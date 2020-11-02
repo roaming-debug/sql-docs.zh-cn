@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32d0e4ea4ca6457701ae5ed4710d5213b3fe164c
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725949"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679016"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>使用具有 SQL 加密功能的 SQL Server 连接器
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85725949"
  
 你需要创建一个凭据和登录名，以及创建一个可以对数据库中的数据和日志进行加密的数据库加密密钥。 若要对数据库进行加密，需要有数据库的 **CONTROL** 权限。 下图显示了使用 Azure 密钥保管库时的加密密钥的层次结构。  
   
- ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![该图显示了使用 Azure Key Vault 时加密密钥的层次结构。](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **创建要用于 TDE 的数据库引擎的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "85725949"
     -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。
   
         > [!IMPORTANT]  
-        >  必须删除 **客户端 ID**中的连字符。  
+        >  必须删除 **客户端 ID** 中的连字符。  
   
     -   使用第 I 部分的“客户端密码”完成 `SECRET` 参数的第二部分。在本示例中，第 I 部分的“客户端密码”为 `ReplaceWithAADClientSecret`。 
   
@@ -118,11 +118,11 @@ ms.locfileid: "85725949"
   
      使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]，通过对象资源管理器连接到数据库来确认是否已启用 TDE。 右键单击数据库，指向“任务”，然后单击“管理数据库加密”。  
   
-     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
+     ![显示对象资源管理器的屏幕截图，其中已选择“任务”>“管理数据库加密”。](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
      在“管理数据库加密”对话框中，确认 TDE 处于打开状态，以及使用哪个非对称密钥对 DEK 进行加密。  
   
-     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![“管理数据库加密”对话框的屏幕截图，其中“将数据库加密设置为开”选项处于选中状态，黄色横幅显示“现已启用 TDE”。](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
      或者，你可以执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本。 加密状态 3 表示已加密的数据库。  
   
@@ -155,9 +155,9 @@ ms.locfileid: "85725949"
     -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
   
         > [!IMPORTANT]  
-        >  必须删除 **客户端 ID**中的连字符。  
+        >  必须删除 **客户端 ID** 中的连字符。  
   
-    -   使用第 I 部分的 `SECRET` 客户端密码 **完成** 参数的第二部分。在此示例中，第 I 部分的 **客户端密码** 为 `Replace-With-AAD-Client-Secret`。 `SECRET` 参数的最终字符串是一长串 *不带连字符*的字母和数字。   
+    -   使用第 I 部分的 `SECRET` 客户端密码 **完成** 参数的第二部分。在此示例中，第 I 部分的 **客户端密码** 为 `Replace-With-AAD-Client-Secret`。 `SECRET` 参数的最终字符串是一长串 *不带连字符* 的字母和数字。   
   
         ```sql  
         USE master;  

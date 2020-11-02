@@ -13,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
 ms.date: 06/12/2020
-ms.openlocfilehash: b2d4364d01b871364fda3ac42d98536e99269c29
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 004a7b0a50a657632bb2b9970f0558857d416494
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763946"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257973"
 ---
 # <a name="xp_cmdshell-server-configuration-option"></a>xp_cmdshell 服务器配置选项
 
@@ -30,6 +30,9 @@ ms.locfileid: "85763946"
 
 - 新开发的代码不应使用 xp_cmdshell 存储过程，通常应将它保留为禁用状态。
 - 某些旧版应用程序要求启用 xp_cmdshell。 如果无法将这些应用程序修改为避免使用此存储过程，则可以按下面所述启用它。
+
+> [!NOTE]  
+> 如果必须使用 xp_cmdshell，最佳安全做法建议只在需要它的实际任务的持续时间内启用。
 
 如果需要启用 xp_cmdshell，可以使用[基于策略的管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)或运行 sp_configure 系统存储过程，如以下代码示例所示：  
   

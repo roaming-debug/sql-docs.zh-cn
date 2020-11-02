@@ -1,6 +1,6 @@
 创建资源调控器工作负荷组并将工作负荷组与资源调控器资源池关联。 不是 [!INCLUDE[msCoName](msconame-md.md)][!INCLUDE[ssNoVersion](ssnoversion-md.md)] 的所有版本都提供资源调控器。 有关 [!INCLUDE[ssNoVersion](ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。
 
-![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
+:::image type="icon" source="../database-engine/configure-windows/media/topic-link.gif"::: [Transact-SQL 语法约定](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>语法
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 787d6d914cd290f7edc3847663690b63f58babeb
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192277"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497000"
 ---
 # <a name="database-files-and-filegroups"></a>数据库文件和文件组
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -212,6 +212,7 @@ GO
 - 将在同一联接查询中使用的不同表置于不同的文件组中。 由于采用并行磁盘 I/O 对联接数据进行搜索，所以此步骤可改善性能。
 - 将最常访问的表和属于这些表的非聚集索引置于不同的文件组中。 如果文件位于不同的物理磁盘上，由于采用并行 I/O，所以使用不同的文件组可改善性能。
 - 请勿将事务日志文件置于已有其他文件和文件组的同一物理磁盘上。
+- 如果需要使用 [Diskpart](/windows-server/administration/windows-commands/diskpart) 等工具扩展数据库文件所在的卷或分区，则应备份所有系统数据库和用户数据库，还要先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 此外，磁盘卷成功扩展后，应考虑运行 [`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 命令，确保驻留在该卷上的所有数据库的物理完整性。
 
 有关事务日志文件管理建议的详细信息，请参阅[管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)。   
 

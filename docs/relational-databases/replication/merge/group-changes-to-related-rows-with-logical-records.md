@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da2699b397d7c5440adc9cdddb3e2b4c1b239fe7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ec09eb43fdd00d57860abf1f40e5010084eded97
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866996"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524027"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>通过逻辑记录对相关行的更改进行分组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "91866996"
   
  ![三个仅具有列名称的表逻辑记录](../../../relational-databases/replication/merge/media/logical-records-01.gif "三个仅具有列名称的表逻辑记录")  
   
- 在此关系中， **Customers** 表是父表，具有主键列 **CustID**。 **Orders** 表具有主键列 **OrderID**和外键约束（ **CustID** 列）。该外键列引用 **Customers** 表中的 **CustID** 列。 同样， **OrderItems** 表具有主键列 **OrderItemID**和外键约束（ **OrderID** 列）。该外键列引用 **Orders** 表中的 **OrderID** 列。  
+ 在此关系中， **Customers** 表是父表，具有主键列 **CustID** 。 **Orders** 表具有主键列 **OrderID** 和外键约束（ **CustID** 列）。该外键列引用 **Customers** 表中的 **CustID** 列。 同样， **OrderItems** 表具有主键列 **OrderItemID** 和外键约束（ **OrderID** 列）。该外键列引用 **Orders** 表中的 **OrderID** 列。  
   
  在此示例中，逻辑记录由 **Orders** 表中与单一 **CustID** 值相关的所有行和 **OrderItems** 表中与 **Orders** 表中的那些行相关的所有行组成。 此关系图显示了 Customer2 的逻辑记录中三个表的所有行：  
   
- ![三个具有值的表逻辑记录](../../../relational-databases/replication/merge/media/logical-records-02.gif "三个具有值的表逻辑记录")  
+ ![第一张屏幕截图显示三个具有值的表逻辑记录。](../../../relational-databases/replication/merge/media/logical-records-02.gif "三个具有值的表逻辑记录")  
   
  若要定义项目之间的逻辑记录关系，请参阅 [定义合并表项目间的逻辑记录关系](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "91866996"
 ### <a name="the-application-of-changes-as-a-unit"></a>将更改作为一个单元来应用  
  在合并处理中断的情况下（如删除连接），如果使用了逻辑记录，则已完成的部分相关复制更改就会回滚。 例如，订阅服务器添加一份 **OrderID** = 6 的新订单，并对应 **OrderID** = 6 在 **OrderItems** 表中添加两个分别为 **OrderItemID** = 10 和 **OrderItemID** = 11 的新行。  
   
- ![三个具有值的表逻辑记录](../../../relational-databases/replication/merge/media/logical-records-04.gif "三个具有值的表逻辑记录")  
+ ![第二张屏幕截图显示三个具有值的表逻辑记录。](../../../relational-databases/replication/merge/media/logical-records-04.gif "三个具有值的表逻辑记录")  
   
  如果复制进程在 **OrderID** = 6 的 **Orders** 行完成之后、在 **OrderItems** 10 和 11 完成之前中断，并且未使用逻辑记录，则 **OrderID** = 6 的 **OrderTotal** 值就不会与 **OrderItems** 行的 **OrderAmount** 值的和一致。 如果使用了逻辑记录，则在复制相关的 **OrderItems** 更改之后，才会提交 **OrderID** = 6 的 **Orders** 行。  
   
@@ -131,11 +131,11 @@ ms.locfileid: "91866996"
   
      ![具有多个父表的子表](../../../relational-databases/replication/merge/media/logical-records-03.gif "具有多个父表的子表")  
   
-     在此关系中，不能使用一个逻辑记录表示三个表，因为 **ClassMembers** 中的行与单一主键行没有关联。 **Classes** 表和 **ClassMembers** 表仍可形成一个逻辑记录， **ClassMembers** 表和 **Students**表也可以，但三个表却不能。  
+     在此关系中，不能使用一个逻辑记录表示三个表，因为 **ClassMembers** 中的行与单一主键行没有关联。 **Classes** 表和 **ClassMembers** 表仍可形成一个逻辑记录， **ClassMembers** 表和 **Students** 表也可以，但三个表却不能。  
   
 -   发布不能包含循环联接筛选器关系。  
   
-     以 **Customers**、 **Orders**和 **OrderItems**这三个表为例，如果 **Orders** 表也有一个引用 **OrderItems** 表的外键约束，就不能使用逻辑记录。  
+     以 **Customers** 、 **Orders** 和 **OrderItems** 这三个表为例，如果 **Orders** 表也有一个引用 **OrderItems** 表的外键约束，就不能使用逻辑记录。  
   
 ## <a name="performance-implications-of-logical-records"></a>逻辑记录对性能的影响  
  逻辑记录功能确实会对性能造成负面影响。 如果不使用逻辑记录，复制代理可以同时处理给定项目的所有更改，并且因为更改是以逐行方式应用的，所以应用这些更改所需的锁定和事务日志要求很小。  

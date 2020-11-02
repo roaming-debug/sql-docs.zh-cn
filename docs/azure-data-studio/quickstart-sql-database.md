@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7eb89be3b94565f7a8642dad893642176a22822b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766436"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439291"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>快速入门：使用 Azure Data Studio 连接和查询 Azure SQL 数据库
 
@@ -39,13 +39,13 @@ ms.locfileid: "88766436"
 
 1. 首次运行 Azure Data Studio 时，应该会打开“欢迎”页。 如果没有看到“欢迎”页，请选择“帮助” > “欢迎”  。 选择“新建连接”以打开“连接”窗格 ：
    
-   ![“新建连接”图标](media/quickstart-sql-database/new-connection-icon.png)
+   ![显示“欢迎使用 Azure Delta Studio”对话框的屏幕截图，其中突出显示了“下一个连接”选项。](media/quickstart-sql-database/new-connection-icon.png)
 
 2. 本文使用 SQL 登录名，但也支持 Windows 身份验证。 使用 Azure SQL Server 的服务器名称、用户名和密码填写以下字段：
 
    | 设置       | 建议的值 | 说明 |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **服务器名称** | 完全限定的服务器名称 | 类似于 **servername.database.windows.net**。 |
+   | **服务器名称** | 完全限定的服务器名称 | 类似于 **servername.database.windows.net** 。 |
    | **身份验证** | SQL 登录名| 本教程使用 SQL 身份验证。 |
    | **用户名** | 服务器管理员帐户用户名 | 用于创建服务器的帐户的用户名。 |
    | **密码(SQL 登录名)** | 服务器管理员帐户密码 | 用于创建服务器的帐户的密码。 |
@@ -53,7 +53,7 @@ ms.locfileid: "88766436"
    | **数据库名称** | *留空* | 仅连接到此处的服务器。 |
    | **服务器组** | 选择 <Default> | 可将此字段设置为创建的特定服务器组。 | 
 
-   ![“新建连接”图标](media/quickstart-sql-database/new-connection-screen.png)  
+   ![“Azure Data Studio - 连接”页面的屏幕截图。](media/quickstart-sql-database/new-connection-screen.png)  
 
 3. 选择“连接”。
 

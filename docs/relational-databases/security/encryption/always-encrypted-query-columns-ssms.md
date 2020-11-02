@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91523e68c03467a7c6aaab40a5cbd3ab696b1890
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 37ac7271be5090f17db16f67968df6eca138856d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866540"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679034"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>通过 SQL Server Management Studio 查询使用 Always Encrypted 的列
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "91866540"
 ### <a name="example"></a>示例
 假定 `SSN` 是 `Patients` 表中的加密列，如果为数据库连接禁用了 Always Encrypted，则以下所示的查询将检索二进制密码文本值。   
 
-![always-encrypted-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png)
+![屏幕截图显示了 SELECT [SSN] FROM [dbo].[Patients] 查询以及作为二进制已加密文本值显示的查询结果。](../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png)
  
 ## <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>检索存储在加密列中的纯文本值    
 从加密列中检索值作为纯文本（用于解密值）：   
@@ -49,7 +49,7 @@ ms.locfileid: "91866540"
 ### <a name="example"></a>示例
 假定 SSN 是 `char(11)` 表中的加密 `Patients` 列，如果为数据库连接启用了 Always Encrypted，并且你有权访问为 `SSN` 列配置的列主密钥，则以下所示的查询将返回纯文本值。   
 
-![always-encrypted-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png)
+![屏幕截图显示了 SELECT [SSN] FROM [Clinic].[dbo].[Patients] 查询以及作为纯文本值显示的查询结果。](../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png)
  
 ## <a name="sending-plaintext-values-targeting-encrypted-columns"></a>发送针对加密列的纯文本值       
 执行发送针对加密列的值的查询，例如，通过存储在加密列中的值进行插入、更新或筛选的查询：
@@ -63,7 +63,7 @@ ms.locfileid: "91866540"
 ### <a name="example"></a>示例
 假定 `SSN` 是 `char(11)` 表中的加密 `Patients` 列，如果已为数据库连接启用 Always Encrypted，为“查询编辑器”窗口启用了 Always Encrypted 参数化，并且你有权访问为 `'795-73-9838'` 列配置的列主密钥，则下面的脚本将尝试在 SSN 列中查找包含 `LastName` 的行并返回 `SSN` 列的值。   
 
-![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
+![屏幕截图显示了 DECLARE @SSN CHAR(11) = '795-73-9838' SELECT [LastName] FROM [dbo].[Patients] WHERE [SSN] = @SSN 查询以及查询结果。](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
 
 ## <a name="permissions-for-querying-encrypted-columns"></a>查询加密列的权限
 
@@ -189,11 +189,11 @@ SQL Server Management Studio 使用 Intellisense 来通知你哪些参数可成�
 
 下面的屏幕截图介绍的是具有六个变量声明的示例。 SQL Server Management Studio 已成功对前三个变量进行了参数化。 最后三个变量不符合参数化先决条件。因此，SQL Server Management Studio 不会尝试对它们进行参数化（声明不会以任何方式进行标记）。
 
-![always-encrypted-parameter-warnings](../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png)
+![屏幕截图上的示例是 6 个变量声明，其中 3 个已成功参数化，另外 3 个失败，并显示了相关的警告消息。](../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png)
  
 下面是另一个示例，介绍了两个符合参数化的先决条件的变量，但是参数化尝试失败，因为变量未正确进行初始化。    
  
-![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
+![屏幕截图上的示例是 2 个变量声明，它们最终失败，并显示了相关的错误消息。](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
 > [!NOTE]
 > Always Encrypted 支持有限子网的类型转换，在许多情况下，Transact-SQL 变量的数据类型都要求与其针对的目标数据库列的类型相同。 例如，假定 `SSN` 表中的 `Patients` 列是 `char(11)`，以下查询将失败，因为 `@SSN` 变量的类型为 `nchar(11)`，与列的类型不匹配。   

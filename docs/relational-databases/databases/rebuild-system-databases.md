@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: 2365440fd87789a30e67c8c5effcbf0e85b8bc24
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210622"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638990"
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -107,10 +107,10 @@ ms.locfileid: "91210622"
     |--------------------|-----------------|  
     |/QUIET 或 /Q|指定在没有任何用户界面的情况下运行安装程序。|  
     |/ACTION=REBUILDDATABASE|指定安装程序将重新创建系统数据库。|  
-    |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。 对于默认实例，请输入 MSSQLSERVER。|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|指定要添加到 **sysadmin** 固定服务器角色中的 Windows 组或单个帐户。 指定多个帐户时，请用空格将帐户隔开。 例如，输入 **BUILTIN\Administrators MyDomain\MyUser**。 当您在帐户名称内指定包含空格的帐户时，用双引号将该帐户引起来。 例如，输入 **NT AUTHORITY\SYSTEM**。|  
-    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA 帐户的密码。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> **\*\* 安全说明 \*\*** **sa** 帐户是广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 因此，为 **sa** 登录名使用强密码非常重要。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
-    |[ /SQLCOLLATION=*CollationName* ]|指定新的服务器级排序规则。 此参数是可选的。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> **\*\* 重要事项 \*\*** 更改服务器级排序规则不会更改现有用户数据库的排序。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../../relational-databases/collations/set-or-change-the-server-collation.md)。|  
+    |/INSTANCENAME= *InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。 对于默认实例，请输入 MSSQLSERVER。|  
+    |/SQLSYSADMINACCOUNTS= *accounts*|指定要添加到 **sysadmin** 固定服务器角色中的 Windows 组或单个帐户。 指定多个帐户时，请用空格将帐户隔开。 例如，输入 **BUILTIN\Administrators MyDomain\MyUser** 。 当您在帐户名称内指定包含空格的帐户时，用双引号将该帐户引起来。 例如，输入 **NT AUTHORITY\SYSTEM** 。|  
+    |[ /SAPWD= *StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA 帐户的密码。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> **\*\* 安全说明 \*\*** **sa** 帐户是广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 因此，为 **sa** 登录名使用强密码非常重要。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
+    |[ /SQLCOLLATION= *CollationName* ]|指定新的服务器级排序规则。 此参数是可选的。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> **\*\* 重要事项 \*\*** 更改服务器级排序规则不会更改现有用户数据库的排序。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../../relational-databases/collations/set-or-change-the-server-collation.md)。|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|指定 tempdb 数据文件的数目。 此值可以增加至 8 或内核数，以较大者为准。<br /><br /> 默认值：8 或内核数量，以较低者为准。|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|指定每个 tempdb 数据文件的初始大小 (MB)。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：64|  
@@ -190,11 +190,11 @@ ms.locfileid: "91210622"
   
 10. 备份 **msdb** 数据库。  
 
-##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> 重新生成 Tempdb 数据库  
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> 重新生成 tempdb 数据库  
 
 如果 tempdb 数据库损坏，并且数据库引擎无法启动，则可以重新生成 tempdb，而无需重新生成所有系统数据库 。
   
-1. 重命名当前的 Tempdb.mdf 和 Templog.ldf 文件（如果未缺失）。 
+1. 重命名当前的 tempdb.mdf 和 templog.ldf 文件（如果未缺失）。 
 1. 使用以下命令从命令提示符处启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 
 
    ```sql
@@ -209,7 +209,7 @@ ms.locfileid: "91210622"
 1. 使用 sqlcmd 连接到服务器，然后使用以下存储过程重置 tempdb 数据库的状态。
 
    ```sql
-   exec master..sp_resetstatus Tempdb
+   exec master..sp_resetstatus tempdb
    ```
 
 1. 通过在命令提示符窗口中按 CTRL+C 来关闭服务器

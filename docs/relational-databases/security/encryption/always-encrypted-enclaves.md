@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 64680ae71e34d1da94bf0ec8b2ab1ef75cd3c4d3
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867247"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679021"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -63,7 +63,7 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
 
 ## <a name="supported-client-drivers"></a>支持的客户端驱动程序
 
-若要使用具有安全 enclave 的 Always Encrypted，应用程序必须使用支持该功能的客户端驱动程序。 需要配置应用程序和客户端驱动程序，以启用 enclave 计算和 enclave 证明。 有关详细信息（包括支持的客户端驱动程序的列表），请参阅 [具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md)。
+若要使用具有安全 enclave 的 Always Encrypted，应用程序必须使用支持该功能的客户端驱动程序。 需要配置应用程序和客户端驱动程序，以启用 enclave 计算和 enclave 证明。 有关详细信息（包括受支持的客户端驱动程序的列表），请参阅[使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)。
 
 ## <a name="enclave-enabled-keys"></a>已启用 enclave 的密钥
 

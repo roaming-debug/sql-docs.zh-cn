@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05f9a1bad426ad38b832597876522e67d1f01d73
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a268de26245955dd6be838e822f1cb84b693324
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537044"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497023"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>内存优化表的持续性
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89537044"
 ### <a name="the-data-file"></a>数据文件  
  数据文件将包含一个或多个内存优化表中作为 INSERT 或 UPDATE 操作的一部分由多个事务插入的行。 例如，一行可以来自内存优化表 T1，而下一行可以来自内存优化表 T2。 这些行按事务日志中事务的顺序追加到数据文件，使数据访问顺序进行。 这将使 I/O 吞吐量比随机 I/O 提高一个数量级。  
   
- 一旦数据文件已满，新事务插入的行就存储于其他数据文件中。 一段时间后，来自持久内存优化表中的行将存储于一个或多个数据文件中，并且每个数据文件都包含来自不相联事务范围（而非连续事务范围）的行。 例如，事务提交时间戳范围为 (100, 200) 的数据文件包含由提交时间戳大于 100 并小于等于 200 的事务插入的所有行。 该提交时间戳是在可供提交时分配给某一事务的单调递增的数字。 每个事务都具有唯一的提交时间戳。  
+ 一旦数据文件已满，新事务插入的行就存储于其他数据文件中。 一段时间后，来自持久内存优化表中的行存储在一个或多个数据文件中，每个包含行的数据文件形成不相交但连续的事务范围。 例如，事务提交时间戳范围为 (100, 200) 的数据文件包含由提交时间戳大于 100 并小于等于 200 的事务插入的所有行。 该提交时间戳是在可供提交时分配给某一事务的单调递增的数字。 每个事务都具有唯一的提交时间戳。  
   
  在删除或更新某一行时，该行并不在数据文件中就地删除或更改，而是在另一种文件类型（即差异文件）中跟踪已删除行。 更新操作以针对每一行的删除和插入操作的元组形式进行处理。 这将消除数据文件上的随机 IO。  
  

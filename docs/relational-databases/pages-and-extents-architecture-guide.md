@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991848"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439391"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "88991848"
 > [!NOTE]
 > 一直到，并且包括 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，跟踪标志 1118 可用于将默认分配更改为始终使用统一区。 有关此跟踪标志的详细信息，请参阅 [DBCC TRACEON - 跟踪标志](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 >   
-> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，将为 tempdb 自动启用 TF 1118 提供的功能。 对于用户数据库，此行为受 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 选项控制，同时默认值设置为禁用，且跟踪标志 1118 无效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
+> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，将为 tempdb 和所有用户数据库自动启用 TF 1118 提供的功能。 对于用户数据库，此行为受 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 选项控制，同时默认值设置为禁用，且跟踪标志 1118 无效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
 
 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，`sys.dm_db_database_page_allocations` 系统函数可以报告数据库、表、索引和分区的页分配信息。
 

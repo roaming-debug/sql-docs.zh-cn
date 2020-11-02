@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943000"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524014"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>对 ODBC 数据源使用“外部表”向导
 
@@ -28,7 +28,7 @@ SQL Server 2019 的重要方案之一是能够虚拟化数据。 此过程允许
 
 ## <a name="start-the-external-table-wizard"></a>启动外部表向导
 
-使用通过 **azdata cluster endpoints list** 命令获取的 sql-server-master 终结点的 IP 地址/端口号连接到主实例[  ](../../big-data-cluster/deployment-guidance.md#endpoints)。 在对象资源管理器中展开  数据库节点。 然后从现有 SQL Server 实例中选择一个要虚拟化数据的数据库。 右键单击该数据库，并选择“创建外部表”以启动虚拟化数据向导  。 还可以从命令面板启动虚拟化数据向导。 在 Windows 中使用 Ctrl+Shift+P，或在 Mac 中使用 Cmd+Shift+P。
+使用通过 **azdata cluster endpoints list** 命令获取的 sql-server-master 终结点的 IP 地址/端口号连接到主实例 [](../../big-data-cluster/deployment-guidance.md#endpoints)。 在对象资源管理器中展开  数据库节点。 然后从现有 SQL Server 实例中选择一个要虚拟化数据的数据库。 右键单击该数据库，并选择“创建外部表”以启动虚拟化数据向导  。 还可以从命令面板启动虚拟化数据向导。 在 Windows 中使用 Ctrl+Shift+P，或在 Mac 中使用 Cmd+Shift+P。
 
 ![虚拟化数据向导](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>选择数据源
@@ -58,13 +58,13 @@ SQL Server 2019 的重要方案之一是能够虚拟化数据。 此过程允许
 
 下一步是配置凭据。 输入凭据的名称。 此名称是数据库作用域凭据，用于安全地存储创建的外部数据源的登录信息。 示例为 `TestCred`。 输入用户名和密码以连接到数据源。
 
-![外部数据源凭据](media/data-virtualization/data-source-credentials.png)
+![显示“步骤 3 - 创建与数据源的连接”的屏幕截图。](media/data-virtualization/data-source-credentials.png)
 
 ## <a name="external-data-table-mapping"></a>外部数据表映射
 
 在下一页上，选择想为其创建外部视图的表。 选择父级数据库时，子表也包括在其中。 选择表后，映射表将显示在右侧。 可在此处更改类型。 此外，也可以更改所选外部表本身的名称。
 
-![外部数据源凭据](media/data-virtualization/data-table-map.png)
+![显示“步骤 4 - 将数据源对象映射到外部表”的屏幕截图。](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >若要更改映射视图，可双击另一个所选表。

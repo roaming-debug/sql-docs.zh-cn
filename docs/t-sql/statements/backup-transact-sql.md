@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d043d7613467381b0c19dfb2ac2ee2ee4ec0e523
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: e4763f4c4f28ad4787785b4e5838155fb9a05f10
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529418"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496875"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,7 +71,7 @@ ms.locfileid: "91529418"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -250,9 +250,9 @@ TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-dat
 > [!NOTE]
 > NUL 磁盘设备将弃用发送给它的所有信息，且仅应用于测试。 这不适用于生产用途。
 > [!IMPORTANT]
-> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，备份到 URL 时只能备份到单个设备。 备份到 URL 时，若要备份到多个设备，必须使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本以及共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)。
+> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，备份到 URL 时只能备份到单个设备。 备份到 URL 时，若要备份到多个设备，必须使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本以及共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)。
 
-**URL 适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更高版本）。
+**URL 适用范围** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更高版本）。
 
 如果某一磁盘设备不存在，也可以在 BACKUP 语句中指定它。 如果存在物理设备且 BACKUP 语句中未指定 INIT 选项，则备份将追加到该设备。
 
@@ -386,7 +386,7 @@ RETAINDAYS = { days | @days\_var } 指定必须经过多少天才可以覆盖该
 { NOINIT | INIT } 控制备份操作是追加到还是覆盖备份媒体中的现有备份集。 默认为追加到介质中最新的备份集 (NOINIT)。
 
 > [!NOTE]
-> 有关 { **NOINIT** | INIT } and { **NOSKIP** | SKIP } 之间交互的信息，请参阅本主题后面的[备注](#general-remarks)。
+> 有关 { **NOINIT** | INIT } and { **NOSKIP** | SKIP } 之间交互的信息，请参阅本主题后面的 [备注](#general-remarks)。
 
 NOINIT 表示备份集将追加到指定的媒体集上，以保留现有的备份集。 如果为介质集定义了介质密码，则必须提供密码。 NOINIT 是默认设置。
 
@@ -440,7 +440,7 @@ BUFFERCOUNT = { buffercount | @buffercount\_variable } 指定用于备份操作�
 缓冲区使用的总空间是由以下公式确定：`BUFFERCOUNT * MAXTRANSFERSIZE`。
 
 > [!NOTE]
-> 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition)博客。
+> 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition)博客。
 
 MAXTRANSFERSIZE **=** { maxtransfersize |  **@** maxtransfersize\_variable } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。
 
@@ -696,7 +696,7 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
 
 只要操作系统支持数据库的排序规则，就可以在不同的平台之间执行备份操作，即使这些平台使用不同的处理器类型。
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，`MAXTRANSFERSIZE` 大于 65536 (64 KB) 的设置为[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 加密数据库启用优化的压缩算法，该算法先解密页面，然后将其压缩并再次对其进行加密。 如果未指定 `MAXTRANSFERSIZE` 或者使用了 `MAXTRANSFERSIZE = 65536` (64 KB)，对使用 TDE 加密的数据库执行备份压缩时会直接压缩加密的页面，且可能不会得到良好的压缩比率。 有关详细信息，请参阅[支持 TDE 的数据库的备份压缩](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)。
+从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，`MAXTRANSFERSIZE` 大于 65536 (64 KB) 的设置为[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 加密数据库启用优化的压缩算法，该算法先解密页面，然后将其压缩并再次对其进行加密。 如果未指定 `MAXTRANSFERSIZE` 或者使用了 `MAXTRANSFERSIZE = 65536` (64 KB)，对使用 TDE 加密的数据库执行备份压缩时会直接压缩加密的页面，且可能不会得到良好的压缩比率。 有关详细信息，请参阅[支持 TDE 的数据库的备份压缩](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases)。
 
 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 开始，不再需要 `MAXTRANSFERSIZE` 设置来对 TDE 启用此优化的压缩算法。 如果备份命令指定 `WITH COMPRESSION`，或者将备份压缩默认服务器配置设置为 1，则 `MAXTRANSFERSIZE` 将自动增加到 128K 以启用优化算法。 如果备份命令指定 `MAXTRANSFERSIZE` 的值为 > 64K，则将采用提供的值。 换句话说，SQL Server 绝不会自动减小该值，只会增加它。 如果需要使用 `MAXTRANSFERSIZE = 65536` 备份 TDE 加密的数据库，则必须指定 `WITH NO_COMPRESSION`，或者确保将备份压缩默认服务器配置设置为 0。
 
@@ -942,7 +942,7 @@ WHERE r.command LIKE 'BACKUP%'
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        \* SQL 数据库<br />托管实例 \* &nbsp;
+        **_\* SQL 托管实例 \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -953,7 +953,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 ## <a name="azure-sql-managed-instance"></a>Azure SQL 托管实例
 
-备份 Azure SQL 托管实例中放置/托管的 SQL 数据库。 SQL [托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)提供自动备份，允许用户创建完整的数据库 `COPY_ONLY` 备份。 不支持差异、日志和文件快照备份。
+备份 Azure SQL 托管实例中放置/托管的 SQL 数据库。 SQL [托管实例](/azure/sql-database/sql-database-managed-instance)提供自动备份，允许用户创建完整的数据库 `COPY_ONLY` 备份。 不支持差异、日志和文件快照备份。
 
 ## <a name="syntax"></a>语法
 
@@ -1007,7 +1007,7 @@ TO URL
 指定要用于备份操作的 URL。 此 URL 格式用于创建到 Microsoft Azure 存储服务的备份。
 
 > [!IMPORTANT]
-> 备份到 URL 时，若要备份到多个设备，必须使用共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)。
+> 备份到 URL 时，若要备份到多个设备，必须使用共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)。
 
 *n* 一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。
 
@@ -1057,7 +1057,7 @@ BUFFERCOUNT = { buffercount | @buffercount\_variable } 指定用于备份操作�
 缓冲区使用的总空间是由以下公式确定：`BUFFERCOUNT * MAXTRANSFERSIZE`。
 
 > [!NOTE]
-> 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition)博客。
+> 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition)博客。
 
 MAXTRANSFERSIZE **=** { maxtransfersize |  **@** maxtransfersize\_variable } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。
 
@@ -1132,7 +1132,7 @@ WITH STATS = 5, COPY_ONLY;
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         \* Analytics<br />Platform System (PDW) \* &nbsp;
@@ -1145,9 +1145,9 @@ WITH STATS = 5, COPY_ONLY;
 
 创建 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库的备份并将该备份存储在设备以外的用户指定网络位置。 将此语句与 [RESTORE DATABASE - Analytics Platform System](../../t-sql/statements/restore-statements-transact-sql.md) 配合使用，用于灾难恢复或用于将数据库从一台设备复制到另一台设备。
 
-**开始之前**，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“获取和配置备份服务器”。
+**开始之前** ，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“获取和配置备份服务器”。
 
-[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中有两种类型的备份。 *完整数据库备份*是指备份整个 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库。 *差异数据库备份*只包含自上次完整备份后所做的更改。 用户数据库备份包含数据库用户和数据库角色。 Master 数据库备份包含登录信息。
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中有两种类型的备份。 *完整数据库备份* 是指备份整个 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库。 *差异数据库备份* 只包含自上次完整备份后所做的更改。 用户数据库备份包含数据库用户和数据库角色。 Master 数据库备份包含登录信息。
 
 有关[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]数据库备份的详细信息，请参阅[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的“备份和还原”。
 
@@ -1193,7 +1193,7 @@ NAME = 'backup \_name' 指定备份集的名称。 备份名称可以与数据�
 - 名称最长可达 128 个字符。
 - 不能包含路径。
 - 必须以字母或数字字符或下划线 (_) 开头。 允许使用的特殊字符包括下划线 (\_)、连字符 (-) 或空格 ( )。 备份名称不能以空格字符结尾。
-- 如果指定位置已存在 *backup_name*，该语句会失败。
+- 如果指定位置已存在 *backup_name* ，该语句会失败。
 
 此名称存储在元数据中，在使用 RESTORE HEADERONLY 还原备份标头时显示。
 
@@ -1207,7 +1207,7 @@ DIFFERENTIAL 指定执行用户数据库的差异备份。 如果省略，默认
 
 ## <a name="permissions"></a>权限
 
-要求具有 **BACKUP DATABASE** 权限，或者在 **db_backupoperator** 固定数据库角色中具有成员身份。 添加到 **db_backupoperator** 固定数据库角色的普通用户无法备份 master 数据库。 仅 **sa**、构造管理员或 **sysadmin** 固定服务器角色的成员可备份 master 数据库。
+要求具有 **BACKUP DATABASE** 权限，或者在 **db_backupoperator** 固定数据库角色中具有成员身份。 添加到 **db_backupoperator** 固定数据库角色的普通用户无法备份 master 数据库。 仅 **sa** 、构造管理员或 **sysadmin** 固定服务器角色的成员可备份 master 数据库。
 
 需要有权访问、创建和写入备份目录的 Windows 帐户。 还必须将 Windows 帐户名称和密码存储在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。 若要将这些网络凭据添加到 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，可使用 [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 存储过程。
 

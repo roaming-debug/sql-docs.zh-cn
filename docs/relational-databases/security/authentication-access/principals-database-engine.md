@@ -30,12 +30,12 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ae2f5840120a24cbb0a1c0426c70e36084bd407
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: ef45a3ade9123288b8d89a44dbfb18b8e626ed5d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004805"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678938"
 ---
 # <a name="principals-database-engine"></a>主体（数据库引擎）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "92004805"
  管理员不可更改这些主体帐户的密码，因为这些密码基于颁发给 Microsoft 的证书。
   
 ## <a name="the-guest-user"></a>guest 用户  
- 每个数据库包括一个 `guest`的行为的更改。 授予 `guest` 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 `guest` 用户无法删除，但可通过撤消其 CONNECT 权限禁用。 可以通过在 `master` 或 `tempdb` 以外的任何数据库中执行 `REVOKE CONNECT FROM GUEST;` 来撤消 CONNECT 权限。  
+ 每个数据库包括一个 `guest`的行为的更改。 授予 `guest` 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 无法删除 `guest` 用户，但可通过撤消其 CONNECT 权限将其禁用。 可以通过在 `master` 或 `tempdb` 以外的任何数据库中执行 `REVOKE CONNECT FROM GUEST;` 来撤消 CONNECT 权限。  
   
   
 ## <a name="related-tasks"></a>Related Tasks  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 61790d066d6cdf0d3e2a520cca740823b78fc6dc
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115825"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524042"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上创建和运行 SQL Server 代理作业
 
@@ -179,9 +179,9 @@ SQL Server 作业用于在 SQL Server 数据库中定期执行相同的命令序
 
 1. 创建新的作业计划。
 
-   ![作业计划](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
+   ![“新建作业”对话框的屏幕截图，其中突出显示了“计划”选项和“新建”选项。](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
 
-   ![作业计划](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
+   ![“新建作业”对话框的屏幕截图，其中突出显示了“确定”选项。](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 
 1. 启动作业。
 

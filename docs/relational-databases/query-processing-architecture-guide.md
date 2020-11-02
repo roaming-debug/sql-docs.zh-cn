@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 62ea3f9484c232112317af9f0cb7bf8d8facde2f
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892437"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639020"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -127,9 +127,9 @@ GO
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 有三个选项可用于显示执行计划：        
-> -  ***[估计的执行计划](../relational-databases/performance/display-the-estimated-execution-plan.md)***，该计划是已编译的计划，由查询优化器生成。        
-> -  ***[实际执行计划](../relational-databases/performance/display-an-actual-execution-plan.md)***，该计划与编译的计划及其执行上下文相同。 这包括在执行完成之后可用的运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。        
-> -  ***[实时查询统计信息](../relational-databases/performance/live-query-statistics.md)***，这与编译的计划及其执行上下文相同。 这包括执行过程中的运行时信息，每秒更新一次。 例如，运行时信息包括流经操作符的实际行数。       
+> -  * *_[估计的执行计划](../relational-databases/performance/display-the-estimated-execution-plan.md)_* _，该计划是由查询优化器生成的已编译计划。        
+> -  _*_ [实际执行计划](../relational-databases/performance/display-an-actual-execution-plan.md) _*_ ，该计划与编译的计划及其执行上下文相同。 这包括在执行完成之后可用的运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。        
+> -  _*_ [实时查询统计信息](../relational-databases/performance/live-query-statistics.md) _*_ ，这与编译的计划及其执行上下文相同。 这包括执行过程中的运行时信息，每秒更新一次。 例如，运行时信息包括流经操作符的实际行数。       
 
 ### <a name="processing-a-select-statement"></a>处理 SELECT 语句
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 处理单个 SELECT 语句的基本步骤包括如下内容： 
@@ -145,10 +145,10 @@ GO
 
 #### <a name="foldable-expressions"></a>可折叠表达式
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将常量折叠与下列类型的表达式配合使用：
-- 仅包含常量的算术表达式，如 1+1、5/3*2。
+- 仅包含常量的算术表达式，如 1+1、5/3_2。
 - 仅包含常量的逻辑表达式，如 1=1 和 1>2 AND 3>4。
 - 被 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 认为可折叠的内置函数包括 `CAST` 和 `CONVERT`。 通常，如果内部函数只与输入有关而与其他上下文信息（例如 SET 选项、语言设置、数据库选项和加密密钥）无关，则该内部函数是可折叠的。 不确定性函数是不可折叠的。 确定性内置函数是可折叠的，但也有例外情况。
-- CLR 用户定义类型的确定性方法和确定性的标量值 CLR 用户定义函数（从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始）。 有关详细信息，请参阅 [CLR 用户定义函数和方法的常量折叠](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)。
+- CLR 用户定义类型的确定性方法和确定性的标量值 CLR 用户定义函数（从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始）。 有关详细信息，请参阅 [CLR 用户定义函数和方法的常量折叠](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)。
 
 > [!NOTE] 
 > 使用大型对象类型时将出现例外。 如果折叠进程的输出类型是大型对象类型（text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 或 XML），则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不折叠该表达式。
@@ -443,7 +443,7 @@ WHERE name LIKE '%plans%';
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行计划包含下列主要组件： 
 
-- **已编译计划**（或查询计划）     
+- **已编译计划** （或查询计划）     
   由编译过程生成的查询计划主要是由任意数量的用户使用的可重入的只读数据结构。 它存储有关以下内容的信息：
   -  物理运算符，用于实现由逻辑运算符描述的操作。 
   -  这些运算符的顺序，用于确定访问、筛选和聚合数据的顺序。 
@@ -695,7 +695,9 @@ sql_handle
 * 一个经常被引用的执行计划，该计划的开销从未等于零。 除非遇到内存不足和当前开销为零的情况，否则该计划保留在计划缓存中，不会被删除。
 * 插入的一个即席执行计划，并且在内存不足情况出现之前没有再次引用该计划。 由于即席计划在初始化后当前开销为零，因此在[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]检查执行计划时，会发现当前开销为零，于是从计划缓存中删除该计划。 如果不存在内存不足的情况，当前开销为零的即席执行计划将保留在计划缓存中。
 
-若要从缓存中手动删除单个计划或所有计划，请使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，使用 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 清除范围内数据库的过程（计划）缓存。
+若要从缓存中手动删除单个计划或所有计划，请使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。 [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) 也可用于清除任何缓存，包括计划缓存。 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，使用 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 清除范围内数据库的过程（计划）缓存。 通过 [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) 和 [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) 对某些配置设置进行的更改也会导致从计划缓存中删除计划。 可在 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks) 一文的“备注”部分中找到这些配置设置的列表。 此类配置更改将在错误日志中记录以下信息性消息：
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
 
 ### <a name="recompiling-execution-plans"></a>重新编译执行计划
 

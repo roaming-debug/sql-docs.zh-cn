@@ -25,12 +25,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0355e777d05ba9b8257f57a65999e6973c53b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875859d70488bd536223e400e183bcc88a3b4d99
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458851"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497009"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "88458851"
         [SQL 数据库](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -284,7 +284,7 @@ GO
         \* SQL 数据库 \*
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -398,7 +398,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 以下示例将登录名 `Mary5` 映射到 EKM 凭据 `EKMProvider1`。
 
 
-**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
+**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
 
 ```sql
 ALTER LOGIN Mary5
@@ -428,7 +428,7 @@ GO
 
 以下示例将 `TestUser` 登录名的密码更改为已经过哈希运算的值。
 
-**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
+**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -456,7 +456,7 @@ GO
         [SQL 数据库](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        _\*SQL 数据库<br />托管实例 \*_ 
+        **_\* SQL 托管实例 \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -655,7 +655,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 以下示例将登录名 `Mary5` 映射到 EKM 凭据 `EKMProvider1`。
 
-**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本，以及 Azure SQL 托管实例。
+**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本，以及 Azure SQL 托管实例。
 
 ```sql
 ALTER LOGIN Mary5
@@ -685,7 +685,7 @@ GO
 
 以下示例将 `TestUser` 登录名的密码更改为已经过哈希运算的值。
 
-**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本，以及 Azure SQL 托管实例。
+**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本，以及 Azure SQL 托管实例。
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -721,7 +721,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [SQL 数据库](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -832,7 +832,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 以下示例将登录名 `Mary5` 映射到 EKM 凭据 `EKMProvider1`。
 
-**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
+**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
 
 ```sql
 ALTER LOGIN Mary5
@@ -862,7 +862,7 @@ GO
 
 以下示例将 `TestUser` 登录名的密码更改为已经过哈希运算的值。
 
-**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
+**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -890,7 +890,7 @@ GO
         [SQL 数据库](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -1035,7 +1035,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 以下示例将登录名 `Mary5` 映射到 EKM 凭据 `EKMProvider1`。
 
-**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
+**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
 
 ```sql
 ALTER LOGIN Mary5
@@ -1065,7 +1065,7 @@ GO
 
 以下示例将 `TestUser` 登录名的密码更改为已经过哈希运算的值。
 
-**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
+**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
 
 ```sql
 ALTER LOGIN TestUser WITH

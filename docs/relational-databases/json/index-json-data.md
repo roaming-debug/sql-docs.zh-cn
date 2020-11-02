@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499230"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439461"
 ---
 # <a name="index-json-data"></a>对 JSON 数据编制索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88499230"
 数据库索引可提升筛选和排序操作的性能。 如果没有索引，每次查询数据时，SQL Server 不得不扫描整个表。  
   
 ## <a name="index-json-properties-by-using-computed-columns"></a>通过使用计算列对 JSON 属性编制索引  
-将 JSON 数据存储在 SQL Server 中时，通常会希望按 JSON 文档的一个或多个属性对查询结果进行筛选或排序**。  
+将 JSON 数据存储在 SQL Server 中时，通常会希望按 JSON 文档的一个或多个属性对查询结果进行筛选或排序  。  
 
 ### <a name="example"></a>示例 
 此示例假定 AdventureWorks `SalesOrderHeader` 表包含 `Info` 列，此列包含关于销售订单的采用 JSON 格式的各种信息。 例如，包含客户、销售人员、装运和帐单地址等相关信息。 假设要使用 `Info` 列的值来筛选某个客户的销售订单。
@@ -70,7 +70,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 ### <a name="execution-plan-for-this-example"></a>此示例的执行计划
 下面是此示例中查询的执行计划。  
   
-![执行计划](../../relational-databases/json/media/jsonindexblog1.png "执行计划")  
+![显示此示例的执行计划的屏幕截图。](../../relational-databases/json/media/jsonindexblog1.png "执行计划")  
   
 SQL Server 在非聚集索引中使用索引查找而非进行全表扫描，由此找到满足指定条件的行。 然后它在 `SalesOrderHeader` 表中使用键查找来提取查询中引用的其他列 - 在此示例中为 `SalesOrderNumber` 和 `OrderDate`。  
  
@@ -138,13 +138,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  如果查看实际的执行计划，会发现它使用非聚集索引中经过排序的值。  
   
- ![执行计划](../../relational-databases/json/media/jsonindexblog2.png "执行计划")  
+ ![显示执行计划的屏幕截图，其中该计划使用来自非聚集索引的排序后的值。](../../relational-databases/json/media/jsonindexblog2.png "执行计划")  
   
  虽然查询具有 `ORDER BY` 子句，但执行计划不使用 Sort 运算符。 此时已根据塞尔维亚西里尔文规则对 JSON 索引进行了排序。 因此 SQL Server 可使用其中的结果已经过排序的非聚集索引。  
   
  但是，如果更改 `ORDER BY` 表达式的排序规则（例如，如果将 `COLLATE French_100_CI_AS_SC` 添加到 `JSON_VALUE` 函数之后），会得到其他查询执行计划。  
   
- ![执行计划](../../relational-databases/json/media/jsonindexblog3.png "执行计划")  
+ ![显示不同执行计划的屏幕截图。](../../relational-databases/json/media/jsonindexblog3.png "执行计划")  
   
  由于索引中的值的顺序不符合法语排序规则，所以 SQL Server 无法使用索引对结果进行排序。 因此，它会添加一个使用法语排序规则对结果进行排序的 Sort 运算符。  
  

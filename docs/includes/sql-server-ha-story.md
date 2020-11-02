@@ -146,7 +146,7 @@ FCI 未出现数据丢失，但因为有一个数据副本，所以基础共享�
  
 可用性组（群集类型为“无”的可用性组除外）要求所有副本都属于同一基础群集（无论是 WSFC 还是 Pacemaker）。 这意味着在上图中，WSFC 延伸到两个不同的数据中心，增加了复杂性。 无论使用什么平台（Windows Server 或 Linux）。 跨距离延伸群集会增加复杂性。 SQL Server 2016 中引入了分布式可用性组，它允许可用性组跨越在不同的群集上配置的可用性组。 这降低了节点必须全部位于同一个群集中这一要求，使配置灾难恢复更加容易。 有关分布式可用性组的详细信息，请参阅[分布式可用性组](../database-engine/availability-groups/windows/distributed-availability-groups.md)。
 
-![分布式可用性组](media/sql-server-ha-story/image11.png)
+![分布式可用性组关系图。](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>AlwaysOn 故障转移群集实例
 
@@ -216,7 +216,7 @@ FCI 可就地升级到 SQL Server 2017。 有关详细信息，请参阅[升级 
 
 分布式可用性组旨在跨可用性组配置，无论可用性组下的两个基础群集是两个不同的 WSFC、Linux 分发，还是一个在 WSFC 上，另一个在 Linux 上。 它会成为具有跨平台解决方案的主要方法。 也是迁移的主要解决方案，例如，公司需要从基于 Windows Server 的 SQL Server 基础结构迁移到基于 Linux 的基础结构。 如上所述，可用性组，尤其是分布式可用性组，可尽量减少应用程序无法使用的时间。 下面显示了跨 WSFC 和 Pacemaker 的分布式可用性组示例。
 
-![分布式可用性组](media/sql-server-ha-story/image9.png)
+![显示跨 WSFC 和 Pacemaker 的分布式可用性组的关系图。](media/sql-server-ha-story/image9.png)
  
 如果可用性组配置了“无”群集类型，则可跨越 Windows Server 和 Linux 以及多个 Linux 分发。 这不是真正的高可用性配置，所以不应用于任务关键型部署，但可用于读取缩放或迁移/升级方案。
 
@@ -233,7 +233,7 @@ FCI 可就地升级到 SQL Server 2017。 有关详细信息，请参阅[升级 
 
 通过可用性组缩放数据库的可读副本这一功能最先是与分布式可用性组一起引入 SQL Server 2016 的。 这使公司能够通过少量配置，不仅在本地，并且可以在区域范围和全局范围内拥有数据库的只读副本，并通过在本地执行查询来减少网络流量和延迟。 可用性组的每个主要副本即使不是完全读/写副本，也可播种另外两个可用性组，因此每个分布式可用性组最多可支持 27 个可读取数据副本。 
 
-![分布式可用性组](media/sql-server-ha-story/image11.png)
+![显示与读取扩展相关的分布式可用性组的关系图。](media/sql-server-ha-story/image11.png)
 
 从 SQL Server 2017 开始，可以创建准实时只读解决方案，其中可用性组的群集类型配置为“无”。 如果目标是将可用性组用于可读次要副本而不是可用性，那么此操作可去除使用 WSFC 或 Pacemaker 的复杂性，并以更简单的部署方法提供可用性组的可读优势。 
 

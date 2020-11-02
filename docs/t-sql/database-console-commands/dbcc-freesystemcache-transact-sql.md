@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6edb71255096e8a3164361af07ca0d675f6a9e7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f99d6e50aed43273dbcaa659f95a8bb8a1fe73d3
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422891"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638980"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ DBCC FREESYSTEMCACHE
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-( 'ALL' [,_pool\_name_ ] )  
+( 'ALL' [, _pool\_name_ ] )  
 ALL 指定所有受支持的缓存。  
 _pool\_name_ 指定 Resource Governor 池缓存。 只释放与此池关联的条目。  
   
@@ -62,7 +62,11 @@ NO_INFOMSGS
 取消显示所有信息性消息。  
   
 ## <a name="remarks"></a>备注  
-运行 DBCC FREESYSTEMCACHE 可清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有即将到来的执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中的每个已清除缓存存储，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志都包含以下信息性消息：“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 刷新了 %d 次(计划缓存中的)'%s' 缓存存储，因为有 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 操作。” 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
+运行 DBCC FREESYSTEMCACHE 可清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有即将到来的执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息： 
+
+>`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
+
+ 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
 
 ## <a name="result-sets"></a>结果集  
 DBCC FREESYSTEMCACHE 返回：“DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。”

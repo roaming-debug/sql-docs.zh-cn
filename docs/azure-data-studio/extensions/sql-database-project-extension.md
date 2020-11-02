@@ -8,17 +8,18 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: 65006891a6633a75482f9a32c328dea0d8bf76fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.date: 10/22/2020
+ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123003"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496738"
 ---
 # <a name="sql-database-projects-extension-preview"></a>SQL 数据库项目扩展（预览版）
 
 SQL 数据库项目扩展（预览版）是在基于项目的开发环境中开发 SQL 数据库的扩展。 
+
 
 ## <a name="features"></a>功能
 
@@ -31,6 +32,10 @@ SQL 数据库项目扩展（预览版）是在基于项目的开发环境中开�
 7. 生成单个项目。
 8. 部署单个项目。
 9. 从部署配置文件加载连接详细信息（SQL Windows 身份验证）和 SQLCMD 变量。
+
+请观看这个 10 分钟的简短视频，了解 Azure Data Studio 中的 SQL 数据库项目扩展：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Build-SQL-Database-Projects-Easily-in-Azure-Data-Studio/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="install-the-sql-database-projects-extension"></a>安装 SQL 数据库项目扩展
 

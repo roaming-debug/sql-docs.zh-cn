@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c6841092edcb5eac4005d0a068f31c768aedf5bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 899a00273fbccb1e68e6690556e81bb3f0bde05c
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394383"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523902"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Attunity Oracle 更改数据捕获的已知错误和解决方法
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -26,38 +26,38 @@ ms.locfileid: "88394383"
 
 ### <a name="sql-server-2017"></a>SQL Server 2017
 
-**5.0.0.111 版**包含以下修复：
+**5.0.0.111 版** 包含以下修复：
 - Bug 修复 - 添加 Oracle 表时，Oracle CDC 设计器失败并显示“Incorrect syntax near the keyword 'KEY'”（关键字“KEY”附近的语法不正确）错误。 
 - 改进 - 改进了对 RAC 的支持，其中包括重启 RAC 节点时的处理改进。 
 - Bug 修复 - 由于从 v$log 请求 NEXT_CHANGE#，CDC 无法与 Oracle 10.2 配合使用。 
 
 
-**5.0.0.93 版**包含以下修复： 
+**5.0.0.93 版** 包含以下修复： 
 - 添加 Oracle 表时，Attunity Oracle Microsoft CDC 设计器失败并显示“Incorrect syntax near the keyword 'KEY'”（关键字“KEY”附近的语法不正确）错误。 
 
  
 ### <a name="sql-server-2016"></a>SQL Server 2016
 
-**4.0.107 版**包含以下修复：
+**4.0.107 版** 包含以下修复：
 - Bug 修复 - 添加 Oracle 表时，Oracle CDC 设计器失败并显示“Incorrect syntax near the keyword 'KEY'”（关键字“KEY”附近的语法不正确）错误。
 - 改进 - 改进了对 RAC 的支持，其中包括重启 RAC 节点时的处理改进。
 - Bug 修复 - 由于从 v$log 请求 NEXT_CHANGE#，CDC 无法与 Oracle 10.2 配合使用。
 
-**4.0.0.95 版**包含以下修复： 
+**4.0.0.95 版** 包含以下修复： 
 - Bug 修复 - 添加 Oracle 表时，Oracle CDC 设计器失败并显示“Incorrect syntax near the keyword 'KEY'”（关键字“KEY”附近的语法不正确）错误。
 
-**4.0.0.88 版**包含以下修复：
+**4.0.0.88 版** 包含以下修复：
 -  从 CDC 添加或删除表时，将删除 Attunity CDC 实例的“高级”选项中添加的属性。 
 - 应用添加 __$command_id 列的 SQL 修复后，Attunity CDC 停止工作
 
 ### <a name="sql-server-2014"></a>SQL Server 2014 
 
-**2.0.0.114 版**包含以下修复：
+**2.0.0.114 版** 包含以下修复：
 - Bug 修复 - 添加 Oracle 表时，Oracle CDC 设计器失败并显示“Incorrect syntax near the keyword 'KEY'”（关键字“KEY”附近的语法不正确）错误。
 - 改进 - 改进了对 RAC 的支持，其中包括重启 RAC 节点时的处理改进。
 - Bug 修复 - 由于从 v$log 请求 NEXT_CHANGE#，CDC 无法与 Oracle 10.2 配合使用。
 
-**2.0.0.92 版**包含以下修复： 
+**2.0.0.92 版** 包含以下修复： 
 - 从 CDC 添加或删除表时，将删除 Attunity CDC 实例的“高级”选项中添加的属性。 应用添加 __$command_id 列的 SQL 修复后，Attunity CDC 停止工作
 - Oracle 表 cdc.table_name 的元数据验证失败。 列 column_name 索引超出范围。  以及下述问题：使用 Attunity Oracle CDC 时，Oracle CDC 服务显示中止状态
     - 已在 _SQL Server 2014 RTM 累积更新 1_ 中修复，如知识库文章 [2894025](https://support.microsoft.com/kb/2894025) 中所述。
@@ -68,7 +68,7 @@ ms.locfileid: "88394383"
 
 ### <a name="sql-server-2012"></a>SQL Server 2012
 
-**1.1.0.102 版**包含以下修复： 
+**1.1.0.102 版** 包含以下修复： 
  
 - 从 CDC 添加或删除表时，将删除 Attunity CDC 实例的“高级”选项中添加的属性。 应用添加 __$command_id 列的 SQL 修复后，Attunity CDC 停止工作
 - Oracle CDC 实例在启动时会挂起，并且不会捕获更改。 Oracle 服务器内存可能会增加，直到内存用完或崩溃。
@@ -97,7 +97,7 @@ ms.locfileid: "88394383"
 
 ### <a name="management-console"></a>管理控制台
 
-当 CDC 实例在左窗格中突出显示时，你会在 Oracle 更改数据捕获设计器管理控制台中记录的“状态”消息中看到错误****。 
+当 CDC 实例在左窗格中突出显示时，你会在 Oracle 更改数据捕获设计器管理控制台中记录的“状态”消息中看到错误  。 
 
 ### <a name="query-trace-table"></a>查询跟踪表
 
@@ -105,29 +105,29 @@ ms.locfileid: "88394383"
 
 ### <a name="save-output-from-basic-logging"></a>保存基本日志记录的输出 
 
-若要捕获诊断，请在 Oracle 更改数据捕获管理控制台的“状态”选项卡上选择“收集诊断”****。 
+若要捕获诊断，请在 Oracle 更改数据捕获管理控制台的“状态”选项卡上选择“收集诊断”  。 
 
-![“收集诊断”链接](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
+![显示 Oracle 更改数据捕获管理控制台中“状态”选项卡的屏幕截图，其中突出显示了“收集诊断”选项。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
-选择开始时间和日志文件的位置。 然后选择“创建”以启动诊断收集****。 
+选择开始时间和日志文件的位置。 然后选择“创建”以启动诊断收集  。 
 
-![“收集诊断”链接](media/known-issues-resolutions-with-cdc-for-oracle-attunity/start-diagnostics.png)
+![“为 testTA 收集诊断”对话框的屏幕截图。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/start-diagnostics.png)
 
 ### <a name="detailed-errors"></a>详细错误
 
 可提高实例收集的跟踪级别，并重复该方案以收集更详细的日志记录。 为此，请在“操作”下选择“属性”，然后在“高级”选项卡的“高级设置”网格中添加新属性   。将属性的名称设置为 `trace`，然后将值设置为 `SOURCE`。 
 
-![“收集诊断”链接](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
+![显示“操作”下的“属性”选项的屏幕截图。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 
-重现该错误，然后选择“收集诊断”选项以收集日志****。 
+重现该错误，然后选择“收集诊断”选项以收集日志  。 
 
-![“收集诊断”链接](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
+![Oracle 更改数据捕获管理控制台中“状态”选项卡的另一个屏幕截图，其中突出显示了“收集诊断”选项。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
 ## <a name="ora-00942-table-of-view-does-not-exist"></a>ORA-00942 表视图不存在 
 
-这是 CDC 实例的“状态”消息字段中显示的常见错误****。 该实例进行了多次重试，因此状态图标会暂时变为绿色，但随后会失败，并显示红色感叹号和“意外”状态。 
+这是 CDC 实例的“状态”消息字段中显示的常见错误  。 该实例进行了多次重试，因此状态图标会暂时变为绿色，但随后会失败，并显示红色感叹号和“意外”状态。 
 
-![Oracle 错误](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
+![显示 CDC 实例的“状态”消息字段中所示的常见错误的屏幕截图。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
 
 ```
 "ERROR","computername","ERROR","UNEXPECTED",
@@ -151,9 +151,9 @@ ms.locfileid: "88394383"
 
 安装程序文件文件夹 `C:\Program Files\Change Data Capture for Oracle by Attunity\Attunity.SqlServer.XdbCdcDesigner.chm` 中包含的帮助文件详细列出了所有必需的权限。  有关完整列表，请参阅 .chm 文件中标题为“连接到 Oracle 源数据库”的页面。
 
-可通过在左窗格中选择 CDCInstance 并在“CDC 设计器”窗口最右侧的“操作”窗格中选择“属性”按钮来设置用户帐户****。 可从属性对话框页面更改 Oracle 日志挖掘身份验证帐户。
+可通过在左窗格中选择 CDCInstance 并在“CDC 设计器”窗口最右侧的“操作”窗格中选择“属性”按钮来设置用户帐户  。 可从属性对话框页面更改 Oracle 日志挖掘身份验证帐户。
 
-![Oracle 错误](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
+![显示“testTA 属性”对话框的“Oracle”选项卡的屏幕截图。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 
 
   

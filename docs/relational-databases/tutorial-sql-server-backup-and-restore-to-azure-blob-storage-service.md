@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: c1f79050a4bbabcfc8729ccdc270d47fe9055c29
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809093"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524062"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入门：将 SQL 备份和还原到 Azure Blob 存储服务
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ GO
 
 1. 选择“选择备份目标”对话框上的“新建容器”以启动“连接到 Microsoft 订阅”窗口  。 
 
-   ![备份目标](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
+   ![“选择备份目标”对话框窗口的屏幕截图，其中突出显示了“新建容器”选项。](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
 1. 通过选择“登录...”登录到 Azure 门户，然后完成登录过程。 
 1. 从下拉列表中选择你的订阅。 
@@ -206,7 +206,7 @@ GO
 
 1. 从下拉列表中选择容器，然后将其粘贴在创建凭据时保存的共享访问签名 (SAS) 中。 
 
-   ![备份目标](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
+   ![“选择备份文件位置”对话框的屏幕截图，其中已填充“共享访问签名”字段。](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
 
 1. 选择“确定”以选择备份文件位置。 
 1. 展开“容器”，然后选择备份文件所在的容器。 

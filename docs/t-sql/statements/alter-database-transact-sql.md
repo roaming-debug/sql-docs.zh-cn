@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f41b3cc0e5a9d895d83c6696105bdded8302217
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 73525f3a89fd0e132de819deefee840c8db8944a
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725908"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497031"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "91725908"
         [SQL 数据库](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -140,7 +140,7 @@ database_name 要修改的数据库的名称。
 > [!NOTE]
 > 此选项在包含的数据库中不可用。
 
-CURRENT **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。
+CURRENT **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。
 
 指定应更改当前使用的数据库。
 
@@ -252,7 +252,7 @@ GO
 
 以下示例创建了一个名为 `testdb`、排序规则为 `SQL_Latin1_General_CP1_CI_A`S 的数据库，然后将 `testdb` 数据库的排序规则更改为 `COLLATE French_CI_AI`。
 
-**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
+**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
 
 ```sql
 USE master;
@@ -295,7 +295,7 @@ GO
         \* SQL 数据库 \*&nbsp;
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -462,7 +462,7 @@ MODIFY (MAXSIZE = [100 MB \| 500 MB \| 1 \| 1024...4096] GB) 指定数据库的�
 |1024 GB|空值|√|√|√|√ (D)|
 |从 1024 GB 到最大 4096 GB，增量为 256 GB*|空值|空值|空值|空值|√|
 
-\* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。 P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关 DTU 模型资源限制的其他详细信息，请参阅 [DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
+\* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。 P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关 DTU 模型资源限制的其他详细信息，请参阅 [DTU 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。
 
 DTU 模型的 MAXSIZE 值（如果指定）必须为上表中所示的指定服务层的有效值。
 
@@ -558,7 +558,7 @@ DTU 模型的 MAXSIZE 值（如果指定）必须为上表中所示的指定服�
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |最大数据大小 (GB)|1280|1536|2048|4096|4096|
 
-如果使用 vCore 模型时未设置 `MAXSIZE` 值，则默认为 32 GB。 有关 vCore 模型资源限制的其他详细信息，请参阅 [vCore 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
+如果使用 vCore 模型时未设置 `MAXSIZE` 值，则默认为 32 GB。 有关 vCore 模型资源限制的其他详细信息，请参阅 [vCore 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。
 
 以下规则适用于 MAXSIZE 和 EDITION 参数：
 
@@ -586,9 +586,9 @@ SERVICE_OBJECTIVE
 
   - 指定计算大小（服务目标）。 服务目标的可用值包括：`HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80`。
 
-有关服务目标说明以及大小、版本和服务目标组合的详细信息，请参阅 [Azure SQL 数据库服务层和性能级别](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)、[DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)和 [vCore 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。 删除了对 PRS 服务目标的支持。 如有问题，请使用此电子邮件别名：premium-rs@microsoft.com。
+有关服务目标说明以及大小、版本和服务目标组合的详细信息，请参阅 [Azure SQL 数据库服务层和性能级别](/azure/azure-sql/database/purchasing-models)、[DTU 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)和 [vCore 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。 删除了对 PRS 服务目标的支持。 如有问题，请使用此电子邮件别名：premium-rs@microsoft.com。
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) 若要向弹性池中添加现有数据库，请将数据库的 SERVICE_OBJECTIVE 设置为 ELASTIC_POOL，并提供弹性池的名称。 还可以使用此选项将数据库更改为相同服务器中的不同弹性池。 有关详细信息，请参阅[弹性池有助于管理和缩放多个 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。 若要从弹性池中删除数据库，请使用 ALTER DATABASE 将 SERVICE_OBJECTIVE 设置为单个数据库计算大小（服务目标）。
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) 若要向弹性池中添加现有数据库，请将数据库的 SERVICE_OBJECTIVE 设置为 ELASTIC_POOL，并提供弹性池的名称。 还可以使用此选项将数据库更改为相同服务器中的不同弹性池。 有关详细信息，请参阅[弹性池有助于管理和缩放多个 Azure SQL 数据库](/azure/azure-sql/database/elastic-pool-overview)。 若要从弹性池中删除数据库，请使用 ALTER DATABASE 将 SERVICE_OBJECTIVE 设置为单个数据库计算大小（服务目标）。
 
 > [!NOTE]
 > 超大规模服务层中的数据库不能添加到弹性池。
@@ -763,7 +763,7 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
         [SQL 数据库](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        \* SQL 数据库<br />托管实例 \* &nbsp;
+        **_\* SQL 托管实例 \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -899,7 +899,7 @@ ALTER DATABASE WideWorldImporters
         [SQL 数据库](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -998,7 +998,7 @@ MAXSIZE 默认为 245,760 GB (240 TB)。
 
 数据库中允许的最大行存储数据大小。 存储在行存储表中的数据、列存储索引的增量存储或非聚集索引（聚集在列存储索引上）都不可超过 MAXSIZE。 压缩到列存储格式的数据没有大小限制，不受 MAXSIZE 约束。
 
-SERVICE_OBJECTIVE 指定计算大小（服务目标）。 有关 Azure Synapse 服务目标的详细信息，请参阅[数据仓库单位 (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)。
+SERVICE_OBJECTIVE 指定计算大小（服务目标）。 有关 Azure Synapse 服务目标的详细信息，请参阅[数据仓库单位 (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)。
 
 ## <a name="permissions"></a>权限
 
@@ -1013,7 +1013,7 @@ SERVICE_OBJECTIVE 指定计算大小（服务目标）。 有关 Azure Synapse �
 
 当前数据库必须不同于你正在更改的数据库，因此连接到 master 数据库之后必须运行 ALTER。
 
-默认情况下，SQL Analytics 中 COMPATIBILITY_LEVEL 设置为 130，且无法更改。 有关详细信息，请参阅[在 Azure SQL 数据库中通过兼容性级别 130 优化查询性能](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
+默认情况下，SQL Analytics 中 COMPATIBILITY_LEVEL 设置为 130，且无法更改。 有关详细信息，请参阅[在 Azure SQL 数据库中通过兼容性级别 130 优化查询性能](./alter-database-transact-sql-compatibility-level.md)。
 
 > [!NOTE]
 > COMPATIBILITY_LEVEL 仅适用于预配的资源（池）。
@@ -1060,7 +1060,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ## <a name="see-also"></a>另请参阅
 
 - [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
-- [参考文章的 Azure Synapse Analytics 列表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
+- [参考文章的 Azure Synapse Analytics 列表](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
@@ -1073,7 +1073,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [SQL 数据库](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1142,7 +1142,7 @@ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 异步统计信息更新选项 AUT
 
 升级到 AU7 后创建的新数据库的默认值为 ON。 升级前创建的数据库的默认值为 OFF。
 
-有关统计信息的详细信息，请参阅[统计信息](/sql/relational-databases/statistics/statistics)。
+有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。
 
 ## <a name="permissions"></a>权限
 

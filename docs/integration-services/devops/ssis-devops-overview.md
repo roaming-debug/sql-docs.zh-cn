@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 597792aa200edf6dcb9cfe49c95ab5e1befa0c55
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194080"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92343649"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>SQL Server Integration Services (SSIS) DevOps 工具 Azure DevOps 扩展
 
@@ -344,6 +344,12 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 |sensitive|环境变量的值是否是敏感值。|有效输入为： <br> true <br> *false*|
 
 ## <a name="release-notes"></a>发行说明
+
+### <a name="version-103"></a>版本 1.0.3
+
+发行日期：2020 年 10 月 21 日
+
+- 允许为 SSIS 部署任务和 SSIS 目录配置任务指定连接字符串后缀。
 
 ### <a name="version-102"></a>版本 1.0.2
 

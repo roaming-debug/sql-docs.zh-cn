@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0854e117ccc765b9e4b47011e589244e71730810
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351213"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257966"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service for Oracle by Attunity
 
@@ -27,7 +27,11 @@ ms.locfileid: "88351213"
   
 ## <a name="installation"></a>安装  
 
-Microsoft Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server 2016 属于 SQL Server 2016 功能包的一部分。 从 [SQL Server 2016 功能包网页](https://go.microsoft.com/fwlink/?LinkId=746297)下载功能包的组件。
+通过以下链接下载用于对应的 SQL Server 版本的 Microsoft Change Data Capture Designer and Service for Oracle by Attunity：
+
+- [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service 功能包](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service 功能包](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Microsoft SQL Server 2019 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=100303)
   
  Oracle CDC 服务可以安装在对要捕获的源 Oracle 数据库以及目标 CDC 数据库所在的目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例具有访问权限的任何支持的 Windows 计算机上。 CDC 服务不需要 Oracle 数据库或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的本地安装，只需要其支持的客户端。 有关安装所需数据库组件的位置的信息，请参阅本主题中的 **数据库必备组件** 。  
   
@@ -44,7 +48,7 @@ Microsoft Change Data Capture Designer and Service for Oracle by Attunity for Mi
 -   Windows Server 2016
   
 ## <a name="database-prerequisites"></a>数据库必备组件  
- 若要使用 Oracle CDC 服务，您必须安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client Oracle 软件。 这是应从 Oracle 获取并在安装 Oracle CDC 服务之前安装的必备组件。 此外，您需要使用 SQL Server 安装程序安装 SQL Server ODBC 客户端。  
+ 若要使用适用于 Oracle 的 CDC 服务，必须安装与 Oracle 数据库版本兼容的 Oracle 客户端。 这是应从 Oracle 获取并在安装 Oracle CDC 服务之前安装的必备组件。 此外，您需要使用 SQL Server 安装程序安装 SQL Server ODBC 客户端。  
   
  Oracle CDC 服务支持以下版本：  
   
@@ -55,7 +59,7 @@ Microsoft Change Data Capture Designer and Service for Oracle by Attunity for Mi
 -   经典安装的 Oracle Database 12c。 （不支持多租户安装。）  
   
 ### <a name="target-sql-server-database"></a>目标 SQL Server 数据库  
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 ## <a name="running-the-installation-program"></a>运行安装程序  
  若要安装 Oracle CDC 服务，请打开针对您正使用的 Windows 平台（32/64 位）的安装向导，并且按照屏幕上的指示执行。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866697"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679039"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>通过 Azure Data Studio 查询使用 Always Encrypted 的列
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91866697"
 ### <a name="example"></a>示例
 假定 `SSN` 是 `Patients` 表中的加密列，如果为数据库连接禁用了 Always Encrypted，则以下所示的查询将检索二进制密码文本值。   
 
-![always-encrypted-ads-query-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
+![屏幕截图显示了 SELECT * FROM [dbo].[Patients] 查询以及作为二进制已加密文本值显示的查询结果。](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
  
 ## <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>检索存储在加密列中的纯文本值    
 本节介绍如何检索以已加密文本形式存储在加密列中的数据。
@@ -52,7 +52,7 @@ ms.locfileid: "91866697"
 ### <a name="example"></a>示例
 假定 SSN 是 `Patients` 表中的加密列，如果为数据库连接启用了 Always Encrypted，并且你有权访问为 `SSN` 列配置的列主密钥，则以下所示的查询将返回纯文本值。   
 
-![always-encrypted-ads-query-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
+![屏幕截图显示了 SELECT * FROM [dbo].[Patients] 查询以及作为纯文本值显示的查询结果。](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
  
 ## <a name="sending-plaintext-values-targeting-encrypted-columns"></a>发送针对加密列的纯文本值       
 本节介绍如何运行发送针对加密列的值的查询。 例如，通过存储在加密列中的值来插入、更新或筛选的查询：
@@ -71,7 +71,7 @@ ms.locfileid: "91866697"
 ### <a name="example"></a>示例
 假设 `SSN` 是 `Patients` 表中加密的 `char(11)` 列，则以下脚本将尝试在 SSN 列中查找包含 `'795-73-9838'` 的行。 如果为数据库连接启用了 Always Encrypted，为查询窗口启用了 Always Encrypted 参数化，并且你有权访问为 `SSN` 列配置的列主密钥，则返回结果。   
 
-![always-encrypted-ads-query-parameters](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
+![屏幕截图显示了 DECLARE @SSN char(11) = '795-73-9838' SELECT * FROM [dbo].[Patients] WHERE [SSN] = @SSN 查询以及查询结果。](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
 
 ## <a name="permissions-for-querying-encrypted-columns"></a>查询加密列的权限
 
@@ -103,7 +103,7 @@ ms.locfileid: "91866697"
 3. 如果使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，且 SQL Server 实例配置了安全 enclave，则可以指定 enclave 协议和 enclave 证明 url。 如果 SQL Server 实例未使用安全 enclave，请确保将“证明协议”和“Enclave 证明 URL”字段留空 。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md)。
 4. 单击“确定”以关闭“高级属性” 。
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+![短片介绍了为连接启用 Always Encrypted 的相关步骤。](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
 
 > [!TIP]
 > 若要在现有查询窗口中启用和禁用 Always Encrypted，请先单击“断开连接”，再单击“连接”并完成以上步骤，以使用“Always Encrypted”字段的所需值重新连接到数据库  。 
@@ -134,7 +134,7 @@ WHERE [SSN] = @SSN
 3. 选择或取消选择“启用 Always Encrypted 参数化” 。
 4. 关闭“设置”窗口。
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
+![短片介绍了如何启用/禁用 Always Encrypted 参数化。](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
 
 > [!NOTE]
 > Always Encrypted 参数化仅在使用启用了 Always Encrypted 的数据库连接的查询中有效（请参阅[为数据库连接启用和禁用 Always Encrypted](#enabling-and-disabling-always-encrypted-for-a-database-connection)）。 如果查询窗口使用未启用 Always Encrypted 的数据库连接，则不会对 Transact-SQL 变量进行参数化。

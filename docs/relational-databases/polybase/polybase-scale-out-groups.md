@@ -5,6 +5,8 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+f1_keywords:
+- sql13.swb.polybasescaleoutcluster.page.f1
 helpviewer_keywords:
 - PolyBase
 - PolyBase, scale-out groups
@@ -14,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: b636a615544cdf3ab642e34b1d02c59db2e11872
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892507"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523833"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 横向扩展组
 
@@ -29,7 +31,7 @@ ms.locfileid: "91892507"
   
 请参阅 [PolyBase 入门](./polybase-guide.md) 和 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。
   
-![PolyBase 横向扩展组](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 横向扩展组")  
+![显示 PolyBase 横向扩展组的示意图。](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 横向扩展组")  
   
 ## <a name="head-node"></a>头节点  
 
@@ -48,7 +50,7 @@ ms.locfileid: "91892507"
 > [!NOTE]
 >  这不同于通过 Hadoop 的横向扩展读取。 
 
-![PolyBase 横向扩展组](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase 横向扩展组")
+![PolyBase 横向扩展读取](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase 横向扩展组")
   
 ## <a name="distributed-query-processing"></a>分布式查询处理  
 

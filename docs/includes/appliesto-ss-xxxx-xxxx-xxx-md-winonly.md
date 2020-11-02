@@ -1,1 +1,1 @@
-<Token>适用于：  ![是](media/yes-icon.png)SQL Server（仅限 Windows）![否](media/no-icon.png)Azure SQL 数据库![否](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![](media/no-icon.png)并行数据仓库</Token>
+<Token>适用于：:::image type="icon" source="media/yes-icon.png":::SQL Server（仅限 Windows）:::image type="icon" source="media/no-icon.png":::Azure SQL 数据库 :::image type="icon" source="media/no-icon.png":::Azure Synapse Analytics (SQL DW) :::image type="icon" source="media/no-icon.png":::并行数据仓库 </Token>

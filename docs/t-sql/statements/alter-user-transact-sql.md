@@ -26,12 +26,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca728137fc4fb76ae4109233b43732a3befbfca6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ecb1710f992535ca4e6ebca3a3f825c5e1bffc9a
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478989"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496975"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -51,7 +51,7 @@ ms.locfileid: "88478989"
         [SQL 数据库](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -93,7 +93,7 @@ NAME = newUserName
 
  DEFAULT_SCHEMA = { schemaName | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
 
- PASSWORD **=** '*password*' **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ PASSWORD **=** ' *password* ' **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
  指定正在更改的用户的密码。 密码是区分大小写的。
 
@@ -114,7 +114,7 @@ NAME = newUserName
 > [!NOTE]
 > 此选项只能在包含数据库中指定，且只能用于包含的用户。
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **适用于** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
 
  取消在大容量复制操作期间对服务器进行加密元数据检查。 这使用户能够在表或数据库之间大容量复制加密数据，而无需对数据进行解密。 默认为 OFF。
 
@@ -196,7 +196,7 @@ GO
 
  以下示例可在一个语句中为一个包含数据库用户更改若干个选项。
 
-**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。
+**适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。
 
 ```sql
 ALTER USER Philip
@@ -226,7 +226,7 @@ GO
         \* SQL 数据库 \*
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -288,7 +288,7 @@ ALTER USER userName
 
  DEFAULT_SCHEMA = { schemaName | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
 
- PASSWORD **=** '*password*' **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ PASSWORD **=** ' *password* ' **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
  指定正在更改的用户的密码。 密码是区分大小写的。
 
@@ -302,7 +302,7 @@ ALTER USER userName
 > [!NOTE]
 > 此选项仅适用于包含的用户。
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **适用于** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
 
  取消在大容量复制操作期间对服务器进行加密元数据检查。 这使用户能够在表或数据库之间大容量复制加密数据，而无需对数据进行解密。 默认为 OFF。
 
@@ -411,7 +411,7 @@ GO
         [SQL 数据库](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        _\*SQL 数据库<br />托管实例 \*_ 
+        **_\* SQL 托管实例 \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -679,7 +679,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL 数据库](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -804,7 +804,7 @@ GO
         [SQL 数据库](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)

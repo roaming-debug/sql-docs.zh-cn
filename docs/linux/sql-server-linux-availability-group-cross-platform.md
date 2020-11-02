@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac19c1c8e0dfc2e8a8cf4711400eb3c5cb29b5f2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 3800029fb04f058f6f2a0f00ed3f859d1385782e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784836"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523862"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>在 Windows 和 Linux 上配置 SQL Server AlwaysOn 可用性组（跨平台）
 
@@ -69,7 +69,7 @@ ms.locfileid: "91784836"
 
    下图显示了此完整步骤。
 
-   ![启用可用性组 Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![显示命令的 Git Bash 窗口的屏幕截图。](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 1. 同时在两台服务器上配置 hosts 文件或向 DNS 注册服务器名称。
 
@@ -110,7 +110,7 @@ ms.locfileid: "91784836"
 
    下图中为证书和密钥正确设置了所有权和组。
 
-   ![启用可用性组 Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![Git Bash 窗口的屏幕截图，其中显示 /var/opt/mssql/data 文件夹中的 .cer 和 .pvk。](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
 1. 在次要副本上，创建数据库登录名和密码并创建主密钥。
