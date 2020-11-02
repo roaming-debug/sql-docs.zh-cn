@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257329"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793694"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>快速入门：使用 Azure Data Studio，在 Azure Synapse Analytics 中借助专用 SQL 池连接和查询数据
 
@@ -36,7 +36,7 @@ ms.locfileid: "92257329"
 
 1. 首次运行 Azure SQL Data，应会打开“连接”页。 如果无法看到“连接”页，请选择“SERVERS”边栏中的“添加连接”或“新建连接”图标：
    
-   ![“新建连接”图标](media/quickstart-sql-dw/new-connection-icon.png)
+   ![“连接”页面的屏幕截图，其中突出显示了“新建连接”图标。](media/quickstart-sql-dw/new-connection-icon.png)
 
 2. 本文使用 SQL 登录名，但也支持 Windows 身份验证 。 使用 Azure SQL 服务器的服务器名称、用户名和密码，按如下所示填写字段：
 
@@ -136,7 +136,7 @@ ms.locfileid: "92257329"
 
 ## <a name="clean-up-resources"></a>清理资源
 
-如果不打算继续使用本文中创建的示例数据库，则[删除资源组](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)。
+如果不打算继续使用本文中创建的示例数据库，则[删除资源组](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)。
 
 ## <a name="next-steps"></a>后续步骤
 有关详细信息，请访问[使用 Azure Data Studio连接到 Synapse SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio)。
