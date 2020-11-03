@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2e9f0619f26abf8b077059c7e12c7fc34c51a2e6
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 433f94f07aaefc98a94959ce995cf5d966536e08
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081296"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439363"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>步骤 1：配置用于 ADO.NET 开发的开发环境
 
@@ -30,7 +30,7 @@ ms.locfileid: "92081296"
 
 ### <a name="adonet-for-windows"></a>ADO.NET，适用于 Windows
 
-- ![带圆圈的框架下载箭头](../../ssms/media/download-icon.png)[下载并安装 .NET Framework，包括 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- :::image type="icon" source="../../ssms/media/download-icon.png"::: [下载并安装 .NET Framework，包括 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 - 安装 Visual Studio Community 或类似的集成开发环境 (IDE) 来编写和编译 C# 源代码。 Microsoft 现在免费提供 Visual Studio Community  。  
     - [下载 Visual Studio 社区](https://www.visualstudio.com/products/visual-studio-community-vs)  
@@ -41,4 +41,4 @@ ms.locfileid: "92081296"
 
 可从以下位置获取下载适用于各种操作系统的 .NET Core 的链接：
 
-- ![带圆圈的核心下载箭头](../../ssms/media/download-icon.png)[下载并安装 .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- :::image type="icon" source="../../ssms/media/download-icon.png"::: [下载并安装 .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

@@ -8,12 +8,12 @@ description: 了解如何通过品牌包为业务打造网站门户的品牌外�
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2079a44a4b9f3977ae09f83685efa122e9467a96
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888118"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907195"
 ---
 # <a name="branding-the-web-portal"></a>设置 Web 门户的品牌
 
@@ -98,8 +98,8 @@ LESS 样式表中包含了引用预定义 LESS 变量的块，如下所示。
   
 Reporting Services 的 colors.json 文件有两种主要类别，项按这两种类别分组。  
   
-- **接口**：包括特定于 Reporting Services Web 门户的项。  
-- **主题**：包括特定于所创建的移动报表中的项。  
+- **接口** ：包括特定于 Reporting Services Web 门户的项。  
+- **主题** ：包括特定于所创建的移动报表中的项。  
   
 接口部细分为下列分组。  
   
@@ -116,7 +116,7 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
 
 第一次使用移动报表发布服务器连接到部署了品牌包的服务器时，主题会添加到应用右上角菜单中的可用主题中。  
   
-![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
+![“选择调色板”对话框的屏幕截图。](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
 然后你就可以对所创建的任何移动报表使用该主题，即使报表不适用于已在其上部署主题的同一服务器。   
   
@@ -134,11 +134,11 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
   
 2.  选择“站点设置”。   
   
-    ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
+    ![“设置”下拉列表的屏幕截图，其中突出显示了“网站设置”选项。](../reporting-services/media/ssrsgearmenu.png)  
   
 3.  选择“品牌”  。  
   
-    ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
+    ![“网站设置”页面的屏幕截图，其中选择了“品牌打造”选项。](../reporting-services/media/ssrsbranding.png) 
   
 “当前已安装的品牌包”  会显示已上传的包的名称，或者显示“无”。  
   
@@ -150,7 +150,7 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
-<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
     type="UniversalBrand"  
     version="2.0.2"  
     name="Multicolored example brand"  

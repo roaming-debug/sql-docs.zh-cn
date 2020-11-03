@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 204885c83b400be7f134a7c8a5e622f3c3488797
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448281"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907305"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>向移动报表添加仪表 | Reporting Services
 仪表是移动报表中最基本且使用最广泛的视觉对象。 它们显示数据集中的单个值 - 值本身，或相比于目标的值。
@@ -25,7 +25,7 @@ ms.locfileid: "79448281"
   
 在 SQL Server 移动报表发布服务器中，所有仪表具有至少一个共同属性：一个主值，设置为移动报表某个数据表中的数值字段。  
 
-除数字仪表外的所有仪表还可以显示比较值或 *差异*值 — 主值和比较值之间的关系。 比较值通常是目标，而仪表是达到该目标的进度或实际值与目标值之间的差异的可视指示器。
+除数字仪表外的所有仪表还可以显示比较值或 *差异* 值 — 主值和比较值之间的关系。 比较值通常是目标，而仪表是达到该目标的进度或实际值与目标值之间的差异的可视指示器。
 
 仪表只能表示其主值的一个聚合值以及其比较值的一个聚合值。 仪表聚合为标准聚合 — 总和、平均值、最小值、最大值等等。 默认情况下，仪表值为总和，用于显示包含在当前已筛选数据（供仪表控件使用）中的所有值的总计。 
 
@@ -43,7 +43,7 @@ ms.locfileid: "79448281"
 
 4. [可选] 若要更改聚合，请选择“选项”，然后选择其他聚合  。
    
-   >**注意**：如果更改主值的聚合，可能还需要更改比较值的聚合，尽管在某些情况下，可能需要混用聚合方法。  
+   >**注意** ：如果更改主值的聚合，可能还需要更改比较值的聚合，尽管在某些情况下，可能需要混用聚合方法。  
 
 ## <a name="filter-a-gauge"></a>筛选仪表
   
@@ -53,7 +53,7 @@ ms.locfileid: "79448281"
 
 2. 在“筛选依据”下面选择要筛选仪表的导航器。
 
-   ![mobile-report-gauge-navigator](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
+   ![展开的“主值选项”的屏幕截图，其中选择了“按产品列表筛选”选项。](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
  
 ## <a name="set-visual-properties-for-a-gauge"></a>设置仪表的视觉对象属性
   

@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 97df8916b713feae56a7cd5344e7fbdc93038317
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 70ca43a017edaa760a5ffa999f40d99516f232bb
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358415"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914329"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集上的控制器？
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-控制器托管用于部署和管理大数据群集的核心逻辑。 它负责与 Kubernetes、作为群集一部分的 SQL Server 实例以及 HDFS 和 Spark 等其他组件的所有交互。
+控制器托管用于部署和管理 SQL Server 大数据群集的核心逻辑。 它负责与 Kubernetes、作为群集一部分的 SQL Server 实例以及 HDFS 和 Spark 等其他组件的所有交互。
 
 控制器服务提供以下核心功能：
 

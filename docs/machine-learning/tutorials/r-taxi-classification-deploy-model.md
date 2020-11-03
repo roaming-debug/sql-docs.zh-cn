@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: 在本系列教程的第五部分，你将使用 SQL 机器学习中的 T-SQL 函数来操作 SQL 存储过程中的嵌入式 R 脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d5132b0616dd223e195f47b1333308a920fb2572
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196262"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412517"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R 教程：在 SQL 存储过程中运行预测
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "92196262"
 
 + 批处理评分模式：使用 SELECT 查询作为存储过程的输入。 存储过程将返回与输入事例对应的观测表。
 
-+ **单个评分模式**：传递一组单独的参数值作为输出。  存储过程将返回单个行或值。
++ **单个评分模式** ：传递一组单独的参数值作为输出。  存储过程将返回单个行或值。
 
 在本文中，你将：
 
@@ -44,39 +44,39 @@ ms.locfileid: "92196262"
 
 ## <a name="basic-scoring"></a>基本评分
 
-存储过程 RxPredict 说明了在存储过程中包装 RevoScaleR rxPredict 调用的基本语法****。
+存储过程 RPredict 说明了在存储过程中包装 `PREDICT` 调用的基本语法。
 
 ```sql
-CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
+CREATE PROCEDURE [dbo].[RPredict] (@model varchar(250), @inquery nvarchar(max))
 AS 
 BEGIN 
 
 DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);  
 EXEC sp_execute_external_script @language = N'R',
   @script = N' 
-    mod <- unserialize(as.raw(model)); 
-    print(summary(mod)) 
-    OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE); 
-    str(OutputDataSet) 
-    print(OutputDataSet) 
-    ', 
-  @input_data_1 = @inquery, 
+    mod <- unserialize(as.raw(model));
+    print(summary(mod))
+    OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
+    str(OutputDataSet)
+    print(OutputDataSet)
+    ',
+  @input_data_1 = @inquery,
   @params = N'@model varbinary(max)',
   @model = @lmodel2 
-  WITH RESULT SETS ((Score float));
+  WITH RESULT SETS (("Score" float));
 END
 GO
 ```
 
 + SELECT 语句从数据库中获取序列化的模型，并将模型存储在 R 变量 `mod` 中以便使用 R 对其进行进一步处理。
 
-+ 从 `@inquery` 中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询中获得要评分的新案例，它是存储过程的第一个参数。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。 此数据帧将被传递给 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 中的 [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) 函数，该函数将生成评分。
++ 从 `@inquery` 中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询中获得要评分的新案例，它是存储过程的第一个参数。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。 此数据帧将被传递给 [PREDICT](/sql/t-sql/queries/predict-transact-sql) 函数，该函数将生成评分。
   
-  `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
+  `OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));`
   
   由于数据帧可以包含单个行，你可以使用相同的代码来进行批量或单个评分。
   
-+ `rxPredict` 函数返回的值是一个浮动值，该值表示司机获得小费（数量不限）的概率****。
++ `PREDICT` 函数返回的值是一个浮动值，该值表示司机获得小费（数量不限）的概率。
 
 ## <a name="batch-scoring-a-list-of-predictions"></a>批处理评分（预测列表）
 
@@ -101,16 +101,16 @@ GO
    **示例结果**
 
    ```text
-   passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
-   1  283 0.7 2013-03-27 14:54:50.000   0.5427964547
-   1  289 0.7 2013-02-24 12:55:29.000   0.3797099614
-   1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
+   passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime          direct_distance
+   1                 283                  0.7            2013-03-27 14:54:50.000   0.5427964547
+   1                 289                  0.7            2013-02-24 12:55:29.000   0.3797099614
+   1                 214                  0.7            2013-06-26 13:28:10.000   0.6970098661
    ```
 
-2. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中创建名为 RxPredictBatchOutput 的存储过程****。
+2. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中创建名为 RPredictBatchOutput 的存储过程。
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
+   CREATE PROCEDURE [dbo].[RPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
    AS
    BEGIN
    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
@@ -119,7 +119,7 @@ GO
      @script = N'
        mod <- unserialize(as.raw(model));
        print(summary(mod))
-       OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);
+       OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
        str(OutputDataSet)
        print(OutputDataSet)
      ',
@@ -138,14 +138,13 @@ GO
    SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
    
    -- Call the stored procedure for scoring and pass the input data
-   EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
+   EXEC [dbo].[RPredictBatchOutput] @model = 'RTrainLogit_model', @inquery = @query_string;
    ```
   
 存储过程将返回一系列值，表示对每个排名前 10 的行程的预测。 但是，排名靠前的行程也是单乘客行程，并且行程距离相对较短，司机不太可能获得小费。
 
 > [!TIP]
-> 
-> 你可能还会返回该预测的概率评分（而不是返回“有小费”和“无小费”的结果），然后将 WHERE 子句应用到“分数”列的值以使用如 0.5 或 0.7 之类的阈值将评分分类为“可能会给小费”或“不可能给小费”__。 此步骤不包含在存储过程中，但很容易执行。
+> 你可能还会返回该预测的概率评分（而不是返回“有小费”和“无小费”的结果），然后将 WHERE 子句应用到“分数”列的值以使用如 0.5 或 0.7 之类的阈值将评分分类为“可能会给小费”或“不可能给小费”。 此步骤不包含在存储过程中，但很容易执行。
 
 ## <a name="single-row-scoring-of-multiple-inputs"></a>多个输入的单行评分
 
@@ -155,10 +154,10 @@ GO
   
 如果从外部应用程序调用存储过程，请确保数据满足 R 模型的要求。 这可能包括确保输入的数据可以被转换为 R 数据类型或验证数据类型和数据长度。
 
-1. 创建存储过程 RxPredictSingleRow****。
+1. 创建存储过程 RPredictSingleRow。
   
    ```sql
-   CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+   CREATE PROCEDURE [dbo].[RPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
    AS
    BEGIN
    DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
@@ -168,7 +167,7 @@ GO
      @script = N'  
        mod <- unserialize(as.raw(model));  
        print(summary(mod));  
-       OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);  
+       OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
        str(OutputDataSet);
        print(OutputDataSet); 
        ',  
@@ -180,10 +179,10 @@ GO
 
 2. 通过手动提供值来进行试用。
   
-   打开一个新的“查询”窗口，调用存储过程，为每个参数提供值****。 参数表示模型所使用的功能列，并且这些参数是必需的。
+   打开一个新的“查询”窗口，调用存储过程，为每个参数提供值。 参数表示模型所使用的功能列，并且这些参数是必需的。
 
    ```sql
-   EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
+   EXEC [dbo].[RPredictSingleRow] @model = 'RTrainLogit_model',
    @passenger_count = 1,
    @trip_distance = 2.5,
    @trip_time_in_secs = 631,
@@ -196,7 +195,7 @@ GO
    或者，使用[存储过程的参数](../../relational-databases/stored-procedures/specify-parameters.md)支持的较短格式：
   
    ```sql
-   EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+   EXEC [dbo].[RPredictSingleRow] 'RTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
    ```
 
 3. 结果表明从排名前 10 的行程中获得小费的概率非常低（零），因为所有这些行程都是距离相对较短的单乘客行程。

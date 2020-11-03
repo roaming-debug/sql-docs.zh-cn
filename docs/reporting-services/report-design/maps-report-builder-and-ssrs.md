@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b3c37e642ba5c9d570fc754f5eca3ab0b57d24a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 9e6dde5a520b845cac47fbfd3c4820d35958c9ba
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881909"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907255"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地图（报表生成器和 SSRS）
   若要针对地理背景实现业务数据的可视化，可以向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加地图。 您选择的地图类型取决于您要在报表中传达的信息。 您可以添加只显示位置的地图、气泡地图（气泡大小随着某地区的家庭数量而变化）、标记地图（标记样式随每个商店盈利情况最好的产品而变化）或线条地图（显示商店之间的路线）。  
@@ -58,7 +58,7 @@ ms.locfileid: "84881909"
  若要对地图上的数据实现可视化效果，分析数据与空间数据必须具有某种关系。 当空间数据和分析数据来自同一个源时，关系是已知的。 当空间数据和分析数据来自不同源时，必须指定匹配字段以使它们相关。  
   
 ### <a name="spatial-data"></a>空间数据  
- 空间数据由一系列坐标组成。 来自数据源的空间数据可以是单个点、多个点、单一线条、多个线条或一组多边形。 每组坐标定义一个“地图元素” **，例如，表示国家/地区轮廓的多边形、表示道路的线条或表示市县所在位置的点。  
+ 空间数据由一系列坐标组成。 来自数据源的空间数据可以是单个点、多个点、单一线条、多个线条或一组多边形。 每组坐标定义一个“地图元素” ，例如，表示国家/地区轮廓的多边形、表示道路的线条或表示市县所在位置的点。  
   
  空间数据基于以下坐标系之一：  
   
@@ -143,7 +143,7 @@ ms.locfileid: "84881909"
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
 ##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> 添加 Bing 地图图块层  
- 您可以为 Bing 地图图块添加一个层，以便为由视区定义的当前地图视图提供地理背景。 若要添加图块层，必须指定 **“地理”** 坐标系和投影类型 **Mercator**。 将自动从 Bing 地图 Web 服务中检索与您选择的视区中心和缩放级别匹配的图块。  
+ 您可以为 Bing 地图图块添加一个层，以便为由视区定义的当前地图视图提供地理背景。 若要添加图块层，必须指定 **“地理”** 坐标系和投影类型 **Mercator** 。 将自动从 Bing 地图 Web 服务中检索与您选择的视区中心和缩放级别匹配的图块。  
   
  可通过指定下列选项自定义层：  
   
@@ -180,7 +180,7 @@ ms.locfileid: "84881909"
   
  若要使用层，请在报表设计图面上选择一个地图以显示“地图”窗格。 “地图”窗格显示为地图定义的层列表。 使用此窗格可以选择某个层，以便更改选项，更改层的绘制顺序，添加层或运行“地图层”向导，隐藏或显示某个层，以及更改地图视区的视图中心和缩放级别。 下图显示一个视区：  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![“地图层”部分的屏幕截图，其中指出了“层工具栏”、“层可见性”、“层名称”、“空间数据源的类型”、“层类型”、“调整缩放级别”和“调整视图中心”选项。](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  有关地图层的详细信息，请参阅 [添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   

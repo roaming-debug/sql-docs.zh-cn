@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a4c032315ef6fb17578ffcdfc7116f3a93293ac8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862948"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793814"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什么是 SQL Server 的外延安全更新程序？
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -84,12 +84,12 @@ ESU 协议所涵盖的客户必须按照以下步骤下载并部署 ESU 修补�
 1. 在搜索框中键入“`SQL Server registry`”。  
 1. 依次选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 发布的“SQL Server 注册表”  选项和“创建”  。 
 
-   ![选择 SQL Server 注册表服务](media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![Azure 门户的屏幕截图，其中显示了如何创建 SQL Server 注册表。](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
 1. 在“项目详细信息”  下，从下拉列表中选择你的订阅。 然后，选择现有资源组  ，或选择“新建”  ，以为新 SQL Server 注册表服务新建资源组。 
 1. 在“服务详细信息”  下，提供新“SQL Server 注册表”  资源的名称和区域： 
 
-   ![选择 SQL Server 注册表服务](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![SQL Server 注册表的屏幕截图，其中显示了“基本信息”选项卡。](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
 1. 选择“审阅 + 创建”  ，以审阅 SQL Server 注册表  的详细信息。 通过验证后，选择“创建”  。 
 
@@ -323,7 +323,7 @@ Azure 暂不支持共享存储群集。 有关如何在 Azure 上配置高度可
 - [SQL Server 2008/2008 R2 终止支持页](https://aka.ms/sqleos)
 - [外延安全更新程序常见问题解答 (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft 安全响应中心 (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
-- [使用 Azure 自动化管理 Windows 更新](/azure/automation/automation-tutorial-update-management)
+- [使用 Azure 自动化管理 Windows 更新](/azure/automation/update-management/overview)
 - [SQL Server 自动修补](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
 - [Microsoft 数据迁移指南](https://datamigration.microsoft.com/)
 - [Azure 迁移：将当前 SQL Server 2008/2008 R2 迁移到 Azure VM 的直接迁移选项](https://azure.microsoft.com/services/azure-migrate/)

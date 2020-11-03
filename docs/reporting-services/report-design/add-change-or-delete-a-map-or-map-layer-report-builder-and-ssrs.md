@@ -26,19 +26,19 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3c5b3c399dfe95e1cbfa521e1a67044d4c5be8e
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: e33750c6c62b1de3b889399fca46dbf5aa83b3fd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935215"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907275"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
   地图是层的集合。 当你向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加一个地图时，就定义了第一个层。 可以使用地图层向导创建其他层。  
   
  若要添加、删除或更改层的选项，最简单的方法是使用地图层向导。 还可以从“地图”窗格中手动更改选项。 若要显示 **“地图”** 窗格，请单击报表设计图面中的地图。 下图显示该窗格的各个部分：  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![“地图层”部分的屏幕截图，其中指出了“层工具栏”、“层可见性”、“层名称”、“空间数据源的类型”、“层类型”、“调整缩放级别”和“调整视图中心”选项。](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  按照地图层在“地图”窗格中的显示顺序从下到上绘制地图层。 在上图中，首先绘制图块层，最后绘制多边形层。 后来绘制的层可能隐藏先前绘制的层上的地图元素。 可以使用“地图”窗格工具栏上的箭头键来更改层的顺序。 若要显示或隐藏层，请切换可见性图标。 可以在 **“层数据”** 属性对话框的 **“可见性”** 页上更改层的透明度。  
   
@@ -46,12 +46,12 @@ ms.locfileid: "91935215"
   
 |符号|说明|何时使用|  
 |------------|-----------------|-----------------|  
-|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|地图层向导|若要使用向导添加层，请单击 **“新建层向导”** 。|  
-|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|添加层|若要手动添加层，请单击 **“添加层”** ，然后单击要添加的地图层类型。|  
-|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|多边形层|添加显示基于一组多边形坐标的区域或形状的地图层。|  
-|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|线条层|添加显示基于一组线条坐标的路径或路线的地图层。|  
-|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|点层|添加显示基于一组点坐标的位置的地图层。|  
-|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|图块层|添加显示 Bing 地图图块的一个地图层，这些图块对应于由视区定义的当前地图视图区域。|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmaplayerwizard.gif":::|地图层向导|若要使用向导添加层，请单击 **“新建层向导”** 。|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmapaddlayer.gif":::|添加层|若要手动添加层，请单击 **“添加层”** ，然后单击要添加的地图层类型。|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif":::|多边形层|添加显示基于一组多边形坐标的区域或形状的地图层。|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaplinelayer.gif":::|线条层|添加显示基于一组线条坐标的路径或路线的地图层。|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappointlayer.gif":::|点层|添加显示基于一组点坐标的位置的地图层。|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaptilelayer.gif":::|图块层|添加显示 Bing 地图图块的一个地图层，这些图块对应于由视区定义的当前地图视图区域。|  
   
  “地图”窗格的底部是“地图”视图区域。 若要更改地图的中心或缩放选项，请使用箭头键来调整视图中心和使用滑块来调整缩放级别。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "91935215"
     > [!NOTE]  
     >  尽管可以手动添加并配置地图层，我们仍建议您使用地图层向导来添加新层。 若要在“地图”窗格工具栏中启动向导，请单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
-3.  右键单击该层，然后单击“层数据”。  
+3.  右键单击该层，然后单击“层数据”  。  
   
 4.  在 **“使用的空间数据来自”** 中，选择空间数据的源。 选项根据您的选择内容而有所不同。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "91935215"
   
 3.  单击 **“可见性”** 。  
   
-4.  在 **“透明度选项”** 中，键入表示百分比透明度的值，例如 **40**。 零 (0) % 透明度表示该层不透明。 100% 透明度意味着您在报表中将看不到该层。  
+4.  在 **“透明度选项”** 中，键入表示百分比透明度的值，例如 **40** 。 零 (0) % 透明度表示该层不透明。 100% 透明度意味着您在报表中将看不到该层。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -209,7 +209,7 @@ ms.locfileid: "91935215"
   
 3.  单击 **“可见性”** 。  
   
-4.  在 **“透明度选项”** 中，键入表示百分比透明度的值，例如 **40**。  
+4.  在 **“透明度选项”** 中，键入表示百分比透明度的值，例如 **40** 。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -219,7 +219,7 @@ ms.locfileid: "91935215"
   
 2.  在“地图”窗格中，单击该图块层以选中它。 “属性”窗格显示该图块层的属性。  
   
-3.  在“属性”窗格中，将 UseSecureConnection 设置为 **True**。  
+3.  在“属性”窗格中，将 UseSecureConnection 设置为 **True** 。  
   
  必应地图 Web 服务的连接将使用 HTTP SSL 服务来检索此层的必应地图图块。 传输层安全性 (TLS) 旧称为“安全套接字层 (SSL)”。
   

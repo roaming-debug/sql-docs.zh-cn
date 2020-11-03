@@ -10,16 +10,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 65a7c0afc57cc29d8ec5df7beb4c3107470e2d31
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: ac26973c4d1ff8b2a9e689f3aa372d3888f939d6
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257257"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914291"
 ---
-# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>什么是大数据群集上的应用程序部署？
+# <a name="what-is-application-deployment-on-a-sql-server-big-data-cluster"></a>SQL Server 大数据群集上的应用程序部署是什么？
 
-应用程序部署通过提供用于创建、管理和运行应用程序的界面，允许在大数据群集上部署应用程序。 部署在大数据群集上的应用程序可以受益于群集的计算能力，并且可以访问群集上可用的数据。 这会提高应用程序的可伸缩性和性能，同时管理数据所在的应用程序。 SQL Server 大数据群集上支持的应用程序运行时包括 R、Python、SSIS、MLeap。
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+应用程序部署通过提供用于创建、管理和运行应用程序的界面，允许在 SQL Server 大数据群集上部署应用程序。 部署在 SQL Server 大数据群集上的应用程序可以受益于群集的计算能力，并且可以访问群集上可用的数据。 这会提高应用程序的可伸缩性和性能，同时管理数据所在的应用程序。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上支持的应用程序运行时包括 R、Python、SSIS、MLeap。
 
 以下部分介绍了应用程序部署的体系结构和功能。
 
@@ -67,9 +69,9 @@ SQL Server 2019 CU5 支持在 Red Hat OpenShift 上部署大数据群集，并�
 ```yml
 ...
 allowedCapabilities:
-- SETUID
-- SETGID
-- CHOWN
+- SETUID
+- SETGID
+- CHOWN
 - SYS_PTRACE
 - AUDIT_WRITE
 ...

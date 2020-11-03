@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17294f4e7f26b3402655e0033cddedeb7bc69a3c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fef66452820975107e06e20a4085978163d957d
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448456"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907075"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>保留移动报表中 Analysis Services 数据的日期格式
 在报表生成器中为共享数据集添加一个度量值，以使 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 数据源中的数据在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]中仍保留其数据类型。
@@ -27,15 +27,15 @@ ms.locfileid: "79448456"
 
 ## <a name="create-a-measure-to-retain-a-date-field-data-type"></a>创建一个度量值以保留一个数据字段数据类型
 
-1. 创建一个度量值以保存有问题的数据字段的值，在表达式字段中选择数据的层次结构/等级并附加 **.CurrentMember.MemberValue**。 例如：
+1. 创建一个度量值以保存有问题的数据字段的值，在表达式字段中选择数据的层次结构/等级并附加 **.CurrentMember.MemberValue** 。 例如：
  
    [Internet Sales].[Ship Date].CurrentMember.MemberValue
    
-   ![ssas-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
+   ![“计算成员生成器”对话框的屏幕截图，其中突出显示了“表达式”文本框。](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
    
 2. 通过从左下角的“计算成员”列表将此计算成员拖动到右侧列网格中，可以将其附加到列集。  
 
-   ![ssas-query-designer-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
+   ![查询设计器的屏幕截图，其中突出显示了“计算成员”部分。](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
    
 ### <a name="see-also"></a>另请参阅
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 640f8a5b04f9045f905f86ef6d34924ea849bd80
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448209"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907079"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中，你将添加 *导航器* 来按时间或按选定内容筛选可视化效果中的数据。 
@@ -65,13 +65,13 @@ ms.locfileid: "79448209"
 
 1. 选择该可视化效果，选择“数据”选项卡，然后在“数据属性”窗格中，选择字段名称旁边的“选项”    。
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![展开的“类别列选项”的屏幕截图，其中选择了“按州/地区筛选”选项。](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
 2. 在“筛选依据”下面，选择选择列表  。
 
 当你在预览模式下或在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中查看移动报表并在选择列表中选择某个值时，它将筛选移动报表中的其他可视化效果。
 
-![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
+![屏幕截图显示了移动报表，其中从“州/地区”列表中选择了“华盛顿”并在返回结果中显示了华盛顿的各个城市。](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
 ## <a name="scorecard-grid"></a>记分卡网格  
   
@@ -96,13 +96,13 @@ ms.locfileid: "79448209"
 
 7. 根据需要命名值指示器，从表中选择其源列，并选择如何对其进行格式处理。  
 
-   ![mobile-report-scorecard-grid-data-properties](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
+   ![屏幕截图显示了适用于新评分的选项。](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
 
 8. 设置数据属性后，在“按选择列表筛选表”下面，选择要筛选的表以及要作为筛选依据的列  。 此列需要匹配选择列表的键列中的值。 
 
 当你在预览模式下或在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中查看移动报表并在记分卡网格中选择某个值时，它将筛选移动报表中的其他可视化效果。
 
-![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
+![移动报表记分卡网格的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     
 ## <a name="set-which-visualizations-are-filtered"></a>设置要筛选的可视化效果  
   
@@ -112,7 +112,7 @@ ms.locfileid: "79448209"
 
 1. 选择该可视化效果，选择“数据”选项卡，然后在“数据属性”窗格中，选择字段名称旁边的“选项”    。
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![展开的“类别列选项”的另一个屏幕截图，其中选择了“按州/地区筛选”选项。](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
 2. 在“筛选依据”下面，选择导航器  。 每个可视化效果可以按多个导航器进行筛选。
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: ce0edeb4d0d78f43da0c510b09e74e7972f5d301
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255486"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907105"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在滚动报表时保持标题可见（报表生成器和 SSRS）
   呈现报表之后，为防止行和列标签滚动出视野之外，可以冻结行或列标题。  
@@ -28,11 +28,11 @@ ms.locfileid: "84255486"
   
  下图显示了一个表。  
   
- ![表](../../reporting-services/report-design/media/table.png "表")  
+ ![表的屏幕截图。](../../reporting-services/report-design/media/table.png "表")  
   
  下图显示了一个矩阵。  
   
- ![矩阵](../../reporting-services/report-design/media/matrix.png "矩阵")  
+ ![矩阵的屏幕截图。](../../reporting-services/report-design/media/matrix.png "矩阵")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -59,7 +59,7 @@ ms.locfileid: "84255486"
   
      ![Tablix 成员属性](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Tablix 成员属性")  
   
-4.  在“属性”窗格中，将 **FixedData** 设置为 **True**。  
+4.  在“属性”窗格中，将 **FixedData** 设置为 **True** 。  
   
 5.  对所有要在滚动时保持可见的相邻成员重复此过程。  
   

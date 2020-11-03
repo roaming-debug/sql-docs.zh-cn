@@ -6,10 +6,6 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.topic: tutorial
 keywords: SQL Server, SSMS, SQL Server Management Studio, 脚本, 编写脚本
-author: markingmyname
-ms.author: maghan
-ms.reviewer: sstein
-ms.date: 03/13/2018
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - source controls [SQL Server Management Studio], tutorials
@@ -19,12 +15,16 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein
+ms.date: 03/13/2018
+ms.openlocfilehash: 9d8d86fbe427b232831fa3713b94f067e0089a4b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038958"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638931"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中编写对象脚本
 
@@ -195,7 +195,7 @@ ms.locfileid: "92038958"
 
 5. 右键单击存储过程“dbo.uspGetBillOfMaterials” > “编写存储过程脚本为” > “删除并创建到” > “新建查询编辑器窗口”：
 
-    ![编写存储过程脚本](media/scripting-ssms/scriptstoredprocedure.PNG)
+    ![编写存储过程脚本](media/scripting-ssms/script-stored-procedure.png)
 
 ## <a name="script-extended-events"></a>编写扩展事件脚本
 

@@ -4,30 +4,30 @@ titleSuffix: SQL machine learning
 description: 浏览示例数据，并生成一些图表，以准备在 SQL 机器学习的 R 中使用二元分类。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a0cacd4beee72cef845fa161d1a1bcd0263a7e6b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193682"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412533"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R 教程：浏览并可视化数据
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 在此系列教程的第二部分中（共五部分），你将浏览示例数据，并生成一些图表。 之后，你可了解如何在 Python 中序列化图形对象，然后对这些对象进行反序列化并制作图表。
 
-在此系列教程的第二部分中（共五部分），你将查看示例数据，然后使用 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 中的 [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) 和基本 R 中的通用 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 函数生成一些图表。
+在此系列教程的第二部分中（共五部分），你将查看示例数据，然后使用基本 R 中的通用 `barplot` 和 `hist` 函数生成一些绘图。
 
 本文的主要目的是说明如何在存储过程中从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调用 R 函数并将结果保存为应用程序文件格式：
 
-+ 使用 RxHistogram 创建存储过程以生成 R 绘图作为 varbinary 数据  。 使用 bcp 将二进制流导出到图像文件  。
-+ 使用 Hist 创建存储过程以生成绘图，将结果另存为 JPG 和 PDF 输出  。
++ 使用 `barplot` 创建存储过程以生成 R 绘图作为 varbinary 数据。 使用 bcp 将二进制流导出到图像文件  。
++ 使用 `hist` 创建存储过程以生成绘图，将结果另存为 JPG 和 PDF 输出。
 
 > [!NOTE]
 > 因为可视化是了解数据形状和分布的强大工具，所以 R 提供了一系列函数和包，用于生成直方图、散点图、箱线图和其他数据浏览图。 R 通常使用 R 设备创建图形输出的图像，可以将其捕获并存储为 varbinary 数据类型以在应用程序中呈现  。 也可以将图像保存为任何支持文件格式（.JPG、.PDF 等）。
@@ -83,14 +83,14 @@ ms.locfileid: "92193682"
 > 从 SQL Server 2019 开始，隔离机制要求你向存储绘图文件的目录授予适当的权限。 有关如何设置这些权限的详细信息，请参阅 [Windows 上 SQL Server 2019 中的“文件权限”部分：机器学习服务的隔离更改](../install/sql-server-machine-learning-services-2019.md#file-permissions)。
 ::: moniker-end
 
-若要创建绘图，请使用 [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram)，这是 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 中提供的增强型 R 函数之一。 这一步基于从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的数据绘制直方图。 可以将此函数包装在存储过程 RxPlotHistogram  中。
+若要创建绘图，请使用 R 函数 `barplot`。 这一步基于从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的数据绘制直方图。 可以将此函数包装在存储过程 RPlotHistogram 中。
 
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器”中，右键单击 NYCTaxi_Sample 数据库，然后选择“新建查询”   。
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器”中，右键单击 NYCTaxi_Sample 数据库，然后选择“新建查询”   。 或者，在 Azure Data Studio 中，从“文件”菜单中选择“新建笔记本”，然后连接到数据库 。
 
-2. 粘贴下面的脚本，创建绘制直方图的存储过程。 此示例命名为“RxPlotHistogram”  。
+2. 粘贴下面的脚本，创建绘制直方图的存储过程。 将此示例命名为 RPlotHistogram。
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxPlotHistogram]
+   CREATE PROCEDURE [dbo].[RPlotHistogram]
    AS
    BEGIN
      SET NOCOUNT ON;
@@ -101,8 +101,7 @@ ms.locfileid: "92193682"
       image_file = tempfile();  
       jpeg(filename = image_file);  
       #Plot histogram  
-      rxHistogram(~tipped, data=InputDataSet, col=''lightgreen'',   
-      title = ''Tip Histogram'', xlab =''Tipped or not'', ylab =''Counts'');  
+      barplot(table(InputDataSet$tipped), main = "Tip Histogram", col="lightgreen", xlab="Tipped or not", ylab = "Counts", space=0)
       dev.off();  
       OutputDataSet <- data.frame(data=readBin(file(image_file, "rb"), what=raw(), n=1e6));  
       ',  
@@ -118,7 +117,7 @@ ms.locfileid: "92193682"
   
 + 在 R 脚本中，定义了一个变量 (`image_file`) 来存储图像。
 
-+ 调用 RevoScaleR 库中的 rxHistogram 函数以生成绘图  。
++ 调用 `barplot` 函数以生成绘图。
   
 + R 设备被设置为“关闭”，因为你正在作为 SQL Server 中的外部脚本运行此命令  。 通常在 R 中，发出高级绘图命令时，R 会打开一个图形窗口，该窗口称为“设备”  。 如果正在写入文件或以其他方式处理输出，则可以关闭设备。
   
@@ -131,7 +130,7 @@ ms.locfileid: "92193682"
 1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，运行以下语句：
   
     ```sql
-    EXEC [dbo].[RxPlotHistogram]
+    EXEC [dbo].[RPlotHistogram]
     ```
   
     **结果**
@@ -141,7 +140,7 @@ ms.locfileid: "92193682"
 2. 打开 PowerShell 命令提示符，并运行以下命令，提供相应的作为参数的实例名称、数据库名称、用户名和凭据。 对于使用 Windows 身份的用户，可以将 -U 和 -P 替换为 -T    。
   
    ```powershell
-   bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
+   bcp "exec RPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
    ```
 
    > [!NOTE]
@@ -151,7 +150,7 @@ ms.locfileid: "92193682"
 
    在每个提示符下按 ENTER 以接受默认设置，以下更改除外：
 
-   + 对于 **prefix-length of field plot**，请键入 0。
+   + 对于 **prefix-length of field plot** ，请键入 0。
   
    + 如果想要保存输出参数供以后重复使用，则键入 **Y** 。
   
@@ -181,11 +180,11 @@ ms.locfileid: "92193682"
   
    ![有小费和没有小费的出租车行程](media/rsql-devtut-tippedornot.jpg "有小费和没有小费的出租车行程")  
   
-## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>使用 Hist 和多种输出格式创建存储过程
+## <a name="create-a-stored-procedure-using-hist"></a>使用 `hist` 创建存储过程
 
 通常数据科学家会生成多个数据可视化，以便从不同的角度深入了解数据。 在此示例中，将创建一个称为 RPlotHist 的存储过程，以将直方图、散点图和其他 R 图形写入 .JPG 和 .PDF 格式  。
 
-此存储过程使用 Hist 函数创建直方图，将二进制数据导出为常用格式，例如 .JPG、.PDF和 .PNG  。 
+此存储过程使用 `hist` 函数创建直方图，将二进制数据导出为常用格式，例如 .JPG、.PDF 和 .PNG。
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器”中，右键单击 NYCTaxi_Sample 数据库，然后选择“新建查询”   。
 
@@ -255,11 +254,13 @@ ms.locfileid: "92193682"
    END
    ```
   
+在此脚本中要理解的关键点包括：
+
 + 此存储过程内的 SELECT 查询的输出存储在默认的 R 数据帧 `InputDataSet`中。 然后，可以调用各种 R 绘图函数来生成实际的图形文件。 大部分嵌入的 R 脚本表示这些图形函数的选项，如 `plot` 或 `hist`。
   
-+ 将所有文件保存在本地文件夹 C:\temp\Plots 中。 此目标文件夹由作为存储过程一部分提供给 R 脚本的参数定义。  可以通过更改变量 `mainDir`的值更改此目标文件夹。
-
-+ 若要将文件输出到另一个文件夹，请更改存储过程中嵌入的 R 脚本中 `mainDir` 变量的值。 还可以修改脚本以输出不同格式、更多文件，等等。
++ R 设备被设置为“关闭”，因为你正在作为 SQL Server 中的外部脚本运行此命令  。 通常在 R 中，发出高级绘图命令时，R 会打开一个图形窗口，该窗口称为“设备”  。 如果正在写入文件或以其他方式处理输出，则可以关闭设备。
+  
++ 将所有文件保存在本地文件夹 C:\temp\Plots 中。 此目标文件夹由作为存储过程一部分提供给 R 脚本的参数定义。 若要将文件输出到另一个文件夹，请更改存储过程中嵌入的 R 脚本中 `mainDir` 变量的值。 还可以修改脚本以输出不同格式、更多文件，等等。
 
 ### <a name="execute-the-stored-procedure"></a>执行该存储过程
 
@@ -270,7 +271,7 @@ EXEC RPlotHist
 ```
 
 **结果**
-    
+
 ```text
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
@@ -282,13 +283,13 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 文件名中的数字是随机生成的，以确保尝试写入现有文件时不会出现错误。
 
-### <a name="view-output"></a>查看输出 
+### <a name="view-output"></a>查看输出
 
 若要查看绘图，请打开目标文件夹，并查看存储过程中 R 代码创建的文件。
 
 1. 转到 STDOUT 消息中指示的文件夹（在该示例中，这是 C:\temp\plots\)
 
-2. 打开 `rHistogram_Tipped.jpg` 显示得到小费的行程数量和未得到小费的行程数量的比较。 （此直方图与上一步中生成的直方图非常相似。）
+2. 打开 `rHistogram_Tipped.jpg`，以显示有小费的行程数和没有小费的行程数（此直方图类似于在上一步中生成的直方图）。
 
 3. 打开 `rHistograms_Tip_and_Fare_Amount.pdf`，查看根据费用金额绘制的小费金额的分布情况。
 

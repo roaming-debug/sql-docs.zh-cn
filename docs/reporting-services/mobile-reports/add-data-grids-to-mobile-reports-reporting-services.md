@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 403e6b3873b93dace3f124eb5931143e8dd4b322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e346ff2f6d5b4951e7ce0e3af81914b15b34ac15
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448319"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907315"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>向移动报表添加数据网格 | Reporting Services
 有时最佳可视化对象是数据本身。 了解用于在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中显示数据的三种数据网格（或表）  ：
@@ -25,7 +25,7 @@ ms.locfileid: "79448319"
 ## <a name="simple-data-grid"></a>简单数据网格
 最基本的简单数据网格可以通过自定义格式和标头显示多个列的数据。 
 
-![mobile-report-simple-data-grid](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
+![移动报表简单数据网格的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
 
 将数据网格添加到设计图面之后，可以将它连接到实际数据。
 
@@ -41,7 +41,7 @@ ms.locfileid: "79448319"
 ##  <a name="indicator-data-grid"></a>指示器数据网格
 可以向指示器数据网格添加具有仪表的列。
 
-![mobile-report-indicator-data-grid](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
+![移动报表指示器数据网格的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
 
 1. 将指示器数据网格从“布局”选项卡拖至设计网格，并将其调整为所需大小  。
 
@@ -56,7 +56,7 @@ ms.locfileid: "79448319"
 ## <a name="chart-data-grid"></a>图表数据网格
 可以向图表数据网格中添加具有仪表或图表的列。 
 
-![mobile-report-chart-data-grid](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
+![移动报表图表数据网格的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
 
 将图表列添加到数据网格时，需要添加单独的数据表以便为每行中的图表提供数据。 此第二个数据表需要与主数据表共享一个字段，以便将每行链接到其关联图表数据。 
 

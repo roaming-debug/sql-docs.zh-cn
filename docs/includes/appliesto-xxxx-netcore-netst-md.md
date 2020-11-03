@@ -1,1 +1,1 @@
-<Token>适用于：![否](media/no-icon.png).NET Framework ![是](media/yes-icon.png).NET Core ![是](media/yes-icon.png).NET Standard </Token>
+<Token>**适用于：** :::image type="icon" source="media/no-icon.png":::.NET Framework :::image type="icon" source="media/yes-icon.png":::.NET Core :::image type="icon" source="media/yes-icon.png":::.NET Standard </Token>

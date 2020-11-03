@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 563dc8fbbb7f866dd91f7a982813fe2e5b0a2e83
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765686"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907355"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>使用 Kubernetes 上的 SQL Server 大数据群集进行数据暂留
 
@@ -36,7 +36,7 @@ SQL Server 大数据群集通过使用[存储类](https://kubernetes.io/docs/con
 
 - 在计算存储池大小要求时，必须考虑 HDFS 配置的复制因子。  复制因子在部署时可在群集部署配置文件中配置。 开发测试配置文件（即 `aks-dev-test`或`kubeadm-dev-test`）的默认值是 2，对于我们为生产部署推荐的配置文件（即 `kubeadm-prod`），默认值是 3。 作为最佳做法，我们建议你将大数据集群的生产部署配置为至少 3 个 HDFS 的复制因子。 复制因子的值将影响存储池中的实例数量：至少必须部署与复制因子的值一样多的存储池实例。 此外，还必须相应地调整存储空间的大小，并将在 HDFS 中复制数据的次数调整为复制因子的值。 在[此处](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication)可以找到更多关于 HDFS 数据复制的信息。 
 
-- 自 SQL Server 2019 CU1 发布后，无法在部署后修改存储配置设置。 此约束不仅阻止修改每个实例的永久性卷声明的大小，还阻止在部署后执行缩放操作。 因此，在部署大数据群集之前，请务必先计划存储布局。
+- 从 SQL Server 2019 CU1 版本开始，BDC 不会在部署后更新存储配置设置。 有了此约束，你将无法使用 BDC 操作来修改每个实例永久性卷声明的大小，也无法在部署后缩放任何池。 因此，在部署大数据群集之前，请务必先计划存储布局。 但你可以直接使用 Kubernetes API 来扩展永久卷的大小。 在这种情况下，不会更新 BDC 元数据，并且你将在配置群集元数据中看到不一致的卷大小。
 
 - 通过在 Kubernetes 上部署为容器化应用程序，并使用有状态集和永久性存储等功能，Kubernetes 确保在出现运行状况问题时重启 Pod，并将它们附加到同一永久性存储。 不过，如果出现节点故障，且必须在另一节点上重启 Pod，那么如果存储是故障节点的本地存储，就会增加不可用性风险。 为了降低这一风险，要么必须配置额外的冗余，并启用[高可用性功能](deployment-high-availability.md)，要么必须使用远程冗余存储。 下面概述了大数据群集中各种组件适用的存储选项：
 
@@ -71,7 +71,7 @@ SQL Server 大数据群集通过使用[存储类](https://kubernetes.io/docs/con
     }
 ```
 
-大数据群集部署使用永久性存储来存储各种组件的数据、元数据和日志。 你可以自定义作为部署的一部分创建的持久卷声明的大小。 根据最佳做法，建议结合使用存储类和 Retain ** [回收策略](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)。
+大数据群集部署使用永久性存储来存储各种组件的数据、元数据和日志。 你可以自定义作为部署的一部分创建的持久卷声明的大小。 根据最佳做法，建议结合使用存储类和 Retain  [回收策略](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)。
 
 > [!WARNING]
 > 在没有持久存储的情况下运行时可在测试环境中运行，但可能导致群集无法正常运行。 在 Pod 重启后，群集元数据和/或用户数据就会永久丢失。 建议不要在此配置下运行。
@@ -83,7 +83,7 @@ SQL Server 大数据群集通过使用[存储类](https://kubernetes.io/docs/con
 AKS 随附[两个内置存储类](/azure/aks/azure-disks-dynamic-pv/)（`default` 和 `managed-premium`），以及这两个类的动态预配程序。 可以指定这两个类中的一个，也可以创建你自己的存储类，从而部署已启用永久性存储的大数据群集。 默认情况下，用于AKS 的内置群集配置文件 `aks-dev-test` 随附使用 `default` 存储类的永久性存储配置。
 
 > [!WARNING]
-> 使用内置存储类 `default` 和 `managed-premium` 创建的持久卷包含回收策略“删除”**。 因此，如果你删除 SQL Server 大数据群集，永久性卷声明和永久性卷都会遭删除。 可通过结合使用 `azure-disk` 预配程序和 `Retain` 回收策略，创建自定义存储类，如[存储概念](/azure/aks/concepts-storage/#storage-classes)所述。
+> 使用内置存储类 `default` 和 `managed-premium` 创建的持久卷包含回收策略“删除”。 因此，如果你删除 SQL Server 大数据群集，永久性卷声明和永久性卷都会遭删除。 可通过结合使用 `azure-disk` 预配程序和 `Retain` 回收策略，创建自定义存储类，如[存储概念](/azure/aks/concepts-storage/#storage-classes)所述。
 
 ## <a name="storage-classes-for-kubeadm-clusters"></a>`kubeadm` 群集的存储类 
 

@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99e176988287a457738a05a4a7ab71653b281070
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95b153be1b4dc5a45effeb678ca0ccef83f06e6e
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448031"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907335"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>使用钻取功能创建选项卡式移动报表
 了解如何使用钻取功能和参数创建外观和行为与选项卡式报表类似的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表。
 
 例如，在此报表中，顶部仪表的行为与选项卡类似。 单击“运输”仪表时，图表其余部分中的数据将筛选为运输数据。
 
-![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
+![屏幕截图显示了“财务 - 运输”报表，其中选择了“运输”仪表。](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
 
 在后台，这实际上是五个单独报表的集合，每个报表都具有不同的参数，用于筛选报表以匹配在报表顶部所选的仪表。 首先创建五个报表，然后针对其中的每个报表，将其他四个仪表设置为分别钻取到其他四个报表中。
 
@@ -37,11 +37,11 @@ ms.locfileid: "79448031"
     * 存储
     * 杂项费用
 
-   ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
+   ![销售报表的屏幕截图，其中包含五个仪表。](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
 2. 针对“销售”仪表将“主题色”设置为“开”，使其相对于报表的其余部分更加醒目--在本示例中，为黑底白色   。
 
-    ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
+    ![“销售”仪表的屏幕截图，其中有一个红色箭头指向位于“开启”位置的“重点”滑块。](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
 3. 将它保存到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表服务器。
 
@@ -62,7 +62,7 @@ ms.locfileid: "79448031"
 
 1. 在“销售”报表中，选择“运输”仪表。
 
-    ![02-Sales-Create-DrillThrough-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
+    ![销售报表的屏幕截图，其中有一个红色箭头从“运输”仪表指向“钻取目标”选项。](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
 
 2. 选择“布局”选项卡后，在“视觉对象属性”窗格中，选择“钻取目标”    。
 
@@ -70,11 +70,11 @@ ms.locfileid: "79448031"
 
 4. 导航到将作为钻取目标的报表然后选中 - 在本示例中为“财务 - 运输”。
 
-    ![03-Sales-Select-Dashboard-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
+    ![“从服务器打开”对话框的屏幕截图，其中突出显示了“财务 - 运输”选项。](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
 
 5. 在“配置目标报表”中，选择用于筛选报表的参数，并选择“应用”   。
 
-   ![04-Sales-Apply-Parameters-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
+   ![“配置目标报表”部分的屏幕截图，其中显示了“财务 - 运输”报表参数。](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
    
 6. 分别对“销售”报表中的其他每个仪表重复上述步骤。 
 
@@ -92,11 +92,11 @@ ms.locfileid: "79448031"
 
 2. 请注意，每个仪表在右上角均有一个钻取图标。
 
-    ![Web-Viewer-drillthrough-icon-mobile-report-builder](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
+    ![“燃料”仪表的屏幕截图。](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
 
 3. 选择其中一个仪表，转到筛选到该仪表数据的报表。
 
-   ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
+   ![屏幕截图显示了“财务 - 运输”报表，其中有一个红色箭头指向“运输”仪表，该仪表同时也用红框框出。](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
 ### <a name="see-also"></a>另请参阅
     

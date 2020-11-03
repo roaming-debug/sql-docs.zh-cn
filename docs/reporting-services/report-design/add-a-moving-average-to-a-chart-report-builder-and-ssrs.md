@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2c72f3720b397e20df7daa794e08ef7ca241abf
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 3820bee4c008bb82a2c1ffdb8a4a6bfb00335958
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255696"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907261"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>向图表添加移动平均线（报表生成器和 SSRS）
 移动平均值是序列中数据的平均值，它是根据定义的时间段内的数据计算的。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，可以在图表中显示移动平均值来标识明显趋势。  
 
-![report-builder-column-chart-tutorial](../../reporting-services/media/report-builder-column-chart-tutorial.png)
+![销售图表的屏幕截图。](../../reporting-services/media/report-builder-column-chart-tutorial.png)
   
  移动平均值公式是技术分析中最常用的价格指标。 包括平均值、中值和标准偏差在内的许多其他公式也可以从图表的序列中派生。 指定移动平均值时，每个公式可能有一个或多个必须指定的参数。  
  
@@ -34,7 +34,7 @@ ms.locfileid: "84255696"
   
 ## <a name="to-add-a-calculated-moving-average-to-a-series-on-the-chart"></a>将计算的移动平均值添加到图表的序列  
   
-1.  右键单击“ **值** ”区域中的字段，然后单击“ **添加计算序列**”。 随即打开 **“计算序列属性”** 对话框。  
+1.  右键单击“ **值** ”区域中的字段，然后单击“ **添加计算序列** ”。 随即打开 **“计算序列属性”** 对话框。  
   
 2.  从“ **公式** ”下拉列表中选择“ **移动平均值** ”选项。  
   

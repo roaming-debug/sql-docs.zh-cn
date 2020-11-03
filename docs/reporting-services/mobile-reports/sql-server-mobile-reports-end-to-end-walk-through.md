@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4013c119093adda0fbb721c376eef502a7b05a38
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462351"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907245"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web 门户上使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 创建适用于任何屏幕大小的移动报表，并在 Power BI 移动应用中查看它们。
@@ -115,7 +115,7 @@ ms.locfileid: "84462351"
      
 5. 选择你想要的聚合。 KPI 只能显示一个数字，因此将聚合该字段以显示该数字。
 
-   ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
+   ![“从 AWSalesYTD 选择字段”部分的屏幕截图，其中显示了“平均聚合”部分。](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
 6. 单击“确定”。 
 
@@ -188,7 +188,7 @@ ms.locfileid: "84462351"
    *  “大小表示”  ,  和“自定义中间值”  必须是具有数值的字段。 
    *  **分组依据** 是一种类别，因此它是文本字段。
    
-   ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
+   ![“数据”属性部分的屏幕截图。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
    
 6. 选择“预览”  可查看使用你的数据更新的树形图。  
 
@@ -200,19 +200,19 @@ ms.locfileid: "84462351"
 
 2. 同样，从模拟数据开始。 
 
-   请注意，在“视觉对象属性”  中，默认情况下 **值越高越好**，且“增量标签”  是 **目标百分比**。 它具有默认的“数据区域停止点”  ，可以对其进行更改，但现在不需要。
+   请注意，在“视觉对象属性”  中，默认情况下 **值越高越好** ，且“增量标签”  是 **目标百分比** 。 它具有默认的“数据区域停止点”  ，可以对其进行更改，但现在不需要。
 
-   ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
+   ![移动报表环形图视觉对象属性“设置范围”部分的屏幕截图。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
 3. 在“数据”  选项卡上，选择包含数据的表，然后选择“主值”  字段以及要在“比较值”  中比较的字段。
 
 4. 可以选择不同的聚合，为“主值”  和“比较值”  各提供一个数字。 默认情况下，该值是一个总和。
 
-   ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
+   ![“选项”或“比较值”的屏幕截图。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
 5. 选择“预览”  可查看其外观。 
 
-   ![ssrs-mobile-report-donut-preview](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
+   ![移动报表环形图预览视图的屏幕截图。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
 
 ## <a name="add-a-selection-list-as-a-filter"></a>添加选择列表作为过滤器
 
@@ -220,11 +220,11 @@ ms.locfileid: "84462351"
 
 1. 在“布局”  选项卡上，将选择列表拖动到树形图的右侧，然后拖动右下角以使其宽度为两个正方形，并与画布一样高（五个正方形高）。 
 
-   ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
+   ![移动报表选择列表的屏幕截图。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
 2. 在“数据”  选项卡上的“数据属性”  中，将“密钥”  和“标签”  设置为数据中要筛选的字段。
 
-   ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
+   ![移动报表选择列表“数据属性”部分的屏幕截图。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
 ## <a name="create-a-mobile-report-for-phones"></a>为手机创建移动报表  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c9ca24186a1b3b2a9fed9f1b3fa9454aa020f9b
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 6b756d7db3a41787da2a9a1a30f1c82b9a72317c
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934939"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907175"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定轴间隔（报表生成器和 SSRS）
 了解如何设置 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的轴间隔，以更改图表中类别 (x) 轴上的标签数目和刻度线数目。
@@ -36,24 +36,24 @@ ms.locfileid: "91934939"
 
 在此柱形图中，水平标签间隔设置为“自动”。
 
-![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
+![报表生成器柱形图预览视图的屏幕截图，其中 X 轴间隔设为“自动”。](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
 1.  右键单击类别轴，然后单击“水平轴属性”。   
 
-    ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
+    ![报表生成器柱形图的屏幕截图，其中显示了如何设置 X 轴标签。](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  在“水平轴属性”对话框 >“轴选项”选项卡中，将“间隔”设置为“1”，以显示每个类别组标签。 若要在 x 轴上显示所有其他类别组标签，请键入 **2**。 
+2.  在“水平轴属性”对话框 >“轴选项”选项卡中，将“间隔”设置为“1”，以显示每个类别组标签。 若要在 x 轴上显示所有其他类别组标签，请键入 **2** 。 
 
-     ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
+     ![报表生成器柱形图的屏幕截图，其中显示了如何为柱形图设置 X 轴间隔。](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-    现在，柱形图显示其所有水平轴标签。
-
-    ![report-builder-column-chart-preview-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
-  
-    > [!NOTE]  
-    >  设置轴间隔后，将禁用所有自动标签。 如果指定轴间隔的值，则可能会遇到不可知的标签行为，具体取决于类别轴上的类别数。  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+     
+     现在，柱形图显示其所有水平轴标签。
+     
+     ![报表生成器柱形图预览视图的屏幕截图，其中显示了 X 轴标签。](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
+     
+     > [!NOTE]  
+     >  设置轴间隔后，将禁用所有自动标签。 如果指定轴间隔的值，则可能会遇到不可知的标签行为，具体取决于类别轴上的类别数。  
 
 ## <a name="change-the-label-interval-in-properties-pane"></a>在“属性”窗格中更改标签间隔
 
@@ -63,13 +63,13 @@ ms.locfileid: "91934939"
 
 3. 在“属性”窗格中，将 LabelInterval 设置为“1”。
 
-    ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![报表生成器柱形图的屏幕截图，其中显示了如何设置标签间隔。](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     该图表同设计视图中一样。 
     
 5.  单击 **“运行”** 以预览报表。
 
-    ![report-builder-column-chart-label-interval-one-preview](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![报表生成器柱形图预览视图的屏幕截图，其中显示了柱形图的标签间隔。](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     现在，图表显示其所有标签。
   

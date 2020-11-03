@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765736"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914333"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
@@ -22,9 +22,7 @@ ms.locfileid: "88765736"
 
 从 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 开始，借助 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可部署在 Kubernetes 上运行的 SQL Server、Spark 和 HDFS 容器的可缩放群集。 这些组件并行运行以确保可读取、写入和处理 Transact-SQL 或 Spark 中的大数据，这样你就可以借助大量大数据轻松合并并分析高价值关系数据。
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 介绍 SQL Server 大数据群集。
-
-使用 SQL Server 大数据群集可执行以下操作：
+使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可以：
 
 - [部署](./deploy-get-started.md) SQL Server、Spark 和在 Kubernetes 上运行的 HDFS 容器的可缩放群集。 
 - 在 Transact-SQL 或 Spark 中读取、写入和处理大数据。
@@ -45,7 +43,7 @@ ms.locfileid: "88765736"
 
 ### <a name="data-virtualization"></a>数据虚拟化
 
-通过利用 [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可以查询外部数据源，而无需移动或复制数据。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 引入了数据源的新连接器。
+通过利用 [PolyBase](../relational-databases/polybase/polybase-guide.md)，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可以查询外部数据源，而无需移动或复制数据。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 引入了数据源的新连接器。
 
 ![数据虚拟化](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -96,7 +94,7 @@ Kubernetes 是一个开放源代码容器业务流程协调程序，可以根据
 
 ### <a name="big-data-clusters-architecture"></a>大数据群集体系结构
 
-下图显示了 SQL Server 的大数据群体的组件。
+下图显示了 SQL Server 大数据群集的组件：
 
 ![体系结构概述](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
@@ -121,4 +119,4 @@ Kubernetes 是一个开放源代码容器业务流程协调程序，可以根据
 
 ## <a name="next-steps"></a>后续步骤
 
-有关部署 SQL Server 大数据群集的详细信息，请参阅 [SQL Server 大数据群集入门](deploy-get-started.md)。
+有关部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的详细信息，请参阅 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 入门](deploy-get-started.md)。

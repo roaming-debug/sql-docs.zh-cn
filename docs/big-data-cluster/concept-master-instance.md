@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57de001599923d46139883f2f8a691f9d682abf3
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773648"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914306"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集中的主实例？
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本文介绍 SQL Server 主实例在 SQL Server 2019 大数据群集中的角色。 主实例是一个在大数据群集中运行的 SQL Server 实例，用于管理连接性、横向扩展查询、元数据和用户数据库以及机器学习服务。
+本文介绍 SQL Server 大数据群集中 SQL Server 主实例的作用。 主实例是在 SQL Server 大数据群集中运行的 SQL Server 实例，用于管理连接性、横向扩展查询、元数据和用户数据库以及机器学习服务。
 
 SQL Server 主实例提供以下功能：
 
@@ -36,8 +36,8 @@ SQL Server 主实例包含横向扩展查询引擎，可用于在[计算池](con
 
 除标准 SQL Server 系统数据库外，SQL 主实例还包含以下内容：
 
-- 保存 HDFS 表元数据的元数据数据库
-- 数据平面分片映射
+- 保存 HDFS 表元数据的元数据数据库。
+- 数据平面分片映射。
 - 提供群集数据平面访问权限的外部表的详细信息。
 - 用户数据库中定义的 PolyBase 外部数据源和外部表。
 
@@ -51,9 +51,9 @@ SQL Server 机器学习服务是数据库引擎的附加功能，用于在 SQL S
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>大数据群集中机器学习服务的优点
 
-借助 SQL Server 2019，可将大数据轻松地联接到通常存储在企业数据库中的维度数据。 当大数据不仅仅由组织的各个部分掌握，而且还包含在报表、仪表板和应用程序中时，其价值会大幅增加。 与此同时，数据科学家可以继续使用 Spark/HDFS 生态系统工具，并轻松、实时地访问 SQL Server 主实例和外部数据源（可_通过_ SQL Server 主实例访问）中的数据。
+借助 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，可将大数据轻松地联接到通常存储在企业数据库中的维度数据。 当大数据不仅仅由组织的各个部分掌握，而且还包含在报表、仪表板和应用程序中时，其价值会大幅增加。 与此同时，数据科学家可以继续使用 Spark/HDFS 生态系统工具，并轻松、实时地访问 SQL Server 主实例和外部数据源（可 _通过_ SQL Server 主实例访问）中的数据。
 
-使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]，可以通过企业数据湖实现更多操作。 SQL Server 开发人员和分析人员可以：
+使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，可以通过企业数据湖实现更多操作。 SQL Server 开发人员和分析人员可以：
 
 * 生成使用企业数据湖中的数据的应用程序。
 * 使用 Transact-SQL 查询推断所有数据。

@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 6981eea5cb4d327303755adc74d5610637eb70b0
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 6625e985781f3980c44bef9b6dbd408243ac78a9
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588253"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523847"
 ---
 # <a name="virtualize-csv-data-from-storage-pool-big-data-clusters"></a>从存储池虚拟化 CSV 数据（大数据群集）
 
@@ -71,7 +71,7 @@ IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePo
 
 Azure Data Studio 提供导入数据的预览。
 
-![外部数据源凭据](media/data-virtualization/130-csv-preview-data.png)
+![屏幕截图显示了“从 CSV 创建外部表”窗口，其中包含导入数据的预览。](media/data-virtualization/130-csv-preview-data.png)
 
 完成查看预览后，单击“下一步”  继续
 
@@ -79,7 +79,7 @@ Azure Data Studio 提供导入数据的预览。
 
 在下一个窗口中，你可以修改要创建的外部表的列。 你将能够更改列名称、更改数据类型并允许可为 Null 的行。 
 
-![外部数据源凭据](media/data-virtualization/140-csv-modify-columns.png)
+![屏幕截图显示了“从 CSV 创建外部表”窗口，其中显示了“步骤 3 修改列”。](media/data-virtualization/140-csv-modify-columns.png)
 
 验证目标列之后，单击“下一步”  。
 

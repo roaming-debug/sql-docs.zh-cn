@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed45f77f509d3206340a2f52e6d3b31ac6824d87
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79447989"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907185"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>向 Reporting Services 移动报表添加可视化效果
 图表是数据可视化效果必不可少的一部分。 了解可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表中使用的图表，这些图表可涵盖一系列方案。 
@@ -55,7 +55,7 @@ ms.locfileid: "79447989"
   
 时间表是 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中最基本的图表。 图表的时间（和日期）轴将自动设置为数据表中第一个有效的日期/时间字段。  
 
-![mobile-report-time-chart](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
+![移动报表时间表的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
 
 1. 从“布局”选项卡将“时间表”拖至设计图面并重设其大小   。
 
@@ -73,9 +73,9 @@ ms.locfileid: "79447989"
   
 ## <a name="category-charts"></a>类别图表  
   
-与时间表不同，在类别图表中，你将在 x 轴上按日期/时间字段以外的字段分组。 此分组称为 *类别坐标*，必须按字符串而不是数值字段分组。
+与时间表不同，在类别图表中，你将在 x 轴上按日期/时间字段以外的字段分组。 此分组称为 *类别坐标* ，必须按字符串而不是数值字段分组。
 
-![mobile-report-category-chart](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
+![移动报表类别表的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
 
 1. 从“布局”选项卡将“类别图表”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）   。
 
@@ -85,7 +85,7 @@ ms.locfileid: "79447989"
   
 ## <a name="totals-charts"></a>总计图表  
 
-![mobile-report-totals-chart](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
+![移动报表总计表的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
   
 总计图表可实现两个不同的目的： 
 * 它不显示多个系列，而只显示所定义的主系列的总和或总计。 
@@ -95,9 +95,9 @@ ms.locfileid: "79447989"
   
 ## <a name="comparison-charts"></a>比较图  
   
-时间表、类别图表和总计图表也可用作 *比较图*。 在比较图中，不仅可以指定主系列，还可以另外指定一个比较系列。 主系列和比较系列可以用三种不同的方式显示。
+时间表、类别图表和总计图表也可用作 *比较图* 。 在比较图中，不仅可以指定主系列，还可以另外指定一个比较系列。 主系列和比较系列可以用三种不同的方式显示。
 
-![mobile-report-comparison-time-chart](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
+![移动报表比较时间表的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
 
 1. 从“布局”选项卡将其中一个“比较图”（时间、类别或总计）拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）   。
 
@@ -120,7 +120,7 @@ ms.locfileid: "79447989"
 * **移动报表中的** 饼图 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 可以是饼形、环形或中间为总计的环形。 饼图可用于显示一个整体的不同部分的相对大小。 切片过多的话会难以理解。
 * **漏斗图** 通常用于显示某个过程的各个阶段，例如销售。
 
-![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
+![移动报表漏斗图的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
 
 ### <a name="structure-pie-and-funnel-chart-data-by-rows-or-by-columns"></a>按行或按列构造饼图和漏斗图数据
 1. 从“布局”选项卡将“饼图”或“漏斗图”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）    。
@@ -137,14 +137,14 @@ ms.locfileid: "79447989"
   
 树状图在显示指标时，会将其值应用于矩形网格中图块的大小和颜色。 
 
-![mobile-report-group-treemap](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
+![移动报表组树状图的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
 
 1. 从“布局”选项卡将“树状图”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）   。
 2.  选择“数据”选项卡，然后在“数据属性”   窗格中： 
 
      * 在“大小表示”下，为图块大小选择一个数值字段  。
      * 在“颜色表示”  下面为图块颜色选择一个数值字段。 
-     * [可选] **自定义中心值**：如果可视化类型为 HeatMapWithCustomCenterValue，只能使用自定义中心值  。
+     * [可选] **自定义中心值** ：如果可视化类型为 HeatMapWithCustomCenterValue，只能使用自定义中心值  。
      
          中间值用于决定框的颜色。 与中间值相比，指标越好，颜色越绿。 指标越差，颜色越红。
      
@@ -175,15 +175,15 @@ ms.locfileid: "79447989"
 
 1. 从“布局”选项卡将“瀑布图”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）   。
 
-    ![mobile-report-waterfall-chart-icon](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
+    ![移动报表瀑布图图标的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
     
 2.  选择“数据”选项卡，然后在“数据属性”窗格中，为“类别坐标”选择一个数据中的类别字段，为“主系列”选择一个数值字段     ： 
 
-    ![mobile-report-waterfall-data](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
+    ![移动报表瀑布数据的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
     
 3. 选择“布局”选项卡以查看预览瀑布图  。
 
-   ![mobile-report-waterfall-chart](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
+   ![移动报表瀑布图的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
    
    亏损月（如 2 月、6 月和 7 月）呈现红色。 
    盈利月（如 9 月、10 月和 11 月）呈现绿色。 

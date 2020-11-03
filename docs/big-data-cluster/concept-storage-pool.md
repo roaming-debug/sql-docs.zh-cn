@@ -9,24 +9,24 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d810220e0bd1148d4f572638c3ac67d4c3b44c0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e8bc204c3f93d4a4ebbd26876bc8c3e23bad8047
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257237"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914286"
 ---
-# <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>什么是存储池 ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])？
+# <a name="what-is-the-storage-pool-in-a-sql-server-big-data-cluster"></a>SQL Server 大数据群集中的存储池是什么？
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本文介绍 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (BDC) 中“SQL Server 存储池”的角色。 以下部分介绍了 SQL 存储池的体系结构和功能。
+本文介绍 SQL Server 大数据群集中 SQL Server 存储池的作用。 以下部分介绍存储池的体系结构和功能。
 
 ## <a name="storage-pool-architecture"></a>存储池体系结构
 
-存储池是 SQL Server BDC 生态系统中的本地 HDFS (Hadoop) 群集。 它为非结构化的和半结构化的数据提供永久性存储。 数据文件（如 Parquet 或带分隔符的文本）可以存储在存储池中。 为了实现永久性存储，池中的每个 pod 都连接了一个永久性卷。 可通过以下方式访问存储池文件：通过 SQL Server 借助 [PolyBase](../relational-databases/polybase/polybase-guide.md) 访问或直接使用 Apache Knox 网关访问。
+存储池是 SQL Server 大数据群集中的本地 HDFS (Hadoop) 群集。 它为非结构化的和半结构化的数据提供永久性存储。 数据文件（如 Parquet 或带分隔符的文本）可以存储在存储池中。 为了实现永久性存储，池中的每个 Pod 都连接了一个永久性卷。 可通过以下方式访问存储池文件：通过 SQL Server 借助 [PolyBase](../relational-databases/polybase/polybase-guide.md) 访问或直接使用 Apache Knox 网关访问。
 
-经典 HDFS 安装程序由一组附加了存储的商用硬件计算机组成。 为了实现容错和利用并行处理，数据以块的形式分散在各个节点上。 群集中的一个节点充当名称节点，并包含关于位于数据节点中的文件的元数据信息。
+经典 HDFS 安装程序由一组附加了存储的商用硬件计算机组成。 为了实现容错和利用并行处理，数据以块的形式分散在各个节点上。 群集中的一个节点充当名称节点，并包含该数据节点中各文件的元数据信息。
 
 ![经典 HDFS 安装程序](media/concept-storage-pool/classic-hdfs-setup.png)
 

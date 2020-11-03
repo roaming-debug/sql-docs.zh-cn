@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3000abfed5258f02d47148ce351a6390cb225c7
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258465"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678886"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 课：指定连接信息 (Reporting Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "75258465"
 
 1. 在“报表数据”  窗格中，选择“新建”   > “数据源”  。 如果“报表数据”  窗格不可见，则选择“视图”  菜单 > “报表数据”  。
 
-    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+    ![“报表数据”窗格的屏幕截图，其中选择了“新建”>“数据源”。](media/ssrs-table-tutorial-2-new-data-source.png)
 
     “数据源属性”  对话框将打开，并显示“常规”  部分。
 

@@ -9,18 +9,18 @@ ms.date: 10/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9c3374b0820233e20ee73b85947ed2b8a61847c0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: b07b1480412dc8dd67535f58fcc4d223a9e91baa
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866809"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914314"
 ---
-# <a name="what-are-compute-pools-sql-server-big-data-clusters"></a>什么是计算池 SQL Server 大数据群集？
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集中的计算池？
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本文介绍 SQL Server 大数据群集中 SQL Server 计算池的作用。 计算池为大数据群集提供横向扩展计算资源。 它们用于从 SQL Server 主实例中卸载计算工作或中间结果集。 以下部分介绍计算池的体系结构、功能和使用情况。
+本文介绍 SQL Server 大数据群集中 *SQL Server 计算池* 的作用。 计算池为 SQL Server 大数据群集提供横向扩展计算资源。 它们用于从 SQL Server 主实例中卸载计算工作或中间结果集。 以下部分介绍计算池的体系结构、功能和使用情况。
 
 你还可以观看下面提供的 5 分钟视频，简要了解计算池：
 
@@ -34,19 +34,19 @@ ms.locfileid: "91866809"
 
 ## <a name="scale-out-groups"></a>横向扩展组
 
-计算池可充当对不同外部数据源（例如 SQL Server、Oracle、MongoDB、Teradata 和 HDFS）进行的分布式查询的 PolyBase 横向扩展组。 通过使用 Kubernetes 中的计算 pod，大数据群集都可自动创建和配置 PolyBase 横向扩展组的计算 pod。
+计算池可充当对不同外部数据源（例如 SQL Server、Oracle、MongoDB、Teradata 和 HDFS）进行的分布式查询的 PolyBase 横向扩展组。 通过使用 Kubernetes 中的计算 Pod，SQL Server 大数据群集可自动为 PolyBase 横向扩展组创建和配置计算 Pod。
 
 ## <a name="compute-pool-scenarios"></a>计算池场景
 
 使用计算池的场景包括：
 
-- 当提交到主实例的查询使用位于[存储池](concept-storage-pool.md)中的一个或多个表时。
+- 当提交到主实例的查询使用[存储池](concept-storage-pool.md)中的一个或多个表时。
 
 - 当提交到主实例的查询使用[数据池](concept-data-pool.md)中具有轮循机制分布的一个或多个表时。
 
 - 当提交到主实例的查询使用具有 SQL Server、Oracle、MongoDB 和 Teradata 的外部数据源的已分区表时。 在此场景中，必须启用查询提示选项 (FORCE SCALEOUTEXECUTION)。
 
-- 当提交到主实例的查询使用位于 [HDFS 层](hdfs-tiering.md)中的一个或多个表时。
+- 当提交到主实例的查询使用 [HDFS 层](hdfs-tiering.md)中的一个或多个表时。
 
 不使用计算池的场景包括：
 

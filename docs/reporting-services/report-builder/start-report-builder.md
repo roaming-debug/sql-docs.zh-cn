@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdb67ef174ec849233826b65a2d90f08e8e4eb7d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00a954a23cf9b17a58c3272a03222019400ae891
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290765"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907035"
 ---
 # <a name="start-report-builder"></a>启动报表生成器
 
@@ -30,7 +30,7 @@ ms.locfileid: "80290765"
   
  从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 门户或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中以 SharePoint 集成模式首次启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，系统会提示从 Microsoft 下载中心下载。 
  
-![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
+![“正在打开报表生成器”消息的屏幕截图。](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
  你或管理员还可以 [从 Microsoft 下载中心将报表生成器安装到你的计算机上](https://go.microsoft.com/fwlink/?LinkID=219138)。 有关详细信息，请参阅 [安装报表生成器](../../reporting-services/install-windows/install-report-builder.md) 中的“使用系统管理器服务器安装报表生成器”。
  
@@ -40,7 +40,7 @@ ms.locfileid: "80290765"
   
 ## <a name="to-start-ssrbnoversion-from-the-ssrsnoversion-web-portal"></a>从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 门户启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  在 Web 浏览器的地址栏中，键入报表服务器的 URL。 默认情况下，该 URL 为 https://\<servername  >/reports。  
+1.  在 Web 浏览器的地址栏中，键入报表服务器的 URL。 默认情况下，URL 为 https://\<*servername*>/reports。  
   
 2.  在 Web 门户的上栏中，选择“新建” > “分页报表”。    
   

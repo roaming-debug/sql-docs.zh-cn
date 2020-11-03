@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e75947d7ea4b47c7c2fef3e37cfd6b5b73b48533
-ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
+ms.openlocfilehash: db705ffc6bd3f7f961ea569883b77934e9689f9f
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86291144"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679201"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什么是 SQL Server Reporting Services (SSRS)？
 
@@ -39,7 +39,7 @@ SSRS 解决方案灵活地将正确信息提供给正确用户。 用户可以�
 SQL Server Reporting Services 提供产品的更新套件：
 
 * 提供最新的“传统”分页报表，使用户可通过更新工具和用于创建报表的新功能创建新式报表  。
-* 具有响应式布局的**新移动报表** ，可适应不同设备和保存方式。
+* 具有响应式布局的 **新移动报表** ，可适应不同设备和保存方式。
 * **新式 Web 门户** ，可在任何新式浏览器中查看。 在新门户中，可以组织和显示移动和分页 Reporting Services 报表及 KPI。 还可在门户中存储 Excel 工作薄。
 
 请继续阅读有关每项的详细信息。
@@ -54,7 +54,7 @@ SQL Server Reporting Services 提供产品的更新套件：
 
 ## <a name="paginated-reports"></a>分页报表
 
-![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
+![图中显示了桌面设备屏幕和平板电脑设备上的分页报表。](../reporting-services/media/ssrs-paginated-reports.png)
 
 Reporting Services 与“传统”分页报表相关联，非常适合用于为打印而优化的固定布局文档，如 PDF 和 Word 文件。
 
@@ -67,7 +67,7 @@ Reporting Services 与“传统”分页报表相关联，非常适合用于为�
 
 ## <a name="mobile-reports"></a>移动报表
 
-![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
+![图中显示了桌面设备屏幕和平板电脑设备上的移动报表。](../reporting-services/media/ssrs-mobile-reports.png)
 
 移动计算已经改变了工作所用的设备，这意味着现在的用户具有不同的报告需求。 引入平板电脑和手机时，固定布局报表体验不佳。 针对宽屏电脑设计的内容无法在小屏幕手机上获得最佳体验，小屏幕手机不仅尺寸更小而且采用纵向或横向布局。
 
@@ -79,7 +79,7 @@ Reporting Services 与“传统”分页报表相关联，非常适合用于为�
 
 ## <a name="web-portal"></a>Web 门户
 
-![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
+![图中显示了 Web 门户笔记本电脑。](../reporting-services/media/ssrs-web-portal.png)
 
 对于本机模式 Reporting Services 的最终用户，前门是可在大多数浏览器中查看的新式 Web 门户。 可以在新门户中访问所有 Reporting Services 移动报表、分页报表及 KPI。 KPI 可结合浏览器查看关键业务指标，而无需打开报表。
 

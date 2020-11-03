@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: 在此系列教程的第四部分（共五部分），你将在 SQL Server 上使用 Transact-SQL，采用 R 和 SQL 机器学习来训练并保存模型。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 242835f4ae65fa0f2ada862e225df47e35f8ec82
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178434"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412545"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>R 教程：训练并保存模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -38,14 +38,14 @@ ms.locfileid: "88178434"
 
 ## <a name="create-the-stored-procedure"></a>创建存储过程
 
-从 T-SQL 调用 R 时，可以使用系统存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 但是，对于经常重复执行的过程（如重新定型模型），在其他存储过程中封装对 sp_execute_exernal_script 进行的调用则会更加方便。
+从 T-SQL 调用 R 时，可以使用系统存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 但是，对于经常重复执行的过程（如重新训练模型），在其他存储过程中封装对 `sp_execute_external_script` 的调用则会更加方便。
 
-1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，打开一个新的“查询”窗口****。
+1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，打开一个新的“查询”窗口。
 
-2. 运行以下语句，创建存储过程 RxTrainLogitModel****。 此存储过程定义输入数据，并使用 RevoScaleR 中的 rxLogit 创建逻辑回归模型****。
+2. 运行以下语句，创建存储过程 RTrainLogitModel。 此存储过程定义输入数据，并使用 glm 来创建逻辑回归模型。
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
+   CREATE PROCEDURE [dbo].[RTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
    
    AS
    BEGIN
@@ -60,7 +60,7 @@ ms.locfileid: "88178434"
      EXEC sp_execute_external_script @language = N'R',
                                      @script = N'
    ## Create model
-   logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet)
+   logitObj <- glm(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet, family = binomial)
    summary(logitObj)
    
    ## Serialize model 
@@ -77,9 +77,9 @@ ms.locfileid: "88178434"
 
    + SELECT 查询使用自定义标量函数 *fnCalculateDistance* 计算上车与下车位置之间的直接距离。 查询的结果存储在默认 R 输入变量 `InputDataset` 中。
   
-   + R 脚本会调用 rxLogit 函数（这是 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 附带的一个增强 R 函数）以创建逻辑回归模型****。
+   + R 脚本调用 R 函数 glm 来创建逻辑回归模型。
   
-     二进制变量 _tipped_ 用作标签** 或结果列，模型使用以下这些特征列进行调整：_passenger_count_、_trip_distance_、_trip_time_in_secs_ 和 _direct_distance_。
+     二进制变量 _tipped_ 用作标签或结果列，模型使用以下这些特征列进行调整： _passenger_count_ 、 _trip_distance_ 、 _trip_time_in_secs_ 和 _direct_distance_ 。
   
    + 已定型模型（保存在 R 变量 `logitObj` 中）会进行序列化，并作为输出参数返回。
 
@@ -87,28 +87,26 @@ ms.locfileid: "88178434"
 
 因为存储过程已包含输入数据的定义，所以无需提供输入查询。
 
-1. 要定型和部署 R 模型，请调用存储过程，并将其插入到数据库表 nyc_taxi_models 中，以便可以将其用于未来的预测__：
+1. 要定型和部署 R 模型，请调用存储过程，并将其插入到数据库表 nyc_taxi_models 中，以便可以将其用于未来的预测：
 
    ```sql
    DECLARE @model VARBINARY(MAX);
-   EXEC RxTrainLogitModel @model OUTPUT;
-   INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
+   EXEC RTrainLogitModel @model OUTPUT;
+   INSERT INTO nyc_taxi_models (name, model) VALUES('RTrainLogit_model', @model);
    ```
 
-2. 查看 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的“消息”窗口，以查看通过管道传递到 R 的 stdout 流的消息，如下所示********： 
+2. 查看 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的“消息”窗口，以查看通过管道传递到 R 的 stdout 流的消息，如下所示： 
 
    “来自外部脚本的 STDOUT 消息:读取的行数：1193025，已处理的总行数:1193025，总区块时间:0.093 秒”
 
-   可能还会看到特定于单个函数 `rxLogit` 的消息（显示作为模型创建的一部分生成的变量和测试指标）。
+3. 语句完成后，打开表 nyc_taxi_models。 数据处理和模型调整可能需要一些时间。
 
-3. 语句完成后，打开表 nyc_taxi_models**。 数据处理和模型调整可能需要一些时间。
-
-   可以看到已添加了一个新行，该行在列 model 中包含序列化模型，在列 name 中包含模型名称 RxTrainLogit_model__****__。
+   你可以看到已添加了一个新行，该行在列 model 中包含序列化模型，在列 name 中包含模型名称 TrainLog_model。
 
    ```text
    model                        name
    ---------------------------- ------------------
-   0x580A00000002000302020....  RxTrainLogit_model
+   0x580A00000002000302020....  RTrainLogit_model
    ```
 
 在此教程的下一部分中，你将使用已训练模型来生成预测。

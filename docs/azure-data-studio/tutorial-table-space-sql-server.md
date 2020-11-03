@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: 276cb3535e3ee0623816aa329446e81b2feaf12e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: d0dd2b33c5f37b58e1442c4ba4cef2a4f38f293c
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745617"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439271"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>教程：使用 Azure Data Studio 启用表空间使用情况示例见解小组件
 
@@ -44,7 +44,7 @@ Azure Data Studio 具有内置的示例小组件，用于监视数据库中的�
 
 4. 自定义“dashboard.database.widgets”设置时，需编辑“用户设置”部分中的“dashboard.database.widgets”条目  。
 
-   ![搜索设置](media/tutorial-table-space-sql-server/search-settings.png)
+   ![屏幕截图显示了“用户设置”部分，其中突出显示了“仪表板”>“数据库小组件”部分。](media/tutorial-table-space-sql-server/search-settings.png)
 
    如果“用户设置”部分中没有“dashboard.database.widgets”，请将鼠标悬停在“默认设置”列中的“dashboard.database.widgets”文本上，单击显示在文本左侧的齿轮图标，然后单击“设置 JSON 时复制”  。 如果弹出窗口显示“在设置中替换”，请勿单击它！ 转到右侧的“用户设置”列，找到“dashboard.database.widgets”部分，然后进入下一步 。
 
@@ -65,13 +65,13 @@ Azure Data Studio 具有内置的示例小组件，用于监视数据库中的�
 
    “dashboard.database.widgets”部分看起来应类似于下图：
 
-    ![搜索设置](./media/tutorial-table-space-sql-server/insight-table-space.png)
+    ![屏幕截图显示了 settings.json 文件，其中包含具有 dashboard.database.widgets 数组的第一个对象。](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
 6. 按“Ctrl+S”保存设置。
 
 7. 右键单击“TutorialDB”打开数据库仪表板，然后单击“管理” 。
 
-8. 查看*表空间*见解小组件，如下图所示：
+8. 查看 *表空间* 见解小组件，如下图所示：
 
    ![小组件](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 

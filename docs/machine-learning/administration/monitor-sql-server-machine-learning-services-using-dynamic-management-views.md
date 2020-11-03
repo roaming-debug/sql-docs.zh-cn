@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6d94fc2d85ac0012347cb55f4981a25ba107f5df
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115533"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679212"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用动态管理视图 (DMV) 监视 SQL Server 机器学习服务
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -251,8 +251,8 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 |--------------------------|--------------|
 | pool_name                | 资源池的名称。 SQL Server 资源池以 `SQL Server` 为前缀，外部资源池以 `External Pool` 为前缀。 |
 | total_cpu_usage_hours    | 自重置 Resource Govenor 统计信息以来的累计 CPU 使用量（毫秒）。 |
-| read_io_completed_total  | 自重置资源调控器统计信息以来完成的读取 IO 总数。              |
-| write_io_completed_total | 自重置资源调控器统计信息以来完成的写入 IO 总数。             |
+| read_io_completed_total  | 自重置 Resource Governor 统计信息以来完成的读取 IO 总数。              |
+| write_io_completed_total | 自重置 Resource Governor 统计信息以来完成的写入 IO 总数。             |
 
 ## <a name="installed-packages"></a>已安装的包
 

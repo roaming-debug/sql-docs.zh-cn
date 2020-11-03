@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f28c3feb8d8cd2fe68ab093241ac4390768b6487
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d775b0346ce2838abeec4bebce55762afd3b0adc
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448230"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907325"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>在移动报表中按列或行对数据进行分组 | Reporting Service
 在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中的许多类型的图表中，可以按列或按行来组织数据。 按照此分步说明执行操作。
@@ -29,17 +29,17 @@ ms.locfileid: "79448230"
 
 2. 选择“数据”选项卡  。你会看到 SimulatedTable 表包含一系列的列，即“Metric1”到“Metric5”，以及“Comparison1”到“Comparison5”     。 
 
-   ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
+   ![移动报表数据组列的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
 3. 在“数据属性”窗格中，“主系列”是“SimulatedTable”    。 选择“主系列”旁的框中的箭头，会看到“Metric1”到“Metric5”处于选中状态    。
 
-   ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
+   ![主系列旁选项的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
    “比较系列”也是同样情况   -- **Comparison1** 到 **Comparison5** 处于选择状态。
    
 4. 选择“预览”  。
 
-   ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
+   ![比较总计图表预览视图的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 
    图表中的每条都表示表中的一列。 较粗条是“度量”列，较细条是“比较”列。
 
@@ -49,15 +49,15 @@ ms.locfileid: "79448230"
 
 7. 选择“数据”选项卡  。现在 SimulatedTable 表具有一个“类别”列以及“指标”和“比较”列（类别 A 到 E）    。 
 
-   ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
+   ![移动报表数据组行的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 
 8.  在“数据属性”窗格中，现在有一个“类别列”框，其中列出了 SimulatedTable 中的“类别”列  。 在“主系列”中，可以选取要用于值的列。 默认情况下， [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 会为“主系列”选择 Metric5 到 Metric1，为“比较系列”选择 Comparison1 到 Comparison5。 
 
-    ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
+    ![比较系列旁选项的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
 9. 选择“预览”  。
 
-   ![mobile-report-chart-by-rows](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
+   ![更新后比较总计图表预览视图的屏幕截图。](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
 
    现在图表中的每条都表示“类别”列中每种类别的值。
 
