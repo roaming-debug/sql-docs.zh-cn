@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
-ms.date: 04/27/2020
-ms.openlocfilehash: 7f77f26ffbaa0dab14e41654fdcddda3dd4ab278
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.date: 10/29/2020
+ms.openlocfilehash: 436c176e469e7ce0f34e26a883fae4cdd6bb59a1
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300490"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067239"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio 中的 Kqlmagic
 
@@ -259,5 +259,4 @@ Kqlmagic 是一种命令，可在 [Azure Data Studio 笔记本](./notebooks-guid
 - [使用 Jupyter Notebook 和 Kqlmagic 扩展分析 Azure 数据资源管理器中的数据](/azure/data-explorer/Kqlmagic)
 - [Jupyter 笔记本和 Jupyter 实验室的扩展 (Magic)](https://github.com/Microsoft/jupyter-Kqlmagic)，让笔记本体验适用于 Kusto、Application Insights 和 LogAnalytics 数据。
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
-- [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
 - [如何使用 Azure Data Studio 中的笔记本](./notebooks-guidance.md)

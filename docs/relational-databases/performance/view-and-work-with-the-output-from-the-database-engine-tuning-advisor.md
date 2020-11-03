@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e81bbff1dd2eedace6ac7a5e535db9e9689157e8
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890907"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734669"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>查看和使用来自数据库引擎优化顾问 (DTA) 的输出
 
@@ -176,7 +176,7 @@ ms.locfileid: "91890907"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     数据库引擎优化顾问 XML 架构也可通过 [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta) 在线获得。  
+     数据库引擎优化顾问 XML 架构也可通过 [https://schemas.microsoft.com/sqlserver/2004/07/dta/](https://schemas.microsoft.com/sqlserver/2004/07/dta/) 在线获得。  
   
 6.  创建工作负荷和 XML 输入文件后，你就可以将该输入文件提交到 **dta** 命令行实用工具进行分析。 请确保为 **-ox** 实用工具参数指定 XML 输出文件名。 这样将创建一个具有 **Configuration** 元素中指定的建议配置的 XML 输出文件。 如果要再次运行数据库引擎优化顾问以检查基于该输出的另一个假设配置，您可以从输出文件中复制 **Configuration** 元素内容，然后将其粘贴到一个新的或原始 XML 输入文件中。 有关将 XML 输入文件与 **dta** 实用工具结合使用的信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)中的“使用 dta 实用工具优化数据库”部分。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "91890907"
 4.  双击优化会话名称，其信息将加载到数据库引擎优化顾问中。 加载会话信息后，可以选择任意选项卡查看此优化会话的有关信息。  
   
 ### <a name="evaluate-existing-tuning-sessions-as-hypothetical-configurations"></a>采用假设配置评估现有优化会话  
- 请按照以下步骤评估现有优化会话。 评估现有优化会话涉及查看和编辑其建议，然后重新优化。 例如，您决定仅对 **table1**创建索引，因此需要从现有优化建议中去掉创建索引视图和分区的步骤。 然后，数据库引擎优化顾问创建新的优化会话，将编辑过的建议作为假设配置，并优化数据库的工作负荷。 这意味着数据库引擎优化顾问优化数据库的工作负荷时，就像已实施了编辑过的建议，这样，用户就可以执行有限的假设分析。 由于使用数据库引擎优化顾问 GUI 时只能选择部分现有建议，因此，只能执行有限的假设分析。 若要执行完整的模拟分析，必须将数据库引擎优化顾问 XML 输入文件与 **dta** 命令行实用工具结合使用，指定一种全新的假设配置，而不是采用任何现有优化会话的一部分。  
+ 请按照以下步骤评估现有优化会话。 评估现有优化会话涉及查看和编辑其建议，然后重新优化。 例如，您决定仅对 **table1** 创建索引，因此需要从现有优化建议中去掉创建索引视图和分区的步骤。 然后，数据库引擎优化顾问创建新的优化会话，将编辑过的建议作为假设配置，并优化数据库的工作负荷。 这意味着数据库引擎优化顾问优化数据库的工作负荷时，就像已实施了编辑过的建议，这样，用户就可以执行有限的假设分析。 由于使用数据库引擎优化顾问 GUI 时只能选择部分现有建议，因此，只能执行有限的假设分析。 若要执行完整的模拟分析，必须将数据库引擎优化顾问 XML 输入文件与 **dta** 命令行实用工具结合使用，指定一种全新的假设配置，而不是采用任何现有优化会话的一部分。  
   
 ##### <a name="to-evaluate-an-existing-tuning-session"></a>评估现有优化会话  
   

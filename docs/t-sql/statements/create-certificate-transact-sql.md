@@ -28,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ae27e25e16022aa1ec497188bee7fde68a9bca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d4799b962fd1c8b6084443f5d83fa171fe4b0a1
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458819"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067416"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -112,6 +112,7 @@ CREATE CERTIFICATE certificate_name
 <date_options> ::=  
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -119,33 +120,33 @@ CREATE CERTIFICATE certificate_name
  certificate_name  
  数据库中证书的名称。  
   
- AUTHORIZATION user_name**  
+ AUTHORIZATION user_name  
  拥有该证书的用户的名称。  
   
  ASSEMBLY assembly_name  
  指定已经加载到数据库中的已签名的程序集。  
   
  [ EXECUTABLE ] FILE = 'path_to_file'  
- 指定包含证书的 DER 编码文件的完整路径（包括文件名）。 如果使用 EXECUTABLE 选项，则文件为已使用证书签名的 DLL。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径**。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问该文件。 该帐户必须具有所需的文件系统权限。  
+ 指定包含证书的 DER 编码文件的完整路径（包括文件名）。 如果使用 EXECUTABLE 选项，则文件为已使用证书签名的 DLL。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问该文件。 该帐户必须具有所需的文件系统权限。  
 
 > [!IMPORTANT]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持通过文件或使用私钥文件创建证书。
   
  BINARY = asn_encoded_certificate  
  指定为二进制常量的 ASN 编码证书字节数。  
- **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
+ **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  WITH PRIVATE KEY  
  指定将证书的私钥加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 从程序集创建证书时，此子句无效。 若要加载从程序集创建的证书的私钥，请使用 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)。  
   
  FILE ='path_to_private_key'  
- 指定私钥的完整路径（包括文件名）。 path_to_private_key 可以是本地路径，也可以是网络位置的 UNC 路径**。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问该文件。 该帐户必须具有所需的文件系统权限。  
+ 指定私钥的完整路径（包括文件名）。 path_to_private_key 可以是本地路径，也可以是网络位置的 UNC 路径。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问该文件。 该帐户必须具有所需的文件系统权限。  
   
 > [!IMPORTANT]  
 > 此选项在包含的数据库或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中不可用。  
   
  BINARY = private_key_bits  
- **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定为二进制常量的专有键位。 这些位可采用加密形式。 如果加密，则用户必须提供解密密码。 不会对此密码执行密码策略检查。 私钥位应该采用 PVK 文件格式。  
   
@@ -156,7 +157,7 @@ CREATE CERTIFICATE certificate_name
  指定用于加密私钥的密码。 只有在需要使用密码对证书进行加密时，才使用该选项。 如果省略该子句，则使用数据库主密钥对私钥进行加密。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
  SUBJECT = 'certificate_subject_name'  
- 根据 X.509 标准中的定义，术语 subject 是指证书的元数据中的字段**。 主题的长度应不超过 64 个字符，并且在 Linux 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中强制执行此限制。 对于 Windows 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，主题的长度最多是 128 个字符。 将主题存储到目录中时，如果主题的长度超过 128 个字节，则主题会被截断，但是包含证书的二进制大型对象 (BLOB) 将保留完整的主题名称。  
+ 根据 X.509 标准中的定义，术语 subject 是指证书的元数据中的字段。 主题的长度应不超过 64 个字符，并且在 Linux 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中强制执行此限制。 对于 Windows 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，主题的长度最多是 128 个字符。 将主题存储到目录中时，如果主题的长度超过 128 个字节，则主题会被截断，但是包含证书的二进制大型对象 (BLOB) 将保留完整的主题名称。  
   
  START_DATE = 'datetime'  
  证书生效的日期。 如果未指定，则将 START_DATE 设置为当前日期。 START_DATE 采用 UTC 时间，并且可以通过可转换为日期和时间的任何格式指定。  
@@ -164,7 +165,7 @@ CREATE CERTIFICATE certificate_name
  EXPIRY_DATE = 'datetime'  
  证书过期的日期。 如果未指定，则将 EXPIRY_DATE 设置为 START_DATE 一年之后的日期。 EXPIRY_DATE 采用 UTC 时间，并且可以通过可转换为日期和时间的任何格式指定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 会检查过期日期。 使用证书进行加密的备份还将检查到期日期，且不会允许使用过期证书创建新备份，但会允许使用过期证书进行还原。 但是，在将证书用于数据库加密或 Always Encrypted 时，不会强制应用到期日期。  
   
- ACTIVE FOR BEGIN_DIALOG = { ON | OFF ****}  
+ ACTIVE FOR BEGIN_DIALOG = { ON | OFF }  
  使证书可用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话会话的发起方。 默认值为 ON。  
   
 ## <a name="remarks"></a>备注  
@@ -176,7 +177,7 @@ CREATE CERTIFICATE certificate_name
   
  存储证书的整个证书颁发者字段，但只有前 884 个字节出现在 sys.certificates 目录视图中。  
   
- 私钥必须与 certificate_name 指定的公钥相对应**。  
+ 私钥必须与 certificate_name 指定的公钥相对应。  
   
  当您通过容器创建证书时，可选择是否加载私钥。 但是当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成自我签名的证书时，始终会创建私钥。 默认情况下，私钥使用数据库主密钥进行加密。 如果数据库主密钥不存在并且未指定密码，则该语句将失败。  
   
@@ -187,7 +188,7 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 > 内置的加密和签名功能不会检查证书的过期日期。 使用这些功能的用户必须决定何时检查证书的过期日期。  
   
- 可以使用 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 和 [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md) 函数创建证书的二进制说明。 有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的示例，请参阅文章 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B********。  
+ 可以使用 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 和 [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md) 函数创建证书的二进制说明。 有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的示例，请参阅文章 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B。  
 
 已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中弃用 MD2、MD4、MD5、SHA 和 SHA1 算法。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，需使用 SHA1 创建自签名证书。 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，可使用 SHA2_256 创建自签名证书。
 

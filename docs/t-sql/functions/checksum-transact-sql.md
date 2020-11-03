@@ -21,12 +21,12 @@ ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9d8db55081e82657966e98a22345076bdd83108
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f27205e76df6ba323ae586a84a19dcf05b654aa9
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459861"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067366"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -42,6 +42,7 @@ CHECKSUM ( * | expression [ ,...n ] )
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>参数
 \*  
@@ -53,7 +54,7 @@ CHECKSUM ( * | expression [ ,...n ] )
 - **text**
 - **XML**
 
-另一个非可比数据类型为，以上述任一数据类型作为基类型的 sql_variant****。
+另一个非可比数据类型为，以上述任一数据类型作为基类型的 sql_variant。
   
 *expression*  
 除非可比数据类型之外的任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。

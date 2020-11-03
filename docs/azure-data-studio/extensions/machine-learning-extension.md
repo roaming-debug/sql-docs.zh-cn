@@ -9,16 +9,16 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 163f5efca97e99609cbdbaae8f713c4576cc4e0b
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725142"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035973"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio 的机器学习扩展（预览版）
 
-借助 [Azure Data Studio](../what-is.md) 的机器学习扩展，你可以管理包、导入机器学习模型、作出预测以及创建笔记本，以运行 SQL 数据库试验。 此扩展当前处于预览状态。
+借助 [Azure Data Studio](../what-is-azure-data-studio.md) 的机器学习扩展，你可以管理包、导入机器学习模型、作出预测以及创建笔记本，以运行 SQL 数据库试验。 此扩展当前处于预览状态。
 
 ## <a name="prerequisites"></a>先决条件
 

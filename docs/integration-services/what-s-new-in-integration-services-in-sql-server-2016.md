@@ -16,10 +16,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92193725"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
@@ -200,10 +200,10 @@ ms.locfileid: "92193725"
  另外，还提供了一个新的 **ssis_monitor** 角色。 该角色支持 AlwaysOn，仅限 SSIS 目录内部使用。  
 
 ####  <a name="new-runtimelineage-logging-level-in-the-ssis-catalog"></a><a name="RuntimeLineage"></a> SSIS 目录中的全新运行时沿袭日志记录级别  
- SSIS 目录中的全新“运行时沿袭”日志记录级别收集在数据流中跟踪沿袭信息所需的数据。 **** 可以分析此沿袭信息以映射任务之间的沿袭关系。 使用此信息，ISV 和开发人员可以构建自定义沿袭映射工具。 
+ SSIS 目录中的全新“运行时沿袭”日志记录级别收集在数据流中跟踪沿袭信息所需的数据。  可以分析此沿袭信息以映射任务之间的沿袭关系。 使用此信息，ISV 和开发人员可以构建自定义沿袭映射工具。 
 
 ####  <a name="new-custom-logging-level-in-the-ssis-catalog"></a><a name="CustomLogging"></a> SSIS 目录中的全新自定义日志记录级别  
- 旧版 SSIS 目录允许你在运行包时从以下四个内置日志记录级别进行选择：“无”、“基本”、“性能”或“详细”。 **** SQL Server 2016 增加了 RuntimeLineage **** 日志记录级别。 此外，你现在还可以在 SSIS 目录中创建和保存多个自定义日志记录级别，然后在每次运行包时选取要使用的日志记录级别。 每个自定义日志记录级别只选择要捕获的统计信息和事件。 （可选）包括事件上下文，以便查看变量值、连接字符串和任务属性。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](../integration-services/performance/integration-services-ssis-logging.md#server_logging)。 
+ 旧版 SSIS 目录允许你在运行包时从以下四个内置日志记录级别进行选择：“无”、“基本”、“性能”或“详细”。  SQL Server 2016 增加了 RuntimeLineage 日志记录级别。 此外，你现在还可以在 SSIS 目录中创建和保存多个自定义日志记录级别，然后在每次运行包时选取要使用的日志记录级别。 每个自定义日志记录级别只选择要捕获的统计信息和事件。 （可选）包括事件上下文，以便查看变量值、连接字符串和任务属性。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](../integration-services/performance/integration-services-ssis-logging.md#server_logging)。 
 
 ####  <a name="column-names-for-errors-in-the-data-flow"></a><a name="ErrorColumn"></a> 数据流中错误对应的列名称  
  当您将重定向的数据流中包含到错误输出的错误的行时，输出会包括顺序错误发生，但不会显示的列的名称的列的数值标识符。 现在可以通过多种方式来查找和显示发生了错误的列的名称。  
@@ -232,7 +232,7 @@ ms.locfileid: "92193725"
 >  （在 RC0 中，此方法已移至新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 接口。 有关详细信息，请参阅 [API 中的全新 IDTSComponentMetaData130 接口](#CMD130)。）  
 
 ####  <a name="support-for-server-wide-default-logging-level"></a><a name="ServerLogLevel"></a> 支持服务器范围的默认日志记录级别  
- 在 SQL Server“服务器属性”的“服务器日志记录级别”属性下，现在可以选择默认服务器范围的日志记录级别。******** 可以从内置日志记录级别（基本、无、详细、性能或运行时沿袭）中选择一项，也可以选择现有的自定义日志记录级别。 所选的日志记录级别适用于部署到 SSIS 目录的所有包， 同时也默认适用于运行 SSIS 包的 SQL 代理作业步骤。  
+ 在 SQL Server“服务器属性”的“服务器日志记录级别”属性下，现在可以选择默认服务器范围的日志记录级别。 可以从内置日志记录级别（基本、无、详细、性能或运行时沿袭）中选择一项，也可以选择现有的自定义日志记录级别。 所选的日志记录级别适用于部署到 SSIS 目录的所有包， 同时也默认适用于运行 SSIS 包的 SQL 代理作业步骤。  
 
 ####  <a name="new-idtscomponentmetadata130-interface-in-the-api"></a><a name="CMD130"></a> API 中的全新 IDTSComponentMetaData130 接口  
  SSIS 目录中的全新“运行时沿袭”日志记录级别收集在数据流中跟踪沿袭信息所需的数据。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 接口向现有的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口添加了新功能，特别是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法。 （ **GetIdentificationStringByID** 方法已从 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口移至新接口。）另外，还有新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> 接口，这两个接口均提供 **LineageIdentificationString** 属性。 有关详细信息，请参阅 [数据流中错误对应的列名称](#ErrorColumn)。  
@@ -243,7 +243,7 @@ ms.locfileid: "92193725"
  将 SSIS 项目从旧版升级到最新版时，可以继续使用项目级别的连接管理器，而且包布局和注释也会保留。  
 
 ####  <a name="autoadjustbuffersize-property-automatically-calculates-buffer-size-for-data-flow"></a><a name="BufferSize"></a> AutoAdjustBufferSize 属性自动为数据流计算缓冲区大小  
- 将新的 **AutoAdjustBufferSize** 属性的值设置为 **true**时，数据流引擎会自动为数据流计算缓冲区大小。 有关详细信息，请参阅 [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md)。  
+ 将新的 **AutoAdjustBufferSize** 属性的值设置为 **true** 时，数据流引擎会自动为数据流计算缓冲区大小。 有关详细信息，请参阅 [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md)。  
 
 ####  <a name="reusable-control-flow-templates"></a><a name="Templates"></a> 可重用控制流模板  
  将常用控制流任务或容器保存到单独的模板文件中，然后即可使用控制流模板在项目的一个或多个包中多次重复使用它。 这种可重用性使得 SSIS 包更容易进行设计和维护。 有关详细信息，请参阅 [通过控制流包部件在包之间重用控制流](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)。  
@@ -325,7 +325,7 @@ ms.locfileid: "92193725"
 ####  <a name="multi-targeting-and-multi-version-support-in-ssis-designer"></a><a name="OneDesigner"></a> SSIS 设计器中的多目标和多版本支持  
  你现在可以在用于 Visual Studio 2015 的 SQL Server Data Tools (SSDT) 中使用 SSIS 设计器来创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。 要获取 SSDT，请参阅 [下载最新的 SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。 
 
- 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性” **** 以打开该项目的属性页。 在“配置属性” **** 的“常规” **** 选项卡上，选择“TargetServerVersion” **** 属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+ 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
  ![“项目属性”对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "“项目属性”对话框中的 TargetServerVersion 属性")  
 

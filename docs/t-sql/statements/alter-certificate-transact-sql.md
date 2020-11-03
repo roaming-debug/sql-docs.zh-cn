@@ -24,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 37580f0069d4621f759d258e238ba3f8cf2d7d14
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688073"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067461"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -76,7 +76,7 @@ ALTER CERTIFICATE certificate_name
         DECRYPTION BY PASSWORD = '<key password>' )
 }  
 ```  
-  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -94,22 +94,22 @@ ALTER CERTIFICATE certificate_name
  
  如果仅指定文件名，则该文件将保存在实例的默认用户数据文件夹中。 此文件夹可能是（或可能不是）[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹。 对于 SQL Server Express LocalDB，实例的默认用户数据文件夹是 `%USERPROFILE%` 环境变量为创建实例的帐户指定的路径。  
   
- BINARY = private_key_bits**  
- **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
+ BINARY = private_key_bits  
+ **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  指定为二进制常量的专有键位。 这些位可采用加密形式。 如果加密，则用户必须提供解密密码。 不会对此密码执行密码策略检查。 私钥位应该采用 PVK 文件格式。  
   
- DECRYPTION BY PASSWORD = current_password**  
+ DECRYPTION BY PASSWORD = current_password  
  指定解密私钥所需的密码。  
   
- ENCRYPTION BY PASSWORD = new_password**  
- 指定用于对数据库中的证书私钥进行加密的密码。 new_password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求**。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
+ ENCRYPTION BY PASSWORD = new_password  
+ 指定用于对数据库中的证书私钥进行加密的密码。 new_password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
  ACTIVE FOR BEGIN_DIALOG = { ON | OFF }  
  使证书可用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话会话的发起方。  
   
 ## <a name="remarks"></a>备注  
- 私钥必须与 certificate_name 指定的公钥相对应**。  
+ 私钥必须与 certificate_name 指定的公钥相对应。  
   
  如果文件中的密码受空密码保护，则可省略 DECRYPTION BY PASSWORD 子句。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0615678e5c6613b5b709f711dc3f2cf9e7dfa8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d4235e64f59814075a5d0d57e24d5345b9876a0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425359"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243671"
 ---
 # <a name="--subtract-ssis-expression"></a>-（减）（SSIS 表达式）
 
@@ -44,10 +44,9 @@ numeric_expression1 - numeric_expression2
  由两个参数的数据类型决定。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
 ## <a name="remarks"></a>备注  
- 用括号将减法一元表达式括起来，以便确保按正确顺序对该表达式进行求值。  
-  
-## <a name="remarks"></a>备注  
- 如果任意一个操作数为 Null，则结果为 Null。  
+ - 用括号将减法一元表达式括起来，以便确保按正确顺序对该表达式进行求值。  
+
+ - 如果任意一个操作数为 Null，则结果为 Null。  
   
 ## <a name="expression-examples"></a>表达式示例  
  此示例将数值相减。  

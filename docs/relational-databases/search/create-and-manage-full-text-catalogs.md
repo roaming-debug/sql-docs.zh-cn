@@ -8,6 +8,7 @@ ms.technology: search
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.fulltextsearch.ftcatalog.general.f1
+- sql13.swb.fulltextsearch.fulltextindexproperties.general.f1
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
@@ -16,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff19e0cd9ef6b88dae2410edbc4cae74e911c1a0
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: a431635fdca556023a5e598502919bfdc9e40db6
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92343999"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067329"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
 
@@ -43,13 +44,13 @@ GO
 ``` 
 
 ### <a name="create-a-full-text-catalog-with-management-studio"></a>使用 Management Studio 创建全文目录
-1.  在对象资源管理器中，展开服务器，展开“数据库”  ，然后展开要在其中创建全文目录的数据库。  
+1.  在对象资源管理器中，展开服务器，展开“数据库”，然后展开要在其中创建全文目录的数据库。  
   
-2.  展开“存储”  ，然后右键单击“全文目录”  。  
+2.  展开“存储”，然后右键单击“全文目录”。  
   
-3.  选择“新建全文目录”  。  
+3.  选择“新建全文目录”。  
   
-4.  在“新建全文目录”  对话框中，指定要重新创建的目录的信息。 有关详细信息，请参阅[新建全文目录（常规页）](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)。  
+4.  在“新建全文目录”对话框中，指定要重新创建的目录的信息。 有关详细信息，请参阅[新建全文目录（常规页）](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)。  
   
     > [!NOTE]  
     >  全文目录 ID 从 00005 开始，每创建一个新目录，其 ID 值就会递增 1。  
@@ -86,27 +87,27 @@ GO
 运行 Transact-SQL 语句 [ALTER FULLTEXT CATALOG ...REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)，或者在 SQL Server Management Studio (SSMS) 中执行以下操作。
 
-1.  在 SSMS 的对象资源管理器中，依次展开服务器、“数据库”  、包含要重新生成的全文目录的数据库。  
+1.  在 SSMS 的对象资源管理器中，依次展开服务器、“数据库”、包含要重新生成的全文目录的数据库。  
   
 2.  展开 **“存储”** ，然后展开 **“全文目录”** 。  
   
-3.  右键单击要重新生成的全文目录的名称，并选择“重新生成”  。  
+3.  右键单击要重新生成的全文目录的名称，并选择“重新生成”。  
   
-4.  对于问题  。  
+4.  对于问题 **是否要删除并重新生成全文目录?** ，请单击“确定”。  
   
-5.  在“重新生成全文目录”  对话框中，单击“关闭”  。  
+5.  在“重新生成全文目录”对话框中，单击“关闭”。  
    
 ##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> 为数据库重新生成所有全文目录  
 
-1.  在 SSMS 的对象资源管理器中，依次展开服务器、“数据库”  、包含要重新生成的全文目录的数据库。  
+1.  在 SSMS 的对象资源管理器中，依次展开服务器、“数据库”、包含要重新生成的全文目录的数据库。  
   
-2.  展开“存储”  ，然后右键单击“全文目录”  。  
+2.  展开“存储”，然后右键单击“全文目录”。  
   
 3.  选择 **“全部重新生成”** 。  
   
-4.  对于问题  。  
+4.  对于问题 **是否要删除并重新生成所有全文目录?** ，请单击“确定”。  
   
-5.  在“重新生成所有全文目录”  对话框中，单击“关闭”  。  
+5.  在“重新生成所有全文目录”对话框中，单击“关闭”。  
   
   
   
@@ -115,11 +116,11 @@ GO
 运行 Transact-SQL 语句 [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)，或在 SQL Server Management Studio (SSMS) 中执行以下操作。
 
-1.  在 SSMS 的对象资源管理器中，依次展开服务器、“数据库”  、包含要删除的全文目录的数据库。  
+1.  在 SSMS 的对象资源管理器中，依次展开服务器、“数据库”、包含要删除的全文目录的数据库。  
   
 2.  展开 **“存储”** ，然后展开 **“全文目录”** 。  
   
-3.  右键单击要删除的全文目录，然后选择“删除”  。  
+3.  右键单击要删除的全文目录，然后选择“删除”。  
   
 4.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
 
