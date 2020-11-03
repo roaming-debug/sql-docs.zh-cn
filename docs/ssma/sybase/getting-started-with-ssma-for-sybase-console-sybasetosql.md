@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e59cb5565ca518dc927f29e684401bf8fc6d5822
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34e0a493140a31099dc4b9ed9f6234743bf0c8c1
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418313"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235364"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>入门用于 Sybase 控制台的 SSMA (SybaseToSQL) 
 本部分介绍了启动和启动用于 Sybase 控制台应用程序的 SSMA 的过程。 本文还列出了在典型的 SSMA 控制台输出窗口中使用的约定。  
@@ -53,15 +53,15 @@ ms.locfileid: "88418313"
 ## <a name="ssma-console-output-conventions"></a>SSMA 控制台输出约定  
 执行 SSMA 脚本命令和选项时，控制台程序会将结果和消息显示 (信息、错误等 ) 到控制台上的用户，或者在必要时将其重定向到 xml 输出文件。 输出中的每种消息类型都用一种独特的颜色表示。 例如，以白色表示的短信表示脚本文件命令;绿色颜色表示用户输入的提示，等等。  
   
-![SSMAConsoleOutput_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
+![显示 SSMA 控制台 Sybase 输出示例的屏幕截图。](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
   
 下表显示了控制台输出的颜色解释：  
   
-|Color|说明|  
+|颜色|说明|  
 |---------|---------------|  
 |红色|执行过程中出现错误|  
 |灰色|日期和时间戳，向用户发送消息|  
-|White|脚本文件命令，消息类型|  
+|白色|脚本文件命令，消息类型|  
 |Yellow|警告|  
 |绿色|提示输入用户-输入|  
 |蓝|操作的开始时间、完成时间和结果|  

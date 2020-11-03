@@ -15,24 +15,24 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eeb6cde4e4b24d9ef7b5e67de8bfd155808fd649
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 57051ece8e432ed56c2b376c6586ff5a147b25b6
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331047"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235537"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>使用 T-sql 创建图形数据库并运行一些模式匹配查询
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-此示例提供了一个 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 脚本，用于创建具有节点和边缘的图形数据库，然后使用 NEW match 子句来匹配某些模式并遍历图形。 此示例脚本可用于 Azure SQL 数据库和[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+此示例提供了一个 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 脚本，用于创建具有节点和边缘的图形数据库，然后使用 NEW match 子句来匹配某些模式并遍历图形。 此示例脚本可用于 Azure SQL 数据库和 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>示例架构
 
 此示例将创建一个图形架构，如图1所示，对于具有人员、餐馆和 City 节点的假设社交网络。 这些节点使用朋友、赞、LivesIn 和 LocatedIn 边缘彼此连接。
 
-![人员-城市-餐厅-表](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql graph 数据库示例")  
+![显示具有餐馆、city、person 节点和 LivesIn、LocatedIn、赞边缘的示例架构的关系图。](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql graph 数据库示例")  
 图1：具有餐馆、city、person 节点和 LivesIn、LocatedIn、赞边缘的示例架构。
 
 ## <a name="sample-script"></a>示例脚本

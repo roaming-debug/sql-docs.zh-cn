@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17199fb610f707c77a6610d34c8b1a5f0166de13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2767a89347329ee084c8b055bcb444dc4e78117
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424849"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243526"
 ---
 # <a name="asynchronous-execution-polling-method"></a>异步执行（轮询方法）
-在 ODBC 3.8 和 Windows 7 SDK 之前，只允许对语句函数执行异步操作。 有关详细信息，请参阅本主题后面的 **异步执行语句操作**。  
+在 ODBC 3.8 和 Windows 7 SDK 之前，只允许对语句函数执行异步操作。 有关详细信息，请参阅本主题后面的 **异步执行语句操作** 。  
   
  Windows 7 SDK 中的 ODBC 3.8 介绍了与连接相关的操作的异步执行。 有关详细信息，请参阅本主题后面的 **异步执行连接操作** 部分。  
   
@@ -201,21 +201,21 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  若要指定以异步方式执行使用特定连接执行的函数，应用程序将调用 **SQLSetConnectAttr** 并将 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 特性设置为 SQL_ASYNC_DBC_ENABLE_ON。 建立连接之前设置连接属性始终以同步方式执行。 此外，SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 将连接属性设置为 " **SQLSetConnectAttr** " 的操作始终同步执行。  
   
- 应用程序可以在建立连接前启用异步操作。 因为在建立连接之前，驱动程序管理器无法确定要使用的驱动程序，所以，驱动程序管理器将始终在 **SQLSetConnectAttr**中返回 success。 但是，如果 ODBC 驱动程序不支持异步操作，则可能无法连接。  
+ 应用程序可以在建立连接前启用异步操作。 因为在建立连接之前，驱动程序管理器无法确定要使用的驱动程序，所以，驱动程序管理器将始终在 **SQLSetConnectAttr** 中返回 success。 但是，如果 ODBC 驱动程序不支持异步操作，则可能无法连接。  
   
  通常，最多可以有一个与特定连接句柄或语句句柄关联的异步执行函数。 但是，一个连接句柄可以有多个关联的语句句柄。 如果在连接句柄上没有执行异步操作，则关联语句句柄可执行异步操作。 同样，如果任何关联语句句柄上都没有正在进行的异步操作，则可以在连接句柄上执行异步操作。 如果尝试使用当前正在执行异步操作的句柄执行异步操作，将返回 HY010，"函数序列错误"。  
   
  如果连接操作返回 SQL_STILL_EXECUTING，则应用程序只能调用该连接句柄的原始函数和以下函数：  
   
--   连接句柄上的**SQLCancelHandle** ()   
+-   连接句柄上的 **SQLCancelHandle** ()   
   
 -   **SQLGetDiagField**  
   
 -   **SQLGetDiagRec**  
   
--   分配 ENV/DBC) 的**SQLAllocHandle** (  
+-   分配 ENV/DBC) 的 **SQLAllocHandle** (  
   
--   分配 ENV/DBC) 的**SQLAllocHandleStd** (  
+-   分配 ENV/DBC) 的 **SQLAllocHandleStd** (  
   
 -   **SQLGetEnvAttr**  
   
@@ -233,23 +233,22 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  如果以异步方式打开或关闭连接，则当应用程序接收到原始函数调用中的 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 时，操作即完成。  
   
- 新函数已添加到 ODBC 3.8， **SQLCancelHandle**。 此函数取消 (**SQLBrowseConnect**、 **SQLConnect**、 **SQLDisconnect**、 **SQLDriverConnect**、 **SQLEndTran**和 **SQLSetConnectAttr**) 的六个连接函数。 应用程序应调用 **SQLGetFunctions** 来确定驱动程序是否支持 **SQLCancelHandle**。 与 **SQLCancel**一样，如果 **SQLCancelHandle** 返回成功，则并不意味着该操作已取消。 应用程序应再次调用原始函数以确定操作是否已取消。 **SQLCancelHandle** 可让你取消对连接句柄或语句句柄的异步操作。 使用 **SQLCancelHandle** 取消对语句句柄的操作与调用 **SQLCancel**相同。  
+ 新函数已添加到 ODBC 3.8， **SQLCancelHandle** 。 此函数取消 ( **SQLBrowseConnect** 、 **SQLConnect** 、 **SQLDisconnect** 、 **SQLDriverConnect** 、 **SQLEndTran** 和 **SQLSetConnectAttr** ) 的六个连接函数。 应用程序应调用 **SQLGetFunctions** 来确定驱动程序是否支持 **SQLCancelHandle** 。 与 **SQLCancel** 一样，如果 **SQLCancelHandle** 返回成功，则并不意味着该操作已取消。 应用程序应再次调用原始函数以确定操作是否已取消。 **SQLCancelHandle** 可让你取消对连接句柄或语句句柄的异步操作。 使用 **SQLCancelHandle** 取消对语句句柄的操作与调用 **SQLCancel** 相同。  
   
- 不需要同时支持 **SQLCancelHandle** 和异步连接操作。 驱动程序可以支持异步连接操作，但不支持 **SQLCancelHandle**，反之亦然。  
+ 不需要同时支持 **SQLCancelHandle** 和异步连接操作。 驱动程序可以支持异步连接操作，但不支持 **SQLCancelHandle** ，反之亦然。  
   
  ODBC 1.x 和 ODBC 2.x 应用程序也可以使用 ODBC 3.8 驱动程序和 ODBC 3.8 驱动程序管理器来使用异步连接操作和 **SQLCancelHandle** 。 有关如何使较旧的应用程序在更高版本的 ODBC 版本中使用新功能的信息，请参阅 [兼容性矩阵](../../../odbc/reference/develop-app/compatibility-matrix.md)。  
   
 ### <a name="connection-pooling"></a>连接池  
- 只要启用了连接池，就只支持使用 **SQLConnect** 和 **SQLDriverConnect**) 建立连接 (，并使用 **SQLDisconnect**关闭连接。 但应用程序仍然能够处理来自 **SQLConnect**、 **SQLDriverConnect**和 **SQLDisconnect**的 SQL_STILL_EXECUTING 返回值。  
+ 只要启用了连接池，就只支持使用 **SQLConnect** 和 **SQLDriverConnect** ) 建立连接 (，并使用 **SQLDisconnect** 关闭连接。 但应用程序仍然能够处理来自 **SQLConnect** 、 **SQLDriverConnect** 和 **SQLDisconnect** 的 SQL_STILL_EXECUTING 返回值。  
   
  启用连接池时，支持 **SQLEndTran** 和 **SQLSetConnectAttr** 异步操作。  
   
-## <a name="example"></a>示例  
+## <a name="examples"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="a-enable-asynchronous-execution-of-connection-functions"></a>A. 启用连接函数的异步执行
+
  下面的示例演示如何使用 **SQLSetConnectAttr** 来启用与连接相关的函数的异步执行。  
-  
-### <a name="code"></a>代码  
   
 ```  
 BOOL AsyncConnect (SQLHANDLE hdbc)   
@@ -298,12 +297,9 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ```  
   
-## <a name="example"></a>示例  
-  
-### <a name="description"></a>描述  
+### <a name="b-asynchronous-commit-operations"></a>B. 异步提交操作 
+
  此示例演示异步提交操作。 还可以通过此方法完成回滚操作。  
-  
-### <a name="code"></a>代码  
   
 ```  
 BOOL AsyncCommit ()   

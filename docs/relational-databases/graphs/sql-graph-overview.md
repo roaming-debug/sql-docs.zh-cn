@@ -16,12 +16,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ffa64e3a567a219e192c9108b04e2c96efaf5c
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494185"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235622"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL 数据库中的图形处理
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "88494185"
 
 
 ### <a name="create-graph-objects"></a>创建图形对象
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 扩展将允许用户创建节点或边界表。 节点和边缘都可以有与之关联的属性。 由于，节点和边缘以表的形式存储，因此在节点或边界表上支持对关系表支持的所有操作。 下面是一个示例：  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 扩展将允许用户创建节点或边界表。 节点和边缘都可以有与之关联的属性。 由于，节点和边缘以表的形式存储，因此在节点或边界表上支持对关系表支持的所有操作。 以下是示例：  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![person-表](../../relational-databases/graphs/media/person-friends-tables.png "人员节点和好友边缘表")  
+![显示节点和边缘的关系图以表的形式存储。](../../relational-databases/graphs/media/person-friends-tables.png "人员节点和好友边缘表")  
 节点和边缘作为表存储  
 
 ### <a name="query-language-extensions"></a>查询语言扩展  

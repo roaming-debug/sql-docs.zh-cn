@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9eba640bc529487772510e06a7c66210be3e43a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59df65daf56708a2b30b1e0a75e554750e95cb47
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463436"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235184"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>SSMA for MySQL 控制台入门 (MySQLToSQL)
 本部分介绍了启动和入门 MySQL 控制台应用程序的过程。 本文还列出了在典型的 SSMA 控制台输出窗口中使用的约定。  
@@ -26,7 +26,7 @@ ms.locfileid: "88463436"
 ## <a name="launching-ssma-console"></a>启动 SSMA 控制台  
 使用以下步骤启动 SSMA 控制台应用程序：  
   
-1.  中转到 " **开始** "，然后指向 " **所有程序**"。  
+1.  中转到 " **开始** "，然后指向 " **所有程序** "。  
   
 2.  单击 " **SQL Server 迁移助手获取 MySQL 命令提示符** " 快捷方式。  
   
@@ -52,15 +52,15 @@ ms.locfileid: "88463436"
 ## <a name="ssma-console-output-conventions"></a>SSMA 控制台输出约定  
 执行 SSMA 脚本命令和选项后，控制台程序会在控制台上显示 (信息、错误等 ) 的结果和消息，或者，如果需要，则重定向到 xml 输出文件。 输出中的每种消息类型都用一种独特的颜色表示。 例如，以白色表示的短信表示脚本文件命令;绿色颜色表示用户输入的提示，等等。  
   
-![SSMAConsoleOutput_MySQL](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
+![显示 SSMA 控制台 MySQL 输出示例的屏幕截图。](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
   
 下表中的控制台输出的颜色解释：  
   
-|Color|说明|  
+|颜色|说明|  
 |---------|---------------|  
 |红色|执行过程中出现错误|  
 |灰色|日期和时间戳，向用户发送消息|  
-|White|脚本文件命令，消息类型|  
+|白色|脚本文件命令，消息类型|  
 |Yellow|警告|  
 |绿色|提示输入用户-输入|  
 |蓝|操作的开始、完成和结果|  

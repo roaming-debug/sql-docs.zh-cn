@@ -15,12 +15,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d676d32426678720f76de1ff04c355a54998dd1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c742ebd930066c4e242cabff781b0c61af5f566f
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408733"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235572"
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 体系结构  
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88408733"
 用户可以为每个数据库创建一个关系图。 关系图是节点和边缘表的集合。 节点或边界表可以在数据库中的任何架构下创建，但它们都属于一个逻辑关系图。 节点表是类似节点类型的集合。 例如，Person 节点表包含属于关系图的所有人员节点。 同样，边缘表也是类似类型的边缘的集合。 例如，朋友边缘表包含将某人员连接到其他人的所有边缘。 由于节点和边缘存储在表中，因此在节点或边界表上支持在常规表上支持的大多数操作。 
  
  
-![sql-图形-体系结构](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql graph 数据库体系结构")   
+![显示 SQL Graph 数据库体系结构的关系图。](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql graph 数据库体系结构")   
 
 图1： SQL Graph 数据库体系结构
  
@@ -44,7 +44,7 @@ ms.locfileid: "88408733"
 ## <a name="edge-table"></a>边缘表
 边缘表表示关系图中的关系。 边缘始终定向并连接两个节点。 使用边缘表，用户可以为图形中的多对多关系建模。 边缘表中不能有任何用户定义的属性。 每次创建边缘表时，还会在边缘表中创建三个隐式列：
 
-|列名称    |描述  |
+|列名称    |说明  |
 |---   |---  |
 |`$edge_id`   |唯一标识数据库中的给定边缘。 它是生成的列，并且值是边缘表 object_id 和内部生成的 bigint 值的组合。 但是，在 `$edge_id` 选择该列时，将显示 JSON 字符串形式的计算值。 `$edge_id` 是一个伪列，它映射到其中包含十六进制字符串的内部名称。 `$edge_id`从表中选择时，列名称将显示为 `$edge_id_\<hex_string>` 。 使用查询中的伪列名时，建议的方法是查询内部 `$edge_id` 列，并使用包含十六进制字符串的内部名称。 |
 |`$from_id`   |存储 `$node_id` 从中产生边缘的节点的。  |
@@ -56,13 +56,13 @@ ms.locfileid: "88408733"
 
 图2显示了如何将节点和边缘表存储在数据库中。 
 
-![person-表](../../relational-databases/graphs/media/person-friends-tables.png "人员节点和好友边缘表")   
+![显示节点和边缘表表示形式的关系图。](../../relational-databases/graphs/media/person-friends-tables.png "人员节点和好友边缘表")   
 
 图2：节点和边缘表表示形式
 
 
 
-## <a name="metadata"></a>Metadata
+## <a name="metadata"></a>元数据
 使用这些元数据视图可以查看节点或边缘表的属性。
  
 ### <a name="systables"></a>sys.tables
@@ -83,7 +83,7 @@ ms.locfileid: "88408733"
  
 下表列出了列的有效值 `graph_type`
 
-|列值  |描述  |
+|列值  |说明  |
 |---   |---   |
 |1  |GRAPH_ID  |
 |2  |GRAPH_ID_COMPUTED  |
@@ -120,7 +120,7 @@ ms.locfileid: "88408733"
 ### <a name="system-functions"></a>系统函数
 添加了下列内置函数。 这将帮助用户从生成的列中提取信息。 请注意，这些方法不会验证用户的输入。 如果用户指定了无效 `sys.node_id` 的方法，将提取相应的部分并将其返回。 例如，OBJECT_ID_FROM_NODE_ID 将采用 `$node_id` 作为输入，并将返回表的 object_id，此节点属于。 
  
-|内置   |描述  |
+|内置   |说明  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |从中提取 object_id `node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |从中提取 graph_id `node_id`  |
@@ -136,7 +136,7 @@ ms.locfileid: "88408733"
  
 ### <a name="data-definition-language-ddl-statements"></a>数据定义语言 (DDL) 语句
 
-|任务   |相关文章  |说明
+|任务   |相关文章  |注释
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` 现已扩展为支持将表创建为节点或边缘。 请注意，边缘表可以是也可以没有任何用户定义的属性。  |
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|节点和边缘表可以通过与关系表相同的方式进行更改，使用 `ALTER TABLE` 。 用户可以添加或修改用户定义的列、索引或约束。 但是，更改内部图形列（如 `$node_id` 或 `$edge_id` ）将导致错误。  |
@@ -147,10 +147,10 @@ ms.locfileid: "88408733"
 
 ### <a name="data-manipulation-language-dml-statements"></a>数据操作语言 (DML) 语句
 
-|任务   |相关文章  |说明
+|任务   |相关文章  |注释
 |---  |---  |---  |
 |INSERT |[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)|插入到节点表与在关系表中插入没有什么不同。 列的值 `$node_id` 将自动生成。 尝试在或列中插入 `$node_id` 值 `$edge_id` 将导致错误。 `$from_id` `$to_id` 当插入到边缘表中时，用户必须为和列提供值。 `$from_id` 和 `$to_id` 是 `$node_id` 给定边缘连接到的节点的值。  |
-|删除 | [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|从节点或边缘表中删除数据时，可以通过与从关系表中删除数据相同的方式删除数据。 但是，在此版本中，没有任何约束来确保在删除节点时不支持边缘指向已删除的节点和边缘的级联删除。 建议每次删除节点时，也会删除该节点的所有连接边缘，以维持图形的完整性。  |
+|DELETE | [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|从节点或边缘表中删除数据时，可以通过与从关系表中删除数据相同的方式删除数据。 但是，在此版本中，没有任何约束来确保在删除节点时不支持边缘指向已删除的节点和边缘的级联删除。 建议每次删除节点时，也会删除该节点的所有连接边缘，以维持图形的完整性。  |
 |UPDATE |[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)  |用户定义列中的值可以使用 UPDATE 语句进行更新。 不允许更新内部图形列 `$node_id` 、 `$edge_id` 、 `$from_id` 和 `$to_id` 。  |
 |MERGE |[MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` 语句在节点或边界表上受支持。  |
 

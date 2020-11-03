@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f275628747d0b17ede6c76f67961fe5233e788c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412854"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243536"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -42,7 +42,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **TopPercent**函数计算指定数值表达式对指定集求得的总和，并按降序对集进行排序。 然后，该函数返回具有最高值的元素，其总合计值的累积百分比至少是指定的百分比。 该函数返回累积合计至少达到指定百分比的最小子集。 返回的元素按从大到小的顺序排序。  
+ **TopPercent** 函数计算指定数值表达式对指定集求得的总和，并按降序对集进行排序。 然后，该函数返回具有最高值的元素，其总合计值的累积百分比至少是指定的百分比。 该函数返回累积合计至少达到指定百分比的最小子集。 返回的元素按从大到小的顺序排序。  
   
 > [!WARNING]  
 >  如果 *Numeric_Expression*  返回任何负值，则 **TopPercent** 只返回一个 (1) 行。  
@@ -52,7 +52,10 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  与 [BottomPercent](../mdx/bottompercent-mdx.md) 函数一样， **TopPercent** 函数始终中断层次结构。  
   
-## <a name="example"></a>示例  
+## <a name="examples"></a>示例  
+
+### <a name="a-return-toppercent"></a>A. 返回 TopPercent
+
  下面的示例返回对于“自行车”类别，帮助实现前 10% 的分销商销售额的最佳城市。 结果将按降序排序，并且从具有最高销售额的城市开始。  
   
 ```  
@@ -72,7 +75,7 @@ WHERE([Product].[Product Categories].[Bikes])
 |-|---------------------------|  
 |Toronto|$3508904.84|  
 |London|$1521530.09|  
-|西雅图|$1209418.16|  
+|Seattle|$1209418.16|  
 |Paris|$1170425.18|  
   
  使用下面的查询可以获取原始数据集，并返回 588 行：  
@@ -89,8 +92,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## <a name="example"></a>示例  
- 下面的演练将帮助了解 *Numeric_Expression*中的负值的影响。 首先，将生成一些可展示该行为的上下文。  
+### <a name="b-understand-the-effect-of-negative-values"></a>B. 了解负值的效果
+
+ 下面的演练将帮助了解 *Numeric_Expression* 中的负值的影响。 首先，将生成一些可展示该行为的上下文。  
   
  下面的查询将返回一个表，由分销商的“Sales Amount”、“Total Product Cost”和“Gross Profit”构成，并且按利润的降序排序。 请注意，对于利润仅存在负值；因此，最小的利润损失将出现在最顶部。  
   
