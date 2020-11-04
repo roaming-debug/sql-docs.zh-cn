@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
-ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
+ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93294391"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328594"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "93294391"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主要版本号。 可以为 NULL。|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次版本号。 可以为 NULL。|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部版本号。 可以为 NULL。|  
-|time_zone|**smallint**|在备份操作开始时，本地时间 (执行备份操作的时间间隔为15分钟的时间间隔内发生的备份操作) 和协调世界)  (时。 值可介于（含） -48 到 +48 之间。 值 127 表示未知。 例如，-20 为美国东部标准时间 (EST)，即比 UTC 晚 5 小时。 可以为 NULL。|  
+|time_zone|**smallint**|使用备份操作开始时的时区信息，本地时间 (备份操作的发生间隔时间) 和协调世界)  (时，以15分钟为间隔。 值可介于（含） -48 到 +48 之间。 值 127 表示未知。 例如，-20 为美国东部标准时间 (EST)，即比 UTC 晚 5 小时。 可以为 NULL。|  
 |**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 磁带格式的次版本号。 可以为 NULL。|  
 |**first_lsn**|**numeric(25,0)**|备份集中第一条或最早的日志记录的日志序列号。 可以为 NULL。|  
 |**last_lsn**|**numeric(25,0)**|备份集之后的下一条日志记录的日志序列号。 可以为 NULL。|  

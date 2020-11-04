@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f62aebfe079ed8a701301ca7d5d3a5c70127407a
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: 8816e2ca5872da55193fab016a459a461359c742
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678904"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328582"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-sql) 
 
@@ -41,11 +41,11 @@ ms.locfileid: "92678904"
 |database_id|**int**|显式上下文所使用的数据库的标识符 (例如，使用 DB_X) 。|请参阅 sys.databases 中的 ID [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |command|**nvarchar(4000)**|保存用户提交的请求的完整文本。|任何有效的查询或请求文本。 超过4000字节的查询将被截断。|  
 |resource_class|**nvarchar (20)**|用于此请求的工作负荷组。 |静态资源类</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>动态资源类</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|执行请求的重要性设置。  这是此工作负荷组中的请求与共享资源的工作负荷组之间的相对重要性。  分类器中指定的重要性覆盖工作负荷组重要性设置。</br>适用对象：Azure SQL 数据仓库|Null</br>low</br>below_normal</br>正常 (默认值) </br>above_normal</br>high|
-|group_name|**sysname** |对于利用资源的请求，group_name 是在其下运行请求的工作负荷组的名称。  如果请求不使用资源，则 group_name 为 null。</br>适用对象：Azure SQL 数据仓库|
+|importance|**nvarchar(128)**|执行请求的重要性设置。  这是此工作负荷组中的请求与共享资源的工作负荷组之间的相对重要性。  分类器中指定的重要性覆盖工作负荷组重要性设置。</br>适用对象：Azure Synapse Analytics|Null</br>low</br>below_normal</br>正常 (默认值) </br>above_normal</br>high|
+|group_name|**sysname** |对于利用资源的请求，group_name 是在其下运行请求的工作负荷组的名称。  如果请求不使用资源，则 group_name 为 null。</br>适用对象：Azure Synapse Analytics|
 |classifier_name|**sysname**|对于利用资源的请求，是用于分配资源和重要性的分类器的名称。||
-|resource_allocation_percentage|**decimal (5，2)**|分配给请求的资源的百分比。</br>适用对象：Azure SQL 数据仓库|
-|result_cache_hit|**int**|详细说明已完成的查询是否使用了结果集缓存。  </br>适用对象：Azure SQL 数据仓库| 1 = 结果集缓存命中 </br> 0 = 结果集缓存未命中 </br> 负整数值 = 不使用结果集缓存的原因。  有关详细信息，请参阅备注部分。|
+|resource_allocation_percentage|**decimal (5，2)**|分配给请求的资源的百分比。</br>适用对象：Azure Synapse Analytics|
+|result_cache_hit|**int**|详细说明已完成的查询是否使用了结果集缓存。  </br>适用对象：Azure Synapse Analytics| 1 = 结果集缓存命中 </br> 0 = 结果集缓存未命中 </br> 负整数值 = 不使用结果集缓存的原因。  有关详细信息，请参阅备注部分。|
 |client_correlation_id|**nvarchar(255)**|客户端会话的可选用户定义名称。  若要为会话设置，请调用 sp_set_session_context "client_correlation_id"、" <CorrelationIDName> "。  运行 `SELECT SESSION_CONTEXT(N'client_correlation_id')` 以检索其值。|
 ||||
 
@@ -72,7 +72,7 @@ ms.locfileid: "92678904"
 
  需要 VIEW SERVER STATE 权限。  
   
-## <a name="security"></a>安全性
+## <a name="security"></a>安全
 
  sys.dm_pdw_exec_requests 不会根据特定于数据库的权限筛选查询结果。 具有 VIEW SERVER STATE 权限的登录名可以获取所有数据库的结果查询结果  
   
@@ -81,4 +81,4 @@ ms.locfileid: "92678904"
   
 ## <a name="see-also"></a>另请参阅
 
- [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [&#40;Transact-sql&#41;的 Azure Synapse 分析和并行数据仓库动态管理视图 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
