@@ -9,12 +9,12 @@ ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 32ff32e3d342d63e6de7976213bf4a48ec915778
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: b929bd76f77f021fbc1821811beb7e86be8edd2e
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784909"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235664"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例 - iSCSI - Linux 上的 SQL Server
 
@@ -47,7 +47,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
-    ![7-setiscsinetwork][6]
+    ![iface 命令及对该命令的响应的屏幕截图。][6]
  
 2.  编辑 `/var/lib/iscsi/ifaces/iSCSIIfaceName`。 确保已完整填写以下值：
 
@@ -58,7 +58,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
 
     请参阅以下示例：
 
-    ![iSCSITargetSettings][2]
+    ![文件完全填写好的文件屏幕截图。][2]
 
 3.  查找 iSCSI 目标。
 
@@ -68,7 +68,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
 
      \<iSCSINetName> 是网络的唯一/友好名称，\<TargetIPAddress> 是 iSCSI 目标的 IP 地址，\<TargetPort> 是 iSCSI 目标的端口。 
 
-    ![iSCSITargetResults][3]
+    ![discovery 命令及对该命令的响应的屏幕截图。][3]
 
  
 4.  登录到目标
@@ -95,7 +95,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
     ```
-    ![30-iSCSIattachedDisks][7]
+    ![grep 命令及对该命令的响应的屏幕截图，其中显示了附加的 SCSI 磁盘。][7]
 
 7.  在 iSCSI 磁盘上创建物理卷。
 
@@ -197,7 +197,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
         ls /var/opt/mssql/data
         ```
     
-        ![45-CopyMove][8]
+        ![ls 命令及对该命令的响应的屏幕截图。][8]
 
    * 键入 `exit` 切换回根用户。
 
@@ -321,7 +321,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
 
    *    若要进行测试，请在该文件夹中创建数据库。 以下示例使用 sqlcmd 创建数据库，将上下文切换到该数据库，验证操作系统级别是否存在文件，然后删除临时位置。 可以使用 SSMS。
   
-        ![50-ExampleCreateSSMS][9]
+        ![sqlcmd 命令及对该命令的响应的屏幕截图。][9]
 
    *    卸载共享 
 
@@ -355,7 +355,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
 
     \<ListOfVGsNotUsedByPacemaker> 是步骤 20 的输出中 FCI 不会使用的卷组的列表。 将每个卷组括在引号中并用逗号分隔。 下面显示了一个示例。
 
-    ![55-ListOfVGs][11]
+    ![显示 volume_list 值的示例的屏幕截图。][11]
 
 17. 当 Linux 启动时，它将装载文件系统。 要确保只有 Pacemaker 可以装入 iSCSI 磁盘，请重新生成根文件系统映像。 
 

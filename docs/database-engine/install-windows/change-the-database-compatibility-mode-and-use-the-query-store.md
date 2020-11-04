@@ -15,12 +15,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09451cc9897962566905f66400cb185a5d2211da
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895391"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243696"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>更改数据库兼容性级别和使用查询存储
 
@@ -46,7 +46,7 @@ ms.locfileid: "85895391"
   
 [查询存储使用方案中的“在升级到新版 SQL Server 期间保持性能稳定”部分](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)中介绍了将查询处理器升级到最新版本的建议工作流，如下所示。  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+![显示建议工作流的示意图，其中建议将查询处理器升级到最新版本的代码。](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
 
 自 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 起，用户可借助查询优化助手按指导操作建议的工作流。 有关详细信息，请参阅[使用查询优化助手升级数据库](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。
  

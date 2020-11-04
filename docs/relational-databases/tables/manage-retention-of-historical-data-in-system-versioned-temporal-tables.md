@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810672"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243595"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理由系统控制版本的临时表中历史数据的保留期
 
@@ -180,7 +180,7 @@ COMMIT ;
 
 下图显示了将数据保留 6 个月的初始分区配置。
 
-![分区](../../relational-databases/tables/media/partitioning.png "分区")
+![显示将数据保留 6 个月的初始分区配置的示意图。](../../relational-databases/tables/media/partitioning.png "分区")
 
 > [!NOTE]
 > 有关配置分区时使用 RANGE LEFT 与 RANGE RIGHT 对性能产生的影响，请参阅下面的“表分区的性能注意事项”。
@@ -189,7 +189,7 @@ COMMIT ;
 
 下图演示了重复性分区维护任务（参阅下面的详细步骤）。
 
-![分区 2](../../relational-databases/tables/media/partitioning2.png "分区 2")
+![显示重复性分区维护任务的示意图。](../../relational-databases/tables/media/partitioning2.png "分区 2")
 
 重复性分区维护任务的详细步骤如下：
 
@@ -323,7 +323,7 @@ COMMIT TRANSACTION
 
 首先，让我们以直观的方式解释 RANGE LEFT 和 RANGE RIGHT 选项的含义：
 
-![分区 3](../../relational-databases/tables/media/partitioning3.png "分区 3")
+![显示 RANGE LEFT 和 RANGE RIGHT 选项的示意图。](../../relational-databases/tables/media/partitioning3.png "分区 3")
 
 当你将某个分区函数定义为 RANGE LEFT 时，指定的值为分区的上限。 当你使用 RANGE RIGHT 时，指定的值为分区的下限。 当你使用 MERGE RANGE 操作从分区函数定义中删除边界时，底层实现也会删除包含边界的分区。 如果该分区不为空，则会因 MERGE RANGE 操作而将数据移到分区。
 
@@ -332,11 +332,11 @@ COMMIT TRANSACTION
 - RANGE LEFT 用例：在 RANGE LEFT 用例中，最低分区边界属于分区 1，而该分区是空的（在换出分区后），因此执行 MERGE RANGE 不会发生任何数据移动。
 - RANGE RIGHT 用例：在 RANGE RIGHT 用例中，最低分区边界属于分区 2，而该分区不是空的，因为我们假设分区 1 是通过换出清空的。在这种情况下，执行 MERGE RANGE 将发生数据移动（分区 2 中的数据将移到分区 1）。 为了避免此问题，滑动窗口方案中的 RANGE RIGHT 需要一个始终为空的分区 1。 这意味着，如果我们使用 RANGE RIGHT，则应创建并维护一个与 RANGE LEFT 用例比较的附加分区。
 
-**结论**：要进行分区管理和避免数据移动，在滑动分区中使用 RANGE LEFT 要方便得多。 但是，使用 RANGE RIGHT 定义分区要稍微简单一些，因为你无需处理日期时间的时钟周期问题。
+**结论** ：要进行分区管理和避免数据移动，在滑动分区中使用 RANGE LEFT 要方便得多。 但是，使用 RANGE RIGHT 定义分区要稍微简单一些，因为你无需处理日期时间的时钟周期问题。
 
 ## <a name="using-custom-cleanup-script-approach"></a>使用自定义清理脚本方法
 
-如果 Stretch Database 和表分区方法不可行，则第三种方法是使用自定义清理脚本从历史记录表中删除数据。 仅当 **SYSTEM_VERSIONING = OFF**时，才可以从历史记录表中删除数据。 为了避免数据不一致，请在维护时段（修改数据的工作负载处于非活动状态）或在事务中（有效阻止其他工作负载）执行清理。 此操作需要对当前和历史记录表拥有 **CONTROL** 权限。
+如果 Stretch Database 和表分区方法不可行，则第三种方法是使用自定义清理脚本从历史记录表中删除数据。 仅当 **SYSTEM_VERSIONING = OFF** 时，才可以从历史记录表中删除数据。 为了避免数据不一致，请在维护时段（修改数据的工作负载处于非活动状态）或在事务中（有效阻止其他工作负载）执行清理。 此操作需要对当前和历史记录表拥有 **CONTROL** 权限。
 
 为了将对常规应用程序和用户查询的阻碍减到最小，请在事务中执行清理脚本时，以一定的延迟删除较小区块中的数据。 尽管在所有情况下要删除的每个数据区块的最佳大小并没有定论，但在单个事务中删除超过 10,000 行可能会造成严重的影响。
 
@@ -344,7 +344,7 @@ COMMIT TRANSACTION
 
 下图演示了应该如何针对单个表组织你的清理逻辑，以降低对运行中工作负载的影响。
 
-![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
+![一张示意图，显示该如何针对一张表整理你的清理逻辑，以降低对运行中工作负载的影响。](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
 
 下面是有关实施该过程的概要指导。 将清理逻辑计划为每天运行，并循环访问所有需要清理数据的临时表。 使用 SQL Server 代理或其他工具来计划此过程：
 

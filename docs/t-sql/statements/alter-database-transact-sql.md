@@ -2,7 +2,7 @@
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: references_regions
-ms.date: 09/29/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73525f3a89fd0e132de819deefee840c8db8944a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92497031"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235384"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -68,23 +68,30 @@ ms.locfileid: "92497031"
 
 ## <a name="overview-sql-server"></a>概述：SQL Server
 
-在 SQL Server 中，此语句修改一个数据库或与该数据库关联的文件和文件组。 在数据库中添加或删除文件和文件组、更改数据库的属性或其文件和文件组、更改数据库排序规则和设置数据库选项。 不能修改数据库快照。 若要修改与复制相关的数据库选项，请使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此语句修改一个数据库或与该数据库关联的文件和文件组。 在数据库中添加或删除文件和文件组、更改数据库的属性或其文件和文件组、更改数据库排序规则和设置数据库选项。 不能修改数据库快照。 若要修改与复制相关的数据库选项，请使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。
 
-由于 ALTER DATABASE 语法的篇幅较长，因此分为多篇文章。
+由于 `ALTER DATABASE` 语法的篇幅较长，因此分为多篇文章。
 
-ALTER DATABASE 本文介绍的是用于更改数据库的名称和排序规则的语法和相关信息。
+ALTER DATABASE   
+本文介绍的是用于更改数据库的名称和排序规则的语法和相关信息。
 
-[ALTER DATABASE 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)：介绍了用于从数据库中添加和删除文件和文件组以及更改文件和文件组的属性的语法和相关信息。
+[ALTER DATABASE 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)   
+介绍了用于从数据库中添加和删除文件和文件组以及更改文件和文件组的属性的语法和相关信息。
 
-[ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)：介绍了使用 ALTER DATABASE 的 SET 选项来更改数据库属性的语法和相关信息。
+[ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+介绍了使用 ALTER DATABASE 的 SET 选项来更改数据库属性的语法和相关信息。
 
-[ALTER DATABASE 数据库镜像](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) 介绍了 ALTER DATABASE 与数据库镜像相关的 SET 选项的语法和相关信息。
+[ALTER DATABASE 数据库镜像](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
+介绍了 ALTER DATABASE 与数据库镜像相关的 SET 选项的语法和相关信息。
 
-[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 提供 ALTER DATABASE 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 选项的语法和相关信息，该语法用来在 AlwaysOn 可用性组的次要副本上配置辅助数据库。
+[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
+提供 ALTER DATABASE 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 选项的语法和相关信息，该语法用来在 AlwaysOn 可用性组的辅助副本上配置辅助数据库。
 
-[ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)：介绍了 ALTER DATABASE 与数据库兼容级别相关的 SET 选项的语法和相关信息。
+[ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
+介绍了 ALTER DATABASE 与数据库兼容级别相关的 SET 选项的语法和相关信息。
 
-[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 提供与用于单个数据库级别设置（例如查询优化和查询执行相关行为）的数据库范围配置相关的语法。
+[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+提供与用于单个数据库级别设置（例如查询优化和查询执行相关行为）的数据库范围配置相关的语法。
 
 ## <a name="syntax"></a>语法
 
@@ -140,13 +147,16 @@ database_name 要修改的数据库的名称。
 > [!NOTE]
 > 此选项在包含的数据库中不可用。
 
-CURRENT **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。
+CURRENT   
+**适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。
 
 指定应更改当前使用的数据库。
 
-MODIFY NAME =new_database_name 使用指定的名称 new_database_name 重命名数据库。
+MODIFY NAME =new_database_name   
+使用指定的名称 new_database_name 重命名数据库。
 
-COLLATE collation_name 指定数据库的排序规则。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果不指定排序规则，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的排序规则指定为数据库的排序规则。
+COLLATE collation_name   
+指定数据库的排序规则。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果不指定排序规则，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的排序规则指定为数据库的排序规则。
 
 > [!NOTE]
 > 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上创建数据库后，不能更改排序规则。
@@ -155,12 +165,13 @@ COLLATE collation_name 指定数据库的排序规则。 collation_name 既可�
 
 有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE](~/t-sql/statements/collations.md)。
 
-**\<delayed_durability_option> ::=** 
- 适用于：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。
+\<delayed_durability_option> ::=   
+**适用于** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。
 
 有关详细信息，请参阅 [ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)和[控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)。
 
-**\<file_and_filegroup_options>::=** 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
+**\<file_and_filegroup_options>::=**    
+有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -311,13 +322,16 @@ GO
 
 在 Azure SQL 数据库中，使用此语句来修改数据库。 使用此语句更改数据库的名称、更改数据库的版本和服务目标、将数据库加入到弹性池或将其从弹性池中删除、设置数据库选项、添加或删除数据库作为异地复制关系中的辅助，以及设置数据库兼容级别。
 
-由于 ALTER DATABASE 语法的篇幅较长，因此分为多篇文章。
+由于 `ALTER DATABASE` 语法的篇幅较长，因此分为多篇文章。
 
-ALTER DATABASE 本文介绍的是用于更改数据库的名称和排序规则的语法和相关信息。
+ALTER DATABASE   
+本文介绍的是用于更改数据库的名称和排序规则的语法和相关信息。
 
-[ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)：介绍了使用 ALTER DATABASE 的 SET 选项来更改数据库属性的语法和相关信息。
+[ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)    
+介绍了使用 ALTER DATABASE 的 SET 选项来更改数据库属性的语法和相关信息。
 
-[ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)：介绍了 ALTER DATABASE 与数据库兼容级别相关的 SET 选项的语法和相关信息。
+[ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)   
+介绍了 ALTER DATABASE 与数据库兼容级别相关的 SET 选项的语法和相关信息。
 
 ## <a name="syntax"></a>语法
 
@@ -403,18 +417,22 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>参数
 
-database_name 要修改的数据库的名称。
+database_name   
+要修改的数据库的名称。
 
-CURRENT 指定应更改当前使用的数据库。
+CURRENT   
+指定应更改当前使用的数据库。
 
-MODIFY NAME =new_database_name 使用指定的名称 new_database_name 重命名数据库。 以下示例将 `db1` 数据库的名称更改为 `db2`：
+MODIFY NAME =new_database_name   
+使用指定的名称 new_database_name 重命名数据库。 以下示例将 `db1` 数据库的名称更改为 `db2`：
 
 ```sql
 ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION = ['Basic' \| 'Standard' \| 'Premium' \|'GeneralPurpose' \| 'BusinessCritical' \| 'Hyperscale']) 更改数据库的服务层。
+MODIFY (EDITION **=** ['Basic' \| 'Standard' \| 'Premium' \|'GeneralPurpose' \| 'BusinessCritical' \| 'Hyperscale'])   
+更改数据库的服务层。
 
 以下示例将版本更改为 `Premium`：
 
@@ -426,12 +444,14 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > 如果数据库的 MAXSIZE 属性设置为该版本支持的有效范围之外的值，则 EDITION 更改会失败。
 
-MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO']) 更改数据库时间点还原备份和长期保留备份（如果已配置）的存储冗余。 所做的更改将应用于将来进行的所有备份。 现有备份继续使用以前的设置。 
+MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO'])   
+更改数据库的时间点还原备份和长期保留备份（若已配置）的存储冗余。 所做的更改将应用于将来进行的所有备份。 现有备份继续使用以前的设置。 
 
 > [!IMPORTANT]
-> Azure SQL 数据库的 BACKUP_STORAGE_REDUNDANCY 选项为公共预览版，且仅在东南亚 Azure 区域提供。  
+> Azure SQL 数据库的 BACKUP_STORAGE_REDUNDANCY 选项已在巴西南部提供公共预览版，且仅在 Azure 东南亚地区正式发布。  
 
-MODIFY (MAXSIZE = [100 MB \| 500 MB \| 1 \| 1024...4096] GB) 指定数据库的最大大小。 该最大大小必须符合针对数据库的 EDITION 属性的有效值集。 更改数据库的最大大小可能导致更改数据库 EDITION。
+MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)   
+指定数据库的最大大小。 该最大大小必须符合针对数据库的 EDITION 属性的有效值集。 更改数据库的最大大小可能导致更改数据库 EDITION。
 
 > [!NOTE]
 > MAXSIZE 参数不适用于超大规模服务层中的单一数据库。 超大规模服务层数据库根据需要而增长，最大 100 TB。 SQL 数据库服务会自动添加存储空间，而无需设置最大大小。
@@ -455,12 +475,12 @@ MODIFY (MAXSIZE = [100 MB \| 500 MB \| 1 \| 1024...4096] GB) 指定数据库的�
 |150 GB|空值|√|√|√|√|
 |200 GB|空值|√|√|√|√|
 |250 GB|空值|√ (D)|√ (D)|√|√|
-|300 GB|空值|√|√|√|√|
-|400 GB|空值|√|√|√|√|
+|300 GB|不适用|√|√|√|√|
+|400 GB|不适用|√|√|√|√|
 |500 GB|空值|√|√|√ (D)|√|
-|750 GB|空值|√|√|√|√|
-|1024 GB|空值|√|√|√|√ (D)|
-|从 1024 GB 到最大 4096 GB，增量为 256 GB*|空值|空值|空值|空值|√|
+|750 GB|不适用|√|√|√|√|
+|1024 GB|不适用|√|√|√|√ (D)|
+|从 1024 GB 到最大 4096 GB，增量为 256 GB*|不适用|不适用|不适用|不适用|√|
 
 \* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。 P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关 DTU 模型资源限制的其他详细信息，请参阅 [DTU 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。
 
@@ -565,14 +585,15 @@ DTU 模型的 MAXSIZE 值（如果指定）必须为上表中所示的指定服�
 - 如果指定了 EDITION 但未指定 MAXSIZE，则使用版本的默认值。 例如，如果 EDITION 设置为 Standard，且未指定 MAXSIZE，那么 MAXSIZE 自动设置为 250MB。
 - 如果 MAXSIZE 和 EDITION 均未指定，EDITION 设置为“常规用途”，MAXSIZE 设置为“32GB”。
 
-MODIFY (SERVICE_OBJECTIVE = \<service-objective>) 指定计算大小（服务目标）。 以下示例将高级数据库的服务目标更改为 `P6`：
+MODIFY (SERVICE_OBJECTIVE = \<service-objective>)   
+指定计算大小（服务目标）。 以下示例将高级数据库的服务目标更改为 `P6`：
 
 ```sql
 ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```
 
-SERVICE_OBJECTIVE
+SERVICE_OBJECTIVE   
 
 - 针对单一数据库和入池数据库
 
@@ -588,13 +609,13 @@ SERVICE_OBJECTIVE
 
 有关服务目标说明以及大小、版本和服务目标组合的详细信息，请参阅 [Azure SQL 数据库服务层和性能级别](/azure/azure-sql/database/purchasing-models)、[DTU 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)和 [vCore 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。 删除了对 PRS 服务目标的支持。 如有问题，请使用此电子邮件别名：premium-rs@microsoft.com。
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) 若要向弹性池中添加现有数据库，请将数据库的 SERVICE_OBJECTIVE 设置为 ELASTIC_POOL，并提供弹性池的名称。 还可以使用此选项将数据库更改为相同服务器中的不同弹性池。 有关详细信息，请参阅[弹性池有助于管理和缩放多个 Azure SQL 数据库](/azure/azure-sql/database/elastic-pool-overview)。 若要从弹性池中删除数据库，请使用 ALTER DATABASE 将 SERVICE_OBJECTIVE 设置为单个数据库计算大小（服务目标）。
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)   
+若要向弹性池中添加现有数据库，请将数据库的 SERVICE_OBJECTIVE 设置为 ELASTIC_POOL，并提供弹性池的名称。 还可以使用此选项将数据库更改为相同服务器中的不同弹性池。 有关详细信息，请参阅[弹性池有助于管理和缩放多个 Azure SQL 数据库](/azure/azure-sql/database/elastic-pool-overview)。 若要从弹性池中删除数据库，请使用 ALTER DATABASE 将 SERVICE_OBJECTIVE 设置为单个数据库计算大小（服务目标）。
 
 > [!NOTE]
 > 超大规模服务层中的数据库不能添加到弹性池。
 
-ADD SECONDARY ON SERVER \<partner_server_name>
-
+ADD SECONDARY ON SERVER \<partner_server_name>   
 在伙伴服务器上创建具有相同名称的异地复制辅助数据库（使本地数据库进入异地复制主数据库），并开始将数据从主数据库异步复制到新的辅助数据库。 如果辅助数据库上已存在同名的数据库，则命令会失败。 命令会对承载的本地数据库会成为主数据库的服务器上的 master 数据库执行。
 
 > [!IMPORTANT]
@@ -603,7 +624,8 @@ ADD SECONDARY ON SERVER \<partner_server_name>
 > [!IMPORTANT]
 > 默认使用与主数据库或源数据库相同的备份存储冗余创建辅助数据库。 不支持在通过 T-SQL 创建辅助数据库时更改备份存储冗余。 
 
-WITH ALLOW_CONNECTIONS { ALL | NO } When ALLOW_CONNECTIONS 未指定 ALLOW_CONNECTIONS 时，它在默认情况下会设置为 ALL。 如果它设置为 ALL，则是允许拥有适当权限的所有登录名进行连接的只读数据库。
+WITH ALLOW_CONNECTIONS { ALL | NO }   
+未指定 ALLOW_CONNECTIONS 时，它在默认情况下会设置为 ALL。 如果它设置为 ALL，则是允许拥有适当权限的所有登录名进行连接的只读数据库。
 
 WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14`, `GP_Fsv2_16`, `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36`, `GP_Fsv2_72`, `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16`, `BC_M_18`, `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64`, `BC_M_128` }
 
@@ -779,17 +801,21 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 
 ## <a name="overview-azure-sql-managed-instance"></a>概述：Azure SQL 托管实例
 
-在 Azure SQL 托管实例中，使用此语句来设置数据库选项。
+在 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 中，使用此语句设置数据库选项。
 
-由于 ALTER DATABASE 语法的篇幅较长，因此分为多篇文章。
+由于 `ALTER DATABASE` 语法的篇幅较长，因此分为多篇文章。
 
-ALTER DATABASE 本文提供有关设置文件和文件组选项、设置数据库选项和设置数据库兼容级别的语法和相关信息。  
+ALTER DATABASE   
+本文提供有关设置文件和文件组选项、设置数据库选项和设置数据库兼容级别的语法和相关信息。  
   
-[ALTER DATABASE 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)：介绍了用于从数据库中添加和删除文件和文件组以及更改文件和文件组的属性的语法和相关信息。  
+[ALTER DATABASE 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)   
+介绍了用于从数据库中添加和删除文件和文件组以及更改文件和文件组的属性的语法和相关信息。  
   
-[ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)：介绍了使用 ALTER DATABASE 的 SET 选项来更改数据库属性的语法和相关信息。  
+[ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)   
+介绍了使用 ALTER DATABASE 的 SET 选项来更改数据库属性的语法和相关信息。  
   
-[ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)：介绍了 ALTER DATABASE 与数据库兼容级别相关的 SET 选项的语法和相关信息。  
+[ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)   
+介绍了 ALTER DATABASE 与数据库兼容级别相关的 SET 选项的语法和相关信息。  
 
 ## <a name="syntax"></a>语法
 
@@ -834,9 +860,11 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>参数
 
-database_name 要修改的数据库的名称。
+database_name   
+要修改的数据库的名称。
 
-CURRENT 指定应更改当前使用的数据库。
+CURRENT   
+指定应更改当前使用的数据库。
 
 ## <a name="remarks"></a>备注
 
@@ -913,11 +941,12 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="overview-azure-synapse-analytics"></a>概述：Azure Synapse Analytics
 
-在 Azure Synapse 中，“ALTER DATABASE”为数据库修改名称、最大大小或服务对象。
+在 Azure Synapse 中，`ALTER DATABASE` 会修改数据库的名称、最大大小或服务对象。
 
-由于 ALTER DATABASE 语法的篇幅较长，因此分为多篇文章。
+由于 `ALTER DATABASE` 语法的篇幅较长，因此分为多篇文章。
 
-[ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)：介绍了使用 ALTER DATABASE 的 SET 选项来更改数据库属性的语法和相关信息。
+[ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+介绍了使用 ALTER DATABASE 的 SET 选项来更改数据库属性的语法和相关信息。
 
 ## <a name="syntax"></a>语法
 
@@ -984,11 +1013,14 @@ ALTER DATABASE { database_name | Current }
 
 ## <a name="arguments"></a>参数
 
-database_name 指定要修改的数据库的名称。
+database_name   
+指定要修改的数据库的名称。
 
-MODIFY NAME = new_database_name 使用指定的名称 new_database_name 重命名数据库。
+MODIFY NAME = new_database_name   
+使用指定的名称 new_database_name 重命名数据库。
 
-MAXSIZE 默认为 245,760 GB (240 TB)。
+MAXSIZE   
+默认为 245,760 GB (240 TB)。
 
 **适用于：** 已针对计算代系 1 进行优化
 
@@ -998,7 +1030,8 @@ MAXSIZE 默认为 245,760 GB (240 TB)。
 
 数据库中允许的最大行存储数据大小。 存储在行存储表中的数据、列存储索引的增量存储或非聚集索引（聚集在列存储索引上）都不可超过 MAXSIZE。 压缩到列存储格式的数据没有大小限制，不受 MAXSIZE 约束。
 
-SERVICE_OBJECTIVE 指定计算大小（服务目标）。 有关 Azure Synapse 服务目标的详细信息，请参阅[数据仓库单位 (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)。
+SERVICE_OBJECTIVE   
+指定计算大小（服务目标）。 有关 Azure Synapse 服务目标的详细信息，请参阅[数据仓库单位 (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)。
 
 ## <a name="permissions"></a>权限
 
@@ -1114,31 +1147,40 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>参数
 
-database_name 要修改的数据库的名称。 要在设备上显示数据库列表，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。
+database_name   
+要修改的数据库的名称。 要在设备上显示数据库列表，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。
 
-AUTOGROW = { ON | OFF } 更新 AUTOGROW 选项。 当 AUTOGROW 为 ON 时，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 根据需要自动为复制表、分布式表和事务日志增大分配空间，以适应存储需求的增长。 当 AUTOGROW 为 OFF 时，如果复制表、分布式表或事务日志超出最大大小设置，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 会返回一个错误。
+AUTOGROW = { ON | OFF }   
+更新 AUTOGROW 选项。 当 AUTOGROW 为 ON 时，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 根据需要自动为复制表、分布式表和事务日志增大分配空间，以适应存储需求的增长。 当 AUTOGROW 为 OFF 时，如果复制表、分布式表或事务日志超出最大大小设置，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 会返回一个错误。
 
-REPLICATED_SIZE = size [GB] 指定每个计算节点的新最大 GB 数，以便存储要更改的数据库中的所有复制表。 如果正在计划设备存储空间，需要用 REPLICATED_SIZE 乘以设备中的计算节点数。
+REPLICATED_SIZE = size [GB]   
+指定每个计算节点的新最大 GB 数，以便存储要更改的数据库中的所有复制表。 如果正在计划设备存储空间，需要用 REPLICATED_SIZE 乘以设备中的计算节点数。
 
-DISTRIBUTED_SIZE = size [GB] 指定每个数据库的新的最大 GB 数，以便存储要更改的数据库中的所有分布式表。 该大小分布到设备的所有计算节点中。
+DISTRIBUTED_SIZE = size [GB]   
+指定每个数据库的新的最大 GB 数，以便存储要更改的数据库中的所有分布式表。 该大小分布到设备的所有计算节点中。
 
-LOG_SIZE = size [GB] 指定每个数据库的新的最大 GB 数，以便存储要更改的数据库中的所有事务日志。 该大小分布到设备的所有计算节点中。
+LOG_SIZE = size [GB]   
+指定每个数据库的新的最大 GB 数，以便存储要更改的数据库中的所有事务日志。 该大小分布到设备的所有计算节点中。
 
-ENCRYPTION { ON | OFF } 将数据库设置为加密的 (ON) 或未加密的 (OFF)。 只能在 [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) 已设置为 **1** 时为 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 配置加密。 必须先创建数据库加密密钥，然后才能配置透明数据加密。 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。
+ENCRYPTION { ON | OFF }   
+将数据库设置为加密的 (ON) 或未加密的 (OFF)。 只能在 [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) 已设置为 **1** 时为 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 配置加密。 必须先创建数据库加密密钥，然后才能配置透明数据加密。 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。
 
-SET AUTO_CREATE_STATISTICS { ON | OFF } 在自动创建统计信息选项 AUTO_CREATE_STATISTICS 为 ON 时，查询优化器将根据需要在查询谓词中的单独列上创建统计信息，以便改进查询计划的基数估计。 这些单列统计信息在现有统计信息对象中尚未具有直方图的列上创建。
+SET AUTO_CREATE_STATISTICS { ON | OFF }   
+在自动创建统计信息选项 AUTO_CREATE_STATISTICS 为 ON 时，查询优化器将根据需要在查询谓词中的单独列上创建统计信息，以便改进查询计划的基数估计。 这些单列统计信息在现有统计信息对象中尚未具有直方图的列上创建。
 
 升级到 AU7 后创建的新数据库的默认值为 ON。 升级前创建的数据库的默认值为 OFF。
 
 有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)
 
-SET AUTO_UPDATE_STATISTICS { ON | OFF } 在自动更新统计信息选项 AUTO_UPDATE_STATISTICS 为 ON 时，查询优化器将确定统计信息何时可能过期，然后在查询使用这些统计信息时更新它们。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。
+SET AUTO_UPDATE_STATISTICS { ON | OFF }   
+在自动更新统计信息选项 AUTO_UPDATE_STATISTICS 为 ON 时，查询优化器将确定统计信息何时可能过期，然后在查询使用这些统计信息时更新它们。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。
 
 升级到 AU7 后创建的新数据库的默认值为 ON。 升级前创建的数据库的默认值为 OFF。
 
 有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。
 
-SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 异步统计信息更新选项 AUTO_UPDATE_STATISTICS_ASYNC 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。
+SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }   
+异步统计信息更新选项 AUTO_UPDATE_STATISTICS_ASYNC 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。
 
 升级到 AU7 后创建的新数据库的默认值为 ON。 升级前创建的数据库的默认值为 OFF。
 

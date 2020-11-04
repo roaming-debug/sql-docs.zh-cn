@@ -2,7 +2,7 @@
 description: 设置或更改数据库排序规则
 title: 设置或更改数据库排序规则 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 10/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -14,12 +14,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32f5807bffcb74b3ca2c7c15ec294154530a9ad5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193457"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907370"
 ---
 # <a name="set-or-change-the-database-collation"></a>设置或更改数据库排序规则
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92193457"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
--   仅限 Windows Unicode 的排序规则只能与 COLLATE 子句一起使用，以便将排序规则应用于列级别和表达式级别数据上的 **nchar**、 **nvarchar**和 **ntext** 数据类型。 它们不能与 COLLATE 子句一起使用以更改数据库或服务器实例的排序规则。  
+-   仅限 Windows Unicode 的排序规则只能与 COLLATE 子句一起使用，以便将排序规则应用于列级别和表达式级别数据上的 **nchar** 、 **nvarchar** 和 **ntext** 数据类型。 它们不能与 COLLATE 子句一起使用以更改数据库或服务器实例的排序规则。  
   
 -   如果指定的排序规则或者被引用的对象所使用的排序规则使用 Windows 不支持的代码页，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将显示错误。  
 
@@ -60,13 +60,39 @@ ms.locfileid: "92193457"
   
 更改数据库排序规则时，需要更改下列内容：  
   
--   将系统表中的任何 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**或 **ntext** 列更改为使用新的排序规则。  
+-   将系统表中的任何 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 或 **ntext** 列更改为使用新的排序规则。  
   
--   存储过程和用户定义函数的所有现有 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**或 **ntext** 参数和标量返回值均已更改为新的排序规则。  
+-   存储过程和用户定义函数的所有现有 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 或 **ntext** 参数和标量返回值均已更改为新的排序规则。  
   
--   **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**或 **ntext** 系统数据类型和基于这些系统数据类型的所有用户定义的数据类型均已更改为新的默认排序规则。  
+-   **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 或 **ntext** 系统数据类型和基于这些系统数据类型的所有用户定义的数据类型均已更改为新的默认排序规则。  
   
 可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句的 `COLLATE` 子句来更改在用户数据库中创建的任何新对象的排序规则。 使用此语句不能更改任何现有用户定义的表中列的排序规则  。 使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 的 `COLLATE` 子句可以更改这些列的排序规则。  
+
+> [!IMPORTANT]
+> 更改数据库或单个列的排序规则时，不会修改已存储在现有表中的基础数据。 除非你的应用程序显式处理不同排序规则之间的数据转换和比较，否则建议将数据库中的现有数据转换为新的排序规则。 这消除了应用程序可能不当修改数据的风险，错误修改会导致结果可能错误或者数据丢失却无提示。   
+
+更改数据库排序规则时，默认情况下，只有新表将继承新的数据库排序规则。 有几种备用方法可将现有数据转换为新的排序规则：
+-  就地转换数据。 若要转换现有表中某列的排序规则，请参阅[设置或更改列排序规则](../../relational-databases/collations/set-or-change-the-column-collation.md)。 此操作很容易实现，但可能会造成大型表和繁忙的应用程序受阻的问题。 请查看以下示例，了解将 `MyString` 列就地转换为新的排序规则的情况：
+
+   ```sql
+   ALTER TABLE dbo.MyTable
+   ALTER COLUMN MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8;
+   ```
+
+-  将数据复制到使用新的排序规则的新表中，并替换同一数据库中的原始表。 在当前数据库中创建一个将继承数据库排序规则的新表，在旧表与新表之间复制数据，删除原始表，然后将新表重命名为原始表的名称。 该操作比就地转换的速度要快，但在处理具有依赖项（例如外键约束、主键约束和触发器）的复杂架构时，可能成为一项挑战。 如果应用程序继续更改数据，那么它还要求在最终截断之前，在原始表与新表之间进行最终的数据同步。 请查看以下示例，了解通过“复制替换”方式将 `MyString` 列转换为新的排序规则的情况：
+
+   ```sql
+   CREATE TABLE dbo.MyTable2 (MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8); 
+   
+   INSERT INTO dbo.MyTable2 
+   SELECT * FROM dbo.MyTable; 
+   
+   DROP TABLE dbo.MyTable; 
+   
+   EXEC sp_rename 'dbo.MyTable2', 'dbo.MyTable’;
+   ```
+
+-  将数据复制到使用新的排序规则的数据库，然后替代原始数据库。 使用新的排序规则创建一个新的数据库，再通过 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 等工具或者 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“导入/导出向导”传输原始数据库中的数据。 对于复杂架构，此方法更简单。 如果应用程序继续更改数据，那么它还要求在最终截断之前，在原始数据库与新数据库之间进行最终的数据同步。
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   

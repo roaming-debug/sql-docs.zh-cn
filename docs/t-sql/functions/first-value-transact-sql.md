@@ -20,12 +20,12 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b4d115487f15c8af7083b9006cf2724d6b81011
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: cba74e40373a4b00a93d41ebc49e2a849df98572
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114840"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235499"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,13 +46,13 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
 
 ## <a name="arguments"></a>参数
  *scalar_expression*  
- 是要返回的值。 scalar_expression 可以是产生单个值的列、子查询或其他任意表达式**。 不允许使用其他分析函数。  
+ 是要返回的值。 scalar_expression 可以是产生单个值的列、子查询或其他任意表达式。 不允许使用其他分析函数。  
 
  [ IGNORE NULLS | RESPECT NULLS ]     
- **适用对象**：Azure SQL Edge
+ **适用对象** ：Azure SQL Edge
 
- IGNORE NULLS - 计算分区上的最后一个值时，忽略数据集中的 null 值。     
- RESPECT NULLS - 计算分区上的最后一个值时，考虑数据集中的 null 值。     
+ IGNORE NULLS - 计算分区上的第一个值时，忽略数据集中的 null 值。     
+ RESPECT NULLS - 计算分区上的第一个值时，考虑数据集中的 null 值。     
  
   有关详细信息，请参阅[输入缺失值](/azure/azure-sql-edge/imputing-missing-values/)。
   

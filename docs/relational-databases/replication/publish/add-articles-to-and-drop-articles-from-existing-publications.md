@@ -21,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d04e4fe2f3adc13b02b5aafb4f2cc49ab05d09d6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7353735a34874248e3796763c608bff24a83f649
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923673"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907365"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>向现有发布添加项目和从中删除项目
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "86923673"
   
 -   对于兼容级别低于 90RTM 的合并发布，可以在初始同步订阅之前删除项目，而无需特别考虑。 如果在同步一个或多个订阅之后删除项目，则必须删除、重新创建和同步订阅。  
   
--   对于快照发布或事务发布，可以在创建订阅之前删除项目，而无需特别考虑。 如果在创建一个或多个订阅之后删除项目，则必须删除、重新创建和同步订阅。 有关删除订阅的详细信息，请参阅[订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)和 [sp_dropsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 使用**sp_dropsubscription** 可以删除订阅中的单个项目，而不是删除整个订阅。  
+-   对于快照发布或事务发布，可以在创建订阅之前删除项目，而无需特别考虑。 如果在创建一个或多个订阅之后删除项目，则必须删除、重新创建和同步订阅。 有关删除订阅的详细信息，请参阅[订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)和 [sp_dropsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 使用 **sp_dropsubscription** 可以删除订阅中的单个项目，而不是删除整个订阅。  
   
 1.  从发布中删除项目涉及的操作有：删除项目并为发布创建新的快照。 删除项目会使当前快照失效，因此必须创建新的快照。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "86923673"
  如上所述，在某些情况下删除项目需要删除、重新创建及同步订阅。 有关详细信息，请参阅[订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)和[同步数据](../../../relational-databases/replication/synchronize-data.md)。  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** 或更高版本以及 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** 或更高版本支持针对参与事务复制的项目使用 **DROP TABLE** DLL 命令删除表。 如果发布支持 DROP TABLE DDL，则 DROP TABLE 操作将从发布和数据库中删除表。 日志读取器代理将会针对已删除的表分发数据库发布清理命令，并针对发布服务器元数据执行清理。 如果日志读取器尚未处理引用已删除表的所有日志记录，则会忽略与已删除表相关联的新命令。 已处理的记录将传送到分发数据库。 如果在日志读取器清理废弃（已删除）项目之前分发代理将处理这些记录，则可能会在订阅服务器数据库上应用这些记录。 所有事务复制发布的**默认**设置是不支持 DROP TABLE DLL。 [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) 提供了有关此项改进的更多详细信息。
+ > [!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2（或更高版本）和 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1（或更高版本）支持针对参与事务复制的项目使用 DROP TABLE DDL 命令删除表  。 如果发布支持 DROP TABLE DDL，则 DROP TABLE 操作将从发布和数据库中删除表。 日志读取器代理将会针对已删除的表分发数据库发布清理命令，并针对发布服务器元数据执行清理。 如果日志读取器尚未处理引用已删除表的所有日志记录，则会忽略与已删除表相关联的新命令。 已处理的记录将传送到分发数据库。 如果在日志读取器清理废弃（已删除）项目之前分发代理将处理这些记录，则可能会在订阅服务器数据库上应用这些记录。 所有事务复制发布的默认设置是不支持 DROP TABLE DDL。 [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) 提供了有关此项改进的更多详细信息。
 
   
 ## <a name="see-also"></a>另请参阅  

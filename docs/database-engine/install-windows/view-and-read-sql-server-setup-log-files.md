@@ -19,12 +19,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 68efda5b93663c2980e10f49c9b8592d08ee02d6
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 5f3e65de977926076ec10ef1609bf712c9579faa
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670220"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243816"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>查看和阅读 SQL Server 安装程序日志文件
 
@@ -44,7 +44,7 @@ ms.locfileid: "91670220"
    | **对于无人参与的安装** | %temp%\sqlsetup*.log |
 
 
- ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
+ ![显示在 Setup Bootstrap 文件夹中的哪个位置查找 ConfigurationFiles.ini 文件的屏幕截图。](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
  >[!NOTE]
  > 路径 nnn 中的数字对应要安装的 SQL 版本。 上图中安装的是 SQL 2017，因此该文件夹为 140。 SQL 2016 对应的文件夹为 130，SQL 2014 对应的文件夹为 120。

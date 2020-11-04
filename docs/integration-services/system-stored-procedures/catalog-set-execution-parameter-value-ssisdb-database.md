@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5775b87b13fc126907dfc0f121e9838c2d490fd0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425109"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243640"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value（SSISDB 数据库）
 
@@ -63,13 +63,13 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  使用值 `20` 表示项目参数，使用值 `30` 表示包参数。  
   
- *object_type* 为 **smallint**。  
+ *object_type* 为 **smallint** 。  
   
  [ @parameter_name = ] *parameter_name*  
- 参数的名称。 parameter_name** 为 nvarchar(128)****。  
+ 参数的名称。 parameter_name 为 nvarchar(128)。  
   
  [ @parameter_value = ] *parameter_value*  
- 参数值。 parameter_value** 为 sql_variant****。  
+ 参数值。 parameter_value 为 sql_variant。  
   
 ## <a name="remarks"></a>备注  
  要查找用于给定执行的参数值，请查询 catalog.execution_parameter_values 视图。  
@@ -114,7 +114,10 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|DUMP_EVENT_CODE|  
 |*parameter_value*|一个或多个事件代码|  
   
-## <a name="example"></a>示例  
+## <a name="examples"></a>示例  
+
+### <a name="a-generate-dump-files-for-errors"></a>A. 为错误生成转储文件
+
  以下示例指定 Integration Services 服务器在包执行期间出现任意错误时生成转储文件：  
   
 ```sql
@@ -122,7 +125,8 @@ exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
 ```  
   
-## <a name="example"></a>示例  
+### <a name="b-generate-dump-files-for-events"></a>B. 为事件生成转储文件
+
  以下示例指定 Integration Services 服务器在包执行期间出现事件时生成转储文件，并指定导致该服务器生成这些文件的事件：  
   
 ```sql

@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b57aec5c6abc9bbeb6928c5310a3217957d2d02b
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 5e78e131e9a328a49bd63182e7ae74db54c50d92
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784903"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235625"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>配置故障转移群集实例 - SMB - Linux 上的 SQL Server
 
@@ -30,7 +30,7 @@ ms.locfileid: "91784903"
 - SMB 共享应高度可用。
 - 必须在 SMB 共享上正确设置安全性。 下面是 /etc/samba/smb.conf 中的一个示例，其中 SQLData1 是共享的名称。
 
-![05-smbsource][1]
+![显示 SQLData1 是共享名称的屏幕截图。][1]
 
 ## <a name="instructions"></a>Instructions
 

@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba85689470e29ee45390f6f59ad44ec222cdf945
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 6b1685a4d93d14b3cd49a4c9a4a031943a5b9f7e
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864053"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243826"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91864053"
 - 使用较旧版本的 Windows 时，在“开始”菜单上，依次指向“所有程序”、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然后单击“SQL Server Management Studio”。  
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>启动 SQL Server 配置管理器  
-- 在当前版本的 Windows 中，在“开始”菜单上，键入 **Configuration Manager**，然后单击“SQL Server 版本配置管理器”。   
+- 在当前版本的 Windows 中，在“开始”菜单上，键入 **Configuration Manager** ，然后单击“SQL Server 版本配置管理器”。   
 - 使用较旧版本的 Windows 时，在“开始”菜单上，依次指向“所有程序”、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、“配置工具”，然后单击“SQL Server 配置管理器”。  
 
 ## <a name="connecting-with-management-studio"></a><a name="connect"></a>使用 Management Studio 进行连接  
@@ -75,11 +75,11 @@ ms.locfileid: "91864053"
 
 2.  选择“数据库引擎”。
 
-![object-explorer](../relational-databases/media/object-explorer.png)
+![对象资源管理器的屏幕截图，其中显示“连接”下拉列表，并突出显示了“数据库引擎”选项。](../relational-databases/media/object-explorer.png)
 
 3.  在“服务器名称”框中，键入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的名称。 对于默认的 SQL Server 实例，服务器名称即计算机名称。 对于 SQL Server 的命名实例，服务器名称为 _\<computer_name\>_ **\\** _\<instance_name\>_ ，如 ACCTG_SRVR\SQLEXPRESS。 以下屏幕截图显示连接到名为“PracticeComputer”的计算机上 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的默认（未命名）实例。 已登录到 Windows 的用户是 Contoso 域中的 Mary。 使用 Windows 身份验证时，无法更改用户名称。 
 
-![connect-to-server](../relational-databases/media/connect-to-server.png)
+![“连接到服务器”对话框的屏幕截图，其中突出显示了“服务器名称”文本框。](../relational-databases/media/connect-to-server.png)
 
 4.  单击“连接”。
 
@@ -98,7 +98,7 @@ ms.locfileid: "91864053"
 
 2.  在“常规”页中的“登录名”框中，键入以下格式的 Windows 登录名：`<domain>\\<login>`
 
-![new-login](../relational-databases/media/new-login.png)
+![“登录 - 新建”对话框的屏幕截图，其中突出显示了“登录名称”文本框。](../relational-databases/media/new-login.png)
 
 3.  在“默认数据库”框中，选择 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]（如果有）。 否则选择“master”。  
 4.  在“服务器角色”页中，如果新建登录名要成为管理员，则单击“sysadmin”，否则保留此项为空白。  

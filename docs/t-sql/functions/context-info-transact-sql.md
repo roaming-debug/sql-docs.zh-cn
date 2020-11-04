@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad1dea00f71039a3dfb37386bfd7ebe63b53a6d6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0a6ff9b888601403029ef8c830dd8dd674aa1f10
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990250"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235638"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-此函数返回通过使用 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 语句为当前会话或批处理设置的“context_info”**** 值。
+此函数返回通过使用 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 语句为当前会话或批处理设置的“context_info”值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,11 +45,11 @@ CONTEXT_INFO()
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-value"></a>返回值
-“context_info”**** 值。
+“context_info”值。
   
-如果尚未设置 context_info****：
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中返回 NULL。  
--   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中返回特定于会话的唯一 GUID。  
+如果尚未设置 context_info：
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回 NULL。  
+-   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 返回特定于会话的唯一 GUID。  
   
 ## <a name="remarks"></a>备注  
 多个活动的结果集 (MARS) 功能将使应用程序能够使用相同连接同时运行多个批处理或请求。 当 MARS 连接中的一个批处理运行 SET CONTEXT_INFO 时，如果 `CONTEXT_INFO` 函数作为 SET 语句运行在同一批处理中，则该 `CONTEXT_INFO` 函数将返回新的上下文值。 如果 `CONTEXT_INFO` 函数运行一个或多个其他连接批处理，则 `CONTEXT_FUNCTION` 不返回新值，除非这些批处理在完成运行 SET 语句的批处理后启动。
@@ -61,7 +61,7 @@ CONTEXT_INFO()
 - **sys.sysprocesses**
   
 ## <a name="examples"></a>示例  
-以下简单示例将“context_info”**** 值设置为 `0x1256698456`，然后使用 `CONTEXT_INFO` 函数检索该值。
+以下简单示例将“context_info”值设置为 `0x1256698456`，然后使用 `CONTEXT_INFO` 函数检索该值。
   
 ```sql
 SET CONTEXT_INFO 0x1256698456;  

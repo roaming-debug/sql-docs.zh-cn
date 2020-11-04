@@ -8,17 +8,17 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: c6e4dd8869c9f26adb34c5acb965241ff9a2198e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.date: 10/29/2020
+ms.openlocfilehash: 0c77b957f14401aec3130fa5fa4f78f0d34de9b5
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098696"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067199"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio 的 Kusto (KQL) 扩展（预览版）
 
-使用 [Azure Data Studio](../what-is.md) 的 Kusto (KQL) 扩展，你可以连接到 [Azure 数据资源管理器](/azure/data-explorer/data-explorer-overview)群集并进行查询。
+使用 [Azure Data Studio](../what-is-azure-data-studio.md) 的 Kusto (KQL) 扩展，你可以连接到 [Azure 数据资源管理器](/azure/data-explorer/data-explorer-overview)群集并进行查询。
 
 用户可以使用包含 IntelliSense 的 [Kusto 内核](../notebooks/notebooks-kusto-kernel.md)，编写并运行 KQL 查询，以及创作笔记本。
 
@@ -55,7 +55,7 @@ ms.locfileid: "92098696"
 
 在 [Azure 门户](https://ms.portal.azure.com/#home)中找到 Azure 数据资源管理器群集，然后找到该群集的 URI。
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Kusto 扩展":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
 
 不过，你可以立即开始使用 help.kusto.windows.net 群集。
 
@@ -82,7 +82,7 @@ ms.locfileid: "92098696"
     7. 对于“名称(可选)”，请留空。
         1. 可以使用此字段为服务器指定别名。
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Kusto 扩展":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="连接详细信息":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>如何在 Azure Data Studio 中查询 Azure 数据资源管理器数据库
 
@@ -114,29 +114,27 @@ StormEvents
 
 2. 找到 Kusto (KQL) 扩展。
 
-3. 选择“管理”**** 图标。
+3. 选择“管理”图标。
 
 4. 选择“扩展设置”图标。
 
 扩展设置如下所示：
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto 扩展":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto (KQL) 扩展设置":::
 
 ## <a name="sanddance-visualization"></a>SandDance 可视化效果
 
 [SandDance 扩展](sanddance-extension.md)和 Azure Data Studio 中的 Kusto (KQL) 扩展结合使用时会带来丰富的交互式可视化效果。 从 KQL 查询结果集中，选择“可视化工具”按钮，启动 [SandDance](https://sanddance.js.org/)。
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Kusto 扩展":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 可视化效果":::
 
 ## <a name="known-issues"></a>已知问题
 
 | 详细信息 | 解决方法 |
 |---------|------------|
-| [Kusto 连接 Viewlet 在重载之后无法正常工作](https://github.com/microsoft/azuredatastudio/issues/12475)。 | 空值 |
-| [无法自动重新连接](https://github.com/microsoft/azuredatastudio/issues/11830)。 | 断开连接，然后重新连接到 Azure 数据资源管理器群集。 |
-| [刷新 Kusto 群集似乎未正确地重新连接](https://github.com/microsoft/azuredatastudio/issues/11824)。 | 断开连接，然后重新连接到 Azure 数据资源管理器群集。 |
-| [连接到群集后应显示群集仪表板，而不是数据库](https://github.com/microsoft/azuredatastudio/issues/12549) | 空值 |
-| 对于 Azure 数据群集数据库中的每个表，仅有一个选项“选择前 1000 个”的选项，而不是“取 10 个”选项 。 | 空值 |
+| [在 Kusto 笔记本中，当代码单元执行中出现错误后，在保存的别名连接中更改数据库连接的操作会停滞](https://github.com/microsoft/azuredatastudio/issues/12384) | 请关闭再重新打开笔记本，然后使用该数据库连接到适当的群集 |
+| [在 Kusto 笔记本中，无法在未保存的别名连接上更改数据库连接](https://github.com/microsoft/azuredatastudio/issues/12843) |从连接 Viewlet 创建新连接，并使用别名保存它。 然后，创建一个新的笔记本并连接到新保存的连接 | 
+| [在 Kusto 笔记本中，创建新的 ADX 连接时不会填充数据库下拉列表](https://github.com/microsoft/azuredatastudio/issues/12666) | 从连接 Viewlet 创建新连接，并使用别名保存它。 然后，创建一个新的笔记本并连接到新保存的连接 |
 
 你可以提交[功能请求](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=)，向产品团队提供反馈。  
 你可以提交 [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=)，向产品团队提供反馈。

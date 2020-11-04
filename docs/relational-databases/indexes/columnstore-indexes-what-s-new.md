@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678d3b76d33babe7e2097eafefcd21ff78702f84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93781a1eb3e18c4eb623f33d294274f02db4f9a
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408633"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036105"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,25 +29,26 @@ ms.locfileid: "88408633"
 ## <a name="feature-summary-for-product-releases"></a>产品版本的功能摘要  
  此表概述了列存储索引的主要功能以及提供这些功能的产品。  
 
-|列存储索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
-|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|多线程查询的批模式执行|是|是|是|是|是|是| 
-|单线程查询的批模式执行|||是|是|是|是|  
-|存档压缩选项||是|是|是|是|是|  
-|快照隔离和读提交快照隔离|||是|是|是|是| 
-|创建表时，请指定列存储索引|||是|是|是|是|  
-|Always On 支持列存储索引|是|是|是|是|是|是| 
-|Always On 可读次要副本支持只读非聚集列存储索引|是|是|是|是|是|是|  
-|Always On 可读次要副本支持可更新列存储索引|||是|是|||  
-|堆或 B 树上的只读非聚集列存储索引|是|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|  
-|堆或 B 树上的可更新非聚集列存储索引|||是|是|是|是|  
-|允许在使用非聚集列存储索引的堆或 B 树上实施额外的 B 树索引|是|是|是|是|是|是|  
-|可更新的聚集列存储索引||是|是|是|是|是|  
-|基于聚集列存储索引的 B 树索引|||是|是|是|是|  
-|基于内存优化表的列存储索引|||是|是|是|是|  
-|非聚集列存储索引定义支持使用筛选的条件|||是|是|是|是|  
-|`CREATE TABLE` 和 `ALTER TABLE` 中的列存储索引的压缩延迟选项|||是|是|是|是|
-|列存储索引具有一个非持久化计算列||||是|||   
+|列存储索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
+|多线程查询的批模式执行|是|是|是|是|是|是|是| 
+|单线程查询的批模式执行|||是|是|是|是|是|  
+|存档压缩选项||是|是|是|是|是|是|  
+|快照隔离和读提交快照隔离|||是|是|是|是|是| 
+|创建表时，请指定列存储索引|||是|是|是|是|是|  
+|Always On 支持列存储索引|是|是|是|是|是|是|是| 
+|Always On 可读次要副本支持只读非聚集列存储索引|是|是|是|是|是|是|是|  
+|Always On 可读次要副本支持可更新列存储索引|||是||是 是|||  
+|堆或 B 树上的只读非聚集列存储索引|是|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|  
+|堆或 B 树上的可更新非聚集列存储索引|||是|是|是|是|是|  
+|允许在使用非聚集列存储索引的堆或 B 树上实施额外的 B 树索引|是|是|是|是|是|是|是|  
+|可更新的聚集列存储索引||是|是|是||是 是|是|  
+|基于聚集列存储索引的 B 树索引|||是|是||是 是|是|  
+|基于内存优化表的列存储索引|||是|是||是 是|是|  
+|非聚集列存储索引定义支持使用筛选的条件|||是|是|是|是|是|  
+|`CREATE TABLE` 和 `ALTER TABLE` 中的列存储索引的压缩延迟选项|||是|是|是|是|是|
+|列存储索引具有一个非持久化计算列||||是|是|||   
+|元组移动器背景合并支持||||||是|是|是|
   
  <sup>1</sup> 要创建只读非聚集列存储索引，请将索引存储在只读文件组内。  
  
@@ -58,13 +59,13 @@ ms.locfileid: "88408633"
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 将添加这些新功能。
 
 ### <a name="functional"></a>功能
-- 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，tuple-mover 通过后台合并任务获得帮助，该任务会自动压缩较小的已存在一段时间（由内部阈值确定）的 OPEN 增量行组，或者合并已从中删除大量行的 COMPRESSED 行组。 以前，需要索引重新组织操作才能将行组与部分删除的数据合并。 随着时间的推移，这会提高列存储索引的质量。 
+- 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，元组移动器通过后台合并任务获得帮助，该任务会自动压缩较小的已存在一段时间（由内部阈值确定）的 OPEN 增量行组，或者合并已从中删除大量行的 COMPRESSED 行组。 以前，需要索引重新组织操作才能将行组与部分删除的数据合并。 随着时间的推移，这会提高列存储索引的质量。 
 
-## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 将添加这些新功能。
+## [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 将添加这些新功能。
 
 ### <a name="functional"></a>功能
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支持聚集列存储索引中的非持久化计算列。 聚集列存储索引不支持持久化计算列。 无法在具有计算列的列存储索引上创建非聚集索引。 
+- [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 支持聚集列存储索引中的非持久化计算列。 聚集列存储索引不支持持久化计算列。 无法在具有计算列的列存储索引上创建非聚集索引。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 添加了重要的增强功能，以此来改善列存储索引的性能和灵活性。 这些改进功能可以增强数据仓库方案的效果，并实现实时运营分析。  

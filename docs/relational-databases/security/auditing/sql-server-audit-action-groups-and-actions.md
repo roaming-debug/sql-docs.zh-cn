@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 51f971caef999424e002a49ab357e33fd1f0657a
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301889"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243566"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 审核操作组和操作
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "86301889"
 |BATCH_STARTED_GROUP|每当任何批处理文本、存储过程或事务管理操作开始执行时，都会引发此事件。 它在执行之前引发，并将审核从客户端发送的整个批处理或存储过程文本。 已在 SQL Server 2019 中添加。|  
 |BROKER_LOGIN_GROUP|引发此事件的目的是为了报告与 Service Broker 传输安全性相关的审核消息。 等效于 [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md)。|  
 |DATABASE_CHANGE_GROUP|创建、更改或删除数据库时将引发此事件。 创建、更改或删除任何数据库时均将引发此事件。 等效于 [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)。|  
-|DATABASE_LOGOUT_GROUP|在包含数据库用户注销某一数据库时，会引发此事件。|  
+|DATABASE_LOGOUT_GROUP|在包含的数据库用户注销某一数据库时，会引发此事件。等效于[审核注销事件类](../../../relational-databases/event-classes/audit-logout-event-class.md)。|  
 |DATABASE_MIRRORING_LOGIN_GROUP|引发此事件的目的是为了报告与数据库镜像传输安全性相关的审核消息。 等效于 [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)。|  
 |DATABASE_OBJECT_ACCESS_GROUP|访问数据库对象（如消息类型、程序集和协定）时将引发此事件。 此事件由对任何数据库的任何访问而引发。 注意：这可能导致生成大量审核记录。<br /><br /> 等效于 [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md)。|  
 |DATABASE_OBJECT_CHANGE_GROUP|针对数据库对象（如架构）执行 CREATE、ALTER 或 DROP 语句时将引发此事件。 创建、更改或删除任何数据库对象时均将引发此事件。 注意：这可能会导致生成大量审核记录。<br /><br /> 等效于 [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md)。|  
@@ -141,7 +141,7 @@ ms.locfileid: "86301889"
 |BATCH_COMPLETED_GROUP|每当任何批处理文本、存储过程或事务管理操作执行完成时，都会引发此事件。 它在批处理完成后引发，并将审核从客户端发送的整个批处理或存储过程文本，其中包括结果。|  
 |BATCH_STARTED_GROUP|每当任何批处理文本、存储过程或事务管理操作开始执行时，都会引发此事件。 它在执行之前引发，并将审核从客户端发送的整个批处理或存储过程文本。|  
 |DATABASE_CHANGE_GROUP|创建、更改或删除数据库时将引发此事件。 等效于 [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)。|  
-|DATABASE_LOGOUT_GROUP|在包含数据库用户注销某一数据库时，会引发此事件。 等效于 [审核备份和还原事件类](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)。|  
+|DATABASE_LOGOUT_GROUP|在包含数据库用户注销某一数据库时，会引发此事件。|  
 |DATABASE_OBJECT_ACCESS_GROUP|访问数据库对象（如证书和非对称密钥）时将引发此事件。 等效于 [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md)。|  
 |DATABASE_OBJECT_CHANGE_GROUP|针对数据库对象（如架构）执行 CREATE、ALTER 或 DROP 语句时将引发此事件。 等效于 [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md)。|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|数据库范围中的对象的所有者发生更改时将引发此事件。 等效于 [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md)。|  

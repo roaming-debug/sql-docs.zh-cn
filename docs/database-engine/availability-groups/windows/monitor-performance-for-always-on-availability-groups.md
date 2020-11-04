@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03c89633fa5b61a8d08e78bd90a06a5f8497be75
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 15ae1302fcff002816e8e8e7a5e37b6fbe8bd503
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727849"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235445"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "91727849"
 1. 在 SQL Server Management Studio 中，展开 “Always On 高可用性”节点，右键单击可用性组的名称，然后选择“显示仪表板”   。 
 1. 从“分组依据”选项卡下，选择“添加/删除列”   。选中“估计恢复时间(秒)”[RTO] 和“估计的数据丢失(时间)”[RPO]   。 
 
-   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+   ![显示 RTO RPO 仪表板的屏幕截图。](media/rto-rpo-dashboard.png)
 
 ### <a name="calculation-of-secondary-database-rto"></a>辅助数据库 RTO 计算 
 恢复时间计算用于确定在发生故障转移后恢复辅助数据库所需的时间  。  故障转移时间通常较短且比较固定。 检测时间取决于群集级别设置，而不是各个可用性副本。 
@@ -338,43 +338,43 @@ ms.locfileid: "91727849"
   
 4.  使用以下规范创建[基于策略的管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名称**：`RTO`  
+    -   **名称** ：`RTO`  
   
-    -   **Facet**：**数据库副本状态**  
+    -   **Facet** ： **数据库副本状态**  
   
-    -   **字段**：`Add(@EstimatedRecoveryTime, 60)`  
+    -   **字段** ：`Add(@EstimatedRecoveryTime, 60)`  
   
-    -   **运算符**：<=  
+    -   **运算符** ：<=  
   
-    -   **值**：`600`  
+    -   **值** ：`600`  
   
      如果潜在故障转移时间超过 10 分钟（包含用于故障检测和故障转移的 60 秒开销），此条件会失败。  
   
 5.  使用以下规范创建第二个[基于策略的管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名称**：`RPO`  
+    -   **名称** ：`RPO`  
   
-    -   **Facet**：**数据库副本状态**  
+    -   **Facet** ： **数据库副本状态**  
   
-    -   **字段**：`@EstimatedDataLoss`  
+    -   **字段** ：`@EstimatedDataLoss`  
   
-    -   **运算符**：<=  
+    -   **运算符** ：<=  
   
-    -   **值**：`3600`  
+    -   **值** ：`3600`  
   
      如果可能的数据丢失超过 1 小时，则此条件会失败。  
   
 6.  使用以下规范创建第三个[基于策略的管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名称**：`IsPrimaryReplica`  
+    -   **名称** ：`IsPrimaryReplica`  
   
-    -   **Facet**：**可用性组**  
+    -   **Facet** ： **可用性组**  
   
-    -   **字段**：`@LocalReplicaRole`  
+    -   **字段** ：`@LocalReplicaRole`  
   
-    -   **运算符**：=  
+    -   **运算符** ：=  
   
-    -   **值**：`Primary`  
+    -   **值** ：`Primary`  
   
      此条件会检查给定的可用性组的本地可用性副本是否为主要副本。  
   
@@ -382,53 +382,53 @@ ms.locfileid: "91727849"
   
     -   “常规”页  ：  
   
-        -   **名称**：`CustomSecondaryDatabaseRTO`  
+        -   **名称** ：`CustomSecondaryDatabaseRTO`  
   
-        -   **检查条件**：`RTO`  
+        -   **检查条件** ：`RTO`  
   
-        -   **针对目标**：IsPrimaryReplica AvailabilityGroup 中的每个 DatabaseReplicaState  
+        -   **针对目标** ：IsPrimaryReplica AvailabilityGroup 中的每个 DatabaseReplicaState  
   
              此设置确保仅在本地可用性副本是其主要副本的可用性组上对策略进行评估。  
   
-        -   **评估模式**：**按计划**  
+        -   **评估模式** ： **按计划**  
   
-        -   **计划**：CollectorSchedule_Every_5min  
+        -   **计划** ：CollectorSchedule_Every_5min  
   
-        -   **已启用**：已选中  
+        -   **已启用** ：已选中  
   
     -   “说明”页  ：  
   
-        -   **类别**：可用性数据库警告  
+        -   **类别** ：可用性数据库警告  
   
              通过此设置，策略评估结果可显示在 Always On 仪表板中。  
   
-        -   **说明**：当前副本的 RTO 超过 10 分钟，假定发现和故障转移的开销为 1 分钟。  应立即调查相应服务器实例上的性能问题。  
+        -   **说明** ：当前副本的 RTO 超过 10 分钟，假定发现和故障转移的开销为 1 分钟。  应立即调查相应服务器实例上的性能问题。  
   
-        -   **要显示的文本**：**超过了 RTO！**  
+        -   **要显示的文本** ： **超过了 RTO！**  
   
 8.  使用以下规范创建第二个[基于策略的管理策略](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md)：  
   
     -   “常规”页  ：  
   
-        -   **名称**：`CustomAvailabilityDatabaseRPO`  
+        -   **名称** ：`CustomAvailabilityDatabaseRPO`  
   
-        -   **检查条件**：`RPO`  
+        -   **检查条件** ：`RPO`  
   
-        -   **针对目标**：IsPrimaryReplica AvailabilityGroup 中的每个 DatabaseReplicaState  
+        -   **针对目标** ：IsPrimaryReplica AvailabilityGroup 中的每个 DatabaseReplicaState  
   
-        -   **评估模式**：**按计划**  
+        -   **评估模式** ： **按计划**  
   
-        -   **计划**：CollectorSchedule_Every_30min  
+        -   **计划** ：CollectorSchedule_Every_30min  
   
-        -   **已启用**：已选中  
+        -   **已启用** ：已选中  
   
     -   “说明”页  ：  
   
-        -   **类别**：可用性数据库警告  
+        -   **类别** ：可用性数据库警告  
   
-        -   **说明**：可用性数据库已超过时间为 1 小时的 RPO。  应立即调查可用性副本上的性能问题。  
+        -   **说明** ：可用性数据库已超过时间为 1 小时的 RPO。  应立即调查可用性副本上的性能问题。  
   
-        -   **要显示的文本**：**超过了 RPO！**  
+        -   **要显示的文本** ： **超过了 RPO！**  
   
  操作完成后，会创建两个新的 SQL Server 代理作业，每个策略评估计划都会有一个作业。 这些作业的名称应以“syspolicy_check_schedule”开头  。  
   

@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fea0c2df2ec25493e09214289802824ffe5f93ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19111422e69b2ce77f53e13bb6d1a450b4ef7692
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430239"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243662"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>函数 - dm_execution_performance_counters
 
@@ -35,7 +35,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
  [ @execution_id = ] execution_id   
  包含一个或多个包的执行的唯一标识符。 通过“执行包”任务执行的包在同一个执行中作为父包运行。  
   
- 如果未指定执行 ID，则返回多个执行的性能统计信息。 如果你是 **ssis_admin** 数据库角色的成员，将返回所有正在运行的执行的性能统计信息。  如果你不是 **ssis_admin** 数据库角色的成员，则返回你对其具有读权限的正在运行的执行的性能统计信息。 *execution_id* 为 **BigInt**。  
+ 如果未指定执行 ID，则返回多个执行的性能统计信息。 如果你是 **ssis_admin** 数据库角色的成员，将返回所有正在运行的执行的性能统计信息。  如果你不是 **ssis_admin** 数据库角色的成员，则返回你对其具有读权限的正在运行的执行的性能统计信息。 *execution_id* 为 **BigInt** 。  
   
 ## <a name="remarks"></a>备注  
  下表列出了由 dm_execution_performance_counter 函数返回的计数器名称值。  
@@ -61,17 +61,21 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |列名|列类型|说明|备注|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** 不是有效值。|包含包的执行的唯一标识符。||  
-|counter_name|**nvarchar(128)**|计数器的名称。|请参阅值的**备注**部分。|  
+|counter_name|**nvarchar(128)**|计数器的名称。|请参阅值的 **备注** 部分。|  
 |counter_value|**BigInt**|计数器所返回的值。||  
   
-## <a name="example"></a>示例  
+## <a name="examples"></a>示例  
+
+### <a name="a-return-statistics-for-a-running-execution"></a>A. 返回正在运行的执行的统计信息
+
  在下面的示例中，该函数将返回 ID 为 34 的正在运行的执行的统计信息。  
   
 ```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
-## <a name="example"></a>示例  
+### <a name="b-return-statistics-for-all-running-executions"></a>B. 返回所有正在运行的执行的统计信息
+
  在下面的示例中，该函数返回正在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上运行的所有执行的统计信息，具体取决于您的权限。  
   
 ```sql

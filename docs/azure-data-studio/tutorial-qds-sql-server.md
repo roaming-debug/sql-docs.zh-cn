@@ -9,14 +9,14 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 06/01/2020
-ms.openlocfilehash: 678d985daf2ca3130fbf7eb3b052718c3cc898ab
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 8137ca8f37254bab94dfaae6d9c8072c293a81ff
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746187"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243386"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教程：将*五个最慢查询*示例小组件添加到数据库仪表板
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教程：将 *五个最慢查询* 示例小组件添加到数据库仪表板
 
 本教程演示了将 Azure Data Studio 内置示例小组件之一添加到数据库仪表板以快速查看数据库的五个最慢查询的过程。 还将学习如何使用 Azure Data Studio 功能查看慢速查询和查询计划的详细信息。 在本教程中，你将学习如何执行以下操作：
 
@@ -38,7 +38,7 @@ Azure Data Studio 包含几个现成的见解小组件。 本教程介绍如何�
 
 ## <a name="turn-on-query-store-for-your-database"></a>为数据库启用查询存储
 
-本示例中的小组件需要启用*查询存储*。
+本示例中的小组件需要启用 *查询存储* 。
 
 1. 右键单击“TutorialDB”数据库（在“服务器”侧栏中），然后选择“新建查询”  。
 
@@ -50,7 +50,7 @@ Azure Data Studio 包含几个现成的见解小组件。 本教程介绍如何�
 
 ## <a name="add-the-slow-queries-widget-to-your-database-dashboard"></a>将慢速查询小组件添加到数据库仪表板
 
-若要将*慢速查询小组件*添加到仪表板，请编辑*用户设置*文件中的 *dashboard.database.widgets* 设置。
+若要将 *慢速查询小组件* 添加到仪表板，请编辑 *用户设置* 文件中的 *dashboard.database.widgets* 设置。
 
 1. 按“Ctrl+Shift+P”打开“命令面板”，以打开“用户设置”。
 
@@ -100,7 +100,7 @@ Azure Data Studio 包含几个现成的见解小组件。 本教程介绍如何�
 
 5. 按“Ctrl+S”保存修改后的“用户设置” 。
 
-6. 通过导航到“服务器”侧栏中的“TutorialDB”打开*数据库仪表板*，右键单击并选择“管理”  。
+6. 通过导航到“服务器”侧栏中的“TutorialDB”打开 *数据库仪表板* ，右键单击并选择“管理”  。
 
    ![打开仪表板](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
@@ -136,7 +136,7 @@ Azure Data Studio 包含几个现成的见解小组件。 本教程介绍如何�
 
 5. 查看查询的执行计划：
 
-   ![显示计划 (Showplan)](./media/tutorial-qds-sql-server/showplan.png)
+   ![显示查询的执行计划的屏幕截图。](./media/tutorial-qds-sql-server/showplan.png)
 
 ## <a name="next-steps"></a>后续步骤
 

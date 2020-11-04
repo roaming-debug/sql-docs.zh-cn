@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 01b629b65c7f8ab1571aa53a944a8525bd09a0b0
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891127"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235447"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
 
@@ -44,7 +44,7 @@ ms.locfileid: "91891127"
 
 将[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)更改为源版本，并遵循下图中推荐的升级工作流：
 
-![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![显示所建议的升级工作流的示意图。](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
 
 有关本主题的详细信息，请参阅[在升级到更高版本 SQL Server 的过程中保持性能稳定性](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)。
 
@@ -94,7 +94,7 @@ ms.locfileid: "91891127"
 > [!NOTE]
 > 对于从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 源中已存在此问题，则按原样迁移到较新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将无法应对此方案。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器仅适用于编译时已知的信息。 如果工作负荷依赖于仅可在执行时已知的谓词，则选择不适合的计划的可能性会增加。 若要获得质量更佳的计划，谓词必须是 SARGable 或 Search Argumentable****************。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器仅适用于编译时已知的信息。 如果工作负荷依赖于仅可在执行时已知的谓词，则选择不适合的计划的可能性会增加。 若要获得质量更佳的计划，谓词必须是 SARGable 或 Search Argumentable。
 
 非 SARGable 谓词的一些示例：
 -   隐式数据转换，例如从 VARCHAR 转换到 NVARCHAR，或从 INT 转换到 NVARCHAR。 查找实际执行计划中的运行时 CONVERT_IMPLICIT 警告。 从一种类型转换到另一种类型还会导致精度损失。

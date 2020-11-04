@@ -9,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 06cd2218a2a194ab3345fc9ed00ae40e17f0141d
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 218c4685b7305a1442f85e9b10da7144c6189ea3
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784886"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235650"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>配置故障转移群集实例 NFS - Linux 上的 SQL Server
 
@@ -36,7 +36,7 @@ NFS 或网络文件系统是用于在 Linux 中而非 Windows 中共享磁盘的
 
 确保针对访问强制执行安全标准。 配置文件夹时，请确保只有参与 FCI 的服务器才能看到 NFS 文件夹。 下面显示了基于 Linux 的 NFS 解决方案中经过修改的 /etc/exports 的示例，其中文件夹限制为 FCIN1 和 FCIN2。
 
-![05-nfsacl][1]
+![一张屏幕截图，显示基于 Linux 的 NFS 解决方案中经过修改的 /etc/exports 的示例，其中文件夹限制为 FCIN1 和 FCIN2。][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -132,7 +132,7 @@ NFS 或网络文件系统是用于在 Linux 中而非 Windows 中共享磁盘的
     mount
     ```
 
-    ![10-mountnoswitches][2]
+    ![mount 命令及对该命令的响应的屏幕截图，其中显示没有开关。][2]
 
    * 切换为 mssql 用户。 如果成功，不会收到任何确认信息。
 
@@ -228,7 +228,7 @@ NFS 或网络文件系统是用于在 Linux 中而非 Windows 中共享磁盘的
 
    * 若要进行测试，请在该文件夹中创建数据库。 以下示例使用 sqlcmd 创建数据库、相应切换上下文、验证文件是否存在于操作系统级别，然后删除临时位置。 可以使用 SSMS。
 
-    ![15-createtestdatabase][4]
+    ![sqlcmd 命令及对该命令的响应的屏幕截图。][4]
  
    * 卸载共享 
 

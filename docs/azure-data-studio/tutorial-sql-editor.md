@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: bd604ea3ad643aa7f70d0be2a1ee7727810b6705
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: e2c200bc57bc62a54a9850e85e13b9c9f15c49f0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745707"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243376"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>教程：使用 Transact-SQL 编辑器创建数据库对象 - Azure Data Studio
 
@@ -66,11 +66,11 @@ Azure Data Studio 提供了许多用于快速创建语句的内置 T-SQL 代码�
 
 2. 在编辑器中键入“sql”，使用向下键移动到“sqlCreateStoredProcedure”，然后按 Tab（或 Enter）以加载创建存储过程片段  。
 
-   ![片段列表](./media/tutorial-sql-editor/snippet-list.png)
+   ![显示查询编辑器的屏幕截图，其中在编辑器中键入了 sql，且突出显示了 sqlCreateStoredProcedure 选项。](./media/tutorial-sql-editor/snippet-list.png)
 
 3. 创建存储过程片段设置了两个字段（StoredProcedureName 和 SchemaName），以便快速进行编辑 。 选择“StoredProcedureName”，右键单击并选择“更改所有匹配项”。 接下来键入 getCustomer，所有 StoredProcedureName 条目都会更改为 getCustomer  。
 
-   ![片段](./media/tutorial-sql-editor/snippet.png)
+   ![显示查询编辑器的屏幕截图，其中突出显示了“更改所有出现项”选项。](./media/tutorial-sql-editor/snippet.png)
 
 5. 将所有出现的 SchemaName 更改为 dbo 。 
 6. 该片段包含需要更新的占位符参数和正文文本。 EXECUTE 语句还包含占位符文本，因为它不知道该过程将具有多少参数。 对于本教程，请更新该片段，使其类似于以下代码：

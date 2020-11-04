@@ -12,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e5fe98b5ec7d6fc141b41869e0caef7f6cb665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7e2aaa0e01a5ca5295bc9f315c44cd7358b1d9f
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408793"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036104"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
 
@@ -95,7 +95,7 @@ ms.locfileid: "88408793"
  有关行组的更多详细信息，请参阅[列存储索引设计指南](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)。    
     
 ### <a name="batch-mode-execution"></a>批处理模式执行    
- 批处理模式执行是指为提高执行效率将一组行（通常最多 900 行）一起处理。 例如，查询 `SELECT SUM (Sales) FROM SalesData` 从表 SalesData 聚合了总销售额。 以批处理模式执行时，查询执行引擎以 900 个值为一组计算聚合。 这样会将元数据（访问成本和其他类型的开销）分布到批处理的所有行中，而不是支付每行的成本，从而大大减少了代码路径。 批处理模式处理在可能的情况下会对压缩数据运行，并消除了行模式处理所用的一些交换运算符。 这可以将分析查询的执行速度提高好几个数量级。    
+ [批处理模式执行](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)是指为提高执行效率将一组行（通常最多 900 行）一起处理。 例如，查询 `SELECT SUM (Sales) FROM SalesData` 从表 SalesData 聚合了总销售额。 以批处理模式执行时，查询执行引擎以 900 个值为一组计算聚合。 这样会将元数据（访问成本和其他类型的开销）分布到批处理的所有行中，而不是支付每行的成本，从而大大减少了代码路径。 批处理模式处理在可能的情况下会对压缩数据运行，并消除了行模式处理所用的一些交换运算符。 这可以将分析查询的执行速度提高好几个数量级。    
     
  并非所有查询执行运算符都可以在批处理模式下执行。 例如，DML 操作（如 Insert、Delete 或 Update）一次执行一行。 批处理模式运算符面向可提高查询性能的运算符（如 Scan、Join、Aggregate、sort 等）。 由于列存储索引是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引入的，因此需要持续扩展可以在批处理模式下执行的运算符。 下表按照产品版本显示了以批处理模式运行的运算符。    
     
@@ -119,6 +119,8 @@ ms.locfileid: "88408793"
 |window aggregates||NA|NA|是|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新运算符。|    
     
 <sup>1</sup>适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层、标准层（S3 及更高）和所有 vCore 层，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+
+有关详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)。
     
 ### <a name="aggregate-pushdown"></a>聚合下推    
  聚合计算的常规执行路径是从 SCAN 节点提取符合条件的行，然后以批处理模式聚合值。 尽管这提供了良好的性能，但使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，可以将聚合运算推送到 SCAN 节点，以便在批处理模式执行的基础上将聚合计算的性能提高好几个数量级，前提是要满足以下条件： 

@@ -12,12 +12,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76768274921bceb17ba9ea05c73850f449441082
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: d45c26459b43fecaedf401bf98d0a5346da34dbb
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810126"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243556"
 ---
 # <a name="temporal-tables"></a>临时表
 
@@ -43,7 +43,7 @@ SQL Server 2016 以数据库功能的形式引入了对时态表（也称为由�
   - [使用带有系统版本的内存优化临时表](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)
   - [在系统版本控制的临时表中修改数据](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
   - [在系统版本控制临时表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
-  - **下载 Adventure Works 示例数据库：** 若要开始使用时态表，请下载包含脚本示例的[适用于 SQL Server 的 AdventureWorks 数据库](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)，并遵循文件夹“Temporal”中的说明
+  - **下载 Adventure Works 示例数据库：** 若要开始使用时态表，请下载包含脚本示例的 [适用于 SQL Server 的 AdventureWorks 数据库](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)，并遵循文件夹“Temporal”中的说明
 
 - **语法：**
 
@@ -79,7 +79,7 @@ SQL Server 2016 以数据库功能的形式引入了对时态表（也称为由�
 
 当前表包含每个行的当前值。 历史记录表包含每个行的每个先前值（如果有），以及该行生效的开始时间和结束时间。
 
-![Temporal-HowWorks](../../relational-databases/tables/media/temporal-howworks.PNG "Temporal-HowWorks")
+![显示临时表工作方式的示意图。](../../relational-databases/tables/media/temporal-howworks.PNG "Temporal-HowWorks")
 
 以下简单示例演示了在虚构 HR 数据库中包含员工信息的方案：
 
@@ -99,9 +99,9 @@ CREATE TABLE dbo.Employee
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 ```
 
-- **INSERTS：** 对于 **INSERT**，系统基于系统时钟将 **SysStartTime** 列的值设置为当前事务的开始时间（位于 UTC 时区），并将 **SysEndTime** 列的值指定为最大值 9999-12-31。 这会将行标记为已打开。
-- **UPDATES：** 对于 **UPDATE**，系统将行的先前值存储在历史记录表中，并基于系统时钟将 **SysEndTime** 列的值设置为当前事务的开始时间（位于 UTC 时区）。 这会将行标记为已关闭，并记录该行有效的期限。 在当前表中，将使用新值更新行，同时，系统会基于系统时钟将 **SysStartTime** 列的值设置为事务的开始时间（位于 UTC 时区）。 在当前表中， **SysEndTime** 列的更新行值将保留最大值 9999-12-31。
-- **DELETES：** 对于 **DELETE**，系统将行的先前值存储在历史记录表中，并基于系统时钟将 **SysEndTime** 列的值设置为当前事务的开始时间（位于 UTC 时区）。 这会将行标记为已关闭，并记录前一行有效的期限。 在当前表中，该行将被删除。 对当前表的查询不会返回此行。 处理历史记录数据的查询将返回已关闭的行的数据。
+- **INSERTS：** 对于 **INSERT** ，系统基于系统时钟将 **SysStartTime** 列的值设置为当前事务的开始时间（位于 UTC 时区），并将 **SysEndTime** 列的值指定为最大值 9999-12-31。 这会将行标记为已打开。
+- **UPDATES：** 对于 **UPDATE** ，系统将行的先前值存储在历史记录表中，并基于系统时钟将 **SysEndTime** 列的值设置为当前事务的开始时间（位于 UTC 时区）。 这会将行标记为已关闭，并记录该行有效的期限。 在当前表中，将使用新值更新行，同时，系统会基于系统时钟将 **SysStartTime** 列的值设置为事务的开始时间（位于 UTC 时区）。 在当前表中， **SysEndTime** 列的更新行值将保留最大值 9999-12-31。
+- **DELETES：** 对于 **DELETE** ，系统将行的先前值存储在历史记录表中，并基于系统时钟将 **SysEndTime** 列的值设置为当前事务的开始时间（位于 UTC 时区）。 这会将行标记为已关闭，并记录前一行有效的期限。 在当前表中，该行将被删除。 对当前表的查询不会返回此行。 处理历史记录数据的查询将返回已关闭的行的数据。
 - **MERGE：** 对于 MERGE，根据 MERGE 语句中被指定为操作的内容，该操作的行为与最多执行了三个语句（INSERT、UPDATE 和/或 DELETE）完全一样    。
 
 > [!IMPORTANT]
@@ -111,7 +111,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 
 SELECT 语句 FROM\<table\> 子句提供新的 FOR SYSTEM_TIME 子句和五个特定于临时表的子子句，用于跨当前表和历史记录表查询数据 。 支持对通过多个联接传播的，以及通过多个临时表顶层的视图传播的单个表直接使用这种新的 **SELECT** 语句语法。
 
-![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")
+![显示临时查询工作方式的示意图。](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")
 
 以下查询将搜索 EmployeeID = 1000 且在 2014 年 1 月 1 日至 2015 年 1 月 1 日的某段时间（包括上限）内保持活动状态的员工行的行版本：
 
@@ -132,9 +132,9 @@ SELECT * FROM Employee
 
 |表达式|符合条件的行|说明|
 |----------------|---------------------|-----------------|
-|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|返回一个表，其行中包含过去指定时间点的实际（当前）值。 在内部，时态表及其历史记录表之间将进行联合，然后筛选结果以返回在 <date_time> 参数指定的时间点有效的行中的值。 如果 system_start_time_column_name 值小于或等于 <date_time> 参数值，并且 system_end_time_column_name 值大于 <date_time> 参数值，则此行的值视为有效   。|
-|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|返回一个表，其中包含在指定的时间范围内保持活动状态的所有行版本的值，不管这些版本是在 FROM 自变量的 <start_date_time> 参数之前开始活动，还是在 TO 自变量的 <end_date_time> 参数值之后停止活动 。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果，以返回在指定时间范围内任意时间保持活动状态的所有行版本的值。 正好在 FROM 终结点定义的下限时间停止活动的行将被排除，正好在 TO 终结点定义的上限时间开始活动的记录也将被排除。|
-|**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|与上面的 **FOR SYSTEM_TIME FROM** <start_date_time>**TO** <end_date_time> 描述相同，不过，返回的行表包括在 <end_date_time> 终结点定义的上限时间激活的行。|
+|**AS OF** <date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|返回一个表，其行中包含过去指定时间点的实际（当前）值。 在内部，时态表及其历史记录表之间将进行联合，然后筛选结果以返回在 <date_time> 参数指定的时间点有效的行中的值。 如果 system_start_time_column_name 值小于或等于 <date_time> 参数值，并且 system_end_time_column_name 值大于 <date_time> 参数值，则此行的值视为有效   。|
+|**FROM** <start_date_time> **TO** <end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|返回一个表，其中包含在指定的时间范围内保持活动状态的所有行版本的值，不管这些版本是在 FROM 自变量的 <start_date_time> 参数之前开始活动，还是在 TO 自变量的 <end_date_time> 参数值之后停止活动 。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果，以返回在指定时间范围内任意时间保持活动状态的所有行版本的值。 正好在 FROM 终结点定义的下限时间停止活动的行将被排除，正好在 TO 终结点定义的上限时间开始活动的记录也将被排除。|
+|**BETWEEN** <start_date_time> **AND** <end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|与上面的 **FOR SYSTEM_TIME FROM** <start_date_time> **TO** <end_date_time> 描述相同，不过，返回的行表包括在 <end_date_time> 终结点定义的上限时间激活的行。|
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|返回一个表，其中包含在 CONTAINED IN 参数的两个日期时间值定义的时间范围内打开和关闭的所有行版本的值。 正好在下限时间激活的记录，或者在上限时间停止活动的行将包括在内。|
 |**ALL**|所有行|返回属于当前表和历史记录表的行的联合。|
 

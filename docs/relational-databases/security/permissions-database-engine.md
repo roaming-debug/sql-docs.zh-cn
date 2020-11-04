@@ -2,7 +2,7 @@
 title: 权限（数据库引擎）| Microsoft Docs
 description: 请参阅此 SQL Server 权限完整列表，了解哪些权限适用于你使用的平台。
 ms.custom: ''
-ms.date: 01/03/2017
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-author: VanMSFT
-ms.author: vanto
+author: AndreasWolter
+ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081946"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243611"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92081946"
 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全对象都有可以授予主体的关联权限。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的权限在分配给登录名和服务器角色的服务器级别，以及分配给数据库用户和数据库角色的数据库级别进行管理。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的模型拥有与数据库权限相同的系统，但服务器级别权限不可用。 本主题包含权限的完整列表。 有关典型的权限实现，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
 [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] 的权限总数是 248。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 公布有 254 个权限。 大多数权限适用于所有平台，但有些则不适用。 例如，无法对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 授予服务器级别权限，并且只有几个权限对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 有意义。
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 公布有 238 个权限。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公布有 230 个权限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公布有 219 个权限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公布有 214 个权限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公布有 195 个权限。 [Sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主题指定哪些是最新版本中的新增主题。
+新权限将随着新版本逐步引入。 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 公布有 238 个权限。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公布有 230 个权限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公布有 219 个权限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公布有 214 个权限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公布有 195 个权限。 [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主题指定哪些权限时近期版本中的新权限。
 
 了解权限后，通过 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)和 [DENY](../../t-sql/statements/deny-transact-sql.md) 语句，将服务器级别权限应用于登录名和数据库级别权限用户。 例如：   
 ```sql
@@ -364,7 +364,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 权限检查算法摘要  
- 检查权限可能很复杂。 权限检查算法包括重叠的组成员关系和所有权链接、显式和隐式权限，并且会受包含安全实体的安全类的权限影响。 该算法的一般过程是收集所有相关权限。 如果未找到阻止性 DENY，该算法将搜索提供足够访问权限的 GRANT。 该算法包含三个基本元素： **安全上下文**、 **权限空间**和 **必需的权限**。  
+ 检查权限可能很复杂。 权限检查算法包括重叠的组成员关系和所有权链接、显式和隐式权限，并且会受包含安全实体的安全类的权限影响。 该算法的一般过程是收集所有相关权限。 如果未找到阻止性 DENY，该算法将搜索提供足够访问权限的 GRANT。 该算法包含三个基本元素： **安全上下文** 、 **权限空间** 和 **必需的权限** 。  
   
 > [!NOTE]  
 >  无法对 sa、dbo、实体所有者、information_schema、sys 或您自己授予、拒绝或撤消权限。  
@@ -404,18 +404,18 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 2.  如果所有权链接适用且以前针对链中对象的访问权限检查通过了安全检查，则允许访问。  
   
-3.  聚合与调用方关联的服务器级、数据库级和已签名模块的标识，以创建 **安全上下文**。  
+3.  聚合与调用方关联的服务器级、数据库级和已签名模块的标识，以创建 **安全上下文** 。  
   
-4.  对于该 **安全上下文**，收集为 **权限空间**授予或拒绝的所有权限。 权限可以明确表述为 GRANT、GRANT WITH GRANT 或 DENY，也可以是隐含或涵盖的权限 GRANT 或 DENY。 例如，针对架构的 CONTROL 权限隐含对表的 CONTROL， 对表的 CONTROL 则隐含 SELECT。 因此，如果授予了针对架构的 CONTROL 权限，也就授予了对表的 SELECT 权限。 如果拒绝了对表的 CONTROL 权限，也就拒绝了对表的 SELECT 权限。  
+4.  对于该 **安全上下文** ，收集为 **权限空间** 授予或拒绝的所有权限。 权限可以明确表述为 GRANT、GRANT WITH GRANT 或 DENY，也可以是隐含或涵盖的权限 GRANT 或 DENY。 例如，针对架构的 CONTROL 权限隐含对表的 CONTROL， 对表的 CONTROL 则隐含 SELECT。 因此，如果授予了针对架构的 CONTROL 权限，也就授予了对表的 SELECT 权限。 如果拒绝了对表的 CONTROL 权限，也就拒绝了对表的 SELECT 权限。  
   
     > [!NOTE]  
     >  列级权限的 GRANT 覆盖对象级的 DENY。  
   
-5.  标识 **必需的权限**。  
+5.  标识 **必需的权限** 。  
   
-6.  如果对于 **权限空间** 中的对象，直接或隐式拒绝授予 **安全上下文** 中任何标识 **必需的权限**，则权限检查失败。  
+6.  如果对于 **权限空间** 中的对象，直接或隐式拒绝授予 **安全上下文** 中任何标识 **必需的权限** ，则权限检查失败。  
   
-7.  如果对于 **权限空间** 中的任何对象，没有拒绝 **必需的权限** 且 **必需的权限** 包含对 **安全上下文**中任何标识直接或隐式的 GRANT 或 GRANT WITH GRANT 权限，则通过权限检查。  
+7.  如果对于 **权限空间** 中的任何对象，没有拒绝 **必需的权限** 且 **必需的权限** 包含对 **安全上下文** 中任何标识直接或隐式的 GRANT 或 GRANT WITH GRANT 权限，则通过权限检查。  
 
 ## <a name="special-considerations-for-column-level-permissions"></a>列级权限的特殊注意事项
 

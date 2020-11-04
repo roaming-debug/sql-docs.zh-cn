@@ -8,21 +8,21 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: alayu, maghan
 ms.custom: seodec18
-ms.date: 10/20/2020
-ms.openlocfilehash: 0e32a9e0a9e7dfd14c56c31a065f692c535b24fb
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.date: 10/28/2020
+ms.openlocfilehash: 212115d87f747d1ee35bc4d9445833daee5d25e5
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257347"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035933"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio 常见问题解答
 
 ## <a name="what-is-azure-data-studio"></a>什么是 Azure Data Studio？
 
-Azure Data Studio 是开放源代码的跨平台桌面环境，供在 Windows、macOS 和 Linux 上使用 Azure Data 系列本地及云数据平台的数据专业人员使用。 Azure Data Studio 提供现代编辑器体验，其中包括速度超快的 IntelliSense、代码片段、源代码管理集成和集成终端，之前发布的 SQL Operations Studio 是它的预览版。 它在设计时考虑了数据平台用户，带有内置查询结果集图表和可自定义的仪表板。
+[Azure Data Studio](what-is-azure-data-studio.md) 是一个开源跨平台桌面环境，供在 Windows、macOS 和 Linux 上使用 Azure Data 系列本地及云数据平台的数据专业人员使用。 Azure Data Studio 提供现代编辑器体验，其中包括速度超快的 IntelliSense、代码片段、源代码管理集成和集成终端，之前发布的 SQL Operations Studio 是它的预览版。 它在设计时考虑了数据平台用户，带有内置查询结果集图表和可自定义的仪表板。
 
-研究表明，在使用 SQL Server Management Studio 时，相比其他任务，用户在处理查询编辑上花费的时间要多得多。 出于这个原因，Azure Data Studio 侧重于关注最常用的功能，并通过产品的可选扩展项提供更丰富的体验。 这使得每个用户都可以根据自己最常用的工作流对环境进行自定义。
+研究表明，在使用 SQL Server Management Studio 时，相比其他任务，用户在处理查询编辑上花费的时间要多得多。 出于这个原因，Azure Data Studio 侧重于关注最常用的功能，并通过产品的可选扩展项提供更丰富的体验。 所有用户都可根据自己最常用的工作流对环境进行自定义。
 
 ## <a name="how-much-does-azure-data-studio-cost"></a>Azure Data Studio 的费用是多少？
 
@@ -30,7 +30,7 @@ Azure Data Studio 面向私人或商业用途免费提供。
 
 ## <a name="who-should-use-azure-data-studio"></a>哪些人适合使用 Azure Data Studio
 
-任何人都可以使用 Azure Data Studio。 但它的目的主要是简化数据库开发人员、数据库管理员、系统管理员和独立软件供应商所执行的任务。
+任何人都可以使用 Azure Data Studio。 但是，它的目的主要是简化数据库开发人员、数据库管理员、系统管理员和独立软件供应商所执行的任务。
 
 ## <a name="what-can-i-do-with-azure-data-studio"></a>Azure Data Studio 有什么用途？
 
@@ -38,7 +38,7 @@ Azure Data Studio 是在 Visual Studio Code 的基础之上构建而成，在与
 
 在 Azure Data Studio 用户界面中的“集成终端”窗口中使用常用的命令行工具（例如，Bash、PowerShell、sqlcmd、bcp、psql 和 ssh）。 轻松为自己的数据库对象生成并执行 CREATE 和 INSERT 脚本，以便创建数据库副本，供开发或测试用。 通过智能代码段和丰富的图形体验，创建新的数据库和数据库对象（例如，表、视图、存储过程、用户、登录名、角色等）或更新现有数据库对象，从而大幅提高工作效率。 丰富的可自定义仪表板可用于监视并快速排查本地、Azure 或任何云中的数据库中出现的性能瓶颈问题。
 
-Azure Data Studio 提供一致的备份和还原数据库的体验。 通过 SQL Server Always-On 可用性组的计划支持，可以轻松地为任务关键型 SQL Server 数据库配置、监视 AG 并对其进行故障排除，并在灾难期间快速故障转移到辅助数据库。 Azure Data Studio 旨在提高你在所需操作系统中所需数据库（在其 DevOps 生命周期中）上的工作效率。 其结果是，一切都在你的掌控之中，你可以降低风险、更快速地解决问题，并持续提供超出客户期望的价值。
+Azure Data Studio 提供一致的备份和还原数据库的体验。 通过 SQL Server Always-On 可用性组的计划支持，可以轻松地为任务关键型 SQL Server 数据库配置、监视 AG 并对其进行故障排除，并在灾难期间快速故障转移到辅助数据库。 Azure Data Studio 旨在提高你在所需操作系统中所需数据库（在其 DevOps 生命周期中）上的工作效率。 其结果是，一切都在你的掌控之中，你可降低风险、更快速地解决问题，并持续提供超出客户期望的价值。
 
 ## <a name="is-azure-data-studio-open-source"></a>Azure Data Studio 是开源环境吗？
 
@@ -46,11 +46,15 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>我们是否计划要使用开源 SSMS？
 
-不是。 但新一代多操作系统 CLI 和 GUI 工具是开源工具。 例如，GitHub 上的 VS Code、mssql-scripter 和 msql-CLI 的 mssql 扩展都是开源的。 GitHub 上提供 Azure Data Studio 的源代码。  
+不是。
 
-## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>既然要使用 Azure Data Studio，Microsoft 是否计划弃用 SSMS 和 SSDT？ 
+但新一代多操作系统 CLI 和 GUI 工具是开源工具。 例如，GitHub 上的 VS Code、mssql-scripter 和 msql-CLI 的 mssql 扩展都是开源的。 GitHub 上提供 Azure Data Studio 的源代码。  
 
-不是。 除了要投资新一代多操作系统和多数据库 CLI 以及 GUI 工具，我们将继续投资重要的 Windows 工具（SSMS、SSDT、PowerShell）。 我们的目标是为客户提供工具使用上的选择，使其能够根据方案需要在所需平台上使用所需工具。 Azure Data Studio 更专注于查询编辑和数据开发体验，据研究表明，这项功能在 SQL Server Management Studio 中的使用频率比其他功能高出一个数量级。 Azure Data Studio 中还以扩展项的方式提供了其他高价值的管理功能，如备份、恢复、代理作业管理和服务器分析等。 Azure Data Studio 同时还是跨平台的环境，这使用户能够在所需平台上工作。 不过，SQL Server Management Studio 所提供的管理功能相较而言仍是最全面广泛的，因此仍是处理平台管理任务的一个非常重要的工具。 
+## <a name="now-that-theres-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>既然要使用 Azure Data Studio，Microsoft 是否计划弃用 SSMS 和 SSDT？ 
+
+不是。
+
+除了要投资新一代多操作系统和多数据库 CLI 以及 GUI 工具，我们将继续投资重要的 Windows 工具（SSMS、SSDT、PowerShell）。 我们的目标是为客户提供工具使用上的选择，使其能够根据方案需要在所需平台上使用所需工具。 Azure Data Studio 更专注于查询编辑和数据开发体验，据研究表明，这项功能在 SQL Server Management Studio 中的使用频率比其他功能高出一个数量级。 Azure Data Studio 中还以扩展项的方式提供了其他高价值的管理功能，如备份、恢复、代理作业管理和服务器分析等。 Azure Data Studio 同时还是跨平台的环境，这使用户能够在所需平台上工作。 不过，SQL Server Management Studio 所提供的管理功能相较而言仍是最全面广泛的，因此仍是处理平台管理任务的一个非常重要的工具。 
 
 ## <a name="when-should-i-use-azure-data-studio-or-sql-server-management-studio"></a>何时应使用 Azure Data Studio 或 SQL Server Management Studio？
 
@@ -74,108 +78,22 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 ## <a name="feature-comparison"></a>功能对比
 
-### <a name="shell-features"></a>Shell 功能
-
-|Feature|Azure Data Studio|SSMS|
-|:---|:---|:---|
-|Azure 登录|是|是|
-|仪表板|是| |
-|扩展|是| |
-|集成终端|是||
-|“对象资源管理器”|是|是|
-|对象脚本|是|是|
-|项目系统|是||
-|从表中选择|是|是|
-|源代码管理|是||
-|任务窗格|是||
-|主题，包括深色模式|是||
-|Azure 资源浏览器|预览||
-|生成脚本向导||是|
-|对象属性||是|
-|表设计器||是|
-
-### <a name="query-editor"></a>查询编辑器
-
-|Feature|Azure Data Studio|SSMS|
-|:---|:---|:---|
-|图表查看器|是||
-|将结果导出为 CSV、JSON、XLSX|是||
-|将结果保存到文件||是|
-|以文本格式显示结果||是|
-|IntelliSense|是|是|
-|代码片段|是|是|
-|显示计划|预览|是|
-|客户端统计信息||是|
-|实时查询统计信息||是|
-|查询选项||是|
-|空间查看器||是|
-|SQLCMD|是|是|
-
-### <a name="operating-system-support"></a>操作系统支持
-
-|Feature|Azure Data Studio|SSMS|
-|:---|:---|:---|
-|Windows|是|是|
-|macOS|是||
-|Linux|是||
-
-### <a name="data-engineering"></a>数据工程
-
-|Feature|Azure Data Studio|SSMS|
-|:---|:---|:---|
-|外部数据向导|预览||
-|HDFS 集成|预览||
-|笔记本|预览||
-
-### <a name="database-administration"></a>数据库管理
-
-|Feature|Azure Data Studio|SSMS|
-|:---|:---|:---|
-|备份/还原|是|是|
-|平面文件导入|是|是|
-|SQL 代理|预览|是|
-|SQL Profiler|预览|是|
-|AlwaysOn||是|
-|Always Encrypted||是|
-|复制数据向导||是|
-|数据优化顾问||是|
-|数据库关系图||是|
-|错误日志查看器||是|
-|维护计划||是|
-|多服务器查询||是|
-|基于策略的管理||是|
-|PolyBase||是|
-|查询存储||是|
-|已注册的服务器||是|
-|复制||是|
-|安全管理||是|
-|Service Broker||是|
-|SQL 评估|预览|是|
-|SQL Mail||是|
-|模板资源管理器||是|
-|漏洞评估||是|
-|XEvent 管理||是|
-
-### <a name="database-development"></a>数据库开发
-|Feature|Azure Data Studio|SSMS|
-|:---|:---|:---|
-|导入\导出 DACPAC|是|是|
-|SQL 项目|预览||
-|架构比较|是||
+若要更详细地了解 Azure Data Studio 和 SQL Server Management Studio (SSMS) 之间的差异，请访问[什么是 Azure Data Studio](what-is-azure-data-studio.md#feature-comparison-with-sql-server-management-studio-ssms)。
 
 
-
-## <a name="azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>Azure Data Studio 缺少 SSMS/SSDT 中提供的一项功能。 是否添加该功能？
+## <a name="what-if-azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt"></a>如果 Azure Data Studio 缺少 SSMS/SSDT 中提供的一项功能，会发生什么情况？
 
 这取决于方案和客户/业务需求。 为了帮助设置优先级，请提交建议，并在 [GitHub](https://github.com/microsoft/azuredatastudio/issues) 上对现有内容投票。
 
 ## <a name="i-understand-azure-data-studio-and-the-mssql-extension-for-vs-code-are-powered-by-a-new-tools-service-that-uses-smo-apis-under-the-covers-is-smo-available-on-linux-and-macos"></a>我了解 Azure Data Studio 和 VS Code 的 mssql 扩展由一个使用 SMO API 的新工具服务在后台提供支持。 SMO 是否可在 Linux 和 macOS 上使用？
 
-目前用户还无法在 Linux 或 macOS 上使用 SMO API。 我们已将 SMO API 的一个子集移植到 .NET Core 中，Azure Data Studio 需要该子集，我们计划扩展该集合，并将该计划加入路线图。 SQL 工具服务位于 GitHub 上：[https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice)。
+目前，用户还无法在 Linux 或 macOS 上使用 SMO API。 我们已将 SMO API 的一个子集移植到 .NET Core 中，Azure Data Studio 需要该子集，我们计划扩展该集合，并将该计划加入路线图。 SQL 工具服务位于 GitHub 上：[https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice)。
 
 ## <a name="do-you-plan-to-port-the-dacfx-apis-andor-sqlpackageexe-andor-ssdt-to-linux-and-macos"></a>是否计划将 DACFx API 和/或 sqlpackage.exe 和/或 SSDT 移植到 Linux 和 macOS 中？
 
-这方面的部分工作已经完成。  [SqlPackage.exe](../tools/sqlpackage-download.md) 现在可以在适用于 Windows、macOS 和 Linux 的 .NET Core 上使用。  SQL 项目 (SSDT) 功能是在 Azure Data Studio 的 [SQL 数据库项目扩展](extensions/sql-database-project-extension.md)中启用的。
+是的。
+
+[SqlPackage.exe](../tools/sqlpackage-download.md) 现在可以在适用于 Windows、macOS 和 Linux 的 .NET Core 上使用。  SQL 项目 (SSDT) 功能是在 Azure Data Studio 的 [SQL 数据库项目扩展](extensions/sql-database-project-extension.md)中启用的。
 
 ## <a name="will-sql-powershell-cmdlets-be-available-on-linux-and-macos"></a>SQL PowerShell cmdlet 是否可在 Linux 和 macOS 上使用？
 
@@ -187,8 +105,20 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 ## <a name="does-azure-data-studio-integrate-with-azure-synapse-analytics"></a>Azure Data Studio 是否与 Azure Synapse Analytics 进行了集成？
 
-是的。 目前以预览版形式提供 Azure Data Studio 对 Azure Synapse Analytics 的支持，同时还提供 Azure SQL 托管实例和 SQL Server 2019 大数据。
+是的。
+
+目前以预览版形式提供 Azure Data Studio 对 Azure Synapse Analytics 的支持，同时还提供 Azure SQL 托管实例和 SQL Server 2019 大数据。
 
 ## <a name="why-is-azure-data-studio-important-for-big-data-scenarios"></a>为什么 Azure Data Studio 对于大数据方案很重要？
 
 随着 SQL Server 将其功能扩展到大数据空间，它需要新的工具来支持这些用例。 出于这个原因，Azure Data Studio 为 SQL Server 大数据提供了一种新的体验，包括 SQL Server 工具集中的笔记本体验，以及可便于从远程 SQL Server 和 Oracle 实例轻松、快速地访问数据的新向导“创建外部表”。
+
+## <a name="can-i-use-visual-studio-code-vs-code-extensions-with-azure-data-studio"></a>是否可将 Visual Studio Code (VS Code) 与 Visual Studio Code 一起使用？
+
+是的。
+
+但是，并非所有 VS Code 扩展都转换为 Azure Data Studio。
+
+## <a name="next-steps"></a>后续步骤
+- [什么是 Azure Data Studio](what-is-azure-data-studio.md)
+- [下载 Azure Data Studio](download-azure-data-studio.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7e87d77eec096191c00a0ff7d68cd40dca713926
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809185"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243570"
 ---
 # <a name="temporal-table-usage-scenarios"></a>时态表使用方案
 
@@ -33,7 +33,7 @@ ms.locfileid: "91809185"
 下图显示了一个 Employee 表方案，其数据样本包括当前行版本（标记为蓝色）以及历史行版本（标记为灰色）。
 图的右侧部分在时间轴上显示了行版本，以及在使用或不使用 SYSTEM_TIME 子句的情况下，你针对不同类型的基于临时表的查询选择了哪些行。
 
-![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
+![显示第一个临时使用场景的示意图。](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
 
 ### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>对新表启用系统版本控制，以便进行数据审核
 
@@ -175,7 +175,7 @@ FROM Employee
 
 下图显示了用于库存管理的简化数据模型：
 
-![TemporalUsageInMemory](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
+![显示用于库存管理的简化数据模型的示意图。](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
 
 以下代码示例创建 ProductInventory 作为内存中系统版本控制型临时表，所使用的聚集列存储索引基于历史记录表（此表实际上是替换了默认创建的行存储索引）：
 
@@ -261,7 +261,7 @@ END;
 
 spUpdateInventory 存储过程可以将新产品插入库存中，也可以更新特定位置的产品数量。 业务逻辑很简单，其注重点是通过表更新对 Quantity 字段进行递增/递减操作，确保最新状态始终准确，而由系统控制版本的表则通过透明方式将历史记录维度添加到数据中，如下图所示。
 
-![TemporalUsageInMemory2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
+![显示临时使用情况的示意图，当前使用情况在内存中，历史使用情况在聚集列存储中。](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
 
 现在，通过本机编译模块即可高效地执行最新状态查询：
 
@@ -295,7 +295,7 @@ SELECT * FROM vw_GetProductInventoryHistory
 
 下图显示了一个产品的数据历史记录，该记录可以通过将上述视图导入 Power Query、Power BI 或类似的商业智能工具来轻松地呈现：
 
-![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
+![显示一种产品的数据历史记录的示意图。](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
 
 这种情况下可以使用临时表进行其他类型的时程分析，例如通过 AS OF 子句重新构造库存在过去任意时间点的状态，或者对属于不同时刻的快照进行比较。
 
@@ -348,7 +348,7 @@ SELECT * FROM vw_ProductInventoryDetails
 
 下图显示了为 SELECT 查询生成的执行计划。 这表明，在处理临时关系时，不管过程怎么复杂，都可以通过 SQL Server 引擎来妥善处理：
 
-![ASOFExecutionPlan](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
+![显示为 SELECT 查询生成的执行计划的示意图，其中说明了处理临时关系所面临的各种复杂性由 SQL Server 引擎完全处理。](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
 
 使用以下代码来比较两个时间点（一天前和一月前）的产品库存状态：
 
@@ -390,7 +390,7 @@ CREATE TABLE [dbo].[Product]
 
 下图显示了一定时段内的购买项目：
 
-![TemporalAnomalyDetection](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
+![显示一段时间内的购买项目的示意图。](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
 
 假定购买产品的数目在平常日子有一些小的差异，则可使用以下查询来确定单一离群值。单一离群值指的是与最近的邻居相比具有显著差异（2 倍），但与周围的示例相比没有显著差异（不到 20%）的示例：
 
@@ -466,7 +466,7 @@ ALTER TABLE DimLocation SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DimLoca
 
 下图演示了如何在涉及 2 个 SCD（DimLocation 和 DimProduct）和 1 个事实数据表的简单方案中使用临时表。
 
-![TemporalSCD](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
+![一张示意图，显示如何在涉及 2 个 SCD（DimLocation 和 DimProduct）和 1 个事实数据表的简单方案中使用临时表。](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
 
 若要在报表中使用上述 SCD，需对查询进行有效调整。 例如，你可能需要计算过去六个月的总销售额和人均销售产品数。 请注意，这两个指标都需要对事实数据表和维度中的数据进行更正，这些数据可能更改了对分析来说很重要的属性（DimLocation.NumOfCustomers、DimProduct.UnitPrice）。 以下查询对所需指标进行了正确的计算：
 
@@ -539,13 +539,13 @@ UPDATE Employee
 
 下图显示了过程调用前后的行状态。 红色矩形标记的是不正确的当前行版本，绿色矩形标记的是历史记录中的正确版本。
 
-![TemporalUsageRepair1](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
+![显示过程调用前后的行状态的屏幕截图](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
 
 ```sql
 EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1
 ```
 
-![TemporalUsageRepair2](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
+![显示所选行的屏幕截图。](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
 
 可以将该修复存储过程定义为接受具体的时间戳而非行版本。 该过程会将行还原为在所提供的时间点（即 AS OF 时间点）处于活动状态的任何版本。
 
@@ -567,11 +567,11 @@ UPDATE Employee
 
 对于同一数据样本，下图显示的是带有时间条件的修复方案。 突出显示的是 @asOf 参数、历史记录中选择的所提供时间点的实际行，以及进行修复操作后当前表中的全新行版本：
 
-![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
+![显示带有时间条件的修复方案的屏幕截图。](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
 
 在数据仓库和报表系统中自动加载数据时，可能会进行数据更正。 很多情况下，如果刚更新的值不正确，从历史记录中还原以前的版本即可。 下图显示了自动执行此过程的方法：
 
-![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
+![显示可如何自动执行此过程的示意图。](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
 
 ## <a name="next-steps"></a>后续步骤
 

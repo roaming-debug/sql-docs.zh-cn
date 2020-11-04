@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 562063245f2c8aaf5204385be20e6687554d5d46
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300175"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043853"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -493,7 +493,7 @@ WITH
 
 创建凭证时的其他说明和指导：
 
-- 若要从 Azure 存储将数据加载到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，请使用 Azure 存储密钥。
+- 若要将数据从 Azure 存储加载到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，请使用共享访问签名（SAS 令牌）。
 - 只有在数据得到保护的情况下才需要 `CREDENTIAL`。 允许匿名访问的数据集不需要 `CREDENTIAL`。
 - 当 `TYPE` = `BLOB_STORAGE` 时，必须使用 `SHARED ACCESS SIGNATURE` 作为标识创建凭据。 此外，应按如下所示配置 SAS 令牌：
   - 配置为密码时排除前导 `?`

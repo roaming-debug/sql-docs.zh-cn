@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 3be7312cceacd7d6cef6c60fbe54515c7577c5f2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7a73a233a84d532f55dc61797f44e5d39013722f
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194092"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067320"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教程：在 Azure 中部署和运行 SQL Server Integration Services (SSIS) 包
 
@@ -52,17 +52,17 @@ ms.locfileid: "92194092"
 
 1. 打开 SQL Server Management Studio。
 
-2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息： 
+2. **连接到该服务器** 。 在“连接到服务器”对话框中，输入以下信息： 
 
    | 设置       | 建议的值 | 说明 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
-   | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 如果需要服务器名称，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。 |
+   | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式： **mysqldbserver.database.windows.net** 。 如果需要服务器名称，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。 |
    | **身份验证** | SQL Server 身份验证 | 无法通过 Windows 身份验证连接到 Azure SQL 数据库。 |
    | **登录** | 服务器管理员帐户 | 在创建服务器时指定的帐户。 |
    | **密码** | 服务器管理员帐户的密码 | 创建服务器时指定的密码。 |
 
-3. **连接到 SSISDB 数据库**。 选择“选项”  展开“连接到服务器”  对话框。 在展开的“连接到服务器”  对话框中，选择“连接属性”  选项卡。在“连接到数据库”  字段中，选择或输入 `SSISDB`。
+3. **连接到 SSISDB 数据库** 。 选择“选项”  展开“连接到服务器”  对话框。 在展开的“连接到服务器”  对话框中，选择“连接属性”  选项卡。在“连接到数据库”  字段中，选择或输入 `SSISDB`。
 
 4. 然后选择“连接”  。 对象资源管理器窗口在 SSMS 中打开。 
 
@@ -91,26 +91,26 @@ ms.locfileid: "92194092"
 
 2. 在“选择源”页上，选择要部署的现有 SSIS 项目  。
     -   若要部署你所创建的项目部署文件，请选择“项目部署文件”  并输入 .ispac 文件的路径。
-    -   若要部署位于 SSIS 目录中的项目，请选择“Integration Services 目录”，然后输入目录中该项目的服务器名称和路径  。
-    -   选择“下一步”  查看“选择目标”  页。
+    -   若要部署位于 SSIS 目录中的项目，请选择“Integration Services 目录”，然后输入目录中该项目的服务器名称和路径  。 在此步骤中，只能重新部署驻留在 SQL Server 托管的 SSISDB 中的项目。
+    -   选择“下一步”查看“选择目标”页。
   
-3.  在“选择目标”页上，选择项目的目标  。
+3.  在“选择目标”页上，选择项目的目标。
     -   使用 `<server_name>.database.windows.net` 格式输入完全限定服务器名称。
-    -   提供身份验证信息，然后选择“连接”  。
-    -   然后选择“浏览”  ，在 SSISDB 中选择目标文件夹。
-    -   再选择“下一步”打开“评审”页   。 （仅当选择“连接”后，才会启用“下一步”按钮   。）
+    -   提供身份验证信息，然后选择“连接”。
+    -   然后选择“浏览”，在 SSISDB 中选择目标文件夹。
+    -   再选择“下一步”打开“评审”页。 （仅当选择“连接”后，才会启用“下一步”按钮。）
   
-4.  在“查看”页上，查看所选的设置  。
-    -   可以通过选择“上一步”  或选择左窗格中的任意步骤来更改所做的选择。
-    -   选择“部署”启动部署进程  。
+4.  在“查看”页上，查看所选的设置。
+    -   可以通过选择“上一步”或选择左窗格中的任意步骤来更改所做的选择。
+    -   选择“部署”启动部署进程。
 
     > [!NOTE]
-    > 如果收到错误消息“没有任何活动工作代理。(.Net SqlClient 数据提供程序)”，请确保 Azure-SSIS Integration Runtime 正在运行  。 如果尝试在 Azure SSIS IR 处于停止状态时进行部署，则会发生此错误。
+    > 如果收到错误消息“没有任何活动工作代理。(.Net SqlClient 数据提供程序)”，请确保 Azure-SSIS Integration Runtime 正在运行。 如果尝试在 Azure SSIS IR 处于停止状态时进行部署，则会发生此错误。
 
-5.  部署过程完成之后，“结果”页随即打开  。 该页显示每个操作是成功了还是失败了。
-    -   如果操作失败，则选择“结果”  列中的“失败”  以显示错误说明。
-    -   （可选）选择“保存报告...”  将结果保存到 XML 文件中。
-    -   选择“关闭”  退出该向导。
+5.  部署过程完成之后，“结果”页随即打开。 该页显示每个操作是成功了还是失败了。
+    -   如果操作失败，则选择“结果”列中的“失败”以显示错误说明。
+    -   （可选）选择“保存报告...”将结果保存到 XML 文件中。
+    -   选择“关闭”退出该向导。
 
 ## <a name="deploy-a-project-with-powershell"></a>使用 PowerShell 部署项目
 
@@ -180,17 +180,17 @@ Write-Host "All done."
 
 1. 在 SSMS 的对象资源管理器中，选择要运行的包。
 
-2. 右击并选择“执行”  打开“执行包”  对话框。
+2. 右击并选择“执行”打开“执行包”对话框。
 
-3.  在“执行包”  对话框中，使用“参数”  、“连接管理器”  和“高级”  选项卡上的设置来配置包执行。
+3.  在“执行包”对话框中，使用“参数”、“连接管理器”和“高级”选项卡上的设置来配置包执行。
 
-4.  选择“确定”  运行包。
+4.  选择“确定”运行包。
 
 ## <a name="monitor-the-running-package-in-ssms"></a>在 SSMS 中监视正在运行的包
 
-若要查看 Integration Services 服务器上当前运行的 Integration Services 操作的状态，比如部署、验证和包执行，请使用 SSMS 中的“活动操作”  对话框。 若要打开“活动操作”  对话框，请右键单击“SSISDB”  ，然后选择“活动操作”  。
+若要查看 Integration Services 服务器上当前运行的 Integration Services 操作的状态，比如部署、验证和包执行，请使用 SSMS 中的“活动操作”对话框。 若要打开“活动操作”对话框，请右键单击“SSISDB”，然后选择“活动操作”。
 
-也可以在对象资源管理器中选择包，右击并选择“报表”  ，然后选择“标准报表”  、“所有执行”  。
+也可以在对象资源管理器中选择包，右击并选择“报表”，然后选择“标准报表”、“所有执行”。
 
 有关如何在 SSMS 中监视正在运行的包的详细信息，请参阅[监视正在运行的包和其他操作](../performance/monitor-running-packages-and-other-operations.md)。
 

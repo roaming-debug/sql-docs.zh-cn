@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f99d6e50aed43273dbcaa659f95a8bb8a1fe73d3
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 0069e1fc2a6991df71291fd377aaa76e10f23256
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638980"
+ms.locfileid: "92734628"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,13 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>参数
 ( 'ALL' [, _pool\_name_ ] )  
 ALL 指定所有受支持的缓存。  
-_pool\_name_ 指定 Resource Governor 池缓存。 只释放与此池关联的条目。  
+pool\_name 指定 Resource Governor 池缓存。 只释放与此池关联的条目。 若要列出可用池名称，请运行：
+
+```sql
+SELECT name FROM sys.dm_os_memory_clerks
+```
+
+可使用此命令单独释放大多数（但非全部）缓存。
   
 MARK_IN_USE_FOR_REMOVAL  
 当不再使用当前使用的条目后，将它们分别从其各自所属的缓存中进行异步释放。 在 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL 运行后，缓存中新建的条目不受影响。  
@@ -62,7 +68,7 @@ NO_INFOMSGS
 取消显示所有信息性消息。  
   
 ## <a name="remarks"></a>备注  
-运行 DBCC FREESYSTEMCACHE 可清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有即将到来的执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息： 
+运行 DBCC FREESYSTEMCACHE 可清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有即将到来的执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：
 
 >`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
 
