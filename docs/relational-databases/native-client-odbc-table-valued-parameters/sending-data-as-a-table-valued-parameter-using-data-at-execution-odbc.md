@@ -14,12 +14,12 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 6447c5088e0fd338618a4601abf47c8b3344d796
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868213"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364735"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用执行时数据将数据作为表值参数发送 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -185,9 +185,9 @@ from @Items
     }  
     ```  
   
-## <a name="example"></a>示例  
+## <a name="examples"></a>示例  
   
-### <a name="description"></a>说明  
+### <a name="a-use-row-streaming-one-row-per-call"></a>A. 使用行流式处理，每次调用一行
  此示例演示可以使用行流式处理，每次调用 SQLPutData 时使用 ODBC TVP，这与使用 BCP.exe 将数据加载到数据库的方式类似。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  
@@ -215,7 +215,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>代码  
+#### <a name="code"></a>代码  
   
 ```cpp
 #define UNICODE  
@@ -373,9 +373,7 @@ EXIT:
 }  
 ```  
   
-## <a name="example"></a>示例  
-  
-### <a name="description"></a>说明  
+### <a name="b-use-row-streaming-multiple-rows-per-call"></a>B. 使用行流式处理，每次调用多行  
  此示例演示你可以使用 ODBC TVP，对每次调用 SQLPutData 使用多行流，这类似于你可能使用 BCP.exe 将数据加载到数据库中的方式。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  
@@ -403,7 +401,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>代码  
+#### <a name="code"></a>代码  
   
 ```cpp
 #define UNICODE  

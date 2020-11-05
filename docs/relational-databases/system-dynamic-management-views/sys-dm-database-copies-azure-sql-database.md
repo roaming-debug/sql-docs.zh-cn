@@ -1,6 +1,6 @@
 ---
 description: sys.dm_database_copies（Azure SQL 数据库）
-title: dm_database_copies (Azure SQL 数据库) |Microsoft Docs
+title: Azure SQL Database (sys.dm_database_copies) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.service: sql-database
@@ -20,19 +20,19 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 178fda9bb96fc84acd1527f172c6a6728a1ec22e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: acdb347af36812095df03f61ae9f118493496e51
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543917"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364769"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies（Azure SQL 数据库）
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   返回有关数据库副本的信息。  
   
-若要返回有关异地复制链接的信息，请使用 SQL 数据库 V12) 中 (可用的 [sys.databases. geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) 或 [dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) 视图。
+若要返回有关异地复制链接的信息，请使用 SQL 数据库 V12) 中 (可用 [sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) 或 [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) 视图。
   
   
 |列名|数据类型|说明|  
@@ -42,7 +42,7 @@ ms.locfileid: "89543917"
 |modify_date|**datetimeoffset**|当完成数据库复制时，区域 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据中心的 UTC 时间。 截至此时，新数据库与主数据库在事务上一致。 完成信息每1分钟更新一次。<br /><br />反映 percent_complete 字段的上一次更新的 UTC 时间。|  
 |**percent_complete**|**real**|已复制的字节的百分比。 值介于 0 到 100 之间。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可以自动从某些错误（如故障转移）中恢复，并重新启动数据库复制。 在这种情况下，percent_complete 将从 0 重新开始。|  
 |**error_code**|**int**|当大于 0 时，代码指示复制时发生的错误。 如果不发生错误，则值等于 0。|  
-|**error_desc**|**nvarchar (4096) **|复制时发生的错误的说明。|  
+|**error_desc**|**nvarchar (4096)**|复制时发生的错误的说明。|  
 |**error_severity**|**int**|如果数据库复制失败，则返回 16。|  
 |**error_state**|**int**|如果复制恢复，则返回 1。|  
 |**copy_guid**|**uniqueidentifier**|复制操作的唯一 ID。|  
@@ -60,6 +60,6 @@ ms.locfileid: "89543917"
  此视图仅在 **master** 数据库中适用于服务器级主体登录名。  
   
 ## <a name="remarks"></a>备注  
- 您可以在源服务器或目标服务器的**master**数据库中使用**sys. dm_database_copies**视图 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 当数据库复制成功完成并且新的数据库处于联机状态时，将自动删除 **sys.databases dm_database_copies** 视图中的行。  
+ 您可以使用源服务器或目标服务器的 **master** 数据库中的 " **sys.dm_database_copies** " 视图 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 当数据库复制成功完成并且新的数据库处于联机状态时，将自动删除 **sys.dm_database_copies** 视图中的行。  
   
   

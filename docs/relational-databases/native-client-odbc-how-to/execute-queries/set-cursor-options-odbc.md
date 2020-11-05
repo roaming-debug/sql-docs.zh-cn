@@ -14,12 +14,12 @@ ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2622fc28743da2e2eed4224e7a2f0eb21c09e665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1cf4610efc2ea021b8cd9260f463af079d28dc9
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423777"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364816"
 ---
 # <a name="set-cursor-options-odbc"></a>设置游标选项 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,10 @@ ms.locfileid: "88423777"
   
  您可以通过设置 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY 或设置 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE 来控制使用的游标类型。 不应将指定游标行为的两种方法混用。  
   
-## <a name="example"></a>示例  
+## <a name="examples"></a>示例  
+
+### <a name="a-set-a-dynamic-cursor"></a>A. 设置动态游标
+
  以下示例分配一个语句句柄，之后以行版本控制乐观并发方式设置动态游标类型，然后执行 SELECT。  
   
 ```  
@@ -48,7 +51,7 @@ retcode = SQLSetStmtAttr(hstmt1, SQL_ATTR_CONCURRENCY, SQLPOINTER)SQL_CONCUR_ROW
 retcode = SQLExecDirect(hstmt1, SELECT au_lname FROM authors", SQL_NTS);  
 ```  
   
-## <a name="example"></a>示例  
+### <a name="b-set-a-scrollable-sensitive-cursor"></a>B. 设置可滚动的敏感游标
  以下示例分配一个语句句柄，之后设置可滚动、敏感游标，然后执行 SELECT  
   
 ```  
