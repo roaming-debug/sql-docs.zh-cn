@@ -6,13 +6,13 @@ ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.tsqlquery.f1
-- sql13.swb.tsqlresults.f1
 - sql13.swb.query.advanced.f1
 - sql13.swb.query.ansi.f1
 - sql13.swb.query.general.f1
-- sql13.swb.query.general.f1
+- sql13.swb.query.grid.f1
 - sql13.swb.sqleditors.multiserverresultssettings
+- sql13.swb.tsqlquery.f1
+- sql13.swb.tsqlresults.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -43,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: 7450a77549d05dab5a024b39be6d2b4aef6c09de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344063"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364827"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SQL Server Management Studio (SSMS) 查询编辑器
 

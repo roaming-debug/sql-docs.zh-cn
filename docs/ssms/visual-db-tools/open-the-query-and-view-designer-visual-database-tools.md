@@ -1,8 +1,6 @@
 ---
-description: 打开查询和视图设计器 (Visual Database Tools)
 title: 打开查询和视图设计器
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+description: 打开查询和视图设计器 (Visual Database Tools)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,15 +14,19 @@ ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 56d9aec3b6768a45ddad6fec107fded037656eb1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: ea9bd06205846401d4e6bd65690f0af4e34bdf63
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88369283"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067335"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>打开查询和视图设计器 (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/applies-to-version/sql-asdb.md)]
+
 当您打开视图的定义、显示查询或视图的结果或者创建或打开查询时，查询和视图设计器将会打开。 它由四个不同的窗格组成：  
   
 -   “关系图”窗格以图形形式显示了您通过数据连接选择的表或表值对象。 同时也会显示它们之间的联接关系。  
@@ -37,21 +39,21 @@ ms.locfileid: "88369283"
   
 -   这些窗格对于处理查询和视图非常有用。  
   
--   当您打开一个视图或查询时，以上部分或全部窗格将随之打开。 所打开的窗格取决于“选项”**** 对话框中的设置以及你所连接的数据库管理系统。 默认设置是四个窗格全都打开。  
+-   当您打开一个视图或查询时，以上部分或全部窗格将随之打开。 所打开的窗格取决于“选项”对话框中的设置以及你所连接的数据库管理系统。 默认设置是四个窗格全都打开。  
   
 ### <a name="to-open-the-query-and-view-designer-for-a-view"></a>为视图打开查询和视图设计器  
   
-1.  在对象资源管理器中，右键单击要打开的视图，然后单击“设计”**** 或“打开视图”****。  
+1.  在对象资源管理器中，右键单击要打开的视图，然后单击“设计”或“打开视图”。  
   
-    如果选择“设计”****，查询和视图设计器窗格将按照在“选项”**** 对话框中选定的选项设置打开。 如果选择“打开视图”****，默认情况下仅打开“结果”窗格。  
+    如果选择“设计”，查询和视图设计器窗格将按照在“选项”对话框中选定的选项设置打开。 如果选择“打开视图”，默认情况下仅打开“结果”窗格。  
   
 ### <a name="to-open-the-query-and-view-designer-for-an-existing-query"></a>为现有查询打开查询和视图设计器  
   
-1.  在解决方案资源管理器中，展开“查询”**** 文件夹。  
+1.  在解决方案资源管理器中，展开“查询”文件夹。  
   
 2.  双击要打开的查询。  
   
-3.  突出显示相应的查询语句，右键单击突出显示的区域，再单击“在编辑器中设计查询”****。  
+3.  突出显示相应的查询语句，右键单击突出显示的区域，再单击“在编辑器中设计查询”。  
   
 ## <a name="see-also"></a>另请参阅  
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

@@ -7,22 +7,23 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
+- Microsoft.Data.Relational.Design.PW.RelationshipsDescriptor.OnDelete
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3364df5dd6336023af7316be12150b878f2c9eb9
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 410b2674f407018b895ed84781bedf5fa8766feb
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518777"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364389"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用表设计器创建数据库对象
 
-SQL Server 对象资源管理器**** 中的新的“SQL Server”**** 节点不但在外观上与 SSMS 十分相似，而且可以使用在功能上与其 SSMS 对应项类似的上下文菜单创建新对象。  
+SQL Server 对象资源管理器中的新的“SQL Server”节点不但在外观上与 SSMS 十分相似，而且可以使用在功能上与其 SSMS 对应项类似的上下文菜单创建新对象。  
   
 例如，可以在“数据库”节点下创建一个新数据库。 同样，您可以选择特定的数据库，并且使用新的表设计器即时创建或编辑表定义及其相关编程对象。 从表设计器中，您可以切换到脚本窗格，从该窗格中，您可以直接编辑定义此表的脚本。  
   

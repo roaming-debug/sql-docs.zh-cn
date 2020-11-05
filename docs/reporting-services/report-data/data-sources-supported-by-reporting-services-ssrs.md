@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 5b8fb15c2fb479471000fc9979c691761e4d81cd
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006453"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328558"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -104,7 +104,7 @@ ms.locfileid: "92006453"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库|OLEDB|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.OledbClient|Y|Y|SQL Server 2012 和更高版本。|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库|[ODBC](#ODBC)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.OdbcClient|Y|是|SQL Server 2012 和更高版本。|Y|是|  
 |[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL 数据库](#Azure)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.SqlClient|空值|不可用|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|是|
-|SQL 数据仓库|[Microsoft Azure SQL 数据库](#Azure)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.SqlClient|空值|不可用|SQL 数据仓库|Y|是| 
+|Azure Synapse Analytics|[Microsoft Azure SQL 数据库](#Azure)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.SqlClient|空值|不可用|Azure Synapse Analytics|Y|是| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具|[Microsoft 并行数据仓库](#PWD)|弃用的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|空值|空值|不可用|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维或表格数据库|[Microsoft SQL Server Analysis Services](#AnalysisServices)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|使用 ADOMD.NET|Y|是|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及更高版本|Y|是|  
 |Power BI Premium 数据集（从 Reporting Services 2019 和 Power BI 报表服务器 2020 年 1 月版开始） |[Microsoft SQL Server Analysis Services](#AnalysisServices)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|使用 ADOMD.NET|Y|是|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及更高版本|Y|是|
@@ -185,7 +185,7 @@ ms.locfileid: "92006453"
  [返回数据源表](#DataSourcesTable)  
   
 ####  <a name="ole-db-for-sql-server"></a><a name="OLEDBSQL"></a> OLE DB for SQL Server  
- 如果选择数据源类型 **OLE DB**，则要选择一个扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for OLE DB 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据处理扩展插件。 此数据处理扩展插件针对 x86 和 x64 平台进行了本机编译并在这些平台上运行。  
+ 如果选择数据源类型 **OLE DB** ，则要选择一个扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for OLE DB 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据处理扩展插件。 此数据处理扩展插件针对 x86 和 x64 平台进行了本机编译并在这些平台上运行。  
   
  有关详细信息，请参阅 [OLE DB 连接类型 (SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "92006453"
  [返回数据源表](#DataSourcesTable)  
   
 ###  <a name="odbc-data-processing-extension"></a><a name="ODBC"></a> ODBC Data Processing Extension  
- 如果选择数据源类型 **ODBC**，则要选择一个扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for ODBC 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据处理扩展插件。 此数据处理扩展插件针对 x86 和 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] 平台进行了本机编译并在这些平台上运行。 使用此扩展插件可连接到具有 ODBC 访问接口的任何数据源并从中检索数据。  
+ 如果选择数据源类型 **ODBC** ，则要选择一个扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for ODBC 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据处理扩展插件。 此数据处理扩展插件针对 x86 和 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] 平台进行了本机编译并在这些平台上运行。 使用此扩展插件可连接到具有 ODBC 访问接口的任何数据源并从中检索数据。  
   
 > [!NOTE]  
 >  虽然某个数据访问接口可能支持在报表创作客户端上预览报表，但并非所有 ODBC 数据访问接口都设计为支持在报表服务器上发布的报表。  
@@ -249,7 +249,7 @@ ms.locfileid: "92006453"
  [返回数据源表](#DataSourcesTable)  
   
 ###  <a name="teradata-data-processing-extension"></a><a name="Teradata"></a> Teradata 数据处理扩展插件  
- 如果选择数据源类型 **Teradata**，则选择的是扩展 .NET Framework Data Provider for Teradata 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件。 若要从 Teradata 检索报表数据，系统管理员必须在报表创作客户端上安装 .NET Framework Data Provider for Teradata 才能在客户端上编辑和预览报表，并且必须在报表服务器上安装它才能查看已发布的报表。  
+ 如果选择数据源类型 **Teradata** ，则选择的是扩展 .NET Framework Data Provider for Teradata 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件。 若要从 Teradata 检索报表数据，系统管理员必须在报表创作客户端上安装 .NET Framework Data Provider for Teradata 才能在客户端上编辑和预览报表，并且必须在报表服务器上安装它才能查看已发布的报表。  
   
  对于报表服务器项目，没有可用于此扩展插件的图形查询设计器。 必须使用基于文本的查询设计器来创建查询。  
   

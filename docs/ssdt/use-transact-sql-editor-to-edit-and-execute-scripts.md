@@ -6,24 +6,25 @@ ms.technology: ssdt
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
+- sql.data.tools.sqleditor
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b6a045900509fbf7aff58f477f079747e413bf0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c9bb76ddd3ee5f5c0828f5c9ef181f98e26f94d
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883168"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067069"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>使用 Transact-SQL 编辑器编辑和执行脚本
 
-在使用脚本时，Transact\-SQL 编辑器为你提供了丰富的编辑和调试体验。 在使用“查看代码”上下文菜单在连接的数据库或项目中打开某一数据库实体时，将调用该编辑器。 在从 SQL Server 对象资源管理器使用“新建查询”**** 上下文菜单或者向数据库项目添加新的脚本对象时，该编辑器也自动打开。  
+在使用脚本时，Transact\-SQL 编辑器为你提供了丰富的编辑和调试体验。 在使用“查看代码”上下文菜单在连接的数据库或项目中打开某一数据库实体时，将调用该编辑器。 在从 SQL Server 对象资源管理器使用“新建查询”上下文菜单或者向数据库项目添加新的脚本对象时，该编辑器也自动打开。  
   
-如果没有连接到某一数据库，但想要对其执行查询，则也可以使用“SQL”**** -> “Transact\-SQL 编辑器”**** 菜单选项中的“新建查询连接”**** 对话框以连接到某一数据库，然后启动 Transact\-SQL 编辑器。  
+如果没有连接到某一数据库，但想要对其执行查询，则也可以使用“SQL” -> “Transact\-SQL 编辑器”菜单选项中的“新建查询连接”对话框以连接到某一数据库，然后启动 Transact\-SQL 编辑器。  
   
 Transact\-SQL 编辑器包含一个主 T-SQL 窗格，在其中可以编写和编辑 Transact\-SQL 脚本。 该编辑器支持 IntelliSense 以及语法的颜色编码，以便提高复杂语句的可读性。 它还支持查找和替换、大量标注、自定义字体和颜色以及行编号。 您还可以更改编辑器中的脚本将对其执行的数据库。 有关详细信息，请参阅[操作说明：克隆现有数据库](../ssdt/how-to-clone-an-existing-database.md)。 “结果”窗格将在网格或文本中显示查询结果。 您还可以将查询结果重定向到某一文件。 “消息”窗格显示在运行脚本时返回的错误、警告和信息性消息。 在启用客户端统计信息时，“统计信息”窗格将显示与查询执行有关的信息并且这些信息按类别进行分组。 “执行计划”窗格显示 SQL Server 选择的数据检索方法，并且显示特定语句和查询的执行系统开销。  
   
