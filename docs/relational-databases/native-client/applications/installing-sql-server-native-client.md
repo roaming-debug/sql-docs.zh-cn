@@ -22,12 +22,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a3047db0cedf165016257961ea9c27474a941ef
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 0537a9fc955cdd27a243ec020199122260db2890
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892327"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384810"
 ---
 # <a name="installing-sql-server-native-client"></a>安装 SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91892327"
  
  没有 SQL Server 2016 Native Client。 有关详细信息，请参阅 [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md)。 
  
-你还可以从 SQL Server 2012 功能包网页获取 sqlncli.msi。 若要下载最新版本的 SQL Server Native Client，请参阅 [Microsoft® SQL Server®2012功能包](https://www.microsoft.com/download/confirmation.aspx?id=29065)。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机上还安装了早于 SQL Server 2012 以前版本的 Native client，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 11.0 将与早期版本并行安装。  
+你还可以从 SQL Server 2012 功能包网页获取 sqlncli.msi。 若要下载最新版本的 SQL Server Native Client，请参阅 [Microsoft® SQL Server®2012功能包](https://www.microsoft.com/download/details.aspx?id=56041)。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机上还安装了早于 SQL Server 2012 以前版本的 Native client，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 11.0 将与早期版本并行安装。  
   
   Native Client 文件（sqlncli11.dll、sqlnclir11.rll 和 s11ch_sqlncli.chm）将安装到以下位置：  
   

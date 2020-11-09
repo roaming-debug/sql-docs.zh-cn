@@ -1,6 +1,6 @@
 ---
 description: sys.dm_cryptographic_provider_properties (Transact-SQL)
-title: sys. dm_cryptographic_provider_properties (Transact-sql) |Microsoft Docs
+title: sys.dm_cryptographic_provider_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e8ff6159cea1f6ca723ed83a73f045f5746967c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 419793e94cc85a8dba1e29f4b79694820518eaad
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542337"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384646"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "89542337"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|加密提供程序的标识号。|  
-|guid|**uniqueidentifier**|唯一的提供程序 GUID。|  
-|provider_version|**nvarchar(256)**|格式为 "*aa.bb.cccc.dd*" 的提供程序版本。|  
-|sqlcrypt_version|**nvarchar(256)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]格式为 "*aa.bb.cccc.dd*" 的加密 API 的主要版本。|  
+|GUID|**uniqueidentifier**|唯一的提供程序 GUID。|  
+|provider_version|**nvarchar(256)**|格式为 " *aa.bb.cccc.dd* " 的提供程序版本。|  
+|sqlcrypt_version|**nvarchar(256)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]格式为 " *aa.bb.cccc.dd* " 的加密 API 的主要版本。|  
 |friendly_name|**nvarchar(2048)**|提供程序提供的名称。|  
 |authentication_type|**nvarchar(256)**|WINDOWS、BASIC 或其他。|  
 |symmetric_key_support|**tinyint**|0（不支持）<br /><br /> 1（支持）|  
@@ -49,8 +49,8 @@ ms.locfileid: "89542337"
 |symmetric_key_import|**tinyint**|0（不支持）<br /><br /> 1（支持）|  
 |symmetric_key_persistance|**tinyint**|0（不支持）<br /><br /> 1（支持）|  
   
-## <a name="remarks"></a>备注  
- sys.dm_cryptographic_provider_properties 视图是公开显示的。  
+## <a name="permissions"></a>权限  
+ **Sys.dm_cryptographic_provider_properties** 视图对公共可见。  
   
 ## <a name="see-also"></a>另请参阅  
  [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
