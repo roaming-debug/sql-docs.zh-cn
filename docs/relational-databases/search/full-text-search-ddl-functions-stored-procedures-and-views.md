@@ -25,7 +25,7 @@ ms.locfileid: "88498584"
   
  此列表中不包括不推荐使用的对象。  
   
- 有关支持语义搜索的数据库对象的列表，请参阅 [Semantic Search DDL, Functions, Stored Procedures, and Views](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)。  
+ 有关支持语义搜索的数据库对象的列表，请参阅 [语义搜索 DDL、函数、存储过程和视图](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)。  
   
 ##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL 数据定义语言 (DDL) 语句  
   
