@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 45cfba1078dbe72e09f760f24fc0c9f47c0c0b1f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 756dd29442fe224f5e0518066cbbfdcbf2ba5ea6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891017"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364669"
 ---
 # <a name="manage-partition-wizard"></a>管理分区向导 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "91891017"
 ### <a name="sliding-window-scenario"></a>滑动窗口应用场景  
  若要管理滑动窗口应用场景中的分区，请选择“管理滑动窗口应用场景中的分区数据”。  
   
-## <a name="ui-element-list"></a>UI 元素列表  
+### <a name="ui-element-list"></a>UI 元素列表  
  **“为分区切换创建临时表”**  
  为切入和切出现有已分区表的数据创建临时表。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "91891017"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> 选择分区切入选项页  
  使用“选择分区切入选项”页可以选择要切入到已分区表中的临时表。  
   
-## <a name="ui-element-list"></a>UI 元素列表  
+### <a name="ui-element-list"></a>UI 元素列表  
  **显示所有分区**  
  选择此选项可以显示所有分区，包括当前位于已分区表的分区。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "91891017"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> 选择分区切出选项页  
  使用“选择分区切出选项”页可以选择用于保存要从已分区表中切出的分区数据的分区和临时表。  
   
-## <a name="ui-element-list"></a>UI 元素列表  
+### <a name="ui-element-list"></a>UI 元素列表  
  **分区网格**  
  显示所选分区的分区名称、“左边界”、“右边界”、“文件组”和“行计数”。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "91891017"
   
  您可以在位于源分区的临时表中创建相同的索引。 临时表会自动基于源分区的元素包含约束。 此约束通常根据源分区的边界值生成。  
   
-## <a name="ui-element-list"></a>UI 元素列表  
+### <a name="ui-element-list"></a>UI 元素列表  
  **临时表名**  
  为临时表创建名称，或接受编辑框中显示的默认名称。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "91891017"
 ##  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用 **“摘要”** 可检查您在前面的页中选择的选项。  
   
-## <a name="ui-element-list"></a>UI 元素列表  
+### <a name="ui-element-list"></a>UI 元素列表  
  **检查所做选择**  
  显示您在向导的每一页中所做的选择。 单击节点可展开和查看以前选择的选项。  
   
@@ -297,7 +297,7 @@ ms.locfileid: "91891017"
 -   **“将报告作为电子邮件发送”**  
   
  **查看报告**  
- 打开“查看报告”对话框。 此对话框包含 **管理分区向导**进度的文本报告。  
+ 打开“查看报告”对话框。 此对话框包含 **管理分区向导** 进度的文本报告。  
   
  **关闭**  
  关闭向导。  
