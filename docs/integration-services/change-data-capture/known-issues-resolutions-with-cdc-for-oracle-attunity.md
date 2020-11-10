@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 899a00273fbccb1e68e6690556e81bb3f0bde05c
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523902"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384724"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Attunity Oracle 更改数据捕获的已知错误和解决方法
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "92523902"
 - Oracle CDC 实例在启动时会挂起，并且不会捕获更改。 Oracle 服务器内存可能会增加，直到内存用完或崩溃。
 - [2672759](https://support.microsoft.com/kb/2672759)：使用 Attunity Oracle Microsoft 更改数据捕获服务时的错误消息：“ORA-00600: internal error code”（ORA-00600: 内部错误代码）。 添加源级别跟踪并确认是否出现相同的 ORA-00600 错误。 已通过 Oracle 修补程序下载修复。
 - 多个分区
-    - 在 Oracle 表中使用超过 10 个分区时，CDC 实例无法捕获该表的所有更改。 当 Oracle 表定义的分区超过 10 个时，仅从最后 10 个分区捕获更改。 已在 _SQL Server 2012 Service Pack 1_ 中修复。 请参阅 [SP1 功能包下载页面](https://www.microsoft.com/download/details.aspx?id=35580)。 
+    - 在 Oracle 表中使用超过 10 个分区时，CDC 实例无法捕获该表的所有更改。 当 Oracle 表定义的分区超过 10 个时，仅从最后 10 个分区捕获更改。 已在 _SQL Server 2012 Service Pack 1_ 中修复。 请参阅 [SP1 功能包下载页面](https://www.microsoft.com/download/details.aspx?id=35575)。 
 - 更改丢失
-    - 事件捕获可能会陷入无限循环并停止捕获新的数据更改（与 Oracle bug 5623813 相关）。 在 Oracle RAC 环境中执行 CDC 实例的停止或恢复操作时，可能跳过/丢失更改。 这意味着 SQL Server 更改数据捕获将丢失重要的行，因此，数据仓库或订阅系统中存在数据丢失。 已在 _SQL Server 2012 Service Pack 1_ 中修复。 请参阅 [SP1 功能包下载页面](https://www.microsoft.com/download/details.aspx?id=35580)
+    - 事件捕获可能会陷入无限循环并停止捕获新的数据更改（与 Oracle bug 5623813 相关）。 在 Oracle RAC 环境中执行 CDC 实例的停止或恢复操作时，可能跳过/丢失更改。 这意味着 SQL Server 更改数据捕获将丢失重要的行，因此，数据仓库或订阅系统中存在数据丢失。 已在 _SQL Server 2012 Service Pack 1_ 中修复。 请参阅 [SP1 功能包下载页面](https://www.microsoft.com/download/details.aspx?id=35575)
 - SQL 中的列为双倍宽度
     - 创建 Oracle CDC 实例时，在针对 SQL Server 运行的脚本中，通过脚本创建的 SQL Server 表中的可变宽度数据类型列的宽度是其原来宽度的两倍。 例如，如果尝试跟踪 Oracle 表中 VARCHAR2(10) 列的更改，则 SQL Server 表中的对应列为部署脚本中的 NVARCHAR(20)。 已在 _SQL Server 2012 SP1 累积更新 2_ 或 _SQL Server 2012 累积更新 5_ 中修复，如知识库文章 [2769673](https://support.microsoft.com/kb/2769673) 中所述。 
 - DDL 数据被截断
@@ -97,7 +97,7 @@ ms.locfileid: "92523902"
 
 ### <a name="management-console"></a>管理控制台
 
-当 CDC 实例在左窗格中突出显示时，你会在 Oracle 更改数据捕获设计器管理控制台中记录的“状态”消息中看到错误  。 
+当 CDC 实例在左窗格中突出显示时，你会在 Oracle 更改数据捕获设计器管理控制台中记录的“状态”消息中看到错误。 
 
 ### <a name="query-trace-table"></a>查询跟踪表
 
@@ -105,11 +105,11 @@ ms.locfileid: "92523902"
 
 ### <a name="save-output-from-basic-logging"></a>保存基本日志记录的输出 
 
-若要捕获诊断，请在 Oracle 更改数据捕获管理控制台的“状态”选项卡上选择“收集诊断”  。 
+若要捕获诊断，请在 Oracle 更改数据捕获管理控制台的“状态”选项卡上选择“收集诊断”。 
 
 ![显示 Oracle 更改数据捕获管理控制台中“状态”选项卡的屏幕截图，其中突出显示了“收集诊断”选项。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
-选择开始时间和日志文件的位置。 然后选择“创建”以启动诊断收集  。 
+选择开始时间和日志文件的位置。 然后选择“创建”以启动诊断收集。 
 
 ![“为 testTA 收集诊断”对话框的屏幕截图。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/start-diagnostics.png)
 
@@ -119,13 +119,13 @@ ms.locfileid: "92523902"
 
 ![显示“操作”下的“属性”选项的屏幕截图。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 
-重现该错误，然后选择“收集诊断”选项以收集日志  。 
+重现该错误，然后选择“收集诊断”选项以收集日志。 
 
 ![Oracle 更改数据捕获管理控制台中“状态”选项卡的另一个屏幕截图，其中突出显示了“收集诊断”选项。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
 ## <a name="ora-00942-table-of-view-does-not-exist"></a>ORA-00942 表视图不存在 
 
-这是 CDC 实例的“状态”消息字段中显示的常见错误  。 该实例进行了多次重试，因此状态图标会暂时变为绿色，但随后会失败，并显示红色感叹号和“意外”状态。 
+这是 CDC 实例的“状态”消息字段中显示的常见错误。 该实例进行了多次重试，因此状态图标会暂时变为绿色，但随后会失败，并显示红色感叹号和“意外”状态。 
 
 ![显示 CDC 实例的“状态”消息字段中所示的常见错误的屏幕截图。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
 
@@ -151,7 +151,7 @@ ms.locfileid: "92523902"
 
 安装程序文件文件夹 `C:\Program Files\Change Data Capture for Oracle by Attunity\Attunity.SqlServer.XdbCdcDesigner.chm` 中包含的帮助文件详细列出了所有必需的权限。  有关完整列表，请参阅 .chm 文件中标题为“连接到 Oracle 源数据库”的页面。
 
-可通过在左窗格中选择 CDCInstance 并在“CDC 设计器”窗口最右侧的“操作”窗格中选择“属性”按钮来设置用户帐户  。 可从属性对话框页面更改 Oracle 日志挖掘身份验证帐户。
+可通过在左窗格中选择 CDCInstance 并在“CDC 设计器”窗口最右侧的“操作”窗格中选择“属性”按钮来设置用户帐户。 可从属性对话框页面更改 Oracle 日志挖掘身份验证帐户。
 
 ![显示“testTA 属性”对话框的“Oracle”选项卡的屏幕截图。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 

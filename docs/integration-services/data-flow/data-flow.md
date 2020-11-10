@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4bbd5718a5c57bdb874af00ba57dafedc9dd8654
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 9e81fc5acefbe8014e06ccd173c32004b0e02dd0
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195958"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384652"
 ---
 # <a name="data-flow"></a>数据流
 
@@ -105,7 +105,7 @@ ms.locfileid: "92195958"
 |源|说明|  
 |------------|-----------------|  
 |Oracle 源|Oracle 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
-|SAP BI 源|SAP BI 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。|  
+|SAP BI 源|SAP BI 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 功能包](https://www.microsoft.com/download/details.aspx?id=55992)。|  
 |Teradata 源|Teradata 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
   
  有关如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](/previous-versions/dn912438(v=msdn.10))。  
@@ -166,7 +166,7 @@ ms.locfileid: "92195958"
 |源|说明|  
 |------------|-----------------|  
 |Oracle 目标|Oracle 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
-|SAP BI 目标|SAP BI 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft SQL Server 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。|  
+|SAP BI 目标|SAP BI 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft SQL Server 功能包](https://www.microsoft.com/en-us/download/details.aspx?id=55992)。|  
 |Teradata 目标|Teradata 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
   
  有关如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](/previous-versions/dn912438(v=msdn.10))。  
@@ -189,7 +189,7 @@ ms.locfileid: "92195958"
  源和转换始终具有输出。 输出包含一个或多个输出列，如果数据流组件已配置为使用外部列，则输出列可引用外部列。 可对输出进行配置以提供对数据的下游处理有用的信息。 例如，可指示输出是否已排序。 还可为输出提供说明或更新输出名称。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输出进行配置。  
   
 ### <a name="error-outputs"></a>错误输出  
- 源、目标和转换都可包含错误输出。 可使用 **“配置错误输出”** 对话框指定数据流组件响应每个输入中错误或列中错误的方式。 如果错误或数据截断在运行时发生，且将数据流组件配置为重定向行，则有错误的数据行将被发送到错误输出。 可以将错误输出连接到转换，这些转换应用其他转换或将数据定向到其他目标。 默认情况下，错误输出包含输出列和两个错误列： **ErrorCode** 和 **ErrorColumn**。 输出列包含失败行的数据， **ErrorCode** 提供错误代码，而 **ErrorColumn** 标识失败的列。  
+ 源、目标和转换都可包含错误输出。 可使用 **“配置错误输出”** 对话框指定数据流组件响应每个输入中错误或列中错误的方式。 如果错误或数据截断在运行时发生，且将数据流组件配置为重定向行，则有错误的数据行将被发送到错误输出。 可以将错误输出连接到转换，这些转换应用其他转换或将数据定向到其他目标。 默认情况下，错误输出包含输出列和两个错误列： **ErrorCode** 和 **ErrorColumn** 。 输出列包含失败行的数据， **ErrorCode** 提供错误代码，而 **ErrorColumn** 标识失败的列。  
   
  有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   

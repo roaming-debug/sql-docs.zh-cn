@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b956269df3d887800587d80fbcd0e5a1699dcca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8e1fd0c8e43000573d030a80ce52145bd0c8669
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457589"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384876"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 设计器控制台简介
 
@@ -28,7 +28,7 @@ ms.locfileid: "88457589"
 ## <a name="installation"></a>安装  
  本节介绍用于 Change Data Capture Designer for Oracle by Attunity 的安装过程。  
   
- 用于 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 属于 SQL Server 2016 功能包。 从 [SQL Server 2016 功能包网页](https://go.microsoft.com/fwlink/?LinkId=746297)下载功能包的组件。  
+ 用于 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 属于 SQL Server 2016 功能包。 从 [SQL Server 2016 功能包网页](https://www.microsoft.com/download/details.aspx?id=56833)下载功能包的组件。  
   
 ## <a name="supported-windows-environments"></a>支持的 Windows 环境  
  CDC 设计器控制台可在以下 Windows 环境中运行：  

@@ -12,12 +12,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c54b396ea05fd78abfe7c05026d23e37a0f18585
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 710554564bf1018c1551fe0e6dbbe065ea395924
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866954"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384756"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -162,7 +162,7 @@ SELECT COUNT(DISTINCT [Col2])
  非聚集索引的最佳应用是范围查找，下面的查询即为例证：  
   
 ```sql  
-SELECT * FRON t_hk  
+SELECT * FROM t_hk  
    WHERE c2 > 5;  
 ```  
   

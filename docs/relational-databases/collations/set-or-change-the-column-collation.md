@@ -14,16 +14,16 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c57021e300168a5e912dfce4ce1e0c62f728dfd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98faafb23e6f5c3f981fdf04eca99a7ab3eb7a7b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465597"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384803"
 ---
 # <a name="set-or-change-the-column-collation"></a>设置或更改列排序规则
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  可以覆盖 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**和 **ntext** 数据的数据库排序规则，方法是为表的特定列指定不同的排序规则并使用以下方式之一：  
+  可以覆盖 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 和 **ntext** 数据的数据库排序规则，方法是为表的特定列指定不同的排序规则并使用以下方式之一：  
   
 -   [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 的 COLLATE 子句，如以下示例所示。 
 
@@ -68,7 +68,7 @@ ms.locfileid: "88465597"
         GO
         DROP TABLE dbo.MyTable;
         GO
-        EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable’;
+        EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable';
         GO
         ```
 
@@ -88,13 +88,13 @@ ms.locfileid: "88465597"
 -   CHECK 约束  
 -   FOREIGN KEY 约束  
   
- 使用 **tempdb**时， [COLLATE](~/t-sql/statements/collations.md) 子句包括了 *database_default* 选项，以此来指定对于该连接，临时表中的列使用当前用户数据库的默认排序规则而非 **tempdb**的排序规则。  
+ 使用 **tempdb** 时， [COLLATE](~/t-sql/statements/collations.md) 子句包括了 *database_default* 选项，以此来指定对于该连接，临时表中的列使用当前用户数据库的默认排序规则而非 **tempdb** 的排序规则。  
   
 ## <a name="collations-and-text-columns"></a>排序规则和文本列  
  如果 **text** 列的排序规则不同于数据库默认排序规则的代码页，则可以在该列中插入值或更新该列中的值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会隐式地将这些值转换为该列的排序规则。  
   
 ## <a name="collations-and-tempdb"></a>排序规则和 tempdb  
- 每次启动 **时，都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。该数据库与 **model** 数据库具有相同的默认排序规则。 这通常与实例的默认排序规则相同。 如果为创建的用户数据库指定的默认排序规则与 **model**的排序规则不同，则该用户数据库与 **tempdb**的默认排序规则也不同。 所有临时存储过程或临时表都创建和存储在 **tempdb**中。 这意味着临时表中的所有隐式列以及临时存储过程中的所有强制默认常量、变量和参数都具有与可比较对象（在永久表和存储过程中创建）不同的排序规则。  
+ 每次启动 **时，都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。该数据库与 **model** 数据库具有相同的默认排序规则。 这通常与实例的默认排序规则相同。 如果为创建的用户数据库指定的默认排序规则与 **model** 的排序规则不同，则该用户数据库与 **tempdb** 的默认排序规则也不同。 所有临时存储过程或临时表都创建和存储在 **tempdb** 中。 这意味着临时表中的所有隐式列以及临时存储过程中的所有强制默认常量、变量和参数都具有与可比较对象（在永久表和存储过程中创建）不同的排序规则。  
   
  这将导致用户定义的数据库和系统数据库对象之间的排序规则出现互相不匹配的问题。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用 Latin1_General_CS_AS 排序规则，而您执行以下语句：  
   
@@ -127,7 +127,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
  为防止出现此错误，可以使用下列方法之一：  
   
--   指定临时表列使用用户数据库（而不是 **tempdb**）的默认排序规则。 如果系统需要，这可以使临时表在多个数据库中使用具有类似格式的表。  
+-   指定临时表列使用用户数据库（而不是 **tempdb** ）的默认排序规则。 如果系统需要，这可以使临时表在多个数据库中使用具有类似格式的表。  
   
     ```sql  
     CREATE TABLE #TestTempTab  

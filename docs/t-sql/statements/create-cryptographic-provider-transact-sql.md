@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1b1ae5e016d407a0aeee6c34fcc75dd71e8fa229
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 91478060af31e142f94730b9df3c0a3cdf2a24ef
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688085"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384759"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,12 +51,12 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  可扩展密钥管理提供程序的名称。  
   
  path_of_DLL  
- 实现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可扩展的密钥管理接口的 .dll 文件的路径。 使用用于 Microsoft Azure Key Vault 的 SQL Server 连接器时，默认位置是 C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll********。  
+ 实现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可扩展的密钥管理接口的 .dll 文件的路径。 使用用于 Microsoft Azure Key Vault 的 SQL Server 连接器时，默认位置是 C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll。  
   
 ## <a name="remarks"></a>备注  
  提供程序创建的所有密钥都将按照提供程序的 GUID 引用提供程序。 在 DLL 的所有版本中都将保留此 GUID。  
   
- 必须使用任何证书对实现 SQLEKM 接口的 DLL 进行数字签名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将验证此签名。 此签名包括其证书链，证书链的根目录必须安装在 Windows 系统的受信任的根证书颁发机构位置****。 如果该签名未经正确验证，则 CREATE CRYPTOGRAPHIC PROVIDER 语句将失败。 有关证书和证书链的详细信息，请参阅 [SQL Server 证书和对称密钥](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
+ 必须使用任何证书对实现 SQLEKM 接口的 DLL 进行数字签名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将验证此签名。 此签名包括其证书链，证书链的根目录必须安装在 Windows 系统的受信任的根证书颁发机构位置。 如果该签名未经正确验证，则 CREATE CRYPTOGRAPHIC PROVIDER 语句将失败。 有关证书和证书链的详细信息，请参阅 [SQL Server 证书和对称密钥](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
   
  当 EKM 提供程序 DLL 未实现所有必需的方法时，CREATE CRYPTOGRAPHIC PROVIDER 可能返回错误 33085：  
   
@@ -84,5 +84,8 @@ CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider
  [DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [使用 Azure 密钥保管库的可扩展密钥管理 (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [使用 Azure Key Vault 设置 SQL Server TDE 可扩展密钥管理](../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
+ [sys.cryptographic_providers](../../relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql.md)  
+ [sys.dm_cryptographic_provider_properties](../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql.md)
   
   

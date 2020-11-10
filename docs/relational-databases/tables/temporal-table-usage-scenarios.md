@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e87d77eec096191c00a0ff7d68cd40dca713926
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 28f1287ead4b3c84f5dcb65ec24564b9341d33f0
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243570"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384649"
 ---
 # <a name="temporal-table-usage-scenarios"></a>时态表使用方案
 
@@ -255,6 +255,7 @@ BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL=SNAPSHOT, LANGUAGE=N'English')
                         @productId
                        ,@locationId
                        ,@quantityIncrement
+                   )
         END
 END;
 ```

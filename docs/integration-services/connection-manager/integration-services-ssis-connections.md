@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b101ac6ab904543ab3e5a558ce2d50030df5adf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aac745594f2dcd23974cc91cb0f9c57ebff91f29
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720722"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384896"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
 
@@ -115,7 +115,7 @@ ms.locfileid: "91720722"
 |类型|说明|主题|  
 |----------|-----------------|-----------|  
 |ORACLE|连接到 Oracle \<version info\> 服务器。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)。|  
-|SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://www.microsoft.com/download/details.aspx?id=30440)。|  
+|SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://www.microsoft.com/download/details.aspx?id=44277)。|  
 |TERADATA|连接到 Teradata \<version info\> 服务器。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)。|  
   
 ### <a name="custom-connection-managers"></a>自定义连接管理器  
@@ -126,12 +126,12 @@ ms.locfileid: "91720722"
   
  若要在创建新包时自动创建和配置连接管理器，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。 该向导还有助于创建和配置使用连接管理器的源和目标。 有关详细信息，请参阅 [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md)。  
   
- 若要手动创建新的连接管理器并将其添加到现有包，可以使用在 **设计器的** “控制流” **、** “数据流” **和**“事件处理程序” **选项卡上出现的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域。 从 **“连接管理器”** 区域，选择要创建的连接管理器的类型，并使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供的对话框设置连接管理器的属性。 有关详细信息，请参阅本主题后面的“使用连接管理器区域”部分。  
+ 若要手动创建新的连接管理器并将其添加到现有包，可以使用在 **设计器的** “控制流” **、** “数据流” **和** “事件处理程序” **选项卡上出现的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域。 从 **“连接管理器”** 区域，选择要创建的连接管理器的类型，并使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供的对话框设置连接管理器的属性。 有关详细信息，请参阅本主题后面的“使用连接管理器区域”部分。  
   
  将连接管理器添加到包之后，可以在任务、Foreach 循环容器、源、转换和目标中使用它。 有关详细信息，请参阅 [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)、[Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)和[数据流](../../integration-services/data-flow/data-flow.md)。  
   
 ### <a name="using-the-connection-managers-area"></a>使用连接管理器区域  
- 可以在 **设计器的**“控制流” **、** “数据流” **或** “事件处理程序” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡活动时创建连接管理器。  
+ 可以在 **设计器的** “控制流” **、** “数据流” **或** “事件处理程序” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡活动时创建连接管理器。  
   
  以下关系图显示 **设计器的** “控制流” **选项卡上的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "91720722"
   
  在运行时，系统将使用正确的版本，即使在设计时指定了 32 位版本的提供程序也没有关系。 即使包运行在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，也可以运行 64 位版本的提供程序。  
   
-  两种版本的提供程序都有相同的 ID。 若要指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时是否使用可用的 64 位版本的提供程序，需要设置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的 Run64BitRuntime 属性。 如果将 Run64BitRuntime 属性设置为 **true**，运行时将发现并使用该 64 位提供程序；如果 Run64BitRuntime 为 **false**，则运行时将发现并使用 32 位提供程序。 有关可以对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目进行设置的属性的详细信息，请参阅 [Integration Services (SSIS) 与 Studio 环境](../integration-services-ssis-development-and-management-tools.md)。   
+  两种版本的提供程序都有相同的 ID。 若要指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时是否使用可用的 64 位版本的提供程序，需要设置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的 Run64BitRuntime 属性。 如果将 Run64BitRuntime 属性设置为 **true** ，运行时将发现并使用该 64 位提供程序；如果 Run64BitRuntime 为 **false** ，则运行时将发现并使用 32 位提供程序。 有关可以对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目进行设置的属性的详细信息，请参阅 [Integration Services (SSIS) 与 Studio 环境](../integration-services-ssis-development-and-management-tools.md)。   
 
 ## <a name="add-a-connection-manager"></a>添加连接管理器
 ###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> 创建包时添加连接管理器  

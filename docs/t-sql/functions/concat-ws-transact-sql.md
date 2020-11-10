@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 903cb42b0064aa29a8df9533769062cbdd436c41
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: aa8c2b6ae98020c46352c55924f16a6912da1ce6
+ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117108"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93405054"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]

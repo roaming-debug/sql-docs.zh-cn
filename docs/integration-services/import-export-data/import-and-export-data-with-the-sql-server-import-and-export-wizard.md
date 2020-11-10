@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4b1b9ea05c6b27010fa7928e36bfdf3f9975fc70
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e8146e56063f73ddc054595c588e396ff4fcb8c0
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196362"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384716"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导导入和导出数据
 
@@ -51,11 +51,11 @@ ms.locfileid: "92196362"
  
 | 数据源 | 是否必须下载其他文件？ |
 |-------------|-----------------------------------------|
-|**企业数据库**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、DB2 等。|SQL Server 或 SQL Server Data Tools (SSDT) 安装连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时所需的文件。 但 SSDT 不安装连接到其他企业数据库（如 Oracle 或 IBM DB2）时所需的所有文件。<br/><br/>若要连接企业数据库，通常需要具有以下两项内容：<br/><br/>1.**客户端软件**。 如果已经为企业数据库系统安装了客户端软件，则通常会有建立连接所需的文件。 如果尚未安装客户端软件，请询问数据库管理员如何安装获得许可的副本。<br/><br/>2.**驱动程序或提供程序**。 Microsoft 安装用于连接 Oracle 的驱动程序和提供程序。 若要连接到 IBM DB2，请从 [Microsoft SQL Server 2016 功能包](https://www.microsoft.com/download/details.aspx?id=52676)中获取用于 Microsoft SQL Server 的 DB2 v5.0 的 MicrosoftÂ® OLEDB 提供程序。<br/><br/>有关详细信息，请参阅[连接到 SQL Server 数据源](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)或[连接到 Oracle 数据源](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)。|
-|**文本文件**（平面文件）|无需任何其他文件。<br/><br/>有关详细信息，请参阅[连接到平面文件数据源](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)。|
+|**企业数据库**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、DB2 等。|SQL Server 或 SQL Server Data Tools (SSDT) 安装连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时所需的文件。 但 SSDT 不安装连接到其他企业数据库（如 Oracle 或 IBM DB2）时所需的所有文件。<br/><br/>若要连接企业数据库，通常需要具有以下两项内容：<br/><br/>1. **客户端软件** 。 如果已经为企业数据库系统安装了客户端软件，则通常会有建立连接所需的文件。 如果尚未安装客户端软件，请询问数据库管理员如何安装获得许可的副本。<br/><br/>2. **驱动程序或提供程序** 。 Microsoft 安装用于连接 Oracle 的驱动程序和提供程序。 若要连接到 IBM DB2，请从 [Microsoft SQL Server 2016 功能包](https://www.microsoft.com/download/details.aspx?id=56833)中获取用于 Microsoft SQL Server 的 DB2 v5.0 的 MicrosoftÂ® OLEDB 提供程序。<br/><br/>有关详细信息，请参阅[连接到 SQL Server 数据源](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)或[连接到 Oracle 数据源](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)。|
+|**文本文件** （平面文件）|无需任何其他文件。<br/><br/>有关详细信息，请参阅[连接到平面文件数据源](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)。|
 |**Microsoft Excel 和 Microsoft Access 文件**|Microsoft Office 并不会安装连接到作为数据源的 Excel 和 Access 文件所需的所有文件。 获取下载：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。<br/><br/>有关详细信息，请参阅[连接到 Excel 数据源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)或[连接到 Access 数据源](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)。|
 |**Azure 数据源**<br/>目前仅限 Azure Blob 存储。|SQL Server Data Tools 不会安装需要作为数据源连接到 Azure Blob 存储的文件。 获取以下下载 — [用于 Azure 的 Microsoft SQL Server 2016 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=49492)。<br/><br/>有关详细信息，请参阅[连接到 Azure Blob 存储](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)。|
-|**打开源数据库**<br/>PostgreSQL、MySql 等。|必须下载其他文件才能连接到这些数据源。<br/><br/>- 对于 PostgreSQL，请参阅[连接到 PostgreSQL 数据源](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)****。<br/>- 对于 MySql，请参阅[连接到 MySQL 数据源](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)****。|
+|**打开源数据库**<br/>PostgreSQL、MySql 等。|必须下载其他文件才能连接到这些数据源。<br/><br/>- 对于 PostgreSQL，请参阅[连接到 PostgreSQL 数据源](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)。<br/>- 对于 MySql，请参阅[连接到 MySQL 数据源](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)。|
 |**提供驱动程序或提供程序的其他任何数据源**|通常必须下载其他文件才能连接到以下类型的数据源。<br/><br/>- 提供 **ODBC 驱动程序** 的任何源。 有关详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。<br/>- 提供 **.Net Framework 数据提供程序** 的任何源。<br/>- 提供 **OLE DB 提供程序** 的任何源。<br/><br/>有时，为其他数据源提供源和目标功能的第三方组件被标记为 SQL Server Integration Services (SSIS) 的附加产品。|
 
 ## <a name="how-do-i-connect-to-my-data"></a>如何连接到我的数据？
@@ -91,7 +91,7 @@ ms.locfileid: "92196362"
 ##  <a name="the-wizard-uses-sql-server-integration-services-ssis"></a><a name="wizardSSIS"></a> 向导使用 SQL Server Integration Services (SSIS)  
  向导使用 SQL Server Integration Services (SSIS) 复制数据。 SSIS 是一种用于提取、转换和加载数据 (ETL) 的工具。 向导页面会使用某些 SSIS 语言。
   
- 在 SSIS 中，基本单位是 **包**。 当你在向导的各个页面之间移动并指定选项时，向导会在内存中创建 SSIS 包。    
+ 在 SSIS 中，基本单位是 **包** 。 当你在向导的各个页面之间移动并指定选项时，向导会在内存中创建 SSIS 包。    
   
 如果安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标准版或更高版本，那么在向导结束时，可以选择保存 SSIS 包。 之后可以重新使用包，或者通过使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器添加任务、转换和事件驱动逻辑来扩展包。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导为创建从源向目标复制数据的基本 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包提供了最简便的方法。
 
