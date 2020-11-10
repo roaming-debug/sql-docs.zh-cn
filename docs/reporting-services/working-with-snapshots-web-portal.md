@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ad3a09d742e18a3f9ab7ed304433fc1b59ce1fc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c17541ff08f136b3c8c26418117df63c71b9195b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247416"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243796"
 ---
 # <a name="working-with-snapshots-web-portal"></a>使用快照（web 门户）
 
@@ -31,7 +31,7 @@ ms.locfileid: "87247416"
   
 可以通过执行以下操作来创建快照。  
   
-![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
+![显示“编辑公司销售额”对话框的“缓存”屏幕的屏幕截图，其中三个红圈中的数字为 1、2 和 3，表示快照下的三个步骤。](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
 1.  在“缓存”页上，选择“始终对预先生成的快照运行此报表”，启用用于创建快照的选项 。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "87247416"
   
 若要生成历史记录快照，报表必须能够以无人参与的方式运行（也就是说，报表必须使用存储的凭据；参数化报表必须包含所有参数的默认参数值）。 可以手动或以计划操作方式生成报表历史记录。 报表的历史记录属性决定报表历史记录的创建方式。  
   
-![ssRSWebPortal-historysnapshots1](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
+![显示“编辑公司销售额”对话框的“历史记录快照”屏幕的屏幕截图，其中三个红色圆圈中的数字为 1、2 和 3，表示快照下的三个步骤。](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
    
 1.  若要创建历史记录快照，请选择“+ 新建历史记录快照”。 这会处理报表并向列表添加条目。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "87247416"
   
 选择“计划和设置”将提供附加选项，用于计划和控制保持已创建快照的保留期。  
   
-![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
+![显示“计划和高级设置”部分的屏幕截图。](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
 可以选择创建计划，以便创建快照。 还可以阻止其他人创建新快照。 取消选中“允许用户手动创建快照”会禁用“+ 新建快照历史记录”按钮 。  
   

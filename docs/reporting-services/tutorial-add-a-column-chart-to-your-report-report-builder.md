@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 23796da12c2b987dfad6f023d40e9975cb301e28
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245684"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043773"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教程：向报表添加柱形图（报表生成器）
 本教程中将创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，该报表包含一个柱形图，将序列显示为一组按类别分组的垂直条。 
@@ -27,7 +27,7 @@ ms.locfileid: "87245684"
   
 下图显示了将创建的带有移动平均线的柱形图。  
   
-![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
+![显示报表生成器柱形图的屏幕截图。](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
 > 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "87245684"
   
 4.  在“选择数据集”页上，单击“创建数据集”，然后单击“下一步”  。  
   
-5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”********。 您可能需要输入用户名和密码。  
+5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”。 您可能需要输入用户名和密码。  
   
     > [!NOTE]  
     > 只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -105,13 +105,13 @@ ms.locfileid: "87245684"
   
     图表将添加到设计图面中。 请注意，新的柱形图只显示代表性数据。 图例标有 Sales Date A、Sales Date B 等，只为大概给出报表的外形。 
     
-    ![report-builder-column-chart-1-design-view](../reporting-services/media/report-builder-column-chart-1-design-view.png)
+    ![屏幕截图：设计视图下的报表生成器柱形图。](../reporting-services/media/report-builder-column-chart-1-design-view.png)
   
 7.  单击图表以显示图表控点。 拖动该图表的右下角以扩大该图表。 请注意，报表设计图面的大小将增大以容纳图表。  
   
 8.  单击 **“运行”** 以预览报表。  
 
-    ![report-builder-column-chart-1-preview](../reporting-services/media/report-builder-column-chart-1-preview.png)
+    ![显示报表生成器柱形图预览的屏幕截图。](../reporting-services/media/report-builder-column-chart-1-preview.png)
 
 请注意，图表不会在水平轴上显示每个类别的标签。 默认情况下，仅包括适合放在轴旁边的标签。 
   
@@ -132,7 +132,7 @@ ms.locfileid: "87245684"
   
 日期会以您选择的日期格式显示。 图表仍不会在水平轴上显示每个类别的标签。 
 
-![report-builder-column-chart-2-preview](../reporting-services/media/report-builder-column-chart-2-preview.png)
+![屏幕截图：显示日期格式的报表生成器柱形图。](../reporting-services/media/report-builder-column-chart-2-preview.png)
   
 通过旋转标签和指定间隔，可以自定义标签显示方式。  
   
@@ -152,13 +152,13 @@ ms.locfileid: "87245684"
   
     水平轴的示例文本将旋转 90 度。  
     
-    ![report-builder-column-chart-rotate-x-axis](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
+    ![屏幕截图：设计视图中 x 轴文本已旋转的报表生成器柱形图。](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
   
 9. 单击 **“运行”** 以预览报表。  
   
 在图表中，会标签旋转。  
 
-![report-builder-column-chart-rotate-x-axis-preview](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
+![屏幕截图：x 轴文本已旋转的报表生成器柱形图的预览。](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
 ## <a name="5-move-the-legend"></a><a name="Legend"></a>5.移动图例  
 系统会根据类别和序列数据自动创建图例。 可在柱形图的图表区域的下方移动图例。  
@@ -214,7 +214,7 @@ ms.locfileid: "87245684"
   
 12. 单击 **“运行”** 以预览报表。  
 
-    ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
+    ![屏幕截图：报表生成器柱形图格式预览，其中已正确标注 y 轴。](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
 ## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8.在水平 (x) 轴上显示所有标签
 
@@ -226,13 +226,13 @@ ms.locfileid: "87245684"
 
 3. 在“属性”窗格中，将 LabelInterval 设置为 1。
 
-    ![report-builder-column-chart-set-label-interval](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![报表生成器柱形图的屏幕截图，其中显示了如何设置标签间隔。](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     该图表同设计视图中一样。 
     
 5.  单击 **“运行”** 以预览报表。
 
-    ![report-builder-column-chart-label-interval-one-preview](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![屏幕截图：标签间隔设置为 1 的报表生成器柱形图的预览。](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     现在，图表显示其所有标签。
   
@@ -246,7 +246,7 @@ ms.locfileid: "87245684"
   
 3.  右键单击“值”区域中的“[Sum(Sales)]”字段，然后单击“添加计算序列”  。  
 
-     ![report-builder-column-chart-add-calculated-series](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
+     ![显示如何将计算序列添加到报表生成器柱形图的屏幕截图。](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
 4.  在“公式”中，验证是否已选中“移动平均线” 。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "87245684"
   
 图表将显示一条线条，它按日期显示销售总计的移动平均线，每隔四天计算一次平均值。 阅读更多有关 [向图表添加移动平均线](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)的信息。 
 
-![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
+![描述移动平均线的报表生成器柱形图的屏幕截图。](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
 ## <a name="10-add-a-report-title"></a><a name="Title"></a>10.添加报表标题  
   
@@ -268,7 +268,7 @@ ms.locfileid: "87245684"
   
 2.  在设计图面上，单击“单击以添加标题”。  
   
-3.  键入 **Sales Chart**，再按 Enter，然后键入 **January to December 2015**，内容如下所示：  
+3.  键入 **Sales Chart** ，再按 Enter，然后键入 **January to December 2015** ，内容如下所示：  
   
     **Sales Chart**  
   
@@ -296,7 +296,7 @@ ms.locfileid: "87245684"
   
 3.  在“名称”中，键入 Sales Order Column Chart 。  
   
-4.  单击“ **保存**”。  
+4.  单击“ **保存** ”。  
   
 ## <a name="next-steps"></a>后续步骤  
 您已成功完成“向报表添加柱形图”教程。 若要了解有关图表的详细信息，请参阅[图表（报表生成器和 SSRS）](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[迷你图和数据条（报表生成器和 SSRS）](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  

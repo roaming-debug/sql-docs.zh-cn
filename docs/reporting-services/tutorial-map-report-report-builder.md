@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b2778023aaa884849d174e27a4e81d0ebd48490
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 14efcfa864cde1fd932c92c79d802efcdd2118c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988402"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243673"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
 在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程中，将了解可用于在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中针对地理背景显示数据的地图功能。 
@@ -23,7 +23,7 @@ ms.locfileid: "91988402"
   
 若要改变地图元素的外观，可以指定一个字段，通过字段值将地图元素与数据集中分析数据相匹配。 还可以定义相关规则，依据数据范围改变颜色、大小、或其他属性。  
 
-![report-builder-map-final-map-only](../reporting-services/media/report-builder-map-final-map-only.png)
+![显示报表生成器地图的屏幕截图。](../reporting-services/media/report-builder-map-final-map-only.png)
   
 在本教程中，将生成一个地图报表，该报表显示了纽约州各县内的商店位置。  
    
@@ -58,7 +58,7 @@ ms.locfileid: "91988402"
   
     此时，“地图预览”窗格将显示纽约的县地图。  
     
-    ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
+    ![屏幕截图：“新建地图”向导的“选择空间数据的来源”步骤，其中已在“地图库”部分中调出“纽约”。](../reporting-services/media/report-builder-map-ny-counties.png)
   
 7.  单击“下一步”。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "91988402"
   
     -   一个距离宽度，显示公里数 (km) 和英里数 (mi)。  
     
-    ![report-builder-map-choose-color-theme](../reporting-services/media/report-builder-map-choose-color-theme.png)
+    ![新建地图向导的“选择颜色主题和数据可视化”步骤的屏幕截图。](../reporting-services/media/report-builder-map-choose-color-theme.png)
   
 14. 单击“完成”。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "91988402"
 
 17. 在“开始”选项卡上，单击“运行”预览报表 。  
   
-    ![report-builder-map-first-preview](../reporting-services/media/report-builder-map-first-preview.png)
+    ![显示新创建的报表生成器地图预览的屏幕截图。](../reporting-services/media/report-builder-map-first-preview.png)
   
 呈现的报表显示地图标题、地图以及距离刻度。 各县位于地图多边形层上。 各个县均为多边形，以调色板中的颜色区分，但颜色并不与任何数据关联。 距离刻度同时用公里和英里显示距离。  
   
@@ -121,13 +121,13 @@ ms.locfileid: "91988402"
   
 2.  双击地图以显示“地图层”窗格。 在工具栏上，单击“新建层向导”按钮 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。 
 
-    ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
+    ![显示地图层窗格的屏幕截图，其中已调出“新建层向导”图标。](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
 3.  在“选择空间数据的来源”页上，选择“SQL Server 空间查询”，然后单击“下一步”  。  
   
 4.  在“选择具有 SQL Server 空间数据的数据集”页上，单击“添加具有 SQL Server 空间数据的新数据集” > “下一步”  。  
   
-5.  在“选择与 SQL Server 空间数据源的连接”页上，选择现有数据源，或浏览到报表服务器并选择数据源****。  
+5.  在“选择与 SQL Server 空间数据源的连接”页上，选择现有数据源，或浏览到报表服务器并选择数据源。  
 
     > [!NOTE]  
     > 只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -170,27 +170,27 @@ ms.locfileid: "91988402"
 9. 在查询设计器工具栏中，单击“运行”( **!** )。  
   
     结果集包含七列，这些列表示纽约州的一组销售消费品的商店。 以下是列表，并对意思可能不明显的列进行说明： 
-    *   **StoreKey**：店铺标识符。  
-    *   **StoreName**。
-    *   **SellingArea**：产品展示区域，面积介于 455 平方英尺和 1,125 平方英尺之间。
-    *   **City**。
-    *   **County**。
-    *   **销售**：总销售额。 
-    *   **SpatialLocation**：以经度和纬度表示的位置。 
+    *   **StoreKey** ：店铺标识符。  
+    *   **StoreName** 。
+    *   **SellingArea** ：产品展示区域，面积介于 455 平方英尺和 1,125 平方英尺之间。
+    *   **City** 。
+    *   **County** 。
+    *   **销售** ：总销售额。 
+    *   **SpatialLocation** ：以经度和纬度表示的位置。 
 
-    ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
+    ![“新建地图层”向导的“设计查询”步骤的屏幕截图。](../reporting-services/media/report-builder-map-design-query.png) 
   
 10. 单击“下一步”。  
   
     此时，将会为您创建一个名为 DataSet1 的报表数据集。 在完成向导后，可以在“报表数据”窗格中看到它的字段集合。  
   
-11. 在“选择空间数据和地图视图选项”页上，确认“空间字段”为“SpatialLocation”，且“层类型”为“点”********************。 接受本页上的其他默认值。  
+11. 在“选择空间数据和地图视图选项”页上，确认“空间字段”为“SpatialLocation”，且“层类型”为“点”。 接受本页上的其他默认值。  
   
     地图视图显示圆圈，这些圆圈标记每个商店的位置。  
   
 12. 单击“下一步”。  
   
-13. 在“选择地图可视化”页上，单击“气泡图”地图类型，该地图类型根据数据显示不同大小的标记****。 单击“下一步”。  
+13. 在“选择地图可视化”页上，单击“气泡图”地图类型，该地图类型根据数据显示不同大小的标记。 单击“下一步”。  
   
 14. 在“选择分析数据集”页上，单击“DataSet1”，然后单击“下一步” 。 此数据集同时包含分析数据和空间数据，它将显示在新的点层上。   
   
@@ -210,11 +210,11 @@ ms.locfileid: "91988402"
   
 21. 在“地图层”窗格中，单击“PointLayer1”旁边的箭头，然后单击“点属性” 。  
 
-    ![report-builder-map-point-properties](../reporting-services/media/report-builder-map-point-properties.png)
+    ![显示“点属性”选项的“地图层”窗格的屏幕截图。](../reporting-services/media/report-builder-map-point-properties.png)
   
 22. 在“字体”选项卡上，将样式设为“加粗”，将大小设为“10 磅”  。
 
-    ![report-builder-map-point-properties-font](../reporting-services/media/report-builder-map-point-properties-font.png)
+    ![显示“地图点属性”对话框的“更改字体、大小和颜色选项”部分的屏幕截图。](../reporting-services/media/report-builder-map-point-properties-font.png)
   
 23. 在“常规”选项卡上，将“位置”选择为“底部”  。
 
@@ -222,7 +222,7 @@ ms.locfileid: "91988402"
   
 24. 单击 **“运行”** 以预览报表。  
 
-    ![report-builder-map-city-names](../reporting-services/media/report-builder-map-city-names.png)
+    ![显示报表生成器地图预览的屏幕截图，其中城市名称显示为粗体 10 磅格式。](../reporting-services/media/report-builder-map-city-names.png)
   
     该地图显示纽约州的商店的位置。 每个商店的标记大小基于显示区域。 系统会自动为您计算五个范围的显示区域。
 
@@ -239,7 +239,7 @@ ms.locfileid: "91988402"
   
 3.  在“选择空间数据的来源”页上，选择“SQL Server 空间查询”，然后单击“下一步”。  
   
-4.  在“选择具有 SQL Server 空间数据的数据集”页上，单击“添加具有 SQL Server 空间数据的新数据集”，然后单击“下一步”************。  
+4.  在“选择具有 SQL Server 空间数据的数据集”页上，单击“添加具有 SQL Server 空间数据的新数据集”，然后单击“下一步”。  
   
 5.  在“选择与 SQL Server 空间数据源的连接”中，选择在第一步中使用的数据源。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "91988402"
   
     此时，地图上将显示一条连接三个商店的路径。  
   
-10. 在“选择空间数据和地图视图选项”页上，确认“空间字段”为“路线”，且“层类型”为“线条”********************。 接受其他默认值。  
+10. 在“选择空间数据和地图视图选项”页上，确认“空间字段”为“路线”，且“层类型”为“线条”。 接受其他默认值。  
   
     地图视图显示一条从位于纽约州北部的商店到位于纽约州南部商店的路径。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "91988402"
   
 14. 单击“完成”。  
 
-    ![report-builder-map-line](../reporting-services/media/report-builder-map-line.png)
+    ![显示带有线条层的报表生成器地图的屏幕截图。](../reporting-services/media/report-builder-map-line.png)
   
      地图显示一个空间数据源类型为“DataRegion”的新线条层。 在本例中，空间数据来自数据源，但没有分析数据与此线条关联。  
 
@@ -281,7 +281,7 @@ ms.locfileid: "91988402"
 
 15. 展开“视图”部分，然后展开“视图”，此时可以看到“缩放”属性  。 将它设置为“125”。 
 
-    ![report-builder-map-zoom](../reporting-services/media/report-builder-map-zoom.png)
+    ![显示如何调整报表生成器地图缩放效果的屏幕截图。](../reporting-services/media/report-builder-map-zoom.png)
 
       这是缩放百分比。 缩放百分比为 125% 时，应该可以看到整个州。
   
@@ -303,7 +303,7 @@ ms.locfileid: "91988402"
   
 5.  在“常规”选项卡的“类型”下，选择“空中”  。 空中视图不包含文本。  
 
-    ![report-builder-map-bing-aerial](../reporting-services/media/report-builder-map-bing-aerial.png)
+    ![屏幕截图：添加到报表生成器地图的必应地图空中图块层。](../reporting-services/media/report-builder-map-bing-aerial.png)
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -320,7 +320,7 @@ ms.locfileid: "91988402"
   
      设计图面将县显示为半透明。  
 
-    ![report-builder-map-transparency](../reporting-services/media/report-builder-map-transparency.png)
+    ![显示如何设置报表生成器地图层的透明度的屏幕截图。](../reporting-services/media/report-builder-map-transparency.png)
   
 ## <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6.根据销售改变县颜色  
 多边形层上的每个县都有一种不同的颜色，因为报表处理器会根据您在地图向导的最后一页选择的主题，自动从调色板中分配一个颜色值。  
@@ -344,13 +344,13 @@ ms.locfileid: "91988402"
   
 8.  在“来自分析数据集”下，单击“[County]”。  
 
-    ![report-builder-map-county-colors](../reporting-services/media/report-builder-map-county-colors.png)
+    ![显示“地图多边形层属性”对话框中的“分析数据”选项卡的屏幕截图。](../reporting-services/media/report-builder-map-county-colors.png)
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. 预览报表。  
 
-    ![report-builder-map-county-highlight](../reporting-services/media/report-builder-map-county-highlight.png)
+    ![报表生成器地图预览的屏幕截图，其中突出显示了特定县。](../reporting-services/media/report-builder-map-county-highlight.png)
   
 通过从空间数据源和分析数据集中指定一个匹配字段，报表处理器可以基于地图元素对分析数据进行分组。 针对您指定的值，数据绑定的地图元素具有成功的匹配项。  
   
@@ -377,7 +377,7 @@ ms.locfileid: "91988402"
   
     “红色”表示低销售值，“黄色”表示中等销售值，而“绿色”表示高销售值  。 报表处理器将基于这些值以及在“分布”页上选择的选项来计算颜色范围。  
     
-    ![report-builder-map-county-color-rules](../reporting-services/media/report-builder-map-county-color-rules.png)
+    ![显示“地图颜色规则属性”对话框的“更改多边形颜色规则”部分的屏幕截图。](../reporting-services/media/report-builder-map-county-color-rules.png)
   
 8.  单击 **“分布”** 。  
   
@@ -395,7 +395,7 @@ ms.locfileid: "91988402"
 
 15. 预览报表。
 
-    ![report-builder-map-county-color-rule-preview](../reporting-services/media/report-builder-map-county-color-rule-preview.png)
+    ![屏幕截图：应用了特定颜色规则的报表生成器地图县的预览。](../reporting-services/media/report-builder-map-county-color-rule-preview.png)
   
     色阶显示四种颜色：红色、橙色、黄色和绿色。 每个颜色表示一个销售额范围，此范围是以县为单位根据销售额自动计算得出的。  
   
@@ -418,7 +418,7 @@ ms.locfileid: "91988402"
 
 3. 将“TextColor”属性更改为“白色”。  
 
-    ![report-builder-map-color-scale-title](../reporting-services/media/report-builder-map-color-scale-title.png)
+    ![显示如何配置图例标题的屏幕截图。](../reporting-services/media/report-builder-map-color-scale-title.png)
   
 8.  预览报表。  
   
@@ -435,7 +435,7 @@ ms.locfileid: "91988402"
   
 3.  单击“PolygonLayer1”上的向下箭头，然后单击“多边形属性”。 
 
-     ![report-builder-map-polygon-layer-properties](../reporting-services/media/report-builder-map-polygon-layer-properties.png)
+     ![显示如何选择“多边形属性”选项的屏幕截图。](../reporting-services/media/report-builder-map-polygon-layer-properties.png)
 
      将打开“地图多边形属性”对话框。 在应用基于规则的显示选项之前，此对话框中设置的显示选项将应用于层上的所有多边形。  
   
@@ -464,13 +464,13 @@ ms.locfileid: "91988402"
   
 5.  单击地图上您要添加点的位置。 在本教程中，单击奥奈达县中的某个位置。 用圆圈标记的点将添加到层中单击过的位置。 默认情况下，该点处于选中状态。  
 
-    ![report-builder-map-custom-point](../reporting-services/media/report-builder-map-custom-point.png)
+    ![显示如何将自定义点添加到报表生成器地图的屏幕截图。](../reporting-services/media/report-builder-map-custom-point.png)
   
 6.  右键单击添加的点，然后单击“嵌入的点属性”。  
   
 7.  选择“覆盖此层的点选项”。 其他页将显示在对话框中。 您在此处设置的值优先于层或颜色规则的显示选项。  
 
-    ![report-builder-map-custom-point-general](../reporting-services/media/report-builder-map-custom-point-general.png)
+    ![显示“地图嵌入的点属性”对话框的“更改嵌入点”选项部分的屏幕截图。](../reporting-services/media/report-builder-map-custom-point-general.png)
   
 8.  在“标记”选项卡上，将“标记类型”选择为“星形”  。  
 
@@ -482,7 +482,7 @@ ms.locfileid: "91988402"
 
 13. 在“字体”选项卡上，将字号设为“10 磅”和“加粗”  。
 
-    ![report-builder-map-custom-point-font](../reporting-services/media/report-builder-map-custom-point-font.png)
+    ![显示“嵌入的地图点属性”对话框的“更改字体、大小和颜色选项”部分的屏幕截图。](../reporting-services/media/report-builder-map-custom-point-font.png)
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -490,7 +490,7 @@ ms.locfileid: "91988402"
   
 标签显示在商店位置上方。  
 
-![report-builder-map-custom-point-new-store](../reporting-services/media/report-builder-map-custom-point-new-store.png)
+![显示报表生成器地图预览的屏幕截图，其中已调出自定义点新商店。](../reporting-services/media/report-builder-map-custom-point-new-store.png)
   
 ## <a name="8-center-and-resize-the-map"></a><a name="CenterView"></a>8.中心和调整地图大小   
 在本部分中，将学习如何更改地图中心，以及更改缩放级别的另一种方法。  
@@ -531,11 +531,11 @@ ms.locfileid: "91988402"
 
 3. 将其保存到本地计算机或 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 服务器。
   
-4. 单击“ **保存**”。 
+4. 单击“ **保存** ”。 
 
 如果将其保存到报表服务器，则可在其中进行查看。
 
-![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
+![屏幕截图：门户中显示已完成的报表生成器地图。](../reporting-services/media/report-builder-map-in-portal.png) 
   
 ## <a name="next-steps"></a>后续步骤  
 到此为止，我们结束了有关如何向报表添加地图的演练。  

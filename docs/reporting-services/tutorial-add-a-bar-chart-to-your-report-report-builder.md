@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245694"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043728"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：向报表添加条形图（报表生成器）
 本教程将使用 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 中的向导，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中创建条形图。 然后添加筛选器，并优化图表。 
@@ -27,7 +27,7 @@ ms.locfileid: "87245694"
   
 下图显示了将创建的条形图，条形图从 2015 年最低销售额开始排列，显示了 2014 和 2015 年度前五位销售人员的销售情况。  
   
-![report-builder-bar-chart](../reporting-services/media/report-builder-bar-chart.png) 
+![报表生成器条形图的屏幕截图。](../reporting-services/media/report-builder-bar-chart.png) 
   
  
 > [!NOTE]  
@@ -58,7 +58,7 @@ ms.locfileid: "87245694"
   
 4.  在“选择数据集”页上，单击“创建数据集”，然后单击“下一步”  。  
   
-5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”********。 您可能需要输入用户名和密码。  
+5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”。 您可能需要输入用户名和密码。  
   
     > [!NOTE]  
     > 只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -266,13 +266,13 @@ ms.locfileid: "87245694"
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
-2.  键入 **Sales Bar Chart**，再按 Enter，然后键入 **Top Five Sellers for 2015**，如下所示：  
+2.  键入 **Sales Bar Chart** ，再按 Enter，然后键入 **Top Five Sellers for 2015** ，如下所示：  
   
     **Sales Bar Chart**  
   
     **Top Five Sellers for 2015**  
   
-3.  选择 **Sales Bar Chart**，并单击“加粗”按钮。  
+3.  选择 **Sales Bar Chart** ，并单击“加粗”按钮。  
   
 4.  选择 Top Five Sellers for 2015，并在“主文件夹”选项卡上的“字体”部分中，将字号设置为“10”   。  
   
@@ -292,7 +292,7 @@ ms.locfileid: "87245694"
 
     可将其保存到计算机或报表服务器中。
   
-4.  单击“ **保存**”。   
+4.  单击“ **保存** ”。   
   
 ## <a name="next-steps"></a>后续步骤  
 您已成功完成“向报表添加条形图”教程的学习。 若要了解有关图表的详细信息，请参阅 [图表](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 和 [条形图](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)。  

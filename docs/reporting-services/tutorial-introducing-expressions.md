@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: db1efab37a24e49dcf9eac774809ec788831b037
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248536"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043819"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
 该 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程介绍了如何使用包含常用函数和运算符的表达式创建功能强大且灵活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
@@ -25,7 +25,7 @@ ms.locfileid: "87248536"
   
 此图显示与将创建的报表类似的报表。  
   
-![report-builder-expression-tutorial-in-browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
+![使用表达式的报表生成器报表的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
 完成本教程的估计时间：30 分钟。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "87248536"
   
 10. 在查询设计器工具栏中，单击“运行”( **!** )。 结果集在以下列中显示 23 行数据：“FirstName”、“LastName”、“StateProvince”、“CountryRegionID”、“Gender”、“YTDPurchase”和“LastPurchase”。  
 
-    ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
+    ![“新建表”或“矩阵”向导的“设计查询步骤”的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
 11. 单击“下一步”。  
   
@@ -113,13 +113,13 @@ ms.locfileid: "87248536"
   
     Sum 不再应用于 YTDPurchase。  
     
-    ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
+    ![值列表的屏幕截图，其中显示了已准备好清除的 Sum 选项。](../reporting-services/media/report-builder-expression-not-sum.png)
   
 15. 单击“下一步”。  
   
 16. 在“选择布局”页上，保留所有默认设置，然后单击“下一步” 。  
 
-    ![report-builder-expression-tutorial-choose-layout](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
+    ![“新建表”或“矩阵”向导的“选择布局”步骤的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
 17. 单击“完成”。  
   
@@ -141,26 +141,26 @@ ms.locfileid: "87248536"
   
 2.  右键单击“DataSet1”，然后单击“数据集属性”。  
 
-    ![report-builder-expression-tutorial-rename-dataset](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
+    ![屏幕截图：如何访问报表生成器中的“数据集属性”。](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
 3.  在“名称”框中，键入 **Expressions**  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3.显示名字首字母和姓氏  
-在本部分，在表达式中使用 **Left** 函数和 **Concatenate** (**&**) 运算符（其计算结果为包括首字母和姓氏的名称）。 你可以逐步生成表达式，也可以跳过一些步骤，将表达式从教程复制/粘贴到“表达式”**** 对话框中。   
+在本部分，在表达式中使用 **Left** 函数和 **Concatenate** ( **&** ) 运算符（其计算结果为包括首字母和姓氏的名称）。 你可以逐步生成表达式，也可以跳过一些步骤，将表达式从教程复制/粘贴到“表达式”对话框中。   
   
 1.  右键单击“StateProvince”列，指向“插入列”，然后单击“左”。  
   
     一个新列添加到“StateProvince”列的左侧。 
     
-    ![report-builder-expression-tutorial-insert-column](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
+    ![显示如何将左侧列插入报表的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
-2.  单击新列的标题，然后键入 **Name**。  
+2.  单击新列的标题，然后键入 **Name** 。  
   
 3.  右键单击“Name”列的数据单元，然后单击“表达式”。  
 
-    ![report-builder-expression-tutorial-insert-expression](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
+    ![显示如何将表达式插入报表的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
   
 4.  在“表达式”对话框中，展开“常见函数”，然后单击“文本”。  
   
@@ -168,11 +168,11 @@ ms.locfileid: "87248536"
   
     将 **Left** 函数添加到表达式中。  
     
-    ![report-builder-expression-tutorial-left-function](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
+    ![显示如何将 Left 函数添加到表达式的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
 6.  在“类别”列表中，单击“字段(表达式)”。  
   
-7.  在“值”列表中，双击 **FirstName**。  
+7.  在“值”列表中，双击 **FirstName** 。  
   
 8.  键入 **, 1)**  
   
@@ -182,11 +182,11 @@ ms.locfileid: "87248536"
 
     这将在表达式后添加一个句点和一个空格。
   
-10. 在“值”列表中，双击 **LastName**。  
+10. 在“值”列表中，双击 **LastName** 。  
   
     完成的表达式： `=Left(Fields!FirstName.Value, 1) &". "& Fields!LastName.Value`  
     
-    ![report-builder-expression-tutorial-complete-name-expression](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
+    ![显示如何将 LastName 值添加到表达式的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -201,11 +201,11 @@ ms.locfileid: "87248536"
   
 2.  选择“Last Purchase”列中的数据单元格，然后在“开始”选项卡上，转至“数字”部分，选择“日期”   。  
 
-    ![report-builder-expression-tutorial-date-format](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
+    ![显示如何将“Last Purchase”列设置为日期的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
 3.  另外，请在“数字”部分中，单击“占位符样式”旁边的箭头，然后选择“示例值”  。 
 
-    ![report-builder-expression-tutorial-sample-values](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
+    ![显示报表生成器中的“示例值”选项的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
 
     现可看到所选格式设置的示例。 
   
@@ -219,13 +219,13 @@ ms.locfileid: "87248536"
 
 2. 在“开始”选项卡上，转至“段落”部分，选择“左”  。 
 
-    ![report-builder-expression-tutorial-format-headings](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
+    ![显示如何在报表生成器中设置标题格式的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
 3. 单击 **“运行”** 以预览报表。 
 
 以下是目前为止的报表，具有设置了格式的日期、货币和列标题。
 
-![report-builder-expression-tutorial-preview-formatted](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
+![屏幕截图：已设置格式的报表的预览。](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
 ## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4.使用颜色显示性别  
@@ -240,7 +240,7 @@ ms.locfileid: "87248536"
   
     一个新列添加到“Name”列的左侧。  
   
-2.  单击新列的标题，然后键入 **M/F**。  
+2.  单击新列的标题，然后键入 **M/F** 。  
   
 ### <a name="to-add-a-rectangle"></a>添加矩形  
   
@@ -248,11 +248,11 @@ ms.locfileid: "87248536"
   
      将在该单元中添加一个矩形。  
      
-     ![report-builder-expression-tutorial-insert-rectangle](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
+     ![显示如何插入矩形的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
   
 2. 拖动“M/F”和“Name”列之间的分隔符，使“M/F”列变窄  。
 
-    ![report-builder-expression-tutorial-narrow-column](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
+    ![显示如何使列变窄的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
 ### <a name="to-use-color-to-show-gender"></a>使用颜色显示性别  
   
@@ -266,13 +266,13 @@ ms.locfileid: "87248536"
   
 5.  在“类别”列表中，单击“字段(表达式)”。  
   
-6.  在“值”列表中，双击 **Gender**。  
+6.  在“值”列表中，双击 **Gender** 。  
   
 7.  键入 **="Male",** （包括逗号）。
 
 8. 在“类别”列表中，单击“常量”，然后在“值”框中，单击“青蓝色”   。
 
-    ![report-builder-expression-tutorial-color-expression-cornflower-blue](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
+    ![显示如何使用颜色显示性别的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
 
 9. 在其后键入一个逗号。 
   
@@ -286,13 +286,13 @@ ms.locfileid: "87248536"
   
     完成的表达式： `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
     
-    ![report-builder-expression-tutorial-color-expression-complete](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
+    ![显示“表达式”对话框中完整表达式的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
 12. 单击“确定”，然后再次单击“确定”关闭“矩形属性”对话框  。  
   
 14. 单击 **“运行”** 以预览报表。  
 
-    ![report-builder-expression-tutorial-preview-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
+    ![显示带有 M/F 列的预览的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
 
 ### <a name="to-format-the-color-rectangles"></a>设置彩色矩形的格式
 
@@ -304,11 +304,11 @@ ms.locfileid: "87248536"
     - BorderStyle = 实线
     - BorderWidth = 5pt
     
-    ![report-builder-expression-tutorial-format-m-f-column](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
+    ![显示如何设置 M/F 列中的彩色矩形格式的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
 
 18. 单击“运行”再次预览报表。 此次，颜色块周围具有空白区域。
 
-    ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
+    ![屏幕截图：在 M/F 列中设置了矩形格式的预览。](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
 ## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5.查找 CountryRegion 名称  
 在此部分，创建 CountryRegion 数据集，使用 **Lookup** 函数显示国家/地区的名称，而非国家/地区的标识符。  
@@ -397,7 +397,7 @@ ms.locfileid: "87248536"
   
 5.  在“表达式”对话框中，展开“常见函数”，然后单击“日期和时间”  。  
   
-6.  在“项”列表中，双击 **DateDiff**。  
+6.  在“项”列表中，双击 **DateDiff** 。  
   
 7.  紧随 `DateDiff(`，键入 **"d",** （包括引号 "" 和逗号）。 
   
@@ -414,7 +414,7 @@ ms.locfileid: "87248536"
   
     完成的表达式： `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
-    ![report-builder-expression-tutorial-date-since-last-purchase](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
+    ![显示自上次采购以来日期的完整表达式的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -423,7 +423,7 @@ ms.locfileid: "87248536"
 ## <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7.使用指示器显示销售情况对比  
 在本部分中，添加一个新列，使用指示器显示某个人的年初至今 (YTD) 采购量是高于还是低于平均 YTD 采购量。 **Round** 函数从值中去掉小数部分。  
   
-需通过几个步骤配置指示器及其状态。 如果需要，可以跳过“配置指示器”过程，将已完成的表达式从本教程复制/粘贴到“表达式”对话框****。  
+需通过几个步骤配置指示器及其状态。 如果需要，可以跳过“配置指示器”过程，将已完成的表达式从本教程复制/粘贴到“表达式”对话框。  
   
 ### <a name="to-add-the--or---avg-sales-column"></a>添加 + or - AVG Sales 列  
   
@@ -441,7 +441,7 @@ ms.locfileid: "87248536"
   
 2.  在图标集的“方向”组中，单击由三个灰色箭头构成的图标集。  
 
-    ![report-builder-expression-tutorial-select-indicator](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
+    ![显示如何添加指示器的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -451,9 +451,9 @@ ms.locfileid: "87248536"
   
 2.  单击“值”文本框旁边的表达式“fx”按钮 。  
   
-3.  在“表达式”对话框中，展开“常见函数”，然后单击 **Math**。  
+3.  在“表达式”对话框中，展开“常见函数”，然后单击 **Math** 。  
   
-4.  在“项”列表中，双击 **Round**。  
+4.  在“项”列表中，双击 **Round** 。  
   
 5.  在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”   。  
   
@@ -471,13 +471,13 @@ ms.locfileid: "87248536"
   
 16. 在“状态度量单位”框中，选择“数字”。  
   
-17. 在具有向下箭头的行中，单击“起始”值的文本框右侧的 **fx**按钮。  
+17. 在具有向下箭头的行中，单击“起始”值的文本框右侧的 **fx** 按钮。  
 
-    ![report-builder-expression-tutorial-indicator-start](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
+    ![显示如何在“开始”文本框旁选择“fx”按钮的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
-18. 在“表达式”对话框中，展开“常见函数”，然后单击 **Math**。  
+18. 在“表达式”对话框中，展开“常见函数”，然后单击 **Math** 。  
   
-19. 在“项”列表中，双击 **Round**。  
+19. 在“项”列表中，双击 **Round** 。  
   
 20. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”   。  
   
@@ -497,7 +497,7 @@ ms.locfileid: "87248536"
   
 32. 单击具有水平方向箭头的行，然后单击“删除”。  
 
-    ![report-builder-expression-tutorial-delete-indicator-state](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
+    ![显示如何删除指示器的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
     
     现在仅有两个箭头，向上或向下。
   
@@ -513,7 +513,7 @@ ms.locfileid: "87248536"
   
 38. 单击 **“运行”** 以预览报表。  
 
-    ![report-builder-expression-tutorial-preview-indicator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
+    ![屏幕截图：“+ or - AVG Sales”列的预览，其中包含所有新指示器。](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
 ## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8.制作镶边报表  
 创建参数以便报表读者可指定要应用于报表的交替行的颜色，使报表成为镶边报表。  
@@ -524,7 +524,7 @@ ms.locfileid: "87248536"
   
 2.  在“报表数据”窗格中，右键单击“参数”，然后单击“添加参数”。  
 
-    ![report-builder-expression-tutorial-add-parameter](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
+    ![显示如何添加参数的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
   
     此时将打开 **“报表参数属性”** 对话框。  
   
@@ -558,7 +558,7 @@ ms.locfileid: "87248536"
   
 18. 在“值”框中，键入 **Pink**  
 
-    ![report-builder-expression-tutorial-parameter-available](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
+    ![“报表参数属性”对话框的屏幕截图，其中显示“选择此参数的可用值”步骤。](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -566,9 +566,9 @@ ms.locfileid: "87248536"
   
 1.   选择数据行中的所有单元格， **M/F** 列中具有自己的背景色的单元格除外。  
 
-     ![report-builder-expression-tutorial-select-banded](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
+     ![显示数据行中已选择的单元格的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
-4.  在“属性”窗格中，单击 **BackgroundColor**。 
+4.  在“属性”窗格中，单击 **BackgroundColor** 。 
 
      如果未看到“属性”窗格，则在“视图”选项卡上，选中“属性”框 。  
   
@@ -576,7 +576,7 @@ ms.locfileid: "87248536"
   
 5.  单击向下箭头，然后单击“表达式”。  
 
-    ![report-builder-expression-tutorial-banded-color-property](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
+    ![“属性”框的屏幕截图，其中显示如何将表达式与 BackgroundColor 关联。](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
   
 6.  在“表达式”对话框中，展开“常见函数”，然后单击“程序流”。  
   
@@ -592,7 +592,7 @@ ms.locfileid: "87248536"
   
     完成的表达式： `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
-    ![report-builder-expression-tutorial-banded-color-expressn](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
+    ![显示完整的镶边彩色表达式的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -604,13 +604,13 @@ ms.locfileid: "87248536"
   
 3.  在“选择颜色”列表中，为报表中的非白色镶边选择颜色。  
     
-    ![report-builder-expression-tutorial-select-color](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
+    ![显示如何为非白色镶边选择颜色的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
   
 4.  单击 **“查看报表”** 。  
   
     该报表呈现，报表行交替呈现您所选的背景。 
     
-    ![report-builder-expression-tutorial-preview-banded](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
+    ![屏幕截图：预览呈现交替颜色的行。](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
 ## <a name="optional-add-a-report-title"></a><a name="Title"></a>（可选）添加报表标题  
 为报表添加标题。  
@@ -619,7 +619,7 @@ ms.locfileid: "87248536"
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
-2.  键入 **Sales Comparison Summary**，然后选择文本。  
+2.  键入 **Sales Comparison Summary** ，然后选择文本。  
   
 3.  在“开始”选项卡上的“字体”框中，进行如下设置 ：
 
@@ -652,7 +652,7 @@ ms.locfileid: "87248536"
 
 现在，报表读者可以在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户中查看报表。
 
-![report-builder-expression-tutorial-final-in-browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
+![已完成的新报表的屏幕截图，其中每个表达式都可见。](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
 ## <a name="see-also"></a>另请参阅  

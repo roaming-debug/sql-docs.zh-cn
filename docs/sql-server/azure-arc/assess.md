@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 459a49a4f2ed41b8e9d95c805431ff2c29a770fa
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: c6f2a0989cb13253ef4a6a26e013a6b8c7a84ded
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92258001"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294378"
 ---
 # <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>在启用了 Azure Arc 的 SQL Server 实例上配置 SQL 评估
 
@@ -37,11 +37,22 @@ SQL 评估提供了一种机制来评估 SQL Server 的配置。 本文介绍了
    > [!div class="mx-imgBorder"]
    > [ ![显示“SQL Server - Azure Arc”资源的“环境运行状况”屏幕的屏幕截图。](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
-1. 在数据收集计算机上指定工作目录。 默认使用 `C:\sql_assessment\work_dir`。 在收集和分析期间，数据临时存储在此文件夹中。 如果此文件夹不存在，则会自动创建它。
+> [!IMPORTANT]
+> 如果未安装 MMA 扩展，则无法启动按需 SQL 评估。
 
-1. 选择“下载配置脚本”。 将下载的脚本复制到目标计算机。
+2. 选择帐户类型。 如果有托管服务帐户，则可以使用该帐户直接从门户启动 SQL 评估。 指定帐户名称。
 
-1. 打开 powershell.exe 的管理员实例，并执行以下代码块之一：
+> [!NOTE]
+> 指定托管服务帐户将激活“配置 SQL 评估”按钮，从而能在门户中通过部署 CustomScriptExtension 启动评估。 因为一次只能部署一个 CustomScriptExtension，所以在执行后将自动删除 SQL 评估的脚本扩展。 如果已将另一个 CustomScriptExtension 部署到托管计算机，则不会激活“配置 SQL 评估”按钮。
+
+3. 如果要更改默认设置，请指定数据收集计算机上的工作目录。 默认使用 `C:\sql_assessment\work_dir`。 在收集和分析期间，数据临时存储在此文件夹中。 如果此文件夹不存在，则会自动创建它。
+
+4. 如果在门户中通过单击“配置 SQL 评估”来启动 SQL 评估，将显示标准部署气泡。
+
+> [!div class="mx-imgBorder"]
+   > [ ![屏幕截图：部署 CustomScriptExtension。](media/assess/sql-assessment-custom-script-deployment.png)](media/assess/sql-assessment-custom-script-deployment.png#lightbox)
+
+5. 若想从目标计算机启动 SQL 评估，请单击“下载配置脚本”，将下载的脚本复制到目标计算机，并在 powershell.exe 的管理员实例中执行以下代码块之一 ：
 
    * 域帐户：系统将提示你输入用户帐户和密码。
 

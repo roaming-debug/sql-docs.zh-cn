@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8e4d7569f8624843f0cf05b4c873f0be7b26df3c
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245674"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043784"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
 在本教程中，将参数添加到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，使报表读者可以筛选报表数据的一个或多个值。 
   
-![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
+![屏幕截图显示可以向分页报表添加参数。](../reporting-services/media/report-builder-parameter-tutorial.png)
 
 报表参数是针对您在数据集查询中包含的每个查询参数自动创建的。 参数的数据类型确定了参数在报表视图工具栏上显示的方式。 
    
@@ -51,7 +51,7 @@ ms.locfileid: "87245674"
   
 4.  在“选择数据集”页上，单击“创建数据集” > “下一步”  。  
   
-7.  在“选择数据源的连接”页上，从列表中选择一个数据源或浏览到报表服务器进行选择****。 选择任何类型为 **SQL Server**的数据源。  
+7.  在“选择数据源的连接”页上，从列表中选择一个数据源或浏览到报表服务器进行选择。 选择任何类型为 **SQL Server** 的数据源。  
       
 8.  单击“下一步”。  
 
@@ -147,11 +147,11 @@ ms.locfileid: "87245674"
   
 4.  在查询设计器工具栏中，单击“运行”( **!** )。 此时将打开“定义查询参数”对话框，提示为查询参数“\@StoreID”输入值。  
   
-5.  在“参数值”中，键入 **200**。  
+5.  在“参数值”中，键入 **200** 。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    结果集显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
+    结果集显示了标识符为 **200** 的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -168,7 +168,7 @@ ms.locfileid: "87245674"
   
 ### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>更改报表参数的默认数据类型  
   
-默认情况下，创建的参数数据类型为 **Text**。 由于商店标识符是一个整数，因此可将数据类型更改为 Integer。  
+默认情况下，创建的参数数据类型为 **Text** 。 由于商店标识符是一个整数，因此可将数据类型更改为 Integer。  
   
 1.  在“报表数据”窗格的“参数”节点中，右键单击“\@StoreID”，然后单击“参数属性”。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "87245674"
   
 6.  单击 **“运行”** 以预览报表。 报表查看器将显示“\@StoreID”的提示“Store Identifier?”。  
   
-7.  在报表查看器工具栏上，在 Store ID 的旁边键入 **200**，然后单击“查看报表”。  
+7.  在报表查看器工具栏上，在 Store ID 的旁边键入 **200** ，然后单击“查看报表”。  
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
@@ -245,7 +245,7 @@ ms.locfileid: "87245674"
   
 10. 从下拉列表中，选择“Contoso Catalog Store”，然后单击“查看报表”。  
   
-报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
+报表显示了标识符为 **200** 的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
 ## <a name="4c-specify-a-default-value"></a><a name="DefaultValues"></a>4c. 指定默认值 
 可以为每个参数指定默认值，以便自动运行报表。  
@@ -266,7 +266,7 @@ ms.locfileid: "87245674"
   
 7.  预览报表。  
   
-对于 \@StoreID，报表查看器显示值“Contoso North America Online Store”，因为它是数据集“Stores”的结果集的第一个值。 报表显示了标识符为 **199**的商店销售的数码相机数量。  
+对于 \@StoreID，报表查看器显示值“Contoso North America Online Store”，因为它是数据集“Stores”的结果集的第一个值。 报表显示了标识符为 **199** 的商店销售的数码相机数量。  
   
 ### <a name="to-specify-a-custom-default-value"></a>指定自定义默认值  
   
@@ -282,7 +282,7 @@ ms.locfileid: "87245674"
   
 6.  预览报表。  
   
-对于 \@StoreID，报表查看器显示“Contoso Catalog Store”，因为它是标识符为 200 的商店的显示名称。 报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
+对于 \@StoreID，报表查看器显示“Contoso Catalog Store”，因为它是标识符为 200 的商店的显示名称。 报表显示了标识符为 **200** 的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
 ## <a name="4d-look-up-a-namevalue-pair"></a><a name="NameValue"></a>4d. 查找名称/值对  
 数据集可以同时包含标识符和对应的名称字段。 若只有一个标识符，则可以在创建的包含名称/值对的数据集中查找对应的名称。  
@@ -347,7 +347,7 @@ ms.locfileid: "87245674"
   
 3.  单击“筛选器”，然后单击“添加” 。 此时将显示一个新的筛选器行。  
   
-4.  在“表达式”的下拉列表中，选择数据集字段 StoreID。 数据类型显示 **Integer**。 当表达式值为数据集字段时，将自动设置数据类型。  
+4.  在“表达式”的下拉列表中，选择数据集字段 StoreID。 数据类型显示 **Integer** 。 当表达式值为数据集字段时，将自动设置数据类型。  
   
 5.  在“运算符”中，确认选择了“等于号 (=)” 。  
   
@@ -420,9 +420,9 @@ ms.locfileid: "87245674"
   
     报表将显示所有商店销售的所有子类别的数量。  
   
-19. 从下拉列表中，单击“全选”清除列表，再单击“Contoso Catalog Store”和“Contoso Asia Online Store”，然后单击“查看报表”********。  
+19. 从下拉列表中，单击“全选”清除列表，再单击“Contoso Catalog Store”和“Contoso Asia Online Store”，然后单击“查看报表”。  
 
-    ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
+    ![屏幕截图显示可选择多个参数添加到报表。](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
 ## <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8.为条件可见性添加布尔参数  
@@ -493,7 +493,7 @@ ms.locfileid: "87245674"
   
 4.  在“名称”中，用 Parameterized Sales Report 替换默认名称。  
   
-5.  单击“ **保存**”。  
+5.  单击“ **保存** ”。  
   
 报表即已保存至报表服务器。 您连接的报表服务器将显示在窗口底部的状态栏中。  
   

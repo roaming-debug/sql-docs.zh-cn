@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 073776c042c0a0da136347c8e1658603b755208f
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 51286acc7f963b8d680bd81121cc22bab1c1a0a6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378349"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364379"
 ---
 # <a name="troubleshooting-big-data-clusters-bdc-with-notebooks"></a>使用笔记本对大数据群集 (BDC) 进行故障排除
 
@@ -80,7 +80,7 @@ ms.locfileid: "92378349"
 |名称 |说明 |
 |---|---|---|---|
 |TSG005 - 检测到转接循环|使用此笔记本来处理检测到的转发循环，因为实用工具 dnsmasq 可以在 resolv.conf 中放置本地 Loopback，这可能会导致 Controller Pod 在初始群集部署期间进入 CrashLoopBackOff： https://askubuntu.com/questions/627899/nameserver-127-0-1-1-in-resolv-conf-wont-go-away|
-|TSG011 - 重启 sparkhistory 服务器|使用此笔记本来重启 SparkHistory 服务器，因为 sparkhistory java 进程可能会在启动期间挂起。 重启 SparkHistory 服务器 (supervisorctl restart sparkhistory) 可以解决此问题。|
+|TSG011 - 重启 sparkhistory 服务器|使用此笔记本来重启 SparkHistory 服务器，因为 sparkhistory java 进程可能会在启动期间停止响应。 重启 SparkHistory 服务器 (supervisorctl restart sparkhistory) 可以解决此问题。|
 |TSG018 - 在主池上终止 sqlservr.exe 进程| 当 T-SQL SHUTDOWN 没有成功循环使用 ./sqlservr 进程时，使用此笔记本。 使用此笔记本来终止 sqlservr 主进程，./sqlservr 前端进程将自动重启主进程。|
 |TSG024 - Namenode 处于安全模式| 当 HDFS 本身进入安全模式时，使用此笔记本。 例如，如果在存储池中过快地循环使用了太多的 Pod，那么可能会自动启用安全模式。|
 |TSG028 - 重启所有存储池节点上的节点管理器| 当需要重启所有存储池节点上的节点管理器时，使用此笔记本。|
@@ -104,4 +104,3 @@ ms.locfileid: "92378349"
 ## <a name="next-steps"></a>后续步骤
 
 有关大数据群集的详细信息，请参阅[什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md)。
-

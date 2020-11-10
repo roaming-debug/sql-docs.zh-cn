@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 695b6d02494430b134ce46ac14d802443b41046b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243594"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243786"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>使用共享数据集（Web 门户）
 
@@ -32,7 +32,7 @@ ms.locfileid: "87243594"
   
 2.  选择“数据集”。  
   
-    ![ssRSDataset-NewDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
+    ![屏幕截图：已调出“数据集”选项的“新建”下拉列表。](../reporting-services/media/ssrsdataset-newdataset.png)  
   
 3.  这将启动报表生成器，或者提示你下载它。  
   
@@ -51,17 +51,17 @@ ms.locfileid: "87243594"
   
 1.  选择要管理的数据集旁边的省略号 (…)。  
   
-    ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
+    ![屏幕截图：用户选择数据集的省略号选项。](../reporting-services/media/ssrsdataset-ellipse.png)  
   
 2.  选择“管理”会将你转到编辑屏幕。  
   
-    ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
+    ![屏幕截图：已选择省略号选项，且已显示“管理”选项。](../reporting-services/media/ssrsdataset-manage.png)  
   
 ## <a name="properties"></a>属性
   
 在属性屏幕中，你可以更改数据集的“名称”和“描述”。 也可以“删除”、“移动”、“在报表生成器中编辑”、“下载”或“替换”。  
   
-![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
+![屏幕截图：“编辑公司销售额”对话框的“属性”屏幕。](../reporting-services/media/ssrsdataset-properties.png)  
   
 ## <a name="caching"></a>Caching
   
@@ -71,17 +71,17 @@ ms.locfileid: "87243594"
   
 2.  **缓存此报表的副本并在可用时使用副本** 会将数据的临时副本放在缓存中，以便用于使用此数据集的项。 由于将从缓存中返回数据（而不是重新运行数据集查询），因此进行缓存通常会提高性能。  
   
-![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
+![屏幕截图：“编辑公司销售额”对话框中的“缓存”屏幕，其中已选中“始终用最新数据运行此报表”选项。](../reporting-services/media/ssrsdataset-caching1.png)  
   
 选择“缓存此报表的副本并在可用时使用副本”时将显示更多选项。  
   
-![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
+![屏幕截图：“编辑公司销售额”对话框中的“缓存”屏幕，其中已选中“缓存此报表的副本并在可用时使用副本”选项。](../reporting-services/media/ssrsdataset-caching2.png)  
   
 ### <a name="cache-expiration"></a>缓存过期  
   
 你可以控制是要在某段时间后针对共享数据集使缓存过期，还是希望按计划使缓存过期。 你可以使用共享计划。  
   
-![ssRSDataset-Caching3](../reporting-services/media/ssrsdataset-caching3.png)  
+![屏幕截图：已选中“按计划使缓存过期”选项。](../reporting-services/media/ssrsdataset-caching3.png)  
   
 > [!NOTE]
 > 设置过期时间并不会刷新缓存。 如果没有缓存刷新计划，将在下次执行数据集时刷新数据。  
@@ -98,7 +98,7 @@ ms.locfileid: "87243594"
   
 完成后，你便可以选择“创建缓存刷新计划”。  
   
-![ssRSDataset-Caching4](../reporting-services/media/ssrsdataset-caching4.png)  
+![屏幕截图：显示了“创建缓存刷新计划”选项的“编辑公司销售额”对话框。](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
 > SQL Server 代理必须处于运行状态才能创建缓存刷新计划。  

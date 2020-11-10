@@ -10,20 +10,20 @@ ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 811b996732dac0f8c6bc0c71e9c8976dc3244085
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06148ae5d10db159745a7eb55be06735efa49531
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114618"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364703"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>查看和读取故障转移群集实例诊断日志
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   将 SQL Server 资源 DLL 的所有严重错误和警告事件写入 Windows 事件日志。 正在运行的特定于 SQL Server 的诊断信息日志由 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)系统存储过程捕获，并会写入 SQL Server 故障转移群集诊断日志文件（也称为 *SQLDIAG* 日志）中。  
   
--   **开始之前：** [建议](#Recommendations)、[安全性](#Security)  
+-   **开始之前：** [建议](#Recommendations)、 [安全性](#Security)  
   
--   **若要查看诊断日志，请使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要查看诊断日志，请使用：** [SQL Server Management Studio](#SSMSProcedure)、 [Transact-SQL](#TsqlProcedure)  
   
 -   **若要配置诊断日志设置，请使用：** [Transact-SQL](#TsqlConfigure)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "91114618"
 ###  <a name="security"></a><a name="Security"></a> Security  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
- 运行 **fn_xe_file_target_read_file**需要 VIEW SERVER STATE 权限。  
+ 运行 **fn_xe_file_target_read_file** 需要 VIEW SERVER STATE 权限。  
   
  以管理员身份打开 SQL Server Management Studio  
   
@@ -46,7 +46,7 @@ ms.locfileid: "91114618"
   
 1.  从“文件”  菜单，选择“打开文件”   ，然后选择要查看的诊断日志文件。  
   
-2.  事件在右窗格中显示为行，默认情况下，仅显示出 **name**和 **timestamp** 这两列。  
+2.  事件在右窗格中显示为行，默认情况下，仅显示出 **name** 和 **timestamp** 这两列。  
   
      这还会激活 **“扩展事件”** 菜单。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "91114618"
   
 4.  您可使用 **“扩展事件”** 菜单并选择 **“筛选”** 选项对事件数据进行筛选和排序。  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="view-diagnostic-log-files-with-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 查看诊断日志文件  
  **查看诊断日志文件：**  
   
  若要查看 SQLDIAG 日志文件中的所有日志项，请使用以下查询：  
@@ -88,13 +88,13 @@ ORDER BY Time;
 > [!NOTE]  
 >  您可以使用 WHERE 子句针对特定的组件或状态筛选结果。  
   
-##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> 使用 Transact-SQL  
- **配置诊断日志属性**  
+##  <a name="configure-diagnostic-log-properties-with-transact-sql"></a><a name="TsqlConfigure"></a> 使用 Transact-SQL 配置诊断日志属性  
+ **配置诊断日志属性：**  
   
 > [!NOTE]  
 >  有关此过程的示例，请参阅本节后面的 [示例 (Transact-SQL)](#TsqlExample)。  
   
- 使用数据定义语言 (DDL) 语句 **ALTER SERVER CONFIGURATION**，可启动或停止对 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 过程捕获的诊断数据的日志记录，并设置 SQLDIAG 日志配置参数，如日志文件滚动更新计数、日志文件大小和文件位置。 有关语法详细信息，请参阅 [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic)。  
+ 使用数据定义语言 (DDL) 语句 **ALTER SERVER CONFIGURATION** ，可启动或停止对 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 过程捕获的诊断数据的日志记录，并设置 SQLDIAG 日志配置参数，如日志文件滚动更新计数、日志文件大小和文件位置。 有关语法详细信息，请参阅 [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic)。  
   
 ###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> 示例 (Transact-SQL)  
   

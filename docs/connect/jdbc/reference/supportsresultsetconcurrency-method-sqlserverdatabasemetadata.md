@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c84283f4ff6628e56ae3bdbcd1a48ace35399de0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f420aff2681495a8890a1c86841e124c73a98184
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472069"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243710"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>supportsResultSetConcurrency 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public boolean supportsResultSetConcurrency(int type,
 #### <a name="parameters"></a>参数  
  type  
   
- 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一****：  
+ 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
  TYPE_FORWARD_ONLY  
@@ -61,14 +61,14 @@ public boolean supportsResultSetConcurrency(int type,
   
  *并发*  
   
- 指示结果集并发级别的 int****，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
+ 指示结果集并发级别的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
   
-## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
+## <a name="concurrency-javasqlresultset-types"></a>并发 java.sql.ResultSet 类型  
  CONCUR_READ_ONLY  
   
  CONCUR_UPDATABLE  
   
-## <a name="sqlserverresultset-types"></a>SQLServerResultSet 类型  
+## <a name="concurrency-sqlserverresultset-types"></a>并发 SQLServerResultSet 类型  
  CONCUR_SS_OPTIMISTIC_CC  
   
  CONCUR_SS_SCROLL_LOCKS  
@@ -76,7 +76,7 @@ public boolean supportsResultSetConcurrency(int type,
  CONCUR_SS_OPTIMISTIC_VAL  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true****。 否则为 **false**。  
+ 如果支持，则值为 true。 否则为 **false** 。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

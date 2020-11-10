@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734642"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364779"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -123,7 +123,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | Analysis Services | 修复了以下问题：在尝试通过 msmdpump.dll 连接到 SSAS 时出错。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696)。 |
 | 备份/还原 | 修复了以下问题：对于 SQL 2016 及更低版本，在 HostDistribution 属性缺失的情况下选择“查看连接属性”生成了 SMO 错误。 |
 | 数据库设计器 | 修复了以下问题：在处理十进制数字时 SSMS 发生故障。 |
-| 数据库关系图 | 修复了以下问题：在“添加表”对话框没有正确显示的情况下，使用数据库关系图可能会导致 SSMS 发生故障或挂起。 |
+| 数据库关系图 | 修复了以下问题：在“添加表”对话框没有正确显示的情况下，使用数据库关系图可能会导致 SSMS 发生故障或停止响应。 |
 | 数据库镜像 | 修复了以下问题：镜像配置失败。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281)。 |
 | 常规 SSMS | 修复了以下问题：在尝试连接到 Azure SQL DB 时，可能需要数秒钟（用户数据库中的 SQL 登录）。 |
 | 常规 SSMS | 修复了以下问题：SSMS 不处理/不显示捕获到的死锁（.xdl 文件）。 |
@@ -164,7 +164,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 
 ### <a name="186"></a>18.6
 
-![下载](media/download-icon.png) [下载 SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2146265)
+![下载](media/download-icon.png) [下载 SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - 版本号：18.6
 - 生成号：15.0.18338.0

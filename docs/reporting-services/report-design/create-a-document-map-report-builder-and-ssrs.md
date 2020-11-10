@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfb17d88af0c5901e0cb4ee0097d02c0225693d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: cd6c70f92cb409ee6742590709743897bb3e77f7
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85061051"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364439"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
 
@@ -40,15 +40,14 @@ ms.locfileid: "85061051"
   
  有关详细信息，请参阅[不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)。  
   
-##  <a name="AddRptItemToMap"></a>   
-#### <a name="to-add-a-report-item-to-a-document-map"></a>向文档结构图添加报表项  
+##  <a name="to-add-a-report-item-to-a-document-map"></a><a name="AddRptItemToMap"></a> 向文档结构图添加报表项  
   
 1.  在“设计”视图中，选择要添加到文档结构图中的报表项，如表、矩阵或仪表。 报表项属性将显示在“属性”窗格中。  
   
     > [!NOTE]  
     >  若要选择 Tablix 数据区域，请在任意单元内单击以显示行控点和列控点，然后单击角控点。  
   
-2.  在“属性”窗格中，在 **DocumentMapLabel** 属性中键入要在文档结构图中显示的文本，或输入计算结果为标签的表达式。 例如，键入 **Sales Chart**。  
+2.  在“属性”窗格中，在 **DocumentMapLabel** 属性中键入要在文档结构图中显示的文本，或输入计算结果为标签的表达式。 例如，键入 **Sales Chart** 。  
   
     > [!NOTE]  
     >  如果看不到“属性”窗格，请在 **“视图”** 选项卡的 **“显示/隐藏”** 组中选择 **“属性”** 。  
@@ -58,8 +57,7 @@ ms.locfileid: "85061051"
 4.  单击 **“运行”** 。 将运行报表，并且文档结构图会显示您创建的标签。 单击任一链接，可跳至显示该报表项的报表页。  
 
   
-##  <a name="AddUniqueValuesToMap"></a>   
-#### <a name="to-add-unique-group-values-to-a-document-map"></a>向文档结构图添加唯一组值  
+##  <a name="to-add-unique-group-values-to-a-document-map"></a><a name="AddUniqueValuesToMap"></a> 向文档结构图添加唯一组值  
   
 1.  在“设计”视图中，选择包含要在文档结构图中显示的组的表、矩阵或列表。 “分组”窗格随即显示行组和列组。  
   
@@ -75,8 +73,7 @@ ms.locfileid: "85061051"
   
 7.  单击 **“运行”** 。 将运行报表，并且文档结构图会显示组值。 单击任一链接，可跳至显示该报表项的报表页。  
   
-##  <a name="HideMapWhenViewRpt"></a>   
-#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>查看报表时隐藏文档结构图  
+##  <a name="to-hide-the-document-map-when-you-view-a-report"></a><a name="HideMapWhenViewRpt"></a> 在查看报表时隐藏文档结构图  
   
 1.  在 Web 门户中，浏览到包含文档结构图的报表。  
   

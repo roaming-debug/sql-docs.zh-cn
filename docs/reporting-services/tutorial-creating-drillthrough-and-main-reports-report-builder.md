@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0e5d34588bef3022f340d6a52dded1b03aad30d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238380"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364639"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
 本教程教授如何创建两种 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 
@@ -166,7 +166,7 @@ ms.locfileid: "87238380"
   
 7.  单击“下一步”。  
   
-## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. 将数据组织到组中  
+## <a name="1c-organize-drillthrough-report-data-into-groups"></a><a name="DLayout"></a>1c. 将“钻取报表”数据整理到组中  
 在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
   
 #### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
@@ -192,7 +192,7 @@ ms.locfileid: "87238380"
   
 6.  单击“下一步”。  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. 添加小计和总计  
+## <a name="1d-add-drillthrough-report-subtotals-and-totals"></a><a name="DTotals"></a>1d. 添加钻取报表小计和总计  
 创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 还可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
   
 #### <a name="to-add-subtotals-and-totals"></a>添加小计和总计  
@@ -280,7 +280,7 @@ ms.locfileid: "87238380"
   
 报表标题包含第一个产品类别的名称。 以后，在您将此报表作为钻取报表运行时，产品类别名称将动态更改，以反映在主报表中单击的产品类别的名称。  
   
-## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5.更新参数属性  
+## <a name="5-set-hidden-parameter-property"></a><a name="DParameter"></a>5.设置隐藏参数属性  
 默认情况下，参数是可见的，但是这对此报表不合适。 您将更新钻取报表的参数属性。  
   
 #### <a name="to-hide-a-parameter"></a>隐藏参数  
@@ -323,7 +323,7 @@ ms.locfileid: "87238380"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  单击“ **保存**”。  
+4.  单击“ **保存** ”。  
   
     “最近使用的站点和服务器”列出 SharePoint 站点上的库。  
   
@@ -332,9 +332,9 @@ ms.locfileid: "87238380"
 6.  在“名称”框中，用 ResellerVSOnlineDrillthrough 替换默认名称 。  
   
     > [!NOTE]  
-    > 您将主报表保存到同一位置。 如果要将主报表和钻取报表保存到不同的站点或库，必须在主报表中更新“转到报表”操作的路径****。  
+    > 您将主报表保存到同一位置。 如果要将主报表和钻取报表保存到不同的站点或库，必须在主报表中更新“转到报表”操作的路径。  
   
-7.  单击“ **保存**”。  
+7.  单击“ **保存** ”。  
   
 ## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1.使用表或矩阵向导创建主报表  
 使用“表或矩阵向导”从“入门”对话框创建一个矩阵报表 。  
@@ -349,7 +349,7 @@ ms.locfileid: "87238380"
  
 2.  在“入门”对话框中，确认已选中“新建报表”，然后单击“表或矩阵向导”。  
   
-## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. 指定数据连接  
+## <a name="1a-add-embedded-data-source"></a><a name="MConnection"></a>1a. 添加嵌入数据源  
 您将嵌入数据源添加到主报表。  
   
 #### <a name="to-create-an-embedded-data-source"></a>创建嵌入数据源  
@@ -388,7 +388,7 @@ ms.locfileid: "87238380"
   
 14. 单击“下一步”。  
   
-## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. 创建 MDX 查询  
+## <a name="1b-create-embedded-dataset"></a><a name="MMDXQuery"></a>1b. 创建嵌入数据集  
 接下来将创建嵌入数据集。 为此，您将使用查询设计器来创建筛选器、参数和计算成员以及数据集本身。  
   
 #### <a name="to-create-query-filters"></a>创建查询筛选器  
@@ -444,7 +444,7 @@ ms.locfileid: "87238380"
   
 2.  在“元数据”窗格中，依次展开“度量值”和“Sales”。  
   
-3.  将“Sales Quantity”度量值拖到“表达式”框，键入减号字符 (-)，然后将“Sales Return Quantity”度量值拖到“表达式”框；将它放到减号字符后面********。  
+3.  将“Sales Quantity”度量值拖到“表达式”框，键入减号字符 (-)，然后将“Sales Return Quantity”度量值拖到“表达式”框；将它放到减号字符后面。  
   
     以下代码显示了该表达式：  
   
@@ -460,7 +460,7 @@ ms.locfileid: "87238380"
   
 6.  在“元数据”窗格中，依次展开“度量值”和“Sales”。  
   
-7.  将“Sales Amount”度量值拖到“表达式”框，键入减号字符 (-)，然后将“Sales Return Amount”度量值拖到“表达式”框；将它放到减号字符后面********。  
+7.  将“Sales Amount”度量值拖到“表达式”框，键入减号字符 (-)，然后将“Sales Return Amount”度量值拖到“表达式”框；将它放到减号字符后面。  
   
     以下代码显示了该表达式：  
   
@@ -468,7 +468,7 @@ ms.locfileid: "87238380"
     [Measures].[Sales Amount] - [Measures].[Sales Return Amount]  
     ```  
   
-8.  在“名称”框中，键入 **Net Sales**，然后单击“确定”。“计算成员”窗格将列出“Net Sales”计算成员。  
+8.  在“名称”框中，键入 **Net Sales** ，然后单击“确定”。“计算成员”窗格将列出“Net Sales”计算成员。  
   
 ### <a name="to-create-the-dataset"></a><a name="MSkip"></a>创建数据集  
   
@@ -486,7 +486,7 @@ ms.locfileid: "87238380"
   
 6.  单击“下一步”。  
   
-## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. 将数据组织到组中  
+## <a name="1c-organize-main-report-data-into-groups"></a><a name="MLayout"></a>1c. 将主报表数据整理到组中  
 在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
   
 #### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
@@ -505,7 +505,7 @@ ms.locfileid: "87238380"
   
     步骤 3 和 4 指定要在矩阵中显示的数据。  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. 添加小计和总计  
+## <a name="1d-add-main-report-subtotals-and-totals"></a><a name="MTotals"></a>1d. 添加主报表小计和总计  
 可以在报表中显示小计和总计。 主报表中的数据作为指示器显示；在完成向导后将删除总计。  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>添加小计和总计  
@@ -606,7 +606,7 @@ ms.locfileid: "87238380"
   
 6.  若要预览报表，请单击 **“运行”** 。  
   
-## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5.更新参数属性  
+## <a name="5-set-internal-parameter-property"></a><a name="MParameter"></a>5.设置内部参数属性  
 默认情况下，参数是可见的，但是这对此报表不合适。 您将更新参数属性以便使参数为内部参数。  
   
 #### <a name="to-make-the-parameter-internal"></a>使参数为内部参数  
@@ -632,7 +632,7 @@ ms.locfileid: "87238380"
   
 3.  选择键入的文本。  
   
-4.  在功能区的“主文件夹”选项卡上，在“字体”组中选择“Times New Roman”字体、“16pt”字号以及“加粗”和“倾斜”样式********************。  
+4.  在功能区的“主文件夹”选项卡上，在“字体”组中选择“Times New Roman”字体、“16pt”字号以及“加粗”和“倾斜”样式。  
   
 5.  若要预览报表，请单击 **“运行”** 。  
   
@@ -658,9 +658,9 @@ ms.locfileid: "87238380"
 6.  在“名称”中，用 ResellerVSOnlineMain 替换默认名称 。  
   
     > [!IMPORTANT]  
-    > 将主报表保存到保存钻取报表的同一位置。 若要将主报表和钻取报表保存到不同的站点或库，请确保主报表中的“转到报表”操作指向正确的钻取报表位置****。  
+    > 将主报表保存到保存钻取报表的同一位置。 若要将主报表和钻取报表保存到不同的站点或库，请确保主报表中的“转到报表”操作指向正确的钻取报表位置。  
   
-7.  单击“ **保存**”。  
+7.  单击“ **保存** ”。  
   
 ## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8.运行主报表和钻取报表  
 运行主报表，然后单击产品类别列中的值以运行钻取报表。  

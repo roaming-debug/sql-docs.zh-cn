@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd161a78bb0b5249d0ce6f802760acd2048014f6
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: de873f30e435a1513e8e642cf5e3a97641e147d6
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523961"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243726"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>连接到 SQL Server 或 Azure SQL 数据库
 
@@ -47,7 +47,7 @@ ms.locfileid: "92523961"
 
 1. 成功连接后，服务器将出现在“对象资源管理器”中：
 
-   ![已连接](../media/connect-to-server/connected.png)
+   ![显示服务器已成功连接的对象资源管理器的屏幕截图。](../media/connect-to-server/connected.png)
 
 ## <a name="next-steps"></a>后续步骤
 

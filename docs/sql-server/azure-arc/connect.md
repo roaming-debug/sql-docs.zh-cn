@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e80892bfef7ee2c8cf22aef1b491ab5ea0c0addd
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987993"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235561"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>将 SQL Server 连接到 Azure Arc
 
@@ -24,6 +24,10 @@ ms.locfileid: "91987993"
 * 你的计算机上至少安装了一个 SQL Server 实例
 * 对于 Windows 计算机，已安装 Azure PowerShell。 按照这些说明[安装 Azure PowerShell](/powershell/azure/install-az-ps)。
 * 对于 Linux 计算机，已下载 Azure CLI 并连接到 Azure 帐户。 按照说明[安装 Azure CLI](/cli/azure/install-azure-cli-apt)。
+* 已注册 Microsoft.AzureData 资源提供程序。 有关资源提供程序的详细信息，请参阅 Azure 资源提供程序和类型。
+    * 在 PowerShell 中运行 `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureData`
+    * 在 Linux 中运行 `az provider register --namespace 'Microsoft.AzureData`
+
 
 
 ## <a name="generate-a-registration-script-for-sql-server"></a>为 SQL Server 生成注册脚本

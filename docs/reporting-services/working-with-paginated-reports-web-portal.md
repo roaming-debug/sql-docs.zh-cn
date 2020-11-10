@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1ebe16bd9b9474b892346ec2a8dd6f25254c6d0b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935411"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243757"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>使用分页报表（Web 门户）
 
@@ -30,7 +30,7 @@ ms.locfileid: "91935411"
   
 2.  选择“分页报表”。  
   
-    ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
+    ![屏幕截图：已调出“分页报表”选项的“新建”下拉列表。](../reporting-services/media/ssrswebportal-new-report.png)  
   
 3.  这将启动报表生成器，或者提示你下载它。  
   
@@ -45,28 +45,28 @@ ms.locfileid: "91935411"
   
 1.  选择要管理的数据集旁边的省略号 (…)。  
       
-    ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
+    ![屏幕截图：用户选择数据集的省略号选项。](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
 2.  选择“管理”会将你转到编辑屏幕。  
     
-    ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
+    ![屏幕截图：已选择省略号选项，且已显示“管理”选项。](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
 ## <a name="properties"></a>属性  
   
 在属性屏幕中，可以更改分页报表的“名称”和“描述” 。 也可以“删除”、“移动”、“创建链接报表”、“在报表生成器中编辑”、“下载”或“替换”     。  
     
-![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
+![屏幕截图：“编辑公司销售额”对话框的“属性”屏幕。](../reporting-services/media/ssrswebportal-report-properties.png)  
    
 ## <a name="parameters"></a>参数  
   
 可以修改分页报表的现有参数。 若要添加新参数，必须在报表生成器或 SQL Server Data Tools 中编辑报表。  
   
-![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
+![屏幕截图：“编辑公司销售额”对话框的“参数”屏幕。](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
 ## <a name="data-source"></a>数据源  
 可以指向共享数据源，或输入自定义数据源的连接信息。  
   
-![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
+![屏幕截图：“编辑公司销售额”对话框的“数据源”屏幕。](../reporting-services/media/ssrswebportal-report-datasource.png)  
   
 下列选项用于指定自定义数据源。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "91935411"
   
 如果帐户为 Windows 凭据，指定的帐户对用来托管报表所用数据源的计算机必须具有本地登录权限。  
   
-选择“使用这些凭据登录，然后尝试模拟用户查看报表”可允许委托凭据，但前提是数据源支持模拟****。 对于 SQL Server 数据库，此选项设置“SETUSER”功能 对于 Analysis Services，此选项使用 EffectiveUserName。  
+选择“使用这些凭据登录，然后尝试模拟用户查看报表”可允许委托凭据，但前提是数据源支持模拟。 对于 SQL Server 数据库，此选项设置“SETUSER”功能 对于 Analysis Services，此选项使用 EffectiveUserName。  
   
 **通过提示用户查看报表以获取凭据**  
   
@@ -122,7 +122,7 @@ ms.locfileid: "91935411"
 ## <a name="subscriptions"></a>订阅  
 Reporting Services 订阅是一种配置，它在特定时间或为响应某个事件，以指定的文件格式传递报表。 例如，每周三将 MonthlySales.rdl 报表作为 Microsoft Word 文档保存至文件共享。 订阅可以用于对报表的传递（以特定报表参数值集）进行计划并使其自动完成。 有关详细信息，请参阅[使用订阅](working-with-subscriptions-web-portal.md)。
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
+![屏幕截图：“编辑公司销售额”对话框的“订阅”屏幕。](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>依赖项  
 使用“依赖项”页可以查看引用此报表的项的列表。 每个项类型的图标都指示了它是什么。 然后，可以选择每个项对应的省略号 (…) 进一步管理这些项。  
@@ -136,11 +136,11 @@ Reporting Services 订阅是一种配置，它在特定时间或为响应某个�
   
 3.  **始终对预先生成的快照运行此报表** 将缓存给定时间段内的报表布局和数据。 您可以按报表快照形式运行报表，以防止报表在任意时间运行（例如，在执行计划备份期间）。 可以按计划刷新快照。 [了解详细信息]  
   
-![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
+![屏幕截图：“编辑公司销售额”对话框中的“缓存”屏幕，其中已选中“始终用最新数据运行此报表”选项。](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
 选择“缓存此报表的副本并在可用时使用副本”时将显示更多选项。  
   
-![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+![屏幕截图：“编辑公司销售额”对话框中的“缓存”屏幕，其中已选中“缓存此报表的副本并在可用时使用副本”选项。](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
 有关详细信息，请参阅[使用快照](working-with-snapshots-web-portal.md)。
   
@@ -163,7 +163,7 @@ Reporting Services 订阅是一种配置，它在特定时间或为响应某个�
   
 完成后，你便可以选择“创建缓存刷新计划”。  
   
-![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
+![屏幕截图：显示了“创建缓存刷新计划”选项的“编辑公司销售额”对话框。](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
 > [!NOTE]
 > SQL Server 代理必须处于运行状态才能创建缓存刷新计划。  

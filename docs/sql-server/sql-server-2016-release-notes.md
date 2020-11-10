@@ -14,12 +14,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 19f906960bc31346f21e4afed436ff10517adebf
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 318dfd44b3c931b124372ce5ea60681b8c1e7e99
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985723"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235481"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -59,7 +59,7 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 |---|---|---|
 |对可用性组中数据库的完整 DTC 支持   |   SQL Server 2016 目前不支持可用性组中数据库的跨数据库事务。 我们在 SQL Server 2016 SP2 中引入了对可用性组数据库的分布式事务的完整支持。   |      |
 |更新到 sys.databases is_encrypted 列，准确反映 TempDB 的加密状态   |   对于 TempDB，sys.databases 中 is_encryptedcolumn 列的值为 1，即使是在关闭所有用户数据库的加密并重新启动 SQL Server 后也一样。 由于 TempDB 在这种情况下不再处于加密状态，因此该列中的值本该为 0。 从 SQL Server 2016 SP2 开始，sys.databases.is_encrypted 现可准确反映 TempDB 的加密状态。   |      |
-|用于生成已验证克隆和备份的新 DBCC CLONEDATABASE 选项   |   借助 SQL Server 2016 SP2，DBCC CLONEDATABASE 提供两个新选项：生成已验证克隆，或生成备份克隆。 使用 WITH VERIFY_CLONEDB 选项创建克隆数据库时，将创建并验证一致的数据库克隆，Microsoft 会为此提供支持，以便生产使用。 引进了新的属性来验证克隆是否已通过验证 SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’)。 使用 BACKUP_CLONEDB 选项创建克隆时，会在数据文件所在的同一文件夹中生成备份，以便客户将克隆移至不同的服务器或将其发送至 Microsoft 客户支持部门 (CSS) 进行故障排除。   |      |
+|用于生成已验证克隆和备份的新 DBCC CLONEDATABASE 选项   |   借助 SQL Server 2016 SP2，DBCC CLONEDATABASE 允许两个新选项：生成已验证克隆，或生成备份克隆。 使用 WITH VERIFY_CLONEDB 选项创建克隆数据库时，将创建并验证一致的数据库克隆，Microsoft 会为此提供支持，以便生产使用。 引进了新的属性来验证克隆是否已通过验证 SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’)。 使用 BACKUP_CLONEDB 选项创建克隆时，会在数据文件所在的同一文件夹中生成备份，以便客户将克隆移至不同的服务器或将其发送至 Microsoft 客户支持部门 (CSS) 进行故障排除。   |      |
 |DBCC CLONEDATABASE 的 Service Broker (SSB) 支持   |   已增强 DBCC CLONEDATABASE 命令，允许 SSB 对象的脚本编写。   |   [KB4092075](https://support.microsoft.com/help/4092075)   |
 |用于监视 TempDB 版本存储空间使用情况的新 DMV   |   SQL Server 2016 SP2 中引入了新的 sys.dm_tran_version_store_space_usage DMV，用于监视 TempDB 的版本存储使用情况。 DBA 现可根据每个数据库的版本存储使用情况要求主动地规划 TempDB 大小，且在生产服务器上运行时无需任何性能开销。   |      |
 |对复制代理的完全转储支持 | 现在，如果复制代理遇到未经处理的异常，则会默认创建异常现象的微型转储。 这使得难以对未经处理的异常问题进行故障排除。 通过此更改，我们引入了新的注册表项，这将允许为复制代理创建完全转储。   |      |
@@ -86,7 +86,7 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 | |已针对涉及批处理模式运算符的死锁对 XML 死锁图进行改进，将更多属性添加到了 SyncPoint 资源。| |
 |部分复制代理配置文件参数的动态重载   |   在目前复制代理的执行情况中，代理配置文件参数中产生的任何更改都要求停止并重启代理。 此改进允许在不重启复制代理的情况下动态重载参数。   |      |
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![水平条的屏幕截图。](media/horizontal-bar.png)
 
 ## <a name="sql-server-2016-service-pack-1-sp1"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 包含至 SQL Server 2016 RTM CU3 的所有累积更新，包括安全更新 MS16-136。 它包含 SQL Server 2016 累积更新（并包含最新累积更新 - CU3 和 2016 年 11 月 8 日发布的安全更新 MS16-136）中提供的解决方案的汇总。
@@ -134,7 +134,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 - [SQL Server 2016 Service Pack 1 的发布信息](https://support.microsoft.com/kb/3182545)
 - ![info_tip](../sql-server/media/info-tip.png) 有关所有受支持版本的链接和信息（包括 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的服务包），请参阅 [SQL Server 更新中心](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![水平条的另一个屏幕截图。](media/horizontal-bar.png)
 
 ##  <a name="sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [数据库引擎 (GA)](#bkmk_ga_instalpatch)
@@ -151,15 +151,15 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
     如果已安装 SQL Server 2016，请按顺序执行以下步骤：
 
-    1.  下载合适的 *vcredist_\*exe*。
+    1.  下载合适的 *vcredist_\*exe* 。
     1.  停止数据库引擎的所有实例的 SQL Server 服务。
-    1.  安装 **KB 3138367**。
+    1.  安装 **KB 3138367** 。
     1.  重新启动计算机。
 
 
  - 安装  [KB 3164398 - 适用于 SQL Server 2016 MSVCRT 系统必备的关键更新](https://support.microsoft.com/kb/3164398)。
 
-    如果使用 **KB 3164398**，可以在 SQL Server 安装过程中、通过 Microsoft 更新或从 Microsoft 下载中心进行安装。
+    如果使用 **KB 3164398** ，可以在 SQL Server 安装过程中、通过 Microsoft 更新或从 Microsoft 下载中心进行安装。
 
     - **在 SQL Server 2016 安装过程中：** 如果运行 SQL Server 安装程序的计算机具有 Internet 访问权限，那么作为整个 SQL Server 安装的一部分，SQL Server 安装程序将检查更新。 如果接受更新，安装程序将下载二进制文件并在安装过程中对文件进行更新。
 

@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a0b49b2cf9ac1e131e74ba39c1430492823e39e5
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247446"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043788"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：生成矩阵报表（报表生成器）
 本教程教你如何使用嵌套行组和列组中的示例销售数据的矩阵组件创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
 
 你还可以创建相邻列组、设置列的格式和旋转文本。 下图显示与您将创建的报表类似的报表。  
   
-![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
+![报表生成器矩阵报表的屏幕截图。](../reporting-services/media/report-builder-matrix-tutorial.png)
    
 完成本教程的估计时间：20 分钟。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "87247446"
   
 5.  单击“下一步”。  
   
-6.  在“选择数据源的连接”**** 页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 若要了解如何创建嵌入数据源，请参阅[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 若要了解如何创建嵌入数据源，请参阅[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  单击“下一步”。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "87247446"
   
     步骤 5 和 6 指定要在矩阵数据单元中显示的数据。
     
-    ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
+    ![显示报表生成器排列字段报表向导的屏幕截图。](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
 7.  单击“下一步”。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "87247446"
   
     矩阵将添加到设计图面中。 “行组”窗格显示两个行组：“Territory”和“SalesDate”。 “列组”窗格显示两个列组：“Subcategory”和“Product”。 详细信息数据是由数据集查询检索的所有数据。  
     
-    ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
+    ![显示报表生成器“行组”和“列组”的屏幕截图。](../reporting-services/media/report-builder-row-and-column-groups.png)
   
 14. 单击 **“运行”** 以预览报表。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "87247446"
 
 14. 展开子类别。 可以看到报表立刻变得很宽。
 
-![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
+![显示展开的报表生成器矩阵报表的屏幕截图。](../reporting-services/media/report-builder-expand-matrix.png)
   
 ## <a name="3-format-data"></a><a name="FormatData"></a>3.设置数据格式  
 默认情况下，Sales 字段的汇总数据显示一般数字，而 SalesDate 字段则显示日期和时间信息。 在本节中，设置 Sales 字段格式以便将数字显示为货币，并且设置 SalesDate 字段格式以便只显示日期。 切换“占位符样式”，将格式化的文本框和占位符文本显示为示例值。  
@@ -157,9 +157,9 @@ ms.locfileid: "87247446"
   
 3.  在“主文件夹”选项卡中，单击“数字” > “货币”  。 单元会更改为显示已设置好格式的货币。  
   
-    如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”  。  
+    如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00** ]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”  。  
     
-    ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
+    ![报表生成器“示例值”选项的屏幕截图。](../reporting-services/media/report-builder-placeholder-value.png)
   
 4.  单击包含 `[SalesDate]`的单元格。  
   
@@ -212,10 +212,10 @@ ms.locfileid: "87247446"
   
 报表包括名为 Monday 和 Tuesday 的列。 数据集仅包含针对这两天的数据。  
 
-![report-builder-matrix-weekdays](../reporting-services/media/report-builder-matrix-weekdays.png)
+![显示在报表生成器矩阵报表中显示的工作日的屏幕截图。](../reporting-services/media/report-builder-matrix-weekdays.png)
   
 > [!NOTE]  
-> 如果数据包括了其他天，则报表也将包括这些天的相应列。 每个列都具有列标题 **Sales**以及按地区统计的销售总额。  
+> 如果数据包括了其他天，则报表也将包括这些天的相应列。 每个列都具有列标题 **Sales** 以及按地区统计的销售总额。  
   
 ## <a name="5-change-column-widths"></a><a name="Width"></a>5.更改列宽  
 包括矩阵的报表填充以水平方式展开，并且在运行时以垂直方式展开。 如果您计划将数据导出到用于打印报表的格式（例如 Microsoft Word 或 Adobe PDF），则控制水平展开将特别重要。 如果报表跨多页水平展开，则打印报表将很难理解。 为了尽量缩小水平展开，您可以将列的大小调整为宽度仅供无需换行就可以显示数据。 您还可以重命名列，以便其标题适合显示数据所需的宽度。  
@@ -234,7 +234,7 @@ ms.locfileid: "87247446"
   
     沿此表的上方和一侧显示的灰色条状物就是列控点和行控点。  
     
-    ![report-builder-column-handles](../reporting-services/media/report-builder-column-handles.png)
+    ![报表生成器矩阵报表中的列图柄和行图柄的屏幕截图。](../reporting-services/media/report-builder-column-handles.png)
   
 5.  若要将 QTY 列向最左侧调整，请指向列控点之间的线条，使光标变为双箭头。 将列向左侧拖动，直到宽度为 1/2 英寸。  
   
@@ -311,7 +311,7 @@ ms.locfileid: "87247446"
   
 4.  在“名称”中，用“SalesByTerritorySubcategory”替换默认名称。  
   
-5.  单击“ **保存**”。  
+5.  单击“ **保存** ”。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -323,7 +323,7 @@ ms.locfileid: "87247446"
   
 3.  在“名称”中，用“SalesByTerritorySubcategory”替换默认名称。  
   
-4.  单击“ **保存**”。  
+4.  单击“ **保存** ”。  
   
 ## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9.（可选）将文本框旋转 270 度  
 具有矩阵的报表在运行时可以垂直方式和水平方式展开。 通过垂直旋转文本框或者旋转 270 度，您可以节约水平空间。 呈现的报表然后将更窄，并且如果导出到 Microsoft Word 之类的格式，报表将更有可能适合打印页面。  
@@ -336,9 +336,9 @@ ms.locfileid: "87247446"
   
 2.  选择包含 的单元格。 `[Territory].` 
 
-    >**注意**：选择单元格，而不是文本。 WritingMode 属性仅可用于该单元格。
+    >**注意** ：选择单元格，而不是文本。 WritingMode 属性仅可用于该单元格。
     
-     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+     ![显示报表生成器矩阵报表中“Territory”单元格的屏幕截图。](../reporting-services/media/report-builder-select-territory-cell.png)
   
 3.  在“属性”窗格中，找到 WritingMode 属性，并将其值从“默认”更改为“Rotate270”。  
   
@@ -346,7 +346,7 @@ ms.locfileid: "87247446"
   
 4.  请确认 CanGrow 属性设置为“True”。  
   
-5.  在“开始”选项卡上的“段落”部分中，选择“垂直居中”和“水平居中”，以便从垂直和水平方向上都将文本定位于单元格的中心****************。  
+5.  在“开始”选项卡上的“段落”部分中，选择“垂直居中”和“水平居中”，以便从垂直和水平方向上都将文本定位于单元格的中心。  
  
 6. 将 Territory 列的大小调整为 1/2 英寸宽，并且删除列标题。  
 6.  单击 **“运行”** 以预览报表。  

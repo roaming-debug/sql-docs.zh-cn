@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 2270305d9fd3ae3bacdccee6166f02e305f94361
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 82f02f877ea271a5c663a8d9139c940cdbcc1faa
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512323"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235455"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 监视合作伙伴
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -24,10 +24,10 @@ ms.locfileid: "88512323"
 | Partner | 说明 | 链接 |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL 诊断管理器是一种功能强大的性能监视和诊断解决方案，它可以主动向管理员警报 SQL Server 环境中的运行状况、性能和可用性问题，且所有操作均可从一个中央控制台完成。<br><br>[系统要求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[网站][idera_website]<br>[Twitter][idera_twitter]<br>[视频][idera_youtube] | |
-|[![quest][3]][quest_website] |**Quest**<br>Spotlight on SQL Server Enterprise - 利用卓越的 SQL Server 环境监控、诊断和优化，全天候确保出色的性能。 Spotlight 可提供对您所需的详细信息的访问权限，以实现 SQL Server 数据库的出色适用性。 获得直观的运行状况和性能概述、自动化警报和操作，以及移动设备支持。|[市场][quest_marketplace]<br>[网站][quest_website]<br>[视频][quest_video] | |
-|[![redgate][4]][redgate_website]| **Redgate**<br>Redgate 的 SQL Monitor 是一个 SQL Server 监视工具，可帮助管理 SQL Server 的团队能更变得更加主动。 SQL Monitor 不仅会警报当前存在的问题，还会提供防止将来发生这些问题所需的信息。 非常适合大型 SQL Server 财产，SQL Monitor 确保你始终能够回答有关性能的问题。 |[网站][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[视频][redgate_video]| |
-|[![sentryone][2]][sentryone_website] |**SentryOne**<br>SentryOne 解决方案使 Microsoft 数据专业人员能在物理、虚拟和云环境中实现显著的性能。 借助 SentryOne，数据专业人员可以合并他们的工具集、降低基础架构成本，并提高数据库速度和效率，以在整个 Microsoft 数据平台环境中实现出色的性能，而不考虑环境的规模或复杂程度。|<!--[Marketplace][idera_marketplace]<br>-->[网站][sentryone_website]<br>[数据表][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
-|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>通过数据库性能分析器，可查看应用程序请求、SQL 语句、数据库资源、主机/操作系统、网络、虚拟化和存储性能。 DPA 合并了等待时间分析，因此不仅会关注运行状况，还会关注数据库响应应用程序请求的速度。 DPA 提供有关数据库的全面信息，而无论其部署方式。 无论是物理、虚拟、云还是 DBaaS，我们都能在一个平台中提供所有信息。|[市场][solarwinds_marketplace]<br>[网站][solarwinds_website]<br>[数据表][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[视频][solarwinds_video]| |
+|[![quest 徽标][3]][quest_website] |**Quest**<br>Spotlight on SQL Server Enterprise - 利用卓越的 SQL Server 环境监控、诊断和优化，全天候确保出色的性能。 Spotlight 可提供对您所需的详细信息的访问权限，以实现 SQL Server 数据库的出色适用性。 获得直观的运行状况和性能概述、自动化警报和操作，以及移动设备支持。|[市场][quest_marketplace]<br>[网站][quest_website]<br>[视频][quest_video] | |
+|[![redgate 徽标][4]][redgate_website]| **Redgate**<br>Redgate 的 SQL Monitor 是一个 SQL Server 监视工具，可帮助管理 SQL Server 的团队能更变得更加主动。 SQL Monitor 不仅会警报当前存在的问题，还会提供防止将来发生这些问题所需的信息。 非常适合大型 SQL Server 财产，SQL Monitor 确保你始终能够回答有关性能的问题。 |[网站][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[视频][redgate_video]| |
+|[![sentryone 徽标][2]][sentryone_website] |**SentryOne**<br>SentryOne 解决方案使 Microsoft 数据专业人员能在物理、虚拟和云环境中实现显著的性能。 借助 SentryOne，数据专业人员可以合并他们的工具集、降低基础架构成本，并提高数据库速度和效率，以在整个 Microsoft 数据平台环境中实现出色的性能，而不考虑环境的规模或复杂程度。|<!--[Marketplace][idera_marketplace]<br>-->[网站][sentryone_website]<br>[数据表][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
+|[![solarwinds 徽标][5]][solarwinds_website] |**Solarwinds**<br>通过数据库性能分析器，可查看应用程序请求、SQL 语句、数据库资源、主机/操作系统、网络、虚拟化和存储性能。 DPA 合并了等待时间分析，因此不仅会关注运行状况，还会关注数据库响应应用程序请求的速度。 DPA 提供有关数据库的全面信息，而无论其部署方式。 无论是物理、虚拟、云还是 DBaaS，我们都能在一个平台中提供所有信息。|[市场][solarwinds_marketplace]<br>[网站][solarwinds_website]<br>[数据表][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[视频][solarwinds_video]| |
 
 
 

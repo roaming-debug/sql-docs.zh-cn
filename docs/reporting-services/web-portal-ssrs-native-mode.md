@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 301d77a972da39f4e3e046e5e983206e9a1ba5c9
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987373"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243749"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>报表服务器的 Web 门户（SSRS 本机模式）
 
@@ -22,7 +22,7 @@ ms.locfileid: "91987373"
 
 Reporting Services 报表服务器的 Web 门户基于 Web 体验。 在门户中，可以查看报表、移动报表、KPI，并浏览报表服务器实例中的元素。 还可以使用 Web 门户管理单个报表服务器实例。
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png)
+![显示 SQL Server Reporting Services 门户的屏幕截图。](../reporting-services/media/ssrsportal.png)
 
 ## <a name="what-is-the-web-portal"></a>什么是 Web 门户
 
@@ -86,15 +86,15 @@ Web 门户将项按不同的类别分组。 可用类别如下。
 
 通过选择右上方的“视图”可以控制显示的内容。 如果选择“显示隐藏项”，这些项将以较浅的颜色显示出来。
 
-![ssRSWebPortal-view](../reporting-services/media/ssrswebportal-view.png)
+![“视图”下拉列表的屏幕截图，其中已选择“显示隐藏项”选项。](../reporting-services/media/ssrswebportal-view.png)
 
-![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
+![屏幕截图：不可用的“分页报表”选项。](../reporting-services/media/ssrswebportal-hidden.png)
 
 ### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Power BI 桌面报表和 Excel 工作薄
 
 可以上传、组织和管理 Power BI 桌面报表和 Excel 工作薄的权限。 它们会在 Web 门户中被分组到一起。
 
-![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
+![显示“Power BI Desktop 报表”部分和“Excel 工作簿”部分的屏幕截图。](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
 与其他资源文件类似，文件将存储在 Reporting Services 内。 选择其中一项会将它们下载到本地桌面。 可以通过将更改重新上传到报表服务器来保存已做更改。
 
@@ -102,7 +102,7 @@ Web 门户将项按不同的类别分组。 可用类别如下。
 
 输入搜索术语，并查看可以访问的所有内容。 结果分为 KPI、报表、数据集和其他项。 然后可以对结果进行交互并将它们添加到你的收藏夹。
 
-![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
+![SQL Server Reporting Services 门户的屏幕截图，其中已调出搜索文本框。](../reporting-services/media/ssrswebportal-search.png)
 
 ## <a name="web-portal-tasks"></a>Web 门户任务
 

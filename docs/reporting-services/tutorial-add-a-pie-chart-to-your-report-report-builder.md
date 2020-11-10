@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a924e8e6ed7a19904ddc9c8cded38683b849edeb
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245664"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043744"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
 在本教程中，将在 Reporting Services 分页报表中创建饼图。 添加百分比，并将小切片合并为一个切片。
@@ -23,7 +23,7 @@ ms.locfileid: "87245664"
 
 此图显示了将创建的饼图。 
  
-![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
+![报表生成器饼图的屏幕截图。](../reporting-services/media/report-builder-pie-chart-final.png)
   
 如果饼图上有太多数据点，这些数据点就可能挤在一起，这会降低图表的可读性。 在这种情况下，请考虑将多个小切片组合成一个更大的切片。 将数据聚合到少量数据点之后，饼图更具可读性。  
  
@@ -51,7 +51,7 @@ ms.locfileid: "87245664"
   
 4.  在“选择数据集”页上，单击“创建数据集”，然后单击“下一步”  。  
   
-5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”********。 您可能需要输入用户名和密码。  
+5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”。 您可能需要输入用户名和密码。  
   
     > [!NOTE]  
     > 只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -94,7 +94,7 @@ ms.locfileid: "87245664"
   
     图表将添加到设计图面中。 看不到饼图的实际值 -- 只能看到 Product 1、Product 2 等，以便了解该图表的显示外观。  
     
-    ![report-builder-pie-chart-first-design](../reporting-services/media/report-builder-pie-chart-first-design.png)
+    ![设计视图下的报表生成器饼图的屏幕截图。](../reporting-services/media/report-builder-pie-chart-first-design.png)
   
 6.  单击图表以显示图表控点。 拖动图表右下角将其放大。 请注意，为适应报表大小，报表设计图面也会变大。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "87245664"
   
 报表会显示具有 8 个切片的饼图，每个产品对应一个切片。 现在可以看到实际产品和每个切片大小所表示的该产品的销售额。 其中有三个切片非常薄。  
 
-![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
+![显示报表生成器饼图预览的屏幕截图。](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
 ## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3.在每个切片中显示百分比  
 在饼图的每个切片上，可以显示此切片占整个饼图的百分比。  
@@ -116,7 +116,7 @@ ms.locfileid: "87245664"
   
 4.  在“标签数据”框中，选择“#PERCENT”。  
     
-5.  （可选）若要指定标签显示的小数位数，在“标签数据”**** 框的“#PERCENT”**** 后面键入 **{Pn}**，其中 n** 为要显示的小数位数。 例如，若不显示小数位数，请键入 **#PERCENT{P0}** 。  
+5.  （可选）若要指定标签显示的小数位数，在“标签数据”框的“#PERCENT”后面键入 **{Pn}** ，其中 n 为要显示的小数位数。 例如，若不显示小数位数，请键入 **#PERCENT{P0}** 。  
 
 6.  若要将值显示为百分比，则 UseValueAsLabel 属性必须为 false。 如果系统提示设置此值，请在“确认操作”对话框中单击“是”。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "87245664"
   
 报表会显示每个饼图切片占总体的百分比。  
 
-![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![显示报表生成器饼图预览的屏幕截图，其中每个切片中都显示了百分比。](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
 ## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4.将多个小型切片合并为一个切片  
 在饼图所包含的切片中，有三个切片非常小。 可以将多个小切片合并为一个表示所有三个小切片的大型“其他”切片。  
@@ -144,7 +144,7 @@ ms.locfileid: "87245664"
   
 5.  将“CollectedStyle”属性设置为“SingleSlice”。  
 
-    ![report-builder-pie-chart-single-slice-property](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![显示如何在报表生成器饼图中设置单个切片的属性的屏幕截图。](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
 6.  确保将“CollectedThreshold”属性设置为“5”。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "87245664"
   
 现在，在图例中可看到类别“其他”。 新饼图切片将所有小于 5% 的切片组合成一个占整个饼图 6% 的切片。  
 
-![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![显示报表生成器如何在与图表顶部成 90 度的位置开始绘制饼图的屏幕截图。](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
 ## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5.从顶部开始绘制饼图值 
 
@@ -172,7 +172,7 @@ ms.locfileid: "87245664"
 
 现在，饼图切片从顶部开始按字母顺序排列，“其他”切片位于末尾。
 
-![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![显示如何从顶部开始绘制报表生成器饼图的屏幕截图。](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6.添加报表标题  
   
@@ -182,13 +182,13 @@ ms.locfileid: "87245664"
 
 2. 在设计图面上，单击“单击以添加标题”。  
   
-2.  键入 **Camera and Camcorder Sales**，按 Enter，然后键入 **As a Percentage of Total Sales**，如下所示：  
+2.  键入 **Camera and Camcorder Sales** ，按 Enter，然后键入 **As a Percentage of Total Sales** ，如下所示：  
   
     **Camera and Camcorder Sales**  
   
     **As a Percentage of Total Sales**  
   
-3.  选择 **Camera and Camcorder Sales**，然后在“开始”选项卡上的“字体”部分，单击“加粗”。  
+3.  选择 **Camera and Camcorder Sales** ，然后在“开始”选项卡上的“字体”部分，单击“加粗”。  
   
 4.  选择“As a Percentage of Total Sales”，然后在“开始”选项卡上的“字体”部分中，将字号设置为“10”。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "87245664"
   
 3.  在“名称”中，键入“Sales Pie Chart”。  
   
-4.  单击“ **保存**”。  
+4.  单击“ **保存** ”。  
   
 报表将保存在报表服务器上。  
   

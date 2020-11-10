@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b189c494f887faca2b6d3d4bb00253992470132
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3a4bada590dc9bea822aadffd102b49e75d10cf
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247456"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043828"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
 在本教程中，将创建充当新闻稿的分页报表。 每一页都会显示静态文本、汇总视觉对象和详细的示例销售数据。
 
-![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
+![报表生成器自由格式报表的屏幕截图。](../reporting-services/media/report-builder-free-form-report-complete.png)
 
 该报表按地区对信息进行分组，并且显示该地区的销售经理的姓名以及详细和汇总销售信息。 从使用列表数据区域作为自由格式报表的基础开始，然后添加具有图像的装饰性面板、插入数据的静态文本、用于显示详细信息的表以及可选的用于显示汇总信息的饼图和柱形图。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "87247456"
   
 2.  在“名称”框中键入：ListDataset。  
   
-3.  单击“使用在我的报表中嵌入的数据集” ，然后验证数据源是否为 **ListDataSource**。  
+3.  单击“使用在我的报表中嵌入的数据集” ，然后验证数据源是否为 **ListDataSource** 。  
   
 4.  确保已选择 **“文本”** 查询类型，然后单击 **“查询设计器”** 。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "87247456"
   
     查询结果将是可用于在您的报表中显示的数据。  
   
-    ![report-builder-free-form-tutorial-data](../reporting-services/media/report-builder-free-form-tutorial-data.png) 
+    ![查询设计器的屏幕截图，其中显示了可在报表生成器自由格式报表中显示的数据。](../reporting-services/media/report-builder-free-form-tutorial-data.png) 
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -132,9 +132,9 @@ ms.locfileid: "87247456"
   
 2.  单击列表框内部，然后右键单击列表顶部栏，单击“Tablix 属性”。  
   
-    ![report-builder-free-form-tablix-properties](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
+    ![显示报表生成器自由格式报表的“Tablix 属性”选项的屏幕截图。](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
   
-3.  在 **“数据集名称”** 下拉列表中，选择 **ListDataset**。  
+3.  在 **“数据集名称”** 下拉列表中，选择 **ListDataset** 。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -148,7 +148,7 @@ ms.locfileid: "87247456"
   
 1.  在“行组”窗格中，右键单击“详细信息”组，指向 **“添加组”** ，然后单击 **“父组”** 。  
   
-    ![report-builder-free-form-add-parent-group](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
+    ![显示如何将父组添加到报表生成器自由格式报表的屏幕截图。](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
 2.  在“分组依据”列表中，选择 `[Territory].`  
   
@@ -158,7 +158,7 @@ ms.locfileid: "87247456"
   
 4.  右键单击列表中的 Territory 列，然后单击 **“删除列”** 。  
   
-    ![report-builder-free-form-delete-columns](../reporting-services/media/report-builder-free-form-delete-columns.png)
+    ![显示如何在报表生成器自由格式报表中删除列的屏幕截图。](../reporting-services/media/report-builder-free-form-delete-columns.png)
   
 5.  选择“仅删除列”。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "87247456"
   
 报表的左侧现在有一个垂直图形，该图形由一个浅灰色的矩形构成，如下图中所示。  
   
-![report-builder-free-form-gray-rectangle](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
+![报表生成器的屏幕截图，其中显示由浅灰色矩形构成的垂直图形。](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
  
 ## <a name="4-add-free-form-text"></a><a name="Text"></a>4.添加自由格式的文本  
 可以添加文本框，用于显示在每个报表页上都重复的静态文本，以及数据字段。  
@@ -206,7 +206,7 @@ ms.locfileid: "87247456"
   
 4.  将“ `[Territory]` ”字段从“报表数据”窗格的“ListDataSet”拖到文本框中，将它放在“Newsletter for ”后面。  
   
-    ![report-builder-free-form-territory-field](../reporting-services/media/report-builder-free-form-territory-field.png)
+    ![显示如何将“Territory”字段拖到报表生成器自由格式报表中的屏幕截图。](../reporting-services/media/report-builder-free-form-territory-field.png)
   
 5.  选择文本和“ `[Territory]` ”字段。  
   
@@ -245,7 +245,7 @@ ms.locfileid: "87247456"
       *  “10 磅”。
       *  “黑色”。  
  
-20. 将光标置于文本框内无意义文本的下方，然后键入 **Congratulations on your total sales of**并在文本后面加一个空格，以将文本与将要在下一步中添加的字段分隔开来。 
+20. 将光标置于文本框内无意义文本的下方，然后键入 **Congratulations on your total sales of** 并在文本后面加一个空格，以将文本与将要在下一步中添加的字段分隔开来。 
   
 21. 将“Sales”字段拖到文本框中，放在之前步骤中键入的文本后面，然后键入一个感叹号 (!)。  
 
@@ -267,7 +267,7 @@ ms.locfileid: "87247456"
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    ![report-builder-free-form-text-box](../reporting-services/media/report-builder-free-form-text-box.png)
+    ![显示报表生成器自由格式报表中的文本框的屏幕截图。](../reporting-services/media/report-builder-free-form-text-box.png)
  
 29. 仍然选择“`[Sum(Sales)]`”，在“主文件夹”选项卡上，依次单击“数字”组和“货币”  。  
   
@@ -275,13 +275,13 @@ ms.locfileid: "87247456"
   
 31. 选择列表框。 选择两个双头箭头，将它移到页面顶部。  
 
-    ![report-builder-drag-list](../reporting-services/media/report-builder-drag-list.png)
+    ![显示如何在报表生成器自由格式报表中拖动列表的屏幕截图。](../reporting-services/media/report-builder-drag-list.png)
   
 32. 单击 **“运行”** 以预览报表。  
   
 报表将显示静态文本，并且每个报表页都包括属于某个地区的数据。 销售额的格式设为货币。  
   
-![report-builder-newsletter-page-preview](../reporting-services/media/report-builder-newsletter-page-preview.png)
+![显示报表生成器自由格式报表中新闻稿页面预览的屏幕截图。](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
 ## <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5.添加一个表以显示销售详细信息  
 使用新建表和矩阵向导可以将表添加到自由格式的报表。 完成向导后，您将手动添加一个合计行。  
@@ -313,11 +313,11 @@ ms.locfileid: "87247456"
   
 12. 选中该表，在“行组”窗格中右键单击“详细信息” > “添加总计” > “之后”   。  
   
-    ![report-builder-free-form-table-totals](../reporting-services/media/report-builder-free-form-table-totals.png)
+    ![显示如何将总计添加到报表生成器自由格式报表的屏幕截图。](../reporting-services/media/report-builder-free-form-table-totals.png)
   
-13. 选择“Product”列中的单元，然后键入 **Total**。
+13. 选择“Product”列中的单元，然后键入 **Total** 。
 
-    ![report-builder-free-form-type-total](../reporting-services/media/report-builder-free-form-type-total.png)
+    ![“Product”列中的单元格的屏幕截图，其中已键入“Total”。](../reporting-services/media/report-builder-free-form-type-total.png)
 
 12. 选择“[SalesDate]”字段。 在“主文件夹”选项卡上，单击“数字”，将“默认值”更改为“Date”   。
 
@@ -327,7 +327,7 @@ ms.locfileid: "87247456"
   
 该报表将显示具有销售详细信息和总计的一个表。  
   
-![report-builder-free-form-with-table](../reporting-services/media/report-builder-free-form-with-table.png)
+![显示报表生成器自由格式报表中该表预览的屏幕截图。](../reporting-services/media/report-builder-free-form-with-table.png)
    
 ## <a name="6-save-the-report"></a><a name="Save"></a>6.保存报表  
 您可以将报表保存到报表服务器、SharePoint 库或本地计算机。  
@@ -344,9 +344,9 @@ ms.locfileid: "87247456"
   
     此时将显示“正在连接到报表服务器”消息。 当连接完成时，您将看到报表服务器管理员指定为报表默认位置的报表文件夹的内容。  
   
-4.  在 **“名称”** 中，用 **SalesInformationByTerritory**替换默认名称。  
+4.  在 **“名称”** 中，用 **SalesInformationByTerritory** 替换默认名称。  
   
-5.  单击“ **保存**”。  
+5.  单击“ **保存** ”。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -356,9 +356,9 @@ ms.locfileid: "87247456"
   
 2.  单击 **“桌面”** 、 **“我的文档”** 或 **“我的电脑”** ，然后浏览到要将报表保存到的文件夹。  
   
-3.  在 **“名称”** 中，用 **SalesInformationByTerritory**替换默认名称。  
+3.  在 **“名称”** 中，用 **SalesInformationByTerritory** 替换默认名称。  
   
-4.  单击“ **保存**”。  
+4.  单击“ **保存** ”。  
   
 ## <a name="7-optional-add-a-line-to-separate-areas-of-the-report"></a><a name="Line"></a>7.（可选）添加线条以便分隔报表区域  
 添加线条可以分隔报表的可编辑区域和详细信息区域。  
@@ -384,7 +384,7 @@ ms.locfileid: "87247456"
   
 2.  在“插入”选项卡上，单击“报表项” >  “矩形”  。 将列表框内的矩形拖到表的右侧，将矩形设为约 2.25 英寸宽，7.9 英寸高。  
   
-3.  选中新矩形，在“属性”窗格中，将 **边框颜色设为浅灰色**、 **边框样式设为纯色**以及 **边框宽度设为 2 磅**。 
+3.  选中新矩形，在“属性”窗格中，将 **边框颜色设为浅灰色** 、 **边框样式设为纯色** 以及 **边框宽度设为 2 磅** 。 
 
 4. 将矩形的顶部和表的顶部对齐。  
   
@@ -421,7 +421,7 @@ ms.locfileid: "87247456"
 
 16. 根据需要通过拖动让图表区域更高。
 
-     ![report-builder-free-form-pie](../reporting-services/media/report-builder-free-form-pie.png)
+     ![显示要添加到报表生成器自由格式报表的饼图的屏幕截图。](../reporting-services/media/report-builder-free-form-pie.png)
   
 ## <a name="to-add-a-column-chart"></a>添加柱形图  
   
@@ -457,7 +457,7 @@ ms.locfileid: "87247456"
     > [!NOTE]  
     > 删除图例可在图表较小时提高图表的可读性。  
   
-    ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
+    ![显示要添加到报表生成器自由格式报表的柱形图的屏幕截图。](../reporting-services/media/report-builder-free-form-column.png)
 
 12. 选择图表轴，然后在“开始”选项卡上单击“数字” > “货币”  。
 
@@ -470,13 +470,13 @@ ms.locfileid: "87247456"
   
     在“属性”窗格中， **Name** 属性显示矩形的名称。  
   
-    ![report-builder-free-form-rectangle-name](../reporting-services/media/report-builder-free-form-rectangle-name.png) 
+    ![显示如何在报表生成器自由格式报表中查看“Name”属性的屏幕截图。](../reporting-services/media/report-builder-free-form-rectangle-name.png) 
   
 2.  单击饼图。  
   
 3.  在 **“属性”** 窗格中，确认 **Parent** 属性包含矩形的名称。  
   
-     ![report-builder-free-form-pie-parent](../reporting-services/media/report-builder-free-form-pie-parent.png) 
+     ![显示如何在报表生成器自由格式报表中查看“Parent”属性的屏幕截图。](../reporting-services/media/report-builder-free-form-pie-parent.png) 
   
 4.  单击柱形图，重复步骤 3。  
   

@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: b44e664d75735a6283d12f218b904fbdd07ad481
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1af364896504dff41ab01095a69e8f581e792096
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396529"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243701"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新增功能
 
@@ -29,7 +29,7 @@ ms.locfileid: "87396529"
 
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-**下载** ![下载](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "下载")
+**下载** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 可通过 Microsoft 下载中心下载 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)。
 
@@ -67,7 +67,7 @@ SQL Server 2019 现支持适用于企业版和标准版的 SSRS 目录数据库�
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
 
-**下载** ![下载](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "下载")
+**下载** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 若要下载 SQL Server 2017 Reporting Services，请转到 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=55252)。
 
@@ -117,7 +117,7 @@ SQL Server 2019 现支持适用于企业版和标准版的 SSRS 目录数据库�
 
 有关 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]的详细信息，请参阅 [Web 门户（SSRS 本机模式）](../reporting-services/web-portal-ssrs-native-mode.md)。  
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
+![显示 SQL Server Reporting Services 门户的屏幕截图。](../reporting-services/media/ssrsportal.png "ssRSPortal")  
 
 #### <a name="custom-branding-for-the-ssrswebportal-non-markdown"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -129,7 +129,7 @@ SQL Server 2019 现支持适用于企业版和标准版的 SSRS 目录数据库�
 
 可以在 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中直接创建与当前文件夹有上下文关系的 KPI。 在创建 KPI 时，可以选择数据集字段并汇总它们的值。 还可以选择相关内容以钻取到更多详细信息。
 
-![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
+![屏幕截图：SQL Server Reporting Services 门户中的 KPI。](../reporting-services/media/ssrs-webportal-kpi.png)
 
 有关详细信息，请参阅[使用 Web 门户中的 KPI](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
 
@@ -194,13 +194,13 @@ Reporting Services 移动报表是针对各种外形规格进行了优化的专�
 
 ![说明](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注") 刷新由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅管理，固定项之后，可编辑该订阅并配置不同的刷新计划。
 
-![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
+![显示“固定到 Power BI 仪表板”对话框的屏幕截图。](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
 有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)和[将 Reporting Services 项固定到 Power BI 仪表板](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。  
 
 **PowerPoint 呈现和导出：** Microsoft PowerPoint (PPTX) 格式是一种新的 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 呈现扩展插件。 你可以采用 PPTX 格式从以下常用应用程序导出报表：报表生成器、报表设计器（在 SSDT 中）和 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]。 如需示例，请参阅下图，其中显示了 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中的导出菜单。 
 
-![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
+![屏幕截图：已调出“PowerPoint”选项的“导出”下拉列表。](../reporting-services/media/ssrs-export-powerpoint.png) 
 
 你还可以选择适用于订阅输出的 PPTX 格式，并使用 Report Server URL 访问权限来呈现和导出报表。 例如，浏览器中的以下 URL 命令从报表服务器的命名实例导出报表。  
 
@@ -214,16 +214,16 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 有关详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。
 
-![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
+![“打印”对话框的屏幕截图。](../reporting-services/media/ssrs-pdf-printing.png)
 
 ### <a name="subscription-improvements"></a>订阅改进  
 
 |Feature|支持的服务器模式|  
 |-------------|---------------------------|  
-|**启用和禁用订阅**。 新用户界面选项可以快速禁用和启用订阅。 已禁用的订阅将维持自身的其他配置属性（例如计划），并且可以轻松地启用。<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 有关详细信息，请参阅 [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)。|本机模式|  
-|**订阅说明**。 你现在可以在创建新订阅时提供报表说明，作为订阅属性的一部分。 说明在订阅摘要页中提供。|SharePoint 和本机模式|  
-|**更改订阅所有者**。 增强的用户界面，可以快速更改订阅的所有者。 旧版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 允许管理员使用脚本来更改订阅所有者。 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 版本开始，你可以使用用户界面或脚本更改订阅所有者。 当用户离开组织或者更改其在组织中的角色时，就需要更改订阅所有者，这是一项常规管理任务。|SharePoint 和本机模式|  
-|**文件共享订阅的共享凭据**。 现在，两个工作流与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 文件共享订阅共存：<br /><br /> 使用此版本中的新增功能，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理员可以配置单个文件共享帐户，该帐户可用于多个订阅。 文件共享帐户在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式配置管理器“指定文件共享帐户”中配置。 在“订阅配置”页面上，用户可选择“使用文件共享帐户”。<br /><br /> 使用目标文件共享的特定凭据配置单独的订阅。<br /><br /> 你还可以混合使用这两种方法，使一些文件共享订阅使用中央文件共享帐户，而其他订阅使用特定的凭据。|本机模式|
+|**启用和禁用订阅** 。 新用户界面选项可以快速禁用和启用订阅。 已禁用的订阅将维持自身的其他配置属性（例如计划），并且可以轻松地启用。<br /><br /> ![显示“启用”、“禁用”和“删除”选项的屏幕截图。](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 有关详细信息，请参阅 [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)。|本机模式|  
+|**订阅说明** 。 你现在可以在创建新订阅时提供报表说明，作为订阅属性的一部分。 说明在订阅摘要页中提供。|SharePoint 和本机模式|  
+|**更改订阅所有者** 。 增强的用户界面，可以快速更改订阅的所有者。 旧版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 允许管理员使用脚本来更改订阅所有者。 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 版本开始，你可以使用用户界面或脚本更改订阅所有者。 当用户离开组织或者更改其在组织中的角色时，就需要更改订阅所有者，这是一项常规管理任务。|SharePoint 和本机模式|  
+|**文件共享订阅的共享凭据** 。 现在，两个工作流与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 文件共享订阅共存：<br /><br /> 使用此版本中的新增功能，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理员可以配置单个文件共享帐户，该帐户可用于多个订阅。 文件共享帐户在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式配置管理器“指定文件共享帐户”中配置。 在“订阅配置”页面上，用户可选择“使用文件共享帐户”。<br /><br /> 使用目标文件共享的特定凭据配置单独的订阅。<br /><br /> 你还可以混合使用这两种方法，使一些文件共享订阅使用中央文件共享帐户，而其他订阅使用特定的凭据。|本机模式|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 

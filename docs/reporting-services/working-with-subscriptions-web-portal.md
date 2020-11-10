@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4efd72f1c2d6f9098e2af4840483d38d4749d264
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243546"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243740"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>使用订阅（Web 门户）
 
@@ -44,7 +44,7 @@ ms.locfileid: "87243546"
 ## <a name="type-of-subscription"></a>订阅的类型  
 可以在“标准订阅”与“数据驱动订阅”之间进行选择 。  
   
-![ssRSWebPortal subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
+![显示“订阅类型”部分的屏幕截图。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
 数据驱动订阅是在每次运行订阅时，都会在订阅服务器数据库中查询订阅信息的订阅。 数据驱动订阅使用查询结果来确定订阅的收件人、传递设置和报表参数值。 在运行时，报表服务器将运行一个查询，以获取订阅设置所需的值。   
   
@@ -57,7 +57,7 @@ ms.locfileid: "87243546"
   
 传递扩展插件的可用性取决于其是否在报表服务器上进行了安装和配置。 报表服务器电子邮件是默认的传递扩展插件，但是使用前必须先行配置。 文件共享传递不需要配置，但是使用前必须定义一个共享文件夹。  
   
-![ssRSWebPortal subscriptions2](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
+![显示目标和传递选项（Windows 文件共享）部分的屏幕截图。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
   
 根据选定的传递扩展插件，会显示下列设置：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "87243546"
 ## <a name="data-driven-subscription-dataset"></a>数据驱动订阅数据集  
 对于数据驱动订阅，需要定义用于订阅的数据集。 选择“编辑数据集”以提供该信息。  
   
-![ssRSWebPortal subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
+![显示数据集部分的屏幕截图。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   
 需要首先提供要用于查询的 **数据源** 。 这可以是共享数据源，也可以提供自定义数据源。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "87243546"
   
 -   结果集内的行决定了所生成的报表传递的数量。 如果您有 10,000 行，则报表服务器将生成 10,000 个通知和传递。  
   
-![ssRSWebPortal-subscriptions5](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
+![显示查询部分的屏幕截图。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
   
-随后可以验证查询。 还可以定义 **查询超时**。  
+随后可以验证查询。 还可以定义 **查询超时** 。  
   
 创建了查询之后，随后可以将值分配给必填字段。 可以输入手动数据，也可以从创建的数据集选择字段。 
 

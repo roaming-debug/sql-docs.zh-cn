@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a60dfa5cf08b11789fde744f41a2c139f922d286
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245654"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043797"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
 
@@ -22,7 +22,7 @@ ms.locfileid: "87245654"
   
 迷你图和数据条是较小的简单图表，可以在很小的空间中传递很多信息，常常出现在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 报表的表格和矩阵中。 下图所示报表和你要创建的报表类似。  
   
-![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
+![显示报表生成器迷你图的屏幕截图。](../reporting-services/media/report-builder-sparkline-final.png)  
      
 完成本教程的估计时间：30 分钟。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "87245654"
   
 4.  在查询设计器工具栏中，单击“运行”( **!** )。  
   
-    该查询运行并显示 **SalesDate**、 **Subcategory**、 **Product**、 **Sales**和 **Quantity**字段的结果集。  
+    该查询运行并显示 **SalesDate** 、 **Subcategory** 、 **Product** 、 **Sales** 和 **Quantity** 字段的结果集。  
   
 5.  单击“下一步”。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "87245654"
   
 8.  将 SalesDate 拖到“列组”中 。  
 
-    ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
+    ![显示如何排列字段的屏幕截图。](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
 9. 单击“下一步”。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "87245654"
   
     *  第三行将对表出现一次以显示总计。  
     
-    ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
+    ![显示如何选择布局的屏幕截图。](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
 11. 单击“下一步”。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "87245654"
   
     在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组” 。 “行组”窗格显示一个行组：“Product”。 “列组”窗格显示一个列组：“SalesDate”。 详细信息数据是由数据集查询检索的所有数据。  
     
-    ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
+    ![显示报表生成器分组窗格的屏幕截图。](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. 单击 **“运行”** 以预览报表。  
 
@@ -168,15 +168,15 @@ ms.locfileid: "87245654"
   
 2.  单击“SalesDate”列的第二行（位于列标题行下方）中的单元格。 按住 Ctrl 键并选择包含 `[Sum(Sales)]`的所有单元格。 
 
-    ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
+    ![显示如何选择总销售额的屏幕截图。](../reporting-services/media/report-builder-select-sum-sales.png) 
   
 3.  在“开始”选项卡上的“数字”组中，单击“货币”  。 单元会更改为显示已设置好格式的货币。  
 
-    ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
+    ![显示用占位符货币值替换总销售额的屏幕截图。](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”  。  
+    如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00** ]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”  。  
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![显示已选择“示例值”选项的屏幕截图。](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. （可选）将数据格式设置为日期格式  
 默认情况下，“SalesDate”字段同时显示日期和时间信息。 您可以设置其格式，使其只显示日期。  
@@ -199,11 +199,11 @@ ms.locfileid: "87245654"
   
 3.  右键单击，指向“插入列”，然后单击“左” 。  
 
-    ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
+    ![显示如何插入左侧列的屏幕截图。](../reporting-services/media/report-builder-add-column-left.png)
   
 4.  在新列中，右键单击 `[Product]` 行中的单元格，选择“插入” > “迷你图” 。  
 
-    ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
+    ![显示如何插入迷你图的屏幕截图。](../reporting-services/media/report-builder-insert-sparkline.png)
   
 5.  在“选择迷你图类型”对话框中，确保已选择“列”行中的第一个迷你图，然后单击“确定”  。  
   
@@ -211,7 +211,7 @@ ms.locfileid: "87245654"
   
 7.  单击“值”框旁边的加号 (+)，然后单击“Sales”。 
 
-    ![report-builder-sparkline-values](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![显示如何将值添加到报表生成器迷你图的屏幕截图。 ](../reporting-services/media/report-builder-sparkline-values.png) 
   
     “Sales”字段中的值现在是迷你图的值。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "87245654"
   
     还要注意的是，对于每一行，该行的最高的条形是行高。 这也会产生误导，因为每一行的最大值不相等：Budget Movie-Maker 的最大值是 $10,400，但 Slim Digital 的最大值是 $26,576 - 是前者的两倍还多。 并且，这两行的最大的条形大约为相同高度。 所有迷你图需要使用相同的比例。  
   
-     ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
+     ![显示未对齐的报表生成器迷你图的屏幕截图。](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4.沿水平方向和垂直方向对齐迷你图  
 当所有迷你图不是使用相同的度量尺度时理解起来很困难。 每个迷你图的水平轴和垂直轴都需要与其他部分匹配。  
@@ -250,7 +250,7 @@ ms.locfileid: "87245654"
   
 现在每个迷你图中的所有条形均与其他迷你图中的条形对齐，它们的高度也是相对的。  
   
-![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
+![显示已对齐的报表生成器迷你图的屏幕截图。](../reporting-services/media/report-builder-sparkline-aligned.png)
   
 ## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7.（可选）更改列宽  
 默认情况下，表中的每个单元格都包含一个文本框。 在呈现页面时，文本框将垂直扩展以容纳文本。 在呈现的报表中，每个行将扩展到行中呈现的最高文本框的高度。 设计图面上的行的高度不会影响已呈现报表中的行的高度。  
@@ -301,7 +301,7 @@ ms.locfileid: "87245654"
   
 4.  在“名称”中，用“Product Sales”替换默认名称 。  
   
-5.  单击“ **保存**”。  
+5.  单击“ **保存** ”。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -313,7 +313,7 @@ ms.locfileid: "87245654"
   
 3.  在“名称”中，用“Product Sales”替换默认名称 。  
   
-4.  单击“ **保存**”。  
+4.  单击“ **保存** ”。  
   
 ## <a name="next-steps"></a>后续步骤  
 

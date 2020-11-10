@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3446eb921f0a731a571f2ad5e7a6f275612f2776
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f4802ee3beb72e34ed2b85e8857ac69c61557018
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245644"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043709"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：向报表添加 KPI（报表生成器）
 在 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程中，向 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表添加关键绩效指标 (KPI)。  
@@ -23,7 +23,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 下图与将要创建的报表类似。  
   
-![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
+![报表生成器 KPI 报表的屏幕截图。](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
 > 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
@@ -139,13 +139,13 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
       表将添加到设计图面中。 此表有五个列和五个行。 “行组”窗格显示三个行组：“SalesDate”、“Subcategory”和“Details”。 详细信息数据是由数据集查询检索的所有数据。 “列组”窗格为空。  
       
-      ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
+      ![显示行组的屏幕截图。](../reporting-services/media/report-builder-kpi-row-groups.png)
   
 12. 单击 **“运行”** 以预览报表。  
   
 对于在特定日期销售的每个产品，表显示产品名称、销售数量及销售额总计。 此数据首先按销售日期组织，然后按子类别组织。 
 
-![report-builder-kpi-basic-table](../reporting-services/media/report-builder-kpi-basic-table.png)
+![显示基本报表生成器 KPI 表的屏幕截图。](../reporting-services/media/report-builder-kpi-basic-table.png)
     
 ### <a name="format-dates-and-currency"></a>设置日期和货币的格式
 将列加宽，并设置日期和货币的格式。
@@ -160,7 +160,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 
    如果区域设置为“英语(美国)”，则默认示例文本为 [$12,345.00]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”  。
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![已选择报表生成器示例值选项的屏幕截图。](../reporting-services/media/report-builder-placeholder-value-button.png)
 
 5. （可选）在“开始”选项卡上的“数字”组中，单击两次“减少小数位数”按钮，显示不带美分的美元数字  。
 
@@ -172,7 +172,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 
 12. 单击 **“运行”** 以预览报表。  
  
-![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
+![显示格式化数字的报表生成器 KPI 报表的屏幕截图。](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
 ## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3.使用背景色显示 KPI  
 可将背景色设置为运行报表时计算的表达式。  
@@ -183,9 +183,9 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 
     请确保选择该单元，而非单元中的文本，以查看“文本框属性”。 
     
-    ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
+    ![报表生成器文本框属性选项的屏幕截图。](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  在“填充”选项卡上，单击“填充颜色”选项旁边的“fx”按钮，然后在“为以下项设置表达式: BackgroundColor”字段中输入以下表达式****************：  
+2.  在“填充”选项卡上，单击“填充颜色”选项旁边的“fx”按钮，然后在“为以下项设置表达式: BackgroundColor”字段中输入以下表达式：  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -197,7 +197,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 在显示子类别销售额的小计行中，根据销售额总计的值，单元的背景色为红色、黄色或绿色。  
 
-![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
+![报表生成器 KPI 报表的屏幕截图，其中某些单元格已着色。](../reporting-services/media/report-builder-kpi-colors.png)
   
 ## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4.使用仪表显示 KPI  
 仪表显示数据集中的单个值。 本教程使用水平线性仪表，因为即使是在该仪表较小或在表单元内使用的情况下，其形状和简便性也使其易于读取。 有关详细信息，请参阅 [仪表（报表生成器和 SSRS）](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
@@ -208,7 +208,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 2.  在表中，右键单击“Sales”列的列句柄，选择“插入列” > “右侧插入” 。 此时将向表添加一个新列。  
 
-    ![report-builder-kpi-insert-column](../reporting-services/media/report-builder-kpi-insert-column.png)
+    ![显示如何将列插入到报表生成器 KPI 报表的屏幕截图。](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  在列标题中键入 **Linear KPI** 。  
   
@@ -224,7 +224,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
     将 `Sales` 字段拖放到仪表中时，该字段将出现在“值”列表中，并对其使用内置 Sum 函数进行聚合。  
    
-    ![report-builder-kpi-drag-sales-field](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
+    ![显示如何将“销售额”字段拖到报表生成器 KPI 报表中的屏幕截图。](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
    
 9. 在“仪表数据”窗格中，单击“LinearPointer1”旁边的箭头 > “指针属性”  。  
   
@@ -252,7 +252,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
     仪表中绿条的水平长度将根据 KPI 的值变化。  
   
-![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
+![显示添加到报表生成器 KPI 报表的线性 KPI 列的屏幕截图。](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5.使用指示器显示 KPI  
 指示器是以直观的形式传递数据值的小巧而简单的仪表。 由于指示器尺寸较小且具有简便性，其经常被用于表和矩阵中。 有关详细信息，请参阅[指示器（报表生成器和 SSRS）](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
@@ -279,7 +279,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 9. 在“值和状态”选项卡上的“值”框中，选择“[Sum(Sales)]”  。 请勿更改任何其他选项。  
   
-    默认情况下，数据区域会发生数据同步，且将在“同步作用域”框中看到“Tablix1”值（报表中表数据区域的名称）********。  
+    默认情况下，数据区域会发生数据同步，且将在“同步作用域”框中看到“Tablix1”值（报表中表数据区域的名称）。  
   
     在该报表中，还可以更改放在子类别小计单元中的指示器的作用域，以在 SalesDate 字段内同步。  
   
@@ -287,7 +287,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 
 11. 单击 **“运行”** 以预览报表。  
 
-![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
+![显示添加到报表生成器 KPI 报表的“Stoplight KPI”列的屏幕截图。](../reporting-services/media/report-builder-kpi-stoplight.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6.添加报表标题  
 报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 在本部分中，可使用自动放在表体顶部的文本框。  
@@ -298,9 +298,9 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
-2.  键入 **Product Sales KPIs**，然后在文本框外部单击。  
+2.  键入 **Product Sales KPIs** ，然后在文本框外部单击。  
   
-3.  也可以右键单击包含 Product Sales KPI 的文本框，单击“文本框属性”，然后单击“字体”选项卡，选择不同字形、大小和颜色********。  
+3.  也可以右键单击包含 Product Sales KPI 的文本框，单击“文本框属性”，然后单击“字体”选项卡，选择不同字形、大小和颜色。  
   
 4.  单击 **“运行”** 以预览报表。  
   
@@ -319,7 +319,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 4.  在“名称”中，用 Product Sales KPI 替换默认名称 。  
   
-5.  单击“ **保存**”。  
+5.  单击“ **保存** ”。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -330,11 +330,11 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 2.  依次单击“桌面”、“我的文档”或“我的电脑”，并浏览到要保存该报表的文件夹  。  
   
 > [!NOTE]  
-> 如果无权访问报表服务器，请单击“桌面”、“我的文档”或“我的电脑”，将报表保存到计算机上************。  
+> 如果无权访问报表服务器，请单击“桌面”、“我的文档”或“我的电脑”，将报表保存到计算机上。  
   
 1.  在“名称”中，用 Product Sales KPI 替换默认名称 。  
   
-2.  单击“ **保存**”。  
+2.  单击“ **保存** ”。  
   
 ## <a name="next-steps"></a>后续步骤  
 您已成功完成“向报表添加 KPI”教程的学习。 有关详细信息，请参阅：

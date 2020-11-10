@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3335665e1e7e7212c6521e6c6c654a1eb5ee04ba
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: fba193af6ef9f76c50f33ffa45a7bc668a0edead
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85035035"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364659"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>向报表添加级联参数（报表生成器和 SSRS）
   级联参数提供了一种管理大量报表数据的方法。 您可以定义一组相关参数，使一个参数的值列表取决于其他参数选取的值。 例如，第一个参数是独立的，并且可能提供产品类别列表。 当用户选中某个类别后，第二个参数则取决于第一个参数的值。 第二个参数的值根据所选类别中的子类别列表进行更新。 用户查看报表时，类别和子类别参数的值用于筛选报表数据。  
@@ -120,7 +120,7 @@ ms.locfileid: "85035035"
   
  接下来，您将设置第二个参数的属性，以便在运行时使用该数据集填充其可用值。  
   
-## <a name="to-set-available-values-for-a-report-parameter"></a>设置报表参数的可用值  
+## <a name="to-set-available-values-for-the-second-parameter"></a>设置第二个参数的可用值  
   
 1.  在“报表数据”窗格的“参数”文件夹中，右键单击第一个参数，然后单击 **“参数属性”** 。  
   

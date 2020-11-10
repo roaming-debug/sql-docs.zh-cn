@@ -9,12 +9,12 @@ ms.technology: big-data-cluster
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 1e2a4b6790375b9db06376e12ac649bf37093902
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: 54ef7f11e15a5cb75833701420fb53d9f28ebaa9
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793784"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235487"
 ---
 # <a name="sql-server-big-data-clusters-partners"></a>SQL Server 大数据群集合作伙伴
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -24,8 +24,8 @@ ms.locfileid: "92793784"
 
 | Partner | 说明 | 链接 |
 | --- | --- | --- |
-|![dellemc][1] |Dell EMC 销售数据存储、信息安全、虚拟化、分析、云计算以及其他产品和服务，方便组织存储、管理、保护和分析数据。|[市场][dellemc_marketplace]<br>[网站][dellemc_website]<br>[数据表][dellemc_datasheet]<br>[Twitter][dellemc_twitter]<br>[视频][dellemc_youtube]<br>[博客][dellemc_blog] |
-|![HPE][2] |以 Microsoft SQL Server 的企业性能为重点<br>我们的存储解决方案提供使用无忧的 Microsoft SQL Server。 集成增强了复制数据管理，改进了数据保护，加速了 DevOps，并提供了云的快速入口。|[网站][hpe_website]<br>[数据表][hpe_datasheet]<br>[下载评估][hpe_download]<br>[Twitter][hpe_twitter]<br>[视频][hpe_youtube]<br>[博客][hpe_download]|
+|![dellemc 徽标][1] |Dell EMC 销售数据存储、信息安全、虚拟化、分析、云计算以及其他产品和服务，方便组织存储、管理、保护和分析数据。|[市场][dellemc_marketplace]<br>[网站徽标][dellemc_website]<br>[数据表][dellemc_datasheet]<br>[Twitter][dellemc_twitter]<br>[视频][dellemc_youtube]<br>[博客][dellemc_blog] |
+|![HPE 徽标][2] |以 Microsoft SQL Server 的企业性能为重点<br>我们的存储解决方案提供使用无忧的 Microsoft SQL Server。 集成增强了复制数据管理，改进了数据保护，加速了 DevOps，并提供了云的快速入口。|[网站][hpe_website]<br>[数据表][hpe_datasheet]<br>[下载评估][hpe_download]<br>[Twitter][hpe_twitter]<br>[视频][hpe_youtube]<br>[博客][hpe_download]|
 |![NetApp][3] |NetApp StorageGRID 是软件定义的对象存储。 它可以在虚拟环境中部署为，仅限软件且为特定用途而创建的设备组合。<br/><br/>在单个命名空间中，StorageGRID 可以跨位于世界各地的多个数据中心进行扩展。 StorageGRID 提供了支持动态数据管理的大规模 S3 对象存储，方便客户在利用公有云资源的同时，在本地运行下一代工作流。 StorageGRID 独特的数据管理策略引擎可确保性能和持续性达到优化水平，并遵守数据位置要求。 |[网站][netapp_website]<br>[数据表][netapp_datasheet]<br>[Twitter][netapp_twitter]<br>[视频][netapp_youtube]<br>[文档][netapp_docs]|
 |![PureStorage][5] |Pure Storage 提供了使组织可以将数据转换为智能和优势的简单 Evergreen&trade; 平台，从而使创新活动能够利用数据构建更好的世界。  Pure Storage 支持大数据群集 (BDC)，具有适用于任何 Kubernetes 兼容容器业务流程平台的高度可缩放存储结构。 Pure 提供的 FlashBlade 是一种易于管理的高性能存储平台，SQL Server 2019 大数据群集 HDFS 分层可以利用该平台，从而扩展到 PB 级的可用存储和数十 GB 的 IO 带宽。 FlashArray 以及 FlashBlade 旨在实现大数据群集成功。 |[网站][purestorage_website]<br>[数据表][purestorage_datasheet]<br>[Twitter][purestorage_twitter]<br>[文档][purestorage_docs]|
 |![StreamSets][4] |Streamsets 为大数据群集的操作数据管道提供了一个无代码解决方案： <br/><ul><li> 利用直观的可视化工具设计和操作连续的数据流，无需知道如何为大数据系统编写代码</li><li>使用直观的拖放用户界面，即可在 Apache Spark 上开发复杂的分析应用程序 </li><li>通过本机集成到 SQL Server 和 HDFS，从各种数据源大规模提取并处理数据</li><li>加速从关系数据库、Hadoop 群集和 NoSQL 存储迁移到大数据群集</li></ul>   | [网站][streamsets_website]<br>[博客][streamsets_blog]<br>[视频][streamsets_youtube]<br>[文档][streamsets_docs]|
