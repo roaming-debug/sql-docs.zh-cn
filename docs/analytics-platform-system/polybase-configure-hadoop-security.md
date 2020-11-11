@@ -1,6 +1,6 @@
 ---
 title: 配置 PolyBase Hadoop 安全性
-description: 介绍如何将 PolyBase 配置为并行数据仓库以连接到外部 Hadoop。
+description: 提供对影响连接到 Hadoop 的 AP PolyBase 连接的各种配置设置的参考。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,16 +9,16 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3c0db3807b45d28f99ef1a3da571675bd6d8ac48
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243493"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520954"
 ---
 # <a name="configure-polybase-hadoop-security"></a>配置 PolyBase Hadoop 安全性
 
-本文提供了对影响到 Hadoop 的 AP PolyBase 连接的各种配置设置的参考。 有关 PolyBase 的操作实例，请参阅[什么是 polybase](configure-polybase-connectivity-to-external-data.md)。
+本文提供了对影响到 Hadoop 的 AP PolyBase 连接的各种配置设置的参考。 有关 PolyBase 的操作实例，请参阅 [什么是 polybase](configure-polybase-connectivity-to-external-data.md)。
 
 > [!NOTE]
 > 在 AP 上，在所有计算节点和控制节点上都需要对 XML 文件进行的更改。
@@ -42,7 +42,7 @@ ms.locfileid: "87243493"
    </property> 
 ```
 
-## <a name="kerberos-configuration"></a><a id="kerberossettings"></a>Kerberos 配置  
+## <a name="kerberos-configuration"></a><a id="kerberossettings"></a> Kerberos 配置  
 
 请注意，当 PolyBase 向 Kerberos 保护的群集证明身份时，默认情况下需要将 hadoop.rpc.protection 设置设为“身份验证”。 这会使 Hadoop 节点间的数据通信保持非加密状态。 要为 hadoop.rpc.protection 使用“隐私”或“完整性”设置，请在 PolyBase 服务器上更新 core-site.xml 文件。 有关详细信息，请参阅上一节的[使用 Hadoop.rpc.protection 连接到 Hadoop 群集](#rpcprotection)。
 
@@ -114,7 +114,7 @@ ms.locfileid: "87243493"
 
 4. 创建数据库范围内的凭据对象，以指定每个 Hadoop 用户的身份验证信息。 请参阅 [PolyBase T-SQL 对象](../relational-databases/polybase/polybase-t-sql-objects.md)。
 
-## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Hadoop 加密区域设置
+## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a> Hadoop 加密区域设置
 如果使用 Hadoop 加密区域修改 core-site.xml 和 hdfs-site.xml，请执行以下所述。 提供运行 KMS 服务的 ip 地址和相应的端口号。 CDH 上的 KMS 的默认端口为16000。
 
 **core-site.xml**
