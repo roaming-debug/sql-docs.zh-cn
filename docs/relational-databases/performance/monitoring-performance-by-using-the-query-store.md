@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 5b3a9151d07599661445eb3dfa20c9ef432e0719
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243418"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418017"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 
@@ -241,11 +241,13 @@ INNER JOIN sys.query_store_query_text AS Txt
 :::row-end:::
 :::row:::
     :::column:::
-        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+        sp_query_store_consistency_check (Transact-SQL)<sup>1</sup>
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::
+
+<sup>1</sup> 在极端情况下，查询存储可能由于内部错误而进入 ERROR 状态。 从 SQL Server 2017 (14.x) 开始，如果出现这种情况，可通过在受影响的数据库内执行 sp_query_store_consistency_check 存储过程来恢复查询存储。 有关 actual_state_desc 列说明中所述的更多详细信息，请参阅 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。
 
 ## <a name="key-usage-scenarios"></a><a name="Scenarios"></a>键使用方案
 
