@@ -341,16 +341,10 @@
           href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
     - name: 性能
       items:
-        - name: R
+        - name: R 代码性能
           items:
-            - name: R 中的性能优化概述
-              href: ../machine-learning/r/sql-server-r-services-performance-tuning.md
-            - name: 性能优化服务器配置
-              href: ../machine-learning/r/sql-server-configuration-r-services.md
-            - name: 性能优化 - R 中的数据优化
+            - name: R 中的数据优化
               href: ../machine-learning/r/r-and-data-optimization-r-services.md
-            - name: R 中的性能优化结果
-              href: ../machine-learning/r/performance-case-study-r-services.md
             - name: 使用 R 代码分析函数
               href: ../machine-learning/r/using-r-code-profiling-functions.md
 - name: 参考

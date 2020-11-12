@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
+ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043853"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93417403"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -107,7 +107,7 @@ WITH
 - `<`Namenode`>` = Hadoop 群集中 `Namenode` 的计算机名称、名称服务 URI 或 IP 地址。 PolyBase 必须解析 Hadoop 群集使用的任何 DNS 名称。 <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = 外部数据源侦听的端口。 在 Hadoop 中，可以使用 `fs.defaultFS` 配置参数查找该端口。 默认值为 8020。
 - `<container>` = 保存数据的存储帐户的容器。 根容器是只读的，数据无法写回容器。
-- `<storage_account>` = azure 资源的存储帐户名称。
+- `<storage_account>` = Azure 资源的存储帐户名称。
 - `<server_name>` = 主机名。
 - `<instance_name>` = SQL Server 命名实例的名称。 如果在目标实例上运行 SQL Server Browser 服务，则使用此路径。
 
@@ -678,6 +678,7 @@ WITH
 
 ## <a name="syntax"></a>语法
 
+### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
@@ -686,6 +687,15 @@ WITH
     [ [ , ] TYPE = HADOOP ]
 [ ; ]
 ```
+### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
+```syntaxsql
+CREATE EXTERNAL DATA SOURCE <data_source_name>  
+WITH
+(    LOCATION = '<prefix>://<path>[:<port>]'
+) 
+[;]
+```
+---
 
 ## <a name="arguments"></a>参数
 
@@ -706,7 +716,7 @@ WITH
 位置路径：
 
 - `<container>` = 保存数据的存储帐户的容器。 根容器是只读的，数据无法写回容器。
-- `<storage_account>` = azure 资源的存储帐户名称。
+- `<storage_account>` = Azure 资源的存储帐户名称。
 
 设置位置时的其他说明和指南：
 
@@ -965,7 +975,7 @@ WITH
 - `<Namenode>` = Hadoop 群集中 `Namenode` 的计算机名称、名称服务 URI 或 IP 地址。 PolyBase 必须解析 Hadoop 群集使用的任何 DNS 名称。 <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = 外部数据源侦听的端口。 在 Hadoop 中，可以使用 `fs.defaultFS` 配置参数查找该端口。 默认值为 8020。
 - `<container>` = 保存数据的存储帐户的容器。 根容器是只读的，数据无法写回容器。
-- `<storage_account>` = azure 资源的存储帐户名称。
+- `<storage_account>` = Azure 资源的存储帐户名称。
 
 设置位置时的其他说明和指南：
 

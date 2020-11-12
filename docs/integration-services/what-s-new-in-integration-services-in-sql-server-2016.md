@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92193725"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384859"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
 
@@ -288,7 +288,7 @@ ms.locfileid: "92193725"
  Excel 连接管理器、Excel 源和 Excel 目标现在显式支持 Excel 2016 数据源。  
 
 ####  <a name="connector-for-sap-bw-for-sql-server-2016-released"></a><a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 已发布  
- 用于 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Connector for SAP BW 已作为 SQL Server 2016 功能包的一部分发布。 若要下载功能包的组件，请参阅 [MicrosoftÂ® SQL ServerÂ® 2016 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。
+ 用于 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Connector for SAP BW 已作为 SQL Server 2016 功能包的一部分发布。 若要下载功能包的组件，请参阅 [MicrosoftÂ® SQL ServerÂ® 2016 功能包](https://www.microsoft.com/download/details.aspx?id=56833)。
  
 #### <a name="connectors-v40-for-oracle-and-teradata-released"></a><a name="oracleteradata"></a> 用于 Oracle 和 Teradata 的连接器 v4.0 已发布
 用于 Oracle 和 Teradata 的 Microsoft 连接器 v4.0 已发布。 若要下载该连接器，请参阅 [用于 Oracle 和 Teradata 的 Microsoft 连接器 v4.0](https://www.microsoft.com/download/details.aspx?id=52950)。
@@ -311,7 +311,7 @@ ms.locfileid: "92193725"
 
 #### <a name="support-for-azure-synapse-analytics-released"></a><a name="sqldwupload"></a> 发布了对 Azure Synapse Analytics 的支持
 
-最新版本的 Azure 功能包包括 Azure SQL DW 上传任务，用于为 SQL 数据仓库填充数据。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
+Azure 功能包的最新版本包括 Azure SQL DW 上传任务，用于为 Azure Synapse Analytics 填充数据。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
 ## <a name="usability-and-productivity"></a>易用性和工作效率  
  
@@ -349,7 +349,7 @@ ms.locfileid: "92193725"
  SQL Server 导入和导出向导现在可以从 Azure Blob 存储导入数据，以及将数据保存到其中。 有关详细信息，请参阅[选择数据源（SQL Server 导入和导出向导）](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)和[选择目标（SQL Server 导入和导出向导）](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。 
 
 ####  <a name="change-data-capture-designer-and-service-for-oracle-for-microsoft-sql-server-2016-released"></a><a name="CDCOracle"></a> Change Data Capture Designer and Service for Oracle for Microsoft SQL Server 2016 已发布  
- 用于 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 已作为 SQL Server 2016 功能包的一部分发布。  这些组件现在支持采用经典安装的 Oracle 12c。 （不支持多租户安装）若要下载功能包的组件，请参阅 [MicrosoftÂ® SQL ServerÂ® 2016 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。  
+ 用于 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 已作为 SQL Server 2016 功能包的一部分发布。  这些组件现在支持采用经典安装的 Oracle 12c。 （不支持多租户安装）若要下载功能包的组件，请参阅 [MicrosoftÂ® SQL ServerÂ® 2016 功能包](https://www.microsoft.com/download/details.aspx?id=56833)。  
   
 ####  <a name="cdc-components-updated-for-sql-server-2016"></a><a name="cdc2016"></a> CDC 组件已针对 SQL Server 2016 进行更新  
  CDC（变更数据捕获）的控制任务、源和拆分器转换组件在更新后已与 SQL Server 2016 完全兼容。 没有新功能，行为也没有改变。  

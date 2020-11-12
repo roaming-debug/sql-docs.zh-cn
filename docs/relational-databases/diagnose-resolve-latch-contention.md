@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1cbf760c16d6de88906d03f511315ae6caec335
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 9b438bd466023844f7396a5ef71e9c8e0f916005
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811739"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384306"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>诊断和解决 SQL Server 上的闩锁争用问题
 
@@ -89,16 +89,16 @@ SQL Server 中一个页的大小为 8 KB，可以存储多行。 为了提高并
 
 累积等待信息由 SQL Server 跟踪，可使用动态管理视图 (DMW) sys.dm_os_wait_stats 进行访问。 SQL Server 使用由 sys.dm_os_wait_stats  DMV 中的相应“wait_type”定义的三种闩锁等待类型：
 
-* **缓冲区 (BUF) 闩锁：** 用于保证用户对象的索引页和数据页的一致性。 还可以使用它们来保护对 SQL Server 用于系统对象的数据页的访问。 例如，管理分配的页受缓冲区闩锁保护。 其中包括页可用空间 (PFS) 页、全局分配映射 (GAM) 页、共享全局分配映射 (SGAM) 页和索引分配映射 (IAM) 页。 缓冲区闩锁在 sys.dm_os_wait_stats 中报告，wait_type 为 PAGELATCH\_\*。
+* **缓冲区 (BUF) 闩锁：** 用于保证用户对象的索引页和数据页的一致性。 还可以使用它们来保护对 SQL Server 用于系统对象的数据页的访问。 例如，管理分配的页受缓冲区闩锁保护。 其中包括页可用空间 (PFS) 页、全局分配映射 (GAM) 页、共享全局分配映射 (SGAM) 页和索引分配映射 (IAM) 页。 缓冲区闩锁在 sys.dm_os_wait_stats 中报告，wait_type 为 *PAGELATCH\_\*_。
 
-* **非缓冲区 (Non-BUF) 闩锁：** 用于保证除缓冲池页以外的任何内存中结构的一致性。 非缓冲区闩锁的任何等待事件都将以 wait_type 为 LATCH\_\* 的形式报告。
+_ **非缓冲区 (Non-BUF) 闩锁：** 用于保证除缓冲池页以外的任何内存中结构的一致性。 非缓冲区闩锁的任何等待事件都将以 wait_type 为 *LATCH\_\*_ 的形式报告。
 
-* **IO 闩锁：** 缓冲区闩锁的一个子集。当受缓冲区闩锁保护的相同结构需要通过 I/O 操作加载到缓冲池时，IO 闩锁可以保证这些结构的一致性。 IO 闩锁可防止另一个线程使用不兼容的闩锁将同一页加载到缓冲池中。 与 wait_type PAGEIOLATCH\_\* 关联。
+_ **IO 闩锁：** 缓冲区闩锁的一个子集。当受缓冲区闩锁保护的相同结构需要通过 I/O 操作加载到缓冲池时，IO 闩锁可以保证这些结构的一致性。 IO 闩锁可防止另一个线程使用不兼容的闩锁将同一页加载到缓冲池中。 与 wait_type *PAGEIOLATCH\_\*_ 关联。
 
    > [!NOTE]
    > 如果看到大量的 PAGEIOLATCH 等待，则表明 SQL Server 正在等待 I/O 子系统。 尽管一定数量的 PAGEIOLATCH 等待是正常现象，但如果 PAGEIOLATCH 平均等待时间始终超过10 毫秒 (ms)，则应调查 I/O 子系统承受压力的原因。
 
-如果在检查 sys.dm_os_wait_stats DMV 时遇到非缓冲区闩锁，则必须检查 sys.dm_os_latch_waits，以获取非缓冲区闩锁的累积等待信息的详细分类。 所有缓冲区闩锁等待都归类为 BUFFER 闩锁类，其余类用于对非缓冲区闩锁进行分类。
+如果在检查 _sys.dm_os_wait_stats* DMV 时遇到非缓冲区闩锁，则必须检查 sys.dm_os_latch_waits，以获取非缓冲区闩锁的累积等待信息的详细分类。 所有缓冲区闩锁等待都归类为 BUFFER 闩锁类，其余类用于对非缓冲区闩锁进行分类。
 
 ## <a name="symptoms-and-causes-of-sql-server-latch-contention"></a>SQL Server 闩锁争用的症状和原因
 
@@ -163,7 +163,7 @@ SQL Server 中一个页的大小为 8 KB，可以存储多行。 为了提高并
 
 3. 确定与闩锁相关的等待时间所占的比例。
 
-累积等待信息可从 sys.dm_os_wait_stats DMV 获得。 闩锁争用最常见的类型是缓冲区闩锁争用，具体表现为 wait_type 为 PAGELATCH\_\* 的闩锁的等待时间增加。 非缓冲区闩锁分组在 LATCH\* 等待类型下。 如下图所示，应首先使用 sys.dm_os_wait_stats  DMV 来查看系统累积等待时间，以确定缓冲区闩锁或非缓冲区闩锁导致的总等待时间所占的百分比。 如果遇到非缓冲区闩锁，则还必须检查 sys.dm_os_latch_stats DMV。
+累积等待信息可从 sys.dm_os_wait_stats DMV 获得。 闩锁争用最常见的类型是缓冲区闩锁争用，具体表现为 wait_type 为 *PAGELATCH\_\*_ 的闩锁的等待时间增加。 非缓冲区闩锁分组在 _*LATCH\**_ 等待类型下。 如下图所示，应首先使用 _sys.dm_os_wait_stats* DMV 来查看系统累积等待时间，以确定缓冲区闩锁或非缓冲区闩锁导致的总等待时间所占的百分比。 如果遇到非缓冲区闩锁，则还必须检查 sys.dm_os_latch_stats DMV。
 
 下图描述了 sys.dm_os_wait_stats DMV 和 sys.dm_os_latch_stats DMV 返回的信息之间的关系。
 
@@ -175,7 +175,7 @@ SQL Server 中一个页的大小为 8 KB，可以存储多行。 为了提高并
 
 闩锁等待时间的以下度量值表明过多的闩锁争用会影响应用程序性能：
 
-* **页闩锁平均等待时间随着吞吐量的增加而持续增加**：如果页闩锁平均等待时间随着吞吐量的增加而持续增加，并且缓冲区闩锁平均等待时间也增加到超出预期的磁盘响应时间，则应使用 sys.dm_os_waiting_tasks DMV 检查当前的等待任务。 单独分析平均值可能会产生误导，因此，尽可能实时查看系统以了解工作负荷特征非常重要。 具体来说，应检查任何页上是否有针对 PAGELATCH_EX 和/或 PAGELATCH_SH 请求的大量等待。 请按照以下步骤诊断随吞吐量增加而增加的页闩锁平均等待时间：
+* **页闩锁平均等待时间随着吞吐量的增加而持续增加** ：如果页闩锁平均等待时间随着吞吐量的增加而持续增加，并且缓冲区闩锁平均等待时间也增加到超出预期的磁盘响应时间，则应使用 sys.dm_os_waiting_tasks DMV 检查当前的等待任务。 单独分析平均值可能会产生误导，因此，尽可能实时查看系统以了解工作负荷特征非常重要。 具体来说，应检查任何页上是否有针对 PAGELATCH_EX 和/或 PAGELATCH_SH 请求的大量等待。 请按照以下步骤诊断随吞吐量增加而增加的页闩锁平均等待时间：
 
    * 使用示例脚本[查询按会话 ID 排序的 sys.dm_os_waiting_tasks](#waiting-tasks-script1) 或[计算一段时间内的等待数](#calculate-waits-over-a-time-period)，以查看当前的等待任务并测量闩锁平均等待时间。 
    * 使用示例脚本[查询缓冲区描述符以确定导致闩锁争用的对象](#query-buffer-descriptors)，以确定发生争用的索引和基础表。 
@@ -184,7 +184,7 @@ SQL Server 中一个页的大小为 8 KB，可以存储多行。 为了提高并
    > [!NOTE]
    > 若要计算特定等待类型（由 sys.dm_os_wait_stats 返回为 wt_:type）的平均等待时间，请将总等待时间（返回为 wait_time_ms）除以等待任务数（返回为 waiting_tasks_count）。
 
-* **高峰负载期间用于闩锁等待类型的总等待时间百分比**：如果闩锁平均等待时间占总等待时间的百分比随着应用程序负载的增加而增加，则闩锁争用可能会影响性能，应进行调查。
+* **高峰负载期间用于闩锁等待类型的总等待时间百分比** ：如果闩锁平均等待时间占总等待时间的百分比随着应用程序负载的增加而增加，则闩锁争用可能会影响性能，应进行调查。
 
    使用 [SQLServer:Wait Statistics Object](./performance-monitor/sql-server-wait-statistics-object.md) 性能计数器来测量页闩锁等待和非页闩锁等待。 然后将这些性能计数器的值与 CPU、I/O、内存和网络吞吐量相关性能计数器的值进行比较。 例如，每秒事务数和每秒批处理请求数是两个绝佳的资源利用率度量值。
 
@@ -202,15 +202,15 @@ SQL Server 中一个页的大小为 8 KB，可以存储多行。 为了提高并
    dbcc SQLPERF ('sys.dm_os_latch_stats', 'CLEAR')
    ```
 
-* **当应用程序负载增加并且 SQL Server 可用的 CPU 数量增加时，吞吐量不仅不增加，反而在某些情况下会减少**：[闩锁争用示例](#example-of-latch-contention)中对此进行了说明。
+* **当应用程序负载增加并且 SQL Server 可用的 CPU 数量增加时，吞吐量不仅不增加，反而在某些情况下会减少** ： [闩锁争用示例](#example-of-latch-contention)中对此进行了说明。
 
-* **CPU 利用率不随应用程序工作负荷的增加而增加**：如果在应用程序吞吐量驱动的并发性增加时，系统上的 CPU 利用率没有增加，则表明 SQL Server 正在等待，这是闩锁争用的症状。
+* **CPU 利用率不随应用程序工作负荷的增加而增加** ：如果在应用程序吞吐量驱动的并发性增加时，系统上的 CPU 利用率没有增加，则表明 SQL Server 正在等待，这是闩锁争用的症状。
 
 分析根本原因。 即使上述每个条件都成立，性能问题的根本原因仍有可能在其他地方。 实际上，在大多数情况下，CPU 利用率欠佳是由其他类型的等待引起的，例如锁阻塞、与 I/O 相关的等待或与网络相关的问题。 一般来说，在继续进行更深入的分析之前，最好先解决占总等待时间最大比例的资源等待。
 
 ## <a name="analyzing-current-wait-buffer-latches"></a>分析当前的等待缓冲区闩锁
 
-缓冲区闩锁争用表现为：sys.dm_os_wait_stats DMV 中 wait_type 为 PAGELATCH\_\* 或 PAGEIOLATCH\_\* 的闩锁的等待时间增加。 若要实时查看系统，请在系统上运行以下查询，以联接 sys.dm_os_wait_stats DMV、sys.dm_exec_sessions DMV 和 sys.dm_exec_requests DMV。 结果可用于确定服务器上正在执行的会话的当前等待类型。
+缓冲区闩锁争用表现为：_sys.dm_os_wait_stats* DMV 中 wait_type 为 * *PAGELATCH\_\** _ 或 _*PAGEIOLATCH\_\**_ 的闩锁的等待时间增加。 若要实时查看系统，请在系统上运行以下查询，以联接 sys.dm_os_wait_stats DMV、sys.dm_exec_sessions DMV 和 sys.dm_exec_requests DMV。 结果可用于确定服务器上正在执行的会话的当前等待类型。
 
 ```sql
 SELECT wt.session_id, wt.wait_type
