@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a1251ed1fa5d3fc7a520259fdfc360ac5b5fb22c
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a7c3220138c0f375b043f41044d5023fdb355ff5
+ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379774"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93405044"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -36,6 +36,9 @@ ms.locfileid: "91379774"
 STRING_SPLIT 要求兼容性级别至少为 130。 级别低于 130 时，SQL Server 找不到 STRING_SPLIT 函数。
 
 若要更改数据库的兼容性级别，请参阅[查看或更改数据库的兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)。
+
+> [!NOTE]
+> 在 Azure Synapse Analytics 中，无需对 STRING_SPLIT 进行兼容性配置。
 
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

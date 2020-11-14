@@ -6,16 +6,16 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
-author: pensivebrian
-ms.author: broneill
-ms.reviewer: drskwier; sstein
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan; sstein
 ms.date: 10/02/2020
-ms.openlocfilehash: 6b84916d94a77c0ab832ceee902f9c5d4f95dc2b
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 94c001f248c9d2861af53a280b4e1c032424fca9
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081956"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384416"
 ---
 # <a name="download-and-install-sqlpackage"></a>下载并安装 sqlpackage
 

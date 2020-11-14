@@ -2731,10 +2731,10 @@
           items:
             - name: 什么是语言扩展？
               href: language-extensions/language-extensions-overview.md
+            - name: 什么是 Java 语言扩展？
+              href: language-extensions/java-overview.md
             - name: 新增功能
               href: language-extensions/language-extensions-whats-new.md
-            - name: Java 语言扩展概述
-              href: language-extensions/java-overview.md
         - name: 安装
           items:
             - name: 在 Windows 上安装语言扩展

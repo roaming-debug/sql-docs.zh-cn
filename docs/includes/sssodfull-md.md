@@ -1,1 +1,1 @@
-Azure Synapse Analytics 中的 SQL 按需版本（预览版）
+Azure Synapse Analytics 中的无服务器 SQL 池（预览版）

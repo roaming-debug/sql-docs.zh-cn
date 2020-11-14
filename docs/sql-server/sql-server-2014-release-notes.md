@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 623c0e6b5a1bafa033ddc9a6fd34a1911d6ecf5b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f2b94f4458e29090559e2fdf7d5819cddb30842f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988533"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384846"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
 - [下载 Microsoft SQL Server 2014 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=46694)
 - [SQL Server 2014 Service Pack 1 已发布 - 已更新](/archive/blogs/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
-- [Microsoft SQL Server 2014 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=46696)
+- [Microsoft SQL Server 2014 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=46694)
 
 
 ## <a name="before-you-install-sql-server-2014-rtm"></a>安装 SQL Server 2014 RTM 之前
@@ -114,7 +114,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 介质/ISO/CAB 上 StreamInsight 客户端的版本不正确  
 错误版本的 StreamInsight.msi 和 StreamInsightClient.msi 位于 SQL Server 介质/ISO/CAB 上的以下路径中 (StreamInsight\\\<Architecture\>\\\<Language ID\>)。  
   
-**解决方法：** 从 [SQL Server 2014 功能包下载页](https://go.microsoft.com/fwlink/?LinkID=306709)下载和安装正确的版本。  
+**解决方法：** 从 [SQL Server 2014 功能包下载页](https://www.microsoft.com/download/details.aspx?id=57474)下载和安装正确的版本。  
   
 ### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>产品文档 RTM
   
@@ -270,7 +270,7 @@ DATEPART(weekday, @d)
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>通过 SSMS 注册会为 DAC 元数据添加不匹配的实例 ID  
 **问题：** 通过 SQL Server Management Studio 注册或删除数据层应用程序包 (.dacpac) 时，sysdac* 表不会正确更新，使用户无法查询数据库的 dacpac 历史记录。  sysdac_history_internal 和 sysdac_instances_internal 的 instance_id 不匹配，无法联接。  
   
-**解决方法：** 此问题已通过 [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295) 的功能包再分发得到修复。  应用更新后，所有的新历史记录条目都将使用 sysdac_instances_internal 表中为 instance_id 列出的值。  
+**解决方法：** 此问题已通过 [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=100297) 的功能包再分发得到修复。  应用更新后，所有的新历史记录条目都将使用 sysdac_instances_internal 表中为 instance_id 列出的值。  
   
 如果已经出现 instance_id 值不匹配的问题，纠正不匹配值的唯一方法是以拥有 MSDB 数据库写入权限的用户身份连接到服务器并更新 instance_id 值使其匹配。  如果从同一数据库获取多个注册和撤消注册事件，可能需要查看时间/日期来确定与当前 instance_id 值匹配的记录。  
   
@@ -359,7 +359,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **解决方法：**  
   
-1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 提供程序”[Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
+1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 提供程序”[Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35575)部分。  
   
 2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)。  
   
@@ -374,7 +374,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **解决方法：**  
   
-1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 提供程序”[Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
+1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 提供程序”[Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35575)部分。  
   
 2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)。  
   
@@ -411,7 +411,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 升级顾问报告与 SQL Server Reporting Services 不相关的升级问题  
 **问题：** SQL Server 2014 介质附带的 SQL Server 升级顾问 (SSUA) 在分析 SQL Server Reporting Services 服务器时不正确地报告多个错误。  
   
-**解决方法：** 此问题已在 [SSUA 的 SQL Server 2014 功能包](https://go.microsoft.com/fwlink/?LinkID=306709)中提供的 SQL Server 升级顾问中得到修复。  
+**解决方法：** 此问题已在 [SSUA 的 SQL Server 2014 功能包](https://www.microsoft.com/download/details.aspx?id=57474)中提供的 SQL Server 升级顾问中得到修复。  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 升级顾问在分析 SQL Server Integration Services 服务器时报告错误  
 **问题：** SQL Server 2014 介质附带的 SQL Server 升级顾问 (SSUA) 会在分析 SQL Server Integration Services 服务器时报告错误。  向用户显示的错误如下：  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**解决方法：** 此问题已在 [SSUA 的 SQL Server 2014 功能包](https://go.microsoft.com/fwlink/?LinkID=306709)中提供的 SQL Server 升级顾问中得到修复。  
+**解决方法：** 此问题已在 [SSUA 的 SQL Server 2014 功能包](https://www.microsoft.com/download/details.aspx?id=57474)中提供的 SQL Server 升级顾问中得到修复。  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

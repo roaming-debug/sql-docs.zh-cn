@@ -21,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b08199f3cbc0d0ae87b5902600188908dac6615d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923434"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364681"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>升级复制脚本（复制 Transact-SQL 编程）
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,31 +37,31 @@ ms.locfileid: "86923434"
   
  这些安全改进允许您显式指定用于执行复制代理作业的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 帐户，从而可对权限进行更多控制，这些安全改进会影响现有脚本中的以下存储过程：  
   
--   **sp_addpublication_snapshot**：  
+-   **sp_addpublication_snapshot** ：  
   
      现在，执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) 来创建用于在分发服务器上运行快照代理的作业时，应提供 Windows 凭据作为 `@job_login` 和 `@job_password`。  
   
--   **sp_addpushsubscription_agent**：  
+-   **sp_addpushsubscription_agent** ：  
   
      现在应执行 [sp_addpushsubscription_agent #40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) 来显式添加作业，并提供用于在分发服务器上运行分发代理作业的 Windows 凭据（`@job_login` 和 `@job_password`）。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，当创建推送订阅时会自动执行此操作。  
   
--   **sp_addmergepushsubscription_agent**：  
+-   **sp_addmergepushsubscription_agent** ：  
   
      现在应执行 [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) 来显式添加作业，并提供用于在分发服务器上运行合并代理作业的 Windows 凭据（`@job_login` 和 `@job_password`）。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，当创建推送订阅时会自动执行此操作。  
   
--   **sp_addpullsubscription_agent**：  
+-   **sp_addpullsubscription_agent** ：  
   
      现在，执行 [sp_addpullsubscription_agent #40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) 来创建用于在订阅服务器上运行分发代理的作业时，应提供 Windows 凭据作为 `@job_login` 和 `@job_password`。  
   
--   **sp_addmergepullsubscription_agent**：  
+-   **sp_addmergepullsubscription_agent** ：  
   
      现在，执行 [sp_addmergepullsubscription_agent #40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) 来创建用于在订阅服务器上运行合并代理的作业时，应提供 Windows 凭据作为 `@job_login` 和 `@job_password`。  
   
--   **sp_addlogreader_agent**：  
+-   **sp_addlogreader_agent** ：  
   
      现在应执行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) 来手动添加作业，并提供用于在分发服务器上运行日志读取器代理的 Windows 凭据。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，当创建事务发布时会自动执行此操作。  
   
--   **sp_addqreader_agent**：  
+-   **sp_addqreader_agent** ：  
   
      现在应执行 [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) 来手动添加作业，并提供用于在分发服务器上运行队列读取器代理的 Windows 凭据。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，当创建支持排队更新的事务发布时会自动执行此操作。  
   
@@ -112,12 +112,15 @@ ms.locfileid: "86923434"
   
     -   对于推送订阅，请在发布服务器上执行 [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 指定 `@subscriber`、`@subscriber_db`、`@publication`，并为 `@job_name` 和 `@job_password` 指定在分发服务器上运行合并代理所使用的 Windows 凭据，同时指定此代理作业的计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)。 此操作将在执行 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)后完成。 有关详细信息，请参阅 [创建推送订阅](../../../relational-databases/replication/create-a-push-subscription.md)。  
   
-## <a name="example"></a>示例  
+## <a name="examples"></a>示例  
+
+### <a name="a-sql-server-2000-script-to-create-a-transactional-publication"></a>A. 用于创建事务发布的 SQL Server 2000 脚本
+
  下面是一个用于创建 Product 表的事务发布的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 脚本示例。 此发布支持以排队更新作为故障转移的立即更新。 为了方便阅读，删除了默认参数。  
   
  [!code-sql[HowTo#sp_createtranpub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_1.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="b-sql-server-2005-and-later-script-to-create-a-transactional-publication"></a>B. 用于创建事务发布的 SQL Server 2005 及更高版本的脚本
  下面的示例将对上一个用于创建事务发布的脚本进行更新，从而可以在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本中成功运行。 此发布支持以排队更新作为故障转移的立即更新。 在此示例中显式声明了新参数的默认值。  
   
 > [!NOTE]  
@@ -125,12 +128,12 @@ ms.locfileid: "86923434"
   
  [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_2.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="c-sql-server-2000-script-to-create-a-merge-publication"></a>C. 用于创建合并发布的 SQL Server 2000 脚本
  下面是一个可创建 Customers 表的合并发布的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 脚本示例。 为了方便阅读，删除了默认参数。  
   
  [!code-sql[HowTo#sp_createmergepub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_3.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="d-sql-server-2005-and-later-script-to-create-a-merge-publication"></a>D. 用于创建合并发布的 SQL Server 2005 及更高版本的脚本
  下面的示例将对上一个用于创建合并发布的脚本进行升级，从而可以在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本中成功运行。 在此示例中显式声明了新参数的默认值。  
   
 > [!NOTE]  
@@ -138,12 +141,12 @@ ms.locfileid: "86923434"
   
  [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_4.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="e-sql-server-2000-script-to-create-a-push-subscription-to-a-transactional-publication"></a>E. 用于创建对事务发布的推送订阅的 SQL Server 2000 脚本
  下面是一个可创建对事务发布的推送订阅的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 脚本示例。 为了方便阅读，删除了默认参数。  
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_5.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="f-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-transactional-publication"></a>F. 用于创建对事务发布的推送订阅的 SQL Server 2005 及更高版本的脚本
  下面的示例将对上一个用于创建对事务发布的推送订阅的脚本进行升级，从而可在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本中成功运行。 在此示例中显式声明了新参数的默认值。  
   
 > [!NOTE]  
@@ -151,12 +154,12 @@ ms.locfileid: "86923434"
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_6.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="g-sql-server-2000-script-to-create-a-push-subscription-to-a-merge-publication"></a>G. 用于创建对合并发布的推送订阅的 SQL Server 2000 脚本
  下面是一个可创建对合并发布的推送订阅的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 脚本示例。 为了方便阅读，删除了默认参数。  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="h-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-merge-publication"></a>H. 用于创建对合并发布的推送订阅的 SQL Server 2005 及更高版本的脚本
  下面的示例将对上一个用于创建对合并发布的推送订阅的脚本进行升级，从而可在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本中成功运行。 在此示例中显式声明了新参数的默认值。  
   
 > [!NOTE]  
@@ -164,12 +167,12 @@ ms.locfileid: "86923434"
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_8.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="i-sql-server-2000-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>I. 用于创建对事务发布的拉取订阅的 SQL Server 2000 脚本
  下面是一个可创建事务发布的请求订阅的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 脚本示例。 为了方便阅读，删除了默认参数。  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="j-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>J. 用于创建对事务发布的拉取订阅的 SQL Server 2005 及更高版本的脚本
  下面的示例将对上一个用于创建对事务发布的请求订阅的脚本进行升级，从而可在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本中成功运行。 在此示例中显式声明了新参数的默认值。  
   
 > [!NOTE]  
@@ -177,12 +180,12 @@ ms.locfileid: "86923434"
   
  [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_9.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="k-sql-server-2000-script-to-create-a-pull-subscription-to-a-merge-publication"></a>K. 用于创建对合并发布的拉取订阅的 SQL Server 2000 脚本
  下面是一个可创建对合并发布的请求订阅的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 脚本示例。 为了方便阅读，删除了默认参数。  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_10.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="l-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-merge-publication"></a>L. 用于创建对合并发布的拉取订阅的 SQL Server 2005 及更高版本的脚本
  下面的示例将对上一个用于创建对合并发布的请求订阅的脚本进行升级，从而可在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本中成功运行。 在此示例中显式声明了新参数的默认值。  
   
 > [!NOTE]  

@@ -16,12 +16,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1a119275f9508c69ab5c250e2a5a6e487d1b6502
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 820837717d2651c1be08ae4be4c88cc8e2ac7c11
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920953"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364675"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>复制加密列中的数据 (SQL Server Management Studio)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,14 +76,16 @@ ms.locfileid: "86920953"
   
 11. 执行 [CLOSE SYMMETRIC KEY](../../../t-sql/statements/close-symmetric-key-transact-sql.md) 以关闭密钥。  
   
-## <a name="example"></a>示例  
+## <a name="examples"></a>示例
+
+### <a name="a-create-keys-in-the-publication-database"></a>A. 在发布数据库中创建密钥
  此示例将创建一个对称密钥、一个用来帮助保护对称密钥的证书和一个主密钥。 这些密钥在发布数据库中创建， 然后可用于在 `SalesOrderHeader` 表中创建加密列 (EncryptedCreditCardApprovalCode)。 将在 AdvWorksSalesOrdersMerge 发布中发布此列而不是未加密的 CreditCardApprovalCode 列。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
  [!code-sql[HowTo#sp_PublishEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_1.sql)]  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_2.sql)]  
   
-## <a name="example"></a>示例  
+### <a name="b-create-keys-in-the-subscription-database"></a>B. 在订阅数据库中创建密钥
  此示例使用与第一个示例相同的 ALGORITHM、KEY_SOURCE 和 IDENTITY_VALUE 值在订阅数据库中重新创建相同的对称密钥。 此示例假设您已初始化 AdvWorksSalesOrdersMerge 发布的订阅以复制加密列。 如果可能，请在运行时提示用户输入安全凭据。 如果必须将凭据存储在脚本文件中，则必须在存储和传输过程中保护文件以防止未经授权的访问。  
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_3.sql)]  

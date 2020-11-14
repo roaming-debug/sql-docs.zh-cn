@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 248865b70115a64f73ce93dbd966dac94db61a0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 495bb8455c3e13b88d2d3ae6b400c5c0f2167604
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482970"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631673"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>对游标和已准备语句的事务影响
-提交或回滚事务会对游标和访问计划产生以下影响：  
+提交或回滚事务会对游标和访问计划产生以下影响之一：  
   
--   所有游标都将关闭，并且将删除该连接上的预定义语句的访问计划。  
+-   所有游标都将关闭，并且将删除该连接上的预定义语句的访问计划，或  
   
--   所有游标都处于关闭状态，并且该连接上的预定义语句的访问计划仍保持不变。  
+-   所有游标都已关闭，并且该连接上的预定义语句的访问计划保持不变，或 
   
 -   所有游标都保持打开状态，并且该连接上的预定义语句的访问计划仍保持不变。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88482970"
   
 -   **SQLExecute** 或 **SQLExecDirect** 在前面的示例中，在步骤4中对 **SQLExecute** 的调用将提交事务。 这会导致数据源关闭语句1和2上的游标，并删除该连接上所有语句上的访问计划。  
   
--   前面的示例中的**SQLBulkOperations**或**SQLSetPos**假设在步骤4中，应用程序使用语句2上的 SQL_UPDATE 选项调用**SQLSetPos** ，而不是在语句3上执行定位的 UPDATE 语句。 这会提交一个事务，并导致数据源关闭语句1和2上的游标，并放弃该连接上的所有访问计划。  
+-   前面的示例中的 **SQLBulkOperations** 或 **SQLSetPos** 假设在步骤4中，应用程序使用语句2上的 SQL_UPDATE 选项调用 **SQLSetPos** ，而不是在语句3上执行定位的 UPDATE 语句。 这会提交一个事务，并导致数据源关闭语句1和2上的游标，并放弃该连接上的所有访问计划。  
   
 -   **SQLCloseCursor** 在前面的示例中，假设当用户突出显示不同的销售订单时，应用程序会在为新销售订单创建行的结果之前，在语句2上调用 **SQLCloseCursor** 。 对 **SQLCloseCursor** 的调用将提交创建行结果集的 **SELECT** 语句，并导致数据源在语句1上关闭游标，然后放弃该连接上的所有访问计划。  
   
