@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb19a7e3dc1ef6c1fc2bcc1c1416c79b2a6c5e4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402573"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364789"
 ---
 # <a name="create-a-trace-transact-sql"></a>创建跟踪 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88402573"
   
 ### <a name="to-create-a-trace"></a>创建跟踪  
   
-1.  执行带所需参数的 **sp_trace_create** 以创建新的跟踪。 新的跟踪将处于停止状态（状态** 为 **0**）。  
+1.  执行带所需参数的 **sp_trace_create** 以创建新的跟踪。 新的跟踪将处于停止状态（状态为 **0** ）。  
   
 2.  执行带所需参数的 **sp_trace_setevent** 以选择要跟踪的事件和列。  
   
@@ -36,11 +36,13 @@ ms.locfileid: "88402573"
      **sp_trace_setevent** 和 **sp_trace_setfilter** 只能在已停止的现有跟踪上执行。  
   
     > [!IMPORTANT]  
-    >  与常规存储过程不同的是，必须严格键入所有 SQL Server Profiler 存储过程的参数 (<strong>sp_trace_xx</strong>)，而且这些参数不支持数据类型自动转换**。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
+    >  与常规存储过程不同的是，必须严格键入所有 SQL Server Profiler 存储过程的参数 (<strong>sp_trace_xx</strong>)，而且这些参数不支持数据类型自动转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
-## <a name="example"></a>示例  
+## <a name="examples"></a>示例
+
  下面的代码演示如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建跟踪。 代码分为三部分：创建跟踪、填充跟踪文件以及停止跟踪。 通过添加要跟踪的事件来自定义跟踪。 有关事件和列的列表，请参阅 [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)创建跟踪。  
   
+### <a name="a-create-a-trace"></a>A. 创建跟踪
  下面的代码创建跟踪，向跟踪添加事件，随后启动跟踪：  
   
 ```  
@@ -73,7 +75,7 @@ GO
   
 ```  
   
-## <a name="example"></a>示例  
+### <a name="b-populate-the-trace-file"></a>B. 填充跟踪文件
  现在已创建并启动跟踪，接下来执行下面的代码以便用活动填充跟踪。  
   
 ```  
@@ -84,7 +86,7 @@ GO
   
 ```  
   
-## <a name="example"></a>示例  
+### <a name="c-stop-the-trace"></a>C. 停止跟踪
  可以随时停止和重新启动跟踪。 在本示例中，执行下面的代码以停止跟踪、关闭跟踪并删除跟踪定义。  
   
 ```  
@@ -100,7 +102,7 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## <a name="example"></a>示例  
+### <a name="d-examine-the-trace-file"></a>D. 检查跟踪文件
  若要检查跟踪文件，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]打开 SampleTrace.trc 文件。  
   
 ## <a name="see-also"></a>另请参阅  
