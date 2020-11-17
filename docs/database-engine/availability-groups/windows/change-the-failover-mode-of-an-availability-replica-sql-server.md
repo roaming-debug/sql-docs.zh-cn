@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - Availability Groups [SQL Server], configuring
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 07b77c85c882d8755e1717a5cfe8ce49df9ae275
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ffd564df011932a0b40c0eff2426049fc3f6c315
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727988"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584549"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>更改 Always On 可用性组中副本的故障转移模式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "91727988"
   
 有关这些参数的详细信息，请参阅 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)。  
   
-以下示例（在 *MyAG* 可用性组的主要副本上输入）在可用性副本上（位于名为 *COMPUTER01*的计算机的默认服务器实例上）将故障转移模式更改为自动故障转移。  
+以下示例（在 *MyAG* 可用性组的主要副本上输入）在可用性副本上（位于名为 *COMPUTER01* 的计算机的默认服务器实例上）将故障转移模式更改为自动故障转移。  
   
 ```sql
 ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  

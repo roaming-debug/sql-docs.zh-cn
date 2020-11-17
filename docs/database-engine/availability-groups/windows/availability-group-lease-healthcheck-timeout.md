@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: ''
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 074a66a094b08f843eed67cfb0276f8c9e635a63
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: fb236820958875458d391495028f04181c8ba47b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753746"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584641"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的租用、群集和运行状况检测超时的机制和指南 
 

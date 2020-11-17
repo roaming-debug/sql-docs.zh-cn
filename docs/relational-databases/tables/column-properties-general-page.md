@@ -14,19 +14,19 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f70e0d563760cf0e511b673ea7f838f6aabdde4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75a8df34472bd8e29b7d4422612ccc6977a70dda
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488643"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674232"
 ---
 # <a name="column-properties-general-page"></a>列属性（“常规”页）
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   使用此页可以查看所选列的属性。  
   
- 此页上的信息为只读信息。 若要修改列，请关闭“列属性”**** 对话框，然后在对象资源管理器中展开表和列，右键单击该列，再单击“设计”****。  
+ 此页上的信息为只读信息。 若要修改列，请关闭“列属性”对话框，然后在对象资源管理器中展开表和列，右键单击该列，再单击“设计”。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -39,7 +39,7 @@ ms.locfileid: "88488643"
  此列所能包含的数据类型。 如果数据类型为系统数据类型，则显示系统数据类型。 如果数据类型为用户定义数据类型，则显示组成用户定义数据类型的系统数据类型。  
   
  **主键**  
- 指示该列是否为主键。 可能的值包括 **True**和 **False**。  
+ 指示该列是否为主键。 可能的值包括 **True** 和 **False**。  
   
  **允许 Null 值**  
  指示列是否接受空值。 可能的值包括 **True** 和 **False**。  
@@ -57,7 +57,7 @@ ms.locfileid: "88488643"
  指示标识列的初始行值。  
   
  **标识增量**  
- “标识增量”属性指定在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为插入的行生成标识值时，在现有的最大行标识值基础上所加的值****。  
+ “标识增量”属性指定在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为插入的行生成标识值时，在现有的最大行标识值基础上所加的值。  
   
  **默认值绑定**  
  绑定到该列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认值。 如果未绑定默认值，此选项为空白。  

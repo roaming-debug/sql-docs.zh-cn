@@ -2,7 +2,7 @@
 description: PolyBase 功能和限制
 title: PolyBase 功能和限制 | Microsoft Docs
 descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
-ms.date: 09/24/2018
+ms.date: 11/13/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d3d6021b34f5804f33cd784bc9b7fd38c7eb1f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce4c3624600741d900d51dc832ab4a685c28107a
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427989"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631743"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 
@@ -38,7 +38,7 @@ ms.locfileid: "88427989"
 |从 Azure Blob 存储导入数据|是|否|是|是|
 |导出数据到 Azure Blob 存储|是|否|是|是|  
 |从 Azure Data Lake Store 导入数据|否|否|是|否|
-|从 Azure Data Lake Store 导出数据|否|否|是|否|
+|将数据导出到 Azure Data Lake Store|否|否|是|否|
 |从 Microsoft BI 工具运行 PolyBase 查询|是|否|是|是|
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 运算符支持的下推计算

@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - read-only routing
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 57e24082eb7bf1fe1e7c2cecc86275ac5d918b3b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9f81d681a0d2539d31639e59836b272a5d7127a9
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117008"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584664"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性组属性：新建可用性组（“备份首选项”页）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

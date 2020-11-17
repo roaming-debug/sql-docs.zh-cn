@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 117819e6a2fdf05bbb2ae2b1745c3450501ee0e8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5823518103647ccc39958af4d309a6d171f4412c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115721"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584699"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>使用“可用性组向导”将数据库添加到 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

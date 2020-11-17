@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: de57f7518136cecca09041e0ce93971aeebe9fd9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 080cd11de04984114fd5eda5f1d8b2e78dfdaca3
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724537"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584760"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>对 Always On 可用性组的操作问题的基于策略的管理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

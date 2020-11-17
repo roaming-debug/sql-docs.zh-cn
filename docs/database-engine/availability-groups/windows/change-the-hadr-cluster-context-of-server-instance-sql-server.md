@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - Availability replicas [SQL Server], change WSFC cluster context
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a3ea0c8a3c87e5ec0387a02a6d2679b6ef67e615
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ac56da316fbb70d661c18029419d9565f93916d7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725309"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584568"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>更改管理 Always On 可用性组中副本元数据的群集
 

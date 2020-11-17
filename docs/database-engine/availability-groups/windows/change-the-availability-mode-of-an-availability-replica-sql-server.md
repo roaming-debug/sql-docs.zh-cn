@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], availability modes
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ae19a0e0446a6b0bb7c1d21456d92171e633f441
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: dcafb8cdd2bdd2d03b3a302ffcb29e3cd5bbf469
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728008"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584580"
 ---
 # <a name="change-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>更改 Always On 可用性组中副本的可用性模式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 来更改 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性组的可用性副本的可用性模式。 可用性模式是一个副本属性，用于控制以异步还是同步方式提交副本。 异步提交模式可使性能最大化，但要牺牲高可用性；它仅支持强制手动故障转移（有可能丢失数据），该故障转移一般称为*强制故障转移*。 *同步提交模式* 更多地强调高可用性而不是性能，并且一旦同步次要副本，即支持手动故障转移（也可以支持自动故障转移）。  
+  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 来更改 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性组的可用性副本的可用性模式。 可用性模式是一个副本属性，用于控制以异步还是同步方式提交副本。 异步提交模式可使性能最大化，但要牺牲高可用性；它仅支持强制手动故障转移（有可能丢失数据），该故障转移一般称为 *强制故障转移*。 *同步提交模式* 更多地强调高可用性而不是性能，并且一旦同步次要副本，即支持手动故障转移（也可以支持自动故障转移）。  
     
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   

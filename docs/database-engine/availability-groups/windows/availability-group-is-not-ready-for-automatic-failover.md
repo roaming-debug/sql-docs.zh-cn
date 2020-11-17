@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e01122509f58e6d3759ae2fbbf56a37ac5023139
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1a5609955ca61cb1ef2df4a940e749c6cb7c038c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115701"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584716"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 可用性组未准备好进行自动故障转移
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

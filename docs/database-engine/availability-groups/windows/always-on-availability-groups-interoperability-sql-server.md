@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], interoperability
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 286a3e31caad83c421865626eee28d9f7d3f91f1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 91a3308db77a9f8dd8e99b802b53a08298dd01ff
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726578"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584809"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性组：互操作性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

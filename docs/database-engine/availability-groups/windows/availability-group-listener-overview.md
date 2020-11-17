@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: bd425438dc4a06faea489ac9cba4b607492fcde8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: aa84b43cbcf636facdade77040eeadf7e8449c54
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900402"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584683"
 ---
 # <a name="what-is-an-availability-group-listener"></a>什么是可用性组侦听器？  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

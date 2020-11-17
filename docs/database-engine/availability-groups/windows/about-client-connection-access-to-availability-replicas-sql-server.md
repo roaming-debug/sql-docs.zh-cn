@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: fc0568a32bae1f9c31fe4d20ff6ae2139d325acd
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 12d7db7b49c15954240843b13d750ea1d64503f3
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724608"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584893"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 可用性组中连接到副本的客户端连接的类型
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91724608"
  不允许任何用户连接。 辅助数据库不可用于读访问。 这是辅助角色中的默认行为。  
   
  仅读意向连接  
- 辅助数据库仅适用于其**应用程序意向**连接属性设置为“ReadOnly”  （读意向连接  ）。  
+ 辅助数据库仅适用于其 **应用程序意向** 连接属性设置为“ReadOnly”  （读意向连接  ）。  
   
  有关此连接属性的信息，请参阅 [对高可用性、灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "91724608"
  主数据库同时允许读写连接和只读连接。 这是主角色的默认行为。  
   
  仅允许读/写连接  
- 当**应用程序意向**连接属性设置为“ReadWrite”  或未设置时，允许此连接。 不允许其 **Application Intent** 连接字符串关键字设置为 **ReadOnly** 的连接。 仅允许读写连接可帮助防止您的客户错误地将读意向工作负荷连接到主副本。  
+ 当 **应用程序意向** 连接属性设置为“ReadWrite”  或未设置时，允许此连接。 不允许其 **Application Intent** 连接字符串关键字设置为 **ReadOnly** 的连接。 仅允许读写连接可帮助防止您的客户错误地将读意向工作负荷连接到主副本。  
   
  有关此连接属性的信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "91724608"
  有关配置可用性组接受到其副本的客户端连接的信息，请参阅， [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
 ### <a name="example-connection-access-configuration"></a>连接访问配置示例  
- 根据将不同可用性副本配置为进行连接访问的方式，在可用性组故障转移之后，对于客户端连接的支持可能会有所变化。 例如，请考虑要在远程异步提交辅助副本上对其执行报告的一个可用性组。 此可用性组中数据库的所有只读应用程序都会将其**应用程序意向**连接属性设置为“ReadOnly”  以使所有只读连接为读意向连接。  
+ 根据将不同可用性副本配置为进行连接访问的方式，在可用性组故障转移之后，对于客户端连接的支持可能会有所变化。 例如，请考虑要在远程异步提交辅助副本上对其执行报告的一个可用性组。 此可用性组中数据库的所有只读应用程序都会将其 **应用程序意向** 连接属性设置为“ReadOnly”  以使所有只读连接为读意向连接。  
   
  在本例中，可用性组在主计算中心具有两个同步提交副本，在附属站点拥有两个异步提交副本。 对于主角色，所有副本都配置为允许读写访问，这样，在所有情况下可防止与主副本进行读意向连接。 同步提交辅助角色使用默认连接访问配置（“无”），这样可以防止在辅助角色下进行的所有客户端连接。  与此相反，异步提交副本配置为允许在辅助角色下进行读意向连接。 下表概述了该示例配置：  
   

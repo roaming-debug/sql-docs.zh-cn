@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 08/07/2020
-ms.openlocfilehash: a6849f13f8182285749c7a95801ee111e7ba0130
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 060039496d5877951e5255fce5e6cac2321731c6
+ms.sourcegitcommit: 31f3405be08441471f441395f1d0f0017ebc0ad5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624674"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94617925"
 ---
 # <a name="build-a-database-project-from-command-line"></a>从命令行生成数据库项目
 
@@ -24,7 +24,7 @@ ms.locfileid: "91624674"
 
 1. 安装并配置 [Azure Data Studio 的 SQL 数据库项目扩展](sql-database-project-extension.md)。
 
-2. 若要从 SQL 数据库项目的 Azure Data Studio 扩展支持的所有平台通过命令行生成 SQL 数据库项目，需要以下 .NET Core dll 和目标文件 `Microsoft.Data.Tools.Schema.SqlTasts.targets`。 在 Azure Data Studio 接口中完成的第一个生成过程中，扩展会创建这些文件，并将其置于 `BuildDirectory` 下的扩展文件夹中。  例如，在 Linux 上，这些文件位于 `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`。  将这 10 个文件复制到一个新的可访问的文件夹中，或记下其位置。  本文档中，该位置称为 `DotNet Core build folder`。
+2. 若要从 SQL 数据库项目的 Azure Data Studio 扩展支持的所有平台通过命令行生成 SQL 数据库项目，需要以下 .NET Core dll 和目标文件 `Microsoft.Data.Tools.Schema.SqlTasks.targets`。 在 Azure Data Studio 接口中完成的第一个生成过程中，扩展会创建这些文件，并将其置于 `BuildDirectory` 下的扩展文件夹中。  例如，在 Linux 上，这些文件位于 `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`。  将这 10 个文件复制到一个新的可访问的文件夹中，或记下其位置。  本文档中，该位置称为 `DotNet Core build folder`。
 
     - Microsoft.Data.Tools.Schema.Sql.dll
     - Microsoft.Data.Tools.Schema.Tasks.Sql.dll

@@ -1,13 +1,14 @@
 ---
-title: FOR XML (SQL Server) | Microsoft Docs
+title: FOR XML (SQL Server)
 description: 了解在 SQL 查询中用于将结果作为 XML 进行检索的 FOR XML 子句。
-ms.custom: fresh2019may
-ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
+f1_keywords:
+- FOR_XML_TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FOR XML clause, about FOR XML clause
 - PATH FOR XML mode, construction
@@ -20,12 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 8cacd5efbc5d94c639c6dbc76c0a8865c4d4d7dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.reviewer: ''
+ms.custom: fresh2019may
+ms.date: 04/03/2020
+ms.openlocfilehash: 974da804e79a6c571b7543caec230984296f6a8e
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729926"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674145"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 

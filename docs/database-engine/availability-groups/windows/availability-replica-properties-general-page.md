@@ -10,14 +10,14 @@ ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b903126e4cb5d199b12865dd306ede7a6ac638b1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1851f55f215e78bc0243ee650c1f4e878b5b8fc6
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115679"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584554"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Always On 可用性组的可用性副本属性（“常规”页）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

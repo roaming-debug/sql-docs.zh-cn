@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c56b8595955caef35d5ff1e591eed417a831a48
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: febd24b17458a37a6ff12c8b17f55527311a0aee
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726556"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584757"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>含有 AlwaysOn 可用性组的 Analysis Services
 
@@ -167,7 +167,7 @@ ms.locfileid: "91726556"
   
 4.  部署该解决方案，并在部署完成后停止跟踪。  
   
-     在跟踪窗口中，您应能看到来自应用程序 **Microsoft SQL Server Analysis Services**的事件。 应能看到从承载辅助副本的服务器实例上的数据库中检索数据的 **SELECT** 语句，证明是通过该侦听器连接到辅助副本。  
+     在跟踪窗口中，您应能看到来自应用程序 **Microsoft SQL Server Analysis Services** 的事件。 应能看到从承载辅助副本的服务器实例上的数据库中检索数据的 **SELECT** 语句，证明是通过该侦听器连接到辅助副本。  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>第 2 步：执行计划的故障转移以测试配置  
   

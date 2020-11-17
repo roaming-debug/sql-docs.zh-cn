@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c0cad69e650493dd9ebd62643dc470eef111637f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d04b8a881ca006264c0258922a045102a23be92b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114359"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584559"
 ---
 # <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>可用性副本未联接到 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - AlwaysOn [SQL Server], see Availability Groups [SQL Server]
 - Availability Groups [SQL Server]
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e236378f9b555e599cd560e377e94a929be0ffbc
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6c6b5290db30ce42df920bac56cf38d8c130039a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726598"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584816"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On 可用性组：高可用性和灾难恢复解决方案
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

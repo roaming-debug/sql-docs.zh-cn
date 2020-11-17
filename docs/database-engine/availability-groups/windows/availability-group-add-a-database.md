@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 2f925bdec1ed3b5da923b7a89f043915a7c884ef
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2195ba9c8cce03bfb182e633d08c1cdc8a6afc68
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726519"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584735"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>将数据库添加到 AlwaysOn 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

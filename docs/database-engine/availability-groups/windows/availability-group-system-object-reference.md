@@ -7,15 +7,15 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: reference
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1be4a7eb4f0b81ba53b0d1f1b1ee000ee63209b2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 99a600e29cf8b1f8bda8b093e9b51c572d86ad9b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116256"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584659"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>AlwaysOn 可用性组系统对象参考
 

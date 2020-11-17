@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 93f2074894f70a0bc5eb581b9b5e6618a785a797
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 92cd76bfa1c1228c9a83f98350952daeb37fc2f5
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115735"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584704"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Always On 可用性组处于脱机状态
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

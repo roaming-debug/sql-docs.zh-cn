@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: bf2ca9ef7d126cb6e742c9df7df61a9f4f75957d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 88704561006f0beff14ae69fff2b79c14ef3114b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111008"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584599"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>单一数据库的基本 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a8dea3150b7dbdbb1b69e82f80723e5651681ef8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 81724be8012eea9aa1c6fcefbb7becc4a96092bf
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726520"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584713"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>使用自动种子设定初始化 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

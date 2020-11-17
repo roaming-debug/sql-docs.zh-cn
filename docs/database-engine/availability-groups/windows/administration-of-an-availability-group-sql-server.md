@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Availability Groups [SQL Server], managing
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 08e63ddb23da5eb97f749bde5db38ecc5f9b5f68
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f82ca3cd976a13cfc9badf17f8dac02cbec83d1a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724578"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584826"
 ---
 # <a name="administration-of-an-availability-group"></a>管理可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

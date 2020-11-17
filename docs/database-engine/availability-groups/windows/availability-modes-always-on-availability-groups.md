@@ -15,14 +15,14 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b37371faa975998484763af08d592a7a2ef0326b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: bb9a9743f6a23d75d7819fb4e48e4233ed2104fd
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725346"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584623"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>AlwaysOn 可用性组的可用性模式之间的差异
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

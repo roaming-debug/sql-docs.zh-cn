@@ -11,14 +11,14 @@ ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 1a432f9b1cfa0898773efa349ba720b37558fb58
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f7e570006908358b1cfe0cb07972113585e58a95
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114548"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584674"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>可用性组属性：新建可用性组（“常规”页）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

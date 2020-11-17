@@ -15,14 +15,14 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724598"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584859"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>卸载对 AlwaysOn 可用性组的次要副本的只读工作负荷
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91724598"
  在主数据库中进行的安全设置会对辅助数据库永久保留。 这包括用户、数据库角色和应用程序角色及其各自的权限；如果对主数据库启用了透明数据加密 (TDE)，还将包括 TDE。  
   
 > [!NOTE]  
->  尽管您无法将数据写入辅助数据库，但可以在承载辅助副本的服务器实例上写入读写数据库，包括用户数据库和 **tempdb**之类的系统数据库。  
+>  尽管您无法将数据写入辅助数据库，但可以在承载辅助副本的服务器实例上写入读写数据库，包括用户数据库和 **tempdb** 之类的系统数据库。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 还支持对可读辅助副本（*只读路由*）的读意向连接请求的重新路由。 有关只读路由的详细信息，请参阅 [使用侦听程序连接到只读次要副本（只读路由）](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
   
@@ -153,18 +153,18 @@ ms.locfileid: "91724598"
 ###  <a name="indexing"></a><a name="bkmk_Indexing"></a> 索引  
  若要优化可读辅助副本上的只读工作负荷，您可能需要对辅助数据库中的表创建索引。 因为您无法在辅助数据库上进行架构或数据更改，所以应在主数据库中创建索引，并且允许更改通过重做进程传输到辅助数据库。  
   
- 若要监视辅助副本上的索引使用活动，请查询 **sys.dm_db_index_usage_stats**动态管理视图的 **user_seeks**、 **user_scans** 和 [user_lookups](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 列。  
+ 若要监视辅助副本上的索引使用活动，请查询 **sys.dm_db_index_usage_stats** 动态管理视图的 **user_seeks**、 **user_scans** 和 [user_lookups](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 列。  
   
 ###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> 只读访问数据库的统计信息  
  表和索引视图的列的统计信息用于优化查询计划。 对于可用性组，作为应用事务日志记录操作的一部分，在主数据库上创建和维护的统计信息将自动保留在辅助数据库中。 但是，辅助数据库上的只读工作负荷需要的统计信息可能与在主数据库上创建的统计信息不同。 但是，因为辅助数据库被限制为只读访问，所以无法在辅助数据库上创建统计信息。  
   
- 为了解决此问题，辅助副本在 **tempdb**中创建和维护辅助数据库的临时统计信息。 将在临时统计信息名称后追加后缀 The suffix _readonly_database_statistic，以便将临时统计信息与主数据库永久保存的永久统计信息加以区分。  
+ 为了解决此问题，辅助副本在 **tempdb** 中创建和维护辅助数据库的临时统计信息。 将在临时统计信息名称后追加后缀 The suffix _readonly_database_statistic，以便将临时统计信息与主数据库永久保存的永久统计信息加以区分。  
   
  只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以创建和更新临时统计信息。 但是，您可以借助用于永久统计信息的相同工具来删除临时统计信息和监视其属性：  
   
 -   使用 [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句删除临时统计信息。  
   
--   使用 **sys.stats** 和 **sys.stats_columns** 目录视图监视统计信息。 **sys_stats** 包含一个 **is_temporary**列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
+-   使用 **sys.stats** 和 **sys.stats_columns** 目录视图监视统计信息。 **sys_stats** 包含一个 **is_temporary** 列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
   
  不支持自动更新主副本或辅助副本上内存优化表的统计信息。 必须监视辅助副本上的查询性能和计划，在需要时手动更新主副本上的统计信息。 不过，会在主副本和辅助副本上自动创建缺少的统计信息。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "91724598"
   
 ####  <a name="limitations-and-restrictions"></a><a name="StatsLimitationsRestrictions"></a> 限制和局限  
   
--   因为临时统计信息存储于 **tempdb**中，所以重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
+-   因为临时统计信息存储于 **tempdb** 中，所以重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
   
 -   后缀 suffix _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]生成的统计信息预留的。 在主数据库上创建统计信息时不能使用此后缀。 有关详细信息，请参阅[统计信息](../../../relational-databases/statistics/statistics.md)。  
   
@@ -207,9 +207,9 @@ GO
   
 -   对于基于磁盘的表，可读次要副本出于以下两个原因需要占用 **tempdb** 中的空间：  
   
-    -   快照隔离级别会将行版本复制到 **tempdb**中。  
+    -   快照隔离级别会将行版本复制到 **tempdb** 中。  
   
-    -   在 **tempdb**中创建和维护辅助数据库的临时统计信息。 临时统计信息会促使略微增大 **tempdb**的大小。 有关详细信息，请参阅本节后面的 [只读访问数据库的统计信息](#Read-OnlyStats)。  
+    -   在 **tempdb** 中创建和维护辅助数据库的临时统计信息。 临时统计信息会促使略微增大 **tempdb** 的大小。 有关详细信息，请参阅本节后面的 [只读访问数据库的统计信息](#Read-OnlyStats)。  
   
 -   在配置对一个或多个辅助副本的读访问时，主数据库将对已删除、修改或插入的数据行添加 14 个字节的系统开销，以便为基于磁盘的表存储指向辅助数据库上的行版本的指针。 这 14 个字节开销将转入辅助数据库。 在向数据行添加 14 个字节的系统开销时，可能会发生页拆分。  
   
