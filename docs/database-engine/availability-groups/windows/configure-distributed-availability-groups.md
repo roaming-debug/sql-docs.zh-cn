@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 537dbc1d60fc707f3d00aacd85e1ec5e335519c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: df4daf119464ccf90c751f97daeea0379d8e8a21
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727978"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584462"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>配置 Always On 分布式可用性组  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ GO
 ## <a name="create-first-availability-group"></a>创建第一个可用性组
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>在第一个群集上创建主要可用性组  
-在第一个 Windows Server 故障转移群集 (WSFC) 上创建可用性组。   在此示例中，将用于数据库 `ag1` 的可用性组命令为 `db1`。 主可用性组的主要副本在分布式可用性组中称为全局主要副本****。 Server1 是此示例中的全局主要副本。        
+在第一个 Windows Server 故障转移群集 (WSFC) 上创建可用性组。   在此示例中，将用于数据库 `ag1` 的可用性组命令为 `db1`。 主可用性组的主要副本在分布式可用性组中称为全局主要副本。 Server1 是此示例中的全局主要副本。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -81,10 +81,10 @@ GO
 ```  
   
 >[!NOTE]
->上述示例使用自动种子设定，其中 SEEDING_MODE 设置为 AUTOMATIC，用于副本和分布式可用性组********。 此配置将设置次要副本和次要可用性组自动填充，而无需手动备份和还原主要数据库。  
+>上述示例使用自动种子设定，其中 SEEDING_MODE 设置为 AUTOMATIC，用于副本和分布式可用性组。 此配置将设置次要副本和次要可用性组自动填充，而无需手动备份和还原主要数据库。  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>将次要副本联接到主要可用性组  
-任何次要副本都必须使用 **JOIN** 选项联接到具有 **ALTER AVAILABILITY GROUP** 的可用性组。 由于在此示例中使用了自动种子设定，因此也必须调用具有 GRANT CREATE ANY DATABASE 选项的 ALTER AVAILABILITY GROUP********。 此设置允许可用性组创建数据库并开始从主要副本自动进行种子设定。  
+任何次要副本都必须使用 **JOIN** 选项联接到具有 **ALTER AVAILABILITY GROUP** 的可用性组。 由于在此示例中使用了自动种子设定，因此也必须调用具有 GRANT CREATE ANY DATABASE 选项的 ALTER AVAILABILITY GROUP。 此设置允许可用性组创建数据库并开始从主要副本自动进行种子设定。  
   
 在此示例中，在次要副本 `server2`上运行以下命令，以联接 `ag1` 可用性组。 允许可用性组在次要副本上创建数据库。  
   
@@ -111,7 +111,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>创建第二个可用性组  
- 然后，在第二个 WSFC 上创建次要可用性组 `ag2`。 在这种情况下，不会指定数据库，因为它会自动从主要可用性组进行种子设定。  辅助可用性组的主要副本在分布式可用性组中称为转发器****。 在此示例中，server3 是转发器。 
+ 然后，在第二个 WSFC 上创建次要可用性组 `ag2`。 在这种情况下，不会指定数据库，因为它会自动从主要可用性组进行种子设定。  辅助可用性组的主要副本在分布式可用性组中称为转发器。 在此示例中，server3 是转发器。 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -153,7 +153,7 @@ GO
 ```  
   
 ## <a name="create-distributed-availability-group-on-first-cluster"></a>在第一个群集上创建分布式可用性组  
- 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、`ag1` 和 `ag2`****。  
+ 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、`ag1` 和 `ag2`。  
   
 ```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
@@ -181,7 +181,7 @@ GO
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>取消转发器的自动种子设定
 
-无论出于何种原因，如果必须在同步两个可用性组_前_取消转发器的初始化，请通过将转发器的 SEEDING_MODE 参数设置为 MANUAL 并立即取消种子设定来更改分布式可用性组。 在全局主要可用性组中运行命令： 
+无论出于何种原因，如果必须在同步两个可用性组 _前_ 取消转发器的初始化，请通过将转发器的 SEEDING_MODE 参数设置为 MANUAL 并立即取消种子设定来更改分布式可用性组。 在全局主要可用性组中运行命令： 
 
 ```sql
 -- Cancel automatic seeding.  Connect to global primary but specify DAG AG2

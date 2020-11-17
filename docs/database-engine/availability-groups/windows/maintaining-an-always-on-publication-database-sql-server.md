@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b5a4204b3963bdb3082353f27404476f81c5efb8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 864fca7c1d2983bec6296f1e82304cff31f658cb
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116910"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584196"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>将复制的发布服务器数据库作为 Always On 可用性组的一部分管理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ebe23aa1fb252ce19f887b225527c3ec7a3339c6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1d9a6dc56f0c61e454d368215cb37f4a2f5602c2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726452"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584476"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>配置 AlwaysOn 可用性组的次要副本备份
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -178,7 +178,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  通过使用此逻辑编写备份作业脚本，可以在同一个计划中安排对每个可用性副本运行的作业。 上述每个作业都应该查看相同数据以便确定哪一作业应该运行，因此，实际上只有一个计划作业将前进到备份阶段。  在发生故障转移时，无需修改任何脚本或作业。 此外，如果重新配置可用性组以便添加可用性副本，则管理备份作业只需复制或计划备份作业即可。 如果您删除可用性副本，只需从承载该副本的服务器实例上删除备份作业即可。  
   
 > [!TIP]  
->  如果使用[维护计划向导](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)创建某个给定的备份作业，该作业将自动包括调用和校验 **sys.fn_hadr_backup_is_preferred_replica** 函数的脚本逻辑。 但是，备份作业不会返回“这不是首选副本…”消息。请确保在托管可用性组的可用性副本的每个服务器实例上为每个可用性数据库创建作业。  
+>  如果使用 [维护计划向导](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)创建某个给定的备份作业，该作业将自动包括调用和校验 **sys.fn_hadr_backup_is_preferred_replica** 函数的脚本逻辑。 但是，备份作业不会返回“这不是首选副本…”消息。请确保在托管可用性组的可用性副本的每个服务器实例上为每个可用性数据库创建作业。  
   
 ##  <a name="to-obtain-information-about-backup-preference-settings"></a><a name="ForInfoAboutBuPref"></a> 获取有关备份首选项设置的信息  
  以下内容对于获取辅助副本备份的相关信息很有用。  

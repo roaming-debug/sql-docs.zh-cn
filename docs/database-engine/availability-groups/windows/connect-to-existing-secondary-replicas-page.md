@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.swb.adddatabasewizard.connecttoreplicas.f1
 - sql13.swb.addreplicawizard.connecttoreplicas.f1
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: efca75738f8e9c0c1c58d9f24c9f951552a2fd50
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b5f10ac1247bca942cc7362530104dce1d97285d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116974"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584447"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>连接到现有次要副本页 - Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

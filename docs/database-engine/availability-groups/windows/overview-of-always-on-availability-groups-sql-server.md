@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 634dcdb3f3682b133e19d25b041819e22300a932
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727820"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584130"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>什么是 Always On 可用性组？
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

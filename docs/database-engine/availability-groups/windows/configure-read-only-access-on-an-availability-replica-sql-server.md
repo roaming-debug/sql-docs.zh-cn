@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 54d9036e6ce4165f4480339926624f1480c154aa
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1604aa22c53a24fa565061325b3c68a1640c490c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727951"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584437"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>配置对 Always On 可用性组的次要副本的只读访问
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "91727951"
      主副本中的数据库允许所有连接。 这是默认设置。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
- 下面的示例将辅助副本添加到名为 *AG2*的可用性组。 一个独立服务器实例 *COMPUTER03\HADR_INSTANCE*被指定为承载新的可用性副本。 将此副本配置为对主角色允许读写连接，对辅助角色仅允许读意向连接。  
+ 下面的示例将辅助副本添加到名为 *AG2* 的可用性组。 一个独立服务器实例 *COMPUTER03\HADR_INSTANCE* 被指定为承载新的可用性副本。 将此副本配置为对主角色允许读写连接，对辅助角色仅允许读意向连接。  
   
 ```  
 ALTER AVAILABILITY GROUP AG2   
@@ -141,12 +141,12 @@ GO
          不允许直接连接到辅助副本中的数据库，且不支持读取这些数据库。 这是默认设置。  
   
          **AllowReadIntentConnectionsOnly**  
-         只允许连接应用程序意向属性设置为 **ReadOnly**的辅助副本中的数据库。 有关此属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+         只允许连接应用程序意向属性设置为 **ReadOnly** 的辅助副本中的数据库。 有关此属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
          **AllowAllConnections**  
          允许针对辅助副本中的数据库的所有连接进行只读访问。  
   
-    -   若要配置主要角色的连接访问，请指定 **ConnectionModeInPrimaryRole**_primary_role_keyword_参数，其中 *primary_role_keyword* 等于以下值之一：  
+    -   若要配置主要角色的连接访问，请指定 **ConnectionModeInPrimaryRole**_primary_role_keyword_ 参数，其中 *primary_role_keyword* 等于以下值之一：  
   
          **AllowReadWriteConnections**  
          不允许 Application Intent 连接属性设置为 ReadOnly 的连接。 在 Application Intent 属性设置为 ReadWrite 或者未设置 Application Intent 连接属性时，将允许连接。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  

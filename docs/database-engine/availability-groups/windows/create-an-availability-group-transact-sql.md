@@ -10,14 +10,14 @@ ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e79175a6194b282fa57514146a63d9102dd33833
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e6235f980627ad56d18330031c3bae6995eb45d2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727942"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584400"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL) 创建 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "91727942"
   
 -   服务器实例必须支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)配置服务器实例时遇到的典型问题。  
   
--   两个示例数据库 *MyDb1* 和 *MyDb2*必须在将承载主副本的服务器实例上存在。 下面的代码示例创建和配置这两个数据库，并且创建这两个数据库的完整备份。 在您想要创建示例可用性组的服务器实例上执行这些代码示例。 此服务器实例将承载示例可用性组的初始主副本。  
+-   两个示例数据库 *MyDb1* 和 *MyDb2* 必须在将承载主副本的服务器实例上存在。 下面的代码示例创建和配置这两个数据库，并且创建这两个数据库的完整备份。 在您想要创建示例可用性组的服务器实例上执行这些代码示例。 此服务器实例将承载示例可用性组的初始主副本。  
   
     1.  下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 示例创建这些数据库并且将它们更改为使用完整恢复模式：  
   
@@ -100,7 +100,7 @@ ms.locfileid: "91727942"
         GO  
         ```  
   
-    2.  下面的代码示例创建 *MyDb1* 和 *MyDb2*的完整数据库备份。 此代码示例使用虚构的备份共享 \\\\*FILESERVER*\\*SQLbackups*。  
+    2.  下面的代码示例创建 *MyDb1* 和 *MyDb2* 的完整数据库备份。 此代码示例使用虚构的备份共享 \\\\*FILESERVER*\\*SQLbackups*。  
   
         ```sql  
         -- Backup sample databases:  
@@ -171,7 +171,7 @@ ms.locfileid: "91727942"
   
 4.  在用户数据库驻留的服务器实例上，创建可用性组。  
   
-     下面的代码示例在创建了示例数据库 *MyDb1* 和 *MyDb2* 的服务器实例上创建名为 *MyAG*的可用性组。 首先指定 `AgHostInstance`COMPUTER01 *上的本地服务器实例* 。 该实例将承载初始的主副本。 指定远程服务器实例（ *COMPUTER02*上的默认服务器实例）承载辅助副本。 将两个可用性副本配置为使用异步提交模式和手动故障转移（对于异步提交副本，手动故障转移意味着强制故障转移可能造成数据丢失）。  
+     下面的代码示例在创建了示例数据库 *MyDb1* 和 *MyDb2* 的服务器实例上创建名为 *MyAG* 的可用性组。 首先指定 `AgHostInstance`COMPUTER01 *上的本地服务器实例* 。 该实例将承载初始的主副本。 指定远程服务器实例（ *COMPUTER02* 上的默认服务器实例）承载辅助副本。 将两个可用性副本配置为使用异步提交模式和手动故障转移（对于异步提交副本，手动故障转移意味着强制故障转移可能造成数据丢失）。  
   
     ```sql
     -- Create the availability group, MyAG:   

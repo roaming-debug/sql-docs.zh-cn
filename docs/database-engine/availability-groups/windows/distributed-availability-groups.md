@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: ''
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: dac452cc825cef7099cd2f0f27c7d2045f6811ff
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7c0ce9d5364865e2bd487cf6866f97e1d1e08a89
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727917"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584334"
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

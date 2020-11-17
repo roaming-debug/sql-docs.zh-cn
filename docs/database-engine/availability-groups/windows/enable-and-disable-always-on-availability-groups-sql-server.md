@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], disabling
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 08a051a5b0fa450680566b8bcfb408e481016325
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 33172488fd20ed4ef2fc555026931ae8b9a10f9c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727904"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584310"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>启用或禁用 AlwaysOn 可用性组功能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "91727904"
   
 4.  选择“AlwaysOn 高可用性”选项卡。  
   
-5.  验证 **Windows 故障转移群集名称**字段包含本地故障转移群集的名称。 如果此字段为空，则此服务器实例当前不支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 原因包括本地计算机不是群集节点、WSFC 群集已关闭或此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 不支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。  
+5.  验证 **Windows 故障转移群集名称** 字段包含本地故障转移群集的名称。 如果此字段为空，则此服务器实例当前不支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 原因包括本地计算机不是群集节点、WSFC 群集已关闭或此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 不支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。  
   
 6.  选中“启用 AlwaysOn 可用性组”复选框，然后单击“确定” 。  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 57af8645045039923fa59bacbc232bca8e435c91
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 59d07b5a3f469e6c25056b47c5ea859dd6e23afc
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726358"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584179"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>在 AlwaysOn 可用性组中管理使用数据库的作业的登录名
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

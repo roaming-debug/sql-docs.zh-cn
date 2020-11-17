@@ -6,15 +6,15 @@ ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.reviewer: alayu, jrasnick
+ms.reviewer: maghan, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: 1b0fe9ee55f9e0e1243ea72e8160b39a95876a55
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793694"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570920"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>快速入门：使用 Azure Data Studio，在 Azure Synapse Analytics 中借助专用 SQL 池连接和查询数据
 
@@ -118,7 +118,7 @@ ms.locfileid: "92793694"
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
-    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="在 TutorialDB 数据库中创建表":::
+    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="在表中创建行":::
 
 ## <a name="view-the-result"></a>查看结果
 
@@ -131,7 +131,7 @@ ms.locfileid: "92793694"
 
 2. 将显示查询结果：
 
-    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="在 TutorialDB 数据库中创建表":::
+    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="查看结果":::
 
 
 ## <a name="clean-up-resources"></a>清理资源

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - database snapshots [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 8e331d2b3342a3055aaefadd730d610d33f5e119
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9474d3e35454729feb2d004cfd25fd224346d5e5
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91112580"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584329"
 ---
 # <a name="database-snapshots-with-always-on-availability-groups-sql-server"></a>含有 Always On 可用性组的数据库快照 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

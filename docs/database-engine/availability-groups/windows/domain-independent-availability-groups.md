@@ -10,14 +10,14 @@ ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: ''
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a0bcf32babdb30c59a43305edffd3f1718354ac0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 86da24e325b51235d031364a765daa65ebd32ca3
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727888"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584306"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>创建域独立可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

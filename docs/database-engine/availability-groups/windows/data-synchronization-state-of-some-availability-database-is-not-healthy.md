@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 38b2a286e7a42c0cc3ad255d66225dea10caca79
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b95864974db04a3ce32c2e86b48680b24955d88d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113268"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584382"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>一些可用性数据库的数据同步状态不正常
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

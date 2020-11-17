@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: abffb23eda73db16481e9b91402b843a4088a33a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 35a0f41a9ad2d0e4ae8128e7cb98838c1a83747d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670920"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584138"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>执行 Always On 可用性组的强制手动故障转移 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -247,7 +247,7 @@ ms.locfileid: "91670920"
 ##  <a name="example-scenario-using-a-forced-failover-to-recover-from-a-catastrophic-failure"></a><a name="ExampleRecoveryFromCatastrophy"></a> 示例应用场景：使用强制故障转移从灾难性故障中恢复  
  如果主副本失败并且没有同步的辅助副本可用，则强制可用性组进行故障转移可能是适当的反应。 强制执行故障转移是否合适取决于以下几个方面：(1) 是否希望主要副本处于脱机状态的时间超过服务级别协议 (SLA) 的容限，(2) 是否愿意为使主数据库更快处于可用状态，而承担数据可能丢失的风险。 如果您决定可用性组需要强制故障转移，则实际的强制故障转移将是多步骤过程中的一个步骤。  
   
- 为了说明使用强制故障转移从灾难性故障中恢复所需的步骤，本主题提供了一个可能的灾难恢复应用场景。 此示例应用场景假定某一可用性组的原始拓扑结构由一个主数据中心和一个远程数据中心构成。主数据中心承载三个同步提交可用性副本，包括主副本；而远程数据中心承载两个异步提交辅助副本。 下图说明了此示例可用性组的原始拓扑结构。 该可用性组由一个多子网 WSFC 群集承载，并且在主数据中心具有三个节点（**节点 01**、 **节点 02**和 **节点 03**），在远程数据中心有两个节点（**节点 04** 和 **节点 05**）。  
+ 为了说明使用强制故障转移从灾难性故障中恢复所需的步骤，本主题提供了一个可能的灾难恢复应用场景。 此示例应用场景假定某一可用性组的原始拓扑结构由一个主数据中心和一个远程数据中心构成。主数据中心承载三个同步提交可用性副本，包括主副本；而远程数据中心承载两个异步提交辅助副本。 下图说明了此示例可用性组的原始拓扑结构。 该可用性组由一个多子网 WSFC 群集承载，并且在主数据中心具有三个节点（**节点 01**、 **节点 02** 和 **节点 03**），在远程数据中心有两个节点（**节点 04** 和 **节点 05**）。  
   
  ![可用性组的原始拓扑](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-origtopology.gif "可用性组的原始拓扑")  
   
@@ -273,7 +273,7 @@ ms.locfileid: "91670920"
 |步骤|操作|链接|  
 |----------|------------|-----------|  
 |**1.**|数据库管理员或网络管理员确保 WSFC 群集具有运行状况正常的仲裁。 在此示例中，需要强制仲裁。|[WSFC 仲裁模式和投票配置 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)<br /><br /> [通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)|  
-|**2.**|数据库管理员连接到具有最少的延迟的服务器示例（在 **节点 04**上）并且执行强制手动故障转移。 此强制故障转移将此次要副本转换为主角色并且挂起其余次要副本上的辅助数据库（在 **节点 05**上）。|[sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) （查询 **sys.dm_hadr_database_replica_states** 列）。 有关详细信息，请参阅本主题前面的 [建议](#Recommendations)。）|  
+|**2.**|数据库管理员连接到具有最少的延迟的服务器示例（在 **节点 04** 上）并且执行强制手动故障转移。 此强制故障转移将此次要副本转换为主角色并且挂起其余次要副本上的辅助数据库（在 **节点 05** 上）。|[sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) （查询 **sys.dm_hadr_database_replica_states** 列）。 有关详细信息，请参阅本主题前面的 [建议](#Recommendations)。）|  
 |**3.**|数据库管理员手动恢复剩余辅助副本上的每个辅助数据库。|[恢复可用性数据库 (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)|  
   
 ###  <a name="returning-the-availability-group-to-its-original-topology"></a><a name="ReturnToOrigTopology"></a> 将可用性组返回到其原始拓扑  

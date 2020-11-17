@@ -11,14 +11,14 @@ helpviewer_keywords:
 - secondary databases [SQL Server], Availability Groups
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4d2cffb3b857e7d75bc8429876fd30b5a66f54c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ee00fcaffe88710edd4c96a03ba1386e0b47a78a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900684"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583692"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>解决失败的添加文件操作问题（AlwaysOn 可用性组）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

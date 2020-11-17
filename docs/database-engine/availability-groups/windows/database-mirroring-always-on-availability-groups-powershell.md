@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d1ba3500428e9ca7698741eee8a3ec9d63c27801
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b44d6c2205b61fbb5cc89595fadfda272378efed
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113086"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584333"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>使用 PowerShell 为可用性组创建数据库镜像端点
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

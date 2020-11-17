@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
-ms.openlocfilehash: fe7678e4c7e3510321df792a1e4c6f94440da909
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 6431e8940039e242059e73ca81dffe8012925872
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113304"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584338"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>AlwaysOn 可用性组中可用性数据库的数据同步状态不正常
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

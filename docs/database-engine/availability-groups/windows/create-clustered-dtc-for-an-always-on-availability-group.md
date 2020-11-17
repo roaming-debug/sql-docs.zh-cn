@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0915b57e7bd73ab4991ae14c222669fd309f7d6a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 306d77b9bf980179ff69514e0e609fc109c78632
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726394"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584364"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组创建群集 DTC 资源
 
@@ -26,7 +26,7 @@ ms.locfileid: "91726394"
 
 本演练将按照[为 SQL Server 可用性组群集化 DTC](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md) 中的要求，创建群集 DTC 资源和 SQL Server 可用性组。
 
-本演练使用 PowerShell 和 Transact-SQL (T-SQL) 脚本。  许多 T-SQL 脚本要求启用 **SQLCMD 模式** 。  有关 **SQLCMD 模式**的详细信息，请参阅 [在查询编辑器中启用 SQLCMD 脚本撰写](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  必须导入 PowerShell 模块 **FailoverClusters** 。  有关导入 PowerShell 模块的详细信息，请参阅 [导入 PowerShell 模块](/powershell/scripting/developer/module/importing-a-powershell-module)。  本演练基于以下条件：
+本演练使用 PowerShell 和 Transact-SQL (T-SQL) 脚本。  许多 T-SQL 脚本要求启用 **SQLCMD 模式** 。  有关 **SQLCMD 模式** 的详细信息，请参阅 [在查询编辑器中启用 SQLCMD 脚本撰写](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  必须导入 PowerShell 模块 **FailoverClusters** 。  有关导入 PowerShell 模块的详细信息，请参阅 [导入 PowerShell 模块](/powershell/scripting/developer/module/importing-a-powershell-module)。  本演练基于以下条件：
 - 已满足[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) 中的所有要求。  
 - 域为 `contoso.lab`。
 - 用户在将要创建 DTC 网络名称资源的 OU 中具有“创建计算机对象”权限。
@@ -116,7 +116,7 @@ foreach ($node in $nodes) {
     };
 ```  
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.配置“未决事务解析” 
-此脚本针对未决事务将“未决事务解析”服务器配置选项配置为“假设提交”  。  在 SQL Server Management Studio (SSMS) 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
+此脚本针对未决事务将“未决事务解析”服务器配置选项配置为“假设提交”  。  在 SQL Server Management Studio (SSMS) 中以 **SQLCMD 模式** 对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
 ```sql  
 /*******************************************************************
@@ -157,7 +157,7 @@ GO
 ```
 
 ## <a name="4-create-test-databases"></a>4.创建测试数据库
-该脚本将在 `SQLNODE1` 上创建一个名为 `AG1` 的数据库，在 `SQLNODE2` 上创建一个名为 `dtcDemoAG1` 的数据库。  在 SSMS 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
+该脚本将在 `SQLNODE1` 上创建一个名为 `AG1` 的数据库，在 `SQLNODE2` 上创建一个名为 `dtcDemoAG1` 的数据库。  在 SSMS 中以 **SQLCMD 模式** 对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
 ```sql  
 /*******************************************************************
@@ -215,7 +215,7 @@ GO
 ----------------------------------------------------------------
 ```
 ## <a name="5---create-endpoints"></a>5. 创建端点
-此脚本将创建一个名为 `AG1_endpoint` 的端点，以侦听 TCP 端口 `5022`。  在 SSMS 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
+此脚本将创建一个名为 `AG1_endpoint` 的端点，以侦听 TCP 端口 `5022`。  在 SSMS 中以 **SQLCMD 模式** 对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
 ```sql  
 /**********************************************
@@ -248,7 +248,7 @@ GO
 ```
 
 ## <a name="6---prepare-databases-for-availability-group"></a>6. 为可用性组准备数据库
-该脚本将备份 `SQLNODE1` 上的 `AG1` 并将其还原到 `SQLNODE2`。  在 SSMS 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
+该脚本将备份 `SQLNODE1` 上的 `AG1` 并将其还原到 `SQLNODE2`。  在 SSMS 中以 **SQLCMD 模式** 对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
 ```sql  
 /*******************************************************************
@@ -281,7 +281,7 @@ GO
 ```
 
 ## <a name="7---create-availability-group"></a>7. 创建可用性组
-[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必须使用 **CREATE AVAILABILITY GROUP** 命令和 **WITH DTC_SUPPORT = PER_DB** 子句创建。  当前不可更改现有可用性组。  新建可用性组向导不允许为新的可用性组启用 DTC 支持。  以下脚本将创建新的可用性组并加入辅助数据库。  在 SSMS 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
+[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必须使用 **CREATE AVAILABILITY GROUP** 命令和 **WITH DTC_SUPPORT = PER_DB** 子句创建。  当前不可更改现有可用性组。  新建可用性组向导不允许为新的可用性组启用 DTC 支持。  以下脚本将创建新的可用性组并加入辅助数据库。  在 SSMS 中以 **SQLCMD 模式** 对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
 ```sql  
 /*******************************************************************
@@ -561,7 +561,7 @@ END
  ```
 
 ### <a name="execute-a-distributed-transaction"></a>执行分布式事务
-此脚本先返回当前 DTC 事务统计信息，  然后利用 `SQLNODE1` 和 `SQLNODE2`上的数据库执行分布式事务。  接着，该脚本再次返回 DTC 事务统计信息，此时其计数应已增加。  以物理方式连接到 `SQLNODE1` ，并在 SSMS 中以 `SQLNODE1` SQLCMD 模式 **对**运行以下 T-SQL 脚本。
+此脚本先返回当前 DTC 事务统计信息，  然后利用 `SQLNODE1` 和 `SQLNODE2`上的数据库执行分布式事务。  接着，该脚本再次返回 DTC 事务统计信息，此时其计数应已增加。  以物理方式连接到 `SQLNODE1` ，并在 SSMS 中以 `SQLNODE1` SQLCMD 模式 **对** 运行以下 T-SQL 脚本。
 
 ```sql  
 /*******************************************************************

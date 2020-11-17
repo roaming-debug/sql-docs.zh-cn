@@ -10,14 +10,14 @@ ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.addreplicawizard.enterpasswords.f1
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 334b5783bf85683403cfc12e736e6c8f2bd1761f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4ab6d424bfa1ff70ada91956e4552032843ff28b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116169"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584261"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>AlwaysOn 可用性组的“输入密码”页（添加副本向导）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

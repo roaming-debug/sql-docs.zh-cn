@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 085b8788ba15349cca5b3ab445bf5c093207f72b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 505982d700608d34e909248b02ade932d470c4b5
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115074"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584435"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>使用 AlwaysOn 可用性组配置复制
 
@@ -176,7 +176,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- 应在每个可用性组副本主机上使用具有足够授权的登录名来运行存储过程 **sp_validate_replica_hosts_as_publishers** ，以查询有关可用性组的信息。 与 **sp_validate_redirected_publisher**不同，它将使用调用方的凭据，且不会使用保留在 msdb.dbo.MSdistpublishers 中的登录名来连接可用性组副本。  
+ 应在每个可用性组副本主机上使用具有足够授权的登录名来运行存储过程 **sp_validate_replica_hosts_as_publishers** ，以查询有关可用性组的信息。 与 **sp_validate_redirected_publisher** 不同，它将使用调用方的凭据，且不会使用保留在 msdb.dbo.MSdistpublishers 中的登录名来连接可用性组副本。  
   
 > [!NOTE]  
 >  在验证不允许读取访问或要求指定读取意图的次要副本主机时，**sp_validate_replica_hosts_as_publishers** 将失败，并显示以下错误。  
