@@ -3,22 +3,22 @@ title: 通过使用 R 代码分析函数提高性能
 description: 通过使用 R 分析函数收集有用的信息以提高性能并在 SQL Server 上更快获得 R 计算结果。 “rprof”函数收集并返回有关内部函数调用的信息。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 12/12/2018
+ms.date: 10/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e65171fa0222c0c581f692bede727dc4366c9c53
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d15f31dc2c289df910b06de8cb1f48647dbde33c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180431"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384746"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>使用 R 代码分析函数提高性能
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-除了使用 SQL Server 资源和工具来监视 R 脚本执行外，还可以使用由其他 R 包提供的性能工具来获取有关内部函数调用的详细信息。 
+本文介绍 R 包提供的性能工具，这些工具可获取有关内部函数调用的信息。 你可以使用此信息来提高代码的性能。
 
 > [!TIP]
 > 本文提供入门的基本资源。 要查看专家指导，建议参阅[由 Hadley Wickham 编写的《Advanced R》](http://adv-r.had.co.nz)中的“性能”部分。
@@ -59,9 +59,11 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>在 R 中进行调试和分析
 
-默认情况下安装的 Microsoft R Open 的文档包括了一个有关为 R 语言开发扩展的手册，其中详细讨论了[分析和调试](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)。 可以在计算机的 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manua 位置找到相同的文档。
+默认情况下安装的 Microsoft R Open 的文档包括了一个有关为 R 语言开发扩展的手册，其中详细讨论了[分析和调试](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="next-steps"></a>后续步骤
 
-+ [utils R 包](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ [由 Hadley Wickham 编写的《Advanced R》](http://adv-r.had.co.nz)
++ 有关在 SQL Server 中优化 R 脚本的详细信息，请参阅 [R 的性能优化和数据优化](r-and-data-optimization-r-services.md)。
++ 有关在 SQL Server 中进行性能优化的详细信息，请参阅 [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)。
++ 有关 utils 包的详细信息，请参阅 [R Utils 包](https://www.rdocumentation.org/packages/utils/versions/3.5.1)。
++ 有关 R 编程的深入讨论，请参阅 [Hadley Wickham 编著的“高级 R”](http://adv-r.had.co.nz)。

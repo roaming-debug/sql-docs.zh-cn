@@ -4,19 +4,19 @@ titleSuffix: ''
 description: 机器学习服务是 SQL Server 中一项支持使用关系数据运行 Python 和 R 脚本的功能。 可以使用开源包和框架，以及 Microsoft Python 和 R 包进行预测分析和机器学习。 脚本在数据库中执行，而不将数据移动到 SQL Server 外部或是在网络上移动。 本文介绍 SQL Server 机器学习服务的基础知识以及如何开始使用该服务。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/19/2020
+ms.date: 11/10/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8113b373c328bac5a6ba95b7f4f40e5ab583503d
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 96e72d5046e095e25cf890c60059b3120d1bed80
+ms.sourcegitcommit: 3bde506b2fa3bc82813dbe658d567b1b9eb4278b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098816"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94498484"
 ---
-# <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什么是 SQL Server 机器学习服务（Python 和 R）？
+# <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>什么是 Python 和 R 的 SQL Server 机器学习服务？
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 机器学习服务是 SQL Server 中一项支持使用关系数据运行 Python 和 R 脚本的功能。 可以使用开源包和框架，以及 [Microsoft Python 包和 R 包](#packages)进行预测分析和机器学习。 脚本在数据库中执行，而不将数据移动到 SQL Server 外部或是在网络上移动。 本文介绍 SQL Server 机器学习服务的基础知识以及如何开始使用该服务。
@@ -25,7 +25,7 @@ ms.locfileid: "92098816"
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> 要在 SQL Server 中执行 Java，请参阅[语言扩展文档](../language-extensions/language-extensions-overview.md)。
+> 要在 SQL Server 中执行 Java，请参阅 [Java 语言扩展文档](../language-extensions/java-overview.md)。
 ::: moniker-end
 
 ## <a name="execute-python-and-r-scripts-in-sql-server"></a>在 SQL Server 中执行 Python 和 R 脚本

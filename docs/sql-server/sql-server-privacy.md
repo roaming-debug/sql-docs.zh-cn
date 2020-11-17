@@ -1,28 +1,28 @@
 ---
 description: SQL Server 隐私补充
 title: SQL Server 隐私补充 | Microsoft Docs
-ms.date: 09/30/2020
+ms.date: 11/11/2020
 ms.prod: sql
 ms.technology: release-landing
-ms.reviewer: mikeray
+ms.reviewer: wopeter
 ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: jaszymas
-ms.author: jaszymas
-ms.openlocfilehash: f8356b5c07e6d85d9359276740fdd30adc200493
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 87cd9ec5266002f91fea682591e82dfecd403ab5
+ms.sourcegitcommit: 4545b502e3cae7136411fd9a7c15450315665f38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793804"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94549999"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隐私补充
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-本文总结了已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SQL Server 可能会收集标准计算机信息，并可能会将有关使用情况和性能的数据传输给 Microsoft 进行分析，以便改进产品的质量、安全性和可靠性。
+本文总结了已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SQL Server 可能会收集标准计算机信息，并可能会将有关使用情况和性能的数据传输给 Microsoft 进行分析，以便改进产品的质量、安全性和可靠性。 如果在 Microsoft Azure 服务上的虚拟机中安装了 SQL Server，则会将环境信息发送到 Microsoft，以便 Microsoft 可以在虚拟机上安装 SQL Server IaaS 代理扩展，并使用 SQL VM 资源提供程序注册 SQL 虚拟机资源，如[此处](/azure/azure-sql/virtual-machines/windows/sql-vm-resource-provider-register)所述。
 
 本文用作整个 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)的附录。 本文中的数据分类仅适用于 SQL Server 本地产品版本。 它不适用于：
 

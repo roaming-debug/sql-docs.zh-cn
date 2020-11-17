@@ -135,7 +135,13 @@
             - name: 先决条件
               href: big-data-cluster/active-directory-prerequisites.md
             - name: 部署
-              href: big-data-cluster/active-directory-deploy.md
+              items:
+                - name: 简单 AD 部署
+                  href: big-data-cluster/active-directory-deploy.md
+                - name: 规划 AKS 上的 AD
+                  href: big-data-cluster/active-directory-deployment-aks.md
+                - name: 教程 - AKS 上的 AD
+                  href: big-data-cluster/active-directory-deployment-aks-tutorial.md
             - name: 连接
               href: big-data-cluster/active-directory-connect.md
             - name: 同一 AD 域中的多个 BDC
@@ -9992,11 +9998,11 @@
               href: linux/sql-server-linux-setup-full-text-search.md
             - name: 安装 SQL Server Integration Services
               href: linux/sql-server-linux-setup-ssis.md
-            - name: 安装 SQL Server 机器学习服务
+            - name: 安装 SQL Server 机器学习服务（Python 和 R）
               href: linux/sql-server-linux-setup-machine-learning.md
-            - name: 在 Docker 上安装 SQL Server 机器学习服务
+            - name: 在 Docker 上安装 SQL Server 机器学习服务（Python 和 R）
               href: linux/sql-server-linux-setup-machine-learning-docker.md
-            - name: 安装 SQL Server 语言扩展
+            - name: 安装 SQL Server Java 语言扩展
               href: linux/sql-server-linux-setup-language-extensions-java.md
             - name: 配置存储库
               href: linux/sql-server-linux-change-repo.md

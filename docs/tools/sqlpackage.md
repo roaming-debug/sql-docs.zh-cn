@@ -6,21 +6,23 @@ ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
-author: pensivebrian
-ms.author: broneill
-ms.reviewer: drswkier; sstein
-ms.date: 09/29/2020
-ms.openlocfilehash: c4a7fb02521a20dffa95c45cc8a345c243c4ae0e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan; sstein
+ms.date: 11/4/2020
+ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005541"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384496"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
 SqlPackage.exe 是一个命令行实用工具，可自动处理以下数据库开发任务  ：  
   
+- [版本](#version)：返回 SqlPackage 应用程序的生成号。  在版本 18.6 中添加。
+
 - [提取](#extract-parameters-and-properties)：从活动的 SQL Server 或 Azure SQL 数据库创建数据库快照 (.dacpac) 文件。  
   
 - [发布](#publish-parameters-properties-and-sqlcmd-variables)：增量更新数据库架构以便匹配源 .dacpac 文件的架构。 如果该数据库在服务器上不存在，则发布操作将创建它。 否则，将更新现有数据库。  
@@ -69,7 +71,10 @@ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
 
-显示 sqlpackage 版本：
+
+## <a name="version"></a>版本
+
+将 sqlpackage 版本显示为生成号。  可在交互提示和[自动管道](sqlpackage-pipelines.md)中使用。
 
 ```
 sqlpackage.exe /Version

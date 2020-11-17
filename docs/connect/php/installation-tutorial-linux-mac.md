@@ -1,7 +1,7 @@
 ---
 title: 在 Linux 和 macOS 上安装 Drivers for PHP
 description: 这些说明介绍了如何在 Linux 或 macOS 上安装 Microsoft Drivers for PHP for SQL Server。
-ms.date: 10/30/2020
+ms.date: 11/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 66c505f588d6f250c0e18dc88a79b21ed658f2b5
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 41b5eaec44c61e03db609bcd81b3e732a2119e7f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243730"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384216"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安装教程
 以下说明假定环境是干净的，展示了如何在 Ubuntu 16.04、18.04 和 20.04、RedHat 7 和 8、Debian 8、9 和 10、Suse 12 和 15、Alpine 3.11 以及 macOS 10.13、10.14 和 10.15 上安装 PHP 7.x、Microsoft ODBC 驱动程序、Apache Web 服务器和 Microsoft Drivers for PHP for SQL Server。 这些说明建议使用 PECL 安装驱动程序，但也可以从 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 项目页下载预生成的二进制文件，并按照[下载 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的说明安装它们。 有关扩展加载以及为什么不将扩展添加到 php.ini 的说明，请参阅[加载驱动程序](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)部分。
@@ -407,6 +407,7 @@ sudo apachectl restart
 ## <a name="testing-your-installation"></a>测试安装
 
 若要测试此示例脚本，请在系统的文档根目录中创建名为“testsql.php”的文件。 这在 Ubuntu、Debian 和 Redhat 上为 `/var/www/html/`，在 SUSE 上为 `/srv/www/htdocs`，在 macOS 上为 `/var/www/localhost/htdocs`，在 macOS 上为 `/usr/local/var/www`。 将以下脚本复制到其中，酌情替换服务器、数据库、用户名和密码。
+
 ```php
 <?php
 $serverName = "yourServername";
@@ -466,7 +467,14 @@ function formatErrors($errors)
 }
 ?>
 ```
-将浏览器指向 https://localhost/testsql.php （macOS 上的 https://localhost:8080/testsql.php ）。 现在应能够连接到 SQL Server/Azure SQL 数据库。 如果未收到显示 SQL 版本信息的成功消息，请参阅[支持资源](support-resources-for-the-php-sql-driver.md)了解如何获取帮助。
+
+将浏览器指向 https://localhost/testsql.php （macOS 上的 https://localhost:8080/testsql.php ）。 现在应能够连接到 SQL Server/Azure SQL 数据库。 如果看不到显示 SQL 版本信息的成功消息，可以通过从命令行运行脚本来执行一些基本的故障排除：
+
+```bash
+php testsql.php
+```
+
+如果从命令行运行成功但在浏览器中未显示任何消息，请查看 [Apache 日志文件](https://linuxize.com/post/apache-log-files/#location-of-the-log-files)。 有关更多帮助，请参阅可以访问的[支持资源](support-resources-for-the-php-sql-driver.md)。
 
 ## <a name="see-also"></a>另请参阅  
 [开始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

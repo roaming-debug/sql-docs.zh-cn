@@ -4,33 +4,34 @@ titleSuffix: ''
 description: 了解 SQL Server 语言扩展的新增功能，这些功能扩大、扩展并深化了外部语言与数据平台之间的集成。
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1583ab8c54d16d7bcf129e401c2e540fabb342b3
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 0b1f7aec4b3581a8604fad68518a36ac8ecc14dd
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155098"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94417994"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 语言扩展中有哪些新增功能？
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
 随着我们继续扩大、扩展和深化外部语言与数据平台之间的集成，每个版本的 SQL Server 中都将添加[语言扩展](language-extensions-overview.md)功能。
 
-## <a name="new-python-and-r-language-extensions-in-sql-server-2019"></a>SQL Server 2019 中的新 Python 和 R 语言扩展
+## <a name="sql-server-2019"></a>SQL Server 2019
 
-+ 自定义运行时可用于 [Windows 上的 Python](../machine-learning/install/custom-runtime-python.md) 若要在 Linux 上安装，请参阅[在 Linux 上安装适用于 SQL Server 的 Python 自定义运行时](../machine-learning/install/custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)。
+可在下面找到 SQL Server 2019 中的[语言扩展](language-extensions-overview.md)新功能。 有关此版本中所有功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL Server 2019 的发行说明](../sql-server/sql-server-version-15-release-notes.md)。
 
-+ 自定义运行时可用于 [Windows上的 R](../machine-learning/install/custom-runtime-r.md)。 若要在 Linux 上安装，请参阅[在 Linux 上安装适用于 SQL Server 的 R 自定义运行时](../machine-learning/install/custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)
+### <a name="new-python-and-r-language-extensions"></a>新 Python 和 R 语言扩展
 
+- 语言扩展提供 [Python 自定义运行时](../machine-learning/install/custom-runtime-python.md)。 有关详细信息，请参阅如何[在 Windows 上安装 Python 自定义运行时](../machine-learning/install/custom-runtime-python.md?view=sql-server-ver15&preserve-view=true)或[在 Linux 上安装 Python 自定义运行时](../machine-learning/install/custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)。
 
-## <a name="new-java-language-extension-in-sql-server-2019"></a>SQL Server 2019 中的新 Java 语言扩展
+- 语言扩展提供 [R 自定义运行时](../machine-learning/install/custom-runtime-r.md)。 有关详细信息，请参阅如何[在 Windows 上安装 R 自定义运行时](../machine-learning/install/custom-runtime-r.md?view=sql-server-ver15&preserve-view=true)或[在 Linux 上安装 R 自定义运行时](../machine-learning/install/custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)。
 
-有关此版本中所有功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL Server 2019 的发行说明](../sql-server/sql-server-version-15-release-notes.md)。
+### <a name="new-java-language-extension"></a>新 Java 语言扩展
 
 - Windows 和 Linux 上的默认 Java 运行时是 Open Zulu JRE，并且包含在 [Windows 上的 SQL Server 语言扩展安装](install/windows-java.md)和 [Linux 上的 SQL Server 语言扩展安装](../linux/sql-server-linux-setup-language-extensions-java.md)中。
 - 支持的 [Java 数据类型](how-to/java-to-sql-data-types.md)。
