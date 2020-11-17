@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 56c325b124c3957e4e47952d1021a2954e05c7b4
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 13bf3e27aba6ea559ad5c1757b00367108685a9f
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522361"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583277"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 群集服务处于脱机状态
 

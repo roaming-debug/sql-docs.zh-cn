@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.swb.addreplicawizard.results.f1
 - sql13.swb.adddatabasewizard.results.f1
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 5d0397fced5420ccd25d8d74fecb47f2ae5ed343
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 080b9b8b20af9abcf6fe37d0c26fc92779be4593
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893111"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583929"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>“结果”页（AlwaysOn 可用性组向导）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

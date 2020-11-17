@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], take offline
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 672a640ed130a434539939516a6b3de39ba3953a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 49d2d529a511aa41ad69dc2326aa33decf0d48ef
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671076"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583779"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>使可用性组脱机 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

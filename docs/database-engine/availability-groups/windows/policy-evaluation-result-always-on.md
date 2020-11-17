@@ -11,14 +11,14 @@ f1_keywords:
 - swb.agdashboard.policyeval.f1
 - sql13.swb.agdashboard.policyeval.f1
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 333ff3e79bc92d82a224caf8af24fb9dc76a6082
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9149767a45aec143b4850b717fc50c070c89e71a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897012"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584099"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>策略评估结果页（Always On 仪表板）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

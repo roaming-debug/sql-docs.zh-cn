@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 2c5d7047940aea0368e5fc3fe8058bab0714ffa8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 514de23cf905f7344f76a3597658f8a9d40d1013
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883108"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583861"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>一些可用性副本不具有正常运行的角色
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

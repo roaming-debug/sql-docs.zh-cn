@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.swb.newagwizard.specifyagname.f1
 - sql13.swb.adddatabasewizard.specifyagname.f1
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 202493fb2ee8a05408f82927f82f2b696aa19331
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8ca6b683bf1fd51d0942984e2b4fcecd5b7d9a9d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883089"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583863"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 可用性组的“指定可用性组选项”页
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

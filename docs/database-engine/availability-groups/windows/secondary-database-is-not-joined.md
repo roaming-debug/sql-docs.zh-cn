@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a0b7ee3ee59a1ebf21854555c8ab75b6a2fc01b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1c66fa7c407469ec8f52b11c8393bf7e03ddc734
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899846"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583937"
 ---
 # <a name="secondary-database-is-not-joined"></a>未联接辅助数据库
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

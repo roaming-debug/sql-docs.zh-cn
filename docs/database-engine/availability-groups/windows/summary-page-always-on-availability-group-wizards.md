@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.swb.addreplicawizard.summary.f1
 - sql13.swb.failoverwizard.summary.f1
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e3370f19992d439f13c06c5e2327cb47f93fc15a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 748633e5b78ad0d27252147fb7455e961fc63d10
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670886"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583791"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>“摘要”页（Always On 可用性组向导）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

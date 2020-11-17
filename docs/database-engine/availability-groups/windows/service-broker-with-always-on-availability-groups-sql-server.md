@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Service Broker, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 10eb6fdf211b15cdc5b9f11d7f85cb45c050019a
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8b9b95e53ad920c712fe9d5da02f0f9a0b4f1095
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332246"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583850"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

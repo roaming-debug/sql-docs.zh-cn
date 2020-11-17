@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4b4c07e6a275d1208d553fb49b38e3c27a584bf7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8b8de7c483e3cb01848a17f5f5762667d21c2a57
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883124"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583840"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>一些可用性副本未同步数据
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

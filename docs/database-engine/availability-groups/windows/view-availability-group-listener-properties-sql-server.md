@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f2f148deff16e26b8eec4d3c34b0e602e5e7f06e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 723fc0d84a01de8435ebb1f7c0c4248eb0b1c25a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893822"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583279"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>查看可用性组侦听器属性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

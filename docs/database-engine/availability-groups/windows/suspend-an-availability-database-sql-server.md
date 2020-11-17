@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], suspending a database
 - Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6e6dc21e1fb7e61b6d2b68524ea16c5b072003cc
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6550c409ee45e3287c6edf691fe9d5993e531a5a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670870"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583782"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>挂起可用性数据库 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

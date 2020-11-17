@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f4590a18f2007fd999629a88dda0f71574775e47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: fea85b98f14fe3afaeb9a92a1748c9c96dc7b306
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897457"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583373"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>查看可用性组属性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

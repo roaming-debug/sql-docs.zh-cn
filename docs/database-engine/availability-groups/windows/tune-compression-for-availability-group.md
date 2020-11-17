@@ -7,14 +7,14 @@ ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 635a9534f12d8ac48eaa0c331371ac2875577a91
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6b618efb64f5409e16665d772accbbe9434e8ffd
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670400"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583681"
 ---
 # <a name="tune-compression-for-availability-group"></a>调整可用性组的压缩
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ', policies'
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 624cf6c008ff18aefed8d0b58c1e7097b3b5ceb0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 19721696cb9f4f084582286018247ea340d20cf7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901082"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583314"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>查看可用性副本属性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

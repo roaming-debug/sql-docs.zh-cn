@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.swb.adddatabasewizard.selectdatabases.f1
 - sql13.swb.newagwizard.selectdatabases.f1
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f47e76c398d48cbfb4c088f73c23fe47022f3a64
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1576b98f62832f5c45759afe96fd0254d3d83513
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899828"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583912"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-and-add-database-wizard"></a>Select Databases Page (New Availability Group Wizard and Add Database Wizard)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

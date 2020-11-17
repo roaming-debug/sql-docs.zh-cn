@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 10af5f8ce1c47fde7870b6382a8f698c26b05130
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 388de3ceb28e4ff8a1e361bf4730c5262bb79544
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670030"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584003"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>删除可用性组侦听程序 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

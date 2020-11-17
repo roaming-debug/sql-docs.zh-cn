@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d39284d132610e1ab68312823ca1d06d540bc492
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: bd19b92c3ddd9cf6dad2cb917bbb598f4cff0438
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897001"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584086"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>“确定可用性副本之间的连接失败的可能原因
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

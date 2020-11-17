@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 590c559b283a91a7b6c4ecde7b455287d2f3b3bb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9ff107b2f3e132015e294ef7ba8174ade5a0c575
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005796"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583680"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>将 Azure VM 配置为可用性组中的次要副本
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

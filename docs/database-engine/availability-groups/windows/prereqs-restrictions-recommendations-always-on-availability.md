@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 38c643bf5faac76d895181476b7d92c469445c26
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 56a36ef2372e1b8171bf957f2d2c2d7dc2eaa356
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670120"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584076"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "91670120"
 |主机必须是一个 WSFC 节点。 托管给定可用性组的可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例驻留在单独的群集节点上。 迁移到其他群集时，一个可用性组可能会暂时跨两个群集。 SQL Server 2016 引入了分布式可用性组。 在分布式可用性组中，两个可用性组驻留在不同的群集上。|[Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [分布式可用性组（AlwaysOn 可用性组）](./distributed-availability-groups.md)|  
 |如果您希望将可用性组与 Kerberos 一起使用：<br /><br /> 承载可用性组的可用性副本的所有服务器实例都必须使用相同的 SQL Server 服务帐户。<br /><br /> 域管理员需要在可用性组侦听器的虚拟网络名称 (VNN) 的 SQL Server 服务帐户上使用 Active Directory 手动注册服务主体名称 (SPN)。 如果在 SQL Server 服务帐户之外的帐户上注册 SPN，则身份验证将失败。<br /><br /> <br /><br /> <b>\*\* 重要提示 \*\*</b> 如果你更改 SQL Server 服务帐户，则域管理员必须重新手动注册 SPN。|[为 Kerberos 连接注册服务主体名称](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **简要说明：**<br /><br /> Kerberos 和 SPN 强制实施相互身份验证。 SPN 将映射到启动 SQL Server 服务的 Windows 帐户。 如果未正确注册 SPN 或注册失败，则 Windows 安全层将无法确定与 SPN 关联的帐户，因而无法使用 Kerberos 身份验证。<br /><br /> <br /><br /> 注意：NTLM 没有此要求。|  
 |如果您计划使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 承载可用性副本，则请确保您理解 FCI 限制并且满足 FCI 要求。|[使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和要求](#FciArLimitations)（本文后面将作介绍）|  
-|每个服务器实例必须运行相同版本的 SQL Server 才能参加 AlwaysOn 可用性组。|[SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014)、[SQL 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md?view=sql-server-2016) 和 [SQL 2017](../../../sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017) 的各版本和支持的功能。|  
+|每个服务器实例必须运行相同版本的 SQL Server 才能参加 AlwaysOn 可用性组。|[SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014&preserve-view=true)、[SQL 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md?view=sql-server-2016&preserve-view=true) 和 [SQL 2017](../../../sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017&preserve-view=true) 的各版本和支持的功能。|  
 |为某一可用性组承载可用性副本的所有服务器实例必须都使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排序规则。|[设置或更改服务器排序规则](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |对将为任何可用性组承载可用性副本的每个服务器实例都启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在某一给定计算机上，您可为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装支持的任意多的服务器实例。|[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\*重要提示\*\*</b> 如果销毁并重新创建了 WSFC，则必须在每个服务器实例上禁用并重新启用已在原始群集上为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|  
 |每个服务器实例都要求数据库镜像端点。 请注意，此端点由服务器实例上的所有可用性副本以及数据库镜像伙伴和见证服务器共享。<br /><br /> 如果你选择承载可用性副本的服务器实例正在某一域用户帐户下运行并且尚不具有数据库镜像端点，则 [新建可用性组向导](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) （或者 [将副本添加到可用性组向导](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)）可以创建该端点并将 CONNECT 权限授予服务器实例的服务帐户。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务正在以内置帐户（例如 Local System、Local Service 或 Network Service）或非域帐户运行，您必须使用证书来进行端点身份验证，并且该向导将无法在服务器实例上创建数据库镜像端点。 在此情况下，我们建议您首先手动创建数据库镜像端点，然后启动该向导。<br /><br /> <br /><br /> <b>\*\* 安全说明 \*\*</b>[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的传输安全性与数据库镜像的传输安全性相同。|[数据库镜像终结点 (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  

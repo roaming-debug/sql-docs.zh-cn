@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4098fd48f44200dd7b878f417d7009d324b2e1aa
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c42edc276052e7558dd8224d38a56a4ab7c6f269
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670069"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584021"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>从 Always On 可用性组中删除主数据库
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

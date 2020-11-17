@@ -14,14 +14,14 @@ helpviewer_keywords:
 - High Availability
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 25103e53ab29e9a19872ea1563f98607f3821b67
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 14a7b2fbb5834ae45c5262f73ffc81a684bba300
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669725"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583825"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性组数据库级别运行状况检测故障转移选项
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 804cf6d89a67441228caead33cbc8969db530d6c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 10e0f4355f3415708e5783595b048f7ae3b540d0
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671050"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583728"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>事务 - AlwaysOn 可用性组和数据库镜像
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

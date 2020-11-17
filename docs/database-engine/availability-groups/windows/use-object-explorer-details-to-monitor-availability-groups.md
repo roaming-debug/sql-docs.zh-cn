@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cc56fad8481141cb208b8fb218c281d12c1e3027
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894166"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583721"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用“对象资源管理器详细信息”来监视可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

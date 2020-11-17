@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 370a8cf6655287c950f0e55c4a69a414de150c06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cfa9fb0297f4ba3e9cdab859816ecfc4d8fb54bf
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883135"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583852"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>断开一些可用性副本的连接
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

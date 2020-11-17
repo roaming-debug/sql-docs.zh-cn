@@ -11,14 +11,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: dd1fe3943fe3e5c36dc60df147a2c2ec77a4dac2
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 90ede0e93644a87d11ef25ec1c2113076ff0bba2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670130"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584060"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>将日志传送转换为 Always On 可用性组的先决条件
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

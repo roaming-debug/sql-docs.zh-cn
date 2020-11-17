@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c92038a8ce32a5e5796af83d26a1b0983c439663
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e6fb7f1bdc9e01037129be72657cd5dcdeba4f56
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670108"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584020"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>使用远程 Blob 存储 (RBS) 和 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
