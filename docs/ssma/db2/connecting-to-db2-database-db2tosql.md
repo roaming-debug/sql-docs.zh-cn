@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9372a12b6ebaa47096c4ad8b6429db61b00a6188
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d0ac703c8ea155f33ecb713b98a26f0c39b5a695
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987453"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870066"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>连接到 DB2 数据库 (DB2ToSQL) 
 
@@ -101,7 +101,7 @@ ms.locfileid: "91987453"
 
 ## <a name="next-step"></a>下一步
 
-- 迁移过程的下一步是 [连接到 SQL Server](./connecting-to-sql-server-db2etosql.md)。
+- 迁移过程的下一步是 [连接到 SQL Server](./connecting-to-sql-server-db2tosql.md)。
 
 ## <a name="see-also"></a>另请参阅
 

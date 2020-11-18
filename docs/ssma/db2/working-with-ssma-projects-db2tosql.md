@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2dbcef29550276241cb638b6224914e43e2e88ec
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f56387f8081ce14c68d355327c2829bf6e33c8cc
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988454"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869475"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>使用 SSMA 项目 (DB2ToSQL) 
 若要将 DB2 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请先创建一个 SSMA 项目。 项目是包含以下信息的文件：  
@@ -28,7 +28,7 @@ ms.locfileid: "91988454"
   
 -   项目设置。  
   
-当你打开项目时，它会与 DB2 和断开连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 这使你可以脱机工作。 有关重新连接到的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 [连接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)。  
+当你打开项目时，它会与 DB2 和断开连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 这使你可以脱机工作。 有关重新连接到的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 [连接到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)。  
   
 ## <a name="reviewing-default-project-settings"></a>查看默认项目设置  
 SSMA 包含多个用于转换和加载数据库对象、迁移数据以及将 SSMA 与 DB2 和同步的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 默认设置适用于许多用户。 但是，在创建新的 SSMA 项目之前，应该检查设置。 如果需要，你可以更改将用于所有新项目的默认设置。  
@@ -60,9 +60,9 @@ SSMA 包含多个用于转换和加载数据库对象、迁移数据以及将 SS
   
 **创建项目**  
   
-1.  在“文件”菜单上，单击“新建项目”。********  
+1.  在“文件”菜单上，单击“新建项目”。  
   
-    将显示“新建项目”对话框。  
+    此时将出现“新建项目”对话框。  
   
 2.  在 " **名称** " 框中，输入项目的名称。  
   
@@ -76,7 +76,7 @@ SSMA 包含多个用于转换和加载数据库对象、迁移数据以及将 SS
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL Database  
+    -   Azure SQL 数据库  
   
 ## <a name="customizing-project-settings"></a>自定义项目设置  
 除了定义适用于所有新 SSMA 项目的默认项目设置，你还可以自定义每个项目的设置。 有关详细信息，请参阅 [设置项目选项 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md) 和相关部分。  
@@ -121,4 +121,4 @@ SSMA 包含多个用于转换和加载数据库对象、迁移数据以及将 SS
 ## <a name="see-also"></a>另请参阅  
 [将 DB2 数据库迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [连接到 DB2 数据库 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
-[连接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[连接到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  

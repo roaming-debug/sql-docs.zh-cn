@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5b833a97fceeaf09b5eb6ffb86ac3abeb06e6bb0
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2f3ca5b9f222e52b7913d5688b6e8c6adfbd526d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987911"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869675"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>将 DB2 数据迁移到 SQL Server (DB2ToSQL) 
 使用成功同步转换后的对象后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以将数据从 DB2 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -28,7 +28,7 @@ ms.locfileid: "91987911"
   
 -   使用此对话框，您可以设置迁移批大小、表锁定、约束检查、null 值处理和标识值处理等选项。 有关项目迁移设置的详细信息，请参阅 [项目设置 (迁移) ](./project-settings-migration-db2tosql.md)。  
   
--   使用 "**项目设置**" 对话框中的**迁移引擎**，用户可以使用两种类型的数据迁移引擎来执行迁移过程：  
+-   使用 "**项目设置**" 对话框中的 **迁移引擎**，用户可以使用两种类型的数据迁移引擎来执行迁移过程：  
   
     1.  客户端数据迁移引擎  
   
@@ -38,10 +38,10 @@ ms.locfileid: "91987911"
   
 -   若要在客户端启动数据迁移，请在 "**项目设置**" 对话框中选择 "**客户端数据迁移引擎**" 选项。  
   
--   在 **项目设置**中，设置了 **客户端数据迁移引擎** 选项。  
+-   在 **项目设置** 中，设置了 **客户端数据迁移引擎** 选项。  
   
     > [!NOTE]  
-    > **客户端数据迁移引擎**驻留在 SSMA 应用程序中，因此不依赖于扩展包的可用性。  
+    > **客户端数据迁移引擎** 驻留在 SSMA 应用程序中，因此不依赖于扩展包的可用性。  
   
 **服务器端数据迁移：**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "91987911"
   
     **客户端数据迁移：**  
   
-    -   若要执行**客户端数据迁移**，请在 "**项目设置**" 对话框中选择 "**客户端数据迁移引擎**" 选项。  
+    -   若要执行 **客户端数据迁移**，请在 "**项目设置**" 对话框中选择 "**客户端数据迁移引擎**" 选项。  
   
     **服务器端数据迁移：**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "91987911"
   
         2.  SQL Server 代理服务正在 SQL Server 的实例上运行。  
   
-    -   对于执行**服务器端数据迁移**，请在 "**项目设置**" 对话框中选择 "**服务器端数据迁移引擎**" 选项。  
+    -   对于执行 **服务器端数据迁移**，请在 "**项目设置**" 对话框中选择 "**服务器端数据迁移引擎**" 选项。  
   
 4.  在 DB2 元数据资源管理器中右键单击 " **架构** "，然后单击 " **迁移数据**"。 您还可以迁移各个对象或对象类别的数据：右键单击对象或其父文件夹;选择 " **迁移数据** " 选项。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "91987911"
   
 5.  在 " **连接到 DB2** " 对话框中，输入连接凭据，然后单击 " **连接**"。 有关连接到 DB2 的详细信息，请参阅 [连接到 Db2 数据库 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    若要连接到目标数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请在 " **连接到 SQL Server** " 对话框中输入连接凭据，然后单击 " **连接**"。 有关连接到的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 [连接到 SQL Server](./connecting-to-sql-server-db2etosql.md)  
+    若要连接到目标数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请在 " **连接到 SQL Server** " 对话框中输入连接凭据，然后单击 " **连接**"。 有关连接到的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 [连接到 SQL Server](./connecting-to-sql-server-db2tosql.md)  
   
     消息将显示在 " **输出** " 窗格中。 迁移完成后，将显示 " **数据迁移" 报表** 。 如果任何数据未迁移，请单击包含错误的行，然后单击 " **详细信息**"。 完成报表后，单击 " **关闭**"。 有关数据迁移报表的详细信息，请参阅 [数据迁移报表 (SSMA Common) ](../sybase/data-migration-report-sybasetosql.md)  
   

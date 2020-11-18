@@ -20,7 +20,7 @@ ms.locfileid: "92358105"
 
 适用于 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-以下文章提供了 azdata 工具中 sql 命令的参考********。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)****
+以下文章提供了 azdata 工具中 sql 命令的参考。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 
@@ -91,7 +91,7 @@ mssqlclirc 配置文件的位置。
 #### `--row-limit`
 设置行限制提示的阈值。 使用 0 可禁止提示。
 #### `--less-chatty`
-启动时跳过简介，退出时再见。
+启动时跳过简介，退出时跳过再见。
 #### `--auto-vertical-output`
 如果结果大于终端宽度，则自动切换到垂直输出模式。
 #### `--encrypt -n`
@@ -101,7 +101,7 @@ mssqlclirc 配置文件的位置。
 #### `--connect-timeout -l`
 在终止请求之前等待连接到服务器的时间（以秒为单位）。
 #### `--application-intent -k`
-连接到 SQL Server 可用性组中的数据库时声明应用程序工作负载类型。
+连接到 SQL Server 可用性组中的数据库时，声明应用程序工作负载类型。
 #### `--multi-subnet-failover -m`
 如果应用程序连接到不同子网上的 AlwaysOn 可用性组，则设置此选项可以更快地检测和连接到当前处于活动状态的服务器。
 #### `--packet-size`
@@ -113,7 +113,7 @@ mssqlclirc 配置文件的位置。
 #### `--output-file`
 指定从查询接收输出的文件。
 #### `--enable-sqltoolsservice-logging`
-启用 SqlToolsService 的诊断日志记录。
+启用 SqlToolsService 的诊断日志记录功能。
 #### `--prompt`
 提示格式（默认值：\d>
 ### <a name="global-arguments"></a>全局参数

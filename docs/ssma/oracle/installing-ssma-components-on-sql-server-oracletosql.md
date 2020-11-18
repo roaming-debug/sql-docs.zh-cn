@@ -3,7 +3,7 @@ title: 在 SQL Server 上安装 SSMA 组件 (OracleToSQL) |Microsoft Docs
 description: 了解如何在运行 SQL Server 的计算机上安装 SSMA 扩展包和 Oracle 提供程序以支持 Oracle 数据库转换。
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/14/2020
+ms.date: 11/16/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7acabfac10c3eb6e7afa1fbfbb2f546b0ae4137d
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 64850d1a701491f0dc5817576a568fdc3ebc2483
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006435"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870092"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server 上安装 SSMA 组件 (OracleToSQL) 
 
@@ -26,7 +26,7 @@ ms.locfileid: "92006435"
 
 ## <a name="ssma-for-oracle-extension-pack"></a>Oracle 扩展包的 SSMA
 
-SSMA 扩展包将 **sysdb** 和 **ssmatesterdb** 数据库添加到的指定实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 数据库 **sysdb** 包含迁移数据所需的表和存储过程，以及用于模拟 Oracle 系统功能的用户定义函数。 **Ssmatesterdb**数据库包含测试人员组件所需的表和过程。
+SSMA 扩展包将部署扩展存储过程，并将 **sysdb** 和 **ssmatesterdb** 数据库添加到指定的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 扩展存储过程提供模拟 Oracle 的功能和 behaiov 所需的功能，而 **sysdb** 数据库包含迁移数据所需的表和存储过程。 如果安装) ， **ssmatesterdb** 数据库包含测试人员组件 (所需的表和过程。
 
 此外，在将数据迁移到时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在服务器端数据迁移引擎用于迁移数据时创建代理作业。
 
@@ -52,13 +52,13 @@ SSMA 扩展包将 **sysdb** 和 **ssmatesterdb** 数据库添加到的指定实�
 
 安装扩展包：
 
-1. 将 **SSMAforOracleExtensionPack_*n*.msi** (，其中 *n* 是) 到运行的计算机的生成号 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
+1. 将 **SSMAforOracleExtensionPack_ *n*.msi** (，其中 *n* 是) 到运行的计算机的生成号 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
 2. 双击 SSMAforOracleExtensionPack_ " **。*n***
-3. 在“欢迎”页上，选择“下一步”。
+3. 在“欢迎”页面上，单击“下一步”。 
 4. 在 " **最终用户许可协议** " 页上，阅读许可协议。 如果同意，请选择 **"我接受协议"** 选项，然后单击 " **下一步**"。
 5. 在 " **选择安装类型** " 页上，选择 " **典型**"。
 6. 在 " **准备安装** " 页上，选择 " **安装**"。
-7. 在 " **完成第一步安装** " 页上，选择 " **下一**步"。
+7. 在 " **完成第一步安装** " 页上，选择 " **下一** 步"。
   
    此时将显示一个新对话框。 选择扩展包类型。
   
@@ -79,7 +79,7 @@ SSMA 扩展包将 **sysdb** 和 **ssmatesterdb** 数据库添加到的指定实�
 
 11. 在下一页上，选择 " **安装实用程序数据库 *n* " 并安装扩展包库**，其中 *n* 是版本号。 如果计划使用测试人员功能，请选择 " **安装测试人员数据库** " 复选框，然后选择 " **下一步**"。
 
-    **Sysdb**数据库是使用 (在此数据库中创建的，这些表和存储过程是使用) 在此数据库中创建的。
+    **Sysdb** 数据库是使用 (在此数据库中创建的，这些表和存储过程是使用) 在此数据库中创建的。
 
     如果选中了 " **安装测试器数据库** " 选项，则将创建 **ssmatesterdb** 数据库。
 
@@ -104,7 +104,13 @@ SSMA 扩展包将 **sysdb** 和 **ssmatesterdb** 数据库添加到的指定实�
 
 每次将数据迁移到时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，SSMA 会创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 这些作业 **ssma_oracle 数据迁移包 {GUID}** 命名，在 "作业" 文件夹的 "代理" 节点中可见 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。
 
-## <a name="see-also"></a>请参阅
+此外，将在 **master** 数据库中添加以下扩展存储过程：
+
+- `xp_ora2ms_exec2`
+- `xp_ora2ms_exec2_ex`
+- `xp_ora2ms_versioninfo2`
+
+## <a name="see-also"></a>另请参阅
 
 - [为 Oracle 客户端安装 SSMA](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)
 - [将 Oracle 数据库迁移到 SQL Server](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

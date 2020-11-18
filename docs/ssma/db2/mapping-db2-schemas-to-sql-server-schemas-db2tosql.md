@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7b609bfa0b29e289a8b2225d969d131112a8f532
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9942d2ee78932c3bb8bed2baac0885b68e40049d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987443"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869536"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>将 DB2 架构映射到 SQL Server 架构 (DB2ToSQL) 
 在 DB2 中，每个数据库都有一个或多个架构。 默认情况下，SSMA 将 DB2 架构中的所有对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名为的数据库的架构。 但是，你可以自定义 DB2 架构和数据库之间的映射 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -23,7 +23,7 @@ ms.locfileid: "91987443"
 ## <a name="db2-and-sql-server-schemas"></a>DB2 和 SQL Server 架构  
 DB2 数据库包含架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含多个数据库，每个数据库都可以有多个架构。  
   
-架构的 DB2 概念映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的概念及其架构之一。 例如，DB2 可能有一个名为 **HR**的架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能有一个名为 **HR**的数据库，该数据库中的数据库是架构。 一个架构是 **dbo** (或数据库所有者) 架构。 默认情况下，DB2 架构 **hr** 将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库和架构 " **hr. dbo**"。 SSMA 是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为架构的数据库和架构的组合。  
+架构的 DB2 概念映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的概念及其架构之一。 例如，DB2 可能有一个名为 **HR** 的架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能有一个名为 **HR** 的数据库，该数据库中的数据库是架构。 一个架构是 **dbo** (或数据库所有者) 架构。 默认情况下，DB2 架构 **hr** 将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库和架构 " **hr. dbo**"。 SSMA 是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为架构的数据库和架构的组合。  
   
 您可以修改 DB2 和架构之间的映射 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -63,5 +63,5 @@ DB2 数据库包含架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/ssn
 如果要分析 DB2 对象到对象的转换 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以 [ (SSMA Common) 数据迁移报表 ](../sybase/data-migration-report-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[连接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[连接到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  
 [将 DB2 数据库迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
