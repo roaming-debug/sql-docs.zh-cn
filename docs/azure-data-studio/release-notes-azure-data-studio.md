@@ -8,17 +8,40 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 11/12/2020
+ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059185"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584800"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](./download-azure-data-studio.md)**
+
+## <a name="november-2020"></a>2020 年 11 月
+
+2020 年 11 月 12 日&nbsp; / &nbsp;版本：1.24.0
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| ------ | ------- |
+| Bug 修复 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed)。 |
+| 连接对话框 | 为“连接”对话框添加了新的“浏览器”选项卡。 |
+| 扩展更新 | 已发布 Postgres 扩展的更新。 |
+| 新笔记本功能 | 向 SQL 笔记本支持添加了新功能。 <br/> 向笔记本参数化支持添加了新功能。 <br/>  向 SQL 笔记本的结果流式处理添加了新功能。 |
+| Python 安装 | 已从默认 Python 安装中删除 PROSE 包。 |
+
+### <a name="known-issues-1240"></a>已知问题 (1.24.0)
+
+| 新项 | 详细信息 | 解决方法 |
+|----------|---------|------------|
+| Azure Arc 扩展 | [已知问题：](https://github.com/microsoft/azuredatastudio/issues/13319)Arc MIAA & PG 部署的“将脚本保存到笔记本”按钮在编写笔记本脚本之前不会执行字段验证。 这意味着，如果用户在密码确认输入中输入了错误的密码，则可能最终会得到一个具有错误密码值的笔记本。| “部署”按钮按预期工作，因此用户应改为使用该按钮。 |
+| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 按需 SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) 相关的更改，低于 1.24.0 的 ADS 版本的对象资源管理器有中断性变更。 | 若要继续将 Azure Data Studio 中的对象资源管理器与 Azure Synapse Analytics 按需 SQL 结合使用，你需要 Azure Data Studio 1.24.0 或更高版本。 |
+
+可参考 [Azure Data Studio 反馈](https://github.com/microsoft/azuredatastudio)了解其他已知问题，并向产品团队提供反馈。
 
 ## <a name="october-2020"></a>2020 年 10 月
 
@@ -468,7 +491,7 @@ ms.locfileid: "92059185"
 - [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427)：在内核准备好启动 Spark 之前单击“在单元上运行”会导致灾难性错误 解决方法：先等待内核加载，再运行单元
 - [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493)：从 SSMS 启动的 ADS 使用 SQL 身份验证，这会提示用户输入密码 解决方法：现在使用 Windows 身份验证。 
 - [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494)：无法安装 SQL 笔记本功能 <br/>
-**解决方法：** 请执行[此处](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832)的解决步骤。 
+**解决方法：** 请执行 [此处](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832)的解决步骤。 
 - [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503)：无法直接从下载文件夹 (Mac) 打开 Azure Data Studio <br />
 **解决方法：** 解压缩应用后重启计算机。 将进行调查。 
 - [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539)：笔记本的“另存为”功能会丢失连接上下文 <br />

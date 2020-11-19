@@ -150,7 +150,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|由三部分和四部分组成的列引用。|由两部分组成的名称是符合标准的行为。|两个以上的部分构成的列名称|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|用引号引起来的字符串用作 SELECT 列表中表达式的列别名：<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|字符串文字作为列别名|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|编号过程|无。 请勿使用。|ProcNums|160|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|在 DROP INDEX 中使用*table_name.index_name* 语法|在 DROP INDEX 中使用*index_name* ON *table_name* 语法。|DROP INDEX 具有两部分构成的名称|163|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|在 DROP INDEX 中使用 *table_name.index_name* 语法|在 DROP INDEX 中使用 *index_name* ON *table_name* 语法。|DROP INDEX 具有两部分构成的名称|163|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|不使用分号结束 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。|使用分号 ( ; ) 结束 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。|无|无|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|GROUP BY ALL|将自定义逐案例解决方案与 UNION 或派生表配合使用。|GROUP BY ALL|169|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL 在 DML 语句中用作列名。|请使用 $rowguid。|ROWGUIDCOL|182|  
@@ -167,7 +167,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |工具|SQL Server Profiler for Trace Replay|[SQL Server 分布式重播](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|无|  
 |跟踪管理对象|Microsoft.SqlServer.Management.Trace 命名空间（包含用于 SQL Server 跟踪和重播对象的 API）|跟踪配置： <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 跟踪读取： <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 跟踪重播：无|||  
 |SQL 跟踪存储过程、函数和目录视图|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[扩展事件](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|
-|SET 选项|适用于**SET ROWCOUNT** 、 **INSERT**, **UPDATE**语句的 **DELETE**|TOP 关键字|SET ROWCOUNT|109|  
+|SET 选项|适用于 **SET ROWCOUNT** 、 **INSERT**, **UPDATE** 语句的 **DELETE**|TOP 关键字|SET ROWCOUNT|109|  
 
   
 > [!NOTE]  

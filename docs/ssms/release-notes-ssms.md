@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: c2139f53771ed50a5ce01cc9fb4c3c64bfd14692
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364779"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570964"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -60,7 +60,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 常规 SSMS | 应将使用 SMO 的 SSMS 扩展重新编译为面向新的特定于 SSMS 的 SMO v161 包。 可在 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 找到预览版本 </br></br> 针对以前 160 个版本的 Microsoft.SqlServer.SqlManagementObjects 包编译的扩展仍起作用。 | 空值 |
 | Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 解决方法：删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 | 空值 |
 | Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 解决方法：在“Computer\HKEY_CLASSES_ROOT\AppID”和“Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下识别与 Integration Services 相关的注册表位置，并在这些配置单元中，将名为“LocalService”的注册表项重命名为“LocalService_A”，以用于我们尝试连接的特定版本的 Integration Services | 不适用 |
-| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 按需 SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) 相关的更改，低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 按需 SQL 结合使用，你需要 SSMS 18.7 或更高版本。 |
+| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 按需 SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) 相关的更改，低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 按需 SQL 结合使用，你需要使用 SSMS 18.7 或更高版本。 |
 
 可参考 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server)了解其他已知问题，并向产品团队提供反馈。
 
@@ -446,7 +446,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 常规 SSMS | 修复了以下问题：当用户位于 UTC 偏移量为负的 TZ 中时，用户无法使用 SSMS 配置对 SQL Azure 托管实例的审核。 |
 | 常规 SSMS | 修复了 XEvent UI 中将鼠标悬停在网格上导致行被选中的问题。 </br></br> 请参阅 SQL Server 用户反馈项，了解更多详细信息：[SSMS 扩展事件 UI 在鼠标悬停时选择操作](https://feedback.azure.com/forums/908035/suggestions/38262124)。 |
 | 导入平面文件 | 通过让用户在简单或丰富数据类型检测之间进行选择，修复了“导入平面文件”未导入所有数据的问题。</br></br> 请参阅 SQL Server 用户反馈项，了解更多详细信息：[SSMS“导入平面文件”未能导入所有数据](https://feedback.azure.com/forums/908035/suggestions/38096989)。 |
-| Integration Services | 为 SSIS 操作报表添加新的操作类型 *StartNonCatalogExecution* 。|
+| Integration Services | 为 SSIS 操作报表添加新的操作类型 *StartNonCatalogExecution*。|
 | Integration Services | 修复了 Azure 数据工厂管道中由 Azure 启用的实用工具 `DTExec` 导致的问题，以使用正确参数类型。 （18.3.1 明确了这一点） |
 | SMO/脚本 | 修复了使用 **SMO.Server.SetDefaultInitFields(true)** 时导致 SMO 在提取属性时引发错误的问题。|
 | 查询存储 UI | 修复了在“跟踪查询”视图中选择“执行计数”指标时 Y 轴无法缩放的问题   。 |
@@ -661,7 +661,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |数据分类|向 SMO 添加了新功能“数据分类”。 列对象公开新属性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId 和 IsClassified（只读）。 有关详细信息，请参阅 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)|
 |数据分类|向“数据分类”浮出控件添加了新的“分类报表”菜单项。|
 |数据分类| 更新了建议。|
-|数据库兼容性级别升级|在“数据库名称”>“任务”>“数据库升级”下添加了一个新选项 ***。此选项将启动新的查询优化助手 (QTA)，引导用户完成以下过程*** ：在升级数据库兼容性级别之前，收集性能基线。 升级到所需数据库兼容性级别。  对同一工作负荷收集第二轮性能数据。 检测工作负荷回归并提供测试建议，以提高工作负荷性能。  这类似于在[查询存储使用方案](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)中记录的数据库升级过程，最后一步（QTA 不依赖之前已知的良好状态来生成建议）除外。|
+|数据库兼容性级别升级|在“数据库名称”>“任务”>“数据库升级”下添加了一个新选项 ***。此选项将启动新的查询优化助手 (QTA)，引导用户完成以下过程***：在升级数据库兼容性级别之前，收集性能基线。 升级到所需数据库兼容性级别。  对同一工作负荷收集第二轮性能数据。 检测工作负荷回归并提供测试建议，以提高工作负荷性能。  这类似于在[查询存储使用方案](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)中记录的数据库升级过程，最后一步（QTA 不依赖之前已知的良好状态来生成建议）除外。|
 |数据层应用程序向导|添加了对使用图形表导入/导出数据层应用程序的支持。|
 |平面文件导入向导|添加了用于通知用户导入可能已导致列重命名的逻辑。|
 |Integration Services (SSIS)|添加了支持，使客户能够在 Azure 政府云中的 Azure-SSIS IR 上安排 SSIS 包。|

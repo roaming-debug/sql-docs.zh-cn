@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |CREATE TRIGGER WITH APPEND|遇到带有 WITH APPEND 子句的 CREATE TRIGGER 语句。 请改为重新创建整个触发器。 每次在 DDL 语句中使用时发生。|  
 |CREATE_DROP_DEFAULT|遇到 CREATE DEFAULT 或 DROP DEFAULT 语法。 请使用 CREATE TABLE 或 ALTER TABLE 的 DEFAULT 选项重写该命令。 每次编译时发生。|  
 |CREATE_DROP_RULE|遇到 CREATE RULE 语法。 请使用约束重写该命令。 每次编译时发生。|  
-|数据类型：text、ntext 或 image|遇到 **text**、 **ntext**或 **image** 数据类型。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
+|数据类型：text、ntext 或 image|遇到 **text**、 **ntext** 或 **image** 数据类型。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext** 和 **image** 数据类型语法。 每次查询时发生。|  
 ||数据库兼容级别更改为 80 的总次数。 计划在下一版本发布前升级数据库和应用程序。 在启动兼容级别为 80 的数据库时也会发生。|  
 |数据库兼容级别 100、110。 120|更改数据库兼容级别的总次数。 计划为未来版本升级数据库和应用程序。 在启动不推荐使用的兼容级别的数据库时也会发生。|  
 |DATABASE_MIRRORING|遇到对数据库镜像功能的引用。 计划升级到 AlwaysOn 可用性组，或者，如果正在运行不支持 AlwaysOn 可用性组的 SQL Server 版本，则计划迁移到日志传送。|  
@@ -266,10 +266,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sysusers|遇到对 sysusers 的引用。 请改用 sys.database_principals。 每次编译时发生。|  
 |不带 WITH 的表提示|遇到使用表提示但不使用 WITH 关键字的语句。 请修改语句以包括单词 WITH。 每次编译时发生。|  
 |text in row 表选项|遇到对“text in row”表选项的引用。 请改用 sp_tableoption 'large value types out of row'。 每次查询时发生。|  
-|TEXTPTR|遇到对 TEXTPTR 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
-|TEXTVALID|遇到对 TEXTVALID 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
+|TEXTPTR|遇到对 TEXTPTR 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext** 和 **image** 数据类型语法。 每次查询时发生。|  
+|TEXTVALID|遇到对 TEXTVALID 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext** 和 **image** 数据类型语法。 每次查询时发生。|  
 |TIMESTAMP|在 DDL 语句中遇到不推荐使用的 **timestamp** 数据类型的总次数。 请改用 **rowversion** 数据类型。|  
-|UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 语句。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
+|UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 语句。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext** 和 **image** 数据类型语法。 每次查询时发生。|  
 |USER_ID|遇到对 USER_ID 函数的引用。 请改用 DATABASE_PRINCIPAL_ID 函数。 每次编译时发生。|  
 |对链接服务器使用 OLEDB||  
 |vardecimal 存储格式|遇到 **vardecimal** 存储格式的使用。 请改用数据压缩。|  

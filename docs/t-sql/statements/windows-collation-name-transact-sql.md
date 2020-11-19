@@ -55,7 +55,7 @@ CollationDesignator_<ComparisonStyle>
 指定 Windows 排序规则使用的基本排序规则。 基本排序规则包括以下内容：
 
 - 指定按字典排序时应用的排序和比较规则。 排序规则基于字母表或语言。
-- 用于存储 varchar**** 数据 的代码页。
+- 用于存储 varchar数据 的代码页。
 
 一些示例如下：
 
@@ -63,21 +63,21 @@ CollationDesignator_<ComparisonStyle>
 - 土耳其语：使用代码页 1254。
 
 CaseSensitivity  
-CI 指定不区分大小写，CS 指定区分大小写********。
+CI 指定不区分大小写，CS 指定区分大小写。
 
 *AccentSensitivity*  
-AI 指定不区分重音，AS 指定区分重音********。
+AI 指定不区分重音，AS 指定区分重音。
 
-KanatypeSensitive**  
-省略此选项指定不区分假名类型，KS 指定区分假名类型****。
+KanatypeSensitive  
+省略此选项指定不区分假名类型，KS 指定区分假名类型。
 
-WidthSensitivity**  
-省略此选项指定不区分全半角，WS 指定区分全半角****。
+WidthSensitivity  
+省略此选项指定不区分全半角，WS 指定区分全半角。
 
-VariationSelectorSensitivity**  
+VariationSelectorSensitivity  
 - **适用对象**：自 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 起 
 
-- 省略此选项指定区分不区分选择器，VSS 指定区分区分选择器****。
+- 省略此选项指定区分不区分选择器，VSS 指定区分区分选择器。
 
 **UTF8**  
 - **适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起   

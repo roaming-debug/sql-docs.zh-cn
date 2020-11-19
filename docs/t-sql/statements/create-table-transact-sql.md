@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b37413dd6450999e6671858073805dea5a5424e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412582"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521138"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -362,7 +362,7 @@ schema_name 新表所属架构的名称。
 
 table_name 新表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。 除了本地临时表名（以单个数字符号 (#) 为前缀的名称）不能超过 116 个字符外，table_name 最多可包含 128 个字符。
 
-**适用于** （AS FileTable）：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。
+**适用于**（AS FileTable）：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。
 
 将新表创建为 FileTable。 您无需指定列，因为 FileTable 具有固定架构。 有关详细信息，请参阅 [FileTables](../../relational-databases/blob/filetables-sql-server.md)。
 
@@ -677,7 +677,7 @@ PAGE 使用页压缩来压缩表或指定的分区。
 
 COLUMNSTORE
 
-**适用于** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE 指定使用性能最高的列存储压缩进行压缩。 这是典型选择。
 
@@ -732,18 +732,18 @@ ALLOW_ROW_LOCKS = { ON | OFF } 如果为 ON，则访问索引时允许使用行�
 
 ALLOW_PAGE_LOCKS = { ON | OFF } 如果为 ON，则访问索引时允许使用页锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用页锁。 如果为 OFF，则不使用页锁。 默认值为 ON。
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF } **适用于** ：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。 <BR>
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF } **适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。 <BR>
 指定是否针对最后一页插入争用进行优化。 默认为 OFF。 有关详细信息，请参阅“CREATE INDEX”页的[顺序键](./create-index-transact-sql.md#sequential-keys)部分。
 
 FILETABLE_DIRECTORY = directory_name
 
-**适用于** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。
 
 指定与 windows 兼容的 FileTable 目录名称。 此名称应在数据库的所有 FileTable 目录名称中唯一。 无论排序规则如何设置，唯一性比较都不区分大小写。 如果未指定此值，则使用 filetable 这个名称。
 
 FILETABLE_COLLATE_FILENAME = { collation_name | database_default }
 
-**适用于** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持 `FILETABLE`。
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持 `FILETABLE`。
 
 指定要应用于 FileTable 的“名称”  列的排序规则名称。 排序规则必须不区分大小写，以遵守 Windows 操作系统文件命名语义。 如果未指定此值，则使用数据库默认排序规则。 如果数据库默认排序规则区分大小写，将引发错误，CREATE TABLE 操作将失败。
 
@@ -770,8 +770,8 @@ SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name .history_table_name [, DA
 
 如果数据类型、为 Null 性约束和主键约束需要都满足了，则可启动系统版本控制。 如果未使用 `HISTORY_TABLE` 参数，系统将在与当前表相同的文件组中生成一个符合当前表架构的新历史记录表，从而在两个表之间创建链接，使系统能在历史记录表中记录当前表中每行的历史记录。 此历史记录表的名称为 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 默认情况下，历史记录表是经过 **PAGE** 压缩的。 如果 `HISTORY_TABLE` 参数用于创建指向现有历史记录表的链接并使用此表，则会在当前表和指定表之间创建链接。 如果当前表已分区，则历史记录表在默认文件组上创建，因为不会自动将分区配置从当前表复制到历史记录表。 如果历史记录表的名称在历史记录表创建期间指定，则必须指定架构和表的名称。 创建现有历史记录表的链接时，可以选择执行数据一致性检查。 数据一致性检查可确保现有记录不重叠。 系统默认执行数据一致性检查。 将此参数与 `PERIOD FOR SYSTEM_TIME` 和 `GENERATED ALWAYS AS ROW { START | END }` 参数结合使用来对表启用系统版本控制。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
-REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }    
-**适用于** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
+REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
 
 创建已启用或禁用 Stretch Database 的新表。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。
 
@@ -779,9 +779,9 @@ REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATI
 
 指定 `ON` 为表启用 Stretch 时，可选择指定 `MIGRATION_STATE = OUTBOUND` 立即开始迁移数据，也可指定 `MIGRATION_STATE = PAUSED` 推迟迁移数据。 默认值是 `MIGRATION_STATE = OUTBOUND`。 有关为表启用 Stretch 的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。
 
-**先决条件** 。 为表启用 Stretch 之前，必须在服务器和数据库上启用 Stretch。 有关详细信息，请参阅 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。
+**先决条件**。 为表启用 Stretch 之前，必须在服务器和数据库上启用 Stretch。 有关详细信息，请参阅 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。
 
-**权限** 。 为数据库或表启用 Stretch 需要 db_owner 权限。 为表启用 Stretch 还需具有表的 ALTER 权限。
+**权限**。 为数据库或表启用 Stretch 需要 db_owner 权限。 为表启用 Stretch 还需具有表的 ALTER 权限。
 
 [ FILTER_PREDICATE = { null | predicate } ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
 
@@ -817,7 +817,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } 适用对象：[!INCLUDE[ssNoV
   - SmallDateTime
   - DateTimeOffset
 
-- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+- RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS }}       
   指定表的保留期策略。 保留期指定为正整数值和日期部分单位的组合。   
 
 MEMORY_OPTIMIZED 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）。 Azure SQL 托管实例不支持内存优化表。
@@ -841,7 +841,7 @@ BUCKET_COUNT 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 Bucket_count 是必需的参数。
 
-INDEX **适用于** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更高版本及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）。
+INDEX **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更高版本及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）。
 
 可将列索引和表索引指定为 CREATE TABLE 语句的一部分。 有关在内存优化表中添加和删除索引的详细信息，请参阅：[更改内存优化表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
@@ -1340,7 +1340,7 @@ CREATE TABLE T1
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>P. 创建由系统版本控制的、基于磁盘的临时表
 
-**适用于** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 下列示例显示如何创建链接到新历史记录表的临时表，以及如何创建链接到现有历史记录表的临时表。 请注意，临时表须有主键，定义为为表启用和为系统版本控制启用。 有关显示如何在现有表中添加或删除系统版本控制的示例，请参阅[示例](../../t-sql/statements/alter-table-transact-sql.md#Example_Top)中的系统版本控制。 有关使用情况，请参阅[临时表](../../relational-databases/tables/temporal-tables.md)。
 
@@ -1390,7 +1390,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSI
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>Q. 创建系统版本控制的内存优化临时表
 
-**适用于** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 下列示例显示如何创建链接到基于磁盘的新历史记录表的新系统版本控制的内存优化临时表。
 
