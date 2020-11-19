@@ -7,14 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: e68c51930cae4762723f098089d0913792748c61
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 1526f1c9eaaf4924ec248b523bd44148398e031b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956669"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870106"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>使用 RevoScaleR 安装 R 包
 

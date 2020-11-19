@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/30/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 2036fda1d483bdfb04a205f5a2e3bf6d86119b1b
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 3263723e04834e5b0a6bad86455f281fe643e083
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956722"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870446"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>使用 SQL Server 机器学习服务中的绑定升级 Python 和 R 运行时
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
@@ -21,7 +21,7 @@ ms.locfileid: "91956722"
 本文介绍如何使用称为“绑定”的 am 安装过程来升级 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 或 [SQL Server 2017 机器学习服务](../sql-server-machine-learning-services.md)中的 R 或 Python 运行时。 可以通过绑定  到 Microsoft Machine Learning Server  来获取[更高版本的 Python 和 R](#version-map)。
 
 > [!IMPORTANT]
-> 本文介绍了一种用于升级 R 和 Python 运行时的旧方法，称为“绑定”。 如果已安装 **SQL Server 2016 Services Pack (SP) 2 的累积更新 (CU) 14 或更高版本**或 **SQL Server 2017 的累积更新 (CU) 22 或更高版本**，请改为参阅如何[将默认 R 或 Python 语言运行时更改为更高版本](change-default-language-runtime-version.md)。
+> 本文介绍了一种用于升级 R 和 Python 运行时的旧方法，称为“绑定”。 如果已安装 **SQL Server 2016 Services Pack (SP) 2 的累积更新 (CU) 14 或更高版本** 或 **SQL Server 2017 的累积更新 (CU) 22 或更高版本**，请改为参阅如何 [将默认 R 或 Python 语言运行时更改为更高版本](change-default-language-runtime-version.md)。
 
 ## <a name="what-is-binding"></a>什么是绑定？
 

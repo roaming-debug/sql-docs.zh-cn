@@ -7,14 +7,13 @@ ms.date: 01/21/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 8b2e61640c03af160985d9e65262eb3da600c3c2
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 67d5a323cfdbdb7eb765430ba264ff0bde2074f5
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956688"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870475"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>使用 Python 工具在 SQL Server 上安装包
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]

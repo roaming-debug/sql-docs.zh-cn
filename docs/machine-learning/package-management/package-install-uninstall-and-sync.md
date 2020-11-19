@@ -7,14 +7,13 @@ ms.date: 06/13/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: c09f79fafca4c16048817f3ee2524f214cb13d49
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 87ac1a75940de892e9796139a4ba0f08263da417
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956609"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870061"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server R 包同步
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]

@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/22/2020
-ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e4030cac39eca0d57af3bf2bcefad293e83971c2
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496738"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704162"
 ---
 # <a name="sql-database-projects-extension-preview"></a>SQL 数据库项目扩展（预览版）
 
@@ -56,14 +56,11 @@ SQL 数据库项目扩展（预览版）是在基于项目的开发环境中开�
 
 ## <a name="known-limitations"></a>已知的限制
 
-1. 当前不支持在 Azure Data Studio viewlet 中添加项目引用和加载现有项目引用。
-2. 目前 Azure Data Studio viewlet 不支持以链接的形式加载文件，但会在树的顶层加载文件，生成会按预期合并这些文件。
-3. 目前还不支持在 viewlet 中添加和加载部署前后的脚本，但如果在项目中手动添加这些文件，它们将在生成时得到执行。
-4. .NET Core 版本的 DacFx 不支持项目中的 SQLCLR 对象。
-5. 任务（生成/发布）不是用户定义的。
-6. 发布 DacFx 定义的目标。
-7. 源代码管理集成和新项目创建不会自动创建 .gitignore 文件。
-8. WSL 环境支持受限。
+- 目前 Azure Data Studio viewlet 不支持以链接的形式加载文件，但会在树的顶层加载文件，生成会按预期合并这些文件。
+- .NET Core 版本的 DacFx 不支持项目中的 SQLCLR 对象。
+- 任务（生成/发布）不是用户定义的。
+- 发布 DacFx 定义的目标。
+- WSL 环境支持受限。
 
 ## <a name="next-steps"></a>后续步骤
 

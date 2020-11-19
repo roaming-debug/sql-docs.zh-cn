@@ -8,14 +8,13 @@ ms.date: 06/03/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e088597a52a9f220c0aecb62c66df085b287955
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 9bb55bf9bac934f78b0a309663ced729a8ef6534
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115500"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869765"
 ---
 # <a name="get-python-package-information"></a>获取 Python 包信息
 

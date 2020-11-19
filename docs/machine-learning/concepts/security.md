@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956502"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869993"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中扩展性框架的安全体系结构
 
@@ -93,7 +92,7 @@ SQL Server 还将调用用户的标识映射到用于启动附属进程的低权
 
 ## <a name="services-used-in-external-processing-launchpad"></a>用于外部处理的服务 (Launchpad)
 
-扩展性框架向 SQL Server 安装中的[服务列表](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)添加一个新的 NT 服务：[**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad)。
+扩展性框架向 SQL Server 安装中的 [服务列表](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)添加一个新的 NT 服务：[**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad)。
 
 数据库引擎使用 SQL Server Launchpad 服务将外部脚本会话实例化为单独的进程  。 
 此进程在 Launchpad 用户标识下运行，但在 AppContainer 中包含附加限制。 在 AppContainer 下，在单独的进程中运行脚本是 SQL Server 中外部脚本的安全和隔离模型的基础。

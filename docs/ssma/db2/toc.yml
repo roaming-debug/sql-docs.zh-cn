@@ -37,7 +37,7 @@
 - name: 连接到 SQL Server
   href: connect-to-sql-server-db2tosql.md
 - name: 连接到 SQL Server
-  href: connecting-to-sql-server-db2etosql.md
+  href: connecting-to-sql-server-db2tosql.md
 - name: 评估报表
   href: assessment-report-db2tosql.md
 - name: 连接到 DB2

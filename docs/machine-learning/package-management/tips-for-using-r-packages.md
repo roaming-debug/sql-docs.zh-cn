@@ -8,14 +8,13 @@ ms.date: 08/06/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 632b380b1935d380661903f18d56fe09aa9eff77
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: c43c5e252c016d8d2094dc2b26d6e87fe3f05749
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227141"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869946"
 ---
 # <a name="tips-for-using-r-packages"></a>使用 R 包的提示
 

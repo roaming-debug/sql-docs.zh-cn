@@ -8,14 +8,13 @@ ms.date: 05/27/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b1004b6ecaffba0768d8565a90387964b62b53b
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 0bbc530a84ca09ce5e2797bc770e50a20fc5113e
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956938"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869962"
 ---
 # <a name="get-r-package-information"></a>获取 R 包信息
 
