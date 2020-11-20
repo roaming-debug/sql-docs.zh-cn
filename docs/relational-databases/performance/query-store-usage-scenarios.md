@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ededb226b10f99c1c064f08bfd2d75cfafcbad0
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a5c182e7425e51a06b170178ee2716c42c58e115
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890756"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521214"
 ---
 # <a name="query-store-usage-scenarios"></a>Query Store 使用方案
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91890756"
   
 -   强制实施历史记录中的旧计划（如果该计划经证明效果更好）。 使用“回归查询”中的“强制计划”按钮，强制实施针对查询选择的计划。  
   
- ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
+ ![查询数据存储的屏幕截图，其中显示了计划摘要。](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
  有关方案的详细说明，请参阅 [Query Store:A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)（查询存储：适用于数据库的飞行数据记录器）博客。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91890756"
   
  开始浏览时，最方便的方式是打开 **中的“资源使用排名靠前的查询”。** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 用户界面分成三个窗格：一个直方图，代表资源使用排名靠前的查询（左）；一个针对所选查询的计划摘要（右）；一个针对所选计划的可视化查询计划（底部）。 单击“配置”按钮即可控制要分析的查询个数，以及要设置的时间间隔。  此外，还可以在不同的资源消耗维度（持续时间、CPU、内存、IO、执行数）和基线（平均、最小、最大、总计、标准偏差）之间进行选择。  
   
- ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
+ ![查询数据存储的屏幕截图，其中显示用户可以识别和优化资源消耗较大的查询。](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
  查看右侧的计划摘要，以便分析执行历史记录并了解各种不同的计划及其运行时统计信息。 使用底部窗格检查各种不同的计划，或者用肉眼对这些并排呈现的计划进行比较（使用“比较”按钮）。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "91890756"
   
 下图显示了如何在创建缺失索引的情况下进行 Query Store 分析（步骤 4）。 打开“资源使用排名靠前的查询”/“计划摘要”窗格，此时将显示会受索引创建操作影响的查询的该视图：  
   
-![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
+![屏幕截图显示缺少索引创建的查询数据存储分析（步骤 4）。](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
 此外，你还可以在索引创建前后对计划进行比较，只需将这些计划并排呈现即可。 （“在单独的窗口中比较选定查询的计划”工具栏选项，此选项已在工具栏中使用红色正方形进行标记。）  
   
-![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
+![屏幕截图显示查询数据存储，以及在单独窗口工具栏选项中显示的“比较所选查询的计划”。](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
 在创建索引之前的计划（plan_id = 1，见上）提示索引缺失，你可以通过检查发现 Clustered Index Scan 是查询中成本最高的运算符（红色矩形）。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "91890756"
   
 自 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 起，所有查询优化器更改都会绑定到最新的[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)，因此计划不会在升级后立即更改，而是在用户将 `COMPATIBILITY_LEVEL` 数据库更改为最新版本后更改。 利用此功能和 Query Store，你可以在升级过程中对查询性能进行精确的控制。 建议的升级工作流如下图所示：  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![显示所建议的升级工作流的示意图。](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
 1.  升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而不更改数据库兼容性级别。 它不会公开最新的查询优化器更改，但仍会提供包括查询存储在内的新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "91890756"
   
  你可以通过“资源使用排名靠前的查询”视图，率先了解工作负荷的即席性质：  
   
-![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
+![屏幕截图显示“资源消耗较大的查询”视图，其中显示了大多数资源消耗较大的查询只执行了一次。](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
 可以通过“执行计数”度量值来分析排名靠前的查询是否为即席查询（这需要使用 `QUERY_CAPTURE_MODE = ALL` 运行 Query Store）。 从上图可以看出，90% 的“资源使用排名靠前的查询”仅执行一次。  
   
@@ -157,7 +157,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
 在工作负荷包含即席查询的情况下，你可能会获得这种结果：  
   
-![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
+![屏幕截图显示在工作负荷包含即席查询的情况下可能得到的结果。](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
   
 查询结果显示，尽管查询存储中查询和计划的数量很大，其 query_hash 和 query_plan_hash 并没有什么不同。 唯一查询文本和唯一 query hash 的比率远远大于 1，这表明工作负荷适合进行参数化，因为这些查询之间的唯一差异就是作为查询文本一部分提供的文本常数（参数）。  
   
@@ -199,7 +199,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 应用任何此类步骤之后，即可通过“资源使用排名靠前的查询”从另一个角度来了解你的工作负荷。   
   
-![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![屏幕截图显示“资源消耗较大的查询”视图，其中以另一种方式显示工作负荷。](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
 某些情况下，你的应用程序可能会生成大量不同的查询，而这些查询并不适合进行自动参数化。 在这种情况下，你会看到系统中存在大量查询，但唯一查询和唯一 `query_hash` 之间的比率可能接近 1。  
   

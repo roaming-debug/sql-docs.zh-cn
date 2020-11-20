@@ -1,6 +1,6 @@
 ---
 title: MSSQLSERVER_10060 | Microsoft Docs
-description: SQL Server 客户端无法连接到服务器。 了解错误说明和可能的解决方法。
+description: SQL Server 客户端无法连接到服务器。 查看错误 10060 的说明和可能的解决方法。
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b952019acc3643baf10d5a69310ab4b9c2629d3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb6a706a664adc8dbc86760b6d5e7b519b8a192a
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781557"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521204"
 ---
 # <a name="mssqlserver_10060"></a>MSSQLSERVER_10060
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

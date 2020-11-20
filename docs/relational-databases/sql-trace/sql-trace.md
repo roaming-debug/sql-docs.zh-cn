@@ -1,27 +1,28 @@
 ---
+title: SQL 跟踪
 description: SQL 跟踪
-title: SQL 跟踪 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7368f8e10c38008836d86d7dea14d2ab8add4a93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 11/27/2018
+ms.openlocfilehash: 4ea8d31c58758c7513a3d958ee02f0e5d9f4c5d4
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455321"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584986"
 ---
 # <a name="sql-trace"></a>SQL 跟踪
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的应用程序中的跟踪信息。  
-  
+
 > [!IMPORTANT]
 > 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
@@ -76,20 +77,20 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INC
   
 |数据列|列号|说明|  
 |-----------------|-------------------|-----------------|  
-|ApplicationName|10|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充，而不是由程序名填充的。|  
+|\* **ApplicationName**|10|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充，而不是由程序名填充的。|  
 |**BigintData1**|52|值（**bigint** 数据类型），取决于跟踪中指定的事件类。|  
 |**BigintData2**|53|值（**bigint** 数据类型），取决于跟踪中指定的事件类。|  
-|**Binary Data**|2|依赖于跟踪中捕获的事件类的二进制值。|  
-|**ClientProcessID**|9|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|  
+|\* **Binary Data**|2|依赖于跟踪中捕获的事件类的二进制值。|  
+|\* **ClientProcessID**|9|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|  
 |**ColumnPermissions**|44|表示是否已设置了列权限。 可以分析语句文本来确定各列所应用权限的情况。|  
-|**CPU**|18|事件使用的 CPU 时间（毫秒）。|  
-|**数据库 ID**|3|由 USE *database_name* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database_name*语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|  
+|\* **CPU**|18|事件使用的 CPU 时间（毫秒）。|  
+|**数据库 ID**|3|由 USE *database_name* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database_name* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|  
 |**DatabaseName**|35|正在运行用户语句的数据库的名称。|  
 |**DBUserName**|40|客户端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名。|  
-|**Duration**|13|事件的持续时间（微秒）。<br /><br /> 服务器以微秒（百万分之一秒或 10<sup>-6</sup> 秒）为单位报告事件的持续时间，以毫秒（千分之一秒或 10<sup>-3</sup> 秒）为单位报告事件使用的 CPU 时间。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 图形用户界面默认以毫秒为单位显示 **“持续时间”** 列，但是当跟踪保存到文件或数据库表中时，将以微秒为单位写入“持续时间” **** 列值。|  
-|**EndTime**|15|事件的结束时间。 对指示事件开始的事件类（例如 **SQL:BatchStarting** 或 **SP:Starting**）将不填充此列。|  
-|**错误**|31|给定事件的错误号。 通常是 **sysmessages**中存储的错误号。|  
-|**EventClass**|27|捕获的事件类的类型。|  
+|\* **Duration**|13|事件的持续时间（微秒）。<br /><br /> 服务器以微秒（百万分之一秒或 10<sup>-6</sup> 秒）为单位报告事件的持续时间，以毫秒（千分之一秒或 10<sup>-3</sup> 秒）为单位报告事件使用的 CPU 时间。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 图形用户界面默认以毫秒为单位显示 **“持续时间”** 列，但是当跟踪保存到文件或数据库表中时，将以微秒为单位写入“持续时间”  列值。|  
+|\* **EndTime**|15|事件的结束时间。 对指示事件开始的事件类（例如 **SQL:BatchStarting** 或 **SP:Starting**）将不填充此列。|  
+|**错误**|31|给定事件的错误号。 通常是 **sysmessages** 中存储的错误号。|  
+|\* **EventClass**|27|捕获的事件类的类型。|  
 |**EventSequence**|51|此事件的序列号。|  
 |**EventSubClass**|21|事件子类的类型，提供有关每个事件类的详细信息。 例如， **Execution Warning** 事件类的事件子类值代表执行警告的类型：<br /><br /> **1** = 查询等候。 查询执行之前必须等待资源；例如，内存。<br /><br /> **2** = 查询超时。查询等待执行所需资源时超时。 所有事件类都不填充此数据列。|  
 |**GUID**|54|依赖于跟踪中指定的事件类的 GUID 值。|  
@@ -102,50 +103,50 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INC
 |**IsSystem**|60|指示该事件发生在系统进程还是用户进程上：<br /><br /> **1** = 系统<br /><br /> **0** = 用户|  
 |**LineNumber**|5|包含存在错误的行的行号。 对于涉及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的事件（如 **SP:StmtStarting**）， **LineNumber** 包含存储过程或批查询中语句的行号。|  
 |**LinkedServerName**|45|链接服务器的名称。|  
-|**LoginName**|11|用户的登录名（SQL Server 安全登录名或 Windows 登录凭据，格式为“域/用户名”）。|  
+|\* **LoginName**|11|用户的登录名（SQL Server 安全登录名或 Windows 登录凭据，格式为“域/用户名”）。|  
 |**LoginSid**|41|已登录的用户的安全标识符 (SID)。 可以在 **master** 数据库的 **sys.server_principals** 视图中找到此信息。 服务器中的每个登录名都具有唯一的 ID。|  
 |**MethodName**|47|OLEDB 方法的名称。|  
 |**模式**|32|一个整数，各种事件都使用它来描述事件要请求或已接收的状态。|  
 |**NestLevel**|29|一个整数，表示 @@NESTLEVEL 返回的数据。|  
 |**NTDomainName**|7|用户所属的 Microsoft Windows 域。|  
-|**NTUserName**|6|Windows 用户名。|  
+|\* **NTUserName**|6|Windows 用户名。|  
 |**Exchange Spill**|22|系统分配的对象 ID。|  
 |**ObjectID2**|56|相关对象或实体（如果存在）的 ID。|  
 |**ObjectName**|34|被引用对象的名称。|  
-|**ObjectType**|28|表示事件中涉及的对象类型的值。 该值对应于 **sysobjects** 中的 **type**列。|  
+|\*\***ObjectType**|28|表示事件中涉及的对象类型的值。 该值对应于 **sysobjects** 中的 **type** 列。|  
 |**Offset**|61|语句在存储过程或批处理中的起始偏移量。|  
 |**OwnerID**|58|仅限于锁事件。 拥有锁的对象的类型。|  
 |**OwnerName**|37|对象所有者的数据库用户名。|  
 |**ParentName**|59|该对象所在的架构的名称。|  
 |**权限**|19|表示所检查的权限类型的整型值。 值为：<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE （只针对过程）<br /><br /> **4096** = SELECT ANY （至少选择一列）<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|OLEDB 访问接口的名称。|  
-|**Reads**|16|由服务器代表事件读取逻辑磁盘的次数。 这些读取操作数包含在语句执行期间读取表和缓冲区的次数。|  
+|\* **Reads**|16|由服务器代表事件读取逻辑磁盘的次数。 这些读取操作数包含在语句执行期间读取表和缓冲区的次数。|  
 |**RequestID**|49|包含该语句的请求的 ID。|  
 |**RoleName**|38|正在启用的应用程序角色名。|  
 |**RowCounts**|48|批处理中的行数。|  
 |**ServerName**|26|正在跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
-|**SessionLoginName**|64|发起会话的用户的登录名。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **连接到** 并以 **Login2**身份执行语句，则 **SessionLoginName** 将显示 **Login1**，而 **LoginName** 将显示 **Login2**。 此数据列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|  
+|**SessionLoginName**|64|发起会话的用户的登录名。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **连接到** 并以 **Login2** 身份执行语句，则 **SessionLoginName** 将显示 **Login1**，而 **LoginName** 将显示 **Login2**。 此数据列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|  
 |**严重性**|20|异常错误事件的严重级别。|  
 |**SourceDatabaseID**|62|存在该对象的源的数据库 ID。|  
-|**SPID**|12|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端的相关进程分配的服务器进程 ID (SPID)。|  
+|\* **SPID**|12|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端的相关进程分配的服务器进程 ID (SPID)。|  
 |**SqlHandle**|63|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 **sys.dm_exec_sql_text()** 以检索关联的 SQL 文本。|  
-|**StartTime**|14|事件（如果有）的开始时间。|  
+|\* **StartTime**|14|事件（如果有）的开始时间。|  
 |**State**|30|错误状态代码。|  
 |**Success**|23|表示事件是否成功。 值包括：<br /><br /> **1** = Success.<br /><br /> **0** = Failure<br /><br /> 例如， **1** 表示权限检查成功，而 **0** 表示权限检查失败。|  
 |**TargetLoginName**|42|如果是针对登录的操作（例如，添加新的登录），这是所针对登录的名称。|  
 |**TargetLoginSid**|43|如果是针对登录的操作（例如，添加新的登录），这是所针对登录的 SID。|  
 |**TargetUserName**|39|如果是针对某个数据库用户的操作（例如，授予用户权限），这是该用户的名称。|  
-|**TextData**|1|依赖于跟踪中捕获的事件类的文本值。 但是，如果跟踪参数化查询，则不以 **TextData** 列中的数据值显示变量。|  
+|\* **TextData**|1|依赖于跟踪中捕获的事件类的文本值。 但是，如果跟踪参数化查询，则不以 **TextData** 列中的数据值显示变量。|  
 |**Transaction ID**|4|系统为事务分配的 ID。|  
 |**类型**|57|跟踪中捕获的与事件类对应的整数值。|  
-|**Writes**|17|由服务器代表事件写入物理磁盘的次数。|  
+|\* **Writes**|17|由服务器代表事件写入物理磁盘的次数。|  
 |**XactSequence**|50|用于说明当前事务的标记。|  
-  
- *默认情况下，对于所有事件，均填充这些数据列。  
-  
- \*\*有关 **ObjectType** 数据列的详细信息，请参阅 [ObjectType 跟踪事件列](../../relational-databases/event-classes/objecttype-trace-event-column.md)。  
-  
-## <a name="sql-trace-tasks"></a>SQL 跟踪任务  
+
+\* 默认情况下，对于所有事件，均填充这些数据列。
+
+\*\*有关 ObjectType 数据列的详细信息，请参阅 [ObjectType 跟踪事件列](../../relational-databases/event-classes/objecttype-trace-event-column.md)。
+
+## <a name="sql-trace-tasks"></a>SQL 跟踪任务
   
 |任务说明|主题|  
 |----------------------|-----------|  

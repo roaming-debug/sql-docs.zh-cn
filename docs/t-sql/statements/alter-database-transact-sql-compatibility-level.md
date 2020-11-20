@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b17adc51f6915067d617a93776783e9e8aee2b12
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 806d6aacb54442ed55d8598c6d6695175eef4e46
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300744"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521107"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
@@ -142,7 +142,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > 给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的已停用功能不受兼容性级别保护 。 这指的是从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中删除的功能。
 > 例如，`FASTFIRSTROW` 提示在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中废止，并替换为 `OPTION (FAST n )` 提示。 将数据库兼容性级别设置为 110 不会恢复废止的提示。  
 >  
-> 要详细了解已停用的功能，请参阅 [SQL Server 2016 中停用的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)和 [SQL Server 2014 中停用的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)。
+> 要详细了解已停用的功能，请参阅 [SQL Server 中停用的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)和 [SQL Server 2014 中停用的数据库引擎功能](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true)。
 
 > [!IMPORTANT]
 > 给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的中断性变更可能不受兼容性级别保护 。 这指的是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本之间的行为变更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为通常受兼容级别保护。 但是，已更改或删除的系统对象 **不** 受兼容级别保护。
@@ -154,7 +154,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > - 系统对象中更改了列名。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，sys.dm_os_sys_info 中的列 single_pages_kb 已重命名为 pages_kb。 无论兼容级别如何，查询 `SELECT single_pages_kb FROM sys.dm_os_sys_info` 都会生成错误 207（列名无效）。
 > - 删除了系统对象。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，`sp_dboption` 已删除。 无论兼容级别如何，语句 `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` 都会生成错误 2812（找不到存储过程“sp_dboption”）。
 >
-> 要详细了解中断性变更，请参阅 [SQL Server 2017 中的数据库引擎功能中断性变更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中的数据库引擎功能中断性变更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)和 [SQL Server 2014 中的数据库引擎功能中断性变更](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)。
+> 若要详细了解重大更改，请参阅 [SQL Server 2019 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md)、[SQL Server 2017 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)和 [SQL Server 2014 中的数据库引擎功能重大更改](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014&preserve-view=true)。
 
 ## <a name="differences-between-compatibility-levels"></a>兼容性级别之间的差异
 对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容性级别都与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本相关联，如[此表](#supported-dbcompats)中所示。 对于新的开发工作，请始终计划在最新的数据库兼容性级别上验证应用程序。
@@ -285,7 +285,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |在递归公用表表达式 (CTE) 查询中允许 `PIVOT`。 然而，当每个分组有多个行时，该查询返回不正确的结果。|在递归公用表表达式 (CTE) 查询中不允许 `PIVOT`。 将返回错误。|
 |RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，可以通过任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。|不能使用 RC4 或 RC4_128 加密新材料。 而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，可以通过任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。|
 |对 **time** 和 **datetime2** 数据类型的 `CAST` 和 `CONVERT` 操作的默认样式为 121，当在计算列表达式中使用这些类型时除外。 对于计算列，默认样式为 0。 当创建用于涉及自动参数化的查询中或约束定义中的计算列时，此行为会影响计算列。<br /><br /> 下面“示例”部分中的示例 D 显示样式 0 与 121 之间的差异。 它并不演示上面所述的行为。 有关日期和时间样式的详细信息，请参阅 [CAST 和 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)。|兼容级别为 110 时，对 **time** 和 **datetime2** 数据类型的 `CAST` 和 `CONVERT` 操作的默认样式始终为 121。 如果您的查询依赖旧行为，请使用低于 110 的兼容性级别或在受影响的查询中显式指定 0 样式。<br /><br /> 将数据库升级到兼容性级别 110 将不更改已存储到磁盘的用户数据。 您必须相应手动更正此数据。 例如，如果使用了 `SELECT INTO` 来从包含上述计算列表达式的源创建表，将存储数据（使用样式 0）而非存储计算列定义本身。 您需要手动更新此数据，以匹配样式 121。|
-|在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **datetime** 。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **datetime** 类型。|在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **smalldatetime** 。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **smalldatetime** 类型。<br /><br /> 在升级到 110 后，分布式分区视图将由于数据类型不匹配而失败。 可以通过将针对远程表的数据类型更改为 **datetime** 或者将本地数据库的兼容级别设置为 100 或更低，解决上述问题。|
+|在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **datetime**。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **datetime** 类型。|在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **smalldatetime**。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **smalldatetime** 类型。<br /><br /> 在升级到 110 后，分布式分区视图将由于数据类型不匹配而失败。 可以通过将针对远程表的数据类型更改为 **datetime** 或者将本地数据库的兼容级别设置为 100 或更低，解决上述问题。|
 |`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 当分隔两个具有相同 `SOUNDEX` 代码的辅音时，将忽略大写 H 或大写 W。<br /><br /> 2) 如果 *character_expression* 的前 2 个字符具有相同的 `SOUNDEX` 代码，则将包含这两个字符。 否则，如果一组并行辅音在 `SOUNDEX` 代码中有相同的数字，所有这些辅音都会被排除在外，第一个辅音除外。|`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 如果大写 H 或大写 W 分隔具有相同 `SOUNDEX` 代码的两个辅音，则将忽略右侧的辅音<br /><br /> 2) 如果一组并行辅音在 `SOUNDEX` 代码中有相同的数字，所有这些辅音都会被排除在外，第一个辅音除外。<br /><br /> <br /><br /> 其他规则可能导致由 `SOUNDEX` 函数计算的值不同于在更低数据库兼容级别时计算的值。 在升级到兼容级别 110 后，可能需要重新生成使用 `SOUNDEX` 函数的索引、堆或 CHECK 约束。 有关详细信息，请参阅 [SOUNDEX](../../t-sql/functions/soundex-transact-sql.md)。|
 
 ## <a name="differences-between-compatibility-level-90-and-level-100"></a>兼容性级别 90 和兼容性级别 100 之间的差异
@@ -305,7 +305,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |如果将 OUTPUT 子句和数据操作语言 (DML) 语句一起使用，并且在语句执行过程中发生运行时错误，则会终止并回滚整个事务。|如果将 `OUTPUT` 子句和数据操作语言 (DML) 语句一起使用，并且在语句执行过程中发生运行时错误，则行为取决于 `SET XACT_ABORT` 设置。 如果 `SET XACT_ABORT` 设置为 OFF，则由使用 `OUTPUT` 子句的 DML 语句所生成的语句中止错误将终止该语句，但批处理的执行仍会继续，并且不会回滚事务。 如果 `SET XACT_ABORT` 设置为 ON，则由使用 OUTPUT 子句的 DML 语句所生成的全部运行时错误都将终止批处理，并回滚事务。|低|
 |CUBE 和 ROLLUP 不作为保留关键字强制应用。|`CUBE` 和 `ROLLUP` 是 GROUP BY 子句中的保留关键字。|低|
 |对 XML **anyType** 类型的元素应用严格验证。|对 **anyType** 类型的元素应用宽松验证。 有关详细信息，请参阅[通配符组成部分和内容验证](../../relational-databases/xml/wildcard-components-and-content-validation.md)。|低|
-|数据操作语言语句不能查询或修改特殊属性 **xsi:nil** 和 **xsi:type** 。<br /><br /> 这意味着 `/e/@xsi:nil` 失败，同时 `/e/@*` 忽略 **xsi:nil** 和 **xsi:type** 属性。 但是，`/e` 返回 **xsi:nil** 和 **xsi:type** 属性，以保持与 `SELECT xmlCol` 的一致性，即使 `xsi:nil = "false"` 也是如此。|特殊属性 **xsi:nil** 和 **xsi:type** 作为常规属性存储，不能查询和修改。<br /><br /> 例如，执行查询 `SELECT x.query('a/b/@*')` 会返回包括 **xsi: nil** 和 **xsi: type** 在内的所有属性。 若要在查询中排除这些类型，请用 `@*[namespace-uri(.) != "`insert xsi namespace uri`"` 替换 `@*`，而不是用 `(local-name(.) = "type"` 或 `local-name(.) ="nil".` 来替换|低|
+|数据操作语言语句不能查询或修改特殊属性 **xsi:nil** 和 **xsi:type**。<br /><br /> 这意味着 `/e/@xsi:nil` 失败，同时 `/e/@*` 忽略 **xsi:nil** 和 **xsi:type** 属性。 但是，`/e` 返回 **xsi:nil** 和 **xsi:type** 属性，以保持与 `SELECT xmlCol` 的一致性，即使 `xsi:nil = "false"` 也是如此。|特殊属性 **xsi:nil** 和 **xsi:type** 作为常规属性存储，不能查询和修改。<br /><br /> 例如，执行查询 `SELECT x.query('a/b/@*')` 会返回包括 **xsi: nil** 和 **xsi: type** 在内的所有属性。 若要在查询中排除这些类型，请用 `@*[namespace-uri(.) != "`insert xsi namespace uri`"` 替换 `@*`，而不是用 `(local-name(.) = "type"` 或 `local-name(.) ="nil".` 来替换|低|
 |用于将 XML 常量字符串值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 类型的用户定义函数被标记为确定的。|用于将 XML 常量字符串值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 类型的用户定义函数被标记为不确定的。|低|
 |不完全支持 XML 联合和列表类型。|完全支持联合和列表类型，包括以下功能：<br /><br /> 列表的联合<br /><br /> 联合的联合<br /><br /> 原子类型的列表<br /><br /> 联合的列表|低|
 |当视图或内联表值函数中包含 xQuery 方法时，不对该方法所需的 SET 选项进行验证。|当视图或内联表值函数中包含 xQuery 方法时，对该方法所需的 SET 选项进行验证。 如果该方法的 SET 选项设置不正确，将引发一个错误。|低|

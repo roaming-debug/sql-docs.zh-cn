@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 599f0edf2a62413aaa44ccaff191bfac034aa3d9
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: eb38c37dcb5a570364675fece213c8c6868173ec
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418014"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570944"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>向 SQL Server 的实例添加功能（安装程序）
 
@@ -62,7 +62,7 @@ ms.locfileid: "94418014"
 
     在右侧窗格中显示所选功能的必备组件。 SQL Server 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。
 
-    系统配置检查器将在安装继续之前检验计算机的系统状态。 选择“下一步”继续。
+    系统配置检查器将在安装继续之前检验计算机的系统状态。 选择“下一步”继续操作。
 
 9. “磁盘空间要求”页计算指定的功能所需的磁盘空间，并将磁盘空间要求与正在运行安装程序的计算机上的可用磁盘空间进行比较。
 

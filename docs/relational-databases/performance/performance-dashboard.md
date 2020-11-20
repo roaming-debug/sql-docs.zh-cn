@@ -2,7 +2,7 @@
 title: 性能仪表板 |Microsoft Docs
 description: 了解 SQL Server Management Studio 性能仪表板，你可通过它快速了解 SQL Server 和 Azure SQL 托管实例。
 ms.custom: ''
-ms.date: 12/14/2019
+ms.date: 11/13/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 61abc33a31948bca020f4a6cf7c9539ae0546af5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45b657be3cef9267431892eeced327e966b97b7d
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863357"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674172"
 ---
 # <a name="performance-dashboard"></a>性能仪表板
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,8 +78,9 @@ ms.locfileid: "87863357"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重启时“耗费大量资源的查询”报表将重置，因为基础 DMV 中的数据已被清除。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，耗费大量资源的查询的详细信息可以在查询存储中找到。 
 
+
 > [!NOTE]
-> 性能仪表板首次作为 [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) 的独立下载发布，之后又针对 [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063) 进行了更新。
+> 性能仪表板首次作为 [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) 的独立下载发布，之后又针对 [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063) 进行了更新。 虽然 SQL Server Management Studio 报表呈现器不支持剪贴板访问报表中包含的文本，但可通过独立报表访问这些文本。  如果需要复制报表中的查询文本，请下载独立报表。
 
 ## <a name="permissions"></a>权限  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，需要 `VIEW SERVER STATE` 和 `ALTER TRACE` 权限。 在 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。

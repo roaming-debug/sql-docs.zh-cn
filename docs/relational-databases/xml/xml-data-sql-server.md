@@ -1,10 +1,8 @@
 ---
-title: XML 数据 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 04/03/2020
+title: XML 数据 (SQL Server)
+description: XML 数据 (Transact-SQL)
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +11,15 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 8fed086b5553e8c8f4368f7ef671c074fe342362
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/03/2020
+ms.openlocfilehash: 40f1bcd974327bc70b5adad55b872ed66ad31aa6
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729809"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674171"
 ---
 # <a name="xml-data-sql-server"></a>XML 数据 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

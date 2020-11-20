@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1d0e6b5fe9303269f5941ba11d231e1ca18def11
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 52578422cc9f68c728c901cf39bf05425576133b
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098804"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521091"
 ---
 # <a name="standalone-sql-server-integration-service-ssis-devops-tools-preview"></a>独立 SQL Server Integration Services (SSIS) DevOps 工具（预览）
 
@@ -128,6 +128,12 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     ```
 
 ## <a name="release-notes"></a>发行说明
+
+### <a name="version-011-preview"></a>版本 0.1.1 预览版
+
+发行日期：2020 年 11 月 11 日
+
+- 解决了问题：将 ispac 部署到 SSIS 目录时 SSISDeploy.exe 无法加载程序集。
 
 ### <a name="version-010-preview"></a>版本 0.1.0 预览版
 

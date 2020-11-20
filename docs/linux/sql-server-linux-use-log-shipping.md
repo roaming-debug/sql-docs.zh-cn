@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fdabd19b81a880c0969cc6359c703cd156a03fab
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115790"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521086"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux 上的日志传送入门
 
@@ -20,8 +20,7 @@ ms.locfileid: "92115790"
 
 SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器复制到一个或多个辅助服务器上。 简单地说，可将源数据库的备份还原到辅助服务器上。 随后，主服务器会定期创建事务日志备份，辅助服务器会还原备份，同时更新数据库的次要副本。 
 
-  ![日志传送](https://preview.ibb.co/hr5Ri5/logshipping.png)
-
+  ![显示日志传送工作流的关系图。](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 如图片所示，日志传送过程包含以下步骤：
 

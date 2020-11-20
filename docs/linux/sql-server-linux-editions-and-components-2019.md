@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115402"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674187"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的各版本和支持的功能
 
@@ -225,6 +225,7 @@ Linux 上的 SQL Server 2019 目前不支持以下功能和服务。 随着时�
 | &nbsp; | FileTable 和文件流 |
 | &nbsp; | 带有 EXTERNAL_ACCESS 或 UNSAFE 权限集的 CLR 程序集 |
 | &nbsp; | 缓冲池扩展 |
+| &nbsp; | 备份到 URL - 页 blob<sup>2</sup> |
 | **SQL Server 代理** |  子系统：CmdExec、PowerShell、队列读取器、SSIS、SSAS、SSRS |
 | &nbsp; | 警报 |
 | &nbsp; | 托管备份 |
@@ -237,11 +238,13 @@ Linux 上的 SQL Server 2019 目前不支持以下功能和服务。 随着时�
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
-| &nbsp; | “数据库引擎服务” |
+| &nbsp; | 数据库引擎服务 |
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server 中支持 SQL Server R，但不支持作为单独包的 SQL Server R services。
-  
+
+<sup>2</sup> 备份到 URL 支持块 blob，通过[共享访问签名](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS)实现。
+
 ## <a name="next-steps"></a>后续步骤
  [SQL Server 2017 的各版本和支持的功能 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [SQL Server 2019 的各版本和支持的功能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
