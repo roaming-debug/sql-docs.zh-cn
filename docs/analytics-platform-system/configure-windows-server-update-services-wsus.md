@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379575"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947943"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>在分析平台系统中配置 Windows Server Update Services (WSUS) 
 这些说明将指导你完成使用 Windows Server Update Services (WSUS) 配置向导来配置 WSUS for Analytics 平台系统的步骤。 你需要配置 WSUS，然后才能将软件更新应用于设备。 WSUS 已安装在设备的 VMM 虚拟机上。  
@@ -39,7 +39,7 @@ ms.locfileid: "91379575"
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a> (WSUS 配置 Windows Server Update Services)   
   
-1.  登录到 **管理控制台**。 在 " **设备状态** " 选项卡上，验证 " **群集** " 和 " **网络** " 列是否为所有节点显示绿色 (或 **NA**) 。 验证 **设备状态**中所有节点的状态指示器。  
+1.  登录到 **管理控制台**。 在 " **设备状态** " 选项卡上，验证 " **群集** " 和 " **网络** " 列是否为所有节点显示绿色 (或 **NA**) 。 验证 **设备状态** 中所有节点的状态指示器。  
   
     -   可以安全地继续进行绿色或 NA 指示器。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "91379575"
   
     #### <a name="to-launch-the-configuration-wizard"></a>启动配置向导  
   
-    1.  在 **服务器管理器仪表板**中的 " **工具** " 菜单上，单击 " **Windows Server Update Services**"。  
+    1.  在 **服务器管理器仪表板** 中的 " **工具** " 菜单上，单击 " **Windows Server Update Services**"。  
   
-    2.  在 "**更新服务**" 窗口的左窗格中，单击以展开虚拟机管理节点服务器 (** _appliance_domain_VMM**) ，然后单击 "**选项**"。  
+    2.  在 "**更新服务**" 窗口的左窗格中，单击以展开虚拟机管理节点服务器 (**_appliance_domain_ VMM**) ，然后单击 "**选项**"。  
   
     3.  在 **选项** 窗格中，单击 " **WSUS 服务器配置向导** " 以启动配置向导。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "91379575"
   
     #### <a name="to-update-by-using-microsoft-update"></a>使用 Microsoft 更新更新  
   
-    1.  如果选择与 Microsoft 更新同步，则不需要对 " **选择上游服务器** " 页进行任何更改。 单击 **“下一步”** 。  
+    1.  如果选择与 Microsoft 更新同步，则不需要对 " **选择上游服务器** " 页进行任何更改。 单击“下一步”。  
   
         ![WSUS 上游服务器同步](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -113,7 +113,7 @@ ms.locfileid: "91379575"
   
     1.  在配置向导的 " **指定代理服务器** " 页上，选中 " **同步时使用代理服务器** " 复选框，然后在对应的框中键入代理服务器 IP 地址 (不 (端口) 80) 和端口号。  
   
-    2.  如果你希望通过使用特定用户凭据来连接代理服务器，请选择 **“使用用户凭据连接代理服务器”** 复选框，然后在对应的框中键入用户名称、域和用户密码。 如果要为连接到代理服务器的用户启用基本身份验证，请选中 " **允许基本身份验证 (密码以明文形式发送) ** " 复选框。  
+    2.  如果你希望通过使用特定用户凭据来连接代理服务器，请选择 **“使用用户凭据连接代理服务器”** 复选框，然后在对应的框中键入用户名称、域和用户密码。 如果要为连接到代理服务器的用户启用基本身份验证，请选中 " **允许基本身份验证 (密码以明文形式发送)** " 复选框。  
   
         ![WSUS 代理凭据](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5b.png "WSUS_Wiz5b")  
   
@@ -145,7 +145,7 @@ ms.locfileid: "91379575"
   
     取消选择所有选定的更新。  
   
-    选择 **SQL Server 2012**、 **SQL Server 2014**、 **Windows Server 2012 2012 r2** **Virtual Machine Manager**，然后单击 " **下一步**"。  
+    选择 **SQL Server 2012**、 **SQL Server 2014**、 **Windows Server 2012 R2**、 **System Center 2012 R2-Virtual Machine Manager**、 **Windows Server 2016** 和 **System center 2016-Virtual Machine Manager** ，然后单击 " **下一步**"。  
   
 9. 选择 "分类"。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "91379575"
   
     取消选择以前选择的所有更新。  
   
-    选择要为分析平台系统设备同步的更新的 **关键更新** 和 **安全更新** ，然后单击 " **下一步**"。  
+    选择 " **关键更新**"、" **安全更新** " 和 " **更新汇总** " 获取将为 Analytics Platform System 设备同步的更新，然后单击 " **下一步**"。  
   
     ![选择分类](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
@@ -170,7 +170,7 @@ ms.locfileid: "91379575"
   
 12. 完成。  
   
-    单击“完成”  。  
+    单击“完成”。  
   
 ## <a name="group-the-appliance-servers-in-wsus"></a><a name="bkmk_WSUSGroup"></a>在 WSUS 中将设备服务器分组  
 配置 WSUS for Analytics 平台系统后，下一步是对设备服务器进行分组。 通过将所有设备服务器添加到组中，WSUS 将能够将软件更新应用于设备中的所有服务器。  
