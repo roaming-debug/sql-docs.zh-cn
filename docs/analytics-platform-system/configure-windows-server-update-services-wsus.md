@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 06ac0126bb12668654c04e6a82b20ca551dd925e
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947943"
+ms.locfileid: "94983052"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>在分析平台系统中配置 Windows Server Update Services (WSUS) 
 这些说明将指导你完成使用 Windows Server Update Services (WSUS) 配置向导来配置 WSUS for Analytics 平台系统的步骤。 你需要配置 WSUS，然后才能将软件更新应用于设备。 WSUS 已安装在设备的 VMM 虚拟机上。  
@@ -156,7 +156,7 @@ ms.locfileid: "94947943"
   
     选择 " **关键更新**"、" **安全更新** " 和 " **更新汇总** " 获取将为 Analytics Platform System 设备同步的更新，然后单击 " **下一步**"。  
   
-    ![选择分类](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![选择分类](./media/configure-windows-server-update-services-wsus/sql-server-pdw-wsus-choose-classifications.png "sql-server pdw-wsus-选择-分类")  
   
 10. 配置同步计划。  
   
