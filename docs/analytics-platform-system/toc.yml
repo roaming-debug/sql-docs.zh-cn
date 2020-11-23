@@ -5,6 +5,8 @@
 - name: APS 中的新增功能
   href: ./whats-new-analytics-platform-system.md
   items:
+    - name: APS CU7.7
+      href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.7
     - name: APS CU7.6
       href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.6
     - name: APS CU7.5

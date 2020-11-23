@@ -46,12 +46,14 @@
         - name: SQL Server 安全性
           href: ../connect/ado-net/sql/sql-server-security.md
           items:
-            - name: SQL Server 中的身份验证
+            - name: 身份验证
               href: ../connect/ado-net/sql/authentication-sql-server.md
-            - name: SQL Server 中的应用程序安全方案
+            - name: Azure Active Directory 身份验证
+              href: ../connect/ado-net/sql/azure-active-directory-authentication.md
+            - name: 应用程序安全性方案
               href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
               items:
-                - name: 在 SQL Server 中编写安全动态 SQL
+                - name: 编写安全的动态 SQL
                   href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
             - name: SQL Server Express 安全性
               href: ../connect/ado-net/sql/sql-server-express-security.md
