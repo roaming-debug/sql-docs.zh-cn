@@ -2,19 +2,19 @@
 title: 使用 Python 绘制直方图进行数据探索
 titleSuffix: SQL machine learning
 description: 了解如何使用 Python 创建直方图来可视化数据。
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/14/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f30230b00258b5f5f662a99c2d75c29ea7ba8d
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: ee708d473e29cd36fe02e18e95eb71c0505dfdd7
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956788"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870133"
 ---
 # <a name="plot-histograms-in-python"></a>在 Python 中绘制直方图 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,20 +24,20 @@ ms.locfileid: "91956788"
 ## <a name="prerequisites"></a>先决条件：
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server。 有关安装方法，请参阅[适用于 Windows 的 SQL Server](../../database-engine/install-windows/install-sql-server.md) 或 [适用于 Linux 的 SQL Server](../../linux/sql-server-linux-overview.md)。
+* [适用于 Windows 的 SQL Server](../../database-engine/install-windows/install-sql-server.md) 或 [适用于 Linux 的 SQL Server](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL 数据库。 有关注册方法，请参阅 [Azure SQL 数据库](/azure/sql-database/sql-database-get-started-portal)
+* [Azure SQL 数据库](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL 托管实例。 有关注册方法，请参阅 [Azure SQL 托管实例](/azure/azure-sql/managed-instance/instance-create-quickstart)。
+* [Azure SQL 托管实例](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * 用于将示例数据库还原到 Azure SQL 托管实例的 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
-* Azure Data Studio。 有关安装方法，请参阅 [Azure Data Studio](../../azure-data-studio/what-is.md)。
+* Azure Data Studio。 如需安装，请参阅 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 * [还原示例 DW 数据库](../../samples/adventureworks-install-configure.md)以获取本文中使用的示例数据。
 

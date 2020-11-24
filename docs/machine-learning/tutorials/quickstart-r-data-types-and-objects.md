@@ -8,15 +8,14 @@ ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 392ab990d33d5686fa5cdd3e4bb2f6a39b592410
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 58eb68b94d5e969ef4a62d5de057d2936a628bda
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178491"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870359"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习使用 R 时的数据结构、数据类型和对象
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -46,16 +45,16 @@ ms.locfileid: "88178491"
 若要运行本快速入门，需要具备以下先决条件。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
+- SQL Server 机器学习服务。 如需安装机器学习服务，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
+- SQL Server 机器学习服务。 如需安装机器学习服务，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-- SQL Server 2016 R Services。 有关如何安装 R Services 的信息，请参阅 [Windows 安装指南](../install/sql-r-services-windows-install.md)。 
+- SQL Server 2016 R Services。 如需安装 R Services，请参阅 [Windows 安装指南](../install/sql-r-services-windows-install.md)。 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+- Azure SQL 托管实例机器学习服务。 有关信息，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 ::: moniker-end
 
 - 一个用于运行包含 R 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。

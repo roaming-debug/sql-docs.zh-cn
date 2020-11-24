@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e5e4a4856b91cd717e9498fb96567ecd6c70ca6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 2dab1d48ca2aa98e4a70a08bac492366f2632b79
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192637"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584949"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>用于 SQL Server Python 和 R 教程的纽约市出租车演示数据
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 本文介绍了如何设置一个示例数据库，该数据库包含来自[纽约市出租车和轿车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)的公共数据。 此数据用于多个 R 和 Python 教程，用于 SQL Server 上的数据库内分析。 为了使示例代码运行速度更快，我们创建了一个具有代表性的 1% 采样数据。 在你的系统上，数据库备份文件略大于 90 MB，在主数据表中提供 170 万行。
 
-若要完成此练习，你应该拥有 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) 或其他可以还原数据库备份文件并运行 T-SQL 查询的工具。
+若要完成此练习，你应该拥有 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017&preserve-view=true) 或其他可以还原数据库备份文件并运行 T-SQL 查询的工具。
 
 使用此数据集的教程和快速入门包括以下内容：
 
@@ -41,7 +41,7 @@ ms.locfileid: "92192637"
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
 >[!NOTE]
->若要还原 [Azure SQL 托管实例中的机器学习服务（预览）](/azure/azure-sql/managed-instance/machine-learning-services-overview)上的示例数据库，请按照[快速入门：将数据库还原到 Azure SQL 托管实例](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)中的说明，使用纽约市出租车演示数据库 .bak 文件进行操作：[https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)。
+>若要还原 [Azure SQL 托管实例中的机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)上的示例数据库，请按照[快速入门：将数据库还原到 Azure SQL 托管实例](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)中的说明，使用纽约市出租车演示数据库 .bak 文件进行操作：[https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)。
 ::: moniker-end
 
 1. 单击 [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) 下载数据库备份文件。

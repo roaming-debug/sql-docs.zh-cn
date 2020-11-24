@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a625684b3196fc246b2753fc7b7e38b3e603f6e
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155067"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674135"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>为 SQL Server 安装 Python 自定义运行时
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -30,16 +30,11 @@ ms.locfileid: "92155067"
 > [!NOTE]
 > 本文介绍如何在 Windows 上安装适用于 Python 的自定义运行时。 若要在 Linux 上安装，请参阅[在 Linux 上安装适用于 SQL Server 的 Python 自定义运行时](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)。
 
-
-
 ## <a name="pre-install-checklist"></a>安装前清单
 
 安装 Python 自定义运行时之前，请安装以下各项：
 
-+ [适用于 Windows 的 SQL Server 2019 CU3 或更高版本](../../database-engine/install-windows/install-sql-server.md).
-
-  > [!NOTE]
-  > Python 自定义运行时需要 SQL Server 2019 的累积更新 (CU) 3 或更高版本。
++ [适用于 Windows 的 SQL Server 2019 累积更新 (CU) 3](../../database-engine/install-windows/install-sql-server.md)。
 
 + [通过扩展性框架在 Windows 上安装 SQL Server 语言扩展](../../language-extensions/install/windows-java.md)。
 
@@ -302,7 +297,7 @@ GO
 
 ## <a name="enable-external-script-execution-in-sql-server"></a>在 SQL Server 中启用外部脚本执行
 
-可以通过针对 SQL Server 运行的存储过程 [sp_execute_external 脚本](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，来执行以 Python 语言编写的外部脚本。 
+可以通过针对 SQL Server 运行的存储过程 [sp_execute_external 脚本](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，来执行以 Python 语言编写的外部脚本。 
 
 若要启用外部脚本，请使用连接到 SQL Server 的 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) 执行以下 SQL 命令。
 

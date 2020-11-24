@@ -2,7 +2,7 @@
 title: SQL Server 机器学习服务中的新增功能？
 titleSuffix: ''
 description: 各版本 SQL Server 机器学习服务和 SQL Server 2016 R Services 的新功能公告。
-ms.date: 11/04/2019
+ms.date: 11/17/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
@@ -10,17 +10,17 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 287b0fd536e5d3a6c76e8ef3760702da061a90ec
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 8d0da76c639048e9479afd575b584275a9bb51c6
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195059"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810507"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的新增功能
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
-随着我们继续扩大、扩展和深化数据平台、高级分析和数据科学之间的集成，机器学习功能会添加到每个版本的 SQL Server 中。 
+本文介绍 [SQL Server 机器学习服务](sql-server-machine-learning-services.md)的每个版本中包含的新功能和功能。 随着我们继续扩大、扩展和深化数据平台、高级分析和数据科学之间的集成，机器学习功能会添加到每个版本的 SQL Server 中。 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019"></a>SQL Server 2019 中的新增功能

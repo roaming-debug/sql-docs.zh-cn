@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b3f8d66d7197e2e55a07f7a5b6de5da1b4ee24a
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: db8a0c073821df46e6d9d5bda43e74aae19a2501
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412558"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585024"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>R 教程：使用二元分类来预测纽约市出租车费用
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92412558"
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-在本面向 SQL 程序员的由五部分组成的系列教程中，你将学习如何在 [Azure SQL 托管实例（预览）中的机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)上集成 R。
+在本面向 SQL 程序员的由五部分组成的系列教程中，你将学习如何在 [Azure SQL 托管实例中的机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)上集成 R。
 ::: moniker-end
 
 你将使用 SQL Server 上的示例数据库来生成和部署基于 R 的机器学习解决方案。 你将使用 T-SQL、Azure Data Studio 或 SQL Server Management Studio，以及支持 SQL 机器学习和 R 语言的数据库引擎实例

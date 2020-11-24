@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1fc4ea656830eb779b80b22a15a74dfd799781aa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7b8e0e8df7bd2a5453299751df682e0c33502c25
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178566"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585069"
 ---
 # <a name="python-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Python 教程：使用二元分类来预测纽约市出租车费用
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88178566"
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-在本面向 SQL 程序员的由五部分组成的系列教程中，你将学习如何在 [Azure SQL 托管实例（预览）中的机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)上集成 Python。
+在本面向 SQL 程序员的由五部分组成的系列教程中，你将学习如何在 [Azure SQL 托管实例中的机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)上集成 Python。
 ::: moniker-end
 
 你将使用 SQL Server 上的示例数据库来生成和部署基于 Python 的机器学习解决方案。 你将使用 T-SQL、Azure Data Studio 或 SQL Server Management Studio，以及支持 SQL 机器学习和 Python 语言的数据库实例。

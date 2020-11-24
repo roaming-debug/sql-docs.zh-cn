@@ -2,19 +2,19 @@
 title: 将 Python 数据帧插入 SQL 表
 titleSuffix: SQL machine learning
 description: 如何将数据从数据帧插入 SQL 表。
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/23/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f479186a8b1455fab8e8ddac7313193337e42dc9
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 85980bf7bc69190a0e7ae75ee74336a62afd12c6
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956816"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870210"
 ---
 # <a name="insert-python-dataframe-into-sql-table"></a>将 Python 数据帧插入 SQL 表
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,20 +24,20 @@ ms.locfileid: "91956816"
 ## <a name="prerequisites"></a>先决条件
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server。 有关安装方法，请参阅[适用于 Windows 的 SQL Server](../../database-engine/install-windows/install-sql-server.md) 或 [适用于 Linux 的 SQL Server](../../linux/sql-server-linux-overview.md)。
+* [适用于 Windows 的 SQL Server](../../database-engine/install-windows/install-sql-server.md) 或 [适用于 Linux 的 SQL Server](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL 数据库。 有关注册方法，请参阅 [Azure SQL 数据库](/azure/sql-database/sql-database-get-started-portal)
+* [Azure SQL 数据库](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL 托管实例。 有关注册方法，请参阅 [Azure SQL 托管实例](/azure/azure-sql/managed-instance/instance-create-quickstart)。
+* [Azure SQL 托管实例](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
-* 使用 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 将示例数据库还原到 Azure SQL 托管实例。
+* 用于将示例数据库还原到 Azure SQL 托管实例的 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
-* Azure Data Studio. 有关安装方法，请参阅 [Azure Data Studio](../../azure-data-studio/what-is.md)。
+* Azure Data Studio。 如需安装，请参阅 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 * [还原示例数据库](../../samples/adventureworks-install-configure.md)以获取本文中使用的示例数据。
 
@@ -116,7 +116,7 @@ DepartmentID,Name,GroupName,
 创建新笔记本的步骤：
 
 1. 在 Azure Data Studio 中，依次选择“文件”和”新建笔记本” 。
-2. 在笔记本中，依次选择内核“Python 3”和“+ 代码” 。
+2. 在笔记本中，依次选择内核“Python3”和“+ 代码” 。
 3. 在笔记本中粘贴代码，选择“全部运行”。
 
  ```Python

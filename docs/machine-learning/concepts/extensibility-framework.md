@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: b7be2d8a11a63c1330e721f893e0ec3e945d8b5d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956513"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870019"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的扩展性体系结构 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,15 +45,15 @@ ms.locfileid: "91956513"
 
 该体系结构的设计理念是让外部脚本在与 SQL Server 不同的进程中运行，但具有在内部管理 SQL Server 上的数据和操作请求链的组件。 根据 SQL Server 版本的不同，支持的语言扩展包括 [R](extension-r.md)、[Python](extension-python.md) 以及第三方语言（例如 Java 和 .NET）。
 
-  ***Windows 中的组件体系结构：***
+  Windows 中的组件体系结构：_*
   
   ![Windows 组件体系结构](../media/generic-architecture-windows.png "组件体系结构")
   
-  ***Linux 中的组件体系结构：***
+  _*_Linux 中的组件体系结构：_*_
 
   ![Linux 组件体系结构](../media/generic-architecture-linux.png "组件体系结构")
   
-组件包括用于调用外部运行时的  Launchpad 服务以及用于加载解释器和库的特定于库的逻辑。 启动器用于加载语言运行时和所有专有模块。 例如，如果代码包含 RevoScaleR 函数，则会加载 RevoScaleR 解释器。 **BxlServer** 和 **SQL Satellite** 管理与 SQL Server 的通信和数据传输。 
+组件包括用于调用外部运行时的 _Launchpad* 服务以及用于加载解释器和库的特定于库的逻辑。 启动器用于加载语言运行时和所有专有模块。 例如，如果代码包含 RevoScaleR 函数，则会加载 RevoScaleR 解释器。 **BxlServer** 和 **SQL Satellite** 管理与 SQL Server 的通信和数据传输。 
 
 在 Linux 中，SQL 使用 Launchpad  服务与每个用户的独立 Launchpad 进程进行通信。
 

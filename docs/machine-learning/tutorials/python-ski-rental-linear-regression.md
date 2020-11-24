@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 17ed4f8f3cd938fe38dbee7dcc0933dae8109c65
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: fc700631df6289c0529fdfd65d73b630cfac00f1
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194450"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585037"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Python 教程：通过 SQL 机器学习使用线性回归来预测雪橇租赁
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "92194450"
 ## <a name="prerequisites"></a>先决条件
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server 机器学习服务 — 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
+* SQL Server 机器学习服务 — 如需安装机器学习服务，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-* SQL Server 机器学习服务 - 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
+* SQL Server 机器学习服务 - 如需安装机器学习服务，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+* Azure SQL 托管实例机器学习服务 - 有关信息，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 * 使用 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 将示例数据库还原到 Azure SQL 托管实例。
 ::: moniker-end

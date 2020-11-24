@@ -5,18 +5,18 @@ description: 本系列教程由四个部分组成。你将开发一个模型，�
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/26/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a933a33f723bf275ef635ba9e0c2a9252fe47752
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 8ee1d60eb9af4232957ff9c1a7df4b976366513f
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193027"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870308"
 ---
 # <a name="tutorial-develop-a-clustering-model-in-r-with-sql-machine-learning"></a>教程：通过 SQL 机器学习在 R 中部署聚类分析模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "92193027"
 ## <a name="prerequisites"></a>先决条件
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* 支持 Python 语言的 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md) - 按照 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%252fsql%252fmachine-learning%252ftoc.json&view=sql-server-linux-ver15)中的安装说明进行操作。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
+* 支持 Python 语言的 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md) - 按照 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%252fsql%252fmachine-learning%252ftoc.json&view=sql-server-linux-ver15&preserve-view=true)中的安装说明进行操作。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * 支持 R 语言的 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md) - 按照 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)中的安装说明进行操作。
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+* Azure SQL 托管实例机器学习服务。 有关信息，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 * 用于将示例数据库还原到 Azure SQL 托管实例的 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
