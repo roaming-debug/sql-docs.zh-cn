@@ -2,21 +2,20 @@
 title: 在 Linux 上安装
 titleSuffix: SQL Server Machine Learning Services
 description: 了解如何在 Linux 上安装 SQL Server 机器学习服务（Python 和 R）：Red Hat、Ubuntu 和 SUSE。
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ms.date: 03/05/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6efa57a482943b6dbef2ebecdc0668dac017a01a
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fc671271d3e998e0329236c6c567438db1a5c48a
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115756"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870001"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安装 SQL Server 机器学习服务（Python 和 R）
 

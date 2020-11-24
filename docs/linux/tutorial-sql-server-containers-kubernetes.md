@@ -9,12 +9,12 @@ ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c8563738c8d1465c6573ca2a92f0839f54c8e29c
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: db9b5c98bd073fcf92f7fd93a24c551f5bca0804
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155106"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810517"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>使用 Azure Kubernetes 服务 (AKS) 在 Kubernetes 中部署 SQL Server 容器
 
@@ -66,7 +66,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 以下命令可为 SA 帐户创建密码：
 
-   ```azurecli
+   ```console
    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```  
 
@@ -111,7 +111,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 1. 在 Kubernetes 中创建永久性卷声明。
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
@@ -123,7 +123,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 1. 验证永久性卷声明。
 
-   ```azurecli
+   ```console
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
@@ -131,7 +131,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
    在上述步骤中，永久性卷声明的名称为 `mssql-data`。 要查看有关永久性卷声明的元数据，请运行以下命令：
 
-   ```azurecli
+   ```console
    kubectl describe pvc mssql-data
    ```
 
@@ -145,7 +145,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 1. 请验证永久性卷。
 
-   ```azurecli
+   ```console
    kubectl describe pv
    ```
 
@@ -244,7 +244,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 1. 创建部署。
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
@@ -265,7 +265,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 1. 请验证服务是否正在运行。 运行以下命令：
 
-   ```azurecli
+   ```console
    kubectl get services 
    ```
 
@@ -281,13 +281,13 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 1. 还可以通过运行以下命令来验证容器是否以非根用户身份运行：
 
-    ```azurecli
+    ```console
     kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
     ```
 
     然后运行“whoami”，你应该会看到用户名为 mssql。 这是一个非根用户。
 
-    ```azurecli
+    ```console
     whoami
     ```
 
@@ -320,7 +320,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 1. 列出运行 SQL Server 的 Pod。
 
-   ```azurecli
+   ```console
    kubectl get pods
    ```
 
@@ -328,7 +328,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 1. 删除 Pod。
 
-   ```azurecli
+   ```console
    kubectl delete pod mssql-deployment-0
    ```
 

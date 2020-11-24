@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: 899d215abe7d0308c4fd0c42ed992defa3b198da
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+ms.openlocfilehash: a1a2d38a9c42905d433a403952a7f96fd9e0245f
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115551"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983131"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>选择合适的工具管理 Linux 上的 SQL Server
 
