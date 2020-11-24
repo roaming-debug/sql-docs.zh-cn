@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: c2139f53771ed50a5ce01cc9fb4c3c64bfd14692
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: eb3fa0a07e9a0b5e7cf1bc1c7564fdb7b0d82a62
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570964"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704192"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -58,6 +58,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | Analysis Services | 在极少数情况下，如果在使用升级设置升级 SSMS 后尝试打开 DAX 编辑器，则会看到“对象未设置为对象实例”错误。 | 若要解决此问题，请卸载并重新安装 SSMS。 |
 | 常规 SSMS | “新建服务器审核规范”对话框可能会导致 SSMS 发生故障，并显示访问冲突错误。 | 空值 |
 | 常规 SSMS | 应将使用 SMO 的 SSMS 扩展重新编译为面向新的特定于 SSMS 的 SMO v161 包。 可在 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 找到预览版本 </br></br> 针对以前 160 个版本的 Microsoft.SqlServer.SqlManagementObjects 包编译的扩展仍起作用。 | 空值 |
+| 生成脚本向导 | 尝试枚举 SQL Server 2014 及更低版本上的数据库对象时，向导失败。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)。 | 使用 SSMS 18.6 在 SQL 2014 和更早版本的生成脚本向导中选择对象。 |
 | Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 解决方法：删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 | 空值 |
 | Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 解决方法：在“Computer\HKEY_CLASSES_ROOT\AppID”和“Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下识别与 Integration Services 相关的注册表位置，并在这些配置单元中，将名为“LocalService”的注册表项重命名为“LocalService_A”，以用于我们尝试连接的特定版本的 Integration Services | 不适用 |
 | “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 按需 SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) 相关的更改，低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 按需 SQL 结合使用，你需要使用 SSMS 18.7 或更高版本。 |
@@ -157,6 +158,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | Analysis Services | 在极少数情况下，如果在使用升级设置升级 SSMS 后尝试打开 DAX 编辑器，则会看到“对象未设置为对象实例”错误。 | 若要解决此问题，请卸载并重新安装 SSMS。 |
 | 常规 SSMS | “新建服务器审核规范”对话框可能会导致 SSMS 发生故障，并显示访问冲突错误。 | 空值 |
 | 常规 SSMS | 应将使用 SMO 的 SSMS 扩展重新编译为面向新的特定于 SSMS 的 SMO v161 包。 可在 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 找到预览版本 </br></br> 针对以前 160 个版本的 Microsoft.SqlServer.SqlManagementObjects 包编译的扩展仍起作用。 | 空值 |
+| 生成脚本向导 | 尝试枚举 SQL Server 2014 及更低版本上的数据库对象时，向导失败。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)。 | 使用 SSMS 18.6 在 SQL 2014 和更早版本的生成脚本向导中选择对象。 |
 | Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 解决方法：删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 | 空值 |
 | Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 解决方法：在“Computer\HKEY_CLASSES_ROOT\AppID”和“Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下识别与 Integration Services 相关的注册表位置，并在这些配置单元中，将名为“LocalService”的注册表项重命名为“LocalService_A”，以用于我们尝试连接的特定版本的 Integration Services | 不适用 |
 | “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 按需 SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) 相关的更改，低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 按需 SQL 结合使用，你需要 SSMS 18.7 或更高版本。 |
