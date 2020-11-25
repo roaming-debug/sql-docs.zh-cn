@@ -1,5 +1,5 @@
 ---
-title: CLR 表值函数 |Microsoft Docs
+title: CLR Table-Valued 函数 |Microsoft Docs
 description: 表值函数返回一个表。 在 SQL Server CLR 集成中，可以在托管代码中编写表值函数。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca80594050e73bf20ecfd589f18a5eca43e4dbde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4295ca970e503ad1785846d63e5ed479923f4303
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727904"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125287"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 表值函数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   表值函数是返回表的用户定义函数。  
   
- 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过允许您在任何托管语言中定义表值函数以扩展表值函数的功能。 数据通过**IEnumerable**或**IEnumerator**对象从表值函数返回。  
+ 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过允许您在任何托管语言中定义表值函数以扩展表值函数的功能。 数据通过 **IEnumerable** 或 **IEnumerator** 对象从表值函数返回。  
   
 > [!NOTE]  
->  对于表值函数，返回表类型的列不能包含时间戳列或非 Unicode 字符串数据类型列（如**char**、 **varchar**和**text**）。 不支持 NOT NULL 约束。  
+>  对于表值函数，返回表类型的列不能包含时间戳列或非 Unicode 字符串数据类型列 (如 **char**、 **varchar** 和 **text**) 。 不支持 NOT NULL 约束。  
   
- 有关 CLR 表值函数的详细信息，请参阅 MSSQLTips " [SQL SERVER CLR 表值函数简介！](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
+ 有关 CLR Table-Valued 函数的详细信息，请参阅 MSSQLTips " [SQL SERVER CLR 表值函数简介！](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL 与 CLR 表值函数之间的差异  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值函数将调用此函数的结果具体化到某个中间表中。 由于它们使用中间表，因此它们可以对于结果支持约束和唯一索引。 当返回大型结果时，这些功能极其有用。  
   
- 相比较而言，CLR 表值函数表示一种流替代方法。 此时，不要求在单个表中具体化整个结果集。 托管函数返回的**IEnumerable**对象直接由调用表值函数的查询的执行计划调用，并且以增量方式使用结果。 这种流模型可确保在第一行可用之后立即使用结果，而不是等待填充整个表。 如果返回的行非常多，则这还是一个更好的替代方法，因为它们不必在内存中作为一个整体进行具体化。 例如，可以使用托管表值函数分析文本文件并将其中的每行作为一行返回。  
+ 相比较而言，CLR 表值函数表示一种流替代方法。 此时，不要求在单个表中具体化整个结果集。 托管函数返回的 **IEnumerable** 对象直接由调用表值函数的查询的执行计划调用，并且以增量方式使用结果。 这种流模型可确保在第一行可用之后立即使用结果，而不是等待填充整个表。 如果返回的行非常多，则这还是一个更好的替代方法，因为它们不必在内存中作为一个整体进行具体化。 例如，可以使用托管表值函数分析文本文件并将其中的每行作为一行返回。  
   
 ## <a name="implementing-table-valued-functions"></a>实现表值函数  
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集中将表值函数作为类的方法实现。 表值函数代码必须实现**IEnumerable**接口。 在 .NET Framework 中定义了**IEnumerable**接口。 表示 .NET Framework 中的数组和集合的类型已经实现了**IEnumerable**接口。 这样，就可以轻松地编写将集合或数组转换为结果集的表值函数。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集中将表值函数作为类的方法实现。 表值函数代码必须实现 **IEnumerable** 接口。 在 .NET Framework 中定义了 **IEnumerable** 接口。 表示 .NET Framework 中的数组和集合的类型已经实现了 **IEnumerable** 接口。 这样，就可以轻松地编写将集合或数组转换为结果集的表值函数。  
   
 ## <a name="table-valued-parameters"></a>表值参数  
  表值参数即传递到某一过程或函数的用户定义表类型，它提供了一种将多行数据传递到服务器的高效方法。 表值参数提供与参数数组类似的功能，但灵活性更高并且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 它们还提供提升性能的潜力。 表值参数还有助于减少到服务器的往返次数。 可以将数据作为表值参数发送到服务器，而不是向服务器发送多个请求（例如，对于标量参数列表）。 用户定义表类型不能作为表值参数传递到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中执行的托管存储过程或函数，也不能从这些存储过程或函数中返回。 有关表值参数的详细信息，请参阅[使用表值参数（数据引擎）](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
@@ -57,7 +57,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>在 Transact-SQL 中定义表值函数  
- 定义 CLR 表值函数的语法与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值函数的语法相似，并添加了**EXTERNAL NAME**子句。 例如：  
+ 定义 CLR 表值函数的语法与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值函数的语法相似，并添加了 **EXTERNAL NAME** 子句。 例如：  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  
@@ -79,7 +79,7 @@ select * from table t cross apply function(t.column);
   
 -   当从外部数据生成表值函数时。 例如，读取事件日志并将其显示为表的表值函数。  
   
- **注意**表值函数只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] **InitMethod**方法（而不是**FillRow**方法）中的查询来执行数据访问。 如果**InitMethod**执行查询，则应使用**SqlFunction** attribute 属性对 InitMethod 进行标记。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+ **注意** 表值函数只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] **InitMethod** 方法（而不是 **FillRow** 方法）中的查询来执行数据访问。 如果 **InitMethod** 执行查询，则应使用 **SqlFunction** attribute 属性对 InitMethod 进行标记。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 ## <a name="a-sample-table-valued-function"></a>示例表值函数  
  下面的表值函数返回系统事件日志中的信息。 此函数采用单个字符串参数，其中包含要读取的事件日志的名称。  
@@ -99,7 +99,8 @@ public class TabularEventLog
     [SqlFunction(FillRowMethodName = "FillRow")]  
     public static IEnumerable InitMethod(String logname)  
     {  
-        return new EventLog(logname).Entries;    }  
+        return new EventLog(logname).Entries;
+    }  
   
     public static void FillRow(Object obj, out SqlDateTime timeWritten, out SqlChars message, out SqlChars category, out long instanceId)  
     {  
