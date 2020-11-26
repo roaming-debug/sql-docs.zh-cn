@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: da44ed2decbaeb2dbaf23c03381a8f58e61f90f6
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: 8050d90cfac0081629f4b7c1d18e2ff0aeb2b770
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496898"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983121"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -45,6 +45,9 @@ ms.locfileid: "92496898"
 选择以下选项卡之一，了解所使用的特定 SQL 版本的语法、参数、注解、权限和示例。
 
 有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
+
+> [!NOTE]
+> 若要使用 ALTER DATABASE 设置一些选项，可能需要独占数据库访问权限。 如果 ALTER DATABASE 语句没有及时完成，请检查数据库中的其他会话是否正在阻止 ALTER DATABASE 会话。
 
 ## <a name="select-a-product"></a>选择一个产品
 
@@ -319,12 +322,12 @@ database_name
 要修改的数据库的名称。
 
 CURRENT     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
 
 运行当前数据库中的操作。 并不是所有上下文中的所有选项都支持 `CURRENT`。 如果 `CURRENT` 失败，则提供数据库名称。
 
 \<accelerated_database_recovery> ::=     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
 按数据库启用[加速数据库恢复](../../relational-databases/accelerated-database-recovery-management.md) (ADR)。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中的 ADR 设置为 OFF。 通过使用此语法，可选择为永久版本存储 (PVS) 数据指定特定的文件组。 如果未指定文件组，则 PVS 将存储在 PRIMARY 文件组中。 有关示例和详细信息，请参阅[加速数据库恢复](../../relational-databases/accelerated-database-recovery-management.md)。
 
@@ -366,7 +369,7 @@ OFF
 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)中的“使用数据库范围的统计信息选项”部分。
 
 INCREMENTAL = ON | OFF     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 将 AUTO_CREATE_STATISTICS 设置为 ON，并将 INCREMENTAL 设置为 ON。 只要支持增量统计信息，就会将自动创建的统计信息设置为增量统计信息。 默认值为 OFF。 有关详细信息，请参阅 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)。
 
@@ -429,7 +432,7 @@ OFF
 有关描述何时使用同步统计信息更新或异步统计信息更新的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md#statistics-options)中的“统计信息选项”部分。
 
 <a name="auto_tuning"></a> \<automatic_tuning_option> ::=     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始）
 
 启用或禁用 `FORCE_LAST_GOOD_PLAN` [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)选项。
 
@@ -443,7 +446,7 @@ OFF
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]报告由 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 视图中的查询计划更改引起的潜在查询性能回归。 但是，不会自动应用这些建议。 用户可以通过应用视图中显示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 脚本来监视正在应用的建议和修复已识别的问题。 默认值为 OFF。
 
 \<change_tracking_option> ::=     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
 
 控制更改跟踪选项。 可以启用更改跟踪、设置选项、更改选项以及禁用更改跟踪。 有关示例，请参阅本文后面的“示例”一节。
 
@@ -468,7 +471,7 @@ OFF
 对数据库禁用更改跟踪。 先对所有表禁用更改跟踪，然后才能对数据库禁用更改跟踪。
 
 \<containment_option> ::=     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
 
 控制数据库包含选项。
 
@@ -511,9 +514,9 @@ GLOBAL
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_local_cursor_default` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsLocalCursorsDefault` 属性来确定状态。
 
-\<data_retention_policy> ::=
+**\<data_retention_policy> ::=**
 
-**适用对象** ：仅限 Azure SQL Edge
+**适用对象**：仅限 Azure SQL Edge
 
 DATA_RETENTION { ON | OFF }   
 ON    
@@ -554,12 +557,12 @@ OFF
 将数据库设置为不加密。
 
 SUSPEND     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）     
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）     
 
 可用于在启用或禁用透明数据加密后或更改了加密密钥后暂停和恢复加密扫描。
 
 RESUME     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
 可用于恢复先前暂停的加密扫描。
 
@@ -634,7 +637,7 @@ MULTI_USER
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `user_access` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `UserAccess` 属性来确定状态。
 
 \<delayed_durability_option> ::=     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）
 
 控制提交的事务是完全持久事务还是延迟持久事务。
 
@@ -684,7 +687,7 @@ OFF
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_trustworthy_on` 列来确定此选项的状态。
 
 DEFAULT_FULLTEXT_LANGUAGE     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
 
 指定全文检索列的默认语言值。
 
@@ -692,27 +695,27 @@ DEFAULT_FULLTEXT_LANGUAGE
 > 仅在将 CONTAINMENT 设置为 PARTIAL 之后，才允许使用此选项。 如果将 CONTAINMENT 设置为 NONE，将发生错误。
 
 DEFAULT_LANGUAGE     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
 
 指定所有新建登录名的默认语言。 可以通过提供本地 ID (lcid)、语言名称或语言别名来指定语言。 有关可接受的语言名称和别名的列表，请参阅 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。 仅在将 CONTAINMENT 设置为 PARTIAL 之后，才允许使用此选项。 如果将 CONTAINMENT 设置为 NONE，将发生错误。
 
 NESTED_TRIGGERS     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
 
 指定 AFTER 触发器是否可级联；级联是指执行某项操作将启动另一个触发器，而该触发器又将启动另外一个，依此类推。 仅在将 CONTAINMENT 设置为 PARTIAL 之后，才允许使用此选项。 如果将 CONTAINMENT 设置为 NONE，将发生错误。
 
 TRANSFORM_NOISE_WORDS     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
 
 用于取消干扰词（或非索引字）导致全文查询的布尔操作失败时所产生的错误消息。 仅在将 CONTAINMENT 设置为 PARTIAL 之后，才允许使用此选项。 如果将 CONTAINMENT 设置为 NONE，将发生错误。
 
 TWO_DIGIT_YEAR_CUTOFF     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
 
 指定一个介于 1753 到 9999 之间的整数，表示用于将两位数年份解释为四位数年份的截止年份。 仅在将 CONTAINMENT 设置为 PARTIAL 之后，才允许使用此选项。 如果将 CONTAINMENT 设置为 NONE，将发生错误。
 
 \<FILESTREAM_option> ::=     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
 
 控制 FileTable 的设置。
 
@@ -735,7 +738,7 @@ DIRECTORY_NAME = \<directory_name>
 请参阅 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)。
 
 \<mixed_page_allocation_option> ::=     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）
 
 控制数据库能否使用混合区为表或索引的前 8 页创建初始页面。
 
@@ -761,7 +764,7 @@ FORCED
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_parameterization_forced column` 确定此选项的当前设置。
 
 <a name="query-store"></a> \<query_store_options> ::=     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）
 
 ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 控制查询存储是否在此数据库中启用，同时控制是否删除查询存储的内容。 有关详细信息，请参阅 [查询存储使用方案](../../relational-databases/performance/query-store-usage-scenarios.md)。
@@ -788,13 +791,13 @@ READ_ONLY
 可以从查询存储读取信息，但不会添加新信息。 如果已用尽查询存储的最大分配空间，查询存储的操作模式将更改为 READ_ONLY。
 
 CLEANUP_POLICY     
-描述查询存储的数据保留策略。 STALE_QUERY_THRESHOLD_DAYS 可确定查询信息在查询存储中保留的天数。 STALE_QUERY_THRESHOLD_DAYS 的类型为 **bigint** 。 默认值为 30。
+描述查询存储的数据保留策略。 STALE_QUERY_THRESHOLD_DAYS 可确定查询信息在查询存储中保留的天数。 STALE_QUERY_THRESHOLD_DAYS 的类型为 **bigint**。 默认值为 30。
 
 DATA_FLUSH_INTERVAL_SECONDS     
-确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 通过使用 DATA_FLUSH_INTERVAL_SECONDS 参数，配置此异步传输发生的频率。 DATA_FLUSH_INTERVAL_SECONDS 的类型为 **bigint** 。 默认值为 900（15 分钟）。
+确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 通过使用 DATA_FLUSH_INTERVAL_SECONDS 参数，配置此异步传输发生的频率。 DATA_FLUSH_INTERVAL_SECONDS 的类型为 **bigint**。 默认值为 900（15 分钟）。
 
 MAX_STORAGE_SIZE_MB     
-确定分配给查询存储的空间。 MAX_STORAGE_SIZE_MB 的类型为 **bigint** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）的默认值为 100 MB。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，默认值为 1 GB。
+确定分配给查询存储的空间。 MAX_STORAGE_SIZE_MB 的类型为 **bigint**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）的默认值为 100 MB。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，默认值为 1 GB。
 
 > [!NOTE]
 > 没有严格执行 `MAX_STORAGE_SIZE_MB` 限制。 仅当查询存储将数据写入磁盘时才检查存储大小。 此间隔由 `DATA_FLUSH_INTERVAL_SECONDS` 选项或 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查询存储对话框选项“数据刷新时间间隔”设置。 间隔时间默认值为 900 秒（或 15 分钟）。
@@ -817,7 +820,7 @@ AUTO
 OFF     
 不自动激活基于大小的清除。
 
-SIZE_BASED_CLEANUP_MODE 的类型为 **nvarchar** 。
+SIZE_BASED_CLEANUP_MODE 的类型为 **nvarchar**。
 
 QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 指定当前处于活动状态的查询捕获模式。 每个模式都定义了特定的查询捕获策略。
@@ -835,17 +838,17 @@ AUTO
 停止捕获新查询。 查询存储将继续为已经捕获的查询收集编译和运行时统计信息。 请谨慎使用此配置，因为你可能会错过捕获重要的查询。
 
 CUSTOM     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
 可控制 QUERY_CAPTURE_POLICY 选项。
 
-QUERY_CAPTURE_MODE 的类型为 **nvarchar** 。 
+QUERY_CAPTURE_MODE 的类型为 **nvarchar**。 
 
 max_plans_per_query     
 定义为每个查询保留的最大计划数。 MAX_PLANS_PER_QUERY 的类型为 int。默认值为 200。
 
 WAIT_STATS_CAPTURE_MODE { ON | OFF }     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）
 
 控制是否按查询捕获等待统计信息。
 
@@ -856,7 +859,7 @@ OFF
 不捕获每个查询的等待统计信息。
 
 \<query_capture_policy_option_list> :: =     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
 控制查询存储捕获策略选项。 除 STALE_CAPTURE_POLICY_THRESHOLD 外，这些选项定义 OR 条件，需要满足这些条件，才能在定义的“过时捕获策略阈值”中捕获查询。
 
@@ -942,7 +945,7 @@ TORN_PAGE_DETECTION
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `page_verify_option` 列或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsTornPageDetectionEnabled` 属性，确定此选项的当前设置。
 
 \<remote_data_archive_option> ::=     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）
 
 为数据库启用或禁用 Stretch Database。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。
 
@@ -1047,7 +1050,7 @@ OFF
 > 当使用 DURABILITY = SCHEMA_ONLY 创建表，随后使用 ALTER DATABASE 更改 READ_COMMITTED_SNAPSHOT 时，表中的数据将丢失  。
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）
 
 ON     
 当事务隔离级别设置为任何低于 SNAPSHOT 的隔离级别时，内存优化表中所有经过解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作将在 SNAPSHOT 隔离下运行。 低于快照的隔离级别示例有 READ COMMITTED 或 READ UNCOMMITTED。 无论是在会话级别显式设置事务隔离级别还是隐式使用默认值，这些操作都会运行。
@@ -1108,7 +1111,7 @@ OFF
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，ANSI_PADDING 将始终为 ON，将该选项显式设置为 OFF 的任何应用程序都将产生错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 建议始终将 ANSI_PADDING 设置为 ON。 创建或操作计算列或索引视图的索引时，ANSI_PADDING 必须为 ON。
 
-当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char( _n_ ) 和 binary( _n_ ) 列填充到列长度。 当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char( _n_ ) 和 binary( _n_ ) 列填充到列长度 。
+当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度。 当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度 。
 
 连接级设置（使用 SET 语句设置）覆盖 ANSI_PADDING 的默认数据库级别设置。 默认情况下，ODBC 和 OLE DB 客户端发出连接级 SET 语句，将会话的 ANSI_PADDING 设置为 ON。 客户端在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时运行该语句。 有关详细信息，请参阅 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -1201,7 +1204,7 @@ OFF
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_recursive_triggers_on` 列或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsRecursiveTriggersEnabled` 属性来确定此选项的状态。
 
 \<target_recovery_time_option> ::=     
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
 
 指定每个数据库上间接检查点的频率。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，新数据库的默认值为 1 分钟，表示数据库使用间接检查点。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于服务器实例的恢复间隔设置。 对于大多数系统，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议设置为 1 分钟。
 
@@ -1397,7 +1400,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. 启用查询存储
 
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）
 
 下面的示例启用查询存储并配置其参数。
 
@@ -1416,7 +1419,7 @@ SET QUERY_STORE = ON
 
 ### <a name="f-enabling-the-query-store-with-wait-statistics"></a>F. 使用等待统计信息启用查询存储
 
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）
 
 下面的示例启用查询存储并配置其参数。
 
@@ -1437,7 +1440,7 @@ SET QUERY_STORE = ON
 
 ### <a name="g-enabling-the-query-store-with-custom-capture-policy-options"></a>G. 使用自定义捕获策略选项启用查询存储
 
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
 下面的示例启用查询存储并配置其参数。
 
@@ -1905,13 +1908,13 @@ OPERATION_MODE
 描述查询存储的操作模式。 有效值为 READ_ONLY 和 READ_WRITE。 在 READ_WRITE 模式下，查询存储将收集并保留查询计划和运行时执行统计信息。 在 READ_ONLY 模式下，可以从查询存储读取信息，但不会添加新信息。 如果已用尽查询存储的最大分配空间，查询存储的操作模式将更改为 READ_ONLY。
 
 CLEANUP_POLICY     
-描述查询存储的数据保留策略。 STALE_QUERY_THRESHOLD_DAYS 可确定查询信息在查询存储中保留的天数。 STALE_QUERY_THRESHOLD_DAYS 的类型为 **bigint** 。 默认值为 30。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 7 天。
+描述查询存储的数据保留策略。 STALE_QUERY_THRESHOLD_DAYS 可确定查询信息在查询存储中保留的天数。 STALE_QUERY_THRESHOLD_DAYS 的类型为 **bigint**。 默认值为 30。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 7 天。
 
 DATA_FLUSH_INTERVAL_SECONDS     
-确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 通过使用 DATA_FLUSH_INTERVAL_SECONDS 参数，配置此异步传输发生的频率。 DATA_FLUSH_INTERVAL_SECONDS 的类型为 **bigint** 。 默认值为 900（15 分钟）。
+确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 通过使用 DATA_FLUSH_INTERVAL_SECONDS 参数，配置此异步传输发生的频率。 DATA_FLUSH_INTERVAL_SECONDS 的类型为 **bigint**。 默认值为 900（15 分钟）。
 
 MAX_STORAGE_SIZE_MB     
-确定分配给查询存储的空间。 MAX_STORAGE_SIZE_MB 的类型为 **bigint** 。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 高级版，默认值为 1 GB，对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 10 MB 。
+确定分配给查询存储的空间。 MAX_STORAGE_SIZE_MB 的类型为 **bigint**。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 高级版，默认值为 1 GB，对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 10 MB 。
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上的 `MAX_STORAGE_SIZE_MB` 设置限制为 10,240 MB。 
@@ -1937,7 +1940,7 @@ OFF
 AUTO     
 AUTO 当磁盘上的大小达到 max_storage_size_mb 的 90% 时，将自动激活基于大小的清除。 基于大小的清除首先会删除成本最低和最旧的查询。 它在达到 **max_storage_size_mb** 的大约 80% 时停止。 这是默认的配置值。
 
-SIZE_BASED_CLEANUP_MODE 的类型为 **nvarchar** 。
+SIZE_BASED_CLEANUP_MODE 的类型为 **nvarchar**。
 
 QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 指定当前处于活动状态的查询捕获模式。 每个模式都定义了特定的查询捕获策略。   
@@ -1957,7 +1960,7 @@ AUTO
 CUSTOM     
 可控制 QUERY_CAPTURE_POLICY 选项。
 
-QUERY_CAPTURE_MODE 的类型为 **nvarchar** 。
+QUERY_CAPTURE_MODE 的类型为 **nvarchar**。
 
 max_plans_per_query     
 定义为每个查询保留的最大计划数。 MAX_PLANS_PER_QUERY 的类型为 int。默认值为 200。
@@ -2086,7 +2089,7 @@ OFF
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，ANSI_PADDING 将始终为 ON，将该选项显式设置为 OFF 的任何应用程序都将产生错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 建议始终将 ANSI_PADDING 设置为 ON。 创建或操作计算列或索引视图的索引时，ANSI_PADDING 必须为 ON。
 
-当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char( _n_ ) 和 binary( _n_ ) 列填充到列长度。 当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char( _n_ ) 和 binary( _n_ ) 列填充到列长度 。
+当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度。 当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度 。
 
 连接级设置（使用 SET 语句设置）覆盖 ANSI_PADDING 的默认数据库级别设置。 默认情况下，ODBC 和 OLE DB 客户端发出连接级 SET 语句，将会话的 ANSI_PADDING 设置为 ON。 客户端在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时运行该语句。 有关详细信息，请参阅 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -2734,13 +2737,13 @@ OPERATION_MODE
 描述查询存储的操作模式。 有效值为 READ_ONLY 和 READ_WRITE。 在 READ_WRITE 模式下，查询存储将收集并保留查询计划和运行时执行统计信息。 在 READ_ONLY 模式下，可以从查询存储读取信息，但不会添加新信息。 如果已用尽查询存储的最大分配空间，查询存储的操作模式将更改为 READ_ONLY。
 
 CLEANUP_POLICY     
-描述查询存储的数据保留策略。 STALE_QUERY_THRESHOLD_DAYS 可确定查询信息在查询存储中保留的天数。 STALE_QUERY_THRESHOLD_DAYS 的类型为 **bigint** 。 默认值为 30。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 7 天。
+描述查询存储的数据保留策略。 STALE_QUERY_THRESHOLD_DAYS 可确定查询信息在查询存储中保留的天数。 STALE_QUERY_THRESHOLD_DAYS 的类型为 **bigint**。 默认值为 30。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 7 天。
 
 DATA_FLUSH_INTERVAL_SECONDS     
-确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 通过使用 DATA_FLUSH_INTERVAL_SECONDS 参数，配置此异步传输发生的频率。 DATA_FLUSH_INTERVAL_SECONDS 的类型为 **bigint** 。 默认值为 900（15 分钟）。
+确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 通过使用 DATA_FLUSH_INTERVAL_SECONDS 参数，配置此异步传输发生的频率。 DATA_FLUSH_INTERVAL_SECONDS 的类型为 **bigint**。 默认值为 900（15 分钟）。
 
 MAX_STORAGE_SIZE_MB     
-确定分配给查询存储的空间。 MAX_STORAGE_SIZE_MB 的类型为 **bigint** 。 默认值为 100 MB。
+确定分配给查询存储的空间。 MAX_STORAGE_SIZE_MB 的类型为 **bigint**。 默认值为 100 MB。
 
 > [!NOTE]
 > 没有严格执行 `MAX_STORAGE_SIZE_MB` 限制。 仅当查询存储将数据写入磁盘时才检查存储大小。 此间隔由 `DATA_FLUSH_INTERVAL_SECONDS` 选项或 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查询存储对话框选项“数据刷新时间间隔”设置。 间隔时间默认值为 900 秒（或 15 分钟）。
@@ -2763,7 +2766,7 @@ OFF
 AUTO     
 AUTO 当磁盘上的大小达到 max_storage_size_mb 的 90% 时，将自动激活基于大小的清除。 基于大小的清除首先会删除成本最低和最旧的查询。 它在达到 **max_storage_size_mb** 的大约 80% 时停止。 这是默认的配置值。
 
-SIZE_BASED_CLEANUP_MODE 的类型为 **nvarchar** 。
+SIZE_BASED_CLEANUP_MODE 的类型为 **nvarchar**。
 
 QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 指定当前处于活动状态的查询捕获模式。
@@ -2777,7 +2780,7 @@ AUTO
 无     
 停止捕获新查询。 查询存储将继续为已经捕获的查询收集编译和运行时统计信息。 请谨慎使用此配置，因为你可能会错过捕获重要的查询。
 
-QUERY_CAPTURE_MODE 的类型为 **nvarchar** 。
+QUERY_CAPTURE_MODE 的类型为 **nvarchar**。
 
 max_plans_per_query     
 一个整数，表示为每个查询保留的最大计划数。 MAX_PLANS_PER_QUERY 的类型为 int。默认值为 200。
@@ -2907,7 +2910,7 @@ OFF
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，ANSI_PADDING 将始终为 ON，将该选项显式设置为 OFF 的任何应用程序都将产生错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 建议始终将 ANSI_PADDING 设置为 ON。 创建或操作计算列或索引视图的索引时，ANSI_PADDING 必须为 ON。
 
-当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char( _n_ ) 和 binary( _n_ ) 列填充到列长度。 当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char( _n_ ) 和 binary( _n_ ) 列填充到列长度 。
+当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度。 当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度 。
 
   连接级设置（使用 SET 语句设置）覆盖 ANSI_PADDING 的默认数据库级别设置。 默认情况下，ODBC 和 OLE DB 客户端发出连接级 SET 语句，将会话的 ANSI_PADDING 设置为 ON。 客户端在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时运行该语句。 有关详细信息，请参阅 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -3294,7 +3297,7 @@ OFF
 > 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，必须在用户数据库中执行 `ALTER DATABASE SET QUERY_STORE`。 不支持从另一个数据仓库实例中执行该语句。
 
 **<result_set_caching_option> ::=**      
-**适用对象** ：Azure Synapse Analytics  
+**适用对象**：Azure Synapse Analytics  
 
 控制查询结果是否缓存在数据库中。
 
@@ -3334,7 +3337,7 @@ WHERE request_id = <'Your_Query_Request_ID'>
 要设置 RESULT_SET_CACHING 选项，用户需要服务器级别主体登录名（在预配过程中创建的登录名）或者成为 `dbmanager` 数据库角色的成员。  
 
 **<snapshot_option> ::=**      
-**适用对象** ：Azure Synapse Analytics
+**适用对象**：Azure Synapse Analytics
 
 控制数据库的事务隔离级别。
 

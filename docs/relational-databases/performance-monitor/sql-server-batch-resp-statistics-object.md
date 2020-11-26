@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b28b0d8af863c21f4764f5c7126fca20b18c1ab1
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 155ff6d21fdb0a40e042463b809c1ed14bbe70df
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458144"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983157"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, Batch Resp Statistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "86458144"
   
 |项|说明|  
 |----------|-----------------|  
-|**CPU Time:Requests**|CPU 在请求上花费的时间。|  
+|**CPU Time:Requests**|根据 CPU 时间得出的请求数。|  
 |**CPU Time:Total(ms)**|CPU 在批处理上花费的总时间。|  
-|**Elapsed Time:Requests**|请求的占用时间。|  
+|**Elapsed Time:Requests**|根据占用时间得出的请求数。|  
 |**Elapsed Time:Total(ms)**|批处理的占用时间。|  
 
 ## <a name="see-also"></a>另请参阅
