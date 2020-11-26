@@ -10,14 +10,14 @@ helpviewer_keywords:
 - upgrading failover clusters
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 20fce8623266a733bb777b0cd3153ad593cfded0
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8077a17676d38937d82241c2e58b556bd322f8a2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988056"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120983"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升级在 Windows Server 2008/2008 R2/2012 群集上运行的 SQL Server 实例
 

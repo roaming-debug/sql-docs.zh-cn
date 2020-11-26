@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dcadc3152a98ad1477d702bef8989d9a5e33543f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 459a40bdd51f1762e81bf17a362d1941ee7b01be
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899618"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120896"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 安装中的新增功能
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

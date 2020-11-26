@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 8492b1fb7b7270fb273afdd74ad12ad44b352f95
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 678775f19cee303b4c1bb34320ca9f7fd7030e97
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988319"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127635"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>配置 FailureConditionLevel 属性设置
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

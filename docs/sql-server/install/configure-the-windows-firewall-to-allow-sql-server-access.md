@@ -21,14 +21,14 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1459c50d87f2f7ccc58e20bd7e21d27ace700f66
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497699"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120850"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "91497699"
   
 -   **netsh**  
   
-     管理员可以在命令提示符下使用 **netsh.exe** 工具配置和监视基于 Windows 的计算机，也可以使用批处理文件执行此操作 **。** 通过使用 **netsh** 工具，可以将输入的上下文命令定向到相应帮助器，然后由帮助器执行此命令。 帮助器是一个动态链接库 (.dll) 文件，它通过对一种或多种服务、实用工具或协议提供配置、监视和支持来扩展 **netsh** 工具的功能。 所有支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的操作系统都具有防火墙帮助器。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 也具有称作 **advfirewall**的高级防火墙帮助器。 本文不讨论有关使用 **netsh** 的详细信息。 不过，所述配置选项中的许多选项都可以通过使用 **netsh**加以配置。 例如，在命令提示符下运行以下脚本，以打开 TCP 端口 1433：  
+     管理员可以在命令提示符下使用 **netsh.exe** 工具配置和监视基于 Windows 的计算机，也可以使用批处理文件执行此操作 **。** 通过使用 **netsh** 工具，可以将输入的上下文命令定向到相应帮助器，然后由帮助器执行此命令。 帮助器是一个动态链接库 (.dll) 文件，它通过对一种或多种服务、实用工具或协议提供配置、监视和支持来扩展 **netsh** 工具的功能。 所有支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的操作系统都具有防火墙帮助器。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 也具有称作 **advfirewall** 的高级防火墙帮助器。 本文不讨论有关使用 **netsh** 的详细信息。 不过，所述配置选项中的许多选项都可以通过使用 **netsh** 加以配置。 例如，在命令提示符下运行以下脚本，以打开 TCP 端口 1433：  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -88,7 +88,7 @@ ms.locfileid: "91497699"
     netsh advfirewall firewall add rule name = SQLPort dir = in protocol = tcp action = allow localport = 1433 remoteip = localsubnet profile = DOMAIN  
     ```  
   
-     有关 **netsh**的详细信息，请参阅以下链接：  
+     有关 **netsh** 的详细信息，请参阅以下链接：  
   
     -   [Netsh 命令语法、上下文和格式](/windows-server/networking/technologies/netsh/netsh-contexts)    
     -   [如何使用“netsh advfirewall firewall”上下文而非“netsh firewall”上下文控制 Windows Server 2008 和 Windows Vista 中的 Windows 防火墙行为](https://support.microsoft.com/kb/947709)    

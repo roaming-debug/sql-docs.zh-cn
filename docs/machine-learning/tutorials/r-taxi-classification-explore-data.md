@@ -11,10 +11,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
 ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92412533"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R 教程：浏览并可视化数据
@@ -150,7 +150,7 @@ ms.locfileid: "92412533"
 
    在每个提示符下按 ENTER 以接受默认设置，以下更改除外：
 
-   + 对于 **prefix-length of field plot** ，请键入 0。
+   + 对于 **prefix-length of field plot**，请键入 0。
   
    + 如果想要保存输出参数供以后重复使用，则键入 **Y** 。
   

@@ -43,14 +43,14 @@ helpviewer_keywords:
 - disk space [SQL Server]
 - localized SQL Server versions
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
-ms.author: mikeray
-author: MikeRayMSFT
-ms.openlocfilehash: 39991d0c69efe81bae92bb1de2d9ee9221245bf4
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.author: chadam
+author: cawrites
+ms.openlocfilehash: a2fb4a36b5ef11a67f9896584ed7fb101d4a042e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988060"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127529"
 ---
 # <a name="sql-server-2016-and-2017-hardware-and-software-requirements"></a>SQL Server 2016 和 2017：硬件和软件要求
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

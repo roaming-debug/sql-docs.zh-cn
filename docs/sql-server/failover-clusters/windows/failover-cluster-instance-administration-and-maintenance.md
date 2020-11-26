@@ -21,14 +21,14 @@ helpviewer_keywords:
 - removing nodes
 - virtual servers [SQL Server], adding nodes
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: da021bee317997233c7e7370e00eb0f5c8444844
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8a3179c26e9eb6bae777641f1a7e39744f54dba5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117245"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127625"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>故障转移群集实例管理和维护
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

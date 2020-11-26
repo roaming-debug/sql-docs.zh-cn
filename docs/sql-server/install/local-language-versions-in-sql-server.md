@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cfeaf90e3765b108c66cd86fc184b9fcdef8a029
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4731dbd80cfefbb3f151c8f749127e37e869e8a3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894322"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120903"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的本地语言版本
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85894322"
   
 2.  在 Control Panel 中，打开 **Regional and Language Options**。  
   
-3.  在 **Languages** 选项卡上，从列表中为 **Language used in menus and dialogs**选择一个值。  
+3.  在 **Languages** 选项卡上，从列表中为 **Language used in menus and dialogs** 选择一个值。  
   
      此设置将影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的用户界面语言，所以它必须与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地化版本匹配。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85894322"
   
 2.  在 Control Panel 中，打开 **Regional and Language Options**。  
   
-3.  在 **Regional Options** 选项卡上，从列表中为 **Select an item to match its preferences**选择一个值。  
+3.  在 **Regional Options** 选项卡上，从列表中为 **Select an item to match its preferences** 选择一个值。  
   
      此设置将影响特定于区域性的数据格式。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "85894322"
   
 2.  在 Control Panel 中，打开 **Regional and Language Options**。  
   
-3.  在“高级” **** 选项卡上，从列表中为“选择一种语言来匹配要使用的非 Unicode 程序的语言版本” **** 选择一个值。  
+3.  在“高级”  选项卡上，从列表中为“选择一种语言来匹配要使用的非 Unicode 程序的语言版本” 选择一个值。  
   
      此设置将使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装选择最佳默认排序规则。  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 195b796514be6ac86de1b997d88de1b6eee44394
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3f829ca9f0acb82089251c772f80f47395fa32e3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117031"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127682"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>自动页修复（可用性组：数据库镜像）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

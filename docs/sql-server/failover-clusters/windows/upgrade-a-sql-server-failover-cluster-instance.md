@@ -12,14 +12,14 @@ helpviewer_keywords:
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c06446f14fd2f316f297b675cc1b96efc7801ba1
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cad44bde76e3915aeb5f99d8eeb415d89b02359e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988293"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127585"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>升级故障转移群集实例 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "91988293"
   
 13. 在升级操作开始之前，系统配置检查器将运行多组规则来针对您指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能验证您的计算机配置。  
   
-14. “群集升级报告”页显示故障转移群集实例中的节点列表和每个节点上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组件的实例版本信息。 它显示数据库脚本状态和复制脚本状态。 此外，还会显示有关单击 **“下一步”** 时会发生的情况的信息性消息。 根据已升级的故障转移群集节点数和节点总数，安装程序会显示你单击“下一步” **** 时发生的故障转移行为。 如果您尚未安装必备组件，还会就潜在的不必要停机时间向您发出警告。   
+14. “群集升级报告”页显示故障转移群集实例中的节点列表和每个节点上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组件的实例版本信息。 它显示数据库脚本状态和复制脚本状态。 此外，还会显示有关单击 **“下一步”** 时会发生的情况的信息性消息。 根据已升级的故障转移群集节点数和节点总数，安装程序会显示你单击“下一步” 时发生的故障转移行为。 如果您尚未安装必备组件，还会就潜在的不必要停机时间向您发出警告。   
   
 15. “准备升级”页显示您在安装过程中指定的安装选项的树视图。 若要继续，请单击 **“升级”** 。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将首先安装所选功能的必备组件，然后安装所选功能。  
   

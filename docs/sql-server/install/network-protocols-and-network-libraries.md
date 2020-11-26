@@ -19,14 +19,14 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bc3f56fe60fdab32a41e61c878b1a3988e265a28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5fafee4f77a665f9409f5b7b6d1a4359765ed3ba
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880454"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127509"
 ---
 # <a name="network-protocols-and-network-libraries"></a>网络协议和网络库
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85880454"
   
 #### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>在可通过 Internet 访问的服务器上禁用 SMB  
   
--   在本地连接属性中，使用“传播控制协议/Internet 协议 (TCP/IP) 属性”**** 对话框删除“Microsoft 网络的文件和打印共享”**** 和“Microsoft 网络客户端”****。  
+-   在本地连接属性中，使用“传播控制协议/Internet 协议 (TCP/IP) 属性”对话框删除“Microsoft 网络的文件和打印共享”和“Microsoft 网络客户端”。  
   
 ## <a name="endpoints"></a>终结点  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接引入了一个新概念；在服务器端用 [!INCLUDE[tsql](../../includes/tsql-md.md)]*终结点*。 可以对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端点授予、撤消和拒绝权限。 默认情况下，所有用户都具备访问端点的权限，除非 sysadmin 组的成员或端点所有者拒绝或撤消了此权限。 GRANT、REVOKE 和 DENY ENDPOINT 语法使用终结点 ID，管理员必须从终结点的目录视图中获取此 ID。  

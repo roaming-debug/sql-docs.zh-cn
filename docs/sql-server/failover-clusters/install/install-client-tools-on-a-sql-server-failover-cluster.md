@@ -8,14 +8,14 @@ ms.prod: sql
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: fd0050d606d27f27285e7ba1376dd32f13e40cae
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 467014114a17d6cafacdaf44f1f7a2c60042721a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988399"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127665"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集上安装客户端工具
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

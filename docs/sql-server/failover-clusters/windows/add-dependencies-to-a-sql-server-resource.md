@@ -14,14 +14,14 @@ helpviewer_keywords:
 - clusters [SQL Server], dependencies
 - dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 402fd3d816145c182520317ab61e65493bfb4149
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 659d9f1b2cb7e8d7d771b260cbeaf6db1a6e1c13
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117226"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127605"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>向 SQL Server 资源添加依赖项
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

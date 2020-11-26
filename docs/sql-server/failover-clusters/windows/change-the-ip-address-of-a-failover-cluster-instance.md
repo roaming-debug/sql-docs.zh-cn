@@ -13,14 +13,14 @@ helpviewer_keywords:
 - IP addresses [SQL Server]
 - clusters [SQL Server], IP addresses
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 8258f67e86d8eb4f1bc90de01aacfae2e80fd100
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: fce7ec31d8cc3ff8e3c9b0cbbd4a25039c998419
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115359"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127698"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>更改故障转移群集实例的 IP 地址
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3144f53bed98c5f5ec92d26a1e72254b6adda25e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d900bbc6b8183e4a903886878cf61ce68ac39573
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895141"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127524"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票配置 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,12 +65,12 @@ ms.locfileid: "85895141"
   
  但是，如果其他子网上的节点在仲裁投票中被视为不可响应的，但它实际上处于联机状态并且正常运行，则很可能是因为子网之间网络通信失败。  根据群集拓扑结构、仲裁模式和故障转移策略配置，该网络通信失败可能会有效地创建超过一组（或一个子组）的投票节点。  
   
- 当多个子组的投票节点能够建立自己的仲裁时，这称作** 分区情况。  在这种情况下，单独仲裁中的节点可能具有不同的行为方式，并有互相冲突。  
+ 当多个子组的投票节点能够建立自己的仲裁时，这称作分区情况。  在这种情况下，单独仲裁中的节点可能具有不同的行为方式，并有互相冲突。  
   
 > [!NOTE]  
 >  此裂脑情况仅在系统管理员手动执行强制的仲裁操作时或者在非常罕见的情况（如强制故障转移）时才可能出现；并且显式细分仲裁节点组。  
   
- 为了简化仲裁配置和增加正常运行时间，可能需要调整每个节点的“NodeWeight”设置，以便为进行仲裁而计算票数时不包括该节点的投票**。  
+ 为了简化仲裁配置和增加正常运行时间，可能需要调整每个节点的“NodeWeight”设置，以便为进行仲裁而计算票数时不包括该节点的投票。  
   
 > [!IMPORTANT]  
 >  为了使用 NodeWeight 设置，必须将以下修补程序应用到 WSFC 群集中的所有服务器：  

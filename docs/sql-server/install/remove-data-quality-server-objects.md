@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4f19dc1e34ea35509a8894400ca298909e3b1f96
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3f3fd7d71c4c26de0aca445eaa49896c24a73d57
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883738"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127501"
 ---
 # <a name="remove-data-quality-server-objects"></a>删除数据质量服务器对象
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

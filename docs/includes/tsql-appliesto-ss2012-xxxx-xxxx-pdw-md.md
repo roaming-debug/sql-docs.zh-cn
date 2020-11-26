@@ -5,11 +5,11 @@ ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
 ms.openlocfilehash: 634e66c44d278c9fdc0cf60fa0b78ba495097c31
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92438848"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126234"
 ---
 <Token>适用于：:::image type="icon" source="media/yes-icon.png":::SQL Server :::image type="icon" source="media/no-icon.png":::Azure SQL 数据库 :::image type="icon" source="media/no-icon.png":::Azure Synapse Analytics (SQL DW) :::image type="icon" source="media/yes-icon.png":::Parallel 数据仓库 </Token> 
 

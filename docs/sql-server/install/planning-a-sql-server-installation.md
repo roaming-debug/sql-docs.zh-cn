@@ -10,14 +10,14 @@ ms.topic: quickstart
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0197c453f2eaeda872eac7ec639fdb56eb7545ce
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: dbacb44550622f3c61a3cd58281619bb74652af7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986957"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120816"
 ---
 # <a name="planning-a-sql-server-installation"></a>计划 SQL Server 安装
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 robots: noindex,nofollow
-ms.openlocfilehash: 040136a7867d2a56e8ec97f183227c6b8d7268f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54030568192560200dd365bbffaedc33df1959a6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730762"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127480"
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
 
@@ -86,7 +86,7 @@ ms.locfileid: "85730762"
 **实例 ID**：默认情况下，实例名称用作实例 ID。 此 ID 用于标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的安装目录和注册表项。 对于默认实例和命名实例，行为是相同的。 对于默认实例，实例名称和实例 ID 为 MSSQLSERVER。 若要使用非默认实例 ID，请在“实例 ID”字段中指定它。  
   
 > [!IMPORTANT]  
->  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep，“实例配置”**** 页上显示的实例 ID 是，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 过程的准备映像步骤中指定的实例 ID。 无法在完成映像步骤中指定其他实例 ID。
+>  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep，“实例配置”页上显示的实例 ID 是，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 过程的准备映像步骤中指定的实例 ID。 无法在完成映像步骤中指定其他实例 ID。
 
 > [!NOTE]  
 >  不支持以下划线 (_) 开头或包含数字符号 (#) 或美元符号 ($) 的实例 ID。  
@@ -134,10 +134,10 @@ ms.locfileid: "85730762"
   
 |说明|默认目录|建议|  
 |-----------------|-----------------------|---------------------|  
-|**数据根目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |确保通过限制权限对 \Program files\Microsoft SQL Server\ 文件夹进行保护。 在许多配置中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 性能取决于数据目录所在的存储区的性能。 请将此目录置于已附加到系统的性能最高存储中。 对于故障转移群集安装，应确保数据目录位于共享磁盘上。|  
-|**日志文件目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |此目录用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件，其中包括 FlightRecorder 日志。 如果要延长网络流量记录器持续时间，请确保该日志目录有足够的空间。|  
-|**临时目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\ |请将临时目录置于高性能存储子系统中。|  
-|**备份目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |此目录用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 默认备份文件。 对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装，此目录也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务缓存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据文件的位置。<br /><br /> 请确保适当权限已设置以防数据丢失，并确保 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的用户组拥有足够的权限，可以对备份目录执行写入操作。 不支持对备份目录使用映射驱动器。|  
+|**数据根目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Data\ |确保通过限制权限对 \Program files\Microsoft SQL Server\ 文件夹进行保护。 在许多配置中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 性能取决于数据目录所在的存储区的性能。 请将此目录置于已附加到系统的性能最高存储中。 对于故障转移群集安装，应确保数据目录位于共享磁盘上。|  
+|**日志文件目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Log\ |此目录用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件，其中包括 FlightRecorder 日志。 如果要延长网络流量记录器持续时间，请确保该日志目录有足够的空间。|  
+|**临时目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Temp\ |请将临时目录置于高性能存储子系统中。|  
+|**备份目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Backup\ |此目录用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 默认备份文件。 对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装，此目录也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务缓存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据文件的位置。<br /><br /> 请确保适当权限已设置以防数据丢失，并确保 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的用户组拥有足够的权限，可以对备份目录执行写入操作。 不支持对备份目录使用映射驱动器。|  
   
 ### <a name="considerations"></a>注意事项  
   
@@ -167,10 +167,10 @@ ms.locfileid: "85730762"
   
 |说明|默认目录|建议|  
 |-----------------|-----------------------|---------------------|  
-|**数据根目录** |\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |确保通过限制权限对 \Program files\Microsoft SQL Server\ 文件夹进行保护。 在许多配置中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 性能取决于数据目录所在的存储区的性能。 请将此目录置于已附加到系统的性能最高存储中。 对于故障转移群集安装，应确保数据目录位于共享磁盘上。|  
-|**日志文件目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |此目录用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件，其中包括 FlightRecorder 日志。 如果延长外部测试版记录器持续时间，请确保日志目录有足够空间。|  
-|**临时目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |请将临时目录置于高性能存储子系统中。|  
-|**备份目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |此目录用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 默认备份文件。 对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装，这也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务缓存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据文件的位置。<br /><br /> 确保设置合适的权限以防止数据丢失，并确保 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的用户组具有写入备份目录的足够权限。 不支持对备份目录使用映射驱动器。|  
+|**数据根目录** |\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Data |确保通过限制权限对 \Program files\Microsoft SQL Server\ 文件夹进行保护。 在许多配置中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 性能取决于数据目录所在的存储区的性能。 请将此目录置于已附加到系统的性能最高存储中。 对于故障转移群集安装，应确保数据目录位于共享磁盘上。|  
+|**日志文件目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Log |此目录用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件，其中包括 FlightRecorder 日志。 如果延长外部测试版记录器持续时间，请确保日志目录有足够空间。|  
+|**临时目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Temp |请将临时目录置于高性能存储子系统中。|  
+|**备份目录**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Backup |此目录用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 默认备份文件。 对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装，这也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务缓存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据文件的位置。<br /><br /> 确保设置合适的权限以防止数据丢失，并确保 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的用户组具有写入备份目录的足够权限。 不支持对备份目录使用映射驱动器。|  
   
 #### <a name="considerations"></a>注意事项
   
@@ -201,7 +201,7 @@ ms.locfileid: "85730762"
 
 在旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，BUILTIN\Administrators 组被预配为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]中的登录名，本地 Administrators 组的成员可以使用自己的管理员凭据登录。 不过，使用提升的权限并不是最佳做法。
 
-在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，BUILTIN\Administrators 组未被预配为登录名。 请务必为每个管理用户都创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，并在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 新实例的过程中将相应登录名添加到 sysadmin**** 固定服务器角色中。 对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业（包括复制代理作业）的 Windows 帐户执行相同操作。  
+在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，BUILTIN\Administrators 组未被预配为登录名。 请务必为每个管理用户都创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，并在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 新实例的过程中将相应登录名添加到 sysadmin 固定服务器角色中。 对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业（包括复制代理作业）的 Windows 帐户执行相同操作。  
   
 ### <a name="options"></a>选项
 
@@ -212,7 +212,7 @@ ms.locfileid: "85730762"
 > [!IMPORTANT]  
 > 您在安装过程中必须为新安装显式设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员。 除非你完成这一步，否则安装程序不会允许你继续操作。
   
-**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员**：必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例指定至少一个 Windows 主体。 若要添加正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请选择“添加当前用户”按钮。 若要在系统管理员列表中添加或删除帐户，请先选择“添加”**** 或“删除”****，再编辑对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例拥有管理员权限的用户、组或计算机列表。  
+**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员**：必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例指定至少一个 Windows 主体。 若要添加正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请选择“添加当前用户”按钮。 若要在系统管理员列表中添加或删除帐户，请先选择“添加”或“删除”，再编辑对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例拥有管理员权限的用户、组或计算机列表。  
   
 编辑完列表后，选择“确定”，然后验证此配置对话框中的管理员列表。 如果列表是完整的，请单击“下一步”。  
   
@@ -239,7 +239,7 @@ ms.locfileid: "85730762"
 **输入密码**：输入并确认系统管理员 (sa) 登录名。 密码是抵御入侵者的第一道防线，因此设置强密码对于系统安全是绝对必要的。 切勿设置空白或弱 sa 密码。  
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 密码可包含 1 到 128 个字符，包括字母、符号和数字的任意组合。 如果选择混合模式身份验证，必须先输入强 sa**** 密码，然后才能继续转到安装向导的下一页。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 密码可包含 1 到 128 个字符，包括字母、符号和数字的任意组合。 如果选择混合模式身份验证，必须先输入强 sa 密码，然后才能继续转到安装向导的下一页。  
   
 #### <a name="strong-password-guidelines"></a>强密码指南
   
@@ -289,9 +289,9 @@ ms.locfileid: "85730762"
 |说明|受支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**数据根目录**|本地磁盘、SMB 文件服务器、共享存储* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置访问控制列表 (ACL)，并在配置过程中中断继承。|  
-|**用户数据库目录**|本地磁盘、SMB 文件服务器、共享存储*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |用户数据目录的最佳实践取决于工作量和性能要求。|  
-|**用户数据库日志目录**|本地磁盘、SMB 文件服务器、共享存储*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|确保日志目录有足够的空间。|  
-|**备份目录**|本地磁盘、SMB 文件服务器、共享存储*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|设置合适的权限以防止数据丢失，并确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的用户帐户具有写入备份目录的足够权限。 不支持对备份目录使用映射驱动器。|  
+|**用户数据库目录**|本地磁盘、SMB 文件服务器、共享存储*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data |用户数据目录的最佳实践取决于工作量和性能要求。|  
+|**用户数据库日志目录**|本地磁盘、SMB 文件服务器、共享存储*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data|确保日志目录有足够的空间。|  
+|**备份目录**|本地磁盘、SMB 文件服务器、共享存储*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Backup|设置合适的权限以防止数据丢失，并确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的用户帐户具有写入备份目录的足够权限。 不支持对备份目录使用映射驱动器。|  
   
 \*尽管共享磁盘受支持，但不建议将共享磁盘用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立实例。  
   
@@ -302,9 +302,9 @@ ms.locfileid: "85730762"
 |说明|受支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**数据根目录**|共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> **提示**：如果你选择“群集磁盘选择”页上的“共享磁盘”，系统默认选择第一个共享磁盘。 如果未在“群集磁盘选择”页上进行任何选择，此字段默认为空白。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL，并在配置过程中中断继承。|  
-|**用户数据库目录**|共享存储、SMB 文件服务器|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果你选择“群集磁盘选择”页上的“共享磁盘”，系统默认选择第一个共享磁盘。 如果未在“群集磁盘选择”页上进行任何选择，此字段默认为空白。|用户数据目录的最佳实践取决于工作量和性能要求。|  
-|**用户数据库日志目录**|共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果你选择“群集磁盘选择”页上的“共享磁盘”，系统默认选择第一个共享磁盘。 如果未在“群集磁盘选择”页上进行任何选择，此字段默认为空白。|确保日志目录有足够的空间。|  
-|**备份目录**|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **提示**：如果你选择“群集磁盘选择”页上的“共享磁盘”，系统默认选择第一个共享磁盘。 如果未在“群集磁盘选择”页上进行任何选择，此字段默认为空白。|设置合适的权限以防止数据丢失，并确保 SQL Server 服务的用户帐户具有写入备份目录的足够权限。 不支持对备份目录使用映射驱动器。|  
+|**用户数据库目录**|共享存储、SMB 文件服务器|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果你选择“群集磁盘选择”页上的“共享磁盘”，系统默认选择第一个共享磁盘。 如果未在“群集磁盘选择”页上进行任何选择，此字段默认为空白。|用户数据目录的最佳实践取决于工作量和性能要求。|  
+|**用户数据库日志目录**|共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果你选择“群集磁盘选择”页上的“共享磁盘”，系统默认选择第一个共享磁盘。 如果未在“群集磁盘选择”页上进行任何选择，此字段默认为空白。|确保日志目录有足够的空间。|  
+|**备份目录**|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **提示**：如果你选择“群集磁盘选择”页上的“共享磁盘”，系统默认选择第一个共享磁盘。 如果未在“群集磁盘选择”页上进行任何选择，此字段默认为空白。|设置合适的权限以防止数据丢失，并确保 SQL Server 服务的用户帐户具有写入备份目录的足够权限。 不支持对备份目录使用映射驱动器。|  
   
 ### <a name="security-considerations"></a>安全注意事项
   
@@ -345,8 +345,8 @@ ms.locfileid: "85730762"
   
 |说明|受支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**数据目录**|本地磁盘、SMB 文件服务器、共享存储* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL，并在配置过程中中断继承。<br /><br /> tempdb 目录的最佳做法取决于工作负荷和性能需求。 若要跨多个卷分散数据文件，请指定多个文件夹或驱动器。|  
-|**日志目录**|本地磁盘、SMB 文件服务器、共享存储*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|确保日志目录有足够的空间。|  
+|**数据目录**|本地磁盘、SMB 文件服务器、共享存储* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL，并在配置过程中中断继承。<br /><br /> tempdb 目录的最佳做法取决于工作负荷和性能需求。 若要跨多个卷分散数据文件，请指定多个文件夹或驱动器。|  
+|**日志目录**|本地磁盘、SMB 文件服务器、共享存储*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data|确保日志目录有足够的空间。|  
   
 \*尽管共享磁盘受支持，但不建议将共享磁盘用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立实例。  
   
@@ -356,16 +356,16 @@ ms.locfileid: "85730762"
   
 |说明|受支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**tempdb 数据目录**|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **提示**：如果你选择“群集磁盘选择”页上的“共享磁盘”，系统默认选择第一个共享磁盘。 如果未在“群集磁盘选择”页上进行任何选择，此字段默认为空白。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL，并在配置过程中中断继承。<br /><br /> 请确保指定的一个或多个目录（如果指定了多个文件）对所有群集节点都有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，SQL Server 资源将无法联机。|  
-|**tempdb 日志目录**|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果你选择“群集磁盘选择”页上的“共享磁盘”，系统默认选择第一个共享磁盘。 如果未在“群集磁盘选择”页上进行任何选择，此字段默认为空白。|用户数据目录的最佳实践取决于工作量和性能要求。<br /><br /> 确保指定的目录对所有群集节点都有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，SQL Server 资源将无法联机。<br /><br /> 确保日志目录有足够的空间。|  
+|**tempdb 数据目录**|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\Data<br /><br /> **提示**：如果你选择“群集磁盘选择”页上的“共享磁盘”，系统默认选择第一个共享磁盘。 如果未在“群集磁盘选择”页上进行任何选择，此字段默认为空白。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL，并在配置过程中中断继承。<br /><br /> 请确保指定的一个或多个目录（如果指定了多个文件）对所有群集节点都有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，SQL Server 资源将无法联机。|  
+|**tempdb 日志目录**|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果你选择“群集磁盘选择”页上的“共享磁盘”，系统默认选择第一个共享磁盘。 如果未在“群集磁盘选择”页上进行任何选择，此字段默认为空白。|用户数据目录的最佳实践取决于工作量和性能要求。<br /><br /> 确保指定的目录对所有群集节点都有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，SQL Server 资源将无法联机。<br /><br /> 确保日志目录有足够的空间。|  
   
 ### <a name="ui-element-list"></a>UI 元素列表
 
 根据工作负荷和要求配置 **tempdb** 的设置。 下列设置适用于 **tempdb** 数据文件：  
   
-* “文件数” 是 **tempdb**的数据文件总数。 默认值是 8 和安装程序检测到的逻辑内核数中的较小值。 作为一般准则，如果逻辑处理器数小于或等于 8，则使用与逻辑处理器数相同的数据文件数。 如果逻辑处理器数大于 8，请指定 8 个数据文件。 如果存在争用，请以 4（逻辑处理器数上限）为倍数增加数据文件数，直到争用减少到可接受的水平，或请更改工作负荷或代码。
+* “文件数” 是 **tempdb** 的数据文件总数。 默认值是 8 和安装程序检测到的逻辑内核数中的较小值。 作为一般准则，如果逻辑处理器数小于或等于 8，则使用与逻辑处理器数相同的数据文件数。 如果逻辑处理器数大于 8，请指定 8 个数据文件。 如果存在争用，请以 4（逻辑处理器数上限）为倍数增加数据文件数，直到争用减少到可接受的水平，或请更改工作负荷或代码。
   
-* **初始大小(MB)** ：每个 tempdb 数据文件的初始大小（以 MB 为单位）。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的初始文件大小上限为 1024MB。 所有 **tempdb** 数据文件初始大小相同。 由于 tempdb**** 在 SQL Server 每次启动或进行故障转移时都会重新创建，因此请指定与工作负荷正常运行所需大小接近的大小。 若要在启动过程中进一步优化 tempdb 创建，请启用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
+* **初始大小(MB)** ：每个 tempdb 数据文件的初始大小（以 MB 为单位）。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的初始文件大小上限为 1024MB。 所有 **tempdb** 数据文件初始大小相同。 由于 tempdb 在 SQL Server 每次启动或进行故障转移时都会重新创建，因此请指定与工作负荷正常运行所需大小接近的大小。 若要在启动过程中进一步优化 tempdb 创建，请启用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
   
 * **总初始大小(MB)** ：所有 tempdb 数据文件的累积大小。  
   
@@ -380,7 +380,7 @@ ms.locfileid: "85730762"
   
 “tempdb 日志文件”是日志文件名。 此文件是自动创建的。 下列设置仅适用于 **tempdb** 日志文件：  
   
-* **初始大小 (MB)** 是 **tempdb** 日志文件的初始大小。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的初始文件大小上限为 1024MB。 由于 tempdb**** 在 SQL Server 每次启动或进行故障转移时都会重新创建，因此请指定与工作负荷正常运行所需大小接近的大小。 若要在启动过程中进一步优化 tempdb 创建，请启用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
+* **初始大小 (MB)** 是 **tempdb** 日志文件的初始大小。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的初始文件大小上限为 1024MB。 由于 tempdb 在 SQL Server 每次启动或进行故障转移时都会重新创建，因此请指定与工作负荷正常运行所需大小接近的大小。 若要在启动过程中进一步优化 tempdb 创建，请启用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
   
   > [!NOTE]
   > tempdb 使用最小日志记录。 无法备份 tempdb 日志文件。 它在 SQL Server 每次启动或群集实例进行故障转移时重新创建。
@@ -434,7 +434,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 “最大服务器内存”决定了 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将用于缓冲池和其他缓存的内存上限。 根据现有系统内存，默认值为 2,147,483,647MB，计算出的建议值遵循独立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的[服务器内存配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)中的内存配置准则。 若要详细了解“最大服务器内存”的影响，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)。
 
-如果在安装过程中跳过此页，使用的“最大服务器内存”默认值为 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 默认值 (2,147,483,647MB)。 选中“建议”**** 单选按钮后，即可在此页上手动配置这些设置，并在安装后修改这些设置。 有关详细信息，请参阅 [服务器内存配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。
+如果在安装过程中跳过此页，使用的“最大服务器内存”默认值为 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 默认值 (2,147,483,647MB)。 选中“建议”单选按钮后，即可在此页上手动配置这些设置，并在安装后修改这些设置。 有关详细信息，请参阅 [服务器内存配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。
 
 ### <a name="ui-element-list"></a>UI 元素列表
   

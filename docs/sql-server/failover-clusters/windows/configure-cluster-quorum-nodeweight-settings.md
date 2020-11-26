@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4b545caaefebdbcedf663790a37653305189cc5a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c422c1fe6b4b0810cc6e151eda6944fc6cc45b0f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988341"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121128"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>配置群集仲裁 NodeWeight 设置
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

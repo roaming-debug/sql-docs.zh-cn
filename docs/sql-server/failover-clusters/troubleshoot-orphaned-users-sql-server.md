@@ -17,15 +17,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 435cc59989b8a06ac651ccc93f73bdfebec3946d
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 6356874ac61790fe27730961e0429db92760bfce
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006256"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121249"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户疑难解答 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,7 @@ WITH PASSWORD = '<use_a_strong_password_here>',
 SID = <SID>;  
 ```  
   
- 若要将孤立的用户映射到 **master**数据库中已存在的登录名，请在用户数据库中执行 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 语句，并指定登录名。  
+ 若要将孤立的用户映射到 **master** 数据库中已存在的登录名，请在用户数据库中执行 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 语句，并指定登录名。  
   
 ```  
 ALTER USER <user_name> WITH Login = <login_name>;  

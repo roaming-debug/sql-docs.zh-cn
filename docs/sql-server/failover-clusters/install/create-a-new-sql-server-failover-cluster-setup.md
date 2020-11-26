@@ -15,14 +15,14 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f505d4559529661738efc8504931c7f96ad8933f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0f99d649dfda393c5371039976321c4bf54be684
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114670"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121238"
 ---
 # <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>创建新的 AlwaysOn 故障转移群集实例（安装程序）
 
@@ -89,7 +89,7 @@ ms.locfileid: "91114670"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质，然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请浏览到共享中的根文件夹，然后双击 Setup.exe。 有关如何安装必备组件的详细信息，请参阅 [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)。  
   
-2.  安装向导启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的新群集安装，请单击安装页上的**新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集安装**。  
+2.  安装向导启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的新群集安装，请单击安装页上的 **新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集安装**。  
   
 3.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "91114670"
     >  如果指定非默认的安装目录，请确保安装文件夹对于此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例是唯一的。 此对话框中的任何目录都不应与其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的目录共享。 对于故障转移群集实例，数据目录应位于共享群集磁盘上。  
   
     > [!NOTE]  
-    >  若要将服务器消息块 (SMB) 文件服务器指定为数据目录，请将“默认数据根目录”**** 指定为 \\\Servername\ShareName\\... 格式的文件共享  
+    >  若要将服务器消息块 (SMB) 文件服务器指定为数据目录，请将“默认数据根目录”指定为 \\\Servername\ShareName\\... 格式的文件共享  
    
 21. 使用“ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置 - FILESTREAM”页对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例启用 FILESTREAM。 单击“下一步”以继续。  
   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - 32-bit edition [SQL Server]
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a2f9c1f0a6f73d4f2e2dfa5556548d3e1d5d9481
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3177050a3d7eaae65099e441792801292df11ec6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988084"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127473"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>处理多个 SQL Server 版本和实例
 

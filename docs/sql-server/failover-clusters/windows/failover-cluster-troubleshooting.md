@@ -12,14 +12,14 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 75090ce180ff6e71796c9363e39768f09ec3f91b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988285"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121097"
 ---
 # <a name="failover-cluster-troubleshooting"></a>故障转移群集疑难解答
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91988285"
   
 #### <a name="how-to-revalidate-your-cluster"></a>如何重新验证群集  
   
-1.  在故障转移群集管理单元中，控制台树内，确保选定“故障转移群集管理”****，然后在“管理”**** 下面，单击“验证配置”****。  
+1.  在故障转移群集管理单元中，控制台树内，确保选定“故障转移群集管理”，然后在“管理”下面，单击“验证配置”。  
   
 2.  按照向导中的说明指定服务器和测试，然后运行这些测试。 在运行测试之后会显示 **“摘要”** 页。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "91988285"
   
 4.  若要查看可帮助你解释测试结果的帮助主题，请单击“关于群集验证测试的详细信息” 。  
   
- 若要在关闭向导后查看关于群集验证的帮助主题，在故障转移群集管理单元中，依次单击“帮助”****、“帮助主题”**** 和“内容”**** 选项卡，展开故障转移群集帮助的内容并单击“验证故障转移群集配置”****。  验证向导运行完毕后，“摘要报告”  会显示结果。 所有带绿色复选标记或者在某些情况下带黄色三角形标记（警告）的测试表示通过。 查看问题区域（红色的 X 或黄色的问号）时，在汇总测试结果的报表部分中，单击单个测试以查看详细信息。 任何红色的 X 标示的问题必须在疑难解答 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 问题之前解决。  
+ 若要在关闭向导后查看关于群集验证的帮助主题，在故障转移群集管理单元中，依次单击“帮助”、“帮助主题”和“内容”选项卡，展开故障转移群集帮助的内容并单击“验证故障转移群集配置”。  验证向导运行完毕后，“摘要报告”  会显示结果。 所有带绿色复选标记或者在某些情况下带黄色三角形标记（警告）的测试表示通过。 查看问题区域（红色的 X 或黄色的问号）时，在汇总测试结果的报表部分中，单击单个测试以查看详细信息。 任何红色的 X 标示的问题必须在疑难解答 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 问题之前解决。  
   
  **安装更新**  
   
@@ -129,9 +129,9 @@ ms.locfileid: "91988285"
   
 1.  使用群集管理器确定包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的组在哪个节点上运行。 对于本例，此节点是 **节点 A**。  
   
-2.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **在该计算机上启动**服务。 有关使用 **net start**的详细信息，请参阅 [手动启动 SQL Server](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)。  
+2.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **在该计算机上启动** 服务。 有关使用 **net start** 的详细信息，请参阅 [手动启动 SQL Server](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)。  
   
-3.  在**节点 A** 上启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server 配置管理器。查看服务器正在侦听的管道名称。 它应类似于 \\\\.\\$$\VIRTSQL\pipe\sql\query。  
+3.  在 **节点 A** 上启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server 配置管理器。查看服务器正在侦听的管道名称。 它应类似于 \\\\.\\$$\VIRTSQL\pipe\sql\query。  
   
 4.  在客户端计算机上，启动 SQL Server 配置管理器。  
   

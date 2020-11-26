@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 956efd3ff115383da4b719bac85fb7da03aac079
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7325581709a8004f1f2ee32fe4c4876429b4237e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883695"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127462"
 ---
 # <a name="uninstall-sql-server"></a>卸载 SQL Server 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

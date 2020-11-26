@@ -13,14 +13,14 @@ helpviewer_keywords:
 - uninstalling failover cluster instances
 - removing failover cluster instances
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3b523b792889c21a0b1d00ea3ab3ea3ac6fbf2aa
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3a5da3c50888975301c5d576c634381b5b2e5310
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988383"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121218"
 ---
 # <a name="remove-a-failover-cluster-instance-setup"></a>删除故障转移群集实例（安装程序）
 

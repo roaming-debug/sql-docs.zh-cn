@@ -14,14 +14,14 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8100d6f18803f891ac9ba5607185fdbac782660
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 16522114fb7e02517ec7385b6b7c73aa90b4b6b0
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332516"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127495"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>卸载现有 SQL Server 实例（安装程序）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "87332516"
 ## <a name="considerations"></a>注意事项
 
 - 若要卸载 SQL Server，你必须是拥有“作为服务登录”权限的本地管理员。 
-- 如果计算机具有所需的*最小*物理内存，请将页面文件的大小增至物理内存的两倍。 虚拟内存不足会导致无法完全删除 SQL Server。 
+- 如果计算机具有所需的 *最小* 物理内存，请将页面文件的大小增至物理内存的两倍。 虚拟内存不足会导致无法完全删除 SQL Server。 
 - 在具有多个 SQL Server 实例的系统上，仅在删除 SQL Server 的最后一个实例后，才会卸载 SQL Server Browser 服务。 可从“控制面板”的“程序和功能”中手动删除 SQL Server Browser 服务 。 
 - 卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会删除在安装过程期间添加的 tempdb 数据文件。 如果带有 tempdb_mssql_*.ndf 名称模式的文件存在于系统数据库目录中，它们会被删除。 
   
@@ -90,7 +90,7 @@ ms.locfileid: "87332516"
   
 1.  在 **“准备删除”** 页上查看要卸载的组件和功能的列表。 单击 **“删除”** 开始卸载  
  
-1. 刷新“应用和功能”窗口，以验证是否已成功删除 SQL Server 实例，并确定哪些 SQL Server 组件仍然存在（如有）****。 如果需要，也可以通过此窗口删除这些组件。 
+1. 刷新“应用和功能”窗口，以验证是否已成功删除 SQL Server 实例，并确定哪些 SQL Server 组件仍然存在（如有）。 如果需要，也可以通过此窗口删除这些组件。 
 
 # <a name="windows-2008---2012-r2"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
 
@@ -111,7 +111,7 @@ ms.locfileid: "87332516"
   
 1.  在 **“准备删除”** 页上查看要卸载的组件和功能的列表。 单击 **“删除”** 开始卸载  
  
-1. 刷新“程序和功能”窗口，以验证是否已成功删除 SQL Server 实例，并确定哪些 SQL Server 组件仍然存在（如有）****。 如果需要，也可以通过此窗口删除这些组件。 
+1. 刷新“程序和功能”窗口，以验证是否已成功删除 SQL Server 实例，并确定哪些 SQL Server 组件仍然存在（如有）。 如果需要，也可以通过此窗口删除这些组件。 
 
 ---
 

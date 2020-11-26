@@ -13,14 +13,14 @@ helpviewer_keywords:
 - virtual servers [SQL Server], failover clustering
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: bbea3e2cf7d8a8eaf3ab62b20e0dd0472053def4
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9e49231237c7a62bb67adcbc72f0bee19d5fb26c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988363"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127656"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重命名 SQL Server 故障转移群集实例
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

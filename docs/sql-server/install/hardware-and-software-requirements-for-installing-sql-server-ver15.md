@@ -43,14 +43,14 @@ helpviewer_keywords:
 - disk space [SQL Server]
 - localized SQL Server versions
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
-ms.author: mikeray
-author: MikeRayMSFT
-ms.openlocfilehash: 89088af9d3758a710db5bd1ee313835087bad832
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.author: chadam
+author: cawrites
+ms.openlocfilehash: 460de4547ababdaac8dff28ff71c53520726ad53
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987636"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121115"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019：硬件和软件要求
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
