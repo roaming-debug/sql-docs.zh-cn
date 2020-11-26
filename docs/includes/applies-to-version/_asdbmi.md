@@ -5,11 +5,11 @@ ms.topic: include
 ms.date: 06/11/2020
 ms.author: mikeray
 ms.openlocfilehash: caa1ef5bf19fbc5fe49d6454f8a530955b849236
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "85625419"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96115923"
 ---
 <Token>![是](../media/yes-icon.png)[!INCLUDE [ssazuremi_md](../ssazuremi_md.md)]</Token>
 
