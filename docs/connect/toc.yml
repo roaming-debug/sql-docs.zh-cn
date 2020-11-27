@@ -40,6 +40,39 @@
           href: ../connect/ado-net/appcontext-switches.md
         - name: 查找其他信息
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: ADO.NET 中的数据类型映射
+      href: ../connect/ado-net/data-type-mappings-ado-net.md
+      items:
+        - name: SQL Server 数据类型映射
+          href: ../connect/ado-net/sql-server-data-type-mappings.md
+        - name: 浮点数
+          href: ../connect/ado-net/floating-point-numbers.md
+    - name: 在 ADO.NET 中检索和修改数据
+      href: ../connect/ado-net/retrieving-modifying-data.md
+      items:
+        - name: 连接到数据源
+          href: ../connect/ado-net/connecting-to-data-source.md
+          items:
+            - name: 建立连接
+              href: ../connect/ado-net/establishing-connection.md
+            - name: 连接事件
+              href: ../connect/ado-net/connection-events.md
+        - name: 连接字符串
+          href: ../connect/ado-net/connection-strings.md
+          items:
+            - name: 连接字符串生成器
+              href: ../connect/ado-net/connection-string-builders.md
+            - name: 连接字符串和配置文件
+              href: ../connect/ado-net/connection-strings-and-configuration-files.md
+            - name: 连接字符串语法
+              href: ../connect/ado-net/connection-string-syntax.md
+            - name: 保护连接信息
+              href: ../connect/ado-net/protecting-connection-information.md
+        - name: 连接池
+          href: ../connect/ado-net/connection-pooling.md
+          items:
+            - name: SQL Server 连接池 (ADO.NET)
+              href: ../connect/ado-net/sql-server-connection-pooling.md
     - name: SQL Server 和 ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
