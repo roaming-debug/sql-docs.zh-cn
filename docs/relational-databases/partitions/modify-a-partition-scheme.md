@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bc39ec02fe5059bb8b1ae561be732244cbb07791
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327173"
 ---
 # <a name="modify-a-partition-scheme"></a>修改分区方案
@@ -65,7 +65,7 @@ ms.locfileid: "88327173"
   
 3.  单击加号以便展开 **“分区方案”** 文件夹。  
   
-4.  右键单击要删除的分区方案，然后选择“删除”****。  
+4.  右键单击要删除的分区方案，然后选择“删除”。  
   
 5.  在 **“删除对象”** 对话框中，确保已选择正确的分区方案，然后单击 **“确定”**。  
   

@@ -12,10 +12,10 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0805b8709e2a0a689538f558672694c96ddff39b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88390663"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>第 2 课：使用 SSIS 添加循环
@@ -24,7 +24,7 @@ ms.locfileid: "88390663"
 
 
 
-在[第 1 课中：使用 SSIS 创建项目和基本包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)，创建了一个从单个平面文件源中提取数据的包。 然后使用查找转换转换了数据。 最后，程序包将数据加载到 AdventureWorksDW2012 示例数据库中的 FactCurrencyRate 事实数据表的副本中********。  
+在[第 1 课中：使用 SSIS 创建项目和基本包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)，创建了一个从单个平面文件源中提取数据的包。 然后使用查找转换转换了数据。 最后，程序包将数据加载到 AdventureWorksDW2012 示例数据库中的 FactCurrencyRate 事实数据表的副本中。  
   
 提取、转换和加载 (ETL) 过程通常从多个平面文件源中提取数据。 从多个源提取数据需要采用迭代控制流。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可以轻松将迭代或循环添加到包。  
   

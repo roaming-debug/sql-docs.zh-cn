@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2717bf5791cd5f057a57da6693e05700c9045e3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88326903"
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
@@ -82,7 +82,7 @@ ms.locfileid: "88326903"
   
 2.  展开 **“分区函数”** 文件夹。  
   
-3.  右键单击要删除的分区函数，然后选择****“删除”。  
+3.  右键单击要删除的分区函数，然后选择“删除”。  
   
 4.  在 **“删除对象”** 对话框中，确保已选择正确的分区函数，然后单击 **“确定”**。  
 

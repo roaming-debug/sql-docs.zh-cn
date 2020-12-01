@@ -20,10 +20,10 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d5202d583a6b4b5ba0b27d25aa7c0a3ed87c9e6b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88346093"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 开发人员文档
@@ -63,7 +63,7 @@ ms.locfileid: "88346093"
  介绍同步输出与异步输出之间的重要差异以及在数据流中使用这些输出的组件。  
   
  [以编程方式使用连接管理器](../integration-services/working-with-connection-managers-programmatically.md)  
- 列出可从托管代码使用的连接管理器以及代码调用 AcquireConnection**** 方法时连接管理器返回的值。  
+ 列出可从托管代码使用的连接管理器以及代码调用 AcquireConnection 方法时连接管理器返回的值。  
   
  [用脚本扩展包](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  介绍如何使用脚本任务扩展控制流或使用脚本组件扩展数据流。  

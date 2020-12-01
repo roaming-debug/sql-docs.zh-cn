@@ -19,10 +19,10 @@ ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 384539d8978dd8ae169ae5cfb2b7b5abcf394686
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422381"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf（geography 数据类型）
@@ -44,9 +44,9 @@ ms.locfileid: "88422381"
 **nvarchar(4000)** 字符串，用于指定 **geography** 类型层次结构中公开的 16 个类型之一。  
   
 ## <a name="return-types"></a>返回类型  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
-CLR 返回类型：SqlBoolean****  
+CLR 返回类型：SqlBoolean  
   
 ## <a name="remarks"></a>备注  
 如果 **geography** 实例的类型与指定的类型相同，或者指定的类型是该实例类型的上级，则返回 1；否则，返回 0。  

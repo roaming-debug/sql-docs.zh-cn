@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2d6d626eac5b4a6277d9c9c527b8db22e10b567c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88428499"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Log File Auto Shrink**** 事件类指示日志文件自动收缩。 如果由于显式 ALTER DATABASE 语句而使日志文件收缩，则不会触发此事件。  
+  Log File Auto Shrink 事件类指示日志文件自动收缩。 如果由于显式 ALTER DATABASE 语句而使日志文件收缩，则不会触发此事件。  
   
  在用于监视日志文件收缩的跟踪中，将 **Log File Auto Shrink** 事件类包括在内。 当 thisevent 类包括在跟踪中时，引发的开销量较低，除非文件频繁地收缩。  
   

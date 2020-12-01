@@ -14,10 +14,10 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2c30a5e35a3c3e5b8e127a317e6d44880dee2e7f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430929"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含配置文件请求选项（数据事件探查任务）
@@ -43,22 +43,22 @@ ms.locfileid: "88430929"
 ## <a name="understanding-the-threshold-settings"></a>了解阈值设置  
  可以使用两个不同的阈值设置来优化值包含配置文件请求的输出。  
   
- 当为 **InclusionThresholdSetting** 指定非 **None**的值时，该配置文件仅在以下条件之一报告超集中子集的包含强度：  
+ 当为 **InclusionThresholdSetting** 指定非 **None** 的值时，该配置文件仅在以下条件之一报告超集中子集的包含强度：  
   
--   当包含强度超出 **InclusionStrengthThreshold**中指定的阈值时。  
+-   当包含强度超出 **InclusionStrengthThreshold** 中指定的阈值时。  
   
--   当包含强度的值为 1.0，而 **InclusionStrengthThreshold** 设置为 **Exact**时。  
+-   当包含强度的值为 1.0，而 **InclusionStrengthThreshold** 设置为 **Exact** 时。  
   
- 由于为非唯一值，因此可以筛选出超集列不是超集表的适当的键的组合，从而更好地优化输出。 当为 **SupersetColumnsKeyThresholdSetting** 指定非 **None**的值时，配置文件仅在以下条件之一报告超集中子集的包含强度：  
+ 由于为非唯一值，因此可以筛选出超集列不是超集表的适当的键的组合，从而更好地优化输出。 当为 **SupersetColumnsKeyThresholdSetting** 指定非 **None** 的值时，配置文件仅在以下条件之一报告超集中子集的包含强度：  
   
--   当超集列作为超集表中的键的适用性超出了 **SupersetColumnsKeyThreshold**中指定的阈值时。  
+-   当超集列作为超集表中的键的适用性超出了 **SupersetColumnsKeyThreshold** 中指定的阈值时。  
   
--   当包含强度的值为 1.0，而 **SupersetColumnsKeyThreshold** 设置为 **Exact**时。  
+-   当包含强度的值为 1.0，而 **SupersetColumnsKeyThreshold** 设置为 **Exact** 时。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
  对于 **“值包含配置文件请求”**， **“请求属性”** 窗格显示下面的选项组：  
   
--   **Data**，它包含 **SubsetTableOrView**、 **SupersetTableOrView**和 **InclusionColumns** 选项  
+-   **Data**，它包含 **SubsetTableOrView**、 **SupersetTableOrView** 和 **InclusionColumns** 选项  
   
 -   **常规**  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88430929"
  显示所选表的名称。 此选项是只读的。  
   
 #### <a name="inclusioncolumns-options"></a>InclusionColumns 选项  
- 将针对在 **InclusionColumns**中进行探查的每个选定列集显示以下选项：  
+ 将针对在 **InclusionColumns** 中进行探查的每个选定列集显示以下选项：  
   
  有关详细信息，请参阅本主题前面的“了解 InclusionColumns 属性列的选择”部分。  
   
@@ -133,11 +133,11 @@ ms.locfileid: "88430929"
 |值|说明|  
 |-----------|-----------------|  
 |**无**|不指定阈值。 不管键强度值如何，都会报告键强度。|  
-|**Specified**|使用 **InclusionStrengthThreshold**中指定的阈值。 只有在包含强度大于阈值时才报告该包含强度。|  
+|**Specified**|使用 **InclusionStrengthThreshold** 中指定的阈值。 只有在包含强度大于阈值时才报告该包含强度。|  
 |**Exact**|不指定阈值。 只有在子集值完全包含在超集值中时才报告包含强度。|  
   
  **InclusionStrengthThreshold**  
- 使用 0 到 1 之间的值指定阈值，高于此阈值将报告包含强度。 此属性的默认值为 0.95。 只有在选择 **Specified** 作为 **InclusionThresholdSetting**的值时，才启用此选项。  
+ 使用 0 到 1 之间的值指定阈值，高于此阈值将报告包含强度。 此属性的默认值为 0.95。 只有在选择 **Specified** 作为 **InclusionThresholdSetting** 的值时，才启用此选项。  
   
  有关详细信息，请参阅本主题前面的“了解阈值设置”部分。  
   
@@ -147,16 +147,16 @@ ms.locfileid: "88430929"
 |值|说明|  
 |-----------|-----------------|  
 |**无**|不指定阈值。 报告包含强度时不考虑超集列的键强度。|  
-|**Specified**|使用 **SupersetColumnsKeyThreshold**中指定的阈值。 只有在超集列的键强度大于阈值时才报告包含强度。|  
+|**Specified**|使用 **SupersetColumnsKeyThreshold** 中指定的阈值。 只有在超集列的键强度大于阈值时才报告包含强度。|  
 |**Exact**|不指定阈值。 只有在超集列为超集表中的确切键时才报告包含强度。|  
   
  **SupersetColumnsKeyThreshold**  
- 使用 0 到 1 之间的值指定阈值，高于此阈值将报告包含强度。 此属性的默认值为 0.95。 只有在选择 **Specified** 作为 **SupersetColumnsKeyThresholdSetting**的值时，才启用此选项。  
+ 使用 0 到 1 之间的值指定阈值，高于此阈值将报告包含强度。 此属性的默认值为 0.95。 只有在选择 **Specified** 作为 **SupersetColumnsKeyThresholdSetting** 的值时，才启用此选项。  
   
  有关详细信息，请参阅本主题前面的“了解阈值设置”部分。  
   
  **MaxNumberOfViolations**  
- 指定要在输出中报告的最大包含冲突数。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **InclusionThresholdSetting**时，才会禁用该选项。  
+ 指定要在输出中报告的最大包含冲突数。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **InclusionThresholdSetting** 时，才会禁用该选项。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

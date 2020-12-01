@@ -18,10 +18,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327063"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
@@ -151,11 +151,11 @@ ms.locfileid: "88327063"
 ### <a name="data-type-mapping-considerations"></a>数据类型映射注意事项  
  复制到 DB2 订阅服务器时，请考虑下列数据类型映射问题：  
   
--   在将  char、varchar、binary 和 varbinary 分别映射到 DB2 CHAR、VARCHAR、CHAR FOR BIT DATA 和 VARCHAR FOR BIT DATA 时，复制会将 DB2 数据类型的长度设置为与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 类型的长度相同[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ****************。  
+-   在将  char、varchar、binary 和 varbinary 分别映射到 DB2 CHAR、VARCHAR、CHAR FOR BIT DATA 和 VARCHAR FOR BIT DATA 时，复制会将 DB2 数据类型的长度设置为与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 类型的长度相同[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
      这样，只要 DB2 页大小约束足够大，能容纳最大行大小，就可以在订阅服务器上成功创建已生成的表。 请确保用于访问 DB2 数据库的登录帐户具有访问表空间的权限，这些表空间具有足够大小可以存放向 DB2 复制的表。  
   
--   DB2 可以支持 32 KB 大的 VARCHAR 列，因此可以将某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象列适当映射到 DB2 VARCHAR 列。 但是，复制用于 DB2 的 OLE DB 访问接口不支持将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象映射到 DB2 大型对象。 因此，在生成的创建脚本中，将  text、varchar(max)、ntext 和 nvarchar(max) 列映射到 VARCHAR(0)[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ****************。 在将脚本应用于订阅服务器之前，必须将长度值 0 更改为一个适当的值。 如果不更改数据类型长度，则当试图在 DB2 订阅服务器上创建表时，DB2 会产生错误 604（错误 604 表示数据类型的精度或长度属性无效）。  
+-   DB2 可以支持 32 KB 大的 VARCHAR 列，因此可以将某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象列适当映射到 DB2 VARCHAR 列。 但是，复制用于 DB2 的 OLE DB 访问接口不支持将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象映射到 DB2 大型对象。 因此，在生成的创建脚本中，将  text、varchar(max)、ntext 和 nvarchar(max) 列映射到 VARCHAR(0)[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 在将脚本应用于订阅服务器之前，必须将长度值 0 更改为一个适当的值。 如果不更改数据类型长度，则当试图在 DB2 订阅服务器上创建表时，DB2 会产生错误 604（错误 604 表示数据类型的精度或长度属性无效）。  
   
      请根据您对要复制的源表的了解来确定是否适于将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象映射到可变长度的 DB2 项，并在自定义创建脚本中指定适当的最大长度。 有关指定自定义创建脚本的信息，请参阅本主题中“配置 IBM DB2 订阅服务器”部分的步骤 5。  
   
@@ -164,9 +164,9 @@ ms.locfileid: "88327063"
   
      如果对于某个大型对象列没有适当的映射，请考虑对项目使用列筛选，以避免复制该列。 有关详细信息，请参阅[筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)。  
   
--   在将  nchar 和 nvarchar 复制到 DB2 的 CHAR 和 VARCHAR 时，复制为 DB2 类型使用的说明符长度与为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 类型相同[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ********。 但是，数据类型长度对于生成的 DB2 表而言可能太小。  
+-   在将  nchar 和 nvarchar 复制到 DB2 的 CHAR 和 VARCHAR 时，复制为 DB2 类型使用的说明符长度与为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 类型相同[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 但是，数据类型长度对于生成的 DB2 表而言可能太小。  
   
-     在某些 DB2 环境中， char 数据项并不限于单字节字符，对于 CHAR 或 VARCHAR 项的长度，必须考虑到这一点[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ****。 如果需要，还必须考虑到“移入” ** 字符和“移出” ** 字符。 如果要复制包含 **nchar** 和 **nvarchar** 列的表，您可能需要在自定义创建脚本中为数据类型指定更大的最大长度。 有关指定自定义创建脚本的信息，请参阅本主题中“配置 IBM DB2 订阅服务器”部分的步骤 5。  
+     在某些 DB2 环境中， char 数据项并不限于单字节字符，对于 CHAR 或 VARCHAR 项的长度，必须考虑到这一点[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如果需要，还必须考虑到“移入”  字符和“移出”  字符。 如果要复制包含 **nchar** 和 **nvarchar** 列的表，您可能需要在自定义创建脚本中为数据类型指定更大的最大长度。 有关指定自定义创建脚本的信息，请参阅本主题中“配置 IBM DB2 订阅服务器”部分的步骤 5。  
   
 ## <a name="see-also"></a>另请参阅  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   

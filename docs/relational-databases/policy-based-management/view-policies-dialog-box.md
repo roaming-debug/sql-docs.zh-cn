@@ -14,10 +14,10 @@ ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 06ab429a5e3524485793bdf118f0c4039869f868
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88428019"
 ---
 # <a name="view-policies-dialog-box"></a>“查看策略”对话框
@@ -44,7 +44,7 @@ ms.locfileid: "88428019"
  单击超链接可显示执行历史记录报表。  
   
  **评估**  
- 单击超链接可打开“评估策略”**** 对话框以执行策略。  
+ 单击超链接可打开“评估策略”对话框以执行策略。  
   
  **上次执行**  
  上次运行策略的日期和时间。  

@@ -20,10 +20,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19f43ada9987079725ab80528d823003cb1636ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88305393"
 ---
 # <a name="stlinefromwkb-geometry-data-type"></a>STLineFromWKB（geometry 数据类型）
@@ -40,20 +40,20 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
 ## <a name="arguments"></a>参数  
  *WKB_linestring*  
- 希望返回的 **geometryLineString** 实例的 WKB 表示形式。 WKB_linestring 是一个 varbinary(max) 表达式******。  
+ 希望返回的 **geometryLineString** 实例的 WKB 表示形式。 WKB_linestring 是一个 varbinary(max) 表达式。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geometryLineString 实例的空间引用 ID (SRID)********。  
+ 一个 int 表达式，表示希望返回的 geometryLineString 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
- OGC 类型：LineString****  
+ OGC 类型：LineString  
   
 ## <a name="remarks"></a>注解  
- 如果输入的格式不正确，此方法将引发 FormatException****。  
+ 如果输入的格式不正确，此方法将引发 FormatException。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STLineFromWKB()` 创建 `geometry` 实例。  

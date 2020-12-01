@@ -20,16 +20,16 @@ ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 584b34c02bde76293654b0a0bef8c006ad3c38b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445277"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geography 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值****。
+从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geography 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值。
   
 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例   。
   
@@ -43,11 +43,11 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- geography_tagged_text**  
- 要返回的 geography 实例的 WKT 表示形式****。 geography_tagged_text 是一个 nvarchar(max) 表达式******。  
+ geography_tagged_text  
+ 要返回的 geography 实例的 WKT 表示形式。 geography_tagged_text 是一个 nvarchar(max) 表达式。  
   
  SRID   
- 一个 int 表达式，表示要返回的 geography 实例的空间引用 ID (SRID)********。  
+ 一个 int 表达式，表示要返回的 geography 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  

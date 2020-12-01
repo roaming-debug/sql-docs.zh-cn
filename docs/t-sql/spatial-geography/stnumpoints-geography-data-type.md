@@ -19,16 +19,16 @@ ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6dbbf84ae21589d6428528d1599fe65eba7704f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445147"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回 geography 实例的每个图形中的总点数****。  
+  返回 geography 实例的每个图形中的总点数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,12 +40,12 @@ ms.locfileid: "88445147"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
   
- CLR 返回类型：SqlInt32****  
+ CLR 返回类型：SqlInt32  
   
 ## <a name="remarks"></a>备注  
- 此方法对 geography 实例说明中的点进行计数****。 重复的点被计算在内；但是，段之间的连接点只计算一次。 如果此实例为集合，则此方法将返回该集合内的总点数。  
+ 此方法对 geography 实例说明中的点进行计数。 重复的点被计算在内；但是，段之间的连接点只计算一次。 如果此实例为集合，则此方法将返回该集合内的总点数。  
   
 ## <a name="examples"></a>示例  
   

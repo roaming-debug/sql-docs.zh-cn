@@ -19,10 +19,10 @@ ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e7f66e25e09d02e506da762909ec80ff7a98114e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88454223"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid（geometry 数据类型）
@@ -44,10 +44,10 @@ STSrid
 ## <a name="return-types"></a>返回类型
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：int  
   
- CLR 类型：SqlInt32****  
+ CLR 类型：SqlInt32  
   
 ## <a name="examples"></a>示例  
- 第一个示例创建 SRID 值为 13 的 geometry 实例并使用 `STSrid` 确认该 SRID****。  
+ 第一个示例创建 SRID 值为 13 的 geometry 实例并使用 `STSrid` 确认该 SRID。  
   
 ```  
 DECLARE @g geometry;  

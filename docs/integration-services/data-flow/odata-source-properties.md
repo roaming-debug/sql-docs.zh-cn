@@ -12,10 +12,10 @@ ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e6af5b248d0d6822b81c070bffc09e1f270abb54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425839"
 ---
 # <a name="odata-source-properties"></a>OData 源属性
@@ -23,7 +23,7 @@ ms.locfileid: "88425839"
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-在数据流中右键单击“OData 源”并单击“属性”时，可在“属性”窗口中看到“OData 源”组件的属性****************。  
+在数据流中右键单击“OData 源”并单击“属性”时，可在“属性”窗口中看到“OData 源”组件的属性。  
 
 ## <a name="properties"></a>属性 
 

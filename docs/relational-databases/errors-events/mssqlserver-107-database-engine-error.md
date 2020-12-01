@@ -13,10 +13,10 @@ ms.assetid: f33f514c-56aa-42e2-841b-e91244da90e2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9da64b573efcdce2adc52e0d7cd419d40ea8289e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88337653"
 ---
 # <a name="mssqlserver_107"></a>MSSQLSERVER_107

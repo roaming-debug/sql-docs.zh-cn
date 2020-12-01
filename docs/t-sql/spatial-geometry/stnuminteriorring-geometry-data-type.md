@@ -19,10 +19,10 @@ ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 83c40255da0544a321aa91c378706d228c09b40c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88444926"
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing（geometry 数据类型）
@@ -40,12 +40,12 @@ ms.locfileid: "88444926"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
   
- CLR 返回类型：SqlInt32****  
+ CLR 返回类型：SqlInt32  
   
 ## <a name="remarks"></a>备注  
- 如果 geometry 实例不是多边形，则此方法返回 NULL****。  
+ 如果 geometry 实例不是多边形，则此方法返回 NULL。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个 `Polygon` 实例并使用 `STNumInteriorRing()` 来确定该实例具有的内环数。  

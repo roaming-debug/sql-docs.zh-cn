@@ -18,10 +18,10 @@ ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 812a5e63f21de77028c1f00a08f1819c5a07be13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445239"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN（geography 数据类型）
@@ -51,7 +51,7 @@ ms.locfileid: "88445239"
  如果参数大于 [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) 的结果，则此方法返回 null；如果 *expression* 参数小于 1，则将引发 **ArgumentOutOfRangeException**。  
   
 ## <a name="examples"></a>示例  
- 以下示例创建 `MultiPoint``geography` 实例并使用 `STGeometryN()` 查找 GeometryCollection 的第二个 `geography` 实例****。  
+ 以下示例创建 `MultiPoint``geography` 实例并使用 `STGeometryN()` 查找 GeometryCollection 的第二个 `geography` 实例。  
   
 ```  
 DECLARE @g geography;  

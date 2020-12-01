@@ -19,16 +19,16 @@ ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 43d6372bbe90146004e205d8ac3678196d76712e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88416893"
 ---
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint（geometry 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  如果一个 geometry 实例与另一个 geometry 实例在空间上不相联，则返回 1********。 反之，则返回 0。  
+  如果一个 geometry 实例与另一个 geometry 实例在空间上不相联，则返回 1。 反之，则返回 0。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,20 +41,20 @@ ms.locfileid: "88416893"
 
 ## <a name="arguments"></a>参数
  *other_geometry*  
- 将与调用 `STDisjoint()` 的实例进行比较的另一个 geometry 实例****。  
+ 将与调用 `STDisjoint()` 的实例进行比较的另一个 geometry 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型：SqlBoolean****  
+ CLR 返回类型：SqlBoolean  
   
 ## <a name="remarks"></a>备注  
- 如果两个 geometry 实例的点集交集是空的，则这两个实例不相联****。  
+ 如果两个 geometry 实例的点集交集是空的，则这两个实例不相联。  
   
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用 `STDisjoint()` 测试两个 geometry 实例是否在空间上不相联****。  
+ 下面的示例使用 `STDisjoint()` 测试两个 geometry 实例是否在空间上不相联。  
   
 ```  
 DECLARE @g geometry;  

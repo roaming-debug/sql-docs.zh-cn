@@ -14,10 +14,10 @@ ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a98ff226c4e2e861b60d04cb50e8b201035c16a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88431079"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>为 CDC 准备 SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "88431079"
   
  有关 MSXDBCDC 数据库的详细信息，请参阅“MSXDBCDC 数据库”。  
   
- 在 CDC 服务配置控制台中，单击“准备 SQL Server”。**** 如果此选项不可用，则请确保在该控制台的左侧窗格中选择了“本地 CDC 服务”。****  
+ 在 CDC 服务配置控制台中，单击“准备 SQL Server”。 如果此选项不可用，则请确保在该控制台的左侧窗格中选择了“本地 CDC 服务”。  
   
 ## <a name="options"></a>选项  
   
@@ -41,7 +41,7 @@ ms.locfileid: "88431079"
   
 -   **Windows 身份验证**  
   
--   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“用户名”**** 和“密码”****。  
+-   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“用户名”和“密码”。  
   
  若要为 Oracle CDC 准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，该登录名必须对 MSXDBCDC 数据库具有写入权限。 输入对 MSXDBCDC 数据库具有写入权限的登录名的凭据，例如 `sysasmin` 角色的成员。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88431079"
 -   **高级**：根据需要键入任何其他连接属性。  
   
 ### <a name="view-script"></a>查看脚本  
- 单击“查看脚本”**** 可查看安装脚本的只读版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员可以将此脚本复制到 SQL Server 管理控制台，以便根据需要进行编辑。 有关准备 SQL Server 脚本的详细信息，请参阅 [为 Oracle CDC 视图脚本准备 SQL Server](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md)。  
+ 单击“查看脚本”可查看安装脚本的只读版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员可以将此脚本复制到 SQL Server 管理控制台，以便根据需要进行编辑。 有关准备 SQL Server 脚本的详细信息，请参阅 [为 Oracle CDC 视图脚本准备 SQL Server](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [如何使用 CDC 服务](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   

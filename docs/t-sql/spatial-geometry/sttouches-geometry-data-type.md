@@ -19,16 +19,16 @@ ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 792ea213b39a8b38787c1ed674aa03fc084ea591
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88454290"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-如果一个**geometry** 实例在空间上与另一个 **geometry** 实例接触，则返回 1。 否则，返回 0。
+如果一个 **geometry** 实例在空间上与另一个 **geometry** 实例接触，则返回 1。 否则，返回 0。
   
 ## <a name="syntax"></a>语法  
   
@@ -41,17 +41,17 @@ ms.locfileid: "88454290"
 
 ## <a name="arguments"></a>参数
  *other_geometry*  
- 将与调用 `STTouches()` 的实例进行比较的另一个 geometry 实例****。  
+ 将与调用 `STTouches()` 的实例进行比较的另一个 geometry 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型：SqlBoolean****  
+ CLR 返回类型：SqlBoolean  
   
 ## <a name="remarks"></a>注解  
  如果两个 **geometry** 实例的点集相交，但是它们的内部不相交，则表明这两个实例接触。  
   
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STTouches()` 来测试两个 `geometry` 实例，以查看它们是否接触。  

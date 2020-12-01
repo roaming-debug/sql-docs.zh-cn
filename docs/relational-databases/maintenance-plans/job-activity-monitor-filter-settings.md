@@ -14,15 +14,15 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f7533366a28517fcc2fdb8ca5c2e4ad0c0dd01c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88424049"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>作业活动监视器（筛选设置）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用此页可以减少作业活动监视器中可见的行数。 在一个或多个可用框中输入条件，以便仅显示符合指定值的行。 其中某些框（如“状态”**** 或“阻塞类型”****）通过下拉列表提供有限数量的可能值。 其他框（如 **“应用程序”** ）则允许以逗号分隔的列表形式输入不限数量的任意值。 使用工具栏图标，可以按类别或按字母顺序对可用的框进行排序。 单击各个条件可以显示该条件的简短说明。  
+  使用此页可以减少作业活动监视器中可见的行数。 在一个或多个可用框中输入条件，以便仅显示符合指定值的行。 其中某些框（如“状态”或“阻塞类型”）通过下拉列表提供有限数量的可能值。 其他框（如 **“应用程序”** ）则允许以逗号分隔的列表形式输入不限数量的任意值。 使用工具栏图标，可以按类别或按字母顺序对可用的框进行排序。 单击各个条件可以显示该条件的简短说明。  
   
  若要筛选作业活动监视器，请提供所需数量的筛选条件，单击 **“应用筛选器”**，再单击 **“确定”**。  
   

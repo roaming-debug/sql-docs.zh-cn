@@ -19,16 +19,16 @@ ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bc6f88b25a67e3d8904ea7823324111e60576ab7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88305834"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  STSrid 是一个表示该实例的空间引用标识符 (SRID) 的整数****。  
+  STSrid 是一个表示该实例的空间引用标识符 (SRID) 的整数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88305834"
 ## <a name="return-types"></a>返回类型
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：int  
   
- CLR 类型：SqlInt32****  
+ CLR 类型：SqlInt32  
   
 ## <a name="remarks"></a>注解  
  此属性可以进行修改。  

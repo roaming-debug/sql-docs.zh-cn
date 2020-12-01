@@ -17,15 +17,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 24bcedd0eb22430bde706ca6565bf7521d3691e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88448617"
 ---
 # <a name="locks-event-category"></a>Locks 事件类别
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用 Locks 事件类别中的事件类可监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例中的锁定活动****。 这些事件类有助于调查由于多个用户同时读取和修改数据而引起的锁定问题。  
+  使用 Locks 事件类别中的事件类可监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例中的锁定活动。 这些事件类有助于调查由于多个用户同时读取和修改数据而引起的锁定问题。  
   
  由于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 通常会处理很多锁，因此在跟踪期间捕获 **Locks** 事件类别会带来很大的开销并生成大型跟踪文件或表。  
   

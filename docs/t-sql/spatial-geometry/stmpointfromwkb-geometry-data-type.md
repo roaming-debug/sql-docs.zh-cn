@@ -19,10 +19,10 @@ ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a80aba8159be4697861ee9d80bcf2a18f7c59c8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88444999"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB（geometry 数据类型）
@@ -40,21 +40,21 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- WKB_multipoint**  
- 希望返回的 **geometryMultiPoint** 实例的 WKB 表示形式。 WKB_multipoint 是一个 varbinary(max) 表达式******。  
+ WKB_multipoint  
+ 希望返回的 **geometryMultiPoint** 实例的 WKB 表示形式。 WKB_multipoint 是一个 varbinary(max) 表达式。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geometryMultiPoint 实例的空间引用 ID (SRID)********。  
+ 一个 int 表达式，表示希望返回的 geometryMultiPoint 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
- OGC 类型：MultiPoint****  
+ OGC 类型：MultiPoint  
   
 ## <a name="remarks"></a>备注  
- 如果输入的格式不正确，此方法将引发 FormatException****。  
+ 如果输入的格式不正确，此方法将引发 FormatException。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STMPointFromWKB()` 创建 `geometry` 实例。  

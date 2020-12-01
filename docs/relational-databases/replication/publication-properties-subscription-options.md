@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420491"
 ---
 # <a name="publication-properties-subscription-options"></a>发布属性，订阅选项
@@ -66,7 +66,7 @@ ms.locfileid: "88420491"
  仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定是否允许使用备份文件来初始化订阅。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
  **允许非 SQL Server 订阅服务器**  
- 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定发布是否支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 将此选项设置为 True 可将其他发布属性设置为支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器****。 如果存在订阅，则此选项是只读的；如果 **“允许立即更新订阅”** 、 **“允许排队更新订阅”** 或 **“允许对等订阅”** 设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
+ 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定发布是否支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 将此选项设置为 True 可将其他发布属性设置为支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 如果存在订阅，则此选项是只读的；如果 **“允许立即更新订阅”** 、 **“允许排队更新订阅”** 或 **“允许对等订阅”** 设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
 ### <a name="data-transformation"></a>数据转换  
  **允许数据转换**  
@@ -77,7 +77,7 @@ ms.locfileid: "88420491"
   
 ### <a name="peer-to-peer-replication"></a>对等复制  
  **True**  
- 仅适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 确定发布是否支持对等复制。 将此选项设置为 **True** 可将其他发布属性设置为支持对等复制。 如果存在订阅，此选项为只读。 如果“允许立即更新订阅” **** 、“允许排队更新订阅” **** 或“允许非 SQL Server 订阅服务器” **** 设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
+ 仅适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 确定发布是否支持对等复制。 将此选项设置为 **True** 可将其他发布属性设置为支持对等复制。 如果存在订阅，此选项为只读。 如果“允许立即更新订阅”  、“允许排队更新订阅”  或“允许非 SQL Server 订阅服务器” 设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
  **允许对等冲突检测**  
  仅适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。 指定是否为此发布启用冲突检测。 若要使用冲突检测，所有节点都必须运行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本；且必须为所有节点启用检测。 若要使用冲突检测，还必须为“对等发起方 ID” 指定一个值。有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  

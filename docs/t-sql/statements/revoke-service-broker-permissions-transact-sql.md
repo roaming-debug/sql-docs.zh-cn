@@ -23,10 +23,10 @@ ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2d018e710bb272d9daa9eda7099d201b80ea3c1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88357113"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE Service Broker 权限 (Transact-SQL)
@@ -65,23 +65,23 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  permission  
  指定可对 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 安全对象撤消的权限。 有关这些权限的列表，请参阅本主题后面的“备注”部分。  
   
- CONTRACT ::contract_name****__  
+ CONTRACT ::contract_name  
  指定对其撤消权限的约定。 需要使用作用域限定符 ::。  
   
- MESSAGE TYPE ::message_type_name****__  
+ MESSAGE TYPE ::message_type_name  
  指定对其撤消权限的消息类型。 需要使用作用域限定符 ::。  
   
- REMOTE SERVICE BINDING ::remote_binding_name****__  
+ REMOTE SERVICE BINDING ::remote_binding_name  
  指定对其撤消权限的远程服务绑定。 需要使用作用域限定符 ::。  
   
- ROUTE ::route_name****__  
+ ROUTE ::route_name  
  指定对其撤消权限的路由。 需要使用作用域限定符 ::。  
   
- SERVICE ::message_type_name****__  
+ SERVICE ::message_type_name  
  指定对其撤消权限的服务。 需要使用作用域限定符 ::。  
   
  database_principal  
- 指定要从中撤消权限的主体。 database_principal 可以为以下各项之一**：  
+ 指定要从中撤消权限的主体。 database_principal 可以为以下各项之一：  
   
 -   数据库用户  
   
@@ -105,8 +105,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal**  
- 指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 revoking_principal 可以为以下各项之一**：  
+ AS revoking_principal  
+ 指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 revoking_principal 可以为以下各项之一：  
   
 -   数据库用户  
   

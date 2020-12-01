@@ -19,16 +19,16 @@ ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 77a79972671854e7e8538de7b943545955f61e89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422421"
 ---
 # <a name="m-geography-data-type"></a>M（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  geography 实例的 M（度量）值********。 度量值的语义是用户定义的，但是通常用于描述沿线条的距离。 例如，度量值可用于跟踪某条公路上的里程碑。  
+  geography 实例的 M（度量）值。 度量值的语义是用户定义的，但是通常用于描述沿线条的距离。 例如，度量值可用于跟踪某条公路上的里程碑。  
   
 ## <a name="syntax"></a>语法  
   

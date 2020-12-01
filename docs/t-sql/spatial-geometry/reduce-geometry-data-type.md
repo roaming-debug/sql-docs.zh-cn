@@ -19,16 +19,16 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 704df574cc67a4321faea90795b248adb2859123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445082"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-返回给定“geometry”实例的近似值****。 通过在具有给定容差的实例上运行 Douglas-Peucker 算法的扩展来生成近似值。
+返回给定“geometry”实例的近似值。 通过在具有给定容差的实例上运行 Douglas-Peucker 算法的扩展来生成近似值。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,20 +44,20 @@ ms.locfileid: "88445082"
  类型为 float 的值  。 *tolerance* 是要为近似算法输入的公差。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="remarks"></a>备注  
  对于集合类型，此算法单独作用于包含在该实例中的每个 **geometry**。  
   
- 此算法不会修改“Point”实例****。  
+ 此算法不会修改“Point”实例。  
   
- 在“LineString”、“CircularString”和“CompoundCurve”实例上，近似算法保留实例的原始起点和终点************。 接下来，算法以迭代方式从与结果偏离最大的原始实例中将此点添加回来。 此过程持续运行，直到没有点偏离超过给定的公差。  
+ 在“LineString”、“CircularString”和“CompoundCurve”实例上，近似算法保留实例的原始起点和终点。 接下来，算法以迭代方式从与结果偏离最大的原始实例中将此点添加回来。 此过程持续运行，直到没有点偏离超过给定的公差。  
   
- `Reduce()` 为 CircularString 实例返回 LineString、CircularString 或 CompoundCurve 实例****************。  `Reduce()` 为 **CompoundCurve** 实例返回 **CompoundCurve** 或 **LineString** 实例。  
+ `Reduce()` 为 CircularString 实例返回 LineString、CircularString 或 CompoundCurve 实例。  `Reduce()` 为 **CompoundCurve** 实例返回 **CompoundCurve** 或 **LineString** 实例。  
   
- 在 **Polygon** 实例中，近似算法独立应用于每个环。 如果返回的“Polygon”实例无效，该方法将生成 `FormatException`；例如，如果应用 `Reduce()` 的目的是简化实例中的每个环，并且所生成的环发生重叠，则会创建无效的“MultiPolygon”实例********。  在有外环但无内环的“CurvePolygon”实例中，`Reduce()` 会返回“CurvePolygon”、“LineString”或“Point”实例****************。  如果 **CurvePolygon** 具有内环，则会返回 **CurvePolygon** 或 **MultiPoint** 实例。  
+ 在 **Polygon** 实例中，近似算法独立应用于每个环。 如果返回的“Polygon”实例无效，该方法将生成 `FormatException`；例如，如果应用 `Reduce()` 的目的是简化实例中的每个环，并且所生成的环发生重叠，则会创建无效的“MultiPolygon”实例。  在有外环但无内环的“CurvePolygon”实例中，`Reduce()` 会返回“CurvePolygon”、“LineString”或“Point”实例。  如果 **CurvePolygon** 具有内环，则会返回 **CurvePolygon** 或 **MultiPoint** 实例。  
   
  找到圆弧段时，近似算法会检查是否可以通过在给定公差一半之内的弦得出弧的近似值。 对于满足此条件的弦，计算中会用该弦来替换圆弧。 如果弦不满足此条件，则保留圆弧，并将近似算法应用于其余的段。  
   
@@ -104,7 +104,7 @@ SELECT @g.Reduce(.75).ToString();
  在此示例中，请注意第二个 **SELECT** 语句返回 **LineString** 实例：`LineString(0 0, 16 0)`。  
   
 ### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>显示原始起点和终点丢失的示例  
- 下面的示例演示生成的实例为何无法保留原始的起点和终点。 出现该行为的原因是保留原始的起点和终点会产生无效的“LineString”实例****。  
+ 下面的示例演示生成的实例为何无法保留原始的起点和终点。 出现该行为的原因是保留原始的起点和终点会产生无效的“LineString”实例。  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(0 0, 4 0, 2 .01, 1 0)';  

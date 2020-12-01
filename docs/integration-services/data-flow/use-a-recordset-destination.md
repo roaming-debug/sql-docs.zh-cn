@@ -14,10 +14,10 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425599"
 ---
 # <a name="use-a-recordset-destination"></a>使用记录集目标
@@ -56,7 +56,7 @@ ms.locfileid: "88425599"
   
     1.  在 **“集合”** 页上，选择 Foreach ADO 枚举器。 然后，对于 **“ADO 对象源变量”**，选择包含该记录集的变量。  
   
-    2.  在“变量映射”**** 页上，将你要使用的每列的基于零的索引映射到适当的变量。  
+    2.  在“变量映射”页上，将你要使用的每列的基于零的索引映射到适当的变量。  
   
          在循环的每次迭代中，枚举器使用当前行的列值来填充这些变量。  
   
@@ -73,19 +73,19 @@ ms.locfileid: "88425599"
   
 3.  在 **“变量”** 窗口中，创建用来保存记录集和当前行的列值的变量：  
   
-    1.  创建名为 **BonusRecordset**的变量，然后将其类型设置为 **Object**。  
+    1.  创建名为 **BonusRecordset** 的变量，然后将其类型设置为 **Object**。  
   
          **BonusRecordset** 变量保存记录集。  
   
-    2.  创建名为 **EmailAddress**的变量，然后将其类型设置为 **String**。  
+    2.  创建名为 **EmailAddress** 的变量，然后将其类型设置为 **String**。  
   
          **EmailAddress** 变量保存销售人员的电子邮件地址。  
   
-    3.  创建名为 **FirstName**的变量，然后将其类型设置为 **String**。  
+    3.  创建名为 **FirstName** 的变量，然后将其类型设置为 **String**。  
   
          **FirstName** 变量保存销售人员的名字。  
   
-    4.  创建名为 **Bonus**的变量，然后将其类型设置为 **Double**。  
+    4.  创建名为 **Bonus** 的变量，然后将其类型设置为 **Double**。  
   
          **Bonus** 变量保存销售人员的奖金额。  
   
@@ -120,13 +120,13 @@ ms.locfileid: "88425599"
         ```  
   
         > [!NOTE]  
-        >  必须先将 Bonus 列中 **currency** 值转换为 **float** 类型，然后才可以将该值加载到类型为 **Double**的包变量中。  
+        >  必须先将 Bonus 列中 **currency** 值转换为 **float** 类型，然后才可以将该值加载到类型为 **Double** 的包变量中。  
   
 4.  在 **“数据流”** 选项卡上，添加记录集目标，并在 OLE DB 源之后连接该目标。  
   
 5.  打开 **“记录集目标编辑器”**，并使用以下设置来配置目标：  
   
-    1.  在“组件属性” **** 选项卡上，为 **VariableName** 属性选择 **User::BonusRecordset**。  
+    1.  在“组件属性”  选项卡上，为 **VariableName** 属性选择 **User::BonusRecordset**。  
   
     2.  在 **“输入列”** 选项卡上，选择所有三个可用列。  
   
@@ -136,9 +136,9 @@ ms.locfileid: "88425599"
   
 2.  打开 **“Foreach 循环编辑器”**，并使用以下设置来配置容器：  
   
-    1.  在“集合” **** 页上，为“枚举器” **** 选择“Foreach ADO 枚举器” ****，并为“ADO 对象源变量” **** 选择 **User::BonusRecordset**。  
+    1.  在“集合”  页上，为“枚举器” 选择“Foreach ADO 枚举器” ，并为“ADO 对象源变量” 选择 **User::BonusRecordset**。  
   
-    2.  在“变量映射” **** 页中，将 **User::EmailAddress** 映射到索引 0，将 **User::FirstName** 映射到索引 1，将 **User::Bonus** 映射到索引 2。  
+    2.  在“变量映射”  页中，将 **User::EmailAddress** 映射到索引 0，将 **User::FirstName** 映射到索引 1，将 **User::Bonus** 映射到索引 2。  
   
 3.  在 **“控制流”** 选项卡的 Foreach 循环容器中，添加发送邮件任务。  
   
@@ -146,11 +146,11 @@ ms.locfileid: "88425599"
   
     1.  对于 **SmtpConnection**，选择以前配置的 SMTP 连接管理器。  
   
-    2.  对于“发件人”，输入适当的电子邮件地址。****  
+    2.  对于“发件人”，输入适当的电子邮件地址。  
   
          如果使用自己的电子邮件地址，则可以确认包成功运行。 对于由发送邮件任务发送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]中的虚构销售人员的邮件，您将收到关于无法投递的回执。  
   
-    3.  对于“收件人”，输入默认电子邮件地址。****  
+    3.  对于“收件人”，输入默认电子邮件地址。  
   
          此值不会使用，但在运行时将替换为每位销售人员的电子邮件地址。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "88425599"
   
     5.  对于 **MessageSourceType**，选择 **“直接输入”**。  
   
-5.  在“发送邮件任务编辑器”的“表达式”页上，单击省略号按钮 (**...**)，以打开“属性表达式编辑器”。************  
+5.  在“发送邮件任务编辑器”的“表达式”页上，单击省略号按钮 (**...**)，以打开“属性表达式编辑器”。  
   
 6.  在 **“属性表达式编辑器”** 中，输入以下信息：  
   

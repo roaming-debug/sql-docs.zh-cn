@@ -19,10 +19,10 @@ ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 26536b5ac3042c1341d75336a7d1b7d8cc439892
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88305891"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference（geography 数据类型）
@@ -40,8 +40,8 @@ ms.locfileid: "88305891"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- other_geography**  
- 调用 STSymDistance() 的实例以外的另一个 geography 实例****。  
+ other_geography  
+ 调用 STSymDistance() 的实例以外的另一个 geography 实例。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
@@ -49,9 +49,9 @@ ms.locfileid: "88305891"
  CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
- 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null****。  
+ 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能的结果集已扩展到 FullGlobe 实例****。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能的结果集已扩展到 FullGlobe 实例。  
   
  只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   

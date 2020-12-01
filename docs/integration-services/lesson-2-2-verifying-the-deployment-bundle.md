@@ -12,10 +12,10 @@ ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4704aea54f73a0fa25db60ab9145a0ad3bc9359d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449651"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>第 2-2 课 - 验证部署捆绑
@@ -51,11 +51,11 @@ ms.locfileid: "88449651"
   
     -   Readme.txt  
   
-3.  右键单击“Deployment Tutorial.SSISDeploymentManifest”，指向“打开方式”****，再单击“Internet Explorer”****。 也可以在文本编辑器（如记事本）中打开该文件。 文件的 XML 代码应该如下所示：  
+3.  右键单击“Deployment Tutorial.SSISDeploymentManifest”，指向“打开方式”，再单击“Internet Explorer”。 也可以在文本编辑器（如记事本）中打开该文件。 文件的 XML 代码应该如下所示：  
   
     `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   
-4.  验证确保“AllowConfigurationChanges”**** 属性的值为“true”****，XML 包括两个包中每个包的 **Package** 元素、四个非包文件中每个文件的 **MiscellaneousFile** 元素以及两个 XML 配置文件中每个文件的 **ConfigurationFile** 元素。  
+4.  验证确保“AllowConfigurationChanges”属性的值为“true”，XML 包括两个包中每个包的 **Package** 元素、四个非包文件中每个文件的 **MiscellaneousFile** 元素以及两个 XML 配置文件中每个文件的 **ConfigurationFile** 元素。  
   
 5.  退出 Internet Explorer 或文本编辑器。  
   

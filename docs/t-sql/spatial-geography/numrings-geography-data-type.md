@@ -19,16 +19,16 @@ ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fddcc951ae438b054c68d6e9755e62388fb098e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422321"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回 Polygon 实例中的总环数****。 在  geography 类型中，不区分外环和内环，因为任何环都可以作为外环[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ****。  
+  返回 Polygon 实例中的总环数。 在  geography 类型中，不区分外环和内环，因为任何环都可以作为外环[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,12 +40,12 @@ ms.locfileid: "88422321"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-type"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
   
- CLR 返回类型：SqlInt32****  
+ CLR 返回类型：SqlInt32  
   
 ## <a name="remarks"></a>备注  
- 如果该实例不是 Polygon 实例，则此方法返回 NULL；如果该实例为空，则将返回 0****。 此方法是精确方法。  
+ 如果该实例不是 Polygon 实例，则此方法返回 NULL；如果该实例为空，则将返回 0。 此方法是精确方法。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个具有两个环的 `Polygon` 实例并确认该实例具有两个环。  

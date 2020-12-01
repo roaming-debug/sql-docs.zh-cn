@@ -15,10 +15,10 @@ ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a9e27d3d7379ad4e0c16d47bcdb97abab38741e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88346393"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>使用 SSIS 包升级向导升级 Integration Services 包
@@ -44,14 +44,14 @@ ms.locfileid: "88346393"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，创建或打开一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在解决方案资源管理器中，右键单击“SSIS 包”**** 节点，然后单击“升级所有包”**** 来升级该节点下的所有包。  
+2.  在解决方案资源管理器中，右键单击“SSIS 包”节点，然后单击“升级所有包”来升级该节点下的所有包。  
   
     > [!NOTE]  
     >  打开包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或更高版本的包的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 项目时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将自动打开 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导。  
   
 #### <a name="to-run-the-wizard-from-sql-server-management-studio"></a>从 SQL Server Management Studio 运行向导  
   
--   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，展开“已存储的包”**** 节点，接着右键单击“文件系统”**** 节点或“MSDB”**** 节点，然后单击“升级包”****。  
+-   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，展开“已存储的包”节点，接着右键单击“文件系统”节点或“MSDB”节点，然后单击“升级包”。  
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>在命令提示符下运行向导  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88346393"
   
 3.  在向导的 **“选择源位置”** 页上，将 **“包源”** 属性设置为 **“文件系统”**。  
   
-4.  在向导的“选择目标位置”**** 页上，选择“保存到源位置”****，从而将已升级的包保存到与原始包相同的位置。  
+4.  在向导的“选择目标位置”页上，选择“保存到源位置”，从而将已升级的包保存到与原始包相同的位置。  
   
     > [!NOTE]  
     >  仅当将已升级包存储在与原始包相同的文件夹中时，向导中的备份选项才可用。  
@@ -91,7 +91,7 @@ ms.locfileid: "88346393"
 2.  在向导的 **“选择包管理选项”** 页上，选择 **“备份原始包”** 选项。  
   
     > [!WARNING]  
-    >  当你在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中打开某一 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更高版本的项目时，将不会显示“备份原始包”**** 选项，因为该向导将自动启动。  
+    >  当你在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中打开某一 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更高版本的项目时，将不会显示“备份原始包”选项，因为该向导将自动启动。  
   
 3.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导。  
   

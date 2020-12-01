@@ -17,10 +17,10 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09ef796494f084fda4cbe27d5fc0ac33b2cfb402
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430659"
 ---
 # <a name="identify-similar-data-rows-with-the-fuzzy-grouping-transformation"></a>使用模糊分组转换标识相似数据行
@@ -56,7 +56,7 @@ ms.locfileid: "88430659"
   
 9. 还可以更新 **“输出别名”** 列中的输出列名称。  
   
-10. 还可以更新“组输出别名”**** 列中清除的列的名称。  
+10. 还可以更新“组输出别名”列中清除的列的名称。  
   
     > [!NOTE]  
     >  列的默认名称为输入列名称加“_clean”后缀。  
@@ -74,7 +74,7 @@ ms.locfileid: "88430659"
   
 15. 若要指定转换如何比较列中的字符串数据，请修改 **“比较标志”** 列中比较选项的默认选择。  
   
-16. 单击“高级”**** 选项卡，修改该转换为唯一行标识符 (_key_in)、重复行标识符 (_key_out) 和相似性值 (_score) 添加到输出的列的名称。  
+16. 单击“高级”选项卡，修改该转换为唯一行标识符 (_key_in)、重复行标识符 (_key_out) 和相似性值 (_score) 添加到输出的列的名称。  
   
 17. 还可以通过移动滑块来调节相似性阈值。  
   

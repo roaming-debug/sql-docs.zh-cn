@@ -19,16 +19,16 @@ ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7ae9c800cffd7df80ba8447c2e16de745a0009bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88359443"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回 geography 实例的开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式****。  
+  返回 geography 实例的开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式。  
   
  这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例   。  
   
@@ -42,12 +42,12 @@ ms.locfileid: "88359443"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：varbinary(max)****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：varbinary(max)  
   
- CLR 返回类型：SqlBytes****  
+ CLR 返回类型：SqlBytes  
   
 ## <a name="remarks"></a>备注  
- geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定****。  
+ geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STAsBinary()` 根据文本创建一个从 (-122.360, 47.656) 到 (-122.343, 47.656) 的 `LineString``geography` 实例。 然后，它以 WKB 的形式返回结果。  

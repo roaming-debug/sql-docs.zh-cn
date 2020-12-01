@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 49fc84b9ac85d17d85f63372c8bdd57d0619413d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88427979"
 ---
 # <a name="replication-agent-profiles"></a>复制代理配置文件
@@ -35,7 +35,7 @@ ms.locfileid: "88427979"
   
  复制为每个代理提供一个默认的配置文件，同时还为日志读取器代理、分发代理和合并代理提供附加的预定义配置文件。 除了所提供的配置文件之外，您还可以创建符合自己应用程序要求的配置文件。 使用代理配置文件可以轻松地更改与该配置文件关联的所有代理的键参数。 例如，如果您有 20 个快照代理并且需要更改查询超时值（ **-QueryTimeout** 参数），则可以更新这些快照代理使用的配置文件，这样该此类型的所有代理将在下次运行时自动开始使用新值。  
   
- 您也可能对代理的不同实例拥有不同的配置文件。 例如，以拨号连接方式连接到发布服务器和分发服务器的合并代理可以通过使用“慢速链接” **** 配置文件而采用一组更适合慢速通信链接的参数。  
+ 您也可能对代理的不同实例拥有不同的配置文件。 例如，以拨号连接方式连接到发布服务器和分发服务器的合并代理可以通过使用“慢速链接”  配置文件而采用一组更适合慢速通信链接的参数。  
   
 > [!NOTE]  
 >  如果在命令行中为代理参数指定了值，则该值将覆盖代理配置文件中为同一参数设置的值。  

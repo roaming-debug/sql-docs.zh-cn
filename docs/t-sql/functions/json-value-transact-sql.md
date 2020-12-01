@@ -19,10 +19,10 @@ ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: f22175349162bac226d41f63ca66743de0668b6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88364413"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
@@ -46,14 +46,14 @@ JSON_VALUE ( expression , path )
  *expression*  
  一个表达式。 通常是包含 JSON 文本的变量或列的名称。  
 
- 如果 JSON_VALUE 在找到由 path 标识的值之前，找到在 expression 中无效的 JSON，则函数会返回错误********。 如果 JSON_VALUE 找不到路径标识的值，则它将扫描整个文本，如果在表达式中的任何位置发现无效的 JSON，则返回错误。
+ 如果 JSON_VALUE 在找到由 path 标识的值之前，找到在 expression 中无效的 JSON，则函数会返回错误。 如果 JSON_VALUE 找不到路径标识的值，则它将扫描整个文本，如果在表达式中的任何位置发现无效的 JSON，则返回错误。
   
  *路径*  
  指定要提取属性的 JSON 路径。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
 
 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值。
   
- 如果 path 格式无效，则 JSON_VALUE 返回错误******。  
+ 如果 path 格式无效，则 JSON_VALUE 返回错误。  
   
 ## <a name="return-value"></a>返回值
 
@@ -61,11 +61,11 @@ JSON_VALUE ( expression , path )
   
  如果值大于 4000 个字符：  
   
-- 在宽松模式下，JSON_VALUE 返回 NULL****。  
+- 在宽松模式下，JSON_VALUE 返回 NULL。  
   
-- 在严格模式下，JSON_VALUE 返回错误****。  
+- 在严格模式下，JSON_VALUE 返回错误。  
   
- 如果必须返回大于 4000 个字符的标量值，请使用 OPENJSON 而不是 JSON_VALUE********。 有关详细信息，请参阅 [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)。  
+ 如果必须返回大于 4000 个字符的标量值，请使用 OPENJSON 而不是 JSON_VALUE。 有关详细信息，请参阅 [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)。  
   
 ## <a name="remarks"></a>备注
 
@@ -90,15 +90,15 @@ SET @jsonInfo=N'{
  }'  
 ```  
   
- 下表对宽松模式和严格模式下 JSON_VALUE 的行为进行了比较****。 有关可选路径模式规范（宽松或严格）的详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
+ 下表对宽松模式和严格模式下 JSON_VALUE 的行为进行了比较。 有关可选路径模式规范（宽松或严格）的详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
 |路径|宽松模式下的返回值|严格模式下的返回值|更多信息|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY****。|  
+|$|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY。|  
 |$.info.type|N'1'|N'1'|不适用|  
 |$.info.address.town|N'Bristol'|N'Bristol'|不适用|  
-|$.info."address"|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY****。|  
-|$.info.tags|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY****。|  
+|$.info."address"|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY。|  
+|$.info.tags|Null|错误|不是标量值。<br /><br /> 改用 JSON_QUERY。|  
 |$.info.type[0]|Null|错误|不是数组。|  
 |$.info.none|Null|错误|属性不存在。|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
@@ -106,7 +106,7 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>示例  
   
 ### <a name="example-1"></a>示例 1
- 以下示例在查询结果中使用 JSON 属性 `town` 和 `state` 的值。 由于 JSON_VALUE 保留了源的排序规则，因此结果的排序顺序取决于 `jsonInfo` 列的排序规则****。 
+ 以下示例在查询结果中使用 JSON 属性 `town` 和 `state` 的值。 由于 JSON_VALUE 保留了源的排序规则，因此结果的排序顺序取决于 `jsonInfo` 列的排序规则。 
 
 > [!NOTE]
 > （此示例假定名为 `Person.Person` 的表包含 JSON 文本的 `jsonInfo` 列，且此列具有先前宽松模式和严格模式讨论中所示的结构。 在 AdventureWorks 示例数据库中，`Person` 表实际上不包含 `jsonInfo` 列。）

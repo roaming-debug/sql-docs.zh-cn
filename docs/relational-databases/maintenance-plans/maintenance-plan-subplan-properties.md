@@ -15,15 +15,15 @@ ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d047b18ea2e749ff0a1bb624ba9b4ad197aec7b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420781"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>维护计划（子计划属性）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用“维护计划（子计划属性）”**** 对话框可以为维护计划的子计划指定名称、说明和计划。 在维护计划的“设计”**** 选项卡上单击“子计划属性”****，或者在设计器网格中双击某子计划可显示此对话框。  
+  使用“维护计划（子计划属性）”对话框可以为维护计划的子计划指定名称、说明和计划。 在维护计划的“设计”选项卡上单击“子计划属性”，或者在设计器网格中双击某子计划可显示此对话框。  
   
 ## <a name="options"></a>选项  
  **名称**  

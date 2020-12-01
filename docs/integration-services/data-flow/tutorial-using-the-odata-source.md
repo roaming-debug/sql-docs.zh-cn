@@ -12,10 +12,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12fe80482b6b6ffd96fe6e56e6dfad1a92362fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425669"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教程：使用 OData 源
@@ -23,7 +23,7 @@ ms.locfileid: "88425669"
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  本教程介绍了从示例 Northwind OData 服务 (https://services.odata.org/V3/Northwind/Northwind.svc/)) 提取 Employees 集合，然后将它加载到某一平面文件中的过程********。  
+  本教程介绍了从示例 Northwind OData 服务 (https://services.odata.org/V3/Northwind/Northwind.svc/)) 提取 Employees 集合，然后将它加载到某一平面文件中的过程。  
   
 ## <a name="1-create-an-integration-services-project"></a>1.创建 Integration Services 项目  
   
@@ -31,7 +31,7 @@ ms.locfileid: "88425669"
   
 2.  单击“文件”，指向“新建”并单击“项目”。     
   
-3.  在“新建项目”**** 对话框中，依次展开“已安装”****、“模板”****“商业智能”****，然后单击“Integration Services”****。  
+3.  在“新建项目”对话框中，依次展开“已安装”、“模板”“商业智能”，然后单击“Integration Services”。  
   
 4.  对于项目类型，选择 **“Integration Services 项目”** 。  
   
@@ -39,25 +39,25 @@ ms.locfileid: "88425669"
   
 ## <a name="2-add-and-configure-an-odata-source"></a>2.添加并配置 OData 源 
   
-1.  将“数据流任务”**** 从“SSIS 工具箱”**** 拖放到 SSIS 包的控制流设计图面上。  
+1.  将“数据流任务”从“SSIS 工具箱”拖放到 SSIS 包的控制流设计图面上。  
   
-2.  单击“数据流”**** 选项卡或者双击“数据流任务”**** 以打开“数据流”设计图面。  
+2.  单击“数据流” 选项卡或者双击“数据流任务”以打开“数据流”设计图面。  
   
-3.  从“SSIS 工具箱”**** 的“公共”**** 组中拖放“OData 源”****。
+3.  从“SSIS 工具箱”的“公共”组中拖放“OData 源”。
   
-4.  双击“OData 源”**** 组件可启动“OData 源编辑器”**** 对话框。  
+4.  双击“OData 源”组件可启动“OData 源编辑器”对话框。  
   
-5.  单击“新建…”可添加新的 OData 连接管理器****。  
+5.  单击“新建…”可添加新的 OData 连接管理器。  
   
 6.  为 **“服务文档位置”** 输入 OData 服务 URL。 这可以是指向服务文档的 URL，也可以是指向特定源或实体的 URL。 就本教程而言，请将以下 URL 输入到服务文档中：[https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/)。  
   
 7.  确认为 **“身份验证”** 选择了 **“Windows 身份验证”** ，以便用于访问 OData 服务。 默认情况下将选择 **“Windows 身份验证”** 。  
   
-8.  单击“测试连接”**** 以测试连接，然后单击“确定”**** 以完成 OData 连接管理器实例的创建。  
+8.  单击“测试连接”以测试连接，然后单击“确定”以完成 OData 连接管理器实例的创建。  
   
 9. 在 **“OData 源编辑器”** 对话框中，确认为 **“对资源路径使用集合”** 选项选择了 **“集合”** 。  
   
-10. 从“集合”**** 下拉列表中，选择“Employees”****。  
+10. 从“集合”下拉列表中，选择“Employees”。  
   
 11. 为 **“查询选项”** 输入任何其他 OData 查询选项或筛选器。 例如，`$orderby=CompanyName&$top=100`。 为了实现本教程的教学目的，请输入 `$top=5`。  
   
@@ -71,17 +71,17 @@ ms.locfileid: "88425669"
   
 ## <a name="3-add-and-configure-a-flat-file-destination"></a>3.添加并配置平面文件目标
   
-1.  现在，将“平面文件目标”**** 从“SSIS 工具箱”**** 拖放到“OData 源”**** 组件下的数据流设计图面上。  
+1.  现在，将“平面文件目标”从“SSIS 工具箱”拖放到“OData 源”组件下的数据流设计图面上。  
   
 2.  使用蓝色箭头将 **“OData 源”** 组件与 **“平面文件目标”** 组件连接起来。  
   
-3.  双击“平面文件目标”****。 您应该会看到 **“平面文件目标编辑器”** 对话框。  
+3.  双击“平面文件目标”。 您应该会看到 **“平面文件目标编辑器”** 对话框。  
   
 4.  在 **“平面文件目标编辑器”** 对话框中，单击 **“新建”** 创建新的平面文件连接管理器。  
   
-5.  在 **“平面文件格式”** 对话框中，选择 **“带分隔符”**。 接着出现“平面文件连接管理器编辑器”**** 对话框。  
+5.  在 **“平面文件格式”** 对话框中，选择 **“带分隔符”**。 接着出现“平面文件连接管理器编辑器”对话框。  
   
-6.  在“平面文件连接管理器编辑器”**** 对话框中，为“文件名”**** 输入 `c:\Employees.txt`。  
+6.  在“平面文件连接管理器编辑器”对话框中，为“文件名”输入 `c:\Employees.txt`。  
   
 7.  在左侧导航窗格中，单击 **“列”**。 您可以预览此页上的数据。  
   

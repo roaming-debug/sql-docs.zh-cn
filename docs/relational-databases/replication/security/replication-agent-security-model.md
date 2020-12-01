@@ -22,10 +22,10 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 41d77ae1b9c0763fedf2e53610bb3a0be5cd185c
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "87823922"
 ---
 # <a name="replication-agent-security-model"></a>复制代理安全性模式
@@ -59,7 +59,7 @@ ms.locfileid: "87823922"
 |代理|权限|  
 |-----------|-----------------|  
 |快照代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须：<br /><br /> -至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> -对快照共享具有读取、写入和修改权限。<br /><br /> <br /><br /> 注意：用于 *连接* 到发布服务器的帐户必须至少是发布数据库中的 **db_owner** 固定数据库角色的成员。|  
-|日志读取器代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 用于连接到发布服务器的帐户必须至少是发布数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 选择 **sync_type** 选项 *replication support only*、 *initialize with backup*或 *initialize from lsn*时，日志读取器代理必须在执行 **sp_addsubscription**后运行，以便将设置脚本写入分发数据库。 日志读取器代理必须在作为 **sysadmin** 固定服务器角色成员的帐户下运行。 将 **sync_type** 选项设置为 *Automatic*时，不需要执行任何特殊日志读取器代理操作。|  
+|日志读取器代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 用于连接到发布服务器的帐户必须至少是发布数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 选择 **sync_type** 选项 *replication support only*、 *initialize with backup* 或 *initialize from lsn* 时，日志读取器代理必须在执行 **sp_addsubscription** 后运行，以便将设置脚本写入分发数据库。 日志读取器代理必须在作为 **sysadmin** 固定服务器角色成员的帐户下运行。 将 **sync_type** 选项设置为 *Automatic* 时，不需要执行任何特殊日志读取器代理操作。|  
 |推送订阅的分发代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须：<br /><br /> -至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> -是 PAL 的成员。<br /><br /> -对快照共享拥有读取权限。<br /><br /> -如果订阅针对非 SQL Server 订阅服务器，则具备对订阅服务器的 OLE DB 访问接口的安装目录的访问权限。<br /><br /> -当复制 LOB 数据时，分发代理必须对复制 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 具有编写权限，其中 XX 表示实例 ID。<br /><br /> <br /><br /> 注意：用于 *连接* 到订阅服务器的帐户必须至少是订阅数据库中的 **db_owner** 固定数据库角色的成员；如果订阅针对于非 SQL Server 订阅服务器，则必须具有同等权限。<br /><br /> 另请注意，在分发代理上使用 `-subscriptionstreams >= 2` 时，你还必须对订阅服务器授予 **View Server State** 权限，以便检测到死锁。|  
 |请求订阅的分发代理|与订阅服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是订阅数据库中的 **db_owner** 固定数据库角色的成员。 用于连接到分发服务器的帐户必须：<br /><br /> -是 PAL 的成员。<br /><br /> -对快照共享拥有读取权限。<br /><br /> -当复制 LOB 数据时，分发代理必须对复制 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 具有编写权限，其中 XX 表示实例 ID。<br /><br /> <br /><br /> 注意：在分发代理上使用 `-subscriptionstreams >= 2` 时，你还必须对订阅服务器授予 **View Server State** 权限，以便检测到死锁。|  
 |推送订阅的合并代理|与发布服务器和分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须：<br /><br /> -至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> -是 PAL 的成员。<br /><br /> -是与发布数据库中某个具有读取/写入权限的用户关联的登录名。<br /><br /> -对快照共享拥有读取权限。<br /><br /> <br /><br /> 注意：用于 *连接* 到订阅服务器的帐户必须至少是订阅数据库中的 **db_owner** 固定数据库角色的成员。|  

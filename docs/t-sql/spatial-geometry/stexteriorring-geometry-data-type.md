@@ -19,16 +19,16 @@ ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7bdf05ddaa39a225bf77538fd492387c481c4749
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88416913"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-返回多边形 geometry 实例的外环****。
+返回多边形 geometry 实例的外环。
   
 ## <a name="syntax"></a>语法  
   
@@ -40,17 +40,17 @@ ms.locfileid: "88416913"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
- 开放地理空间信息联盟 (OGC) 类型：LineString****  
+ 开放地理空间信息联盟 (OGC) 类型：LineString  
   
 ## <a name="remarks"></a>备注  
- 如果 geometry 实例不是多边形，则此方法返回 NULL********。  
+ 如果 geometry 实例不是多边形，则此方法返回 NULL。  
   
 ## <a name="examples"></a>示例  
- 以下示例创建 `Polygon` 实例，并使用 `STExteriorRing()` 以 LineString 的形式返回多边形的外环****。  
+ 以下示例创建 `Polygon` 实例，并使用 `STExteriorRing()` 以 LineString 的形式返回多边形的外环。  
   
 ```  
 DECLARE @g geometry;  

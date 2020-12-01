@@ -27,10 +27,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ffe1565499230f86bbf2bde44afb8d2b6bdb9e1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88310273"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
@@ -52,15 +52,15 @@ MONTH ( date )
 
 ## <a name="arguments"></a>参数
  *date*  
- 一个表达式，它可以解析为 time、date、smalldatetime、datetime、datetime2 或 datetimeoffset 值************************。 date 参数可以是表达式、列表达式、用户定义变量或字符串文字**。  
+ 一个表达式，它可以解析为 time、date、smalldatetime、datetime、datetime2 或 datetimeoffset 值。 date 参数可以是表达式、列表达式、用户定义变量或字符串文字。  
   
 ## <a name="return-type"></a>返回类型  
  **int**  
   
 ## <a name="return-value"></a>返回值  
- MONTH 返回的值与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (month, date) 所返回的值相同******。  
+ MONTH 返回的值与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (month, date) 所返回的值相同。  
   
- 如果 date 只包含时间部分，则返回值为 1，即基准月**。  
+ 如果 date 只包含时间部分，则返回值为 1，即基准月。  
   
 ## <a name="examples"></a>示例  
  下面的语句将返回 `4`。 这是月份的数字。  
@@ -69,7 +69,7 @@ MONTH ( date )
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');  
 ```  
   
- 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
 ```sql  
 SELECT YEAR(0), MONTH(0), DAY(0);  
@@ -85,7 +85,7 @@ SELECT TOP 1 MONTH('2007-04-30T01:01:01.1234')
 FROM dbo.DimCustomer;  
 ```  
   
- 下面的示例将返回 `1900, 1, 1`。 date 的参数为数字 `0`**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的示例将返回 `1900, 1, 1`。 date 的参数为数字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
 ```sql  
 -- Uses AdventureWorks  

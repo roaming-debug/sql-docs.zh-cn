@@ -19,16 +19,16 @@ ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 76adf5bfff925c74f728d19b6781f346646354fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88306187"
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式返回 geographyMultiPolygon 实例****。
+从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式返回 geographyMultiPolygon 实例。
   
 ## <a name="syntax"></a>语法  
   
@@ -40,18 +40,18 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- WKB_multipolygon**  
- 希望返回的 geographyMultiPolygon 实例的 WKB 表示形式****。 WKB_multipolygon 是一个 varbinary(max) 表达式******。  
+ WKB_multipolygon  
+ 希望返回的 geographyMultiPolygon 实例的 WKB 表示形式。 WKB_multipolygon 是一个 varbinary(max) 表达式。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geographyMultiPolygon 实例的空间引用 ID (SRID)********。  
+ 一个 int 表达式，表示希望返回的 geographyMultiPolygon 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
  CLR 返回类型：SqlGeography  
   
- OGC 类型：MultiPolygon****  
+ OGC 类型：MultiPolygon  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STMPolyFromWKB()` 创建 `geography` 实例。  

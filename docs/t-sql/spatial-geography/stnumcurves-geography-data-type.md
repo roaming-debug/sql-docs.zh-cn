@@ -19,16 +19,16 @@ ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 3f2d2eead1803745d58cc827b85acd612f925a0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88306040"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回一维 geography 实例中的曲线数****。  
+  返回一维 geography 实例中的曲线数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,11 +45,11 @@ ms.locfileid: "88306040"
  CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
- 一维空间数据类型包括 LineString、CircularString 和 CompoundCurve************。 空的一维 geography 实例返回 0****。  
+ 一维空间数据类型包括 LineString、CircularString 和 CompoundCurve。 空的一维 geography 实例返回 0。  
   
- `STNumCurves`() 仅适用于简单类型，它不适用于 MultiLineString 之类的 geography 集合********。 当 geography 实例不是一维数据类型时，将返回 NULL********。  
+ `STNumCurves`() 仅适用于简单类型，它不适用于 MultiLineString 之类的 geography 集合。 当 geography 实例不是一维数据类型时，将返回 NULL。  
   
- 对于未初始化的 geography 实例，返回 Null********。  
+ 对于未初始化的 geography 实例，返回 Null。  
   
 ## <a name="examples"></a>示例  
   

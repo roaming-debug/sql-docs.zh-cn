@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b8487f821b698974744fdc18453a2a5c8285d889
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408003"
 ---
 # <a name="indexes"></a>索引
@@ -38,7 +38,7 @@ ms.locfileid: "88408003"
 |带有包含列的索引|一种非聚集索引，它扩展后不仅包含键列，还包含非键列。|[创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)|  
 |计算列上的索引|从一个或多个其他列的值或某些确定的输入值派生的列上的索引。|[计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)|  
 |Filtered|一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。|[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [筛选索引设计指南](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
-|空间|利用空间索引，可以更高效地对*几何*数据类型的列中的空间对象（ **空间数据** ）执行某些操作。 空间索引可减少需要应用开销相对较大的空间操作的对象数。|[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)|  
+|空间|利用空间索引，可以更高效地对 *几何* 数据类型的列中的空间对象（ **空间数据** ）执行某些操作。 空间索引可减少需要应用开销相对较大的空间操作的对象数。|[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)|  
 |XML|**xml** 数据类型列中 XML 二进制大型对象 (BLOB) 的已拆分持久表示形式。|[XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)|  
 |全文|一种特殊类型的基于标记的功能性索引，由 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文引擎生成和维护。 用于帮助在字符串数据中搜索复杂的词。|[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)|  
   

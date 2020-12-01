@@ -18,10 +18,10 @@ ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 897ecc72090649e881c82279dcbb8bac94b672c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426539"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT 程序集权限 (Transact-SQL)
@@ -46,7 +46,7 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  permission  
  指定可对程序集授予的权限。 如下所列。  
   
- ON ASSEMBLY ::assembly_name****__  
+ ON ASSEMBLY ::assembly_name  
  指定对其授予权限的程序集。 需要使用作用域限定符“::”。  
   
  database_principal  

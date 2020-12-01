@@ -14,10 +14,10 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fa83e2b75860730f4e3d9b419a2ca8ca374ba31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88393423"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>函数依赖关系配置文件请求选项（数据事件探查任务）
@@ -33,7 +33,7 @@ ms.locfileid: "88393423"
  有关如何使用数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>了解如何选择决定列和依赖列  
- “函数依赖关系配置文件请求”**** 计算决定端列或列集（在 **DeterminantColumns** 属性中指定）对依赖端列（在 **DependentColumn** 属性中指定）的值的决定程度。 例如，美国的州列在函数关系上应依赖于美国邮政编码列。 也就是说，如果邮政编码（决定列）为 98052，则州（依赖列）应始终为华盛顿。  
+ “函数依赖关系配置文件请求”计算决定端列或列集（在 **DeterminantColumns** 属性中指定）对依赖端列（在 **DependentColumn** 属性中指定）的值的决定程度。 例如，美国的州列在函数关系上应依赖于美国邮政编码列。 也就是说，如果邮政编码（决定列）为 98052，则州（依赖列）应始终为华盛顿。  
   
  可以在 **DeterminantColumns** 属性中指定一个列或列集作为决定端。 例如，假定有一个包含列 A、B 和 C 的示例表，则您可以在 **DeterminantColumns** 属性中进行以下选择：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88393423"
  有关详细信息，请参阅本主题中的“了解如何选择决定列和依赖列”以及“DeterminantColumns 和 DependentColumn 选项”部分。  
   
 #### <a name="determinantcolumns-and-dependentcolumn-options"></a>DeterminantColumns 和 DependentColumn 选项  
- 对于在 **DeterminantColumns** 和 **DependentColumn**中选定进行事件探查的每个列，将显示以下选项。  
+ 对于在 **DeterminantColumns** 和 **DependentColumn** 中选定进行事件探查的每个列，将显示以下选项。  
   
  有关详细信息，请参阅本主题前面的“了解如何选择决定列和依赖列”部分。  
   
@@ -115,14 +115,14 @@ ms.locfileid: "88393423"
 |值|说明|  
 |-----------|-----------------|  
 |**无**|不指定阈值。 不管函数依赖关系强度值如何，都会报告函数依赖关系强度。|  
-|**Specified**|使用 **FDStrengthThreshold**中指定的阈值。 仅当函数依赖关系强度大于阈值时，才会报告函数依赖关系强度。|  
+|**Specified**|使用 **FDStrengthThreshold** 中指定的阈值。 仅当函数依赖关系强度大于阈值时，才会报告函数依赖关系强度。|  
 |**Exact**|不指定阈值。 仅当选定列之间具有完全匹配的函数依赖关系时，才会报告函数依赖关系强度。|  
   
  **FDStrengthThreshold**  
- 指定阈值（使用介于 0 和 1 之间的值），仅当函数依赖关系强度大于该阈值时，才会报告函数依赖关系强度。 此属性的默认值为 0.95。 仅当选择了 **Specified** 作为 **ThresholdSetting**时，才会启用该选项。  
+ 指定阈值（使用介于 0 和 1 之间的值），仅当函数依赖关系强度大于该阈值时，才会报告函数依赖关系强度。 此属性的默认值为 0.95。 仅当选择了 **Specified** 作为 **ThresholdSetting** 时，才会启用该选项。  
   
  **MaxNumberOfViolations**  
- 指定要在输出中报告的函数依赖关系冲突的最大数量。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **ThresholdSetting**时，才会禁用该选项。  
+ 指定要在输出中报告的函数依赖关系冲突的最大数量。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **ThresholdSetting** 时，才会禁用该选项。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

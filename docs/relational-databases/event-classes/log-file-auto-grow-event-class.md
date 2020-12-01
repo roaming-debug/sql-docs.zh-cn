@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 78704ae9dfd932f18dcc4afa2152ee55fbccb734
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88448613"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-   Log File Auto Grow **** 事件类指明日志文件自动增长了。 如果通过 ALTER DATABASE 使日志文件显式增长，则不会触发此事件。  
+   Log File Auto Grow  事件类指明日志文件自动增长了。 如果通过 ALTER DATABASE 使日志文件显式增长，则不会触发此事件。  
   
  **Log File Auto Grow** 事件类包括在监视日志文件增长的跟踪中。 此事件类包括在跟踪中后，引发的开销量较低，除非日志文件频繁地自动增长。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88448613"
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
 |**Duration**|**bigint**|扩展文件所需的时间长度（毫秒）。|13|是|  
-|**EndTime**|**datetime**|日志文件自动增长 **** 的结束时间。|18|是|  
+|**EndTime**|**datetime**|日志文件自动增长  的结束时间。|18|是|  
 |**EventClass**|**int**|事件类型 = 93。|27|否|  
 |**EventSequence**|**int**|**CursorClose** 事件类在批处理中的顺序。|51|否|  
 |**Filename**|**nvarchar**|扩展的文件的逻辑名称。|36|是|  

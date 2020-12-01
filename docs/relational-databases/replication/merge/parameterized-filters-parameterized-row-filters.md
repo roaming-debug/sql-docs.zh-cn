@@ -22,10 +22,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 656f36cce2c1b458f2eb85c734709691b59a82bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423541"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>参数化筛选器 - 参数化行筛选器
@@ -55,7 +55,7 @@ ms.locfileid: "88423541"
 >  对参数化筛选器进行比较时，将始终使用数据库排序规则。 例如，如果数据库排序规则不区分大小写，而表或列排序规则区分大小写，那么该比较将不区分大小写。  
   
 ### <a name="filtering-with-suser_sname"></a>使用 SUSER_SNAME() 进行筛选  
- 下面以 **示例数据库中的** Employee 表 [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] 为例进行说明。 此表包含 **LoginID**列，该列中每个雇员的登录名的格式为“*domain\login*”。 若要筛选此表以便雇员仅接收与之相关的数据，请指定筛选子句：  
+ 下面以 **示例数据库中的** Employee 表 [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] 为例进行说明。 此表包含 **LoginID** 列，该列中每个雇员的登录名的格式为“*domain\login*”。 若要筛选此表以便雇员仅接收与之相关的数据，请指定筛选子句：  
   
 ```  
 LoginID = SUSER_SNAME()  
@@ -89,14 +89,14 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 > [!NOTE]  
 >  如果覆盖 HOST_NAME()，则对 HOST_NAME() 函数的所有调用将全部返回指定的值。 请确保其他应用程序未依赖于返回计算机名称的 HOST_NAME()。  
   
- 下面以 **HumanResources.Employee** 表为例进行说明。 此表包含 **EmployeeID**列。 若要筛选此表以便每个雇员仅接收与他们相关的数据，请指定筛选子句：  
+ 下面以 **HumanResources.Employee** 表为例进行说明。 此表包含 **EmployeeID** 列。 若要筛选此表以便每个雇员仅接收与他们相关的数据，请指定筛选子句：  
   
  `EmployeeID = CONVERT(int,HOST_NAME())`  
   
  例如，为雇员 Pamela Ansman-Wolfe 分配的雇员 ID 为 280。 为此雇员创建订阅时，为 HOST_NAME() 值指定雇员 ID 值（在此例中为 280）。 合并代理连接到发布服务器时，会将 HOST_NAME() 返回的值与表中的值进行比较，并仅下载 **EmployeeID** 列中值为 280 的行。  
   
 > [!IMPORTANT]
->  HOST_NAME() 函数会返回 **nchar** 值，因此如果筛选子句中的列为数值数据类型（如前面示例所示），则必须使用 CONVERT。 出于性能方面的考虑，建议您不要对参数化行筛选器子句（如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`）中的列名应用函数。 建议改为使用示例中所示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用于 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 `@subset_filterclause` 参数，但通常不能在新建发布向导中使用（该向导会执行筛选子句以对其进行验证，而此验证会失败，因为计算机名称无法转换为 int中，参数化筛选器称为“动态筛选器”）****。 如果使用的是新建发布向导，建议在向导中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然后在为发布创建快照之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 将子句更改为 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
+>  HOST_NAME() 函数会返回 **nchar** 值，因此如果筛选子句中的列为数值数据类型（如前面示例所示），则必须使用 CONVERT。 出于性能方面的考虑，建议您不要对参数化行筛选器子句（如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`）中的列名应用函数。 建议改为使用示例中所示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用于 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 `@subset_filterclause` 参数，但通常不能在新建发布向导中使用（该向导会执行筛选子句以对其进行验证，而此验证会失败，因为计算机名称无法转换为 int中，参数化筛选器称为“动态筛选器”）。 如果使用的是新建发布向导，建议在向导中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然后在为发布创建快照之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 将子句更改为 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
   
  **覆盖 HOST_NAME() 值**  
   
@@ -116,7 +116,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   如何通过合并复制处理筛选器，可以通过以下两个发布设置之一控制： **use partition groups** 和 **keep partition changes**。  
   
--   数据如何在订阅服务器之间共享，必须通过项目设置 **partition options**来反映。  
+-   数据如何在订阅服务器之间共享，必须通过项目设置 **partition options** 来反映。  
   
  若要设置筛选选项，请参阅 [Optimize Parameterized Row Filters](../../../relational-databases/replication/publish/optimize-parameterized-row-filters.md)。  
   
@@ -133,7 +133,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |分区中的数据不重叠，并且数据由所有订阅共享。 订阅服务器无法更新参数化筛选器中引用的列。|N/A*|**不重叠，由所有订阅共享**|**2**|  
 |分区中的数据不重叠，每个分区只有一个订阅。 订阅服务器无法更新参数化筛选器中引用的列。**|**此表中的行将仅转到一个订阅**|**不重叠，一个订阅**|**3**|  
   
- \*如果基础筛选选项设置为 **0**、**1** 或 **2**，则“添加筛选器”和“编辑筛选器”对话框中会显示“此表中的行将转到多个订阅”。************  
+ \*如果基础筛选选项设置为 **0**、**1** 或 **2**，则“添加筛选器”和“编辑筛选器”对话框中会显示“此表中的行将转到多个订阅”。  
   
  **如果你指定此选项，则相应项目中的每个数据分区只能有一个订阅。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。  
   
@@ -184,7 +184,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   项目应只有一个参数化筛选器或联接筛选器。 允许具有参数化筛选器，并允许其作为联接筛选器中的父项目。 不允许具有参数化筛选器，并且不允许其作为联接筛选器中的子项目。 也不允许具有多个联接筛选器。  
   
--   如果发布服务器上的两个表有联接筛选器关系，并且子表的行在父表中没有对应的行，则插入缺少的父行不会导致相关行下载到订阅服务器（这些行将随重叠分区下载）。 例如，如果 **SalesOrderDetail** 表的行在 **SalesOrderHeader** 表中没有对应的行，则在 **SalesOrderHeader**中插入缺少的行后，该行将下载到订阅服务器，但 **SalesOrderDetail** 中对应的行不会下载到订阅服务器。  
+-   如果发布服务器上的两个表有联接筛选器关系，并且子表的行在父表中没有对应的行，则插入缺少的父行不会导致相关行下载到订阅服务器（这些行将随重叠分区下载）。 例如，如果 **SalesOrderDetail** 表的行在 **SalesOrderHeader** 表中没有对应的行，则在 **SalesOrderHeader** 中插入缺少的行后，该行将下载到订阅服务器，但 **SalesOrderDetail** 中对应的行不会下载到订阅服务器。  
   
 ## <a name="see-also"></a>另请参阅  
  [基于时间的行筛选器的最佳做法](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   

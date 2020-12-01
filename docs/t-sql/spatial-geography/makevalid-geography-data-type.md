@@ -16,16 +16,16 @@ ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7a3ca43dea611fb3fb74167032bd72f045e39b41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422411"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  将无效的 geography 实例转换为具有有效开放地理空间信息联盟 (OGC) 类型的有效 geography 实例********。  
+  将无效的 geography 实例转换为具有有效开放地理空间信息联盟 (OGC) 类型的有效 geography 实例。  
   
  如果输入对象针对 STIsValid() 返回 False，则 `MakeValid()` 将无效实例转换为有效实例。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "88422411"
  CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
- 此方法可能更改 geography 实例的类型****。 此外，geography 实例的点可能会略有偏移****。 某些方法（如 NumPoint()）产生的结果可能会发生变化。  
+ 此方法可能更改 geography 实例的类型。 此外，geography 实例的点可能会略有偏移。 某些方法（如 NumPoint()）产生的结果可能会发生变化。  
   
- 在无效的空间实例与赤道相交且 EnvelopeAngle() = 180 的情况下，将返回 FullGlobe 实例****。 `MakeValid()` geography 数据类型方法将以最佳方式尝试返回有效的实例，但不保证结果的准确性或精确性****。  
+ 在无效的空间实例与赤道相交且 EnvelopeAngle() = 180 的情况下，将返回 FullGlobe 实例。 `MakeValid()` geography 数据类型方法将以最佳方式尝试返回有效的实例，但不保证结果的准确性或精确性。  
   
 > [!NOTE]  
 >  无效的对象可以存储在数据库中。 可对无效实例（即 STIsValid() 对其返回 False 的那些实例）执行的方法是用于检查有效性或允许导出的方法：STIsValid()、MakeValid()、STAsText()、STAsBinary()、ToString()、AsTextZM() 和 AsGml()。  

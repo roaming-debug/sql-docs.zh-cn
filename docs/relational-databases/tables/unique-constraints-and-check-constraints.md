@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: efd7fb070a81715b88d6949fac47c972bdd0643d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88418961"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一约束和 CHECK 约束
@@ -55,7 +55,7 @@ ms.locfileid: "88418961"
 >  包括隐式或显式数据类型转换的约束可能会导致某些操作失败。 例如，为表定义的作为分区切换的源的此类约束可能会导致 ALTER TABLE...SWITCH 操作失败。 在约束定义中避免数据类型转换。  
   
 ### <a name="limitations-of-check-constraints"></a>CHECK 约束的限制  
- CHECK 约束不接受计算结果为 FALSE 的值。 因为空值的计算结果为 UNKNOWN，所以表达式中存在这些值可能会覆盖约束。 例如，假设对指定 **MyColumn** 只能包含值 10（即 **MyColumn=10** ）的 **int** 列**MyColumn**应用一个约束。 如果将值 NULL 插入到 **MyColumn**， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将插入 NULL 且不返回错误。  
+ CHECK 约束不接受计算结果为 FALSE 的值。 因为空值的计算结果为 UNKNOWN，所以表达式中存在这些值可能会覆盖约束。 例如，假设对指定 **MyColumn** 只能包含值 10（即 **MyColumn=10** ）的 **int** 列 **MyColumn** 应用一个约束。 如果将值 NULL 插入到 **MyColumn**， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将插入 NULL 且不返回错误。  
   
  如果 CHECK 约束检查的条件对于表中的任何行都不是 FALSE，它将返回 TRUE。 CHECK 约束在行级执行。 如果刚创建的表没有任何行，则此表的任何 CHECK 约束都视为有效。 这种情况可能会产生意外结果，如下面的示例所示。  
   

@@ -12,10 +12,10 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ee2861b40dbe132e7c95b52802bd10ccd46c20c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426089"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何编辑 CDC 实例属性
@@ -35,7 +35,7 @@ ms.locfileid: "88426089"
   
 4.  从 CDC 设计器控制台右侧的“操作”窗格中，单击 **“属性”**。  
   
-     也可以右键单击要编辑其属性的实例，然后单击“属性”****。  
+     也可以右键单击要编辑其属性的实例，然后单击“属性”。  
   
 5.  在属性编辑器中，在以下选项卡中编辑属性：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88426089"
   
          有关可在此选项卡中编辑的内容的信息，请参阅 [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)。  
   
-    -   **脚本**：使用“脚本”**** 选项卡可对 Oracle 源数据库运行或重新运行一个设置补充日志记录的脚本。  
+    -   **脚本**：使用“脚本”选项卡可对 Oracle 源数据库运行或重新运行一个设置补充日志记录的脚本。  
   
          有关可在此选项卡中执行的操作的信息，请参阅 [Review and Generate Supplemental Logging Scripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)。  
   

@@ -19,16 +19,16 @@ ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9e7b33ea60599dc5920d15df18177a34bcdde07c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88416973"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndPoint（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回 geography 实例的终点****。  
+  返回 geography 实例的终点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,12 +44,12 @@ ms.locfileid: "88416973"
   
  CLR 返回类型：SqlGeography  
   
- 开放地理空间信息联盟 (OGC) 类型：Point****  
+ 开放地理空间信息联盟 (OGC) 类型：Point  
   
 ## <a name="remarks"></a>注解  
  STEndPoint() 等效于 [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`。  
   
- 如果针对空 geography 实例调用此方法，则此方法返回 Null****。  
+ 如果针对空 geography 实例调用此方法，则此方法返回 Null。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `LineString` 创建 `STGeomFromText()` 实例，并使用 `STEndPoint()` 检索 `LineString` 的终点。  

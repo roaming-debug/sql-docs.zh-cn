@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408113"
 ---
 # <a name="indexes-on-computed-columns"></a>计算列上的索引
@@ -43,7 +43,7 @@ ms.locfileid: "88408113"
 ## <a name="determinism-requirements"></a>确定性要求  
 
 如果对于一组指定的输入表达式始终返回相同的结果，则说明表达式具有确定性。 **COLUMNPROPERTY** 函数的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 属性报告 *computed_column_expression* 是否具有确定性。  
-*Computed_column_expression* 必须具有确定性。 如果下列所有项均为真，则 computed_column_expression 具有确定性**：  
+*Computed_column_expression* 必须具有确定性。 如果下列所有项均为真，则 computed_column_expression 具有确定性：  
   
 -   表达式引用的所有函数都具有确定性，并且是精确的。 这些函数包括用户定义函数和内置函数。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 如果计算列是 PERSISTED，则函数可能不精确。 有关详细信息，请参阅本主题后面的 [对持久化计算列创建索引](#BKMK_persisted) 。  
   
@@ -95,9 +95,9 @@ COLUMNPROPERTY 函数的 **IsPrecise** 属性报告 *computed_column_expression*
 
 ## <a name="data-type-requirements"></a>数据类型要求
   
--   为计算列定义的 *computed_column_expression* 不能求值为 **text**、 **ntext**或 **image** 数据类型。  
+-   为计算列定义的 *computed_column_expression* 不能求值为 **text**、 **ntext** 或 **image** 数据类型。  
 -   只要计算列的数据类型可以作为索引键列，从 **image**、 **ntext**、 **text**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 和 **xml** 数据类型派生的计算列上就可以创建索引。  
--   只要计算列的数据类型可以作为非键索引列，从 **image**、 **ntext**和 **text** 数据类型派生的计算列就可以作为非聚集索引中的非键（包含性）列。  
+-   只要计算列的数据类型可以作为非键索引列，从 **image**、 **ntext** 和 **text** 数据类型派生的计算列就可以作为非聚集索引中的非键（包含性）列。  
 
 
 ## <a name="set-option-requirements"></a>SET 选项要求

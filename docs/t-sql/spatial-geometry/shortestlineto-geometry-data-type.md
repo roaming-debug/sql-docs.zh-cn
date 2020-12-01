@@ -16,10 +16,10 @@ ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bd22be1b41ec9213d8e42c66f4de187581d7381d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422291"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo（geometry 数据类型）
@@ -41,9 +41,9 @@ ms.locfileid: "88422291"
  第二个 **geometry** 实例，执行调用的 **geometry** 实例尝试确定与该实例之间的最短距离。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="remarks"></a>备注  
  该方法返回一个 **LineString** 实例，它包含的端点位于所比较的两个不相交 **geometry** 实例的边界上。 返回的 **LineString** 长度等于两个 **geometry** 实例之间的最短距离。 当两个 **geometry** 实例彼此相交时，将返回空的 **LineString** 实例。  

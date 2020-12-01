@@ -18,15 +18,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 92a2570f2d591f3eb2fb3c2c460c60809bc0f5fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88427919"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server 复制“发布服务器设置”对话框
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  可以使用“发布服务器设置”**** 对话框，更改已添加到复制监视器左窗格中的发布服务器的设置。  
+  可以使用“发布服务器设置”对话框，更改已添加到复制监视器左窗格中的发布服务器的设置。  
   
 ## <a name="options"></a>选项  
  **发布服务器连接**  

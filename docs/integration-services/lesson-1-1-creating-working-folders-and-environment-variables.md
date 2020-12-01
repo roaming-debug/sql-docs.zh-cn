@@ -12,10 +12,10 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c91be2fffde29a362dd73da41159b4a4658bce3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449736"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>第 1-1 课 - 创建工作文件夹和环境变量
@@ -37,31 +37,31 @@ ms.locfileid: "88449736"
   
 1.  右键单击“开始”菜单，再单击“资源管理器”。  
   
-2.  单击“本地磁盘 (C:)”****。  
+2.  单击“本地磁盘 (C:)”。  
   
-3.  在“文件”**** 菜单上，指向“新建”****，再单击“文件夹”****。  
+3.  在“文件”菜单上，指向“新建”，再单击“文件夹”。  
   
-4.  将“新建文件夹”重命名为“DeploymentTutorial”****。  
+4.  将“新建文件夹”重命名为“DeploymentTutorial”。  
   
 ### <a name="to-create-local-environment-variables"></a>创建本地环境变量  
   
 1.  在 **“开始”** 菜单上，单击 **“控制面板”** 。  
   
-2.  在控制面板中，双击“系统”****。  
+2.  在控制面板中，双击“系统”。  
   
 3.  在 **“系统属性”** 对话框中，单击 **“高级”** 选项卡，再单击 **“环境变量”**。  
   
-4.  在“环境变量”**** 对话框的“系统变量”**** 框架中，单击“新建”****。  
+4.  在“环境变量”对话框的“系统变量”框架中，单击“新建”。  
   
-5.  在“新建系统变量”**** 对话框中，在“变量名”**** 框中键入 **DataTransfer**，并在“变量值”**** 框中键入 **C:\DeploymentTutorial\datatransferconfig.dtsconfig**。  
+5.  在“新建系统变量”对话框中，在“变量名”框中键入 **DataTransfer**，并在“变量值”框中键入 **C:\DeploymentTutorial\datatransferconfig.dtsconfig**。  
   
 6.  单击“确定”。   
   
-7.  再次单击“新建”****，在“变量名”**** 框中键入 **LoadXMLData**，并在“变量值”**** 框中键入 **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig**。  
+7.  再次单击“新建”，在“变量名”框中键入 **LoadXMLData**，并在“变量值”框中键入 **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig**。  
   
-8.  单击“确定”**** 退出“环境变量”**** 对话框。  
+8.  单击“确定”退出“环境变量”对话框。  
   
-9. 单击“确定”**** 退出“系统属性”**** 对话框。  
+9. 单击“确定”退出“系统属性”对话框。  
   
 10. （可选）重新启动计算机。 如果不重新启动计算机，则在包配置向导中将不显示新变量的名称，但是您仍可以使用它。  
   
@@ -69,21 +69,21 @@ ms.locfileid: "88449736"
   
 1.  在 **“开始”** 菜单上，单击 **“控制面板”** 。  
   
-2.  在控制面板中，双击“系统”****。  
+2.  在控制面板中，双击“系统”。  
   
 3.  在 **“系统属性”** 对话框中，单击 **“高级”** 选项卡，再单击 **“环境变量”**。  
   
-4.  在“环境变量”**** 对话框的“系统变量”**** 框架中，单击“新建”****。  
+4.  在“环境变量”对话框的“系统变量”框架中，单击“新建”。  
   
-5.  在“新建系统变量”**** 对话框中，在“变量名”**** 框中键入 **DataTransfer**，并在“变量值”**** 框中键入 **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig**。  
+5.  在“新建系统变量”对话框中，在“变量名”框中键入 **DataTransfer**，并在“变量值”框中键入 **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig**。  
   
 6.  单击“确定”。   
   
-7.  再次单击“新建”****，在“变量名”**** 框中键入 **LoadXMLData**，并在“变量值”**** 框中键入 **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig**。  
+7.  再次单击“新建”，在“变量名”框中键入 **LoadXMLData**，并在“变量值”框中键入 **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig**。  
   
-8.  单击“确定”**** 退出“环境变量”**** 对话框。  
+8.  单击“确定”退出“环境变量”对话框。  
   
-9. 单击“确定”**** 退出“系统属性”**** 对话框。  
+9. 单击“确定”退出“系统属性”对话框。  
   
 10. （可选）重新启动计算机。  
   

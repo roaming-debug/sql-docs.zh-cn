@@ -23,10 +23,10 @@ ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11d55d52b04436b4e1628c961114535c313c0d1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88304671"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
@@ -50,7 +50,7 @@ SET STATISTICS XML { ON | OFF }
   
  当 SET STATISTICS XML 为 ON 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在执行每条语句后返回该语句的执行信息。 该选项设置为 ON 后，将返回有关所有后续 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的信息，直到该选项设置为 OFF 为止。 请注意，SET STATISTICS XML 不必是批处理中的唯一语句。  
   
- SET STATISTICS XML 为应用程序（如 sqlcmd 实用工具）返回 nvarchar(max) 类型的输出，其中的 XML 输出随后将由其他工具用于显示和处理查询计划信息********。  
+ SET STATISTICS XML 为应用程序（如 sqlcmd 实用工具）返回 nvarchar(max) 类型的输出，其中的 XML 输出随后将由其他工具用于显示和处理查询计划信息。  
   
  SET STATISTICS XML 返回的信息是一组 XML 文档。 SET STATISTICS XML ON 语句后面的每条语句都反映在输出的单个文档中。 每个文档都包含该语句的文本，后面是执行步骤的详细信息。 此输出显示了诸如开销、访问索引以及所执行操作的类型、联接顺序、某个物理操作的执行次数、每个物理运算符生成的行数等运行时信息。  
   
@@ -63,7 +63,7 @@ SET STATISTICS XML { ON | OFF }
  SET STATISTICS PROFILE 和 SET STATISTICS XML 彼此互为对等物。 前者生成文本输出；后者生成 XML 输出。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，新的查询执行计划信息将只通过 SET STATISTICS XML 语句显示，而不通过 SET STATISTICS PROFILE 语句显示。  
   
 > [!NOTE]  
->  如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出****。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮****。  
+>  如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮。  
   
 ## <a name="permissions"></a>权限  
  若要使用 SET STATISTICS XML 并查看输出，用户必须具有以下权限：  
@@ -75,7 +75,7 @@ SET STATISTICS XML { ON | OFF }
  对于不生成 STATISTICS XML 结果集的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。 对于生成 STATISTICS XML 结果集的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，则要求对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句执行权限和 SHOWPLAN 权限的检查必须成功，否则将中止 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的执行，并且不生成任何 Showplan 信息。  
   
 ## <a name="examples"></a>示例  
- 下面两条语句使用 SET STATISTICS XML 设置，显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查询内对索引进行分析和优化的方法。 第一个查询在索引列上的 WHERE 子句中使用等于 (=) 比较运算符。 第二个查询在 WHERE 子句中使用 LIKE 运算符。 这将强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用聚集索引扫描并查找满足 WHERE 子句条件的数据。 EstimateRows 和 EstimatedTotalSubtreeCost 属性内用于第一个基于索引查询的值较小，这表示与非索引查询相比，该查询的处理速度要快得多，且使用的资源较少********。  
+ 下面两条语句使用 SET STATISTICS XML 设置，显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查询内对索引进行分析和优化的方法。 第一个查询在索引列上的 WHERE 子句中使用等于 (=) 比较运算符。 第二个查询在 WHERE 子句中使用 LIKE 运算符。 这将强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用聚集索引扫描并查找满足 WHERE 子句条件的数据。 EstimateRows 和 EstimatedTotalSubtreeCost 属性内用于第一个基于索引查询的值较小，这表示与非索引查询相比，该查询的处理速度要快得多，且使用的资源较少。  
   
 ```sql
 USE AdventureWorks2012;  

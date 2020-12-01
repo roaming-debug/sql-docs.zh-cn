@@ -19,10 +19,10 @@ ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e4d58095c8db69a84562d13a30be317a06948ed4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445142"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText（geography 数据类型）
@@ -41,20 +41,20 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 
 ## <a name="arguments"></a>参数
  *multilinestring_tagged_text*  
- 希望返回的 geographyMultiLineString 实例的 WKT 表示形式****。 multilinestring_tagged_text 是一个 nvarchar(max) 表达式******。  
+ 希望返回的 geographyMultiLineString 实例的 WKT 表示形式。 multilinestring_tagged_text 是一个 nvarchar(max) 表达式。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geographyMultiLineString 实例的空间引用 ID (SRID)********。  
+ 一个 int 表达式，表示希望返回的 geographyMultiLineString 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
  CLR 返回类型：SqlGeography  
   
- OGC 类型：MultiLineString****  
+ OGC 类型：MultiLineString  
   
 ## <a name="remarks"></a>注解  
- 如果输入的格式不正确，此方法将引发 FormatException****。  
+ 如果输入的格式不正确，此方法将引发 FormatException。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STMLineFromText()` 创建 `geography` 实例。  

@@ -15,15 +15,15 @@ ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 38102297ee7ac0a29bbe37e83d1bfe834d9faaa4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88380733"
 ---
 # <a name="results-detailed-view-dialog-box"></a>“结果详细视图”对话框
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用“评估策略”**** 对话框运行策略并单击“评估”**** 后，此对话框显示策略评估结果。 此对话框是只读的，可帮助您了解属性表达式的哪个部分可能失败。  
+  使用“评估策略”对话框运行策略并单击“评估”后，此对话框显示策略评估结果。 此对话框是只读的，可帮助您了解属性表达式的哪个部分可能失败。  
   
 ## <a name="options"></a>选项  
  **AndOr**  

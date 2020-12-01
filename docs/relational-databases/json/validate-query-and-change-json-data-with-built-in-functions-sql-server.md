@@ -15,10 +15,10 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76644f677a03f34312e6731f5a973167313ad22a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88424089"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用内置函数 (SQL Server) 验证、查询和更改 JSON 数据
@@ -244,7 +244,7 @@ HAVING SUM(SubTotal)>1000
 ```  
   
 ##  <a name="update-property-values-in-json-text-by-using-the-json_modify-function"></a><a name="MODIFY"></a> 使用 JSON_MODIFY 函数更新 JSON 文本中的属性值  
-JSON_MODIFY 函数更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串****。  
+JSON_MODIFY 函数更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串。  
   
 以下示例将更新包含 JSON 的变量中的 JSON 属性的值。  
   

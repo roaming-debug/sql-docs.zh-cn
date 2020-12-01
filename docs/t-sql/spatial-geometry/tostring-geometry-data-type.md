@@ -18,10 +18,10 @@ ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d5b8e9d4c027dd364c9aaf84b4b8e56680548d0c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88305505"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString（geometry 数据类型）
@@ -39,9 +39,9 @@ ms.locfileid: "88305505"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)  
   
- CLR 返回类型：SqlString****  
+ CLR 返回类型：SqlString  
   
 ## <a name="remarks"></a>注解  
  在针对 Null 实例调用时，此方法将返回字符串“Null”。  

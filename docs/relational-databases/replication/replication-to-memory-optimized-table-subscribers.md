@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 7345d2ed17d8eca7bac386f4abe58893827ff00e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88404963"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
@@ -41,28 +41,28 @@ ms.locfileid: "88404963"
 2.  向发布添加项目。 有关详细信息，请参阅 [定义项目](../../relational-databases/replication/publish/define-an-article.md)。  
   
      如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle 存储过程的 \@schema_option 参数设置为   
-    **0x40000000000**及更高版本支持此功能。  
+    **0x40000000000** 及更高版本支持此功能。  
   
-3.  在项目属性窗口中，将“启用内存优化” **** 设置为“true” ****。  
+3.  在项目属性窗口中，将“启用内存优化”  设置为“true” 。  
   
 4.  启动快照代理作业以为此发布生成初始快照。 有关详细信息，请参阅 [创建并应用初始快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
-5.  此时，创建新订阅。 在“新建订阅向导” **** 中，将“内存优化订阅” **** 设置为“true” ****。  
+5.  此时，创建新订阅。 在“新建订阅向导”  中，将“内存优化订阅”  设置为“true” 。  
 
  内存优化表现在应该开始从发布服务器接收更新。  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>重新配置现有的事务复制  
   
-1.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的订阅属性，然后将“内存优化订阅” **** 设置为“true” ****。 只有在重新初始化订阅之后，系统才会应用这些更改。  
+1.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的订阅属性，然后将“内存优化订阅”  设置为“true” 。 只有在重新初始化订阅之后，系统才会应用这些更改。  
   
      如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addsubscription 存储过程的 \@memory_optimized 参数设置为 true。  
   
-2.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的发布项目属性，然后将“启用内存优化” **** 设置为“true”。  
+2.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的发布项目属性，然后将“启用内存优化”  设置为“true”。  
   
      如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle 存储过程的 \@schema_option 参数设置为   
-    **0x40000000000**及更高版本支持此功能。  
+    **0x40000000000** 及更高版本支持此功能。  
   
-3.  内存优化表不支持聚集索引。 若要让复制能够通过在目标上将聚集索引转换成非聚集索引来处理此情况，请将“为内存优化项目将聚集索引转换成非聚集索引” **** 设置为“true”。  
+3.  内存优化表不支持聚集索引。 若要让复制能够通过在目标上将聚集索引转换成非聚集索引来处理此情况，请将“为内存优化项目将聚集索引转换成非聚集索引”  设置为“true”。  
   
      如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle 存储过程的 \@schema_option 参数设置为 0x0000080000000000。  
   

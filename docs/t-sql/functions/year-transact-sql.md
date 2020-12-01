@@ -25,10 +25,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3f8ad5bd4d39b0fc55fad2dd68b43552bf15ab8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422581"
 ---
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
@@ -50,15 +50,15 @@ YEAR ( date )
 
 ## <a name="arguments"></a>参数
  *date*  
- 一个表达式，它可以解析为 time、date、smalldatetime、datetime、datetime2 或 datetimeoffset 值************************。 date 参数可以是表达式、列表达式、用户定义变量或字符串文字。  
+ 一个表达式，它可以解析为 time、date、smalldatetime、datetime、datetime2 或 datetimeoffset 值。 date 参数可以是表达式、列表达式、用户定义变量或字符串文字。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
 ## <a name="return-value"></a>返回值  
- YEAR 与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (year, date) 返回相同的值******。  
+ YEAR 与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (year, date) 返回相同的值。  
   
- 如果 date 仅包含一个时间部分，则返回值为 1900，即基准年**。  
+ 如果 date 仅包含一个时间部分，则返回值为 1900，即基准年。  
   
 ## <a name="examples"></a>示例  
  下面的语句将返回 `2010`。 它是表示年份的数字。  
@@ -67,14 +67,14 @@ YEAR ( date )
 SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
- 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
 ```sql 
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
 ```sql  
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0);  

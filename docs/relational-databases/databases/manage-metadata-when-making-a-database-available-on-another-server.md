@@ -35,10 +35,10 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88412843"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>使数据库在其他服务器上可用时管理元数据
@@ -55,7 +55,7 @@ ms.locfileid: "88412843"
   
 -   在其他服务器实例上附加数据库副本。  
   
- 某些应用程序依赖于单个用户数据库范围之外的信息、实体和/或对象。 通常，应用程序具有对 **master** 和 **msdb** 数据库的依赖关系，并且还具有对用户数据库的依赖关系。 用户数据库正确运行所需的存储在该数据库外部的任何内容必须在目标服务器实例上可用。 例如，应用程序的登录名作为元数据存储在 **master** 数据库中，必须在目标服务器上重新创建这些登录名。 如果应用程序或数据库维护计划依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业（其元数据存储在 **msdb** 数据库中），则必须在目标服务器实例上重新创建这些作业。 同样，服务器级触发器的元数据存储在 **master**中。  
+ 某些应用程序依赖于单个用户数据库范围之外的信息、实体和/或对象。 通常，应用程序具有对 **master** 和 **msdb** 数据库的依赖关系，并且还具有对用户数据库的依赖关系。 用户数据库正确运行所需的存储在该数据库外部的任何内容必须在目标服务器实例上可用。 例如，应用程序的登录名作为元数据存储在 **master** 数据库中，必须在目标服务器上重新创建这些登录名。 如果应用程序或数据库维护计划依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业（其元数据存储在 **msdb** 数据库中），则必须在目标服务器实例上重新创建这些作业。 同样，服务器级触发器的元数据存储在 **master** 中。  
   
  将应用程序的数据库移动到其他服务器实例时，必须在目标服务器实例的 master 和 msdb 中重新创建依赖实体和依赖对象的所有元数据 。 例如，如果数据库应用程序使用服务器级触发器，则仅在新系统上附加或还原数据库是不够的。 如果不手动在 **master** 数据库中重新创建这些触发器的元数据，则数据库不能按预期方式工作。  
   
@@ -126,9 +126,9 @@ ms.locfileid: "88412843"
   
   
 ##  <a name="encrypted-data"></a><a name="encrypted_data"></a> Encrypted Data  
- 如果在其他服务器实例上可用的数据库包含加密数据，并且数据库主密钥由原始服务器上的服务主密钥保护，则最好重新进行服务主密钥加密。 “数据库主密钥 ** ”是一种对称密钥，用于在加密数据库中保护证书的私钥和非对称密钥的私钥。 当创建数据库主密钥时，会使用 Triple DES 算法以及用户提供的密码对其进行加密。  
+ 如果在其他服务器实例上可用的数据库包含加密数据，并且数据库主密钥由原始服务器上的服务主密钥保护，则最好重新进行服务主密钥加密。 “数据库主密钥  ”是一种对称密钥，用于在加密数据库中保护证书的私钥和非对称密钥的私钥。 当创建数据库主密钥时，会使用 Triple DES 算法以及用户提供的密码对其进行加密。  
   
- 若要对服务器实例上的数据库主密钥启用自动解密，请使用服务主密钥对此密钥的副本进行加密。 此加密副本存储在此数据库以及 **master**中。 通常，每当主密钥更改时，便会在不进行提示的情况下更新存储在 **master** 中的副本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初尝试使用实例的服务主密钥解密数据库主密钥。 如果解密失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在凭据存储区中搜索与需要其主密钥的数据库具有相同系列 GUID 的主密钥凭据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试使用每个匹配的凭据对数据库主密钥进行解密，直到成功解密或者没有更多的凭据为止。 必须使用 OPEN MASTER KEY 语句和密码打开未使用服务主密钥进行加密的主密钥。  
+ 若要对服务器实例上的数据库主密钥启用自动解密，请使用服务主密钥对此密钥的副本进行加密。 此加密副本存储在此数据库以及 **master** 中。 通常，每当主密钥更改时，便会在不进行提示的情况下更新存储在 **master** 中的副本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初尝试使用实例的服务主密钥解密数据库主密钥。 如果解密失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在凭据存储区中搜索与需要其主密钥的数据库具有相同系列 GUID 的主密钥凭据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试使用每个匹配的凭据对数据库主密钥进行解密，直到成功解密或者没有更多的凭据为止。 必须使用 OPEN MASTER KEY 语句和密码打开未使用服务主密钥进行加密的主密钥。  
   
  对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'**。 建议您通过执行下面的语句对数据库主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
@@ -144,18 +144,18 @@ ms.locfileid: "88412843"
   
   
 ##  <a name="user-defined-error-messages"></a><a name="user_defined_error_messages"></a> User-defined Error Messages  
- 用户定义的错误消息位于 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 目录视图中。 此目录视图存储在 **master**中。 如果数据库应用程序依赖于用户定义的错误消息并且此数据库在其他服务器实例上可用，则请使用 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) 在目标服务器实例上添加这些用户定义的消息。  
+ 用户定义的错误消息位于 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 目录视图中。 此目录视图存储在 **master** 中。 如果数据库应用程序依赖于用户定义的错误消息并且此数据库在其他服务器实例上可用，则请使用 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) 在目标服务器实例上添加这些用户定义的消息。  
 
   
 ##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a> 事件通知和 Windows Management Instrumentation (WMI) 事件 （在服务器级别）  
   
 ### <a name="server-level-event-notifications"></a>服务器级事件通知  
- 服务器级事件通知存储在 **msdb**中。 因此，如果数据库应用程序依赖于服务器级事件通知，则必须在目标服务器实例上重新创建该事件通知。 若要查看服务器实例上的事件通知，请使用 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目录视图。 有关详细信息，请参阅 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)。  
+ 服务器级事件通知存储在 **msdb** 中。 因此，如果数据库应用程序依赖于服务器级事件通知，则必须在目标服务器实例上重新创建该事件通知。 若要查看服务器实例上的事件通知，请使用 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目录视图。 有关详细信息，请参阅 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)。  
   
- 此外，使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]传递事件通知。 传入消息的路由不包括在包含服务的数据库中。 相反，显式路由存储在 **msdb**中。 如果服务使用 **msdb** 数据库中的显式路由将传入的消息路由到该服务，则在将数据库附加到其他实例时，必须重新创建此路由。  
+ 此外，使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]传递事件通知。 传入消息的路由不包括在包含服务的数据库中。 相反，显式路由存储在 **msdb** 中。 如果服务使用 **msdb** 数据库中的显式路由将传入的消息路由到该服务，则在将数据库附加到其他实例时，必须重新创建此路由。  
   
 ### <a name="windows-management-instrumentation-wmi-events"></a>Windows Management Instrumentation (WMI) 事件  
- 使用服务器事件的 WMI 提供程序，可以使用 Windows Management Instrumentation (WMI) 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的事件。 必须在目标服务器实例所在的计算机上定义任何依赖于服务器级事件（此事件通过数据库所依赖的 WMI 提供程序显示）的应用程序。 WMI 事件提供程序使用在 **msdb**中定义的目标服务创建事件通知。  
+ 使用服务器事件的 WMI 提供程序，可以使用 Windows Management Instrumentation (WMI) 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的事件。 必须在目标服务器实例所在的计算机上定义任何依赖于服务器级事件（此事件通过数据库所依赖的 WMI 提供程序显示）的应用程序。 WMI 事件提供程序使用在 **msdb** 中定义的目标服务创建事件通知。  
   
 > **注意：** 有关详细信息，请参阅 [WMI Provider for Server Events 的概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "88412843"
 -   [创建 WMI 事件警报](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>镜像数据库事件通知工作原理  
- 因为镜像数据库可以进行故障转移，所以涉及镜像数据库的事件通知的跨数据库传递是按照定义以远程方式进行的。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 以*镜像路由*的形式为镜像数据库提供特殊支持。 镜像路由有两个地址：一个针对主体服务器实例，另一个针对镜像服务器实例。  
+ 因为镜像数据库可以进行故障转移，所以涉及镜像数据库的事件通知的跨数据库传递是按照定义以远程方式进行的。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 以 *镜像路由* 的形式为镜像数据库提供特殊支持。 镜像路由有两个地址：一个针对主体服务器实例，另一个针对镜像服务器实例。  
   
  通过设置镜像路由，您可以使 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 路由支持数据库镜像。 使用镜像路由， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 能够透明地将会话重定向到当前的主体服务器实例。 例如，有一项由镜像数据库 Database_A 承载的服务 Service_A。 假定您需要由 Database_B 承载的另一项服务 Service_B 与 Service_A 进行对话。 为了实现此对话，Database_B 必须包含 Service_A 的镜像路由。 此外，Database_A 必须包含 Service_B 的非镜像 TCP 传输路由，与本地路由不同的是，该路由在故障转移后保持有效。 这些路由使 ACK 能够在故障转移后恢复。 由于发送方的服务始终以相同方式命名，因此路由必须指定 Broker 实例。  
   
@@ -256,11 +256,11 @@ ms.locfileid: "88412843"
   
 
 ##  <a name="logins"></a><a name="logins"></a> 登录名  
- 登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例需要有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 在身份验证过程中会使用此登录名，以验证主体是否可以连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户无法登录到实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户” ** 。 当数据库还原、附加或复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他实例之后，数据库用户便可变为孤立用户。  
+ 登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例需要有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 在身份验证过程中会使用此登录名，以验证主体是否可以连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户无法登录到实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户”  。 当数据库还原、附加或复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他实例之后，数据库用户便可变为孤立用户。  
   
  若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在 **“选择脚本选项”** 对话框中将 **“编写登录脚本”** 选项设置为 **True**。  
   
-> **注意：** 有关如何为镜像数据库设置登录名的信息，请参阅[数据库镜像或 AlwaysOn 可用性组设置登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
+> **注意：** 有关如何为镜像数据库设置登录名的信息，请参阅 [数据库镜像或 AlwaysOn 可用性组设置登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和 [角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
   
 ##  <a name="permissions"></a><a name="permissions"></a> 权限  
@@ -273,7 +273,7 @@ ms.locfileid: "88412843"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>对系统对象的 GRANT、REVOKE 和 DENY 权限  
  对系统对象（例如存储过程、扩展存储过程、函数和视图）的权限存储在 **master** 数据库中，并且必须在目标服务器实例上进行配置。  
   
- 若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在“选择脚本选项”**** 对话框中将“编写对象级权限脚本”**** 选项设置为 **True**。  
+ 若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在“选择脚本选项”对话框中将“编写对象级权限脚本”选项设置为 **True**。  
   
    > [!IMPORTANT]
    > 如果编写登录脚本，则不编写密码的脚本。 如果登录名使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须在目标上修改脚本。  
@@ -286,11 +286,11 @@ ms.locfileid: "88412843"
  有关更多详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)、[REVOKE 服务器权限 (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md) 和 [DENY 服务器权限 (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)。  
   
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>证书或非对称密钥的服务器级权限  
- 不能向证书或非对称密钥直接授予服务器级权限。 相反，可以向专门针对特定证书或非对称密钥创建的映射登录名授予服务器级权限。 因此，每个需要服务器级权限的证书或非对称密钥都需要自己的“证书映射登录名 ** ”或“非对称密钥映射登录名 **”。 若要为证书或非对称密钥授予服务器级权限，请向其映射登录名授予相应权限。  
+ 不能向证书或非对称密钥直接授予服务器级权限。 相反，可以向专门针对特定证书或非对称密钥创建的映射登录名授予服务器级权限。 因此，每个需要服务器级权限的证书或非对称密钥都需要自己的“证书映射登录名  ”或“非对称密钥映射登录名 ”。 若要为证书或非对称密钥授予服务器级权限，请向其映射登录名授予相应权限。  
   
 > **注意：** 映射登录名仅用于对使用相应证书或非对称密钥签名的代码进行授权。 映射登录名不能用于身份验证。  
   
- 映射登录名及其权限都位于 **master**中。 如果证书或非对称密钥位于 **master**之外的数据库中，则必须在 **master** 中重新创建证书或非对称密钥并将其映射到登录名。 如果将数据库移动、复制或还原到其他服务器实例，则必须在目标服务器实例的 **master** 数据库中重新创建其证书或非对称密钥，将证书或非对称密钥映射到登录名，并向此登录名授予必需的服务器级权限。  
+ 映射登录名及其权限都位于 **master** 中。 如果证书或非对称密钥位于 **master** 之外的数据库中，则必须在 **master** 中重新创建证书或非对称密钥并将其映射到登录名。 如果将数据库移动、复制或还原到其他服务器实例，则必须在目标服务器实例的 **master** 数据库中重新创建其证书或非对称密钥，将证书或非对称密钥映射到登录名，并向此登录名授予必需的服务器级权限。  
   
  **创建证书或非对称密钥**  
   
@@ -319,7 +319,7 @@ TRUSTWORTHY 数据库属性用于指明此 SQL Server 实例是否信任该数�
   
   
 ##  <a name="service-broker-applications"></a><a name="sb_applications"></a> Service Broker Applications  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 应用程序的许多相关内容都将随数据库一起移动。 但是，应用程序的某些相关内容必须在新位置重新创建或重新配置。  为安全起见，默认情况下，从其他服务器附加数据库后，is_broker_enabled 和 is_honoor_broker_priority_on 的选项设置为 OFF****。 有关如何将这些选项设置为 ON 的详细信息，请参阅 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 应用程序的许多相关内容都将随数据库一起移动。 但是，应用程序的某些相关内容必须在新位置重新创建或重新配置。  为安全起见，默认情况下，从其他服务器附加数据库后，is_broker_enabled 和 is_honoor_broker_priority_on 的选项设置为 OFF。 有关如何将这些选项设置为 ON 的详细信息，请参阅 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
   
 ##  <a name="startup-procedures"></a><a name="startup_procedures"></a> Startup Procedures  

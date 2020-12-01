@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fe87d9a583c60ba6d627168ade3eef07a47467b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88368253"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -43,9 +43,9 @@ ms.locfileid: "88368253"
   
 |属性|值|  
 |--------------|-----------|  
-|语法|time [ (fractional second scale) ]******|  
-|使用情况|DECLARE \@MyTime time(7)****<br /><br /> CREATE TABLE Table1 ( Column1 time(7)****)|  
-|fractional seconds scale**|为秒的小数部分指定数字的位数。<br /><br /> 这可以是从 0 到 7 的整数。 对于 Informatica，这可以是从 0 到 3 的整数。<br /><br /> 默认小数位数为 7 (100ns)。|  
+|语法|time [ (fractional second scale) ]|  
+|使用情况|DECLARE \@MyTime time(7)<br /><br /> CREATE TABLE Table1 ( Column1 time(7))|  
+|fractional seconds scale|为秒的小数部分指定数字的位数。<br /><br /> 这可以是从 0 到 7 的整数。 对于 Informatica，这可以是从 0 到 3 的整数。<br /><br /> 默认小数位数为 7 (100ns)。|  
 |默认的字符串文字格式<br /><br /> （用于下级客户端）|对于 Informatica，为 hh:mm:ss[.nnnnnnn]）<br /><br /> 有关详细信息，请参阅[下级客户端的后向兼容性](#BackwardCompatibilityforDownlevelClients)部分。|  
 |范围|00:00:00.0000000 到 23:59:59.9999999（对于 Informatica，为 00:00:00.000 到 23:59:59.999）|  
 |各元素的范围|hh 是表示小时的两位数字，范围为 0 到 23。<br /><br /> mm 是表示分钟的两位数字，范围为 0 到 59。<br /><br /> ss 是表示秒的两位数字，范围为 0 到 59。<br /><br /> n\* 是 0 到 7 位数字，范围为 0 到 9999999，它表示秒的小数部分。 对于 Informatica，n\* 是零到三位数字，范围为 0 到 999。|  
@@ -53,7 +53,7 @@ ms.locfileid: "88368253"
 |精度、小数位数<br /><br /> （用户只能指定小数位数）|请参阅下表。|  
 |存储大小|固定 5 个字节，是使用默认的 100ns 秒的小数部分精度时的默认存储大小。 在 Informatica 中，默认为 4 个字节，固定不变，同时秒的小数部分精度默认为 1 毫秒。|  
 |精确度|100 纳秒（Informatica 中为 1 毫秒）|  
-|默认值|00:00:00<br /><br /> 此值用作从 date 隐式转换到datetime2 或 datetimeoffset 时追加的时间部分************。|  
+|默认值|00:00:00<br /><br /> 此值用作从 date 隐式转换到datetime2 或 datetimeoffset 时追加的时间部分。|  
 |用户定义的秒的小数部分精度|是|  
 |时区偏移量感知和保留|否|  
 |夏时制感知|否|  
@@ -71,7 +71,7 @@ ms.locfileid: "88368253"
 |**time(7)**<br /><br /> Informatica 中不支持。|(16,7)|5|5-7|  
   
 ## <a name="supported-string-literal-formats-for-time"></a>time 支持的字符串文字格式  
- 下表显示的是适用于 time 数据类型的有效字符串文字格式****。  
+ 下表显示的是适用于 time 数据类型的有效字符串文字格式。  
   
 |SQL Server|描述|  
 |----------------|-----------------|  
@@ -91,7 +91,7 @@ ms.locfileid: "88368253"
  默认字符串文字格式（用于下级客户端）将遵照 SQL 标准格式（定义为 hh:mm:ss[.nnnnnnn]）。 这种格式类似于 ISO 8601 对不包含秒小数部分的 TIME 的定义。  
   
 ##  <a name="backward-compatibility-for-down-level-clients"></a><a name="BackwardCompatibilityforDownlevelClients"></a> 下级客户端的向后兼容性  
- 某些下级客户端不支持 time、time、datetime2 和 datetimeoffset 数据类型****************。 下表显示了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上级实例与下级客户端之间的类型映射。  
+ 某些下级客户端不支持 time、time、datetime2 和 datetimeoffset 数据类型。 下表显示了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上级实例与下级客户端之间的类型映射。  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|传递给下级客户端的默认字符串文字格式|下级 ODBC|下级 OLEDB|下级 JDBC|下级 SQLCLIENT|  
 |-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
@@ -104,9 +104,9 @@ ms.locfileid: "88368253"
  当转换为日期和时间数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会拒绝它无法识别为日期或时间的所有值。 有关日期和时间数据使用 CAST 和 CONVERT 函数的信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
 ### <a name="converting-timen-data-type-to-other-date-and-time-types"></a>将 time(n) 数据类型转换为其他日期和时间类型  
- 本部分介绍当 time 数据类型转换为其他日期和时间数据类型时发生的情况****。  
+ 本部分介绍当 time 数据类型转换为其他日期和时间数据类型时发生的情况。  
   
- 转换到 time(n) 时，会复制小时、分钟和秒数****。 当目标精度小于源精度时，将对秒的小数部分进行向上舍入，以适合目标精度。 下面的示例显示了将 `time(4)` 值转换为 `time(3)` 值的结果。  
+ 转换到 time(n) 时，会复制小时、分钟和秒数。 当目标精度小于源精度时，将对秒的小数部分进行向上舍入，以适合目标精度。 下面的示例显示了将 `time(4)` 值转换为 `time(3)` 值的结果。  
   
 ```  
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
@@ -124,7 +124,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
   
  如果转换到“date”，转换失败，并引发错误消息 206：“操作数类型冲突: date 与 time 不兼容”。  
   
- 转换到 datetime 时，会复制小时、分钟和秒数，且日期部分设为“1900-01-01”****。 当 time(n) 值的秒的小数部分精度大于三位时，datetime 结果将被截断********。 下面的代码显示将 `time(4)` 值转换为 `datetime` 值的结果。  
+ 转换到 datetime 时，会复制小时、分钟和秒数，且日期部分设为“1900-01-01”。 当 time(n) 值的秒的小数部分精度大于三位时，datetime 结果将被截断。 下面的代码显示将 `time(4)` 值转换为 `datetime` 值的结果。  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -140,7 +140,7 @@ SELECT @time AS '@time', @datetime AS '@datetime';
   
 ```  
   
- 转换到 smalldatetime 时，日期设置为“1900-01-01”，小时和分钟值向上舍入****。 秒和秒的小数部分设置为 0。 下面的代码显示将 `time(4)` 值转换为 `smalldatetime` 值的结果。  
+ 转换到 smalldatetime 时，日期设置为“1900-01-01”，小时和分钟值向上舍入。 秒和秒的小数部分设置为 0。 下面的代码显示将 `time(4)` 值转换为 `smalldatetime` 值的结果。  
   
 ```  
 -- Shows rounding up of the minute value.  
@@ -167,7 +167,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- 如果转换到 datetimeoffset(n)，则日期设置为“1900-01-01”，且复制时间****。 时区偏移量设置为 +00:00。 当 time(n) 值秒的小数部分精度大于 datetimeoffset(n) 值的精度时，将对值进行向上舍入以适合精度********。 下面的示例显示将 `time(4)` 值转换为 `datetimeoffset(3)` 类型的结果。  
+ 如果转换到 datetimeoffset(n)，则日期设置为“1900-01-01”，且复制时间。 时区偏移量设置为 +00:00。 当 time(n) 值秒的小数部分精度大于 datetimeoffset(n) 值的精度时，将对值进行向上舍入以适合精度。 下面的示例显示将 `time(4)` 值转换为 `datetimeoffset(3)` 类型的结果。  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -184,7 +184,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- 转换到 datetime2(n) 时，日期设置为“1900-01-01”，复制时间部分，时区偏移量设置为 00:00****。 当 datetime2(n) 值秒的小数部分精度大于 time(n) 值时，将对值进行向上舍入以适合精度********。  下面的示例显示了将 `time(4)` 值转换为 `datetime2(2)` 值的结果。  
+ 转换到 datetime2(n) 时，日期设置为“1900-01-01”，复制时间部分，时区偏移量设置为 00:00。 当 datetime2(n) 值秒的小数部分精度大于 time(n) 值时，将对值进行向上舍入以适合精度。  下面的示例显示了将 `time(4)` 值转换为 `datetime2(2)` 值的结果。  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -201,11 +201,11 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 ```  
   
 ### <a name="converting-string-literals-to-timen"></a>将字符串文字转换为 time(n)  
- 如果字符串所有部分的格式均有效，则允许从字符串文字转换为日期和时间类型。 否则，将引发运行时错误。 从日期和时间类型向字符串文字进行的未指定样式的隐式转换或显式转换将采用当前会话的默认格式。 下表显示用于将字符串文字转换为 time 数据类型的规则****。  
+ 如果字符串所有部分的格式均有效，则允许从字符串文字转换为日期和时间类型。 否则，将引发运行时错误。 从日期和时间类型向字符串文字进行的未指定样式的隐式转换或显式转换将采用当前会话的默认格式。 下表显示用于将字符串文字转换为 time 数据类型的规则。  
   
 |输入字符串文字|转换规则|  
 |--------------------------|---------------------|  
-|ODBC DATE|ODBC 字符串文字映射到 datetime 数据类型。 从 ODBC DATETIME 文字到 time 类型的任何赋值操作都会导致在 datetime 与此类型之间按照转换规则的定义进行隐式转换********。|  
+|ODBC DATE|ODBC 字符串文字映射到 datetime 数据类型。 从 ODBC DATETIME 文字到 time 类型的任何赋值操作都会导致在 datetime 与此类型之间按照转换规则的定义进行隐式转换。|  
 |ODBC TIME|请参阅上面的 ODBC DATE 规则。|  
 |ODBC DATETIME|请参阅上面的 ODBC DATE 规则。|  
 |仅 DATE|提供默认值。|  
@@ -244,7 +244,7 @@ SELECT
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ###  <a name="b-inserting-valid-time-string-literals-into-a-time7-column"></a><a name="ExampleB"></a> B. 将有效的时间字符串文字插入 time(7) 列  
- 下表列出了可插入到数据类型为 time(7) 的一个列中的不同字符串文字，以及在插入后存储到该列中的对应值****。  
+ 下表列出了可插入到数据类型为 time(7) 的一个列中的不同字符串文字，以及在插入后存储到该列中的对应值。  
   
 |字符串文字格式类型|插入的字符串文字|存储的 time(7) 值|描述|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  

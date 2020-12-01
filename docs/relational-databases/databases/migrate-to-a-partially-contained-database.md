@@ -14,10 +14,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a942af36a551498e81b3dbaeaa02686dec9c28b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88410993"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -65,7 +65,7 @@ GO
 #### <a name="enabling-contained-databases-using-management-studio"></a>使用 Management Studio 启用包含的数据库  
  下面的示例对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
   
-1.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”****。  
+1.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”。  
   
 2.  在 **“高级”** 页面上的 **“包含”** 部分中，将 **“启用包含的数据库”** 选项设置为 **“True”**。  
   
@@ -87,7 +87,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>使用 Management Studio 将数据库转换为部分包含的数据库  
  下面的示例将数据库转换为部分包含的数据库。  
   
-1.  在对象资源管理器中，展开“数据库”****，右键单击要转换的数据库，然后单击“属性”****。  
+1.  在对象资源管理器中，展开“数据库”，右键单击要转换的数据库，然后单击“属性”。  
   
 2.  在 **“选项”** 页面上，将 **“包含类型”** 选项更改为 **“部分”**。  
   

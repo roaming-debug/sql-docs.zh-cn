@@ -19,10 +19,10 @@ ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6caf71740ca5c62e50af582df1a3d6f3866f6ec8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88416953"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText（geography 数据类型）
@@ -40,11 +40,11 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- geometrycollection_tagged_text**  
- 希望返回的 geography 实例的 WKT 表示形式****。 geometrycollection_tagged_text 是一个 nvarchar(max) 表达式******。  
+ geometrycollection_tagged_text  
+ 希望返回的 geography 实例的 WKT 表示形式。 geometrycollection_tagged_text 是一个 nvarchar(max) 表达式。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geography 实例的空间引用 ID (SRID)********。  
+ 一个 int 表达式，表示希望返回的 geography 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
@@ -52,9 +52,9 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
  CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
- STGeomCollFromText() 返回的 geography 实例的 OGC 类型设置为相应的 WKT 输入****。  
+ STGeomCollFromText() 返回的 geography 实例的 OGC 类型设置为相应的 WKT 输入。  
   
- 如果输入无效，此方法将引发 ArgumentException****。  
+ 如果输入无效，此方法将引发 ArgumentException。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STGeomCollFromText()` 创建 `geography` 实例。  

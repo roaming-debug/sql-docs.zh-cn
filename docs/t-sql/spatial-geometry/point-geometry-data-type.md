@@ -19,16 +19,16 @@ ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f62f8ae1528ca26fa3a2f78ec5132aaa8ed7cf55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88416923"
 ---
 # <a name="point-geometry-data-type"></a>Point（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-构造一个 geometry 实例，该实例表示一个根据其 X 和 Y 值以及 SRID 构造的 Point 实例********。
+构造一个 geometry 实例，该实例表示一个根据其 X 和 Y 值以及 SRID 构造的 Point 实例。
   
 ## <a name="syntax"></a>语法  
   
@@ -47,12 +47,12 @@ Point ( X, Y, SRID )
  一个 float 表达式，表示正在生成的 Point 的 Y 坐标 。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)********。  
+ 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="remarks"></a>备注  
   

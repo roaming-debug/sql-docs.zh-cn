@@ -20,16 +20,16 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ce978df17e7f0fd904e630fb3e8eaf84db375765
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445229"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects（geography 数据类型）
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  如果 geography 实例与另一个 geography 实例相交，则返回 1********。 否则，返回 0。  
+  如果 geography 实例与另一个 geography 实例相交，则返回 1。 否则，返回 0。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,14 +41,14 @@ ms.locfileid: "88445229"
   
 ## <a name="arguments"></a>参数
 
-other_geography**  
-与对其调用 `STIntersects()` 的实例进行比较的另一个 geography 实例****。  
+other_geography  
+与对其调用 `STIntersects()` 的实例进行比较的另一个 geography 实例。  
   
 ## <a name="return-types"></a>返回类型
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型：SqlBoolean****  
+ CLR 返回类型：SqlBoolean  
   
 ## <a name="remarks"></a>注解  
  如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 Null 。  
