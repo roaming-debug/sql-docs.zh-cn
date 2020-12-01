@@ -9,20 +9,20 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 144b769ce42b192099678cda4cfe6fb2935c1c2f
+ms.sourcegitcommit: af663bdca0df8a1f34a14667390662f6f0e17766
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257327"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924164"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>在同一 Active Directory 域中部署多个 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本文介绍 SQL Server 2019 CU 5 的更新，这些更新支持将多个 SQL Server 2019 大数据群集部署并集成到同一 Active Directory 域。
+本文介绍 SQL Server 2019 CU5 的更新，这些更新支持将多个 SQL Server 2019 大数据群集部署并集成到同一 Active Directory 域。
 
-在 CU5 之前，存在两个问题阻止在 AD 域中部署多个 BDC。
+在 SQL 2019 CU5 之前，存在两个问题阻止在 AD 域中部署多个 BDC。
 
 - 服务主体名称和 DNS 域的命名冲突
 - 域帐户主体名称
@@ -35,11 +35,11 @@ ms.locfileid: "92257327"
 
 ### <a name="domain-account-principal-names"></a>域帐户主体名称
 
-在 Active Directory 域的 BDC 部署过程中，将为在 BDC 内运行的服务生成多个帐户主体。 它们实质上是 AD 用户帐户。 在 CU5 之前，这些帐户的名称在群集之间不唯一。 尝试使用此清单在两个不同的群集中为 BDC 中的特定服务创建相同的用户帐户名。 第二个部署的群集将在 AD 中遇到冲突，无法创建其帐户。
+在 Active Directory 域的 BDC 部署过程中，将为在 BDC 内运行的服务生成多个帐户主体。 它们实质上是 AD 用户帐户。 在 SQL 2019 CU5 之前，这些帐户的名称在群集之间不唯一。 尝试使用此清单在两个不同的群集中为 BDC 中的特定服务创建相同的用户帐户名。 第二个部署的群集将在 AD 中遇到冲突，无法创建其帐户。
 
 ## <a name="resolution-for-collisions"></a>解决冲突
 
-### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---cu5"></a>SPN 和 DNS 域问题的解决方案 - CU5
+### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---sql-2019-cu5"></a>SPN 和 DNS 域问题的解决方案 - SQL 2019 CU5
 
 由于任意两个群集中的 SPN 必须不同，因此部署时传入的 DNS 域名必须不同。 可以使用部署配置文件中新引入的设置指定不同的 DNS 名称：`subdomain`。 如果这两个群集之间的子域不同，并且可以通过此子域进行内部通信，则 SPN 包括实现所需唯一性的子域。
 
@@ -63,7 +63,7 @@ ms.locfileid: "92257327"
 
 ## <a name="semantics"></a>语义
 
-总的来说，以下是在 CU5 中为域中多个群集添加的参数的语义：
+总的来说，以下是在 SQL 2019 CU5 中为域中多个群集添加的参数的语义：
 
 ### `subdomain`
 
@@ -138,7 +138,7 @@ ms.locfileid: "92257327"
 
 这不是必需的，但建议这样做。 为不同的群集提供不同的 OU 有助于管理生成的用户帐户。
 
-### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>如何还原到 CU5 之前的行为？
+### <a name="how-to-revert-back-to-the-pre-cu5-behavior-in-sql-2019"></a>如何在 SQL 2019 中还原到 CU5 之前的行为？
 
 在某些情况下，无法适应新引入的 `subdomain` 参数。 例如，必须部署低于 CU5 的版本，并且已升级 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。 这不太可能发生，但如果需要还原到 CU5 之前的行为，可以在 `control.json` 的 active directory 部分中将 `useSubdomain` 参数设置为 `false`。
 

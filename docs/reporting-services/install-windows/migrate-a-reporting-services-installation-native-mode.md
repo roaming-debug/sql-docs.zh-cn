@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: ae3932611181f99b71d72bc2365967a19c968b9c
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934843"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96125016"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>迁移 Reporting Services 安装（本机模式）
 
@@ -132,7 +132,7 @@ ms.locfileid: "91934843"
   
     2. Rswebapplication.config  
   
-    3. Rssvrpolicy.config  
+    3. Rssrvpolicy.config  
   
     4. Rsmgrpolicy.config  
   

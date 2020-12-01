@@ -2,20 +2,20 @@
 title: 什么是外延安全更新程序？
 description: 了解如何使用 SQL Server 注册表来获取终止支持且生命周期结束的 SQL Server 产品（如 SQL Server 2008 和 SQL Server 2008 R2）的外延安全更新程序。
 ms.custom: ''
-ms.date: 12/09/2019
+ms.date: 11/24/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: f3a337395be09743be335dd01ac80caf9dc98be0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793814"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121277"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什么是 SQL Server 的外延安全更新程序？
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -206,6 +206,39 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
    ![检查“安全更新程序”窗格中是否有更新程序](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. 从其中下载安全更新程序（若有）。 
+
+## <a name="supported-regions-and-data-residency"></a>支持的区域和数据驻留
+
+一部分 Azure 区域提供了 SQL Server 注册表服务（预览版）。 下表显示了支持的区域以及每个区域的数据驻留类型。
+
+| **区域** | **数据驻留** |
+|:--|:--|
+|澳大利亚东部|地域|
+|Australia Southeast|地域|
+|加拿大中部|地域|
+|法国中部|地域|
+|Japan East|地域|
+|日本西部|地域|
+|韩国中部|地域|
+|韩国南部|地域|
+|美国中北部|地域|
+|北欧|地域|
+|美国中南部|地域|
+|Southeast Asia|单区域|
+|印度南部|地域|
+|南非北部|地域|
+|英国南部|地域|
+|英国西部|地域|
+|美国西部|地域|
+|美国东部|地域|
+|美国中部|地域|
+|东亚|地域|
+|西欧|地域|
+|美国中西部|地域|
+|美国西部 2|地域|
+|美国东部 2|地域|
+
+在带有地理驻留的区域中，SQL 注册表服务维护异地冗余存储帐户 (GRS) 中的数据备份。  在带有单个区域驻留的区域中，SQL 注册表服务维护区域冗余存储帐户 (ZRS) 中的数据备份。 有关详细信息，请参阅[信任中心](https://azuredatacentermap.azurewebsites.net/)。
 
 ## <a name="configure-regional-redundancy"></a>配置区域冗余 
 

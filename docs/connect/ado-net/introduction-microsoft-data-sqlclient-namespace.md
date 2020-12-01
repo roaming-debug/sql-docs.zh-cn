@@ -1,7 +1,7 @@
 ---
 title: Microsoft.Data.SqlClient 命名空间简介
 description: 了解 Microsoft.Data.SqlClient 命名空间，以及为何将其作为首选方式连接到 SQL for .NET 应用程序。
-ms.date: 09/29/2020
+ms.date: 11/19/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,17 +9,232 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.reviewer: v-kaywon
-ms.openlocfilehash: d02c12998f1083774727c33a261292396151a352
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.reviewer: v-jizho2
+ms.openlocfilehash: f522b856e759ec9821b5cc549ce3f801951b7283
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081466"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011827"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 命名空间简介
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+
+## <a name="release-notes-for-microsoftdatasqlclient-21"></a>Microsoft.Data.SqlClient 2.1 发行说明
+
+GitHub 存储库中也提供了发行说明：[2.1 发行说明](https://github.com/dotnet/SqlClient/tree/master/release-notes/2.1)。
+
+### <a name="new-features"></a>新增功能
+
+### <a name="cross-platform-support-for-always-encrypted"></a>对 Always Encrypted 的跨平台支持
+Microsoft.Data.SqlClient v2.1 扩展了对以下平台的 Always Encrypted 支持：
+
+| 支持 Always Encrypted | 支持具有安全 Enclave 的 Always Encrypted  | 目标 Framework | Microsoft.Data.SqlClient 版本 | 操作系统 |
+|:--|:--|:--|:--:|:--:|
+| 是 | 是 | .NET Framework 4.6 及更高版本 | 1.1.0+ | Windows |
+| 是 | 是 | .NET Core 2.1+ | 2.1.0+<sup>1</sup> | Windows、Linux、macOS |
+| 是 | 否<sup>2</sup> | .NET Standard 2.0 | 2.1.0+ | Windows、Linux、macOS |
+| 是 | 是 | .NET Standard 2.1+ | 2.1.0+ | Windows、Linux、macOS |
+
+> [!NOTE]
+> <sup>1</sup> 在 Microsoft.Data.SqlClient 版本 v2.1 之前，Always Encrypted 仅在 Windows 上受支持。
+> <sup>2</sup> 具有安全 Enclave 的 Always Encrypted 在 .NET Standard 2.0 上不受支持。
+
+### <a name="azure-active-directory-device-code-flow-authentication"></a>Azure Active Directory 设备代码流身份验证
+Microsoft.Data.SqlClient v2.1 支持使用 MSAL.NET 进行“设备代码流”身份验证。
+参考文档：[OAuth2.0 设备授权授权流](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code)
+
+连接字符串示例：
+
+`Server=<server>.database.windows.net; Authentication=Active Directory Device Code Flow; Database=Northwind;`
+
+以下 API 支持自定义设备代码流回调机制：
+
+```csharp
+public class ActiveDirectoryAuthenticationProvider
+{
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void SetDeviceCodeFlowCallback(Func<DeviceCodeResult, Task> deviceCodeFlowCallbackMethod)
+}
+```
+
+### <a name="azure-active-directory-managed-identity-authentication"></a>Azure Active Directory 托管标识身份验证
+Microsoft.Data.SqlClient v2.1 支持使用[托管标识](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)进行 Azure Active Directory 身份验证。
+
+支持以下身份验证模式关键字：
+- Active Directory 托管标识
+- Active Directory MSI（用于跨 MS SQL 驱动程序兼容性）
+
+连接字符串示例：
+
+```cs
+// For System Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory MSI; Initial Catalog={db};"
+
+// For System Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory Managed Identity; Initial Catalog={db};"
+
+// For User Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory MSI; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+
+// For User Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory Managed Identity; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+```
+
+### <a name="azure-active-directory-interactive-authentication-enhancements"></a>Azure Active Directory 交互式身份验证增强功能
+Microsoft.Data.SqlClient v2.1 添加了以下 API，用于自定义“Active Directory 交互式”身份验证体验：
+
+```csharp
+public class ActiveDirectoryAuthenticationProvider
+{
+    // For .NET Framework targeted applications only
+    public void SetIWin32WindowFunc(Func<IWin32Window> iWin32WindowFunc);
+
+    // For .NET Standard targeted applications only
+    public void SetParentActivityOrWindowFunc(Func<object> parentActivityOrWindowFunc);
+
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void SetAcquireAuthorizationCodeAsyncCallback(Func<Uri, Uri, CancellationToken, Task<Uri>> acquireAuthorizationCodeAsyncCallback);
+
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void ClearUserTokenCache();
+}
+```
+
+### <a name="sqlclientauthenticationproviders-configuration-section"></a>`SqlClientAuthenticationProviders` 配置节
+Microsoft.Data.SqlClient v2.1 引入了新的配置节 `SqlClientAuthenticationProviders`（现有 `SqlAuthenticationProviders` 的克隆）。 定义了适当的类型时，仍支持现有的配置节 `SqlAuthenticationProviders`，以实现向后兼容性。
+
+新节允许应用程序配置文件同时包含 System.Data.SqlClient 的 SqlAuthenticationProviders 节和 Microsoft.Data.SqlClient 的 SqlClientAuthenticationProviders 节。
+
+
+### <a name="azure-active-directory-authentication-using-an-application-client-id"></a>使用应用程序客户端 ID 进行 Azure Active Directory 身份验证
+Microsoft.Data.SqlClient v2.1 支持将用户定义的应用程序客户端 ID 传递到 Microsoft 身份验证库。 使用 Azure Active Directory 进行身份验证时，使用应用程序客户端 ID。
+
+引入了以下新 API：
+
+1. ActiveDirectoryAuthenticationProvider 中引入了新的构造函数：\
+[适用于所有 .NET 平台（.NET Framework、.NET Core 和 .NET Standard）]
+
+```csharp
+public ActiveDirectoryAuthenticationProvider(string applicationClientId)
+```
+
+用法：
+```csharp
+string APP_CLIENT_ID = "<GUID>";
+SqlAuthenticationProvider customAuthProvider = new ActiveDirectoryAuthenticationProvider(APP_CLIENT_ID);
+SqlAuthenticationProvider.SetProvider(SqlAuthenticationMethod.ActiveDirectoryInteractive, customAuthProvider);
+
+using (SqlConnection sqlConnection = new SqlConnection("<connection_string>")
+{
+    sqlConnection.Open();
+}
+```
+
+2. 在 `SqlAuthenticationProviderConfigurationSection` 和 `SqlClientAuthenticationProviderConfigurationSection` 下引入了新的配置属性：\
+[适用于 .NET Framework 和 .NET Core]
+
+```csharp
+internal class SqlAuthenticationProviderConfigurationSection : ConfigurationSection
+{
+    ...
+    [ConfigurationProperty("applicationClientId", IsRequired = false)]
+    public string ApplicationClientId => this["applicationClientId"] as string;
+}
+
+// Inheritance
+internal class SqlClientAuthenticationProviderConfigurationSection : SqlAuthenticationProviderConfigurationSection
+{ ... }
+```
+
+用法：
+```xml
+<configuration>
+    <configSections>
+        <section name="SqlClientAuthenticationProviders"
+                         type="Microsoft.Data.SqlClient.SqlClientAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
+    </configSections>
+    <SqlClientAuthenticationProviders applicationClientId ="<GUID>" />
+</configuration>
+
+<!--or-->
+
+<configuration>
+    <configSections>
+        <section name="SqlAuthenticationProviders"
+                         type="Microsoft.Data.SqlClient.SqlAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
+    </configSections>
+    <SqlAuthenticationProviders applicationClientId ="<GUID>" />
+</configuration>
+```
+
+### <a name="data-classification-v2-support"></a>数据分类 v2 支持
+Microsoft.Data.SqlClient v2.1 引入了对数据分类的“敏感度级别”信息的支持。 现推出以下新 API：
+
+```csharp
+public class SensitivityClassification
+{
+    public SensitivityRank SensitivityRank;
+}
+
+public class SensitivityProperty
+{
+    public SensitivityRank SensitivityRank;
+}
+
+public enum SensitivityRank
+{
+    NOT_DEFINED = -1,
+    NONE = 0,
+    LOW = 10,
+    MEDIUM = 20,
+    HIGH = 30,
+    CRITICAL = 40
+}
+```
+
+### <a name="server-process-id-for-an-active-sqlconnection"></a>活动 `SqlConnection` 的服务器进程 ID
+Microsoft.Data.SqlClient v2.1 为活动连接引入了新的 `SqlConnection` 属性 `ServerProcessId`。
+
+```csharp
+public class SqlConnection
+{
+    // Returns the server process Id (SPID) of the active connection.
+    public int ServerProcessId;
+}
+```
+
+### <a name="trace-logging-support-in-native-sni"></a>本机 SNI 中的跟踪日志记录支持
+Microsoft.Data.SqlClient v2.1 扩展了现有 `SqlClientEventSource` 实现，以支持 SNI.dll 中的事件跟踪。 必须使用类似于 Xperf 的工具捕获事件。
+
+可以通过将命令发送到 `SqlClientEventSource` 来启用跟踪，如下图所示：
+
+```csharp
+// Enables trace events:
+EventSource.SendCommand(eventSource, (EventCommand)8192, null);
+
+// Enables flow events:
+EventSource.SendCommand(eventSource, (EventCommand)16384, null);
+
+// Enables both trace and flow events:
+EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
+```
+
+
+### <a name="command-timeout-connection-string-property"></a>“命令超时”连接字符串属性
+Microsoft.Data.SqlClient v2.1 引入了“命令超时”连接字符串属性来替代默认值 30 秒。 可以使用 SqlCommand 上的 `CommandTimeout` 属性来替代单个命令的超时。
+
+连接字符串示例：
+
+`"Server={serverURL}; Initial Catalog={db}; Integrated Security=true; Command Timeout=60"`
+
+### <a name="removal-of-symbols-from-native-sni"></a>从本机 SNI 中删除符号
+在 Microsoft.Data.SqlClient v2.1 中，我们从 [Microsoft.Data.SqlClient.SNI.runtime](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime) NuGet（从 [v2.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime/2.1.1) 开始）删除了 [v2.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI/2.0.0) 中引入的符号。 公共符号现已发布到 Microsoft symbols Server，以供 BinSkim 等需要访问公共符号的工具使用。
+
+### <a name="source-linking-of-microsoftdatasqlclient-symbols"></a>Microsoft.Data.SqlClient 符号的源链接
+从 Microsoft.Data.SqlClient v2.1 开始，Microsoft.Data.SqlClient 符号可源链接并发布到 Microsoft Symbols Server，以获得增强的调试体验，而无需下载源代码。
+
 
 ## <a name="release-notes-for-microsoftdatasqlclient-20"></a>Microsoft.Data.SqlClient 2.0 发行说明
 
@@ -45,7 +260,7 @@ GitHub 存储库中也提供了发行说明：[2.0 发行说明](https://github.
 
 #### <a name="dns-failure-resiliency"></a>DNS 故障复原
 
-驱动程序现会将 IP 地址从每个成功连接缓存到支持该功能的 SQL Server 终结点。 如果在连接尝试期间发生 DNS 解析失败，驱动程序将尝试使用该服务器的已缓存 IP 地址（如存在）建立连接。 
+驱动程序现会将 IP 地址从每个成功连接缓存到支持该功能的 SQL Server 终结点。 如果在连接尝试期间发生 DNS 解析失败，驱动程序将尝试使用该服务器的已缓存 IP 地址（如存在）建立连接。
 
 #### <a name="eventsource-tracing"></a>EventSource 跟踪
 
@@ -67,7 +282,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWind
 
 有关驱动程序中可用开关的完整列表，请参阅 [SqlClient 中的 AppContext 开关](appcontext-switches.md)。
 
-#### <a name="enabling-decimal-truncation-behavior"></a>启用小数截断行为 
+#### <a name="enabling-decimal-truncation-behavior"></a>启用小数截断行为
 
 默认情况下，驱动程序将舍入十进制数据小数位，这与 SQL Server 一样。 为实现后向兼容性，可将 AppContext 开关“Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal”设置为“true” 。
 
@@ -92,7 +307,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 #### <a name="sqlbulkcopy-rowscopied-property"></a>SqlBulkCopy RowsCopied 属性
 
-RowsCopied 属性提供对已在正在进行的大容量复制操作中处理的行数的只读访问。 此值不一定等于添加到目标表中的最终行数。 
+RowsCopied 属性提供对已在正在进行的大容量复制操作中处理的行数的只读访问。 此值不一定等于添加到目标表中的最终行数。
 
 #### <a name="connection-open-overrides"></a>连接打开替代
 
