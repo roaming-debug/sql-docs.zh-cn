@@ -13,12 +13,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1038b37cf97fed506d8503ceafb94a7bdabb0b2d
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038290"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419828"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "92038290"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|基础表的 ID。 这是计算节点上的物理表，而不是控制节点上逻辑表的 object_id。 例如，object_id 与 sys.databases 中的 object_id 不匹配。<br /><br /> 若要与 sys.databases 联接，请使用 sys.pdw_index_mappings。|  
-|index_id|**int**|*Object_id*表上的聚集列存储索引的 ID。|  
-|**partition_number**|**int**|保存行组 *row_group_id*的表分区的 ID。 你可以使用 *partition_number* 将此 DMV 加入 sys.databases。|  
+|index_id|**int**|*Object_id* 表上的聚集列存储索引的 ID。|  
+|**partition_number**|**int**|保存行组 *row_group_id* 的表分区的 ID。 你可以使用 *partition_number* 将此 DMV 加入 sys.databases。|  
 |**row_group_id**|**int**|此行组的 ID。 这在分区中是唯一的。|  
 |**dellta_store_hobt_id**|**bigint**|delta 行组的 hobt_id；或如果行组类型不是 delta，则为 NULL。 delta 行组是正在接受新记录的读/写行组。 增量行组具有 **打开** 状态。 delta 行组仍采用行存储格式，并且尚未压缩成列存储格式。|  
 |**state**|**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
@@ -40,14 +40,14 @@ ms.locfileid: "92038290"
 |pdw_node_id|**int**|节点的唯一 ID [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
 |distribution_id|**int**|分布的唯一 ID。|
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  针对每个表中具有聚合或非聚合列存储索引的每个列存储行组返回一行。  
   
  使用 **sys.pdw_nodes_column_store_row_groups** 来确定行组中包含的行数和行组的大小。  
   
- 当行组中的已删除行数量增长到占总行数的较大百分比时，该表的效率将下降。 重新生成列存储索引以减少表的大小，同时减少读取该表所需的磁盘 I/O。 若要重新生成列存储索引，请使用**ALTER index**语句的**rebuild**选项。  
+ 当行组中的已删除行数量增长到占总行数的较大百分比时，该表的效率将下降。 重新生成列存储索引以减少表的大小，同时减少读取该表所需的磁盘 I/O。 若要重新生成列存储索引，请使用 **ALTER index** 语句的 **rebuild** 选项。  
   
- 可更新的列存储首先将新数据插入到处于行存储格式的 **打开** 行组中，有时也称为增量表。  打开的行组已满后，其状态将更改为 " **已关闭**"。 由元组移动器将关闭的行组压缩为列存储格式，并将状态更改为已 **压缩**。  元组搬运者是一个后台进程，它定期唤醒并检查是否有任何关闭的行组正准备要压缩成列存储行组。  元组搬运者还取消分配其中已删除每个行的行组。 解除分配的行组标记为已 **停**用。 若要立即运行元组移动器，请使用**ALTER INDEX**语句的 "重新**组织**" 选项。  
+ 可更新的列存储首先将新数据插入到处于行存储格式的 **打开** 行组中，有时也称为增量表。  打开的行组已满后，其状态将更改为 " **已关闭**"。 由元组移动器将关闭的行组压缩为列存储格式，并将状态更改为已 **压缩**。  元组搬运者是一个后台进程，它定期唤醒并检查是否有任何关闭的行组正准备要压缩成列存储行组。  元组搬运者还取消分配其中已删除每个行的行组。 解除分配的行组标记为已 **停** 用。 若要立即运行元组移动器，请使用 **ALTER INDEX** 语句的 "重新 **组织**" 选项。  
   
  如果列存储行组已填充，它将进行压缩并停止接受新行。 当从压缩组中删除行时，这些行将保留但标记为已删除。 对压缩组的更新将实现为压缩组中的删除以及对打开组的插入。  
   
@@ -76,6 +76,7 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
+    AND CSRowGroups.distribution_id = NI.distribution_id
     AND CSRowGroups.index_id = NI.index_id      
 WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   

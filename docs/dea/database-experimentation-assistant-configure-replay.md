@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 2e3490f1a381bbe3a27f9860df2884c759387c39
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: 7001f188b00e70c2616e8c3592d7fa9e34147321
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636087"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419782"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>为数据库实验助手配置 Distributed Replay
 
@@ -62,7 +62,7 @@ Distributed Replay 要求在计算机之间使用公用帐户。 由于此要求
 1. 打开 dcomcnfg.exe。
 2. 展开 "**组件服务**  >  **计算机**"  >  **我的电脑**  >  **DCOM 配置**"。
 3. 在 " **DCOM 配置**" 下，右键单击 **DReplayController**，然后选择 " **属性**"。
-4. 选择“安全”**** 选项卡。
+4. 选择“安全”选项卡。
 5. 在 " **启动和激活权限**" 下，选择 " **自定义**"，然后选择 " **编辑**"。
 6. 添加将开始重播的用户。 为用户授予本地启动和本地激活权限。 如果用户计划远程启动或激活，请向用户授予 "远程启动" 和 "远程激活" 权限。
 7. 选择 **"确定"** 以提交更改并返回到 " **安全** " 选项卡。
@@ -91,7 +91,7 @@ Distributed Replay 要求在计算机之间使用公用帐户。 由于此要求
 
     Distributed Replay 控制器日志位于 (x86) \Microsoft SQL Server \Tools\DReplayClient\Log. 的 C:\Program 文件中。 \<version\> 日志指示客户端是否可以向控制器注册自身。
 
-    如果配置成功，日志将显示**已向控制器注册的消息 \> <控制器名称**。
+    如果配置成功，日志将显示 **已向控制器注册的消息 \> <控制器名称**。
 
 有关更多配置选项，请参阅 [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md)。
 
@@ -99,7 +99,7 @@ Distributed Replay 要求在计算机之间使用公用帐户。 由于此要求
 
 您可以使用 Distributed Replay 管理工具快速测试 Distributed Replay 在环境中是否正常工作。 在向控制器注册多个客户端计算机的环境中，测试配置可能特别有用。 你可能需要 SQL Server Management Studio (SSMS) 安装才能获取管理工具。
 
-1. 请参阅 SSMS 安装位置，并查找 Distributed Replay 管理工具 dreplay.exe 及其相关组件。
+1. 请参阅 SSMS 安装位置，并查找 Distributed Replay 管理工具 dreplay.exe 及其相关组件。 目前， [ssms 17](../ssms/release-notes-ssms.md#1791) 是最新版本的 ssms，其中包含 dreplay.exe。
 2. 在命令提示符下，运行 `dreplay.exe status -f 1` 。
 
 如果前面的步骤已成功完成，控制台输出表明控制器可以查看其客户端 `READY` 状态。
