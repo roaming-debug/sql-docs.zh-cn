@@ -24,10 +24,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ddc348ba8ee7ccf9d37d9133272b48730965fb1
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379458"
 ---
 # <a name="type_name-transact-sql"></a>TYPE_NAME (Transact-SQL)
@@ -47,7 +47,7 @@ TYPE_NAME ( type_id )
 
 ## <a name="arguments"></a>参数
  type_id  
- 要使用的类型的 ID。 type_id 的数据类型为 int，它可以引用调用方有权访问的任意架构中的类型******。  
+ 要使用的类型的 ID。 type_id 的数据类型为 int，它可以引用调用方有权访问的任意架构中的类型。  
   
 ## <a name="return-types"></a>返回类型  
  **sysname**  
@@ -58,9 +58,9 @@ TYPE_NAME ( type_id )
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 也就是说，如果用户对该对象没有任何权限，则某些会产生元数据的内置函数（如 TYPE_NAME）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="remarks"></a>备注  
- 当 type_id 无效或当调用方没有足够权限引用类型时，TYPE_NAME 将返回 NULL**。  
+ 当 type_id 无效或当调用方没有足够权限引用类型时，TYPE_NAME 将返回 NULL。  
   
- TYPE_NAME 既可用于系统数据类型，也可用于用户定义数据类型。 类型可以包含在任意架构中，但是始终返回一个未限定的类型名称。 这表示名称不具有 schema.__**** 前缀开头。  
+ TYPE_NAME 既可用于系统数据类型，也可用于用户定义数据类型。 类型可以包含在任意架构中，但是始终返回一个未限定的类型名称。 这表示名称不具有 schema. 前缀开头。  
   
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) 和 [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)。  
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: bfa7cc36898aa521fed2e0e20fd08a5296147fcf
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91869222"
 ---
 # <a name="initialize-a-subscription-manually"></a>手动初始化订阅
@@ -76,7 +76,7 @@ ms.locfileid: "91869222"
   
 2.  在发布服务器中，执行 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 \@publication、\@subscriber 和 \@subscriber_db，并将 \@subscription_type 的值指定为 pull    。 这样便可注册请求订阅。  
   
-3.  在订阅服务器上，对包含已发布数据的数据库执行 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 将 \@sync_type 的值指定为 none********。  
+3.  在订阅服务器上，对包含已发布数据的数据库执行 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 将 \@sync_type 的值指定为 none。  
   
 4.  在订阅服务器上，执行 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)。 有关详细信息，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
   

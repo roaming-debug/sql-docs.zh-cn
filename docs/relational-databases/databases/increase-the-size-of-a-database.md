@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 6ba22ed5ef08a90bd0726dfefb1f748da0588cb1
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91810021"
 ---
 # <a name="increase-the-size-of-a-database"></a>增加数据库的大小
@@ -58,13 +58,13 @@ ms.locfileid: "91810021"
   
 #### <a name="to-increase-the-size-of-a-database"></a>增加数据库的大小  
   
-1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在 **对象资源管理器** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开****“数据库”，右键单击要扩展的数据库，再单击****“属性”。  
+2.  展开“数据库”，右键单击要扩展的数据库，再单击“属性”。  
   
 3.  在 **“数据库属性”** 中，选择 **“文件”** 页。  
   
-4.  若要增加现有文件的大小，请增加文件的****“初始大小 (MB)”列中的值。 数据库的大小必须至少增加 1 MB。  
+4.  若要增加现有文件的大小，请增加文件的“初始大小 (MB)”列中的值。 数据库的大小必须至少增加 1 MB。  
   
 5.  若要通过添加新文件增加数据库大小，请单击 **“添加”** ，然后输入新文件的值。 有关详细信息，请参阅 [向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   

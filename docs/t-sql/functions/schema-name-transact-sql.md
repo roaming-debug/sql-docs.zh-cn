@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef311e220c23fdc8b8bb3b779426418559ee83a7
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379942"
 ---
 # <a name="schema_name-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
@@ -51,7 +51,7 @@ SCHEMA_NAME ( [ schema_id ] )
 ## <a name="return-types"></a>返回类型  
  **sysname**  
   
- schema_id 不是有效 ID 时，返回 NULL**。  
+ schema_id 不是有效 ID 时，返回 NULL。  
   
 ## <a name="remarks"></a>注解  
  SCHEMA_NAME 返回系统架构和用户定义架构的名称。 可以在选择列表、WHERE 子句和任何允许使用表达式的地方调用 SCHEMA_NAME。  

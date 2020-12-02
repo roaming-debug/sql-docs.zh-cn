@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: 02ec3dd7e7047411901dcaad4b76056781a9384c
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379512"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
@@ -46,20 +46,20 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  要强制转换的值。 任何有效的表达式。  
   
  data_type  
- 要将 expression 强制转换为的数据类型**。  
+ 要将 expression 强制转换为的数据类型。  
   
  *length*  
  指定目标数据类型长度的可选整数。  
   
- 可接受值的范围由 data_type 的值确定**。  
+ 可接受值的范围由 data_type 的值确定。  
   
 ## <a name="return-types"></a>返回类型  
  返回转换为指定数据类型的值（如果转换成功）；否则返回 Null。  
   
 ## <a name="remarks"></a>注解  
- TRY_CAST 接收传递给它的值，并尝试将该值转换为指定的 data_type******。 如果强制转换成功，TRY_CAST 按指定的 data_type 返回值；如果发生错误，则返回 null******。 但是，如果请求的转换是显式不允许执行的转换，则 TRY_CAST 失败并显示错误****。  
+ TRY_CAST 接收传递给它的值，并尝试将该值转换为指定的 data_type。 如果强制转换成功，TRY_CAST 按指定的 data_type 返回值；如果发生错误，则返回 null。 但是，如果请求的转换是显式不允许执行的转换，则 TRY_CAST 失败并显示错误。  
   
- TRY_CAST 不是新的保留关键字，且可用于所有兼容级别****。 当连接到远程服务器时，TRY_CAST 与 TRY_CONVERT 具有相同的语义********。  
+ TRY_CAST 不是新的保留关键字，且可用于所有兼容级别。 当连接到远程服务器时，TRY_CAST 与 TRY_CONVERT 具有相同的语义。  
   
 ## <a name="examples"></a>示例  
   

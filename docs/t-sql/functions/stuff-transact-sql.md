@@ -26,10 +26,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d798e00eccd5252c5142c0e6e19ac842b02d500d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379808"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
@@ -49,19 +49,19 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 
 ## <a name="arguments"></a>参数
  *character_expression*  
- 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列**。  
+ 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列。  
   
  *start*  
- 一个整数值，指定删除和插入的开始位置。 如果 start 为负或为零，则返回空字符串**。 如果 start 的长度大于第一个 character_expression，则返回空字符串****。 start 的类型可以是 bigint******。  
+ 一个整数值，指定删除和插入的开始位置。 如果 start 为负或为零，则返回空字符串。 如果 start 的长度大于第一个 character_expression，则返回空字符串。 start 的类型可以是 bigint。  
   
  *length*  
- 一个整数，指定要删除的字符数。 如果 length 为负，则返回空字符串**。 如果 length 的长度大于第一个 character_expression，则最多可以删除到最后一个 character_expression 中的最后一个字符******。  如果 *length* 为零，则插入在 *start* 位置发生，并且不会删除任何字符。 length 的类型可以是 bigint******。
+ 一个整数，指定要删除的字符数。 如果 length 为负，则返回空字符串。 如果 length 的长度大于第一个 character_expression，则最多可以删除到最后一个 character_expression 中的最后一个字符。  如果 *length* 为零，则插入在 *start* 位置发生，并且不会删除任何字符。 length 的类型可以是 bigint。
 
- replaceWith_expression**  
- 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列**。 此表达式从 start 开始替换 length 个字符的 character_expression******。 如果 replaceWith_expression 为 `NULL`，则在不插入任何内容的情况下删除字符**。   
+ replaceWith_expression  
+ 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列。 此表达式从 start 开始替换 length 个字符的 character_expression。 如果 replaceWith_expression 为 `NULL`，则在不插入任何内容的情况下删除字符。   
   
 ## <a name="return-types"></a>返回类型  
- 如果 character_expression 是支持的字符数据类型之一，则返回字符数据**。 如果 character_expression 是支持的二进制数据类型之一，则返回二进制数据**。  
+ 如果 character_expression 是支持的字符数据类型之一，则返回字符数据。 如果 character_expression 是支持的二进制数据类型之一，则返回二进制数据。  
   
 ## <a name="remarks"></a>备注  
  如果开始位置或长度值是负数，或者开始位置大于第一个字符串的长度，则返回 Null 字符串。 如果开始位置为 0，则返回 Null 值。 如果要删除的长度大于第一个字符串的长度，则删除到第一个字符串中的第一个字符。  
@@ -69,7 +69,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 如果结果值大于返回类型支持的最大值，则会引发错误。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- 使用 SC 排序规则时，character_expression 和 replaceWith_expression 都可以包含代理项对****。 length 参数将 character_expression 中的每个代理项计为一个字符**。  
+ 使用 SC 排序规则时，character_expression 和 replaceWith_expression 都可以包含代理项对。 length 参数将 character_expression 中的每个代理项计为一个字符。  
   
 ## <a name="examples"></a>示例  
  以下示例从第一个字符串 `abcdef` 的第 `2` 个位置 (`b`) 开始删除三个字符，然后在删除位置插入第二个字符串，从而创建并返回一个字符串。  

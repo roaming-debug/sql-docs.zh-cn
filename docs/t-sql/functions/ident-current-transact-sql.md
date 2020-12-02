@@ -22,10 +22,10 @@ ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a4fe77504233fe2569a978c9f51c34e4e2236993
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116332"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
@@ -45,7 +45,7 @@ IDENT_CURRENT( 'table_or_view' )
 
 ## <a name="arguments"></a>参数
 table_or_view  
-返回其标识值的表或视图的名称。 table_or_view** 是 varchar****，无默认值。  
+返回其标识值的表或视图的名称。 table_or_view 是 varchar，无默认值。  
   
 ## <a name="return-types"></a>返回类型  
 numeric([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
@@ -56,7 +56,7 @@ numeric([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0)
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 这意味着，如果用户对对象没有任何权限，则元数据生成的内置函数（如 IDENT_CURRENT）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="remarks"></a>注解  
-IDENT_CURRENT 类似于 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 标识函数 SCOPE_IDENTITY 和 @@IDENTITY。 这三个函数都返回最后生成的标识值。 但是，上述每个函数中定义的“最后”的作用域和会话有所不同**：  
+IDENT_CURRENT 类似于 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 标识函数 SCOPE_IDENTITY 和 @@IDENTITY。 这三个函数都返回最后生成的标识值。 但是，上述每个函数中定义的“最后”的作用域和会话有所不同：  
 
 -   IDENT_CURRENT 返回为某个会话和用域中的指定表生成的最新标识值。  
 -   @@IDENTITY 返回为跨所有作用域的当前会话中的任何表生成的最后一个标识值。  

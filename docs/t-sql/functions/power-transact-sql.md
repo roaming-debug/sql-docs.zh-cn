@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3fbed016f7c4126f937fd2c376126ebd9f8e5f7b
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380732"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
@@ -46,10 +46,10 @@ POWER ( float_expression , y )
  float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md) 。  
   
  *y*  
- 要将 float_expression 提升到的幂**。 y 可以是精确或近似数值数据类型类别（bit 数据类型除外）的表达式******。  
+ 要将 float_expression 提升到的幂。 y 可以是精确或近似数值数据类型类别（bit 数据类型除外）的表达式。  
   
 ## <a name="return-types"></a>返回类型  
- 返回类型取决于 float_expression 的输入类型**：
+ 返回类型取决于 float_expression 的输入类型：
  
 |输入类型|返回类型|  
 |----------|-----------|  
@@ -86,7 +86,7 @@ Result1                Result2
 ```  
   
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. 使用 POWER 显示数据类型转换的结果  
- 以下示例演示 float_expression 如何保留会返回意外结果的数据类型**。  
+ 以下示例演示 float_expression 如何保留会返回意外结果的数据类型。  
   
 ```sql 
 SELECT   

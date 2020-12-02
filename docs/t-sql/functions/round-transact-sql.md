@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bafff2cafe25587ae65c519bfc2e1896b34117d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379985"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
@@ -44,13 +44,13 @@ ROUND ( numeric_expression , length [ ,function ] )
 
 ## <a name="arguments"></a>参数
  *numeric_expression*  
- 是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)****。  
+ 是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *length*  
- 它是 numeric_expression 的舍入精度**。 length 必须是 tinyint、smallint 或 int 类型的表达式  。如果 length 为正数，则将 numeric_expression 舍入到 length 指定的小数位数  。 如果 length 为负数，则将 numeric_expression 小数点左边部分舍入到 length 指定的长度******。  
+ 它是 numeric_expression 的舍入精度。 length 必须是 tinyint、smallint 或 int 类型的表达式  。如果 length 为正数，则将 numeric_expression 舍入到 length 指定的小数位数  。 如果 length 为负数，则将 numeric_expression 小数点左边部分舍入到 length 指定的长度。  
   
  *函数*  
- 要执行的操作的类型。 function 的数据类型必须是 tinyint、smallint 或 int  。如果 function 省略或其值为 0（默认值），则对 numeric_expression  进行舍入。 如果指定了 0 以外的值，则将截断 numeric_expression**。  
+ 要执行的操作的类型。 function 的数据类型必须是 tinyint、smallint 或 int  。如果 function 省略或其值为 0（默认值），则对 numeric_expression  进行舍入。 如果指定了 0 以外的值，则将截断 numeric_expression。  
   
 ## <a name="return-types"></a>返回类型  
  返回以下数据类型。  
@@ -62,17 +62,17 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**int**|**int**|  
 |**bigint**|**bigint**|  
 |**decimal** 和 **numeric** 类别 (p, s)|**decimal(p, s)**|  
-|money 和 smallmoney 类别********|**money**|  
-|float 和 real 类别********|**float**|  
+|money 和 smallmoney 类别|**money**|  
+|float 和 real 类别|**float**|  
   
 ## <a name="remarks"></a>注解  
- ROUND 始终返回一个值。 如果 length 为负数，并且大于小数点前的数字个数，则 ROUND 将返回 0**。  
+ ROUND 始终返回一个值。 如果 length 为负数，并且大于小数点前的数字个数，则 ROUND 将返回 0。  
   
 |示例|结果|  
 |-------------|------------|  
 |ROUND(748.58, -4)|0|  
   
- 如果 length 为负数，则无论什么数据类型，ROUND 都将返回一个舍入的 numeric_expression****。  
+ 如果 length 为负数，则无论什么数据类型，ROUND 都将返回一个舍入的 numeric_expression。  
   
 |示例|结果|  
 |--------------|------------|  

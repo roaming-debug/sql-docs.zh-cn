@@ -18,10 +18,10 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 854f975c64f5622c53d04c51651929d83745864a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91728038"
 ---
 # <a name="ftp-connection-manager"></a>FTP 连接管理器
@@ -80,7 +80,7 @@ ms.locfileid: "91728038"
  指定用来连接的 FTP 服务器的端口号。 此属性的默认值为 **21**。  
   
  **用户名**  
- 提供用于访问 FTP 服务器的用户名。 此属性的默认值为“匿名”。 ****  
+ 提供用于访问 FTP 服务器的用户名。 此属性的默认值为“匿名”。   
   
  **密码**  
  提供用于访问 FTP 服务器的密码。  
@@ -89,7 +89,7 @@ ms.locfileid: "91728038"
  指定任务超时之前经过的秒数。如果值为 **0** ，则表示不限制时间。 此属性的默认值为 **60**。  
   
  **使用被动模式**  
- 指定是由服务器还是由客户端启动连接。 服务器使用主动模式启动连接，客户端使用被动模式启动连接。 此属性的默认值为“主动模式”。 ****  
+ 指定是由服务器还是由客户端启动连接。 服务器使用主动模式启动连接，客户端使用被动模式启动连接。 此属性的默认值为“主动模式”。   
   
  **重试**  
  指定任务尝试连接的次数。 如果值为 **0** ，则表示不限制尝试次数。  
@@ -98,7 +98,7 @@ ms.locfileid: "91728038"
  提供传输数据的块区大小 (KB)。  
   
  **测试连接**  
- 在配置 FTP 连接管理器后，请通过单击“测试连接”**** 确认该连接是否正常。  
+ 在配置 FTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。  
   
 ## <a name="see-also"></a>另请参阅  
  [FTP 任务](../../integration-services/control-flow/ftp-task.md)   

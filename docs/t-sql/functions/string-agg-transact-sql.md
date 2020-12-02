@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fa5490a488168716649a913045b38dc04591ce27
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379802"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
@@ -105,7 +105,7 @@ FROM Person.Person;
 结果中不返回 `name` 单元格中的 `NULL` 值。   
 
 > [!NOTE]  
-> 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器，“结果显示为网格”选项无法实现回车符。 可切换到“结果显示为文本”，以便正确查看结果集****。       
+> 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器，“结果显示为网格”选项无法实现回车符。 可切换到“结果显示为文本”，以便正确查看结果集。       
 > 默认情况下，“结果显示为文本”截断为 256 个字符。 若要增加此限制，请更改“每个列中显示的最大字符数”选项。
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 生成使用逗号分隔且不带 NULL 值的姓名列表
@@ -145,7 +145,7 @@ FROM Person.Person;
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
-> 如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符****。 可切换到“结果显示为文本”，以便正确查看结果集****。
+> 如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符。 可切换到“结果显示为文本”，以便正确查看结果集。
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 返回带有相关标记的新闻文章
 

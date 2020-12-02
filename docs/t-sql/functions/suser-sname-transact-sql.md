@@ -28,10 +28,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d441cba0f070f4d93210000f3b497e88ebf9011
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380062"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
@@ -50,10 +50,10 @@ SUSER_SNAME ( [ server_user_sid ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- server_user_sid**  
+ server_user_sid  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
- 可选的登录安全标识号。 server_user_sid 为 varbinary(85)******。 server_user_sid 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组的安全标识号**。 如果未指定 server_user_sid，则返回有关当前用户的信息**。 如果此参数包含词 NULL，将返回 NULL。  
+ 可选的登录安全标识号。 server_user_sid 为 varbinary(85)。 server_user_sid 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组的安全标识号。 如果未指定 server_user_sid，则返回有关当前用户的信息。 如果此参数包含词 NULL，将返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(128)**  

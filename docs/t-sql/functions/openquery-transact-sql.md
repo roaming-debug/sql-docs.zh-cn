@@ -24,10 +24,10 @@ ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 0e8af312809066bef0a1e73bcdb1d8902f1c7808
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91117060"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
@@ -46,7 +46,7 @@ OPENQUERY ( linked_server ,'query' )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- linked_server**  
+ linked_server  
  表示链接服务器名称的标识符。  
   
  ' query '  

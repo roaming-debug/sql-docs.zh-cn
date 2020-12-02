@@ -20,10 +20,10 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d966e11f3bb545ec4ac71a412958fc36de6885ee
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91497735"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT 全文权限 (Transact-SQL)
@@ -56,10 +56,10 @@ GRANT permission [ ,...n ] ON
  permission  
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON FULLTEXT CATALOG ::full-text_catalog_name__****  
+ ON FULLTEXT CATALOG ::full-text_catalog_name  
  指定对其授予权限的全文目录。 需要使用作用域限定符 ::。  
   
- ON FULLTEXT STOPLIST ::full-text_stoplist_name****__  
+ ON FULLTEXT STOPLIST ::full-text_stoplist_name  
  指定要对其授予权限的全文非索引字表。 需要使用作用域限定符 ::。  
   
  database_principal  

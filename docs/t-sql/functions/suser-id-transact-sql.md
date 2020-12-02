@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4b145ad70549fb0dc1103e1b0a9b7f586c99b1d8
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379763"
 ---
 # <a name="suser_id-transact-sql"></a>SUSER_ID (Transact-SQL)
@@ -51,15 +51,15 @@ SUSER_ID ( [ 'login' ] )
 
 ## <a name="arguments"></a>参数
  **'** *login* **'**  
- 用户的登录名。 login** 是 **nchar**。 如果 login** 指定为 **char**，则 login** 会隐式转换为 **nchar**。 login** 可以是有权限连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户或组。 如果未指定 login**，则返回当前用户的登录标识号。 如果此参数包含词 NULL，将返回 NULL。  
+ 用户的登录名。 login 是 **nchar**。 如果 login 指定为 **char**，则 login 会隐式转换为 **nchar**。 login 可以是有权限连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户或组。 如果未指定 login，则返回当前用户的登录标识号。 如果此参数包含词 NULL，将返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
 ## <a name="remarks"></a>备注  
- SUSER_ID 仅为已经在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中显式提供的登录名返回标识号。 此 ID 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用于跟踪所有权和权限。 此 ID 不等同于 SUSER_SID 返回的登录名的 SID。 如果 login 是 SQL Server 登录名，则 SID 映射到 GUID**。 如果 login 是 Windows 登录名或 Windows 组，则 SID 映射到 Windows 安全标识符**。  
+ SUSER_ID 仅为已经在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中显式提供的登录名返回标识号。 此 ID 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用于跟踪所有权和权限。 此 ID 不等同于 SUSER_SID 返回的登录名的 SID。 如果 login 是 SQL Server 登录名，则 SID 映射到 GUID。 如果 login 是 Windows 登录名或 Windows 组，则 SID 映射到 Windows 安全标识符。  
   
- SUSER_SID 只返回在 syslogins 系统表中有条目的登录名的 SUID****。  
+ SUSER_SID 只返回在 syslogins 系统表中有条目的登录名的 SUID。  
   
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用，并且后面必须始终跟随圆括号，即使未指定任何参数。  
   

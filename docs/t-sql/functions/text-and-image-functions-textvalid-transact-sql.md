@@ -24,16 +24,16 @@ ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 52b353a09f8f175496a75a512188f5637d01d8e5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92036456"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>文本与图像函数 - TEXTVALID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  检查特定文本指针是否有效的 text、ntext 或 image 函数************。  
+  检查特定文本指针是否有效的 text、ntext 或 image 函数。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]没有可用的替代功能。  
@@ -62,15 +62,15 @@ TEXTVALID ( 'table.column' ,text_ ptr )
  **int**  
   
 ## <a name="remarks"></a>备注  
- 如果指针有效则返回 1，无效则返回 0。 请注意，text 列的标识符必须包含表名****。 在没有有效的文本指针的情况下，不能使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
+ 如果指针有效则返回 1，无效则返回 0。 请注意，text 列的标识符必须包含表名。 在没有有效的文本指针的情况下，不能使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
   
- 当使用 text、ntext 和 image 数据时，下列函数和语句也非常有用************。  
+ 当使用 text、ntext 和 image 数据时，下列函数和语句也非常有用。  
   
 |函数或语句|描述|  
 |---------------------------|-----------------|  
-|PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|返回指定字符串在 text 和 ntext 列中所处的字符位置********。|  
-|DATALENGTH(expression)|返回 text、ntext 和 image 列中数据的长度************。|  
-|SET TEXTSIZE|返回使用 SELECT 语句时返回的 text、ntext 或 image 数据的限制（字节）************。|  
+|PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|返回指定字符串在 text 和 ntext 列中所处的字符位置。|  
+|DATALENGTH(expression)|返回 text、ntext 和 image 列中数据的长度。|  
+|SET TEXTSIZE|返回使用 SELECT 语句时返回的 text、ntext 或 image 数据的限制（字节）。|  
   
 ## <a name="examples"></a>示例  
  以下示例报告是否存在用于 `logo` 表的 `pub_info` 列中的各个值的有效文本指针。  

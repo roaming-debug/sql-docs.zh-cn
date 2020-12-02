@@ -19,10 +19,10 @@ ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 321440dd7f9f895f4bbebb7b5d6fa361ac416bce
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380852"
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY (Transact-SQL)
@@ -42,7 +42,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 
 ## <a name="arguments"></a>参数
  Key_ID  
- 是数据库中对称密钥的 Key_ID。 若要查找您仅知道密钥名称的 Key_ID，请使用 SYMKEY_ID。 Key_ID 为 int 数据类型******。  
+ 是数据库中对称密钥的 Key_ID。 若要查找您仅知道密钥名称的 Key_ID，请使用 SYMKEY_ID。 Key_ID 为 int 数据类型。  
   
  **'** algorithm_desc **'**  
  指定输出应返回对称密钥的算法说明。 仅适用于从 EKM 模块创建的对称密钥。  

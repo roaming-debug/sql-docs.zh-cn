@@ -22,10 +22,10 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 31cf25c3800d4fe35e0ef914db85eb82f58fe85c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116712"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
@@ -45,7 +45,7 @@ GETANSINULL ( [ 'database' ] )
 
 ## <a name="arguments"></a>参数
  'database'  
- 为其返回为空性信息的数据库的名称。 *database 可以是 char****，也可以是 nchar****。 如果是 char，则数据库隐式转换为 nchar**********。  
+ 为其返回为空性信息的数据库的名称。 *database 可以是 char，也可以是 nchar。 如果是 char，则数据库隐式转换为 nchar。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -55,7 +55,7 @@ GETANSINULL ( [ 'database' ] )
   
  若要启用 ANSI NULL 默认行为，则必须设置下列条件之一:  
   
--   ALTER DATABASE database_name SET ANSI_NULL_DEFAULT ON**  
+-   ALTER DATABASE database_name SET ANSI_NULL_DEFAULT ON  
   
 -   SET ANSI_NULL_DFLT_ON ON  
   

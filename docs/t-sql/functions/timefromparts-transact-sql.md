@@ -20,16 +20,16 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b6ae1434ea9ec664481d233c4e38be7b0ada7389
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380462"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  对指定的时间返回 time 值（具有指定精度）****。  
+  对指定的时间返回 time 值（具有指定精度）。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,19 +51,19 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
  *seconds*  
  用于指定秒的整数表达式。  
   
- fractions**  
+ fractions  
  用于指定小数部分的整数表达式。  
   
  *精度*  
- 整数文字，用于指定要返回的 time 值的精度****。  
+ 整数文字，用于指定要返回的 time 值的精度。  
   
 ## <a name="return-types"></a>返回类型  
- time( precision )**** ** ****  
+ time( precision )    
   
 ## <a name="remarks"></a>备注  
- TIMEROMPARTS 返回完全初始化的时间值。 如果参数无效，则引发错误。 如果任何参数都为 null，则返回 null。 但是，如果 precision 参数为 Null，则会引发错误**。  
+ TIMEROMPARTS 返回完全初始化的时间值。 如果参数无效，则引发错误。 如果任何参数都为 null，则返回 null。 但是，如果 precision 参数为 Null，则会引发错误。  
   
- fractions 参数取决于 precision 参数****。 例如，如果 precision 为 7，则每个分数表示 100 纳秒；如果 precision 为 3，则每个分数表示 1 毫秒****。 如果 precision 的值为零，则 fractions 的值也必须为零；否则将引发错误****。  
+ fractions 参数取决于 precision 参数。 例如，如果 precision 为 7，则每个分数表示 100 纳秒；如果 precision 为 3，则每个分数表示 1 毫秒。 如果 precision 的值为零，则 fractions 的值也必须为零；否则将引发错误。  
   
  此函数可以在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本的服务器上远程执行。 它不能在版本低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的服务器上远程执行。  
   
@@ -86,7 +86,7 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. 包含秒的小数部分的示例  
- 以下示例演示了 fractions 和 precision 参数的用法****：  
+ 以下示例演示了 fractions 和 precision 参数的用法：  
   
 1.  如果 fractions 的值为 5、precision 的值为 1，则 fractions 的值表示 5/10 秒  。  
   

@@ -14,15 +14,15 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a56b34301386287ef954edae0528decd4d03fee
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91809473"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 课：将表转换为层次结构
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-具有使用自联接表示层次结构关系的表的客户可以将本课程作为指南，将他们的表转换为层次结构。 相对而言，从这种表示形式迁移为使用 **hierarchyid**的表示形式较为容易。 迁移之后，用户将拥有一个精简且易于理解的层次结构表示形式，可以采用多种方式对其进行索引以进行有效查询。  
+具有使用自联接表示层次结构关系的表的客户可以将本课程作为指南，将他们的表转换为层次结构。 相对而言，从这种表示形式迁移为使用 **hierarchyid** 的表示形式较为容易。 迁移之后，用户将拥有一个精简且易于理解的层次结构表示形式，可以采用多种方式对其进行索引以进行有效查询。  
   
 本课程将检查现有表、创建一个包含 **hierarchyid** 列的新表、使用源表中的数据填充此表，然后再演示三个索引策略。 本课程包含以下主题：  
  
@@ -37,11 +37,11 @@ ms.locfileid: "91809473"
 此处提供在 SSMS 中还原数据库的说明：[还原数据库](../backup-restore/restore-a-database-backup-using-ssms.md)。  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>检查 Employee 表的当前结构
-示例 Adventureworks2017（或更高版本）数据库包含基于“HumanResources”架构的“Employee”表********。 为了避免更改原始表，此步骤将对名为 **EmployeeDemo** 的 **Employee**表创建一个副本。 若要简化此示例，你只需从原始表中复制五列数据。 然后，查询 **HumanResources.EmployeeDemo** 表以查看在不使用 **hierarchyid** 数据类型的情况下表中数据的结构。  
+示例 Adventureworks2017（或更高版本）数据库包含基于“HumanResources”架构的“Employee”表。 为了避免更改原始表，此步骤将对名为 **EmployeeDemo** 的 **Employee** 表创建一个副本。 若要简化此示例，你只需从原始表中复制五列数据。 然后，查询 **HumanResources.EmployeeDemo** 表以查看在不使用 **hierarchyid** 数据类型的情况下表中数据的结构。  
   
 ### <a name="copy-the-employee-table"></a>复制 Employee 表  
   
-1.  在查询编辑器窗口中，运行下列代码以将 **Employee** 表中的表结构和数据复制到名为 **EmployeeDemo**的新表中。 由于原始表已使用 hierarchyid，本次查询实质上合会并层次结构，以便检索 employee 的管理员。 在本课程的后续部分中，我们将重新构建该层次结构。
+1.  在查询编辑器窗口中，运行下列代码以将 **Employee** 表中的表结构和数据复制到名为 **EmployeeDemo** 的新表中。 由于原始表已使用 hierarchyid，本次查询实质上合会并层次结构，以便检索 employee 的管理员。 在本课程的后续部分中，我们将重新构建该层次结构。
 
    ```sql  
    USE AdventureWorks2017;  
@@ -91,11 +91,11 @@ ms.locfileid: "91809473"
   
     结果在继续，共 290 行。  
   
-请注意， **ORDER BY** 子句会使输出将每个管理级别的直接下属都列在一起。 例如，MgrID 1 (ken0) 的所有七个直接下属都彼此紧挨着列出****。 虽然有可能实现，但是要将最终向 MgrID 1 负责的所有雇员进行分组将会更加困难****。  
+请注意， **ORDER BY** 子句会使输出将每个管理级别的直接下属都列在一起。 例如，MgrID 1 (ken0) 的所有七个直接下属都彼此紧挨着列出。 虽然有可能实现，但是要将最终向 MgrID 1 负责的所有雇员进行分组将会更加困难。  
 
 
 ## <a name="populate-a-table-with-existing-hierarchical-data"></a>使用现有层次结构数据填充表
-此任务将创建新表，然后使用 EmployeeDemo**** 表中的数据填充该表。 此任务包含以下步骤：  
+此任务将创建新表，然后使用 EmployeeDemo 表中的数据填充该表。 此任务包含以下步骤：  
   
 -   创建一个包含 **hierarchyid** 列的新表。 此列可替换现有的 **EmployeeID** 和 **ManagerID** 列。 但是，您将保留这些列。 这是因为现有应用程序可能会引用这些列，而且它们还有助于您了解传输后的数据。 表定义将 **OrgNode** 指定为主键，这就要求该列包含唯一值。 **OrgNode** 列的聚集索引将使用 **OrgNode** 序列存储日期。    
 -   创建一个用于跟踪直接向每个经理报告的雇员人数的临时表。 
@@ -103,7 +103,7 @@ ms.locfileid: "91809473"
   
 ### <a name="to-create-a-new-table-named-neworg"></a>创建一个名为 NewOrg 的新表  
   
--   在查询编辑器窗口中，运行下列代码以创建名为 **HumanResources.NewOrg**的新表：  
+-   在查询编辑器窗口中，运行下列代码以创建名为 **HumanResources.NewOrg** 的新表：  
   
     ```sql   
     CREATE TABLE HumanResources.NewOrg  
@@ -224,15 +224,15 @@ ms.locfileid: "91809473"
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>优化 NewOrg 表
-在[使用现有层次结构数据填充表]()任务中创建的“NewOrd”表包含所有雇主信息，该表使用 hierarchyid 数据类型表示层次结构********。 此任务添加了新的索引，以便支持对“hierarchyid”**** 列的搜索。  
+在[使用现有层次结构数据填充表]()任务中创建的“NewOrd”表包含所有雇主信息，该表使用 hierarchyid 数据类型表示层次结构。 此任务添加了新的索引，以便支持对“hierarchyid”列的搜索。  
   
 
-“hierarchyid”**** 列 (**OrgNode**) 是“NewOrg”**** 表的主键。 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”**** 列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  
+“hierarchyid”列 (**OrgNode**) 是“NewOrg”表的主键。 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  
   
   
 ### <a name="create-index-on-neworg-table-for-efficient-searches"></a>为 NewOrg 表创建索引以提高搜索效率  
   
-1.  若要改善在层次结构中同一级别的查询，可以使用 [GetLevel](../../t-sql/data-types/getlevel-database-engine.md) 方法创建一个包含此层次结构中的此级别的计算列。 然后，对此级别和 **Hierarchyid**创建一个组合索引。 运行下列代码以创建计算列和广度优先索引：  
+1.  若要改善在层次结构中同一级别的查询，可以使用 [GetLevel](../../t-sql/data-types/getlevel-database-engine.md) 方法创建一个包含此层次结构中的此级别的计算列。 然后，对此级别和 **Hierarchyid** 创建一个组合索引。 运行下列代码以创建计算列和广度优先索引：  
   
     ```sql  
     ALTER TABLE HumanResources.NewOrg   
@@ -242,7 +242,7 @@ ms.locfileid: "91809473"
     GO  
     ```  
   
-2.  对“EmployeeID”**** 列创建一个唯一索引。 即采用传统方式通过 **EmployeeID** 号单独查找一个雇员。 运行下列代码以便对 **EmployeeID**创建索引：  
+2.  对“EmployeeID”列创建一个唯一索引。 即采用传统方式通过 **EmployeeID** 号单独查找一个雇员。 运行下列代码以便对 **EmployeeID** 创建索引：  
   
     ```sql  
     CREATE UNIQUE INDEX EmpIDs_unq ON HumanResources.NewOrg(EmployeeID) ;  
@@ -290,7 +290,7 @@ ms.locfileid: "91809473"
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    **EmployeeID**优先索引：各行按照 **EmployeeID** 顺序存储。  
+    **EmployeeID** 优先索引：各行按照 **EmployeeID** 顺序存储。  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID
@@ -313,14 +313,14 @@ ms.locfileid: "91809473"
   
 ### <a name="drop-the-unnecessary-columns"></a>删除不需要的列  
   
-1.  “ManagerID”**** 列用于表示雇员/经理关系，现在由“OrgNode”**** 列来表示。 如果其他应用程序不需要“ManagerID”**** 列，可以考虑使用下列语句删除该列：  
+1.  “ManagerID” 列用于表示雇员/经理关系，现在由“OrgNode”列来表示。 如果其他应用程序不需要“ManagerID”列，可以考虑使用下列语句删除该列：  
   
     ```sql  
     ALTER TABLE HumanResources.NewOrg DROP COLUMN ManagerID ;  
     GO  
     ```  
   
-2.  “EmployeeID”**** 列也是冗余列。 “OrgNode”**** 列可以唯一标识每个雇员。 如果其他应用程序不需要“EmployeeID”**** 列，可以考虑使用下列代码先删除索引再删除该列：  
+2.  “EmployeeID”列也是冗余列。 “OrgNode”列可以唯一标识每个雇员。 如果其他应用程序不需要“EmployeeID”列，可以考虑使用下列代码先删除索引再删除该列：  
   
     ```sql  
     DROP INDEX EmpIDs_unq ON HumanResources.NewOrg ;  
@@ -330,9 +330,9 @@ ms.locfileid: "91809473"
   
 ### <a name="replace-the-original-table-with-the-new-table"></a>使用新表替换原始表  
   
-1.  如果原始表包含任何其他索引或约束，请将它们添加到“NewOrg”**** 表中。  
+1.  如果原始表包含任何其他索引或约束，请将它们添加到“NewOrg”表中。  
   
-2.  将旧的“EmployeeDemo”**** 表替换为新表。 运行下列代码以删除旧表，然后使用旧表的名称重新命名新表：  
+2.  将旧的“EmployeeDemo”表替换为新表。 运行下列代码以删除旧表，然后使用旧表的名称重新命名新表：  
   
     ```sql  
     DROP TABLE HumanResources.EmployeeDemo ;  

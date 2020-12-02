@@ -26,16 +26,16 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 204cdfe73791ef1cf7e6d3b66ed20735b61e9b09
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380448"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回从 datetime2 表达式转换的 datetimeoffset 值********。  
+  返回从 datetime2 表达式转换的 datetimeoffset 值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ TODATETIMEOFFSET ( expression , time_zone )
  一个解析为 [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 > [!NOTE]  
->  该表达式的类型不能为 text、ntext 或 image，因为这些类型无法隐式转换为 varchar 或 nvarchar********************。  
+>  该表达式的类型不能为 text、ntext 或 image，因为这些类型无法隐式转换为 varchar 或 nvarchar。  
   
  time_zone  
  是表示时区偏移量（分钟）（如果为整数）的表达式，例如 -120；或表示小时和分钟数的表达式（如果为字符串），例如“+13.00”。 范围为 +14 到 -14（小时）。 该表达式被解释为指定 time_zone 的本地时间。  
@@ -61,7 +61,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  如果表达式是字符串，其格式必须为 {+|-}TZH:THM。  
   
 ## <a name="return-type"></a>返回类型  
- datetimeoffset。 小数精度与 datetime 参数相同**。  
+ datetimeoffset。 小数精度与 datetime 参数相同。  
   
 ## <a name="examples"></a>示例  
   

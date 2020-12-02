@@ -24,10 +24,10 @@ ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4f2a75cf3da8220e861d8320b2454683c3b65a1f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380592"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
@@ -53,7 +53,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  正在验证的明文数据。  
   
  *签名*  
- 附加到已签名数据中的签名。 signature 的数据类型为 varbinary******。  
+ 附加到已签名数据中的签名。 signature 的数据类型为 varbinary。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -61,7 +61,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  如果签名匹配，则返回 1；否则返回 0。  
   
 ## <a name="remarks"></a>注解  
- VerifySignedByAsymKey 使用指定的非对称密钥的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较****。 如果值匹配，则确认签名有效。  
+ VerifySignedByAsymKey 使用指定的非对称密钥的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较。 如果值匹配，则确认签名有效。  
   
 ## <a name="permissions"></a>权限  
  要求对非对称密钥具有 VIEW DEFINITION 权限。  

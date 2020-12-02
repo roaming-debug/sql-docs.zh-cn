@@ -22,10 +22,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c30468f62758e0483b339baf436a788c2cdcabf
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380631"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
@@ -45,13 +45,13 @@ REVERSE ( string_expression )
 
 ## <a name="arguments"></a>参数
  string_expression  
- string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)**。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列**。  
+ string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列。  
   
 ## <a name="return-types"></a>返回类型  
- varchar 或 nvarchar********  
+ varchar 或 nvarchar  
   
 ## <a name="remarks"></a>备注  
- string_expression 的数据类型必须可隐式转换为 varchar******。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 string_expression**。  
+ string_expression 的数据类型必须可隐式转换为 varchar。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 string_expression。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
  使用 SC 排序规则时，REVERSE 函数将不反转代理项对的两部分的顺序。  
@@ -89,7 +89,7 @@ SELECT REVERSE(@myvar) AS Reversed ;
 GO  
 ```  
   
- 以下示例从 int 数据类型隐式转换为 varchar 数据类型，然后反转结果********。  
+ 以下示例从 int 数据类型隐式转换为 varchar 数据类型，然后反转结果。  
   
 ```sql
 SELECT REVERSE(1234) AS Reversed ;  

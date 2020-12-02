@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c2d0e0e8e49cc190931295e2b00fbb2486e39f1d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91378988"
 ---
 # <a name="session_id-transact-sql"></a>SESSION_ID (Transact-SQL)
@@ -35,7 +35,7 @@ SESSION_ID ( )
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回 nvarchar(32)**** 值。  
+ 返回 nvarchar(32) 值。  
   
 ## <a name="general-remarks"></a>一般备注  
  会话 ID 在连接建立时分配给每个用户连接。 它在连接期间都存在。 连接结束时，会话 ID 也会解除。  

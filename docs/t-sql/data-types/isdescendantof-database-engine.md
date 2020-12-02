@@ -19,16 +19,16 @@ ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8223928a7c0b537a26084eaa434567845e521719
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037480"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf（数据库引擎）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-如果这是父级的后代，则返回 true**。
+如果这是父级的后代，则返回 true。
   
 ## <a name="syntax"></a>语法  
   
@@ -46,12 +46,12 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 
 ## <a name="arguments"></a>参数
 parent  
-要执行 IsDescendantOf 测试的 Hierarchyid 节点****。
+要执行 IsDescendantOf 测试的 Hierarchyid 节点。
   
 ## <a name="return-types"></a>返回类型  
-SQL Server 返回类型：bit****
+SQL Server 返回类型：bit
   
-CLR 返回类型：SqlBoolean****
+CLR 返回类型：SqlBoolean
   
 ## <a name="remarks"></a>注解  
 对于以父级为根的子树中的所有节点，返回 true；对于其他所有节点，返回 false。

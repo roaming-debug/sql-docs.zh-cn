@@ -22,10 +22,10 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: db39f526499581d105176fa7df6092b7b2edd567
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379932"
 ---
 # <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
@@ -44,7 +44,7 @@ SCOPE_IDENTITY()
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- numeric(38,0)****  
+ numeric(38,0)  
   
 ## <a name="remarks"></a>备注  
  SCOPE_IDENTITY、IDENT_CURRENT 和 @@IDENTITY 是相似的函数，因为它们都返回插入到标识列中的值。  

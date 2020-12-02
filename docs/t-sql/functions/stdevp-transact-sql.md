@@ -22,10 +22,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b529dc24269b7e2b57f68ec22e81beed31d7dc03
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379842"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
@@ -55,7 +55,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  指定考虑每一个唯一值。  
   
  *expression*  
- 数值[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。 expression 是精确数值或近似数值数据类型类别（bit 数据类型除外）的表达式******。  
+ 数值[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。 expression 是精确数值或近似数值数据类型类别（bit 数据类型除外）的表达式。  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  

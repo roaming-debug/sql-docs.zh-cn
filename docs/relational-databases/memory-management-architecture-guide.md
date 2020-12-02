@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91809803"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
@@ -343,7 +343,7 @@ min memory per query 配置选项设定将为执行查询分配的最小内存�
 > [!NOTE]
 > 在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]之前，可以使用跟踪标志 8048 将基于节点的 PMO 强制变为基于 CPU 的 PMO。 从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，此行为是动态的，由引擎控制。
 
-从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可以动态检测特定 CMemThread 对象上的争用，并将对象提升为基于每个节点或每个 CPU 的实现。 升级后，PMO 会保持升级状态，直到重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程。 [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV 中 CMEMTHREAD 等待数过多可指示 CMemThread 争用，可通过观察以下 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 列来发现它：*contention_factor* *partition_type* *exclusive_allocations_count* 和 *waiting_tasks_count*。
+从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可以动态检测特定 CMemThread 对象上的争用，并将对象提升为基于每个节点或每个 CPU 的实现。  升级后，PMO 会保持升级状态，直到重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程。 [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV 中 CMEMTHREAD 等待数过多可指示 CMemThread 争用，可通过观察以下 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 列来发现它：*contention_factor* *partition_type* *exclusive_allocations_count* 和 *waiting_tasks_count*。
 
 ## <a name="see-also"></a>另请参阅
 [“服务器内存”服务器配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

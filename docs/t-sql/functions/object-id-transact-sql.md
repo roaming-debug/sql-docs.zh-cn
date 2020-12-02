@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 65161cafb2ef12e2de120b0e0bd402b722447620
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91670910"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
@@ -55,10 +55,10 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 
 ## <a name="arguments"></a>参数
  **'** *object_name* **'**  
- 要使用的对象。 object_name 为 varchar 或 nvarchar**********。 如果 object_name 为 varchar，则它会隐式转换为 nvarchar**********。 可以选择是否指定数据库和架构名称。  
+ 要使用的对象。 object_name 为 varchar 或 nvarchar。 如果 object_name 为 varchar，则它会隐式转换为 nvarchar。 可以选择是否指定数据库和架构名称。  
   
  **'** *object_type* **'**  
- 架构范围的对象类型。 object_type 为 varchar 或 nvarchar**********。 如果 object_type 为 varchar，则它会隐式转换为 nvarchar**********。 有关对象类型的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的 type 列****。  
+ 架构范围的对象类型。 object_type 为 varchar 或 nvarchar。 如果 object_type 为 varchar，则它会隐式转换为 nvarchar。 有关对象类型的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的 type 列。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -73,7 +73,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ## <a name="remarks"></a>注解  
  当该参数对系统函数可选时，则采用当前数据库、主机、服务器用户或数据库用户。 内置函数后面必须跟括号。  
   
- 当指定临时表名时，除非当前数据库为 tempdb，否则必须在该临时表名之前加上数据库名称****。 例如：`SELECT OBJECT_ID('tempdb..#mytemptable')`。  
+ 当指定临时表名时，除非当前数据库为 tempdb，否则必须在该临时表名之前加上数据库名称。 例如：`SELECT OBJECT_ID('tempdb..#mytemptable')`。  
   
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) 和 [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)。  
   

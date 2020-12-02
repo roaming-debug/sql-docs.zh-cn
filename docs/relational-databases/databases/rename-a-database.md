@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b81e565875074e3ba3fc08dd85f27b9c077ebb08
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92005504"
 ---
 # <a name="rename-a-database"></a>重命名数据库
@@ -66,11 +66,11 @@ ms.locfileid: "92005504"
 使用以下步骤通过 SQL Server Management Studio 重命名 SQL Server 或 Azure SQL 数据库。
 
   
-1. 在“对象资源管理器”中，连接到 SQL 实例****。  
+1. 在“对象资源管理器”中，连接到 SQL 实例。  
   
 2. 请确保该数据库没有打开的连接。 如果使用 SQL Server，则可以[将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)，关闭任何打开的连接并防止其他用户在你更改数据库名称时进行连接。  
   
-3. 在“对象资源管理器”中，展开“数据库”，右键单击要重命名的数据库，然后单击“重命名”********。  
+3. 在“对象资源管理器”中，展开“数据库”，右键单击要重命名的数据库，然后单击“重命名”。  
   
 4. 输入新的数据库名称，然后单击 **“确定”**。  
   

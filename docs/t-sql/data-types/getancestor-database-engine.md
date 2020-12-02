@@ -19,16 +19,16 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0256deca482147f98ed93f788b8c77ea26a93b02
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037170"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor（数据库引擎）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-返回表示 this 的第 n 个祖先的 hierarchyid********。
+返回表示 this 的第 n 个祖先的 hierarchyid。
   
 ## <a name="syntax"></a>语法  
   
@@ -46,12 +46,12 @@ SqlHierarchyId GetAncestor ( int n )
 
 ## <a name="arguments"></a>参数
 *n*  
-int，表示在层次结构中上升的级别数****。
+int，表示在层次结构中上升的级别数。
   
 ## <a name="return-types"></a>返回类型
-SQL Server 返回类型：hierarchyid****
+SQL Server 返回类型：hierarchyid
   
-CLR 返回类型：SqlHierarchyId****
+CLR 返回类型：SqlHierarchyId
   
 ## <a name="remarks"></a>备注  
 用于测试输出中的每个节点是否将当前节点作为指定级别的祖先。

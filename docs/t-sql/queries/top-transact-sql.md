@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5795e27e7ff97de361161d4f703d8691b3c8405e
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91227188"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -63,7 +63,7 @@ ms.locfileid: "91227188"
 指定要返回的行数的数值表达式。 如果指定 PERCENT，*expression* 会隐式转换为 **float** 值。 否则，*expression* 会转换为 **bigint**。  
   
 PERCENT  
-指示查询只返回结果集中前 expression% 的行**。 小数部分的值向上舍入到下一个整数值。  
+指示查询只返回结果集中前 expression% 的行。 小数部分的值向上舍入到下一个整数值。  
   
 WITH TIES  
 返回与有限结果集中的最后一个位置相关联的两行或更多行。 必须将此参数用于 **ORDER BY** 子句。 **WITH TIES** 可能会导致返回的行数多于在 *expression* 中指定的值。 例如，如果 *expression* 设置为 5，而 2 个其他行与第 5 行中 **ORDER BY** 列的值匹配，则结果集将包含 7 行。  
@@ -77,7 +77,7 @@ WITH TIES
   
 使用 TOP（或 OFFSET 和 FETCH）而非 SET ROWCOUNT 限制返回的行数。 这些方法之所以优于使用 SET ROWCOUNT，原因包括以下各项：  
   
--   作为 SELECT 语句的一部分，查询优化器在查询优化期间可能会考虑 TOP 或 FETCH 子句中 expression 的值**。 由于在运行查询的语句外部使用 SET ROWCOUNT，不会在查询计划中考虑它的值。  
+-   作为 SELECT 语句的一部分，查询优化器在查询优化期间可能会考虑 TOP 或 FETCH 子句中 expression 的值。 由于在运行查询的语句外部使用 SET ROWCOUNT，不会在查询计划中考虑它的值。  
   
 ## <a name="compatibility-support"></a>兼容性支持  
 为了向后兼容，括号在 SELECT 语句中是可选的。 我们建议在 SELECT 语句中始终为 TOP 使用括号。 这样做可与要求在 INSERT、UPDATE、MERGE 和 DELETE 语句中使用它的做法保持一致。 
@@ -87,7 +87,7 @@ TOP 表达式不影响由于触发器而可能运行的语句。 触发器中的
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许通过视图更新行。 由于可在视图定义中包含 TOP 子句，如果更新后行不再符合 TOP 表达式的要求，则某些行可能会从视图中消失。  
   
-如果在 MERGE 语句中指定，TOP 子句会在整个源表和整个目标表联接*后*应用。 而且，不符合执行插入、更新或删除操作要求的联接行会被删除。 TOP 子句将联接行的数量进一步减少为指定值，并且以一种无序方式对其余联接行应用插入、更新或删除操作。 也就是说，在 WHEN 子句中定义的操作中，这些行是无序分布的。 例如，如果指定 TOP (10) 会影响这些行中的 10 行，则 7 行可能会更新，3 行可能会插入。 或者，1 行可能会删除、5 行可能会更新以及 4 行可能会插入，以此类推。 由于 MERGE 语句对源表和目标表都进行完全表扫描，在使用 TOP 子句通过创建多个批处理来修改大型表时，I/O 性能可能会受到影响。 在这种情况下，请务必要确保所有连续批处理都以新行为目标。  
+如果在 MERGE 语句中指定，TOP 子句会在整个源表和整个目标表联接 *后* 应用。 而且，不符合执行插入、更新或删除操作要求的联接行会被删除。 TOP 子句将联接行的数量进一步减少为指定值，并且以一种无序方式对其余联接行应用插入、更新或删除操作。 也就是说，在 WHEN 子句中定义的操作中，这些行是无序分布的。 例如，如果指定 TOP (10) 会影响这些行中的 10 行，则 7 行可能会更新，3 行可能会插入。 或者，1 行可能会删除、5 行可能会更新以及 4 行可能会插入，以此类推。 由于 MERGE 语句对源表和目标表都进行完全表扫描，在使用 TOP 子句通过创建多个批处理来修改大型表时，I/O 性能可能会受到影响。 在这种情况下，请务必要确保所有连续批处理都以新行为目标。  
   
 在包含 UNION、UNION ALL、EXCEPT 或 INTERSECT 运算符的查询中指定 TOP 子句时，应特别小心。 此时可以编写一个返回意外结果的查询，因为当在选择操作中使用这些运算符时，以逻辑方式处理 TOP 和 ORDER BY 子句的顺序并不总是直观的。 例如，给定以下表和数据，假定您要返回最便宜的红色汽车和最便宜的蓝色汽车。 也就是红色的小轿车和蓝色的货车。  
   
@@ -231,7 +231,7 @@ GO
 ###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a>限制受 DELETE、INSERT 或 UPDATE 影响的行  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. 使用 TOP 限制删除的行数  
-如果将 TOP (*n*) 子句用于 DELETE，将针对未定义的选定 *n* 行执行删除操作。 也即，DELETE 语句选择满足 WHERE 子句中定义的条件的任何数目 (n) 的行**。 下面的示例从 `20` 表中删除其到期日期早于 2002 年 7 月 1 日的 `PurchaseOrderDetail` 行。  
+如果将 TOP (*n*) 子句用于 DELETE，将针对未定义的选定 *n* 行执行删除操作。 也即，DELETE 语句选择满足 WHERE 子句中定义的条件的任何数目 (n) 的行。 下面的示例从 `20` 表中删除其到期日期早于 2002 年 7 月 1 日的 `PurchaseOrderDetail` 行。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -297,7 +297,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. 使用 TOP 限制更新的行数  
-以下示例使用 TOP 子句更新表中的行。 如果将 TOP (*n*) 子句用于 UPDATE，将针对未定义数量的行运行更新操作。 也即，UPDATE 语句选择满足 WHERE 子句中定义的条件的任何数目 (n) 的行**。 下列示例将 10 个客户从一位销售人员分配给了另一位。  
+以下示例使用 TOP 子句更新表中的行。 如果将 TOP (*n*) 子句用于 UPDATE，将针对未定义数量的行运行更新操作。 也即，UPDATE 语句选择满足 WHERE 子句中定义的条件的任何数目 (n) 的行。 下列示例将 10 个客户从一位销售人员分配给了另一位。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -321,7 +321,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 下列示例将返回匹配查询条件的前 31 行。 **ORDER BY** 子句可确保所返回的 31 行是按字母顺序排序的 `LastName` 列的前 31 行。  
   
-使用 TOP，且不指定关联****。  
+使用 TOP，且不指定关联。  
   
 ```sql  
 SELECT TOP (31) FirstName, LastName   

@@ -22,16 +22,16 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 90365bd45edac8e3e5a131ab4786449352b70011
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92036458"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>文本与图像函数 - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  返回对应于 varbinary 格式的 text、ntext 或 image 列的文本指针值****************。 检索到的文本指针值可用于 READTEXT、WRITETEXT 和 UPDATETEXT 语句。  
+  返回对应于 varbinary 格式的 text、ntext 或 image 列的文本指针值。 检索到的文本指针值可用于 READTEXT、WRITETEXT 和 UPDATETEXT 语句。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]没有可用的替代功能。  
@@ -48,7 +48,7 @@ TEXTPTR ( column )
 
 ## <a name="arguments"></a>参数
  *column*  
- 将要使用的 text、ntext 或 image 列************。  
+ 将要使用的 text、ntext 或 image 列。  
   
 ## <a name="return-types"></a>返回类型  
  **varbinary**  
@@ -56,18 +56,18 @@ TEXTPTR ( column )
 ## <a name="remarks"></a>备注  
  对于含行内文本的表，TEXTPTR 将为要处理的文本返回一个句柄。 即使文本值为空，仍可获得有效的文本指针。  
   
- 不能对视图列使用 TEXTPTR 函数。 只能对表列使用此函数。 若要在视图列中使用 TEXTPTR 函数，必须使用 [ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)将兼容级别设置为 80。 如果表不含行内文本，并且 text、ntext 或 image 列尚未使用 UPDATETEXT 语句初始化，则 TEXTPTR 将返回一个空指针************。  
+ 不能对视图列使用 TEXTPTR 函数。 只能对表列使用此函数。 若要在视图列中使用 TEXTPTR 函数，必须使用 [ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)将兼容级别设置为 80。 如果表不含行内文本，并且 text、ntext 或 image 列尚未使用 UPDATETEXT 语句初始化，则 TEXTPTR 将返回一个空指针。  
   
  可使用 TEXTVALID 来测试文本指针是否存在。 在没有有效的文本指针的情况下，不能使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
   
- 当使用 text、ntext 和 image 数据时，下列函数和语句也非常有用************。  
+ 当使用 text、ntext 和 image 数据时，下列函数和语句也非常有用。  
   
 |函数或语句|描述|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b>%pattern%' , expression)|返回指定字符串在 text 或 ntext 列中所处的字符位置********。|  
-|DATALENGTH(expression)<b></b>|返回 text、ntext 和 image 列中数据的长度************。|  
-|SET TEXTSIZE|返回使用 SELECT 语句时返回的 text、ntext 或 image 数据的限制（字节）************。|  
-|SUBSTRING(text_column, start, length)<b></b>  |返回由指定的 start 偏移量和 length 指定的 varchar 字符串********。 字符串的长度应小于 8 KB。|  
+|PATINDEX<b>('</b>%pattern%' , expression)|返回指定字符串在 text 或 ntext 列中所处的字符位置。|  
+|DATALENGTH(expression)<b></b>|返回 text、ntext 和 image 列中数据的长度。|  
+|SET TEXTSIZE|返回使用 SELECT 语句时返回的 text、ntext 或 image 数据的限制（字节）。|  
+|SUBSTRING(text_column, start, length)<b></b>  |返回由指定的 start 偏移量和 length 指定的 varchar 字符串。 字符串的长度应小于 8 KB。|  
   
 ## <a name="examples"></a>示例  
   
@@ -75,7 +75,7 @@ TEXTPTR ( column )
 >  若要运行以下示例，必须安装 pubs 数据库  。  
   
 ### <a name="a-using-textptr"></a>A. 使用 TEXTPTR  
- 以下示例将使用 `TEXTPTR` 函数来查找与 `pubs` 数据库的 `pub_info` 表中的 `New Moon Books` 关联的 image 列 `logo`****。 文本指针放在局部变量 `@ptrval.` 中。  
+ 以下示例将使用 `TEXTPTR` 函数来查找与 `pubs` 数据库的 `pub_info` 表中的 `New Moon Books` 关联的 image 列 `logo`。 文本指针放在局部变量 `@ptrval.` 中。  
   
 ```sql
 USE pubs;  

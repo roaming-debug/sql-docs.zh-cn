@@ -24,10 +24,10 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 02eaf8552bdbd25788d5a436230b58e3d14d6f9e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116666"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
@@ -134,7 +134,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 -   如果 `INSERT ... SELECT` 或 `INSERT ... EXEC` 语句中插入的数据来自使用 **ORDER BY** 子句的查询，则按照 **ORDER BY** 子句指定的顺序生成 **NEXT VALUE FOR** 函数返回的值。  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>通过 OVER ORDER BY 子句使用序列对象  
- 通过将 **OVER** 子句应用于 **NEXT VALUE FOR** 调用，**NEXT VALUE FOR** 函数支持生成排序的序列值。 通过使用 OVER**** 子句，可以向用户保证返回的值是按照 OVER**** 子句的 ORDER BY**** 子句的顺序生成的。 将 **NEXT VALUE FOR** 函数与 **OVER** 子句一起使用时，下列附加规则适用：  
+ 通过将 **OVER** 子句应用于 **NEXT VALUE FOR** 调用，**NEXT VALUE FOR** 函数支持生成排序的序列值。 通过使用 OVER 子句，可以向用户保证返回的值是按照 OVER 子句的 ORDER BY 子句的顺序生成的。 将 **NEXT VALUE FOR** 函数与 **OVER** 子句一起使用时，下列附加规则适用：  
   
 -   如果在单个语句中为相同序列生成器多次调用 **NEXT VALUE FOR** 函数，这些调用必须使用相同的 **OVER** 子句定义。  
   
@@ -230,7 +230,7 @@ GO
 ```  
   
 ### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D. 在默认约束定义中使用 NEXT VALUE FOR 函数  
- 支持在默认约束定义中使用 **NEXT VALUE FOR** 函数。 有关在 **CREATE TABLE** 语句中使用 **NEXT VALUE FOR** 的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)中的示例 C。 以下示例使用 `ALTER TABLE` 将序列作为默认值添加到当前表中。  
+ 支持在默认约束定义中使用 **NEXT VALUE FOR** 函数。 有关在 **CREATE TABLE** 语句中使用 **NEXT VALUE FOR** 的示例，请参阅 [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)中的示例 C。 以下示例使用 `ALTER TABLE` 将序列作为默认值添加到当前表中。  
   
 ```sql
 CREATE TABLE Test.MyTable  

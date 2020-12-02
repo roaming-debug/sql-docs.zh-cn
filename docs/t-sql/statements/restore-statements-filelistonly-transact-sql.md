@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: f69f4ac410c3a625fce65b560af4b0611c1bca4c
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91497214"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 语句 - FILELISTONLY (Transact-SQL)
@@ -89,7 +89,7 @@ FROM <backup_device>
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|文件的逻辑名称。|  
 |PhysicalName|**nvarchar(260)**|文件的物理名称或操作系统名称。|  
-|类型|**char(1)**|文件的类型，其中包括：<br /><br /> **** L = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件<br /><br /> F = 全文目录<br /><br /> **** S = FileStream、FileTable 或 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 容器|  
+|类型|**char(1)**|文件的类型，其中包括：<br /><br /> L = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件<br /><br /> F = 全文目录<br /><br /> S = FileStream、FileTable 或 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 容器|  
 |FileGroupName|**nvarchar(128)** NULL|包含文件的文件组的名称。|  
 |大小|**numeric(20,0)**|当前大小（以字节为单位）。|  
 |MaxSize|**numeric(20,0)**|允许的最大大小（以字节为单位）。|  
@@ -103,10 +103,10 @@ FROM <backup_device>
 |SourceBlockSize|**int**|包含文件的物理设备（并非备份设备）的块大小（以字节为单位）。|  
 |FileGroupID|**int**|文件组的 ID。|  
 |LogGroupGUID|**uniqueidentifier** NULL|NULL。|  
-|DifferentialBaseLSN|**numeric(25,0)** NULL|对于差异备份，日志序列号大于或等于 DifferentialBaseLSN 的更改都包含在差异中****。<br /><br /> 对于其他备份类型，该值为 NULL。|  
+|DifferentialBaseLSN|**numeric(25,0)** NULL|对于差异备份，日志序列号大于或等于 DifferentialBaseLSN 的更改都包含在差异中。<br /><br /> 对于其他备份类型，该值为 NULL。|  
 |DifferentialBaseGUID|**uniqueidentifier** NULL|对于差异备份，该值是差异基准的唯一标识符。<br /><br /> 对于其他备份类型，该值为 NULL。|  
-|IsReadOnly|**bit**|**** 1 = 文件为只读文件。|  
-|IsPresent|**bit**|**** 1 = 文件出现在备份中。|  
+|IsReadOnly|**bit**|1 = 文件为只读文件。|  
+|IsPresent|**bit**|1 = 文件出现在备份中。|  
 |TDEThumbprint|**varbinary(32)** NULL|显示数据库加密密钥的指纹。 加密程序的指纹是带有加密密钥的证书的 SHA-1 哈希。 有关数据库加密的信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。|  
 |SnapshotURL|**nvarchar(360)** NULL|FILE_SNAPSHOT 备份中包含的数据库文件的 Azure 快照的 URL。 如果没有 FILE_SNAPSHOT 备份，则返回 NULL。|  
   

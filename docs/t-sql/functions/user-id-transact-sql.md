@@ -24,10 +24,10 @@ ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 50ffbb7ff9afa07b022f1c119afe07f43ab8ff6d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379422"
 ---
 # <a name="user_id-transact-sql"></a>USER_ID (Transact-SQL)
@@ -50,13 +50,13 @@ USER_ID ( [ 'user' ] )
 
 ## <a name="arguments"></a>参数
  *user*  
- 要使用的用户名。 user 为 nchar******。 如果指定的是 char 类型的值，则将其隐式转换为 nchar********。 需要使用括号。  
+ 要使用的用户名。 user 为 nchar。 如果指定的是 char 类型的值，则将其隐式转换为 nchar。 需要使用括号。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
 ## <a name="remarks"></a>备注  
- 省略 user 时，则假定为当前用户**。 如果此参数包含词 NULL，将返回 NULL。当在 EXECUTE AS 之后调用 USER_ID 时，USER_ID 将返回模拟上下文的 ID。  
+ 省略 user 时，则假定为当前用户。 如果此参数包含词 NULL，将返回 NULL。当在 EXECUTE AS 之后调用 USER_ID 时，USER_ID 将返回模拟上下文的 ID。  
   
  当未映射到特定数据库用户的 Windows 主体使用组成员身份访问数据库时，USER_ID 将返回 0（public 的 ID）。 如果此类主体在不指定架构的情况下创建对象，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建映射到 Windows 主体的隐式用户和架构。 在这些情况下创建的用户不能用来连接到数据库。 映射到隐式用户的 Windows 主体调用 USER_ID 将返回该隐式用户的 ID。  
   

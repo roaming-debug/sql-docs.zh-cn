@@ -21,10 +21,10 @@ ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 38c35f039701d68eddfee86f4fb558a3689033d8
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380712"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
@@ -46,13 +46,13 @@ PWDCOMPARE ( 'clear_text_password'
 
 ## <a name="arguments"></a>参数
  **'** *clear_text_password* **'**  
- 未加密的密码。 clear_text_password 是 sysname (nvarchar(128))**********。  
+ 未加密的密码。 clear_text_password 是 sysname (nvarchar(128))。  
   
  *password_hash*  
- 密码的加密哈希。 password_hash 是 varbinary(128)******。  
+ 密码的加密哈希。 password_hash 是 varbinary(128)。  
   
  *version*  
- 已过时参数；如果 password_hash 表示来自早于 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]（已迁移到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本但从未转换为 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 系统）的登录名的值，则该参数可设置为 1**。 version 是 int******。  
+ 已过时参数；如果 password_hash 表示来自早于 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]（已迁移到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本但从未转换为 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 系统）的登录名的值，则该参数可设置为 1。 version 是 int。  
   
 > [!CAUTION]  
 >  此参数用于向后兼容，但由于密码哈希 blob 现在包含自身的版本说明，因此忽略此参数。 [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
@@ -60,12 +60,12 @@ PWDCOMPARE ( 'clear_text_password'
 ## <a name="return-types"></a>返回类型  
  **int**  
   
- 如果 clear_text_password 的哈希与 password_hash 相匹配，则返回 1；反之，则返回 0****。  
+ 如果 clear_text_password 的哈希与 password_hash 相匹配，则返回 1；反之，则返回 0。  
   
 ## <a name="remarks"></a>注解  
  PWDCOMPARE 函数不会威胁密码哈希的能力，因为可通过尝试使用作为第一个参数提供的密码登录，执行相同的测试。  
   
- PWDCOMPARE 不能与包含数据库用户的密码一起使用****。 没有等效的包含数据库。  
+ PWDCOMPARE 不能与包含数据库用户的密码一起使用。 没有等效的包含数据库。  
   
 ## <a name="permissions"></a>权限  
  PWDENCRYPT 向用户开放使用。  

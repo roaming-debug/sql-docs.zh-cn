@@ -20,16 +20,16 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 26552c560277ae7eff9067ab3c33ec1d37a67e84
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379922"
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  为指定的日期和时间返回 smalldatetime 值****。  
+  为指定的日期和时间返回 smalldatetime 值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +61,7 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
  **smalldatetime**  
   
 ## <a name="remarks"></a>备注  
- 此函数的行为像完全初始化的 smalldatetime 值的构造函数****。 如果参数无效，则引发错误。 如果所需的参数为 null，则返回 null。  
+ 此函数的行为像完全初始化的 smalldatetime 值的构造函数。 如果参数无效，则引发错误。 如果所需的参数为 null，则返回 null。  
   
  此函数可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器以及更高版本上远程执行。 但在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之下的服务器版本中无法远程执行。  
   

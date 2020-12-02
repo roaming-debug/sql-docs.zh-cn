@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 468ffd5a95bcb0bf6fa2c5d4cb9a1cb343102acd
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91227171"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 子句 (Transact-SQL)
@@ -66,7 +66,7 @@ OPTION ( <query_option> [ ,...n ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- query_hint**  
+ query_hint  
  关键字，指示优化器提示用于自定义数据库引擎处理语句的方式。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="examples"></a>示例  

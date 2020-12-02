@@ -17,10 +17,10 @@ ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c7485325af023c264193fcc8ce8a449553dcb0b9
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91498041"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE 系统对象权限 (Transact-SQL)
@@ -40,7 +40,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 
 ## <a name="arguments"></a>参数
  [sys.] .  
- 只有在引用目录视图和动态管理视图时才需要 sys 限定符****。  
+ 只有在引用目录视图和动态管理视图时才需要 sys 限定符。  
   
  system_object  
  指定要对其撤消权限的对象。  
@@ -49,9 +49,9 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
  指定要从中撤消权限的主体。  
   
 ## <a name="remarks"></a>备注  
- 可使用该语句撤消对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的特定存储过程、扩展存储过程、表值函数、标量函数、视图、目录视图、兼容性视图、INFORMATION_SCHEMA 视图、动态管理视图以及系统表的权限。 每个系统对象都作为唯一的一条记录存在于资源数据库 (mssqlsystemresource) 中****。 该资源数据库为只读。 指向对象的链接作为各数据库的 sys 架构中的一条记录显示****。  
+ 可使用该语句撤消对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的特定存储过程、扩展存储过程、表值函数、标量函数、视图、目录视图、兼容性视图、INFORMATION_SCHEMA 视图、动态管理视图以及系统表的权限。 每个系统对象都作为唯一的一条记录存在于资源数据库 (mssqlsystemresource) 中。 该资源数据库为只读。 指向对象的链接作为各数据库的 sys 架构中的一条记录显示。  
   
- 默认名称解析将解析资源数据库的非限定过程名称。 因此，**** 只有当指定目录视图和动态管理视图时，才需要 sys. 限定符。  
+ 默认名称解析将解析资源数据库的非限定过程名称。 因此， 只有当指定目录视图和动态管理视图时，才需要 sys. 限定符。  
   
 > [!CAUTION]  
 >  撤消对系统对象的权限会导致依赖这些权限的应用程序失败。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用目录视图，并且在更改了对目录视图的默认权限之后可能无法发挥预期的作用。  

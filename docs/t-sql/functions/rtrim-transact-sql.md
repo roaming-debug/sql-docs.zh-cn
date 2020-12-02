@@ -23,10 +23,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 33451df732cc2fec3ffedd8d8893034b1b24d1a4
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379982"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
@@ -46,12 +46,12 @@ RTRIM ( character_expression )
 
 ## <a name="arguments"></a>参数
  *character_expression*  
- 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列**。  
+ 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列。  
   
- character_expression 的数据类型必须可隐式转换为 varchar******。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 character_expression**。  
+ character_expression 的数据类型必须可隐式转换为 varchar。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 character_expression。  
   
 ## <a name="return-types"></a>返回类型  
- varchar 或 nvarchar********  
+ varchar 或 nvarchar  
   
 ## <a name="examples"></a>示例  
   

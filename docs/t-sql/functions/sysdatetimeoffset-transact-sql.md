@@ -32,16 +32,16 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e5599ad413dbdc6720a35d9ce86e37aa6b4a2add
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380002"
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回包含计算机的日期和时间的 datetimeoffset(7) 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例正在该计算机上运行****。 时区偏移量包含在内。  
+  返回包含计算机的日期和时间的 datetimeoffset(7) 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例正在该计算机上运行。 时区偏移量包含在内。  
   
  有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
@@ -59,7 +59,7 @@ SYSDATETIMEOFFSET ( )
  **datetimeoffset(7)**  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其可以引用 datetimeoffset 表达式的任何位置都可以引用 SYSDATETIMEOFFSET****。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其可以引用 datetimeoffset 表达式的任何位置都可以引用 SYSDATETIMEOFFSET。  
   
  SYSDATETIMEOFFSET 是不确定性函数。 不能对在列中引用该函数的视图和表达式建立索引。  
   

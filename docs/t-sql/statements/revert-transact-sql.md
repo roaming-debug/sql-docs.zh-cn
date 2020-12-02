@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: e8ae0325029d458df85c3250e96002a075945f88
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91498037"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -48,7 +48,7 @@ REVERT
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- WITH COOKIE = @varbinary_variable**  
+ WITH COOKIE = @varbinary_variable  
  指定在相应的 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 独立语句中创建的 cookie。 \@varbinary_variable 是 varbinary(100)。  
   
 ## <a name="remarks"></a>注解  
@@ -80,7 +80,7 @@ EXECUTE dbo.usp_myproc;
  指定为独立语句时，REVERT 将应用于在批或会话中定义的 EXECUTE AS 语句。 如果相应的 EXECUTE AS 语句包含 WITH NO REVERT 子句，则 REVERT 无效。 在这种情况下，执行上下文将保持有效状态，直到删除会话。  
   
 ## <a name="using-revert-with-cookie"></a>使用 REVERT WITH COOKIE  
- 用于设置会话执行上下文的 EXECUTE AS 语句可以包含可选子句 WITH NO REVERT COOKIE = @varbinary_variable**。 运行此语句时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将 cookie 传递给 @varbinary_variable**。 只有执行调用的 REVERT WITH COOKIE = @varbinary_variable语句包含正确的 \@varbinary_variable 值，该语句设置的执行上下文才能恢复为以前的上下文****。  
+ 用于设置会话执行上下文的 EXECUTE AS 语句可以包含可选子句 WITH NO REVERT COOKIE = @varbinary_variable。 运行此语句时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将 cookie 传递给 @varbinary_variable。 只有执行调用的 REVERT WITH COOKIE = @varbinary_variable语句包含正确的 \@varbinary_variable 值，该语句设置的执行上下文才能恢复为以前的上下文。  
   
  此机制在使用连接池的环境中是有用的。 连接池是一组供跨越多个最终用户的应用程序重用的数据库连接的维护机制。 由于只有 EXECUTE AS 语句的调用方（在这里，是应用程序）才知道传递到 \@varbinary_variable 的值，因此调用方可以保证它们所建立的执行上下文无法被调用该应用程序的最终用户更改。 恢复执行上下文之后，应用程序可以将上下文切换到另一个主体。  
   

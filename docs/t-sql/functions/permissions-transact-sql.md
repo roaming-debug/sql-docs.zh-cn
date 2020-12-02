@@ -26,10 +26,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1bbd07982bc45b3fbd32b140f74a9a0f32fa3c3a
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380739"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -51,10 +51,10 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 
 ## <a name="arguments"></a>参数
  *objectid*  
- 安全对象的 ID。 如果未指定 objectid，则位图值包含当前用户的语句权限；否则，位图包含当前用户对该安全对象的权限**。 指定的安全对象必须在当前数据库中。 使用 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 函数确定 objectid 值**。  
+ 安全对象的 ID。 如果未指定 objectid，则位图值包含当前用户的语句权限；否则，位图包含当前用户对该安全对象的权限。 指定的安全对象必须在当前数据库中。 使用 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 函数确定 objectid 值。  
   
  **'** *column* **'**  
- 返回其权限信息的列的可选名。 该列必须是 objectid 指定的表中的有效列名**。  
+ 返回其权限信息的列的可选名。 该列必须是 objectid 指定的表中的有效列名。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -64,13 +64,13 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
  所返回的权限信息是 32 位位图。  
   
- 低 16 位反映授予用户的权限，以及应用于 Windows 组或当前用户属于其成员的固定服务器角色的权限。 例如，当没有指定 objectid 时，将返回值 66（十六进制值 0x42），指示当前用户具有执行 CREATE TABLE（十进制值 2）和 BACKUP DATABASE（十进制值 64）语句的权限**。  
+ 低 16 位反映授予用户的权限，以及应用于 Windows 组或当前用户属于其成员的固定服务器角色的权限。 例如，当没有指定 objectid 时，将返回值 66（十六进制值 0x42），指示当前用户具有执行 CREATE TABLE（十进制值 2）和 BACKUP DATABASE（十进制值 64）语句的权限。  
   
- 高 16 位反映用户可以授予其他用户的权限。 除左移 16 位（与 65536 相乘）之外，高 16 位的解释方式与下表中所介绍的低 16 位的解释方式完全相同。 例如，位 0x8（十进制值 8）指示当指定 objectid 时的 INSERT 权限**。 而 0x80000（十进制值 524288）指示 GRANT INSERT 权限的能力，这是因为 524288 = 8 x 65536。  
+ 高 16 位反映用户可以授予其他用户的权限。 除左移 16 位（与 65536 相乘）之外，高 16 位的解释方式与下表中所介绍的低 16 位的解释方式完全相同。 例如，位 0x8（十进制值 8）指示当指定 objectid 时的 INSERT 权限。 而 0x80000（十进制值 524288）指示 GRANT INSERT 权限的能力，这是因为 524288 = 8 x 65536。  
   
  由于角色中的成员身份，没有执行语句权限的用户仍然可以将该权限授予其他用户。  
   
- 下表显示语句权限所使用的位（未指定 objectid）**。  
+ 下表显示语句权限所使用的位（未指定 objectid）。  
   
 |位（十进制）|位（十六进制）|语句权限|  
 |-----------------|-----------------|--------------------------|  
@@ -84,7 +84,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |128|0x80|BACKUP LOG|  
 |256|0x100|保留|  
   
- 下表显示当仅指定 objectid 时，返回的对象权限所使用的位**。  
+ 下表显示当仅指定 objectid 时，返回的对象权限所使用的位。  
   
 |位（十进制）|位（十六进制）|语句权限|  
 |-----------------|-----------------|--------------------------|  
@@ -98,7 +98,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |8192|0x2000|UPDATE ANY|  
 |16384|0x4000|REFERENCES ANY|  
   
- 下表显示当同时指定 objectid 和列时，返回的列级对象权限所使用的位**。  
+ 下表显示当同时指定 objectid 和列时，返回的列级对象权限所使用的位。  
   
 |位（十进制）|位（十六进制）|语句权限|  
 |-----------------|-----------------|--------------------------|  
@@ -106,7 +106,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |2|0x2|UPDATE|  
 |4|0x4|REFERENCES|  
   
- 如果指定的参数为 NULL 或无效（例如，objectid 或列不存在），则返回 NULL**。 没有定义不适用的权限所使用的位值（例如，表的 EXECUTE 权限、位 0x20）。  
+ 如果指定的参数为 NULL 或无效（例如，objectid 或列不存在），则返回 NULL。 没有定义不适用的权限所使用的位值（例如，表的 EXECUTE 权限、位 0x20）。  
   
  使用位与 (&) 运算符确定 PERMISSIONS 函数返回的位图中的每个位集。  
   

@@ -15,10 +15,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68b556070ef8714bc793a333b2a7e6c5d392d882
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719660"
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
@@ -31,11 +31,11 @@ ms.locfileid: "91719660"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>向 SSIS 包添加 OData 连接管理器  
  可以通过三种方式向 SSIS 包添加新 OData 连接管理器：  
   
--   单击“OData 源编辑器”中的“新建…”按钮********  
+-   单击“OData 源编辑器”中的“新建…”按钮  
   
--   在“解决方案资源管理器” **** 中，右键单击“连接管理器” **** 文件夹，然后单击“新建连接管理器” ****。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
+-   在“解决方案资源管理器”  中，右键单击“连接管理器” 文件夹，然后单击“新建连接管理器” 。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
   
--   右键单击包设计器底部的“连接管理器”窗格，然后选择“新建连接”********。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
+-   右键单击包设计器底部的“连接管理器”窗格，然后选择“新建连接”。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
   
 ## <a name="connection-manager-authentication"></a>连接管理器身份验证  
  OData 连接管理器支持五种身份验证模式。  
@@ -52,7 +52,7 @@ ms.locfileid: "91719660"
   
 对于匿名访问，请选择“Windows 身份验证”选项。  
 
-要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项****。 也不可使用任何为多重身份验证配置的选项。 当前不支持新式身份验证。 
+要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项。 也不可使用任何为多重身份验证配置的选项。 当前不支持新式身份验证。 
   
 ### <a name="specifying-and-securing-credentials"></a>指定和保护凭据  
  如果 OData 服务需要基本身份验证，则可以在 [OData Connection Manager Editor]()中指定用户名和密码。 在编辑器中输入的值保留在包中。 密码值根据包保护级别进行加密。  
@@ -70,7 +70,7 @@ ms.locfileid: "91719660"
 |ConnectionString|包括连接管理器的其他属性。|  
   
 ## <a name="odata-connection-manager-editor"></a>“OData 连接管理器编辑器”
-  使用“OData 连接管理器编辑器”对话框可以添加与 OData 数据源的连接或者编辑现有连接****。  
+  使用“OData 连接管理器编辑器”对话框可以添加与 OData 数据源的连接或者编辑现有连接。  
   
 ### <a name="options"></a>选项  
  **连接管理器名称**  
@@ -87,9 +87,9 @@ ms.locfileid: "91719660"
 -   **Microsoft Dynamics CRM Online**，适用于 Dynamics CRM Online
 -   **Microsoft Online Services**，适用于 Microsoft Online Services
 
-如果选择 Windows 身份验证之外的选项，请输入用户名和密码********。 
+如果选择 Windows 身份验证之外的选项，请输入用户名和密码。 
 
-要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项****。 也不可使用任何为多重身份验证配置的选项。
+要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项。 也不可使用任何为多重身份验证配置的选项。
 
  **测试连接**  
  单击此按钮可测试与 OData 源的连接。

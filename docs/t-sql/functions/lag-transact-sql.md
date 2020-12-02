@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 61921766a4b665ceadc5dd4791fa699f1f23d1dc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116689"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
@@ -45,19 +45,19 @@ LAG (scalar_expression [,offset] [,default])
 
 ## <a name="arguments"></a>参数
  *scalar_expression*  
- 要根据指定偏移量返回的值。 这是一个返回单个（标量）值的任何类型的表达式。 scalar_expression 不能为分析函数**。  
+ 要根据指定偏移量返回的值。 这是一个返回单个（标量）值的任何类型的表达式。 scalar_expression 不能为分析函数。  
   
  *offset*  
- 当前行（从中获得取值）后的行数。 如果未指定，则默认值为 1。 offset 可以是列、子查询或其他表达式，它们的计算值为正整数，或可隐式转换为 bigint******。 offset 不能是负数值或分析函数**。  
+ 当前行（从中获得取值）后的行数。 如果未指定，则默认值为 1。 offset 可以是列、子查询或其他表达式，它们的计算值为正整数，或可隐式转换为 bigint。 offset 不能是负数值或分析函数。  
   
  *default*  
- 偏移量** 超出分区范围时返回的值。 如果未指定默认值，则返回 NULL。 default 可以是列、子查询或其他表达式，但它不能是分析函数**。 default 的类型与 scalar_expression 的类型必须兼容****。  
+ 偏移量超出分区范围时返回的值。 如果未指定默认值，则返回 NULL。 default 可以是列、子查询或其他表达式，但它不能是分析函数。 default 的类型与 scalar_expression 的类型必须兼容。  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 在应用函数之前确定数据的顺序  。 当指定 partition_by_clause 时，它确定分区中数据的顺序**。 需要 order_by_clause  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 在应用函数之前确定数据的顺序  。 当指定 partition_by_clause 时，它确定分区中数据的顺序。 需要 order_by_clause  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 指定 scalar_expression 的数据类型**。 如果 scalar_expression 可以为 null 或 default 被设置为 NULL，则返回 NULL****。  
+ 指定 scalar_expression 的数据类型。 如果 scalar_expression 可以为 null 或 default 被设置为 NULL，则返回 NULL。  
   
 ## <a name="general-remarks"></a>一般备注  
  LAG 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d70ad412676a06c9a72eac8379fc72673c41275f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116376"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
@@ -51,7 +51,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 标识用于对输入执行哈希操作的哈希算法。 这是必选参数，无默认值。 需要使用单引号。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，除 SHA2_256 和 SHA2_512 以外的所有算法都已过时。  
   
 `@input`  
-指定包含要对其执行哈希操作的数据的变量。  为 varchar、nvarchar 或 varbinary`@input`************。  
+指定包含要对其执行哈希操作的数据的变量。  为 varchar、nvarchar 或 varbinary`@input`。  
   
 'input'  
 指定一个表达式，其计算结果为要对其执行哈希操作的字符或二进制字符串。  
@@ -63,7 +63,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
  对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更早版本，允许的输入值限制为 8000 个字节。  
   
 ## <a name="return-value"></a>返回值  
- varbinary（最大 8000 个字节）****  
+ varbinary（最大 8000 个字节）  
 
 ## <a name="remarks"></a>备注  
 请考虑使用 `CHECKSUM` 或 `BINARY_CHECKSUM` 作为替代方案，以计算哈希值。
@@ -72,7 +72,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 ## <a name="examples"></a>示例  
 ### <a name="return-the-hash-of-a-variable"></a>返回变量的哈希  
- 以下示例返回变量 `@HashThis` 中存储的 nvarchar 数据的 `SHA2_256` 哈希值****。  
+ 以下示例返回变量 `@HashThis` 中存储的 nvarchar 数据的 `SHA2_256` 哈希值。  
   
 ```sql  
 DECLARE @HashThis NVARCHAR(32);  

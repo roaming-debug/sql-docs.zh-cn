@@ -14,20 +14,20 @@ ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 295eaa677578effd375e5443fd20e1f5ca368669
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868646"
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱组件的 F1 帮助
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  “工具箱”中显示有许多可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 项目中使用的项****。 您可以从 **“视图”** 菜单打开 **“工具箱”** ，并根据需要停靠此窗口。 在停靠时， **“工具箱”** 可以始终是打开的并保持在固定位置，或设置为在未使用时 **“自动隐藏”** 。  
+  “工具箱”中显示有许多可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 项目中使用的项。 您可以从 **“视图”** 菜单打开 **“工具箱”** ，并根据需要停靠此窗口。 在停靠时， **“工具箱”** 可以始终是打开的并保持在固定位置，或设置为在未使用时 **“自动隐藏”** 。  
   
- 可以通过拖放“工具箱”**** 中的图标，或通过复制并粘贴这些图标，将其移至代码编辑器中或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计视图的图面上。  
+ 可以通过拖放“工具箱”中的图标，或通过复制并粘贴这些图标，将其移至代码编辑器中或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计视图的图面上。  
   
 ## <a name="how-the-toolbox-works"></a>工具箱的工作原理  
- 工具箱是一个滑动树控件，其行为与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 资源管理器非常类似，但是没有网格线或连接线。 可以同时展开“工具箱”**** 的多个片段（称为“选项卡”），并且可以在“工具箱”**** 窗口内滚动查看整个树的内容。 若要展开“工具箱”**** 的任何选项卡，请单击其名称旁边的加号 (**+**)。 若要折叠展开的选项卡，请单击其名称旁边的减号 ( **-** )。  
+ 工具箱是一个滑动树控件，其行为与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 资源管理器非常类似，但是没有网格线或连接线。 可以同时展开“工具箱”的多个片段（称为“选项卡”），并且可以在“工具箱”窗口内滚动查看整个树的内容。 若要展开“工具箱”的任何选项卡，请单击其名称旁边的加号 (**+**)。 若要折叠展开的选项卡，请单击其名称旁边的减号 ( **-** )。  
   
  每次返回到编辑器或设计器时， **“工具箱”** 都将自动滚动到最近选择的选项卡和项。 将焦点切换到其他编辑器或设计器时， **“工具箱”** 中的当前选择也会随之切换。  
   

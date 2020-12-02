@@ -12,10 +12,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 783d2a0e80728f323b5b9d25048c10189df695a3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868045"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改进全文查询的性能
@@ -36,7 +36,7 @@ ms.locfileid: "91868045"
   
 -   如果只需要全文键或排名的信息，请使用 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) ，而不要使用分别与之对应的 CONTAINS 或 FREETEXT。  
   
--   若要限制结果数并提高性能，请使用 FREETEXTTABLE 和 CONTAINSTABLE 函数的 *top_n_by_rank* 参数。 使用*top_n_by_rank* 可以只返回最密切相关的匹配项。 仅当商业应用场景不需要返回所有可能的匹配项（即不需要“返回全部项”**）时，才应使用此参数。  
+-   若要限制结果数并提高性能，请使用 FREETEXTTABLE 和 CONTAINSTABLE 函数的 *top_n_by_rank* 参数。 使用 *top_n_by_rank* 可以只返回最密切相关的匹配项。 仅当商业应用场景不需要返回所有可能的匹配项（即不需要“返回全部项”）时，才应使用此参数。  
   
     > [!NOTE]  
     >  法律应用场景通常需要返回全部项，不过对于诸如电子商务等商业应用场景，性能可能更为重要。  

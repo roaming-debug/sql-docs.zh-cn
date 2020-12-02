@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a17fb30859866155b2e3976e3d1a1bb2890ac4e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92006225"
 ---
 # <a name="polygon"></a>Polygon
@@ -30,7 +30,7 @@ ms.locfileid: "92006225"
 ## <a name="polygon-instances"></a>Polygon 实例  
  可以从至少具有三个不同点的环中构建一个 **Polygon** 实例。 **Polygon** 实例也可以为空。  
   
-**Polygon** 的外部环和任意内部环定义了其边界。 环内部的空间定义了 **Polygon**的内部。  
+**Polygon** 的外部环和任意内部环定义了其边界。 环内部的空间定义了 **Polygon** 的内部。  
   
 下图显示了 **Polygon** 实例的示例。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "92006225"
  已接受的 **Polygon** 实例是可以在不引发异常的情况下存储到 **geometry** 或 **geography** 变量中的实例。 下面是一些已接受的 **Polygon** 实例：  
   
 -   空的 **Polygon** 实例  
--   包含一个可接受外部环 (LineString****) 和零个或多个可接受内部环 (LineString****) 的 Polygon**** 实例  
+-   包含一个可接受外部环 (LineString) 和零个或多个可接受内部环 (LineString) 的 Polygon 实例  
   
-为了让环 (LineString****) 可接受，必须满足以下条件。  
+为了让环 (LineString) 可接受，必须满足以下条件。  
   
 -   **LineString** 实例必须是已接受的实例。  
 -   **LineString** 实例至少必须有四个点。  

@@ -14,10 +14,10 @@ ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91412750"
 ---
 # <a name="import-a-policy-based-management-policy"></a>导入基于策略的管理策略
@@ -32,15 +32,15 @@ ms.locfileid: "91412750"
   
 ### <a name="to-import-a-policy-instance"></a>导入策略实例  
   
-1.  在“对象资源管理器” **** 中，单击加号以展开新导入的策略实例要存储到的服务器。  
+1.  在“对象资源管理器” 中，单击加号以展开新导入的策略实例要存储到的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
 3.  单击加号以便展开 **“策略管理”**。  
   
-4.  右键单击“策略”**** 文件夹，然后选择“导入策略”****。  
+4.  右键单击“策略”文件夹，然后选择“导入策略”。  
   
-5.  在“导入”**** 对话框中，键入该文件的路径和名称；或者使用“浏览”按钮 (**...**) 查找包含策略的 XML 文件，然后选择该文件。 有关 **“导入”** 对话框中可用选项的详细信息，请参阅 [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)。  
+5.  在“导入”对话框中，键入该文件的路径和名称；或者使用“浏览”按钮 (**...**) 查找包含策略的 XML 文件，然后选择该文件。 有关 **“导入”** 对话框中可用选项的详细信息，请参阅 [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)。  
   
 6.  完成后，单击 **“确定”** 。  
 

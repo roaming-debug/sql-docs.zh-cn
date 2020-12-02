@@ -26,16 +26,16 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e8769671a5f769fcf7c7d6af1eff00406355ce33
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380532"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回包含计算机的日期和时间的 datetime2 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例正在该计算机上运行****。 日期和时间作为 UTC 时间（通用协调时间）返回。 秒部分精度规范的范围为 1 至 7 位。 默认精度为 7 位数。  
+  返回包含计算机的日期和时间的 datetime2 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例正在该计算机上运行。 日期和时间作为 UTC 时间（通用协调时间）返回。 秒部分精度规范的范围为 1 至 7 位。 默认精度为 7 位数。  
   
 > [!NOTE]  
 >  与 GETDATE 和 GETUTCDATE 比较而言，SYSDATETIME 和 SYSUTCDATETIME 的秒的小数部分精度更高。 SYSDATETIMEOFFSET 包含系统时区偏移量。 SYSDATETIME、SYSUTCDATETIME 和 SYSDATETIMEOFFSET 可以分配给采用任意日期和时间类型的变量。  
@@ -56,7 +56,7 @@ SYSUTCDATETIME ( )
  **datetime2**  
   
 ## <a name="remarks"></a>注解  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其可以引用 datetime2 表达式的任何位置，均可引用 SYSUTCDATETIME****。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其可以引用 datetime2 表达式的任何位置，均可引用 SYSUTCDATETIME。  
   
  SYSUTCDATETIME 是不确定性函数。 不能对在列中引用该函数的视图和表达式建立索引。  
   

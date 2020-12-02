@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc2e5858e978aa88c55e2cdbbd7c54cb06a814dc
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91226767"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
@@ -67,7 +67,7 @@ SET CONCAT_NULL_YIELDS_NULL ON
   
  SET CONCAT_NULL_YIELDS_NULL 的设置是在执行或运行时设置的，而不是在分析时设置的。  
 
-创建或更改索引视图、计算列上的索引、筛选索引或空间索引时，SET CONCAT_NULL_YIELDS_NULL 必须为 ON****。 如果 SET CONCAT_NULL_YIELDS_NULL 为 OFF****，无法对包含计算列上的索引、筛选索引、空间索引或索引视图的表运行任何 CREATE、UPDATE、INSERT 和 DELETE 语句。 有关计算列的索引视图和索引需要的 SET 选项设置的详细信息，请参阅 [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md) 中的“使用 SET 语句时的注意事项”。
+创建或更改索引视图、计算列上的索引、筛选索引或空间索引时，SET CONCAT_NULL_YIELDS_NULL 必须为 ON。 如果 SET CONCAT_NULL_YIELDS_NULL 为 OFF，无法对包含计算列上的索引、筛选索引、空间索引或索引视图的表运行任何 CREATE、UPDATE、INSERT 和 DELETE 语句。 有关计算列的索引视图和索引需要的 SET 选项设置的详细信息，请参阅 [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md) 中的“使用 SET 语句时的注意事项”。
   
  如果将 CONCAT_NULL_YIELDS_NULL 设置为 OFF，则不能出现跨服务器边界的字符串串联。  
   

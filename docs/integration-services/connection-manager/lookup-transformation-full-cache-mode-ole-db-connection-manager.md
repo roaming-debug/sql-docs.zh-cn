@@ -14,10 +14,10 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55a439be88d422130e8a511a5c1d2071ece7fc2c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719659"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查找转换完全缓存模式 - OLE DB 连接管理器
@@ -44,7 +44,7 @@ ms.locfileid: "91719659"
   
 4.  双击源或前一转换以配置组件。  
   
-5.  双击查找转换，在“查找转换编辑器”**** 的“常规”**** 页上，选择“完全缓存”****。  
+5.  双击查找转换，在“查找转换编辑器”的“常规”页上，选择“完全缓存”。  
   
 6.  在 **“连接类型”** 区域，选择 **“OLE DB 连接管理器”**。  
   

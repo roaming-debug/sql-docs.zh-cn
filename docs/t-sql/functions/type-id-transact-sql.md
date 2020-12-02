@@ -23,10 +23,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4192aa80f1cbc2d7106d8893f135387c40b5bef5
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379449"
 ---
 # <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
@@ -46,7 +46,7 @@ TYPE_ID ( [ schema_name ] type_name )
 
 ## <a name="arguments"></a>参数
  type_name  
- 数据类型的名称。 type_name 的数据类型为 nvarchar******。 type_name 可以是系统数据类型或用户定义的数据类型**。  
+ 数据类型的名称。 type_name 的数据类型为 nvarchar。 type_name 可以是系统数据类型或用户定义的数据类型。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  

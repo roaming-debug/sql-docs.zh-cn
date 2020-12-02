@@ -19,10 +19,10 @@ ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c5e76db626c0129253f343075894825c114da4ec
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037150"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant（数据库引擎）
@@ -45,16 +45,16 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-child1**  
-NULL 或当前节点的子节点的 hierarchyid****。
+child1  
+NULL 或当前节点的子节点的 hierarchyid。
   
-child2**  
-NULL 或当前节点的子节点的 hierarchyid****。
+child2  
+NULL 或当前节点的子节点的 hierarchyid。
   
 ## <a name="return-types"></a>返回类型  
-SQL Server 返回类型：hierarchyid****
+SQL Server 返回类型：hierarchyid
   
-CLR 返回类型：SqlHierarchyId****
+CLR 返回类型：SqlHierarchyId
   
 ## <a name="remarks"></a>备注  
 返回作为父节点的后代的一个子节点。
@@ -116,7 +116,7 @@ VALUES
   
 ```  
   
-完成示例 A、B 和 C 后，添加到表中的节点将成为具有下列 hierarchyid 值的对等方****：
+完成示例 A、B 和 C 后，添加到表中的节点将成为具有下列 hierarchyid 值的对等方：
   
 `/3/1/1/`
   
@@ -127,7 +127,7 @@ VALUES
 节点 `/3/1/1.1/` 高于节点 `/3/1/1/`，但是在层次结构中处于同一级别。
   
 ### <a name="d-scalar-examples"></a>D. 标量示例  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持随意插入和删除任何 hierarchyid 节点****。 使用 GetDescendant()，始终可以在任何两个 hierarchyid 节点之间生成一个节点****。 执行以下代码，使用 `GetDescendant` 生成示例节点：
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持随意插入和删除任何 hierarchyid 节点。 使用 GetDescendant()，始终可以在任何两个 hierarchyid 节点之间生成一个节点。 执行以下代码，使用 `GetDescendant` 生成示例节点：
   
 ```sql
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  

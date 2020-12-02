@@ -20,10 +20,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91867677"
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
@@ -32,10 +32,10 @@ ms.locfileid: "91867677"
 
 执行联机索引操作时，请按照下列指南进行：  
 
-- 如果基础表包含下列大型对象 (LOB) 数据类型： **image**、 **ntext**和 **text**，则必须脱机创建、重新生成或删除聚集索引。  
+- 如果基础表包含下列大型对象 (LOB) 数据类型： **image**、 **ntext** 和 **text**，则必须脱机创建、重新生成或删除聚集索引。  
 - 如果表包含 LOB 数据类型，但索引定义中未使用这些列中的任何列作为键或非键（包含性）列，则可以联机创建非唯一的非聚集索引。  
 - 无法为本地临时表联机创建、重新生成或删除索引。 全局临时表的索引则没有此限制。
-- 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行****。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。
+- 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。
 
 > [!NOTE]  
 > 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
@@ -129,7 +129,7 @@ ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 均仅适用于分别支持联机和可恢�
 > [!NOTE]
 > ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 不适用于 XML 索引操作。
 
-## <a name="related-content"></a>相关的内容
+## <a name="related-content"></a>相关内容
 
 - [联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)  

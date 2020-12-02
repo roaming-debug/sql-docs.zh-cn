@@ -27,10 +27,10 @@ ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f5a15c5ac7a401e4f5359cff34693a6131ce1391
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91497785"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
@@ -52,8 +52,8 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- FILE ='path_to_file'**  
- 指定存储数据库主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径**。  
+ FILE ='path_to_file'  
+ 指定存储数据库主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径。  
   
  DECRYPTION BY PASSWORD ='*password*'  
  指定对从文件中导入的数据库主密钥进行解密时所需的密码。  

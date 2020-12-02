@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15986ee3b8407a62fc4ed40a49c043921fe34588
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92035846"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>第 2 课：配置数据库对象的权限
@@ -45,10 +45,10 @@ ms.locfileid: "92035846"
   
 ### <a name="create-a-new-windows-account"></a>创建新的 Windows 帐户  
   
-1.  单击“开始”后，单击“运行”，在“打开”框中，键入“%SystemRoot%\system32\compmgmt.msc /s”，再单击“确定”打开“计算机管理”程序。******************** 
-2.  在“系统工具”下，展开“本地用户和组”，右键单击“用户”，再单击“新建用户”。****************    
-3.  在“用户名”框中，键入“Mary”。********    
-4.  在“密码”和“确认密码”框中，键入强密码，再单击“创建”创建新的本地 Windows 用户。************  
+1.  单击“开始”后，单击“运行”，在“打开”框中，键入“%SystemRoot%\system32\compmgmt.msc /s”，再单击“确定”打开“计算机管理”程序。 
+2.  在“系统工具”下，展开“本地用户和组”，右键单击“用户”，再单击“新建用户”。    
+3.  在“用户名”框中，键入“Mary”。    
+4.  在“密码”和“确认密码”框中，键入强密码，再单击“创建”创建新的本地 Windows 用户。  
   
 ### <a name="create-a-sql-login"></a>创建 SQL 登录名  
 

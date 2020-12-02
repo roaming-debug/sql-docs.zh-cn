@@ -25,10 +25,10 @@ ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: acc73e861b0c27b4a1fa46e7c4c2efa0e23cb55d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91378768"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
@@ -48,13 +48,13 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 
 ## <a name="arguments"></a>参数
  certificate_ID  
- 当前数据库中证书的 ID。 certificate_ID 是 int******。  
+ 当前数据库中证书的 ID。 certificate_ID 是 int。  
   
  *\@cleartext*  
- 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含要签名的数据****************。  
+ 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含要签名的数据。  
   
  ' password '  
- 用来对证书私钥进行加密的密码。 password 的数据类型为 nvarchar(128)******。  
+ 用来对证书私钥进行加密的密码。 password 的数据类型为 nvarchar(128)。  
   
 ## <a name="return-types"></a>返回类型  
  varbinary（最大大小为 8000 个字节）。  

@@ -27,10 +27,10 @@ ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 5a3aa4aecb35151734d2a0b9a7e7305dbb2643c1
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91497832"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
@@ -50,13 +50,13 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 
 ## <a name="arguments"></a>参数
  *conversation_id*  
- 会话的会话句柄。 此参数的类型为 uniqueidentifier****。  
+ 会话的会话句柄。 此参数的类型为 uniqueidentifier。  
   
 ## <a name="return-types"></a>返回类型  
  **nchar**  
   
 ## <a name="remarks"></a>备注  
- 返回一个字符串，该字符串说明指定会话上次传输尝试的状态。 在下列情况下都将返回一个空字符串：上次传输尝试成功；尚未进行任何传输尝试；或 conversation_handle 不存在**。  
+ 返回一个字符串，该字符串说明指定会话上次传输尝试的状态。 在下列情况下都将返回一个空字符串：上次传输尝试成功；尚未进行任何传输尝试；或 conversation_handle 不存在。  
   
  该函数返回的信息与管理视图 sys.transmission_queue 的 last_transmission_error 列中显示的信息相同。 但是，该函数可用于查找那些当前传输队列中没有消息的会话的传输状态。  
   
