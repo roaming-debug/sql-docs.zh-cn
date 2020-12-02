@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cba74e40373a4b00a93d41ebc49e2a849df98572
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235499"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124739"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
  是要返回的值。 scalar_expression 可以是产生单个值的列、子查询或其他任意表达式。 不允许使用其他分析函数。  
 
  [ IGNORE NULLS | RESPECT NULLS ]     
- **适用对象** ：Azure SQL Edge
+ **适用对象**：Azure SQL Edge
 
  IGNORE NULLS - 计算分区上的第一个值时，忽略数据集中的 null 值。     
  RESPECT NULLS - 计算分区上的第一个值时，考虑数据集中的 null 值。     

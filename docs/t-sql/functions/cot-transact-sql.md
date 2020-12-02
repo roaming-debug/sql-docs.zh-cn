@@ -21,16 +21,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 13a9f556b74300fde0c792380d8616b36cccb19a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115283"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124851"
 ---
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-一个数学函数，返回指定的“float”**** 表达式中所指定角度（以弧度为单位）的三角余切值。
+一个数学函数，返回指定的“float”表达式中所指定角度（以弧度为单位）的三角余切值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,7 +44,7 @@ COT ( float_expression )
 
 ## <a name="arguments"></a>参数
 *float_expression*  
-“float”**** 类型或可隐式转换为“float”**** 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
+“float”类型或可隐式转换为“float”类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
 **float**

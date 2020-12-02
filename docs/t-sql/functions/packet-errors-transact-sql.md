@@ -23,11 +23,11 @@ ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1470d95dd12134abf0e097e4c56f7eb908c807f0
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380812"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124616"
 ---
 # <a name="x40x40packet_errors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "91380812"
  **integer**  
   
 ## <a name="remarks"></a>注解  
- 要显示包含多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括数据包错误）的报表，请运行 sp_monitor****。  
+ 要显示包含多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括数据包错误）的报表，请运行 sp_monitor。  
   
 ## <a name="examples"></a>示例  
  下面的示例显示了使用 `@@PACKET_ERRORS`。  

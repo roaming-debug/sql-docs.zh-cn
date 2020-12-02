@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5c322f8c798a7b4a319df67e56565af54ceac20f
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cda87fffca686f8e86c7b617e502952341bd459f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662176"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125546"
 ---
 # <a name="restore-database-general-page"></a>还原数据库（“常规”页）
 
@@ -63,7 +63,7 @@ RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角
   
 |术语|定义|  
 |----------|----------------|  
-|**Database**|在该列表中输入要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master** 和 **tempdb**之外的所有数据库。<br /><br /> 注意：若要还原带有密码保护的备份，必须使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句。|  
+|**Database**|在该列表中输入要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master** 和 **tempdb** 之外的所有数据库。<br /><br /> 注意：若要还原带有密码保护的备份，必须使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句。|  
 |**“还原到”**|默认情况下， **“还原到”** 框将设置为“至最近一次进行的备份”。 你还可以选择“时间线”以便显示“备份时间线”对话框，该对话框将以时间线的形式显示数据库备份历史记录 。 选择“时间线”可以指定要将数据库还原到的特定日期/时间 。 数据库将还原到它在此指定时间点时的状态。 请参阅 [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md)。|  
   
 ### <a name="restore-plan"></a>还原计划  

@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417663"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124951"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 
@@ -41,8 +41,8 @@ ms.locfileid: "88417663"
   
 |属性|值|  
 |---|---|
-|语法|datetimeoffset [ (fractional seconds precision) ]******|  
-|使用情况|DECLARE \@MyDatetimeoffset datetimeoffset(7)****<br /><br /> CREATE TABLE Table1 (Column1 datetimeoffset(7))****|  
+|语法|datetimeoffset [ (fractional seconds precision) ]|  
+|使用情况|DECLARE \@MyDatetimeoffset datetimeoffset(7)<br /><br /> CREATE TABLE Table1 (Column1 datetimeoffset(7))|  
 |默认字符串文字格式（用于下级客户端）|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
 |日期范围|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
 |时间范围|00:00:00 到 23:59:59.9999999|  
@@ -71,36 +71,36 @@ ms.locfileid: "88417663"
 |**datetimeoffset(7)**|(34,7)|10|5-7|  
   
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>datetimeoffset 支持的字符串文字格式
-下表列出了 datetimeoffset 支持的 ISO 8601 字符串文字格式****。 有关 datetimeoffset 日期和时间部分的字母、数值、未分隔的的字符串文字格式和时间格式的信息，请参阅 [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md) 和 [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)****。
+下表列出了 datetimeoffset 支持的 ISO 8601 字符串文字格式。 有关 datetimeoffset 日期和时间部分的字母、数值、未分隔的的字符串文字格式和时间格式的信息，请参阅 [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md) 和 [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)。
   
 |ISO 8601|说明|  
 |---|---|
-|YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|这两种格式不受 SET LANGUAGE 和 SET DATEFORMAT 会话的区域设置的影响。 datetimeoffset 和 datetime 部分之间不允许有空格********。|  
-|YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|这种遵从 ISO 定义的格式表明 datetime 部分应采用协调世界时 (UTC) 表示****。 例如，1999-12-12 12:30:30.12345 -07:00 应表示为 1999-12-12 19:30:30.12345Z。|  
+|YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|这两种格式不受 SET LANGUAGE 和 SET DATEFORMAT 会话的区域设置的影响。 datetimeoffset 和 datetime 部分之间不允许有空格。|  
+|YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|这种遵从 ISO 定义的格式表明 datetime 部分应采用协调世界时 (UTC) 表示。 例如，1999-12-12 12:30:30.12345 -07:00 应表示为 1999-12-12 19:30:30.12345Z。|  
   
 ## <a name="time-zone-offset"></a>时区偏移量
-时区偏移量指定某个 time 或 datetime 值相对于 UTC 的时区偏移量********。 时区偏移量可以表示为 [+|-] hh:mm：
+时区偏移量指定某个 time 或 datetime 值相对于 UTC 的时区偏移量。 时区偏移量可以表示为 [+|-] hh:mm：
 -   hh 是两位数，范围为 00 到 14，表示时区偏移量中的小时数。  
 -   mm 是两位数，范围为 00 到 59，表示时区偏移量中的额外分钟数。  
 -   时区偏移量中必须包含 \+（加）或 -（减）号。 这两个符号表示是在 UTC 时间的基础上加上还是从中减去时区偏移量以得出本地时间。 时区偏移量的有效范围为 -14:00 到 +14:00。  
   
 时区偏移量的范围遵循 XSD 架构定义的 W3C XML 标准，与 SQL 2003 标准定义（12:59 到 +14:00）略有不同。
   
-可选的类型参数 fractional seconds precision 指定了秒小数部分的位数**。 该值可以是一个 0 到 7（100 纳秒）的整数。 默认 fractional seconds precision 为 100ns（秒的小数部分有第 7 位）**。
+可选的类型参数 fractional seconds precision 指定了秒小数部分的位数。 该值可以是一个 0 到 7（100 纳秒）的整数。 默认 fractional seconds precision 为 100ns（秒的小数部分有第 7 位）。
   
 此数据存储在数据库中，并以与 UTC 相同的方式在服务器中进行处理、比较、排序和索引。 时区偏移量将保留在数据库中以供检索。
   
-给定时区偏移量将假定为可以识别夏时制时间 (DST)，并会针对 DST 期间内的任何给定 datetime 进行调整****。
+给定时区偏移量将假定为可以识别夏时制时间 (DST)，并会针对 DST 期间内的任何给定 datetime 进行调整。
   
-对于 datetimeoffset 类型，在插入、更新、转换或赋值操作中将验证 UTC 和本地（相对于一致的或转换的时区偏移量）datetime 值********。 如果检测到任何无效的 UTC 或本地（相对于一致的或转换的时区偏移量）datetime 值，将引发一个无效值错误****。 例如，9999-12-31 10:10:00 在 UTC 中有效，但在本地时间中会溢出时区偏移量 +13:50。
+对于 datetimeoffset 类型，在插入、更新、转换或赋值操作中将验证 UTC 和本地（相对于一致的或转换的时区偏移量）datetime 值。 如果检测到任何无效的 UTC 或本地（相对于一致的或转换的时区偏移量）datetime 值，将引发一个无效值错误。 例如，9999-12-31 10:10:00 在 UTC 中有效，但在本地时间中会溢出时区偏移量 +13:50。
   
-若要将日期转换为目标时区中的相应 datetimeoffset 值，请参阅 [AT TIME ZONE (Transact SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)****。
+若要将日期转换为目标时区中的相应 datetimeoffset 值，请参阅 [AT TIME ZONE (Transact SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)。
   
 ## <a name="ansi-and-iso-8601-compliance"></a>对 ANSI 和 ISO 8601 的遵从性  
-[date](../../t-sql/data-types/date-transact-sql.md) 和 [time](../../t-sql/data-types/time-transact-sql.md) 主题的“对 ANSI 和 ISO 8601 的遵从性”部分也适用于 datetimeoffset****。
+[date](../../t-sql/data-types/date-transact-sql.md) 和 [time](../../t-sql/data-types/time-transact-sql.md) 主题的“对 ANSI 和 ISO 8601 的遵从性”部分也适用于 datetimeoffset。
   
 ## <a name="backward-compatibility-for-down-level-clients"></a>下级客户端的向后兼容性
-某些下级客户端不支持 time、time、datetime2 和 datetimeoffset 数据类型****************。 下表显示了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上级实例与下级客户端之间的类型映射。
+某些下级客户端不支持 time、time、datetime2 和 datetimeoffset 数据类型。 下表显示了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上级实例与下级客户端之间的类型映射。
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|传递给下级客户端的默认字符串文字格式|下级 ODBC|下级 OLEDB|下级 JDBC|下级 SQLCLIENT|  
 |---|---|---|---|---|---|
@@ -113,9 +113,9 @@ ms.locfileid: "88417663"
 当转换为日期和时间数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会拒绝它无法识别为日期或时间的所有值。 有关日期和时间数据使用 CAST 和 CONVERT 函数的信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
 ### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>将 datetimeoffset 数据类型转换为其他日期和时间类型
-此部分介绍了在 datetimeoffset**** 数据类型转换为其他日期和时间数据类型时发生的具体情况。
+此部分介绍了在 datetimeoffset 数据类型转换为其他日期和时间数据类型时发生的具体情况。
   
-转换成 date 时，会复制年、月和日****。 下面的代码显示将 `datetimeoffset(4)` 值转换为 `date` 值的结果。  
+转换成 date 时，会复制年、月和日。 下面的代码显示将 `datetimeoffset(4)` 值转换为 `date` 值的结果。  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10 +01:00';  
@@ -132,7 +132,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-如果转换成 time(n)，会复制小时、分钟、秒数和秒的小数部分****。 时区值被截断。 当 datetimeoffset(n) 值的精度大于 time(n) 值的精度时，将对该值进行向上舍入********。 下面的代码显示将 `datetimeoffset(4)` 值转换为 `time(3)` 值的结果。
+如果转换成 time(n)，会复制小时、分钟、秒数和秒的小数部分。 时区值被截断。 当 datetimeoffset(n) 值的精度大于 time(n) 值的精度时，将对该值进行向上舍入。 下面的代码显示将 `datetimeoffset(4)` 值转换为 `time(3)` 值的结果。
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -150,7 +150,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @time AS 'time';
   
 ```  
   
-转换到 datetime 时，会复制日期和时间值，时区被截断****。 当 datetimeoffset(n) 值的小数部分精度大于三位时，该值被截断****。 下面的代码显示将 `datetimeoffset(4)` 值转换为 `datetime` 值的结果。
+转换到 datetime 时，会复制日期和时间值，时区被截断。 当 datetimeoffset(n) 值的小数部分精度大于三位时，该值被截断。 下面的代码显示将 `datetimeoffset(4)` 值转换为 `datetime` 值的结果。
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -166,7 +166,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-转换成 smalldatetime 时，会复制日期和小时****。 分钟数会根据秒值向上舍入，秒数设置为 0。 下面的代码显示将 `datetimeoffset(3)` 值转换为 `smalldatetime` 值的结果。  
+转换成 smalldatetime 时，会复制日期和小时。 分钟数会根据秒值向上舍入，秒数设置为 0。 下面的代码显示将 `datetimeoffset(3)` 值转换为 `smalldatetime` 值的结果。  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(3) = '1912-10-25 12:24:32 +10:0';  
@@ -182,7 +182,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-如果转换成 datetime2(n)，日期和时间会复制到 datetime2 值，时区被截断********。 当 datetime2(n) 值的精度大于 datetimeoffset(n) 值的精度时，秒的小数部分将被截断，以适合目标精度********。 下面的代码显示将 `datetimeoffset(4)` 值转换为 `datetime2(3)` 值的结果。
+如果转换成 datetime2(n)，日期和时间会复制到 datetime2 值，时区被截断。 当 datetime2(n) 值的精度大于 datetimeoffset(n) 值的精度时，秒的小数部分将被截断，以适合目标精度。 下面的代码显示将 `datetimeoffset(4)` 值转换为 `datetime2(3)` 值的结果。
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  
@@ -199,11 +199,11 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 ```  
   
 ### <a name="converting-string-literals-to-datetimeoffset"></a>将字符串文字转换为 datetimeoffset
-如果字符串所有部分的格式均有效，则允许从字符串文字转换为日期和时间类型。 否则，将引发运行时错误。 从日期和时间类型向字符串文字进行的未指定样式的隐式转换或显式转换将采用当前会话的默认格式。 下表显示用于将字符串文字转换为 datetimeoffset 数据类型的规则****。
+如果字符串所有部分的格式均有效，则允许从字符串文字转换为日期和时间类型。 否则，将引发运行时错误。 从日期和时间类型向字符串文字进行的未指定样式的隐式转换或显式转换将采用当前会话的默认格式。 下表显示用于将字符串文字转换为 datetimeoffset 数据类型的规则。
   
 |输入字符串文字|**datetimeoffset(n)**|  
 |---|---|
-|ODBC DATE|ODBC 字符串文字映射到 datetime 数据类型。 从 ODBC DATETIME 文字到 datetimeoffset 类型的任何赋值操作都会导致在 datetime 与此类型之间按照转换规则的定义进行隐式转换********。|  
+|ODBC DATE|ODBC 字符串文字映射到 datetime 数据类型。 从 ODBC DATETIME 文字到 datetimeoffset 类型的任何赋值操作都会导致在 datetime 与此类型之间按照转换规则的定义进行隐式转换。|  
 |ODBC TIME|请参阅前面的 ODBC DATE 规则。|  
 |ODBC DATETIME|请参阅前面的 ODBC DATE 规则。|  
 |仅 DATE|TIME 部分默认为 00:00:00。 TIMEZONE 默认为 +00:00。|  

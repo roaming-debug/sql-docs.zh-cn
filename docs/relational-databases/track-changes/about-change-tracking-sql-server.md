@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 518c827339b134ab30dd12552ec492d8bda878c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472987"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125071"
 ---
 # <a name="about-change-tracking-sql-server"></a>关于更改跟踪 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "88472987"
 ## <a name="change-tracking-cleanup"></a>更改跟踪清除
 所有表（已启用更改跟踪功能）的更改跟踪信息存储在内存中行存储中。 与每个表（已启用更改跟踪功能）关联的更改跟踪数据会在每个检查点从内存中行存储刷新到磁盘上的相应内部表。 检查点的内存中行存储还会在行移到磁盘上的表之后进行清除。
 
-启用更改跟踪功能的每个表都有一个磁盘上的内部表，更改跟踪功能可以使用该表来确定更改版本以及自特定版本以来更改过的行。 每次苏醒时，“自动清除”线程就会扫描 SQL Server 实例上的所有用户数据库，标识启用了更改跟踪的数据库。**** 磁盘上的每个内部表都会根据数据库的保持期设置清除其过期记录。
+启用更改跟踪功能的每个表都有一个磁盘上的内部表，更改跟踪功能可以使用该表来确定更改版本以及自特定版本以来更改过的行。 每次苏醒时，“自动清除”线程就会扫描 SQL Server 实例上的所有用户数据库，标识启用了更改跟踪的数据库。 磁盘上的每个内部表都会根据数据库的保持期设置清除其过期记录。
 
 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的 Service Pack 中增加了存储过程，用于对更改跟踪内部表执行手动清除。 [KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1) 中提供了该存储过程的详细信息。 
   

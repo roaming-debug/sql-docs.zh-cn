@@ -18,14 +18,14 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 902cb988e52eecedaa8ce95aeb3d922b6daef42c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759122"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125533"
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -21,16 +21,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e93680972f686b2d596e9c8659d5a4bed90032a4
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116448"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124729"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回指定的 float 表达式的指数值****。  
+  返回指定的 float 表达式的指数值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,11 +50,11 @@ EXP ( float_expression )
  **float**  
   
 ## <a name="remarks"></a>注解  
- 常量 e (2.718281…) 是自然对数的底数****。  
+ 常量 e (2.718281…) 是自然对数的底数。  
   
  一个数字的指数是常量 **e** 的该数字次幂。 例如，EXP(1.0) = e^1.0 = 2.71828182845905，而 EXP(10) = e^10 = 22026.4657948067。  
   
- 数字的自然对数的指数是数字本身：EXP (LOG (n)) = n****。 数字的指数的自然对数是数字本身：LOG (EXP (n)) = n****。  
+ 数字的自然对数的指数是数字本身：EXP (LOG (n)) = n。 数字的指数的自然对数是数字本身：LOG (EXP (n)) = n。  
   
 ## <a name="examples"></a>示例  
   

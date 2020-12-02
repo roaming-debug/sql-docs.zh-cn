@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], installing
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a895fb07d21fe7411fc019d5320dc9d2f6037cb
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: e25eac581730b8d4950ca49af8b7edbf61433e5f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155020"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125950"
 ---
 # <a name="install-sql-server-database-engine"></a>安装 SQL Server 数据库引擎
 

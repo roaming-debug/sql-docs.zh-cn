@@ -24,11 +24,11 @@ ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 2b6aa8b3ccdc0dfb6584f6138059de6686326dca
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115195"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124671"
 ---
 # <a name="x40x40io_busy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "91115195"
  若要显示包含几种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息的报告，请运行 sp_monitor。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回在开始时间和当前时间之间 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已经用于执行输入/输出操作的毫秒数。 为了避免将值转换为微秒时出现算术溢出，此示例将其中一个值转换为 float 数据类型****。  
+ 下面的示例返回在开始时间和当前时间之间 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已经用于执行输入/输出操作的毫秒数。 为了避免将值转换为微秒时出现算术溢出，此示例将其中一个值转换为 float 数据类型。  
   
 ```sql  
 SELECT @@IO_BUSY*@@TIMETICKS AS 'IO microseconds',   

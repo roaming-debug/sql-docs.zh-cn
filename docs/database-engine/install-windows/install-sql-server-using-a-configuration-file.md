@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: c67682305f0ed48c1d96cf5ca41ad0e88e421e06
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670300"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125899"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>使用配置文件安装 SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "91670300"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供了基于系统默认值和运行时输入生成配置文件的功能。 可以使用配置文件在整个企业中部署具有相同配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 通过创建一个启动 Setup.exe 的批处理文件，还可以使企业范围内的手动安装得以标准化。 
  
-本文面向 SQL Server 2016 版及更高版本。 有关 SQL Server 较早版本的信息，请参阅[使用配置文件安装 SQL Server 2014](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014)。
+本文面向 SQL Server 2016 版及更高版本。 有关 SQL Server 较早版本的信息，请参阅[使用配置文件安装 SQL Server 2014](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014&preserve-view=true)。
  
 安装程序仅支持通过命令提示符使用配置文件。 下面列出了在使用配置文件时参数的处理顺序：  
   

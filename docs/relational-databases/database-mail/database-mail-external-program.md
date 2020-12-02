@@ -16,11 +16,11 @@ ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8d609ec57f47cf3df061f286bd663c0a8431047
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465449"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125225"
 ---
 # <a name="database-mail-external-program"></a>数据库邮件外部程序
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -22,17 +22,17 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: bc2c16fb026bb64a304c1582b59ee7ffa09f35d6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116504"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124869"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-此函数将返回 varbinary 位模式，它指示表或视图中已插入或已更新的列****。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器主体中的任意位置使用 `COLUMNS_UPDATED`，以测试触发器是否应执行某些操作。
+此函数将返回 varbinary 位模式，它指示表或视图中已插入或已更新的列。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器主体中的任意位置使用 `COLUMNS_UPDATED`，以测试触发器是否应执行某些操作。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,7 +52,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` 将按从左到右的顺序返回一个或多个字节。 每个字节的最右侧位是最低有效位。 最左侧字节的最右侧位表示表中的第一表列；向左的下一位表示第二列，依此类推。 如果创建了触发器的表中包含八列以上，`COLUMNS_UPDATED` 则将返回多个字节，最低有效字节位于最左侧。 在 INSERT 操作中，`COLUMNS_UPDATED` 将为所有列返回 TRUE，因为这些列已插入了显式值或隐式 (NULL) 值。
   
-若要检测针对特定列的更新或插入操作，请使用按位运算符和已测试列的整数位掩码的语法。 例如，假设表 t1 包含列 C1、C2、C3、C4 和 C5************************。 若要验证列 C2、C3 和 C4 是否已全部成功更新（使用具有 UPDATE 触发器的表 t1），请使用 & 14 的语法********************。 若要测试是否只更新了列 C2，请指定 & 2********。 有关实际示例，请参阅[示例 A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) 和[示例 B](#b-using-columns_updated-to-test-more-than-eight-columns)。
+若要检测针对特定列的更新或插入操作，请使用按位运算符和已测试列的整数位掩码的语法。 例如，假设表 t1 包含列 C1、C2、C3、C4 和 C5。 若要验证列 C2、C3 和 C4 是否已全部成功更新（使用具有 UPDATE 触发器的表 t1），请使用 & 14 的语法。 若要测试是否只更新了列 C2，请指定 & 2。 有关实际示例，请参阅[示例 A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) 和[示例 B](#b-using-columns_updated-to-test-more-than-eight-columns)。
   
 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器内部的任意位置使用 `COLUMNS_UPDATED`。
   

@@ -15,11 +15,11 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869281"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125137"
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

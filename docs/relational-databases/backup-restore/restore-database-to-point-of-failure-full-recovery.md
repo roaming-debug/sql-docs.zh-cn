@@ -13,14 +13,14 @@ helpviewer_keywords:
 - restoring databases [SQL Server], point of failure
 - database restores [SQL Server], point of failure
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e63d8c84b455fbcf991485486bb7bb197032827a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a3a3bee6457f76311fa8ab1bc11afee6c222fe80
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737706"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125524"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>将数据库还原到故障点 - 完整恢复
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

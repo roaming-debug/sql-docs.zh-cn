@@ -10,15 +10,15 @@ ms.topic: quickstart
 helpviewer_keywords:
 - upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dc4877a76b314baf13353e6fe979210244d81c48
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: c30eb3d39c79b57b4cc937fcb118b7bb63fe7474
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670226"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125687"
 ---
 # <a name="upgrade-sql-server"></a>升级 SQL Server
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]

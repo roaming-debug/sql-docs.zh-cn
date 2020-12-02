@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Transact-SQL restore sequence
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 36eef2c38d708b3634d669830e34f46a8480e138
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 69ad35549678772fc0da1c834ba4064beeb19ed7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809703"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125608"
 ---
 # <a name="file-restores-full-recovery-model"></a>文件还原（完整恢复模式）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

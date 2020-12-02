@@ -24,11 +24,11 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2500a95946ee1a8226763ebd7983edd2a9f81c6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114591"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125078"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]

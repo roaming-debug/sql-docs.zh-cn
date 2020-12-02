@@ -19,16 +19,16 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4f4c5943dd69d651a9038e5e8e27798115911a9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360463"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124352"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回一个 geography 实例，它表示与执行调用的 geography 实例的距离小于或等于 distance 参数的所有点的集合**********。  
+  返回一个 geography 实例，它表示与执行调用的 geography 实例的距离小于或等于 distance 参数的所有点的集合。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,28 +49,28 @@ ms.locfileid: "88360463"
  CLR 返回类型：SqlGeography  
   
 ## <a name="exceptions"></a>例外  
- 以下条件将引发 ArgumentException****。  
+ 以下条件将引发 ArgumentException。  
   
 -   没有为方法传递任何参数，例如，`@g.BufferWithCurves()`  
   
 -   为方法传递了非数值参数，例如，`@g.BufferWithCurves('a')`  
   
--   向方法传递了 NULL，例如，`@g.BufferWithCurves(NULL)`****  
+-   向方法传递了 NULL，例如，`@g.BufferWithCurves(NULL)`  
   
 ## <a name="remarks"></a>注解  
  下表显示为不同距离值返回的结果。  
   
 |距离值|类型维度|返回的空间类型|  
 |--------------------|---------------------|---------------------------|  
-|距离 < 0|0 或 1|空的 GeometryCollection 实例****|  
-|distance \< 0|2 或更大|具有负缓冲区的 CurvePolygon 或 GeometryCollection 实例********。<br /><br /> 注意：负缓冲区可能会创建空的 GeometryCollection****|
+|距离 < 0|0 或 1|空的 GeometryCollection 实例|  
+|distance \< 0|2 或更大|具有负缓冲区的 CurvePolygon 或 GeometryCollection 实例。<br /><br /> 注意：负缓冲区可能会创建空的 GeometryCollection|
 |距离 = 0|所有维度|执行调用的 **geography** 实例的副本|  
-|distance > 0|所有维度|CurvePolygon 或 GeometryCollection 实例********|  
+|distance > 0|所有维度|CurvePolygon 或 GeometryCollection 实例|  
   
 > [!NOTE]  
->  由于 distance 的类型为 float，因此，很小的值可能在计算中等于零******。  如果发生这种情况，则会返回执行调用的 geography 实例的副本****。  
+>  由于 distance 的类型为 float，因此，很小的值可能在计算中等于零。  如果发生这种情况，则会返回执行调用的 geography 实例的副本。  
   
- 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发 `ArgumentException`********。  
+ 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发 `ArgumentException`。  
   
 ## <a name="examples"></a>示例  
   
@@ -91,17 +91,17 @@ ms.locfileid: "88360463"
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. 使用 < 0 的参数值调用 BufferWithCurves()，它返回一个空 GeometryCollection  
- 以下示例显示当 distance 参数等于 -2 时出现的情况**：  
+ 以下示例显示当 distance 参数等于 -2 时出现的情况：  
   
  ```sql
  DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- 此 SELECT 语句返回 `GEOMETRYCOLLECTION EMPTY`****  
+ 此 SELECT 语句返回 `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. 使用 = 0 的参数值调用 BufferWithCurves()  
- 以下示例返回执行调用的 geography 实例的副本****：  
+ 以下示例返回执行调用的 geography 实例的副本：  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -109,7 +109,7 @@ ms.locfileid: "88360463"
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. 使用极小的非零参数值调用 BufferWithCurves()  
- 以下示例还返回执行调用的 geography 实例的副本****：  
+ 以下示例还返回执行调用的 geography 实例的副本：  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  

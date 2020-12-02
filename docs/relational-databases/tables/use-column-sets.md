@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79625148ed44c2003c74d393502129fe15a112f5
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564637"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125097"
 ---
 # <a name="use-column-sets"></a>使用列集
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]

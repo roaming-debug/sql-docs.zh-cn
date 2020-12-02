@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: be3ecc4924abd059bf6cd04234dbd2fb66c92a72
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: c72c5a2f4aaa408c67cc9191f803e0af6469857d
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522979"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96124675"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "87522979"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-FORMAT ( value, format [, culture ] )  
+FORMAT( value, format [, culture ] )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -102,32 +102,29 @@ FORMAT ( value, format [, culture ] )
  下面的示例返回针对不同区域性格式化的简单日期。  
   
 ```sql  
-DECLARE @d DATETIME = '10/01/2011';  
-SELECT FORMAT ( @d, 'd', 'en-US' ) AS 'US English Result'  
-      ,FORMAT ( @d, 'd', 'en-gb' ) AS 'Great Britain English Result'  
-      ,FORMAT ( @d, 'd', 'de-de' ) AS 'German Result'  
-      ,FORMAT ( @d, 'd', 'zh-cn' ) AS 'Simplified Chinese (PRC) Result';
+DECLARE @d DATE = '11/22/2020';
+SELECT FORMAT( @d, 'd', 'en-US' ) 'US English'  
+      ,FORMAT( @d, 'd', 'en-gb' ) 'Great Britain English'  
+      ,FORMAT( @d, 'd', 'de-de' ) 'German'  
+      ,FORMAT( @d, 'd', 'zh-cn' ) 'Simplified Chinese (PRC)';  
   
-SELECT FORMAT ( @d, 'D', 'en-US' ) AS 'US English Result'  
-      ,FORMAT ( @d, 'D', 'en-gb' ) AS 'Great Britain English Result'  
-      ,FORMAT ( @d, 'D', 'de-de' ) AS 'German Result'  
-      ,FORMAT ( @d, 'D', 'zh-cn' ) AS 'Chinese (Simplified PRC) Result';  
+SELECT FORMAT( @d, 'D', 'en-US' ) 'US English'  
+      ,FORMAT( @d, 'D', 'en-gb' ) 'Great Britain English'  
+      ,FORMAT( @d, 'D', 'de-de' ) 'German'  
+      ,FORMAT( @d, 'D', 'zh-cn' ) 'Chinese (Simplified PRC)';  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-US English Result Great Britain English Result  German Result Simplified Chinese (PRC) Result  
-----------------  ----------------------------- ------------- -------------------------------------  
-10/1/2011         01/10/2011                    01.10.2011    2011/10/1  
+US English  Great Britain English German     Simplified Chinese (PRC)  
+----------  --------------------- ---------- ------------------------  
+11/22/2020  22/11/2020            22.11.2020 2020/11/22 
   
-(1 row(s) affected)  
+US English                  Great Britain English  German                      Chinese (Simplified PRC)  
+--------------------------- ---------------------- --------------------------  ---------------------------------------  
+Sunday, November 22, 2020   22 November 2020       Sonntag, 22. November 2020  2020年11月22日  
   
-US English Result            Great Britain English Result  German Result                    Chinese (Simplified PRC) Result  
----------------------------- ----------------------------- -----------------------------  ---------------------------------------  
-Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2011        2011年10月1日  
-  
-(1 row(s) affected)  
 ```  
   
 ### <a name="b-format-with-custom-formatting-strings"></a>B. 使用自定义格式字符串执行 FORMAT
@@ -135,19 +132,18 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
  以下示例通过指定自定义格式显示格式数值。 该示例假定当前日期为 2012 年 9 月 27 日。 有关这些格式和其他自定义格式的详细信息，请参阅[自定义数字格式字符串](https://msdn.microsoft.com/library/0c899ak8.aspx)。  
   
 ```sql  
-DECLARE @d DATETIME = GETDATE();  
-SELECT FORMAT( @d, 'dd/MM/yyyy', 'en-US' ) AS 'DateTime Result'  
-       ,FORMAT(123456789,'###-##-####') AS 'Custom Number Result';  
+DECLARE @d DATE = GETDATE();  
+SELECT FORMAT( @d, 'dd/MM/yyyy', 'en-US' ) AS 'Date'  
+       ,FORMAT(123456789,'###-##-####') AS 'Custom Number';  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-DateTime Result  Custom Number Result  
---------------   --------------------  
-27/09/2012       123-45-6789  
+Date        Custom Number  
+----------  -------------  
+22/11/2020  123-45-6789  
   
-(1 row(s) affected)  
 ```  
   
 ### <a name="c-format-with-numeric-types"></a>C. 用于数值类型的 FORMAT
@@ -155,7 +151,7 @@ DateTime Result  Custom Number Result
  下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 Sales.CurrencyRate 表中的 5 个行  。 EndOfDateRate 列在该表中作为 money 类型存储   。 在本示例中，该列以非格式化形式返回，然后通过指定 .NET 数字格式、常规格式和货币格式类型进行格式化。 有关这些格式和其他数字格式的详细信息，请参阅[标准数字格式字符串](https://msdn.microsoft.com/library/dwhawy9k.aspx)。  
   
 ```sql  
-SELECT TOP(5)CurrencyRateID, EndOfDayRate  
+SELECT TOP(5) CurrencyRateID, EndOfDayRate  
             ,FORMAT(EndOfDayRate, 'N', 'en-us') AS 'Number Format'  
             ,FORMAT(EndOfDayRate, 'G', 'en-us') AS 'General Format'  
             ,FORMAT(EndOfDayRate, 'C', 'en-us') AS 'Currency Format'  
@@ -174,14 +170,12 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
 4              1.4683        1.47            1.4683          $1.47  
 5              8.2784        8.28            8.2784          $8.28  
   
-(5 row(s) affected)  
-  
 ```  
   
  此示例指定了德语区域性 (de-de)。  
   
 ```sql  
-SELECT TOP(5)CurrencyRateID, EndOfDayRate  
+SELECT TOP(5) CurrencyRateID, EndOfDayRate  
       ,FORMAT(EndOfDayRate, 'N', 'de-de') AS 'Numeric Format'  
       ,FORMAT(EndOfDayRate, 'G', 'de-de') AS 'General Format'  
       ,FORMAT(EndOfDayRate, 'C', 'de-de') AS 'Currency Format'  
@@ -198,7 +192,6 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
 4              1.4683        1,47            1,4683          1,47 &euro;  
 5              8.2784        8,28            8,2784          8,28 &euro;  
   
- (5 row(s) affected)  
 ```  
   
 ### <a name="d-format-with-time-data-types"></a><a name="ExampleD"></a> D. 时间数据类型的 D. FORMAT

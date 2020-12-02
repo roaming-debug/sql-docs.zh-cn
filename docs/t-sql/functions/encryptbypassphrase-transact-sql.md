@@ -21,11 +21,11 @@ ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f8e11d7e9f36d6619c626d9387cce766fbce5b0d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116781"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124742"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,13 +50,13 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  用于生成对称密钥的通行短语。  
   
  @passphrase  
- 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含用于生成对称密钥的通行短语************************。  
+ 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含用于生成对称密钥的通行短语。  
   
  *cleartext*  
  要加密的明文。  
   
  @cleartext  
- 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含明文************************。 最大大小为 8000 个字节。  
+ 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含明文。 最大大小为 8000 个字节。  
   
  add_authenticator  
  指示是否将验证器与明文一起加密。 如果将添加验证器，则为 1。 int。  
@@ -71,7 +71,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  包含验证器所源自的数据的变量。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）****。  
+ varbinary（最大大小为 8000 个字节）。  
   
 ## <a name="remarks"></a>注解  
  通行短语是包含空格的密码。 使用通行短语的优点在于，与相对较长的字符串相比，有含义的短语或句子更容易记忆。  

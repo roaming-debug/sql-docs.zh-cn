@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aace4785289cd041b72c98a880ac38741bf0d641
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446343"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125052"
 ---
 # <a name="create-dml-triggers"></a>创建 DML 触发器
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "88446343"
   
 2.  展开 **“数据库”**，展开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库，展开 **“表”** ，然后展开表 **Purchasing.PurchaseOrderHeader**。  
   
-3.  右键单击“触发器”，然后选择“新建触发器”********。  
+3.  右键单击“触发器”，然后选择“新建触发器”。  
   
-4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。 或者，你可以按下 (Ctrl-Shift-M) 以便打开“指定模板参数的值”**** 对话框。  
+4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。 或者，你可以按下 (Ctrl-Shift-M) 以便打开“指定模板参数的值”对话框。  
   
 5.  在 **“指定模板参数的值”** 对话框中，输入下列所示的参数值。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88446343"
   
 9. 若要创建 DML 触发器，请在 **“查询”** 菜单上单击 **“执行”**。 该 DML 触发器作为数据库中的对象创建。  
   
-10. 若要查看在“对象资源管理器”中列出的 DML 触发器，请右键单击“触发器”，然后选择“刷新”********。  
+10. 若要查看在“对象资源管理器”中列出的 DML 触发器，请右键单击“触发器”，然后选择“刷新”。  
 
  [开始之前](#Top)  
   

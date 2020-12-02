@@ -11,14 +11,14 @@ helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6c72f43b6605821ad984a9ad9dc98378aea258bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5b3518b9ffb201985c4ebef7de13c24c4345394f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696042"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125652"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>日志传送和复制 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

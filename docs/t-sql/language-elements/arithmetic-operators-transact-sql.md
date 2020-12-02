@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b51c473bb75f3f2e1c82f96dcd8af743597678fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445515"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124543"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>算术运算符 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88445515"
 |[/（除）](../../t-sql/language-elements/divide-transact-sql.md)|部门|  
 |[%（取模）](../../t-sql/language-elements/modulo-transact-sql.md)|返回一个除法运算的整数余数。 例如，12 % 5 = 2，这是因为 12 除以 5，余数为 2。|  
   
-加 (+) 和减 (-) 运算符也可用于对 datetime**** 和 smalldatetime**** 值运行算术运算。  
+加 (+) 和减 (-) 运算符也可用于对 datetime 和 smalldatetime 值运行算术运算。  
   
 若要详细了解算术运算结果的精度和确定位数，请参阅[精度、确定位数和长度 &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   

@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f4226d3fac66ec20f5012a15bb092b666cf86f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475796"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125184"
 ---
 # <a name="configure-parallel-index-operations"></a>配置并行索引操作
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "88475796"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要为其设置最大并行度的索引，然后选择“属性”****。  
+5.  右键单击要为其设置最大并行度的索引，然后选择“属性”。  
   
 6.  在 **“选择页”** 下，选择 **“选项”** 。  
   

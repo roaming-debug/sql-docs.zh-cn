@@ -14,14 +14,14 @@ helpviewer_keywords:
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 984e57d309dbed6a2aeb29dcaa260ae8f07896c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 05f3dd9658ca51e1208476f8d11b387a79eb0234
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429099"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96125564"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>将 SQL Server 数据库还原到某个时点（完整恢复模式）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "88429099"
   
      有关这些选项的说明，请参阅[还原数据库（“选项”页）](../../relational-databases/backup-restore/restore-database-options-page.md)。  
   
-12. 如果对于选择的时间点是必需的，则选择“还原前进行结尾日志备份”****。 无需修改此设置，但可以选择备份日志尾部（即使不需要）。  
+12. 如果对于选择的时间点是必需的，则选择“还原前进行结尾日志备份”。 无需修改此设置，但可以选择备份日志尾部（即使不需要）。  
   
 13. 如果存在与数据库的活动连接，则还原操作可能会失败。 选中 **“关闭现有连接”** 以确保关闭 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和数据库之间的所有活动连接。 此复选框可在执行还原操作之前将数据库设置为单用户模式，并在该操作完成后将数据库设置为多用户模式。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "88429099"
   
  RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY…  
   
- 恢复点是在 **time** 指定的 *datetime*值或之前发生的最新的事务提交。  
+ 恢复点是在 **time** 指定的 *datetime* 值或之前发生的最新的事务提交。  
   
  要只还原在特定时间点之前所做的修改，请为还原的每个备份指定 WITH STOPAT = time。 这样确保了不会超出目标时间。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "88429099"
   
 3.  还原上次差异数据库备份（如果有），而不恢复数据库 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间 (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY)。  
+4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间 (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=**_time_**,** RECOVERY)。  
   
     > [!NOTE]  
     >  RECOVERY 和 STOPAT 选项。 如果事务日志备份不包含要求的时间（例如，如果指定的时间超出了事务日志所包含的时间范围），则会生成警告，并且不会恢复数据库。  

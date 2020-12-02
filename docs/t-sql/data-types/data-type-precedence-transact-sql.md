@@ -20,11 +20,11 @@ ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6ed8d2a30d4bcc2cd1adaedc3cccd6642d701533
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459917"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124978"
 ---
 # <a name="data-type-precedence-transact-sql"></a>数据类型优先级 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md.md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -57,12 +57,12 @@ ms.locfileid: "88459917"
 1. **图像**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. nvarchar（包括 nvarchar(max)）********  
+1. nvarchar（包括 nvarchar(max)）  
 1. **nchar**  
-1. varchar（包括 varchar(max)）********  
+1. varchar（包括 varchar(max)）  
 1. **char**  
-1. varbinary（包括 varbinary(max)）********  
-1. binary（最低）****  
+1. varbinary（包括 varbinary(max)）  
+1. binary（最低）  
   
 ## <a name="see-also"></a>另请参阅
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  

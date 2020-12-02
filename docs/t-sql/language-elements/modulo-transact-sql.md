@@ -27,11 +27,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 284d4110c4c0a2b8b4b7a1c26c4a4148fb5c50a6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193327"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124403"
 ---
 # <a name="-modulus-transact-sql"></a>%（取模）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,16 +50,16 @@ dividend % divisor
 
 ## <a name="arguments"></a>参数
  *dividend*  
- 被除数的数值表达式。 *dividend* 必须为整数和货币数据类型类别中任意一种数据类型的有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，或者为 **numeric** 数据类型。  
+ 被除数的数值表达式。 *dividend* 必须为整数和货币数据类型类别中任意一种数据类型的有效 [表达式](../../t-sql/language-elements/expressions-transact-sql.md)，或者为 **numeric** 数据类型。  
   
  *divisor*  
- 除数的数值表达式。 divisor 必须为整数和货币数据类型类别中任意一种数据类型的任意有效表达式，或者为 numeric 数据类型******。  
+ 除数的数值表达式。 divisor 必须为整数和货币数据类型类别中任意一种数据类型的任意有效表达式，或者为 numeric 数据类型。  
   
 ## <a name="result-types"></a>结果类型  
  由两个参数的数据类型确定。  
   
 ## <a name="remarks"></a>注解  
- 取模算术运算符可以和列名、数值常量或任何具有整数和货币数据类型类别或 numeric 数据类型的有效表达式组合一起用于 SELECT 语句的选择列表中****。  
+ 取模算术运算符可以和列名、数值常量或任何具有整数和货币数据类型类别或 numeric 数据类型的有效表达式组合一起用于 SELECT 语句的选择列表中。  
   
 ## <a name="examples"></a>示例  
   

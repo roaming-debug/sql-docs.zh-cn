@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b1d4a5951b223e5772a59f3cb9c12fd4f04ae244
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867285"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125206"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ HAVING 子句：
 - **ORDER BY** 子句中不支持 **DISTINCT** 。  
 
 
-- 在**TOP** 子句中使用常量时，结合使用 **ORDER BY** 与 **TOP** 不支持超过 8,192。
+- 在 **TOP** 子句中使用常量时，结合使用 **ORDER BY** 与 **TOP** 不支持超过 8,192。
   - 当查询包含联接或聚合函数时，该限制数可能降低。 （例如，对于一个联接（两个表），限制为 4,096 行。 对于两个联接（三个表），限制为 2,730 行。）  
   - 可通过将行数存储在变量中来获得多于 8,192 的结果：  
 

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fd4acadbf94f45c1b155d10a70a376ea11c326e4
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 8f29fb060b68d55733eb20c02119325577764991
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670493"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126018"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]

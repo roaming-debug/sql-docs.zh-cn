@@ -13,11 +13,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ab153d8d28e2f8005f0b0a370ffa4def42f81c58
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868019"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125221"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存 OLTP 的性能改进
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +64,7 @@ go
   
 1.  决定将用于代码示例的现有测试数据库。  
   
-2.  如果你决定创建一个新的测试数据库，请使用 [Azure 门户](https://portal.azure.com) 创建一个名为 **imoltp**的数据库。  
+2.  如果你决定创建一个新的测试数据库，请使用 [Azure 门户](https://portal.azure.com) 创建一个名为 **imoltp** 的数据库。  
   
  如果需要有关使用 Azure 门户来实现这一操作的说明，请参阅 [Azure SQL Database 入门](/azure/azure-sql/database/single-database-create-quickstart)。  
   

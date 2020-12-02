@@ -16,15 +16,15 @@ helpviewer_keywords:
 - errors [SQL Server], Setup
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f3e65de977926076ec10ef1609bf712c9579faa
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 4cf535ee95b91a0e9b6ed3ba2b8745478736a142
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243816"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125664"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>查看和阅读 SQL Server 安装程序日志文件
 

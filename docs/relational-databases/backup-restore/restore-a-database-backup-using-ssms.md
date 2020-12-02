@@ -18,14 +18,14 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2e23cceab272e11eedb1fa99250dce5520ada073
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f93bb71a3f6dcbbd98e62cca67a877361c6766db
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718012"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125596"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>使用 SSMS 还原数据库备份
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85718012"
     
 如果将较旧版本的数据库还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则该数据库将自动升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 这将阻止数据库被旧版本的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 使用。 但是，这与元数据升级相关，不会影响[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的最低兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
-通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于**全文升级选项**服务器属性的设置。 如果将升级选项设置为“导入”  或“重新生成”  ，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。     
+通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于 **全文升级选项** 服务器属性的设置。 如果将升级选项设置为“导入”  或“重新生成”  ，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。     
     
 当升级选项设置为“导入”  时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”  属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。    
 
@@ -203,7 +203,7 @@ ms.locfileid: "85718012"
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>E.  从 Microsoft Azure 存储服务还原备份
 
 #### <a name="common-steps"></a>一般步骤
-下面的两个示例执行从位于 Microsoft Azure 存储服务中的备份还原 `Sales` 。  存储帐户名称为 `mystorageaccount`。  容器名称为 `myfirstcontainer`。  出于简洁的目的，在此处一次列出前六个步骤，所有示例将从**步骤 7** 开始。
+下面的两个示例执行从位于 Microsoft Azure 存储服务中的备份还原 `Sales` 。  存储帐户名称为 `mystorageaccount`。  容器名称为 `myfirstcontainer`。  出于简洁的目的，在此处一次列出前六个步骤，所有示例将从 **步骤 7** 开始。
 1.  在“对象资源管理器”  中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
 2.  右键单击“数据库”  ，然后选择“还原数据库...”  。
 3.  在“常规”  页上，在“源”  部分下选择“设备”  。

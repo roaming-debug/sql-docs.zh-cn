@@ -8,15 +8,15 @@ ms.technology: install
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6b9e625978315a06faf19314b5d7197eafb95567
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 01d8324d950f7dc5db4bb2456e67f01b380d9771
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897459"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126008"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>完成数据库引擎升级
 

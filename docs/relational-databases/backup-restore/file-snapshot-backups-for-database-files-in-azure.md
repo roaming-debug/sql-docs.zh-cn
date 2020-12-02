@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fe74f56af2726a32d6216852ca2d8dec341ee6dd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 221479f50d7e8097ccf4f9d2b98c930752547baf
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809430"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125591"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中数据库文件的文件快照备份
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

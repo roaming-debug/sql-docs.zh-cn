@@ -21,11 +21,11 @@ ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7b3bb37af363727d1eb41922979ee6f78a9fd008
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380816"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124627"
 ---
 # <a name="x40x40pack_received-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "91380816"
  **integer**  
   
 ## <a name="remarks"></a>注解  
- 若要显示包含多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括发送和接收的数据包）的报表，请运行 sp_monitor****。  
+ 若要显示包含多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括发送和接收的数据包）的报表，请运行 sp_monitor。  
   
 ## <a name="examples"></a>示例  
  下面的示例说明了 `@@PACK_RECEIVED` 的用法：  

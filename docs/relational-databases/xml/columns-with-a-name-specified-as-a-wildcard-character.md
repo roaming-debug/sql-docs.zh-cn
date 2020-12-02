@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 915bd2824f6e3a706587769413c0f116df859f06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775579"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125029"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>名称指定为通配符的列
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-如果指定的列名是一个通配符 (\*)，则插入此列的内容时就像没有指定列名那样插入。 如果此列不是**xml** 类型的列，则此列的内容将作为文本节点插入，如下例所示：  
+如果指定的列名是一个通配符 (\*)，则插入此列的内容时就像没有指定列名那样插入。 如果此列不是 **xml** 类型的列，则此列的内容将作为文本节点插入，如下例所示：  
   
 ```sql
 USE AdventureWorks2012;  

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - " SQL Server, features"
 - adding features to  SQL Server
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eb38c37dcb5a570364675fece213c8c6868173ec
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: b7fdbda79c36c8ddf939477db9ea197c22507b64
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570944"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126042"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>向 SQL Server 的实例添加功能（安装程序）
 

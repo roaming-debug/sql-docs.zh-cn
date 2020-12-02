@@ -22,11 +22,11 @@ ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 846a3d772c35d8d47aa0013b6d27b8c94f5cf6f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88310173"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124767"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ varbinary 类型的变量，包含使用密钥加密的数据。
 包含验证器生成所源自的数据的变量。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 *\@authenticator* 具有 **sysname** 数据类型。  
 
 ## <a name="return-types"></a>返回类型  
-varbinary（最大大小为 8,000 个字节）。 如果用于数据加密的对称密钥未打开，或者如果 ciphertext 为 NULL，则 `DECRYPTBYKEY` 返回 NULL**。  
+varbinary（最大大小为 8,000 个字节）。 如果用于数据加密的对称密钥未打开，或者如果 ciphertext 为 NULL，则 `DECRYPTBYKEY` 返回 NULL。  
   
 ## <a name="remarks"></a>注解  
 `DECRYPTBYKEY` 使用对称密钥。 该数据库必须已打开此对称密钥。 `DECRYPTBYKEY` 将允许同时打开多个密钥。 在密文解密之前，不必立即打开密钥。  

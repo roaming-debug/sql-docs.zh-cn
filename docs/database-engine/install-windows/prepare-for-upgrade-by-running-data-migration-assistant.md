@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 577b65a693fd1955daed3600f75b8b67fdc4483e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4cd334b5301b2074ff7a36b8a7625cc3b50cc552
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900332"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125801"
 ---
 # <a name="prepare-for-upgrade-by-running-data-migration-assistant"></a>运行数据迁移助手以准备升级
 

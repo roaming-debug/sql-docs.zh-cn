@@ -10,14 +10,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 41c11b596017f9dfeab7d62cfbe517e764f733ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d28d41c85b267d3920e62773f3694cabb252c64b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428919"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125456"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88428919"
   
  [Microsoft Azure 价格计算器](https://go.microsoft.com/fwlink/?LinkId=277060) 可以帮助估算你的成本。  
   
- **存储：** 费用基于使用的空间并根据渐变的标准和冗余级别来计算它。 有关详细信息和最新信息，请参阅 **定价详细信息** 文章中的[“数据管理”](https://go.microsoft.com/fwlink/?LinkId=277059) 一节。  
+ **存储：** 费用基于使用的空间并根据渐变的标准和冗余级别来计算它。 有关详细信息和最新信息，请参阅 **定价详细信息** 文章中的 [“数据管理”](https://go.microsoft.com/fwlink/?LinkId=277059) 一节。  
   
  **数据传输：** 传输到 Microsoft Azure 的入站数据是免费的。 出站传输要支付带宽使用费用，并根据渐变的区域特定标准来计算费用。 有关详细信息，请参阅“定价详细信息”文章中的 [数据传输](https://go.microsoft.com/fwlink/?LinkId=277061) 一节。  
   

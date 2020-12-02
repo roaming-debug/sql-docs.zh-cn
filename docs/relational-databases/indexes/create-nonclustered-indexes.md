@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 04c45acc426cdeb187fd673756da388f971fe24e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382613"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125181"
 ---
 # <a name="create-nonclustered-indexes"></a>创建非聚集索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,19 +60,19 @@ ms.locfileid: "88382613"
   
 2.  展开 **“表”** 文件夹。  
   
-3.  右键单击你要创建非聚集索引的表，然后选择“设计”****。  
+3.  右键单击你要创建非聚集索引的表，然后选择“设计”。  
   
 4.  在“表设计器”菜单上，单击“索引/键”。  
   
-5.  在“索引/键”**** 对话框中，单击“添加”****。  
+5.  在“索引/键”对话框中，单击“添加”。  
   
-6.  从“选定的主/唯一键或索引”**** 文本框中选择新索引。  
+6.  从“选定的主/唯一键或索引”文本框中选择新索引。  
   
-7.  在网格中，选择“创建为聚集”****，然后从该属性右侧的下拉列表中选择“否”****。  
+7.  在网格中，选择“创建为聚集”，然后从该属性右侧的下拉列表中选择“否”。  
   
 8.  单击“关闭”。  
   
-9. 在“文件”**** 菜单上，单击“保存”**** 以保存 _table_name_。  
+9. 在“文件”菜单上，单击“保存”以保存 _table_name_。  
 
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>使用对象资源管理器创建非聚集索引  
   
@@ -88,7 +88,7 @@ ms.locfileid: "88382613"
   
 6.  在“索引键列”下，单击“添加…” 。  
   
-7.  在“从 table_name 中选择列”****__ 对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
+7.  在“从 table_name 中选择列”对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
   
 8.  单击“确定”。  
   

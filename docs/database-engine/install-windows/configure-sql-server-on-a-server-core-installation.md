@@ -11,15 +11,15 @@ helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4be5f264e790bb84142cbed1460e937a40c41663
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 3e132297969c20a8c823dfcc1095d89c598c5fd5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670480"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125972"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
 

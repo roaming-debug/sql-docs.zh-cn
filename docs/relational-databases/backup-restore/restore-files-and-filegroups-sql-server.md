@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], restoring files and filegroups
 - restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fade272bf603b0931d19c66b0ca1009b8cfbb3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 40397b72c72142e65716f48a9e948d079d5a7015
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737686"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125512"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>还原文件和文件组 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85737686"
   
 4.  单击 **“文件和文件组”** ，将打开 **“还原文件和文件组”** 对话框。  
   
-5.  在 **“常规”** 页上的 **目标数据库** 列表框中，输入要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master** 和 **tempdb**之外的所有数据库。  
+5.  在 **“常规”** 页上的 **目标数据库** 列表框中，输入要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master** 和 **tempdb** 之外的所有数据库。  
   
 6.  若要指定要还原的备份集的源和位置，请单击以下选项之一：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "85737686"
      如果对于不同介质集必须更换磁带，例如在服务器具有一个磁带设备时，此选项非常有用。  
   
      **限制访问还原的数据库**  
-     使还原的数据库仅供 **db_owner**、 **dbcreator**或 **sysadmin**的成员使用。  
+     使还原的数据库仅供 **db_owner**、 **dbcreator** 或 **sysadmin** 的成员使用。  
   
      选择此选项等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 语句中使用 RESTRICTED_USER 选项。  
   

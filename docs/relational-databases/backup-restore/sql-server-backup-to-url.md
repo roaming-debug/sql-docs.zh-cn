@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 234de41b70c6bddbe37212850a6027d368131eaf
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5d548262cf26f763c14b4f8ac693491ba3d58a85
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674225"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125445"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 

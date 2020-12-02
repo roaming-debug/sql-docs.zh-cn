@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd65d2923d063440e292884da2bb4c6aecf0ec4
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255455"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124897"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,11 +77,11 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 
 or  
 
-* sql_variant（如果 sql_variant 的基类型为字符串数据类型）  。  
+* sql_variant（如果 sql_variant 的基类型为字符串数据类型）。  
   
 例如，字符串“McCavity”和“Mccavity”的 `BINARY_CHECKSUM` 值不同。 反之，对于不区分大小写的服务器，上述字符串的 `CHECKSUM` 将返回相同的校验和值。 应避免比较 `CHECKSUM` 值与 `BINARY_CHECKSUM` 值。
  
-`BINARY_CHECKSUM` 支持任何字符长度的 varbinary(max)  类型和最多 255 个字符长度的 nvarchar(max)  类型。
+`BINARY_CHECKSUM` 支持任何字符长度的 varbinary(max) 类型和最多 255 个字符长度的 nvarchar(max) 类型。
   
 ## <a name="examples"></a>示例  
 此示例使用 `BINARY_CHECKSUM` 检测表行中的更改。

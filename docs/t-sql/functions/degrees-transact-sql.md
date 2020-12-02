@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7930e915884ee84884f1d1069622e7cc75d06c5f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116813"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124772"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,10 +44,10 @@ DEGREES ( numeric_expression )
 
 ## <a name="arguments"></a>参数
  *numeric_expression*  
-精确数值或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)****。  
+精确数值或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-code-values"></a>返回代码值  
-返回数据类型与 numeric_expression 的数据类型匹配的值**。  
+返回数据类型与 numeric_expression 的数据类型匹配的值。  
   
 ## <a name="examples"></a>示例  
 此示例返回按 PI/2 弧度表示的角的度数。  

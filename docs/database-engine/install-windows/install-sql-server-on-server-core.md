@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 40114f51a3012f5f60564a57e63a2f3e0bc8bdab
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 14646a81b3bc575231382e615231894861719604
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670424"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125952"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安装 SQL Server
 

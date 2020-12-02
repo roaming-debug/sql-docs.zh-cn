@@ -23,11 +23,11 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ae3fc6e47bcb375122be6e045c36b5e5f08c2cc0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116877"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124922"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,16 +46,16 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 
 ## <a name="arguments"></a>参数
 **'** *database_principal* **'**  
-可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 若要成功调用函数，该函数调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员**。
+可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 若要成功调用函数，该函数调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员。
   
 **'** *resource_name* **'**  
-由客户端应用程序指定的锁资源名称。 应用程序必须确保唯一的资源名称。 指定的名称经过内部哈希运算后成为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器可内部存储的值。  resource_name 为 nvarchar(255)，无默认值。 resource_name 使用二进制比较并区分大小写，无论当前数据库的排序规则设置为何**。
+由客户端应用程序指定的锁资源名称。 应用程序必须确保唯一的资源名称。 指定的名称经过内部哈希运算后成为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器可内部存储的值。  resource_name 为 nvarchar(255)，无默认值。 resource_name 使用二进制比较并区分大小写，无论当前数据库的排序规则设置为何。
   
 **'** *lock_mode* **'**  
-要为特定资源获取的锁模式。 lock_mode 为 nvarchar(32)，无默认值******。 lock_mode 可具有任何以下值：Shared、Update、IntentShared、IntentExclusive、Exclusive**********************。
+要为特定资源获取的锁模式。 lock_mode 为 nvarchar(32)，无默认值。 lock_mode 可具有任何以下值：Shared、Update、IntentShared、IntentExclusive、Exclusive。
   
 **'** *lock_owner* **'**  
-锁的所有者，它是请求锁时所指定的 lock_owner 值**。 lock_owner 为 nvarchar(32)，值可以是 Transaction（默认值）或 Session**************。 如果显式指定默认值或 Transaction，则必须从事务中执行 APPLOCK_TEST****。
+锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 为 nvarchar(32)，值可以是 Transaction（默认值）或 Session。 如果显式指定默认值或 Transaction，则必须从事务中执行 APPLOCK_TEST。
   
 ## <a name="return-types"></a>返回类型
 **smallint**
@@ -71,7 +71,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 **Nonparallelizable**
   
 ## <a name="examples"></a>示例  
-具有不同会话的两个用户（用户 A 和用户 B）按以下顺序运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句********。
+具有不同会话的两个用户（用户 A 和用户 B）按以下顺序运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。
   
 用户 A 运行：
   
@@ -89,7 +89,7 @@ SELECT APPLOCK_MODE('public', 'Form1', 'Transaction');
 GO  
 ```  
   
-然后用户 B 运行****：
+然后用户 B 运行：
   
 ```sql
 Use AdventureWorks2012;  
@@ -106,14 +106,14 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-然后用户 A 运行****：
+然后用户 A 运行：
   
 ```sql
 EXEC sp_releaseapplock @Resource='Form1', @DbPrincipal='public';  
 GO  
 ```  
   
-然后用户 B 运行****：
+然后用户 B 运行：
   
 ```sql
 SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');  
@@ -121,7 +121,7 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-然后用户 A 和用户 B 同时运行********：
+然后用户 A 和用户 B 同时运行：
   
 ```sql
 COMMIT TRAN;  

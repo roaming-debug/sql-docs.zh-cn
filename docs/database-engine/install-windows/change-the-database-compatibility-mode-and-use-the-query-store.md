@@ -12,15 +12,15 @@ helpviewer_keywords:
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 09451cc9897962566905f66400cb185a5d2211da
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: a327b5aa82c11b3c0192b054e9b242f854b43818
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243696"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126037"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>更改数据库兼容性级别和使用查询存储
 

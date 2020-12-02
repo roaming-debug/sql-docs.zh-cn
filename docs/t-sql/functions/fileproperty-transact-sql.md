@@ -24,11 +24,11 @@ ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 524fe8130742a58da0c806c8ad35c9287c732017
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116395"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124717"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,10 +47,10 @@ FILEPROPERTY ( file_name , property )
 
 ## <a name="arguments"></a>参数
  file_name  
- 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)******。  
+ 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)。  
   
  *property*  
- 包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一******。  
+ 包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一。  
   
 |值|说明|返回的值|  
 |-----------|-----------------|--------------------|  
@@ -63,7 +63,7 @@ FILEPROPERTY ( file_name , property )
  **int**  
   
 ## <a name="remarks"></a>备注  
- file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应**************。  
+ file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应。  
   
 ## <a name="examples"></a>示例  
  以下示例返回 `IsPrimaryFile` 数据库中的 `AdventureWorks_Data` 文件名的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 属性的设置。  

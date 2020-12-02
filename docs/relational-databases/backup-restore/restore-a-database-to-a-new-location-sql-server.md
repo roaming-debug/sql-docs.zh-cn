@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 89abaf77c605574ef05a88a7cc18a09c0840a9c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 19ff3852dad4b98b739bfc058ba7a532af932ee1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717998"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125576"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>将数据库还原到新位置 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -159,12 +159,12 @@ ms.locfileid: "85717998"
   有关详细信息，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 中的“指定备份集”。  
   
   MOVE **'** _logical_file_name_in_backup_ **'** TO **'** _operating_system_file_name_ **'** [ **,** ...*n* ]  
-  指定由 *logical_file_name_in_backup* 指定的数据或日志文件将还原到 *operating_system_file_name*指定的位置。 请为每个要从备份集还原到新位置的逻辑文件指定 MOVE 语句。  
+  指定由 *logical_file_name_in_backup* 指定的数据或日志文件将还原到 *operating_system_file_name* 指定的位置。 请为每个要从备份集还原到新位置的逻辑文件指定 MOVE 语句。  
   
   |选项|说明|  
   |------------|-----------------|  
   |*logical_file_name_in_backup*|指定备份集中数据文件或日志文件的逻辑名称。 创建备份集时，备份集中的数据或日志文件的逻辑文件名与其在数据库中的逻辑名称匹配。<br /><br /> <br /><br /> 注意：若要从备份集中获取逻辑文件列表，请使用 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。|  
-  |*operating_system_file_name*|指定由 *logical_file_name_in_backup*指定的文件的新位置。 文件将还原到此位置。<br /><br /> 或者， *operating_system_file_name* 指定已还原文件的新文件名。 如果您在相同服务器实例上创建现有数据库的副本，则此操作是必需的。|  
+  |*operating_system_file_name*|指定由 *logical_file_name_in_backup* 指定的文件的新位置。 文件将还原到此位置。<br /><br /> 或者， *operating_system_file_name* 指定已还原文件的新文件名。 如果您在相同服务器实例上创建现有数据库的副本，则此操作是必需的。|  
   |*n*|是指示可以指定其他 MOVE 语句的占位符。|  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  

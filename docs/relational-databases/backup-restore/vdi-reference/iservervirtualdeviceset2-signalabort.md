@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: reference
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: ee70ef059e80d9c8a31281ce50f451e7787f637a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8275d2bbe11b550a804ab9bd9bcf475e1d2fbd34
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895939"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125302"
 ---
 # <a name="iservervirtualdeviceset2signalabort-vdi"></a>IServerVirtualDeviceSet2::SignalAbort (VDI)
 

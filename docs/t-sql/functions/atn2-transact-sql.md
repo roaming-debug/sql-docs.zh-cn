@@ -22,11 +22,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7dd9d89534be641da25c0cbf0d4f7e1e58d82dde
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117137"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124959"
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ ATN2 ( float_expression , float_expression )
 
 ## <a name="arguments"></a>参数
 *float_expression*  
-float 数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)****。
+float 数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
 **float**

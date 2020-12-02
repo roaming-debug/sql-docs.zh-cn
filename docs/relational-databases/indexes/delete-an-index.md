@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9279f22be324858e2a71ea523cab000c8f7253cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490949"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125169"
 ---
 # <a name="delete-an-index"></a>删除索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "88490949"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要删除的索引，然后选择“删除”****。  
+5.  右键单击要删除的索引，然后选择“删除”。  
   
 6.  在 **“删除对象”** 对话框中，确认正确的索引位于 **“要重删除的对象”** 网格中，然后单击 **“确定”**。  
   
@@ -80,13 +80,13 @@ ms.locfileid: "88490949"
   
 4.  在“表设计器”菜单上，单击“索引/键”。  
   
-5.  在“索引/键”**** 对话框中，选择要删除的索引。  
+5.  在“索引/键”对话框中，选择要删除的索引。  
   
 6.  单击 **“删除”** 。  
   
 7.  单击“关闭”。  
   
-8.  在“文件”**** 菜单上，选择“保存”**** 以保存 _table_name_。  
+8.  在“文件”菜单上，选择“保存”以保存 _table_name_。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

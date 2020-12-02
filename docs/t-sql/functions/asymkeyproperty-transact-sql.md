@@ -19,11 +19,11 @@ ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 88d4ae042cc6fd01988e51f78d1e5a212ed66863
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116868"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124902"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,13 +42,13 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 
 ## <a name="arguments"></a>参数
 Key_ID  
-数据库中非对称密钥的 Key_ID。 如果仅知道密钥名称，请使用 ASYMKEY_ID 查找 Key_ID。 Key_ID 为 int 数据类型******。
+数据库中非对称密钥的 Key_ID。 如果仅知道密钥名称，请使用 ASYMKEY_ID 查找 Key_ID。 Key_ID 为 int 数据类型。
   
 **'** algorithm_desc **'**  
 指定输出应返回非对称密钥的算法说明。 仅适用于从 EKM 模块创建的非对称密钥。
   
 'string_sid'   
-指定输出应以 nvarchar() 格式返回非对称密钥的 SID****。
+指定输出应以 nvarchar() 格式返回非对称密钥的 SID。
   
 **'** sid **'**  
 指定输出应以二进制格式返回非对称密钥的 SID。

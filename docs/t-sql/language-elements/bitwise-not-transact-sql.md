@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd89533ee030204cfb0b57a3c51d4a03bb790462
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92189222"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124517"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~（位非）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92189222"
 
 ## <a name="arguments"></a>参数
  *expression*  
- 整数数据类型类别中的任何一种数据类型、bit、binary 或 varbinary 数据类型的任何有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)************。 对于位运算，expression 被视为二进制数字。  
+ 整数数据类型类别中的任何一种数据类型、bit、binary 或 varbinary 数据类型的任何有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 对于位运算，expression 被视为二进制数字。  
   
 > [!NOTE]  
 >  位运算中，只有一个 expression 可以是 binary 或 varbinary 数据类型 。  
@@ -60,16 +60,16 @@ ms.locfileid: "92189222"
   
  如果输入值为 tinyint，则结果为 tinyint 。  
   
- 如果输入值为 bit，则结果为 bit********。  
+ 如果输入值为 bit，则结果为 bit。  
   
 ## <a name="remarks"></a>备注  
- ~ 位运算符对 expression 逐位执行逻辑位非运算。 如果 expression 的值为 0，则结果集中的位将设置为 1；否则，结果中的位将清 0**。 换句话说，1 改成 0，而 0 则改成 1。  
+ ~ 位运算符对 expression 逐位执行逻辑位非运算。 如果 expression 的值为 0，则结果集中的位将设置为 1；否则，结果中的位将清 0。 换句话说，1 改成 0，而 0 则改成 1。  
   
 > [!IMPORTANT]  
->  执行任何种类的位运算时，位运算中使用的表达式的存储长度都是很重要的。 建议您在存储值时使用该相同的字节数。 例如，如果将十进制值 5 作为 tinyint、smallint 或 int 进行存储，所生成的值将以不同字节数进行存储：tinyint 使用 1 个字节存储数据；smallint 使用 2 个字节存储数据；而 int 则使用 4 个字节存储数据************************。 因此，对 int 十进制值执行位运算所生成的结果与那些使用直接二进制或十六进制转换的结果不同，尤其是使用 ~（位非）运算符时********。 位非运算可能针对长度较短的变量执行。 这种情况下，当长度较短的变量转换为较长的数据类型变量时，上 8 位中的位将不能设置为期望的值。 我们建议先将较小的数据类型变量转换为较大的数据类型，然后对结果执行非运算。  
+>  执行任何种类的位运算时，位运算中使用的表达式的存储长度都是很重要的。 建议您在存储值时使用该相同的字节数。 例如，如果将十进制值 5 作为 tinyint、smallint 或 int 进行存储，所生成的值将以不同字节数进行存储：tinyint 使用 1 个字节存储数据；smallint 使用 2 个字节存储数据；而 int 则使用 4 个字节存储数据。 因此，对 int 十进制值执行位运算所生成的结果与那些使用直接二进制或十六进制转换的结果不同，尤其是使用 ~（位非）运算符时。 位非运算可能针对长度较短的变量执行。 这种情况下，当长度较短的变量转换为较长的数据类型变量时，上 8 位中的位将不能设置为期望的值。 我们建议先将较小的数据类型变量转换为较大的数据类型，然后对结果执行非运算。  
   
 ## <a name="examples"></a>示例  
- 以下示例将使用 int 数据类型创建一个表，用于存储值，并将两个值插入到一行中****。  
+ 以下示例将使用 int 数据类型创建一个表，用于存储值，并将两个值插入到一行中。  
   
 ```sql  
 CREATE TABLE bitwise (  

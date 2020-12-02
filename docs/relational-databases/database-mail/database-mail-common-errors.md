@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 442e95c2e579fa67cb54b801fe6ebbdcd4098ae3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461035"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125236"
 ---
 # <a name="common-errors-with-database-mail"></a>数据库邮件的常见错误 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88461035"
 本文介绍了数据库邮件可能遇到的一些常见错误及其解决方案。
 
 ## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>找不到存储过程“sp_send_dbmail”
-[sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) 存储过程安装在 msdb 数据库中。 必须从 msdb 数据库运行 sp_send_dbmail，或为存储过程指定一个由三部分构成的名称****。
+[sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) 存储过程安装在 msdb 数据库中。 必须从 msdb 数据库运行 sp_send_dbmail，或为存储过程指定一个由三部分构成的名称。
 
 示例：
 ```sql
@@ -71,9 +71,9 @@ GO
 
 ## <a name="database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log"></a>数据库邮件已排队，但 sysmail_event_log 或 Windows 应用程序事件日志中没有任何项 
 
-数据库邮件使用 Service Broker 来对电子邮件进行排队。 如果数据库邮件已停止，或者尚未在 msdb 数据库中激活 Service Broker 消息传递功能，数据库邮件将对消息进行排队，但无法传递消息****。 在这种情况下，Service Broker 消息将保留在 Service Broker 邮件队列中。 由于 Service Broker 未激活外部程序，因此 sysmail_event_log 中没有日志项，并且 sysmail_allitems 和相关视图中的项状态也没有更新********。
+数据库邮件使用 Service Broker 来对电子邮件进行排队。 如果数据库邮件已停止，或者尚未在 msdb 数据库中激活 Service Broker 消息传递功能，数据库邮件将对消息进行排队，但无法传递消息。 在这种情况下，Service Broker 消息将保留在 Service Broker 邮件队列中。 由于 Service Broker 未激活外部程序，因此 sysmail_event_log 中没有日志项，并且 sysmail_allitems 和相关视图中的项状态也没有更新。
 
-执行以下语句，检查 msdb 数据库中是否启用了 Service Broker****：
+执行以下语句，检查 msdb 数据库中是否启用了 Service Broker：
 
 ```sql
 SELECT is_broker_enabled FROM sys.databases WHERE name = 'msdb';
@@ -89,7 +89,7 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-数据库邮件依赖于多个内部存储过程。 为了减少外围应用，在新安装的 SQL Server 中，这些存储过程是禁用的。 要启用这些存储过程，请使用 sp_configure 系统存储过程的[数据库邮件 XP 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)，如以下示例所示****：
+数据库邮件依赖于多个内部存储过程。 为了减少外围应用，在新安装的 SQL Server 中，这些存储过程是禁用的。 要启用这些存储过程，请使用 sp_configure 系统存储过程的[数据库邮件 XP 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)，如以下示例所示：
 
 ```sql
 EXEC sp_configure 'show advanced options', 1;  

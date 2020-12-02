@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6280e0abe6c95b2ac0a13339b0dfe2c6092e2fa3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670430"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125967"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
@@ -326,14 +326,14 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
     > [!NOTE]  
     > 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 
     
-    有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop)。 
+    有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop)。 
 
      使用“数据库引擎配置 - 内存”页，指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在启动后使用的“最小服务器内存和“最大服务器内存”值。 可以使用默认值、计算出的建议值，也可以在选择“推荐”选项后手动指定你自己的值。
      
     > [!NOTE]  
     > 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 
     
-    有关详细信息，请参阅[“数据库引擎配置 - 内存”页](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory)。 
+    有关详细信息，请参阅[“数据库引擎配置 - 内存”页](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory)。 
 
      使用“数据库引擎配置 - FILESTREAM”页为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 FILESTREAM。 有关详细信息，请参阅[“数据库引擎配置 - FILESTREAM”页](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page)。  
   
@@ -401,7 +401,7 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
 
 ## <a name="next-steps"></a>后续步骤
 
-[配置新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017)。  
+[配置新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装](../../database-engine/configure-windows/database-engine-instances-sql-server.md)。  
   
 为了减少系统的可攻击外围应用， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有选择地安装和启用了一些关键服务和功能。 有关详细信息，请参阅[外围应用配置](../../relational-databases/security/surface-area-configuration.md)。  
   

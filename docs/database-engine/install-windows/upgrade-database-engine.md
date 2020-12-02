@@ -12,15 +12,15 @@ helpviewer_keywords:
 - compatibility levels [SQL Server], after upgrade
 - Database Engine [SQL Server], upgrading
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 492f663e09f8883d1994d1ee5af2c0ed9acbb111
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e527cbe28eb2685d79d37393396508a0c316677d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748569"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125774"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
 

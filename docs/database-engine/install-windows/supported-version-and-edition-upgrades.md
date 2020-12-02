@@ -13,15 +13,15 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 784e005a9a7851c6e088255d8ff8b9e671796367
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: c5f5ba531875009b64c3dc65d8cf67b6160417da
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670990"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125789"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2016"></a>支持的版本和版本升级 (SQL Server 2016)
 

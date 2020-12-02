@@ -21,11 +21,11 @@ ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 28d810b8bf74a91a72dad7ab7d9eadce9bbfb9ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479412"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124370"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml - geography 数据类型
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "88479412"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：xml****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：xml  
   
- CLR 返回类型：SqlXml****  
+ CLR 返回类型：SqlXml  
   
 ## <a name="remarks"></a>备注  
   

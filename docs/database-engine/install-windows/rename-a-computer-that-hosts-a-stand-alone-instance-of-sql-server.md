@@ -17,15 +17,15 @@ helpviewer_keywords:
 - deleting remote logins
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0426ae38b00a939ff852af21b3a3b376b4c236f3
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: a436ed47730ef98287eef10d5342df4334782690
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671017"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125827"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重命名承载 SQL Server 独立实例的计算机
 
@@ -56,9 +56,9 @@ ms.locfileid: "91671017"
 -   对于承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]默认实例的重命名计算机，请运行以下过程：  
   
     ```sql
-    sp_dropserver <old_name>;  
+    EXEC sp_dropserver '<old_name>';  
     GO  
-    sp_addserver <new_name>, local;  
+    EXEC sp_addserver '<new_name>', local;  
     GO  
     ```  
   
@@ -67,9 +67,9 @@ ms.locfileid: "91671017"
 -   对于承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]命名实例的重命名计算机，请运行以下过程：  
   
     ```sql
-    sp_dropserver <old_name\instancename>;  
+    EXEC sp_dropserver '<old_name\instancename>';  
     GO  
-    sp_addserver <new_name\instancename>, local;  
+    EXEC sp_addserver '<new_name\instancename>', local;  
     GO  
     ```  
   
@@ -98,14 +98,14 @@ ms.locfileid: "91671017"
 -   对于默认实例，请运行以下过程：  
   
     ```sql
-    sp_dropremotelogin old_name;  
+    EXEC sp_dropremotelogin old_name;  
     GO  
     ```  
   
 -   对于命名实例，请运行以下过程：  
   
     ```sql
-    sp_dropremotelogin old_name\instancename;  
+    EXEC sp_dropremotelogin old_name\instancename;  
     GO  
     ```  
   

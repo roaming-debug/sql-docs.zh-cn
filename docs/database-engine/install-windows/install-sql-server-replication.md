@@ -14,15 +14,15 @@ helpviewer_keywords:
 - replication [SQL Server], installing
 - command prompt [SQL Server replication]
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 199230f8438a93db64fd5e32ded526699c447a7b
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 55a8a744c384df0536cef1073e05b2fc61a7a1ac
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670926"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125925"
 ---
 # <a name="install-sql-server-replication"></a>安装 SQL Server 复制
 

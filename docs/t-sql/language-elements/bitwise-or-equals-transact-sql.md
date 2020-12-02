@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0274a2259bab7fe16109520030d526113d4e876c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92189207"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124502"
 ---
 # <a name="-bitwise-or-assignment-transact-sql"></a>|=（位异或赋值）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ expression |= expression
 
 ## <a name="arguments"></a>参数
  *expression*  
- 数值类别中任意数据类型（bit 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)****。  
+ 数值类别中任意数据类型（bit 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  

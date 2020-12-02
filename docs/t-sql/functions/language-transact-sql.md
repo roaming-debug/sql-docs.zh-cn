@@ -23,11 +23,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc24d75bbe3ca32e0e3aede50109ab467570db8e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111102"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124652"
 ---
 # <a name="x40x40language-transact-sql"></a>&#x40;&#x40;LANGUAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "91111102"
  **nvarchar**  
   
 ## <a name="remarks"></a>备注  
- 若要查看语言设置信息（包括有效的正式语言名称），可在不指定参数的情况下运行 sp_helplanguage****。  
+ 若要查看语言设置信息（包括有效的正式语言名称），可在不指定参数的情况下运行 sp_helplanguage。  
   
 ## <a name="examples"></a>示例  
  以下示例返回当前会话的语言。  

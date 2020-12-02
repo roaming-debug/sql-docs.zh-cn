@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4322d70fe60182116a47b35d005f2dae3a449e8a
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570658"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124803"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,10 +57,10 @@ DB_ID ( [ 'database_name' ] )
 `DB_ID` 仅可用于返回 Azure SQL 数据库中当前数据库的数据库标识符。 如果指定的数据库名称不是当前数据库，则返回 NULL。
 
 > [!NOTE]
-> 与 Azure SQL 数据库一起使用时，`DB_ID` 可能不会返回从 sys.databases**** 查询 `database_id` 得到的相同结果。 如果 `DB_ID` 的调用方将结果与其他 sys**** 视图进行比较，应改为查询 sys.databases****。
+> 与 Azure SQL 数据库一起使用时，`DB_ID` 可能不会返回从 sys.databases 查询 `database_id` 得到的相同结果。 如果 `DB_ID` 的调用方将结果与其他 sys 视图进行比较，应改为查询 sys.databases。
   
 ## <a name="permissions"></a>权限  
-如果 `DB_ID` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行********。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限****。 调用方连接的数据库将始终出现在 sys.databases 中****。
+如果 `DB_ID` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限。 调用方连接的数据库将始终出现在 sys.databases 中。
   
 > [!IMPORTANT]  
 >  默认情况下，公共角色具有 `VIEW ANY DATABASE` 权限，允许所有登录名查看数据库信息。 若要防止登录名检测数据库，则需 `REVOKE` 公共登录名的 `VIEW ANY DATABASE` 权限或 `DENY` 个人登录名的 `VIEW ANY DATABASE` 权限。  

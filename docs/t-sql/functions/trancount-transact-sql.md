@@ -23,11 +23,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7fd868824316fdd532851040730ae76e259cb3cc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92191995"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124589"
 ---
 # <a name="x40x40trancount-transact-sql"></a>@@TRANCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "92191995"
  **integer**  
   
 ## <a name="remarks"></a>备注  
- BEGIN TRANSACTION 语句将 @@TRANCOUNT 增加 1。 ROLLBACK TRANSACTION 将 @@TRANCOUNT 递减到 0，但 ROLLBACK TRANSACTION savepoint_name 除外，它不影响 @@TRANCOUNT**。 COMMIT TRANSACTION 或 COMMIT WORK 将 @@TRANCOUNT 递减 1。  
+ BEGIN TRANSACTION 语句将 @@TRANCOUNT 增加 1。 ROLLBACK TRANSACTION 将 @@TRANCOUNT 递减到 0，但 ROLLBACK TRANSACTION savepoint_name 除外，它不影响 @@TRANCOUNT。 COMMIT TRANSACTION 或 COMMIT WORK 将 @@TRANCOUNT 递减 1。  
   
 ## <a name="examples"></a>示例  
   

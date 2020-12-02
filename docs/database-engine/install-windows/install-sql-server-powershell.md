@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1de1d21208319773552d315714306abe3530f871
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: f374318c7b06a525f4ab684a1ac6aef4fdd3b915
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670414"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125938"
 ---
 # <a name="install-sql-server-powershell"></a>安装 SQL Server PowerShell
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]

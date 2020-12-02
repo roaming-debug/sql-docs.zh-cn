@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e7c19d7e0294fb65a2a5ba1783e7ca65f3453ab3
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cf4814ae0bcb40ddbcdb8e9d2c9e1f5c87e5cf14
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670810"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125651"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>将日志传送升级至 SQL Server 2016 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

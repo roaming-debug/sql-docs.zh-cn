@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b562b03068ebee035f9b298c62ca49d5c1c0f396
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6c06cb6fe516625cb517fc315bac8f3bc91e4fd7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671094"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125921"
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安装 SQL Server
 

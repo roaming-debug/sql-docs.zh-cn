@@ -12,11 +12,11 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 528d1f6e1c7eea06b69fc60e2208eeb37ce3e36f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420841"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125125"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分布式查询：OLE DB 连接
 
@@ -109,7 +109,7 @@ SQL 命令提供程序的示例包括 SQL Server 的 Microsoft OLE DB 提供程�
 
 - 所有远程表都通过 `IDBSchemaRowset` 接口的 INDEXES 行集公开唯一键。 应有一个索引条目，其 UNIQUE 列设置为 VARIANT_TRUE。
 
-涉及 OpenQuery ** 函数的分布式查询不支持键集游标。
+涉及 OpenQuery 函数的分布式查询不支持键集游标。
 
 #### <a name="updatable-keyset-cursor-requirements"></a>可更新的键集游标要求
 
@@ -398,9 +398,9 @@ SQL Server 不会从 OLE DB 提供程序公开 LOB 上的完整文本和图像�
 
 如果提供程序支持任一结构化存储接口，则 SQL Server 会执行以下步骤以在查询执行期间检索 LOB 列：
 
-1. 在通过 `IOpenRowset::OpenRowset` 打开行集之前，SQL Server 会先请求对大型对象列上一个或多个结构化存储接口（`ISequentialStream``Istream` 和 `ILockBytes`）的支持。 提供程序支持的第一个接口是必需的；其他接口要求\"若价廉则设置\"，方法是将相应 DBPROP 结构的 dwOptions 元素设置为 DBPROPOPTIONS_SETIFCHEAP**。 例如，如果提供程序同时支持 `ISequentialStream` 和 `ILockBytes`，则 `ISequentialStream` 是必需的，`ILockBytes` 要求\"若价廉则设置\"。
+1. 在通过 `IOpenRowset::OpenRowset` 打开行集之前，SQL Server 会先请求对大型对象列上一个或多个结构化存储接口（`ISequentialStream``Istream` 和 `ILockBytes`）的支持。 提供程序支持的第一个接口是必需的；其他接口要求\"若价廉则设置\"，方法是将相应 DBPROP 结构的 dwOptions 元素设置为 DBPROPOPTIONS_SETIFCHEAP。 例如，如果提供程序同时支持 `ISequentialStream` 和 `ILockBytes`，则 `ISequentialStream` 是必需的，`ILockBytes` 要求\"若价廉则设置\"。
 
-4. 打开行集后，SQL Server 使用 `IRowsetInfo::GetProperties` 来标识行集中可用的实际接口。 使用提供程序返回的最后一个或最优的接口。 当 SQL Server 针对大型对象列创建访问器时，该列绑定为 DBTYPE_IUNKNOWN，其中绑定集中 DBOBJECT 结构的 iid 元素绑定到接口**。
+4. 打开行集后，SQL Server 使用 `IRowsetInfo::GetProperties` 来标识行集中可用的实际接口。 使用提供程序返回的最后一个或最优的接口。 当 SQL Server 针对大型对象列创建访问器时，该列绑定为 DBTYPE_IUNKNOWN，其中绑定集中 DBOBJECT 结构的 iid 元素绑定到接口。
 
 #### <a name="reading-from-lob-columns"></a>读取 LOB 列
 
@@ -434,7 +434,7 @@ SQL Server 使用 OLE DB 指定的 OLE DB 错误对象。 其中一些高级步�
 
 这些映射可以由用户为给定的链接服务器指定，并且可以由系统存储过程 `sp_addlinkedsrvlogin` 和 `sp_droplinkedsrvlogin` 设置和管理。 如果通过 `IDBProperties::SetProperties` 设置初始化组属性 DBPROP_AUTH_USERID 和 DBPROP_AUTH_PASSWORD，则由映射确定的用户 ID 和密码可在连接建立期间传递给提供程序。
 
-当客户端通过 Windows 身份验证连接到 SQL Server 时，如果登录使用 `sp_addlinkedsrvlogin` 设置了 `self` 映射，则 SQL Server 会尝试模拟客户端的安全上下文，并在连接建立过程中在提供程序上设置 `DBPROP_AUTH_INTEGRATED` 属性。 此过程称为“委派”**。
+当客户端通过 Windows 身份验证连接到 SQL Server 时，如果登录使用 `sp_addlinkedsrvlogin` 设置了 `self` 映射，则 SQL Server 会尝试模拟客户端的安全上下文，并在连接建立过程中在提供程序上设置 `DBPROP_AUTH_INTEGRATED` 属性。 此过程称为“委派”。
 
 确定用于连接的安全上下文后，此安全上下文的身份验证以及其针对数据源中的数据对象的权限检查完全取决于 OLE DB 提供程序。
 

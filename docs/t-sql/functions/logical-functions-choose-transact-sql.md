@@ -19,11 +19,11 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 68ad50b69fefd541e083ecab096732d549d171d1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116011"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124644"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>逻辑函数 - CHOOSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,9 +44,9 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
  *index*  
  一个整数表达式，表示其后的项列表的从 1 开始的索引。  
   
- 如果提供的索引值具有 int 之外的数值数据类型，则该值将隐式转换为整数****。 如果索引值超出了值数组的界限，则 CHOOSE 返回 Null。  
+ 如果提供的索引值具有 int 之外的数值数据类型，则该值将隐式转换为整数。 如果索引值超出了值数组的界限，则 CHOOSE 返回 Null。  
   
- val_1 … val_n**  
+ val_1 … val_n  
  任何数据类型的逗号分隔的值列表。  
   
 ## <a name="return-types"></a>返回类型  

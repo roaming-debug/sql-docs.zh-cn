@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bec1ae2badef02e407b4562732af9cda85fc989
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 321c56d6e528586a44e4f94619e7c28709ab6998
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670210"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125722"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>升级到 SQL Server 的其他版本（安装程序）
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c981154462ec6b544d8dd877d1b6a41a6fa0ac2c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 46a83efe3efcab212d3569c5f2f32c232f1962c5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670586"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125862"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server 安装指南
 
@@ -44,7 +44,7 @@ ms.locfileid: "91670586"
     - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md)：  
     - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://docs.microsoft.com/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014)
 
-*  **要求**：查看 [SQL Server 2016 和 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 或 [Linux 上的 SQL Server](../../linux/sql-server-linux-setup.md) 的硬件和软件安装要求，以及系统配置检查和[规划 SQL Server 安装中](../../sql-server/install/planning-a-sql-server-installation.md)的安全注意事项 
+*  **要求**：查看 [SQL Server 2016 和 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 或 [Linux 上的 SQL Server](../../linux/sql-server-linux-setup.md) 的硬件和软件安装要求，以及系统配置检查和 [规划 SQL Server 安装中](../../sql-server/install/planning-a-sql-server-installation.md)的安全注意事项 
 
 
   

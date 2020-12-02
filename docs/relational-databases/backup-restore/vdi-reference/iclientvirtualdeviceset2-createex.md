@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: reference
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 27601b860d5f0cff6efcbd6ff800ab58e06a750a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 180ad0ca42904a6a9c4820db1cb5fab36157e972
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896908"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125425"
 ---
 # <a name="iclientvirtualdeviceset2createex-vdi"></a>IClientVirtualDeviceSet2::CreateEx (VDI)
 

@@ -22,16 +22,16 @@ ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 34df520dcb0f193e2b548a909ea10cd4113995fc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196651"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124480"
 ---
 # <a name="comparison-operators-transact-sql"></a>比较运算符 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  比较运算符测试两个表达式是否相同。 除 text、ntext 或 image 数据类型的表达式外，比较运算符可以用于所有其他表达式************。 下表列出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 比较运算符。  
+  比较运算符测试两个表达式是否相同。 除 text、ntext 或 image 数据类型的表达式外，比较运算符可以用于所有其他表达式。 下表列出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 比较运算符。  
   
 |运算符|含义|  
 |--------------|-------------|  
@@ -46,13 +46,13 @@ ms.locfileid: "92196651"
 |[\!>（不大于）](../../t-sql/language-elements/not-greater-than-transact-sql.md)|不大于（非 ISO 标准）|  
   
 ## <a name="boolean-data-type"></a>布尔数据类型  
- 具有 Boolean 数据类型的比较运算符的结果****。 它有三个值：TRUE、FALSE 和 UNKNOWN。 返回 Boolean 数据类型的表达式称为布尔表达式****。  
+ 具有 Boolean 数据类型的比较运算符的结果。 它有三个值：TRUE、FALSE 和 UNKNOWN。 返回 Boolean 数据类型的表达式称为布尔表达式。  
   
- 与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不同，Boolean 数据类型不能被指定为表列或变量的数据类型，也不能在结果集中返回****。  
+ 与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不同，Boolean 数据类型不能被指定为表列或变量的数据类型，也不能在结果集中返回。  
   
  当 SET ANSI_NULLS 为 ON 时，带有一个或两个 NULL 表达式的运算符返回 UNKNOWN。 当 SET ANSI_NULLS 为 OFF 时，除了等于 (=) 和不等于 (<>) 运算符外，相同的规则适用。 当 SET ANSI_NULLS 为 OFF 时，这些运算符将 NULL 视为已知值，等效于任何其他 NULL，且只返回 TRUE 或 FALSE（绝不会返回 UNKNOWN）。  
   
- 在 WHERE 子句中使用数据类型为 Boolean 的表达式，可以筛选出符合搜索条件的行，也可以在控制流语言语句（例如 IF 和 WHILE）中使用这种表达式。例如：****  
+ 在 WHERE 子句中使用数据类型为 Boolean 的表达式，可以筛选出符合搜索条件的行，也可以在控制流语言语句（例如 IF 和 WHILE）中使用这种表达式。例如：  
   
 ```syntaxsql  
 -- Uses AdventureWorks  

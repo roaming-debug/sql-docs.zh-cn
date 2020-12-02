@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 24ebd7d212b125d5cce1e39aab0427c35784eefc
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5329181957e09e169caae74f9611a2426f377f7b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809743"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125506"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>从 Microsoft Azure 中存储的备份还原
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

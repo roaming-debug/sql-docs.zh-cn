@@ -16,15 +16,15 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3ee012fe4bcd7fa1cd98c51f537035fc6148938
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461097"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125247"
 ---
 # <a name="create-a-database-mail-profile"></a>创建数据库邮件配置文件
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  使用“数据库邮件配置向导”或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可创建数据库邮件的公共和专用配置文件****。 有关邮件配置文件的详细信息，请参阅 [数据库邮件配置文件](database-mail-configuration-objects.md)。
+  使用“数据库邮件配置向导”或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可创建数据库邮件的公共和专用配置文件。 有关邮件配置文件的详细信息，请参阅 [数据库邮件配置文件](database-mail-configuration-objects.md)。
   
 -   **开始之前：** [先决条件](#Prerequisites)、[安全性](#Security)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "88461097"
   
 -   在 **“管理配置文件和帐户”** 页上，选择 **“创建新配置文件”** 选项，然后单击 **“下一步”**。  
   
--   在“新建配置文件”页上，指定配置文件的名称、说明并添加要包括在配置文件中的帐户，然后单击“下一步”********。  
+-   在“新建配置文件”页上，指定配置文件的名称、说明并添加要包括在配置文件中的帐户，然后单击“下一步”。  
   
 -   在 **“完成该向导”** 页上，检查要执行的操作，然后单击 **“完成”** 以完成创建新配置文件。  
   

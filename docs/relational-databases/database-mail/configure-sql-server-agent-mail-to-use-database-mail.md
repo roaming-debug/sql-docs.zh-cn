@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192574"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125260"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>配置 SQL Server 代理邮件以使用数据库邮件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "92192574"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
   > [!NOTE]
-  > 托管实例上的 SQL 代理始终配置为使用数据库邮件，因此在托管实例上此内容不适用。 在托管实例中，需要具有必须调用的配置文件 [AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)，才能将 SQL 代理与数据库邮件绑定****。 
+  > 托管实例上的 SQL 代理始终配置为使用数据库邮件，因此在托管实例上此内容不适用。 在托管实例中，需要具有必须调用的配置文件 [AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)，才能将 SQL 代理与数据库邮件绑定。 
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
@@ -45,7 +45,7 @@ ms.locfileid: "92192574"
   
 -    创建供[代理服务帐户使用的](../../relational-databases/database-mail/create-a-database-mail-account.md) 数据库邮件帐户 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
--   创建供[代理服务帐户使用的](../../relational-databases/database-mail/create-a-database-mail-profile.md) 数据库邮件配置文件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并将用户添加到 **DatabaseMailUserRole** 数据库的 **DatabaseMailUserRole** 中。
+-   创建供 [代理服务帐户使用的](../../relational-databases/database-mail/create-a-database-mail-profile.md) 数据库邮件配置文件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并将用户添加到 **DatabaseMailUserRole** 数据库的 **DatabaseMailUserRole** 中。
   
 -   将该配置文件设置为 **msdb** 数据库的默认配置文件。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "92192574"
   
 -   在对象资源管理器中，展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
--   右键单击“SQL Server 代理”****，然后单击“属性”****。  
+-   右键单击“SQL Server 代理”，然后单击“属性”。  
   
 -   单击 **“警报系统”**。  
   

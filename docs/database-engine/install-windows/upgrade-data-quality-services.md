@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ee0e76644b21493debd81c1b9b420e1a08a335c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 4a1a020d691b1908f45b4b683f41d9720999c4c6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670350"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125765"
 ---
 # <a name="upgrade-data-quality-services"></a>升级 Data Quality Services
 

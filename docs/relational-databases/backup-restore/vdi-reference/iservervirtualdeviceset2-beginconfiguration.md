@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: reference
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: d188c79a558fcfe03b713a973cf0681822e24ba5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d1a2bd52e923f64bac8b1865cee5e18aa2f6345e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887616"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125360"
 ---
 # <a name="iservervirtualdeviceset2beginconfiguration-vdi"></a>IServerVirtualDeviceSet2::BeginConfiguration (VDI)
 

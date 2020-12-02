@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a9e762c88291deb0643acef0db3bfc7c4e79e8a1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92191747"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124416"
 ---
 # <a name="expressions-transact-sql"></a>表达式（Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -87,16 +87,16 @@ ms.locfileid: "92191747"
 |术语|定义|  
 |----------|----------------|  
 |*constant*|表示单个特定数据值的符号。 有关详细信息，请参阅[常量 (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md)。|  
-|scalar_function**|一个提供特定服务并返回单个值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法单元。 scalar_function 可以是内置标量函数（如 SUM、GETDATE 或 CAST 函数），也可以是标量用户定义函数**。|  
+|scalar_function|一个提供特定服务并返回单个值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法单元。 scalar_function 可以是内置标量函数（如 SUM、GETDATE 或 CAST 函数），也可以是标量用户定义函数。|  
 |[ table_name. ]|表的名称或别名。|  
 |*column*|列的名称。 表达式中只允许列的名称。|  
 |variable|变量或参数的名称。 有关详细信息，请参阅 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
 | **(** _expression_  **)**|本主题中定义的任意一个有效表达式。 括号是分组运算符，用于确保先运算括号内表达式中的运算符，然后再将结果与别的表达式组合。|  
 |**(** _scalar_subquery_ **)**|返回一个值的子查询。 例如：<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
-|{ unary_operator }**|一元运算符只能用于计算结果数据类型属于数字数据类型类别的表达式。 只有一个数字操作数的运算符：<br /><br /> ＋ 指示正数。<br /><br /> - 指示负数。<br /><br /> ~ 指示一的补数运算符。|  
-|{ binary_operator }**|用于定义如何组合两个表达式以得到一个结果的运算符。 binary_operator 可以是算术运算符、赋值运算符 (=)、位运算符、比较运算符、逻辑运算符、字符串连接运算符 (+) 或一元运算符**。 有关运算符的详细信息，请参阅[运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)。|  
-|ranking_windowed_function**|任意 [!INCLUDE[tsql](../../includes/tsql-md.md)] 排名函数。 有关详细信息，请参阅[排名函数 (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md)。|  
-|aggregate_windowed_function**|任意包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] OVER 子句的聚合函数。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。|  
+|{ unary_operator }|一元运算符只能用于计算结果数据类型属于数字数据类型类别的表达式。 只有一个数字操作数的运算符：<br /><br /> ＋ 指示正数。<br /><br /> - 指示负数。<br /><br /> ~ 指示一的补数运算符。|  
+|{ binary_operator }|用于定义如何组合两个表达式以得到一个结果的运算符。 binary_operator 可以是算术运算符、赋值运算符 (=)、位运算符、比较运算符、逻辑运算符、字符串连接运算符 (+) 或一元运算符。 有关运算符的详细信息，请参阅[运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)。|  
+|ranking_windowed_function|任意 [!INCLUDE[tsql](../../includes/tsql-md.md)] 排名函数。 有关详细信息，请参阅[排名函数 (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md)。|  
+|aggregate_windowed_function|任意包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] OVER 子句的聚合函数。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。|  
   
 ## <a name="expression-results"></a>表达式结果  
  对于由单个常量、变量、标量函数或列名组成的简单表达式，其数据类型、排序规则、精度、小数位数和值就是它所引用的元素的数据类型、排序规则、精度、小数位数和值。  

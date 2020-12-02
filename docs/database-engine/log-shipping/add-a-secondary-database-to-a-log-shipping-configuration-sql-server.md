@@ -13,14 +13,14 @@ helpviewer_keywords:
 - secondary data files [SQL Server], adding
 - log shipping [SQL Server], secondary databases
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a140f44e848c7b8b00b8c8b7891467dde74822cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2d2560564703c87f5443f5366a7066d3e2a33758
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696731"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125677"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>向日志传送配置添加辅助数据库 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

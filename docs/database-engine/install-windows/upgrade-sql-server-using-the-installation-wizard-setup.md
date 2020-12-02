@@ -11,15 +11,15 @@ helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 27f8f9e04bc78fb382a2f40826bc67215839460d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 99e9c4af8006b621be0bc547f1c171019c6ec1c2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670232"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125698"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安装向导升级 SQL Server（安装程序）
 

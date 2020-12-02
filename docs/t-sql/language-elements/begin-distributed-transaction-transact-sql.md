@@ -28,11 +28,11 @@ ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 757e838efe95130f745cf8966789cab4432bc0d5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196845"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124528"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,8 +53,8 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- transaction_name**  
- 用户定义的事务名，用于跟踪 MS DTC 实用工具中的分布式事务。 transaction_name 必须符合标识符规则，字符数必须 \<= 32**。  
+ transaction_name  
+ 用户定义的事务名，用于跟踪 MS DTC 实用工具中的分布式事务。 transaction_name 必须符合标识符规则，字符数必须 \<= 32。  
   
  @*tran_name_variable*  
  用户定义的一个变量名，它含有一个事务名，该事务名用于跟踪 MS DTC 实用工具中的分布式事务。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量   。  
@@ -74,7 +74,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  已在分布式事务中登记的会话执行一个引用远程服务器的远程存储过程调用。  
   
- sp_configure remote proc trans 选项控制对本地事务中的远程存储过程调用是否自动使本地事务被提升为由 MS DTC 管理的分布式事务****。 连接级别 SET 选项 REMOTE_PROC_TRANSACTIONS 可用于覆盖由 sp_configure remote proc trans 建立的实例默认值。启用此选项后，远程存储过程调用会导致一个本地事务提升为分布式事务。 创建 MS DTC 事务的连接成为该事务的创建者。 COMMIT TRANSACTION 初始化一个 MS DTC 协调的提交。 如果启用了 sp_configure remote proc trans 选项，本地事务中的远程存储过程调用将被自动保护，成为分布式事务的一部分，而不需要重写应用程序以便专门发出 BEGIN DISTRIBUTED TRANSACTION 而不是 BEGIN TRANSACTION****。  
+ sp_configure remote proc trans 选项控制对本地事务中的远程存储过程调用是否自动使本地事务被提升为由 MS DTC 管理的分布式事务。 连接级别 SET 选项 REMOTE_PROC_TRANSACTIONS 可用于覆盖由 sp_configure remote proc trans 建立的实例默认值。启用此选项后，远程存储过程调用会导致一个本地事务提升为分布式事务。 创建 MS DTC 事务的连接成为该事务的创建者。 COMMIT TRANSACTION 初始化一个 MS DTC 协调的提交。 如果启用了 sp_configure remote proc trans 选项，本地事务中的远程存储过程调用将被自动保护，成为分布式事务的一部分，而不需要重写应用程序以便专门发出 BEGIN DISTRIBUTED TRANSACTION 而不是 BEGIN TRANSACTION。  
   
  有关分布式事务环境和处理的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器文档。  
   

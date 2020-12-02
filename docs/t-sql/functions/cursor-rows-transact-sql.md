@@ -22,11 +22,11 @@ ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: afc9e800545ffdc3002c0bfbddbb572432b10589
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114865"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124835"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "91114865"
   
 |返回值|描述|  
 |---|---|
-|-m|游标被异步填充。 返回的值 (-m) 是键集中当前的行数*m*。|  
+|-m|游标被异步填充。 返回的值 (-m) 是键集中当前的行数 *m*。|  
 |-1|游标为动态游标。 因为动态游标可反映所有更改，所以游标符合条件的行数不断变化。 游标不一定检索所有符合条件的行。|  
 |0|没有已打开的游标，对于上一个打开的游标没有符合条件的行，或上一个打开的游标已被关闭或被释放。|  
-|*n*|游标已完全填充。 返回值 (n) 是游标中的总行数**。|  
+|*n*|游标已完全填充。 返回值 (n) 是游标中的总行数。|  
   
 ## <a name="remarks"></a>备注  
 如果异步打开最后一个游标，`@@CURSOR_ROWS` 返回负数。 如果 sp_configure cursor threshold 的值超过 0，且游标结果集中的行数大于游标阈值，则异步打开键集驱动程序或静态游标。

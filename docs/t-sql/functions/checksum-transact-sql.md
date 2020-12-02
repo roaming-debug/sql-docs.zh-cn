@@ -22,11 +22,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f27205e76df6ba323ae586a84a19dcf05b654aa9
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067366"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124889"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

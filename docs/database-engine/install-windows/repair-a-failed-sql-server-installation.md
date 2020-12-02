@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91c7f3a0ef51b752b2c1460578319929f7ae4113
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 7524ea73ce04db70b75df3b8a4306c7304f475de
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670994"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125817"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>修复失败的 SQL Server 安装
 

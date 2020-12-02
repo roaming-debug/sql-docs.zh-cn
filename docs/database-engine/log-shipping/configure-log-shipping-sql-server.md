@@ -11,14 +11,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], enabling
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b9735e45e834f60cff3a9d7fa25360b8935ed9b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 711f16dc52a25f03fabcd59dd63e13e5d075ba05
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696268"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125719"
 ---
 # <a name="configure-log-shipping-sql-server"></a>配置日志传送 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

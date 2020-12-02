@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1eafd49be2b0617f1e3d6b6b3c9309103097c00b
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 645ed91d9300974d643961602c83bdafcf90e757
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671070"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125880"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>使用 SMB 文件共享存储安装 SQL Server
 

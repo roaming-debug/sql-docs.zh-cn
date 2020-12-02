@@ -20,16 +20,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 568c6334506b3b8cc2d186d9d6ad6ee48fa773ac
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116805"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124788"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-此函数对指定日期和时间参数返回 datetime2 值****。 返回值具有由 precision 参数指定的精度。
+此函数对指定日期和时间参数返回 datetime2 值。 返回值具有由 precision 参数指定的精度。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -60,19 +60,19 @@ minute
 *seconds*  
 指定秒数的整数表达式。
   
-fractions**  
+fractions  
 指定秒的小数形式值的整数表达式。
   
 *精度*  
-整数表达式，用于指定 `DATETIME2FROMPARTS` 将返回的 datetime2 值的精度****。
+整数表达式，用于指定 `DATETIME2FROMPARTS` 将返回的 datetime2 值的精度。
   
 ## <a name="return-types"></a>返回类型
-datetime2( precision )**** ** ****
+datetime2( precision )  
   
 ## <a name="remarks"></a>注解  
-`DATETIME2FROMPARTS` 返回完全初始化的 datetime2 值****。 如果至少有一个必需参数具有无效值，`DATETIME2FROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATETIME2FROMPARTS` 返回 NULL。 但是，如果 precision 参数具有 NULL 值，`DATETIME2FROMPARTS` 将引发错误**。
+`DATETIME2FROMPARTS` 返回完全初始化的 datetime2 值。 如果至少有一个必需参数具有无效值，`DATETIME2FROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATETIME2FROMPARTS` 返回 NULL。 但是，如果 precision 参数具有 NULL 值，`DATETIME2FROMPARTS` 将引发错误。
 
-fractions 参数取决于 precision 参数****。 例如，如果 precision 值为 7，则每个分数表示 100 纳秒；如果 precision 为 3，则每个分数表示 1 毫秒****。 如果 precision 的值为零，则 fractions 的值也必须为零；否则 `DATETIME2FROMPARTS` 将引发错误****。
+fractions 参数取决于 precision 参数。 例如，如果 precision 值为 7，则每个分数表示 100 纳秒；如果 precision 为 3，则每个分数表示 1 毫秒。 如果 precision 的值为零，则 fractions 的值也必须为零；否则 `DATETIME2FROMPARTS` 将引发错误。
   
 此函数支持在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及更高版本的服务器上远程执行。 但不支持在版本低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的服务器上远程执行。
   
@@ -95,13 +95,13 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. 包含秒的小数部分的示例  
-此示例介绍了 fractions 和 precision 参数的用法****：
+此示例介绍了 fractions 和 precision 参数的用法：
   
-1.  如果 fractions 的值为 5、precision 的值为 1，则 fractions 的值表示 5/10 秒******。  
+1.  如果 fractions 的值为 5、precision 的值为 1，则 fractions 的值表示 5/10 秒。  
   
-2.  如果 fractions 的值为 50、precision 的值为 2，则 fractions 的值表示 50/100 秒******。  
+2.  如果 fractions 的值为 50、precision 的值为 2，则 fractions 的值表示 50/100 秒。  
   
-3.  如果 fractions 的值为 500、precision 的值为 3，则 fractions 的值表示 500/1000 秒******。  
+3.  如果 fractions 的值为 500、precision 的值为 3，则 fractions 的值表示 500/1000 秒。  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  

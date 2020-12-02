@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ee3b0fc253f0b3ff365e8d228d117dc602ed0789
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 0bb5751c8e0bce55ecf83d8f1226a102b9fc691f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671040"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125885"
 ---
 # <a name="install-sql-server-servicing-updates"></a>安装 SQL Server 服务更新
 

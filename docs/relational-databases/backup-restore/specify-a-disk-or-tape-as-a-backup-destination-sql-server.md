@@ -19,14 +19,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - tape backup devices, backing up
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d1a1d1975b5e71c8ed18200d07069f673e981732
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e80b1913f6ff7c40ff0c3b715e98c9df6b3e20ca
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759063"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125484"
 ---
 # <a name="specify-a-disk-or-tape-backup-destination-sql-server"></a>指定磁盘或磁带备份目标 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
