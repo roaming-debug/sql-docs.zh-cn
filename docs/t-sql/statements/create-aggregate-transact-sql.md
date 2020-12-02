@@ -23,11 +23,11 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300235"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126214"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,17 +60,17 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *schema_name*  
  用户定义聚合函数所属的架构的名称。  
   
-  aggregate_name  
+ aggregate_name  
  要创建的聚合函数的名称。  
   
  **@** _param_name_  
  用户定义聚合函数中的一个或多个参数。 在执行聚合函数时，用户必须提供参数的值。 通过将 at 符号 (@) 用作第一个字符来指定参数名称。 参数名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 该函数的参数是局部参数。  
   
-  system_scalar_type  
- 要存放输入参数值或返回值的任一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统标量数据类型。 除 text、ntext 和 image 之外的所有标量数据类型都可用作用户定义聚合函数的参数  。 不能指定非标量类型（如 cursor 和 table）  。  
+ system_scalar_type  
+ 要存放输入参数值或返回值的任一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统标量数据类型。 除 text、ntext 和 image 之外的所有标量数据类型都可用作用户定义聚合函数的参数。 不能指定非标量类型（如 cursor 和 table）。  
   
- udt_schema_name   
- CLR 用户定义类型所属的架构的名称。 如果未指定，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将按以下顺序引用 udt_type_name  ：  
+ udt_schema_name  
+ CLR 用户定义类型所属的架构的名称。 如果未指定，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将按以下顺序引用 udt_type_name：  
   
 -   本机 SQL 类型命名空间。  
   
@@ -78,16 +78,16 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
 -   当前数据库中的 **dbo** 架构。  
   
-  udt_type_name  
- 当前数据库中已创建的 CLR 用户定义类型的名称。 如果未指定 udt_schema_name，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定该类型属于当前用户的架构  。  
+ udt_type_name  
+ 当前数据库中已创建的 CLR 用户定义类型的名称。 如果未指定 udt_schema_name，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定该类型属于当前用户的架构。  
   
  assembly_name [ .class_name ]  
- 指定与用户定义的聚合函数绑定在一起的程序集以及（可选）该程序集所属的架构名称和该程序集中实现该用户定义聚合函数的类名称。 必须先使用 CREATE ASSEMBLY 语句在数据库中创建了该程序集。  class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符并与该程序集中现有的类名称相匹配。 如果编写类所用的编程语言使用了命名空间（如 C#），则 class_name  可以是命名空间限定名称。 如果未指定 class_name  ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定该名称与 aggregate_name  相同。  
+ 指定与用户定义的聚合函数绑定在一起的程序集以及（可选）该程序集所属的架构名称和该程序集中实现该用户定义聚合函数的类名称。 必须先使用 CREATE ASSEMBLY 语句在数据库中创建了该程序集。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符并与该程序集中现有的类名称相匹配。 如果编写类所用的编程语言使用了命名空间（如 C#），则 class_name 可以是命名空间限定名称。 如果未指定 class_name，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定该名称与 aggregate_name 相同。  
   
 ## <a name="remarks"></a>注解  
  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法运行 CLR 代码。 您可以创建、修改和删除引用托管代码模块的数据库对象，但是，除非通过使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 启用了 [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)，否则这些模块中的代码将不在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中运行。  
   
- 在 assembly_name  及其方法中引用的程序集的类应满足在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中实现用户定义聚合函数的所有要求。 有关详细信息，请参阅 [CLR 用户定义聚合](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)。  
+ 在 assembly_name 及其方法中引用的程序集的类应满足在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中实现用户定义聚合函数的所有要求。 有关详细信息，请参阅 [CLR 用户定义聚合](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)。  
   
 ## <a name="permissions"></a>权限  
  需要 CREATE AGGREGATE 权限以及对 EXTERNAL NAME 子句中指定的程序集的 REFERENCES 权限。  

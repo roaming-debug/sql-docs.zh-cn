@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d54abb31cfe2f7541edb459f1d55356c7ae643db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456010"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126708"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件类
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在 Service Broker 收到损坏的消息时创建一个 Broker:Corrupted Message**** 事件。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在 Service Broker 收到损坏的消息时创建一个 Broker:Corrupted Message 事件。  
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Broker:Corrupted Message 事件类的数据列  
   

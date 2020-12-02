@@ -15,15 +15,15 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ddc0df0e6949ed429d415940fe9fda4263d3190a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006350"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127713"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>创建、构造和查询几何图形实例
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  平面空间数据类型 **geometry**表示欧几里得（平面）坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为公共语言运行时 (CLR) 数据类型实现。  
+  平面空间数据类型 **geometry** 表示欧几里得（平面）坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为公共语言运行时 (CLR) 数据类型实现。  
   
  **geometry** 类型已进行预定义，可在每个数据库中使用。 您可以创建 **geometry** 类型的表列并对 **geometry** 数据进行操作，就像使用其他 CLR 类型一样。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "92006350"
   
   
 ###  <a name="number-of-points"></a><a name="number"></a> 点数  
- 所有非空 **geometry** 实例都由“点” ** 组成。 这些点表示在其上绘制几何图形的面的 X 和 Y 坐标。 **geometry** 提供许多用于查询实例的点的内置方法。  
+ 所有非空 **geometry** 实例都由“点” 组成。 这些点表示在其上绘制几何图形的面的 X 和 Y 坐标。 **geometry** 提供许多用于查询实例的点的内置方法。  
   
  **返回构成实例的点数。**  
  [STNumPoints（geometry 数据类型）](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)  
@@ -206,7 +206,7 @@ ms.locfileid: "92006350"
   
   
 ###  <a name="dimension"></a><a name="dimension"></a> 维度  
- 非空 **geometry** 实例可以为零维、一维或二维。 零维 **geometry**（如 **Point** 和 **MultiPoint**）没有长度或面积。 一维对象（如 **LineString、CircularString、CompoundCurve**和 **MultiLineString**）有长度。 二维实例（如 **Polygon**、 **CurvePolygon**和 **MultiPolygon**）有面积和长度。 空实例将报告为 -1 维，并且 **GeometryCollection** 将根据其内容类型报告一个面积。  
+ 非空 **geometry** 实例可以为零维、一维或二维。 零维 **geometry**（如 **Point** 和 **MultiPoint**）没有长度或面积。 一维对象（如 **LineString、CircularString、CompoundCurve** 和 **MultiLineString**）有长度。 二维实例（如 **Polygon**、 **CurvePolygon** 和 **MultiPolygon**）有面积和长度。 空实例将报告为 -1 维，并且 **GeometryCollection** 将根据其内容类型报告一个面积。  
   
  **返回实例的维度**  
  [STDimension](../../t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
@@ -219,14 +219,14 @@ ms.locfileid: "92006350"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- 空 __**geometry** 实例不包含任何点。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 实例的长度为零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 实例的面积为 0。  
+ 空 **geometry** 实例不包含任何点。 空的 **LineString, CircularString**、 **CompoundCurve** 和 **MultiLineString** 实例的长度为零。 空的 **Polygon**、 **CurvePolygon** 和 **MultiPolygon** 实例的面积为 0。  
   
  **确定实例是否为空**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md)。  
   
   
 ###  <a name="simple"></a><a name="simple"></a> Simple  
- 为了使实例的 **geometry** 变得“简单” **，必须符合以下全部两个要求：  
+ 为了使实例的 **geometry** 变得“简单” ，必须符合以下全部两个要求：  
   
 -   实例的每个图形不能与自身相交，但其终点除外。  
   
@@ -240,9 +240,9 @@ ms.locfileid: "92006350"
   
   
 ###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> 边界、内部和外部  
- **geometry** 实例的“内部”** 是指由实例占用的空间，而“外部”** 是指未占用的空间。  
+ **geometry** 实例的“内部”是指由实例占用的空间，而“外部”是指未占用的空间。  
   
- “边界”** 由 OGC 定义，如下所示：  
+ “边界” 由 OGC 定义，如下所示：  
   
 -   **Point** 和 **MultiPoint** 实例没有边界。  
   
@@ -266,13 +266,13 @@ SELECT @g.STBoundary().ToString();
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
 ###  <a name="envelope"></a><a name="envelope"></a> 包络线  
- **geometry**实例的“包络线”** 又称为“边界框”**，它是一个由实例的最小和最大坐标 (X,Y) 形成的轴对齐矩形。  
+ **geometry** 实例的“包络线”又称为“边界框”，它是一个由实例的最小和最大坐标 (X,Y) 形成的轴对齐矩形。  
   
  **返回实例的包络线**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> 闭合  
- 闭合的 __**geometry** 实例是指起始点和终点相同的图形。 **Polygon** 实例被视为闭合的。 **Point** 实例不是闭合的。  
+ 闭合的 **geometry** 实例是指起始点和终点相同的图形。 **Polygon** 实例被视为闭合的。 **Point** 实例不是闭合的。  
   
  环是一个简单、闭合的 **LineString** 实例。  
   

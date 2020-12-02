@@ -21,11 +21,11 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b70fe92da0c7efb0e59dbc89505ad623cad64432
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196448"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127238"
 ---
 # <a name="data-mining-model-training-destination"></a>数据挖掘模型定型目标
 
@@ -59,16 +59,16 @@ ms.locfileid: "92196448"
   
 ### <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”**** 按钮创建新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接。  
+ 从现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”按钮创建新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”**** 对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”对话框创建一个新连接。  
   
  **挖掘结构**  
- 从可用挖掘结构的列表中进行选择，或者通过单击“新建”**** 创建新的挖掘结构。  
+ 从可用挖掘结构的列表中进行选择，或者通过单击“新建”创建新的挖掘结构。  
   
  **新建**  
- 通过使用 **数据挖掘向导**创建新的挖掘结构和挖掘模型。  
+ 通过使用 **数据挖掘向导** 创建新的挖掘结构和挖掘模型。  
   
  **挖掘模型**  
  查看与所选挖掘结构相关联的挖掘模型的列表。  

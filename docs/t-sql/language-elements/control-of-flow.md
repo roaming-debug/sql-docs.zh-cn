@@ -17,11 +17,11 @@ ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0229be825cfb465c12fd5e19f18d83517554c57b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445482"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128279"
 ---
 # <a name="control-of-flow"></a>控制流
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

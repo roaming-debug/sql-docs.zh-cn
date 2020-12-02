@@ -32,11 +32,11 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 60eca69999f7e21164eac2ce35add549d767dc26
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688530"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126187"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,13 +65,13 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 
 ## <a name="arguments"></a>参数
  **@** _dialog_handle_  
- 一个变量，用于为 BEGIN DIALOG CONVERSATION 语句返回的新对话存储系统生成的对话句柄。 该变量的类型必须为 uniqueidentifier****。  
+ 一个变量，用于为 BEGIN DIALOG CONVERSATION 语句返回的新对话存储系统生成的对话句柄。 该变量的类型必须为 uniqueidentifier。  
   
  FROM SERVICE *initiator_service_name*  
  指定启动对话的服务。 指定的名称必须是当前数据库中的服务的名称。 为发起方服务指定的队列将接收由目标服务返回的消息，以及 Service Broker 为此会话创建的消息。  
   
  TO SERVICE 'target_service_name'  
- 指定启动对话时的目标服务。 *target_service_name* 的类型为 **nvarchar(256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 target_service_name 字符串匹配**。 换言之，比较时将区分大小写，且不考虑当前的排序规则。  
+ 指定启动对话时的目标服务。 *target_service_name* 的类型为 **nvarchar(256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 target_service_name 字符串匹配。 换言之，比较时将区分大小写，且不考虑当前的排序规则。  
   
  *service_broker_guid*  
  指定承载目标服务的数据库。 如果有多个数据库承载目标服务实例，则可通过提供 *service_broker_guid* 与特定数据库通信。  
@@ -103,7 +103,7 @@ WHERE database_id = DB_ID() ;
  指定对话将保持打开状态的最长时间。 为使对话成功完成，两个端点都必须在生存期内显式结束对话。 *dialog_lifetime* 的值必须以秒表示。 生存期的类型为 **int**。如果未指定 LIFETIME 子句，则对话的生存期为 **int** 数据类型的最大值。  
   
  ENCRYPTION  
- 指定在将此对话发送和接收的消息发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例外部时是否必须进行加密。 必须加密的对话是*安全对话*。 如果 ENCRYPTION = ON，但未配置支持加密所需的证书，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将返回针对该会话的错误消息。 ENCRYPTION = OFF 时，如果为 *target_service_name* 配置了远程服务绑定，则使用加密；否则，发送消息时不加密。 如果未使用此子句，则默认值为 ON。  
+ 指定在将此对话发送和接收的消息发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例外部时是否必须进行加密。 必须加密的对话是 *安全对话*。 如果 ENCRYPTION = ON，但未配置支持加密所需的证书，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将返回针对该会话的错误消息。 ENCRYPTION = OFF 时，如果为 *target_service_name* 配置了远程服务绑定，则使用加密；否则，发送消息时不加密。 如果未使用此子句，则默认值为 ON。  
   
 > [!NOTE]  
 >  在任何情况下，都不对同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务间交换的消息加密。 但是，如果用于会话的服务位于不同的数据库，则使用加密的会话仍然需要数据库主密钥和加密证书。 这样，在会话进行的过程中，如果将一个数据库移到其他实例，会话仍可继续进行。  

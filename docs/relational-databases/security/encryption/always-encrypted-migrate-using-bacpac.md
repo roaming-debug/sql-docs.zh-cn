@@ -14,11 +14,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3fc54fedce772b267cf19a9396672b61cf6e6254
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867775"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127728"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>导出和导入使用 Always Encrypted 的数据库 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91867775"
 
 ## <a name="permissions-for-migrating-databases-with-encrypted-columns"></a>迁移包含加密列的数据库所需的权限
 
-你需要源数据库上的 *更改任意列主密钥* 和 *更改任意列加密密钥* 。 你需要目标数据库上的“更改任意列主密钥”**、“更改任意列加密密钥”**、“查看任意列主密钥定义”** 和“查看任意列加密定义”**。
+你需要源数据库上的 *更改任意列主密钥* 和 *更改任意列加密密钥* 。 你需要目标数据库上的“更改任意列主密钥”、“更改任意列加密密钥”、“查看任意列主密钥定义”和“查看任意列加密定义”。
 
 不需要可以访问为加密列配置的列主密钥，因为在导出和导入操作期间数据会保持加密。
 

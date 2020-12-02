@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a97a4b529921ab61f0f5dce83a059f5e9129b9a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 31376d9ff735c30a0374acade23e3a8a89804baa
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748486"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127027"
 ---
 # <a name="configure-backup-compression-sql-server"></a>配置备份压缩 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

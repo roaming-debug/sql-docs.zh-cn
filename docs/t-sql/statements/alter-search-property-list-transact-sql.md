@@ -25,11 +25,11 @@ ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 5cf5d6bcda6670c6cfc9a142be0569bc4bfeaf8e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688201"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128050"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ ALTER SEARCH PROPERTY LIST list_name
 
 ## <a name="arguments"></a>参数
  *list_name*  
- 是正在更改的属性列表的名称。 list_name 是一个标识符**。  
+ 是正在更改的属性列表的名称。 list_name 是一个标识符。  
   
  若要查看现有属性列表的名称，请使用 [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) 目录视图，如下所示：  
   
@@ -67,15 +67,15 @@ SELECT name FROM sys.registered_search_property_lists;
 ```  
   
  ADD  
- 将指定的搜索属性添加到 list_name 指定的属性列表中**。 已为搜索属性列表注册该属性。 在新添加的属性可用于属性搜索之前，必须重新填充关联的全文检索。 有关详细信息，请参阅 [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)。  
+ 将指定的搜索属性添加到 list_name 指定的属性列表中。 已为搜索属性列表注册该属性。 在新添加的属性可用于属性搜索之前，必须重新填充关联的全文检索。 有关详细信息，请参阅 [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)。  
   
 > [!NOTE]  
->  若要将给定搜索属性添加到搜索属性列表中，必须提供其属性集 GUID (property_set_guid) 和属性整数 ID (property_int_id)****。 有关详细信息，请参阅本主题后面的“获取属性集 GUIDS 和标识符”。  
+>  若要将给定搜索属性添加到搜索属性列表中，必须提供其属性集 GUID (property_set_guid) 和属性整数 ID (property_int_id)。 有关详细信息，请参阅本主题后面的“获取属性集 GUIDS 和标识符”。  
   
  property_name  
- 指定要用来标识全文查询中的属性的名称。 property_name 必须唯一标识属性集中的属性**。 属性名称可以包含内部空格。 property_name 的最大长度为 256 个字符**。 此名称可以是“作者”或“家庭地址”等此类用户友好名称，也可以是 Windows 的属性规范名称，如 System.Author 或 System.Contact.HomeAddress********。  
+ 指定要用来标识全文查询中的属性的名称。 property_name 必须唯一标识属性集中的属性。 属性名称可以包含内部空格。 property_name 的最大长度为 256 个字符。 此名称可以是“作者”或“家庭地址”等此类用户友好名称，也可以是 Windows 的属性规范名称，如 System.Author 或 System.Contact.HomeAddress。  
   
- 开发人员将需要使用你为 property_name 指定的值在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词中标识该属性**。 因此，在添加属性时，务必指定一个在含义上可表示由指定的属性集 GUID (property_set_guid) 和属性标识符 (property_int_id) 定义属性的值****。 有关属性名称的详细信息，请参阅本主题后面的“备注”。  
+ 开发人员将需要使用你为 property_name 指定的值在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词中标识该属性。 因此，在添加属性时，务必指定一个在含义上可表示由指定的属性集 GUID (property_set_guid) 和属性标识符 (property_int_id) 定义属性的值。 有关属性名称的详细信息，请参阅本主题后面的“备注”。  
   
  若要查看当前数据库的搜索属性列表中当前存在的属性的名称，请使用 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 目录视图，如下所示：  
   
@@ -83,7 +83,7 @@ SELECT name FROM sys.registered_search_property_lists;
 SELECT property_name FROM sys.registered_search_properties;  
 ```  
   
- PROPERTY_SET_GUID ='property_set_guid**'  
+ PROPERTY_SET_GUID ='property_set_guid'  
  指定属性所属的属性集的标识符。 这是全局唯一标识符 (GUID)。 有关获取此值的信息，请参阅本主题后面的“备注”。  
   
  若要查看当前数据库的搜索属性列表中存在的任何属性的属性集 GUID，请使用 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 目录视图，如下所示：  
@@ -92,7 +92,7 @@ SELECT property_name FROM sys.registered_search_properties;
 SELECT property_set_guid FROM sys.registered_search_properties;  
 ```  
   
- PROPERTY_INT_ID =property_int_id**  
+ PROPERTY_INT_ID =property_int_id  
  指定用于在属性集内标识属性的整数。 有关获取此值的信息，请参阅“备注”。  
   
  若要查看当前数据库的搜索属性列表中存在的任何属性的整数标识符，请使用 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 目录视图，如下所示：  
@@ -102,13 +102,13 @@ SELECT property_int_id FROM sys.registered_search_properties;
 ```  
   
 > [!NOTE]  
->  property_set_guid 和 property_int_id 的给定组合在搜索属性列表内必须唯一****。 如果试图添加一个现有组合，则 ALTER SEARCH PROPERTY LIST 操作将失败并且会发出错误。 这意味着，您只能为给定属性定义一个名称。  
+>  property_set_guid 和 property_int_id 的给定组合在搜索属性列表内必须唯一。 如果试图添加一个现有组合，则 ALTER SEARCH PROPERTY LIST 操作将失败并且会发出错误。 这意味着，您只能为给定属性定义一个名称。  
   
- PROPERTY_DESCRIPTION ='property_description**'  
- 指定用户定义的属性说明。 property_description 是一个最多 512 个字符的字符串**。 此选项是可选的。  
+ PROPERTY_DESCRIPTION ='property_description'  
+ 指定用户定义的属性说明。 property_description 是一个最多 512 个字符的字符串。 此选项是可选的。  
   
  DROP  
- 从 list_name 指定的属性列表中删除指定属性**。 删除属性会撤消注册该属性，因此它不再可搜索。  
+ 从 list_name 指定的属性列表中删除指定属性。 删除属性会撤消注册该属性，因此它不再可搜索。  
   
 ## <a name="remarks"></a>备注  
  每个全文检索只能有一个搜索属性列表。  
@@ -134,7 +134,7 @@ WITH (
  全文搜索使用搜索属性的属性集 GUID 和属性整数 ID 将其映射为全文检索。 有关如何获取已由 Microsoft 定义的属性的这些值的信息，请参阅 [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 有关由独立软件供应商 (ISV) 定义的属性的信息，请参阅该供应商提供的文档。  
   
 ## <a name="making-added-properties-searchable"></a>使已添加的属性可搜索  
- 将搜索属性添加到搜索属性列表中会注册该属性。 可在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 查询中立即指定新添加的属性。 但是，对新添加的属性进行的属性范围的全文查询将不返回文档，直到重新填充关联的全文检索为止。 例如，对新添加的属性 new_search_property 执行的属性范围的查询将不返回任何文档，直到重新填充与目标表 (table_name) 关联的全文索引为止****：  
+ 将搜索属性添加到搜索属性列表中会注册该属性。 可在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 查询中立即指定新添加的属性。 但是，对新添加的属性进行的属性范围的全文查询将不返回文档，直到重新填充关联的全文检索为止。 例如，对新添加的属性 new_search_property 执行的属性范围的查询将不返回任何文档，直到重新填充与目标表 (table_name) 关联的全文索引为止：  
   
 ```sql  
 SELECT column_name  

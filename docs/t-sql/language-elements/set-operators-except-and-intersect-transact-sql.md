@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06029c531fbdebfd74d3a2314221725a41647853
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459289"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128208"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>SET 运算符 - EXCEPT 和 INTERSECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ INTERSECT 返回由左右双侧输入查询运算符输出的非重复行。
   
 如果类型相同，但精度、确定位数或长度不同，那么结果以相同的表达式合并规则为依据。 有关详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
-查询规范或表达式无法返回 xml****、text****、ntext****、image**** 或非二进制 CLR 用户定义类型列，因为这些数据类型不可比较。  
+查询规范或表达式无法返回 xml、text、ntext、image 或非二进制 CLR 用户定义类型列，因为这些数据类型不可比较。  
   
 EXCEPT  
 返回由 EXCEPT 运算符左侧的查询返回的所有非重复值。 返回这些值的前提是，右侧查询不返回这些值。  

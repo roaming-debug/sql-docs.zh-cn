@@ -12,14 +12,14 @@ helpviewer_keywords:
 - differential backups
 - differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9452fc4f3ca4a0ccfa4983b8e47f97f47108eb75
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 06ef5f2972792c71513b5f22340cfbce2d17b87b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737804"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126982"
 ---
 # <a name="differential-backups-sql-server"></a>差异备份 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

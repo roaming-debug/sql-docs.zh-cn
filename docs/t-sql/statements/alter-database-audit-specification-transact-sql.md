@@ -21,11 +21,11 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 98ac18629fc8765c314abd799364fd542e25c5da
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688753"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128127"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,16 +58,16 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- audit_specification_name**  
+ audit_specification_name  
  审核规范的名称。  
   
- audit_name**  
+ audit_name  
  应用此规范的审核的名称。  
   
- audit_action_specification**  
+ audit_action_specification  
  一个或多个数据库级别可审核操作的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- audit_action_group_name**  
+ audit_action_group_name  
  一个或多个数据库级别可审核操作组的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
  *class*  
@@ -82,7 +82,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  principal  
  应用审核操作或审核操作组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主体的名称。 有关详细信息，请参阅[主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
   
- WITH ( STATE = { ON | OFF } )************  
+ WITH ( STATE = { ON | OFF } )  
  允许或禁止审核收集此审核规范的记录。 审核规范状态更改必须在用户事务之外进行，并且从 ON 转换到 OFF 时，审核规范的同一语句中不能有其他更改。  
   
 ## <a name="remarks"></a>注解  

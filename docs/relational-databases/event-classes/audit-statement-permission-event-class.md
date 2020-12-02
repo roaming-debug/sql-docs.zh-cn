@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f89ac7c706bf27b140af76718a0cb82e152800bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456022"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126726"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  只要使用语句权限（如 CREATE TABLE），就会发生 Audit Statement Permission 事件类****。  
+  只要使用语句权限（如 CREATE TABLE），就会发生 Audit Statement Permission 事件类。  
   
  未来版本的 **可能会删除** Audit Statement Permission [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件类。 建议您改用 **Audit Schema Object Management** 事件类。  
   

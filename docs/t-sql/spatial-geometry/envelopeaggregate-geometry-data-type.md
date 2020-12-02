@@ -16,11 +16,11 @@ ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 240df782e2175d22d9f00e38427c39a2b7115213
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459037"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128162"
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate（geometry 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,18 +41,18 @@ EnvelopeAggregate ( geometry_operand )
  一个 **geometry** 类型的表列，表示一组 **geometry** 对象。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
 ## <a name="exceptions"></a>异常  
  在输入值无效时引发 `FormatException`。 请参阅 [STIsValid（geometry 数据类型）](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
 ## <a name="remarks"></a>注解  
- 在输入为空或具有不同的 SRID 时，方法返回 null****。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ 在输入为空或具有不同的 SRID 时，方法返回 null。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- 方法忽略 null 输入****。  
+ 方法忽略 null 输入。  
   
 > [!NOTE]  
->  如果所有输入值均为 null，则方法返回 null********。  
+>  如果所有输入值均为 null，则方法返回 null。  
   
 ## <a name="examples"></a>示例  
  以下示例为表变量列中的一组对象返回边界框。  

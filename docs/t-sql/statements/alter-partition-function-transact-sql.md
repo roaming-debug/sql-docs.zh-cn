@@ -27,11 +27,11 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: d405c656af3265d09340ceeef42ac0423efd6a85
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734620"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128102"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ ALTER PARTITION SCHEME 语句可以添加文件组，也可以选择现有文件
 >  列存储索引限制：当表上存在列存储索引时，仅可拆分空分区。 需要先删除或禁用此列存储索引才能执行此操作。  
   
 MERGE [ RANGE ( boundary_value) ]  
-删除一个分区并将该分区中存在的所有值都合并到某个剩余分区中。 RANGE ( *boundary_value* ) 必须是要删除的分区的现有边界值。 如果最初保存 boundary_value 的文件组没有被剩余分区使用，也没有使用 NEXT USED 属性进行标记，此参数将从分区方案中删除该文件组。 合并的分区位于最初不保存 boundary_value 的文件组中。 boundary_value 是一个可以引用变量（包括用户定义类型变量）或函数（包括用户定义函数）的常量表达式。 它无法引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 boundary_value 必须匹配或可隐式转换为其对应分区列的数据类型。 另外，在隐式转换期间，如果 boundary_value 值的大小和比例与其对应的 input_parameter_type 不匹配，也不能截断它。  
+删除一个分区并将该分区中存在的所有值都合并到某个剩余分区中。 RANGE (*boundary_value*) 必须是要删除的分区的现有边界值。 如果最初保存 boundary_value 的文件组没有被剩余分区使用，也没有使用 NEXT USED 属性进行标记，此参数将从分区方案中删除该文件组。 合并的分区位于最初不保存 boundary_value 的文件组中。 boundary_value 是一个可以引用变量（包括用户定义类型变量）或函数（包括用户定义函数）的常量表达式。 它无法引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 boundary_value 必须匹配或可隐式转换为其对应分区列的数据类型。 另外，在隐式转换期间，如果 boundary_value 值的大小和比例与其对应的 input_parameter_type 不匹配，也不能截断它。  
   
 > [!NOTE]  
 >  列存储索引限制：不能合并包含列存储索引的两个非空分区。 需要先删除或禁用此列存储索引才能执行此操作  

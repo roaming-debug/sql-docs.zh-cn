@@ -20,11 +20,11 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e00a786dfb9d9ffe55274822b276a2d2497efd82
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192743"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127184"
 ---
 # <a name="excel-source"></a>Excel 源
 
@@ -70,10 +70,10 @@ ms.locfileid: "92192743"
   
 ### <a name="static-options"></a>静态选项  
  **“无缓存”**  
- 从列表中选择现有的 Excel 连接管理器，或单击“新建”**** 创建新连接。  
+ 从列表中选择现有的 Excel 连接管理器，或单击“新建”创建新连接。  
   
  **新建**  
- 使用“Excel 连接管理器”**** 对话框创建一个新连接管理器。  
+ 使用“Excel 连接管理器”对话框创建一个新连接管理器。  
   
  **数据访问模式**  
  指定从源选择数据的方法。  
@@ -100,7 +100,7 @@ ms.locfileid: "92192743"
   
 #### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
  **SQL 命令文本**  
- 输入 SQL 查询的文本，通过单击“生成查询”**** 来生成查询，或通过单击“浏览”**** 浏览至包含查询文本的文件。  
+ 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”浏览至包含查询文本的文件。  
   
  **参数**  
  如果已经在参数化查询文本中使用 ? 作为参数占位符输入了参数化查询，请使用 **“设置查询参数”** 对话框将查询输入参数映射到包变量。  
@@ -119,7 +119,7 @@ ms.locfileid: "92192743"
  选择包含 SQL 查询文本的变量。  
   
 ## <a name="excel-source-editor-columns-page"></a>Excel 源编辑器（“列”页）
-  可以使用“Excel 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列********。  
+  可以使用“Excel 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
   
 ### <a name="options"></a>选项  
  **可用外部列**  
@@ -139,7 +139,7 @@ ms.locfileid: "92192743"
  查看数据源的名称。  
   
  **列**  
- 查看在“Excel 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。********  
+ 查看在“Excel 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  

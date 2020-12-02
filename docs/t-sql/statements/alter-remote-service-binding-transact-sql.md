@@ -21,11 +21,11 @@ ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 47c4e18c28a5377fa487e0d4d4e8b9be4cf58acc
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688250"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128061"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

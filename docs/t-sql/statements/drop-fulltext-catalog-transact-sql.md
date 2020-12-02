@@ -23,11 +23,11 @@ ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 71061c8265ccd7ca2b1d8ed060843b06db621b0e
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380438"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127436"
 ---
 # <a name="drop-fulltext-catalog-transact-sql"></a>DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,10 +46,10 @@ DROP FULLTEXT CATALOG catalog_name
 
 ## <a name="arguments"></a>参数
  catalog_name  
- 要删除的目录名。 如果 catalog_name 不存在，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误，并且不执行 DROP 操作**。 要使该命令成功执行，不能将全文目录的文件组标记为 OFFLINE 或 READONLY。  
+ 要删除的目录名。 如果 catalog_name 不存在，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误，并且不执行 DROP 操作。 要使该命令成功执行，不能将全文目录的文件组标记为 OFFLINE 或 READONLY。  
   
 ## <a name="permissions"></a>权限  
- 用户必须对全文目录有 DROP 权限，或者是 db_owner 或 db_ddladmin 固定数据库角色的成员********。  
+ 用户必须对全文目录有 DROP 权限，或者是 db_owner 或 db_ddladmin 固定数据库角色的成员。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys.fulltext_catalogs (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   

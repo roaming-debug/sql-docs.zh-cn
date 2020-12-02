@@ -41,11 +41,11 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192587"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126919"
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "92192587"
  使用 **DatabaseMail XPs** 选项可以在此服务器上启用数据库邮件。 有关详细信息，请参阅主题 [Database Mail XPs Server 配置选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 。  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
- 在任何数据库中启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 都需要数据库锁。 如果在 **msdb**中停用了 Service Broker，则若要启用数据库邮件，应首先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，以使 Service Broker 可以获取所需的锁。  
+ 在任何数据库中启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 都需要数据库锁。 如果在 **msdb** 中停用了 Service Broker，则若要启用数据库邮件，应首先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，以使 Service Broker 可以获取所需的锁。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
  要配置数据库邮件，您必须是 **sysadmin** 固定服务器角色的成员。 若要发送数据库邮件，您必须是 **msdb** 数据库中的 **DatabaseMailUserRole** 数据库角色的成员。  
@@ -71,7 +71,7 @@ ms.locfileid: "92192587"
   
 2.  展开 **“管理”** 节点。  
   
-3.  右键单击“数据库邮件”**** 然后单击“配置数据库邮件”****。  
+3.  右键单击“数据库邮件”然后单击“配置数据库邮件”。  
   
 4.  完成向导对话框  
 
@@ -106,7 +106,7 @@ ms.locfileid: "92192587"
   
  **不再显示此页** - 选中它，可在以后的显示中跳过此“欢迎”页。  
   
- **下一步** - 继续到“选择配置任务”**** 页。  
+ **下一步** - 继续到“选择配置任务”页。  
   
  **取消** - 终止向导而无需配置数据库邮件  
   
@@ -116,7 +116,7 @@ ms.locfileid: "92192587"
  使用 **“选择配置任务”** 页可以指示每次使用此向导时要完成的任务。 如果您在完成向导前改变了主意，请使用 **“上一步”** 按钮返回此页并选择其他任务。  
   
 > [!NOTE]  
->  如果数据库邮件尚未启用，您将收到以下消息： **“数据库邮件功能不可用。是否要启用此功能？** 回答“是”**** 相当于使用 **sp_configure** 系统存储过程的 [Mail XPs 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)启用数据库邮件。  
+>  如果数据库邮件尚未启用，您将收到以下消息： **“数据库邮件功能不可用。是否要启用此功能？** 回答“是”相当于使用 **sp_configure** 系统存储过程的 [Mail XPs 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)启用数据库邮件。  
   
  **通过执行以下任务来设置数据库邮件**  
  执行第一次设置数据库邮件所需的所有任务。 此选项包含所有其他三个选项。  
@@ -196,7 +196,7 @@ ms.locfileid: "92192587"
  查看或更新帐户的说明。 说明是可选的。  
   
  **电子邮件地址**  
- 查看或更新帐户电子邮件地址的名称。 这是发送电子邮件的电子邮件地址。 例如，Microsoft SQL Server 代理的帐户可能会通过地址“SqlAgent\@Adventure-Works.com”发送电子邮件****。  
+ 查看或更新帐户电子邮件地址的名称。 这是发送电子邮件的电子邮件地址。 例如，Microsoft SQL Server 代理的帐户可能会通过地址“SqlAgent\@Adventure-Works.com”发送电子邮件。  
   
  **显示名称**  
  查看或更新由此帐户发送的电子邮件上显示的名称。 显示名称为可选项。 这是由此帐户发送的邮件上显示的名称。 例如，SQL Server 代理的帐户可能会在电子邮件上显示名称 **SQL Server Agent Automated Mailer** 。  
@@ -308,7 +308,7 @@ ms.locfileid: "92192587"
  选择要添加到配置文件的帐户的名称。  
   
  **电子邮件地址**  
- 查看所选帐户的电子邮件地址。 您不能在此页中更改电子邮件地址。 若要更改该帐户的电子邮件地址，请返回到该向导的主页，再选择“管理数据库邮件帐户和配置文件”**** 选项。  
+ 查看所选帐户的电子邮件地址。 您不能在此页中更改电子邮件地址。 若要更改该帐户的电子邮件地址，请返回到该向导的主页，再选择“管理数据库邮件帐户和配置文件”选项。  
   
  服务器名称  
  查看所选帐户的邮件服务器名称。 您不能在此页中更改服务器名称。 若要更改该帐户的服务器名称，请返回到该向导的主页，再选择 **“管理数据库邮件帐户和配置文件”** 选项。  
@@ -420,7 +420,7 @@ ms.locfileid: "92192587"
  [数据库邮件配置向导](#DBWizard)  
   
 ###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a> Send Test E-Mail Page  
- 使用**从 _<instance_name>_ 发送测试电子邮件**页，可以使用指定的数据库邮件配置文件发送电子邮件。 只有 **sysadmin** 固定服务器角色的成员才可以使用此页发送测试电子邮件。  
+ 使用 **从 _<instance_name>_ 发送测试电子邮件** 页，可以使用指定的数据库邮件配置文件发送电子邮件。 只有 **sysadmin** 固定服务器角色的成员才可以使用此页发送测试电子邮件。  
   
  **数据库邮件配置文件**  
  从列表中选择数据库邮件配置文件。 这是必填字段。 如果没有显示配置文件，则没有配置文件或您不具有选择配置文件的权限。 使用 **数据库邮件配置向导** 可以创建和配置配置文件。 如果没有列出配置文件，请使用数据库邮件配置向导来创建要使用的配置文件。  
@@ -434,7 +434,7 @@ ms.locfileid: "92192587"
  **正文**  
  测试电子邮件的正文。 更改默认主题，以更好地标识电子邮件以进行故障排除。  
   
- “数据库邮件测试电子邮件”**** 对话框确认数据库邮件尝试发送的测试消息，并为测试电子邮件提供 **mailitem_id**。 请与收件人核实以确定该电子邮件是否已到达。 通常几分钟后即可接收到电子邮件，但是由于网络速度较慢、邮件服务器上的邮件积压或服务器暂时不可用，该电子邮件可能会延迟。 使用 **mailitem_id** 以进行故障排除。  
+ “数据库邮件测试电子邮件”对话框确认数据库邮件尝试发送的测试消息，并为测试电子邮件提供 **mailitem_id**。 请与收件人核实以确定该电子邮件是否已到达。 通常几分钟后即可接收到电子邮件，但是由于网络速度较慢、邮件服务器上的邮件积压或服务器暂时不可用，该电子邮件可能会延迟。 使用 **mailitem_id** 以进行故障排除。  
   
  **发送电子邮件**  
  测试电子邮件的 **mailitem_id** 。  
@@ -451,11 +451,11 @@ ms.locfileid: "92192587"
   
 2.  在 **“模板资源管理器”** 窗口中，展开 **“数据库邮件”** 文件夹。  
   
-3.  双击“简单数据库邮件配置”****。 模板将在新的查询窗口中打开。  
+3.  双击“简单数据库邮件配置”。 模板将在新的查询窗口中打开。  
   
 4.  在 **“查询”** 菜单上，选择 **“指定模板参数的值”**。 将打开 **“替换模板参数”** 窗口。  
   
-5.  为 **profile_name**、 **account_name**、 **SMTP_servername**、 **email_address**和 **display_name**键入值。 SQL Server Management Studio 将使用您提供的值填充模板。  
+5.  为 **profile_name**、 **account_name**、 **SMTP_servername**、 **email_address** 和 **display_name** 键入值。 SQL Server Management Studio 将使用您提供的值填充模板。  
   
 6.  执行脚本来创建配置。  
   

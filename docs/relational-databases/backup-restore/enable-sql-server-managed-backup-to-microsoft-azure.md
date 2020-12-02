@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 30c53bedf4f5946088e35c94e8902554c6da0049
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 554bb3164902afa909556ea6836335fdd76dd79a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439470"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126976"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>启用目标为 Azure 的 SQL Server 托管备份
 

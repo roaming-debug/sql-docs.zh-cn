@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1836698d7ecf718a3866175f21309daf3dcc8153
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385403"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126895"
 ---
 # <a name="attention-event-class"></a>Attention 事件类
 
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
 
-  Attention**** 事件类指示发生了需要注意的事件（例如取消、客户端中断请求或客户端连接中断）。 取消操作可视为实现数据访问驱动程序超时的一部分。  
+  Attention 事件类指示发生了需要注意的事件（例如取消、客户端中断请求或客户端连接中断）。 取消操作可视为实现数据访问驱动程序超时的一部分。  
   
 ## <a name="attention-event-class-data-columns"></a>Attention 事件类的数据列  
   

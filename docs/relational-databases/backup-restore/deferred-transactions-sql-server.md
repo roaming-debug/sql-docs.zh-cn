@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deferred transactions
 - modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 91d8cdd0c776a7cc8f3e0fcb9ef73da83bf37e6c
-ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8d748a5997df33ab9448fc9ba604ae700b87c0ee
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88618126"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127030"
 ---
 # <a name="deferred-transactions-sql-server"></a>延迟的事务 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - online restores [SQL Server], full recovery model
 - restore sequences [SQL Server], online
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 75c16bab2ed7f8f46ee05af3dedf533530f07f08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ce68e817070765a6f84a12c518e71de221734b34
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737787"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126995"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>示例：读/写文件的联机还原（完整恢复模式）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85737787"
   
 3.  联机还原日志备份。  
   
-     管理员还原自从还原了文件备份后一直到获得最新日志备份（在步骤 2 中创建的*log_backup3*）所进行的所有日志备份。 还原最后一个备份之后，应当恢复数据库。  
+     管理员还原自从还原了文件备份后一直到获得最新日志备份（在步骤 2 中创建的 *log_backup3*）所进行的所有日志备份。 还原最后一个备份之后，应当恢复数据库。  
   
     ```  
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  

@@ -21,11 +21,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475529"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127775"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>创建全文索引时选择语言
 
@@ -72,7 +72,7 @@ ms.locfileid: "88475529"
  创建全文索引时，需要为每一列指定有效的语言名称。 如果语言名称有效但却未由 [sys.fulltext_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) 目录视图返回，则全文搜索将退而使用相同语系中最接近的可用语言名称（如果有）。 否则，全文搜索将退而使用非特定语言断字符。 这种回退行为可能会影响恢复的准确性。 因此，我们极力建议您在创建全文索引时为每一列指定有效且可用的语言名称。  
   
 > [!NOTE]  
->  将对可创建全文索引的所有数据类型（例如 **char** 或 **nchar**）使用 LCID。 如果将 **char**、 **varchar**或 **text** 类型的列的排序顺序设置为不同于 LCID 所标识语言的语言设置，则在对这些列进行全文索引和查询时，始终使用该 LCID。  
+>  将对可创建全文索引的所有数据类型（例如 **char** 或 **nchar**）使用 LCID。 如果将 **char**、 **varchar** 或 **text** 类型的列的排序顺序设置为不同于 LCID 所标识语言的语言设置，则在对这些列进行全文索引和查询时，始终使用该 LCID。  
   
   
 ##  <a name="word-breaking"></a><a name="breaking"></a> 断字  
@@ -101,7 +101,7 @@ ms.locfileid: "88475529"
   
   
 ##  <a name="stemming"></a><a name="stemming"></a> 词干分析  
- 选择列级语言时的另外一个注意事项是词干分析。 全文查询中的*词干分析* 是指搜索特定语言中某个词的所有词干派生形式（变形）的过程。 当使用一般断字符处理多种语言时，词干分析过程仅对为相应列指定的语言起作用，对于此列中的其他语言则不起作用。 例如，德语词干分析器对于英语或西班牙语（等语言）不起作用。 这可能会影响恢复操作，具体取决于你在查询时选择使用的语言。  
+ 选择列级语言时的另外一个注意事项是词干分析。 全文查询中的 *词干分析* 是指搜索特定语言中某个词的所有词干派生形式（变形）的过程。 当使用一般断字符处理多种语言时，词干分析过程仅对为相应列指定的语言起作用，对于此列中的其他语言则不起作用。 例如，德语词干分析器对于英语或西班牙语（等语言）不起作用。 这可能会影响恢复操作，具体取决于你在查询时选择使用的语言。  
   
   
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> 列类型对全文搜索的影响  

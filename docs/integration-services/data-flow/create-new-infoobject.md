@@ -12,11 +12,11 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cb9336b7999373b1f6af5bb5327a35f77fdbe7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495880"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127236"
 ---
 # <a name="create-new-infoobject"></a>新建 InfoObject
 
@@ -155,7 +155,7 @@ ms.locfileid: "88495880"
  要创建和添加新的 InfoObject，请单击“新建”，然后使用 **“新建 InfoObject”** 对话框的一个新实例来创建新的 InfoObject。  
   
  **删除**  
- 从“属性”**** 列表删除选择的 InfoObject。  
+ 从“属性”列表删除选择的 InfoObject。  
   
 ## <a name="see-also"></a>另请参阅  
  [“创建事务数据的 InfoCube”](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   

@@ -14,11 +14,11 @@ ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3265e970fbad572e09527dedcb35397d811daefa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470313"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127895"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>删除基于策略的管理条件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88470313"
   
 4.  单击加号以便展开 **“条件”** 文件夹。  
   
-5.  右键单击要删除的条件，然后选择“删除”****。  
+5.  右键单击要删除的条件，然后选择“删除”。  
   
 6.  在 **“删除对象”** 对话框中，确保已选择正确的条件，然后单击 **“确定”**。  
 

@@ -14,11 +14,11 @@ ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0ff43debf025f9c6494f9e1beeeae1cb5721037
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428838"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125272"
 ---
 # <a name="enable-or-disable-data-collection"></a>启用或禁用数据收集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "88428838"
   
 1.  在对象资源管理器中，展开 **“管理”** 节点。  
   
-2.  右键单击“数据收集”，然后单击“禁用数据收集”********。  
+2.  右键单击“数据收集”，然后单击“禁用数据收集”。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

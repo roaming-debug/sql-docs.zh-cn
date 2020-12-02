@@ -28,20 +28,20 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729971"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126310"
 ---
 # <a name="examples-using-openxml"></a>示例：使用 OPENXML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
   
 ## <a name="examples"></a>示例  
- 在检索数据时， *rowpattern* 可用于在确定行的 XML 文档中标识节点。 此外， *rowpattern* 是用实现 MSXML XPath 所采用的 XPath 模式语言表示的。 例如，如果模式以元素或属性结束，则为 *rowpattern*选择的每个元素或属性节点创建一行。  
+ 在检索数据时， *rowpattern* 可用于在确定行的 XML 文档中标识节点。 此外， *rowpattern* 是用实现 MSXML XPath 所采用的 XPath 模式语言表示的。 例如，如果模式以元素或属性结束，则为 *rowpattern* 选择的每个元素或属性节点创建一行。  
   
- *flags* 值提供默认映射。 如果 *SchemaDeclaration* 中没有指定 *ColPattern*，则假定使用 *flags* 所指定的映射。 如果在 *SchemaDeclaration* 中指定了 *ColPattern* ，则忽略 *flags*值。 指定的 *ColPattern* 决定了映射是以属性为中心还是以元素为中心，还决定了在处理溢出数据和未用完数据时的行为。  
+ *flags* 值提供默认映射。 如果 *SchemaDeclaration* 中没有指定 *ColPattern*，则假定使用 *flags* 所指定的映射。 如果在 *SchemaDeclaration* 中指定了 *ColPattern* ，则忽略 *flags* 值。 指定的 *ColPattern* 决定了映射是以属性为中心还是以元素为中心，还决定了在处理溢出数据和未用完数据时的行为。  
   
 ### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. 使用 OPENXML 执行简单的 SELECT 语句  
  此示例中的 XML 文档由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素组成。 OPENXML 语句从 XML 文档中检索两列行集（ **CustomerID** 和 **ContactName**）中的客户信息。  
@@ -52,9 +52,9 @@ ms.locfileid: "85729971"
   
 -   *rowpattern* (/ROOT/Customer) 标识要处理的 <`Customer`> 节点。  
   
--   *flags* 参数值设置为 **1** ，表示以属性为中心的映射。 因此，XML 属性映射到 *SchemaDeclaration*中所定义的行集中的列。  
+-   *flags* 参数值设置为 **1** ，表示以属性为中心的映射。 因此，XML 属性映射到 *SchemaDeclaration* 中所定义的行集中的列。  
   
--   在 WITH 子句的 *SchemaDeclaration*中所指定的 *ColName* 值与相应的 XML 属性名称相匹配。 因此，在 *SchemaDeclaration* 中不指定 *ColPattern*参数。  
+-   在 WITH 子句的 *SchemaDeclaration* 中所指定的 *ColName* 值与相应的 XML 属性名称相匹配。 因此，在 *SchemaDeclaration* 中不指定 *ColPattern* 参数。  
   
  SELECT 语句随后将检索 OPENXML 所提供的行集中的所有列。  
   
@@ -95,7 +95,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- 由于 <`Customer`> 元素没有任何子元素，因而如果在 *flags* 设置为**2** 时（表示以元素为中心的映射）执行上述 SELECT 语句，则两个客户的 **CustomerID** 和 **ContactName** 值将返回 NULL 值。  
+ 由于 <`Customer`> 元素没有任何子元素，因而如果在 *flags* 设置为 **2** 时（表示以元素为中心的映射）执行上述 SELECT 语句，则两个客户的 **CustomerID** 和 **ContactName** 值将返回 NULL 值。  
   
  \@xmlDocument 也可以是 xml 类型或 (n)varchar(max) 类型。  
   
@@ -145,7 +145,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. 为行集列与 XML 属性及元素之间的映射指定 ColPattern  
  此示例说明如何在可选的 *ColPattern* 参数中指定 XPath 模式，以提供行集列和 XML 属性以及元素之间的映射。  
   
- 此示例中的 XML 文档由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素组成。 OPENXML 语句从该 XML 文档中检索客户和订单信息作为行集（**CustomerID**、 **OrderDate**、 **ProdID**和 **Qty**）。  
+ 此示例中的 XML 文档由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素组成。 OPENXML 语句从该 XML 文档中检索客户和订单信息作为行集（**CustomerID**、 **OrderDate**、 **ProdID** 和 **Qty**）。  
   
  首先调用 **sp_xml_preparedocument** 存储过程以获得文档句柄。 此文档句柄传递给 OPENXML。  
   
@@ -155,11 +155,11 @@ LILAS      Carlos Gonzlez
   
  为了举例说明，将 *flags* 参数值设置为 **2** ，表示以元素为中心的映射。 但是， *ColPattern* 中指定的映射覆盖了此映射。 即 *ColPattern* 中指定的 XPath 模式将行集中的列映射到属性。 这将产生以属性为中心的映射。  
   
- 在 WITH 子句内的 *SchemaDeclaration*中，也可以用 *ColName* 和 *ColType* 参数指定 *ColPattern* 。 可选的 *ColPattern* 是指定的 XPath 模式，表示以下内容：  
+ 在 WITH 子句内的 *SchemaDeclaration* 中，也可以用 *ColName* 和 *ColType* 参数指定 *ColPattern* 。 可选的 *ColPattern* 是指定的 XPath 模式，表示以下内容：  
   
--   行集中的 **OrderID**、 **CustomerID** 和 **OrderDate** 列映射到 *rowpattern* 所标识节点的父节点的属性，同时，*rowpattern* 还标识 <`OrderDetail`> 节点。 因此，**CustomerID** 和 **OrderDate** 列映射到 <`Order`> 元素的**CustomerID** 和 **OrderDate** 属性。  
+-   行集中的 **OrderID**、 **CustomerID** 和 **OrderDate** 列映射到 *rowpattern* 所标识节点的父节点的属性，同时，*rowpattern* 还标识 <`OrderDetail`> 节点。 因此，**CustomerID** 和 **OrderDate** 列映射到 <`Order`> 元素的 **CustomerID** 和 **OrderDate** 属性。  
   
--   行集中的 **ProdID** 和 **Qty** 列映射到 **rowpattern** 所标识节点的 **ProductID** 和 *Quantity*属性。  
+-   行集中的 **ProdID** 和 **Qty** 列映射到 **rowpattern** 所标识节点的 **ProductID** 和 *Quantity* 属性。  
   
  SELECT 语句随后将检索 OPENXML 所提供的行集中的所有列。  
   
@@ -294,9 +294,9 @@ LILAS      Carlos Gonzlez
   
 -   *rowpattern* (/root/Customer/Order) 标识要处理的 <`Order`> 节点。  
   
--   *flags* 参数值设置为 **1** ，表示以属性为中心的映射。 因此，XML 属性映射到 *SchemaDeclaration*中定义的行集列。  
+-   *flags* 参数值设置为 **1** ，表示以属性为中心的映射。 因此，XML 属性映射到 *SchemaDeclaration* 中定义的行集列。  
   
--   在 WITH 子句的 *SchemaDeclaration* 中， **oid** 和 **amount** 行集列名与相应的 XML 属性名称相匹配。 因此，没有指定 *ColPattern* 参数。 对于行集中的 **comment** 列，XPath 函数 **text()** 将被指定为 *ColPattern*。 这将覆盖在 *flags*参数中指定的以属性为中心的映射，而且列将包含元素内容的叶值字符串。  
+-   在 WITH 子句的 *SchemaDeclaration* 中， **oid** 和 **amount** 行集列名与相应的 XML 属性名称相匹配。 因此，没有指定 *ColPattern* 参数。 对于行集中的 **comment** 列，XPath 函数 **text()** 将被指定为 *ColPattern*。 这将覆盖在 *flags* 参数中指定的以属性为中心的映射，而且列将包含元素内容的叶值字符串。  
   
  SELECT 语句随后将检索 OPENXML 所提供的行集中的所有列。  
   
@@ -345,7 +345,7 @@ O4    10000.0       NULL
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. 在 WITH 子句中指定 TableName  
  此示例在 WITH 子句中指定 *TableName* ，而不指定 *SchemaDeclaration*。 当表具有想要的结构而不具备列模式（ *ColPattern* 参数）时，这非常有用。  
   
- 此示例中的 XML 文档由 <`Customer`> 和 <`Order`> 元素组成。 OPENXML 语句从 XML 文档中检索三列行集（**oid**、 **date**和 **amount**）中的订单信息。  
+ 此示例中的 XML 文档由 <`Customer`> 和 <`Order`> 元素组成。 OPENXML 语句从 XML 文档中检索三列行集（**oid**、 **date** 和 **amount**）中的订单信息。  
   
  首先调用 **sp_xml_preparedocument** 存储过程以获得文档句柄。 此文档句柄传递给 OPENXML。  
   
@@ -355,7 +355,7 @@ O4    10000.0       NULL
   
 -   在 WITH 子句中没有 *SchemaDeclaration* 。 而是指定了一个表名。 因此，表架构将用作行集架构。  
   
--   *flags* 参数值设置为 **1** ，表示以属性为中心的映射。 因此， *rowpattern*所标识的元素属性将映射到同名的行集列。  
+-   *flags* 参数值设置为 **1** ，表示以属性为中心的映射。 因此， *rowpattern* 所标识的元素属性将映射到同名的行集列。  
   
  SELECT 语句随后将检索 OPENXML 所提供的行集中的所有列。  
   
@@ -464,7 +464,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. 指定以属性结束的 rowpattern  
- 此示例中的 XML 文档由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素组成。 OPENXML 语句从 XML 文档中检索三列行集（**ProductID**、 **Quantity**和 **OrderID**）中的订单详细信息。  
+ 此示例中的 XML 文档由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素组成。 OPENXML 语句从 XML 文档中检索三列行集（**ProductID**、 **Quantity** 和 **OrderID**）中的订单详细信息。  
   
  首先调用 **sp_xml_preparedocument** 存储过程以获得文档句柄。 此文档句柄传递给 OPENXML。  
   
@@ -476,7 +476,7 @@ EXEC sp_xml_removedocument @docHandle
   
  在 WITH 子句的 *SchemaDeclaration* 中，还可以用 *ColName* 和 *ColType* 参数指定 *ColPattern* 。 可选的 *ColPattern* 是指定的 XPath 模式，用以表示以下内容：  
   
--   在行集中为**ProdID**列指定为 *ColPattern* 的 XPath 模式 ( **.** ) 将标识上下文节点（当前节点）。 按照指定的 *rowpattern*，它是 <`OrderDetail`> 元素的 **ProductID** 属性。  
+-   在行集中为 **ProdID** 列指定为 *ColPattern* 的 XPath 模式 ( **.** ) 将标识上下文节点（当前节点）。 按照指定的 *rowpattern*，它是 <`OrderDetail`> 元素的 **ProductID** 属性。  
   
 -   为行集中的 Qty 列指定的 ColPattern（即 ../\@Quantity）标识上下文节点 \<ProductID> 的父节点 <`OrderDetail`> 的 Quantity 属性。  
   
@@ -612,11 +612,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     **id** （学生 ID）、 **name**和 **attends** 属性。 **attends** 属性是多值属性。  
+     **id** （学生 ID）、 **name** 和 **attends** 属性。 **attends** 属性是多值属性。  
   
 -   \<Class>  
   
-     **id** （班级 ID）、 **name**和 **attendedBy** 属性。 **attendedBy** 属性是多值属性。  
+     **id** （班级 ID）、 **name** 和 **attendedBy** 属性。 **attendedBy** 属性是多值属性。  
   
  \<Student> 中的 attends 属性和 \<Class> 中的 attendedBy 属性表示 Student 表与 Class 表之间的 m:n 关系。 一个学生可在很多班上课，而一个班也可有很多学生。  
   

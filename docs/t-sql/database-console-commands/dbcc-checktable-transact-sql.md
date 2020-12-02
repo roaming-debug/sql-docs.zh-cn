@@ -28,11 +28,11 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 1c4563a10433d4cbead089da026d086f9c021ccb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422861"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126284"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ NOINDEX
  指定不应对用户表的非聚集索引执行会占用很大系统开销的检查。 这将减少总执行时间。 NOINDEX 不会影响系统表，因为完整性检查的执行对象始终是所有系统表索引。  
     
  index_id  
- 要进行完整性检查的索引标识 (ID) 号。 如果指定了 index_id，则 DBCC CHECKTABLE 只对该索引以及堆或聚集索引执行完整性检查**。  
+ 要进行完整性检查的索引标识 (ID) 号。 如果指定了 index_id，则 DBCC CHECKTABLE 只对该索引以及堆或聚集索引执行完整性检查。  
     
 REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
  指定 DBCC CHECKTABLE 修复发现的错误。 若要使用修复选项，数据库必须处于单用户模式。  
@@ -120,7 +120,7 @@ PHYSICAL_ONLY
  > 指定 PHYSICAL_ONLY 会导致 DBCC CHECKTABLE 跳过对 FILESTREAM 数据的所有检查。  
     
 DATA_PURITY  
- 使 DBCC CHECKTABLE 检查表中是否存在无效或越界的列值。 例如， DBCC CHECKTABLE 检测日期和时间值大于或小于 datetime 数据类型的可接受范围的列，或者小数位数或精度值无效的 decimal 或近似 numeric 数据类型列********。  
+ 使 DBCC CHECKTABLE 检查表中是否存在无效或越界的列值。 例如， DBCC CHECKTABLE 检测日期和时间值大于或小于 datetime 数据类型的可接受范围的列，或者小数位数或精度值无效的 decimal 或近似 numeric 数据类型列。  
  默认情况下将启用列值完整性检查，并且不需要使用 DATA_PURITY 选项。 对于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级的数据库，您可以使用 DBCC CHECKTABLE WITH DATA_PURITY 查找和更正特定表中的错误；但是，默认情况下不会对该表启用列值检查，直到 DBCC CHECKDB WITH DATA_PURITY 在数据库中正确运行时为止。 然后，DBCC CHECKDB 和 DBCC CHECKTABLE 将默认检查列值完整性。  
  无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 若要了解如何手动更正这些错误，请参阅知识库文章 923247：[解决 SQL Server 2005 及更高版本中的 DBCC 错误 2570](https://support.microsoft.com/kb/923247)。  
  如果指定了 PHYSICAL_ONLY，则不执行列完整性检查。  
@@ -146,7 +146,7 @@ MAXDOP
 -   页面偏移量是否合理。    
 -   基表的每一行是否在每个非聚集索引中具有匹配的行，以及非聚集索引的每一行是否在基表中具有匹配的行。    
 -   已分区表或索引的每一行是否都位于正确的分区中。    
--   使用 FILESTREAM 将 varbinary(max) 数据存储在文件系统中时，文件系统与表之间是否保持链接级一致性****。    
+-   使用 FILESTREAM 将 varbinary(max) 数据存储在文件系统中时，文件系统与表之间是否保持链接级一致性。    
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>对索引执行逻辑一致性检查    
 对索引进行的逻辑一致性检查因数据库兼容级别而异，如下所示：
@@ -171,7 +171,7 @@ DBCC CHECKTABLE 使用内部数据库快照提供其执行这些检查必需的�
     
 ## <a name="checking-and-repairing-filestream-data"></a>检查和修复 FILESTREAM 数据    
 对数据库和表启用 FILESTREAM 后，便可选择将 varbinary(max) 二进制大型对象 (BLOB) 存储在文件系统中。 对在文件系统中存储 BLOB 的表使用 DBCC CHECKTABLE 时，DBCC 会检查文件系统与数据库之间的链接级一致性。
-例如，如果表包含使用 FILESTREAM 属性的 varbinary(max) 列，则 DBCC CHECKTABLE 会检查文件系统目录和文件与表行、表列和列值之间是否存在一对一映射****。 如果指定了 REPAIR_ALLOW_DATA_LOSS 选项，DBCC CHECKTABLE 便可修复损坏。 为了修复 FILESTREAM 损坏，DBCC 将删除缺少文件系统数据的任何表行，并将删除未映射到表行、表列或列值的任何目录和文件。
+例如，如果表包含使用 FILESTREAM 属性的 varbinary(max) 列，则 DBCC CHECKTABLE 会检查文件系统目录和文件与表行、表列和列值之间是否存在一对一映射。 如果指定了 REPAIR_ALLOW_DATA_LOSS 选项，DBCC CHECKTABLE 便可修复损坏。 为了修复 FILESTREAM 损坏，DBCC 将删除缺少文件系统数据的任何表行，并将删除未映射到表行、表列或列值的任何目录和文件。
     
 ## <a name="checking-objects-in-parallel"></a>并行检查对象    
 默认情况下，DBCC CHECKTABLE 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置方式与并行查询相同。 若要限制 DBCC 检查可使用的处理器的最大数目，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。

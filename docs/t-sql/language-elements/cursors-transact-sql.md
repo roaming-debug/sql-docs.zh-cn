@@ -18,16 +18,16 @@ ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: edfa870dd6f2f21f6d2bfdd122365c9913dc342a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361053"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128276"
 ---
 # <a name="cursors-transact-sql"></a>游标 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句产生完整的结果集，但有时候最好对结果进行逐行处理。 打开结果集中的游标，即可对结果集进行逐行处理。 可以将游标分配给具有光标数据类型的变量或参数****。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句产生完整的结果集，但有时候最好对结果进行逐行处理。 打开结果集中的游标，即可对结果集进行逐行处理。 可以将游标分配给具有光标数据类型的变量或参数。  
   
  下面这些语句支持游标操作：  
   

@@ -24,11 +24,11 @@ ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: dd983f16907332414cc6f726fb41583f8b928069
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688387"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128110"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,12 +59,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  指定要更改的全文索引和查询的目录是区分重音的，还是不区分重音的。  
   
- 若要确定全文目录当前的区分重音属性的设置，请对 catalog_name 使用具有 accentsensitivity 属性值的 FULLTEXTCATALOGPROPERTY 函数******。 如果函数返回“1”，则全文目录是区分重音的；如果函数返回“0”，则目录是不区分重音的。  
+ 若要确定全文目录当前的区分重音属性的设置，请对 catalog_name 使用具有 accentsensitivity 属性值的 FULLTEXTCATALOGPROPERTY 函数。 如果函数返回“1”，则全文目录是区分重音的；如果函数返回“0”，则目录是不区分重音的。  
   
  目录和数据库的默认重音区分设置是相同的。  
   
  REORGANIZE  
- 告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行“主合并”，以将在索引进程中创建的各个较小的索引合并成一个大型索引**。 合并全文索引碎片可以提高性能，并释放磁盘和内存资源。 如果全文目录频繁发生更改，则请定期使用该命令重新组织全文目录。  
+ 告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行“主合并”，以将在索引进程中创建的各个较小的索引合并成一个大型索引。 合并全文索引碎片可以提高性能，并释放磁盘和内存资源。 如果全文目录频繁发生更改，则请定期使用该命令重新组织全文目录。  
   
  REORGANIZE 还可以优化内部索引和目录结构。  
   
@@ -74,7 +74,7 @@ ALTER FULLTEXT CATALOG catalog_name
  指定此目录为默认目录。 如果创建全文索引时没有指定目录，则将使用默认目录。 如果存在默认全文目录，则以 AS DEFAULT 设置该目录将覆盖现有默认设置。  
   
 ## <a name="permissions"></a>权限  
- 用户必须对全文目录具有 ALTER 权限，或者是 db_owner、db_ddladmin 固定数据库角色或 sysadmin 固定服务器角色的成员********。  
+ 用户必须对全文目录具有 ALTER 权限，或者是 db_owner、db_ddladmin 固定数据库角色或 sysadmin 固定服务器角色的成员。  
   
 > [!NOTE]  
 >  若要使用 ALTER FULLTEXT CATALOG AS DEFAULT，用户必须对全文目录具有 ALTER 权限，对数据库具有 CREATE FULLTEXT CATALOG 权限。  

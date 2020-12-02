@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15649f0ff6a9695b17af629f28156ea4860e4aa6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459429"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128325"
 ---
 # <a name="bitwise-operators-transact-sql"></a>位运算符 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,16 +49,16 @@ ms.locfileid: "88459429"
 * [^=（位异或赋值）](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
 * [~（位非）](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
- 位运算符的操作数可以是整数或二进制字符串数据类型类别中的任何数据类型（image 数据类型除外），但两个操作数不能同时是二进制字符串数据类型类别中的某种数据类型****。 下表显示所支持的操作数数据类型。  
+ 位运算符的操作数可以是整数或二进制字符串数据类型类别中的任何数据类型（image 数据类型除外），但两个操作数不能同时是二进制字符串数据类型类别中的某种数据类型。 下表显示所支持的操作数数据类型。  
   
 |左操作数|右操作数|  
 |------------------|-------------------|  
 |[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|int、smallint 或 tinyint  |  
-|[bit](../../t-sql/data-types/bit-transact-sql.md)|int、smallint、tinyint 或 bit****************|  
-|[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|bigint、int、smallint、tinyint、binary 或 varbinary************************|  
-|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary********************|  
-|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary********************|  
-|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary********************|  
+|[bit](../../t-sql/data-types/bit-transact-sql.md)|int、smallint、tinyint 或 bit|  
+|[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|bigint、int、smallint、tinyint、binary 或 varbinary|  
+|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary|  
+|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary|  
+|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary|  
 |[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|int、smallint 或 tinyint  |  
   
 ## <a name="see-also"></a>另请参阅  

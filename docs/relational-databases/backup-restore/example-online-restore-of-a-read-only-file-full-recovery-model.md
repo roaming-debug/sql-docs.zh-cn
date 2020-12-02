@@ -13,14 +13,14 @@ helpviewer_keywords:
 - online restores [SQL Server], full recovery model
 - restore sequences [SQL Server], online
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 55cf92ac9a4c2324449e27840782a6930478e953
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: af5845b1227b5028c6eb98f12bcba5f520d39f1a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85747771"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126963"
 ---
 # <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>示例：只读文件的联机还原（完整恢复模式）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3d203dc1924706732bfc8c672308123ce662d879
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88384863"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126887"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  当添加或删除了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名时，会发生 Audit Addlogin 事件类****。  
+  当添加或删除了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名时，会发生 Audit Addlogin 事件类。  
   
  如果在添加了登录帐户后设置其他属性，例如，默认数据库，会在此事件的 **TextData** 列中找到有关这些属性的信息。 如果在添加登录帐户时设置这些属性，就不会发生 **Audit Login Change Property** 事件。  
   

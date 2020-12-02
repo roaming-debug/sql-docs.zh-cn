@@ -25,11 +25,11 @@ ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5e8be7438efd35d57a81b30270ab865ca795b9d7
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196145"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128238"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,16 +68,16 @@ FETCH
  返回游标中的最后一行并将其作为当前行。  
   
  ABSOLUTE { *n*| \@*nvar*}  
- 如果 n 或 \@nvar 为正，则返回从游标起始处开始向后的第 n 行，并将返回行变成新的当前行******。 如果 n 或 \@nvar 为负，则返回从游标末尾处开始向前的第 n 行，并将返回行变成新的当前行******。 如果 n 或 \@nvar 为 0，则不返回行****。 n 必须是整数常量，并且 \@nvar 必须是 smallint、tinyint 或 int****************。  
+ 如果 n 或 \@nvar 为正，则返回从游标起始处开始向后的第 n 行，并将返回行变成新的当前行。 如果 n 或 \@nvar 为负，则返回从游标末尾处开始向前的第 n 行，并将返回行变成新的当前行。 如果 n 或 \@nvar 为 0，则不返回行。 n 必须是整数常量，并且 \@nvar 必须是 smallint、tinyint 或 int。  
   
  RELATIVE { *n*| \@*nvar*}  
- 如果 n 或 \@nvar 为正，则返回从当前行开始向后的第 n 行，并将返回行变成新的当前行******。 如果 n 或 \@nvar 为负，则返回从当前行开始向前的第 n 行，并将返回行变成新的当前行******。 如果 n 或 \@nvar 为 0，则返回当前行****。 在对游标进行第一次提取时，如果在将 n 或 \@nvar 设置为负数或 0 的情况下指定 `FETCH RELATIVE`，则不返回行****。 n 必须是整数常量，并且 \@nvar 必须是 smallint、tinyint 或 int****************。  
+ 如果 n 或 \@nvar 为正，则返回从当前行开始向后的第 n 行，并将返回行变成新的当前行。 如果 n 或 \@nvar 为负，则返回从当前行开始向前的第 n 行，并将返回行变成新的当前行。 如果 n 或 \@nvar 为 0，则返回当前行。 在对游标进行第一次提取时，如果在将 n 或 \@nvar 设置为负数或 0 的情况下指定 `FETCH RELATIVE`，则不返回行。 n 必须是整数常量，并且 \@nvar 必须是 smallint、tinyint 或 int。  
   
  GLOBAL  
  指定 cursor_name 是指全局游标。  
   
  cursor_name  
- 要从中进行提取的开放游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 指全局游标，如果未指定 GLOBAL，则指局部游标****。  
+ 要从中进行提取的开放游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 指全局游标，如果未指定 GLOBAL，则指局部游标。  
   
  \@cursor_variable_name  
  游标变量名，引用要从中进行提取操作的打开的游标。  

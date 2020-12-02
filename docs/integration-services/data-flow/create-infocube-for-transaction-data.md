@@ -12,11 +12,11 @@ ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 18d7f3f10a2d7179d31e08e5a8e255df7295ca67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457386"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127307"
 ---
 # <a name="create-infocube-for-transaction-data"></a>“创建事务数据的 InfoCube”
 

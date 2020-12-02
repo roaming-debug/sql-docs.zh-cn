@@ -12,11 +12,11 @@ ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38c7183853dcac7043672d5e4a622362af08c10b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457366"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127285"
 ---
 # <a name="create-infopackage"></a>创建 InfoPackage
 

@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a0013a3988dc740e4c681413e9a0a09dba2a7779
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456084"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126747"
 ---
 # <a name="audit-server-object-take-ownership-event-class"></a>Audit Server Object Take Ownership 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  当服务器作用域内的对象改变了所有者时，会发生 Audit Server Object Take Ownership 事件类****。  
+  当服务器作用域内的对象改变了所有者时，会发生 Audit Server Object Take Ownership 事件类。  
   
 ## <a name="audit-server-object-take-ownership-event-class-data-columns"></a>Audit Server Object Take Ownership 事件类的数据列  
   

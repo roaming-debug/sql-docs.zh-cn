@@ -14,11 +14,11 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457394"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127314"
 ---
 # <a name="cdc-splitter"></a>CDC 拆分器
 
@@ -30,10 +30,10 @@ ms.locfileid: "88457394"
 |操作的值|输出|说明|  
 |------------------------|------------|-----------------|  
 |1|删除|删除的行|  
-|2|插入|插入的行（使用“净值且具有合并”**** CDC 模式时不可用）|  
-|3|更新|更新前的行（仅在使用“全部且具有旧值”**** CDC 模式时可用）|  
+|2|插入|插入的行（使用“净值且具有合并”CDC 模式时不可用）|  
+|3|更新|更新前的行（仅在使用“全部且具有旧值”CDC 模式时可用）|  
 |4|更新|更新后的行（与更新前相同）|  
-|5|更新|合并行（仅在使用“净值且具有合并”**** CDC 模式时可用）|  
+|5|更新|合并行（仅在使用“净值且具有合并”CDC 模式时可用）|  
 |其他|错误||  
   
  您可以使用拆分器连接到预定义的 INSERT、DELETE 和 UPDATE 输出以便进行进一步的处理。  

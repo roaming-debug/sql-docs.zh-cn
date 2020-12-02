@@ -26,11 +26,11 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 22ae11a8e37109e7ba90e2b02e9e4351510f9ae7
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344073"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127411"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,19 +51,19 @@ CREATE SEARCH PROPERTY LIST new_list_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- new_list_name   
- 新搜索属性列表的名称。 new_list_name 是最多包含 128 个字符的标识符  。 new_list_name 在当前数据库的所有属性列表中必须是唯一的，并且符合标识符规则  。 创建全文检索时将使用 new_list_name  。  
+ new_list_name  
+ 新搜索属性列表的名称。 new_list_name 是最多包含 128 个字符的标识符。 new_list_name 在当前数据库的所有属性列表中必须是唯一的，并且符合标识符规则。 创建全文检索时将使用 new_list_name。  
   
  *database_name*  
- source_list_name 指定的属性列表所在的数据库的名称  。 如果未指定，则 database_name 默认为当前数据库。  
+ source_list_name 指定的属性列表所在的数据库的名称。 如果未指定，则 database_name 默认为当前数据库。  
   
- database_name 须指定现有数据库的名称。 当前连接的登录名必须与 database_name 所指定的数据库中的现有用户 ID 关联  。 还必须拥有针对数据库的必需[权限](#Permissions)。  
+ database_name 须指定现有数据库的名称。 当前连接的登录名必须与 database_name 所指定的数据库中的现有用户 ID 关联。 还必须拥有针对数据库的必需[权限](#Permissions)。  
   
- source_list_name   
- 指定通过从 database_name 中复制现有属性列表来创建新属性列表  。 如果 source_list_name 不存在，CREATE SEARCH PROPERTY LIST 失败并出现错误  。 source_list_name 中的搜索属性由 new_list_name 继承  。  
+ source_list_name  
+ 指定通过从 database_name 中复制现有属性列表来创建新属性列表。 如果 source_list_name 不存在，CREATE SEARCH PROPERTY LIST 失败并出现错误。 source_list_name 中的搜索属性由 new_list_name 继承。  
   
  AUTHORIZATION owner_name   
- 指定要拥有属性列表的用户或角色的名称。 owner_name 必须是当前用户所属的角色的名称，或当前用户必须具有对 owner_name 的 IMPERSONATE 权限  。 如果未指定，则所有权授予当前用户。  
+ 指定要拥有属性列表的用户或角色的名称。 owner_name 必须是当前用户所属的角色的名称，或当前用户必须具有对 owner_name 的 IMPERSONATE 权限。 如果未指定，则所有权授予当前用户。  
   
 > [!NOTE]  
 >  可通过 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句更改所有者。  
@@ -77,9 +77,9 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
  在以下任一情况下，CREATE SEARCH PROPERTY LIST 语句均会失败：  
   
--   database_name 指定的数据库不存在  。  
+-   database_name 指定的数据库不存在。  
   
--   source_list_name 指定的列表不存在  。  
+-   source_list_name 指定的列表不存在。  
   
 -   没有适当的权限。  
   

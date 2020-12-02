@@ -19,11 +19,11 @@ ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 3e1e705930e31cec8fa6b7b4913e3643cc25227e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688205"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128070"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -129,7 +129,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  建议您在熟悉资源调控器状态之后再执行 DDL 语句。 有关详细信息，请参阅 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
- 在更改计划影响到设置时，只有在执行 DBCC FREEPROCCACHE (pool_name) 后，新设置才会在之前已缓存的计划中生效，其中 pool_name 是 Resource Governor 资源池的名称****。  
+ 在更改计划影响到设置时，只有在执行 DBCC FREEPROCCACHE (pool_name) 后，新设置才会在之前已缓存的计划中生效，其中 pool_name 是 Resource Governor 资源池的名称。  
   
 -   如果将 AFFINITY 从多个计划程序更改为单个计划程序，则不需要执行 DBCC FREEPROCCACHE，因为并行计划可以在串行模式中运行。 但是，它可能不如编译为串行计划的计划那么有效。  
   

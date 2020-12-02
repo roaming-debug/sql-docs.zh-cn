@@ -15,11 +15,11 @@ ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ca8342ac6cbdab99c3314b49cac4c28408fee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457490"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127375"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>在数据流中添加或删除组件
 
@@ -36,7 +36,7 @@ ms.locfileid: "88457490"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“控制流”选项卡，然后双击包含要向其添加组件的数据流的数据流任务。****  
+3.  单击“控制流”选项卡，然后双击包含要向其添加组件的数据流的数据流任务。  
   
 4.  在工具箱中，展开 **“数据流源”**、 **“数据流转换”** 或 **“数据流目标”**，然后将数据流项拖动到 **“数据流”** 选项卡的设计图面。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "88457490"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“控制流”选项卡，然后双击包含要从中删除组件的数据流的数据流任务。****  
+3.  单击“控制流”选项卡，然后双击包含要从中删除组件的数据流的数据流任务。  
   
-4.  右键单击数据流组件，然后单击“删除”****。  
+4.  右键单击数据流组件，然后单击“删除”。  
   
 5.  确认删除操作。  
   

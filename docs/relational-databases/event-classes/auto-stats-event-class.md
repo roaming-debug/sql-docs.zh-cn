@@ -13,15 +13,15 @@ ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f9e20179799dbc61dae0a1e02247fe5eb0df2628
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88410543"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126719"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Auto Stats 事件类指示索引和列统计信息自动更新事件的发生****。  优化器加载使用统计数据时，也会触发 Auto Stats****。
+  Auto Stats 事件类指示索引和列统计信息自动更新事件的发生。  优化器加载使用统计数据时，也会触发 Auto Stats。
   
 ## <a name="auto-stats-event-class-data-columns"></a>Auto Stats 事件类的数据列  
   

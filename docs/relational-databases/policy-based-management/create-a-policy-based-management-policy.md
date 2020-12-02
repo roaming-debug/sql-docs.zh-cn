@@ -14,11 +14,11 @@ ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8a27cb717d8a54de804469d210e0eaaf3b622dd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494040"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127920"
 ---
 # <a name="create-a-policy-based-management-policy"></a>创建基于策略的管理策略
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +45,13 @@ ms.locfileid: "88494040"
   
 #### <a name="to-create-a-policy"></a>创建策略  
   
-1.  在“对象资源管理器”**** 中，单击加号以展开你要在其中创建新的基于策略的管理策略的服务器。  
+1.  在“对象资源管理器”中，单击加号以展开你要在其中创建新的基于策略的管理策略的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
 3.  单击加号以便展开 **“策略管理”**。  
   
-4.  右键单击“策略”**** 文件夹，然后选择“新建策略”****。  
+4.  右键单击“策略”文件夹，然后选择“新建策略”。  
   
 5.  在 **“创建新策略”** 对话框的 **“名称”** 框中，键入新策略的名称。  
   

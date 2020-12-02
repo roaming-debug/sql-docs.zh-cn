@@ -16,11 +16,11 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f6dd42e81d3b1d2db558962cbb9843488dd1ad16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425549"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127141"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD（SSIS 表达式）
 
@@ -41,7 +41,7 @@ DATEADD(datepart, number, date)
  指定要与数值相加的日期部分的参数。  
   
  *数字*  
- 用于与 datepart ** 相加的值。 该值必须是分析表达式时已知的整数值。  
+ 用于与 datepart 相加的值。 该值必须是分析表达式时已知的整数值。  
   
  *date*  
  返回有效日期或日期格式的字符串的表达式。  

@@ -14,11 +14,11 @@ ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: de66aa15b385ee2aef206e026550aca95e770f12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470307"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127883"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>删除基于策略的管理策略
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88470307"
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要删除的策略，然后选择“删除”****。  
+5.  右键单击要删除的策略，然后选择“删除”。  
   
 6.  在 **“删除对象”** 对话框中，确保已选择正确的条件，然后单击 **“确定”**。  
   

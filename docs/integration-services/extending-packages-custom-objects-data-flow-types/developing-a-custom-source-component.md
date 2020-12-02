@@ -23,11 +23,11 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba5222b35e6e55329e746f316a0503c27092441a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484327"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127095"
 ---
 # <a name="developing-a-custom-source-component"></a>开发自定义源组件
 
@@ -44,7 +44,7 @@ ms.locfileid: "88484327"
  实现源组件的设计时功能包括指定与外部数据源的连接、添加和配置反映数据源的输出列以及验证该组件是否可以执行。 根据定义，源组件没有输入，有一个或多个异步输出。  
   
 ### <a name="creating-the-component"></a>创建组件  
- 源组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 源组件将元素添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 属性的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 集合，以指明自己需要连接管理器。 此集合有两个用途：一是保存对组件所用包中的连接管理器的引用；二是通知设计器此集合需要连接管理器。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 添加到该集合后，“高级编辑器”会显示“连接属性”选项卡，用户可以在其中选择包中的连接或创建连接********。  
+ 源组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 源组件将元素添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 属性的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 集合，以指明自己需要连接管理器。 此集合有两个用途：一是保存对组件所用包中的连接管理器的引用；二是通知设计器此集合需要连接管理器。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 添加到该集合后，“高级编辑器”会显示“连接属性”选项卡，用户可以在其中选择包中的连接或创建连接。  
   
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 的实现，该实现添加一个输出，然后将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 对象添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>。  
   
@@ -366,7 +366,7 @@ End Sub
 ### <a name="validating-the-component"></a>验证组件  
  您应验证源组件，并验证源组件的输出列集合中定义的列是否与外部数据源中的列相匹配。 有时，根据外部数据源验证输出列是不可能，例如处于断开连接状态时，或者希望避免与服务器之间费时的往返通信时。 在这些情况下，仍然可以使用输出对象的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> 来验证输出中的列。 有关详细信息，请参阅[验证数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)。  
   
- 此集合同时存在于输入对象和输出对象中，可以使用来自外部数据源的列填充此集合。 此集合可用于在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器处于离线状态、组件断开连接或 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性为 false 时验证输出列****。 应在创建输出列的同时对该集合进行首次填充。 将外部元数据列添加到集合相对比较容易，因为外部元数据列最初就应与输出列相匹配。 列的数据类型属性应已正确设置，这些属性可直接复制到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 对象。  
+ 此集合同时存在于输入对象和输出对象中，可以使用来自外部数据源的列填充此集合。 此集合可用于在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器处于离线状态、组件断开连接或 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性为 false 时验证输出列。 应在创建输出列的同时对该集合进行首次填充。 将外部元数据列添加到集合相对比较容易，因为外部元数据列最初就应与输出列相匹配。 列的数据类型属性应已正确设置，这些属性可直接复制到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 对象。  
   
  下面的示例代码添加一个外部元数据列，该列基于新创建的输出列。 假定已经创建了该输出列。  
   

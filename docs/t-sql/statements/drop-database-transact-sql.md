@@ -27,11 +27,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ae3af2eb84fa18777c0d0fe55503ea60bf5c303
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990280"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127441"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -62,7 +62,7 @@ IF EXISTS
 
 只有在数据库已存在时才对其进行有条件地删除。
 
-database_name** 指定要删除的数据库的名称。 若要显示数据库列表，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。
+database_name 指定要删除的数据库的名称。 若要显示数据库列表，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。
 
 database_snapshot_name
 适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
@@ -127,15 +127,15 @@ DROP DATABASE 语句必须是 SQL 批处理中的唯一语句，您一次只能�
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份************。
+要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份。
 
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-只有服务器级别主体登录名（由预配过程创建）或 dbmanager 数据库角色的成员可以删除数据库****。
+只有服务器级别主体登录名（由预配过程创建）或 dbmanager 数据库角色的成员可以删除数据库。
 
 ### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份************。
+要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份。
 
 ## <a name="examples"></a>示例
 

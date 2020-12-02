@@ -17,11 +17,11 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d19b63fe653700839f4ea3443fc0676890fdcc9
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194897"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127388"
 ---
 # <a name="copy-package-objects"></a>复制包对象
 
@@ -43,14 +43,14 @@ ms.locfileid: "92194897"
     > [!IMPORTANT]  
     >  如果选择的两个项相互连接，则不会自动选择连接这些项的优先级约束和路径。 若要复制经过排序的工作流（一段控制流或数据流），请确保同时复制优先级约束和路径。  
   
-5.  右键单击所选项并单击“复制”****。  
+5.  右键单击所选项并单击“复制”。  
   
 6.  如果将项复制到其他包，请单击要复制到其中的包，然后单击适合该项类型的合适的选项卡。  
   
     > [!IMPORTANT]  
     >  无法将数据流复制到包中，除非包至少包含一个“数据流”任务。  
   
-7.  右键单击并单击“粘贴”****。  
+7.  右键单击并单击“粘贴”。  
   
 ### <a name="to-copy-connection-managers"></a>复制连接管理器  
   
@@ -60,11 +60,11 @@ ms.locfileid: "92194897"
   
 3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击 **“控制流”**、 **“数据流”** 或 **“事件处理程序”** 选项卡。  
   
-4.  在“连接管理器”**** 区域中，右键单击连接管理器，然后单击“复制”****。 每次只能复制一个连接管理器。  
+4.  在“连接管理器”区域中，右键单击连接管理器，然后单击“复制”。 每次只能复制一个连接管理器。  
   
 5.  如果要将项复制到其他包，请单击希望复制到其中的包，然后单击 **“控制流”**、 **“数据流”** 或 **“事件处理程序”** 选项卡。  
   
-6.  右键单击“连接管理器”**** 区域，并单击“粘贴”****。  
+6.  右键单击“连接管理器”区域，并单击“粘贴”。  
   
 ## <a name="see-also"></a>另请参阅  
  [控制流](../integration-services/control-flow/control-flow.md)   

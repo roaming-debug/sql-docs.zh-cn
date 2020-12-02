@@ -23,11 +23,11 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: eac401156014952142c39851b1e703605997c245
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549394"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128004"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,36 +74,36 @@ CREATE FULLTEXT INDEX ON table_name
 包含全文索引中的一列或多列的表或索引视图的名称。  
   
 column_name       
-全文索引中包含的列的名称。 只能为 char、varchar、nchar、nvarchar、text、ntext、image、xml 或 varbinary 类型的列编制索引，以供全文搜索使用************************************。 若要指定多个列，请按如下方式重复 column_name 子句**：  
+全文索引中包含的列的名称。 只能为 char、varchar、nchar、nvarchar、text、ntext、image、xml 或 varbinary 类型的列编制索引，以供全文搜索使用。 若要指定多个列，请按如下方式重复 column_name 子句：  
   
 CREATE FULLTEXT INDEX ON table_name (column_name1 [...], column_name2 [...]) ...    
   
 TYPE COLUMN type_column_name       
-指定表列的名称 (type_column_name)，用于存储 varbinary(max) 或 image 文档的文档类型**********。 此列（称为类型列）包含用户提供的文件扩展名（.doc、.pdf、.xls 等）。 类型列必须是 **char**、 **nchar**、 **varchar**或 **nvarchar**类型。  
+指定表列的名称 (type_column_name)，用于存储 varbinary(max) 或 image 文档的文档类型。 此列（称为类型列）包含用户提供的文件扩展名（.doc、.pdf、.xls 等）。 类型列必须是 **char**、 **nchar**、 **varchar** 或 **nvarchar** 类型。  
   
-仅当 column_name 指定 varbinary、varbinary(max) 或 image 列（数据作为二进制数据存储在该列中）时，才指定 TYPE COLUMN type_column_name；否则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误************。  
+仅当 column_name 指定 varbinary、varbinary(max) 或 image 列（数据作为二进制数据存储在该列中）时，才指定 TYPE COLUMN type_column_name；否则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   
 > [!NOTE]  
-> 在建立索引时，全文引擎使用每个表行的类型列中的缩写来标识对 column_name 中的文档使用哪个全文搜索筛选器**。 筛选器按二进制流加载文档，并删除格式设置信息，然后将文档中的文本发送到断字器组件。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
+> 在建立索引时，全文引擎使用每个表行的类型列中的缩写来标识对 column_name 中的文档使用哪个全文搜索筛选器。 筛选器按二进制流加载文档，并删除格式设置信息，然后将文档中的文本发送到断字器组件。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
   
 LANGUAGE language_term       
-存储在 column_name 中的数据的语言**。  
+存储在 column_name 中的数据的语言。  
   
-language_term 是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值**。 如果未指定任何值，则使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认语言。  
+language_term 是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值。 如果未指定任何值，则使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认语言。  
   
-如果指定了 language_term，将使用它代表的语言对存储在 char、nchar、varchar、nvarchar、text 和 ntext 列中的数据编制索引**************************。 如果未针对列将 language_term 指定为全文谓词的一部分，则该语言就是查询时使用的默认语言**。  
+如果指定了 language_term，将使用它代表的语言对存储在 char、nchar、varchar、nvarchar、text 和 ntext 列中的数据编制索引。 如果未针对列将 language_term 指定为全文谓词的一部分，则该语言就是查询时使用的默认语言。  
   
-如果指定为字符串，则 language_term 对应于 syslanguages 系统表中的 alias 列值**。 字符串必须用单引号引起来，如 'language\_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值**。 十六进制值不能超过八位（包括前导零在内）。  
+如果指定为字符串，则 language_term 对应于 syslanguages 系统表中的 alias 列值。 字符串必须用单引号引起来，如 'language\_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
   
 如果该值是双字节字符集 (DBCS) 格式，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode 格式。  
   
-对于指定为 language_term 的语言，必须启用断字符和词干分析器等资源**。 如果这些资源不支持指定的语言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
+对于指定为 language_term 的语言，必须启用断字符和词干分析器等资源。 如果这些资源不支持指定的语言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   
 使用 sp_configure 存储过程可访问有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认全文语言信息。 有关详细信息，请参阅本主题后面的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)不熟悉的读者。  
   
 如果非 BLOB 和非 XML 列包含多种语言的文本数据，或者列中存储的文本的语言未知，则可能适合使用非特定 (0x0) 语言资源。 但是，您应该先了解使用非特定 (0x0) 语言资源的可能后果。 有关使用非特定 (0x0) 语言资源的可能解决方案和后果的信息，请参阅[创建全文检索时选择语言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。  
   
-对于存储在 XML 或 BLOB 类型列中的文档，在创建索引时，将使用文档内的语言编码。 例如，在 XML 列中，XML 文档中的 xml:lang 属性将标识语言****。 在查询时，除非将 language_term 指定为全文查询的一部分，否则将使用以前在 language_term 中指定的值作为全文查询的默认语言****。  
+对于存储在 XML 或 BLOB 类型列中的文档，在创建索引时，将使用文档内的语言编码。 例如，在 XML 列中，XML 文档中的 xml:lang 属性将标识语言。 在查询时，除非将 language_term 指定为全文查询的一部分，否则将使用以前在 language_term 中指定的值作为全文查询的默认语言。  
   
 STATISTICAL_SEMANTICS       
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本） 
@@ -111,7 +111,7 @@ STATISTICAL_SEMANTICS
 创建作为统计语义索引一部分的附加关键短语和文档相似性索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md)。  
   
 KEY INDEX index_name       
-table_name 的唯一键索引的名称**。 KEY INDEX 必须是唯一的单键列，不可为 Null。 为全文唯一键选择最小的唯一键索引。  为获得最佳性能，建议全文键使用整数数据类型。  
+table_name 的唯一键索引的名称。 KEY INDEX 必须是唯一的单键列，不可为 Null。 为全文唯一键选择最小的唯一键索引。  为获得最佳性能，建议全文键使用整数数据类型。  
   
 fulltext_catalog_name       
 用于全文索引的全文目录。 数据库中必须已存在该目录。 此子句为可选项。 如果未指定，则使用默认目录。 如果默认目录不存在，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
@@ -119,14 +119,14 @@ fulltext_catalog_name
 FILEGROUP filegroup_name       
 针对指定的文件组创建指定的全文索引。 该文件组必须已存在。 如果未指定 FILEGROUP 子句，则全文索引位于与基表或视图相同的文件组中（对于非分区表），或者位于主文件组中（对于分区表）。  
   
- CHANGE_TRACKING [ = ] { MANUAL | AUTO | OFF [ , NO POPULATION ] }****       
+ CHANGE_TRACKING [ = ] { MANUAL | AUTO | OFF [ , NO POPULATION ] }       
  指定是否由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对全文索引所覆盖的表列所做的更改（更新、删除或插入）传播到全文索引。 通过 WRITETEXT 和 UPDATETEXT 所做的数据更改不会反映到全文索引中，也不能使用更改跟踪方法拾取。  
   
 MANUAL       
 指定必须通过调用 ALTER FULLTEXT INDEX …START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（手动填充）。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定期调用此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 AUTO       
-指定当基表中的数据修改时，所跟踪的更改将会自动传播（自动填充）**。 尽管是自动传播更改，但这些更改可能不会立即反映到全文索引中。 默认值为 AUTO。  
+指定当基表中的数据修改时，所跟踪的更改将会自动传播（自动填充）。 尽管是自动传播更改，但这些更改可能不会立即反映到全文索引中。 默认值为 AUTO。  
   
 OFF [ `,` NO POPULATION]       
 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保留对索引数据的更改的列表。 如果未指定 NO POPULATION，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建索引后将对其进行完全填充。  
@@ -159,7 +159,7 @@ property_list_name
 ## <a name="remarks"></a>备注  
 有关详细信息，请参阅[创建和管理全文检索](../../relational-databases/search/create-and-manage-full-text-indexes.md)。  
   
-在 xml 列上，可以创建一个全文检索以便为 XML 元素的内容编制索引，但忽略 XML 标记****。 不为数值的属性值都会进行全文索引。 元素标记用作标记边界。 支持包含多种语言的格式正确的 XML 或 HTML 文档和片段。 有关详细信息，请参阅 [结合使用具有全文搜索和 XML 列](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
+在 xml 列上，可以创建一个全文检索以便为 XML 元素的内容编制索引，但忽略 XML 标记。 不为数值的属性值都会进行全文索引。 元素标记用作标记边界。 支持包含多种语言的格式正确的 XML 或 HTML 文档和片段。 有关详细信息，请参阅 [结合使用具有全文搜索和 XML 列](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
   
 建议索引键列为整数数据类型。 这可在执行查询时提供优化。  
   

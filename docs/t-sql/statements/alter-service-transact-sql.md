@@ -22,11 +22,11 @@ ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c6a9ed30e92358d269fa4d6c0e270bd4a16e3bdb
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688126"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126255"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +54,7 @@ ALTER SERVICE service_name
  service_name  
  要更改的服务的名称。 不能指定服务器、数据库和架构名称。  
   
- ON QUEUE [ schema_name.__**** ] queue_name**  
+ ON QUEUE [ schema_name. ] queue_name  
  为此服务指定新队列。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将此服务的所有消息从当前队列移动到新队列。  
   
  ADD CONTRACT *contract_name*  
@@ -69,7 +69,7 @@ ALTER SERVICE service_name
  若要更改服务的 AUTHORIZATION，请使用 ALTER AUTHORIZATION 语句。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，服务所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员拥有更改服务的权限************。  
+ 默认情况下，服务所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员拥有更改服务的权限。  
   
 ## <a name="examples"></a>示例  
   

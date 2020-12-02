@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c79b8ad73bc939354d3b9078c9486531ec8b01ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426809"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126233"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -59,11 +59,11 @@ ALTER SERVER ROLE  server_role_name  DROP MEMBER login;
 *server_role_name*  
 要更改的服务器角色的名称。  
   
-ADD MEMBER server_principal**  
-将指定的服务器主体添加到服务器角色中。 server_principal 可以是登录名或用户定义的服务器角色**。 server_principal 不能是固定服务器角色、数据库角色或 sa**。  
+ADD MEMBER server_principal  
+将指定的服务器主体添加到服务器角色中。 server_principal 可以是登录名或用户定义的服务器角色。 server_principal 不能是固定服务器角色、数据库角色或 sa。  
   
-DROP MEMBER server_principal**  
-从服务器角色中删除指定的服务器主体。 server_principal 可以是登录名或用户定义的服务器角色**。 server_principal 不能是固定服务器角色、数据库角色或 sa**。  
+DROP MEMBER server_principal  
+从服务器角色中删除指定的服务器主体。 server_principal 可以是登录名或用户定义的服务器角色。 server_principal 不能是固定服务器角色、数据库角色或 sa。  
   
 WITH NAME =new_server_role_name  
 指定用户定义的服务器角色的新名称。 服务器中不能已存在此名称。  
@@ -144,7 +144,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. 查看角色成员身份  
-若要查看角色成员身份，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的服务器角色（成员）页或执行以下查询****：  
+若要查看角色成员身份，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的服务器角色（成员）页或执行以下查询：  
   
 ```sql
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

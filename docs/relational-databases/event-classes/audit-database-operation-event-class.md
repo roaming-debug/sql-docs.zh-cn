@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f321bb7fe011edccb3fdbcada18a95756f4dd4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385343"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126846"
 ---
 # <a name="audit-database-operation-event-class"></a>Audit Database Operation 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  当数据库中发生各种操作（如检查点操作或订阅查询通知）时，会发生 Audit Database Operation 事件类****。  
+  当数据库中发生各种操作（如检查点操作或订阅查询通知）时，会发生 Audit Database Operation 事件类。  
   
 ## <a name="audit-database-operation-event-class-data-columns"></a>Audit Database Operation 事件类的数据列  
   

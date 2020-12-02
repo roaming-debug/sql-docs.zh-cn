@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7e5e8e0bc84e26798716ba1635580b81dbfc08c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88331073"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126686"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify 事件类
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]当 Service Broker 确定消息的路由时， 生成 Broker:Message Classify 事件****。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]当 Service Broker 确定消息的路由时， 生成 Broker:Message Classify 事件。  
   
 ## <a name="brokermessage-classify-event-class-data-columns"></a>Broker:Message Classify 事件类的数据列  
   

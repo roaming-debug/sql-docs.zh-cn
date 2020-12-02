@@ -26,11 +26,11 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4a75da0d64957e87997e65fd135c332065a5fa31
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196627"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128293"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,27 +62,27 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 
 ## <a name="arguments"></a>参数
  cursor_name  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标定义的名称。 cursor_name 必须符合有关标识符的规则**。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标定义的名称。 cursor_name 必须符合有关标识符的规则。  
   
  INSENSITIVE  
- 定义一个游标，以创建将由该游标使用的数据的临时副本。 对游标的所有请求都从 tempdb 中的这一临时表中得到应答；因此，在对该游标进行提取操作时返回的数据中不反映对基表所做的修改，并且该游标不允许修改****。 使用 ISO 语法时，如果省略 `INSENSITIVE`，则已提交的（任何用户）对基础表的删除和更新则会反映在后面的提取操作中。  
+ 定义一个游标，以创建将由该游标使用的数据的临时副本。 对游标的所有请求都从 tempdb 中的这一临时表中得到应答；因此，在对该游标进行提取操作时返回的数据中不反映对基表所做的修改，并且该游标不允许修改。 使用 ISO 语法时，如果省略 `INSENSITIVE`，则已提交的（任何用户）对基础表的删除和更新则会反映在后面的提取操作中。  
   
  SCROLL  
  指定所有的提取选项（`FIRST`、`LAST`、`PRIOR`、`NEXT`、`RELATIVE` 和 `ABSOLUTE`）均可用。 如果未在 ISO `DECLARE CURSOR` 中指定 `SCROLL`，则 `NEXT` 是唯一支持的提取选项。 如果还指定了 `FAST_FORWARD`，则无法指定 `SCROLL`。 如果未指定 `SCROLL`，则只有提取选项 `NEXT` 可用，且游标将变为 `FORWARD_ONLY`。
   
  select_statement  
- 是定义游标结果集的标准 `SELECT` 语句。 在游标声明的 select_statement 中不允许使用关键字 `FOR BROWSE` 和 `INTO`**。  
+ 是定义游标结果集的标准 `SELECT` 语句。 在游标声明的 select_statement 中不允许使用关键字 `FOR BROWSE` 和 `INTO`。  
   
- 如果 select_statement 中的子句与所请求的游标类型的功能有冲突，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将游标隐式转换为其他类型**。  
+ 如果 select_statement 中的子句与所请求的游标类型的功能有冲突，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将游标隐式转换为其他类型。  
   
  READ ONLY  
  禁止通过该游标进行更新。 无法在 `UPDATE` 或 `DELETE` 语句的 `WHERE CURRENT OF` 子句中引用游标。 该选项优先于要更新的游标的默认功能。  
   
- UPDATE [OF column_name [,...n]]********  
+ UPDATE [OF column_name [,...n]]  
  定义游标中可更新的列。 如果指定了 OF <column_name> [, <... n>]，则只允许修改所列出的列。 如果指定了 `UPDATE`，但未指定列的列表，则可以更新所有列。  
   
 cursor_name  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标定义的名称。 cursor_name 必须符合有关标识符的规则**。  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标定义的名称。 cursor_name 必须符合有关标识符的规则。  
   
 LOCAL  
 指定该游标的范围对在其中创建它的批处理、存储过程或触发器是局部的。 该游标名称仅在这个作用域内有效。 在批处理、存储过程、触发器或存储过程 `OUTPUT` 参数中，该游标可由局部游标变量引用。 `OUTPUT` 参数用于将局部游标传递回调用批处理、存储过程或触发器，它们可在存储过程终止后给游标变量分配参数使其引用游标。 除非 `OUTPUT` 参数将游标传递回来，否则游标将在批处理、存储过程或触发器终止时隐式释放。 如果 `OUTPUT` 参数将游标传递回来，则游标在最后引用它的变量释放或离开作用域时释放。  
@@ -91,16 +91,16 @@ GLOBAL
 指定该游标范围对连接是全局的。 在由此连接执行的任何存储过程或批处理中，都可以引用该游标名称。 该游标仅在断开连接时隐式释放。  
   
 > [!NOTE]  
->  如果 `GLOBAL` 和 `LOCAL` 参数都未指定，则默认值由“默认为本地游标”数据库选项的设置控制****。  
+>  如果 `GLOBAL` 和 `LOCAL` 参数都未指定，则默认值由“默认为本地游标”数据库选项的设置控制。  
   
 FORWARD_ONLY  
 指定游标只能向前移动，并从第一行滚动到最后一行。 `FETCH NEXT` 是唯一支持的提取选项。 对所有由当前用户发出（或由其他用户提交）并影响结果集中的行的插入、更新和删除语句，其效果在提取这些行时是可见的。 由于游标无法向后滚动，但是，在提取行后对数据库中的行进行的更改通过游标均不可见。 默认只进游标是动态的，这意味着处理当前行时会检测到所有更改。 这可实现更快速的游标打开，并使结果集能够显示对基础表所做的更新。 尽管只进游标不支持向后滚动，但应用程序可通过关闭并重新打开游标返回到结果集的开头。 如果指定了 `FORWARD_ONLY` 而没有指定 `STATIC`、`KEYSET` 和 `DYNAMIC` 关键字，则游标作为动态游标进行操作。 如果未指定 `FORWARD_ONLY` 和 `SCROLL`，则默认为 `FORWARD_ONLY`，除非指定了关键字 `STATIC`、`KEYSET` 或 `DYNAMIC`。 `STATIC`、`KEYSET` 和 `DYNAMIC` 游标默认为 `SCROLL`。 与 ODBC 和 ADO 等数据库 API 不同，`STATIC`、`KEYSET` 和 `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标支持 `FORWARD_ONLY`。  
    
  STATIC  
-指定游标始终以第一次打开时的样式显示结果集，并制作数据的临时副本，供游标使用。 对游标的所有请求都通过 tempdb 中的这个临时表进行答复****。 因此，对基表所做的插入、更新和删除操作不在对此游标所做的提取操作返回的数据中反映，并且在该游标打开后，不会检测对结果集的成员、顺序或值所做的更改。 尽管不需要，但静态游标可检测其自己的更新、删除和插入。 例如，假定静态游标提取行，然后另一个应用程序将更新该行。 如果应用程序通过静态游标重新提取行，尽管更改由其他应用程序执行，但看到的值将保持不变。 支持所有类型的滚动。 
+指定游标始终以第一次打开时的样式显示结果集，并制作数据的临时副本，供游标使用。 对游标的所有请求都通过 tempdb 中的这个临时表进行答复。 因此，对基表所做的插入、更新和删除操作不在对此游标所做的提取操作返回的数据中反映，并且在该游标打开后，不会检测对结果集的成员、顺序或值所做的更改。 尽管不需要，但静态游标可检测其自己的更新、删除和插入。 例如，假定静态游标提取行，然后另一个应用程序将更新该行。 如果应用程序通过静态游标重新提取行，尽管更改由其他应用程序执行，但看到的值将保持不变。 支持所有类型的滚动。 
   
 KEYSET  
-指定当游标打开时，游标中行的成员身份和顺序已经固定。 对行进行唯一标识的键集内置在 tempdb 内一个称为 keyset 的表中********。 此游标在其检测更改的功能方面，提供介于静态和动态游标之间的功能。 比如静态游标，它不会始终检测对结果集的成员身份和顺序的更改。 比如动态游标，它会检测对结果集中的行值的更改。 由键集驱动的游标由一组唯一标识符（键）控制，这组键称为键集。 键是根据以唯一方式标识结果集中各行的一组列生成的。 键集是查询语句返回的所有行中的一组键值。 使用由键集驱动的游标，为游标中的每行生成和保存一个键，并将其存储在客户端工作站或服务器上。 访问每行时，存储的密钥可用来从数据源提取当前数据值。 在由键集驱动的游标中，如果键集完全填充，将冻结结果集成员身份。 此后，在重新打开结果集前，都不会执行影响成员身份的添加或更新操作。 用户滚动浏览结果集时，对数据值的更改（由键集所有者或其他进程执行）是可见的：
+指定当游标打开时，游标中行的成员身份和顺序已经固定。 对行进行唯一标识的键集内置在 tempdb 内一个称为 keyset 的表中。 此游标在其检测更改的功能方面，提供介于静态和动态游标之间的功能。 比如静态游标，它不会始终检测对结果集的成员身份和顺序的更改。 比如动态游标，它会检测对结果集中的行值的更改。 由键集驱动的游标由一组唯一标识符（键）控制，这组键称为键集。 键是根据以唯一方式标识结果集中各行的一组列生成的。 键集是查询语句返回的所有行中的一组键值。 使用由键集驱动的游标，为游标中的每行生成和保存一个键，并将其存储在客户端工作站或服务器上。 访问每行时，存储的密钥可用来从数据源提取当前数据值。 在由键集驱动的游标中，如果键集完全填充，将冻结结果集成员身份。 此后，在重新打开结果集前，都不会执行影响成员身份的添加或更新操作。 用户滚动浏览结果集时，对数据值的更改（由键集所有者或其他进程执行）是可见的：
 -  如果删除某一行，尝试提取该行时将返回为 -2 的 `@@FETCH_STATUS`，因为已删除的行在结果集中将显示为空白。 行键存在于键集中，但行不再存在于结果集中。 
 -  游标外所做的插入（由其他进程执行）仅在关闭并重新打开游标后可见。 游标内部所做的插入在结果集的末尾可见。
 -  从游标外部更新键值类似于删除旧行后再插入新行。 具有新值的行不可见，且尝试提取具有旧值的行时返回的 `@@FETCH_STATUS` 为 -2。 如果通过指定 `WHERE CURRENT OF` 子句来通过游标执行更新，则新值可见。 
@@ -124,20 +124,20 @@ SCROLL_LOCKS
 指定通过游标进行的定位更新或删除一定会成功。 将行读入游标时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将锁定这些行，以确保随后可对它们进行修改。 如果还指定了 `FAST_FORWARD` 或 `STATIC`，则无法指定 `SCROLL_LOCKS`。  
   
 OPTIMISTIC  
-指定如果行自读入游标以来已得到更新，则通过游标进行的定位更新或定位删除不成功。 当将行读入游标时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不锁定行。 相反，它使用 timestamp 列值的比较，或者如果表没有 timestamp 列则使用校验和值，以确定将行读入游标后是否已修改该行********。 如果已修改该行，尝试进行的定位更新或定位删除将失败。 如果还指定了 `FAST_FORWARD`，则无法指定 `OPTIMISTIC`。  
+指定如果行自读入游标以来已得到更新，则通过游标进行的定位更新或定位删除不成功。 当将行读入游标时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不锁定行。 相反，它使用 timestamp 列值的比较，或者如果表没有 timestamp 列则使用校验和值，以确定将行读入游标后是否已修改该行。 如果已修改该行，尝试进行的定位更新或定位删除将失败。 如果还指定了 `FAST_FORWARD`，则无法指定 `OPTIMISTIC`。  
   
  TYPE_WARNING  
  指定如果游标从所请求的类型隐式转换为另一种类型，则向客户端发送警告消息。  
   
  select_statement  
- 定义游标结果集的标准 SELECT 语句。 在游标声明的 select_statement 中不允许使用关键字 `COMPUTE`、`COMPUTE BY`、`FOR BROWSE` 和 `INTO`**。  
+ 定义游标结果集的标准 SELECT 语句。 在游标声明的 select_statement 中不允许使用关键字 `COMPUTE`、`COMPUTE BY`、`FOR BROWSE` 和 `INTO`。  
   
 > [!NOTE]  
 > 可以在游标声明中使用查询提示；但如果还使用 `FOR UPDATE OF` 子句，请在 `FOR UPDATE OF` 之后指定 `OPTION (<query_hint>)`。  
   
-如果 select_statement 中的子句与所请求的游标类型的功能有冲突，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将游标隐式转换为其他类型**。 有关详细信息，请参阅“隐式游标转换”。  
+如果 select_statement 中的子句与所请求的游标类型的功能有冲突，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将游标隐式转换为其他类型。 有关详细信息，请参阅“隐式游标转换”。  
   
-FOR UPDATE [OF column_name [,...n]]********  
+FOR UPDATE [OF column_name [,...n]]  
 定义游标中可更新的列。 如果提供了 `OF <column_name> [, <... n>]`，则只允许修改所列出的列。 如果指定了 `UPDATE`，但未指定列的列表，则除非指定了 `READ_ONLY` 并发选项，否则可以更新所有的列。  
   
 ## <a name="remarks"></a>注解  
@@ -166,7 +166,7 @@ FOR UPDATE [OF column_name [,...n]]********
 |**sp_describe_cursor_columns**|说明游标结果集中的列的属性。|  
 |**sp_describe_cursor_tables**|说明游标所访问的基表。|  
   
- 在声明游标的 select_statement 中可以使用变量**。 游标变量值在声明游标后不发生更改。  
+ 在声明游标的 select_statement 中可以使用变量。 游标变量值在声明游标后不发生更改。  
   
 ## <a name="permissions"></a>权限  
  `DECLARE CURSOR` 的权限默认授予对游标中使用的视图、表和列具有 `SELECT` 权限的任何用户。

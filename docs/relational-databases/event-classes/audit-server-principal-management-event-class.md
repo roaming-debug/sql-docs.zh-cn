@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 17ca0e44c6320a91c50005c7ed382224f5723559
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456063"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126760"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Audit Server Principal Management 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  创建、更改或删除服务器主体时，会发生 Audit Server Principal Management 事件类****。  
+  创建、更改或删除服务器主体时，会发生 Audit Server Principal Management 事件类。  
   
 ## <a name="audit-server-principal-management-event-class-data-columns"></a>Audit Server Principal Management 事件类的数据列  
   

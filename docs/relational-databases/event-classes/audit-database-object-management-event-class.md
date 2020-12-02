@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7222928fabac19df648cea9d059d6657e8bd3c9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475975"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126860"
 ---
 # <a name="audit-database-object-management-event-class"></a>Audit Database Object Management 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  当对数据库对象（如架构）执行 CREATE、ALTER 或 DROP 语句时，会发生 Audit Database Object Management 事件类****。  
+  当对数据库对象（如架构）执行 CREATE、ALTER 或 DROP 语句时，会发生 Audit Database Object Management 事件类。  
   
 > [!NOTE]  
 >  不审核与公钥相关的操作。  

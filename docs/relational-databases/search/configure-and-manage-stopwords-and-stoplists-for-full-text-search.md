@@ -20,19 +20,19 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869399"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127767"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>为全文搜索配置和管理非索引字和非索引字表
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  为了精简全文检索， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种机制，用于去掉那些经常出现但对搜索无益的字符串。 这些去掉的字符串称为“非索引字” **。 在索引创建期间，全文引擎将忽略全文检索中的非索引字。 也就是说全文查询将不搜索非索引字。  
+  为了精简全文检索， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种机制，用于去掉那些经常出现但对搜索无益的字符串。 这些去掉的字符串称为“非索引字” 。 在索引创建期间，全文引擎将忽略全文检索中的非索引字。 也就是说全文查询将不搜索非索引字。  
    
-**非索引字**。 非索引字可以是特定语言中具有含义的单词。 例如，在英语中，诸如“a”、“and”、“is”和“the”之类的词将被排除在全文检索之外，这是因为已经知道它们对搜索没有用处。 非索引字也可以是没有语言含义的“令牌”**。  
+**非索引字**。 非索引字可以是特定语言中具有含义的单词。 例如，在英语中，诸如“a”、“and”、“is”和“the”之类的词将被排除在全文检索之外，这是因为已经知道它们对搜索没有用处。 非索引字也可以是没有语言含义的“令牌”。  
 
-**非索引字表**。 使用称为“非索引字表”的对象在数据库中管理非索引字。 “非索引字表”** 是一个由非索引字组成的列表，这些非索引字在与全文检索关联时会应用于该索引的全文查询。
+**非索引字表**。 使用称为“非索引字表”的对象在数据库中管理非索引字。 “非索引字表”是一个由非索引字组成的列表，这些非索引字在与全文检索关联时会应用于该索引的全文查询。
    
 ## <a name="use-an-existing-stoplist"></a>使用现有的非索引字表  
  可以通过以下方式使用现有的非索引字表：  
@@ -51,11 +51,11 @@ ms.locfileid: "91869399"
   
 1.  在对象资源管理器中，展开服务器。  
   
-2.  展开“数据库”****，然后展开要在其中创建全文非索引字表的数据库。  
+2.  展开“数据库”，然后展开要在其中创建全文非索引字表的数据库。  
   
-3.  展开“存储”****，然后右键单击“全文非索引字表”****。  
+3.  展开“存储”，然后右键单击“全文非索引字表”。  
   
-4.  选择“新建全文非索引字表”****。  
+4.  选择“新建全文非索引字表”。  
   
 5.  输入新的非索引字表的名称。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "91869399"
   
 3.  展开 **“存储”**，然后选择 **“全文非索引字表”**。  
   
-4.  右键单击要更改其属性的非索引字表，然后选择“属性”。****  
+4.  右键单击要更改其属性的非索引字表，然后选择“属性”。  
   
 5.  在“ [全文非索引字表属性](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) ”对话框中：  
   
@@ -102,7 +102,7 @@ ms.locfileid: "91869399"
   
     2.  如果对选定的操作启用了 **“非索引字”** 文本框，请输入一个非索引字。 该非索引字必须是唯一的，也就是说，在针对所选语言的此非索引字表中还不存在该非索引字。  
   
-    3.  如果对选定的操作启用了“全文语言”**** 列表框，请选择一种语言。  
+    3.  如果对选定的操作启用了“全文语言”列表框，请选择一种语言。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

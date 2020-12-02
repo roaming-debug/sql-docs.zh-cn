@@ -27,11 +27,11 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 9c50ce97995322a025feb1e201682717d7d2234d
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688511"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126165"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,17 +58,17 @@ FOR CONVERSATION
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- ConversationPriorityName**  
+ ConversationPriorityName  
  指定此会话优先级的名称。 该名称在当前数据库中必须唯一，并且必须符合 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
  SET  
  指定用于确定会话优先级是否应用于会话的条件。 如果指定了 SET，则它必须至少包含以下条件之一：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。 如果未指定 SET，则全部三个条件都设置为默认值。  
   
  CONTRACT_NAME = {ContractName | ANY}  
- 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 ContractName 是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符，并且必须指定当前数据库中的协定的名称**。  
+ 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 ContractName 是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符，并且必须指定当前数据库中的协定的名称。  
   
- ContractName**  
- 指定此会话优先级只能应用于启动会话的 BEGIN DIALOG 语句指定了 ON CONTRACT ContractName 的会话**。  
+ ContractName  
+ 指定此会话优先级只能应用于启动会话的 BEGIN DIALOG 语句指定了 ON CONTRACT ContractName 的会话。  
   
  ANY  
  指定此会话优先级可应用于任何会话，而不考虑它使用的约定如何。  
@@ -78,31 +78,31 @@ FOR CONVERSATION
  LOCAL_SERVICE_NAME = {LocalServiceName | ANY}  
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
- LocalServiceName 是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符。** 它必须指定当前数据库中的服务的名称。  
+ LocalServiceName 是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符。 它必须指定当前数据库中的服务的名称。  
   
- LocalServiceName**  
+ LocalServiceName  
  指定此会话优先级可以应用于以下各项：  
   
--   其发起方服务名称与 LocalServiceName 匹配的任何发起方会话端点**。  
+-   其发起方服务名称与 LocalServiceName 匹配的任何发起方会话端点。  
   
--   其目标服务名称与 LocalServiceName 匹配的任何目标会话端点**。  
+-   其目标服务名称与 LocalServiceName 匹配的任何目标会话端点。  
   
  ANY  
  -   指定此会话优先级可应用于任何会话端点，而不管端点使用的本地服务的名称如何。  
   
  默认值为 ANY。  
   
- REMOTE_SERVICE_NAME = {'RemoteServiceName' | ANY}******  
+ REMOTE_SERVICE_NAME = {'RemoteServiceName' | ANY}  
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
- RemoteServiceName 是 nvarchar(256) 类型的文本******。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 RemoteServiceName 字符串匹配**。 这种比较区分大小写，并且不考虑当前的排序规则。 目标服务可以位于当前[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中，也可以位于远程[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
+ RemoteServiceName 是 nvarchar(256) 类型的文本。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 RemoteServiceName 字符串匹配。 这种比较区分大小写，并且不考虑当前的排序规则。 目标服务可以位于当前[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中，也可以位于远程[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
   
  'RemoteServiceName'  
  指定此会话优先级可以应用于以下各项：  
   
--   其关联目标服务名称与 RemoteServiceName 匹配的任何发起方会话端点**。  
+-   其关联目标服务名称与 RemoteServiceName 匹配的任何发起方会话端点。  
   
--   其关联发起方服务名称与 RemoteServiceName 匹配的任何目标会话端点**。  
+-   其关联发起方服务名称与 RemoteServiceName 匹配的任何目标会话端点。  
   
  ANY  
  指定此会话优先级可应用于任何会话端点，而不管与端点关联的远程服务的名称如何。  
@@ -110,7 +110,7 @@ FOR CONVERSATION
  默认值为 ANY。  
   
  PRIORITY_LEVEL = { PriorityValue | DEFAULT }  
- 指定要分配给使用在会话优先级中指定的约定和服务的任何会话端点的优先级。 PriorityValue 必须是一个从 1（优先级最低）到 10（优先级最高）的整数文本**。 默认值为 5。  
+ 指定要分配给使用在会话优先级中指定的约定和服务的任何会话端点的优先级。 PriorityValue 必须是一个从 1（优先级最低）到 10（优先级最高）的整数文本。 默认值为 5。  
   
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 为会话端点分配优先级别。 优先级别控制与端点关联的操作的优先级。 每个会话均有两个会话端点：  
@@ -137,13 +137,13 @@ FOR CONVERSATION
   
 |运营合同|操作本地服务|操作远程服务|  
 |------------------------|-----------------------------|------------------------------|  
-|ContractName**|LocalServiceName**|RemoteServiceName**|  
-|ContractName**|LocalServiceName**|ANY|  
-|ContractName**|ANY|RemoteServiceName**|  
-|ContractName**|ANY|ANY|  
-|ANY|LocalServiceName**|RemoteServiceName**|  
-|ANY|LocalServiceName**|ANY|  
-|ANY|ANY|RemoteServiceName**|  
+|ContractName|LocalServiceName|RemoteServiceName|  
+|ContractName|LocalServiceName|ANY|  
+|ContractName|ANY|RemoteServiceName|  
+|ContractName|ANY|ANY|  
+|ANY|LocalServiceName|RemoteServiceName|  
+|ANY|LocalServiceName|ANY|  
+|ANY|ANY|RemoteServiceName|  
 |ANY|ANY|ANY|  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 首先查找其指定的约定、本地服务和远程服务与操作所用的约定、本地服务和远程服务匹配的优先级。 如果找不到，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将查找约定以及本地服务与操作所用的约定和本地服务匹配且远程服务指定为 ANY 的优先级。 这一过程将按照优先顺序表中列出的所有变化情况继续下去。 如果未找到匹配项，将为操作分配默认优先级 5。  

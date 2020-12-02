@@ -15,11 +15,11 @@ ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 65ef2568a30ada4503252adf404c24b2c8b5017d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425569"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127129"
 ---
 # <a name="-equal-ssis-expression"></a>==（等于）（SSIS 表达式）
 

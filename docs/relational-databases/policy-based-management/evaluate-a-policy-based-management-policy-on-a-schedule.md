@@ -14,11 +14,11 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 79e16f9a39e235f7ceed5a77e55d03f4c5efed72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381183"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127870"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>定期评估基于策略的管理策略
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88381183"
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要评估其计划的策略，然后选择“属性”****。  
+5.  右键单击要评估其计划的策略，然后选择“属性”。  
   
 6.  在“打开策略 - policy_name”对话框的“评估模式”列表中，选择“按计划” 。  
   
