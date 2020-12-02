@@ -23,10 +23,10 @@ ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9e50a3f642bc4ecc9782aea699f49e6403d98c23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457167"
 ---
 # <a name="validating-a-data-flow-component"></a>验证数据流组件
@@ -43,9 +43,9 @@ ms.locfileid: "88457167"
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> 值指示组件具有可通过在设计器中进行编辑来更正的错误。 导致该错误的原因通常是没有指定或没有正确设置自定义属性或所需连接。  
   
- 最后一个错误值是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>，它指示组件已发现仅应该在编辑包 XML 或使用对象模型直接修改 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 属性时出现的错误。 例如，当组件只添加了一个输入，但是验证操作却发现 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 中存在多个输入时，此类错误将会发生。 若要修复生成此返回值的错误，只能使用“高级编辑器”**** 对话框中的“重置”**** 按钮重置组件。  
+ 最后一个错误值是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>，它指示组件已发现仅应该在编辑包 XML 或使用对象模型直接修改 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 属性时出现的错误。 例如，当组件只添加了一个输入，但是验证操作却发现 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 中存在多个输入时，此类错误将会发生。 若要修复生成此返回值的错误，只能使用“高级编辑器”对话框中的“重置”按钮重置组件。  
   
- 除了返回错误值，组件还通过在验证过程中发布警告和错误来提供反馈。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法提供了此机制。 调用这些方法时，这些事件会发布在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的“错误列表”**** 窗口中。 然后，组件开发人员可以直接向用户提供有关已发生错误的反馈，并且在适当的情况下说明如何更正它们。  
+ 除了返回错误值，组件还通过在验证过程中发布警告和错误来提供反馈。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法提供了此机制。 调用这些方法时，这些事件会发布在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的“错误列表”窗口中。 然后，组件开发人员可以直接向用户提供有关已发生错误的反馈，并且在适当的情况下说明如何更正它们。  
   
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 的重写实现。  
   

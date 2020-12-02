@@ -19,16 +19,16 @@ ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c22913dfea659c94b3e780d86272aabf55ccbd2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459612"
 ---
 # <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  返回由用户在数据库连接字符串中指定的数据库名称。 使用 sqlcmd-d**** 选项 (USE database**) 指定此数据库。 也可以使用开放式数据库连接 (ODBC) 数据源表达式 (initial catalog =databasename**) 来指定此数据库。  
+  返回由用户在数据库连接字符串中指定的数据库名称。 使用 sqlcmd-d 选项 (USE database) 指定此数据库。 也可以使用开放式数据库连接 (ODBC) 数据源表达式 (initial catalog =databasename) 来指定此数据库。  
   
  该数据库与默认用户数据库不同。  
   

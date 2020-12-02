@@ -23,10 +23,10 @@ ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b7b067831ca56d3dc5797aa68e4810a7e9969946
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459951"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext、text 和 image (Transact-SQL)
@@ -34,11 +34,11 @@ ms.locfileid: "88459951"
 
 用于存储大型非 Unicode 字符、Unicode 字符及二进制数据的固定长度数据类型和可变长度数据类型。 Unicode 数据使用 UNICODE UCS-2 字符集。
   
->**重要说明！**  SQL Server 的未来版本中将删除 ntext、text 和 image 数据类型************。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
+>**重要说明！**  SQL Server 的未来版本中将删除 ntext、text 和 image 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
 ## <a name="arguments"></a>参数
 **ntext**  
-长度可变的 Unicode 数据，字符串最大长度为 2^30 - 1 (1,073,741,823) 个字节。 存储大小是所输入字符串长度的两倍（以字节为单位）。 ntext 的 ISO 同义词为 national text********。
+长度可变的 Unicode 数据，字符串最大长度为 2^30 - 1 (1,073,741,823) 个字节。 存储大小是所输入字符串长度的两倍（以字节为单位）。 ntext 的 ISO 同义词为 national text。
   
 **text**  
 服务器代码页中长度可变的非 Unicode 数据，字符串最大长度为 2^31-1 (2,147,483,647) 个字节。 当服务器代码页使用双字节字符时，存储仍是 2,147,483,647 字节。 根据字符串，存储大小可能小于 2,147,483,647 字节。
@@ -47,7 +47,7 @@ ms.locfileid: "88459951"
 长度可变的二进制数据，从 0 到 2^31-1 (2,147,483,647) 个字节。
   
 ## <a name="remarks"></a>备注  
-以下函数和语句可与 ntext、text 或 image 数据一起使用************。
+以下函数和语句可与 ntext、text 或 image 数据一起使用。
   
 |函数|语句|  
 |---|---|

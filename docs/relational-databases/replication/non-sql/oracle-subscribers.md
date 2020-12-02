@@ -18,10 +18,10 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3e7b6abc6b235950fef107a870e53d827dee6f5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88455595"
 ---
 # <a name="oracle-subscribers"></a>Oracle 订阅服务器
@@ -87,7 +87,7 @@ ms.locfileid: "88455595"
   
     -   确保不要将空字符串作为列值插入到已发布表中。  
   
-    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 -SkipErrors 参数****。 指定 Oracle 错误代码 1400 (**-SkipErrors1400**)。  
+    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 -SkipErrors 参数。 指定 Oracle 错误代码 1400 (**-SkipErrors1400**)。  
   
     -   修改生成的创建表脚本，从任何可能包含关联空字符串的字符列中删除 NOT NULL 属性，并使用 @creation_script sp_addarticle [的](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)参数将修改后的脚本作为项目的自定义创建脚本提供。  
   

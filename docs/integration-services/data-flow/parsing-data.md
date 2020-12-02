@@ -15,10 +15,10 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eba3e72558433acab3ba1a0edc3cd921b15281bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457335"
 ---
 # <a name="parsing-data"></a>分析数据
@@ -192,7 +192,7 @@ ms.locfileid: "88457335"
 ## <a name="enable-fast-parse"></a>启用快速分析
 必须为使用快速分析的源或转换的每个列设置快速分析属性。 若要设置该属性，请使用平面文件源和数据转换的高级编辑器。  
   
-1.  右键单击平面文件源或数据转换，然后单击“显示高级编辑器”。****  
+1.  右键单击平面文件源或数据转换，然后单击“显示高级编辑器”。  
   
 2.  在 **“高级编辑器”** 对话框中，单击 **“输入属性和输出属性”** 选项卡。  
   

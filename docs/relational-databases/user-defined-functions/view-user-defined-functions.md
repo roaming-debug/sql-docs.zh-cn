@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 70cb57fd62b62e10aeb1d68d708a7504265e4e97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88460189"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
@@ -69,9 +69,9 @@ ms.locfileid: "88460189"
   
     -   Aggregate 函数  
   
-4.  右键单击要查看其属性的函数，然后选择“属性”****。  
+4.  右键单击要查看其属性的函数，然后选择“属性”。  
 
-     “函数属性 - function_name”对话框中将显示以下属性**** __。  
+     “函数属性 - function_name”对话框中将显示以下属性 。  
   
      **Database**  
      包含此函数的数据库的名称。  

@@ -14,10 +14,10 @@ ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2dae5a66a762e53a4748bf43732aed70c5c0edfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465130"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 发布的术语词汇表
@@ -40,7 +40,7 @@ ms.locfileid: "88465130"
  用于生成唯一编号的数据库对象。 复制使用序列来为已发布表的更改排序。  
   
 #### <a name="sqlplus"></a>SQL\*Plus  
- 用于访问和查询 Oracle 数据库的应用程序。 它类似于  sqlcmd[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ****。  
+ 用于访问和查询 Oracle 数据库的应用程序。 它类似于  sqlcmd[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="synonym"></a>同义词  
  对象的别名。 配置 Oracle 发布服务器时自动创建特殊公共同义词 **MSSQLSERVERDISTRIBUTOR** 。 该同义词引用 **HREPL_Distributor** 表，并提供一个逻辑指针指向为发布服务器服务的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器。  

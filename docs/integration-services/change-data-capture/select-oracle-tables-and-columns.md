@@ -14,10 +14,10 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d418e3d9f8b323c5f0c7905dad8c2ec636f1a3e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457626"
 ---
 # <a name="select-oracle-tables-and-columns"></a>选择 Oracle 表和列
@@ -37,22 +37,22 @@ ms.locfileid: "88457626"
   
      如果未指定，则该名称将从源架构名称加上源表名称中派生而来，格式为 `<schema-name>_<table-name>`。 捕获实例名称不能超过 100 个字符，并且在数据库中必须是唯一的。  
   
-     可单击此列的任意单元格对 **capture_instance**进行手动编辑。  
+     可单击此列的任意单元格对 **capture_instance** 进行手动编辑。  
   
 -   **安全角色**：用于控制对更改数据的访问的数据库访问控制角色的名称。  
   
-     可单击此列的任意单元格对 **security_role**进行手动编辑。  
+     可单击此列的任意单元格对 **security_role** 进行手动编辑。  
   
  **添加表**  
- 单击“添加表”**** 可打开“表选择”对话框，从中你可以[为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)。  
+ 单击“添加表”可打开“表选择”对话框，从中你可以[为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)。  
   
  **编辑**  
- 从该列表中选择一个表，然后选择“编辑”**** 以便打开该表的“属性”**** 对话框，从中你可以[对为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)。  
+ 从该列表中选择一个表，然后选择“编辑”以便打开该表的“属性”对话框，从中你可以[对为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)。  
   
  **删除**  
- 从该列表中选择一个表，然后单击“删除”**** 可从 CDC 实例中删除该表。  
+ 从该列表中选择一个表，然后单击“删除”可从 CDC 实例中删除该表。  
   
- 在使用正确的对话框[为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)或[对为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)后，单击“下一步”**** 以[生成和运行补充日志记录脚本](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)。  
+ 在使用正确的对话框[为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)或[对为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)后，单击“下一步”以[生成和运行补充日志记录脚本](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   

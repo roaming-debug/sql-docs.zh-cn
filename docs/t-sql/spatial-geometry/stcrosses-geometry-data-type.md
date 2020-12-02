@@ -19,10 +19,10 @@ ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b7294db9b86f9a356fa7834b89642ec0b1653866
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88458930"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses（geometry 数据类型）
@@ -41,12 +41,12 @@ ms.locfileid: "88458930"
 
 ## <a name="arguments"></a>参数
  *other_geometry*  
- 将与调用 `STCrosses()` 的实例进行比较的另一个 geometry 实例****。  
+ 将与调用 `STCrosses()` 的实例进行比较的另一个 geometry 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型：SqlBoolean****  
+ CLR 返回类型：SqlBoolean  
   
 ## <a name="remarks"></a>注解  
  如果同时满足以下两个条件，则表示两个 **geometry** 实例相交：  
@@ -55,7 +55,7 @@ ms.locfileid: "88458930"
   
 -   交集发生在两个源 **geometry** 实例的内部。  
   
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STCrosses()` 来测试两个 `geometry` 实例，以查看它们是否相交。  

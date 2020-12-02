@@ -19,16 +19,16 @@ ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5526d9e8fb788e06b1ed61b3e20236963319b844
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88458951"
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-根据地理标记语言 (GML) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子集中的给定表示形式构建 geometry 实例****。
+根据地理标记语言 (GML) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子集中的给定表示形式构建 geometry 实例。
   
 有关地理标记语言的详细信息，请参阅以下开放地理空间信息联盟规范：
   
@@ -44,19 +44,19 @@ GeomFromGml ( GML_input, SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- GML_input**  
+ GML_input  
  XML 输入，GML 将从该输入返回值。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)********。  
+ 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="remarks"></a>注解  
- 如果输入的格式不正确，此方法将引发 FormatException****。  
+ 如果输入的格式不正确，此方法将引发 FormatException。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `GeomFromGml()` 创建 `geometry` 实例。  

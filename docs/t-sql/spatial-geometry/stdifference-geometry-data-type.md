@@ -19,10 +19,10 @@ ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f8fc3fab7828f5978a3a944c9efb0eb3f9fbada2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88458931"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference（geometry 数据类型）
@@ -44,12 +44,12 @@ ms.locfileid: "88458931"
  另一个 **geometry** 实例，指示要从调用 `STDifference()` 的实例中删除哪些点。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="remarks"></a>注解  
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。   只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。   只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   
 ## <a name="examples"></a>示例  
   

@@ -14,10 +14,10 @@ ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: afdeac18b14b75461038889fe34b6fd34658991f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457753"
 ---
 # <a name="project-versions-dialog-box"></a>“项目版本”对话框
@@ -47,9 +47,9 @@ ms.locfileid: "88457753"
   
 4.  **SSISDB** 节点包含一个或多个文件夹，每个文件夹包含一个或多个项目。 展开包含您感兴趣的项目的文件夹。  
   
-5.  右键单击该项目，然后单击“版本”。****  
+5.  右键单击该项目，然后单击“版本”。  
   
- 在“项目版本”对话框中，“版本”表显示服务器上已部署的项目的版本列表，并显示部署版本的日期和时间、还原版本的日期和时间（如果被还原过）、版本说明以及版本标识符。******** 当前活动版本用表的 **“当前”** 列中的复选标记表示。  
+ 在“项目版本”对话框中，“版本”表显示服务器上已部署的项目的版本列表，并显示部署版本的日期和时间、还原版本的日期和时间（如果被还原过）、版本说明以及版本标识符。 当前活动版本用表的 **“当前”** 列中的复选标记表示。  
   
 ##  <a name="restore-a-project-version"></a><a name="restore"></a> 还原项目版本  
  若要还原项目的以前版本，请在 **“版本”** 表中选择该版本，然后单击 **“还原到所选版本”**。 项目将还原到所选版本，且该版本用 **“版本”** 表的 **“当前”** 列中的复选标记表示。  

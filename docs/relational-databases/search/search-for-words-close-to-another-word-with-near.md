@@ -22,15 +22,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6fb4746b2dda07cfcc4872f3bc987df3276f8859
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88464984"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜索与另一个词邻近的词
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  可以在 [CONTAINS ](../../t-sql/queries/contains-transact-sql.md) 谓词或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函数中使用邻近词 NEAR 来搜索相互邻近的字词或短语** ****。 
+  可以在 [CONTAINS ](../../t-sql/queries/contains-transact-sql.md) 谓词或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函数中使用邻近词 NEAR 来搜索相互邻近的字词或短语 。 
   
 ##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> NEAR 概述  
 **NEAR** 具有以下功能：  
@@ -38,7 +38,7 @@ ms.locfileid: "88464984"
 
 -   你可以按任意顺序搜索词或短语，也可以按特定顺序搜索词或短语。
   
--   可以指定第一个搜索词与最后一个搜索词之间存在的非搜索词的最大数目或最大距离**，以作为构成匹配项的条件。  
+-   可以指定第一个搜索词与最后一个搜索词之间存在的非搜索词的最大数目或最大距离，以作为构成匹配项的条件。  
 
 -   如果指定词的最大数目，还可以指定搜索词必须以指定顺序出现在匹配项中。
 
@@ -112,15 +112,15 @@ GO
 ## <a name="combine-near-with-other-terms"></a>将 NEAR 与其他词组合使用  
  你可以将 NEAR 与一些其他词组合使用。 可以使用 AND (&), OR (|) 或 AND NOT (&!) 将一个自定义邻近词与另一个自定义邻近词、简单词或前缀词组合使用。 例如：  
   
--   CONTAINS('NEAR((term1, term2),5) AND term3')******  
+-   CONTAINS('NEAR((term1, term2),5) AND term3')  
   
--   CONTAINS('NEAR((term1, term2),5) OR term3')******  
+-   CONTAINS('NEAR((term1, term2),5) OR term3')  
   
--   CONTAINS('NEAR((term1, term2),5) AND NOT term3')******  
+-   CONTAINS('NEAR((term1, term2),5) AND NOT term3')  
   
--   CONTAINS('NEAR((term1, term2),5) AND NEAR((term3, term4),2)')********  
+-   CONTAINS('NEAR((term1, term2),5) AND NEAR((term3, term4),2)')  
   
--   CONTAINS('NEAR((term1, term2),5) OR NEAR((term3, term4),2, TRUE)')********  
+-   CONTAINS('NEAR((term1, term2),5) OR NEAR((term3, term4),2, TRUE)')  
   
  例如，应用于对象的  
   

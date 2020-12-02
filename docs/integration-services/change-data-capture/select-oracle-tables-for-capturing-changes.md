@@ -14,10 +14,10 @@ ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5417245afb872fac5ffc144c0d7a8b946e677e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457617"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>为捕获更改选择 Oracle 表
@@ -30,7 +30,7 @@ ms.locfileid: "88457617"
  默认情况下，此对话框的表的列表中不包含任何表。 您可以选中复选框列顶部的复选框，以便选择所有表或搜索特定表。  
   
  **搜索特定表**  
- 按如下所示输入搜索条件，然后单击“搜索”****：  
+ 按如下所示输入搜索条件，然后单击“搜索”：  
   
 -   **架构**：从列表中选择数据库架构。 只有具有该架构的表才会出现在列表中。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88457617"
 -   **显示前 1000 个匹配表**：默认情况下选中此复选框。 它将显示限制为前 1000 个匹配表。 如果取消选中该复选框，将显示条件相匹配的所有表。 如果有大量的表，则此方法可能需要较长的时间来显示列表。  
   
  **选择要包括在 CDC 实例中的表**  
- 单击要包含的任何表旁边的复选框，然后单击“添加”****。 相应的表将添加到新建实例向导的 **“选择表和列”** 页的列表中。  
+ 单击要包含的任何表旁边的复选框，然后单击“添加”。 相应的表将添加到新建实例向导的 **“选择表和列”** 页的列表中。  
   
  单击 **“关闭”** 将关闭该对话框并且不再添加任何表。  
   

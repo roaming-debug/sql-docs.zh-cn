@@ -19,10 +19,10 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f83cb45dc060bc2877cf316e4d19baa073a9e6e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457023"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何创建 ETL 包
@@ -49,9 +49,9 @@ ms.locfileid: "88457023"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 若要安装 SQL Server 和 SSIS，请参阅[安装 Integration Services](install-windows/install-integration-services.md)。
 
--   AdventureWorksDW2012**** 示例数据库。 若要下载 AdventureWorksDW2012 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorksDW2012.bak`，并还原备份****。  
+-   AdventureWorksDW2012 示例数据库。 若要下载 AdventureWorksDW2012 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorksDW2012.bak`，并还原备份。  
 
--   示例**** 数据文件。 示例数据与 [!INCLUDE[ssIS](../includes/ssis-md.md)] 课程包一起提供。 要将示例数据和课程包下载为 Zip 文件，请参阅 [SQL Server Integration Services 教程文件](https://www.microsoft.com/download/details.aspx?id=56827)。
+-   示例数据文件。 示例数据与 [!INCLUDE[ssIS](../includes/ssis-md.md)] 课程包一起提供。 要将示例数据和课程包下载为 Zip 文件，请参阅 [SQL Server Integration Services 教程文件](https://www.microsoft.com/download/details.aspx?id=56827)。
 
     - 为了防止意外更改发生，zip 文件中的大部分文件都是只读文件。 若要将输出写入到文件或更改输出，必须在文件属性中禁用只读属性。
     - 示例包假定数据文件位于文件夹 `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package` 中。 如果将下载内容解压缩到其他位置，必须在示例包中的多个位置更新文件路径。
