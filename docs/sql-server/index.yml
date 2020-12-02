@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: 31d0046c3a81b84c926a99efce80816c5ef42a88
-  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+  ms.openlocfilehash: 97ca3c3c7fb6611b58f20fb14f627cf0ad546b15
+  ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/22/2020
-  ms.locfileid: "90915478"
+  ms.lasthandoff: 12/01/2020
+  ms.locfileid: "96442941"
 landingContent:
 - title: Azure 上的 SQL
   linkLists:
@@ -24,7 +24,7 @@ landingContent:
       url: /azure/sql-database/sql-database-single-database
     - text: Azure SQL 托管实例
       url: /azure/sql-database/sql-database-managed-instance
-    - text: Azure Synapse Analytics (SQL DW)
+    - text: Azure Synapse Analytics
       url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
     - text: Windows VM 上的 SQL Server
       url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview

@@ -12,14 +12,14 @@ f1_keywords:
 - swb.backupdatabase.mediaoptions.f1
 - sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f0c5b5b8df782652565247c7c050b1c1edc6a8b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 384233f6fdc7379ad72b120972b16ca5aba736cb
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719948"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129384"
 ---
 # <a name="back-up-database-media-options-page"></a>备份数据库（“介质选项”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
