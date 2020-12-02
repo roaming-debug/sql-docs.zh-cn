@@ -14,11 +14,11 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: d02424e5e33823956977c8b32d1ab4e996df5526
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867462"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130929"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ GO
   
  **示例 2：对具有延迟索引填充的几个列创建一个全文索引和语义索引**  
   
- 以下示例在 AdventureWorks2012 示例数据库中创建一个全文目录 **documents_catalog**。 然后，该示例创建一个使用该新目录的全文索引。 全文索引针对 **Production.Document**表的 **Title**、 **DocumentSummary** 和 **Document** 列创建，而语义索引仅针对 **Document** 列创建。 此全文索引使用新创建的全文目录和现有的唯一键索引 **PK_Document_DocumentID**。 根据建议，此索引键在整数列 **DocumentID**上创建。 该示例指定英语的 LCID 1033，这是列中数据的语言。  
+ 以下示例在 AdventureWorks2012 示例数据库中创建一个全文目录 **documents_catalog**。 然后，该示例创建一个使用该新目录的全文索引。 全文索引针对 **Production.Document** 表的 **Title**、 **DocumentSummary** 和 **Document** 列创建，而语义索引仅针对 **Document** 列创建。 此全文索引使用新创建的全文目录和现有的唯一键索引 **PK_Document_DocumentID**。 根据建议，此索引键在整数列 **DocumentID** 上创建。 该示例指定英语的 LCID 1033，这是列中数据的语言。  
   
  该示例还指定关闭更改跟踪并且不进行填充。 随后，在非峰值时间，该示例使用 **ALTER FULLTEXT INDEX** 语句对新索引开始进行完全填充，并启用自动更改跟踪。  
   
@@ -116,7 +116,7 @@ GO
 ```  
   
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 创建新的语义索引  
- 运行全文索引向导并在“选择表列” **** 页为每个要创建语义索引的列启用“统计语义”**** 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
+ 运行全文索引向导并在“选择表列” 页为每个要创建语义索引的列启用“统计语义” 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
   
 ##  <a name="create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a> 在存在现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 添加语义索引  
- 可以在“全文索引属性”**** 对话框的“全文索引列”**** 页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](./create-and-manage-full-text-indexes.md)。  
+ 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](./create-and-manage-full-text-indexes.md)。  
 
 ## <a name="alter-a-semantic-index"></a>更改语义索引
   
@@ -159,7 +159,7 @@ GO
 在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以删除语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框删除语义索引。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 删除语义索引  
-要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn\_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句********__****。 可以在单个 **ALTER** 语句中从多个列删除索引。  
+要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn\_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句。 可以在单个 **ALTER** 语句中从多个列删除索引。  
   
 ```sql  
 USE database_name  
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn\_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句********__****。  
+要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn\_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句。  
   
 ```sql  
 USE database_name  
@@ -184,7 +184,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 删除语义索引  
- 可以在“全文索引属性”**** 对话框的“全文索引列”**** 页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](./create-and-manage-full-text-indexes.md)。  
+ 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](./create-and-manage-full-text-indexes.md)。  
   
 ###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a> 删除语义索引的要求和限制  
   
@@ -237,7 +237,7 @@ GO
     GO  
     ```  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”****。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
   
      值 True 表示除了启用全文索引外，还为指定的列启用了语义索引。  
   

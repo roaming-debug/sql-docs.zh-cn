@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab0200330949834238d6a01f86c5a0071bba3303
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 1bd2a430ea01203c938385b66cc3bca47c0db87c
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88383163"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506238"
 ---
 # <a name="localdb_error_instance_configuration_corrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

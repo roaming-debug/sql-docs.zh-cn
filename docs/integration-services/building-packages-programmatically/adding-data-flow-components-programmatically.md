@@ -19,11 +19,11 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ef015c1cdaef9794546c8284e968b53a20ca197
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480701"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130710"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>以编程方式添加数据流组件
 
@@ -38,9 +38,9 @@ ms.locfileid: "89480701"
  在 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 属性中指定的值可为 CLSID、PROGID 或组件的 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> 属性。 CLSID 通常作为组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 属性值显示在“属性”窗口中。 有关获取可用组件的此属性和其他属性的信息，请参阅[以编程方式查找数据流组件](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)。  
   
 ## <a name="adding-a-managed-component"></a>添加托管组件  
- 您不能使用 CLSID 或 PROGID 向数据流添加一个托管数据流组件，因为这些值指向包装而不是组件本身。 可以改用 CreationName**** 属性或 AssemblyQualifiedName**** 属性，如以下示例中所示。  
+ 您不能使用 CLSID 或 PROGID 向数据流添加一个托管数据流组件，因为这些值指向包装而不是组件本身。 可以改用 CreationName 属性或 AssemblyQualifiedName 属性，如以下示例中所示。  
   
- 若要使用 AssemblyQualifiedName**** 属性，则必须在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目中添加对包含托管组件的程序集的引用。 这些程序集没有在“添加引用”**** 对话框的 .NET 选项卡上列出。 通常需要浏览至 C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents**** 文件夹查找程序集。  
+ 若要使用 AssemblyQualifiedName 属性，则必须在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目中添加对包含托管组件的程序集的引用。 这些程序集没有在“添加引用”对话框的 .NET 选项卡上列出。 通常需要浏览至 C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents 文件夹查找程序集。  
   
  内置托管数据流组件包括：  
   

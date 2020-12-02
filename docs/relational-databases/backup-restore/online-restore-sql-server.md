@@ -12,14 +12,14 @@ helpviewer_keywords:
 - online restores [SQL Server]
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 00cec6d2ce9fcb74151bcbc6e87a58f9b8fbbfe2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670445"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130377"
 ---
 # <a name="online-restore-sql-server"></a>联机还原 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85670445"
 >  如果创建备份时有多个设备连接到服务器，则联机还原期间，可用设备数必须相同。  
   
 > [!CAUTION]  
->  使用快照备份时，不能执行 **Online Restore**。 有关 **快照备份**的详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+>  使用快照备份时，不能执行 **Online Restore**。 有关 **快照备份** 的详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ## <a name="log-backups-for-online-restore"></a>联机还原所需的日志备份  
  对于联机还原，恢复点就是要恢复的数据最后一次变为脱机或只读时的点。 截止到该恢复点（包括该恢复点）的事务日志备份都必须是可用的。 通常在该点后都需要日志备份，以覆盖文件的恢复点。 唯一的例外情况是在使用当数据变为只读后执行的数据备份对只读数据进行联机还原的时候。 在这种情况下，不必准备日志备份。  

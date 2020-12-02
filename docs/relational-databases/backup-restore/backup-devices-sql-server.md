@@ -24,14 +24,14 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79fb6976eb128e31965290df302a222bcf55177e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b0e264f1111ffc924466fdbb658b3f1e278d3f3a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728529"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130511"
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -102,7 +102,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **注意：** 默认位置存储在 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 下的 **BackupDirectory**注册表项中。  
+> **注意：** 默认位置存储在 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 下的 **BackupDirectory** 注册表项中。  
   
    
 ###  <a name="back-up-to-a-network-share-file"></a><a name="NetworkShare"></a> 备份到网络共享文件  

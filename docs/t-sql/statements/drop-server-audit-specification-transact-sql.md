@@ -21,11 +21,11 @@ ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 1664f2a9263db649dc9e840b915cd25d2610e956
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379722"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131130"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- audit_specification_name**  
+ audit_specification_name  
  现有服务器审核规范对象的名称。  
   
 ## <a name="remarks"></a>备注  

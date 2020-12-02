@@ -15,20 +15,20 @@ helpviewer_keywords:
 - database backups [SQL Server], system databases
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 7444bd163ad453a2aac3c598ab0cc8575c09eb0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c37eb7eb796e4ce8caed41dcdc55cd147f5916ea
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754581"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130556"
 ---
-# <a name="backuprestoresystemdatabases-sql-server"></a>备份和还原：系统数据库 (SQL Server)
+# <a name="backup--restore-system-databases-sql-server"></a>备份和还原：系统数据库 (SQL Server)
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护一组系统级数据库（称为“系统数据库”  ），这些数据库对于服务器实例的运行至关重要。 每次进行大量更新后，都必须备份多个系统数据库。 必须备份的系统数据库包括 **msdb**、 **master**和 **model**。 如果有任何数据库在服务器实例上使用了复制，则还必须备份 **distribution** 系统数据库。 备份这些系统数据库，就可以在发生系统故障（例如硬盘丢失）时还原和恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护一组系统级数据库（称为“系统数据库”  ），这些数据库对于服务器实例的运行至关重要。 每次进行大量更新后，都必须备份多个系统数据库。 必须备份的系统数据库包括 **msdb**、 **master** 和 **model**。 如果有任何数据库在服务器实例上使用了复制，则还必须备份 **distribution** 系统数据库。 备份这些系统数据库，就可以在发生系统故障（例如硬盘丢失）时还原和恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统。  
   
  下表概述了所有的系统数据库。  
   

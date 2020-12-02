@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408493"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130264"
 ---
 # <a name="create-clustered-indexes"></a>创建聚集索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,13 +84,13 @@ ms.locfileid: "88408493"
   
 1.  在“对象资源管理器”中，展开要创建聚集索引的表。  
   
-2.  右键单击“索引”文件夹，指向“新建索引”，然后选择“聚集索引…”************。  
+2.  右键单击“索引”文件夹，指向“新建索引”，然后选择“聚集索引…”。  
   
 3.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
 4.  在“索引键列”下，单击“添加…” 。  
   
-5.  在“从表名称中选择列”对话框中，选中要添加到聚集索引的表列的复选框****_\__。  
+5.  在“从表名称中选择列”对话框中，选中要添加到聚集索引的表列的复选框 _\__。  
   
 6.  单击“确定”。  
   
@@ -100,19 +100,19 @@ ms.locfileid: "88408493"
   
 1.  在“对象资源管理器”中，展开要使用聚集索引创建表的数据库。  
   
-2.  右键单击“表”文件夹，然后单击“新建表…”********。  
+2.  右键单击“表”文件夹，然后单击“新建表…”。  
   
 3.  按常规方式创建新表。 有关详细信息，请参阅[创建表（数据库引擎）](../../relational-databases/tables/create-tables-database-engine.md)。  
   
-4.  右键单击上面创建的新表，然后单击“设计”****。  
+4.  右键单击上面创建的新表，然后单击“设计”。  
   
 5.  在“表设计器”菜单上，单击“索引/键”。  
   
-6.  在“索引/键”**** 对话框中，单击“添加”****。  
+6.  在“索引/键”对话框中，单击“添加”。  
   
-7.  从“选定的主/唯一键或索引”**** 文本框中选择新索引。  
+7.  从“选定的主/唯一键或索引”文本框中选择新索引。  
   
-8.  在网格中，选择“创建为聚集”****，然后从该属性右侧的下拉列表中选择“是”****。  
+8.  在网格中，选择“创建为聚集”，然后从该属性右侧的下拉列表中选择“是”。  
   
 9. 单击“关闭”。  
   

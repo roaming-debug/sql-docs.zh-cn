@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: f1458ca8-54dd-48c4-86ae-a8bbedbb7db3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 93e28e63ecb4ad25ddac2be42beef4233c394a8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2ffab6fd5027487c62f54c2944171ae486e87832
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88383243"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506321"
 ---
 # <a name="localdb_error_cannot_access_instance_registry"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

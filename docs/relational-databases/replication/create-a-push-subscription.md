@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869250"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131022"
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "91869250"
   
    - **\@subscriber_type**。 对于客户端订阅，请指定“本地”。 对于服务器订阅，请指定“全局”。  
   
-   - **\@subscription_priority**。 对于服务器订阅，请指定订阅的优先级（从**0.00** 到 **99.99**）。  
+   - **\@subscription_priority**。 对于服务器订阅，请指定订阅的优先级（从 **0.00** 到 **99.99**）。  
   
    有关详细信息，请参阅[高级合并复制冲突检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   

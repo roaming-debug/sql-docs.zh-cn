@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 654dbae04bbc69fa257b288f6b130c6b17f75ace
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809206"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130842"
 ---
 # <a name="create-views"></a>创建视图
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "91809206"
   
 6.  在 **“条件窗格”** 中，选择列的其他排序或筛选条件。  
   
-7.  在“文件”**** 菜单上，单击“保存”**** 以保存_视图名称_。  
+7.  在“文件”菜单上，单击“保存”以保存 _视图名称_。  
   
 8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”**。  
 

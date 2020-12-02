@@ -14,11 +14,11 @@ ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 10ef5b2c2e873d3f17085137134aabd8db57b059
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893797"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131033"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>查看和修改复制代理命令提示符参数
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

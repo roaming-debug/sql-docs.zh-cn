@@ -19,11 +19,11 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fa23524c5aa024daa4b9a99a6bbeaca747c9226e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496860"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131213"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY 架构权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 permission  
 指定可拒绝授予架构的权限。 有关这些权限的列表，请参阅本文后面的“备注”部分。  
   
-ON SCHEMA :: schema_name******  
+ON SCHEMA :: schema_name  
 指定权限在其中被拒绝的架构。 需要使用作用域限定符 ::。  
   
 database_principal  
@@ -66,7 +66,7 @@ database_principal
 CASCADE  
 对指定 *database_principal* 授予权限的任何其他主体拒绝授予权限。
   
-denying_principal**  
+denying_principal  
 指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 *denying_principal* 可以为以下主体之一：  
   
 -   数据库用户  

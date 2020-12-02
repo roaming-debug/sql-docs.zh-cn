@@ -12,11 +12,11 @@ ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b6b4770034771049d19e3a1eb3e8c43205aad46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430079"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129753"
 ---
 # <a name="catalogrename_customized_logging_level"></a>catalog.rename_customized_logging_level 
 
@@ -32,15 +32,15 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @old_name = ] old_name**  
+ [ @old_name = ] old_name  
  要重命名的现有自定义日志记录级别的名称。  
   
- old_name 为 nvarchar(128)******。  
+ old_name 为 nvarchar(128)。  
   
  [ @new_name = ] new_name  
  指定的自定义日志记录级别的新名称。  
   
- new_name 为 nvarchar(128)******。  
+ new_name 为 nvarchar(128)。  
   
 ## <a name="remarks"></a>注解  
   

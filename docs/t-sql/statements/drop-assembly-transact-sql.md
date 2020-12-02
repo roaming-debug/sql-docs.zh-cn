@@ -24,11 +24,11 @@ ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 601d7bdff19c6e6d8f4daec58c28c048891bcc82
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380182"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131338"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,12 +57,12 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  希望删除的程序集的名称。  
   
  WITH NO DEPENDENTS  
- 如果指定它，则只删除 assembly_name，而不删除该程序集引用的相关程序集**。 如果不指定它，则 DROP ASSEMBLY 会删除 assembly_name 和所有相关程序集**。  
+ 如果指定它，则只删除 assembly_name，而不删除该程序集引用的相关程序集。 如果不指定它，则 DROP ASSEMBLY 会删除 assembly_name 和所有相关程序集。  
   
 ## <a name="remarks"></a>备注  
  删除程序集时，将从数据库中删除程序集和它的所有关联文件，例如，源代码和调试文件。  
   
- 如果不指定 WITH NO DEPENDENTS，则 DROP ASSEMBLY 删除 assembly_name 和所有相关程序集**。 如果删除任何相关程序集的尝试失败，则 DROP ASSEMBLY 返回错误。  
+ 如果不指定 WITH NO DEPENDENTS，则 DROP ASSEMBLY 删除 assembly_name 和所有相关程序集。 如果删除任何相关程序集的尝试失败，则 DROP ASSEMBLY 返回错误。  
   
  如果程序集被存在于该数据库中的另一个程序集引用，或者它被当前数据库中的公共语言运行时 (CLR) 函数、过程、触发器、用户定义类型或聚合使用，则 DROP ASSEMBLY 返回错误。  
   

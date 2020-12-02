@@ -16,11 +16,11 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 420e34cc54d83d2f9f01aee1b794c7f37080c493
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724526"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130110"
 ---
 # <a name="ado-connection-manager"></a>ADO 连接管理器
 
@@ -29,7 +29,7 @@ ms.locfileid: "91724526"
 
   ADO 连接管理器使包可以连接到 ActiveX 数据对象 (ADO) 对象（如记录集）。 此连接管理器通常用于以 Microsoft Visual Basic 6.0 等语言的早期版本编写的自定义任务，或用于从属于使用 ADO 连接到数据源的现有应用程序的自定义任务。  
   
- 将 ADO 连接管理器添加到包时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时解析为 ADO 连接的连接管理器，设置连接管理器属性，并将该连接管理器添加到包上的“Connections”集合****。 该连接管理器的 **ConnectionManagerType** 属性设置为 **ADO**。  
+ 将 ADO 连接管理器添加到包时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时解析为 ADO 连接的连接管理器，设置连接管理器属性，并将该连接管理器添加到包上的“Connections”集合。 该连接管理器的 **ConnectionManagerType** 属性设置为 **ADO**。  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>ADO 连接管理器故障排除  
  ADO 连接管理器在读取数据时，某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期数据类型将生成下表中显示的结果。  

@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ab82f18d59bd6a2f8df0c236cd44031b740ee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486866"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130252"
 ---
 # <a name="create-unique-indexes"></a>创建唯一索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建表的唯一索引。 唯一索引能够保证索引键中不包含重复的值，从而使表中的每一行从某种方式上具有唯一性。 创建 UNIQUE 约束和创建与约束无关的唯一索引并没有明显的区别。 进行数据验证的方式相同，而且对于唯一索引是由约束创建的还是手动创建的，查询优化器并不加以区分。 但是，创建列的 UNIQUE 约束会使索引目标更清晰。 有关 UNIQUE 约束的详细信息，请参阅 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
- 在创建唯一索引时，可以设置一个忽略重复键的选项。 如果此选项已设置为“是”****，当你试图通过添加影响多行的数据来创建重复键（使用 INSERT 语句）时，则不会添加包含重复项的行。 如果此选项设置为 **“否”**，则整个插入操作将失败，并且将回滚所有数据。  
+ 在创建唯一索引时，可以设置一个忽略重复键的选项。 如果此选项已设置为“是”，当你试图通过添加影响多行的数据来创建重复键（使用 INSERT 语句）时，则不会添加包含重复项的行。 如果此选项设置为 **“否”**，则整个插入操作将失败，并且将回滚所有数据。  
   
 > [!NOTE]  
 >  如果单个列在多行中包含 NULL，则无法对该列创建唯一索引。 同样，如果列的组合在多行中包含 NULL，则无法对多个列创建唯一索引。 在进行索引时，它们都被视为重复值。  
@@ -58,7 +58,7 @@ ms.locfileid: "88486866"
   
 ###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> 唯一索引的优点  
   
--   多列唯一索引能够保证索引键中值的每个组合都是唯一的。 例如，如果为 **LastName**、 **FirstName**和 **MiddleName** 列的组合创建了唯一索引，则表中的任意两行都不会有这些列值的相同组合。  
+-   多列唯一索引能够保证索引键中值的每个组合都是唯一的。 例如，如果为 **LastName**、 **FirstName** 和 **MiddleName** 列的组合创建了唯一索引，则表中的任意两行都不会有这些列值的相同组合。  
   
 -   只要每个列中的数据是唯一的，就可以为同一个表创建一个唯一聚集索引和多个唯一非聚集索引。  
   
@@ -106,17 +106,17 @@ ms.locfileid: "88486866"
   
 2.  展开 **“表”** 文件夹。  
   
-3.  右键单击你要创建唯一索引的表，然后选择“设计”****。  
+3.  右键单击你要创建唯一索引的表，然后选择“设计”。  
   
-4.  在“表设计器”**** 菜单上，选择“索引/键”****。  
+4.  在“表设计器”菜单上，选择“索引/键”。  
   
-5.  在“索引/键”**** 对话框中，单击“添加”****。  
+5.  在“索引/键”对话框中，单击“添加”。  
   
-6.  从“选定的主/唯一键或索引”**** 文本框中选择新索引。  
+6.  从“选定的主/唯一键或索引”文本框中选择新索引。  
   
 7.  在主网格中，在“(常规)”下，选择“类型”，然后从列表中选择“索引”。  
   
-8.  选择“列”，然后单击省略号 (…)********。  
+8.  选择“列”，然后单击省略号 (…)。  
   
 9. 在 **“索引列”** 对话框中的 **“列名”** 下，选择要编制索引的列。 最多可选择 16 列。 为获得最佳的性能，请只为每个索引选择一列或两列。 对于所选的每一列，指定索引是以升序还是以降序来排列此列的值。  
   

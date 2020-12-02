@@ -27,14 +27,14 @@ helpviewer_keywords:
 - full recovery model [SQL Server]
 - backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f9b81397d389ac6a77cb9d0ef2fe62afaaa43630
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a7b746b8bd323b7037a7a477b33596b554aed096
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809693"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130353"
 ---
 # <a name="recovery-models-sql-server"></a>恢复模式 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

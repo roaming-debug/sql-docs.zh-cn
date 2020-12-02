@@ -12,11 +12,11 @@ ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5e5e93263d37acf72782f2b9a2fe3ef3f7c5d29d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422151"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129691"
 ---
 # <a name="catalogset_environment_variable_protection-ssisdb-database"></a>catalog.set_environment_variable_protection（SSISDB 数据库）
 
@@ -43,11 +43,11 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
  [ @environment_name = ] environment_name   
  环境的名称。 environment_name 为 nvarchar(128)   。  
   
- [ @variable_name = ] variable_name**  
- 环境变量名。 variable_name 为 nvarchar(128)******。  
+ [ @variable_name = ] variable_name  
+ 环境变量名。 variable_name 为 nvarchar(128)。  
   
- [ @sensitive = ] sensitive**  
- 指示变量是否包含敏感值。 使用值 `1` 表示环境变量的值是敏感值，值为 `0` 表示该值不是敏感值。 存储敏感值时将对其加密。 不敏感的值以纯文本形式存储。 sensitive 参数为 bit******。  
+ [ @sensitive = ] sensitive  
+ 指示变量是否包含敏感值。 使用值 `1` 表示环境变量的值是敏感值，值为 `0` 表示该值不是敏感值。 存储敏感值时将对其加密。 不敏感的值以纯文本形式存储。 sensitive 参数为 bit。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

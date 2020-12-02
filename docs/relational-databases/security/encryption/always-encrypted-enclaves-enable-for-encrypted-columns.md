@@ -12,11 +12,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ef6fe83bd2d9671ccf43b4957497a8c1fc7a4cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420331"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130913"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>为现有加密列启用具有安全 enclave 的 Always Encrypted 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -27,8 +27,8 @@ ms.locfileid: "88420331"
 
 可以通过几种不同的方式为现有加密列启用 enclave 计算，具体取决于以下内容：
 
-- **** 作用域/粒度：你是否想要为列子集或使用给定列主密钥保护的所有列启用 enclave 功能？
-- **** 数据大小：包含想要启用 enclave 的列的表的大小是什么？
+- 作用域/粒度：你是否想要为列子集或使用给定列主密钥保护的所有列启用 enclave 功能？
+- 数据大小：包含想要启用 enclave 的列的表的大小是什么？
 - 此外，是否要更改列的加密类型？ 请记住，唯一的随机的加密支持丰富计算（模式匹配、比较运算符）。 如果列是使用确定性加密进行加密，则还需要使用随机加密对它进行重新加密，才能解锁丰富的计算功能。
 
 下面几节介绍用于为现有列启用 enclave 的三种方法。

@@ -16,15 +16,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d713b4eb49a527f2cbbbf871cce9d01d4449443d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465053"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130945"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文搜索查询可以使用全文搜索同义词库来搜索用户指定字词的同义词**。 每个同义词库为特定语言定义一组同义词。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文搜索查询可以使用全文搜索同义词库来搜索用户指定字词的同义词。 每个同义词库为特定语言定义一组同义词。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。
 
 仅对所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查询以及指定 `FORMSOF THESAURUS` 子句的任意 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查询执行同义词库匹配操作。
   
@@ -57,7 +57,7 @@ ms.locfileid: "88465053"
   
 该默认位置包含以下文件：  
   
--   **特定于语言的**同义词库文件  
+-   **特定于语言的** 同义词库文件  
 
     安装程序将在上述位置安装空同义词库文件。 对于每种支持的语言，将提供一个单独的文件。 系统管理员可以自定义这些文件。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "88465053"
      
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
--   **全局**同义词库文件  
+-   **全局** 同义词库文件  
   
     空的全局同义词库文件 tsGlobal.xml。  
 

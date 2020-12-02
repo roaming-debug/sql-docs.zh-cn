@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bc5e696b75b1f1a011c380d77010ca3167187a3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f943d579b46fac79803565b2d9b0e8ed91f65454
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470517"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506098"
 ---
 # <a name="localdb_error_unknown_language_id"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

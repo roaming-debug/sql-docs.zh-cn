@@ -15,11 +15,11 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 44f3efa30bc33bd7a8b9bc5057d2877be62f8f8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425179"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130033"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 包记录的事件
 
@@ -101,9 +101,9 @@ ms.locfileid: "88425179"
   
 5.  在 **“日志事件”** 窗口中查看日志项。  
   
-6.  （可选）单击要复制的日志项，右键单击，然后单击“复制”****。  
+6.  （可选）单击要复制的日志项，右键单击，然后单击“复制”。  
   
-7.  （可选）双击日志项，然后在“日志条目”对话框中，查看单个日志项的详细信息。****  
+7.  （可选）双击日志项，然后在“日志条目”对话框中，查看单个日志项的详细信息。  
   
 8.  在 **“日志条目”** 对话框中，单击向上和向下键头，以显示上一个或下一个日志项，并单击复制图标以复制该日志项。  
   

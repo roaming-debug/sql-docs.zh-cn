@@ -25,11 +25,11 @@ ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8043eb95855e463c63bf4667209d47b293a492e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426599"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131341"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,19 +60,19 @@ DENY permission  [ ,...n ] ON
  permission  
  指定可拒绝授予 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 安全对象的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- CONTRACT ::contract_name****__  
+ CONTRACT ::contract_name  
  指定拒绝将其权限授权他人的约定。 需要使用作用域限定符 ::。  
   
- MESSAGE TYPE ::message_type_name****__  
+ MESSAGE TYPE ::message_type_name  
  指定拒绝将其权限授予他人的消息类型。 需要使用作用域限定符 ::。  
   
- REMOTE SERVICE BINDING ::remote_binding_name****__  
+ REMOTE SERVICE BINDING ::remote_binding_name  
  指定拒绝将其权限授予他人的远程服务绑定。 需要使用作用域限定符 ::。  
   
- ROUTE ::route_name****__  
+ ROUTE ::route_name  
  指定拒绝将其权限授予他人的路由。 需要使用作用域限定符 ::。  
   
- SERVICE ::message_type_name****__  
+ SERVICE ::message_type_name  
  指定拒绝将其权限授予他人的服务。 需要使用作用域限定符 ::。  
   
  database_principal  
@@ -90,7 +90,7 @@ DENY permission  [ ,...n ] ON
 CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
-denying_principal**  
+denying_principal  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  

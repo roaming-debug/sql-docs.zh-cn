@@ -12,11 +12,11 @@ ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 230e2057c8257a37eb96c683abaf8348307a0cba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425089"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129459"
 ---
 # <a name="catalogexecution_property_override_values"></a>catalog.execution_property_override_values 
 
@@ -36,7 +36,7 @@ ms.locfileid: "88425089"
 |sensitive|**bit**|当值为 1 时，属性是敏感的并在存储时加密。 当值为 0 时，属性是不敏感的并以纯文本形式存储值。|  
   
 ## <a name="remarks"></a>备注  
- 此视图为每次执行显示一行，在每次执行中都使用“执行包”对话框上“高级”选项卡中的“属性覆盖”部分覆盖属性值************。 该属性的路径从包任务的“包路径”**** 属性派生。  
+ 此视图为每次执行显示一行，在每次执行中都使用“执行包”对话框上“高级”选项卡中的“属性覆盖”部分覆盖属性值。 该属性的路径从包任务的“包路径”属性派生。  
   
 ## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  

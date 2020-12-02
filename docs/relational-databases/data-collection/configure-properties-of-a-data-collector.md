@@ -14,11 +14,11 @@ ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19d0107e21e71c8330e3990d4fe937e030ecd0e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428959"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128843"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>配置数据收集器的属性
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

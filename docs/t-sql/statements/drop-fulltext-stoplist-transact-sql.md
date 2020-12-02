@@ -23,11 +23,11 @@ ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e82a6c699aa31b58e5bdd79d122754cabf728941
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380410"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131224"
 ---
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ DROP FULLTEXT STOPLIST stoplist_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- stoplist_name**  
+ stoplist_name  
  要从数据库中删除的全文本非索引字表的名称。  
   
 ## <a name="remarks"></a>注解  

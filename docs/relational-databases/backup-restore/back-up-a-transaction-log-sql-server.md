@@ -13,14 +13,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - backing up transaction logs [SQL Server], SQL Server Management Studio
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c953e5a707bb197457d76e9d5d4f64635515ffce
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 57c864996d15886eb69ef7caf0f000349b238b9c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91807517"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130579"
 ---
 # <a name="back-up-a-transaction-log"></a>备份事务日志
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

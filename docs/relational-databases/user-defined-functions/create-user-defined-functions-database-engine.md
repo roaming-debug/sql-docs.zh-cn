@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9739c1c5476b189cce41d14190165c9b82587f93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485331"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130834"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>创建用户定义函数（数据库引擎）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "88485331"
 需要在数据库中具有 `CREATE FUNCTION` 权限，并对创建函数时所在的架构具有 `ALTER` 权限。 如果函数指定用户定义类型，则需要对该类型具有 `EXECUTE` 权限。  
   
 ##  <a name="scalar-functions"></a><a name="Scalar"></a> 标量函数  
- 下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建一个多语句标量函数（ 标量 UDF）****。 此函数输入一个值 `ProductID`，而返回一个单个数据值（指定库存产品的聚合量）。  
+ 下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建一个多语句标量函数（ 标量 UDF）。 此函数输入一个值 `ProductID`，而返回一个单个数据值（指定库存产品的聚合量）。  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
@@ -106,7 +106,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > 有关详细信息，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)。 
 
 ##  <a name="table-valued-functions"></a><a name="TVF"></a> 表值函数  
-下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建内联表值函数 (TVF)****。 此函数的输入参数为客户（商店）ID，而返回 `ProductID`、 `Name`以及 `YTD Total` （销售到商店的每种产品的本年度节截止到现在的销售总额）列。  
+下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建内联表值函数 (TVF)。 此函数的输入参数为客户（商店）ID，而返回 `ProductID`、 `Name`以及 `YTD Total` （销售到商店的每种产品的本年度节截止到现在的销售总额）列。  
   
 ```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
@@ -133,7 +133,7 @@ RETURN
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建多语句表值函数 (MSTVF)****。 此函数具有一个输入参数 `EmployeeID` ，它返回直接或间接向指定员工报告的所有员工的列表。 然后在指定雇员 ID 109 的情况下调用此函数。  
+下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建多语句表值函数 (MSTVF)。 此函数具有一个输入参数 `EmployeeID` ，它返回直接或间接向指定员工报告的所有员工的列表。 然后在指定雇员 ID 109 的情况下调用此函数。  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  

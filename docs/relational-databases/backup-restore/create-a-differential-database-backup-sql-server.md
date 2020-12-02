@@ -14,14 +14,14 @@ helpviewer_keywords:
 - backing up databases [SQL Server], full differential backups
 - backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9ba56e83a427d5a760ac40ca8d81c6a2f85cc685
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5362d3ddde85b21c5450a162fff0fdc5f23cda7f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728473"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130465"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>创建差异数据库备份 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

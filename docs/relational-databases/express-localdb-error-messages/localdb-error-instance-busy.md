@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: 0ed9d0f8-3297-4e31-a3e9-4a827f381789
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 663b37d3667ce3751f78d322415ae80677ac3f02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 35c236fe1d327c3ff6d075332cdbc19e0aeeb8db
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475891"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506232"
 ---
 # <a name="localdb_error_instance_busy"></a>LOCALDB_ERROR_INSTANCE_BUSY
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

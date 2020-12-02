@@ -12,11 +12,11 @@ ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba69c12d93b683afa8d11669523153dc6d79d0c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425139"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129724"
 ---
 # <a name="catalogset_environment_property-ssisdb-database"></a>catalog.set_environment_property（SSISDB 数据库）
 
@@ -43,11 +43,11 @@ catalog.set_environment_property [ @folder_name = ] folder_name
  [ @environment_name = ] environment_name   
  环境的名称。 environment_name 为 nvarchar(128)   。  
   
- [ @property_name = ] property_name**  
- 环境属性的名称。 property_name 为 nvarchar(128)******。  
+ [ @property_name = ] property_name  
+ 环境属性的名称。 property_name 为 nvarchar(128)。  
   
- [ @property_value = ] property_value**  
- 环境属性的值。 property_value 为 nvarchar(1024)******。  
+ [ @property_value = ] property_value  
+ 环境属性的值。 property_value 为 nvarchar(1024)。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

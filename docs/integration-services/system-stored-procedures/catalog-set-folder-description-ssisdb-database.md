@@ -12,11 +12,11 @@ ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 18e7cb22f94e33328ed08968052d03b0261c73df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425059"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129639"
 ---
 # <a name="catalogset_folder_description-ssisdb-database"></a>catalog.set_folder_description（SSISDB 数据库）
 
@@ -38,8 +38,8 @@ catalog.set_folder_description [ @folder_name = ] folder_name
  [ @folder_name = ] folder_name   
  文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [ @folder_description = ] folder_description**  
- 文件夹的说明。 folder_description** 为 nvarchar(MAX)****。  
+ [ @folder_description = ] folder_description  
+ 文件夹的说明。 folder_description 为 nvarchar(MAX)。  
   
 ## <a name="return-code-value"></a>返回代码值  
  无  

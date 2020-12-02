@@ -16,11 +16,11 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8096ccaf1fc92710e46970744a7a4f7cbe000700
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426029"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130599"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>“添加文件连接管理器”对话框 UI 参考
 
@@ -49,13 +49,13 @@ ms.locfileid: "88426029"
  查看使用下面介绍的按钮所添加的文件或文件夹。  
   
  **添加**  
- 通过使用“选择文件”**** 对话框添加文件，或者通过使用“查找文件夹”**** 对话框添加文件夹。  
+ 通过使用“选择文件”对话框添加文件，或者通过使用“查找文件夹”对话框添加文件夹。  
   
  **编辑**  
- 选择一个文件或文件夹，再通过使用“选择文件”**** 或“查找文件夹”**** 对话框，将其替换为另一个文件或文件夹。  
+ 选择一个文件或文件夹，再通过使用“选择文件”或“查找文件夹”对话框，将其替换为另一个文件或文件夹。  
   
  **删除**  
- 选择一个文件或文件夹，再通过使用“删除”**** 按钮将其从列表中删除。  
+ 选择一个文件或文件夹，再通过使用“删除”按钮将其从列表中删除。  
   
  **箭头按钮**  
  选择一个文件或文件夹，再使用箭头按钮将它上移或下移以指定访问顺序。  

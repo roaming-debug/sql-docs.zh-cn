@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - validating installations [SQL Server]
 ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7643aac720a016aabe747b5f429af82c135652cd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fde701b41060b59d08be9ced38687385a6b3a995
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900186"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130806"
 ---
 # <a name="validate-a-sql-server-installation"></a>验证 SQL Server 安装
 

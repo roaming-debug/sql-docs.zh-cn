@@ -16,14 +16,14 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 87d17a3f6051e497b64dd88c1dd2e005a4411e27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c328ae66b2ec85080b6da14ff054c824405b8be2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695872"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130759"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>监视日志传送 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85695872"
 |[log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|对每个辅助数据库存储一条监视记录，包括有关对监视有用的最新备份文件和最新还原文件的信息。|  
   
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>监视日志传送的存储过程  
- 监视和历史记录信息存储在 **msdb**的表中，可以通过日志传送存储过程来访问它。 请在下表中指定的服务器上运行下列存储过程。  
+ 监视和历史记录信息存储在 **msdb** 的表中，可以通过日志传送存储过程来访问它。 请在下表中指定的服务器上运行下列存储过程。  
   
 |存储过程|说明|运行存储过程的服务器|  
 |----------------------|-----------------|---------------------------|  

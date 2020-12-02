@@ -26,11 +26,11 @@ ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: d800de4adea71523c3ae05bed53c97697c718d70
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379642"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131071"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ ON ALL SERVER
 
 ## <a name="arguments"></a>参数
  IF EXISTS  
- **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)、[!INCLUDE[sssds](../../includes/sssds-md.md)]）。  
+ **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)、[!INCLUDE[sssds](../../includes/sssds-md.md)]）。  
   
  有条件地删除触发器（仅当其已存在时）。  
   
@@ -87,7 +87,7 @@ ON ALL SERVER
 ## <a name="remarks"></a>备注  
  可以通过删除 DML 触发器或删除触发器表来删除 DML 触发器。 删除表时，将同时删除与表关联的所有触发器。  
   
- 删除触发器时，会从 sys.objects、sys.triggers 和 sys.sql_modules 目录视图中删除有关该触发器的信息。************  
+ 删除触发器时，会从 sys.objects、sys.triggers 和 sys.sql_modules 目录视图中删除有关该触发器的信息。  
   
  仅当所有触发器均使用相同的 ON 子句创建时，才能使用一个 DROP TRIGGER 语句删除多个 DDL 触发器。  
   
@@ -118,7 +118,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
  以下示例将删除 DDL 触发器 `safety`。  
   
 > [!IMPORTANT]  
->  因为 DDL 触发器不在架构范围内，所以不会在 sys.objects 目录视图中出现，无法使用 OBJECT_ID 函数来查询数据库中是否存在 DDL 触发器。**** 必须使用相应的目录视图来查询架构范围以外的对象。 对于 DDL 触发器，可使用 sys.triggers。****  
+>  因为 DDL 触发器不在架构范围内，所以不会在 sys.objects 目录视图中出现，无法使用 OBJECT_ID 函数来查询数据库中是否存在 DDL 触发器。 必须使用相应的目录视图来查询架构范围以外的对象。 对于 DDL 触发器，可使用 sys.triggers。  
   
 ```sql  
 DROP TRIGGER safety  

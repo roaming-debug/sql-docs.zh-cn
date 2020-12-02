@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4b0bdb3d9edca685e3b939c5f9a3ab1a0ec68846
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382483"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130269"
 ---
 # <a name="enable-indexes-and-constraints"></a>启用索引和约束
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "88382483"
 ###  <a name="security"></a><a name="Security"></a> Security  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
- 要求对表或视图具有 ALTER 权限。 如果使用 DBCC DBREINDEX，用户必须拥有该表；或者是 sysadmin**** 固定服务器角色的成员；或者是 db_ddladmin**** 和 db_owner**** 固定数据库角色的成员。  
+ 要求对表或视图具有 ALTER 权限。 如果使用 DBCC DBREINDEX，用户必须拥有该表；或者是 sysadmin 固定服务器角色的成员；或者是 db_ddladmin 和 db_owner 固定数据库角色的成员。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88382483"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要启用的索引，然后选择****“重新生成”。  
+5.  右键单击要启用的索引，然后选择“重新生成”。  
   
 6.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”** 。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88382483"
   
 3.  单击加号以便展开您要启用索引的表。  
   
-4.  右键单击****“索引”文件夹，然后选择****“全部重新生成”。  
+4.  右键单击“索引”文件夹，然后选择“全部重新生成”。  
   
 5.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。 若要从 **“要重新生成的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
   

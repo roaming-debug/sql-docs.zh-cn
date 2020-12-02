@@ -24,11 +24,11 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 93890a2bf8fc0b9209eb9582c8129ee6856865ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351283"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130105"
 ---
 # <a name="flat-file-connection-manager"></a>平面文件连接管理器
 
@@ -45,13 +45,13 @@ ms.locfileid: "88351283"
  在已添加并配置使用连接管理器的平面文件源之后，如果在平面文件连接管理器中更新列长度，则不必在平面文件源中手动调整输出列的大小。 打开 **“平面文件源”** 对话框时，平面文件源将提供同步列元数据的选项。  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>平面文件连接管理器的配置  
- 将平面文件连接管理器添加到包时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时解析为平面文件连接的连接管理器，同时将设置该平面文件连接的属性，并将该平面文件连接管理器添加到包的 Connections 集合****。  
+ 将平面文件连接管理器添加到包时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时解析为平面文件连接的连接管理器，同时将设置该平面文件连接的属性，并将该平面文件连接管理器添加到包的 Connections 集合。  
   
  该连接管理器的 **ConnectionManagerType** 属性设置为 **FLATFILE**。  
   
  默认情况下，平面文件连接管理器始终检查未被引号引起的数据中的行分隔符，在找到行分隔符时开始一个新行。 这使连接管理器可以正确地分析具有缺少列字段的行的文件。  
   
- 在某些情况下，禁用此功能可以提高包性能。 您可以通过将平面文件连接管理器属性 **AlwaysCheckForRowDelimiters**设置为 **False**来禁用此功能。  
+ 在某些情况下，禁用此功能可以提高包性能。 您可以通过将平面文件连接管理器属性 **AlwaysCheckForRowDelimiters** 设置为 **False** 来禁用此功能。  
   
  可以按下列方式配置平面文件连接管理器：  
   
@@ -121,7 +121,7 @@ ms.locfileid: "88351283"
  指定要使用的文本限定符。 例如，可以指定文本字段必须用引号括起来。  
   
 > [!NOTE]  
->  选择文本限定符之后，不能重新选择“无”**** 选项。 键入 **None** 以取消选择文本限定符。  
+>  选择文本限定符之后，不能重新选择“无”选项。 键入 **None** 以取消选择文本限定符。  
   
  **标题行分隔符**  
  从标题行的分隔符列表中选择，或输入分隔符文本。  
@@ -186,7 +186,7 @@ ms.locfileid: "88351283"
 |**竖线 {&#124;}** 。|列由竖线分隔。|  
   
  **“刷新”**  
- 通过单击“刷新”**** 查看更改要跳过的分隔符后的效果。 只有在更改其他连接选项之后，此按钮才可见。  
+ 通过单击“刷新”查看更改要跳过的分隔符后的效果。 只有在更改其他连接选项之后，此按钮才可见。  
   
  **预览行**  
  查看平面文件中的示例数据，这些数据已按所选的选项划分为列和行。  
@@ -276,7 +276,7 @@ ms.locfileid: "88351283"
  选择一列，然后单击“删除”来删除该列。  
   
  **建议类型**  
- 使用****“提供列类型建议”对话框可以计算文件中的示例数据，并获取关于每列的数据类型和长度的建议。 有关详细信息，请参阅 [“提供列类型建议”对话框 UI 参考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用“提供列类型建议”对话框可以计算文件中的示例数据，并获取关于每列的数据类型和长度的建议。 有关详细信息，请参阅 [“提供列类型建议”对话框 UI 参考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
 ## <a name="flat-file-connection-manager-editor-preview-page"></a>平面文件连接管理器编辑器（“预览”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“预览”** 节点，按表格格式查看源文件的内容。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "88351283"
  指定在平面文件的开头要跳过多少行。  
   
  **“刷新”**  
- 通过单击“刷新”可以查看更改要跳过的行数后的效果。**** 只有在更改其他连接选项之后，此按钮才可见。  
+ 通过单击“刷新”可以查看更改要跳过的行数后的效果。 只有在更改其他连接选项之后，此按钮才可见。  
   
  **预览行**  
  查看平面文件中的示例数据，这些数据已按所选的选项划分为列和行。  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - backing up [SQL Server]. damaged database
 - transaction log backups [SQL Server], damaged databases
 ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e94899f3c10f6f603d07af8a8512755d9d04c9b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ed951ce9aae366fc47c72f9fa9ee4b5219b47595
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670800"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130546"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>在数据库损坏时备份事务日志 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

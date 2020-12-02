@@ -27,11 +27,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 786606c99cf2fe4cdfcd5343e203784353b8c863
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989814"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131188"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,12 +72,12 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
  在删除任何存储过程之前，请检查依赖对象，并且相应地修改这些对象。 如果没有更新这些对象，则删除存储过程可能会导致依赖对象和脚本失败。 有关详细信息，请参阅[查看存储过程的依赖关系](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
   
 ## <a name="metadata"></a>Metadata  
- 若要显示现有过程的列表，请查询 sys.objects 目录视图****。 若要显示过程定义，请查询 sys.sql_modules 目录视图****。  
+ 若要显示现有过程的列表，请查询 sys.objects 目录视图。 若要显示过程定义，请查询 sys.sql_modules 目录视图。  
   
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 需要拥有该过程的 CONTROL 权限，或该过程所属架构的 ALTER 权限，或 db_ddladmin 固定服务器角色的成员身份************。  
+ 需要拥有该过程的 CONTROL 权限，或该过程所属架构的 ALTER 权限，或 db_ddladmin 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  下面的示例将删除当前数据库中的 `dbo.uspMyProc` 存储过程。  

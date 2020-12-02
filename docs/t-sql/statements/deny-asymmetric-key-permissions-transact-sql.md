@@ -21,11 +21,11 @@ ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d678397ca184e6b94925ec43d0f07f3e6368f614
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444737"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131360"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY 非对称密钥权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +77,7 @@ DENY { permission  [ ,...n ] }
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- denying_principal**  
+ denying_principal  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  

@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cd88bb7760810e490fc4da457a3e9edc0bd1ad47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472312"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131255"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY 数据库作用域凭据 (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -77,7 +77,7 @@ DENY permission  [ ,...n ]
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- denying_principal**  
+ denying_principal  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  

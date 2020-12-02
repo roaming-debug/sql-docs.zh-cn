@@ -16,15 +16,15 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006334"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130193"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-   地理空间数据类型、地理**** 表示圆形地球坐标系统中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。  geography 数据类型存储椭球体（圆形地球）数据，如 GPS 纬度和经度坐标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ****。  
+   地理空间数据类型、地理表示圆形地球坐标系统中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。  geography 数据类型存储椭球体（圆形地球）数据，如 GPS 纬度和经度坐标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **geography** 类型已进行预定义，可在每个数据库中使用。 你可以创建 **geography** 类型的表列并对 **geography** 数据进行操作，就像使用其他系统提供的数据类型一样。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "92006334"
  [STGeometryN（geography 数据类型）](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN（geography 数据类型）  
   
 ###  <a name="number-of-points"></a><a name="number"></a> 点数  
- 所有非空 **geography** 实例都由“点” ** 组成。 这些点表示球体的纬度和经度坐标，在其上可绘制 **geography** 实例。 **geography** 数据类型提供了许多用于查询实例点的内置方法。  
+ 所有非空 **geography** 实例都由“点” 组成。 这些点表示球体的纬度和经度坐标，在其上可绘制 **geography** 实例。 **geography** 数据类型提供了许多用于查询实例点的内置方法。  
   
  **返回构成实例的点数。**  
  [STNumPoints（geography 数据类型）](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)  
@@ -163,7 +163,7 @@ ms.locfileid: "92006334"
  [STEndpoint（geography 数据类型）](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> 维度  
- 非空 **geography** 实例可以为零维、一维或二维。 零维 **geography** 实例（如 **Point** 和 **MultiPoint**）没有长度或面积。 一维对象（如 **LineString、CircularString**、 **CompoundCurve**和 **MultiLineString**）有长度。 二维实例（如 **Polygon、CurvePolygon**和 **MultiPolygon**）有面积和长度。 空实例会报告 -1 维，并且 **GeometryCollection** 会报告其内容的最大维度。  
+ 非空 **geography** 实例可以为零维、一维或二维。 零维 **geography** 实例（如 **Point** 和 **MultiPoint**）没有长度或面积。 一维对象（如 **LineString、CircularString**、 **CompoundCurve** 和 **MultiLineString**）有长度。 二维实例（如 **Polygon、CurvePolygon** 和 **MultiPolygon**）有面积和长度。 空实例会报告 -1 维，并且 **GeometryCollection** 会报告其内容的最大维度。  
   
  **返回实例的维度**  
  [STDimension（geography 数据类型）](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -175,7 +175,7 @@ ms.locfileid: "92006334"
  [STArea（geography 数据类型）](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- 空 **geography** 实例不包含任何点。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 实例的长度为 0。 空的 **Polygon, CurvePolygon** 和 **MultiPolygon** 实例的面积为 0。  
+ 空 **geography** 实例不包含任何点。 空的 **LineString, CircularString**、 **CompoundCurve** 和 **MultiLineString** 实例的长度为 0。 空的 **Polygon, CurvePolygon** 和 **MultiPolygon** 实例的面积为 0。  
   
  **确定实例是否为空**  
  [STIsEmpty（geography 数据类型）](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  

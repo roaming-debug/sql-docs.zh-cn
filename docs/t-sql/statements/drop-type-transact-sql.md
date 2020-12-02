@@ -22,11 +22,11 @@ ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 26fb837dc28b0ac7b2845a64eab800512e508b7b
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497592"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131067"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 -   存在在数据库中创建的函数、存储过程或触发器，且这些例程使用别名类型或用户定义的类型的变量和参数。 通过查询 [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) 或 [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md) 目录视图可获得有关别名类型参数或用户定义类型参数的信息。  
   
 ## <a name="permissions"></a>权限  
- 需要对 type_name 拥有 CONTROL 权限，或对 schema_name 拥有 ALTER 权限****。  
+ 需要对 type_name 拥有 CONTROL 权限，或对 schema_name 拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
  以下示例假设已经在当前数据库中创建了一个名为 `ssn` 的类型。  

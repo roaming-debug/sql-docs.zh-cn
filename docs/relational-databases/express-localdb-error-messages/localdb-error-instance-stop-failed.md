@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0d258fdf6d807d0f3006188e073857c03d3f9693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9d1edf7badcc31385913e3cf7e2bd795d19075ec
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409443"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506211"
 ---
 # <a name="localdb_error_instance_stop_failed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -23,11 +23,11 @@ ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4bf41bb420ddaaccd0f1899c641a30a17bbb8fcd
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380338"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131161"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,10 +50,10 @@ DROP QUEUE <object>
 
 ## <a name="arguments"></a>参数
  *database_name*  
- 数据库的名称，此数据库包含要删除的队列。 如果未提供 database_name，则默认为当前数据库**。  
+ 数据库的名称，此数据库包含要删除的队列。 如果未提供 database_name，则默认为当前数据库。  
   
  schema_name（对象）  
- 架构的名称，此架构拥有要删除的队列。 如果未提供 schema_name，则默认为当前用户的默认架构**。  
+ 架构的名称，此架构拥有要删除的队列。 如果未提供 schema_name，则默认为当前用户的默认架构。  
   
  queue_name  
  要删除的队列的名称。  

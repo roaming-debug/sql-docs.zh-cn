@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e9a82b29583ef26ed1a748e1f6e58f415b8cab0e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9ac10832856ca481d170cd4db79ff37eaecffaac
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695664"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130522"
 ---
 # <a name="backup-device-general-page"></a>备份设备（“常规”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

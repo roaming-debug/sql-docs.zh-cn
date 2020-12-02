@@ -23,11 +23,11 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: cf0a57dd61d3679f5d1d2888299b3759c1feca54
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544195"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131262"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,16 +50,16 @@ CREATE SERVICE service_name
 
 ## <a name="arguments"></a>参数
  *service_name*  
- 要创建的服务的名称。 新服务在当前数据库中创建，由 AUTHORIZATION 子句中指定的主体数据库所有。 不能指定服务器、数据库和架构名称。 service_name 必须是有效的 sysname******。  
+ 要创建的服务的名称。 新服务在当前数据库中创建，由 AUTHORIZATION 子句中指定的主体数据库所有。 不能指定服务器、数据库和架构名称。 service_name 必须是有效的 sysname。  
   
 > [!NOTE]  
-> 不要创建将关键字 ANY 用于 service_name 的服务**。 在 `CREATE BROKER PRIORITY` 中为服务名称指定 `ANY` 时，优先级被视为针对所有服务。 此情况不限于名称为 ANY 的服务。  
+> 不要创建将关键字 ANY 用于 service_name 的服务。 在 `CREATE BROKER PRIORITY` 中为服务名称指定 `ANY` 时，优先级被视为针对所有服务。 此情况不限于名称为 ANY 的服务。  
   
  AUTHORIZATION owner_name   
- 将服务所有者设置为指定的数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可能为任意有效用户或角色的名称**********。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有 IMPERSONATE 权限的用户的名称，或者是当前用户所属的角色的名称  。  
+ 将服务所有者设置为指定的数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可能为任意有效用户或角色的名称。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有 IMPERSONATE 权限的用户的名称，或者是当前用户所属的角色的名称  。  
   
- ON QUEUE [ schema_name.__**** ] queue_name**  
- 指定接收服务消息的队列。 该队列必须与服务在同一数据库中。 如果未提供 schema_name，则架构为执行该语句的用户的默认架构**。  
+ ON QUEUE [ schema_name. ] queue_name  
+ 指定接收服务消息的队列。 该队列必须与服务在同一数据库中。 如果未提供 schema_name，则架构为执行该语句的用户的默认架构。  
   
  contract_name  
  指定针对此服务的约定。 服务程序使用指定的约定来启动与此服务的会话。 如果未指定约定，则该服务可能仅启动会话。  

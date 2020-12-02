@@ -12,11 +12,11 @@ ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6af8fdff22031cd5f806cb3d6f640223414f3ac1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425069"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129708"
 ---
 # <a name="catalogset_environment_reference_type-ssisdb-database"></a>catalog.set_environment_reference_type（SSISDB 数据库）
 
@@ -73,6 +73,6 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
  项目可以具有相对或绝对的环境引用。 相对引用通过名称引用环境，并要求它与项目位于相同文件夹中。 绝对引用通过名称和文件夹引用环境，可能引用与项目不在同一文件夹中的环境。 项目可以引用多个环境。  
   
 > [!IMPORTANT]  
->  如果指定了相对引用，则不会使用 environment_folder_name 参数值，并且环境文件夹名称将自动设置为 NULL******。 如果指定了绝对引用，则必须在 environment_folder_name 参数中提供环境文件夹名称**。  
+>  如果指定了相对引用，则不会使用 environment_folder_name 参数值，并且环境文件夹名称将自动设置为 NULL。 如果指定了绝对引用，则必须在 environment_folder_name 参数中提供环境文件夹名称。  
   
   

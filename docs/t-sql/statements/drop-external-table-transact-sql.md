@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3397248b39b3fa099cf0df90e4396454189941b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544154"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131193"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ## <a name="permissions"></a>权限  
   
--   该表所属架构需要 ALTER**** 权限。  
+-   该表所属架构需要 ALTER 权限。  
   
 ## <a name="general-remarks"></a>一般备注  
  删除外部表会删除所有与表相关的元数据。 该操作不会删除外部数据。  

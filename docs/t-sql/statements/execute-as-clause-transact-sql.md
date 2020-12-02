@@ -27,11 +27,11 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e41272ce78e5bfb0dd1a0f746a11d6700ac11c59
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498150"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131056"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 子句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,12 +82,12 @@ DDL Triggers with Database Scope
  CALLER 不能在 CREATE QUEUE 或 ALTER QUEUE 语句中指定。  
   
  **SELF**  
- EXECUTE AS SELF 与 EXECUTE AS user_name 等价，其中指定用户是创建或更改模块的用户**。 创建或更改模块的用户的实际用户 ID 存储在 sys.sql_modules 或 sys.service_queues 目录视图的 execute_as_principal_id 列中************。  
+ EXECUTE AS SELF 与 EXECUTE AS user_name 等价，其中指定用户是创建或更改模块的用户。 创建或更改模块的用户的实际用户 ID 存储在 sys.sql_modules 或 sys.service_queues 目录视图的 execute_as_principal_id 列中。  
   
  SELF 是队列的默认值。  
   
 > [!NOTE]  
->  若要在 sys.service_queues 目录视图中更改 execute_as_principal_id 的用户 ID，必须在 ALTER QUEUE 语句中显式指定 EXECUTE AS 设置********。  
+>  若要在 sys.service_queues 目录视图中更改 execute_as_principal_id 的用户 ID，必须在 ALTER QUEUE 语句中显式指定 EXECUTE AS 设置。  
   
  OWNER  
  指定模块内的语句在模块的当前所有者上下文中执行。 如果模块没有指定的所有者，则使用模块架构的所有者。 不能为 DDL 或登录触发器指定 OWNER。  
@@ -96,16 +96,16 @@ DDL Triggers with Database Scope
 >  OWNER 必须映射到单一实例帐户，并且不能是角色或组。  
   
  **'** *user_name* **'**  
- 指定模块内的语句在 user_name 指定的用户的上下文中执行**。 将根据 user_name 来验证对模块内任意对象的权限**。 不能为具有服务器作用域的 DDL 触发器或登录触发器指定 user_name**。 请改用 login_name**。  
+ 指定模块内的语句在 user_name 指定的用户的上下文中执行。 将根据 user_name 来验证对模块内任意对象的权限。 不能为具有服务器作用域的 DDL 触发器或登录触发器指定 user_name。 请改用 login_name。  
   
- user_name 必须存在于当前数据库中，并且必须是单一实例帐户**。 user_name 不能为组、角色、证书、密钥或内置帐户，如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem**。  
+ user_name 必须存在于当前数据库中，并且必须是单一实例帐户。 user_name 不能为组、角色、证书、密钥或内置帐户，如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
   
- 执行上下文的用户 ID 存储在元数据中，可以在 sys.sql_modules 或 sys.assembly_modules 目录视图的 execute_as_principal_id 列查看************。  
+ 执行上下文的用户 ID 存储在元数据中，可以在 sys.sql_modules 或 sys.assembly_modules 目录视图的 execute_as_principal_id 列查看。  
   
  **'** *login_name* **'**  
- 指定模块内的语句在 login_name 指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的上下文中执行**。 将根据 login_name 来验证对模块内任意对象的权限**。 只能为具有服务器作用域的 DDL 触发器或登录触发器指定 login_name**。  
+ 指定模块内的语句在 login_name 指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的上下文中执行。 将根据 login_name 来验证对模块内任意对象的权限。 只能为具有服务器作用域的 DDL 触发器或登录触发器指定 login_name。  
   
- login_name 不能为组、角色、证书、密钥或内置帐户，如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem**。  
+ login_name 不能为组、角色、证书、密钥或内置帐户，如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
   
 ## <a name="remarks"></a>注解  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]对模块所引用对象的权限进行评估的方式取决于调用对象和被引用对象之间存在的所有权链。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，所有权链是可以避免授权调用用户访问所有被引用对象权限的唯一方式。  
@@ -131,11 +131,11 @@ DDL Triggers with Database Scope
 ## <a name="specifying-a-user-or-login-name"></a>指定用户名或登录名  
  修改模块以便在其他上下文中执行前，不能删除模块的 EXECUTE AS 子句中指定的数据库用户或服务器登录。  
   
- 在 EXECUTE AS 子句中指定的用户或登录名必须分别是 sys.database_principals 或 sys.server_principals 中的主体，否则创建或更改模块的操作将失败********。 此外，创建或更改模块的用户必须拥有对主体的 IMPERSONATE 权限。  
+ 在 EXECUTE AS 子句中指定的用户或登录名必须分别是 sys.database_principals 或 sys.server_principals 中的主体，否则创建或更改模块的操作将失败。 此外，创建或更改模块的用户必须拥有对主体的 IMPERSONATE 权限。  
   
  如果用户拥有通过 Windows 组成员身份隐式访问数据库或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的权限，并且满足以下要求之一，则创建模块时，也将隐式创建在 EXECUTE AS 子句中指定的用户：  
   
--   指定的用户或登录名是 sysadmin 固定服务器角色的成员****。  
+-   指定的用户或登录名是 sysadmin 固定服务器角色的成员。  
   
 -   创建模块的用户拥有创建主体的权限。  
   
@@ -148,7 +148,7 @@ DDL Triggers with Database Scope
   
 -   CompanyDomain\SQLUsers 组拥有 Sales 数据库的访问权限 。  
   
--   CompanyDomain\SqlUser1 是 SQLUsers 的成员，因此它拥有 Sales 数据库的访问权限************。  
+-   CompanyDomain\SqlUser1 是 SQLUsers 的成员，因此它拥有 Sales 数据库的访问权限。  
   
 -   创建或更改模块的用户拥有创建主体的权限。  
   
@@ -196,7 +196,7 @@ GO
   
  若要在创建或修改模块时指定 EXECUTE AS 子句，必须对指定的主体拥有 IMPERSONATE 权限以及创建该模块的权限。 可以始终扮演自身。 如果未指定执行上下文或指定了 EXECUTE AS CALLER，则无需 IMPERSONATE 权限。  
   
- 若要指定通过 Windows 组成员身份能够隐式访问数据库的 login_name 或 user_name，则必须拥有对数据库的 CONTROL 权限****。  
+ 若要指定通过 Windows 组成员身份能够隐式访问数据库的 login_name 或 user_name，则必须拥有对数据库的 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
  以下示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建一个存储过程，并将执行上下文分配给 `OWNER`。  

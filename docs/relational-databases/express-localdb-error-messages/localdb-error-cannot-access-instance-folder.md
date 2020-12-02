@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 59321d66a5dd290fe6f1c148a60c9a1d0b2ecd68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 556e1a5b7aeba484e66888f021619c8ae74a8c3f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88383283"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506438"
 ---
 # <a name="localdb_error_cannot_access_instance_folder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: 35b4d6fa-ebb9-49d3-aaab-d4e37b6f3760
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 44bec1873b345c7cc5a7eff830d61a44c8597af9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4e4b290daa5dee2fb2a7cc5d3d608b81a7eae438
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409543"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506261"
 ---
 # <a name="localdb_error_instance_already_shared"></a>LOCALDB_ERROR_INSTANCE_ALREADY_SHARED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

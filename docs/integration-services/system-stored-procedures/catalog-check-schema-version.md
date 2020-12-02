@@ -12,11 +12,11 @@ ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b8f1d04f2a41c247a3de8a66f5b07ee74f5036b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456984"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129942"
 ---
 # <a name="catalogcheck_schema_version"></a>catalog.check_schema_version 
 
@@ -39,7 +39,7 @@ catalog.check_schema_version [ @use32bitruntime = ] use32bitruntime
   
 ## <a name="arguments"></a>参数  
  [ @use32bitruntime= ] *use32bitruntime*  
- 当此参数设置为 1**** 时，将调用 32 位版本的 dtexec。 use32bitruntime** 为 int****。  
+ 当此参数设置为 1 时，将调用 32 位版本的 dtexec。 use32bitruntime 为 int。  
   
 ## <a name="result-set"></a>结果集  
  无  

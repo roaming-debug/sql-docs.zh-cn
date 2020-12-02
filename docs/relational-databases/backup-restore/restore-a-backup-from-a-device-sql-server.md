@@ -14,14 +14,14 @@ helpviewer_keywords:
 - database restores [SQL Server], device restores
 - devices [SQL Server]
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ca37f8761ad2559cf5381e0d80cd6e30d003d13d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1c2125a470390f1b7343e4e0f978eb957bd3695e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669531"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130306"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>从设备还原备份 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

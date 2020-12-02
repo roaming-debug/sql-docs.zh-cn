@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1487d56bd1f93e0410f6c9b6001f4f379b466fb5
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380323"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131147"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ DROP ROLE role_name
  若要删除服务器角色，请使用[DROP SERVER ROLE (Transact-SQL)](../../t-sql/statements/drop-server-role-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
- 要求对数据库具有 ALTER ANY ROLE 权限、对角色具有 CONTROL 权限或具有 db_securityadmin 中的成员身份************。  
+ 要求对数据库具有 ALTER ANY ROLE 权限、对角色具有 CONTROL 权限或具有 db_securityadmin 中的成员身份。  
   
 ## <a name="examples"></a>示例  
  以下示例从 `AdventureWorks2012` 数据库中删除数据库角色 `purchasing`。  

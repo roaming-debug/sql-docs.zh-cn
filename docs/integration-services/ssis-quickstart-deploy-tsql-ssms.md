@@ -10,11 +10,11 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a741612f0afd305edaf4cc289f1841eb9b353d8a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195184"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129967"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>使用 Transact-SQL 从 SSMS 部署 SSIS 项目
 
@@ -72,11 +72,11 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
 
 2.  为系统更新 `catalog.deploy_project` 存储过程中的参数值。
 
-3.  请确保 SSISDB 是当前数据库****。
+3.  请确保 SSISDB 是当前数据库。
 
 4.  运行该脚本。
 
-5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目****。
+5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目。
 
 ```sql
 DECLARE @ProjectBinary AS varbinary(max)

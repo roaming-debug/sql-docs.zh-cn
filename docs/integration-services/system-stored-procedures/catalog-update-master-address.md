@@ -12,11 +12,11 @@ author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 80b5e28a0d552955154849d2f593fc32be79f656
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495358"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129508"
 ---
 # <a name="catalogupdate_master_address-ssisdb-database"></a>catalog.update_master_address（SSISDB 数据库）
 
@@ -34,8 +34,8 @@ catalog.update_master_address [ @MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>参数
-[ @MasterAddress = ] masterAddress**  
-Scale Out Master 终结点。 masterAddress** 为 nvarchar****。  
+[ @MasterAddress = ] masterAddress  
+Scale Out Master 终结点。 masterAddress 为 nvarchar。  
 
  ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

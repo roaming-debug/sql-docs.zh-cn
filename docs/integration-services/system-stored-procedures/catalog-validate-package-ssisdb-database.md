@@ -15,11 +15,11 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 632a0039692cbb6d22dba736f268bffff9be6f74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495377"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129497"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package（SSISDB 数据库）
 
@@ -49,20 +49,20 @@ catalog.validate_package [ @folder_name = ] folder_name
  [ @project_name = ] project_name   
  包含此包的项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
- [ @package_name = ] package_name**  
- 包的名称。 package_name** 为 nvarchar(260)****。  
+ [ @package_name = ] package_name  
+ 包的名称。 package_name 为 nvarchar(260)。  
   
- [ @validation_id = ] validation_id**  
- 返回验证的唯一标识符 (ID)。 validation_id** 为 bigint****。  
+ [ @validation_id = ] validation_id  
+ 返回验证的唯一标识符 (ID)。 validation_id 为 bigint。  
   
  [ @use32bitruntime = ] use32bitruntime  
  指示是否应使用 32 位运行时在 64 位操作系统上运行包。 在 64 位操作系统上运行时，使用值 `1` 以便使用 32 位运行时执行此包。 在 64 位操作系统上运行时，使用值 `0` 以便使用 64 位运行时执行此包。 此参数是可选的。 use32bitruntime 为 bit。  
   
- [ @environment_scope = ] environment_scope**  
+ [ @environment_scope = ] environment_scope  
  指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数是可选的。 默认情况下使用字符 `D`。 environment_scope 为 char(1)。  
   
  [ @reference_id = ] reference_id   
- 环境引用的唯一 ID。 如果 environment_scope** 为 `S`，仅当在验证中包含单个环境引用时，才需要此参数。 reference_id 为 bigint   。  
+ 环境引用的唯一 ID。 如果 environment_scope 为 `S`，仅当在验证中包含单个环境引用时，才需要此参数。 reference_id 为 bigint   。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）  

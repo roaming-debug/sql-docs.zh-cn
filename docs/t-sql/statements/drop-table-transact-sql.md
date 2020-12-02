@@ -39,11 +39,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab3e6728560c563b5b3ecf4de03fd9359070f19e
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989875"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131079"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -94,7 +94,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
   
  删除表时，表的规则或默认值将被解除绑定，与该表关联的任何约束或触发器将被自动删除。 如果要重新创建表，则必须重新绑定相应的规则和默认值，重新创建某些触发器，并添加所有必需的约束。  
   
- 如果使用 DELETE tablename 删除表中的所有行或使用 TRUNCATE TABLE 语句，则在表被删除之前，表将一直存在**。  
+ 如果使用 DELETE tablename 删除表中的所有行或使用 TRUNCATE TABLE 语句，则在表被删除之前，表将一直存在。  
   
  删除使用了超过 128 个区的大型表和索引时，需要分两个单独的阶段：逻辑和物理阶段。 在逻辑阶段中，对表使用的现有分配单元进行标记以便释放，并对其进行锁定，直到事务提交为止。 在物理阶段，标记为要释放的 IAM 页被成批地物理删除。  
   
@@ -123,7 +123,7 @@ DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. 删除临时表  
- 以下示例将创建一个临时表，测试该表是否存在，删除该表，然后再次测试该表是否存在。 此示例不使用 IF EXISTS 语法，该语法适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及以上版本****。  
+ 以下示例将创建一个临时表，测试该表是否存在，删除该表，然后再次测试该表是否存在。 此示例不使用 IF EXISTS 语法，该语法适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及以上版本。  
   
 ```sql  
 CREATE TABLE #temptable (col1 INT);  

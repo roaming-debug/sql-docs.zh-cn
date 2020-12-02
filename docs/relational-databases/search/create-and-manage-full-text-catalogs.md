@@ -18,11 +18,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a431635fdca556023a5e598502919bfdc9e40db6
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067329"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130923"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
 
@@ -89,11 +89,11 @@ GO
 
 1.  在 SSMS 的对象资源管理器中，依次展开服务器、“数据库”、包含要重新生成的全文目录的数据库。  
   
-2.  展开 **“存储”** ，然后展开 **“全文目录”** 。  
+2.  展开 **“存储”**，然后展开 **“全文目录”**。  
   
 3.  右键单击要重新生成的全文目录的名称，并选择“重新生成”。  
   
-4.  对于问题 **是否要删除并重新生成全文目录?** ，请单击“确定”。  
+4.  对于问题 **是否要删除并重新生成全文目录?**，请单击“确定”。  
   
 5.  在“重新生成全文目录”对话框中，单击“关闭”。  
    
@@ -103,9 +103,9 @@ GO
   
 2.  展开“存储”，然后右键单击“全文目录”。  
   
-3.  选择 **“全部重新生成”** 。  
+3.  选择 **“全部重新生成”**。  
   
-4.  对于问题 **是否要删除并重新生成所有全文目录?** ，请单击“确定”。  
+4.  对于问题 **是否要删除并重新生成所有全文目录?**，请单击“确定”。  
   
 5.  在“重新生成所有全文目录”对话框中，单击“关闭”。  
   
@@ -118,11 +118,11 @@ GO
 
 1.  在 SSMS 的对象资源管理器中，依次展开服务器、“数据库”、包含要删除的全文目录的数据库。  
   
-2.  展开 **“存储”** ，然后展开 **“全文目录”** 。  
+2.  展开 **“存储”**，然后展开 **“全文目录”**。  
   
 3.  右键单击要删除的全文目录，然后选择“删除”。  
   
-4.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
+4.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
 
 ## <a name="next-step"></a>后续步骤
 [创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)

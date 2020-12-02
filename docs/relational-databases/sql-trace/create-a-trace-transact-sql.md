@@ -15,11 +15,11 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364789"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130184"
 ---
 # <a name="create-a-trace-transact-sql"></a>创建跟踪 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "93364789"
   
 ### <a name="to-create-a-trace"></a>创建跟踪  
   
-1.  执行带所需参数的 **sp_trace_create** 以创建新的跟踪。 新的跟踪将处于停止状态（状态为 **0** ）。  
+1.  执行带所需参数的 **sp_trace_create** 以创建新的跟踪。 新的跟踪将处于停止状态（状态为 **0**）。  
   
 2.  执行带所需参数的 **sp_trace_setevent** 以选择要跟踪的事件和列。  
   

@@ -1,1 +1,1 @@
-Microsoft Azure Synapse Analytics（以前称为“SQL 数据仓库”）  
+Microsoft Azure Synapse Analytics  

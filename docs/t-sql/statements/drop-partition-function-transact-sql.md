@@ -23,11 +23,11 @@ ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4491f35570a4f60d2a3deb9e4c3271c34f699369
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380362"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131176"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- partition_function_name**  
+ partition_function_name  
  要删除的分区函数的名称。  
   
 ## <a name="remarks"></a>备注  

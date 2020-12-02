@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cdfff620e2a83dbd151c7c5a1034ec8d206b7e1f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c56915e31834aedfa56dd119a3615d64b0510732
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458860"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506042"
 ---
 # <a name="sql-server-express-localdb-reference---error-messages"></a>SQL Server Express LocalDB 参考 - 错误消息
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

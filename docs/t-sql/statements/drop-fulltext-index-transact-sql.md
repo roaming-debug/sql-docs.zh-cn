@@ -23,11 +23,11 @@ ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 7883bb6eab65b2877e08c9ad9c0e9c869d4988af
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380422"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131407"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ DROP FULLTEXT INDEX ON table_name
  使用 DROP FULLTEXT INDEX 命令前，无需从全文索引中删除所有列。  
   
 ## <a name="permissions"></a>权限  
- 用户必须对表或索引视图具有 ALTER 权限，或者是 sysadmin 固定服务器角色、db_owner 固定数据库角色或 db_ddladmin 固定数据库角色的成员************。  
+ 用户必须对表或索引视图具有 ALTER 权限，或者是 sysadmin 固定服务器角色、db_owner 固定数据库角色或 db_ddladmin 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  
  以下示例删除 `JobCandidate` 表的全文索引。  

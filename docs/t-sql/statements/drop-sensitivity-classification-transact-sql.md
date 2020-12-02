@@ -26,11 +26,11 @@ helpviewer_keywords:
 - data classification
 monikerRange: " >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
 ms.openlocfilehash: 6b09e5e60bd7ac1d02f46d191fccd0e2142f8d75
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784762"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131102"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -56,7 +56,7 @@ object_name ([schema_name.]table_name.column_name)
 是从中删除分类的数据库列的名称。 目前仅支持列分类。
     - schema_name（可选）- 是已分类的列所属架构的名称。
     - *table_name* - 是已分类的列所属表的名称。
-    - column_name** - 是从中删除分类的列的名称。
+    - column_name - 是从中删除分类的列的名称。
 
 ## <a name="remarks"></a>备注  
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9caaf20096c489eb4e7ff5ff4620c22acda57436
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5fbc51b2c3e4efc75200bbeef211979956d1cb5c
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470580"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506161"
 ---
 # <a name="localdb_error_not_installed"></a>LOCALDB_ERROR_NOT_INSTALLED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

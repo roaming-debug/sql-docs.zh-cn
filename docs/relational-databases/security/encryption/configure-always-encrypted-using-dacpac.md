@@ -14,11 +14,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470099"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130899"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>使用 Always Encrypted 和 DAC 包配置列加密 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88470099"
 如果升级操作触发数据加密操作，则还需要能够访问为受影响的列配置的列主密钥：
 
 - **证书存储 - 本地计算机** - 必须对用作列主密钥的证书具有读取访问权限，或者是计算机上的管理员。
-- **Azure Key Vault** - 需要包含列主密钥的保管库上的 create、get、unwrapKey、wrapKey、sign 和 verify 权限************。
+- **Azure Key Vault** - 需要包含列主密钥的保管库上的 create、get、unwrapKey、wrapKey、sign 和 verify 权限。
 - **密钥存储提供程序(CNG)** - 使用密钥存储或密钥时可能提示你提供必要的权限和凭据，具体取决于存储和 KSP 配置。
 - **加密服务提供程序(CAPI)** - 使用密钥存储或密钥时可能提示你提供必要的权限和凭据，具体取决于存储和 CSP 配置。
 

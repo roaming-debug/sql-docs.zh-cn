@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5ba5f84315eec687e6ab93c407226a3ff2fbc343
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6b400efdcf437fd97952ae215f5279d770c0598a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809184"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130560"
 ---
 # <a name="back-up-files-and-filegroups"></a>备份文件和文件组
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -206,9 +206,9 @@ GO
   
 使用 **Backup-SqlDatabase** cmdlet 并为 **-BackupAction** 参数的值指定 **Files** 。 此外，还指定下列参数之一：  
   
-- 若要备份某个特定文件，请指定 _-DatabaseFile_String  参数，其中 String  是要备份的一个或多个数据库文件。  
+- 若要备份某个特定文件，请指定 _-DatabaseFile_ String  参数，其中 String  是要备份的一个或多个数据库文件。  
   
-- 若要备份某个给定文件组中的所有文件，请指定 _-DatabaseFileGroup_String  参数，其中 String  是要备份的一个或多个数据库文件组。  
+- 若要备份某个给定文件组中的所有文件，请指定 _-DatabaseFileGroup_ String  参数，其中 String  是要备份的一个或多个数据库文件组。  
   
 下面的示例在 `<myDatabase>` 数据库中创建辅助文件组“FileGroup1”和“FileGroup2”中的每个文件的完整文件备份。 将在服务器实例 `Computer\Instance`的默认备份位置上创建备份。  
 

@@ -31,11 +31,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43214b8f1e0b81b75c34c33b8b8b7df53bdd8d03
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300528"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131396"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -177,7 +177,7 @@ CREATE USER user_name
 
 ## <a name="arguments"></a>参数
  user_name  
- 指定在此数据库中用于识别该用户的名称。 *user_name* 为 **sysname** 。 它的长度最多是 128 个字符。 在创建基于 Windows 主体的用户时，除非指定其他用户名，否则 Windows 主体名称将成为用户名。  
+ 指定在此数据库中用于识别该用户的名称。 *user_name* 为 **sysname**。 它的长度最多是 128 个字符。 在创建基于 Windows 主体的用户时，除非指定其他用户名，否则 Windows 主体名称将成为用户名。  
   
  LOGIN *login_name*  
  指定要为其创建数据库用户的登录名。 *login_name* 必须是服务器中的有效登录名。 可以是基于 Windows 主体（用户或组）的登录名，也可以是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名。 当此 SQL Server 登录名进入数据库时，它将获取正在创建的这个数据库用户的名称和 ID。 在创建从 Windows 主体映射的登录名时，请使用格式 [\<domainName\>\\\<loginName\>]。 有关示例，请参阅[语法摘要](#SyntaxSummary)。  
@@ -187,10 +187,10 @@ CREATE USER user_name
  WITH DEFAULT_SCHEMA = schema_name  
  指定服务器为此数据库用户解析对象名时将搜索的第一个架构。  
   
- ' *windows_principal* '  
+ '*windows_principal*'  
  指定正为其创建数据库用户的 Windows 主体。 *windows_principal* 可以是 Windows 用户或 Windows 组。 即使 *windows_principal* 没有登录名，也会创建该用户。 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，如果 *windows_principal* 没有登录名，Windows 主体必须通过有登录名的 Windows 组中的成员身份在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中进行身份验证，或者连接字符串必须将包含的数据库指定为初始目录。 在从 Windows 主体创建用户时，请使用格式 [\<domainName\>\\\<loginName\>]。 有关示例，请参阅[语法摘要](#SyntaxSummary)。 基于 Active Directory 用户的用户的名称限制为少于 21 个字符。
   
- ' *Azure_Active_Directory_principal* '  
+ '*Azure_Active_Directory_principal*'  
  适用范围：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
   
  指定正为其创建数据库用户的 Azure Active Directory 主体。 Azure_Active_Directory_principal 可以是 Azure Active Directory 用户、Azure Active Directory 组或 Azure Active Directory 应用程序。 （Azure Active Directory 用户不能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中拥有 Windows 身份验证登录名；只有数据库用户才能拥有。）连接字符串必须将包含的数据库指定为初始目录。
@@ -209,7 +209,7 @@ CREATE USER user_name
  有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/azure-sql/database/authentication-aad-overview)。  
   
 WITH PASSWORD = 'password'  
- **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  只能在包含数据库中使用。 为正在创建的用户指定密码。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，存储的密码信息使用 SHA-512 加盐密码进行计算。  
   
@@ -217,17 +217,17 @@ WITHOUT LOGIN
  指定不应将用户映射到现有登录名。  
   
 CERTIFICATE cert_name  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定要为其创建数据库用户的证书。  
   
 ASYMMETRIC KEY asym_key_name  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定要为其创建数据库用户的非对称密钥。  
   
 DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
- **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  为新用户指定默认语言。 如果为用户指定了默认语言并在之后更改数据库的默认语言，则用户的默认语言仍会保留为指定的语言。 如果未指定默认语言，用户的默认语言将为数据库的默认语言。 如果未指定用户的默认语言并在之后更改数据库的默认语言，用户的默认语言将更改为数据库的新默认语言。  
   
@@ -235,12 +235,12 @@ DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> 
 >  *DEFAULT_LANGUAGE* 仅用于包含的数据库用户。  
   
 SID = sid  
- **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  仅适用于包含的数据库中具有密码的用户（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证）。 指定新数据库用户的 SID。 如果未选择此选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动指派 SID。 使用 SID 参数在具有同一标识 (SID) 的多个数据库中创建用户。 当在多个数据库中创建用户以准备进行 Always On 故障转移时，这非常有用。 若要确定用户的 SID，请查询 sys.database_principals。  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **适用于** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  取消在大容量复制操作期间对服务器进行加密元数据检查。 这使用户能够在表或数据库之间大容量复制加密数据，而无需对数据进行解密。 默认为 OFF。  
   
@@ -380,7 +380,7 @@ GO
 ### <a name="c-creating-a-database-user-from-a-certificate"></a>C. 从证书创建数据库用户  
  下面的示例从证书 `JinghaoLiu` 创建数据库用户 `CarnationProduction50`。  
   
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -419,7 +419,7 @@ GO
 ### <a name="e-creating-a-contained-database-user-with-password"></a>E. 创建拥有密码的包含数据库用户  
  下面的示例创建一个拥有密码的包含数据库用户。 该示例只能在包含数据库中执行。  
   
-**适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 如果删除了 DEFAULT_LANGUAGE，则此示例可在 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中正常运行。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 如果删除了 DEFAULT_LANGUAGE，则此示例可在 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中正常运行。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -434,7 +434,7 @@ GO
 ### <a name="f-creating-a-contained-database-user-for-a-domain-login"></a>F. 为域登录名创建包含数据库用户  
  下面的示例为 Contoso 域中名为 Fritz 的登录名创建一个包含数据库用户。 该示例只能在包含数据库中执行。  
   
-**适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -446,7 +446,7 @@ GO
 ### <a name="g-creating-a-contained-database-user-with-a-specific-sid"></a>G. 创建具有特定 SID 的包含数据库用户  
  下面的示例创建名为 CarmenW 的 SQL Server 经过身份验证的包含数据库用户。 该示例只能在包含数据库中执行。  
   
-**适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -458,7 +458,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. 创建用户以复制加密数据  
  以下示例会创建一个用户，该用户可以将受 Always Encrypted 功能保护的数据从一组包含加密列的表复制到另一组具有加密列的表中（在相同或不同的数据库中）。  有关详细信息，请参阅[迁移通过 Always Encrypted 保护的敏感数据](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。  
   
-**适用于** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```sql  
 CREATE USER [Chin]   

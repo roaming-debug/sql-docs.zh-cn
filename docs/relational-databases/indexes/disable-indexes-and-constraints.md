@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424169"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130287"
 ---
 # <a name="disable-indexes-and-constraints"></a>禁用索引和约束
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "88424169"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要禁用的索引，然后选择****“禁用”。  
+5.  右键单击要禁用的索引，然后选择“禁用”。  
   
 6.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”**。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "88424169"
   
 3.  单击加号以便展开您要禁用索引的表。  
   
-4.  右键单击****“索引”文件夹，然后选择****“全部禁用”。  
+4.  右键单击“索引”文件夹，然后选择“全部禁用”。  
   
 5.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”**。 若要从 **“要禁用的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "88424169"
  显示创建索引的表或视图的名称。  
   
  **索引类型**  
- 显示索引的类型：****“聚集”、****“非聚集”、****“空间”或 ****”XML”。  
+ 显示索引的类型：“聚集”、“非聚集”、“空间”或 ”XML”。  
   
  **Status**  
  显示禁用操作的状态。 执行之后可能的值包括：  

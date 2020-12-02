@@ -32,14 +32,14 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 3bcec97642ead8a53c0703cdcfafbbe59cc4bbe1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ec866bae59d0b37803e7df72e9ba9593e0f66c7b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728476"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130492"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>备份历史记录和标头信息 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

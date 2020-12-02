@@ -12,11 +12,11 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5775b87b13fc126907dfc0f121e9838c2d490fd0
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243640"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129662"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value（SSISDB 数据库）
 
@@ -63,7 +63,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  使用值 `20` 表示项目参数，使用值 `30` 表示包参数。  
   
- *object_type* 为 **smallint** 。  
+ *object_type* 为 **smallint**。  
   
  [ @parameter_name = ] *parameter_name*  
  参数的名称。 parameter_name 为 nvarchar(128)。  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - online restores [SQL Server], simple recovery model
 - simple recovery model [SQL Server], RESTORE examples
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bf837bc23f1462acc2c875a97c167b82ef600190
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 58c4448ecde5bfed478ad19aa961dc74c1db59a5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85747427"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130429"
 ---
 # <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>示例：只读文件的联机还原（简单恢复模式）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

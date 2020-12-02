@@ -18,11 +18,11 @@ ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1905b2a0c2eaa017249ac9ab7f86a6523c4366c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444713"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131355"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY 程序集权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  permission  
  指定可拒绝授予程序集的权限。 如下所列。  
   
- ON ASSEMBLY ::assembly_name****__  
+ ON ASSEMBLY ::assembly_name  
  指定拒绝将其权限授予他人的程序集。 需要使用作用域限定符“::”。  
   
  database_principal  
@@ -74,7 +74,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- denying_principal**  
+ denying_principal  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  

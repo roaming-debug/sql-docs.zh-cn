@@ -12,11 +12,11 @@ ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 349a68fa94cfb479c6c3823b2b295a3a65498692
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495393"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129784"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values（SSISDB 数据库）
 
@@ -44,8 +44,8 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  [ @project_name = ] project_name   
  参数所在的项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
- [ @package_name = ] package_name**  
- 包的名称。 指定包名称，以便从特定包中检索所有项目参数和参数。 package_name** 为 nvarchar(260)****。  
+ [ @package_name = ] package_name  
+ 包的名称。 指定包名称，以便从特定包中检索所有项目参数和参数。 package_name 为 nvarchar(260)。  
   
  [ @reference_id = ] reference_id   
  环境引用的唯一标识符。 此参数是可选的。 reference_id 为 bigint   。  
@@ -67,7 +67,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |value_set|**bit**|如果值为 `1`，则已分配参数值。 如果值为 `0`，则尚未分配参数值。|  
   
 > [!NOTE]  
->  以纯文本形式显示文本值。 将显示 NULL**** 来替代敏感值。  
+>  以纯文本形式显示文本值。 将显示 NULL 来替代敏感值。  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

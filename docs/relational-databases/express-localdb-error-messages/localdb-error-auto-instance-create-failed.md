@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: ca7d2c05-2bde-4284-bb17-aa7fd8d7b20a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d2d8666521433a2b3f5020577b7e2bac7b340899
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 937d6e3a4ac1985f3c2f2a9f9e93df8f71663802
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486957"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506461"
 ---
 # <a name="localdb_error_auto_instance_create_failed"></a>LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

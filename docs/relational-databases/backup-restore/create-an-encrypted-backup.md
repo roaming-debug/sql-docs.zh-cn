@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fbf54c1e384357a423ee9c2c1f086edbc5c947f9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b02f55100110952bce5785130ba330b5c96bce81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809251"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130440"
 ---
 # <a name="create-an-encrypted-backup"></a>创建加密的备份
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

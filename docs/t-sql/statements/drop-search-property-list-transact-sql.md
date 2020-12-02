@@ -22,11 +22,11 @@ ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: de8f55242f3727eb1491b9a89e9bf7d349cef860
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380016"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131117"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ DROP SEARCH PROPERTY LIST property_list_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- property_list_name**  
+ property_list_name  
  要删除的搜索属性列表的名称。 *property_list_name* 是一个标识符。  
   
  若要查看现有属性列表的名称，请使用 [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) 目录视图，如下所示：  

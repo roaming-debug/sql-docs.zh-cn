@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1c0abb7ed5d4dfa128a276dc4a6a6c3db5a96d2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ca18065dd5d626e737025ef9ef4be3ab4d63bd19
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470599"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506181"
 ---
 # <a name="localdb_error_invalid_instance_name"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

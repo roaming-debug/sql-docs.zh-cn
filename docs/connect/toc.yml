@@ -73,6 +73,24 @@
           items:
             - name: SQL Server 连接池 (ADO.NET)
               href: ../connect/ado-net/sql-server-connection-pooling.md
+        - name: 命令和参数
+          href: ../connect/ado-net/commands-parameters.md
+          items:
+            - name: 执行命令
+              href: ../connect/ado-net/execute-command.md
+            - name: 配置参数
+              href: ../connect/ado-net/configure-parameters.md
+            - name: 使用 CommandBuilder 生成命令
+              href: ../connect/ado-net/generate-commands-with-commandbuilders.md
+            - name: 从数据库获取单一值
+              href: ../connect/ado-net/obtain-single-value-from-database.md
+            - name: 使用命令修改数据
+              href: ../connect/ado-net/use-commands-to-modify-data.md
+              items:
+                - name: 更新数据源中的数据
+                  href: ../connect/ado-net/update-data-inside-data-source.md
+                - name: 执行目录操作
+                  href: ../connect/ado-net/perform-catalog-operations.md
     - name: SQL Server 和 ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:

@@ -12,11 +12,11 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c7a3fc7c8d945050d1fcd9d74d543fbee26a0e45
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477182"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129936"
 ---
 # <a name="catalogcleanup_server_execution_keys"></a>catalog.cleanup_server_execution_keys 
 
@@ -35,14 +35,14 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @cleanup_flag = ] cleanup_flag**  
+ [ @cleanup_flag = ] cleanup_flag  
  指示是否删除执行级别 (1) 或项目级别 (2) 证书以及对称密钥。  
   
  仅当 SERVER_OPERATION_ENCRYPTION_LEVEL 设置为 PER_EXECUTION (1) 时，使用执行级别 (1)。  
   
  仅当 SERVER_OPERATION_ENCRYPTION_LEVEL 设置为 PER_PROJECT (2) 时，使用项目级别 (2)。 将仅删除后列项目的证书和对称密钥：已删除的项目和已为其清理操作日志的项目。  
   
- [ @delete_batch_size = ] delete_batch_size**  
+ [ @delete_batch_size = ] delete_batch_size  
  要删除的密钥和证书的数量。 默认值为 1000。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -68,7 +68,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 -   SSISDB 数据库未处于单用户模式下。  
   
 ## <a name="remarks"></a>注解  
- SQL Server 2012 Service Pack 2 将 SERVER_OPERATION_ENCRYPTION_LEVEL 属性添加到 internal.catalog_properties 表****。 该属性有两个可能值：  
+ SQL Server 2012 Service Pack 2 将 SERVER_OPERATION_ENCRYPTION_LEVEL 属性添加到 internal.catalog_properties 表。 该属性有两个可能值：  
   
 -   **PER_EXECUTION (1)** - 为每次执行创建用于保护敏感执行参数和执行日志的证书和对称密钥。 这是默认值。 因为每次执行都会生成证书/密钥，生产环境中可能会出现性能问题（死锁、失败的维护工作等）。 但是，此设置提供的安全性级别比其他值 (2) 高。  
   

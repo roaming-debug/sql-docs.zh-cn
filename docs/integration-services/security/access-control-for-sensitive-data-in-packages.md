@@ -25,11 +25,11 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d915b70f3f17c1be5c87361ab2810a82d18d6525
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192427"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130026"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
 
@@ -42,7 +42,7 @@ ms.locfileid: "92192427"
 >  除了本主题中所述的保护级别外，还可以使用固定数据库级角色保护保存到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包。  
   
 ## <a name="definition-of-sensitive-information"></a>定义敏感信息  
- 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中，下列信息定义为“敏感” ** 信息：  
+ 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中，下列信息定义为“敏感” 信息：  
   
 -   连接字符串的密码部分。 但是，如果选择加密所有数据的选项，则整个连接字符串都将被视为敏感信息。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "92192427"
   
  通常，您可以按下面列出的步骤更改保护级别：  
   
-1.  在部署期间，将包的保护级别保留为默认值 **EncryptSensitiveWithUserKey**。 此设置可以保证只有开发人员可以看到包中的敏感值。 或者，您可以考虑使用 **EncryptAllWithUserKey**或 **DontSaveSensitive**。  
+1.  在部署期间，将包的保护级别保留为默认值 **EncryptSensitiveWithUserKey**。 此设置可以保证只有开发人员可以看到包中的敏感值。 或者，您可以考虑使用 **EncryptAllWithUserKey** 或 **DontSaveSensitive**。  
   
-2.  部署包时，您需要将保护级别更改为不依靠开发人员用户密钥的保护级别。 因此，通常需要选择 **EncryptSensitiveWithPassword**或 **EncryptAllWithPassword**。 通过分配一个生产环境中运营团队也知道的临时强密码来加密包。  
+2.  部署包时，您需要将保护级别更改为不依靠开发人员用户密钥的保护级别。 因此，通常需要选择 **EncryptSensitiveWithPassword** 或 **EncryptAllWithPassword**。 通过分配一个生产环境中运营团队也知道的临时强密码来加密包。  
   
 3.  在将包部署到生产环境后，运营团队可以通过分配一个只有他们自己知道的强密码来重新加密部署的包。 他们也可以通过选择 **EncryptSensitiveWithUserKey** 或 **EncryptAllWithUserKey**，并使用要运行包的帐户的本地凭据来加密部署的包。  
 
@@ -99,7 +99,7 @@ ms.locfileid: "92192427"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中设置或更改包的保护级别  
   
-1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值****。  
+1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值。  
   
 2.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含该包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "92192427"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示符下设置或更改包的保护级别  
   
-1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值****。  
+1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值。  
   
 2.  在主题 **dtutil Utility** 中查看 [Encrypt](../../integration-services/dtutil-utility.md)选项的映射，然后确定要用作所选 **ProtectionLevel** 属性的值的相应整数。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "92192427"
  从列表中选择保护级别。  
   
  **密码**  
- 如果使用“使用密码加密敏感数据”**** 或“使用密码加密所有数据”**** 保护级别，请键入密码。  
+ 如果使用“使用密码加密敏感数据”或“使用密码加密所有数据”保护级别，请键入密码。  
   
  **重新键入密码**  
  再次键入该密码。  

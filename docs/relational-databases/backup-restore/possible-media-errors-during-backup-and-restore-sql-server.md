@@ -22,14 +22,14 @@ helpviewer_keywords:
 - NO_CHECKSUM option
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c364c7dca1e8ea7a74a526bdb69dc8a7b3cf296d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f0405ddad68df7c4e34d0af17d2e9da81adfe535
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670103"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130329"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在备份和还原期间可能的介质错误 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "85670103"
   
 2.  无论是否存在页校验和，BACKUP 都会为备份流生成一个单独的备份校验和。 还原操作可使用（可选）备份校验和来验证该备份是否损坏。 备份校验和存储在备份介质上，而不是存储在数据库页上。 备份校验还可根据需要在还原时使用。  
   
-3.  备份集标记为包含备份校验和（在 **msdb..backupset** 的 **has_backup_checksums**列中）。 有关详细信息，请参阅 [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)。  
+3.  备份集标记为包含备份校验和（在 **msdb..backupset** 的 **has_backup_checksums** 列中）。 有关详细信息，请参阅 [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)。  
 
  在还原操作过程中，如果备份介质中存在备份校验和，则默认情况下，RESTORE 和 RESTORE VERIFYONLY 语句都将验证备份校验和及页校验和。 如果不存在备份校验和，则这两种还原操作直接执行，而不会进行验证；这是因为没有备份校验和，还原无法可靠地验证页校验和。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "85670103"
   
 2.  记录 SQL Server 错误日志中的错误。  
   
-3.  将备份集标记为包含此类型的错误（在 **msdb.backupset** 的 **is_damaged**列中）。 有关详细信息，请参阅 [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)。  
+3.  将备份集标记为包含此类型的错误（在 **msdb.backupset** 的 **is_damaged** 列中）。 有关详细信息，请参阅 [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)。  
   
 4.  发出一条消息，说明已成功生成备份，但备份中包含页错误。  
   

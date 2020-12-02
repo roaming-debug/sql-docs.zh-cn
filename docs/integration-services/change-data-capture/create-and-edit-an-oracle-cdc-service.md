@@ -14,11 +14,11 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bcccb89d1af55f990388b389087c16c003d12c39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496234"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130657"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>创建和编辑 Oracle CDC 服务
 
@@ -27,11 +27,11 @@ ms.locfileid: "88496234"
 
   您从 CDC 服务配置控制台创建和编辑新的 Oracle CDC Windows 服务。  
   
- 若要创建新的 Oracle CDC Windows 服务，请从左侧窗格中选择 **“本地 CDC 服务”** ，然后从 **“操作”** 窗格中单击 **“新建服务”** 。 还可以右键单击“本地 CDC 服务”****，然后选择“新建服务”****。 “新 Oracle CDC Windows 服务”对话框将打开。  
+ 若要创建新的 Oracle CDC Windows 服务，请从左侧窗格中选择 **“本地 CDC 服务”** ，然后从 **“操作”** 窗格中单击 **“新建服务”** 。 还可以右键单击“本地 CDC 服务”，然后选择“新建服务”。 “新 Oracle CDC Windows 服务”对话框将打开。  
   
  **OR**  
   
- 若要编辑 CDC 服务属性，请选择要编辑其属性的服务，然后从 **“操作”** 窗格中单击 **“属性”** 。 还可以右键单击要使用的服务，然后选择“属性”。**** 此时将打开“CDC 服务属性”对话框。  
+ 若要编辑 CDC 服务属性，请选择要编辑其属性的服务，然后从 **“操作”** 窗格中单击 **“属性”** 。 还可以右键单击要使用的服务，然后选择“属性”。 此时将打开“CDC 服务属性”对话框。  
   
  在“新 Oracle CDC Windows 服务”对话框或“CDC 服务属性”对话框中输入以下信息。  
   

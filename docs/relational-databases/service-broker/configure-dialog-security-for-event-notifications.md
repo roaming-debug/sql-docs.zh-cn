@@ -14,11 +14,11 @@ ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 85fbbe596954083015a0533995784f31609d1b90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448009"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130206"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>配置事件通知的对话安全模式
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88448009"
 ||如果仍未以目标数据库用户身份连接到数据库，则立即执行此操作。|  
 ||[创建队列](../../t-sql/statements/create-queue-transact-sql.md) 以接收事件通知消息，并 [创建服务](../../t-sql/statements/create-service-transact-sql.md) 以传递消息。|  
 ||向源数据库用户[授予 SEND 权限](../../t-sql/statements/grant-transact-sql.md) ，此权限将针对目标服务。|  
-|向目标服务器提供源数据库的 Service Broker 标识符。 此标识符可以通过查询 **sys.databases** 目录视图的 [service_broker_guid](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列而获得。 对于服务器级事件通知，请使用 **msdb**的 Service Broker 标识符。|向源服务器提供目标数据库的 Service Broker 标识符。|  
+|向目标服务器提供源数据库的 Service Broker 标识符。 此标识符可以通过查询 **sys.databases** 目录视图的 [service_broker_guid](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列而获得。 对于服务器级事件通知，请使用 **msdb** 的 Service Broker 标识符。|向源服务器提供目标数据库的 Service Broker 标识符。|  
   
  **步骤 4：创建路由并设置服务器级身份验证。**  
   

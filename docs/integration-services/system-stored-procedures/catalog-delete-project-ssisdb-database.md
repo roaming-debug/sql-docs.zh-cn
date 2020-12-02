@@ -12,11 +12,11 @@ ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 40e9a9a404c17b1a86b48fef45cdc32bf399ace3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495440"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129827"
 ---
 # <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project（SSISDB 数据库）
 
@@ -35,10 +35,10 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 ## <a name="arguments"></a>参数  
  [ @folder_name = ] folder_name   
- 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)******。  
+ 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)。  
   
  [ @project_name = ] project_name   
- 要删除的项目的名称。 project_name 为 nvarchar(128)******。  
+ 要删除的项目的名称。 project_name 为 nvarchar(128)。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

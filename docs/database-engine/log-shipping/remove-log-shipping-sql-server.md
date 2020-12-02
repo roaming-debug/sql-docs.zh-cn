@@ -12,14 +12,14 @@ helpviewer_keywords:
 - removing log shipping
 - deleting log shipping
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a62ae437349e5a00ae119b4cc9130d1b8882752f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0deafc65d31fe6be3bd211321fef18a4123f0e52
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695819"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130745"
 ---
 # <a name="remove-log-shipping-sql-server"></a>删除日志传送 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

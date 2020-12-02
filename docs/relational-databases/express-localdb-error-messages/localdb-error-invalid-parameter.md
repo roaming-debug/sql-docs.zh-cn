@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: 70cbcae2-1686-4507-9326-b95206b3089b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 04808ae6a248af7b18959ee3b99039c67dd05cfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 6e8310ebaf066870a1d031ab28678f61fa8e474d
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470569"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506164"
 ---
 # <a name="localdb_error_invalid_parameter"></a>LOCALDB_ERROR_INVALID_PARAMETER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

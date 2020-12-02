@@ -13,11 +13,11 @@ author: chugugrace
 ms.author: chugu
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 102277139885379f4c2f75c912756e09131ec546
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456986"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129953"
 ---
 # <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker（SSISDB 数据库）
 
@@ -38,7 +38,7 @@ catalog.add_execution_worker [ @execution_id = ] execution_id, [ @workeragent_id
 [ @execution_id = ] execution_id  
  执行实例的唯一标识符。 execution_id 为 bigint。  
  
-[@workeragent_id = ] workeragent_id**  
+[@workeragent_id = ] workeragent_id  
 Scale Out Worker 的辅助角色代理 ID。 workeragent_id 为 uniqueIdentifier。
 
 ## <a name="return-code-value"></a>返回代码值  

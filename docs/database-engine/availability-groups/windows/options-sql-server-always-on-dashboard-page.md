@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
-author: cawrites
-ms.author: chadam
-ms.openlocfilehash: 1b34fcb55625bf2283389abe129fe33e0aa5c6ef
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 3ddc300aeff51382b962767b857c8b2fdee8270a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584098"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130159"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>选项（SQL Server AlwaysOn、“面板”页）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

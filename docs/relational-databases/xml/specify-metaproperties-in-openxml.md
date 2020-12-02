@@ -18,11 +18,11 @@ ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd34411b00bfa89c5c69b0d71073ee1c0d4d2280
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728121"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130825"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定元属性
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85728121"
   
  有些元属性特性用于处理目的。 例如， **xmltext** 元属性特性用于溢出处理。 溢出处理针对文档中未用完/未处理的数据。 可以将 OPENXML 所生成的行集中的一列标识为溢出列。 可以通过使用 **ColPattern** 参数将该列映射到 *xmltext* 元属性来执行此操作。 然后，该列将接收溢出数据。 *flags* 参数用于确定该列是包含所有数据还是只包含未用完的数据。  
   
- 下表列出了每个经过分析的 XML 元素所具有的元属性特性。 可以使用命名空间 **urn:schemas-microsoft-com:xml-metaprop**来访问这些元属性特性。 用户使用这些元属性在 XML 文档中直接设置的任何值均会被忽略。  
+ 下表列出了每个经过分析的 XML 元素所具有的元属性特性。 可以使用命名空间 **urn:schemas-microsoft-com:xml-metaprop** 来访问这些元属性特性。 用户使用这些元属性在 XML 文档中直接设置的任何值均会被忽略。  
   
 > [!NOTE]  
 >  不能在任何 XPath 导航中引用这些元属性。  

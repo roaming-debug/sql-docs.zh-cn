@@ -27,11 +27,11 @@ ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb9a8dbb4b67a514d56febaed13a33d7f7eb2a8a
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688644"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131382"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  是 XML 架构集合的 SQL 标识符。  
   
  *表达式*  
- 字符串常量或标量变量。 为 varchar、varbinary、nvarchar 或 xml 类型****************。  
+ 字符串常量或标量变量。 为 varchar、varbinary、nvarchar 或 xml 类型。  
   
 ## <a name="remarks"></a>注解  
  通过 [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)，还可以向集合中添加新命名空间或向集合的现有命名空间中添加新组件。  
@@ -164,7 +164,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
   
  有关详细信息，请参阅 [查看存储 XML 架构集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)。  
   
- 可以在 xml**** 类型列中存储架构集合。 在这种情况下，若要创建 XML 架构集合，请执行以下操作：  
+ 可以在 xml 类型列中存储架构集合。 在这种情况下，若要创建 XML 架构集合，请执行以下操作：  
   
 1.  使用 SELECT 语句从列中检索该架构集合，然后将它分配给一个类型为 xml 或 varchar 的变量 。  
   

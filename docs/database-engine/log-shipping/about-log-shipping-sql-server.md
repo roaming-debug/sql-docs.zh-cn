@@ -23,15 +23,15 @@ helpviewer_keywords:
 - backup jobs [SQL Server]
 - primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cf881487ff9d0b338aa9ef02849e2fa044481ebb
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 5785322c1a20b9607a7104998017b8f90a558701
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987591"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130789"
 ---
 # <a name="about-log-shipping-sql-server"></a>关于日志传送 (SQL Server)
 

@@ -16,11 +16,11 @@ ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a58c4a27a90a36acc47c3338b39a802a2209060d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900650"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130983"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>指定 Oracle 发布服务器的数据类型映射
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -83,11 +83,11 @@ ms.locfileid: "85900650"
 1.  在分发服务器上，对任何一个数据库执行 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)。 将 \@source_dbms 的值指定为 ORACLE ，并指定筛选结果集所需的其他任何参数。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
- 此示例将对其类型为 Oracle 数据类型 NUMBER 的列进行更改，以将该列映射到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型 **numeric**(38,38) 而非默认数据类型 **float**中指定 Oracle 发布服务器的数据类型映射。  
+ 此示例将对其类型为 Oracle 数据类型 NUMBER 的列进行更改，以将该列映射到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型 **numeric**(38,38) 而非默认数据类型 **float** 中指定 Oracle 发布服务器的数据类型映射。  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_1.sql)]  
   
- 此示例查询将返回 Oracle 9 数据类型 **CHAR**的默认映射及替代映射。  
+ 此示例查询将返回 Oracle 9 数据类型 **CHAR** 的默认映射及替代映射。  
   
  [!code-sql[HowTo#sp_helpcolumndatatype_char](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_2.sql)]  
   

@@ -11,15 +11,15 @@ f1_keywords:
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ms.reviewer: ''
-ms.openlocfilehash: 95bf7a69d525721c1610b989cc142d9ab754a7ee
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 3f59707810a698f59f73443066d6e551fbcb3e41
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358889"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130478"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>配置 Microsoft Azure SQL Server 托管备份的高级选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

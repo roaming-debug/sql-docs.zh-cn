@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: e3e5e5dc-21dc-42fc-82a6-730fed46ef16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f7ebaf89d90c478014fb9dc6266620c2abd19daa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4bd756aee6c83a64c91eae1ec2fb9fc1f8b39d32
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470547"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506141"
 ---
 # <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

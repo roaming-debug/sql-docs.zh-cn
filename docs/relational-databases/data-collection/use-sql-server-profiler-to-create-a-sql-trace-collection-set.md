@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386423"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128835"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>使用 SQL Server Profiler 创建 SQL 跟踪收集组
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88386423"
   
 ### <a name="create-and-export-a-sql-server-profiler-trace"></a>创建和导出 SQL Server Profiler 跟踪  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 （在“工具”**** 菜单上，单击“SQL Server Profiler”****。）  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 （在“工具”菜单上，单击“SQL Server Profiler”。）  
   
 2.  在 **“连接到服务器”** 对话框中，单击 **“取消”** 。  
   
@@ -53,27 +53,27 @@ ms.locfileid: "88386423"
   
      此时，将显示 **“跟踪属性”** 对话框。  
   
-6.  在“常规”**** 选项卡上，执行下列操作：  
+6.  在“常规”选项卡上，执行下列操作：  
   
     1.  在 **“跟踪名称”** 框中，键入该跟踪要使用的名称。 在本示例中，跟踪名称为 **SPgt80**。  
   
-    2.  在 **“使用模板”** 列表中，选择要用于该跟踪的模板。 在本示例中，请单击“TSQL_SPs”****。  
+    2.  在 **“使用模板”** 列表中，选择要用于该跟踪的模板。 在本示例中，请单击“TSQL_SPs”。  
   
 7.  在 **“事件选择”** 选项卡上，请执行下列操作：  
   
-    1.  标识要用于该跟踪的事件。 在本示例中，清除 **“事件”** 列中除 **ExistingConnection** 和 **SP:Completed**以外的所有复选框。  
+    1.  标识要用于该跟踪的事件。 在本示例中，清除 **“事件”** 列中除 **ExistingConnection** 和 **SP:Completed** 以外的所有复选框。  
   
-    2.  在右下角，选中“显示所有列”**** 复选框。  
+    2.  在右下角，选中“显示所有列”复选框。  
   
     3.  单击 **SP:Completed** 行。  
   
     4.  在这一行中滚动到 **“持续时间”** 列，然后选中 **“持续时间”** 复选框。  
   
-8.  在右下角，单击“列筛选器”以打开“编辑筛选器”对话框********。 在 **“编辑筛选器”** 对话框中，请执行下列操作：  
+8.  在右下角，单击“列筛选器”以打开“编辑筛选器”对话框。 在 **“编辑筛选器”** 对话框中，请执行下列操作：  
   
     1.  在筛选器列表中，单击 **“持续时间”**。  
   
-    2.  在布尔运算符窗口中，展开“大于或等于” **** 节点，键入 **80** 作为值，然后单击“确定” ****。  
+    2.  在布尔运算符窗口中，展开“大于或等于”  节点，键入 **80** 作为值，然后单击“确定” 。  
   
 9. 单击 **“运行”** 以启动跟踪。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "88386423"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“文件”** 菜单上，指向 **“打开”** ，然后单击 **“文件”**。  
   
-2.  在“打开文件”**** 对话框中，找到并打开你在前面的过程中创建的文件 (SPgt80)。  
+2.  在“打开文件”对话框中，找到并打开你在前面的过程中创建的文件 (SPgt80)。  
   
      将在“查询”窗口中打开保存的跟踪信息，并将其合并到可运行以创建新收集组的脚本中。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "88386423"
   
 5.  在对象资源管理器中，验证该收集组是否已经创建。 为此，请按照下列步骤进行操作：  
   
-    1.  右键单击“管理”，然后单击“刷新”********。  
+    1.  右键单击“管理”，然后单击“刷新”。  
   
     2.  展开 **“管理”**，然后展开 **“数据收集”**。  
   
-     **SPROC_CollectionSet** 收集组与“系统数据收集组”**** 节点显示在同一级。 默认情况下，将禁用该收集组。  
+     **SPROC_CollectionSet** 收集组与“系统数据收集组”节点显示在同一级。 默认情况下，将禁用该收集组。  
   
 6.  使用对象资源管理器编辑 SPROC_CollectionSet 的属性，如收集模式和上载计划。 按照针对与数据收集器一起提供的系统数据收集组的过程进行操作。  
   
@@ -127,11 +127,11 @@ BEGIN TRANSACTION
 BEGIN TRY  
   
 -- Define collection set  
--- ***  
--- *** Replace 'SqlTrace Collection Set Name Here' in the   
--- *** following script with the name you want  
--- *** to use for the collection set.  
--- ***  
+-- **_  
+-- _*_ Replace 'SqlTrace Collection Set Name Here' in the   
+-- _*_ following script with the name you want  
+-- _*_ to use for the collection set.  
+-- _*_  
 DECLARE @collection_set_id int;  
 EXEC [dbo].[sp_syscollector_create_collection_set]  
     @name = N'SPROC_CollectionSet',  
@@ -171,11 +171,11 @@ SELECT @collector_type_GUID = collector_type_uid
   WHERE name = N'Generic SQL Trace Collector Type';  
   
 -- Create the trace collection item.  
--- ***  
--- *** Replace 'SqlTrace Collection Item Name Here' in   
--- *** the following script with the name you want to  
--- *** use for the collection item.  
--- ***  
+-- _*_  
+-- _*_ Replace 'SqlTrace Collection Item Name Here' in   
+-- _*_ the following script with the name you want to  
+-- _*_ use for the collection item.  
+-- _**  
 EXEC [dbo].[sp_syscollector_create_collection_item]  
    @collection_set_id = @collection_set_id,  
    @collector_type_uid = @collector_type_GUID,  

@@ -1,11 +1,11 @@
 ---
-title: 'sys. dm_exec_query_optimizer_memory_gateways (Transact-sql) '
+title: 'sys.dm_exec_query_optimizer_memory_gateways (Transact-sql) '
 description: 返回用于限制并发查询优化的资源信号量的当前状态
 ms.custom: seo-dt-2019
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: language-reference
 f1_keywords:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3da92fb6d489bd8ca09c65e267f67dca75d8c01a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 1db599449d45263445ae9628e2cfbacfe768f0f1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646397"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96503321"
 ---
-# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-sql) 
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-sql) 
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -51,10 +51,10 @@ SQL Server 要求对服务器具有 VIEW SERVER STATE 权限。
 Azure SQL 数据库需要数据库中的 VIEW DATABASE STATE 权限。
 
 
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 SQL Server 使用分层网关方法来限制允许的并发编译数。  使用三个网关，包括小型、中型和大型。 通过更大的编译内存（需要使用者），网关可帮助防止总体内存资源耗尽。
 
-等待网关导致延迟编译。 除了编译延迟外，限制请求还会将关联的 RESOURCE_SEMAPHORE_QUERY_COMPILE 等待类型累积。 RESOURCE_SEMAPHORE_QUERY_COMPILE 等待类型可能表示查询正在使用大量内存进行编译，并且该内存已用尽，或者有足够的内存可用，但是特定网关上的可用单元已经耗尽。 如果内存不足，无法编译查询执行计划，则可以使用 **sys. dm_exec_query_optimizer_memory_gateways** 的输出进行故障排除。  
+等待网关导致延迟编译。 除了编译延迟外，限制请求还会将关联的 RESOURCE_SEMAPHORE_QUERY_COMPILE 等待类型累积。 RESOURCE_SEMAPHORE_QUERY_COMPILE 等待类型可能表示查询正在使用大量内存进行编译，并且该内存已用尽，或者有足够的内存可用，但是特定网关上的可用单元已经耗尽。 **Sys.dm_exec_query_optimizer_memory_gateways** 的输出可用于排查没有足够的内存来编译查询执行计划的情况。  
 
 ## <a name="examples"></a>示例  
 

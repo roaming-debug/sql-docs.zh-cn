@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: 60c7a47b-114c-441b-869e-9d8ebfe4148e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 018e5b33e3da26a3412a671666e6b95a4817a1d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 52653bc1610e27da8a8bcaf3e3420132d90eae4a
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490993"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506194"
 ---
 # <a name="localdb_error_internal_error"></a>LOCALDB_ERROR_INTERNAL_ERROR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

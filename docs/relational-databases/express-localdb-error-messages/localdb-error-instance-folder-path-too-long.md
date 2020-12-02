@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d72cae123d37e561799285e4dbf7a21875fc5b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a4313aa27b2bae30f6eb989e2161b80635a2b985
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409513"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506219"
 ---
 # <a name="localdb_error_instance_folder_path_too_long"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

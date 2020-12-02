@@ -20,11 +20,11 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 2bb618bfc53e481e2ea7d86749aaf093d3ec2542
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380039"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131300"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
  *schema_name*  
  默认值所属架构的名称。  
   
- default_name**  
+ default_name  
  现有默认值的名称。 若要查看现有默认值的列表，请执行 **sp_help**。 默认值必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定默认架构名称。  
   
 ## <a name="remarks"></a>备注  
