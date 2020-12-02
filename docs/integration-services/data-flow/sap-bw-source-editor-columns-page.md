@@ -14,10 +14,10 @@ ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dab03a43269739bbf77101f8ded9dac68ff2b8f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495738"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 源编辑器（“列”页）
@@ -25,7 +25,7 @@ ms.locfileid: "88495738"
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用“SAP BW 源编辑器”**** 的“列”**** 页将输出列映射到每个外部（源）列。  
+  使用“SAP BW 源编辑器”的“列”页将输出列映射到每个外部（源）列。  
   
  若要了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 源组件的详细信息，请参阅 [SAP BW 源](../../integration-services/data-flow/sap-bw-source.md)。  
   

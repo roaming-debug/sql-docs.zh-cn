@@ -20,10 +20,10 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9e47bae183dc2d0e790a6f0cb6be207d30cd4834
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495501"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 包升级向导的 F1 帮助
@@ -60,7 +60,7 @@ ms.locfileid: "88495501"
 |**Microsoft SQL Server**|指示要升级的包来自 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的现有实例。<br /><br /> 选择此值将显示相应的动态选项 **Package source** 。|  
   
  **文件夹**  
- 键入要升级的包所在的文件夹名称或单击“浏览”**** 找到该文件夹。  
+ 键入要升级的包所在的文件夹名称或单击“浏览”找到该文件夹。  
   
  **“浏览”**  
  浏览找到要升级的包所在的文件夹。  
@@ -95,7 +95,7 @@ ms.locfileid: "88495501"
  
 ### <a name="static-options"></a>静态选项  
  **保存到源位置**  
- 将升级的包保存到在向导的“选择源位置”**** 页上指定的位置。  
+ 将升级的包保存到在向导的“选择源位置”页上指定的位置。  
   
  如果原始包存储在文件系统中，并且您希望向导备份这些包，请选择 **“保存到源位置”** 选项。 有关详细信息，请参阅 [使用 SSIS 包升级向导升级 Integration Services 包](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "88495501"
 |**Microsoft SQL Server**|指示升级的包将保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的现有实例中。<br /><br /> 选择此值将显示相应的动态选项 **“包源”** 。|  
   
  **文件夹**  
- 键入要保存升级包的文件夹的名称，或单击“浏览”**** 找到该文件夹。  
+ 键入要保存升级包的文件夹的名称，或单击“浏览”找到该文件夹。  
   
  **“浏览”**  
  浏览找到将保存已升级包的文件夹。  
@@ -159,7 +159,7 @@ ms.locfileid: "88495501"
  **验证升级包**  
  验证升级包，并仅保存通过验证的升级包。  
   
- 如果未选择此选项，则向导将不会验证升级包。 因此，向导将保存所有升级包，不论包是否有效。 向导会将升级包保存到在向导的“选择目标位置”**** 页上指定的目标。  
+ 如果未选择此选项，则向导将不会验证升级包。 因此，向导将保存所有升级包，不论包是否有效。 向导会将升级包保存到在向导的“选择目标位置”页上指定的目标。  
   
  验证会延长升级过程的时间。 对于可能成功升级的大型包，建议不要选择此选项。  
   

@@ -12,10 +12,10 @@ ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6c0ecefc040d07405e700ee879b2220ff820e0cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484626"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>如何创建和编辑 CDC 服务
@@ -51,7 +51,7 @@ ms.locfileid: "88484626"
   
 1.  从 **“开始”** 菜单上，选择 **“Oracle CDC 服务配置”**。  
   
-2.  从左侧窗格中，选择“本地 CDC 服务”****，然后右键单击要编辑的本地服务并且选择“属性”****。  
+2.  从左侧窗格中，选择“本地 CDC 服务”，然后右键单击要编辑的本地服务并且选择“属性”。  
   
      还可以在中部选择要使用的服务，然后从 **“操作”** 窗格中单击 **“属性”**。  
   

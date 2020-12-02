@@ -16,10 +16,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e4ad414772e61a0100b52e9e665255922e5b908e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470105"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
@@ -39,7 +39,7 @@ ms.locfileid: "88470105"
   
 1.  在“对象资源管理器”中，右键单击服务器，再单击“属性” 。  
   
-2.  在“服务器属性”**** 对话框中，单击“高级”**** 页以查看有关全文搜索的服务器信息。 全文属性如下所示：  
+2.  在“服务器属性”对话框中，单击“高级”页以查看有关全文搜索的服务器信息。 全文属性如下所示：  
 
     -   **默认全文语言**  
   

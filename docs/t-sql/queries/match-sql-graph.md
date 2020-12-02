@@ -21,10 +21,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b3d0f5307b8a9b96dec8b81f00550dbcd639ac9a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116263"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
@@ -120,16 +120,16 @@ n -  positive integer only.
 graph_search_pattern    
 指定图形中的搜索模式或遍历路径。 此模式使用 ASCII 图表语法来遍历图形中的路径。 模式将按照所提供的箭头方向通过边缘从一个节点转到另一个节点。 边缘名称或别名是在括号内提供。 节点名称或别名显示在箭头两端。 模式中，箭头可以指向两个方向中的任意一个方向。
 
-node_alias**  
+node_alias  
 FROM 子句中提供的节点表的名称或别名。
 
-edge_alias**  
+edge_alias  
 FROM 子句中提供的边缘表的名称或别名。
 
 SHORTEST_PATH   
 最短路径函数用于查找图形中两个给定节点之间的最短路径，或图形中给定节点与其他所有节点之间的最短路径。 它需要使用在图形中重复搜索的任意长度模式作为输入。 
 
-arbitrary_length_match_pattern**  
+arbitrary_length_match_pattern  
 指定在到达相应节点前，或在达到模式中指定的最高迭代次数前，必须重复遍历的节点和边缘。 
 
 al_pattern_quantifier   

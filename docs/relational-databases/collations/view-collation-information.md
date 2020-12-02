@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3bc53832315aac772230de80c23fc13505360af4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465510"
 ---
 # <a name="view-collation-information"></a>查看排序规则信息
@@ -37,13 +37,13 @@ ms.locfileid: "88465510"
   
 1.  在“对象资源管理器”中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  右键单击该实例，然后选择“属性”****。  
+2.  右键单击该实例，然后选择“属性”。  
   
  **使用对象资源管理器查看数据库的排序规则设置**  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开“数据库”****，右键单击数据库，然后选择“属性”****。  
+2.  展开“数据库”，右键单击数据库，然后选择“属性”。  
   
  **使用对象资源管理器查看列的排序规则设置**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "88465510"
   
 3.  展开包含该列的表，然后展开 **“列”**。  
   
-4.  右键单击该列并选择“属性”****。 如果排序规则属性为空，则该列不是字符数据类型。  
+4.  右键单击该列并选择“属性”。 如果排序规则属性为空，则该列不是字符数据类型。  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看服务器的排序规则设置**  

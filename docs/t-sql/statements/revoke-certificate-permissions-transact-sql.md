@@ -18,10 +18,10 @@ ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 81641dd0849580169e95a696abd04e68138bcf0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496610"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE 证书权限 (Transact-SQL)
@@ -54,7 +54,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  permission  
  指定可以对证书撤消的权限。 如下所列。  
   
- ON CERTIFICATE ::certificate_name****__  
+ ON CERTIFICATE ::certificate_name  
  指定要撤消的权限所针对的证书。 需要使用作用域限定符“::”。  
   
  database_principal  
@@ -82,7 +82,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal**  
+ AS revoking_principal  
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 下列类型作之一：  
   
 -   数据库用户  

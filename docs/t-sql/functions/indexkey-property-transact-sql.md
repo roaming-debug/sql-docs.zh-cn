@@ -23,10 +23,10 @@ ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 60247a9c2dcdc038f17edc9637805c62e02fe0d0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115438"
 ---
 # <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
@@ -52,17 +52,17 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  表或索引视图的对象标识号。 object_id 的数据类型为 int。  
   
  index_ID  
- 索引标识号。 index_ID 的数据类型为 int******。  
+ 索引标识号。 index_ID 的数据类型为 int。  
   
  key_ID  
- 索引键列的位置。 key_ID 的数据类型为 int******。  
+ 索引键列的位置。 key_ID 的数据类型为 int。  
   
  *property*  
- 要返回其信息的属性的名称。 property 是字符串，可以是下列值之一**。  
+ 要返回其信息的属性的名称。 property 是字符串，可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**ColumnId**|索引的 key_ID 位置上的列 ID**。|  
+|**ColumnId**|索引的 key_ID 位置上的列 ID。|  
 |**IsDescending**|存储索引列的排序顺序。<br /><br /> 1 = 降序 0 = 升序|  
   
 ## <a name="return-types"></a>返回类型  

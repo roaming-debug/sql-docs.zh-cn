@@ -19,10 +19,10 @@ ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5bcdb5f682ebd279af1d5314917f61290a88b07e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88479261"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid（geometry 数据类型）
@@ -40,11 +40,11 @@ ms.locfileid: "88479261"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
- 开放地理空间信息联盟 (OGC) 类型：Point****  
+ 开放地理空间信息联盟 (OGC) 类型：Point  
   
 ## <a name="remarks"></a>备注  
  如果 **geometry** 实例的类型不是 **Polygon、CurvePolygon** 或 **MultiPolygon**，则 `STCentroid()` 返回 null。  

@@ -19,10 +19,10 @@ ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 65e86550626b1461cb8b0abc5e7fb354e6b4e3a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472408"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid（geometry 数据类型）
@@ -40,12 +40,12 @@ ms.locfileid: "88472408"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型：SqlBoolean****  
+ CLR 返回类型：SqlBoolean  
   
 ## <a name="remarks"></a>注解  
- geometry 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) 来确定****。  
+ geometry 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) 来确定。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只生成有效的 **geometry** 实例，但允许存储和检索无效的实例。 可使用 `MakeValid()` 方法检索表示任何无效实例的相同点集的有效实例。  
   

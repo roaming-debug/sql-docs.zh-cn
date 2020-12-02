@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488552"
 ---
 # <a name="modify-check-constraints"></a>修改 CHECK 约束
@@ -52,9 +52,9 @@ ms.locfileid: "88488552"
   
 #### <a name="to-modify-a-check-constraint"></a>修改 CHECK 约束  
   
-1.  在“对象资源管理器”**** 中，右键单击包含 CHECK 约束的表，然后选择“设计”****。  
+1.  在“对象资源管理器” 中，右键单击包含 CHECK 约束的表，然后选择“设计”。  
   
-2.  在“表设计器”菜单上，单击“CHECK 约束…”********。  
+2.  在“表设计器”菜单上，单击“CHECK 约束…”。  
   
 3.  在 **“CHECK 约束”** 对话框中，在 **“选定的 CHECK 约束”** 下选择要编辑的约束。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88488552"
   
 5.  单击“关闭” 。  
   
-6.  在“文件”菜单上，单击“保存表名称”********__。  
+6.  在“文件”菜单上，单击“保存表名称”。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改 CHECK 约束**  

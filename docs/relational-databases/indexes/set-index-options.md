@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1427a47837063db4fd617c8489d99a3ab7927d15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499371"
 ---
 # <a name="set-index-options"></a>设置索引选项
@@ -72,12 +72,12 @@ ms.locfileid: "88499371"
 
 1. 在对象资源管理器中，单击加号以便展开包含您要修改索引属性的表的数据库。
 2. 单击加号以便展开 **“表”** 文件夹。
-3. 右键单击你要修改索引属性的表，然后选择“设计”****。
+3. 右键单击你要修改索引属性的表，然后选择“设计”。
 4. 在“表设计器”菜单上，单击“索引/键”。
 5. 选择要修改的索引。 其属性将显示在主网格中。
 6. 更改任意属性的设置以自定义索引。
 7. 单击“关闭”  。
-8. 在“文件”**** 菜单上，选择“保存”**** 以保存 _table_name_。
+8. 在“文件”菜单上，选择“保存”以保存 _table_name_。
 
 ### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在对象资源管理器中修改索引的属性
 
@@ -85,10 +85,10 @@ ms.locfileid: "88499371"
 2. 单击加号以便展开 **“表”** 文件夹。
 3. 单击加号以展开您要修改索引属性的表。
 4. 单击加号以便展开 **“索引”** 文件夹。
-5. 右键单击要修改其属性的索引，然后选择“属性”****。
+5. 右键单击要修改其属性的索引，然后选择“属性”。
 6. 在 **“选择页”** 下，选择 **“选项”** 。
 7. 更改任意属性的设置以自定义索引。
-8. 若要添加、删除或更改索引列的位置，请从“索引属性 - index_name”对话框中选择“常规”页**** __****。 有关详细信息，请参阅 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
+8. 若要添加、删除或更改索引列的位置，请从“索引属性 - index_name”对话框中选择“常规”页 。 有关详细信息，请参阅 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 

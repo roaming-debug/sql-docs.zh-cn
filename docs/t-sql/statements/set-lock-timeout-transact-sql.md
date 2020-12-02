@@ -27,10 +27,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: add022bc9ffef0ad36b817120555647531daa4fa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89539860"
 ---
 # <a name="set-lock_timeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
@@ -49,7 +49,7 @@ SET LOCK_TIMEOUT timeout_period
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- timeout_period**  
+ timeout_period  
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回锁定错误前经过的毫秒数。 值为 -1（默认值）时表示没有超时期限（即无限期等待）。  
   
  当锁等待超过超时值时，将返回错误。 值为 0 时表示根本不等待，一遇到锁就返回消息。  

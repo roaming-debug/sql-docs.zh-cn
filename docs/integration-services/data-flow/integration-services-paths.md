@@ -22,10 +22,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495849"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路径
@@ -53,7 +53,7 @@ ms.locfileid: "88495849"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“数据流”**** 选项卡，然后双击路径。  
+3.  单击“数据流”选项卡，然后双击路径。  
   
 4.  在 **“数据流路径编辑器”** 中，单击 **“常规”**。 然后，可以编辑默认的路径名称并提供路径说明。 还可以修改 PathAnnotation 属性。  
   
@@ -139,13 +139,13 @@ ms.locfileid: "88495849"
  列出数据查看器的类型。  
   
  **添加**  
- 单击此项可使用“配置数据查看器”**** 对话框来添加数据查看器。  
+ 单击此项可使用“配置数据查看器”对话框来添加数据查看器。  
   
  **删除**  
  单击此项可删除所选数据查看器。  
   
  **配置**  
- 单击此项可使用“配置数据查看器”**** 对话框来配置所选数据查看器。  
+ 单击此项可使用“配置数据查看器”对话框来配置所选数据查看器。  
  
 ## <a name="path-properties"></a>Path Properties
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中的数据流对象在组件级、输入和输出级以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
@@ -159,6 +159,6 @@ ms.locfileid: "88495849"
   
 |属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
-|PathAnnotation|Integer（枚举）|用于指示在设计器图面上显示路径时是否应显示批注的值。 可能的值为 **AsNeeded**、 **SourceName**、 **PathName**和 **Never**。 默认值为 **AsNeeded**。|  
+|PathAnnotation|Integer（枚举）|用于指示在设计器图面上显示路径时是否应显示批注的值。 可能的值为 **AsNeeded**、 **SourceName**、 **PathName** 和 **Never**。 默认值为 **AsNeeded**。|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|与路径关联的输入。|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|与路径关联的输出。|  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: a2fed319e89864538104904782b28329855dbf08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490522"
 ---
 # <a name="publishers"></a>发布服务器
@@ -32,7 +32,7 @@ ms.locfileid: "88490522"
  选择允许使用此分发服务器的服务器。 请单击发布服务器旁边的属性按钮 ( **...** ) 以查看和设置其他属性。  
   
  **添加**  
- 如果希望允许的服务器没有列出，请单击“添加”向可用发布服务器列表中添加 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器或 Oracle 发布服务器****。  
+ 如果希望允许的服务器没有列出，请单击“添加”向可用发布服务器列表中添加 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器或 Oracle 发布服务器。  
   
 ## <a name="see-also"></a>另请参阅  
  [“配置分发”](../../relational-databases/replication/configure-distribution.md)   

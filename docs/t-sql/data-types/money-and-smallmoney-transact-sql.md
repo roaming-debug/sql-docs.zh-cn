@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8218bf8b98cd072dd60f8458c75819761153b634
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91111286"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money 和 smallmoney (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "91111286"
 |**money**|-922,337,203,685,477.5808 到 922,337,203,685,477.5807（对于 Informatica，为 -922,337,203,685,477.58<br />到 922,337,203,685,477.58。  Informatica 仅支持两位小数，而不是四位。）|8 个字节|  
 |**smallmoney**|-214,748.3648 到 214,748.3647|4 个字节|  
   
-money 和 smallmoney 数据类型精确到它们所代表的货币单位的万分之一********。 对于 Informatica，money 和 smallmoney 数据类型精确到它们所代表的货币单位的百分之一********。
+money 和 smallmoney 数据类型精确到它们所代表的货币单位的万分之一。 对于 Informatica，money 和 smallmoney 数据类型精确到它们所代表的货币单位的百分之一。
   
 用句点分隔局部货币单位（如美分）和总体货币单位。 例如，2.15 表示 2 美元 15 美分。
   
@@ -57,7 +57,7 @@ money 和 smallmoney 数据类型精确到它们所代表的货币单位的万�
 ## <a name="converting-money-data"></a>转换 money 数据
 如果将整型数据类型转换为 **money**，则假设采用货币单位。 例如，整数值 4 被转换为相当于 4 个货币单位的 **money** 值。
   
-下面的示例分别将 smallmoney 和 money 值转换为 varchar 和 decimal 数据类型****************。
+下面的示例分别将 smallmoney 和 money 值转换为 varchar 和 decimal 数据类型。
   
 ```sql
 DECLARE @mymoney_sm SMALLMONEY = 3148.29,  

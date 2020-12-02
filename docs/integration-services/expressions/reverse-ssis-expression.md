@@ -15,10 +15,10 @@ ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 250f4a865ac488614459350ee42698d8dbb003fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477443"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE（SSIS 表达式）
@@ -43,9 +43,9 @@ REVERSE(character_expression)
  DT_WSTR  
   
 ## <a name="remarks"></a>备注  
- character_expression 参数必须具有 DT_WSTR 数据类型**。  
+ character_expression 参数必须具有 DT_WSTR 数据类型。  
   
- 如果 character_expression 为 Null，则 REVERSE 将返回 Null 结果**。  
+ 如果 character_expression 为 Null，则 REVERSE 将返回 Null 结果。  
   
 ## <a name="expression-examples"></a>表达式示例  
  此示例使用一个字符串文字。 返回结果为“ekiB niatnuoM”。  

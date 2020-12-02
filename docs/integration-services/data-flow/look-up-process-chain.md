@@ -12,10 +12,10 @@ ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 28d354fce02498905c61df6b61a35a774d804eec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495815"
 ---
 # <a name="look-up-process-chain"></a>查找进程链
@@ -40,7 +40,7 @@ ms.locfileid: "88495815"
   
 4.  在 **“进程链”** 组框中，单击 **“查找”** 显示 **“查找进程链”** 对话框。  
   
-     只有在“执行模式”为“P - 触发进程链”的情况下，“进程链”组框才会显示。************  
+     只有在“执行模式”为“P - 触发进程链”的情况下，“进程链”组框才会显示。  
   
 ## <a name="lookup-options"></a>查找选项  
  在查找字段中，您可以使用星号通配符 (*) 或使用部分字符串结合星号通配符来筛选结果。 但是，如果您将查找字段保留为空，则查找操作仅与该字段中的空字符串匹配。  

@@ -19,16 +19,16 @@ ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 14dcdd0581f88897f10160d2be70eb01bbd2b018
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467455"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  如果一个 geography 实例与另一个 geography 实例在空间上不相联，则返回 1********。 反之，则返回 0。  
+  如果一个 geography 实例与另一个 geography 实例在空间上不相联，则返回 1。 反之，则返回 0。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +40,16 @@ ms.locfileid: "88467455"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- other_geography**  
- 与对其调用 STDisjoint() 的实例进行比较的其他 geography 实例****。  
+ other_geography  
+ 与对其调用 STDisjoint() 的实例进行比较的其他 geography 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型：SqlBoolean****  
+ CLR 返回类型：SqlBoolean  
   
 ## <a name="remarks"></a>注解  
- 如果两个 geography 实例的点集交集是空的，则这两个实例不相联****。  
+ 如果两个 geography 实例的点集交集是空的，则这两个实例不相联。  
   
  如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
   

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fbef817bba2cd7b8f682d86300a5348fd0879dfb
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90570555"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT 架构权限 (Transact-SQL)
@@ -48,7 +48,7 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
  permission  
  指定可授予架构的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON SCHEMA :: schema_name******  
+ ON SCHEMA :: schema_name  
  指定将对其授予权限的架构。 需要使用作用域限定符 ::。  
   
  database_principal  

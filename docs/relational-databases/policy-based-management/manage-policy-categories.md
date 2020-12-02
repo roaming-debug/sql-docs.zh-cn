@@ -14,10 +14,10 @@ ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 26b15222f570304f321337a4b3574c3fa2f3b945
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88493990"
 ---
 # <a name="manage-policy-categories"></a>管理策略类别
@@ -44,7 +44,7 @@ ms.locfileid: "88493990"
   
 -   使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，如果未选中 **“托管数据库订阅”** 复选框，则必须将策略类别分别应用于服务器的每个相关部分，例如，一个或多个数据库或表。  
   
--   如果您指定的策略类别不存在，将创建新的策略类别，并且在您执行存储过程时对于所有数据库都将托管订阅。 如果你为新的类别清除托管的订阅，则该订阅将只适用于你指定为 *target_object*的数据库。 有关如何更改托管的订阅设置的详细信息，请参阅 [sp_syspolicy_update_policy_category (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)。  
+-   如果您指定的策略类别不存在，将创建新的策略类别，并且在您执行存储过程时对于所有数据库都将托管订阅。 如果你为新的类别清除托管的订阅，则该订阅将只适用于你指定为 *target_object* 的数据库。 有关如何更改托管的订阅设置的详细信息，请参阅 [sp_syspolicy_update_policy_category (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   
@@ -59,7 +59,7 @@ ms.locfileid: "88493990"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“策略管理”****，然后选择“管理类别”****。  
+3.  右键单击“策略管理”，然后选择“管理类别”。  
   
      在 **“管理策略类别”** 对话框中提供以下信息：  
   

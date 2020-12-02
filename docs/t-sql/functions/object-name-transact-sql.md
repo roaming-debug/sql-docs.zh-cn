@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5909334c6a31279760ebb8a91d3b4f7f1841accb
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115170"
 ---
 # <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
@@ -49,10 +49,10 @@ OBJECT_NAME ( object_id [, database_id ] )
 
 ## <a name="arguments"></a>参数
  object_id  
- 要使用的对象的 ID。 object_id 的数据类型为 int，并假定为指定数据库或当前数据库上下文中的架构范围内的对象******。  
+ 要使用的对象的 ID。 object_id 的数据类型为 int，并假定为指定数据库或当前数据库上下文中的架构范围内的对象。  
   
  database_id  
- 要在其中查找对象的数据库的 ID。 database_id 的数据类型为 int******。  
+ 要在其中查找对象的数据库的 ID。 database_id 的数据类型为 int。  
   
 ## <a name="return-types"></a>返回类型  
  **sysname**  
@@ -70,7 +70,7 @@ OBJECT_NAME ( object_id [, database_id ] )
   
  由此系统函数返回的值使用当前数据库的排序规则。  
   
- 默认情况下，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]假定 object_id 在当前数据库的上下文中**。 在其他数据库中引用 object_id 的查询将返回 NULL 或错误的结果**。 例如，以下查询中当前数据库上下文是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将尝试返回在该数据库（而非查询的 FROM 子句中指定的数据库）中指定的对象 ID 的对象名称。 因此，会返回不正确的信息。  
+ 默认情况下，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]假定 object_id 在当前数据库的上下文中。 在其他数据库中引用 object_id 的查询将返回 NULL 或错误的结果。 例如，以下查询中当前数据库上下文是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将尝试返回在该数据库（而非查询的 FROM 子句中指定的数据库）中指定的对象 ID 的对象名称。 因此，会返回不正确的信息。  
   
 ```sql  
 USE AdventureWorks2012;  

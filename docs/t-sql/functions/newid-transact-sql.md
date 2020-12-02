@@ -21,17 +21,17 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb2e8c2d00ef42a43ea32ab55df6b14cb13d5dc1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91111073"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-创建 uniqueidentifier 类型的唯一值****。  
+创建 uniqueidentifier 类型的唯一值。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ NEWID ( )
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. 对变量使用 NEWID 函数  
- 以下示例使用 `NEWID()` 对声明为 uniqueidentifier 数据类型的变量赋值****。 在测试 uniqueidentifier 数据类型变量的值之前，先打印该值****。  
+ 以下示例使用 `NEWID()` 对声明为 uniqueidentifier 数据类型的变量赋值。 在测试 uniqueidentifier 数据类型变量的值之前，先打印该值。  
   
 ```sql
 -- Creating a local variable with DECLARE/SET syntax.  
@@ -74,7 +74,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 以下示例创建数据类型为 uniqueidentifier 的 `cust` 表，并使用 NEWID 作为默认值填充该表****。 为 `NEWID()` 赋予默认值时，每个新行和现有行均对 `CustomerID` 列具有唯一值。  
+ 以下示例创建数据类型为 uniqueidentifier 的 `cust` 表，并使用 NEWID 作为默认值填充该表。 为 `NEWID()` 赋予默认值时，每个新行和现有行均对 `CustomerID` 列具有唯一值。  
   
 ```sql
 -- Creating a table using NEWID for uniqueidentifier data type.  
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. 使用 uniqueidentifier 和变量赋值  
- 以下示例将名为 `@myid` 的局部变量声明为 uniqueidentifier 数据类型的变量****。 然后使用 `SET` 语句为该变量赋值。  
+ 以下示例将名为 `@myid` 的局部变量声明为 uniqueidentifier 数据类型的变量。 然后使用 `SET` 语句为该变量赋值。  
   
 ```sql  
 DECLARE @myid uniqueidentifier ;  

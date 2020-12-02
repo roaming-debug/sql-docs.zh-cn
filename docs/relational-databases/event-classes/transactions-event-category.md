@@ -16,15 +16,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 086ea0a7206c667242d3aa631fa0f46f86220b2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470612"
 ---
 # <a name="transactions-event-category"></a>Transactions 事件类别
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Transactions 事件类可用于监视事务的状态****。 带有 **TM:** 前缀的事件类名称可用于跟踪通过事务管理界面发送的、与事务相关的操作。  
+  Transactions 事件类可用于监视事务的状态。 带有 **TM:** 前缀的事件类名称可用于跟踪通过事务管理界面发送的、与事务相关的操作。  
   
 ## <a name="in-this-section"></a>本节内容  
   

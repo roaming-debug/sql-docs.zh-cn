@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 15a7386c08d2b9147858cab3fde212cf285902cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499357"
 ---
 # <a name="modify-an-index"></a>修改索引
@@ -49,7 +49,7 @@ ms.locfileid: "88499357"
   
 3.  展开该索引所属的表，再展开 **“索引”**。  
   
-4.  右键单击要修改的索引，然后单击“属性”****。  
+4.  右键单击要修改的索引，然后单击“属性”。  
   
 5.  在 **“索引属性”** 对话框中进行所需的更改。 例如，您可以从索引键中添加或删除列，或更改索引选项的设置。  
   

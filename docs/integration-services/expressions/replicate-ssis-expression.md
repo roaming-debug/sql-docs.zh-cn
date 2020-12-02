@@ -14,10 +14,10 @@ ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66560e6c72a0b6a5d36a2eee744d81eb1c232fda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477439"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE（SSIS 表达式）
@@ -42,19 +42,19 @@ REPLICATE(character_expression,times)
  要复制的字符表达式。  
   
  *times*  
- 指定 character_expression 复制次数的整数表达式**。  
+ 指定 character_expression 复制次数的整数表达式。  
   
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
 ## <a name="remarks"></a>备注  
- 如果 times 为 0，则该函数返回零长度的字符串**。  
+ 如果 times 为 0，则该函数返回零长度的字符串。  
   
  如果 *times* 为负数，则该函数返回一个错误。  
   
  *times* 参数还可以使用变量和列。  
   
- REPLICATE 只可用于 DT_WSTR 数据类型。 如果 character_expression 参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 REPLICATE 执行操作前隐式转换为 DT_WSTR 数据类型**。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
+ REPLICATE 只可用于 DT_WSTR 数据类型。 如果 character_expression 参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 REPLICATE 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  如果有一个参数为空，REPLICATE 将返回空结果。  
   

@@ -19,16 +19,16 @@ ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: dbd382664925059128b21a5a1dce048d7703fc2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88479327"
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式中返回 geometry 实例****。
+从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式中返回 geometry 实例。
   
 ## <a name="syntax"></a>语法  
   
@@ -40,21 +40,21 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- WKB_geometry**  
- 希望返回的 geometry 实例的 WKB 表示形式****。 WKB_geometry 是一个 varbinary(max) 表达式******。  
+ WKB_geometry  
+ 希望返回的 geometry 实例的 WKB 表示形式。 WKB_geometry 是一个 varbinary(max) 表达式。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)********。  
+ 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="remarks"></a>备注  
- `STGeomFromText()` 返回的 geometry 实例的 OGC 类型设置为相应的 WKB 输入****。  
+ `STGeomFromText()` 返回的 geometry 实例的 OGC 类型设置为相应的 WKB 输入。  
   
- 如果输入的格式不正确，此方法将引发 FormatException****。  
+ 如果输入的格式不正确，此方法将引发 FormatException。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STGeomFromWKB()` 创建 geometry 实例。  

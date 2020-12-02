@@ -17,10 +17,10 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 717d81dd0f6f7f55af78ec4264b4f3b9fb329583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471370"
 ---
 # <a name="validate-a-dac-package"></a>验证 DAC 包
@@ -45,11 +45,11 @@ ms.locfileid: "88471370"
   
 3.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“属性…” 。  
   
-4.  在“项目设置”**** 选项卡上的“输出类型”**** 部分中，选中“数据层应用程序（.dacpac 文件）”**** 复选框，然后关闭属性对话框。  
+4.  在“项目设置” 选项卡上的“输出类型”部分中，选中“数据层应用程序（.dacpac 文件）”复选框，然后关闭属性对话框。  
   
 5.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“导入数据层应用程序…” 。  
   
-6.  使用“解决方案资源管理器”**** 可打开该 DAC 中的所有文件，例如服务器选择策略以及预部署和部署后脚本。  
+6.  使用“解决方案资源管理器”可打开该 DAC 中的所有文件，例如服务器选择策略以及预部署和部署后脚本。  
   
 7.  使用 **“架构视图”** 可查看架构中的所有对象，特别是查看对象（例如函数或存储过程）中的代码。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88471370"
   
  **使用向导查看数据库更改**  
   
-1.  运行“升级数据层应用程序”**** 向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
+1.  运行“升级数据层应用程序”向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
   
 2.  在 **“检测更改”** 页上，查看已对数据库进行的更改的报告。  
   
@@ -111,7 +111,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
  **使用向导报告升级操作**  
   
-1.  运行“升级数据层应用程序”**** 向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
+1.  运行“升级数据层应用程序”向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
   
 2.  对 **“摘要”** 页上，查看升级操作的报告。  
   

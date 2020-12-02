@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470174"
 ---
 # <a name="validate-replicated-data"></a>验证已复制的数据
@@ -39,7 +39,7 @@ ms.locfileid: "88470174"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>数据验证的工作机制  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过计算发布服务器上的行计数或校验和，并将这些值与订阅服务器上计算所得的行计数或校验和值比较来验证数据。 为整个发布表和整个订阅表各计算一个值，但计算中不包括 **text**、 **ntext**或 **image** 列中的数据。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过计算发布服务器上的行计数或校验和，并将这些值与订阅服务器上计算所得的行计数或校验和值比较来验证数据。 为整个发布表和整个订阅表各计算一个值，但计算中不包括 **text**、 **ntext** 或 **image** 列中的数据。  
   
  执行计算时，共享锁临时放置对其执行行计数或校验和的表上，不过计算很快完成，同时共享锁被删除，这一过程通常只需几秒钟。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88470174"
 
  验证数据分为三个部分：  
   
-1.  将对发布的单个或所有订阅“标记” ** 为要验证。 可以在“验证单个订阅”、“验证多个订阅”和“验证所有订阅”对话框中，将订阅标记为要验证，这些对话框可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“本地发布” **文件夹和“本地订阅”** 文件夹访问。 也可以从 **“所有订阅”** 选项卡、 **“订阅监视列表”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+1.  将对发布的单个或所有订阅“标记”  为要验证。 可以在“验证单个订阅”、“验证多个订阅”和“验证所有订阅”对话框中，将订阅标记为要验证，这些对话框可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“本地发布” **文件夹和“本地订阅”** 文件夹访问。 也可以从 **“所有订阅”** 选项卡、 **“订阅监视列表”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 2.  下次分发代理（对于事务复制）或合并代理（对于合并复制）同步订阅时，将对订阅进行验证。 分发代理通常是连续运行的，在这种情况下验证会立即进行；合并代理通常是按需运行的，在这种情况下验证在运行代理后进行。  
   

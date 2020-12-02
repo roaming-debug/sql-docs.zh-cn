@@ -14,10 +14,10 @@ ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d4aca0ffc4cf4521123c03b71c7e2e4aae72038
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465429"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>日志传送事务日志备份设置

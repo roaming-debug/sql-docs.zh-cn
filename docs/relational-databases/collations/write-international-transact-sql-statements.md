@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8192fcd7d657c5842dfd60fcca36fec3e945413d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465511"
 ---
 # <a name="write-international-transact-sql-statements"></a>编写国际化 Transact-SQL 语句
@@ -31,15 +31,15 @@ ms.locfileid: "88465511"
   如果遵循以下指导原则，则使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的数据库和数据库应用程序将变得更易于在语言之间移植，或者将支持多种语言：  
 
 -   从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，使用以下任一选项：
-    -   具有已启用 [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 的排序规则的 char、varchar 和 varchar(max) 数据类型，并使用 UTF-8 对数据进行编码************。
-    -   具有已启用[附属字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则的 nchar、nvarchar 和 nvarchar(max) 数据类型，并使用 UTF-16 对数据进行编码************。 使用非 SC 排序规则会导致使用 UCS-2 对数据进行编码。      
+    -   具有已启用 [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 的排序规则的 char、varchar 和 varchar(max) 数据类型，并使用 UTF-8 对数据进行编码。
+    -   具有已启用[附属字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则的 nchar、nvarchar 和 nvarchar(max) 数据类型，并使用 UTF-16 对数据进行编码。 使用非 SC 排序规则会导致使用 UCS-2 对数据进行编码。      
 
     这避免了代码页转换问题。 有关其他注意事项，请参阅 [UTF-8 与 UTF-16 的存储差异](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。  
 
--   到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 为止，将 char、varchar 和 varchar(max) 数据类型的所有使用替换为 nchar、nvarchar 和 nvarchar(max)************************。 如果使用已启用[增补字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则，则使用 UTF-16 对数据进行编码。 使用非 SC 排序规则会导致使用 UCS-2 对数据进行编码。 这避免了代码页转换问题。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。 
+-   到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 为止，将 char、varchar 和 varchar(max) 数据类型的所有使用替换为 nchar、nvarchar 和 nvarchar(max)。 如果使用已启用[增补字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则，则使用 UTF-16 对数据进行编码。 使用非 SC 排序规则会导致使用 UCS-2 对数据进行编码。 这避免了代码页转换问题。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。 
 
     > [!IMPORTANT]
-    > text 数据类型已弃用，不应在新的开发工作中使用此数据类型****。 计划将 text 数据转换为 varchar(max)********。
+    > text 数据类型已弃用，不应在新的开发工作中使用此数据类型。 计划将 text 数据转换为 varchar(max)。
   
 -   当执行月份和星期的比较与操作时，请使用数值日期，而不要使用名称字符串。 不同的语言设置返回的月份和工作日的名称也不同。 例如，当语言设置为美国英语时，`DATENAME(MONTH,GETDATE())` 返回 `May`，当语言设置为德语时，返回 `Mai`，当语言设置为法语时，返回 `mai`。 应使用以数字而非名称表示月份的函数，如 [DATEPART](../../t-sql/functions/datepart-transact-sql.md)。 在生成显示给用户的结果集时，请使用 DATEPART 名称，因为日期名称通常比数值表示形式更有意义。 但是，编写逻辑代码时不要使用任何依赖于特定语言显示的名称。  
   

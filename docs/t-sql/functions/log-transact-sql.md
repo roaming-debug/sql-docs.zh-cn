@@ -22,16 +22,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c962baabeaccdd2c2cbf517cab5894458046bb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88468000"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定 float 表达式的自然对数****。  
+  返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定 float 表达式的自然对数。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +64,7 @@ LOG ( float_expression )
  **float**  
   
 ## <a name="remarks"></a>注解  
- 默认情况下，LOG() 返回自然对数。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，可使用可选的 base 参数将对数的底数更改为其他值** 。  
+ 默认情况下，LOG() 返回自然对数。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，可使用可选的 base 参数将对数的底数更改为其他值 。  
   
  自然对数是以 **e** 为底的对数，其中，**e** 是一个无理常量，约等于 2.718281828。  
   
@@ -73,7 +73,7 @@ LOG ( float_expression )
 ## <a name="examples"></a>示例  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 计算某数的对数。  
- 以下示例计算指定 float 表达式的 `LOG`****。  
+ 以下示例计算指定 float 表达式的 `LOG`。  
   
 ```sql  
 DECLARE @var FLOAT = 10;  
@@ -109,7 +109,7 @@ SELECT LOG (EXP (10));
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 计算某数的对数  
- 以下示例计算指定 float 表达式的 `LOG`****。  
+ 以下示例计算指定 float 表达式的 `LOG`。  
   
 ```sql  
 SELECT LOG(10);  

@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 97c971a25a10c232f3ae9301caa45bb6b2123acb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88493885"
 ---
 # <a name="publisher-information-agents"></a>发布服务器信息，代理
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  “代理”选项卡显示与发布服务器关联的代理和维护作业的相关信息****：  
+  “代理”选项卡显示与发布服务器关联的代理和维护作业的相关信息：  
   
 -   快照代理，为所有发布显示。  
   

@@ -21,10 +21,10 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 19b7d284a69997ef5b3c93713335fa7f3854849a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114790"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
@@ -44,7 +44,7 @@ IDENT_INCR ( 'table_or_view' )
 
 ## <a name="arguments"></a>参数
 **'** *table_or_view* **'**  
-指定表或视图以检查有效的标识增量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view** 可以是带有引号的字符串常量。 也可以是变量、函数或列名。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar******************。  
+指定表或视图以检查有效的标识增量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view 可以是带有引号的字符串常量。 也可以是变量、函数或列名。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar。  
   
 ## <a name="return-types"></a>返回类型  
 numeric([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  

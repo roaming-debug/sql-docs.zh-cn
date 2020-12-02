@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4bb66a3711bcb2a5a309c4b712470c4fb3b16bb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88478703"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE 语句 - LABELONLY (Transact-SQL)
@@ -87,7 +87,7 @@ FROM <backup_device>
 |**FamilySequenceNumber**|**int**|此介质簇的序号。|  
 |**MediaFamilyId**|**uniqueidentifier**|媒体簇的唯一标识号。|  
 |**MediaSequenceNumber**|**int**|此介质在介质簇中的序号。|  
-|**MediaLabelPresent**|**tinyint**|介质说明中是否包含：<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] 磁带格式媒体标签<br /><br /> **** 0 = 媒体描述|  
+|**MediaLabelPresent**|**tinyint**|介质说明中是否包含：<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] 磁带格式媒体标签<br /><br /> 0 = 媒体描述|  
 |**MediaDescription**|**nvarchar(255)**|介质说明（自由格式的文本）或磁带格式介质标签。|  
 |**SoftwareName**|**nvarchar(128)**|写入标签的备份软件名称。|  
 |**SoftwareVendorId**|**int**|写入备份的软件供应商的唯一供应商标识号。|  

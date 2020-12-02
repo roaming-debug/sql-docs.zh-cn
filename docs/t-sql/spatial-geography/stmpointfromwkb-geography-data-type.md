@@ -19,16 +19,16 @@ ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d8580b97571feb2b93c88d5e229a86490a08cd02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467414"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式返回 geographyMultiPoint 实例****。
+从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式返回 geographyMultiPoint 实例。
   
 ## <a name="syntax"></a>语法  
   
@@ -40,21 +40,21 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- WKB_multipoint**  
- 希望返回的 geographyMultiPoint 实例的 WKB 表示形式****。 WKB_multipoint 是一个 varbinary(max) 表达式******。  
+ WKB_multipoint  
+ 希望返回的 geographyMultiPoint 实例的 WKB 表示形式。 WKB_multipoint 是一个 varbinary(max) 表达式。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geographyMultiPoint 实例的空间引用 ID (SRID)********。  
+ 一个 int 表达式，表示希望返回的 geographyMultiPoint 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
  CLR 返回类型：SqlGeography  
   
- OGC 类型：MultiPoint****  
+ OGC 类型：MultiPoint  
   
 ## <a name="remarks"></a>备注  
- 如果输入的格式不正确，此方法将引发 FormatException****。  
+ 如果输入的格式不正确，此方法将引发 FormatException。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STMPointFromWKB()` 创建 `geography` 实例。  

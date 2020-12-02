@@ -18,10 +18,10 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e4f59f38a15bf7a703bbdf18277b4e384d1f4c94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495126"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>包开发的故障排除工具
@@ -34,11 +34,11 @@ ms.locfileid: "88495126"
 ## <a name="troubleshooting-design-time-validation-issues"></a>设计时验证问题故障排除  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，当打开包后，系统将在验证所有数据流组件值之前验证所有连接，并设置速度较慢或无法脱机工作的所有连接。 这有助于减少验证包数据流时的延迟时间。  
   
- 打开包后，还可以通过右键单击“连接管理器”**** 区域中的连接管理器并单击“脱机工作”**** 来关闭连接。 这可以在 SSIS 设计器中加快执行操作。  
+ 打开包后，还可以通过右键单击“连接管理器”区域中的连接管理器并单击“脱机工作”来关闭连接。 这可以在 SSIS 设计器中加快执行操作。  
   
  已设置为脱机工作的连接将保持脱机状态，直到您执行下列操作之一：  
   
--   通过右键单击 SSIS 设计器的“连接管理器”**** 区域中的连接管理器并单击“测试连接”**** 来测试连接。  
+-   通过右键单击 SSIS 设计器的“连接管理器”区域中的连接管理器并单击“测试连接”来测试连接。  
   
      例如，当打开包后，连接最初设置为脱机工作。 修改连接字符串以解决该问题，并单击 **“测试连接”** 以测试连接。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88495126"
   
 -   **针对在运行时之前无效的包元素配置 DelayValidation 属性**。 对于其配置在设计时无效的包元素，您可以将 **DelayValidation** 设置为 **True** 以防止出现验证错误。 例如，可以使用只有在运行时通过执行 SQL 任务创建才存在的目标表来执行数据流任务。 可以在包级或包中的各个任务和容器级启用 **DelayValidation** 属性。 在部署包时，对于相同的包元素，通常必须将此属性设置为 **True** ，以防止运行时出现相同的验证错误。  
   
-     可以对数据流任务设置 **DelayValidation** 属性，但不能对单个数据流组件设置该属性。 可以通过将单个数据流组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性设置为 **false**。 但是，当此属性的值为 **false**时，该组件不能识别外部数据源的元数据的更改。  
+     可以对数据流任务设置 **DelayValidation** 属性，但不能对单个数据流组件设置该属性。 可以通过将单个数据流组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性设置为 **false**。 但是，当此属性的值为 **false** 时，该组件不能识别外部数据源的元数据的更改。  
   
  如果进行验证时包使用的数据库对象被锁定，则验证过程可能会停止响应。 在这些情况下， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器也会停止响应。 可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 继续验证过程，以结束 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的关联会话。 还可以使用本节中介绍的设置避免此问题。  
   

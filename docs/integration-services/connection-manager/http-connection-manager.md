@@ -21,10 +21,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cd88a7f40787ecc33d99fe0c749c477f23b526a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496118"
 ---
 # <a name="http-connection-manager"></a>HTTP 连接管理器
@@ -86,7 +86,7 @@ ms.locfileid: "88496118"
  指定是否希望 HTTP 连接管理器使用客户端证书进行身份验证。  
   
  **证书**  
- 使用“选择证书”对话框从列表中选择证书。**** 文本框显示与此证书关联的名称。  
+ 使用“选择证书”对话框从列表中选择证书。 文本框显示与此证书关联的名称。  
   
  **超时值(秒)**  
  提供连接 Web 服务器时允许的超时值。 此属性的默认值为 30 秒。  
@@ -95,7 +95,7 @@ ms.locfileid: "88496118"
  提供用于写入数据的块区大小。  
   
  **测试连接**  
- 在配置 HTTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。****  
+ 在配置 HTTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。  
   
 ## <a name="http-connection-manager-editor-proxy-page"></a>HTTP 连接管理器编辑器（“代理”页）
   可以使用 **“HTTP 连接管理器编辑器”** 对话框的 **“代理”** 选项卡配置 HTTP 连接管理器以使用代理服务器。 利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。  
@@ -131,7 +131,7 @@ ms.locfileid: "88496118"
  键入要跳过代理服务器的地址。  
   
  **删除**  
- 选择某个地址，再单击“删除”**** 即可将其删除。  
+ 选择某个地址，再单击“删除”即可将其删除。  
   
 ## <a name="see-also"></a>另请参阅  
  [Web 服务任务](../../integration-services/control-flow/web-service-task.md)   

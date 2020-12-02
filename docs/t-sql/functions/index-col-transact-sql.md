@@ -23,10 +23,10 @@ ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e84cc199c94775a38268ab486712c5f5982bdb26
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115448"
 ---
 # <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)
@@ -53,13 +53,13 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  该索引所属架构的名称。  
   
  table_or_view_name  
- 表或索引视图的名称。 table_or_view_name 必须使用单引号分隔，并且可由数据库名称和架构名称完全限定**。  
+ 表或索引视图的名称。 table_or_view_name 必须使用单引号分隔，并且可由数据库名称和架构名称完全限定。  
   
  index_id  
- 索引的 ID。 index_ID 的数据类型为 int******。  
+ 索引的 ID。 index_ID 的数据类型为 int。  
   
  *key_id*  
- 索引键列的位置。 key_ID 的数据类型为 int******。  
+ 索引键列的位置。 key_ID 的数据类型为 int。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar (128** **)**  

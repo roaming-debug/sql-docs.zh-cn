@@ -19,10 +19,10 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c82909bb5a128ee0a1dff9fa48b0a213a3c931e4
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115415"
 ---
 # <a name="table-value-constructor-transact-sql"></a>表值构造函数 (Transact-SQL)
@@ -67,7 +67,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
   
 - 使用派生表  
   
-- 通过使用 [bcp 实用工具](../../tools/bcp-utility.md)、.NET [SqlBulkCopy 类](/dotnet/api/system.data.sqlclient.sqlbulkcopy)、[OPENROWSET (BULK ...)](../../t-sql/functions/openrowset-transact-sql.md) 或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)语句批量导入数据****  
+- 通过使用 [bcp 实用工具](../../tools/bcp-utility.md)、.NET [SqlBulkCopy 类](/dotnet/api/system.data.sqlclient.sqlbulkcopy)、[OPENROWSET (BULK ...)](../../t-sql/functions/openrowset-transact-sql.md) 或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)语句批量导入数据  
   
  只允许单个标量值作为行值表达式。 涉及多列的子查询不允许作为行值表达式。 例如，以下代码导致语法错误，因为第三个行值表达式列表包含具有多列的子查询。  
   
@@ -96,7 +96,7 @@ GO
 ```  
   
 ## <a name="data-types"></a>数据类型  
- 在多行 INSERT 语句中指定的值遵循 UNION ALL 语法的数据类型约定属性。 这会导致不匹配类型隐式转换到更高[优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)的类型。 如果此转换不是所支持的隐式转换，则返回错误。 例如，以下语句将整数值和字符值插入到类型为 char 的列中****。  
+ 在多行 INSERT 语句中指定的值遵循 UNION ALL 语法的数据类型约定属性。 这会导致不匹配类型隐式转换到更高[优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)的类型。 如果此转换不是所支持的隐式转换，则返回错误。 例如，以下语句将整数值和字符值插入到类型为 char 的列中。  
   
 ```sql
 CREATE TABLE dbo.t (a INT, b CHAR);  

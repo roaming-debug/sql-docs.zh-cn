@@ -23,16 +23,16 @@ ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 364bcd6eb68ca7c529c56fae70109b79cbc1dc18
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114728"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY（函数）(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  只用于在带有 INTO 子句的 SELECT 语句中将标识列插入到新表中**。 尽管类似，但是 IDENTITY 函数不是与 CREATE TABLE 和 ALTER TABLE 一起使用的 IDENTITY 属性。  
+  只用于在带有 INTO 子句的 SELECT 语句中将标识列插入到新表中。 尽管类似，但是 IDENTITY 函数不是与 CREATE TABLE 和 ALTER TABLE 一起使用的 IDENTITY 属性。  
   
 > [!NOTE]  
 >  要创建一个可在多个表中使用的自动递增数字或者可以从应用程序中调用而不引用任何表的自动递增数字，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
@@ -49,10 +49,10 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 
 ## <a name="arguments"></a>参数
  data_type  
- 标识列的数据类型。 标识列的有效数据类型可以是任何整数数据类型类别的数据类型（bit 数据类型除外），也可以是 decimal 数据类型********。  
+ 标识列的数据类型。 标识列的有效数据类型可以是任何整数数据类型类别的数据类型（bit 数据类型除外），也可以是 decimal 数据类型。  
   
  seed  
- 要分配给表中第一行的整数值。 为每一个后续行分配下一个标识值，该值等于上一个 IDENTITY 值加上 increment 值**。 如果既没有指定 seed，也没有指定 increment，那么它们都默认为 1****。  
+ 要分配给表中第一行的整数值。 为每一个后续行分配下一个标识值，该值等于上一个 IDENTITY 值加上 increment 值。 如果既没有指定 seed，也没有指定 increment，那么它们都默认为 1。  
   
  increment  
  要加到表中后续行的 seed 值上的整数值。  
@@ -61,7 +61,7 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
  将插入到新表中的列的名称。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与 data_type 相同的数据类型**。  
+ 返回与 data_type 相同的数据类型。  
   
 ## <a name="remarks"></a>注解  
  因为该函数在表中创建一个列，所以必须用下列方式中的一种在选择列表中指定该列的名称：  

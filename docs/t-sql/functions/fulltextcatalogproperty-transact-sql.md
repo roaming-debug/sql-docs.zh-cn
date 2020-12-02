@@ -21,10 +21,10 @@ ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 83213da53228a39b3642f9563aecd5d365d02355
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116052"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
@@ -45,7 +45,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>参数
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除以下属性：LogSize 和 PopulateStatus********。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除以下属性：LogSize 和 PopulateStatus。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
   
 _catalog\_name_  
 包含全文目录名称的表达式。  

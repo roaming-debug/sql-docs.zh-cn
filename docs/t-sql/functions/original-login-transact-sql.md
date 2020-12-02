@@ -23,10 +23,10 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eea845c7ebe9b40db0d5dfc2b09a7f69d94321f2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115865"
 ---
 # <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
@@ -55,7 +55,7 @@ ORIGINAL_LOGIN( )
  以下示例将当前会话的执行上下文从语句的调用方切换到 `login1`。 函数 `SUSER_SNAME` 和 `ORIGINAL_LOGIN` 用于返回当前会话用户（上下文切换到的用户）和原始登录帐户。 
  
   >[!NOTE]
-  > 尽管 Azure SQL 数据库上支持 ORIGINAL_LOGIN 函数，但由于 Azure SQL 数据库上不支持 Execute as LOGIN，因此以下脚本将失败**。 
+  > 尽管 Azure SQL 数据库上支持 ORIGINAL_LOGIN 函数，但由于 Azure SQL 数据库上不支持 Execute as LOGIN，因此以下脚本将失败。 
   
 ```sql  
 USE AdventureWorks2012;  

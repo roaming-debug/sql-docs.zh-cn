@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b14aaaceadcc5cabeb8fad667879cae60e2d1331
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499330"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>为索引指定填充因子
@@ -73,7 +73,7 @@ ms.locfileid: "88499330"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要指定索引的填充因子的表，然后选择“设计”****。  
+3.  右键单击你要指定索引的填充因子的表，然后选择“设计”。  
   
 4.  在“表设计器”菜单上，单击“索引/键”。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "88499330"
   
 7.  单击“关闭”  。  
   
-8.  在“文件”**** 菜单上，选择“保存”**** 以保存 _table_name_。  
+8.  在“文件”菜单上，选择“保存”以保存 _table_name_。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用对象资源管理器为索引指定填充因子  
   
@@ -95,7 +95,7 @@ ms.locfileid: "88499330"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要指定填充因子的索引，然后选择“属性”****。  
+5.  右键单击要指定填充因子的索引，然后选择“属性”。  
   
 6.  在 **“选择页”** 下，选择 **“选项”** 。  
   

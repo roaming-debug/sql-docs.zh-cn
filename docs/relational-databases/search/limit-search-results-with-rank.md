@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f68204154f2bbbc3c78d3aeec7e9221a625f355d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470125"
 ---
 # <a name="limit-search-results-with-rank"></a>使用 RANK 限制搜索结果
@@ -167,7 +167,7 @@ Rank = min( MaxQueryRank, HitCount * 16 * StatisticalWeight / MaxOccurrence )
   
  **NEAR 的排名**  
   
- 通过使用 NEAR 选项，CONTAINSTABLE 支持查询彼此接近的两个或更多个搜索词。 每个返回行的排名值基于以下几个参数。 一个主要排名因素是相对于文档长度的匹配项总数（或“命中数”**）。 因此举例来说，如果一个 100 个字长的文档和一个 900 个字长的文档中包含相同的匹配项，那么 100 个字长的文档的排名更靠前。  
+ 通过使用 NEAR 选项，CONTAINSTABLE 支持查询彼此接近的两个或更多个搜索词。 每个返回行的排名值基于以下几个参数。 一个主要排名因素是相对于文档长度的匹配项总数（或“命中数”）。 因此举例来说，如果一个 100 个字长的文档和一个 900 个字长的文档中包含相同的匹配项，那么 100 个字长的文档的排名更靠前。  
   
  根据匹配项中第一个与最后一个搜索词之间的距离，一行中每个匹配项的总长度也会提高该行的排名。 距离越小，该匹配项对该行排名值的贡献就越大。 如果全文查询没有指定一个整数作为最大距离，只有包含的匹配项的相隔距离大于 100 个逻辑词时，文档才会得到 0 排名。  
   

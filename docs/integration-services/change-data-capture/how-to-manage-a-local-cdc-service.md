@@ -12,10 +12,10 @@ ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1d103c224088d2dfa22fe1d8dcb36306177aac54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496167"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>如何管理本地 CDC 服务
@@ -47,7 +47,7 @@ ms.locfileid: "88496167"
   
          从 CDC 服务配置控制台右侧的 **“操作”** 窗格，单击 **“删除”** 以便删除服务。  
   
-         也可以右键单击要删除的 CDC 服务，然后选择“删除”****。  
+         也可以右键单击要删除的 CDC 服务，然后选择“删除”。  
   
          **注意**：如果在删除服务时该服务正在运行，则该服务将在被删除前停止。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "88496167"
   
          从 CDC 服务配置控制台右侧的 **“操作”** 窗格中，单击 **“属性”**。  
   
-         也可以右键单击要编辑其属性的 CDC 服务，然后选择“属性”****。  
+         也可以右键单击要编辑其属性的 CDC 服务，然后选择“属性”。  
   
 ## <a name="see-also"></a>另请参阅  
  [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  

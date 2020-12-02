@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8bc8760b678391b2bee7cf96d6e1b0e1e0c317a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496567"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE 数据库作用域凭据 (Transact-SQL)
@@ -85,7 +85,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal**  
+ AS revoking_principal  
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 下列类型作之一：  
   
 -   数据库用户  

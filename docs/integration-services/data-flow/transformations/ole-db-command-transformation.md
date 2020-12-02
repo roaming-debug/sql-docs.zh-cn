@@ -17,10 +17,10 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5cde3dc6eb7805f412ed7e820fb4946cf0c20c1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477622"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令转换
@@ -38,9 +38,9 @@ ms.locfileid: "88477622"
   
 -   指定默认的代码页。  
   
- 通常，所运行的 SQL 语句会包含一些参数。 参数值存储在转换输入的外部列中，将输入列映射到外部列便可将输入列映射到参数。 例如，若要按 **ProductKey** 列中的值在 **DimProduct** 表中查找行，然后删除这些行，可将名为 **Param_0** 的外部列映射到名为 **ProductKey** 的输入列，然后再运行 SQL 语句 `DELETE FROM DimProduct WHERE ProductKey = ?`。 OLE DB 命令转换提供参数的名称，这些参数名不可修改。 参数名的形式为 **Param_0**、 **Param_1**等，依此类推。  
+ 通常，所运行的 SQL 语句会包含一些参数。 参数值存储在转换输入的外部列中，将输入列映射到外部列便可将输入列映射到参数。 例如，若要按 **ProductKey** 列中的值在 **DimProduct** 表中查找行，然后删除这些行，可将名为 **Param_0** 的外部列映射到名为 **ProductKey** 的输入列，然后再运行 SQL 语句 `DELETE FROM DimProduct WHERE ProductKey = ?`。 OLE DB 命令转换提供参数的名称，这些参数名不可修改。 参数名的形式为 **Param_0**、 **Param_1** 等，依此类推。  
   
- 如果使用 **“高级编辑器”** 对话框配置 OLE DB 命令转换，单击 **“刷新”** 按钮便可将 SQL 语句中的参数自动映射到转换输入中的外部列，并定义每个参数的特征。 但是，如果 OLE DB 命令转换所使用的 OLE DB 访问接口不支持从参数派生参数信息，则必须手动配置外部列。 这意味着对每个参数，必须在转换的外部输入中添加一列，用类似 **Param_0**的名称更新列名，指定 DBParamInfoFlags 属性的值，并将包含参数值的输入列映射到这些外部列。  
+ 如果使用 **“高级编辑器”** 对话框配置 OLE DB 命令转换，单击 **“刷新”** 按钮便可将 SQL 语句中的参数自动映射到转换输入中的外部列，并定义每个参数的特征。 但是，如果 OLE DB 命令转换所使用的 OLE DB 访问接口不支持从参数派生参数信息，则必须手动配置外部列。 这意味着对每个参数，必须在转换的外部输入中添加一列，用类似 **Param_0** 的名称更新列名，指定 DBParamInfoFlags 属性的值，并将包含参数值的输入列映射到这些外部列。  
   
  DBParamInfoFlags 的值表示参数的特征。 例如，值 **1** 指定参数为输入参数，而值 **65** 则指定参数为输入参数，且可能包含空值。 该值必须与 OLE DB DBPARAMFLAGSENUM 枚举中包含的值相匹配。 有关详细信息，请参阅 OLE DB 参考文档。  
   
@@ -67,15 +67,15 @@ ms.locfileid: "88477622"
   
 4.  将连接线（绿色或红色箭头）从数据源或前一个转换拖动到 OLE DB 命令转换，从而将 OLE DB 命令转换连接到数据流。  
   
-5.  右键单击组件，并选择“编辑高级编辑器”或“显示高级编辑器”。****  
+5.  右键单击组件，并选择“编辑高级编辑器”或“显示高级编辑器”。  
   
 6.  在 **“连接管理器”** 选项卡上，从 **“连接管理器”** 列表中选择 OLE DB 连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
-7.  单击“组件属性”选项卡，并单击“SqlCommand”框中的省略号按钮 (…)************。  
+7.  单击“组件属性”选项卡，并单击“SqlCommand”框中的省略号按钮 (…)。  
   
-8.  在“字符串值编辑器”中，键入参数化 SQL 语句，并且使用问号 (?) 作为每个参数的参数标记。****  
+8.  在“字符串值编辑器”中，键入参数化 SQL 语句，并且使用问号 (?) 作为每个参数的参数标记。  
   
-9. 单击“刷新”。 单击“刷新”时，转换将为 External Columns 集合中的每一个参数都创建一列，并设置 DBParamInfoFlags 属性。****  
+9. 单击“刷新”。 单击“刷新”时，转换将为 External Columns 集合中的每一个参数都创建一列，并设置 DBParamInfoFlags 属性。  
   
 10. 单击 **“输入属性和输出属性”** 选项卡。  
   

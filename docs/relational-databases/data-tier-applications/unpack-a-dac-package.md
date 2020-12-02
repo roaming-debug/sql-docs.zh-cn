@@ -15,10 +15,10 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dee530c223890a51ab255d319db9a7772e0ce686
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499765"
 ---
 # <a name="unpack-a-dac-package"></a>解压缩 DAC 包
@@ -35,11 +35,11 @@ ms.locfileid: "88499765"
 ##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> “解压缩数据层应用程序”对话框  
  **解压缩 DAC 包文件**  
   
--   在 **Windows 资源管理器**中，导航到 DAC 包 (.dacpac) 文件的位置。  
+-   在 **Windows 资源管理器** 中，导航到 DAC 包 (.dacpac) 文件的位置。  
   
 -   使用以下两种方法之一可打开“解压缩数据层应用程序”对话框：  
   
-    1.  右键单击该 DAC 包 (.dacpac) 文件，然后选择“解压缩”****。  
+    1.  右键单击该 DAC 包 (.dacpac) 文件，然后选择“解压缩”。  
   
     2.  双击该 DAC 包文件。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "88499765"
   
  **文件将解压缩到此文件夹：** - 指定解压缩文件所在文件夹的完整路径。 如果该文件夹存在并且您知道完整路径，请在框中键入该路径。 如果该文件夹不存在或者您不知道完整路径，请单击 **“浏览”** 以导航到某一文件夹或者创建一个新文件夹。  
   
- **浏览** - 打开“浏览文件夹”**** 页，从中可以通过导航文件层次结构选择一个文件夹，或者创建一个新文件夹。  
+ **浏览** - 打开“浏览文件夹”页，从中可以通过导航文件层次结构选择一个文件夹，或者创建一个新文件夹。  
   
  **解压缩** - 启动解压缩操作。  
   
@@ -67,12 +67,12 @@ ms.locfileid: "88499765"
   
  **新建文件夹** - 打开一个对话框，从中可以指定要在文件夹层次结构中当前选择的文件夹中创建的新文件夹的名称。  
   
- **确定** - 放置你在“解压缩 DAC 包文件”**** 页的“文件将解包到此文件夹”**** 框中选择的文件夹的路径，并且返回到该页。  
+ **确定** - 放置你在“解压缩 DAC 包文件”页的“文件将解包到此文件夹”框中选择的文件夹的路径，并且返回到该页。  
   
  **取消** - 终止该对话框且未选择文件夹。  
   
 ##  <a name="examine-the-contents-of-a-dac-package"></a><a name="ExamDACPack"></a> 检查 DAC 包的内容  
- 对包解压缩后，可以检查由“解压缩数据层应用程序”**** 对话框生成的文件。 该对话框在所选目标文件夹中生成以下文件：  
+ 对包解压缩后，可以检查由“解压缩数据层应用程序”对话框生成的文件。 该对话框在所选目标文件夹中生成以下文件：  
   
 1.  一个 Transact-SQL 脚本，包含用于创建在该 DAC 中定义的对象的语句。 该文件名是 *DACName*.sql，其中， *DACName* 是 DAC 的名称。  
   

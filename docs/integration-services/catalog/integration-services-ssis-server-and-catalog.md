@@ -15,10 +15,10 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2124351357d52e3389d0db1e58874ffcb46275d6
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89480689"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 服务器和目录
@@ -37,7 +37,7 @@ ms.locfileid: "89480689"
  若要大致了解 SSISDB 目录功能，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
   
 ## <a name="high-availability"></a>高可用性  
- 像其他用户数据库一样，SSISDB 数据库不支持数据库镜像和复制****。 若要详细了解镜像和复制，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ 像其他用户数据库一样，SSISDB 数据库不支持数据库镜像和复制。 若要详细了解镜像和复制，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
  还可以利用 SSIS 和 Always On 可用性组，提供高可用性的 SSISDB 及其内容。 有关详细信息，请参阅[对 SSIS 目录 (SSISDB) 使用 Always On](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)。 另请参阅 blogs.msdn.com 上 Matt Masson 的博客文章[结合使用 SSIS 和 Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091)。  
   

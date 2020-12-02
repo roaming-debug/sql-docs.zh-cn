@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: afec53715458129253f1f2bebb8eee40214d15c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89541307"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server 排序规则名称 (Transact-SQL)
@@ -49,11 +49,11 @@ _CaseSensitivity_AccentSensitivity | _BIN
 
 ## <a name="arguments"></a>参数
 
-SortRules** 标识字母表或语言的字符串，当指定按字典排序时应用该字母表或语言的排序规则。 例如 Latin1_General 或波兰语。
+SortRules 标识字母表或语言的字符串，当指定按字典排序时应用该字母表或语言的排序规则。 例如 Latin1_General 或波兰语。
 
-Pref**** 指定大写字母优先。 即使比较时不区分大小写，在没有其他区别的情况下，大写字母也将排在小写字母之前。
+Pref 指定大写字母优先。 即使比较时不区分大小写，在没有其他区别的情况下，大写字母也将排在小写字母之前。
 
-Codepage** 指定用于标识排序规则所使用的代码页的 1 至 4 位数号码。 **CP1** 指定代码页 1252，对于其他所有代码页，则需指定完整的代码页编号。 例如，**CP1251** 指定代码页 1251，**CP850** 指定代码页 850。
+Codepage 指定用于标识排序规则所使用的代码页的 1 至 4 位数号码。 **CP1** 指定代码页 1252，对于其他所有代码页，则需指定完整的代码页编号。 例如，**CP1251** 指定代码页 1251，**CP850** 指定代码页 850。
 
 CaseSensitivity
 CI 指定不区分大小写，CS 指定区分大小写。
@@ -61,7 +61,7 @@ CI 指定不区分大小写，CS 指定区分大小写。
 AccentSensitivity
  AI 指定不区分重音，AS 指定区分重音。
 
-BIN**** 指定使用二进制排序顺序。
+BIN 指定使用二进制排序顺序。
 
 ## <a name="remarks"></a>注解
 

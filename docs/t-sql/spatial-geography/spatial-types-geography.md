@@ -19,20 +19,20 @@ ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 46489eadd2c56fbccca62dfe415611e0f8f66a2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467463"
 ---
 # <a name="spatial-types---geography"></a>空间类型 - geography
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  地理空间数据类型 geography 是作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 .NET 公共语言运行时 (CLR) 数据类型实现的****。 此类型表示圆形地球坐标系中的数据。  geography 数据类型存储椭球体（圆形地球）数据，如 GPS 纬度和经度坐标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ****。  
+  地理空间数据类型 geography 是作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 .NET 公共语言运行时 (CLR) 数据类型实现的。 此类型表示圆形地球坐标系中的数据。  geography 数据类型存储椭球体（圆形地球）数据，如 GPS 纬度和经度坐标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 geography 空间数据类型的一组方法****。 这些方法包括开放地理空间信息联盟 (OGC) 标准和对该标准的一组 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 扩展所定义的 geography 方法****。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 geography 空间数据类型的一组方法。 这些方法包括开放地理空间信息联盟 (OGC) 标准和对该标准的一组 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 扩展所定义的 geography 方法。  
  
- geography 方法的容错可高达 1.0e-7 * extents****。 extents 表示 geography 对象的各点之间的近似最大距离****。
+ geography 方法的容错可高达 1.0e-7 * extents。 extents 表示 geography 对象的各点之间的近似最大距离。
   
 
 ## <a name="registering-the-geography-type"></a>注册 geography 类型  
@@ -77,7 +77,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geography-in-a-computed-column"></a>C. 在计算列中使用地理数据  
- 下面的示例使用 geography 类型创建具有持久化计算列的表****。  
+ 下面的示例使用 geography 类型创建具有持久化计算列的表。  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

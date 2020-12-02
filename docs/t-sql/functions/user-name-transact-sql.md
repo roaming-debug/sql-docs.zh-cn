@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 13c27b4f23e6361592a72082c94fb033a96ce0d7
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90570671"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
@@ -55,7 +55,7 @@ USER_NAME ( [ id ] )
  **nvarchar(128)**  
   
 ## <a name="remarks"></a>注解  
- 省略 id 时，则假定为当前上下文中的当前用户**。 如果此参数包含词 NULL，将返回 NULL。 如果在 EXECUTE AS 语句之后调用 USER_NAME，但不指定 id，则 USER_NAME 将返回模拟用户的名称**。 如果 Windows 主体通过某组中的成员身份访问数据库，则 USER_NAME 将返回 Windows 主体的名称，而不是该组的名称。  
+ 省略 id 时，则假定为当前上下文中的当前用户。 如果此参数包含词 NULL，将返回 NULL。 如果在 EXECUTE AS 语句之后调用 USER_NAME，但不指定 id，则 USER_NAME 将返回模拟用户的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 USER_NAME 将返回 Windows 主体的名称，而不是该组的名称。  
  
 > [!NOTE]
 > 尽管 Azure SQL 数据库支持 USER_NAME，但 Azure SQL 数据库不支持使用 USER_NAME 的 Execute as。 

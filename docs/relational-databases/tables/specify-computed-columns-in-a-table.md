@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ee1d32ce60064d6ab42b04a9aeddec4a6252d479
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488584"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
@@ -58,22 +58,22 @@ ms.locfileid: "88488584"
 
 ### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> 添加新的计算列
 
-1. 在 **“对象资源管理器”** 中，展开要添加新计算列的表。 右键单击“列”****，再选择“新建列”****。
-2. 输入列名并接受默认数据类型 (**nchar**(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 通过将数据类型的优先顺序规则应用到在公式中指定的表达式，来确定计算列的数据类型。 例如，如果公式引用一个类型为 **money** 的列和一个类型为 **int**的列，则计算列的类型将为 **money** ，因为该数据类型具有较高优先顺序。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。
+1. 在 **“对象资源管理器”** 中，展开要添加新计算列的表。 右键单击“列”，再选择“新建列”。
+2. 输入列名并接受默认数据类型 (**nchar**(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 通过将数据类型的优先顺序规则应用到在公式中指定的表达式，来确定计算列的数据类型。 例如，如果公式引用一个类型为 **money** 的列和一个类型为 **int** 的列，则计算列的类型将为 **money** ，因为该数据类型具有较高优先顺序。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。
 3. 在 **“列属性”** 选项卡中，展开 **“计算所得的列规范”** 属性。
-4. 在“(公式)”**** 子属性中，在右侧的网格单元格中输入此列的表达式。 例如，在 `SalesTotal` 列中，您输入的公式可能是 `SubTotal+TaxAmt+Freight`，它将该值加入到表中每行的这些列中。
+4. 在“(公式)”子属性中，在右侧的网格单元格中输入此列的表达式。 例如，在 `SalesTotal` 列中，您输入的公式可能是 `SubTotal+TaxAmt+Freight`，它将该值加入到表中每行的这些列中。
 
    > [!IMPORTANT]
-   > 当两个不同数据类型的表达式用公式组合后，数据类型优先级规则指定将优先级较低的数据类型转换为优先级较高的数据类型。 如果此转换不是所支持的隐式转换，则返回错误“`Error validating the formula for column column_name.`”。 使用 CAST 或 CONVERT 函数解决数据类型冲突。 例如，如果类型为 **nvarchar** 的列与类型为 **int**的列相结合，则整数类型必须转换为 **nvarchar** ，如公式 `('Prod'+CONVERT(nvarchar(23),ProductID))`中所示。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。
+   > 当两个不同数据类型的表达式用公式组合后，数据类型优先级规则指定将优先级较低的数据类型转换为优先级较高的数据类型。 如果此转换不是所支持的隐式转换，则返回错误“`Error validating the formula for column column_name.`”。 使用 CAST 或 CONVERT 函数解决数据类型冲突。 例如，如果类型为 **nvarchar** 的列与类型为 **int** 的列相结合，则整数类型必须转换为 **nvarchar** ，如公式 `('Prod'+CONVERT(nvarchar(23),ProductID))`中所示。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。
 
-5. 从“持久化”**** 子属性的下拉菜单上选择“是”**** 或“否”****，以指示该数据是否持久。
+5. 从“持久化”子属性的下拉菜单上选择“是”或“否”，以指示该数据是否持久。
 
-6. 在“文件”菜单上，单击“保存表名称”******** __。
+6. 在“文件”菜单上，单击“保存表名称” 。
 
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>将计算列定义添加到现有列中
 
-1. 在“对象资源管理器”**** 中，右键单击该表以及你要对其更改和展开“列”**** 文件夹的列。
-2. 右键单击你要为其指定计算列公式的列，然后单击“删除”****。 单击“确定”。 
+1. 在“对象资源管理器”中，右键单击该表以及你要对其更改和展开“列”文件夹的列。
+2. 右键单击你要为其指定计算列公式的列，然后单击“删除”。 单击“确定”。 
 3. 添加一个新列，然后按照前面的步骤添加新计算列以指定新计算列公式。
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL

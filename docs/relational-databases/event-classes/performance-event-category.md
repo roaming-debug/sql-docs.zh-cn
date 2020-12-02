@@ -16,15 +16,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b652324f42375bd1de7161ac596f13be13891475
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499414"
 ---
 # <a name="performance-event-category"></a>Performance 事件类别
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  使用 Performance 事件类别可以监视 Showplan 事件类以及在执行 SQL 数据操作语言 (DML) 运算符时生成的事件类********。  
+  使用 Performance 事件类别可以监视 Showplan 事件类以及在执行 SQL 数据操作语言 (DML) 运算符时生成的事件类。  
   
 ## <a name="in-this-section"></a>本节内容  
   

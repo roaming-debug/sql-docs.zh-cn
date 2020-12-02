@@ -19,10 +19,10 @@ ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0236a6ac037233446a1b6a2103daaa260875c064
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88478784"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT 证书权限 (Transact-SQL)
@@ -47,7 +47,7 @@ GRANT permission  [ ,...n ]
  permission  
  指定可对证书授予的权限。 如下所列。  
   
- ON CERTIFICATE ::certificate_name****__  
+ ON CERTIFICATE ::certificate_name  
  指定对其授予权限的证书。 需要使用作用域限定符“::”。  
   
  database_principal  

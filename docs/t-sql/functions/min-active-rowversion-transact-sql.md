@@ -19,10 +19,10 @@ ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 61304621317ee302585102acdd82198fd90baedd
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115974"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
@@ -44,17 +44,17 @@ MIN_ACTIVE_ROWVERSION ( )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- 返回 binary(8) 值****。  
+ 返回 binary(8) 值。  
   
 ## <a name="remarks"></a>备注  
- MIN_ACTIVE_ROWVERSION 是一个非确定性函数，可返回当前数据库中最低的活动 rowversion 值****。 对包含 **rowversion** 类型的列的表执行插入或更新操作时，通常会生成一个新的 **rowversion**值。 如果数据库中没有活动的值，则 MIN_ACTIVE_ROWVERSION 会返回与 @@DBTS + 1 相同的值。  
+ MIN_ACTIVE_ROWVERSION 是一个非确定性函数，可返回当前数据库中最低的活动 rowversion 值。 对包含 **rowversion** 类型的列的表执行插入或更新操作时，通常会生成一个新的 **rowversion** 值。 如果数据库中没有活动的值，则 MIN_ACTIVE_ROWVERSION 会返回与 @@DBTS + 1 相同的值。  
   
- 对于诸如使用 rowversion 值将多组更改组合在一起的数据同步等情况，MIN_ACTIVE_ROWVERSION 很有用****。 如果应用程序使用 @@DBTS 而不是 MIN_ACTIVE_ROWVERSION，则在进行同步时可能会丢失处于活动状态的更改。  
+ 对于诸如使用 rowversion 值将多组更改组合在一起的数据同步等情况，MIN_ACTIVE_ROWVERSION 很有用。 如果应用程序使用 @@DBTS 而不是 MIN_ACTIVE_ROWVERSION，则在进行同步时可能会丢失处于活动状态的更改。  
   
  MIN_ACTIVE_ROWVERSION 函数不受事务隔离级别中的更改影响。  
   
 ## <a name="examples"></a>示例  
- 下例使用 `MIN_ACTIVE_ROWVERSION` 和 `@@DBTS` 返回 rowversion 值****。 请注意，当数据库中没有活动事务时，值会有所不同。  
+ 下例使用 `MIN_ACTIVE_ROWVERSION` 和 `@@DBTS` 返回 rowversion 值。 请注意，当数据库中没有活动事务时，值会有所不同。  
   
 ```sql  
 -- Create a table that has a ROWVERSION column in it.  

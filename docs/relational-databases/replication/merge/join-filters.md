@@ -17,10 +17,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a667c6055a43886239102bd9985d06fa714a24d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470239"
 ---
 # <a name="join-filters"></a>Join Filters
@@ -39,7 +39,7 @@ ms.locfileid: "88470239"
   
  这些表可用在支持移动销售队伍的应用程序中，但必须经过筛选，以使 **HumanResources.Employee** 表中的各销售人员只接收与其客户订单相关的数据。  
   
- 第一个步骤是在父表上定义参数化筛选器。本例中的父表是 **HumanResources.Employee** 表。 这个表包括 **LoginID**列，该列包含 *domain\login*格式的各个雇员登录名。 若要筛选该表以使每个雇员只接收与他们相关的数据，请指定一个参数化筛选器子句：  
+ 第一个步骤是在父表上定义参数化筛选器。本例中的父表是 **HumanResources.Employee** 表。 这个表包括 **LoginID** 列，该列包含 *domain\login* 格式的各个雇员登录名。 若要筛选该表以使每个雇员只接收与他们相关的数据，请指定一个参数化筛选器子句：  
   
 ```  
 LoginID = SUSER_SNAME()  
@@ -70,9 +70,9 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      联接筛选器可关联的表数目不限，但有大量表的筛选器会严重影响合并处理过程的性能。 如果要生成五个或更多表的联接筛选器，请考虑其他解决方案：不筛选小表、不会发生更改的表或主要是查找表的表。 仅在必须在订阅中分区的表之间使用联接筛选器。  
   
--   在适当处将“联接唯一键” **** 选项设置为 **True** 。  
+-   在适当处将“联接唯一键”  选项设置为 **True** 。  
   
-     如果父级中的联接列是唯一的，则合并进程的性能有较大的优化空间。 如果联接条件是依据某个唯一列，请为联接筛选器设置“联接唯一键” **** 选项。 有关设置此选项的详细信息，请参阅前一部分中列出的操作指南主题。  
+     如果父级中的联接列是唯一的，则合并进程的性能有较大的优化空间。 如果联接条件是依据某个唯一列，请为联接筛选器设置“联接唯一键”  选项。 有关设置此选项的详细信息，请参阅前一部分中列出的操作指南主题。  
   
 -   确保为联接筛选器中引用的列建立索引。  
   

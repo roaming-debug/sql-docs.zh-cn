@@ -19,16 +19,16 @@ ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: add89c5a1705344a661b6061dd7668429961ec14
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472493"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-返回表示 geometry 实例的凸包的对象****。
+返回表示 geometry 实例的凸包的对象。
   
 ## <a name="syntax"></a>语法  
   
@@ -40,12 +40,12 @@ ms.locfileid: "88472493"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="remarks"></a>注解  
- `STConvexHull()` 返回包含给定 geometry 实例的最小凸多边形****。 Points 或共线 LineString 实例将生成与该输入具有相同类型的实例********。  
+ `STConvexHull()` 返回包含给定 geometry 实例的最小凸多边形。 Points 或共线 LineString 实例将生成与该输入具有相同类型的实例。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STConvexHull()` 查找非凸 `Polygon``geometry` 实例的凸包。  

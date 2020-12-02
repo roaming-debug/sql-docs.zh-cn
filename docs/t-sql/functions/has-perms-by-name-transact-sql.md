@@ -24,10 +24,10 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115227"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
@@ -48,26 +48,26 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 
 ## <a name="arguments"></a>参数
  securable  
- 安全对象的名称。 如果安全对象是服务器本身，则此值应设置为 NULL。 securable 是 sysname 类型的标量表达式******。 没有默认值。  
+ 安全对象的名称。 如果安全对象是服务器本身，则此值应设置为 NULL。 securable 是 sysname 类型的标量表达式。 没有默认值。  
   
  *securable_class*  
- 测试权限的安全对象的类名。 securable_class 是 nvarchar(60) 类型的标量表达式******。  
+ 测试权限的安全对象的类名。 securable_class 是 nvarchar(60) 类型的标量表达式。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 参数必须设置为以下值之一：DATABASE、OBJECT、ROLE、SCHEMA 或 USER********************。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 参数必须设置为以下值之一：DATABASE、OBJECT、ROLE、SCHEMA 或 USER。  
   
  permission  
- 类型为 sysname 的非空标量表达式，表示要检查的权限名称****。 没有默认值。 权限名称 ANY 是通配符。  
+ 类型为 sysname 的非空标量表达式，表示要检查的权限名称。 没有默认值。 权限名称 ANY 是通配符。  
   
  *sub-securable*  
- 类型为 sysname 的可选标量表达式，表示测试权限的安全对象子实体的名称****。 默认值为 NULL。  
+ 类型为 sysname 的可选标量表达式，表示测试权限的安全对象子实体的名称。 默认值为 NULL。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及更高版本中，子安全对象不能使用 '[sub name]' 形式的括号****__****。 请改用 **'** _sub name_ **'** 。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及更高版本中，子安全对象不能使用 '[sub name]' 形式的括号。 请改用 **'** _sub name_ **'** 。  
   
  *sub-securable_class*  
- 类型为 nvarchar(60) 的可选标量表达式，表示测试权限的安全对象子实体的类****。 默认值为 NULL。  
+ 类型为 nvarchar(60) 的可选标量表达式，表示测试权限的安全对象子实体的类。 默认值为 NULL。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，只有在 securable_class 参数设置为 OBJECT 时 sub-securable_class 参数才有效****。 如果 securable_class 参数设置为 OBJECT，则 sub-securable_class 参数必须设置为 COLUMN********。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，只有在 securable_class 参数设置为 OBJECT 时 sub-securable_class 参数才有效。 如果 securable_class 参数设置为 OBJECT，则 sub-securable_class 参数必须设置为 COLUMN。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  

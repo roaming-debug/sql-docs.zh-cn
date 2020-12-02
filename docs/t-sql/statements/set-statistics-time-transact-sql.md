@@ -26,10 +26,10 @@ ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: abde67780d0eff93a791a2b48654ba712dea6859
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89539801"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
@@ -53,9 +53,9 @@ SET STATISTICS TIME { ON | OFF }
   
  SET STATISTICS TIME 的设置是在执行或运行时设置，而不是在分析时设置。  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能在纤程模式下提供准确的统计信息，而纤程模式在启用“轻型池”配置选项时激活****。  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能在纤程模式下提供准确的统计信息，而纤程模式在启用“轻型池”配置选项时激活。  
   
- 只有当使用 SET STATISTICS TIME ON 执行查询时才更新 sysprocesses 表中的 cpu 列********。 当 SET STATISTICS TIME 为 OFF 时，将返回 0****。  
+ 只有当使用 SET STATISTICS TIME ON 执行查询时才更新 sysprocesses 表中的 cpu 列。 当 SET STATISTICS TIME 为 OFF 时，将返回 0。  
   
  ON 和 OFF 设置还影响 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 内的“当前活动的进程信息视图”中的 CPU 列。  
   

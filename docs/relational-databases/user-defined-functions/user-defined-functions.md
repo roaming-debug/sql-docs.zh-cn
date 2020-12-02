@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7abbff8fbf88ccca3a0226b651da11f0825436b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472909"
 ---
 # <a name="user-defined-functions"></a>用户定义函数
@@ -50,7 +50,7 @@ ms.locfileid: "88472909"
   
 ##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> 函数类型  
 **标量函数**  
- 用户定义标量函数返回在 RETURNS 子句中定义的类型的单个数据值。 对于内联标量函数，返回的标量值是单个语句的结果。 对于多语句标量函数，函数体可以包含一系列返回单个值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 返回类型可以是除 **text**、 **ntext**、 **image**、 **cursor**和 **timestamp**外的任何数据类型。 
+ 用户定义标量函数返回在 RETURNS 子句中定义的类型的单个数据值。 对于内联标量函数，返回的标量值是单个语句的结果。 对于多语句标量函数，函数体可以包含一系列返回单个值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 返回类型可以是除 **text**、 **ntext**、 **image**、 **cursor** 和 **timestamp** 外的任何数据类型。 
  **[示例。](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **表值函数**  
@@ -170,7 +170,7 @@ ms.locfileid: "88472909"
     :::column-end:::
 :::row-end:::
  
- 下列不确定性内置函数不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数中使用****。  
+ 下列不确定性内置函数不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数中使用。  
   
 :::row:::
     :::column:::

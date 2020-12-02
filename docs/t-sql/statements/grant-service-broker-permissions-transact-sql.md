@@ -22,10 +22,10 @@ ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 350787ea11245db4bbd720c9bbbcc97403c90231
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472191"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT Service Broker 权限 (Transact-SQL)
@@ -58,19 +58,19 @@ GRANT permission  [ ,...n ] ON
  permission  
  指定可对 Service Broker 安全对象授予的权限。  如下所列。  
   
- CONTRACT ::contract_name****__  
+ CONTRACT ::contract_name  
  指定将对其授予权限的约定。 需要使用作用域限定符“::”。  
   
- MESSAGE TYPE ::message_type_name****__  
+ MESSAGE TYPE ::message_type_name  
  指定将对其授予权限的消息类型。 需要使用作用域限定符“::”。  
   
- REMOTE SERVICE BINDING ::remote_binding_name****__  
+ REMOTE SERVICE BINDING ::remote_binding_name  
  指定将对其授予权限的远程服务绑定。 需要使用作用域限定符“::”。  
   
- ROUTE ::route_name****__  
+ ROUTE ::route_name  
  指定将对其授予权限的路由。 需要使用作用域限定符“::”。  
   
- SERVICE ::service_name****__  
+ SERVICE ::service_name  
  指定将对其授予权限的服务。 需要使用作用域限定符“::”。  
   
  database_principal  
@@ -95,7 +95,7 @@ GRANT permission  [ ,...n ] ON
  GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
- granting_principal**  
+ granting_principal  
  指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  

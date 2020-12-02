@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d273277eff9a9d731aca1f60115aef28ef27a25f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472951"
 ---
 # <a name="modify-views"></a>修改视图
@@ -63,17 +63,17 @@ ms.locfileid: "88472951"
   
 1.  在 **“对象资源管理器”** 中，单击视图所在的数据库旁边的加号，然后单击 **“视图”** 文件夹旁边的加号。  
   
-2.  右键单击要修改的视图，然后选择“设计”****。  
+2.  右键单击要修改的视图，然后选择“设计”。  
   
 3.  在查询设计器的关系图窗格中，通过以下一种或多种方式更改视图：  
   
     1.  选中或清除要添加或删除的任何元素的复选框。  
   
-    2.  在关系图窗格中右键单击，选择“添加表…”，然后从“添加表”对话框选择要添加到视图的其他列********。  
+    2.  在关系图窗格中右键单击，选择“添加表…”，然后从“添加表”对话框选择要添加到视图的其他列。  
   
-    3.  右键单击要删除的表的标题栏，然后选择“删除”****。  
+    3.  右键单击要删除的表的标题栏，然后选择“删除”。  
   
-4.  在“文件”**** 菜单上，单击“保存”**** 以保存_视图名称_。  
+4.  在“文件”菜单上，单击“保存”以保存 _视图名称_。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

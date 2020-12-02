@@ -12,10 +12,10 @@ ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b98acd138794028dcecce9d121295154358799b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496116"
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服务
@@ -29,7 +29,7 @@ ms.locfileid: "88496116"
   
 1.  从 **“开始”** 菜单上，选择 **“Oracle CDC 服务配置”**。  
   
-2.  从左侧窗格中，选择“本地 CDC 服务”（根级别）。****  
+2.  从左侧窗格中，选择“本地 CDC 服务”（根级别）。  
   
 3.  您可以执行一项或两项下列任务：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "88496116"
   
          从 CDC 服务配置控制台右侧的 **“操作”** 窗格中选择此选项。  
   
-         还可以右键单击“本地 CDC 服务”****，然后选择“准备 SQL Server”****。  
+         还可以右键单击“本地 CDC 服务”，然后选择“准备 SQL Server”。  
   
          “为 Oracle CDC 准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例”对话框随即将会打开。  
   

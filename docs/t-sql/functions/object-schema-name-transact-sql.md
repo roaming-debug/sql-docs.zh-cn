@@ -23,10 +23,10 @@ ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f38e7c67fc458373e7887865de1b48bdd9324d0f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114747"
 ---
 # <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
@@ -46,10 +46,10 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 
 ## <a name="arguments"></a>参数
  object_id  
- 要使用的对象的 ID。 object_id 的数据类型为 int，并假定为指定数据库或当前数据库上下文中的架构范围内的对象******。  
+ 要使用的对象的 ID。 object_id 的数据类型为 int，并假定为指定数据库或当前数据库上下文中的架构范围内的对象。  
   
  database_id  
- 要在其中查找对象的数据库的 ID。 database_id 的数据类型为 int******。  
+ 要在其中查找对象的数据库的 ID。 database_id 的数据类型为 int。  
   
 ## <a name="return-types"></a>返回类型  
  **sysname**  
@@ -67,7 +67,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  由此系统函数返回的结果集将使用当前数据库的排序规则。  
   
- 如果未指定 database_id，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 假定 object_id 在当前数据库上下文中****。 在其他数据库中引用 object_id 的查询将返回 NULL 或错误的结果**。 例如，以下查询中当前数据库上下文是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将尝试返回在该数据库（而非查询的 FROM 子句中指定的数据库）中指定的对象 ID 的对象架构名称。 因此，会返回不正确的信息。  
+ 如果未指定 database_id，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 假定 object_id 在当前数据库上下文中。 在其他数据库中引用 object_id 的查询将返回 NULL 或错误的结果。 例如，以下查询中当前数据库上下文是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将尝试返回在该数据库（而非查询的 FROM 子句中指定的数据库）中指定的对象 ID 的对象架构名称。 因此，会返回不正确的信息。  
   
 ```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  

@@ -17,16 +17,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b20ea3e11cc08463a377616e319c8398525c90b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470412"
 ---
 # <a name="rename-indexes"></a>重命名索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名索引。 重命名索引将用提供的新名称替换当前的索引名称。 指定的名称在表或视图中必须是唯一的。 例如，两个表可以有一个名为 **XPK_1**的索引，但同一表中不能有两个名为 **XPK_1**的索引。 无法创建与现有禁用索引同名的索引。 重命名索引不会导致重新生成索引。  
+  本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名索引。 重命名索引将用提供的新名称替换当前的索引名称。 指定的名称在表或视图中必须是唯一的。 例如，两个表可以有一个名为 **XPK_1** 的索引，但同一表中不能有两个名为 **XPK_1** 的索引。 无法创建与现有禁用索引同名的索引。 重命名索引不会导致重新生成索引。  
   
  **本主题内容**  
   
@@ -60,17 +60,17 @@ ms.locfileid: "88470412"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要重命名索引的表，然后选择“设计”****。  
+3.  右键单击你要重命名索引的表，然后选择“设计”。  
   
 4.  在“表设计器”菜单上，单击“索引/键”。  
   
-5.  在“选定的主/唯一键或索引”**** 文本框中，选择你要重命名的索引。  
+5.  在“选定的主/唯一键或索引”文本框中，选择你要重命名的索引。  
   
 6.  在网格中，单击 **“名称”** 并在文本框中键入新名称。  
   
 7.  单击“关闭”。  
   
-8.  在“文件”**** 菜单上，单击“保存”**** 以保存 _table_name_。  
+8.  在“文件”菜单上，单击“保存”以保存 _table_name_。  
 
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>通过使用对象资源管理器重命名索引  
   
@@ -82,7 +82,7 @@ ms.locfileid: "88470412"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要重命名的索引，然后选择“重命名”****。  
+5.  右键单击要重命名的索引，然后选择“重命名”。  
   
 6.  键入索引的新名称，再按 Enter。  
   

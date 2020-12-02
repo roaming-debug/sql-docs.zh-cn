@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c86496904351d305cdf21af05275f469db689982
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88485289"
 ---
 # <a name="modify-user-defined-functions"></a>修改用户定义函数
@@ -69,11 +69,11 @@ ms.locfileid: "88485289"
   
     -   Aggregate 函数  
   
-4.  右键单击要修改的函数，然后单击“修改”****。  
+4.  右键单击要修改的函数，然后单击“修改”。  
   
 5.  在查询窗口中，对 ALTER FUNCTION 语句进行必要的更改。  
   
-6.  在“文件”**** 菜单上，点击“保存”**** function_name__。  
+6.  在“文件”菜单上，点击“保存”function_name。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

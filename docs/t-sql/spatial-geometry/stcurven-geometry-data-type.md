@@ -16,16 +16,16 @@ ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e182b7c5670bd86e0d684d1d8caaea563a2ff456
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467376"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN（geometry 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-返回从 geometry 实例中指定的曲线，该实例的数据类型为 LineString、CircularString、CompoundCurve 或 MultiLineString********************。
+返回从 geometry 实例中指定的曲线，该实例的数据类型为 LineString、CircularString、CompoundCurve 或 MultiLineString。
   
 ## <a name="syntax"></a>语法  
   
@@ -41,9 +41,9 @@ ms.locfileid: "88467376"
  一个 **int** 表达式，其值介于 1 和 **geometry** 实例中的曲线数之间。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry****  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="exceptions"></a>例外  
  如果 *curve_index* < 1，则引发 `ArgumentOutOfRangeException`。  

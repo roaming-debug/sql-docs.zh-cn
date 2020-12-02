@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f68cdf9461211003f90aaf4e302be8df02c4722
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116025"
 ---
 # <a name="max-transact-sql"></a>MAX (Transact-SQL)
@@ -55,15 +55,15 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
  指定考虑每一个唯一值。 DISTINCT 对于 MAX 无意义，使用它仅仅是为了与 ISO 实现兼容。  
   
  *expression*  
- 常量、列名、函数以及算术运算符、位运算符和字符串运算符的任意组合。 MAX 可用于 numeric、character、uniqueidentifier 和 datetime 列，但不能用于 bit 列********************。 不允许使用聚合函数和子查询。  
+ 常量、列名、函数以及算术运算符、位运算符和字符串运算符的任意组合。 MAX 可用于 numeric、character、uniqueidentifier 和 datetime 列，但不能用于 bit 列。 不允许使用聚合函数和子查询。  
   
  有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause**。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与 expression 相同的值**。  
+ 返回与 expression 相同的值。  
   
 ## <a name="remarks"></a>注解  
  MAX 忽略任何空值。  

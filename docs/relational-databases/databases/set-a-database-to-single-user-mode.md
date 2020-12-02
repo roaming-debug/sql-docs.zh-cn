@@ -14,10 +14,10 @@ ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 591a2d22a603c51f44bdfa16d4072e6b9ad36c73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471128"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>将数据库设置为单用户模式
@@ -61,9 +61,9 @@ ms.locfileid: "88471128"
   
 #### <a name="to-set-a-database-to-single-user-mode"></a>将数据库设置为单用户模式  
   
-1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在 **对象资源管理器** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  右键单击要更改的数据库，再单击“属性”****。  
+2.  右键单击要更改的数据库，再单击“属性”。  
   
 3.  在 **“数据库属性”** 对话框中，单击 **“选项”** 页。  
   

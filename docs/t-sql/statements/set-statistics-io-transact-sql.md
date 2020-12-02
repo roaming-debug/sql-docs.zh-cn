@@ -27,10 +27,10 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f0baaa385e86844bed40dfa3f725e11ba298e27c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89541244"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
@@ -63,9 +63,9 @@ SET STATISTICS IO { ON | OFF }
 |**逻辑读取次数**|从数据缓存读取的页数。|  
 |**物理读取次数**|从磁盘读取的页数。|  
 |**预读次数**|为进行查询而放入缓存的页数。|  
-|**lob 逻辑读取次数**|从数据缓存读取的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页************************。|  
-|**lob 物理读取次数**|从磁盘读取的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页************************。|  
-|**lob 预读次数**|为进行查询而放入缓存的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页************************。|
+|**lob 逻辑读取次数**|从数据缓存读取的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页。|  
+|**lob 物理读取次数**|从磁盘读取的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页。|  
+|**lob 预读次数**|为进行查询而放入缓存的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页。|
 
  SET STATISTICS IO 是在执行或运行时设置，而不是在分析时设置。
 

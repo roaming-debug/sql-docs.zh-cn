@@ -17,10 +17,10 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 849f01ba00bddd67ca2de2c16b6953cff9b06c36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495140"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和异步转换
@@ -35,7 +35,7 @@ ms.locfileid: "88495140"
   
  “数据转换”这种转换是同步转换的一个示例。 对于每个传入行，它都转换指定列中的值，然后将其向下游发送。 每个单独的转换操作都与数据集中的其他所有行无关。  
   
- 在编写 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 脚本和编程时，可以通过以下方式指定同步转换：查找一个组件的输入 ID，然后将其分配给该组件的输出 SynchronousInputID**** 属性。 这可以使数据流引擎处理输入中的每一行，然后自动将每行发送给指定输出。 如果希望每一行都产生一个输出，则不必再编写任何其他代码来输出数据。 如果使用 ExclusionGroup**** 属性指定各行的输出只应归为一个或另一个输出组，就像有条件拆分转换中一样，则必须调用 DirectRow**** 方法来为每一行选择适当的目标。 如果存在错误输出，必须调用 DirectErrorRow**** 来将存在错误的行发送到错误输出，而不是默认输出。  
+ 在编写 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 脚本和编程时，可以通过以下方式指定同步转换：查找一个组件的输入 ID，然后将其分配给该组件的输出 SynchronousInputID 属性。 这可以使数据流引擎处理输入中的每一行，然后自动将每行发送给指定输出。 如果希望每一行都产生一个输出，则不必再编写任何其他代码来输出数据。 如果使用 ExclusionGroup 属性指定各行的输出只应归为一个或另一个输出组，就像有条件拆分转换中一样，则必须调用 DirectRow 方法来为每一行选择适当的目标。 如果存在错误输出，必须调用 DirectErrorRow 来将存在错误的行发送到错误输出，而不是默认输出。  
   
 ## <a name="asynchronous-transformations"></a>异步转换  
  如果处理每一行时无法独立于其他所有行，则您的设计可能需要异步转换。 换言之，您不能在处理每一行时在数据流中传递该行，而必须使输出数据与输入异步，即两者不同时发生。 例如，以下情况需要异步转换：  
@@ -46,7 +46,7 @@ ms.locfileid: "88495140"
   
 -   在输入行和输出行之间不存在一对一的对应关系。 例如聚合转换，在该转换中，组件必须向输出添加一行来保存计算的聚合值。  
   
- 在编写 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 脚本和编程时，可以通过将值 0 分配给组件的输出的 SynchronousInputID**** 属性来指定异步转换。 . 这可以使数据流引擎不自动将每一行发送到输出中。 这样，您就必须编写代码将每一行显式发送到相应的输出中，方法是将该行添加到为异步转换的输出创建的新输出缓冲区中。  
+ 在编写 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 脚本和编程时，可以通过将值 0 分配给组件的输出的 SynchronousInputID 属性来指定异步转换。 . 这可以使数据流引擎不自动将每一行发送到输出中。 这样，您就必须编写代码将每一行显式发送到相应的输出中，方法是将该行添加到为异步转换的输出创建的新输出缓冲区中。  
   
 > [!NOTE]  
 >  由于源组件也必须显式将从数据源读取的每一行添加到该组件的输出缓冲区中，因此源与具有异步输出的转换很相似。  

@@ -19,10 +19,10 @@ ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9ccc9a860218a6fa39596faaee78908eedf6907a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115996"
 ---
 # <a name="key_name-transact-sql"></a>KEY_NAME (Transact-SQL)
@@ -42,10 +42,10 @@ KEY_NAME ( ciphertext | key_guid )
 
 ## <a name="arguments"></a>参数
  ciphertext  
- 对称密钥加密的文本。 cyphertext 是 varbinary(8000) 类型******。  
+ 对称密钥加密的文本。 cyphertext 是 varbinary(8000) 类型。  
   
  key_guid  
- 对称密钥的 GUID。 key_guid 是 uniqueidentifier 类型******。  
+ 对称密钥的 GUID。 key_guid 是 uniqueidentifier 类型。  
   
 ## <a name="returned-types"></a>返回类型  
  **varchar(128)**  
@@ -56,7 +56,7 @@ KEY_NAME ( ciphertext | key_guid )
 ## <a name="examples"></a>示例  
   
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-key_guid"></a>A. 使用 key_guid 显示对称密钥的名称  
- master 数据库包含一个名为 ##MS_ServiceMasterKey## 的对称密钥****。 下面的示例从 sys.symmetric_keys 动态管理视图获取该密钥的 GUID，并将其赋值给一个变量，然后将该变量传递到 KEY_NAME 函数，从而演示如何返回与 GUID 对应的名称。  
+ master 数据库包含一个名为 ##MS_ServiceMasterKey## 的对称密钥。 下面的示例从 sys.symmetric_keys 动态管理视图获取该密钥的 GUID，并将其赋值给一个变量，然后将该变量传递到 KEY_NAME 函数，从而演示如何返回与 GUID 对应的名称。  
   
 ```sql  
 USE master;  

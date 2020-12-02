@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2ba9047673e7f43202ec74f577e039d3b769abe
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90570621"
 ---
 # <a name="has_dbaccess-transact-sql"></a>HAS_DBACCESS (Transact-SQL)
@@ -50,7 +50,7 @@ HAS_DBACCESS ( 'database_name' )
 
 ## <a name="arguments"></a>参数
  'database_name'  
- 数据库的名称，用户希望获取有关该数据库的访问信息。 database_name 的数据类型为 sysname******。  
+ 数据库的名称，用户希望获取有关该数据库的访问信息。 database_name 的数据类型为 sysname。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  

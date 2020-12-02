@@ -16,10 +16,10 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c12c260c4971763041bf41b5be7dafbdfd497c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477492"
 ---
 # <a name="property-expressions-editor"></a>属性表达式编辑器
@@ -43,7 +43,7 @@ ms.locfileid: "88477492"
  单击省略号可以打开 **“表达式生成器”** 对话框。 有关详细信息，请参阅 [Expression Builder](../../integration-services/expressions/expression-builder.md)。  
   
  **删除**  
- 选择一个属性，再单击“删除”****。  
+ 选择一个属性，再单击“删除”。  
   
 ## <a name="see-also"></a>另请参阅  
  [“表达式”页](../../integration-services/expressions/expressions-page.md)   

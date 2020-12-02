@@ -19,10 +19,10 @@ ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d48004bfe0dd40545941bf23a41b91c49485233b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115179"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
@@ -79,7 +79,7 @@ IS_OBJECTSIGNED (
 ## <a name="examples"></a>示例  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. 显示数据库的扩展属性  
- 下面的示例测试 master 数据库中的 spt_fallback_db 表是否由架构签名证书进行签名****。  
+ 下面的示例测试 master 数据库中的 spt_fallback_db 表是否由架构签名证书进行签名。  
   
 ```sql  
 USE master;  

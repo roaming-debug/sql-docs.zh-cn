@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 853fbe7569d160cfa9fee7e59b4f9c323c5d4ec1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115467"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
@@ -48,13 +48,13 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  一个表达式，包含要为其提供索引属性信息的表或索引视图的对象标识号。 object_id 的数据类型为 int。  
   
  index_or_statistics_name  
- 一个表达式，包含要为其返回属性信息的索引或统计信息的名称。 index_or_statistics_name 的数据类型为 nvarchar(128)******。  
+ 一个表达式，包含要为其返回属性信息的索引或统计信息的名称。 index_or_statistics_name 的数据类型为 nvarchar(128)。  
   
  *property*  
- 一个表达式，包含要返回的数据库属性的名称。 property 的数据类型为 varchar(128)，它可以为以下值之一******。  
+ 一个表达式，包含要返回的数据库属性的名称。 property 的数据类型为 varchar(128)，它可以为以下值之一。  
   
 > [!NOTE]  
->  除非另外注明，否则出现以下情况时将返回 NULL：property 不是有效的属性名称；object_ID 不是有效的对象 ID；object_ID 不是指定属性支持的对象类型；调用方无权查看对象的元数据******。  
+>  除非另外注明，否则出现以下情况时将返回 NULL：property 不是有效的属性名称；object_ID 不是有效的对象 ID；object_ID 不是指定属性支持的对象类型；调用方无权查看对象的元数据。  
   
 |属性|说明|值|  
 |--------------|-----------------|-----------|  
@@ -69,7 +69,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsPadIndex**|索引指定每个内部节点上将要保持空闲的空间。|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsPageLockDisallowed**|通过 ALTER INDEX 的 ALLOW_PAGE_LOCKS 选项设置的页锁定值。|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 1 = 不允许页锁定。<br /><br /> 0 = 允许页锁定。<br /><br /> NULL = 输入无效。|  
 |**IsRowLockDisallowed**|通过 ALTER INDEX 的 ALLOW_ROW_LOCKS 选项设置的行锁定值。|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 1 = 不允许行锁定。<br /><br /> 0 = 允许行锁定。<br /><br /> NULL = 输入无效。|  
-|**IsStatistics**|index_or_statistics_name 是通过 CREATE STATISTICS 语句或 ALTER DATABASE 的 AUTO_CREATE_STATISTICS 选项创建的统计信息**。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
+|**IsStatistics**|index_or_statistics_name 是通过 CREATE STATISTICS 语句或 ALTER DATABASE 的 AUTO_CREATE_STATISTICS 选项创建的统计信息。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsUnique**|索引是唯一的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsColumnstore**|索引为 xVelocity 内存优化的列存储索引。|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 1 = True<br /><br /> 0 = False| 
 |**IsOptimizedForSequentialKey**|索引是否已启用优化最后一页插入。|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。 <br><br>1 = True<br><br>0 = False| 
@@ -83,7 +83,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 INDEXPROPERTY）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
- 以下示例针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Employee` 表的 `PK_Employee_BusinessEntityID` 索引返回 IsClustered、IndexDepth 和 IndexFillFactor 属性的值************。  
+ 以下示例针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Employee` 表的 `PK_Employee_BusinessEntityID` 索引返回 IsClustered、IndexDepth 和 IndexFillFactor 属性的值。  
   
 ```sql  
 SELECT   

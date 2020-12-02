@@ -14,10 +14,10 @@ ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d6db17f4c7930e03e65412c9addaef5340ec4645
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471119"
 ---
 # <a name="secondary-database-settings"></a>辅助数据库设置
@@ -55,7 +55,7 @@ ms.locfileid: "88471119"
  让 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用主数据库的现有备份初始化辅助数据库。 在 **“备份文件”** 框中键入该备份的位置。 如果在“辅助数据库”框中输入新的数据库名称，数据库将作为还原操作的一部分进行创建。  
   
  **“备份文件”**  
- 如果选择“是，将主数据库的现有备份还原到辅助数据库”**** 选项，请键入要用于初始化辅助数据库的完整数据库备份的路径和文件名。  
+ 如果选择“是，将主数据库的现有备份还原到辅助数据库”选项，请键入要用于初始化辅助数据库的完整数据库备份的路径和文件名。  
   
  **还原选项**  
  参阅本主题前面对此按钮的说明。  

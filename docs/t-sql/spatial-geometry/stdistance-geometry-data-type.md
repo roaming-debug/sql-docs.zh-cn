@@ -19,10 +19,10 @@ ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 48ae04bdc272bcb7513fe4c2ac1d474406b4ba04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467359"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance（geometry 数据类型）
@@ -44,9 +44,9 @@ ms.locfileid: "88467359"
  另一个 **geometry** 实例，将度量该实例与调用 `STDistance()` 的实例之间的距离。 如果 *other_geometry* 为空集，则 `STDistance()` 返回 null。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float  
   
- CLR 返回类型：SqlDouble****  
+ CLR 返回类型：SqlDouble  
   
 ## <a name="remarks"></a>注解  
  如果 **geometry** 实例的空间引用 ID (SRID) 不匹配，则 `STDistance()` 始终返回 null。  

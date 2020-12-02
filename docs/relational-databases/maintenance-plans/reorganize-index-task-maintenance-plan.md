@@ -16,15 +16,15 @@ ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3af62a68c6aeb36f6527afc66744ad8c2f66947f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88494162"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>“重新组织索引”任务（维护计划）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用“‘重新组织索引’任务”**** 对话框可以移动索引页，以提高搜索效率。 此任务将使用 `ALTER INDEX REORGANIZE` 语句和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。  
+  使用“‘重新组织索引’任务”对话框可以移动索引页，以提高搜索效率。 此任务将使用 `ALTER INDEX REORGANIZE` 语句和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。  
   
 ## <a name="options"></a>选项  
  **Connection**  
@@ -42,7 +42,7 @@ ms.locfileid: "88494162"
   
 -   **所有系统数据库**  
   
-     生成的维护计划将对除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tempdb **之外的所有**系统数据库运行维护任务。 对用户创建的数据库不运行维护任务。  
+     生成的维护计划将对除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tempdb **之外的所有** 系统数据库运行维护任务。 对用户创建的数据库不运行维护任务。  
   
 -   **所有用户数据库**  
   

@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d1e069b4fca1f7fb675f802a3d009d59962444af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88491068"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  FT:Crawl Started**** 事件类指示全文爬网（填充）已开始。 使用此事件类来检查工作线程任务是否正在实际拾取爬网请求。  
+  FT:Crawl Started 事件类指示全文爬网（填充）已开始。 使用此事件类来检查工作线程任务是否正在实际拾取爬网请求。  
   
 ## <a name="ft-crawl-started-event-class-data-columns"></a>FT: Crawl Started 事件类的数据列  
   

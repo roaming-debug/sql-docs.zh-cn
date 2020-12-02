@@ -19,16 +19,16 @@ ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 015a1906ad2be09ffd2ea4fec85277255641a36a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88479319"
 ---
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回 geography 实例的起点****。  
+  返回 geography 实例的起点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "88479319"
   
  CLR 返回类型：SqlGeography  
   
- 开放地理空间信息联盟 (OGC) 类型：Point****  
+ 开放地理空间信息联盟 (OGC) 类型：Point  
   
 ## <a name="remarks"></a>备注  
  STStartPoint() 等效于 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`。  

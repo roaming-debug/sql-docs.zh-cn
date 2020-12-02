@@ -34,10 +34,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8cd51d8b728fd12bfcab2a853c6bf3a8a2b7c214
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116293"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
@@ -66,9 +66,9 @@ expression IS [ NOT ] NULL
  **布尔值**  
   
 ## <a name="return-code-values"></a>返回代码值  
- 如果 expression 的值为 NULL，则 IS NULL 返回 TRUE；否则，返回 FALSE**。  
+ 如果 expression 的值为 NULL，则 IS NULL 返回 TRUE；否则，返回 FALSE。  
   
- 如果 expression 的值为 NULL，则 IS NOT NULL 返回 FALSE；否则，返回 TRUE**。  
+ 如果 expression 的值为 NULL，则 IS NOT NULL 返回 FALSE；否则，返回 TRUE。  
   
 ## <a name="remarks"></a>备注  
  若要确定表达式是否为 NULL，请使用 IS NULL 或 IS NOT NULL，而不要使用比较运算符（如 = 或 !=）。 如果有一个参数为 NULL 或两个参数都为 NULL，比较运算符将返回 UNKNOWN。  
