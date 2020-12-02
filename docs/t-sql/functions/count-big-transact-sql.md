@@ -24,16 +24,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 47d918b40002d877c667c675c5da7c49f98f267b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459809"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128562"
 ---
 # <a name="count_big-transact-sql"></a>COUNT_BIG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-此函数返回组中找到的项数量。 `COUNT_BIG` 的操作与 [COUNT](../../t-sql/functions/count-transact-sql.md) 函数类似。 这些函数区别只在于其返回的值的数据类型。 `COUNT_BIG` 始终返回“bigint”**** 数据类型值。 `COUNT` 始终返回“int”**** 数据类型值。
+此函数返回组中找到的项数量。 `COUNT_BIG` 的操作与 [COUNT](../../t-sql/functions/count-transact-sql.md) 函数类似。 这些函数区别只在于其返回的值的数据类型。 `COUNT_BIG` 始终返回“bigint”数据类型值。 `COUNT` 始终返回“int”数据类型值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -61,10 +61,10 @@ DISTINCT
 任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 `COUNT_BIG` 不支持表达式中的聚合函数或子查询。
   
 *\**  
-指定 `COUNT_BIG` 应对所有行计数，以确定要返回的总表行计数。 `COUNT_BIG(*)` 不采用任何参数，也不支持使用 DISTINCT。 `COUNT_BIG(*)` 不需要“expression”** 参数，因为根据定义，该函数不使用有关任何特定列的信息。 `COUNT_BIG(*)` 返回指定表中的行数，但保留副本行。 它会单独为每一行计数，包括包含 null 值的行。
+指定 `COUNT_BIG` 应对所有行计数，以确定要返回的总表行计数。 `COUNT_BIG(*)` 不采用任何参数，也不支持使用 DISTINCT。 `COUNT_BIG(*)` 不需要“expression”参数，因为根据定义，该函数不使用有关任何特定列的信息。 `COUNT_BIG(*)` 返回指定表中的行数，但保留副本行。 它会单独为每一行计数，包括包含 null 值的行。
   
-OVER **(** [ partition_by_clause ] [ order_by_clause ] **)******  
-“partition_by_clause”** 将 `FROM` 子句生成的结果集划分为要应用 `COUNT_BIG` 函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 “order_by_clause”** 确定操作的逻辑顺序。 请参阅 [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) 获取详细信息。
+OVER **(** [ partition_by_clause ] [ order_by_clause ] **)**  
+“partition_by_clause”将 `FROM` 子句生成的结果集划分为要应用 `COUNT_BIG` 函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 “order_by_clause”确定操作的逻辑顺序。 请参阅 [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) 获取详细信息。
   
 ## <a name="return-types"></a>返回类型
 **bigint**
@@ -76,7 +76,7 @@ COUNT_BIG (ALL *expression*) 计算组中每行的 *expression*，然后返回�
   
 COUNT_BIG (DISTINCT *expression*) 计算组中每行的 *expression*，然后返回独一无二的非 null 值的数量。
   
-COUNT_BIG 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，COUNT_BIG 具有不确定性**__**。 请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)获取详细信息。
+COUNT_BIG 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，COUNT_BIG 具有不确定性 ****。 请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)获取详细信息。
   
 ## <a name="examples"></a>示例  
 请参阅 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) 获取示例。

@@ -23,11 +23,11 @@ ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ff8932e241349836f34dad60c805d4396ca84575
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116415"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128474"
 ---
 # <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +45,13 @@ FILEGROUP_ID ( 'filegroup_name' )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-filegroup_name** 是类型 sysname**** 的表达式，它表示文件组 ID `FILEGROUP_ID` 将返回的文件组名称。  
+filegroup_name 是类型 sysname 的表达式，它表示文件组 ID `FILEGROUP_ID` 将返回的文件组名称。  
   
 ## <a name="return-types"></a>返回类型  
 **int**  
   
 ## <a name="remarks"></a>备注  
-filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应**********。  
+filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应。  
   
 ## <a name="examples"></a>示例  
 此示例将返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中名为 `PRIMARY` 的文件组的文件组 ID。  

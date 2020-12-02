@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 244b815a0e670cd0e697c037c62d66cc78159d81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737723"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129102"
 ---
 # <a name="restore-database-options-page"></a>还原数据库（“选项”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85737723"
  有关详细信息，请参阅 [备份和还原复制的数据库](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)。  
   
  **限制还原数据库的访问 [WITH RESTRICTED_USER]**  
- 使还原的数据库仅供 **db_owner**、 **dbcreator**或 **sysadmin**的成员使用。  
+ 使还原的数据库仅供 **db_owner**、 **dbcreator** 或 **sysadmin** 的成员使用。  
   
  选择此选项等效于在 RESTORE 语句中使用 RESTRICTED_USER 选项。  
   

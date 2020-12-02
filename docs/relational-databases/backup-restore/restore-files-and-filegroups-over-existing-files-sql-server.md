@@ -17,14 +17,14 @@ helpviewer_keywords:
 - overwriting filegroups
 - overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5fe155516996d9f5761ccb2b8b1d1071fb975bbe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5f5b0b6a43c3b6cc1dde0fa566fdb4547c831e76
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737696"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129092"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>在现有文件上还原文件和文件组 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85737696"
   
 2.  右键单击所需数据库，指向“任务”  ，再指向“还原”  ，然后单击“文件和文件组”  。  
   
-3.  在 **“常规”** 页上的 **目标数据库** 列表框中，输入要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master** 和 **tempdb**之外的所有数据库。  
+3.  在 **“常规”** 页上的 **目标数据库** 列表框中，输入要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master** 和 **tempdb** 之外的所有数据库。  
   
 4.  若要指定要还原的备份集的源和位置，请单击以下选项之一：  
   

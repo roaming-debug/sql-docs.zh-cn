@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 43bb11503e312ca9a92251c1e77524e68077ccd9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b32df686813d69740f06bb711e2cd8bf6625fa6f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728522"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129352"
 ---
 # <a name="backup-device-media-contents-page"></a>备份设备（“介质内容”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

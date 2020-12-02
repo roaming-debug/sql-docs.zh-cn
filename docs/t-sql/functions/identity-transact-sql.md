@@ -21,11 +21,11 @@ ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eff66d795dce39c21ee6a4354e8f34a62ed15d6c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115485"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128412"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91115485"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- numeric(38,0)****  
+ numeric(38,0)  
   
 ## <a name="remarks"></a>备注  
  在一条 INSERT、SELECT INTO 或大容量复制语句完成后，@@IDENTITY 中包含语句生成的最后一个标识值。 如果语句未影响任何包含标识列的表，则 @@IDENTITY 返回 NULL。 如果插入了多个行，生成了多个标识值，则 @@IDENTITY 将返回最后生成的标识值。 如果语句触发了一个或多个触发器，该触发器又执行了生成标识值的插入操作，那么，在语句执行后立即调用 @@IDENTITY 将返回触发器生成的最后一个标识值。 如果对包含标识列的表执行插入操作后触发了触发器，并且触发器对另一个没有标识列的表执行了插入操作，则 @@IDENTITY 将返回第一次插入的标识值。 出现 INSERT 或 SELECT INTO 语句失败或大容量复制失败，或者事务被回滚的情况时，@@IDENTITY 值不会恢复为以前的设置。  

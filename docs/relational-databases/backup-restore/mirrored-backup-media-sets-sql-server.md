@@ -17,14 +17,14 @@ helpviewer_keywords:
 - media sets [SQL Server], mirrored backup media sets
 - backup media [SQL Server], mirrored media
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ef4dbb94285abf6e88f663e1dc2cc609bd6718a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3c9f357465c82620c663761730999ce85c27a033
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670669"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129253"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>镜像备份介质集 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

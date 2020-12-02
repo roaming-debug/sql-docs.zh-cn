@@ -15,14 +15,14 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2bcd64bae91ee4f6b217c75a946e57523cc2accf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 508e567be5fa44e3bf64465dc583f7196dcdb911
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669312"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129135"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>在简单恢复模式下还原数据库备份 (Transact-SQL)
 

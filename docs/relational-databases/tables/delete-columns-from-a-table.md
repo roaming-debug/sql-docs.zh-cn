@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2ad600234ac931f408cdf60ba5b2a855823f8151
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446435"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128708"
 ---
 # <a name="delete-columns-from-a-table"></a>从表中删除列
 
@@ -66,16 +66,16 @@ ms.locfileid: "88446435"
 ### <a name="to-delete-columns-by-using-object-explorer"></a>通过使用对象资源管理器删除列
 
 1. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。
-2. 在“对象资源管理器”中，找到要从其中删除列的表，然后将其展开以公开列名称****。
-3. 右键单击要删除的列，然后选择“删除”****。
+2. 在“对象资源管理器”中，找到要从其中删除列的表，然后将其展开以公开列名称。
+3. 右键单击要删除的列，然后选择“删除”。
 4. 在 **“删除对象”** 对话框中，单击 **“确定”**。
 
 如果该列包含约束或其他依赖关系，则在 **“删除对象”** 对话框中将显示一条错误消息。 通过删除引用的约束解决该错误。
 
 ### <a name="to-delete-columns-by-using-table-designer"></a>通过使用表设计器删除列
 
-1. 在“对象资源管理器”**** 中，右键单击要从其中删除列的表，然后选择“设计”****。
-2. 右键单击要删除的列，然后从快捷菜单上选择“删除列”****。
+1. 在“对象资源管理器”中，右键单击要从其中删除列的表，然后选择“设计”。
+2. 右键单击要删除的列，然后从快捷菜单上选择“删除列”。
 3. 如果该列参与了关系（FOREIGN KEY 或 PRIMARY KEY），则将显示一条消息，提示您确认删除所选列及其关系。 选择 **“是”** 。
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL

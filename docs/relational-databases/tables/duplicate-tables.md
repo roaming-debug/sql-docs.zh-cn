@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a8faa1aab3237152934f0ce9eb4cb9ce541d5d3d
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765813"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128675"
 ---
 # <a name="duplicate-tables"></a>复制表
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -58,9 +58,9 @@ ms.locfileid: "91765813"
   
 1.  请确保您已经连接到要在其中创建表的数据库并在对象资源管理器中选中该数据库。  
   
-2.  在对象资源管理器中，右键单击****“表”，再单击****“新建表”。  
+2.  在对象资源管理器中，右键单击“表”，再单击“新建表”。  
   
-3.  在对象资源管理器中，右键单击要复制的表，再单击****“设计”。  
+3.  在对象资源管理器中，右键单击要复制的表，再单击“设计”。  
   
 4.  在现有表中选择列，在 **“编辑”** 菜单上单击 **“复制”**。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "91765813"
   
 1.  请确保您已经连接到要在其中创建表的数据库并在对象资源管理器中选中该数据库。  
   
-2.  右键单击要复制的表，指向****“编写表脚本为”，然后指向****“CREATE 到”，再选择****“新查询编辑器窗口”。  
+2.  右键单击要复制的表，指向“编写表脚本为”，然后指向“CREATE 到”，再选择“新查询编辑器窗口”。  
   
 3.  更改表的名称。  
   

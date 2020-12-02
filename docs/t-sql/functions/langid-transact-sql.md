@@ -23,11 +23,11 @@ ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e6cd2cb8379281733a4fadada57af60780d0f0db
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115125"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128398"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "91115125"
  **smallint**  
   
 ## <a name="remarks"></a>备注  
- 若要查看有关语言设置的信息（包括语言 ID 号），可不带指定参数运行 sp_helplanguage****。  
+ 若要查看有关语言设置的信息（包括语言 ID 号），可不带指定参数运行 sp_helplanguage。  
   
 ## <a name="examples"></a>示例  
  以下示例将当前会话的语言设置为 `Italian`，然后使用 `@@LANGID` 返回意大利语的 ID。  

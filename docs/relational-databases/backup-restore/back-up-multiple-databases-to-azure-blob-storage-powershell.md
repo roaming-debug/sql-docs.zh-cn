@@ -10,14 +10,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e79840f828a7891ac3e01cd52721eb5755a97c7b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ef69119a6e9b18d2bbe8008cf4113a0181ce74eb
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809218"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129362"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>将多个数据库备份到 Azure Blob 存储 - PowerShell
 

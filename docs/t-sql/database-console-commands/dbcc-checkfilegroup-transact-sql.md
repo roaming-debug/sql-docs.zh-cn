@@ -27,11 +27,11 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116151"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128618"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ DBCC CHECKFILEGROUP
 ## <a name="arguments"></a>参数
  filegroup_name  
  当前数据库中要检查表分配和结构完整性的文件组的名称。 如果不指定此参数或指定了 0 值，则默认值为主文件组。 文件组名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
- filegroup_name 不能是 FILESTREAM 文件组**。  
+ filegroup_name 不能是 FILESTREAM 文件组。  
   
  *filegroup_id*  
  当前数据库中要检查其表分配和结构完整性的文件组标识 (ID) 号。  
@@ -94,7 +94,7 @@ DBCC CHECKFILEGROUP
 >  指定 PHYSICAL_ONLY 会导致 DBCC CHECKFILEGROUP 跳过对 FILESTREAM 数据的所有检查。  
   
  MAXDOP  
- **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
  对于语句，替代 sp_configure 的“max degree of parallelism”配置选项 。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则数据库引擎会使用资源调控器 MAXDOP 值（如 ALTER WORKLOAD GROUP (Transact-SQL) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
@@ -143,8 +143,8 @@ DBCC CHECKFILEGROUP 命令完成后，会将一条消息写入 [!INCLUDE[ssNoVer
 |5|出现终止了 DBCC 命令的未知错误。|  
   
 ## <a name="error-reporting"></a>错误报告  
-只要 DBCC CHECKFILEGROUP 检测到损坏错误，就会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建微型转储文件 (SQLDUMPnnnn.txt)**。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
-转储文件包含 DBCC CHECKFILEGROUP 命令的结果以及其他诊断输出数据。 该文件拥有任意访问控制列表 (DACL)。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 sysadmin 角色的成员才有权进行访问。 默认情况下，sysadmin 角色包含 Windows BUILTIN\Administrators 组和本地管理员组的所有成员****。 如果数据收集进程失败，DBCC 命令不会失败。
+只要 DBCC CHECKFILEGROUP 检测到损坏错误，就会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建微型转储文件 (SQLDUMPnnnn.txt)。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
+转储文件包含 DBCC CHECKFILEGROUP 命令的结果以及其他诊断输出数据。 该文件拥有任意访问控制列表 (DACL)。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 sysadmin 角色的成员才有权进行访问。 默认情况下，sysadmin 角色包含 Windows BUILTIN\Administrators 组和本地管理员组的所有成员。 如果数据收集进程失败，DBCC 命令不会失败。
   
 ## <a name="resolving-errors"></a>纠正错误  
 如果 DBCC CHECKFILEGROUP 报告了任何错误，建议通过数据库备份还原数据库。 请注意，不能将修复操作指定为 DBCC CHECKFILEGROUP。

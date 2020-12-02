@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b953d49716cb6a99879ebc94c750fc1e765916e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385333"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128792"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 事件类
 
 [!INCLUDE [sql-asdb.md](../../includes/applies-to-version/sql-asdb.md)]
 
-  将登录名作为数据库用户添加到数据库或从数据库删除时，会发生 Audit Add DB User 事件类****。 此事件类用于 **sp_grantdbaccess**、**sp_revokedbaccess****sp_adduser** 和 **sp_dropuser** 存储过程。  
+  将登录名作为数据库用户添加到数据库或从数据库删除时，会发生 Audit Add DB User 事件类。 此事件类用于 **sp_grantdbaccess**、**sp_revokedbaccess****sp_adduser** 和 **sp_dropuser** 存储过程。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的将来版本中可能会删除此事件类。 建议使用 **Audit Database Principal Management** 事件类。  
   

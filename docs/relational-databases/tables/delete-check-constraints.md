@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 557c791f0457ef31c1bf5aeca51787f2200a70ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446444"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128725"
 ---
 # <a name="delete-check-constraints"></a>删除 CHECK 约束
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88446444"
   
 2.  展开  **“约束”**。  
   
-3.  右键单击该约束，然后单击“删除”****。  
+3.  右键单击该约束，然后单击“删除”。  
   
 4.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   

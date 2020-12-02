@@ -21,14 +21,14 @@ helpviewer_keywords:
 - backups [SQL Server], about
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d13429793a2dcab0247042fcac49ee03174527ac
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 08a9360ae2f9fa7f1ff109b4d9b6075dd5536481
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834798"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129318"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

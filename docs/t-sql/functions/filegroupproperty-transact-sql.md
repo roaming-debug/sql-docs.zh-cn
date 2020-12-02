@@ -22,11 +22,11 @@ ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 369a9e1b4914fe4c3de1d7fc86596067d67867ef
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116379"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128485"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +45,10 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 
 ## <a name="arguments"></a>参数
  filegroup_name  
-类型为 sysname**** 的表达式，它表示要为 `FILEGROUPPROPERTY` 返回命名的属性信息的文件组名称。  
+类型为 sysname 的表达式，它表示要为 `FILEGROUPPROPERTY` 返回命名的属性信息的文件组名称。  
   
  *property*  
-类型为 varchar(128)**** 的表达式，它返回文件组属性的名称。 Property** 可以返回下列值之一：  
+类型为 varchar(128) 的表达式，它返回文件组属性的名称。 Property 可以返回下列值之一：  
   
 |值|说明|返回的值|  
 |-----------|-----------------|--------------------|  
@@ -60,7 +60,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 **int**  
   
 ## <a name="remarks"></a>备注  
-filegroup_name** 与 sys.filegroups**** 目录视图中的 name**** 列相对应。  
+filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应。  
   
 ## <a name="examples"></a>示例  
 此示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中主文件组的 `IsDefault` 属性设置。  

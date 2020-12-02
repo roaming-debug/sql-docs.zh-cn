@@ -8,14 +8,14 @@ ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3073607520bc6ebe25debf39e9ccc3a4b5b29d64
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 541f17e5e01f81702b387664cbf2f666c0d21703
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809873"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129302"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>连接到 Microsoft Azure 订阅
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

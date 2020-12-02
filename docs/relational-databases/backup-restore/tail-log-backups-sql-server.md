@@ -16,14 +16,14 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: fa48e2e96c5066ee2a2bd5d2757a3ae8f669225b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 546029b8615745c64d62da49af5299893d4d7c15
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631363"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129025"
 ---
 # <a name="tail-log-backups-sql-server"></a>结尾日志备份 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85631363"
 |CONTINUE_AFTER_ERROR|仅当您要备份受损数据库的尾部时，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 对受损数据库备份日志尾部时，日志备份中正常捕获的部分元数据可能不可用。 有关详细信息，请参阅本主题中的 [包含不完整备份元数据的结尾日志备份](#IncompleteMetadata)。|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a> 包含不完整备份元数据的结尾日志备份  
- 结尾日志备份可捕获日志尾部，即使数据库脱机、损坏或缺少数据文件。 这可能导致还原信息命令和 **msdb**生成不完整的元数据。 但只有元数据是不完整的，而捕获的日志是完整且可用的。  
+ 结尾日志备份可捕获日志尾部，即使数据库脱机、损坏或缺少数据文件。 这可能导致还原信息命令和 **msdb** 生成不完整的元数据。 但只有元数据是不完整的，而捕获的日志是完整且可用的。  
   
  如果结尾日志备份包含不完整的元数据，则 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 表中的 **has_incomplete_metadata** 将设置为 **1**。 此外，在 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)的输出中， **HasIncompleteMetadata** 将设置为 **1**。  
   

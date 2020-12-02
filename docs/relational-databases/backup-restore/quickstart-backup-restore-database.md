@@ -2,8 +2,8 @@
 title: 快速入门：备份和还原数据库
 titleSuffix: SQL Server
 description: 本文介绍了如何在 SQL Server 中创建新数据库、备份数据库以及还原备份。
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d658358fa8e09b967b921d162b8f443032a16ddc
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669959"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129198"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>快速入门：本地备份和还原 SQL Server 数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

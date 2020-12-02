@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring transaction logs [SQL Server], restoring backups
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ffd2fd146d585b49579910d5876ba5268e4237f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6c983279a1fe317b2e7975b972e5471b9724b65d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717959"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129111"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>还原事务日志备份 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "85717959"
   
     -   **限制对还原数据库的访问(WITH RESTRICTED_USER)**  
   
-         使还原的数据库仅供 **db_owner**、 **dbcreator**或 **sysadmin**的成员使用。  
+         使还原的数据库仅供 **db_owner**、 **dbcreator** 或 **sysadmin** 的成员使用。  
   
          选择此选项等效于在 **RESTORE** 语句中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTRICTED_USER** 选项。  
   

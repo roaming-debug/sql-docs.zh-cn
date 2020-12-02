@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.backuptourl.createcred.f1
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b75085f8b5c01ad5257f5bc165f32be7a7a91902
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 331d973e3290c5528ba811f7d6306f7505b55041
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809231"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129258"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>创建凭据 - 向 Azure 存储进行身份验证
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

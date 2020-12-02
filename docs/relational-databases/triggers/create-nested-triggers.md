@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2709846194c14dc08653efa761edd6660620872a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485366"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128649"
 ---
 # <a name="create-nested-triggers"></a>创建嵌套触发器
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,11 +62,11 @@ AS
   
      在触发器触发并执行一个导致同一个触发器再次触发的操作时，将发生此递归。 例如，应用程序更新了表 **T3**，从而触发了触发器 **Trig3** 。 **Trig3** 再次更新表 **T3** ，从而再次触发了触发器 **Trig3** 。  
   
-     调用其他类型的触发器（AFTER 或 INSTEAD OF）之后再次调用同一个触发器时，也会发生直接递归。 换言之，当同一个 INSTEAD OF 触发器被第二次调用时，即使在这两次调用之间调用了一个或多个 AFTER 触发器，也会发生 INSTEAD OF 触发器的直接递归。 同样，当同一个 AFTER 触发器被第二次调用时，即使在这两次调用之间调用了一个或多个 INSTEAD OF 触发器，也会发生 AFTER 触发器的直接递归。 例如，一个应用程序对表 **T4**进行更新。 此更新将导致触发 INSTEAD OF 触发器 **Trig4** 。 **Trig4** 对表 **T5**进行更新。 此更新将导致触发 AFTER 触发器 **Trig5** 。 **Trig5** 更新表 **T4**，此更新将导致再次触发 INSTEAD OF 触发器 **Trig4** 。 此事件链即被认为是 **Trig4**的直接递归。  
+     调用其他类型的触发器（AFTER 或 INSTEAD OF）之后再次调用同一个触发器时，也会发生直接递归。 换言之，当同一个 INSTEAD OF 触发器被第二次调用时，即使在这两次调用之间调用了一个或多个 AFTER 触发器，也会发生 INSTEAD OF 触发器的直接递归。 同样，当同一个 AFTER 触发器被第二次调用时，即使在这两次调用之间调用了一个或多个 INSTEAD OF 触发器，也会发生 AFTER 触发器的直接递归。 例如，一个应用程序对表 **T4** 进行更新。 此更新将导致触发 INSTEAD OF 触发器 **Trig4** 。 **Trig4** 对表 **T5** 进行更新。 此更新将导致触发 AFTER 触发器 **Trig5** 。 **Trig5** 更新表 **T4**，此更新将导致再次触发 INSTEAD OF 触发器 **Trig4** 。 此事件链即被认为是 **Trig4** 的直接递归。  
   
 -   间接递归  
   
-     当触发器触发并执行导致触发相同类型的其他触发器（AFTER 或 INSTEAD OF）的操作时，会发生此类递归。 第二个触发器执行一个再次触发第一个触发器的操作。 换言之，当在这两次调用之间调用其他 INSTEAD OF 触发器之前第二次调用 INSTEAD OF 触发器，便会发生间接递归。 同样，当在这两次调用之间调用其他 AFTER 触发器之前第二次调用 AFTER 触发器，也会发生间接递归。 例如，一个应用程序对表 **T1**进行更新。 此更新将导致触发 AFTER 触发器 **Trig1** 。 **Trig1** 更新表 **T2**，此更新将导致触发 AFTER 触发器 **Trig2** 。 **Trig2** 反过来更新表 **T1** ，从而导致再次触发 AFTER 触发器 **Trig1** 。  
+     当触发器触发并执行导致触发相同类型的其他触发器（AFTER 或 INSTEAD OF）的操作时，会发生此类递归。 第二个触发器执行一个再次触发第一个触发器的操作。 换言之，当在这两次调用之间调用其他 INSTEAD OF 触发器之前第二次调用 INSTEAD OF 触发器，便会发生间接递归。 同样，当在这两次调用之间调用其他 AFTER 触发器之前第二次调用 AFTER 触发器，也会发生间接递归。 例如，一个应用程序对表 **T1** 进行更新。 此更新将导致触发 AFTER 触发器 **Trig1** 。 **Trig1** 更新表 **T2**，此更新将导致触发 AFTER 触发器 **Trig2** 。 **Trig2** 反过来更新表 **T1** ，从而导致再次触发 AFTER 触发器 **Trig1** 。  
   
  当 RECURSIVE_TRIGGERS 数据库选项设置为 OFF 时，仅阻止 AFTER 触发器的直接递归。 若要禁用 AFTER 触发器的间接递归，还必须将 **nested triggers** 服务器选项设置为 **0**。  
   

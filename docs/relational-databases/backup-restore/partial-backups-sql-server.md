@@ -14,14 +14,14 @@ helpviewer_keywords:
 - READ_WRITE_FILEGROUPS option
 - database backups [SQL Server], about backing up databases
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a5781f32050dc2afe09bd5c0b2f1c11b9d818022
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 715eb703a5ae2d09e363c1b572f3645d42e7090f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670507"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129240"
 ---
 # <a name="partial-backups-sql-server"></a>部分备份 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

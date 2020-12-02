@@ -13,14 +13,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e0c103fba0dae4f6e31d976c151b7c01c487f658
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809264"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129287"
 ---
 # <a name="create-a-full-database-backup"></a>完整数据库备份
 
@@ -93,7 +93,7 @@ ms.locfileid: "91809264"
 
 - 创建完整数据库备份后，可以创建[差异数据库备份](create-a-differential-database-backup-sql-server.md)或[事务日志备份](back-up-a-transaction-log-sql-server.md)。
 
-- 还可以选择“仅复制备份”复选框创建仅复制备份  。 *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。 仅复制备份不可用于**差异**备份类型。
+- 还可以选择“仅复制备份”复选框创建仅复制备份  。 *仅复制备份* 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。 仅复制备份不可用于 **差异** 备份类型。
 
 - 如果要备份到 URL，请禁用“介质选项”页上的“覆盖介质”选项   。
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 802963395caa096d6a5e26a506e45d7c282ea7cc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114762"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128421"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -42,10 +42,10 @@ FILEPROPERTYEX ( name , property )
   
 ## <a name="arguments"></a>参数  
  *name*  
- 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)******。  
+ 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)。  
   
  *property*  
- 包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一******。  
+ 包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一。  
 
 
   
@@ -60,7 +60,7 @@ FILEPROPERTYEX ( name , property )
  **sql_variant**  
   
 ## <a name="remarks"></a>备注  
- file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应**************。  
+ file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应。  
   
 ## <a name="examples"></a>示例  
  以下示例返回数据库文件的设置：

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473065"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128748"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>向表中添加列（数据库引擎）
 
@@ -45,7 +45,7 @@ ms.locfileid: "88473065"
 
 ### <a name="to-insert-columns-into-a-table-with-table-designer"></a>用表设计器向表中插入列
 
-1. 在“对象资源管理器”**** 中，右键单击要为其添加列的表，再选择“设计”****。
+1. 在“对象资源管理器”中，右键单击要为其添加列的表，再选择“设计”。
 2. 单击 **“列名”** 列中的第一个空单元。
 3. 在该单元中键入列名。 列名是必需设置的值。
 4. 按 Tab 键转到 **“数据类型”** 单元格，再从下拉列表中选择数据类型。

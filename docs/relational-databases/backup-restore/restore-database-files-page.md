@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.swb.restoredb.files.f1
 - sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ab1cedc6960052ec8a9007b72d9062b8fc818ab7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d94a143eae321f7ea01f97a54b351d72f8142ad6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737731"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129150"
 ---
 # <a name="restore-database-files-page"></a>还原数据库（“文件”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

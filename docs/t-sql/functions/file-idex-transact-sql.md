@@ -24,11 +24,11 @@ ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 3ca433b6e802ce492b0ff464fc300d9f7e569964
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116400"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128448"
 ---
 # <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,15 +47,15 @@ FILE_IDEX ( file_name )
 
 ## <a name="arguments"></a>参数
  file_name  
-类型为 sysname**** 的表达式，它返回文件名称的文件 ID 值“FILE_IDEX”。 
+类型为 sysname 的表达式，它返回文件名称的文件 ID 值“FILE_IDEX”。 
   
 ## <a name="return-types"></a>返回类型  
 **int**  
   
-出现错误时，返回 NULL****  
+出现错误时，返回 NULL  
   
 ## <a name="remarks"></a>注解  
-file_name** 对应于 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图中的 name**** 列中所显示的逻辑文件名。  
+file_name 对应于 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图中的 name 列中所显示的逻辑文件名。  
   
 在 SELECT 列表、WHERE 子句或支持使用表达式的任何位置使用 `FILE_IDEX`。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   

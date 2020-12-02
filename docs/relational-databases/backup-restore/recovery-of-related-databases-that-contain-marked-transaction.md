@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e43b37dd96a931d98555f05fe6e70b9f8a4f99e3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088165"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129175"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>包含标记事务的相关数据库恢复
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88088165"
   
 -   由于事务标记会消耗日志空间，应只对在数据库恢复策略中起重要作用的事务使用标记。  
   
--   标记的事务提交之后，在 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) 的 **logmarkhistory**表中插入一行。  
+-   标记的事务提交之后，在 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) 的 **logmarkhistory** 表中插入一行。  
   
 -   如果一个标记的事务跨同一数据库服务器或不同服务器上的多个数据库，这些标记将记录在所有受影响的数据库的日志内。 有关详细信息，请参阅 [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
@@ -73,7 +73,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  STOPATMARK 和 STOPBEFOREMARK 选项均支持可选的 AFTER *datetime* 子句。 使用 *datetime* 时，标记名不必是唯一的。  
   
- 如果省略了 AFTER *datetime* ，则前滚操作将于达到含有指定名称的第一个标记处停止。 如果指定了 AFTER *datetime* ，则前滚操作将于达到 *datetime*时或之后在具有指定名称的第一个标记处停止。  
+ 如果省略了 AFTER *datetime* ，则前滚操作将于达到含有指定名称的第一个标记处停止。 如果指定了 AFTER *datetime* ，则前滚操作将于达到 *datetime* 时或之后在具有指定名称的第一个标记处停止。  
   
 > [!NOTE]  
 >  对于所有时点还原操作而言，如果数据库正在执行成批记录的操作，则不允许恢复到标记。  

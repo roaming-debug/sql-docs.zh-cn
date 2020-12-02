@@ -12,14 +12,14 @@ helpviewer_keywords:
 - restore sequences [SQL Server], planning for
 - full recovery model [SQL Server], planning restore sequences
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 74a785caa2f8511bf11caf757793244d3c06c052
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8ac088e916736ee852cd828735c988f134ec4978
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670139"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129194"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>计划和执行还原顺序（完整恢复模式）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

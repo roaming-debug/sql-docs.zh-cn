@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 25cdef293ced7b58ea41f71f78a1046c6b5dd0ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463787"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128634"
 ---
 # <a name="ddl-events"></a>DDL 事件
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -194,24 +194,24 @@ ms.locfileid: "88463787"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_FULLTEXT_CATALOG（当指定 create** 时适用于 CREATE FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）
+        CREATE_FULLTEXT_CATALOG（当指定 create 时适用于 CREATE FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_CATALOG（当指定 ** start_incremental、** start_full、** Stop 或 ** Rebuild 时，适用于 ALTER FULLTEXT CATALOG 语句 **sp_fulltextcatalog**，当指定 ** enable 时，适用于 **sp_fulltext_database**。）
+        ALTER_FULLTEXT_CATALOG（当指定 start_incremental、start_full、Stop 或 Rebuild 时，适用于 ALTER FULLTEXT CATALOG 语句 **sp_fulltextcatalog**，当指定 enable 时，适用于 **sp_fulltext_database**。）
     :::column-end:::
     :::column:::
-        DROP_FULLTEXT_CATALOG（当指定 ** drop 时，适用于 DROP FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）
+        DROP_FULLTEXT_CATALOG（当指定 drop 时，适用于 DROP FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_FULLTEXT_INDEX（当指定 ** create 时，适用于 CREATE FULLTEXT INDEX 语句和 **sp_fulltexttable**。）
+        CREATE_FULLTEXT_INDEX（当指定 create 时，适用于 CREATE FULLTEXT INDEX 语句和 **sp_fulltexttable**。）
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_INDEX（当指定 start_full****、start_incremental 或** stop 时，适用于 ALTER FULLTEXT INDEX 语句和 **sp_fulltextcatalog**，当指定除了 create** 或 ** drop 操作之外时，适用于 **sp_fulltext_column** 和 **sp_fulltext_table**。）
+        ALTER_FULLTEXT_INDEX（当指定 start_full、start_incremental 或stop 时，适用于 ALTER FULLTEXT INDEX 语句和 **sp_fulltextcatalog**，当指定除了 create 或 drop 操作之外时，适用于 **sp_fulltext_column** 和 **sp_fulltext_table**。）
     :::column-end:::
     :::column:::
-        DROP_FULLTEXT_INDEX（当指定 ** drop 时，适用于 DROP FULLTEXT INDEX 语句和 **sp_fulltexttable**。）
+        DROP_FULLTEXT_INDEX（当指定 drop 时，适用于 DROP FULLTEXT INDEX 语句和 **sp_fulltexttable**。）
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -355,13 +355,13 @@ ms.locfileid: "88463787"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_ROLE（适用于 CREATE ROLE 语句、 **sp_addrole**和 **sp_addgroup**。）
+        CREATE_ROLE（适用于 CREATE ROLE 语句、 **sp_addrole** 和 **sp_addgroup**。）
     :::column-end:::
     :::column:::
         ALTER_ROLE
     :::column-end:::
     :::column:::
-        DROP_ROLE（适用于 DROP ROLE 语句、 **sp_droprole**和 **sp_dropgroup**。）
+        DROP_ROLE（适用于 DROP ROLE 语句、 **sp_droprole** 和 **sp_dropgroup**。）
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -568,13 +568,13 @@ ms.locfileid: "88463787"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_USER（适用于 CREATE USER 语句、 **sp_adduser**和 **sp_grantdbaccess**）
+        CREATE_USER（适用于 CREATE USER 语句、 **sp_adduser** 和 **sp_grantdbaccess**）
     :::column-end:::
     :::column:::
         ALTER_USER（应用于 ALTER USER 语句和 **sp_change_users_login**。）
     :::column-end:::
     :::column:::
-        DROP_USER（适用于 DROP USER 语句、 **sp_dropuser**和 **sp_revokedbaccess**。）
+        DROP_USER（适用于 DROP USER 语句、 **sp_dropuser** 和 **sp_revokedbaccess**。）
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -727,10 +727,10 @@ ms.locfileid: "88463787"
         CREATE_LOGIN（当使用必须隐式创建的不存在登录名时，适用于 CREATE LOGIN 语句、**sp_addlogin****sp_grantlogin****xp_grantlogin** 和 **sp_denylogin**。）
     :::column-end:::
     :::column:::
-        ALTER_LOGIN（当指定 ** Auto_Fix 时，适用于**sp_defaultdb**、**sp_defaultlanguage**、**sp_password** 和 **sp_change_users_login**。）
+        ALTER_LOGIN（当指定 Auto_Fix 时，适用于 **sp_defaultdb**、**sp_defaultlanguage**、**sp_password** 和 **sp_change_users_login**。）
     :::column-end:::
     :::column:::
-        DROP_LOGIN（适用于 DROP LOGIN 语句、 **sp_droplogin**、 **sp_revokelogin**和 **xp_revokelogin**）
+        DROP_LOGIN（适用于 DROP LOGIN 语句、 **sp_droplogin**、 **sp_revokelogin** 和 **xp_revokelogin**）
     :::column-end:::
 :::row-end:::  
 :::row:::

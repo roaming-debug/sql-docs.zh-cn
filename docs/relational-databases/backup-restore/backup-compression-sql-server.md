@@ -16,14 +16,14 @@ helpviewer_keywords:
 - backing up [SQL Server], backup compression
 - backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 56c2f2cadd998a6daba51b46e46e2c141e1f0f38
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c39b9520bebf08cf523bece5b2c9bab78675138d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810283"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129338"
 ---
 # <a name="backup-compression-sql-server"></a>备份压缩 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

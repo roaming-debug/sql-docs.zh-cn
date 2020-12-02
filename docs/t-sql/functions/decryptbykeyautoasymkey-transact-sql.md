@@ -19,11 +19,11 @@ ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4ac2905d7466b8a2aa3e8a823ab25f89d98ae96f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115204"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128515"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +44,16 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- akey_ID**  
-用于加密对称密钥的非对称密钥的 ID。 akey_ID 具有 int 数据类型******。  
+ akey_ID  
+用于加密对称密钥的非对称密钥的 ID。 akey_ID 具有 int 数据类型。  
   
- akey_password**  
-保护非对称密钥的密码。 如果数据库主密钥保护非对称私钥，则 akey_password 可具有 NULL 值**。 akey_password 具有 nvarchar 数据类型******。  
+ akey_password  
+保护非对称密钥的密码。 如果数据库主密钥保护非对称私钥，则 akey_password 可具有 NULL 值。 akey_password 具有 nvarchar 数据类型。  
   
- ciphertext - 使用密钥进行加密的数据**。 ciphertext 具有 varbinary 数据类型。  
+ ciphertext - 使用密钥进行加密的数据。 ciphertext 具有 varbinary 数据类型。  
   
  @ciphertext  
-varbinary 类型的变量，包含使用对称密钥进行加密的数据****。  
+varbinary 类型的变量，包含使用对称密钥进行加密的数据。  
   
  add_authenticator  
 指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 必须与数据加密过程中传递给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 如果加密过程使用验证器，则 add_authenticator 具有 1 值。 add_authenticator 具有 int 数据类型。  

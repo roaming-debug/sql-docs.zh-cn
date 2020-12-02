@@ -16,14 +16,14 @@ helpviewer_keywords:
 - restarting interrupted restore operation
 - restoring interrupted operation [SQL Server]
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bfe32215d30b6722a621b0ebb3f0f556a34ddf26
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f2c70762e4e68081fc63930b1140ba904a5ca565
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669590"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129146"
 ---
 # <a name="restart-an-interrupted-restore-operation-transact-sql"></a>重新启动中断的还原操作 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

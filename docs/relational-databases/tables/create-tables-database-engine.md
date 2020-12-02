@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9d1826e8c9291dbfb92b7cccbd48ac0bf34fe690
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235480"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128733"
 ---
 # <a name="create-tables-database-engine"></a>创建表（数据库引擎）
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "93235480"
   
 9. 从“文件”菜单中，选择“保存”表名称 。  
   
-10. 在 **“选择名称”** 对话框中，为该表键入一个名称，再单击 **“确定”** 。  
+10. 在 **“选择名称”** 对话框中，为该表键入一个名称，再单击 **“确定”**。  
   
 11. 若要查看这个新表，请在 **“对象资源管理器”** 中展开 **“表”** 节点，然后按 **F5** 刷新对象列表。 该新表将显示在表列表中。  
   
