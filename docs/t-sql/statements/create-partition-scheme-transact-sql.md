@@ -30,11 +30,11 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ea6018e34db8ddc07a1e30cec6089994e402b9e6
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024542"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124032"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,20 +61,20 @@ AS PARTITION partition_function_name
  partition_scheme_name  
  分区方案的名称。 分区方案名称在数据库中必须是唯一的，并且符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
- partition_function_name**  
- 使用分区方案的分区函数的名称。 分区函数所创建的分区将映射到在分区方案中指定的文件组。 数据库中必须已存在 partition_function_name**。 单个分区不能同时包含 FILESTREAM 和非 FILESTREAM 文件组。  
+ partition_function_name  
+ 使用分区方案的分区函数的名称。 分区函数所创建的分区将映射到在分区方案中指定的文件组。 数据库中必须已存在 partition_function_name。 单个分区不能同时包含 FILESTREAM 和非 FILESTREAM 文件组。  
   
  ALL  
- 指定所有分区都映射到在 file_group_name 中提供的文件组，或映射到主文件组（如果指定了 [PRIMARY]**********）。 如果指定了 ALL，则只能指定一个 file_group_name**。  
+ 指定所有分区都映射到在 file_group_name 中提供的文件组，或映射到主文件组（如果指定了 [PRIMARY]）。 如果指定了 ALL，则只能指定一个 file_group_name。  
   
  file_group_name[ PRIMARY ] [ ,...n] |     
- 指定用来持有由 partition_function_name 指定的分区的文件组的名称**。 数据库中必须已存在 file_group_name**。  
+ 指定用来持有由 partition_function_name 指定的分区的文件组的名称。 数据库中必须已存在 file_group_name。  
   
- 如果指定了 [PRIMARY]，则分区将存储于主文件组中********。 如果指定了 ALL，则只能指定一个 file_group_name**。 分区分配到文件组的顺序是从分区 1 开始，按文件组在 [,...n] 中列出的顺序进行分配。 在 [,...n] 中，可以多次指定同一个 file_group_name。 如果 n 不足以拥有在 partition_function_name 中指定的分区数，则 CREATE PARTITION SCHEME 将失败，并返回错误****。  
+ 如果指定了 [PRIMARY]，则分区将存储于主文件组中。 如果指定了 ALL，则只能指定一个 file_group_name。 分区分配到文件组的顺序是从分区 1 开始，按文件组在 [,...n] 中列出的顺序进行分配。 在 [,...n] 中，可以多次指定同一个 file_group_name。 如果 n 不足以拥有在 partition_function_name 中指定的分区数，则 CREATE PARTITION SCHEME 将失败，并返回错误。  
   
- 如果 partition_function_name 生成的分区数少于文件组数，则第一个未分配的文件组将标记为 NEXT USED，并且出现显示命名 NEXT USED 文件组的信息**。 如果指定了 ALL，则单独的 file_group_name 将为该 partition_function_name 保持它的 NEXT USED 属性****。 如果在 ALTER PARTITION FUNCTION 语句中创建了一个分区，则 NEXT USED 文件组将再接收一个分区。 若要再创建一个未分配的文件组来拥有新的分区，请使用 ALTER PARTITION SCHEME。  
+ 如果 partition_function_name 生成的分区数少于文件组数，则第一个未分配的文件组将标记为 NEXT USED，并且出现显示命名 NEXT USED 文件组的信息。 如果指定了 ALL，则单独的 file_group_name 将为该 partition_function_name 保持它的 NEXT USED 属性。 如果在 ALTER PARTITION FUNCTION 语句中创建了一个分区，则 NEXT USED 文件组将再接收一个分区。 若要再创建一个未分配的文件组来拥有新的分区，请使用 ALTER PARTITION SCHEME。  
   
- 在 file_group_name [ 1,...n] 中指定主文件组时，必须像在 [PRIMARY] 中那样分隔 PRIMARY，因为它是关键字******__********。  
+ 在 file_group_name [ 1,...n] 中指定主文件组时，必须像在 [PRIMARY] 中那样分隔 PRIMARY，因为它是关键字。  
   
  对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，只支持 PRIMARY。 请参阅下面的示例 E。 
   
@@ -101,7 +101,7 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- 对分区依据列 col1 使用分区函数 `myRangePF1` 的表的分区会按下表所示进行分配****。  
+ 对分区依据列 col1 使用分区函数 `myRangePF1` 的表的分区会按下表所示进行分配。  
   
 ||||||  
 |-|-|-|-|-|  
@@ -121,7 +121,7 @@ AS PARTITION myRangePF2
 TO ( test1fg, test1fg, test1fg, test2fg );  
 ```  
   
- 对分区依据列 col1 使用分区函数 `myRangePF2` 的表的分区会按下表所示进行分配****。  
+ 对分区依据列 col1 使用分区函数 `myRangePF2` 的表的分区会按下表所示进行分配。  
   
 ||||||  
 |-|-|-|-|-|  

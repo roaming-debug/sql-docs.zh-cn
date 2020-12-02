@@ -21,10 +21,10 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c066add73dbc8049f389c828363f1157bb39edae
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194543"
 ---
 # <a name="xml-source"></a>XML 源
@@ -64,7 +64,7 @@ ms.locfileid: "92194543"
   
  从 XML 数据文件提取数据后，数据将转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 不过，XML 源不能将 XML 数据转换为 DT_TIME2 或 DT_DBTIMESTAMP2 数据类型，这是因为源不支持这些数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
- XSD 或内联架构可能为元素指定了数据类型，但如果未指定，则“XML 源编辑器” **** 对话框将为输出中包含该元素的列指定 Unicode 字符串数据类型 (DT_WSTR)，并将列长度设置为 255 个字符。  
+ XSD 或内联架构可能为元素指定了数据类型，但如果未指定，则“XML 源编辑器”  对话框将为输出中包含该元素的列指定 Unicode 字符串数据类型 (DT_WSTR)，并将列长度设置为 255 个字符。  
   
  如果该架构指定了元素的最大长度，则输出列的长度将设置为此值。 如果最大长度大于将元素转换为的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型所支持的长度，则数据将被截断为该数据类型的最大长度。 例如，如果一个字符串的长度为 5000，则该字符串将因为 DT_WSTR 数据类型的最大长度而截断为 4000 字符；类似地，字节数据将截断为 DT_BYTES 数据类型的最大长度 8000 字符。 如果架构未指定最大长度，则具有任何一种数据类型的列的默认长度都设置为 255。 对 XML 源中的数据截断的处理方式与其他数据流组件中截断的处理方式相同。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "92194543"
   
  XML 源支持多个常规输出和多个错误输出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含用于配置 XML 源的“XML 源编辑器”对话框****。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含用于配置 XML 源的“XML 源编辑器”对话框。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
@@ -108,22 +108,22 @@ ms.locfileid: "92194543"
  指定 XML 源数据本身是否包含 XSD 架构（用于定义和验证 XML 源数据的结构和数据）。  
   
  **XSD 位置**  
- 键入 XSD 架构文件的路径和文件名，或者可以单击“浏览”**** 定位该文件。  
+ 键入 XSD 架构文件的路径和文件名，或者可以单击“浏览”定位该文件。  
   
  **“浏览”**  
- 使用“打开”**** 对话框定位到 XSD 架构文件。  
+ 使用“打开”对话框定位到 XSD 架构文件。  
   
  **生成 XSD**  
- 使用“另存为”**** 对话框可以为自动生成的 XSD 架构文件选择位置。 编辑器将根据 XML 数据的结构来推断架构。  
+ 使用“另存为”对话框可以为自动生成的 XSD 架构文件选择位置。 编辑器将根据 XML 数据的结构来推断架构。  
   
 ### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
 #### <a name="data-access-mode--xml-file-location"></a>数据访问模式 = XML 文件位置  
  **XML 位置**  
- 键入 XML 数据文件的路径和文件名，或者通过单击“浏览”**** 查找文件。  
+ 键入 XML 数据文件的路径和文件名，或者通过单击“浏览”查找文件。  
   
  **“浏览”**  
- 使用“打开”**** 对话框定位到 XML 数据文件。  
+ 使用“打开”对话框定位到 XML 数据文件。  
   
 #### <a name="data-access-mode--xml-file-from-variable"></a>数据访问模式 = 来自变量的 XML 文件  
  **变量名称**  
@@ -134,7 +134,7 @@ ms.locfileid: "92194543"
  选择包含 XML 数据的变量。  
   
 ## <a name="xml-source-editor-columns-page"></a>XML 源编辑器（“列”页）
-  可以使用“XML 源编辑器”对话框的“列”节点，将输出列映射到外部（源）列。********  
+  可以使用“XML 源编辑器”对话框的“列”节点，将输出列映射到外部（源）列。  
   
 ### <a name="options"></a>选项  
  **可用外部列**  
@@ -154,7 +154,7 @@ ms.locfileid: "92194543"
  查看数据源的名称。  
   
  **列**  
- 查看在“XML 源编辑器”**** 对话框中“连接管理器”**** 页上选择的外部（源）列。  
+ 查看在“XML 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  

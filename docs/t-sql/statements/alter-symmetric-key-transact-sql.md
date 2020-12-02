@@ -23,11 +23,11 @@ ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a5635a7a0cc1d4c90ea70cf5973f0fc09b938f63
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688136"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124197"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  PASSWORD ='password'  
  指定用于对对称密钥进行加密的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。  
   
- SYMMETRIC KEY Symmetric_Key_Name**  
+ SYMMETRIC KEY Symmetric_Key_Name  
  指定用于对要更改的对称密钥进行加密的对称密钥。 该对称密钥必须已存在于数据库中，并且必须打开。  
   
  ASYMMETRIC KEY Asym_Key_Name  

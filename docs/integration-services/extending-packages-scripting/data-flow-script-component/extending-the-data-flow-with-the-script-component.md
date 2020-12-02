@@ -26,11 +26,11 @@ ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 82f34ab83935bee2972a4dbb2b007eb2632b9fba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425389"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122938"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>使用脚本组件扩展数据流
 

@@ -23,11 +23,11 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 755fdbcd3ecf01e0b76548f728d77c66ebe011a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484297"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123217"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>开发具有同步输出的自定义转换组件
 
@@ -189,7 +189,7 @@ End Sub
 ### <a name="processing-rows"></a>处理行  
  组件可接收 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 对象，这些对象包含 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法中的行和列。 在此方法中，将循环访问缓冲区中的行，并读取和修改 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 期间标识的列。 数据流任务将重复调用该方法，直到上游组件不再提供行。  
   
- 可使用数组索引器访问方法或者使用 Get**** 或 Set**** 方法之一来读取或写入缓冲区中的单个列。 Get**** 和 Set**** 方法的效率更高，应在缓冲区中的列的数据类型已知时使用。  
+ 可使用数组索引器访问方法或者使用 Get 或 Set 方法之一来读取或写入缓冲区中的单个列。 Get 和 Set 方法的效率更高，应在缓冲区中的列的数据类型已知时使用。  
   
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法的实现，该方法用于处理传入的行。  
   

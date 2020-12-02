@@ -21,11 +21,11 @@ ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c70136ad09aaa3cb24c04c2828e8335f96aef467
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425309"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122850"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>使用脚本任务扩展包
 
@@ -44,7 +44,7 @@ ms.locfileid: "88425309"
  下列主题提供有关脚本任务的详细信息。  
   
  [在脚本任务编辑器中配置脚本任务](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
- 说明在“脚本任务编辑器”**** 中配置的属性如何影响脚本任务中代码的功能和性能。  
+ 说明在“脚本任务编辑器”中配置的属性如何影响脚本任务中代码的功能和性能。  
   
  [脚本任务的编码和调试](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
  说明如何使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 开发包含在脚本任务中的脚本。  

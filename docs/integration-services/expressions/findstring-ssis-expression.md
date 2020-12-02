@@ -14,11 +14,11 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c4da6f54ead49d01d9d691cc081ac9b9955c693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425469"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123252"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING（SSIS 表达式）
 
@@ -48,7 +48,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
  DT_I4  
   
 ## <a name="remarks"></a>备注  
- FINDSTRING 只能处理 DT_WSTR 数据类型。  如果*character_expression* 和 *searchstring* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它们在 FINDSTRING 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
+ FINDSTRING 只能处理 DT_WSTR 数据类型。  如果 *character_expression* 和 *searchstring* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它们在 FINDSTRING 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  如果 *character_expression* 或 *searchstring* 为 null，则 FINDSTRING 返回 null。  
   
@@ -69,7 +69,7 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- 此示例使用 **Name** 列。 它返回“Name”列中第二个“n”的位置****。 返回结果因 **Name**中值的不同而不同。 如果 **Name** 包含 Anderson，则函数返回 8。  
+ 此示例使用 **Name** 列。 它返回“Name”列中第二个“n”的位置。 返回结果因 **Name** 中值的不同而不同。 如果 **Name** 包含 Anderson，则函数返回 8。  
   
 ```  
 FINDSTRING(Name, "n", 2)   

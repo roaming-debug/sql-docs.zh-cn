@@ -14,11 +14,11 @@ ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55eafedfd05ce1dde2468bfda62b515057ea4bb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484246"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123170"
 ---
 # <a name="creating-a-custom-connection-manager"></a>创建自定义连接管理器
 
@@ -48,7 +48,7 @@ ms.locfileid: "88484246"
  将这两个项目配置为使用强名称密钥文件对在生成时产生的程序集进行签名。  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>应用 DtsConnection 属性  
- 对已创建的类应用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性，以将其标识为连接管理器。 此属性提供设计时信息，例如连接管理器的名称、说明和连接类型。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> 和 **Description** 属性与“添加 SSIS 连接管理器”**** 对话框中显示的“类型”**** 和“说明”**** 列相对应，该对话框在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中为包配置连接时显示。  
+ 对已创建的类应用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性，以将其标识为连接管理器。 此属性提供设计时信息，例如连接管理器的名称、说明和连接类型。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> 和 **Description** 属性与“添加 SSIS 连接管理器”对话框中显示的“类型”和“说明”列相对应，该对话框在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中为包配置连接时显示。  
   
  使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 属性将连接管理器链接到其自定义用户界面。 要获取此属性所需的公钥令牌，可使用 sn.exe -t 来显示要用于对用户界面程序集签名的密钥对 (.snk) 文件中的公钥令牌。  
   

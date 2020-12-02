@@ -20,11 +20,11 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1af5f497be96f5c8b9808878aea9e5275c77ddf7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727571"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123552"
 ---
 # <a name="data-mining-query-task"></a>数据挖掘查询任务
 
@@ -86,7 +86,7 @@ ms.locfileid: "91727571"
   
 ### <a name="mining-model-tab-options"></a>挖掘模型选项卡选项  
  **Connection**  
- 从列表中选择 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器，或单击****“新建”创建新的连接管理器。  
+ 从列表中选择 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器，或单击“新建”创建新的连接管理器。  
   
  **相关主题：**  [Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -138,7 +138,7 @@ ms.locfileid: "91727571"
  将参数添加到列表。  
   
  **删除**  
- 选择一个参数，再单击“删除”****。  
+ 选择一个参数，再单击“删除”。  
   
 ### <a name="result-set-tab-options"></a>“结果集”选项卡选项  
  **结果名称**  
@@ -156,7 +156,7 @@ ms.locfileid: "91727571"
  向列表中添加结果集。  
   
  **删除**  
- 选择一个结果，再单击“删除”****。  
+ 选择一个结果，再单击“删除”。  
 ## <a name="data-mining-query-task-editor-output-tab"></a>数据挖掘查询任务编辑器（“输出”选项卡）
   可以使用 **“数据挖掘查询任务编辑器”** 对话框的 **“输出”** 选项卡指定预测查询的目标。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "91727571"
   
 ### <a name="output-tab-options"></a>“输出”选项卡选项  
  **Connection**  
- 从列表中选择连接管理器，或单击“新建”**** 以创建新的连接管理器。  
+ 从列表中选择连接管理器，或单击“新建”以创建新的连接管理器。  
   
  **新建**  
  创建新的连接管理器。 只能使用 ADO.NET 和 OLE DB 连接管理器类型。  

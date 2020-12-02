@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8bf1b3c571806aaaca17894c52c4673709074261
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92187847"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
@@ -49,9 +49,9 @@ NULLIF ( expression , expression )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- 返回类型与第一个 expression 相同**。  
+ 返回类型与第一个 expression 相同。  
   
- 如果两个表达式不相等，则 NULLIF 返回第一个 expression 的值**。 如果表达式相等，则 NULLIF 返回第一个 expression 类型的空值**。  
+ 如果两个表达式不相等，则 NULLIF 返回第一个 expression 的值。 如果表达式相等，则 NULLIF 返回第一个 expression 类型的空值。  
   
 ## <a name="remarks"></a>注解  
  如果两个表达式相等且结果表达式为 NULL，则 NULLIF 等价于 CASE 搜索表达式。  

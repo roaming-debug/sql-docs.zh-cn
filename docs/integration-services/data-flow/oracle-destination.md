@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5c1bb607326233dccdafa8fc57e3ce9d32cf20c9
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195359"
 ---
 # <a name="oracle-destination"></a>Oracle 目标
@@ -55,7 +55,7 @@ Oracle 目标有错误输出。 组件的错误输出包括以下输出列：
 
 支持在加载过程中出现的输出错误类型包括：数据转换、截断或约束冲突等。 请参阅 [Oracle 目标编辑器（“错误输出”页）](#oracle-destination-editor-error-output-page)。
 
-“最大错误数(MaxErrors)”**** 属性设置可以出现的最大错误数。 达到最大错误数后，执行停止并返回错误。 只有在达到最大错误数之前的执行记录，才会包含在目标表中。 有关详细配置，请参阅 [Oracle 目标编辑器（“连接管理器”页）](#oracle-destination-editor-connection-manager-page)。
+“最大错误数(MaxErrors)”属性设置可以出现的最大错误数。 达到最大错误数后，执行停止并返回错误。 只有在达到最大错误数之前的执行记录，才会包含在目标表中。 有关详细配置，请参阅 [Oracle 目标编辑器（“连接管理器”页）](#oracle-destination-editor-connection-manager-page)。
 
 ## <a name="parallelism"></a>并行度
 
@@ -84,13 +84,13 @@ Oracle 目标有错误输出。 组件的错误输出包括以下输出列：
 |:-|:-|:-|:-|
 |BatchSize|Integer|用于大容量加载的批处理的大小。 这是作为批处理加载的行数。|仅用于批量模式。|
 |DefaultCodePage|Integer|当数据源没有代码页信息时，要使用的代码页。 <br>**注意**：此属性仅由高级编辑器设置。|用于两种模式。|
-|FastLoad|布尔|是否使用快速加载。 默认值是 **false**秒。 也可以在 [Oracle 目标编辑器（“连接管理器”页）](#oracle-destination-editor-connection-manager-page)中设置此模式。 |用于两种模式。|
-|MaxErrors|Integer|在数据流停止前可能发生的错误数。 默认值为 0****，表示没有错误数限制。<br> 如果选择的是“错误处理”**** 页中的“重定向流”****。 在达到错误数限制前，所有错误都在错误输出中返回。 有关详细信息，请参阅[错误处理](#error-handling)。|仅用于快速加载模式。|
-|NoLogging|布尔|是否禁用数据库日志记录。 默认值为 False****，表示启用日志记录。|用于两种模式。|
-|并行程序|布尔|是否允许并行加载。 True**** 表示允许其他加载会话针对同一个目标表运行。<br> 有关详细信息，请参阅[并行](#parallelism)。|仅用于快速加载模式。|
+|FastLoad|布尔|是否使用快速加载。 默认值是 **false** 秒。 也可以在 [Oracle 目标编辑器（“连接管理器”页）](#oracle-destination-editor-connection-manager-page)中设置此模式。 |用于两种模式。|
+|MaxErrors|Integer|在数据流停止前可能发生的错误数。 默认值为 0，表示没有错误数限制。<br> 如果选择的是“错误处理”页中的“重定向流”。 在达到错误数限制前，所有错误都在错误输出中返回。 有关详细信息，请参阅[错误处理](#error-handling)。|仅用于快速加载模式。|
+|NoLogging|布尔|是否禁用数据库日志记录。 默认值为 False，表示启用日志记录。|用于两种模式。|
+|并行程序|布尔|是否允许并行加载。 True 表示允许其他加载会话针对同一个目标表运行。<br> 有关详细信息，请参阅[并行](#parallelism)。|仅用于快速加载模式。|
 |TableName|String|包含正在使用的数据的表的名称。|用于两种模式。|
 |TableSubName|String|子名称或子分区。 此值是可选的。<br> **注意**：只能在高级编辑器中设置此属性。|仅用于快速加载模式。|
-|TransactionSize|Integer|可以在一个事务中进行的插入数。 默认值为 BatchSize****。|仅用于批量模式。|
+|TransactionSize|Integer|可以在一个事务中进行的插入数。 默认值为 BatchSize。|仅用于批量模式。|
 |TransferBufferSize|Integer|传输缓冲区大小。 默认值为 64 KB。|仅用于快速加载模式。|
 
 ## <a name="configuring-the-oracle-destination"></a>配置 Oracle 目标
@@ -110,13 +110,13 @@ Oracle 目标有错误输出。 组件的错误输出包括以下输出列：
 **“高级编辑器”** 对话框包含可通过编程方式设置的属性。
 打开 **“高级编辑器”** 对话框：
 
-- 在 Integration Services 项目的“数据流”**** 屏幕上，右键单击 Oracle 目标，并选择“显示高级编辑器”****。
+- 在 Integration Services 项目的“数据流”屏幕上，右键单击 Oracle 目标，并选择“显示高级编辑器”。
 
 若要详细了解可以在“高级编辑器”对话框中设置的属性，请参阅 [Oracle 目标的自定义属性](#oracle-destination-custom-properties)。
 
 ## <a name="oracle-destination-editor-connection-manager-page"></a>Oracle 目标编辑器（“连接管理器”页）
 
-使用“Oracle 目标编辑器”**** 对话框的“连接管理器”**** 页，可以为目标选择 Oracle Connection Manager。 使用此页还可以选择数据库中的表或视图。
+使用“Oracle 目标编辑器”对话框的“连接管理器”页，可以为目标选择 Oracle Connection Manager。 使用此页还可以选择数据库中的表或视图。
 
 **打开 Oracle 目标编辑器的“连接管理器”页的具体步骤**
 
@@ -142,16 +142,16 @@ Oracle 目标有错误输出。 组件的错误输出包括以下输出列：
 
 |选项|说明|
 |:-|:-|
-|表名称|将 Oracle 目标配置为，在批量模式下运行。 选项：<br><br> **表或视图的名称**：从列表中选择数据库中的可用表或视图。<br><br> **事务大小**：输入可以在一个事务中进行的插入数。 默认值为 BatchSize****。<br><br> **批大小**：键入用于批量加载的批大小（已加载的行数）。
+|表名称|将 Oracle 目标配置为，在批量模式下运行。 选项：<br><br> **表或视图的名称**：从列表中选择数据库中的可用表或视图。<br><br> **事务大小**：输入可以在一个事务中进行的插入数。 默认值为 BatchSize。<br><br> **批大小**：键入用于批量加载的批大小（已加载的行数）。
 |表名 - 快速加载|将 Oracle 目标配置为，在快速（直接路径）加载模式下运行。 <br><br>可用选项如下：<br><br> **表或视图的名称**：从列表中选择数据库中的可用表或视图。<br><br> **并行加载**：是否启用并行加载。 有关详细信息，请参阅[并行](#parallelism)。<br><br> **无日志记录**：此复选框可禁用数据库日志记录。 此日志记录是用于恢复用途的 Oracle Database，与跟踪无关。<br><br> **最大错误数**：在数据流停止前可能发生的最大错误数。 默认值为 0，表示没有错误数限制。<br><br> 所有可能发生的错误都在错误输出中返回。<br><br> **传输缓冲区大小(KB)** ：输入传输缓冲区大小。 默认大小为 64KB。|
 
 **查看现有数据**
 
-单击“查看现有数据”**** 最多可查看选定表的 200 行数据。
+单击“查看现有数据”最多可查看选定表的 200 行数据。
 
 ## <a name="oracle-destination-editor-mappings-page"></a>Oracle 目标编辑器（“映射”页）
 
-使用“Oracle 目标编辑器”**** 对话框的“映射”**** 页，可以将输入列映射到目标列。
+使用“Oracle 目标编辑器”对话框的“映射”页，可以将输入列映射到目标列。
 
 **打开 Oracle 目标编辑器的“映射”页的具体步骤**
 
@@ -173,7 +173,7 @@ Oracle 目标有错误输出。 组件的错误输出包括以下输出列：
 
 **输入列**
 
-查看选定的输入列。 可以删除映射，具体方法为选择“< 忽略 >”****，以从输出中排除列。
+查看选定的输入列。 可以删除映射，具体方法为选择“< 忽略 >”，以从输出中排除列。
 
 **目标列**
 

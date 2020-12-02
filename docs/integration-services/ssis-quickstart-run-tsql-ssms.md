@@ -10,10 +10,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b22c31b7e38936adec2ac7355912e2899024659c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197011"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>使用 Transact-SQL 运行来自 SSMS 的 SSIS 包
@@ -46,8 +46,8 @@ Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企
 要在 Azure SQL 数据库上运行包，请获取连接到 SSIS 目录数据库 (SSISDB) 所需的连接信息。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
 
 1. 登录到 [Azure 门户](https://portal.azure.com/)。
-2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库********。 
-3. 在数据库的“概述”**** 页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上****。 
+2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库。 
+3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上。 
 4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 
 ## <a name="connect-to-the-ssisdb-database"></a>连接到 SSISDB 数据库
@@ -73,7 +73,7 @@ Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企
 ## <a name="run-a-package"></a>运行包
 运行以下 Transact-SQL 代码以便运行 SSIS 包。
 
-1.  在 SSMS 中，打开新的查询窗口并粘贴以下代码。 （此代码是由 SSMS “执行包”**** 对话框中的“脚本”**** 选项生成的代码。）
+1.  在 SSMS 中，打开新的查询窗口并粘贴以下代码。 （此代码是由 SSMS “执行包”对话框中的“脚本”选项生成的代码。）
 
 2.  为系统更新 `catalog.create_execution` 存储过程中的参数值。
 
@@ -81,7 +81,7 @@ Azure SQL 数据库服务器在端口 1433 上进行侦听。 如果尝试从企
 
 4.  运行该脚本。
 
-5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目****。
+5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目。
 
 ```sql
 Declare @execution_id bigint

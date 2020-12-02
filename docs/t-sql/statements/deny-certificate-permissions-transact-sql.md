@@ -19,11 +19,11 @@ ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: feec699a67378db5a7cdd1c169e507c72859b639
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444730"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123992"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY 证书权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ DENY permission  [ ,...n ]
  permission  
  指定可拒绝授予证书的权限。 如下所列。  
   
- ON CERTIFICATE ::certificate_name****__  
+ ON CERTIFICATE ::certificate_name  
  指定拒绝将其权限授予他人的证书。 需要使用作用域限定符“::”。  
   
  database_principal  
@@ -75,7 +75,7 @@ DENY permission  [ ,...n ]
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- denying_principal**  
+ denying_principal  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  

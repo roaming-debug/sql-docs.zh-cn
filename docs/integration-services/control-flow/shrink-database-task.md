@@ -18,10 +18,10 @@ ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: af97af913af741cc93a5afda1ba9a986ea1f72db
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92192811"
 ---
 # <a name="shrink-database-task"></a>“收缩数据库”任务

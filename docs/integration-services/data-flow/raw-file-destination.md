@@ -22,10 +22,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 27b28672540d25fe84573c37004161992d3d3827
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194181"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -118,9 +118,9 @@ ms.locfileid: "92194181"
   
  若要在循环的第一次迭代中创建文件，然后在循环的后续迭代中追加行，您需要在设计时执行下列操作：  
   
-1.  将 WriteOption 属性设置为 **CreateOnce** 或 **CreateAlways**并运行循环的一次迭代过程。 此时将创建文件。 这可确保追加数据的元数据与文件匹配。  
+1.  将 WriteOption 属性设置为 **CreateOnce** 或 **CreateAlways** 并运行循环的一次迭代过程。 此时将创建文件。 这可确保追加数据的元数据与文件匹配。  
   
-2.  将 WriteOption 属性重置为“追加”**** 并将 ValidateExternalMetadata 属性设置为 **False**。  
+2.  将 WriteOption 属性重置为“追加”并将 ValidateExternalMetadata 属性设置为 **False**。  
   
  如果使用 **TruncateAppend** 选项而不是 **“追加”** 选项，此操作将截断以前的任何迭代过程中所添加的行，然后追加新行。 使用 **TruncateAppend** 选项也要求数据与文件格式相匹配。  
   

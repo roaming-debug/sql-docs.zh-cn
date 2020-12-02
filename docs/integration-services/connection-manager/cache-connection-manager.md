@@ -16,11 +16,11 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 074aa791a20eed06241aef1087f5ac355f8ea493
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725338"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123703"
 ---
 # <a name="cache-connection-manager"></a>缓存连接管理器
 
@@ -66,10 +66,10 @@ ms.locfileid: "91725338"
   
  查找转换在引用数据集上执行查找。  
   
- “缓存连接管理器编辑器”**** 对话框包含以下选项卡：  
+ “缓存连接管理器编辑器”对话框包含以下选项卡：  
   
 ###  <a name="general-tab"></a><a name="generaltab"></a> “常规”选项卡  
- “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件********。  
+ “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件。  
   
 #### <a name="options"></a>选项  
  **连接管理器名称**  

@@ -23,11 +23,11 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688372"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124269"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ALTER FULLTEXT INDEX ON table_name
  包含全文索引中的一列或多列的表或索引视图的名称。 可以选择指定数据库和表所有者名称。  
   
  ENABLE | DISABLE  
- 通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否收集 table_name 的全文检索数据**。 ENABLE 激活全文索引；DISABLE 关闭全文索引。 禁用索引时，表不支持全文查询。  
+ 通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否收集 table_name 的全文检索数据。 ENABLE 激活全文索引；DISABLE 关闭全文索引。 禁用索引时，表不支持全文查询。  
   
  通过禁用全文索引，您可以关闭更改跟踪但保留全文索引，并且可以随时使用 ENABLE 重新激活全文索引。 如果禁用全文索引，则全文索引元数据将保留在系统表中。 禁用全文索引时，如果 CHANGE_TRACKING 处于启用状态（自动或手动更新），则索引状态将冻结，任何正在进行的爬网将停止，并且不会跟踪对表数据进行的新更改，也不会将这些更改传播到索引。  
   
@@ -86,43 +86,43 @@ ALTER FULLTEXT INDEX ON table_name
  指定跟踪的更改会手动传播，方法是调用 ALTER FULLTEXT INDEX ...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（手动填充）。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定期调用此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
  AUTO  
- 指定当基表中的数据修改时，所跟踪的更改将会自动传播（自动填充）**。 尽管是自动传播更改，但这些更改可能不会立即反映到全文索引中。 默认值为 AUTO。  
+ 指定当基表中的数据修改时，所跟踪的更改将会自动传播（自动填充）。 尽管是自动传播更改，但这些更改可能不会立即反映到全文索引中。 默认值为 AUTO。  
   
  OFF  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将不保存对索引数据的更改的列表。  
   
- ADD | DROP column_name**  
- 指定要添加到全文索引或从全文索引中删除的列。 一个或多个列必须是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型****************************************。  
+ ADD | DROP column_name  
+ 指定要添加到全文索引或从全文索引中删除的列。 一个或多个列必须是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型。  
   
  仅对先前为全文索引启用的列使用 DROP 子句。  
   
- 将 TYPE COLUMN 和 LANGUAGE 与 ADD 子句一起使用，以对 column_name 设置这些属性**。 添加列后，必须重新填充该表的全文索引，才能使针对此列进行的全文查询生效。  
+ 将 TYPE COLUMN 和 LANGUAGE 与 ADD 子句一起使用，以对 column_name 设置这些属性。 添加列后，必须重新填充该表的全文索引，才能使针对此列进行的全文查询生效。  
   
 > [!NOTE]  
 >  在全文索引中添加或删除某个列后，是否填充全文索引取决于是否启用了更改跟踪以及是否指定了 WITH NO POPULATION。 有关详细信息，请参阅[更改跟踪和 NO POPULATION 参数的交互](#change-tracking-no-population)。
   
- TYPE COLUMN type_column_name**  
- 指定表列的名称 (type_column_name)，用于存储 varbinary、varbinary(max) 或 image 文档的文档类型**************。 此列（称为类型列）包含用户提供的文件扩展名（.doc、.pdf、.xls 等）。 类型列必须是 **char**、 **nchar**、 **varchar**或 **nvarchar**类型。  
+ TYPE COLUMN type_column_name  
+ 指定表列的名称 (type_column_name)，用于存储 varbinary、varbinary(max) 或 image 文档的文档类型。 此列（称为类型列）包含用户提供的文件扩展名（.doc、.pdf、.xls 等）。 类型列必须是 **char**、 **nchar**、 **varchar** 或 **nvarchar** 类型。  
   
- 仅当 column_name 指定 varbinary、varbinary(max) 或 image 列（数据作为二进制数据存储在该列中）时，才指定 TYPE COLUMN type_column_name；否则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误****************。  
+ 仅当 column_name 指定 varbinary、varbinary(max) 或 image 列（数据作为二进制数据存储在该列中）时，才指定 TYPE COLUMN type_column_name；否则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   
 > [!NOTE]  
->  在建立索引时，全文引擎使用每个表行的类型列中的缩写来标识对 column_name 中的文档使用哪个全文搜索筛选器**。 筛选器按二进制流加载文档，并删除格式设置信息，然后将文档中的文本发送到断字器组件。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
+>  在建立索引时，全文引擎使用每个表行的类型列中的缩写来标识对 column_name 中的文档使用哪个全文搜索筛选器。 筛选器按二进制流加载文档，并删除格式设置信息，然后将文档中的文本发送到断字器组件。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
   
  LANGUAGE language_term  
- 存储在 column_name 中的数据的语言****。  
+ 存储在 column_name 中的数据的语言。  
   
- language_term 是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值**。 如果指定了 language_term，则它表示的语言将应用于搜索条件的所有元素。 如果未指定值，则使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认全文语言。  
+ language_term 是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值。 如果指定了 language_term，则它表示的语言将应用于搜索条件的所有元素。 如果未指定值，则使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认全文语言。  
   
  使用 sp_configure 存储过程访问有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认全文语言的信息。  
   
- 如果指定为字符串，则 language_term 对应于 syslanguages 系统表中的 alias 列值 。 字符串必须用单引号引起来，如 'language_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值**。 十六进制值不能超过八位（包括前导零在内）。  
+ 如果指定为字符串，则 language_term 对应于 syslanguages 系统表中的 alias 列值 。 字符串必须用单引号引起来，如 'language_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
   
  如果该值是双字节字符集 (DBCS) 格式，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode 格式。  
   
- 对于指定为 language_term 的语言，必须启用断字符和词干分析器等资源**。 如果这些资源不支持指定的语言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
+ 对于指定为 language_term 的语言，必须启用断字符和词干分析器等资源。 如果这些资源不支持指定的语言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   
- 对于包含多种语言的文本数据的非 BLOB 和非 XML 列，或者列中所存储文本的语言未知时，请使用非特定 (0x0) 语言资源。 对于存储在 XML 或 BLOB 类型列中的文档，在创建索引时，将使用文档内的语言编码。 例如，在 XML 列中，XML 文档中的 xml:lang 属性将标识语言。 在查询时，除非将 language_term 指定为全文查询的一部分，否则将使用以前在 language_term 中指定的值作为全文查询的默认语言****。  
+ 对于包含多种语言的文本数据的非 BLOB 和非 XML 列，或者列中所存储文本的语言未知时，请使用非特定 (0x0) 语言资源。 对于存储在 XML 或 BLOB 类型列中的文档，在创建索引时，将使用文档内的语言编码。 例如，在 XML 列中，XML 文档中的 xml:lang 属性将标识语言。 在查询时，除非将 language_term 指定为全文查询的一部分，否则将使用以前在 language_term 中指定的值作为全文查询的默认语言。  
   
  STATISTICAL_SEMANTICS  
  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
@@ -148,13 +148,13 @@ ALTER FULLTEXT INDEX ON table_name
  对指定列启用或禁用统计语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md)。  
   
  START {FULL|INCREMENTAL|UPDATE} POPULATION  
- 通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开始填充 table_name 的全文检索**。 如果全文检索填充已在执行，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个警告，并且不会启动新的填充。  
+ 通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开始填充 table_name 的全文检索。 如果全文检索填充已在执行，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个警告，并且不会启动新的填充。  
   
  FULL  
  指定检索表中的每一行以进行全文索引，即使已对这些行进行了索引。  
   
  INCREMENTAL  
- 指定仅检索自上次填充以来修改的行以进行全文索引。 仅当表包含一个类型为 **timestamp**的列时，才能应用 INCREMENTAL。 如果全文目录中的表不包含 timestamp 类型的列，则该表将进行完全填充****。  
+ 指定仅检索自上次填充以来修改的行以进行全文索引。 仅当表包含一个类型为 **timestamp** 的列时，才能应用 INCREMENTAL。 如果全文目录中的表不包含 timestamp 类型的列，则该表将进行完全填充。  
   
  UPDATE  
  指定对自上次更新更改跟踪索引以来的所有插入、更新或删除进行处理。 必须对表启用更改跟踪填充，但不应打开后台更新索引或自动更改跟踪。  
@@ -166,7 +166,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  PAUSE POPULATION 和 RESUME POPULATION 只能用于完全填充。 它们与其他填充类型无关，因为其他填充从爬网停止的位置恢复爬网。  
   
- SET STOPLIST { OFF| SYSTEM | stoplist_name }**  
+ SET STOPLIST { OFF| SYSTEM | stoplist_name }  
  更改与索引（如果有）关联的全文非索引字表。  
   
  OFF  
@@ -175,12 +175,12 @@ ALTER FULLTEXT INDEX ON table_name
  SYSTEM  
  指定应对此全文索引使用默认的全文系统 STOPLIST。  
   
- stoplist_name**  
+ stoplist_name  
  指定要与全文索引关联的非索引字表的名称。  
   
  有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
- SET SEARCH PROPERTY LIST { OFF | property_list_name } [ WITH NO POPULATION ]**  
+ SET SEARCH PROPERTY LIST { OFF | property_list_name } [ WITH NO POPULATION ]  
  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  更改与索引（如果有）关联的搜索属性列表。  
@@ -190,7 +190,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  默认情况下，在关闭现有的搜索时属性列表时，将自动重新填充全文索引。 如果在关闭搜索属性列表时指定 WITH NO POPULATION，则不会自动进行重新填充。 但是，我们建议您在方便的时候对此全文索引运行完全填充。 重新填充全文索引将删除每个删除的搜索属性的属性特定元数据，从而使全文索引更小更有效。  
   
- property_list_name**  
+ property_list_name  
  指定要与全文索引关联的搜索属性列表的名称。  
   
  为全文索引添加搜索属性列表需要重新填充索引，以便对为关联的搜索属性列表注册的搜索属性编制索引。 如果在添加搜索属性列表时指定了 WITH NO POPULATION，则需要在适当的时候对索引运行填充。  
@@ -287,7 +287,7 @@ ALTER FULLTEXT INDEX ON table_name
     >  还需要对不同的搜索属性列表进行重新生成，例如 `spl_2`。  
   
 ## <a name="permissions"></a>权限  
- 用户必须对相应表或索引视图拥有 ALTER 权限，或者必须是 sysadmin 固定服务器角色、db_ddladmin 固定数据库角色或 db_owner 固定数据库角色的成员************。  
+ 用户必须对相应表或索引视图拥有 ALTER 权限，或者必须是 sysadmin 固定服务器角色、db_ddladmin 固定数据库角色或 db_owner 固定数据库角色的成员。  
   
  如果指定了 SET STOPLIST，则用户必须对此非索引字表拥有 REFERENCES 权限。 如果指定了 SET SEARCH PROPERTY LIST，则用户必须具有搜索属性列表的 REFERENCES 权限。 如果指定非索引字表或搜索属性列表所有者具有 ALTER FULLTEXT CATALOG 权限，则该所有者可以授予 REFERENCES 权限。  
   

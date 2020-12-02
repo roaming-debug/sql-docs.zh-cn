@@ -15,11 +15,11 @@ ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ada6905f267506128be16b2d2a60a6f0ba8fb3a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484227"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123158"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>为自定义连接管理器开发用户界面
 
@@ -165,7 +165,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
  在创建用于实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> 接口的方法的用户界面类后，必须创建用户可在其中配置连接管理器的属性的 Windows 窗体。  
   
 ### <a name="initializing-the-user-interface-form"></a>初始化用户界面窗体  
- 显示用于编辑的自定义窗体后，可以传递对正在编辑的连接管理器的引用。 可以使用窗体类的自定义构造函数传递此引用，也可以按如下所示创建自己的 Initialize 方法来传递此引用****。  
+ 显示用于编辑的自定义窗体后，可以传递对正在编辑的连接管理器的引用。 可以使用窗体类的自定义构造函数传递此引用，也可以按如下所示创建自己的 Initialize 方法来传递此引用。  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As ConnectionManager, ByVal serviceProvider As IServiceProvider)  

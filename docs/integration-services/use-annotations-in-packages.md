@@ -16,10 +16,10 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 88a927a23696e5de7a1e079cb517078dc318b69c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193759"
 ---
 # <a name="use-annotations-in-packages"></a>在包中使用批注
@@ -41,19 +41,19 @@ ms.locfileid: "92193759"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，右键单击“控制流”****、“数据流”**** 或“事件处理程序”**** 选项卡上设计图面的任意处，再单击“添加批注”****。 选项卡的设计图面上将出现文本块。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，右键单击“控制流”、“数据流”或“事件处理程序”选项卡上设计图面的任意处，再单击“添加批注”。 选项卡的设计图面上将出现文本块。  
   
 4.  添加文本。  
   
     > [!NOTE]  
     >  如果未添加文本，则单击文本块外部时此文本块会被删除。  
   
-5.  若要更改批注中的文本大小或格式，请右键单击该批注，然后单击“设置文本批注字体”****。  
+5.  若要更改批注中的文本大小或格式，请右键单击该批注，然后单击“设置文本批注字体”。  
   
 6.  若要添加其他文本行，请按 Enter。  
   
      在添加其他文本行时，批注框的大小会自动增加。  
   
-7.  若要向组添加批注，请右键单击该批注，然后单击“组”****。  
+7.  若要向组添加批注，请右键单击该批注，然后单击“组”。  
   
 8.  若要保存更新后的包，请单击 **“文件”** 菜单中的 **“全部保存”**。

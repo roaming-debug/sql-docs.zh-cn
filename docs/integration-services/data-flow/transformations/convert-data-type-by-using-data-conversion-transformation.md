@@ -16,11 +16,11 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55585698aaeddc5147455bda61b14eac695071fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477735"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123413"
 ---
 # <a name="convert-data-type-with-data-conversion-transformation"></a>使用数据转换进行数据类型的转换
 
@@ -41,7 +41,7 @@ ms.locfileid: "88477735"
   
 5.  双击此数据转换。  
   
-6.  在“数据转换编辑器”对话框的“可用输入列”表中，选中位于要转换其数据类型的列旁边的复选框********。  
+6.  在“数据转换编辑器”对话框的“可用输入列”表中，选中位于要转换其数据类型的列旁边的复选框。  
   
     > [!NOTE]  
     >  可以将多个数据转换应用到一个输入列。  

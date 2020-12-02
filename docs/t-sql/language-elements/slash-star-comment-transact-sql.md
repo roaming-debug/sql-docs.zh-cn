@@ -23,10 +23,10 @@ ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 161c90803b636ff8aacd67f773c739b0d0153150
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195426"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>斜杠星型（块注释）(Transact-SQL)
@@ -48,7 +48,7 @@ text_of_comment
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- text_of_comment**  
+ text_of_comment  
  是注释的文本。 它是一个或多个字符串。  
   
 ## <a name="remarks"></a>备注  

@@ -22,11 +22,11 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a0646c394be5d00bea32f69b137e32c03d1663e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197092"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123469"
 ---
 # <a name="flat-file-source"></a>平面文件源
 
@@ -52,7 +52,7 @@ ms.locfileid: "92197092"
   
  平面文件源输出中的输出列包含 FastParse 属性。 FastParse 指示该列是使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的速度较快但不区分区域设置的较快分析例程，还是使用区分区域设置的标准分析例程。 有关详细信息，请参阅 [Fast Parse](./parsing-data.md) 和 [Standard Parse](./parsing-data.md)。  
   
- 输出列还包含 UseBinaryFormat 属性。 使用该属性可在文件中实现对二进制数据（如带有组合型十进制格式的数据）的支持。 默认情况下 UseBinaryFormat 设置为 **false**。 如果要使用二进制格式，请将 UseBinaryFormat 设置为 **true** ，并将输出列的数据类型设置为 **DT_BYTES**。 执行上述操作时，平面文件源将跳过数据转换并将数据原样传递到输出列。 然后，可以使用“派生列”或“数据转换”等转换将 **DT_BYTES** 数据转换为不同的数据类型，或者在脚本转换中编写自定义脚本来解释数据。 也可以编写自定义数据流组件来解释数据。 有关可将 **DT_BYTES** 转换为哪些数据类型的详细信息，请参阅[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
+ 输出列还包含 UseBinaryFormat 属性。 使用该属性可在文件中实现对二进制数据（如带有组合型十进制格式的数据）的支持。 默认情况下 UseBinaryFormat 设置为 **false**。 如果要使用二进制格式，请将 UseBinaryFormat 设置为 **true** ，并将输出列的数据类型设置为 **DT_BYTES**。 执行上述操作时，平面文件源将跳过数据转换并将数据原样传递到输出列。 然后，可以使用“派生列”或“数据转换”等转换将 **DT_BYTES** 数据转换为不同的数据类型，或者在脚本转换中编写自定义脚本来解释数据。 也可以编写自定义数据流组件来解释数据。 有关可将 **DT_BYTES** 转换为哪些数据类型的详细信息，请参阅 [转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  此源使用平面文件连接管理器访问文本文件。 通过设置平面文件连接管理器的属性，可以提供关于文件和文件中每列的信息，并可以指定平面文件源应如何处理文本文件中的数据。 例如，可以指定文件中分隔列和行的字符，以及每列的数据类型和长度。 有关详细信息，请参阅 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)。  
   
@@ -81,19 +81,19 @@ ms.locfileid: "92197092"
   
 ### <a name="options"></a>选项  
  **Flat file connection manager**  
- 从列表中选择现有的连接管理器，或单击“新建”**** 创建新的连接管理器。  
+ 从列表中选择现有的连接管理器，或单击“新建”创建新的连接管理器。  
   
  **新建**  
- 通过使用“平面文件连接管理器编辑器”**** 对话框创建新的连接管理器。  
+ 通过使用“平面文件连接管理器编辑器”对话框创建新的连接管理器。  
   
  **在数据流中保留源中的空值**  
- 指定提取数据时是否保留空值。 此属性的默认值为 **false**。 当此值为 F**alse**时，平面文件源使用每列的相应默认值替换源数据中的空值，例如，对于字符串列使用空字符串，对于数值列使用零。  
+ 指定提取数据时是否保留空值。 此属性的默认值为 **false**。 当此值为 F **alse** 时，平面文件源使用每列的相应默认值替换源数据中的空值，例如，对于字符串列使用空字符串，对于数值列使用零。  
   
  **预览**  
  通过使用“数据视图”  对话框预览结果。 预览最多可以显示 200 行。  
   
 ## <a name="flat-file-source-editor-columns-page"></a>平面文件源编辑器（“列”页）
-  可以使用“平面文件源编辑器”**** 对话框的“列”**** 节点，将输出列映射到每个外部（源）列。  
+  可以使用“平面文件源编辑器”对话框的“列”节点，将输出列映射到每个外部（源）列。  
   
 > [!NOTE]  
 >  平面文件源的 **FileNameColumnName** 属性及其输出列的 **FastParse** 属性未在 **“平面文件源编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 有关这些属性的详细信息，请参阅 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)的“平面文件源”部分。  
@@ -109,14 +109,14 @@ ms.locfileid: "92197092"
  为每个输出列提供唯一的名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
 ## <a name="flat-file-source-editor-error-output-page"></a>平面文件源编辑器（“错误输出”页）
-  可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。********  
+  可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。  
   
 ### <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   
  **列**  
- 查看在“平面文件源编辑器”对话框中“连接管理器”页上选择的外部（源）列。********  
+ 查看在“平面文件源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  

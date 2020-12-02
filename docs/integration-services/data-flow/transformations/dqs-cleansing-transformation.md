@@ -18,11 +18,11 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495689"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123383"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清除转换
 
@@ -61,7 +61,7 @@ ms.locfileid: "88495689"
 -   social.technet.microsoft.com 上的文章： [使用复合域清理复杂数据](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)。  
   
 ## <a name="dqs-cleansing-transformation-editor-dialog-box"></a>“DQS 清除转换编辑器”对话框
-  可使用 Data Quality Services (DQS) 通过“DQS 清除转换编辑器”**** 对话框来更正数据。 有关详细信息，请参阅 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)。  
+  可使用 Data Quality Services (DQS) 通过“DQS 清除转换编辑器”对话框来更正数据。 有关详细信息，请参阅 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)。  
   
  **您希望做什么？**  
   
@@ -83,10 +83,10 @@ ms.locfileid: "88495689"
   
 ###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **数据质量连接管理器**  
- 从列表中选择现有 DQS 连接管理器，或单击“新建”**** 创建一个新连接。  
+ 从列表中选择现有 DQS 连接管理器，或单击“新建”创建一个新连接。  
   
  **新建**  
- 使用“DQS 清除连接管理器”**** 对话框创建新的连接管理器。 请参阅 [设置“DQS 清除连接管理器”对话框中的选项](#manager)  
+ 使用“DQS 清除连接管理器”对话框创建新的连接管理器。 请参阅 [设置“DQS 清除连接管理器”对话框中的选项](#manager)  
   
  **数据质量知识库**  
  为所连接的数据源选择现有的 DQS 知识库。 有关 DQS 知识库的详细信息，请参阅 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)。  
@@ -117,7 +117,7 @@ ms.locfileid: "88495689"
  列出所连接数据源中的列。 选择包含要更正的数据的一个或多个列。  
   
  **输入列**  
- 列出你在“可用输入列”**** 区域中选定的输入列。  
+ 列出你在“可用输入列”区域中选定的输入列。  
   
  **Domain**  
  选择要映射到输入列的域。  
@@ -128,7 +128,7 @@ ms.locfileid: "88495689"
  在该字段中单击可修改列名。  
   
  **输出别名**  
- 列出“DQS 清除转换”**** 输出的列。 该列包含原始列值或更正的值。  
+ 列出“DQS 清除转换”输出的列。 该列包含原始列值或更正的值。  
   
  在该字段中单击可修改列名。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "88495689"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开现有的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目或者创建一个新项目。  
   
-2.  在连接区域中单击右键，依次单击“新建连接”**** 和“DQS”****。  
+2.  在连接区域中单击右键，依次单击“新建连接”和“DQS”。  
   
 3.  单击“添加”  。  
   

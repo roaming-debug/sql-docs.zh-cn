@@ -12,15 +12,15 @@ ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b7865180ffd1bcf090e51eafd1542e12c97d17ac
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194989"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>发布数据库 (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   可以使用“生成和发布脚本向导”**** 向 Web 宿主提供程序发布整个数据库或单独的数据库对象。  
+   可以使用“生成和发布脚本向导”向 Web 宿主提供程序发布整个数据库或单独的数据库对象。  
   
 > [!NOTE]  
 >  本主题中介绍的功能以前往往由“发布数据库向导”提供。 发布功能已添加到“生成和发布脚本向导”，“发布数据库向导”已停止使用。  
@@ -32,7 +32,7 @@ ms.locfileid: "92194989"
   
 #### <a name="to-publish-a-database-to-a-web-service"></a>将数据库发布到 Web 服务  
   
-1.  在对象资源管理器中，展开“数据库”****，右键单击某个数据库，指向“任务”****，然后单击“生成和发布脚本”****。 按照向导中的步骤，创建用于发布的数据库对象的脚本。  
+1.  在对象资源管理器中，展开“数据库”，右键单击某个数据库，指向“任务”，然后单击“生成和发布脚本”。 按照向导中的步骤，创建用于发布的数据库对象的脚本。  
   
 2.  在 **“选择对象”** 页上，选择要发布到 Web 宿主服务的对象。  
   

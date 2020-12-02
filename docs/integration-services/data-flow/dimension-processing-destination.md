@@ -22,11 +22,11 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a93e031afddb7533cea5251c4882da2760fbfe
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195389"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123502"
 ---
 # <a name="dimension-processing-destination"></a>维度处理目标
 
@@ -59,14 +59,14 @@ ms.locfileid: "92195389"
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="dimension-processing-destination-editor-connection-manager-page"></a>维度处理目标编辑器（“连接管理器”页）
-  可以使用“维度处理目标编辑器”对话框的“连接管理器”页面指定与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间的连接********。  
+  可以使用“维度处理目标编辑器”对话框的“连接管理器”页面指定与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间的连接。  
   
 ### <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从列表中选择现有连接管理器，或单击“新建”**** 创建新的连接管理器。  
+ 从列表中选择现有连接管理器，或单击“新建”创建新的连接管理器。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”**** 对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”对话框创建一个新连接。  
   
  **可用维度列表**  
  选择要处理的维度。  
@@ -118,10 +118,10 @@ ms.locfileid: "92195389"
  指定在出现错误时应停止处理。  
   
  **错误数**  
- 指定应停止处理的错误阈值（如果选择了“出错时停止”****）。  
+ 指定应停止处理的错误阈值（如果选择了“出错时停止”）。  
   
  **出错时要执行的操作**  
- 指定在达到错误阈值时执行的操作（如果选择了“出错时停止”****）。  
+ 指定在达到错误阈值时执行的操作（如果选择了“出错时停止”）。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -165,7 +165,7 @@ ms.locfileid: "92195389"
 |**ReportAndStop**|报告错误并停止处理。|  
   
  **错误日志路径**  
- 键入错误日志的路径，或单击浏览 (...) 按钮以选择目标****。  
+ 键入错误日志的路径，或单击浏览 (...) 按钮以选择目标。  
   
  **浏览(...)**  
  选择错误日志的路径。  

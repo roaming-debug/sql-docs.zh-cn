@@ -20,10 +20,10 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f5f18f3306256906d6c419957aa3d97d3506e7d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197126"
 ---
 # <a name="script-task"></a>脚本任务
@@ -50,7 +50,7 @@ ms.locfileid: "92197126"
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>编写和运行任务使用的脚本  
  脚本任务将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 用作编写脚本的环境和运行这些脚本的引擎。  
   
- VSTA 提供 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 环境的所有标准功能，如具有颜色编码的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 编辑器、IntelliSense 和“对象资源管理器”****。 VSTA 还可以使用与其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 开发工具使用的调试器。 脚本中的断点与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务和容器上的断点可以无缝集合。 VSTA 支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 编程语言。  
+ VSTA 提供 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 环境的所有标准功能，如具有颜色编码的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 编辑器、IntelliSense 和“对象资源管理器”。 VSTA 还可以使用与其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 开发工具使用的调试器。 脚本中的断点与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务和容器上的断点可以无缝集合。 VSTA 支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 编程语言。  
   
  若要运行脚本，运行包的计算机上必须安装有 VSTA。 运行包时，任务将加载脚本引擎并运行脚本。 可以通过向项目中的程序集添加引用的方式来访问脚本中的外部 .NET 程序集。 目前，我们不支持 .NET Core 和 .NET 标准程序集引用。  
   
@@ -131,13 +131,13 @@ ms.locfileid: "92197126"
  若要更改 VSTA 项目中方法的名称，则必须更改 **EntryPoint** 属性的值。  
   
  **ReadOnlyVariables**  
- 以逗号分隔的形式键入一列可供脚本使用的只读变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量********。  
+ 以逗号分隔的形式键入一列可供脚本使用的只读变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量。  
   
 > [!NOTE]  
 >  变量名称区分大小写。  
   
  **ReadWriteVariables**  
- 以逗号分隔的形式键入一列可供脚本使用的读/写变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量********。  
+ 以逗号分隔的形式键入一列可供脚本使用的读/写变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量。  
   
 > [!NOTE]  
 >  变量名称区分大小写。  

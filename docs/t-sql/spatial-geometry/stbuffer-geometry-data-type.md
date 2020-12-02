@@ -19,16 +19,16 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7644e25159a7df28d2de51d5e1a08a0e1b36ef05
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92300372"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-返回一个几何图形对象，该对象表示所有与  geometry 实例的距离小于或等于指定值的点的并集。
+返回一个几何图形对象，该对象表示所有与 geometry 实例的距离小于或等于指定值的点的并集。
   
 ## <a name="syntax"></a>语法  
   
@@ -41,20 +41,20 @@ ms.locfileid: "92300372"
 
 ## <a name="arguments"></a>参数
  *distance*  
- 类型为 float  （在 .NET Framework 中为 double  ）的值，用于指定与围绕其计算缓冲区的几何图形实例的距离。  
+ 类型为 float（在 .NET Framework 中为 double）的值，用于指定与围绕其计算缓冲区的几何图形实例的距离。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="remarks"></a>注解  
- `STBuffer()` 计算缓冲区的方式与  。  
+ `STBuffer()` 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) 相似，指定 tolerance = distance\* .001 和 relative  = false。  
   
- 如果 distance > 0，则返回 Polygon 或 MultiPolygon 实例  。  
+ 如果 distance > 0，则返回 Polygon 或 MultiPolygon 实例。  
   
 > [!NOTE]  
->  由于 distance 的类型为 float，因此，很小的值可能在计算中等于零  。  如果发生这种情况，则会返回执行调用的 geometry 实例的副本  。  请参阅 [float 和 real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)  
+>  由于 distance 的类型为 float，因此，很小的值可能在计算中等于零。  如果发生这种情况，则会返回执行调用的 geometry 实例的副本。  请参阅 [float 和 real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)  
   
  如果 distance = 0，则会返回调用 geometry 实例的副本。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "92300372"
 -   当实例维度为 2 或更大时，将返回负缓冲区。  
   
     > [!NOTE]  
-    >  负缓冲区还可能会创建空的 GeometryCollection 实例  。  
+    >  负缓冲区还可能会创建空的 GeometryCollection 实例。  
   
  负缓冲区删除距几何图形边界给定距离的所有点。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "92300372"
 >  将返回 `Polygon` 实例，而非 `CurvePolygon` 实例。  若要返回 `CurvePolygon` 实例，请参阅 [BufferWithCurves（geometry 数据类型）](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
 ### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. 使用返回一个空实例的负参数值调用 STBuffer()  
- 以下示例说明了针对前一实例，distance 参数等于 -2 时发生的情况  。  
+ 以下示例说明了针对前一实例，distance 参数等于 -2 时发生的情况。  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -163,7 +163,7 @@ ms.locfileid: "92300372"
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- 前两个 SELECT 语句返回一个 `MultiPolygon` 实例，因为 distance 参数小于或等于两个点 (1 1) 和 (1 4) 之间的距离的 1/2  。 第三个 SELECT 语句返回一个 `Polygon` 实例，因为两个点 (1 1) 和 (1 4) 的缓冲实例发生重叠  。  
+ 前两个 SELECT 语句返回一个 `MultiPolygon` 实例，因为 distance 参数小于或等于两个点 (1 1) 和 (1 4) 之间的距离的 1/2。 第三个 SELECT 语句返回一个 `Polygon` 实例，因为两个点 (1 1) 和 (1 4) 的缓冲实例发生重叠。  
   
 ## <a name="see-also"></a>另请参阅  
  [BufferWithTolerance（geometry 数据类型）](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   

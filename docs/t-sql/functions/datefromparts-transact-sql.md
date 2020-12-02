@@ -20,16 +20,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 405155dbc721afe162baca38f6db04e73625c639
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111199"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117759"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-此函数返回映射到指定年、月、日值的 date 值****。
+此函数返回映射到指定年、月、日值的 date 值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,7 +55,7 @@ DATEFROMPARTS ( year, month, day )
 **date**
   
 ## <a name="remarks"></a>备注  
-`DATEFROMPARTS` 返回一个 date 值，其中日期部分设置为指定的年、月和日，时间部分设置为默认值****。 对于无效参数，`DATEFROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATEFROMPARTS` 返回 NULL。
+`DATEFROMPARTS` 返回一个 date 值，其中日期部分设置为指定的年、月和日，时间部分设置为默认值。 对于无效参数，`DATEFROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATEFROMPARTS` 返回 NULL。
   
 此函数可在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本的服务器上执行远程处理。 它不能无法在版本低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的服务器上执行远程处理。
   

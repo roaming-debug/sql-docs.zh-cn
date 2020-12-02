@@ -25,16 +25,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f6e967b66ff4de244d1027583877c3250d4d11a7
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116792"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117003"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-此函数返回表示指定 date 的日期（某月的一天）的整数**。
+此函数返回表示指定 date 的日期（某月的一天）的整数。
   
 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
@@ -65,9 +65,9 @@ DAY ( date )
 **int**
   
 ## <a name="return-value"></a>返回值  
-DAY 与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (day, date) 返回相同的值******。
+DAY 与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (day, date) 返回相同的值。
   
-如果 date 只包含时间部分，则 `DAY` 将返回 1，即基准日**。
+如果 date 只包含时间部分，则 `DAY` 将返回 1，即基准日。
   
 ## <a name="examples"></a>示例  
 此语句返回 `30`，即天数本身。
@@ -76,7 +76,7 @@ DAY 与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (day, date) �
 SELECT DAY('2015-04-30 01:01:01.1234567');  
 ```  
   
-此语句返回 `1900, 1, 1`。 date 参数具有数值 `0`**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。
+此语句返回 `1900, 1, 1`。 date 参数具有数值 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。
   
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0);  

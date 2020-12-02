@@ -19,11 +19,11 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e278c50b6a467660c827e3e59181945fdb9985e7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035800"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96115004"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,21 +43,21 @@ ms.locfileid: "92035800"
 
 ## <a name="arguments"></a>参数
 _distance_  
-一个 float 表达式，用于指定与围绕其计算缓冲区的 geography 实例的距离********。  
+一个 float 表达式，用于指定与围绕其计算缓冲区的 geography 实例的距离。  
   
 缓冲区的最大距离不得超过 0.999 \* _π_  * minorAxis \* minorAxis / majorAxis（~0.999 \* 1/2 的地球圆周）或整个地球。  
   
 tolerance  
-一个 float 表达式，用于指定缓冲区距离的公差****。  
+一个 float 表达式，用于指定缓冲区距离的公差。  
   
-理想的缓冲区距离与返回的线性近似之间的最大偏差是 tolerance__ 值。  
+理想的缓冲区距离与返回的线性近似之间的最大偏差是 tolerance 值。  
   
 例如，点的理想缓冲区距离为圆圈，但是此距离必须与多边形近似。 容差越小，多边形的点就越多。 此结果虽增加了结果的复杂性，但最大限度地减少错误。  
   
 最小限制为距离的 0.1%，任何小于此限制的公差都将向上舍入到此最小限制。  
   
 _relative_  
-一个指定 tolerance 值是相对值还是绝对值的 bit 值****__。 如果值为“TRUE”或“1”，容差是相对的。 此值是 tolerance__ 参数与椭圆体的角范围 \* 赤道半径的乘积。 如果值为“FALSE”或“0”，容差是绝对的。 tolerance__ 值是理想的缓冲区距离与返回的线性近似之间的最大绝对偏差。  
+一个指定 tolerance 值是相对值还是绝对值的 bit 值。 如果值为“TRUE”或“1”，容差是相对的。 此值是 tolerance 参数与椭圆体的角范围 \* 赤道半径的乘积。 如果值为“FALSE”或“0”，容差是绝对的。 tolerance 值是理想的缓冲区距离与返回的线性近似之间的最大绝对偏差。  
   
 ## <a name="return-types"></a>返回类型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
@@ -65,15 +65,15 @@ _relative_
 CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
-如果 distance__ 不是数字 (NAN)，或如果 distance__ 是正/负无穷大，此方法会抛出 ArgumentException****。  如果 tolerance__ 为零 (0)，而不是数字 (NaN)、负数或正/负无穷大，此方法也会抛出 ArgumentException****。  
+如果 distance 不是数字 (NAN)，或如果 distance 是正/负无穷大，此方法会抛出 ArgumentException。  如果 tolerance 为零 (0)，而不是数字 (NaN)、负数或正/负无穷大，此方法也会抛出 ArgumentException。  
   
-`STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到两极的距离时，`STBuffer()` 在两极返回 FullGlobe 实例********。  
+`STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到两极的距离时，`STBuffer()` 在两极返回 FullGlobe 实例。  
   
-在缓冲区的距离超过下列限制的 FullGlobe 实例中，此方法将引发 ArgumentException********：  
+在缓冲区的距离超过下列限制的 FullGlobe 实例中，此方法将引发 ArgumentException：  
   
 0.999 \* _π_ * minorAxis \* minorAxis / majorAxis（~0.999 \* 1/2 地球的周长）  
   
-理论缓冲区与计算缓冲区之间的误差为 max(tolerance, extents \* 1.E-7)，其中 tolerance 是 tolerance 参数的值__。 有关盘区的详细信息，请参阅 [geography 数据类型方法引用](./stequals-geography-data-type.md)。  
+理论缓冲区与计算缓冲区之间的误差为 max(tolerance, extents \* 1.E-7)，其中 tolerance 是 tolerance 参数的值。 有关盘区的详细信息，请参阅 [geography 数据类型方法引用](./stequals-geography-data-type.md)。  
   
 此方法不精确。  
   

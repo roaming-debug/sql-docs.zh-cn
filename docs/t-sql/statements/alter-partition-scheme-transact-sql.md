@@ -23,11 +23,11 @@ ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 8ca48f836b6d14b85d3f8d0286fd31e60c403afe
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688262"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124259"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -57,11 +57,11 @@ NEXT USED [ filegroup_name ] [ ; ]
  filegroup_name  
  指定要由分区方案标记为 NEXT USED 的文件组。 这意味着文件组将接受使用 [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md) 语句创建的新分区。  
   
- 在一个分区方案中，只能将一个文件组指定为 NEXT USED。 可以指定非空文件组。 如果指定了 filegroup_name 且当前没有文件组被标记为 NEXT USED，则将 filegroup_name 标记为 NEXT USED****。 如果指定了 filegroup_name 且已经存在具有 NEXT USED 属性的文件组，则 NEXT USED 属性从现有的文件组转移到 filegroup_name****。  
+ 在一个分区方案中，只能将一个文件组指定为 NEXT USED。 可以指定非空文件组。 如果指定了 filegroup_name 且当前没有文件组被标记为 NEXT USED，则将 filegroup_name 标记为 NEXT USED。 如果指定了 filegroup_name 且已经存在具有 NEXT USED 属性的文件组，则 NEXT USED 属性从现有的文件组转移到 filegroup_name。  
   
- 如果没有指定 filegroup_name 且已经存在具有 NEXT USED 属性的文件组，则该文件组将失去其 NEXT USED 状态，因此 partition_scheme_name 中将没有 NEXT USED 文件组****。  
+ 如果没有指定 filegroup_name 且已经存在具有 NEXT USED 属性的文件组，则该文件组将失去其 NEXT USED 状态，因此 partition_scheme_name 中将没有 NEXT USED 文件组。  
   
- 如果指定了 filegroup_name 且没有文件组被标记为 NEXT USED，则 ALTER PARTITION SCHEME 将返回一个警告**。  
+ 如果指定了 filegroup_name 且没有文件组被标记为 NEXT USED，则 ALTER PARTITION SCHEME 将返回一个警告。  
   
 ## <a name="remarks"></a>注解  
  受 ALTER PARTITION SCHEME 影响的所有文件组都必须处于联机状态。  

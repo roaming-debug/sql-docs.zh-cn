@@ -19,10 +19,10 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 54a577a2a94c64eafe3817ccd9a041125629f846
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193839"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查询
@@ -83,7 +83,7 @@ ms.locfileid: "92193839"
   
 -   **立即查看和编辑结果** 您可以运行查询，在可滚动和编辑数据库中各记录的网格中对记录集进行操作。  
   
- ****“查询生成器”对话框中的图形工具使你可以使用拖放操作来构造查询。 默认情况下，“查询生成器”对话框将生成 SELECT 查询，但也可以生成 INSERT、UPDATE 或 DELETE 查询。 还可以在 **“查询生成器”** 对话框中分析和运行所有类型的 SQL 语句。 有关包中 SQL 语句的详细信息，请参阅 [Integration Services (SSIS) 查询](../integration-services/integration-services-ssis-queries.md)。  
+ “查询生成器”对话框中的图形工具使你可以使用拖放操作来构造查询。 默认情况下，“查询生成器”对话框将生成 SELECT 查询，但也可以生成 INSERT、UPDATE 或 DELETE 查询。 还可以在 **“查询生成器”** 对话框中分析和运行所有类型的 SQL 语句。 有关包中 SQL 语句的详细信息，请参阅 [Integration Services (SSIS) 查询](../integration-services/integration-services-ssis-queries.md)。  
   
  若要了解关于 Transact-SQL 语言及其语法的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../t-sql/language-reference.md)。  
   

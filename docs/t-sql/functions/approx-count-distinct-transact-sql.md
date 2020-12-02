@@ -16,11 +16,11 @@ author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e980e97adc29cda45dbedb0640f46d0a444c4b2
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076732"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119456"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 
@@ -49,7 +49,7 @@ APPROX_COUNT_DISTINCT ( expression )
 `APPROX_COUNT_DISTINCT( expression )` 计算组中每行的表达式，并返回组中唯一非空值的近似数。 此函数旨在跨响应速度比绝对精度更为关键的大型数据集进行聚合。  
 
 `APPROX_COUNT_DISTINCT` 专用于大数据方案，更适合以下情形：
-- 访问包含数百万行或更多行的数据集，且**
+- 访问包含数百万行或更多行的数据集，且
 - 聚合包含多个非重复值的一个或多个列
 
 此函数实现可保证最多 2% 的错误率，概率在 97% 内。 

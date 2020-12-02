@@ -11,20 +11,20 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d8738fb22682ad4a6f432187998663c4c8282cd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195901"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122831"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导连接到数据源
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-本部分中的主题说明如何在运行 SQL Server 导入和导出向导时连接到多个常用的数据源。 用户需要在向导的“选择数据源”**** 和“选择目标”**** 页上为数据源提供连接信息。
+本部分中的主题说明如何在运行 SQL Server 导入和导出向导时连接到多个常用的数据源。 用户需要在向导的“选择数据源”和“选择目标”页上为数据源提供连接信息。
 
-本部分中的主题仅介绍如何从向导的“选择数据源”**** 和“选择目标”**** 页**连接到数据源**。 如需其他信息，请参阅[相关任务和内容](#related)。
+本部分中的主题仅介绍如何从向导的“选择数据源”和“选择目标”页 **连接到数据源**。 如需其他信息，请参阅[相关任务和内容](#related)。
 
 ## <a name="connect-to-a-commonly-used-data-source"></a>连接到常用数据源
 单击链接详细了解如何连接到以下常用数据源之一。

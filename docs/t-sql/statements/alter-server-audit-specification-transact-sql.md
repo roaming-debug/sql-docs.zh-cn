@@ -21,11 +21,11 @@ ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ca119bfb4b94aee36270315a29e97613f3d28ce5
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688171"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124219"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,16 +51,16 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- audit_specification_name**  
+ audit_specification_name  
  审核规范的名称。  
   
- audit_name**  
+ audit_name  
  应用此规范的审核的名称。  
   
- audit_action_group_name**  
+ audit_action_group_name  
  服务器级别可审核操作组的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- WITH ( STATE = { ON | OFF } )************  
+ WITH ( STATE = { ON | OFF } )  
  允许或禁止审核收集此审核规范的记录。  
   
 ## <a name="remarks"></a>备注  

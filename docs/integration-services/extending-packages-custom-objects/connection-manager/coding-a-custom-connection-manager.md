@@ -14,11 +14,11 @@ ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 352735b75d99f87b741959b6c53f66937860588f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484293"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123174"
 ---
 # <a name="coding-a-custom-connection-manager"></a>编写自定义连接管理器代码
 
@@ -197,7 +197,7 @@ public override Microsoft.SqlServer.Dts.Runtime.DTSExecResult Validate(Microsoft
  用于支持与外部数据源连接的方法是自定义连接管理器的最重要方法。 会在设计时和运行时期间的不同时间调用 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A> 方法。  
   
 ### <a name="acquiring-the-connection"></a>获取连接  
- 您需要决定哪种类型的对象适合由 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 方法从自定义连接管理器返回。 例如，文件连接管理器只返回包含路径和文件名的字符串，而 ADO.NET 连接管理器则返回已打开的托管连接对象。 OLE DB 连接管理器返回本机 OLE DB 连接对象，这些对象不能从托管代码使用。 自定义 SQL Server 连接管理器（从中获取本主题中的代码段）返回打开的 SqlConnection 对象****。  
+ 您需要决定哪种类型的对象适合由 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 方法从自定义连接管理器返回。 例如，文件连接管理器只返回包含路径和文件名的字符串，而 ADO.NET 连接管理器则返回已打开的托管连接对象。 OLE DB 连接管理器返回本机 OLE DB 连接对象，这些对象不能从托管代码使用。 自定义 SQL Server 连接管理器（从中获取本主题中的代码段）返回打开的 SqlConnection 对象。  
   
  连接管理器用户需要事先了解所需的对象类型，以便可以将返回的对象转换为合适的类型并访问其方法和属性。  
   

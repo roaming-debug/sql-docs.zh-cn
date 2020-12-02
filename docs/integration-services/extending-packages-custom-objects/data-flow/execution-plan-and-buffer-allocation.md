@@ -22,11 +22,11 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 311fc7cd35187228615ede0c570dc572097d2966
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484188"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123141"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>执行计划和缓冲区分配
 
@@ -78,7 +78,7 @@ End WorkThread1
 ```  
   
 > [!NOTE]  
->  每次执行包时，都会生成一个执行计划，可通过向包中添加日志提供程序、启用日志记录并选择 PipelineExecutionPlan 事件来捕获该执行计划****。  
+>  每次执行包时，都会生成一个执行计划，可通过向包中添加日志提供程序、启用日志记录并选择 PipelineExecutionPlan 事件来捕获该执行计划。  
   
 ## <a name="understanding-buffer-allocation"></a>了解缓冲区分配  
  工作流任务会基于执行计划创建缓冲区，这些缓冲区包含在数据流组件的输出中定义的列。 在数据流通过这一系列组件的过程中，会重用缓冲区，直至遇到具有异步输出的组件为止。 此时将创建新的缓冲区，其中包含异步输出的输出列和下游组件的输出列。  
@@ -87,5 +87,5 @@ End WorkThread1
   
  具有异步输出的转换组件从 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法接收现有输入缓冲区，并从 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法接收新的输出缓冲区。 具有异步输出的转换组件是唯一一种可同时接收输入缓冲区和输出缓冲区的数据流组件。  
   
- 由于提供给组件的缓冲区所包含的列数可能大于组件的输入或输出列集合中的列数，因此，组件开发人员可通过调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> 方法并指定列的 LineageID，在缓冲区中查找列****。  
+ 由于提供给组件的缓冲区所包含的列数可能大于组件的输入或输出列集合中的列数，因此，组件开发人员可通过调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> 方法并指定列的 LineageID，在缓冲区中查找列。  
   

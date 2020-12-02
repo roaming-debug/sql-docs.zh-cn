@@ -17,10 +17,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194756"
 ---
 # <a name="odbc-source"></a>ODBC 源
@@ -57,7 +57,7 @@ ms.locfileid: "92194756"
  有关 ODBC 源支持的数据类型的信息，请参阅开放式数据库连接 (ODBC) 连接器。  
   
 ## <a name="extract-options"></a>提取选项  
- ODBC 源在“批处理”**** 或“逐行”**** 模式下操作。 使用的模式由 **FetchMethod** 属性确定。 下表对这些模式进行了说明。  
+ ODBC 源在“批处理”或“逐行”模式下操作。 使用的模式由 **FetchMethod** 属性确定。 下表对这些模式进行了说明。  
   
 -   **批处理**：组件将基于发现的 ODBC 访问接口功能尝试使用最高效的提取方法。 对于大多数现今的 ODBC 提供程序，这是具有数组绑定的 SQLFetchScroll（其中，数组大小由 **BatchSize** 属性确定）。 如果选择“批处理”  并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”  模式。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "92194756"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
   
--   在“数据流”**** 选项卡上，双击 ODBC 源。  
+-   在“数据流”选项卡上，双击 ODBC 源。  
   
 ### <a name="options"></a>选项  
   
@@ -125,14 +125,14 @@ ms.locfileid: "92194756"
  单击 **“预览”** ，查看从选定的表或视图中提取的最多前 200 行数据。  
   
 ## <a name="odbc-source-editor-columns-page"></a>ODBC 源编辑器（“列”页）
-  可以使用“ODBC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列********。  
+  可以使用“ODBC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
   
 ### <a name="task-list"></a>任务列表  
  **打开“ODBC 源编辑器”的“列”页**  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
   
-2.  在“数据流”**** 选项卡上，双击 ODBC 源。  
+2.  在“数据流”选项卡上，双击 ODBC 源。  
   
 3.  在 **“ODBC 源编辑器”** 中，单击 **“列”**。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "92194756"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
   
--   在“数据流”**** 选项卡上，双击 ODBC 源。  
+-   在“数据流”选项卡上，双击 ODBC 源。  
   
 -   在 **“ODBC 源编辑器”** 中，单击 **“错误输出”**。  
   

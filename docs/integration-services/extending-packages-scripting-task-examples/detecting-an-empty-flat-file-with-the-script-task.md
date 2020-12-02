@@ -17,11 +17,11 @@ ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d5c1c5473eb307480b772d2cecd31b3ebb2a9bed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430429"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122991"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>使用脚本任务检测空平面文件
 
@@ -34,7 +34,7 @@ ms.locfileid: "88430429"
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="description"></a>说明  
- 下面的示例使用 **System.IO** 命名空间中的方法来测试在平面文件连接管理器中指定的平面文件，以确定该文件是否为空，或者是否只包含预期的非数据行，比如列标题或空行。 该脚本先检查文件的大小，如果大小为零字节，则该文件是空的。 如果文件大小大于零，该脚本会从文件中读取行，直到没有行可读为止，或者直到行数超过预期的非数据行数为止。 如果该文件中的行数小于或等于预期的非数据行数，则认为该文件是空的。 结果将以布尔值的形式在用户变量中返回，该变量的值可用于在包控制流中进行分支跳转。 FireInformation 方法还将结果显示在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 的“输出”窗口中********。  
+ 下面的示例使用 **System.IO** 命名空间中的方法来测试在平面文件连接管理器中指定的平面文件，以确定该文件是否为空，或者是否只包含预期的非数据行，比如列标题或空行。 该脚本先检查文件的大小，如果大小为零字节，则该文件是空的。 如果文件大小大于零，该脚本会从文件中读取行，直到没有行可读为止，或者直到行数超过预期的非数据行数为止。 如果该文件中的行数小于或等于预期的非数据行数，则认为该文件是空的。 结果将以布尔值的形式在用户变量中返回，该变量的值可用于在包控制流中进行分支跳转。 FireInformation 方法还将结果显示在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 的“输出”窗口中。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   

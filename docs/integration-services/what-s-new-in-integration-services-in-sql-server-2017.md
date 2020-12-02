@@ -12,10 +12,10 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193719"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 Integration Services 中的新增功能
@@ -62,10 +62,10 @@ ms.locfileid: "92193719"
 
 -   Scale Out 主要角色现在支持高可用性。 可为 SSISDB 启用 Always On 功能并为承载 Scale Out Master 服务的服务器设置 Windows Server 故障转移群集。 通过将此更改应用于 Scale Out Master，即可避免单一故障点并为整个 Scale Out 部署提供高可用性。
 -   改进了 Scale Out 辅助角色中执行日志的故障转移处理。 如果 Scale Out Worker 意外停止，执行日志将保存到本地磁盘中。 稍后重启辅助角色时，它会重新加载保存的日志并将其继续保存到 SSISDB。
--   存储过程 **[catalog].[create_execution]** 的参数 *runincluster*重命名为 *runinscaleout*，以保持一致性和可读性。 更改参数名称会产生以下影响：
-    -   如果现有脚本在 Scale Out 中运行包，必须将参数名称从 runincluster 更改为 runinscaleout，以使脚本在 RC1 中正常运行****。
+-   存储过程 **[catalog].[create_execution]** 的参数 *runincluster* 重命名为 *runinscaleout*，以保持一致性和可读性。 更改参数名称会产生以下影响：
+    -   如果现有脚本在 Scale Out 中运行包，必须将参数名称从 runincluster 更改为 runinscaleout，以使脚本在 RC1 中正常运行。
     -   SQL Server Management Studio (SSMS) 17.1 及更早版本无法在 RC1 的 Scale Out 中触发包执行。 错误消息为：“@runincluster 不是过程 create_execution 的参数   。” SSMS 的下一个版本，即版本 17.2 中修复了此问题。 SSMS 的版本 17.2 及更高版本支持 Scale Out 中的新参数名称和包执行。解决方法如下：SSMS 版本 17.2 可用之前，可以使用 SSMS 的现有版本生成包执行脚本，然后在脚本中将 runincluster 参数的名称更改为 runinscaleout，并运行该脚本 。
--   SSIS 目录具有新的全局属性，用于指定执行 SSIS 包的默认模式。 此新属性适用于这种情况：调用 [catalog].[create_execution] 存储过程且将 runinscaleout 参数设为 null******。 此模式也适用于 SSIS SQL 代理作业。 可以在 SSMS 中 SSISDB 节点的“属性”对话框中设置新的全局属性，或者使用下面的命令进行设置：
+-   SSIS 目录具有新的全局属性，用于指定执行 SSIS 包的默认模式。 此新属性适用于这种情况：调用 [catalog].[create_execution] 存储过程且将 runinscaleout 参数设为 null。 此模式也适用于 SSIS SQL 代理作业。 可以在 SSMS 中 SSISDB 节点的“属性”对话框中设置新的全局属性，或者使用下面的命令进行设置：
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1
     ```
@@ -74,10 +74,10 @@ ms.locfileid: "92193719"
 
 ### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>SSIS Scale Out 中的新增功能和更改功能
 
--   现可在 Scale Out 中触发执行时使用 Use32BitRuntime 参数****。
+-   现可在 Scale Out 中触发执行时使用 Use32BitRuntime 参数。
 -   Scale Out 中用于包执行的 SSISDB 日志记录性能得到了改进。 事件消息和消息上下文日志现批量写入 SSISDB 中，而不是逐一写入。 以下是有关此改进的一些其他说明：        
-    - 在当前版本的 SQL Server Management Studio (SSMS) 中，某些报表目前不显示要在 Scale Out 中执行的日志。预计将在下一版本的 SSMS 中支持它们。 受影响的报表包括“所有连接”报表、“错误上下文”报表和 Integration Service 仪表板中的“连接信息”部分******。
-    - 新增了列 event_message_guid****。 在 Scale Out 中查询这些执行日志时，使用 event_message_guid 替代 event_message_id 联接 [catalog].[event_message_context] 和 [catalog].[event_messages] 视图****。
+    - 在当前版本的 SQL Server Management Studio (SSMS) 中，某些报表目前不显示要在 Scale Out 中执行的日志。预计将在下一版本的 SSMS 中支持它们。 受影响的报表包括“所有连接”报表、“错误上下文”报表和 Integration Service 仪表板中的“连接信息”部分。
+    - 新增了列 event_message_guid。 在 Scale Out 中查询这些执行日志时，使用 event_message_guid 替代 event_message_id 联接 [catalog].[event_message_context] 和 [catalog].[event_messages] 视图。
 -   若要获取用于 SSIS Scale Out 的管理应用程序，请[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 17.1 或更高版本。
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>SQL Server 2017 CTP 2.0 中新的 SSIS 功能

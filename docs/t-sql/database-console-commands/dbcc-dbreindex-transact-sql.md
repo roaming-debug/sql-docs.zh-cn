@@ -24,11 +24,11 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: fc18c47d87ada5b60cb57aba79e1063ce1f38c3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417643"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119638"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,12 +59,12 @@ DBCC DBREINDEX
  包含要重新生成的指定索引的表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
  index_name  
- 要重新生成的索引名。 索引名称必须符合标识符规则。 如果已指定 index_name，则必须指定 table_name****。 如果未指定 index_name 或者该值为“ ”，则重新生成表的所有索引**。  
+ 要重新生成的索引名。 索引名称必须符合标识符规则。 如果已指定 index_name，则必须指定 table_name。 如果未指定 index_name 或者该值为“ ”，则重新生成表的所有索引。  
   
  fillfactor  
- 在创建或重新生成索引时，每个索引页上用于存储数据的空间的百分比。 创建索引后，fillfactor 将替换填充因子，从而成为该索引以及重新生成的任何其他非聚集索引（因为重新生成了聚集索引）的新默认值**。  
- 当 fillfactor 为 0 时，DBCC DBREINDEX 将使用上次为索引指定的填充因子值**。 该值存储在 sys.indexes 目录视图中****。   
- 如果已指定 fillfactor，则必须指定 index_name******。 如果未指定 fillfactor，则使用默认填充因子 100**。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
+ 在创建或重新生成索引时，每个索引页上用于存储数据的空间的百分比。 创建索引后，fillfactor 将替换填充因子，从而成为该索引以及重新生成的任何其他非聚集索引（因为重新生成了聚集索引）的新默认值。  
+ 当 fillfactor 为 0 时，DBCC DBREINDEX 将使用上次为索引指定的填充因子值。 该值存储在 sys.indexes 目录视图中。   
+ 如果已指定 fillfactor，则必须指定 index_name。 如果未指定 fillfactor，则使用默认填充因子 100。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
  WITH NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  

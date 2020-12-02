@@ -19,11 +19,11 @@ ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e45c856ee8ce1942840f47f5878de57525426c94
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111081"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96116323"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +45,10 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 
 ## <a name="arguments"></a>参数
  cert_ID  
-用于保护对称密钥的证书的 ID。 cert_ID 具有 int 数据类型******。  
+用于保护对称密钥的证书的 ID。 cert_ID 具有 int 数据类型。  
   
 cert_password  
-用于加密证书私钥的密码。 如果数据库主密钥保护私钥，则可能具有 `NULL` 值。 cert_password 具有 nvarchar 数据类型******。  
+用于加密证书私钥的密码。 如果数据库主密钥保护私钥，则可能具有 `NULL` 值。 cert_password 具有 nvarchar 数据类型。  
 
 'ciphertext'  
 使用密钥加密的数据字符串。 ciphertext 具有 varbinary 数据类型。  

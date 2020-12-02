@@ -33,10 +33,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c7c0a80475989e4fde3e77090239577f9d57c68
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92187583"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
@@ -65,11 +65,11 @@ match_expression [ NOT ] LIKE pattern
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- match_expression**  
+ match_expression  
  为任何有效的字符数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *pattern*  
- 要在 match_expression 中搜索并且可以包括下列有效通配符的特定字符串**。 pattern 的最大长度可达 8,000 字节**。  
+ 要在 match_expression 中搜索并且可以包括下列有效通配符的特定字符串。 pattern 的最大长度可达 8,000 字节。  
   
 |通配符|描述|示例|  
 |------------------------|-----------------|-------------|  
@@ -78,19 +78,19 @@ match_expression [ NOT ] LIKE pattern
 |[ ]|指定范围 ([a-f]) 或集合 ([abcdef]) 中的任何单个字符。|WHERE au_lname LIKE '[C-P]arsen' 将查找以 arsen 结尾并且以介于 C 与 P 之间的任何单个字符开始的作者姓氏，例如 Carsen、Larsen、Karsen 等。 在范围搜索中，范围包含的字符可能因排序规则的排序规则而异。|  
 |[^]|不属于指定范围 ([a-f]) 或集合 ([abcdef]) 的任何单个字符。|WHERE au_lname LIKE 'de[^l]%' 查找以 de 开头且后跟字母不是 l 的所有作者姓氏。|  
   
- escape_character**  
- 位于通配符前的字符，用于指明应将通配符解释为常规字符，而不是通配符。 escape_character 是字符表达式，无默认值，并且计算结果必须仅为一个字符**。  
+ escape_character  
+ 位于通配符前的字符，用于指明应将通配符解释为常规字符，而不是通配符。 escape_character 是字符表达式，无默认值，并且计算结果必须仅为一个字符。  
   
 ## <a name="result-types"></a>结果类型  
  **布尔值**  
   
 ## <a name="result-value"></a>结果值  
- 如果 match_expression 与指定的 pattern 相匹配，则 LIKE 返回 TRUE****。  
+ 如果 match_expression 与指定的 pattern 相匹配，则 LIKE 返回 TRUE。  
   
 ## <a name="remarks"></a>备注  
  如果你使用 LIKE 执行字符串比较，模式字符串中的所有字符都有意义。 有意义的字符包括任何前导或尾随空格。 如果查询中的比较要返回包含字符串 LIKE 'abc '（abc 后跟一个空格）的所有行，则不会返回列值为 abc（abc 后没有空格）的行。 但是可以忽略模式所要匹配的表达式中的尾随空格。 如果查询中的比较要返回包含 "abc"（abc 后没有空格）的所有行，则返回以 "abc" 开始并且具有零个或多个尾随空格的所有行。  
   
- 鉴于各数据类型的数据存储方式不同，如果使用包含 char**** 和 varchar**** 数据的模式进行字符串比较，可能无法传递 LIKE 比较。 下面的示例先将本地 char**** 变量传递给存储过程，再使用模式匹配来查找姓氏以一组指定字符开头的所有员工。  
+ 鉴于各数据类型的数据存储方式不同，如果使用包含 char 和 varchar 数据的模式进行字符串比较，可能无法传递 LIKE 比较。 下面的示例先将本地 char 变量传递给存储过程，再使用模式匹配来查找姓氏以一组指定字符开头的所有员工。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -106,9 +106,9 @@ EXEC FindEmployee @EmpLName = 'Barb';
 GO  
 ```  
   
- 当名字中包含的字符数小于 20 时，char 变量 (`@EmpLName`) 将包含尾随空格，这导致 `FindEmployee` 过程中没有行返回****。 由于 `LastName` 列为 varchar 类型，因此没有尾随空格****。 因为尾随空格是有意义的，所以此过程失败。  
+ 当名字中包含的字符数小于 20 时，char 变量 (`@EmpLName`) 将包含尾随空格，这导致 `FindEmployee` 过程中没有行返回。 由于 `LastName` 列为 varchar 类型，因此没有尾随空格。 因为尾随空格是有意义的，所以此过程失败。  
   
- 但以下示例会成功，因为没有向 varchar**** 变量中添加尾随空格。  
+ 但以下示例会成功，因为没有向 varchar 变量中添加尾随空格。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -126,7 +126,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
-FirstName      LastName            City
+FirstName      LastName            City
 ----------     -------------------- --------------- 
 Angela         Barbariol            Snohomish
 David          Barber               Snohomish
@@ -134,7 +134,7 @@ David          Barber               Snohomish
 ```
 
 ## <a name="pattern-matching-by-using-like"></a>使用 LIKE 的模式匹配  
- LIKE 支持 ASCII 模式匹配和 Unicode 模式匹配。 如果所有参数（match_expression、pattern 和 escape_character，如果存在）均为 ASCII 字符数据类型，则执行 ASCII 模式匹配******。 如果任何一个参数为 Unicode 数据类型，则所有参数都将转换为 Unicode，并执行 Unicode 模式匹配。 如果将 Unicode 数据（nchar**** 或 nvarchar**** 数据类型）与 LIKE 结合使用，尾随空格很重要；但对于非 Unicode 数据，尾随空格并不重要。 Unicode LIKE 与 ISO 标准兼容。 ASCII LIKE 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容。  
+ LIKE 支持 ASCII 模式匹配和 Unicode 模式匹配。 如果所有参数（match_expression、pattern 和 escape_character，如果存在）均为 ASCII 字符数据类型，则执行 ASCII 模式匹配。 如果任何一个参数为 Unicode 数据类型，则所有参数都将转换为 Unicode，并执行 Unicode 模式匹配。 如果将 Unicode 数据（nchar 或 nvarchar 数据类型）与 LIKE 结合使用，尾随空格很重要；但对于非 Unicode 数据，尾随空格并不重要。 Unicode LIKE 与 ISO 标准兼容。 ASCII LIKE 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容。  
   
  下面的一系列示例显示 ASCII LIKE 模式匹配与 Unicode LIKE 模式匹配所返回的行之间的差异。  
   
@@ -201,7 +201,7 @@ GO
   
  如果 LIKE 模式中的转义字符后面没有字符，此模式无效，且 LIKE 返回 FALSE。 如果转义字符后面的字符不是通配符，转义字符会遭放弃，且后面的字符会被视为模式中的常规字符。 这些字符包括百分号 (%)、下划线 (_) 和左方括号 ([) 通配符（如果它们包含在双方括号 ([ ]) 中的话）。 可以在双方括号字符 ([ ]) 内使用转义字符，包括转义脱字号 (^)、连字符 (-) 或右方括号 (])。  
   
- 0x0000 (char(0)****) 是 Windows 排序规则中未定义的字符，无法添加到 LIKE 中。  
+ 0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，无法添加到 LIKE 中。  
   
 ## <a name="examples"></a>示例  
   
@@ -223,7 +223,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
- FirstName             LastName             Phone
+ FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
  Shelby                Cook                 415-555-0121  
@@ -257,7 +257,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
-FirstName              LastName            Phone
+FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
 Gail                  Butler               1 (11) 500 555-0191  
@@ -267,7 +267,7 @@ Gail                  Griffin              450-555-0171
 Gail                  Moore                155-555-0169  
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
-(8 row(s) affected)  
+(8 row(s) affected)  
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  

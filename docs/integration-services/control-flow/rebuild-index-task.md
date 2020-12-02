@@ -18,10 +18,10 @@ ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7ea6820033ad5b545cc73ce79741b52953bd5caa
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197151"
 ---
 # <a name="rebuild-index-task"></a>“重新生成索引”任务

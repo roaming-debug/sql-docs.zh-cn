@@ -20,11 +20,11 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b825ff5cee4ceba526d59cc30dc0bb1205896171
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194629"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123424"
 ---
 # <a name="character-map-transformation"></a>字符映射表转换
 
@@ -89,7 +89,7 @@ ms.locfileid: "92194629"
 -   [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="character-map-transformation-editor"></a>字符映射表转换编辑器
-  可以使用“字符映射表转换编辑器”**** 对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
+  可以使用“字符映射表转换编辑器”对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
   
 ### <a name="options"></a>选项  
  **可用输入列**  

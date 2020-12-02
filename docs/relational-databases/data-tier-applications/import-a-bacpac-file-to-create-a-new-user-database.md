@@ -27,10 +27,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195579"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
@@ -69,7 +69,7 @@ ms.locfileid: "92195579"
   
 1.  连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例（无论是在内部部署中还是在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中）。  
   
-2.  在“对象资源管理器” **** 中，右键单击“数据库” ****，然后选择“导入数据层应用程序” **** 菜单项以启动向导。  
+2.  在“对象资源管理器” 中，右键单击“数据库” ，然后选择“导入数据层应用程序”  菜单项以启动向导。  
   
 3.  完成向导对话框：  
   
@@ -99,11 +99,11 @@ ms.locfileid: "92195579"
 ###  <a name="import-settings-page"></a><a name="Import_settings"></a> “导入设置”页  
  使用此页可以指定要导入的 .bacpac 文件的位置。  
   
--   **从本地磁盘导入** - 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径****。 路径名必须包含文件名和 .bacpac 扩展名。  
+-   **从本地磁盘导入** - 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
   
 -   **从 Azure 导入** - 从 Microsoft Azure 容器中导入一个 BACPAC 文件。 必须连接到 Microsoft Azure 容器才能验证此选项。 请注意，“从 Azure 导入”选项还要求为临时文件指定一个本地目录。 将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
   
-     在浏览 Azure 时，你将能够在单一帐户内的不同容器之间进行切换。 您必须指定一个单独的 .bacpac 文件以继续导入操作。 可以按“名称”、“大小”或“修改日期”对列进行排序************。  
+     在浏览 Azure 时，你将能够在单一帐户内的不同容器之间进行切换。 您必须指定一个单独的 .bacpac 文件以继续导入操作。 可以按“名称”、“大小”或“修改日期”对列进行排序。  
   
      若要继续，请指定要导入的 .bacpac 文件，然后单击 **“打开”**。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "92195579"
  若要继续，请单击 **“下一步”** 。  
   
 ###  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
- 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导入操作，请单击 **“完成”**。 若要取消导入操作并退出向导，请单击“取消” ****。  
+ 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导入操作，请单击 **“完成”**。 若要取消导入操作并退出向导，请单击“取消” 。  
   
 ###  <a name="progress-page"></a><a name="Progress"></a> “进度”页  
  此页将显示一个指示操作状态的进度栏。 若要查看详细状态，请单击 **“查看详细信息”** 选项。  

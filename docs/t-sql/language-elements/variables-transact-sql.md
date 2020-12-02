@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 264a277c45ebd1f067318625f7b0f1fb986389d4
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92196141"
 ---
 # <a name="variables-transact-sql"></a>变量 (Transact-SQL)
@@ -88,13 +88,13 @@ DECLARE 语句通过以下操作初始化 Transact-SQL 变量：
 * 指定系统提供的或用户定义的数据类型和长度。 对于数值变量还指定精度和小数位数。 对于 XML 类型的变量，可以指定一个可选的架构集合。
 * 将值设置为 NULL。
 
-例如，下面的 DECLARE**** 语句创建名为 \@mycounter**** 且数据类型为 int 的局部变量。  
+例如，下面的 DECLARE语句创建名为 \@mycounter 且数据类型为 int 的局部变量。  
 ```sql
 DECLARE @MyCounter INT;
 ```
 若要声明多个局部变量，请在定义的第一个局部变量后使用一个逗号，然后指定下一个局部变量名称和数据类型。
 
-例如，下面的 DECLARE**** 语句创建了三个局部变量，分别名为 \@LastName****、\@FirstName**** 和 \@StateProvince****，并将每个变量都初始化为 NULL：  
+例如，下面的 DECLARE 语句创建了三个局部变量，分别名为 \@LastName、\@FirstName 和 \@StateProvince，并将每个变量都初始化为 NULL：  
 ```sql
 DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2);
 ```

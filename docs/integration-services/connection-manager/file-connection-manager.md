@@ -21,11 +21,11 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebe86146e2ce4f25f05c9948071d3fc7a4d4edb8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728044"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123701"
 ---
 # <a name="file-connection-manager"></a>文件连接管理器
 
@@ -37,7 +37,7 @@ ms.locfileid: "91728044"
 ## <a name="usage-types-of-the-file-connection-manager"></a>文件连接管理器的使用类型  
  文件连接管理器的 **FileUsageType** 属性指定如何使用文件连接。 文件连接管理器可以创建文件、创建文件夹、使用现有文件或使用现有文件夹。  
   
- 下表列出了 **FileUsageType**的值。  
+ 下表列出了 **FileUsageType** 的值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -78,7 +78,7 @@ ms.locfileid: "91728044"
   
 ### <a name="options"></a>选项  
  **使用类型**  
- 指定“文件连接管理器”是连接到现有文件或文件夹，还是创建新的文件或文件夹。****  
+ 指定“文件连接管理器”是连接到现有文件或文件夹，还是创建新的文件或文件夹。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -88,10 +88,10 @@ ms.locfileid: "91728044"
 |现有文件夹|使用现有文件夹。|  
   
  **文件/文件夹**  
- 对于“文件”****，请指定要使用的文件。  
+ 对于“文件”，请指定要使用的文件。  
   
  对于 **“文件夹”**，请指定要使用的文件夹。  
   
  **“浏览”**  
- 通过使用“选择文件”**** 或“查找文件夹”**** 对话框选择文件或文件夹。  
+ 通过使用“选择文件”或“查找文件夹”对话框选择文件或文件夹。  
   

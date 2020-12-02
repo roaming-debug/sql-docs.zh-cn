@@ -22,11 +22,11 @@ ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 95d7bf7ac61ed2b79829a5aeb9d41c7f06485c8d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114876"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117938"
 ---
 # <a name="database_principal_id-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -45,7 +45,7 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 
 ## <a name="arguments"></a>参数
 principal_name  
-sysname 类型的表达式，表示数据库主体****。 如果省略 principal_name，`DATABASE_PRINCIPAL_ID` 返回当前用户的 ID**。 `DATABASE_PRINCIPAL_ID` 需要使用括号。
+sysname 类型的表达式，表示数据库主体。 如果省略 principal_name，`DATABASE_PRINCIPAL_ID` 返回当前用户的 ID。 `DATABASE_PRINCIPAL_ID` 需要使用括号。
   
 ## <a name="return-types"></a>返回类型
 **int**  

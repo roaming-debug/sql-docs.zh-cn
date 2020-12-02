@@ -18,11 +18,11 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430989"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123533"
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
 
@@ -87,17 +87,17 @@ ms.locfileid: "88430989"
 |函数依赖关系配置文件|**integer** 类型、 **char** 类型和 **datetime** 类型的列|  
 |包含配置文件|**integer** 类型、 **char** 类型和 **datetime** 类型的列|  
   
- \* 在上述有效的数据类型表中， **integer**、 **char**、 **datetime**和 **numeric** 类型分别包括以下特定的数据类型：  
+ \* 在上述有效的数据类型表中， **integer**、 **char**、 **datetime** 和 **numeric** 类型分别包括以下特定的数据类型：  
   
- Integer 类型包括 **bit**、 **tinyint**、 **smallint**、 **int**和 **bigint**。  
+ Integer 类型包括 **bit**、 **tinyint**、 **smallint**、 **int** 和 **bigint**。  
   
- Character 类型包括 **char**、 **nchar**、 **varchar**和 **nvarchar** ，但不包括 **varchar(max)** 和 **nvarchar(max)**。  
+ Character 类型包括 **char**、 **nchar**、 **varchar** 和 **nvarchar** ，但不包括 **varchar(max)** 和 **nvarchar(max)**。  
   
- Date 和 time 类型包括 **datetime**、 **smalldatetime**和 **timestamp**。  
+ Date 和 time 类型包括 **datetime**、 **smalldatetime** 和 **timestamp**。  
   
- Numeric 类型包括 **integer** 类型（ **bit**除外）、 **money**、 **smallmoney**、 **decimal**、 **float**、 **real**和 **numeric**。  
+ Numeric 类型包括 **integer** 类型（ **bit** 除外）、 **money**、 **smallmoney**、 **decimal**、 **float**、 **real** 和 **numeric**。  
   
- \* 除列 Null 比率配置文件以外，其他任何配置文件都不支持 image、text、XML、udt 和 variant 类型\* ********************。  
+ \* 除列 Null 比率配置文件以外，其他任何配置文件都不支持 image、text、XML、udt 和 variant 类型\* 。  
   
 ### <a name="valid-tables-and-columns"></a>有效的表和列  
  如果表或列为空，则数据事件探查将执行以下操作：  
@@ -138,10 +138,10 @@ ms.locfileid: "88430989"
  使用 **“数据事件探查任务编辑器”** 配置数据事件探查任务。 此编辑器有以下两页：  
   
  [“常规”页](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)  
- 在“常规”**** 页上，可指定输出文件或变量。 还可以选择 **“快速配置文件”** 对任务进行快速配置，以便使用默认的设置来计算配置文件。 有关详细信息，请参阅 [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
+ 在“常规”页上，可指定输出文件或变量。 还可以选择 **“快速配置文件”** 对任务进行快速配置，以便使用默认的设置来计算配置文件。 有关详细信息，请参阅 [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
   
  [“配置文件请求”页](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
- 在“配置文件请求”**** 页上，可指定数据源，选择要计算的数据配置文件并对其进行配置。 有关可以配置的各种配置文件的详细信息，请参阅以下主题：  
+ 在“配置文件请求”页上，可指定数据源，选择要计算的数据配置文件并对其进行配置。 有关可以配置的各种配置文件的详细信息，请参阅以下主题：  
   
 -   [候选键配置文件请求选项（数据事件探查任务）](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   

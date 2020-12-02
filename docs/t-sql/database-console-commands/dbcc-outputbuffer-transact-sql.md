@@ -23,16 +23,16 @@ ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: dfc426af5cc72e072cab1908930d265dc1cf91c6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111147"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119622"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-以十六进制和 ASCII 格式返回指定 session_id 的当前输出缓冲区**。
+以十六进制和 ASCII 格式返回指定 session_id 的当前输出缓冲区。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,7 +50,7 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
   
  request_id  
  要在当前会话中搜索的精确请求（批）。  
- 下面的查询返回 request_id**：  
+ 下面的查询返回 request_id：  
   
 ```sql
 SELECT request_id   
@@ -65,7 +65,7 @@ WHERE session_id = @@spid;
  取消严重级别从 0 到 10 的所有信息性消息。  
   
 ## <a name="remarks"></a>备注  
-DBCC OUTPUTBUFFER 显示发送到指定客户端 (session_id) 的结果**。 对于不包含输出流的进程，则返回错误消息。
+DBCC OUTPUTBUFFER 显示发送到指定客户端 (session_id) 的结果。 对于不包含输出流的进程，则返回错误消息。
   
 若要显示所执行的、其返回的结果由 DBCC OUTPUTBUFFER 所显示的语句，请执行 DBCC INPUTBUFFER。
   

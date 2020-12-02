@@ -28,11 +28,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 13a960ed74fe9947d82e6dee3701ce1ba6af7648
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547580"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124154"
 ---
 # <a name="collation-precedence"></a>排序规则优先级
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89547580"
   
 -   区分排序规则的运算符所使用的排序规则，这些运算符使用字符串输入但不返回字符串，如 LIKE 和 IN。  
   
-排序规则的优先顺序规则只应用于下列字符串数据类型：char、varchar、text、nchar、nvarchar 和 ntext************************。 具有其他数据类型的对象不参与排序规则计算。  
+排序规则的优先顺序规则只应用于下列字符串数据类型：char、varchar、text、nchar、nvarchar 和 ntext。 具有其他数据类型的对象不参与排序规则计算。  
   
 ## <a name="collation-labels"></a>排序规则标签  
 下表列出并说明了四个用于标识所有对象的排序规则的类别。 每个类别的名称叫做排序规则标签。  
@@ -97,7 +97,7 @@ ms.locfileid: "89547580"
   
      `WHERE ColumnA = ( 'abc' COLLATE French_CI_AS) COLLATE French_CS_AS`  
   
--   不允许进行 text 数据类型的代码页转换****。 如果排序规则的代码页不同，则不能将 text 表达式从一种排序规则转换为另一种排序规则****。 如果右边文本操作数的排序规则代码页与左边文本操作数的排序规则代码页不同，则不能为赋值运算符赋值。  
+-   不允许进行 text 数据类型的代码页转换。 如果排序规则的代码页不同，则不能将 text 表达式从一种排序规则转换为另一种排序规则。 如果右边文本操作数的排序规则代码页与左边文本操作数的排序规则代码页不同，则不能为赋值运算符赋值。  
   
 在数据类型转换之后确定排序规则优先顺序。 生成结果排序规则的操作数可以与提供最终结果数据类型的操作数不同。 例如，请看下面的批处理：  
   
@@ -223,7 +223,7 @@ a
 字符串串联运算符区分排序规则，两个字符串操作数和结果被赋以排序规则优先级最高的操作数的排序规则标签。 UNION ALL 和 CASE 语句不区分排序规则，所有的字符串操作数和最终结果都被赋以具有最高优先顺序的操作数的排序规则标签。 按列评估 UNION ALL 操作数和结果的排序规则优先顺序。  
   
 ### <a name="functions-and-collation"></a>函数和排序规则  
-对于 char、varchar 和 text 数据类型，CAST、CONVERT 和 COLLATE 函数区分排序规则************。 如果 CAST 和 CONVERT 函数的输入和输出是字符串，则输出字符串具有输入字符串的排序规则标签。 如果输入不是字符串，则输出字符串为强制默认并被赋以连接所使用的当前数据库的排序规则，或是包含引用 CAST 或 CONVERT 的用户定义函数、存储过程或触发器的数据库的排序规则。  
+对于 char、varchar 和 text 数据类型，CAST、CONVERT 和 COLLATE 函数区分排序规则。 如果 CAST 和 CONVERT 函数的输入和输出是字符串，则输出字符串具有输入字符串的排序规则标签。 如果输入不是字符串，则输出字符串为强制默认并被赋以连接所使用的当前数据库的排序规则，或是包含引用 CAST 或 CONVERT 的用户定义函数、存储过程或触发器的数据库的排序规则。  
   
  对于返回字符串但不使用字符串输入的内置函数，结果字符串为强制默认并被赋以当前数据库的排序规则，或是包含引用该函数的用户定义函数、存储过程或触发器的数据库的排序规则。  
   

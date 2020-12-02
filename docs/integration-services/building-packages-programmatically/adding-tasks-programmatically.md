@@ -18,11 +18,11 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a14261bb60eece1497594a6aa70b46748ed8cd1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480789"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123810"
 ---
 # <a name="adding-tasks-programmatically"></a>以编程方式添加任务
 
@@ -48,7 +48,7 @@ ms.locfileid: "89480789"
  若要向包中添加任务，您需要一个具有现有 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 集合的容器。 大多数情况下，要添加到该集合中的任务为包。 若要向容器的该集合中添加新任务可执行文件，可以调用 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 方法。 该方法只有一个参数，是个字符串，它包含要添加的任务的 CLSID、PROGID、STOCK 名字对象或 <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A>。  
   
 ## <a name="task-names"></a>任务名称  
- 虽然可以通过名称或 ID 指定任务，但 STOCK**** 名字对象是 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 方法中最常用的参数。 若要向 STOCK**** 名字对象所标识的可执行文件添加任务，请使用下列语法：  
+ 虽然可以通过名称或 ID 指定任务，但 STOCK 名字对象是 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 方法中最常用的参数。 若要向 STOCK 名字对象所标识的可执行文件添加任务，请使用下列语法：  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -60,7 +60,7 @@ Dim exec As Executable = package.Executables.Add("STOCK:BulkInsertTask")
   
 ```  
   
- 下面列出了在 STOCK**** 名字对象后使用的每个任务的名称。  
+ 下面列出了在 STOCK 名字对象后使用的每个任务的名称。  
   
 -   ActiveXScriptTask  
   
@@ -122,7 +122,7 @@ Dim exec As Executable = package.Executables.Add( _
   "Culture=neutral, PublicKeyToken=89845dcd8080cc91")  
 ```  
   
- 可以使用类的 AssemblyQualifiedName**** 属性，以编程方式获取任务的长名称，而无须指定任务版本，如下面的示例所示。 此示例需要引用 Microsoft.SqlServer.SQLTask 程序集。  
+ 可以使用类的 AssemblyQualifiedName 属性，以编程方式获取任务的长名称，而无须指定任务版本，如下面的示例所示。 此示例需要引用 Microsoft.SqlServer.SQLTask 程序集。  
   
 ```csharp  
 using Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask;  
@@ -138,7 +138,7 @@ Imports Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask
       GetType(Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask).AssemblyQualifiedName)  
 ```  
   
- 下面的代码示例演示如何从新包创建 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 集合，并使用相应任务的 STOCK**** 名字对象向该集合添加一个文件系统任务和一个大容量插入任务。 此示例需要引用 Microsoft.SqlServer.FileSystemTask 和 Microsoft.SqlServer.BulkInsertTask 程序集。  
+ 下面的代码示例演示如何从新包创建 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 集合，并使用相应任务的 STOCK 名字对象向该集合添加一个文件系统任务和一个大容量插入任务。 此示例需要引用 Microsoft.SqlServer.FileSystemTask 和 Microsoft.SqlServer.BulkInsertTask 程序集。  
   
 ```csharp  
 using System;  

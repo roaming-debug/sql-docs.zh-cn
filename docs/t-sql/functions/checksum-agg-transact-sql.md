@@ -21,11 +21,11 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a423fefd8acfa2e917605955658f18c0a55c77d7
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114921"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119044"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ DISTINCT
 整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 `CHECKSUM_AGG` 不允许使用聚合函数或子查询。
   
 ## <a name="return-types"></a>返回类型
-将所有表达式值的校验和作为 int 类型返回******。
+将所有表达式值的校验和作为 int 类型返回。
   
 ## <a name="remarks"></a>注解  
 `CHECKSUM_AGG` 可以检测表中的更改。

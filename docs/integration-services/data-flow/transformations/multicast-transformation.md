@@ -20,10 +20,10 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 92dd1a4351c9cfdc1bedb0958e370e382b08ecc0
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197062"
 ---
 # <a name="multicast-transformation"></a>多播转换
@@ -55,7 +55,7 @@ ms.locfileid: "92197062"
  在左侧选择输出可以在右侧的表中查看其属性。  
   
  **属性**  
- 除了“名称”**** 和“说明”**** 外，所有列出的输出属性都是只读的。  
+ 除了“名称”和“说明”外，所有列出的输出属性都是只读的。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)   

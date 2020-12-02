@@ -23,11 +23,11 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1cf2f0799896bfaac652e00a7736a0de3d8be97e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194599"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123372"
 ---
 # <a name="export-column-transformation"></a>导出列转换
 
@@ -44,11 +44,11 @@ ms.locfileid: "92194599"
 |False|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
 |True|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
 |False|True|否|该转换将创建一个新文件并将数据写入到该文件中。|  
-|True|True|否|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
+|True|True|否|该转换的设计时验证失败。 将两个属性都设置为 **true** 是无效的。|  
 |False|False|是|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
 |False|True|是|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
 |True|错误|是|转换将打开文件并将数据写入到文件末尾。|  
-|True|True|是|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
+|True|True|是|该转换的设计时验证失败。 将两个属性都设置为 **true** 是无效的。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>导出列转换的配置  
  可以按照下列方式配置导出列转换：  
@@ -103,7 +103,7 @@ ms.locfileid: "92194599"
  查看输出的名称。 单击名称可以展开视图以包括列。  
   
  **列**  
- 查看在“导出列转换编辑器”对话框的“列”页中选择的输出列。********  
+ 查看在“导出列转换编辑器”对话框的“列”页中选择的输出列。  
   
  **错误**  
  指定发生错误时要执行的操作：忽略失败、重定向行或使组件失败。  

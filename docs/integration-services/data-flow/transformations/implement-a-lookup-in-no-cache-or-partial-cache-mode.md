@@ -17,10 +17,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f971d0788b33420495f1ae7ceeaca56599c8e239
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194161"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>在不缓存模式或部分缓存模式下实现查找
@@ -53,7 +53,7 @@ ms.locfileid: "92194161"
   
 4.  双击源或前一转换以配置组件。  
   
-5.  双击查找转换，然后在“查找转换编辑器”**** 中的“常规”**** 页上，选择“部分缓存”**** 或“不缓存”****。  
+5.  双击查找转换，然后在“查找转换编辑器”中的“常规”页上，选择“部分缓存”或“不缓存”。  
   
 6.  请从 **“指定如何处理没有匹配项的行”** 列表中选择一个错误处理选项。  
   
@@ -93,9 +93,9 @@ ms.locfileid: "92194161"
   
 11. 如果在步骤 5 中选择了 **“部分缓存”** ，则在 **“高级”** 页上，设置以下缓存选项：  
   
-    -   从“缓存大小(32 位)”**** 列表中，为 32 位环境选择缓存大小。  
+    -   从“缓存大小(32 位)”列表中，为 32 位环境选择缓存大小。  
   
-    -   从“缓存大小(64 位)”**** 列表中，为 64 位环境选择缓存大小。  
+    -   从“缓存大小(64 位)”列表中，为 64 位环境选择缓存大小。  
   
     -   若要缓存在引用中有匹配项的行，请选择 **“为没有匹配项的行启用缓存”**。  
   

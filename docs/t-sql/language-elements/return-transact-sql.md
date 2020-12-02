@@ -26,10 +26,10 @@ ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 837c84bbeda46bf78d670124cc2d33f820fe9891
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195516"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
@@ -52,7 +52,7 @@ RETURN [ integer_expression ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- 可以选择返回 int****。  
+ 可以选择返回 int。  
   
 > [!NOTE]  
 >  除非另外说明，否则所有系统存储过程都将返回一个 0 值。 此值表示成功，非 0 值表示失败。  

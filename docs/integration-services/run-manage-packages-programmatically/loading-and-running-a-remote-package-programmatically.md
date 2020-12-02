@@ -16,10 +16,10 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3b5f944c2fb6b0a2029ed7b8481a8b7f71485a41
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92192460"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以编程方式加载和运行远程包
@@ -41,13 +41,13 @@ ms.locfileid: "92192460"
   
 -   [使用 Web 服务或远程组件以编程方式运行远程包](#service)  
   
- 本主题中用于加载和保存包的几乎所有方法都需要引用 Microsoft.SqlServer.ManagedDTS 程序集****。 但是本主题中演示的用于执行 sp_start_job 存储过程的 ADO.NET 方法是一个例外，该方法只需引用 System.Data********。 在新项目中添加对 Microsoft.SqlServer.ManagedDTS 程序集的引用后，请使用 using 或 Imports 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间************。  
+ 本主题中用于加载和保存包的几乎所有方法都需要引用 Microsoft.SqlServer.ManagedDTS 程序集。 但是本主题中演示的用于执行 sp_start_job 存储过程的 ADO.NET 方法是一个例外，该方法只需引用 System.Data。 在新项目中添加对 Microsoft.SqlServer.ManagedDTS 程序集的引用后，请使用 using 或 Imports 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
   
 ###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a>使用 SQL Server 代理以编程方式在服务器上运行远程包  
- 下面的代码示例演示如何以编程方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在服务器上运行远程包。 该示例代码调用系统存储过程 sp_start_job，该存储过程启动一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业****。 该存储过程启动的作业名为 `RunSSISPackage`，并且此作业位于远程计算机上。 然后 `RunSSISPackage` 作业在远程计算机上运行包。  
+ 下面的代码示例演示如何以编程方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在服务器上运行远程包。 该示例代码调用系统存储过程 sp_start_job，该存储过程启动一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 该存储过程启动的作业名为 `RunSSISPackage`，并且此作业位于远程计算机上。 然后 `RunSSISPackage` 作业在远程计算机上运行包。  
   
 > [!NOTE]  
->  sp_start_job 存储过程的返回值指示该存储过程是否已成功启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业****。 此返回值不指示该包成功还是失败。  
+>  sp_start_job 存储过程的返回值指示该存储过程是否已成功启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 此返回值不指示该包成功还是失败。  
   
  有关对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 Microsoft 文章[从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)。  
   
@@ -152,7 +152,7 @@ namespace LaunchSSISPackageAgent_CS
  上面的以编程方式在服务器上运行包的解决方案不需要服务器上的任何自定义代码。 但是，您可能更倾向于不依赖 SQL Server 代理来执行包的解决方案。 下面的示例演示可在服务器上创建用于在本地启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的 Web 服务，以及可用于从客户端计算机调用 Web 服务的测试应用程序。 如果你更倾向于创建远程组件而不是 Web 服务，则可在远程组件中使用同一代码逻辑，只需很少的更改。 但是，与 Web 服务相比，远程组件可能需要更广泛的配置。  
   
 > [!IMPORTANT]  
->  使用 Web 服务的默认身份验证和授权设置，加载和执行包时通常没有足够的权限来访问 SQL Server 或文件系统。 可能需要在 web.config 文件中配置 Web 服务的身份验证和授权设置并相应地分配数据库和文件系统权限，以便为 Web 服务分配适当的权限****。 有关 Web、数据库和文件系统权限的全面讨论已超出了本主题的范围。  
+>  使用 Web 服务的默认身份验证和授权设置，加载和执行包时通常没有足够的权限来访问 SQL Server 或文件系统。 可能需要在 web.config 文件中配置 Web 服务的身份验证和授权设置并相应地分配数据库和文件系统权限，以便为 Web 服务分配适当的权限。 有关 Web、数据库和文件系统权限的全面讨论已超出了本主题的范围。  
   
 > [!IMPORTANT]  
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类中用于 SSIS 包存储的方法仅支持“.”、localhost 或本地服务器的服务器名称。 不能使用“(local)”。  
@@ -161,13 +161,13 @@ namespace LaunchSSISPackageAgent_CS
  下面的代码示例演示如何创建和测试 Web 服务。  
   
 #### <a name="creating-the-web-service"></a>创建 Web 服务  
-  包可从文件或 SQL Server 直接加载，也可以从 SSIS 包存储区加载，该存储区在 SQL Server 和特殊文件系统文件夹中管理包存储。 此示例支持所有可用选项，方法是使用 Select Case 或 switch 构造来选择启动包所用的相应语法，并相应地连接输入参数********。 LaunchPackage Web 服务方法返回的包执行结果为整数形式，而不是 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 值，以便客户端计算机不需要引用任何 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集。  
+  包可从文件或 SQL Server 直接加载，也可以从 SSIS 包存储区加载，该存储区在 SQL Server 和特殊文件系统文件夹中管理包存储。 此示例支持所有可用选项，方法是使用 Select Case 或 switch 构造来选择启动包所用的相应语法，并相应地连接输入参数。 LaunchPackage Web 服务方法返回的包执行结果为整数形式，而不是 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 值，以便客户端计算机不需要引用任何 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集。  
   
 ###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>以编程方式创建 Web 服务以在服务器上运行包  
   
 1.  打开 Visual Studio，并使用首选的编程语言创建一个 Web 服务项目。 示例代码将该项目命名为 LaunchSSISPackageService。  
   
-2.  添加对 Microsoft.SqlServer.ManagedDTS 的引用，然后向 Microsoft.SqlServer.Dts.Runtime 命名空间的代码文件添加 Imports 或 using 语句****************。  
+2.  添加对 Microsoft.SqlServer.ManagedDTS 的引用，然后向 Microsoft.SqlServer.Dts.Runtime 命名空间的代码文件添加 Imports 或 using 语句。  
   
 3.  将 LaunchPackage Web 服务方法的示例代码粘贴到类中。 （该示例显示了代码窗口的全部内容。）  
   

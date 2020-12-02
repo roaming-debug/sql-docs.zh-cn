@@ -30,10 +30,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195948"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
@@ -56,7 +56,7 @@ ms.locfileid: "92195948"
   
 -   **_key_in**，唯一标识每行的列。  
   
--   **_key_out**，标识一组重复行的列。 在规范数据行中， **_key_out** 列的值就是 **_key_in** 列。 **_key_out** 中的值相同的行属于同一个组。 组的 **_key_out**值对应于规范数据行中 **_key_in** 值。  
+-   **_key_out**，标识一组重复行的列。 在规范数据行中， **_key_out** 列的值就是 **_key_in** 列。 **_key_out** 中的值相同的行属于同一个组。 组的 **_key_out** 值对应于规范数据行中 **_key_in** 值。  
   
 -   **_score**，一个介于 0 和 1 之间的值，指示输入行与规范行之间的相似性。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "92195948"
   
 ### <a name="options"></a>选项  
  **“无缓存”**  
- 使用列表框选择现有的 OLE DB 连接管理器，或使用“新建”按钮创建新的连接。****  
+ 使用列表框选择现有的 OLE DB 连接管理器，或使用“新建”按钮创建新的连接。  
   
  **新建**  
  通过使用“配置 OLE DB 连接管理器”  对话框创建新的连接。  
@@ -129,7 +129,7 @@ ms.locfileid: "92195948"
  选择是否在转换的输出中包含输入列。 用于分组的所有列将自动复制到输出中。 通过选中此列可以包含其他列。  
   
  **输入列**  
- 选择先前在“可用输入列”**** 列表中选中的一个输入列。  
+ 选择先前在“可用输入列”列表中选中的一个输入列。  
   
  **输出别名**  
  为相应的输出列输入一个描述性名称。 默认情况下，输出列名称与输入列名称相同。  

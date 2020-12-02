@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49ddfeda6b720d774e2b1d7c089fb295d185e40a
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93067373"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
@@ -70,7 +70,7 @@ SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression
 
 ## <a name="arguments"></a>参数
 **@** _local_variable_  
-除 **cursor** 、 **text** 、 **ntext** 、 **image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 (@) 开头。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
+除 **cursor**、**text**、**ntext**、**image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 (@) 开头。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
 property_name  
 用户定义类型的属性。  
@@ -82,7 +82,7 @@ udt_name
 公共语言运行时 (CLR) 用户定义类型的名称。  
   
 `{ . | :: }`  
-指定 CLR 用户定义类型的方法。 对于实例（非静态）方法，请使用句点 ( **.** )。 对于静态方法，请使用两个冒号 (::)。 若要调用 CLR 用户定义类型的方法、属性或字段，必须对类型具有 EXECUTE 权限。  
+指定 CLR 用户定义类型的方法。 对于实例（非静态）方法，请使用句点 (**.**)。 对于静态方法，请使用两个冒号 (::)。 若要调用 CLR 用户定义类型的方法、属性或字段，必须对类型具有 EXECUTE 权限。  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 用户定义类型的方法，它使用一个或多个参数来修改类型实例的状态。 静态方法必须是公共的。  

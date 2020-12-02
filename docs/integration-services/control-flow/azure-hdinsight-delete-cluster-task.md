@@ -15,25 +15,25 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8e081ecc3eecf44e358d5288fa689e2676d21f22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496039"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123661"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight 删除群集任务
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-Azure HDInsight 删除群集任务启用一个 SSIS 包来删除指定的 Azure 订阅和资源组中的一个 Azure HDInsight 群集****。
+Azure HDInsight 删除群集任务启用一个 SSIS 包来删除指定的 Azure 订阅和资源组中的一个 Azure HDInsight 群集。
   
-Azure HDInsight 删除群集任务是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的一个组件****。
+Azure HDInsight 删除群集任务是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的一个组件。
   
 > [!NOTE]
 > 删除 HDInsight 群集可能需要 10~20 分钟。  
   
-若要添加 **Azure HDInsight 删除群集任务**，可将其拖放到 SSIS 设计器，然后双击或右键单击“编辑”， **** 以查看以下 **Azure Blob 删除群集任务编辑器** 对话框。  
+若要添加 **Azure HDInsight 删除群集任务**，可将其拖放到 SSIS 设计器，然后双击或右键单击“编辑”，  以查看以下 **Azure Blob 删除群集任务编辑器** 对话框。  
   
 下表提供了此对话框中的字段说明。  
   

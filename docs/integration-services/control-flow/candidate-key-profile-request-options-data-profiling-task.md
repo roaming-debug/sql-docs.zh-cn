@@ -14,11 +14,11 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 499f56a0ce11bc68ad046035ff0a43d80ae4bfe7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431039"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123592"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候选键配置文件请求选项（数据事件探查任务）
 
@@ -35,13 +35,13 @@ ms.locfileid: "88431039"
 ## <a name="understanding-the-selection-of-columns-for-the-keycolumns-property"></a>了解如何为 KeyColumns 属性选择列  
  每个 **“候选键配置文件请求”** 都会计算由单个列或多个列组成的单个候选键的键强度：  
   
--   如果仅在 **KeyColumns**中选择了一个列，则该任务将计算那一个列的键强度。  
+-   如果仅在 **KeyColumns** 中选择了一个列，则该任务将计算那一个列的键强度。  
   
--   如果在 **KeyColumns**中选择了多个列，则该任务将计算由所有选定列组成的组合键的键强度。  
+-   如果在 **KeyColumns** 中选择了多个列，则该任务将计算由所有选定列组成的组合键的键强度。  
   
 -   如果在 **KeyColumns** 中选择通配符 **(\*)** ，则该任务将计算表或视图中的每个列的键强度。  
   
- 例如，假定有一个包含列 A、B 和 C 的示例表，则您可以在 **KeyColumns**中进行以下选择：  
+ 例如，假定有一个包含列 A、B 和 C 的示例表，则您可以在 **KeyColumns** 中进行以下选择：  
   
 -   在\*KeyColumns **中选择 (**) 和 列 C。 该任务将计算列 C 的键强度，然后计算组合候选键 (A, C) 和 (B, C) 的键强度。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "88431039"
  显示所选表的名称。 此选项是只读的。  
   
 #### <a name="keycolumns-options"></a>KeyColumns 选项  
- 对于在 **KeyColumns**中选定进行分析的每个列或针对 **(\*)** 选项，将显示以下选项。  
+ 对于在 **KeyColumns** 中选定进行分析的每个列或针对 **(\*)** 选项，将显示以下选项。  
   
  有关详细信息，请参阅本主题前面的“了解如何为 KeyColumns 属性选择列”部分。  
   
@@ -123,14 +123,14 @@ ms.locfileid: "88431039"
 |值|说明|  
 |-----------|-----------------|  
 |**无**|未指定阈值。 不管键强度值如何，都会报告键强度。|  
-|**Specified**|在 **KeyStrengthThreshold**中指定了阈值。 仅当键强度大于阈值时，才会报告键强度。|  
+|**Specified**|在 **KeyStrengthThreshold** 中指定了阈值。 仅当键强度大于阈值时，才会报告键强度。|  
 |**Exact**|未指定阈值。 仅当选定列为完全匹配的键时，才报告键强度。|  
   
  **KeyStrengthThreshold**  
- 指定阈值（使用介于 0 和 1 之间的值），仅当键强度大于该阈值时，才会报告键强度。 此属性的默认值为 0.95。 仅当选择了 **Specified** 作为 **KeyStrengthThresholdSetting**时，才会启用该选项。  
+ 指定阈值（使用介于 0 和 1 之间的值），仅当键强度大于该阈值时，才会报告键强度。 此属性的默认值为 0.95。 仅当选择了 **Specified** 作为 **KeyStrengthThresholdSetting** 时，才会启用该选项。  
   
  **MaxNumberOfViolations**  
- 指定要在输出中报告的候选键冲突的最大数量。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **KeyStrengthThresholdSetting**时，才会禁用该选项。  
+ 指定要在输出中报告的候选键冲突的最大数量。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **KeyStrengthThresholdSetting** 时，才会禁用该选项。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

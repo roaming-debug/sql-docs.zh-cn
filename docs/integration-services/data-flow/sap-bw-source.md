@@ -12,10 +12,10 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8d62e20117bf23511a1d261142a3618dcbd5095a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195324"
 ---
 # <a name="sap-bw-source"></a>SAP BW 源
@@ -49,19 +49,19 @@ ms.locfileid: "92195324"
   
 1.  通过 SAP GUI 登录 SAP Netweaver BW，输入事务代码 SM59，创建一个 RFC 目标：  
   
-    1.  对于“连接类型”，选择“TCP/IP”********。  
+    1.  对于“连接类型”，选择“TCP/IP”。  
   
     2.  对于 **“激活类型”**，选择 **“注册服务器程序”**。  
   
-    3.  对于“与目标系统的通信类型”****，选择“非 Unicode (非活动 MDMP 设置)”****。  
+    3.  对于“与目标系统的通信类型”，选择“非 Unicode (非活动 MDMP 设置)”。  
   
     4.  分配适当的程序 ID。  
   
 2.  创建 Open Hub 目标：  
   
-    1.  转到 Administrator Workbench（事务代码 RSA1），在左窗格中选择****“Open Hub 目标”。  
+    1.  转到 Administrator Workbench（事务代码 RSA1），在左窗格中选择“Open Hub 目标”。  
   
-    2.  在中间窗格中，右键单击 InfoArea，然后选择****“创建 Open Hub 目标”。  
+    2.  在中间窗格中，右键单击 InfoArea，然后选择“创建 Open Hub 目标”。  
   
     3.  对于 **“目标类型”**，选择 **“第三方工具”**，然后输入之前创建的 RFC 目标。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "92195324"
   
 3.  创建数据传输进程 (DTP)：  
   
-    1.  在 InfoArea 的中间窗格中，右键单击之前创建的目标，然后选择****“创建数据传输进程”。  
+    1.  在 InfoArea 的中间窗格中，右键单击之前创建的目标，然后选择“创建数据传输进程”。  
   
     2.  配置、保存并激活 DTP。  
   
@@ -105,11 +105,11 @@ ms.locfileid: "92195324"
   
 -   根据所选择的数据提取方法，提供以下额外信息：  
   
-    -   对于****“P - 触发进程链”选项，提供网关主机名称、网关服务名称、RFC 目标的程序 ID 和进程链的名称。  
+    -   对于“P - 触发进程链”选项，提供网关主机名称、网关服务名称、RFC 目标的程序 ID 和进程链的名称。  
   
-    -   对于****“W - 等待通知”选项，提供网关主机名称、网关服务器名称和 RFC 目标的程序 ID。 还可以指定超时时间（以秒为单位）。 超时是源收到通知前的最长等待时间。  
+    -   对于“W - 等待通知”选项，提供网关主机名称、网关服务器名称和 RFC 目标的程序 ID。 还可以指定超时时间（以秒为单位）。 超时是源收到通知前的最长等待时间。  
   
-    -   对于“E - 仅提取”**** 选项，提供请求 ID。  
+    -   对于“E - 仅提取”选项，提供请求 ID。  
   
 -   指定字符串转换规则。 （例如，根据 SAP Netweaver BW 是否为 Unicode 转换所有字符串，或者将所有字符串转换为 **varchar** 或 **nvarchar**）。  
   

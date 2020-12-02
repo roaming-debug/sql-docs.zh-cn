@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 97800bdd8137d20fabec298bce235bd2a4232b79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428579"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122743"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SELECT、INSERT、UPDATE 或 DELETE 语句时都会发生 Degree of Parallelism (7.0 Insert) **** 事件类。  
+  每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SELECT、INSERT、UPDATE 或 DELETE 语句时都会发生 Degree of Parallelism (7.0 Insert)  事件类。  
   
  当该事件包含在跟踪中时，如果经常发生这些事件则所引起的开销可能会明显影响性能。 若要最大限度地降低引起的开销，请仅将此事件类用于在短时间内监视特定问题的跟踪操作。  
   

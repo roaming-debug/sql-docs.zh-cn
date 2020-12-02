@@ -26,27 +26,27 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0beac97d600e95f48921a5eb8229c0ff5bff9b75
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727584"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123828"
 ---
 # <a name="adding-connections-programmatically"></a>以编程方式添加连接
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类表示与外部数据源的物理连接。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类可将连接的实现细节与运行时隔离。 这可使运行时以一致且可预测的方式与每个连接管理器进行交互。 连接管理器包含一组所有连接通用的常用属性，如 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>。 但是，通常配置连接管理器只需 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> 属性。 在其他编程范例中，连接类会提供一些方法（如 Open**** 或 Connect ****）以物理方式建立与数据源的连接，而不同的是，运行时引擎会在包运行时管理包的所有连接。  
+  <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类表示与外部数据源的物理连接。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类可将连接的实现细节与运行时隔离。 这可使运行时以一致且可预测的方式与每个连接管理器进行交互。 连接管理器包含一组所有连接通用的常用属性，如 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>。 但是，通常配置连接管理器只需 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> 属性。 在其他编程范例中，连接类会提供一些方法（如 Open 或 Connect ）以物理方式建立与数据源的连接，而不同的是，运行时引擎会在包运行时管理包的所有连接。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 类是一个已添加到该包并且可在运行时使用的连接管理器的集合。 可以使用该集合的 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> 方法，并提供一个用于指示连接管理器类型的字符串，以向该集合添加更多的连接管理器。 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> 方法返回已添加到该包的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 实例。  
   
 ## <a name="intrinsic-properties"></a>内部属性  
- <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类公开一组所有连接通用的属性。 但是，有时您需要访问特定连接类型特有的属性。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A> 类的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 集合提供对这些属性的访问。 可以使用索引器或属性名称以及 GetValue 方法从集合检索这些属性，并使用 SetValue 方法设置属性的值********。 设置基础连接对象属性的属性的另一种方法是：获取该对象的实际实例并直接设置其属性。 若要获取基础连接，请使用连接管理器的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A> 属性。 下面的代码行显示了一行 C# 代码，该代码行创建一个具有基础类 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass> 的 ADO.NET 连接管理器。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类公开一组所有连接通用的属性。 但是，有时您需要访问特定连接类型特有的属性。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A> 类的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 集合提供对这些属性的访问。 可以使用索引器或属性名称以及 GetValue 方法从集合检索这些属性，并使用 SetValue 方法设置属性的值。 设置基础连接对象属性的属性的另一种方法是：获取该对象的实际实例并直接设置其属性。 若要获取基础连接，请使用连接管理器的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A> 属性。 下面的代码行显示了一行 C# 代码，该代码行创建一个具有基础类 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass> 的 ADO.NET 连接管理器。  
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- 这可将托管连接管理器对象转换为其基础连接对象。 如果使用的是 C++，则需要调用 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象的 QueryInterface**** 方法，并请求基础连接对象的接口。  
+ 这可将托管连接管理器对象转换为其基础连接对象。 如果使用的是 C++，则需要调用 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象的 QueryInterface 方法，并请求基础连接对象的接口。  
   
  下表列出了随 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的连接管理器。 此外，还有 `package.Connections.Add("xxx")` 语句中使用的字符串。 若要获取所有连接管理器的列表，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   

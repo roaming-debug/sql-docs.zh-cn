@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0b0c259abda86eef45cc241453caae074d845c3e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195505"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -55,14 +55,14 @@ ROLLBACK { TRAN | TRANSACTION }
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- transaction_name**  
- 是为 BEGIN TRANSACTION 上的事务分配的名称。 transaction_name 必须符合标识符规则，但只使用事务名称的前 32 个字符**。 嵌套事务时，transaction_name 必须是最外面的 BEGIN TRANSACTION 语句中的名称**。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此**。  
+ transaction_name  
+ 是为 BEGIN TRANSACTION 上的事务分配的名称。 transaction_name 必须符合标识符规则，但只使用事务名称的前 32 个字符。 嵌套事务时，transaction_name 必须是最外面的 BEGIN TRANSACTION 语句中的名称。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
   
  **@** *tran_name_variable*  
  用户定义的、含有有效事务名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量   。  
   
- savepoint_name**  
- SAVE TRANSACTION 语句中的 savepoint_name**。 savepoint_name 必须遵守标识符规则**。 当条件回滚应只影响事务的一部分时，可使用 savepoint_name**。  
+ savepoint_name  
+ SAVE TRANSACTION 语句中的 savepoint_name。 savepoint_name 必须遵守标识符规则。 当条件回滚应只影响事务的一部分时，可使用 savepoint_name。  
   
  **@** *savepoint_variable*  
  是用户定义的、包含有效保存点名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量   。  
@@ -71,16 +71,16 @@ ROLLBACK { TRAN | TRANSACTION }
  ROLLBACK TRANSACTION 语句不生成显示给用户的消息。 如果在存储过程或触发器中需要警告，请使用 RAISERROR 或 PRINT 语句。 RAISERROR 是用于指出错误的首选语句。  
   
 ## <a name="general-remarks"></a>一般备注  
- 不带 savepoint_name 和 transaction_name 的 ROLLBACK TRANSACTION 将回滚到事务的起点****。 嵌套事务时，该语句将所有内层事务回滚到最外面的 BEGIN TRANSACTION 语句。 在这两种情况下，ROLLBACK TRANSACTION 都将 @@TRANCOUNT 系统函数减小为 0。 ROLLBACK TRANSACTION savepoint_name 不会减小 @@TRANCOUNT**。  
+ 不带 savepoint_name 和 transaction_name 的 ROLLBACK TRANSACTION 将回滚到事务的起点。 嵌套事务时，该语句将所有内层事务回滚到最外面的 BEGIN TRANSACTION 语句。 在这两种情况下，ROLLBACK TRANSACTION 都将 @@TRANCOUNT 系统函数减小为 0。 ROLLBACK TRANSACTION savepoint_name 不会减小 @@TRANCOUNT。  
   
- 在由 BEGIN DISTRIBUTED TRANSACTION 显式启动或从本地事务升级而来的分布式事务中，ROLLBACK TRANSACTION 不能引用 savepoint_name**。  
+ 在由 BEGIN DISTRIBUTED TRANSACTION 显式启动或从本地事务升级而来的分布式事务中，ROLLBACK TRANSACTION 不能引用 savepoint_name。  
   
  在执行 COMMIT TRANSACTION 语句后不能回滚事务，但是 COMMIT TRANSACTION 与包含在要回滚的事务中的嵌套事务关联时除外。 在这种情况下，嵌套事务会回滚，即使已对它发出 COMMIT TRANSACTION，也不例外。  
   
  在事务内允许有重复的保存点名称，但如果 ROLLBACK TRANSACTION 使用重复的保存点名称，则只回滚到最近的使用该保存点名称的 SAVE TRANSACTION。  
   
 ## <a name="interoperability"></a>互操作性  
- 在存储过程中，不带 savepoint_name 或 transaction_name 的 ROLLBACK TRANSACTION 语句会将所有语句回滚到最外面的 BEGIN TRANSACTION****。 在存储过程中，ROLLBACK TRANSACTION 语句使 @@TRANCOUNT 在存储过程完成时的值不同于调用此存储过程时的 @@TRANCOUNT 值，并且生成信息性消息。 该信息不影响后面的处理。  
+ 在存储过程中，不带 savepoint_name 或 transaction_name 的 ROLLBACK TRANSACTION 语句会将所有语句回滚到最外面的 BEGIN TRANSACTION。 在存储过程中，ROLLBACK TRANSACTION 语句使 @@TRANCOUNT 在存储过程完成时的值不同于调用此存储过程时的 @@TRANCOUNT 值，并且生成信息性消息。 该信息不影响后面的处理。  
   
  如果在触发器中发出 ROLLBACK TRANSACTION：  
   

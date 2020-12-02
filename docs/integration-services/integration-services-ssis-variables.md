@@ -20,10 +20,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193820"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
@@ -82,7 +82,7 @@ ms.locfileid: "92193820"
  有关变量的实际使用情况的详细信息，请参阅 [在包中使用变量]()。  
   
 ## <a name="properties-of-variables"></a>变量属性  
- 你可通过在“变量”窗口或“属性”窗口中设置以下属性来配置用户定义变量********。 某些属性仅在“属性”窗口中提供。  
+ 你可通过在“变量”窗口或“属性”窗口中设置以下属性来配置用户定义变量。 某些属性仅在“属性”窗口中提供。  
   
 > [!NOTE]  
 >  对系统变量唯一可配置的选项是指定变量在更改值时是否引发事件。  
@@ -91,7 +91,7 @@ ms.locfileid: "92193820"
  指定对变量的描述。  
   
  **EvaluateAsExpression**    
- 将此属性设置为 **True**时，所提供的表达式可用于设置变量值。  
+ 将此属性设置为 **True** 时，所提供的表达式可用于设置变量值。  
   
  **表达式**    
  指定分配给该变量的表达式。  
@@ -100,13 +100,13 @@ ms.locfileid: "92193820"
  指定变量名称。  
   
  **Namespace**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了两个命名空间：User 和 System********。 默认情况下，自定义变量位于 **User** 命名空间中，系统变量位于 **System** 命名空间中。 你可以为用户定义变量创建其他命名空间，并可以更改 **User** 命名空间的名称，但不能更改 **System** 命名空间的名称，也不能向 **System** 命名空间添加变量或将系统变量分配给其他命名空间。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了两个命名空间：User 和 System。 默认情况下，自定义变量位于 **User** 命名空间中，系统变量位于 **System** 命名空间中。 你可以为用户定义变量创建其他命名空间，并可以更改 **User** 命名空间的名称，但不能更改 **System** 命名空间的名称，也不能向 **System** 命名空间添加变量或将系统变量分配给其他命名空间。  
   
 **RaiseChangedEvent**  
- 将此属性设置为 **True**时，变量值的改变将会引发 **OnVariableValueChanged** 事件。  
+ 将此属性设置为 **True** 时，变量值的改变将会引发 **OnVariableValueChanged** 事件。  
   
  **ReadOnly**  
- 将此属性设置为 **False**时，该变量可读\写。  
+ 将此属性设置为 **False** 时，该变量可读\写。  
   
 **范围**    
  > [!NOTE]  
@@ -129,7 +129,7 @@ ms.locfileid: "92193820"
   
 -   如果变量数据类型更改为字符串，则系统将 **IncludeInDebugDump** 选项重置为 **false**。  
   
- 在系统将 **“IncludeInDebugDump”** 选项重置为 **false**时，该设置可能会覆盖用户选择的值。  
+ 在系统将 **“IncludeInDebugDump”** 选项重置为 **false** 时，该设置可能会覆盖用户选择的值。  
   
 **“值”**     
 用户定义变量的值可以是文字或表达式。 变量值不能为 null。 变量具有以下默认值：
@@ -252,14 +252,14 @@ ms.locfileid: "92193820"
   
 -   “变量”窗口。  
   
--   属性窗口。 “属性”**** 窗口中列出了用于配置“变量”**** 窗口中不可用变量的属性：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
+-   属性窗口。 “属性”窗口中列出了用于配置“变量”窗口中不可用变量的属性：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还提供了一组无法更新属性的系统变量，但 RaiseChangedEvent 属性例外。  
   
 ### <a name="set-expressions-on-variables"></a>对变量设置表达式  
   
- 使用****“属性”窗口对用户定义变量设置表达式时：  
+ 使用“属性”窗口对用户定义变量设置表达式时：  
   
 -   可通过 Value 属性或 Expression 属性来设置变量的值。 默认情况下，EvaluateAsExpression 属性设置为 **False** ，变量的值由 Value property 属性进行设置。 若要使用表达式来设置值，必须首先将 EvaluateAsExpression 设置为 **True**，然后在 Expression property 属性中提供一个表达式。 Value 属性自动设置为该表达式的计算结果。  
   
@@ -267,9 +267,9 @@ ms.locfileid: "92193820"
   
 -   通过变量的 **“属性”** 窗口，可以访问 **“表达式生成器”** 对话框。 使用该工具可以生成、验证和计算表达式。 有关详细信息，请参阅[表达式生成器](../integration-services/expressions/expression-builder.md)和 [Integration Services (SSIS) 表达式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
- 使用****“变量”窗口对用户定义变量设置表达式时：  
+ 使用“变量”窗口对用户定义变量设置表达式时：  
   
--   若要使用表达式来设置变量值，首先请确认变量数据类型与表达式的计算结果一致，然后在 **“变量”** 窗口的 **“表达式”** 列中提供表达式。 “属性”**** 窗口中的 EvaluateAsExpression 属性会自动设置为 **True**。  
+-   若要使用表达式来设置变量值，首先请确认变量数据类型与表达式的计算结果一致，然后在 **“变量”** 窗口的 **“表达式”** 列中提供表达式。 “属性”窗口中的 EvaluateAsExpression 属性会自动设置为 **True**。  
   
 -   如果为变量指定了表达式，则该变量旁边将显示一个特殊图标标记。 这个特殊的图标标记还显示在设置有表达式的连接管理器和任务旁边。  
   
@@ -313,7 +313,7 @@ ms.locfileid: "92193820"
   
 6.  单击要修改其属性的变量。  
   
-7.  在****“属性”窗口中，更改读/写变量属性。 对于用户定义的变量而言，某些属性为可读/只读。  
+7.  在“属性”窗口中，更改读/写变量属性。 对于用户定义的变量而言，某些属性为可读/只读。  
   
      有关属性的详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)。  
   

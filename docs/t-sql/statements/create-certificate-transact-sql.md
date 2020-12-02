@@ -29,11 +29,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d4799b962fd1c8b6084443f5d83fa171fe4b0a1
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067416"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124145"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -134,7 +134,7 @@ CREATE CERTIFICATE certificate_name
   
  BINARY = asn_encoded_certificate  
  指定为二进制常量的 ASN 编码证书字节数。  
- **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  WITH PRIVATE KEY  
  指定将证书的私钥加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 从程序集创建证书时，此子句无效。 若要加载从程序集创建的证书的私钥，请使用 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)。  
@@ -146,7 +146,7 @@ CREATE CERTIFICATE certificate_name
 > 此选项在包含的数据库或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中不可用。  
   
  BINARY = private_key_bits  
- **适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定为二进制常量的专有键位。 这些位可采用加密形式。 如果加密，则用户必须提供解密密码。 不会对此密码执行密码策略检查。 私钥位应该采用 PVK 文件格式。  
   

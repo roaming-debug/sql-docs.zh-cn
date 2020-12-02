@@ -18,10 +18,10 @@ ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 307854616b6257c00bbcf9d5b66df6d00211b7b5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197156"
 ---
 # <a name="reorganize-index-task"></a>“重新组织索引”任务

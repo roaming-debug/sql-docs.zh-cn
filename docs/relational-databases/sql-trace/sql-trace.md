@@ -12,10 +12,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/27/2018
 ms.openlocfilehash: 4ea8d31c58758c7513a3d958ee02f0e5d9f4c5d4
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94584986"
 ---
 # <a name="sql-trace"></a>SQL 跟踪

@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 307d27f85d5643b837298418279e22dc9225ac67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423581"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121378"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -83,9 +83,9 @@ ms.locfileid: "88423581"
   
 -   限制使用大型对象 (LOB) 数据类型。  
   
-     LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 不推荐使用数据类型 **text**、 **ntext**和 **image** 。 如果确实要包括 LOB，建议分别使用数据类型 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)**。  
+     LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 不推荐使用数据类型 **text**、 **ntext** 和 **image** 。 如果确实要包括 LOB，建议分别使用数据类型 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)**。  
   
-     对于事务复制，请考虑使用名为“用于 OLEDB 流式处理的分发配置文件” **** 的分发代理配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+     对于事务复制，请考虑使用名为“用于 OLEDB 流式处理的分发配置文件” 的分发代理配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
 ## <a name="publication-design"></a>发布设计  
   

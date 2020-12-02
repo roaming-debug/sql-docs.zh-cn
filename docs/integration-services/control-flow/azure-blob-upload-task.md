@@ -15,22 +15,22 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4fefa039f03e061c683c3df916a25087cb9a4e5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349963"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123670"
 ---
 # <a name="azure-blob-upload-task"></a>Azure blob 上载任务
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-“Azure blob 上传任务”**** 可让 SSIS 包将文件上传到 Azure blob 存储区中。
+“Azure blob 上传任务”可让 SSIS 包将文件上传到 Azure blob 存储区中。
     
-若要添加“Azure blob 上传任务”****，请将其拖放到“SSIS 设计器”中，双击或右键单击它，然后单击“编辑”**** 调出下面的“Azure blob 上传任务编辑器”**** 对话框。  
+若要添加“Azure blob 上传任务”，请将其拖放到“SSIS 设计器”中，双击或右键单击它，然后单击“编辑”调出下面的“Azure blob 上传任务编辑器”对话框。  
   
- “Azure blob 上载任务”**** 是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)组件。
+ “Azure blob 上载任务”是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)组件。
   
  下表介绍了此对话框中的各个字段。  
 

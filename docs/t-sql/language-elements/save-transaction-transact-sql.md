@@ -27,10 +27,10 @@ ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f13fcea7eaf2958ba2ebd9c856a86a743e050ffc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195491"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
@@ -50,14 +50,14 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- savepoint_name**  
- 分配给保存点的名称。 保存点名称必须符合标识符的规则，但长度不能超过 32 个字符。 savepoint_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此**。  
+ savepoint_name  
+ 分配给保存点的名称。 保存点名称必须符合标识符的规则，但长度不能超过 32 个字符。 savepoint_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
   
  @*savepoint_variable*  
  包含有效保存点名称的用户定义变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量   。 如果长度超过 32 个字符，也可以传递到变量，但只使用前 32 个字符。  
   
 ## <a name="remarks"></a>注解  
- 用户可以在事务内设置保存点或标记。 保存点可以定义在按条件取消某个事务的一部分后，该事务可以返回的一个位置。 如果将事务回滚到保存点，则根据需要必须完成其他剩余的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 COMMIT TRANSACTION 语句，或者必须通过将事务回滚到起始点完全取消事务。 若要取消整个事务，请使用 ROLLBACK TRANSACTION transaction_name**。 这将撤消事务的所有语句和过程。  
+ 用户可以在事务内设置保存点或标记。 保存点可以定义在按条件取消某个事务的一部分后，该事务可以返回的一个位置。 如果将事务回滚到保存点，则根据需要必须完成其他剩余的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 COMMIT TRANSACTION 语句，或者必须通过将事务回滚到起始点完全取消事务。 若要取消整个事务，请使用 ROLLBACK TRANSACTION transaction_name。 这将撤消事务的所有语句和过程。  
   
  在事务中允许有重复的保存点名称，但指定保存点名称的 ROLLBACK TRANSACTION 语句只将事务回滚到使用该名称的最近的 SAVE TRANSACTION。  
   

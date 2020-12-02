@@ -12,10 +12,10 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d46d3598bb309029319c1b74b467983e681b96ac
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197042"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目标
@@ -48,7 +48,7 @@ ms.locfileid: "92197042"
   
     1.  选择类型， **“第三方/分级 BAPI”**。  
   
-    2.  对于“与目标系统的通信类型”****，选择“非 Unicode (非活动 MDMP 设置)”****。  
+    2.  对于“与目标系统的通信类型”，选择“非 Unicode (非活动 MDMP 设置)”。  
   
     3.  分配适当的程序 ID。  
   

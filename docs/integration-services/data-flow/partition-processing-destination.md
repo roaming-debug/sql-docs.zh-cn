@@ -21,10 +21,10 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d98fda12251dafb69ab3738ea90f1eaf0298df46
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92192692"
 ---
 # <a name="partition-processing-destination"></a>分区处理目标
@@ -63,7 +63,7 @@ ms.locfileid: "92192692"
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="partition-processing-destination-editor-connection-manager-page"></a>分区处理目标编辑器（“连接管理器”页）
-  使用“分区处理目标编辑器”对话框的“连接管理器”页面，可以指定与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间的连接********。  
+  使用“分区处理目标编辑器”对话框的“连接管理器”页面，可以指定与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间的连接。  
   
 > [!NOTE]  
 >  此处所述的任何不适用于 Analysis Services 表格模型。  你无法将输入列映射到表格模型的分区列。 您可以改用 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 处理分区。  
@@ -73,7 +73,7 @@ ms.locfileid: "92192692"
  从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”**** 对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”对话框创建一个新连接。  
   
  **可用分区列表**  
  选择要处理的分区。  
@@ -131,10 +131,10 @@ ms.locfileid: "92192692"
  指定在出现错误时应停止处理。  
   
  **错误数**  
- 如果选择了“出错时停止”****，请指定应停止处理的错误阈值。  
+ 如果选择了“出错时停止”，请指定应停止处理的错误阈值。  
   
  **出错时要执行的操作**  
- 如果选择了“出错时停止”****，请指定在达到错误阈值时要执行的操作。  
+ 如果选择了“出错时停止”，请指定在达到错误阈值时要执行的操作。  
   
 |值|描述|  
 |-----------|-----------------|  

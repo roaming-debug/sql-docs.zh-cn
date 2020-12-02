@@ -29,11 +29,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c74406db7ea8d05b6c01fb31ef3f6f0a6d1976a
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688292"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124071"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +68,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
 ## <a name="permissions"></a>权限  
- 要求对数据库具有 CREATE ROLE 权限或者在 db_securityadmin 固定数据库角色中具有成员身份********。 使用 AUTHORIZATION 选项时，还需要具有下列权限****：  
+ 要求对数据库具有 CREATE ROLE 权限或者在 db_securityadmin 固定数据库角色中具有成员身份。 使用 AUTHORIZATION 选项时，还需要具有下列权限：  
   
 -   若要将角色的所有权分配给另一个用户，则需要对该用户具有 IMPERSONATE 权限。  
   

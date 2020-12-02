@@ -14,11 +14,11 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4cb9b5a4c97e178e3acfbd64f1f99f831f116f09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484830"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123764"
 ---
 # <a name="access-the-cdc-designer-console"></a>访问 CDC 设计器控制台
 
@@ -41,7 +41,7 @@ ms.locfileid: "88484830"
   
 -   **Windows 身份验证**  
   
--   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”**** 和“密码”****。  
+-   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”和“密码”。  
   
  该登录名必须具有允许访问 MSXCDCDB 数据库的数据库角色。 建议该登录名还具有访问要使用的任何其他数据库的权限，否则，该用户将无法查看这些数据库中的数据。  
   
@@ -55,10 +55,10 @@ ms.locfileid: "88484830"
  键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  
   
  **加密连接**  
- 选择“加密连接”**** 将使用加密连接进行 Oracle CDC 服务和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间的通信。**高级**：单击“高级”**** 并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
+ 选择“加密连接”将使用加密连接进行 Oracle CDC 服务和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间的通信。**高级**：单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
   
  **高级**  
- 单击“高级”**** 并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
+ 单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
   
  有关“高级连接属性”对话框的信息，请参阅 [高级连接属性](../../integration-services/change-data-capture/advanced-connection-properties.md)。  
   

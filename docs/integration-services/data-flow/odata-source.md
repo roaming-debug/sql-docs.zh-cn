@@ -17,10 +17,10 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f872916b7b93a1aab3447bad6579dd672c915e1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194788"
 ---
 # <a name="odata-source"></a>OData 源
@@ -50,7 +50,7 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
 
 若要发现数据源中列的数据类型，请查看 `https://<OData feed endpoint>/$metadata` 页。
 
-对于十进制数据类型，精度和小数位数由源元数据决定****。 如果源元数据未指定“精度”和“小数位数”属性，则数据可能会被截断********。
+对于十进制数据类型，精度和小数位数由源元数据决定。 如果源元数据未指定“精度”和“小数位数”属性，则数据可能会被截断。
 
 > [!IMPORTANT]
 > OData 源组件不支持 SharePoint 列表中的复杂类型，例如多选项。
@@ -88,7 +88,7 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
  选择或创建连接管理器以后，对话框会显示连接管理器所使用的 OData 协议版本。  
   
  **新建**  
- 通过使用“OData 连接管理器编辑器”**** 对话框创建新的连接管理器。  
+ 通过使用“OData 连接管理器编辑器”对话框创建新的连接管理器。  
   
  **使用集合或资源路径**  
  指定从源选择数据的方法。  
@@ -105,7 +105,7 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
  基于在此对话框中选择的选项显示只读馈送 URL。  
   
  **预览**  
- 通过使用“预览”**** 对话框预览结果。 **“预览”** 最多可以显示 20 行。  
+ 通过使用“预览”对话框预览结果。 **“预览”** 最多可以显示 20 行。  
   
 ### <a name="dynamic-options"></a>动态选项  
   
@@ -118,7 +118,7 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
  键入资源路径。 例如：Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>OData 源编辑器（“列”页）
-  使用“OData 源编辑器”**** 对话框的“列”**** 页可选择要包含在输出中的外部（源）列并将它们映射到输出列。  
+  使用“OData 源编辑器”对话框的“列”页可选择要包含在输出中的外部（源）列并将它们映射到输出列。  
   
 ### <a name="options"></a>选项  
  **可用外部列**  
@@ -138,7 +138,7 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
  查看数据源的名称。  
   
  **列**  
- 查看在“OData 源编辑器”**** 对话框中“Connection Manager”**** 页上选择的外部（源）列。  
+ 查看在“OData 源编辑器”对话框中“Connection Manager”页上选择的外部（源）列。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  

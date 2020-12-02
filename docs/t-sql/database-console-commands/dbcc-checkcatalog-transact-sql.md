@@ -25,11 +25,11 @@ ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: fe40df4a8593b3ae00bb6733d30a4091a6179ef5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116507"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119655"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +75,7 @@ DBCC CHECKCATALOG 在系统元数据表之间执行各种一致性检查。 DBCC
 如果无法创建快照，则 DBCC CHECKCATALOG 将获取一个排他数据库锁以获得要求的一致性。 如果检测到任何不一致，则无法修复这些不一致问题，必须使用备份来还原数据库。
   
 > [!NOTE]  
-> 对 tempdb 运行 DBCC CHECKCATALOG 不会执行任何检查****。 这是因为，为了提高性能，不允许对 tempdb 使用数据库快照。 这意味着，无法获得所需的事务一致性。 回收服务器以解析任何 tempdb 元数据问题****。  
+> 对 tempdb 运行 DBCC CHECKCATALOG 不会执行任何检查。 这是因为，为了提高性能，不允许对 tempdb 使用数据库快照。 这意味着，无法获得所需的事务一致性。 回收服务器以解析任何 tempdb 元数据问题。  
   
 > [!NOTE]  
 > DBCC CHECKCATALOG 不会检查 FILESTREAM 数据。 FILESTREAM 在文件系统中存储二进制大型对象 (BLOB)。  

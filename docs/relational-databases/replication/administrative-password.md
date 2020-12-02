@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: feef4402a50bedb326b67c2de5633c90bf9e994e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88406383"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121361"
 ---
 # <a name="administrative-password"></a>管理密码
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  如果在此向导的“分发服务器”**** 页上为此发布服务器选择了远程分发服务器，则必须输入复制使用 distributor_admin**** 登录名在发布服务器和分发服务器之间所建立的连接的密码。 该密码必须与在配置分发向导的 **“分发服务器密码”** 页上或在 **“分发服务器属性”** 对话框的 **“发布服务器”** 页上指定的密码相匹配。  
+  如果在此向导的“分发服务器”页上为此发布服务器选择了远程分发服务器，则必须输入复制使用 distributor_admin 登录名在发布服务器和分发服务器之间所建立的连接的密码。 该密码必须与在配置分发向导的 **“分发服务器密码”** 页上或在 **“分发服务器属性”** 对话框的 **“发布服务器”** 页上指定的密码相匹配。  
   
 ## <a name="options"></a>选项  
  **密码**  

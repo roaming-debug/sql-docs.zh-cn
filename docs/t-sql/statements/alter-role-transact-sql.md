@@ -24,11 +24,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4bf7faa22088fd00c646a5760923e7e6a64a9eac
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024442"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124224"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,25 +72,25 @@ ALTER ROLE role_name
   
  指定要更改的数据库角色。  
   
- ADD MEMBER database_principal**  
+ ADD MEMBER database_principal  
  适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定向数据库角色的成员身份添加数据库主体。  
   
--   database_principal 是数据库用户或用户定义的数据库角色**。  
+-   database_principal 是数据库用户或用户定义的数据库角色。  
   
--   database_principal 不能是固定的数据库角色或是服务器主体**。  
+-   database_principal 不能是固定的数据库角色或是服务器主体。  
   
-DROP MEMBER database_principal**  
+DROP MEMBER database_principal  
  适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定从数据库角色的成员身份删除数据库主体。  
   
--   database_principal 是数据库用户或用户定义的数据库角色**。  
+-   database_principal 是数据库用户或用户定义的数据库角色。  
   
--   database_principal 不能是固定的数据库角色或是服务器主体**。  
+-   database_principal 不能是固定的数据库角色或是服务器主体。  
   
-WITH NAME = new_name**  
+WITH NAME = new_name  
  适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 开始）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定更改用户定义的数据库角色的名称。 数据库中必须尚未包含新名称。  
@@ -100,13 +100,13 @@ WITH NAME = new_name**
 ## <a name="permissions"></a>权限  
  需具有以下一项或多项权限或成员身份才能运行此命令：  
   
--   对角色具有 ALTER 权限****  
--   对数据库具有 ALTER ANY ROLE 权限****  
--   具有 db_securityadmin 固定数据库角色的成员身份****  
+-   对角色具有 ALTER 权限  
+-   对数据库具有 ALTER ANY ROLE 权限  
+-   具有 db_securityadmin 固定数据库角色的成员身份  
   
 此外，若要更改固定数据库角色中的成员身份还需要：  
   
--   具有 db_owner 固定数据库角色的成员身份****  
+-   具有 db_owner 固定数据库角色的成员身份  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  不能更改固定数据库角色的名称。  

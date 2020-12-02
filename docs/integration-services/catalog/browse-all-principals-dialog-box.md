@@ -14,11 +14,11 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f5ec280020b966a1d23b5ebb9dfb2c740692a6d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394963"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123783"
 ---
 # <a name="browse-all-principals-dialog-box"></a>“浏览所有主体”对话框
 
@@ -55,10 +55,10 @@ ms.locfileid: "88394963"
  选择主体后，在您单击 **“确定”** 并且关闭 **“浏览所有主体”** 对话框时，会将这些主体添加到父对话框的 **“权限”** 页上的 **“登录名或角色”** 列表中。 在将主体添加到 **“登录名或角色”** 列表后，您可以更改该主体对所选项目的权限。  
   
  **选择列**  
- 选择此选项可以将主体添加到父对话框的“权限”页上的“登录名或角色”******** 列表中。  
+ 选择此选项可以将主体添加到父对话框的“权限”页上的“登录名或角色”列表中。  
   
  **图标列**  
- 与主体的****“类型”相对应的图标。  
+ 与主体的“类型”相对应的图标。  
   
  **名称**  
  主体的名称。  

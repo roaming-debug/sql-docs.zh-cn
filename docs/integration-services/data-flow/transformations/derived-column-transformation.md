@@ -21,11 +21,11 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193208"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123379"
 ---
 # <a name="derived-column-transformation"></a>派生列转换
 
@@ -36,13 +36,13 @@ ms.locfileid: "92193208"
   
  可以使用此转换执行下列任务：  
   
--   将不同列的数据连接到一个派生列中。 例如，可以使用表达式 **将** FirstName **和** LastName **列中的值组合到名为**FullName `FirstName + " " + LastName`的单个派生列中。  
+-   将不同列的数据连接到一个派生列中。 例如，可以使用表达式 **将** FirstName **和** LastName **列中的值组合到名为** FullName `FirstName + " " + LastName`的单个派生列中。  
   
 -   通过使用 SUBSTRING 之类的函数从字符串数据中提取字符，然后将结果存储到派生列中。 例如，可以使用表达式 **从** FirstName `SUBSTRING(FirstName,1,1)`列提取人名的首字母。  
   
--   对数值数据应用数学函数，然后将结果存储到派生列中。 例如，可以使用表达式 **将数值列**SalesTax `ROUND(SalesTax, 2)`的值更改为精确到小数点后两位。  
+-   对数值数据应用数学函数，然后将结果存储到派生列中。 例如，可以使用表达式 **将数值列** SalesTax `ROUND(SalesTax, 2)`的值更改为精确到小数点后两位。  
   
--   创建比较输入列和变量的表达式。 例如，可以使用表达式 **来比较变量** Version **与**ProductVersion **列中的数据，然后根据比较结果决定选用** Version **还是**ProductVersion `ProductVersion == @Version? ProductVersion : @Version`的值。  
+-   创建比较输入列和变量的表达式。 例如，可以使用表达式 **来比较变量** Version **与** ProductVersion **列中的数据，然后根据比较结果决定选用** Version **还是** ProductVersion `ProductVersion == @Version? ProductVersion : @Version`的值。  
   
 -   提取日期时间值的某部分。 例如，可以通过表达式 `DATEPART("year",GETDATE())`使用 GETDATE 和 DATEPART 函数提取当前年份。  
   
@@ -99,22 +99,22 @@ ms.locfileid: "92193208"
   
  此属性的值可以使用属性表达式来指定。  
   
- **相关主题**：[Integration Services (SSIS) 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](../../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **相关主题**：[Integration Services (SSIS) 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](../../../integration-services/expressions/operators-ssis-expression.md)和 [函数（SSIS 表达式）](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **数据类型**  
- 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 如果向新列中添加数据，“派生列转换编辑器”对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  **长度**  
- 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动计算表达式的值并设置字符串数据的列长度。 该列的值是只读的。  
+ 如果向新列中添加数据，“派生列转换编辑器”对话框将自动计算表达式的值并设置字符串数据的列长度。 该列的值是只读的。  
   
  **精度**  
- 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动根据数据类型来设置数值数据的精度。 该列的值是只读的。  
+ 如果向新列中添加数据，“派生列转换编辑器”对话框将自动根据数据类型来设置数值数据的精度。 该列的值是只读的。  
   
  **缩放**  
- 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动根据数据类型来设置数值数据的小数位数。 该列的值是只读的。  
+ 如果向新列中添加数据，“派生列转换编辑器”对话框将自动根据数据类型来设置数值数据的小数位数。 该列的值是只读的。  
   
  **代码页**  
- 如果向新列中添加数据，“派生列转换编辑器”**** 对话框将自动设置 DT_STR 数据类型的代码页。 可以更新 **“代码页”**。  
+ 如果向新列中添加数据，“派生列转换编辑器”对话框将自动设置 DT_STR 数据类型的代码页。 可以更新 **“代码页”**。  
   
  **配置错误输出**  
  使用 [配置错误输出](../error-handling-in-data.md) 对话框指定处理错误的方式。  

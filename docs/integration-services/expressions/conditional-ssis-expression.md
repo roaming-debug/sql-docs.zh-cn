@@ -15,11 +15,11 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f63ea95489b639672ddb50b44fa882eecc463025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425559"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123281"
 ---
 # <a name="--conditional-ssis-expression"></a>? 解码的字符：（条件）（SSIS 表达式）
 
@@ -47,7 +47,7 @@ boolean_expression?expression1:expression2
  为任何有效的表达式。  
   
 ## <a name="result-types"></a>结果类型  
- *expression1* 或 *expression2*的数据类型。  
+ *expression1* 或 *expression2* 的数据类型。  
   
 ## <a name="remarks"></a>备注  
  如果 *boolean_expression* 的计算结果为 NULL，则表达式结果为 NULL。 如果选择的表达式（ *expression1* 或 *expression2* ）为 NULL，则结果为 NULL。 如果选择的表达式不为 NULL，但未选择的表达式为 NULL，则结果为所选表达式的值。  

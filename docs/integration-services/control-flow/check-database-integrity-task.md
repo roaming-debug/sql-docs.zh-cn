@@ -21,11 +21,11 @@ ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: af37de7c5192cb0fe2f113205b5569430e507acc
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728088"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123600"
 ---
 # <a name="check-database-integrity-task"></a>“检查数据库完整性”任务
 

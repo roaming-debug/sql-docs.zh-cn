@@ -17,11 +17,11 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2db38d2ad6c102b47b2a9f3349a3877a9d55a4c4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727570"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123673"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
 
@@ -110,7 +110,7 @@ ms.locfileid: "91727570"
   
 ### <a name="options"></a>选项  
  **Analysis Services 连接管理器**  
- 从列表中选择现有的 Analysis Services 连接管理器，或单击****“新建”以创建新的连接管理器。  
+ 从列表中选择现有的 Analysis Services 连接管理器，或单击“新建”以创建新的连接管理器。  
   
  **新建**  
  创建新的 Analysis Services 连接管理器。  
@@ -130,7 +130,7 @@ ms.locfileid: "91727570"
  将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象添加到列表中。  
   
  **删除**  
- 选择对象，再单击“删除”****。  
+ 选择对象，再单击“删除”。  
   
  **影响分析**  
  对所选对象进行影响分析。  

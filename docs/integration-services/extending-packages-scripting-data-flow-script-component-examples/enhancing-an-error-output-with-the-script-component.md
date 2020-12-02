@@ -17,11 +17,11 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e6150c8b80b29575cbb08c4cd88ebe342a55da79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477288"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123042"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用脚本组件增强错误输出
 
@@ -48,21 +48,21 @@ ms.locfileid: "88477288"
   
 3.  将错误输出从上游组件连接到新脚本组件。  
   
-4.  打开“脚本转换编辑器”****，在“脚本”**** 页中，为 **ScriptLanguage** 属性选择脚本语言。  
+4.  打开“脚本转换编辑器”，在“脚本”页中，为 **ScriptLanguage** 属性选择脚本语言。  
   
-5.  单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，并添加下面的示例代码****。  
+5.  单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，并添加下面的示例代码。  
   
 6.  关闭 VSTA。  
   
-7.  在脚本转换编辑器的“输入列”**** 页中，选择 ErrorCode 列和 ErrorColumn 列。  
+7.  在脚本转换编辑器的“输入列”页中，选择 ErrorCode 列和 ErrorColumn 列。  
   
-8.  在“输入和输出”**** 页中，添加两个新列。  
+8.  在“输入和输出”页中，添加两个新列。  
   
     -   添加一个名为 **ErrorDescription** 的 **String** 类型的新输出列。 将新列的默认长度提高到 255 以支持长消息。  
   
     -   添加另一个名为 **ColumnName** 的 **String** 类型的新输出列。 将新列的默认长度提高到 255 以支持长值。  
   
-9. 关闭“脚本转换编辑器”****。  
+9. 关闭“脚本转换编辑器”。  
   
 10. 将脚本组件的输出附加到合适的目标。 对于即席测试，平面文件目标是最容易配置的。  
   

@@ -14,11 +14,11 @@ ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 046b40b0dd7502e57614691066d8c87bcfe5d9fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430549"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123123"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>编写自定义 Foreach 枚举器代码
 
@@ -33,7 +33,7 @@ ms.locfileid: "88430549"
  可以重写 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.InitializeForEachEnumerator%2A> 方法以缓存对包中定义的连接管理器的引用，和缓存对事件接口（用于引发错误、警告和信息性消息）的引用。  
   
 ## <a name="validating-the-enumerator"></a>验证枚举器  
- 重写 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> 方法以验证枚举器是否正确配置。 如果该方法返回“Failure”****，则枚举器和包含枚举器的包将不执行。 此方法的实现是特定于每个枚举器的，但如果枚举器依赖于 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象，则应该添加代码以验证这些对象存在于提供给方法的集合中。  
+ 重写 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> 方法以验证枚举器是否正确配置。 如果该方法返回“Failure”，则枚举器和包含枚举器的包将不执行。 此方法的实现是特定于每个枚举器的，但如果枚举器依赖于 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象，则应该添加代码以验证这些对象存在于提供给方法的集合中。  
   
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> 的实现，该接口用于检查在枚举器的属性中指定的变量。  
   

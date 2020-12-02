@@ -17,11 +17,11 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dd25e6cf4816b0ff39ed1129a1d98f9de5603d2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477306"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123047"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用脚本组件创建 ODBC 目标
 
@@ -42,7 +42,7 @@ ms.locfileid: "88477306"
   
 -   **OdbcCommand** 需要位置参数。 在命令的文本中，参数的位置由问号 (?) 指示。 （相反，**SqlCommand** 需要命名参数。）  
   
- 本示例使用 **AdventureWorks** 示例数据库中的 **Person.Address** 表。 此示例通过数据流传递此表的第一列和第四列：int AddressID 和 nvarchar(30) City 列**__****__**。 [开发特定类型的脚本组件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主题中的源、转换和目标示例使用了相同的数据。  
+ 本示例使用 **AdventureWorks** 示例数据库中的 **Person.Address** 表。 此示例通过数据流传递此表的第一列和第四列：int AddressID 和 nvarchar(30) City 列 ********。 [开发特定类型的脚本组件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主题中的源、转换和目标示例使用了相同的数据。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   
@@ -63,11 +63,11 @@ ms.locfileid: "88477306"
   
 6.  在“输入和输出”页中，用更具说明性的名称（如 **MyAddressInput**）重命名输入。  
   
-7.  在“连接管理器”**** 页中，添加或创建一个具有说明性名称（如 **MyODBCConnectionManager**）的 ODBC 连接管理器。  
+7.  在“连接管理器”页中，添加或创建一个具有说明性名称（如 **MyODBCConnectionManager**）的 ODBC 连接管理器。  
   
-8.  在“脚本”**** 页中，单击“编辑脚本”****，并在 **ScriptMain** 类中输入下面所示的脚本。  
+8.  在“脚本”页中，单击“编辑脚本”，并在 **ScriptMain** 类中输入下面所示的脚本。  
   
-9. 关闭脚本开发环境和“脚本转换编辑器”****，然后运行该示例。  
+9. 关闭脚本开发环境和“脚本转换编辑器”，然后运行该示例。  
   
     ```vb  
     Imports System.Data.Odbc  

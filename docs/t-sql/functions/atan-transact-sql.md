@@ -22,16 +22,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fbbc2cb7d9774cc5da44af311cd436072fbbd679
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116840"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119315"
 ---
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-一种函数，该函数返回以弧度表示的角，其正切为指定的 float 表达式****。 这也被称为反正切。
+一种函数，该函数返回以弧度表示的角，其正切为指定的 float 表达式。 这也被称为反正切。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,13 +45,13 @@ ATAN ( float_expression )
 
 ## <a name="arguments"></a>参数
 *float_expression*  
-float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)********。
+float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
 **float**
   
 ## <a name="examples"></a>示例  
-本示例采用 float 表达式并返回指定角的 ATAN 值****。
+本示例采用 float 表达式并返回指定角的 ATAN 值。
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -93,7 +93,7 @@ The ATAN of 197.1099392 is: 1.56572
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-本示例采用 float 表达式并返回指定角的反正切值****。
+本示例采用 float 表达式并返回指定角的反正切值。
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  

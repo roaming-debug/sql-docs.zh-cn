@@ -23,10 +23,10 @@ ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 525e0b30fd68aa45425849b9f2e144621b92286f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92187456"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
@@ -49,7 +49,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  指定 cursor_name 是指全局游标。  
   
  cursor_name  
- 已声明的游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 是指全局游标；否则，cursor_name 是指局部游标******。  
+ 已声明的游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 是指全局游标；否则，cursor_name 是指局部游标。  
   
  cursor_variable_name  
  游标变量的名称，该变量引用一个游标。  

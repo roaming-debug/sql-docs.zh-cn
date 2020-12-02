@@ -19,11 +19,11 @@ ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d0cdca25e14d58270185d4605287d22d1af5e0d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468166"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118619"
 ---
 # <a name="crypt_gen_random-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,13 +42,13 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
 
 ## <a name="arguments"></a>参数
 *length*  
-`CRYPT_GEN_RANDOM` 将创建数的长度数，以字节为单位。 length 参数的数据类型为“int”**** 且值范围在 1 和 8000 之间**。 `CRYPT_GEN_RANDOM` 为此范围外的“int”**** 值返回 NULL。 
+`CRYPT_GEN_RANDOM` 将创建数的长度数，以字节为单位。 length 参数的数据类型为“int”且值范围在 1 和 8000 之间。 `CRYPT_GEN_RANDOM` 为此范围外的“int”值返回 NULL。 
   
 seed  
-一个可选的十六进制数字，用作随机种子值。 种子的长度必须匹配 length 参数的值****。 种子参数的数据类型为“varbinary (8000)”******。
+一个可选的十六进制数字，用作随机种子值。 种子的长度必须匹配 length 参数的值。 种子参数的数据类型为“varbinary (8000)”。
   
 ## <a name="returned-types"></a>返回类型  
-varbinary(8000)****
+varbinary(8000)
   
 ## <a name="permissions"></a>权限  
 此函数是公用的，因此不需要任何特殊权限。

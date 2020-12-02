@@ -21,11 +21,11 @@ ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 24d7cea4d5e04c92379961bea5f2b6cc6abac07d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114825"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118180"
 ---
 # <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ CURSOR_STATUS
 指定一个常量，该常量用于指示游标的源是一个本地变量。
   
 'cursor_variable'  
-游标变量的名称。 必须使用 cursor 数据类型定义游标变量****。
+游标变量的名称。 必须使用 cursor 数据类型定义游标变量。
   
 ## <a name="return-types"></a>返回类型
 **smallint**

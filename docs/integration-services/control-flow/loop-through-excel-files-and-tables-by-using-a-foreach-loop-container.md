@@ -16,10 +16,10 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7c6e986f032f755f73db249f7ddeff539fca4a8c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197167"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>使用 Foreach 循环容器循环遍历 Excel 文件和表
@@ -42,9 +42,9 @@ ms.locfileid: "92197167"
   
 3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。有关如何配置 Foreach 循环容器的信息，请参阅 [配置 Foreach 循环容器](./foreach-loop-container.md)。  
   
-4.  在“Foreach 循环编辑器”的“集合”页上，选择“Foreach 文件”枚举器，并指定 Excel 工作簿所在的文件夹，然后指定文件筛选器（通常是 *.xlsx）********。  
+4.  在“Foreach 循环编辑器”的“集合”页上，选择“Foreach 文件”枚举器，并指定 Excel 工作簿所在的文件夹，然后指定文件筛选器（通常是 *.xlsx）。  
   
-5.  在“变量映射”**** 页中，将索引 0 映射到用户定义字符串变量，该变量将在每个循环迭代中接收当前 Excel 路径和文件名。 （本过程后面显示的示例表达式将使用变量名 `ExcelFile`。）  
+5.  在“变量映射”页中，将索引 0 映射到用户定义字符串变量，该变量将在每个循环迭代中接收当前 Excel 路径和文件名。 （本过程后面显示的示例表达式将使用变量名 `ExcelFile`。）  
   
 6.  关闭 **“Foreach 循环编辑器”**。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "92197167"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>使用 Foreach ADO.NET 架构行集枚举器循环遍历 Excel 表  
   
-1.  创建使用 Microsoft ACE OLE DB 访问接口连接 Excel 工作簿的 ADO.NET 连接管理器。 在“连接管理器”对话框的“所有”页上，确保输入 Excel 版本，在本例中，Excel 12.0 作为“Extended Properties”属性的值****。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))。  
+1.  创建使用 Microsoft ACE OLE DB 访问接口连接 Excel 工作簿的 ADO.NET 连接管理器。 在“连接管理器”对话框的“所有”页上，确保输入 Excel 版本，在本例中，Excel 12.0 作为“Extended Properties”属性的值。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))。  
   
 2.  创建一个字符串变量，用于在每次循环迭代中接收当前表的名称。  
   

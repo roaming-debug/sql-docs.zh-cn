@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 0e2cdb7832e97c575af79c322e1cd21d1d8f09f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498760"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121338"
 ---
 # <a name="distributor-information-publications"></a>分发服务器信息，发布
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88498760"
   用于快照发布订阅的信息包括发布服务器的名称。 否则，在此对话框中提供的功能和信息与发布服务器视图中的功能和信息相同。 有关如何使用此对话框的详细信息，请参阅[发布服务器信息，订阅监视列表（快照发布，SQL Server 2005 和更高版本）](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)。  
 
 ## <a name="agents"></a>代理
-“代理”**** 选项卡显示与发布服务器和订阅服务器关联的代理和维护作业的相关信息。  
+“代理”选项卡显示与发布服务器和订阅服务器关联的代理和维护作业的相关信息。  
   
  在分发服务器视图中分发服务器的 **“代理”** 选项卡中可用的代理包括在发布服务器的 **“代理”** 选项卡中可用的所有代理。 不过，分发服务器视图中分发服务器的 **“代理”** 选项卡还包括一个分发服务器代理和一个合并代理。  
   

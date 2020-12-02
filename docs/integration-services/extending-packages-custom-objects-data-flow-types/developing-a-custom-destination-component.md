@@ -22,11 +22,11 @@ ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f681c33f7921f57d42f9078a768f8f8eafec1f7c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391243"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123230"
 ---
 # <a name="developing-a-custom-destination-component"></a>开发自定义目标组件
 
@@ -43,7 +43,7 @@ ms.locfileid: "88391243"
  实现目标组件的设计时功能包括指定与外部数据源的连接以及验证该组件已经正确配置。 根据定义，目标组件有一个输入，可能有一个错误输出。  
   
 ### <a name="creating-the-component"></a>创建组件  
- 目标组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 目标组件通过将元素添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器和组件用户指明自己需要连接管理器。 此集合有两个用途：首先，告知 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器它需要连接管理器；然后，在用户选择或创建完连接管理器后，保存对组件正在使用的包中的连接管理器的引用。 将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 添加到该集合后，“高级编辑器”**** 将显示“连接属性”**** 选项卡，以提示用户在包中选择或创建连接以供组件使用。  
+ 目标组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 目标组件通过将元素添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器和组件用户指明自己需要连接管理器。 此集合有两个用途：首先，告知 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器它需要连接管理器；然后，在用户选择或创建完连接管理器后，保存对组件正在使用的包中的连接管理器的引用。 将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 添加到该集合后，“高级编辑器”将显示“连接属性”选项卡，以提示用户在包中选择或创建连接以供组件使用。  
   
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 的实现，该实现添加一个输入，然后将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 对象添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>。  
   
@@ -171,7 +171,7 @@ End Sub
 ### <a name="validating-the-component"></a>验证组件  
  目标组件开发人员应按照[组件验证](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)中所述执行验证。 此外，还应该验证组件的输入列集合中定义的列的数据类型属性是否与外部数据源中的列匹配。 有时候，根据外部数据源验证输入列是不可能或不希望的，例如组件或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器处于断开连接状态时，或者与服务器之间的往返通信不可接受时。 在这些情况下，仍然可以使用输入对象的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> 来验证输入列集合中的列。  
   
- 此集合同时存在于输入对象和输出对象中，必须由组件开发人员从外部数据源的列来填充。 此集合可用于 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器处于离线状态、组件断开连接或 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性为“false”**** 时验证输入列。  
+ 此集合同时存在于输入对象和输出对象中，必须由组件开发人员从外部数据源的列来填充。 此集合可用于 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器处于离线状态、组件断开连接或 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性为“false”时验证输入列。  
   
  下面的示例代码根据现有输入列添加外部元数据列。  
   
@@ -209,7 +209,7 @@ End Sub
 ```  
   
 ## <a name="run-time"></a>运行时  
- 在执行过程中，每次上游组件中有了完整的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 时，目标组件都会收到对 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 方法的调用。 此方法会被重复调用，直到再没有缓冲区可用且 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性为“true”****。 在此方法中，目标组件读取缓冲区中的列和行，并将其添加到外部数据源。  
+ 在执行过程中，每次上游组件中有了完整的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 时，目标组件都会收到对 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 方法的调用。 此方法会被重复调用，直到再没有缓冲区可用且 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性为“true”。 在此方法中，目标组件读取缓冲区中的列和行，并将其添加到外部数据源。  
   
 ### <a name="locating-columns-in-the-buffer"></a>在缓冲区中查找列  
  组件的输入缓冲区包含数据流中该组件的上游组件的输出列集合中定义的所有列。 例如，如果源组件在其输出中提供三列，下一个组件添加了另外一个输出列，则为目标组件提供的缓冲区中将包含四列，即使目标组件将只写入两列。  

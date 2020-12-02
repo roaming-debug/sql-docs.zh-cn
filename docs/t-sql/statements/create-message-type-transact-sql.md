@@ -30,11 +30,11 @@ ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 3ad277a8538eee95404be124068635bc4d9ea5fa
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688452"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124049"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,10 +60,10 @@ CREATE MESSAGE TYPE message_type_name
 
 ## <a name="arguments"></a>参数
  *message_type_name*  
- 要创建的消息类型的名称。 在当前数据库中创建一条新消息，并归 AUTHORIZATION 子句定义的主体数据库所有。 不能指定服务器、数据库和架构名称。 ** message_type_name 最多可具有 128 个字符。  
+ 要创建的消息类型的名称。 在当前数据库中创建一条新消息，并归 AUTHORIZATION 子句定义的主体数据库所有。 不能指定服务器、数据库和架构名称。  message_type_name 最多可具有 128 个字符。  
   
  AUTHORIZATION owner_name   
- 将消息类型所有者设置为指定数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可以为任意有效用户或角色的名称**********。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有 IMPERSONATE 权限的用户的名称，或者是当前用户所属的角色的名称**。 如果省略此子句，则消息类型属于当前用户。  
+ 将消息类型所有者设置为指定数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可以为任意有效用户或角色的名称。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有 IMPERSONATE 权限的用户的名称，或者是当前用户所属的角色的名称。 如果省略此子句，则消息类型属于当前用户。  
   
  VALIDATION  
  指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对此类型消息的消息正文的验证方式。 如果未指定此子句，则验证默认为 NONE。  
@@ -77,8 +77,8 @@ CREATE MESSAGE TYPE message_type_name
  WELL_FORMED_XML  
  指定消息正文必须包含格式正确的 XML。  
   
- VALID_XML WITH SCHEMA COLLECTION schema_collection_name**  
- 指定消息正文必须包含符合指定架构集合中的某一架构的 XML。** schema_collection_name 必须是现有 XML 架构集合的名称。  
+ VALID_XML WITH SCHEMA COLLECTION schema_collection_name  
+ 指定消息正文必须包含符合指定架构集合中的某一架构的 XML。schema_collection_name 必须是现有 XML 架构集合的名称。  
   
 ## <a name="remarks"></a>注解  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 验证传入消息。 如果消息包含的消息正文与指定的验证类型不符，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将放弃此无效消息，并向发送此消息的服务返回一条错误消息。  
@@ -88,9 +88,9 @@ CREATE MESSAGE TYPE message_type_name
  消息类型不能是临时对象。 允许使用以 # 开头的消息类型名称，但它们是永久对象。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建消息类型的权限************。  
+ 默认情况下，db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建消息类型的权限。  
   
- 默认情况下，消息类型的所有者、db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有消息类型的 REFERENCES 权限********。  
+ 默认情况下，消息类型的所有者、db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有消息类型的 REFERENCES 权限。  
   
  如果 CREATE MESSAGE TYPE 语句指定了架构集合，则执行该语句的用户必须对指定的架构集合拥有 REFERENCES 权限。  
   

@@ -18,11 +18,11 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21f4d8059ee7e0e2f9d466289f4b40f9f51ff950
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194643"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123438"
 ---
 # <a name="cache-transform"></a>缓存转换
 
@@ -69,7 +69,7 @@ ms.locfileid: "92194643"
   
 ### <a name="options"></a>选项  
  **“完全缓存”**  
- 使用列表选择现有的缓存连接管理器，或使用“新建”**** 按钮创建新的连接。  
+ 使用列表选择现有的缓存连接管理器，或使用“新建”按钮创建新的连接。  
   
  **新建**  
  使用“缓存连接管理器编辑器”对话框创建新的连接。  

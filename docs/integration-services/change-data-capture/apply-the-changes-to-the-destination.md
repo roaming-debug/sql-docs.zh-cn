@@ -14,11 +14,11 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0176dcc68e8c7f72c4bd9b78b1f3d926e52ad215
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484739"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123738"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>将变更应用到目标
 
@@ -107,6 +107,6 @@ ms.locfileid: "88484739"
 ## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>使用 MERGE 功能优化插入和更新操作  
  可以通过将特定的变更数据捕获选项与 Transact-SQL MERGE 关键字结合使用，来优化插入操作和更新操作的处理。 有关 MERGE 关键字的详细信息，请参阅[ MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)。  
   
- 在用于检索变更数据的 Transact-SQL 语句中，调用 **cdc.fn_cdc_get_net_changes_<capture_instance>** 函数时可以将 all with merge 指定为 row_filter_option 参数的值****。 当此变更数据捕获函数不需要执行用于区分插入操作和更新操作的额外处理时，它的操作效率会大大提高。 将 all with merge 指定为参数值时，对于删除操作来说，变更数据的 **__$operation** 值为 1，而对于插入操作或更新操作引起的变更来说，该值为 5**。 有关用于检索变更数据的 Transact-SQL 函数的详细信息，请参阅[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。使用 all with merge 参数值检索变更之后，可以应用删除操作，并将剩余行输出到临时表或中间临时表中**。 然后，在下游执行 SQL 任务中，可以使用一个 MERGE 语句将所有插入操作或更新操作从中间临时表应用到目标中。  
+ 在用于检索变更数据的 Transact-SQL 语句中，调用 **cdc.fn_cdc_get_net_changes_<capture_instance>** 函数时可以将 all with merge 指定为 row_filter_option 参数的值。 当此变更数据捕获函数不需要执行用于区分插入操作和更新操作的额外处理时，它的操作效率会大大提高。 将 all with merge 指定为参数值时，对于删除操作来说，变更数据的 **__$operation** 值为 1，而对于插入操作或更新操作引起的变更来说，该值为 5。 有关用于检索变更数据的 Transact-SQL 函数的详细信息，请参阅[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。使用 all with merge 参数值检索变更之后，可以应用删除操作，并将剩余行输出到临时表或中间临时表中。 然后，在下游执行 SQL 任务中，可以使用一个 MERGE 语句将所有插入操作或更新操作从中间临时表应用到目标中。  
   
   

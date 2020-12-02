@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 623c423b50d589ce9e7964b436cba604dcb3203d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1918d6cac049fd863426ce320ab774067c350ea5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449814"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92678934"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 项目和解决方案
 
@@ -40,7 +40,7 @@ ms.locfileid: "88449814"
  项目存储在解决方案中。 可以先创建解决方案，然后向该解决方案添加 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 如果不存在解决方案， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将在您首次创建项目时自动创建解决方案。 解决方案可以包含多个不同类型的项目。  
   
 > [!TIP]  
->  默认情况下，在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中创建新项目时，“解决方案资源管理器”**** 窗格不会显示该解决方案。 若要更改此默认行为，请在 **“工具”** 菜单上单击 **“选项”**。 在 **“选项”** 对话框中，展开 **“项目和解决方案”**，然后单击 **“常规”**。 在 **“常规”** 页上，选择 **“总是显示解决方案”**。  
+>  默认情况下，在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中创建新项目时，“解决方案资源管理器”窗格不会显示该解决方案。 若要更改此默认行为，请在 **“工具”** 菜单上单击 **“选项”**。 在 **“选项”** 对话框中，展开 **“项目和解决方案”**，然后单击 **“常规”**。 在 **“常规”** 页上，选择 **“总是显示解决方案”**。  
 
 ## <a name="solutions-contain-projects"></a>解决方案包含项目  
  解决方案是对开发端到端商业解决方案时所使用的项目进行分组和管理的容器。 使用解决方案，您可以将多个项目作为一个单元处理，并将构成商业解决方案的一个或多个相关项目组合在一起。  
@@ -65,7 +65,7 @@ ms.locfileid: "88449814"
 ## <a name="folders-in-integration-services-projects"></a>Integration Services 项目中的文件夹  
  下面的关系图显示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中一个 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目中的文件夹。  
   
-![ssis-solution-explorer.png](media/ssis-solution-explorer.png)
+![解决方案资源管理器的屏幕截图，其中显示项目中的文件夹。](media/ssis-solution-explorer.png)
   
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中出现的文件夹。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "88449814"
 ## <a name="version-targeting-in-integration-services-projects"></a>Integration Services 项目中面向的版本  
  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，可以创建、维护和运行面向 SQL Server 2017、SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。  
   
- 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性” **** 以打开该项目的属性页。 在“配置属性”的“常规”选项卡上，选择“TargetServerVersion”属性，然后选择 SQL Server 2017、SQL Server 2016、SQL Server 2014 或 SQL Server 2012************。  
+ 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”的“常规”选项卡上，选择“TargetServerVersion”属性，然后选择 SQL Server 2017、SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
  ![“项目属性”对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "“项目属性”对话框中的 TargetServerVersion 属性")  
 
@@ -100,11 +100,11 @@ ms.locfileid: "88449814"
   
 2.  在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“项目”** 。  
   
-3.  在“新建项目”对话框中，选择“商业智能”，然后选择“Integration Services 项目”模板************。  
+3.  在“新建项目”对话框中，选择“商业智能”，然后选择“Integration Services 项目”模板。  
   
      **“Integration Services 项目”** 模板创建包含单个空包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。
 
-  ![ssis-ssdt-new-project.png](media/ssis-ssdt-new-project.png)
+  ![“新建项目”对话框的屏幕截图，其中突出显示了“Integration Services 项目 - 商业智能”模板。](media/ssis-ssdt-new-project.png)
   
 4.  （可选）编辑项目名称和位置。  
   
@@ -116,9 +116,9 @@ ms.locfileid: "88449814"
   
 7.  如果源代码管理软件是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe， **“Visual SourceSafe 登录”** 对话框就会打开。 在 **“Visual SourceSafe 登录”** 对话框中，提供用户名、密码和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 数据库的名称。 单击 **“浏览”** 查找数据库。  
   
-    > **注意：** 若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”******** 菜单上的“选项”，然后展开“源代码管理”节点****。  
+    > **注意：** 若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”菜单上的“选项”，然后展开“源代码管理”节点。  
   
-8.  单击“确定” **** ，将解决方案添加到 **解决方案资源管理器** ，并将项目添加到解决方案。  
+8.  单击“确定”  ，将解决方案添加到 **解决方案资源管理器** ，并将项目添加到解决方案。  
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>使用导入项目向导导入现有项目
   
@@ -138,9 +138,9 @@ ms.locfileid: "88449814"
   
 8.  单击 **“下一步”** 切换到 **“选择源”** 页。  
   
-9. 如果要从 .ispac 文件导入，请在“路径”文本框中键入包含文件名的路径********。 单击 **“浏览”** 导航到要存储解决方案的文件夹，在 **“文件名”** 文本框中键入文件名，然后单击 **“打开”**。  
+9. 如果要从 .ispac 文件导入，请在“路径”文本框中键入包含文件名的路径。 单击 **“浏览”** 导航到要存储解决方案的文件夹，在 **“文件名”** 文本框中键入文件名，然后单击 **“打开”**。  
   
-     如果要从“Integration Services 目录”导入，请在“服务器名称”文本框中键入数据库实例名称，或者单击“浏览”选择包含该目录的数据库实例************。  
+     如果要从“Integration Services 目录”导入，请在“服务器名称”文本框中键入数据库实例名称，或者单击“浏览”选择包含该目录的数据库实例。  
   
      单击 **“路径”** 文本框旁边的 **“浏览”** ，展开目录中的文件夹，选择要导入的项目，然后单击 **“确定”**。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "88449814"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开要添加新 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的解决方案，然后进行下列操作之一：  
   
-    -   右键单击该解决方案，单击“添加”，再单击“新建项目”。********  
+    -   右键单击该解决方案，单击“添加”，再单击“新建项目”。  
   
     -   在 **“文件”** 菜单上，指向 **“添加”**，再单击 **“新建项目”**。  
   
@@ -173,28 +173,28 @@ ms.locfileid: "88449814"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中打开要把现有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目添加到其中的解决方案，并且执行下列操作之一：  
   
-    -   右键单击该解决方案，指向“添加”，然后单击“现有项目”。********  
+    -   右键单击该解决方案，指向“添加”，然后单击“现有项目”。  
   
     -   在 **“文件”** 菜单上，单击 **“添加”**，然后单击 **“现有项目”**。  
   
 2.  在 **“添加现有项目”** 对话框中，浏览并找到要添加的项目，然后单击 **“打开”**。  
   
-3.  此项目即添加到 **解决方案资源管理器**中的解决方案文件夹中。  
+3.  此项目即添加到 **解决方案资源管理器** 中的解决方案文件夹中。  
   
 ## <a name="remove-a-project-from-a-solution"></a>从解决方案中删除项目
  仅当解决方案在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中可见时，才能从解决方案中删除项目。 解决方案可见后，则可以保留一个项目而删除其余所有项目。 只要仅剩余一个项目， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 就不再显示解决方案文件夹，并且您无法删除最后一个项目。  
    
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开要删除 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的解决方案。  
   
-2.  在解决方案资源管理器中，右键单击该项目，然后单击“卸载项目”。****  
+2.  在解决方案资源管理器中，右键单击该项目，然后单击“卸载项目”。  
   
-3.  单击“确定”以确认删除。****  
+3.  单击“确定”以确认删除。  
 
 ## <a name="add-an-item-to-a-project"></a>向项目添加项  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开包含要添加项的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的解决方案。  
   
-2.  在解决方案资源管理器中，右键单击项目，指向“添加”****，并执行下列操作之一：  
+2.  在解决方案资源管理器中，右键单击项目，指向“添加”，并执行下列操作之一：  
   
     -   单击 **“新建项”**，然后从 **“添加新项”** 对话框的 **“模板”** 窗格中选择模板。  
   
@@ -209,11 +209,11 @@ ms.locfileid: "88449814"
   
 2.  展开要从中复制对象的项目和项文件夹。  
   
-3.  右键单击该项，然后单击“复制”****。  
+3.  右键单击该项，然后单击“复制”。  
   
-4.  右键单击要复制到其中的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，然后单击“粘贴”****。  
+4.  右键单击要复制到其中的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，然后单击“粘贴”。  
   
-     这些项会自动复制到正确的文件夹中。 如果将项复制到不是包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中，则该项将复制到“杂项”文件夹中****。  
+     这些项会自动复制到正确的文件夹中。 如果将项复制到不是包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中，则该项将复制到“杂项”文件夹中。  
 
 ## <a name="next-steps"></a>后续步骤
 

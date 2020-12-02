@@ -25,11 +25,11 @@ ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a76fab0c7e0b7e15beb0eb094de4aa66e1644b2e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115003"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119594"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 request_id  
 要在当前会话中搜索的精确请求（批）。  
 
-下面的查询返回 request_id**：  
+下面的查询返回 request_id：  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
@@ -71,9 +71,9 @@ DBCC INPUTBUFFER 返回包含如下列的行集。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|事件类型。 这可能是 RPC 事件或 Language 事件********。 检测不到上一个事件时，输出为 No Event****。|  
-|**参数**|**smallint**|0 = 文本<br /><br /> 1- n = Parameters**|  
-|**EventInfo**|**nvarchar(4000)**|对于 RPC 的 EventType，EventInfo 仅包含过程名********。 对于 Language 的 EventType，仅显示事件的前 4000 个字符****。|  
+|**EventType**|**nvarchar(30)**|事件类型。 这可能是 RPC 事件或 Language 事件。 检测不到上一个事件时，输出为 No Event。|  
+|**参数**|**smallint**|0 = 文本<br /><br /> 1- n = Parameters|  
+|**EventInfo**|**nvarchar(4000)**|对于 RPC 的 EventType，EventInfo 仅包含过程名。 对于 Language 的 EventType，仅显示事件的前 4000 个字符。|  
   
 例如，当缓冲区中的最后一个事件是 DBCC INPUTBUFFER(11) 时，DBCC INPUTBUFFER 将返回以下结果集。
   
@@ -92,9 +92,9 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 ## <a name="permissions"></a>权限  
 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，要求具有下列权限之一：
--   用户必须是 sysadmin 固定服务器角色的成员****。  
+-   用户必须是 sysadmin 固定服务器角色的成员。  
 -   用户必须具有 VIEW SERVER STATE 权限。  
--   session_id 必须与正在运行该命令的会话 ID 相同**。 要确定会话 ID，请执行以下查询：  
+-   session_id 必须与正在运行该命令的会话 ID 相同。 要确定会话 ID，请执行以下查询：  
   
 ```sql
 SELECT @@spid;  

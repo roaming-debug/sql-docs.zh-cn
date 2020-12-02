@@ -22,11 +22,11 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194572"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123341"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署包
 
@@ -57,13 +57,13 @@ ms.locfileid: "92194572"
     
 ### <a name="on-the-source-computer"></a>在源计算机上
 
-将在其上创建部署捆绑的计算机必须安装下列组件：****
+将在其上创建部署捆绑的计算机必须安装下列组件：
 
 - SQL Server。 （从[SQL Server 下载](https://www.microsoft.com/sql-server/sql-server-downloads)下载 SQL Server 的免费评估版或开发人员版。）
 
 - 示例数据、已完成的包、配置和自述文件。 要将示例数据和课程包下载为 Zip 文件，请参阅 [SQL Server Integration Services 教程文件](https://www.microsoft.com/download/details.aspx?id=56827)。 为了防止意外更改发生，zip 文件中的大部分文件都是只读文件。 若要将输出写入到文件或更改输出，必须在文件属性中禁用只读属性。
 
--   AdventureWorks2014 示例数据库****。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份****。  
+-   AdventureWorks2014 示例数据库。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份。  
 
 -   必须具有在 AdventureWorks 数据库中创建和删除表的权限。
     
@@ -77,7 +77,7 @@ ms.locfileid: "92194572"
 
 - 示例数据、已完成的包、配置和自述文件。 要将示例数据和课程包下载为 Zip 文件，请参阅 [SQL Server Integration Services 教程文件](https://www.microsoft.com/download/details.aspx?id=56827)。 为了防止意外更改发生，zip 文件中的大部分文件都是只读文件。 若要将输出写入到文件或更改输出，必须在文件属性中禁用只读属性。
 
--   AdventureWorks2014 示例数据库****。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份****。  
+-   AdventureWorks2014 示例数据库。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份。  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     
