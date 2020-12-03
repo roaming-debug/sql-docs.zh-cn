@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 5510fb2a0a4760b5465dad7f44eed8c85ef36251
+ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006210"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96297954"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上传任务
 
@@ -31,6 +31,11 @@ Azure SQL DW 上传任务启用 SSIS 包，将表格数据从文件系统或 Azu
 该任务利用 PolyBase 来改进性能，如 [Azure Synapse Analytics 加载模式和策略](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)一文中所述。
 当前支持的源数据文件格式是采用 UTF8 编码的带分隔符的文本。
 当从文件系统复制时，数据首先将上传到 Azure Blob 存储进行暂存，然后上传到 Azure SQL DW。 因此，需要 Azure Blob 存储帐户。
+
+> [!NOTE]
+> 不支持将 Azure 存储连接管理器用于 Data Lake Gen2 服务类型。
+>
+> 若要为暂存或源使用 Azure Data Lake Gen2，可通过 Azure 存储连接管理器与 Blob 存储服务类型进行连接。
 
 “Azure SQL DW 上传任务”  是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。
 
@@ -63,8 +68,8 @@ CompressionType|指定将文件上传到 Azure 存储时使用的压缩格式。
 CompressionLevel|指定用于压缩格式的压缩级别。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 连接管理器。
 TableName|指定目标表的名称。 可选择现有的表名称，或选择“\<New Table ...>”创建一个新表。
-TableDistribution|指定新表的分发方法。 已为 **TableName**指定新的表名称时适用。
-HashColumnName|指定用于哈希表分发的列。 已为 **TableDistribution** 指定 **HASH**时适用。
+TableDistribution|指定新表的分发方法。 已为 **TableName** 指定新的表名称时适用。
+HashColumnName|指定用于哈希表分发的列。 已为 **TableDistribution** 指定 **HASH** 时适用。
 
 ### <a name="blobstorage"></a>BlobStorage
 
@@ -78,8 +83,8 @@ ColumnDelimiter|指定标记每一列末尾的一个或多个字符。 例如 &#
 CompressionType|指定用于源数据的压缩格式。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 连接管理器。
 TableName|指定目标表的名称。 可选择现有的表名称，或选择“\<New Table ...>”创建一个新表。
-TableDistribution|指定新表的分发方法。 已为 **TableName**指定新的表名称时适用。
-HashColumnName|指定用于哈希表分发的列。 已为 **TableDistribution** 指定 **HASH**时适用。
+TableDistribution|指定新表的分发方法。 已为 **TableName** 指定新的表名称时适用。
+HashColumnName|指定用于哈希表分发的列。 已为 **TableDistribution** 指定 **HASH** 时适用。
 
 根据是复制到新表还是现有表，看到的“映射”  页面会有所不同。
 如果是前者，请在待创建目标表中配置要映射到的源列及其对应名称。

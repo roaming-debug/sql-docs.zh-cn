@@ -13,12 +13,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e70bf690c7e236bbe52eae905730dec8f9ac48a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4e723b2ef95fa3b1916d972a5b911dda5201a3d
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418951"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328057"
 ---
 # <a name="ddl-triggers"></a>DDL 触发器
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88418951"
   
  与 DML 触发器不同，DDL 触发器的作用域不是架构。 因此，不能将 OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX 之类的函数用于查询有关 DDL 触发器的元数据。 请改用目录视图。  
   
- 服务器范围的 DDL 触发器显示在 SQL Server Management Studio 对象资源管理器的“触发器”**** 文件夹中。 此文件夹位于 **“服务器对象”** 文件夹下。 数据库范围的 DDL 触发器显示在“数据库触发器”文件夹中。 此文件夹位于相应数据库的 **“可编程性”** 文件夹下。  
+ 服务器范围的 DDL 触发器显示在 SQL Server Management Studio 对象资源管理器的“触发器”文件夹中。 此文件夹位于 **“服务器对象”** 文件夹下。 数据库范围的 DDL 触发器显示在“数据库触发器”文件夹中。 此文件夹位于相应数据库的 **“可编程性”** 文件夹下。  
   
 > [!IMPORTANT]  
 >  触发器内部的恶意代码可以在升级后的权限下运行。 有关如何帮助减少此威胁的详细信息，请参阅 [管理触发器安全](../../relational-databases/triggers/manage-trigger-security.md)。  
@@ -124,5 +124,5 @@ GO
  [DML 触发器](../../relational-databases/triggers/dml-triggers.md)   
  [登录触发器](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)  
-  
+ [事件数据 &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

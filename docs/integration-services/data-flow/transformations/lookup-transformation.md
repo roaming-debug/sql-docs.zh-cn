@@ -25,10 +25,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193209"
 ---
 # <a name="lookup-transformation"></a>查找转换
@@ -91,9 +91,9 @@ ms.locfileid: "92193209"
   
  下面是将缓存保留到文件中的其他好处：  
   
--   ***在多个包中共享缓存文件。有关更多信息，请参阅***[在完全缓存模式下使用缓存连接管理器来实现查找转换](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)。  
+-   ***在多个包中共享缓存文件。有关详细信息，请参阅 [在完全缓存模式下使用缓存连接管理器来实现查找转换](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)** _*_ 。 _*_  
   
--   使用包部署缓存文件。 ***随后即可在多台计算机上使用该数据。*** 有关详细信息，请参阅 [为查找转换创建和部署缓存](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
+-   使用包部署缓存文件。 _*_随后即可在多台计算机上使用该数据。_*_ 有关详细信息，请参阅 [为查找转换创建和部署缓存](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
   
 -   使用原始文件源从缓存文件中读取数据。 随后即可使用其他数据流组件来转换或移动数据。 有关详细信息，请参阅 [Raw File Source](../../../integration-services/data-flow/raw-file-source.md)。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "92193209"
      有关安装 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 产品示例和示例数据库的信息，请参阅 [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527)（SQL Server Integration Services 产品示例）。  
   
 ## <a name="lookup-transformation-editor-general-page"></a>查找转换编辑器（“常规”页）
-  可以使用“查找转换编辑器”对话框的 **“常规”** 页，选择缓存模式，选择连接类型以及指定如何处理没有匹配项的行。  
+  可在“查找转换编辑器”对话框的“常规”页面上选择缓存模式、选择连接类型和指定如何处理没有匹配项的行。  
   
 ### <a name="options"></a>选项  
  **完全缓存**  
@@ -181,15 +181,15 @@ ms.locfileid: "92193209"
  在 **“查找转换编辑器”** 对话框的“常规”页上选择 **“完全缓存”** 和 **“缓存连接管理器”** 时，下列选项可用：  
   
  **“完全缓存”**  
- 从列表中选择现有的缓存连接管理器，或单击“新建”**** 创建一个新连接。  
+ 从列表中选择现有的缓存连接管理器，或单击“新建”创建一个新连接。  
   
  **新建**  
- 使用“缓存连接管理器编辑器”**** 对话框创建新的连接。  
+ 使用“缓存连接管理器编辑器”对话框创建新的连接。  
   
  在 **“查找转换编辑器”** 对话框的“常规”页上选择 **“完全缓存”**、 **“部分缓存”** 或 **“无缓存”** 以及 **“OLE DB 连接管理器”** 时，下列选项可用：  
   
  **“无缓存”**  
- 从列表中选择现有的 OLE DB 连接管理器，或通过单击“新建”**** 创建一个新连接。  
+ 从列表中选择现有的 OLE DB 连接管理器，或通过单击“新建”创建一个新连接。  
   
  **新建**  
  通过使用“配置 OLE DB 连接管理器”  对话框创建新的连接。  
@@ -207,7 +207,7 @@ ms.locfileid: "92193209"
  选择该选项后，可以通过浏览找到预先存在的查询、生成一个新查询、检查查询语法，然后预览查询结果。  
   
  **生成查询**  
- 通过使用“查询生成器”**** 可以创建要运行的 Transact-SQL 语句，查询生成器是一个用于通过浏览数据来创建查询的图形工具。  
+ 通过使用“查询生成器”可以创建要运行的 Transact-SQL 语句，查询生成器是一个用于通过浏览数据来创建查询的图形工具。  
   
  **“浏览”**  
  使用此选项可以找到保存为文件的预先存在的查询。  
@@ -273,7 +273,7 @@ ms.locfileid: "92193209"
 >  在此页上指定的可选 SQL 语句将覆盖并替换在 **“查找转换编辑器”** 的 **“高级”** 页上指定的表名。 有关详细信息，请参阅 [查找转换编辑器（“连接”页）]()。  
   
  **设置参数**  
- 使用“设置查询参数”**** 对话框将输入列映射到参数。  
+ 使用“设置查询参数”对话框将输入列映射到参数。  
   
 ### <a name="external-resources"></a>外部资源  
  blogs.msdn.com 上的博客文章： [查找缓存模式](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/)  

@@ -17,16 +17,16 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ce9659824a46615da6056928c81e6a8cc4b98b36
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116477"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128555"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-此函数使用 GZIP 算法压缩输入表达式。 该函数返回类型 varbinary(max) 的字节数组****。
+此函数使用 GZIP 算法压缩输入表达式。 该函数返回类型 varbinary(max) 的字节数组。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -40,23 +40,23 @@ COMPRESS ( expression )
 *expression*  
 A
 
-* **binary(***n***)**
-* **char(***n***)**
-* **nchar(***n***)**
+* **binary(** _n_*_)_*
+* **char(** _n_*_)_*
+* **nchar(** _n_*_)_*
 * **nvarchar(max)**
-* **nvarchar(***n***)**
+* **nvarchar(** _n_*_)_*
 * **varbinary(max)**
-* **varbinary(***n***)**
+* **varbinary(** _n_*_)_*
 * **varchar(max)**
 
 或
 
-* **varchar(***n***)**
+* **varchar(** _n_*_)_*
 
 expression。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
-varbinary(max) 代表已压缩的输入内容****。
+varbinary(max) 代表已压缩的输入内容。
   
 ## <a name="remarks"></a>注解  
 压缩数据无法编入索引。

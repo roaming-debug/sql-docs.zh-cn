@@ -5,23 +5,25 @@ description: 了解如何在 Linux 上安装 SQL Server 机器学习服务（Pyt
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.date: 03/05/2020
+ms.date: 11/24/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc671271d3e998e0329236c6c567438db1a5c48a
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: d236f70a3fdc3e03909078e366ec1f776b68c689
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870001"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96129433"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安装 SQL Server 机器学习服务（Python 和 R）
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-本文指导你在 Linux 上安装 [SQL Server 机器学习服务](../machine-learning/index.yml)。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。
+本文指导你在 Linux 上安装 [SQL Server 机器学习服务](../machine-learning//sql-server-machine-learning-services.md)。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。
+
+可在 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 和 Ubuntu 上安装机器学习服务。 有关详细信息，请参阅 [Linux 上的 SQL Server 安装指南中的“受支持的平台”部分](sql-server-linux-setup.md#supportedplatforms)。
 
 > [!NOTE]
 > 默认情况下，机器学习服务安装在 SQL Server 大数据群集上。 有关详细信息，请参阅[在大数据群集上使用机器学习服务（Python 和 R）](../big-data-cluster/machine-learning-services.md)
@@ -34,8 +36,6 @@ ms.locfileid: "94870001"
 
 * 查看 SQL Server Linux 存储库中的 Python 和 R 扩展。 
   如果已为数据库引擎安装配置了源存储库，则可以使用相同的存储库注册运行 mssql-mlservices 包安装命令  。
-
-  你可以安装 SQL Server on Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 和 Ubuntu。 有关详细信息，请参阅 [Linux 上的 SQL Server 安装指南中的“受支持的平台”部分](sql-server-linux-setup.md#supportedplatforms)。
 
 * （仅限 R）Microsoft R Open (MRO) 为 SQL Server 中的 R 功能提供 R 基础发行版，要使用通过机器学习服务安装的 RevoScaleR、MicrosoftML 和其他 R 包，则该基础发行版是一种先决条件。
     * 所需版本为 MRO 3.5.2。

@@ -22,12 +22,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7d09b4cda394e6a8b612c03bf5f1569eff65909
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f90af0fff19b2053710158f292da880cb0ad9ca4
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548959"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328069"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -38,15 +38,13 @@ ms.locfileid: "89548959"
 
 ## <a name="syntax"></a>语法
 
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>[!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)] 的语法
 ```syntaxsql
--- Syntax for SQL Server
-
 SET ANSI_DEFAULTS { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>[!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] 和 [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)] 的语法
 ```syntaxsql
--- Syntax for Azure Synapse and Parallel Data Warehouse
-
 SET ANSI_DEFAULTS ON
 ```
 

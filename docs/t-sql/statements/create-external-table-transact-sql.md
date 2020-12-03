@@ -22,12 +22,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76deea6c09a14a420ac5916248d0a3944ea5609a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f6bfa965b74aada909b7e28e1429941d4a82b65a
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300639"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328027"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -196,7 +196,7 @@ PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 �
 
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
-由于外部表的数据不受 SQL Server 直接控制，这些数据可以随时通过外部进程进行更改或删除。 因此，针对外部表的查询结果不保证具有确定性。 相同查询可能会在每次针对外部表运行时返回不同结果。 同样，如果外部数据已移动或删除，则查询可能会失败。
+外部表的数据不受 SQL Server 直接控制，因此可随时通过外部进程更改或删除这些数据。 因此，针对外部表的查询结果不保证具有确定性。 相同查询可能会在每次针对外部表运行时返回不同结果。 同样，如果外部数据已移动或删除，则查询可能会失败。
 
 可以创建各自引用不同外部数据源的多个外部表。 如果同时针对不同 Hadoop 数据源运行查询，则每个 Hadoop 源都必须使用相同的“hadoop 连接”服务器配置设置。 例如，不能同时针对 Cloudera Hadoop 群集和 Hortonworks Hadoop 群集运行查询，因为这些群集使用不同的配置设置。 有关配置设置和受支持的组合，请参阅 [PolyBase 连接配置](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
 
@@ -211,13 +211,26 @@ PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 �
 - 外部表列上的 DEFAULT 约束
 - 删除、插入和更新的数据操作语言 (DML) 操作
 
-查询限制：
+### <a name="query-limitations"></a>查询限制
 
 运行 32 个并发 PolyBase 查询时，每个文件夹中 PolyBase 最多可使用 33000 个文件。 此最大数量包括每个 HDFS 文件夹中的文件和子文件夹。 如果并发度小于 32，用户可以针对 HDFS 中包含超过 33000 个文件的文件夹运行 PolyBase 查询。 建议保持外部文件路径简短，并且每个 HDFS 文件夹不超过 30000 个文件。 当引用太多文件时，可能会发生 Java 虚拟机 (JVM) 内存不足异常。
 
-表宽度限制：
+### <a name="table-width-limitations"></a>表宽度限制
 
 基于表定义中单个有效行的最大大小，SQL Server 2016 中的 PolyBase 具有 32 KB 的行宽限制。 如果列架构的总和大于 32 KB，则 PolyBase 无法查询数据。
+
+### <a name="data-type-limitations"></a>数据类型限制
+
+以下数据类型不能在 PolyBase 外部表中使用：
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 任何用户定义类型
 
 ## <a name="locking"></a>锁定
 
@@ -700,6 +713,19 @@ DISTRIBUTION，DISTRIBUTION 子句指定用于此表的数据分发。 查询处
 
 外部表作为远程查询实现，因此，估计的返回行数通常为 1000 行，还有基于用于筛选外部表的谓词类型的其他规则。 它们是基于规则的估计，而不是基于外部表中的实际数据的估计。 优化器不会通过访问远程数据源来获取更准确的估计。
 
+### <a name="data-type-limitations"></a>数据类型限制
+
+以下数据类型不能在 PolyBase 外部表中使用：
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 任何用户定义类型
+
 ## <a name="locking"></a>锁定
 
 SCHEMARESOLUTION 对象上的共享锁。
@@ -755,6 +781,7 @@ WITH
 
 ## <a name="syntax"></a>语法
 
+### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
@@ -777,9 +804,23 @@ column_name <data_type>
     | REJECT_VALUE = reject_value,  
     | REJECT_SAMPLE_VALUE = reject_sample_value,
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
-  
 }  
 ```
+### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
+```syntaxsql
+CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name } 
+    ( <column_definition> [ ,...n ] )   
+    WITH ( 
+        LOCATION = 'folder_or_filepath',   
+        DATA_SOURCE = external_data_source_name,   
+        FILE_FORMAT = external_file_format_name   
+    )   
+[;]   
+<column_definition> ::= 
+column_name <data_type> 
+    [ COLLATE collation_name ] 
+```
+---
 
 ## <a name="arguments"></a>参数
 
@@ -898,13 +939,26 @@ PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 �
 - 外部表列上的 DEFAULT 约束
 - 删除、插入和更新的数据操作语言 (DML) 操作
 
-查询限制：
+### <a name="query-limitations"></a>查询限制
 
 建议每个文件夹不超过 30,000 个文件。 如果引用的文件过多，可能会出现 Java 虚拟机 (JVM) 内存不足异常或性能下降的问题。
 
-表宽度限制：
+### <a name="table-width-limitations"></a>表宽度限制
 
 基于表定义中单个有效行的最大大小，Azure 数据仓库中的 PolyBase 具有 1 MB 的行宽限制。 如果列架构的总和大于 1 MB，则 PolyBase 无法查询数据。
+
+### <a name="data-type-limitations"></a>数据类型限制
+
+以下数据类型不能在 PolyBase 外部表中使用：
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 任何用户定义类型
 
 ## <a name="locking"></a>锁定
 
@@ -1128,15 +1182,28 @@ PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 �
 - 外部表列上的 DEFAULT 约束
 - 删除、插入和更新的数据操作语言 (DML) 操作
 
-查询限制：
+### <a name="query-limitations"></a>查询限制
 
 运行 32 个并发 PolyBase 查询时，每个文件夹中 PolyBase 最多可使用 33000 个文件。 此最大数量包括每个 HDFS 文件夹中的文件和子文件夹。 如果并发度小于 32，用户可以针对 HDFS 中包含超过 33000 个文件的文件夹运行 PolyBase 查询。 建议保持外部文件路径简短，并且每个 HDFS 文件夹不超过 30000 个文件。 当引用太多文件时，可能会发生 Java 虚拟机 (JVM) 内存不足异常。
 
-表宽度限制：
+### <a name="table-width-limitations"></a>表宽度限制
 
 基于表定义中单个有效行的最大大小，SQL Server 2016 中的 PolyBase 具有 32 KB 的行宽限制。 如果列架构的总和大于 32 KB，则 PolyBase 无法查询数据。
 
 在 Azure Synapse Analytics 中，此限制已提高到 1 MB。
+
+### <a name="data-type-limitations"></a>数据类型限制
+
+以下数据类型不能在 PolyBase 外部表中使用：
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 任何用户定义类型
 
 ## <a name="locking"></a>锁定
 

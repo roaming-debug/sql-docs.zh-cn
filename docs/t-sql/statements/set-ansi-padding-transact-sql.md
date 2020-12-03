@@ -25,31 +25,29 @@ ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76af61ef4551da1a508de695b6c786f6d5283396
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: f764b11533be2eb6e6e4a71e5b0fe388da9bdcc6
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227101"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328067"
 ---
 # <a name="set-ansi_padding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  对列存储长度小于列的定义大小的值以及在 **char**、 **varchar**、 **binary**和 **varbinary** 数据中含有尾随空格的值的方式进行控制。  
+  对列存储长度小于列的定义大小的值以及在 **char**、 **varchar**、 **binary** 和 **varbinary** 数据中含有尾随空格的值的方式进行控制。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法
-  
+ 
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>[!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)] 的语法 
 ```syntaxsql
--- Syntax for SQL Server
-
 SET ANSI_PADDING { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>[!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] 和 [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)] 的语法
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ANSI_PADDING ON
 ```
 
@@ -65,7 +63,7 @@ SET ANSI_PADDING ON
   
  下表显示在将值插入数据类型为 **char**、**varchar**、**binary** 和 **varbinary** 的列时，SET ANSI_PADDING 设置的效果。  
   
-|设置|char(n) NOT NULL 或 binary(n) NOT NULL****|char(n) NULL 或 binary(n) NULL****|varchar(n) 或 varbinary(n)****|  
+|设置|char(n) NOT NULL 或 binary(n) NOT NULL|char(n) NULL 或 binary(n) NULL|varchar(n) 或 varbinary(n)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
 |ON|填充原始值（**char** 列具有尾随空格的值，**binary** 列具有尾随零的值），以达到列的长度。|如果 SET ANSI_PADDING 为 ON，则遵从与 char(_n_) 或 binary(_n_) NOT NULL 相同的规则。|不剪裁插入 **varchar** 列中的字符值的尾随空格。 不剪裁插入 **varbinary** 列中的二进制值的尾随零。 不将值填充到列的长度。|  
 |OFF|填充原始值（**char** 列具有尾随空格的值，**binary** 列具有尾随零的值），以达到列的长度。|如果 SET ANSI_PADDING 为 OFF，则遵从与 **varchar** 或 **varbinary** 相同的规则。|剪裁插入 **varchar** 列中的字符值的尾随空格。 剪裁插入 **varbinary** 列中的二进制值的尾随零。|  

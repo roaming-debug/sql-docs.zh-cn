@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4212c397c712351e951060032f6e7a2ece6a5c3f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809173"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129033"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>从 SQL Server 备份到 URL 的最佳做法和疑难解答
 
@@ -70,11 +70,11 @@ ms.locfileid: "91809173"
     , SECRET = '<storage access key>' ;  
     ```  
   
--   凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 **db_backupoperator** 且拥有 ***更改任意凭据*** 权限的登录帐户。  
+-   凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 db_backupoperator 且拥有“更改任意凭据”权限的登录帐户。  
   
 -   验证存储帐户名称和密钥值。 在凭据中存储的信息必须与你在备份和还原操作中使用的 Azure 存储帐户的属性值匹配。  
   
- **备份错误/失败：**  
+ _ *备份错误/失败：* *  
   
 -   并行备份到同一 blob 导致一个备份失败，发生 **“初始化失败”** 错误。  
   

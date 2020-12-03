@@ -14,11 +14,11 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789643"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126147"
 ---
 # <a name="set-warning-thresholds"></a>设置警告阈值
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85789643"
   
 ## <a name="options"></a>选项  
  *服务器实例及其连接状态*  
- 伙伴服务器实例的名称格式为 SYSTEM\\INSTANCE_NAME。 ** 对于默认服务器实例，只显示系统名。  
+ 伙伴服务器实例的名称（格式为 SYSTEM\\INSTANCE_NAME）。 对于默认服务器实例，只显示系统名。  
   
  该字段还指示当前监视器是否连接至该服务器实例。 可能的连接状态为：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "85789643"
  每个伙伴服务器实例的名称将在单独的 *“服务器实例及其连接状态”* 字段中显示。 当监视器开始运行时，顶部字段会列出主体服务器。  
   
  **连接**/**取消**  
- “连接/取消” 按钮和每个*服务器实例及其连接状态*字段相关联。 按钮状态取决于连接状态：  
+ “连接/取消” 按钮和每个 *服务器实例及其连接状态* 字段相关联。 按钮状态取决于连接状态：  
   
 -   如果未与服务器实例建立连接，则按钮文本为 **“连接”** 。 单击可连接到服务器实例。  
   

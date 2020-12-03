@@ -38,6 +38,8 @@
           href: ../connect/ado-net/enable-eventsource-tracing.md
         - name: AppContext 开关
           href: ../connect/ado-net/appcontext-switches.md
+        - name: 故障排除指南
+          href: ../connect/ado-net/sqlclient-troubleshooting-guide.md
         - name: 查找其他信息
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
     - name: ADO.NET 中的数据类型映射
@@ -5177,6 +5179,8 @@
           href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
         - name: 使用 Azure Active Directory
           href: ../connect/oledb/features/using-azure-active-directory.md
+        - name: 使用数据分类
+          href: ../connect/oledb/features/using-data-classification.md
         - name: 使用数据库镜像
           href: ../connect/oledb/features/using-database-mirroring.md
         - name: 使用不带验证的加密
@@ -5447,6 +5451,12 @@
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
                 - name: 'ISSCommandWithParameters::SetParameterProperties'
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
+                - name: ISSDataClassification
+                  items:
+                    - name: ISSDataClassification
+                      href: oledb/ole-db-interfaces/issdataclassification-ole-db.md
+                    - name: 'ISSDataClassification::GetSensitivityClassification'
+                      href: oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md
             - name: 如何
               href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
               items:

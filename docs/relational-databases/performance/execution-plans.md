@@ -18,11 +18,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457237"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126612"
 ---
 # <a name="execution-plans"></a>执行计划
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "86457237"
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有三个选项可用于显示执行计划：        
 > -  [估计的执行计划](../../relational-databases/performance/display-the-estimated-execution-plan.md)，该计划是已编译的计划，由查询优化器根据估计得出。 这是存储在计划缓存中存储的查询计划。        
-> -  [实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)，该计划是已编译的计划加上其[执行上下文](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)。 在查询执行完成后可用。 这包括实际运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。         
-> -  [实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)是已编译的计划加上其执行上下文。 它可用于正在进行的查询执行，每隔一秒更新一次。 这包括运行时信息，如通过[运算符](../../relational-databases/showplan-logical-and-physical-operators-reference.md)的实际行数、运行时间和估计的查询进度。
+> -  [实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)，该计划是已编译的计划加上其 [执行上下文](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) _*_ _*_ 。 它在查询执行完成后可用。 这包括实际运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。         
+> -  [实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)，它是已编译的计划加上其执行上下文 ***。它可用于正在进行的查询执行，每一秒更新一次***。 这包括运行时信息，如通过[运算符](../../relational-databases/showplan-logical-and-physical-operators-reference.md)的实际行数、运行时间和估计的查询进度。
 
 > [!TIP]
 > 有关查询处理和查询执行计划的更多信息，请参阅“查询处理体系结构指南”的[优化 SELECT 语句](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)和[执行计划缓存和重用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)部分。

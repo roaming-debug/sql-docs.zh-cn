@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 14b146fb2420fb85be4a3ce10ac460302480a319
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "86913173"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>为事务项目的数据更改设置传播方法
@@ -119,11 +119,11 @@ ms.locfileid: "86913173"
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 \@publication 指定项目所属的发布的名称，为 \@article 指定项目的名称，为 \@source_object 指定要发布的数据库对象，并为包含值 0x02 （可自动生成自定义存储过程）的 \@schema_option 位掩码以及下列至少一个参数指定值：  
   
-    -   \@ins_cmd - 指定 CALL sp_MSins_*article_name* ** 值，其中 article_name 是为 \@article 指定的值。  
+    -   **\@ins_cmd** - 指定 CALL sp_MSins_article_name 的值，其中 article_name 是为 \@article 指定的值。  
   
-    -   \@del_cmd - 指定 CALL sp_MSdel_article_name ***** * 或 XCALL sp_MSdel_article_name**** 值，其中 article_name 是为 \@article 指定的值。  
+    -   **\@del_cmd** - 指定 CALL sp_MSdel_*article_name 或 CALL sp_MSdel_article_name 的值，其中 article_name 是为 \@article 指定的值。  
   
-    -   \@upd_cmd - 指定 SCALL sp_MSupd_article_name****、CALL sp_MSupd_article_name****、XCALL sp_MSupd_article_name**** 或 MCALL sp_MSupd_article_name**** 值，其中 article_name 是为 \@article 指定的值。  
+    -   **\@upd_cmd** - 指定 SCALL sp_MSupd_article_name、CALL sp_MSupd_article_name、XCALL sp_MSupd_article_name 或 MCALL sp_MSupd_article_name 的值，其中 article_name 是为 \@article 指定的值   。  
   
     > [!NOTE]  
     >  对于以上每个命令参数，您都可以为复制生成的存储过程指定您自己的名称。  
@@ -139,11 +139,11 @@ ms.locfileid: "86913173"
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 \@publication 指定项目所属的发布的名称，为 \@article 指定项目的名称，为 \@source_object 指定要发布的数据库对象，并为包含值 0x02 （可自动生成自定义存储过程）的 \@schema_option 位掩码以及下列至少一个参数指定值：  
   
-    -   \@ins_cmd - 指定 CALL sp_MSins_*article_name* ** 值，其中 article_name 是为 \@article 指定的值。  
+    -   **\@ins_cmd** - 指定 CALL sp_MSins_article_name 的值，其中 article_name 是为 \@article 指定的值。  
   
-    -   \@del_cmd - 指定 CALL sp_MSdel_article_name ***** * 或 XCALL sp_MSdel_article_name**** 值，其中 article_name 是为 \@article 指定的值。  
+    -   **\@del_cmd** - 指定 CALL sp_MSdel_*article_name 或 CALL sp_MSdel_article_name 的值，其中 article_name 是为 \@article 指定的值。  
   
-    -   \@upd_cmd - 指定 SCALL sp_MSupd_article_name****、CALL sp_MSupd_article_name****、XCALL sp_MSupd_article_name****、MCALL sp_MSupd_article_name**** 值，其中 article_name 是为 \@article 指定的值。  
+    -   **\@upd_cmd** - 指定 SCALL sp_MSupd_article_name、CALL sp_MSupd_article_name、XCALL sp_MSupd_article_name 或 MCALL sp_MSupd_article_name 的值，其中 article_name 是为 \@article 指定的值   。  
   
     > [!NOTE]  
     >  对于以上每个命令参数，您都可以为复制生成的存储过程指定您自己的名称。  

@@ -2,7 +2,7 @@
 title: 统计信息
 description: 查询优化器使用统计信息来创建可提高查询性能的查询计划。 了解使用查询优化的概念和指导原则。
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/23/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 1374be401f379dceb73a41f7a4e2f38882a9a98c
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810523"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130175"
 ---
 # <a name="statistics"></a>统计信息
 
@@ -134,20 +134,23 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
 
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
- 异步统计信息更新选项 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 默认情况下，异步统计信息更新选项为 OFF 状态，并且查询优化器以同步方式更新统计信息。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建的统计信息。  
+异步统计信息更新选项 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 默认情况下，异步统计信息更新选项为 OFF 状态，并且查询优化器以同步方式更新统计信息。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建的统计信息。  
  
- > [!NOTE]
- > 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中设置异步统计信息更新选项，需在“数据库属性”窗口的“选项”页中同时将“自动更新统计信息”和“自动异步更新统计信息”选项设置为“True”。
+> [!NOTE]
+> 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中设置异步统计信息更新选项，需在“数据库属性”窗口的“选项”页中同时将“自动更新统计信息”和“自动异步更新统计信息”选项设置为“True”。
   
- 统计信息更新可以是同步（默认设置）或异步的。 对于同步统计信息更新，查询将始终用最新的统计信息编译和执行；在统计信息过期时，查询优化器将在编译和执行查询前等待更新的统计信息。 对于异步统计信息更新，查询将用现有的统计信息编译，即使现有统计信息已过期。如果在查询编译时统计信息过期，查询优化器可以选择非最优查询计划。 在异步更新完成后编译的查询将从使用更新的统计信息中受益。  
+统计信息更新可以是同步（默认设置）或异步的。 对于同步统计信息更新，查询将始终用最新的统计信息编译和执行；在统计信息过期时，查询优化器将在编译和执行查询前等待更新的统计信息。 对于异步统计信息更新，查询将用现有的统计信息编译，即使现有统计信息已过期。如果在查询编译时统计信息过期，查询优化器可以选择非最优查询计划。 在异步更新完成后编译的查询将从使用更新的统计信息中受益。  
   
- 执行更改数据分布的操作（例如截断表或对很大百分比的行执行大容量更新）时，考虑使用同步统计信息。 如果您在完成该操作后未更新统计信息，则使用同步统计信息将确保对更改的数据执行查询前统计信息是最新的。  
+执行更改数据分布的操作（例如截断表或对很大百分比的行执行大容量更新）时，考虑使用同步统计信息。 如果您在完成该操作后未更新统计信息，则使用同步统计信息将确保对更改的数据执行查询前统计信息是最新的。  
   
- 在以下情况下，考虑使用异步统计信息来实现可预测性更高的查询响应时间：  
+在以下情况下，考虑使用异步统计信息来实现可预测性更高的查询响应时间：  
   
 * 您的应用程序频繁执行相同的查询、类似的查询或类似的缓存查询计划。 与同步统计信息更新相比，使用异步统计信息更新时你的查询响应时间可能具有更高的可预测性，因为查询优化器可以执行传入的查询而不必等待最新的统计信息。 这避免延迟某些查询，而不延迟其他查询。  
   
 * 您的应用程序遇到了客户端请求超时，这些超时是由于一个或多个查询正在等待更新后的统计信息所导致的。 在某些情况下，等待同步统计信息可能会导致应用程序因过长超时而失败。  
+
+> [!NOTE]
+> 不管 AUTO_UPDATE_STATISTICS_ASYNC 选项如何，本地临时表上的统计信息都始终同步更新。 而全局临时表上的统计信息会同步或异步更新，具体取决于为用户数据库设置的 AUTO_UPDATE_STATISTICS_ASYNC 选项。
 
 异步统计信息更新由后台请求执行。 当请求准备好将更新后的统计信息写入数据库时，它将尝试获取统计信息元数据对象上的架构修改锁。 如果其他会话已经锁定了同一对象，则将阻止异步统计信息更新，直到可以获取架构修改锁。 类似地，需要获取统计信息元数据对象上架构稳定性锁以编译查询的会话可能被已经持有或正在等待获取架构修改锁的异步统计信息更新后台会话阻止。 因此，对于具有非常频繁的查询编译和频繁统计信息更新的工作负载，使用异步统计信息可能会增加由于锁定阻止而导致并发问题的可能性。
 
@@ -248,14 +251,14 @@ GO
 * 请确保数据库不是只读的。 如果数据库是只读的，则无法保存新统计信息对象。  
 * 通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建缺少的统计信息。  
   
-当有关只读数据库或只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 **tempdb**中进行维护。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 创建临时统计信息时，将在统计信息名称后追加后缀 _readonly_database_statistic，以便将临时统计信息与永久统计信息加以区分。 后缀 _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的统计信息预留的。 可以在读写数据库上创建和重新生成临时统计信息的脚本。 编写脚本时，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将统计信息名称的后缀从 _readonly_database_statistic 更改为 _readonly_database_statistic_scripted。  
+当有关只读数据库或只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 **tempdb** 中进行维护。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 创建临时统计信息时，将在统计信息名称后追加后缀 _readonly_database_statistic，以便将临时统计信息与永久统计信息加以区分。 后缀 _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的统计信息预留的。 可以在读写数据库上创建和重新生成临时统计信息的脚本。 编写脚本时，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将统计信息名称的后缀从 _readonly_database_statistic 更改为 _readonly_database_statistic_scripted。  
   
 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以创建和更新临时统计信息。 但是，您可以使用用于永久统计信息的相同工具来删除临时统计信息和监视统计信息属性：  
   
 * 使用 [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) 语句删除临时统计信息。  
 * 使用 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 和 [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 目录视图监视统计信息 。 **sys_stats** 包含 **is_temporary** 列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
   
- 因为临时统计信息存储于 **tempdb**中，所以重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
+ 因为临时统计信息存储于 **tempdb** 中，所以重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
     
 ## <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> 何时更新统计信息  
  查询优化器确定统计信息何时可能过期，然后在查询计划需要统计信息时更新它们。 在某些情况下，将 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 设置为 ON 时，可以通过更频繁地更新统计信息来优化查询计划，并因此提高查询性能。 可以使用 UPDATE STATISTICS 语句或存储过程 sp_updatestats 来更新统计信息。  

@@ -14,15 +14,15 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445865"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>文字日期字符串转换为日期值的不确定性转换
 
-允许字符串转换为日期数据类型时请格外小心。 这是因为这种转换通常具有不确定性__。
+允许字符串转换为日期数据类型时请格外小心。 这是因为这种转换通常具有不确定性。
 
 可以通过考虑使用 [SET LANGUAGE](../statements/set-language-transact-sql.md) 和 [SET DATEFORMAT](../statements/set-dateformat-transact-sql.md) 的设置来控制这些不确定性转换。
 
@@ -34,9 +34,9 @@ ms.locfileid: "88445865"
 
 字符串可以是某月份的名称。 但是该名称是英语、波兰语、克罗地亚语还是另一种语言？ 以及，用户的会话是否将被设置为正确的相应语言？
 
-例如，可以考虑使用单词 listopad__，这是月份的名称。 但它究竟是哪一月要取决于 SQL 系统选择使用的语言：
-- 如果是波兰语，那么 listopad__ 将被翻译为 11 月（用英语表达为“November”__）。
-- 如果是克罗地亚语，那么 listopad__ 将被翻译为 10 月（用英语表达为“October”__）。
+例如，可以考虑使用单词 listopad，这是月份的名称。 但它究竟是哪一月要取决于 SQL 系统选择使用的语言：
+- 如果是波兰语，那么 listopad 将被翻译为 11 月（用英语表达为“November”）。
+- 如果是克罗地亚语，那么 listopad 将被翻译为 10 月（用英语表达为“October”）。
 
 #### <a name="code-example-of-set-language"></a>SET LANGUAGE 的代码示例
 
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-***/
+**_/
 ```
 
 
@@ -69,24 +69,24 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-前面的 dmy 格式表示示例日期字符串“01-03-2018”将被解释为表示 2018 年 3 月的第 1 天__****。
+前面的 dmy 格式表示示例日期字符串“01-03-2018”将被解释为表示 2018 年 3 月的第 1 天。
 
-如果指定为 mdy，那么相同的“01-03-2018”字符串将代表 2018 年 1 月的第 3 天__****。
+如果指定为 mdy，那么相同的“01-03-2018”字符串将代表 2018 年 1 月的第 3 天。
 
-如果指定为 ymd，则无法保证输出的结果是什么****。 “2018”的数值太大无法表示为一天。
+如果指定为 ymd，则无法保证输出的结果是什么。 “2018”的数值太大无法表示为一天。
 <!--
 The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
 #### <a name="specific-countries"></a>特定国家/地区
 
-在日本和中国，使用 ymd 的 DATEFORMAT。**** 格式的部分为从最大单位到最小单位的合理顺序。 因此，此格式排序良好。 此格式被视为国际性__ 格式。 之所以称其为国际性格式，是因为年份的四位数字是明确的，并且地球上没有一个国家/地区使用古老的 ydm 格式。****
+在日本和中国，使用 ymd 的 DATEFORMAT。 格式的部分为从最大单位到最小单位的合理顺序。 因此，此格式排序良好。 此格式被视为国际性格式。 之所以称其为国际性格式，是因为年份的四位数字是明确的，并且地球上没有一个国家/地区使用古老的 ydm 格式。
 
-在其他国家/地区（例如德国和法国），DATEFORMAT 为 dmy，意思是“dd-mm-yyyy”********。 该 **** dmy 格式排序不好，但它是最小单位到最大单位的合理顺序。
+在其他国家/地区（例如德国和法国），DATEFORMAT 为 dmy，意思是“dd-mm-yyyy”。 该 dmy 格式排序不好，但它是最小单位到最大单位的合理顺序。
 
-美国和密克罗尼西亚联邦是唯一使用 mdy 的国家/地区，此格式并不排序****。 此格式的混合顺序与口述日期中的口语模式相匹配。
+美国和密克罗尼西亚联邦是唯一使用 mdy 的国家/地区，此格式并不排序。 此格式的混合顺序与口述日期中的口语模式相匹配。
 
-#### <a name="code-example-of-set-dateformat-mdy-versus-dmy"></a>SET DATEFORMAT 的代码示例：mdy 和 dmy****
+#### <a name="code-example-of-set-dateformat-mdy-versus-dmy"></a>SET DATEFORMAT 的代码示例：mdy 和 dmy
 
 下面的 Transact-SQL 代码示例使用具有三种不同 DATEFORMAT 设置的相同日期字符串。 运行代码会生成注释中显示的输出：
 
@@ -115,14 +115,14 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-***/
+**_/
 ```
 
-在前面的代码示例中，最后一个示例格式 ymd 与输入字符串不匹配****。 输入字符串的第三个节点代表一个太大而无法表示一天的数值。 Microsoft 不保证这种不匹配输出的值。
+在上述代码示例中，最后一个示例的格式 ymd 与输入字符串之间不一致。 输入字符串的第三个节点代表一个太大而无法表示一天的数值。 Microsoft 不保证这种不匹配输出的值。
 
-#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT 提供确定性__ 日期格式控制的显式代码
+#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT 提供确定性日期格式控制的显式代码
 
-CAST 和 CONVERT 文档文章列出了可以与 CONVERT 函数一起使用以确定性地__ 控制日期转换的显式代码。 每个月这篇文章都有最高的页面浏览量。
+CAST 和 CONVERT 文档文章列出了可以与 CONVERT 函数一起使用以确定性地控制日期转换的显式代码。 每个月这篇文章都有最高的页面浏览量。
 
 - [CAST 和 CONVERT (Transact SQL)：日期和时间样式](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
 - [CAST 和 CONVERT (Transact-SQL)：某些日期时间的转换具有不确定性](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)

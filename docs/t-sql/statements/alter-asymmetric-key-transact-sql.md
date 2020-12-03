@@ -21,11 +21,11 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 814df70ce91d6cc65b6c2a86d0617dc42bbb4489
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688699"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128155"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,10 +63,10 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  更改私钥的保护。  
   
- ENCRYPTION BY PASSWORD ='strongPassword'**********  
+ ENCRYPTION BY PASSWORD **='** _strongPassword_*_'_*  
  指定用于保护私钥的新密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
   
- DECRYPTION BY PASSWORD ='oldPassword'**********  
+ DECRYPTION BY PASSWORD **='** _oldPassword_*_'_*  
  指定当前用于保护私钥的旧密码。 如果私钥使用数据库主密钥进行加密，则不需要指定旧密码。  
   
 ## <a name="remarks"></a>备注  

@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 00cfd711ce130fa9c90c11000a6853082494e9bd
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300307"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124300"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,17 +45,17 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  指定要更改的数据库作用域凭据的名称。  
   
- IDENTITY ='identity_name'   
+ IDENTITY **='** _identity_name_*_'_*  
  指定从服务器外部进行连接时要使用的帐户名称。 要从 Azure Blob 存储导入文件，标识名称必须是 `SHARED ACCESS SIGNATURE`。  有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1)。  
     
   
- SECRET ='secret'   
- 指定发送身份验证所需的机密内容。 从 Azure Blob 存储导入文件时需要 *secret* 。 在其他用途中， *secret* 可能是可选的。   
+ SECRET **='** _secret_*_'_*  
+ 指定发送身份验证所需的机密内容。 从 Azure Blob 存储导入文件时需要 *secret*。 在其他用途中，*secret* 可能是可选的。   
 > [!WARNING]
 >  SAS 密钥值可以“?”（问号）开头。 使用 SAS 密钥时，必须删除前导“?”。 否则会阻止操作。    
   
 ## <a name="remarks"></a>备注  
- 当数据库作用域凭据发生更改时，identity_name 和 secret 的值都将重置  。 如果未指定可选参数 SECRET 的值，则存储的密码值将设置为 NULL。  
+ 当数据库作用域凭据发生更改时，identity_name 和 secret 的值都将重置。 如果未指定可选参数 SECRET 的值，则存储的密码值将设置为 NULL。  
   
  使用服务主密钥对密码进行加密。 如果重新生成服务主密钥，则需要使用新服务主密钥对该密码重新加密。  
   

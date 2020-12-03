@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 47e88bb71ac656debf02646a99e51ca77ab243c6
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 776f3bfbefbafa3f2e7e116db40d893cacd425f5
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037440"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419841"
 ---
 # <a name="security-functions-transact-sql"></a>安全函数 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -121,10 +121,17 @@ ms.locfileid: "92037440"
 :::row-end:::
 :::row:::
     :::column:::
-        [ORIGINAL_LOGIN (Transact-SQL)](../../t-sql/functions/original-login-transact-sql.md)
+        [LOGINPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/loginproperty-transact-sql.md)
     :::column-end:::
     :::column:::
         [USER_NAME (Transact-SQL)](../../t-sql/functions/user-name-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [ORIGINAL_LOGIN (Transact-SQL)](../../t-sql/functions/original-login-transact-sql.md)
+    :::column-end:::
+    :::column:::
     :::column-end:::
 :::row-end:::
 :::row:::

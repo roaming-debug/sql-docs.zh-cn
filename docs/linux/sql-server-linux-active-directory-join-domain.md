@@ -2,19 +2,19 @@
 title: 将 Linux 上的 SQL Server 加入 Active Directory
 titleSuffix: SQL Server
 description: 本文提供了将 SQL Server Linux 主机连接到 AD 域的指导。 你可以使用内置的 SSSD 包或使用第三方 AD 提供程序。
-author: Dylan-MSFT
-ms.author: dygray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 184744aeea40dd8d21c023806cc63d644311ffde
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896976"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419838"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>将 Linux 主机上的 SQL Server 加入 Active Directory 域
 
@@ -29,23 +29,31 @@ ms.locfileid: "85896976"
 > [!IMPORTANT]
 > 本文中所述的示例步骤仅用于指导，请参考 Ubuntu 16.04、Red Hat Enterprise Linux (RHEL) 7.x 和 SUSE Enterprise Linux (SLES) 12 操作系统。 根据你整体环境的配置和操作系统版本，实际步骤可能略有不同。 例如，Ubuntu 18.04 使用 netplan，而 Red Hat Enterprise Linux (RHEL) 8.x 使用 nmcli 等工具来管理和配置网络。 建议让你环境的系统和域管理员进行特定的工具、配置、自定义以及所需的任何故障排除。
 
+### <a name="reverse-dns-rdns"></a>反向 DNS (RDNS)
+
+将运行 Windows Server 的计算机设置为域控制器时，可能不会默认获得 RDNS 区域。 请确保将运行 SQL Server 的 Linux 计算机的域控制器和 IP 地址都存在适用的 RDNS 区域。
+
+还请确保存在一个 PTR 记录指向域控制器。
+
 ## <a name="check-the-connection-to-a-domain-controller"></a>检查与域控制器的连接
 
-检查是否可以使用域的短名称和完全限定的名称访问域控制器：
+检查你能否通过域的短名称和完全限定的名称连接域控制器，且你能否使用域控制器的主机名实现连接。 域控制器的 IP 也应解析为域控制器的 FQDN：
 
 ```bash
 ping contoso
 ping contoso.com
+ping dc1.contoso.com
+nslookup <IP address of dc1.contoso.com>
 ```
 
 > [!TIP]
-> 本教程分别使用 contoso.com 和 CONTOSO.COM 作为示例域和领域名   。 它还使用 DC1.CONTOSO.COM 作为域控制器的完全限定的域名示例  。 需要使用自己的值替换这些名称。
+> 本教程分别使用 contoso.com 和 CONTOSO.COM 作为示例域和领域名。 它还使用 DC1.CONTOSO.COM 作为域控制器的完全限定的域名示例。 需要使用自己的值替换这些名称。
 
 如果其中任何一个名称未能通过检查，请更新域搜索列表。 以下部分分别提供有关 Ubuntu、Red Hat Enterprise Linux (RHEL) 和 SUSE Linux Enterprise Server (SLES) 的说明。
 
 ### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
-1. 编辑“/etc/network/interfaces”文件，以使 Active Directory 域出现在域搜索列表中  ：
+1. 编辑“/etc/network/interfaces”文件，以使 Active Directory 域出现在域搜索列表中：
 
    ```/etc/network/interfaces
    # The primary network interface
@@ -56,12 +64,45 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > 不同计算机的网络接口 `eth0` 可能略有不同。 若要找出正在使用的接口，请运行“ifconfig”  。 然后复制具有 IP 地址且传输和接收了字节的接口。
+   > 不同计算机的网络接口 `eth0` 可能略有不同。 若要找出正在使用的接口，请运行“ifconfig”。 然后复制具有 IP 地址且传输和接收了字节的接口。
 
 1. 编辑此文件后，重启网络服务：
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
+   ```
+
+1. 下一步，检查“/etc/resolv.conf”文件是否包含类似以下示例的行：
+
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
+
+### <a name="ubuntu-1804"></a>Ubuntu 18.04
+
+1. 编辑 [sudo vi /etc/netplan/******.yaml] 文件，使 Active Directory 域出现在域搜索列表中：
+
+   ```/etc/netplan/******.yaml
+   network:
+     ethernets:
+       eth0:
+               dhcp4: true
+
+               dhcp6: true
+               nameservers:
+                       addresses: [ **<AD domain controller IP address>**]
+                       search: [**<AD domain name>**]
+     version: 2
+   ```
+
+   > [!NOTE]
+   > 不同计算机的网络接口 `eth0` 可能略有不同。 若要找出正在使用的接口，请运行“ifconfig”。 然后复制具有 IP 地址且传输和接收了字节的接口。
+
+1. 编辑此文件后，重启网络服务：
+
+   ```bash
+   sudo netplan apply
    ```
 
 1. 下一步，检查“/etc/resolv.conf”文件是否包含类似以下示例的行  ：
@@ -73,7 +114,7 @@ ping contoso.com
 
 ### <a name="rhel-7x"></a>RHEL 7.x
 
-1. 编辑“/etc/sysconfig/network-scripts/ifcfg-eth0”文件，以使 Active Directory 域出现在域搜索列表中  。 或根据需要编辑其他的接口配置文件：
+1. 编辑“/etc/sysconfig/network-scripts/ifcfg-eth0”文件，以使 Active Directory 域出现在域搜索列表中。 或根据需要编辑其他的接口配置文件：
 
    ```/etc/sysconfig/network-scripts/ifcfg-eth0
    PEERDNS=no
@@ -87,14 +128,14 @@ ping contoso.com
    sudo systemctl restart network
    ```
 
-1. 现在检查“/etc/resolv.conf”文件是否包含类似以下示例的行  ：
+1. 现在检查“/etc/resolv.conf”文件是否包含类似以下示例的行：
 
    ```/etc/resolv.conf
    search contoso.com com  
    nameserver **<AD domain controller IP address>**
    ```
 
-1. 如果仍无法对域控制器进行 ping 操作，请查找域控制器的完全限定的域名和 IP 地址。 示例域名为“DC1.CONTOSO.COM”  。 请将以下条目添加到“/etc/hosts”  ：
+1. 如果仍无法对域控制器进行 ping 操作，请查找域控制器的完全限定的域名和 IP 地址。 示例域名为“DC1.CONTOSO.COM”。 请将以下条目添加到“/etc/hosts”：
 
    ```/etc/hosts
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
@@ -102,7 +143,7 @@ ping contoso.com
 
 ### <a name="sles-12"></a>SLES 12
 
-1. 编辑“/etc/sysconfig/network/config”文件，以使 Active Directory 域控制器 IP 用于 DNS 查询，且 Active Directory 域出现在域搜索列表中  ：
+1. 编辑“/etc/sysconfig/network/config”文件，以使 Active Directory 域控制器 IP 用于 DNS 查询，且 Active Directory 域出现在域搜索列表中：
 
    ```/etc/sysconfig/network/config
    NETCONFIG_DNS_STATIC_SEARCHLIST=""
@@ -115,7 +156,7 @@ ping contoso.com
    sudo systemctl restart network
    ```
 
-1. 下一步，检查“/etc/resolv.conf”文件是否包含类似以下示例的行  ：
+1. 下一步，检查“/etc/resolv.conf”文件是否包含类似以下示例的行：
 
    ```/etc/resolv.conf
    search contoso.com com
@@ -131,36 +172,55 @@ ping contoso.com
 
 ### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> 选项 1：使用 SSSD 包加入 AD 域
 
-此方法使用 realmd 和 sssd 包将 SQL Server 主机加入到 AD 域   。
+此方法使用 realmd 和 sssd 包将 SQL Server 主机加入到 AD 域。
 
 > [!NOTE]
 > 这是将 Linux 主机加入 AD 域控制器的首选方法。
 
 下面的步骤用于将 SQL Server 主机加入 Active Directory 域：
 
-1. 使用 [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) 将主机加入 AD 域。 需要先使用 Linux 分发的包管理器在 SQL Server 主机上安装 realmd 和 Kerberos 客户端包  ：
+1. 使用 [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) 将主机加入 AD 域。 需要先使用 Linux 分发的包管理器在 SQL Server 主机上安装 realmd 和 Kerberos 客户端包：
 
    **RHEL：**
 
    ```base
    sudo yum install realmd krb5-workstation
    ```
-
-   **SUSE：**
+   
+   **SLES 12：**
+   
+   请注意，这些步骤特定于 SLES 12，它是面向 Linux 的唯一官方支持的 SUSE 版本。
 
    ```bash
-   sudo zypper install realmd krb5-client
+   sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
+   sudo zypper refresh
+   sudo zypper install realmd krb5-client sssd-ad
    ```
 
-   **Ubuntu：**
+   **Ubuntu 16.04：**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
+   **Ubuntu 18.04：**
+
+   ```bash
+   sudo apt-get install realmd krb5-user software-properties-common python3-software-properties packagekit
+   sudo apt-get install adcli libpam-sss libnss-sss sssd sssd-tools
+   ```
+
 1. 安装 Kerberos 客户端包时，如果系统提示输入领域名，请以大写形式输入自己的域名。
 
-1. 确认自己的 DNS 配置正确后，请通过运行以下命令加入域。 需要使用在 AD 中具有足够权限的 AD 帐户进行身份验证，才能将新计算机加入域。 此命令在 AD 中创建新的计算机帐户，创建“/etc/krb5.keytab”主机 keytab 文件，在“/etc/sssd/sssd.conf”中配置域，并更新“/etc/krb5.conf”    。
+1. 确认自己的 DNS 配置正确后，请通过运行以下命令加入域。 需要使用在 AD 中具有足够权限的 AD 帐户进行身份验证，才能将新计算机加入域。 此命令在 AD 中创建新的计算机帐户，创建“/etc/krb5.keytab”主机 keytab 文件，在“/etc/sssd/sssd.conf”中配置域，并更新“/etc/krb5.conf”。
+
+   由于 realmd 出现问题，请先将计算机主机名设置为 FQDN，而不是设置为计算机名称。 否则，realmd 可能不会为计算机创建某些必需 SPN，而且 DNS 条目也不会自动更新，即使你的域控制器支持动态 DNS 更新也是如此。
+   
+   ```bash
+   sudo hostname <old hostname>.contoso.com
+   ```
+   
+   运行上述命令后，/etc/hostname 文件应包含 <old hostname>.contoso.com。
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -176,11 +236,11 @@ ping contoso.com
    | `Insufficient permissions to join the domain` | 请与域管理员核实自己是否拥有足够的权限将 Linux 计算机加入自己的域。 |
    | `KDC reply did not match expectations` | 你可能没有为用户指定正确的领域名。 领域名区分大小写（通常为大写），可使用命令领域发现 contoso.com 进行标识。 |
 
-   SQL Server 使用 SSSD 和 NSS 将用户帐户和组映射到安全标识符 (SID)。 若要成功创建 AD 登录名，必须为 SQL Server 配置 SSSD 并运行它。 “realmd”通常会在加入域时自动执行此操作，但在某些情况下，你必须单独执行此操作  。
+   SQL Server 使用 SSSD 和 NSS 将用户帐户和组映射到安全标识符 (SID)。 若要成功创建 AD 登录名，必须为 SQL Server 配置 SSSD 并运行它。 “realmd”通常会在加入域时自动执行此操作，但在某些情况下，你必须单独执行此操作。
 
    有关详细信息，请参阅如何[手动配置 SSSD](https://access.redhat.com/articles/3023951) 和[配置 NSS 以使用 SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
 
-1. 请确认自己现在是否可以从域中收集有关用户的信息，及是否可以该用户的身份获取 Kerberos 工单。 下面的示例使用 id  、[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 和 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 命令执行此操作。
+1. 请确认自己现在是否可以从域中收集有关用户的信息，及是否可以该用户的身份获取 Kerberos 工单。 下面的示例使用 id、[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 和 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 命令执行此操作。
 
    ```bash
    id user@contoso.com
@@ -210,9 +270,9 @@ ping contoso.com
 SQL Server 不使用第三方集成器的代码或任何与 AD 相关的查询的库。 SQL Server 始终在此设置中直接使用 openldap 库调用查询 AD。 第三方集成器仅用于将 Linux 主机加入 AD 域，SQL Server 不与这些实用程序直接通信。
 
 > [!IMPORTANT]
-> 请查看[配合使用 Active Directory 身份验证与 Linux 上的 SQL Server](sql-server-linux-active-directory-authentication.md#additionalconfig) 一文“其他配置选项”部分中关于使用 mssql-conf `network.disablesssd` 配置选项的建议   。
+> 请查看[配合使用 Active Directory 身份验证与 Linux 上的 SQL Server](sql-server-linux-active-directory-authentication.md#additionalconfig) 一文“其他配置选项”部分中关于使用 mssql-conf `network.disablesssd` 配置选项的建议 。
 
-验证是否已正确配置“/etc/krb5.conf”  。 对于大多数第三方 Active Directory 提供程序，此配置是自动完成的。 但是，请检查“/etc/krb5.conf”的以下值，以防止将来出现任何问题  ：
+验证是否已正确配置“/etc/krb5.conf”。 对于大多数第三方 Active Directory 提供程序，此配置是自动完成的。 但是，请检查“/etc/krb5.conf”的以下值，以防止将来出现任何问题：
 
 ```/etc/krb5.conf
 [libdefaults]
@@ -229,7 +289,7 @@ contoso.com = CONTOSO.COM
 
 ## <a name="check-that-the-reverse-dns-is-properly-configured"></a>检查反向 DNS 是否已正确配置
 
-以下命令应返回运行 SQL Server 的主机的完全限定的域名 (FQDN)。 例如，“SqlHost.contoso.com”  。
+以下命令应返回运行 SQL Server 的主机的完全限定的域名 (FQDN)。 例如，“SqlHost.contoso.com”。
 
 ```bash
 host **<IP address of SQL Server host>**

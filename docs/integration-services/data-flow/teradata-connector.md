@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a866d7d1083435acffeb157edf9fe4a0bb725d3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425759"
 ---
 # <a name="microsoft-connector-for-teradata"></a>Microsoft Connector for Teradata
@@ -86,15 +86,15 @@ Teradata 连接管理器显示为“TERADATA”。
 
 要在面向 SQL Server 2017 及更低版本的 SSDT 中设计 SSIS 包，需要拥有 Microsoft Connector for Teradata，并安装相应版本的 Microsoft Connector for Teradata by Attunity。 
 
-## <a name="limitationsandknownissues"></a>限制和已知问题
+## <a name="limitations-and-known-issues"></a>限制和已知问题
 
-- Teradata 源/目标编辑器，“默认数据库”属性不生效。 ****   在下拉框中键入数据库名称来筛选表或视图，可暂时绕过此问题。
+- Teradata 源/目标编辑器，“默认数据库”属性不生效。  在下拉框中键入数据库名称来筛选表或视图，可暂时绕过此问题。
 
-- Teradata 源/目标编辑器，键入 \<database>.<table/view> 时映射步骤无效。 键入 \<database>.<table/view> 然后单击下拉按钮，可暂时绕过此问题。
+- Teradata 源/目标编辑器，键入 \<database>.<table/view> 时映射步骤无效。 键入 \<database>.<table/view>，然后单击下拉按钮，可暂时绕过此问题。
 
 - Teradata 源编辑器，当数据访问模式为“表名称 – TPT 导出”时，不能显示视图。 使用 Teradata 源的高级编辑器，可暂时绕过此问题。
 
-- Teradata 目标，不能将特性“PackMaximum”设置为“True”。 否则将会出错。
+- Teradata 目标，不能将特性“PackMaximum”设置为“True”。  否则将会出错。
 
 ## <a name="uninstallation"></a>卸载
 

@@ -26,12 +26,12 @@ ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
-ms.openlocfilehash: 670c9ed80a81ce2e276af815a840a9a9386a9872
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8a18c0ff3422bc26046eca195dcd8f8ada41c9eb
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227113"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328080"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,15 +42,13 @@ ms.locfileid: "91227113"
 
 ## <a name="syntax"></a>语法
 
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>[!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)] 的语法
 ```syntaxsql
--- Syntax for SQL Server
-
 SET ANSI_NULLS { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>[!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] 和 [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)] 的语法
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ANSI_NULLS ON
 ```
 

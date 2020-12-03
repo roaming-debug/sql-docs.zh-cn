@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3dcf1473fc92ba69d68f9aae9d871540e2604b52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 106773df7a5e9f88c123b614688ca19722613d7f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737826"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130533"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>备份和还原：互操作性和共存 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "85737826"
   
  如果数据库启动过程中出现问题，恢复将失败且数据库被标记为 SUSPECT。 如果可以将问题隔离到单个文件或多个文件，则数据库管理员可以使文件脱机并尝试重新启动数据库。 若要使文件脱机，可以使用下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句：  
   
- ALTER DATABASE database_name MODIFY FILE (NAME ='filename', OFFLINE)     
+ ALTER DATABASE *database_name* MODIFY FILE (NAME **='** _filename_*_'_*, OFFLINE)  
   
  如果数据库成功启动，则任何包含脱机文件的文件组将保持脱机状态。  
   

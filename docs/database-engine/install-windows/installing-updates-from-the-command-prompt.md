@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 96a7bde8459edcc6e6fe4758167c35b95aaedfef
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: e89e825dc8b5fd2748dc380c8b065e0baac02821
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670580"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125856"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>从命令提示符安装更新
 
@@ -80,8 +80,8 @@ ms.locfileid: "91670580"
 |**/?**|显示无人参与安装命令提示符帮助| 
 |**/action=Patch 或 /action=RemovePatch**|指定安装操作：Patch 或 RemovePatch。| 
 |**/allinstances**|将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新应用于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以及所有不识别实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件。| 
-|**/instancename=InstanceName***|将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新应用于名为 InstanceName 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以及所有不识别实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件。| 
-|**/InstanceID=Inst1**|将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 实例，以及所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件和不识别实例的组件。| 
+|**/instancename=InstanceName** _|将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新应用于名为 InstanceName 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以及所有不识别实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件。| 
+|_ */InstanceID=Inst1**|将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 实例，以及所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件和不识别实例的组件。| 
 |**/quiet**|在无人参与模式下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安装程序。| 
 |**/qs**|仅显示进度 UI 对话。| 
 |**/UpdateEnabled**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和加入产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将包含找到的更新。| 
