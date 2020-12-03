@@ -2,7 +2,7 @@
 title: 集成的 Kerberos 身份验证（OLE DB 驱动程序）| Microsoft Docs
 description: 通过此示例了解如何使用 OLE DB Driver for SQL Server 中的 OLE DB 获得 Kerberos 相互身份验证。
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d14c3b3b6bd872a529bbe20ab41d650120f406ab
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: e7ba7469d01b75397f706df403041ec68c1ed5f9
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860533"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506369"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>集成的 Kerberos 身份验证 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,117 +33,107 @@ ms.locfileid: "88860533"
   
  请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。 使用 ole32.lib 和 oleaut32.lib 进行编译。  
   
-```  
-// compile with: ole32.lib oleaut32.lib  
-#pragma once  
-  
-#define WIN32_LEAN_AND_MEAN   // Exclude rarely-used stuff from Windows headers  
-#include <stdio.h>  
-#include <tchar.h>  
-#include <msoledbsql.h>  
-  
-#define CHECKHR(stmt) \  
-   do { \  
-      hr = (stmt); \  
-      if (FAILED(hr)) { \  
-         printf("CHECK_HR " #stmt " failed at (%hs, %d), hr=0x%08X\r\n", __FILE__, __LINE__, hr); \  
-         goto CleanUp; \  
-      } \  
-   } while(0)  
-  
-#define CHECKVB(stmt) \  
-   do { \  
-      if ((stmt)!= VARIANT_TRUE) { \  
-         printf("CHECK_VB " #stmt " failed at (%hs, %d)\r\n", __FILE__, __LINE__); \  
-         goto CleanUp; \  
-      } \  
-   } while(0)  
-  
-#define CHECKBOOL(stmt) \  
-   do { \  
-      if (!(stmt)) { \  
-         printf("CHECK_BOOL " #stmt " failed at (%hs, %d)\r\n", __FILE__, __LINE__); \  
-        goto CleanUp; \  
-      } \  
-   } while(0)  
-  
-#define CHECKNULL(stmt) \  
-   do { \  
-      if ((stmt) == NULL) { \  
-         printf("CHECK_NULL " #stmt " failed at (%hs, %d)\r\n", __FILE__, __LINE__); \  
-         goto CleanUp; \  
-      } \  
-   } while(0)  
-  
-#define SAFERELEASE(p) \  
-   do { \  
-      if ((p)!= NULL) { \  
-         p->Release(); \  
-         p = NULL; \  
-      } \  
-   } while(0)  
-  
-#define SAFE_SYSFREESTRING(p) \  
-   do { \  
-      if ((p)!= NULL) { \  
-         ::SysFreeString(p); \  
-         p = NULL; \  
-      } \  
-   } while(0)  
-  
-int _tmain(int argc, _TCHAR* argv[]) {  
-   HRESULT hr = S_OK;  
-   IDBInitialize* pInitialize = NULL;  
-   IDBProperties* pProperties = NULL;  
-   DBPROPSET PropertySet[1];  
-   DBPROP rgdbprop[1];  
-   LPCWSTR lpwszProviderString = L"Server=MyServer;"   // server with SQL Server 2008 (or later)  
-      L"Trusted_Connection=Yes;"  
-      L"ServerSPN=CP_SPN;";   // customer-provided SPN  
-   DBPROPID rgdbPropID[2];  
-   DBPROPIDSET rgdbPropIDSet[1];  
-   ULONG cPropertySets;  
-   DBPROPSET *prgPropertySets;  
-  
-   CHECKHR(CoInitialize(NULL));  
-   CHECKHR(CoCreateInstance(CLSID_MSOLEDBSQL, NULL, CLSCTX_INPROC_SERVER, __uuidof(IDBProperties), reinterpret_cast<void **>(&pProperties)));  
-  
-   // set provider string  
-   rgdbprop[0].dwPropertyID = DBPROP_INIT_PROVIDERSTRING;  
-   rgdbprop[0].dwOptions = DBPROPOPTIONS_REQUIRED;  
-   rgdbprop[0].colid = DB_NULLID;  
-   VariantInit(&(rgdbprop[0].vValue));  
-   V_VT(&(rgdbprop[0].vValue)) = VT_BSTR;  
-   V_BSTR(&(rgdbprop[0].vValue)) = SysAllocString(lpwszProviderString);  
-  
-   // set the property to the property set  
-   PropertySet[0].rgProperties = &rgdbprop[0];  
-   PropertySet[0].cProperties = 1;  
-   PropertySet[0].guidPropertySet = DBPROPSET_DBINIT;  
-  
-   // set properties and connect to server  
-   CHECKHR(pProperties->SetProperties(1, PropertySet));  
-   CHECKHR(pProperties->QueryInterface(__uuidof(pInitialize), (void **)&pInitialize));  
-   CHECKHR(pInitialize->Initialize());  
-  
-   // get properties  
-   rgdbPropID[0] = SSPROP_INTEGRATEDAUTHENTICATIONMETHOD;  
-   rgdbPropID[1] = SSPROP_MUTUALLYAUTHENTICATED;  
-   rgdbPropIDSet[0].rgPropertyIDs = &rgdbPropID[0];  
-   rgdbPropIDSet[0].cPropertyIDs = 2;  
-   rgdbPropIDSet[0].guidPropertySet = DBPROPSET_SQLSERVERDATASOURCEINFO;  
-  
-   CHECKHR(pProperties->GetProperties(1, rgdbPropIDSet, &cPropertySets, &prgPropertySets));  
-   wprintf(L"Authentication method: %s\r\n", (LPWSTR)V_BSTR(&(prgPropertySets[0].rgProperties[0].vValue)));  
-   wprintf(L"Mutually authenticated: %s\r\n", (VT_BOOL == V_VT(&(prgPropertySets[0].rgProperties[1].vValue)))?L"yes":L"no");  
-  
-CleanUp:  
-   SAFERELEASE(pProperties);  
-   SAFERELEASE(pInitialize);  
-  
-   VariantClear(&(rgdbprop[0].vValue));  
-   CoUninitialize();  
-}  
-```  
-  
-  
+```cpp
+// compile with: ole32.lib oleaut32.lib
+#pragma once
+
+#define WIN32_LEAN_AND_MEAN   // Exclude rarely-used stuff from Windows headers
+#include <stdio.h>
+#include <tchar.h>
+#include <msoledbsql.h>
+
+#define CHECKHR(stmt) \
+do\
+{\
+    hr = (stmt);\
+    if (FAILED(hr))\
+    {\
+       printf("CHECK_HR " #stmt " failed at (%hs, %d), hr=0x%08X\r\n", __FILE__, __LINE__, hr); \
+       goto CleanUp; \
+    } \
+} while (0)
+
+#define SAFERELEASE(p) \
+do\
+{\
+    if ((p) != nullptr)\
+    {\
+       p->Release(); \
+       p = nullptr; \
+    } \
+} while (0)
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    HRESULT hr = S_OK;
+    IDBInitialize* pInitialize = nullptr;
+    IDBProperties* pProperties = nullptr;
+    DBPROP rgDBProp[1] = {};
+    LPCWSTR lpwszProviderString = L"Server=MyServer;"   // server with SQL Server 2008 (or later)
+       L"Trusted_Connection=Yes;"
+       L"Encrypt=yes;"
+       L"ServerSPN=CP_SPN;";   // customer-provided SPN
+
+    DBPROPSET* prgPropertySets = nullptr;
+    ULONG cPropertySets = 0;
+
+    CHECKHR(CoInitialize(nullptr));
+    CHECKHR(CoCreateInstance(CLSID_MSOLEDBSQL, nullptr, CLSCTX_INPROC_SERVER, __uuidof(IDBProperties), reinterpret_cast<void**>(&pProperties)));
+
+    // set provider string
+    rgDBProp[0].dwPropertyID = DBPROP_INIT_PROVIDERSTRING;
+    rgDBProp[0].dwOptions = DBPROPOPTIONS_REQUIRED;
+    rgDBProp[0].colid = DB_NULLID;
+    VariantInit(&(rgDBProp[0].vValue));
+    V_VT(&(rgDBProp[0].vValue)) = VT_BSTR;
+    V_BSTR(&(rgDBProp[0].vValue)) = SysAllocString(lpwszProviderString);
+
+    { // set the property to the property set
+        DBPROPSET PropertySet[1] = {};
+        PropertySet[0].rgProperties = &rgDBProp[0];
+        PropertySet[0].cProperties = 1;
+        PropertySet[0].guidPropertySet = DBPROPSET_DBINIT;
+
+        // set properties and connect to server
+        CHECKHR(pProperties->SetProperties(sizeof(PropertySet)/sizeof(DBPROPSET), PropertySet));
+    }
+
+    CHECKHR(pProperties->QueryInterface<IDBInitialize>(&pInitialize));
+    CHECKHR(pInitialize->Initialize());
+
+    { // get properties
+        DBPROPIDSET rgDBPropIDSet[1] = {};
+
+        DBPROPID rgDBPropID[2] = {};
+        rgDBPropID[0] = SSPROP_INTEGRATEDAUTHENTICATIONMETHOD;
+        rgDBPropID[1] = SSPROP_MUTUALLYAUTHENTICATED;
+
+        rgDBPropIDSet[0].rgPropertyIDs = &rgDBPropID[0];
+        rgDBPropIDSet[0].cPropertyIDs = 2;
+        rgDBPropIDSet[0].guidPropertySet = DBPROPSET_SQLSERVERDATASOURCEINFO;
+        CHECKHR(pProperties->GetProperties(1, rgDBPropIDSet, &cPropertySets, &prgPropertySets));
+    }
+    wprintf(L"Authentication method: %s\r\n", V_BSTR(&(prgPropertySets[0].rgProperties[0].vValue)));
+    wprintf(L"Mutually authenticated: %s\r\n",
+        (V_BOOL(&(prgPropertySets[0].rgProperties[1].vValue)) == VARIANT_TRUE) ? L"yes" : L"no");
+
+CleanUp:
+    SAFERELEASE(pProperties);
+    SAFERELEASE(pInitialize);
+
+    if (prgPropertySets)
+    {
+        for (ULONG iPropSet = 0; iPropSet < cPropertySets; ++iPropSet)
+        {
+            for (ULONG iProp = 0; iProp < prgPropertySets[iPropSet].cProperties; ++iProp)
+            {
+                VariantClear(&prgPropertySets[iPropSet].rgProperties[iProp].vValue);
+            }
+        }
+    }
+
+    VariantClear(&(rgDBProp[0].vValue));
+    CoUninitialize();
+}
+```

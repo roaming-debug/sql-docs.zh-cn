@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 74031c0c3711ce768b919692fde0cb687060f227
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: bdb4294fda1f26ec346f786ec29061f8d4f9ee27
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126370"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419774"
 ---
 # <a name="connection-string-builders"></a>连接字符串生成器
 
@@ -71,6 +71,6 @@ initial catalog="AdventureWorks;NewValue=Bad"
 
 [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](~/../sqlclient/doc/samples/SqlConnectionStringBuilder_UserNamePwd.cs#1)]
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [连接字符串](connection-strings.md)

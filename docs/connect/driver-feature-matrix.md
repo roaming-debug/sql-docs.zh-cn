@@ -2,19 +2,19 @@
 title: 驱动程序功能支持矩阵
 description: 了解 SQL Server 的驱动程序支持的常用功能，以及可找到有关这些功能的信息的位置。
 ms.custom: ''
-ms.date: 08/05/2020
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081426"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419669"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Microsoft SQL Server 的驱动程序功能支持矩阵
 
@@ -43,11 +43,11 @@ ms.locfileid: "92081426"
 | [Azure Active Directory 密码身份验证](/azure/sql-database/sql-database-aad-authentication) | “是” | “是” | | 是 |
 | [Azure Active Directory 集成身份验证](/azure/sql-database/sql-database-aad-authentication) | “是” | “是” | | 是 |
 | [Azure Active Directory 交互式 (MFA) 身份验证](/azure/sql-database/sql-database-aad-authentication) | “是” | “是” | | 是 |
-| [Azure Active Directory 托管标识身份验证](/azure/active-directory/managed-identities-azure-resources/overview) | | | | |
+| [Azure Active Directory 托管标识身份验证](/azure/active-directory/managed-identities-azure-resources/overview) | 是 | “是” | | |
 | [Azure Active Directory 服务主体身份验证](/azure/active-directory/develop/app-objects-and-service-principals) | “是” | 是 | | |
 | [Windows 集成身份验证](/windows-server/security/windows-authentication/windows-authentication-overview) | [是](ado-net/sql/authentication-sql-server.md) | [是](ado-net/sql/authentication-sql-server.md) | [是](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [是](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [大容量复制](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [是](ado-net/sql/bulk-copy-operations-sql-server.md) | [是](ado-net/sql/bulk-copy-operations-sql-server.md) | [是](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [是](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
-| [数据敏感度和分类元数据](../relational-databases/security/sql-data-discovery-and-classification.md) | “是” | “是” | “是” | 是 |
+| [数据敏感度和分类元数据](../relational-databases/security/sql-data-discovery-and-classification.md) | “是” | 是 | 是 | 是 |
 | [多重活动结果集 (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [是](ado-net/sql/multiple-active-result-sets-mars.md) | [是](ado-net/sql/multiple-active-result-sets-mars.md) | [是](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [是](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [空间数据类型](../relational-databases/spatial/spatial-data-sql-server.md) | | “是” | | 是 |
 | [表值参数 (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [是](ado-net/sql/table-valued-parameters.md) | [是](ado-net/sql/table-valued-parameters.md) | [是](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [是](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
