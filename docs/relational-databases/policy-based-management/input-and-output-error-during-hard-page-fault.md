@@ -1,5 +1,5 @@
 ---
-description: Input and Output Error During Hard Page Fault
+description: 硬页面错误期间的输入和输出错误
 title: 硬页面错误期间的输入和输出错误 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -20,7 +20,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/09/2020
 ms.locfileid: "91892467"
 ---
-# <a name="input-and-output-error-during-hard-page-fault"></a>Input and Output Error During Hard Page Fault
+# <a name="input-and-output-error-during-hard-page-fault"></a>硬页面错误期间的输入和输出错误
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此规则检查系统事件日志中是否存在 EventId 51。 此错误由硬页面错误期间的错误引起。  
   
