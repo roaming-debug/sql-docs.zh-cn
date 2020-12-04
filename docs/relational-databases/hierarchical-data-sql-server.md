@@ -20,17 +20,17 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91869051"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
 
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
-  内置的 hierarchyid**** 数据类型使存储和查询层次结构数据变得更为容易。 针对表示树（最常见的层次结构数据类型）对**hierarchyid** 进行了优化。  
+  内置的 hierarchyid 数据类型使存储和查询层次结构数据变得更为容易。 针对表示树（最常见的层次结构数据类型）对 **hierarchyid** 进行了优化。  
   
  层次结构数据定义为一组通过层次结构关系互相关联的数据项。 在层次结构关系中，一个数据项是另一个项的父级。 通常存储在数据库中的层次结构数据示例包括以下内容：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "91869051"
   
 -   非常紧凑  
   
-     在具有 *n* 个节点的树中，表示一个节点所需的平均位数取决于平均端数（节点的平均子级数）。 端数较小时 (0-7)，大小约为 6\*logA*n* 位，其中 A 是平均端数。 对于平均端数为 6 级、包含 100,000 个人的组织层次结构，一个节点大约占 38 位。 存储时，此值向上舍入为 40 位，即 5 字节。  
+     在具有 *n* 个节点的树中，表示一个节点所需的平均位数取决于平均端数（节点的平均子级数）。 端数较小时 (0-7)，大小约为 6\*logA *n* 位，其中 A 是平均端数。 对于平均端数为 6 级、包含 100,000 个人的组织层次结构，一个节点大约占 38 位。 存储时，此值向上舍入为 40 位，即 5 字节。  
   
 -   按深度优先顺序进行比较  
   
@@ -99,13 +99,13 @@ GO
   
  针对一些常见操作比较父/子与 **hierarchyid**  
   
--   使用 **hierarchyid**进行子树查询时速度明显加快。  
+-   使用 **hierarchyid** 进行子树查询时速度明显加快。  
   
--   使用 **hierarchyid**进行直接后代查询时速度稍慢。  
+-   使用 **hierarchyid** 进行直接后代查询时速度稍慢。  
   
--   使用 **hierarchyid**移动非叶节点时速度明显减慢。  
+-   使用 **hierarchyid** 移动非叶节点时速度明显减慢。  
   
--   使用 **hierarchyid**插入非叶节点和插入或移动叶节点具有相同的复杂度。  
+-   使用 **hierarchyid** 插入非叶节点和插入或移动叶节点具有相同的复杂度。  
   
  当存在以下情况时，使用父/子可能更好：  
   
@@ -127,7 +127,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- XML 文档是一个树，因此单个 XML 数据类型实例可以表示一个完整的层次结构。 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML hierarchyid 函数dex is created, **hierarchyid** values are used hierarchyid 函数ternally to represent the position hierarchyid 函数 the hierarchy.  
+ XML 文档是一个树，因此单个 XML 数据类型实例可以表示一个完整的层次结构。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，创建 XML 索引时，会内部使用 hierarchyid 值以表示层次结构中的位置。  
   
  当满足以下所有条件时，使用 XML 数据类型会更好：  
   
@@ -260,7 +260,7 @@ INSERT SimpleDemo
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDER BY Level;  
 ```  
   
- 这演示更多可能的问题。 Kyoto 可以作为级别 `/1/3/1/` 插入，即使没有父级别 `/1/3/`。 London 和 Kyoto 具有相同的 **hierarchyid**值。 用户必须再次确定此类型的层次结构是否适合于其用途，并阻止对其用途无效的值。  
+ 这演示更多可能的问题。 Kyoto 可以作为级别 `/1/3/1/` 插入，即使没有父级别 `/1/3/`。 London 和 Kyoto 具有相同的 **hierarchyid** 值。 用户必须再次确定此类型的层次结构是否适合于其用途，并阻止对其用途无效的值。  
   
  此外，此表未使用层次结构顶层 `'/'`。 该层被省略，因为没有所有州的公共父级。 可以通过添加整个星球来添加一个顶层。  
   
@@ -326,7 +326,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>使用可序列化事务的示例  
- Org_BreadthFirst 索引可确保确定 \@last_child 使用范围查找********。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 \@last_child。 以下代码计算可序列化事务中的新节点值：  
+ Org_BreadthFirst 索引可确保确定 \@last_child 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 \@last_child。 以下代码计算可序列化事务中的新节点值：  
   
 ```sql
 CREATE TABLE Org_T2  
