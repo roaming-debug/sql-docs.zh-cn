@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 7894ea12ef77a7fb07a61ff454f27150812c7dfb
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384496"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443062"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -86,7 +86,7 @@ SqlPackage.exe 提取操作可创建从 SQL Server 或 Azure SQL 数据库到 DA
 
 ### <a name="help-for-the-extract-action"></a>有关 Extract 操作的帮助
 
-|参数|缩写|值|说明|
+|参数|缩写|值|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -137,7 +137,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 
 ### <a name="help-for-publish-action"></a>有关 Publish 操作的帮助
 
-|参数|缩写|值|说明|
+|参数|缩写|值|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|发布|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -245,7 +245,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定在发布到数据库时，应忽略还是应更新 SQL Server 保留路由表中的路由的时间量方面的差异。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|指定在发布到数据库时，是将忽略还是将更新 T-SQL 语句之间的分号差异。|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新表选项方面的差异。|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新表分区选项方面的差异。  此选项仅适用于 Azure Synapse Analytics SQL 池（数据仓库）数据库。|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新表分区选项方面的差异。  此选项仅适用于 Azure Synapse Analytics 专用 SQL 池数据库。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新用户设置对象方面的差异。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|指定在发布到数据库时，是将忽略还是将更新空白方面的差异。|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|指定在进行发布时，是将忽略还是将更新 CHECK 约束的 WITH NOCHECK 子句值方面的差异。|
@@ -285,7 +285,7 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
   
 ### <a name="help-for-export-action"></a>有关 Export 操作的帮助
 
-|参数|缩写|值|说明|
+|参数|缩写|值|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|导出|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -326,7 +326,7 @@ SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件�
   
 ### <a name="help-for-command-actions"></a>命令操作帮助
 
-|参数|缩写|值|说明|
+|参数|缩写|值|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|导入|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -368,7 +368,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
   
 ### <a name="help-for-deployreport-action"></a>有关 DeployReport 操作的帮助
 
-|参数|缩写|值|说明|
+|参数|缩写|值|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -504,7 +504,7 @@ SqlPackage.exe 报告操作创建自注册数据库注册以来已对其做出�
   
 ### <a name="help-for-driftreport-action"></a>有关 DriftReport 操作的帮助
 
-|参数|缩写|值|说明|
+|参数|缩写|值|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -531,7 +531,7 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
   
 ### <a name="help-for-the-script-action"></a>有关 Script 操作的帮助
 
-|参数|缩写|值|说明|
+|参数|缩写|值|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|Script|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |

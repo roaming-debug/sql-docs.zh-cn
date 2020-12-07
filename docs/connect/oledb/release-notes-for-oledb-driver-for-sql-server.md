@@ -1,19 +1,19 @@
 ---
 title: OLE DB 驱动器发行说明
 description: 本发行说明文章介绍了每个发行版 Microsoft ODBC Driver for SQL Server 的变更内容。
-ms.date: 05/25/2020
+ms.date: 12/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: e66856d7eac47bca5fe7093cbec02d9414c585ef
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726905"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523067"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 Microsoft OLE DB 驱动程序发行说明
 
@@ -27,6 +27,34 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1850"></a>18.5.0
+![下载](../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2135577)  
+![下载](../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2135722)  
+
+发布日期：2020 年 12 月 1 日
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+    对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40a)  
+    对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40a)  
+
+### <a name="features-added"></a>新增功能
+
+| 新增功能 | 详细信息 |
+| :------------ | :------ |
+| 支持 [SQL 数据发现和分类](../../relational-databases/security/sql-data-discovery-and-classification.md) | [使用数据分类](features/using-data-classification.md) |
+| Azure Active Directory 服务主体身份验证支持 (`ActiveDirectoryServicePrincipal`) | [使用 Azure Active Directory](features/using-azure-active-directory.md) |
+
+### <a name="bugs-fixed"></a>已修复 bug
+
+| 已修复 bug | 详细信息 |
+| :-------- | :------ |
+| 修复了嵌入的 NUL 字符的问题。 | 修复了一个 bug，该 bug 导致驱动程序返回包含 NUL 字符的不正确字符串长度。 |
+| 修复了 [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) 接口中的内存泄漏问题。 | 修复了涉及 `sql_variant` 数据类型的大容量复制操作的 [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) 接口中的内存泄漏问题。 |
+| 修复了导致为 `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` 和 `SSPROP_MUTUALLYAUTHENTICATED` 属性返回了不正确值的 bug。 | 先前版本的驱动程序返回 `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` 属性的截断值。 此外，在 `ActiveDirectoryIntegrated` 身份验证的情况下，即使双方均相互进行了身份验证，`SSPROP_MUTUALLYAUTHENTICATED` 属性的返回值仍为 `VARIANT_FALSE`。|
+| 修复了链接服务器远程表插入 bug。 | 修复了启用 [NOCOUNT 服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)时，链接服务器远程表插入失败的 bug。 |
+
+## <a name="previous-releases"></a>以前的版本
 
 ## <a name="1840"></a>18.4.0
 ![下载](../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2129954)  
@@ -52,12 +80,10 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | 修复了 [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) 接口中的各种 bug | 数个影响多字节代码页的 bug 导致接口在读取操作期间过早报告流结束。|
 | 修复了 [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 接口中的内存泄漏 | 修复了启用 `SSPROP_IRowsetFastLoad` 属性时 [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 接口中的内存泄漏。 |
 | 修复了涉及 `sql_variant` 数据类型和非 ASCII 字符串的方案中的 bug。 | 执行某些涉及 `sql_variant` 数据类型和非 ASCII 字符串的方案可能导致数据损坏。 有关详细信息，请参阅：[已知问题](ole-db-data-types/ssvariant-structure.md#known-issues)。 |
-| 修复了 [UDL 配置对话框](help-topics/data-link-pages.md)中“测试连接”按钮的问题 | [UDL 配置对话框](help-topics/data-link-pages.md)中的“测试连接”按钮现在遵循“全部”选项卡中设置的初始化属性 。 |
-| 修复了 `SSPROP_INIT_PACKETSIZE` 属性默认值处理 | 修复了将 `SSPROP_INIT_PACKETSIZE` 属性设置为 `0` 默认值时出现的意外错误。 有关此属性的详细信息，请参阅[初始化和授权属性](ole-db-data-source-objects/initialization-and-authorization-properties.md)。 |
-| 修复了 [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) 中的缓冲区溢出问题 | 修复了使用格式不正确的数据文件时出现的缓冲区溢出问题。 |
-| 修复了辅助功能问题 | 修复了安装程序 UI 和 [SQL Server 登录对话框](help-topics/sql-server-login-dialog.md)中的辅助功能问题（阅读内容、制表位）。 |
-
-## <a name="previous-releases"></a>以前的版本
+| 修复了 [UDL 配置对话框](help-topics/data-link-pages.md)中“测试连接”按钮的问题。 | [UDL 配置对话框](help-topics/data-link-pages.md)中的“测试连接”按钮现在遵循“全部”选项卡中设置的初始化属性 。 |
+| 修复了 `SSPROP_INIT_PACKETSIZE` 属性默认值处理。 | 修复了将 `SSPROP_INIT_PACKETSIZE` 属性设置为 `0` 默认值时出现的意外错误。 有关此属性的详细信息，请参阅[初始化和授权属性](ole-db-data-source-objects/initialization-and-authorization-properties.md)。 |
+| 修复了 [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) 中的缓冲区溢出问题。 | 修复了使用格式不正确的数据文件时出现的缓冲区溢出问题。 |
+| 修复了辅助功能问题。 | 修复了安装程序 UI 和 [SQL Server 登录对话框](help-topics/sql-server-login-dialog.md)中的辅助功能问题（阅读内容、制表位）。 |
 
 ## <a name="1830"></a>18.3.0
 
@@ -74,7 +100,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
-| Azure Active Directory 身份验证支持（`ActiveDirectoryInteractive`、`ActiveDirectoryMSI`）。 | [使用 Azure Active Directory](features/using-azure-active-directory.md)。 |
+| Azure Active Directory 身份验证支持（`ActiveDirectoryInteractive`、`ActiveDirectoryMSI`） | [使用 Azure Active Directory](features/using-azure-active-directory.md) |
 | 在安装程序中添加 Azure Active Directory 身份验证库 (adal.dll) | 现已包含在基础驱动程序安装中，OLE DB 安装程序将升级适用于 SQL Server 的 Microsoft Active Directory 身份验证库的现有安装，同时从 Windows 的已安装应用程序列表中将其删除。 |
 | &nbsp; | &nbsp; |
 
@@ -102,7 +128,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
-| 支持从 SQL Server 可移动媒体升级驱动程序。 | 借助此改进，可以直接从 SQL Server 可移动媒体升级驱动程序。 |
+| 支持从 SQL Server 可移动媒体升级驱动程序 | 借助此改进，可以直接从 SQL Server 可移动媒体升级驱动程序。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -138,8 +164,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
-| 支持 UTF-8 服务器编码。 | [OLE DB Driver for SQL Server 中的 UTF-8 支持](features/utf-8-support-in-oledb-driver-for-sql-server.md)。 |
-| Azure Active Directory 身份验证支持。 | [使用 Azure Active Directory](features/using-azure-active-directory.md)。 |
+| 支持 UTF-8 服务器编码 | [适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+| Azure Active Directory 身份验证支持 | [使用 Azure Active Directory](features/using-azure-active-directory.md) |
 | &nbsp; | &nbsp; |
 
 ## <a name="1810"></a>18.1.0
@@ -157,7 +183,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
-| 对 `UseFMTONLY` 连接字符串密钥以及 `SSPROP_INIT_USEFMTONLY` 初始化属性的支持。 | 连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本时，`UseFMTONLY` 会控制检索元数据的方式。<br/><br/>有关详细信息，请参阅：[结合使用连接字符串关键字和 OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
+| 对 `UseFMTONLY` 连接字符串关键字以及 `SSPROP_INIT_USEFMTONLY` 初始化属性的支持 | 连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本时，`UseFMTONLY` 会控制检索元数据的方式。<br/><br/>有关详细信息，请参阅：[结合使用连接字符串关键字和 OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed-in-1810"></a>已在 18.1.0 中修复的 bug

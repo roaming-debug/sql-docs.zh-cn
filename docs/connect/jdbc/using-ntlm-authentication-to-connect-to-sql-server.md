@@ -13,18 +13,18 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: ed1e16aac4de3277906d00c2b1a0f4458418cc95
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 31510c4fbe4291168753809c227650951592e1e6
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081766"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328037"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>使用 NTLM 身份验证连接到 SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 允许应用程序使用 authenticationScheme**** 连接属性，以指明要使用 NTLM v2 身份验证连接到数据库。 
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 允许应用程序使用 authenticationScheme 连接属性，以指明要使用 NTLM v2 身份验证连接到数据库。 
 
 以下属性也用于 NTLM 身份验证：
 
@@ -33,7 +33,7 @@ ms.locfileid: "92081766"
 - **密码 = 密码**
 - **integratedSecurity = true**
 
-除了 domain**** 以外，其他属性都是必需的；使用 NTLM**** authenticationScheme 属性时，如果缺少任何必需属性，驱动程序都会抛出错误。 
+除了 domain 以外，其他属性都是必需的；使用 NTLM authenticationScheme 属性时，如果缺少任何必需属性，驱动程序都会抛出错误。 
 
 若要详细了解连接属性，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 若要详细了解 Microsoft NTLM 身份验证协议，请参阅 [Microsoft NTLM](/windows/desktop/SecAuthN/microsoft-ntlm)。
 

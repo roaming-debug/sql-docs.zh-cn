@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b3f1e0c518bf1b77c096999423c5e6d37e6051a
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f78760819e91a3f83e1a91208bdd96e7d1ec15ac
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123914"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442723"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>用于 SQL Server 的 Microsoft ADO.NET
 
@@ -32,8 +32,8 @@ ADO.NET 是用于 .NET 语言的核心数据访问技术。 使用 Microsoft.Dat
 
 ## <a name="documentation"></a>文档
 * [ADO.NET 概述](/dotnet/framework/data/adonet/)
-* [SqlClient 驱动程序入门](get-started-sqlclient-driver.md)  
-* [SqlClient 驱动程序概述](overview-sqlclient-driver.md)  
+* [SqlClient 驱动程序入门](get-started-sqlclient-driver.md)
+* [SqlClient 驱动程序概述](overview-sqlclient-driver.md)
 * [ADO.NET 中的数据类型映射](data-type-mappings-ado-net.md)
 * [在 ADO.NET 中检索和修改数据](retrieving-modifying-data.md)
 * [SQL Server 和 ADO.NET](./sql/index.md)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 40fc82cdc264951d1e776875a48b5a516b4b26a8
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f61b867b70825595a012b2167d2c63b13409a8e2
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126371"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442814"
 ---
 # <a name="connection-string-syntax"></a>连接字符串语法
 
@@ -69,7 +69,7 @@ Windows 身份验证是用于连接到 SQL Server 的首选方法。 但是，�
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-连接到 Azure SQL 数据库或 Azure SQL 数据仓库并提供格式为 `user@servername` 的登录名时，请确保登录名中的 `servername` 值与为 `Server=` 提供的值相匹配。
+连接到 Azure SQL 数据库或 Azure Synapse Analytics 并提供格式为 `user@servername` 的登录名时，请确保登录名中的 `servername` 值与为 `Server=` 提供的值相匹配。
 
 > [!NOTE]
 > Windows 身份验证优先于 SQL Server 登录。 如果您同时指定 Integrated Security=true 以及用户名和密码，将忽略用户名和密码，而使用 Windows 身份验证。
@@ -125,7 +125,7 @@ Windows 身份验证是用于连接到 SQL Server 的首选方法。 但是，�
 
 有关详细信息，请参阅[使用加密但不验证](/sql/relational-databases/native-client/features/using-encryption-without-validation)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [连接字符串](connection-strings.md)
 - [连接到数据源](connecting-to-data-source.md)

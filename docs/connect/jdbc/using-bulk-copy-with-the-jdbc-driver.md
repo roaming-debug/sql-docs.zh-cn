@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 52f465b4cfdcb2ff771a71c1ef956af78b522358
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042210"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442879"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>通过 JDBC 驱动程序使用大容量复制
 
@@ -364,9 +364,9 @@ public class BulkCopyMultiple {
 
 将此连接属性设置为 `false` 时，将发送 DATE、DATETIME、DATIMETIME2、DATETIMEOFFSET、SMALLDATETIME 和 TIME 数据类型作为其各自的类型，而不是以 String 的形式发送它们。
 
-将时态数据类型作为其各自的类型发送时，用户可以将数据发送到 Azure Synapse Analytics (SQL DW) 的这些列，这在之前是不可能的，因为驱动程序将数据转换为 String。 将字符串数据发送到时态列适用于 SQL Server，因为 SQL Server 会为我们执行隐式转换，但与 Azure Synapse Analytics (SQL DW) 不同。
+将时态数据类型作为其各自的类型发送时，用户可以将数据发送到 Azure Synapse Analytics 的这些列，这在之前是不可能的，因为驱动程序将数据转换为 String。 将字符串数据发送到时态列适用于 SQL Server，因为 SQL Server 会为我们执行隐式转换，但与 Azure Synapse Analytics 不同。
 
-此外，即使不将此连接字符串设置为“false”，在 v8.4.1 及更高版本中，MONEY 和 SMALLMONEY 数据类型也将作为 MONEY / SMALLMONEY 数据类型发送，而不是 DECIMAL，这同样允许将这些数据类型大容量复制到 Azure Synapse Analytics (SQL DW) 中。
+此外，即使不将此连接字符串设置为“false”，在 v8.4.1 及更高版本中，MONEY 和 SMALLMONEY 数据类型也将作为 MONEY / SMALLMONEY 数据类型发送，而不是 DECIMAL，这同样允许将这些数据类型大容量复制到 Azure Synapse Analytics 中。
 
 ### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>Azure 数据仓库的大容量复制扩展支持限制
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: ab6edc2a7090de85e970445cdb2b86d6ed5cb8f2
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 26554deb5d8a3786efd1bd869a2692d368132531
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126373"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419808"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>连接到 ADO.NET 中的数据源
 
@@ -35,7 +35,7 @@ Microsoft SqlClient Data Provider for SQL Server 包括一个派生自 <xref:Sys
 [连接事件](connection-events.md)\
 说明如何使用 InfoMessage 事件从数据源中检索信息性消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [连接字符串](connection-strings.md)
 - [连接池](connection-pooling.md)

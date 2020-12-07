@@ -1,18 +1,18 @@
 ---
 title: 下载适用于 SQL Server 的 Microsoft OLE DB 驱动程序 | Microsoft Docs
 description: 下载 Microsoft OLE DB Driver for SQL Server，以开发连接到 SQL Server 和 Azure SQL 数据库的本机 Windows 应用程序。
-ms.date: 05/25/2020
+ms.date: 09/30/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4424f11e4b8d31c964d024b3ecaf90bec0cd7c21
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ea4fcf0ed6fdab9a9580d8f13227fb5bd079f3bc
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727338"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506401"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>下载适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 
@@ -24,15 +24,15 @@ OLE DB Driver for SQL Server 是独立的数据访问应用程序编程接口 (A
 
 适用于 Microsoft OLE DB Driver for SQL Server 的可再发行安装程序安装客户端组件，在运行时利用 SQL Server 的新功能需要这些组件。 从版本 18.3 开始，安装程序还包括并安装了 Microsoft Active Directory 身份验证库 (ADAL.dll)。
 
-适用于 SQL Server 的 Microsoft OLE DB 驱动程序 18.4 是最新正式发行版 (GA)。 如果安装了适用于 SQL Server 的 Microsoft OLE DB 驱动程序 18 的早期版本，安装 18.4 版会使其升级到 18.4 版。
+Microsoft OLE DB Driver 18.5 for SQL Server 是最新正式发行版 (GA)。 如果安装了 Microsoft OLE DB Driver 18 for SQL Server 的早期版本，安装 18.5 版会使其升级到 18.5 版。
 
-[![下载](../../ssms/media/download-icon.png)下载 Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2129954)   
-[![下载](../../ssms/media/download-icon.png)下载 Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2131003)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2135577)   
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2135722)   
 
 ### <a name="version-information"></a>版本信息
 
-- 版本号：18.4.0
-- 发布日期：2020 年 5 月 30 日
+- 版本号：18.5.0
+- 发布日期：2020 年 9 月 30 日
 
 > [!Note]
 > 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本]()。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
@@ -41,11 +41,11 @@ OLE DB Driver for SQL Server 是独立的数据访问应用程序编程接口 (A
 
 可以安装以下语言的此版本 Microsoft OLE DB Driver for SQL Server：
 
-适用于 SQL Server 的 Microsoft OLE DB 驱动程序 18.4 (x64)：  
-[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40a)
+Microsoft OLE DB Driver 18.5 for SQL Server (x64)：  
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40a)
 
-适用于 SQL Server 的 Microsoft OLE DB 驱动程序 18.4 (x86)：  
-[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40a)
+Microsoft OLE DB Driver 18.5 for SQL Server (x86)：  
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40a)
 
 ## <a name="release-notes"></a>发行说明
 

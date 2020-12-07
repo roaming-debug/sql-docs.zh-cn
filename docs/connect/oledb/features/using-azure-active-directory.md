@@ -2,7 +2,7 @@
 title: 使用 Azure Active Directory
 description: 了解可用于连接到 Azure SQL 数据库的 Microsoft OLE DB Driver for SQL Server 中可用的 Azure Active Directory 身份验证方法。
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: bace88bd8ccf42cbef96a34ddb2af2593cedd7be
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 71f95203e006141649db7b884b56d085f562974b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727288"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504677"
 ---
 # <a name="using-azure-active-directory"></a>使用 Azure Active Directory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,23 +24,29 @@ ms.locfileid: "91727288"
 
 ## <a name="purpose"></a>目的
 
-从版本 18.2.1 开始，Microsoft OLE DB Driver for SQL Server 允许 OLE DB 应用程序使用联合身份连接到 Azure SQL 数据库的实例。 新的身份验证方法包括：
+
+从版本 [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821) 开始，Microsoft OLE DB Driver for SQL Server 允许 OLE DB 应用程序使用联合身份连接到 Azure SQL 数据库的实例。 新的身份验证方法包括：
 - Azure Active Directory 登录 ID 和密码
 - Azure Active Directory 访问令牌
 - Azure Active Directory 集成身份验证
 - SQL 登录 ID 和密码
 
-版本 18.3 添加了对以下身份验证方法的支持：
+
+版本 [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) 添加了对以下身份验证方法的支持：
 - Azure Active Directory 交互式身份验证
 - Azure Active Directory 托管标识身份验证
 
+版本 [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) 添加了对以下身份验证方法的支持：
+- Azure Active Directory 服务主体身份验证
+
 > [!NOTE]
-> 不**** 支持使用以下将 `DataTypeCompatibility`（或其对应的属性）设置为 `80` 的身份验证模式：
+> 不支持使用以下将 `DataTypeCompatibility`（或其对应的属性）设置为 `80` 的身份验证模式：
 > - 使用登录 ID 和密码进行 Azure Active Directory 身份验证
 > - 使用访问令牌进行 Azure Active Directory 身份验证
 > - Azure Active Directory 集成身份验证
 > - Azure Active Directory 交互式身份验证
 > - Azure Active Directory 托管标识身份验证
+> - Azure Active Directory 服务主体身份验证
 
 ## <a name="connection-string-keywords-and-properties"></a>连接字符串关键字和属性
 引入了以下连接字符串关键字，以支持 Azure Active Directory 身份验证：
@@ -55,16 +61,16 @@ ms.locfileid: "91727288"
 - [初始化和授权属性](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 
 ## <a name="encryption-and-certificate-validation"></a>加密和证书验证
-本部分讨论加密和证书验证行为的更改。 仅当使用新的身份验证或访问令牌连接字符串关键字（或其对应的属性）时，这些更改才**** 有效。
+本部分讨论加密和证书验证行为的更改。 仅当使用新的身份验证或访问令牌连接字符串关键字（或其对应的属性）时，这些更改才有效。
 
 ### <a name="encryption"></a>加密
 为了提高安全性，当使用新的连接属性/关键字时，驱动程序会通过将默认加密值设置为 `yes` 来重写该值。 重写在数据源对象初始化时发生。 如果在通过任何方法初始化之前设置加密，则会考虑该值，而不会进行重写。
 
 > [!NOTE]   
-> 在 ADO 应用程序以及通过 `IDataInitialize::GetDataSource` 获取 `IDBInitialize` 接口的应用程序中，实现接口的核心组件会将加密显式设置为其默认值 `no`。 因此，新的身份验证属性/关键字遵循此设置，而不会**** 重写加密值。 因此，建议**** 这些应用程序显式设置 `Use Encryption for Data=true` 来重写默认值。
+> 在 ADO 应用程序以及通过 `IDataInitialize::GetDataSource` 获取 `IDBInitialize` 接口的应用程序中，实现接口的核心组件会将加密显式设置为其默认值 `no`。 因此，新的身份验证属性/关键字遵循此设置，而不会重写加密值。 因此，建议这些应用程序显式设置 `Use Encryption for Data=true` 来重写默认值。
 
 ### <a name="certificate-validation"></a>证书验证
-为了提高安全性，新的连接属性/关键字遵循 `TrustServerCertificate` 设置（及其相应的连接字符串关键字/属性），独立于客户端加密设置****。 因此，默认情况下会验证服务器证书。
+为了提高安全性，新的连接属性/关键字遵循 `TrustServerCertificate` 设置（及其相应的连接字符串关键字/属性），独立于客户端加密设置。 因此，默认情况下会验证服务器证书。
 
 > [!NOTE]   
 > 还可以通过 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` 注册表项的 `Value` 字段来控制证书验证。 有效值为 `0` or `1`进行求值的基于 SQL 语言的筛选器表达式。 OLE DB 驱动程序在注册表和连接属性/关键字设置之间选择最安全的选项。 也就是说，只要至少有一个注册表/连接设置启用服务器证书验证，驱动程序就会验证服务器证书。
@@ -142,6 +148,13 @@ ms.locfileid: "91727288"
         > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;UID=[Object ID];Encrypt=yes
     - 系统分配的托管标识：
         > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;Encrypt=yes
+
+### <a name="azure-active-directory-service-principal-authentication"></a>Azure Active Directory 服务主体身份验证
+
+- 使用 `IDataInitialize::GetDataSource`：
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=ActiveDirectoryServicePrincipal;User ID=[Application (client) ID];Password=[Application (client) secret];Use Encryption for Data=true
+- 使用 `DBPROP_INIT_PROVIDERSTRING`：
+    > Server=[server];Database=[database];Authentication=ActiveDirectoryServicePrincipal;UID=[Application (client) ID];PWD=[Application (client) secret];Encrypt=yes
 
 ## <a name="code-samples"></a>代码示例
 

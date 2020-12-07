@@ -2,7 +2,7 @@
 title: 客户端连接中的服务主体名称 (SPN) (OLE DB) | Microsoft Docs
 description: 了解支持客户端应用程序中的服务主体名称的 OLE DB Driver for SQL Server 属性和成员函数。
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5a97e889a8e36e0c9fc918f3f4724d283b8cfa5d
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 43e0972f3dde7be226ccac2bd4039dd7403ade03
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862229"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504726"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db-in-sql-server-native-client"></a>SQL Server Native Client 中的客户端连接 (OLE DB) 中的服务主体名称 (SPN)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88862229"
 |名称|类型|使用情况|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR，只读|返回用于连接的身份验证方法。 返回到应用程序的值是 Windows 返回到 OLE DB Driver for SQL Server 的那个值。 以下列出的是可能的值： <br />“NTLM”，使用 NTLM 身份验证打开连接时将返回该值。<br />“Kerberos”，使用 Kerberos 身份验证打开连接时将返回该值。<br /><br /> 如果已经打开连接但无法确定身份验证方法，将返回 VT_EMPTY。<br /><br /> 只能在已经初始化数据源时读取此属性。 如果试图在初始化数据源之前读取该属性，IDBProperties::GetProperies 将视情况返回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，并且将在 DBPROPSET_PROPERTIESINERROR 中为此属性设置 DBPROPSTATUS_NOTSUPPORTED。 此行为符合 OLE DB 核心规范。|  
-|SSPROP_MUTUALLYAUTHENICATED|VT_ BOOL，只读|如果建立连接的服务器之间已通过相互身份验证，则返回 VARIANT_TRUE；否则返回 VARIANT_FALSE。<br /><br /> 只能在已经初始化数据源时读取此属性。 如果试图在初始化数据源之前读取该属性，IDBProperties::GetProperies 将视情况返回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，并且将在 DBPROPSET_PROPERTIESINERROR 中为此属性设置 DBPROPSTATUS_NOTSUPPORTED。 此行为符合 OLE DB 核心规范<br /><br /> 如果针对未使用 Windows 身份验证的连接查询此属性，将返回 VARIANT_FALSE。|  
+|SSPROP_MUTUALLYAUTHENTICATED|VT_ BOOL，只读|如果建立连接的服务器之间已通过相互身份验证，则返回 VARIANT_TRUE；否则返回 VARIANT_FALSE。<br /><br /> 只能在已经初始化数据源时读取此属性。 如果试图在初始化数据源之前读取该属性，IDBProperties::GetProperies 将视情况返回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，并且将在 DBPROPSET_PROPERTIESINERROR 中为此属性设置 DBPROPSTATUS_NOTSUPPORTED。 此行为符合 OLE DB 核心规范<br /><br /> 如果针对未使用 Windows 身份验证的连接查询此属性，将返回 VARIANT_FALSE。|  
   
 ## <a name="ole-db-api-support-for-spns"></a>OLE DB API 对 SPN 的支持  
  下表对支持客户端连接中的 SPN 的 OLE DB 成员函数进行了说明：  

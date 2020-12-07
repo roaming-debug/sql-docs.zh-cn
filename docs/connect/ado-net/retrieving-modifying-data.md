@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: cbe61aafd8dcd1681230c355187a65a231535e00
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126354"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419730"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中检索和修改数据
 
@@ -25,15 +25,15 @@ ms.locfileid: "96126354"
 
 任何数据库应用程序的一项主要功能是连接数据源并检索数据源中包含的数据。 SqlClient 数据提供程序充当应用程序和数据源之间的桥梁，使你可以执行命令以及使用 DataReader 或 DataAdapter 检索数据。 任何数据库应用程序的一项关键功能是更新数据库中存储的数据的能力。 在 Microsoft SqlClient Data Provider for SQL Server 中，更新数据时会使用 DataAdapter、<xref:System.Data.DataSet> 和 Command 对象；此外，还可能会使用事务。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
-[连接到数据源](connecting-to-data-source.md) 介绍如何建立与数据源的连接以及如何使用连接事件。
+[连接到数据源](connecting-to-data-source.md)介绍如何建立与数据源的连接以及如何使用连接事件。
 
-[连接字符串](connection-strings.md) 包含介绍使用连接字符串的各个方面的主题，包括连接字符串关键字、安全信息以及存储和检索连接字符串。
+[连接字符串](connection-strings.md)包含介绍使用连接字符串的各个方面的主题，包括连接字符串关键字、安全信息以及存储和检索连接字符串。
 
-[连接池](connection-pooling.md) 介绍 Microsoft SqlClient Data Provider for SQL Server 的连接池。
+[连接池](connection-pooling.md)介绍 Microsoft SqlClient Data Provider for SQL Server 的连接池。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ADO.NET 中的数据类型映射](data-type-mappings-ado-net.md)
 - [SQL Server 和 ADO.NET](./sql/index.md)

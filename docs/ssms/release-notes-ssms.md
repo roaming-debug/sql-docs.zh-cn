@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: eb3fa0a07e9a0b5e7cf1bc1c7564fdb7b0d82a62
-ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
+ms.openlocfilehash: 4569c61552a03e928d01e47940ae02e7fee9dcec
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94704192"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523078"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -56,12 +56,13 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |----------|---------|------------|
 | Analysis Services | 通过 msmdpump.dll 连接到 SSAS 时出错。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696)。 | 空值 |
 | Analysis Services | 在极少数情况下，如果在使用升级设置升级 SSMS 后尝试打开 DAX 编辑器，则会看到“对象未设置为对象实例”错误。 | 若要解决此问题，请卸载并重新安装 SSMS。 |
+| DAX 查询编辑器 | 打开 DAX 查询编辑器导致错误“对象未设置为对象的实例” | 卸载并重新安装 SQL Server Management Studio。  如果重新安装后未解决问题，请关闭所有 SSMS 实例、备份，然后删除 `%AppData%\Microsoft\SQL Server Management Studio` 和 `%LocalAppData%\Microsoft\SQL Server Management Studio`。 |
 | 常规 SSMS | “新建服务器审核规范”对话框可能会导致 SSMS 发生故障，并显示访问冲突错误。 | 空值 |
 | 常规 SSMS | 应将使用 SMO 的 SSMS 扩展重新编译为面向新的特定于 SSMS 的 SMO v161 包。 可在 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 找到预览版本 </br></br> 针对以前 160 个版本的 Microsoft.SqlServer.SqlManagementObjects 包编译的扩展仍起作用。 | 空值 |
 | 生成脚本向导 | 尝试枚举 SQL Server 2014 及更低版本上的数据库对象时，向导失败。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)。 | 使用 SSMS 18.6 在 SQL 2014 和更早版本的生成脚本向导中选择对象。 |
-| Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 解决方法：删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 | 空值 |
-| Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 解决方法：在“Computer\HKEY_CLASSES_ROOT\AppID”和“Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下识别与 Integration Services 相关的注册表位置，并在这些配置单元中，将名为“LocalService”的注册表项重命名为“LocalService_A”，以用于我们尝试连接的特定版本的 Integration Services | 不适用 |
-| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 按需 SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) 相关的更改，低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 按需 SQL 结合使用，你需要使用 SSMS 18.7 或更高版本。 |
+| Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 | 删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 |
+| Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 | 在“Computer\HKEY_CLASSES_ROOT\AppID”和“Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下识别与 Integration Services 相关的注册表位置，并在这些配置单元中，将名为“LocalService”的注册表项重命名为“LocalService_A”，以用于我们尝试连接的特定版本的 Integration Services |
+| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 无服务器 SQL 池](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相关的更改，因此低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 无服务器 SQL 池结合使用，需要使用 SSMS 18.7 或更高版本。 |
 
 可参考 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server)了解其他已知问题，并向产品团队提供反馈。
 
@@ -129,7 +130,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 常规 SSMS | 修复了以下问题：在尝试连接到 Azure SQL DB 时，可能需要数秒钟（用户数据库中的 SQL 登录）。 |
 | 常规 SSMS | 修复了以下问题：SSMS 不处理/不显示捕获到的死锁（.xdl 文件）。 |
 | 常规 SSMS | 修复了以下问题：无法尝试打开 SQL Server 2008 R2 及更低版本的错误日志设置，找不到 ErrorLogSizeKb 属性。 |
-| 常规 SSMS | 关于 [Azure Synapse Analytics 按需 SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) 支持的常规修复和改进。 |
+| 常规 SSMS | 关于 [Azure Synapse Analytics 无服务器 SQL 池](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)支持的常规修复和改进。 |
 | 导入平面文件 | 修复了以下问题：向导没有检测到文件可能被另一个应用程序使用，而是抛出了错误。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/40761574)。 |
 | 导入/导出数据层应用程序 | 修复了以下问题：导入 bacpac 时，默认服务层为标准 S0（与 Azure 门户和 SqlPackage.exe 行为相同）。 |
 | 导入平面文件 | 修复了以下问题：向导没有检测到文件可能被另一个应用程序使用，而是抛出了错误。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/40761574)。 |
@@ -161,7 +162,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 生成脚本向导 | 尝试枚举 SQL Server 2014 及更低版本上的数据库对象时，向导失败。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)。 | 使用 SSMS 18.6 在 SQL 2014 和更早版本的生成脚本向导中选择对象。 |
 | Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 解决方法：删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 | 空值 |
 | Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 解决方法：在“Computer\HKEY_CLASSES_ROOT\AppID”和“Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下识别与 Integration Services 相关的注册表位置，并在这些配置单元中，将名为“LocalService”的注册表项重命名为“LocalService_A”，以用于我们尝试连接的特定版本的 Integration Services | 不适用 |
-| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 按需 SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) 相关的更改，低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 按需 SQL 结合使用，你需要 SSMS 18.7 或更高版本。 |
+| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 无服务器 SQL 池](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相关的更改，因此低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 无服务器 SQL 池结合使用，需要使用 SSMS 18.7 或更高版本。 |
 | 查询存储 | 右键单击时查询存储的对象资源管理器节点时引发错误。 | 通过展开节点并右键单击各个子选项，直接访问项。 |
 
 ### <a name="186"></a>18.6
@@ -185,7 +186,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 导入平面文件 | 添加了对固定宽度文件的支持，以及对 .csv/.tsv 文件的文件类型检测的支持，确保它们分别分析为 csv/tsv 文件。 |
 | Integration Services | 添加了对 Azure SQL 托管实例代理作业的支持，以便在 Azure-SSIS IR 中从包存储执行 SSIS 包。 |
 | SMO/脚本编写 | 添加了对在 [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)（以前的 SQL Azure DW）上编写动态数据掩码脚本的支持。 |
-| SMO/脚本编写 | 添加了对在 [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)（以前的 SQL DW）上编写安全策略脚本的支持。 |
+| SMO/脚本编写 | 添加了对在 [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) 上编写安全策略脚本的支持。 |
 
 #### <a name="bug-fixes-in-186"></a>18.6 中的 bug 修复
 
@@ -278,7 +279,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | SMO/脚本 | 向 View 对象添加了新属性 DwMaterializedViewDistribution。 |
 | SMO/脚本 | 已取消支持功能限制  （此预览功能已从本地 SQL Azure 和 SQL 中删除）。 |
 | SMO/脚本 | 添加了“笔记本”  ，可作为“生成脚本”向导的目标。 |
-| SMO/脚本 | 添加了对按需 SQL 的支持  。 |
+| SMO/脚本 | 添加了对 Azure Synapse Analytics 无服务器 SQL 池的支持。 |
 | SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) -“平台”、“名称”和“engineEdition”字段现在可以包含常规的逗号分隔列表（“平台”  ：\[Windows  , Linux  \]），而不仅仅包含正则表达式（“平台”  ：\/Windows\|Linux\/  ）
 | SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 添加了 13 条评估规则。 如需了解更多详情，请转到 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api)。 |
 
@@ -301,9 +302,9 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 常规 SSMS | 更新了 MSODBC 和 MSOLEDB 驱动程序的版本。 |
 | 常规 SSMS | 解决了 SSMS 中至少两个常见源的挂起和故障问题。 |
 | 常规 SSMS | 解决了在选择“浏览”按钮时“还原”  对话框挂起的另一种情况。 |
-| 常规 SSMS | 修复了 SQL 按需的“新建数据库 GUI”  。 |
-| 常规 SSMS | 修复了 SQL 按需的“新建外部表...”  和“新建外部数据源...”模板  。 |
-| 常规 SSMS | 修复了 SQL 按需的数据库属性、连接属性、报表隐藏和重命名。 |
+| 常规 SSMS | 修复了 Azure Synapse Analytics 无服务器 SQL 池的新数据库 GUI。 |
+| 常规 SSMS | 修复了 Azure Synapse Analytics 无服务器 SQL 池的“新建外部表...”和“新建外部数据源...”模板。 |
+| 常规 SSMS | 修复了 Azure Synapse Analytics 无服务器 SQL 池的数据库属性、连接属性、报表隐藏和重命名。 |
 | 常规 SSMS | Always Encrypted：修复了以下问题：在选择启用了 enclave 的新密钥时，密钥名称下拉列表变成只读列表。 |
 | 常规 SSMS | 清理了“数据库属性选项”  网格，其中显示两个“其他类别”  。 |
 | 常规 SSMS | 修复了以下问题：滚动条从“数据库属性选项”网格的中间开始滚动。 |
@@ -330,7 +331,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | SQL 代理 | 修复了“作业步骤”页上的 Tab 键顺序。 |
 | SQL 代理 | 反转了“作业步骤”页上的“下一步”和“上一步”按钮的位置，让它们按逻辑顺序排列。 |
 | SQL 代理 | 调整了“作业计划”窗口，使其不剪裁 UI。 |
-| SMO/脚本 | 修复了 SQL 按需的数据库脚本。 |
+| SMO/脚本 | 修复了 Azure Synapse Analytics 无服务器 SQL 池的数据库脚本编写。 |
 | SMO/脚本 | 删除了显式 sqlvariant 强制转换（SqlOnDemand 的非法 T-SQL 语法），这修复了 SqlOnDemand 的脚本。 |
 | SMO/脚本 | 修复了以下问题：跳过 SQL Azure 索引上的 FILLFACTOR。 |
 | SMO/脚本 | 修复了与为外部对象编写脚本相关的问题。 |
@@ -370,7 +371,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 查询存储 | 添加了对新的自定义捕获策略的支持。 |
 | 查询存储 | 向查询存储的“数据库属性”    选项添加了“等待统计信息捕获模式”。 |
 | SMO/脚本 | SQL DW 中的具体化视图的支持脚本。 |
-| SMO/脚本 | 添加了对按需 SQL 的支持  。 |
+| SMO/脚本 | 添加了对 Azure Synapse Analytics 无服务器 SQL 池的支持。 |
 | SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 添加了 50 条评估规则（请参阅 GitHub 上的详细信息）。 |
 | SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 添加了基本数学表达式以及与规则条件的比较。 |
 | SMO/脚本 | [SQL 评估 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 RegisteredServer 对象的支持。 |

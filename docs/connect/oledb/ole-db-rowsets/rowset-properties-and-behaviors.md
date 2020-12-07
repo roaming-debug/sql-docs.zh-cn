@@ -2,7 +2,7 @@
 title: 行集属性和行为（OLE DB 驱动程序）
 description: 这些是 OLE DB Driver for SQL Server 行集属性，包括属性名称和描述。
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b5d42db2a329290f13917b754a89232e30ae52ed
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ff19eb334fceba0b49a88fd1f812ad5b320c762f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859991"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504714"
 ---
 # <a name="rowset-properties-and-behaviors"></a>行集属性和行为
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  这些是 OLE DB Driver for SQL Server 行集属性。  
+  以下是 OLE DB Driver for SQL Server 行集属性：
   
 |属性 ID|说明|  
 |-----------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "88859991"
 |DBPROP_BOOKMARKTYPE|R/W：只读<br /><br /> 默认值：DBPROPVAL_BMK_NUMERIC<br /><br /> 说明:OLE DB Driver for SQL Server 仅实现数字书签。 OLE DB Driver for SQL Server 书签为 32 位无符号整数，类型为 DBTYPE_UI4。|  
 |DBPROP_CACHEDEFERRED|OLE DB Driver for SQL Server 不实现此行集属性。 尝试读取或写入属性值将生成错误。|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:OLE DB Driver for SQL Server 支持在非序列行集中进行向后提取和回滚。 当 DBPROP_CANFETCHBACKWARDS 或 DBPROP_CANSCROLLBACKWARDS 是 VARIANT_TRUE 时，适用于 SQL Server 的 OLE DB 驱动程序创建一个支持游标的行集。 有关详细信息，请参阅[行集和 SQL Server 游标](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。|  
-|DBPROP_CANHOLDROWS|R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:默认情况下，如果使用者尝试获取某行集的多个行，但该行集的这些行上当前存在挂起的更改，则 OLE DB Driver for SQL Server 返回 DB_E_ROWSNOTRELEASED。 可以修改此行为。<br /><br /> 将 DBPROP_CANHOLDROWS 和 DBPROP_IRowsetChange 同时设置为 VARIANT_TRUE 意味着行集带有书签。 如果这两个属性都是 VARIANT_TRUE，则 IRowsetLocate 接口可在行集上使用，并且 DBPROP_BOOKMARKS 和 DBPROP_LITERALBOOKMARKS 都是 VARIANT_TRUE  。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标支持包含书签的 OLE DB Driver for SQL Server 行集。|  
+|DBPROP_CANHOLDROWS|R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：默认情况下，如果使用者尝试获取某行集的多个行，但该行集的这些行上当前存在挂起的更改，则 OLE DB Driver for SQL Server 返回 DB_E_ROWSNOTRELEASED。 可以修改此行为。<br /><br /> 将 DBPROP_CANHOLDROWS 和 DBPROP_IRowsetChange 同时设置为 VARIANT_TRUE 意味着行集带有书签。 如果这两个属性都是 VARIANT_TRUE，则 IRowsetLocate 接口可在行集上使用，并且 DBPROP_BOOKMARKS 和 DBPROP_LITERALBOOKMARKS 都是 VARIANT_TRUE  。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标支持包含书签的 OLE DB Driver for SQL Server 行集。|  
 |DBPROP_CHANGEINSERTEDROWS|R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:如果行集正在使用由键集驱动的游标，则此属性只能设置为 VARIANT_TRUE。|  
 |DBPROP_COLUMNRESTRICT|R/W：只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:当使用者无法更改行集中的某列时，OLE DB Driver for SQL Server 会将此属性设置为 VARIANT_TRUE。 可以更新行集中的其他列，并且可以删除行本身。<br /><br /> 当此属性为 VARIANT_TRUE 时，使用者将检查 DBCOLUMNINFO 结构的 dwFlags 成员，确定能否写入单独列的值  。 对于可修改的列，dwFlags 展现 DBCOLUMNFLAGS_WRITE  。|  
 |DBPROP_COMMANDTIMEOUT|R/W：读取/写入<br /><br /> 默认值：0<br /><br /> 说明:默认情况下，在 ICommand::Execute  方法上，OLE DB Driver for SQL Server 不会超时。|  
@@ -97,6 +97,7 @@ ms.locfileid: "88859991"
 |SSPROP_DEFERPREPARE|列：否<br /><br /> R/W：读取/写入<br /><br /> 键入：VT_BOOL<br /><br /> 默认值：VARIANT_TRUE<br /><br /> 说明:VARIANT_TRUE：在准备好的执行中，推迟命令准备，直到调用 ICommand::Execute  或执行元属性操作。 如果此属性设置为<br /><br /> VARIANT_FALSE：当执行 ICommandPrepare::Prepare  时，将准备好此语句。|  
 |SSPROP_IRowsetFastLoad|列：否<br /><br /> R/W：读取/写入<br /><br /> 键入：VT_BOOL<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:将此属性设置为 VARIANT_TRUE，通过 IOpenRowset::OpenRowset  打开快速加载行集。 无法在 ICommandProperties::SetProperties 中设置此属性  。|  
 |SSPROP_ISSAsynchStatus|列：不是。<br /><br /> R/W：读取/写入<br /><br /> 键入：VT_BOOL<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:如果将此属性设置为 VARIANT_TRUE，则可以使用 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) 接口执行异步操作。|  
+|SSPROP_ISSDataClassification|R/W：读取/写入<br /><br />  键入：VT_BOOL<br /><br /> 默认值：VARIANT_TRUE<br /><br /> 说明：OLE DB Driver for SQL Server 支持使用 [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) 接口检索敏感度分类信息。|  
 |SSPROP_MAXBLOBLENGTH|列：否<br /><br /> R/W：读取/写入<br /><br /> 键入：VT_I4<br /><br /> 默认值：访问接口不限制由服务器返回的文本大小，并且此属性值设置为其最大值。 例如，2147483647。<br /><br /> 说明:OLE DB Driver for SQL Server 执行 SET TEXTSIZE 语句，以限制在 SELECT 语句中返回的二进制大型对象 (BLOB) 数据的长度。|  
 |SSPROP_NOCOUNT_STATUS|列：NoCount<br /><br /> R/W：只读<br /><br /> 键入：VT_BOOL<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:一个布尔值，表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 SET NOCOUNT ON/OFF 的状态：<br /><br /> VARIANT_TRUE：当 SET NOCOUNT 为 ON 时<br /><br /> VARIANT_FALSE：当 SET NOCOUNT 为 OFF 时|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|列：否<br /><br /> R/W：读取/写入<br /><br /> 键入：VT_BSTR（允许 1-2000 个字符）<br /><br /> 默认值：空字符串<br /><br /> 说明:查询通知的消息文本。 这是用户定义的文本，没有确定的格式。|  

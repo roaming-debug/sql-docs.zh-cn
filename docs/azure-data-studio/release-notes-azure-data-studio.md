@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 11/12/2020
-ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: b9bfda0507b81211feefb0fdb2505ae31f0c8c3b
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584800"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442649"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
@@ -39,7 +39,7 @@ ms.locfileid: "94584800"
 | 新项 | 详细信息 | 解决方法 |
 |----------|---------|------------|
 | Azure Arc 扩展 | [已知问题：](https://github.com/microsoft/azuredatastudio/issues/13319)Arc MIAA & PG 部署的“将脚本保存到笔记本”按钮在编写笔记本脚本之前不会执行字段验证。 这意味着，如果用户在密码确认输入中输入了错误的密码，则可能最终会得到一个具有错误密码值的笔记本。| “部署”按钮按预期工作，因此用户应改为使用该按钮。 |
-| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 按需 SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) 相关的更改，低于 1.24.0 的 ADS 版本的对象资源管理器有中断性变更。 | 若要继续将 Azure Data Studio 中的对象资源管理器与 Azure Synapse Analytics 按需 SQL 结合使用，你需要 Azure Data Studio 1.24.0 或更高版本。 |
+| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 无服务器 SQL 池](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相关的更改，低于 1.24.0 的 ADS 版本的对象资源管理器有中断性变更。 | 若要继续将 Azure Data Studio 中的对象资源管理器与 Azure Synapse Analytics 无服务器 SQL 池结合使用，你需要 Azure Data Studio 1.24.0 或更高版本。 |
 
 可参考 [Azure Data Studio 反馈](https://github.com/microsoft/azuredatastudio)了解其他已知问题，并向产品团队提供反馈。
 
