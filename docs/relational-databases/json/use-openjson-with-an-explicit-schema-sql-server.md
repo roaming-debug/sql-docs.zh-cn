@@ -13,15 +13,15 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 405e0c00a34f5143f6acda4b3d50e7c083bec045
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 932bb8e5b01343979372970d5927a163c1654e48
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424119"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595160"
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>使用具有显式架构的 OPENJSON (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
   使用具有显式架构的 **OPENJSON** 可返回一个按你在 WITH 子句中指定的格式进行设置的表。  
   

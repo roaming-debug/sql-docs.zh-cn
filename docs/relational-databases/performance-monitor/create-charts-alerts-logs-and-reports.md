@@ -18,14 +18,14 @@ helpviewer_keywords:
 - System Monitor [SQL Server], logs
 - Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d4469138ebcc6e9d2440ec09a9b8241ef0dd035f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 3339d77f0515f85853f406bfd4cc318dce2e33ec
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457760"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506021"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>创建图表、警报、日志和报表
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

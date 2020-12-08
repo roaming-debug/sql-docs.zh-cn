@@ -11,15 +11,15 @@ helpviewer_keywords:
 - statistics [SQL Server], modifying
 - modifying statistics
 ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d39e99b4c50d1b077cf3871ba5d89b7a170d2f16
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 9fc8456ee8423cf8789e7fc1d8c44428958ac805
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458084"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506521"
 ---
 # <a name="modify-statistics"></a>修改统计信息
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQLServer:Availability Replica
 - Availability Groups [SQL Server], performance counters
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: cb04f9a626c63e5e65f73b3de0810a2869ee9841
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: eb320ec65adf1a08df69954f133571c50de3eef8
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674148"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505888"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server，可用性副本
 

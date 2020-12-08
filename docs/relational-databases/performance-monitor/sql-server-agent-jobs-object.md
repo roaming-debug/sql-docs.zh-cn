@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLAgent:Jobs
 - Jobs object
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d791edff7b4f9aa5dd8693bfec5b146fb44bb0c9
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 34b4a1e9fc276da5e629d7521609bca5570a5798
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458440"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505921"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 代理中的 Jobs 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "86458440"
 |--------------|-----------------|  
 |**_Total**|所有作业的信息。|  
 |**警报**|由警报启动的作业的信息。|  
-|**其他**|不是由警报或计划启动的作业的信息。 通常这些作业是使用 **sp_start_job**手动启动的作业。|  
+|**其他**|不是由警报或计划启动的作业的信息。 通常这些作业是使用 **sp_start_job** 手动启动的作业。|  
 |**计划**|由计划启动的作业的信息。|  
   
 ## <a name="see-also"></a>另请参阅  

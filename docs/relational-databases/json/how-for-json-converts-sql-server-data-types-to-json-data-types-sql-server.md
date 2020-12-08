@@ -13,22 +13,22 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d010978b7c660b43a5fe6487ac57e0d6143b282
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7a9b6cb32af496b70a48ef4d32f3692b7b863b28
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499286"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595101"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>FOR JSON 如何将 SQL Server 数据类型转换为 JSON 数据类型 (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
   **FOR JSON** 子句在 JSON 输出中使用以下规则将 SQL Server 数据类型转换为 JSON 类型。  
   
-|类别|SQL Server 数据类型|JSON 数据类型|  
+|Category|SQL Server 数据类型|JSON 数据类型|  
 |--------------|--------------|---------------|  
 |字符和字符串类型|char、nchar、varchar、nvarchar|字符串|  
-|数字类型|int、bigint、float、decimal、numeric|数字|  
+|数字类型|int、bigint、float、decimal、numeric|number|  
 |位类型|bit|布尔值（true 或 false）|  
 |日期和时间类型|date、datetime、datetime2、time、datetimeoffset|字符串|  
 |二进制类型|varbinary、binary、image、timestamp、rowversion|BASE64 编码的字符串|  

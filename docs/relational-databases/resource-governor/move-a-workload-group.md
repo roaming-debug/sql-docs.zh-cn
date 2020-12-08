@@ -13,14 +13,14 @@ helpviewer_keywords:
 - workload groups [SQL Server], move
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a3ff2eff8f72499506aa129b064690693f1b14ff
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 03ad7743638779aa1afc05359be45da377f997b7
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456599"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506571"
 ---
 # <a name="move-a-workload-group"></a>移动工作负荷组
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

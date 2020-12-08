@@ -14,14 +14,14 @@ helpviewer_keywords:
 - performance counters [SQL Server], database mirroring
 - Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 6c2d3dd59f6e2736938bfc9880e7258cf81dfafb
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f88935ba5ef8cf7f42c844e2d9a02c21d68aee97
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457999"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505761"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server Database Mirroring 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

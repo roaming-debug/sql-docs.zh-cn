@@ -21,14 +21,14 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 2e81db69a70a54365ffe7da6fbe9933bb98848db
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 885375f935459acc0d699870a95db706f38ecd87
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458551"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505986"
 ---
 # <a name="monitor-cpu-usage"></a>监视 CPU 使用率
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

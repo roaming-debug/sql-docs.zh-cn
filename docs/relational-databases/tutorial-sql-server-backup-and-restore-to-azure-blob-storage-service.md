@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: c1f79050a4bbabcfc8729ccdc270d47fe9055c29
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: faf3ccecd17ece2b66371d81a68589f184fe48a0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524062"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506403"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入门：将 SQL 备份和还原到 Azure Blob 存储服务
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

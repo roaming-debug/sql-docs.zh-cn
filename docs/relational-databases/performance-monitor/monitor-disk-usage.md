@@ -22,14 +22,14 @@ helpviewer_keywords:
 - database performance [SQL Server], disk usage
 - monitoring server performance [SQL Server], disk usage
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 2bf6f22b6a3b76694c89bd480b289ecd0db1dce5
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: de77b88d4b82e0fd7360e76d090dd13468ef2a53
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458480"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505971"
 ---
 # <a name="monitor-disk-usage"></a>监视磁盘使用情况
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

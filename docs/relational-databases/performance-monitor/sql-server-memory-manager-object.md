@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:Memory Manager
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: ad1317d52ca3075a5726e528216f569bd91c2a15
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 179cd20f1006565ea4ca6924d568b6da80dbb154
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458789"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505626"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server Memory Manager 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

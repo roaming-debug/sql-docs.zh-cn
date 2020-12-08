@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a623d68d5d738d773ab479bd0ca24c7454399f58
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a12431a679ddbe4f47697b181c81ed3b7b3f08f3
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457909"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505461"
 ---
 # <a name="sql-server-xtp-storage"></a>SQL Server XTP 存储
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

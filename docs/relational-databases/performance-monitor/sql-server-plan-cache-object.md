@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Plan Cache object
 - SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: faf553c33cf2f515abcad904bfc3c64bf228b546
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 265b6e877101d69b6af76b1c31ad1aa572989fdd
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458746"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505601"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server Plan Cache 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Plan Cache 对象提供用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用内存来存储对象（例如存储过程、即席和准备的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及触发器）的计数器。 可同时监视 **Plan Cache** 对象的多个实例，每个实例代表一个要监视的不同类型的计划。  
   
- 下表介绍了 **SQLServer:Plan Cache**计数器。  
+ 下表介绍了 **SQLServer:Plan Cache** 计数器。  
   
 |SQL Server Plan Cache 计数器|说明|  
 |------------------------------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "86458746"
 |Plan Cache 实例|说明|  
 |-------------------------|-----------------|  
 |**_Total**|所有类型的缓存实例的信息。|  
-|**Sql 计划**|由一个临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（包括自动参数化查询）生成的查询计划，或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **或** sp_cursorprepare **预备的**语句生成的查询计划。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的计划存入缓存，以便将来需要执行相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时再次使用。 用户参数化的查询（即使未显式准备）也作为准备好的 SQL 计划监视。|  
+|**Sql 计划**|由一个临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（包括自动参数化查询）生成的查询计划，或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **或** sp_cursorprepare **预备的** 语句生成的查询计划。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的计划存入缓存，以便将来需要执行相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时再次使用。 用户参数化的查询（即使未显式准备）也作为准备好的 SQL 计划监视。|  
 |**对象计划**|通过创建存储过程、函数或触发器而生成的查询计划。|  
 |**绑定树**|视图、规则、计算列和检查约束的规范化树。|  
 |**扩展存储过程**|扩展存储过程的目录信息。|  

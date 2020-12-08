@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: ddb47208f37344a1c7a7985f877486d3254a68f4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: e37516249bf251a95d5c03ff5fad1bdeeab7fbf8
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458116"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505570"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server:SQL Statistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

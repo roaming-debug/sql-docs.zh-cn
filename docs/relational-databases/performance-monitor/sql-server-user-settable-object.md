@@ -12,14 +12,14 @@ helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: f61f4013c02148485994ebcb5b579c0d0ef78b2b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 980a7161eba7cc40da6de3f2c4172df7e2349c78
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458623"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505556"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server User Settable 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "86458623"
   
 |Query 计数器实例|说明|  
 |-----------------------------|-----------------|  
-|**用户计数器 1**|使用 **sp_user_counter1**定义。|  
-|**用户计数器 2**|使用 **sp_user_counter2**定义。|  
-|**用户计数器 3**|使用 **sp_user_counter3**定义。|  
+|**用户计数器 1**|使用 **sp_user_counter1** 定义。|  
+|**用户计数器 2**|使用 **sp_user_counter2** 定义。|  
+|**用户计数器 3**|使用 **sp_user_counter3** 定义。|  
 |...||  
-|**用户计数器 10**|使用 **sp_user_counter10**定义。|  
+|**用户计数器 10**|使用 **sp_user_counter10** 定义。|  
   
  要使用用户计数器存储过程，只需从自己的应用程序中执行它们，并用一个整型参数表示计数器的新值。 例如，若要将 **用户计数器 1** 的值设置为 10，执行下面的 Transact-SQL 语句：  
   

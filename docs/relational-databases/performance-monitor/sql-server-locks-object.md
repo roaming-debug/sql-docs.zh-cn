@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Locks object
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 1553985a2c85eb183841491854ef010eb12d941a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 94e726a108c78ffec8715e80c4b14f2274656be0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458114"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505661"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server Locks 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "86458114"
 |**堆/B 树**|堆或 B 树 (HOBT)。 锁定数据页堆，或索引的 B 树结构。|  
 |**Key**|锁定索引中的某行。|  
 |**元数据**|锁定一些目录信息（又称为元数据）。|  
-|**Object**|锁定表、存储过程、视图等（包括所有数据和索引）。 该对象可以是包含 **sys.all_objects**中某项的任何一个对象。|  
+|**Object**|锁定表、存储过程、视图等（包括所有数据和索引）。 该对象可以是包含 **sys.all_objects** 中某项的任何一个对象。|  
 |**第**|锁定数据库中 8 KB 页。|  
 |**RID**|行 ID。 锁定一个堆中的一行。|  
   

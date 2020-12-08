@@ -11,14 +11,14 @@ helpviewer_keywords:
 - workload groups [SQL Server], alter
 - Resource Governor, workload group alter
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 882d0f15b946e49bf33338707ddeb2ea5354f922
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 28b55fd7546db7378f79f98db213e7abd6aae40c
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457549"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506617"
 ---
 # <a name="change-workload-group-settings"></a>更改工作负荷组设置
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

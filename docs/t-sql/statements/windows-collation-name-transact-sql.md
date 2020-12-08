@@ -19,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04f3a63fd156968cbe27b5d9b4e86baf1a2ad110
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 658f232492455afe40dff1a5c3e9306046e502d6
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "89538007"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563143"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 排序规则名称 (Transact-SQL)
 
@@ -38,10 +38,10 @@ ms.locfileid: "89538007"
 
 ```syntaxsql
 <Windows_collation_name> :: =
-CollationDesignator_<ComparisonStyle>
+<CollationDesignator>_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
+{ <CaseSensitivity>_<AccentSensitivity> [ _<KanatypeSensitive> ] [ _<WidthSensitive> ] [ _<VariationSelectorSensitive> ] 
 }
 | { _UTF8 }
 | { _BIN | _BIN2 }

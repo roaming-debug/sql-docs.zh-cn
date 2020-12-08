@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:General Statistics
 - General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d146725df4f8c2eaffafb0c46f8062849857ad01
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 124352d2c252f927d0b07a34f1077fe0c9dde210
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458286"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505681"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server General Statistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

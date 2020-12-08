@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:Broker Statistics
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8a32f1013418afa01abee65ab9c8fdb78c794918
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8c422fb14069e2fe290d2719c08331aa10229894
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458453"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505863"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server Broker Statistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

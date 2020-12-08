@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:Buffer Node
 - Buffer Node object
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: ce9d30b4d7f8716dc256d1ea640924af7945d8fd
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: eb86d3734d7e2cf7799940837f6d3677fb53c89e
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457434"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505824"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86457434"
   
  如果 SQL Server 在非 NUMA 硬件上运行，则 **Buffer Node** 和 **Buffer Manager** 对象的计数器应该匹配。  
   
- 在 NUMA 硬件上，所有 **Buffer Node** 的相应计数器的总和应该与所有 **Buffer Manager**的相应计数器的总和匹配。  
+ 在 NUMA 硬件上，所有 **Buffer Node** 的相应计数器的总和应该与所有 **Buffer Manager** 的相应计数器的总和匹配。  
   
 > [!NOTE]  
 >  由于计数器具有动态性以及抽样准确性有所偏差，计数器的值与总和可能不会精确匹配。  

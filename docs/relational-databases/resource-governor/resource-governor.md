@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8654f25318bfc947394b0acaf0df19a8f7eb2bc3
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 29d63602d4e3553ee2e5f1cb9053e445265fd301
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457814"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506534"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "86457814"
   
  在资源调控器的上下文中，您可以将前面的概念视为组件。 下图显示了这些组件及其在数据库引擎环境中相互之间的关系。 从处理的角度，简化的流程如下所示：  
   
--   会话有传入的连接（Session 1，共 *n*个）。  
+-   会话有传入的连接（Session 1，共 *n* 个）。  
   
 -   会话已分类（分类）。  
   

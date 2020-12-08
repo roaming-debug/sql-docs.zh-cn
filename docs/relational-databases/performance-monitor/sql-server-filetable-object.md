@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:FileTable
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: f6abfd3c7bdb7ba03a7ab91a7e242d645590796e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 310bbb694eb3751d16543c5bc108ccdf2a880b02
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458817"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505705"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server，FileTable 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

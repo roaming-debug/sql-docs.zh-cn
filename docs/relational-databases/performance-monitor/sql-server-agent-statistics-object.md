@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Statistics object
 - SQLAgent:Statistics
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 6b40c3f32a119cb0a7ef459d38187f6cf13c7d3c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: cec6cb7cc4e8ceb9a84ab9adc21331cd414bbfdf
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458844"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505911"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server 代理中的 Statistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

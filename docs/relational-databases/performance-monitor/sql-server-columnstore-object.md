@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: f00f4405144cec17b0b0266308ebc6df39336a70
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 61f950b5322270ce1b72b1734b92474dfb18b2bb
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458404"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505782"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server，列存储对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

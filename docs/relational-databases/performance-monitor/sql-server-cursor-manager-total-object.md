@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:Cursor Manager Total
 - Cursor Manager Total object
 ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 2506c12f7a8be65ce490d160c04a7e24771e6c3c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7cfe39fb6726915c000c66e486e470b4de1acad8
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457706"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505771"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server Cursor Manager Total 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

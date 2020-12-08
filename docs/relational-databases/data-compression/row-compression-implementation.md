@@ -12,15 +12,15 @@ helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbe2358e2be461666378cc18c5a735a71574f17a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 829229371dfecd55a56fdbb9a6530635a6170904
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456099"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506347"
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "86456099"
   
 -   减少了与记录相关联的元数据开销。 此元数据为有关列、列长度和偏移量的信息。 在某些情况下，元数据开销可能大于旧的存储格式。  
   
--   它对于数值类型（例如， **integer**、 **decimal**和 **float**）和基于数值的类型（例如， **datetime** 和 **money**）使用可变长度存储格式。  
+-   它对于数值类型（例如， **integer**、 **decimal** 和 **float**）和基于数值的类型（例如， **datetime** 和 **money**）使用可变长度存储格式。  
   
 -   它通过使用不存储空字符的可变长度格式来存储定长字符串。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "86456099"
 |**numeric**|是|此存储与 vardecimal 存储格式完全相同。|  
 |**bit**|是|元数据开销使此类型达到 4 个位。|  
 |**smallmoney**|是|使用 4 字节整数表示整数数据。 货币值乘以 10000，并在存储生成的整数值时删除小数点之后的所有位数。 此类型具有类似于整数类型存储优化的存储优化。|  
-|**money**|是|使用 8 字节整数表示整数数据。 货币值乘以 10000，并在存储生成的整数值时删除小数点之后的所有位数。 此类型的范围比 **smallmoney**更大。 此类型具有类似于整数类型存储优化的存储优化。|  
+|**money**|是|使用 8 字节整数表示整数数据。 货币值乘以 10000，并在存储生成的整数值时删除小数点之后的所有位数。 此类型的范围比 **smallmoney** 更大。 此类型具有类似于整数类型存储优化的存储优化。|  
 |**float**|是|不存储带零的最低有效字节。 **float** 压缩主要适用于尾数中的非小数值。|  
 |**real**|是|不存储带零的最低有效字节。 **real** 压缩主要适用于尾数中的非小数值。|  
 |**smalldatetime**|否|使用两个 2 字节整数表示整数数据。 日期占用 2 个字节。 它是自 1901 年 1 月 1 日以来经过的天数。 从 1902 年起便需要 2 个字节。 因此，自该时间之后的日期不会节省任何空间。<br /><br /> 时间是自午夜以来经过的分钟数。 超过 4AM 后，时间值就开始使用第二个字节。<br /><br /> 如果 **smalldatetime** 只用于表示日期（常见情况），则时间为 0.0。 通过为行压缩以最高有效字节格式存储时间，压缩操作可节省 2 个字节。|  

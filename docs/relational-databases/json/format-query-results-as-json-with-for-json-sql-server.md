@@ -15,31 +15,31 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3621fcc105d7b03d2347bc723f2ddb552bc9e81
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 852cb235738316312794a963879e49f1a5eb7ee6
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765708"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595212"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 将查询结果格式化为 JSON (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
-通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，将查询结果格式化为 JSON，或者将 SQL Server 中的数据导出为 JSON。 使用 FOR JSON 子句，通过将 JSON 输出的格式处理从应用委托到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来简化客户端应用程序****。 建议使用 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) 作为 JSON 查询的查询编辑器，因为它会自动格式化 JSON 结果（如本文所示），而不是显示平面字符串。
+通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，将查询结果格式化为 JSON，或者将 SQL Server 中的数据导出为 JSON。 使用 FOR JSON 子句，通过将 JSON 输出的格式处理从应用委托到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来简化客户端应用程序。 建议使用 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) 作为 JSON 查询的查询编辑器，因为它会自动格式化 JSON 结果（如本文所示），而不是显示平面字符串。
   
- 使用 FOR JSON 子句时，可以显式指定 JSON 输出的结构，或让 SELECT 语句的结构来决定输出****。  
+ 使用 FOR JSON 子句时，可以显式指定 JSON 输出的结构，或让 SELECT 语句的结构来决定输出。  
   
--   使用 FOR JSON PATH 来保持对 JSON 输出格式的完全控制****。 你可以创建包装对象并嵌套复杂属性。  
+-   使用 FOR JSON PATH 来保持对 JSON 输出格式的完全控制。 你可以创建包装对象并嵌套复杂属性。  
   
--   使用 FOR JSON AUTO 来根据 SELECT 语句的结构自动格式化 JSON 输出****。  
+-   使用 FOR JSON AUTO 来根据 SELECT 语句的结构自动格式化 JSON 输出。  
   
 下面是带有 **FOR JSON** 子句的 **SELECT** 语句及其输出的示例。
   
  ![对于 JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>选项 1 - 使用 FOR JSON PATH 控制输出
-在 PATH 模式下，可以使用点语法来设置嵌套的输出格式，例如 `'Item.UnitPrice'`****。  
+在 PATH 模式下，可以使用点语法来设置嵌套的输出格式，例如 `'Item.UnitPrice'`。  
 
 以下是一个使用带有 **FOR JSON** 子句的 **对于 JSON** 模式。 下面的示例使用 **ROOT** 选项指定一个已命名根元素。 
   
@@ -167,7 +167,7 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
 有关语法和用法的详细信息，请参阅 [FOR 子句 (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)。  
   
 ## <a name="control-other-json-output-options"></a>控制其他 JSON 输出选项  
-使用以下附加选项控制 FOR JSON 子句的输出****。  
+使用以下附加选项控制 FOR JSON 子句的输出。  
   
 -   ROOT。 若要将单个顶层元素添加到 JSON 输出中，请指定 **ROOT** 选项。 如果没有指定此选项，JSON 输出不会包括根元素。 有关详细信息，请参阅 [使用 ROOT 选项将根节点添加到 JSON 输出中 (SQL Server)](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md)。  
   
@@ -181,7 +181,7 @@ FOR JSON 子句的输出具有以下特征：
 1.  结果集包含单个列。
     -   一个小结果集可包含单个列。
     -   一个大结果集可将长 JSON 字符串拆分到多行中。
-        -   默认情况下，输出设置为“以网格显示结果”时，SQL Server Management Studio (SSMS) 会将结果连接到单个行中****。 SSMS 状态栏会显示实际行数。
+        -   默认情况下，输出设置为“以网格显示结果”时，SQL Server Management Studio (SSMS) 会将结果连接到单个行中。 SSMS 状态栏会显示实际行数。
         -   其他客户端应用程序可能需要使用代码，通过串联多个行的内容来将较长的结果重新组合为单个有效的 JSON 字符串。 有关 C# 应用程序中此代码的示例，请参阅[在 C# 客户端应用中使用 FOR JSON 输出](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app)。
   
      ![FOR JSON 输出示例](../../relational-databases/json/media/forjson-example2.png)  
@@ -197,7 +197,7 @@ FOR JSON 子句的输出具有以下特征：
 3.  列的名称及其值都会根据 JSON 语法进行转义。 有关详细信息，请参阅 [FOR JSON 如何转义特殊字符和控制字符 (SQL Server)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)。
 
 ### <a name="example"></a>示例
-下面是演示 FOR JSON 子句如何格式化 JSON 输出的示例****。  
+下面是演示 FOR JSON 子句如何格式化 JSON 输出的示例。  
   
 **查询结果**  
 
@@ -229,7 +229,7 @@ FOR JSON 子句的输出具有以下特征：
 }] 
 ```  
 
- 有关 FOR JSON 子句的输出内容的详细信息，请参阅以下主题****。  
+ 有关 FOR JSON 子句的输出内容的详细信息，请参阅以下主题。  
 
 -   [FOR JSON 如何将 SQL Server 数据类型转换为 JSON 数据类型 (SQL Server)](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
     **FOR JSON** 子句使用本主题中所述的规则在 JSON 输出中将 SQL 数据类型转换为 JSON 类型。  

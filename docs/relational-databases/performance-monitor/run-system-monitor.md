@@ -15,14 +15,14 @@ helpviewer_keywords:
 - starting Windows NT System Monitor
 - RPC
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 6487ad070ee5c1be02f904f1f8e05c98530a2c3f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ee6fb05d0ec83fe38acbef4ad80494c3a4a5c975
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457739"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505961"
 ---
 # <a name="run-system-monitor"></a>运行系统监视器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

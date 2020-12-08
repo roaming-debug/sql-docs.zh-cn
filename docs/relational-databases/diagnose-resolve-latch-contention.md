@@ -3,18 +3,18 @@ title: 白皮书：诊断和解决闩锁争用问题
 description: 本文详细介绍如何诊断和解决 SQL Server 中的闩锁争用问题。 本文最初由 Microsoft 的 SQLCAT 团队发布。
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b438bd466023844f7396a5ef71e9c8e0f916005
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 3a1ce0e4a54810730935b4a93aef72edfa404d88
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384306"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506448"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>诊断和解决 SQL Server 上的闩锁争用问题
 
@@ -175,7 +175,7 @@ _ **IO 闩锁：** 缓冲区闩锁的一个子集。当受缓冲区闩锁保护�
 
 闩锁等待时间的以下度量值表明过多的闩锁争用会影响应用程序性能：
 
-* **页闩锁平均等待时间随着吞吐量的增加而持续增加** ：如果页闩锁平均等待时间随着吞吐量的增加而持续增加，并且缓冲区闩锁平均等待时间也增加到超出预期的磁盘响应时间，则应使用 sys.dm_os_waiting_tasks DMV 检查当前的等待任务。 单独分析平均值可能会产生误导，因此，尽可能实时查看系统以了解工作负荷特征非常重要。 具体来说，应检查任何页上是否有针对 PAGELATCH_EX 和/或 PAGELATCH_SH 请求的大量等待。 请按照以下步骤诊断随吞吐量增加而增加的页闩锁平均等待时间：
+* **页闩锁平均等待时间随着吞吐量的增加而持续增加**：如果页闩锁平均等待时间随着吞吐量的增加而持续增加，并且缓冲区闩锁平均等待时间也增加到超出预期的磁盘响应时间，则应使用 sys.dm_os_waiting_tasks DMV 检查当前的等待任务。 单独分析平均值可能会产生误导，因此，尽可能实时查看系统以了解工作负荷特征非常重要。 具体来说，应检查任何页上是否有针对 PAGELATCH_EX 和/或 PAGELATCH_SH 请求的大量等待。 请按照以下步骤诊断随吞吐量增加而增加的页闩锁平均等待时间：
 
    * 使用示例脚本[查询按会话 ID 排序的 sys.dm_os_waiting_tasks](#waiting-tasks-script1) 或[计算一段时间内的等待数](#calculate-waits-over-a-time-period)，以查看当前的等待任务并测量闩锁平均等待时间。 
    * 使用示例脚本[查询缓冲区描述符以确定导致闩锁争用的对象](#query-buffer-descriptors)，以确定发生争用的索引和基础表。 
@@ -184,7 +184,7 @@ _ **IO 闩锁：** 缓冲区闩锁的一个子集。当受缓冲区闩锁保护�
    > [!NOTE]
    > 若要计算特定等待类型（由 sys.dm_os_wait_stats 返回为 wt_:type）的平均等待时间，请将总等待时间（返回为 wait_time_ms）除以等待任务数（返回为 waiting_tasks_count）。
 
-* **高峰负载期间用于闩锁等待类型的总等待时间百分比** ：如果闩锁平均等待时间占总等待时间的百分比随着应用程序负载的增加而增加，则闩锁争用可能会影响性能，应进行调查。
+* **高峰负载期间用于闩锁等待类型的总等待时间百分比**：如果闩锁平均等待时间占总等待时间的百分比随着应用程序负载的增加而增加，则闩锁争用可能会影响性能，应进行调查。
 
    使用 [SQLServer:Wait Statistics Object](./performance-monitor/sql-server-wait-statistics-object.md) 性能计数器来测量页闩锁等待和非页闩锁等待。 然后将这些性能计数器的值与 CPU、I/O、内存和网络吞吐量相关性能计数器的值进行比较。 例如，每秒事务数和每秒批处理请求数是两个绝佳的资源利用率度量值。
 
@@ -202,9 +202,9 @@ _ **IO 闩锁：** 缓冲区闩锁的一个子集。当受缓冲区闩锁保护�
    dbcc SQLPERF ('sys.dm_os_latch_stats', 'CLEAR')
    ```
 
-* **当应用程序负载增加并且 SQL Server 可用的 CPU 数量增加时，吞吐量不仅不增加，反而在某些情况下会减少** ： [闩锁争用示例](#example-of-latch-contention)中对此进行了说明。
+* **当应用程序负载增加并且 SQL Server 可用的 CPU 数量增加时，吞吐量不仅不增加，反而在某些情况下会减少**：[闩锁争用示例](#example-of-latch-contention)中对此进行了说明。
 
-* **CPU 利用率不随应用程序工作负荷的增加而增加** ：如果在应用程序吞吐量驱动的并发性增加时，系统上的 CPU 利用率没有增加，则表明 SQL Server 正在等待，这是闩锁争用的症状。
+* **CPU 利用率不随应用程序工作负荷的增加而增加**：如果在应用程序吞吐量驱动的并发性增加时，系统上的 CPU 利用率没有增加，则表明 SQL Server 正在等待，这是闩锁争用的症状。
 
 分析根本原因。 即使上述每个条件都成立，性能问题的根本原因仍有可能在其他地方。 实际上，在大多数情况下，CPU 利用率欠佳是由其他类型的等待引起的，例如锁阻塞、与 I/O 相关的等待或与网络相关的问题。 一般来说，在继续进行更深入的分析之前，最好先解决占总等待时间最大比例的资源等待。
 

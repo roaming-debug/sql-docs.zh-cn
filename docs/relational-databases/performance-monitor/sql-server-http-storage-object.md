@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a18cb0e74a537a62eb662fdb30ba289e255c0348
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 6ca729c6097b02142e4459a0c11e5ad77741ea37
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457409"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505701"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server，HTTP 存储
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

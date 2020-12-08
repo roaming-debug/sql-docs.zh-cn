@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Alerts object
 - SQLAgent:Alerts
 ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 9fe293b70b074322380dc55f4294971908c106ee
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 180224d5be7a49f031b3ff37741c90a9647fd89b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457459"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505928"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server 代理中的 Alerts 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

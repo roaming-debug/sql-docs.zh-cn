@@ -14,22 +14,22 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: eb884b2a3e2114d86dda60fc63b528e11a6386c9
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439461"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595048"
 ---
 # <a name="index-json-data"></a>对 JSON 数据编制索引
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 在 SQL Server 和 SQL 数据库中，JSON 不是内置数据类型，SQL Server 不具有自定义 JSON 索引。 但是，可以使用标准索引优化对 JSON 文档的查询。 
 
 数据库索引可提升筛选和排序操作的性能。 如果没有索引，每次查询数据时，SQL Server 不得不扫描整个表。  
   
 ## <a name="index-json-properties-by-using-computed-columns"></a>通过使用计算列对 JSON 属性编制索引  
-将 JSON 数据存储在 SQL Server 中时，通常会希望按 JSON 文档的一个或多个属性对查询结果进行筛选或排序  。  
+将 JSON 数据存储在 SQL Server 中时，通常会希望按 JSON 文档的一个或多个属性对查询结果进行筛选或排序。  
 
 ### <a name="example"></a>示例 
 此示例假定 AdventureWorks `SalesOrderHeader` 表包含 `Info` 列，此列包含关于销售订单的采用 JSON 格式的各种信息。 例如，包含客户、销售人员、装运和帐单地址等相关信息。 假设要使用 `Info` 列的值来筛选某个客户的销售订单。

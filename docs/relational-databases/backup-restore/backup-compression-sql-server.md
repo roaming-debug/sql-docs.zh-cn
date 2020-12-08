@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c39b9520bebf08cf523bece5b2c9bab78675138d
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 278ee9ecf44a90574d212e761089127342b2c9be
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129338"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563123"
 ---
 # <a name="backup-compression-sql-server"></a>备份压缩 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的压缩，包括限制、压缩备份时的性能折中、备份压缩的配置以及压缩率。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本支持备份压缩：企业版、标准版和开发人员版。  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的每个版本和更高版本都可以还原已压缩的备份。 
+  本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的压缩，包括限制、压缩备份时的性能折中、备份压缩的配置以及压缩率。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支持备份压缩：企业版、标准版和开发人员版。  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的每个版本和更高版本都可以还原已压缩的备份。 
  
   
 ##  <a name="benefits"></a><a name="Benefits"></a> 优势  

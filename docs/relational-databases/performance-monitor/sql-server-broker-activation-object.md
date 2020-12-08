@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:Broker Activation
 - Broker Activation object
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 74031fb95207c1bb0a4916aa512893dd38aeb7b4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8c257bee159905042ddece42102ef0a55a3512f1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458139"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505845"
 ---
 # <a name="sql-server-broker-activation-object"></a>SQL Server Broker Activation 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

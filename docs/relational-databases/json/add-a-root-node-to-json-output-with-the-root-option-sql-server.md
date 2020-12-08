@@ -13,15 +13,15 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 109af1eaee80fee6882aa8b5128234e84e1a5d86
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c925902fa8ab0181021dc837a00981299e5664e
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499380"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595238"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>使用 ROOT 选项将根节点添加到 JSON 输出中 (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
   若要将一个顶层元素添加到 **FOR JSON** 子句的 JSON 输出中，请指定 **ROOT** 选项。  
   

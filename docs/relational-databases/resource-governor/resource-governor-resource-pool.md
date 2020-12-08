@@ -12,14 +12,14 @@ helpviewer_keywords:
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: fa28f69fea78c3ccf09b0b41357ab156ed72c608
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d7de8dcd6291330e2e18136e2c16e16b36f3ef71
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115672"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506561"
 ---
 # <a name="resource-governor-resource-pool"></a>资源调控器资源池
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

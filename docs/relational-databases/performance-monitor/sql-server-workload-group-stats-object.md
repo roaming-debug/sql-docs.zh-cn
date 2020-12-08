@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Workload Group Stats object
 - 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 6a189c02caaef100b2531b20a986befc5a069ba6
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: cf82172eaa811d9992588e1615e55509c31be803
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458109"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505526"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQLServer，Workload Group Stats 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

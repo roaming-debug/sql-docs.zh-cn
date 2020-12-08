@@ -11,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0fd426cecf7fa74e3f45ee13e9d508c6f36a4bb7
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c2b557b1fe9c73c9672eb2a02afc2fb27c5ae0ea
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86459039"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506361"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>对表或索引禁用压缩功能
 

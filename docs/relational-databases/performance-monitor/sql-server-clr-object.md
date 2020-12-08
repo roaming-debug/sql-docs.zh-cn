@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:CLR
 - CLR object [SQL Server]
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 3748641366e41a44845084ef6b5f487f1465178d
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 0036040791158411d1a11342d62c5d3209e9750d
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458639"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505801"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server CLR 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

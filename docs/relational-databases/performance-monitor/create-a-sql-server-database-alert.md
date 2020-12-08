@@ -19,14 +19,14 @@ helpviewer_keywords:
 - database monitoring [SQL Server], alerts
 - server performance [SQL Server], alerts
 ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: abb5eddab78146c91adf1387c048e013f018c763
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 512c902e0b35e15b65866464500b4928e105d4ad
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457761"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506031"
 ---
 # <a name="create-a-sql-server-database-alert"></a>创建 SQL Server 数据库警报
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

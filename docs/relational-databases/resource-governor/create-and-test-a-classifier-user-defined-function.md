@@ -13,14 +13,14 @@ helpviewer_keywords:
 - classifier function [SQL Server], create
 - Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: e5b1b0accf599793fdaac0bd492b648d1b302cae
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d08ddba59acdf2692e8493a10bac58048458ae23
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457860"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506592"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>创建和测试分类器用户定义函数
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

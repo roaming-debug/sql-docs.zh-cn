@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:Backup Device
 - Backup Device object
 ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 116a4cc015e74fd737c5e9fb9d5f1f920abaf377
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 383e1cd4ccca7a466817ac5ca226785fa56560ce
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458839"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505890"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server Backup Device 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

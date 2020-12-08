@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 218fd5f50061161c1b94bc22cdaf94c3202cfb6a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 89eb1e6e2ab2f030a189054e32dbe0c96f43687b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458664"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505846"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server Broker - DBM Transport 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

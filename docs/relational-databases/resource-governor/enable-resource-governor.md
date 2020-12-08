@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 7e58987e36ee4119b282a303265d2b6d898c9b0b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 775956ae1a6f802a986bcca11755887644f797f9
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457839"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506576"
 ---
 # <a name="enable-resource-governor"></a>启用资源调控器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

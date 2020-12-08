@@ -22,14 +22,14 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], memory usage
 - server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0d390a0ed1397a7f433c5582361def2f4022d09b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 93e2780c3e51ce46e0687864896c36b7d3166917
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906146"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505985"
 ---
 # <a name="monitor-memory-usage"></a>监视内存使用量
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "86906146"
  有关解决分页过多的详细信息，请参阅 Windows 操作系统文档。  
   
 ## <a name="isolating-memory-used-by-sql-server"></a>隔离 SQL Server 所用的内存  
- 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将根据可用系统资源动态改变其内存要求。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要更多内存，它会查询操作系统以确定是否有可用的空闲物理内存，然后使用可用内存。 如果 OS 的空闲内存不足，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将内存释放回操作系统，直到内存不足的情况得以缓解，或者直到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 达到 minservermemory 限制。 但是，你可以覆盖此选项通过使用 **minservermemory**和 **maxservermemory** 服务器配置选项来动态使用内存。 有关详细信息，请参阅 [服务器内存选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
+ 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将根据可用系统资源动态改变其内存要求。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要更多内存，它会查询操作系统以确定是否有可用的空闲物理内存，然后使用可用内存。 如果 OS 的空闲内存不足，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将内存释放回操作系统，直到内存不足的情况得以缓解，或者直到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 达到 minservermemory 限制。 但是，你可以覆盖此选项通过使用 **minservermemory** 和 **maxservermemory** 服务器配置选项来动态使用内存。 有关详细信息，请参阅 [服务器内存选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
  若要监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的内存量，请检查下列性能计数器：  
   

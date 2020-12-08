@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a833e7029697693a6620ce5196a10b6ef95acc8f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4e6e6ae53bfc9cf3c6c702e9caf8a1a9bdaf29a1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890917"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505713"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

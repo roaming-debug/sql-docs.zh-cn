@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Buffer Manager object
 - SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 63ecd1f64db0a3065bc513e935fc832292d5dd00
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2eae64110e8c359e424d6f7313f9949f28b46c9f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457417"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505822"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server Buffer Manager 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

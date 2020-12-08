@@ -11,14 +11,14 @@ helpviewer_keywords:
 - resource pools [SQL Server], create
 - Resource Governor, resource pool create
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: cc46e2e759dbfec54064975281101cb694039786
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a37ffa8d49f850d25aeb815683d9f3541e24bb64
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457539"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506611"
 ---
 # <a name="create-a-resource-pool"></a>创建资源池
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

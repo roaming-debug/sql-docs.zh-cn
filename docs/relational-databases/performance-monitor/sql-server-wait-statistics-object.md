@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Wait Statistics object
 - SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 64a21ac3072869f74c71997be5160b55758fc917
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: df97bc68487d6113857fa0d9c6a56bdc7a2871b9
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457390"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505548"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server Wait Statistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

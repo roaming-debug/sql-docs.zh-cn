@@ -21,15 +21,15 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1374be401f379dceb73a41f7a4e2f38882a9a98c
-ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
+ms.openlocfilehash: a7e1a11993c3c4eb1f5ebc6470c2e0f8387d539a
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "96130175"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506517"
 ---
 # <a name="statistics"></a>统计信息
 

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Activity Monitor [SQL Server], opening
 - opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d570faf51200708bcbd56371d68f53a12776d12e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5569286a31b9897b8fcca0eafea6830593d05183
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457463"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505987"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>打开 SQL Server Management Studio (SSMS) 中的活动监视器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

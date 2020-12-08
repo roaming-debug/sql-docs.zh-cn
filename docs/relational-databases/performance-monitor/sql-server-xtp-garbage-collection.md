@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8575295948b5560f25dc0e967fa419699587af7b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 48e4b2864465e095220ab238d8288c6e12639dec
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457959"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505496"
 ---
 # <a name="sql-server-xtp-garbage-collection"></a>SQL Server XTP 垃圾收集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Batch Resp Statistics
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 155ff6d21fdb0a40e042463b809c1ed14bbe70df
-ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: acd7dc7b853c600b743d9791a3bade6ce8970a41
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94983157"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505856"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, Batch Resp Statistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

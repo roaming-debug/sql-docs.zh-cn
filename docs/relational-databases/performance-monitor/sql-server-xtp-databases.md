@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 3dea94fe092f4481386a9fd8a5649d0ea4dd18c2
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9b4e75e2033e0e73c592eb0e565038d514f73229
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457381"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505495"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP 数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

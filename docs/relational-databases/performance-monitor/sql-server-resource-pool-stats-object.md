@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Reosurce Pool Stats object
 - 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 4629cc0e109946c6dcd2f146e7e18568eca082f0
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2c0a5a4f4f75d6a585faf35d94d98f7c08997d6f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458750"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505591"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server，Resource Pool Stats 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 4b140d5efbe33b2c274b50eb34c6ee601a347e09
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 39c491efc7b0001b7f6b44bda127e7b128c31851
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458088"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505521"
 ---
 # <a name="sql-server-xtp-cursors"></a>SQL Server XTP 游标
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

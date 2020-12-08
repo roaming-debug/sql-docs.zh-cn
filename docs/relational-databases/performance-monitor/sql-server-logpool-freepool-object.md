@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:LogPool FreePool
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: b3ffe8512adc1fd21bcf33741d0a10db058d5752
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8c41d49b9fb5e25381879a803b3b10963b13b8ba
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457715"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505651"
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server，LogPool FreePool 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

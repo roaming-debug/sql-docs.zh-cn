@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 384e2feb7d638a7ff8cad4e22346ba58369cc6aa
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 84d00aa0fc9f9677af96604788dd374e8d08e92d
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458061"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505448"
 ---
 # <a name="sql-server-xtp-transactions"></a>SQL Server XTP 事务
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

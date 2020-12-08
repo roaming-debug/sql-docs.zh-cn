@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Catalog Metadata
 ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 54beed996f87ad279ed097efe8e4a8ca9558634e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a02c8d6253df487ebf5c01c8658f448ec680022c
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458647"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505811"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, 目录元数据对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

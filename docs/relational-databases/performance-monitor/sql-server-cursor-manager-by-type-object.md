@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Cursor Manager by Type object
 - SQLServer:Cursor Manager by Type
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 09717c81690fefab85ecffd94937fd257c45d4a3
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 95f88849070d95703b611a00c5c1e5abef94fffb
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458389"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505783"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server Cursor Manager by Type 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

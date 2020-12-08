@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: ca71e9d90cf5e057d70a32eae9882d90ddbcf611
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c8a18e0d6466e6792dee8395fbbde741f3094696
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457934"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505481"
 ---
 # <a name="sql-server-xtp-io-governor"></a>SQL Server XTP IO 调控器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

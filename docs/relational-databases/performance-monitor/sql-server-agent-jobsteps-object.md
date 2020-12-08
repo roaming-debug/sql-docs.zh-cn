@@ -12,14 +12,14 @@ helpviewer_keywords:
 - JobSteps object
 - SQLAgent:JobSteps
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 14a13671c5447872e1c4c0030c8717e471d8114f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 18c4c7db9fcd23581162eb4da4d763bfc1efbb3c
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457449"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505926"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server 代理中的 JobSteps 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

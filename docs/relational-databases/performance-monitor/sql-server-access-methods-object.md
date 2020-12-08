@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 485e7e4d762b415ad4a0d140a631e99b4c79983b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7d19e5469ea93c751076654ce5fa8e12cde4f274
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458445"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505949"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server Access Methods 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

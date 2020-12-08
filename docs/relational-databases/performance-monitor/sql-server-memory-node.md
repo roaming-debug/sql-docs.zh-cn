@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 9afe187c8a9a732145862040ab09f0377aa59a60
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7f1c3f161d59e3bbf08036cc4c15d3380f2484dd
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458779"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505621"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server、内存节点
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
