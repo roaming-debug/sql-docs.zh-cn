@@ -17,14 +17,14 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 13b974b37202a41f333e7d94104eccbee4c72d5c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: dcdfba8947333b6856485848b5597b766f71edbe
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457651"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505080"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>性能监视和优化工具
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

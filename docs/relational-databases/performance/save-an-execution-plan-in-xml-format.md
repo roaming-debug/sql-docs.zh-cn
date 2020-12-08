@@ -15,15 +15,15 @@ helpviewer_keywords:
 - execution plans [SQL Server], saving
 - saving execution plans
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f10e2cd6b6b146bb7c91d9732ba04b7f6a4d5ebb
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 4799d09105d42fb136ea5aa1e10a9cf587f052c6
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784731"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505033"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式保存执行计划
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "91784731"
   
 3.  选择要查看的 XML 查询计划文件，然后单击 **“打开”** 。  
   
-     此外，还可以在 Windows 资源管理器中双击扩展名为 **.sqlplan**的文件。 该计划便会在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开。  
+     此外，还可以在 Windows 资源管理器中双击扩展名为 **.sqlplan** 的文件。 该计划便会在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开。  
   
 ## <a name="see-also"></a>另请参阅  
  [SET SHOWPLAN_XML (Transact-SQL)](../../t-sql/statements/set-showplan-xml-transact-sql.md)   

@@ -11,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b18741804460a5a95f74345f2158cb647ab3689c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 8c0da148cb3d1d733e506aee2ce06b5494e44c90
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456918"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504911"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>通过内存中 OLTP 使用查询存储
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

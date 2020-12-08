@@ -18,14 +18,14 @@ helpviewer_keywords:
 - performance (SQL Database)
 - database performance (SQL Database)
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: f12143e297b5cbf102afec030d19106ece71427a
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a93a5ba8ecacf9080edba64b31d7760f6b359c48
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678983"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505125"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL 数据库的性能中心
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 982feaae1638250c80091778cdbacbfc21b0b3af
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 60e50e5680aebd9db384a8f4ace56ee5687d640a
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458699"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504982"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>设置 SQL Server 数据库警报 (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

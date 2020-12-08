@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - plan guides [SQL Server], deleting
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: e93982c0ad59b7016902c64cd4dd81d0f81c270f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 17e2c32fbf7f26ecb0e3044e248f3b52469dad5e
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457305"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505291"
 ---
 # <a name="delete-a-plan-guide"></a>删除计划指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

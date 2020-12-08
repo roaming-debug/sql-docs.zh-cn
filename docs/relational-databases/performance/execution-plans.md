@@ -4,7 +4,7 @@ description: 了解查询优化器为 SQL Server 数据库引擎创建的用于�
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fee5c2f4f1d8a286830f4e1fdefdb1043964a726
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126612"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505221"
 ---
 # <a name="execution-plans"></a>执行计划
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

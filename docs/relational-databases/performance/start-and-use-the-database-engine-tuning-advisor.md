@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c8cd352c5347cbc48979af4e03775c9d7da8f3d1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890752"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504956"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "91890752"
  也可以使用这些跟踪事件的 **Starting** 版本。 例如， **SQL:BatchStarting**。 但是，这些跟踪事件的 **Completed** 版本包括 **Duration** 列，它能使数据库引擎优化顾问更有效地优化工作负荷。 数据库引擎优化顾问不优化其他类型的跟踪事件。 有关这些跟踪事件的详细信息，请参阅 [Stored Procedures Event Category](../../relational-databases/event-classes/stored-procedures-event-category.md) 和 [TSQL Event Category](../../relational-databases/event-classes/tsql-event-category.md)。 有关使用 SQL 跟踪存储过程来创建跟踪文件工作负荷的信息，请参阅[创建跟踪 (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
 ### <a name="trace-file-or-trace-table-workloads-that-contain-the-loginname-data-column"></a>包含 LoginName 数据列的跟踪文件或跟踪表工作负荷  
- 数据库引擎优化顾问在优化过程中提交显示计划请求。 当包含 **LoginName** 数据列的跟踪表或跟踪文件被用作工作负荷时，数据库引擎优化顾问将模拟 **LoginName**中指定的用户。 如果没有为此用户授予 SHOWPLAN 权限（该权限使用户能够为跟踪中包含的语句执行和生成显示计划），数据库引擎优化顾问将不会优化这些语句。  
+ 数据库引擎优化顾问在优化过程中提交显示计划请求。 当包含 **LoginName** 数据列的跟踪表或跟踪文件被用作工作负荷时，数据库引擎优化顾问将模拟 **LoginName** 中指定的用户。 如果没有为此用户授予 SHOWPLAN 权限（该权限使用户能够为跟踪中包含的语句执行和生成显示计划），数据库引擎优化顾问将不会优化这些语句。  
   
 ##### <a name="to-avoid-granting-the-showplan-permission-to-each-user-specified-in-the-loginname-column-of-the-trace"></a>避免为跟踪的 LoginName 列中指定的每个用户授予 SHOWPLAN 权限  
   

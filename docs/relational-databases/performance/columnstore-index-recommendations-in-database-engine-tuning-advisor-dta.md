@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor, columnstore index
 - Database Engine Tuning Advisor, columnstore and rowstore indexes
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: f534e88529564f2fcb01c61911e291eaa7f99c30
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 441b0c37a39efaf02ff00d64b893896cd3fe8f6f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457361"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505371"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>数据引擎优化顾问 (DTA) 中的列存储索引建议
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

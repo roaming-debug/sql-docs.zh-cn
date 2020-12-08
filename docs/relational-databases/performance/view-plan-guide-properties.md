@@ -13,14 +13,14 @@ helpviewer_keywords:
 - plan guides [SQL Server], view plan guide properties
 - viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 18c1d7f663d5006cae078753e028caf133ec2c5c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2c0615501d2cb191e5c45e33bb50f3898a412fbc
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458862"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504881"
 ---
 # <a name="view-plan-guide-properties"></a>查看计划指南属性
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "86458862"
      当作用域类型为 OBJECT 时，显示包含此对象的架构的名称。  
   
      **作用域类型**  
-     显示其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的实体的类型。 这便指定了用于将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南匹配的上下文。 可能的值为 **OBJECT**、 **SQL**和 **TEMPLATE**。  
+     显示其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的实体的类型。 这便指定了用于将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南匹配的上下文。 可能的值为 **OBJECT**、 **SQL** 和 **TEMPLATE**。  
   
      **Statement**  
      显示应用此计划指南的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  

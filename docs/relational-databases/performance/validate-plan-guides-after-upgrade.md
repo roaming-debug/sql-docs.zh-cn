@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - plan guides [SQL Server], validating after upgrade
 ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: bb7b3981c76e5bf8059d13afc74f3181d4b60cea
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8486277a3f46775a05c146e411e56e12b2fd3e1f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456817"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96503521"
 ---
 # <a name="validate-plan-guides-after-upgrade"></a>升级后验证计划指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

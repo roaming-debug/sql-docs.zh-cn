@@ -29,19 +29,19 @@ helpviewer_keywords:
 - counters [SQL Server]
 - performance counters [SQL Server], listed
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0dd256b071ce3621f02e6c4a6a152670e2fd5c0f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 6595db2d6d9f0c2f4e3cbd50dcadbc16e379d05f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892217"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505414"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，系统监视器可以使用它们监视运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机中的活动。 对象可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁或 Windows 进程。 每个对象有一个或多个计数器，用于确定所要监视对象的各方面信息。 例如， **SQL Server Locks** 对象包含名为 **Number of Deadlocks/sec** 和 **Lock Timeouts/sec**的计数器。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，系统监视器可以使用它们监视运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机中的活动。 对象可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁或 Windows 进程。 每个对象有一个或多个计数器，用于确定所要监视对象的各方面信息。 例如， **SQL Server Locks** 对象包含名为 **Number of Deadlocks/sec** 和 **Lock Timeouts/sec** 的计数器。  
   
  如果计算机上有某一个给定资源类型的多个资源，则一些对象会有几个实例。 例如，如果一个系统有多个处理器，则 **Processor** 对象类型会有多个实例。 对于 **上的每个数据库，** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象类型都有一个实例。 某些对象类型（例如， **Memory Manager** 对象）只有一个实例。 如果一个对象类型有多个实例，则可以增加计数器以跟踪每个实例的统计信息，另外在许多情况下，同时跟踪所有实例的统计信息。 默认实例的计数器以 SQLServer:\<object name> 格式显示。 命名实例的计数器以 MSSQL$\<instance name>:\<counter name> 或 SQLAgent$\<instance name>:\<counter name> 格式显示。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "91892217"
  有关 **SSIS 管道** 计数器的信息，请参阅 [性能计数器](../../integration-services/performance/performance-counters.md)。  
   
 ##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> 所需的权限  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的使用取决于 Windows 权限（ **SQLAgent:Alerts**除外）。 只有 **sysadmin** 固定服务器角色的成员可以使用 **SQLAgent:Alerts**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的使用取决于 Windows 权限（ **SQLAgent:Alerts** 除外）。 只有 **sysadmin** 固定服务器角色的成员可以使用 **SQLAgent:Alerts**。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用性能对象](../../ssms/agent/use-performance-objects.md)   

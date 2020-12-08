@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, templates
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: b815330ad5088ca449ab3b73f540b3ec2e521629
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9da1652b2a4814950bbc152e4ea74eb9e4c38a17
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458209"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504861"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用模板配置 Resource Governor
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "86458209"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器” 。  
   
-2.  在**模板资源管理器**中，展开“资源调控器”，然后双击“配置资源调控器”。  
+2.  在 **模板资源管理器** 中，展开“资源调控器”，然后双击“配置资源调控器”。  
   
 3.  在 **“连接到数据库引擎”** 中，输入所需信息，然后单击 **“确定”** 。 查询编辑器中提供模板 Configure Resource Governor.sql。 使用此模板可创建和配置资源池、工作负荷组和分类器函数。  
   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - lightweight query profiling
 - lightweight profiling
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: fe6467cbe5cc915b876b9efa6b8afd9ff59e2bbd
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2c45216331d940398c0d89e319c9f847d70faba0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890782"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505160"
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

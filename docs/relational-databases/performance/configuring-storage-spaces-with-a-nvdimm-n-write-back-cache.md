@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 7f95a343074ce2fb9f7f54c3121b0db6beafe34d
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8cde267305ee7e7666443d0cf9c7f96dee92d072
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679233"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505334"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>配置具有 NVDIMM-N 回写式缓存的存储空间
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

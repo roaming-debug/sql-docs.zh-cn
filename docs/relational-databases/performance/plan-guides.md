@@ -18,14 +18,14 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 9ce87be759659c79815165d827b06f6f6322df46
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: aa12afd7721c83f834c3c3f9311cb0436b57e38b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457679"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505063"
 ---
 # <a name="plan-guides"></a>计划指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

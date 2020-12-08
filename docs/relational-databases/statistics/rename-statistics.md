@@ -11,15 +11,15 @@ helpviewer_keywords:
 - renaming statistics
 - statistics [SQL Server], renaming
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09b27cba405c758be84b996eebe2628041a9611d
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 1d63fb4e6a9f469a4014fa098cabf7bac04a64c5
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458528"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504757"
 ---
 # <a name="rename-statistics"></a>重命名统计信息
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

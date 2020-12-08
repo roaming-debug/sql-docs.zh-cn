@@ -13,14 +13,14 @@ helpviewer_keywords:
 - plan guides [SQL Server], enabling
 - disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 04180f951747b7517775ec7c222f679d043286c3
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 094fa6511875a77751eda2132529ce5548d2d215
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457269"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505231"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>启用或禁用计划指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

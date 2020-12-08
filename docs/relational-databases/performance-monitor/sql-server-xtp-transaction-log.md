@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d167ee7ac85e206d79fdce0f13aba7c5d6f86827
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: dafddb3a8c0880881413db2ff51330cbe1a04cb0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458072"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505435"
 ---
 # <a name="sql-server-xtp-transaction-log"></a>SQL Server XTP 事务日志
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

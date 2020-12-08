@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 6a428f0cf913c4076e431314efc12bb52030d4c8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 6d2980803fb7a3361d74ccd86c0bcef4da734317
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458574"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505383"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>将查询提示附加到计划指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

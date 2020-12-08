@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 1424558566e544acd1a65aeb39c9a83747bbbb64
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 461f2ef3dc8617531513272d032eb30c6b59d790
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458585"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505409"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>分析实际执行计划
 

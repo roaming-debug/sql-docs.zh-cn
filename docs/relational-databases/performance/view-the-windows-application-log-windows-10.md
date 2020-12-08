@@ -17,14 +17,14 @@ helpviewer_keywords:
 - monitoring [SQL Server], events
 - logs [SQL Server], viewing
 ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d733c8c50768f5639c1af8b20f9c2b9028f7cfc1
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 714e1f694faac9bf72c09dbe60ff94d5cb99fb9a
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458679"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504838"
 ---
 # <a name="view-the-windows-application-log-windows-10"></a>查看 Windows 应用程序日志 (Windows 10)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86458679"
   
 2. 在“事件查看器”中，打开“应用程序和服务日志” 。
 
-3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件由“源”列中的 **MSSQLSERVER** 项（命名实例以 **MSSQL$** _<instance_name>_ 标识）标识。 SQL Server 代理事件由 SQLSERVERAGENT 项标识（对于已命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件使用 SQLAgent$\<*instance_name*> 标识）。 Microsoft Search 服务事件由 **Microsoft Search**项标识。  
+3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件由“源”列中的 **MSSQLSERVER** 项（命名实例以 **MSSQL$** _<instance_name>_ 标识）标识。 SQL Server 代理事件由 SQLSERVERAGENT 项标识（对于已命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件使用 SQLAgent$\<*instance_name*> 标识）。 Microsoft Search 服务事件由 **Microsoft Search** 项标识。  
   
 4. 若要查看另一台计算机的日志，右键单击“事件查看器（本地）”。 选择“连接到另一台计算机”，并填写字段以完成“选择计算机”对话框。  
   

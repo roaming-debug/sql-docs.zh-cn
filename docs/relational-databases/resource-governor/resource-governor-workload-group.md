@@ -12,14 +12,14 @@ helpviewer_keywords:
 - workload groups [SQL Server]
 - workload groups [SQL Server], overview
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 22e2c282e7f0a7450ec2997d150818607fdb5bcb
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 472e9ca18091bcf5d106a2132c54aaf4000bf0e3
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458228"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504791"
 ---
 # <a name="resource-governor-workload-group"></a>资源调控器工作负荷组
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

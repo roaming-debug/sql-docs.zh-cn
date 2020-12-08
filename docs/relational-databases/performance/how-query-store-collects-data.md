@@ -11,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c099485550f258c81684bf11c76ab7d57d0830b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 04af8ab978e04a3f724e592412b4f9a7cec72070
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458402"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505259"
 ---
 # <a name="how-query-store-collects-data"></a>查询存储的数据收集方式
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

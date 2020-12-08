@@ -14,15 +14,15 @@ helpviewer_keywords:
 - subqueries [SQL Server], correlated
 - subqueries [SQL Server], types
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4df3e14fc35abd0de05f87bb79d442e62df7dc1d
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 5d14b528b1b5e0b0583b630644b8f174d3b58c9b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457589"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504951"
 ---
 # <a name="subqueries-sql-server"></a>子查询 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

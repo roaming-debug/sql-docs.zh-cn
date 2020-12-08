@@ -17,15 +17,15 @@ helpviewer_keywords:
 - database performance [SQL Server], isolating problems
 - server performance [SQL Server], isolating problems
 ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59a452da4fa48d422855416d308383fceb126791
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 39db53bb4f198783b3da6c57d447f95467654287
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457914"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505191"
 ---
 # <a name="isolate-performance-problems"></a>隔离性能问题
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

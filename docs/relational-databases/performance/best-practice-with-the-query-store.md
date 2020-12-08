@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: pmasl
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ad9bb98b55e654efd60c028187d6085f698e1f9
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: dadf7f495198879035f4cbbbad1dcb06df5b6003
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194319"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505398"
 ---
 # <a name="best-practices-with-query-store"></a>查询存储最佳做法
 
@@ -294,7 +294,7 @@ FROM sys.database_query_store_options;
 
 考虑执行以下步骤将 Query Store 切换为读写模式并激活数据收集功能：
 
-- 使用 **ALTER DATABASE** 的 **MAX_STORAGE_SIZE_MB**选项增大最大存储大小。
+- 使用 **ALTER DATABASE** 的 **MAX_STORAGE_SIZE_MB** 选项增大最大存储大小。
 - 使用以下语句清理 Query Store 数据：
 
   ```sql

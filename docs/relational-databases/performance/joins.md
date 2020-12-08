@@ -15,15 +15,15 @@ helpviewer_keywords:
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7dd500eb443af493403b64b652e047608d2a0dd1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725998"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505179"
 ---
 # <a name="joins-sql-server"></a>联接 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -157,7 +157,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 哈希联接可以减少使用非规范化。 非规范化一般通过减少联接操作获得更好的性能，尽管这样做有冗余之险（如不一致的更新）。 哈希联接则减少使用非规范化的需要。 哈希联接使垂直分区（用单独的文件或索引代表单个表中的几组列）得以成为物理数据库设计的可行选项。     
 
-哈希联接有两种输入：**生成**输入和**探测**输入。 查询优化器指派这些角色，使两个输入中较小的那个作为生成输入。    
+哈希联接有两种输入：**生成** 输入和 **探测** 输入。 查询优化器指派这些角色，使两个输入中较小的那个作为生成输入。    
 
 哈希联接用于多种设置匹配操作：内部联接；左外部联接、右外部联接和完全外部联接；左半联接和右半联接；交集；并集和差异。 此外，哈希联接的某种变形可以进行重复删除和分组，例如 `SUM(salary) GROUP BY department`。 这些修改对生成和探测角色只使用一个输入。   
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 70fe75b97181815246d03de588bdd6d45af3ce9f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 518dce515ebf4f89a35dfc960872e4856afc5428
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458379"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505151"
 ---
 # <a name="monitor-sql-server-components"></a>监视 SQL Server 组件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

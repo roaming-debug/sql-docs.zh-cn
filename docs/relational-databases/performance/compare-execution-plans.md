@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 855d893ddde9c3eba9f9197c510ed0d03bc658ce
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4f3c78649a8934af4add9bf0696aaf91f017e687
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457365"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505349"
 ---
 # <a name="compare-execution-plans"></a>比较执行计划
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

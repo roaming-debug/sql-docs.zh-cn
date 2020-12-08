@@ -13,14 +13,14 @@ helpviewer_keywords:
 - classifier function [SQL Server]
 - classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 80ece7e7de3896cffc8bbf274071ceed3d53f39a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 78992e730afb36dc1c44fac297da0951cff80ee3
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457496"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504803"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

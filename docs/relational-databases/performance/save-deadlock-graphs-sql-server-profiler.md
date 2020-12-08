@@ -12,14 +12,14 @@ helpviewer_keywords:
 - graphs [SQL Server]
 - saving deadlock graphs
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 874597d5d62f13556072fb129931fa9e4faf1a85
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 15fd61803ab64355672c792c628aa8d9b3e7bea6
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458717"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505032"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>保存死锁图形 (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

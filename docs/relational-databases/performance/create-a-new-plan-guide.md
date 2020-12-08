@@ -13,14 +13,14 @@ helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 46a3cc2e95093a9d4d3a69f1b5ca0e1eddb38d21
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: b8f96167fff7c5d36209d43eedbbd53bc1daffee
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457337"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505321"
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "86457337"
 计划指南将固定查询计划和/或查询提示应用于查询。
   
 ##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
--   sp_create_plan_guide 的参数必须以显示的顺序提供。 为 **sp_create_plan_guide**的参数提供值时，必须显式指定所有的参数名称，或全部都不指定。 例如，如果指定了 **@name =** ，则也必须指定 **@stmt =** 、 **@type =** 等。 同样，如果省略了 **@name =** 并仅提供了参数值，则其余的参数名称也必须省略并仅提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
+-   sp_create_plan_guide 的参数必须以显示的顺序提供。 为 **sp_create_plan_guide** 的参数提供值时，必须显式指定所有的参数名称，或全部都不指定。 例如，如果指定了 **@name =** ，则也必须指定 **@stmt =** 、 **@type =** 等。 同样，如果省略了 **@name =** 并仅提供了参数值，则其余的参数名称也必须省略并仅提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
   
 -   您可以为相同的查询和批处理或模块创建多个 OBJECT 或 SQL 计划指南。 但是，在任何给定的时间只能启用一个计划指南。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "86457337"
   
 4.  在 **“语句”** 框中，输入要对其应用计划指南的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-5.  在 **“作用域类型”** 列表中，选择 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其中出现的实体的类型。 这便指定了用于将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南匹配的上下文。 可能的值为 **OBJECT**、 **SQL**和 **TEMPLATE**。  
+5.  在 **“作用域类型”** 列表中，选择 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其中出现的实体的类型。 这便指定了用于将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南匹配的上下文。 可能的值为 **OBJECT**、 **SQL** 和 **TEMPLATE**。  
   
 6.  在 **“作用域批处理”** 框中，请输入其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的批处理文本。 批处理文本不能包括 `USE`database 语句。 只有在 **SQL** 选择为作用域类型时， **“作用域批处理”** 框才可用。 如果在 SQL 为作用域类型时在“作用域批处理”框中未输入任何内容，则将批处理文本的值设置为与 **“语句”** 框中相同的值。  
   

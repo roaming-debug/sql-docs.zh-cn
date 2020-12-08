@@ -18,14 +18,14 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], monitoring system
 - Profiler [SQL Server Profiler], how-to topics
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8ce17c3bcc7d47aa8607035c3812b4235ead7c79
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f53b951e9b97b079c67132e836b2444d2871ddf0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890733"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504992"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>服务器性能和活动监视
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

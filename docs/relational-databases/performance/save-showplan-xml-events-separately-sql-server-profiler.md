@@ -13,14 +13,14 @@ helpviewer_keywords:
 - saving Showplan XML events
 - events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: c7cac6673d190ab8860792a2de1c995804275570
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 34c79b9f3dad13a8927296d424d827eb693ad1dd
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458716"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505001"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>单独保存 Showplan XML 事件 (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
