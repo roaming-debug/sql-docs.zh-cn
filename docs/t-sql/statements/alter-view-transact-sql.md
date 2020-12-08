@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9aa2c82f83e20017778a9e5096977dedeb38646d
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 36ba589c82621460bae9dc6b7772944c061c748a
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126220"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442985"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ AS select_statement
 ```
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics (SQL DW) and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
