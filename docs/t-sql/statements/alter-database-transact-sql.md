@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: af8f519e7fec6a440fcdce44ccebbcfab2f0e0a9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235384"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443203"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -148,7 +148,7 @@ database_name 要修改的数据库的名称。
 > 此选项在包含的数据库中不可用。
 
 CURRENT   
-**适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。
 
 指定应更改当前使用的数据库。
 
@@ -166,7 +166,7 @@ COLLATE collation_name
 有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE](~/t-sql/statements/collations.md)。
 
 \<delayed_durability_option> ::=   
-**适用于** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。
 
 有关详细信息，请参阅 [ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)和[控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)。
 
@@ -263,7 +263,7 @@ GO
 
 以下示例创建了一个名为 `testdb`、排序规则为 `SQL_Latin1_General_CP1_CI_A`S 的数据库，然后将 `testdb` 数据库的排序规则更改为 `COLLATE French_CI_AI`。
 
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。
 
 ```sql
 USE master;
@@ -470,17 +470,17 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 |20 GB|空值|√|√|√|√|
 |30 GB|空值|√|√|√|√|
 |40 GB|空值|√|√|√|√|
-|50 GB|空值|√|√|√|√|
+|50 GB|空值|√ (D)|√|√|√|
 |100 GB|空值|√|√|√|√|
 |150 GB|空值|√|√|√|√|
-|200 GB|空值|√|√|√|√|
+|200 GB|空值|√|√ (D)|√|√|
 |250 GB|空值|√ (D)|√ (D)|√|√|
-|300 GB|不适用|√|√|√|√|
+|300 GB|空值|√|√|√ (D)|√|
 |400 GB|不适用|√|√|√|√|
 |500 GB|空值|√|√|√ (D)|√|
-|750 GB|不适用|√|√|√|√|
-|1024 GB|不适用|√|√|√|√ (D)|
-|从 1024 GB 到最大 4096 GB，增量为 256 GB*|不适用|不适用|不适用|不适用|√|
+|750 GB|空值|√|√|√|√|
+|1024 GB|空值|√|√|√|√ (D)|
+|从 1024 GB 到最大 4096 GB，增量为 256 GB*|空值|空值|空值|空值|√|
 
 \* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。 P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关 DTU 模型资源限制的其他详细信息，请参阅 [DTU 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。
 
@@ -950,7 +950,7 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="syntax"></a>语法
 
-### <a name="sql-pool"></a>[SQL 池](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[专用 SQL 池](#tab/sqlpool)
 ```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -974,7 +974,7 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
-### <a name="sql-on-demand-preview"></a>[SQL 按需版本（预览版）](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[无服务器 SQL 池](#tab/sqlod)
 ```syntaxsql
 ALTER DATABASE { database_name | Current } 
 { 
