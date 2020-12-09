@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b474931aad2958a4ddba3bccb20773e7f36fd0e7
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 910ee3433bfa4298412a10a58405fb27dad0b157
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753812"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900968"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,12 +58,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>参数  
 `[ @job_id = ] job_id` 向其中添加计划的作业的作业标识号。 *job_id* 是 **uniqueidentifier**，无默认值。  
   
-`[ @job_name = ] 'job_name'` 向其中添加计划的作业的名称。 *job_name* 为 **nvarchar (128) **，无默认值。  
+`[ @job_name = ] 'job_name'` 向其中添加计划的作业的名称。 *job_name* 为 **nvarchar (128)**，无默认值。  
   
 > [!NOTE]  
 >  必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。  
   
-`[ @name = ] 'name'` 计划的名称。 *name* 为 **nvarchar (128) **，无默认值。  
+`[ @name = ] 'name'` 计划的名称。 *name* 为 **nvarchar (128)**，无默认值。  
   
 `[ @enabled = ] enabled_flag` 指示计划的当前状态。 *enabled_flag* 为 **tinyint**，默认值为 **1** (启用) 。 如果为 **0**，则不启用计划。 禁用该计划时，将不运行作业。  
   
@@ -72,7 +72,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**16**|每月一次|  
 |**32**|每月，相对于 *frequency_interval。*|  
@@ -86,22 +86,23 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**1** (一次) |*frequency_interval* 未使用。|  
 |**4** (每日) |每 *frequency_interval* 天。|  
 |**8** (每周) |*frequency_interval* 是 (与或逻辑运算符组合在一起的一个或多个) ：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 4 = 星期二<br /><br /> 8 = 星期三<br /><br /> 16 = 星期四<br /><br /> 32 = 星期五<br /><br /> 64 = 星期六|  
-|每月**16** () |*Frequency_interval*月中的第几天。|  
+|每月 **16** () |*Frequency_interval* 月中的第几天。|  
 |**32** (月相对) |*frequency_interval* 是以下项之一：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 3 = 星期二<br /><br /> 4 = 星期三<br /><br /> 5 = 星期四<br /><br /> 6 = 星期五<br /><br /> 7 = 星期六<br /><br /> 8 = 天<br /><br /> 9 = 工作日<br /><br /> 10 = 休息日|  
 |**64** ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务启动时) |*frequency_interval* 未使用。|  
 |**128**|*frequency_interval* 未使用。|  
   
-`[ @freq_subday_type = ] frequency_subday_type` 指定 *frequency_subday_interval*的单位。 *frequency_subday_type* 是 **int**，没有默认值，可以是下列值之一：  
+`[ @freq_subday_type = ] frequency_subday_type` 指定 *frequency_subday_interval* 的单位。 *frequency_subday_type* 是 **int**，没有默认值，可以是下列值之一：  
   
 |值|说明（单位）|  
 |-----------|--------------------------|  
 |**0x1**|在指定的时间|  
+|**0x2**|秒|  
 |**0x4**|分钟数|  
 |**0x8**|小时|  
   
 `[ @freq_subday_interval = ] frequency_subday_interval` 每次执行作业之间要发生的 *frequency_subday_type* 周期数。 *frequency_subday_interval* 的值为 **int**，默认值为0。  
   
-`[ @freq_relative_interval = ] frequency_relative_interval`当*frequency_type*设置为**32** (每月相对) 时，进一步定义*frequency_interval* 。  
+`[ @freq_relative_interval = ] frequency_relative_interval`当 *frequency_type* 设置为 **32** (每月相对) 时，进一步定义 *frequency_interval* 。  
   
  *frequency_relative_interval* 是 **int**，没有默认值，可以是下列值之一：  
   
@@ -115,7 +116,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* 指示间隔的发生次数。 例如，如果 *frequency_relative_interval* 设置为 **2**， *frequency_type* 设置为 **32**， *frequency_interval* 设置为 **3**，则计划作业将在每月的第二个星期二发生。  
   
-`[ @freq_recurrence_factor = ] frequency_recurrence_factor` 作业的计划执行之间的周数或月数。 仅当*frequency_type*设置为**8**、 **16**或**32**时才使用*frequency_recurrence_factor* 。 *frequency_recurrence_factor* 的值为 **int**，默认值为0。  
+`[ @freq_recurrence_factor = ] frequency_recurrence_factor` 作业的计划执行之间的周数或月数。 仅当 *frequency_type* 设置为 **8**、 **16** 或 **32** 时才使用 *frequency_recurrence_factor* 。 *frequency_recurrence_factor* 的值为 **int**，默认值为0。  
   
 `[ @active_start_date = ] active_start_date` 可以开始执行作业的日期。 *active_start_date* 为 **int**，没有默认值。 日期的格式为 YYYYMMDD。 如果设置 *active_start_date* ，则日期必须大于或等于19900101。  
   
@@ -123,13 +124,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @active_end_date = ] active_end_date` 可以停止作业执行的日期。 *active_end_date* 为 **int**，没有默认值。 日期的格式为 YYYYMMDD。  
   
-`[ @active_start_time = ] active_start_time`*Active_start_date*和*active_end_date*之间的任意一天的时间，用于开始执行作业。 *active_start_time* 为 **int**，没有默认值。 此时间的格式为24小时制的 HHMMSS。  
+`[ @active_start_time = ] active_start_time`*Active_start_date* 和 *active_end_date* 之间的任意一天的时间，用于开始执行作业。 *active_start_time* 为 **int**，没有默认值。 此时间的格式为24小时制的 HHMMSS。  
   
-`[ @active_end_time = active_end_time_`*Active_start_date*和*active_end_date*之间的任意一天的时间结束作业执行。 *active_end_time* 为 **int**，没有默认值。 此时间的格式为24小时制的 HHMMSS。  
+`[ @active_end_time = active_end_time_`*Active_start_date* 和 *active_end_date* 之间的任意一天的时间结束作业执行。 *active_end_time* 为 **int**，没有默认值。 此时间的格式为24小时制的 HHMMSS。  
   
-`[ @schedule_id = schedule_idOUTPUT` 已成功创建计划时分配给计划的计划标识号。 *schedule_id* 是 **int**类型的输出变量，无默认值。  
+`[ @schedule_id = schedule_idOUTPUT` 已成功创建计划时分配给计划的计划标识号。 *schedule_id* 是 **int** 类型的输出变量，无默认值。  
   
-`[ @schedule_uid = ] _schedule_uidOUTPUT` 计划的唯一标识符。 *schedule_uid* 是 **uniqueidentifier**类型的变量。  
+`[ @schedule_uid = ] _schedule_uidOUTPUT` 计划的唯一标识符。 *schedule_uid* 是 **uniqueidentifier** 类型的变量。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
