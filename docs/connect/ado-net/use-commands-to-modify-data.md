@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 03ebdbdd15adfae8e765964e8338f043999319f3
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 98127e41b5b07c38030ef27214c9c92bf7c4b4be
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428182"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761475"
 ---
 # <a name="using-commands-to-modify-data"></a>使用命令修改数据
 
@@ -31,11 +31,14 @@ ms.locfileid: "96428182"
 
 ## <a name="in-this-section"></a>在本节中
 
-[更新数据源中的数据](update-data-inside-data-source.md)介绍如何执行修改数据库中的数据的命令或存储过程。
+[更新数据源中的数据](update-data-inside-data-source.md)  
+描述如何执行对数据库中的数据进行修改的命令或存储过程。
 
-[执行目录操作](perform-catalog-operations.md)介绍如何执行修改数据库架构的命令。
+[执行目录操作](perform-catalog-operations.md)  
+描述如何执行对数据库架构进行修改的命令。
 
 ## <a name="see-also"></a>请参阅
 
 - [在 ADO.NET 中检索和修改数据](retrieving-modifying-data.md)
 - [命令和参数](commands-parameters.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

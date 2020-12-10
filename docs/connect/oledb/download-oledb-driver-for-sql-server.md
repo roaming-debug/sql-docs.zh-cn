@@ -1,18 +1,18 @@
 ---
 title: 下载适用于 SQL Server 的 Microsoft OLE DB 驱动程序 | Microsoft Docs
 description: 下载 Microsoft OLE DB Driver for SQL Server，以开发连接到 SQL Server 和 Azure SQL 数据库的本机 Windows 应用程序。
-ms.date: 09/30/2020
+ms.date: 12/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea4fcf0ed6fdab9a9580d8f13227fb5bd079f3bc
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 4d0f619fbdba59a902a1db379f65ebd131e5e4df
+ms.sourcegitcommit: cad737d30e5a80033f3b021cc3f0d47c00756a6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506401"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96614479"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>下载适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 
@@ -32,7 +32,7 @@ Microsoft OLE DB Driver 18.5 for SQL Server 是最新正式发行版 (GA)。 如
 ### <a name="version-information"></a>版本信息
 
 - 版本号：18.5.0
-- 发布日期：2020 年 9 月 30 日
+- 发布日期：2020 年 12 月 1 日
 
 > [!Note]
 > 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本]()。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。

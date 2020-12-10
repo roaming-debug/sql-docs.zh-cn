@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 1cf7cf010724453aadcc3c93ef216e44d6a869fc
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: ef687114ff2ceceabc1ed87d67a4585a5846029d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419729"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563074"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 连接池 (ADO.NET)
 
@@ -68,10 +68,10 @@ ms.locfileid: "96419729"
 连接池进程通过在连接释放回池中时重新分配连接，来满足这些连接请求。 如果已达到最大池大小且不存在可用的连接，则该请求将会排队。 然后，池程序会尝试回收任何连接，直到达到超时为止（默认值为 15 秒）。 如果池进程在连接超时之前无法满足请求，将引发异常。
 
 > [!CAUTION]
-> 我们强烈建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 要关闭连接，可以使用 `Connection` 对象的 `Close` 或 `Dispose` 方法，也可以通过在 C# 的 `using` 语句中或 Visual Basic 的 `Using` 语句中打开所有连接。 不是显式关闭的连接可能不会添加或返回到池中。 有关详细信息，请参阅[使用语句](/dotnet/docs/csharp/language-reference/keywords/using-statement.md)或[如何：释放 Visual Basic 的系统资源](/dotnet/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)。
+> 我们强烈建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 要关闭连接，可以使用 `Connection` 对象的 `Close` 或 `Dispose` 方法，也可以通过在 C# 的 `using` 语句中或 Visual Basic 的 `Using` 语句中打开所有连接。 不是显式关闭的连接可能不会添加或返回到池中。 有关详细信息，请参阅[使用语句](/dotnet/csharp/language-reference/keywords/using-statement)或[如何：释放 Visual Basic 的系统资源](/dotnet/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource)。
 
 > [!NOTE]
-> 不要在类的 `Close` 方法中对 `Dispose`、`Connection` 或任何其他托管对象调用 `DataReader` 或 `Finalize`。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息，请参阅[垃圾回收](/dotnet/docs/standard/garbage-collection/index.md)。
+> 不要在类的 `Close` 方法中对 `Dispose`、`Connection` 或任何其他托管对象调用 `DataReader` 或 `Finalize`。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息，请参阅[垃圾回收](/dotnet/standard/garbage-collection/index)。
 
 有关与打开和关闭与连接相关联的事件的详细信息，请参阅 SQL Server 文档中的 [Audit Login 事件类](/sql/relational-databases/event-classes/audit-login-event-class)和 [Audit Logout 事件类](/sql/relational-databases/event-classes/audit-logout-event-class)。
 

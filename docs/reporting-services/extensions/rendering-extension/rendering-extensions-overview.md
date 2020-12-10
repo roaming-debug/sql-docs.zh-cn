@@ -1,7 +1,7 @@
 ---
 title: 呈现扩展插件概述 | Microsoft Docs
 description: 查看 Reporting Services 中包含的数据呈现扩展插件。 了解如何添加自定义呈现扩展插件，以生成其他格式的报表。
-ms.date: 03/14/2017
+ms.date: 12/7/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dd3bca97b438d683e325194616af123ea9fb8290
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: c14237adcb3cd45e62db0915004f51ed547c9f30
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529423"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788292"
 ---
 # <a name="rendering-extensions-overview"></a>呈现扩展插件概述
   呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  
@@ -53,9 +53,7 @@ ms.locfileid: "84529423"
   
 -   通过将 XSL 转换 (XSLT) 与 XML 呈现格式的输出结合起来，添加自定义格式和演示功能。  
   
- 编写自定义呈现扩展插件的过程困难重重。 呈现扩展插件通常必须支持报表元素的所有可能组合，并要求您实现许许多多的类、接口、方法和属性。 如果必须以未随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的格式呈现报表，并且决定为呈现扩展插件编写自己的托管代码实现，则呈现扩展插件代码必须实现报表服务器要求的 Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension 接口****。  
-  
- 有关 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的补充文档和白皮书，请参阅 [Reporting Services 网站](https://go.microsoft.com/fwlink/?LinkId=19951)上的最新技术资源。  
+ 编写自定义呈现扩展插件的过程困难重重。 呈现扩展插件通常必须支持报表元素的所有可能组合，并要求您实现许许多多的类、接口、方法和属性。 如果必须以未随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的格式呈现报表，并且决定为呈现扩展插件编写自己的托管代码实现，则呈现扩展插件代码必须实现报表服务器要求的 Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension 接口。  
   
 ## <a name="see-also"></a>另请参阅  
  [实现呈现扩展插件](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

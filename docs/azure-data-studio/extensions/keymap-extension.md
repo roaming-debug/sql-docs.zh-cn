@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 127b163ff7f75b4c7ebeff37781f8a5670a47cf9
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364074"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900820"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>创建 Azure Data Studio 键映射扩展
 
@@ -37,14 +37,14 @@ Azure Data Studio 建立在与 Visual Studio Code 相同的框架上，因此 Az
 - 已在 `$PATH` 中安装 [Node.js](https://nodejs.org) 且可用。 Node.js 包含 [npm](https://www.npmjs.com/)，它是用于安装扩展生成器的 Node.js 包管理器。
 - 已有 [Visual Studio Code](https://code.visualstudio.com)，用于调试扩展。
 - 有 Azure Data Studio [调试扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)（可选）。 可使用它测试扩展，且无需将扩展打包并安装到 Azure Data Studio 中。
-- 确保 `azuredatastudio` 位于你的路径中。 对于 Windows，请确保选择 setup.exe 中的 `Add to Path` 选项。 对于 Mac 或 Linux，运行“在 PATH 中安装“azuredatastudio”命令”选项**。
+- 确保 `azuredatastudio` 位于你的路径中。 对于 Windows，请确保选择 setup.exe 中的 `Add to Path` 选项。 对于 Mac 或 Linux，运行“在 PATH 中安装“azuredatastudio”命令”选项。
 
 ## <a name="install-the-extension-generator"></a>安装扩展生成器
 
 为了简化创建扩展的过程，已使用 Yeoman 构建了一个[扩展生成器](https://code.visualstudio.com/docs/extensions/yocode)。 要安装它，请在命令提示符中运行以下代码：
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-keymap-extension"></a>创建键映射扩展
@@ -55,11 +55,11 @@ Azure Data Studio 建立在与 Visual Studio Code 相同的框架上，因此 Az
 
    `yo azuredatastudio`
 
-2. 从扩展类型列表中选择“新键映射”****：
+2. 从扩展类型列表中选择“新键映射”：
 
    :::image type="content" source="media/keymap-extension/extension-generator.png" alt-text="扩展生成器":::
 
-3. 按步骤填写扩展名称（对于本教程，请使用 ssmskeymap2）并添加描述****。
+3. 按步骤填写扩展名称（对于本教程，请使用 ssmskeymap2）并添加描述。
 
 完成前面的步骤后，系统会创建一个新文件夹。 在 Visual Studio Code 中打开该文件夹，然后便可创建自己的键绑定扩展了！
 
@@ -71,13 +71,13 @@ Azure Data Studio 建立在与 Visual Studio Code 相同的框架上，因此 Az
 
 我发现遗漏了一些重要内容：
 
-- 运行查询，并启用实际的执行计划。 这是 SSMS 中的 Ctrl+M，并且在 Azure Data Studio 中没有绑定****。
-- 将 CTRL+SHIFT+E 作为运行查询的第二种方式****。 用户反馈显示缺少此内容。
-- 让 ALT+F1 运行 `sp_help`****。 我们在 Azure Data Studio 中添加了此项，但由于该绑定已在使用中，因此我们将其映射到 ALT+F2****。
-- 切换全屏 (SHIFT+ALT+ENTER)****。
-- F8，用于显示“对象资源管理器” / “服务器视图”************。
+- 运行查询，并启用实际的执行计划。 这是 SSMS 中的 Ctrl+M，并且在 Azure Data Studio 中没有绑定。
+- 将 CTRL+SHIFT+E 作为运行查询的第二种方式。 用户反馈显示缺少此内容。
+- 让 ALT+F1 运行 `sp_help`。 我们在 Azure Data Studio 中添加了此项，但由于该绑定已在使用中，因此我们将其映射到 ALT+F2。
+- 切换全屏 (SHIFT+ALT+ENTER)。
+- F8，用于显示“对象资源管理器” / “服务器视图”。
 
-可以轻松查找和替换这些键绑定。 运行“打开键盘快捷方式”以显示 Azure Data Studio 中的“键盘快捷方式”选项卡，搜索“查询”，然后选择“更改键绑定”************。 更改完键绑定后，可以在 keybindings.json 文件中看到更新的映射（运行“打开键盘快捷方式”可查看该文件）**。
+可以轻松查找和替换这些键绑定。 运行“打开键盘快捷方式”以显示 Azure Data Studio 中的“键盘快捷方式”选项卡，搜索“查询”，然后选择“更改键绑定”。 更改完键绑定后，可以在 keybindings.json 文件中看到更新的映射（运行“打开键盘快捷方式”可查看该文件）。
 
 :::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="键盘快捷方式":::
 
@@ -124,7 +124,7 @@ Azure Data Studio 建立在与 Visual Studio Code 相同的框架上，因此 Az
 
 确保 Visual Studio Code 中安装了 Azure Data Studio 调试扩展。
 
-选择“F5”，在调试模式下启动 Azure Data Studio 并运行扩展****：
+选择“F5”，在调试模式下启动 Azure Data Studio 并运行扩展：
 
 :::image type="content" source="media/keymap-extension/install-extension.png" alt-text="安装扩展":::
 
@@ -137,10 +137,10 @@ Azure Data Studio 建立在与 Visual Studio Code 相同的框架上，因此 Az
 要与他人共享，需要将扩展集中打包到一个文件中。 这样可发布到 Azure Data Studio 扩展市场，或在团队或社区之间共享。 为此，需要从命令行安装另一个 npm 包：
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
-导航到扩展的基本目录，并运行 `vsce package`。 我不得不额外添加了几行代码来阻止 vsce 工具发出错误消息**：
+导航到扩展的基本目录，并运行 `vsce package`。 我不得不额外添加了几行代码来阻止 vsce 工具发出错误消息：
 
 ```json
 "repository": {

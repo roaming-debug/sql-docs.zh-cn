@@ -2,19 +2,19 @@
 title: 驱动程序功能支持矩阵
 description: 了解 SQL Server 的驱动程序支持的常用功能，以及可找到有关这些功能的信息的位置。
 ms.custom: ''
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 4fff9c04098bd0796f714d160864e4edb93613ac
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419669"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595228"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Microsoft SQL Server 的驱动程序功能支持矩阵
 
@@ -40,14 +40,14 @@ ms.locfileid: "96419669"
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [是](ado-net/sql/sqlclient-support-always-encrypted.md) | [是](ado-net/sql/sqlclient-support-always-encrypted.md) | | [是](ado-net/sql/sqlclient-support-always-encrypted.md) |
 | [具有安全 Enclave 的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [是](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | [是](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | | [是](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) |
 | [Azure Active Directory 访问令牌身份验证](/azure/active-directory/develop/access-tokens) | [是](/dotnet/api/system.data.sqlclient.sqlconnection.accesstoken) | [是](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [是](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [是](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) |
-| [Azure Active Directory 密码身份验证](/azure/sql-database/sql-database-aad-authentication) | “是” | “是” | | 是 |
-| [Azure Active Directory 集成身份验证](/azure/sql-database/sql-database-aad-authentication) | “是” | “是” | | 是 |
-| [Azure Active Directory 交互式 (MFA) 身份验证](/azure/sql-database/sql-database-aad-authentication) | “是” | “是” | | 是 |
-| [Azure Active Directory 托管标识身份验证](/azure/active-directory/managed-identities-azure-resources/overview) | 是 | “是” | | |
-| [Azure Active Directory 服务主体身份验证](/azure/active-directory/develop/app-objects-and-service-principals) | “是” | 是 | | |
+| [Azure Active Directory 密码身份验证](/azure/sql-database/sql-database-aad-authentication) | [是](ado-net/sql/azure-active-directory-authentication.md) | [是](ado-net/sql/azure-active-directory-authentication.md) | | 是 |
+| [Azure Active Directory 集成身份验证](/azure/sql-database/sql-database-aad-authentication) | [是](ado-net/sql/azure-active-directory-authentication.md) | [是](ado-net/sql/azure-active-directory-authentication.md) | | 是 |
+| [Azure Active Directory 交互式 (MFA) 身份验证](/azure/sql-database/sql-database-aad-authentication) | [是](ado-net/sql/azure-active-directory-authentication.md) | [是](ado-net/sql/azure-active-directory-authentication.md) | | 是 |
+| [Azure Active Directory 托管标识身份验证](/azure/active-directory/managed-identities-azure-resources/overview) | [是](ado-net/sql/azure-active-directory-authentication.md) | [是](ado-net/sql/azure-active-directory-authentication.md) | | |
+| [Azure Active Directory 服务主体身份验证](/azure/active-directory/develop/app-objects-and-service-principals) | [是](ado-net/sql/azure-active-directory-authentication.md) | [是](ado-net/sql/azure-active-directory-authentication.md) | | |
 | [Windows 集成身份验证](/windows-server/security/windows-authentication/windows-authentication-overview) | [是](ado-net/sql/authentication-sql-server.md) | [是](ado-net/sql/authentication-sql-server.md) | [是](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [是](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [大容量复制](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [是](ado-net/sql/bulk-copy-operations-sql-server.md) | [是](ado-net/sql/bulk-copy-operations-sql-server.md) | [是](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [是](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
-| [数据敏感度和分类元数据](../relational-databases/security/sql-data-discovery-and-classification.md) | “是” | 是 | 是 | 是 |
+| [数据敏感度和分类元数据](../relational-databases/security/sql-data-discovery-and-classification.md) | [是](ado-net/sql/data-classification.md) | [是](ado-net/sql/data-classification.md) | 是 | 是 |
 | [多重活动结果集 (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [是](ado-net/sql/multiple-active-result-sets-mars.md) | [是](ado-net/sql/multiple-active-result-sets-mars.md) | [是](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [是](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [空间数据类型](../relational-databases/spatial/spatial-data-sql-server.md) | | “是” | | 是 |
 | [表值参数 (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [是](ado-net/sql/table-valued-parameters.md) | [是](ado-net/sql/table-valued-parameters.md) | [是](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [是](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
@@ -64,7 +64,7 @@ ms.locfileid: "96419669"
 | [Azure Active Directory 集成身份验证](/azure/sql-database/sql-database-aad-authentication) | [是](odbc/using-azure-active-directory.md) | [是](odbc/using-azure-active-directory.md) | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 交互式 (MFA) 身份验证](/azure/sql-database/sql-database-aad-authentication) | [是](odbc/using-azure-active-directory.md) | | | [是](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 托管标识身份验证](/azure/active-directory/managed-identities-azure-resources/overview) | [是](odbc/using-azure-active-directory.md) | [是](odbc/using-azure-active-directory.md) | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
-| [Azure Active Directory 服务主体身份验证](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
+| [Azure Active Directory 服务主体身份验证](/azure/active-directory/develop/app-objects-and-service-principals) | | | | [是](oledb/features/using-azure-active-directory.md) |
 | [Windows 集成身份验证](/windows-server/security/windows-authentication/windows-authentication-overview) | 是 | [是](odbc/linux-mac/using-integrated-authentication.md) | [是](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | 是 |
 | [大容量复制](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [是](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [是](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [是](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [是](oledb/features/performing-bulk-copy-operations.md) |
 | [数据发现和分类元数据](../relational-databases/security/sql-data-discovery-and-classification.md) | [是](odbc/data-classification.md) | [是](odbc/data-classification.md) | [是](jdbc/data-discovery-classification-sample.md) | |

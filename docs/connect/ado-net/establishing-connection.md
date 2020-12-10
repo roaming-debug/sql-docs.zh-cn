@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 2eb3c7d996463b9c581ea60bc11f853a5d131582
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: cb77d01ede16a6fa68aac6dcb49612ad8fd9a191
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419737"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563078"
 ---
 # <a name="establishing-connection"></a>建立连接
 
@@ -29,12 +29,12 @@ ms.locfileid: "96419737"
 
 ## <a name="closing-connections"></a>关闭连接
 
-我们建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 如果 Visual Basic 或 C# 的代码中存在 `Using` 块，将自动断开连接，即使发生无法处理的异常。 有关详细信息，请参阅 [using 语句](/dotnet/docs/csharp/language-reference/keywords/using-statement.md)和 [ 语句](/dotnet/docs/visual-basic/language-reference/statements/using-statement.md)。
+我们建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 如果 Visual Basic 或 C# 的代码中存在 `Using` 块，将自动断开连接，即使发生无法处理的异常。 有关详细信息，请参阅 [using 语句](/dotnet/csharp/language-reference/keywords/using-statement)和 [ 语句](/dotnet/visual-basic/language-reference/statements/using-statement)。
 
 还可以使用连接对象的 `Close` 或 `Dispose` 方法。 不是显式关闭的连接可能不会添加或返回到池中。 例如，如果连接已超出范围但没有显式关闭，则仅当达到最大池大小而该连接仍然有效时，该连接才会返回到连接池中。
 
 > [!NOTE]
-> 不要在类的 `Finalize` 方法中对 Connection、DataReader 或任何其他托管对象调用 `Close` 或 `Dispose`。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息，请参阅[垃圾回收](/dotnet/docs/standard/garbage-collection/index.md)。
+> 不要在类的 `Finalize` 方法中对 Connection、DataReader 或任何其他托管对象调用 `Close` 或 `Dispose`。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息，请参阅[垃圾回收](/dotnet/standard/garbage-collection/index)。
 
 > [!NOTE]
 > 从连接池中提取连接或将连接返回到连接池时，服务器上不会引发登录和注销事件，这是因为在将连接返回到连接池时实际上并没有将其关闭。 有关详细信息，请参阅 [SQL Server 连接池 (ADO.NET)](sql-server-connection-pooling.md)。

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c5610f182adaab2197b67578e51331fd6d7ce19b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126368"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563113"
 ---
 # <a name="connection-strings-and-configuration-files"></a>连接字符串和配置文件
 
@@ -25,7 +25,7 @@ ms.locfileid: "96126368"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-在应用程序代码中嵌入连接字符串可能导致安全漏洞和维护问题。 使用 [Ildasm.exe（IL 反汇编程序）](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md)工具可以查看编译到应用程序源代码中的未加密连接字符串。 此外，如果连接字符串发生更改，则必须重新编译应用程序。 因此，我们建议您将连接字符串存储在应用程序配置文件中。
+在应用程序代码中嵌入连接字符串可能导致安全漏洞和维护问题。 使用 [Ildasm.exe（IL 反汇编程序）](/dotnet/framework/tools/ildasm-exe-il-disassembler)工具可以查看编译到应用程序源代码中的未加密连接字符串。 此外，如果连接字符串发生更改，则必须重新编译应用程序。 因此，我们建议您将连接字符串存储在应用程序配置文件中。
 
 ## <a name="working-with-application-configuration-files"></a>使用应用程序配置文件
 
@@ -194,5 +194,5 @@ ASP.NET 2.0 引入了一个称为“受保护配置”的新功能，可以通�
 - [连接字符串生成器](connection-string-builders.md)
 - [保护连接信息](protecting-connection-information.md)
 - [使用配置类](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [配置应用程序](/dotnet/docs/framework/configure-apps/index.md)
+- [配置应用程序](/dotnet/framework/configure-apps/index)
 - [ASP.NET 网站管理](/previous-versions/aspnet/6hy1xzbw(v=vs.100))
