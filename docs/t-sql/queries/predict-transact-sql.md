@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116279"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523046"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -120,9 +120,9 @@ DATA 参数用于指定用于评分或预测的数据。 在查询中以表源�
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> `RUNTIME = ONNX` 参数仅在 [Azure SQL 托管实例](/azure/azure-sql/managed-instance/machine-learning-services-overview)和 [Azure SQL Edge](/azure/sql-database-edge/onnx-overview) 中可用。
+> `RUNTIME = ONNX` 参数仅在 [Azure SQL 托管实例](/azure/azure-sql/managed-instance/machine-learning-services-overview)、[Azure SQL Edge](/azure/sql-database-edge/onnx-overview) 和 [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is) 中可用。
 
-指示用于执行模型的机器学习引擎。 `RUNTIME` 参数值始终为 `ONNX`。 对于 Azure SQL Edge，此参数是必需的。 在 Azure SQL 托管实例上，此参数是可选的，仅在使用 ONNX 模型时使用。
+指示用于执行模型的机器学习引擎。 `RUNTIME` 参数值始终为 `ONNX`。 对于 Azure SQL Edge 和 Azure Synapse Analytics，此参数是必需的。 在 Azure SQL 托管实例上，此参数是可选的，仅在使用 ONNX 模型时使用。
 
 WITH ( <result_set_definition> )
 
@@ -186,7 +186,7 @@ DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE mode
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+    DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+             DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -216,6 +216,8 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 一个常见的预测用例是生成输入数据的评分，然后将预测值插入到表中。 下面的示例假定，应用程序调用操作会使用存储过程将包含预测值的行插入到表中：
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
@@ -223,6 +225,20 @@ INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
+```
+
+:::moniker-end
 
 - `PREDICT` 的结果存储在名为 PredictionResults 的表中。 
 - 模型存储为“模型”表中的 `varbinary(max)` 列。 ID 和说明等其他信息可保存在表中以标识模式。

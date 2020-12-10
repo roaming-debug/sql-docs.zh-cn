@@ -1,19 +1,19 @@
 ---
 title: PolyBase 中的常见问题解答 |Microsoft Docs
 description: 比较 PolyBase 和链接服务器，并比较大数据群集中的 PolyBase 和独立实例中的 PolyBase。 了解 PolyBase 2019 中的新增功能。
-ms.date: 04/23/2019
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 57d59e774c1042bf7989bcd2df4a652ed4498f0d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96127851"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563133"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 
@@ -55,13 +55,13 @@ ms.locfileid: "96127851"
 
 |Feature |大数据群集|独立实例|
 |--------------------------|--------------------------|---------|   
-|为 SQL Server、Oracle、Teradata 和 Mongo DB 创建外部数据源 |X|X |
+|为 SQL Server、Oracle、Teradata 和 Mongo DB 创建外部数据源 |X|X|
 |使用可兼容的第三方 ODBC 驱动程序创建外部数据源 | | X|
 |为 HADOOP 数据源创建外部数据源 | X| X|
 |为 Azure Blob 存储创建外部数据源 | X| X|
 |在 SQL Server 数据池上创建外部表 | X| |
 |在 SQL Server 存储池上创建外部表 | X| |
-|执行横向扩展查询 | X| X|
+|执行横向扩展查询 | X| X（仅限 Windows） |
 
 > [!NOTE]
 >此表未说明最新的 [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP 提供的功能。 有关可用功能的信息，请参阅发行说明。 有关使用 ODBC 泛型连接器进行连接的详细信息，请访问我们的[配置 ODBC 泛型类型的操作指南](polybase-configure-odbc-generic.md)。

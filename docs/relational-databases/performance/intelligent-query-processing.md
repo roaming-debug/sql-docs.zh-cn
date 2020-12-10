@@ -5,23 +5,23 @@ ms.custom: seo-dt-2019
 ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce39e398db9d3676bc9c6e2257c9847774927e26
-ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
+ms.openlocfilehash: d1171d4f3570c6bcfcf222043c5036de15c98241
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92134865"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595138"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 智能查询处理 (IQP) 功能系列包含有广泛影响的功能，既能提升现有工作负荷的性能，还能最大限度地减少实现工作量。 
 
@@ -40,8 +40,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 下表详细列出了所有智能查询处理功能，以及针对数据库兼容性级别必须具备的任何要求。
 
-| **IQP 功能** | **在 Azure SQL 数据库中是否受支持** | **在 SQL Server 中是否受支持** |**说明** |
-| --- | --- | --- |--- |
+| **IQP 功能** | 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 中受支持 | 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中受支持 |**说明** |
+| ---------------- | ------- | ------- | ---------------- |
 | [自适应联接（批处理模式）](#batch-mode-adaptive-joins) | 是，兼容性级别为 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，兼容性级别为 140|自适应联接在运行时期间根据实际输入行自动选择联接类型。|
 | [非重复近似计数](#approximate-query-processing) | 是| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起|由于高性能和低内存占用量，可针对大数据方案提供近似的 COUNT DISTINCT。 |
 | [行存储上的批处理模式](#batch-mode-on-rowstore) | 是，兼容性级别为 150| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，兼容性级别为 150|可为 CPU 绑定关系的 DW 工作负载提供批处理模式，无需列存储索引。  | 
@@ -136,7 +136,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 通过 memory_grant_updated_by_feedback  XEvent，可以查看行模式内存授予反馈活动。 
 
-从行模式内存授予反馈开始，将显示两个新的查询计划属性，用于实际执行后计划：IsMemoryGrantFeedbackAdjusted 和 LastRequestedMemory，它们将添加到 MemoryGrantInfo 查询计划 XML 元素  。 
+从行模式内存授予反馈开始，将会对实际执行后计划显示两个新查询计划属性：“IsMemoryGrantFeedbackAdjusted”*_和“LastRequestedMemory”（它们添加到“MemoryGrantInfo”_*查询计划 XML 元素中）。 
 
 LastRequestedMemory 显示上一次查询执行中的授予内存（以千字节 (KB) 为单位）  。 使用 IsMemoryGrantFeedbackAdjusted 属性，可以查看实际查询执行计划内语句的内存授予反馈状态  。 下面列出了此属性的可取值：
 
@@ -319,14 +319,14 @@ SELECT L_OrderKey, L_Quantity
 FROM dbo.lineitem
 WHERE L_Quantity = 5;
 
-SELECT  O_OrderKey,
+SELECT O_OrderKey,
     O_CustKey,
     O_OrderStatus,
     L_QUANTITY
 FROM    
     ORDERS,
     @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
+WHERE    O_ORDERKEY    =    L_ORDERKEY
     AND O_OrderStatus = 'O'
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
@@ -391,7 +391,6 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 即使查询不访问任何具有列存储索引的表，查询处理器也将使用启发式方法来决定是否考虑批处理模式。 启发式方法包括以下检查：
 1. 初始检查输入查询中的表大小、使用的运算符和估计的基数。
 2. 其他检查点，因为优化器会发现新的、成本更低的查询计划。 如果这些替代计划没有大量使用批处理模式，优化器会停止探索批处理模式替代方案。
-
 
 如果使用行存储上的批处理模式，则会发现在查询计划中实际运行模式为批处理模式  。 扫描运算符对磁盘堆和 B 树索引使用批处理模式。 此批处理模式扫描可以评估批处理模式位图筛选器。 还可以在计划中看到其他批处理模式运算符。 例如，哈希联接、基于哈希的聚合、排序、窗口聚合、筛选器、串联和计算标量运算符。
 

@@ -1,5 +1,5 @@
 ---
-title: COPY INTO (Transact-SQL)（预览版）
+title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: 在 Azure Synapse Analytics 中使用 COPY 语句从外部存储帐户加载数据。
 ms.date: 09/25/2020
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300282"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96787961"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -45,7 +45,7 @@ ms.locfileid: "92300282"
 
 - [快速入门：使用 COPY 语句批量加载数据](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [快速入门：关于使用 COPY 语句及其支持的身份验证方法的示例](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [快速入门：使用丰富的 Synapse Studio UI（工作区预览版）创建 COPY 语句](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [快速入门：使用丰富的 Synapse Studio UI 创建 COPY 语句](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>语法  
 
@@ -75,7 +75,7 @@ WITH
 ## <a name="arguments"></a>参数  
 
 *schema_name*  
-如果执行操作的用户的默认架构是指定表的架构，则该参数是可选的。 如果未指定 *schema* ，并且执行复制操作的用户的默认架构不同于指定表的架构，则将取消复制，并返回一条错误消息。  
+如果执行操作的用户的默认架构是指定表的架构，则该参数是可选的。 如果未指定 *schema*，并且执行复制操作的用户的默认架构不同于指定表的架构，则将取消复制，并返回一条错误消息。  
 
 *table_name*  
 要将数据复制到其中的表的名称。 目标表可以是临时或永久表，并且必须已存在于数据库中。 
@@ -85,9 +85,9 @@ WITH
 
 [(Column_name [Default_value] [Field_number] [,...n])]
 
-- *Column_name* ：目标表中列的名称。
-- *Default_value* ：将替换输入文件中的任何 NULL 值的默认值。 默认值适用于所有文件格式。 如果省略列列表中的某一列或者某个输入文件字段为空，则 COPY 将尝试从输入文件中加载 NULL。
-- *Field_number* ：将映射到目标列名称的输入文件字段编号。
+- *Column_name*：目标表中列的名称。
+- *Default_value*：将替换输入文件中的任何 NULL 值的默认值。 默认值适用于所有文件格式。 如果省略列列表中的某一列或者某个输入文件字段为空，则 COPY 将尝试从输入文件中加载 NULL。
+- *Field_number*：将映射到目标列名称的输入文件字段编号。
 - 字段索引从 1 开始。
 
 如果未指定列列表，则 COPY 将根据源顺序和目标顺序映射列：输入字段 1 将映射到目标列 1，字段 2 将映射到列 2，依此类推。
@@ -95,17 +95,17 @@ WITH
 *External locations(s)*</br>
 包含数据的文件的暂存位置。 目前支持 Azure Data Lake Storage (ADLS) Gen2 和 Azure Blob 存储：
 
-- Blob 存储的 *外部位置* ： https://<account>.blob.core.windows.net/<container>/<path>
-- ADLS Gen2 的 *外部位置* ： https://<account>。 dfs.core.windows.net/<container>/<path>
+- Blob 存储的 *外部位置*： https://<account>.blob.core.windows.net/<container>/<path>
+- ADLS Gen2 的 *外部位置*： https://<account>。 dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
 > .blob 终结点也可用于 ADLS Gen2，并且当前可获得最佳性能。 当身份验证方法不需要 .dfs 时，请使用 .blob 终结点。
 
-- *Account* ：存储帐户名称
+- *Account*：存储帐户名称
 
-- *Container* ：blob 容器名称
+- *Container*：blob 容器名称
 
-- *Path* ：数据的文件夹或文件路径。 位置从容器开始。 如果指定了文件夹，则 COPY 将从该文件夹及其所有子文件夹中检索所有文件。 除非在路径中显式指定，否则 COPY 会忽略隐藏文件夹，并且不返回以下划线 (_) 或句点 (.) 开头的文件。 即使使用通配符指定路径也是如此。
+- *Path*：数据的文件夹或文件路径。 位置从容器开始。 如果指定了文件夹，则 COPY 将从该文件夹及其所有子文件夹中检索所有文件。 除非在路径中显式指定，否则 COPY 会忽略隐藏文件夹，并且不返回以下划线 (_) 或句点 (.) 开头的文件。 即使使用通配符指定路径也是如此。
 
 可以在路径中使用通配符：
 
@@ -154,7 +154,7 @@ WITH
 - 使用共享访问签名 (SAS) 进行身份验证
   
   - *IDENTITY：一个值为“共享访问签名”的常量*
-  - *SECRET： [共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*  。
+  - *SECRET：[共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*  。
   -  所需的最低权限：READ 和 LIST
   
 - 使用 [*服务主体*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)进行身份验证
@@ -179,7 +179,7 @@ WITH
   - 所需的最小 RBAC 角色：AAD 用户的存储 blob 数据参与者或存储 blob 数据所有者
 
 *ERRORFILE = Directory Location*</br>
-*ERRORFILE* 仅适用于 CSV。 指定 COPY 语句中的目录，应在该目录中写入被拒绝的行和相应的错误文件。 可以指定存储帐户的完整路径，也可以指定容器的相对路径。 如果指定的路径不存在，系统将代你创建一个。 创建名称为“ _rejectedrows”的子目录。除非在位置参数中明确命名，否则，“_ ”字符将确保对该目录转义以进行其他数据处理。 
+*ERRORFILE* 仅适用于 CSV。 指定 COPY 语句中的目录，应在该目录中写入被拒绝的行和相应的错误文件。 可以指定存储帐户的完整路径，也可以指定容器的相对路径。 如果指定的路径不存在，系统将代你创建一个。 创建名称为“_rejectedrows”的子目录。除非在位置参数中明确命名，否则，“_ ”字符将确保对该目录转义以进行其他数据处理。 
 
 在此目录中，存在根据负荷提交时间创建的文件夹，采用 YearMonthDay-HourMinuteSecond 格式（例如， 20180330-173205）。 在此文件夹中，将写入两种类型的文件，即原因（错误）文件和数据（行）文件，每个文件都预先追加 queryID、distributionID 和文件 GUID。 数据和原因位于不同的文件中，因此相应的文件具有匹配的前缀。
 
@@ -193,7 +193,7 @@ WITH
   
 - 使用共享访问签名 (SAS) 进行身份验证
   - *IDENTITY：一个值为“共享访问签名”的常量*
-  - *SECRET： [共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*  。
+  - *SECRET：[共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*  。
   - 所需的最低权限：READ、LIST、WRITE、CREATE、DELETE
   
 - 使用 [*服务主体*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)进行身份验证
@@ -234,7 +234,7 @@ COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}</br>
 
 - .gz - **GZIP**
 - .snappy - **Snappy**
-- .deflate - **DefaultCodec** （仅限 Parquet 和 ORC）
+- .deflate - **DefaultCodec**（仅限 Parquet 和 ORC）
 
  *FIELDQUOTE = 'field_quote'*</br>
 *FIELDQUOTE* 适用于 CSV，它指定一个字符，该字符将用作 CSV 文件中的引号字符（字符串分隔符）。 如果未指定，根据 RFC 4180 标准中的定义，引号字符 (") 将用作引号字符。 FIELDQUOTE 的 UTF-8 不支持扩展的 ASCII 和多字节字符。
@@ -262,7 +262,7 @@ DATEFORMAT 仅适用于 CSV，它指定映射到 SQL Server 日期格式的日�
 *ENCODING* 仅适用于 CSV。 默认值为 UTF8。 指定 COPY 命令加载的文件的数据编码标准。 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT 指定是否将导入数据文件中的标识值用于标识列。 如果 IDENTITY_INSERT 为 OFF（默认值），则验证此列的标识值，但不导入。 SQL DW 会根据创建表时指定的种子和增量值自动分配唯一值。 请注意 COPY 命令的以下行为：
+IDENTITY_INSERT 指定是否将导入数据文件中的标识值用于标识列。 如果 IDENTITY_INSERT 为 OFF（默认值），则验证此列的标识值，但不导入。 Azure Synapse Analytics 会根据创建表时指定的种子和增量值自动分配唯一值。 请注意 COPY 命令的以下行为：
 
 - 如果 IDENTITY_INSERT 为 OFF，并且表有一个标识列
   - 必须指定一个不会将输入字段映射到标识列的列列表。
@@ -433,17 +433,6 @@ COPY 命令将具有更好的性能，具体取决于工作负载。 为了获�
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>文件的数量和大小有限制吗？
 文件的数量或大小没有限制；但是，为了获得最佳性能，建议文件至少为 4 MB。
 
-### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>使用 Synapse 工作区（预览版）的 COPY 是否有任何限制？
-
-COPY 语句或 PolyBase（包括在管道中使用时）不支持使用托管标识 (MSI) 进行身份验证。 你可能会遇到类似的错误消息：
-
-*com.microsoft.sqlserver.jdbc.SQLServerException：此服务器尚未启用托管服务标识。请先启用托管服务标识，再重试。*
-
-当存储帐户与 VNet 关联时，需要 MSI 身份验证。 如果将存储帐户附加到 VNet，则必须使用 BCP/BULK INSERT 来加载数据，而不是使用 COPY 或 PolyBase。
-
-此限制仅适用于属于 Synapse 工作区（预览版）的 SQL 池。 在即将发布的版本中，我们将在 Synapse 工作区中启用 MSI 支持。 
-
-请向以下通讯组列表发送反馈和问题：sqldwcopypreview@service.microsoft.com
 
 ## <a name="see-also"></a>另请参阅  
 

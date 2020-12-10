@@ -21,12 +21,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d282a1dca21d2b76925c12dddf3002d159aaec64
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f7911d4f096c8b90b2ee01341405acd561c46ec9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116522"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443128"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +90,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsXTPSupported|指示数据库是否支持内存中 OLTP，即创建和使用内存优化表和本机编译模块。<br /><br /> 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 与任何 MEMORY_OPTIMIZED_DATA 文件组的存在与否无关，创建内存中 OLTP 对象则需要该文件组。|**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本），以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效，出现错误或不适用<br /><br /> 基本数据类型：int|  
 |LastGoodCheckDbTime|在指定数据库上运行的上一成功 DBCC CHECKDB 的日期和时间。<sup>1</sup> 如果 DBCC CHECKDB 未在数据库上运行，则返回 1900-01-01 00:00:00.000。|适用于：从 SP2 开始的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。</br>从 CU9 开始的 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]。</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 或更高版本。</br>Azure SQL 数据库。<br/><br/>日期时间值。<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：datetime| 
 |LCID|排序规则的 Windows 区域设置标识符 (LCID)。|LCID 值（十进制格式）。<br /><br /> 基本数据类型：int|  
-|MaxSizeInBytes|最大数据库大小（以字节为单位）。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br />[Azure SQL 数据库和 Azure Synapse Analytics (SQL DW)](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) - 除非已购买额外的存储空间，否则值基于 SLO。<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) - 值以 1 GB 为增量递增，直到达到最大大小。<br /><br />NULL：数据库未启动<br /><br /> 基本数据类型：bigint|  
+|MaxSizeInBytes|最大数据库大小（以字节为单位）。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br />[Azure SQL 数据库和 Azure Synapse Analytics](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) - 除非已购买额外的存储空间，否则值基于 SLO。<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) - 值以 1 GB 为增量递增，直到达到最大大小。<br /><br />NULL：数据库未启动<br /><br /> 基本数据类型：bigint|  
 |恢复|数据库恢复模式|FULL：完整恢复模式<br /><br /> BULK_LOGGED：大容量日志模型<br /><br /> SIMPLE：简单恢复模式<br /><br /> 基本数据类型：nvarchar(128)|  
 |ServiceObjective|描述 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]或 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的数据库的性能级别。|下列类型作之一：<br /><br /> NULL：数据库没有启动<br /><br /> 已共享（针对 Web/企业版本）<br /><br /> 基本<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> 系统（针对主数据库）<br /><br /> 基本数据类型：nvarchar(32)|  
 |ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中的服务器目标 ID。|uniqueidentifier 确定服务目标。|  

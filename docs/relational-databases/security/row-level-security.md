@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5ddd76c050e50576a446e8e404b889fcc8fa92d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 728650497849454ab7c30dae04317a750665a26c
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867965"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442961"
 ---
 # <a name="row-level-security"></a>行级安全性
 
@@ -110,11 +110,11 @@ RLS 支持两种类型的安全谓词。
   
  另外，每个添加的谓词都需要以下权限：  
   
-- 针对用作谓词的函数的**SELECT** 和 **REFERENCES** 权限。  
+- 针对用作谓词的函数的 **SELECT** 和 **REFERENCES** 权限。  
   
-- 针对绑定到策略的目标表的**REFERENCES** 权限。  
+- 针对绑定到策略的目标表的 **REFERENCES** 权限。  
   
-- 针对目标表上用作参数的每一列的**REFERENCES** 权限。  
+- 针对目标表上用作参数的每一列的 **REFERENCES** 权限。  
   
  安全策略应用于所有用户（包括数据库中的 dbo 用户）。 Dbo 用户可以更改或删除安全策略，但是可以审核他们对安全策略进行的更改。 如果高特权用户（如 sysadmin 或 db_owner）需要查看所有行来排除故障或验证数据，必须为此编写安全策略。  
   
@@ -208,12 +208,12 @@ CREATE TABLE Sales
  使用六行数据填充该表（对于每个销售代表显示三个订单）。  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -302,8 +302,8 @@ DROP SCHEMA Security;
 
 ### <a name="prerequisites"></a>先决条件
 
-1. 必须具有一个 SQL 池。 请参阅[创建 Synapse SQL 池](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. 托管 SQL 池的服务器必须向 AAD 注册，并且你应具有一个包含存储博客参与者权限的 Azure 存储帐户。 按照[此处](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps)的步骤操作。
+1. 必须具有专用 SQL 池。 请参阅[创建专用 SQL 池](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. 托管专用 SQL 池的服务器必须向 AAD 注册，并且你应具有一个包含存储博客参与者权限的 Azure 存储帐户。 按照[此处](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps)的步骤操作。
 1. 为 Azure 存储帐户创建一个文件系统。 使用存储资源管理器查看存储帐户。 右键单击容器，然后选择“创建文件系统”。  
 
 满足先决条件后，创建三个用户帐户来演示不同的访问功能。
@@ -317,10 +317,10 @@ GO
 CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
---run in master and your SQL pool database
-CREATE USER Manager FOR LOGIN Manager;  
-CREATE USER Sales1  FOR LOGIN Sales1;  
-CREATE USER Sales2  FOR LOGIN Sales2 ;
+--run in master and your dedicated SQL pool database
+CREATE USER Manager FOR LOGIN Manager;  
+CREATE USER Sales1  FOR LOGIN Sales1;  
+CREATE USER Sales2  FOR LOGIN Sales2 ;
 ```
 
 创建用于保留数据的表。  
@@ -504,7 +504,7 @@ CREATE SECURITY POLICY Security.SalesFilter
     WITH (STATE = ON);  
 ```
 
-在 `Sales` SESSION_CONTEXT **中设置不同的用户 ID 后，可以通过从**表进行选择，来模拟连接筛选。 在实践中，应用程序负责在打开连接后在 **SESSION_CONTEXT** 中设置当前用户 ID。
+在 `Sales` SESSION_CONTEXT **中设置不同的用户 ID 后，可以通过从** 表进行选择，来模拟连接筛选。 在实践中，应用程序负责在打开连接后在 **SESSION_CONTEXT** 中设置当前用户 ID。
 
 ```sql
 EXECUTE AS USER = 'AppUser';  

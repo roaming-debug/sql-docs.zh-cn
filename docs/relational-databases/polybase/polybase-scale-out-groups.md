@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 3ab1841c009094831ae114d701d526a1d3036dba
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523833"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535271"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 横向扩展组
 
@@ -35,11 +35,11 @@ ms.locfileid: "92523833"
   
 ## <a name="head-node"></a>头节点  
 
-头节点包含 PolyBase 查询提交到的 SQL Server 实例。 每个 PolyBase 组只能有一个头节点。 头节点是 SQL Server 实例上 SQL 数据库引擎、PolyBase 引擎和 PolyBase 数据移动服务的逻辑组。
+头节点包含 PolyBase 查询提交到的 SQL Server 实例。 每个 PolyBase 组只能有一个头节点。 头节点是 SQL Server 实例上 SQL Server 数据库引擎、PolyBase 引擎和 PolyBase 数据移动服务的逻辑组。 使用 SQL Server 2017 和 SQL Server 2016 时，头节点必须是企业版。 从 SQL Server 2019 开始，PolyBase 头节点可以是企业版或标准版。
   
-## <a name="compute-node"></a>计算节点  
+## <a name="compute-node"></a>计算节点
 
-计算节点包含协助扩展查询处理外部数据的 SQL Server 实例。 计算节点是 SQL Server 和 SQL Server 实例上的 PolyBase 数据移动服务的逻辑组。 PolyBase 组可以有多个计算节点。 头节点和计算节点必须都运行相同版本的 SQL Server。
+计算节点包含协助扩展查询处理外部数据的 SQL Server 实例。 计算节点是 SQL Server 和 SQL Server 实例上的 PolyBase 数据移动服务的逻辑组。 PolyBase 组可以有多个计算节点。 头节点和计算节点必须都运行相同版本的 SQL Server。 SQL Server 2016 初始版本允许计算节点为企业版或标准版。 从 SQL Server 2016 SP1 开始，SQL Server 的所有版本都可以作为计算节点。
 
 ## <a name="scale-out-reads"></a>横向扩展读取
 

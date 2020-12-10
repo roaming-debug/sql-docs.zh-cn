@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194997"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523056"
 ---
 # <a name="move-system-databases"></a>移动系统数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92194997"
 >  如果移动系统数据库并且随后重新生成 master 数据库，则必须再次移动系统数据库，因为重新生成操作会在默认位置安装所有系统数据库。  
 
 > [!IMPORTANT]  
->  移动文件之后， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服务帐户必须有权访问新文件的文件夹位置中的文件。
+>  移动文件之后，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服务帐户必须有权访问新文件的文件夹位置中的文件。 有关更多信息，请参阅[配置数据库引擎访问的文件系统权限](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)。
     
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> 预先安排的重定位与预定的磁盘维护过程  

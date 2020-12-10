@@ -4,7 +4,7 @@ description: 了解 SQL Server 数据库引擎如何访问查询执行计划上�
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 125a95f14f7082a3ed806d6dfa7fcb05b6d11c81
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890775"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505062"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "91890775"
 
 以下为所有会话全局收集执行计划信息的方法利用标准分析基础结构：
 
--  ***query_post_execution_showplan*** 扩展事件。 若要启用扩展事件，请参阅 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
+-  query_post_execution_showplan 扩展事件。 若要启用扩展事件，请参阅 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
 - [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) 和 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md) 中的 Showplan XML 跟踪事件。 有关此跟踪事件的详细信息，请参阅 [Showplan XML 事件类](../../relational-databases/event-classes/showplan-xml-event-class.md)。
 
 当运行使用 query_post_execution_showplan 事件的扩展事件会话时，还会填充 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV，它使用[活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)或直接查询 DMV，为所有会话启用实时查询统计。 有关详细信息，请参阅 [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)。
@@ -64,7 +64,7 @@ ms.locfileid: "91890775"
   
 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，通过引入轻型分析，减少了收集执行计划信息的性能开销。 和标准分析不同，轻型分析不收集 CPU 运行时信息。 但是，轻型分析仍收集行计数和 I/O 使用情况信息。
 
-还引入了一个新的利用轻型分析的 query_thread_profile 扩展事件。 此扩展事件公开了每个运算符的执行统计信息，从而可以更深入地了解每个节点和线程的性能。 使用此扩展事件的示例会话可以按下面的示例进行配置：
+其中还引入了一个新的利用轻型分析的 query_thread_profile 扩展事件。 此扩展事件公开了每个运算符的执行统计信息，从而可以更深入地了解每个节点和线程的性能。 使用此扩展事件的示例会话可以按下面的示例进行配置：
 
 ```sql
 CREATE EVENT SESSION [NodePerfStats] ON SERVER

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b0fea6ec995f383cd290ebbee786e31623b25f1
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: f290da98335aaf46c3c0d12c94d265f14dc1e2bd
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669501"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535281"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -64,6 +64,10 @@ LocalDB 安装程序使用 `SqlLocalDB.msi` 程序在计算机上安装所需文
 将 LocalDB 的实例排序规则设置为 `SQL_Latin1_General_CP1_CI_AS`，并且不能更改。 一般支持数据库级、列级和表达式级排序规则。 包含的数据库遵循[包含数据库的排序规则](../../relational-databases/databases/contained-database-collations.md)所定义的元数据和 `tempdb` 排序规则。
 
 ### <a name="restrictions"></a>限制
+
+- 除通过服务包以外，无法修补 LocalDB。 CU 和安全更新不能手动应用，也无法通过 Windows 更新、适用于企业的 Windows 更新或其他途径应用。
+
+- LocalDB 不能通过 SQL Management Studio 远程管理。
 
 - LocalDB 不能是合并复制订阅服务器。
 

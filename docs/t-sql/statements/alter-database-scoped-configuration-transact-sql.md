@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 99d2f29a4e0e1839256acb49b91307e48e39d057
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 092c6c8b99c7a30ff02aed450a4da9d991d7f3df
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300331"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443030"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -58,7 +58,7 @@ ms.locfileid: "92300331"
 - 指定暂停的可恢复索引操作在被 SQL Server 引擎自动中止之前暂停的分钟数。
 - 新允许或禁止等待低优先级的锁来完成异步统计信息更
 
-此设置仅在 Azure Synapse Analytics（以前称为 SQL DW）中可用。
+此设置仅在 Azure Synapse Analytics 中可用。
 - 设置用户数据库的兼容性级别
 
 ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -113,7 +113,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 更改为 `BATCH_MODE_ADAPTIVE_JOINS`
 
 ```SQL
--- Syntax for Azure Synapse Analytics (Formerly SQL DW)
+-- Syntax for Azure Synapse Analytics
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -251,7 +251,7 @@ TSQL_SCALAR_UDF_INLINING = { ON | OFF }
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**适用对象** ：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
+**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
 
 允许你选择选项，使引擎自动将支持的操作提升为联机。 默认值为 OFF，表示除非在语句中指定，否则操作不会提升为联机。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 反映 ELEVATE_ONLINE 的当前值。 这些选项只适用于支持联机的操作。
 
@@ -285,13 +285,13 @@ WHEN_SUPPORTED
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF } 
 
-**适用对象** ：[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
 
 第一次编译批处理时，启用或禁用要存储在缓存中的已编译计划存根。 默认为 OFF。 为数据库启用了数据库作用域内配置 OPTIMIZE_FOR_AD_HOC_WORKLOADS 后，已编译计划存根可在第一次编译批处理时存储在缓存中。 与完全编译的计划大小相比，计划存根的内存占用空间更小。 如果编译或再次执行批处理，则会删除已编译计划存根，并将其替换为完全编译的计划。
 
 XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
 
-**适用对象** ：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 启用或禁用对当前数据库的本机编译的 T-SQL 模块在模块级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 中。
 
@@ -299,7 +299,7 @@ XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
 
 XTP_QUERY_EXECUTION_STATISTICS = { ON |OFF  }
 
-**适用对象** ：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 启用或禁用对当前数据库的本机编译的 T-SQL 模块语句级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 和[查询存储](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)中。
 
@@ -336,7 +336,7 @@ DEFERRED_COMPILATION_TV = { ON | OFF}
 
 ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
 
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
 启用经过优化的查询计划强制实施机制，这适用于所有形式的计划强制实施，例如[查询存储强制实施计划](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed)、[自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction)或 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md#use-plan) 查询提示。 默认值为 ON。
 
@@ -345,7 +345,7 @@ ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
 
 GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 
-**适用对象** ：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
+**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
 
 允许为[全局临时表](../../t-sql/statements/create-table-transact-sql.md#temporary-tables)设置自动删除功能。 默认值为 ON，这意味着如果没有任何会话使用全局临时表，系统会自动删除该表。 如果设置为 OFF，需要使用 DROP TABLE 语句显式删除或将在服务器重启时自动删除该表。
 
@@ -395,7 +395,7 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
 此选项的当前值显示在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 中。
 
-ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF** }
+ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -403,7 +403,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF** }
 
 DW_COMPATIBILITY_LEVEL = {AUTO | 10 | 20 } 
 
-适用范围：仅限 Azure Synapse Analytics（以前称为 SQL DW）
+适用范围：仅限 Azure Synapse Analytics
 
 将 Transact-SQL 和查询处理行为设置为与指定的数据库引擎版本兼容。  设置后，在该数据库上执行查询时，将仅使用兼容功能。  首次创建数据库时，其兼容性级别默认设置为 AUTO。  即使在数据库暂停/恢复、备份/还原操作之后，仍保留兼容性级别。 
 
@@ -413,7 +413,7 @@ DW_COMPATIBILITY_LEVEL = {AUTO | 10 | 20 }
 |**10**| 在引入兼容性级别支持之前，请练习 Transact-SQL 和查询处理行为。|
 |**20**| 第一种兼容性级别，包括封闭 Transact-SQL 和查询处理行为。 |
 
-ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF** }
+ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
 
 适用范围：仅限 Azure SQL Database（此功能处于公共预览阶段）
 
@@ -569,7 +569,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 
 ### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. 设置 OPTIMIZE_FOR_AD_HOC_WORKLOADS
 
-**适用对象** ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 本示例可在第一次编译批处理时启用要存储在缓存中的已编译计划存根。
 
@@ -579,7 +579,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### <a name="i-set-elevate_online"></a>I. 设置 ELEVATE_ONLINE
 
-**适用对象** ：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
+**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
 
 此示例将 ELEVATE_ONLINE 设置为 FAIL_UNSUPPORTED。
 
@@ -589,7 +589,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 
 ### <a name="j-set-elevate_resumable"></a>J. 设置 ELEVATE_RESUMABLE
 
-**适用对象** ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
 
 此示例将 ELEVATE_RESUMABLE 设置为 WHEN_SUPPORTED。
 

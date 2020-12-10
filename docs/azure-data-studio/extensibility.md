@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 73f9f3a39f5a30fe611c5ec839d8d2c7172206d8
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778436"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761505"
 ---
 # <a name="azure-data-studio-extensibility"></a>Azure Data Studio 扩展性
 
@@ -32,6 +32,9 @@ Azure Data Studio 具有多种扩展性机制，可以自定义用户体验并�
 ## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code 扩展性 API
 
 由于核心 Azure Data Studio 平台是基于 Visual Studio Code 构建的，因此，Visual Studio Code 网站上的[扩展创作](https://code.visualstudio.com/docs/extensions/overview)和[扩展 API](https://code.visualstudio.com/docs/extensionAPI/overview) 文档中提供了有关 Visual Studio Code 扩展性 API 的详细信息。
+
+> [!NOTE]
+>  Azure Data Studio 版本与较新的 VS Code 版本一致，但其中包含的 VS Code 引擎可能不是当前的 VS Code 版本。 例如，在 2020 年 11月，Azure Data Studio 中的 VS Code 引擎为 1.48，而当前的 VS Code 版本为 1.51。  安装扩展时出现错误消息“无法安装扩展‘<name>’，因为它与 VS Code <version> 不兼容”，这是因为该扩展的程序包清单 (`package.json`) 中定义的 VS Code 引擎版本较新。 你可以通过“关于”下的“帮助”菜单验证 Azure Data Studio中的 VS Code 引擎版本。
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>管理仪表板选项卡面板贡献
 
@@ -272,8 +275,8 @@ Dashboard.tabs 用于在仪表板页面内创建选项卡部分。 它需要对�
 
 |上下文变量| description|
 |:---|:---|
-|`connectionProvider` | 当前连接的提供程序的标识符字符串。 例如： `connectionProvider == 'MSSQL'` 列中的一个值匹配。|
-|`serverName`|当前连接的服务器名称字符串。 例如： `serverName == 'localhost'` 列中的一个值匹配。|
-|`databaseName` | 当前连接的数据库名称字符串。 例如： `databaseName == 'master'` 列中的一个值匹配。|
+|`connectionProvider` | 当前连接的提供程序的标识符字符串。 例如： `connectionProvider == 'MSSQL'`.|
+|`serverName`|当前连接的服务器名称字符串。 例如： `serverName == 'localhost'`.|
+|`databaseName` | 当前连接的数据库名称字符串。 例如： `databaseName == 'master'`.|
 |`connection` | 当前连接的完整连接配置文件对象 (IConnectionProfile)|
 |`dashboardContext` | 当前打开的仪表板页面的上下文字符串。 “database”或“server”。 例如： `dashboardContext == 'database'`|

@@ -18,18 +18,18 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 882a99eafed8c913ef0edef213b09ef23a0990f7
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: 4d1fefc10f19a4b8fda411337cd4b35a6f8f2939
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439331"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442979"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密数据列
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-  本文介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中通过对称加密对数据列进行加密。 这有时称为列级加密或单元级加密。 此功能针对 Azure Synapse Analytics (SQL DW) 处于预览状态
+  本文介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中通过对称加密对数据列进行加密。 这有时称为列级加密或单元级加密。 对于 Azure Synapse Analytics，此功能为预览版
 
 ## <a name="security"></a>安全性  
   

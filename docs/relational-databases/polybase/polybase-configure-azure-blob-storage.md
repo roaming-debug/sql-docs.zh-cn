@@ -1,7 +1,7 @@
 ---
 title: 访问外部数据：Azure blob 存储 - PolyBase
 description: 本文使用 Azure Blob 存储的 SQL Server 实例上的 PolyBase。 PolyBase 适用于外部表的临时查询和数据导入/导出。
-ms.date: 12/13/2019
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6621d01c9cb52d528f2d3578a128f0abada22db0
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215848"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563103"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>配置 PolyBase 以访问 Azure Blob 存储中的外部数据
 
@@ -44,7 +44,7 @@ ms.locfileid: "80215848"
    GO
    ```  
 
-2. 必须使用  services.msc 重启 SQL Server。 重启 SQL Server 会重启这些服务：  
+2. 使用 services.msc 重启 SQL Server。 重启 SQL Server 会重启这些服务：  
 
    - SQL Server PolyBase 数据移动服务  
    - SQL Server PolyBase 引擎  
@@ -55,7 +55,7 @@ ms.locfileid: "80215848"
 
 若要查询 Hadoop 数据源中的数据，必须定义外部表以在 Transact-SQL 查询中使用。 以下步骤介绍如何配置外部表。
 
-1. 在数据库上创建主密钥。 这是加密凭据密钥所必需的。
+1. 在数据库上创建主密钥。 需要主密钥来加密凭据机密。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -158,7 +158,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ### <a name="exporting-data"></a>导出数据  
 
-以下查询将数据从 SQL Server 导出到 Azure Blob 存储。 若要执行此操作，首先需要启用 PolyBase 导出。 在向目标导出数据之前，为目标创建一个外部表。
+以下查询将数据从 SQL Server 导出到 Azure Blob 存储。 首先启用 PolyBase 导出。 然后，在向目标导出数据之前，为目标创建一个外部表。
 
 ```sql
 -- Enable INSERT into external table  
@@ -187,9 +187,11 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
+使用此方法执行 PolyBase 导出时，可能会创建多个文件。
+
 ## <a name="view-polybase-objects-in-ssms"></a>查看 SSMS 中的 PolyBase 对象  
 
-在 SSMS 中，外部表在单独的文件夹“外部表”  中显示。 外部数据源和外部文件格式位于“外部资源”  下的子文件夹中。  
+在 SSMS 中，外部表在单独的文件夹“外部表” 中显示。 外部数据源和外部文件格式位于“外部资源” 下的子文件夹中。  
   
 ![SSMS 中的 PolyBase 对象](media/polybase-management.png)  
 
