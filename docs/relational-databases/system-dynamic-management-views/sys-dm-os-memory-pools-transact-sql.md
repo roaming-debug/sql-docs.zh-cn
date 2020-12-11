@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_memory_pools (Transact-SQL)
-title: sys. dm_os_memory_pools (Transact-sql) |Microsoft Docs
+title: sys.dm_os_memory_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 1ef053f3-c6f3-456e-82b6-26e4bd630d46
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24ac0a1611d9b5996f2181a4d2c533bc2972bc86
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d06c82fea42adf1a2cacfab8ccc2118f68c165ba
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536983"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326078"
 ---
 # <a name="sysdm_os_memory_pools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,23 +34,23 @@ ms.locfileid: "89536983"
   针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中存储的每个对象分别返回一行。 可以使用此视图来监视缓存内存使用情况，并识别错误的缓存行为。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_memory_pools**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_os_memory_pools**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**memory_pool_address**|**varbinary(8)**|代表内存池的项的内存地址。 不可为 null。|  
 |**pool_id**|**int**|在一组池中的特定池的 ID。 不可为 null。|  
-|type|**nvarchar(60)**|对象池的类型。 不可为 null。 有关详细信息，请参阅 [sys.databases&#41;dm_os_memory_clerks &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
-|name |**nvarchar(256)**|系统为此内存对象分配的名称。 不可为 null。|  
+|type|**nvarchar(60)**|对象池的类型。 不可为 null。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.dm_os_memory_clerks ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
+|name|**nvarchar(256)**|系统为此内存对象分配的名称。 不可为 null。|  
 |**max_free_entries_count**|**bigint**|池可以拥有的最大可用项的个数。 不可为 null。|  
 |**free_entries_count**|**bigint**|池中当前可用项的个数。 不可为 null。|  
 |**removed_in_all_rounds_count**|**bigint**|自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启动以来从池中删除的项数。 不可为 null。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件有时使用公用池框架来缓存同种、无状态类型的数据。 池框架比缓存框架更简单。 池中的所有项都被视为是等同的。 在内部，池是内存分配器，并且可以用在使用内存分配器的地方。  

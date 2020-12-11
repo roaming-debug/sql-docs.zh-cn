@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_buffer_descriptors (Transact-SQL)
-title: sys. dm_os_buffer_descriptors (Transact-sql) |Microsoft Docs
+title: sys.dm_os_buffer_descriptors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe2641c33169e094b5e3cf5ae49a36508f5d4d00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c778e2e2ccc1d54a6a61110457ce6a2b0756920e
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539391"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322017"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89539391"
   
  当从磁盘读取数据页时，该数据页被复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池并被缓存以供重复使用。 每个缓存的数据页都有一个缓冲描述符。 缓冲描述符唯一地标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中当前缓存的每个数据页。 sys.dm_os_buffer_descriptors 返回所有用户数据库和系统数据库的缓存页。 这包括与 Resource 数据库相关联的页。  
   
-> **注意：** 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_buffer_descriptors**。  
+> **注意：** 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_os_buffer_descriptors**。  
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -49,23 +49,23 @@ ms.locfileid: "89539391"
 |free_space_in_bytes|**int**|页中的可用空间（字节）。 可以为 Null。|  
 |is_modified|**bit**|1 = 从磁盘读取页后已对其进行修改。 可以为 Null。|  
 |numa_node|**int**|缓冲区的非一致性内存访问节点。 可以为 Null。|  
-|read_microsec|**bigint**|将此页读入缓冲区所需的实际时间（微秒）。 重用缓冲区时重置该数值。 可以为 Null。|  
-|is_in_bpool_extension|**bit**|1 = 页在缓冲池扩展中。 可以为 Null。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|read_microsec|**bigint**|将此页读入缓冲区所需的实际时间（微秒）。 重用缓冲区时重置该数值。 可以为 Null。|  
+|is_in_bpool_extension|**bit**|1 = 页在缓冲池扩展中。 可以为 Null。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
    
 ## <a name="remarks"></a>备注  
- sys. dm_os_buffer_descriptors 返回资源数据库正在使用的页。 sys. dm_os_buffer_descriptors 不返回有关免费或被盗页面的信息，也不返回有关在读取时出错的页的信息。  
+ sys.dm_os_buffer_descriptors 返回资源数据库正在使用的页。 sys.dm_os_buffer_descriptors 不会返回有关免费或被盗页面的信息，也不会返回有关在读取时出错的页的信息。  
   
-|From|到|开|关系|  
+|From|功能|开|关系|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|多对一|  
-|sys.dm_os_buffer_descriptors|\<userdb>.sys. allocation_units|allocation_unit_id|多对一|  
-|sys.dm_os_buffer_descriptors|\<userdb>.sys. database_files|file_id|多对一|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|多对一|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|多对一|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|多对一|  
   
 ## <a name="examples"></a>示例  

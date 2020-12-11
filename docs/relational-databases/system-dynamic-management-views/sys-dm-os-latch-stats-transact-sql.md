@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_latch_stats (Transact-SQL)
-title: sys. dm_os_latch_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_os_latch_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e4e29a7e416a5c3aebb109c871af00bbd31871a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: abb813e008fdf00e7094ce59000f07be8da6bf25
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321886"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89548512"
 返回有关按类组织的所有闩锁等待的信息。 
   
 > [!NOTE]  
-> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_latch_stats**。  
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_os_latch_stats**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -40,11 +40,11 @@ ms.locfileid: "89548512"
 |waiting_requests_count|**bigint**|此类中的闩锁等待的个数。 此计数器在闩锁等待启动时递增。|  
 |wait_time_ms|**bigint**|此类中闩锁的总计等待时间（毫秒）。<br /><br /> **注意：** 此列每五分钟更新一次，在闩锁等待期间，在闩锁等待结束时进行更新。|  
 |max_wait_time_ms|**bigint**|内存对象已等待此闩锁的最大时间。 如果此值异常高，则可能指示有内部死锁。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
   
 ## <a name="remarks"></a>备注  
  通过检查不同闩锁类的相对等待数和等待时间，sys.dm_os_latch_stats 可以用来标识闩锁争用源。 在某些情况中，可能能够解决或减少闩锁争用。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
@@ -73,7 +73,7 @@ GO
   
  下表包含对各种闩锁类的简短说明。  
   
-|闩锁类|说明|  
+|闩锁类|描述|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部使用，用于初始化对分配环形缓冲区创建过程的同步。|  
 |ALLOC_CREATE_FREESPACE_CACHE|用来初始化对堆的内部可用空间缓存的同步。|  
@@ -101,7 +101,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|用于同步用 DBCC 执行的差异备份操作。|  
 |BACKUP_OPERATION|用于备份操作（例如，数据库、日志或文件备份）中的内部数据结构同步。|  
 |BACKUP_FILE_HANDLE|用于同步在还原操作期间的文件打开操作。|  
-|BUFFER|用于同步对数据库页的短期访问。 读取或修改任何数据库页之前，必须使用缓冲区闩锁。 缓冲区闩锁争用可以指示出现了几个问题，包括热页和缓慢 I/O。<br /><br /> 此闩锁类覆盖所有可能的页闩锁使用。 sys. dm_os_wait_stats 在页闩锁等待期间，在页上执行 i/o 操作和读写操作导致的页闩锁等待之间存在差异。|  
+|BUFFER|用于同步对数据库页的短期访问。 读取或修改任何数据库页之前，必须使用缓冲区闩锁。 缓冲区闩锁争用可以指示出现了几个问题，包括热页和缓慢 I/O。<br /><br /> 此闩锁类覆盖所有可能的页闩锁使用。 sys.dm_os_wait_stats 在页闩锁等待期间（即，对页面上的 i/o 操作和读和写操作造成了不同）。|  
 |BUFFER_POOL_GROW|用于在缓冲区池增长操作期间的内部缓冲区管理器同步。|  
 |DATABASE_CHECKPOINT|用于序列化数据库中的检查点。|  
 |CLR_PROCEDURE_HASHTABLE|仅限内部使用。|  

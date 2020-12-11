@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_top_version_generators (Transact-SQL)
-title: sys. dm_tran_top_version_generators (Transact-sql) |Microsoft Docs
+title: sys.dm_tran_top_version_generators (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54e3caeb50a0c6fd9f3a6b1523675eb482005384
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 77cabe4416c3168930822d85710cb663b5752a86
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546463"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334426"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  为生成版本存储区中大多数版本的对象返回一个虚拟表。 **sys. dm_tran_top_version_generators** 返回按 **database_id** 和 **rowset_id**分组的前256聚合记录的长度。 **sys. dm_tran_top_version_generators** 通过查询 **dm_tran_version_store** 虚拟表来检索数据。 **dm_tran_top_version_generators** 是一种低效运行的视图，因为此视图查询版本存储区，版本存储区可能非常大。 建议使用此函数查找版本存储区的最大使用者。  
+  为生成版本存储区中大多数版本的对象返回一个虚拟表。 **sys.dm_tran_top_version_generators** 返回按 **database_id** 和 **rowset_id** 分组的前256聚合记录的长度。 **sys.dm_tran_top_version_generators** 通过查询 **dm_tran_version_store** 虚拟表来检索数据。 **sys.dm_tran_top_version_generators** 是一种低效运行的视图，因为此视图查询版本存储区，版本存储区可能非常大。 建议使用此函数查找版本存储区的最大使用者。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_tran_top_version_generators**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_tran_top_version_generators**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,15 +50,15 @@ sys.dm_tran_top_version_generators
 |database_id|**int**|数据库 ID。|  
 |**rowset_id**|**bigint**|行集 ID。|  
 |**aggregated_record_length_in_bytes**|**int**|版本存储区中每个 **database_id** 和 **rowset_id 对** 的记录长度之和。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="remarks"></a>备注  
- 由于 **dm_tran_top_version_generators** 在扫描整个版本存储区时可能必须读取多个页面，因此，运行 **dm_tran_top_version_generators sys.databases** 可能会影响系统性能。  
+ 由于 **sys.dm_tran_top_version_generators** 在扫描整个版本存储时可能必须读取许多页面，因此运行 **sys.dm_tran_top_version_generators** 可能会影响系统性能。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用具有四个并发事务的测试方案，每一个事务都由事务序列号 (XSN) 标识，并在 ALLOW_SNAPSHOT_ISOLATION 和 READ_COMMITTED_SNAPSHOT 选项设置为 ON 的数据库中运行。 下列事务正在运行：  

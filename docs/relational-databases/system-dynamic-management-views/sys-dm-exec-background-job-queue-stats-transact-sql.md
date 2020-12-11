@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_background_job_queue_stats (Transact-SQL)
-title: sys. dm_exec_background_job_queue_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_background_job_queue_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 27f62ab5-46c4-417e-814d-8d6437034d1c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c79c0897f8be3997133cedaf54f42df55ea90486
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 04433018f98125921c4b03f5ada3a45215cd1ef4
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89533966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334573"
 ---
 # <a name="sysdm_exec_background_job_queue_stats-transact-sql"></a>sys.dm_exec_background_job_queue_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89533966"
   对于每个为异步（后台）执行而提交的查询处理器作业，相应地返回一行，以提供聚合统计信息。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_exec_background_job_queue_stats**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_exec_background_job_queue_stats**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "89533966"
 |**enqueue_failed_duplicate_count**|**int**|复制排队尝试的数字。|  
 |**elapsed_avg_ms**|**int**|请求的平均占用时间（毫秒）。|  
 |**elapsed_max_ms**|**int**|最长请求的占用时间（毫秒）。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="remarks"></a>备注  
  该视图只返回有关异步更新统计作业的信息。 有关异步更新统计信息的详细信息，请参阅 [统计](../../relational-databases/statistics/statistics.md)信息。  
@@ -57,7 +57,7 @@ ms.locfileid: "89533966"
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="examples"></a>示例  
   

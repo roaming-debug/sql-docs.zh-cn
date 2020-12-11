@@ -1,6 +1,6 @@
 ---
 description: sys.dm_io_pending_io_requests (Transact-SQL)
-title: sys. dm_io_pending_io_requests (Transact-sql) |Microsoft Docs
+title: sys.dm_io_pending_io_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: d1fb46dd-5c74-4c04-9ecf-8934b1bedb5b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e61b234942d6e486886ae8238db8b9c68e65385
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: be906db87eca3c65eb94f6dc5d64db74513e3d02
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322613"
 ---
 # <a name="sysdm_io_pending_io_requests-transact-sql"></a>sys.dm_io_pending_io_requests (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89532368"
   对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中每个挂起的 I/O 请求返回一行。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_io_pending_io_requests**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_io_pending_io_requests**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -44,16 +44,16 @@ ms.locfileid: "89532368"
 |**io_pending**|**int**|指示 IO 请求被挂起还是已由 Windows 完成。 即使在 Windows 已完成 I/O 请求但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尚未执行上下文切换（在其中处理 I/O 请求并将其从此列表中删除）时，I/O 请求仍可处于挂起状态。 不可为 null。|  
 |**io_completion_routine_address**|**varbinary(8)**|I/O 请求完成时调用的内部函数。 可以为 Null。|  
 |**io_user_data_address**|**varbinary(8)**|仅限内部使用。 可以为 Null。|  
-|**scheduler_address**|**varbinary(8)**|发出此 I/O 请求的计划程序。 I/O 请求将显示于计划程序的挂起 I/O 列表中。 有关详细信息，请参阅 [sys.databases&#41;dm_os_schedulers &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。 不可为 null。|  
+|**scheduler_address**|**varbinary(8)**|发出此 I/O 请求的计划程序。 I/O 请求将显示于计划程序的挂起 I/O 列表中。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.dm_os_schedulers ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。 不可为 null。|  
 |**io_handle**|**varbinary(8)**|I/O 请求中所使用文件的文件句柄。 可以为 Null。|  
 |**io_offset**|**bigint**|IO 请求的偏移量。 不可为 null。|  
 |**io_handle_path**|**nvarchar(256)**| I/o 请求中使用的文件的路径。 可以为 Null。|
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_memory_cache_entries (Transact-SQL)
-title: sys. dm_os_memory_cache_entries (Transact-sql) |Microsoft Docs
+title: sys.dm_os_memory_cache_entries (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b29f7d03fc23fdb0d204de5f2f3cbd15bd6f74a7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cd862a55941939105371b65d39b37af65ea7c578
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326455"
 ---
 # <a name="sysdm_os_memory_cache_entries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "89542139"
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中返回有关缓存中所有条目的信息。 使用此视图可对缓存条目进行跟踪，直至它们的关联对象。 还可使用此视图获取有关缓存条目的统计信息。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_memory_cache_entries**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_os_memory_cache_entries**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|缓存的地址。 不可为 null。|  
-|name |**nvarchar(256)**|缓存的名称。 不可为 null。|  
+|name|**nvarchar(256)**|缓存的名称。 不可为 null。|  
 |type|**varchar(60)**|缓存类型。 不可为 null。|  
 |**entry_address**|**varbinary(8)**|缓存条目的描述符地址。 不可为 null。|  
 |**entry_data_address**|**varbinary(8)**|缓存条目中用户数据的地址。<br /><br /> 0x00000000 = 条目数据地址不可用。<br /><br /> 不可为 null。|  
@@ -52,12 +52,12 @@ ms.locfileid: "89542139"
 |**pages_kb**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 此缓存条目使用的内存量 (KB)。  不可为 null。|  
 |**entry_data**|**nvarchar(2048)**|缓存条目的序列化表示形式。 此信息与缓存存储相关。 可以为 Null。|  
 |**pool_id**|**int**|**适用于**：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 与条目关联的资源池 ID。 可以为 Null。<br /><br /> 不是 katmai|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限 
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="see-also"></a>另请参阅  
  

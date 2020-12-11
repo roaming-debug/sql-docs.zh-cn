@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_version_store (Transact-SQL)
-title: sys. dm_tran_version_store (Transact-sql) |Microsoft Docs
+title: sys.dm_tran_version_store (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd71e1c70ef06d5e669158aea06b7f3dde720951
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d56dc48e37d7f0b03f59a1fecb024a74d3ed75cb
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333062"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回一个虚拟表，其中显示有版本存储区中的所有版本记录。 **dm_tran_version_store** 的运行效率较低，因为它查询整个版本存储区，版本存储区可能非常大。  
+  返回一个虚拟表，其中显示有版本存储区中的所有版本记录。 **sys.dm_tran_version_store** 的运行效率较低，因为它会查询整个版本存储区，版本存储区可能会非常大。  
   
  每个有版本控制的记录均以二进制数据的形式与某些跟踪或状态信息存储在一起。 与数据库表中的记录相似，版本存储区记录存储在 8192 字节的页中。 如果记录超过 8192 字节，则该记录将拆分为两个不同的记录。  
   
- 由于有版本控制的记录以二进制数据的形式存储，因此不同的数据库可以采用不同的排序规则。 使用 **sys. dm_tran_version_store** ，以二进制表示形式查找行的以前版本，因为它们存在于版本存储区中。  
+ 由于有版本控制的记录以二进制数据的形式存储，因此不同的数据库可以采用不同的排序规则。 使用 **sys.dm_tran_version_store** 可以查找二进制表示形式中的行的以前版本，因为它们存在于版本存储区中。  
   
   
 ## <a name="syntax"></a>语法  
@@ -55,14 +55,14 @@ sys.dm_tran_version_store
 |**status**|**tinyint**|指示有版本控制的记录是否已拆分为两个记录。 如果此值为 0，则记录存储在一页中。 如果此值为 1，则记录拆分为两个记录，且存储在两个不同页上。|  
 |**min_length_in_bytes**|**smallint**|记录的最小长度（字节）。|  
 |**record_length_first_part_in_bytes**|**smallint**|有版本控制的记录的第一部分的长度（字节）。|  
-|**record_image_first_part**|varbinary(8000)****|版本记录的第一部分的二进制图像。|  
+|**record_image_first_part**|varbinary(8000)|版本记录的第一部分的二进制图像。|  
 |**record_length_second_part_in_bytes**|**smallint**|版本记录的第二部分的长度（字节）。|  
-|**record_image_second_part**|varbinary(8000)****|版本记录的第二部分的二进制图像。|  
+|**record_image_second_part**|varbinary(8000)|版本记录的第二部分的二进制图像。|  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
   
 ## <a name="examples"></a>示例  
  下面的示例使用具有四个并发事务的测试方案，每一个事务都由事务序列号 (XSN) 标识，并在 ALLOW_SNAPSHOT_ISOLATION 和 READ_COMMITTED_SNAPSHOT 选项设置为 ON 的数据库中运行。 下列事务正在运行：  

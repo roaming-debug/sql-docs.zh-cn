@@ -21,12 +21,12 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdf67ebe15b869cb295c3090fe24ed5cd4f50413
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 0bd260aebb7f55b29e0c9515d29dacce6914a04c
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834237"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329479"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91834237"
 返回执行的线程所遇到的所有等待的相关信息。 可以使用此聚合视图来诊断 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以及特定查询和批处理的性能问题。 [sys.dm_exec_session_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) 按会话提供类似的信息。  
   
 > [!NOTE] 
-> 若要从** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 或**调用此，请使用名称**sys.dm_pdw_nodes_os_wait_stats**。  
+> 若要从 **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 或** 调用此，请使用名称 **sys.dm_pdw_nodes_os_wait_stats**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -43,19 +43,19 @@ ms.locfileid: "91834237"
 |wait_time_ms|**bigint**|该等待类型的总等待时间（毫秒）。 该时间包括 signal_wait_time_ms。|  
 |max_wait_time_ms|**bigint**|该等待类型的最长等待时间。|  
 |signal_wait_time_ms|**bigint**|正在等待的线程从收到信号通知到其开始运行之间的时差。|  
-|pdw_node_id|**int**|此分发所在的节点的标识符。 <br/> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|此分发所在的节点的标识符。 <br/> **适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ##  <a name="types-of-waits"></a><a name="WaitTypes"></a> 等待类型  
- 当某个工作线程请求访问不可用的资源（因为该资源正在由其他某个工作线程使用，或者该资源尚不可用）时，便会发生**资源等待**。 资源等待的示例包括锁等待、闩锁等待、网络等待以及磁盘 I/O 等待。 锁等待和闩锁等待是指等待同步对象  
+ 当某个工作线程请求访问不可用的资源（因为该资源正在由其他某个工作线程使用，或者该资源尚不可用）时，便会发生 **资源等待**。 资源等待的示例包括锁等待、闩锁等待、网络等待以及磁盘 I/O 等待。 锁等待和闩锁等待是指等待同步对象  
   
-当工作线程空闲，等待分配工作时，会发生**队列等待**。 队列等待通常发生在系统后台任务（如监视死锁以及清除已删除的记录等任务）中。 这些任务将等待工作请求被放入工作队列。 即使没有新数据包放入队列，队列等待也可能定期处于活动状态。  
+当工作线程空闲，等待分配工作时，会发生 **队列等待**。 队列等待通常发生在系统后台任务（如监视死锁以及清除已删除的记录等任务）中。 这些任务将等待工作请求被放入工作队列。 即使没有新数据包放入队列，队列等待也可能定期处于活动状态。  
   
- **External waits**当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作线程正在等待外部事件（如扩展存储过程调用或链接服务器查询）完成时，会发生外部等待。 当诊断有妨碍的问题时，请记住，外部等待不会始终表示工作线程处于空闲状态，因为工作线程可能处于活动状态且正在运行某些外部代码。  
+ 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作线程正在等待外部事件（如扩展存储过程调用或链接服务器查询）完成时，会发生外部等待。 当诊断有妨碍的问题时，请记住，外部等待不会始终表示工作线程处于空闲状态，因为工作线程可能处于活动状态且正在运行某些外部代码。  
   
  `sys.dm_os_wait_stats` 显示已完成的等待时间。 此动态管理视图不显示当前等待。  
   
@@ -87,7 +87,7 @@ GO
   
  下表列出各任务所遇到的等待类型。  
 
-|类型 |说明| 
+|类型 |描述| 
 |-------------------------- |--------------------------| 
 |ABR |标识为仅供参考。 不支持。 不保证以后的兼容性。| | 
 |AM_INDBUILD_ALLOCATION |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -166,10 +166,10 @@ GO
 |CONNECTION_ENDPOINT_LOCK |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |COUNTRECOVERYMGR |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |CREATE_DATINISERVICE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|CXCONSUMER <a name="cxconsumer"></a>|当使用者线程 (父) 等待制造者线程发送行时，并行查询计划发生。 CXCONSUMER 等待是由从其制造者线程中用尽行的 Exchange 迭代器导致的。 这是并行查询执行的正常部分。 <br /><br /> **适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从 SP2 开始 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3) ， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ， [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]|
+|CXCONSUMER <a name="cxconsumer"></a>|当使用者线程 (父) 等待制造者线程发送行时，并行查询计划发生。 CXCONSUMER 等待是由从其制造者线程中用尽行的 Exchange 迭代器导致的。 这是并行查询执行的正常部分。 <br /><br /> **适用** 于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从 SP2 开始 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3) ， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ， [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]|
 |CXPACKET <a name="cxpacket"></a>|当等待同步查询处理器 [交换迭代器](../../relational-databases/showplan-logical-and-physical-operators-reference.md)时，以及在生成和使用行时，在并行查询计划中发生。 如果等待情况过大，并且无法通过优化查询来降低 (例如添加索引) ，请考虑调整并行的开销阈值或降低最大并行度 (MaxDOP) 。 <br /><br /> **注意：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始，CXPACKET 仅指等待同步 Exchange 迭代器和生成行。 使用行的线程在 CXCONSUMER 等待类型中单独跟踪。 如果使用者线程速度太慢，则 Exchange 迭代器缓冲区可能会变满并导致 CXPACKET 等待。 <br /><br /> **注意：** 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和中 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] ，CXPACKET 仅指等待生成行的线程。 Exchange 迭代器同步在 CXSYNC_PORT 和 CXSYNC_CONSUMER 等待类型中单独跟踪。 使用行的线程在 CXCONSUMER 等待类型中单独跟踪。<br /> | 
-|CXSYNC_PORT|在等待打开、关闭和同步制造者和使用者线程之间的 [Exchange 迭代器](../../relational-databases/showplan-logical-and-physical-operators-reference.md) 端口时，在并行查询计划中发生。 例如，如果查询计划具有长排序操作，则 CXSYNC_PORT 等待可能会更高，因为必须先完成排序，然后才能同步 Exchange 迭代器端口。 <br /><br /> **适用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]| 
-|CXSYNC_CONSUMER|在等待在所有使用者线程之间到达 [Exchange 迭代器](../../relational-databases/showplan-logical-and-physical-operators-reference.md) 同步点时使用并行查询计划时发生。 <br /><br /> **适用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]| 
+|CXSYNC_PORT|在等待打开、关闭和同步制造者和使用者线程之间的 [Exchange 迭代器](../../relational-databases/showplan-logical-and-physical-operators-reference.md) 端口时，在并行查询计划中发生。 例如，如果查询计划具有长排序操作，则 CXSYNC_PORT 等待可能会更高，因为必须先完成排序，然后才能同步 Exchange 迭代器端口。 <br /><br /> **适用** 于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]| 
+|CXSYNC_CONSUMER|在等待在所有使用者线程之间到达 [Exchange 迭代器](../../relational-databases/showplan-logical-and-physical-operators-reference.md) 同步点时使用并行查询计划时发生。 <br /><br /> **适用** 于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]| 
 |CXROWSET_SYNC |在并行范围扫描期间出现。| 
 |DAC_INIT |当正在初始化专用管理员连接时出现。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -221,7 +221,7 @@ GO
 |EXECSYNC |在并行查询过程中同步与交换迭代器无关的区域内的查询处理器期间出现。 例如，此类区域包括位图、二进制大型对象 (LOB) 以及假脱机迭代器等。 LOB 可能会经常使用该等待状态。| 
 |EXECUTION_PIPE_EVENT_INTERNAL |当同步通过连接上下文提交的批处理执行的创建器和使用者部件期间出现。| 
 |EXTERNAL_RG_UPDATE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
-|EXTERNAL_SCRIPT_NETWORK_IO |仅限内部使用。 <br /><br /> **适用**于： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到当前。| 
+|EXTERNAL_SCRIPT_NETWORK_IO |仅限内部使用。 <br /><br /> **适用** 于： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到当前。| 
 |EXTERNAL_SCRIPT_PREPARE_SERVICE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |EXTERNAL_SCRIPT_SHUTDOWN |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |EXTERNAL_WAIT_ON_LAUNCHER， |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
@@ -260,7 +260,7 @@ GO
 |FILESTREAM_FILE_OBJECT |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |FILESTREAM_WORKITEM_QUEUE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |FILETABLE_SHUTDOWN |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|FOREIGN_REDO |仅限内部使用。 <br /><br /> **适用**于： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到当前。| 
+|FOREIGN_REDO |仅限内部使用。 <br /><br /> **适用** 于： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到当前。| 
 |FORWARDER_TRANSITION |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |FS_FC_RWLOCK |当 FILESTREAM 垃圾收集器等待执行下列操作之一时出现：| 
 |FS_GARBAGE_COLLECTOR_SHUTDOWN |当 FILESTREAM 垃圾收集器等待清除任务完成时出现。| 
@@ -346,7 +346,7 @@ GO
 |HADR_TDS_LISTENER_SYNC |内部 Always On 系统或 WSFC 群集将请求侦听器已启动或已停止。 对此请求的处理始终是异步的，并且存在删除冗余请求的机制。 还存在此进程由于配置更改而挂起的时刻。 与此侦听器同步机制相关的所有等待都使用此等待类型。 仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |在需要启动和/或停止可用性组侦听器的 Always On Transact-sql 语句的末尾使用。 因为启动/停止操作异步完成，所以，在侦听器的状况为已知时，用户线程将阻止使用此等待类型。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
-|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | 当使用较小的计算大小配置异地复制辅助数据库时出现 (低于 SLO) 的主要部分。 由于辅助数据库延迟的日志消耗，主数据库将受到限制。 这是因为辅助数据库的计算能力不足以跟上主数据库的变化率。 <br /><br /> **适用**于： Azure SQL 数据库| 
+|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | 当使用较小的计算大小配置异地复制辅助数据库时出现 (低于 SLO) 的主要部分。 由于辅助数据库延迟的日志消耗，主数据库将受到限制。 这是因为辅助数据库的计算能力不足以跟上主数据库的变化率。 <br /><br /> **适用** 于： Azure SQL 数据库| 
 |HADR_THROTTLE_LOG_RATE_LOG_SIZE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
 |HADR_THROTTLE_LOG_RATE_SEEDING |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
 |HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
@@ -473,7 +473,7 @@ GO
 |MD_LAZYCACHE_RWLOCK |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |MEMORY_ALLOCATION_EXT |在从内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存池或操作系统分配内存时发生。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |MEMORY_GRANT_UPDATE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
-|METADATA_LAZYCACHE_RWLOCK |仅限内部使用。 <br /><br /> **适用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
+|METADATA_LAZYCACHE_RWLOCK |仅限内部使用。 <br /><br /> **适用** 于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
 |MIGRATIONBUFFER |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
 |MISCELLANEOUS |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
 |MISCELLANEOUS |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
@@ -511,8 +511,8 @@ GO
 |PHYSICAL_SEEDING_DMV |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |POOL_LOG_RATE_GOVERNOR |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |PREEMPTIVE_ABR |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
-|PREEMPTIVE_AUDIT_ACCESS_EVENTLOG |在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 操作系统 (SQLOS) 计划程序切换到抢先模式时发生，以便将审核事件写入 Windows 事件日志。 <br /><br /> **适用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
-|PREEMPTIVE_AUDIT_ACCESS_SECLOG |在 SQLOS 计划程序切换到抢先模式时发生，以便将审核事件写入 Windows 安全日志。 <br /><br /> **适用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
+|PREEMPTIVE_AUDIT_ACCESS_EVENTLOG |在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 操作系统 (SQLOS) 计划程序切换到抢先模式时发生，以便将审核事件写入 Windows 事件日志。 <br /><br /> **适用** 于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
+|PREEMPTIVE_AUDIT_ACCESS_SECLOG |在 SQLOS 计划程序切换到抢先模式时发生，以便将审核事件写入 Windows 安全日志。 <br /><br /> **适用** 于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
 |PREEMPTIVE_CLOSEBACKUPMEDIA |在 SQLOS 计划程序切换到抢先模式时发生，以便关闭备份介质。| 
 |PREEMPTIVE_CLOSEBACKUPTAPE |在 SQLOS 计划程序切换到抢先模式时发生，以便关闭磁带备份设备。| 
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE |在 SQLOS 计划程序切换到抢先模式时发生，以便关闭虚拟备份设备。| 
@@ -768,8 +768,8 @@ GO
 |QRY_MEM_GRANT_INFO_MUTEX |当查询执行内存管理尝试控制对静态授予信息列表的访问时出现。 该状态列出当前已批准的内存请求以及正在等待的内存请求的有关信息。 该状态是一个简单的访问控制状态。 该状态始终不应当等待较长的时间。 如果未释放互斥体，则所有占用内存的新查询都将停止响应。| 
 |QRY_PARALLEL_THREAD_MUTEX |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |QRY_PROFILE_LIST_MUTEX |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
-|QUERY_ERRHDL_SERVICE_DONE |标识为仅供参考。 不支持。 <br /><br /> **适用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
-|QUERY_WAIT_ERRHDL_SERVICE |标识为仅供参考。  不支持。 <br /><br /> **适用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。  |  
+|QUERY_ERRHDL_SERVICE_DONE |标识为仅供参考。 不支持。 <br /><br /> **适用** 于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
+|QUERY_WAIT_ERRHDL_SERVICE |标识为仅供参考。  不支持。 <br /><br /> **适用** 于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。  |  
 |QUERY_EXECUTION_INDEX_SORT_EVENT_OPEN |当脱机创建索引生成以并行方式运行，并且正在排序的不同工作线程同步访问排序文件时出现。| 
 |QUERY_NOTIFICATION_MGR_MUTEX |在查询通知管理器中的垃圾收集队列同步期间出现。| 
 |QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX |在查询通知中事务的状态同步期间出现。| 
@@ -779,10 +779,10 @@ GO
 |QUERY_TASK_ENQUEUE_MUTEX |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |QUERY_TRACEOUT |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
 |RBIO_WAIT_VLF |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 
-|RBIO_RG_STORAGE |当超大规模数据库计算节点由于页面服务器 () 的延迟日志消耗而受到限制时发生。 <br /><br /> **适用**于： Azure SQL 数据库超大规模。|
-|RBIO_RG_DESTAGE |由于长期日志存储延迟日志消耗而正在限制超大规模数据库计算节点时发生。 <br /><br /> **适用**于： Azure SQL 数据库超大规模。|
-|RBIO_RG_REPLICA |当超大规模数据库计算节点由于) 的可读辅助副本节点 (延迟的日志消耗而受到限制时发生。 <br /><br /> **适用**于： Azure SQL 数据库超大规模。|
-|RBIO_RG_LOCALDESTAGE |由于日志服务延迟日志消耗而正在限制超大规模数据库计算节点时发生。 <br /><br /> **适用**于： Azure SQL 数据库超大规模。|
+|RBIO_RG_STORAGE |当超大规模数据库计算节点由于页面服务器 () 的延迟日志消耗而受到限制时发生。 <br /><br /> **适用** 于： Azure SQL 数据库超大规模。|
+|RBIO_RG_DESTAGE |由于长期日志存储延迟日志消耗而正在限制超大规模数据库计算节点时发生。 <br /><br /> **适用** 于： Azure SQL 数据库超大规模。|
+|RBIO_RG_REPLICA |当超大规模数据库计算节点由于) 的可读辅助副本节点 (延迟的日志消耗而受到限制时发生。 <br /><br /> **适用** 于： Azure SQL 数据库超大规模。|
+|RBIO_RG_LOCALDESTAGE |由于日志服务延迟日志消耗而正在限制超大规模数据库计算节点时发生。 <br /><br /> **适用** 于： Azure SQL 数据库超大规模。|
 |RECOVER_CHANGEDB |在备用数据库中同步数据库状态期间出现。| 
 |RECOVERY_MGR_LOCK |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |REDO_THREAD_PENDING_WORK |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -807,7 +807,7 @@ GO
 |RESOURCE_SEMAPHORE |当由于存在其他并发查询而无法立即批准查询内存请求时出现。 等待时间较长或等待次数较多可能指示并发查询的数量过多或内存请求的数量过多。| 
 |RESOURCE_SEMAPHORE_MUTEX |在查询等待其预留线程的请求完成时出现。 它也在同步查询编译和内存授予请求时出现。| 
 |RESOURCE_SEMAPHORE_QUERY_COMPILE |在并发查询编译的数量达到中止限制时出现。 高等待时间和等待时间可能表示过多的编译、重新编译或 uncacheable 计划。| 
-|RESOURCE_SEMAPHORE_SMALL_QUERY |当由于存在其他并发查询而无法立即批准较小查询的内存请求时出现。 等待时间不应超过几秒钟，因为如果服务器无法在几秒钟内给予请求的内存，则会将请求传输到主查询内存池中。 等待时间较长可能指示当主内存池被等待的查询阻塞时并发小查询的数量过多。 <br /><br /> **适用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
+|RESOURCE_SEMAPHORE_SMALL_QUERY |当由于存在其他并发查询而无法立即批准较小查询的内存请求时出现。 等待时间不应超过几秒钟，因为如果服务器无法在几秒钟内给予请求的内存，则会将请求传输到主查询内存池中。 等待时间较长可能指示当主内存池被等待的查询阻塞时并发小查询的数量过多。 <br /><br /> **适用** 于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
 |RESTORE_FILEHANDLECACHE_ENTRYLOCK |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |RESTORE_FILEHANDLECACHE_LOCK |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |RG_RECONFIG |仅限内部使用。| 
@@ -863,13 +863,13 @@ GO
 |SOCKETDUPLICATEQUEUE_CLEANUP |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |SOS_CALLBACK_REMOVAL |在为了删除回调而对回调列表执行同步期间出现。 服务器初始化完成之后，此计数器可能不会更改。| 
 |SOS_DISPATCHER_MUTEX |在调度程序池进行内部同步期间出现。 包括调整该池时。| 
-|SOS_LOCALALLOCATORLIST |在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 内存管理器中进行内部同步期间出现。 <br /><br /> **适用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
+|SOS_LOCALALLOCATORLIST |在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 内存管理器中进行内部同步期间出现。 <br /><br /> **适用** 于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
 |SOS_MEMORY_TOPLEVELBLOCKALLOCATOR |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |SOS_MEMORY_USAGE_ADJUSTMENT |在池之间调整内存使用情况时出现。| 
 |SOS_OBJECT_STORE_DESTROY_MUTEX |当破坏池中的对象时在内存池中进行内部同步期间出现。| 
 |SOS_PHYS_PAGE_CACHE |考虑到线程等待获得互斥体的时间，它必须在分配物理页前或将这些页返回操作系统前获得。 仅当实例使用 AWE 内存时，才会显示此类型的等待 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |SOS_PROCESS_AFFINITY_MUTEX |在同步访问进程关联设置期间出现。| 
-|SOS_RESERVEDMEMBLOCKLIST |在内存管理器中进行内部同步期间出现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 <br /><br /> **适用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
+|SOS_RESERVEDMEMBLOCKLIST |在内存管理器中进行内部同步期间出现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 <br /><br /> **适用** 于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
 |SOS_SCHEDULER_YIELD |在任务自愿为要执行的其他任务生成计划程序时出现。 在该等待期间任务正在等待其量程更新。| 
 |SOS_SMALL_PAGE_ALLOC |在分配和释放由某些内存对象管理的内存时出现。| 
 |SOS_STACKSTORE_INIT_MUTEX |在内部存储初始化同步期间出现。| 
@@ -893,12 +893,12 @@ GO
 |SQLCLR_QUANTUM_PUNISHMENT |在 CLR 任务由于已经超过了其执行量程而中止时出现。 此中止已完成，以便减小此大量消耗资源的任务对其他任务的影响。| 
 |SQLSORT_NORMMUTEX |在初始化内部排序结构时进行内部同步期间出现。| 
 |SQLSORT_SORTMUTEX |在初始化内部排序结构时进行内部同步期间出现。| 
-|SQLTRACE_BUFFER_FLUSH |当某任务正在等待后台任务将跟踪缓冲区每隔四秒刷新到磁盘时出现。 <br /><br /> **适用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
+|SQLTRACE_BUFFER_FLUSH |当某任务正在等待后台任务将跟踪缓冲区每隔四秒刷新到磁盘时出现。 <br /><br /> **适用** 于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
 |SQLTRACE_FILE_BUFFER |在文件跟踪过程中同步跟踪缓冲区期间出现。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |SQLTRACE_FILE_READ_IO_COMPLETION |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |SQLTRACE_FILE_WRITE_IO_COMPLETION |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |SQLTRACE_INCREMENTAL_FLUSH_SLEEP |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|SQLTRACE_LOCK |仅限内部使用。 <br /><br /> **适用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
+|SQLTRACE_LOCK |仅限内部使用。 <br /><br /> **适用** 于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
 |SQLTRACE_PENDING_BUFFER_WRITERS |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |SQLTRACE_SHUTDOWN |在跟踪关闭等待未完成的跟踪事件完成时出现。| 
 |SQLTRACE_WAIT_ENTRIES |在 SQL 跟踪事件队列等待数据包到达队列时出现。| 
@@ -989,7 +989,7 @@ GO
 |XE_LIVE_TARGET_TVF |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |XE_MODULEMGR_SYNC |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
 |XE_OLS_LOCK |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
-|XE_PACKAGE_LOCK_BACKOFF |标识为仅供参考。 不支持。 <br /><br /> **适用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
+|XE_PACKAGE_LOCK_BACKOFF |标识为仅供参考。 不支持。 <br /><br /> **适用** 于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 仅限。 |  
 |XE_SERVICES_EVENTMANUAL |仅限内部使用。| 
 |XE_SERVICES_MUTEX |仅限内部使用。| 
 |XE_SERVICES_RWLOCK |仅限内部使用。| 

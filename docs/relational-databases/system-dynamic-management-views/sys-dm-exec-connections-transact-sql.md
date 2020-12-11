@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_connections (Transact-SQL)
-title: sys. dm_exec_connections (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f9885ce0232b9fc36cbcec48ed17d16b54f4f57
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ebb703be1a68e8cc11ac5e9cfb832ca6f8145abb
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332842"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89546621"
   返回有关与此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立的连接的信息以及每个连接的详细信息。 返回 SQL Server 的服务器范围连接信息。 返回 SQL 数据库的当前数据库连接信息。  
   
 > [!NOTE]
-> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用 [&#40;transact-sql&#41;的 dm_pdw_exec_connections ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)。  
+> 若要从或调用它 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用 [sys.dm_pdw_exec_connections &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -60,12 +60,12 @@ ms.locfileid: "89546621"
 |connection_id|**uniqueidentifier**|对每个连接进行唯一标识。 不可为 null。|  
 |parent_connection_id|**uniqueidentifier**|标识 MARS 会话正在使用的主要连接。 可以为 Null。|  
 |most_recent_sql_handle|**varbinary(64)**|此连接上执行的上一个请求的 SQL 句柄。 most_recent_sql_handle 列始终与 most_recent_session_id 列同步。 可以为 Null。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="physical-joins"></a>物理联接  
  ![sys.dm_exec_connections 的联接](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "sys.dm_exec_connections 的联接")  

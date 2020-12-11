@@ -1,6 +1,6 @@
 ---
 description: sys.dm_fts_active_catalogs (Transact-SQL)
-title: sys. dm_fts_active_catalogs (Transact-sql) |Microsoft Docs
+title: sys.dm_fts_active_catalogs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4545e37733448d1c26b19567c05463b014482d10
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f352af03115de658f16e56e27bc5ecf3bd900c3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324398"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "88454913"
  
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|包含活动全文目录的数据库的 ID。|  
+|database_id|**int**|包含活动全文目录的数据库的 ID。|  
 |**catalog_id**|**int**|活动的全文目录的 ID。|  
 |**memory_address**|**varbinary(8)**|为与此全文目录相关的填充活动所分配的内存缓冲区的地址。|  
-|**name**|**nvarchar(128)**|活动的全文目录的名称。|  
+|name|**nvarchar(128)**|活动的全文目录的名称。|  
 |**is_paused**|**bit**|指示活动全文目录的填充是否已暂停。|  
 |**status**|**int**|全文目录的当前状态。 下列类型作之一：<br /><br /> 0 = 正在初始化<br /><br /> 1 = 就绪<br /><br /> 2 = 已暂停<br /><br /> 3 = 暂时错误<br /><br /> 4 = 需要重新装入<br /><br /> 5 = 关闭<br /><br /> 6 = 停止以备份<br /><br /> 7 = 已完成目录备份<br /><br /> 8 = 目录已损坏|  
 |**status_description**|**nvarchar(120)**|对活动全文目录的当前状态的说明。|  
@@ -62,7 +62,7 @@ ms.locfileid: "88454913"
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
    
 ## <a name="physical-joins"></a>物理联接  
  ![此动态管理视图的重要联接](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "此动态管理视图的重要联接")  

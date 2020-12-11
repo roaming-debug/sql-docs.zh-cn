@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_transactions_snapshot (Transact-SQL)
-title: sys. dm_tran_transactions_snapshot (Transact-sql) |Microsoft Docs
+title: sys.dm_tran_transactions_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb750ba886aeddc9871e9b3fdbc6d020b9839079
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b7ecd301c08127e4fdc8dbec923961f397006964
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333096"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89546437"
   
 -   确定特定快照事务忽略的数据修改。 对于在快照事务启动时活动的事务，快照事务将忽略由其进行的所有数据修改，即使在事务提交后也是如此。  
   
- 例如，请考虑以下来自 **sys. dm_tran_transactions_snapshot**的输出：  
+ 例如，请考虑以下 **sys.dm_tran_transactions_snapshot** 输出：  
   
 ```  
 transaction_sequence_num snapshot_id snapshot_sequence_num  
@@ -70,10 +70,10 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
   
 ## <a name="remarks"></a>备注  
- 当快照事务启动时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会记录此时处于活动状态的所有事务。 **sys. dm_tran_transactions_snapshot** 报告所有当前活动的快照事务的此信息。  
+ 当快照事务启动时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会记录此时处于活动状态的所有事务。 **sys.dm_tran_transactions_snapshot** 报告所有当前活动的快照事务的此信息。  
   
  每个事务都由事务开始时分配的事务序列号标识。 在执行 BEGIN TRANSACTION 或 BEGIN WORK 语句时事务启动。 但是，[!INCLUDE[ssDE](../../includes/ssde-md.md)]通过执行 BEGIN TRANSACTION 或 BEGIN WORK 语句后第一个访问数据的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来分配事务序列号。 事务序列号以一为增量递增。  
   

@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 05e8698484f9445de7a5fb3265d1e0e294dc65d7
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810103"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332082"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -42,16 +42,16 @@ ms.locfileid: "91810103"
 |name|**nvarchar(256)**|旋转锁类型的名称。|  
 |冲突|**bigint**|由于另一个线程当前包含旋转锁，线程尝试获取旋转锁并被阻止的次数。|  
 |旋转|**bigint**|线程在尝试获取旋转锁时执行循环的次数。|  
-|spins_per_collision|**real**|每个冲突的旋转比例。|  
+|spins_per_collision|**real**|每次冲突的旋转比率。|  
 |sleep_time|**bigint**|发生回退事件时线程所用的时间（以毫秒为单位）。|  
 |几率|**int**|"旋转" 线程无法获取旋转锁并生成计划程序的次数。|  
 
 
 ## <a name="permissions"></a>权限  
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。    
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。    
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  
  sys.dm_os_spinlock_stats 可用于标识旋转锁争用源。 在某些情况下，您可能能够解决或减少旋转锁的争用情况。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
   
@@ -72,7 +72,7 @@ GO
    
  下表包含一些最常见的旋转锁类型的简要说明。  
   
-|旋转锁类型|说明|  
+|旋转锁类型|描述|  
 |-----------------|-----------------|  
 |ABR|仅限内部使用。|
 |ADB_CACHE|仅限内部使用。|

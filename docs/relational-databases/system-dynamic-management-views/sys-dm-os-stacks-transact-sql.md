@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_stacks (Transact-SQL)
-title: sys. dm_os_stacks (Transact-sql) |Microsoft Docs
+title: sys.dm_os_stacks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83b694a70145637dce66e33ea417d1afc660af8e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 04f9fe453b2f3e74a96ebd20565d92038bff4bae
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542108"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325148"
 ---
 # <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "89542108"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|是该堆栈分配的唯一地址。 不可为 null。|  
-|**frame_index**|**int**|每行表示一个函数调用，该函数调用在特定 **stack_address**按帧索引的升序排序时，返回完整调用堆栈。 不可为 null。|  
+|**frame_index**|**int**|每行表示一个函数调用，该函数调用在特定 **stack_address** 按帧索引的升序排序时，返回完整调用堆栈。 不可为 null。|  
 |**frame_address**|**varbinary(8)**|函数调用的地址。 不可为 null。|  
   
 ## <a name="remarks"></a>备注  
- **sys. dm_os_stacks** 要求服务器和其他组件的符号在服务器上出现，才能正确显示信息。  
+ **sys.dm_os_stacks** 要求服务器和其他组件的符号在服务器上出现才能正确显示信息。  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 
 ## <a name="see-also"></a>另请参阅  

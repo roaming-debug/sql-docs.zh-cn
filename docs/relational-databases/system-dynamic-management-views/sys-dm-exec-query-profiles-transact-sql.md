@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_profiles (Transact-SQL)
-title: sys. dm_exec_query_profiles (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_query_profiles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b761064191f26a05d565e673428221afb4805b1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 332b554797282510463ae3ec837fb00256db31b3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330895"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89548580"
 |session_id|**smallint**|标识运行此查询的会话。 引用 dm_exec_sessions.session_id。|  
 |request_id|**int**|确定目标请求。 引用 dm_exec_sessions.request_id。|  
 |sql_handle|**varbinary(64)**|是唯一标识查询所属的批处理或存储过程的标记。 引用 dm_exec_query_stats.sql_handle。|  
-|plan_handle|**varbinary(64)**|是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 引用 dm_exec_query_stats plan_handle。|  
+|plan_handle|**varbinary(64)**|是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 引用 dm_exec_query_stats. plan_handle。|  
 |physical_operator_name|**nvarchar(256)**|物理运算符名称。|  
 |node_id|**int**|标识查询树中的运算符节点。|  
 |thread_id|**int**|区分属于同一个查询运算符节点的线程（针对并行查询）。|  
@@ -84,14 +84,14 @@ ms.locfileid: "89548580"
   
 -   如果存在并行扫描，则此 DMV 将报告处理扫描的每个并行线程的计数器。
  
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始， *标准查询执行统计信息分析基础结构* 与 *轻型查询执行统计分析基础结构*并存。 `SET STATISTICS XML ON` 和 `SET STATISTICS PROFILE ON` 始终使用 *标准查询执行统计分析基础结构*。 `sys.dm_exec_query_profiles`若要填充，必须启用查询分析基础结构之一。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。    
+从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始， *标准查询执行统计信息分析基础结构* 与 *轻型查询执行统计分析基础结构* 并存。 `SET STATISTICS XML ON` 和 `SET STATISTICS PROFILE ON` 始终使用 *标准查询执行统计分析基础结构*。 `sys.dm_exec_query_profiles`若要填充，必须启用查询分析基础结构之一。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。    
 
 >[!NOTE]
 > 正在调查的查询必须在启用了查询分析基础结构 **后** 开始，在查询开始后启用它将不会在中生成结果 `sys.dm_exec_query_profiles` 。 有关如何启用查询分析基础结构的详细信息，请参阅 [查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。
 
 ## <a name="permissions"></a>权限  
 在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 和 AZURE SQL 托管实例上，需要 `VIEW DATABASE STATE` 数据库角色的权限和成员身份 `db_owner` 。   
-在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
    
 ## <a name="examples"></a>示例  
  步骤1：登录到计划运行查询的会话，你将使用进行分析 `sys.dm_exec_query_profiles` 。 配置用于分析的查询 `SET STATISTICS PROFILE ON` 。 在同一会话中运行你的查询。  

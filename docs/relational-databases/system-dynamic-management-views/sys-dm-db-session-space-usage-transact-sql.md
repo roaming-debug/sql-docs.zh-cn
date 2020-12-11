@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_session_space_usage (Transact-SQL)
-title: sys. dm_db_session_space_usage (Transact-sql) |Microsoft Docs
+title: sys.dm_db_session_space_usage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2015
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 571b3a474e8b6f40745ca0534d40b76dea4dd0fb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0e8871d698b008488a87ccdda86e9abc72f24a2e
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550312"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330140"
 ---
 # <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,23 +37,23 @@ ms.locfileid: "89550312"
 >  此视图仅适用于 [tempdb 数据库](../../relational-databases/databases/tempdb-database.md)。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_db_session_space_usage**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_db_session_space_usage**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**smallint**|会话 ID。<br /><br /> **session_id**映射到[dm_exec_sessions sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)中**session_id** 。|  
+|**session_id**|**smallint**|会话 ID。<br /><br /> **session_id** 映射到 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)中 **session_id** 。|  
 |database_id|**smallint**|数据库 ID。|  
 |**user_objects_alloc_page_count**|**bigint**|由该会话为用户对象保留或分配的页数。|  
 |**user_objects_dealloc_page_count**|**bigint**|由该会话释放并不再为用户对象保留的页数。|  
 |**internal_objects_alloc_page_count**|**bigint**|由该会话为内部对象保留或分配的页数。|  
 |**internal_objects_dealloc_page_count**|**bigint**|由该会话释放并不再为内部对象保留的页数。|  
 |**user_objects_deferred_dealloc_page_count**|**bigint**|已标记为要延迟释放的页数。<br /><br /> **注意：** 在和的 service pack 中引入 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="remarks"></a>备注  
  由该视图报告的分配或释放的计数不包括 IAM 页。  
@@ -62,7 +62,7 @@ ms.locfileid: "89550312"
   
  会话可同时包含多个活动请求。 如果是并行查询，则请求可启动多个线程和任务。  
   
- 有关会话、请求和任务的详细信息，请参阅 [sys. dm_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)， [Sys.databases dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)，dm_os_tasks [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。  
+ 有关会话、请求和任务的详细信息，请参阅 [sys.dm_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)、 [sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)和 sys.dm_os_tasks [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。  
   
 ## <a name="user-objects"></a>用户对象  
  用户对象页计数器中包括下列对象：  
@@ -80,7 +80,7 @@ ms.locfileid: "89550312"
 -   表值函数中返回的表  
   
 ## <a name="internal-objects"></a>内部对象  
- 内部对象仅在 **tempdb**中。 内部对象页计数器中包括下列对象：  
+ 内部对象仅在 **tempdb** 中。 内部对象页计数器中包括下列对象：  
   
 -   用于游标或假脱机操作以及临时大型对象 (LOB) 存储的工作表  
   
@@ -93,7 +93,7 @@ ms.locfileid: "89550312"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|到|关系|  
+|From|功能|关系|  
 |----------|--------|------------------|  
 |dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|一对一|  
   
@@ -102,8 +102,8 @@ ms.locfileid: "89550312"
  [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
  [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys. dm_os_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
- [sys. dm_db_task_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+ [sys.dm_os_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
+ [sys.dm_db_task_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_file_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   

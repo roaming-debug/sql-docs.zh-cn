@@ -21,12 +21,12 @@ ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf8f1d6f2b9ae0e724e23238dea494ad0cb4529f
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 4b60b8b79eb5b325760c9058c4e252dc45b0e895
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834240"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325870"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "91834240"
 |**instance_name**|**nchar(128)**|计数器特定实例的名称。 通常包含数据库名称。|  
 |**cntr_value**|**bigint**|计数器的当前值。<br /><br /> **注意：** 对于每秒计数器，此值为累积值。 速率值必须通过对离散时间间隔的值抽样来进行计算。 任何两个连续抽样值之间的差等于针对所使用时间间隔的速率。|  
 |**cntr_type**|**int**|Windows 性能体系结构定义的计数器类型。 有关性能计数器类型的详细信息，请参阅文档中的 [WMI 性能计数器类型](/windows/desktop/WmiSdk/wmi-performance-counter-types) 或 Windows Server 文档。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安装实例无法显示 Windows 操作系统的性能计数器，请使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询来确定性能计数器是否已被禁用。  
   
 ```sql  
@@ -61,7 +61,7 @@ SELECT COUNT(*) FROM sys.dm_os_performance_counters;
 ## <a name="permission"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
  
 ## <a name="examples"></a>示例  
  下面的示例返回显示快照计数器值的所有性能计数器。  

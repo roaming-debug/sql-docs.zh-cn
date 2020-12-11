@@ -23,12 +23,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5419919b14c15615cb84d124387c98e9ba2e90a5
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 1f905eed2d4dfdbbd7167171282922739978d386
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834429"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332958"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "91834429"
 |**bpool_committed**|**int**|**适用于：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 表示内存管理器中的已提交内存 (KB)。 不包括内存管理器中的保留内存。 不可为 Null。|  
 |**committed_kb**|**int**|适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 表示内存管理器中的已提交内存 (KB)。 不包括内存管理器中的保留内存。 不可为 Null。|  
 |**bpool_commit_target**|**int**|**适用于：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 表示 SQL Server 内存管理器可以占用的内存量 (KB)。|  
-|**committed_target_kb**|**int**|适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 表示 SQL Server 内存管理器可以占用的内存量 (KB)。 使用类似如下的不同输入计算目标量：<br /><br /> -包括其负载的系统的当前状态<br /><br /> -当前进程请求的内存<br /><br /> -计算机上安装的内存量<br /><br /> -配置参数<br /><br /> 如果 **committed_target_kb** 大于 **committed_kb**，则内存管理器将尝试获得额外内存。 如果 **committed_target_kb** 小于 **committed_kb**，则内存管理器将尝试减少提交的内存量。 **Committed_target_kb**始终包括盗用内存和保留内存。 不可为 Null。|  
+|**committed_target_kb**|**int**|适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 表示 SQL Server 内存管理器可以占用的内存量 (KB)。 使用类似如下的不同输入计算目标量：<br /><br /> -包括其负载的系统的当前状态<br /><br /> -当前进程请求的内存<br /><br /> -计算机上安装的内存量<br /><br /> -配置参数<br /><br /> 如果 **committed_target_kb** 大于 **committed_kb**，则内存管理器将尝试获得额外内存。 如果 **committed_target_kb** 小于 **committed_kb**，则内存管理器将尝试减少提交的内存量。 **Committed_target_kb** 始终包括盗用内存和保留内存。 不可为 Null。|  
 |**bpool_visible**|**int**|**适用于：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 在进程虚拟地址空间中可直接访问的缓冲池中的 8 KB 缓冲区数。 当未使用地址窗口化扩展插件 (AWE)，缓冲区池已获取其内存目标 (bpool_committed = bpool_commit_target) 时，bpool_visible 的值与 bpool_committed 的值相等。当在 32 位版本的 SQL Server 上使用 AWE 时，bpool_visible 表示用于访问由缓冲池区分配的物理内存的 AWE 映射窗口的大小。 此映射窗口的大小由进程地址空间绑定，因此，可见数量将小于提交数量，并且通过为数据库页之外的其他用途而消耗内存的内部组件会进一步减少可见数量。 如果 bpool_visible 的值太低，则可能收到内存不足错误。|  
-|**visible_target_kb**|**int**|适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 与 **committed_target_kb**相同。 不可为 Null。|  
+|**visible_target_kb**|**int**|适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 与 **committed_target_kb** 相同。 不可为 Null。|  
 |**stack_size_in_bytes**|**int**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建的每个线程的调用堆栈的大小。 不可为 Null。|  
 |**os_quantum**|**bigint**|表示非抢先任务的量程（以毫秒数度量）。 量程 (（秒）) = **os_quantum** /CPU 时钟速度。 不可为 Null。|  
 |**os_error_mode**|**int**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的错误模式。 不可为 Null。|  
@@ -73,9 +73,9 @@ ms.locfileid: "91834429"
 |**virtual_machine_type_desc**|**nvarchar(60)**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 介绍 **virtual_machine_type** 列。 不可为 Null。<br /><br /> 无 = 未 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在虚拟机中运行。<br /><br /> 虚拟机监控程序 = 正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 由运行虚拟机监控程序的 OS 托管的虚拟机内运行 (使用硬件辅助虚拟化) 的主机操作系统。<br /><br /> OTHER = 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 由不使用硬件助理（如 Microsoft VIRTUAL PC）的操作系统托管的虚拟机中运行。|  
 |**softnuma_configuration**|**int**|适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 指定 NUMA 节点的配置方式。 不可为 Null。<br /><br /> 0 = OFF 表示硬件默认值<br /><br /> 1 = 自动软件 NUMA<br /><br /> 2 = 通过注册表手动进行软件 NUMA|  
 |**softnuma_configuration_desc**|**nvarchar(60)**|适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> OFF = 软 NUMA 功能已关闭<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动确定适用于软件 numa 的 numa 节点大小<br /><br /> 手动 = 手动配置的软件 NUMA|
-|**process_physical_affinity**|**nvarchar (3072) ** |**适用于：** 从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 。<br /><br />信息有待提供。 |
+|**process_physical_affinity**|**nvarchar (3072)** |**适用于：** 从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 。<br /><br />信息有待提供。 |
 |**sql_memory_model**|**int**|**适用于：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本。<br /><br />指定用于分配内存的内存模型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不可为 Null。<br /><br />1 = 常规内存模型<br />2 = 锁定内存页<br /> 3 = 内存中的大型页面|
-|**sql_memory_model_desc**|**nvarchar(120)**|**适用于：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本。<br /><br />指定用于分配内存的内存模型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不可为 Null。<br /><br />**CONVENTIONAL**  =  传统 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的是常规内存模型来分配内存。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户在启动过程中没有锁定页面的内存特权，则这是默认的 sql 内存模型。<br />**LOCK_PAGES**  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用锁定内存页来分配内存。 这是默认的 sql 内存管理器，在 SQL Server 启动期间 SQL Server 服务帐户拥有 "锁定内存页" 特权。<br /> **LARGE_PAGES**  =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用内存中的大型页分配内存。 SQL Server 使用大型页面分配器仅 SQL Server 在服务器启动期间和跟踪标志834打开时，将内存分配给 Enterprise edition。|
+|**sql_memory_model_desc**|**nvarchar(120)**|**适用于：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本。<br /><br />指定用于分配内存的内存模型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不可为 Null。<br /><br />  =  传统 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的是常规内存模型来分配内存。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户在启动过程中没有锁定页面的内存特权，则这是默认的 sql 内存模型。<br />  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用锁定内存页来分配内存。 这是默认的 sql 内存管理器，在 SQL Server 启动期间 SQL Server 服务帐户拥有 "锁定内存页" 特权。<br />   =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用内存中的大型页分配内存。 SQL Server 使用大型页面分配器仅 SQL Server 在服务器启动期间和跟踪标志834打开时，将内存分配给 Enterprise edition。|
 |pdw_node_id|**int**|**适用于：** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
 |**socket_count** |**int** | **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。<br /><br />指定系统上可用的处理器插槽数。 |  
 |**cores_per_socket** |**int** | **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。<br /><br />指定系统上每个套接字可用的处理器数。 |  
@@ -84,7 +84,7 @@ ms.locfileid: "91834429"
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

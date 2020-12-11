@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_tasks (Transact-SQL)
-title: sys. dm_clr_tasks (Transact-sql) |Microsoft Docs
+title: sys.dm_clr_tasks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22066cd2fedee929a5d4047e20e30531728b45bb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2ff7a1d7a705d7f39b5b7d0d2fa87d342bff82ab
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329830"
 ---
 # <a name="sysdm_clr_tasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89537931"
 |**task_address**|**varbinary(8)**|CLR 任务的地址。|  
 |**sos_task_address**|**varbinary(8)**|基础 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批任务的地址。|  
 |**appdomain_address**|**varbinary(8)**|此任务在其中运行的应用程序域的地址。|  
-|State|**nvarchar(128)**|任务的当前状态。|  
+|**state**|**nvarchar(128)**|任务的当前状态。|  
 |**abort_state**|**nvarchar(128)**|中止任务时当前所处的状态（如果取消任务）。中止任务时涉及多个状态。|  
 |type|**nvarchar(128)**|任务类型。|  
 |**affinity_count**|**int**|任务的关联。|  
@@ -47,7 +47,7 @@ ms.locfileid: "89537931"
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

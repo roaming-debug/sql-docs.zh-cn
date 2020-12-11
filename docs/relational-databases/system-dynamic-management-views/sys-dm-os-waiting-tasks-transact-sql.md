@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_waiting_tasks (Transact-SQL)
-title: sys. dm_os_waiting_tasks (Transact-sql) |Microsoft Docs
+title: sys.dm_os_waiting_tasks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d02a397ab5f76682ba29d72bf873f581ee2fe091
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ce17704962491cc9a01a54a15358b7384430cf6c
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532234"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327611"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89532234"
   返回有关正在等待某些资源的任务的等待队列的信息。 有关任务的详细信息，请参阅 [线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
    
 > [!NOTE]  
-> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_waiting_tasks**。  
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_os_waiting_tasks**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -47,8 +47,8 @@ ms.locfileid: "89532234"
 |**blocking_task_address**|**varbinary(8)**|当前持有此资源的任务。|  
 |**blocking_session_id**|**smallint**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而无法确定阻塞闩锁所有者的会话 ID。|  
 |**blocking_exec_context_id**|**int**|正在阻塞的任务的执行上下文 ID。|  
-|**resource_description**|**nvarchar (3072) **|对正在占用的资源的说明。 有关详细信息，请参阅下面的列表。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**resource_description**|**nvarchar (3072)**|对正在占用的资源的说明。 有关详细信息，请参阅下面的列表。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="resource_description-column"></a>resource_description 列  
  resource_description 列具有以下可能值。  
@@ -138,7 +138,7 @@ ms.locfileid: "89532234"
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
  
 ## <a name="example"></a>示例
 ### <a name="a-identify-tasks-from-blocked-sessions"></a>A. 识别阻止的会话中的任务。 

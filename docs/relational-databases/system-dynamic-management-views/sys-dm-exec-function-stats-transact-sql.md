@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_exec_function_stats (Transact-sql) '
-title: sys. dm_exec_function_stats (Transact-sql) |Microsoft Docs
+description: 'sys.dm_exec_function_stats (Transact-sql) '
+title: sys.dm_exec_function_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -19,14 +19,14 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ec3f05f40f6de423cec2d08f2a240729201e43e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 35f0ab89e1aa90ea8eeeb09f57911b7b526026f9
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550281"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332180"
 ---
-# <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-sql) 
+# <a name="sysdm_exec_function_stats-transact-sql"></a>sys.dm_exec_function_stats (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   返回缓存函数的聚合性能统计信息。 视图为每个缓存的函数计划返回一行，行的生存期与函数保持缓存的时间相同。 从缓存中移除某个函数后，将从此视图中删除相应的行。 此时，将引发类似于 **sys.dm_exec_query_stats** 的 Performance Statistics SQL 跟踪事件。 返回有关标量函数的信息，其中包括内存中函数和 CLR 标量函数。 不返回有关表值函数的信息。  
@@ -34,7 +34,7 @@ ms.locfileid: "89550281"
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 为了避免公开此信息，每个包含不属于所连接的租户的数据的行都将被筛选掉。  
   
 > [!NOTE]
-> 每次执行时， **sys.databases dm_exec_function_stats**  的结果可能会有所不同，因为数据只反映完成的查询，而不是仍在进行中的查询。 
+> 每次执行时， **sys.dm_exec_function_stats**  的结果可能会有所不同，因为数据只反映完成的查询，而不是仍在进行中的查询。 
 
   
 |列名称|数据类型|说明|  
@@ -43,8 +43,8 @@ ms.locfileid: "89550281"
 |object_id|**int**|函数的对象标识号。|  
 |type|**char(2)**|对象的类型： FN = 标量值函数|  
 |**type_desc**|**nvarchar(60)**|对象类型的说明： SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary(64)**|这可用于与在此函数中执行的 **dm_exec_query_stats** 中的查询相关联。|  
-|**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于 **sys.databases dm_exec_cached_plans** 动态管理视图。<br /><br /> 当本机编译的函数查询内存优化表时，将始终为0x000。|  
+|**sql_handle**|**varbinary(64)**|这可用于与在此函数中执行的 **sys.dm_exec_query_stats** 中的查询相关联。|  
+|**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可与 **sys.dm_exec_cached_plans** 动态管理视图一起使用。<br /><br /> 当本机编译的函数查询内存优化表时，将始终为0x000。|  
 |**cached_time**|**datetime**|将函数添加到缓存的时间。|  
 |**last_execution_time**|**datetime**|上次执行函数的时间。|  
 |**execution_count**|**bigint**|函数自上次编译以来已执行的次数。|  
@@ -76,7 +76,7 @@ ms.locfileid: "89550281"
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
   
 ## <a name="examples"></a>示例  
  下面的示例返回有关按平均占用时间标识的前十个函数的信息。  
@@ -92,10 +92,10 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>另请参阅  
  [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
- [sys. dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
- [sys. dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+ [sys.dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+ [sys.dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   

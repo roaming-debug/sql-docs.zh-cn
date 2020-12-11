@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_process_memory (Transact-SQL)
-title: sys. dm_os_process_memory (Transact-sql) |Microsoft Docs
+title: sys.dm_os_process_memory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4234894d907a383902a00a659e954ccfea2ff74c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6a60651016355dcf6b78a514a4b4ee3b523c9136
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539298"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325418"
 ---
 # <a name="sysdm_os_process_memory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   大多数因 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程空间导致的内存分配都是通过可跟踪和核算这些分配的接口控制的。 但是，内存分配可能会绕过内部内存管理例程在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 地址空间中进行。 值是通过调用基本操作系统获取的。 它们不是由内部的方法操作的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，除非它是为锁定或大页面分配进行调整。  
   
- 所有指示内存大小的返回值均以千字节 (KB) 表示。 列**total_virtual_address_space_reserved_kb**是从**dm_os_sys_info sys.databases** **virtual_memory_in_bytes**的副本。  
+ 所有指示内存大小的返回值均以千字节 (KB) 表示。 列 **total_virtual_address_space_reserved_kb** 是 **sys.dm_os_sys_info** 中 **virtual_memory_in_bytes** 的副本。  
   
  下表对进程地址空间作了完整的说明。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_process_memory**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_os_process_memory**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -54,13 +54,13 @@ ms.locfileid: "89539298"
 |**available_commit_limit_kb**|**bigint**|指示可供进程提交的内存量。 不可为 Null。|  
 |**process_physical_memory_low**|**bit**|指示进程正在响应物理内存不足的通知。 不可为 Null。|  
 |**process_virtual_memory_low**|**bit**|指示检测到虚拟内存不足的情况。 不可为 Null。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，要求具有服务器上的 VIEW SERVER STATE 权限。  
   
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

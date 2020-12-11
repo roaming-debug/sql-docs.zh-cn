@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_cached_plans (Transact-SQL)
-title: sys. dm_exec_cached_plans (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_cached_plans (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02e10051c13f55b703e0f45ab2b657d7f0d66230
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4625b80bd709528288d0e9a6afec70a3c730ee1
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542179"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332724"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89542179"
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 为了避免公开此信息，每个包含不属于所连接的租户的数据的行都将被筛选掉。此外，筛选列中的值 **memory_object_address** 和 **pool_id** 。列值设置为 NULL。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_exec_cached_plans**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_exec_cached_plans**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -45,18 +45,18 @@ ms.locfileid: "89542179"
 |usecounts|**int**|已查找缓存对象的次数。 当参数化查询在缓存中找到计划时不递增。 在使用显示计划时可多次递增。|  
 |size_in_bytes|**int**|缓存对象占用的字节数。|  
 |memory_object_address|**varbinary(8)**|缓存条目的内存地址。 此值可以与 [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) 一起使用，以获得缓存计划的内存明细，还可以与 [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)_entries 一起使用，以获得缓存条目的开销。|  
-|cacheobjtype|**nvarchar (34) **|缓存中的对象类型。 值可以是下列任一值：<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
-|objtype|**nvarchar (16) **|对象的类型。 下面是可能的值及其相应的说明。<br /><br /> Proc：存储过程<br />已准备：预定义语句<br />即席：即席查询。 是指 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 **osql** 或 **sqlcmd** 而不是远程过程调用提交为语言事件。<br />ReplProc：复制筛选器-过程<br />触发器：触发器<br />视图：视图<br />默认值：默认值<br />UsrTab：用户表<br />SysTab：系统表<br />检查： CHECK 约束<br />规则：规则|  
+|cacheobjtype|**nvarchar (34)**|缓存中的对象类型。 值可以是下列任一值：<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
+|objtype|**nvarchar (16)**|对象的类型。 下面是可能的值及其相应的说明。<br /><br /> Proc：存储过程<br />已准备：预定义语句<br />即席：即席查询。 是指 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 **osql** 或 **sqlcmd** 而不是远程过程调用提交为语言事件。<br />ReplProc：复制筛选器-过程<br />触发器：触发器<br />视图：视图<br />默认值：默认值<br />UsrTab：用户表<br />SysTab：系统表<br />检查： CHECK 约束<br />规则：规则|  
 |plan_handle|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可以和以下动态管理函数一起使用：<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|特定资源池的 ID，此计划内存使用量就是针对该资源池而言的。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
  <sup>1</sup>  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
+在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="examples"></a>示例  
   
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>C. 返回编译计划所用的 SET 选项  
- 以下示例返回编译计划所用的 SET 选项。 `sql_handle`还会返回计划的。 PIVOT 运算符用于将 `set_options` 和 `sql_handle` 属性输出为列而非行。 有关中返回的值的详细信息 `set_options` ，请参阅 [sys.databases&#41;&#40;dm_exec_plan_attributes ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)。  
+ 以下示例返回编译计划所用的 SET 选项。 `sql_handle`还会返回计划的。 PIVOT 运算符用于将 `set_options` 和 `sql_handle` 属性输出为列而非行。 有关中返回的值的详细信息 `set_options` ，请参阅 [&#40;transact-sql&#41;sys.dm_exec_plan_attributes ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)。  
   
 ```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
@@ -115,11 +115,11 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys. dm_exec_plan_attributes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
- [sys. dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys. dm_os_memory_objects &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
- [sys. dm_os_memory_cache_entries &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
+ [sys.dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_plan_attributes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_os_memory_objects &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
+ [sys.dm_os_memory_cache_entries &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)  
   
   
