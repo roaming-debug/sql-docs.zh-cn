@@ -18,13 +18,13 @@ ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 39db2d1bd2d3525e1dc2902c11e362d70b212ebd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: dbe893e86824ad727b7eaca96b4e01e4ded971d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809855"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404991"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -33,24 +33,24 @@ ms.locfileid: "91809855"
   
 ||  
 |-|  
-|**适用**于：  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
+|**适用** 于：  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|指示15秒报告间隔的开始时间的 UTC 时间。|  
 |**end_time**|**datetime2**|指示15秒报表间隔结束时间的 UTC 时间。|  
 |**elastic_pool_name**|**nvarchar(128)**|弹性数据库池的名称。|  
-|**avg_cpu_percent**|**decimal (5，2) **|以池的限制百分比形式表示的平均计算使用率。|  
-|**avg_data_io_percent**|**decimal (5，2) **|以基于池的限制的百分比形式表示的平均 I/O 使用率。|  
-|**avg_log_write_percent**|**decimal (5，2) **|以池的限制百分比形式表示的平均写入资源使用率。|  
-|**avg_storage_percent**|**decimal (5，2) **|以池的存储限制百分比形式表示的平均存储使用率。|  
-|**max_worker_percent**|**decimal (5，2) **|以基于池的限制的百分比形式表示的最大并发工作线程（请求）数量。|  
-|**max_session_percent**|**decimal (5，2) **|以基于池的限制的百分比形式表示的最大并发会话（请求）数量。|  
+|**avg_cpu_percent**|**decimal (5，2)**|以池的限制百分比形式表示的平均计算使用率。|  
+|**avg_data_io_percent**|**decimal (5，2)**|以基于池的限制的百分比形式表示的平均 I/O 使用率。|  
+|**avg_log_write_percent**|**decimal (5，2)**|以池的限制百分比形式表示的平均写入资源使用率。|  
+|**avg_storage_percent**|**decimal (5，2)**|以池的存储限制百分比形式表示的平均存储使用率。|  
+|**max_worker_percent**|**decimal (5，2)**|以基于池的限制的百分比形式表示的最大并发工作线程（请求）数量。|  
+|**max_session_percent**|**decimal (5，2)**|以基于池的限制的百分比形式表示的最大并发会话（请求）数量。|  
 |**elastic_pool_dtu_limit**|**int**|在该时间间隔内该弹性池的当前最大弹性池 DTU 设置。|  
 |**elastic_pool_storage_limit_mb**|**bigint**|在该时间间隔内该弹性池的当前最大弹性池存储限制设置（以兆字节为单位）。|
-|**avg_allocated_storage_percent**|**decimal (5，2) **|弹性池中所有数据库分配的数据空间百分比。  这是为弹性池分配的数据空间与数据最大大小的比率。  有关详细信息，请参阅 [SQL 数据库中的文件空间管理](/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal (5，2)**|弹性池中所有数据库分配的数据空间百分比。  这是为弹性池分配的数据空间与数据最大大小的比率。  有关详细信息，请参阅 [SQL 数据库中的文件空间管理](/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
  此视图存在于 SQL 数据库服务器的 master 数据库中。 您必须连接到 master 数据库才能查询 **sys.elastic_pool_resource_stats**。  
   

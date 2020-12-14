@@ -1,6 +1,6 @@
 ---
 description: sys.database_role_members (Transact-SQL)
-title: sys. database_role_members (Transact-sql) |Microsoft Docs
+title: sys.database_role_members (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 443df263f534d6f15648caacb5a810a0c15e555a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 603ecd155e076b4f8798e7d5259eee902e4eab79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482130"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405416"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  为每个数据库角色的每个成员返回一行。  数据库用户、应用程序角色和其他数据库角色可以是数据库角色的成员。 若要向角色添加成员，请将 [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) 语句与选项一起使用 `ADD MEMBER` 。 与 [database_principals sys.databases](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 联接以返回值的名称 `principal_id` 。
+  为每个数据库角色的每个成员返回一行。  数据库用户、应用程序角色和其他数据库角色可以是数据库角色的成员。 若要向角色添加成员，请将 [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) 语句与选项一起使用 `ADD MEMBER` 。 与 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 联接以返回值的名称 `principal_id` 。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

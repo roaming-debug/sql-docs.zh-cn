@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74720a7919f9acace77a7f50fd38e7aa89f29794
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 30082fa8f4c3d85e59f4ea75602c34a5701d50cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499268"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406891"
 ---
 # <a name="bcp_colptr"></a>bcp_colptr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ RETCODE bcp_colptr (
         INT idxServerCol);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
@@ -61,7 +61,7 @@ RETCODE bcp_colptr (
 ## <a name="remarks"></a>备注  
  使用 **bcp_colptr** 函数，可以在将数据复制 SQL Server 到 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)时，更改特定列的源数据地址。  
   
- 最初，指向用户数据的指针通过调用 **bcp_bind**设置。 如果程序变量数据地址在对 **bcp_sendrow**的调用之间发生更改，则可以调用 **bcp_colptr** 来重置指向数据的指针。 对的下一次调用 **bcp_sendrow** 会将通过调用来寻址的数据发送到 **bcp_colptr**。  
+ 最初，指向用户数据的指针通过调用 **bcp_bind** 设置。 如果程序变量数据地址在对 **bcp_sendrow** 的调用之间发生更改，则可以调用 **bcp_colptr** 来重置指向数据的指针。 对的下一次调用 **bcp_sendrow** 会将通过调用来寻址的数据发送到 **bcp_colptr**。  
   
  对于要修改其数据地址的表中的每一列，都必须有单独的 **bcp_colptr** 调用。  
   
