@@ -114,6 +114,28 @@
               href: ../connect/ado-net/handle-dataadapter-events.md
             - name: 批处理使用 DataAdapter 的操作
               href: ../connect/ado-net/batch-operations-using-dataadapters.md
+        - name: 事务和并发性
+          href: ../connect/ado-net/transactions-and-concurrency.md
+          items:
+            - name: 本地事务
+              href: ../connect/ado-net/local-transactions.md
+            - name: 分布式事务
+              href: ../connect/ado-net/distributed-transactions.md
+            - name: System.Transactions 与 SQL Server 的集成
+              href: ../connect/ado-net/system-transactions-integration-with-sql-server.md
+            - name: 乐观并发
+              href: ../connect/ado-net/optimistic-concurrency.md
+        - name: 检索数据库架构信息
+          href: ../connect/ado-net/retrieving-database-schema-information.md
+          items:
+            - name: GetSchema 和架构集合
+              href: ../connect/ado-net/getschema-and-schema-collections.md
+            - name: 架构限制
+              href: ../connect/ado-net/schema-restrictions.md
+            - name: 常用架构集合
+              href: ../connect/ado-net/common-schema-collections.md
+            - name: SQL Server 架构集合
+              href: ../connect/ado-net/sql-server-schema-collections.md
     - name: SQL Server 和 ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:

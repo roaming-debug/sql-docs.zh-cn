@@ -9956,6 +9956,9 @@
           href: linux/sql-server-linux-run-sql-server-agent-job.md
         - name: 设置 AD 身份验证
           href: linux/sql-server-linux-active-directory-authentication.md
+          items:
+            - name: 使用 adutil 设置 AD 身份验证
+              href: linux/sql-server-linux-ad-auth-adutil-tutorial.md
         - name: 创建故障转移群集实例
           href: linux/sql-server-linux-shared-disk-cluster-configure.md
           items:
@@ -10021,6 +10024,8 @@
               href: linux/sql-server-linux-configure-msdtc-docker.md
             - name: Docker 容器疑难解答
               href: linux/sql-server-linux-docker-container-troubleshooting.md
+            - name: 使用 adutil 设置 AD 身份验证
+              href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
         - name: 开发
           href: linux/sql-server-linux-develop-overview.md
           items:
