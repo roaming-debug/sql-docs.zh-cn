@@ -1,5 +1,5 @@
 ---
-title: DiffGram 示例（SQLXML）
+title: 'SQLXML 示例 (的 DiffGram) '
 description: 查看 SQLXML 4.0 中 diffgram 的示例，该示例对数据库执行插入、更新和删除操作。
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dbc6d4d2be27ca0a91a7ed312d26baf19a72551
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c4681c4babe25ec9c683d78e583ddd2c1a4d91fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650003"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415174"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram 示例 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -102,11 +102,11 @@ ms.locfileid: "85650003"
 </ROOT>  
 ```  
   
- 在 **\<before>** 块中，有一个 **\<Order>** 元素（**diffgr： Id = "Order1"**）和一个 **\<Customer>** 元素（**diffgr： id = "Customer1"**）。 这些元素表示数据库中的现有记录。 **\<DataInstance>** 元素没有对应的记录（具有相同的**diffgr： id**）。 这指示一个删除操作。  
+ 在 **\<before>** 块中，有一个 **\<Order>** 元素 (**diffgr： Id = "Order1"**) 和 **\<Customer>** 元素 (**diffgr： id = "Customer1"**) 。 这些元素表示数据库中的现有记录。 **\<DataInstance>** 元素没有 (具有相同 **diffgr： id**) 的相应记录。 这指示一个删除操作。  
   
 #### <a name="to-test-the-diffgram"></a>测试 DiffGram  
   
-1.  在**tempdb**数据库中创建这些表。  
+1.  在 **tempdb** 数据库中创建这些表。  
   
     ```  
     CREATE TABLE Cust(  
@@ -142,7 +142,7 @@ ms.locfileid: "85650003"
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行 DiffGram。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B. 使用 DiffGram 插入记录  
  在本示例中，DiffGram 在 Cust 表和 Ord 表中各插入一条记录。  
@@ -169,11 +169,11 @@ ms.locfileid: "85650003"
 </ROOT>  
 ```  
   
- 在此 DiffGram 中， **\<before>** 未指定块（未标识任何现有的数据库记录）。 **\<Customer>** **\<Order>** 分别映射到 Ord 表的两个记录实例（由块中的和元素标识 **\<DataInstance>** ）。 这两个元素都指定了**diffgr： hasChanges**属性（**hasChanges = "insert"**）。 这指示一个插入操作。 在此 DiffGram 中，如果指定**hasChanges = "modified"**，则表明要修改不存在的记录，这将导致错误。  
+ 在此 DiffGram 中， **\<before>** 未指定块 () 找不到任何现有的数据库记录。 有两个记录实例 (由 **\<Customer>** **\<Order>**) 块中的和元素标识， **\<DataInstance>** 分别映射到 "Ord" 和 "" 表。 这两个元素都指定了 **diffgr： hasChanges** 属性 (**hasChanges = "insert"**) 。 这指示一个插入操作。 在此 DiffGram 中，如果指定 **hasChanges = "modified"**，则表明要修改不存在的记录，这将导致错误。  
   
 #### <a name="to-test-the-diffgram"></a>测试 DiffGram  
   
-1.  在**tempdb**数据库中创建这些表。  
+1.  在 **tempdb** 数据库中创建这些表。  
   
     ```  
     CREATE TABLE Cust(  
@@ -209,7 +209,7 @@ ms.locfileid: "85650003"
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行 DiffGram。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="c-updating-an-existing-record-by-using-a-diffgram"></a>C. 使用 DiffGram 更新现有记录  
  在本示例中，DiffGram 更新客户 ALFKI 的客户信息（CompanyName 和 ContactName）。  
@@ -241,11 +241,11 @@ ms.locfileid: "85650003"
 </ROOT>  
 ```  
   
- **\<before>** 块包括 **\<Customer>** 元素（**diffgr： Id = "Customer1"**）。 **\<DataInstance>** 该块包含 **\<Customer>** 具有相同**id**的对应元素。**\<customer>** 中的元素 **\<NewDataSet>** 还指定了**diffgr： hasChanges = "modified"**。 这表示更新操作，**客户表中的客户**记录将相应更新。 请注意，如果未指定**diffgr： hasChanges**属性，DiffGram 处理逻辑将忽略此元素，并且不执行任何更新。  
+ **\<before>** 块包括 **\<Customer>** 元素 (**diffgr： Id = "Customer1"**) 。 **\<DataInstance>** 该块包含 **\<Customer>** 具有相同 **id** 的对应元素。**\<customer>** 中的元素 **\<NewDataSet>** 还指定了 **diffgr： hasChanges = "modified"**。 这表示更新操作， **客户表中的客户** 记录将相应更新。 请注意，如果未指定 **diffgr： hasChanges** 属性，DiffGram 处理逻辑将忽略此元素，并且不执行任何更新。  
   
 #### <a name="to-test-the-diffgram"></a>测试 DiffGram  
   
-1.  在**tempdb**数据库中创建这些表。  
+1.  在 **tempdb** 数据库中创建这些表。  
   
     ```  
     CREATE TABLE Cust(  
@@ -281,7 +281,7 @@ ms.locfileid: "85650003"
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行 DiffGram。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>D. 使用 DiffGram 插入、更新和删除记录  
  在本示例中，使用一个较为复杂的 DiffGram 执行插入、更新和删除操作。  
@@ -344,17 +344,17 @@ ms.locfileid: "85650003"
   
 -   根据 DiffGram 处理逻辑，块中的所有顶级元素都 **\<before>** 映射到相应的表，如映射架构中所述。  
   
--   **\<before>** 块具有一个 **\<Order>** 元素（**dffgr： Id = "Order1"**）和一个 **\<Customer>** 元素（**diffgr： id = "Customer1"**），该元素在块中没有相应的元素 **\<DataInstance>** （具有相同的 id）。 这指示一个删除操作，将从 Cust 表和 Ord 表中删除记录。  
+-   **\<before>** 块具有 **\<Order>** 元素 (**dffgr： Id = "Order1"**) 和 **\<Customer>** 元素 (**diffgr： id = "Customer1"**) ，该元素在块中没有对应的元素 (**\<DataInstance>** 具有相同的 id。 这指示一个删除操作，将从 Cust 表和 Ord 表中删除记录。  
   
--   **\<before>** 块具有一个 **\<Customer>** 元素（**diffgr： Id = "Customer2"**），该元素在块中有相应的 **\<Customer>** 元素 **\<DataInstance>** （具有相同的 id）。 块中的元素 **\<DataInstance>** 指定**Diffgr： hasChanges = "modified"**。 这是一项更新操作，在该操作中，客户 ANATR 使用在块中指定的值在 customer 表中更新公司名称和联系人信息 **\<DataInstance>** 。  
+-   **\<before>** 块具有 **\<Customer>** 元素 (**diffgr： Id = "Customer2"**) ，该元素 **\<Customer>** 在 **\<DataInstance>** 块 (具有相同 id) 中具有相应的元素。 块中的元素 **\<DataInstance>** 指定 **Diffgr： hasChanges = "modified"**。 这是一项更新操作，在该操作中，客户 ANATR 使用在块中指定的值在 customer 表中更新公司名称和联系人信息 **\<DataInstance>** 。  
   
--   **\<DataInstance>** 块具有一个 **\<Customer>** 元素（**diffgr： Id = "Customer3"**）和一个 **\<Order>** 元素（**diffgr： id = "Order3"**）。 这两个元素都不指定**diffgr： hasChanges**属性。 因此，DiffGram 处理逻辑将忽略这些元素。  
+-   **\<DataInstance>** 块具有 **\<Customer>** 元素 (**diffgr： Id = "Customer3"**) 和 **\<Order>** 元素 (**diffgr： id = "Order3"**) 。 这两个元素都不指定 **diffgr： hasChanges** 属性。 因此，DiffGram 处理逻辑将忽略这些元素。  
   
--   **\<DataInstance>** 块具有一个 **\<Customer>** 元素（**diffgr： Id = "Customer4"**）和一个 **\<Order>** 元素（**diffgr： id = "Order4"**），该元素在块中没有对应的元素 \<before> 。 块中的这些元素 **\<DataInstance>** 指定**Diffgr： hasChanges = "insert"**。 因此，将在 Cust 表和 Ord 表中添加一条新记录。  
+-   **\<DataInstance>** 块具有 **\<Customer>** 元素 (**diffgr： Id = "Customer4"**) 和 **\<Order>** 元素 (**diffgr： id = "Order4"**) ，该元素在块中没有相应的元素 \<before> 。 块中的这些元素 **\<DataInstance>** 指定 **Diffgr： hasChanges = "insert"**。 因此，将在 Cust 表和 Ord 表中添加一条新记录。  
   
 #### <a name="to-test-the-diffgram"></a>测试 DiffGram  
   
-1.  在**tempdb**数据库中创建以下表。  
+1.  在 **tempdb** 数据库中创建以下表。  
   
     ```  
     CREATE TABLE Cust(  
@@ -390,10 +390,10 @@ ms.locfileid: "85650003"
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行 DiffGram。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="e-applying-updates-by-using-a-diffgram-with-the-diffgrparentid-annotation"></a>E. 通过使用带有 diffgr:parentID 批注的 DiffGram 应用更新  
- 此示例演示如何在应用更新时使用在 DiffGram 的块中指定的**parentID**批注 **\<before>** 。  
+ 此示例演示如何在应用更新时使用在 DiffGram 的块中指定的 **parentID** 批注 **\<before>** 。  
   
 ```  
 <NewDataSet />  
@@ -414,6 +414,6 @@ ms.locfileid: "85650003"
 </diffgr:diffgram>  
 ```  
   
- 此 DiffGram 指定删除操作，因为只有一个 **\<before>** 块。 在 DiffGram 中， **parentID**批注用于指定订单和订单详细信息之间的父子关系。 当 SQLXML 删除记录时，它先从此关系标识的子表中删除记录，然后从相应的父表中删除记录。  
+ 此 DiffGram 指定删除操作，因为只有一个 **\<before>** 块。 在 DiffGram 中， **parentID** 批注用于指定订单和订单详细信息之间的父子关系。 当 SQLXML 删除记录时，它先从此关系标识的子表中删除记录，然后从相应的父表中删除记录。  
   
   

@@ -16,13 +16,13 @@ ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: fd660dcd2e4e79515065bfc9d221afbb3fe2806e
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: ca0b8567115c2a9209efb61185aad4fa4d05fa24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059327"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412969"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives（Azure SQL 数据库）
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]

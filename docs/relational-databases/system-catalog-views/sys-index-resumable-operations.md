@@ -1,6 +1,6 @@
 ---
-description: 'sys. index_resumable_operations (Transact-sql) '
-title: sys. index_resumable_operations (Transact-sql) |Microsoft Docs
+description: 'sys.index_resumable_operations (Transact-sql) '
+title: sys.index_resumable_operations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
 ms.prod: sql
@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6878ccf5d267c265ca7bd90120c1bfc227f16ed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 97f0c09e20da61cce1904b17ae830e5ab24abb98
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546759"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412698"
 ---
-# <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-sql) 
+# <a name="sysindex_resumable_operations-transact-sql"></a>sys.index_resumable_operations (Transact-sql) 
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
-**sys. index_resumable_operations** 是一个系统视图，用于监视和检查当前执行状态以实现可恢复索引重新生成。  
+**sys.index_resumable_operations** 是监视和检查当前执行状态以实现可恢复索引重新生成或创建的系统视图。  
 **适用于**： SQL Server (2017 和更新版本的) 以及 Azure SQL 数据库
   
 |列名称|数据类型|说明|  
@@ -41,7 +41,7 @@ ms.locfileid: "89546759"
 |**sql_text**|**nvarchar(max)**|DDL T-sql 语句文本|
 |**last_max_dop**|**smallint**|上次 MAX_DOP 使用 (默认值 = 0) |
 |**partition_number**|**int**|所属索引或堆中的分区号。 对于未分区的表和索引，或者如果正在重新生成所有分区，则此列的值为 NULL。|
-|State|**tinyint**|可恢复索引的操作状态：<br /><br />0 = 正在运行<br /><br />1 = 暂停|
+|**state**|**tinyint**|可恢复索引的操作状态：<br /><br />0 = 正在运行<br /><br />1 = 暂停|
 |**state_desc**|**nvarchar(60)**|可恢复索引 (运行或已暂停的操作状态的说明) |  
 |**start_time**|**datetime**|索引操作开始时间 (不可为空) |
 |**last_pause_time**|**datatime**| 索引操作上次暂停时间 (可以为 null) 。 如果操作正在运行且从未暂停，则为 NULL。|

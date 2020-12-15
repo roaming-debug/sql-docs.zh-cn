@@ -1,5 +1,5 @@
 ---
-title: 执行 SQL 查询（SQLXML）
+title: " (SQLXML) 执行 SQL 查询"
 description: 了解如何使用 SQLXML 托管类执行 SQL 查询。
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,25 +17,25 @@ ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcb35f21b2208d2d5f924102a48ba1364eb9c154
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9a20d41c1002f9e17ef10dbb86feaef100ce293f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649546"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414202"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>执行 SQL 查询（SQLXML 托管类）
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   此示例演示：  
   
--   创建参数（SqlXmlParameter 对象）。  
+-   ) 创建参数 (SqlXmlParameter 对象。  
   
--   向 SqlXmlParameter 对象的属性（名称和值）分配值。  
+-   为 SqlXmlParameter 对象的 "名称" 和 "值")  (属性赋值。  
   
- 在本示例中，将执行一个简单的 SQL 查询，以检索其姓氏值作为参数传递的雇员的名字、姓氏和出生日期。 在指定参数（*LastName*）的情况下，仅设置了 Value 属性。 未设置 Name 属性，因为在此查询中，参数是位置，无需名称。  
+ 在本示例中，将执行一个简单的 SQL 查询，以检索其姓氏值作为参数传递的雇员的名字、姓氏和出生日期。 在 (*LastName*) 指定参数时，只设置 Value 属性。 未设置 Name 属性，因为在此查询中，参数是位置，无需名称。  
   
- 默认情况下，SqlXmlCommand 对象的 CommandType 属性为**Sql**。 因此，不显式设置此属性。  
+ 默认情况下，SqlXmlCommand 对象的 CommandType 属性为 **Sql**。 因此，不显式设置此属性。  
   
 > [!NOTE]  
 >  在代码中，必须在连接字符串中提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
@@ -102,7 +102,7 @@ public static int Main(String[] args)
 
  若要测试该示例，必须在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework。  
   
- 您可以指定一个模板（如下面的代码段所示），该模板执行 updategram（也是一个模板）来插入客户记录，而不是将 SQL 查询指定为命令文本。 您可以在文件中指定模板和 updategram，然后执行文件。 有关详细信息，请参阅[使用 CommandText 属性执行模板文件](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)。  
+ 您可以指定一个模板（如下面的代码段所示），该模板执行 updategram（也是一个模板）来插入客户记录，而不是将 SQL 查询指定为命令文本。 您可以在文件中指定模板和 updategram，然后执行文件。 有关详细信息，请参阅 [使用 CommandText 属性执行模板文件](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)。  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -156,6 +156,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  你还可以使用返回 XmlReader 对象的 ExecuteXMLReadermethod。 有关详细信息，请参阅[使用 ExecuteXMLReader 方法执行 SQL 查询](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)。  
+>  你还可以使用返回 XmlReader 对象的 ExecuteXMLReadermethod。 有关详细信息，请参阅 [使用 ExecuteXMLReader 方法执行 SQL 查询](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)。  
   
   

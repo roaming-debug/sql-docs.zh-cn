@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLXMLOLEDB 提供程序（SQLXML）
+title: '使用 SQLXMLOLEDB 提供程序 (SQLXML) '
 description: 查看有关在 ADO 应用程序中使用 SQLXMLOLEDB 提供程序特定属性的信息。
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7de27ec74af3b3fd4b0127745416e1f81902f905
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bbecbe6507754412ffd4a95fc60b077a92fc669e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650019"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414982"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>使用 SQLXMLOLEDB 访问接口 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85650019"
   
 2.  部署和安装 SQLXML 4.0 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。  
 
-     有关详细信息，请参阅[SQLXML 4.0 编程概念](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)和[安装 SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
+     有关详细信息，请参阅 [SQLXML 4.0 编程概念](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) 和 [安装 SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [&#40;SQLXMLOLEDB 提供程序执行 SQL 查询&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  

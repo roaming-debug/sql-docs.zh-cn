@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: d60c081eecf88868db4541bc79960bf1bbd8723c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892397"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412888"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -44,10 +44,10 @@ ms.locfileid: "91892397"
 |**database_name**|**sysname**|数据库的名称。 如果连接失败，并且用户未指定数据库名称，则此列为空白。|  
 |**start_time**|**datetime2**|聚合间隔开始的 UTC 日期和时间。 对于聚合事件，时间始终为 5 分钟的倍数。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|聚合间隔结束的 UTC 日期和时间。 对于聚合事件， **End_time** 始终比同一行中对应的 **start_time** 正好晚5分钟。 对于未聚合的事件， **start_time** 和 **end_time** 等于事件的实际 UTC 日期和时间。|  
-|**event_category**|**nvarchar (64) **|生成此事件的高级组件。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
-|event_type|**nvarchar (64) **|事件的类型。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
+|**event_category**|**nvarchar (64)**|生成此事件的高级组件。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
+|event_type|**nvarchar (64)**|事件的类型。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |**event_subtype**|**int**|发生的事件的子类型。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
-|**event_subtype_desc**|**nvarchar (64) **|事件子类型的说明。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
+|**event_subtype_desc**|**nvarchar (64)**|事件子类型的说明。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |severity |**int**|错误的严重性。 可能的值包括：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
 |**event_count**|**int**|在指定的时间间隔内，针对指定数据库发生此事件的次数 (**start_time** 并 **end_time**) 。|  
 |description|**nvarchar(max)**|对事件的详细说明。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
@@ -55,7 +55,7 @@ ms.locfileid: "91892397"
   
 ##  <a name="event-types"></a><a name="EventTypes"></a> 事件类型
 
- 此视图中的每一行记录的事件由类别标识 (**event_category**) 、事件类型 (**event_type**) 和子**类型 (event_subtype) 。** 下表列出了此视图中收集的事件类型。  
+ 此视图中的每一行记录的事件由类别标识 (**event_category**) 、事件类型 (**event_type**) 和子 **类型 (event_subtype) 。** 下表列出了此视图中收集的事件类型。  
   
  对于 " **连接** " 类别中的事件，"sys.database_connection_stats" 视图中提供了摘要信息。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "91892397"
 |**连接**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用 TEMPDB，已终止该会话。 请尝试修改您的查询以减少使用临时表空间。 有关详细信息，请参阅 [资源限制](/previous-versions/azure/dn338081(v=azure.100))。|  
 |**连接**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用事务日志空间，已终止该会话。 请尝试在单个事务中修改更少的行。 有关详细信息，请参阅 [资源限制](/previous-versions/azure/dn338081(v=azure.100))。|  
 |**连接**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用内存，已终止该会话。 请尝试修改您的查询以处理更少的行。 有关详细信息，请参阅 [资源限制](/previous-versions/azure/dn338081(v=azure.100))。|  
-|**搜索引擎优化**|**deadlock**|0|**deadlock**|2|发生死锁。|  
+|**搜索引擎优化**|**死**|0|**死**|2|发生死锁。|  
   
 ## <a name="permissions"></a>权限
 
@@ -105,7 +105,7 @@ ms.locfileid: "91892397"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-start_time-and-end_time"></a>间隔 start_time 和 end_time  
- 事件发生的时间或_之后_**start_time**和该间隔_之前_**end_time** *时，* 聚合间隔中包含一个事件。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
+ 事件发生的时间或 _之后_**start_time** 和该间隔 _之前_**end_time** *时，* 聚合间隔中包含一个事件。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
   
 ```
 start_time                    end_time  

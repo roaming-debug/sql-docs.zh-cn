@@ -1,6 +1,6 @@
 ---
-title: 使用 sql： prefix （SQLXML）的有效 ID 属性
-description: 了解如何使用 sql： prefix 创建有效的 ID、IDREF 和 IDREFS 类型属性（SQLXML 4.0）。
+title: 使用 sql： prefix (SQLXML) 的有效 ID 属性
+description: 了解如何使用 sql： prefix (SQLXML 4.0) 创建有效的 ID、IDREF 和 IDREFS 类型属性。
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -23,19 +23,19 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832607a376c8c08dbcdcff0c70278401a166a7f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 51e236b690c8523337b66d19a9b47755a6117f0c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415731"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>使用 sql:prefix 创建有效的 ID、IDREF 和 IDREFS 类型属性 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   可以将属性指定为 ID 类型属性。 然后，可以用指定为 IDREF 或 IDREFS 的属性引用 ID 类型属性，从而启用文档之间的链接。  
   
- ID、IDREF 和 IDREFS 大体上对应于数据库中的 PK/FK（主键/外键）关系。 在 XML 文档中，ID 类型属性的值必须是唯一的。 如果在 XML 文档中将**CustomerID**和**订单**ID 属性指定为 ID 类型，则这些值必须是唯一的。 但是，在数据库中，CustomerID 和 OrderID 列可以具有相同值。 （例如，CustomerID = 1 和 OrderID = 1 在数据库中都是有效的）。  
+ ID、IDREF 和 IDREFS 大体上对应于数据库中的 PK/FK（主键/外键）关系。 在 XML 文档中，ID 类型属性的值必须是唯一的。 如果在 XML 文档中将 **CustomerID** 和 **订单** ID 属性指定为 ID 类型，则这些值必须是唯一的。 但是，在数据库中，CustomerID 和 OrderID 列可以具有相同值。 （例如，CustomerID = 1 和 OrderID = 1 在数据库中都是有效的）。  
   
  若要使 ID、IDREF 和 IDREFS 属性有效：  
   
@@ -45,19 +45,19 @@ ms.locfileid: "85750811"
   
 -   ID、IDREF 和 IDREFS 的值必须是命名标记。 （例如，整数值 101 不能是 ID 值。）  
   
--   ID、IDREF 和 IDREFS 类型的属性不能映射到类型为**text**、 **ntext**或**image**的列，也不能映射到任何其他二进制数据类型（例如， **timestamp**）。  
+-   ID、IDREF 和 IDREFS 类型的属性不能映射到类型为 **text**、 **ntext** 或 **image** 的列，也不能映射到任何其他二进制数据类型 (例如， **timestamp**) 。  
   
- 如果 XML 文档包含多个 Id，请使用**sql： prefix**批注确保这些值是唯一的。  
+ 如果 XML 文档包含多个 Id，请使用 **sql： prefix** 批注确保这些值是唯一的。  
   
- 请注意，不能将**sql： prefix**批注与 XSD fixed 特性一起使用。  
+ 请注意，不能将 **sql： prefix** 批注与 XSD fixed 特性一起使用。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅 [运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. 指定 ID 和 IDREFS 类型  
  在下面的架构中， **\<Customer>** 元素由 **\<Order>** 子元素组成。 **\<Order>** 元素还有一个子元素，即 **\<OrderDetail>** 元素。  
   
- 的**OrderIDList**属性 **\<Customer>** 是一个 IDREFS 类型属性，该属性引用元素的 "**订单 id** " 属性 **\<Order>** 。  
+ 的 **OrderIDList** 属性 **\<Customer>** 是一个 IDREFS 类型属性，该属性引用元素的 " **订单 id** " 属性 **\<Order>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -133,7 +133,7 @@ ms.locfileid: "85750811"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是部分结果：  
   

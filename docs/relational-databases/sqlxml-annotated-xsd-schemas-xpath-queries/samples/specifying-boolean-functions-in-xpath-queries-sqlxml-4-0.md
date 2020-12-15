@@ -1,6 +1,6 @@
 ---
-title: 在 XPath 查询中使用布尔函数（SQLXML）
-description: 了解如何在 XPath 查询中指定 SQLXML 4.0 布尔函数 true （）、false （）和 not （）。
+title: " (SQLXML) 使用 XPath 查询中的布尔函数"
+description: '了解如何在 XPath 查询中指定 SQLXML 4.0 布尔函数 true ( # A1、false ( # A3 和 not ( # A5。'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +17,17 @@ ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7180a820a8b5a6daf6ef02d94582ff07ad6f6a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1100374106182ed3575fc4a22183780d25a5243a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773022"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97413394"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔函数 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  以下示例说明如何在 XPath 查询中指定布尔函数。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  以下示例说明如何在 XPath 查询中指定布尔函数。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅 [&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85773022"
 /child::Customer[not(child::Order)]  
 ```  
   
- **子**轴是默认值。 因此，可以将该查询指定为：  
+ **子** 轴是默认值。 因此，可以将该查询指定为：  
   
 ```  
 /Customer[not(Order)]  
@@ -46,7 +46,7 @@ ms.locfileid: "85773022"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
-1.  复制[示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
+1.  复制 [示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) ，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (BooleanFunctionsA.xml) 并将其保存到保存 SampleSchema1.xml 的目录中。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85773022"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
 
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是执行该模板的部分结果集：  
   
@@ -86,7 +86,7 @@ ms.locfileid: "85773022"
 /child::Customer[child::Order=false()]  
 ```  
   
- **子**轴是默认值。 因此，可以将该查询指定为：  
+ **子** 轴是默认值。 因此，可以将该查询指定为：  
   
 ```  
 /Customer[Order=false()]  
@@ -112,7 +112,7 @@ ms.locfileid: "85773022"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
-1.  复制[示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
+1.  复制 [示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) ，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (BooleanFunctionsB.xml) 并将其保存到保存 SampleSchema1.xml 的目录中。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "85773022"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是执行该模板的部分结果集：  
   

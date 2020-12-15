@@ -17,13 +17,13 @@ ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ad966d5a6cc4a624310d7c20ed60ea8a9210137
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 86cf0f5133adf3bbf1e8efa8ff0e93ff4bc98c66
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649430"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414150"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 属性执行模板文件
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ class Test
   
 2.  将该示例中提供的 XML 模板 (TemplateFile.xml) 保存在某个文件夹中。  
   
-3.  将此示例中提供的 c # 代码（DocSample.cs）保存到存储架构的相同文件夹中。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
+3.  将此示例中提供的 c # 代码 (DocSample.cs) 保存到存储架构的相同文件夹中。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
   
 4.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   
@@ -94,7 +94,7 @@ class Test
   
 5.  在命令提示符下，执行 DocSample.exe。  
 
- 如果将参数传递给模板，则参数名称必须以 at 符号（@）开头;例如，p.Name = " \@ ContactID"，其中 p 为 SqlXmlParameter 对象。  
+ 如果将参数传递给模板，则参数名称必须以 at 符号 ( @ ) 开头。例如，p.Name = " \@ ContactID"，其中 p 为 SqlXmlParameter 对象。  
   
  下面是接受一个参数后的已更新模板。  
   

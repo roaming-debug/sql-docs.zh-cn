@@ -26,17 +26,17 @@ helpviewer_keywords:
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd890e8c81638531d7e89d67ca3ffb027b77f071
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f67372e6814babb2c3b344a84ffe8f361113e56f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649891"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414979"
 ---
 # <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0 .NET Framework 支持 - 使用 DiffGrams 修改数据
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  DiffGram 格式是在 .NET Framework 的**数据集**组件中引入的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 在 .NET Framework 中，您可以创建 DiffGram，并使用它来修改 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的表的数据。  
+  DiffGram 格式是在 .NET Framework 的 **数据集** 组件中引入的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 在 .NET Framework 中，您可以创建 DiffGram，并使用它来修改 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的表的数据。  
   
 > [!NOTE]  
 >  本部分简单介绍了 DiffGram，并提供了如何使用 DiffGram 的示例。 本部分假定您熟悉 .NET Framework 中的 DiffGram。 本文档重点关注特定于 SQLXML 的 DiffGram 问题。  
@@ -45,7 +45,7 @@ ms.locfileid: "85649891"
  [SQLXML 4.0 中的 DiffGrams 简介](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/introduction-to-diffgrams-in-sqlxml-4-0.md)  
  提供有关 Diffgram 的基本信息。  
   
- [&#40;SQLXML 4.0&#41;的 DiffGram 示例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的 DiffGram 示例 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
  提供使用 Diffgram 的示例。  
   
  [使用 ADO 执行 DiffGram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  

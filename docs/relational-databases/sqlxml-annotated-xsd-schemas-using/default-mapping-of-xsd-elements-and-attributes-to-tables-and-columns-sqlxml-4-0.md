@@ -1,5 +1,5 @@
 ---
-title: 到表/列的默认 XSD 映射（SQLXML）
+title: " (SQLXML) 默认的 XSD 映射到表/列"
 description: 了解如何在默认情况下将 XSD 架构中的元素和属性映射到 SQLXML 4.0 中的表和列。
 ms.date: 03/17/2017
 ms.prod: sql
@@ -27,23 +27,23 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1820f99d5250d9687fb83c57f9f743e2e1b5c33b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fbe7cea458f317138f4ad63698c3ff68af0eacd7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750801"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415715"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和属性到表和列的默认映射 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   默认情况下，XSD 带批注的架构中复杂类型的元素映射到指定数据库中具有相同名称的表（视图），而简单类型的元素或属性映射到表中具有相同名称的列。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅 [运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 指定默认映射  
- 在本示例中，不在 XSD 架构中指定任何批注。 **\<Person.Contact>** 元素属于复杂类型，因此默认情况下映射到 AdventureWorks 数据库中的 Person 表。 元素的所有属性（ContactID、FirstName、LastName） **\<Person.Contact>** 都是简单类型，默认情况下映射到 Person 表中具有相同名称的列。  
+ 在本示例中，不在 XSD 架构中指定任何批注。 **\<Person.Contact>** 元素属于复杂类型，因此默认情况下映射到 AdventureWorks 数据库中的 Person 表。 元素 (ContactID、FirstName、LastName) 的所有属性 **\<Person.Contact>** 都属于简单类型，并且默认映射为 Person 表中具有相同名称的列。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -80,7 +80,7 @@ ms.locfileid: "85750801"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是部分结果集：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "85750801"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. 将 XML 元素映射到数据库列  
- 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Person.Contact>** 元素属于复杂类型，并且映射到数据库中具有相同名称的表。 元素 **\<FirstName>** 和 **\<LastName>** "**雇员 id** " 属性属于简单类型，因此，映射到具有相同名称的列。 本示例与前一示例的唯一差别在于本示例使用元素来映射 FirstName 和 LastName 字段。  
+ 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Person.Contact>** 元素属于复杂类型，并且映射到数据库中具有相同名称的表。 元素 **\<FirstName>** 和 **\<LastName>** " **雇员 id** " 属性属于简单类型，因此，映射到具有相同名称的列。 本示例与前一示例的唯一差别在于本示例使用元素来映射 FirstName 和 LastName 字段。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -133,7 +133,7 @@ ms.locfileid: "85750801"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是部分结果集：  
   
@@ -148,7 +148,7 @@ ms.locfileid: "85750801"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. 将 XML 元素映射到 XML 数据类型列  
- 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Production.ProductModel>** 元素属于复杂类型，并且映射到数据库中具有相同名称的表。 **ProductModelID**属性属于简单类型，因此，映射到具有相同名称的列。 此示例与前一个示例的唯一区别在于，该 **\<Instructions>** 元素通过使用**Xsd： anyType**类型映射到使用**xml**数据类型的列。  
+ 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Production.ProductModel>** 元素属于复杂类型，并且映射到数据库中具有相同名称的表。 **ProductModelID** 属性属于简单类型，因此，映射到具有相同名称的列。 此示例与前一个示例的唯一区别在于，该 **\<Instructions>** 元素通过使用 **Xsd： anyType** 类型映射到使用 **xml** 数据类型的列。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -164,7 +164,7 @@ ms.locfileid: "85750801"
 </xsd:schema>  
 ```  
   
- **Xml**数据类型是在中引入的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
+ **Xml** 数据类型是在中引入的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
@@ -188,7 +188,7 @@ ms.locfileid: "85750801"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是部分结果集：  
   
@@ -208,7 +208,7 @@ ctions">
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SQLXML 4.0 的批注的架构安全注意事项&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
+ [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)   
  [SQLXML 4.0 中的 xml 数据类型支持](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

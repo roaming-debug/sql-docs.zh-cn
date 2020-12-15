@@ -1,5 +1,5 @@
 ---
-title: XML 大容量加载示例（SQLXML）
+title: " (SQLXML) 的 XML 大容量加载示例"
 description: 查看 SQKXML 4.0 中 XML 大容量加载功能的详细示例，其中每个示例都有 XSD 和 XDR 架构。
 ms.date: 03/17/2017
 ms.prod: sql
@@ -32,20 +32,20 @@ ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9ec14bb6a13b3dc8675c2bf2710bdcf101b80ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 181b5a7dd62b5a3cae2ff433f718d8c40b40e6bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650826"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415176"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 大容量加载示例 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   以下示例说明 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 XML 大容量加载功能。 每个示例都提供了 XSD 架构及其等效的 XDR 架构。  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>Bulk Loader 脚本 (ValidateAndBulkload.vbs)  
- 下面的脚本是用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition （VBScript）编写的，它将 xml 文档加载到 XML DOM 中; 对架构进行验证; 如果文档有效，则执行 xml 大容量加载将 xml 加载到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表中。 此脚本可用于本主题后面提到它的每个单独示例。  
+ 下面的脚本编写在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) ，将 xml 文档加载到 XML DOM 中; 根据架构对其进行验证; 如果文档有效，则执行 xml 大容量加载将 xml 加载到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表中。 此脚本可用于本主题后面提到它的每个单独示例。  
   
 > [!NOTE]  
 >  如果未从数据文件中上载任何内容，XML 大容量加载将不引发警告或错误。 因此，最好在执行大容量加载操作之前验证您的 XML 数据文件。  
@@ -114,7 +114,7 @@ End Function
 ```  
   
 ## <a name="a-bulk-loading-xml-in-a-table"></a>A. 将 XML 大容量加载到表中  
- 此示例与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ConnectionString 属性（MyServer）中指定的实例建立连接。 该示例还指定 ErrorLogFile 属性。 因此，错误输出将保存在指定的文件（“C:\error.log”）中，您也可以决定将其更改为其他位置。 另请注意，Execute 方法将两个映射架构文件（SampleSchema.xml）和 XML 数据文件（SampleXMLData.xml）作为其参数。 当执行大容量加载时，在**tempdb**数据库中创建的 "用户" 表将包含基于 XML 数据文件内容的新记录。  
+ 此示例与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (MyServer) 的 ConnectionString 属性中指定的实例建立连接。 该示例还指定 ErrorLogFile 属性。 因此，错误输出将保存在指定的文件（“C:\error.log”）中，您也可以决定将其更改为其他位置。 另请注意，Execute 方法将映射架构文件 ( # A0) 和 XML 数据文件 ( # A1) 。 当执行大容量加载时，在 **tempdb** 数据库中创建的 "用户" 表将包含基于 XML 数据文件内容的新记录。  
   
 #### <a name="to-test-a-sample-bulk-load"></a>测试示例大容量加载  
   
@@ -227,11 +227,11 @@ End Function
 </ROOT>  
 ```  
   
- 此示例将 XML 数据大容量加载**到以下两**个**表中：**  
+ 此示例将 XML 数据大容量加载 **到以下两** 个 **表中：**  
   
--   客户（CustomerID、公司名称、城市）  
+-   客户 (CustomerID、公司名称、城市)   
   
--   CustOrder （订单 Id，CustomerID）  
+-   CustOrder (订单 id，CustomerID)   
   
  以下 XSD 架构定义这些表的 XML 视图。 架构指定和元素之间的父子关系 **\<Customer>** **\<Order>** 。  
   
@@ -276,7 +276,7 @@ End Function
   
 #### <a name="to-test-a-sample-bulk-load"></a>测试示例大容量加载  
   
-1.  在**tempdb**数据库中创建两个表：  
+1.  在 **tempdb** 数据库中创建两个表：  
   
     ```sql  
     USE tempdb;  
@@ -543,7 +543,7 @@ OrderDetail (OrderID, ProductID)
     </ROOT>  
     ```  
   
-4.  在您首选的文本编辑器或 XML 编辑器中创建文件，然后将其另存为 ValidateAndBulkload.vbs。 在此文件中，添加以下 VBScript 代码。 修改连接字符串以提供适当的服务器和数据库名称。 为充当**Execute**方法的参数的文件指定适当的路径。  
+4.  在您首选的文本编辑器或 XML 编辑器中创建文件，然后将其另存为 ValidateAndBulkload.vbs。 在此文件中，添加以下 VBScript 代码。 修改连接字符串以提供适当的服务器和数据库名称。 为充当 **Execute** 方法的参数的文件指定适当的路径。  
   
     ```  
     Set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -589,7 +589,7 @@ Set objBL = Nothing
   
 1.  在您首选的文本编辑器或 XML 编辑器中创建文件，然后将其另存为 SampleSchema.xml。 将在前面的示例“使用架构中的链关系大容量加载 XML”中提供的 XSD 架构添加到此文件中。  
   
-2.  在您首选的文本编辑器或 XML 编辑器中创建文件，然后将其另存为 SampleXMLData.xml。 将在前面的示例“使用架构中的链关系大容量加载 XML”中提供的 XML 文档添加到此文件中。 \<ROOT>从文档中删除元素（使其成为片段）。  
+2.  在您首选的文本编辑器或 XML 编辑器中创建文件，然后将其另存为 SampleXMLData.xml。 将在前面的示例“使用架构中的链关系大容量加载 XML”中提供的 XML 文档添加到此文件中。 删除 \<ROOT> 文档 (中的元素，使其成为) 片段。  
   
 3.  在您首选的文本编辑器或 XML 编辑器中创建文件，然后将其另存为 ValidateAndBulkload.vbs。 在此文件中，添加本示例中的 VBScript 代码。 修改连接字符串以提供适当的服务器和数据库名称。 为指定为 Execute 方法的参数的文件指定适当的路径。  
   
@@ -708,7 +708,7 @@ Set objBL = Nothing
 ```  
   
 ### <a name="opening-a-stream-on-an-existing-file"></a>在现有文件中打开流  
- 你还可以在现有的 XML 数据文件上打开流，并将流作为参数传递给 Execute 方法（而不是将文件名作为参数传递）。  
+ 您还可以在现有的 XML 数据文件上打开流，并将该流作为参数传递给 Execute 方法 (而不是将文件名作为参数传递) 。  
   
  以下是将流作为参数传递的 Visual Basic 示例：  
   
@@ -810,7 +810,7 @@ End Sub
 ```  
   
 ## <a name="g-bulk-loading-in-overflow-columns"></a>G. 在溢出列中执行大容量加载  
- 如果映射架构通过使用**sql：溢出字段**批注指定溢出列，则 XML 大容量加载会将源文档中所有未用完的数据复制到此列中。  
+ 如果映射架构通过使用 **sql：溢出字段** 批注指定溢出列，则 XML 大容量加载会将源文档中所有未用完的数据复制到此列中。  
   
  请看下面的 XSD 架构：  
   
@@ -850,11 +850,11 @@ End Sub
  此架构标识 Cust 表的溢出列 (OverflowColumn)。 因此，每个元素的所有未用完的 XML 数据 **\<Customer>** 都将添加到此列中。  
   
 > [!NOTE]  
->  所有抽象元素（指定了**abstract = "true"** 的元素）和所有禁止属性（为其指定了**禁止 = "true"** 的属性）被 XML 大容量加载视为溢出，并将其添加到溢出列（如果已指定）。 （否则，将忽略它们。）  
+>  ) 为其指定了 **abstract = "true"** (元素的所有抽象元素，并且指定了 **禁止 = "true"** (属性) 被 XML 大容量加载时被视为溢出，并将其添加到了溢出列（如果已指定）。 （否则，将忽略它们。）  
   
 #### <a name="to-test-a-working-sample"></a>测试工作示例  
   
-1.  在**tempdb**数据库中创建两个表：  
+1.  在 **tempdb** 数据库中创建两个表：  
   
     ```  
     USE tempdb;  
@@ -954,7 +954,7 @@ End Sub
 ```  
   
 ## <a name="h-specifying-the-file-path-for-temp-files-in-transaction-mode"></a>H. 在事务模式下为 temp 文件指定文件路径  
- 当你在事务模式下进行大容量加载时（即，当 Transaction 属性设置为 TRUE 时），如果满足以下条件之一，则还必须设置 TempFilePath 属性：  
+ 在事务模式下进行大容量加载时 (也就是说，当 Transaction 属性设置为 TRUE) 时，如果满足以下条件之一，则还必须设置 TempFilePath 属性：  
   
 -   您要大容量加载到远程服务器。  
   
@@ -974,11 +974,11 @@ set objBL=Nothing
 ```  
   
 > [!NOTE]  
->  此临时文件路径必须是一个共享位置，该共享位置可供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的目标实例的服务帐户和运行大容量加载应用程序的帐户访问。 除非在本地服务器上进行大容量加载，否则临时文件路径必须是 UNC 路径（例如 \\ \servername\sharename ....）。  
+>  此临时文件路径必须是一个共享位置，该共享位置可供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的目标实例的服务帐户和运行大容量加载应用程序的帐户访问。 除非在本地服务器上进行大容量加载，否则临时文件路径必须是 UNC 路径 (例如 \\ \servername\sharename ....) 。  
   
 #### <a name="to-test-a-working-sample"></a>测试工作示例  
   
-1.  在**tempdb**数据库中创建此表：  
+1.  在 **tempdb** 数据库中创建此表：  
   
     ```  
     USE tempdb;  
@@ -1033,7 +1033,7 @@ set objBL=Nothing
   
 5.  执行 VBScript 代码。  
   
-     当**customerid**的值指定为包含大括号（{和}）的 GUID 时，架构必须为**customerid**特性指定相应的**sql： datatype** ，如：  
+     当 **customerid** 的值指定为包含大括号 ( {and} ) 的 GUID 时，架构必须为 **customerid** 特性指定相应的 **sql： datatype** ，如：  
   
     ```  
     <ROOT>  
@@ -1065,7 +1065,7 @@ set objBL=Nothing
     </xsd:schema>  
     ```  
   
-     如果指定**sql： datatype**将列类型标识为**uniqueidentifier**，则大容量加载操作将从**CustomerID**值中删除大括号（{和}），然后将其插入到列中。  
+     如果指定 **sql： datatype** 将列类型标识为 **uniqueidentifier**，则大容量加载操作将从 **CustomerID** 值中删除大括号 ( {and} ) ，然后将其插入列中。  
   
  这是等效的 XDR 架构：  
   
@@ -1116,7 +1116,7 @@ End Sub
   
 #### <a name="to-test-a-working-sample"></a>测试工作示例  
   
-1.  在**tempdb**数据库中创建两个表：  
+1.  在 **tempdb** 数据库中创建两个表：  
   
     ```  
     USE tempdb;  
@@ -1245,9 +1245,9 @@ End Sub
 ```  
   
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. 在 xml 数据类型列中执行大容量加载  
- 如果映射架构通过使用**sql： datatype = "xml"** 批注指定了[xml 数据类型](../../../t-sql/xml/xml-transact-sql.md)列，则 xml 大容量加载可以将源文档中映射字段的 xml 子元素复制到此列中。  
+ 如果映射架构通过使用 **sql： datatype = "xml"** 批注指定了 [xml 数据类型](../../../t-sql/xml/xml-transact-sql.md)列，则 xml 大容量加载可以将源文档中映射字段的 xml 子元素复制到此列中。  
   
- 请看以下 XSD 架构，它映射 AdventureWorks 示例数据库中 Production.ProductModel 表的视图。 在此表中， **xml**数据类型的 CatalogDescription 字段 **\<Desc>** 使用**sql： field**和**sql： datatype = "xml"** 注释映射到元素。  
+ 请看以下 XSD 架构，它映射 AdventureWorks 示例数据库中 Production.ProductModel 表的视图。 在此表中， **xml** 数据类型的 CatalogDescription 字段 **\<Desc>** 使用 **sql： field** 和 **sql： datatype = "xml"** 注释映射到元素。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
