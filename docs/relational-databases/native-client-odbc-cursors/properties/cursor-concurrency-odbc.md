@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 324e193ff8ac1f98c00f8569c0da2a3c93f56ad0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 343eaeceeb12e71f0df9b4a2791120007effac46
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420661"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473718"
 ---
 # <a name="cursor-concurrency-odbc"></a>游标并发 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

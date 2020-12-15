@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fb15ad9040276302586efc1b9661ff1e08e62e2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 184328e9b6d5c197b06f89f151942535a90f7f91
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548389"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474648"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ sp_addextendedproperty
 [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @name ] = {'*property_name*'}  
  要添加的属性的名称。 *property_name* 为 **sysname** ，且不能为 NULL。 名称还可以包括空格或非字母数字字符串以及二进制值。  
   
@@ -61,7 +61,7 @@ sp_addextendedproperty
  要与属性关联的值。 *值* **sql_variant**，默认值为 NULL。 *value* 的大小不能超过 7,500 个字节。  
   
  [ @level0type =] {'*level0_object_type*'}  
- 级别 0 对象的类型。 *level0_object_type* 是 **varchar (128) **，默认值为 NULL。  
+ 级别 0 对象的类型。 *level0_object_type* 是 **varchar (128)**，默认值为 NULL。  
   
  有效输入包括：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE 和 NULL。  
   
@@ -72,12 +72,12 @@ sp_addextendedproperty
  所指定的级别 0 对象类型的名称。 *level0_object_name* 的值为 **sysname** ，默认值为 NULL。  
   
  [ @level1type =] {'*level1_object_type*'}  
- 级别 1 对象的类型。 *level1_object_type* 是 **varchar (128) **，默认值为 NULL。 有效的输入包括 AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SEQUENCE、同义词、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。    
+ 级别 1 对象的类型。 *level1_object_type* 是 **varchar (128)**，默认值为 NULL。 有效的输入包括 AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SEQUENCE、同义词、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。    
  [ @level1name =] {'*level1_object_name*'}  
  所指定的级别 1 对象类型的名称。 *level1_object_name* 的默认值为 **sysname**，默认值为 NULL。  
   
  [ @level2type =] {'*level2_object_type*'}  
- 级别 2 对象的类型。 *level2_object_type* 是 **varchar (128) **，默认值为 NULL。 有效的输入包括：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
+ 级别 2 对象的类型。 *level2_object_type* 是 **varchar (128)**，默认值为 NULL。 有效的输入包括：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
  [ @level2name =] {'*level2_object_name*'}  
  所指定的级别 2 对象类型的名称。 *level2_object_name* 的默认值为 **sysname**，默认值为 NULL。  
@@ -100,7 +100,7 @@ sp_addextendedproperty
  仅在发布服务器和订阅服务器之间的初始同步中复制扩展属性。 如果在初始同步之后添加或修改扩展属性，则不会复制该更改。 有关如何复制数据库对象的详细信息，请参阅 [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
 ## <a name="schema-vs-user"></a>架构与User  
- 建议不要在将扩展属性应用于数据库对象时指定 USER 作为级别 0 类型，因为这会导致名称解析不明确。 例如，假定用户 Mary 拥有两个架构（Mary 和 MySchema），并且这两个架构都包含名为 MyTable 的表。 如果 Mary 将扩展属性添加到表 MyTable 并指定** @level0type = N'USER '**， ** @level0name = Mary**，则扩展属性应用于哪个表并不明确。 为了保持向后兼容，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将属性应用于名为 Mary 的架构中包含的表。  
+ 建议不要在将扩展属性应用于数据库对象时指定 USER 作为级别 0 类型，因为这会导致名称解析不明确。 例如，假定用户 Mary 拥有两个架构（Mary 和 MySchema），并且这两个架构都包含名为 MyTable 的表。 如果 Mary 将扩展属性添加到表 MyTable 并指定 **@level0type = N'USER '**， **@level0name = Mary**，则扩展属性应用于哪个表并不明确。 为了保持向后兼容，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将属性应用于名为 Mary 的架构中包含的表。  
   
 ## <a name="permissions"></a>权限  
  db_owner 和 db_ddladmin 固定数据库角色的成员可以向任何对象添加扩展属性，但以下情况例外：db_ddladmin 不能向数据库本身添加属性，也不能向用户或角色中添加属性。  
@@ -238,7 +238,7 @@ EXEC sys.sp_addextendedproperty
   
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys. fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   

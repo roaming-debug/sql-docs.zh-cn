@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b060b0d22b3fa4eb5557b6903164974874f5d30
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 847e046c89a11ec8d26db47d33f6f605c24cef28
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753925"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474708"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "91753925"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|当前数据库的名称|  
-|**SCHEMA_NAME**|**nvarchar (** 128 **) **|返回架构名称。|  
-|**SCHEMA_OWNER**|**nvarchar (** 128 **) **|架构所有者名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠的方式是查询 sys.objects 目录视图。|  
-|**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (** 6 **) **|始终返回 NULL。|  
-|**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (** 3 **) **|始终返回 NULL。|  
+|**SCHEMA_NAME**|**nvarchar (** 128 **)**|返回架构名称。|  
+|**SCHEMA_OWNER**|**nvarchar (** 128 **)**|架构所有者名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠的方式是查询 sys.objects 目录视图。|  
+|**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|始终返回 NULL。|  
+|**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|始终返回 NULL。|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|返回默认字符集的名称。|  
 
 **示例**  

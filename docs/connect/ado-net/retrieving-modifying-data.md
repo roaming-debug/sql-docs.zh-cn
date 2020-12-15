@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d6e4d6c298c632c446e1671b5d9adabaa19e0776
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419730"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761485"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中检索和修改数据
 
@@ -27,13 +27,23 @@ ms.locfileid: "96419730"
 
 ## <a name="in-this-section"></a>在本节中
 
-[连接到数据源](connecting-to-data-source.md)介绍如何建立与数据源的连接以及如何使用连接事件。
+[连接到数据源](connecting-to-data-source.md)  
+说明如何建立到数据源的连接及如何使用连接事件。
 
-[连接字符串](connection-strings.md)包含介绍使用连接字符串的各个方面的主题，包括连接字符串关键字、安全信息以及存储和检索连接字符串。
+[连接字符串](connection-strings.md)  
+包含说明使用连接字符串（包括连接字符串关键字、安全信息以及存储和检索连接字符串）的各个方面的主题。
 
-[连接池](connection-pooling.md)介绍 Microsoft SqlClient Data Provider for SQL Server 的连接池。
+[连接池](connection-pooling.md)  
+介绍 Microsoft SqlClient Data Provider for SQL Server 的连接池。
+
+[命令和参数](commands-parameters.md)  
+包含说明如何创建命令和命令生成器、配置参数以及如何执行命令来检索和修改数据的主题。
+
+[DataAdapter 和 DataReader](dataadapters-datareaders.md)  
+包含说明 DataReader、DataAdapter、参数、处理 DataAdapter 事件和执行批操作的主题。
 
 ## <a name="see-also"></a>请参阅
 
 - [ADO.NET 中的数据类型映射](data-type-mappings-ado-net.md)
 - [SQL Server 和 ADO.NET](./sql/index.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

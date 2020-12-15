@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
-title: sys. dm_exec_describe_first_result_set_for_object (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_describe_first_result_set_for_object (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9600439c2f3d58d38cea393886ed90a55e5e7d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fb51b9913b8a45b582520174cf98a226918d6aa3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550294"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474908"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   此动态管理函数采用 @object_id 作为参数，并描述具有该 ID 的模块的第一个结果元数据。 @object_id指定的可以是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程或触发器的 ID [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 如果它是其他任何对象（如视图、表、函数或 CLR 过程）的 ID，则会在结果的错误列中指定错误。  
   
- **sys. dm_exec_describe_first_result_set_for_object** 具有与 dm_exec_describe_first_result_set sys.databases 相同的结果集定义 [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ，与 [sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)类似。  
+ **sys.dm_exec_describe_first_result_set_for_object** 具有与 [sys.dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 相同的结果集定义，并且类似于 sp_describe_first_result_set &#40;[transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ sys.dm_exec_describe_first_result_set_for_object
     ( @object_id , @include_browse_information )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *\@object_id*  
- @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器的。  的类型为 int@object_id****。  
+ @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器的。  的类型为 int@object_id。  
   
  *\@include_browse_information*  
  @include_browse_information 的类型为 **bit**。 如果设置为 1，则分析每个查询，就好像它在查询中使用 FOR BROWSE 选项。 返回其他键列和源表信息。  
@@ -61,7 +61,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_nullable**|**bit**|如果列允许 NULL，则包含值 1；如果列不允许 NULL，则包含 0；如果不能确定列是否允许 NULL，则为 1。|  
 |**system_type_id**|**int**|包含 sys.databases 中指定的列数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含数据类型名称。 包含为列数据类型指定的参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  
-|**max_length**|**smallint**|列的最大长度（字节）。<br /><br /> -1 = 列数据类型为 **varchar (max) **、 **nvarchar (max) **、 **varbinary (max) **或 **xml**。<br /><br /> 对于 **text** 列， **max_length** 值将是16，或者是 **sp_tableoption "text in row"** 设置的值。|  
+|**max_length**|**smallint**|列的最大长度（字节）。<br /><br /> -1 = 列数据类型为 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)** 或 **xml**。<br /><br /> 对于 **text** 列， **max_length** 值将是16，或者是 **sp_tableoption "text in row"** 设置的值。|  
 |**精度**|**tinyint**|如果为基于数值的列，则为该列的精度。 否则，返回 0。|  
 |**scale**|**tinyint**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
 |**collation_name**|**sysname**|如果列包含的是字符，则为该列的排序规则的名称。 否则，返回 NULL。|  
@@ -93,7 +93,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |error_number|**int**|包含函数返回的错误号。 如果列中未发生错误，则包含 NULL。|  
 |**error_severity**|**int**|包含函数返回的严重性。 如果列中未发生错误，则包含 NULL。|  
 |**error_state**|**int**|包含函数返回的状态消息。 如果未发生错误， 则该列包含 NULL。|  
-|**error_message**|**nvarchar (4096) **|包含函数返回的消息。 如果未发生错误，则该列包含 NULL。|  
+|**error_message**|**nvarchar (4096)**|包含函数返回的消息。 如果未发生错误，则该列包含 NULL。|  
 |**error_type**|**int**|包含一个整数，它表示返回的错误。 映射到 error_type_desc。 请参阅“备注”中的列表。|  
 |**error_type_desc**|**nvarchar(60)**|包含一个简短的大写字符串，它表示返回的错误。 映射到 error_type。 请参阅“备注”中的列表。|  
   
@@ -139,7 +139,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. 结合使用 sys.dm_exec_describe_first_result_set_for_object 函数和表或视图  
- 下面的示例使用 sys.databases 系统目录视图和 **sys.databases. dm_exec_describe_first_result_set_for_object** 函数显示数据库中所有存储过程的结果集的元数据 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
+ 下面的示例使用 sys.databases 系统目录视图和 **sys.dm_exec_describe_first_result_set_for_object** 函数显示数据库中所有存储过程的结果集的元数据 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 USE AdventureWorks2012;  
@@ -155,6 +155,6 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [sp_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

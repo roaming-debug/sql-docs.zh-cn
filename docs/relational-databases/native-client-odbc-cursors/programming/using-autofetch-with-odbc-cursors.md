@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 57bd55f4-8945-4d8d-9f58-d30c81d2a514
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60f044aa6568d73364e6adf56cff54354c5e82f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: abb1bb038273bfd2d1e9e4bdd2d6f130285361e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473738"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>通过 ODBC 游标使用自动提取
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

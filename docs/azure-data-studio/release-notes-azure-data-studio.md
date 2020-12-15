@@ -8,17 +8,28 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 11/12/2020
-ms.openlocfilehash: b9bfda0507b81211feefb0fdb2505ae31f0c8c3b
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.date: 12/9/2020
+ms.openlocfilehash: cd990278d7478c089df7b01fa4a3738ad36368c3
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442649"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933843"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](./download-azure-data-studio.md)**
+
+## <a name="december-2020"></a>2020 年 12 月
+
+2020 年 12 月 9 日 &nbsp; / &nbsp; 版本：1.25.0
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| ------ | ------- |
+| Bug 修复 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22December+2020+Release%22)。 |
+| 数据库项目扩展更新 | 已添加工作区并改进边栏 |
 
 ## <a name="november-2020"></a>2020 年 11 月
 

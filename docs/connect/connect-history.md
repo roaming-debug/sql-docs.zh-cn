@@ -2,18 +2,18 @@
 title: Microsoft SQL Server 的驱动程序历史记录 | Microsoft Docs
 description: 本页面介绍 Microsoft 用于连接到 SQL Server 的历史数据连接技术。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 12/08/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5db99b78cc5c5d251baee6028d1c9bc4e7448bf
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: dee1514230f3e0ce0f0ba4c0d3af904cc90c9720
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885764"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933806"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server 的驱动程序历史记录
 
@@ -21,7 +21,7 @@ ms.locfileid: "82885764"
 
 ## <a name="odbc"></a>ODBC
 
-有三代不同的 Microsoft ODBC Driver for SQL Server。 第一代“SQL Server”ODBC 驱动程序仍作为 [Windows 数据访问组件](#microsoft-or-windows-data-access-components)的一部分提供。 不建议在新开发中使用此驱动程序。 从 SQL Server 2005 开始，[SQL Server Native Client](#sql-server-native-client) 包含一个 ODBC 接口，并且它是 SQL Server 2005 至 SQL Server 2012 中随附的 ODBC 驱动程序。 不建议在新开发中使用此驱动程序。 在 SQL Server 2012 之后，[Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server) 驱动程序随最新的服务器功能进行更新。
+有三代不同的 Microsoft ODBC Driver for SQL Server。 第一代“SQL Server”ODBC 驱动程序仍作为 [Windows 数据访问组件](#microsoft-or-windows-data-access-components)的一部分提供。 对于新开发，不建议使用此驱动程序。 从 SQL Server 2005 开始，[SQL Server Native Client](#sql-server-native-client) 包含一个 ODBC 接口，并且它是 SQL Server 2005 至 SQL Server 2012 中随附的 ODBC 驱动程序。 对于新开发，也不建议使用此驱动程序。 在 SQL Server 2012 之后，[Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server) 驱动程序随最新的服务器功能进行更新。
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
@@ -39,7 +39,15 @@ SQL Server Native Client 是一个用于 OLE DB 和 ODBC 的独立库。 SQL Ser
 
 ## <a name="adonet"></a>ADO.NET
 
-ADO.NET 是随 Microsoft .NET Framework 引入的，并将继续进行改进和维护。 它是 Microsoft .NET Framework 的核心组件。 有关详细信息，请参阅 [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-sql-server.md)。
+ADO.NET 是一组类，用于定义用于访问任何类型的数据源（关系数据源和非关系数据源）的接口。 ADO.NET 是随 Microsoft .NET Framework 引入的，并将在 .NET 中继续进行改进和维护。 SqlClient 库是一个 ADO.NET 数据提供程序，它提供与 SQL Server 和 Azure SQL 数据源的连接。
+
+### <a name="systemdatasqlclient"></a>System.Data.SqlClient
+
+System.Data.SqlClient 包含在 .NET Framework 和 .NET Core 中。 直到 2019 年，它都会接收定期功能更新。 随着宣布[将来的 .NET Core、.NET Framework](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) 和[常规 .NET](https://devblogs.microsoft.com/dotnet/introducing-net-5/)，SqlClient 的开发需要移动到 .NET 以外的包。 System.Data.SqlClient 仍受支持，但不接收功能更新，因此不建议用于新开发。
+
+### <a name="microsoftdatasqlclient"></a>Microsoft.Data.SqlClient
+
+[于 2019 年引入](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/)的 Microsoft SqlClient Data Provider for SQL Server 是一个 ADO.NET 数据提供程序，支持面向 .NET Framework、.NET Core 和 .NET Standard 的应用程序。 有关 Microsoft.Data.SqlClient 命名空间的详细信息，请参阅[用于 SQL Server 的 Microsoft ADO.NET](ado-net/microsoft-ado-net-sql-server.md)。
 
 ## <a name="jdbc"></a>JDBC
 
@@ -79,8 +87,8 @@ Microsoft/Windows 数据访问组件 (MDAC/WDAC) 随 Windows 一起提供并受�
 
 MDAC/WDAC 包含以下组件：
 
-* **ODBC：** Microsoft 开放式数据库连接 (ODBC) 接口是一种 C 编程语言接口，它允许应用程序访问来自各种数据库管理系统 (DBMS) 的数据。 使用此 API 的应用程序只能访问关系数据源。
-* **OLE DB：** OLE DB 是一组 COM 接口，用于访问各种数据存储中的数据。 OLE DB 提供程序用于访问数据库、文件系统、消息存储、目录服务、工作流和文档存储中的数据。
+* **ODBC：** Microsoft 开放式数据库连接 (ODBC) 接口是一种 C 编程语言接口，它允许应用程序访问来自不同类型的数据库管理系统 (DBMS) 的数据。 使用此 API 的应用程序只能访问关系数据源。
+* **OLE DB：** OLE DB 是一组 COM 接口，用于访问不同类型的数据存储中的数据。 OLE DB 提供程序用于访问数据库、文件系统、消息存储、目录服务、工作流和文档存储中的数据。
 * **ADO：** ActiveX 数据对象 (ADO) 提供了一个高级编程模型。 尽管与直接编码到 OLE DB 或 ODBC 相比，ADO 的性能稍差，但它非常易于学习和使用。 可以从脚本语言（如 Microsoft Visual Basic Scripting Edition (VBScript) 或 Microsoft JScript）中使用它。
 * **ADOMD：** ADO Multi-Dimensional (ADOMD) 将与多维数据提供程序（如 Microsoft OLAP 提供程序，也称为 Microsoft Analysis Services 提供程序）一起使用。 自 MDAC 2.0 开始，未对其主要功能进行增强。
 * **ADOX：** 使用 ADO Extensions for DDL and Security (ADOX)，可以创建和修改数据库、表、索引或存储过程的定义。 可以将 ADOX 与任何提供程序一起使用。 Microsoft Jet OLE DB Provider 完全支持 ADOX，而 Microsoft SQL Server OLE DB Provider 则提供有限的支持。
@@ -105,10 +113,10 @@ MDAC/WDAC 的当前版本仍支持这些组件，但在将来的版本中可能�
   > [!NOTE]
   > 通过 2007 Office System 驱动程序，SQL Server 应用程序还可以访问来自 SQL Server 异类数据连接和 Integration Services 功能的 2007 Office System 以及更早版本的文件。 另外，通过在 64 位 Windows 上使用 32 位 SQL Server Integration Services (SSIS)，64 位 SQL Server 应用程序可以访问 32 位 Jet 和 2007 Office System 文件。
 
-* **MSDADS：** 使用 Microsoft OLE DB Provider for Data Shaping (MSDADS)，可以在应用程序中的键、字段或行集之间创建层次结构关系。 自 MDAC 2.1 开始，未对主要功能进行增强。 已弃用此提供程序。 Microsoft 建议使用 XML 替代 MSDADS。
+* **Microsoft OLE DB Provider for Data Shaping (MSDADS)：** 使用 MSDADS，可以在应用程序中的键、字段或行集之间创建层次结构关系。 自 MDAC 2.1 开始，未对主要功能进行增强。 已弃用此提供程序。 Microsoft 建议使用 XML 替代 MSDADS。
 * **Oracle ODBC 和 Oracle OLE DB：** Microsoft Oracle ODBC 驱动程序 (Oracle ODBC) 和 Oracle 的 Microsoft OLE DB 提供程序 (Oracle OLE DB) 提供对 Oracle 数据库服务器的访问。 它们是使用 Oracle Call Interface (OCI) 版本 7 生成的，并为 Oracle 7 提供完全支持。 此外，它还使用 Oracle 7 仿真为 Oracle 8 数据库提供有限的支持。 Oracle 不再支持使用 OCI 版本 7 调用的应用程序。 这些技术已弃用。 如果你使用的是 Oracle 数据源，应迁移到 Oracle 提供的驱动程序和提供程序。
-* **RDS：** 远程数据服务 (RDS) 是一种 Microsoft 专有机制，用于通过 Internet 或 Intranet 访问远程 ADO 记录集对象。 RDS 已弃用；自 MDAC 2.1 开始，未对 RDS 的主要功能进行增强。 Microsoft 已发布 .NET Framework，它具有广泛的 SOAP 功能并替换了 RDS 组件。 在 Windows 7 之后，所有 RDS 服务器组件都将从操作系统中删除。
-* **JRO：** Jet Replication Objects (JRO) 已弃用。 JRO 在 ADO 中与 Jet ( *.mdb) 数据库结合使用，创建和压缩 Jet 数据库 (.mdb) 并执行 Jet 复制管理。MDAC 2.7 将是它的最后一个版本。JRO 在 64 位 Windows 操作系统上不可用。Microsoft Access 2007 文件格式 (* .accdb) 不支持 JRO。
+* **远程数据服务 (RDS)：** RDS 是一种 Microsoft 专有机制，用于通过 Internet 或 Intranet 访问远程 ADO 记录集对象。 RDS 已弃用；自 MDAC 2.1 开始，未对 RDS 的主要功能进行增强。 Microsoft 已发布 .NET Framework，它具有广泛的 SOAP 功能并替换了 RDS 组件。 在 Windows 7 之后，所有 RDS 服务器组件都将从操作系统中删除。
+* **Jet 复制对象 (JRO)：** JRO 已弃用。 JRO 在 ADO 中与 Jet ( *.mdb) 数据库结合使用，创建和压缩 Jet 数据库 (.mdb) 并执行 Jet 复制管理。MDAC 2.7 将是它的最后一个版本。JRO 在 64 位 Windows 操作系统上不可用。Microsoft Access 2007 文件格式 (* .accdb) 不支持 JRO。
 * **16 位 ODBC 支持：** 如果你使用的是 16 位应用程序，应迁移到 32 位应用程序。 16 位功能已弃用，将从 64 位操作系统中删除。 有关详细信息，请参阅[知识库文章 896458](https://support.microsoft.com/kb/896458)。
 * **OLEDB 简单提供程序 (MSDAOSP)：** OLEDB 简单提供程序提供了一个框架，用于基于简单数据快速生成 OLE DB 提供程序。 MSDAOSP 已弃用。
 * **ODBC 游标库：** ODBC 游标库 (ODBCCR32.dll) 提供有限的客户端数据游标。 ODBC 游标库已弃用；应用程序可以使用服务器端游标实现作为替代方法。

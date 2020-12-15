@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f84f1afbc1ede59e170e3fa4d17c9b921d2d1674
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 24aac8fe3f903ebb0cadec8f662a1cc870340d1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499213"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473808"
 ---
 # <a name="bcp_control"></a>bcp_control
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ RETCODE bcp_control (
         void* iValue);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
@@ -49,7 +49,7 @@ RETCODE bcp_control (
  可以是下列值之一：  
   
  BCPABORT  
- 停止正在进行的大容量复制操作。 从另一个线程调用*eOption*为 BCPABORT 的**bcp_control** ，停止正在运行的大容量复制操作。 忽略 *iValue* 参数。  
+ 停止正在进行的大容量复制操作。 从另一个线程调用 *eOption* 为 BCPABORT 的 **bcp_control** ，停止正在运行的大容量复制操作。 忽略 *iValue* 参数。  
   
  BCPBATCH  
  每批的行数。 默认值为 0，当提取数据时，该默认值表示表中的所有行；将数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，则表示用户数据文件中的所有行。 值小于 1 则将 BCPBATCH 重置为默认值。  
@@ -71,7 +71,7 @@ RETCODE bcp_control (
  BCPFILE_RAW：文件中的数据位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的代码页中。  
   
  BCPFILEFMT  
- 数据文件格式的版本号。 这可能是 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]) 、90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) 、100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) 、110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 120 () [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。 120 是默认值。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。 例如，若要将从服务器中的文本列获取的数据导入 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 到或更高版本的服务器中的 **varchar (max) ** 列 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ，则应指定80。 同样，如果在从 **varchar (max) ** 列导出数据时指定80，则将像保存文本列那样保存它 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ，并且可以将其导入到服务器的文本列 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。  
+ 数据文件格式的版本号。 这可能是 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]) 、90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) 、100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) 、110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 120 () [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。 120 是默认值。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。 例如，若要将从服务器中的文本列获取的数据导入 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 到或更高版本的服务器中的 **varchar (max)** 列 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ，则应指定80。 同样，如果在从 **varchar (max)** 列导出数据时指定80，则将像保存文本列那样保存它 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ，并且可以将其导入到服务器的文本列 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。  
   
  BCPFIRST  
  要复制的文件或表的第一行数据。 默认值为 1；值小于 1 则将此选项重置为其默认值。  
@@ -81,7 +81,7 @@ RETCODE bcp_control (
   
  对于 BCP in 操作，指定要复制到数据库表的数据文件的第一行。  
   
- *IValue*参数应为包含值的已签名64位整数的地址。 可传递给 BCPFIRSTEX 的最大值为 2 ^ 63-1。  
+ *IValue* 参数应为包含值的已签名64位整数的地址。 可传递给 BCPFIRSTEX 的最大值为 2 ^ 63-1。  
   
  BCPFMTXML  
  指定生成的格式化文件应采用 XML 格式。 默认情况下将禁用此选项。  
@@ -108,7 +108,7 @@ RETCODE bcp_control (
   
  对于 BCP in 操作，指定要复制到数据库表的数据文件的最后一行。  
   
- *IValue*参数应为包含值的已签名64位整数的地址。 可以传递到 BCPLASTEX 的最大值为 2^63-1。  
+ *IValue* 参数应为包含值的已签名64位整数的地址。 可以传递到 BCPLASTEX 的最大值为 2^63-1。  
   
  BCPMAXERRS  
  大容量复制操作失败之前允许的错误数。 默认值为 10;如果值小于1，则将此选项重置为其默认值。 大容量复制将最大错误数限制为 65,535 个。 如果尝试将该选项设置为大于 65,535 的值，将导致该选项设置为 65,535。  
@@ -128,7 +128,7 @@ RETCODE bcp_control (
  如果为 TRUE，则指定输入文件是 Unicode 文件。  
   
  *iValue*  
- 指定的 *eOption*的值。 *iValue* 是一个整数 (LONGLONG) 值强制转换为 void 指针，以允许将来扩展到64位值。  
+ 指定的 *eOption* 的值。 *iValue* 是一个整数 (LONGLONG) 值强制转换为 void 指针，以允许将来扩展到64位值。  
   
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
@@ -138,7 +138,7 @@ RETCODE bcp_control (
   
  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量复制 SELECT 的结果集时，此函数还可用于指定 SELECT 语句。 将 *eOption* 设置为 BCPHINTS，并将 *iValue* 设置为具有指向包含 SELECT 语句的 SQLTCHAR 字符串的指针。  
   
- 仅当在用户文件和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表之间进行复制时，这些控制参数才有意义。 控制参数设置对使用 bcp_sendrow 复制到的行没有影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)  
+ 仅当在用户文件和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表之间进行复制时，这些控制参数才有意义。 控制参数设置对使用 bcp_sendrow 复制到的行没有影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)  
   
 ## <a name="example"></a>示例  
   

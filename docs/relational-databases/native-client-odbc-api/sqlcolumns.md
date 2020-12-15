@@ -14,37 +14,37 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f44f2e1c9754096ae08bc64298815a8849f92478
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 73bdc833b31251e3cf0747aca19371ad2b0cb839
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810593"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473768"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **SQLColumns** 返回 SQL_SUCCESS *CatalogName*、 *TableName*或 *ColumnName* 参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
+  **SQLColumns** 返回 SQL_SUCCESS *CatalogName*、 *TableName* 或 *ColumnName* 参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch** 将返回 SQL_NO_DATA。  
   
 > [!NOTE]  
 >  对于大值类型，将返回值为 SQL_SS_LENGTH_UNLIMITED 的所有长度参数。  
   
- 可以对静态服务器游标执行**SQLColumns** 。 尝试对可更新的 (动态或键集) 游标执行 **SQLColumns** 将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
+ 可以对静态服务器游标执行 **SQLColumns** 。 尝试对可更新的 (动态或键集) 游标执行 **SQLColumns** 将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- 通过接受由两部分组成的*CatalogName*参数的名称： *Linked_Server_Name*，> Native Client ODBC 驱动程序支持链接服务器上的表的报告信息。  
+ 通过接受由两部分组成的 *CatalogName* 参数的名称： *Linked_Server_Name*，> Native Client ODBC 驱动程序支持链接服务器上的表的报告信息。  
   
- 对于 ODBC 2。*x* 应用程序未在 *TableName*中使用通配符， **SQLColumns** 返回有关名称与 *TableName* 匹配并且由当前用户拥有的所有表的信息。 如果当前用户拥有的表的名称与 *tablename* 参数的名称匹配，则 **SQLColumns** 将返回其他用户所拥有的、表名称与 *tablename* 参数匹配的所有表的相关信息。 对于 ODBC 2。使用通配符的*x* 应用程序， **SQLColumns** 返回其名称与 *TableName*匹配的所有表。 对于 ODBC 3。*x* 应用程序 **SQLColumns** 返回其名称与 *TableName* 匹配的所有表，而不考虑所有者或是否使用通配符。  
+ 对于 ODBC 2。*x* 应用程序未在 *TableName* 中使用通配符， **SQLColumns** 返回有关名称与 *TableName* 匹配并且由当前用户拥有的所有表的信息。 如果当前用户拥有的表的名称与 *tablename* 参数的名称匹配，则 **SQLColumns** 将返回其他用户所拥有的、表名称与 *tablename* 参数匹配的所有表的相关信息。 对于 ODBC 2。使用通配符的 *x* 应用程序， **SQLColumns** 返回其名称与 *TableName* 匹配的所有表。 对于 ODBC 3。*x* 应用程序 **SQLColumns** 返回其名称与 *TableName* 匹配的所有表，而不考虑所有者或是否使用通配符。  
   
  下表列出了结果集返回的列：  
   
 |列名称|说明|  
 |-----------------|-----------------|  
-|DATA_TYPE|返回 **VARCHAR (max) ** 数据类型 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
-|TYPE_NAME|为 varchar 返回 "varchar"、"varbinary" 或 "nvarchar" ** (max) **、 **varbinary (max) **和 **nvarchar (max) ** 数据类型。|  
-|COLUMN_SIZE|对于 **varchar (max) ** 数据类型返回 SQL_SS_LENGTH_UNLIMITED，指示列的大小不受限制。|  
-|BUFFER_LENGTH|对于 **varchar (max) ** 数据类型返回 SQL_SS_LENGTH_UNLIMITED，指示缓冲区的大小不受限制。|  
-|SQL_DATA_TYPE|返回 **VARCHAR (max) ** 数据类型 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
+|DATA_TYPE|返回 **VARCHAR (max)** 数据类型 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
+|TYPE_NAME|为 varchar 返回 "varchar"、"varbinary" 或 "nvarchar" **(max)**、 **varbinary (max)** 和 **nvarchar (max)** 数据类型。|  
+|COLUMN_SIZE|对于 **varchar (max)** 数据类型返回 SQL_SS_LENGTH_UNLIMITED，指示列的大小不受限制。|  
+|BUFFER_LENGTH|对于 **varchar (max)** 数据类型返回 SQL_SS_LENGTH_UNLIMITED，指示缓冲区的大小不受限制。|  
+|SQL_DATA_TYPE|返回 **VARCHAR (max)** 数据类型 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
 |CHAR_OCTET_LENGTH|返回字符或二进制列的最大长度。 返回 0 表示大小不受限制。|  
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|返回在其中定义 XML 架构集合名称的目录的名称。 如果找不到目录名称，则此变量包含空字符串。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|返回在其中定义 XML 架构集合名称的架构的名称。 如果找不到架构名称，则此变量包含空字符串。|  
@@ -75,7 +75,7 @@ ms.locfileid: "91810593"
  有关详细信息，请参阅 [ODBC&#41;&#40;日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>SQLColumns 对大型 CLR UDT 的支持  
- **SQLColumns** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [&#40;ODBC&#41;的大型 CLR 用户定义类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLColumns** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [ODBC&#41;&#40;的大型 CLR User-Defined 类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns 对稀疏列的支持  
  已将两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定列添加到 SQLColumns 的结果集中：  

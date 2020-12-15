@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_tran_version_store_space_usage (Transact-sql) '
-title: sys. dm_tran_version_store_space_usage (Transact-sql) |Microsoft Docs
+description: 'sys.dm_tran_version_store_space_usage (Transact-sql) '
+title: sys.dm_tran_version_store_space_usage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,26 +20,26 @@ ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 author: savjani
 ms.author: pariks
 manager: ajayj
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3e40c6fd2ce7da44c2d6e347c7bcc0729ab0236
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2fb83ffddba629b35f60bc930dc1525af7037244
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322963"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474788"
 ---
-# <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys. dm_tran_version_store_space_usage (Transact-sql) 
+# <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-sql) 
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-返回一个表，该表显示每个数据库的版本存储记录使用的 tempdb 中的总空间。 **sys. dm_tran_version_store_space_usage** 是高效的，运行效率不高，因为它不在各个版本存储记录之间导航，并返回每个数据库的 tempdb 中使用的聚合版本存储空间。
+返回一个表，该表显示每个数据库的版本存储记录使用的 tempdb 中的总空间。 **sys.dm_tran_version_store_space_usage** 的运行效率高且不昂贵，因为它不会在各个版本存储记录之间导航，并返回每个数据库的 tempdb 中使用的聚合版本存储空间。
   
 每个版本控制的记录均存储为二进制数据，以及某些跟踪或状态信息。 与数据库表中的记录相似，版本存储区记录存储在 8192 字节的页中。 如果记录超过 8192 字节，则该记录将拆分为两个不同的记录。  
   
-由于有版本控制的记录以二进制数据的形式存储，因此不同的数据库可以采用不同的排序规则。 使用 **dm_tran_version_store_space_usage** 可以基于 SQL Server 实例中数据库的版本存储空间使用情况监视和计划 tempdb 大小。
+由于有版本控制的记录以二进制数据的形式存储，因此不同的数据库可以采用不同的排序规则。 使用 **sys.dm_tran_version_store_space_usage** 可以基于 SQL Server 实例中数据库的版本存储空间使用情况监视和计划 tempdb 大小。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|数据库的数据库 ID。|  
+|database_id|**int**|数据库的数据库 ID。|  
 |**reserved_page_count**|**bigint**|数据库的版本存储记录在 tempdb 中保留的总页数。|  
 |**reserved_space_kb**|**bigint**|数据库的版本存储记录在 tempdb 中使用的总空间（kb）。|  
   

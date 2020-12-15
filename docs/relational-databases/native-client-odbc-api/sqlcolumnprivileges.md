@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: c78acd4e-8668-4abc-9bc9-6ad381965863
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e85edde7aaba43dab43d486e5b615a27f50bc19e
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 03ec4e33fbac576b0e6dcaada5bad7b96e1c7294
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809890"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473818"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **SQLColumnPrivileges** 返回 SQL_SUCCESS*CatalogName*、 *SchemaName*、 *TableName*或 *ColumnName* 参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
+  **SQLColumnPrivileges** 返回 SQL_SUCCESS *CatalogName*、 *SchemaName*、 *TableName* 或 *ColumnName* 参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch** 将返回 SQL_NO_DATA。  
   
- 可以对静态服务器游标执行**SQLColumnPrivileges** 。 尝试对可更新的 (动态或键集) 游标执行 **SQLColumnPrivileges** 将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
+ 可以对静态服务器游标执行 **SQLColumnPrivileges** 。 尝试对可更新的 (动态或键集) 游标执行 **SQLColumnPrivileges** 将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- 通过接受由两部分组成的*CatalogName*参数的名称： *Linked_Server_Name*，> Native Client ODBC 驱动程序支持链接服务器上的表的报告信息。  
+ 通过接受由两部分组成的 *CatalogName* 参数的名称： *Linked_Server_Name*，> Native Client ODBC 驱动程序支持链接服务器上的表的报告信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLColumnPrivileges 函数](../../odbc/reference/syntax/sqlcolumnprivileges-function.md)   

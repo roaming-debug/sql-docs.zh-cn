@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71ff730734a82d37cff8e13ea6c89ce55722c186
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 66d8314123ffd37bb8163dc18900e62b252a6ce0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420641"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473748"
 ---
 # <a name="cursor-rowset-size"></a>游标行集大小
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
  使用按列绑定或按行绑定时，对 **SQLFetch** 或 **SQLFetchScroll** 的每个调用都将使用检索到的行集中的数据填充绑定数组。  
   
- [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) 也可用于从块游标中检索列数据。 由于**SQLGetData**一次只处理一行，因此在调用**SQLGetData**之前，必须调用**SQLSetPos**将行集中的特定行设置为当前行。  
+ [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) 也可用于从块游标中检索列数据。 由于 **SQLGetData** 一次只处理一行，因此在调用 **SQLGetData** 之前，必须调用 **SQLSetPos** 将行集中的特定行设置为当前行。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过使用行集快速检索整个结果集提供优化。 若要使用此优化，请在调用 **SQLExecDirect** 或 **SQLExecute** 时，将游标属性设置为默认 (只进、只读、行集大小 = 1) 。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序设置默认的结果集。 在不需要滚动的情况下将结果传输到客户端时，该优化功能比服务器游标更有效。 执行语句后，请增加行集大小并使用按列绑定或按行绑定。 这允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用默认结果集将结果行高效地发送到客户端，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE client ODBC 驱动程序会持续从客户端上的网络缓冲区中提取行。  
   

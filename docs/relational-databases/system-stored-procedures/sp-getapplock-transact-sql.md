@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f60adc4bdd8e8d3cdfc7f44751854b97a2f7345
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 16a51a2578718db33e27a5c0c027f607eb4d37fc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535676"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474638"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,20 +46,20 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @Resource =] "*resource_name*"  
- 指定标识锁资源的名称的字符串。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name* 为 **nvarchar (255) ** ，无默认值。 如果资源字符串的长度超过 **nvarchar (255) **，则它将被截断为 **nvarchar (255) **。  
+ 指定标识锁资源的名称的字符串。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name* 为 **nvarchar (255)** ，无默认值。 如果资源字符串的长度超过 **nvarchar (255)**，则它将被截断为 **nvarchar (255)**。  
   
- 比较了二进制*resource_name* ，因此无论当前数据库的排序规则设置如何，都是区分大小写的。  
+ 比较了二进制 *resource_name* ，因此无论当前数据库的排序规则设置如何，都是区分大小写的。  
   
 > [!NOTE]  
 >  一旦获取应用程序锁之后，则只能检索纯文本中的前 32 个字符；对剩余的字符执行哈希运算。  
   
  [ @LockMode =] "*lock_mode*"  
- 要为特定资源获取的锁模式。 *lock_mode* 是 **varchar (32) ** ，并且没有默认值。 该值可以是下列任意值： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或 **Exclusive**。 有关详细信息，请参阅 [锁模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
+ 要为特定资源获取的锁模式。 *lock_mode* 是 **varchar (32)** ，并且没有默认值。 该值可以是下列任意值： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive** 或 **Exclusive**。 有关详细信息，请参阅 [锁模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
   
  [ @LockOwner =] "*lock_owner*"  
- 锁的所有者，它是请求锁时所指定的 lock_owner 值**。 *lock_owner* 是 **varchar (32) **。 该值可以是 Transaction（默认值）或 Session********。 默认情况下， *lock_owner* 值为 **transaction**时，sp_getapplock 必须从事务内执行。  
+ 锁的所有者，它是请求锁时所指定的 lock_owner 值。 *lock_owner* 是 **varchar (32)**。 该值可以是 Transaction（默认值）或 Session。 默认情况下， *lock_owner* 值为 **transaction** 时，sp_getapplock 必须从事务内执行。  
   
  [ @LockTimeout =] "*value*"  
  锁超时值（毫秒）。 默认值与 @ 返回的值相同 @LOCK_TIMEOUT 。 若要指示锁请求应返回的返回代码为-1，而不是在不能立即授予请求时等待锁，请指定0。  

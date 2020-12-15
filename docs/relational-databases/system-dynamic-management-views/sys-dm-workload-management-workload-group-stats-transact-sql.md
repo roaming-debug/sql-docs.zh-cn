@@ -11,13 +11,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: bc36846a62b8b71e0e21d7ea61d088a0f16c674d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 89daf919af43c130c23477596e34d6a19654fd12
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035173"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474758"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys.dm_workload_management_workload_groups_stats (Transact-sql) 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "92035173"
 |total_request_execution_timeouts|**bigint**|工作负荷组中的请求的累计计数，在完成之前根据 query_execution_timeout_sec 设置超时。||
 |effective_min_percentage_resource|**tinyint**|允许考虑服务级别和工作负荷组设置的有效 min_percentage_resource 设置。 可在较低的服务级别调整有效 min_percentage_resource。  例如，在 DW100c 上，允许的最低 min_percentage_resource 为25%。  如果无法在服务级别授予值，则将 min_percentage_resource 调整为0%。  例如 min_percentage_resource，在 DW6000c 设置为10% 时，在向下缩放到 DW100c 时，将具有0% 的 effective_min_percentage_resource。||
 |effective_cap_percentage_resource|**tinyint**|工作负荷组的有效 cap_percentage_resource。  如果有其他工作负荷组 min_percentage_resource > 0，effective_cap_percentage_resource 会按比例降低。||
-|effective_request_min_resource_grant_percent|**decimal (5，2) **|工作负荷组 request_min_resource_grant_percent 的有效运行时值。 考虑服务级别以及如何配置工作负荷组的有效值。  如果因为服务级别而调整了 min_percentage_resource，effective_request_min_resource_grant_percent 将相应地进行调整。||
-|effective_request_max_resource_grant_percent|**decimal (5，2) **|考虑所有工作负荷组的配置的工作负荷组 request_max_resource_grant_percent 的有效运行时值。||
+|effective_request_min_resource_grant_percent|**decimal (5，2)**|工作负荷组 request_min_resource_grant_percent 的有效运行时值。 考虑服务级别以及如何配置工作负荷组的有效值。  如果因为服务级别而调整了 min_percentage_resource，effective_request_min_resource_grant_percent 将相应地进行调整。||
+|effective_request_max_resource_grant_percent|**decimal (5，2)**|考虑所有工作负荷组的配置的工作负荷组 request_max_resource_grant_percent 的有效运行时值。||
 |||||
 
 ## <a name="see-also"></a>请参阅

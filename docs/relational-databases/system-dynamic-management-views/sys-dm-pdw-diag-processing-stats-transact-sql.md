@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4abebe258290203f7b87ff39e48d30de2a910379
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: e050ab114773930ef3f21c3ca46381774ce0ee82
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035400"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474808"
 ---
 # <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

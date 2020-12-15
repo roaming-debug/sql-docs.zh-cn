@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_table_memory_stats (Transact-SQL)
-title: sys. dm_db_xtp_table_memory_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_db_xtp_table_memory_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bf82197a769e8268d882aadc9358a4b4ee8bbb7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: daa5c0a36884c06ae4c335a016b4cdcbbb33bfa5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536995"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474928"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

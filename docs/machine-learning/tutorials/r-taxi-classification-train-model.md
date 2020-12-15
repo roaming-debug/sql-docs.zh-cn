@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 0b5f930568e655df645cbaed140f163ada3e3afa
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412545"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934015"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>R 教程：训练并保存模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "92412545"
   
    + R 脚本调用 R 函数 glm 来创建逻辑回归模型。
   
-     二进制变量 _tipped_ 用作标签或结果列，模型使用以下这些特征列进行调整： _passenger_count_ 、 _trip_distance_ 、 _trip_time_in_secs_ 和 _direct_distance_ 。
+     二进制变量 _tipped_ 用作标签或结果列，模型使用以下这些特征列进行调整：_passenger_count_、_trip_distance_、_trip_time_in_secs_ 和 _direct_distance_。
   
    + 已定型模型（保存在 R 变量 `logitObj` 中）会进行序列化，并作为输出参数返回。
 
@@ -101,7 +101,7 @@ ms.locfileid: "92412545"
 
 3. 语句完成后，打开表 nyc_taxi_models。 数据处理和模型调整可能需要一些时间。
 
-   你可以看到已添加了一个新行，该行在列 model 中包含序列化模型，在列 name 中包含模型名称 TrainLog_model。
+   可以看到已添加了一个新行，该行在列 model 中包含序列化模型，在列 name 中包含模型名称 RTrainLogit_model。
 
    ```text
    model                        name
