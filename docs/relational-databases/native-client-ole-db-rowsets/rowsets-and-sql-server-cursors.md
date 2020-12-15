@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71c5f372ef0a985aaba3016eee398bb7183dcbb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3de88fa5e6e662836a55a715daa33cb5c102674e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448349"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476108"
 ---
 # <a name="rowsets-and-sql-server-cursors-native-client-ole-db-provider"></a>本机客户端 OLE DB 提供程序 (的行集和 SQL Server 游标) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "88448349"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集只支持向前滚动。 支持相对行定位。 如果针对被引用的列存在索引，则命令文本可以包括 ORDER BY 子句。<br /><br /> DBPROP_IMMOBILEROWS 仅在可以显示由其他会话的命令或由其他用户插入的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行的行集中可用。 如果试图在其 DBPROP_OTHERINSERT 不能是 VARIANT_TRUE 的任何行集上打开一个该属性设置为 VARIANT_FALSE 的行集，将导致错误。|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集只支持向前滚动。 支持相对行定位。 除非受另一个属性约束，否则命令文本可以包含 ORDER BY 子句。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**IOpenRowset：： OpenRowset**方法，在基础表或视图上轻松创建服务器游标支持的 Native Client OLE DB 提供程序行集。 按名称指定表或视图，同时在 rgPropertySets 参数中传递所需的行集属性集  。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 **IOpenRowset：： OpenRowset** 方法，在基础表或视图上轻松创建服务器游标支持的 Native Client OLE DB 提供程序行集。 按名称指定表或视图，同时在 rgPropertySets 参数中传递所需的行集属性集  。  
   
  当使用者需要服务器游标支持行集时，创建行集的命令文本将受到限制。 具体来说，命令文本只能是返回单个行集结果的单个 SELECT 语句，或实现返回单个行集结果的单个 SELECT 语句的存储过程。  
   

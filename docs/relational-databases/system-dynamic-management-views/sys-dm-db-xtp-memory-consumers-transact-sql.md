@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_memory_consumers (Transact-SQL)
-title: sys. dm_db_xtp_memory_consumers (Transact-sql) |Microsoft Docs
+title: sys.dm_db_xtp_memory_consumers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 321297a2590a18ed7e51364b3f532076f90ce740
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a962925e0a359055286b6598914cd3e79cf8036c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542227"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474968"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "89542227"
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|内存消耗者的 ID（内部）。|  
 |memory_consumer_type|**int**|内存消耗者的类型：<br /><br /> 0=聚合。 （聚合两个或多个消耗者的内存使用量。 不应显示。）<br /><br /> 2=VARHEAP（跟踪长度可变的堆的内存占用情况。）<br /><br /> 3=HASH（跟踪索引的内存占用情况。）<br /><br /> 5=DB 页池（跟踪用于运行时操作的数据库页池的内存占用情况。 例如，表变量和某些可序列化扫描。 每个数据库只有一个此类型的内存消耗者。）|  
-|memory_consumer_type_desc|**nvarchar (64) **|内存消耗者的类型：VARHEAP、HASH 或 PGPOOL。<br /><br /> 0- (不应显示。 ) <br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar (64) **|对内存消耗者实例的说明：<br /><br /> VARHEAP <br />数据库堆。 用于为数据库分配用户数据（行）。<br />数据库系统堆。 用于分配将包含在内存转储中但不包含用户数据的数据库数据。<br />范围索引堆。 由范围索引用于分配 BW 页的专用堆。<br /><br /> HASH：无说明，因为 object_id 指示表和 index_id 哈希索引本身。<br /><br /> PGPOOL：对于数据库，只有一个页面池数据库64K 页池。|  
+|memory_consumer_type_desc|**nvarchar (64)**|内存消耗者的类型：VARHEAP、HASH 或 PGPOOL。<br /><br /> 0- (不应显示。 ) <br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**nvarchar (64)**|对内存消耗者实例的说明：<br /><br /> VARHEAP <br />数据库堆。 用于为数据库分配用户数据（行）。<br />数据库系统堆。 用于分配将包含在内存转储中但不包含用户数据的数据库数据。<br />范围索引堆。 由范围索引用于分配 BW 页的专用堆。<br /><br /> HASH：无说明，因为 object_id 指示表和 index_id 哈希索引本身。<br /><br /> PGPOOL：对于数据库，只有一个页面池数据库64K 页池。|  
 |object_id|**bigint**|所分配的内存所属的对象 ID。 负值表示系统对象。|  
 |xtp_object_id|**bigint**|内存优化表的对象 ID。|  
 |index_id|**int**|消耗者的索引 ID（如果有）。 NULL 表示基表。|  
@@ -65,7 +65,7 @@ ms.locfileid: "89542227"
  只会为拥有 VIEW DATABASE STATE 权限的用户返回系统表。  
   
 ## <a name="general-remarks"></a>一般备注  
- 当内存优化表具有列存储索引时，系统将使用一些使用一些内存的内部表来跟踪列存储索引的数据。 有关这些内部表的详细信息以及显示其内存消耗情况的示例查询，请参阅 [transact-sql)  (memory_optimized_tables_internal_attributes ](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。
+ 当内存优化表具有列存储索引时，系统将使用一些使用一些内存的内部表来跟踪列存储索引的数据。 有关这些内部表的详细信息以及显示其内存消耗情况的示例查询，请参阅 [ (transact-sql) sys.memory_optimized_tables_internal_attributes ](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。
  
   
 ## <a name="examples"></a>示例  
@@ -112,7 +112,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- 分配给此 DMV 并使用的总内存与 [sys. dm_db_xtp_table_memory_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)中的对象级别相同。  
+ 分配给此 DMV 并使用的总内存与 [sys.dm_db_xtp_table_memory_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)中的对象级别相同。  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   

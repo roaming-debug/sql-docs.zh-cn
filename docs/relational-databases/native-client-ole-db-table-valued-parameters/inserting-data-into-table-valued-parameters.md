@@ -1,5 +1,5 @@
 ---
-title: 向表值参数中插入数据（Native Client OLE DB 提供程序） |Microsoft Docs
+title: " (Native Client OLE DB 提供程序将数据插入表值参数) |Microsoft Docs"
 description: 了解 SQL Server Native Client OLE DB 提供程序支持使用者为表值参数行指定数据的两个模型。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 823ca21dd04fe89c3b1598fba068a0f58bcceaf3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2e5cd2a11340fe40dbfce93447054be1520fb50e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246750"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476018"
 ---
-# <a name="inserting-data-into-table-valued-parameters-native-client-ole-db-provider"></a>向表值参数中插入数据（Native Client OLE DB 提供程序）
+# <a name="inserting-data-into-table-valued-parameters-native-client-ole-db-provider"></a>将数据插入 Table-Valued 参数 (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持使用两种模型来指定表值参数行的数据：推送模型和请求模型。 提供演示请求模型的示例；请参阅 [SQL Server 数据编程示例](https://msftdpprodsamples.codeplex.com/)。  
@@ -29,7 +29,7 @@ ms.locfileid: "87246750"
 > [!NOTE]  
 >  表值参数列要么必须在所有行中具有非默认值，要么必须在所有行中具有默认值。 不能在某些行中具有默认值，而在其他行中不具有默认值。 因此，在表值参数绑定中，表值参数行集列数据仅允许状态值 DBSTATUS_S_ISNULL 和 DBSTATUS_S_OK。 DBSTATUS_S_DEFAULT 将导致失败，而绑定的状态值将设置为 DBSTATUS_E_BADSTATUS。  
   
-## <a name="push-model-loads-all-table-valued-parameter-data-in-memory"></a>推送模型（将所有表值参数数据加载到内存中）  
+## <a name="push-model-loads-all-table-valued-parameter-data-in-memory"></a>推送模型（在内存中加载所有表值参数数据）  
  推送模型类似于使用参数集（也即，ICommand::Execute 中的 DBPARAMS 参数）。 仅当在未对 IRowset 接口执行自定义实现的情况下使用表值参数行集对象时，才使用推送模型。 当表值参数行集中的行数较少且预计不会给应用程序带来过量内存压力时，建议使用推送模型。 这比请求模型更简单，因为它向使用者应用程序要求的功能不会超过典型 OLE DB 应用程序中当前常用的功能。  
   
  使用者应在执行命令之前向访问接口提供所有表值参数数据。 为提供数据，使用者为每个表值参数填充一个表值参数行集对象。 表值参数行集对象显示行集 Insert、Set 和 Delete 操作，使用者将使用这些操作来操作表值参数数据。 访问接口在执行时将从该表值参数行集对象中提取数据。  

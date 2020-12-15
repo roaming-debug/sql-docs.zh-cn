@@ -1,6 +1,6 @@
 ---
-description: 'sys. column_encryption_keys (Transact-sql) '
-title: sys. column_encryption_keys (Transact-sql) |Microsoft Docs
+description: 'sys.column_encryption_keys (Transact-sql) '
+title: sys.column_encryption_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4dc716cf2990984bd65e7425776517602e18c6d9
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4822a422e398fb79487589a78d3224d001d6611e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227068"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475188"
 ---
-# <a name="syscolumn_encryption_keys--transact-sql"></a>sys. column_encryption_keys (Transact-sql) 
+# <a name="syscolumn_encryption_keys--transact-sql"></a>sys.column_encryption_keys (Transact-sql) 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
   返回 (用 [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 语句创建) 的列加密密钥的信息。 每行表示一个 CEK。  

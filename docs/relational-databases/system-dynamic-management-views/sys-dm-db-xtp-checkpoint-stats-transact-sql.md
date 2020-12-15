@@ -1,5 +1,5 @@
 ---
-title: sys. dm_db_xtp_checkpoint_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_stats (Transact-sql) |Microsoft Docs
 description: 返回与当前数据库中的内存中 OLTP 检查点操作有关的统计信息。 了解此视图与 SQL Server 版本的不同之处。
 ms.custom: ''
 ms.date: 03/20/2017
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66532a6ed19dc3a7929fe7d5638fa850c893d119
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 39e4d0d0e4198fee1be446675bd0314e0fefcb7a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542288"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474998"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -48,7 +48,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|控制器观察到的最后一个 LSN。|  
-|end_of_log_lsn|**数值 (38) **|日志结尾的 LSN。|  
+|end_of_log_lsn|**数值 (38)**|日志结尾的 LSN。|  
 |bytes_to_end_of_log|**bigint**|控制器处理的日志字节数，对应于和之间的字节数 `last_lsn_processed` `end_of_log_lsn` 。|  
 |log_consumption_rate|**bigint**|控制器 (的事务日志消耗速率（KB/秒) ）。|  
 |active_scan_time_in_ms|**bigint**|控制器主动扫描事务日志所花费的时间。|  
@@ -66,10 +66,10 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |xtp_log_bytes_consumed|**bigint**|数据库重新启动后使用的日志字节总数。|  
 |checkpoints_closed|**bigint**|自数据库重新启动以来关闭的检查点计数。|  
 |last_closed_checkpoint_ts|**bigint**|最后关闭的检查点的时间戳。|  
-|hardened_recovery_lsn|**数值 (38) **|将从此 LSN 开始恢复。|  
+|hardened_recovery_lsn|**数值 (38)**|将从此 LSN 开始恢复。|  
 |hardened_root_file_guid|**uniqueidentifier**|作为上次完成的检查点的结果强制执行的根文件的 GUID。|  
 |hardened_root_file_watermark|**bigint**|**仅限内部**。 将根文件读取到 (，这是一个仅限内部相关的类型-称为 BSN) 的有效程度。|  
-|hardened_truncation_lsn|**数值 (38) **|截断点的 LSN。|  
+|hardened_truncation_lsn|**数值 (38)**|截断点的 LSN。|  
 |log_bytes_since_last_close|**bigint**|上次接近日志末尾的字节数。|  
 |time_since_last_close_in_ms|**bigint**|上次关闭检查点的时间。|  
 |current_checkpoint_id|**bigint**|当前已将新段分配到此检查点。 检查点系统是一个管道。 当前检查点是要将日志中的段分配到的检查点。 一旦达到了某个限制，控制器就会释放该检查点，并创建一个新的检查点作为当前。|  
@@ -79,7 +79,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |closing_checkpoint_id|**bigint**|结束检查点的 ID。<br /><br /> 序列化程序是并行运行的，因此完成后，检查点就是关闭线程要关闭的候选项。 但关闭线程只能一次关闭一个，并且它必须按顺序关闭，因此结束检查点就是关闭线程正在处理的。|  
 |recovery_checkpoint_id|**bigint**|要在恢复中使用的检查点的 ID。|  
 |recovery_checkpoint_ts|**bigint**|恢复检查点的时间戳。|  
-|bootstrap_recovery_lsn|**数值 (38) **|启动的恢复 LSN。|  
+|bootstrap_recovery_lsn|**数值 (38)**|启动的恢复 LSN。|  
 |bootstrap_root_file_guid|**uniqueidentifier**|启动的根文件的 GUID。|  
 |internal_error_code|**bigint**|任何控制器、序列化程序、关闭和合并线程均出现错误。|
 |bytes_of_large_data_serialized|**bigint**|已序列化的数据量。 |  
@@ -100,9 +100,9 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |new_log_wait_time_in_ms|**bigint**|等待新日志所用的累计时间。|  
 |log_generated_since_last_checkpoint_in_bytes|**bigint**|自上一个内存中 OLTP 检查点以来生成的日志量。|  
 |ms_since_last_checkpoint|**bigint**|自上一个内存中 OLTP 检查点以来的时间量（毫秒）。|  
-|checkpoint_lsn|**数值 (38) **|与上次完成的内存中 OLTP 检查点关联的恢复日志序列号 (LSN)。|  
-|current_lsn|**数值 (38) **|当前正在处理的日志记录的 LSN。|  
-|end_of_log_lsn|**数值 (38) **|日志结尾的 LSN。|  
+|checkpoint_lsn|**数值 (38)**|与上次完成的内存中 OLTP 检查点关联的恢复日志序列号 (LSN)。|  
+|current_lsn|**数值 (38)**|当前正在处理的日志记录的 LSN。|  
+|end_of_log_lsn|**数值 (38)**|日志结尾的 LSN。|  
 |task_address|**varbinary(8)**|SOS_Task 的地址。 联接到 sys.dm_os_tasks 以查找其他信息。|  
   
 ## <a name="permissions"></a>权限  

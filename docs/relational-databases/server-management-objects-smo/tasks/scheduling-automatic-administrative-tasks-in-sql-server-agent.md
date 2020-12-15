@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ca351a2e3a6104a4bcc5c8fb7192d0f00ea6a56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2b777b9f7343a0014d01da34b7681ef382e4821d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88325603"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475448"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>在 SQL Server 代理中计划自动管理任务
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -169,7 +169,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
   
- 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>类型需要方括号，因为**运算符**是一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
+ 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>类型需要方括号，因为 **运算符** 是一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
   
 ```csharp  
 {  
@@ -202,7 +202,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
   
- 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>类型需要方括号，因为**运算符**是一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
+ 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>类型需要方括号，因为 **运算符** 是一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

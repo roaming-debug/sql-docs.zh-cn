@@ -10,13 +10,13 @@ ms.topic: reference
 ms.assetid: 6ae35826-7d75-4542-b686-5f79316b6157
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02247866c1f83693202d649d1c05be31214b5ded
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a487eb380ea4e7b0fe246efdb9281cbab63a1303
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498930"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475988"
 ---
 # <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>Dbmslpcn.dll 共享内存中的 ConnectionValidSharedMemory 函数
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,15 +29,15 @@ ms.locfileid: "88498930"
 BOOL ConnectionValidSharedMemory(char * szServerName);  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  *szServerName*  
   
--   类型： **char \* **  
+-   类型： **char \** _  
   
 -   SQL server 的名称。  
   
 ## <a name="return-value"></a>返回值  
- 类型： **BOOL**  
+ 类型： _ *BOOL**  
   
  如果无效，则返回 0;否则返回非零值。  
   

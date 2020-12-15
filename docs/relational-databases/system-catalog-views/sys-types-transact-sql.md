@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8400701be6e002701da112294bbfbf7c11b7da18
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 09a7add1433bc9eb8184843f24d113e3706a4c36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537327"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475088"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89537327"
 |**user_type_id**|**int**|类型的 ID。 在该数据库中是唯一的。 对于系统数据类型， **user_type_id**  =  **system_type_id**。|  
 |schema_id|**int**|类型所属架构的 ID。|  
 |principal_id|**int**|如果个体所有者与架构所有者不同，则表示该所有者的 ID。 默认情况下，架构包含的对象由架构所有者拥有。 不过，通过使用 ALTER AUTHORIZATION 语句更改所有权可以指定备用所有者。<br /><br /> 如果没有另外的个体所有者，则值为 NULL。|  
-|**max_length**|**smallint**|类型的最大长度（字节）。<br /><br /> -1 = 列数据类型为 **varchar (max) **、 **nvarchar (max) **、 **varbinary (max) **或 **xml**。<br /><br /> 对于 **text** 列， **max_length** 值将为16。|  
+|**max_length**|**smallint**|类型的最大长度（字节）。<br /><br /> -1 = 列数据类型为 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)** 或 **xml**。<br /><br /> 对于 **text** 列， **max_length** 值将为16。|  
 |**精度**|**tinyint**|如果类型基于数值，则表示类型的最大精度；否则，该值为 0。|  
 |**scale**|**tinyint**|如果类型基于数值，则表示类型的最大小数位数；否则，该值为 0。|  
 |**collation_name**|**sysname**|如果类型基于字符，则表示类型排序规则的名称；否则，该值为 NULL。|  

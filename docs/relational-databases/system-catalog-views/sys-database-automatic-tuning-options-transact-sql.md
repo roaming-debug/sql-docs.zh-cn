@@ -1,5 +1,5 @@
 ---
-title: sys. database_automatic_tuning_options （Transact-sql） |Microsoft Docs
+title: sys.database_automatic_tuning_options (Transact-sql) |Microsoft Docs
 description: 了解如何在 SQL 数据库上查看自动优化选项。 查看所需权限并查看其他可用资源。
 ms.custom: ''
 ms.date: 07/20/2017
@@ -21,22 +21,22 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4de2851505d7c5c240d792ecacdaa6bf3d1c6c3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4da712a23dde26d12164957718c3bdfbf89eb487
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242947"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475218"
 ---
-# <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys.databases \_ 自动 \_ Tuning_options （transact-sql）
+# <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys. 数据库 \_ 自动 \_ Tuning_options (transact-sql) 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   返回此数据库的自动优化选项。  
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|自动优化选项的名称。 请参阅[ALTER DATABASE SET AUTOMATIC_TUNING &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)了解可用选项。|  
+|**name**|**nvarchar(128)**|自动优化选项的名称。 请参阅 [ALTER DATABASE SET AUTOMATIC_TUNING &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 了解可用选项。|  
 |**desired_state**|**smallint**|指示自动优化选项的所需操作模式，由用户显式设置。<br />0 = OFF<br />1 = ON|  
 |**desired_state_desc**|**nvarchar(60)**|自动优化选项所需操作模式的文本说明。<br />OFF<br />ON|  
 |**actual_state**|**smallint**|指示自动优化选项的操作模式。<br />0 = OFF<br />1 = ON|  
@@ -50,6 +50,6 @@ ms.locfileid: "87242947"
 ## <a name="see-also"></a>另请参阅  
  [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [将数据库集 AUTOMATIC_TUNING &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys. database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys. dm_db_tuning_recommendations &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.dm_db_tuning_recommendations &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  

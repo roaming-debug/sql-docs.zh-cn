@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: seo-dt-2019
 ms.date: 06/04/2020
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3939942c7655206a448797f0258d883eac904fef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 64b631219afcd37bbc6883ef7e1c89d6335b7095
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455491"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475528"
 ---
 # <a name="create-and-update-statistics"></a>创建和更新统计信息
 

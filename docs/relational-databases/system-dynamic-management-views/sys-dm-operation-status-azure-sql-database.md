@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 777dd89339ef2eefccdb5ee180178100a16b5216
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 7146d3455d4d9a36304cc0a1cc69ba3c4c841479
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834156"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477218"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -54,7 +54,7 @@ ms.locfileid: "91834156"
 ## <a name="permissions"></a>权限  
  此视图仅在 **master** 数据库中适用于服务器级主体登录名。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  若要使用此视图，您必须连接到 **master** 数据库。 使用 `sys.dm_operation_status` 服务器的 **master** 数据库中的视图 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 跟踪对执行的以下操作的状态 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ：  
   
 -   创建数据库  
@@ -77,7 +77,7 @@ ms.locfileid: "91834156"
 
 此视图中的信息保留大约1小时。 请使用 " [Azure 活动日志](/azure/azure-monitor/platform/activity-log) " 查看最近90天内的操作的详细信息。 对于超过90天的保留期，请考虑将 [活动日志条目发送](/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) 到 Log Analytics 工作区。
 
-## <a name="example"></a>示例：  
+## <a name="example"></a>示例  
  显示与数据库 "mydb" 关联的最近异地复制操作。  
   
 ```  

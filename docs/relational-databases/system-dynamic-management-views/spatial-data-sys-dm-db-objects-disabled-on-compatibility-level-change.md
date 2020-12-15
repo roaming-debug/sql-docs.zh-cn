@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL)
-title: sys. dm_db_objects_disabled_on_compatibility_level_change (Transact-sql) |Microsoft Docs
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4779675cd37f6f49f90ab01fa17e5f5e9259260
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fdb9fb661ed0da6eee45206acb302922243609c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518895"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475078"
 ---
-# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空间数据-sys. dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空间数据-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   列出由于更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的兼容级别而将禁用的索引和约束。 在升级或更改兼容级别之后，包含持久化计算列且其表达式使用空间 UDT 的索引和约束将被禁用。 使用此动态管理函数可以确定兼容级别变化所带来的影响。  
@@ -43,7 +43,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  *compatibility_level*  
- 标识要设置的兼容级别的**int** 。  
+ 标识要设置的兼容级别的 **int** 。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -147,7 +147,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
  需要拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示了对 **sys.databases dm_db_objects_disabled_on_compatibility_level_change** 的查询，以查找受更改兼容级别为120的对象。  
+ 下面的示例演示 **sys.dm_db_objects_disabled_on_compatibility_level_change** 的查询，以查找通过将兼容级别更改为120而受影响的对象。  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

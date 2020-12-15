@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f0fb1b5ad1c004f1f4aba688c29138282b71f38
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1837ce515f31a0a8c98c2c63b0ef4ab853bad19a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809613"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475238"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_tables"></a>更改跟踪目录视图-sys.change_tracking_tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

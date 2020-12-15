@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: de7983a786ef6214ea5573a6167175bcb1f5df20
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 3a3e3e4754b831b28be323c194f9eef70bd64f9b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035170"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477188"
 ---
 # <a name="sysdm_pdw_waits-transact-sql"></a>sys.dm_pdw_waits (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "92035170"
 |session_id|**nvarchar(32)**|发生等待状态的会话的 ID。|请参阅 [sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
 |type|**nvarchar(255)**|此项表示的等待类型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_type|**nvarchar(255)**|受等待影响的对象的类型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|object_name|**nvarchar (386) **|受等待影响的指定对象的名称或 GUID。||  
+|object_name|**nvarchar (386)**|受等待影响的指定对象的名称或 GUID。||  
 |request_id|**nvarchar(32)**|发生等待状态的请求的 ID。|请参阅 [sys.dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)中的 request_id。|  
 |request_time|**datetime**|请求等待状态的时间。||  
 |acquire_time|**datetime**|获取锁或资源的时间。||  

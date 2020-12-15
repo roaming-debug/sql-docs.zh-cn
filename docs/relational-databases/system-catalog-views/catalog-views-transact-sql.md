@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d139633c9f1e38f7509696ce228c6e0559da52f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e06b77b5ff994d64bcc5c8acc65464f530fe27c9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038293"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475228"
 ---
 # <a name="system-catalog-views-transact-sql"></a> (Transact-sql) 的系统目录视图
 

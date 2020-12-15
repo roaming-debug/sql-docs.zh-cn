@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e00bf48c991d496e4425e665206b22a0ac3d32a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 35c2bbfb0b4aeac91e4a2c6ddcccaeddfce76857
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448319"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476028"
 ---
 # <a name="updating-data-in-sql-server-cursors-in-sql-server-native-client"></a>在 SQL Server Native Client 中更新 SQL Server 游标中的数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88448319"
   
  无论哪种模式，往返表示当未针对行集打开事务对象时的不同事务。  
   
- 使用 **IRowsetUpdate：： Update**时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将尝试处理每个指示的行。 出现错误是因为任何行的数据无效、长度或状态值不会停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序处理。 可能修改参与更新的所有其他行，也可能不修改这些行。 当*prgRowStatus* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 DB_S_ERRORSOCCURRED 时，使用者必须检查返回的 prgRowStatus 数组，以确定任何特定行的失败。  
+ 使用 **IRowsetUpdate：： Update** 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将尝试处理每个指示的行。 出现错误是因为任何行的数据无效、长度或状态值不会停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序处理。 可能修改参与更新的所有其他行，也可能不修改这些行。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序返回 DB_S_ERRORSOCCURRED 时，使用者必须检查返回的 prgRowStatus 数组，以确定任何特定行的失败。  
   
  使用者不应假定行以任意特定顺序处理。 如果使用者要求按顺序处理基于多个行的数据修改，使用者应在应用程序逻辑中建立该顺序，并打开一个事务以包含该过程。  
   

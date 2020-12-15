@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95e4d3b3b1b06810fc1e60564a4ad7c84e85189a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 169f0069565c3d1f6561d6edc8e8b459fc77ac9a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486510"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475258"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "88486510"
 |**pvt_key_encryption_type**|**char(2)**|私钥加密方式。<br /><br /> NA = 证书没有私钥<br /><br /> MK = 使用主密钥加密私钥<br /><br /> PW = 使用用户定义的密码加密私钥<br /><br /> SK = 使用服务主密钥加密私钥。|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|对私钥加密方式的说明。<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**is_active_for_begin_dialog**|**bit**|如果为 1，则证书用于启动加密的服务对话。|  
-|**issuer_name**|**nvarchar (442) **|证书颁发者的名称。|  
-|**cert_serial_number**|**nvarchar (64) **|证书的序列号。|  
-|**sid**|**varbinary (85) **|此证书的登录 SID。|  
+|**issuer_name**|**nvarchar (442)**|证书颁发者的名称。|  
+|**cert_serial_number**|**nvarchar (64)**|证书的序列号。|  
+|**sid**|**varbinary(85)**|此证书的登录 SID。|  
 |**string_sid**|**nvarchar(128)**|此证书的登录 SID 的字符串表示形式。|  
 |**subject**|**nvarchar(4000)**|此证书的主题。|  
 |**expiry_date**|**datetime**|证书的过期时间。|  

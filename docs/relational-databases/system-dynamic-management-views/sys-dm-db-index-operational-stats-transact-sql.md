@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d69890ba5c76c3d37ecd6accd9ba13caa7b089
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1f177d09dd741eadc967a2b32a87a905e04dfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036091"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475068"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,15 +55,15 @@ sys.dm_db_index_operational_stats (
 
 *database_id* |NULL |0 |缺省值
 
-  数据库 ID。 *database_id* 为 **smallint** 。 有效的输入包括数据库的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
+  数据库 ID。 *database_id* 为 **smallint**。 有效的输入包括数据库的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
- 指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。 如果为 *database_id* 指定 null，则还必须为 *object_id* 、 *index_id* 和 *partition_number* 指定 null。    
+ 指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。 如果为 *database_id* 指定 null，则还必须为 *object_id*、 *index_id* 和 *partition_number* 指定 null。    
     
  可以指定内置函数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。    
 
 *object_id* |NULL |0 |缺省值
 
- 索引所基于的表或视图的对象 ID。 *object_id* 是 **int** 。    
+ 索引所基于的表或视图的对象 ID。 *object_id* 是 **int**。    
     
  有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
@@ -71,13 +71,13 @@ sys.dm_db_index_operational_stats (
 
 *index_id* |0 |NULL |-1 |缺省值
 
- 索引的 ID。 *index_id* 是 **int** 。有效输入包括索引的 ID 号、0（如果 *object_id* 为堆）、NULL、-1 或默认值。 默认值为 -1。在此上下文中，NULL、-1 和 DEFAULT 是等价值。    
+ 索引的 ID。 *index_id* 是 **int**。有效输入包括索引的 ID 号、0（如果 *object_id* 为堆）、NULL、-1 或默认值。 默认值为 -1。在此上下文中，NULL、-1 和 DEFAULT 是等价值。    
     
  指定 NULL 可返回基表或视图的所有索引的缓存信息。 如果为 *index_id* 指定 null，则还必须为 *partition_number* 指定 null。    
 
 *partition_number* |NULL |0 |缺省值
 
- 对象中的分区号。 *partition_number* 是 **int** 。有效输入包括索引或堆的 *partion_number* 、NULL、0或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
+ 对象中的分区号。 *partition_number* 是 **int**。有效输入包括索引或堆的 *partion_number* 、NULL、0或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
  指定 NULL 可返回索引或堆的所有分区的缓存信息。    
     
@@ -106,11 +106,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|从索引或堆开始的范围和表扫描的累积计数。|    
 |**singleton_lookup_count**|**bigint**|对索引或堆的单行检索的累积计数。|    
 |**forwarded_fetch_count**|**bigint**|通过前推记录提取的行计数。<br /><br /> 0 = 索引|    
-|**lob_fetch_in_pages**|**bigint**|从 LOB_DATA 分配单元检索到的大型对象 (LOB) 页的累积计数。 这些页包含存储在类型为 **text** 、 **ntext** 、 **image** 、 **varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 和 **xml** 的列中的数据。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|    
+|**lob_fetch_in_pages**|**bigint**|从 LOB_DATA 分配单元检索到的大型对象 (LOB) 页的累积计数。 这些页包含存储在类型为 **text**、 **ntext**、 **image**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)** 和 **xml** 的列中的数据。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|    
 |**lob_fetch_in_bytes**|**bigint**|检索到的 LOB 数据字节数的累积计数。|    
 |**lob_orphan_create_count**|**bigint**|为大容量操作创建的孤立 LOB 值的累积计数。<br /><br /> 0 = 非聚集索引|    
 |**lob_orphan_insert_count**|**bigint**|大容量操作期间插入的孤立 LOB 值的累积计数。<br /><br /> 0 = 非聚集索引|    
-|**row_overflow_fetch_in_pages**|**bigint**|从 ROW_OVERFLOW_DATA 分配单元检索到的行溢出数据页数的累积计数。<br /><br /> 这些页包含存储在类型 **varchar (n)** 、 **nvarchar (n)** 、 **varbinary (n)** 和已被推送到行外的 **sql_variant** 的列中的数据。|    
+|**row_overflow_fetch_in_pages**|**bigint**|从 ROW_OVERFLOW_DATA 分配单元检索到的行溢出数据页数的累积计数。<br /><br /> 这些页包含存储在类型 **varchar (n)**、 **nvarchar (n)**、 **varbinary (n)** 和已被推送到行外的 **sql_variant** 的列中的数据。|    
 |**row_overflow_fetch_in_bytes**|**bigint**|检索到的行溢出数据字节数的累积计数。|    
 |**column_value_push_off_row_count**|**bigint**|已推出行外以使插入或更新的行可容纳在页中的 LOB 数据和行溢出数据的列值累积计数。|    
 |**column_value_pull_in_row_count**|**bigint**|已请求到行内的 LOB 数据和行溢出数据的列值的累积计数。 当更新操作释放记录中的空间，并提供将一个或多个行外值从 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元请求到 IN_ROW_DATA 分配单元中的机会时，就会出现此计数。|    
@@ -140,7 +140,7 @@ sys.dm_db_index_operational_stats (
     
  使用以下各列可标识争用区。    
     
- 若要分析表或索引分区的通用访问模式，请使用这些列：     
+ 若要分析表或索引分区的通用访问模式，请使用这些列：    
     
 -   **leaf_insert_count**    
     
@@ -177,10 +177,10 @@ sys.dm_db_index_operational_stats (
 ## <a name="column-remarks"></a>列备注    
  **lob_orphan_create_count** 和 **lob_orphan_insert_count** 中的值应始终相等。    
     
- 对于包含一个或多个 LOB 列作为包含列的非聚集索引， **lob_fetch_in_pages** 和 **lob_fetch_in_bytes** 列中的值可以大于零。 有关详细信息，请参阅 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)。 同样，对于非聚集索引，如果索引包含可推送到行外的列，则 **row_overflow_fetch_in_pages** 和 **row_overflow_fetch_in_bytes** 列中的值也可以大于 0。    
+ 对于包含一个或多个 LOB 列作为包含列的非聚集索引，**lob_fetch_in_pages** 和 **lob_fetch_in_bytes** 列中的值可以大于零。 有关详细信息，请参阅 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)。 同样，对于非聚集索引，如果索引包含可推送到行外的列，则 **row_overflow_fetch_in_pages** 和 **row_overflow_fetch_in_bytes** 列中的值也可以大于 0。    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>如何重置元数据缓存中的计数器    
- 仅当表示堆或索引的元数据缓存对象可用时， **sys.dm_db_index_operational_stats** 返回的数据才存在。 此数据既不是持久性数据，也不是事务上一致的数据。 这意味着，不能使用这些计数器确定是否已使用索引，或确定上次使用索引的时间。 有关此方面的信息，请参阅 [&#40;transact-sql&#41;sys.dm_db_index_usage_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)。    
+ 仅当表示堆或索引的元数据缓存对象可用时，**sys.dm_db_index_operational_stats** 返回的数据才存在。 此数据既不是持久性数据，也不是事务上一致的数据。 这意味着，不能使用这些计数器确定是否已使用索引，或确定上次使用索引的时间。 有关此方面的信息，请参阅 [&#40;transact-sql&#41;sys.dm_db_index_usage_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)。    
     
  只要堆或索引的元数据被载入元数据缓存，每列中的值就会被设置为零，且在从元数据缓存中删除缓存对象前会累积统计信息。 所以，活动堆或索引可能始终将其元数据放在缓存中，且累积计数可能反映自上次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以来的活动。 活动较少的堆或索引的元数据将在使用时移入和移出缓存。 因此，它可能有、也可能没有可用值。 删除索引将导致从内存中删除对应统计信息，且函数不再报告这些统计信息。 对索引执行的其他 DDL 操作可能导致统计信息的值被重置为零。    
     
@@ -192,9 +192,9 @@ sys.dm_db_index_operational_stats (
     
 -   `CONTROL` 对数据库中指定对象的权限    
     
--   `VIEW DATABASE STATE` 使用对象通配符 @ *object_id* = NULL 返回有关指定数据库中所有对象的信息的权限    
+-   `VIEW DATABASE STATE` 使用对象通配符 @*object_id* = NULL 返回有关指定数据库中所有对象的信息的权限    
     
--   `VIEW SERVER STATE` 使用数据库通配符 @ *database_id* = NULL 返回有关所有数据库的信息的权限    
+-   `VIEW SERVER STATE` 使用数据库通配符 @*database_id* = NULL 返回有关所有数据库的信息的权限    
     
  授予 `VIEW DATABASE STATE` 会允许返回数据库中的所有对象，而不管对特定对象拒绝的任何控制权限。    
     
