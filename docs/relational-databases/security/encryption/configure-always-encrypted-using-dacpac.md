@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c18b6842139e5a4f5f0261761fa93cc42d3a506c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130899"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405492"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>使用 Always Encrypted 和 DAC 包配置列加密 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "96130899"
 ## <a name="performance-considerations"></a>性能注意事项
 要执行加密操作，用于部署 DACPAC 的工具需要将数据移出数据库。 该工具会在数据库中创建具有所需加密配置的一个或多个新表，从原始表加载所有数据，执行请求的加密操作，将数据上传到新表，然后将原始表换为新表。 运行加密操作可能需要很长时间。 在此期间，数据库不可用于写入事务。 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > 如果使用的是 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，并且 SQL Server 实例配置了安全 Enclave，则无需将数据移出数据库，即可就地运行加密操作。 请参阅[使用具有安全 enclave 的 Always Encrypted 就地配置列加密](always-encrypted-enclaves-configure-encryption.md)。 请注意，就地加密不适用于 DACPAC 部署。

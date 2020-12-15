@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d14b528b1b5e0b0583b630644b8f174d3b58c9b
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8f44ccb5de715b302f7b4db0b80fa4f3e5633021
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96504951"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406631"
 ---
 # <a name="subqueries-sql-server"></a>子查询 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

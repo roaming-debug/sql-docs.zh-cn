@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e130997ff6e81ffaef45597b0f4fbe9a238154c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 27af6771eeccf660b1eac623f80e663d93e411b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866684"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405828"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>使用 Always Encrypted 向导配置列加密
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ Always Encrypted 向导是一个功能强大的工具，可让你为所选数据
 > [!NOTE]
 > 运行加密操作可能需要很长时间。 在此期间，数据库不可用于写入事务。 建议将 PowerShell 作为对较大表执行加密操作的工具。 请参阅[通过 PowerShell 配置使用 Always Encrypted 的列加密](configure-column-encryption-using-powershell.md)。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > 如果使用的是 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，并且 SQL Server 实例配置了安全 Enclave，则无需将数据移出数据库，即可就地运行加密操作。 请参阅[使用具有安全 enclave 的 Always Encrypted 就地配置列加密](always-encrypted-enclaves-configure-encryption.md)。 请注意，该向导不支持就地加密。

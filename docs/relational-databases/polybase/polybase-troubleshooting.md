@@ -14,13 +14,13 @@ ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: c54a2d16acafefdc763ca7e02f9b42c81cb1c2f7
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016'
+ms.openlocfilehash: 4440573f9c9ae00cc293ff356127c1de65b272ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892387"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406457"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase 的监视和故障排除
 

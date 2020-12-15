@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d04539d146cdf931105d68b08a617b14106b4a0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 7cb26094b990f13a3c581321905913673f7c1f56
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88405763"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406493"
 ---
 # <a name="define-and-modify-a-column-filter"></a>定义和修改列筛选器
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

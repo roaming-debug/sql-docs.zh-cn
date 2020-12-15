@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 93e2780c3e51ce46e0687864896c36b7d3166917
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: f07e46838160d963510fd2402b0fafb0bce1dabf
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505985"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900955"
 ---
 # <a name="monitor-memory-usage"></a>监视内存使用量
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,5 +80,4 @@ process_physical_memory_low,
 process_virtual_memory_low  
 FROM sys.dm_os_process_memory;  
 ```  
-  
-  
+

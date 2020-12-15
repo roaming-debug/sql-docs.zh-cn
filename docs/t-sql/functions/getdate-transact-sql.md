@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: bebe3b65-2b3e-4c73-bf80-ff1132c680a7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c43f3522612e88a8f17ca6587fd8ffa06795e68b
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 46119cd0ba625e1f4898d8e43af4075e02ac1f82
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216710"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402565"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

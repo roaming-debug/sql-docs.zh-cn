@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 08010e294b1b143c941774912d661a53c021a6ab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fedec9e351b9c8910db0bee51c1e2c5dc8569655
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85632791"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402974"
 ---
 # <a name="example-retrieving-binary-data"></a>示例：检索二进制数据
 

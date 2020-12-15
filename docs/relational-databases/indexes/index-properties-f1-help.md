@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43ef52303110cb26b145348edc6aa9ec09bf38de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 780ee667e84b0def82e27afff1b27886150c8bb0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408133"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407113"
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -276,7 +276,7 @@ False 或未指定填充因子<br>
  **每个对象的单元格数**  
  指示可用于索引中单个空间对象的每个对象的分割单元格数。 该数字可以是 1 和 8192 之间（含 1 和 8192）的任何整数。 当数据库兼容级别设置为 110 或更高时，默认值为 16，并且对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本为 8。  
   
- 在顶级，如果对象包含的单元格多于 *n*指定的单元格，则索引操作将根据需要使用尽可能多的单元格来提供完整的顶级分割。 在这种情况下，对象收到的单元格数可能会大于指定的单元格数。 这种情况下，最大数量即为顶级网格创建的单元格数，这取决于 **“级别 1”** 的密度。  
+ 在顶级，如果对象包含的单元格多于 *n* 指定的单元格，则索引操作将根据需要使用尽可能多的单元格来提供完整的顶级分割。 在这种情况下，对象收到的单元格数可能会大于指定的单元格数。 这种情况下，最大数量即为顶级网格创建的单元格数，这取决于 **“级别 1”** 的密度。  
   
 ### <a name="grids"></a>网格  
  此面板显示分割方案的每个级别上网格的密度。 密度可指定为 **“低”** 、 **“中”** 或 **“高”** 三个级别。 默认值为 **“中”** 。 **“低”** 表示 4x4 网格（16 个单元格）、 **“中”** 表示 8x8 网格（64 个单元格）而 **“高”** 表示 16x16 网格（256 个单元格）。 在选择 **“几何自动网格”** 或 **“地理自动网格”** 分割选项时，这些选项将不可用。  

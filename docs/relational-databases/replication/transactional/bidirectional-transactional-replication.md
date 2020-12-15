@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 98772e95-67ed-4010-8108-5113dbe709ff
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 347a54964180833f56ffcb636176ad5e2415780c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f8a22b04834cc80b3b64cf7384bc6fe97d2f0571
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86903861"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406274"
 ---
 # <a name="bidirectional-transactional-replication"></a>双向事务复制
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

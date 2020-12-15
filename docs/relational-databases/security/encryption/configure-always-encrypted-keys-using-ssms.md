@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b84de259222b9e2bde8c9b99f67328ea317e645
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765143"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405490"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 预配 Always Encrypted 密钥
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85765143"
 
 “新建列主密钥”  对话框允许你生成列主密钥或选择密钥存储中的现有密钥，并在数据库中为所创建或所选择的密钥创建列主密钥元数据。
 
-1.  使用**对象资源管理器**导航到数据库下面的“安全”>“始终加密密钥”文件夹。
+1.  使用 **对象资源管理器** 导航到数据库下面的“安全”>“始终加密密钥”文件夹。
 2.  右键单击“列主密钥”文件夹，然后选择“新建列主密钥...” 。 
 3.  在“新建列主密钥”  对话框中，输入列主密钥元数据对象的名称。
 4.  选择密钥存储：
@@ -60,7 +60,7 @@ ms.locfileid: "85765143"
 
 完成此对话框中的选择后，SQL Server Management Studio 会在数据库中为列主密钥创建元数据。 该对话框通过生成并发出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 语句来实现此操作。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 如果要配置已启用 enclave 的列主密钥，SSMS 还会使用列主密钥对元数据进行签名。 
 
@@ -81,7 +81,7 @@ ms.locfileid: "85765143"
 
 “新建列加密密钥”  对话框允许生成列加密密钥、使用列主密钥对其加密，以及在数据库中创建列加密密钥元数据。
 
-1.  使用 **对象资源管理器**导航到数据库下面的“安全”/“始终加密密钥”  文件夹。
+1.  使用 **对象资源管理器** 导航到数据库下面的“安全”/“始终加密密钥”  文件夹。
 2.  右键单击“列加密密钥”文件夹，然后选择“新建列加密密钥...” 。 
 3.  在“新建列加密密钥”  对话框中，输入列加密密钥元数据对象的名称。
 4.  在数据库中选择一个表示列主密钥的元数据对象。
