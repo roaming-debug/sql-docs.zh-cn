@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3dd7431a208db3f0da1e2ee53522920319b40af0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482708"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407466"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列存储索引 - 数据加载指南
 
@@ -28,7 +28,7 @@ ms.locfileid: "88482708"
  你是列存储索引的初学者？ 请参阅[列存储索引 - 概述](../../relational-databases/indexes/columnstore-indexes-overview.md)和[列存储索引 - 体系结构](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)。
   
 ## <a name="what-is-bulk-loading"></a>什么是大容量加载？
-*大容量加载*指的是将大量的行添加到数据存储的方式。 这是将数据移到列存储索引的最高效方法，因为它对成批的行进行操作。 大容量加载将行组填充到最大容量，并将它们直接压缩到列存储中。 只有在加载结束时未达到每行组至少 102,400 行的行才会进入增量存储。  
+*大容量加载* 指的是将大量的行添加到数据存储的方式。 这是将数据移到列存储索引的最高效方法，因为它对成批的行进行操作。 大容量加载将行组填充到最大容量，并将它们直接压缩到列存储中。 只有在加载结束时未达到每行组至少 102,400 行的行才会进入增量存储。  
 
 要执行大容量加载，可以使用 [bcp 实用工具](../../tools/bcp-utility.md)、[Integration Services](../../integration-services/sql-server-integration-services.md)，或从临时表中选择行。
 
@@ -48,7 +48,7 @@ ms.locfileid: "88482708"
 
 -   **日志记录减小：** 直接加载到压缩行组中的数据会导致显著减小日志大小。 例如，如果 10 倍压缩数据，则相应事务日志将减小大约 10 倍，无需使用 TABLOCK 或批量记录的/简单恢复模式。 进入增量行组的任何数据都将被完全记录。 这包括任何少于 102400 行的批大小。  最佳做法是使用 batchsize >= 102400。 由于无需 TABLOCK，因此可以并行加载数据。 
 
--   **最小日志记录：** 如果遵循[最小日志记录](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)的先决条件，则可以进一步减小日志记录。 但是，与将数据加载到行存储中不同，TABLOCK 会导致表具有 X 锁而不是 BU（批量更新）锁，因此无法完成并行数据加载。 有关锁定的详细信息，请参阅[锁定和行版本控制](../sql-server-transaction-locking-and-row-versioning-guide.md)。
+-   **最小日志记录：** 如果遵循 [最小日志记录](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)的先决条件，则可以进一步减小日志记录。 但是，与将数据加载到行存储中不同，TABLOCK 会导致表具有 X 锁而不是 BU（批量更新）锁，因此无法完成并行数据加载。 有关锁定的详细信息，请参阅[锁定和行版本控制](../sql-server-transaction-locking-and-row-versioning-guide.md)。
 
 -   **锁定优化：** 在将数据加载到压缩行组时，将自动获取行组的 X 锁。 但是，大容量加载到增量行组时，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT，因为 X 行组锁不是锁定层次结构的一部分。  
   
@@ -104,7 +104,7 @@ SELECT <list of columns> FROM <Staging Table>
   
 ## <a name="what-is-trickle-insert"></a>什么是渗透插入？
 
-*渗透插入*指的是将单个行移到列存储索引的方式。 渗透插入使用 [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) 语句。 使用渗透插入时，所有行将进入增量存储。 这适用于少量的行，但对于较大负载而言并不实用。
+*渗透插入* 指的是将单个行移到列存储索引的方式。 渗透插入使用 [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) 语句。 使用渗透插入时，所有行将进入增量存储。 这适用于少量的行，但对于较大负载而言并不实用。
   
 ```sql  
 INSERT INTO <table-name> VALUES (<set of values>)  
