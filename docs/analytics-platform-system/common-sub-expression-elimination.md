@@ -9,13 +9,13 @@ ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: d05314f4d100e469c621d42a10ed89671b2bdd9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>= aps-pdw-2016-au7'
+ms.openlocfilehash: 8dfadabcae27ff8705d86294b1c05851245d199c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401337"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420196"
 ---
 # <a name="common-subexpression-elimination-explained"></a>介绍的常见子表达式消除
 
@@ -55,9 +55,9 @@ select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_nam
   order by asceding.rnk
   ;
 ```
-请考虑以下从 TPC-DS 基准工具进行的查询。  在上面的查询中，子查询是相同的，但 with rank （） over 函数的 order by 子句以两种不同的方式进行排序。 在 CU 7.3 之前，此子查询将被评估并执行两次，一次针对升序，一次用于降序，产生两个数据移动操作。 安装了 AP CU 7.3 后，子查询部分将被计算一次，从而减少数据移动并更快地完成查询。
+请考虑以下从 TPC-DS 基准工具进行的查询。  在上面的查询中，子查询是相同的，但秩 ( # A1 over 函数的 order by 子句以两种不同的方式进行排序。 在 CU 7.3 之前，此子查询将被评估并执行两次，一次针对升序，一次用于降序，产生两个数据移动操作。 安装了 AP CU 7.3 后，子查询部分将被计算一次，从而减少数据移动并更快地完成查询。
 
-我们引入了一个名为 "OptimizeCommonSubExpressions" 的[功能开关](appliance-feature-switch.md)，该开关可用于在升级到 ap cu 7.3 后测试该功能。 此功能在默认情况下处于打开状态，但可以关闭。 
+我们引入了一个名为 "OptimizeCommonSubExpressions" 的 [功能开关](appliance-feature-switch.md) ，该开关可用于在升级到 ap cu 7.3 后测试该功能。 此功能在默认情况下处于打开状态，但可以关闭。 
 
 > [!NOTE] 
 > 更改功能开关值需要重启服务。
@@ -118,6 +118,6 @@ CREATE TABLE [dbo].[item] (
 )
 WITH (CLUSTERED INDEX ( [i_item_sk] ASC ), DISTRIBUTION = REPLICATE);
 ```
-如果你查看查询的解释计划，你将看到在 CU 7.3 之前（或者当功能开关关闭时），查询具有17个操作总数，在 CU 7.3 之后（或在打开功能开关的情况下），同一查询显示了9个操作的总数。 如果只是对数据移动操作进行计数，则会看到，在新计划中，上一计划具有四个移动操作和两个移动操作。 新的查询优化器可以通过重复使用已创建的临时表来减少两个数据移动操作，从而减少查询运行时。 
+如果你查看查询的说明计划，你将看到在 CU 7.3 (或功能开关关闭时) 查询包含17个操作的总数，并且在 CU 7.3 (或启用了功能开关的情况下) 同一查询显示了9个操作的总数。 如果只是对数据移动操作进行计数，则会看到，在新计划中，上一计划具有四个移动操作和两个移动操作。 新的查询优化器可以通过重复使用已创建的临时表来减少两个数据移动操作，从而减少查询运行时。 
 
 

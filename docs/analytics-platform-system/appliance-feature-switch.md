@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8642f27a329da8819acf0ab99a648c4979ed40d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>= aps-pdw-2016-au7'
+ms.openlocfilehash: cd9e93b1b734737eda94501df7a30a07c8f8042a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401454"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420260"
 ---
 # <a name="appliance-feature-switches"></a>设备功能切换
 
-**功能切换**页面显示有关分析平台系统 AU7 和更高版本中引入的功能开关的信息。 使用此配置页可以更新或启用/禁用分析平台系统中的功能和设置。
+**功能切换** 页面显示有关分析平台系统 AU7 和更高版本中引入的功能开关的信息。 使用此配置页可以更新或启用/禁用分析平台系统中的功能和设置。
 
 > [!NOTE]
 > 更改功能开关值需要重启服务。
@@ -27,7 +27,7 @@ ms.locfileid: "74401454"
 
 ## <a name="autostatsenabled"></a>AutoStatsEnabled
 
-控制自动统计信息功能。 升级到 AU7 后，此功能开关默认设置为 true。 升级后创建的任何数据库将继承统计信息的自动创建和异步更新。 对于现有数据库，数据库管理员可以使用[ALTER database （并行数据仓库）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)启用自动统计信息。 有关统计信息的详细信息，请参阅[统计](../relational-databases/statistics/statistics.md)信息。
+控制自动统计信息功能。 升级到 AU7 后，此功能开关默认设置为 true。 升级后创建的任何数据库将继承统计信息的自动创建和异步更新。 对于现有数据库，数据库管理员可以使用 [ALTER database (并行数据仓库) ](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)启用自动统计信息。 有关统计信息的详细信息，请参阅 [统计](../relational-databases/statistics/statistics.md)信息。
 
 ## <a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
 
@@ -35,7 +35,7 @@ ms.locfileid: "74401454"
 
 ## <a name="optimizecommonsubexpressions"></a>OptimizeCommonSubExpressions
 
-通过消除 SQL 查询优化器中常见子表达式的数据移动，提高查询性能。 可在[此处](common-sub-expression-elimination.md)找到有关此功能的详细说明。
+通过消除 SQL 查询优化器中常见子表达式的数据移动，提高查询性能。 可在 [此处](common-sub-expression-elimination.md)找到有关此功能的详细说明。
 
 ## <a name="usecatalogqueries"></a>UseCatalogQueries
 
@@ -43,4 +43,4 @@ ms.locfileid: "74401454"
 
 ## <a name="dmsprocessstopmessagetimeoutinseconds"></a>DmsProcessStopMessageTimeoutInSeconds
 
-控制在取消涉及数据移动的查询时，数据移动服务（DMS）等待同步到繁忙系统上的时间。 默认情况下，更新到 AU7 会将此值设置为900秒（15分钟）。 有效范围为 0-3600 秒。
+控制在取消涉及数据移动的查询时，数据移动服务 (DM) 等待同步到繁忙系统。 更新到 AU7 会将此值 (15 分钟) 默认设置为900秒。 有效范围为 0-3600 秒。

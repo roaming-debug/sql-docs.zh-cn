@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dafe6b863b19a555b62b46227f470a6ea03fb133
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7afe8bd9b3c4c5b712db57f09a61357c3d0c8393
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448352"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419423"
 ---
 # <a name="fetching-rows-native-client-ole-db-provider"></a> (Native Client OLE DB 提供程序中提取行) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

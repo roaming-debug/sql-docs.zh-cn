@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90f33a053e9c1c0ebea0b0248e79660ec7428955
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6517d7a49aee24cedb22b037d373d0d56598af54
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498982"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97418644"
 ---
 # <a name="isolation-levels-native-client-ole-db-provider"></a>本机客户端 OLE DB 提供程序 (隔离级别) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

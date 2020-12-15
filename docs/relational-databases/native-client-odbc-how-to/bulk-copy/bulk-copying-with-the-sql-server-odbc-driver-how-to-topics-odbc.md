@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6f4742ba9990012a758bdc0668aaf07866e68b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7354af558e2ced8e198947b20c8753d797e26a97
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448509"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419624"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>使用 SQL Server ODBC 驱动程序进行大容量复制操作指南主题 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

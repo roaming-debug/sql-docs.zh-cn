@@ -1,5 +1,5 @@
 ---
-description: '使用 SQL Server Native Client (OLE DB 中的表值参数) '
+description: '使用 SQL Server Native Client (OLE DB 中 Table-Valued 参数) '
 title: " (Native Client OLE DB 提供程序使用表值参数) "
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,15 +11,15 @@ ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d8e35803c71047f73faac83cb79f309cf803a27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9e5c470cc438f9985e93313d746bf0671c0b8a59
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448429"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419512"
 ---
-# <a name="use-table-valued-parameters-in-sql-server-native-client-ole-db"></a>使用 SQL Server Native Client (OLE DB 中的表值参数) 
+# <a name="use-table-valued-parameters-in-sql-server-native-client-ole-db"></a>使用 SQL Server Native Client (OLE DB 中 Table-Valued 参数) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。 该示例将执行以下操作：  

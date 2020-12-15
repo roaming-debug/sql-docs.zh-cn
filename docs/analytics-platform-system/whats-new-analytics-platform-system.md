@@ -9,19 +9,19 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011810"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420164"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>分析平台系统中的新增功能-横向扩展 MPP 数据仓库
 请参阅 Microsoft Analytics Platform System (AP) 最新的设备更新中的新增功能。 AP 是托管 MPP SQL Server 并行数据仓库的扩展本地设备。 
 
-::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016-au7 "
 <a name="h2-aps-cu7.7"></a>
-## <a name="aps-cu77"></a>AP CU 7。7
+## <a name="aps-cu77"></a>APS CU7.7
 发布日期-2020 年11月
 
 ### <a name="scvmm2016"></a>SCVMM2016
@@ -150,7 +150,7 @@ AP 支持 T-sql [dbcc 命令](../t-sql/database-console-commands/dbcc-transact-s
 ### <a name="bug-fixes"></a>Bug 修复
 我们已升级到 SQL Server 2016 SP2 CU2 与 AP CU 7.1。 升级修复了下面所述的一些问题。
 
-| 标题 | 说明 |
+| Title | 说明 |
 |:---|:---|
 | **潜在元组移动器死锁** |升级修复了分布式事务和元组移动器后台线程中可能出现的死锁。 安装 CU 7.1 后，使用 TF634 停止元组移动器 SQL Server 启动参数或全局跟踪标志的客户可以安全地将其删除。 | 
 | **某些滞后/线索查询失败** |对于包含嵌套延迟/潜在顾客函数（将出错）的 CCI 表的某些查询，此升级现已修复。 | 
@@ -179,7 +179,7 @@ AP AU7 引入 [Configuration Manager](launch-the-configuration-manager.md)中的
 Microsoft 建议所有客户安装 BIOS 更新。 Microsoft 已衡量内核虚拟地址影 (KVAS) 、内核页表间接寻址 (KPTI) 和间接分支预测缓解 (措施在各种环境中的各种 SQL 工作负载上的影响。 度量值明显降低了某些工作负荷。 根据结果，建议你在将 BIOS 更新部署到生产环境之前，对其进行测试，从而对性能产生影响。 请参阅 [此处](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)SQL Server 指南。
 
 ::: moniker-end
-::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016 "
 <a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 本部分介绍了用于 AP 2016-AU6 的新增功能。

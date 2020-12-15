@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4942428a1f73275aeb85d9c41220467b89e3ab9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b5eb57bb4e88ebcad9a3ffdfdf9517a2f2576cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868890"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419356"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>分析 ODBC 驱动程序性能数据 - 记录长时间运行的查询
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91868890"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>使用 ODBC 管理器记录长时间运行的查询  
   
-1.  在 " **控制面板**" 中，双击 " **管理工具** "，然后双击 " ** (ODBC) **中的" 数据源 "。 （或者，也可以从命令提示符处运行 odbcad32.exe。）  
+1.  在 " **控制面板**" 中，双击 " **管理工具** "，然后双击 " **(ODBC)** 中的" 数据源 "。 （或者，也可以从命令提示符处运行 odbcad32.exe。）  
   
 2.  单击 " **用户 dsn**"、" **系统 dsn**" 或 " **文件 dsn** " 选项卡。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "91868890"
   
 6.  选择 **"将长时间运行的查询保存到日志文件"**。 在该框中，放置应记录长时间运行的查询的文件的名称。 还可以单击 " **浏览** "，浏览文件系统中的查询日志。  
   
-7.  在 **长查询时间 (毫秒) ** 中，设置查询超时间隔（以毫秒为单位）。  
+7.  在 **长查询时间 (毫秒)** 中，设置查询超时间隔（以毫秒为单位）。  
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>以编程方式记录长时间运行的查询数据  
   

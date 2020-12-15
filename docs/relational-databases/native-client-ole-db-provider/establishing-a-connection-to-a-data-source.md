@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 384d6b0b9db152d1418b009c50345151786875e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eed9eeb8a02c900fd7c61ae0d626ce515d5c04a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419262"
 ---
 # <a name="establishing-a-connection-to-a-sql-server-native-client-data-source"></a>建立与 SQL Server Native Client 数据源的连接
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

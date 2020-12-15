@@ -9,22 +9,22 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7071c9cb46bde6e2d353293cec9f01451c0b4f67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>= aps-pdw-2016-au7'
+ms.openlocfilehash: fc204c5c4fd37ef4621c4376142662b7a9164ade
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401286"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420184"
 ---
 # <a name="configure-auto-statistics"></a>配置自动统计信息
 
 了解如何将并行数据仓库配置为使用自动统计信息自动创建和更新统计信息。  使用此功能可改进查询计划，从而提高查询性能。
 
-**适用于：** AP （从 2016-AU7 开始）
+**适用于：** 从 2016 AU7 开始 (的 AP) 
 
 ## <a name="what-are-statistics"></a>什么是统计信息？
-查询优化的统计信息是包含有关表的一列或多列中的值分布的统计信息的对象。 查询优化器使用这些统计信息来估计查询结果中的基数或行数。 通过这些基数估计，查询优化器可以创建高质量的查询计划。 例如，在 AP 中，MPP 查询优化器使用基数估计来选择无序或复制联接子句中使用的两个表中较小的一个，从而提高查询性能。  有关详细信息，请参阅[统计信息](../relational-databases/statistics/statistics.md)和[DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
+查询优化的统计信息是包含有关表的一列或多列中的值分布的统计信息的对象。 查询优化器使用这些统计信息来估计查询结果中的基数或行数。 通过这些基数估计，查询优化器可以创建高质量的查询计划。 例如，在 AP 中，MPP 查询优化器使用基数估计来选择无序或复制联接子句中使用的两个表中较小的一个，从而提高查询性能。  有关详细信息，请参阅 [统计信息](../relational-databases/statistics/statistics.md) 和 [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 
 ## <a name="what-are-auto-statistics"></a>什么是自动统计信息？
 自动统计信息是查询优化器创建和自动更新以改进查询计划的统计信息。 加载、插入、更新和删除操作后，统计信息可能会过期。 如果没有自动统计信息，则需要进行自己的分析，以了解哪些列需要统计信息，以及何时需要更新统计信息。
@@ -41,11 +41,11 @@ ms.locfileid: "74401286"
 异步统计信息更新选项 AUTO_UPDATE_STATISTICS_ASYNC 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 对于 AP，默认情况下会启用 "异步统计信息更新" 选项，查询优化器会以异步方式更新统计信息。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。
 
 ## <a name="configuration-settings-for-system-administrators"></a>系统管理员的配置设置
-升级到 AP AU7 后，默认情况下会启用 "自动统计"。 系统管理员可以使用设备 Configuration Manager 中的[功能开关](appliance-feature-switch.md)选项启用或禁用自动统计信息。  启用后，用户可以更改每个数据库的统计信息设置。
+升级到 AP AU7 后，默认情况下会启用 "自动统计"。 系统管理员可以使用设备 Configuration Manager 中的 [功能开关](appliance-feature-switch.md) 选项启用或禁用自动统计信息。  启用后，用户可以更改每个数据库的统计信息设置。
 更改任何功能开关值都需要在 AP 上重新启动服务。
 
 ## <a name="change-auto-statistics-settings-on-a-database"></a>更改数据库的自动统计信息设置
-如果系统管理员启用了自动统计信息，则可以使用[ALTER DATABASE （并行数据仓库）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)更改数据库的统计信息设置。 如果系统管理员启用了自动统计信息功能切换，则升级到 AU7 后创建的任何新数据库都将启用 "自动统计信息"。 升级到 AU7 之前已存在的所有数据库已禁用自动统计信息。 以下示例对现有数据库 myPDW 启用自动统计信息。
+如果系统管理员启用了自动统计信息，则可以使用 [ALTER DATABASE (Parallel 数据仓库) ](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) 更改数据库的统计信息设置。 如果系统管理员启用了自动统计信息功能切换，则升级到 AU7 后创建的任何新数据库都将启用 "自动统计信息"。 升级到 AU7 之前已存在的所有数据库已禁用自动统计信息。 以下示例对现有数据库 myPDW 启用自动统计信息。
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON
@@ -76,4 +76,4 @@ FROM
 返回值为1表示设置为 on，0表示设置为关闭。 
 
 ## <a name="next-steps"></a>后续步骤
-若要查看查询的执行情况，请参阅[监视活动查询](monitoring-active-queries.md)
+若要查看查询的执行情况，请参阅 [监视活动查询](monitoring-active-queries.md)

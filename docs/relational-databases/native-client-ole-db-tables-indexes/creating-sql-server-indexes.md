@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4850e0de477378b403c5443dc9dcd3ecf952321d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7b7f08c622c5a1dccb9000daf952915bc62ea78c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448252"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419042"
 ---
 # <a name="creating-sql-server-native-client-indexes"></a>创建 SQL Server Native Client 索引
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序公开**IIndexDefinition：： CreateIndex**函数，允许使用者定义表的新索引 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序公开 **IIndexDefinition：： CreateIndex** 函数，允许使用者定义表的新索引 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序将表索引创建为索引或约束。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向表所有者、数据库所有者和某些管理角色的成员提供约束创建特权。 默认情况下，只有表所有者才能对表创建索引。 因此，CreateIndex 的成功或失败不仅取决于应用程序用户的访问权限，还取决于所创建索引的类型  。  
   
  在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串    。 pTableID 的 eKind 成员必须是 DBKIND_NAME   。  
   
- *PIndexID*参数可以为 NULL，如果是，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序为索引创建唯一名称。 通过在 ppIndexID 参数中指定一个指向 DBID 的有效指针，使用者可以捕获索引的名称  。  
+ *PIndexID* 参数可以为 NULL，如果是，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序为索引创建唯一名称。 通过在 ppIndexID 参数中指定一个指向 DBID 的有效指针，使用者可以捕获索引的名称  。  
   
  在 pIndexID 参数的 uName 联合的 pwszName 成员中，使用者可以将索引名称指定为 Unicode 字符串    。 pIndexID 的 eKind 成员必须是 DBKIND_NAME   。  
   

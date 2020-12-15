@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 837947acfb36857414b53edc9f89054a4dd4bbd8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dea493c6c46536367d3251579d60c731bde1bb84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899987"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424535"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW 使用 SQL Server 特性和功能
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ WideWorldImportersDW 旨在展示适用于数据仓库和分析的 SQL Server �
 
 ## <a name="polybase"></a>PolyBase
 
-[适用于 SQL Server （2016和更高版本）]
+[适用于 SQL Server (2016 及更高版本) ]
 
 PolyBase 用于将 WideWorldImportersDW 中的销售信息与有关统计信息的公共数据集合并，以了解哪些城市可能会对销售更有兴趣。
 
@@ -80,9 +80,9 @@ ORDER BY PopulationIn2016 DESC;
 
 ## <a name="clustered-columnstore-indexes"></a>聚集列存储索引
 
-（该示例的完整版本）
+示例 (完整版本) 
 
-聚集列存储索引（CCI）与所有事实数据表一起使用，可减少存储空间占用量和提高查询性能。 使用 CCI 后，事实数据表的基本存储使用列压缩。
+聚集列存储索引 (CCI) 与所有事实数据表一起使用，以减少存储空间占用量和提高查询性能。 使用 CCI 后，事实数据表的基本存储使用列压缩。
 
 非聚集索引是在聚集列存储索引的顶层使用的，用于简化 primary key 和 foreign key 约束。 这些约束已增加，但 ETL 过程从 WideWorldImporters 数据库中查找数据，而这些数据具有强制完整性的约束。 删除主键和外键约束及其支持索引会减少事实数据表的存储空间。
 
@@ -114,7 +114,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX [CCX_Fact_Order] ON [Fact].[Order]
 
 ## <a name="partitioning"></a>分区
 
-（该示例的完整版本）
+示例 (完整版本) 
 
 数据仓库中的数据大小可能会增长得非常大。 因此，最佳做法是使用分区来管理数据库中大表的存储。
 
@@ -124,7 +124,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX [CCX_Fact_Order] ON [Fact].[Order]
 
 ## <a name="in-memory-oltp"></a>内存中 OLTP
 
-（该示例的完整版本）
+示例 (完整版本) 
 
 WideWorldImportersDW 对临时表使用 SCHEMA_ONLY 内存优化表。 所有 `Integration.` * `_Staging` 表都 SCHEMA_ONLY 内存优化表。
 
