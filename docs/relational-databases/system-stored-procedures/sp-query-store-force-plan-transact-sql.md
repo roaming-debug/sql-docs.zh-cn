@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 503305e4e1954f7d549244bee058ad449c975ec7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 14bf8a5f4e8ca74a7419c62200f87bc7fb4ce052
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534967"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427218"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-sql) 
 
@@ -45,7 +45,7 @@ ms.locfileid: "89534967"
 sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @query_id = ] query_id` 查询的 id。 *query_id* 是 **bigint**，无默认值。  
   
 `[ @plan_id = ] plan_id` 要强制执行的查询计划的 id。 *plan_id* 是 **bigint**，无默认值。  

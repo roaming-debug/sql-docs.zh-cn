@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1eb0487c46b0ef3d16c7a8286292fce5cef11538
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: e4afeb9f30040cf576a35b1b822bf5292752c148
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809143"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427145"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact-sql) 
 
@@ -31,7 +31,7 @@ ms.locfileid: "91809143"
 sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] table_name [, [@row_count=] @row_count_var [OUTPUT]]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 *\@table_name*
 
@@ -45,7 +45,7 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 返回已删除的行数的输出参数。 如果历史记录表中包含聚集列存储索引，则此参数将始终返回0。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此存储过程只能与指定了有限保留期的临时表一起使用。
 仅当需要立即清除历史记录表中的所有过期行时，才使用此存储过程。 您应该知道，它会对数据库日志和 i/o 子系统产生重大影响，因为它会删除同一事务中所有符合条件的行。
