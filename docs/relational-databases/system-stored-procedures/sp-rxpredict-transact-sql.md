@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 55514f89487a06e16413f199f744013d2c4f8c90
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fb1f2af32479ef295d578b3fd6f0f7581524d960
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461498"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489525"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -58,13 +58,13 @@ sp_rxPredict  ( @model, @input )
 若要启用存储过程，必须在实例上启用 SQLCLR。
 
 > [!NOTE]
-> Enabing 此选项有安全隐患。 如果无法在服务器上启用 SQLCLR，请使用其他实现，如 [TRANSACT-SQL 预测](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017) 函数。
+> 启用此选项有安全隐患。 如果无法在服务器上启用 SQLCLR，请使用其他实现，如 [TRANSACT-SQL 预测](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017&preserve-view=true) 函数。
 
 用户需要 `EXECUTE` 对数据库的权限。
 
 ### <a name="supported-algorithms"></a>支持的算法
 
-若要创建和训练模型，请使用支持的 R 或 Python 算法之一， [SQL Server 机器学习服务 (r 或 python) ](../../machine-learning/sql-server-machine-learning-services.md)， [SQL Server 2016 R 服务](../../machine-learning/r/sql-server-r-services.md)， [SQL Server Machine Learning Server (独立)  (R 或 Python) ](../../machine-learning/r/r-server-standalone.md)，或 [SQL Server 2016 R Server (独立) ](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016)。
+若要创建和训练模型，请使用支持的 R 或 Python 算法之一， [SQL Server 机器学习服务 (r 或 python) ](../../machine-learning/sql-server-machine-learning-services.md)， [SQL Server 2016 R 服务](../../machine-learning/r/sql-server-r-services.md)， [SQL Server Machine Learning Server (独立)  (R 或 Python) ](../../machine-learning/r/r-server-standalone.md)，或 [SQL Server 2016 R Server (独立) ](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016&preserve-view=true)。
 
 #### <a name="r-revoscaler-models"></a>R： RevoScaleR 模型
 

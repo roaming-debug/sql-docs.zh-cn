@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd95dd20cf72900a85c675c0e6b89689553d55f5
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127668"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999235"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "96127668"
   
 -   必须启用远程管理。  
   
--   对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 端口，请使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器对您要取消阻止的实例检查 TCP/IP 协议的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 网络配置。 如果要在安装后使用 TCP 连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，则必须对 IPALL 启用 TCP 端口。 默认情况下，SQL Browser 侦听 UDP 端口 1434。  
+- 对于使用非默认端口的 SQL Server 实例，请使用 SQL Server 配置管理器的网络配置来确定要取消阻止的 SQL Server 实例所使用的端口。 如果要使用 [SQL Server Browser 服务](../../../tools/configuration-manager/sql-server-browser-service.md)（使用的 IP 地址不同于群集实例的 IP 地址）和 UDP 端口 1434 连接到 SQL Server 实例，请在防火墙中启用 IPALL 的 TCP 端口。 
   
 -   故障转移群集安装程序操作包括一个用于检查网络绑定顺序的规则。 尽管绑定顺序看起来可能是正确的，但您可能已对系统禁用或“幻像”NIC 配置。 “幻像”NIC 配置可影响绑定顺序并导致绑定顺序规则发出警告。 若要避免此问题，请使用下列步骤来标识并删除禁用的网络适配器：  
   

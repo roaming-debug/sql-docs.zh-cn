@@ -1,7 +1,7 @@
 ---
 title: Reporting Services 支持的数据源 | Microsoft Docs
 description: 了解 Reporting Services 支持的各种数据源，包括 Microsoft SQL Server、Oracle 和 ODBC。
-ms.date: 05/21/2020
+ms.date: 11/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b8fb15c2fb479471000fc9979c691761e4d81cd
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+ms.openlocfilehash: 34d5618950a96fd275a334dd78d914ee7e036c2f
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328558"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788373"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -173,6 +173,8 @@ ms.locfileid: "93328558"
  
  对于 Azure Analysis Services 和 Power BI Premium 数据集数据源，请注意，必须禁用多重身份验证，才能使用凭据连接到数据源。 如果需要为环境启用多重身份验证，请查看 <a href="/azure/active-directory/conditional-access/overview">Azure Active Directory 条件访问</a>，将其作为为数据源中使用的凭据禁用多重身份验证的一种方式。
   
+ 使用 Power BI Premium 数据集作为数据源时，仅支持导入模式和 DirectQuery。
+  
  连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持多值参数，并将单元格和成员属性映射到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持的扩展属性。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
  也可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源创建模型。  
@@ -185,7 +187,7 @@ ms.locfileid: "93328558"
  [返回数据源表](#DataSourcesTable)  
   
 ####  <a name="ole-db-for-sql-server"></a><a name="OLEDBSQL"></a> OLE DB for SQL Server  
- 如果选择数据源类型 **OLE DB** ，则要选择一个扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for OLE DB 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据处理扩展插件。 此数据处理扩展插件针对 x86 和 x64 平台进行了本机编译并在这些平台上运行。  
+ 如果选择数据源类型 **OLE DB**，则要选择一个扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for OLE DB 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据处理扩展插件。 此数据处理扩展插件针对 x86 和 x64 平台进行了本机编译并在这些平台上运行。  
   
  有关详细信息，请参阅 [OLE DB 连接类型 (SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)。  
   
@@ -214,7 +216,7 @@ ms.locfileid: "93328558"
  [返回数据源表](#DataSourcesTable)  
   
 ###  <a name="odbc-data-processing-extension"></a><a name="ODBC"></a> ODBC Data Processing Extension  
- 如果选择数据源类型 **ODBC** ，则要选择一个扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for ODBC 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据处理扩展插件。 此数据处理扩展插件针对 x86 和 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] 平台进行了本机编译并在这些平台上运行。 使用此扩展插件可连接到具有 ODBC 访问接口的任何数据源并从中检索数据。  
+ 如果选择数据源类型 **ODBC**，则要选择一个扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for ODBC 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据处理扩展插件。 此数据处理扩展插件针对 x86 和 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] 平台进行了本机编译并在这些平台上运行。 使用此扩展插件可连接到具有 ODBC 访问接口的任何数据源并从中检索数据。  
   
 > [!NOTE]  
 >  虽然某个数据访问接口可能支持在报表创作客户端上预览报表，但并非所有 ODBC 数据访问接口都设计为支持在报表服务器上发布的报表。  
@@ -249,7 +251,7 @@ ms.locfileid: "93328558"
  [返回数据源表](#DataSourcesTable)  
   
 ###  <a name="teradata-data-processing-extension"></a><a name="Teradata"></a> Teradata 数据处理扩展插件  
- 如果选择数据源类型 **Teradata** ，则选择的是扩展 .NET Framework Data Provider for Teradata 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件。 若要从 Teradata 检索报表数据，系统管理员必须在报表创作客户端上安装 .NET Framework Data Provider for Teradata 才能在客户端上编辑和预览报表，并且必须在报表服务器上安装它才能查看已发布的报表。  
+ 如果选择数据源类型 **Teradata**，则选择的是扩展 .NET Framework Data Provider for Teradata 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件。 若要从 Teradata 检索报表数据，系统管理员必须在报表创作客户端上安装 .NET Framework Data Provider for Teradata 才能在客户端上编辑和预览报表，并且必须在报表服务器上安装它才能查看已发布的报表。  
   
  对于报表服务器项目，没有可用于此扩展插件的图形查询设计器。 必须使用基于文本的查询设计器来创建查询。  
   

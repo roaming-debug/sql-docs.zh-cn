@@ -2,7 +2,7 @@
 title: 了解并发控制
 description: 了解并发控制，以及如何在使用 JDBC Driver for SQL Server 开发多用户应用程序时保持数据库完整性。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9350c62c29acce5e56d60cfcd1fa854a7e2414cd
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: c44f52697fa8048a8c7db2286c3e69114f658152
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435301"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900940"
 ---
 # <a name="understanding-concurrency-control"></a>了解并发控制
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "87435301"
   并发控制指的是当多个用户同时更新行时，用于保护数据库完整性的各种技术。 并发机制不正确可能导致脏读、虚拟读取和不可重复读等问题。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的所有并发技术提供了接口以解决这些问题。  
   
 > [!NOTE]  
->  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并发的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“管理并发数据访问”。  
+>  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并发的详细信息，请参阅[“管理并发数据访问”](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#managing-concurrent-data-access)。  
   
 ## <a name="remarks"></a>注解  
  JDBC 驱动程序支持以下并发类型：  

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2d1ef030815e701f0b1b7cdeac02c4827641ff2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 99a4ffe7fc4b5ac47abdf8891ab694ef20abc845
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809883"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485089"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  您可以使用 **SQLColAttribute** 检索已准备或执行的 ODBC 语句的结果集列的属性。 在已准备好的语句上调用 **SQLColAttribute** 将导致往返 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序接收语句执行过程中的结果集列数据，因此在**SQLExecute**或**SQLExecDirect**完成后调用**SQLColAttribute**不涉及服务器往返。  
+  您可以使用 **SQLColAttribute** 检索已准备或执行的 ODBC 语句的结果集列的属性。 在已准备好的语句上调用 **SQLColAttribute** 将导致往返 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序接收语句执行过程中的结果集列数据，因此在 **SQLExecute** 或 **SQLExecDirect** 完成后调用 **SQLColAttribute** 不涉及服务器往返。  
   
 > [!NOTE]  
 >  ODBC 列标识符属性并非可用于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 结果集。  
@@ -57,7 +57,7 @@ ms.locfileid: "91809883"
   
  对于所有版本，当已准备的一批 SQL 语句生成多个结果集时，只为第一个结果集报告列属性。  
   
- 以下列属性是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序公开的扩展。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序将返回*NumericAttrPtr*参数中的所有值。 这些值作为 SDWORD（signed long，有符号长值）返回，但 SQL_CA_SS_COMPUTE_BYLIST 除外，它是指向 WORD 数组的指针。  
+ 以下列属性是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序公开的扩展。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序将返回 *NumericAttrPtr* 参数中的所有值。 这些值作为 SDWORD（signed long，有符号长值）返回，但 SQL_CA_SS_COMPUTE_BYLIST 除外，它是指向 WORD 数组的指针。  
   
 |字段标识符|返回的值|  
 |----------------------|--------------------|  
@@ -102,7 +102,7 @@ ms.locfileid: "91809883"
  有关详细信息，请参阅 [ODBC&#41;&#40;日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>SQLColAttribute 对大型 CLR UDT 的支持  
- **SQLColAttribute** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [&#40;ODBC&#41;的大型 CLR 用户定义类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLColAttribute** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [ODBC&#41;&#40;的大型 CLR User-Defined 类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>SQLColAttribute 对于稀疏列的支持  
  SQLColAttribute 查询新的实现行描述符 (IRD) 字段 SQL_CA_SS_IS_COLUMN_SET，以确定列是否为 **column_set** 列。  

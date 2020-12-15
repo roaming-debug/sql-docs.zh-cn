@@ -15,18 +15,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: c6e5a3878011de396568c4649ea5575635e96aec
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523874"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489551"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>使用数据迁移助手评估迁移到 Azure SQL 数据库的 SQL Server 数据空间的准备情况
 
 将数百个 SQL Server 实例和数千个数据库迁移到 Azure SQL 数据库，我们的平台即服务 (PaaS) 产品/服务，这是一个很大的任务。 为了尽可能简化该过程，您需要自信地了解迁移的相对就绪性。 确定低挂起的可理解性，包括完全准备就绪的服务器和数据库，或者需要最少的工作量来做好迁移准备，从而使您的工作更加轻松并加速。
 
-本文提供了有关利用 [数据迁移助手](./dma-overview.md?view=sql-server-2017) 汇总就绪结果并在 [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) 中心进行介绍的分步说明。
+本文提供了有关利用 [数据迁移助手](./dma-overview.md) 汇总就绪结果并在 [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) 中心进行介绍的分步说明。
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -46,7 +46,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
 
    ![Azure Migrate-启动评估](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-hub-assess.png)
 
-4. 在 " **数据库**" 中，在 "入门 **" 下，** 选择 " **添加工具 (s) **"。
+4. 在 " **数据库**" 中，在 "入门 **" 下，** 选择 " **添加工具 (s)**"。
 
    ![Azure Migrate-添加工具](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tools.png)
 
@@ -71,11 +71,11 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
    > [!NOTE]
    > 创建项目时，必须至少添加一个评估或迁移工具。
 
-8. 在 " **选择评估工具** " 选项卡上， **Azure Migrate：数据库评估** 显示为要添加的评估工具。 如果当前不需要评估工具，请选中 " **立即跳过添加评估工具** " 复选框。 选择“下一步”。
+8. 在 " **选择评估工具** " 选项卡上， **Azure Migrate：数据库评估** 显示为要添加的评估工具。 如果当前不需要评估工具，请选中 " **立即跳过添加评估工具** " 复选框。 选择“下一步”  。
 
     ![Azure Migrate-选择评估工具选项卡](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-assessment-tool.png)
 
-9. 在 " **选择迁移工具** " 选项卡上， **Azure Migrate：数据库迁移** 显示为要添加的迁移工具。 如果当前不需要迁移工具，请选择 " **立即跳过添加迁移工具**"。 选择“下一步”。
+9. 在 " **选择迁移工具** " 选项卡上， **Azure Migrate：数据库迁移** 显示为要添加的迁移工具。 如果当前不需要迁移工具，请选择 " **立即跳过添加迁移工具**"。 选择“下一步”  。
 
     ![Azure Migrate-选择迁移工具选项卡](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
@@ -101,7 +101,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
 
     如果要将本地 SQL Server 实例升级到 SQL Server 的更高版本，或在 Azure VM 上托管 SQL Server，请将源和目标服务器类型设置为 " **SQL Server**"。 将 Azure SQL 数据库的目标服务器类型设置为 **AZURE sql 托管实例** (PaaS) 目标准备情况评估。
 
-3. 选择“创建”。
+3. 选择“创建”  。
 
    ![Azure Migrate 数据迁移助手接口](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -115,7 +115,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
 
    ![Azure Migrate 数据迁移助手评估选项屏幕](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-options-screen.png)
 
-2. 选择“下一步”。
+2. 选择“下一步”  。
 
 ### <a name="add-databases-to-assess"></a>添加要评估的数据库
 
@@ -159,7 +159,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
    ![Azure Migrate-查看准备情况结果](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-readiness.png)
 
     **评估的数据库实例**：到目前为止已评估的 SQL Server 实例的数目。
-    已**评估的数据库**：在一个或多个 SQL Server 实例中评估的数据库可**用于 SQL 数据库**的数据库总数：已准备好迁移到 Azure sql database (PaaS) 的数据库数。
+    已 **评估的数据库**：在一个或多个 SQL Server 实例中评估的数据库可 **用于 SQL 数据库** 的数据库总数：已准备好迁移到 Azure sql database (PaaS) 的数据库数。
     **适用于 AZURE SQL VM 的数据库**：数据库数包含一个或多个针对 Azure sql 数据库的迁移阻止程序 (PaaS) ，但可以迁移到 Azure SQL Server vm。
 
 3. 选择 " **评估的数据库实例** "，以转到 SQL Server 实例级别视图。
@@ -178,7 +178,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
 
    ![Azure Migrate-查看迁移阻止程序](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [数据迁移助手 (DMA)](../dma/dma-overview.md)
 * [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)

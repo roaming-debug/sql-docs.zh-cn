@@ -1,5 +1,5 @@
 ---
-title: dwloader 命令行加载器
+title: dwloader Command-Line 加载程序
 description: dwloader 是并行数据仓库 (PDW) 命令行工具，它将表行批量加载到现有表中。
 author: mzaman1
 ms.prod: sql
@@ -9,14 +9,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3635aff3c3dad371c969acd3d72b2fb738748ecc
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767046"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489687"
 ---
-# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>并行数据仓库的 dwloader 命令行加载器
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>并行数据仓库的 dwloader Command-Line 加载程序
 **dwloader** 是并行数据仓库 (PDW) 命令行工具，它将表行批量加载到现有表中。 加载行时，可以将所有行添加到表的末尾 (*追加模式* 或 *fastappend 模式*) ，追加新行并更新 (*upsert 模式下* 的现有行) ，或在加载前删除所有现有行，然后将所有行插入到空表 (*重载模式*) 。  
   
 **用于加载数据的进程**  
@@ -116,15 +116,15 @@ dwloader.exe
 }  
 ```  
   
-## <a name="arguments"></a>参数  
-**-h**  
+## <a name="arguments"></a>自变量  
+-h  
 显示有关使用加载程序的简单帮助信息。 仅当未指定其他命令行参数时，才会显示帮助。  
   
 **-U** *login_name*  
 有效的 SQL Server 身份验证登录名，具有适当的权限来执行负载。  
   
 -P password  
-SQL Server Authentication *login_name*的密码。  
+SQL Server Authentication *login_name* 的密码。  
   
 **-W**  
 使用 Windows 身份验证。  (无需 *login_name* 或 *密码* 。 )  
@@ -134,11 +134,11 @@ For information about configuring Windows Authentication, see [Security - Config
 -->
   
 **-f** *parameter_file_name*  
-使用参数文件 *parameter_file_name*来代替命令行参数。 *parameter_file_name* 可以包含除 *user_name* 和 *password*以外的任何命令行参数。 如果在命令行和参数文件中指定了参数，则命令行将覆盖 file 参数。  
+使用参数文件 *parameter_file_name* 来代替命令行参数。 *parameter_file_name* 可以包含除 *user_name* 和 *password* 以外的任何命令行参数。 如果在命令行和参数文件中指定了参数，则命令行将覆盖 file 参数。  
   
 参数文件包含一个参数， **-** 每行不含前缀。  
   
-示例：  
+示例:  
   
 `rt=percentage`  
   
@@ -193,7 +193,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   所有文件将被连接起来，并将其加载，就好像它们是一个文件，被拒绝的行会转向单个拒绝文件。  
   
-示例：  
+示例:  
   
 -   -i \\ \loadserver\loads\daily \\ *. gz  
   
@@ -206,10 +206,10 @@ For more information about this install option, see [Install dwloader Command-Li
 -   -i \\ \loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
-如果存在加载失败， **dwloader** 将存储未能加载的行，并且失败说明中名为 *load_failure_file_name*的文件中的失败信息。 如果此文件已存在，dwloader 将覆盖现有文件。 *load_failure_file_name* 是在第一次失败时创建的。 如果所有行都成功加载，则不会创建 *load_failure_file_name* 。  
+如果存在加载失败， **dwloader** 将存储未能加载的行，并且失败说明中名为 *load_failure_file_name* 的文件中的失败信息。 如果此文件已存在，dwloader 将覆盖现有文件。 *load_failure_file_name* 是在第一次失败时创建的。 如果所有行都成功加载，则不会创建 *load_failure_file_name* 。  
   
 **-fh** *number_header_rows*  
-*Source_data_file_name*开始时要忽略 (行) 行数。 默认值为 0。  
+*Source_data_file_name* 开始时要忽略 (行) 行数。 默认值为 0。  
   
 <variable_length_column_options>  
 具有字符分隔可变长度列的 *source_data_file_name* 的选项。 默认情况下， *source_data_file_name* 包含可变长度列中的 ASCII 字符。  
@@ -234,7 +234,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 若要在命令行中指定管道字符，请将其括在双引号 "|" 中。 这将避免命令行分析器解释。 其他字符用单引号括起来。  
   
-示例：  
+示例:  
   
 -t "|"  
   
@@ -274,7 +274,7 @@ LF 的示例：
 **-s** *string_delimiter*  
 用文本分隔的输入文件的 string 数据类型字段的分隔符。 字符串分隔符是一个或多个 ASCII 值。  它可以指定为字符 (例如，-s * ) 或十六进制值 (例如，-s 0x22 对于双引号) 。  
   
-示例：  
+示例:  
   
 些  
   
@@ -288,7 +288,7 @@ LF 的示例：
 **-w** *fixed_width_config_file*  
 配置文件的路径和名称，该配置文件指定每列中的字符数。 必须指定每个字段。  
   
-此文件必须位于加载服务器上。 路径可以是 UNC、相对路径或绝对路径。 *Fixed_width_config_file*中的每一行都包含一个列的名称和该列的字符数。 每个列都有一个行，如下所示，文件中的顺序必须与目标表中的顺序匹配：  
+此文件必须位于加载服务器上。 路径可以是 UNC、相对路径或绝对路径。 *Fixed_width_config_file* 中的每一行都包含一个列的名称和该列的字符数。 每个列都有一个行，如下所示，文件中的顺序必须与目标表中的顺序匹配：  
   
 *column_name* =*num_chars*  
   
@@ -300,7 +300,7 @@ SalesCode = 3
   
 SalesID = 10  
   
-*Source_data_file_name*中的示例行：  
+*Source_data_file_name* 中的示例行：  
   
 230Shirts0056  
   
@@ -376,11 +376,11 @@ dym
 有关更全面的格式设置信息，请参阅 [dwloader 的数据类型转换规则](dwloader-data-type-conversion-rules.md)。  
   
 **-dt** *datetime_format_file*  
-在名为 *datetime_format_file*的文件中指定每个日期时间格式。 与命令行参数不同，包含空格的文件参数不得用双引号引起来。 在加载数据时，不能更改日期时间格式。 源数据文件与其在目标表中的对应列必须具有相同的格式。  
+在名为 *datetime_format_file* 的文件中指定每个日期时间格式。 与命令行参数不同，包含空格的文件参数不得用双引号引起来。 在加载数据时，不能更改日期时间格式。 源数据文件与其在目标表中的对应列必须具有相同的格式。  
   
 每行都包含目标表中列的名称及其日期时间格式。  
   
-示例：  
+示例:  
   
 `LastReceiptDate=ymd`  
   
@@ -398,7 +398,7 @@ append
 fastappend  
 加载程序直接将行插入到目标表中的现有行的末尾，而不是使用临时表。 fastappend 需要多事务 (-m) 选项。 使用 fastappend 时，不能指定临时数据库。 没有 fastappend 的回滚，这意味着从失败或中止的负载中进行的恢复必须由您自己的加载进程处理。  
   
-upsert **-K***merge_column* [,.。。*n* ]    
+upsert *merge_column* [,.。。*n* ]    
 加载器使用 SQL Server Merge 语句来更新现有行和插入新行。  
   
 -K 选项指定合并时所基于的一个或多个列。 这些列构成一个合并关键字，它应表示唯一行。 如果目标表中存在合并关键字，则更新该行。 如果目标表中不存在合并关键字，则追加行。  
@@ -427,14 +427,14 @@ upsert **-K***merge_column* [,.。。*n* ]
 指定用于确定加载程序将允许的加载失败次数的选项。 如果加载失败超出阈值，加载程序将暂停，并且不提交任何行。  
   
 **-rt** { **value** | 百分率}  
-指定 **-rv** *reject_value*选项中的-*reject_value*是 (值的文本行数) 还是失败率 (百分比) 。 默认值为。  
+指定 **-rv** *reject_value* 选项中的-*reject_value* 是 (值的文本行数) 还是失败率 (百分比) 。 默认值为。  
   
 百分比选项是按-rs 选项间隔发生的实时计算。  
   
 例如，如果加载程序尝试加载100行，25个失败并且75成功，则失败率为25%。  
   
 **-rv** *reject_value*  
-指定在停止负载之前允许的行否决的数目或百分比。 **-Rt**选项决定*reject_value*是指行数还是行数百分比。  
+指定在停止负载之前允许的行否决的数目或百分比。 **-Rt** 选项决定 *reject_value* 是指行数还是行数百分比。  
   
 默认 *reject_value* 为0。  
   
@@ -448,7 +448,7 @@ upsert **-K***merge_column* [,.。。*n* ]
 **-c**  
 删除 char、nchar、varchar 和 nvarchar 字段的左侧和右侧的空白字符。 将仅包含空格字符的每个字段转换为空字符串。  
   
-示例：  
+示例:  
   
 "" 截断为 ""  
   
@@ -464,9 +464,9 @@ upsert **-K***merge_column* [,.。。*n* ]
   
 对于 **-m**，SQL Server PDW 并行执行和提交负载。 这比默认加载模式执行得更快，但并不是事务安全的。  
   
-不带 **-m**的 SQL Server PDW 会跨每个计算节点内的分布，同时跨计算节点执行和提交负载。 此方法比多事务模式慢，但是事务安全的。  
+不带 **-m** 的 SQL Server PDW 会跨每个计算节点内的分布，同时跨计算节点执行和提交负载。 此方法比多事务模式慢，但是事务安全的。  
   
-**-m** 对于 *append*、 *reload.sql*和 *upsert*是可选的。  
+**-m** 对于 *append*、 *reload.sql* 和 *upsert* 是可选的。  
   
 **-m** 对于 fastappend 是必需的。  
   
@@ -528,16 +528,16 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 尽管 **dwloader** 是一个事务进程，并将在失败时正常回滚，但一旦成功完成大容量加载，就不能将其回滚。 若要取消活动的 **dwloader** 进程，请键入 CTRL + C。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
-并发发生的所有加载的总大小必须小于数据库的 LOG_SIZE，建议所有并发加载的总大小小于 LOG_SIZE 的50%。 若要实现此大小限制，可将大负载拆分为多个批处理。 有关 LOG_SIZE 的详细信息，请参阅 [创建数据库](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)  
+并发发生的所有加载的总大小必须小于数据库的 LOG_SIZE，建议所有并发加载的总大小小于 LOG_SIZE 的50%。 若要实现此大小限制，可将大负载拆分为多个批处理。 有关 LOG_SIZE 的详细信息，请参阅 [创建数据库](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
   
 在加载包含一个 load 命令的多个文件时，所有拒绝的行将写入同一拒绝文件。 拒绝文件不显示哪个输入文件包含每个被拒绝行。  
   
 空字符串不应用作分隔符。 当空字符串用作行分隔符时，加载将失败。 当用作列分隔符时，加载将忽略分隔符，并继续使用默认值 "|" 作为列分隔符。 当用作字符串分隔符时，将忽略空字符串并应用默认行为。  
   
 ## <a name="locking-behavior"></a>锁定行为  
-**dwloader** 锁定行为根据 *load_mode_option*的不同而异。  
+**dwloader** 锁定行为根据 *load_mode_option* 的不同而异。  
   
--   建议使用**追加**追加，这是最常用的选项。 追加将数据加载到临时表中。 下面将详细介绍锁定。  
+-   建议使用 **追加** 追加，这是最常用的选项。 追加将数据加载到临时表中。 下面将详细介绍锁定。  
   
 -   **快速追加** -以快速方式将加载追加到 ExclusiveUpdate 表锁的最终表中，这是不使用临时表的唯一模式。  
   
@@ -550,18 +550,18 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 追加可以在使用-m 参数)  (多事务性模式下运行，但它不是事务安全的。 因此追加应用作事务性操作，而不使用-m 参数)  (。 遗憾的是，在最后的 INSERT SELECT 操作过程中，事务模式当前大约比多事务性模式慢六倍。  
   
-追加模式分两个阶段加载数据。 第一阶段会将源文件中的数据加载到临时表中， (碎片可能会) 。 阶段2：将数据从临时表加载到最终表。 第二个阶段执行 **INSERT INTO .。。选择 WITH (TABLOCK) ** 操作。 下表显示了对最终表的锁定行为以及使用追加模式时的日志记录行为：  
+追加模式分两个阶段加载数据。 第一阶段会将源文件中的数据加载到临时表中， (碎片可能会) 。 阶段2：将数据从临时表加载到最终表。 第二个阶段执行 **INSERT INTO .。。选择 WITH (TABLOCK)** 操作。 下表显示了对最终表的锁定行为以及使用追加模式时的日志记录行为：  
   
 |表类型|多事务<br />模式 (-m) |表为空|支持并发|日志记录|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|堆|是|是|是|最低|  
-|堆|是|否|是|最低|  
-|堆|否|是|否|最低|  
-|堆|否|否|否|最低|  
-|Cl|是|是|否|最低|  
-|Cl|是|否|是|完全|  
-|Cl|否|是|否|最低|  
-|Cl|否|否|是|完全|  
+|堆|是|是|是|最少|  
+|堆|是|否|是|最少|  
+|堆|否|是|否|最少|  
+|堆|否|否|否|最少|  
+|Cl|是|是|否|最少|  
+|Cl|是|否|是|完整|  
+|Cl|否|是|否|最少|  
+|Cl|否|否|是|完整|  
   
 上表显示了 **dwloader** ，使用追加模式加载到堆或聚集索引 (CI) 表，其中包含或不包含多事务性标志，并且加载到空表或非空表中。 表中显示了每个这种负载组合的锁定和日志记录行为。 例如，使用追加模式将 (第 2) 阶段加载到聚集索引中，而不是使用多事务性模式，而在空表中，将在表中创建排他锁，并且日志记录是最少的。 这意味着，客户将无法加载 (第二) 阶段并同时查询到空表中。 但是，在非空表中加载具有相同配置的时，PDW 不会对表发出排他锁，并且可能会发生并发。 遗憾的是，发生了完整的日志记录，从而降低了处理速度。  
   
@@ -598,7 +598,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. 将数据加载到 AdventureWorks 表中  
-下面的示例是将数据加载到 **AdventureWorksPDW2012**的批处理脚本的一部分。  若要查看完整脚本，请打开 **AdventureWorksPDW2012** 安装包附带的 aw_create.bat 文件。 
+下面的示例是将数据加载到 **AdventureWorksPDW2012** 的批处理脚本的一部分。  若要查看完整脚本，请打开 **AdventureWorksPDW2012** 安装包附带的 aw_create.bat 文件。 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
@@ -695,7 +695,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 -   *-r \r\n* 指定 DimAccount.txt 以回车符和换行符开头的每一行。  
   
--   *-U <login_name>-P <password> *指定有权执行加载的登录名和密码。  
+-   *-U <login_name>-P <password>* 指定有权执行加载的登录名和密码。  
   
 
 <!-- MISSING LINK

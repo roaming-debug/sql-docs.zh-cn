@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 5c0ddd9aa7c89f7f77212155a0b85089c34087d9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c88a289e21e7cd70980763474e82b7dd6cbd49c2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726297"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489514"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>使用数据迁移助手进行 SQL Server 迁移评估
 
@@ -37,7 +37,7 @@ ms.locfileid: "91726297"
 
     如果要将本地 SQL Server 实例升级到现代的本地 SQL Server 实例或托管在 Azure VM 上的 SQL Server，请将源和目标服务器类型设置为 " **SQL Server**"。 如果要迁移到 Azure SQL 数据库，请改为将目标服务器类型设置为 " **AZURE Sql 数据库**"。
 
-3. 单击“创建”。
+3. 单击 **创建**。
 
    ![创建评估](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
@@ -110,12 +110,12 @@ ms.locfileid: "91726297"
         go
     ```
 
-5. 单击“下一步”****，以开始评估。
+5. 单击“下一步”，以开始评估。
 
     ![添加源并开始评估](../dma/media/dma-assesssqlonprem/select-database1.png)
 
 > [!NOTE]
-> 可以并发运行多个评估，然后打开“所有评估”页来查看评估的状态。****
+> 可以并发运行多个评估，然后打开“所有评估”页来查看评估的状态。
 
 ## <a name="view-results"></a>查看结果
 
@@ -125,23 +125,23 @@ ms.locfileid: "91726297"
 
 2. 查看在 " **选项** " 页上选择的目标 SQL Server 版本所支持的所有兼容性问题。
 
-您可以通过分析受影响的对象及其详细信息来查看兼容性问题，并可能针对在中断性 **更改**、 **行为更改**和已 **弃用的功能**下标识的每个问题提供修补程序。
+您可以通过分析受影响的对象及其详细信息来查看兼容性问题，并可能针对在中断性 **更改**、 **行为更改** 和已 **弃用的功能** 下标识的每个问题提供修补程序。
 
 ![查看评估结果](../dma/media/dma-assesssqlonprem/review-results.png)
 
-同样，你可以跨 **性能**、 **存储**和 **安全** 区域查看功能建议。
+同样，你可以跨 **性能**、 **存储** 和 **安全** 区域查看功能建议。
 
-功能建议涵盖了不同类型的功能，例如内存中 OLTP、列存储、Stretch Database、Always Encrypted、动态数据掩码和透明数据加密。
+功能建议涵盖了不同类型的功能，例如 In-Memory OLTP、列存储、Stretch Database、Always Encrypted、动态数据掩码和透明数据加密。
 
 ![查看功能建议](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-对于 Azure SQL 数据库，评估提供了迁移阻止问题和功能奇偶校验问题。通过选择特定的选项来查看这两种类别的结果。
+对于 Azure SQL 数据库，评估提供了迁移阻止问题和功能奇偶校验问题。 通过选择特定的选项来查看这两种类别的结果。
 
-- **SQL Server 功能奇偶校验**类别提供了一套全面的建议、Azure 中可用的替代方法和缓解措施。 它可帮助你在迁移项目中规划此项工作。
+- **SQL Server 功能奇偶校验** 类别提供了一套全面的建议、Azure 中可用的替代方法和缓解措施。 它可帮助你在迁移项目中规划此项工作。
 
   ![查看 SQL Server 功能奇偶校验的信息](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- **兼容性问题**类别提供部分支持或不支持的功能，这些功能会阻止本地 SQL Server 数据库迁移到 Azure SQL 数据库。然后，它提供了帮助你解决这些问题的建议。
+- **兼容性问题** 类别提供部分支持或不支持的功能，这些功能会阻止本地 SQL Server 数据库迁移到 Azure SQL 数据库。 然后，它提供了帮助你解决这些问题的建议。
 
   ![查看兼容性问题](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
@@ -151,7 +151,7 @@ ms.locfileid: "91726297"
 
 这样做使你可以查看 Azure Migrate 中心项目上的合并结果。
 
-[此处](./dma-assess-sql-data-estate-to-sqldb.md?view=sql-server-2017)提供了有关目标准备情况评估的详细的分步指南。
+[此处](./dma-assess-sql-data-estate-to-sqldb.md)提供了有关目标准备情况评估的详细的分步指南。
 
    ![将结果上传到 Azure Migrate](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 

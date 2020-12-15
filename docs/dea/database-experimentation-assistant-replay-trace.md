@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: b91385f587668b17bd9cde9f173cebacce48dc91
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636167"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489541"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>在数据库实验助手中重播跟踪
 
@@ -50,7 +50,7 @@ ms.locfileid: "91636167"
         > [!NOTE]
         > 对于 Azure SQL 数据库或 Azure SQL 托管实例，需要提供 Azure blob 存储帐户的 SAS URI。
 
-3. 通过选择 **"是，手动还原数据库 () " ** 复选框，验证是否已将数据库还原 () 。
+3. 通过选择 **"是，手动还原数据库 () "** 复选框，验证是否已将数据库还原 () 。
 
 4. 在 " **SQL Server 连接详细信息**" 下，输入或选择以下信息：
 
@@ -98,7 +98,7 @@ ms.locfileid: "91636167"
 
 **问：我是否可以并行启动多个重播？**
 
-是，但不是在 **控制器和客户端**中选择的一组计算机。 控制器和客户端将处于繁忙状态。 在 **控制器和客户端** 下设置一组单独的计算机，以开始并行重播。
+是，但不是在 **控制器和客户端** 中选择的一组计算机。 控制器和客户端将处于繁忙状态。 在 **控制器和客户端** 下设置一组单独的计算机，以开始并行重播。
 
 **问：重播通常需要多长时间才能完成？**
 
@@ -139,7 +139,7 @@ DEA 捕获包含与性能相关的信息的跟踪事件。 捕获配置位于 St
 
 - 验证 Distributed Replay 控制器服务是否正在控制器计算机上运行。 若要验证，请使用 Distributed Replay 管理工具 (运行命令 `dreplay.exe status -f 1`) "。
 - 如果远程启动重播：
-  - 确认运行 DEA 的计算机可以成功地 ping 控制器。 根据 **配置重播环境** 页面上的说明，确认防火墙设置允许连接。 有关详细信息，请参阅文章 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017)。
+  - 确认运行 DEA 的计算机可以成功地 ping 控制器。 根据 **配置重播环境** 页面上的说明，确认防火墙设置允许连接。 有关详细信息，请参阅文章 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)。
   - 请确保 Distributed Replay 控制器的用户可以使用 DCOM 远程启动和远程激活。
   - 请确保 Distributed Replay 控制器的用户可以使用 DCOM 远程访问用户权限。
 
@@ -163,6 +163,6 @@ UNC 路径与 Distributed Replay 不兼容。 Distributed Replay 路径必须是
   
 此问题已在 2017 SQL Server 的最新累积更新1中解决。 下载 [SQL Server 2017 的累积更新 1](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)的最新版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - 若要创建分析报表来帮助获取有关建议更改的信息，请参阅 [创建报表](database-experimentation-assistant-create-report.md)。

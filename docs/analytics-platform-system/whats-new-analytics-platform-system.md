@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 590ca4149bc93fd2c22d04f22c3c47b7389245a2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97420164"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489604"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>分析平台系统中的新增功能-横向扩展 MPP 数据仓库
 请参阅 Microsoft Analytics Platform System (AP) 最新的设备更新中的新增功能。 AP 是托管 MPP SQL Server 并行数据仓库的扩展本地设备。 
@@ -45,13 +45,13 @@ AP CU 7.7 软件将 VMM VM 升级到 Windows Server 2016 并安装 SCVMM2016。 
 发布日期-2019 年9月
 
 ### <a name="alter-external-data-source"></a>更改外部数据源
-客户将可以通过 CU 7.5 更新来更改外部数据源定义。 使用 Hadoop 名称节点高可用性的客户现在可以在发生故障转移时更改数据源以更改参数。 对于 AP，只能更改位置、RESOURCE_MANAGER_LOCATION 和凭据。 有关详细信息，请参阅 [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017) 。
+客户将可以通过 CU 7.5 更新来更改外部数据源定义。 使用 Hadoop 名称节点高可用性的客户现在可以在发生故障转移时更改数据源以更改参数。 对于 AP，只能更改位置、RESOURCE_MANAGER_LOCATION 和凭据。 有关详细信息，请参阅 [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017&preserve-view=true) 。
 
 ### <a name="cdh-515-and-516-support-with-polybase"></a>支持 PolyBase 的 CDH 5.15 和5.16
 具有 CU 7.5 更新的接入点上的 PolyBase 现在支持来自 Cloudera 的 CDH 5.15 和5.16 版本的 Hadoop 分发版。 将选项6用于 CDH 4.x 版本。 
 
 ### <a name="try_convert-and-try_cast-support"></a>Try_Convert 和 Try_Cast 支持
-CU 7.5 AP 现在支持 [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017) 和 [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017) tsql 函数。 如果转换成功，则这两个函数都将返回转换为指定数据类型的值;否则，将返回 null。
+CU 7.5 AP 现在支持 [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017&preserve-view=true) 和 [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017&preserve-view=true) tsql 函数。 如果转换成功，则这两个函数都将返回转换为指定数据类型的值;否则，将返回 null。
 
 <a name="h2-aps-cu7.4"></a>
 ## <a name="aps-cu74"></a>APS CU7.4

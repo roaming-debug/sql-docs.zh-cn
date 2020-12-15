@@ -2,7 +2,7 @@
 title: 设置连接属性
 description: 可以通过多种方式来指定 Microsoft JDBC Driver for SQL Server 的连接字符串属性。
 ms.custom: ''
-ms.date: 08/19/2020
+ms.date: 12/04/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a322af478215a215975942fb2b055a6cff755dfe
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 29d8ab48623b2eeb2d4cd3a367499bdbe67375f7
+ms.sourcegitcommit: cad737d30e5a80033f3b021cc3f0d47c00756a6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081696"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96614469"
 ---
 # <a name="setting-the-connection-properties"></a>设置连接属性
 
@@ -50,15 +50,15 @@ ms.locfileid: "92081696"
 | properties<br/>类型<br/>默认 | 说明 |
 | :------------------------------ | :---------- |
 | accessToken<br/><br/>字符串<br/><br/>Null | 借助此属性，可以使用访问令牌连接到 SQL 数据库。 无法使用连接 URL 设置 accessToken  。 |
-| applicationIntent<br/><br/>字符串<br/><br/>ReadWrite | 连接到服务器时声明应用程序工作负荷类型。 <br/><br/>可能的值为 ReadOnly 和 ReadWrite   。 <br/><br/>有关详细信息，请参阅 [JDBC 驱动程序对高可用性和灾难恢复的支持](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)。 |
+| applicationIntent<br/><br/>字符串<br/><br/>ReadWrite | 连接到服务器时声明应用程序工作负荷类型。 <br/><br/>可能的值为 ReadOnly 和 ReadWrite   。 <br/><br/>有关详细信息，请参阅 [JDBC 驱动程序对高可用性和灾难恢复的支持](jdbc-driver-support-for-high-availability-disaster-recovery.md)。 |
 | applicationName<br/><br/>字符串<br/>[&lt;=128 char]<br/><br/>Null | 如果未提供名称，则使用应用程序名称或“[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]”。<br/><br/>用于在各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分析和日志记录工具中标识特定的应用程序。 |
 | 身份验证<br/><br/>字符串<br/><br/>NotSpecified | 自 Microsoft JDBC Driver 6.0 for SQL Server 起，此可选属性指明要使用哪个 SQL 身份验证方法进行连接。 可取值为 ActiveDirectoryIntegrated  、ActiveDirectoryPassword  、ActiveDirectoryMSI  、SqlPassword  和 NotSpecified  （默认值）。<br/><br/> 借助 ActiveDirectoryIntegrated  ，可以使用集成 Windows 身份验证连接到 SQL 数据库。<br/><br/> 借助 ActiveDirectoryPassword  ，可以使用 Azure AD 主体名称和密码连接到 SQL 数据库。<br/><br/> 使用 ActiveDirectoryMSI 从 Azure 资源内部连接到 SQL 数据库。 例如，使用托管标识 (MSI) 身份验证的 Azure 虚拟机、应用服务或函数应用。 <br><br>使用 ActiveDirectoryMSI  身份验证模式时，驱动程序支持以下两种类型的托管标识： <br> 1._系统分配的托管标识_：默认用于获取 accessToken  。 <br> 2._用户分配的托管标识_：用于获取 accessToken，前提是托管标识 (MSI) 的客户端 ID 与 msiClientId 连接属性一起指定。<br/><br/> 借助 SqlPassword  ，可以使用 userName  /user  和 password  属性连接到 SQL Server。<br/><br/> 如果不需要这些身份验证方法，请使用 NotSpecified  。<br/><br/> **重要提示：** 如果将身份验证设置为 ActiveDirectoryIntegrated，则需要安装以下两个库：mssql-jdbc_auth-\<version>-\<arch>.dll（在 JDBC 驱动程序包中可用）和用于 SQL Server 的 Azure Active Directory 身份验证库 (ADAL.DLL) ADAL 可以通过安装 [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) 或 [Microsoft OLE DB Driver for SQL Server](../oledb/download-oledb-driver-for-sql-server.md) 来安装 。 JDBC 驱动程序仅支持 ADAL.Dll 版本 1.0.2028.318 及更高版本  。<br/><br/> **注意：** 如果身份验证属性设置为除“NotSpecified”以外的任何值，驱动程序默认使用传输层安全性 (TLS)（以前称为安全套接字层 (SSL)）加密  。<br/><br/> 若要了解如何配置 Azure Active Directory 身份验证，请访问[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/azure-sql/database/authentication-aad-overview)。 |
-| authenticationScheme<br/><br/>字符串<br/><br/>NativeAuthentication | 指示您的应用程序要使用哪一种集成安全性。 可取值为 JavaKerberos  、NTLM  和 NativeAuthentication  （默认值）。<br/><br/> 使用 authenticationScheme=JavaKerberos  时，必须在 serverName  或 serverSpn  属性中指定完全限定的域名 (FQDN)。 否则，将出现错误（Kerberos 数据库中找不到服务器）。<br/><br/> 若要详细了解如何使用 authenticationScheme=JavaKerberos  ，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 <br/><br/> 使用 authenticationScheme=NTLM  时，必须在 domain  或 domainName  属性中指定使用 NTLM 进行身份验证的 Windows 域，并在 user  或 userName  和 password  属性中指定 Windows 凭据。 否则，就会出错（必须指定连接属性）。  |
+| authenticationScheme<br/><br/>字符串<br/><br/>NativeAuthentication | 指示您的应用程序要使用哪一种集成安全性。 可取值为 JavaKerberos  、NTLM  和 NativeAuthentication  （默认值）。<br/><br/> NativeAuthentication 导致驱动程序在 Windows 上加载 `mssql-jdbc_auth-<version>-<arch>.dll`（例如 `mssql-jdbc_auth-8.2.2.x64.dll`），用于获取集成的身份验证信息。 <br/><br/>  （使用 6.0 到 7.4 版本的驱动程序时，加载的本机身份验证库被命名为 `sqljdbc_auth.dll`。） <br/><br/> 使用 authenticationScheme=JavaKerberos  时，必须在 serverName  或 serverSpn  属性中指定完全限定的域名 (FQDN)。 否则，将出现错误（Kerberos 数据库中找不到服务器）。<br/><br/> 若要详细了解如何使用 authenticationScheme=JavaKerberos  ，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 <br/><br/> 使用 authenticationScheme=NTLM  时，必须在 domain  或 domainName  属性中指定使用 NTLM 进行身份验证的 Windows 域，并在 user  或 userName  和 password  属性中指定 Windows 凭据。 否则，就会出错（必须指定连接属性）。  |
 | cancelQueryTimeout<br/><br/>int<br/><br/>-1 | 自 Microsoft JDBC Driver 6.4 for SQL Server 起，此属性可用于取消连接上设置的 queryTimeout  。 如果与 SQL Server 的 TCP 连接遭静默删除，查询执行就会挂起，但不会抛出异常。 只有在连接上也设置了“queryTimeout”时，此属性才适用。 <br/><br/>驱动程序等待 cancelQueryTimeout   + queryTimeout  总秒数，以断开连接并关闭通道。 <br/><br/>此属性的默认值为 -1，行为是无限期等待。 |
-| clientCertificate<br/><br/>字符串<br/><br/>Null | 指定用于客户端身份验证的证书的位置。 JDBC 驱动程序将支持 PFX、PEM、DER 和 CER 文件扩展名。 <br/><br/>有关详细信息，请参阅[环回方案的客户端证书身份验证](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)。 |
-| clientKey <br/><br/>字符串<br/><br/>Null | 指定由 clientCertificate 属性指定的 PEM、DER 或 CER 证书的私钥的位置。 <br/><br/>有关详细信息，请参阅[环回方案的客户端证书身份验证](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)。 |
-| clientKeyPassword <br/><br/>字符串<br/><br/>Null | 指定用于访问 clientKey 文件私钥的可选密码字符串。 <br/><br/>有关详细信息，请参阅[环回方案的客户端证书身份验证](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)。 |
-| columnEncryptionSetting<br/><br/>字符串<br/>["Enabled" &#124; "Disabled"]<br/><br/>已禁用 | 从 Microsoft JDBC Driver 6.0 for SQL Server 开始，设置为“已启用”以使用 Always Encrypted (AE) 功能。 启用 AE后，JDBC 驱动程序以透明方式加密和解密存储在 SQL Server 中的加密数据库中的敏感数据。<br/><br/> 若要详细了解 columnEncryptionSetting  ，请参阅[结合使用 Always Encrypted 和 JDBC 驱动程序](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。<br/><br/> **注意：** SQL Server 2016 或更高版本随附 Always Encrypted。 |
+| clientCertificate<br/><br/>字符串<br/><br/>Null | 指定用于客户端身份验证的证书的位置。 JDBC 驱动程序将支持 PFX、PEM、DER 和 CER 文件扩展名。 <br/><br/>有关详细信息，请参阅[环回方案的客户端证书身份验证](client-certification-authentication-for-loopback-scenarios.md)。 |
+| clientKey <br/><br/>字符串<br/><br/>Null | 指定由 clientCertificate 属性指定的 PEM、DER 或 CER 证书的私钥的位置。 <br/><br/>有关详细信息，请参阅[环回方案的客户端证书身份验证](client-certification-authentication-for-loopback-scenarios.md)。 |
+| clientKeyPassword <br/><br/>字符串<br/><br/>Null | 指定用于访问 clientKey 文件私钥的可选密码字符串。 <br/><br/>有关详细信息，请参阅[环回方案的客户端证书身份验证](client-certification-authentication-for-loopback-scenarios.md)。 |
+| columnEncryptionSetting<br/><br/>字符串<br/>["Enabled" &#124; "Disabled"]<br/><br/>已禁用 | 从 Microsoft JDBC Driver 6.0 for SQL Server 开始，设置为“已启用”以使用 Always Encrypted (AE) 功能。 启用 AE后，JDBC 驱动程序以透明方式加密和解密存储在 SQL Server 中的加密数据库中的敏感数据。<br/><br/> 若要详细了解 columnEncryptionSetting  ，请参阅[结合使用 Always Encrypted 和 JDBC 驱动程序](using-always-encrypted-with-the-jdbc-driver.md)。<br/><br/> **注意：** SQL Server 2016 或更高版本随附 Always Encrypted。 |
 | databaseName,<br/>database<br/><br/>字符串<br/>[&lt;=128 char]<br/><br/>Null | 要连接到的数据库名称。 <br/><br/>如果未声明，则连接到默认的数据库。 |
 | delayLoadingLobs<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | 指示是否流式处理从 ResultSet 检索的所有 LOB 对象的标志。 将该属性设置为“false”将不需要流式处理即可将整个 LOB 对象加载到内存。 |
 | domainName,<br/>域<br/><br/>字符串<br/>Null | 要使用 NTLM 进行身份验证的 Windows 域。 |

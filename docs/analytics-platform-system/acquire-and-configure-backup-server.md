@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6e0bbfd3acbc7616fca0f180d6de3238a724231
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767156"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489717"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>为并行数据仓库获取和配置备份服务器
 本文介绍如何将非设备 Windows 系统配置为备份服务器，以与分析平台系统中的备份和还原功能 (AP) 和并行数据仓库 (PDW) 一起使用。  
@@ -120,9 +120,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 有关详细信息，请参阅： 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)   
   
--   [还原数据库](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
+-   [还原数据库](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
   
 ## <a name="security-notices"></a><a name="Security"></a>安全通知  
 备份服务器未加入设备的专用域。 它位于你自己的网络中，你自己的域和专用设备域之间没有信任关系。  
@@ -140,7 +140,7 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 若要从 PDW 删除网络凭据，请使用 [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) 存储过程。  
   
-若要列出 SQL Server PDW 中存储的所有网络凭据，请使用 [sys. dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) 动态管理视图。  
+若要列出 SQL Server PDW 中存储的所有网络凭据，请使用 [sys.dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) 动态管理视图。  
   
 ### <a name="secure-communications"></a>安全通信  
   

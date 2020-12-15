@@ -9,12 +9,12 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e7f106e462d3d1bb7848b15523ef3d3f7feed2a1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9dd52db9d34519f2b09cbaba880806c17509c84c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767206"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489707"
 ---
 # <a name="backup-and-restore"></a>备份和还原
 
@@ -24,7 +24,7 @@ ms.locfileid: "88767206"
 
 PDW *数据库备份* 是设备数据库的副本，以格式存储，以便可以使用它将原始数据库还原到设备。  
   
-将使用 [BACKUP database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016) t-sql 语句创建 PDW 数据库备份，并将其设置为与 [RESTORE database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) 语句一起使用。它不可用于任何其他目的。 只能将备份还原到具有相同数量或更多计算节点的设备上。  
+将使用 [BACKUP database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true) t-sql 语句创建 PDW 数据库备份，并将其设置为与 [RESTORE database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) 语句一起使用。它不可用于任何其他目的。 只能将备份还原到具有相同数量或更多计算节点的设备上。  
   
 <!-- MISSING LINKS
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
@@ -104,7 +104,7 @@ PDW 使用 SQL Server 备份技术来备份和还原设备数据库。 SQL Serve
   
 1.  要还原的数据库备份在非设备备份服务器上的 Windows 文件共享上可用。 为了获得最佳性能，此服务器已连接到设备 "无线网络"。  
   
-2.  用户向控件节点提交 [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) tsql 语句。  
+2.  用户向控件节点提交 [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) tsql 语句。  
   
     -   还原是完全还原或标头还原。 完全还原将还原完整备份，并根据需要还原差异备份。  
   
@@ -133,8 +133,8 @@ PDW 使用 SQL Server 备份技术来备份和还原设备数据库。 SQL Serve
 |备份和还原任务|说明|  
 |---------------------------|---------------|  
 |准备服务器作为备份服务器。|[获取和配置备份服务器](acquire-and-configure-backup-server.md)|  
-|备份数据库。|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)|  
-|还原数据库。|[还原数据库](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)|    
+|备份数据库。|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|  
+|还原数据库。|[还原数据库](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|    
 
 <!-- MISSING LINKS
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 8d4de2aea0a9020a7f971f36dd011c435a3cec3d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947927"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489493"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>确定本地数据库的正确的 Azure SQL 数据库/托管实例 SKU
 
@@ -38,13 +38,13 @@ ms.locfileid: "94947927"
 
 以下说明可帮助你在 Azure 中使用 DMA 来确定 SKU 建议并设置相应的单个数据库 () 或 () 。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 下载并安装最新版本的 [DMA](https://aka.ms/get-dma)。 如果你已经具有该工具的早期版本，请将其打开，系统会提示你升级 DMA。
 - 确保你的计算机具有 [PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 或更高版本，以便运行所有脚本。 有关如何找出计算机上安装的 PowerShell 版本的信息，请参阅 [下载并安装 Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)一文。
   > [!NOTE]
   > 若要收集计算机信息，数据收集脚本使用 PowerShell 6 中弃用的 Get-WmiObject cmdlet。 若要在 PowerShell 6 或7中运行此脚本，必须将 WMI cmdlet 替换为较新的 CIM cmdlet。
-- 确保计算机上已安装 Azure Powershell 模块。 有关详细信息，请参阅 [安装 Azure PowerShell 模块](/powershell/azure/install-az-ps?view=azps-1.8.0)一文。
+- 确保计算机上已安装 Azure Powershell 模块。 有关详细信息，请参阅 [安装 Azure PowerShell 模块](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true)一文。
 - 验证要收集性能计数器所需的 PowerShell 文件 **SkuRecommendationDataCollectionScript.ps1** 是否安装在 DMA 文件夹中。
 - 确保你要在其上执行此过程的计算机对承载数据库的计算机具有管理员权限。
 
@@ -239,4 +239,4 @@ HTML 文件以图形格式包含这些信息。 它提供了一个用户友好�
 
 ## <a name="next-step"></a>后续步骤
 
-- 有关从 CLI 运行 DMA 的命令的完整列表，请参阅 [从命令行运行数据迁移助手](./dma-commandline.md?view=sql-server-2017)一文。
+- 有关从 CLI 运行 DMA 的命令的完整列表，请参阅 [从命令行运行数据迁移助手](./dma-commandline.md)一文。

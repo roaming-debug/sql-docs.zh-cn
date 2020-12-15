@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41842a2eb754aedc31bad206ad427a86bb65f00f
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 41b139d2f22a9cb3137879d96224b02eafc24bab
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126369"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761495"
 ---
 # <a name="connection-pooling"></a>连接池
 
@@ -27,8 +27,10 @@ ms.locfileid: "96126369"
 
 ## <a name="in-this-section"></a>本节内容  
 
-[SQL Server 连接池 (ADO.NET)](sql-server-connection-pooling.md) 概述连接池并说明 SQL Server 中连接池的工作原理。
+[SQL Server 连接池 (ADO.NET)](sql-server-connection-pooling.md)  
+概述连接池并说明 SQL Server 中连接池的工作原理。
 
 ## <a name="see-also"></a>另请参阅
 
 - [在 ADO.NET 中检索和修改数据](retrieving-modifying-data.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)
