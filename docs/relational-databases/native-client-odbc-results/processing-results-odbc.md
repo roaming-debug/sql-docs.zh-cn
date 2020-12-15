@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 912a025e689343ffe3dce2ccc19dbec600576cd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a7e51247bec904bbd4d735e5706814c2b60bdfed
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867277"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97437932"
 ---
 # <a name="processing-results-odbc"></a>处理结果 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91867277"
   
  其他 SQL 语句（如 GRANT 或 REVOKE）不返回结果集。 对于这些语句，从 **SQLExecute** 或 **SQLExecDirect** 返回的代码通常是语句成功的唯一指示。  
   
- 每个 INSERT、UPDATE 和 DELETE 语句均返回一个仅包含受修改影响的行数的结果集。 当应用程序调用 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)时，此计数可用。 ODBC 3。*x* 应用程序必须调用 **SQLRowCount** 来检索结果集，或 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 将其取消。 当应用程序执行包含多个 INSERT、UPDATE 或 DELETE 语句的批处理或存储过程时，必须使用 **SQLRowCount** 处理每个修改语句的结果集，或使用 **SQLMoreResults**来取消结果集。 通过在批处理或存储过程中包含 SET NOCOUNT ON 语句，可以取消这些计数。  
+ 每个 INSERT、UPDATE 和 DELETE 语句均返回一个仅包含受修改影响的行数的结果集。 当应用程序调用 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)时，此计数可用。 ODBC 3。*x* 应用程序必须调用 **SQLRowCount** 来检索结果集，或 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 将其取消。 当应用程序执行包含多个 INSERT、UPDATE 或 DELETE 语句的批处理或存储过程时，必须使用 **SQLRowCount** 处理每个修改语句的结果集，或使用 **SQLMoreResults** 来取消结果集。 通过在批处理或存储过程中包含 SET NOCOUNT ON 语句，可以取消这些计数。  
   
  Transact-SQL 包括 SET NOCOUNT 语句。 当 NOCOUNT 选项设置为 on 时，SQL Server 不返回受语句影响的行数， **SQLRowCount** 返回0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序版本引入了特定于驱动程序的[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)选项 SQL_SOPT_SS_NOCOUNT_STATUS，以报告 NOCOUNT 选项是打开还是关闭。 无论何时 **SQLRowCount** 返回0，应用程序都应测试 SQL_SOPT_SS_NOCOUNT_STATUS。 如果返回 SQL_NC_ON，则 **SQLRowCount** 的值将仅指示 SQL Server 未返回行计数。 如果返回 SQL_NC_OFF，则表示 NOCOUNT 为 OFF，0与 **SQLRowCount** 的值指示该语句不会影响任何行。 SQL_NC_OFF SQL_SOPT_SS_NOCOUNT_STATUS 时，应用程序不应显示 **SQLRowCount** 的值。 大型批处理或存储过程可能包含多个 SET NOCOUNT 语句，因此程序员不能假定 SQL_SOPT_SS_NOCOUNT_STATUS 保持不变。 每次 **SQLRowCount** 返回0时，应测试该选项。  
   

@@ -1,6 +1,6 @@
 ---
 description: 表值参数的 ODBC SQL 类型
-title: 用于表值参数的 ODBC SQL 类型 |Microsoft Docs
+title: Table-Valued 参数的 ODBC SQL 类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bdde09e3ee58390d8b6b1e14e19de247b0a7b60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1d56ba19777e4c4ef99b067cd98265b7e774a1a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499070"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97435415"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>表值参数的 ODBC SQL 类型
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "88499070"
   
  如果在调用 SQLGetData 时 SQL_SS_TABLE 了 *TargetType* 参数，则返回 SQL_ERROR，并生成包含 SQLSTATE = HY003，"应用程序缓冲区类型无效" 的诊断记录。  
   
- 不能将表值参数列作为 SQL_SS_TABLE 类型绑定。 如果在将*ParameterType*设置为 SQL_SS_TABLE 的情况下调用**SQLBindParameter** ，则返回 SQL_ERROR，并生成包含 SQLSTATE = HY004 "SQL 数据类型无效" 的诊断记录。 SQLSetDescField 和 SQLSetDescRec 也会出现这种情况。  
+ 不能将表值参数列作为 SQL_SS_TABLE 类型绑定。 如果在将 *ParameterType* 设置为 SQL_SS_TABLE 的情况下调用 **SQLBindParameter** ，则返回 SQL_ERROR，并生成包含 SQLSTATE = HY004 "SQL 数据类型无效" 的诊断记录。 SQLSetDescField 和 SQLSetDescRec 也会出现这种情况。  
   
  表值参数列值与参数和结果列具有相同的数据转换选项。  
   
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中只能将表值参数用作输入参数。 如果尝试通过 SQLBindParameter 或 SQLSetDescField 将 SQL_DESC_PARAMETER_TYPE 设置为 SQL_PARAM_INPUT 以外的值，则返回 SQL_ERROR，并将诊断记录添加到 SQLSTATE = HY105 的语句和消息 "参数类型无效"。  
   
- 表值参数列无法在 *StrLen_or_IndPtr*中使用 SQL_DEFAULT_PARAM，因为表值参数不支持每行的默认值。 应用程序可以改为将 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 列属性设置为 1。 这表示该列的所有行均具有默认值。 如果 *StrLen_or_IndPtr* 设置为 SQL_DEFAULT_PARAM，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR，并且将使用 SQLSTATE = HY090 和消息 "字符串或缓冲区长度无效" 将诊断记录添加到语句中。  
+ 表值参数列无法在 *StrLen_or_IndPtr* 中使用 SQL_DEFAULT_PARAM，因为表值参数不支持每行的默认值。 应用程序可以改为将 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 列属性设置为 1。 这表示该列的所有行均具有默认值。 如果 *StrLen_or_IndPtr* 设置为 SQL_DEFAULT_PARAM，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR，并且将使用 SQLSTATE = HY090 和消息 "字符串或缓冲区长度无效" 将诊断记录添加到语句中。  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC&#41;&#40;表值参数 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  

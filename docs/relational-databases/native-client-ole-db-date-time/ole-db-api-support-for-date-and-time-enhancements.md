@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c948c8fa104f57c36f1cbf55fcc7de3469f0846
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 753bc7c2ad83d85977729ab7be241fcf4601d4a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475765"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97433771"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements-native-client-ole-db-provider"></a>OLE DB API 支持 (Native Client OLE DB 提供程序的日期和时间增强功能) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
