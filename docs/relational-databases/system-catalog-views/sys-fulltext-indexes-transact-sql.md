@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_indexes (Transact-SQL)
-title: sys. fulltext_indexes (Transact-sql) |Microsoft Docs
+title: sys.fulltext_indexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b57b7f507e5721647ca44b7f75388fc5ce8de57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7c9b04a81d537c0b82a7a1bccb76b429d896ba13
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401653"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482898"
 ---
 # <a name="sysfulltext_indexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,17 +40,17 @@ ms.locfileid: "88401653"
 |**unique_index_id**|**int**|对应的唯一非全文索引的 ID，该索引用于将全文索引与行关联。|  
 |**fulltext_catalog_id**|**int**|全文索引所在的全文目录的 ID。|  
 |**is_enabled**|**bit**|1 = 当前已启用全文索引。|  
-|**change_tracking_state**|**char (1) **|更改跟踪的状态。<br /><br /> M = 手动<br /><br /> A = 自动<br /><br /> O = 关闭|  
+|**change_tracking_state**|**char(1)**|更改跟踪的状态。<br /><br /> M = 手动<br /><br /> A = 自动<br /><br /> O = 关闭|  
 |**change_tracking_state_desc**|**nvarchar(60)**|对更改跟踪状态的说明。<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
 |**has_crawl_completed**|**bit**|全文索引完成的上一次爬网（填充）。|  
-|**crawl_type**|**char (1) **|当前或上一次爬网的类型。<br /><br /> F = 完全爬网<br /><br /> I = 增量时间戳爬网<br /><br /> U = 基于通知的更新爬网<br /><br /> P = 完全爬网已暂停。|  
+|**crawl_type**|**char(1)**|当前或上一次爬网的类型。<br /><br /> F = 完全爬网<br /><br /> I = 增量时间戳爬网<br /><br /> U = 基于通知的更新爬网<br /><br /> P = 完全爬网已暂停。|  
 |**crawl_type_desc**|**nvarchar(60)**|对当前或上一次爬网类型的说明。<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
 |**crawl_start_date**|**datetime**|当前或上一次爬网的开始日期。<br /><br /> NULL = 无。|  
 |**crawl_end_date**|**datetime**|当前或上一次爬网的结束日期。<br /><br /> NULL = 无。|  
-|**incremental_timestamp**|**二进制 (8) **|要用于下一次增量爬网的时间戳值。<br /><br /> NULL = 无。|  
+|**incremental_timestamp**|**二进制 (8)**|要用于下一次增量爬网的时间戳值。<br /><br /> NULL = 无。|  
 |**stoplist_id**|**int**|与此全文索引关联的 [非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) 的 ID。|  
 |**data_space_id**|**int**|此全文索引所在的文件组。|  
-|**property_list_id**|**int**|与此全文索引关联的搜索属性列表的 ID。 NULL 表示没有与全文索引关联的搜索属性列表。 若要获取有关此搜索属性列表的详细信息，请使用 [sys. registered_search_property_lists &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) 目录视图。|  
+|**property_list_id**|**int**|与此全文索引关联的搜索属性列表的 ID。 NULL 表示没有与全文索引关联的搜索属性列表。 若要获取有关此搜索属性列表的详细信息，请使用 [sys.registered_search_property_lists &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) 目录视图。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
@@ -70,9 +70,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. fulltext_index_fragments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
- [sys. fulltext_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
- [sys. fulltext_index_catalog_usages &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
+ [sys.fulltext_index_fragments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
+ [sys.fulltext_index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
+ [sys.fulltext_index_catalog_usages &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
