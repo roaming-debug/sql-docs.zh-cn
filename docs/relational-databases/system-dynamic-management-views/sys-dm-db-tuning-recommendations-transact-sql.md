@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adf2a1eb88397acbbc8e092eb320e15f239ae8f2
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cad75b88b14fd9bc64acbbd8b167619d3dbcc2e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834526"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472878"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>sys.dm \_ db \_ 优化 \_ 建议 (transact-sql) 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "91834526"
 | **分值** | **int** | 针对0-100 缩放的此建议的预计值/影响 (更好)  |
 | **详细** | **nvarchar(max)** | 包含有关建议的更多详细信息的 JSON 文档。 可用字段如下：<br /><br />`planForceDetails`<br />-    `queryId` - \_ 回归查询的查询 id。<br />-    `regressedPlanId` -回归计划的 plan_id。<br />-   `regressedPlanExecutionCount` -检测到回归之前，执行具有回归计划的查询的次数。<br />-    `regressedPlanAbortedCount` -执行回归计划期间检测到的错误数。<br />-    `regressedPlanCpuTimeAverage` -检测到回归之前，回归查询使用的平均 CPU 时间 (（微秒）) 。<br />-    `regressedPlanCpuTimeStddev` -检测到回归之前，回归查询占用的 CPU 时间的标准偏差。<br />-    `recommendedPlanId` -应强制执行的计划 plan_id。<br />-   `recommendedPlanExecutionCount`-在检测到回归之前应强制执行的查询的执行次数。<br />-    `recommendedPlanAbortedCount` -执行应强制执行的计划期间检测到的错误数。<br />-    `recommendedPlanCpuTimeAverage` - (用计划执行的查询所使用的平均 CPU 时间) ，该查询使用的是在检测到回归之前应强制 (计算的计划) 。<br />-    `recommendedPlanCpuTimeStddev` 检测到回归之前，回归查询占用的 CPU 时间的标准偏差。<br /><br />`implementationDetails`<br />-  `method` -应该用于更正回归的方法。 值始终为 `TSql` 。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 为了强制建议的计划而应执行的脚本。 |
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  `sys.dm_db_tuning_recommendations`当数据库引擎识别潜在的查询性能回归时，将更新返回的信息，并且不会保留。 建议仅在重启后才会保留 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果数据库管理员要在服务器回收后保留这些建议，则应该定期制作优化建议的备份副本。 
 
  `currentValue` 列中的字段 `state` 可能包含以下值：
@@ -72,7 +72,7 @@ ms.locfileid: "91834526"
 
 列中的 JSON 文档 `state` 包含描述为何处于当前状态的原因。 "原因" 字段中的值可能是： 
 
-| Reason | 说明 |
+| 原因 | 说明 |
 |--------|-------------|
 | `SchemaChanged` | 建议过期，因为引用的表的架构已更改。 如果在新架构上检测到新的查询计划回归，则将创建新的建议。 |
 | `StatisticsChanged`| 由于所引用表的统计信息发生变化，建议过期。 如果基于新统计信息检测到新的查询计划回归，则将创建新的建议。 |

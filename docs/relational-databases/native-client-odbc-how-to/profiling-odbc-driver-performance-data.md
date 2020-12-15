@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b55ba95c05d75c384cc89bd55452a5663bbc959
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ae2c238cb6e11293887211d3a72041ff06888fdd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868856"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469538"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>分析 ODBC 驱动程序性能数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91868856"
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>使用 ODBC 管理器记录驱动程序性能数据  
   
-1.  在 " **控制面板**" 中，双击 " **管理工具** "，然后双击 " ** (ODBC) **中的" 数据源 "。 或者，可以调用 odbcad32.exe。  
+1.  在 " **控制面板**" 中，双击 " **管理工具** "，然后双击 " **(ODBC)** 中的" 数据源 "。 或者，可以调用 odbcad32.exe。  
   
 2.  单击 " **用户 dsn**"、" **系统 dsn**" 或 " **文件 dsn** " 选项卡。  
   

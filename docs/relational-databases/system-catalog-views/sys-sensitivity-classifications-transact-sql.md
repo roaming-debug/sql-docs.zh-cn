@@ -23,13 +23,13 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - rank
-monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4021751337e7c49b22d6ec8bc2d24cc4e144e763
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest'
+ms.openlocfilehash: 908151d19df364171063bffcd280786a354c2654
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006009"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472948"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92006009"
 |列名称|数据类型|说明|
 |-----------------|---------------|-----------------|  
 |**class**|**int**|标识存在分类的项的类。 将始终具有值 1 (表示列) |  
-|**class_desc**|**varchar (16) **|存在分类的项的类的说明。 始终具有值 *OBJECT_OR_COLUMN*|  
+|**class_desc**|**varchar (16)**|存在分类的项的类的说明。 始终具有值 *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|表示包含已分类列的表的 ID，与 sys. _objects. object_id 相对应。|  
 |**minor_id**|**int**|表示存在分类的列的 ID，与 sys. _columns. column_id 相对应。|   
 |**label**|**sysname**|为敏感度分类分配的用户可读)  (标签|  

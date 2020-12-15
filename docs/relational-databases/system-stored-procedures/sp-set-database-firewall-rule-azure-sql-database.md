@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b6f9130a4250bdb6f9c250bacbcaaa3943eeef3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: edbe51dc6694a94fcf68b012153e065906ce2208
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810493"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472638"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  创建或更新的数据库级防火墙规则 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。 可以为 **master** 数据库和上的用户数据库配置数据库防火墙规则 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 使用包含的数据库用户时，数据库防火墙规则特别有用。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+  创建或更新的数据库级防火墙规则 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。 可以为 **master** 数据库和上的用户数据库配置数据库防火墙规则 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 使用包含的数据库用户时，数据库防火墙规则特别有用。 有关详细信息，请参阅[包含数据库用户 - 使数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,19 +44,19 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @name = ] [N]'name'` 用于描述和区分数据库级防火墙设置的名称。 *name* 为 **nvarchar (128) ** ，无默认值。 Unicode 标识符 `N` 对于是可选的 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。 
+## <a name="arguments"></a>自变量  
+`[ @name = ] [N]'name'` 用于描述和区分数据库级防火墙设置的名称。 *name* 为 **nvarchar (128)** ，无默认值。 Unicode 标识符 `N` 对于是可选的 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。 
   
-`[ @start_ip_address = ] 'start_ip_address'` 数据库级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最低 IP 地址为 `0.0.0.0`。 *start_ip_address* 是 **varchar (50) ** ，无默认值。  
+`[ @start_ip_address = ] 'start_ip_address'` 数据库级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最低 IP 地址为 `0.0.0.0`。 *start_ip_address* 是 **varchar (50)** ，无默认值。  
   
-`[ @end_ip_address = ] 'end_ip_address'` 数据库级防火墙设置范围中的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。 *end_ip_address* 是 **varchar (50) ** ，无默认值。  
+`[ @end_ip_address = ] 'end_ip_address'` 数据库级防火墙设置范围中的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。 *end_ip_address* 是 **varchar (50)** ，无默认值。  
   
  下表说明了中支持的参数和选项 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。  
   
 > [!NOTE]  
 >  如果此字段和 *start_ip_address* 字段都等于，则允许 Azure 连接尝试 `0.0.0.0` 。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  数据库的数据库级防火墙设置的名称必须是唯一的。 如果为存储过程提供的数据库级防火墙设置的名称在数据库级防火墙设置表中已经存在，则将更新开始和结束 IP 地址。 否则，将创建新的数据库级防火墙设置。  
   
  如果添加的数据库级防火墙设置的起始和结束 IP 地址等于 `0.0.0.0` ，则可以 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 从任何 Azure 资源中启用对服务器中数据库的访问。 为 *name* 参数提供一个值，以帮助你记住防火墙设置的用途。  

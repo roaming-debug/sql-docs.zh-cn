@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_index_columns (Transact-SQL)
-title: sys. fulltext_index_columns (Transact-sql) |Microsoft Docs
+title: sys.fulltext_index_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c1dbd0b4885ef9c1320a505eba17b21b5c8964c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c514fbfd5d82038995bb6db006a9013c28674202
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460644"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472978"
 ---
 # <a name="sysfulltext_index_columns-transact-sql"></a>sys.fulltext_index_columns (Transact-SQL)
 
@@ -39,9 +39,9 @@ ms.locfileid: "88460644"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|此对象所属对象的 ID。|  
-|**column_id**|**int**|构成全文索引的列的 ID。|  
+|column_id|**int**|构成全文索引的列的 ID。|  
 |**type_column_id**|**int**|类型列的 ID，它将用户提供的文档文件扩展名（".doc"、".xls" 等）存储在给定行中的文档中。 类型列仅针对全文索引期间需要筛选其数据的列指定。 如果不适用，则为 NULL。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。|  
-|**language_id**|**int**|其断字符用于对该全文列创建索引的语言 LCID。<br /><br /> 0 = 非特定语言。<br /><br /> 有关详细信息，请参阅 [sys.databases&#41;fulltext_languages &#40;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。|  
+|**language_id**|**int**|其断字符用于对该全文列创建索引的语言 LCID。<br /><br /> 0 = 非特定语言。<br /><br /> 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.fulltext_languages ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。|  
 |**statistical_semantics**|**int**|1 = 此列在全文索引之外还启用了统计语义索引。|  
   
 ## <a name="permissions"></a>权限  

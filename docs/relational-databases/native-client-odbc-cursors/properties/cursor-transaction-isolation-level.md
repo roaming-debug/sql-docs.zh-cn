@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d790761bc0536768cadc8402777c9d1c122d684
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 475ad9fd8965cd74cb46691117df05815d0d2e84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420671"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473698"
 ---
 # <a name="cursor-transaction-isolation-level"></a>游标事务隔离级别
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

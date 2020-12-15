@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_page_info (Transact-SQL)
-title: sys. dm_db_page_info (Transact-sql) |Microsoft Docs
+title: sys.dm_db_page_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 60df2ed8bf279bf7da8193282768124815aa6ab3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: 429f8049ef0b92168be5e3e0fc90c91e3d37224e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493690"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472808"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -43,15 +43,15 @@ ms.locfileid: "88493690"
 sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )  
 ``` 
 
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 *DatabaseId* |NULL |缺省值     
 数据库的 ID。 *DatabaseId* 为 **smallint**。 有效输入是数据库的 ID 号。 默认值为 NULL，但对于此参数发送 NULL 值将导致错误。
  
 *FileId* |NULL |缺省值   
-文件的 ID。 *FileId* 为 **int**。 有效输入是由 *DatabaseId*指定的数据库中文件的 ID 号。 默认值为 NULL，但对于此参数发送 NULL 值将导致错误。
+文件的 ID。 *FileId* 为 **int**。 有效输入是由 *DatabaseId* 指定的数据库中文件的 ID 号。 默认值为 NULL，但对于此参数发送 NULL 值将导致错误。
 
 *PageId* |NULL |缺省值   
-页面的 ID。  *PageId* 为 **int**。 有效输入是 *FileId*指定的文件中的页面 ID 号。 默认值为 NULL，但对于此参数发送 NULL 值将导致错误。
+页面的 ID。  *PageId* 为 **int**。 有效输入是 *FileId* 指定的文件中的页面 ID 号。 默认值为 NULL，但对于此参数发送 NULL 值将导致错误。
 
 *模式* |NULL |缺省值   
 确定函数的输出中的详细信息级别。 "受限" 将为所有说明列返回 NULL 值，"详细信息" 将填充说明列。  默认值为 "受限"。
@@ -60,58 +60,58 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id |int |数据库 ID |
-|file_id |int |文件 ID |
-|page_id |int |页面 ID |
-|page_header_version |int |页面页眉版本 |
-|page_type |int |页面类型 |
-|page_type_desc |nvarchar (64)  |页类型的说明 |
-|page_type_flag_bits |nvarchar (64)  |在页眉中键入标志位 |
-|page_type_flag_bits_desc |nvarchar (64)  |在页眉中键入标志位说明 |
-|page_flag_bits |nvarchar (64)  |标志页眉中的位 |
-|page_flag_bits_desc |nvarchar(256) |标志页眉中的位说明 |
-|page_lsn |nvarchar (64)  |日志序列号/时间戳 |
-|page_level |int |索引 (叶级中的页级别 = 0)  |
-|object_id |int |拥有该页的对象的 ID |
-|index_id |int |堆数据页的索引 (0 的 ID)  |
-|partition_id |bigint |分区的 ID |
-|alloc_unit_id |bigint |分配单元的 ID |
+|database_id |int |数据库 ID |
+|file_id |int |文件 ID |
+|page_id |int |页面 ID |
+|page_header_version |int |页面页眉版本 |
+|page_type |int |页面类型 |
+|page_type_desc |nvarchar (64)  |页类型的说明 |
+|page_type_flag_bits |nvarchar (64)  |在页眉中键入标志位 |
+|page_type_flag_bits_desc |nvarchar (64)  |在页眉中键入标志位说明 |
+|page_flag_bits |nvarchar (64)  |标志页眉中的位 |
+|page_flag_bits_desc |nvarchar(256) |标志页眉中的位说明 |
+|page_lsn |nvarchar (64)  |日志序列号/时间戳 |
+|page_level |int |索引 (叶级中的页级别 = 0)  |
+|object_id |int |拥有该页的对象的 ID |
+|index_id |int |堆数据页的索引 (0 的 ID)  |
+|partition_id |bigint |分区的 ID |
+|alloc_unit_id |bigint |分配单元的 ID |
 |is_encrypted |bit |用于指示该页是否已加密的位 |
 |has_checksum |bit |用于指示页面是否具有校验和值的位 |
-|校验和 (checksum) |int |存储用于检测数据损坏的校验和值 |
-|is_iam_pg |bit |用于指示该页是否为 IAM 页的位  |
-|is_mixed_ext |bit |用于指示在混合区中分配的位 |
+|校验和 (checksum) |int |存储用于检测数据损坏的校验和值 |
+|is_iam_pg |bit |用于指示该页是否为 IAM 页的位  |
+|is_mixed_ext |bit |用于指示在混合区中分配的位 |
 |has_ghost_records |bit |用于指示该页是否包含虚影记录的位 <br> 幻像记录是已标记为要删除但尚未删除的记录。|
 |has_version_records |bit |用于指示该页是否包含用于[加速数据库恢复](../backup-restore/restore-and-recovery-overview-sql-server.md#adr)的版本记录的位 |
-|pfs_page_id |int |对应的 PFS 页的页 ID |
+|pfs_page_id |int |对应的 PFS 页的页 ID |
 |pfs_is_allocated |bit |指示是否在相应的 PFS 页中将该页标记为已分配的位 |
-|pfs_alloc_percent |int |按相应的 PFS 字节指示的分配百分比 |
-|pfs_status |nvarchar (64)  |PFS 字节 |
-|pfs_status_desc |nvarchar (64)  |PFS 字节的说明 |
-|gam_page_id |int |对应的 GAM 页面的页面 ID |
-|gam_status |bit |要指示是否已在 GAM 中分配的位 |
-|gam_status_desc |nvarchar (64)  |GAM 状态位的说明 |
-|sgam_page_id |int |对应的 SGAM 页的页 ID |
-|sgam_status |bit |要指示是否在 SGAM 中分配的位 |
-|sgam_status_desc |nvarchar (64)  |SGAM 状态位的说明 |
-|diff_map_page_id |int |对应的差异位图页面的页面 ID |
-|diff_status |bit |用于指示差异状态是否更改的位 |
-|diff_status_desc |nvarchar (64)  |差异状态位的说明 |
-|ml_map_page_id |int |对应的最小日志记录位图页的页 ID |
-|ml_status |bit |用于指示是否按最小方式记录页面的位 |
-|ml_status_desc |nvarchar (64)  |最小日志记录状态位的说明 |
-|prev_page_file_id |smallint |上一页文件 ID |
-|prev_page_page_id |int |上一页页面 ID |
-|next_page_file_id |smallint |下一页文件 ID |
-|next_page_page_id |int |下一页页 ID |
-|fixed_length |smallint |固定大小行的长度 |
-|slot_count |smallint | (使用的和未使用的槽总数)  <br> 对于数据页，此数字与行数等效。 |
-|ghost_rec_count |smallint |页面上标记为 ghost 的记录数 <br> 幻像记录是已标记为要删除但尚未删除的记录。 |
-|free_bytes |smallint |页面上的可用字节数 |
-|free_data_offset |int |数据区域末尾的可用空间偏移量 |
-|reserved_bytes |smallint |如果堆) ，则为所有事务 (保留的可用字节数 <br> 索引叶)  (的幻像行数 |
-|reserved_bytes_by_xdes_id |smallint |M_xdesID 分配给 m_reservedCnt 的空间 <br> 仅用于调试目的 |
-|xdes_id |nvarchar (64)  |M_reserved 提供的最新事务 <br> 仅用于调试目的 |
+|pfs_alloc_percent |int |按相应的 PFS 字节指示的分配百分比 |
+|pfs_status |nvarchar (64)  |PFS 字节 |
+|pfs_status_desc |nvarchar (64)  |PFS 字节的说明 |
+|gam_page_id |int |对应的 GAM 页面的页面 ID |
+|gam_status |bit |要指示是否已在 GAM 中分配的位 |
+|gam_status_desc |nvarchar (64)  |GAM 状态位的说明 |
+|sgam_page_id |int |对应的 SGAM 页的页 ID |
+|sgam_status |bit |要指示是否在 SGAM 中分配的位 |
+|sgam_status_desc |nvarchar (64)  |SGAM 状态位的说明 |
+|diff_map_page_id |int |对应的差异位图页面的页面 ID |
+|diff_status |bit |用于指示差异状态是否更改的位 |
+|diff_status_desc |nvarchar (64)  |差异状态位的说明 |
+|ml_map_page_id |int |对应的最小日志记录位图页的页 ID |
+|ml_status |bit |用于指示是否按最小方式记录页面的位 |
+|ml_status_desc |nvarchar (64)  |最小日志记录状态位的说明 |
+|prev_page_file_id |smallint |上一页文件 ID |
+|prev_page_page_id |int |上一页页面 ID |
+|next_page_file_id |smallint |下一页文件 ID |
+|next_page_page_id |int |下一页页 ID |
+|fixed_length |smallint |固定大小行的长度 |
+|slot_count |smallint | (使用的和未使用的槽总数)  <br> 对于数据页，此数字与行数等效。 |
+|ghost_rec_count |smallint |页面上标记为 ghost 的记录数 <br> 幻像记录是已标记为要删除但尚未删除的记录。 |
+|free_bytes |smallint |页面上的可用字节数 |
+|free_data_offset |int |数据区域末尾的可用空间偏移量 |
+|reserved_bytes |smallint |如果堆) ，则为所有事务 (保留的可用字节数 <br> 索引叶)  (的幻像行数 |
+|reserved_bytes_by_xdes_id |smallint |M_xdesID 分配给 m_reservedCnt 的空间 <br> 仅用于调试目的 |
+|xdes_id |nvarchar (64)  |M_reserved 提供的最新事务 <br> 仅用于调试目的 |
 ||||
 
 ## <a name="remarks"></a>备注
@@ -137,7 +137,7 @@ SELECT *
 FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 ```
 
-### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>B. 将 sys. dm_db_page_info 与其他 Dmv 配合使用 
+### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>B. 将 sys.dm_db_page_info 与其他 Dmv 配合使用 
 
 `wait_resource` `sys.dm_exec_requests` 当行包含非 null 时，以下查询将返回每个由公开的行`page_resource`
 

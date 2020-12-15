@@ -1,6 +1,6 @@
 ---
 description: sys.bandwidth_usage (Azure SQL Database)
-title: bandwidth_usage (Azure SQL 数据库) |Microsoft Docs
+title: Azure SQL Database (sys.bandwidth_usage) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: c71fdc21c634e8f473d628373ae5adfa9c1c072f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402523"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473028"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -34,13 +34,13 @@ ms.locfileid: "88402523"
 > [!NOTE]
 > 这仅适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11。 * *  
   
- 返回有关** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 数据库服务器**中每个数据库使用的网络带宽的信息。 为给定数据库返回的每行总结在一小时内使用的单个方向和类别。  
+ 返回有关 **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 数据库服务器** 中每个数据库使用的网络带宽的信息。 为给定数据库返回的每行总结在一小时内使用的单个方向和类别。  
   
  **此已在中弃用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。**  
   
- **Sys. bandwidth_usage**视图包含以下列。  
+ **Sys.bandwidth_usage** 视图包含以下列。  
   
-|列名|描述|  
+|列名|说明|  
 |-----------------|-----------------|  
 |**time**|占用带宽的时间（小时）。 此视图中的各行以小时为单位。 例如，2009-09-19 02:00:00.000 表示占用带宽的时间是 2009 年 9 月 19 日的凌晨 2:00  到凌晨 3:00。|  
 |**database_name**|占用带宽的数据库的名称。|  
@@ -57,7 +57,7 @@ ms.locfileid: "88402523"
   
 ### <a name="external-and-internal-classes"></a>External 和 Internal 类别
 
- 对于在给定时间使用的每个数据库， **sys.databases bandwidth_usage** 视图返回显示类和带宽使用方向的行。 下例列举给定数据库可能公开的数据。 在此示例中，时间为 2012-04-21 17:00: 00，即发生在高峰时段。 数据库名称为 Db1。 在此示例中， **bandwidth_usage sys.databases** 为入口和出口方向以及外部和内部类的四个组合返回了一行，如下所示：  
+ 对于在给定时间使用的每个数据库，" **sys.bandwidth_usage** " 视图返回显示类和带宽使用方向的行。 下例列举给定数据库可能公开的数据。 在此示例中，时间为 2012-04-21 17:00: 00，即发生在高峰时段。 数据库名称为 Db1。 在此示例中， **sys.bandwidth_usage** 已为入口和出口方向以及外部和内部类的四个组合返回了一行，如下所示：  
   
 |time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  

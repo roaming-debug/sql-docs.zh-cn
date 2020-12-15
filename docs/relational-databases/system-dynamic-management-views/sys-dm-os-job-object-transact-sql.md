@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c8ee9c4054a9bb39f7eebcd30aa0fa9c85d7bde7
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 456197c4519ca4135cf4a5edbf38d58c6d9246a8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834071"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472848"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "91834071"
 |read_operation_count |**bigint**|自创建作业对象之后 SQL Server 颁发的本地磁盘上的读取 IO 操作总数。 |
 |peak_process_memory_used_mb|**bigint**|自创建作业对象以来，作业对象中单个进程使用的内存量（以 MB 为单位），例如 SQL Server。| 
 |peak_job_memory_used_mb|**bigint**|自创建作业对象以来，作业对象中所有进程已累积使用的内存的最大内存量（以 MB 为单位）。|
-|process_physical_affinity|**nvarchar (3072) **|用于描述 SQL Server 进程可在每个处理器组中使用的逻辑处理器的位掩码。 此列中的值由一个或多个值对组成，每个值对括在大括号中。 在每个对中，第一个值是处理器组号，第二个值是该处理器组的关联位掩码。 例如，值 `{{0,a}{1,2}}` 表示处理器组的关联掩码 `0` `a` `1010` 以二进制形式 (，这表示) 使用处理器2和4，而处理器组的关联掩码 `1` `2` `10` 以二进制形式 (，这表示使用) 处理器2。|
+|process_physical_affinity|**nvarchar (3072)**|用于描述 SQL Server 进程可在每个处理器组中使用的逻辑处理器的位掩码。 此列中的值由一个或多个值对组成，每个值对括在大括号中。 在每个对中，第一个值是处理器组号，第二个值是该处理器组的关联位掩码。 例如，值 `{{0,a}{1,2}}` 表示处理器组的关联掩码 `0` `a` `1010` 以二进制形式 (，这表示) 使用处理器2和4，而处理器组的关联掩码 `1` `2` `10` 以二进制形式 (，这表示使用) 处理器2。|
   
 ## <a name="permissions"></a>权限  
 在 SQL 托管实例上，需要 `VIEW SERVER STATE` 权限。 在 SQL 数据库上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。  

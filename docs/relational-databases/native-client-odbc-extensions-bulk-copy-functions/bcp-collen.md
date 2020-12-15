@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33c0505109bebaba31e98c463cbb92b339af7e21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ba02f03b831f2bdae6c6f4e86c59647598a741ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499239"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473638"
 ---
 # <a name="bcp_collen"></a>bcp_collen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ RETCODE bcp_collen (
         INT idxServerCol);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
@@ -55,9 +55,9 @@ RETCODE bcp_collen (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  
- 使用**bcp_collen**函数，可以在将数据复制到具有 bcp_sendrow 时，更改特定列的程序变量中的数据长度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)  
+ 使用 **bcp_collen** 函数，可以在将数据复制到具有 bcp_sendrow 时，更改特定列的程序变量中的数据长度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)  
   
- 最初，数据长度是在调用 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 时确定的。 如果数据长度在对 **bcp_sendrow** 的调用之间发生更改，并且没有使用长度前缀或终止符，则可以调用 **bcp_collen** 来重置长度。 对 **bcp_sendrow** 的下一次调用使用由对 **bcp_collen**的调用设置的长度。  
+ 最初，数据长度是在调用 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 时确定的。 如果数据长度在对 **bcp_sendrow** 的调用之间发生更改，并且没有使用长度前缀或终止符，则可以调用 **bcp_collen** 来重置长度。 对 **bcp_sendrow** 的下一次调用使用由对 **bcp_collen** 的调用设置的长度。  
   
  您必须对要修改其数据长度的表中的每一列调用一次 **bcp_collen** 。  
   

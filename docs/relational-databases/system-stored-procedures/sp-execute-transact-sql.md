@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49b5548d149640b7e9d78b38c70c22fd6c5ae163
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 72018e5e064a3d3f35fb8495f3b32d7a3e76d4fd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005607"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472708"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ sp_execute handle OUTPUT
     [,bound_param  ]  [,...n ]  ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *柄*  
  Sp_prepare 返回的 *句柄* 值。 *句柄* 是一个参数，它需要调用 **int** 输入值。  
   
@@ -50,7 +50,7 @@ sp_execute handle OUTPUT
  指示使用其他参数。 *bound_param* 是必需的参数，该参数调用任意数据类型的输入值来表示过程的附加参数。  
   
 > [!NOTE]  
->  *bound_param*必须与 sp_prepare*参数*值所进行的声明相匹配，并且可以采用* @name = 值*或*值*形式。  
+>  *bound_param* 必须与 sp_prepare *参数* 值所进行的声明相匹配，并且可以采用 *@name = 值* 或 *值* 形式。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

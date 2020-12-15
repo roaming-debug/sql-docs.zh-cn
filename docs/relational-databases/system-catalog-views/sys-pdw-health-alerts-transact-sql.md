@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e2e265a7905313a988a15fb29de0a8c86b397ac8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: fcdb396016c58f82f3e67f08af2b5489adb40731
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036740"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472938"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>sys.pdw_health_alerts (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92036740"
 |description|**nvarchar(4000)**|警报的说明。|NOT NULL|  
 |condition|**nvarchar(255)**|Type = 阈值时使用。 定义如何计算警报阈值。|Null|  
 |status|**nvarchar(32)**|警报状态|Null|  
-|condition_value|**bit**|指示是否允许在系统操作过程中出现警报。|Null<br /><br /> 可能的值<br /><br /> 0-不生成警报。<br /><br /> 1-生成警报。|  
+|condition_value|**bit**|指示是否允许在系统操作过程中出现警报。|Null<br /><br /> 可能值<br /><br /> 0-不生成警报。<br /><br /> 1-生成警报。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Azure Synapse Analytics 和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

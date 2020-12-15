@@ -1,6 +1,6 @@
 ---
 description: sys.fn_check_object_signatures (Transact-SQL)
-title: sys. fn_check_object_signatures (Transact-sql) |Microsoft Docs
+title: sys.fn_check_object_signatures (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dc2f5c8700bef804b77e97917250152988baf7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 652f7d896d68097d081d209fd6617a8a3b389eb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481813"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472768"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -45,7 +45,7 @@ fn_ check_object_signatures (
   )   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  { '\@*类*"}  
  标识提供的指纹类型：  
   
@@ -53,10 +53,10 @@ fn_ check_object_signatures (
   
 -   “非对称密钥”  
   
- \@*class* 为 **sysname** 类型。  
+ \@*类* 为 **sysname**。  
   
  { \@ *thumbprint* }  
- 用来对密钥进行加密的证书的 SHA-1 哈希，或用来对密钥进行加密的非对称密钥的 GUID。 \@*指纹* 为 **varbinary (20) **。  
+ 用来对密钥进行加密的证书的 SHA-1 哈希，或用来对密钥进行加密的非对称密钥的 GUID。 \@*指纹* 为 **varbinary (20)**。  
   
 ## <a name="tables-returned"></a>返回的表  
  下表列出了 **fn_check_object_signatures** 返回的列。  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 741906e1673d5ac8fe5b88e4d546ee1807667063
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4d126d6718836f5fb1b242564047ab1f0ca807a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486736"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473468"
 ---
 # <a name="sql-server-native-client-data-type-support-for-ole-db-date-and-time-improvements"></a>SQL Server Native Client 数据类型对 OLE DB 日期和时间改进的支持
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -160,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果将基础架构更新为使用**datetime2**而不是**datetime**，则迁移到使用**sql_variant**并且依赖于**datetime**的有限精度的应用程序将需要进行更新。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果将基础架构更新为使用 **datetime2** 而不是 **datetime**，则迁移到使用 **sql_variant** 并且依赖于 **datetime** 的有限精度的应用程序将需要进行更新。  
   
  还通过添加以下内容，对 SSVARIANT 的访问宏进行了扩展：  
   
@@ -177,9 +177,9 @@ enum SQLVARENUM {
 |OLE DB 数据类型 (wType  )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|说明|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
-|DBTYPE_DBTIME2| time(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
-|DBTYPE_DBTIMESTAMPOFFSET| datetimeoffset(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale* 成员，以确定秒的小数部分精度。|  
+|DBTYPE_DBTIME2| time(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale* 成员，以确定秒的小数部分精度。|  
+|DBTYPE_DBTIMESTAMPOFFSET| datetimeoffset(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale* 成员，以确定秒的小数部分精度。|  
   
  应用程序以 wType 指定 DBTYPE_DBTIMESTAMP 时，它可以通过在 pwszTypeName 中提供类型名称来覆盖到 datetime2 的映射。 如果指定 datetime  ，则 bScale  必须为 3。 如果指定 smalldatetime  ，则 bScale  必须为 0。 如果 bScale  与 wType  和 pwszTypeName  不一致，则返回 DB_E_BADSCALE。  
   

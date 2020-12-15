@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61fbf1bd1abb0b0a28182e3546313e7860f67a80
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 96a25a69c14919c4e0108537af105108a813c3fd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97331667"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472868"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "97331667"
 |stack_bytes_committed|**int**|在堆栈中提交的字节数。|  
 |stack_bytes_used|**int**|线程目前使用的字节数。|  
 |affinity|**bigint**|该线程运行时使用的 CPU 掩码。 这取决于 **ALTER SERVER CONFIGURATION SET PROCESS 地缘** 语句配置的值。 在软关联的情况下，可能与计划程序不同。|  
-|优先度|**int**|该线程的优先级值。|  
+|优先级|**int**|该线程的优先级值。|  
 |Locale|**int**|线程的缓存区域设置 LCID。|  
 |Token|**varbinary(8)**|线程的缓存模拟令牌句柄。|  
 |is_impersonating|**int**|指示该线程是否使用 Win32 模拟。<br /><br /> 1 = 该线程使用与进程默认的安全凭据不同的安全凭据。 这表明线程正在模拟创建该进程的实体以外的其他实体。|  

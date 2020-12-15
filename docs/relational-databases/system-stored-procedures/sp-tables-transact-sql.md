@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58f27f22e0a0d69ab35f21b9dcecdc80fd12e63
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dbbf927943b34c81ad1f0a49b831314803969d7c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005554"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472648"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,16 +48,16 @@ sp_tables [ [ @table_name = ] 'name' ]
      [ , [@fUsePattern = ] 'fUsePattern'];  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @table_name = ] 'name'` 用于返回目录信息的表。 *name* 为 **nvarchar (384) **，默认值为 NULL。 支持通配符模式匹配。  
+## <a name="arguments"></a>自变量  
+`[ @table_name = ] 'name'` 用于返回目录信息的表。 *name* 为 **nvarchar (384)**，默认值为 NULL。 支持通配符模式匹配。  
   
-`[ @table_owner = ] 'owner'` 用于返回目录信息的表的表所有者。 *所有者* 为 **nvarchar (384) **，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
+`[ @table_owner = ] 'owner'` 用于返回目录信息的表的表所有者。 *所有者* 为 **nvarchar (384)**，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定所有者，且当前用户未拥有指定名称的表，则该过程查找由数据库所有者拥有的具有指定名称的表。 如果存在，则返回该表的列。  
   
 `[ @table_qualifier = ] 'qualifier'` 表限定符的名称。 *限定符* 的值为 **sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_) 。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` 以逗号分隔的值列表，它提供有关指定的表类型的所有表的信息。 其中包括 **TABLE**、 **SYSTEMTABLE**和 **VIEW**。 *类型* 为 **varchar (100) **，默认值为 NULL。  
+``[ , [ @table_type = ] "'type', 'type'" ]`` 以逗号分隔的值列表，它提供有关指定的表类型的所有表的信息。 其中包括 **TABLE**、 **SYSTEMTABLE** 和 **VIEW**。 *类型* 为 **varchar (100)**，默认值为 NULL。  
   
 > [!NOTE]  
 >  每个表类型都必须用单引号引起来，整个参数必须用双引号引起来。 表类型必须大写。 如果 SET QUOTED_IDENTIFIER 为 ON，则每个单引号必须换成双引号，整个参数必须用单引号引起来。  
@@ -75,14 +75,14 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_OWNER**|**sysname**|表所有者名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示创建该表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**TABLE_TYPE**|**varchar(32)**|表、系统表或视图。|  
-|**备注**|**varchar (254) **|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
+|**备注**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
   
 ## <a name="remarks"></a>备注  
  为达到最大互操作性，网关客户端应假定只有 SQL-92 标准的 SQL 模式匹配（% 和 _ 通配符字符）。  
   
- 并不总是检查有关当前用户对特定表的读写权限的权限信息。 因此，访问得不到保障。 该结果集不仅包含表和视图，还包含网关的同名和别名，这些网关通往支持这些类型的 DBMS 产品。 如果**sp_server_info**的结果集中的服务器属性**ACCESSIBLE_TABLES**为 Y，则只返回当前用户可访问的表。  
+ 并不总是检查有关当前用户对特定表的读写权限的权限信息。 因此，访问得不到保障。 该结果集不仅包含表和视图，还包含网关的同名和别名，这些网关通往支持这些类型的 DBMS 产品。 如果 **sp_server_info** 的结果集中的服务器属性 **ACCESSIBLE_TABLES** 为 Y，则只返回当前用户可访问的表。  
   
- **sp_tables** 等效于 ODBC 中的 **SQLTables** 。 返回的结果按 **TABLE_TYPE**、 **TABLE_QUALIFIER**、 **TABLE_OWNER**和 **TABLE_NAME**进行排序。  
+ **sp_tables** 等效于 ODBC 中的 **SQLTables** 。 返回的结果按 **TABLE_TYPE**、 **TABLE_QUALIFIER**、 **TABLE_OWNER** 和 **TABLE_NAME** 进行排序。  
   
 ## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  

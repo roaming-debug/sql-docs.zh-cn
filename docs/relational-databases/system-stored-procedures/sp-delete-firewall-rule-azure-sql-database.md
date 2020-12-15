@@ -19,13 +19,13 @@ ms.assetid: cf93eed1-ba97-4850-9fcc-b9c5a9317908
 author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3b88db4894b7d24599ccade131fdf2de7fd82d9b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 22edbde7dacf45c670c94d77e7cf48833445c346
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810302"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472698"
 ---
 # <a name="sp_delete_firewall_rule-azure-sql-database"></a>sp_delete_firewall_rule（Azure SQL 数据库）
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -40,11 +40,11 @@ sp_delete_firewall_rule [@name =] 'name'
 [ ; ] 
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  存储过程的参数为：  
   
  [ @name =] "*name*"  
- 将删除的服务器级防火墙设置的名称。 *name* 为 **nvarchar (128) ** ，无默认值。  
+ 将删除的服务器级防火墙设置的名称。 *name* 为 **nvarchar (128)** ，无默认值。  
   
 ## <a name="remarks"></a>备注  
  在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录名表，请执行 [DBCC FLUSHAUTHCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。  
@@ -52,7 +52,7 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="permissions"></a>权限  
  只有由设置过程创建的服务器级主体登录名才可以删除服务器级防火墙规则。 用户必须连接到 master 数据库才能执行 sp_delete_firewall_rule。  
   
-## <a name="example"></a>示例：  
+## <a name="example"></a>示例  
  以下示例将删除名为“Example setting 1”的服务器级防火墙设置。 在虚拟 master 数据库中执行语句。  
   
 ```   

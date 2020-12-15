@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f142f5de6f5580e7b0e21658e4b3c276984cd88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f1c547cee24397cc9cc1c0b139bd728aef92c2b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474683"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472778"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +46,9 @@ CHANGETABLE (
 ( column_name [ , ...n ] ) , ( value [ , ...n ] )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  更改 *表* ， *last_sync_version*  
- 返回自 *last_sync_version*指定的版本以来对某个表进行的所有更改的跟踪信息。  
+ 返回自 *last_sync_version* 指定的版本以来对某个表进行的所有更改的跟踪信息。  
   
  *table*  
  是要从中获取跟踪的更改的用户定义表。 必须对表启用更改跟踪。 可以使用由一部分、两部分、三部分或四部分构成的表名。 表名可以是表的同义词。  
@@ -56,7 +56,7 @@ CHANGETABLE (
  *last_sync_version*  
  获取更改时，调用应用程序必须指定所需更改的起始点。 last_sync_version 指定该起始点。 该函数返回在该版本之后更改的所有行的信息。 应用程序将查询以接收版本大于 last_sync_version 的更改。  
   
- 通常情况下，在获取更改之前，应用程序将调用 **CHANGE_TRACKING_CURRENT_VERSION ( # B1 ** 获取将在下次需要更改时使用的版本。 因此，该应用程序不必解释或了解实际值。  
+ 通常情况下，在获取更改之前，应用程序将调用 **CHANGE_TRACKING_CURRENT_VERSION ( # B1** 获取将在下次需要更改时使用的版本。 因此，该应用程序不必解释或了解实际值。  
   
  由于 last_sync_version 是由调用应用程序获取的，因此该应用程序必须保持该值。 如果应用程序丢失该值，则需要重新初始化数据。  
   
@@ -64,7 +64,7 @@ CHANGETABLE (
   
  如果值为 NULL，则返回所有跟踪的更改。  
   
- 应该验证*last_sync_version* ，以确保它不太旧，因为某些或全部更改信息可能已根据为数据库配置的保留期进行清理。 有关详细信息，请参阅 [CHANGE_TRACKING_MIN_VALID_VERSION&#41;transact-sql&#41;&#40;transact-sql ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) 和 [ALTER Database SET &#40;选项 ](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
+ 应该验证 *last_sync_version* ，以确保它不太旧，因为某些或全部更改信息可能已根据为数据库配置的保留期进行清理。 有关详细信息，请参阅 [CHANGE_TRACKING_MIN_VALID_VERSION&#41;transact-sql&#41;&#40;transact-sql ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) 和 [ALTER Database SET &#40;选项 ](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  版本 *表*{<primary_key_values>}  
  返回指定行的最新更改跟踪信息。 主键值必须标识该行。 <primary_key_values> 标识主键列并指定值。 可以按任意顺序指定主键列名称。  
@@ -75,7 +75,7 @@ CHANGETABLE (
  column_name  
  指定一个或多个主键列的名称。 可以按任意顺序指定多个列名。  
   
- *值*  
+ 值  
  是主键的值。 如果有多个主键列，则这些值的指定顺序必须与列在 *column_name* 列表中的显示顺序相同。  
   
  方式 *table_alias* [ (*column_alias* [,.。。*n* ] ) ]  
@@ -214,7 +214,7 @@ WHERE
  [变更跟踪函数 (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 7ab227e9df241914cba5f242eed6a38cf35815b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809316"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472928"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,14 +38,14 @@ ms.locfileid: "91809316"
 |**server_id**|**int**|链接服务器的本地 ID。|  
 |name|**sysname**|当 **server_id** = 0 时，返回的值是服务器名称。<br /><br /> 如果 **server_id** > 0，则返回的值为链接服务器的本地名称。|  
 |**product**|**sysname**|链接服务器的产品名。 值 "SQL Server" 指示的另一个实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|**程序**|**sysname**|用于连接到链接服务器的 OLE DB 访问接口名称。<br /><br />从开始 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，值 "sqlncli.msi" 将映射到默认情况下 [SQL SERVER (MSOLEDBSQL) 的 Microsoft OLE DB 驱动程序 ](../../connect/oledb/oledb-driver-for-sql-server.md) 。 在早期版本中，值 "SQLNCLI.MSI" 映射到 [SQL Server Native Client OLE DB 提供程序 (SQLNCLI11) ](../../relational-databases/native-client/sql-server-native-client.md)。|  
+|**provider**|**sysname**|用于连接到链接服务器的 OLE DB 访问接口名称。<br /><br />从开始 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，值 "sqlncli.msi" 将映射到默认情况下 [SQL SERVER (MSOLEDBSQL) 的 Microsoft OLE DB 驱动程序 ](../../connect/oledb/oledb-driver-for-sql-server.md) 。 在早期版本中，值 "SQLNCLI.MSI" 映射到 [SQL Server Native Client OLE DB 提供程序 (SQLNCLI11) ](../../relational-databases/native-client/sql-server-native-client.md)。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 数据源连接属性。|  
 |**location**|**nvarchar(4000)**|OLE DB 位置连接属性。 如果没有，则为 NULL。|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 访问接口字符串连接属性。<br /><br /> 如果调用方具有权限，则为 NULL `ALTER ANY LINKED SERVER` 。|  
 |**catalog**|**sysname**|OLE DB 目录连接属性。 如果没有，则为 NULL。|  
 |**connect_timeout**|**int**|以秒为单位的连接超时，0 表示没有超时。|  
 |**query_timeout**|**int**|以秒为单位的查询超时，0 表示没有超时。|  
-|**is_linked**|**bit**|0 = 是使用 **sp_addserver**添加的一种老式服务器，具有不同的 RPC 和分布式事务行为。<br /><br /> 1 = 标准链接服务器。|  
+|**is_linked**|**bit**|0 = 是使用 **sp_addserver** 添加的一种老式服务器，具有不同的 RPC 和分布式事务行为。<br /><br /> 1 = 标准链接服务器。|  
 |**is_remote_login_enabled**|**bit**|设置 RPC 选项来启用该服务器的传入远程登录。|  
 |**is_rpc_out_enabled**|**bit**|启用（从该服务器的）传出 RPC。|  
 |**is_data_access_enabled**|**bit**|为分布式查询启用服务器。|  
@@ -63,7 +63,7 @@ ms.locfileid: "91809316"
 |**is_rda_server**|**bit**|**适用于：** 从开始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />服务器为远程数据存档 (启用 stretch) 启用。 有关详细信息，请参阅在 [服务器上启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。|
   
 ## <a name="permissions"></a>权限  
- **Provider_string**中的值始终为 NULL，除非调用方具有 ALTER ANY 链接服务器权限。  
+ **Provider_string** 中的值始终为 NULL，除非调用方具有 ALTER ANY 链接服务器权限。  
   
   (**server_id** = 0) 查看本地服务器不需要权限。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "91809316"
  如果删除了默认登录映射，则只有已作为链接登录名或远程登录名显式添加的用户才能查看其拥有登录名的链接服务器或远程服务器。  在默认的登录映射之后，查看所有链接服务器和远程服务器需要以下权限：  
   
 - `ALTER ANY LINKED SERVER` 或 `ALTER ANY LOGIN ON SERVER`  
-- **Setupadmin**或**sysadmin**固定服务器角色的成员身份  
+- **Setupadmin** 或 **sysadmin** 固定服务器角色的成员身份  
   
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

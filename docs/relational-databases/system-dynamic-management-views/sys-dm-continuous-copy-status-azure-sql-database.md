@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a27c286316dd49407b0cb74027eefc296a8ca654
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 69dfbde65d00f3d6995d1bce784a46a64515f8fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834276"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472888"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,14 +52,14 @@ ms.locfileid: "91834276"
 ## <a name="permissions"></a>权限  
  若要检索数据，需要 **db_owner** 数据库角色的成员身份。 Dbo 用户、 **dbmanager** 数据库角色的成员以及 sa 登录名也可以查询此视图。  
   
-## <a name="remarks"></a>注解  
- **Sys.dm_continuous_copy_status**视图在**资源**数据库中创建，并在所有数据库（包括逻辑 master）中可见。 但是，在主数据库中查询此视图将返回空集合。  
+## <a name="remarks"></a>备注  
+ **Sys.dm_continuous_copy_status** 视图在 **资源** 数据库中创建，并在所有数据库（包括逻辑 master）中可见。 但是，在主数据库中查询此视图将返回空集合。  
   
  如果在数据库中终止了连续复制关系，则 **sys.dm_continuous_copy_status** 视图中该数据库的行将会消失。  
   
- 与 " **sys.dm_database_copies** " 视图一样， **sys.dm_continuous_copy_status** 反映连续复制关系的状态，其中该数据库是主数据库或活动辅助数据库。 与 **sys.dm_database_copies**不同， **sys.dm_continuous_copy_status** 包含多个列，这些列提供有关操作和性能的详细信息。 这些列包括 **last_replication**和 **replication_lag_sec**。  
+ 与 " **sys.dm_database_copies** " 视图一样， **sys.dm_continuous_copy_status** 反映连续复制关系的状态，其中该数据库是主数据库或活动辅助数据库。 与 **sys.dm_database_copies** 不同， **sys.dm_continuous_copy_status** 包含多个列，这些列提供有关操作和性能的详细信息。 这些列包括 **last_replication** 和 **replication_lag_sec**。  
   
 ## <a name="see-also"></a>另请参阅  
  [Azure SQL Database &#40;sys.dm_database_copies&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [活动异地复制存储过程 &#40;Transact-sql&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Active Geo-Replication 存储过程 &#40;Transact-sql&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

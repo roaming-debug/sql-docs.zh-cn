@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 60de1735c9a5a43ea58c5e9c8ccca03b69b310f0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 645d4d722cadfb25453dd51400c05a8ca67c3c71
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036933"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472898"
 ---
 # <a name="syspdw_materialized_view_mappings-transact-sql"></a>sys.pdw_materialized_view_mappings (Transact-sql)   
 
@@ -30,7 +30,7 @@ Physical_name 和 object_id 的列构成此目录视图的键。
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar (36) **|具体化视图的物理名称。|  
+|physical_name |**nvarchar (36)**|具体化视图的物理名称。|  
 |object_id  |**int**|具体化视图的对象 ID。 请参阅 [sys.databases (transact-sql) ](./sys-objects-transact-sql.md?view=azure-sqldw-latest)。| 
 
 ## <a name="permissions"></a>权限

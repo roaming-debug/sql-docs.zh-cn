@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f4a3a7a16ed2f222a7d179cbae17b6bdfb2982f5
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: ae71838bd9a384e616d0f1fe50d612535f840919
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810319"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472688"
 ---
 # <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
@@ -39,14 +39,14 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `[@name =] [N]'name'`  
- 将删除的数据库级防火墙设置的名称。 *name* 为 **nvarchar (128) ** ，无默认值。 Unicode 标识符 `N` 对于是可选的 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。 
+ 将删除的数据库级防火墙设置的名称。 *name* 为 **nvarchar (128)** ，无默认值。 Unicode 标识符 `N` 对于是可选的 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。 
   
 ## <a name="permissions"></a>权限  
  只有由设置过程创建的服务器级别主体登录名或分配为管理员的 Azure Active Directory 主体才能删除数据库级防火墙规则。  
   
-## <a name="example"></a>示例：  
+## <a name="example"></a>示例  
  下面的示例删除名为的数据库级防火墙设置 `Example DB Setting 1` 。
   
 ```  

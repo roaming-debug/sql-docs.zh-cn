@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9648f17ccd3688e166612f3d753d3208a83ebb52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 16caf538ea5406ea4d5f23d4fbd05b2a646a0ba7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460766"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473668"
 ---
 # <a name="scrolling-and-fetching-rows"></a>滚动和提取行
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "88460766"
   
 -   使用 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置光标功能。  
   
--   使用 **SQLExecute** 或 **SQLExecDirect**打开游标。  
+-   使用 **SQLExecute** 或 **SQLExecDirect** 打开游标。  
   
 -   使用 **SQLFetch** 或 [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)滚动和提取行。  
   
- **SQLFetch**和**SQLFetchSroll**一次可以提取行块。 返回的行数是通过使用 **SQLSetStmtAttr** 设置 SQL_ATTR_ROW_ARRAY_SIZE 参数指定的。  
+ **SQLFetch** 和 **SQLFetchSroll** 一次可以提取行块。 返回的行数是通过使用 **SQLSetStmtAttr** 设置 SQL_ATTR_ROW_ARRAY_SIZE 参数指定的。  
   
  ODBC 应用程序可以使用 **SQLFetch** 来提取只进游标。  
   
  **SQLFetchScroll** 用于在游标周围滚动。 **SQLFetchScroll** 支持提取下一个、以前的、第一个和最后一个行集， (提取从当前行集开头开始的行集 *n* 行) 和绝对提取 (从第 *n* 行开始) 提取行集。 如果在绝对提取中 *n* 为负，则从结果集的末尾开始对行进行计数。 绝对提取行 -1 表示提取从结果集中最后一行开始的行集。  
   
- 仅对其块游标功能（如报表）使用 **SQLFetchScroll** 的应用程序可能只使用用于提取下一个行集的选项传递结果集。 另一方面，基于屏幕的应用程序可以利用 **SQLFetchScroll**的所有功能。 如果应用程序将行集大小设置为屏幕上显示的行数，并将屏幕缓冲区绑定到结果集，则可以直接将滚动条操作转换为对 **SQLFetchScroll**的调用。  
+ 仅对其块游标功能（如报表）使用 **SQLFetchScroll** 的应用程序可能只使用用于提取下一个行集的选项传递结果集。 另一方面，基于屏幕的应用程序可以利用 **SQLFetchScroll** 的所有功能。 如果应用程序将行集大小设置为屏幕上显示的行数，并将屏幕缓冲区绑定到结果集，则可以直接将滚动条操作转换为对 **SQLFetchScroll** 的调用。  
   
 |滚动条操作|SQLFetchScroll 滚动选项|  
 |--------------------------|-------------------------------------|  
