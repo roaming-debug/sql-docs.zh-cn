@@ -1,5 +1,5 @@
 ---
-title: 指定轴（SQLXML）
+title: " (SQLXML) 指定轴"
 description: 了解如何在 SQLXML 4.0 XPath 查询中指定轴指定 location 步骤所选的节点与上下文节点之间的关系。
 ms.date: 03/04/2017
 ms.prod: sql
@@ -21,22 +21,22 @@ ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df40d531bcb9c1fddcad5d78cd76ca98831834ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03c0fff271ef3774116eb9c97025b1f602f7852c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649731"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431155"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定轴 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
     
--   轴指定根据位置步骤和上下文节点选择的节点之间的树关系。 支持以下轴： **child**  
+-   轴指定根据位置步骤和上下文节点选择的节点之间的树关系。 支持以下轴：  **child**  
   
      包含上下文节点的子级。  
   
-     以下 XPath 表达式（位置路径）从当前上下文节点选择所有 **\<Customer>** 子级：  
+     以下 XPath 表达式 (位置路径) 从当前上下文节点选择所有 **\<Customer>** 子级：  
   
     ```  
     child::Customer  
@@ -44,7 +44,7 @@ ms.locfileid: "85649731"
   
      在下面的 XPath 查询中，`child` 为轴。 `Customer` 是节点测试。  
   
--   **上层**  
+-   parent  
   
      包含上下文节点的父级。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "85649731"
   
      包含上下文节点的属性。  
   
-     下面的 XPath 表达式选择上下文节点的**CustomerID**属性：  
+     下面的 XPath 表达式选择上下文节点的 **CustomerID** 属性：  
   
     ```  
     attribute::CustomerID  

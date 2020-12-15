@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8031178d268af10169bc8b8ca441bd7d7668c82b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 305565d542144a7e6e24663aadba1fb56a67eddb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649966"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431269"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0 的准则和限制
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "85649966"
   
      正在运行使用 SQLXML 4.0 和与版本无关的 PROGID 的应用程序，而且您决定安装其他某种软件程序。 此程序可能安装较早版本的 SQLXML。 由于您的应用程序中的与版本无关的 PROGID 现在指向较早版本的 SQLXML（其中可能具有或不具有您的应用程序正在使用的 SQLXML 功能），您的应用程序可能失败。  
   
--   如果出于任何原因而不想使用 SQLXMLOLEDB 提供程序，而是希望使用 SQLOLEDB 提供程序执行 SQLXML 功能，请将**Sqlxml 版本**属性设置为 "sqlxml. 4.0"。  
+-   如果出于任何原因而不想使用 SQLXMLOLEDB 提供程序，而是希望使用 SQLOLEDB 提供程序执行 SQLXML 功能，请将 **Sqlxml 版本** 属性设置为 "sqlxml. 4.0"。  
   
   

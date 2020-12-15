@@ -1,6 +1,6 @@
 ---
-title: 在 XPath 查询中指定布尔值谓词（SQLXML）
-description: 查看有关如何在 XPath 查询中指定布尔值谓词（SQLXML 4.0）的示例。
+title: " (SQLXML) 在 XPath 查询中指定布尔谓词"
+description: 查看有关如何在 (SQLXML 4.0) 的 XPath 查询中指定布尔值谓词的示例。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,17 +19,17 @@ ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbc7aa62597834371ee27bcd90af567f1c1d5a0e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cc257db3918ff7f24c7d85d057b43bb256b7231e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773096"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97430830"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔值谓词 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  以下示例显示如何在 XPath 查询中指定布尔值谓词。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  以下示例显示如何在 XPath 查询中指定布尔值谓词。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅 [&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -48,7 +48,7 @@ ms.locfileid: "85773096"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
-1.  复制[示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
+1.  复制 [示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) ，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (BooleanValuedPredicatesA.xml)，并将它保存在保存 SampleSchema1.xml 的目录中。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "85773096"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
 
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
      下面是结果：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "85773096"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定连续和嵌套的谓词  
- 以下查询使用连续谓词显示。 查询返回 **\<Customer>** 上下文节点的所有子元素，该节点的**SalesPersonID**属性的值为277， **TerritoryID**属性值为3：  
+ 以下查询使用连续谓词显示。 查询返回 **\<Customer>** 上下文节点的所有子元素，该节点的 **SalesPersonID** 属性的值为277， **TerritoryID** 属性值为3：  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
@@ -100,13 +100,13 @@ ms.locfileid: "85773096"
   
  查询返回 **\<Customer>** 满足谓词中指定的条件的元素。  
   
- 可以指定**属性**轴（@）的快捷方式，因为**子**轴是默认值，因此可以在查询中省略它：  
+ 可以指定 **属性** 轴 ( @ ) 的快捷方式，因为 **子** 轴是默认值，因此可以在查询中省略它：  
   
 ```  
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 以下 XPath 查询说明嵌套谓词的用法。 查询返回 **\<Customer>** 上下文节点的所有子元素，其中包含 **\<Order>** 至少一个 **\<Order>** 元素具有**SalesPersonID**属性值2的子元素。  
+ 以下 XPath 查询说明嵌套谓词的用法。 查询返回 **\<Customer>** 上下文节点的所有子元素，其中包含 **\<Order>** 至少一个 **\<Order>** 元素具有 **SalesPersonID** 属性值2的子元素。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -114,7 +114,7 @@ ms.locfileid: "85773096"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
-1.  复制[示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
+1.  复制 [示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) ，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (nestedSuccessive.xml)，并将它保存在保存 SampleSchema1.xml 的目录中。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "85773096"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是部分结果：  
   
@@ -175,7 +175,7 @@ ms.locfileid: "85773096"
 /child::Customer[child::Order]  
 ```  
   
- **子**轴是默认值。 因此，可以将该查询指定为：  
+ **子** 轴是默认值。 因此，可以将该查询指定为：  
   
 ```  
 /Customer[Order]  
@@ -183,7 +183,7 @@ ms.locfileid: "85773096"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
-1.  复制[示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
+1.  复制 [示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) ，并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (TopLevelPredicate.xml)，并将它保存在保存 SampleSchema1.xml 的目录中。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "85773096"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是部分结果：  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.column_master_keys (Transact-SQL)
-title: sys. column_master_keys (Transact-sql) |Microsoft Docs
+title: sys.column_master_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a49dd0832e0319f078d91c44708e8ab821ad107
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9b62a54ec2ab17d76f5f726dbd26f28a60d79afc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646717"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429575"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 
@@ -45,10 +45,10 @@ ms.locfileid: "88646717"
 |**column_master_key_id**|**int**|列主密钥的 ID。|  
 |create_date|**datetime**|列主密钥的创建日期。|  
 |modify_date|**datetime**|列主密钥的上次修改日期。|  
-|key_store_provider_name****|**sysname**|包含 CMK 的列主密钥存储的提供程序的名称。 允许值包括：<br /><br /> MSSQL_CERTIFICATE_STORE-如果列主密钥存储是证书存储区，则为。<br /><br /> 用户定义的值（如果列主密钥存储为自定义类型）。|  
-|**key_path**|**nvarchar(4000)**|密钥的列主密钥存储特定路径。 路径的格式取决于列主密钥存储类型。 示例：<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 对于自定义列主密钥存储，开发人员负责为自定义列主密钥存储定义密钥路径。|  
+|key_store_provider_name|**sysname**|包含 CMK 的列主密钥存储的提供程序的名称。 允许值包括：<br /><br /> MSSQL_CERTIFICATE_STORE-如果列主密钥存储是证书存储区，则为。<br /><br /> 用户定义的值（如果列主密钥存储为自定义类型）。|  
+|**key_path**|**nvarchar(4000)**|密钥的列主密钥存储特定路径。 路径的格式取决于列主密钥存储类型。 例如：<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 对于自定义列主密钥存储，开发人员负责为自定义列主密钥存储定义密钥路径。|  
 |**allow_enclave_computations**|**bit**|指示列主密钥是否已启用 enclave， (如果使用此主密钥加密的列加密密钥可用于服务器端安全 enclaves) 内的计算。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。|  
-|**签名**|**varbinary(max)**|**Key_path**和**allow_enclave_computations**（使用由**key_path**引用的列主密钥生成）的数字签名。|
+|**签名**|**varbinary(max)**|**Key_path** 和 **allow_enclave_computations**（使用由 **key_path** 引用的列主密钥生成）的数字签名。|
 
 
   

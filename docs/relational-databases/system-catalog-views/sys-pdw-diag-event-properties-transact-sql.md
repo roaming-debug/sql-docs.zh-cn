@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: e3944f48-8074-43aa-9840-3d5230faedd3
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eaed4f37f60f63c08c4e3564f78c0ee3098f44b9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: c72d7a967a8a84a551db61a608cf7a55e7281c38
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036781"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428798"
 ---
 # <a name="syspdw_diag_event_properties-transact-sql"></a>sys.pdw_diag_event_properties (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

@@ -16,23 +16,23 @@ ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76d101190cc30aaed21126be336436ff655b5bf1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4557f0e19b3515c7a8a652ba06bde82e6bdd0685
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649753"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431307"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>在 .NET 环境中访问 SQLXML 功能
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   此示例显示：  
   
--   如何使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 托管类（node.js） [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 .NET Framework 环境中访问 Microsoft [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
+-   如何使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Sqlxml 托管类 () [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 .NET Framework 环境中访问 microsoft。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
 -   在 .NET Framework 环境中生成的 DiffGram 如何向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表应用数据更新。  
   
- 在此应用程序中，XPath 查询是针对 XSD 架构执行的。 XPath 查询的执行将返回一个由联系人数据（**FirstName**， **LastName**）组成的 XML 文档。 应用程序在 .NET Framework 环境中将 XML 文档加载到数据集。 修改该数据集中的数据：对于数据集中的第一个联系人，该联系人的名字被更改为“Susan”。 从该数据集生成 DiffGram，然后将在 DiffGram 中指定的更新（雇员名字的更改）应用到 Person.Contact 表。  
+ 在此应用程序中，XPath 查询是针对 XSD 架构执行的。 XPath 查询的执行将返回一个 XML 文档，该文档包含联系人数据 (**FirstName**， **LastName**) 。 应用程序在 .NET Framework 环境中将 XML 文档加载到数据集。 修改该数据集中的数据：对于数据集中的第一个联系人，该联系人的名字被更改为“Susan”。 从该数据集生成 DiffGram，然后将在 DiffGram 中指定的更新（雇员名字的更改）应用到 Person.Contact 表。  
   
 > [!NOTE]  
 >  在该代码中，必须在连接字符串中提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  

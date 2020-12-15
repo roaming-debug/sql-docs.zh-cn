@@ -12,13 +12,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: a2d573ef8cfc97d40451ad59d0fe51f98542c677
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: c915ba6b058f998307ccc697876aa020143a500e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033695"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427930"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-sql) 
 
@@ -33,8 +33,8 @@ ms.locfileid: "92033695"
 |importance|**nvarchar(128)**|是此工作负荷组中的请求与共享资源的工作负荷组之间的相对重要性。 不可为 null。|low、below_normal、normal (默认) 、above_normal、高||
 |min_percentage_resource|**tinyint**|工作负荷组中的请求的保证资源量。 资源不与其他工作负荷组共享。 不可为 null。||
 |cap_percentage_resource|**tinyint**|工作负荷组中请求的资源百分比分配的硬上限。 限制分配给指定级别的最大资源数。 允许的值范围为 1 到 100。||
-|request_min_resource_grant_percent|**decimal (5，2) **|指定分配给请求的最小资源量。 值的允许范围是从0.75 到100。||
-|request_max_resource_grant_percent |**decimal (5，2) **|指定分配给请求的最大资源量。||
+|request_min_resource_grant_percent|**decimal (5，2)**|指定分配给请求的最小资源量。 值的允许范围是从0.75 到100。||
+|request_max_resource_grant_percent |**decimal (5，2)**|指定分配给请求的最大资源量。||
 |query_execution_timeout_sec|**int**|取消查询之前允许的执行时间量（以秒为单位）。  查询在达到执行的返回阶段后，便无法取消。  query_execution_timeout_sec 不包括排队所用的时间。|
 |query_wait_timeout_sec|**int**|INTERNAL||
 |create_time|**datetime**|工作负荷组的创建时间。 不可为 null。||

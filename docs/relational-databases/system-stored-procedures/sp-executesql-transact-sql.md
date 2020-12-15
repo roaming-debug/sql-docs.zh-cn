@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eac2107c22781c278e173992d8994fc68fea981
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 315abb75423d2d7fa11d70ab1b2d6897b8bbc372
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005755"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427835"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,9 +49,9 @@ sp_executesql [ @stmt = ] statement
 ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ \@ stmt =] *语句*  
- 是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理的 Unicode 字符串。 \@stmt 必须是 Unicode 常量或 Unicode 变量。 不允许使用更复杂的 Unicode 表达式（例如使用 + 运算符连接两个字符串）。 不允许使用字符常量。 如果指定了 Unicode 常量，则必须使用 **N**作为前缀。例如，Unicode 常量 **N "sp_who"** 有效，但字符常量 **"sp_who"** 不是。 字符串的大小仅受可用数据库服务器内存限制。 在64位服务器上，字符串的大小限制为 2 GB，最大值为 **nvarchar (max) **。  
+ 是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理的 Unicode 字符串。 \@stmt 必须是 Unicode 常量或 Unicode 变量。 不允许使用更复杂的 Unicode 表达式（例如使用 + 运算符连接两个字符串）。 不允许使用字符常量。 如果指定了 Unicode 常量，则必须使用 **N** 作为前缀。例如，Unicode 常量 **N "sp_who"** 有效，但字符常量 **"sp_who"** 不是。 字符串的大小仅受可用数据库服务器内存限制。 在64位服务器上，字符串的大小限制为 2 GB，最大值为 **nvarchar (max)**。  
   
 > [!NOTE]  
 >  \@stmt 可以包含与变量名称格式相同的参数，例如： `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
@@ -65,7 +65,7 @@ sp_executesql [ @stmt = ] statement
  参数字符串中定义的第一个参数的值。 该值可以是 Unicode 常量，也可以是 Unicode 变量。 对于 stmt 中包含的每个参数，都必须提供一个参数值 \@ 。如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] stmt 中的语句或批处理没有参数，则不需要这些值 \@ 。  
   
  [ OUT | OUTPUT ]  
- 指示参数是输出参数。 **text**、 **ntext**和 **image** 参数可用作输出参数，除非该过程是公共语言运行时 (CLR) 过程。 使用 OUTPUT 关键字的输出参数可以为游标占位符，CLR 过程除外。  
+ 指示参数是输出参数。 **text**、 **ntext** 和 **image** 参数可用作输出参数，除非该过程是公共语言运行时 (CLR) 过程。 使用 OUTPUT 关键字的输出参数可以为游标占位符，CLR 过程除外。  
   
  *n*  
  附加参数值的占位符。 这些值只能为常量或变量， 不能是很复杂的表达式（例如函数）或使用运算符生成的表达式。  

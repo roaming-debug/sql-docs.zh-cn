@@ -16,19 +16,19 @@ ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90f2d7e20d4cb490e738a3dd813ce6037a1bfac6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e7ba8ad5ffccd5220c2490354f7fcf4a29192f9f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649496"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97430758"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>使用 CommandStream 属性执行模板文件
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   此示例演示如何使用 SqlXmlCommand 对象的 CommandStream 属性来指定由 SQL 或 XPath 查询组成的模板文件。 在此应用程序中，将为命令文件打开 FileStreamobject，并将文件流指定为执行的 CommandStream。  
   
- 在下面的示例中，CommandType 属性指定为 SqlXmlCommandType （而不是 TemplateFile）。  
+ 在下面的示例中，CommandType 属性被指定为 SqlXmlCommandType (而不是 TemplateFile) 。  
   
  下面是示例 XML 模板：  
   
@@ -85,7 +85,7 @@ class Test
   
 1.  将该示例中提供的 XML 模板 (TemplateFile.xml) 保存在某个文件夹中。  
   
-2.  将此示例中提供的 c # 代码（DocSample.cs）保存到存储架构的相同文件夹中。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
+2.  将此示例中提供的 c # 代码 (DocSample.cs) 保存到存储架构的相同文件夹中。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
   
 3.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   

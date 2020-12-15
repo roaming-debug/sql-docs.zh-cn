@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aefb58e8f483c22772bf228dc7707efff50ee47f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e9babfb8a3d29e3b094c3fb1cd42257dcb9fa0a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666170"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429891"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>运行 SQLXML 示例的要求
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "85666170"
   
  若要使用 SQLXML 4.0 示例创建工作示例，需要安装以下产品。  
   
--   AdventureWorks 示例数据库。 有关详细信息，请参阅[AdventureWorks 示例数据库](https://msftdbprodsamples.codeplex.com/)。  
+-   AdventureWorks 示例数据库。 有关详细信息，请参阅 [AdventureWorks 示例数据库](https://msftdbprodsamples.codeplex.com/)。  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 有关详细信息，请参阅 [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
 -   MDAC 2.6 或更高版本  
   
- 在许多示例中，使用模板来指定针对映射 XSD 架构的 XPath 查询。 有关详细信息，请参阅[在查询中使用带批注的 XSD 架构 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)。  
+ 在许多示例中，使用模板来指定针对映射 XSD 架构的 XPath 查询。 有关详细信息，请参阅 [在查询中使用带批注的 XSD 架构 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)。  
   
   

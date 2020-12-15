@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b533a4bd4f2b404975e8315f36aba9b31e3b51ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6f39b3bff2073475c9bd0d969efa3901ff055edb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545359"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428675"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  每个类型为 TR 或 TA 的触发器对象对应一行。 DML 触发器名称是架构作用域的，因此在 **sys.databases**中可见。 DDL 触发器名称的作用域取决于父实体，只能在此视图中显示。  
+  每个类型为 TR 或 TA 的触发器对象对应一行。 DML 触发器名称是架构作用域的，因此在 **sys.databases** 中可见。 DDL 触发器名称的作用域取决于父实体，只能在此视图中显示。  
   
  " **Parent_class** " 和 " **名称** " 列唯一标识数据库中的触发器。  
   

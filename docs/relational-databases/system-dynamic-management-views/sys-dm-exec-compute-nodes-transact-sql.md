@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85a63b9df2e4d1bbb7a0f4c9096ae8ff192315eb
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6a9776a0fa0e1d6c939c41d66f32a6cc4855e360
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834158"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427968"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "91834158"
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|与节点关联的唯一数字 id。 此视图的键。|在扩展群集中唯一，而不考虑类型。|  
-|类型|**nvarchar(32)**|节点的类型。|"COMPUTE"、"HEAD"|  
+|type|**nvarchar(32)**|节点的类型。|"COMPUTE"、"HEAD"|  
 |name|**nvarchar(32)**|节点的逻辑名称。|任何适当长度的字符串。|  
 |address|**nvarchar(32)**|此节点的 IP 地址。|IP 地址范围|  
   

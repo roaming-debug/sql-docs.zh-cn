@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: bd045c01439e2913179fdf2188448772f20d9f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955858"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427340"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -60,14 +60,14 @@ RECONFIGURE
 [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @configname = ] 'option_name'` 配置选项的名称。 *option_name* 的数据类型为 **varchar(35)** ，默认值为 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]能够识别构成配置名称的任何唯一字符串。 如果未指定该参数，则返回选项的完整列表。  
   
  有关可用配置选项及其设置的信息，请参阅 [服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
 `[ @configvalue = ] 'value'` 新的配置设置。 *value* 的数据类型为 **int**，默认值为 NULL。 最大值取决于各个选项。  
   
- 若要查看每个选项的最大值，请参阅**sys.configurations**目录视图的**最大**值列。  
+ 若要查看每个选项的最大值，请参阅 **sys.configurations** 目录视图的 **最大** 值列。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -75,17 +75,17 @@ RECONFIGURE
 ## <a name="result-sets"></a>结果集  
  在不带参数的情况下执行时， **sp_configure** 将返回包含五列的结果集，并按字母顺序升序排列选项，如下表所示。  
   
- **Config_value**和**run_value**的值不是自动等效的。 使用 **sp_configure**更新配置设置后，系统管理员必须使用 "重新配置" 或 "使用替代重新配置" 更新正在运行的配置值。 有关详细信息，请参阅“备注”部分。  
+ **Config_value** 和 **run_value** 的值不是自动等效的。 使用 **sp_configure** 更新配置设置后，系统管理员必须使用 "重新配置" 或 "使用替代重新配置" 更新正在运行的配置值。 有关详细信息，请参阅“备注”部分。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(35)**|配置选项的名称。|  
 |**最小值**|**int**|配置选项的最小值。|  
 |**最大值**|**int**|配置选项的最大值。|  
-|**config_value**|**int**|**Sp_configure**使用 (**sys.configurations**) 中的值将配置选项设置为的值。 有关这些选项的详细信息，请参阅 [服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 和 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
+|**config_value**|**int**|**Sp_configure** 使用 (**sys.configurations**) 中的值将配置选项设置为的值。 有关这些选项的详细信息，请参阅 [服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 和 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
 |**run_value**|**int**|配置选项的当前运行值 (**sys.configurations.value_in_use**) 中的值。<br /><br /> 有关详细信息，请参阅 [ urations &#40;transact-sql&#41;sys.config](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 **sp_configure** 显示或更改服务器级设置。 若要更改数据库级别设置，请使用 ALTER DATABASE。 若要更改仅影响当前用户会话的设置，请使用 SET 语句。  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -93,7 +93,7 @@ RECONFIGURE
 [!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="updating-the-running-configuration-value"></a>更新运行的配置值  
- 为某个*选项*指定新*值*时，结果集将在 " **config_value** " 列中显示此值。 此值最初与 **run_value** 列中的值不同，后者显示当前正在运行的配置值。 若要更新 **run_value** 列中的运行配置值，系统管理员必须运行 "重新配置" 或 "重新配置替代"。  
+ 为某个 *选项* 指定新 *值* 时，结果集将在 " **config_value** " 列中显示此值。 此值最初与 **run_value** 列中的值不同，后者显示当前正在运行的配置值。 若要更新 **run_value** 列中的运行配置值，系统管理员必须运行 "重新配置" 或 "重新配置替代"。  
   
  RECONFIGURE 和 RECONFIGURE WITH OVERRIDE 对每个配置选项都有效。 但是，基本 RECONFIGURE 语句会拒绝处于合理范围之外或可能导致选项冲突的任何选项值。 例如，如果 " **恢复间隔** " 值大于60分钟或 **关联掩码** 值与 **关联 i/o 掩码** 值重叠，则重新配置会生成错误。 与此相反，RECONFIGURE WITH OVERRIDE 则接受具有正确数据类型的任何选项值，并使用指定的值强制进行重新配置。  
   
@@ -102,7 +102,7 @@ RECONFIGURE
   
  RECONFIGURE 语句可以动态更新某些选项，而其他选项的更新则需要停止服务器再重新启动才能实现。 例如，" **最小服务器内存** " 和 " **最大服务器** 内存" 服务器内存选项在中动态更新， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 因此，你可以更改它们而无需重新启动服务器。 与此相反，重新配置 **填充因子** 选项的运行值需要重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
- 在配置选项上运行重新配置后，可以通过执行 **sp_configure "***option_name***"** 来查看是否已动态更新了选项。 对于动态更新的选项， **run_value** 和 **config_value** 列中的值应匹配。 还可以通过查看**sys.configurations**目录视图的**is_dynamic**列来查看哪些选项是动态的。  
+ 在配置选项上运行重新配置后，可以通过执行 **sp_configure "**_option_name_*_"_* 来查看是否已动态更新了选项。 对于动态更新的选项， **run_value** 和 **config_value** 列中的值应匹配。 还可以通过查看 **sys.configurations** 目录视图的 **is_dynamic** 列来查看哪些选项是动态的。  
  
  此更改也会写入 SQL Server 错误日志。
   
@@ -161,7 +161,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 结果返回选项名称，后跟该选项的最小值和最大值。 **Config_value**是重新 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 配置完成时将使用的值。 **run_value** 是当前正在使用的值。 **config_value** 和 **run_value** 通常是相同的，除非该值正在进行更改。  
+ 结果返回选项名称，后跟该选项的最小值和最大值。 **Config_value** 是重新 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 配置完成时将使用的值。 **run_value** 是当前正在使用的值。 **config_value** 和 **run_value** 通常是相同的，除非该值正在进行更改。  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 列出一个配置名称的配置设置  
   

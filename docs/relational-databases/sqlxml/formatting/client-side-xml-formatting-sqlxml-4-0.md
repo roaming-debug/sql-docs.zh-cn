@@ -1,5 +1,5 @@
 ---
-title: 客户端 XML 格式（SQLXML）
+title: " (SQLXML) 的客户端 XML 格式"
 description: 使用 FOR XML 子句了解 SQLXML 4.0 中的客户端 XML 格式。
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,22 +16,22 @@ ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 526f47678e09f10bdd412bb35287d6363c41cabc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9d13f5252fade9a05db1b9d31cc62f1ed9292aa4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666144"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97430016"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>客户端 XML 格式化 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   本主题提供了有关客户端 XML 格式化的信息。 客户端格式化是指对中间层上的 XML 的格式化。  
   
 > [!NOTE]  
->  本主题提供了有关使用客户端上的 FOR XML 子句的其他信息，并假定您已熟悉 FOR XML 子句。 有关 FOR XML 的详细信息，请参阅[使用 FOR Xml 构造 XML](../../../relational-databases/xml/for-xml-sql-server.md)。  
+>  本主题提供了有关使用客户端上的 FOR XML 子句的其他信息，并假定您已熟悉 FOR XML 子句。 有关 FOR XML 的详细信息，请参阅 [使用 FOR Xml 构造 XML](../../../relational-databases/xml/for-xml-sql-server.md)。  
   
- **重要提示**若要将客户端 FOR XML 功能与新的**xml**数据类型一起使用，客户端应始终使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE client （SQLNCLI11）数据访问接口，而不是 SQLOLEDB 访问接口。 SQLNCLI11 为 SQL Server 访问接口的最新版本，且完全识别 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的数据类型。 通过 SQLOLEDB 提供程序的客户端 FOR XML 的行为将**xml**数据类型视为字符串。  
+ **重要提示** 若要将客户端 FOR XML 功能与新的 **xml** 数据类型一起使用，客户端应始终使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE client (SQLNCLI11) 数据提供程序而不是 SQLOLEDB 访问接口。 SQLNCLI11 为 SQL Server 访问接口的最新版本，且完全识别 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的数据类型。 通过 SQLOLEDB 提供程序的客户端 FOR XML 的行为将 **xml** 数据类型视为字符串。  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>对客户端上的 XML 文档进行格式化  
  当客户端应用程序执行以下查询时：  
@@ -49,7 +49,7 @@ SELECT FirstName, LastName
 FROM   Person.Contact  
 ```  
   
- 服务器执行查询，并将行集（包含 FirstName 和 LastNamecolumns）返回到客户端。 然后，中间层对行集应用 FOR XML 转换，并将 XML 格式返回到客户端。  
+ 服务器执行查询，并返回包含 LastNamecolumns 的行集和客户端)  (。 然后，中间层对行集应用 FOR XML 转换，并将 XML 格式返回到客户端。  
   
  同样，在您执行 XPath 查询时，服务器将行集返回到客户端，并对客户端上的行集应用 FOR XML EXPLICIT 转换，从而生成所需的 XML 格式。  
   
@@ -91,7 +91,7 @@ AS
 </ROOT>  
 ```  
   
- 由于在模板中将**客户端-xml**特性设置为1（true），因此将在服务器上执行存储过程，并将服务器返回的两列行集转换为中间层上的 xml 并返回到客户端。 （此处仅显示部分结果。）  
+ 因为 **客户端-xml** 特性设置为 1 () 模板中的 true），则将在服务器上执行存储过程，并将服务器返回的两列行集转换为中间层上的 xml 并返回到客户端。 （此处仅显示部分结果。）  
   
 ```  
  <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -101,7 +101,7 @@ AS
 ```  
   
 > [!NOTE]  
->  使用 SQLXMLOLEDB 提供程序或 SQLXML 托管类时，可以使用**ClientSideXml**属性请求客户端 XML 格式。  
+>  使用 SQLXMLOLEDB 提供程序或 SQLXML 托管类时，可以使用 **ClientSideXml** 属性请求客户端 XML 格式。  
   
 ### <a name="the-workload-is-more-balanced"></a>工作负荷更加均衡。  
  由于客户端进行 XML 格式化，因此会在服务器与客户端之间均衡工作负荷，从而释放服务器执行其他操作。  
@@ -120,13 +120,13 @@ AS
      通过将 SQLXML 托管类的此属性设置为 True，可指定客户端格式。  
   
 ## <a name="enhanced-xml-template-support"></a>增强的 XML 模板支持  
- 从开始 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，中的 XML 模板已 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过添加**客户端-xml**特性得以增强。 如果此属性设置为 True，将在客户端上进行 XML 格式化。 请注意，此模板特性在功能上与特定于 SQLXMLOLEDB 提供程序的 ClientSideXML 属性相同。  
+ 从开始 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，中的 XML 模板已 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过添加 **客户端-xml** 特性得以增强。 如果此属性设置为 True，将在客户端上进行 XML 格式化。 请注意，此模板特性在功能上与特定于 SQLXMLOLEDB 提供程序的 ClientSideXML 属性相同。  
   
 > [!NOTE]  
->  如果你在使用 SQLXMLOLEDB 提供程序的 ADO 应用程序中执行 XML 模板，并且在模板中同时指定了**客户端-XML**特性和 Provider ClientSideXML 属性，则模板中指定的值优先。  
+>  如果你在使用 SQLXMLOLEDB 提供程序的 ADO 应用程序中执行 XML 模板，并且在模板中同时指定了 **客户端-XML** 特性和 Provider ClientSideXML 属性，则模板中指定的值优先。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SQLXML 4.0&#41;的客户端和服务器端 XML 格式的体系结构](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [&#40;SQLXML 4.0&#41;的客户端和服务器端 XML 格式的体系结构 ](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
  [有关 &#40;SQLXML 4.0 的 XML 安全注意事项&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [SQLXML 4.0 中的 xml 数据类型支持](../../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)   

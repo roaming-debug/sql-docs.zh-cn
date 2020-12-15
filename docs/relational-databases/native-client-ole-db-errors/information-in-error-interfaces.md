@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90120272c94731f6ac2ba3f692c8a8c83ed3f129
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 63ed78e916c9cb5250c9c1c500ef65fca0fc7617
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081976"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97433185"
 ---
 # <a name="information-in-ole-db-defined-error-interfaces"></a>OLE DB 定义的错误接口中的信息
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序在 OLE DB 定义的错误接口**IErrorInfo**、 **IErrorRecords**和**ISQLErrorInfo**中报告一些错误和状态信息。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序在 OLE DB 定义的错误接口 **IErrorInfo**、 **IErrorRecords** 和 **ISQLErrorInfo** 中报告一些错误和状态信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持**IErrorInfo**成员函数，如下所示。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持 **IErrorInfo** 成员函数，如下所示。  
   
 |成员函数|说明|  
 |---------------------|-----------------|  
@@ -41,17 +41,17 @@ ms.locfileid: "92081976"
 |**GetHelpFile**|不支持。 始终返回 NULL。|  
 |**GetSource**|“Microsoft SQL Server Native Client”字符串。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持使用者可用的**IErrorRecords**成员函数，如下所示。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持使用者可用的 **IErrorRecords** 成员函数，如下所示。  
   
 |成员函数|说明|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|使用有关错误的基本信息填充 ERRORINFO 结构。 ERRORINFO 结构包含标识错误的 HRESULT 返回值的成员、访问接口和该错误适用的接口。|  
 |**GetCustomErrorObject**|返回对 ISQLErrorInfo 和 [ISQLServerErrorInfo](../native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md) 接口的引用  。|  
 |**GetErrorInfo**|返回对 IErrorInfo 接口的引用  。|  
-|**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序不通过**GetErrorParameters**将参数返回给使用者。|  
+|**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序不通过 **GetErrorParameters** 将参数返回给使用者。|  
 |**GetRecordCount**|可用错误记录的计数。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持**ISQLErrorInfo：： GetSQLInfo**参数，如下所示。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持 **ISQLErrorInfo：： GetSQLInfo** 参数，如下所示。  
   
 |参数|说明|  
 |---------------|-----------------|  

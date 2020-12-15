@@ -1,6 +1,6 @@
 ---
 description: sys.sql_modules (Transact-SQL)
-title: sys. sql_modules (Transact-sql) |Microsoft Docs
+title: sys.sql_modules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fef38d2e060e8b9442a29fb83e821de0e93822b5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: acf5f7195a3ee997590d9625615038577779fd14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551357"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429339"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  为在中为 SQL 语言定义的模块的每个对象（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括本机编译的标量用户定义函数）返回一行。 类型为 P、RF、V、TR、FN、IF、TF 和 R 的对象均有关联的 SQL 模块。 在此视图中，独立的默认值，即 D 类型的对象也具有 SQL 模块定义。 有关这些类型的说明，请参阅[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录视图中的**类型**列。  
+  为在中为 SQL 语言定义的模块的每个对象（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括本机编译的标量用户定义函数）返回一行。 类型为 P、RF、V、TR、FN、IF、TF 和 R 的对象均有关联的 SQL 模块。 在此视图中，独立的默认值，即 D 类型的对象也具有 SQL 模块定义。 有关这些类型的说明，请参阅 [sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录视图中的 **类型** 列。  
   
  有关详细信息，请参阅[内存中 OLTP 的标量用户定义函数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "89551357"
 
   
 ## <a name="remarks"></a>备注  
- 默认约束（类型为 D 的对象）的 SQL 表达式可在 [default_constraints sys.databases](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) 目录视图中找到。 CHECK 约束的 SQL 表达式（类型为 C 的对象）可在 [check_constraints sys.databases](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) 目录视图中找到。  
+ 默认约束（类型为 D 的对象）的 SQL 表达式可在 [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) 目录视图中找到。 在 [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) 目录视图中找到检查约束（类型为 C 的对象）的 SQL 表达式。  
   
- 此信息也会在 [dm_db_uncontained_entities &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)中介绍。  
+ [Sys.dm_db_uncontained_entities &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)中也介绍了此信息。  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
