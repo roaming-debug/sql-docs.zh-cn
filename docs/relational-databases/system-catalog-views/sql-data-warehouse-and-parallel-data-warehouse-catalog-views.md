@@ -11,14 +11,14 @@ dev_langs:
 ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ff25c5988b3e989be11758591af1f69f778b72f
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 54f256fde4a15aa5a364965fc11469f9381b8e4c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059575"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462828"
 ---
 # <a name="azure-synapse-analytics-and-parallel-data-warehouse-catalog-views"></a>Azure Synapse Analytics 和并行数据仓库目录视图
 

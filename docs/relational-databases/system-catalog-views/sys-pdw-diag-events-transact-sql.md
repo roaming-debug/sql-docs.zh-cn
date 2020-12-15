@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 59bb3e9c-2829-49a0-b382-652ed1f54f88
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9af8b5bb95dac16ab0359d3438f5b3f489313ba7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 68cdc1013969dde85bbdc0bded31610a1673b91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035000"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461608"
 ---
 # <a name="syspdw_diag_events-transact-sql"></a>sys.pdw_diag_events (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "92035000"
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|name|**nvarchar(255)**|特定诊断事件的名称。||  
+|**name**|**nvarchar(255)**|特定诊断事件的名称。||  
 |**source**|**nvarchar(255)**|事件源 (引擎、常规、dms 等 ) ||  
 |**is_enabled**|**bit**|事件是否正在发布。||  
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15ce6ea1c72bee64ad8fe96e70b9a7c513c623e6
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0b182a2c4993206d302ce951234e709d0954dc5c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868278"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462978"
 ---
 # <a name="installing-smo"></a>安装 SMO
 

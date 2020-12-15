@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb1e6e149a17e5315f1675aed52ec010a1751b4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1777265db1c1f32d4c72ee91d6af7e8ac73d7221
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455876"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439916"
 ---
 # <a name="sql-server-native-client-command-parameters"></a>SQL Server Native Client 命令参数
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "88455876"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持 SQL 语句命令中的输入参数。 在过程调用命令中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持输入参数、输出参数和输入/输出参数。 输出参数值在运行时（仅当没有行集返回时）或当应用程序用尽返回的所有行集时，返回到应用程序。 若要确保返回值有效，可使用 IMultipleResults 强制使用行集  。  
   
- 在 DBPARAMBINDINFO 结构中无需指定存储过程参数的名称。 使用 NULL 作为*pwszName*成员的值，以指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序应忽略参数名，并且仅使用**ICommandWithParameters：： SetParameterInfo**的*rgParamOrdinals*成员中指定的序号。 如果命令文本中既包含命名参数又包含未命名参数，则必须在所有命名参数之前指定所有未命名参数。  
+ 在 DBPARAMBINDINFO 结构中无需指定存储过程参数的名称。 使用 NULL 作为 *pwszName* 成员的值，以指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序应忽略参数名，并且仅使用 **ICommandWithParameters：： SetParameterInfo** 的 *rgParamOrdinals* 成员中指定的序号。 如果命令文本中既包含命名参数又包含未命名参数，则必须在所有命名参数之前指定所有未命名参数。  
   
  如果指定了存储过程参数的名称，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将检查该名称，以确保该名称有效。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]当 Native Client OLE DB 提供程序从使用者接收到错误的参数名称时，它将返回错误。  
   

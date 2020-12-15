@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0e94854b13377b9d608c027992cdc48a396093
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4b2e0d637dcd3e956afcbe3867c02464453ece2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428149"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463328"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>创建驱动程序应用程序 - 异步模式和 SQLCancel
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  当应用程序测试命令是否完成时，它会向驱动程序发出带有相同参数的相同函数调用。 如果驱动程序尚未从服务器接收到回复，它将再次返回 SQL_STILL_EXECUTING。 应用程序必须定期测试该命令，直到返回 SQL_STILL_EXECUTING 之外的代码。 当应用程序收到其他任何返回代码（甚至是 SQL_ERROR）后，它可以确定命令是否已完成。  
   
- 有时某个命令长时间未完成。 如果应用程序需要在不等待答复的情况下取消命令，则可以通过使用与未完成的命令相同的语句句柄调用 **SQLCancel** 来执行此操作。 这是唯一应该使用的 **SQLCancel** 。 某些程序员在通过结果集处理部分方法时使用 **SQLCancel** ，并希望取消结果集的其余部分。 应使用[SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)或[SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)来取消未完成的结果集的剩余部分，而不是**SQLCancel**。  
+ 有时某个命令长时间未完成。 如果应用程序需要在不等待答复的情况下取消命令，则可以通过使用与未完成的命令相同的语句句柄调用 **SQLCancel** 来执行此操作。 这是唯一应该使用的 **SQLCancel** 。 某些程序员在通过结果集处理部分方法时使用 **SQLCancel** ，并希望取消结果集的其余部分。 应使用 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)或 [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)来取消未完成的结果集的剩余部分，而不是 **SQLCancel**。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建 SQL Server Native Client ODBC 驱动程序应用程序](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  

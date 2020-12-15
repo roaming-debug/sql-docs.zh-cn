@@ -1,6 +1,6 @@
 ---
 description: sys.sp_add_trusted_assembly (Transact-SQL)
-title: sys. sp_add_trusted_assembly (Transact-sql) |Microsoft Docs
+title: sys.sp_add_trusted_assembly (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e59cd1836a838294904970f00a677a0fdfe6c03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dd109cbb67ced59488d6436880be495501e92034
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480879"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462648"
 ---
 # <a name="syssp_add_trusted_assembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ sp_add_trusted_assembly
 
 ## <a name="remarks"></a>备注  
 
-此过程将程序集添加到  [sys.databases trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)。
+此过程将程序集添加到  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 [ @hash =] "*value*"  
 要添加到服务器的受信任程序集列表的程序集的 SHA2_512 哈希值。 即使程序集未签名或数据库未标记为可信，也可以在启用 [CLR 严格安全](../../database-engine/configure-windows/clr-strict-security.md) 时加载受信任的程序集。
@@ -67,8 +67,8 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
 ```  
 
 ## <a name="see-also"></a>另请参阅  
-  [sys. sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
-  [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
+  [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
+  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)  
   [CLR 严格安全性](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  

@@ -17,32 +17,32 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40196c8ec895bbf6bfc8e092e82ca8704d4f803e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dce3adf92772a69875a644a2dc23344b6b139f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243894"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461988"
 ---
 # <a name="using-large-value-types-in-sql-server-native-client"></a>在 SQL Server Native Client 中使用大值类型
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，若要使用大值数据类型，必须进行特殊的处理。 大值数据类型是那些超出了 8 KB 的最大行大小的数据类型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]为**varchar**、 **nvarchar**和**varbinary**数据类型引入了一个 max 说明符，以允许存储**最**大为 2 ^ 31-1 个字节的值。 表列和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 变量可以指定**varchar （max）**、 **nvarchar （max）** 或**varbinary （max）** 数据类型。  
+  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，若要使用大值数据类型，必须进行特殊的处理。 大值数据类型是那些超出了 8 KB 的最大行大小的数据类型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]为 **varchar**、 **nvarchar** 和 **varbinary** 数据类型引入了一个 max 说明符，以允许存储 **最** 大为 2 ^ 31-1 个字节的值。 表列和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 变量可以指定 **varchar (max)**、 **nvarchar (max)** 或 **varbinary (max)** 数据类型。  
   
 > [!NOTE]  
 >  大值数据类型的最大大小可以介于 1 到 8 KB 之间，也可以指定为不限制其大小。  
   
- 以前，只有诸如 text、ntext 和 image 之类的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可以达到这样的长度    。 **Varchar**、 **nvarchar**和**varbinary**的**max**说明符使这些数据类型成为冗余的。 但是，由于仍然提供长数据类型，因而大多数 OLE DB 和 ODBC 数据访问组件的接口将保持不变。 为了实现与先前版本的向后兼容，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口中的 DBCOLUMNFLAGS_ISLONG 标志和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序中的 SQL_LONGVARCHAR 仍然可以继续使用。 针对 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本编写的访问接口和驱动程序可以继续使用这些字词将新类型设置为最大长度不受限制。  
+ 以前，只有诸如 text、ntext 和 image 之类的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可以达到这样的长度    。 **Varchar**、 **nvarchar** 和 **varbinary** 的 **max** 说明符使这些数据类型成为冗余的。 但是，由于仍然提供长数据类型，因而大多数 OLE DB 和 ODBC 数据访问组件的接口将保持不变。 为了实现与先前版本的向后兼容，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口中的 DBCOLUMNFLAGS_ISLONG 标志和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序中的 SQL_LONGVARCHAR 仍然可以继续使用。 针对 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本编写的访问接口和驱动程序可以继续使用这些字词将新类型设置为最大长度不受限制。  
   
 > [!NOTE]  
 >  还可以将 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型指定为存储过程的输入和输出参数类型、函数返回类型或者用在 [CAST 和 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 函数中  。  
   
 > [!NOTE]  
->  如果复制数据，则可能需要将 "[最大文本复制大小" 服务器配置选项](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)配置为-1。  
+>  如果复制数据，则可能需要将 " [最大文本复制大小" 服务器配置选项](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) 配置为-1。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序将**varchar （max）**、 **varbinary （max）** 和**nvarchar （max）** 类型分别公开为 DBTYPE_STR、DBTYPE_BYTES 和 DBTYPE_WSTR。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序以) 、 (和) 分别公开 **varchar (max)**、 **varbinary (max DBTYPE_STR** 和 **nvarchar DBTYPE_BYTES 最大 DBTYPE_WSTR** 类型。  
   
  如果列中的 varchar(max)、varbinary(max) 和 nvarchar(max) 数据类型的 max 大小设置为不受限制，则这些数据类型会通过返回列数据类型的核心 OLE DB 架构行集和接口表示为 ISLONG     。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "87243894"
   
  在报告列的最大大小时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将报告：  
   
--   定义的最大大小，例如，对于**varchar （** 2000 **）** 列为2000，或  
+-   定义的最大大小，例如，对于 **varchar (** 2000 **)** 列，则为2000，否则为  
   
 -   “unlimited”值，如果 varchar(max) 列等于 ~0  。 此值是为 DBCOLUMN_COLUMNSIZE 元数据属性设置的。  
   
@@ -690,18 +690,18 @@ _ExitProcessResultSet:
 }  
 ```  
   
- 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序如何公开大值数据类型的详细信息，请参阅[BLOB 和 OLE 对象](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序如何公开大值数据类型的详细信息，请参阅 [BLOB 和 OLE 对象](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驱动程序  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序将**varchar （max）**、 **varbinary （max）** 和**nvarchar （max）** 类型公开为在接受或返回 odbc SQL 数据类型的 odbc API 函数中 SQL_VARCHAR、SQL_VARBINARY 和 SQL_WVARCHAR。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序在接受或返回 ODBC SQL 数据类型的 ODBC API 函数中公开 **varchar (max)**， **varbinary (max)** 和 **nvarchar (最大)** 类型 SQL_VARCHAR SQL_VARBINARY、SQL_WVARCHAR 和。  
   
  在报告列的最大大小时，该驱动程序将报告以下两个值之一：  
   
--   定义的最大大小，例如，对于**varchar （2000）** 列为2000，或  
+-   定义的最大大小，例如，对于 **varchar (2000)** 列，则为2000，否则为  
   
--   对于**varchar （max）** 列等于0的值 "无限制"。  
+-   值 "无限制"，在这种情况下， **varchar (max)** 列等于0。  
   
- 标准转换规则适用于**varchar （max）** 列，这意味着，对于**varchar （** 2000 **）** 列有效的任何转换也对于**varchar （max）** 列有效。 这也适用于 nvarchar(max) 和 varbinary(max) 列********。  
+ 标准转换规则适用于 **varchar (max)** 列，这意味着对于 **varchar (** 2000 **)** 列有效的任何转换也将对 **varchar (max)** 列有效。 这也适用于 nvarchar(max) 和 varbinary(max) 列   。  
   
  下面列出了经过增强以便使用大值数据类型的 ODBC API 函数：  
   

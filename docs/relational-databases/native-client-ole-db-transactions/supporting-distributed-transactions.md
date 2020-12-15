@@ -19,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4512cea869bae06bde3343db1487e060a35928b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1e91067d59c3cfc5875a2f83f72ac3ee659db412
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498952"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462128"
 ---
 # <a name="supporting-distributed-transactions-in-sql-server-native-client"></a>SQL Server Native Client 中支持分布式事务
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用者可以使用 **ITransactionJoin：： JoinTransaction** 方法参与由 Microsoft 分布式事务处理协调器 (MS DTC) 协调的分布式事务。  
   
- MS DTC 公开 COM 对象，这些对象允许客户端跨各种数据存储的多个连接来启动和参与协调的事务。 若要启动某个事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用者使用了 MS DTC **ITransactionDispenser** 接口。 ITransactionDispenser 的 BeginTransaction 成员返回分布式事务对象的引用   。 使用 JoinTransaction 将此引用传递给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供**JoinTransaction**程序。  
+ MS DTC 公开 COM 对象，这些对象允许客户端跨各种数据存储的多个连接来启动和参与协调的事务。 若要启动某个事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用者使用了 MS DTC **ITransactionDispenser** 接口。 ITransactionDispenser 的 BeginTransaction 成员返回分布式事务对象的引用   。 使用 JoinTransaction 将此引用传递给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序。  
   
  MS DTC 支持对分布式事务的异步提交和中止。 为了通知异步事务状态，使用者实现 ITransactionOutcomeEvents 接口并将该接口与 MS DTC 事务对象连接  。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "88498952"
 |punkTransactionCoord |指向 MS DTC 事务对象的指针。|  
 |IsoLevel |由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序忽略。 使用者在从 MS DTC 获取事务对象时，确定由 MS DTC 协调的事务的隔离级别。|  
 |IsoFlags |必须为 0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果使用者指定了其他任何值，则 Native Client OLE DB 提供程序将返回 XACT_E_NOISORETAIN。|  
-|POtherOptions |如果不为 NULL，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序从接口请求 options 对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果 options 对象的*ulTimeout*成员不为零，则 Native Client OLE DB 提供程序将返回 XACT_E_NOTIMEOUT。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序忽略*szDescription*成员的值。|  
+|POtherOptions |如果不为 NULL，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序从接口请求 options 对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果 options 对象的 *ulTimeout* 成员不为零，则 Native Client OLE DB 提供程序将返回 XACT_E_NOTIMEOUT。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序忽略 *szDescription* 成员的值。|  
   
  下面的示例通过使用 MS DTC 来协调事务：  
   

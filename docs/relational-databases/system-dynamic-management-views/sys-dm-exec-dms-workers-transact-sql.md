@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5942abbdd1710a058ec725e88d96f99c9ba21e37
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5e6209aef488fb336f65d26556732f90063ff8d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834089"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464548"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91834089"
 |dms_step_index|`int`|此工作线程正在运行的 DMS 计划中的步骤。|请参阅 [sys.dm_exec_dms_workers (transact-sql) ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|`int`|正在运行辅助角色的节点。|请参阅 [&#40;transact-sql&#41;sys.dm_exec_compute_nodes ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|`int`|||  
-|类型|`nvarchar(32)`|此项表示的 DMS 工作线程的类型。|"DIRECT_CONVERTER"、"DIRECT_READER"、"FILE_READER"、"HASH_CONVERTER"、"HASH_READER"、"ROUNDROBIN_CONVERTER"、"EXPORT_READER"、"EXTERNAL_READER"、"EXTERNAL_WRITER"、"PARALLEL_COPY_READER"、"REJECT_WRITER"、"WRITER"|  
+|type|`nvarchar(32)`|此项表示的 DMS 工作线程的类型。|"DIRECT_CONVERTER"、"DIRECT_READER"、"FILE_READER"、"HASH_CONVERTER"、"HASH_READER"、"ROUNDROBIN_CONVERTER"、"EXPORT_READER"、"EXTERNAL_READER"、"EXTERNAL_WRITER"、"PARALLEL_COPY_READER"、"REJECT_WRITER"、"WRITER"|  
 |status|`nvarchar(32)`|此步骤的状态|"挂起"、"正在运行"、"完成"、"失败"、"UndoFailed"、"PendingCancel"、"已取消"、"撤消"、"已中止"|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  

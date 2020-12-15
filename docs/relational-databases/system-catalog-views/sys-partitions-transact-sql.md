@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0947a58b607d781b05eb5633b0664d7f0da4d107
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 889b96df7adaff39f3f032a272c319e62d1e8e51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546724"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461668"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89546724"
 |hobt_id|**bigint**|指示包含此分区的行的数据堆或B 树 (HoBT) 的 ID。|  
 |行|**bigint**|指示此分区中的大约行数。|  
 |filestream_filegroup_id|**smallint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指示在此分区上存储的 FILESTREAM 文件组的 ID。|  
-|data_compression|**tinyint**|指示每个分区的压缩状态：<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = 列存储： **适用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本<br />4 = COLUMNSTORE_ARCHIVE： **适用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更高版本<br /><br /> **注意：** 在的任何版本中，将压缩全文索引 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|data_compression|**tinyint**|指示每个分区的压缩状态：<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = 列存储： **适用** 于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本<br />4 = COLUMNSTORE_ARCHIVE： **适用** 于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更高版本<br /><br /> **注意：** 在的任何版本中，将压缩全文索引 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |data_compression_desc|**nvarchar(60)**|指示每个分区的压缩状态。 行存储表的可能值为 NONE、ROW 和 PAGE。 列存储表的可能值为 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。|  
   
 ## <a name="permissions"></a>权限  

@@ -9,13 +9,13 @@ ms.topic: language-reference
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: da990bafa1addd84ffabdc700c9f94e82454eb3a
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: f20d02ba7607ce0f905af39f15a5a76f3516638a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753742"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440672"
 ---
 # <a name="sysdm_xe_database_sessions-azure-sql-database"></a>sys.dm_xe_database_sessions（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "91753742"
   
 ||  
 |-|  
-|**适用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
+|**适用** 于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "91753742"
 ### <a name="relationship-cardinalities"></a>关系基数  
 从2015-07-13，"sys.dm_xe_objects" 是在其名称中不包含 "_database" 的其中一个 XEvents Dmv。 不是下表的右侧列中的错误键入或错误。 Microsoft SQL Server 和 Azure SQL 数据库中的名称相同。  
   
-|源|目标|Relationship|  
+|From|功能|关系|  
 |--------|------|----------------|  
 |sys.dm_xe_database_session_events sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions 地址|多对一|  
 |sys.databases _xe_database_session_events. event_package_guid，sys.databases _xe_database_session_events. event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  

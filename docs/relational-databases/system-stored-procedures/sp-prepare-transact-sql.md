@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 198707a1ffda49a3ffc28d0d35eadced99e4b149
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9726ac52d0579c56de3c3ad971028cd606748726
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535052"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462678"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "89535052"
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *柄*  
  是 SQL Server 生成的已 *准备的句柄* 标识符。 *句柄* 是带有 **int** 返回值的必需参数。  
   
  *params*  
- 标识参数化语句。 变量的参数定义将替换为语句 *中的参数* 标记。 *params* 是调用 **ntext**、 **nchar**或 **nvarchar** 输入值的必需参数。 如果语句未参数化，则输入一个 NULL 值。  
+ 标识参数化语句。 变量的参数定义将替换为语句 *中的参数* 标记。 *params* 是调用 **ntext**、 **nchar** 或 **nvarchar** 输入值的必需参数。 如果语句未参数化，则输入一个 NULL 值。  
   
  *stmt*  
- 定义游标结果集。 *Stmt*参数是必需的，并且调用了**ntext**、 **nchar**或**nvarchar**输入值。  
+ 定义游标结果集。 *Stmt* 参数是必需的，并且调用了 **ntext**、 **nchar** 或 **nvarchar** 输入值。  
   
  *options*  
  一个可选参数，它返回游标结果集列的说明。 *选项* 需要以下 int 输入值：  

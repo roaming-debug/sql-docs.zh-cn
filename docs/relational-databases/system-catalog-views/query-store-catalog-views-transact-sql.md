@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 43d5466a-89e2-4e59-b87e-a2a78e59a1de
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5537e3a8d773f0222fdc431979b3d6f54ac2decd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9f8295085fddb2ec7744fcff63d630adae722a98
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539737"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461708"
 ---
 # <a name="query-store-catalog-views-transact-sql"></a>查询存储目录视图 (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

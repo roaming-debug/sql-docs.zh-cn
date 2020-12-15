@@ -10,12 +10,13 @@ ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63b641e86c03dfdbc5bd7b5b506586fca3343b18
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 22a707d2a373045666b8eae0ad6f9d48d23c88ba
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008982"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462038"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>对高可用性、灾难恢复的 SQL Server Native Client 支持
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "86008982"
 >  增大连接超时值和实现连接重试逻辑将增加应用程序连接到可用性组的概率。 此外，由于可用性组进行故障转移而可能使连接失败，您应实现连接重试逻辑，重试失败的连接，直至重新连接。  
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接  
- 在连接到 SQL Server 2012 可用性组侦听程序或 SQL Server 2012 故障转移群集实例时，应始终指定 **MultiSubnetFailover=Yes**。 **MultiSubnetFailover**为 SQL Server 2012 中的所有可用性组和故障转移群集实例启用更快的故障转移，并且将显著缩短单个和多子网 Always On 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行进行连接。 在子网故障转移过程中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将会主动重试 TCP 连接。  
+ 在连接到 SQL Server 2012 可用性组侦听程序或 SQL Server 2012 故障转移群集实例时，应始终指定 **MultiSubnetFailover=Yes**。 **MultiSubnetFailover** 为 SQL Server 2012 中的所有可用性组和故障转移群集实例启用更快的故障转移，并且将显著缩短单个和多子网 Always On 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行进行连接。 在子网故障转移过程中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将会主动重试 TCP 连接。  
   
- **MultiSubnetFailover** 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将尝试通过连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库。 如果为连接指定的是 MultiSubnetFailover=Yes****，客户端重试 TCP 连接的时间短于操作系统的默认 TCP 重传间隔。 这样，在 Always On 可用性组或 Always On 故障转移群集实例进行故障转移后，就可以更快地重新连接，并且适用于单个和多子网可用性组和故障转移群集实例。  
+ **MultiSubnetFailover** 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将尝试通过连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库。 如果为连接指定的是 MultiSubnetFailover=Yes  ，客户端重试 TCP 连接的时间短于操作系统的默认 TCP 重传间隔。 这样，在 Always On 可用性组或 Always On 故障转移群集实例进行故障转移后，就可以更快地重新连接，并且适用于单个和多子网可用性组和故障转移群集实例。  
   
  有关连接字符串关键字的详细信息，请参阅 [将连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
@@ -40,13 +41,13 @@ ms.locfileid: "86008982"
   
  使用以下准则可以连接到可用性组或故障转移群集实例中的服务器：  
   
--   连接到单个子网或多子网时，请使用**MultiSubnetFailover**连接属性;它将提高这两者的性能。  
+-   连接到单子网或多子网时使用 **MultiSubnetFailover** 连接属性，这二者的性能都会得到改进。  
   
 -   若要连接到某一可用性组，请在您的连接字符串中将该可用性组的可用性组侦听器指定为服务器。  
   
 -   连接到配置有超过 64 个 IP 地址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例将导致连接失败。  
   
--   根据身份验证类型，使用**MultiSubnetFailover**连接属性的应用程序的行为不受影响： [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证、Kerberos 身份验证或 Windows 身份验证。  
+-   基于以下身份验证类型，使用 **MultiSubnetFailover** 连接属性的应用程序的行为不受影响：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证、Kerberos 身份验证或 Windows 身份验证。  
   
 -   你可以增加 **loginTimeout** 的值，以延长故障转移时间并减少应用程序连接重试次数。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86008982"
   
 1.  如果未将辅助副本位置配置为接受连接。  
   
-2.  如果应用程序使用**ApplicationIntent = ReadWrite** （如下所述），并且将辅助副本位置配置为只读访问。  
+2.  如果应用程序使用 **ApplicationIntent=ReadWrite**（在下文中介绍）且将次要副本位置配置为只读访问。  
   
  如果将主副本配置为拒绝只读工作负荷且连接字符串包含 **ApplicationIntent=ReadOnly**，连接将失败。  
   
@@ -129,12 +130,12 @@ ms.locfileid: "86008982"
  **IDBProperties::SetProperties**  
  若要设置 **ApplicationIntent** 属性值，请调用在带有“**ReadWrite**”或“**ReadOnly**”值的 **SSPROP_INIT_APPLICATIONINTENT** 属性或含有“**ApplicationIntent=ReadOnly**”或“**ApplicationIntent=ReadWrite**”值的 **DBPROP_INIT_PROVIDERSTRING** 属性中传递的 **IDBProperties::SetProperties**。  
   
- 可以在“数据链接属性”**** 对话框的“全部”选项卡的“应用程序意向属性”字段中指定应用程序意向。  
+ 可以在“数据链接属性”  对话框的“全部”选项卡的“应用程序意向属性”字段中指定应用程序意向。  
   
  建立隐式连接时，隐式连接将使用父连接的应用程序意向设置。 同样，从同一数据源创建的多个会话将继承数据源的应用程序意向设置。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [将连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+ [将连接字符串关键字用于 SQL Server 本机客户端](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

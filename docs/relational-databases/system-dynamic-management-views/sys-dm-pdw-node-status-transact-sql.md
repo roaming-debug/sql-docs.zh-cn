@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 267b2aa14e85f77af91a0cf1a5640a16ee158215
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: ae7d516d143adb54427146a1675433575d5a2529
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035310"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461578"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys.dm_pdw_node_status (Transact-sql) 
 
@@ -41,7 +41,7 @@ ms.locfileid: "92035310"
 |is_available|**bit**|指示此节点是否可用的标志。||  
 |sent_time|**datetime**|此节点上次发送网络包的时间。||  
 |received_time|**datetime**|此节点上次收到网络包的时间。||  
-|error_id|**nvarchar (36) **|此节点上发生的最后一个错误的唯一标识符。||  
+|error_id|**nvarchar (36)**|此节点上发生的最后一个错误的唯一标识符。||  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;的 Azure Synapse 分析和并行数据仓库动态管理视图 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

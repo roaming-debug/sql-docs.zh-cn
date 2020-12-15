@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 572b5187-9753-4063-adf8-65dea87d11f8
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4181b82b6512211d91d23c76b797aedeec761b7f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 054dc5391ce03fc079bae505ec3f8fbe2eca2ea2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036753"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461588"
 ---
 # <a name="syspdw_distributions-transact-sql"></a>sys.pdw_distributions (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 description: sys.partition_range_values (Transact-SQL)
-title: sys. partition_range_values (Transact-sql) |Microsoft Docs
+title: sys.partition_range_values (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924640e4f30a47ecacb911567ab8f6d766bf4182
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0617f01056af48341e616f10fca1cadabdf98299
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551461"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458490"
 ---
 # <a name="syspartition_range_values-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89551461"
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|该范围边界值的分区函数的 ID。|  
 |**boundary_id**|**int**|边界值元组的 ID（从 1 开始的序号），最左边界以值为 1 的 ID 开始。|  
-|**parameter_id**|**int**|该值所对应的函数参数的 ID。 此列中的值与任何特定**function_id**的**sys.databases partition_parameters**目录视图的**parameter_id**列中的值相对应。|  
+|**parameter_id**|**int**|该值所对应的函数参数的 ID。 此列中的值与任何特定 **function_id** 的 **sys.partition_parameters** 目录视图的 " **parameter_id** " 列中的值相对应。|  
 |**value**|**sql_variant**|实际的边界值。|  
   
 ## <a name="permissions"></a>权限  

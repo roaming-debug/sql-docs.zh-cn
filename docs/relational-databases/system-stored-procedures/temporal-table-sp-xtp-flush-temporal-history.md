@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c22e02aba01530059357b709a0c72be350ec7de
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d3e093e713d40265c215bbfe6e8ea89199599c2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544685"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462658"
 ---
 # <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-sql) 
 
@@ -42,7 +42,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *\@schema_name*  
  当前表或临时表的架构名称  
   

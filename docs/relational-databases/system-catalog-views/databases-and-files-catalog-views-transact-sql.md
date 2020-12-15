@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 60a05111-c542-45b5-a0cb-433ddcf6286a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0218256ef7b9e10e4293344a730b8bc1a35370f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7014d444444977d1b88c5cce7bcaccbb2806de99
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809400"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462818"
 ---
 # <a name="databases-and-files-catalog-views-transact-sql"></a>数据库和文件目录视图 (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

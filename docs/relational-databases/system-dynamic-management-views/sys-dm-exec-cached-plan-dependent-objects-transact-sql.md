@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
-title: sys. dm_exec_cached_plan_dependent_objects (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_cached_plan_dependent_objects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9b6cf5f7-b267-44fb-aac8-f49c9aa10cc1
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea18d0f3def41404fd6dd7b42dbf1e66a7ceea23
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 29b533890f22891d8bd7e4cfe7a0323507874753
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548614"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464608"
 ---
 # <a name="sysdm_exec_cached_plan_dependent_objects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "89548614"
 sys.dm_exec_cached_plan_dependent_objects(plan_handle)  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 *plan_handle*  
-是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询执行计划。 *plan_handle* 为 **varbinary (64) **。   
+是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询执行计划。 *plan_handle* 为 **varbinary (64)**。   
 
 可以从以下动态管理对象中获取 *plan_handle* ：  
   
@@ -51,9 +51,9 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 -   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -61,7 +61,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
 |-----------------|---------------|-----------------|  
 |**usecounts**|**int**|执行上下文或游标的已用次数。<br /><br /> 此列不可为空值。|  
 |**memory_object_address**|**varbinary(8)**|执行上下文或游标的内存地址。<br /><br /> 此列不可为空值。|  
-|**cacheobjtype**|**nvarchar(50)**|计划缓存对象类型。 此列不可为空值。 可能的值为<br /><br /> 可执行计划<br /><br /> CLR 编写函数<br /><br /> CLR 编写过程<br /><br /> Cursor|  
+|**cacheobjtype**|**nvarchar(50)**|计划缓存对象类型。 此列不可为空值。 可能的值为<br /><br /> 可执行计划<br /><br /> CLR 编写函数<br /><br /> CLR 编写过程<br /><br /> 游标|  
   
 ## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
@@ -71,7 +71,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|到|开|关系|  
+|From|功能|On|关系|  
 |----------|--------|--------|------------------|  
 |**dm_exec_cached_plan_dependent_objects**|**dm_os_memory_objects**|**memory_object_address**|一对一|  
   

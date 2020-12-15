@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efb4fea164129627f846571a8a2913afc7097260
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1e837d1e74df620964dea8bedc7aebe2a5298eee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012925"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462088"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 生成应用程序
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "86012925"
  [SQL Server Native Client 的组件](../../../relational-databases/native-client/applications/components-of-sql-server-native-client.md)  
  讨论组成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的组件，包括库、资源、帮助和头文件。  
   
- [将连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+ [将连接字符串关键字用于 SQL Server 本机客户端](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
  讨论通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 连接到数据库时可以使用的各种类型的连接字符串。  
   
  [使用 SQL Server Native Client 头文件和库文件](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)  

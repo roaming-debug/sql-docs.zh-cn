@@ -1,5 +1,5 @@
 ---
-title: sql：溢出字段（SQLXML）
+title: 'sql：溢出-字段 (SQLXML) '
 description: 了解如何使用 sql：溢出字段批注将列标识为将从 XML 文档接收所有未使用的数据的溢出列。
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b6ba41157e7e13651eb5810502a41e7c8abde67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4d0fa21bcd570a5f5196dfbc1bdf8e1bb6186cb8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724698"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462938"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>批注解释 - sql:overflow-field
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  在架构中，可以将某列标识为溢出列，以接收 XML 文档中所有未用完的数据。 此列是使用**sql：溢出字段**批注在架构中指定的。 可能有多个溢出列。  
+  在架构中，可以将某列标识为溢出列，以接收 XML 文档中所有未用完的数据。 此列是使用 **sql：溢出字段** 批注在架构中指定的。 可能有多个溢出列。  
   
- 每当有**sql：溢出字段**批注定义的 XML 节点（元素或属性）进入范围时，溢出列就会激活并接收未用完的数据。 节点离开作用域时，溢出列将不再活动，XML 大容量加载将激活上一个溢出字段（如果有）。  
+ 每当 XML 节点 (有 **sql：溢出字段** 批注定义的元素或属性) 时，溢出列就会激活并接收未用完的数据。 节点离开作用域时，溢出列将不再活动，XML 大容量加载将激活上一个溢出字段（如果有）。  
   
- 由于它在溢出列中存储数据，XML 大容量加载还会存储为其定义了**sql：溢出字段**的父元素的开始标记和结束标记。  
+ 由于它在溢出列中存储数据，XML 大容量加载还会存储为其定义了 **sql：溢出字段** 的父元素的开始标记和结束标记。  
   
  例如，下面的架构描述了 **\<Customers>** 和 **\<CustOrder>** 元素。 上述每个元素都标识一个溢出列：  
   

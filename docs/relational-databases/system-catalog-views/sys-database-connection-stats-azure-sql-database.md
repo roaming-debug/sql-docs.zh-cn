@@ -20,19 +20,19 @@ ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 2a3d57bb4ba8c36778d3d4e552d9a69bd285db9e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: e303099001b1708b6227547fdd68e94dba5c5eee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542575"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459897"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  包含数据库连接 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 事件**connectivity**的统计信息，提供数据库连接成功和失败的概述。 有关连接事件的详细信息，请参阅 sys.databases 中的事件类型 [event_log &#40;AZURE SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
+  包含数据库连接 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 事件的统计信息，提供数据库连接成功和失败的概述。 有关连接事件的详细信息，请参阅 [AZURE SQL 数据库&#41;sys.event_log &#40;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)中的事件类型。  
   
 |统计信息|类型|说明|  
 |---------------|----------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "89542575"
 |**start_time**|**datetime2**|聚合间隔开始的 UTC 日期和时间。 时间始终为 5 分钟的倍数。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|聚合间隔结束的 UTC 日期和时间。 **End_time** 始终比同一行中对应的 **start_time** 正好晚5分钟。|  
 |**success_count**|**int**|成功连接数。|  
-|**total_failure_count**|**int**|失败连接的总数。 这是 **connection_failure_count**、 **terminated_connection_count**和 **throttled_connection_count**的总和，不包括死锁事件。|  
+|**total_failure_count**|**int**|失败连接的总数。 这是 **connection_failure_count**、 **terminated_connection_count** 和 **throttled_connection_count** 的总和，不包括死锁事件。|  
 |**connection_failure_count**|**int**|登录失败数。|  
 |**terminated_connection_count**|**int**|**_仅适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11。_**<br /><br /> 终止连接数。|  
 |**throttled_connection_count**|**int**|**_仅适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11。_**<br /><br /> 中止的连接数。|  
@@ -59,7 +59,7 @@ ms.locfileid: "89542575"
   
 ### <a name="interval-start_time-and-end_time"></a>间隔 start_time 和 end_time
 
- 事件发生的时间或_之后_**start_time**和该间隔_之前_**end_time** *时，* 聚合间隔中包含一个事件。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
+ 事件发生的时间或 _之后_**start_time** 和该间隔 _之前_**end_time** *时，* 聚合间隔中包含一个事件。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
   
 ```  
   
@@ -80,7 +80,7 @@ start_time                    end_time
 
  此视图可能并未包含所有连接和错误信息：  
   
-- 此视图不包含 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可能会发生的所有数据库错误，只包括在 sys.databases 的事件类型中指定的所有错误 [Event_log &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
+- 此视图不包含 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可能会发生的所有数据库错误，只包括 [Sys.event_log &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)的事件类型中指定的所有错误。  
   
 - 如果数据中心内存在计算机故障 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，则事件表中可能缺少少量数据。  
   
@@ -92,7 +92,7 @@ start_time                    end_time
   
 ## <a name="example"></a>示例
 
- 下面的示例演示了 **sys.databases database_connection_stats** 的查询，该查询将返回在9/25/2011 到 (UTC) 9/28/2011 上的 noon 之间发生的数据库连接的汇总。 默认情况下，查询结果按) **start_time** (升序排序。  
+ 下面的示例演示了一个 **sys.database_connection_stats** 查询，该查询返回在 9/28/2011 (UTC) 上的中午9/25/2011 和中午之间发生的数据库连接摘要。 默认情况下，查询结果按) **start_time** (升序排序。  
   
 ```sql
 SELECT *  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99ac0e206244404d1f4155acdd10c0a35df6e719
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1939f6608b6175463103fce2a69a3d5936346605
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420301"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462998"
 ---
 # <a name="working-with-data-types"></a>使用数据类型
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88420301"
   
 -   使用类的静态成员之一 <xref:Microsoft.SqlServer.Management.Smo.DataType> ，例如 **Int**。实际上，这将返回对象的实例 <xref:Microsoft.SqlServer.Management.Smo.DataType> 。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DataType> 对象具有定义数据类型的几个属性。 例如，<xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 属性指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。 在 <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 枚举中列出了表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的常量值。 这是指诸如 **varchar**、 **nchar**、 **currency**、 **integer**、 **float**和 **datetime**这样的数据类型。  
+ <xref:Microsoft.SqlServer.Management.Smo.DataType> 对象具有定义数据类型的几个属性。 例如，<xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 属性指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。 在 <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 枚举中列出了表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的常量值。 这是指诸如 **varchar**、 **nchar**、 **currency**、 **integer**、 **float** 和 **datetime** 这样的数据类型。  
   
  确立数据类型时，必须为数据设置具体的属性。 例如，如果它是 **nchar** 类型，则必须在 **Length** 属性中设置字符串数据的长度。 对数字值同样如此，这时必须指定精度和小数位数。  
   

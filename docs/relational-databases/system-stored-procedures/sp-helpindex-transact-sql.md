@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eba692ae14a1632a59c3a56c0f7ac68072dee7eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a011e8f19650dad1c52b4a88e81edf28eb0bfc47
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549592"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462688"
 ---
 # <a name="sp_helpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "89549592"
 sp_helpindex [ @objname = ] 'name'  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @objname = ] 'name'` 用户定义的表或视图的限定或非限定名称。 仅当指定限定的表或视图名称时，才需要使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *name* 为 **nvarchar (776) **，无默认值。  
+## <a name="arguments"></a>自变量  
+`[ @objname = ] 'name'` 用户定义的表或视图的限定或非限定名称。 仅当指定限定的表或视图名称时，才需要使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *name* 为 **nvarchar (776)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -51,8 +51,8 @@ sp_helpindex [ @objname = ] 'name'
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |index_name|**sysname**|索引名。|  
-|**index_description**|**varchar (210) **|索引说明，其中包括索引所在的文件组。|  
-|**index_keys**|**nvarchar (2078) **|对其生成索引的表或视图列。|  
+|**index_description**|**varchar (210)**|索引说明，其中包括索引所在的文件组。|  
+|**index_keys**|**nvarchar (2078)**|对其生成索引的表或视图列。|  
   
  被降序索引的列将在结果集中列出，该列的名称后面带有一个减号 (-)，当列出被升序索引的列（这是默认情况）时，只带有该列的名称。  
   

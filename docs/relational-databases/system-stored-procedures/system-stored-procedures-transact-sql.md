@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60d30105f0c56224748a3c676ba4d76b73aa989b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810293"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462668"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系统存储过程 (Transact-SQL)
 
@@ -38,9 +38,9 @@ ms.locfileid: "91810293"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|类别|说明|  
+|Category|说明|  
 |--------------|-----------------|  
-|[活动异地复制存储过程]()|用于管理 Azure SQL 数据库中的活动异地复制配置|  
+|[活动 Geo-Replication 存储过程]()|用于管理以管理 Azure SQL 数据库中的 Active Geo-Replication 配置|  
 |[目录存储过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|用于实现 ODBC 数据字典功能，并隔离 ODBC 应用程序以使其不受基础系统表更改的影响。|  
 |[变更数据捕获存储过程](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|用于启用、禁用、或报告变更数据捕获对象。|  
 |[游标存储过程](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|用于实现游标变量功能。|  
@@ -75,7 +75,7 @@ ms.locfileid: "91810293"
 ## <a name="api-system-stored-procedures"></a>API 系统存储过程  
  针对 ADO、OLE DB 以及 ODBC 应用程序运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的用户可能会注意到这些使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 引用未涵盖的系统存储过程的应用程序。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 访问接口和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client ODBC 驱动程序使用这些存储过程来实现数据库 API 功能。 这些存储过程只不过是访问接口或驱动程序所使用的机制，用来传达用户对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的请求。 它们只供提供程序或驱动程序内部使用。 不支持从基于的应用程序中显式调用它们 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- Sp_createorphan 和 sp_droporphans 存储过程用于 ODBC **ntext**、 **text**和 **image** 处理。  
+ Sp_createorphan 和 sp_droporphans 存储过程用于 ODBC **ntext**、 **text** 和 **image** 处理。  
   
  sp_reset_connection 存储过程由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用来支持事务中的远程存储过程调用。 从连接池中重用连接时，该存储过程还将导致激发 Audit Login 和 Audit Logout 事件。  
   

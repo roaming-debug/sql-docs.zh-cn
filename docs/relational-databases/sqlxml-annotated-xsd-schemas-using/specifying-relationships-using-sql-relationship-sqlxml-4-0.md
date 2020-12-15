@@ -1,5 +1,5 @@
 ---
-title: 设置与 sql： relationship 的关系（SQLXML）
+title: '设置与 sql： relationship 的关系 (SQLXML) '
 description: 了解如何使用 SQLXML 4.0 中的 sql： relationship 批注指定 XML 元素之间的关系。
 ms.date: 03/16/2017
 ms.prod: sql
@@ -29,21 +29,21 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15274c3b46ac7b0dfb3e9f43fad0dd1174f5fbbf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6c050a6b34781fc6312e7d410aeccace29e3dc84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775762"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461758"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定关系 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   可以对 XML 文档中的元素建立相关性。 元素可以按层次结构方式嵌套，并且可以在元素之间指定 ID、IDREF 或 IDREFS 关系。  
   
- 例如，在 XSD 架构中， **\<Customer>** 元素包含 **\<Order>** 子元素。 将架构映射到 AdventureWorks 数据库后， **\<Customer>** 元素映射到 Customer 表， **\<Order>** 元素映射到 SalesOrderHeader 表。 由于是由客户下订单，因此，基础表 Sales.Customer 和 Sales.SalesOrderHeader 是相关的。 Sales.SalesOrderHeader 表中的 CustomerID 是外键，它引用 Sales.Customer 表中的 CustomerID 主键。 可以通过使用**sql： relationship**批注在映射架构元素之间建立这些关系。  
+ 例如，在 XSD 架构中， **\<Customer>** 元素包含 **\<Order>** 子元素。 将架构映射到 AdventureWorks 数据库后， **\<Customer>** 元素映射到 Customer 表， **\<Order>** 元素映射到 SalesOrderHeader 表。 由于是由客户下订单，因此，基础表 Sales.Customer 和 Sales.SalesOrderHeader 是相关的。 Sales.SalesOrderHeader 表中的 CustomerID 是外键，它引用 Sales.Customer 表中的 CustomerID 主键。 可以通过使用 **sql： relationship** 批注在映射架构元素之间建立这些关系。  
   
- 在带批注的 XSD 架构中， **sql： relationship**批注用于根据元素所映射到的基础表中的主键和外键关系，按层次结构嵌套架构元素。 在指定**sql： relationship**批注时，必须确定以下各项：  
+ 在带批注的 XSD 架构中， **sql： relationship** 批注用于根据元素所映射到的基础表中的主键和外键关系，按层次结构嵌套架构元素。 在指定 **sql： relationship** 批注时，必须确定以下各项：  
   
 -   父表 (Sales.Customer) 和子表 (Sales.SalesOrderHeader)。  
   
@@ -51,37 +51,37 @@ ms.locfileid: "85775762"
   
  此信息用于生成适当的层次结构。  
   
- 为了提供表名和必需的联接信息，以下属性在**sql： relationship**批注上指定。 这些属性仅对于 **\<sql:relationship>** 元素有效：  
+ 为了提供表名和必需的联接信息，以下属性在 **sql： relationship** 批注上指定。 这些属性仅对于 **\<sql:relationship>** 元素有效：  
   
- **Name**  
+ 名称  
  指定关系的唯一名称。  
   
  **父级**  
  指定父关系（表）。 这是一个可选属性；如果未指定此属性，将从文档的子层次结构中的信息获得父表名称。 如果架构指定了两个父子层次结构，它们使用相同 **\<sql:relationship>** 但不同的父元素，则不在中指定父属性 **\<sql:relationship>** 。 此信息将从架构的层次结构中获得。  
   
- **parent-key**  
+ **父键**  
  指定父项的父键。 如果父键由多列组成，则指定值时应在各值之间使用空格。 在为多列键指定的值与为对应的子键指定的值之间存在位置映射。  
   
- **子代**  
+ **子级**  
  指定子关系（表）。  
   
  **child-key**  
  在引用父项中父键的子项中指定子键。 如果子键由多个属性（列）组成，则指定子键值时应在各值之间使用空格。 在为多列键指定的值与为对应的父键指定的值之间存在位置映射。  
   
  **反转**  
- 此上指定的属性 **\<sql:relationship>** 由 updategram 使用。 有关详细信息，请参阅[在 sql： relationship 上指定 sql：反向特性](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
+ 此上指定的属性 **\<sql:relationship>** 由 updategram 使用。 有关详细信息，请参阅 [在 sql： relationship 上指定 sql：反向特性](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
- 必须**在包含**子元素的元素（该元素具有在 **\<sql:relationship>** 元素和子元素之间定义）的元素中指定，并且该元素不提供父元素中指定的表的主键。 即使架构未指定 **\<sql:relationship>** ，也必须指定**sql： key-字段**以生成适当的层次结构。 有关详细信息，请参阅[使用 sql： key-字段标识键列](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  
+ 必须 **在包含** 子元素的元素（该元素具有在 **\<sql:relationship>** 元素和子元素之间定义）的元素中指定，并且该元素不提供父元素中指定的表的主键。 即使架构未指定 **\<sql:relationship>** ，也必须指定 **sql： key-字段** 以生成适当的层次结构。 有关详细信息，请参阅 [使用 sql： key-字段标识键列](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  
   
- 若要在结果中生成正确的嵌套，建议在所有架构中指定**sql：键字段**。  
+ 若要在结果中生成正确的嵌套，建议在所有架构中指定 **sql：键字段** 。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅 [运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 针对元素指定 sql:relationship 批注  
  以下带批注的 XSD 架构包含 **\<Customer>** 和 **\<Order>** 元素。 **\<Order>** 元素是元素的子元素 **\<Customer>** 。  
   
- 在架构中，在子元素上指定**sql： relationship**批注 **\<Order>** 。 关系本身是在元素中定义的 **\<xsd:appinfo>** 。  
+ 在架构中，在子元素上指定 **sql： relationship** 批注 **\<Order>** 。 关系本身是在元素中定义的 **\<xsd:appinfo>** 。  
   
  **\<relationship>** 元素将 SalesOrderHeader 表中的 CustomerID 标识为一个外键，该外键引用 Customer 表中的 customerid 主键。 因此，属于某个客户的订单将显示为该元素的子元素 **\<Customer>** 。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "85775762"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是结果集：  
   
@@ -203,7 +203,7 @@ ms.locfileid: "85775762"
   
  若要指定将生成此层次结构的 XSD 架构，您必须指定两个关系：OrderOD 和 ODProduct。 OrderOD 关系在 Sales.SalesOrderHeader 表与 Sales.SalesOrderDetail 表之间指定父子关系。 ODProduct 关系指定 Sales.SalesOrderDetail 表与 Production.Product 表之间的关系。  
   
- 在下面的架构中，元素上的**msdata： relationship**批注 **\<Product>** 指定了两个值： OrderOD 和 ODProduct。 指定这些值的顺序非常重要。  
+ 在下面的架构中，元素上的 **msdata： relationship** 批注 **\<Product>** 指定了两个值： OrderOD 和 ODProduct。 指定这些值的顺序非常重要。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -301,7 +301,7 @@ ms.locfileid: "85775762"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是结果集：  
   
@@ -320,7 +320,7 @@ ms.locfileid: "85775762"
 ```  
   
 ### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>C. 针对属性指定关系批注  
- 此示例中的架构包含一个 \<Customer> 元素，该元素具有一个 \<CustomerID> 子元素和一个 IDREFS 类型的 OrderIDList 属性。 \<Customer>元素映射到 AdventureWorks 数据库中的 Customer 表。 默认情况下，此映射的作用域应用于所有子元素或属性，除非在子元素或属性上指定了**sql：** relationship，在这种情况下，必须使用元素定义适当的主键/外键关系 \<relationship> 。 另外，使用**关系**批注指定不同表的子元素或属性还必须指定**关系**注释。  
+ 此示例中的架构包含一个 \<Customer> 元素，该元素具有一个 \<CustomerID> 子元素和一个 IDREFS 类型的 OrderIDList 属性。 \<Customer>元素映射到 AdventureWorks 数据库中的 Customer 表。 默认情况下，此映射的作用域应用于所有子元素或属性，除非在子元素或属性上指定了 **sql：** relationship，在这种情况下，必须使用元素定义适当的主键/外键关系 \<relationship> 。 另外，使用 **关系** 批注指定不同表的子元素或属性还必须指定 **关系** 注释。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -372,7 +372,7 @@ ms.locfileid: "85775762"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是结果集：  
   
@@ -462,7 +462,7 @@ ms.locfileid: "85775762"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是结果集：  
   
@@ -486,7 +486,7 @@ ms.locfileid: "85775762"
 ```  
   
 ### <a name="e-specifying-the-sqlrelationship-without-the-parent-attribute"></a>E. 指定 \<sql:relationship> 无父属性  
- 此示例阐释了如何指定， **\<sql:relationship>** 而没有**父**属性。 例如，假设您具有以下员工表：  
+ 此示例阐释了如何指定， **\<sql:relationship>** 而没有 **父** 属性。 例如，假设您具有以下员工表：  
   
 ```  
 Emp1(SalesPersonID, FirstName, LastName, ReportsTo)  
@@ -527,7 +527,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- 在架构中， **\<Emp1>** 元素和 **\<Emp2>** 元素都是**EmpType**类型。 类型**EmpType**描述了 **\<Order>** 子元素和相应的 **\<sql:relationship>** 。 在这种情况下，不存在可以 **\<sql:relationship>** 使用**parent**属性在中标识的单个父。 在这种情况下，你不能在中指定**父**属性，而 **\<sql:relationship>** 是从架构的层次结构中获取**父**属性信息。  
+ 在架构中， **\<Emp1>** 元素和 **\<Emp2>** 元素都是 **EmpType** 类型。 类型 **EmpType** 描述了 **\<Order>** 子元素和相应的 **\<sql:relationship>** 。 在这种情况下，不存在可以 **\<sql:relationship>** 使用 **parent** 属性在中标识的单个父。 在这种情况下，你不能在中指定 **父** 属性，而 **\<sql:relationship>** 是从架构的层次结构中获取 **父** 属性信息。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
@@ -563,7 +563,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 3.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 relationship-noparent.xml。  
   
-4.  复制以下模板，并将它粘贴到文本文件中。 在您保存 relationship-noparent.xml 的相同目录中将该文件另存为 relationship-noparentT.xml。 模板中的查询选择所有 \<Emp1> 元素（因此，父项为 Emp1）。  
+4.  复制以下模板，并将它粘贴到文本文件中。 在您保存 relationship-noparent.xml 的相同目录中将该文件另存为 relationship-noparentT.xml。 模板中的查询选择 (的所有 \<Emp1> 元素，父项为 Emp1) 。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -581,7 +581,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下为部分结果集：  
   

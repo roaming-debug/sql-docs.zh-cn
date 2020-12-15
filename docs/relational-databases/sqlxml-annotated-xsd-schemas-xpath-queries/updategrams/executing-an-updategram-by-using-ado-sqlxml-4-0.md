@@ -1,6 +1,6 @@
 ---
-title: 使用 ADO 执行 Updategram （SQLXML）
-description: 了解如何使用 ADO 建立与实例的连接 Microsoft SQL Server 并使用 ADO 执行 updategram.by （SQLXML 4.0）。
+title: 使用 ADO (SQLXML) 执行 Updategram
+description: 了解如何建立与实例的连接，并使用 ADO (SQLXML 4.0) Microsoft SQL Server 执行 updategram.by。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,13 +15,13 @@ ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2da024366da5789631aee147ab25d89a5103b40e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 325ef35c27f97f99902c927fce6e3eb268035ccf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785047"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462868"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>使用 ADO 执行 Updategram (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -29,15 +29,15 @@ ms.locfileid: "85785047"
   
  在此示例应用程序中：  
   
--   **Conn**对象（**adodb.recordset）。连接**）与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在特定服务器计算机上运行的实例建立连接。  
+-   **Conn** 对象 (**adodb.recordset。连接**) 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定服务器计算机上的正在运行的实例建立连接。  
   
--   **Cmd**对象（**adodb.recordset**）在已建立的连接上执行。  
+-   **Cmd** 对象 (在已建立的连接上执行 **adodb.recordset) 。**  
   
 -   将命令方言设置为 DBGUID_MSSQLXML。  
   
--   将 updategram 复制到命令流（**strmIn**）。  
+-   将 updategram 复制到命令流 (**strmIn**) 。  
   
--   该命令的输出流设置为**StrmOut**对象（adodb.recordset）**。流**）接收任何返回的数据。  
+-   命令的输出流设置为 **StrmOut** 对象 (**adodb.recordset。流式传输**) 可接收任何返回的数据。  
   
 -   最后，执行该命令 (updategram)。  
   
@@ -185,7 +185,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>传递参数  
- 在以前提供的 Visual Basic 应用程序中，不能传递参数。 在此应用程序中， **ContactID**和**MiddleName**值作为参数化输入传递到 updategram。  
+ 在以前提供的 Visual Basic 应用程序中，不能传递参数。 在此应用程序中， **ContactID** 和 **MiddleName** 值作为参数化输入传递到 updategram。  
   
 ```vb  
 Private Sub Form_Load()  

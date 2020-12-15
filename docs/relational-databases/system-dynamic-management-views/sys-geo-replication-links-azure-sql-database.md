@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 568cda98a1bbb55e5c4f3e07bd53592ff642f0bd
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 12adf94f84fbe9c1b47093cf8ab6b106fb9d5249
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753682"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440648"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links（Azure SQL 数据库）
 

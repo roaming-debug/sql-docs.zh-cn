@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c67769e4afd62c4b69628a263f3485ee63081a2a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a356ea0603d096fc339495f028b1e4f86af81f92
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892007"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463378"
 ---
 # <a name="changing-sql-server-native-client-passwords-programmatically"></a>以编程方式更改 SQL Server Native Client 密码
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "91892007"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序通过用户界面和以编程方式支持密码过期。  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 用户界面密码过期  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序通过对**SQL Server 登录**对话框进行更改来支持密码过期。 如果将 DBPROP_INIT_PROMPT 的值设置为 DBPROMPT_NOPROMPT，则在密码已过期的情况下初始连接尝试将失败。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序通过对 **SQL Server 登录** 对话框进行更改来支持密码过期。 如果将 DBPROP_INIT_PROMPT 的值设置为 DBPROMPT_NOPROMPT，则在密码已过期的情况下初始连接尝试将失败。  
   
  如果 DBPROP_INIT_PROMPT 已设置为任何其他值，则无论密码是否已过期，用户都会看到“SQL Server 登录”对话框  。 用户可单击“选项”按钮，再选中“更改密码”进行更改   。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "91892007"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序通过用户界面和以编程方式支持密码过期。  
   
 ### <a name="odbc-user-interface-password-expiration"></a>ODBC 用户界面密码过期  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过对**SQL Server 登录**对话框进行更改来支持密码过期。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过对 **SQL Server 登录** 对话框进行更改来支持密码过期。  
   
- 如果调用 [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 并将 **DriverCompletion** 的值设置为 SQL_DRIVER_NOPROMPT，则如果密码已过期，则初始连接尝试将失败。 SQLSTATE 值28000和本机错误代码值18487由对 **SQLError** 或 **SQLGetDiagRec**的后续调用返回。  
+ 如果调用 [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 并将 **DriverCompletion** 的值设置为 SQL_DRIVER_NOPROMPT，则如果密码已过期，则初始连接尝试将失败。 SQLSTATE 值28000和本机错误代码值18487由对 **SQLError** 或 **SQLGetDiagRec** 的后续调用返回。  
   
  如果 **DriverCompletion** 已设置为任何其他值，则无论密码是否已过期，用户都会看到 **SQL Server 登录** 对话框。 用户可单击“选项”按钮，再选中“更改密码”进行更改   。  
   

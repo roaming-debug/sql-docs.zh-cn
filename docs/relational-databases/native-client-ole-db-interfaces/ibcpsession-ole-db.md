@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 779ade2e7678efb39df29efe38113630d5e03d9d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 64857d0ccf4a3b3bb2a70c6ae0267f677bfc18cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462188"
 ---
 # <a name="ibcpsession-native-client-ole-db-provider"></a>IBCPSession (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  IBCPSession 接口公开了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于文件的大容量复制操作的支持。 **IBCPSession**接口在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话相同的级别下，在 Native Client OLE DB 提供程序中公开。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序中，数据源对象是会话对象的工厂，而大容量复制操作是在连接属性 SSPROP_ENABLEBULKCOPY 中指定的。 此外，SSPROP_ENABLEFASTLOAD 属性应当设置为 True。  
+  IBCPSession 接口公开了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于文件的大容量复制操作的支持。 **IBCPSession** 接口在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话相同的级别下，在 Native Client OLE DB 提供程序中公开。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序中，数据源对象是会话对象的工厂，而大容量复制操作是在连接属性 SSPROP_ENABLEBULKCOPY 中指定的。 此外，SSPROP_ENABLEFASTLOAD 属性应当设置为 True。  
   
  调用 IDBCreateSession::CreateSession 方法随后将创建 BulkCopySession 对象   。 然后，可针对此 IBCPSession 对象的 IBCPSession 接口，采用极为相似的签名来调用通过 IBCPSession 对象公开的所有基于文件的大容量复制方法    。  
   

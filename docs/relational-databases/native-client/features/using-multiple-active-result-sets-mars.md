@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1b31e142760e6799b743ab8771cc52c068d1b3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 468de09dbbf49b14f1794de5956df7e6125407fa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243866"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461978"
 ---
-# <a name="using-multiple-active-result-sets-mars-in-sql-server-native-client"></a>在 SQL Server Native Client 中使用多个活动的结果集（MARS）
+# <a name="using-multiple-active-result-sets-mars-in-sql-server-native-client"></a>在 SQL Server Native Client (MARS) 使用多个活动的结果集
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
@@ -59,7 +59,7 @@ ms.locfileid: "87243866"
   
  MARS 支持在单一连接中交错执行多个请求。 即：它允许运行批处理，并且在执行过程中还允许执行其他请求。 不过请注意，MARS 是从交错执行而不是从并行执行的角度定义的。  
   
- MARS 基础结构允许以交错方式执行多个批处理，尽管只能在定义完善的时间点切换执行。 此外，多数语句必须在同一批处理内以原子方式运行。 在将行发送到客户端时，允许向客户端返回行的语句（有时称为 "*生成点*"）在完成前交错执行，例如：  
+ MARS 基础结构允许以交错方式执行多个批处理，尽管只能在定义完善的时间点切换执行。 此外，多数语句必须在同一批处理内以原子方式运行。 在将行发送到客户端时，允许向客户端返回行的语句（有时称为 " *生成点*"）在完成前交错执行，例如：  
   
 -   SELECT  
   
@@ -76,7 +76,7 @@ ms.locfileid: "87243866"
 > [!NOTE]  
 >  启用 MARS 时，启动手动或隐式事务的批处理或存储过程必须完成该事务，之后批处理才能退出。 如果不是这样，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将在批处理完成时回滚该事务所做的所有更改。 这种事务由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 作为批范围的事务管理。 这是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 新引入的事务类型，用于在启用 MARS 时支持使用功能良好的现有存储过程。 若要详细了解批范围内的事务，请参阅[事务语句 &#40;Transact-SQL&#41;](~/t-sql/statements/statements.md)。  
   
- 有关使用 ADO 的示例，请参阅将[ado 用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)。  
+ 有关使用 ADO 的示例，请参阅将 [ado 用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)。  
   
 ## <a name="in-memory-oltp"></a>内存中 OLTP  
  内存中 OLTP 支持在查询和本机编译的存储过程中使用 MARS。 使用 MARS，可以请求从多个查询获取数据，而无需在发送请求从新结果集中提取行前完全检索每个结果集。 若要成功读取多个打开的结果集，必须使用启用 MARS 的连接。  
@@ -107,14 +107,14 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  由交错的语句和 ATOMIC 块所做的更改相互隔离。 例如，如果一个语句或 ATOMIC 块进行了一些更改，然后将执行机会转让给另一个语句，那么新语句就看不到第一个语句所做的更改。 此外，当第一个语句继续执行时，它也看不到其他任何语句所做的任何更改。 语句只会看到在语句开始之前完成和提交的更改。  
   
- 使用 BEGIN TRANSACTION 语句可以在当前用户事务中启动新的用户事务-此操作仅在互操作模式下受支持，因此只能从 T-sql 语句调用 BEGIN TRANSACTION，而不能从本机编译的存储过程中调用。您可以使用 SAVE TRANSACTION 或对 transaction 的 API 调用在事务中创建一个保存点。保存（save_point_name）以回滚到保存点。 此功能也只能从 T-SQL 语句中启用，而不能从本机编译的存储过程中启用。  
+ 使用 BEGIN TRANSACTION 语句可以在当前用户事务中启动新的用户事务-此操作仅在互操作模式下受支持，因此只能从 T-sql 语句调用 BEGIN TRANSACTION，而不能从本机编译的存储过程中调用。您可以使用 SAVE TRANSACTION 或对 transaction 的 API 调用在事务中创建一个保存点。保存 (save_point_name) 回滚到保存点。 此功能也只能从 T-SQL 语句中启用，而不能从本机编译的存储过程中启用。  
   
  **MARS 和列存储索引**  
   
  SQL Server（自 2016 起）支持结合使用 MARS 和列存储索引。 SQL Server 2014 将 MARS 用于具有列存储索引的表的只读连接。    但是，SQL Server 2014 不支持将 MARS 用于具有列存储索引的表中的并发数据操作语言 (DML) 操作。 发生这种情况时，SQL Server 会终止连接并中止事务。   SQL Server 2012 包含的是只读列存储索引，MARS 不适用于它们。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序通过添加 SSPROP_INIT_MARSCONNECTION 数据源初始化属性（在 DBPROPSET_SQLSERVERDBINIT 属性集中实现）来支持 MARS。 此外，还添加了新的连接字符串关键字 MarsConn****。 它接受值 true**** 或 false****；默认值为 false****。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序通过添加 SSPROP_INIT_MARSCONNECTION 数据源初始化属性（在 DBPROPSET_SQLSERVERDBINIT 属性集中实现）来支持 MARS。 此外，还添加了新的连接字符串关键字 MarsConn  。 它接受值 true  或 false  ；默认值为 false  。  
   
  数据源属性 DBPROP_MULTIPLECONNECTIONS 默认为 VARIANT_TRUE。 这意味着访问接口将生成多个连接以支持多个并发命令和行集对象。 启用 MARS 后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 可以在单个连接上支持多个命令和行集对象，因此默认情况下 MULTIPLE_CONNECTIONS 设置为 VARIANT_FALSE。  
   
@@ -207,10 +207,10 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驱动程序  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过向[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函数添加内容支持 MARS。 添加了 SQL_COPT_SS_MARS_ENABLED 以接受 SQL_MARS_ENABLED_YES 或 SQL_MARS_ENABLED_NO，默认值为 SQL_MARS_ENABLED_NO。 此外，还添加了一个新的连接字符串关键字**Mars_Connection**。 它接受值 "yes" 或 "no"；默认值为 "no"。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过向[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函数添加内容支持 MARS。 添加了 SQL_COPT_SS_MARS_ENABLED 以接受 SQL_MARS_ENABLED_YES 或 SQL_MARS_ENABLED_NO，默认值为 SQL_MARS_ENABLED_NO。 此外，还添加了一个新的连接字符串关键字 **Mars_Connection**。 它接受值 "yes" 或 "no"；默认值为 "no"。  
   
 ### <a name="sql-server-native-client-odbc-driver-example"></a>SQL Server Native Client ODBC 驱动程序示例  
- 在此示例中， **SQLSetConnectAttr**函数用于在调用**SQLDriverConnect**函数连接数据库之前启用 MARS。 建立连接后，将调用两个**SQLExecDirect**函数，以便在同一连接上创建两个单独的结果集。  
+ 在此示例中， **SQLSetConnectAttr** 函数用于在调用 **SQLDriverConnect** 函数连接数据库之前启用 MARS。 建立连接后，将调用两个 **SQLExecDirect** 函数，以便在同一连接上创建两个单独的结果集。  
   
 ```cpp
 #include <sqlncli.h>  

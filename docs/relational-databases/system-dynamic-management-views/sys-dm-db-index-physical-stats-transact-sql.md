@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1e4d175fe42497d2a75c23d3ae49d60821952ccf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833859"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458475"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91833859"
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定表或视图的数据和索引的大小和碎片信息。 对于索引，针对每个分区中的 B 树的每个级别，返回与其对应的一行。 对于堆，针对每个分区的 IN_ROW_DATA 分配单元，返回与其对应的一行。 对于大型对象 (LOB) 数据，针对每个分区的 LOB_DATA 分配单元返回与其对应的一行。 如果表中存在行溢出数据，则针对每个分区中的 ROW_OVERFLOW_DATA 分配单元，返回与其对应的一行。 不返回有关 xVelocity 内存优化的列存储索引的信息。  
   
 > [!IMPORTANT]
-> 如果在承载 Always On[可读辅助副本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)的服务器实例上查询**sys.dm_db_index_physical_stats** ，则可能会遇到重做阻止问题。 这是因为此动态管理视图获取指定用户表或视图的 IS 锁，而该锁可能阻止 REDO 线程对该用户表或视图的 X 锁请求。  
+> 如果在承载 Always On [可读辅助副本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)的服务器实例上查询 **sys.dm_db_index_physical_stats** ，则可能会遇到重做阻止问题。 这是因为此动态管理视图获取指定用户表或视图的 IS 锁，而该锁可能阻止 REDO 线程对该用户表或视图的 X 锁请求。  
   
  **sys.dm_db_index_physical_stats** 不返回有关内存优化索引的信息。 有关内存优化索引使用的信息，请参阅 [&#40;transact-sql&#41;sys.dm_db_xtp_index_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。  
   
@@ -55,11 +55,11 @@ sys.dm_db_index_physical_stats (
 )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *database_id* \| NULL \| 0 \| 默认值  
  数据库的 ID。 *database_id* 为 **smallint**。 有效的输入包括数据库的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。  
   
- 指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。 如果为 *database_id*指定 null，则还必须为 *object_id*、 *index_id*和 *partition_number*指定 null。  
+ 指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。 如果为 *database_id* 指定 null，则还必须为 *object_id*、 *index_id* 和 *partition_number* 指定 null。  
   
  可以指定内置函数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。 如果在不指定数据库名称的情况下使用 DB_ID，则当前数据库的兼容级别必须是 90 或更高。  
   
@@ -68,12 +68,12 @@ sys.dm_db_index_physical_stats (
   
  有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，有效输入还包括 service broker 队列名称或队列内部表名称。 如果应用默认参数 (即所有对象、所有索引等) ，则所有队列的碎片信息都将包含在结果集中。  
   
- 指定 NULL 可返回指定数据库中的所有表和视图的信息。 如果为 *object_id*指定 null，则还必须为 *index_id* 和 *partition_number*指定 null。  
+ 指定 NULL 可返回指定数据库中的所有表和视图的信息。 如果为 *object_id* 指定 null，则还必须为 *index_id* 和 *partition_number* 指定 null。  
   
  *index_id* \| 0 \| NULL \| -1 \| 默认值  
  索引的 ID。 *index_id* 是 **int**。有效输入包括索引的 ID 号、0（如果 *object_id* 为堆）、NULL、-1 或默认值。 默认值为 -1。 在此上下文中，NULL、-1 和 DEFAULT 是等效值。  
   
- 指定 NULL 可返回基表或视图的所有索引的信息。 如果为 *index_id*指定 null，则还必须为 *partition_number*指定 null。  
+ 指定 NULL 可返回基表或视图的所有索引的信息。 如果为 *index_id* 指定 null，则还必须为 *partition_number* 指定 null。  
   
  *partition_number* \| NULL \| 0 \| 默认值  
  对象中的分区号。 *partition_number* 是 **int**。有效输入包括索引或堆的 *partion_number* 、NULL、0或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。  
@@ -95,7 +95,7 @@ sys.dm_db_index_physical_stats (
 |partition_number|**int**|所属对象内从 1 开始的分区号；表、视图或索引。<br /><br /> 1 = 未分区的索引或堆。|  
 |index_type_desc|**nvarchar(60)**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> 列存储映射索引 (内部) <br /><br /> 列存储 DELETEBUFFER 索引 (内部) <br /><br /> 列存储 DELETEBITMAP 索引 (内部) |  
 |hobt_id|**bigint**|索引或分区的堆或 B 树 ID。<br /><br /> 除了返回用户定义索引的 hobt_id，这还会返回内部列存储索引的 hobt_id。|  
-|alloc_unit_type_desc|**nvarchar(60)**|对分配单元类型的说明：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 分配单元包含存储在类型为 **text**、 **ntext**、 **image**、 **varchar (max) **、 **nvarchar (max) **、 **varbinary (max) **和 **xml**的列中的数据。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 分配单元包含存储在类型为 **varchar (n **的列中的数据) 、 **nvarchar (n) **、 **varbinary (n) **和已推送到行外的 **sql_variant** 。|  
+|alloc_unit_type_desc|**nvarchar(60)**|对分配单元类型的说明：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 分配单元包含存储在类型为 **text**、 **ntext**、 **image**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)** 和 **xml** 的列中的数据。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 分配单元包含存储在类型为 **varchar (n** 的列中的数据) 、 **nvarchar (n)**、 **varbinary (n)** 和已推送到行外的 **sql_variant** 。|  
 |index_depth|**tinyint**|索引级别数。<br /><br /> 1 = 堆，或 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元。|  
 |index_level|**tinyint**|索引的当前级别。<br /><br /> 0 表示索引叶级别、堆以及 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元。<br /><br /> 大于 0 的值表示非叶索引级别。 *index_level* 将在索引的根级别最高。<br /><br /> 仅当 *mode* = 详细时才处理非叶级别的索引。|  
 |avg_fragmentation_in_percent|**float**|索引的逻辑碎片，或 IN_ROW_DATA 分配单元中堆的区碎片。<br /><br /> 此值按百分比计算，并将考虑多个文件。 有关逻辑碎片和区碎片的定义，请参阅“注释”。<br /><br /> 0 表示 LOB_DATA 和 ROW_OVERFLOW_DATA 分配单元。<br /><br /> 如果 *模式* = 采样，则为 NULL。|  
@@ -121,11 +121,11 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|保存在原始数据行外部的版本记录的计数。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|被视为长期的版本记录的计数。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  sys.dm_db_index_physical_stats 动态管理函数将替换 DBCC SHOWCONTIG 语句。  
   
 ## <a name="scanning-modes"></a>扫描模式  
- 函数的执行模式将确定为了获取此函数所使用的统计信息数据而执行的扫描级别。 *模式* 被指定为 "有限"、"采样" 或 "详细"。 该函数遍历分配单元的页链，这些分配单元构成表或索引的指定分区。 sys.dm_db_index_physical_stats 只需要意向共享 () 表锁，而不考虑它在中运行的模式。  
+ 函数的执行模式将确定为了获取此函数所使用的统计信息数据而执行的扫描级别。 *模式* 被指定为 "有限"、"采样" 或 "详细"。 该函数遍历分配单元的页链，这些分配单元构成表或索引的指定分区。 sys.dm_db_index_physical_stats 只需 Intent-Shared (是) 表锁，而不考虑它在哪个模式下运行。  
   
  LIMITED 模式运行最快，扫描的页数最少。 对于索引，只扫描 B 树的父级别页（即叶级别以上的页）。 对于堆，只检查关联的 PFS 和 IAM 页；并在 LIMITED 模式下扫描堆的数据页。  
   
@@ -138,7 +138,7 @@ sys.dm_db_index_physical_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>使用系统函数指定参数值  
  您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 和 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 来指定 *database_id* 和 *object_id* 参数的值。 但是，将无效的值传递给这些函数可能会导致意外结果。 例如，如果找不到数据库或对象名（因为它们不存在或拼写错误），则两个函数都返回 NULL。 sys.dm_db_index_physical_stats 函数将 NULL 解释为指定所有数据库或所有对象的通配符值。  
   
- 此外，在调用 sys.dm_db_index_physical_stats 函数之前处理 OBJECT_ID 函数，因此在当前数据库的上下文中进行计算，而不是在 *database_id*中指定的数据库中进行计算。 此行为可能会导致 OBJECT_ID 函数返回 NULL 值；或者，如果当前数据库上下文和指定数据库中都存在对象名，则可能返回一条错误消息。 以下示例演示了这些意外的结果。  
+ 此外，在调用 sys.dm_db_index_physical_stats 函数之前处理 OBJECT_ID 函数，因此在当前数据库的上下文中进行计算，而不是在 *database_id* 中指定的数据库中进行计算。 此行为可能会导致 OBJECT_ID 函数返回 NULL 值；或者，如果当前数据库上下文和指定数据库中都存在对象名，则可能返回一条错误消息。 以下示例演示了这些意外的结果。  
   
 ```  
 USE master;  

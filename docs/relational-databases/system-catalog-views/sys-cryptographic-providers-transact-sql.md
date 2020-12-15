@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 305ea4a72855dd5ba136740dcc9b4321826384ad
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f32f7ceea8a68a3ddf1693ae9f382ee066d51eb1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384769"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462838"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "94384769"
 |**provider_id**|**int**|加密提供程序的标识号。|  
 |name|**sysname**|加密提供程序的名称。|  
 |**guid**|**uniqueidentifier**|唯一的提供程序 GUID。|  
-|**version**|**nvarchar(50)**|格式为 " *aa.bb.cccc.dd* " 的提供程序版本。|  
+|**version**|**nvarchar(50)**|格式为 "*aa.bb.cccc.dd*" 的提供程序版本。|  
 |**dll_path**|**nvarchar(512)**|实现可扩展密钥管理 (EKM) 应用程序编程接口 (API) 的 DLL 的路径。|  
 |**is_enabled**|**bit**|服务器上是否启用了此提供程序。<br /><br /> 0 = 未启用（默认值）<br /><br /> 1 = 已启用|  
   

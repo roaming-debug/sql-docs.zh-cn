@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32e004da26b8cba5df8b44e4fbef3fd90967cdfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7de50d6040e53bffe18e4e13e8458c55c32ac46c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490445"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463048"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>连接到 SQL Server 实例
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88490445"
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>连接到用于 RMO 的 SQL Server 实例  
  复制管理对象 (RMO) 用于连接到复制服务器的方法与 SMO 稍有不同。  
   
- RMO 编程对象要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 由命名空间实现的**Microsoft.SqlServer.Management.Common**对象建立与实例的连接。 与服务器的这一连接独立于 RMO 编程对象建立。 然后，在实例创建期间或通过指派该对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性，将它传递到 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
+ RMO 编程对象要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 由命名空间实现的对象建立与实例的连接。 与服务器的这一连接独立于 RMO 编程对象建立。 然后，在实例创建期间或通过指派该对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性，将它传递到 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
   
 -   为指定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象定义连接的所有属性。  
   

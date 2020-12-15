@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_db_log_info (Transact-sql) '
-title: sys. dm_db_log_info (Transact-sql) |Microsoft Docs
+description: 'sys.dm_db_log_info (Transact-sql) '
+title: sys.dm_db_log_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: savjani
 ms.author: pariks
 manager: ajayj
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 12fe1e95cbb1c7ad26025ee52ce111cb3f835704
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447659"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440822"
 ---
-# <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-sql) 
+# <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-sql) 
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 返回 (事务日志) 信息的 [虚拟日志文件 ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 。 请注意，所有事务日志文件都在表输出中合并。 输出中的每一行都表示事务日志中的一个 VLF，并在日志中提供与该 VLF 相关的信息。
@@ -39,7 +39,7 @@ ms.locfileid: "88447659"
 sys.dm_db_log_info ( database_id )  
 ``` 
 
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *database_id* |NULL |缺省值  
  数据库的 ID。 *database_id* 是 **int**。有效的输入包括数据库的 ID 号、NULL 或默认值。 默认值为 NULL。 NULL 和默认值在当前数据库的上下文中是等效值。
  
@@ -59,8 +59,8 @@ sys.dm_db_log_info ( database_id )
 |vlf_active|**bit** |指示 [虚拟日志文件 () ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 是否正在使用中。 <br />0-VLF 未被使用。<br />1-VLF 处于活动状态。|
 |vlf_status|**int** |[虚拟日志文件的状态 (VLF) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。 可能的值包括 <br />0-VLF 处于非活动状态 <br />1-VLF 已初始化但未使用 <br /> 2-VLF 处于活动状态。|
 |vlf_parity|**tinyint** |[虚拟日志文件 (VLF) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的奇偶校验。用于在 VLF 中确定日志的结尾。|
-|vlf_first_lsn|**nvarchar (48) ** |虚拟日志文件中第一条日志记录[ (LSN) 的日志序列号](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) [ (VLF) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
-|vlf_create_lsn|**nvarchar (48) ** |创建[虚拟日志文件 (VLF) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的日志记录[ (LSN) 的日志序列号](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|
+|vlf_first_lsn|**nvarchar (48)** |虚拟日志文件中第一条日志记录[ (LSN) 的日志序列号](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) [ (VLF) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
+|vlf_create_lsn|**nvarchar (48)** |创建[虚拟日志文件 (VLF) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的日志记录[ (LSN) 的日志序列号](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|
 |vlf_encryptor_thumbprint|**varbinary(20)**| **适用于：** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 如果使用 [透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)对 VLF 进行了加密，则显示 VLF 的加密程序的指纹，否则为 NULL。 |
 
 ## <a name="remarks"></a>备注

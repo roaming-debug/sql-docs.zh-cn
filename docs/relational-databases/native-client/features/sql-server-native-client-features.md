@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec878229524d048969acbf3ca1af7cca4e318084
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d192f469759ae57d01f4789aef887f4cbb60adca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008991"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462098"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86008991"
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持 XML 数据类型，此基于 XML 的数据类型可用作列类型、变量类型、参数类型或函数返回类型。  
   
  [使用用户定义类型](../../../relational-databases/native-client/features/using-user-defined-types.md)  
- 讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持用户定义的类型（UDT），该方法通过允许您在数据库中存储对象和自定义数据结构来扩展 SQL 类型系统 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持 User-Defined 类型 (UDT) ，它通过允许您在数据库中存储对象和自定义数据结构，从而扩展了 SQL 类型系统 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  [使用大值类型](../../../relational-databases/native-client/features/using-large-value-types.md)  
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持大值数据类型，该类型是大型对象数据类型 (LOB)。  
@@ -86,7 +87,7 @@ ms.locfileid: "86008991"
  讨论对 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中的元数据发现功能进行的改进。  
   
  [SQL Server Native Client 11.0 中的 UTF-16 支持](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
- 讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 如果在绑定列结果或输出参数时提供固定长度的缓冲区，并且在终止字符之前写入缓冲区中的**wchar**字符是代理项对的高代理项码位，并且下一个**wchar**字符是低代理项码位，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将不会向缓冲区添加高代理项码位。  
+ 讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 如果在绑定列结果或输出参数时提供固定长度的缓冲区，并且在终止字符之前写入缓冲区中的 **wchar** 字符是代理项对的高代理项码位，并且下一个 **wchar** 字符是低代理项码位，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将不会向缓冲区添加高代理项码位。  
   
  [对高可用性、灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  讨论如何配置应用程序以利用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中添加的高可用性和灾难恢复功能。  

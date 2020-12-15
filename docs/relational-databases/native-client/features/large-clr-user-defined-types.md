@@ -1,5 +1,5 @@
 ---
-description: SQL Server Native Client 中的大型 CLR 用户定义类型
+description: SQL Server Native Client 中的大型 CLR User-Defined 类型
 title: 大型 CLR 用户定义类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b841020b73ea7dde90eca5a0b693bb1f943fa4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 039b57d8eaaee8004dda5988cb877c4ec7ccc037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498915"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463368"
 ---
-# <a name="large-clr-user-defined-types-in-sql-server-native-client"></a>SQL Server Native Client 中的大型 CLR 用户定义类型
+# <a name="large-clr-user-defined-types-in-sql-server-native-client"></a>SQL Server Native Client 中的大型 CLR User-Defined 类型
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在 SQL Server 2005 中，公共语言运行时 (CLR) 中的用户定义类型 (UDT) 已限制为最大 8,000 字节。 这一限制在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和更高版本中已取消。 CLR UDT 现在以针对大型对象 (LOB) 类型的类似方式处置。 也就是说，小于或等于 8,000 字节的 UDT 在行为上与 SQL Server 2005 中相同，但支持更大的 UDT 并且将其大小报告为“无限制”。  
   
- 有关详细信息，请参阅 &#40;OLE DB&#41;和[大型 Clr 用户定义类型 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)中的[大型 Clr 用户定义类型](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)。  
+ 有关详细信息，请参阅 [大型 clr User-Defined 类型 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) 和 [大型 clr User-Defined 类型 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="use-cases"></a>用例  
  对于 ODBC，对大型 UDT 的支持包括能够分块将 UDT 值作为执行时数据参数发送。 这可以通过使用 SQLPutData 来完成。  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 - sp_enclave_send_keys
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09409a3c3b71a668d897d50d6bb22e51f21e51d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 0fc33aa4e45e742f50321336bd01ab136c8e966a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447182"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462698"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -48,7 +48,7 @@ sp_enclave_send_keys
 [ ;]  
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 此存储过程没有参数。
 

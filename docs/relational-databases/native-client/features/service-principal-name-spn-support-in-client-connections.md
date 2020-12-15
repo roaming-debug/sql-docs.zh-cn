@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f500e41737bf3c1c17ada377f533bd1241d0db4b
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 492ec9b3aad422ffe2c075bdeab6db932b14ff21
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892287"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462058"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections-in-sql-server-native-client"></a>SQL Server Native Client 的客户端连接中的服务主体名称 (SPN) 支持
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "91892287"
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|使用除 TCP 之外的协议时访问接口生成的用于默认实例的默认 SPN。<br /><br /> *fqdn* 为完全限定的域名。|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 时访问接口生成的默认 SPN。<br /><br /> *port* 是 TCP 端口号。|  
-|MSSQLSvc/*fqdn*:*InstanceName*|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。<br /><br /> InstanceName 为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例名**。|  
+|MSSQLSvc/*fqdn*:*InstanceName*|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。<br /><br /> InstanceName 为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例名。|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|映射到内置计算机帐户的 SPN，这些内置计算机帐户由 Windows 自动注册。|  
 |*Username*@*Domain*|域帐户的直接规范。<br /><br /> *Username* 为 Windows 用户帐户名。<br /><br /> *Domain* 为 Windows 域名或完全限定的域名。|  
 |*MachineName*$@*Domain*|计算机帐户的直接规范。<br /><br /> （如果要连接到的服务器正在 LOCAL SYSTEM 或 NETWORK SERVICE 帐户下运行，则若要获取 Kerberos 身份验证， **ServerSPN** 可以使用 *MachineName*$@*Domain* 格式）。|  

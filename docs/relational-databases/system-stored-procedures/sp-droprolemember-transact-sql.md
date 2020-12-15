@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ef98244eec97fda5d0d11220348dbd4f14dcf61
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 013cd061a96bd4f199591fa65f15718d27056d89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006513"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440558"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -55,10 +55,10 @@ sp_droprolemember 'role' ,
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @rolename = ] 'role'` 要从中删除成员的角色的名称。 *role* 的值为 **sysname**，无默认值。 *角色* 必须存在于当前数据库中。  
   
-`[ @membername = ] 'security_account'` 要从角色中删除的安全帐户的名称。 *security_account* **sysname**，无默认值。 *security_account* 可以是数据库用户、其他数据库角色、windows 登录名或 windows 组。 当前数据库中必须存在*security_account* 。  
+`[ @membername = ] 'security_account'` 要从角色中删除的安全帐户的名称。 *security_account* **sysname**，无默认值。 *security_account* 可以是数据库用户、其他数据库角色、windows 登录名或 windows 组。 当前数据库中必须存在 *security_account* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_system_stopwords (Transact-SQL)
-title: sys. fulltext_system_stopwords (Transact-sql) |Microsoft Docs
+title: sys.fulltext_system_stopwords (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ ms.assetid: 487de53f-c637-4d78-85f6-fef5e768cd0c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c57914d0f1f7653191b08f22e33e6f86d0b70c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1c8df32568cbdbed34c601efcd3961a445d030aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475419"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461648"
 ---
 # <a name="sysfulltext_system_stopwords-transact-sql"></a>sys.fulltext_system_stopwords (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88475419"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**非索引字**|**nvarchar (64) **|被视为非索引字匹配项的字词。|  
+|**非索引字**|**nvarchar (64)**|被视为非索引字匹配项的字词。|  
 |**language_id**|**int**|语言的区域设置标识符 (LCID)。 此 LCID 用于断字。|  
   
 ## <a name="permissions"></a>权限  
@@ -47,8 +47,8 @@ ms.locfileid: "88475419"
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [sys. fulltext_stoplists &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
- [sys. fulltext_stopwords &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+ [sys.fulltext_stoplists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   

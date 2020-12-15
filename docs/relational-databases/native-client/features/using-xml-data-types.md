@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b095eace82538b8d10efd0c628b467560ef36edf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 76b24491df72773fb45b0513720151ed9a9c6585
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428209"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461958"
 ---
 # <a name="using-xml-data-types-in-sql-server-native-clients"></a>在 SQL Server 本机客户端中使用 XML 数据类型
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "88428209"
 -   **ISequentialStream**  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序不包括 SAX 读取器，但可以轻松地将**ISequentialStream**传递给 MSXML 中的 sax 和 DOM 对象。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序不包括 SAX 读取器，但可以轻松地将 **ISequentialStream** 传递给 MSXML 中的 sax 和 DOM 对象。  
   
  **ISequentialStream** 应用于检索大型 XML 文档。 用于其他大值类型的相同技术也适用于 XML。 有关详细信息，请参阅[使用大型数据类型](../../../relational-databases/native-client/features/using-large-value-types.md)。  
   
@@ -138,19 +138,19 @@ ms.locfileid: "88428209"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>COLUMNS 和 PROCEDURE_PARAMETERS 架构行集  
  COLUMNS 和 PROCEDURE_PARAMETERS 架构行集添加了以下列。  
   
-|列名称|类型|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|在其中定义 XML 架构集合的目录的名称。 对于非 XML 列或非类型化 XML 列，为 NULL。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|在其中定义 XML 架构集合的架构的名称。 对于非 XML 列或非类型化 XML 列，为 NULL。|  
 |SS_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|XML 架构集合的名称。 对于非 XML 列或非类型化 XML 列，为 NULL。|  
   
 #### <a name="the-provider_types-schema-rowset"></a>PROVIDER_TYPES 架构行集  
- 在 PROVIDER_TYPES 架构行集中，xml 数据类型的 COLUMN_SIZE 值为 0，且 DATA_TYPE 为 DBTYPE_XML****。  
+ 在 PROVIDER_TYPES 架构行集中，xml 数据类型的 COLUMN_SIZE 值为 0，且 DATA_TYPE 为 DBTYPE_XML  。  
   
 #### <a name="the-ss_xmlschema-schema-rowset"></a>SS_XMLSCHEMA 架构行集  
  所引入的新的架构行集 SS_XMLSCHEMA 可供客户端检索 XML 架构信息。 SS_XMLSCHEMA 行集包含以下列。  
   
-|列名称|类型|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 集合所属的目录。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 集合所属的架构。|  
@@ -170,7 +170,7 @@ ms.locfileid: "88428209"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
  为了通过 OLE DB 支持 **xml** 数据类型， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 实现了新的 DBPROPSET_SQLSERVERPARAMETER 属性集，该属性集包含以下值。  
   
-|名称|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|在其中定义 XML 架构集合的目录（数据库）的名称。 由三部分组成的 SQL 名称标识符的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|架构集合内 XML 架构的名称。 由三部分组成的 SQL 名称标识符的一部分。|  
@@ -179,7 +179,7 @@ ms.locfileid: "88428209"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
  为了支持在 **ITableDefinition** 接口中创建表， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将三个新列添加到 DBPROPSET_SQLSERVERCOLUMN 属性集。  
   
-|名称|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定在其中存储 XML 架构的目录的名称。 对于其他列类型，此属性返回空字符串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定定义此列的 XML 架构的名称。|  
@@ -191,41 +191,41 @@ ms.locfileid: "88428209"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将新值或更改添加到许多核心 OLE DB 接口。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 接口  
- 为了通过 OLE DB 支持 **xml** 数据类型， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 实现了许多更改，包括添加 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters****。 除了从 **ICommandWithParameters**继承的三个方法; **GetParameterInfo**、 **MapParameterNames**和 **SetParameterInfo**; **ISSCommandWithParameters** 提供了用于处理服务器特定数据类型的 [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 和 [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 方法。  
+ 为了通过 OLE DB 支持 **xml** 数据类型， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 实现了许多更改，包括添加 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 **ICommandWithParameters** 继承的三个方法; **GetParameterInfo**、 **MapParameterNames** 和 **SetParameterInfo**; **ISSCommandWithParameters** 提供了用于处理服务器特定数据类型的 [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 和 [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 方法。  
   
 > [!NOTE]  
->  ISSCommandWithParameters 接口也利用新的 SSPARAMPROPS 结构****。  
+>  ISSCommandWithParameters 接口也利用新的 SSPARAMPROPS 结构  。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 接口  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将以下 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定列添加到 **IColumnRowset：： GetColumnsRowset** 方法返回的行集。 这些列包含 XML 架构集合的由三个部分组成的名称。 对于非 XML 列或非类型化 XML 列，所有这三列均取默认值 NULL。  
   
-|列名称|类型|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 架构集合所属的目录，<br /><br /> 否则为 Null。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 架构集合所属的架构。 否则为 Null。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|类型化 XML 列的 XML 架构集合的名称，否则为 NULL。|  
   
 #### <a name="the-irowset-interface"></a>IRowset 接口  
- 通过 IRowset::GetData 方法检索 XML 列中的 XML 实例****。 根据由客户端指定的绑定，可以将 XML 实例作为 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML、DBTYPE_STR、DBTYPE_BYTES 进行检索，或者通过 DBTYPE_IUNKNOWN 将其作为接口检索。 如果使用者指定 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，则访问接口将 XML 实例转换为用户请求的类型，并将其放入在相应绑定中指定的位置。  
+ 通过 IRowset::GetData 方法检索 XML 列中的 XML 实例  。 根据由客户端指定的绑定，可以将 XML 实例作为 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML、DBTYPE_STR、DBTYPE_BYTES 进行检索，或者通过 DBTYPE_IUNKNOWN 将其作为接口检索。 如果使用者指定 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，则访问接口将 XML 实例转换为用户请求的类型，并将其放入在相应绑定中指定的位置。  
   
- 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 参数设置为 NULL，或将 pObject 参数设置为 IID_ISequentialStream，则提供程序将 ISequentialStream 接口返回到使用者，让其可流式处理该列之外的 XML 数据********。 然后，ISequentialStream 将 XML 数据作为 Unicode 字符流返回****。  
+ 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 参数设置为 NULL，或将 pObject 参数设置为 IID_ISequentialStream，则提供程序将 ISequentialStream 接口返回到使用者，让其可流式处理该列之外的 XML 数据    。 然后，ISequentialStream 将 XML 数据作为 Unicode 字符流返回  。  
   
  当返回与 DBTYPE_IUNKNOWN 绑定的 XML 值时，访问接口将报告 `sizeof (IUnknown *)` 的大小值。 请注意，这与在将某列绑定为 DBTYPE_IUnknown 或 DBTYPE_IDISPATCH 时所采取的方法相一致；当无法确定实际列大小时，将返回 DBTYPE_IUNKNOWN/ISequentialStream。  
   
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange 接口  
- 使用者可以通过两种方法更新列中的 XML 实例。 第一种方法是使用提供程序创建的存储对象 ISequentialStream****。 使用者可调用 ISequentialStream::Write 方法直接更新提供程序返回的 XML 实例****。  
+ 使用者可以通过两种方法更新列中的 XML 实例。 第一种方法是使用提供程序创建的存储对象 ISequentialStream  。 使用者可调用 ISequentialStream::Write 方法直接更新提供程序返回的 XML 实例  。  
   
- 第二种方法是通过 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法********。 使用这种方法，可以在类型为 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML 或 DBTYPE_IUNKNOWN 的绑定中，指定使用者缓冲区内的 XML 实例。  
+ 第二种方法是通过 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法   。 使用这种方法，可以在类型为 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML 或 DBTYPE_IUNKNOWN 的绑定中，指定使用者缓冲区内的 XML 实例。  
   
  对于 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，访问接口将位于使用者缓冲区中的 XML 实例存储到适当的列中。  
   
- 在 DBTYPE_IUNKNOWN/ISequentialStream 的情况下，如果使用者未指定任何存储对象，则使用者必须事先创建 **ISequentialStream** 对象，将 XML 文档与对象绑定，然后通过 **IRowsetChange：： SetData** 方法将该对象传递给提供程序。 使用者还可以创建存储对象，将 pObject 参数设置为 IID_ISequentialStream，创建 ISequentialStream 对象，然后将 ISequentialStream 对象传递给 IRowsetChange::SetData 方法************。 在这两种情况下，提供程序都可以通过 ISequentialStream 对象检索 XML 对象，然后将其插入适当的列中****。  
+ 在 DBTYPE_IUNKNOWN/ISequentialStream 的情况下，如果使用者未指定任何存储对象，则使用者必须事先创建 **ISequentialStream** 对象，将 XML 文档与对象绑定，然后通过 **IRowsetChange：： SetData** 方法将该对象传递给提供程序。 使用者还可以创建存储对象，将 pObject 参数设置为 IID_ISequentialStream，创建 ISequentialStream 对象，然后将 ISequentialStream 对象传递给 IRowsetChange::SetData 方法    。 在这两种情况下，提供程序都可以通过 ISequentialStream 对象检索 XML 对象，然后将其插入适当的列中  。  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate 接口  
- IRowsetUpdate 接口提供了用于延迟更新的功能****。 在使用者调用 **IRowsetUpdate： Update** 方法之前，对行集可用的数据不会提供给其他事务。  
+ IRowsetUpdate 接口提供了用于延迟更新的功能  。 在使用者调用 **IRowsetUpdate： Update** 方法之前，对行集可用的数据不会提供给其他事务。  
   
 #### <a name="the-irowsetfind-interface"></a>IRowsetFind 接口  
- IRowsetFind::FindNextRow 方法不使用 xml 数据类型********。 调用 IRowsetFind::FindNextRow 且 hAccessor 参数指定 DBTYPE_XML 列时，返回 DB_E_BADBINDINFO******。 此时不考虑正在搜索的列的类型。 对于任何其他绑定类型，如果要搜索的列属于 xml 数据类型，则 FindNextRow 将失败并返回 DB_E_BADCOMPAREOP********。  
+ IRowsetFind::FindNextRow 方法不使用 xml 数据类型   。 调用 IRowsetFind::FindNextRow 且 hAccessor 参数指定 DBTYPE_XML 列时，返回 DB_E_BADBINDINFO   。 此时不考虑正在搜索的列的类型。 对于任何其他绑定类型，如果要搜索的列属于 xml 数据类型，则 FindNextRow 将失败并返回 DB_E_BADCOMPAREOP   。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驱动程序  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序中，对各种函数进行了一些更改以支持 **xml** 数据类型。  
@@ -244,12 +244,12 @@ ms.locfileid: "88428209"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]当无法在[SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md)函数中确定列大小时，Native Client ODBC 驱动程序将报告 SQL_SS_LENGTH_UNLIMITED。  
   
 ### <a name="sqlgettypeinfo"></a>SQLGetTypeInfo  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序报告 SQL_SS_LENGTH_UNLIMITED 作为[SQLGetTypeInfo](../../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)函数中**xml**数据类型的最大 COLUMN_SIZE。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序报告 SQL_SS_LENGTH_UNLIMITED 作为 [SQLGetTypeInfo](../../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)函数中 **xml** 数据类型的最大 COLUMN_SIZE。  
   
 ### <a name="sqlprocedurecolumns"></a>SQLProcedureColumns  
- [SQLProcedureColumns](../../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md)函数具有与**SQLColumns**函数相同的列添加。  
+ [SQLProcedureColumns](../../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md)函数具有与 **SQLColumns** 函数相同的列添加。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序报告 SQL_SS_LENGTH_UNLIMITED 作为**xml**数据类型的最大 COLUMN_SIZE。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序报告 SQL_SS_LENGTH_UNLIMITED 作为 **xml** 数据类型的最大 COLUMN_SIZE。  
   
 ### <a name="supported-conversions"></a>支持的转换  
  当从 SQL 转换为 C 数据类型时，SQL_C_WCHAR、SQL_C_BINARY 和 SQL_C_CHAR 可全部转换为 SQL_SS_XML，但必须符合以下规定：  

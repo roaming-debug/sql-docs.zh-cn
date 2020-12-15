@@ -1,5 +1,5 @@
 ---
-title: 筛选 sql： limit 字段和 sql： limit-值（SQLXML）
+title: 通过 sql： limit 字段和 sql： limit-value (SQLXML) 进行筛选
 description: 了解如何使用 SQLXML 4.0 中的 sql： limit 字段和 sql： limit 值注释来筛选由限制值所返回的查询返回的数据。
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,24 +19,24 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50732a867c0329610b0a03eebcd97d3f3224d6e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 374b6d588f89abd507d341596da0426eecf8910a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750776"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461768"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 筛选值 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  可以基于某些限制值来限制从数据库查询返回的行。 **Sql： limit 字段**和**sql：限值**批注用于标识包含限制值的数据库列，并指定用于筛选返回的数据的特定限制值。  
+  可以基于某些限制值来限制从数据库查询返回的行。 **Sql： limit 字段** 和 **sql：限值** 批注用于标识包含限制值的数据库列，并指定用于筛选返回的数据的特定限制值。  
   
- **Sql： limit 字段**批注用于标识包含限制值的列;每个映射的元素或属性都允许使用此属性。  
+ **Sql： limit 字段** 批注用于标识包含限制值的列;每个映射的元素或属性都允许使用此属性。  
   
- **Sql：限值**批注用于指定在**sql： limit 字段**注释中指定的列中的有限值。 **Sql：限值**批注是可选的。 如果未指定**sql： limit 值**，则假定为 NULL 值。  
+ **Sql：限值** 批注用于指定在 **sql： limit 字段** 注释中指定的列中的有限值。 **Sql：限值** 批注是可选的。 如果未指定 **sql： limit 值** ，则假定为 NULL 值。  
   
 > [!NOTE]  
->  当使用**sql： limit-字段**（其中映射的 sql 列的类型为**real**）时，SQLXML 4.0 对 XML 架构中指定的**sql： limit 值**执行转换，作为**nvarchar**指定的值。 这要求使用纯科学记数法指定小数限制值。 有关详细信息，请参阅下面的示例 B。  
+>  当使用 **sql： limit-字段** （其中映射的 sql 列的类型为 **real**）时，SQLXML 4.0 对 XML 架构中指定的 **sql： limit 值** 执行转换，作为 **nvarchar** 指定的值。 这要求使用纯科学记数法指定小数限制值。 有关详细信息，请参阅下面的示例 B。  
   
 ## <a name="examples"></a>示例  
  若要创建使用这些示例的工作示例，需要安装以下产品：  
@@ -56,7 +56,7 @@ ms.locfileid: "85750776"
   
  一个客户可以具有发货地址和/或开票地址。 AddressType 列值是 Shipping 和 Billing。  
   
- 这是映射架构，其中**ShipTo**架构属性映射到地址关系中的 StreetAddress 列。 此属性返回的值仅限于通过指定**sql： limit 字段**和**sql： limit-value**批注来发送地址。 同样， **BillTo**架构特性仅返回客户的帐单地址。  
+ 这是映射架构，其中 **ShipTo** 架构属性映射到地址关系中的 StreetAddress 列。 此属性返回的值仅限于通过指定 **sql： limit 字段** 和 **sql： limit-value** 批注来发送地址。 同样， **BillTo** 架构特性仅返回客户的帐单地址。  
   
  以下是架构：  
   
@@ -102,7 +102,7 @@ ms.locfileid: "85750776"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
-1.  在**tempdb**数据库中创建两个表：  
+1.  在 **tempdb** 数据库中创建两个表：  
   
     ```  
     USE tempdb  
@@ -149,7 +149,7 @@ ms.locfileid: "85750776"
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
 
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  结果如下：  
   
@@ -173,7 +173,7 @@ ms.locfileid: "85750776"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- 这是订单详细信息中的 "订单**id** " 属性映射到订单关系中的 "订单 id" 列的映射架构。 为此属性返回的值仅限于使用 " **sql： limit-字段**" 和 " **sql：限值**" 批注为 "**折扣**" 属性指定的值为 "2.0000000 e-001 （0.2）" 的值。  
+ 这是订单详细信息中的 "订单 **id** " 属性映射到订单关系中的 "订单 id" 列的映射架构。 此属性返回的值仅限于具有 2.0000000 e-001 (0.2) 的值的值，这些值是使用 **sql： limit** 和 **sql： limit-Limit** 批注为 **折扣** 属性指定的。  
   
  以下是架构：  
   
@@ -219,7 +219,7 @@ ms.locfileid: "85750776"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
-1.  在**tempdb**数据库中创建两个表：  
+1.  在 **tempdb** 数据库中创建两个表：  
   
     ```  
     USE tempdb  
@@ -308,7 +308,7 @@ ms.locfileid: "85750776"
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [float 和 real &#40;Transact-sql&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [float 和 real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)   
  [nchar 和 nvarchar &#40;Transact-sql&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [在查询中使用带批注的 XSD 架构 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  

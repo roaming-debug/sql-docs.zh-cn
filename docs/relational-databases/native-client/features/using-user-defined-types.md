@@ -1,5 +1,5 @@
 ---
-description: 在 SQL Server Native Client 中使用用户定义的类型
+description: 在 SQL Server Native Client 中使用 User-Defined 类型
 title: 使用用户定义类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b56a4e3446c827ecd8372876aa54cb023827a861
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2808e712491271fe5738ba4d20ad3e7e2133a451
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448222"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461948"
 ---
-# <a name="using-user-defined-types-in-sql-server-native-client"></a>在 SQL Server Native Client 中使用用户定义的类型
+# <a name="using-user-defined-types-in-sql-server-native-client"></a>在 SQL Server Native Client 中使用 User-Defined 类型
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 介绍了用户定义类型 (UDT)。 UDT 可将对象和自定义数据结构存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中，从而扩展了 SQL 类型系统。 UDT 可以包含多种数据类型并且可具有行为，这使它们不同于由单一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系统数据类型构成的传统别名数据类型。 使用生成可验证代码的 .NET 公共语言运行时 (CLR) 所支持的任何语言都可以定义 UDT， 这些语言包括 Microsoft Visual C#<sup>®</sup> 和 Visual Basic<sup>®</sup> .NET。 数据公开为 .NET 类或结构的字段和属性，行为则由类或结构的方法来定义。  
@@ -174,7 +174,7 @@ ms.locfileid: "88448222"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将新值或更改添加到许多核心 OLE DB 接口。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 接口  
- 为了通过 OLE DB 支持 Udt， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 实现了许多更改，包括添加 **ISSCommandWithParameters** 接口。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 **ICommandWithParameters**继承的三个方法; **GetParameterInfo**、 **MapParameterNames**和 **SetParameterInfo**; **ISSCommandWithParameters** 提供了用于处理服务器特定数据类型的 **GetParameterProperties** 和 **SetParameterProperties** 方法。  
+ 为了通过 OLE DB 支持 Udt， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 实现了许多更改，包括添加 **ISSCommandWithParameters** 接口。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 **ICommandWithParameters** 继承的三个方法; **GetParameterInfo**、 **MapParameterNames** 和 **SetParameterInfo**; **ISSCommandWithParameters** 提供了用于处理服务器特定数据类型的 **GetParameterProperties** 和 **SetParameterProperties** 方法。  
   
 > [!NOTE]  
 >  ISSCommandWithParameters 接口也利用新的 SSPARAMPROPS 结构  。  

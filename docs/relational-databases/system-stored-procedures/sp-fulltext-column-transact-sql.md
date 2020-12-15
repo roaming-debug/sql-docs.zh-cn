@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55f25dad90002ea50ba797a7960f22cfee5055c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: aadc6c5b5548b2fccb3c37fdc9eb06a9baf69dcc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543365"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440528"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -47,27 +47,27 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
      [ , [ @type_colname= ] 'type_column_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @tabname = ] 'qualified_table_name'` 为一个或两个部分组成的表名。 表必须在当前数据库中。 表必须具有全文索引。 *qualified_table_name* 为 **nvarchar (517) **，没有默认值。  
+## <a name="arguments"></a>自变量  
+`[ @tabname = ] 'qualified_table_name'` 为一个或两个部分组成的表名。 表必须在当前数据库中。 表必须具有全文索引。 *qualified_table_name* 为 **nvarchar (517)**，没有默认值。  
   
-`[ @colname = ] 'column_name'`*Qualified_table_name*中的列的名称。 列必须是字符、 **varbinary (max) ** 或 **image** 列，不能是计算列。 *column_name* **sysname**，无默认值。  
+`[ @colname = ] 'column_name'`*Qualified_table_name* 中的列的名称。 列必须是字符、 **varbinary (max)** 或 **image** 列，不能是计算列。 *column_name* **sysname**，无默认值。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以为 ** (max) ** 或 **image** 数据类型的列中存储的文本数据创建全文索引。 不对图像和图片进行索引。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以为 **(max)** 或 **image** 数据类型的列中存储的文本数据创建全文索引。 不对图像和图片进行索引。  
   
-`[ @action = ] 'action'` 要执行的操作。 *操作* 是 **varchar (20) **，无默认值，可以是下列值之一。  
+`[ @action = ] 'action'` 要执行的操作。 *操作* 是 **varchar (20)**，无默认值，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
-|**add**|将*qualified_table_name* *column_name*添加到表的不活动全文索引中。 此操作可启用列以进行全文索引。|  
-|**击落**|从表的不活动全文索引中移除*qualified_table_name* *column_name* 。|  
+|**add**|将 *qualified_table_name* *column_name* 添加到表的不活动全文索引中。 此操作可启用列以进行全文索引。|  
+|**击落**|从表的不活动全文索引中移除 *qualified_table_name* *column_name* 。|  
   
-`[ @language = ] 'language_term'` 列中存储的数据的语言。 有关中包含的语言的列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 [transact-sql&#41;&#40;fulltext_languages ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
+`[ @language = ] 'language_term'` 列中存储的数据的语言。 有关中包含的语言的列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 [&#40;transact-sql&#41;sys.fulltext_languages ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
   
 > [!NOTE]  
 >  如果列包含的数据使用了多种语言或不支持的语言，则使用“非特定语言”。 默认值通过配置选项“默认全文语言”指定。  
   
-`[ @type_colname = ] 'type_column_name'`*Qualified_table_name*中保存*column_name*的文档类型的列的名称。 此列必须是 **char**、 **nchar**、 **varchar**或 **nvarchar**。 仅当 *column_name* 的数据类型为 **varbinary (max) ** 或 **image**类型时，才使用此方法。 *type_column_name* **sysname**，无默认值。  
+`[ @type_colname = ] 'type_column_name'`*Qualified_table_name* 中保存 *column_name* 的文档类型的列的名称。 此列必须是 **char**、 **nchar**、 **varchar** 或 **nvarchar**。 仅当 *column_name* 的数据类型为 **varbinary (max)** 或 **image** 类型时，才使用此方法。 *type_column_name* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

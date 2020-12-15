@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66d987556c0de9a64b7572be324b9f59563af830
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5bc731438d8691664b4db502ab05e3489e5faaa1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730171"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461718"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework 支持 - 使用大容量加载
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  本主题说明如何在 .NET 环境中使用 XML 大容量加载功能。 有关 XML 大容量加载的详细信息，请参阅[&#40;SQLXML 4.0&#41;执行 Xml 数据的大容量加载](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。  
+  本主题说明如何在 .NET 环境中使用 XML 大容量加载功能。 有关 XML 大容量加载的详细信息，请参阅 [&#40;SQLXML 4.0&#41;执行 Xml 数据的大容量加载 ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。  
   
  若要从托管环境使用 SQLXML 大容量加载 COM 对象，需要添加对此对象的项目引用。 这将围绕该大容量加载 COM 对象生成一个托管的包装接口。  
   
 > [!NOTE]  
->  托管的 XML 大容量加载不使用托管流并且要求围绕本机流的包装。 SQLXML 大容量加载组件将不在多线程环境中运行（“[MTAThread]”属性）。 如果尝试在多线程环境中运行大容量加载组件，会收到 InvalidCastException 异常，其中包含以下附加信息： "interface SQLXMLBULKLOADLib. ISQLXMLBulkLoad 的 QueryInterface 失败"。 解决方法是使包含大容量加载对象单线程的对象可访问（例如，使用示例中所示的 **[STAThread]** 属性）。  
+>  托管的 XML 大容量加载不使用托管流并且要求围绕本机流的包装。 SQLXML 大容量加载组件将不在多线程环境中运行（“[MTAThread]”属性）。 如果尝试在多线程环境中运行大容量加载组件，会收到 InvalidCastException 异常，其中包含以下附加信息： "interface SQLXMLBULKLOADLib. ISQLXMLBulkLoad 的 QueryInterface 失败"。 解决方法是，使用示例) 中所示的 **[STAThread]** 属性，使包含大容量加载对象可访问单线程的对象 (例如。  
   
  本主题提供一个 C# 应用程序的工作示例，用于将 XML 数据大容量加载到数据库中。 请按照以下步骤创建工作示例：  
   
@@ -114,11 +114,11 @@ ms.locfileid: "85730171"
   
 5.  创建 C# 控制台应用程序。  
   
-6.  从 "**项目**" 菜单中，选择 "**添加引用**"。  
+6.  从 " **项目** " 菜单中，选择 " **添加引用**"。  
   
-7.  在 " **COM** " 选项卡中，选择 " **Microsoft SQLXML Bulkload 4.0 类型库**（xblkld4.dll）"，然后单击 **"确定"**。 你将看到在项目中创建的**SQLXMLBULKLOADLib**程序集。  
+7.  在 " **COM** " 选项卡中，选择 " **Microsoft SQLXML Bulkload 4.0 类型库** ( # A0) 并单击 **" 确定 "**。 你将看到在项目中创建的 **SQLXMLBULKLOADLib** 程序集。  
   
-8.  用下面的代码替换 Main() 方法。 更新**ConnectionString**属性和架构和数据文件的文件路径。  
+8.  用下面的代码替换 Main() 方法。 更新 **ConnectionString** 属性和架构和数据文件的文件路径。  
   
     ```  
     [STAThread]  

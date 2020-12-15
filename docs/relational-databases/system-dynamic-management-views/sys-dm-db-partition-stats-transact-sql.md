@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1fd58cef1e99a1c7648ea8ad73657b7dc02be01
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c87ba11d6a38b69c63839db9b918fe44dbca2641
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006020"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97444267"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "92006020"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|分区 ID。 在数据库中是唯一的。 此值与**sys.databases**目录视图中的**partition_id**的值相同，但 Azure Synapse 分析除外。|  
+|**partition_id**|**bigint**|分区 ID。 在数据库中是唯一的。 此值与 **sys.databases** 目录视图中的 **partition_id** 的值相同，但 Azure Synapse 分析除外。|  
 |object_id|**int**|包含该分区的表或索引视图的对象 ID。|  
 |index_id|**int**|包含该分区的堆或索引的 ID。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引。<br /><br /> > 1 = 非聚集索引|  
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。|  
@@ -49,11 +49,11 @@ ms.locfileid: "92006020"
 |**lob_reserved_page_count**|**bigint**|为存储和管理分区中的行外 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 和 **xml** 列而保留的页数，包括使用的和未使用的页。 包含 IAM 页。<br /><br /> 为存储和管理分区中的列存储索引而保留的 LOB 总数。|  
 |**row_overflow_used_page_count**|**bigint**|用于保存和管理分区中行溢出 **varchar**、**nvarchar**、**varbinary** 和 **sql_variant** 列的页数。 包含 IAM 页。<br /><br /> 对列存储索引始终为 0。|  
 |**row_overflow_reserved_page_count**|**bigint**|为保存和管理分区中行溢出 **varchar**、**nvarchar**、**varbinary** 和 **sql_variant** 列而保留的页数，包括已使用的和未使用的页。 包含 IAM 页。<br /><br /> 对列存储索引始终为 0。|  
-|**used_page_count**|**bigint**|用于分区的总页数。 计算为**in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**。|  
-|**reserved_page_count**|**bigint**|为分区保留的总页数。 计算为**in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**。|  
+|**used_page_count**|**bigint**|用于分区的总页数。 计算为 **in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**。|  
+|**reserved_page_count**|**bigint**|为分区保留的总页数。 计算为 **in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**。|  
 |**row_count**|**bigint**|分区中的大约行数。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
-|distribution_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 与分布关联的唯一数字 id。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|distribution_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 与分布关联的唯一数字 id。|  
   
 ## <a name="remarks"></a>备注  
  **sys.dm_db_partition_stats** 显示用于存储和管理数据库中全部分区的行内数据 LOB 数据和行溢出数据的空间的有关信息。 每个分区对应一行。  

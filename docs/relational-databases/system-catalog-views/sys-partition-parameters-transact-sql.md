@@ -1,6 +1,6 @@
 ---
 description: sys.partition_parameters (Transact-SQL)
-title: sys. partition_parameters (Transact-sql) |Microsoft Docs
+title: sys.partition_parameters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d0231c80c4c122703bd3ede4315e13362e49c34
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 50aac8964e9b18922f88e33dce2c2b99c14b0348
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542506"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462848"
 ---
 # <a name="syspartition_parameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89542506"
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|此参数所属分区函数的 ID。|  
 |**parameter_id**|**int**|参数的 ID。 在分区函数中是唯一的，从 1 开始。|  
-|**system_type_id**|**tinyint**|参数的系统类型的 ID。 对应于**sys.databases**目录视图的**system_type_id**列。|  
+|**system_type_id**|**tinyint**|参数的系统类型的 ID。 对应于 **sys.databases** 目录视图的 **system_type_id** 列。|  
 |**max_length**|**smallint**|参数的最大长度（字节）。|  
 |**精度**|**tinyint**|如果参数是基于数值的，则表示参数的精度；否则为 0。|  
 |**scale**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  

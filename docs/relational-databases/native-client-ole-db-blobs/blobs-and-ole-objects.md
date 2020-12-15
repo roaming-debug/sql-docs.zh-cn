@@ -17,26 +17,26 @@ helpviewer_keywords:
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9ab95bece59c6ecb2ed3c2df4aeb0b90ec52605
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c7661a35eae2a178df57a1c83f1e0912044f4b1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381194"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439958"
 ---
 # <a name="blobs-and-ole-objects-in-sql-server-native-client"></a>SQL Server Native Client 中的 Blob 和 OLE 对象
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序公开了**ISequentialStream**接口，以支持使用者访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**、 **text**、 **image**、 **varchar (max) **、 **nvarchar (max) **、 **varbinary (max) **和 xml 数据类型为二进制大型对象 (blob) 。 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据   。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序公开了 **ISequentialStream** 接口，以支持使用者访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**、 **text**、 **image**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)** 和 xml 数据类型为二进制大型对象 (blob) 。 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据   。  
   
  有关演示此功能的示例，请参阅[设置大型数据 (OLE DB)](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]当使用者在访问器中提供用于数据修改的接口指针时，Native Client OLE DB 提供程序可以使用使用者实现的**IStorage**接口。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]当使用者在访问器中提供用于数据修改的接口指针时，Native Client OLE DB 提供程序可以使用使用者实现的 **IStorage** 接口。  
   
- 对于大值数据类型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 **IROWSET** 和 DDL 接口中的类型大小假设。 使用最大大小设置为 "无限制" 的 **varchar**、 **nvarchar**和 **varbinary** 数据类型的列将通过架构行集和返回列数据类型的接口表示为 ISLONG。  
+ 对于大值数据类型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 **IROWSET** 和 DDL 接口中的类型大小假设。 使用最大大小设置为 "无限制" 的 **varchar**、 **nvarchar** 和 **varbinary** 数据类型的列将通过架构行集和返回列数据类型的接口表示为 ISLONG。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序以) 、 (和) 分别公开**varchar (max) **、 **varbinary (max DBTYPE_STR**和**nvarchar DBTYPE_BYTES 最**大 DBTYPE_WSTR 类型。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序以) 、 (和) 分别公开 **varchar (max)**、 **varbinary (max DBTYPE_STR** 和 **nvarchar DBTYPE_BYTES 最** 大 DBTYPE_WSTR 类型。  
   
  若要使用这些类型，应用程序具有以下选项：  
   

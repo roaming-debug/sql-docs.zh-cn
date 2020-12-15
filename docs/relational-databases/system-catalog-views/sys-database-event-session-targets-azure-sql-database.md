@@ -1,6 +1,6 @@
 ---
 description: sys.database_event_session_targets（Azure SQL 数据库）
-title: database_event_session_targets (Azure SQL 数据库) |Microsoft Docs
+title: Azure SQL Database (sys.database_event_session_targets) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.topic: language-reference
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 680cac9474fd63806c046ffeede22e83c04773c5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2b77a6340fe245884c137fb24fbeac653a8a2ff0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537393"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458507"
 ---
 # <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets（Azure SQL 数据库）
 
@@ -27,14 +27,14 @@ ms.locfileid: "89537393"
   
 ||  
 |-|  
-|**适用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
+|**适用** 于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |target_id|**int**|目标的 ID。 ID 在事件会话对象中是唯一的。 不可为 null。|  
 |name|**sysname**|事件目标的名称。 不可为 null。|  
-|包|**sysname**|包含事件目标的事件包的名称。 不可为 null。|  
+|程序包|**sysname**|包含事件目标的事件包的名称。 不可为 null。|  
 |name|**sysname**|包含事件目标的模块的名称。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
@@ -43,9 +43,9 @@ ms.locfileid: "89537393"
 ## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-|From|到|关系|  
+|From|功能|关系|  
 |-|-|-|  
-|sys. database_event_session_targets event_session_id|sys. database_event_sessions event_session_id|多对一|  
+|sys.database_event_session_targets sys.database_event_session_targets.event_session_id|sys.database_event_sessions sys.database_event_sessions.event_session_id|多对一|  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  

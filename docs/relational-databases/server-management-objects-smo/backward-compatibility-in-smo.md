@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d18b4d12b38627048fb5b8844685cd36541027dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a6e36a0966f631138768c2c4b17ab7444df76aea
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448094"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463068"
 ---
 # <a name="backward-compatibility-in-smo"></a>SMO 中的向后兼容性
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -56,7 +56,7 @@ Imports Microsoft.SqlServer.Management.Smo
 Imports Microsoft.SqlServer.Management.Common  
 ```  
   
- 如果你的代码使用 Urn 功能，如 **GetSqlSmoObject (urn) **，则必须链接到命名空间。  
+ 如果你的代码使用 Urn 功能，如 **GetSqlSmoObject (urn)**，则必须链接到命名空间。  
   
  如果您的代码直接使用 Transfer 对象，则需要链接到 Microsoft.SqlServer.Management.SmoExtended 命名空间。  
   

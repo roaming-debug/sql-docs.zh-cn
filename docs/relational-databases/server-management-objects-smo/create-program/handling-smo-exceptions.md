@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92167925e38e2029ac94d83b7ca4c9566e41527f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 66956ff6d6b8d904ba20cb68ce012194d6069e75
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448060"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463028"
 ---
 # <a name="handling-smo-exceptions"></a>处理 SMO 异常
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88448060"
  异常可能是常规异常，也可能是特定异常。 常规异常包含一组特定异常。 可使用几条 **Catch** 语句处理预计可能出现的错误，并使用常规异常处理代码处理其余错误。 通常，异常按照级联顺序发生。 很多情况下，SMO 异常可能是由 SQL 异常导致的。 检测是否为这种情况的方法便是连续使用 **InnerException** 属性确定导致最终顶级异常的原始异常。  
   
 > [!NOTE]  
->  **SQLException**异常在**SqlClient**命名空间中声明。  
+>  **SQLException** 异常在 **SqlClient** 命名空间中声明。  
   
  ![显示级别的关系图](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "显示级别的关系图")  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88448060"
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。
   
 ## <a name="catching-an-exception-in-visual-basic"></a>在 Visual Basic 中捕获异常  
- 此代码示例演示如何使用**Try .。。Catch .。。Finally** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 语句来捕获 SMO 异常。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 文档。  
+ 此代码示例演示如何使用 **Try .。。Catch .。。Finally** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 语句来捕获 SMO 异常。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 文档。  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.

@@ -17,13 +17,13 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.SEQUENCES view
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa13582e155387bbe7b7122e0051d830be2261b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 365b91660769cbb189b23366671486271177e6e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546323"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440588"
 ---
 # <a name="sequences-transact-sql"></a>Transact-sql)  (序列
 
@@ -31,14 +31,14 @@ ms.locfileid: "89546323"
 
 为当前数据库中当前用户可访问的每个序列返回一行。
 
-若要从这些视图中检索信息，请指定 **INFORMATION_SCHEMA**_view_name_的完全限定名称。
+若要从这些视图中检索信息，请指定 **INFORMATION_SCHEMA**_.view_name_ 的完全限定名称。
 
 |列名称|数据类型|说明|
 |-----------------|---------------|-----------------|
 |**SEQUENCE_CATALOG**|**nvarchar(128)**|序列限定符|
 |**SEQUENCE_SCHEMA**|**nvarchar (** 128) * *|包含序列的架构的名称|
 |**SEQUENCE_NAME**|**nvarchar(128)**|序列名称|
-|**DATA_TYPE**|**nvarchar (** 128 **) **|序列数据类型|
+|**DATA_TYPE**|**nvarchar (** 128 **)**|序列数据类型|
 |**NUMERIC_PRECISION**|**tinyint**|序列的精度|
 |**NUMERIC_PRECISION_RADIX**|**smallint**|近似数字数据、精确数字数据、整数数据或货币数据的精度基数。 否则，返回 NULL。|
 |**NUMERIC_SCALE**|**int**|近似数字数据、精确数字数据、整数数据或货币数据的小数位数。 否则，返回 NULL。|

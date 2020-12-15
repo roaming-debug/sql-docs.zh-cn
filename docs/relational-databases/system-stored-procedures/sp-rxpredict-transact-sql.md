@@ -15,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 625157885fa4494f4d8c70da5bea8ac70472d3b5
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 55514f89487a06e16413f199f744013d2c4f8c90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809476"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461498"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "91809476"
 sp_rxPredict  ( @model, @input )
 ```
 
-### <a name="arguments"></a>参数
+### <a name="arguments"></a>自变量
 
 **model**
 
@@ -53,7 +53,7 @@ sp_rxPredict  ( @model, @input )
 返回分数列以及输入数据源中的任何传递列。
 如果算法支持生成此类值，则可以返回其他分数列，如置信区间。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 若要启用存储过程，必须在实例上启用 SQLCLR。
 
@@ -135,7 +135,7 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-除了是有效的 SQL 查询外， * \@ inputData*中的输入数据还必须包含与存储模型中的列兼容的列。
+除了是有效的 SQL 查询外， *\@ inputData* 中的输入数据还必须包含与存储模型中的列兼容的列。
 
 `sp_rxPredict` 仅支持以下 .NET 列类型： double、float、short、ushort、long、ulong 和 string。 你可能需要在输入数据中筛选掉不受支持的类型，然后将其用于实时计分。 
 

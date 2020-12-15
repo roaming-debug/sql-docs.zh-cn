@@ -10,21 +10,21 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: e246d516d3c05b9a2c6725f7fd3e3f787066b8aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112432"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461398"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 数据库目录
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 WideWorldImportersDW 数据库中的架构、表和存储过程的说明。 
 
-WideWorldImportersDW 数据库用于数据仓库和分析处理。 有关销售和采购的事务数据在 WideWorldImporters 数据库中生成，并使用**每日 ETL 过程**加载到 WideWorldImportersDW 数据库中。
+WideWorldImportersDW 数据库用于数据仓库和分析处理。 有关销售和采购的事务数据在 WideWorldImporters 数据库中生成，并使用 **每日 ETL 过程** 加载到 WideWorldImportersDW 数据库中。
 
-因此 WideWorldImportersDW 中的数据将反映 WideWorldImporters 中的数据，但表的组织方式有所不同。 尽管 WideWorldImporters 具有传统的规范化架构，但 WideWorldImportersDW 使用[星型架构](https://wikipedia.org/wiki/Star_schema)方法进行表设计。 除了事实数据表和维度表，数据库还包含一些用于 ETL 进程的临时表。
+因此 WideWorldImportersDW 中的数据将反映 WideWorldImporters 中的数据，但表的组织方式有所不同。 尽管 WideWorldImporters 具有传统的规范化架构，但 WideWorldImportersDW 使用 [星型架构](https://wikipedia.org/wiki/Star_schema) 方法进行表设计。 除了事实数据表和维度表，数据库还包含一些用于 ETL 进程的临时表。
 
 ## <a name="schemas"></a>架构
 
@@ -33,7 +33,7 @@ WideWorldImportersDW 数据库用于数据仓库和分析处理。 有关销售�
 |架构|说明|
 |-----------------------------|---------------------|
 |维度|维度表。|
-|Fact|事实数据表。|  
+|Fact| 事实数据表。|  
 |集成|ETL 需要临时表和其他对象。|  
 
 ## <a name="tables"></a>表
@@ -48,8 +48,8 @@ WideWorldImportersDW 具有以下维度表。 说明包括与 WideWorldImporters
 |-----------------------------|---------------------|
 |城市|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |客户|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|日期|新表，其中包含有关日期的信息，包括财政年度（基于财政年度的11月1日开始）。|
-|Employee|`Application.People`.|
+|Date|新表，其中包含有关日期的信息，包括基于财政年度) 的年11月1日开始 (。|
+|员工|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |供应商|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
 |PaymentMethod|`Application.PaymentMethods`.|
@@ -72,7 +72,7 @@ WideWorldImportersDW 具有以下事实数据表。 说明包括与 WideWorldImp
 
 存储过程主要用于 ETL 过程和配置目的。
 
-鼓励使用此示例的任何扩展，以便将`Reports`架构用于 Reporting Services 报表和 Power BI `PowerBI`访问的架构。
+鼓励使用此示例的任何扩展，以便将 `Reports` 架构用于 Reporting Services 报表和 `PowerBI` Power BI 访问的架构。
 
 ### <a name="application-schema"></a>应用程序架构
 
@@ -92,7 +92,7 @@ WideWorldImportersDW 具有以下事实数据表。 说明包括与 WideWorldImp
 ETL 过程中使用的过程分为以下几类：
 - ETL 包的帮助程序过程-所有 Get * 过程。
 - ETL 包用于将暂存数据迁移到 DW 表中的过程-所有迁移 * 过程。
-- `PopulateDateDimensionForYear`-使用年份，并确保在`Dimension.Date`表中填充该年份的所有日期。
+- `PopulateDateDimensionForYear` -使用年份，并确保在表中填充该年份的所有日期 `Dimension.Date` 。
 
 ### <a name="sequences-schema"></a>序列架构
 
@@ -100,5 +100,5 @@ ETL 过程中使用的过程分为以下几类：
 
 |过程|目的|
 |-----------------------------|---------------------|
-|ReseedAllSequences|为所有序列`ReseedSequenceBeyondTableValue`调用过程。|
-|ReseedSequenceBeyondTableValue|用于将下一个序列值重定位到任何使用同一序列的表中的值之外。 （例如`DBCC CHECKIDENT`适用于序列但可能跨多个表的标识列。）|
+|ReseedAllSequences|`ReseedSequenceBeyondTableValue`为所有序列调用过程。|
+|ReseedSequenceBeyondTableValue|用于将下一个序列值重定位到任何使用同一序列的表中的值之外。  (`DBCC CHECKIDENT` ，例如适用于序列但可能跨多个表的标识列。 ) |

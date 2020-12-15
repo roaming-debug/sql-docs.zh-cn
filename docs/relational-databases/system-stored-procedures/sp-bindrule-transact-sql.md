@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7355f421701c5eb24da58dec5037b5fb1b8317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0616ed8334665f1c6226ad8bd28ed3e968a04be7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548298"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462718"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,12 +45,12 @@ sp_bindrule [ @rulename = ] 'rule' ,
      [ , [ @futureonly = ] 'futureonly_flag' ]   
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @rulename = ] 'rule'` 由 CREATE RULE 语句创建的规则的名称。 *规则* 为 **nvarchar (776) **，无默认值。  
+## <a name="arguments"></a>自变量  
+`[ @rulename = ] 'rule'` 由 CREATE RULE 语句创建的规则的名称。 *规则* 为 **nvarchar (776)**，无默认值。  
   
-`[ @objname = ] 'object_name'` 是要将规则绑定到的表和列或别名数据类型。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列********************************。 无法将规则绑定到计算列。  
+`[ @objname = ] 'object_name'` 是要将规则绑定到的表和列或别名数据类型。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列。 无法将规则绑定到计算列。  
   
- *object_name* 为 **nvarchar (776) ** ，无默认值。 如果 *object_name* 是由一个部分组成的名称，则将其解析为别名数据类型。 如果是由两部分或三部分组成的名称，则首先按表和列进行解析；如果解析失败，则按别名数据类型进行解析。 默认情况下，除非规则直接绑定到列，否则别名数据类型的现有列将继承 *规则* 。  
+ *object_name* 为 **nvarchar (776)** ，无默认值。 如果 *object_name* 是由一个部分组成的名称，则将其解析为别名数据类型。 如果是由两部分或三部分组成的名称，则首先按表和列进行解析；如果解析失败，则按别名数据类型进行解析。 默认情况下，除非规则直接绑定到列，否则别名数据类型的现有列将继承 *规则* 。  
   
 > [!NOTE]  
 >  *object_name* 可以将方括号 **[** 和 **]** 字符包含为带分隔符的标识符字符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
@@ -58,7 +58,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  可以将针对使用别名数据类型的表达式创建的规则绑定到列或别名数据类型，但在引用这些规则时无法编译它们。 避免使用对别名数据类型创建的规则。  
   
-`[ @futureonly = ] 'futureonly_flag'` 仅在将规则绑定到别名数据类型时使用。 *future_only_flag* 是 **varchar (15) ** ，默认值为 NULL。 此参数设置为 **futureonly** 时，会阻止别名数据类型的现有列继承新规则。 如果 *futureonly_flag* 为 NULL，则会将新规则绑定到当前没有规则或使用别名数据类型的现有规则的别名数据类型的任何列。  
+`[ @futureonly = ] 'futureonly_flag'` 仅在将规则绑定到别名数据类型时使用。 *future_only_flag* 是 **varchar (15)** ，默认值为 NULL。 此参数设置为 **futureonly** 时，会阻止别名数据类型的现有列继承新规则。 如果 *futureonly_flag* 为 NULL，则会将新规则绑定到当前没有规则或使用别名数据类型的现有规则的别名数据类型的任何列。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -68,7 +68,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
   
  当尝试执行 INSERT 语句时（而非绑定时），将强行执行规则。 可以将字符规则绑定到 **数值** 数据类型的列，但此类插入操作无效。  
   
- 除非将 *futureonly_flag* 指定为 **futureonly**，否则别名数据类型的现有列将继承新规则。 使用别名数据类型定义的新列始终继承规则。 但是，如果 ALTER TABLE 语句的 ALTER COLUMN 子句将列的数据类型更改为绑定规则的别名数据类型，那么列不会继承与数据类型绑定的规则。 必须使用 **sp_bindrule**专门将规则绑定到列。  
+ 除非将 *futureonly_flag* 指定为 **futureonly**，否则别名数据类型的现有列将继承新规则。 使用别名数据类型定义的新列始终继承规则。 但是，如果 ALTER TABLE 语句的 ALTER COLUMN 子句将列的数据类型更改为绑定规则的别名数据类型，那么列不会继承与数据类型绑定的规则。 必须使用 **sp_bindrule** 专门将规则绑定到列。  
   
  将规则绑定到列时，相关信息将添加到 **sys.databases** 表中。 将规则绑定到别名数据类型时，相关信息将添加到 **sys.databases** 表中。  
   
@@ -87,7 +87,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 将规则绑定到别名数据类型  
- 假设存在名为 `rule_ssn` 的规则和名为 `ssn` 的别名数据类型，以下示例将 `rule_ssn` 绑定到 `ssn`。 在 CREATE TABLE 语句中，类型为 `ssn` 的列会继承 `rule_ssn` 规则。 类型为的现有列 `ssn` 还继承此 `rule_ssn` 规则，除非为*futureonly_flag*指定**futureonly**或 `ssn` 直接绑定规则。 绑定到列的规则始终优先于绑定到数据类型的规则。  
+ 假设存在名为 `rule_ssn` 的规则和名为 `ssn` 的别名数据类型，以下示例将 `rule_ssn` 绑定到 `ssn`。 在 CREATE TABLE 语句中，类型为 `ssn` 的列会继承 `rule_ssn` 规则。 类型为的现有列 `ssn` 还继承此 `rule_ssn` 规则，除非为 *futureonly_flag* 指定 **futureonly** 或 `ssn` 直接绑定规则。 绑定到列的规则始终优先于绑定到数据类型的规则。  
   
 ```  
 USE master;  

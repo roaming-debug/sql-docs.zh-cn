@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1099243569f74cc5c50c90de1ec7bf35a5c53d51
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2cef670429ad9a086916e49049b7e28d03ad424f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005816"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462798"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys.query_store_query (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92005816"
 |**context_settings_id**|**bigint**|外键。 联接到 [&#40;transact-sql&#41;sys.query_context_settings ](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)。<br/>**注意：** Azure Synapse Analytics 将始终返回零 (0) 。|  
 |object_id|**bigint**|查询所属的数据库对象的 ID (存储过程、触发器、CLR UDF/UDAgg 等 ) 。 如果查询未作为数据库对象的一部分执行，则为 0 (即席查询) 。<br/>**注意：** Azure Synapse Analytics 将始终返回零 (0) 。|  
 |**batch_sql_handle**|**varbinary(64)**|查询所属的语句批处理的 ID。 仅当查询引用临时表或表变量时才填充。<br/>**注意：** Azure Synapse Analytics 将始终返回 *NULL*。|  
-|**query_hash**|**二进制 (8) **|基于逻辑查询树的单个查询的 MD5 哈希。 包含优化器提示。|  
+|**query_hash**|**二进制 (8)**|基于逻辑查询树的单个查询的 MD5 哈希。 包含优化器提示。|  
 |**is_internal_query**|**bit**|查询是在内部生成的。<br/>**注意：** Azure Synapse Analytics 将始终返回零 (0) 。|  
 |**query_parameterization_type**|**tinyint**|参数化类型：<br /><br /> 0 - 无<br /><br /> 1-用户<br /><br /> 2-简单<br /><br /> 3-强制<br/>**注意：** Azure Synapse Analytics 将始终返回零 (0) 。|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|参数化类型的文本说明。<br/>**注意：** Azure Synapse Analytics 将始终返回 *None*。|  

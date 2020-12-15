@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3271963cf5a07e88b6209bd2b7316ab40f43bc05
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328594"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461528"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "93328594"
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|标识备份集的唯一备份集标识号。 标识，主键。|  
 |**backup_set_uuid**|**uniqueidentifier**|标识备份集的唯一备份集标识号。|  
-|**media_set_id**|**int**|标识备份集所在介质集的唯一介质集标识号。 引用 **backupmediaset (media_set_id)** 。|  
+|**media_set_id**|**int**|标识备份集所在介质集的唯一介质集标识号。 引用 **backupmediaset (media_set_id)**。|  
 |**first_family_number**|**tinyint**|备份集中第一个介质簇的编号。 可以为 NULL。|  
 |**first_media_number**|**smallint**|备份集从此处开始的介质的编号。 可以为 NULL。|  
 |**last_family_number**|**tinyint**|备份从此处结束的介质的编号。 可以为 NULL。|  
@@ -90,19 +90,19 @@ ms.locfileid: "93328594"
 |**has_incomplete_metadata**|**bit**|1 = 带不完整元数据的结尾日志备份。 有关详细信息，请参阅[结尾日志备份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。|  
 |**is_force_offline**|**bit**|1 = 进行备份时，使用了 NORECOVERY 选项使数据库脱机。|  
 |**is_copy_only**|**bit**|1 = 仅复制备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。|  
-|**first_recovery_fork_guid**|**uniqueidentifier**|起始恢复分叉的 ID。 这对应于 RESTORE HEADERONLY 的 **FirstRecoveryForkID** 。<br /><br /> 对于数据备份， **first_recovery_fork_guid** 等于 **last_recovery_fork_guid** 。|  
-|**last_recovery_fork_guid**|**uniqueidentifier**|结束恢复分叉的 ID。 这对应于 RESTORE HEADERONLY 的 **RecoveryForkID** 。<br /><br /> 对于数据备份， **first_recovery_fork_guid** 等于 **last_recovery_fork_guid** 。|  
-|**fork_point_lsn**|**numeric(25,0)**|如果 **first_recovery_fork_guid** 不等于 **last_recovery_fork_guid** ，则这是分叉点的日志序列号。 否则，该值为 NULL。|  
+|**first_recovery_fork_guid**|**uniqueidentifier**|起始恢复分叉的 ID。 这对应于 RESTORE HEADERONLY 的 **FirstRecoveryForkID** 。<br /><br /> 对于数据备份， **first_recovery_fork_guid** 等于 **last_recovery_fork_guid**。|  
+|**last_recovery_fork_guid**|**uniqueidentifier**|结束恢复分叉的 ID。 这对应于 RESTORE HEADERONLY 的 **RecoveryForkID** 。<br /><br /> 对于数据备份， **first_recovery_fork_guid** 等于 **last_recovery_fork_guid**。|  
+|**fork_point_lsn**|**numeric(25,0)**|如果 **first_recovery_fork_guid** 不等于 **last_recovery_fork_guid**，则这是分叉点的日志序列号。 否则，该值为 NULL。|  
 |**database_guid**|**uniqueidentifier**|数据库的唯一 ID。 这对应于 RESTORE HEADERONLY 的 **BindingID** 。 还原数据库时，将分配一个新值。|  
 |**family_guid**|**uniqueidentifier**|创建时原始数据库的唯一 ID。 还原数据库时，即使还原为其他名称，此值也保持不变。|  
 |**differential_base_lsn**|**numeric(25,0)**|差异备份的基准 LSN。 对于基于单一的差异备份，为;在差异备份中包括 Lsn 大于或等于 **differential_base_lsn** 的更改。<br /><br /> 对于多基准差异，该值为 NULL，并且必须在文件级别确定基本 LSN (请参阅 [backupfile &#40;transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)) 。<br /><br /> 对于非差异备份类型，该值始终为 NULL。|  
 |**differential_base_guid**|**uniqueidentifier**|对于单基准的差异备份，该值为差异基准的唯一标识符。<br /><br /> 对于多基准的差异备份，该值为 NULL，并且必须在文件级别确定差异基准。<br /><br /> 对于非差异备份类型，该值为 NULL。|  
-|**compressed_backup_size**|**数值 (20，0)**|磁盘上存储的备份的总字节数。<br /><br /> 若要计算压缩率，请使用 **compressed_backup_size** 和 **backup_size** 。<br /><br /> 在 **msdb** 升级期间，此值设置为 NULL。 表示未压缩的备份。|  
+|**compressed_backup_size**|**数值 (20，0)**|磁盘上存储的备份的总字节数。<br /><br /> 若要计算压缩率，请使用 **compressed_backup_size** 和 **backup_size**。<br /><br /> 在 **msdb** 升级期间，此值设置为 NULL。 表示未压缩的备份。|  
 |**key_algorithm**|**nvarchar(32)**|用于加密备份的加密算法。 NO_Encryption 值指示备份未加密。|  
 |**encryptor_thumbprint**|**varbinary(20)**|可用于在数据库中查找证书或非对称密钥的加密程序的指纹。 在备份未加密的情况下，此值为 NULL。|  
 |**encryptor_type**|**nvarchar(32)**|使用的加密程序的类型：证书或非对称密钥。 . 在备份未加密的情况下，此值为 NULL。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  RESTORE VERIFYONLY FROM *backup_device* with LOADHISTORY，用介质集标头中的相应值填充 **backupmediaset** 表的列。  
   
  若要减少此表以及其他备份和历史记录表中的行数，请执行 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 存储过程。  

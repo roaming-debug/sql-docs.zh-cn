@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 591bba14af18f8c622ffa5547339fd0024cf4445
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: a8f3cfc9e47cc18df2728e7b6078cc355c488fa0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059515"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440792"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql) 
 
@@ -77,7 +77,7 @@ ms.locfileid: "92059515"
 ## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
  [&#40;Transact-sql&#41;的 Azure Synapse 分析和并行数据仓库动态管理视图 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
