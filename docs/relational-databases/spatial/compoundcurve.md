@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60254364eb7dd4151ee309258f75039bd59628a1
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 919e71894dbf01ce015bed8eb3cc801bbad29c4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006366"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415954"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92006366"
 ![CompoundCurve 示例](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
 ### <a name="accepted-instances"></a>接受的实例  
- 如果**CompoundCurve** 实例是空实例或者它满足以下条件，则接受该实例。  
+ 如果 **CompoundCurve** 实例是空实例或者它满足以下条件，则接受该实例。  
   
 1.  **CompoundCurve** 实例包含的所有实例都是接受的圆弧线段实例。 有关接受的圆弧线段实例的详细信息，请参阅 [LineString](../../relational-databases/spatial/linestring.md) 和 [CircularString](../../relational-databases/spatial/circularstring.md)。  
   
