@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae4c4e9d063d087c4018874a82631e2163c44ffd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1d365cf2e3120e1156267a49f0aec1607ce1efa3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448537"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483318"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ RETCODE bcp_readfmt (
         LPCTSTR szFormatFile);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
@@ -51,13 +51,13 @@ RETCODE bcp_readfmt (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  
- **Bcp_readfmt**读取格式值后，它将对[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)进行适当的调用。 您无需分析格式文件和进行这些调用。  
+ **Bcp_readfmt** 读取格式值后，它将对 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)进行适当的调用。 您无需分析格式文件和进行这些调用。  
   
  若要保存格式化文件，请调用 [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)。 对 **bcp_readfmt** 的调用可以引用保存的格式。 有关详细信息，请参阅 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
   
- 此外，大容量复制实用工具 (**bcp**) 可以将用户定义的数据格式保存在可由 **bcp_readfmt**引用的文件中。 有关 **bcp** 实用工具和 **bcp** 数据格式文件的结构的详细信息，请参阅 [批量导入和导出数据 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
+ 此外，大容量复制实用工具 (**bcp**) 可以将用户定义的数据格式保存在可由 **bcp_readfmt** 引用的文件中。 有关 **bcp** 实用工具和 **bcp** 数据格式文件的结构的详细信息，请参阅 [批量导入和导出数据 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
- [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)的*EOption*参数的**BCPDELAYREADFMT**值会修改 bcp_readfmt 的行为。  
+ [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)的 *EOption* 参数的 **BCPDELAYREADFMT** 值会修改 bcp_readfmt 的行为。  
   
 > [!NOTE]  
 >  格式化文件必须由 **bcp** 实用工具版本4.2 或更高版本生成。  

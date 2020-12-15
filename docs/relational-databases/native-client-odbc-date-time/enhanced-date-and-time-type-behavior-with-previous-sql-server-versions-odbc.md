@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83616c86aec74aa7d30c71d9347722d89f1448e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0d9f25706641a20a59c01d44b487ef692e9cdbb2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420611"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483379"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>与 SQL Server 早期版本的增强日期和时间类型行为 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "88420611"
 |||SQL_C_TYPE_TIMESTAMP|失败-时间文本无效。|确定 (1) |  
 ||Datetime2 (3) |SQL_C_TYPE_TIMESTAMP|OK|确定 (1) |  
 ||Datetime2 (7) |SQL_C_TYPE_TIMESTAMP|OK|由客户端转换将值舍入到 1/300 秒。|  
-|Smalldatetime|Date|SQL_C_TYPE_DATE|确定|确定|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|确定|确定|  
+||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则失败。<br /><br /> 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|确定|确定|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
 |||||
 
 ## <a name="key-to-symbols"></a>符号含义  

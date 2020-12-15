@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_resource_governor_external_resource_pools (Transact-sql) '
-title: sys. dm_resource_governor_external_resource_pools (Transact-sql) |Microsoft Docs
+description: 'sys.dm_resource_governor_external_resource_pools (Transact-sql) '
+title: sys.dm_resource_governor_external_resource_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2020
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 99a85cb9c329752e35f720ec97dabbb417498d3d
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 1fdce8416bf28b1013b32efb5c2d1dc46c76831d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283628"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484589"
 ---
-# <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-sql) 
+# <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact-sql) 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 返回有关当前外部资源池状态、资源池的当前配置以及资源池统计信息的信息。 

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e4219850fec566b39371629226e74e5d6aeaf00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e64e436569f264fe5962a572929b058f5e1946dd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539165"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484519"
 ---
 # <a name="query-store-stored-procedures-transact-sql"></a>查询存储存储过程 (Transact-sql) 
 
@@ -37,7 +37,7 @@ ms.locfileid: "89539165"
   
 -   [sp_query_store_force_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)  
   
--   [sp_query_store_remove_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)  
+-   [sp_query_store_remove_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)  
   
 -   [sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2892b0d7618d14df3e551408b2f7f8518c11c95f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 52011d178bdb7e0aa5d3cf20ffc779499ae0152e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455874"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483228"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>使用格式化文件执行大容量复制 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

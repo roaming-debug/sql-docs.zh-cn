@@ -1,5 +1,5 @@
 ---
-title: datetime 数据类型转换（ODBC） |Microsoft Docs
+title: datetime 数据类型转换 (ODBC) |Microsoft Docs
 description: 了解 ODBC 中的数据类型转换，这些转换已经由 ODBC 定义，或者是 ODBC 的一致扩展。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e33745f9ab1cfdfe9ae20a2a9aea6386d5072075
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4876f47266dc0e5053606f9543473f9d283b4470
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004350"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483409"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 数据类型转换 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86004350"
   
 -   日期字符串的格式为 'yyyy-mm-dd'  
   
- 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅[针对 ODBC 日期和时间改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)中的 "数据格式：字符串和文字" 部分。  
+ 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅 [针对 ODBC 日期和时间改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)中的 "数据格式：字符串和文字" 部分。  
   
  下面是一般的转换规则：  
   
@@ -61,6 +62,6 @@ ms.locfileid: "86004350"
  列出了在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间类型转换到 C 类型时要考虑的问题。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC&#41;&#40;的日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;的日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

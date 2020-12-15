@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e37533e1c57ccf55dfe8bb7b5cbc5aa3da60dd3f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 071146a14be3dbeff057845f0458de422617430f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890786"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483108"
 ---
 # <a name="performing-transactions-in-odbc"></a>在 ODBC 中执行事务
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "91890786"
   
 -   手动提交模式  
   
-     所有已执行的语句都包含在同一事务中，直到通过调用 **SQLEndTran**专门停止它。  
+     所有已执行的语句都包含在同一事务中，直到通过调用 **SQLEndTran** 专门停止它。  
   
- 自动提交模式是针对 ODBC 的默认的事务模式。 建立连接后，该连接处于自动提交模式，直到调用 **SQLSetConnectAttr** ，通过设置自动提交模式来切换为手动提交模式。 在应用程序关闭自动提交后，发送到数据库的下一个语句将开始某一事务。 然后，在应用程序调用带有 SQL_COMMIT 或 SQL_ROLLBACK 选项的 **SQLEndTran** 之前，该事务将一直有效。 **SQLEndTran**在启动下一个事务后发送到数据库的命令。  
+ 自动提交模式是针对 ODBC 的默认的事务模式。 建立连接后，该连接处于自动提交模式，直到调用 **SQLSetConnectAttr** ，通过设置自动提交模式来切换为手动提交模式。 在应用程序关闭自动提交后，发送到数据库的下一个语句将开始某一事务。 然后，在应用程序调用带有 SQL_COMMIT 或 SQL_ROLLBACK 选项的 **SQLEndTran** 之前，该事务将一直有效。 **SQLEndTran** 在启动下一个事务后发送到数据库的命令。  
   
  如果应用程序从手动提交模式切换到自动提交模式，则驱动程序将提交在该连接上当前打开的所有事务。  
   

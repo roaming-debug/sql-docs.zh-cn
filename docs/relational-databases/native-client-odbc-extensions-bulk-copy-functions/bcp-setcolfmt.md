@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01576468fb54618e34f72bbd42fbd1ae861c8520
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5f97b9fbd9c3f53dab9bcfaa07863dcf1d8b861c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420531"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483298"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **Bcp_setcolfmt**函数取代了[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 在指定列排序规则时，必须使用 **bcp_setcolfmt** 函数。 [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) 可用于指定多个列格式。  
+  **Bcp_setcolfmt** 函数取代了 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 在指定列排序规则时，必须使用 **bcp_setcolfmt** 函数。 [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) 可用于指定多个列格式。  
   
  该函数提供在大容量复制操作中指定列格式的灵活方法。 它用于设置单独的列格式属性。 对的每个调用都将设置一个列格式特性 **bcp_setcolfmt** 。  
   
- **Bcp_setcolfmt**函数指定用户文件中数据的源或目标格式。 用作源格式时， **bcp_setcolfmt** 指定在大容量复制到中的表中用作数据源的现有数据文件的格式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 用作目标格式时，将使用 **bcp_setcolfmt**指定的列格式创建数据文件。  
+ **Bcp_setcolfmt** 函数指定用户文件中数据的源或目标格式。 用作源格式时， **bcp_setcolfmt** 指定在大容量复制到中的表中用作数据源的现有数据文件的格式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 用作目标格式时，将使用 **bcp_setcolfmt** 指定的列格式创建数据文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ RETCODE bcp_setcolfmt (
         INT cbValue);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
@@ -57,7 +57,7 @@ RETCODE bcp_setcolfmt (
  *property*  
  属性常量之一。 在下表中定义属性常量。  
   
-|属性|值|描述|  
+|Property|值|说明|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|用户文件中此列的数据类型。 如果不同于数据库表中相应列的数据类型，则大容量复制将根据情况转换数据。<br /><br /> BCP_FMT_TYPE 参数由 sqlncli.h 中的 SQL Server 数据类型标记枚举，而非采用 ODBC C 数据类型枚举器。 例如，您可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SQLCHARACTER 类型指定一个字符串：ODBC 类型 SQL_C_CHAR。<br /><br /> 若要为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型指定默认的数据表示形式，则将此参数设置为 0。<br /><br /> 对于从 SQL Server 大容量复制到文件中，当 BCP_FMT_TYPE 为 SQLDECIMAL 或 SQLNUMERIC 时，如果源列不是 **decimal** 或 **numeric**，则使用默认的精度和小数位数。 否则，如果源列为 **decimal** 或 **numeric**，则使用源列的精度和小数位数。|  
 |BCP_FMT_INDICATOR_LEN|INT|以字节表示的指示器（前缀）的长度。<br /><br /> 它是列数据中以字节表示的长度/空指示器的长度。 有效的指示器长度值是 0（在未使用指示器时）、1、2 或 4。<br /><br /> 若要指定默认的大容量复制指示器用法，请将此参数设置为 SQL_VARLEN_DATA。<br /><br /> 指示器在内存中出现在任何数据的紧前面，在数据文件中出现在它们适用于的数据的紧前面。<br /><br /> 如果使用多种方法来指定数据文件列长度（例如指示器和最大列长度，或者指示器和终止符序列），则大容量复制将选择导致数据复制量最少的方法。<br /><br /> 如果列数据可能在长度上发生变化或列可能接受 NULL 作为值，则在没有调整数据格式的用户干预时，大容量复制生成的数据文件将包含指示器。|  
@@ -67,7 +67,7 @@ RETCODE bcp_setcolfmt (
 |BCP_FMT_COLLATION|LPCSTR|排序规则名。|  
   
  *pValue*  
- 指向要关联到 *属性*的值的指针。 它允许单独设置每个列格式属性。  
+ 指向要关联到 *属性* 的值的指针。 它允许单独设置每个列格式属性。  
   
  *cbvalue*  
  以字节表示的属性缓冲区的长度。  
@@ -76,7 +76,7 @@ RETCODE bcp_setcolfmt (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  
- 此函数取代了 **bcp_colfmt** 函数。 **Bcp_setcolfmt**函数中提供了**bcp_colfmt**的所有功能。 此外，还提供对列排序规则的支持。 建议按照下面给出的顺序设置以下列格式属性：  
+ 此函数取代了 **bcp_colfmt** 函数。 **Bcp_setcolfmt** 函数中提供了 **bcp_colfmt** 的所有功能。 此外，还提供对列排序规则的支持。 建议按照下面给出的顺序设置以下列格式属性：  
   
  BCP_FMT_SERVER_COL  
   
@@ -84,7 +84,7 @@ RETCODE bcp_setcolfmt (
   
  BCP_FMT_TYPE  
   
- **Bcp_setcolfmt**函数允许您为大容量复制指定用户文件格式。 对于大容量复制，格式包含以下部分：  
+ **Bcp_setcolfmt** 函数允许您为大容量复制指定用户文件格式。 对于大容量复制，格式包含以下部分：  
   
 -   从用户文件列到数据库列的映射。  
   
@@ -98,9 +98,9 @@ RETCODE bcp_setcolfmt (
   
 -   可选终止字节序列的长度。  
   
- 对 **bcp_setcolfmt** 的每个调用都指定一个用户文件列的格式。 例如，若要更改五行用户数据文件中三列的默认设置，请首先调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) ** (5) **，然后调用**bcp_setcolfmt** 5 次，其中三个调用设置您的自定义格式。 对于剩余的两次调用，将 BCP_FMT_TYPE 设置为0，并分别将 BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN 和 *cbValue* 设置为0、SQL_VARLEN_DATA 和0。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
+ 对 **bcp_setcolfmt** 的每个调用都指定一个用户文件列的格式。 例如，若要更改五行用户数据文件中三列的默认设置，请首先调用 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)**，然后调用 **bcp_setcolfmt** 5 次，其中三个调用设置您的自定义格式。 对于剩余的两次调用，将 BCP_FMT_TYPE 设置为0，并分别将 BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN 和 *cbValue* 设置为0、SQL_VARLEN_DATA 和0。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
   
- 调用**bcp_setcolfmt**之前，必须先调用**bcp_columns**函数。  
+ 调用 **bcp_setcolfmt** 之前，必须先调用 **bcp_columns** 函数。  
   
  您必须对用户文件中每个列的每个属性调用一次 **bcp_setcolfmt** 。  
   

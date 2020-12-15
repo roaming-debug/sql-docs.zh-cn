@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5531450e79b036138e581aa0fb8083ebb121c6f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c4b37d6bd4acfb88aacbeb7f86186bb8a3fcf02c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670858"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484549"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @rolename =] "*role*"  
  当前数据库中的数据库角色的名称。 *role* 是 **sysname**，无默认值。  
   
@@ -70,7 +70,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
 -   具有拥有该角色的角色的成员身份。  
   
--   对角色具有**ALTER ANY role**权限或**alter**权限。  
+-   对角色具有 **ALTER ANY role** 权限或 **alter** 权限。  
   
  向固定数据库角色添加成员要求具有 db_owner 固定数据库角色的成员身份。  
   

@@ -1,6 +1,6 @@
 ---
-description: 'sys. security_predicates (Transact-sql) '
-title: sys. security_predicates (Transact-sql) |Microsoft Docs
+description: 'sys.security_predicates (Transact-sql) '
+title: sys.security_predicates (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2ba8b6c9c4a2fc2f6b3beb562edfac0728678fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 629d2eb6cc4bd9451800be12f9739209548c1df2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490126"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484719"
 ---
-# <a name="syssecurity_predicates-transact-sql"></a>sys. security_predicates (Transact-sql) 
+# <a name="syssecurity_predicates-transact-sql"></a>sys.security_predicates (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   为数据库中的每个安全谓词返回一行。  

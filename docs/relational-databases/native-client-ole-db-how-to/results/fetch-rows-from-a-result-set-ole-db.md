@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c90271fb87622c4406570d2e2fde23e15e6fd33
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eb26d3ff6239116ac846ed5b5fe0ebbc19924fc1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867639"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483238"
 ---
 # <a name="fetch-rows-from-a-result-set-native-client-ole-db-provider"></a>从结果集中提取行 (Native Client OLE DB 提供程序) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

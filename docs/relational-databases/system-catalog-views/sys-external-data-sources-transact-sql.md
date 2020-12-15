@@ -1,6 +1,6 @@
 ---
 description: sys.external_data_sources (Transact-SQL)
-title: sys. external_data_sources (Transact-sql) |Microsoft Docs
+title: sys.external_data_sources (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 130b23f2961f1b2d2abec96c1f0f1b32400db0a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e6edde5c73a094449d5e91b8f26de3afd455dd63
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546860"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482908"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "89546860"
 |name|**sysname**|外部数据源的名称。||  
 |location|**nvarchar(4000)**|连接字符串，其中包括用于外部数据源的协议、IP 地址和端口。||  
 |type_desc|**nvarchar(255)**|以字符串形式显示的数据源类型。|HADOOP、RDBMS、SHARD_MAP_MANAGER、RemoteDataArchiveTypeExtDataSource|  
-|类型|**tinyint**|以数字形式显示的数据源类型。|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
+|type|**tinyint**|以数字形式显示的数据源类型。|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|对于类型 HADOOP，为 Hadoop 资源管理器的 IP 和端口位置。 这用于在 Hadoop 数据源上提交作业。<br /><br /> 对于其他类型的外部数据源为 NULL。||  
 |credential_id|**int**|用于连接到外部数据源的数据库范围凭据的对象 ID。||  
 |database_name|**sysname**|对于类型 RDBMS，为远程数据库的名称。 对于 "类型"，请 SHARD_MAP_MANAGER 分片映射管理器数据库的名称。 对于其他类型的外部数据源为 NULL。||  
@@ -45,8 +45,8 @@ ms.locfileid: "89546860"
  目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. external_file_formats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
- [sys. external_tables &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
+ [sys.external_file_formats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
+ [sys.external_tables &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   

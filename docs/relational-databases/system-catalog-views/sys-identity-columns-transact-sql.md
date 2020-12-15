@@ -1,6 +1,6 @@
 ---
 description: sys.identity_columns (Transact-SQL)
-title: sys. identity_columns (Transact-sql) |Microsoft Docs
+title: sys.identity_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 97ee01e6-9c9e-4fd9-884b-68b4084669d5
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67282343c26f607ef0d6f44401cdf2a1c291fafd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 195768c830e13f2cb61f04bff9fe67f6eefe6dc4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420131"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484759"
 ---
 # <a name="sysidentity_columns-transact-sql"></a>sys.identity_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   作为标识列的每个列各占一行。  
   
- **Sys.databases identity_columns**视图继承**sys.databases**视图中的行。 **Sys. identity_columns**视图返回**sys.databases**视图中的列，以及**seed_value**、 **increment_value**、 **last_value**和**is_not_for_replication**列。 有关详细信息，请参阅[目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
+ **Sys.identity_columns** 视图继承 **sys.databases** 视图中的行。 **Sys.identity_columns** 视图返回 **sys.databases** 视图中的列，以及 **seed_value**、 **increment_value**、 **last_value** 和 **is_not_for_replication** 列。 有关详细信息，请参阅[目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<columns inherited from sys.columns>**||**Sys. identity_columns**视图返回**sys.databases**视图中的所有列。 它还返回如下所述的其他列。 有关**sys.databases identity_columns**视图继承自**sys.databases**的列的说明，请参阅[&#40;transact-sql&#41;的 sys.databases。 ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)|  
+|**\<columns inherited from sys.columns>**||**Sys.identity_columns** 视图返回 **sys.databases** 视图中的所有列。 它还返回如下所述的其他列。 有关 **sys.identity_columns** 视图继承自 **sys.databases** 的列的说明，请参阅 [&#40;transact-sql&#41;的 sys.databases。](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)|  
 |**seed_value**|**sql_variant**|该标识列的种子值。 种子值的数据类型与列本身的数据类型相同。|  
 |**increment_value**|**sql_variant**|该标识列的增量值。 种子值的数据类型与列本身的数据类型相同。|  
 |**last_value**|**sql_variant**|为该标识列生成的最后一个值。 种子值的数据类型与列本身的数据类型相同。|  

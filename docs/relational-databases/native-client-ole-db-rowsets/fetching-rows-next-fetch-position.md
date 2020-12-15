@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9ef74b3f-c9c0-492f-9b93-d65738a61abd
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0f1fd4da86bdd0c7cbe0df0c832554566e93b88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 819d790e94026be70861e1fe3d1d4ad547ca77e9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448360"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483148"
 ---
 # <a name="fetching-rows---next-fetch--native-client-ole-db-provider"></a>提取行-下一次提取 (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序跟踪下一个提取位置，以便对**GetNextRows**方法的调用序列 (无需跳过、方向更改或对**FindNextRow**、 **Seek**或**RestartPosition**方法的干预调用，) 读取整个行集，而无需跳过或重复任何行。 可以通过调用 IRowset::GetNextRows、IRowset::RestartPosition 或 IRowsetIndex::Seek，或通过调用 FindNextRow 且 pBookmark 值为空来更改下次提取位置      。 调用 FindNextRow 且 pBookmark 值不为空时，不会影响下次提取位置   。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序跟踪下一个提取位置，以便对 **GetNextRows** 方法的调用序列 (无需跳过、方向更改或对 **FindNextRow**、 **Seek** 或 **RestartPosition** 方法的干预调用，) 读取整个行集，而无需跳过或重复任何行。 可以通过调用 IRowset::GetNextRows、IRowset::RestartPosition 或 IRowsetIndex::Seek，或通过调用 FindNextRow 且 pBookmark 值为空来更改下次提取位置      。 调用 FindNextRow 且 pBookmark 值不为空时，不会影响下次提取位置   。  
   
 ## <a name="see-also"></a>另请参阅  
  [提取行](../../relational-databases/native-client-ole-db-rowsets/fetching-rows.md)  

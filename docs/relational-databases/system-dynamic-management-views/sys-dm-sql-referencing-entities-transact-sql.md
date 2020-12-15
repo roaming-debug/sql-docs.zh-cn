@@ -1,6 +1,6 @@
 ---
 description: sys.dm_sql_referencing_entities (Transact-SQL)
-title: sys. dm_sql_referencing_entities (Transact-sql) |Microsoft Docs
+title: sys.dm_sql_referencing_entities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9855ef4c747c411476df5700f4a61f43f31de299
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 517e6f8faaccf40091535b8a78d47d0fa8a43032
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550187"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484569"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  针对当前数据库中按名称引用另一个用户定义实体的每个实体均返回一行。 两个实体之间的依赖关系是在另一个实体（称为 "*引用实体* *"）的*持久化 SQL 表达式中按名称显示的。 例如，如果将某个用户定义类型 (UDT) 指定为被引用的实体，则此函数将返回在其定义中按名称引用该类型的每个用户定义实体。 该函数不会返回其他数据库中可能引用该指定实体的实体。 必须在 master 数据库的上下文中执行该函数，以便将服务器级 DDL 触发器作为引用实体返回。  
+  针对当前数据库中按名称引用另一个用户定义实体的每个实体均返回一行。 两个实体之间的依赖关系是在另一个实体（称为 "*引用实体* *"）的* 持久化 SQL 表达式中按名称显示的。 例如，如果将某个用户定义类型 (UDT) 指定为被引用的实体，则此函数将返回在其定义中按名称引用该类型的每个用户定义实体。 该函数不会返回其他数据库中可能引用该指定实体的实体。 必须在 master 数据库的上下文中执行该函数，以便将服务器级 DDL 触发器作为引用实体返回。  
   
  可以使用此动态管理函数来报告当前数据库中引用指定实体的以下类型实体：  
   
@@ -60,12 +60,12 @@ sys.dm_sql_referencing_entities (
 }  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `schema_name.referenced_entity_name` 被引用实体的名称。  
   
  `schema_name` 是必需的，但是当被引用的类是 PARTITION_FUNCTION 时除外。  
   
- `schema_name.referenced_entity_name` 为 **nvarchar (517) **。  
+ `schema_name.referenced_entity_name` 为 **nvarchar (517)**。  
   
  `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }` 被引用实体的类。 每个语句只能指定一个类。  
   
@@ -127,7 +127,7 @@ sys.dm_sql_referencing_entities (
   
 -   需要对引用对象拥有 CONTROL 权限。 当被引用的实体是分区函数时，要求对数据库拥有 CONTROL 权限。  
   
--   需要对 sys.databases 的 SELECT 权限。 dm_sql_referencing_entities。 默认情况下，SELECT 权限授予 public。  
+-   需要 sys.dm_sql_referencing_entities 上的 SELECT 权限。 默认情况下，SELECT 权限授予 public。  
   
 ### <a name="sssql14---sscurrent"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   

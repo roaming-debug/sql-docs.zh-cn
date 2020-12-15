@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5ace381694dcc3afdbed36e35e48af147067b32
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 23f772f61191f593900147a293400997345844bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005963"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483128"
 ---
 # <a name="create-a-distributed-transaction"></a>创建分布式事务
 
@@ -52,9 +52,9 @@ Microsoft 分布式事务处理协调器 (MSDTC) 允许应用程序跨两个或�
 3. 应用程序会更新计算机 B 上 SQL Server Y 上的一些数据。
     - 如果 SQL Server Y 上的更新失败，则将回滚两个 SQL Server 实例上的所有未提交的更新。
 
-4. 最后，应用程序通过使用 SQL_COMMIT 或 SQL_ROLLBACK 选项调用 [SQLEndTran _ (1) _](../../../relational-databases/native-client-odbc-api/sqlendtran.md)来结束事务。
+4. 最后，应用程序通过使用 SQL_COMMIT 或 SQL_ROLLBACK 选项调用 [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md)来结束事务。
 
-_ (1) _ 无需 ODBC 即可调用 MSDTC。 在这种情况下，MSDTC 成为事务管理器，应用程序不再使用 **SQLEndTran**。
+_(1)_ 无需 ODBC 即可调用 MSDTC。 在这种情况下，MSDTC 成为事务管理器，应用程序不再使用 **SQLEndTran**。
 
 ### <a name="only-one-distributed-transaction"></a>仅一个分布式事务
 

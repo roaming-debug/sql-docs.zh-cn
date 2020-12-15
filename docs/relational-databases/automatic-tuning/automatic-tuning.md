@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65fc7918a3e8064310757a2875e62d6e001f750c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 57a595a2bcb78d86c3a770db6b584974c229a0df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808403"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483649"
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 自动优化是一种数据库功能，提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。
 
-自动优化（在中引入 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ）会在检测到潜在性能问题时通知你，并允许你应用纠正措施，或让你能够 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 自动修复性能问题。 利用自动优化， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以确定并修复由 **查询执行计划选择回归**导致的性能问题。 自动优化 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 还会创建必要的索引并删除未使用的索引。 有关查询执行计划的详细信息，请参阅 [执行计划](../../relational-databases/performance/execution-plans.md)。
+自动优化（在中引入 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ）会在检测到潜在性能问题时通知你，并允许你应用纠正措施，或让你能够 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 自动修复性能问题。 利用自动优化， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以确定并修复由 **查询执行计划选择回归** 导致的性能问题。 自动优化 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 还会创建必要的索引并删除未使用的索引。 有关查询执行计划的详细信息，请参阅 [执行计划](../../relational-databases/performance/execution-plans.md)。
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]监视在数据库上执行的查询，并自动提高工作负荷的性能。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]具有内置的智能机制，可通过动态调整数据库以适应工作负荷，自动优化和提高查询的性能。 有两种自动优化功能可用：
 
@@ -101,7 +101,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 在中 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] ，可以使用查询存储系统视图查找计划选择回归。 从开始 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ，将 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 检测并显示潜在的计划选择回归和建议的操作，这些操作应在 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV 中应用。 DMV 显示了有关问题的信息、问题的重要性，以及详细信息，如标识的查询、回归计划的 ID、用作比较基线的计划的 ID 以及 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可以执行以修复问题的语句。
 
-| 类型 | description | datetime | score | 详细信息 | ... |
+| type | description | datetime | score | 详细信息 | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 时间从4毫秒更改为14毫秒 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 时间从 37 ms 更改为84毫秒 | 2017 年 3 月 16 日 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

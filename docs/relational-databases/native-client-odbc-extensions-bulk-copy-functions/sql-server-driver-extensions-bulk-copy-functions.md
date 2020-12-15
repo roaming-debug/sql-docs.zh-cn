@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8de90d38e540b4c4964581ef434514bc734cbdf0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2aaf93f2fd7428cde5d561822b50a551e66f6c33
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483258"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>SQL Server 驱动程序扩展 - 大容量复制函数
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

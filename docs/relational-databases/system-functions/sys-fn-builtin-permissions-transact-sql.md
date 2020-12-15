@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4738fca47b35cae4e6b895ac59aa26213f17a7d8
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 117c4c2e6bc3e08ea32869cd198850eb3bb29ab2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753980"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484559"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
     | SYMMETRIC KEY | TYPE | USER | XML SCHEMA COLLECTION  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  DEFAULT  
  如果使用默认选项调用 (不使用引号) ，则函数将返回内置权限的完整列表。  
   
@@ -77,7 +77,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|服务器的排序规则|安全对象类的说明。|  
 |permission_name|**nvarchar(60)**|服务器的排序规则|权限名称。|  
-|类型|**varchar(4)**|服务器的排序规则|压缩权限类型代码。 请参阅后面的表。|  
+|type|**varchar(4)**|服务器的排序规则|压缩权限类型代码。 请参阅后面的表。|  
 |covering_permission_name|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为该类的权限名称（隐含该类的其他权限）。|  
 |parent_class_desc|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为包含当前类的父类的名称。|  
 |parent_covering_permission_name|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为父类的权限名称（隐含该类的所有其他权限）。|  

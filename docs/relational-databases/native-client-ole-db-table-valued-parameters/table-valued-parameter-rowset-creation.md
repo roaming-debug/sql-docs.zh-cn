@@ -1,5 +1,5 @@
 ---
-description: 在 SQL Server Native Client 中创建表值参数行集
+description: Table-Valued 在 SQL Server Native Client 中创建参数行集
 title: " (Native Client OLE DB 提供程序创建表值参数行集) "
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bf030073ce8b8a22fe605ef54ea521253aa3337
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 65215eebf7a0e8dd91529f5a231f8597cadfda2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482570"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483138"
 ---
-# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>在 SQL Server Native Client 中创建表值参数行集
+# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>Table-Valued 在 SQL Server Native Client 中创建参数行集
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   尽管使用者可以为表值参数提供任意行集对象，但是典型的行集对象要针对后端数据存储来实现，因此提供有限的性能。 有鉴于此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持使用者在内存中的数据之上创建专用行集对象。 此特殊的内存中行集对象是一个名为表值参数行集的新 COM 对象。 它提供与参数集相似的功能。  
@@ -35,7 +35,7 @@ ms.locfileid: "88482570"
   
  对于聚合，使用者传递 pUnkOuter  参数（带有控制的 IUnknown）。  
   
- 表值参数行集对象属性是只读的，因此，使用者不应在 *rgPropertySets*中设置任何属性。  
+ 表值参数行集对象属性是只读的，因此，使用者不应在 *rgPropertySets* 中设置任何属性。  
   
  对于每个 DBCOLUMNDESC 结构中的 rgPropertySets 成员，使用者可为每列指定附加属性  。 这些属性属于 DBPROPSET_SQLSERVERCOLUMN 属性集。 它们支持您为每一列指定计算设置和默认设置。 它们还支持现有列属性，如为空性和标识。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88482570"
   
  在此方案中，访问接口代表使用者从服务器获取有关表值参数行集对象的类型信息。  
   
- 应按照静态方案的设置对 pTableID  和 pUnkOuter  参数进行设置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]然后，Native Client OLE DB 提供程序从服务器获取) 列信息和约束 (类型信息，并通过*ppRowset*参数返回表值参数行集对象。 此操作要求与服务器通信，因此性能不如静态方案。 动态方案仅适用于参数化过程调用。  
+ 应按照静态方案的设置对 pTableID  和 pUnkOuter  参数进行设置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]然后，Native Client OLE DB 提供程序从服务器获取) 列信息和约束 (类型信息，并通过 *ppRowset* 参数返回表值参数行集对象。 此操作要求与服务器通信，因此性能不如静态方案。 动态方案仅适用于参数化过程调用。  
   
 ## <a name="see-also"></a>另请参阅  
  [表值参数 (OLE DB)](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

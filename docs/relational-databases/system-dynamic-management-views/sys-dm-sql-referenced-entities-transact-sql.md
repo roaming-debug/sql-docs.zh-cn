@@ -1,6 +1,6 @@
 ---
 description: sys.dm_sql_referenced_entities (Transact-SQL)
-title: sys. dm_sql_referenced_entities (Transact-sql) |Microsoft Docs
+title: sys.dm_sql_referenced_entities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2019
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de7e748e1e993d0e60bde500af1443707ee9020c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cd6c12416a4e1626b7439ace6921b5d1981f0051
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550202"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484599"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
@@ -65,16 +65,16 @@ sys.dm_sql_referenced_entities (
 }  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ *schema_name*。 ] *referencing_entity_name*  
- 是引用实体的名称。 当引用类为 OBJECT 时，需要*schema_name* 。  
+ 是引用实体的名称。 当引用类为 OBJECT 时，需要 *schema_name* 。  
   
- *schema_name referencing_entity_name* 为 **nvarchar (517) **。  
+ *schema_name. referencing_entity_name* **(517) 为 nvarchar**。  
   
  *<referencing_class>* ：： = {OBJECT |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER}  
  指定的引用实体的类。 每个语句只能指定一个类。  
   
- *<referencing_class>* 为 **nvarchar (60) **。  
+ *<referencing_class>* 为 **nvarchar (60)**。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -91,7 +91,7 @@ sys.dm_sql_referenced_entities (
 |referenced_class|**tinyint**|被引用的实体的类。<br /><br /> 1 = 对象或列<br /><br /> 6 = 类型<br /><br /> 10 = XML 架构集合<br /><br /> 21 = 分区函数|  
 |referenced_class_desc|**nvarchar(60)**|对被引用的实体的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|指示被引用的实体的架构绑定发生于运行时，因此实体 ID 的解析依赖于调用方的架构。 当被引用的实体为存储过程、扩展存储过程或在 EXECUTE 语句中调用的用户定义函数时，将会出现这种情况。<br /><br /> 1 = 被引用的实体依赖调用方并在运行时解析。 在这种情况下，referenced_id 为 NULL。<br /><br /> 0 = 被引用的实体 ID 不依赖调用方。 对于绑定到架构的引用、显式指定架构名称的跨数据库和跨服务器的引用，始终为 0。 例如，对格式为 `EXEC MyDatabase.MySchema.MyProc` 的实体的引用不依赖于调用方。 但是，格式为 `EXEC MyDatabase..MyProc` 的引用依赖调用方。|  
-|is_ambiguous|**bit**|指示引用不明确，可在运行时解析为用户定义函数、用户定义类型 (UDT) 或对 **xml**类型的列的 xquery 引用。 例如，假定语句 `SELECT Sales.GetOrder() FROM Sales.MySales` 是在存储过程中定义的。 在执行存储过程之前，并不知道 `Sales.GetOrder()` 是 `Sales` 架构中的用户定义函数还是带有名为 `Sales` 的方法、类型为 UDT 且名为 `GetOrder()` 的列。<br /><br /> 1 = 引用的是用户定义函数还是使用用户定义类型 (UDT) 方法的列，这一点是不明确的。<br /><br /> 0 = 引用是明确的，或者在调用函数时可以成功绑定实体。<br /><br /> 对于绑定到架构的引用始终为 0。|  
+|is_ambiguous|**bit**|指示引用不明确，可在运行时解析为用户定义函数、用户定义类型 (UDT) 或对 **xml** 类型的列的 xquery 引用。 例如，假定语句 `SELECT Sales.GetOrder() FROM Sales.MySales` 是在存储过程中定义的。 在执行存储过程之前，并不知道 `Sales.GetOrder()` 是 `Sales` 架构中的用户定义函数还是带有名为 `Sales` 的方法、类型为 UDT 且名为 `GetOrder()` 的列。<br /><br /> 1 = 引用的是用户定义函数还是使用用户定义类型 (UDT) 方法的列，这一点是不明确的。<br /><br /> 0 = 引用是明确的，或者在调用函数时可以成功绑定实体。<br /><br /> 对于绑定到架构的引用始终为 0。|  
 |is_selected|**bit**|1 = 选中了对象或列。|  
 |is_updated|**bit**|1 = 修改了对象或列。|  
 |is_select_all|**bit**|1 = 对象用于 SELECT * 子句中（仅限对象级）。|  

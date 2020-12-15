@@ -1,6 +1,6 @@
 ---
 description: 大型 CLR 用户定义类型 (ODBC)
-title: " (ODBC) 的大型 CLR 用户定义类型 |Microsoft Docs"
+title: " (ODBC) 的大型 CLR User-Defined 类型 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 52944d98e4e3141ffbe036b1166b083195ea7fb4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428159"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483158"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 用户定义类型 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88428159"
   
  有关显示对大型 CLR Udt 的 ODBC 支持的示例，请参阅对 [大型 udt 的支持](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)。  
   
- 有关 SQL Server Native Client 中的大型 CLR Udt 的详细信息，请参阅 [大型 Clr 用户定义类型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。  
+ 有关 SQL Server Native Client 中的大型 CLR Udt 的详细信息，请参阅 [大型 clr User-Defined 类型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。  
   
 ## <a name="data-format"></a>数据格式  
  SQL Server Native Client 使用 SQL_SS_LENGTH_UNLIMITED 来指示大型对象 (LOB) 类型的列大小大于 8,000 个字节。 从 SQL Server 2008 开始，在其大小大于 8,000 个字节时将相同的值用于 CLR UDT。  
@@ -71,7 +71,7 @@ ms.locfileid: "88428159"
 |SQL_CA_SS_UDT_TYPE_NAME|UDT 的名称。|UDT 的名称。|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的完全限定名称。|UDT 的完全限定名称。|  
   
- 对于 UDT 参数，SQL_CA_SS_UDT_TYPE_NAME 必须始终通过 **SQLSetDescField**进行设置。 SQL_CA_SS_UDT_CATALOG_NAME 和 SQL_CA_SS_UDT_SCHEMA_NAME 是可选的。  
+ 对于 UDT 参数，SQL_CA_SS_UDT_TYPE_NAME 必须始终通过 **SQLSetDescField** 进行设置。 SQL_CA_SS_UDT_CATALOG_NAME 和 SQL_CA_SS_UDT_SCHEMA_NAME 是可选的。  
   
  如果使用与表不同的架构在同一数据库中定义 UDT，则必须设置 SQL_CA_SS_UDT_SCHEMA_NAME。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "88428159"
 |SQL_DESC_CONCISE_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|0|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SQL_DESC_DISPLAY_SIZE|2*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_DISPLAY_SIZE|2 *n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_LITERAL_PREFIX|"0x"|"0x"|  
@@ -161,7 +161,7 @@ ms.locfileid: "88428159"
 |服务器版本|SQL_SS_UDT<br /><br /> （长度小于或等于 8,000 个字节）|SQL_SS_UDT<br /><br /> （长度大于 8000 个字节）|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
 |SQL Server 2005|**UDT**|**varbinary(max)**|  
-|SQL Server 2008 和更高版本|**UDT**|**UDT**|  
+|SQL Server 2008 及更高版本|**UDT**|**UDT**|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>支持大型 CLR UDT 的 ODBC 函数  
  本节讨论为支持大型 CLR UDT 而对 SQL Server Native Client ODBC 函数进行的更改。  

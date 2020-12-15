@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_stats_histogram (Transact-SQL)
-title: sys. dm_db_stats_histogram (Transact-sql) |Microsoft Docs
+title: sys.dm_db_stats_histogram (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af4e3e3739475ff3beac61802606499874fdff58
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0c6bf618fe665a3c988a7148a4958979f0d151d4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116999"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484729"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
@@ -48,7 +48,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
  当前数据库中您要请求其某个统计信息属性的对象的 ID。 *object_id* 是 **int**。  
   
  *stats_id*  
- 指定 *object_id*的统计信息 ID。 可以从 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 动态管理视图获取该统计信息 ID。 *stats_id* 是 **int**。  
+ 指定 *object_id* 的统计信息 ID。 可以从 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 动态管理视图获取该统计信息 ID。 *stats_id* 是 **int**。  
   
 ## <a name="table-returned"></a>返回的表  
   

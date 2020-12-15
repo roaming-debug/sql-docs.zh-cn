@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1cbc5d23a7c7843a2186cd951fd5bb16079489d3
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 8aafaca36fb5ef1d96ddbd9f369a3ba4f06a596d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834318"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484579"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) 
 
@@ -104,7 +104,7 @@ ms.locfileid: "91834318"
 
 此视图需要 VIEW SERVER STATE 权限。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 用户可以使用此动态管理视图来监视用户工作负荷池的近乎实时的资源消耗以及 Azure SQL 数据库实例的系统内部池。
 
