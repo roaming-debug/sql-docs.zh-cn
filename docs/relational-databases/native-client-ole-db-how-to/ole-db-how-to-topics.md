@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43cfa6e21939d316657cd1d80ef7959721e057f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 96c8200cad7749dfd8a50dfef1880ec69df8702b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381073"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481078"
 ---
 # <a name="ole-db-how-to-topics-native-client-ole-db-provider"></a>OLE DB 操作指南主题 (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

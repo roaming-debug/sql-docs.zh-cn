@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21f743aa4c28095a3167ebb16cf873f46afece38
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9cad51a7a83f694ac89b41584929a46e1fbc725c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541950"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482412"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,17 +45,17 @@ sp_bindefault [ @defname = ] 'default' ,
     [ , [ @futureonly = ] 'futureonly_flag' ]   
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @defname = ] 'default'` 由 CREATE DEFAULT 创建的默认值的名称。 *默认值* 为 **nvarchar (776) **，无默认值。  
+## <a name="arguments"></a>自变量  
+`[ @defname = ] 'default'` 由 CREATE DEFAULT 创建的默认值的名称。 *默认值* 为 **nvarchar (776)**，无默认值。  
   
-`[ @objname = ] 'object_name'` 要绑定默认值的表和列的名称或别名数据类型。 *object_name* 为 **nvarchar (776) ** ，无默认值。 不能用**varchar (max) **、 **nvarchar (max) **、 **varbinary (MAX **) 、 **xml**或 CLR 用户定义类型来定义*object_name* 。  
+`[ @objname = ] 'object_name'` 要绑定默认值的表和列的名称或别名数据类型。 *object_name* 为 **nvarchar (776)** ，无默认值。 不能用 **varchar (max)**、 **nvarchar (max)**、 **varbinary (MAX**) 、 **xml** 或 CLR 用户定义类型来定义 *object_name* 。  
   
- 如果 *object_name* 是由一个部分组成的名称，则将其解析为别名数据类型。 如果它是由两部分或三部分组成的名称，则首先将它解析为表和列;如果此分辨率失败，则将其解析为别名数据类型。 默认情况下，别名数据类型的现有列将继承 *默认值*，除非已将默认值直接绑定到列。 不能将默认值绑定到 **text**、 **ntext**、 **image**、 **varchar (max) **、 **nvarchar (max) **、 **varbinary (max) **、 **xml**、 **timestamp**或 CLR 用户定义类型列、具有 IDENTITY 属性的列、计算列或已具有 default 约束的列。  
+ 如果 *object_name* 是由一个部分组成的名称，则将其解析为别名数据类型。 如果它是由两部分或三部分组成的名称，则首先将它解析为表和列;如果此分辨率失败，则将其解析为别名数据类型。 默认情况下，别名数据类型的现有列将继承 *默认值*，除非已将默认值直接绑定到列。 不能将默认值绑定到 **text**、 **ntext**、 **image**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**、 **timestamp** 或 CLR 用户定义类型列、具有 IDENTITY 属性的列、计算列或已具有 default 约束的列。  
   
 > [!NOTE]  
 >  *object_name* 可以包含方括号 **[]** 作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
-`[ @futureonly = ] 'futureonly_flag'` 仅在将默认值绑定到别名数据类型时使用。 *futureonly_flag* 是 **varchar (15) ** ，默认值为 NULL。 当此参数设置为 **futureonly**时，该数据类型的现有列无法继承新的默认值。 将默认值绑定到列时，从不使用此参数。 如果 *futureonly_flag* 为 NULL，则新的默认值将绑定到当前没有默认值或使用别名数据类型的现有默认值的别名数据类型的任何列。  
+`[ @futureonly = ] 'futureonly_flag'` 仅在将默认值绑定到别名数据类型时使用。 *futureonly_flag* 是 **varchar (15)** ，默认值为 NULL。 当此参数设置为 **futureonly** 时，该数据类型的现有列无法继承新的默认值。 将默认值绑定到列时，从不使用此参数。 如果 *futureonly_flag* 为 NULL，则新的默认值将绑定到当前没有默认值或使用别名数据类型的现有默认值的别名数据类型的任何列。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -82,7 +82,7 @@ EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. 将默认值绑定到别名数据类型  
- 已经存在名为 `def_ssn` 的默认值和名为 `ssn` 的别名数据类型。 以下示例将默认值 `def_ssn` 绑定到 `ssn`。 创建表时，被赋予别名数据类型 `ssn` 的所有列都将继承此默认值。 类型为**ssn**的现有列还继承默认**def_ssn**，除非为*futureonly_flag*值指定**futureonly** ，否则，除非该列有直接绑定到它的默认值。 绑定到列的默认值始终优先于绑定到数据类型的默认值。  
+ 已经存在名为 `def_ssn` 的默认值和名为 `ssn` 的别名数据类型。 以下示例将默认值 `def_ssn` 绑定到 `ssn`。 创建表时，被赋予别名数据类型 `ssn` 的所有列都将继承此默认值。 类型为 **ssn** 的现有列还继承默认 **def_ssn**，除非为 *futureonly_flag* 值指定 **futureonly** ，否则，除非该列有直接绑定到它的默认值。 绑定到列的默认值始终优先于绑定到数据类型的默认值。  
   
 ```  
 USE master;  
@@ -100,7 +100,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. 使用分隔标识符  
- 下面的示例演示如何 `[t.1]` 在 *object_name*中使用分隔标识符。  
+ 下面的示例演示如何 `[t.1]` 在 *object_name* 中使用分隔标识符。  
   
 ```  
 USE master;  

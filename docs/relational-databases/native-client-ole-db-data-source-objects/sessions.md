@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce9c18021d474bfcb4af0e1418e432d779b9376a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 85d0c15fa83056e72976efa8d8c5f588e417edfa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455718"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477978"
 ---
 # <a name="sessions-native-client-ole-db-provider"></a> (Native Client OLE DB 提供程序的会话) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -187,7 +187,7 @@ EXIT:
  例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 由于需要会话对象，因此，池维护代码将向需要会话的应用程序方法传递有效的 IDBCreateCommand 接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
   
 > [!NOTE]  
->  在前面的示例中，使用 IDBCreateCommand**** 接口的原因在于 ICommand**** 接口实现 GetDBSession**** 方法，该方法是命令或行集作用域中允许对象确定创建其会话的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
+>  在前面的示例中，使用 IDBCreateCommand 接口的原因在于 ICommand 接口实现 GetDBSession 方法，该方法是命令或行集作用域中允许对象确定创建其会话的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据源对象 (OLE DB)](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

@@ -1,5 +1,5 @@
 ---
-title: 使用 OLE DB （SQLXML）执行 Updategram
+title: '使用 OLE DB (SQLXML 执行 Updategram) '
 description: 了解如何使用 SQLXML 4.0 中的 OLE DB 来执行 updategram。
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,20 +16,20 @@ ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f96578432e6806651e335cfbdb3570e2e65f8cb6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 83fc6d17dcc550eba8d142f3c9ba31780f1f8ab5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790723"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479218"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>使用 OLE DB 执行 Updategram (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   本主题提供了 usingOLE DB 的工作示例，以执行 updategram。  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>使用 ICommandStream 设置 XML 命令  
- OLE DB （版本2.6 或更高版本） ICommandStream 接口将命令作为流对象传递，而不是作为字符串传递。  
+ OLE DB (版本2.6 或更高版本) ICommandStream 接口将命令作为流对象传递，而不是作为字符串传递。  
   
  该接口允许命令采用 XML 分析器理解的任何编码形式。 调用 ICommand：： Execute 时，将直接从流中读取命令文本，而不需要进行任何转换。 因此，使用 ICommandStream 接口执行 XML 命令更有效。  
   
@@ -516,7 +516,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- 该模板包含 SQL 查询。 查询需要其参数（）的值 @Title 。 如果未传递参数值，则使用默认值（“Mr.”）。  
+ 该模板包含 SQL 查询。 查询需要 () 的参数的值 @Title 。 如果未传递参数值，则使用默认值（“Mr.”）。  
   
  向模板传递参数值时，参数名称和值都必须指定。  
   

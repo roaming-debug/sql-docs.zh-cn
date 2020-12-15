@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8683920e22e8888cc3dc93ffa350a43189116646
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 2baa21665d7fae6f87acbbebb88e55ca6c4624fc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834223"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482628"
 ---
 # <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91834223"
 |step_index|**int**|正在调用此 DMS 辅助角色的查询步骤。<br /><br /> request_id、step_index 和 dms_step_index 构成此视图的键。|与 [sys.dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)中 step_index 相同。|  
 |dms_step_index|**int**|DMS 计划中的当前步骤。<br /><br /> request_id、step_index 和 dms_step_index 构成此视图的键。|与 [sys.dm_pdw_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)中 dms___step_index 相同。|  
 |pdw_node_id|**int**|正在运行 DMS 辅助角色的节点。|与 [sys.dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)中 node_id 相同。|  
-|类型|**nvarchar(60)**|此节点正在运行的外部操作的类型。<br /><br /> 文件拆分是对已拆分成多个较小块的外部 Hadoop 文件执行的操作。|"文件拆分"|  
+|type|**nvarchar(60)**|此节点正在运行的外部操作的类型。<br /><br /> 文件拆分是对已拆分成多个较小块的外部 Hadoop 文件执行的操作。|"文件拆分"|  
 |work_id|**int**|文件拆分 ID。|大于或等于0。<br /><br /> 每个计算节点唯一。|  
 |input_name|**nvarchar(60)**|要读取的输入的字符串名称。|对于 Hadoop 文件，这是 Hadoop 文件名。|  
 |read_location|**bigint**|读取位置的偏移量。||  

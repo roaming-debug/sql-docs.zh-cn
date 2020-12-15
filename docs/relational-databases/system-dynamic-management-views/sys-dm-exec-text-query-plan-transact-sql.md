@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_text_query_plan (Transact-SQL)
-title: sys. dm_exec_text_query_plan (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_text_query_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51e2ee0d9867f952b219434ff59432732a96ddd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f24871b199c66ea1efdd238b7141d8f0f7d99e19
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539415"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482818"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或批处理中的特定语句返回文本格式的显示计划。 执行计划句柄指定的查询计划可处于缓存状态或正在执行状态。 此表值函数与 [sys. dm_exec_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)相似，但存在以下差异：  
+为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或批处理中的特定语句返回文本格式的显示计划。 执行计划句柄指定的查询计划可处于缓存状态或正在执行状态。 此表值函数与 [sys.dm_exec_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)相似，但存在以下差异：  
   
 -   查询计划的输出以文本格式返回。  
 -   查询计划的输出无大小限制。  
@@ -52,9 +52,9 @@ sys.dm_exec_text_query_plan
 )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 *plan_handle*  
-是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle* 为 **varbinary (64) **。   
+是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle* 为 **varbinary (64)**。   
 
 可以从以下动态管理对象中获取 *plan_handle* ： 
   
@@ -64,9 +64,9 @@ sys.dm_exec_text_query_plan
   
 -   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 *statement_start_offset* |0 |缺省值  
 指示行所说明的查询在其批处理或持久性对象文本中的起始位置（字节）。 *statement_start_offset* 是 **int**。值0指示批处理的开头。 默认值为 0。  
@@ -92,7 +92,7 @@ sys.dm_exec_text_query_plan
 |**objectid**|**int**|此查询计划的对象（如存储过程或用户定义函数）的 ID。 对于即席批处理和已准备好的批处理，此列为 **null**。<br /><br /> 此列可为空值。|  
 |**数字**|**smallint**|为存储过程编号的整数。 例如，用于 **orders** 应用程序的一组过程可命名为 **orderproc;1**、**orderproc;2** 等等。 对于即席批处理和已准备好的批处理，此列为 **null**。<br /><br /> 此列可为空值。|  
 |**过**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
-|**query_plan**|**nvarchar(max)**|包含与 *plan_handle*一起指定的查询执行计划的编译时显示计划表示形式。 显示计划采用文本格式。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。|  
+|**query_plan**|**nvarchar(max)**|包含与 *plan_handle* 一起指定的查询执行计划的编译时显示计划表示形式。 显示计划采用文本格式。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。|  
   
 ## <a name="remarks"></a>备注  
  在以下条件下，不会在 **sys.dm_exec_text_query_plan** 返回的表的 **plan** 列中返回显示计划输出：  
@@ -101,7 +101,7 @@ sys.dm_exec_text_query_plan
   
 -   有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句未放入缓存，如大容量操作语句或包含大于 8 KB 的字符串文字的语句。 由于这些语句不在缓存中，因此无法使用 **sys.dm_exec_text_query_plan** 来检索这些语句的显示计划。  
   
--   如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或存储过程包含对用户定义函数或动态 SQL 调用的调用（例如，使用 EXEC (*string*) ），则用户定义函数的已编译的 XML 显示计划不包含在由 sys.databases 或存储过程的 **dm_exec_text_query_plan sys.databases** 返回的表中。 相反，必须为与用户定义函数对应的*plan_handle*单独调用**dm_exec_text_query_plan** 。  
+-   如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或存储过程包含对用户定义函数或动态 SQL 调用的调用（例如，使用 EXEC (*string*) ），则用户定义函数的编译的 XML 显示计划不包含在批处理或存储过程的 **sys.dm_exec_text_query_plan** 返回的表中。 相反，必须为与用户定义函数相对应的 *plan_handle* 单独调用 **sys.dm_exec_text_query_plan** 。  
   
 当即席查询使用 [简单](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) 参数化或 [强制参数](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)化时， **query_plan** 列将仅包含语句文本，而非实际查询计划。 若要返回查询计划，则应为已准备好的参数化查询的计划句柄调用 **sys.dm_exec_text_query_plan**。 可以通过引用 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 视图的 **sql** 列或 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 动态管理视图的文本列来确定查询是否已参数化。  
   
@@ -181,4 +181,4 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+ [sys.dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

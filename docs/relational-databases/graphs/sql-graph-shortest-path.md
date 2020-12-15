@@ -18,13 +18,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current
+ms.openlocfilehash: c916466f6a105a2b10508e23f1739bba0d192970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475833"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480178"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql) 
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ SHORTEST_PATH 函数允许你查找：
 此模式包括节点和边缘，必须反复遍历这些节点和边缘，直到达到所需的节点或达到模式中指定的最大迭代数。 每次执行查询时，执行此模式的结果将是从开始节点到结束节点的路径遍历的节点和边缘的有序集合。 这是正则表达式样式语法模式，支持以下两种模式限定符：
 
 * **"+"**：重复模式1次或多次。 找到最短路径后立即终止。
-* **{1，n}**：重复模式1到 "n" 次。 找到最短的时立即终止。
+* **{1,n}** ：重复模式 1到“n”次。 找到最短的时立即终止。
 
 ## <a name="last_node"></a>LAST_NODE
 LAST_NODE ( # A1 函数允许链接两个任意长度的遍历模式。 它可用于以下情况：    
@@ -213,6 +213,6 @@ WHERE Q.levels = 2
 ## <a name="see-also"></a>另请参阅  
  [匹配 (SQL Graph) ](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [插入 (SQL Graph) ](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT（SQL 图形）](../../t-sql/statements/insert-sql-graph.md)]  
  [使用 SQL Server 2017 进行图形处理](../../relational-databases/graphs/sql-graph-overview.md)     
  

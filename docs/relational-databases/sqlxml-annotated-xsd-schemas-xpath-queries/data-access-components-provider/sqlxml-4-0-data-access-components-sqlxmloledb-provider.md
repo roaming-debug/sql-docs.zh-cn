@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c88bad721d511299e216fb9aa20279570f58e532
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6f205a194267fc5036aa707f5f1040edc050a27e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479238"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 数据访问组件 - SQLXMLOLEDB 提供程序
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

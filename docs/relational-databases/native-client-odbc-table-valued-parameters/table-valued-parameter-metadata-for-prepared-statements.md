@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c93614fa84a1758586deb72382dde042d40dd827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 14ef8b8111ed40ca9d1286b2648d39656ca8b58b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455855"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478028"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>准备的语句的表值参数元数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

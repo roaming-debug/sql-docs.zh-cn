@@ -1,5 +1,5 @@
 ---
-title: sql：映射（SQLXML）
+title: 'sql：映射 (SQLXML) '
 description: 了解如何在 XML 大容量加载过程中解释 SQLXML 批注 sql：映射。
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b38ef4e89db99239759ad0809a5b4828fd1906e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 199d39bb7d209fbfda5ca5a3f3907969b5ce7b2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724709"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479278"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>批注解释 - sql:mapped
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  XML 大容量加载按预期处理 XSD 架构中的**sql：映射**批注，也就是说，如果映射架构为任何元素或属性指定了**sql： mapping = "false"** ，则 xml 大容量加载不会尝试将关联的数据存储在相应的列中。  
+  XML 大容量加载按预期处理 XSD 架构中的 **sql：映射** 批注，也就是说，如果映射架构为任何元素或属性指定了 **sql： mapping = "false"** ，则 xml 大容量加载不会尝试将关联的数据存储在相应的列中。  
   
- XML 大容量加载将忽略未映射的元素和属性（因为未在架构中对其进行描述，或者在带有**sql：映射 = "false"** 的 XSD 架构中批注它们）。 如果使用**sql：溢出字段**指定了这样的列，则所有未映射的数据都将进入溢出列。  
+ XML 大容量加载将忽略未映射 (的元素和属性，因为这些元素和属性未在架构中描述，或者它们已通过 **sql：映射 = "false"**) 在 XSD 架构中进行批注。 如果使用 **sql：溢出字段** 指定了这样的列，则所有未映射的数据都将进入溢出列。  
   
  例如，请看此 XSD 架构：  
   
@@ -56,11 +56,11 @@ ms.locfileid: "85724709"
 </xsd:schema>  
 ```  
   
- 由于**HomePhone**属性指定**sql： map = "false"**，XML 大容量加载不会将此属性映射到相应的列。 XSD 架构标识了一个溢出列（**OverflowColumn**），其中，XML 大容量加载将存储此未使用的数据。  
+ 由于 **HomePhone** 属性指定 **sql： map = "false"**，XML 大容量加载不会将此属性映射到相应的列。 XSD 架构标识溢出列 (**OverflowColumn**) ，XML 大容量加载会在其中存储此未使用的数据。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   
-1.  在**tempdb**数据库中创建以下表：  
+1.  在 **tempdb** 数据库中创建以下表：  
   
     ```  
     USE tempdb  

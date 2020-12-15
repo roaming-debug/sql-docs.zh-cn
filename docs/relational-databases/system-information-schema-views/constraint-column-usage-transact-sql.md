@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0f3ae521-6b19-43ad-b2c4-3822adb19591
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 650fb3320266a192312c50c8679cd0d5adc1934c
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b6eefdafded71a89497fe0e875d0a214ce607a26
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753600"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478918"
 ---
 # <a name="constraint_column_usage-transact-sql"></a>CONSTRAINT_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "91753600"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**nvarchar (** 128 **) **|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **) **|包含表所有者的架构名。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
-|**TABLE_NAME**|**nvarchar (** 128 **) **|表名。|  
-|**COLUMN_NAME**|**nvarchar (** 128 **) **|列名称。|  
-|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **) **|约束限定符。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **) **|包含该约束的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
-|**CONSTRAINT_NAME**|**nvarchar (** 128 **) **|约束名称。|  
+|**TABLE_CATALOG**|**nvarchar (** 128 **)**|表限定符。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|包含表所有者的架构名。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**TABLE_NAME**|**nvarchar (** 128 **)**|表名。|  
+|**COLUMN_NAME**|**nvarchar (** 128 **)**|列名称。|  
+|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|约束限定符。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|包含该约束的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**CONSTRAINT_NAME**|**nvarchar (** 128 **)**|约束名称。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](../../t-sql/language-reference.md)   

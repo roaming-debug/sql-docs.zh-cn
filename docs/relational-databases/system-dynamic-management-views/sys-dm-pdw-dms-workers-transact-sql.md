@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cf53d8d1ae8787ee8cff12ea944398f90707d7ea
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 2c81bb5c02b11753fa98024cfd4d3861b2768d24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035390"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482588"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "92035390"
 |buffers_available|**int**|未使用的缓冲区数。| 如果查询在执行之前已取消或失败，则为 NULL。|  
 |sql_spid|**int**|为此 DMS 辅助角色执行工作的 SQL Server 实例的会话 id。||  
 |dms_cpid|**int**|运行的实际线程的进程 ID。||  
-|error_id|**nvarchar (36) **|执行此辅助进程期间发生的错误的唯一标识符（如果有）。|请参阅 [sys.dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)中的 error_id。|  
+|error_id|**nvarchar (36)**|执行此辅助进程期间发生的错误的唯一标识符（如果有）。|请参阅 [sys.dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)中的 error_id。|  
 |source_info|**nvarchar(4000)**|对于读取器，说明源表和列。||  
 |destination_info|**nvarchar(4000)**|对于编写器，指定目标表。||  
   

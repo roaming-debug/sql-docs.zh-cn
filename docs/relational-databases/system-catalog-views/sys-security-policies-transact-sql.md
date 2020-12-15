@@ -1,6 +1,6 @@
 ---
-description: 'sys. security_policies (Transact-sql) '
-title: sys. security_policies (Transact-sql) |Microsoft Docs
+description: 'sys.security_policies (Transact-sql) '
+title: sys.security_policies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae97e6f310561339c24e712dd3d0f07552232bf2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e2d1cd685055d4dd91bdb9cda445c7847bf5bbd6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490141"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479028"
 ---
-# <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-sql) 
+# <a name="syssecurity_policies-transact-sql"></a>sys.security_policies (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   为数据库中的每个安全策略返回一行。  
@@ -41,7 +41,7 @@ ms.locfileid: "88490141"
 |principal_id|**int**|注册到数据库的安全策略所有者的 ID。 如果通过架构确定所有者，则为 NULL。|  
 |schema_id|**int**|对象所在架构的 ID。|  
 |parent_object_id|**int**|策略所属对象的 ID。 必须为 0。|  
-|type|**vachar (2) **|必须为 **SP**。|  
+|type|**vachar (2)**|必须为 **SP**。|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**。|  
 |create_date|**datetime**|所创建的安全策略的 UTC 日期。|  
 |modify_date|**datetime**|最近一次修改的安全策略的 UTC 日期。|  
@@ -56,7 +56,7 @@ ms.locfileid: "88490141"
   
 ## <a name="see-also"></a>另请参阅  
  [行级安全性](../../relational-databases/security/row-level-security.md)   
- [sys. security_predicates &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
+ [sys.security_predicates &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
  [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

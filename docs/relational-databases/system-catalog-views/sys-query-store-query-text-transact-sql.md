@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d0dd52ae5c84ab13266bc1c90f81a3d9b2ad869
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 49ce800cf2b831501237f4f15169637fa8c52187
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005626"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477388"
 ---
 # <a name="sysquery_store_query_text-transact-sql"></a>sys.query_store_query_text (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "92005626"
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|主密钥。|  
 |**query_sql_text**|**nvarchar(max)**|由用户提供的查询的 SQL 文本。 包括空格、提示和注释。 将忽略查询文本之前和之后的注释和空格。 不忽略文本内部的注释和空格。|  
-|**statement_sql_handle**|**vabinary (64) **|单个查询的 SQL 句柄。|  
+|**statement_sql_handle**|**vabinary (64)**|单个查询的 SQL 句柄。|  
 |**is_part_of_encrypted_module**|**bit**|查询文本是加密模块的一部分。<br/>**注意：** Azure Synapse Analytics 将始终返回零 (0) 。|
 |**has_restricted_text**|**bit**|查询文本包含一个密码或其他 unmentionable 词。<br/>**注意：** Azure Synapse Analytics 将始终返回零 (0) 。|
   

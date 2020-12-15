@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c742ebd930066c4e242cabff781b0c61af5f566f
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f167741a2064020cfbc7fdc43e881a74609e4ac6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235572"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480158"
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 体系结构  
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "93235572"
  
 ### <a name="data-definition-language-ddl-statements"></a>数据定义语言 (DDL) 语句
 
-|任务   |相关文章  |注释
+|任务   |相关文章  |说明
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` 现已扩展为支持将表创建为节点或边缘。 请注意，边缘表可以是也可以没有任何用户定义的属性。  |
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|节点和边缘表可以通过与关系表相同的方式进行更改，使用 `ALTER TABLE` 。 用户可以添加或修改用户定义的列、索引或约束。 但是，更改内部图形列（如 `$node_id` 或 `$edge_id` ）将导致错误。  |
@@ -147,7 +147,7 @@ ms.locfileid: "93235572"
 
 ### <a name="data-manipulation-language-dml-statements"></a>数据操作语言 (DML) 语句
 
-|任务   |相关文章  |注释
+|任务   |相关文章  |说明
 |---  |---  |---  |
 |INSERT |[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)|插入到节点表与在关系表中插入没有什么不同。 列的值 `$node_id` 将自动生成。 尝试在或列中插入 `$node_id` 值 `$edge_id` 将导致错误。 `$from_id` `$to_id` 当插入到边缘表中时，用户必须为和列提供值。 `$from_id` 和 `$to_id` 是 `$node_id` 给定边缘连接到的节点的值。  |
 |DELETE | [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|从节点或边缘表中删除数据时，可以通过与从关系表中删除数据相同的方式删除数据。 但是，在此版本中，没有任何约束来确保在删除节点时不支持边缘指向已删除的节点和边缘的级联删除。 建议每次删除节点时，也会删除该节点的所有连接边缘，以维持图形的完整性。  |

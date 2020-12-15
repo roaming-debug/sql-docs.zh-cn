@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f44a757695d067f518de22f9d3bc59af455a67c
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 83aa956f8a9a9421cdbc411856be78af272f1fa6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753766"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482511"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  是一个函数，用于在 SELECT 语句的 [from 子句](../../t-sql/queries/from-transact-sql.md) 中对 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含基于字符的数据类型的全文索引列执行全文搜索。 此函数返回一个表，该表包含零行、一行或多行，其中包含的值与指定 *freetext_string*中的文本的含义匹配，而不只是确切的措辞。 FREETEXTTABLE 被视为一个常规表名来引用。  
+  是一个函数，用于在 SELECT 语句的 [from 子句](../../t-sql/queries/from-transact-sql.md) 中对 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含基于字符的数据类型的全文索引列执行全文搜索。 此函数返回一个表，该表包含零行、一行或多行，其中包含的值与指定 *freetext_string* 中的文本的含义匹配，而不只是确切的措辞。 FREETEXTTABLE 被视为一个常规表名来引用。  
   
  FREETEXTTABLE 对于与 [FREETEXT &#40;transact-sql&#41;](../../t-sql/queries/freetext-transact-sql.md)相同的匹配类型很有用，  
   
@@ -58,7 +58,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>参数  
  *table*  
- 表的名称，该表已标记为全文查询。 *表* 或 *视图*可以是由一个、两个或三个部分组成的数据库对象名称。 查询视图时，仅能涉及一个全文索引的基表。  
+ 表的名称，该表已标记为全文查询。 *表* 或 *视图* 可以是由一个、两个或三个部分组成的数据库对象名称。 查询视图时，仅能涉及一个全文索引的基表。  
   
  *表* 不能指定服务器名称，并且不能用于对链接服务器的查询。  
   
@@ -90,14 +90,14 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term。  
   
  *top_n_by_rank*  
- 指定仅返回 *n*个排名最高的匹配项（降序）。 仅当指定了整数值 *n*时才适用。 如果 *top_n_by_rank* 与其他参数组合使用，则查询返回的行数可能会少于实际与所有谓词都匹配的行数。 *top_n_by_rank* 允许通过只调用最相关的命中来提高查询性能。  
+ 指定仅返回 *n* 个排名最高的匹配项（降序）。 仅当指定了整数值 *n* 时才适用。 如果 *top_n_by_rank* 与其他参数组合使用，则查询返回的行数可能会少于实际与所有谓词都匹配的行数。 *top_n_by_rank* 允许通过只调用最相关的命中来提高查询性能。  
   
 ## <a name="remarks"></a>备注  
  全文谓词和函数作用于 FROM 谓词所示的单个表。 若要对多个表进行搜索，请在 FROM 子句中使用联接表，以搜索由两个或更多个表的乘积构成的结果集。  
   
  FREETEXTTABLE 使用与 FREETEXT 谓词相同的搜索条件。  
   
- 与 CONTAINSTABLE 一样，返回的表包含名为 **KEY** 和 **RANK**的列，在查询中引用这些列以获取适当的行并使用行排名值。  
+ 与 CONTAINSTABLE 一样，返回的表包含名为 **KEY** 和 **RANK** 的列，在查询中引用这些列以获取适当的行并使用行排名值。  
   
 ## <a name="permissions"></a>权限  
  只有对指定表或表中所引用的列具有适当的 SELECT 权限的用户才能调用 FREETEXTTABLE。  
@@ -144,7 +144,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. 指定语言和排名最高的匹配项  
- 下面的示例是相同的，并显示 `LANGUAGE` *language_term*和*top_n_by_rank*参数的用法。  
+ 下面的示例是相同的，并显示 `LANGUAGE` *language_term* 和 *top_n_by_rank* 参数的用法。  
   
 ```  
 USE AdventureWorks2012;  
@@ -163,7 +163,7 @@ GO
 ```  
   
 > [!NOTE]
->  使用*top_n_by_rank*参数不需要*language_term*语言参数。  
+>  使用 *top_n_by_rank* 参数不需要 *language_term* 语言参数。  
   
 ## <a name="see-also"></a>另请参阅  
  [全文搜索入门](../../relational-databases/search/get-started-with-full-text-search.md)   

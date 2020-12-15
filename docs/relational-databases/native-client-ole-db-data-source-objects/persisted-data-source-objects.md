@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 482762127b8daa9d3fad3e4a3fd79a6ad9d179ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a554762ae801be4b6bd4ee5d9752a56da8951be0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381473"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477998"
 ---
 # <a name="persisted-data-source-objects-in-sql-server-native-client"></a>SQL Server Native Client 中的持久化数据源对象 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持具有**IPersistFile**接口的持久化数据源对象。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持具有 **IPersistFile** 接口的持久化数据源对象。  
   
 ## <a name="examples"></a>示例  
  **A.使数据源初始化持久化：**  

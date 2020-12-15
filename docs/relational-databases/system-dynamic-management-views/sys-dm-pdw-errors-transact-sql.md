@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 944eac31-5691-432b-b9f5-f1e11c05191f
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: de46fc1078b4a8a7d3898fbb034aa147cec157e5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: f89d6ce4c8a385906856dde4c71e97d8a6e24ad2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482584"
 ---
 # <a name="sysdm_pdw_errors-transact-sql"></a>sys.dm_pdw_errors (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -27,8 +27,8 @@ ms.locfileid: "92035370"
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar (36) **|此视图的键。<br /><br /> 与错误关联的唯一数字 id。|系统中所有查询错误都是唯一的。|  
-|source|**nvarchar (64) **|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|error_id|**nvarchar (36)**|此视图的键。<br /><br /> 与错误关联的唯一数字 id。|系统中所有查询错误都是唯一的。|  
+|source|**nvarchar (64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |type|**nvarchar(4000)**|发生的错误的类型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|发生错误的时间。|小于或等于当前时间。|  
 |pwd_node_id|**int**|涉及的特定节点的标识符（如果有）。 有关节点 id 的其他信息，请参阅 [&#40;transact-sql&#41;sys.dm_pdw_nodes ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。||  

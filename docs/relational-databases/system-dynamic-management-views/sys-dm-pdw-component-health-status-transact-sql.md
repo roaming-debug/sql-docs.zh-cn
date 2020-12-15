@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 68cc3f7a-693c-4d5d-a76b-455352af8d7f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 25c3a68f023397b08d61ba58acb2a829c218cffa
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 6c525237b8e2cf92eef038f3cdfe668c8b87af49
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035402"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482608"
 ---
 # <a name="sysdm_pdw_component_health_status-transact-sql"></a>sys.dm_pdw_component_health_status (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

@@ -19,46 +19,46 @@ helpviewer_keywords:
 ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4f49fe215279782a5f2e8df8fe501e0619f4bd2
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5dd88dffcf5171250936c75ff56ee5948148adad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753607"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478968"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   为当前数据库中当前用户可访问的每一列返回一行。  
   
- 若要从这些视图中检索信息，请指定 **INFORMATION_SCHEMA**_.view_name_的完全限定名称。  
+ 若要从这些视图中检索信息，请指定 **INFORMATION_SCHEMA**_.view_name_ 的完全限定名称。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**nvarchar (** 128 **) **|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **) **|包含该表的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
-|**TABLE_NAME**|**nvarchar (** 128 **) **|表名。|  
-|**COLUMN_NAME**|**nvarchar (** 128 **) **|列名称。|  
+|**TABLE_CATALOG**|**nvarchar (** 128 **)**|表限定符。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|包含该表的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**TABLE_NAME**|**nvarchar (** 128 **)**|表名。|  
+|**COLUMN_NAME**|**nvarchar (** 128 **)**|列名称。|  
 |**ORDINAL_POSITION**|**int**|列标识号。|  
-|**COLUMN_DEFAULT**|**nvarchar (** 4000 **) **|列的默认值。|  
-|**IS_NULLABLE**|**varchar (** 3 **) **|列的为空性。 如果列允许 NULL，则该列将返回 YES。 否则，返回 NO。|  
-|**DATA_TYPE**|**nvarchar (** 128 **) **|系统提供的数据类型。|  
+|**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|列的默认值。|  
+|**IS_NULLABLE**|**varchar (** 3 **)**|列的为空性。 如果列允许 NULL，则该列将返回 YES。 否则，返回 NO。|  
+|**DATA_TYPE**|**nvarchar (** 128 **)**|系统提供的数据类型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字符）。<br /><br /> 对于 **xml** 和大值类型的数据，为-1。 否则，返回 NULL。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|  
 |**CHARACTER_OCTET_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字节）。<br /><br /> 对于 **xml** 和大值类型的数据，为-1。 否则，返回 NULL。|  
 |**NUMERIC_PRECISION**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的精度。 否则，返回 NULL。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|近似数字数据、精确数字数据、整数数据或货币数据的精度基数。 否则，返回 NULL。|  
 |**NUMERIC_SCALE**|**int**|近似数字数据、精确数字数据、整数数据或货币数据的小数位数。 否则，返回 NULL。|  
-|**DATETIME_PRECISION**|**smallint**|**Datetime**和 ISO **interval**数据类型的子类型代码。 对于其他数据类型，返回 NULL。|  
-|**CHARACTER_SET_CATALOG**|**nvarchar (** 128 **) **|返回 **master**。 如果该列是字符数据或 **文本** 数据类型，则指示字符集所在的数据库。 否则，返回 NULL。|  
-|**CHARACTER_SET_SCHEMA**|**nvarchar (** 128 **) **|始终返回 NULL。|  
-|**CHARACTER_SET_NAME**|**nvarchar (** 128 **) **|如果此列为字符数据或 **文本** 数据类型，则返回字符集的唯一名称。 否则，返回 NULL。|  
-|**COLLATION_CATALOG**|**nvarchar (** 128 **) **|始终返回 NULL。|  
-|**COLLATION_SCHEMA**|**nvarchar (** 128 **) **|始终返回 NULL。|  
-|**COLLATION_NAME**|**nvarchar (** 128 **) **|如果列为字符数据或 **文本** 数据类型，则返回排序规则的唯一名称。 否则，返回 NULL。|  
-|**DOMAIN_CATALOG**|**nvarchar (** 128 **) **|如果此列是别名数据类型，则此列是在其中创建用户定义数据类型的数据库的名称。 否则，返回 NULL。|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **) **|如果列是用户定义数据类型，则此列将返回该用户定义数据类型的架构名称。 否则，返回 NULL。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
-|**DOMAIN_NAME**|**nvarchar (** 128 **) **|如果列是用户定义数据类型，则此列是该用户定义数据类型的名称。 否则，返回 NULL。|  
+|**DATETIME_PRECISION**|**smallint**|**Datetime** 和 ISO **interval** 数据类型的子类型代码。 对于其他数据类型，返回 NULL。|  
+|**CHARACTER_SET_CATALOG**|**nvarchar (** 128 **)**|返回 **master**。 如果该列是字符数据或 **文本** 数据类型，则指示字符集所在的数据库。 否则，返回 NULL。|  
+|**CHARACTER_SET_SCHEMA**|**nvarchar (** 128 **)**|始终返回 NULL。|  
+|**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|如果此列为字符数据或 **文本** 数据类型，则返回字符集的唯一名称。 否则，返回 NULL。|  
+|**COLLATION_CATALOG**|**nvarchar (** 128 **)**|始终返回 NULL。|  
+|**COLLATION_SCHEMA**|**nvarchar (** 128 **)**|始终返回 NULL。|  
+|**COLLATION_NAME**|**nvarchar (** 128 **)**|如果列为字符数据或 **文本** 数据类型，则返回排序规则的唯一名称。 否则，返回 NULL。|  
+|**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|如果此列是别名数据类型，则此列是在其中创建用户定义数据类型的数据库的名称。 否则，返回 NULL。|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|如果列是用户定义数据类型，则此列将返回该用户定义数据类型的架构名称。 否则，返回 NULL。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
+|**DOMAIN_NAME**|**nvarchar (** 128 **)**|如果列是用户定义数据类型，则此列是该用户定义数据类型的名称。 否则，返回 NULL。|  
   
 ## <a name="remarks"></a>备注  
  INFORMATION_SCHEMA 的 **ORDINAL_POSITION** 列 **。列** 视图与 COLUMNS_UPDATED 函数所返回列的位模式不兼容。 若要获取与 COLUMNS_UPDATED 兼容的位模式，你必须在查询 INFORMATION_SCHEMA 时引用 COLUMNPROPERTY 系统函数的 **ColumnID** 属性 **。列** 视图。 例如：  

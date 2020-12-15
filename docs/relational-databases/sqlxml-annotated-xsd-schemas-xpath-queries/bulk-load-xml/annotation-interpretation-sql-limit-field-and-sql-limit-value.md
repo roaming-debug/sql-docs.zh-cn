@@ -1,5 +1,5 @@
 ---
-title: sql： limit 字段和 sql： limit-值（SQLXML）
+title: sql： limit 字段和 sql： (SQLXML) 的限制值
 description: 了解如何在使用 XML 大容量加载时使用 SQLXML 批注 sql： limit 和 sql： limit 来筛选数据。
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +18,17 @@ ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 211e14cbc8f965a660a087346a437d814489b7c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 68f0044df7beb39d11caa828f7c873d574a03a89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724722"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479288"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>批注解释 - sql:limit-field 和 sql:limit-value
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  XML 大容量加载按其定义处理**sql： limit 字段**和**sql： limit-值**注释。 有关详细信息，请参阅[使用 sql： limit 字段和 sql： limit-value &#40;SQLXML 4.0&#41;筛选值](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。  
+  XML 大容量加载按其定义处理 **sql： limit 字段** 和 **sql： limit-值** 注释。 有关详细信息，请参阅 [使用 sql： limit 字段和 sql： limit-value &#40;SQLXML 4.0&#41;筛选值 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。  
   
  例如，假定一个数据库包含以下各表：  
   

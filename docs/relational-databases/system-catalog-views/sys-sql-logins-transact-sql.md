@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc8e947c60f8a1225b9079cbd55ec9d8a617b712
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bb0fc659d82024dbbc52dc777b9f6ae5da3062ac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956998"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477328"
 ---
 # <a name="syssql_logins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91956998"
   
  有关此视图所继承的列的列表，请参阅 [&#40;transact-sql&#41;sys.server_principals ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。 列 `owning_principal_id` 和 `is_fixed_role` 不是继承自 sys.server_principals。
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名和 Windows 身份验证登录名，请参阅 [&#40;transact-sql&#41;sys.server_principals ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
  如果启用包含的数据库用户，则无需登录即可建立连接。 若要标识这些帐户，请参阅  [&#40;transact-sql&#41;sys.database_principals ](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)。  

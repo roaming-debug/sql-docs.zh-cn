@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_exec_input_buffer (Transact-sql) '
-title: sys. dm_exec_input_buffer (Transact-sql) |Microsoft Docs
+description: 'sys.dm_exec_input_buffer (Transact-sql) '
+title: sys.dm_exec_input_buffer (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fecdc698dc7015ab47e5a8c97b3990c7e5bf1f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 68673cb11ce5a003b2c9317939942b1d602095be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536950"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477258"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-sql) 
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-sql) 
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
@@ -40,15 +40,15 @@ ms.locfileid: "89536950"
 sys.dm_exec_input_buffer ( session_id , request_id )
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
-*session_id* 要查找的批处理的会话 ID。 *session_id* 为 **smallint**。 可以从以下动态管理对象中获取*session_id* ：
+*session_id* 要查找的批处理的会话 ID。 *session_id* 为 **smallint**。 可以从以下动态管理对象中获取 *session_id* ：
 
 - [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)
 
-*request_id* 从 [dm_exec_requests sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)request_id。 *request_id* 是 **int**。
+*request_id*[Sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的 request_id。 *request_id* 是 **int**。
 
 ## <a name="table-returned"></a>返回的表
 
@@ -72,7 +72,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="remarks"></a>备注
 
-此动态管理函数可与 sys.databases 结合使用，dm_exec_sessions 或**dm_exec_requests。**
+此动态管理函数可与 sys.dm_exec_sessions 或 sys.dm_exec_requests 进行 **交叉应用** 一起使用。
 
 ## <a name="examples"></a>示例
 

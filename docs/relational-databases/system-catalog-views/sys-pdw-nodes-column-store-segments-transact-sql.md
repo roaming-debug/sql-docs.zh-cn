@@ -13,13 +13,13 @@ ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
 author: julieMSFT
 ms.author: jrasnick
 manager: jrj
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47e0b471f4622a66fa3ecba7dfa73fdaf8fa08e5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: bc68340741161743c4b090abbea69a4ace61c2ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034782"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477378"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-sql) 
 

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_external_script_requests
-title: sys. dm_external_script_requests |Microsoft Docs
+title: sys.dm_external_script_requests |Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b3c1f10be0b454503c5fbcfd9cdab191a687797
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 972e9527db2eaa546210ccc54528d0ce60197b4c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489835"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482678"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -80,7 +80,7 @@ external_script_request_id  |语言  |degree_of_parallelism  |external_user_name
 ---------|---------|---------|---------
 183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  

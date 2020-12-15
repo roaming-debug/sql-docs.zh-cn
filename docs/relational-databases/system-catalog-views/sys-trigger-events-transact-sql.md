@@ -1,6 +1,6 @@
 ---
 description: sys.trigger_events (Transact-SQL)
-title: sys. trigger_events (Transact-sql) |Microsoft Docs
+title: sys.trigger_events (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ead6f918e85c73d344924bfe1bc7c878bf4d44c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 18f9453079f7a11da4c1d073cda4dd750a3c91c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537981"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482868"
 ---
 # <a name="systrigger_events-transact-sql"></a>sys.trigger_events (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "89537981"
   激发触发器的每个事件对应一行。  
   
 > [!NOTE]  
->  **sys. trigger_events** 不适用于事件通知。  
+>  **sys.trigger_events** 不适用于事件通知。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<Columns inherited from sys.events>**|不适用|从[sys.databases](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)继承**object_id**、**类型** **type_desc**列。|  
+|**\<Columns inherited from sys.events>**|不适用|从 [sys.databases](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)继承 **object_id**、**类型** **type_desc** 列。|  
 |**is_first**|**bit**|触发器标记为第一个为此事件激发的触发器。|  
 |**is_last**|**bit**|触发器标记为最后一个为此事件激发的触发器。|  
 |**event_group_type**|**int**|要对其创建触发器的事件组，如果未对事件组创建触发器，则为 Null。|  

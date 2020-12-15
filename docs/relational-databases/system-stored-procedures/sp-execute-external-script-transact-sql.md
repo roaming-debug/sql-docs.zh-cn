@@ -20,43 +20,43 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: cceb8ad1df56eabaf0aa9507187e71b8db15bcaa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155080"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482375"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**Sp_execute_external_script**存储过程执行以输入参数形式提供给过程的脚本，并与[机器学习服务](../../machine-learning/sql-server-machine-learning-services.md)和[语言扩展](../../language-extensions/language-extensions-overview.md)一起使用。 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+**Sp_execute_external_script** 存储过程执行以输入参数形式提供给过程的脚本，并与 [机器学习服务](../../machine-learning/sql-server-machine-learning-services.md)和 [语言扩展](../../language-extensions/language-extensions-overview.md)一起使用。 
 
 机器学习服务、 [Python](../../machine-learning/concepts/extension-python.md) 和 [R](../../machine-learning/concepts/extension-r.md) 是受支持的语言。 对于语言扩展，Java 是支持的，但必须用 [CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md)定义。
 
 若要执行 **sp_execute_external_script**，必须首先安装机器学习服务或语言扩展。 有关详细信息，请参阅在 Windows 和[linux](../../linux/sql-server-linux-setup-machine-learning.md)[上安装 SQL Server 机器学习服务 (Python 和 R) ](../../machine-learning/install/sql-machine-learning-services-windows-install.md) ，或在 Windows 和[Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)[上安装 SQL Server 语言扩展](../../language-extensions/install/windows-java.md)。
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-**Sp_execute_external_script**存储过程执行以输入参数形式提供给过程的脚本，并与 SQL Server 2017 上的[机器学习服务](../../machine-learning/sql-server-machine-learning-services.md)一起使用。
+::: moniker range="=sql-server-2017"
+**Sp_execute_external_script** 存储过程执行以输入参数形式提供给过程的脚本，并与 SQL Server 2017 上的 [机器学习服务](../../machine-learning/sql-server-machine-learning-services.md)一起使用。
 
 机器学习服务、 [Python](../../machine-learning/concepts/extension-python.md) 和 [R](../../machine-learning/concepts/extension-r.md) 是受支持的语言。
 
 若要执行 **sp_execute_external_script**，必须先安装机器学习服务。 有关详细信息，请参阅 [在 Windows 上 (Python 和 R) 安装 SQL Server 机器学习服务](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-**Sp_execute_external_script**存储过程执行以输入参数形式提供给过程的脚本，并与 SQL Server 2016 上的[R Services](../../machine-learning/r/sql-server-r-services.md)一起使用。
+::: moniker range="=sql-server-2016"
+**Sp_execute_external_script** 存储过程执行以输入参数形式提供给过程的脚本，并与 SQL Server 2016 上的 [R Services](../../machine-learning/r/sql-server-r-services.md)一起使用。
 
 对于 R 服务，  [r](../../machine-learning/concepts/extension-r.md) 是支持的语言。
 
 若要执行 **sp_execute_external_script**，你必须首先安装 R Services。 有关详细信息，请参阅 [在 Windows 上 (Python 和 R) 安装 SQL Server 机器学习服务](../../machine-learning/install/sql-r-services-windows-install.md)。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-**Sp_execute_external_script**存储过程执行以输入参数形式提供给过程的脚本，并用于[Azure SQL 托管实例中的机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+::: moniker range="=azuresqldb-mi-current"
+**Sp_execute_external_script** 存储过程执行以输入参数形式提供给过程的脚本，并用于 [Azure SQL 托管实例中的机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 机器学习服务、 [Python](../../machine-learning/concepts/extension-python.md) 和 [R](../../machine-learning/concepts/extension-r.md) 是受支持的语言。
 
@@ -65,7 +65,7 @@ ms.locfileid: "92155080"
 
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ## <a name="syntax"></a>语法
 
 ```
@@ -82,7 +82,7 @@ sp_execute_external_script
     [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 ## <a name="syntax-for-sql-server-2017-and-earlier"></a>SQL Server 2017 及更早版本的语法
 
 ```
@@ -98,28 +98,28 @@ sp_execute_external_script
 ```
 ::: moniker-end
 
-## <a name="arguments"></a>参数
- ** \@ language** = N "*language*"  
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
- 指示脚本语言。 *语言* 为 **sysname**。 有效值为 **R**、 **Python**以及用 [CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md) (（例如，Java) ）定义的任何语言。
+## <a name="arguments"></a>自变量
+ **\@ language** = N "*language*"  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+ 指示脚本语言。 *语言* 为 **sysname**。 有效值为 **R**、 **Python** 以及用 [CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md) (（例如，Java) ）定义的任何语言。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
  指示脚本语言。 *语言* 为 **sysname**。 在 SQL Server 2017 中，有效值为 **R** 和 **Python**。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
  指示脚本语言。 *语言* 为 **sysname**。 在 SQL Server 2016 中，唯一有效的值是 **R**。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
  指示脚本语言。 *语言* 为 **sysname**。 在 Azure SQL 托管实例中，有效值为 **R** 和 **Python**。
 ::: moniker-end
 
- ** \@ script** = N "*script*" 外部语言脚本指定为文本或变量输入。 *脚本* 为 **nvarchar (max) **。  
+ **\@ script** = N "*script*" 外部语言脚本指定为文本或变量输入。 *脚本* 为 **nvarchar (max)**。  
 
-`[ @input_data_1 =  N'input_data_1' ]` 以查询形式指定外部脚本使用的输入数据 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *Input_data_1*的数据类型** (max) 为 nvarchar **。
+`[ @input_data_1 =  N'input_data_1' ]` 以查询形式指定外部脚本使用的输入数据 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *Input_data_1* 的数据类型 **(max) 为 nvarchar**。
 
 `[ @input_data_1_name = N'input_data_1_name' ]` 指定用于表示由定义的查询的变量名称 @input_data_1 。 外部脚本中的变量的数据类型取决于语言。 对于 R，输入变量是数据帧。 对于 Python，输入必须为表格格式。 *input_data_1_name* **sysname**。  默认值为 *InputDataSet*。  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 `[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]` 用于生成每个分区的模型。 指定用于对结果集进行排序的列的名称，例如 "产品名称"。 外部脚本中的变量的数据类型取决于语言。 对于 R，输入变量是数据帧。 对于 Python，输入必须为表格格式。
 
 `[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]` 用于生成每个分区的模型。 指定用于对数据进行分段的列的名称，如地理区域或日期。 外部脚本中的变量的数据类型取决于语言。 对于 R，输入变量是数据帧。 对于 Python，输入必须为表格格式。 
@@ -137,21 +137,21 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` 外部脚本使用的输入参数的值列表。  
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 > [!IMPORTANT]
 > 查询树由 SQL 机器学习控制，用户无法对查询执行任意操作。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 使用 **sp_execute_external_script** 执行使用支持的语言编写的脚本。 支持的语言是用于机器学习服务的 **Python** 和 **R** ，以及使用 [CREATE EXTERNAL language](../../t-sql/statements/create-external-language-transact-sql.md) 定义的任何语言 (例如，Java) 用于语言扩展。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 使用 **sp_execute_external_script** 执行使用支持的语言编写的脚本。 支持的语言为 SQL Server 2017 机器学习服务中的 **Python** 和 **R** 。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 使用 **sp_execute_external_script** 执行使用支持的语言编写的脚本。 唯一受支持的语言是 SQL Server 2016 R Services 中的 **r** 。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 使用 **sp_execute_external_script** 执行使用支持的语言编写的脚本。 支持的语言是在 Azure SQL 托管实例机器学习服务中的 **Python** 和 **R** 。
 ::: moniker-end
 
@@ -159,7 +159,7 @@ sp_execute_external_script
 
 除了返回一个结果集外，还可以使用输出参数返回标量值。
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 可以通过配置外部资源池来控制外部脚本所使用的资源。 有关详细信息，请参阅 [CREATE EXTERNAL RESOURCE POOL &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)。 可从资源调控器目录视图、DMV 和计数器获取有关工作负荷的信息。 有关详细信息，请参阅 [Resource Governor 目录视图 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)， [Resource Governor 相关的动态管理视图 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)和 [SQL Server 外部脚本对象](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)。  
 ::: moniker-end
 
@@ -167,12 +167,12 @@ sp_execute_external_script
 
 使用 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 和 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)监视脚本执行。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ### <a name="parameters-for-partition-modeling"></a>分区建模的参数
 
 您可以设置两个附加参数，这些参数对分区数据启用建模，其中分区基于您提供的一个或多个列，这些列将数据集中的一个或多个列自然分段到仅在脚本执行过程中创建和使用的逻辑分区。 包含年龄、性别、地理区域、日期或时间的重复值的列是几个可用于分区数据集的示例。
 
-这两个参数 **input_data_1_partition_by_columns** 和 **input_data_1_order_by_columns**中，第二个参数用于对结果集进行排序。 参数作为输入传递给， `sp_execute_external_script` 并为每个分区执行一次外部脚本。 有关详细信息和示例，请参阅 [教程：创建基于分区的模型](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md)。
+这两个参数 **input_data_1_partition_by_columns** 和 **input_data_1_order_by_columns** 中，第二个参数用于对结果集进行排序。 参数作为输入传递给， `sp_execute_external_script` 并为每个分区执行一次外部脚本。 有关详细信息和示例，请参阅 [教程：创建基于分区的模型](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md)。
 
 可以通过指定并行执行脚本 `@parallel=1` 。 如果输入查询可并行化，则应将参数设置为 `@parallel=1` 的一部分 `sp_execute_external_script` 。 默认情况下，查询优化器在超过 `@parallel=1` 256 行的表下运行，但如果想要显式处理此操作，则此脚本会将参数作为演示。
 
@@ -288,7 +288,7 @@ GO
 
 Python 代码中使用的列标题不会输出到 SQL Server;因此，请使用 WITH RESULT 语句来指定要使用的 SQL 的列名称和数据类型。
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 ### <a name="c-generate-an-r-model-based-on-data-from-sql-server"></a>C. 基于 SQL Server 中的数据生成 R 模型  
 
 下面的示例创建一个存储过程，该存储过程使用 **sp_execute_external_script** 生成 iris 模型并返回模型。  
@@ -322,7 +322,7 @@ GO
 
 要进行评分，还可以使用本机 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函数，此函数无需调用 Python 或 R 运行时，因此更加快速。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [SQL 机器学习](../../machine-learning/index.yml)
 + [SQL Server 语言扩展](../../language-extensions/language-extensions-overview.md)。 

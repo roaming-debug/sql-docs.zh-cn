@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8222058b5e26dd8e2d1c932705889ec0ee6d68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753699"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482525"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -131,16 +131,16 @@ CONTAINSTABLE
  LANGUAGE language_term  
  一种语言，其资源将用于断字、词干分析、同义词库和干扰词 (或 [非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 删除作为查询的一部分。 此参数是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值。 如果指定了 language_term，则它表示的语言将应用于搜索条件的所有元素。 如果未指定值，则使用该列的全文语言。  
   
- 如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 在对这种列进行查询时，指定 LANGUAGElanguage_term 可增大找到有效匹配项的可能性**。  
+ 如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 在对这种列进行查询时，指定 LANGUAGElanguage_term 可增大找到有效匹配项的可能性。  
   
- 指定为字符串时， *language_term*对应于[sys.sys语言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)兼容性视图中的**alias**列值。  字符串必须用单引号引起来，如 'language_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
+ 指定为字符串时， *language_term* 对应于 [sys.sys语言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)兼容性视图中的 **alias** 列值。  字符串必须用单引号引起来，如 'language_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
   
  如果该值是双字节字符集 (DBCS) 格式，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode 格式。  
   
  如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term。  
   
  *top_n_by_rank*  
- 指定仅返回 *n* 个排名最高的匹配项（降序）。 仅当指定了整数值 *n*时才适用。 如果 *top_n_by_rank* 与其他参数组合使用，则查询返回的行数可能会少于实际与所有谓词都匹配的行数。 *top_n_by_rank* 允许通过只调用最相关的命中来提高查询性能。  
+ 指定仅返回 *n* 个排名最高的匹配项（降序）。 仅当指定了整数值 *n* 时才适用。 如果 *top_n_by_rank* 与其他参数组合使用，则查询返回的行数可能会少于实际与所有谓词都匹配的行数。 *top_n_by_rank* 允许通过只调用最相关的命中来提高查询性能。  
   
  <contains_search_condition>  
  指定要在 column_name 中搜索的文本和匹配条件。 有关搜索条件的信息，请参阅 [CONTAINS &#40;transact-sql&#41;](../../t-sql/queries/contains-transact-sql.md)。  
@@ -159,7 +159,7 @@ FROM table AS FT_TBL INNER JOIN
    ON FT_TBL.unique_key_column = KEY_TBL.[KEY];  
 ```  
   
- CONTAINSTABLE 生成的表包含一个名为 **RANK**的列。 " **排名** " 列是从0到 1000) 的 (值，每行表示行与选择条件的匹配程度。 在 SELECT 语句中，此排名值通常按照下列方法之一使用：  
+ CONTAINSTABLE 生成的表包含一个名为 **RANK** 的列。 " **排名** " 列是从0到 1000) 的 (值，每行表示行与选择条件的匹配程度。 在 SELECT 语句中，此排名值通常按照下列方法之一使用：  
   
 -   在 ORDER BY 子句中返回排名最高的行作为表的第一行。  
   

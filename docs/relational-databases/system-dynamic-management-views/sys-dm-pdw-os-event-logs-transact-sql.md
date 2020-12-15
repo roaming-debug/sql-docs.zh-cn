@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: a0daa8cf-72e2-4349-8be1-d3cc0f9b1e02
 author: markingmyname
 ms.author: maghan
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d41886ee98edfe55927c746a2197df0ac4a2eeb1
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 15427f1be76cfa52b9124dde337f01fd1bcbd28b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035280"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482538"
 ---
 # <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys.dm_pdw_os_event_logs (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

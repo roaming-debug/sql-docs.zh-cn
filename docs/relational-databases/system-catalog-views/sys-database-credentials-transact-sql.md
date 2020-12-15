@@ -1,6 +1,6 @@
 ---
-description: 'sys. database_credentials (Transact-sql) '
-title: sys. database_credentials (Transact-sql) |Microsoft Docs
+description: 'sys.database_credentials (Transact-sql) '
+title: sys.database_credentials (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 796322df-e62a-45bf-b519-89e1d521abce
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5f5d4173c7e0454405102c35d56ff2fa1bf17eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6da257b97cecdba1dd6e4f485803e5833f3ed9ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460668"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482888"
 ---
-# <a name="sysdatabase_credentials-transact-sql"></a>sys. database_credentials (Transact-sql) 
+# <a name="sysdatabase_credentials-transact-sql"></a>sys.database_credentials (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   为数据库中的每个数据库作用域凭据返回一行。  
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改用 [sys.databases database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) 。    
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改用 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) 。    
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -40,17 +40,17 @@ ms.locfileid: "88460668"
 |credential_identity|**nvarchar(4000)**|要使用的标识的名称。 这通常是一个 Windows 用户。 它不必是唯一的。|  
 |create_date|**datetime**|创建数据库作用域凭据的时间。|  
 |modify_date|**datetime**|上次修改数据库作用域凭据的时间。|  
-|target_type|**nvarchar (100) **|数据库作用域凭据的类型。 对于数据库范围的凭据，返回 NULL。|  
+|target_type|**nvarchar (100)**|数据库作用域凭据的类型。 对于数据库范围的凭据，返回 NULL。|  
 |target_id|**int**|将数据库范围凭据映射到的对象的 ID。 对于数据库范围的凭据，返回0|  
   
 ## <a name="permissions"></a>权限  
  需要对数据库拥有 `CONTROL` 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [凭据 &#40;数据库引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [&#40;Transact-sql&#41;创建数据库作用域凭据 ](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
- [更改数据库作用域凭据 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
- [&#40;Transact-sql&#41;删除数据库范围的凭据 ](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+ [凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

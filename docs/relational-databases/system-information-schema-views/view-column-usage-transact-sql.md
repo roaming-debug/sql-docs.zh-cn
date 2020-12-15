@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aacea1639acd400334c19922588f0e9fc1298631
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4765b8955b47d67fb9e324cd019b7103d448bb6f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753846"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482475"
 ---
 # <a name="view_column_usage-transact-sql"></a>VIEW_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "91753846"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**VIEW_CATALOG**|**nvarchar (** 128 **) **|视图限定符。|  
-|**VIEW_SCHEMA**|**nvarchar (** 128 **) **|包含该视图的架构名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只是查找对象架构的可靠方法是查询 sys.databases 目录视图。|  
+|**VIEW_CATALOG**|**nvarchar (** 128 **)**|视图限定符。|  
+|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|包含该视图的架构名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只是查找对象架构的可靠方法是查询 sys.databases 目录视图。|  
 |**VIEW_NAME**|**sysname**|视图名。|  
-|**TABLE_CATALOG**|**nvarchar (** 128 **) **|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **) **|包含该表的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只是查找对象架构的可靠方法是查询 sys.databases 目录视图。|  
+|**TABLE_CATALOG**|**nvarchar (** 128 **)**|表限定符。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|包含该表的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只是查找对象架构的可靠方法是查询 sys.databases 目录视图。|  
 |**TABLE_NAME**|**sysname**|基表。|  
 |**COLUMN_NAME**|**sysname**|列名称。|  
   

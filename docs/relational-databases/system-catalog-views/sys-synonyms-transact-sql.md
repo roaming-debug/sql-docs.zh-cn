@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d6e88ca6-6e3d-4f56-bd3e-d85e26be5499
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7afb67a5371ca85bc3a0fa623b42519370e133a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 48d365741eb32b998a9d0b20299e328ba38f9b44
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545017"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477358"
 ---
 # <a name="syssynonyms-transact-sql"></a>sys.synonyms (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89545017"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**\<Columns inherited from sys.objects>**||有关此视图所继承的列的列表，请参阅 [sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
-|**base_object_name**|**nvarchar (1035) **|将此同义词的用户重定向到的对象的完全引起来的名称。|  
+|**base_object_name**|**nvarchar (1035)**|将此同义词的用户重定向到的对象的完全引起来的名称。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

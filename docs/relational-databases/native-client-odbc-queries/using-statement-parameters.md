@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81f55a758949f3be55c70d55b06d5c7860f407d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b05c7d20deb1108e5e4c7f74fffce42072ba8515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499092"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478058"
 ---
 # <a name="using-statement-parameters"></a>使用语句参数
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "88499092"
   
 -   在构造查询条件时增强用户交互。  
   
--   管理 **text**、 **ntext**和 **image** 数据以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定于数据的 C 数据类型。  
+-   管理 **text**、 **ntext** 和 **image** 数据以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定于数据的 C 数据类型。  
   
- 例如， **part** 表包含名为 **PartID**、 **Description**和 **Price**的列。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
+ 例如， **part** 表包含名为 **PartID**、 **Description** 和 **Price** 的列。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: d9bcc769abf138658c4994a42b9ee1898e964509
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: c180d679075076168d3be510c22d0775ebc7af30
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130889"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478898"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -56,7 +56,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
     , [ @objtype = ] 'COLUMN'   
 ``` 
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @objname =] "*object_name*"  
  用户对象或数据类型的当前限定或非限定名称。 如果要重命名的对象是表中的列，则 *object_name* 必须是表的形式。*列* 或 *架构。* 如果要重命名的对象是一个索引，则 *object_name* 必须是表的形式。*索引* 或 *架构。* 如果要重命名的对象是一个约束，则 *object_name* 的格式必须为 *schema。*  
   
@@ -86,7 +86,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 **适用** 于SQL Server (支持的所有版本) 和 Azure SQL 数据库  
  每当重命名 PRIMARY KEY 或 UNIQUE 约束时，sp_rename 都会自动重命名关联的索引。 如果重命名的索引与 PRIMARY KEY 约束关联，则 sp_rename 也会自动重命名该 PRIMARY KEY 约束。  
 

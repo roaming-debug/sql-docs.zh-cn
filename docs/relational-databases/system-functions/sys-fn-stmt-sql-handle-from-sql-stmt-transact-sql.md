@@ -1,6 +1,6 @@
 ---
 description: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-title: sys. fn_stmt_sql_handle_from_sql_stmt (Transact-sql) |Microsoft Docs
+title: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ dev_langs:
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5008d433757351e6d4be65d6db9c3ba8e0deb10f
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a46c5b4d9fa9f5bdf5db52e9ee2c0610ef7ba2a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646497"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482462"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  获取**stmt_sql_handle** [!INCLUDE[tsql](../../includes/tsql-md.md)] 给定参数化类型 (简单或强制) 下的语句的 stmt_sql_handle。 这使你可以通过在知道查询存储的文本时使用其 **stmt_sql_handle** 来引用其中存储的查询。  
+  获取 [!INCLUDE[tsql](../../includes/tsql-md.md)] 给定参数化类型 (简单或强制) 下的语句的 stmt_sql_handle。 这使你可以通过在知道查询存储的文本时使用其 **stmt_sql_handle** 来引用其中存储的查询。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,9 +39,9 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ) [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *query_sql_text*  
- 要作为句柄的查询在查询存储中的文本。 *query_sql_text* 为 **nvarchar (max) **，无默认值。  
+ 要作为句柄的查询在查询存储中的文本。 *query_sql_text* 为 **nvarchar (max)**，无默认值。  
   
  *query_param_type*  
  查询的参数类型。 *query_param_type* 是 **tinyint**。 可能的值包括：  
@@ -57,7 +57,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 -   3-强制  
   
 ## <a name="columns-returned"></a>返回的列  
- 下表列出了 sys.databases. fn_stmt_sql_handle_from_sql_stmt 返回的列。  
+ 下表列出了 sys.fn_stmt_sql_handle_from_sql_stmt 返回的列。  
   
 |列名称|类型|说明|  
 |-----------------|----------|-----------------|  
@@ -81,7 +81,7 @@ SELECT * FROM sys.databases;
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- 使用函数可以将查询存储数据与其他动态管理视图关联。 下面的示例：  
+ 使用函数可以将查询存储数据与其他动态管理视图关联。 如下示例中：  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0a06ab3c1a707d27cb97bff1db380974488d3d4
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 93820c8729bae62e6df35ba5030ecb2dde4dbeef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081616"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477928"
 ---
 # <a name="ibcpsessionbcpreadfmt-native-client-ole-db-provider"></a>IBCPSession：： BCPReadFmt (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

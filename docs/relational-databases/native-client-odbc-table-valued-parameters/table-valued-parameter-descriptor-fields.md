@@ -1,6 +1,6 @@
 ---
 description: 表值参数描述符字段
-title: 表值参数描述符字段 |Microsoft Docs
+title: Table-Valued 参数描述符字段 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5e8f06fc25aceda016398b414c895c349804008
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 391c6bafc42a7504643f09ba5cef2d17e1e734ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486741"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478038"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>表值参数描述符字段
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88486741"
   
 ## <a name="remarks"></a>备注  
   
-|名称|位置|类型|描述|  
+|名称|位置|类型|说明|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|表值参数的服务器类型名称。<br /><br /> 如果在对 SQLBindParameter 的调用上指定了表值参数类型名称，则它必须始终指定为 Unicode 值，即使是在作为 ANSI 应用程序生成的应用程序中。 用于参数 *StrLen_or_IndPtr* 的值应为 SQL_NTS 或名称的字符串长度乘以 SIZEOF (WCHAR) 。<br /><br /> 当通过 SQLSetDescField 指定表值参数类型名称时，可以使用符合应用程序生成方式的文本指定它。 ODBC 驱动程序管理器将执行任何所需的 Unicode 转换。|  
 |SQL_CA_SS_TYPE_CATALOG_NAME（只读）|IPD|SQLTCHAR*|定义该类型的目录。|  
@@ -38,7 +38,7 @@ ms.locfileid: "88486741"
   
  如果将参数焦点设置为表值参数，则以下语句属性和描述符标头字段将应用于表值参数：  
   
-|名称|位置|类型|描述|  
+|名称|位置|类型|说明|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> （这等同于 APD 中的 SQL_DESC_ARRAY_SIZE。）|APD|SQLUINTEGER|用于表值参数的缓冲区数组的数组大小。 这是缓冲区将容纳的最大行数或缓冲区的行数大小；表值参数值本身所具有的行数可能大于或小于缓冲区可以容纳的行数。 默认值为 1。<br /><br /> 注意：如果 SQL_SOPT_SS_PARAM_FOCUS 设置为其默认值0，则 SQL_ATTR_PARAMSET_SIZE 指的是语句，并指定参数集的数目。 如果将 SQL_SOPT_SS_PARAM_FOCUS 设置为表值参数的序号，则它引用该表值参数，并为该表值参数指定每个参数集具有的行数。|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|默认值是 SQL_PARAM_BIND_BY_COLUMN。<br /><br /> 若要选择按行绑定，则该字段将设置为将要绑定到一组表值参数行的结构或缓冲区实例的长度。 此长度必须包括所有绑定列的空间以及结构或缓冲区的任何填充大小。 这将确保当绑定列的地址按指定长度递增时，结果将指向下一行中相同列的开头。 在 ANSI C 中使用 **sizeof** 运算符时，此行为是保证的。|  

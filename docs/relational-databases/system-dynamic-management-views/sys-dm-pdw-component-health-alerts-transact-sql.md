@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
 author: markingmyname
 ms.author: maghan
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 49abcf059469f49dd9042e2ec0168962c383b7bd
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 97202c1532685abfe6d12c1dfe0f44642ecc5723
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035430"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482638"
 ---
 # <a name="sysdm_pdw_component_health_alerts-transact-sql"></a>sys.dm_pdw_component_health_alerts (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92035430"
 |component_id|**int**|组件的 ID。 请参阅 [&#40;transact-sql&#41;sys.pdw_health_components ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)。<br /><br /> pdw_node_id、component_id、component_instance_id、alert_id 和 alert_instance_id 构成此视图的键。|NOT NULL|  
 |component_instance_id|**nvarchar(255)**|pdw_node_id、component_id、component_instance_id、alert_id 和 alert_instance_id 构成此视图的键。|NOT NULL|  
 |alert_id|**int**|警报类型的 ID。 请参阅 [&#40;transact-sql&#41;sys.pdw_health_alerts ](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md)。<br /><br /> pdw_node_id、component_id、component_instance_id、alert_id 和 alert_instance_id 构成此视图的键。|NOT NULL|  
-|alert_instance_id|**nvarchar (36) **|标识给定警报的实例。<br /><br /> pdw_node_id、component_id、component_instance_id、alert_id 和 alert_instance_id 构成此视图的键。|NOT NULL|  
+|alert_instance_id|**nvarchar (36)**|标识给定警报的实例。<br /><br /> pdw_node_id、component_id、component_instance_id、alert_id 和 alert_instance_id 构成此视图的键。|NOT NULL|  
 |previous_value|**nvarchar(255)**|当警报的类型为 StatusChange 时使用。 这是之前的组件状态。 对于阈值类型的警报，值为 NULL。 有关警报类型的列表，请参阅 [&#40;transact-sql&#41;sys.pdw_health_alerts ](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md) 。|Null|  
 |current_value|**nvarchar(255)**|当警报的类型为 StatusChange 时使用。 这是当前的组件状态。 对于阈值类型的警报，值为 NULL。 有关警报类型的列表，请参阅 [&#40;transact-sql&#41;sys.pdw_health_alerts ](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md) 。|Null|  
 |create_time|**datetime**|生成警报的时间和日期。|NOT NULL|  

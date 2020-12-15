@@ -1,6 +1,6 @@
 ---
 description: sys.dm_external_script_execution_stats
-title: sys. dm_external_script_execution_stats |Microsoft Docs
+title: sys.dm_external_script_execution_stats |Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c8244de0efc2bdd3dc506e5e1ebcddcd4843dea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 32a35224dd40cfc33bdc3c8bb0c93fd5a783966a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489909"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482688"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88489909"
 
 对于 Python，此 DMV 跟踪对实例执行的 Python 调用的数目。
 
-在实例上安装并启用该功能时，计数开始；计数会一直累积，直到删除维护状态的文件或管理员将该文件覆盖。 因此，通常不可能重置 *counter_value*中的值。 如要希望根据会话、日历时间和其他间隔来监视使用情况，我们建议将计数捕获到表中。
+在实例上安装并启用该功能时，计数开始；计数会一直累积，直到删除维护状态的文件或管理员将该文件覆盖。 因此，通常不可能重置 *counter_value* 中的值。 如要希望根据会话、日历时间和其他间隔来监视使用情况，我们建议将计数捕获到表中。
 
 ### <a name="registration-of-external-script-functions-in-r"></a>在 R 中注册外部脚本函数
 
@@ -97,7 +97,7 @@ FROM sys.dm_external_script_execution_stats
 WHERE language = 'Python';
 ```  
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)

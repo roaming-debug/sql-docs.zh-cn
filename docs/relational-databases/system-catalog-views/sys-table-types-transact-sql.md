@@ -1,6 +1,6 @@
 ---
 description: sys.table_types (Transact-SQL)
-title: sys. table_types (Transact-sql) |Microsoft Docs
+title: sys.table_types (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ helpviewer_keywords:
 ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd8ea2fe8960115b5ef638490a38291ed9cdd559
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0e55d33dbc18c8a06100a2ffab4b9ea3691aabc1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548639"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482878"
 ---
 # <a name="systable_types-transact-sql"></a>sys.table_types (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的用户定义表类型的属性。 表类型是指无法从其中声明表变量或表值参数的类型。 每个表类型都有一个作为[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录视图中外键的**type_table_object_id** 。 您可以使用此 ID 列查询各种目录视图，其方式类似于常规表的 **object_id** 列，用于发现表类型的结构，如表的列和约束。    
+  显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的用户定义表类型的属性。 表类型是指无法从其中声明表变量或表值参数的类型。 每个表类型都有一个作为 [sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录视图中外键的 **type_table_object_id** 。 您可以使用此 ID 列查询各种目录视图，其方式类似于常规表的 **object_id** 列，用于发现表类型的结构，如表的列和约束。    
  
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "89548639"
   
 ## <a name="see-also"></a>另请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [使用表值参数 &#40;数据库引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
+ [&#40;数据库引擎使用 Table-Valued 参数&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

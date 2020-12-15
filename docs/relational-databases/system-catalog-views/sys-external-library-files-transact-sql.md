@@ -1,6 +1,6 @@
 ---
 description: sys.external_library_files (Transact-SQL)
-title: sys. external_library_files (Transact-sql) |Microsoft Docs
+title: sys.external_library_files (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2020
 ms.prod: sql
@@ -18,13 +18,13 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f0d4ef2a22c2d84030686f13304528c6e7980fc7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: cfeae68d2895df4fa448a87d81e0fdb85aa74cd1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486311"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477448"
 ---
 # <a name="sysexternal_library_files-transact-sql"></a>sys.external_library_files (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "88486311"
 |列名称 |数据类型 |说明|
 |------|------|-----|
 |external_library_id | int |外部库对象的 ID。 |
-|内容 |varbinary(max) |外部库文件项目的内容。 |
+|content |varbinary(max) |外部库文件项目的内容。 |
 |平台 |tinyint |安装 SQL Server 的主机平台的 ID。 |
 |platform_desc | nvarchar(60) |主机平台的名称。 有效值为 "WINDOWS"、"LINUX"。 |
 
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>请参阅  
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [创建外部库](../../t-sql/statements/create-external-library-transact-sql.md)  

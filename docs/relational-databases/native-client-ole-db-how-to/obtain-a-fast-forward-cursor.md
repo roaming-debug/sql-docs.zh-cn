@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bb39a385f78849df8f0c580e9ef37aff56e85fb
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7aff2a69aef735e68d5bb70eea7a927005e5fb74
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866550"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481088"
 ---
 # <a name="obtain-a-fast_forward-cursor-native-client-ole-db-provider"></a> (Native Client OLE DB 提供程序获取 FAST_FORWARD 游标) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

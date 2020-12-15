@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1d2672b9539770dd257b3db1bbce7af9c8a96c4e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 8fd0bbad8ede056d1d35a9be62e82704575472bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035230"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482497"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92035230"
 |distribution_type|**nvarchar(32)**|此步骤将经历的分发类型。|"AllNodes"、"AllDistributions"、"AllComputeNodes"、"ComputeNode"、"分发"、"SubsetNodes"、"SubsetDistributions"、"未指定"|  
 |location_type|**nvarchar(32)**|步骤的运行位置。|"Compute"、"Control"、"DMS"|  
 |status|**nvarchar(32)**|此步骤的状态。|挂起、正在运行、已完成、失败、UndoFailed、PendingCancel、已取消、已中止|  
-|error_id|**nvarchar (36) **|与此步骤关联的错误的唯一 ID （如果有）。|请参阅 [&#40;transact-sql&#41;sys.dm_pdw_errors ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)error_id。 如果未发生错误，则为 NULL。|  
+|error_id|**nvarchar (36)**|与此步骤关联的错误的唯一 ID （如果有）。|请参阅 [&#40;transact-sql&#41;sys.dm_pdw_errors ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)error_id。 如果未发生错误，则为 NULL。|  
 |start_time|**datetime**|步骤开始执行的时间。|小于或等于当前时间，大于或等于此步骤所属的查询 end_compile_time。 有关查询的详细信息，请参阅 [&#40;transact-sql&#41;sys.dm_pdw_exec_requests ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |end_time|**datetime**|此步骤完成执行、已取消或失败的时间。|小于或等于当前时间，大于或等于 start_time。 对于当前正在执行或已排队的步骤，将设置为 NULL。|  
 |total_elapsed_time|**int**|查询步骤已运行的总时间（以毫秒为单位）。|介于0与 end_time 与 start_time 之间的差异。 对于排队步骤，为0。<br /><br /> 如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。"<br /><br /> 最大值（以毫秒为单位）等效于24.8 天。|  

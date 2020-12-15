@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_sessions (Transact-SQL)
-title: sys. dm_exec_sessions (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d160be9c71c75e58a892f4b43494046b293caeb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7b50b83a71df6485afae83fb371abb04209898ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539426"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482788"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中每个经过身份验证的会话都返回一行。 sys.dm_exec_sessions 是服务器范围的视图，显示了有关所有活动用户连接和内部任务的信息。 此信息包含客户端版本、客户端程序名称、客户端登录时间、登录用户、当前会话设置等。 使用 sys.dm_exec_sessions，首先可以查看当前的系统负荷并标识相关会话，然后可以通过其他动态管理视图或动态管理函数了解有关该会话的详细信息。  
   
- Sys. dm_exec_connections、dm_exec_sessions 和 sys.databases dm_exec_requests 动态管理视图映射到 [sys.sys进程](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 系统表。  
+ Sys.dm_exec_connections、sys.dm_exec_sessions 和 sys.dm_exec_requests 动态管理视图映射到 [sys.sys进程](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 系统表。  
   
-> **注意：** 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_exec_sessions**。  
+> **注意：** 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_exec_sessions**。  
   
 |列名称|数据类型|说明和特定于版本的信息|  
 |-----------------|---------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "89539426"
 |login_name|**nvarchar(128)**|当前执行的会话所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 有关创建此会话的原始登录名，请参阅 original_login_name。 可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经过身份验证的登录名或 Windows 身份验证的域用户名。 不可为 null。|  
 |nt_domain|**nvarchar(128)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 客户端的 Windows 域（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
 |nt_user_name|**nvarchar(128)**|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 客户端的 Windows 用户名（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
-|状态|**nvarchar(30)**|会话的状态。 可能的值：<br /><br /> **Running** - 当前正在运行一个或多个请求<br /><br /> **Sleeping** - 当前没有运行任何请求<br /><br /> **休眠** -由于连接池而重置会话，并且该会话目前处于预登录状态。<br /><br /> **Preconnect** - 会话在资源调控器分类器中。<br /><br /> 不可为 null。|  
+|status|**nvarchar(30)**|会话的状态。 可能的值：<br /><br /> **Running** - 当前正在运行一个或多个请求<br /><br /> **Sleeping** - 当前没有运行任何请求<br /><br /> **休眠** -由于连接池而重置会话，并且该会话目前处于预登录状态。<br /><br /> **Preconnect** - 会话在资源调控器分类器中。<br /><br /> 不可为 null。|  
 |context_info|**varbinary(128)**|会话的 CONTEXT_INFO 值。 上下文信息由用户通过使用 [set CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 语句设置。 可以为 Null。|  
 |cpu_time|**int**|该会话所占用的 CPU 时间（毫秒）。 不可为 null。|  
 |memory_usage|**int**|该会话所占用的 8 KB 内存页数。 不可为 null。|  
@@ -65,7 +65,7 @@ ms.locfileid: "89539426"
 |is_user_process|**bit**|如果会话是系统会话，则为 0。 否则为 1。 不可为 null。|  
 |text_size|**int**|会话的 TEXTSIZE 设置。 不可为 null。|  
 |语言|**nvarchar(128)**|会话的 LANGUAGE 设置。 可以为 Null。|  
-|date_format|**nvarchar (3) **|会话的 DATEFORMAT 设置。 可以为 Null。|  
+|date_format|**nvarchar (3)**|会话的 DATEFORMAT 设置。 可以为 Null。|  
 |date_first|**smallint**|会话的 DATEFIRST 设置。 不可为 null。|  
 |quoted_identifier|**bit**|会话的 QUOTED_IDENTIFIER 设置。 不可为 null。|  
 |arithabort|**bit**|会话的 ARITHABORT 设置。 不可为 null。|  
@@ -89,13 +89,13 @@ ms.locfileid: "89539426"
 |database_id|**smallint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 每个会话的当前数据库的 ID。|  
 |authenticating_database_id|**int**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 对主体进行身份验证的数据库的 ID。 对于登录名，该值将为 0。 对于包含数据库用户，该值将为包含数据库的数据库 ID。|  
 |open_transaction_count|**int**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 每个会话的打开事务数。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
-|page_server_reads|**bigint**|**适用**于： Azure SQL 数据库超大规模<br /><br /> 在此会话期间，此会话中的请求所执行的页服务器读取次数。 不可为 null。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|page_server_reads|**bigint**|**适用** 于： Azure SQL 数据库超大规模<br /><br /> 在此会话期间，此会话中的请求所执行的页服务器读取次数。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
 所有人都可以查看自己的会话信息。  
-** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ：** 需要 `VIEW SERVER STATE` 权限 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 才能查看服务器上的所有会话。  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ：** 需要 `VIEW DATABASE STATE` 查看与当前数据库的所有连接。 `VIEW DATABASE STATE` 不能在数据库中授予 `master` 。 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ：** 需要 `VIEW SERVER STATE` 权限 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 才能查看服务器上的所有会话。  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ：** 需要 `VIEW DATABASE STATE` 查看与当前数据库的所有连接。 `VIEW DATABASE STATE` 不能在数据库中授予 `master` 。 
   
   
 ## <a name="remarks"></a>备注  
@@ -115,12 +115,12 @@ ms.locfileid: "89539426"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|到|对于/应用|关系|  
+|From|功能|对于/应用|关系|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|一对零或一对多|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|一对零或一对多|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|一对零或一对多|  
-|sys.dm_exec_sessions|[sys. dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md) (session_id &#124; 0) |session_id CROSS APPLY<br /><br /> OUTER APPLY|一对零或一对多|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md) (session_id &#124; 0) |session_id CROSS APPLY<br /><br /> OUTER APPLY|一对零或一对多|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|一对一|  
   
 ## <a name="examples"></a>示例  

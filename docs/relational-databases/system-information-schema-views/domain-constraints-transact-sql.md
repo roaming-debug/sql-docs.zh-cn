@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20f675d11a58af2f5a1a433b8fdba41d07d4b01b
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a21ae902a796e5d8864fc9a72a9d0fe01992285b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753565"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482438"
 ---
 # <a name="domain_constraints-transact-sql"></a>DOMAIN_CONSTRAINTS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "91753565"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **) **|规则所在的数据库。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **) **|包含该约束的架构的名称。<br /><br /> <strong> \* \* 重要 \* 说明 \* </strong>不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|规则所在的数据库。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|包含该约束的架构的名称。<br /><br /> <strong> \* \* 重要 \* 说明 \* </strong>不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
 |**CONSTRAINT_NAME**|**sysname**|“规则名称”。|  
-|**DOMAIN_CATALOG**|**nvarchar (** 128 **) **|包含该别名数据类型的数据库。|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **) **|包含该别名数据类型的架构的名称。<br /><br /> <strong> \* \* 重要 \* 说明 \* </strong>不要使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
+|**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|包含该别名数据类型的数据库。|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|包含该别名数据类型的架构的名称。<br /><br /> <strong> \* \* 重要 \* 说明 \* </strong>不要使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
 |**DOMAIN_NAME**|**sysname**|别名数据类型。|  
-|**IS_DEFERRABLE**|**varchar (** 2 **) **|指定限制检查是否可延迟。 始终返回 NO。|  
-|**INITIALLY_DEFERRED**|**varchar (** 2 **) **|指定是否首先延迟约束检查。 始终返回 NO。|  
+|**IS_DEFERRABLE**|**varchar (** 2 **)**|指定限制检查是否可延迟。 始终返回 NO。|  
+|**INITIALLY_DEFERRED**|**varchar (** 2 **)**|指定是否首先延迟约束检查。 始终返回 NO。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](../../t-sql/language-reference.md)   

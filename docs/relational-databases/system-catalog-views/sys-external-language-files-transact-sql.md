@@ -1,6 +1,6 @@
 ---
-description: sys. external_language_files (Transact-sql) -SQL Server
-title: sys. external_language_files (Transact-sql) -SQL Server |Microsoft Docs
+description: sys.external_language_files (Transact-sql) -SQL Server
+title: sys.external_language_files (Transact-sql) -SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe6da94cc085e14667ee0518452fc6043eed60e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: f09590931848f963ebe62736d4a890c0cf11ed0d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401063"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477458"
 ---
-# <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files (Transact-sql) 
+# <a name="sysexternal_language_files-transact-sql"></a>sys.external_language_files (Transact-sql) 
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 此目录视图提供数据库中的外部语言扩展文件的列表。 “R”和“Python”是保留名称，不能使用这些特定名称创建外部语言   。
@@ -36,19 +36,19 @@ ms.locfileid: "88401063"
 
 ## <a name="sysexternal_languages"></a>sys.external_languages
 
-目录视图 sys.databases 列出了数据库中每个外部语言扩展的行 external_language_files。 参数
+目录视图 sys.external_language_files 列出了数据库中每个外部语言扩展的行。 parameters
 
 |列名称 |数据类型 | 说明|
 |------|------|------|
 |external_language_id |int | 外部语言的 ID|
-|内容|varbinary(max) |外部语言扩展文件的内容|
+|content|varbinary(max) |外部语言扩展文件的内容|
 |file_name|nvarchar (266) |语言扩展文件的名称|
 |平台|tinyint|安装 SQL Server 的主机平台的 ID|
 |platform_desc |nvarchar(60)|主机平台的名称。 有效值为 "WINDOWS"、"LINUX"。|
 |parameters|nvarchar(4000)|外部语言 prameters|
 |environment_variables |nvarchar(4000)|外部语言环境变量|
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
 + [sys.external_languages](sys-external-languages-transact-sql.md)  
 + [创建外部语言](../../t-sql/statements/create-external-language-transact-sql.md)  

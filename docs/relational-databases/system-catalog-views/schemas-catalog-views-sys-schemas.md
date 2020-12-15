@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccce0c55e7c59cd72e004d6c7bd52fe03a1c4e1f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 473dd22d2f19d29e5b778a585ad59d0d99acbaee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91807225"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479098"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>架构目录视图-sys.databases
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91807225"
 |schema_id|**int**|架构的 ID。 在该数据库中是唯一的。|  
 |principal_id|**int**|此架构所属的主体数据库的 ID。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 数据库架构充当可在 **sys.databases** 目录视图中找到的对象（如表、视图、过程和函数）的命名空间或容器。  
 
 每个架构都有一个所有者。 所有者为安全 [主体](../../relational-databases/security/authentication-access/principals-database-engine.md)。

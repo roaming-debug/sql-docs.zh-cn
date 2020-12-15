@@ -1,6 +1,6 @@
 ---
 description: sys.fn_listextendedproperty (Transact-SQL)
-title: sys. fn_listextendedproperty (Transact-sql) |Microsoft Docs
+title: sys.fn_listextendedproperty (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd891bcfdaddfb42e2b55e1b69e3f320563c1ba7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3efd2428f9eeae241c0ec9be497c854ba0d91417
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427819"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478948"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,12 +57,12 @@ fn_listextendedproperty (
   )   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  {默认值 |"*property_name*" |无效  
  属性的名称。 *property_name* **sysname**。 有效输入包括默认值 NULL 或属性名。  
   
  {默认值 |"*level0_object_type*" |无效  
- 用户或用户定义类型。 *level0_object_type* 是 **varchar (128) **，默认值为 NULL。 有效输入包括 ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER 和 NULL。  
+ 用户或用户定义类型。 *level0_object_type* 是 **varchar (128)**，默认值为 NULL。 有效输入包括 ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER 和 NULL。  
   
 > [!IMPORTANT]  
 >  作为级别 0 类型的 USER 和 TYPE 将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中删除。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。 改用 SCHEMA 替代 USER 作为级别 0 类型。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
@@ -71,7 +71,7 @@ fn_listextendedproperty (
  所指定的级别 0 对象类型的名称。 *level0_object_name* 的值为 **sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
   
  {默认值 |"*level1_object_type*" |无效  
- 级别 1 对象的类型。 *level1_object_type* 是 **varchar (128) ** ，默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ 级别 1 对象的类型。 *level1_object_type* 是 **varchar (128)** ，默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
 > [!NOTE]  
 >  默认值映射到 NULL，而“default”映射到对象类型 DEFAULT。  
@@ -80,7 +80,7 @@ fn_listextendedproperty (
  所指定的级别 1 对象类型的名称。 *level1_object_name* 的值为 **sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
   
  {默认值 |"*level2_object_type*" |无效  
- 级别 2 对象的类型。 *level2_object_type* 是 **varchar (128) ** ，默认值为 NULL。 有效输入包括 DEFAULT、默认值（映射到 NULL）和 NULL。 *Level2_object_type*的有效输入为 COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
+ 级别 2 对象的类型。 *level2_object_type* 是 **varchar (128)** ，默认值为 NULL。 有效输入包括 DEFAULT、默认值（映射到 NULL）和 NULL。 *Level2_object_type* 的有效输入为 COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
  {默认值 |"*level2_object_name*" |无效  
  所指定的级别 2 对象类型的名称。 *level2_object_name* 的值为 **sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
@@ -182,6 +182,6 @@ GO
  [sp_addextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys. extended_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys.extended_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

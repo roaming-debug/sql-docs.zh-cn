@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 507853f50ede1c652e81b24d60121deadad239d3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 0bd3d4c55a61f7e4911d4b9f1e962a11960976f5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035377"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482604"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92035377"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-| 源 | 功能 | Relationship |
+| From | 功能 | 关系 |
 | ---- | -- | ------------ |
 |dm_pdw_exec_sessions dm_pdw_exec_sessions.session_id|dm_pdw_exec_connections dm_pdw_exec_connections.session_id|一对一|  
 |dm_pdw_exec_requests dm_pdw_exec_requests.connection_id|dm_pdw_exec_connections dm_pdw_exec_connections.connection_id|多对一|  

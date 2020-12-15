@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea021b39d01af931a989c55233a7f1cd8fa2cb82
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6a55bcdd0df9f288daa22c5f4f1454b14305ec6a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004797"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478938"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,14 +42,14 @@ sp_pkeys [ @table_name = ] 'name'
     [ , [ @table_qualifier = ] 'qualifier' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @table_name =] "*name*"  
  要返回其信息的表。 *名称* 为 **sysname**，无默认值。 不支持通配符模式匹配。  
   
  [ @table_owner =] "*owner*"  
  为指定的表指定所有者。 *所有者* 为 **sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定 *owner* ，则应用基础 DBMS 的默认表可见性规则。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定 *所有者* ，并且当前用户没有具有指定 *名称*的表，则此过程将查找数据库所有者拥有指定 *名称* 的表。 如果存在，则返回该表的列。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定 *所有者* ，并且当前用户没有具有指定 *名称* 的表，则此过程将查找数据库所有者拥有指定 *名称* 的表。 如果存在，则返回该表的列。  
   
  [ @table_qualifier =] '*限定符*'  
  是表限定符。 *限定符* 的值为 **sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_) 。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  

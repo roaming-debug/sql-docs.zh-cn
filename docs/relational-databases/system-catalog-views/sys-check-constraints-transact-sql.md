@@ -1,6 +1,6 @@
 ---
 description: sys.check_constraints (Transact-SQL)
-title: sys. check_constraints (Transact-sql) |Microsoft Docs
+title: sys.check_constraints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 767714d75fcb885a23899161714695237fcb8149
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 73b76b420c06b27b61fb1adeb469d09cf6899310
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88323853"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477518"
 ---
 # <a name="syscheck_constraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

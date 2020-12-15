@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c778e2e2ccc1d54a6a61110457ce6a2b0756920e
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 23f4db8f365aabc51ced7fc0d2ebfb9c5f94a788
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97322017"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482758"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "97322017"
 ## <a name="remarks"></a>备注  
  sys.dm_os_buffer_descriptors 返回资源数据库正在使用的页。 sys.dm_os_buffer_descriptors 不会返回有关免费或被盗页面的信息，也不会返回有关在读取时出错的页的信息。  
   
-|From|功能|开|关系|  
+|From|功能|On|关系|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|多对一|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|多对一|  

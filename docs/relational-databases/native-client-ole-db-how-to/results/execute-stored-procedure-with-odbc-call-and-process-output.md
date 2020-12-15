@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5785874d7046cfe1822feeb43a9ee9e3c9b191b0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9600980f1965b689ce3c1d39aa8eed346fb2cb69
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867656"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481058"
 ---
 # <a name="execute-sql-server-native-client-stored-procedure-with-odbc-call-and-process-output"></a>执行具有 ODBC 调用和进程输出的 SQL Server Native Client 存储过程
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5804f8b5aa598908262d1e3fb89ec13a9b183ed7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f99e4c0106817b0defdcc09fc045ce985634571e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448513"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477948"
 ---
 # <a name="sql-server-native-client-data-type-mapping-in-rowsets-and-parameters"></a>SQL Server Native Client 行集和参数中的数据类型映射
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  在行集和作为参数值的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 情况下，Native Client OLE DB 提供程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用以下 OLE DB 定义的数据类型来表示数据，这些数据类型在函数 **IColumnsInfo：： GetColumnInfo** 和 **ICommandWithParameters：： GetParameterInfo**中报告。  
+  在行集和作为参数值的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 情况下，Native Client OLE DB 提供程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用以下 OLE DB 定义的数据类型来表示数据，这些数据类型在函数 **IColumnsInfo：： GetColumnInfo** 和 **ICommandWithParameters：： GetParameterInfo** 中报告。  
   
 |SQL Server 数据类型|OLE DB 数据类型|  
 |--------------------------|----------------------|  

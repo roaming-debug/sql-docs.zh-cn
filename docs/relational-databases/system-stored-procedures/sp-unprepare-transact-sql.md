@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 14320251-c551-49d8-b933-057406114978
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e3b2d0aadc896e24991f457721d44128023fc8b
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 035277942891af31b6d4eac980be2ed653ec703f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006141"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480788"
 ---
 # <a name="sp_unprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92006141"
 sp_unprepare handle           
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *柄*  
  Sp_prepare 返回的 *句柄* 值。  
   

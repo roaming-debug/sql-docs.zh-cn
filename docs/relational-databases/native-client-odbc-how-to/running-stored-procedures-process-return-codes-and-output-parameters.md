@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d71c4b453ca9e3f48f5ac2d4d7cbcf46da1d26e8
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 25366965de65289e895cda888a7bb3a6d8956d54
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869386"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481148"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>运行存储过程 - 处理返回代码和输出参数
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "91869386"
   
 2.  为每个输入、输入/输出和输出参数调用 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) ，并为过程返回值调用，如果有任何)  (。  
   
-3.  用 **SQLExecDirect**执行语句。  
+3.  用 **SQLExecDirect** 执行语句。  
   
 4.  处理结果集，直到 **SQLFetch** 或 **SQLFetchScroll** 在处理最后一个结果集时或在 **SQLMoreResults** 返回 SQL_NO_DATA 之前返回 SQL_NO_DATA。 这时，将以返回的数据值填充绑定到返回代码和输出参数的变量。  
 

@@ -19,13 +19,13 @@ helpviewer_keywords:
 - sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db599449d45263445ae9628e2cfbacfe768f0f1
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a87f08bd2992d752b57af9519d351c198cb4d78b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96503321"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477228"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-sql) 
 

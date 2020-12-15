@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0f9f31caa5b026df62d509db5c276e60839877b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6135873485afc025b51610b503fd8896e9dbb08e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866643"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481068"
 ---
 # <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>执行 SQL Server Native Client User-Defined 函数并处理返回代码 (OLE DB) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

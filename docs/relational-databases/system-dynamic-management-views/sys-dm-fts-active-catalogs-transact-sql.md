@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f352af03115de658f16e56e27bc5ecf3bd900c3
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6b557073c7ad5d9aaef7f90380bf80f6ba382901
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324398"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482728"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "97324398"
 |database_id|**int**|包含活动全文目录的数据库的 ID。|  
 |**catalog_id**|**int**|活动的全文目录的 ID。|  
 |**memory_address**|**varbinary(8)**|为与此全文目录相关的填充活动所分配的内存缓冲区的地址。|  
-|name|**nvarchar(128)**|活动的全文目录的名称。|  
+|**name**|**nvarchar(128)**|活动的全文目录的名称。|  
 |**is_paused**|**bit**|指示活动全文目录的填充是否已暂停。|  
 |**status**|**int**|全文目录的当前状态。 下列类型作之一：<br /><br /> 0 = 正在初始化<br /><br /> 1 = 就绪<br /><br /> 2 = 已暂停<br /><br /> 3 = 暂时错误<br /><br /> 4 = 需要重新装入<br /><br /> 5 = 关闭<br /><br /> 6 = 停止以备份<br /><br /> 7 = 已完成目录备份<br /><br /> 8 = 目录已损坏|  
 |**status_description**|**nvarchar(120)**|对活动全文目录的当前状态的说明。|  

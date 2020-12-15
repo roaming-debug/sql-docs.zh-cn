@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8fcdf7061685dacbd578e995164e3658fd22b45
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e339b35742e95d6c55a10c161831835c04557393
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753907"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478888"
 ---
 # <a name="table_privileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "91753907"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**GRANTOR**|**nvarchar (** 128 **) **|授权者。|  
-|**GRANTEE**|**nvarchar (** 128 **) **|被授权者。|  
-|**TABLE_CATALOG**|**nvarchar (** 128 **) **|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **) **|包含该表的架构的名称。<br /><br /> <strong> \* \* 重要 \* 信息 \* ：</strong>查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**GRANTOR**|**nvarchar (** 128 **)**|授权者。|  
+|**GRANTEE**|**nvarchar (** 128 **)**|被授权者。|  
+|**TABLE_CATALOG**|**nvarchar (** 128 **)**|表限定符。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|包含该表的架构的名称。<br /><br /> <strong> \* \* 重要 \* 信息 \* ：</strong>查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
 |**TABLE_NAME**|**sysname**|表名。|  
-|**PRIVILEGE_TYPE**|**varchar (** 10 **) **|特权的类型。|  
-|**IS_GRANTABLE**|**varchar (** 3 **) **|指定被授权者是否可以向其他人授予权限。|  
+|**PRIVILEGE_TYPE**|**varchar (** 10 **)**|特权的类型。|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|指定被授权者是否可以向其他人授予权限。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](../../t-sql/language-reference.md)   

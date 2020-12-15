@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dee5ef30ca260855c9df6a7823e7dce605c3ff72
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f976f9be51d688833a09e5faaae42b8864ecc274
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534779"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482385"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,15 +44,15 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="arguments"></a>参数  
-`[ @resample = ] 'resample'` 指定 **sp_updatestats** 将使用 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 语句的 "重新采样" 选项。 如果未指定 **"重新采样"** ，则 **sp_updatestats** 使用默认采样更新统计信息。 重新**采样**是**varchar (8) ** ，默认值为 NO。  
+## <a name="arguments"></a>自变量  
+`[ @resample = ] 'resample'` 指定 **sp_updatestats** 将使用 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 语句的 "重新采样" 选项。 如果未指定 **"重新采样"** ，则 **sp_updatestats** 使用默认采样更新统计信息。 重新 **采样** 是 **varchar (8)** ，默认值为 NO。  
   
 ## <a name="remarks"></a>备注  
- **sp_updatestats** `UPDATE STATISTICS` 通过 `ALL` 在数据库中的所有用户定义表和内部表中指定关键字，sp_updatestats 执行。 sp_updatestats 显示指示其进度的消息。 完成更新之后，此存储过程将报告已为所有的表更新了统计信息。  
+  `UPDATE STATISTICS` 通过 `ALL` 在数据库中的所有用户定义表和内部表中指定关键字，sp_updatestats 执行。 sp_updatestats 显示指示其进度的消息。 完成更新之后，此存储过程将报告已为所有的表更新了统计信息。  
   
 **sp_updatestats** 更新已禁用的非聚集索引的统计信息，并且不更新已禁用聚集索引的统计信息。  
   
-对于基于磁盘的表， **sp_updatestats**根据**dm_db_stats_properties sys.databases**目录视图中的**modification_counter**信息更新统计信息，并更新至少包含一行的统计信息。 **Sp_updatestats**执行时，将始终更新内存优化表的统计信息。 因此， **sp_updatestats** 不需要执行更多的操作。  
+对于基于磁盘的表， **sp_updatestats** 会根据 **sys.dm_db_stats_properties** 目录视图中的 **modification_counter** 信息更新统计信息，并更新至少有一行修改的统计信息。 **Sp_updatestats** 执行时，将始终更新内存优化表的统计信息。 因此， **sp_updatestats** 不需要执行更多的操作。  
   
 **sp_updatestats** 可以触发存储过程或其他已编译代码的重新编译。 但是，如果在引用的表和索引上只有一个查询计划，则 **sp_updatestats** 可能不会导致重新编译。 在这些情况下，即便更新了统计信息也不必进行重新编译。  
   

@@ -1,6 +1,6 @@
 ---
 description: 表值参数诊断记录字段
-title: 表值参数诊断记录字段 |Microsoft Docs
+title: Table-Valued 参数诊断记录字段 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58ca5bf25b1353e23d9c38374f2f538f2bfba0a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6d363b83300ec9733b3a2a7e934a3debe7d29abf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423741"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478018"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>表值参数诊断记录字段
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

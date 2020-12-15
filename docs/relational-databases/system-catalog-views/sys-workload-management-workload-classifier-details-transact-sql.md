@@ -12,13 +12,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 63b415b74692e58b453cd483983844bfa9d724d4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: cdab5a27c505d6024b85b0c4ec2ed15595b23863
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034560"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482828"
 ---
 # <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>sys.workload_management_workload_classifier_details (Transact-sql) 
 

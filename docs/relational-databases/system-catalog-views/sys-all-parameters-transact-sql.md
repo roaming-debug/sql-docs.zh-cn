@@ -1,6 +1,6 @@
 ---
 description: sys.all_parameters (Transact-SQL)
-title: sys. all_parameters (Transact-sql) |Microsoft Docs
+title: sys.all_parameters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2a6f5d373c4bf3ea2a5b22b0376ee57dbb0e4c0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 452d131c0bf1a267d42c83c17b7c6f3c9ec69bfe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539759"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479108"
 ---
 # <a name="sysall_parameters-transact-sql"></a>sys.all_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "89539759"
 |**parameter_id**|**int**|参数的 ID， 在对象中是唯一的。 如果对象是标量函数，则 **parameter_id** = 0 表示返回值。|  
 |**system_type_id**|**tinyint**|参数的系统类型的 ID。|  
 |**user_type_id**|**int**|用户定义的参数类型的 ID。<br /><br /> 若要返回类型的名称，请在此列上联接到 [sys.databases](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) 目录视图。|  
-|**max_length**|**smallint**|参数的最大长度（以字节为单位）。<br /><br /> -1 = 列数据类型为 **varchar (max) **、 **nvarchar (max) **、 **varbinary (max) **或 **xml**。|  
+|**max_length**|**smallint**|参数的最大长度（以字节为单位）。<br /><br /> -1 = 列数据类型为 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)** 或 **xml**。|  
 |**精度**|**tinyint**|如果参数是数值，则为该参数的精度；否则为 0。|  
 |**scale**|**tinyint**|如果参数是数值，则为该参数的小数位数；否则为 0。|  
 |is_output|**bit**|1 = 参数为输出值（或返回值）；否则为 0。|  
 |**is_cursor_ref**|**bit**|1 = 参数为游标引用参数。|  
-|**has_default_value**|**bit**|1 = 参数有默认值。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只维护该目录视图中的 CLR 对象的默认值；因此，对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 对象，此列始终包含 0 值。 若要查看对象中参数的默认值 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，请查询[sys.databases sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图的**定义**列，或使用[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)系统函数。|  
+|**has_default_value**|**bit**|1 = 参数有默认值。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只维护该目录视图中的 CLR 对象的默认值；因此，对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 对象，此列始终包含 0 值。 若要查看对象中参数的默认值 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，请查询 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图的 "**定义**" 列，或使用 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)系统函数。|  
 |**is_xml_document**|**bit**|1 = 内容为完整的 XML 文档。<br /><br /> 0 = 内容是文档片段，或列的数据类型不是 **xml**。|  
 |**default_value**|**sql_variant**|如果 **has_default_value** 为1，则此列的值为参数的默认值; 否则为。否则为 NULL。|  
 |**xml_collection_id**|**int**|用于验证参数的 XML 架构集合的 ID。<br /><br /> 如果参数的数据类型为 **xml** ，并且已键入 xml，则为非零值。<br /><br /> 0 = 没有 XML 架构集合，或参数不为 XML。|  

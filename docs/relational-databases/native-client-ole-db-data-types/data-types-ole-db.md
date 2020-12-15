@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1f3d294bf1c504da0f5c90a46ff5e5e86d5c734
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 477ec44d91f5373cf7fc72bc0b439e2e92621c9d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475752"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477938"
 ---
 # <a name="sql-server-native-client-data-types-ole-db"></a>OLE DB 的数据类型 (SQL Server Native Client) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

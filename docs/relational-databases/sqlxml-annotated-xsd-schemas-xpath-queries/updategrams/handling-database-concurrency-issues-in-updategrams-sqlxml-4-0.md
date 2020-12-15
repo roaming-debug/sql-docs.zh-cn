@@ -1,6 +1,6 @@
 ---
-title: Updategram 中的数据库并发问题（SQLXML）
-description: 了解如何使用 updategram （SQLXML 4.0）中的乐观并发控制机制处理数据库并发问题。
+title: 'Updategram 中的数据库并发问题 (SQLXML) '
+description: 了解如何使用 updategram (SQLXML 4.0) 中的乐观并发控制机制处理数据库并发问题。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +21,13 @@ ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11e4a7a875dd2c9b9450619f389b2f082136c536
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0f7c39eac7fc19d9f35c800f71ac874159fe284b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790591"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479198"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>在 Updategram 中处理数据库并发问题 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "85790591"
  乐观并发控制在 updategram 中提供三种保护级别：低（无）、中间和高。 通过相应指定 updategram，可以确定需要的保护级别。  
   
 ## <a name="lowest-level-of-protection"></a>最低保护级别  
- 此级别为盲目更新，它不参照自上次读取数据库后已进行的其他更新来处理更新。 在这种情况下，只在块中指定主键列 **\<before>** 来标识记录，并在块中指定更新后的信息 **\<after>** 。  
+ 此级别为盲目更新，它不参照自上次读取数据库后已进行的其他更新来处理更新。 在这种情况下，只在块中指定主键列 (s) **\<before>** 来标识记录，并在块中指定更新后的信息 **\<after>** 。  
   
- 例如，无论以前的电话号码是什么，以下 updategram 中的新联系人电话号码都是正确的。 请注意 **\<before>** 块如何仅指定主键列（ContactID）。  
+ 例如，无论以前的电话号码是什么，以下 updategram 中的新联系人电话号码都是正确的。 请注意 **\<before>** 块如何仅指定主键列 (ContactID) 。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -56,9 +56,9 @@ ms.locfileid: "85790591"
 ## <a name="intermediate-level-of-protection"></a>中间保护级别  
  在此保护级别中，updategram 将要更新的数据的当前值与数据库列中的值进行比较，以确保自您的事务读取记录后，这（个）些值未被任何其他事务更改过。  
   
- 您可以通过指定要在块中更新的主键列和列来获得此级别的保护 **\<before>** 。  
+ 您可以通过指定主键列 (s) 以及要在块中更新的列 () 来获取此级别的保护 **\<before>** 。  
   
- 例如，此 updategram 为 ContactID 是 1 的联系人更新 Person.Contact 表的 Phone 列中的值。 **\<before>** 块指定**电话**属性，以确保在应用更新的值之前此属性值与数据库中相应列的值匹配。  
+ 例如，此 updategram 为 ContactID 是 1 的联系人更新 Person.Contact 表的 Phone 列中的值。 **\<before>** 块指定 **电话** 属性，以确保在应用更新的值之前此属性值与数据库中相应列的值匹配。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -82,7 +82,7 @@ ms.locfileid: "85790591"
   
      如果在块中指定其他列 **\<before>** ，则在应用更新之前，updategram 会将为这些列指定的值与数据库中的值进行比较。 如果自您的事务读取记录后有记录列被更改过，updategram 将不执行更新。  
   
-     例如，以下 updategram 更新了 shift 名称，但在块中指定了附加列（StartTime，EndTime） **\<before>** ，因此请求更高级别的保护以应对并发更新。  
+     例如，以下 updategram 更新了 shift 名称，但指定了 (StartTime、EndTime) 在块中的其他列 **\<before>** ，从而请求对并发更新的更高保护级别。  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -102,13 +102,13 @@ ms.locfileid: "85790591"
   
      此示例通过指定块中记录的所有列值来指定最高保护级别 **\<before>** 。  
   
--   指定块中的时间戳列（如果可用） **\<before>** 。  
+-   指定时间戳列 (在块中) 可用 **\<before>** 。  
   
-     不是在 * * 块中指定所有记录列 \<before**> ，只需指定时间戳列（如果表有一个），并在块中指定主键列 **\<before>** 。 在每次更新记录后，数据库将时间戳列更新为唯一值。 在这种情况下，updategram 将时间戳的值与数据库中的相应值进行比较。 在数据库中存储的时间戳值为二进制值。 因此，必须在架构中将 timestamp 列指定为**dt： type = "bin. hex"**、 **dt： type = "bin"** 或**sql： datatype = "timestamp"**。 （可以指定**xml**数据类型或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。）  
+     \<before**>如果表中有一个) 与块中的主键列 () ，则只需在 * * 块中 (指定所有记录列 **\<before>** 。 在每次更新记录后，数据库将时间戳列更新为唯一值。 在这种情况下，updategram 将时间戳的值与数据库中的相应值进行比较。 在数据库中存储的时间戳值为二进制值。 因此，必须在架构中将 timestamp 列指定为 **dt： type = "bin. hex"**、 **dt： type = "bin"** 或 **sql： datatype = "timestamp"**。  (可以指定 **xml** 数据类型或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。 )   
   
 #### <a name="to-test-the-updategram"></a>测试 updategram  
   
-1.  在**tempdb**数据库中创建此表：  
+1.  在 **tempdb** 数据库中创建此表：  
   
     ```  
     USE tempdb  
@@ -168,7 +168,7 @@ ms.locfileid: "85790591"
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅 [使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  这是等效的 XDR 架构：  
   
@@ -190,6 +190,6 @@ ms.locfileid: "85790591"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SQLXML 4.0&#41;的 Updategram 安全注意事项](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的 Updategram 安全注意事项 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

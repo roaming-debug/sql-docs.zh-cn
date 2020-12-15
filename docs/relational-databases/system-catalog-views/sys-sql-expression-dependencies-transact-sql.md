@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 012d3d8b944b162e317bee53f4f25dcaaf5a1541
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2a9810d1c1fbda616b6dec588375529f4cbbb15c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006424"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477408"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  当前数据库中用户定义实体的每个按名称依赖项在此表中均占一行。 这包括本机编译标量用户定义函数和其他模块之间的依赖项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 两个实体之间的依赖关系是在另一个实体（称为 "*引用实体* *"）的*持久化 SQL 表达式中按名称显示的。 例如，在视图定义中引用表时，作为引用实体的视图将依赖于表这个被引用的实体。 如果删除该表，则该视图不可用。  
+  当前数据库中用户定义实体的每个按名称依赖项在此表中均占一行。 这包括本机编译标量用户定义函数和其他模块之间的依赖项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 两个实体之间的依赖关系是在另一个实体（称为 "*引用实体* *"）的* 持久化 SQL 表达式中按名称显示的。 例如，在视图定义中引用表时，作为引用实体的视图将依赖于表这个被引用的实体。 如果删除该表，则该视图不可用。  
   
  有关详细信息，请参阅[内存中 OLTP 的标量用户定义函数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "92006424"
 |referenced_id|**int**|被引用的实体的 ID。 对于绑定到架构的引用，此列的值始终为 NULL。 对于跨服务器和跨数据库引用，此列的值始终为 NULL。<br /><br /> 对于数据库内的引用，如果无法确定 ID，则为 NULL。 对于非绑定到架构的引用，在以下情况下将无法解析 ID：<br /><br /> 被引用实体不存在于数据库中。<br /><br /> 被引用的实体的架构依赖于调用方的架构，并在运行时解析。 在这种情况下，is_caller_dependent 设置为 1。|  
 |referenced_minor_id|**int**|引用实体为列时被引用的列的 ID；否则为 0。 不可为 null。<br /><br /> 当列在引用实体中按名称标识时，或者当 SELECT * 语句中使用了父实体时，被引用的实体为列。|  
 |is_caller_dependent|**bit**|指示被引用的实体的架构绑定在运行时发生，因此，实体 ID 的解析依赖于调用方的架构。 当被引用的实体为存储过程、扩展存储过程或在 EXECUTE 语句中调用的非绑定到架构的用户定义函数时，将会出现这种情况。<br /><br /> 1 = 被引用的实体依赖于调用方并在运行时解析。 在这种情况下，referenced_id 为 NULL。<br /><br /> 0 = 被引用的实体 ID 不依赖调用方。<br /><br /> 对于绑定到架构的引用、显式指定架构名称的跨数据库和跨服务器的引用，始终为 0。 例如，对格式为 `EXEC MyDatabase.MySchema.MyProc` 的实体的引用不依赖于调用方。 但是，格式为 `EXEC MyDatabase..MyProc` 的引用依赖调用方。|  
-|is_ambiguous|**bit**|指示引用不明确，可在运行时解析为用户定义函数、用户定义类型 (UDT) 或对 **xml**类型的列的 xquery 引用。<br /><br /> 例如，假定语句 `SELECT Sales.GetOrder() FROM Sales.MySales` 是在存储过程中定义的。 在执行存储过程之前，并不知道 `Sales.GetOrder()` 是 `Sales` 架构中的用户定义函数还是带有名为 `Sales` 的方法、类型为 UDT 且名为 `GetOrder()` 的列。<br /><br /> 1 = 引用不明确。<br /><br /> 0 = 引用是明确的，或者在调用视图时可以成功绑定实体。<br /><br /> 对于架构绑定引用，始终为0。|  
+|is_ambiguous|**bit**|指示引用不明确，可在运行时解析为用户定义函数、用户定义类型 (UDT) 或对 **xml** 类型的列的 xquery 引用。<br /><br /> 例如，假定语句 `SELECT Sales.GetOrder() FROM Sales.MySales` 是在存储过程中定义的。 在执行存储过程之前，并不知道 `Sales.GetOrder()` 是 `Sales` 架构中的用户定义函数还是带有名为 `Sales` 的方法、类型为 UDT 且名为 `GetOrder()` 的列。<br /><br /> 1 = 引用不明确。<br /><br /> 0 = 引用是明确的，或者在调用视图时可以成功绑定实体。<br /><br /> 对于架构绑定引用，始终为0。|  
   
 ## <a name="remarks"></a>备注  
  下表列出了为其创建和维护依赖关系信息的实体类型。 不为规则、默认值、临时表、临时存储过程或系统对象创建或维护依赖关系信息。  
@@ -77,7 +77,7 @@ ms.locfileid: "92006424"
 |查看|是|是|  
 |筛选索引|是**|否|  
 |筛选统计信息|是**|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程***|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程 * * _|是|是|  
 |CLR 存储过程|否|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
 |CLR 用户定义函数|否|是|  
@@ -92,11 +92,11 @@ ms.locfileid: "92006424"
 |XML 架构集合|否|是|  
 |分区函数|否|是|  
   
- \* 仅当表引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 计算列、CHECK 约束或 DEFAULT 约束的定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
+ \_ 仅当表引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 计算列、CHECK 约束或 DEFAULT 约束的定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
   
  ** 筛选谓词中使用的每列都作为引用实体进行跟踪。  
   
- *** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
+ * * _ 整数值大于1的带编号的存储过程不会作为引用或被引用的实体进行跟踪。  
   
 ## <a name="permissions"></a>权限  
  要求对数据库具有 VIEW DEFINITION 权限，并对数据库的 sys.sql_expression_dependencies 具有 SELECT 权限。 默认情况下，SELECT 权限仅授予 db_owner 固定数据库角色的成员。 将 SELECT 和 VIEW DEFINITION 权限授予其他用户时，被授权者可以查看数据库中的所有依赖关系。  
@@ -154,7 +154,7 @@ CREATE DATABASE db1;
 GO  
 USE db1;  
 GO  
-CREATE PROCEDURE p1 AS SELECT * FROM db2.s1.t1;  
+CREATE PROCEDURE p1 AS SELECT _ FROM db2.s1.t1;  
 GO  
 CREATE PROCEDURE p2 AS  
     UPDATE db3..t3  

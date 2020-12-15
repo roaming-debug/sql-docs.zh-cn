@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91900dc582246c7af67ca13ff49b465b48599b5d
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 256d01bcd3b33e96adb576a59ad917df4b04585b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97326830"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477268"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "97326830"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary(8)**|指定内存分配器的唯一内存地址。 这是主键列。 不可为 null。|  
-|type|**nvarchar(60)**|指定内存分配器的类型。 每个分配器都具有特定类型，例如，CLR Clerks MEMORYCLERK_SQLCLR。 不可为 null。|  
-|name|**nvarchar(256)**|指定在内部为此内存分配器分配的名称。 一个组件可拥有多个特定类型的内存分配器。 组件可选择使用特定名称来标识相同类型的内存分配器。 不可为 null。|  
+|**type**|**nvarchar(60)**|指定内存分配器的类型。 每个分配器都具有特定类型，例如，CLR Clerks MEMORYCLERK_SQLCLR。 不可为 null。|  
+|**name**|**nvarchar(256)**|指定在内部为此内存分配器分配的名称。 一个组件可拥有多个特定类型的内存分配器。 组件可选择使用特定名称来标识相同类型的内存分配器。 不可为 null。|  
 |**memory_node_id**|**smallint**|指定内存节点的 ID。 不可为 Null。|  
 |**single_pages_kb**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。|  
 |**pages_kb**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指定为此内存分配器分配的页内存量 (KB)。 不可为 null。|  

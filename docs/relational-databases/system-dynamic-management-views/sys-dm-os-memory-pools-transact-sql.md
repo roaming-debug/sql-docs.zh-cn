@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1ef053f3-c6f3-456e-82b6-26e4bd630d46
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d06c82fea42adf1a2cacfab8ccc2118f68c165ba
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7d6f41a3eca54dbcaa0c21e21a38482cae821808
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97326078"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480808"
 ---
 # <a name="sysdm_os_memory_pools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "97326078"
 |-----------------|---------------|-----------------|  
 |**memory_pool_address**|**varbinary(8)**|代表内存池的项的内存地址。 不可为 null。|  
 |**pool_id**|**int**|在一组池中的特定池的 ID。 不可为 null。|  
-|type|**nvarchar(60)**|对象池的类型。 不可为 null。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.dm_os_memory_clerks ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
-|name|**nvarchar(256)**|系统为此内存对象分配的名称。 不可为 null。|  
+|**type**|**nvarchar(60)**|对象池的类型。 不可为 null。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.dm_os_memory_clerks ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
+|**name**|**nvarchar(256)**|系统为此内存对象分配的名称。 不可为 null。|  
 |**max_free_entries_count**|**bigint**|池可以拥有的最大可用项的个数。 不可为 null。|  
 |**free_entries_count**|**bigint**|池中当前可用项的个数。 不可为 null。|  
 |**removed_in_all_rounds_count**|**bigint**|自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启动以来从池中删除的项数。 不可为 null。|  

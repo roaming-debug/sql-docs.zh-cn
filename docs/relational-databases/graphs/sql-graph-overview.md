@@ -15,13 +15,13 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79ffa64e3a567a219e192c9108b04e2c96efaf5c
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 846f37923f8388e15663c56a4f724984a1a2588f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235622"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480168"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL 数据库中的图形处理
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]

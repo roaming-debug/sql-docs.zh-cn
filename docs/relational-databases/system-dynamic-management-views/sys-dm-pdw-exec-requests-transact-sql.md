@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8816e2ca5872da55193fab016a459a461359c742
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: a84facf470cbafa9480c1beb48b19be7b9783f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328582"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482576"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-sql) 
 
@@ -36,7 +36,7 @@ ms.locfileid: "93328582"
 |end_compile_time|**datetime**|引擎完成编译请求的时间。|对于尚未编译的请求，为 NULL;否则，有效的 **日期时间** 小于 start_time 且小于或等于当前时间。|
 |end_time|**datetime**|请求执行完成、失败或已取消的时间。|对于排队或活动的请求为 Null;否则，有效的 **日期** 时间小于或等于当前时间。|  
 |total_elapsed_time|**int**|自请求开始后执行所用的时间（以毫秒为单位）。|介于0与 submit_time 与 end_time 之间的差异。</br></br> 如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。"</br></br> 最大值（以毫秒为单位）与24.8 天相同。|  
-|标签|**nvarchar(255)**|与某些 SELECT 查询语句相关联的可选标签字符串。|包含 "a-z"、"a-z"、"0-9" 和 "_" 的任何字符串。|  
+|label|**nvarchar(255)**|与某些 SELECT 查询语句相关联的可选标签字符串。|包含 "a-z"、"a-z"、"0-9" 和 "_" 的任何字符串。|  
 |error_id|**nvarchar (36)**|与请求关联的错误的唯一 ID （如果有）。|请参阅 [sys.dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md);如果未发生错误，则设置为 NULL。|  
 |database_id|**int**|显式上下文所使用的数据库的标识符 (例如，使用 DB_X) 。|请参阅 sys.databases 中的 ID [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |command|**nvarchar(4000)**|保存用户提交的请求的完整文本。|任何有效的查询或请求文本。 超过4000字节的查询将被截断。|  
@@ -49,7 +49,7 @@ ms.locfileid: "93328582"
 |client_correlation_id|**nvarchar(255)**|客户端会话的可选用户定义名称。  若要为会话设置，请调用 sp_set_session_context "client_correlation_id"、" <CorrelationIDName> "。  运行 `SELECT SESSION_CONTEXT(N'client_correlation_id')` 以检索其值。|
 ||||
 
-## <a name="remarks"></a>注解 
+## <a name="remarks"></a>备注 
  有关此视图保留的最大行的信息，请参阅 [容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 主题中的元数据部分。
 
 "Result_cache_hit" 列中的负整数值是所有应用原因的位图值，无法缓存查询的结果集。  此列可以是以下一个或多个值的 [| (按位或) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) 积：  
@@ -57,22 +57,22 @@ ms.locfileid: "93328582"
 |值            |说明  |  
 |-----------------|-----------------|  
 |**1**|结果集缓存命中|  
-|**0x00** ( **0** ) |结果集缓存未命中|  
-|-**0x01** ( **-1** ) |已对数据库禁用结果集缓存。|  
-|-**0x02** ( **-2** ) |在会话上禁用结果集缓存。 | 
-|-**0x04** ( **-4** ) |由于没有用于查询的数据源，因此已禁用结果集缓存。|  
-|-**0x08** ( **-8** ) |由于行级安全谓词，结果集缓存已禁用。|  
-|-**0x10** ( **-16** ) |由于在查询中使用了系统表、临时表或外部表，因此结果集缓存已禁用。|  
-|-**0x20** ( **-32** ) |由于查询包含运行时常量、用户定义函数或非确定性函数，因此禁用了结果集缓存。|  
-|-**0x40** ( **-64** ) |由于估计的结果集大小为 >10GB，结果集缓存已禁用。|  
-|-**0x80** ( **-128** )  |结果集缓存已禁用，因为结果集包含大小为 ( # B0 64kb) 的行。|  
-|-**0x100** ( **-256** )  |由于使用粒度动态数据掩码，结果集缓存已禁用。|  
+|**0x00** (**0**) |结果集缓存未命中|  
+|-**0x01** (**-1**) |已对数据库禁用结果集缓存。|  
+|-**0x02** (**-2**) |在会话上禁用结果集缓存。 | 
+|-**0x04** (**-4**) |由于没有用于查询的数据源，因此已禁用结果集缓存。|  
+|-**0x08** (**-8**) |由于行级安全谓词，结果集缓存已禁用。|  
+|-**0x10** (**-16**) |由于在查询中使用了系统表、临时表或外部表，因此结果集缓存已禁用。|  
+|-**0x20** (**-32**) |由于查询包含运行时常量、用户定义函数或非确定性函数，因此禁用了结果集缓存。|  
+|-**0x40** (**-64**) |由于估计的结果集大小为 >10GB，结果集缓存已禁用。|  
+|-**0x80** (**-128**)  |结果集缓存已禁用，因为结果集包含大小为 ( # B0 64kb) 的行。|  
+|-**0x100** (**-256**)  |由于使用粒度动态数据掩码，结果集缓存已禁用。|  
 
 ## <a name="permissions"></a>权限
 
  需要 VIEW SERVER STATE 权限。  
   
-## <a name="security"></a>安全
+## <a name="security"></a>安全性
 
  sys.dm_pdw_exec_requests 不会根据特定于数据库的权限筛选查询结果。 具有 VIEW SERVER STATE 权限的登录名可以获取所有数据库的结果查询结果  
   

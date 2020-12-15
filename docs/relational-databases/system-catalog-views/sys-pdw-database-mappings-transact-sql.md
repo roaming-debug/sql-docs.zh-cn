@@ -12,22 +12,22 @@ dev_langs:
 ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fb32b46347105b6dd80bf8013fe263018fad80e3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 8c93497ad0fd1c51a5422b80c835f3dbc8f1aff7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035010"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477368"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys.pdw_database_mappings (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  将数据库的 **database_id**映射到计算节点上使用的物理名称，并提供系统上数据库所有者的 **主体 id** 。 将 **sys.pdw_database_mappings** 联接到 **sys.databases** 和 **sys.pdw_nodes_pdw_physical_databases**。  
+  将数据库的 **database_id** 映射到计算节点上使用的物理名称，并提供系统上数据库所有者的 **主体 id** 。 将 **sys.pdw_database_mappings** 联接到 **sys.databases** 和 **sys.pdw_nodes_pdw_physical_databases**。  
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|physical_name|**nvarchar (36) **|计算节点上数据库的物理名称。<br /><br /> **physical_name** 和 **database_id** 构成此视图的键。||  
+|physical_name|**nvarchar (36)**|计算节点上数据库的物理名称。<br /><br /> **physical_name** 和 **database_id** 构成此视图的键。||  
 |database_id|**int**|数据库的对象 ID。 请参阅 [sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。<br /><br /> **physical_name** 和 **database_id** 构成此视图的键。||  
   
 ## <a name="examples-sspdw"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

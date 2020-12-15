@@ -1,6 +1,6 @@
 ---
 description: sys.symmetric_keys (Transact-SQL)
-title: sys. symmetric_keys (Transact-sql) |Microsoft Docs
+title: sys.symmetric_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbaba2c61112726b2dcecdfb02740cfc6a040079
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 54132d7f450543a8cec8396ebc8622f88a280476
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545044"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477398"
 ---
 # <a name="syssymmetric_keys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

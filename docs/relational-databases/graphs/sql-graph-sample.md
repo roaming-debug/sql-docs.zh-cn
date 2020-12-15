@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57051ece8e432ed56c2b376c6586ff5a147b25b6
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 24dd60c0341bc3f32192a5ac94fe786e9483a9f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235537"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480118"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>使用 T-sql 创建图形数据库并运行一些模式匹配查询
 
@@ -163,7 +163,7 @@ go
 ## <a name="script-explanation"></a>脚本说明  
 此脚本使用新的 T-sql 语法来创建节点和边缘表。 演示如何使用语句将数据插入到节点和边缘表中 `INSERT` ，并说明如何将 `MATCH` 子句用于模式匹配和导航。
 
-|命令    |注释
+|命令    |说明
 |---  |---  |
 |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)  |创建关系图节点或边缘表  |
 |[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)  |插入到节点或边缘表中  |

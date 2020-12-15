@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ceec8dbac1d66a516ad80e2e029fce2d5f405fc
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b10eed0596291e3030f6a0a24feded8087c95c30
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834374"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482768"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91834374"
 |sql_handle|**varbinary(64)**|此视图的键。 与请求关联的唯一数字 id。|系统中所有请求都是唯一的。|  
 |execution_id|**nvarchar (32**|与运行此查询的会话相关联的唯一数字 id。||  
 |status|**nvarchar (32**|请求的当前状态。|"挂起"、"授权"、"AcquireSystemResources"、"正在初始化"、"计划"、"正在分析"、"AquireResources"、"正在运行"、"正在取消"、"完成"、"失败"、"已取消"。|  
-|error_id|**nvarchar (36) **|与请求关联的错误的唯一 id （如果有）。|如果未发生错误，则设置为 NULL。|  
+|error_id|**nvarchar (36)**|与请求关联的错误的唯一 id （如果有）。|如果未发生错误，则设置为 NULL。|  
 |start_time|**datetime**|开始执行请求的时间。|对于排队请求，为 0;否则，有效的日期时间小于或等于当前时间。|  
 |end_time|**datetime**|引擎完成编译请求的时间。|对于排队或活动的请求为 Null;否则，有效的日期时间小于或等于当前时间。|  
 |total_elapsed_time|**int**|自请求开始后执行所用的时间（以毫秒为单位）。|介于0与 start_time 与 end_time 之间的差异。如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。" 最大值（以毫秒为单位）等效于24.8 天。|  
