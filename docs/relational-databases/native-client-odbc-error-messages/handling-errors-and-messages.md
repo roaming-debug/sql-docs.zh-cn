@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92a47417e8b8b133bd8956d0ba02d8f0037d0111
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 367142f4a605f95c81cbac34d4696a77f7a693ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868332"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438472"
 ---
 # <a name="handling-errors-and-messages"></a>处理错误和消息
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

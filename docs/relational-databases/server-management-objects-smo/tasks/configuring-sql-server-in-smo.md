@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82b797bdf365b5b1226f63bae31047f4c6aa29c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: afb9cbc371fa962d9c7b63dea6e2a9fe82cbfae8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498538"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439738"
 ---
 # <a name="configuring-sql-server-in-smo"></a>在 SMO 中配置 SQL Server
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

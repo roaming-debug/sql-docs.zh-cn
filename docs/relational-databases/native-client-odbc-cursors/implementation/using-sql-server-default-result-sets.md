@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9efdab422aba328213742d859ccdcca7498ebaed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f3599b25297cd1c30e015cfc609ed06376c243bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423899"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438620"
 ---
 # <a name="using-sql-server-default-result-sets"></a>使用 SQL Server 默认结果集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

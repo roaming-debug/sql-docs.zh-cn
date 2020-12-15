@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8939bfbec2f309c899a527288de35a3d3ea10d09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 91301000df95b19338313d4541d7a7de4956095d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420191"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439811"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共享管理对象 (SMO) 许可条款
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88420191"
 
 **2.  其他许可要求和/或使用权利。**
 
-&nbsp;&nbsp;**一个可分发代码。**
+&nbsp;&nbsp;**的.   可分发代码。**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i. 使用和分发的权限。如果你遵守以下条款：**
 *   你可以在你开发的程序中复制和分发该软件的对象代码形式（“可分发代码”）；并且
@@ -86,9 +86,9 @@ ms.locfileid: "88420191"
 
 **10. 适用的法律。**
 
-&nbsp;&nbsp;**美国。** 如果您在美国购买本软件，则对本协议的解释以及由于违反本协议而引起的索赔均以华盛顿州法律为准并受其管辖，而不考虑法律冲突原则。 您所居住的州的法律管辖所有其他索赔项目，包括根据州消费者保护法、不正当竞争法、以及侵权法提出的相关索赔。
+&nbsp;&nbsp;**的.   美国。** 如果您在美国购买本软件，则对本协议的解释以及由于违反本协议而引起的索赔均以华盛顿州法律为准并受其管辖，而不考虑法律冲突原则。 您所居住的州的法律管辖所有其他索赔项目，包括根据州消费者保护法、不正当竞争法、以及侵权法提出的相关索赔。
 
-&nbsp;&nbsp;**b. 美国之外。** 如果您在任何其他国家/地区购买该软件，则您所在国家/地区的法律适用。
+&nbsp;&nbsp;**b.   外美国。** 如果您在任何其他国家/地区购买该软件，则您所在国家/地区的法律适用。
 
 **11. 法律效力。** 本协议规定了某些合法权利。 根据您所在国家/地区的法律规定，您可能享有其他权利。 您还可能享有与您的软件卖方相关的权利。 如果您所在国家/地区的法律不允许本协议改变您所在国家/地区法律赋予您的权利，则本协议将不改变您按照所在国家/地区的法律应享有的权利。
 

@@ -14,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87f0d54585cafac90a2ab47ec3a7f691c80fe9e5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9b886ac6a15930146fedda1d6ee336234fc6cf57
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001478"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438576"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>针对 ODBC 日期/时间改进的数据类型支持
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,10 +38,10 @@ ms.locfileid: "86001478"
   
 |SQL Server 数据类型|SQL 数据类型|值|  
 |--------------------------|-------------------|-----------|  
-|datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|日期|SQL_TYPE_DATE<br /><br /> SQL_DATE|91（sql .h）<br /><br /> 9（sqltypes.h）|  
-|时间|SQL_SS_TIME2|-154 （SQLNCLI.MSI）|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql .h) <br /><br /> 9 (sqltypes.h) |  
+|时间|SQL_SS_TIME2|-154 (SQLNCLI.MSI) |  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 ||||
@@ -64,7 +65,7 @@ ms.locfileid: "86001478"
 |--------------------------|--------------------|------------------------------------------|  
 |datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 此数据类型精确到 1 分钟。 秒部分在输出中将为零，在输入中由服务器进行四舍五入。|  
-|日期|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |时间|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|"yyyy-mm-dd hh： mm： ss [. 维]"<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
@@ -139,7 +140,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- 如果**timezone_hour**为负数，则**timezone_minute**必须为负数或零。 如果**timezone_hour**为正，则**timezone_minute**必须为正数或零。 如果**timezone_hour**为零，则**timezone_minute**的范围可以是从-59 到 + 59 的任何值。  
+ 如果 **timezone_hour** 为负数，则 **timezone_minute** 必须为负数或零。 如果 **timezone_hour** 为正，则 **timezone_minute** 必须为正数或零。 如果 **timezone_hour** 为零，则 **timezone_minute** 的范围可以是从-59 到 + 59 的任何值。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC&#41;&#40;的日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;的日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

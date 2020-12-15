@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 791ae266a82168239f7c3a9cf99ef90066e8032f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f88f345a7c30ca240acdacd35cb0e015a4699f16
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455800"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439891"
 ---
-# <a name="sql-server-native-client-commands-generating-multiple-rowset-results"></a>SQL Server Native Client 生成多行集结果的命令
+# <a name="sql-server-native-client-commands-generating-multiple-rowset-results"></a>SQL Server Native Client 生成 Multiple-Rowset 结果的命令
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序可以从语句返回多个行集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句在以下条件下返回具有多个行集的结果：  

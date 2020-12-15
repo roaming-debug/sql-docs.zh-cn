@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d2fee24e7bad8628aeacf12dc04c205d09bc18a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 67d1650eb19e2a0f7f06f27a280458fff661e424
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498496"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439722"
 ---
 # <a name="creating-altering-and-removing-databases"></a>创建、更改和删除数据库
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

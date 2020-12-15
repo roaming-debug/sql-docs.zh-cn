@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d0842a0cc4c38c25af9dc3bdf334f846993f480
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 77ca9dc51b0c4529b54e6107adfcf19fb4f8bab8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867306"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438390"
 ---
 # <a name="batches-of-statements"></a>语句的批处理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

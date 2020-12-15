@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e0f32166351f80b87b28a169ea0204af97f832f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bf933bec30b2434583970992f79dfc4e898cd479
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547582"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439430"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "89547582"
 sp_recompile [ @objname = ] 'object'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @objname =] "*object*"  
- 当前数据库中存储过程、触发器、表、视图或用户定义函数的限定或未限定的名称。 *对象* 为 **nvarchar (776) **，无默认值。 如果 *对象* 是存储过程、触发器或用户定义函数的名称，则存储过程、触发器或函数将在下次运行时重新编译。 如果 *对象* 是表或视图的名称，则所有引用该表或视图的存储过程、触发器或用户定义函数将在下次运行时重新编译。  
+ 当前数据库中存储过程、触发器、表、视图或用户定义函数的限定或未限定的名称。 *对象* 为 **nvarchar (776)**，无默认值。 如果 *对象* 是存储过程、触发器或用户定义函数的名称，则存储过程、触发器或函数将在下次运行时重新编译。 如果 *对象* 是表或视图的名称，则所有引用该表或视图的存储过程、触发器或用户定义函数将在下次运行时重新编译。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败）  

@@ -1,6 +1,6 @@
 ---
 description: 使用用户定义表
-title: 使用用户定义的表 |Microsoft Docs
+title: 使用 User-Defined 表 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58f244f5216a016633b2f186d04ef9789267b6e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c1dd77a0558b2f4506179a4d4ebe87eba078801
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439708"
 ---
 # <a name="using-user-defined-tables"></a>使用用户定义表
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   用户定义表表示表格信息。 将表格数据传递到存储过程或用户定义函数中时，用户定义表可作为参数使用。 用户定义表不能用于表示数据库表中的列。  
   
-  对象具有  属性，该属性引用  对象。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>该集合中的每个对象都有一个**Columns**属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.Column> 列出了用户定义的表中的列的对象集合。 使用 Add 方法可向用户定义表添加列。  
+  对象具有  属性，该属性引用  对象。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>该集合中的每个对象都有一个 **Columns** 属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.Column> 列出了用户定义的表中的列的对象集合。 使用 Add 方法可向用户定义表添加列。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 对象定义新的用户定义表时，必须提供列和基于其中一列的主键。  
   

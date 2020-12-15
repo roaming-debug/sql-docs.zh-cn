@@ -1,5 +1,5 @@
 ---
-title: 执行查询（ODBC） |Microsoft Docs
+title: " (ODBC) 执行查询 |Microsoft Docs"
 description: ODBC 应用程序可以通过初始化连接句柄并连接到数据源，在 SQL Server 实例上运行语句。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 220ae82acde52fecf893e407e30b87ef9cc7e88b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1324ea8ab9f186726c965685a7261f78cabf5bc2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001431"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438400"
 ---
 # <a name="executing-queries-odbc"></a>执行查询 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86001431"
   
 4.  检索任何结果集。  
   
- 应用程序检索 SQL 语句所返回的所有结果集中的所有行后，它可以在同一语句句柄上执行其他查询。 如果应用程序确定不需要检索特定结果集中的所有行，则可以通过调用[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)或[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)来取消结果集的其余部分。  
+ 应用程序检索 SQL 语句所返回的所有结果集中的所有行后，它可以在同一语句句柄上执行其他查询。 如果应用程序确定不需要检索特定结果集中的所有行，则可以通过调用 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 或 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)来取消结果集的其余部分。  
   
  如果在 ODBC 应用程序中必须使用不同数据多次执行同一 SQL 语句，可以在 SQL 语句的构造中使用用问号 (?) 表示的参数标记：  
   
@@ -45,7 +46,7 @@ ms.locfileid: "86001431"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- 然后，可以通过调用[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)将每个参数标记绑定到程序变量。  
+ 然后，可以通过调用 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)将每个参数标记绑定到程序变量。  
   
  执行所有 SQL 语句并处理它们的结果集之后，应用程序释放语句句柄。  
   
@@ -61,7 +62,7 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
 -   [使用语句参数](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
--   [&#40;ODBC&#41;执行语句](../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+-   [&#40;ODBC&#41;执行语句 ](../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
 -   [释放语句句柄](../../relational-databases/native-client-odbc-queries/freeing-a-statement-handle.md)  
   

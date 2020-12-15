@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e6526db71839eab76789d5aaf15900e2e5596ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2a7d0aa8c2db5bc0553cafc761e9d4aac79c403b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490411"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439765"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 语法约定
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

@@ -1,6 +1,6 @@
 ---
 description: 快速只进游标 (ODBC)
-title: ODBC)  (快速只进游标 |Microsoft Docs
+title: " (ODBC) 快速 Forward-Only 游标 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c365461cc7dc4874ae76978019da2c67e3b84fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ef941028ffaf9c515b42d319bee522a03c928569
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423909"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438587"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>快速只进游标 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "88423909"
   
 2.  将 SQL_ATTR_ROW_ARRAY_SIZE 设置为 *n* + 1。  
   
-3.  如果在实际) *n* + 1 行时，将结果列绑定到*n* + 1 个元素的数组 (为 safe。  
+3.  如果在实际) *n* + 1 行时，将结果列绑定到 *n* + 1 个元素的数组 (为 safe。  
   
-4.  用 **SQLExecDirect** 或 **SQLExecute**打开游标。  
+4.  用 **SQLExecDirect** 或 **SQLExecute** 打开游标。  
   
 5.  如果返回状态为 SQL_SUCCESS，则调用 **SQLFreeStmt** 或 **SQLCloseCursor** 以关闭游标。 所有行数据将位于绑定程序变量中。  
   

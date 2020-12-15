@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 089d113a6908b02736626445360e99c5f29807e7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cb359800d5bf3b8a3ac0a73f13215f2093cbaa0d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866865"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438426"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>使用表值参数 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

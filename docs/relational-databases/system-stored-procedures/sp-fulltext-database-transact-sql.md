@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: eeb1e151-eb00-484c-8fd1-5641e621ffc6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27e239838e8112b30ef5ba7bbb54082050b220a5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: daa24fdd0bbba0ff949b7b43a74e312d114d4e0d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549770"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439442"
 ---
 # <a name="sp_fulltext_database-transact-sql"></a>sp_fulltext_database (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中的全文目录没有影响，支持它只是为了向后兼容。 **sp_fulltext_database** 不会对给定数据库禁用全文引擎。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，所有用户创建的数据库始终启用全文索引。  
+  对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中的全文目录没有影响，支持它只是为了向后兼容。 **sp_fulltext_database** 不会禁用给定数据库的 Full-Text 引擎。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，所有用户创建的数据库始终启用全文索引。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 改为使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
@@ -43,8 +43,8 @@ ms.locfileid: "89549770"
 sp_fulltext_database [@action=] 'action'  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @action = ] 'action'` 要执行的操作。 **操作** 是 **varchar (20) **，可以是下列值之一。  
+## <a name="arguments"></a>自变量  
+`[ @action = ] 'action'` 要执行的操作。 **操作** 是 **varchar (20)**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  

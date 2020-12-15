@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a592f8d15503b176193caa755a6b9d187a164429
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a6cbc5d549b34a5b3256ad19461a17b9de5804ed
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420621"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438520"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>ODBC API 对日期和时间增强功能的支持
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

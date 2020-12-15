@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55de82affa5ea60acb5bd284f4876501d96b5404
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ce62781859e07eda250a6ea5d0c84016a0216163
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868497"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438680"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "91868497"
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*类型*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*子类型*|忽略|对于 SQL_DATETIME 或 SQL_INTERVAL 类型的记录，请将它设置为 SQL_DESC_DATETIME_INTERVAL_CODE。|  
-|*长度*|SQL_DESC_OCTET_LENGTH|表值参数类型名称的长度。 如果类型名称是以 null 结束，则它可为 SQL_NTS；如果不需要表值参数类型名称，则为零。|  
+|*时长*|SQL_DESC_OCTET_LENGTH|表值参数类型名称的长度。 如果类型名称是以 null 结束，则它可为 SQL_NTS；如果不需要表值参数类型名称，则为零。|  
 |*精度*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
-|*规模*|SQL_DESC_SCALE|未使用。 此参数应为零。|  
+|*可伸缩*|SQL_DESC_SCALE|未使用。 此参数应为零。|  
 |*DataPtr*|APD 中的 SQL_DESC_DATA_PTR|SQL_CA_SS_TYPE_NAME<br /><br /> 对于存储过程调用，此参数是可选的。如果不需要此参数，则可以指定为 NULL。 对于非过程调用的 SQL 语句，必须指定此参数。<br /><br /> *DataPtr* 还充当唯一值，应用程序可在使用可变行绑定时用于标识此表值参数。|  
 |*StringLengthPtr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> 对于表值参数，它是要传输的行数或 SQL_DATA_AT_EXEC。 这是一个指向值的指针，该值包含要与 SQLExecDirect 传输的行数。|  
 |*IndicatorPtr*|SQL_DESC_INDICATOR_PTR|SQL_DESC_INDICATOR_PTR|  
@@ -47,7 +47,7 @@ ms.locfileid: "91868497"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec 对日期和时间增强功能的支持  
  日期/时间类型所允许的值如下所示：  
   
-| 属性 | *类型* | *子类型* | *长度* | *精度* | *缩放* |
+| Attribute | *类型* | *子类型* | *时长* | *精度* | *缩放* |
 | --------- | ------ | --------- | -------- | ----------- | ------- |
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  

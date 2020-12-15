@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a358a3cd071c3b0a986925a1ef5fc181536283c0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a59fd9774bb6c9bdb652f41623856d01c9d2a86a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868325"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438460"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE（ODBC 错误代码）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

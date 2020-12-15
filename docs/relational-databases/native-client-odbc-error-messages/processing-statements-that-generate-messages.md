@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca60a4bbe9652d20cb4db0f9f4522d2fa1ff1afc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c648e39186dada7527678f6a1c8efcd764d86355
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420511"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438450"
 ---
 # <a name="processing-statements-that-generate-messages"></a>处理生成消息的语句
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
    SQL Server Parse and Compile Time: cpu time = 0 ms."  
 ```  
   
- 在到达结果集的末尾之前，SET STATISTICS IO 的输出不可用。 若要获取统计信息 IO 输出，应用程序会在**SQLFetch**或[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)返回 SQL_NO_DATA 时调用**SQLGetDiagRec** 。 STATISTICS IO 的输出按以下格式返回：  
+ 在到达结果集的末尾之前，SET STATISTICS IO 的输出不可用。 若要获取统计信息 IO 输出，应用程序会在 **SQLFetch** 或 [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)返回 SQL_NO_DATA 时调用 **SQLGetDiagRec** 。 STATISTICS IO 的输出按以下格式返回：  
   
 ```  
 szSqlState="01000", *pfNativeError= 3615,  
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>使用 PRINT 和 RAISERROR 语句  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT 和 RAISERROR 语句还通过调用 **SQLGetDiagRec**返回数据。 PRINT 语句使 SQL 语句执行返回 SQL_SUCCESS_WITH_INFO，并对 **SQLGetDiagRec** 的后续调用返回 *SQLState* 01000。 严重性为 10 或更低的 RAISERROR 在行为上与 PRINT 相同。 严重性为11或更高的 RAISERROR 导致 execute 返回 SQL_ERROR，对 **SQLGetDiagRec** 的后续调用会返回 *SQLState* 42000。 例如，下面的语句返回 SQL_SUCCESS_WITH_INFO：  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT 和 RAISERROR 语句还通过调用 **SQLGetDiagRec** 返回数据。 PRINT 语句使 SQL 语句执行返回 SQL_SUCCESS_WITH_INFO，并对 **SQLGetDiagRec** 的后续调用返回 *SQLState* 01000。 严重性为 10 或更低的 RAISERROR 在行为上与 PRINT 相同。 严重性为11或更高的 RAISERROR 导致 execute 返回 SQL_ERROR，对 **SQLGetDiagRec** 的后续调用会返回 *SQLState* 42000。 例如，下面的语句返回 SQL_SUCCESS_WITH_INFO：  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e2c5b4574e03ed8820f3d9bfe307fe5a5c6e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fd47c2867303eee6fa991d9932486f93918253f9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464927"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439829"
 ---
 # <a name="smo-object-model-namespaces"></a>SMO 对象模型命名空间
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

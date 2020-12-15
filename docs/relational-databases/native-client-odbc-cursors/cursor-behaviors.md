@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95a2a323e3bdd772077bbd801a9f929774325cbc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 91bc7286beb8b03f6e76698e84a8fcf3d8d3f11c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438658"
 ---
 # <a name="cursor-behaviors"></a>游标行为
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88423949"
  基于版本的乐观并发要求基础表中有一个 **时间戳** 列。 如果对没有 **时间戳** 列的表请求基于版本的乐观并发控制，则服务器将使用基于值的乐观并发。  
   
 ## <a name="scrollability"></a>可滚动性  
- 当 SQL_ATTR_CURSOR_SCROLLABLE 设置为 SQL_SCROLLABLE 时，游标支持[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)的*FetchOrientation*参数的所有不同值。 当 SQL_ATTR_CURSOR_SCROLLABLE 设置为 SQL_NONSCROLLABLE 时，游标仅支持 SQL_FETCH_NEXT 的 *FetchOrientation* 值。  
+ 当 SQL_ATTR_CURSOR_SCROLLABLE 设置为 SQL_SCROLLABLE 时，游标支持 [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)的 *FetchOrientation* 参数的所有不同值。 当 SQL_ATTR_CURSOR_SCROLLABLE 设置为 SQL_NONSCROLLABLE 时，游标仅支持 SQL_FETCH_NEXT 的 *FetchOrientation* 值。  
   
 ## <a name="sensitivity"></a>敏感性  
  将 SQL_ATTR_CURSOR_SENSITIVITY 设置为 SQL_SENSITIVE 时，游标可以反映由当前用户所做的或由其他用户提交的数据修改。 将 SQL_ATTR_CURSOR_SENSITIVITY 设置为 SQL_INSENSITIVE 时，游标不能反映数据修改。  

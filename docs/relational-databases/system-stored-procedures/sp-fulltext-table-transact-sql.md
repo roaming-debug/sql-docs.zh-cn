@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1117c89aec3a615b439686a065c29457e267bffe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 94ce485bc773b66010708034c6c6cd2b87f85d3e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541757"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439402"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -49,18 +49,18 @@ sp_fulltext_table
    ]  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @tabname = ] 'qualified_table_name'` 为一个或两个部分组成的表名。 表必须在当前数据库中。 *qualified_table_name* 为 **nvarchar (517) **，无默认值。  
+## <a name="arguments"></a>自变量  
+`[ @tabname = ] 'qualified_table_name'` 为一个或两个部分组成的表名。 表必须在当前数据库中。 *qualified_table_name* 为 **nvarchar (517)**，无默认值。  
   
-`[ @action = ] 'action'` 要执行的操作。 *操作* 为 **nvarchar (50) **，无默认值，可以是下列值之一。  
+`[ @action = ] 'action'` 要执行的操作。 *操作* 为 **nvarchar (50)**，无默认值，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
-|**创建**|为 *qualified_table_name* 引用的表创建全文索引的元数据，并指定此表的全文索引数据应驻留在 *fulltext_catalog_name*中。 此操作还将 *unique_index_name* 的用法指定为全文键列。 这个唯一的索引必须已经存在，并且必须已在表的某个列上定义。<br /><br /> 完成了全文目录填充后，才能对该表执行全文检索。|  
-|**击落**|删除 *qualified_table_name*的全文索引的元数据。 如果全文索引是活动的，则将自动停用该全文索引，然后将其删除。 在删除全文索引之前，不必删除列。|  
-|**激活**|激活在停用后，为 *qualified_table_name*收集全文索引数据的功能。 在激活全文索引之前，应该至少有一列参与了全文索引。<br /><br /> 只要添加了第一个要编制索引的列，便会自动激活全文索引（进行填充）。 如果从索引中删除最后一个列，该索引便成为非活动索引。 如果启用了更改跟踪，则激活非活动索引时将启动一个新填充。<br /><br /> 请注意，这实际上并不是填充全文索引，而只是将表注册到文件系统中的全文目录中，以便可以在下一次全文索引填充期间检索 *qualified_table_name* 中的行。|  
-|**停用**|停用 *qualified_table_name* 的全文索引，以便无法再为 *qualified_table_name*收集全文索引数据。 全文索引元数据依然保留，该表可以被重新激活。<br /><br /> 如果启用了更改跟踪，停用一个活动索引将冻结索引的状态：停止正在进行的所有填充，不再向索引传播更改。|  
-|**start_change_tracking**|启动全文索引的增量填充。 如果表没有时间戳，则启动全文索引的完全填充。 开始跟踪对表所做的更改。<br /><br /> 全文更改跟踪不跟踪对类型为 **image**、 **text**或 **ntext**的全文索引列执行的任何 WRITETEXT 或 UPDATETEXT 操作。|  
+|**创建**|为 *qualified_table_name* 引用的表创建全文索引的元数据，并指定此表的全文索引数据应驻留在 *fulltext_catalog_name* 中。 此操作还将 *unique_index_name* 的用法指定为全文键列。 这个唯一的索引必须已经存在，并且必须已在表的某个列上定义。<br /><br /> 完成了全文目录填充后，才能对该表执行全文检索。|  
+|**击落**|删除 *qualified_table_name* 的全文索引的元数据。 如果全文索引是活动的，则将自动停用该全文索引，然后将其删除。 在删除全文索引之前，不必删除列。|  
+|**激活**|激活在停用后，为 *qualified_table_name* 收集全文索引数据的功能。 在激活全文索引之前，应该至少有一列参与了全文索引。<br /><br /> 只要添加了第一个要编制索引的列，便会自动激活全文索引（进行填充）。 如果从索引中删除最后一个列，该索引便成为非活动索引。 如果启用了更改跟踪，则激活非活动索引时将启动一个新填充。<br /><br /> 请注意，这实际上并不是填充全文索引，而只是将表注册到文件系统中的全文目录中，以便可以在下一次全文索引填充期间检索 *qualified_table_name* 中的行。|  
+|**停用**|停用 *qualified_table_name* 的全文索引，以便无法再为 *qualified_table_name* 收集全文索引数据。 全文索引元数据依然保留，该表可以被重新激活。<br /><br /> 如果启用了更改跟踪，停用一个活动索引将冻结索引的状态：停止正在进行的所有填充，不再向索引传播更改。|  
+|**start_change_tracking**|启动全文索引的增量填充。 如果表没有时间戳，则启动全文索引的完全填充。 开始跟踪对表所做的更改。<br /><br /> 全文更改跟踪不跟踪对类型为 **image**、 **text** 或 **ntext** 的全文索引列执行的任何 WRITETEXT 或 UPDATETEXT 操作。|  
 |**stop_change_tracking**|停止对表更改的跟踪。|  
 |**update_index**|将当前的一组跟踪的更改传播给全文索引。|  
 |**start_background_updateindex**|一旦发生更改，就启动将被跟踪的更改传播给全文索引。|  
@@ -71,7 +71,7 @@ sp_fulltext_table
   
 `[ @ftcat = ] 'fulltext_catalog_name'` 是一个有效的现有全文目录名称，用于 **创建** 操作。 对于其他所有操作，此参数必须为 NULL。 *fulltext_catalog_name* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @keyname = ] 'unique_index_name'`**创建**操作*qualified_table_name*的有效单一键列唯一不可 null 索引。 对于其他所有操作，此参数必须为 NULL。 *unique_index_name* 的默认值为 **sysname**，默认值为 NULL。  
+`[ @keyname = ] 'unique_index_name'`**创建** 操作 *qualified_table_name* 的有效单一键列唯一不可 null 索引。 对于其他所有操作，此参数必须为 NULL。 *unique_index_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -84,12 +84,12 @@ sp_fulltext_table
   
  如果重新激活该表，但不重新填充索引，则仍可使用旧索引对剩余的启用了全文索引的非新列进行查询。 在指定了完全全文列搜索的查询中，将匹配已删除的列中的数据。  
   
- 为全文索引定义了表后，将全文唯一键列从一种数据类型切换到另一种数据类型，方法是：将该列的数据类型更改为另一列，或将全文唯一键从一列更改为另一列，而不进行完全重新填充可能会导致在后续查询中出现失败，并返回错误消息： " *data_type* 全文搜索键值 *key_value*的转换为类型失败。 若要防止出现这种情况，请使用**sp_fulltext_table**的**删除**操作删除此表的全文定义，并使用**sp_fulltext_table**和**sp_fulltext_column**对其重新定义。  
+ 为全文索引定义了表后，将全文唯一键列从一种数据类型切换到另一种数据类型，方法是：将该列的数据类型更改为另一列，或将全文唯一键从一列更改为另一列，而不进行完全重新填充可能会导致在后续查询中出现失败，并返回错误消息： " *data_type* 全文搜索键值 *key_value* 的转换为类型失败。 若要防止出现这种情况，请使用 **sp_fulltext_table** 的 **删除** 操作删除此表的全文定义，并使用 **sp_fulltext_table** 和 **sp_fulltext_column** 对其重新定义。  
   
  必须将全文键列定义为 900 字节或更少。 考虑到性能原因，建议尽量使用较小的键列。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员、 **db_owner** 和 **db_ddladmin** 固定数据库角色的成员，或者具有全文目录的 reference 权限的用户才能 **sp_fulltext_table**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员、 **db_owner** 和 **db_ddladmin** 固定数据库角色的成员，或者具有全文目录的 reference 权限的用户才能 **sp_fulltext_table** 执行。  
   
 ## <a name="examples"></a>示例  
   

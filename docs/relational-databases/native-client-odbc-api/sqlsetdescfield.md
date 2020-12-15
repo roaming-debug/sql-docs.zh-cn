@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 229b4f53e19d902bc8ffa929d4a8e116c46d8d46
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c0a6599bd1f0c7c91078f0afbf92079b415436be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868488"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438710"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   SQLSetDescField 可用于为表值参数和表值参数列设置描述符字段。 有关可用字段的信息，请参阅 [表值参数描述符字段](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) 和 [Table-Valued 参数构成列的描述符字段](../../relational-databases/native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  表值参数列仅在将描述符标头字段 SQL_SOPT_SS_PARAM_FOCUS 设置为特定记录（其 SQL_DESC_TYPE 设置为 SQL_SS_TABLE）的序数时可用。 有关 SQL_SOPT_SS_PARAM_FOCUS 的详细信息，请参阅 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   
  如果尝试将 SQL_SOPT_SS_PARAM_FOCUS 设置为不是表值参数的参数的序号，则 SQLSetStmtAttr 将返回 SQL_ERROR，并且将使用 SQLSTATE = HY024 和消息 "属性值无效" 创建诊断记录。 返回 SQL_ERROR 时，不更改 SQL_SOPT_SS_PARAM_FOCUS。  

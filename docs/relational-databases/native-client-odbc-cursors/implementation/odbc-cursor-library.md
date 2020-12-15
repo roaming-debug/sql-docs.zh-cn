@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5aad8e51d4f3e13612242bd80cd6882d7f0c1533
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ee3d3a71520f11d2e611c2b71eb6588e20cfdbb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423929"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438640"
 ---
 # <a name="odbc-cursor-library"></a>ODBC 游标库
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

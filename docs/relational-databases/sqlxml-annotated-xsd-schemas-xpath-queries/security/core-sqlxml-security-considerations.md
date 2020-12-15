@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9841e46f97248413f142886193d9c2afedbe4e04
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 477124bc7dac925e48fc1a31382197daefefa4f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809778"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439596"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML 核心安全性注意事项
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

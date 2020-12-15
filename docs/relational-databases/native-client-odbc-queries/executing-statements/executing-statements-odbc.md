@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc2f16bf168fc7f37ac6f6518e7e16cd7dfa35c3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f7ab0f345d6b3589941ef20b13570a43ecffda0a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869361"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438360"
 ---
 # <a name="executing-statements-odbc"></a>执行语句 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

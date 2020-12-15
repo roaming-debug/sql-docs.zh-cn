@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c55dd59c86c5a46ef409f607e109264859210f8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0fd85df31856668e4f3cafacbe8a90157b7310b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486804"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438380"
 ---
 # <a name="direct-execution"></a>直接执行
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88486804"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 显著提高了在多用户环境中直接执行通常执行的语句的性能；如果将 SQLExecDirect 与参数标记配合用于通常执行的 SQL 语句，其效率可接近准备好的执行。  
   
- 当连接到实例时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序使用 [sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 传输 **SQLExecDirect**上指定的 SQL 语句或批处理。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具有逻辑来快速确定使用 **sp_executesql** 执行的 SQL 语句或批处理是否与生成执行计划（已存在于内存中）的语句或批处理相匹配。 如果匹配，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 只需重用现有计划，而无需编译新计划。 这意味着，在包含多个用户的系统中，使用 **SQLExecDirect** 执行的常见 SQL 语句将受益于较早版本的中的存储过程所使用的许多计划重用权益 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 当连接到实例时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序使用 [sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 传输 **SQLExecDirect** 上指定的 SQL 语句或批处理。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具有逻辑来快速确定使用 **sp_executesql** 执行的 SQL 语句或批处理是否与生成执行计划（已存在于内存中）的语句或批处理相匹配。 如果匹配，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 只需重用现有计划，而无需编译新计划。 这意味着，在包含多个用户的系统中，使用 **SQLExecDirect** 执行的常见 SQL 语句将受益于较早版本的中的存储过程所使用的许多计划重用权益 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  仅当多个用户执行同一 SQL 语句或批处理时，才会从重用执行计划中受益。 请遵照以下编码约定，提高不同客户端执行的 SQL 语句的相似性，以便能够重用执行计划：  
   

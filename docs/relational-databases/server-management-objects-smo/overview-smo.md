@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f472c3354e2cfefe10aeeedd8935360e3a4751a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8b3a9c15979d162ca345a0d440f7093c4bd15ad9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868268"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439830"
 ---
 # <a name="overview-smo"></a>概述 (SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "91868268"
   
  直接执行是通常的执行方法。 语句一旦引发，就会直接发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某个实例。 捕获执行是直接执行的替代方式。  
   
- 捕获执行允许您捕获通常会执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理。 这使 SMO 编程人员得以延迟脚本、存储它以便以后执行，或者为最终用户提供预览。 例如， **create database**、 **create table**和 **create index** 语句可以在一个批处理中发送，然后作为三个连续的步骤运行。 用户可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 对象控制此功能。  
+ 捕获执行允许您捕获通常会执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理。 这使 SMO 编程人员得以延迟脚本、存储它以便以后执行，或者为最终用户提供预览。 例如， **create database**、 **create table** 和 **create index** 语句可以在一个批处理中发送，然后作为三个连续的步骤运行。 用户可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 对象控制此功能。  
   
  **WMI 提供程序**  
   
@@ -110,9 +110,9 @@ ms.locfileid: "91868268"
   
  **脚本**  
   
- 在 SMO 中，脚本编写已经过增强，并移 **到了脚本编写类** 中。 **脚本编写**类可以发现依赖关系，了解对象之间的关系，并允许操作依赖关系层次结构。 主要脚本对象是脚本 **编写** 对象。 还有若干支持对象用于处理依赖关系并响应进度或错误事件。  
+ 在 SMO 中，脚本编写已经过增强，并移 **到了脚本编写类** 中。 **脚本编写** 类可以发现依赖关系，了解对象之间的关系，并允许操作依赖关系层次结构。 主要脚本对象是脚本 **编写** 对象。 还有若干支持对象用于处理依赖关系并响应进度或错误事件。  
   
- **脚本编写**对象支持以下高级脚本编写选项：  
+ **脚本编写** 对象支持以下高级脚本编写选项：  
   
 -   1 段式简单脚本编写（在一步中创建脚本）  
   
@@ -134,7 +134,7 @@ ms.locfileid: "91868268"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- 可以通过引用对象的 URN 属性来检索该对象的 URN。 脚本编写对象还使用 Urn 作为参数，将对象引用传递给 **脚本编写** 对象的方法。 此外，可以为**服务器**对象的**GETSMOOBJECT**方法指定 URN。 用于创建 SMO 对象的实例。  
+ 可以通过引用对象的 URN 属性来检索该对象的 URN。 脚本编写对象还使用 Urn 作为参数，将对象引用传递给 **脚本编写** 对象的方法。 此外，可以为 **服务器** 对象的 **GETSMOOBJECT** 方法指定 URN。 用于创建 SMO 对象的实例。  
   
 ## <a name="sql-server-features-represented-in-smo"></a>SMO 中表示 SQL Server 功能  
  **表和索引分区**  

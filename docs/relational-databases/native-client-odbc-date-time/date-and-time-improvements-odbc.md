@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 596dd2755e41eb476ee5588909cae5e13cf1e1ca
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 177d09f28be3a0cef799ad0b280d408f9aac2516
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868957"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438560"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日期和时间改进 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91868957"
  提供有关支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和时间数据类型的 ODBC 类型的信息。  
   
  [Metadata &#40;ODBC&#41;]()  
- 描述在实现参数描述符中返回的信息 (IPD) 和实现行描述符 (IRD) 字段，以及 **SQLColumns** 和 **SQLProcedureColumns**返回的列元数据。 还介绍 **SQLGetTypeInfo**返回的数据类型元数据。  
+ 描述在实现参数描述符中返回的信息 (IPD) 和实现行描述符 (IRD) 字段，以及 **SQLColumns** 和 **SQLProcedureColumns** 返回的列元数据。 还介绍 **SQLGetTypeInfo** 返回的数据类型元数据。  
   
  [datetime 数据类型转换 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  
  描述如何在 datetime 值和 datetimeoffset 值之间进行转换。  

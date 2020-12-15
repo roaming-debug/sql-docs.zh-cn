@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c3de6c94-8ef5-4ac6-9529-8f8c11b72ebb
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7916d1588b88b5869900a30f68a4b63c302b1977
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2665764ed01b1a7ff281dc3a95191b697090bb55
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439510"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439808"
 ---
 # <a name="smo-object-model-diagram"></a>SMO 对象模型关系图
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

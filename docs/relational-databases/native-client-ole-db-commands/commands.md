@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0cebaf38741e6d30eec6751ef683543dac25711
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c2f26871cfbc3dcae8aa11422c499d730f0857e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455797"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439888"
 ---
 # <a name="sql-server-native-client-commands"></a>SQL Server Native Client 命令
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序公开了本节中介绍的**ICommand**接口和 command 对象：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序公开了本节中介绍的 **ICommand** 接口和 command 对象：  
   
 -   [命令语法](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   
