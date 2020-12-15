@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 080808c2f32990070ab630042a00e2173f0440a2
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 1ee858953867209a6686f1775c17e539d13aae2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059526"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410004"
 ---
 # <a name="azure-synapse-analytics-stored-procedures"></a>Azure Synapse 分析存储过程
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]

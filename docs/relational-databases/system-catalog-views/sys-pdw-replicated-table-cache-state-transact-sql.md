@@ -11,18 +11,18 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 19a5132bd78b3cc1cca48be193b34126a9f83c3e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 76b5f9ec684b4733934a8cdd703942f12cf1b541
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036891"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404447"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  **Object_id**返回与复制的表关联的缓存状态。  
+  **Object_id** 返回与复制的表关联的缓存状态。  
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  

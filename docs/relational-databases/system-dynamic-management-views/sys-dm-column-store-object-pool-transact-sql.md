@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e258c1b095c4b43ebf23957a721d40c5254d6edc
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4980bd77c16ac268ddae6f9d96d5c55b45ccc62a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97329950"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97411520"
 ---
 # <a name="sysdm_column_store_object_pool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-sql) 
 

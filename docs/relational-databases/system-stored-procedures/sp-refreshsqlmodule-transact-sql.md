@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5265d2b38f8d41be321a63b701bb286b3b793e1c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dc3be80416180b8e87cacc848a4322e013ce368a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534987"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410462"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -56,27 +56,27 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @name = ] 'module\_name'` 存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name* 不能是公共语言运行时 (CLR) 存储过程或 clr 函数。 *module_name* 不能是绑定到架构的。 *module_name* 为 **nvarchar**，无默认值。 *module_name* 可以是由多个部分组成的标识符，但只能引用当前数据库中的对象。  
   
 `[ , @namespace = ] ' \<class> '` 指定模块的类。 如果 *module_name* 是 DDL 触发器， \<class> 则是必需的。 *\<class>* 为 **nvarchar** (20) 。 有效输入为：  
 
 * DATABASE_DDL_TRIGGER
 
-* SERVER_DDL_TRIGGER- **适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。
+* SERVER_DDL_TRIGGER- **适用** 于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。
 
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败）  
   
 ## <a name="remarks"></a>备注  
- 当对影响其定义的模块的基础对象进行更改时，应运行**sp_refreshsqlmodule** 。 否则，查询或调用该模块时，可能会产生意外结果。 若要刷新视图，可以使用具有相同结果的 **sp_refreshsqlmodule** 或 **sp_refreshview** 。  
+ 当对影响其定义的模块的基础对象进行更改时，应运行 **sp_refreshsqlmodule** 。 否则，查询或调用该模块时，可能会产生意外结果。 若要刷新视图，可以使用具有相同结果的 **sp_refreshsqlmodule** 或 **sp_refreshview** 。  
   
  **sp_refreshsqlmodule** 不会影响与对象关联的任何权限、扩展属性或 SET 选项。  
   
  若要刷新服务器级 DDL 触发器，可以在任何数据库的上下文中执行此存储过程。  
   
 > [!NOTE]  
->  运行 **sp_refreshsqlmodule**时，将删除与对象关联的所有签名。  
+>  运行 **sp_refreshsqlmodule** 时，将删除与对象关联的所有签名。  
   
 ## <a name="permissions"></a>权限  
  需要对相应模块拥有 ALTER 权限，对该对象引用的任何 CLR 用户定义类型和 XML 架构集合拥有 REFERENCES 权限。 当指定的模块是数据库级 DDL 触发器时，需要在当前数据库中拥有 ALTER ANY DATABASE DDL TRIGGER 权限。 当指定的模块是服务器级 DDL 触发器时，需要拥有 CONTROL SERVER 权限。  

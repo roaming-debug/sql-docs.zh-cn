@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_exec_compute_pools (Transact-sql) '
-title: sys. dm_exec_compute_pools (Transact-sql) |Microsoft Docs
+description: 'sys.dm_exec_compute_pools (Transact-sql) '
+title: sys.dm_exec_compute_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9e0e4cfda23c90807436b6f7b8b4179d2cb22620
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-2017'
+ms.openlocfilehash: f6affbcc67e3c4a95929263a3c90bd93e1ec7826
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89533574"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97411204"
 ---
-# <a name="sysdm_exec_compute_pools-transact-sql"></a>sys. dm_exec_compute_pools (Transact-sql) 
+# <a name="sysdm_exec_compute_pools-transact-sql"></a>sys.dm_exec_compute_pools (Transact-sql) 
 [!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 |列名称|数据类型|说明|  

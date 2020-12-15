@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec619fc8053b735e952b2577f6cdee5d4647e652
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0b74d54cbf87c6749248376a21ae55362c93314d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538654"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410404"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,12 +43,12 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @Resource =] "*resource_name*"  
- 由客户端应用程序指定的锁资源名称。 应用程序必须确保该资源是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name* 为 **nvarchar (255) ** ，无默认值。 比较了二进制*resource_name* ，因此无论当前数据库的排序规则设置如何，都是区分大小写的。  
+ 由客户端应用程序指定的锁资源名称。 应用程序必须确保该资源是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name* 为 **nvarchar (255)** ，无默认值。 比较了二进制 *resource_name* ，因此无论当前数据库的排序规则设置如何，都是区分大小写的。  
   
  [ @LockOwner =] "*lock_owner*"  
- 锁的所有者，它是请求锁时所指定的 lock_owner 值**。 lock_owner 是 nvarchar(32)******。 该值可以是 Transaction（默认值）或 Session********。 默认情况下， *lock_owner* 值为 **transaction**时，sp_getapplock 必须从事务内执行。  
+ 锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 默认情况下， *lock_owner* 值为 **transaction** 时，sp_getapplock 必须从事务内执行。  
   
  [ @DbPrincipal =] "*database_principal*"  
  对数据库中的对象具有权限的用户、角色或应用程序角色。 函数的调用方必须是 *database_principal*、dbo 或 db_owner 固定数据库角色的成员，才能成功调用该函数。 默认值为 public。  

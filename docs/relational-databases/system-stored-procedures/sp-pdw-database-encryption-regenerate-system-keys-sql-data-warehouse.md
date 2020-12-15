@@ -11,13 +11,13 @@ ms.assetid: bb13e323-a984-4462-8b6d-6019c38ddd9d
 author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f432d19a558b82abd52bef2839c0887dff70f7ba
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 89be1645a93d10e09b43dd3c32fc1fee72785791
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92254754"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410503"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_database_encryption_regenerate_system_keys) 
 
@@ -53,7 +53,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [&#40;Azure Synapse Analytics sp_pdw_database_encryption&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [&#40;Azure Synapse Analytics sp_pdw_log_user_data_masking&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2172c7d17d9c3d9ebb6680fc7af0212c0a01e12
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e55b0a69fde6e80c6c7124b9fe800c2f6818109
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526068"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410564"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql) 
 
@@ -46,7 +46,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 { DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER }
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `[ @name = ] 'module_name'` 存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name* 不能是公共语言运行时 (CLR) 存储过程或 clr 函数。 *module_name* 不能是绑定到架构的。 *module_name* 为 `nvarchar` ，无默认值。 *module_name* 可以是由多个部分组成的标识符，但只能引用当前数据库中的对象。
 

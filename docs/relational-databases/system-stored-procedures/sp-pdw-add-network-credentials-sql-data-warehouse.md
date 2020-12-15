@@ -11,14 +11,14 @@ dev_langs:
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 212e8e5ab05204a6497282e79c4134dcff844299
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: 0aeb775ea03d022337f45463b16e7134cfb12dc8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067306"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410671"
 ---
 # <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_add_network_credentials) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,7 +37,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>自变量  
- " *target_server_name* "  
+ "*target_server_name*"  
  指定目标服务器主机名或 IP 地址。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将使用传递到此存储过程的用户名和密码凭据访问此服务器。  
   
  若要通过未使用的网络进行连接，请使用目标服务器的未使用的 IP 地址。  
@@ -49,7 +49,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'
   
  *user_name* 定义为 nvarchar (513) 。  
   
- ' *password* "  
+ '*password*"  
  指定 *user_name* 的密码。  
   
 ## <a name="return-code-values"></a>返回代码值  
