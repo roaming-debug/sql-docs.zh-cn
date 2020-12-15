@@ -9,13 +9,13 @@ ms.date: 8/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 6bed37e6fe0451e45e9d99fd9c15d03d12a30a4b
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15'
+ms.openlocfilehash: 2c93d219860f2bbbdf11050966955a63d44387e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564647"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97416381"
 ---
 # <a name="install-polybase-on-linux"></a>在 Linux 上安装 PolyBase
 

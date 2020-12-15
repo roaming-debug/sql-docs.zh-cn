@@ -17,13 +17,13 @@ ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 92416e1dc528880767ccebd1873707e0a1259a31
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 2eec9c64a65ae0fb548944dc88a056c15e5c1e80
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901267"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97416716"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase 查询方案
 

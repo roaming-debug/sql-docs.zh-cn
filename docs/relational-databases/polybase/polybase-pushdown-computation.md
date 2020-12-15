@@ -9,13 +9,13 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 59ff1e7807a8bdd8427e3b902bf53c111d52c7b7
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 844ab3f2a13e2bd5a9e3ea26d41012a51e7329a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96127841"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97416496"
 ---
 # <a name="pushdown-computations-in-polybase"></a>在 PolyBase 中下推计算
 

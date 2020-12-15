@@ -15,13 +15,13 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3ab1841c009094831ae114d701d526a1d3036dba
-ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 3928d00a2b72c4d1484fa8b30ca579a5af0ef34c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535271"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97416338"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 横向扩展组
 
