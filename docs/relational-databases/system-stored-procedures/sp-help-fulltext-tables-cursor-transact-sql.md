@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c5f4c8e96eecd770190be5efcc42799ed3958
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ca07485062d39e2fa547e524e2b0368b19e9b577
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548025"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468398"
 ---
 # <a name="sp_help_fulltext_tables_cursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89548025"
   使用游标返回为全文索引注册的表的列表。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改为使用新的 **sys.databases. fulltext_indexes** 目录视图。 有关详细信息，请参阅 [sys.databases&#41;fulltext_indexes &#40;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改为使用新的 **sys.fulltext_indexes** 目录视图。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.fulltext_indexes ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,12 +45,12 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
      [ , [ @table_name = ] 'table_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @cursor_return = ] @cursor_variable OUTPUT` 类型为 **cursor**的输出变量。 游标是只读的可滚动动态游标。  
+## <a name="arguments"></a>自变量  
+`[ @cursor_return = ] @cursor_variable OUTPUT` 类型为 **cursor** 的输出变量。 游标是只读的可滚动动态游标。  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 全文目录的名称。 *fulltext_catalog_name* 的默认值为 **sysname**，默认值为 NULL。 如果省略 *fulltext_catalog_name* 或为 NULL，则返回与数据库关联的所有全文索引表。 如果指定了 *fulltext_catalog_name* ，但省略了 *TABLE_NAME* 或为 NULL，则将为与此目录关联的每个全文索引表检索全文索引信息。 如果同时指定 *fulltext_catalog_name* 和 *table_name* ，则在 *table_name* 与 *fulltext_catalog_name*关联时返回一行;否则，将引发错误。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 全文目录的名称。 *fulltext_catalog_name* 的默认值为 **sysname**，默认值为 NULL。 如果省略 *fulltext_catalog_name* 或为 NULL，则返回与数据库关联的所有全文索引表。 如果指定了 *fulltext_catalog_name* ，但省略了 *TABLE_NAME* 或为 NULL，则将为与此目录关联的每个全文索引表检索全文索引信息。 如果同时指定 *fulltext_catalog_name* 和 *table_name* ，则在 *table_name* 与 *fulltext_catalog_name* 关联时返回一行;否则，将引发错误。  
   
-`[ @table_name = ] 'table_name'` 请求全文元数据的一个或两个部分组成的表名。 *table_name* 为 **nvarchar (517) **，默认值为 NULL。 如果仅指定 *table_name* ，则仅返回与 *table_name* 相关的行。  
+`[ @table_name = ] 'table_name'` 请求全文元数据的一个或两个部分组成的表名。 *table_name* 为 **nvarchar (517)**，默认值为 NULL。 如果仅指定 *table_name* ，则仅返回与 *table_name* 相关的行。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

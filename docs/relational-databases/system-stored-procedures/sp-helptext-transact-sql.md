@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4461c311c32c1f500a4481b36f4a17d0be0134bf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e6d2fbb2311392ee046b4aad84705b8ccd91a48c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547981"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468368"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "89547981"
 sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @objname = ] 'name'` 用户定义的架构范围内对象的限定名称或非限定名称。 仅当指定限定对象时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 对象必须在当前数据库中。 *name* 为 **nvarchar (776) **，无默认值。  
+## <a name="arguments"></a>自变量  
+`[ @objname = ] 'name'` 用户定义的架构范围内对象的限定名称或非限定名称。 仅当指定限定对象时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 对象必须在当前数据库中。 *name* 为 **nvarchar (776)**，无默认值。  
   
 `[ @columnname = ] 'computed_column_name'` 要显示其定义信息的计算列的名称。 必须将包含列的表指定为 *name*。 *column_name* **sysname**，无默认值。  
   
@@ -52,10 +52,10 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**Text**|**nvarchar(255)**|对象定义|  
+|**文本**|**nvarchar(255)**|对象定义|  
   
 ## <a name="remarks"></a>备注  
- sp_helptext 显示用于在多行中创建对象的定义。 每行包含 255 个字符的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。 定义位于[sql_modules sys.databases](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图的**定义**列中。  
+ sp_helptext 显示用于在多行中创建对象的定义。 每行包含 255 个字符的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。 定义位于 " [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录" 视图中的 "**定义**" 列中。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 系统对象定义对所有用户可见。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。  

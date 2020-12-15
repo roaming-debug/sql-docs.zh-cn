@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f23d179e0a3864d9408ab24571270007eff6254e
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cf190b2c0a973db9e2955cd928e1b716d847d26b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810781"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467018"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,8 +51,8 @@ ms.locfileid: "91810781"
 |**default_language_lcid**|**int**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指示此主体的默认 LCID。|  
 |**allow_encrypted_value_modifications**|**bit**|**适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 取消在大容量复制操作期间对服务器进行加密元数据检查。 这样，用户便可以使用 Always Encrypted、在表或数据库之间对数据进行大容量复制，而无需解密数据。 默认为 OFF。 |      
   
-## <a name="remarks"></a>注解  
- *PasswordLastSetTime*属性可用于 SQL Server 的所有受支持的配置，但其他属性仅在 SQL Server 在 Windows Server 2003 或更高版本上运行并且启用了 CHECK_POLICY 和 CHECK_EXPIRATION 时才可用。 有关详细信息，请参阅 [密码策略](../../relational-databases/security/password-policy.md) 。
+## <a name="remarks"></a>备注  
+ *PasswordLastSetTime* 属性可用于 SQL Server 的所有受支持的配置，但其他属性仅在 SQL Server 在 Windows Server 2003 或更高版本上运行并且启用了 CHECK_POLICY 和 CHECK_EXPIRATION 时才可用。 有关详细信息，请参阅 [密码策略](../../relational-databases/security/password-policy.md) 。
 如果主体已删除，因此可以重复使用 principal_id 的值，因此不一定会不断增加。
   
 ## <a name="permissions"></a>权限  

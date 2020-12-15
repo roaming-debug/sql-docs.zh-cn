@@ -21,20 +21,20 @@ helpviewer_keywords:
 ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51a3ee2c825a2cf752353175b390a258157f3693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2c35d7bdbca8889f1cdd4d8f748ee8e9cae02d02
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381543"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469478"
 ---
 # <a name="managing-text-and-image-columns"></a>管理 Text 和 Image 列
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**text**、 **ntext**和**image**数据 (也称为长数据) 是可以保存数据值太大，无法放入**char**、 **varchar**、 **binary**或**varbinary**列的字符或二进制字符串数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Text**数据类型映射到 ODBC SQL_LONGVARCHAR 数据类型;**ntext**映射到 SQL_WLONGVARCHAR;和**图像**映射到 SQL_LONGVARBINARY。 某些数据项（例如很长的文档或大位图）可能因太大而无法在内存中合理存储。 若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连续部分中检索长数据， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序允许应用程序调用 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)。 若要以连续部分发送长数据，应用程序可以调用 [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)。 在执行时发送其数据的参数称为执行时数据参数。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**text**、 **ntext** 和 **image** 数据 (也称为长数据) 是可以保存数据值太大，无法放入 **char**、 **varchar**、 **binary** 或 **varbinary** 列的字符或二进制字符串数据类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Text** 数据类型映射到 ODBC SQL_LONGVARCHAR 数据类型;**ntext** 映射到 SQL_WLONGVARCHAR;和 **图像** 映射到 SQL_LONGVARBINARY。 某些数据项（例如很长的文档或大位图）可能因太大而无法在内存中合理存储。 若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连续部分中检索长数据， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序允许应用程序调用 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)。 若要以连续部分发送长数据，应用程序可以调用 [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)。 在执行时发送其数据的参数称为执行时数据参数。  
   
- 尽管只能在部分中发送或检索**字符**和**二进制**数据，但应用程序实际上可以使用**SQLPutData**或**SQLGetData**来写入或检索任何类型的数据， (不只是长数据) 。 但是，如果数据太小，足以容纳在单个缓冲区中，通常没有理由使用 **SQLPutData** 或 **SQLGetData**。 将单一缓冲区绑定到参数或列更简单。  
+ 尽管只能在部分中发送或检索 **字符** 和 **二进制** 数据，但应用程序实际上可以使用 **SQLPutData** 或 **SQLGetData** 来写入或检索任何类型的数据， (不只是长数据) 。 但是，如果数据太小，足以容纳在单个缓冲区中，通常没有理由使用 **SQLPutData** 或 **SQLGetData**。 将单一缓冲区绑定到参数或列更简单。  
   
 ## <a name="in-this-section"></a>本节内容  
   

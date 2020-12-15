@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38644be1cbb9c9df785926534ef8b224cd539277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c46ab596b058aa31254138d3454a1248c986f64e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482576"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467568"
 ---
 # <a name="schema-rowsets---linkedservers-rowset-in-sql-server-native-client"></a>架构行集-SQL Server Native Client 中的 LINKEDSERVERS 行集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,5 +1,5 @@
 ---
-title: 执行包含 SQL 查询的模板（SQLXMLOLEDB）
+title: " (SQLXMLOLEDB 中的 SQL 查询执行模板) "
 description: 查看使用 SQLXMLOLEDB 提供程序执行包含 SQL 查询的服务器端 XML 模板的客户端 ADO 应用程序的示例。
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c97dd6675b13d5f47298f3791f8f47da793a9a8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9298024d8010b8ab4684eb54b85f4b8afc636b69
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650383"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467148"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>执行包含 SQL 查询的模板（SQLXMLOLEDB 访问接口）
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "85650383"
   
  由于 ClientSideXML 属性设置为 True，因此将不带 FOR XML 子句的 SELECT 语句发送到服务器。 服务器执行该查询并将一个行集返回给客户端。 然后客户端对行集应用 FOR XML 转换，并生成 XML 文档。  
   
- XML 模板为生成的 XML 文档提供一个顶级根元素（ \<ROOT> ）; 因此，不提供 xml 根属性。  
+ XML 模板为生成的 XML 文档提供一个顶级根元素 (\<ROOT>) ; 因此，不提供 xml 根属性。  
   
  若要执行 XML 模板，必须指定方言 {5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
   
 > [!NOTE]  
->  在该代码中，必须在连接字符串中提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 而且，该示例指定对于需要安装其他网络客户端软件的数据访问接口使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11)。 有关详细信息，请参阅[SQL Server Native Client 的系统要求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
+>  在该代码中，必须在连接字符串中提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 而且，该示例指定对于需要安装其他网络客户端软件的数据访问接口使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11)。 有关详细信息，请参阅 [SQL Server Native Client 的系统要求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
   
 ```  
 Option Explicit  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: feb83b82a131d731129285fb4c9b5fea7b201b9f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: aada1686982e39c405c0c022fa46d5117d690f86
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493742"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466928"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88493742"
 |name|**sysname**|对象名称|  
 |id|**int**|对象标识号|  
 |xtype|**char(2)**|对象类型。 可以是以下对象类型之一：<br /><br /> AF = 聚合函数 (CLR)<br /><br /> C = CHECK 约束<br /><br /> D = 默认值或 DEFAULT 约束<br /><br /> F = FOREIGN KEY 约束<br /><br /> L = 日志<br /><br /> FN = 标量函数<br /><br /> FS = 程序集 (CLR) 标量函数<br /><br /> FT = 程序集 (CLR) 表值函数<br /><br /> IF = 内联表函数<br /><br /> IT = 内部表<br /><br /> P = 存储过程<br /><br /> PC = Assembly (CLR) 存储过程<br /><br /> PK = PRIMARY KEY 约束（类型为 K）<br /><br /> RF = 复制筛选存储过程<br /><br /> S = 系统表<br /><br /> SN = 同义词<br /><br /> SQ = 服务队列<br /><br /> TA = 程序集 (CLR) DML 触发器<br /><br /> TF = 表函数<br /><br /> TR = SQL DML 触发器<br /><br /> TT = 表类型<br /><br /> U = 用户表<br /><br /> UQ = UNIQUE 约束（类型为 K）<br /><br /> V = 视图<br /><br /> X = 扩展存储过程|  
-|uid|**smallint**|对象所有者的架构 ID。 对于从旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的数据库，架构 ID 等于所有者的用户 ID。 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。<br /><br /> ** \* \* 重要 \* 提示 \* **如果使用以下任意 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL 语句，则必须使用[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录视图，而不是 sys.sys对象。<br /><br /> 创建 &#124; ALTER &#124; DROP USER<br /><br /> 创建 &#124; ALTER &#124; DROP ROLE<br /><br /> 创建 &#124; ALTER &#124; DROP 应用程序角色<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
+|uid|**smallint**|对象所有者的架构 ID。 对于从旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的数据库，架构 ID 等于所有者的用户 ID。 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。<br /><br /> **\* \* 重要 \* 提示 \*** 如果使用以下任意 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL 语句，则必须使用 [sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录视图，而不是 sys.sys对象。<br /><br /> 创建 &#124; ALTER &#124; DROP USER<br /><br /> 创建 &#124; ALTER &#124; DROP ROLE<br /><br /> 创建 &#124; ALTER &#124; DROP 应用程序角色<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
 |info|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |状态|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |base_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

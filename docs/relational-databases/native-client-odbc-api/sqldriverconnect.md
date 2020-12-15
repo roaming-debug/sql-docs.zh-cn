@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76942f8367bb6c38da195c61fa8d428b877d0042
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 53804692b3bb27fa4be5c3ca46e516e178288846
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810068"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465268"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91810068"
   
  当 **SQLDriverConnect**_DriverCompletion_ 参数值为 SQL_DRIVER_PROMPT、SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将从显示的对话框中检索关键字值。 如果关键字值传递到连接字符串中，并且用户未在对话框中更改关键字的值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将使用连接字符串中的值。 如果在连接字符串中未设置值，并且用户在对话框中未指定任何值，则驱动程序将使用默认值。  
   
- 当任何*DriverCompletion*值需要 (或可能需要) 驱动程序连接对话框的显示时，必须为**SQLDriverConnect**指定有效的*WindowHandle* 。 无效句柄将返回 SQL_ERROR。  
+ 当任何 *DriverCompletion* 值需要 (或可能需要) 驱动程序连接对话框的显示时，必须为 **SQLDriverConnect** 指定有效的 *WindowHandle* 。 无效句柄将返回 SQL_ERROR。  
   
  指定 DRIVER 或 DSN 关键字。 ODBC 规定，如果同时指定了这两个关键字，驱动程序将使用左边的关键字，而忽略另一个关键字。 如果指定了驱动程序，或者指定了驱动程序的最左侧，并且 **SQLDriverConnect**_DriverCompletion_ 参数值为 SQL_DRIVER_NOPROMPT，则需要 SERVER 关键字和适当的值。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "91810068"
  有关 Spn 的详细信息，请参阅 [&#40;ODBC&#41;的客户端连接中的服务主体名称 &#40;spn&#41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。  
   
 ## <a name="examples"></a>示例  
- 以下调用说明了 **SQLDriverConnect**所需的最少数据量：  
+ 以下调用说明了 **SQLDriverConnect** 所需的最少数据量：  
   
 ```  
 SQLDriverConnect(hdbc, hwnd,  

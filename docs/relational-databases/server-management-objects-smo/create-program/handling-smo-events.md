@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79a3bcc31c8b237a93cd5d7d1d32ae425c626735
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ea6e1e8c1c995a450f113fe67f916d501dbedd0f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490430"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467248"
 ---
 # <a name="handling-smo-events"></a>处理 SMO 事件
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

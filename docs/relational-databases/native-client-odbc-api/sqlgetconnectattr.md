@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 966d76cd9d0582cc94d3419714c4368e24a68eac
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f988f8fa6b09a3efd895499bfa1a367e0bb44774
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810791"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465178"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "91810791"
 |SQL_SUCCESS|连接成功。 将在输出缓冲区中找到客户端连接 ID。|  
   
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
- SQL_COPT_SS_PERF_DATA 属性返回包含当前驱动程序性能统计信息的 SQLPERF 结构的指针。 如果未启用性能日志记录， **SQLGetConnectAttr**将返回 NULL。 驱动程序不会动态更新 SQLPERF 结构中的统计信息。 每次需要刷新性能统计信息时调用 **SQLGetConnectAttr** 。  
+ SQL_COPT_SS_PERF_DATA 属性返回包含当前驱动程序性能统计信息的 SQLPERF 结构的指针。 如果未启用性能日志记录， **SQLGetConnectAttr** 将返回 NULL。 驱动程序不会动态更新 SQLPERF 结构中的统计信息。 每次需要刷新性能统计信息时调用 **SQLGetConnectAttr** 。  
   
 |值|说明|  
 |-----------|-----------------|  

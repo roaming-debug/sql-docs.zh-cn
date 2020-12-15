@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0e28b9c039bd620780930a2795914432bf07669
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b40e6caf31616f7dc1749a80746ea4ab2b9039ed
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535207"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468378"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89535207"
 sp_helplanguage [ [ @language = ] 'language' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @language = ] 'language'` 要显示其信息的替代语言的名称。 *language* 的值为 **sysname**，默认值为 NULL。 如果指定 *language* ，则返回有关指定语言的信息。 如果未指定语言，则将返回 **sys.sys语言** 兼容性视图中有关所有语言的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  

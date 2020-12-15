@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a88b2488cbc64e77d0bcc00e3a9f758ab0f4f47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fd4277c773c07e56a8669d1bb5c6f9d8e024d769
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486890"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464968"
 ---
 # <a name="disconnecting-from-a-data-source"></a>与数据源断开连接
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

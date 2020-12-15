@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcfdd367937cb00d98ed79edf6758b74c96ad330
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 99e1d43c60dde82762ccca13568509031c8d5225
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547867"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468308"
 ---
 # <a name="sp_query_store_reset_exec_stats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-sql) 
 
@@ -44,7 +44,7 @@ ms.locfileid: "89547867"
 sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @plan_id = ] plan_id` 要清除的查询计划的 id。 *plan_id* 是 **bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

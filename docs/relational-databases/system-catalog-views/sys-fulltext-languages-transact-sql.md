@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_languages (Transact-SQL)
-title: sys. fulltext_languages (Transact-sql) |Microsoft Docs
+title: sys.fulltext_languages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab4f793c243671edeaf2684d40b87c40cddaf8cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9e8c29c32323c2c75e573e8e76851e4026a6e815
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420161"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464688"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88420161"
 ## <a name="values-returned-for-default-languages"></a>针对默认语言返回的值  
  下表显示在默认情况下为其注册了断字符的语言的值。  
   
-|Language|LCID|  
+|语言|LCID|  
 |--------------|----------|  
 |阿拉伯语|1025|  
 |孟加拉语（印度）|1093|  
@@ -68,7 +68,7 @@ ms.locfileid: "88420161"
 |意大利语|1040|  
 |日语|1041|  
 |卡纳达语|1099|  
-|朝鲜语|1042|  
+|韩语|1042|  
 |拉脱维亚语|1062|  
 |立陶宛语|1063|  
 |马来语（马来西亚）|1086|  
@@ -106,10 +106,10 @@ ms.locfileid: "88420161"
   
 ## <a name="see-also"></a>另请参阅  
  [sp_fulltext_load_thesaurus_file &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
- [sp_fulltext_service &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [sp_fulltext_service (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [为全文搜索配置和管理非索引字和非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [为 Full-Text 搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

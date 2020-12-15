@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b192f9080973c34ca5c054595b586bd9aa14f7e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d10b8643b2a34b0340234b60802df07354dac307
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428219"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469228"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>从 SQL Server 2005 Native Client 更新应用程序
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88428219"
 |SQLSetDescRec、SQLBindParameter 和 SQLBindCol 现在会执行一致性检查。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在 Native Client 10.0 之前，设置 SQL_DESC_DATA_PTR 不会对 SQLSetDescRec、SQLBindParameter 或 SQLBindCol 中的任何描述符类型进行一致性检查。|  
 |SQLCopyDesc 现在执行描述符一致性检查。|在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 之前，当对特定记录设置 SQL_DESC_DATA_PTR 字段时，SQLCopyDesc 不执行一致性检查。|  
 |SQLGetDescRec 不再执行描述符一致性检查。|在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 之前，在设置 SQL_DESC_DATA_PTR 字段时，SQLGetDescRec 执行了描述符一致性检查。 这不是 ODBC 规范和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 以及更高版本所要求的，该一致性检查不再执行。|  
-|日期超出范围时返回其他错误。|对于 **日期时间** 类型， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (会从 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 超出早期版本返回的超出范围的) 开始返回不同的错误号。<br /><br /> 具体来说， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client 9.0 在字符串转换为 **datetime**时，将所有超出范围的年份值返回22007，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 从版本)  (10.0 开始， [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 当日期在 **datetime2** 支持的范围内但在日期 **时间** 或 **smalldatetime**支持的范围之外时，将返回22008。|  
+|日期超出范围时返回其他错误。|对于 **日期时间** 类型， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (会从 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 超出早期版本返回的超出范围的) 开始返回不同的错误号。<br /><br /> 具体来说， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client 9.0 在字符串转换为 **datetime** 时，将所有超出范围的年份值返回22007，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 从版本)  (10.0 开始， [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 当日期在 **datetime2** 支持的范围内但在日期 **时间** 或 **smalldatetime** 支持的范围之外时，将返回22008。|  
 |如果舍入将更改日期，则 datetime 值将截断秒的小数部分，并且不舍入  。|在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 之前，对于发送到服务器的 datetime 值的客户端行为是将它们舍入到最接近 1/300 秒的值  。 从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 开始，如果舍入会更改日期，则该方案会导致截断秒的小数部分。|  
 |datetime  值的可能截断秒。|如果您绑定到某一 datetime 列并且其类型标识符为 DBTYPE_DBTIMESTAMP (OLE DB) 或 SQL_TIMESTAMP (ODBC)、小数位数为 0，则使用连接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 2005 服务器的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client（或更高版本）生成的应用程序将截断要发送到服务器的时间部分中的秒和秒的小数部分。<br /><br /> 例如：<br /><br /> 输入数据：1994-08-21 21:21:36.000<br /><br /> 插入的数据：1994-08-21 21:21:00.000|  
 |从 DBTYPE_DBTIME 到 DBTYPE_DATE 的 OLE DB 数据转换不会再导致日期发生更改。|在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 之前，如果 DBTYPE_DATE 的时间部分是在距离午夜的半秒内，则 OLE DB 转换代码将导致日期发生更改。 从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 开始，日期不会更改（秒的小数部分将截断但不舍入）。|  

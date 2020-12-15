@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb26981d8b2bdad7a6d9a34b3671fedeecb02c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4d0005c9821782840a08c9165acf7413c23e6d1e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498801"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467518"
 ---
 # <a name="stored-procedures-in-sql-server-native-client"></a>SQL Server Native Client 中的存储过程
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

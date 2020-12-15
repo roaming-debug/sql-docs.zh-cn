@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76c5e2aab1f515ee52feb97218880e8831f3bea8
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8f93ad9f3229597fea17d53747dcd97d22172d6c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868846"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469508"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>运行存储过程 - 调用存储过程
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

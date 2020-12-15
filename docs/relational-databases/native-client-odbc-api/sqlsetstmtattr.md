@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e338ba67bdd2535f54e4678b4ff013c768571da8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868451"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465098"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91868451"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序还支持以下特定于驱动程序的语句属性。  
   
 ### <a name="sql_sopt_ss_cursor_options"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
- SQL_SOPT_SS_CURSOR 属性指定驱动程序是否将在游标上使用特定于驱动程序的性能选项。 设置这些选项时，不允许[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 。 默认设置为 SQL_CO_OFF。 *将 valueptr*值的类型为 SQLLEN。  
+ SQL_SOPT_SS_CURSOR 属性指定驱动程序是否将在游标上使用特定于驱动程序的性能选项。 设置这些选项时，不允许[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 。 默认设置为 SQL_CO_OFF。 *将 valueptr* 值的类型为 SQLLEN。  
   
 |*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
@@ -60,10 +60,10 @@ ms.locfileid: "91868451"
   
  当设置这些选项时，服务器将在检测到已提取最后一行时自动关闭游标。 应用程序仍必须 SQL_CLOSE) 或[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)调用[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) (，但驱动程序不必向服务器发送关闭通知。  
   
- 如果选择列表包含 **text**、 **ntext**或 **image** 列，则快速只进游标将转换为动态游标，并允许 **SQLGetData** 。  
+ 如果选择列表包含 **text**、 **ntext** 或 **image** 列，则快速只进游标将转换为动态游标，并允许 **SQLGetData** 。  
   
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
- SQL_SOPT_SS_DEFER_PREPARE 特性确定是立即准备还是推迟语句，直到执行 **SQLExecute**、 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 或 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和早期版本中，将忽略此属性（没有延迟的准备）。 *将 valueptr*值的类型为 SQLLEN。  
+ SQL_SOPT_SS_DEFER_PREPARE 特性确定是立即准备还是推迟语句，直到执行 **SQLExecute**、 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 或 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和早期版本中，将忽略此属性（没有延迟的准备）。 *将 valueptr* 值的类型为 SQLLEN。  
   
 |*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "91868451"
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
  SQL_SOPT_SS_REGIONALIZE 属性用于确定语句级别的数据转换。 该属性使驱动程序在将日期、时间和货币值转换为字符串时遵循客户端区域设置。 该转换仅针对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机数据类型到字符串的转换。  
   
- *将 valueptr*值的类型为 SQLLEN。  
+ *将 valueptr* 值的类型为 SQLLEN。  
   
 |*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "91868451"
  改变数据源的区域行为可能导致应用程序失败。 对于分析日期字符串并期望日期字符串按 ODBC 定义的方式显示的应用程序，更改该值可能会对它们产生负面影响。  
   
 ### <a name="sql_sopt_ss_textptr_logging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
- SQL_SOPT_SS_TEXTPTR_LOGGING 属性用于切换对包含 **文本** 或 **图像** 数据的列进行的操作的日志记录。 *将 valueptr*值的类型为 SQLLEN。  
+ SQL_SOPT_SS_TEXTPTR_LOGGING 属性用于切换对包含 **文本** 或 **图像** 数据的列进行的操作的日志记录。 *将 valueptr* 值的类型为 SQLLEN。  
   
 |*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
@@ -96,7 +96,7 @@ ms.locfileid: "91868451"
 |SQL_TL_ON|默认。 启用对 **文本** 和 **图像** 数据执行的操作的日志记录。|  
   
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
- SQL_SOPT_SS_HIDDEN_COLUMNS 属性在结果集中公开隐含在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 语句中的列。 默认情况下，驱动程序不公开这些列。 *将 valueptr*值的类型为 SQLLEN。  
+ SQL_SOPT_SS_HIDDEN_COLUMNS 属性在结果集中公开隐含在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 语句中的列。 默认情况下，驱动程序不公开这些列。 *将 valueptr* 值的类型为 SQLLEN。  
   
 |*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
@@ -118,7 +118,7 @@ ms.locfileid: "91868451"
  `service=mySSBService;local database=mydb`  
   
 ### <a name="sql_sopt_ss_querynotification_timeout"></a>SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
- SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT 属性指定查询通知保持活动状态的秒数。 默认值为 432000 秒（5 天）。 *将 valueptr*值的类型为 SQLLEN。  
+ SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT 属性指定查询通知保持活动状态的秒数。 默认值为 432000 秒（5 天）。 *将 valueptr* 值的类型为 SQLLEN。  
   
 ### <a name="sql_sopt_ss_param_focus"></a>SQL_SOPT_SS_PARAM_FOCUS  
  SQL_SOPT_SS_PARAM_FOCUS 属性指定后续 SQLBindParameter、SQLGetDescField、SQLSetDescField、SQLGetDescRec 和 SQLSetDescRec 调用的焦点。  
@@ -134,10 +134,10 @@ ms.locfileid: "91868451"
   
 |*将 valueptr* 值|说明|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|默认。<br /><br /> 当使用表值参数时，指示应返回实际表的元数据。<br /><br /> 当使用稀疏列功能时，SQLColumns 将仅返回不是稀疏 **column_set**的成员的列。|  
+|SQL_SS_NAME_SCOPE_TABLE|默认。<br /><br /> 当使用表值参数时，指示应返回实际表的元数据。<br /><br /> 当使用稀疏列功能时，SQLColumns 将仅返回不是稀疏 **column_set** 的成员的列。|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|指示应用程序需要表类型的元数据，而不是实际表（目录函数应返回表类型的元数据）。 然后，应用程序将表值参数的 TYPE_NAME 作为 *TableName* 参数传递。|  
 |SQL_SS_NAME_SCOPE_EXTENDED|当使用稀疏列功能时，SQLColumns 将返回所有列，而不管 **column_set** 成员身份如何。|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|当使用稀疏列功能时，SQLColumns 仅返回作为稀疏 **column_set**的成员的列。|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|当使用稀疏列功能时，SQLColumns 仅返回作为稀疏 **column_set** 的成员的列。|  
 |SQL_SS_NAME_SCOPE_DEFAULT|等同于 SQL_SS_NAME_SCOPE_TABLE。|  
   
  SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 分别与 *CatalogName* 和 *SchemaName* 参数一起使用，以标识表值参数的目录和架构。 在应用程序检索完表值参数的元数据之后，该应用程序必须将 SQL_SOPT_SS_NAME_SCOPE 设置回原来的默认值 SQL_SS_NAME_SCOPE_TABLE。  

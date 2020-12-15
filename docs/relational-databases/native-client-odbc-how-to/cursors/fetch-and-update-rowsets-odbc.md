@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd2605fcad1e9942dca546a86661dd67991b8b27
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b5eaa9a150589cbdf41a41d3528b2b49b00cd7c9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867789"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467758"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>提取和更新行集 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

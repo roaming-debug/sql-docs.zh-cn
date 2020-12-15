@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 518e8441c19286e3a0daccca724062a8ff54294a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 943cfd787cccff42973862b12f0f52feae24410c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420251"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467188"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>如何在 Visual Studio .NET 中创建 Visual C# SMO 项目
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   本节介绍了如何生成简单的 SMO 控制台应用程序。  
   
- 此示例导入命名空间，这样，程序即可以引用 SMO 类型。 **代理**命名空间的导入是可选的。 当编写使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的程序时使用此命名空间。 需要 **公共** 命名空间才能建立与实例的安全连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **SqlClient**命名空间用于处理 SQL 异常错误。  
+ 此示例导入命名空间，这样，程序即可以引用 SMO 类型。 **代理** 命名空间的导入是可选的。 当编写使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的程序时使用此命名空间。 需要 **公共** 命名空间才能建立与实例的安全连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **SqlClient** 命名空间用于处理 SQL 异常错误。  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>在 Visual Studio.NET 中创建 Visual c # SMO 项目  
   
 1. 启动 Visual Studio
   
-2. 在 " **文件** " 菜单上，单击 " **新建** "，然后单击 " **项目**"。  将显示“新建项目”对话框。   
+2. 在 " **文件** " 菜单上，单击 " **新建** "，然后单击 " **项目**"。  此时将出现“新建项目”  对话框。   
   
 3. 在 " [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **已安装**" 窗格中，导航到 "**模板**" " \\ **Visual c #** \\ **Windows** "，然后选择 "**控制台应用**  
   

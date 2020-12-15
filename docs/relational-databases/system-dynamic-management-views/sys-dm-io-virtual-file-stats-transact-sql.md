@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
-ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 132add407f19a8a4ac33a1b2ee7587748807754e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535291"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466898"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -53,7 +53,7 @@ sys.dm_io_virtual_file_stats (
 sys.dm_pdw_nodes_io_virtual_file_stats
 ```
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 
 
  *database_id* |无效

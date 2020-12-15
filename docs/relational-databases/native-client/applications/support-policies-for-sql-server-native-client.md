@@ -10,12 +10,13 @@ ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08efcc441e0c06c05dcb49f2a5d18a3fc9e5d72d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1bdc9812b46869a46879adfe10efda8b35128bf9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005721"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469248"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client 的支持策略
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -23,16 +24,16 @@ ms.locfileid: "86005721"
   本主题讨论如何将各种数据访问组件与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 一起使用。  
   
 ## <a name="server-support"></a>服务器支持  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 11.0 支持与、、、、和的连接 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 支持与、、、、和的连接 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 。  
   
 ## <a name="supported-operating-system-versions"></a>支持的操作系统版本  
  下表列出了支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的操作系统。  
   
 |SQL Server Native Client 版本|支持的操作系统|  
 |--------------------------------------|---------------------------------|  
-|SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 或更高版本<br /><br /> Microsoft Windows Server 2003 或更高版本<br /><br /> Microsoft Windows XP Service Pack 1 或更高版本<br /><br /> Microsoft Windows Vista（需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 或更高版本）<br /><br /> Microsoft Windows Server 2008 R2 （需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 或更高版本）|  
-|SQL Server Native Client 10.0 （ [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ）|Microsoft Windows Server 2003 Service Pack 2 或更高版本<br /><br /> Microsoft Windows XP Service Pack 2 或更高版本<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  
-|SQL Server Native Client 10.5 （ [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] ）|Microsoft Windows Server 2003 Service Pack 2 或更高版本<br /><br /> Microsoft Windows XP Service Pack 2 或更高版本<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
+|SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 或更高版本<br /><br /> Microsoft Windows Server 2003 或更高版本<br /><br /> Microsoft Windows XP Service Pack 1 或更高版本<br /><br /> Microsoft Windows Vista（需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 或更高版本）<br /><br /> Microsoft Windows Server 2008 R2 (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 或更高版本) |  
+|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) |Microsoft Windows Server 2003 Service Pack 2 或更高版本<br /><br /> Microsoft Windows XP Service Pack 2 或更高版本<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  
+|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]) |Microsoft Windows Server 2003 Service Pack 2 或更高版本<br /><br /> Microsoft Windows XP Service Pack 2 或更高版本<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
 |SQL Server Native Client 11.0（[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]）|Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7<br /><br /> Microsoft Windows 8<br /><br /> Microsoft Windows Server 2012|  
   
 ## <a name="ado-support-policies"></a>ADO 支持策略  

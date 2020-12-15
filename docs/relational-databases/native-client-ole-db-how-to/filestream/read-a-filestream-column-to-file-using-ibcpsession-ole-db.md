@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5db0799e5f5b2ed6e708b38969f80f1678eb12c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c48614682a028ef06279dea44631bd03acf055f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88407263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464898"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-in-sql-server-native-client-ole-db"></a>使用 SQL Server Native Client (OLE DB 中的 IBCPSession 将 FILESTREAM 列读入文件) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

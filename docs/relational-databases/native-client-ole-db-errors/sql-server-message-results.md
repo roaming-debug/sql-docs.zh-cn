@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9806bc940e6065a0a4c68dda74fcdf9f8a1bc4b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7fe5f2711334f371831bc76d60b5b74ef6b9a417
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475713"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467628"
 ---
 # <a name="sql-server-native-client-message-results"></a>SQL Server Native Client 消息结果
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88475713"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native client OLE DB 提供程序返回 S_OK 并在执行多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或使用者执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序成员函数时提供一条或多条信息性消息。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次执行成员函数后，无论返回代码的值、是否存在返回的 IRowset 或 IMultipleResults 接口引用，或者是否缺少返回的**IRowset**或**IMultipleResults**接口引用或受影响的行的计数，Native Client OLE DB 提供程序使用者允许动态指定查询文本。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次执行成员函数后，无论返回代码的值、是否存在返回的 IRowset 或 IMultipleResults 接口引用，或者是否缺少返回的或接口引用或受影响的行的计数，Native Client OLE DB 提供程序使用者允许动态指定查询文本。  
   
 ## <a name="see-also"></a>另请参阅  
  [错误](../../relational-databases/native-client-ole-db-errors/errors.md)  

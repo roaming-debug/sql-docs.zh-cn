@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c316d1f87b76387ebf382754970a6b9dc1ab609f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2996d419ae22b58c065eb2b6dbcdae6786703420
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89517619"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466848"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "89517619"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |class|**int** NOT NULL|将受影响的对象的类：<br /><br /> **1** = 约束<br /><br /> **7** = 索引和堆|  
-|class_desc|**nvarchar (60) ** NOT NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|class_desc|**nvarchar (60)** NOT NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** NOT NULL|约束的对象 ID，或包含索引或堆的表的对象 ID。|  
 |minor_id|**int** 无效|对于约束为 **NULL**<br /><br /> 索引和堆的 Index_id|  
-|dependency|**nvarchar (60) ** NOT NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **space**（用于内部）<br /><br /> **geometry**（用于系统 UDT）<br /><br /> **geography::Parse**（用于系统 UDT 方法）|  
+|dependency|**nvarchar (60)** NOT NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例:<br /><br /> **space**（用于内部）<br /><br /> **geometry**（用于系统 UDT）<br /><br /> **geography::Parse**（用于系统 UDT 方法）|  
   
 ## <a name="permissions"></a>权限  
  需要拥有 VIEW DATABASE STATE 权限。  
@@ -68,7 +68,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |订单|受影响的对象|纠正措施|  
 |-----------|---------------------|-----------------------|  
-|1|**索引**|重新生成由 sys.databases 标识的任何索引 **dm_db_objects_impacted_on_version_change** 例如：  `ALTER INDEX ALL ON <table> REBUILD`<br />or<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Object**|在重新计算基础表中的 geometry 和 geography 数据后，必须重新验证 **sys.dm_db_objects_impacted_on_version_change** 标识的所有约束。 对于约束，使用 ALTER TABLE 进行重新验证。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**索引**|重新生成由 **sys.dm_db_objects_impacted_on_version_change** 标识的任何索引，例如：  `ALTER INDEX ALL ON <table> REBUILD`<br />或<br />`ALTER TABLE <table> REBUILD`|  
+|2|**对象**|在重新计算基础表中的 geometry 和 geography 数据后，必须重新验证 **sys.dm_db_objects_impacted_on_version_change** 标识的所有约束。 对于约束，使用 ALTER TABLE 进行重新验证。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

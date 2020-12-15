@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47e839f090a3a7420a3da01cb4d468d3da667314
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bd065f5e1b4fbdf7df341e81c29ace25a39db5c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399693"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466968"
 ---
 # <a name="syssyscharsets-transact-sql"></a>sys.syscharsets (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "88399693"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|type|**smallint**|此行表示的实体的类型：<br /><br /> 1001 = 字符集。<br /><br /> 2001 = 排序顺序。|  
+|**type**|**smallint**|此行表示的实体的类型：<br /><br /> 1001 = 字符集。<br /><br /> 2001 = 排序顺序。|  
 |**id**|**tinyint**|字符集或排序顺序的唯一 ID。 请注意，排序顺序和字符集不能共享相同的 ID 号。 从 1 至 240 的 ID 范围是保留给[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用的。|  
 |**csid**|**tinyint**|如果行表示字符集，则不使用此字段。 如果行表示排序顺序，则此字段为排序顺序据以生成的字符集的 ID。 假设此表中存在具有此 ID 的字符集行。|  
 |**status**|**smallint**|内部系统状态信息位。|  
 |name|**sysname**|字符集或排序顺序的唯一名称。 此字段必须只包含字母 A-Z 或 a-z、数字 0 - 9 以及下划线 (_)，并且必须以字母开始。|  
 |description|**nvarchar(255)**|字符集或排序顺序功能的说明（可选）。|  
 |**binarydefinition**|**varbinary(6000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**definition**|**图像**|字符集或排序顺序的内部定义。 此字段中的数据结构取决于类型。|  
+|**definition**|**image**|字符集或排序顺序的内部定义。 此字段中的数据结构取决于类型。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4272cfad-5ad7-493d-9edd-d9111619bda0
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 583790fa6b14660f2e48f39ca44c06fbbfb9ff5b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: d0d5bfea5d43315fed6b74f8767cea6cb89904a9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034820"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466938"
 ---
 # <a name="syspdw_health_component_status_mappings-transact-sql"></a>sys.pdw_health_component_status_mappings (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

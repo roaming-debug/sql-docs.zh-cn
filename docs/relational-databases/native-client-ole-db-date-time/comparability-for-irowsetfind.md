@@ -13,13 +13,13 @@ ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fcb41e6a893f8c8ad84a099ae6d098646b1b9c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c51f5944854305b653f2f06ff2533a1bb2b4ccb3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328573"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467678"
 ---
 # <a name="sql-server-native-client-comparability-for-irowsetfind"></a>适用于 IRowsetFind 的 SQL Server Native Client 比较
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

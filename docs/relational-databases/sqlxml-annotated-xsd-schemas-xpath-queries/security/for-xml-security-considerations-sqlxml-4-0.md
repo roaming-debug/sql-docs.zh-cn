@@ -1,5 +1,5 @@
 ---
-title: FOR XML 安全注意事项（SQLXML）
+title: " (SQLXML) 的 XML 安全注意事项"
 description: 了解在 SQLXML 4.0 中指定 FOR XML AUTO 模式时的重要安全注意事项。
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b6786351f99acb34eb407de10150ffc6aeabc28
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8dbfe261078d35579bdc97a82cbef90abff289bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626872"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467118"
 ---
 # <a name="for-xml-security-considerations-sqlxml-40"></a>FOR XML 安全注意事项 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38ee324445e635ee959a3c7abe3010c8f48d859a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 18e1f0e5871c477fe166ac43276c864233150cf8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420321"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467238"
 ---
 # <a name="using-capture-mode"></a>使用捕获模式
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

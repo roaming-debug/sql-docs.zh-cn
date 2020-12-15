@@ -15,27 +15,28 @@ helpviewer_keywords:
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c765f45b986640fd6b6a1bf1cf491e783e38ae2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 54fc2f3916a4fc21645281fbac989f34b32e46d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998874"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469208"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>将 ADO 用于 SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  为了充分利用中引入的新功能，例如 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 多个活动的结果集（MARS）、查询通知、用户定义类型（udt）或新的**xml**数据类型，使用 ActiveX 数据对象（ADO）的现有应用程序应将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序用作其数据访问接口。  
+  为了充分利用中引入的新功能 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] （例如多个活动结果集） (MARS) 、查询通知、用户定义类型 (udt) 或新的 **xml** 数据类型，使用 ActiveX 数据对象 (ADO) 的现有应用程序应使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序作为其数据访问接口。  
   
  如果不需要使用在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的任何新功能，则不需要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口；您可以继续使用当前数据访问接口（通常是 SQLOLEDB）。 如果要增强现有应用程序的功能，并且需要使用在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的新功能，则应当使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口。  
   
 > [!NOTE]  
 >  如果要开发新的应用程序，则建议考虑使用用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 ADO.NET 和 .NET Framework 数据访问接口，而不是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client，以访问最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的所有新功能。 有关用于 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的详细信息，请参阅针对 ADO.NET 的 .NET Framework SDK 文档。  
   
- 为了使 ADO 能够使用最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的新功能，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口已进行了某些增强，这些增强扩展了 OLE DB 的核心功能。 借助这些增强功能，ADO 应用程序可使用更新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，还可使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的两个数据类型（xml 和 udt）   。 通过这些增强功能，还可探索对 varchar、nvarchar 和 varbinary 数据类型的强化    。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 将 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化属性添加到 DBPROPSET_SQLSERVERDBINIT 属性集以供 ADO 应用程序使用，以便以与 ADO 兼容的方式公开新数据类型。 此外， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序还定义了一个名为**DataTypeCompatibility**的新连接字符串关键字，该关键字是在连接字符串中设置的。  
+ 为了使 ADO 能够使用最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的新功能，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口已进行了某些增强，这些增强扩展了 OLE DB 的核心功能。 借助这些增强功能，ADO 应用程序可使用更新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，还可使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的两个数据类型（xml 和 udt）   。 通过这些增强功能，还可探索对 varchar、nvarchar 和 varbinary 数据类型的强化    。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化属性添加到 DBPROPSET_SQLSERVERDBINIT 属性集以供 ADO 应用程序使用，以便以与 ADO 兼容的方式公开新数据类型。 此外， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序还定义了一个名为 **DataTypeCompatibility** 的新连接字符串关键字，该关键字是在连接字符串中设置的。  
   
 > [!NOTE]  
->  现有 ADO 应用程序可以使用 SQLOLEDB 访问接口来访问和更新 XML、UDT 以及大型值文本和二进制字段值。 新的更大型的 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型分别作为 ADO 类型 adLongVarChar、adLongVarWChar 和 adLongVarBinary 返回       。 XML 列作为 adLongVarChar 返回，而 UDT 列作为 adVarBinary 返回   。 但是，如果使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序（SQLNCLI11）而不是 SQLOLEDB，则需要确保将**DataTypeCompatibility**关键字设置为 "80"，以便将新的数据类型正确映射到 ADO 数据类型。  
+>  现有 ADO 应用程序可以使用 SQLOLEDB 访问接口来访问和更新 XML、UDT 以及大型值文本和二进制字段值。 新的更大型的 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型分别作为 ADO 类型 adLongVarChar、adLongVarWChar 和 adLongVarBinary 返回       。 XML 列作为 adLongVarChar 返回，而 UDT 列作为 adVarBinary 返回   。 但是，如果使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序 (SQLNCLI11) 而不是 SQLOLEDB，则需要确保将 **DataTypeCompatibility** 关键字设置为 "80"，以便将新的数据类型正确映射到 ADO 数据类型。  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>从 ADO 启用 SQL Server Native Client  
  若要启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client，ADO 应用程序需要在其连接字符串中实现以下关键字：  
@@ -44,7 +45,7 @@ ms.locfileid: "85998874"
   
 -   `DataTypeCompatibility=80`  
   
- 有关 Native Client 中支持的 ADO 连接字符串关键字的详细信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅将[连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+ 有关 Native Client 中支持的 ADO 连接字符串关键字的详细信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅将 [连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
  下面是一个示例，用于建立完全启用的 ADO 连接字符串，以便与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 一起使用，包括启用 MARS 功能：  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9bdc781aaef55a074083e111777b99c0b6ebd6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5047e64eed31c1b6853cbe23fc2008d61015fbca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428089"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467608"
 ---
 # <a name="using-catalog-functions"></a>使用目录函数
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88428089"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持通过一个查询访问多个异类 OLE DB 数据源的数据的分布式查询。 访问远程 OLE DB 数据源的一种方法是将数据源定义为链接服务器。 可以通过使用 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)来完成此操作。 定义链接服务器后，使用由四个部分组成的名称可以在 Transact-SQL 语句中引用该服务器上的对象：  
   
- *linked_server_name。 object_name*。  
+ *linked_server_name. object_name*。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持两个有助于获取链接服务器的目录信息的特定于驱动程序的函数：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88428089"
   
      返回链接服务器包含的目录的列表。  
   
- 使用链接服务器名称和目录名称后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序支持通过使用由两部分组成的名称来获取目录中的信息_linked_server_name_**。** 以下 ODBC 目录函数的*CatalogName* _目录_：  
+ 使用链接服务器名称和目录名称后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序支持通过使用由两部分组成的名称来获取目录中的信息 _linked_server_name_**。** 以下 ODBC 目录函数的 *CatalogName* _目录_：  
   
 -   **SQLColumnPrivileges**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88428089"
   
 -   **SQLTables**  
   
- 由两部分组成的_linked_server_name_**。**[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)上的*FKCatalogName*和*PKCatalogName*也支持_目录_。  
+ 由两部分组成的 _linked_server_name_**。**[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)上的 *FKCatalogName* 和 *PKCatalogName* 也支持 _目录_。  
   
  使用 SQLLinkedServers 和 SQLLinkedCatalogs 需要以下文件：  
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 850268d303106e8c07a19915f9284b6c4dc3f7d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e82feaa49d5474cd0f621b36b3099dc6f97c8e65
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420271"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467208"
 ---
 # <a name="files-and-version-numbers"></a>文件和版本号
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88420271"
 > > 
 > > 因此， **不** 应将这些版本的程序集安装到全局程序集缓存 (GAC) 。 这样做可能会导致其他应用程序（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio）中断。 
   
-|文件|描述|  
+|文件|说明|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|包含对连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的支持。|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|包含对编写 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker 的支持。 这仅在访问 Service Broker 的程序中是必需的。|  

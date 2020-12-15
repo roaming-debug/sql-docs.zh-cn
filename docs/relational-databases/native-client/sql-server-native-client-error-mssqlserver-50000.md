@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0f5c601208aefcff17349a99318ce1160b7a108
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3ed22c6160dd6d909a565498b030633af8bda94b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498833"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467508"
 ---
 # <a name="sql-server-native-client-error-mssqlserver_50000"></a>SQL Server 本机客户端错误 MSSQLSERVER_50000
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

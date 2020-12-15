@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9d04de01-efeb-4b2d-8c28-3234bc7ff2f3
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee01522731e38eeb830e08dd162901cf08efbb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f76bc99be907bdf3b46d478802c3c71b1d7028d6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448025"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467198"
 ---
 # <a name="using-xml-schemas"></a>使用 XML 架构
 

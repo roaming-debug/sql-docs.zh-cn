@@ -13,13 +13,13 @@ ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7960647af0d661d52fe6ebce467468691cc2e785
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f91e2dfd6570808c5b385f07bcb6b3d66e2bd55b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328023"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467688"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-server-to-client"></a>从服务器到客户端的 SQL Server Native Client 转换
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "88328023"
 |Smalldatetime|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Datetime|5、7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Datetime2|5、7|8|9,10|10|7|3|5、7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Datetimeoffset|5、7、11|8，11|9、10、11|10,11|7、11|OK|5、7、11|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Datetimeoffset|5、7、11|8，11|9、10、11|10，11|7、11|OK|5、7、11|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12、9|12|12|12|7、13|空值|空值|空值|空值|空值|空值|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (date)|1,7|OK|2|2|1|1,3|1,7|-|OK(VT_BSTR)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (time)|5、6、7|2|6|OK|6|3、6|5、6|-|OK(VT_BSTR)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (datetime2)|5、7|8|9,10|10|OK|3|5、7|-|OK(VT_BSTR)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5、7、11|8，11|9、10、11|10,11|7、11|OK|5、7、11|-|OK(VT_BSTR)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5、7、11|8，11|9、10、11|10，11|7、11|OK|5、7、11|-|OK(VT_BSTR)|OK|OK|4|4|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   

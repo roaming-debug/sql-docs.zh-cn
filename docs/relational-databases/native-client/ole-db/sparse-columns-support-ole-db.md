@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f402e4a676ad87dd376901199fc4f7537d089b89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c1acd979138ec96ded25ecbead978b7ff18c9d30
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428129"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467558"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client-ole-db"></a>稀疏列支持 SQL Server Native Client (OLE DB) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,8 +58,8 @@ ms.locfileid: "88428129"
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS 返回两个新列：SS_IS_COLUMN_SET 和 SS_IS_SPARSE。<br /><br /> DBSCHEMA_COLUMNS 仅返回不属于 column_set 成员的列  。<br /><br /> 已添加两个新架构行集：不管 column_set 成员身份的稀疏性如何，DBSCHEMA_COLUMNS_EXTENDED 都将返回所有列  。 DBSCHEMA_SPARSE_COLUMN_SET 仅返回属于 column_set 成员的列  。 这些新行集具有与 DBSCHEMA_COLUMNS 相同的列和限制。|  
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas 将新行集 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的 GUID 包括在可用架构行集的列表中。|  
 |ICommand::Execute|如果使用表中的 select **，它将返回不属于稀疏 column_set 成员的所有列，外加一个 XML 列（如果有），其中包含属于稀疏 column_set 成员的所有非 NULL 列的值\***    。|  
-|IOpenRowset::OpenRowset|IOpenRowset::OpenRowset 通过同一表上的 select\* 查询返回与 ICommand::Execute 具有相同列的行集。|  
-|ITableDefinition|对于稀疏列或 column_set 列，该接口没有更改  。 必须进行架构修改的应用程序必须直接执行正确的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  
+|IOpenRowset::OpenRowset|IOpenRowset：： OpenRowset 返回具有与 ICommand：： Execute 相同的列的行集，并在同一个表上使用 **select \** _ 查询。|  
+|ITableDefinition|稀疏列或 _ *column_set** 列没有此接口的更改。 必须进行架构修改的应用程序必须直接执行正确的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client (OLE DB)](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

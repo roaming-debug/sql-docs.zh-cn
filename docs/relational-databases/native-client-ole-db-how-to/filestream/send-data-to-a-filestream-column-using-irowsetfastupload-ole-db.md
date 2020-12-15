@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce03739c3ae8e1dfb7adc8e2c1cf8eab500159f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4ff7c4dcbf486f963da5cebf2cf507ce406f9737
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455712"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464878"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-sql-server-native-client-ole-db"></a>使用 Irowsetfastupload 向 SQL Server Native Client (OLE DB 将数据发送到 FILESTREAM 列) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

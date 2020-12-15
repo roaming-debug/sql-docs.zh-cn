@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ae867ff6291b9c11865c9fd0488d7ef0fb0572c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dab49c59b04c09dc550e9fa922ec6f40dbb3fd6d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542970"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466778"
 ---
 # <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  为 **xp_cmdshell**创建代理凭据。  
+  为 **xp_cmdshell** 创建代理凭据。  
   
 > [!NOTE]  
->  默认情况下，禁用**xp_cmdshell** 。 若要启用 **xp_cmdshell**，请参阅 [Xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+>  默认情况下，禁用 **xp_cmdshell** 。 若要启用 **xp_cmdshell**，请参阅 [Xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "89542970"
 sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  Null  
  指定应删除的代理凭据。  
   

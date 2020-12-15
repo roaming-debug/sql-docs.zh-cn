@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b8789b6bedd67171af12a5b240f566e012b2397
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d4c74f8d40be0a0269d3241aefc0b2e4d43adc0f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423797"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467718"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>执行查询操作指南主题 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

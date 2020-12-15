@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ed1df2288067d30f9443736b914b7560c0c6a784
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 795aeb9a03f839cae400e92060ac21056f314d2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810469"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468278"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -42,16 +42,16 @@ sp_set_firewall_rule [@name =] 'name',
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  下表说明了中支持的参数和选项 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
   
 |名称|Datatype|说明|  
 |----------|--------------|-----------------|  
-|[ @name =] "name"|**NVARCHAR (128) **|用来描述和区分服务器级防火墙设置的名称。|  
-|[ @start_ip_address =] "start_ip_address"|**VARCHAR (50) **|服务器级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最低 IP 地址为 `0.0.0.0`。|  
-|[ @end_ip_address =] "end_ip_address"|**VARCHAR (50) **|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：如果此字段和 *start_ip_address* 字段都等于，则允许 Azure 连接尝试 `0.0.0.0` 。|  
+|[ @name =] "name"|**NVARCHAR (128)**|用来描述和区分服务器级防火墙设置的名称。|  
+|[ @start_ip_address =] "start_ip_address"|**VARCHAR (50)**|服务器级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最低 IP 地址为 `0.0.0.0`。|  
+|[ @end_ip_address =] "end_ip_address"|**VARCHAR (50)**|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：如果此字段和 *start_ip_address* 字段都等于，则允许 Azure 连接尝试 `0.0.0.0` 。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  服务器级防火墙设置的名称必须是唯一的。 如果为存储过程提供的设置的名称在防火墙设置表中已经存在，则将更新开始和结束 IP 地址。 否则，将创建新的服务器级防火墙设置。  
   
  若添加的服务器级防火墙设置的起始和结束 IP 地址均为 `0.0.0.0`，此时支持从 Azure 访问你的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 为 *name* 参数提供一个值，该值有助于记住服务器级防火墙设置的用途。  

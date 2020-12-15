@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ecbd97ecdd60a65fdc72a55b8669a72e4b37a7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 60d49b2a2709560c17ac42ec78fd047326e420a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88327593"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467578"
 ---
 # <a name="schema-rowset-support-in-sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB 中支持架构行集) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

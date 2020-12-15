@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40cc17b96b863c9beb47b3bfec416543117f8743
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 69943bc28ca5badecd2cb1406ddd074301fc828c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455820"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469418"
 ---
 #  <a name="sql-server-native-client-data-source-information-properties"></a>SQL Server Native Client 数据源信息属性
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

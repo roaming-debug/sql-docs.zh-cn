@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b15cc00d5fc594d9e038f0db5b2862ea11673187
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c52125db68c8652ebf21c6649b568d135df9373
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88407313"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464908"
 ---
 # <a name="filestream-and-ole-db-native-client-ole-db-provider"></a>Filestream 和 OLE DB (Native Client OLE DB 提供程序) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

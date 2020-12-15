@@ -1,6 +1,6 @@
 ---
 description: sys.allocation_units (Transact-SQL)
-title: sys. allocation_units (Transact-sql) |Microsoft Docs
+title: sys.allocation_units (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4e1d8894659b252d4a4888c8fb905df7468eb69
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06b45e2bb57f8b39595beee13014ac72b835e4e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546864"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464678"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89546864"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|分配单元的 ID。 在数据库中是唯一的。|  
-|类型|**tinyint**|分配单元的类型：<br /><br /> 0 = 已删除<br /><br /> 1 = 行内数据（所有数据类型，但 LOB 数据类型除外）<br /><br /> 2 = (LOB) 数据 (**text**、 **ntext**、 **image**、 **xml**、大值类型和 CLR 用户定义类型的大型对象) <br /><br /> 3 = 行溢出数据|  
+|type|**tinyint**|分配单元的类型：<br /><br /> 0 = 已删除<br /><br /> 1 = 行内数据（所有数据类型，但 LOB 数据类型除外）<br /><br /> 2 = (LOB) 数据 (**text**、 **ntext**、 **image**、 **xml**、大值类型和 CLR 用户定义类型的大型对象) <br /><br /> 3 = 行溢出数据|  
 |type_desc|**nvarchar(60)**|对分配单元类型的说明：<br /><br /> **删除**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|与分配单元关联的存储容器的 ID。<br /><br /> 如果 type = 1 或 3，则 container_id = sys.partitions.hobt_id。<br /><br /> 如果 type 为 2，则 container_id = sys.partitions.partition_id。<br /><br /> 0 = 标记为要延迟删除的分配单元|  
 |data_space_id|**int**|此分配单元所在文件组的 ID。|  

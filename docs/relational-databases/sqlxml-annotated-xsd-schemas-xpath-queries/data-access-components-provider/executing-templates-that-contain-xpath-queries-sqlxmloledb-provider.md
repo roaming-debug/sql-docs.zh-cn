@@ -1,5 +1,5 @@
 ---
-title: 执行包含 XPath 查询的模板（SQLXMLOLEDB）
+title: '执行包含 XPath 查询的模板 (SQLXMLOLEDB) '
 description: 查看使用 SQLXMLOLEDB 提供程序执行包含 XPath 查询的模板的 ADO 应用程序的示例。
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9cccdba37897836733f666ede50948953b31946b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 839ddb6fad2be960a266385bdd9bbfe59cd5a825
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650407"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467138"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>执行包含 XPath 查询的模板（SQLXMLOLEDB 访问接口）
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85650407"
   
 -   映射架构  
   
- 在此示例 ADO 应用程序中，将根据[执行 Xpath 查询 &#40;SQLXMLOLEDB 提供程序&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)中所述的 XSD 映射架构（MySchema.xml）来指定由 xpath 查询（根）组成的 XML 模板。  
+ 在此示例 ADO 应用程序中， (根) 包含 XPath 查询的 XML 模板是)  ( 根据 [执行 Xpath 查询 &#40;SQLXMLOLEDB Provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)中所述的。  
   
  "映射架构" 属性提供了用于执行 XPath 查询的 XSD 映射架构。 "基路径" 属性提供映射架构的文件路径。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "85650407"
  在应用程序中，可直接指定 XPath 查询。 因此，必须包括方言 {5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
   
 > [!NOTE]  
->  在代码中，必须在连接字符串中提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 而且，该示例指定对于需要安装其他网络客户端软件的数据访问接口使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11)。 有关详细信息，请参阅[SQL Server Native Client 的系统要求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
+>  在代码中，必须在连接字符串中提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 而且，该示例指定对于需要安装其他网络客户端软件的数据访问接口使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11)。 有关详细信息，请参阅 [SQL Server Native Client 的系统要求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
   
 ```  
 Option Explicit  

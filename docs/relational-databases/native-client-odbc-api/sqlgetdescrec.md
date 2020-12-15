@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04c209c9a9795e832648f91e52f1ee35f8f0db3c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 426b5c0d11e428d7b36d4d1eec9edc3a49da823d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811015"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465138"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91811015"
   
 |参数|表值参数|表值参数列和其他参数|  
 |---------------|-----------------------------|----------------------------------------------------------|  
-|*名称*|存储过程调用的正式参数名称；否则是长度为 0 的字符串。|表值参数列名称。|  
+|名称|存储过程调用的正式参数名称；否则是长度为 0 的字符串。|表值参数列名称。|  
 |*TypePtr*|SQL_DESC_TYPE。 对于表值参数，这是 SQL_SS_TABLE。|SQL_DESC_TYPE|  
 |*SubTypePtr*|Undefined|SQL_DESC_DATETIME_INTERVAL_CODE（对于 SQL_DATETIME 或 SQL_INTERVAL 类型的记录。）|  
 |*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
@@ -48,7 +48,7 @@ ms.locfileid: "91811015"
 ## <a name="sqlgetdescrec-support-for-enhanced-date-and-time-features"></a>SQLGetDescRec 对日期和时间增强功能的支持  
  日期/时间类型返回以下值：  
   
-| 属性 | *TypePtr* | *SubTypePtr* | *LengthPtr* | *PrecisionPtr* | *ScalePtr* |  
+| Attribute | *TypePtr* | *SubTypePtr* | *LengthPtr* | *PrecisionPtr* | *ScalePtr* |  
 | --------- | --------- | ------------ | ----------- | -------------- | ---------- |  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
@@ -60,7 +60,7 @@ ms.locfileid: "91811015"
  有关详细信息，请参阅 [ODBC&#41;&#40;日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlgetdescrec-support-for-large-clr-udts"></a>SQLGetDescRec 对大型 CLR UDT 的支持  
- **SQLGetDescRec** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [&#40;ODBC&#41;的大型 CLR 用户定义类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLGetDescRec** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [ODBC&#41;&#40;的大型 CLR User-Defined 类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLGetDescRec](../../odbc/reference/syntax/sqlgetdescrec-function.md)   

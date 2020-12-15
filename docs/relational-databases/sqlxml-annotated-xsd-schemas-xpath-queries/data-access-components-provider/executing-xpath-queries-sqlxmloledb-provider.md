@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5a337408ef4cf1a2e4b72cbb20f9c64681efd0c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 95b1ac8bbbcc07eb671a32f72e944b80fdb7e0d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650317"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467128"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>执行 XPath 查询（SQLXMLOLEDB 访问接口）
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85650317"
   
 -   **映射架构**  
   
- 在该示例 ADO 应用程序中，根据 XSD 映射架构 (MySchema.xml) 指定了一个 XPath 查询 (root)。 架构包含一个元素，该 **\<Contacts>** 元素具有**ContactID**、 **FirstName**和**LastName**属性。 在此架构中，发生默认映射：元素名称映射到同名的表，并且简单类型的属性映射到同名的列。  
+ 在该示例 ADO 应用程序中，根据 XSD 映射架构 (MySchema.xml) 指定了一个 XPath 查询 (root)。 架构包含一个元素，该 **\<Contacts>** 元素具有 **ContactID**、 **FirstName** 和 **LastName** 属性。 在此架构中，发生默认映射：元素名称映射到同名的表，并且简单类型的属性映射到同名的列。  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
@@ -63,7 +63,7 @@ ms.locfileid: "85650317"
  在应用程序中，可直接指定 XPath 查询。 因此，必须包括 XPath 方言 {ec2a4293-e898-11d2-b1b7-00c04f680c56}。  
   
 > [!NOTE]  
->  在该代码中，必须在连接字符串中提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 而且，该示例指定对于需要安装其他网络客户端软件的数据访问接口使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11)。 有关详细信息，请参阅[SQL Server Native Client 的系统要求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
+>  在该代码中，必须在连接字符串中提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 而且，该示例指定对于需要安装其他网络客户端软件的数据访问接口使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11)。 有关详细信息，请参阅 [SQL Server Native Client 的系统要求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
   
 ```  
 Option Explicit  

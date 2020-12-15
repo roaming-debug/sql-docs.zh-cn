@@ -1,6 +1,6 @@
 ---
 description: sys.event_notifications (Transact-SQL)
-title: sys. event_notifications (Transact-sql) |Microsoft Docs
+title: sys.event_notifications (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7051716ff8b401c04f1be90ec92d4a154dd0d68
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fa6f06df580b7f76309660a87e24ae458bf1c2d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548780"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467038"
 ---
 # <a name="sysevent_notifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89548780"
 |**parent_id**|**int**|父对象的非零 ID。<br /><br /> 0 = 父类是数据库。|  
 |create_date|**datetime**|创建日期。|  
 |modify_date|**datetime**|始终等于 **create_date**。|  
-|**service_name**|**nvarchar(256)**|向其发送通知的目标服务的名称。|  
+|service_name|**nvarchar(256)**|向其发送通知的目标服务的名称。|  
 |**broker_instance**|**nvarchar(128)**|向其发送通知的 Broker 实例。|  
 |principal_id|**int**|拥有此事件通知的数据库主体的 ID。|  
 |**creator_sid**|**varbinary(85)**|创建事件通知的登录的 SID。<br /><br /> 如果未指定 FAN_IN 选项，则为 NULL。|  

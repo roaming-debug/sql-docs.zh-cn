@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_cluster_members (Transact-SQL)
-title: sys. dm_hadr_cluster_members (Transact-sql) |Microsoft Docs
+title: sys.dm_hadr_cluster_members (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2019
 ms.prod: sql
@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c7e182c4b8efb2ecc882c0e81bb1c1863b310a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d7c9f7b1145eec5d9c0c7f3644f18e8de7739b11
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546565"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468458"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  如果承载启用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 本地实例的 WSFC 节点具有 SQL 仲裁，则为构成仲裁的每一个成员及各个成员的状态都返回一行。 这包括群集中的所有节点 (通过 **Clusterenum** 函数 CLUSTER_ENUM_NODE 类型返回，) 和磁盘或文件共享见证（如果有）。 为给定成员返回的行包含有关该成员状态的信息。 例如，对于具有多数节点仲裁（其中一个节点处于关闭状态）的五个节点群集**sys.dm_hadr_cluster_members** ，当从为 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 驻留在具有**dm_hadr_cluster_members**仲裁的节点上的节点上启用的服务器实例（即 "NODE_DOWN"）中查询 "sys. dm_hadr_cluster_members 时。  
+  如果承载启用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 本地实例的 WSFC 节点具有 SQL 仲裁，则为构成仲裁的每一个成员及各个成员的状态都返回一行。 这包括群集中的所有节点 (通过 **Clusterenum** 函数 CLUSTER_ENUM_NODE 类型返回，) 和磁盘或文件共享见证（如果有）。 为给定成员返回的行包含有关该成员状态的信息。 例如，对于具有 "多数节点仲裁" 节点处于关闭状态的五个节点群集，当从为驻留在具有仲裁的节点上的启用的服务器实例中查询 **sys.dm_hadr_cluster_members** 时 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ， **sys.dm_hadr_cluster_members** 会将向下节点的状态反映为 "NODE_DOWN"。  
   
  如果 WSFC 节点没有仲裁，则不会返回任何行。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "89546565"
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|成员名称，可以是一个计算机名称、驱动器号或文件共享路径。|  
 |**member_type**|**tinyint**|成员的类型，可为下列值之一：<br /><br /> 0 = WSFC 节点<br /><br /> 1 = 磁盘见证服务器<br /><br /> 2 = 文件共享见证服务器<br /><br /> 3 = 云见证|  
-|**member_type_desc**|**nvarchar(50)**|**Member_type**的说明，请执行以下操作之一：<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
+|**member_type_desc**|**nvarchar(50)**|**Member_type** 的说明，请执行以下操作之一：<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|成员状态，可为下列值之一：<br /><br /> 0 = 脱机<br /><br /> 1 = 联机|  
-|**member_state_desc**|**nvarchar(60)**|**Member_state**的说明，请执行以下操作之一：<br /><br /> UP<br /><br /> DOWN|  
+|**member_state_desc**|**nvarchar(60)**|**Member_state** 的说明，请执行以下操作之一：<br /><br /> UP<br /><br /> DOWN|  
 |**number_of_quorum_votes**|**tinyint**|此仲裁成员拥有的仲裁票数。 对于“无大多数: 仅限磁盘”仲裁，此值默认为 0。 对于其他仲裁类型，此值默认为 1。|  
   
 ## <a name="permissions"></a>权限  

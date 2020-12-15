@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 141eca7a03b2bb6339712a2b9a1aa459b0c09ada
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 44ec790c3a372bfd2dae8f22cbdc6f50608c9426
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868448"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465048"
 ---
 # <a name="sqltables"></a>SQLTables
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91868448"
   
  为了报告可用的目录、架构和表类型，SQLTables)  (长度为零的字节指针的空字符串。 空字符串不是默认值（NULL 指针）。  
   
- 通过接受由两部分组成的*CatalogName*参数的名称： *Linked_Server_Name*，> Native Client ODBC 驱动程序支持链接服务器上的表的报告信息。  
+ 通过接受由两部分组成的 *CatalogName* 参数的名称： *Linked_Server_Name*，> Native Client ODBC 驱动程序支持链接服务器上的表的报告信息。  
   
  SQLTables 返回其名称与 *TableName* 匹配并且由当前用户拥有的所有表的相关信息。  
   

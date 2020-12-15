@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf5fff49104658af4cf5a5102e538200d0393a1f
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9988a7d10342711a0a648496ed65dc6a84398278
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325912"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468428"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "97325912"
 |**pages_in_bytes**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 此内存对象实例分配的内存量（以字节为单位）。 不可为 null。|  
 |**creation_options**|**int**|仅限内部使用。 可以为 Null。|  
 |**bytes_used**|**bigint**|仅限内部使用。 可以为 Null。|  
-|type|**nvarchar(60)**|内存对象的类型。<br /><br /> 它指示该内存对象所属的特定组件，或指示内存对象的函数。 可以为 Null。|  
-|name|**varchar(128)**|仅限内部使用。 可以为 NULL。|  
+|**type**|**nvarchar(60)**|内存对象的类型。<br /><br /> 它指示该内存对象所属的特定组件，或指示内存对象的函数。 可以为 Null。|  
+|**name**|**varchar(128)**|仅限内部使用。 可以为 NULL。|  
 |**memory_node_id**|**smallint**|该内存对象所用的内存节点的 ID。 不可为 null。|  
 |**creation_time**|**datetime**|仅限内部使用。 可以为 Null。|  
 |**max_pages_allocated_count**|**int**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 由该内存对象分配的最大页数。 不可为 null。|  

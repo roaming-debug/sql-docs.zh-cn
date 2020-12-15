@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2c6e374061a847e168421b30971469ff60e4348
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ee91975b31d16845c56f27e872998809fb252838
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834082"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468388"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys.dm_os_host_info (Transact-sql) 
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "91834082"
 |**host_sku**|**int**|Windows 单品 (SKU) ID。 有关 SKU Id 和说明的列表，请参阅 [GetProductInfo 函数](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo)。 可以为 Null。 <br> 对于 Linux，返回 NULL。 |  
 |**os_language_version**|**int**|操作系统的 Windows 区域设置标识符 (LCID)。 有关 LCID 值和说明的列表，请参阅 [Microsoft 分配的区域设置 id](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)。 不能为 null。|  
 
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 此视图类似于 [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)，添加了用于区分 Windows 和 Linux 的列。
   
 ## <a name="security"></a>安全性  

@@ -1,5 +1,5 @@
 ---
-title: 客户端和服务器端 XML （SQLXML）的体系结构
+title: 客户端和服务器端 XML (SQLXML) 的体系结构
 description: 了解 SQLXML 4.0 中客户端和服务器端 XML 格式的体系结构。
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0782982f3e50288506b864e34205b15f0f052a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 599efd933243c2e5bac13f825ef8a8315c7481cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725838"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467068"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>客户端和服务器端 XML 格式的体系结构 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85725838"
   
  ![客户端 XML 格式的体系结构。](../../../relational-databases/sqlxml/formatting/media/clientsidexml.gif "客户端 XML 格式的体系结构。")  
   
- 在该示例中，客户端使用 SQLXMLOLEDB 访问接口。 在连接字符串中，数据访问接口属性必须设置为 SQLOLEDB。 （这是 SQLXML 4.0 中唯一接受的值。）在客户端上执行的命令将发送到服务器。 在服务器上生成的行集则发送到客户端。 由行集转换至 XML 文档的格式设置操作将在客户端上执行。  
+ 在该示例中，客户端使用 SQLXMLOLEDB 访问接口。 在连接字符串中，数据访问接口属性必须设置为 SQLOLEDB。  (这是 SQLXML 4.0 中唯一接受的值。 ) 在客户端上执行的命令将发送到服务器。 在服务器上生成的行集则发送到客户端。 由行集转换至 XML 文档的格式设置操作将在客户端上执行。  
   
  在 SQLXML 4.0 中，可以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) 或 SQLOLEDB 访问接口用作数据访问接口。 您应当可以访问任何数据源。 只要查询返回单个行集，就可以在客户端应用 XML 转换。  
   

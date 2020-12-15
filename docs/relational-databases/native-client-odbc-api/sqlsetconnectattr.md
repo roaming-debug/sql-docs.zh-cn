@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03dd345e2b7fc3be27b9bd1c61f3d252d7afb229
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3b3c006da487774a8de01ccf9a9b8cd12d9ca15f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867809"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465118"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -75,7 +75,7 @@ ms.locfileid: "91867809"
 |SQL_COPT_SS_USER_DATA|任一个|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|以前|  
   
- 对同一个会话、数据库或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 状态使用一个预连接属性和等同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令可能会产生意外行为。 例如，  
+ 对同一个会话、数据库或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 状态使用一个预连接属性和等同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令可能会产生意外行为。 例如，应用于对象的  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -133,7 +133,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssbrowseserver"></a>
 ## <a name="sql_copt_ss_browse_server"></a>SQL_COPT_SS_BROWSE_SERVER  
- 此属性用于自定义 **SQLBrowseConnect**返回的结果集。 SQL_COPT_SS_BROWSE_SERVER 指定 **SQLBrowseConnect** 为其返回信息的服务器名称。  
+ 此属性用于自定义 **SQLBrowseConnect** 返回的结果集。 SQL_COPT_SS_BROWSE_SERVER 指定 **SQLBrowseConnect** 为其返回信息的服务器名称。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -265,7 +265,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
 <a name="sqlcoptssperfquerylog"></a>
 ## <a name="sql_copt_ss_perf_query_log"></a>SQL_COPT_SS_PERF_QUERY_LOG  
- SQL_COPT_SS_PERF_QUERY_LOG 分配用于记录长时间运行的查询数据的日志文件名称。 该日志文件名是 ANSI 或 Unicode 以 Null 值结束的字符串（取决于应用程序编译）。 *StringLength*参数应为 SQL_NTS 或字符串的长度（以字节为单位）。  
+ SQL_COPT_SS_PERF_QUERY_LOG 分配用于记录长时间运行的查询数据的日志文件名称。 该日志文件名是 ANSI 或 Unicode 以 Null 值结束的字符串（取决于应用程序编译）。 *StringLength* 参数应为 SQL_NTS 或字符串的长度（以字节为单位）。  
 
 <a name="sqlcoptsspreservecursors"></a>
 ## <a name="sql_copt_ss_preserve_cursors"></a>SQL_COPT_SS_PRESERVE_CURSORS  
@@ -273,8 +273,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
 |值|说明|  
 |-----------|-----------------|  
-|SQL_PC_OFF|默认。 使用 **SQLEndTran**提交或回滚事务时将关闭游标。|  
-|SQL_PC_ON|当使用 **SQLEndTran**提交或回滚事务时，游标不会关闭，除非在异步模式下使用静态或键集游标。 如果在发出回滚命令时未完成游标的填充，则关闭游标。|  
+|SQL_PC_OFF|默认。 使用 **SQLEndTran** 提交或回滚事务时将关闭游标。|  
+|SQL_PC_ON|当使用 **SQLEndTran** 提交或回滚事务时，游标不会关闭，除非在异步模式下使用静态或键集游标。 如果在发出回滚命令时未完成游标的填充，则关闭游标。|  
 
 <a name="sqlcoptssquotedident"></a>
 ## <a name="sql_copt_ss_quoted_ident"></a>SQL_COPT_SS_QUOTED_IDENT  
@@ -287,7 +287,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
 <a name="sqlcoptsstranslate"></a>
 ## <a name="sql_copt_ss_translate"></a>SQL_COPT_SS_TRANSLATE  
- SQL_COPT_SS_TRANSLATE 导致在交换 MBCS 数据时驱动程序在客户端和服务器代码页之间进行字符转换。 此属性仅影响存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char**、 **varchar**和**text**列中的数据。  
+ SQL_COPT_SS_TRANSLATE 导致在交换 MBCS 数据时驱动程序在客户端和服务器代码页之间进行字符转换。 此属性仅影响存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char**、 **varchar** 和 **text** 列中的数据。  
   
 |值|说明|  
 |-----------|-----------------|  

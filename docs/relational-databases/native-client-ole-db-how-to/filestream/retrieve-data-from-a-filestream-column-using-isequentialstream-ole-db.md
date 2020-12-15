@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a2eb8976fe40c1f24861d511c8afc636566dcda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 61e4f3d542fe91512159ea3fbc1ae5c152ed59ad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455710"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469398"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-in-sql-server-native-client-ole-db"></a>使用 SQL Server Native Client (OLE DB 中的 ISequentialStream 从 FILESTREAM 列检索数据) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 318e6d9a9b830b2e4e61bde835b6e1b02d2acdae
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c081f415ad651ac48d033f298dd8f50064f3b982
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867137"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467668"
 ---
 # <a name="ssvariant-structure-in-sql-server-native-client"></a>SQL Server Native Client 中的 SSVARIANT 结构
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,8 +74,8 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|支持 time  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> tTime2Val  (DBTIME2  )<br /><br /> bScale  (BYTE  ) 指定 tTime2Val  值的小数位数。|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|支持 datetime2  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> tsDataTimeVal  (DBTIMESTAMP)<br /><br /> bScale  (BYTE  ) 指定 tsDataTimeVal  值的小数位数。|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|支持 datetimeoffset  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> tsoDateTimeOffsetVal  (DBTIMESTAMPOFFSET  )<br /><br /> bScale  (BYTE  ) 指定 tsoDateTimeOffsetVal  值的小数位数。|  
-|NCharVal|没有对应的 OLE DB 类型指示器。|**struct _NCharVal**|**VT_SS_WVARSTRING、**<br /><br /> **VT_SS_WSTRING**|支持 nchar  和 nvarchar  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> sActualLength  (SHORT  ) 指定 pwchNCharVal  指向的字符串的实际长度。 不包括尾零。<br /><br /> sMaxLength  (SHORT  ) 指定 pwchNCharVal  指向的字符串的最大长度。<br /><br /> 指向字符串的 pwchNCharVal  (WCHAR  \*) 指针。<br /><br /> 不使用的成员：rgbReserved**、dwReserved** 和 pwchReserved**。|  
-|CharVal|没有对应的 OLE DB 类型指示器。|**struct _CharVal**|**VT_SS_STRING、**<br /><br /> **VT_SS_VARSTRING**|支持 char 和 varchar[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> sActualLength (SHORT) 指定 pchCharVal 指向的字符串的实际长度。 不包括尾零。<br /><br /> sMaxLength (SHORT) 指定 pchCharVal 指向的字符串的最大长度。<br /><br /> 指向字符串的 pchCharVal (CHAR \*) 指针。<br /><br /> 不使用的成员：<br /><br /> rgbReserved**、dwReserved** 和 pwchReserved**。|  
+|NCharVal|没有对应的 OLE DB 类型指示器。|**struct _NCharVal**|**VT_SS_WVARSTRING、**<br /><br /> **VT_SS_WSTRING**|支持 nchar  和 nvarchar  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> sActualLength  (SHORT  ) 指定 pwchNCharVal  指向的字符串的实际长度。 不包括尾零。<br /><br /> sMaxLength  (SHORT  ) 指定 pwchNCharVal  指向的字符串的最大长度。<br /><br /> 指向字符串的 pwchNCharVal  (WCHAR  \*) 指针。<br /><br /> 不使用的成员：rgbReserved、dwReserved 和 pwchReserved。|  
+|CharVal|没有对应的 OLE DB 类型指示器。|**struct _CharVal**|**VT_SS_STRING、**<br /><br /> **VT_SS_VARSTRING**|支持 char 和 varchar[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> sActualLength (SHORT) 指定 pchCharVal 指向的字符串的实际长度。 不包括尾零。<br /><br /> sMaxLength (SHORT) 指定 pchCharVal 指向的字符串的最大长度。<br /><br /> 指向字符串的 pchCharVal (CHAR \*) 指针。<br /><br /> 不使用的成员：<br /><br /> rgbReserved、dwReserved 和 pwchReserved。|  
 |BinaryVal|没有对应的 OLE DB 类型指示器。|**struct _BinaryVal**|**VT_SS_VARBINARY、**<br /><br /> **VT_SS_BINARY**|支持 binary 和 varbinary[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> sActualLength (SHORT) 指定 prgbBinaryVal 指向的数据的实际长度。<br /><br /> sMaxLength (SHORT) 指定 prgbBinaryVal 指向的数据的最大长度。<br /><br /> 指向二进制数据的 prgbBinaryVal (BYTE \*) 指针。<br /><br /> 不使用的成员：dwReserved。|  
 |UnknownType|不使用|不使用|不使用|不使用|  
 |BLOBType|不使用|不使用|不使用|不使用|  

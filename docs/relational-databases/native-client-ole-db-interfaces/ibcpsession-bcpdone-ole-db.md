@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4cb691b8271e0903fb31253b3ab6cbcdc7007ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5110fb766973c4279670b88879f40ffa64db04fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448385"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464888"
 ---
 # <a name="ibcpsessionbcpdone-native-client-ole-db-provider"></a>IBCPSession：： BCPDone (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

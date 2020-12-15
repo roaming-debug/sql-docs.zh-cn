@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35bf38e3c6ac85fe27af595571785f8d34a6f0d4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b06ee1588fe46b04348d2e9595eb72206f7b57d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646487"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466818"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-sql) 
 
@@ -41,14 +41,14 @@ sp_describe_parameter_encryption
 [ ;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ \@ tsql =] ' SQL_batch '  
- 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 SQL_batch 可以是 nvarchar (n) 或 nvarchar (max) 。  
+ 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 Transact-SQL_batch 可以为 nvarchar (n) 或 nvarchar (max) 。  
   
  [ \@ params =] N'parameters '  
- * \@ Params*为 transact-sql 批处理的参数提供声明字符串，这与 sp_executesql 类似。 参数可以为 nvarchar (n) 或 nvarchar (max) 。  
+ *\@ Params* 为 transact-sql 批处理的参数提供声明字符串，这与 sp_executesql 类似。 参数可以为 nvarchar (n) 或 nvarchar (max) 。  
   
- 一个字符串，其中包含已嵌入到 _batch 中的所有参数的定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n* 是表示附加参数定义的占位符。 语句中指定的每个参数都必须在* \@ params*中定义。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中的语句或批处理不包含参数，则无* \@ *需参数。 该参数的默认值为 NULL。  
+ 一个字符串，其中包含已嵌入到 _batch 中的所有参数的定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n* 是表示附加参数定义的占位符。 语句中指定的每个参数都必须在 *\@ params* 中定义。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中的语句或批处理不包含参数，则无 *\@* 需参数。 该参数的默认值为 NULL。  
   
 ## <a name="return-value"></a>返回值  
  0表示成功。 任何其他表示失败。  
@@ -66,9 +66,9 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|结果集中的行的 Id。|  
 |database_id|**int**|数据库 id。|  
-|**column_encryption_key_id**|**int**|列加密密钥 id。注意：此 id 在 [sys. column_encryption_keys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 目录视图中表示一行。|  
-|**column_encryption_key_version**|**int**|保留供将来使用。 当前，始终包含1。|  
-|**column_encryption_key_metadata_version**|**二进制 (8) **|表示列加密密钥的创建时间的时间戳。|  
+|**column_encryption_key_id**|**int**|列加密密钥 id。注意：此 id 在 [sys.column_encryption_keys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 目录视图中表示一行。|  
+|**column_encryption_key_version**|**int**|留待将来使用。 当前，始终包含1。|  
+|**column_encryption_key_metadata_version**|**二进制 (8)**|表示列加密密钥的创建时间的时间戳。|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|列加密密钥的加密值。|  
 |**column_master_key_store_provider_name**|**sysname**|包含列主密钥的密钥存储的提供程序的名称，该列用于生成列加密密钥的加密值。|  
 |**column_master_key_path**|**nvarchar(4000)**|列主密钥的密钥路径，该密钥用于生成列加密密钥的加密值。|  
@@ -79,14 +79,14 @@ sp_describe_parameter_encryption
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|结果集中行的 Id。|  
-|**parameter_name**|**sysname**|* \@ Params*参数中指定的其中一个参数的名称。|  
+|**parameter_name**|**sysname**|*\@ Params* 参数中指定的其中一个参数的名称。|  
 |**column_encryption_algorithm**|**tinyint**|指示为列配置的加密算法的代码，参数对应于。 当前支持的值为：2表示 **AEAD_AES_256_CBC_HMAC_SHA_256**。|  
 |**column_encryption_type**|**tinyint**|指示为列配置的加密类型的代码，参数对应于。 支持的值包括：<br /><br /> 0-不加密列 () 的纯文本<br /><br /> 1-随机加密<br /><br /> 2-确定性加密。|  
 |**column_encryption_key_ordinal**|**int**|第一个结果集中的行的代码。 引用的行描述为列配置的列加密密钥，参数对应于。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|类型规范化算法的版本号。|  
   
-## <a name="remarks"></a>注解  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持 Always Encrypted 的客户端驱动程序将自动调用**sp_describe_parameter_encryption**来检索由应用程序发出的参数化查询的加密元数据。 随后，驱动程序将使用加密元数据对与 Always Encrypted 保护的数据库列对应的参数值进行加密，并在将查询发送到数据库引擎之前，用加密参数值替换应用程序提交的纯文本参数值。  
+## <a name="remarks"></a>备注  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持 Always Encrypted 的客户端驱动程序将自动调用 **sp_describe_parameter_encryption** 来检索由应用程序发出的参数化查询的加密元数据。 随后，驱动程序将使用加密元数据对与 Always Encrypted 保护的数据库列对应的参数值进行加密，并在将查询发送到数据库引擎之前，用加密参数值替换应用程序提交的纯文本参数值。  
   
 ## <a name="permissions"></a>权限  
  需要 **查看任意列加密密钥定义** ，并查看数据库中的 **任何列主密钥定义** 权限。  
@@ -157,7 +157,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|\@c1|1|1|  
+|1|\@低耗|1|1|  
   
   (结果继续。 )   
   

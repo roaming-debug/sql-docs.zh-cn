@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 462c857e6067e6431248e86edb72d007e56d84e7
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2145297325aa71aad6a235e93254bbc2857d8afc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734608"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468288"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -42,9 +42,9 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @key =] N'key '  
- 要设置的键，类型为 **sysname** 。 最大密钥大小为128个字节。  
+ 要设置的键，类型为 **sysname**。 最大密钥大小为128个字节。  
   
  [ @value =] "value"  
  **Sql_variant** 类型的指定键的值。 如果将值设置为 NULL，则释放内存。 最大大小为 8,000 个字节。  
@@ -55,7 +55,7 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ## <a name="permissions"></a>权限  
  任何用户都可以为其会话设置会话上下文。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  与其他存储过程一样， (不) 表达式或函数调用的文本和变量也可以作为参数传递。  
   
  会话上下文的总大小限制为 1 MB。 如果设置的值导致超过此限制，则语句将失败。 可以监视 [sys.dm_os_memory_objects &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)中的总体内存使用情况。  

@@ -1,6 +1,6 @@
 ---
 description: sys.time_zone_info (Transact-SQL)
-title: sys. time_zone_info (Transact-sql) |Microsoft Docs
+title: sys.time_zone_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2018
 ms.prod: sql
@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51f3fd600b3c2c78caf437e758ece03aa325d29a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d88603b0f7da691633f14211a14204bf14b32aac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544962"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466948"
 ---
 # <a name="systime_zone_info-transact-sql"></a>sys.time_zone_info (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89544962"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|采用 Windows 标准格式的时区的名称。 例如， **中部澳大利亚标准时间** 或 **中欧标准时间**。|  
-|**current_utc_offset**|**nvarchar (12) **|当前与 UTC 的偏移量。 例如， **+ 01:00** 或 **-07:00**。|  
+|**current_utc_offset**|**nvarchar (12)**|当前与 UTC 的偏移量。 例如， **+ 01:00** 或 **-07:00**。|  
 |**is_currently_dst**|**bit**|如果当前观察到夏令时，则为 True。|  
   
 ## <a name="see-also"></a>另请参阅  

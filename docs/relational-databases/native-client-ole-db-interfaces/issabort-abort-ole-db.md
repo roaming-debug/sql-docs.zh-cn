@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16e72e33c4ddd618ab9753cb13e1073d9defe365
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 276378972110515ef1ab397a9a494c50d5532970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081576"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469408"
 ---
 # <a name="issabortabort-native-client-ole-db-provider"></a>ISSAbort：： Abort (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   取消当前行集以及与当前命令关联的任何批处理命令。  
   
-在**ISSAbort** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序中公开的 ISSAbort 接口提供**ISSAbort：： Abort**方法，该方法用于取消当前行集以及使用最初生成了行集的命令进行批处理，并且尚未完成执行的任何命令。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序中公开的 ISSAbort 接口提供 **ISSAbort：： Abort** 方法，该方法用于取消当前行集以及使用最初生成了行集的命令进行批处理，并且尚未完成执行的任何命令。  
   
- **ISSAbort**是一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 种特定于 Native Client 提供程序的接口，可通过对**ICommand：： Execute**或**IOpenRowset：： OpenRowset**返回的**IMultipleResults**对象使用**QueryInterface** 。  
+ **ISSAbort** 是一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 种特定于 Native Client 提供程序的接口，可通过对 **ICommand：： Execute** 或 **IOpenRowset：： OpenRowset** 返回的 **IMultipleResults** 对象使用 **QueryInterface** 。  
   
 ## <a name="syntax"></a>语法  
   

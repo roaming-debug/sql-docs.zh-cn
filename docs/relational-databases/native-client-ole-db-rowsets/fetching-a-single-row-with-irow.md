@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e70f3aa9fc0faef9a6c80d5009818329dd7abcc
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 60fd6650b2f8c0ae3a43513848e145d14c0c546d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868719"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469288"
 ---
 # <a name="fetching-a-single-row-with-irow-native-client-ole-db-provider"></a>使用 IRow (Native Client OLE DB 提供程序提取单行) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

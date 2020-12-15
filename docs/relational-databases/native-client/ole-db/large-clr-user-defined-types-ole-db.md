@@ -1,5 +1,5 @@
 ---
-description: 'SQL Server Native Client (OLE DB 中的大型 CLR 用户定义类型) '
+description: 'SQL Server Native Client (OLE DB 中的大型 CLR User-Defined 类型) '
 title: 大型 CLR 用户定义类型 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5342dcab8dee628f074963a7ddc56a0ecc1d940
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 95552d965ab09f34c134ad82dd7d84966ee65fd6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328283"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467598"
 ---
-# <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB 中的大型 CLR 用户定义类型) 
+# <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB 中的大型 CLR User-Defined 类型) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 OLE DB 进行的更改。  
   
- 有关 Native Client 中对大型 CLR Udt 的支持的详细信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅 [大型 Clr 用户定义类型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 有关示例，请参阅[使用大型 CLR UDT (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
+ 有关 Native Client 中对大型 CLR Udt 的支持的详细信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅 [大型 Clr User-Defined 类型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 有关示例，请参阅[使用大型 CLR UDT (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
   
 ## <a name="data-format"></a>数据格式  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用 ~0 表示其大小对于大型对象 (LOB) 类型不受限制的值的长度。 ~0 还表示大于 8,000 个字节的 CLR UDT 的大小。  

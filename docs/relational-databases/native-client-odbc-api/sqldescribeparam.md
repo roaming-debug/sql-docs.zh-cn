@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20463fcf61f5d9842f4e5a84814970c57d4712f3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5352afc5b711cd0158a7119da367fe5659b78989
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809265"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465319"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "91809265"
 SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);  
 ```  
   
- 成功完成准备后执行 SQLDescribeParam 将返回连接到任何数据库但 **master**后的空行集。 如下所示的相同调用会导致 SQLDescribeParam 成功，而不考虑当前用户数据库：  
+ 成功完成准备后执行 SQLDescribeParam 将返回连接到任何数据库但 **master** 后的空行集。 如下所示的相同调用会导致 SQLDescribeParam 成功，而不考虑当前用户数据库：  
   
 ```  
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
@@ -76,7 +76,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 ## <a name="sqldescribeparam-support-for-enhanced-date-and-time-features"></a>SQLDescribeParam 对日期和时间增强功能的支持  
  日期/时间类型返回以下值：  
   
-| 属性 | *DataTypePtr* | *ParameterSizePtr* | *DecimalDigitsPtr* |  
+| Attribute | *DataTypePtr* | *ParameterSizePtr* | *DecimalDigitsPtr* |  
 | --------- | ------------- | ------------------ | ------------------ |  
 |datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
@@ -88,7 +88,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  有关详细信息，请参阅 [ODBC&#41;&#40;日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqldescribeparam-support-for-large-clr-udts"></a>SQLDescribeParam 对大型 CLR UDT 的支持  
- **SQLDescribeParam** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [&#40;ODBC&#41;的大型 CLR 用户定义类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLDescribeParam** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [ODBC&#41;&#40;的大型 CLR User-Defined 类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLDescribeParam 函数](../../odbc/reference/syntax/sqldescribeparam-function.md)   

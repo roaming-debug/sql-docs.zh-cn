@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f2e03e32842a9187761c0f4471d871277682005
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b887b79a2e768f3c73a683ae6f60b06fb8d16a2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067509"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466828"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,11 +52,11 @@ sp_spaceused [[ @objname = ] 'objname' ]
    
  请求其空间使用信息的表、索引视图或队列的限定或非限定名称。 仅当指定限定对象名称时，才需要使用引号。 如果提供完全限定对象名称（包括数据库名称），则数据库名称必须是当前数据库的名称。  
 如果未指定 *objname* ，则返回整个数据库的结果。  
-*objname* 是 **nvarchar (776)** ，默认值为 NULL。  
+*objname* 是 **nvarchar (776)**，默认值为 NULL。  
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 仅支持数据库对象和表对象。
   
-`[ @updateusage = ] 'updateusage'` 指示应运行 DBCC UPDATEUSAGE 以更新空间使用情况信息。 如果未指定 *objname* ，则对整个数据库运行语句;否则，语句将在 *objname* 上运行。 值可以为 **true** 或 **false** 。 *updateusage* 是 **varchar (5)** ，默认值为 **false** 。  
+`[ @updateusage = ] 'updateusage'` 指示应运行 DBCC UPDATEUSAGE 以更新空间使用情况信息。 如果未指定 *objname* ，则对整个数据库运行语句;否则，语句将在 *objname* 上运行。 值可以为 **true** 或 **false**。 *updateusage* 是 **varchar (5)**，默认值为 **false**。  
   
 `[ @mode = ] 'mode'` 指示结果的范围。 对于延伸的表或数据库，可以使用 *mode* 参数包括或排除对象的远程部分。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
@@ -68,7 +68,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |LOCAL_ONLY|返回仅对象或数据库的本地部分的存储统计信息。 如果对象或数据库未启用 Stretch，则返回与 = ALL 相同的统计信息 @mode 。|  
 |REMOTE_ONLY|返回仅对象或数据库的远程部分的存储统计信息。 如果满足以下条件之一，则此选项将引发错误：<br /><br /> 该表未启用延伸。<br /><br /> 表已启用延伸，但你从未启用数据迁移。 在这种情况下，远程表还没有架构。<br /><br /> 用户已手动删除远程表。<br /><br /> 设置远程数据存档返回了成功状态，但实际上它失败了。|  
   
- *模式* 为 **varchar (11)** ，默认值为 **N'ALL '** 。  
+ *模式* 为 **varchar (11)**，默认值为 **N'ALL '**。  
   
 `[ @oneresultset = ] oneresultset` 指示是否返回单个结果集。 *Oneresultset* 参数可具有以下值：  
   
@@ -77,7 +77,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |0|当 *\@ objname* 为 null 或未指定时，将返回两个结果集。 默认行为是两个结果集。|  
 |1|如果 *\@ objname* = null 或未指定，则返回单个结果集。|  
   
- *oneresultset* 的值为 **bit** ，默认值为 **0** 。  
+ *oneresultset* 的值为 **bit**，默认值为 **0**。  
 
 `[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **适用于：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 、 [!INCLUDE[sssds-md](../../includes/sssds-md.md)] 。  
@@ -101,7 +101,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**保护**|**varchar (18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar (18)**|数据使用的空间总量。|  
 |**index_size**|**varchar (18)**|索引使用的空间总量。|  
-|**用**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|  
+|**unused**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|  
   
  如果省略 *objname* 并且 *oneresultset* 的值为1，则返回以下单个结果集以提供当前数据库大小信息。  
   
@@ -113,7 +113,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**保护**|**varchar (18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar (18)**|数据使用的空间总量。|  
 |**index_size**|**varchar (18)**|索引使用的空间总量。|  
-|**用**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|  
+|**unused**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|  
   
  如果指定了 *objname* ，则将为指定的对象返回下面的结果集。  
   
@@ -124,7 +124,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**保护**|**varchar (18)**|*Objname* 的保留空间总量。|  
 |**data**|**varchar (18)**|*Objname* 中的数据所用的空间总量。|  
 |**index_size**|**varchar (18)**|*Objname* 中的索引使用的空间总量。|  
-|**用**|**varchar (18)**|为 *objname* 保留但尚未使用的空间总量。|  
+|**unused**|**varchar (18)**|为 *objname* 保留但尚未使用的空间总量。|  
  
 如果未指定任何参数，则这是默认模式。 将返回以下结果集，其中详细说明了磁盘上的数据库大小信息。 
 
@@ -141,7 +141,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**保护**|**varchar (18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar (18)**|数据使用的空间总量。|  
 |**index_size**|**varchar (18)**|索引使用的空间总量。|  
-|**用**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|
+|**unused**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|
 
 **仅当** 数据库包含至少具有一个容器的 MEMORY_OPTIMIZED_DATA 文件组时，才返回下面的结果集： 
 
@@ -161,17 +161,17 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**保护**|**varchar (18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar (18)**|数据使用的空间总量。|  
 |**index_size**|**varchar (18)**|索引使用的空间总量。|  
-|**用**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|
-|**xtp_precreated**|**varchar (18)**|状态为预创建的检查点文件的总大小（KB）。 这将计入整个数据库中的未分配空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 *只有在 @include_total_xtp_storage = 1 时才包括此列* 。| 
-|**xtp_used**|**varchar (18)**|状态为 "构造"、"活动" 和 "合并目标" 的检查点文件的总大小（KB）。 这是内存优化表中的数据所用的磁盘空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 *只有在 @include_total_xtp_storage = 1 时才包括此列* 。| 
+|**unused**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|
+|**xtp_precreated**|**varchar (18)**|状态为预创建的检查点文件的总大小（KB）。 这将计入整个数据库中的未分配空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 *只有在 @include_total_xtp_storage = 1 时才包括此列*。| 
+|**xtp_used**|**varchar (18)**|状态为 "构造"、"活动" 和 "合并目标" 的检查点文件的总大小（KB）。 这是内存优化表中的数据所用的磁盘空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 *只有在 @include_total_xtp_storage = 1 时才包括此列*。| 
 |**xtp_pending_truncation**|**varchar (18)**|状态 WAITING_FOR_LOG_TRUNCATION 的检查点文件的总大小（KB）。 这是在发生日志截断后用于等待清理的检查点文件的磁盘空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 只有此列包含在内 `@include_total_xtp_storage=1` 。|
 
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **database_size** 通常大于 **保留**  +  **未分配空间** 的总和，因为它包括日志文件的大小，但 **保留** 和 **unallocated_space** 只考虑数据页。 在某些情况下，Azure Synapse Analytics 不能为 true。 
   
  XML 索引和全文索引使用的页包括在两个结果集的 **index_size** 中。 当指定 *objname* 时，对象的 XML 索引和全文索引的页也将计入总 **保留** 和 **index_size** 结果中。  
   
- 如果为数据库或具有空间索引的对象计算空间使用量，则空间大小列（如 **database_size** 、 **保留** 和 **index_size** ）包括空间索引的大小。  
+ 如果为数据库或具有空间索引的对象计算空间使用量，则空间大小列（如 **database_size**、 **保留** 和 **index_size**）包括空间索引的大小。  
   
  指定 *updateusage* 时，会 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 扫描数据库中的数据页，并对每个表使用的存储空间的 **sys.allocation_units** 和 **sys.databases** 目录视图进行任何所需的更正。 在某些情况下（例如删除索引后、表的空间信息不是当前信息时），需要执行该操作。 *updateusage* 可能需要一些时间才能在大型表或数据库上运行。 仅当您怀疑返回了不正确的值，并且该进程不会对数据库中的其他用户或进程产生不利影响时，才使用 *updateusage* 。 如果首选该进程，则可以单独运行 DBCC UPDATEUSAGE。  
   
