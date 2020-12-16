@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5d778526336ce26a4cfb7932971a1be275a5dda
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f06fbda4382042ffa51afa0eaa14eb18175874f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505111"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483098"
 ---
 # <a name="open-view-and-print-a-deadlock-file-in-sql-server-management-studio-ssms"></a>在 SQL Server Management Studio (SSMS) 中打开、查看和打印死锁文件
 

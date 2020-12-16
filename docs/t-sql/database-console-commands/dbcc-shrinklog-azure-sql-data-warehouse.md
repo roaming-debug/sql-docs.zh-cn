@@ -11,13 +11,13 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d6830452d32de9a1b3ca954cbaf94d7d883f1b5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 58bda1e035c25ae373fef14bfb574a6f2c139835
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038343"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480418"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG（并行数据仓库）
 

@@ -24,13 +24,13 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77e6331623da6672b0b39ec7ca432201cd9a482b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ac09b96cf93144ebf2b615bbd73db36c673eb5ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404133"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479458"
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "88404133"
   
 ##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 全文索引支持以下填充类型：
--   **完全**填充
--   基于**更改跟踪**的自动或手动填充
--   基于**时间戳**的增量填充
+-   **完全** 填充
+-   基于 **更改跟踪** 的自动或手动填充
+-   基于 **时间戳** 的增量填充
   
 ## <a name="full-population"></a>完全填充  
  在完全填充期间，为表或索引视图的所有行生成索引条目。 全文索引的完全填充为基表或索引视图的所有行生成索引条目。  
@@ -191,21 +191,21 @@ ALTER FULLTEXT INDEX ON Production.Document
 
      选项如下：  
   
-    -   若要**创建**新计划，请单击“新建”。  
+    -   若要 **创建** 新计划，请单击“新建”。  
   
         此时将打开“新建全文索引表计划”对话框，你可以在此对话框中创建计划。 若要保存计划，请单击 **“确定”** 。  
   
         > [!IMPORTANT]  
         >  在退出“全文索引属性”对话框之后，SQL Server 代理作业（对 *database_name*.*table_name* 启动表增量填充）将与新计划相关联。 如果你针对同一全文索引创建多个计划，这些计划都将使用同一作业。  
   
-    -   若要**更改**现有的计划，选择该计划，然后单击“编辑”。  
+    -   若要 **更改** 现有的计划，选择该计划，然后单击“编辑”。  
   
          此时将打开“新建全文索引表计划” 对话框，你可以在此对话框中修改计划。  
   
         > [!NOTE]  
         >  有关修改 SQL Server 代理作业的信息，请参阅[修改作业](../../ssms/agent/modify-a-job.md)。  
   
-    -   若要**删除**现有的计划，选择该计划，然后单击“删除”。  
+    -   若要 **删除** 现有的计划，选择该计划，然后单击“删除”。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 

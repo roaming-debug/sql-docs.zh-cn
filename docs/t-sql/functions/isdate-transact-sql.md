@@ -31,13 +31,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 898fd741dfdcb2a4ababb855a33eaee856a2dd4e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ffb074adf1c9af9ac48fad0f0762349190a5c254
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115461"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480458"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 

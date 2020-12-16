@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c58e0a2ab7f8bb93992278580d57a529bfd45e7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2542afce50f14c9b107f4bc8c70ea649ff65d422
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330533"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478288"
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

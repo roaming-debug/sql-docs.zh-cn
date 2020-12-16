@@ -15,13 +15,13 @@ ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4166cdf974ed1f7b5b5d9033f4bc9bdb6e60ef52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ffb6aefd828d9e329df6b624669f7d025d6044f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420401"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479518"
 ---
 # <a name="get-started-with-full-text-search"></a>全文搜索入门
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

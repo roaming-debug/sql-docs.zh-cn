@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
-monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 82a558d445d93e007b9402425426815922c7043b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest
+ms.openlocfilehash: 38deaa198679545b3b67a9d93e9a01b12851abd0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115591"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480498"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -55,7 +55,7 @@ DBCC SHRINKDATABASE
 ```  
 
 ```syntaxsql
--- Azure Synapse Analytics (formerly SQL DW)
+-- Azure Synapse Analytics
 
 DBCC SHRINKDATABASE   
 ( database_name   

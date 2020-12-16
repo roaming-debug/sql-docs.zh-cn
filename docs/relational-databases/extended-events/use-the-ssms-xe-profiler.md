@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 97cad6d2dae1b9ce6e4b97eae221c810cded10d4
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: b9e3eb84b5712866e7aabe165639c766869af512
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868750"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481298"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>使用 SSMS XEvent 探查器
 

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 366cab7b22913a45085d358607e3e6d656a4728f
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fa133ba96ee9f77537216bd1a8ef2445abd94016
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88494270"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481408"
 ---
 # <a name="query-notifications-event-category"></a>Query Notifications 事件类别
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

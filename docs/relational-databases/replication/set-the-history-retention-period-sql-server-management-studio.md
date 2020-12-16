@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bc04a0b78c93666b4213acea3a1f59af5dc5b5fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 5bf353b2e8fae3277a9377c2e4703a4340411a2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767654"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479668"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>设置历史记录保持期 (SQL Server Management Studio)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

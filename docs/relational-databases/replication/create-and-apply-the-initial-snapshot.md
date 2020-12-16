@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 40b77254e3c9dfd6640d1649b1e2236a34cd644d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: e297a985ef1a6ffb0eb3c407f089cbd9a360c42b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868291"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479988"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91868291"
 -   在计划时间。 在新建发布向导的 **“快照代理”** 页面上指定计划时间，或者在使用存储过程或复制管理对象 (RMO) 时指定计划时间。    
 -   手动。 从命令提示或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]运行快照代理。 有关运行代理的详细信息，请参阅[复制代理可执行文件概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)或[启动和停止复制代理 (SQL Server Management Studio)](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。  
   
-对于合并复制，每当运行快照代理时都会生成快照。 对于事务复制，是否生成快照取决于发布属性 **immediate_sync**的设置。 如果该属性设置为 TRUE（使用新建发布向导时的默认设置），则每当运行快照代理时都会生成快照，而且可以随时将其应用到订阅服务器。 如果该属性设置为 FALSE（使用 **sp_addpublication**时的默认设置），则仅当自上次快照代理运行以来添加了新订阅时，才会生成快照；订阅服务器必须等待快照代理完成，才能实现同步。  
+对于合并复制，每当运行快照代理时都会生成快照。 对于事务复制，是否生成快照取决于发布属性 **immediate_sync** 的设置。 如果该属性设置为 TRUE（使用新建发布向导时的默认设置），则每当运行快照代理时都会生成快照，而且可以随时将其应用到订阅服务器。 如果该属性设置为 FALSE（使用 **sp_addpublication** 时的默认设置），则仅当自上次快照代理运行以来添加了新订阅时，才会生成快照；订阅服务器必须等待快照代理完成，才能实现同步。  
   
 默认情况下，快照生成后，它们将保存在位于分发服务器上的默认快照文件夹中。 还可以将快照文件保存在可移动介质（例如可移动磁盘、CD-ROM）上，或者保存在默认快照文件夹以外的位置。 另外，可以压缩文件，以便它们更容易存储和传输以及在订阅服务器上应用快照前后执行脚本。 有关这些选项的详细信息，请参阅 [Snapshot Options](../../relational-databases/replication/snapshot-options.md)。  
   
@@ -186,7 +186,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法以启动为此发布生成快照的代理作业。  
   
-6.  （可选） <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 的值为 **true**时，订阅服务器具有快照。  
+6.  （可选） <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 的值为 **true** 时，订阅服务器具有快照。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>通过运行快照代理（同步）为快照发布或事务发布生成初始快照  
   
@@ -220,7 +220,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法以启动为此发布生成快照的代理作业。  
   
-6.  （可选） <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 的值为 **true**时，订阅服务器具有快照。  
+6.  （可选） <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 的值为 **true** 时，订阅服务器具有快照。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>通过运行快照代理（同步）为合并发布生成初始快照  
   

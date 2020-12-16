@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ec430a256e07cfee21a14bbe3fe97426b044b4fd
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8ebdef5d75c430ec5ba208613b72771939fdfc9b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636127"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481478"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>启用了外部脚本的服务器配置选项
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

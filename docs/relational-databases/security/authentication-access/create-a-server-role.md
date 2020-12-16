@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f90781fd5e293c4de5821fc89588b9b1e38ac0b
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5de0726185f6ba294c1527fbb709ba3f883b70d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479348"
 ---
 # <a name="create-a-server-role"></a>创建服务器角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85334263"
   
 -   要求具有 CREATE SERVER ROLE 权限，或者 sysadmin 固定服务器角色中的成员身份。  
   
--   还需要针对登录名的 *server_principal* 的 IMPERSONATE 权限、针对用作 *server_principal*的服务器角色的 ALTER 权限或用作 server_principal 的 Windows 组的成员身份。  
+-   还需要针对登录名的 *server_principal* 的 IMPERSONATE 权限、针对用作 *server_principal* 的服务器角色的 ALTER 权限或用作 server_principal 的 Windows 组的成员身份。  
   
 -   使用 AUTHORIZATION 选项分配服务器角色所有权时，还需要具有下列权限：  
   

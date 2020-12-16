@@ -12,13 +12,13 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d90234f6a433604e492e3824cd7585de2babfce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 90670f75be6e54b92309c460b315c77a3056008c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465022"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479508"
 ---
 # <a name="full-text-search"></a>全文搜索
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "88465022"
   
 -   **协议处理程序。** 此组件从内存中取出数据，以进行进一步的处理，并访问指定数据库的用户表中的数据。 其职责之一是从全文索引列中收集数据，并将所收集的数据传递给筛选器后台程序宿主，从而由该宿主根据需要应用筛选和断字符。  
   
--   **筛选器。** 某些数据类型需要筛选，然后才能为文档中的数据（包括 **varbinary**、 **varbinary(max)** 、 **image**或 **xml** 列中的数据）创建全文索引。 给定文档采用何种筛选器取决于文档类型。 例如，Microsoft Word (.doc) 文档、Microsoft Excel (.xls) 文档和 XML (.xml) 文档分别使用不同的筛选器。 然后，筛选器从文档中提取文本块区，删除嵌入的格式并保留文本，如有可能的话也会保留有关文本位置的信息。 结果将以文本化信息流的形式出现。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
+-   **筛选器。** 某些数据类型需要筛选，然后才能为文档中的数据（包括 **varbinary**、 **varbinary(max)** 、 **image** 或 **xml** 列中的数据）创建全文索引。 给定文档采用何种筛选器取决于文档类型。 例如，Microsoft Word (.doc) 文档、Microsoft Excel (.xls) 文档和 XML (.xml) 文档分别使用不同的筛选器。 然后，筛选器从文档中提取文本块区，删除嵌入的格式并保留文本，如有可能的话也会保留有关文本位置的信息。 结果将以文本化信息流的形式出现。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
   
 -   **断字符和词干分析器。** 断字符是特定于语言的组件，它根据给定语言的词汇规则查找词边界（“断字”）。 每个断字符都与用于组合动词及执行变形扩展的特定于语言的词干分析器组件相关联。 在创建索引时，筛选器后台程序宿主使用断字符和词干分析器来对给定表列中的文本数据执行语言分析。 与全文索引中的表列相关的语言将决定为列创建索引时要使用的断字符和词干分析器。 有关详细信息，请参阅 [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "88465022"
   
  对存储在 **varbinary(max)** 或 **image** 列中的数据编制索引时，筛选器（实现 **IFilter** 接口）将基于为该数据指定的文件格式（例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word）来提取文本。 在某些情况下，筛选器组件要求将 **varbinary(max)** 或 **image** 数据写入 filterdata 文件夹中，而不是将其存入内存。  
   
- 在处理过程中，通过断字符将收集到的文本数据分隔成各个单独的标记或关键字。 用于词汇切分的语言将在列级指定，或者也可以通过筛选器组件在 **varbinary(max)** 、 **image**或 **xml** 数据内标识。  
+ 在处理过程中，通过断字符将收集到的文本数据分隔成各个单独的标记或关键字。 用于词汇切分的语言将在列级指定，或者也可以通过筛选器组件在 **varbinary(max)** 、 **image** 或 **xml** 数据内标识。  
   
  还可能会进行其他处理以删除非索引字，并在将标记存储到全文索引或索引片断之前对其进行规范化。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "88465022"
   
  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始，全文索引与数据库引擎集成在一起，而不是像 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本那样位于文件系统中。 对于新数据库，全文目录现在为不属于任何文件组的虚拟对象；它仅是一个表示一组全文索引的逻辑概念。 然而，请注意，在升级 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库（即包含数据文件的任意全文目录）的过程中，将创建一个新文件组。有关详细信息，请参阅 [升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)。  
   
-每个表只允许有一个全文索引。 若要对某个表创建全文索引，该表必须具有一个唯一且非 Null 的列。 你可以在 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **text**、 **ntext**、 **image**、 **xml**、 **varbinary**类型的列上生成全文索引，并且可对 **varbinary(max)** 索引以进行全文搜索。 在数据类型为  **varbinary**、 **varbinary(max)** 、 **image**或 **xml** 的列上创建全文索引需要你指定类型列。 *类型列*是用来存储每行中文档的文件扩展名（.doc、.pdf、xls 等）的表列。  
+每个表只允许有一个全文索引。 若要对某个表创建全文索引，该表必须具有一个唯一且非 Null 的列。 你可以在 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **text**、 **ntext**、 **image**、 **xml**、 **varbinary** 类型的列上生成全文索引，并且可对 **varbinary(max)** 索引以进行全文搜索。 在数据类型为  **varbinary**、 **varbinary(max)** 、 **image** 或 **xml** 的列上创建全文索引需要你指定类型列。 *类型列* 是用来存储每行中文档的文件扩展名（.doc、.pdf、xls 等）的表列。  
 
 ###  <a name="full-text-index-structure"></a><a name="structure"></a> 全文索引结构  
  对全文索引的结构的良好了解将帮助您了解全文引擎的工作方式。 本主题使用 **中的** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 表的以下摘录部分作为示例表。 此摘录部分仅显示该表的两个列（ **DocumentID** 列和 **Title** 列）和三行。  
@@ -250,7 +250,7 @@ ms.locfileid: "88465022"
   
 -   **同义词库文件。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还会安装一个全局同义词库文件，并且还为每种全文语言安装一个同义词库文件。 安装的同义词库文件实际上是空的，不过可以编辑它们以便为特定语言或商业应用场景定义同义词。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。 有关详细信息，请参阅 [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   
--   **筛选器 (iFilter)。**  对 **varbinary(max)** 、 **image**或 **xml** 数据类型列中的文档进行索引时，需要使用筛选器来执行额外的处理工作。 此筛选器必须特定于文档类型（.doc、.pdf、.xls、.xml 等）。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
+-   **筛选器 (iFilter)。**  对 **varbinary(max)** 、 **image** 或 **xml** 数据类型列中的文档进行索引时，需要使用筛选器来执行额外的处理工作。 此筛选器必须特定于文档类型（.doc、.pdf、.xls、.xml 等）。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
   
  断字符（和词干分析器）以及筛选器在筛选器后台程序宿主进程 (fdhost.exe) 中运行。  
 

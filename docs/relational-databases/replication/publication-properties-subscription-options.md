@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: b30077fae17f88495c660cf5c7881270342b01cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88420491"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483038"
 ---
 # <a name="publication-properties-subscription-options"></a>发布属性，订阅选项
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

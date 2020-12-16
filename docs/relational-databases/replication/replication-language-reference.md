@@ -11,13 +11,13 @@ ms.topic: language-reference
 ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0e270d68e75ee48be6471a3eed5947a1dea2db0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: ceb506d79892695efa33eeeb25830133ac8f82c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88405343"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479798"
 ---
 # <a name="replication-language-reference"></a>复制语言参考
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cf573478ce602b15718a54cfb71b03b243d601b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0d61842473eb13af2ed3284aea6d7488e72d5f9e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867044"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481348"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 扩展事件包
 

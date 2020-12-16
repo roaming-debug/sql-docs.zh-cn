@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 526be3921fa6b842415f0fbd2c78e2fd66981253
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 2936d9c53f3dd99bcd112de3743107128da25fc2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475533"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479918"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot-for-a-new-publication"></a>使用新发布的快照初始化订阅
 

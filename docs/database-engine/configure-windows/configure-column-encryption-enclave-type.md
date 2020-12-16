@@ -10,13 +10,13 @@ ms.technology: configuration
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39ad6bdc8911a0596d619f6d6a68de07d733dd6f
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 45f6bdca2602a9a85cf9fc193269b445599c78ad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279410"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480328"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>配置 Always Encrypted 的 enclave 类型服务器配置选项
 

@@ -9,13 +9,13 @@ ms.technology: xevents
 ms.topic: reference
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e61edcb1f8c1dd9844d887818d208cde1615d5ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6a2d56121276e0a485d0f7a95f45c16c2a87d866
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756794"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481278"
 ---
 # <a name="system-objects-that-support-extended-events"></a>支持扩展事件的系统对象
 

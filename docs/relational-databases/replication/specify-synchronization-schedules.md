@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6dbdad85561116fb3dd6a3c003bb7bf9967c00b1
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 23011d3e0cbe952253c6f3601384d374b12daa3c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127804"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479718"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步计划
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

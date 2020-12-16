@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8620cbc1dce63d4c2e14949866329d34207f7fc9
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: a85d9f7753ef1ba44d9879ca9d884fc56a5b852d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96131002"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483088"
 ---
 # <a name="distributor-settings"></a>分发服务器设置
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

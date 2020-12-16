@@ -9,13 +9,13 @@ ms.technology: high-availability
 ms.topic: reference
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 99a600e29cf8b1f8bda8b093e9b51c572d86ad9b
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: cf0651a7b38027d420b9e56833a225ea258f71e0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584659"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480358"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>AlwaysOn 可用性组系统对象参考
 

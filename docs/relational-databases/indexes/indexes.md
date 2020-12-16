@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8487f821b698974744fdc18453a2a5c8285d889
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 082670e6e7c728bc9d91b538760676680d8fa354
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88408003"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481158"
 ---
 # <a name="indexes"></a>索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: 82c8807aef206867a8f50eed507e7a3a4cb48e59
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||>= aps-pdw-2016||= azure-sqldw-latest
+ms.openlocfilehash: 64d85762e97da9c282f1f36e65676354c68d210a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91379502"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480388"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

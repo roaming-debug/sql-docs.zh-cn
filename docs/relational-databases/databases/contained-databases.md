@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee26ff95b5317d65e71fbdb91e39a2d56e9f5f95
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cc6e5734edbf7203f98d1b7fc7a685e699aaa635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756346"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481428"
 ---
 # <a name="contained-databases"></a>包含的数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85756346"
  跨数据库边界的元素。  
   
  非包含数据库  
- 具有设置为 **NONE**的包含的数据库。 版本早于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的所有数据库均属于非包含数据库。 默认情况下，所有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本数据库的包含都设置为 **NONE**。  
+ 具有设置为 **NONE** 的包含的数据库。 版本早于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的所有数据库均属于非包含数据库。 默认情况下，所有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本数据库的包含都设置为 **NONE**。  
   
  部分包含数据库  
  部分包含数据库是一种包含数据库，可允许存在跨越数据库边界的某些功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括确定何时跨越包含边界的功能。  

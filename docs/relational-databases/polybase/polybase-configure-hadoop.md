@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+monikerRange: '>= sql-server-2016'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b51b896610ae74b5d3e30cc2a9e078611202fe17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c42f763957fd7245bff60293b790ab11a833c3ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882610"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480008"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
@@ -28,7 +28,7 @@ ms.locfileid: "85882610"
 - 如果尚未安装 PolyBase，请参阅 [PolyBase 安装](polybase-installation.md)。 这篇安装文章介绍了安装的先决条件。
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 - 从 SQL Server 2019 开始，还必须[启用 PolyBase 功能](polybase-installation.md#enable)。
 

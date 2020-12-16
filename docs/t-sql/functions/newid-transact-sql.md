@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb2e8c2d00ef42a43ea32ab55df6b14cb13d5dc1
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 876f5c395480eec9b875b6cac3dc792d60ca8369
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91111073"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478568"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 

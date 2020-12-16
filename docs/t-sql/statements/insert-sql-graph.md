@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ffd99a9291e35024d1c8a209569e399b71b53de
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 280b3ccd8a724db4a36804545e75a66f5a59b8a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899799"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481788"
 ---
 # <a name="insert-sql-graph"></a>INSERT（SQL 图形）
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]

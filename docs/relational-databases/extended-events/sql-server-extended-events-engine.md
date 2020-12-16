@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9178b6246c32c54aee6979bec00bac8b53e700fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 339e6ada7ae707d4bb48f5b1d3c1eb3b52e94e72
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756861"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481368"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 扩展事件引擎
 
@@ -44,7 +44,7 @@ ms.locfileid: "85756861"
   
 -   每个 Windows 进程都可以有一个或多个模块（**Win32 进程**、 **Win32 模块**）。 这些模块也称为“二进制模块”  或“可执行模块”  。  
   
--   每个 Windows 进程模块都可以包含一个或多个扩展事件包（**包**），而扩展事件包则包含一个或多个扩展事件对象（**类型**、 **目标**、 **操作Action**、 **映射**、 **谓词**和 **事件**）。  
+-   每个 Windows 进程模块都可以包含一个或多个扩展事件包（**包**），而扩展事件包则包含一个或多个扩展事件对象（**类型**、 **目标**、 **操作Action**、 **映射**、 **谓词** 和 **事件**）。  
   
 -   在主机进程中只能有一个扩展事件引擎实例（**扩展事件引擎**），该实例具有如下功能：  
   

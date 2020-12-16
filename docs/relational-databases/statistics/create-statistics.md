@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b2d5dc3f6822a7becc311367a7f0c6893a91f6f
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3d5f0cc0ed880cf47d85ea41696b221faedd3d1f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506541"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479168"
 ---
 # <a name="create-statistics"></a>创建统计信息
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

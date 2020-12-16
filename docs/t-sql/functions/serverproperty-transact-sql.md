@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3127def55801cec84a960df55525241d865716b
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ab575a2947147373036b6329ea53d8016459e137
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358915"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481958"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -69,8 +69,8 @@ propertyname
 |FilestreamConfiguredLevel|FILESTREAM 访问的配置级别。 有关详细信息，请参阅[文件流访问级别](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。<br /><br /> 基本数据类型：int|  
 |FilestreamEffectiveLevel|FILESTREAM 访问的有效级别。 如果级别已更改，并且实例重新启动或计算机重新启动处于挂起状态，则该值可以不同于 FilestreamConfiguredLevel。 有关详细信息，请参阅[文件流访问级别](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。<br /><br /> 基本数据类型：int|  
 |FilestreamShareName|FILESTREAM 使用的共享的名称。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：nvarchar(128)| 
-|HadrManagerStatus|**适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指示 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]管理器是否已启动。<br /><br /> 0 = 未启动，通信挂起。<br /><br /> 1 = 已启动，正在运行。<br /><br /> 2 = 未启动，已失败。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int|  
-|InstanceDefaultBackupPath|**适用于** ：[!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 及更高版本。<br /><br /> 实例备份文件的默认路径的名称。|  
+|HadrManagerStatus|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指示 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]管理器是否已启动。<br /><br /> 0 = 未启动，通信挂起。<br /><br /> 1 = 已启动，正在运行。<br /><br /> 2 = 未启动，已失败。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int|  
+|InstanceDefaultBackupPath|**适用于**：[!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 及更高版本。<br /><br /> 实例备份文件的默认路径的名称。|  
 |InstanceDefaultDataPath|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到当前版本 2015 年底开始的更新。<br /><br /> 实例数据文件的默认路径的名称。<br /><br /> 基本数据类型：nvarchar(128)|  
 |InstanceDefaultLogPath|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到当前版本 2015 年底开始的更新。<br /><br /> 实例日志文件的默认路径的名称。<br /><br /> 基本数据类型：nvarchar(128)|  
 |InstanceName|用户连接到的实例的名称。<br /><br /> 如果实例名称是默认实例，或者输入无效或发生错误，则返回 NULL。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：nvarchar(128)|  
@@ -78,13 +78,13 @@ propertyname
 |IsBigDataCluster| 从 CU4 开始在 [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 中引入。<br /><br />如果实例为 SQL Server 大数据群集，则返回 1；如果不是，则为 0。<br /><br /> 基本数据类型：int|  
 |IsClustered|服务器实例已配置在故障转移群集中。<br /><br /> 1 = 群集。<br /><br /> 0 = 非群集。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int|  
 |IsFullTextInstalled|全文和语义索引组件安装在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例上。<br /><br /> 1 = 已安装全文和语义索引组件。<br /><br /> 0 = 未安装全文和语义索引组件。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int|  
-|IsHadrEnabled|**适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 在此服务器实例上启用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。<br /><br /> 0 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已禁用。<br /><br /> 1 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已启用。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int<br /><br /> 要创建可用性副本并使该副本在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上运行，必须在该服务器实例上启用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。 有关详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。<br /><br /> **注意：** IsHadrEnabled 属性仅与 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 相关。 其他高可用性或灾难恢复功能（如数据库镜像或日志传送）都不受此服务器属性影响。|  
+|IsHadrEnabled|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 在此服务器实例上启用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。<br /><br /> 0 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已禁用。<br /><br /> 1 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已启用。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int<br /><br /> 要创建可用性副本并使该副本在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上运行，必须在该服务器实例上启用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。 有关详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。<br /><br /> **注意：** IsHadrEnabled 属性仅与 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 相关。 其他高可用性或灾难恢复功能（如数据库镜像或日志传送）都不受此服务器属性影响。|  
 |IsIntegratedSecurityOnly|服务器处于集成安全性模式下。<br /><br /> 1 = 集成安全性（Windows 身份验证）<br /><br /> 0 = 非集成安全性。 （Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。）<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int|  
-|IsLocalDB|**适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 服务器是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 的实例。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int|  
-|IsPolyBaseInstalled|**适用于** ： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 返回服务器实例是否安装了 PolyBase 功能的结果。<br /><br /> 0 = 未安装 PolyBase。<br /><br /> 1 = 安装了 PolyBase。<br /><br /> 基本数据类型：int|  
+|IsLocalDB|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 服务器是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 的实例。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int|  
+|IsPolyBaseInstalled|**适用于**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 返回服务器实例是否安装了 PolyBase 功能的结果。<br /><br /> 0 = 未安装 PolyBase。<br /><br /> 1 = 安装了 PolyBase。<br /><br /> 基本数据类型：int|  
 |IsSingleUser|服务器处于单用户模式下。<br /><br /> 1 = 单个用户。<br /><br /> 0 = 非单个用户<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int|  
-|IsTempDbMetadataMemoryOptimized|**适用于** ：[!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 及更高版本。<br /><br />如果已启用 tempdb，可将内存优化表用于元数据，则返回 1；如果 tempdb 对元数据使用基于磁盘的常规表，则返回 0。 有关详细信息，请参阅 [tempdb Database](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。<br /><br /> 基本数据类型：int|  
-|IsXTPSupported|**适用对象** ：SQL Server（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。<br /><br /> 服务器支持内存中 OLTP。<br /><br /> 1= 服务器支持内存中 OLTP。<br /><br /> 0= 服务器不支持内存中 OLTP。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int|  
+|IsTempDbMetadataMemoryOptimized|**适用于**：[!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 及更高版本。<br /><br />如果已启用 tempdb，可将内存优化表用于元数据，则返回 1；如果 tempdb 对元数据使用基于磁盘的常规表，则返回 0。 有关详细信息，请参阅 [tempdb Database](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。<br /><br /> 基本数据类型：int|  
+|IsXTPSupported|**适用对象**：SQL Server（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。<br /><br /> 服务器支持内存中 OLTP。<br /><br /> 1= 服务器支持内存中 OLTP。<br /><br /> 0= 服务器不支持内存中 OLTP。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int|  
 |LCID|排序规则的 Windows 区域设置标识符 (LCID)。<br /><br /> 基本数据类型：int|  
 |LicenseType|未使用。 许可证信息不由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品保留或维护。 始终返回 DISABLED。<br /><br /> 基本数据类型：nvarchar(128)|  
 |MachineName|运行服务器实例的 Windows 计算机名称。<br /><br /> 对于群集实例，即在 Microsoft 群集服务的虚拟服务器上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，返回虚拟服务器的名称。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：nvarchar(128)|  

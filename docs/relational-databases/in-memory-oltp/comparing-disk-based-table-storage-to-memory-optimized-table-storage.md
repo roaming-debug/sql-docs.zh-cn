@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c747328877911d8f470b93f9937c1bc49466ddb3
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a98600ce9fc628fc5e8c76d62a7455e0da80c44f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529452"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481258"
 ---
 # <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>比较基于磁盘的表存储与内存优化的表存储
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

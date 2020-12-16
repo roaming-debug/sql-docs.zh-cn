@@ -18,13 +18,13 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a76a0aac8ff4630eb8b51835bba618303fe497cb
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f41013db7cbd871ef132c3c0a3bad8a772511022
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344053"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480778"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 
@@ -86,11 +86,11 @@ ms.locfileid: "92344053"
  在大多数情况下禁止锁升级。 表级别的锁未完全禁止。 例如，当扫描在可序列化隔离级别下没有聚集索引的表时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必须使用表锁来保证数据的完整性。  
   
  **对表进行复制**  
- 指示是否使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制将表复制到其他数据库。 可能的值包括 **True** 和 **False** 。  
+ 指示是否使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制将表复制到其他数据库。 可能的值包括 **True** 和 **False**。  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> “更改跟踪”页  
  **更改跟踪**  
- 指示是否对相应的表启用了更改跟踪。 默认值为 **False** 。  
+ 指示是否对相应的表启用了更改跟踪。 默认值为 **False**。  
   
  只有对数据库启用了更改跟踪，此选项才可用。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "92344053"
  FileTable 的根文件夹。  
   
  **启用 FileTable 命名空间**  
- 当为 **True** 时，该值指示该表为 FileTable。 如果您将该值更改为 **False** ，则是在将 FileTable 更改为普通用户表。 如果您以后想要将该表更改回 FileTable，则该表将必须首先通过 FileTable 一致性检查，之后转换才会成功。  
+ 当为 **True** 时，该值指示该表为 FileTable。 如果您将该值更改为 **False**，则是在将 FileTable 更改为普通用户表。 如果您以后想要将该表更改回 FileTable，则该表将必须首先通过 FileTable 一致性检查，之后转换才会成功。  
   
 ##  <a name="storage-page"></a><a name="Storage"></a> “存储”页  
  显示所选表中与存储相关的属性。  
@@ -137,7 +137,7 @@ ms.locfileid: "92344053"
  包含该表的文件组的名称。  
   
  **已对表进行分区**  
- 可能的值包括 **True** 和 **False** 。  
+ 可能的值包括 **True** 和 **False**。  
   
  **Filestream 文件组**  
  如果该表包含具有 FILESTREAM 属性的 **varbinary(max)** 列，则指定 FILESTREAM 数据文件组的名称。 默认值为默认的 FILESTREAM 数据文件组。  

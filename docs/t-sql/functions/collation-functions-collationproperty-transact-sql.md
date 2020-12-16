@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cd3bfc9b136dac41352d2be594e7d1e3099bd37
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f2b4678d8c33ed7cc83bcefcdef13c91cf550086
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96118942"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478748"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>排序规则函数 - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1ccca2b8dc74759e1b4a1dc4d2e9485bf2fbcca7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91869051"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480188"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
 

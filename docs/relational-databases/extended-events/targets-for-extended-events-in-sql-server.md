@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 116d2f34bef990cca174117238981bb7e87917b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868772"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481338"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标
 
@@ -82,7 +82,7 @@ SQL Server 扩展事件可以和 Windows 事件跟踪 (ETW) 相互操作来监�
 - [使用扩展事件监视系统活动](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
-此 ETW 目标 *以同步方式* 处理其接收的数据，而大多数目标 *以异步方式*进行处理。
+此 ETW 目标 *以同步方式* 处理其接收的数据，而大多数目标 *以异步方式* 进行处理。
 
 > [!NOTE]
 > Azure SQL 数据库不支持 `etw_classic_sync_target target`。
@@ -104,7 +104,7 @@ event_counter 目标只是对每个指定事件发生的次数进行计数。
 
 - 与大多数目标不同，event_counter 目标 *以同步方式* 处理其接收的数据。
     - 同步方式适用于简单的 event_counter 是因为 event_counter 只涉及极少的处理。
-    - 数据库引擎将断开与任何速度太慢而可能降低数据库引擎性能的目标的连接。 这就是大多数目标 *以异步方式*处理的原因。
+    - 数据库引擎将断开与任何速度太慢而可能降低数据库引擎性能的目标的连接。 这就是大多数目标 *以异步方式* 处理的原因。
 
 
 #### <a name="example-output-captured-by-event_counter"></a>示例输入由 event_counter 捕获
@@ -151,7 +151,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 - 系统会将你选择的文件名用作基于日期时间的长整型的前缀，后接 .xel 扩展名。
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]
 > Azure SQL 数据库仅支持在 Azure Blob 存储中存储 `xel` 文件。 
@@ -252,7 +252,7 @@ SELECT f.*
 #### <a name="data-stored-in-the-event_file-target"></a>event_file 目标中存储的数据
 
 
-接下来介绍从 SQL Server 2016 的 **sys.fn_xe_file_target_read_file**中进行选择所得的报告。
+接下来介绍从 SQL Server 2016 的 **sys.fn_xe_file_target_read_file** 中进行选择所得的报告。
 
 
 ```
@@ -671,7 +671,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-若要查看前述的 XML，可以在事件会话处于活动状态时发出以下 SELECT。 从系统视图 **sys.dm_xe_session_targets**检索活动的 XML 数据 。
+若要查看前述的 XML，可以在事件会话处于活动状态时发出以下 SELECT。 从系统视图 **sys.dm_xe_session_targets** 检索活动的 XML 数据 。
 
 
 ```sql

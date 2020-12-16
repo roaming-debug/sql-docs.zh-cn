@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 532917bc211dcc281dd65ebb6229febc953d5805
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 2d65419fb3e3f819c75362712ee680c358c8fc29
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88420381"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479678"
 ---
 # <a name="snapshot-agent"></a>快照代理
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

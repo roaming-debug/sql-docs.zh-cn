@@ -17,13 +17,13 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 79368864ef41860d725772ee9136bb1e66e82790
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868070"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479498"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,7 +137,7 @@ ms.locfileid: "91868070"
 |x64|F = 爬网范围数\* 10 \* 8|M = T - F - 500  |  
 
 **有关公式的说明**
-1.  如果正在进行多个完全填充，则分别计算每个完全填充的 fdhost.exe 内存需求量，如 *F1*、*F2*等。 然后计算 M 为 T- sigma(_F_i)  。  
+1.  如果正在进行多个完全填充，则分别计算每个完全填充的 fdhost.exe 内存需求量，如 *F1*、*F2* 等。 然后计算 M 为 T- sigma(_F_i)  。  
 2.  500 MB 是系统中其他进程所需内存的估计值。 如果系统正在执行其他工作，请相应地增加此值。  
 3.  。*ism_size* 假定为 8 MB。  
   

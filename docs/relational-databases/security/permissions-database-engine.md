@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: AndreasWolter
 ms.author: anwolter
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b7839615ed830f91ced84f1c565d9c2d32bf3a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243611"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479418"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -364,7 +364,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 权限检查算法摘要  
- 检查权限可能很复杂。 权限检查算法包括重叠的组成员关系和所有权链接、显式和隐式权限，并且会受包含安全实体的安全类的权限影响。 该算法的一般过程是收集所有相关权限。 如果未找到阻止性 DENY，该算法将搜索提供足够访问权限的 GRANT。 该算法包含三个基本元素： **安全上下文** 、 **权限空间** 和 **必需的权限** 。  
+ 检查权限可能很复杂。 权限检查算法包括重叠的组成员关系和所有权链接、显式和隐式权限，并且会受包含安全实体的安全类的权限影响。 该算法的一般过程是收集所有相关权限。 如果未找到阻止性 DENY，该算法将搜索提供足够访问权限的 GRANT。 该算法包含三个基本元素： **安全上下文**、 **权限空间** 和 **必需的权限**。  
   
 > [!NOTE]  
 >  无法对 sa、dbo、实体所有者、information_schema、sys 或您自己授予、拒绝或撤消权限。  
@@ -404,16 +404,16 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 2.  如果所有权链接适用且以前针对链中对象的访问权限检查通过了安全检查，则允许访问。  
   
-3.  聚合与调用方关联的服务器级、数据库级和已签名模块的标识，以创建 **安全上下文** 。  
+3.  聚合与调用方关联的服务器级、数据库级和已签名模块的标识，以创建 **安全上下文**。  
   
-4.  对于该 **安全上下文** ，收集为 **权限空间** 授予或拒绝的所有权限。 权限可以明确表述为 GRANT、GRANT WITH GRANT 或 DENY，也可以是隐含或涵盖的权限 GRANT 或 DENY。 例如，针对架构的 CONTROL 权限隐含对表的 CONTROL， 对表的 CONTROL 则隐含 SELECT。 因此，如果授予了针对架构的 CONTROL 权限，也就授予了对表的 SELECT 权限。 如果拒绝了对表的 CONTROL 权限，也就拒绝了对表的 SELECT 权限。  
+4.  对于该 **安全上下文**，收集为 **权限空间** 授予或拒绝的所有权限。 权限可以明确表述为 GRANT、GRANT WITH GRANT 或 DENY，也可以是隐含或涵盖的权限 GRANT 或 DENY。 例如，针对架构的 CONTROL 权限隐含对表的 CONTROL， 对表的 CONTROL 则隐含 SELECT。 因此，如果授予了针对架构的 CONTROL 权限，也就授予了对表的 SELECT 权限。 如果拒绝了对表的 CONTROL 权限，也就拒绝了对表的 SELECT 权限。  
   
     > [!NOTE]  
     >  列级权限的 GRANT 覆盖对象级的 DENY。  
   
-5.  标识 **必需的权限** 。  
+5.  标识 **必需的权限**。  
   
-6.  如果对于 **权限空间** 中的对象，直接或隐式拒绝授予 **安全上下文** 中任何标识 **必需的权限** ，则权限检查失败。  
+6.  如果对于 **权限空间** 中的对象，直接或隐式拒绝授予 **安全上下文** 中任何标识 **必需的权限**，则权限检查失败。  
   
 7.  如果对于 **权限空间** 中的任何对象，没有拒绝 **必需的权限** 且 **必需的权限** 包含对 **安全上下文** 中任何标识直接或隐式的 GRANT 或 GRANT WITH GRANT 权限，则通过权限检查。  
 

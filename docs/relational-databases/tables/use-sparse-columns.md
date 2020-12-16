@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b422f4c34831c570b3ed6d9d54bcdb90d1d86754
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645918"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482339"
 ---
 # <a name="use-sparse-columns"></a>使用稀疏列
 
@@ -125,7 +125,7 @@ ms.locfileid: "88645918"
 ## <a name="restrictions-for-using-sparse-columns"></a>使用稀疏列的限制  
  稀疏列可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，其行为与任何其他列类似，但有以下限制：  
   
--   稀疏列必须可为 Null，并且不能有 ROWGUIDCOL 或 IDENTITY 属性。 稀疏列不可以是以下数据类型： **text**、 **ntext**、 **image**、 **timestamp**、用户定义的数据类型、 **geometry**或 **geography**；或者有 FILESTREAM 属性。  
+-   稀疏列必须可为 Null，并且不能有 ROWGUIDCOL 或 IDENTITY 属性。 稀疏列不可以是以下数据类型： **text**、 **ntext**、 **image**、 **timestamp**、用户定义的数据类型、 **geometry** 或 **geography**；或者有 FILESTREAM 属性。  
   
 -   稀疏列不能有默认值。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "88645918"
   
      事务复制支持稀疏列，但它不支持可以与稀疏列一起使用的列集。 有关列集的详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。  
   
-     SPARSE 属性的复制由架构选项来决定，架构选项是通过使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或者使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的****“项目属性”对话框来指定的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本不支持稀疏列。 如果必须将数据复制到早期版本，需指定不应复制 SPARSE 属性。  
+     SPARSE 属性的复制由架构选项来决定，架构选项是通过使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或者使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“项目属性”对话框来指定的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本不支持稀疏列。 如果必须将数据复制到早期版本，需指定不应复制 SPARSE 属性。  
   
      对于发布的表，不能向表中添加任何新的稀疏列，也不能更改现有列的稀疏属性。 如果需要执行此类操作，则应删除然后再重新创建发布。  
   

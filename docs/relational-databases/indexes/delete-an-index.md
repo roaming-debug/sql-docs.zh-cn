@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9279f22be324858e2a71ea523cab000c8f7253cf
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: = azuresqldb-current || >= sql-server-2016
+ms.openlocfilehash: b76d22d712327cac381a7a615d0170f76d476f34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96125169"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479998"
 ---
 # <a name="delete-an-index"></a>删除索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

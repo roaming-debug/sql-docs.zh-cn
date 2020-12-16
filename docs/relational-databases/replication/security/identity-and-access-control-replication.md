@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c44efad10aeade68f42e76d4aa5622807159110f
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 8737fa7c4781110c4a9169a7334e88f7df734291
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88404823"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479758"
 ---
 # <a name="identity-and-access-control-replication"></a>标识和访问控制（复制）
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

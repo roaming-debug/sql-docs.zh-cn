@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d09bc4bb7382c236661ba6433ee24ec4f96219ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 698650955b56d73615a644821b553e10076ab040
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729400"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479618"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>订阅，分发服务器到订阅服务器的历史记录（事务订阅）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

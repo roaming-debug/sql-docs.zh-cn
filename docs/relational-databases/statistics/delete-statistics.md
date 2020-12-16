@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 820852784e6c7de3893595166f64e09c1cb907e5
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8eadf600a52984e9d1ba0e11c80f415ec01fd306
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96504751"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479148"
 ---
 # <a name="delete-statistics"></a>删除统计信息
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

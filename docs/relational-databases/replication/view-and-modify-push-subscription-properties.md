@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 73e4b46d36f91c67794446ef5bf563d1753b90c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 006c577a6fd309ffb0aad25eab2cf5cc7261cb11
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482294"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480918"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>查看和修改推送订阅属性
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

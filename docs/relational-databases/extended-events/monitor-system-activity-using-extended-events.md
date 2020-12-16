@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0c573d3271346e8e42fa0fb1a06fba0b20a136
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b09dd7baae138fc559fd672ee43cad1761ca77c0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866786"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481398"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>使用扩展事件监视系统活动
 

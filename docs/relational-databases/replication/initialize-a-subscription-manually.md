@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bfa7cc36898aa521fed2e0e20fd08a5296147fcf
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 4f782c5b58c2110eb2181b4ede639a62f9544b39
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91869222"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479928"
 ---
 # <a name="initialize-a-subscription-manually"></a>手动初始化订阅
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

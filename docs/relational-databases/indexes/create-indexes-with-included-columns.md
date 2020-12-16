@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b7c552fa3955818c8d9978802f950f07f8a6bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ce010e0093e234c9095c440f3283b8c7942c78bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480048"
 ---
 # <a name="create-indexes-with-included-columns"></a>创建带有包含列的索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,11 +54,11 @@ ms.locfileid: "88408263"
   
 -   只能对非聚集索引定义非键列。  
   
--   除了 **text**、 **ntext**和 **image** 之外的所有数据类型都可以用作非键列。  
+-   除了 **text**、 **ntext** 和 **image** 之外的所有数据类型都可以用作非键列。  
   
 -   精确或不精确的确定性计算列都可以是非键列。 有关详细信息，请参阅 [计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
   
--   只要允许将计算列数据类型作为非键索引列，从 **image**、 **ntext**和 **text** 数据类型派生的计算列就可以作为非键索引列。  
+-   只要允许将计算列数据类型作为非键索引列，从 **image**、 **ntext** 和 **text** 数据类型派生的计算列就可以作为非键索引列。  
   
 -   除非先删除某一表的索引，否则无法从该表中删除非键列。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88408263"
   
     -   将列的为空性从 NOT NULL 改为 NULL。  
   
-    -   增加 **varchar**、 **nvarchar**或 **varbinary** 列的长度。  
+    -   增加 **varchar**、 **nvarchar** 或 **varbinary** 列的长度。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   

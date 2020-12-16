@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ab6f4ff4d5681d0dfeb30ded57447ddbb8b24a0
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 906e475bb5234d4bb007f1bfaa3577382c9c4037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300548"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478528"
 ---
 # <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE EXTERNAL TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

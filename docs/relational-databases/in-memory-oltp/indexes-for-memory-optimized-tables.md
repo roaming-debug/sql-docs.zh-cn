@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7f43554f4b14b1afa5eee8a2cf3600c7b9ae2fab
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866615"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480108"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>内存优化的表的索引
 

@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e24711b7b67f19018b325da3c6b78dc954e6a31
-ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 37fdafe41500e8b146aed8e9840ee3027cc86281
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "96130298"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481378"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
 

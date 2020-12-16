@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: 02ec3dd7e7047411901dcaad4b76056781a9384c
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||>= aps-pdw-2016||= azure-sqldw-latest
+ms.openlocfilehash: 1d43cb8449ccc59e024f4b0a281716d9af2b6006
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91379512"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481918"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

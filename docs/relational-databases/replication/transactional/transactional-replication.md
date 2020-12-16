@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91dfeb8d8086b9d19ab56a419c8ffa556c0708a6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 643670af17a3f9f3371571db0c942e1418e897a1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923721"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479578"
 ---
 # <a name="transactional-replication"></a>事务复制
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]

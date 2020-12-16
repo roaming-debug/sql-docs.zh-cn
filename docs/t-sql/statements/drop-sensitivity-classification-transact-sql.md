@@ -24,13 +24,13 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - data classification
-monikerRange: " >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: 6b09e5e60bd7ac1d02f46d191fccd0e2142f8d75
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: " >= sql-server-ver15 || = azuresqldb-current"
+ms.openlocfilehash: 1073384585e83be5f6ee4f1db5b17de1a83c40bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96131102"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478518"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

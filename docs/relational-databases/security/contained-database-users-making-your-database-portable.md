@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: decbd12174f6000a44a3cfd95b145c70de10740c
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9215ac429ff45d80a2ba1ea7d913a63ab49e34e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004668"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480948"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使数据库可移植
 
@@ -114,7 +114,7 @@ WHERE name='Test'
   
 - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例启用包含的数据库用户。 有关详细信息，请参阅 [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)。  
 - 具有非重叠名称的包含的数据库用户和登录名可以在应用程序中共存。  
-- 如果 master 数据库中有一个名为 **name1** 的登录名，并且你创建一个名为 **name1**的包含的数据库用户，当在连接字符串中提供数据库名称时，将在连接到数据库的情况下提取登录上下文上的数据库用户上下文。 即，包含的数据库用户将优先使用具有相同名称的登录名。  
+- 如果 master 数据库中有一个名为 **name1** 的登录名，并且你创建一个名为 **name1** 的包含的数据库用户，当在连接字符串中提供数据库名称时，将在连接到数据库的情况下提取登录上下文上的数据库用户上下文。 即，包含的数据库用户将优先使用具有相同名称的登录名。  
 - 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，包含的数据库用户的名称不能与服务器管理员帐户的名称相同。  
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器管理员帐户绝不能是包含的数据库用户。 服务器管理员具有足够的权限来创建和管理包含的数据库用户。 服务器管理员可以向包含的数据库用户授予针对用户数据库的权限。  
 - 由于包含的数据库用户是数据库级别主体，因此需要在会使用它们的每个数据库中创建包含的数据库用户。 标识仅限于数据库，在所有方面都独立于同一台服务器上其他数据库中具有相同名称和相同密码的用户。  

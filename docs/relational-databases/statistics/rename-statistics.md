@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d63fb4e6a9f469a4014fa098cabf7bac04a64c5
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7a5108a5631c5a87218d7c99bfb6d5bd24c29840
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96504757"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479128"
 ---
 # <a name="rename-statistics"></a>重命名统计信息
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

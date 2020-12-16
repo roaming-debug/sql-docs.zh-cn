@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 773162660a1d64f37ee225a14b7a260640104594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988813"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479598"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 复制“订阅属性”对话框 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

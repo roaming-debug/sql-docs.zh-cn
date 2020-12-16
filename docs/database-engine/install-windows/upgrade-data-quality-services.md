@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a1a020d691b1908f45b4b683f41d9720999c4c6
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 1be8d8e6b320af96bc3acf7a28ec2c017a92914a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125765"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480318"
 ---
 # <a name="upgrade-data-quality-services"></a>升级 Data Quality Services
 

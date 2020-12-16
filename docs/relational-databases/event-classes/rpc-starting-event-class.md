@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2a3360ae8bc9aada352f0fdcd22ddfc4a59f4bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d05758b36320258dc2a3dbb07f7163d333ce0252
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470735"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478278"
 ---
 # <a name="rpcstarting-event-class"></a>RPC:Starting 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

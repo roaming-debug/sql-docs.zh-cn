@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 44a8c71b-63d8-458b-8b5d-99d570067c3c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9215ff6f4be0118f83c422451697fda52efef229
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 85ea8a101bb3d12ffc4f1eefd521aeff5ab0df3c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570702"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481998"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

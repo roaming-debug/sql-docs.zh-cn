@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 17b2fd7cd58cdd63884850ccd3b4da1b5e1ee380
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: f18d7b665d9e546054fccf681e2e78f4f9fbf963
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110542"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481028"
 ---
 # <a name="replication-conflict-viewer-transactional-replication"></a>复制冲突查看器（事务复制）
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

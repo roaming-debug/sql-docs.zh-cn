@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ee448df6c962596b146c3c933406a23063873d96
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 0f339c2be8c7424134ba76fabbed1105d447a621
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919943"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479588"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在事务复制中发布存储过程执行
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,7 +58,7 @@ EXEC give_raise
 -   复制 Transact-SQL 编程：执行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 并为参数 `@type` 指定“serializable proc exec”（推荐）或“proc exec”值。 有关如何定义项目的详细信息，请参阅[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>在订阅服务器上修改过程  
- 默认情况下，发布服务器上的存储过程定义会传播到每个订阅服务器。 但是，还可以在订阅服务器上修改存储过程。 这有助于在发布服务器和订阅服务器上执行不同的逻辑。 例如，假设发布服务器上的存储过程 **sp_big_delete**有两个作用：从复制的表 **big_table1** 中删除 1,000,000 行；更新未复制的表 **big_table2**。 为了减少对网络资源的需求，应通过发布 **sp_big_delete**将 1 百万行删除作为一个存储过程进行传播。 在订阅服务器上，您可以修改 **sp_big_delete** 只删除 1 百万行且不对 **big_table2**执行后续更新。  
+ 默认情况下，发布服务器上的存储过程定义会传播到每个订阅服务器。 但是，还可以在订阅服务器上修改存储过程。 这有助于在发布服务器和订阅服务器上执行不同的逻辑。 例如，假设发布服务器上的存储过程 **sp_big_delete** 有两个作用：从复制的表 **big_table1** 中删除 1,000,000 行；更新未复制的表 **big_table2**。 为了减少对网络资源的需求，应通过发布 **sp_big_delete** 将 1 百万行删除作为一个存储过程进行传播。 在订阅服务器上，您可以修改 **sp_big_delete** 只删除 1 百万行且不对 **big_table2** 执行后续更新。  
   
 > [!NOTE]  
 >  默认情况下，发布服务器上使用 ALTER PROCEDURE 进行的任何更改都会传播到订阅服务器上。 为避免出现这种情况，在执行 ALTER PROCEDURE 之前禁用架构更改的传播。 有关架构更改的信息，请参阅[对发布数据库进行架构更改](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  

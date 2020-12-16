@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8535123c46bc7249704808762b9b5d59c773976f
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4e568e009f0fec3e3ff0f067c749a1d51dde3b8a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88424219"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480268"
 ---
 # <a name="oledb-event-category"></a>OLEDB 事件类别
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

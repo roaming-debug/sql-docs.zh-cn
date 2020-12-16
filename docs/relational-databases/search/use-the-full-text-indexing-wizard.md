@@ -23,13 +23,13 @@ ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24903e075fc7ce38e79c0b99a559afac194638bf
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 17fd1c0c884f606d1ede8e6dfa392fd0645185f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88490531"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479388"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

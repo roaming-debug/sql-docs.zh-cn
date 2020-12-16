@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 50d2cd0406798b89df4a3c76ee37567e8c469ecc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 348d8dddcd7314adc50f058ab1043f7024458a2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110666"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479958"
 ---
 # <a name="delete-a-push-subscription"></a>删除推送订阅
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

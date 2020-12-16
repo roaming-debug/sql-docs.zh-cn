@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1a32aabcd7eb431498e54a828dcfdcf4e87480c1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 03440561eb766779309a868ac5caf7c49a885f73
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923681"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482988"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication"></a>在发布中添加和删除项目
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

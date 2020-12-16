@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 80fbe0c833f9b4ac7f3d0ec1f845dfd230f09e64
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 8f680d2569bd05a5adb922e273378f920830a1ea
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603452"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481488"
 ---
 # <a name="compatibility-certification"></a>兼容性认证
 
@@ -51,7 +51,7 @@ SharePoint Server 2016 和 SharePoint Server 2019 也通过这种方式在 [!INC
 -  在与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为相关的方面，任何更改都意味着需要重新认证应用程序的正确性。 然而，[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)设置提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的后向兼容性，但后向兼容性仅适用于指定的数据库，而不适用于整个服务器。 保持数据库兼容性级别不变可确保现有应用程序查询在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 升级之前和之后继续显示相同的行为。 有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为和兼容性级别的详细信息，请参阅[使用兼容性级别实现后向兼容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
 
 -  在与性能相关的方面，由于每个版本都会引入查询优化器改进，因此，可能会遇到不同 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本之间的查询计划差异。 如果某些更改可能会对给定查询或工作负荷产生负面影响，则升级范围内的查询计划差异通常会转换为风险。 这种风险会促使进行重新认证，进而延迟升级并带来生命周期和支持挑战。 
-   由于需要缓解升级风险，查询优化器改进被限制为新版本的默认兼容性级别（即，适用于任何新版本的最高兼容性级别）。 兼容性认证包括**查询计划形状保护**（在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 升级后使用新版本中的相同查询优化模型立即将数据库兼容性级别保持原样的概念），因为它在升级之前进行，并且查询计划形状不应更改。 
+   由于需要缓解升级风险，查询优化器改进被限制为新版本的默认兼容性级别（即，适用于任何新版本的最高兼容性级别）。 兼容性认证包括 **查询计划形状保护**（在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 升级后使用新版本中的相同查询优化模型立即将数据库兼容性级别保持原样的概念），因为它在升级之前进行，并且查询计划形状不应更改。 
    有关详细信息，请参阅本文的[为什么使用查询计划形状？](#queryplan_shape)部分。
    
 有关兼容性级别的详细信息，请参阅[使用兼容性级别实现后向兼容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
@@ -66,7 +66,7 @@ SharePoint Server 2016 和 SharePoint Server 2019 也通过这种方式在 [!INC
 
 若要在升级过程中保持查询性能的可预测性，其中一个基本目标是确保使用相同的查询计划形状。 这可通过在升级后不立即改变数据库兼容性级别来实现，即使基础 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 具有不同的版本。 如果查询执行生态系统中没有其他更改（例如可用资源的重大更改或基础数据中的数据分布），则查询的性能应保持不变。 
 
-但是，保留查询计划的形状并不是在升级后可能影响性能的唯一因素。 如果将数据库移到较新的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]，并同时进行环境更改，则可能引入会对查询性能产生即时影响的因素，即使查询计划在不同版本中保留了相同的形状。 这些环境更改可能包括新的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 具有更多或更少的可用内存和 CPU 资源、对服务器或数据库配置选项的更改，或影响查询计划创建方式的数据分布更改。 因此，请务必了解，维护数据库兼容性级别可防止查询计划**形状**更改，但不能针对影响查询性能的其他环境方面提供保护，其中一些环境更改为用户发起的更改。
+但是，保留查询计划的形状并不是在升级后可能影响性能的唯一因素。 如果将数据库移到较新的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]，并同时进行环境更改，则可能引入会对查询性能产生即时影响的因素，即使查询计划在不同版本中保留了相同的形状。 这些环境更改可能包括新的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 具有更多或更少的可用内存和 CPU 资源、对服务器或数据库配置选项的更改，或影响查询计划创建方式的数据分布更改。 因此，请务必了解，维护数据库兼容性级别可防止查询计划 **形状** 更改，但不能针对影响查询性能的其他环境方面提供保护，其中一些环境更改为用户发起的更改。
 
 有关详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)。
    

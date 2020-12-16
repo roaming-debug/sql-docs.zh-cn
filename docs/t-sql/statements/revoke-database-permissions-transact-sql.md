@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e27ea765f590b0f1726371343fef48ac5afc64e0
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7b3125c5c0e2947e99d646364b3c327e80433626
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498146"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481818"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE 数据库权限 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

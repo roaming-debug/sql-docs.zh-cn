@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2b3e66bbfa13af7c6f06e39346c68273c9f7a58a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f4c10ff531c0a687bebb270c118c451ce489786a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783133"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480968"
 ---
 # <a name="snapshot-replication"></a>快照复制
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "85783133"
  ![快照复制组件和数据流](../../relational-databases/replication/media/snapshot.gif "快照复制组件和数据流")  
   
 ##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> 快照代理  
- 对于合并复制，每当运行快照代理时都会生成快照。 对于事务复制，是否生成快照取决于发布属性 **immediate_sync**的设置。 如果该属性设置为 TRUE（使用新建发布向导时的默认设置），则每当运行快照代理时都会生成快照，而且可以随时将其应用到订阅服务器。 如果该属性设置为 FALSE（使用 **sp_addpublication**时的默认设置），则仅当自上次快照代理运行以来添加了新订阅时，才会生成快照；订阅服务器必须等待快照代理完成，才能实现同步。  
+ 对于合并复制，每当运行快照代理时都会生成快照。 对于事务复制，是否生成快照取决于发布属性 **immediate_sync** 的设置。 如果该属性设置为 TRUE（使用新建发布向导时的默认设置），则每当运行快照代理时都会生成快照，而且可以随时将其应用到订阅服务器。 如果该属性设置为 FALSE（使用 **sp_addpublication** 时的默认设置），则仅当自上次快照代理运行以来添加了新订阅时，才会生成快照；订阅服务器必须等待快照代理完成，才能实现同步。  
   
  快照代理执行以下操作：  
   
@@ -104,6 +104,6 @@ ms.locfileid: "85783133"
   
 2.  检查发布服务器上的 **sysmergeschemachange** 表，确定是否存在应该应用于订阅服务器的新快照。  
   
-3.  如果存在新快照，合并代理则将 **sysmergeschemachange**所指定位置处的快照文件应用于订阅数据库。  
+3.  如果存在新快照，合并代理则将 **sysmergeschemachange** 所指定位置处的快照文件应用于订阅数据库。  
   
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e02e5e2e6449a1c8c62072d0cd5a86d44cdf22ce
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4cb894ef393f767d85af5c43b50bffce87f3a6fc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005998"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480038"
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "92005998"
 将分区函数的分区映射到一组文件组的数据库对象。 在各个文件组上放置分区的主要原因是为了确保可以在分区上独立执行备份操作。 这是因为您可以在各个文件组上执行备份。  
   
 ### <a name="partitioning-column"></a>分区列  
-分区函数对表或索引进行分区时所使用的表或索引列。 参与分区函数的计算列必须显式标记为 PERSISTED。 用作索引列时有效的所有数据类型都可以用作分区依据列， **timestamp**除外。 无法指定 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)** 、 **nvarchar(max)** 或 **varbinary(max)** 数据类型。 此外，无法指定 Microsoft .NET Framework 公共语言运行时 (CLR) 用户定义类型和别名数据类型列。  
+分区函数对表或索引进行分区时所使用的表或索引列。 参与分区函数的计算列必须显式标记为 PERSISTED。 用作索引列时有效的所有数据类型都可以用作分区依据列， **timestamp** 除外。 无法指定 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)** 、 **nvarchar(max)** 或 **varbinary(max)** 数据类型。 此外，无法指定 Microsoft .NET Framework 公共语言运行时 (CLR) 用户定义类型和别名数据类型列。  
   
 ### <a name="aligned-index"></a>对齐的索引  
 与其对应的表建立在同一个分区方案之上的一种索引。 如果表与其索引对齐，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 则可以快速高效地切换分区，同时又能维护表及其索引的分区结构。 索引要与其基表对齐，并不需要与基表参与相同的命名分区函数。 但是，索引和基表的分区函数实质上必须是相同的，因为：

@@ -10,13 +10,13 @@ ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 783d2a0e80728f323b5b9d25048c10189df695a3
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6a47f4aab579410c147f4e6472a851cd6baa0dc0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91868045"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479488"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改进全文查询的性能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

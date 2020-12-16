@@ -12,13 +12,13 @@ dev_langs:
 - TSQL
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 062c77adf6c7be83e3e2e38ed6947b0d362b690c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 211acd1d54a048d434d579490f2ef156978ffca5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036852"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482046"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
