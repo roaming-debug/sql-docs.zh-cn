@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d0f1a43ab06c931fd9fda6498790ccc7dce3476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2c65bcdcaccb12fdca721834666bc1db91b41c20
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737197"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467998"
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout 事件类
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

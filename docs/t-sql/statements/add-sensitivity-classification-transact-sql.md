@@ -22,13 +22,13 @@ helpviewer_keywords:
 - rank
 ms.custom: ''
 ms.date: 06/10/2020
-monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: cc5f77d8590434d8d8d03e5ef8ab68365be3c4ca
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current"
+ms.openlocfilehash: a9654a26ff748afa039ac5b0d2088135eea6a796
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784783"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466028"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "91784783"
 
 将有关敏感度分类的元数据添加到一个或多个数据库列中。 分类可以包括敏感度标签和信息类型。
 
-对于 SQL Server，这是在 SQL Server 2012 中引入的。
+对于 SQL Server，这在 SQL Server 2019 中进行了引入。
 
 对你的数据库环境中的敏感数据进行分类可帮助实现更高的可见性和更好的保护。 可以在 [SQL 信息保护入门](https://aka.ms/sqlip)中找到更多信息
 

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80b0606f38f50b067f706bc5dad4d094ea49a4b2
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f5317580647f0d8795277722e44382c2a77cdafe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332036"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467288"
 ---
 # <a name="metadata-visibility-configuration"></a>元数据可见性配置
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -131,7 +131,7 @@ GO
   
  下列元数据无法强制公开：  
   
--   存储在 **sys.servers** 的 **provider_string**列中的值。 没有 ALTER ANY LINKED SERVER 权限的用户将看到此列中的值为 NULL。  
+-   存储在 **sys.servers** 的 **provider_string** 列中的值。 没有 ALTER ANY LINKED SERVER 权限的用户将看到此列中的值为 NULL。  
   
 -   用户定义的对象（如存储过程或触发器）的源定义。 只有在满足下列某一种条件时，才能看到源代码：  
   
@@ -164,7 +164,7 @@ GO
 
 -   OBJECT_DEFINITION() 函数  
   
--   存储在 **sys.sql_logins**的 password_hash 列中的值。  不具有 CONTROL SERVER 权限的用户可以看到该列中的 NULL 值。  
+-   存储在 **sys.sql_logins** 的 password_hash 列中的值。  不具有 CONTROL SERVER 权限的用户可以看到该列中的 NULL 值。  
   
 > [!NOTE]  
 >  内置系统过程和函数的 SQL 定义通过 **sys.system_sql_modules** 目录视图、 **sp_helptext** 存储过程以及 OBJECT_DEFINITION() 函数公开可见。  

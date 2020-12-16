@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: markingmyname
 ms.author: maghan
-monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 4bb178639b262320a0292a25b3535a9f969972f0
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017
+ms.openlocfilehash: 4f31dcfc576e4808d12482c4605e5f10d70e684b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523219"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468188"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和时间数据类型及函数 (Transact-SQL)
 

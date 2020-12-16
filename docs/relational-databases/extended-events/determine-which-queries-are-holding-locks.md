@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20e75befe723beebec26ea819811ae0183ba4aa3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e1e24e408df936fc2a651263218896e4c96826e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780134"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465608"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>确定持有锁的查询
 
@@ -155,7 +155,7 @@ ms.locfileid: "85780134"
     ```  
 
 > [!NOTE]
-> 前面的 Transact-SQL 代码示例在 SQL Server 上本地运行，但可能_不太在 Azure SQL 数据库上运行_。 该示例的核心部分直接涉及事件，例如 `ADD EVENT sqlserver.lock_acquired` 也可在 Azure SQL 数据库上运行。 但要运行示例，必须先将一些初步项（如 `sys.server_event_sessions`）编辑为其 Azure SQL 数据库对应项，如 `sys.database_event_sessions`。
+> 前面的 Transact-SQL 代码示例在 SQL Server 上本地运行，但可能 _不太在 Azure SQL 数据库上运行_。 该示例的核心部分直接涉及事件，例如 `ADD EVENT sqlserver.lock_acquired` 也可在 Azure SQL 数据库上运行。 但要运行示例，必须先将一些初步项（如 `sys.server_event_sessions`）编辑为其 Azure SQL 数据库对应项，如 `sys.database_event_sessions`。
 > 若要详细了解本地 SQL Server 与 Azure SQL 数据库之间的细微差异，请参阅以下文章：
 > - [Azure SQL 数据库中的扩展事件](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
 > - [支持扩展事件的系统对象](xevents-references-system-objects.md)

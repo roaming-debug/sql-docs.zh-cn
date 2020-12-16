@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5da2a080ef20bd98b27873796a64b433268ae06f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 1d395bebae8b009f4e91d8df074401f8659e1748
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108421"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467398"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>快照复制和事务复制的备份和还原策略
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -141,7 +141,7 @@ ms.locfileid: "87108421"
   
     2.  使用 [tablediff 实用工具](../../../tools/tablediff-utility.md) 或其他工具手动将发布服务器和订阅服务器同步。 这使您能够从订阅数据库恢复发布数据库备份中未包含的数据。 转到步骤 c。  
   
-         有关 **tablediff** 实用工具的详细信息，请参阅[比较所复制表的差异（复制编程）](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)。  
+         有关 **tablediff** 实用工具的详细信息，请参阅 [比较所复制表的差异（复制编程）](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)。  
   
     3.  还原的备份是否已完成并且是最新的？ 它是否包含所有发布和订阅的最新配置？ 如果是，执行 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) 存储过程，使发布服务器元数据与分发服务器元数据重新同步。 还原完成。 如果不是，则转到步骤 d。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "87108421"
   
     2.  使用 [tablediff Utility](../../../tools/tablediff-utility.md) 或其他工具手动将发布服务器和订阅服务器同步。 这使您能够从订阅数据库恢复发布数据库备份中未包含的数据。 转到步骤 c。  
   
-         有关 **tablediff** 实用工具的详细信息，请参阅[比较所复制表的差异（复制编程）](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)。  
+         有关 **tablediff** 实用工具的详细信息，请参阅 [比较所复制表的差异（复制编程）](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)。  
   
     3.  还原的备份是否已完成并且是最新的？ 它是否包含所有发布和订阅的最新配置？ 如果是，执行 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) 存储过程，使发布服务器元数据与分发服务器元数据重新同步。 还原完成。 如果不是，则转到步骤 d。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "87108421"
          有关如何指定订阅服务器已包含数据的详细信息，请参阅 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)。  
   
 #### <a name="publication-database-peer-to-peer-transactional-replication"></a>发布数据库：@loopback_detection  
- 在下列步骤中，复制数据库 **A**、 **B**和 **C** 位于对等事务复制拓扑中。 数据库 **A** 和 **C** 处于联机状态，并且可以正常工作；数据库 **B** 是要还原的数据库。 在此介绍的过程，尤其是步骤 7、10 和 11，非常类似于向对等拓扑添加节点时所需的过程。 执行这些步骤最简单的方法是使用配置对等拓扑向导，但是您也可以使用存储过程。  
+ 在下列步骤中，复制数据库 **A**、 **B** 和 **C** 位于对等事务复制拓扑中。 数据库 **A** 和 **C** 处于联机状态，并且可以正常工作；数据库 **B** 是要还原的数据库。 在此介绍的过程，尤其是步骤 7、10 和 11，非常类似于向对等拓扑添加节点时所需的过程。 执行这些步骤最简单的方法是使用配置对等拓扑向导，但是您也可以使用存储过程。  
   
 1.  运行分发代理以同步数据库 **A** 和 **C** 上的订阅。转到步骤 2。  
   
@@ -238,17 +238,17 @@ ms.locfileid: "87108421"
   
     4.  执行 [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)，执行时为其提供在步骤 b 中检索到的 `@request_id` 值。 请等到所有节点都指示它们已接收到对等请求。 转到步骤 e。  
   
-    5.  在数据库 **B** 上重新创建对数据库 **C**上的发布的订阅，同时指定订阅服务器已包含数据。 转到步骤 b。  
+    5.  在数据库 **B** 上重新创建对数据库 **C** 上的发布的订阅，同时指定订阅服务器已包含数据。 转到步骤 b。  
   
-    6.  在数据库 **C** 上重新创建对数据库 **B**上的发布的订阅，同时指定订阅服务器已包含数据。 转到步骤 13。  
+    6.  在数据库 **C** 上重新创建对数据库 **B** 上的发布的订阅，同时指定订阅服务器已包含数据。 转到步骤 13。  
   
-12. 在数据库 **B** 和 **C**之间重新创建订阅：  
+12. 在数据库 **B** 和 **C** 之间重新创建订阅：  
   
-    1.  在数据库 **B**上，查询 [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) 表，以检索数据库 **B** 从 **C**收到的最近事务的日志序列号 (LSN)。  
+    1.  在数据库 **B** 上，查询 [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) 表，以检索数据库 **B** 从 **C** 收到的最近事务的日志序列号 (LSN)。  
   
     2.  在数据库 B 上重新创建对数据库 C 上的发布的订阅，同时指定该订阅应基于 LSN 进行初始化（[sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)的 `@sync_type` 参数的值为 initialize from lsn）  。 转到步骤 b。  
   
-    3.  在数据库 **C** 上重新创建对数据库 **B**上的发布的订阅，同时指定订阅服务器已包含数据。 转到步骤 13。  
+    3.  在数据库 **C** 上重新创建对数据库 **B** 上的发布的订阅，同时指定订阅服务器已包含数据。 转到步骤 13。  
   
 13. 运行分发代理以同步数据库 **B** 和 **C** 上的订阅。还原完成。  
   

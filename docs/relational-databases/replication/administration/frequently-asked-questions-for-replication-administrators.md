@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9e6746847d202448b9953cbb9b65e769375645ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: bd6ae5ed3072af96c64ba69e7346e8e2b2f03cbe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467478"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>复制管理员常见问题
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -216,7 +216,7 @@ ms.locfileid: "86918263"
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>如何确定是否存在要复制的事务或行？  
  对于事务复制，请使用存储过程或复制监视器中的 **“未分发的命令”** 选项卡。 有关详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
- 对于合并复制，请使用 **sp_showpendingchanges**存储过程。 有关详细信息，请参阅 [sp_showpendingchanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)。  
+ 对于合并复制，请使用 **sp_showpendingchanges** 存储过程。 有关详细信息，请参阅 [sp_showpendingchanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)。  
   
 ### <a name="how-far-behind-is-the-distribution-agent-should-i-reinitialize"></a>分发代理滞后多少？ 是否应重新初始化？  
  使用 **sp_replmonitorsubscriptionpendingcmds** 存储过程或复制监视器中的 **“未分发的命令”** 选项卡。 存储过程和选项卡显示：  

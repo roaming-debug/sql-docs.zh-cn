@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2665ab9b5a30209a123056664921334ce3c8367
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eebd2896dc1931e03dd121867ee09c1940d02d36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485293"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466708"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>确定性函数和不确定性函数
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "88485293"
 |函数|注释|  
 |--------------|--------------|  
 |所有聚合函数|除非用 OVER 和 ORDER BY 子句指定聚合函数，否则所有聚合函数都具有确定性。 有关这些函数的列表，请参阅[聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)。|  
-|CAST|除非与 **datetime**、 **smalldatetime**或 **sql_variant**一起使用，否则其他时候都是确定性的。|  
+|CAST|除非与 **datetime**、 **smalldatetime** 或 **sql_variant** 一起使用，否则其他时候都是确定性的。|  
 |CONVERT|除非存在下列条件，否则为确定性函数：<br /><br /> <br /><br /> 源类型是 **sql_variant**。<br /><br /> 目标类型是 **sql_variant** ，其源类型不是确定性的。<br /><br /> 源类型或目标类型是 **datetime** 或 **smalldatetime**，其他源类型或目标类型是字符串，并且指定了不确定的样式。 若要为确定样式，则样式参数必须是常量。 此外，除了样式 20 和 21，小于或等于 100 的样式都具有不确定性。 大于 100 的样式具有确定性，但样式 106、107、109 和 113 除外。|  
 |CHECKSUM|确定性函数，CHECKSUM(*) 除外。|  
 |ISDATE|只有与 CONVERT 函数一起使用、指定 CONVERT 样式参数并且样式不等于 0、100、9 或 109 时，才是确定性函数。|  

@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 578d639eb80bd85e56d282dbae1495e2abd3ff42
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 721917607310b918fb436d6970b4bcd2117a8db0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990185"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466038"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
         [ [ FULLSCAN   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
-            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ] 
@@ -294,13 +294,13 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. 将 CREATE STATISTICS 与 FULLSCAN 和 PERSIST_SAMPLE_PERCENT 一起使用  
- 以下示例为 `Person` 表 `BusinessEntityID` 和 `EmailPromotion` 列中的所有行创建 `NamePurchase` 统计信息，并为所有未明确指定采样百分比的后续更新设置 100% 的采样百分比。  
+### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. 将 CREATE STATISTICS 与 FULLSCAN 和 PERSIST_SAMPLE_PERCENT 一起使用  
+ 以下示例为 `Person` 表 `BusinessEntityID` 和 `EmailPromotion` 列中的所有行创建 `NamePurchase` 统计信息，并为所有未明确指定采样百分比的后续更新设置 100% 的采样百分比。  
   
-```sql  
-CREATE STATISTICS NamePurchase  
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
-    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+```sql  
+CREATE STATISTICS NamePurchase  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
 ```  
   
 ### <a name="examples-using-adventureworksdw-database"></a>使用 AdventureWorksDW 数据库的示例。 

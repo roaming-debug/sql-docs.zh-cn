@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ddfb9836650028c0f6aae150a2f70e4758b6ca2
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: d8d3b67a8909867760b7ab01ebf860dd2f8dfe48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467218"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>教程：在使用随机加密且已启用 enclave 的列上创建并使用索引
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -122,7 +122,7 @@ Microsoft 强烈建议，先在数据库中启用 ADR，再在使用随机加密
 1. 以数据所有者（或有权访问密钥的应用程序）身份，使用 CEK1  填充 enclave 内的缓存。
 
    > [!NOTE]
-   > 除非你在**第 2 步：在不使用角色分隔的情况下创建和测试索引**后重启了 SQL Server 实例，否则此为冗余步骤，因为缓存中已有 CEK1  。 之所以添加它是为了展示数据所有者如何向 enclave 提供密钥（如果 enclave 中尚无的话）。
+   > 除非你在 **第 2 步：在不使用角色分隔的情况下创建和测试索引** 后重启了 SQL Server 实例，否则此为冗余步骤，因为缓存中已有 CEK1  。 之所以添加它是为了展示数据所有者如何向 enclave 提供密钥（如果 enclave 中尚无的话）。
 
    1. 在已  启用 Always Encrypted 的 SSMS 实例中，在查询窗口中执行下面的语句。 此语句将所有已启用 enclave 的列加密密钥都发送到 enclave。 有关详细信息，请参阅 [sp_enclave_send_keys](../system-stored-procedures/sp-enclave-send-keys-sql.md)。
 

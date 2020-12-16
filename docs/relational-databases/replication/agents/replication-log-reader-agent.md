@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 09334d8eedab294de3015cdcaf0ac5b1c61c9239
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f5e716be586d7fb152a3c229cc016e349d57c99b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395005"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467348"
 ---
 # <a name="replication-log-reader-agent"></a>复制日志读取器代理
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -191,7 +191,7 @@ logread [-?]
  在复制命令由分发代理发送给订阅服务器之前，从事务日志读取的复制命令的数目。 默认值为 0。 如果未指定此参数，日志读取器代理会一直读取完此日志，或者读取到 **-ReadBatchSize** 中指定的数字（事务数）为止。  
   
  **-RecoverFromDataErrors**  
- 指定日志读取器代理在从非 SQL Server 发布服务器发布的列数据中遇到错误时应继续运行。 默认情况下，这类错误可导致日志读取器代理失败。 在使用 **-RecoverFromDataErrors**后，出错的列数据将复制为 NULL 或者适当的非 Null 值，并在 [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) 表中记录警告消息。 仅 Oracle 发布服务器支持此参数。  
+ 指定日志读取器代理在从非 SQL Server 发布服务器发布的列数据中遇到错误时应继续运行。 默认情况下，这类错误可导致日志读取器代理失败。 在使用 **-RecoverFromDataErrors** 后，出错的列数据将复制为 NULL 或者适当的非 Null 值，并在 [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) 表中记录警告消息。 仅 Oracle 发布服务器支持此参数。  
   
 ## <a name="remarks"></a>备注  
   

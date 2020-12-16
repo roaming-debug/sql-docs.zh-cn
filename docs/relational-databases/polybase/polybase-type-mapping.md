@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 107e25f9d4307532e4d1bd6d413e05347fc5209b
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 2cbdcfca40f1fa2fd51e669aeefcf317a958c687
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624724"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467428"
 ---
 # <a name="type-mapping-with-polybase"></a>PolyBase 的类型映射
 
@@ -57,7 +57,7 @@ ms.locfileid: "91624724"
 | Decimal       | Decimal                   | Decimal        | BigDecimalWritable    | 适用于 Hive 0.11 及更高版本。 |
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 ## <a name="oracle-type-mapping-reference"></a>Oracle 类型映射引用
 
@@ -84,7 +84,7 @@ ms.locfileid: "91624724"
 
 类型不匹配 
 
-Float：Oracle 支持的浮点精度为 126，低于 SQL Server 支持的精度 (53)。 因此，可以直接映射 Float (1-53)****，但除此之外，截断会导致数据丢失。
+Float：Oracle 支持的浮点精度为 126，低于 SQL Server 支持的精度 (53)。 因此，可以直接映射 Float (1-53)，但除此之外，截断会导致数据丢失。
 
 时间戳：Oracle 中的时间戳和具有当地时区的时间戳支持 0.9 秒的精度，而 SQL Server DateTime2 仅支持 0.7 秒的精度。 
 

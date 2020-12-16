@@ -10,13 +10,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d73d337e750e287066531017710b733c92a312ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 53026845a3cb41a53bec6c0d817b04b6d485f1be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627016"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468518"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>配置和使用具有安全 enclave 的 Always Encrypted 
 

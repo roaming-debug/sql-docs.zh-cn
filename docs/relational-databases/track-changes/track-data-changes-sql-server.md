@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5edcc10b7cb9682f6856c8129e13a2d57af67074
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b38293d4b60168028a5669a9f5dd2e01ccbde012
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810718"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466748"
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "91810718"
  若要获取对与捕获实例关联的更改数据的访问，必须为用户授予关联源表中的所有捕获列的选择访问权限。 此外，如果在创建捕获实例时指定了访问控制角色，调用者还必须是指定访问控制角色的成员。 所有数据库用户可通过 public 角色访问用于访问元数据的其他常规变更数据捕获功能，但返回的元数据访问通常也是使用基础源表的选择访问权限以及任何定义的访问控制角色成员控制的。  
   
  **对启用了变更数据捕获的源表执行的 DDL 操作**  
- 为表启用变更数据捕获后，只能由固定服务器角色 **sysadmin**、 **database role db_owner**成员或 **database role db_ddladmin**成员将 DDL 操作应用于该表。 如果为用户显式授予了对表执行 DDL 操作的权限，这些用户在尝试执行这些操作时将收到错误 22914。  
+ 为表启用变更数据捕获后，只能由固定服务器角色 **sysadmin**、 **database role db_owner** 成员或 **database role db_ddladmin** 成员将 DDL 操作应用于该表。 如果为用户显式授予了对表执行 DDL 操作的权限，这些用户在尝试执行这些操作时将收到错误 22914。  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>变更数据捕获的数据类型注意事项  
  变更数据捕获支持所有基列类型。 下表列出了几个列类型的行为和限制。  

@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: markingmyname
 ms.author: maghan
-monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 08c8fd59e702d668f7218757021f415b0bea3e39
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest
+ms.openlocfilehash: b45a8b618db939a2ca10721e9a2062ca142ffce6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544191"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465798"
 ---
 # <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

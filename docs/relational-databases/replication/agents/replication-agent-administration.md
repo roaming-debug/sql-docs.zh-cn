@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 206bf3691786007fe4ab8ac8b446af13604341a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 76c793758fa9886f0f8246c5d6c4aa7ec27fa707
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923423"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467328"
 ---
 # <a name="replication-agent-administration"></a>复制代理管理
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "86923423"
   
     -   队列读取器代理  
   
-     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。有关详细信息，请参阅“使用[复制监视器](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)查看信息和执行任务”。  
+     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。有关详细信息，请参阅“使用 [复制监视器](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)查看信息和执行任务”。  
   
 -   以下代理与复制监视器中的订阅相关联：  
   

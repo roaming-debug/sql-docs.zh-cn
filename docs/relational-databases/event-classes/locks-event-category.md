@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24bcedd0eb22430bde706ca6565bf7521d3691e4
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ed5d792cd88f067ae014cb5191a363c51f336b7c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88448617"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467988"
 ---
 # <a name="locks-event-category"></a>Locks 事件类别
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

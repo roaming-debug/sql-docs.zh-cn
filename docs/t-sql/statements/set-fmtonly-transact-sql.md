@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 859f6a3315711811fb6587c52f3b80c0a0f05575
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 224611c3af21b85c82b76777b2df54d797eab0e2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196521"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465758"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY (Transact-SQL)
 
@@ -58,7 +58,7 @@ SET FMTONLY { ON | OFF }
 
 分析 Transact-SQL 批时，`SET FMTONLY ON` 无效。 在执行运行时期间生效。
 
-默认值为 `OFF`。
+默认值是 `OFF`。
 
 ## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  

@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4019a1e661b14825532596091918f2f14eac1e92
-ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: d81ecf6b555022aeac47e810041d96a57f61b00b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93405064"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468208"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -82,17 +82,17 @@ OPENROWSET
 
 ## <a name="arguments"></a>参数
 
-### <a name="provider_name"></a>' *provider_name* '
+### <a name="provider_name"></a>'*provider_name*'
 字符串，表示在注册表中指定的 OLE DB 访问接口的友好名称（或 PROGID）。 provider_name 没有默认值  。 提供程序名称示例是 `Microsoft.Jet.OLEDB.4.0`、`SQLNCLI` 或 `MSDASQL`。
 
-### <a name="datasource"></a>' *datasource* '
+### <a name="datasource"></a>'*datasource*'
 对应于特定 OLE DB 数据源的字符串常量。 datasource 是要传递给提供程序的 IDBProperties 接口的 DBPROP_INIT_DATASOURCE 属性，该属性用于初始化提供程序  。 通常，此字符串包含数据库文件的名称、数据库服务器的名称，或者访问接口能理解的用于定位数据库的名称。
 数据源可以是 `Microsoft.Jet.OLEDB.4.0` 提供程序的文件路径 `C:\SAMPLES\Northwind.mdb'`，也可以是 `SQLNCLI` 提供程序的连接字符串 `Server=Seattle1;Trusted_Connection=yes;`。
 
-### <a name="user_id"></a>' *user_id* '
+### <a name="user_id"></a>'*user_id*'
 字符串常量，它是传递给指定 OLE DB 访问接口的用户名。 user_id 为连接指定安全上下文，并作为 DBPROP_AUTH_USERID 属性传入以初始化提供程序  。 user_id 不能是 Microsoft Windows 登录名  。
 
-### <a name="password"></a>' *password* '
+### <a name="password"></a>'*password*'
 字符串常量，它是传递给 OLE DB 访问接口的用户密码。 在初始化提供程序时，password 作为 DBPROP_AUTH_PASSWORD 属性传入  。 password 不能是 Microsoft Windows 密码  。
 
 ```sql
@@ -104,7 +104,7 @@ SELECT a.*
                    Customers) AS a;
 ```
 
-### <a name="provider_string"></a>' *provider_string* '
+### <a name="provider_string"></a>'*provider_string*'
 访问接口特定的连接字符串，作为 DBPROP_INIT_PROVIDERSTRING 属性传入以初始化 OLE DB 访问接口。 provider_string 通常封装初始化提供程序所需的所有连接信息  。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序识别的关键字列表，请参阅[初始化和授权属性](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。
 
 ```sql
@@ -125,7 +125,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
                  AdventureWorks2012.HumanResources.Department) AS d;
 ```
 
-### <a name="query"></a>' *query* '
+### <a name="query"></a>'*query*'
 字符串常量，发送到访问接口并由访问接口执行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地实例不处理该查询，但处理由访问接口返回的查询结果（传递查询）。 有些访问接口并不通过表名而是通过命令语言提供其表格格式数据，将传递查询用于这些访问接口是非常有用的。 只要查询提供程序支持 OLE DB Command 对象及其强制接口，那么在远程服务器上就支持传递查询。 有关详细信息，请参阅 [SQL Server Native Client (OLE DB) 参考](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)。
 
 ```sql
@@ -249,7 +249,7 @@ SELECT *
 |ACP|将数据类型为 char、varchar 或 text 的列由 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页    。|
 |OEM（默认值）|将数据类型为 char、varchar 或 text 的列由系统 OEM 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页    。|
 |RAW|不执行从一个代码页到另一个代码页的转换。 这是执行最快的选项。|
-|*code_page*|指示数据文件中字符数据已编码的源代码页，例如 850。<br /><br /> **重要提示** ：低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|
+|*code_page*|指示数据文件中字符数据已编码的源代码页，例如 850。<br /><br /> **重要提示**：低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|
 
 ##### <a name="format"></a>FORMAT
 `FORMAT` = 'CSV' 适用范围：   [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
