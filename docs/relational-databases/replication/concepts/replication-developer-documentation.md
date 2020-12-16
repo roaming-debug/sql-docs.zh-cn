@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bf9fb1e0980680793f9aa87c6a7297089f619512
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f3cd2af326a38168860d072303f3f572959f73d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490615"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460290"
 ---
 # <a name="replication-developer-documentation"></a>复制开发人员文档
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

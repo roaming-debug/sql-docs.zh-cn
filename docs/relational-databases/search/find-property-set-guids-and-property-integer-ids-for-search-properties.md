@@ -13,14 +13,14 @@ ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c916bcaa0ff0a3fb294038df30e65e7f53f367aa
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 518d5479b1b07c13ab0613aaf2dc68f1431cb16b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867455"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460050"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>查找搜索属性的属性集 GUID 和属性整数 ID
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "91867455"
 -   对于 32 位版本，请查看 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`。  
   
 ##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a> 从 Windows 属性说明查找搜索属性的值  
- 对于众所周知的 Windows 搜索属性，可以从属性说明 ( **propertyDescription** ) 的 **formatID** 和**propID**属性中获取你需要的信息。  
+ 对于众所周知的 Windows 搜索属性，可以从属性说明 ( **propertyDescription** ) 的 **formatID** 和 **propID** 属性中获取你需要的信息。  
   
  下面的示例显示了典型的 Microsoft 属性说明的相关部分，在此示例中为 `System.Author` 属性的说明。 `formatID` 特性指定属性集 GUID `F29F85E0-4FF9-1068-AB91-08002B27B3D9`， `propID` 特性指定属性整数 ID `4.` 。请注意， `name` 特性指定 Windows 规范属性名称 `System.Author`。 （此示例中省略了不相关的属性描述部分。）  
   

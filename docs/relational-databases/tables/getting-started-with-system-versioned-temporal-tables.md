@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 497996334b71bd986c25d3074ae4a0fac59506b7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1d62bbb6d38da6b60179f723e4bb363dec6ad225
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521276"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440533"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>由系统控制版本的时态表入门
 

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7abbff8fbf88ccca3a0226b651da11f0825436b1
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3ddf097ec820a17856407712153fe004c36e27a9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88472909"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440508"
 ---
 # <a name="user-defined-functions"></a>用户定义函数
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

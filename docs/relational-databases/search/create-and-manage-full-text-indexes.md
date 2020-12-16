@@ -13,13 +13,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347f59a7498e34ac1b99956990507559363813c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 501be7ed93ec7be0edd55d95bf7bd0b5bce229d8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493841"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460090"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -166,7 +166,7 @@ GO
  此示例返回名为“`Unique Key Column`”的结果集列，其中显示一行，行内包含 Document 表的唯一键列 DocumentNode 的名称。 请注意，如果此查询包含无效的索引名称，索引名称与表不对应或表不存在等，它将返回 NULL。  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>索引 varbinary(max) 和 xml 列  
- 如果 **varbinary(max)** 、 **varbinary**或 **xml** 列是全文索引列，则与任何其他全文索引列一样，可以使用全文谓词（CONTAINS 和 FREETEXT）以及函数（CONTAINSTABLE 和 FREETEXTTABLE）来查询该列。
+ 如果 **varbinary(max)** 、 **varbinary** 或 **xml** 列是全文索引列，则与任何其他全文索引列一样，可以使用全文谓词（CONTAINS 和 FREETEXT）以及函数（CONTAINSTABLE 和 FREETEXTTABLE）来查询该列。
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>索引 varbinary(max) 或 varbinary 数据  
  单个 **varbinary(max)** 或 **varbinary** 列可存储多种类型的文档。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持安装了相应筛选器并且在操作系统中可用的任何文档类型。 每个文档的文档类型由该文档的文件扩展名标识。 例如，对于 .doc 文件扩展名，全文搜索将使用支持 Microsoft Word 文档的筛选器。 有关可用文档类型的列表，请查询 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) 目录视图。  
@@ -182,7 +182,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="index-xml-data"></a>索引 xml 数据  
  **xml** 数据类型列仅存储 XML 文档和片段，并且只有 XML 筛选器用于此类文档。 因此，无需类型列。 在 **xml** 列上，全文索引会为 XML 元素的内容创建索引，但会忽略 XML 标记。 不为数值的属性值都会进行全文索引。 元素标记用作标记边界。 支持包含多种语言的格式正确的 XML 或 HTML 文档和片段。  
   
- 有关 **xml** 列的索引编制和查询的详细信息，请参阅[结合使用全文搜索和 XML 列](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
+ 有关 **xml** 列的索引编制和查询的详细信息，请参阅 [结合使用全文搜索和 XML 列](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
   
 ##  <a name="disable-or-re-enable-full-text-indexing-for-a-table"></a><a name="disable"></a> 为表禁用或重新启用全文索引   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，默认情况下所有由用户创建的数据库都启用了全文索引。 另外，在为表创建全文索引并将列添加到索引之后，就会自动为单个表启用全文索引。 从表的全文索引中删除最后一列时，会自动为表禁用全文索引。  

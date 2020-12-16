@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864477"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460062"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,15 +81,13 @@ ms.locfileid: "91864477"
   
 #### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>如果连接的人员将只连接到一个数据库  
   
-1.  为 Windows 组创建登录名。 （如果使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，请跳过 Active Directory 步骤，并在此处创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证登录名。）  
+1.  在用户数据库中，为 Windows 组创建一个包含的数据库用户。 （如果使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，请跳过 Active Directory 步骤，并在此处创建包含的数据库用户 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。）  
   
-2.  在用户数据库中，为 Windows 组创建一个包含的数据库用户。 （如果使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，请跳过 Active Directory 步骤，并在此处创建包含的数据库用户 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。）  
+1.  在用户数据库中，创建一个或多个用户定义的数据库角色，每个角色表示相似的职能。 例如，财务分析人员和销售分析人员。  
   
-3.  在用户数据库中，创建一个或多个用户定义的数据库角色，每个角色表示相似的职能。 例如，财务分析人员和销售分析人员。  
+1.  将数据库用户添加到一个或多个用户定义的数据库角色。  
   
-4.  将数据库用户添加到一个或多个用户定义的数据库角色。  
-  
-5.  向用户定义的数据库角色授予权限。  
+1.  向用户定义的数据库角色授予权限。  
   
  此时的典型结果是，Windows 用户是 Windows 组的成员。 Windows 组在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中具有登录名。 该登录名将映射到用户数据库中的用户标识。 用户是数据库角色的成员。 现在，你需要将权限添加到角色。  
   

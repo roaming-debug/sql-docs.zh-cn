@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a7a27ed17835067fd3d98eaa1651993fec8488d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 41525854d161d029beae6e0956bc11e536ab813b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493977"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460300"
 ---
 # <a name="replication-agent-executables-concepts"></a>复制代理可执行文件概念
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e982f8a8a2ee42c1ac2d84529a29842f8c4b4577
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fe0c23f3cd5b087b4e5a14d50d681b983aeac496
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235534"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459969"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -125,7 +125,7 @@ ms.locfileid: "93235534"
   
 -   对于聚集索引，请保持较短的索引键长度。 另外，对唯一列或非空列创建聚集索引可以使聚集索引获益。  
   
--   无法指定 **ntext** 、 **text** 、 **image** 、 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据类型的列为索引键列。 不过， **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 和 **xml** 数据类型的列可以作为非键索引列参与非聚集索引。 有关详细信息，请参阅本指南中的 [具有包含列的索引](#Included_Columns)。  
+-   无法指定 **ntext**、 **text**、 **image**、 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据类型的列为索引键列。 不过， **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 和 **xml** 数据类型的列可以作为非键索引列参与非聚集索引。 有关详细信息，请参阅本指南中的 [具有包含列的索引](#Included_Columns)。  
   
 -   **xml** 数据类型的列只能在 XML 索引中用作键列。 有关详细信息，请参阅 [XML 索引 (SQL Server)](../relational-databases/xml/xml-indexes-sql-server.md)。 SQL Server 2012 SP1 引入了称作选择性 XML 索引的一种新的 XML 索引。 这个新的索引可提高 SQL Server 中针对作为 XML 存储的数据的查询性能，从而通过降低索引本身的存储成本来加快大型 XML 数据工作负荷的索引编制和改进可伸缩性。 有关详细信息，请参阅[选择性 XML 索引 (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
@@ -476,11 +476,11 @@ INCLUDE (FileName);
   
 -   只能对表或索引视图的非聚集索引定义非键列。  
   
--   允许除 **text** 、 **ntext** 和 **image** 之外的所有数据类型。  
+-   允许除 **text**、 **ntext** 和 **image** 之外的所有数据类型。  
   
 -   精确或不精确的确定性计算列都可以是包含列。 有关详细信息，请参阅 [计算列上的索引](../relational-databases/indexes/indexes-on-computed-columns.md)。  
   
--   与键列一样，只要允许将计算列数据类型作为非键索引列，从 **image** 、 **ntext** 和 **text** 数据类型派生的计算列就可以作为非键（包含性）列。  
+-   与键列一样，只要允许将计算列数据类型作为非键索引列，从 **image**、 **ntext** 和 **text** 数据类型派生的计算列就可以作为非键（包含性）列。  
   
 -   不能同时在 INCLUDE 列表和键列列表中指定列名。  
   
@@ -503,7 +503,7 @@ INCLUDE (FileName);
   
     -   将列的为空性从 NOT NULL 改为 NULL。  
   
-    -   增加 **varchar** 、 **nvarchar** 或 **varbinary** 列的长度。  
+    -   增加 **varchar**、 **nvarchar** 或 **varbinary** 列的长度。  
   
         > [!NOTE]  
         >  这些列修改限制也适用于索引键列。  
@@ -567,7 +567,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> 筛选索引设计指南  
  筛选索引是一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。  
   
-**适用范围** ： [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
+**适用范围**： [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
   
  筛选索引与全表索引相比具有以下优点：  
   
@@ -821,7 +821,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 所有内存优化表都至少必须有一个索引，因为行正是通过索引才连接在一起。 在内存优化表中，每个索引也经过内存优化。 哈希索引是内存优化表中可能存在的索引类型之一。 有关详细信息，请参阅[内存优化表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。
 
-**适用范围** ： [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
+**适用范围**： [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
 
 ### <a name="hash-index-architecture"></a>哈希索引体系结构
 哈希索引包含一个指针数组，该数组的每个元素被称为哈希桶。
@@ -913,7 +913,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 非聚集索引是内存优化表中可能存在的一种索引类型。 有关详细信息，请参阅[内存优化表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。
 
-**适用范围** ： [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
+**适用范围**： [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>内存中非聚集索引体系结构
 

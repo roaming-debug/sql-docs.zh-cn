@@ -14,14 +14,14 @@ ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: edfea50f0970f9d868ec36fe80d5ecc18c0e4a8d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 509a3fccabcacaf6429ed324756d2a6f13f06867
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493808"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460070"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016 中弃用的全文搜索功能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,6 +57,6 @@ ms.locfileid: "88493808"
 |sp_detach_db 选项：<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|无。|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service 操作值：resource_usage 没有函数。|无|sp_fulltext_service @action=resource_usage|200|  
   
- &#42;“SQL Server:Deprecated Features”对象不监视 CREATE FULLTEXT CATLOG ON FILEGROUP 文件组的出现情况******。  
+ &#42;“SQL Server:Deprecated Features”对象不监视 CREATE FULLTEXT CATLOG ON FILEGROUP 文件组的出现情况。  
   
   

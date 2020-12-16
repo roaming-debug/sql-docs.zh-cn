@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ae4198c68bdef3ca6c4ad93e2c717c18125d8f4e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: b716a4cd679e0cb252fb5805c0d3a8e74c6fb60a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460240"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在复制监视器中查看发布和订阅状态
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

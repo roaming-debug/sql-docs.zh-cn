@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8092faa3-9cff-4f81-926c-6a0070d1ce2c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 470db784550df51193337aefd8a81360563d2bc3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: a22a2bb5e57bd80fdc868bf461af758831a3c9ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653452"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460270"
 ---
 # <a name="enable-a-database-for-replication-sql-server-management-studio"></a>为复制启用数据库 (SQL Server Management Studio)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

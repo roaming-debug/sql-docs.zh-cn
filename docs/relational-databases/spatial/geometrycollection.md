@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8af9fceff99881b5b6d2ddaa343adba949b70853
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6aa516fca8e2b7469b5856b32bffaad5640adccf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92006313"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459959"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

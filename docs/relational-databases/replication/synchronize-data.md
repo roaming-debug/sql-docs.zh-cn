@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3a6c7ba7deddb6b2728a846cb454917ee6b065bf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: c75b15ddd296d85ba7df44e97aa33dfca33ae8f2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716690"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460140"
 ---
 # <a name="synchronize-data"></a>同步数据
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

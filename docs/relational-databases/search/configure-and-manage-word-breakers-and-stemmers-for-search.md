@@ -20,14 +20,14 @@ ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7a33d02cb6ca1cbc100a458d254cf962d2d0d34b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 8281024e31d87cb1d02b4032a3d0f939da297232
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127792"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460110"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>配置和管理断字符和词干分析器以便搜索 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: bd2d4604e35c42b4b9689934b9fb41dd3e4fb6fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88470174"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460150"
 ---
 # <a name="validate-replicated-data"></a>验证已复制的数据
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

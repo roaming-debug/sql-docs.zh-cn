@@ -13,13 +13,13 @@ ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebeaebbc4a082bcb7051dc3d6c784b6ce1ec11fc
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3cb9d2938bddb44f22f4429daf0de0705ea53b65
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460120"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>配置和管理搜索筛选器
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

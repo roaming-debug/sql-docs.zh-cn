@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39db53bb4f198783b3da6c57d447f95467654287
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ed6728b164ab0d8562965935ad869c767a8a9961
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505191"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460320"
 ---
 # <a name="isolate-performance-problems"></a>隔离性能问题
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

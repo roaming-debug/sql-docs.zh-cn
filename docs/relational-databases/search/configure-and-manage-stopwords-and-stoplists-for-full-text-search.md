@@ -17,14 +17,14 @@ ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: a7da4fa25883f6deee5c0af8afa7df61b6bf5807
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127767"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460130"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>为全文搜索配置和管理非索引字和非索引字表
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

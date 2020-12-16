@@ -16,13 +16,13 @@ ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a431635fdca556023a5e598502919bfdc9e40db6
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ffb6203366e0003918d95d40c4ae3c77be7c765f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130923"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460100"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
 
