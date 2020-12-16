@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f742ece496377a224a67b12223b09d198327812a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243595"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484489"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理由系统控制版本的临时表中历史数据的保留期
 
@@ -332,7 +332,7 @@ COMMIT TRANSACTION
 - RANGE LEFT 用例：在 RANGE LEFT 用例中，最低分区边界属于分区 1，而该分区是空的（在换出分区后），因此执行 MERGE RANGE 不会发生任何数据移动。
 - RANGE RIGHT 用例：在 RANGE RIGHT 用例中，最低分区边界属于分区 2，而该分区不是空的，因为我们假设分区 1 是通过换出清空的。在这种情况下，执行 MERGE RANGE 将发生数据移动（分区 2 中的数据将移到分区 1）。 为了避免此问题，滑动窗口方案中的 RANGE RIGHT 需要一个始终为空的分区 1。 这意味着，如果我们使用 RANGE RIGHT，则应创建并维护一个与 RANGE LEFT 用例比较的附加分区。
 
-**结论** ：要进行分区管理和避免数据移动，在滑动分区中使用 RANGE LEFT 要方便得多。 但是，使用 RANGE RIGHT 定义分区要稍微简单一些，因为你无需处理日期时间的时钟周期问题。
+**结论**：要进行分区管理和避免数据移动，在滑动分区中使用 RANGE LEFT 要方便得多。 但是，使用 RANGE RIGHT 定义分区要稍微简单一些，因为你无需处理日期时间的时钟周期问题。
 
 ## <a name="using-custom-cleanup-script-approach"></a>使用自定义清理脚本方法
 

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1bb607326233dccdafa8fc57e3ce9d32cf20c9
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: a4221c4200d8b56a1ce1b848e024ef8f135d9129
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92195359"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489777"
 ---
 # <a name="oracle-destination"></a>Oracle 目标
 
@@ -200,7 +200,7 @@ Oracle 目标有错误输出。 组件的错误输出包括以下输出列：
 **错误行为**
 
 选择 Oracle 源应如何处理流中的错误：忽略失败、重定向行或让组件失败。
-**相关部分**：[数据中的错误处理](./error-handling-in-data.md?view=sql-server-2017)
+**相关部分**：[数据中的错误处理](./error-handling-in-data.md)
 
 **截断**
 

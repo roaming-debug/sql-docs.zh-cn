@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0af4a041580d59cc77d5605dc1df72ca8b823f0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 83180bde505a156c5a6fd5832916e578fb73c52c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548847"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484449"
 ---
 # <a name="partitioning-with-temporal-tables"></a>时态表分区
 
@@ -32,13 +32,13 @@ ms.locfileid: "89548847"
 
 - **当前表：**
 
-  - 当**SWITCH IN** 为 **SWITCH IN** 时，当前表的 **SWITCH IN**可用于加快数据加载和查询
+  - 当 **SWITCH IN** 为 **SWITCH IN** 时，当前表的 **SWITCH IN** 可用于加快数据加载和查询
   - **SYSTEM_VERSIONING** 为 **ON** 时，当前表的 **SWITCH IN**
 
 - **历史记录表：**
 
-  - 当**SWITCH OUT** 为 **SWITCH OUT** 时，可以执行历史记录表中的 **SWITCH OUT** to purge portions of h时，可以执行历史记录表中的tory data that 时，可以执行历史记录表中的 no longer relevant.
-  - 当**SWITCH IN** 为 **SWITCH IN** 时，不允许执行 **SWITCH IN** since it can invalidate temporal data cons时，不允许执行tency.
+  - 当 **SWITCH OUT** 为 **SWITCH OUT** 时，可以执行历史记录表中的 **SWITCH OUT** to purge portions of h时，可以执行历史记录表中的tory data that 时，可以执行历史记录表中的 no longer relevant.
+  - 当 **SWITCH IN** 为 **SWITCH IN** 时，不允许执行 **SWITCH IN** since it can invalidate temporal data cons时，不允许执行tency.
 
 ## <a name="next-steps"></a>后续步骤
 

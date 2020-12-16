@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a1e6bcb89b8206f34c8438f6ebab2ef983210057
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 910671ecefc7a52f86a7e025492c3e5ec1371e65
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330433"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485359"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 事件类别 (SQL Server Profiler)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88330433"
 |[Audit DBCC 事件类](../../relational-databases/event-classes/audit-dbcc-event-class.md)|指示已发出 DBCC 命令。|  
 |[Audit Fulltext 事件类](../../relational-databases/event-classes/audit-fulltext-event-class.md)|指示全文事件已发生。|  
 |[Audit Login Change Password 事件类](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|指示用户已更改其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录密码。|  
-|[Audit Login Change Property 事件类](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|指示已使用 **sp_defaultdb**、 **sp_defaultlanguage**或 ALTER LOGIN 修改登录属性。|  
+|[Audit Login Change Property 事件类](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|指示已使用 **sp_defaultdb**、 **sp_defaultlanguage** 或 ALTER LOGIN 修改登录属性。|  
 |[Audit Login 事件类](../../relational-databases/event-classes/audit-login-event-class.md)|指示用户已成功登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |[Audit Login Failed 事件类](../../relational-databases/event-classes/audit-login-failed-event-class.md)|指示用户尝试登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但是失败。|  
 |[Audit Login GDR 事件类](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|指示已添加或删除 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录权限。|  

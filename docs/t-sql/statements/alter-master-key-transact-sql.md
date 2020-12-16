@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c59acf58ce6816ebdcb7bf04fcb81df7c125693
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 344580a5c85898666c1450a0bc00d7a12fa20341
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024410"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489957"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 
@@ -148,5 +148,5 @@ GO
 - [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md)
 - [DROP MASTER KEY](../../t-sql/statements/drop-master-key-transact-sql.md)
 - [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [数据库分离和附加](../../relational-databases/databases/database-detach-and-attach-sql-server.md)

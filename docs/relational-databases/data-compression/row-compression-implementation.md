@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 829229371dfecd55a56fdbb9a6530635a6170904
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ad9f8a8552c534a0397db6cb32b17cbd3fb7cd71
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506347"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485479"
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

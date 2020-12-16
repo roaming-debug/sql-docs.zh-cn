@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 创建适用于 SQL Server、Azure SQL 数据库、Azure Synapse Analytics 和 Analytics Platform System 的数据库语法
 ms.custom: references_regions
-ms.date: 10/30/2020
+ms.date: 12/11/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -36,13 +36,13 @@ helpviewer_keywords:
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
+ms.openlocfilehash: 0e0cf7b17061340f347af536cad762f63cc38ef3
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235394"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489093"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -54,7 +54,7 @@ ms.locfileid: "93235394"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -70,7 +70,7 @@ ms.locfileid: "93235394"
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -182,7 +182,7 @@ database_name 是新数据库的名称。 数据库名称在 [!INCLUDE[ssNoVersi
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
+**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
 
 指定数据库的包含状态。 NONE = 非包含数据库。 PARTIAL = 部分包含的数据库。
 
@@ -227,25 +227,25 @@ DIRECTORY_NAME = \<directory_name>
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
+  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
 
   有关此选项的完整说明，请参阅[配置“默认全文语言”服务器配置选项](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)。
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
+  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
 
   有关此选项的完整说明，请参阅[配置“默认语言”服务器配置选项](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)。
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
+  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
 
   有关此选项的完整说明，请参阅[配置“嵌套触发器”服务器配置选项](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)。
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
+  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本
 
   有关此选项的完整说明，请参阅[“转换干扰词”服务器配置选项](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)。
 
@@ -322,7 +322,7 @@ ERROR_BROKER_CONVERSATIONS 结束所有会话，并产生一个错误指出数�
 > [!IMPORTANT]
 > 建议您不要附加未知或不可信源中的数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，然后检查数据库中的代码，例如存储过程或其他用户定义代码。
 > [!NOTE]
-> 在附加数据库时， **TRUSTWORTHY** 和 **DB_CHAINING** 选项没有影响。
+> 在附加数据库时，**TRUSTWORTHY** 和 **DB_CHAINING** 选项没有影响。
 
 FOR ATTACH_REBUILD_LOG 指定通过附加一组现有的操作系统文件来创建数据库。 该选项只限于读/写数据库。 必须有一个指定主文件的 \<filespec> 项。 如果缺少一个或多个事务日志文件，将重新生成日志文件。 ATTACH_REBUILD_LOG 自动创建一个新的 1 MB 的日志文件。 此文件放置于默认的日志文件位置。 有关此位置的信息，请参阅[查看或更改数据文件和日志文件的默认位置 - SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)。
 
@@ -371,13 +371,13 @@ SIZE size 指定文件的大小。
 
 size 文件的初始大小。
 
-如果没有为主文件提供 *size* ，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用 model 数据库中主文件的大小。 model 数据库中主文件的默认大小为 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）或 1 MB（对于较早版本）。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size* ，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）或 1 MB（对于较早版本）作为该文件的大小。 为主文件指定的大小至少应与 model 数据库的主文件大小相同。
+如果没有为主文件提供 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用 model 数据库中主文件的大小。 model 数据库中主文件的默认大小为 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）或 1 MB（对于较早版本）。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）或 1 MB（对于较早版本）作为该文件的大小。 为主文件指定的大小至少应与 model 数据库的主文件大小相同。
 
 可以使用千字节 (KB)、兆字节 (MB)、千兆字节 (GB) 或兆兆字节 (TB) 后缀。 默认值为 MB。 指定一个整数，不包含小数位。 *Size* 是一个整数值。 对于大于 2147483647 的值，使用更大的单位。
 
 MAXSIZE max_size 指定文件可增大到的最大大小。 将 *os_file_name* 指定为 UNC 路径时，不能指定 MAXSIZE。
 
-max_size 最大的文件大小。 可以使用 KB、MB、GB 和 TB 后缀。 默认值为 MB。 指定一个整数，不包含小数位。 如果未指定 *max_size* ，文件将一直增长到磁盘变满为止。 *Max_size* 是一个整数值。 对于大于 2147483647 的值，使用更大的单位。
+max_size 最大的文件大小。 可以使用 KB、MB、GB 和 TB 后缀。 默认值为 MB。 指定一个整数，不包含小数位。 如果未指定 *max_size*，文件将一直增长到磁盘变满为止。 *Max_size* 是一个整数值。 对于大于 2147483647 的值，使用更大的单位。
 
 UNLIMITED 指定文件将增长到磁盘充满。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定为不限制增长的日志文件的最大大小为 2 TB，而数据文件的最大大小为 16 TB。
 
@@ -411,7 +411,7 @@ CONTAINS FILESTREAM 指定文件组在文件系统中存储 FILESTREAM 二进制
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**适用于** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本
 
 指定文件组在文件系统中存储内存优化数据。 有关详细信息，请参阅[内存中 OLTP - 内存中优化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每个数据库只能有一个 MEMORY_OPTIMIZED_DATA 文件组。 有关通过创建文件组来存储内存优化数据的代码示例，请参阅[创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。
 
@@ -485,7 +485,7 @@ AS SNAPSHOT OF source_database_name 指定要创建的数据库为 source_databa
 
 指定 `CREATE DATABASE <database_name>` 语句而不带其他大小参数时，主数据文件与模型数据库中的主文件具有相同的大小。
 
-除非指定了 `FOR ATTACH`，否则每个新数据库都从模型数据库继承数据库选项设置。 例如，在 model 数据库和任何新建数据库中，数据库选项 auto shrink 都设置为 **true** 。 如果更改了 model 数据库中的选项，则这些新选项设置也将用于您所创建的所有新数据库中。 在 model 数据库中的更改操作不会影响现有数据库。 如果在 CREATE DATABASE 语句中指定了 FOR ATTACH，则新数据库将继承原始数据库的数据库选项设置。
+除非指定了 `FOR ATTACH`，否则每个新数据库都从模型数据库继承数据库选项设置。 例如，在 model 数据库和任何新建数据库中，数据库选项 auto shrink 都设置为 **true**。 如果更改了 model 数据库中的选项，则这些新选项设置也将用于您所创建的所有新数据库中。 在 model 数据库中的更改操作不会影响现有数据库。 如果在 CREATE DATABASE 语句中指定了 FOR ATTACH，则新数据库将继承原始数据库的数据库选项设置。
 
 ## <a name="viewing-database-information"></a>查看数据库信息
 
@@ -859,11 +859,11 @@ GO
 - [二进制大型对象 - Blob 数据](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         \* SQL 数据库 \*
@@ -875,7 +875,7 @@ GO
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -997,7 +997,7 @@ MAXSIZE 指定数据库的最大大小。 MAXSIZE 必须对指定 EDITION（服�
 |100 MB|√|√|√|√|√|
 |500 MB|√|√|√|√|√|
 |1 GB|√|√|√|√|√|
-|2 GB|√ (D)|√|√|√|√|
+|2 GB|√ (D)|√|√ (D)|√|√|
 |5 GB|空值|√|√|√|√|
 |10 GB|空值|√|√|√|√|
 |20 GB|空值|√|√|√|√|
@@ -1007,13 +1007,13 @@ MAXSIZE 指定数据库的最大大小。 MAXSIZE 必须对指定 EDITION（服�
 |100 GB|空值|√|√|√|√|
 |150 GB|空值|√|√|√|√|
 |200 GB|空值|√|√|√|√|
-|250 GB|空值|√ (D)|√ (D)|√|√|
-|300 GB|空值|不适用|√|√|√|
+|250 GB|空值|√ (D)|√ (D)|√ (D)|√ (D)|
+|300 GB|空值|空值|√|√|√|
 |400 GB|空值|空值|√|√|√|
 |500 GB|空值|空值|√|√ (D)|√|
 |750 GB|空值|空值|√|√|√|
 |1024 GB|空值|空值|√|√|√ (D)|
-|从 1024 GB 到最大 4096 GB，增量为 256 GB* |空值|空值|不适用|不适用|√|√|
+|从 1024 GB 到最大 4096 GB，增量为 256 GB* |空值|空值|空值|不适用|√|√|
 
 \* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。 P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关 DTU 模型资源限制的其他详细信息，请参阅 [DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
 
@@ -1288,11 +1288,11 @@ CREATE DATABASE test_zone_redundancy
 - [ALTER DATABASE - Azure SQL 数据库](alter-database-transact-sql.md?view=azuresqldb-currentls)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1304,7 +1304,7 @@ CREATE DATABASE test_zone_redundancy
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1324,7 +1324,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ```
 
 > [!IMPORTANT]
-> 要在托管实例中为数据库添加文件或设置包含，请使用 [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi) 语句。
+> 要在托管实例中为数据库添加文件或设置包含，请使用 [ALTER DATABASE](alter-database-transact-sql.md?tabs=sqldbmi) 语句。
 
 ## <a name="arguments"></a>参数
 
@@ -1372,11 +1372,11 @@ CREATE DATABASE TestDB1;
 请参阅 [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1388,7 +1388,7 @@ CREATE DATABASE TestDB1;
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1402,7 +1402,7 @@ CREATE DATABASE TestDB1;
 
 ## <a name="syntax"></a>语法
 
-### <a name="sql-pool"></a>[SQL 池](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[专用 SQL 池](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1423,7 +1423,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
-### <a name="sql-on-demand-preview"></a>[SQL 按需版本（预览版）](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[无服务器 SQL 池](#tab/sqlod)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;] 
@@ -1504,11 +1504,11 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 - [DROP DATABASE - Transact-SQL](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current)

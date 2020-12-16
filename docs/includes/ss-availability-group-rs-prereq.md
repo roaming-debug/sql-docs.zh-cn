@@ -106,4 +106,4 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [<service account or user>];
 
 防火墙上的 TCP 端口必须对侦听器端口打开。
 
-有关详细信息，请参阅 [数据库镜像终结点 (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md?view=sql-server-2017)。
+有关详细信息，请参阅 [数据库镜像终结点 (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。

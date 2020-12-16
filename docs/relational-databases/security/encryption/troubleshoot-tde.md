@@ -13,13 +13,13 @@ ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2eb908b1d63b70453aeff0e650f93b7c4e794520
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 2328cb73bbd101af12074620d0f755209e6dd185
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679252"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489837"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误
 
@@ -70,7 +70,7 @@ ms.locfileid: "92679252"
 
 - Azure PowerShell：[Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- Azure CLI：[az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- Azure CLI：[az-sql-server-show](/cli/azure/sql/server#az-sql-server-show)
 
 **缓解**
 
@@ -78,7 +78,7 @@ ms.locfileid: "92679252"
 
 - Azure PowerShell：[Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0)（含 `-AssignIdentity` 选项）。
 
-- Azure CLI：[az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update)（含 `--assign_identity` 选项）。
+- Azure CLI：[az sql server update](/cli/azure/sql/server#az-sql-server-update)（含 `--assign_identity` 选项）。
 
 在 Azure 门户中，依次转到密钥保管库和“访问策略”  。 完成以下步骤： 
 
@@ -105,7 +105,7 @@ ms.locfileid: "92679252"
 
     - Azure PowerShell：[Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - Azure CLI：[az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - Azure CLI：[az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-show) 
 
 1. 使用密钥 URI 来标识密钥保管库：
 

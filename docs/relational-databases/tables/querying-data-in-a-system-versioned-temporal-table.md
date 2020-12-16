@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f25698110307ca4539b0939ad8c1f0cb9696145b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1efbdca9b0d3d7919cf3e3f54837decd37bdf5b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537808"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484439"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>在系统控制版本的时态表中查询数据
 
@@ -35,7 +35,7 @@ ms.locfileid: "89537808"
 - CONTAINED IN (<start_date_time> , <end_date_time>)
 - ALL
 
-可以在查询中为每个表单独指定**FOR SYSTEM_TIME** 。 它可以在公用表表达式、表值函数和存储过程内使用。 将表别名与时态表配合使用时，时态表名称和别名之间必须包含 FOR SYSTEM_TIME 子句（请参阅下面“使用 AS OF 子句查询特定时间”中的第二个示例）。
+可以在查询中为每个表单独指定 **FOR SYSTEM_TIME** 。 它可以在公用表表达式、表值函数和存储过程内使用。 将表别名与时态表配合使用时，时态表名称和别名之间必须包含 FOR SYSTEM_TIME 子句（请参阅下面“使用 AS OF 子句查询特定时间”中的第二个示例）。
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>使用 AS OF 子子句查询特定时间
 

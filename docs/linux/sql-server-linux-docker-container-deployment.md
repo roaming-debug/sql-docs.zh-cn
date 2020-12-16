@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 380fa9b4cb6941b438d0308be38956659862ce50
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6fbf5782ff67b3406cffad808b27c47112a48d97
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115445"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489857"
 ---
 # <a name="deploy-and-connect-to-sql-server-docker-containers"></a>部署并连接到 SQL Server Docker 容器
 
@@ -45,8 +45,8 @@ ms.locfileid: "92115445"
 
 若要拉取并运行 SQL Server 2017 和 SQL Server 2019 的 Docker 容器映像，请按照以下快速入门中的先决条件和步骤执行操作：
 
-- [使用 Docker 运行 SQL Server 2017 容器映像](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [使用 Docker 运行 SQL Server 2019 容器映像](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [使用 Docker 运行 SQL Server 2017 容器映像](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
+- [使用 Docker 运行 SQL Server 2019 容器映像](quickstart-install-connect-docker.md?view=sql-server-ver15&preserve-view=true)
 
 本配置文章在以下部分中提供其他使用方案。
 
@@ -245,7 +245,7 @@ Packages
 这些步骤也可用于降级现有容器。 例如，你可能会希望回滚或降级正在运行的容器以进行故障排除或测试。 若要降级正在运行的容器，必须对数据文件夹使用持久性技术。 按照[升级部分](#upgrade)所述的相同步骤进行操作，但在运行新容器时指定早期版本的标记名称。
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="run-rhel-based-container-images"></a><a id="rhel"></a> 运行基于 RHEL 的容器映像
 
@@ -314,7 +314,7 @@ docker run --name sqlenterprise `
 > 通过将值 **Y** 传递给环境变量 **ACCEPT_EULA** 并将版本值传递给 **MSSQL_PID**，你表明自己拥有打算使用的 SQL Server 版本的现行有效有许可证。 你还同意自己对在 Docker 容器映像中运行的 SQL Server 软件的使用将受 SQL Server 许可条款的约束。
 
 > [!NOTE]
-> 有关 **MSSQL_PID** 的可能值的完整列表，请参阅[在 Linux 上使用环境变量配置 SQL Server 设置](sql-server-linux-configure-environment-variables.md)。
+> 有关 **MSSQL_PID** 的可能值的完整列表，请参阅 [在 Linux 上使用环境变量配置 SQL Server 设置](sql-server-linux-configure-environment-variables.md)。
 
 ## <a name="run-multiple-sql-server-containers"></a><a id="multiple"></a>运行多个 SQL Server 容器
 
@@ -323,7 +323,7 @@ Docker 支持在同一主机上运行多个 SQL Server 容器。 对要求在同
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-以下示例创建两个 SQL Server 2017 容器，并将它们映射到主机的 **1401** 和 **1402**端口。
+以下示例创建两个 SQL Server 2017 容器，并将它们映射到主机的 **1401** 和 **1402** 端口。
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -348,7 +348,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 以下示例创建两个 SQL Server 2019 容器，并将它们映射到主机的 1401 和 1402 端口   。
 
@@ -426,12 +426,12 @@ docker pull mcr.microsoft.com/mssql/server:<image_tag>
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- 通过查看[快速入门](quickstart-install-connect-docker.md?view=sql-server-2017)，开始在 Docker 上使用 SQL Server 2017 容器映像
+- 通过查看[快速入门](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)，开始在 Docker 上使用 SQL Server 2017 容器映像
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - 通过查看[快速入门](quickstart-install-connect-docker.md?view=sql-server-ver15)，开始在 Docker 上使用 SQL Server 2019 容器映像
 

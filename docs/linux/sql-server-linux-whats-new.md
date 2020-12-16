@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f2b955579853c48f7899614f0e87dd996f3076e
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 7f2eba8e373fd291606a3580f0464b829a86d03c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115580"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489757"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的新增功能
 
@@ -25,11 +25,11 @@ ms.locfileid: "92115580"
 
 ## <a name="ubuntu-1804-supported"></a>支持 Ubuntu 18.04
 
-自 SQL Server 2017 CU20 起，现已开始支持 Ubuntu 18.04。 查看[在 Ubuntu 上安装 SQL Server 并创建数据库](quickstart-install-connect-ubuntu.md?view=sql-server-2017)快速入门。
+自 SQL Server 2017 CU20 起，现已开始支持 Ubuntu 18.04。 查看[在 Ubuntu 上安装 SQL Server 并创建数据库](quickstart-install-connect-ubuntu.md)快速入门。
 
 ## <a name="rhel-8-supported"></a>支持 RHEL 8
 
-自 SQL Server 2017 CU20 起，现已开始支持 RHEL 8。 查看[在 Red Hat 上安装 SQL Server 并创建数据库](quickstart-install-connect-red-hat.md?view=sql-server-2017)快速入门。
+自 SQL Server 2017 CU20 起，现已开始支持 RHEL 8。 查看[在 Red Hat 上安装 SQL Server 并创建数据库](quickstart-install-connect-red-hat.md)快速入门。
 
 ## <a name="sql-server-database-engine"></a>SQL Server 数据库引擎
 

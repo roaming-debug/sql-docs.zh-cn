@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bab6bfa38cb33f046bc2c96e18f359d2b31526b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6472022afef2562c971773928401abb68cfbad66
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424249"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485399"
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired 事件类
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

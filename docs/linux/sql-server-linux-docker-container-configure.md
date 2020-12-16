@@ -9,14 +9,14 @@ ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 53bfe3652df7136b0358590f6d9be51f36907b2d
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: fbae468dfd0f68f2765dc781ad710e9b8525aeaf
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511556"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489887"
 ---
 # <a name="configure-and-customize-sql-server-docker-containers"></a>配置和自定义 SQL Server Docker 容器
 
@@ -36,7 +36,7 @@ ms.locfileid: "89511556"
 
 ## <a name="persist-your-data"></a><a id="persist"></a> 保留数据
 
-即使通过 `docker stop` 和 `docker start` 重启容器，SQL Server 配置仍会更改，且数据库文件依然保留在容器中。 但是，如果使用 `docker rm` 删除容器，则会删除容器中的所有内容，包括 SQL Server 和数据库。 以下部分介绍如何使用**数据卷**保留数据库文件（即使关联的容器已被删除）。
+即使通过 `docker stop` 和 `docker start` 重启容器，SQL Server 配置仍会更改，且数据库文件依然保留在容器中。 但是，如果使用 `docker rm` 删除容器，则会删除容器中的所有内容，包括 SQL Server 和数据库。 以下部分介绍如何使用 **数据卷** 保留数据库文件（即使关联的容器已被删除）。
 
 > [!IMPORTANT]
 > 对于 SQL Server，了解 Docker 中的数据持久性至关重要。 除本部分讨论的内容外，请参阅有关[如何在 Docker 容器中管理数据](https://docs.docker.com/engine/tutorials/dockervolumes/)的 Docker 文档。
@@ -69,7 +69,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -125,7 +125,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -161,7 +161,7 @@ docker volume ls
 若要删除数据卷容器，请使用 `docker volume rm` 命令。
 
 > [!WARNING]
-> 如果删除数据卷容器，则该容器中的所有 SQL Server 数据都会被*永久*删除。
+> 如果删除数据卷容器，则该容器中的所有 SQL Server 数据都会被 *永久* 删除。
 
 ### <a name="backup-and-restore"></a>备份和还原
 
@@ -281,7 +281,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -340,7 +340,7 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_D
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -367,12 +367,12 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_D
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- 通过查看[快速入门](quickstart-install-connect-docker.md?view=sql-server-2017)，开始在 Docker 上使用 SQL Server 2017 容器映像
+- 通过查看[快速入门](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)，开始在 Docker 上使用 SQL Server 2017 容器映像
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - 通过查看[快速入门](quickstart-install-connect-docker.md?view=sql-server-ver15)，开始在 Docker 上使用 SQL Server 2019 容器映像
 

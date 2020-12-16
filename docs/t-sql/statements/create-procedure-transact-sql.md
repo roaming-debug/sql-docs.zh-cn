@@ -46,13 +46,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11718e97ac633b108c6cf49c27d2d47ea0d0ee94
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 99697c6bb3e3b9eb8de2f3e6c41e092539cb79b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300264"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483919"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -148,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 
 OR ALTER
 
-**适用对象** ：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）。
+**适用对象**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）。
 
 如果过程已存在，则更改该过程。
 
@@ -164,7 +164,7 @@ procedure_name：过程的名称。 过程名称必须遵循有关[标识符](..
 
 **;** *number*
 
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 用于对同名的过程分组的可选整数。 使用一个 DROP PROCEDURE 语句可将这些分组过程一起删除。
 
@@ -210,7 +210,7 @@ RECOMPILE 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]不缓存此过程的
 
 ENCRYPTION
 
-**适用对象** ：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用对象**：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 CREATE PROCEDURE 语句的原始文本转换为模糊格式。 模糊代码的输出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何目录视图中都不能直接显示。 对系统表或数据库文件没有访问权限的用户不能检索模糊文本。 但是，可以通过 [DAC 端口](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)访问系统表的特权用户或直接访问数据文件的特权用户可以使用此文本。 此外，能够向服务器进程附加调试器的用户可在运行时从内存中检索已解密的过程。 有关如何访问系统元数据的详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。
 
@@ -226,7 +226,7 @@ EXECUTE AS 子句指定在其中执行过程的安全上下文。
 
 FOR REPLICATION
 
-**适用对象** ：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用对象**：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定为复制创建该过程。 因此，它不能在订阅服务器上执行。 使用 FOR REPLICATION 选项创建的过程可用作过程筛选器，且仅在复制过程中执行。 如果指定了 FOR REPLICATION，则无法声明参数。 对于 CLR 过程，不能指定 FOR REPLICATION。 对于使用 FOR REPLICATION 创建的过程，忽略 RECOMPILE 选项。
 
@@ -236,7 +236,7 @@ FOR REPLICATION
 
 EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
 指定 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集的方法，以便 CLR 过程引用。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为类存在于程序集中。 如果类包含一个使用句点 (.) 分隔命名空间各部分的限定命名空间的名称，则必须使用方括号 ([]) 或引号 ("") 将类名称分隔开  。 指定的方法必须为该类的静态方法。
 
@@ -247,7 +247,7 @@ EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 
 ATOMIC WITH
 
-**适用于** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指示执行原子存储过程。 更改提交或所有更改通过引发异常回滚。 ATOMIC WITH 块对于本机编译存储过程是必需的。
 
@@ -273,25 +273,25 @@ NULL | NOT NULL 确定参数中是否允许使用 null 值。 NULL 是默认值�
 
 NATIVE_COMPILATION
 
-**适用于** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指示过程已本机编译。 NATIVE_COMPILATION、SCHEMABINDING 和 EXECUTE AS 可以按任意顺序指定。 有关详细信息，请参阅[本机编译的存储过程](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)。
 
 SCHEMABINDING
 
-**适用于** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 确保过程引用的表不能删除或修改。 SCHEMABINDING 在本机编译存储过程中是必需的。 （有关详细信息，请参阅[本机编译的存储过程](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)。）SCHEMABINDING 限制与其对用户定义的函数的限制是相同的。 有关详细信息，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 中的 SCHEMABINDING 部分。
 
 LANGUAGE = [N] 'language'
 
-**适用于** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 等效于 [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md) 会话选项。 LANGUAGE = [N] 'language' 是必须的。
 
 TRANSACTION ISOLATION LEVEL
 
-**适用于** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 对于本机编译存储过程是必需的。 指定存储过程的事务隔离级别。 选项如下：
 
@@ -309,7 +309,7 @@ SNAPSHOT 指定事务中任何语句读取的数据都是事务开始时便存�
 
 DATEFIRST = *number*
 
-**适用于** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 将一周的第一天指定为 1 到 7 中的一个数字。 DATEFIRST 是可选的。 如果未指定，该设置从指定语言进行推断。
 
@@ -317,7 +317,7 @@ DATEFIRST = *number*
 
 DATEFORMAT = format
 
-**适用于** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定用于解释 date、smalldatetime、datetime、datetime2 和 datetimeoffset 字符串的月、日和年日期部分的顺序。 DATEFORMAT 是可选的。 如果未指定，该设置从指定语言进行推断。
 
@@ -325,7 +325,7 @@ DATEFORMAT = format
 
 DELAYED_DURABILITY = { OFF | ON }
 
-**适用于** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、默认或延迟的持久。
 
@@ -545,7 +545,7 @@ GO
 
 以下示例将创建 `GetPhotoFromDB` 过程，此过程引用 `HandlingLOBUsingCLR` 程序集中的 `LargeObjectBinary` 类的 `GetPhotoFromDB` 方法。 在创建过程之前，已在本地数据库中注册 `HandlingLOBUsingCLR` 程序集。
 
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、（如果使用从 assembly_bits 创建的程序集）。
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、（如果使用从 assembly_bits 创建的程序集）。
 
 ```sql
 CREATE ASSEMBLY HandlingLOBUsingCLR
@@ -886,7 +886,7 @@ DROP PROCEDURE Production.uspDeleteWorkOrder;
 
 以下示例将创建 `HumanResources.uspEncryptThis` 过程。
 
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、SQL 数据库。
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、SQL 数据库。
 
 ```sql
 CREATE PROCEDURE HumanResources.uspEncryptThis

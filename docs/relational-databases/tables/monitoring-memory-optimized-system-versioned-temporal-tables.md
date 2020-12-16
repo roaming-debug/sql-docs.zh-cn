@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add320eaae050b84184b5db11b5e09083b910000
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e593417e5b88037ad3fddbfba4a8cb99ddb50e94
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548854"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484459"
 ---
 # <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>监视系统版本控制型内存优化临时表
 

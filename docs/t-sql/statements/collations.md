@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3c05cd8fbf9ae131bbb1bc61f18acab043a8228
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dc115153671a4cd8aed490205b19f4a21c9e8949
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126206"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489487"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -153,7 +153,7 @@ Chiapas
 
 ### <a name="b-additional-examples"></a>B. 其他示例
 
-有关使用 COLLATE 的其他示例，请参阅 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) 示例 **G. 创建数据库并指定排序规则名称和选项**，以及 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 示例 **V. 更改列排序规则**。
+有关使用 COLLATE 的其他示例，请参阅 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md#examples) 示例 **G. 创建数据库并指定排序规则名称和选项**，以及 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 示例 **V. 更改列排序规则**。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -161,7 +161,7 @@ Chiapas
 - [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)
 - [排序规则优先级](../../t-sql/statements/collation-precedence-transact-sql.md)
 - [常量](../../t-sql/data-types/constants-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [表数据类型](../../t-sql/data-types/table-transact-sql.md)

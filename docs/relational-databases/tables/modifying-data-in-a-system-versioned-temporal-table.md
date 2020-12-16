@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6c431669d89f87c49cfd96d48e6b3c53c8d866e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7acb5296f5cfcefd5c39c9ceb643a1076c11bfbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548862"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484469"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>修改由系统控制版本的时态表中的数据
 
@@ -29,7 +29,7 @@ ms.locfileid: "89548862"
 
 ## <a name="inserting-data"></a>插入数据
 
-当插入新数据时，如果它们不是 **HIDDEN** ，你需要对 **PERIOD**列作出说明。 你还可以对系统版本控制的临时表使用分区切换。
+当插入新数据时，如果它们不是 **HIDDEN** ，你需要对 **PERIOD** 列作出说明。 你还可以对系统版本控制的临时表使用分区切换。
 
 ### <a name="insert-new-data-with-visible-period-columns"></a>使用可见的时间段列插入新数据
 
@@ -191,11 +191,11 @@ AND Department.DeptID = 10 ;
 
 ## <a name="deleting-data"></a>删除数据
 
-用常规的 **DELETE** 语句在当前表中删除数据。 已删除行的结束时间段列将填充底层事物的开始时间。 当 **SYSTEM_VERSIONING = ON**时不能直接从历史记录表删除行。 设置 **SYSTEM_VERSIONING = OFF** 并从当前和历史记录表中删除行，但请记住，这样的话系统将不会保留更改的历史记录。 **SYSTEM_VERSIONING = ON**时，不支当前表的 **TRUNCATE** 和 **SWITCH PARTITION OUT** ，以及历史记录表的 **SWITCH PARTITION IN**。
+用常规的 **DELETE** 语句在当前表中删除数据。 已删除行的结束时间段列将填充底层事物的开始时间。 当 **SYSTEM_VERSIONING = ON** 时不能直接从历史记录表删除行。 设置 **SYSTEM_VERSIONING = OFF** 并从当前和历史记录表中删除行，但请记住，这样的话系统将不会保留更改的历史记录。 **SYSTEM_VERSIONING = ON** 时，不支当前表的 **TRUNCATE** 和 **SWITCH PARTITION OUT** ，以及历史记录表的 **SWITCH PARTITION IN**。
 
 ## <a name="using-merge-to-modify-data-in-temporal-table"></a>使用 MERGE 在临时表中修改数据
 
-支持**MERGE** 操作，有关 **INSERT** 列方面的限制与 **INSERT** 和 **UPDATE** 语句的相同。
+支持 **MERGE** 操作，有关 **INSERT** 列方面的限制与 **INSERT** 和 **UPDATE** 语句的相同。
 
 ```sql
 CREATE TABLE DepartmentStaging (DeptId INT, DeptName varchar(50));

@@ -60,13 +60,13 @@ helpviewer_keywords:
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cef7fd2ddbcc95789ddb8a306538b6dfdaf29c5
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: aff544048da8bb09a2fd488d26a7bd1f69cf8f56
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521184"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489582"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -785,7 +785,7 @@ SET ( FILESTREAM_ON = { partition_scheme_name \| filestream_filegroup_name \| "d
 
 如果指定 partition_scheme_name，则会应用 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 规则。 请确保表已针对行数据进行了分区，且它的分区方案使用与 FILESTREAM 分区方案相同的分区功能和分区列。
 
-filestream_filegroup_name 指定 FILESTREAM 文件组的名称。 文件组必须包含一个使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句为文件组定义的文件；否则，便会导致错误生成。
+filestream_filegroup_name 指定 FILESTREAM 文件组的名称。 文件组必须包含一个使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句为文件组定义的文件；否则，便会导致错误生成。
 
 "default" 指定具有 DEFAULT 属性集的 FILESTREAM 文件组 。 如果没有 FILESTREAM 文件组，便会导致错误生成。
 

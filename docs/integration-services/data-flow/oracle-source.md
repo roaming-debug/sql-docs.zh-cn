@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5919aa313147b54e52289aa0c1d530a5f0064aab
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: fe89a97c1fb13d9446b0fe07f04c7399b42a439e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195349"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489767"
 ---
 # <a name="oracle-source"></a>Oracle 源
 
@@ -162,7 +162,7 @@ Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 **错误行为**
 
 选择 Oracle 源应如何处理流中的错误：忽略失败、重定向行或让组件失败。
-**相关部分**：[数据中的错误处理](./error-handling-in-data.md?view=sql-server-2017)
+**相关部分**：[数据中的错误处理](./error-handling-in-data.md)
 
 **截断**
 

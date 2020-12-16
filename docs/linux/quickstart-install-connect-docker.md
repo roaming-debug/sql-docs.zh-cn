@@ -11,14 +11,14 @@ ms.prod: sql
 ms.technology: linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+monikerRange: '>= sql-server-linux-2017 || >= sql-server-2017'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 8e87ca7630fca5e72daf2a3e4eedfd38d50482fd
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 94ca368b7eaf9b9ad37107c01eb84e239d5fb3c0
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115660"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490027"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入门：使用 Docker 运行 SQL Server 容器映像
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92115660"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 > [!NOTE]
 > 自 SQL Server 2019 CU3 起，支持 Ubuntu 18.04。
@@ -44,7 +44,7 @@ ms.locfileid: "92115660"
 在本快速入门中，请使用 Docker 拉取和运行 SQL Server 2019 容器映像 [mssql-server](https://hub.docker.com/r/microsoft/mssql-server)。 然后使用 **sqlcmd** 连接，以创建第一个数据库并运行查询。
 
 > [!TIP]
-> 本快速入门将创建 SQL Server 2019 容器。 如果希望创建 SQL Server 2017 容器，请参阅[本文的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017)。
+> 本快速入门将创建 SQL Server 2019 容器。 如果希望创建 SQL Server 2017 容器，请参阅[本文的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true)。
 
 ::: moniker-end
 
@@ -138,7 +138,7 @@ any changes to one section should be duplicated in the other-->
 
    | 参数 | 说明 |
    |-----|-----|
-   | **-e "ACCEPT_EULA=Y"** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?linkid=857698)。 SQL Server 映像的必需设置。 |
+   | **-e "ACCEPT_EULA=Y"** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受 [最终用户许可协议](https://go.microsoft.com/fwlink/?linkid=857698)。 SQL Server 映像的必需设置。 |
    | -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 将主机环境中的 TCP 端口（第一个值）映射到容器中的 TCP 端口（第二个值）。 在此示例中，SQL Server 侦听容器中的 TCP 1433，并对主机上的端口 1433 公开。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
@@ -190,7 +190,7 @@ SELECT @@SERVERNAME,
 <!--End of 2017 "Pull and run" section-->
 
 <!--This is the 2019 version of the "Pull and run" section-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="pull-and-run-the-2019-container-image"></a><a id="pullandrun2019"></a> 拉取并运行 2019 容器映像
 
@@ -221,7 +221,7 @@ SELECT @@SERVERNAME,
    ::: zone-end
 
    > [!TIP]
-   > 本快速入门使用 SQL Server 2019 Docker 映像。 若要运行 SQL Server 2017 映像，请参阅[本文的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)。
+   > 本快速入门使用 SQL Server 2019 Docker 映像。 若要运行 SQL Server 2017 映像，请参阅[本文的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true#pullandrun2017)。
 
    前一命令拉取基于 Ubuntu 的 SQL Server 2019 容器映像。 若要改为使用基于 RedHat 的容器映像，请参阅[运行基于 RHEL 的容器映像](./sql-server-linux-docker-container-deployment.md#rhel)。 要查看所有可用映像，请参阅 [mssql-server-linux Docker 中心页](https://hub.docker.com/_/microsoft-mssql-server)。
 
@@ -264,7 +264,7 @@ SELECT @@SERVERNAME,
 
    | 参数 | 说明 |
    |-----|-----|
-   | **-e "ACCEPT_EULA=Y"** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
+   | **-e "ACCEPT_EULA=Y"** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受 [最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
    | -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 将主机环境中的 TCP 端口（第一个值）映射到容器中的 TCP 端口（第二个值）。 在此示例中，SQL Server 侦听容器中的 TCP 1433，并对主机上的端口 1433 公开。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |

@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 10cb78d3804ed022619ed6c19a69e4722c518562
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 51e617c26aad4261d0d337ff2fd2a3dcd19c79b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653286"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484859"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>SQL Server 复制“分发服务器属性”对话框 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
