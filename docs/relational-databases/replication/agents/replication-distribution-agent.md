@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 71782c95201c224bdd40624e23f529b01d892f22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395018"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475938"
 ---
 # <a name="replication-distribution-agent"></a>复制分发代理
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -191,7 +191,7 @@ distrib [-?]
  登录超时前等待的秒数。 默认值为 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
- 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。 默认值是处理器数目的 **2**倍，最大值为 8。 应用于使用并发快照选项在发布服务器上生成的快照时，不管为 **MaxBcpThreads**指定了什么数值，都将使用一个线程。  
+ 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。 默认值是处理器数目的 **2** 倍，最大值为 8。 应用于使用并发快照选项在发布服务器上生成的快照时，不管为 **MaxBcpThreads** 指定了什么数值，都将使用一个线程。  
   
  **-MaxDeliveredTransactions** _number_of_transactions_  
  一次同步期间应用于订阅服务器的推送事务或请求事务的最大数量。 值为 0，表示最大值为无穷多个事务。 订阅服务器可使用其他值缩短从发布服务器请求的同步的持续时间。  
@@ -222,7 +222,7 @@ distrib [-?]
  **-PacketSize** _packet_size_  
  数据包大小（按字节计）。 默认值为 4096（字节）。  
   
- **-PollingInterval** _polling_interval__  
+ **-PollingInterval** _polling_interval_ _  
  对分发数据库进行已复制事务查询的频率（以秒计）。 默认值为 5 秒。  
   
  **-ProfileName** _profile_name_  
@@ -268,7 +268,7 @@ distrib [-?]
 >  如果有一个连接无法执行或提交，则所有连接将中止当前批处理，而且代理将用单独的流重试失败的批处理。 在重试阶段完成之前，订阅服务器上会存在临时事务不一致。 失败的批处理成功提交后，订阅服务器将恢复到事务一致状态。  
   
 > [!IMPORTANT]  
->  将 **-SubscriptionStreams**的值指定为 2 或更大的数字时，订阅服务器接收事务的顺序可能与发布服务器提交事务的顺序不同。 如果此行为在同步期间导致约束冲突，则应使用 NOT FOR REPLICATION 选项禁止在同步期间强制执行约束。 有关详细信息，请参阅[控制同步期间触发器和约束的行为（复制 Transact-SQL 编程）](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)。  
+>  将 **-SubscriptionStreams** 的值指定为 2 或更大的数字时，订阅服务器接收事务的顺序可能与发布服务器提交事务的顺序不同。 如果此行为在同步期间导致约束冲突，则应使用 NOT FOR REPLICATION 选项禁止在同步期间强制执行约束。 有关详细信息，请参阅[控制同步期间触发器和约束的行为（复制 Transact-SQL 编程）](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)]订阅流不适用于配置为传递  的项目。 若要使用订阅流，请改将项目配置为传递存储过程调用。  
@@ -280,7 +280,7 @@ distrib [-?]
  指定分发的订阅类型。 值为 **0** ，表示推送订阅，值为 **1** ，表示请求订阅，值为 2，表示匿名订阅。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
- 指定历史日志记录的事务间隔。 如果自历史日志记录上一实例之后的已提交事务数大于此选项，将记录历史记录消息。 默认值为 100。 值 **0** 表示无限 **TransactionsPerHistory**。 See the preceding **–MessageInterval**parameter.  
+ 指定历史日志记录的事务间隔。 如果自历史日志记录上一实例之后的已提交事务数大于此选项，将记录历史记录消息。 默认值为 100。 值 **0** 表示无限 **TransactionsPerHistory**。 See the preceding **–MessageInterval** parameter.  
   
  **-UseDTS**  
  必须指定为允许数据转换的发布的参数。  

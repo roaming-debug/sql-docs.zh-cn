@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27ff72cfdf599e0e67000db2a73956d6fffb0dd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 97263a456107dd4d38bfc2682ef6b98d51d93b84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330833"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476388"
 ---
 # <a name="audit-dbcc-event-class"></a>Audit DBCC 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f441380805e443cc13617a5477d3083ee1dc62d5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8584c274304757724d0eceb88a91257112ef694a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006255"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473998"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>格式化文件以导入或导出数据 (SQL Server)
 
@@ -106,7 +106,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 - 数据文件列的终止字符或前缀长度不同。
 
 > [!NOTE]
-> 在缺少格式化文件的情况下，如果 **bcp** 命令指定了数据格式开关（ **-n**、 **-c**、 **-w**或 **-N**），或者 BULK INSERT 操作指定了 DATAFILETYPE 选项，那么指定的数据格式将用作解释数据文件字段的默认方法。
+> 在缺少格式化文件的情况下，如果 **bcp** 命令指定了数据格式开关（ **-n**、 **-c**、 **-w** 或 **-N**），或者 BULK INSERT 操作指定了 DATAFILETYPE 选项，那么指定的数据格式将用作解释数据文件字段的默认方法。
 
 ## <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务
 

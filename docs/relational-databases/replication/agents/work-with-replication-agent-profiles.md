@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1b40afe7f9e7e74fb70f7b08a1c7532e5a65c715
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: b21d42777d4561685e714eeb72c07bb1e6fd405b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482488"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475868"
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -225,7 +225,7 @@ ms.locfileid: "88482488"
 3.  如果是从命令提示符处启动代理，请在 **-ProfileName** 命令行参数后指定在步骤 1 中获得的 **profile_name** 值。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
- 此示例将为名为 **custom_merge**的合并代理创建自定义配置文件，更改 **-UploadReadChangesPerBatch** 参数的值，添加新的 **-ExchangeType** 参数，并返回有关创建的配置文件的信息。  
+ 此示例将为名为 **custom_merge** 的合并代理创建自定义配置文件，更改 **-UploadReadChangesPerBatch** 参数的值，添加新的 **-ExchangeType** 参数，并返回有关创建的配置文件的信息。  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../relational-databases/replication/codesnippet/tsql/work-with-replication-ag_1.sql)]  
   
@@ -253,7 +253,7 @@ ms.locfileid: "88482488"
   
 5.  在服务器上存在此配置文件后，可以通过添加、删除或更改复制代理参数的值来对该配置文件进行自定义。  
   
-6.  若要将此配置文件分配给现有的复制代理作业，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 为 *distributionDBName* 传递分发数据库的名称并为 *agentID*传递作业 ID。  
+6.  若要将此配置文件分配给现有的复制代理作业，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 为 *distributionDBName* 传递分发数据库的名称并为 *agentID* 传递作业 ID。  
   
 ###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_RMO"></a> 修改现有代理配置文件  
   

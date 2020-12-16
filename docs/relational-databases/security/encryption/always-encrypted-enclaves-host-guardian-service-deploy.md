@@ -9,13 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88ab6e015f26cf97e002bc4e21a4430bf30d9cba
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9ce744de4f70e30a10fad36eef6c1f28f4d8e8d4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868207"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477678"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>为 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 部署主机保护者服务
 

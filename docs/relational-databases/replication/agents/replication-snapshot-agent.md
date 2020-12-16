@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9fd89016895d2e106e6c9ff9dcab4873824c7515
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 867f902376778b298ff6f099747c9344f8a055e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364234"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475878"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -146,7 +146,7 @@ snapshot [ -?]
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制数据文件中用于标记字段末尾的字符或字符序列。 默认值为 \n\<x$3>\n。  
   
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
- 指定在快照操作过程中记录的历史记录大小。 选择 **1**可将历史日志记录对性能的影响减至最小。  
+ 指定在快照操作过程中记录的历史记录大小。 选择 **1** 可将历史日志记录对性能的影响减至最小。  
   
 |HistoryVerboseLevel 值|说明|  
 |-------------------------------|-----------------|  

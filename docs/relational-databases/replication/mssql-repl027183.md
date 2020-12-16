@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 10b0edeac4c84d11eb1bafe43ef884b76734f784
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 123936b94066af78dce6cd9c2f8a4cdeec7f2fbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470199"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475698"
 ---
 # <a name="mssql_repl027183"></a>MSSQL_REPL027183
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88470199"
   
 -   用于筛选的列上存在索引碎片。  
   
--   大型合并元数据表，如 **MSmerge_tombstone**、 **MSmerge_contents**和 **MSmerge_genhistory**。  
+-   大型合并元数据表，如 **MSmerge_tombstone**、 **MSmerge_contents** 和 **MSmerge_genhistory**。  
   
 -   未基于唯一键联接的已筛选表和涉及大量表的联接筛选器。  
   

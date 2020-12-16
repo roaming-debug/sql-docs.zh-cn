@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 03ada0a70977968914cd00c14c279921a0652a2c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3f34874dc641eeb080514f5d6acb1bb00eefb5d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738391"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477158"
 ---
 # <a name="use-the-binary-base64-option"></a>使用 BINARY BASE64 选项
 

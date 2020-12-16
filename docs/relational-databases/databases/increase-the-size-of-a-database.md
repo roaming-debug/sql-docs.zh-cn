@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6ba22ed5ef08a90bd0726dfefb1f748da0588cb1
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 2c218c75784c6244285b625a0adfa47b4a913702
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91810021"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474068"
 ---
 # <a name="increase-the-size-of-a-database"></a>增加数据库的大小
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

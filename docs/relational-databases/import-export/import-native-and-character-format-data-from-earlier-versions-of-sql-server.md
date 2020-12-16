@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a433735d5989a9708c9ca59ba92051634e1c2eed
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: e89b0fb2445901ec981a5bdfa238cbd31704a039
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868743"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473948"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91868743"
 ## <a name="interpretation-of-data-types"></a>对数据类型的解释  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本均支持一些新的类型。 如果要将新的数据类型导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中，则必须以早期的 **bcp** 客户端可读的格式存储该数据类型。 下表总结了如何转换新数据类型以便与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]兼容。  
   
-|SQL Server 2005 中的新数据类型|版本 6*x*兼容的数据类型|版本 70 中兼容的数据类型|版本 80 中兼容的数据类型|  
+|SQL Server 2005 中的新数据类型|版本 6 *x* 兼容的数据类型|版本 70 中兼容的数据类型|版本 80 中兼容的数据类型|  
 |---------------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------------|  
 |**bigint**|**decimal**|**decimal**|*|  
 |**sql_variant**|**text**|**nvarchar(4000)**|*|  
@@ -63,7 +63,7 @@ ms.locfileid: "91868743"
  对于字符格式的数据文件， **bcp** 命令会为 **datetime** 和 **smalldatetime** 类型的值使用 ODBC 默认格式将文件导出。 例如，包含日期 **的** datetime `12 Aug 1998` 列将以字符串 `1998-08-12 00:00:00.000`的形式大容量复制到数据文件中。  
   
 > [!IMPORTANT]  
->  在使用 **bcp** 将数据导入到 **smalldatetime**字段中时，请确保秒数值为 00.000，否则操作将失败。 **smalldatetime** 数据类型仅支持最接近的分钟值。 BULK INSERT 和 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在这种情况下不会失败，但会截断秒值。  
+>  在使用 **bcp** 将数据导入到 **smalldatetime** 字段中时，请确保秒数值为 00.000，否则操作将失败。 **smalldatetime** 数据类型仅支持最接近的分钟值。 BULK INSERT 和 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在这种情况下不会失败，但会截断秒值。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **使用数据格式进行大容量导入或大容量导出**  

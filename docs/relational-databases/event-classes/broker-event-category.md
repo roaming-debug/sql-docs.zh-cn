@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10262f9d74fd6d7ef7a4de8fc231a4f96fa00468
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d2e5763593a3d041dd1021f48645c35eb867ed41
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126694"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476238"
 ---
 # <a name="broker-event-category"></a>Broker 事件类别
 

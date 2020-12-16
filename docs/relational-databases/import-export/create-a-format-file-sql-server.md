@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f878144b8b7ff86636ff778ec586a0382ca801cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009922"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474058"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "86009922"
 > [!NOTE]  
 >  读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bcp 可以读取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bcp 生成的 10.0 版格式化文件，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bcp 无法读取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bcp 生成的 11.0 版格式化文件     。  
   
- 本主题说明了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 为特定表创建格式化文件。 格式化文件基于指定的数据类型选项（ **-n**、 **-c**、 **-w**或 **-N**）以及表或视图分隔符。  
+ 本主题说明了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 为特定表创建格式化文件。 格式化文件基于指定的数据类型选项（ **-n**、 **-c**、 **-w** 或 **-N**）以及表或视图分隔符。  
   
 ## <a name="creating-a-non-xml-format-file"></a>创建非 XML 格式化文件  
  若要使用 **bcp** 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。 **format** 选项还需要 **-f** 选项，例如：  
@@ -267,7 +267,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.x
  有关此格式化文件语法的详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。 有关如何使用本机数据的详细信息，请参阅[使用本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)。  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>将数据字段映射到表列  
- 如同使用 **bcp**创建一样，格式化文件按顺序说明所有的表列。 可以修改格式化文件以重新安排或忽略表列。 这便于您针对字段未直接映射到表列的数据文件来自定义格式化文件。 有关详情，请参阅以下主题：  
+ 如同使用 **bcp** 创建一样，格式化文件按顺序说明所有的表列。 可以修改格式化文件以重新安排或忽略表列。 这便于您针对字段未直接映射到表列的数据文件来自定义格式化文件。 有关详情，请参阅以下主题：  
   
 -   [使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

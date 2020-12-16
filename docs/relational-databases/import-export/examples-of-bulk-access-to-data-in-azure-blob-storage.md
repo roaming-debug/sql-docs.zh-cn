@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b067b668cfdf0dc42596d7fb6858240ad8d944e9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: de82e4c1b72355fa97e1d844be45d563a4161ed5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867712"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473988"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>批量访问 Azure Blob 存储中数据的示例
 

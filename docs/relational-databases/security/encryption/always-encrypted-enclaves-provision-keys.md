@@ -10,13 +10,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77a438ee4f495429bbe0eb9c1e98728ecb324009
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 02d4b833b45393c6d830048c3e761cd7abac99e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91867663"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477618"
 ---
 # <a name="provision-enclave-enabled-keys"></a>预配已启用 enclave 的密钥
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

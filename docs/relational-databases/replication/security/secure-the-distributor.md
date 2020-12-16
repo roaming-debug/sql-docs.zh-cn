@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0e0a8a7e42259553e2748d2e323b0322a877f01c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f8a6ff28260945bc3468d11514eb63e404a38583
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88405023"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475688"
 ---
 # <a name="secure-the-distributor"></a>保护分发服务器的安全
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88405023"
   
  分发服务器可以使用 **repl_distributor** 远程服务器项来验证调用服务器是否在分发服务器上配置为发布服务器，可以验证该发布服务器提供的密码并验证存储过程在执行期间是否为复制存储过程。  
   
- 设置期间为 **repl_distributor** 远程服务器项配置的密码与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登录名 **distributor_admin**相关联，此登录名将添加到分发服务器的 **sysadmin** 固定服务器角色中。 连接到分发服务器时，复制存储过程将使用 **distributor_admin** 登录名。  
+ 设置期间为 **repl_distributor** 远程服务器项配置的密码与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登录名 **distributor_admin** 相关联，此登录名将添加到分发服务器的 **sysadmin** 固定服务器角色中。 连接到分发服务器时，复制存储过程将使用 **distributor_admin** 登录名。  
   
 > [!NOTE]  
 >  不要手动更改 **distributor_admin** 的密码。 始终使用 **中的** sp_changedistributor_password **存储过程、** “分发服务器属性” **或** “更新复制密码” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]对话框，因为密码更改随后将自动应用到本地发布。  

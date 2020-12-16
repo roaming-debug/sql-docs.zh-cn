@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a64b2d0e640a2c16fc04491e9db307fca82633a
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ea276d706d2c1e95f352755cb0b794861e45b42a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92006285"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475418"
 ---
 # <a name="multipoint"></a>MultiPoint
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

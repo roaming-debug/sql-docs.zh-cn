@@ -9,13 +9,13 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 51dbde0144f26171994638d50659192ca31400ee
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15'
+ms.openlocfilehash: ac4fa22e2d0aea57f25aaa9ef2d8c570f8bb130b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216689"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475928"
 ---
 # <a name="configure-polybase-to-access-external-data-with-odbc-generic-types"></a>配置 PolyBase 以使用 ODBC 泛型类型访问外部数据
 

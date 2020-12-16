@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e5e8e0bc84e26798716ba1635580b81dbfc08c8
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fe1b34327332678e6c20fa65ecb0bdae9c6e4594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126686"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476178"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify 事件类
 

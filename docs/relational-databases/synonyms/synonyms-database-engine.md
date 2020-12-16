@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74f5c5dcf2f2e1891daca22d70ebb9d9f1d9119f
-ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d4be81ac9a59696fb9bd87b9db77ca88df955a8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94983111"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477508"
 ---
 # <a name="synonyms-database-engine"></a>同义词（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

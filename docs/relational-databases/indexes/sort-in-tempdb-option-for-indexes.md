@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 474fee6c8e37a52fbdb273b5fba95910b895f288
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f8f1ab5eb19e5590c5a4e3604469f93c2d524aac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499378"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478178"
 ---
 # <a name="sort_in_tempdb-option-for-indexes"></a>用于索引的 SORT_IN_TEMPDB 选项
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  当创建或重新生成索引时，通过将 SORT_IN_TEMPDB 选项设置为 ON，可以指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 **tempdb** 来存储用于生成索引的中间排序结果。 虽然此选项会增加创建索引所用的临时磁盘空间量，但是当 **tempdb** 与用户数据库位于不同的磁盘集上时，该选项可减少创建或重新生成索引所需的时间。 有关 **tempdb**的详细信息，请参阅 [配置 index create memory 服务器配置选项](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)。  
+  当创建或重新生成索引时，通过将 SORT_IN_TEMPDB 选项设置为 ON，可以指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 **tempdb** 来存储用于生成索引的中间排序结果。 虽然此选项会增加创建索引所用的临时磁盘空间量，但是当 **tempdb** 与用户数据库位于不同的磁盘集上时，该选项可减少创建或重新生成索引所需的时间。 有关 **tempdb** 的详细信息，请参阅 [配置 index create memory 服务器配置选项](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)。  
   
 ## <a name="phases-of-index-building"></a>索引生成阶段  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 生成索引时经历下面两个阶段：  
@@ -43,11 +43,11 @@ ms.locfileid: "88499378"
 ## <a name="sort_in_tempdb-option"></a>SORT_IN_TEMPDB 选项  
  如果 SORT_IN_TEMPDB 设置为 OFF（默认设置），则排序运行指令将存储在目标文件组中。 在创建索引的第一阶段，交替读取基表页和写入排序运行指令会将读/写磁头从磁盘的一个区域移到另一个区域。 扫描数据页时，磁头位于数据页区域。 当填充排序缓冲区且当前排序运行指令必须写入磁盘时，磁头将移到某个可用空间区域，然后在继续扫描表页时移回数据页区域。 在第二阶段，读/写磁头的移动频率较高。 这时，排序进程通常交替读取各个排序运行区域。 排序运行指令和新的索引页都在目标文件组中生成。 这意味着 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在排序运行指令中分布读取的同时，还必须定期跳至索引区，以便在填充索引页时写入新的索引页。  
   
- 如果 SORT_IN_TEMPDB 选项设置为 ON，并且 **tempdb** 与目标文件组位于不同的磁盘集上，那么在第一阶段，对数据页的读取与对 **tempdb**中排序工作区的写入发生在不同的磁盘上。 这意味着对数据键的磁盘读取在整个磁盘上通常较连续地进行，而对 **tempdb** 磁盘的写入通常也是连续的，就像生成最终索引的写入一样。 即使其他用户正在使用数据库且正在访问不同的磁盘地址，指定 SORT_IN_TEMPDB 选项时的总体读写模式的效率也比没有指定时要高。  
+ 如果 SORT_IN_TEMPDB 选项设置为 ON，并且 **tempdb** 与目标文件组位于不同的磁盘集上，那么在第一阶段，对数据页的读取与对 **tempdb** 中排序工作区的写入发生在不同的磁盘上。 这意味着对数据键的磁盘读取在整个磁盘上通常较连续地进行，而对 **tempdb** 磁盘的写入通常也是连续的，就像生成最终索引的写入一样。 即使其他用户正在使用数据库且正在访问不同的磁盘地址，指定 SORT_IN_TEMPDB 选项时的总体读写模式的效率也比没有指定时要高。  
   
- SORT_IN_TEMPDB 选项可能会提高索引区的邻接，尤其当不是并行处理 CREATE INDEX 操作时。 排序工作区在数据库中的释放位置方面有些随机。 如果排序工作区包含在目标文件组中，则释放排序工作区时，可通过请求来获取它们，以使区在生成时具有索引结构。 这在某种程度上会随机化索引区的位置。 如果排序区单独保存在 **tempdb**中，则释放排序区的顺序对索引区的位置没有影响。 此外，当中间排序运行指令存储在 **tempdb** 中而不是目标文件组中时，目标文件组中的可用空间较多。 这增加了索引区连续的可能性。  
+ SORT_IN_TEMPDB 选项可能会提高索引区的邻接，尤其当不是并行处理 CREATE INDEX 操作时。 排序工作区在数据库中的释放位置方面有些随机。 如果排序工作区包含在目标文件组中，则释放排序工作区时，可通过请求来获取它们，以使区在生成时具有索引结构。 这在某种程度上会随机化索引区的位置。 如果排序区单独保存在 **tempdb** 中，则释放排序区的顺序对索引区的位置没有影响。 此外，当中间排序运行指令存储在 **tempdb** 中而不是目标文件组中时，目标文件组中的可用空间较多。 这增加了索引区连续的可能性。  
   
- SORT_IN_TEMPDB 选项仅影响当前的语句。 没有任何元数据记录索引是否存储在 **tempdb**中。 例如，如果使用 SORT_IN_TEMPDB 选项创建一个非聚集索引，然后在不指定该选项的情况下创建一个聚集索引，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在重新创建该聚集索引时不使用该选项。  
+ SORT_IN_TEMPDB 选项仅影响当前的语句。 没有任何元数据记录索引是否存储在 **tempdb** 中。 例如，如果使用 SORT_IN_TEMPDB 选项创建一个非聚集索引，然后在不指定该选项的情况下创建一个聚集索引，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在重新创建该聚集索引时不使用该选项。  
   
 > [!NOTE]  
 >  如果不需要排序操作或可以在内存中执行排序，则忽略 SORT_IN_TEMPDB 选项。  

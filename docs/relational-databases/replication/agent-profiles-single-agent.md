@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c6dcd33464b52c9ad42974c70ed72cc9ae4da746
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: e657df525317f3f9ea9f110c88f8bb6752a79077
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127826"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475918"
 ---
 # <a name="agent-profiles-single-agent"></a>代理配置文件（单个代理）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

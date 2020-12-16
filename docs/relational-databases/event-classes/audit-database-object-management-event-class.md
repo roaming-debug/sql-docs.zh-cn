@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bc5c0be2-990b-4032-a5e6-41ce98661698
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7222928fabac19df648cea9d059d6657e8bd3c9a
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3a783e64f6dfe38cbff746fafbd07a1091337392
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126860"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476448"
 ---
 # <a name="audit-database-object-management-event-class"></a>Audit Database Object Management 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

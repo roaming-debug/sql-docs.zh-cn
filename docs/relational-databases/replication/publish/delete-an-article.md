@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2c9f2fd0d7cede5981258ccc74cecd2608ba931a
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: d29a89fb25fef977973e2353eed864e49d2808c9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127817"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477738"
 ---
 # <a name="delete-an-article"></a>删除项目
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

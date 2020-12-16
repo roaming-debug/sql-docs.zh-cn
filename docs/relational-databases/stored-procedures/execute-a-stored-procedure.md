@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f7cff43378cdffd2015040d9de4d8ffb7b014291
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332608"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475298"
 ---
 # <a name="execute-a-stored-procedure"></a>执行存储过程
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "87332608"
   
 -   自动执行存储过程  
   
-     在每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时将执行标记为自动执行的过程，并在启动过程期间中恢复 **master** 数据库。 将这些过程设置为自动执行对执行数据库维护操作或使这些过程作为后台进程连续运行很有用。 自动执行的另一个用途是使该过程执行 **tempdb**中的系统或维护任务，如创建一个全局临时表。 这将确保在 **启动过程中重新创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，始终存在这样一个临时表。  
+     在每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时将执行标记为自动执行的过程，并在启动过程期间中恢复 **master** 数据库。 将这些过程设置为自动执行对执行数据库维护操作或使这些过程作为后台进程连续运行很有用。 自动执行的另一个用途是使该过程执行 **tempdb** 中的系统或维护任务，如创建一个全局临时表。 这将确保在 **启动过程中重新创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，始终存在这样一个临时表。  
   
      自动执行的过程使用与固定服务器角色 **sysadmin** 的成员相同的权限进行操作。 该过程生成的所有错误消息都将写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "87332608"
   
 -   设置、清除和控制自动执行  
   
-     只有系统管理员 (**sa**) 可以将过程标记为自动执行。 另外，该过程必须在 **master** 数据库中，由 **sa**所有，而且不能有输入或输出参数。  
+     只有系统管理员 (**sa**) 可以将过程标记为自动执行。 另外，该过程必须在 **master** 数据库中，由 **sa** 所有，而且不能有输入或输出参数。  
   
      使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 可以：  
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 574b53cfe078d2ef050cd645ecebcbf27abff62b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 54787645f8e445f0132b3371c11f8b55f4481a31
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88383955"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478198"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

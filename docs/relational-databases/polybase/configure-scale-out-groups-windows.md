@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddf0fe7b4f3f14963291d8ae930d7d680c374cb2
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 1592632bdeca9f8c3cdceeb61b06c1bd92550f53
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892137"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477918"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>在 Windows 上配置 PolyBase 横向扩展组
 

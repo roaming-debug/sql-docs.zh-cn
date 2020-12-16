@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 author: shkale-msft
 ms.author: shkale
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: be27468691c64cd23020dd9232e146e44f2a45fa
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: a70959afb4e61f2049e19cfd1de96f0434abcb09
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227341"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476668"
 ---
 # <a name="aliasing-azure-synapse-analytics-parallel-data-warehouse"></a>别名（Azure Synapse Analytics 和并行数据仓库）
 

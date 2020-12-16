@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e0ac70ecaddb16dd22f1e97ed56ff7ca47488019
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 778661a1ff29f8813a000606d4d49be3c7105643
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88379843"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475828"
 ---
 # <a name="mssql_eng003165"></a>MSSQL_ENG003165
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88379843"
   
 -   如果将备份还原到其他数据库或服务器，此错误将指示无法正确删除复制设置（默认情况下，如果是在其他数据库或服务器上，则删除复制设置）。  
   
- 该错误可能是由已还原数据库的状态与一个或多个包含复制元数据的系统数据库 **msdb**、 **master**或分发数据库的状态不匹配造成的。  
+ 该错误可能是由已还原数据库的状态与一个或多个包含复制元数据的系统数据库 **msdb**、 **master** 或分发数据库的状态不匹配造成的。  
   
 ## <a name="user-action"></a>用户操作  
  若要解决此问题，请执行下列操作：  

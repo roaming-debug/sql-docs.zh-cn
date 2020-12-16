@@ -24,12 +24,12 @@ ms.author: jroth
 ms.reviewer: ''
 ms.custom: fresh2019may
 ms.date: 04/03/2020
-ms.openlocfilehash: 974da804e79a6c571b7543caec230984296f6a8e
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+ms.openlocfilehash: c977ae1b2b9d692c3adebc0715e88027e2609228
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674145"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477208"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 

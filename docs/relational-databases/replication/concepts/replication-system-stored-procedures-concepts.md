@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a95adc8ad2b4a9c5c2b97a1d5e36820d1fe7ac1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 226db73ec48cdcd13ef80571b94e21fb283ecaac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868099"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477908"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -133,7 +133,7 @@ GO
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中创建一个 SQL 查询文件  
  可以将复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件创建为 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 项目中的 SQL 查询文件。 编写完脚本后，可以为此查询文件创建一个与数据库的连接，然后即可执行该脚本。 有关如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 创建 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本的详细信息，请参阅[查询和文本编辑器 &#40;SQL Server Management Studio&#41;](../../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)。  
   
- 若要使用包含脚本变量的脚本，[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 必须在 **sqlcmd** 模式下运行。 在 **sqlcmd** 模式下，查询编辑器可接受特定于 **sqlcmd** 的附加语法，如可用于变量值的 `:setvar`。 有关 **sqlcmd** 模式的详细信息，请参阅[使用查询编辑器编辑 SQLCMD 脚本](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md)。 在下面的脚本中，`:setvar` 用于为 `$(DistPubServer)` 变量提供值。  
+ 若要使用包含脚本变量的脚本，[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 必须在 **sqlcmd** 模式下运行。 在 **sqlcmd** 模式下，查询编辑器可接受特定于 **sqlcmd** 的附加语法，如可用于变量值的 `:setvar`。 有关 **sqlcmd** 模式的详细信息，请参阅 [使用查询编辑器编辑 SQLCMD 脚本](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md)。 在下面的脚本中，`:setvar` 用于为 `$(DistPubServer)` 变量提供值。  
   
 ```  
 :setvar DistPubServer N'MyPublisherAndDistributor';  

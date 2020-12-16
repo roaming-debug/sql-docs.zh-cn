@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c52250061e78f663e4046d53b5c101f13367407d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 8d2bb044d0a75c4809cfe987bea6d0c2efc7d743
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423431"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477748"
 ---
 # <a name="filter-published-data"></a>筛选已发布数据
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "88423431"
   
 -   事务复制允许您将索引视图按视图或表来复制。 如果将视图按表复制，则无法从表中筛选列。  
   
- 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 **sp_replcmds** 的执行（执行筛选器）限制为数据库所有者 (**dbo**)。 **dbo** 不具有跨数据库权限。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，**sp_replcmds** 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会限制此逻辑的执行，以使恶意的 **dbo** 无法劫持此执行路径。 例如，恶意的 **dbo** 可能在 CDC 表上添加触发器，然后这些触发器会在调用 **sp_replcmds**的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 **dbo** 可以提升其权限。  
+ 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 **sp_replcmds** 的执行（执行筛选器）限制为数据库所有者 (**dbo**)。 **dbo** 不具有跨数据库权限。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，**sp_replcmds** 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会限制此逻辑的执行，以使恶意的 **dbo** 无法劫持此执行路径。 例如，恶意的 **dbo** 可能在 CDC 表上添加触发器，然后这些触发器会在调用 **sp_replcmds** 的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 **dbo** 可以提升其权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a754dd4904cb106fc847beab843abca3837545a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 31a157c04afc4890c8818a118c83f5a3c5458e84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002967"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474108"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估计堆的大小
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "86002967"
      添加到 Max_Var_Size 中的字节用于跟踪每个可变长度列。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 Max_Var_Size 值，从而对整个表大小得出一个更准确的估计。  
   
     > [!NOTE]  
-    >  你可以组合 **varchar**、 **nvarchar**、 **varbinary**或 **sql_variant** 列，使定义的表的总宽度超过 8,060 字节。 对于 varchar、nvarchar、varbinary 或 sql_variant 列，每列的长度仍不得超过 8,000 字节  。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
+    >  你可以组合 **varchar**、 **nvarchar**、 **varbinary** 或 **sql_variant** 列，使定义的表的总宽度超过 8,060 字节。 对于 varchar、nvarchar、varbinary 或 sql_variant 列，每列的长度仍不得超过 8,000 字节  。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
   
      如果没有可变长度列，请将 Variable_Data_Size 设置为 0。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "86002967"
   
 -   大型对象 (LOB) 值  
   
-     精确确定存储 LOB 数据类型 **varchar(max)** 、 **varbinary(max)** 、 **nvarchar(max)** 、 **text**、 **ntextxml**和 **image** 值所用的空间量的算法非常复杂。 只添加所期望的 LOB 值的平均大小就足够了，然后将其添加至总的堆大小中。  
+     精确确定存储 LOB 数据类型 **varchar(max)** 、 **varbinary(max)** 、 **nvarchar(max)** 、 **text**、 **ntextxml** 和 **image** 值所用的空间量的算法非常复杂。 只添加所期望的 LOB 值的平均大小就足够了，然后将其添加至总的堆大小中。  
   
 -   压缩  
   

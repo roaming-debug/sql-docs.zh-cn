@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a0d0eb1272e93b08d9dbe84608199cf26ebd3df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8dfc9dbbeee6f03dc1d4c8b7053bb669107c6037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424259"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476348"
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  添加或删除 **Windows 登录权限时，会发生** Audit Login GDR [!INCLUDE[msCoName](../../includes/msconame-md.md)] 事件类。 此事件类用于 **sp_grantlogin**、 **sp_revokelogin**及 **sp_denylogin** 存储过程。  
+  添加或删除 **Windows 登录权限时，会发生** Audit Login GDR [!INCLUDE[msCoName](../../includes/msconame-md.md)] 事件类。 此事件类用于 **sp_grantlogin**、 **sp_revokelogin** 及 **sp_denylogin** 存储过程。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的将来版本中可能会删除此事件类。 建议您改用 **Audit Server Principal Management** 事件类。  
   
