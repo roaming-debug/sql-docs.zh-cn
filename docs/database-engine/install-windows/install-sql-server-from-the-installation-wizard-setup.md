@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6280e0abe6c95b2ac0a13339b0dfe2c6092e2fa3
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 9cc9c07d69be1b08a887ddf4a7ac071647a4d89a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125967"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440228"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
@@ -49,7 +49,7 @@ ms.locfileid: "96125967"
 > [!NOTE]  
 > 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016 <=sql-server-2017"
 
 ###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> 安装修补程序要求
 
@@ -221,7 +221,7 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-ver15"
 ## <a name="to-install-sql-server-2019"></a>安装 SQL Server 2019 
   
 1. 插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 **Setup.exe**。 若要从网络共享进行安装，请先在共享中找到根文件夹，再双击“Setup.exe”。  

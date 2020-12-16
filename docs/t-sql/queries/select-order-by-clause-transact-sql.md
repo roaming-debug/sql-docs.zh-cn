@@ -39,13 +39,13 @@ helpviewer_keywords:
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b6910a57f137a6463f235bb64db2b6bef4274d4
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 12bb0423ad450ef94df8767ba8aae10a5c47cade
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226897"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439075"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 
@@ -116,7 +116,7 @@ ORDER BY SchemaName + ''; -- wrong
  **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 按从最低值到最高值的顺序进行排序。 DESC 按从最高值到最低值的顺序进行排序。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
   
- OFFSET { integer_constant*offset_row_count_expression } { ROW | ROWS }*  |   
+ OFFSET { integer_constant *offset_row_count_expression } { ROW | ROWS }*  |   
  指定开始从查询表达式返回行之前跳过的行数。 该值可以是大于或等于零的整数常量或表达式。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2b795f2fc65cade53dac533795d41ae8013e90cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809291"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439385"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的时态表
 
@@ -170,7 +170,7 @@ ALTER TABLE InsurancePolicy
   - 开始列的默认值指定从哪个时间点起应考虑现有行有效。 不能将它指定为将来的日期时间点。
   - 结束时间必须指定为一个给定 datetime2 精度的最大值，例如 `9999-12-31 23:59:59` 或 `9999-12-31 23:59:59.9999999`。
 - 添加期间将对当前表执行数据一致性检查，以确保期间列的默认值有效。
-- 如果在启用 **SYSTEM_VERSIONING**时指定了现有历史记录表，则将对当前表和历史记录表同时执行临时数据一致性检查。 如果你将 DATA_CONISTENCY_CHECK = OFF 指定为一个附加参数，则可跳过此项检查  。
+- 如果在启用 **SYSTEM_VERSIONING** 时指定了现有历史记录表，则将对当前表和历史记录表同时执行临时数据一致性检查。 如果你将 DATA_CONISTENCY_CHECK = OFF 指定为一个附加参数，则可跳过此项检查  。
 
 ### <a name="migrate-existing-tables-to-built-in-support"></a>将现有表迁移到内置支持
 

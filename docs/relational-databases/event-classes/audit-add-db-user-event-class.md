@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b953d49716cb6a99879ebc94c750fc1e765916e8
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b4588c789bb63b1f6b8a0ecb38263714d08d4dbb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96128792"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438761"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 事件类
 

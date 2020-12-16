@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 01d8324d950f7dc5db4bb2456e67f01b380d9771
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: be6c23f2943a437565ead1512922408e609c0300
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96126008"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438812"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>完成数据库引擎升级
 

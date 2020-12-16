@@ -29,18 +29,18 @@ helpviewer_keywords:
 ms.assetid: cba4999e-a9d4-4742-abc9-4a4f109206b6
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79a275c0532838ec8466a2fc5415d9e3b4238b12
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e3a2016379bce1813549a686ff1b8192e4bfa4d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439262"
 ---
 # <a name="sysdatetime-transact-sql"></a>SYSDATETIME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回包含计算机的日期和时间的 datetime2(7) 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例正在该计算机上运行****。  
+  返回包含计算机的日期和时间的 datetime2(7) 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例正在该计算机上运行。  
   
 > [!NOTE]  
 >  与 GETDATE 和 GETUTCDATE 比较而言，SYSDATETIME 和 SYSUTCDATETIME 的秒的小数部分精度更高。 SYSDATETIMEOFFSET 包含系统时区偏移量。 SYSDATETIME、SYSUTCDATETIME 和 SYSDATETIMEOFFSET 可以分配给采用任意日期和时间类型的变量。  
@@ -63,7 +63,7 @@ SYSDATETIME ( )
  **datetime2(7)**  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在 可以引用 datetime2(7) 表达式的任何位置，均可引用 SYSDATETIME****。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在 可以引用 datetime2(7) 表达式的任何位置，均可引用 SYSDATETIME。  
   
  SYSDATETIME 是不确定性函数。 不能对在列中引用该函数的视图和表达式建立索引。  
   

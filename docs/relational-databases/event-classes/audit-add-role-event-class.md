@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae486a3b57bf620b2e4c3ba094d372281cd04aea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fdad83f36cdba9a79f48ea94a4bcd6c97ab1f4c3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385313"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440158"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 910d0aba243c7d42cd0866d516ae392320913cd8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 221e5aaee8fa286cb7893035337703aa92190dfd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475986"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440178"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

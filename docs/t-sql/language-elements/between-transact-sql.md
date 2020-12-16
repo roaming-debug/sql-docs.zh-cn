@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 709af562247c040508627527c299ee6f5181da49
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 51e22e4acd4f8c58515d6d3403c4c7ca9d5f2595
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96128344"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439225"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1085686f4c83198a043855e701ec2ef38d17541f
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 9c97ee3e1f268553a828e035498b203c8fa1e747
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496940"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438942"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -136,7 +136,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
  外部表名和定义存储在数据库元数据中。 数据存储在外部数据源中。
 
- 外部文件被命名为 *QueryID_date_time_ID.format* ，其中 *ID* 是增量标识符， *format* 是导出的数据格式。 例如，QID776_20160130_182739_0.orc。
+ 外部文件被命名为 *QueryID_date_time_ID.format*，其中 *ID* 是增量标识符， *format* 是导出的数据格式。 例如，QID776_20160130_182739_0.orc。
 
  即使已对源表进行分区，CREATE EXTERNAL TABLE AS SELECT 语句也会始终创建一个非分区表。
 

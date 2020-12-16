@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf44e0ef836763dd4515fb410f2a73577b4fed05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2113e0bf6ceb8a27b53a6853235152a1dbf8f425
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646007"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439382"
 ---
 # <a name="delete-primary-keys"></a>删除主键
 
@@ -54,20 +54,20 @@ ms.locfileid: "88646007"
   
 1.  在对象资源管理器中，展开包含主键的表，再展开 **“键”**。  
   
-2.  右键单击该键，然后选择“删除”****。  
+2.  右键单击该键，然后选择“删除”。  
   
 3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”**。  
   
 #### <a name="to-delete-a-primary-key-constraint-using-table-designer"></a>使用表设计器删除主键约束  
   
-1.  在对象资源管理器中，右键单击具有主键的表，再单击“设计”****。  
+1.  在对象资源管理器中，右键单击具有主键的表，再单击“设计”。  
   
-2.  在表网格中右键单击包含主键的行，再选择“删除主键”**** 以将该设置从启用切换到禁用。  
+2.  在表网格中右键单击包含主键的行，再选择“删除主键”以将该设置从启用切换到禁用。  
   
     > [!NOTE]  
     >  若要撤消此操作，请关闭该表而不保存更改。 若要撤消删除主键操作，就无法避免丢失对表做出的所有其他更改。  
   
-3.  在“文件”菜单上，单击“保存表名称”********__。  
+3.  在“文件”菜单上，单击“保存表名称”。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

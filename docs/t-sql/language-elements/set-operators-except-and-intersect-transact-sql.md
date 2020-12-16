@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06029c531fbdebfd74d3a2314221725a41647853
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2cd2452a63b9c822e2931f74f764a832f6e08334
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96128208"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439128"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>SET 运算符 - EXCEPT 和 INTERSECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -12,13 +12,13 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 67eea4a666519ec5a9dd1dce7e1e33e3c8da4831
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: d70321f41688300524a570a5e4a67df149832d14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722363"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439303"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 

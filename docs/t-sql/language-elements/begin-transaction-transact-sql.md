@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b40f7e725c4f0a413963e772a741b56aabb65140
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 31f505a969674832d8f4d28db363de093d2e3633
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96124552"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439234"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

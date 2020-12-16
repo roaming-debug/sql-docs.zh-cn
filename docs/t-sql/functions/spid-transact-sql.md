@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88cdc4c31f94e4f09f73c37993005acb80e5942b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3e3c47d73942824e40b58f9b8a0f3f099ef81401
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96124606"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439282"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

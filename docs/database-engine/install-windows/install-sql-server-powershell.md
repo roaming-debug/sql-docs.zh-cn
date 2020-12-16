@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f374318c7b06a525f4ab684a1ac6aef4fdd3b915
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 4731394c13be32cbaa2529af9638820922720ce3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125938"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440250"
 ---
 # <a name="install-sql-server-powershell"></a>安装 SQL Server PowerShell
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]

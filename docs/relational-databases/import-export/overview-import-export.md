@@ -9,14 +9,14 @@ ms.technology: data-movement
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e8e0c926a81d97561a16928dc33af406c69469ae
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d934e6f1c5457297e385fbe8d42c2709ed2c0f88
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868804"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438778"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>在 SQL Server 和 Azure SQL 数据库中导入和导出数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

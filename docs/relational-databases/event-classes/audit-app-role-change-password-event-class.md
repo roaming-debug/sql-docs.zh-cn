@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9835f65ce682d3cd60f0ec58e26a4c36422adecb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06662ea1228b09555524d30a6b5f0cf49a23ba34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494509"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440118"
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

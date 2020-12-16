@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 400c0e28040f0db76ab609edb726146e3be4295d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 844d118247c6bc0ec0126fe5462e5cb3b7820379
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424189"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440038"
 ---
 # <a name="progress-report-event-category"></a>Progress Report 事件类别
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

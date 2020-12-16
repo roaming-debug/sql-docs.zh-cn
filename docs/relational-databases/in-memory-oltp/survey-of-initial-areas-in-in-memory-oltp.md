@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5287bb37b779775edb3375d545c1745c6ed63e93
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005677"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438742"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
 
@@ -188,7 +188,7 @@ ALTER DATABASE CURRENT
 ## <a name="2-elevate-to-snapshot"></a>2.提升为快照  
   
   
-当事务同时涉及基于磁盘的表和内存优化表时，我们将该事务称为*跨容器事务*。 在此类事务中，事务的内存优化部分必须以名为“快照”的事务隔离级别运行。  
+当事务同时涉及基于磁盘的表和内存优化表时，我们将该事务称为 *跨容器事务*。 在此类事务中，事务的内存优化部分必须以名为“快照”的事务隔离级别运行。  
   
 若要可靠地对跨容器事务中的内存优化表强制执行此级别，请通过执行以下 T-SQL 来[变更数据库设置](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   

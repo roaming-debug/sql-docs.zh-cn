@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bb5751c8e0bce55ecf83d8f1226a102b9fc691f
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 975cdab71f8124978fa7f6816391649c4002e719
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125885"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440207"
 ---
 # <a name="install-sql-server-servicing-updates"></a>安装 SQL Server 服务更新
 

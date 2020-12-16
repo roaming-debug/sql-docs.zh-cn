@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 975e14a1a17422949f5ef848b0b0a69d71e58593
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e16ef746dd970926e61098eb66e8f8ddf6a98b1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866624"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438741"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -134,8 +134,8 @@ ms.locfileid: "91866624"
 |NULL 数组填充|可能的值包括：<br /><br /> 如果存在深表类型列并且 NULL 数组的大小为奇数字节，则为 1。<br /><br /> 否则为 0|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |填充|如果没有深表类型列：0<br /><br /> 如果有深表类型列，则根据浅表列需要的最大对齐添加 0-7 个填充字节。 每个浅表列都需要与上述大小相等的对齐，而 GUID 列需要 1（而不是 16）字节的对齐，数值列始终需要 8（而不是 16）字节的对齐。 所有浅表列间使用最大的对齐要求，添加了 0-7 个字节，现在总大小（不带深表类型列）是所需对齐的数倍。|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |固定长度的深表类型列|SUM(*固定长度深表类型列的大小*)<br /><br /> 各列大小如下：<br /><br /> 对于 char(i) 和 binary(i)，为 i。<br /><br /> 对于 nchar(i)，为 2 * i|固定长度深表类型列是类型为 char(i)、nchar(i) 或 binary(i) 的列。|  
-|可变长度深表类型列*计算大小*|SUM(*可变长度深表类型列的计算大小*)<br /><br /> 各列的计算大小如下：<br /><br /> 对于 varchar(i) 和 varbinary(i)，为 i<br /><br /> 对于 nvarchar(i)，为 2 * i|此行仅适用于 *计算行正文大小*。<br /><br /> 可变长度的深表类型列是类型为 varchar(i)、nvarchar(i) 或 varbinary(i) 的列。 计算大小由列的最大长度 (i) 决定。|  
-|可变长度深表类型列*实际大小*|SUM(*可变长度深表类型列的实际大小*)<br /><br /> 各列的实际大小如下：<br /><br /> 对于 varchar(i) 为 n，其中 n 是列中存储的字符数。<br /><br /> 对于 nvarchar(i) 为 2 * n，其中 n 是列中存储的字符数。<br /><br /> 对于 varbinary(i) 为 n，其中 n 是列中存储的字节数。|此行仅适用于 *实际行正文大小*。<br /><br /> 实际大小由相应行中各列存储的数据决定。|   
+|可变长度深表类型列 *计算大小*|SUM(*可变长度深表类型列的计算大小*)<br /><br /> 各列的计算大小如下：<br /><br /> 对于 varchar(i) 和 varbinary(i)，为 i<br /><br /> 对于 nvarchar(i)，为 2 * i|此行仅适用于 *计算行正文大小*。<br /><br /> 可变长度的深表类型列是类型为 varchar(i)、nvarchar(i) 或 varbinary(i) 的列。 计算大小由列的最大长度 (i) 决定。|  
+|可变长度深表类型列 *实际大小*|SUM(*可变长度深表类型列的实际大小*)<br /><br /> 各列的实际大小如下：<br /><br /> 对于 varchar(i) 为 n，其中 n 是列中存储的字符数。<br /><br /> 对于 nvarchar(i) 为 2 * n，其中 n 是列中存储的字符数。<br /><br /> 对于 varbinary(i) 为 n，其中 n 是列中存储的字节数。|此行仅适用于 *实际行正文大小*。<br /><br /> 实际大小由相应行中各列存储的数据决定。|   
   
 ##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> 示例：表和行大小计算  
  对于哈希索引，实际 Bucket 计数舍入为最近的 2 次幂。 例如，如果指定的 `bucket_count` 为 100000，则索引的实际 bucket 计数为 131072。  

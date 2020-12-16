@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62166f813bee655bda939c1f230d02a1a5b0afbc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e4ad904176abdc4f714980cf1e242bd620632a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195611"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440211"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "92195611"
  如果数据库有 DAC 中不支持的对象或包含用户，则不能导出该数据库。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))。  
   
 ###  <a name="permissions"></a><a name="Permissions"></a> 权限  
- 导出 DAC 至少要求 ALTER ANY LOGIN 和数据库范围内的 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。
+ 导出 DAC 至少要求 ALTER ANY LOGIN 和数据库范围内的 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies** 具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。
  
 在 Azure SQL 数据库上，需要为每个数据库授予对所有表或特定表的“查看定义”和“选择”权限
 

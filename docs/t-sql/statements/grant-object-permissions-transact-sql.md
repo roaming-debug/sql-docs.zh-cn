@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1282bdd6c1bfb103a42336fc62289d1949bda07c
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 79ab625394abbc3d92a26a0a25093df4eadeaacd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570581"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438973"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 对象权限 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

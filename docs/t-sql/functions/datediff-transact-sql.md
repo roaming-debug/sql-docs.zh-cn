@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df865c15c13c78f01a8c3da30be2f39656dc7156
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 03b6070fe5ab96cca726c494bf4f01f621fc2d7b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96117774"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440306"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 

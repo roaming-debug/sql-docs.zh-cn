@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28ee72ba25949547321a3b1279b9343d0f39b482
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: db979cec01343d04010be04089207d6a08050845
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96124535"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439212"
 ---
 # <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;=（位与赋值）(Transact SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

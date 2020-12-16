@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 952d6f2043ed9b271a735f034844d40787af5a87
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 172743f16f0c10fdf40fd01af3e9974b88a927a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584218"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438860"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>将 FILESTREAM 和 FileTable 与 AlwaysOn 可用性组一起使用
 

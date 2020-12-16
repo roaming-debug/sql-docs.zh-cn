@@ -19,32 +19,32 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d484d2e95f3b2f0030744a87f00c7dc3f220aa40
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: a408cfb25f40ee58c1aeb521c11938026d9241cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300229"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439012"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 从指定的字节流或文件路径上传 R、Python 或 Java 包文件至数据库。 此语句充当一种通用机制，可供数据库管理员上传任何新的外部语言运行时和 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持的 OS 平台所需的项目。 
 
 > [!NOTE]
 > 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 及更高版本支持 Windows 和 Linux 平台上的 R、Python 和外部语言。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 从指定的字节流或文件路径上传 R 或 Python 包文件至数据库。 此语句充当数据库管理员上传所需项目的通用机制。 
 
 > [!NOTE]
 > 在 Azure SQL 托管实例中，可以使用 sqlmlutils 安装库。 有关详细信息，请参阅[使用 sqlmlutils 安装 Python 包](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)和[使用 sqlmlutils 安装新的 R 包](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 语法
 
 ```syntaxsql
@@ -86,7 +86,7 @@ WITH ( LANGUAGE = <language> )
 
 ```
 ::: moniker-end
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 ## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017 语法
 
 ```syntaxsql
@@ -115,7 +115,7 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 ## <a name="syntax-for-azure-sql-managed-instance"></a>Azure SQL 托管实例的语法
 
 ```syntaxsql
@@ -162,7 +162,7 @@ WITH ( LANGUAGE = <language> )
 
 当用户 **RUser1** 执行外部脚本时，`libPath` 值可包含多个路径。 第一个路径始终为数据库所有者创建的共享库的路径。 `libPath` 的第二部分指定包含由 RUser1 单独上传的包的路径。
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 **file_spec**
 
 指定特定平台的包的内容。 每个平台仅支持一个文件项目。
@@ -180,33 +180,33 @@ WITH ( LANGUAGE = <language> )
 
 如果需要创建库或更改现有库（并具有执行此操作的所需权限），但服务器上的文件系统受限，无法将库文件复制到服务器可以访问的位置，此选项会非常有用。
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 **PLATFORM = WINDOWS**
 
 为库的内容指定平台。 该值默认为正在运行 SQL Server 的主机平台。 因此，用户不需要指定该值。 如果支持多个平台或用户需要指定不同的平台，则需要此值。
 在 SQL Server 2017 中，Windows 是唯一受支持的平台。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **PLATFORM**
 
 为库的内容指定平台。 该值默认为正在运行 SQL Server 的主机平台。 因此，用户不需要指定该值。 如果支持多个平台或用户需要指定不同的平台，则需要此值。
 在 SQL Server 2019 中，Windows 和 Linux 是受支持的平台。
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 **LANGUAGE = 'R'**
 
 指定包的语言。 SQL Server 2017 中支持 R。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 **language**
 
 指定包的语言。 在 Azure SQL 托管实例中，该值可以为 `R` 或 `Python`。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **language**
 
 指定包的语言。 该值可以是 `R`、`Python` 或外部语言的名称（请参阅[创建外部语言](create-external-language-transact-sql.md)）。
@@ -216,12 +216,12 @@ WITH ( LANGUAGE = <language> )
 
 ## <a name="remarks"></a>备注
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 对于 R 语言，使用文件时，必须使用 Windows 的 .ZIP 扩展名以压缩存档文件的形式准备包。 
 在 SQL Server 2017 中，仅支持 Windows 平台。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 对于 R 语言，使用文件时，必须使用 .ZIP 扩展名以压缩存档文件的形式准备包。  
 
 对于 Python 语言，必须以压缩存档文件的形式准备 .whl 或 .zip 文件中的包。 如果包已经是 .zip 文件，则必须将其包含在新的 .zip 文件中。 目前不支持将包作为 .whl 或 .zip 文件直接上传。
@@ -237,7 +237,7 @@ WITH ( LANGUAGE = <language> )
 
 需要 `CREATE EXTERNAL LIBRARY` 权限。 默认情况下，dbo 用户或担任 db_owner 角色的任何成员都有权创建外部库。 对于其他所有用户，必须使用 [GRANT](./grant-database-permissions-transact-sql.md) 语句显式授予他们权限，同时将 CREATE EXTERNAL LIBRARY 指定为特权。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在 SQL Server 2019 中，除了“CREATE EXTERNAL LIBRARY”权限之外，用户还需要外部语言的引用权限才能为该外部语言创建外部库。
 
 ```sql
@@ -253,7 +253,7 @@ GRANT CREATE EXTERNAL LIBRARY to user
 
 ## <a name="examples"></a>示例
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 ### <a name="add-an-external-library-to-a-database"></a>将外部库添加到数据库  
 
 下面的示例将一个名为 `customPackage` 的外部库添加到数据库。
@@ -272,7 +272,7 @@ EXEC sp_execute_external_script
 ```
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 对于 SQL Server 2019 中的 Python 语言，可通过将 `'R'` 替换为 `'Python'` 使用示例。
 ::: moniker-end
 
@@ -291,7 +291,7 @@ EXEC sp_execute_external_script
 
 由于仅通过查看程序包清单可能很难确定所有依赖项，因此建议使用 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 等包，以标识成功完成安装可能需要的所有包。
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 
 + 上传目标包及其依赖项。 所有文件都必须位于服务器可访问的文件夹中。
 
@@ -328,7 +328,7 @@ EXEC sp_execute_external_script
     ```
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 对于 SQL Server 2019 中的 Python 语言，可通过将 `'R'` 替换为 `'Python'` 使用示例。
 ::: moniker-end
 
@@ -340,7 +340,7 @@ EXEC sp_execute_external_script
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 对于 SQL Server 2019 中的 Python 语言，可通过将 **“R”** 替换为 **“Python”** 使用示例。
 ::: moniker-end
 
@@ -353,7 +353,7 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xABC123...) WITH (LANGUAG
 
 有关详细信息，请参阅 [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md)。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ### <a name="add-a-java-jar-file-to-a-database"></a>向数据库添加 Java .jar 文件  
 
 下面的示例将一个名为 `customJar` 的外部 jar 文件添加到数据库。

@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9ba02ca79db2e79f14483e632eaa6fa77c3d4a0
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9f7c95b225fc9bc1c7bb6403482b9d5dae1ada1b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88304685"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438912"
 ---
 # <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 

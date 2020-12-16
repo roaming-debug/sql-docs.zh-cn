@@ -84,13 +84,13 @@ ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/26/2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2119b3917d6adb13d29627d148a969bf4ccc92c5
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 6d815a88b9ac185871ed12b8192f6a5a7741f23a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125992"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440238"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 

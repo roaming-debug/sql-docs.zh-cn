@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92acc81763355aa7f87d02ec85986ae904209b34
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1fa0db66c75fd0fc45f02dd768f69659c96d739b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506331"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440198"
 ---
 # <a name="database-engine-tutorials"></a>数据库引擎教程
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]

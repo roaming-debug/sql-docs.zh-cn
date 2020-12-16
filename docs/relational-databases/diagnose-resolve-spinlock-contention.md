@@ -8,13 +8,13 @@ ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ecce46a04943d36dc6d821d6a3457b056f00356
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a25835dd5fbac5f95434d46ac152d44ea6974496
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506311"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440128"
 ---
 # <a name="diagnose-and-resolve-spinlock-contention-on-sql-server"></a>诊断和解决 SQL Server 上的旋转锁争用问题
 

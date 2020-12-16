@@ -14,12 +14,12 @@ ms.author: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/03/2020
-ms.openlocfilehash: 40f1bcd974327bc70b5adad55b872ed66ad31aa6
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+ms.openlocfilehash: bcd47e1b674e3fa90e18889ed4e61dfabfa66961
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674171"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439372"
 ---
 # <a name="xml-data-sql-server"></a>XML 数据 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

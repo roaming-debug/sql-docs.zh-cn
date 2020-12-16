@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c962baabeaccdd2c2cbf517cab5894458046bb2
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fd18836c0f4b2de1dec38892bc6e44c5a0b32f5e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88468000"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440278"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

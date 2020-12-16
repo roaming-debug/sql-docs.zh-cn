@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77209f40363ee4f5566604d301c8ade1d9116217
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 79311990e4144ae8bf985ec0afc9d9d6853d4691
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92196721"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440259"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

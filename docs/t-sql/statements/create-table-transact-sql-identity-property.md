@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 309243b635cb42b3f4acc62422bdfd3eb4aff807
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 893f2d0b9a734fbeaeabac437d56b87a4b165b12
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443135"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438952"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY（属性）
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

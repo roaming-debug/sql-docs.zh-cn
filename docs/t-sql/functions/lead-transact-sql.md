@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2869c46d3aca815968f77829f2ce57b31de06a6
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 94010267e3e2df520a51b3ffc50b34ef1159d404
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91116058"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440288"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e725124c49c5936567e0c7bd9272dceff7a7161d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 82762e132f3e8478a69eefff20820270c560b342
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037421"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440328"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE (Transact-SQL)
 

@@ -10,13 +10,13 @@ ms.technology: integration-services
 ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 80b5e28a0d552955154849d2f593fc32be79f656
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>= sql-server-2017'
+ms.openlocfilehash: 7f7abd4db53e6871e3291a63c755fb43ac731c3d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96129508"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438762"
 ---
 # <a name="catalogupdate_master_address-ssisdb-database"></a>catalog.update_master_address（SSISDB 数据库）
 

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f6cd4c28efff1425a18fcef9e7ed60ee535a93f
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 61528cbb7e8b061ad41abdec5844aaf901fcc76c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570540"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438974"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>授予搜索属性列表权限 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

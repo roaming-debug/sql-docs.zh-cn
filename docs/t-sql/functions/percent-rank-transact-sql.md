@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40422b7ea89dd6a62ea3f59f3d08d8eb48107a98
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f4e16ab802bf485e1d9f5574bc7e9a8bcabd342a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380779"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440249"
 ---
 # <a name="percent_rank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

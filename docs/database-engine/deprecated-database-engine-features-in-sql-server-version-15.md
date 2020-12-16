@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15'
-ms.openlocfilehash: 6c8b0b5b1ae7c93c48ac12a950fe971feb4da920
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: b899f2e5ebd9d1af634aff02b4dfc3a4c5d77b47
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670490"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438800"
 ---
 # <a name="deprecated-database-engine-features-in-sssqlv15-md"></a>[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] 中弃用的数据库引擎功能
 

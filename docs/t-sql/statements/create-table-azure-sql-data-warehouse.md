@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 64cbc15572d8d7316d5d61cc65190960aa496357
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: fdadefa5b898a2b37c7e5a7f087c429ccc6b8d4f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300208"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438956"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -158,7 +158,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> 表分区选项
 有关使用表分区的指南，请参阅[对 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
- `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,... *n* ] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 创建一个或多个表分区。 这些分区是水平表切片，可便于向行的子集应用操作，无论表是作为堆、聚集索引还是聚集列存储索引进行存储。 与分发列不同，表分区不确定存储每行的分发。 表分区决定行如何分组并存储在每个分发中。  
 
 | 参数 | 说明 |

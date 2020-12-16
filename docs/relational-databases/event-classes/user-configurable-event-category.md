@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae2703e889d09a106c0ba234ee9f5af213a945b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7bc734ad5d267a9848c134c11cab802a3347b720
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494271"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440009"
 ---
 # <a name="user-configurable-event-category"></a>User-Configurable 事件类别
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

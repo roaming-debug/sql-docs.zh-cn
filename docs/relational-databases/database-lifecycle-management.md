@@ -31,13 +31,13 @@ helpviewer_keywords:
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 604fbce3aebe8e6e902e2dc9292a24779471c86e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d2e00efc82ced01e0a5c3979d405d8275ff7c9b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196204"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440188"
 ---
 # <a name="database-lifecycle-management"></a>数据库生命周期管理
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]

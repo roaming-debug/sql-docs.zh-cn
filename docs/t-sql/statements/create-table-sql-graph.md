@@ -32,13 +32,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 325e6d949cfede5bec7ccdb958dac2c82e9d9efa
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 77fe857a66ca90b25e5cc4248304d37d68c2a2bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005584"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438928"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE（SQL 图形）
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]

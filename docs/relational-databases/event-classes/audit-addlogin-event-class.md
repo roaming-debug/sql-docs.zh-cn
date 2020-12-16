@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d203dc1924706732bfc8c672308123ce662d879
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3000e7e3cd43149c5ae110102030b638a25c2d09
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126887"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440138"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

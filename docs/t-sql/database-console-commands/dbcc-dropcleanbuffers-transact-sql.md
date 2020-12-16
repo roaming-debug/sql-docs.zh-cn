@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ac3719d3946e07ec3314b586f5abb5a14910133
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e3291ebc25cfa29b866ccca576ef8900bf151fb2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955870"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440338"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 

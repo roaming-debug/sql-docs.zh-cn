@@ -32,13 +32,13 @@ helpviewer_keywords:
 ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a715f64c0d6c1adf8ec3bc55b851848dfd1ae2e
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 87f2ac115228804be52bd3e771b0aae235d25a0d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96125003"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439304"
 ---
 # <a name="constants-transact-sql"></a>常量 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

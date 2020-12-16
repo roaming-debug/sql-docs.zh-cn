@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 30a4403819da8f88ea8fac50f2b3e6c6f62eab3b
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 4c2a77556356d96428ba177654d937cd346e784d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584262"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438864"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
 

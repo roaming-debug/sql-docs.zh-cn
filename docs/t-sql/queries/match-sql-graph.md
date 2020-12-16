@@ -19,13 +19,13 @@ helpviewer_keywords:
 - Shortest Path, shortest_path
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3d0f5307b8a9b96dec8b81f00550dbcd639ac9a
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0ebd5ea961301fb330106430af939664b6bce3e9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91116263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439062"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]

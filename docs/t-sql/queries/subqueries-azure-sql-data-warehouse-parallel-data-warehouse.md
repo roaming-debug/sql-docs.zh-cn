@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b60dc6b14b6161849a0e50b3de149946427568f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: a739b44c673a20a157dd2ea03824ae9a8b70a30b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227428"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439042"
 ---
 # <a name="subqueries-azure-synapse-analytics-parallel-data-warehouse"></a>子查询（Azure Synapse Analytics 和并行数据仓库）
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

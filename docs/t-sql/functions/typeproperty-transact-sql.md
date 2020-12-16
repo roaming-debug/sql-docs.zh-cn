@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0d97d422cb5f3ca7c248b3c3175eb172a5180be
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 54957a176c0896e01603de5a47accbcaed6c6681
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91379450"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439248"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

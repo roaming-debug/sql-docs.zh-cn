@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f28ea2b3ce9520eca770b0808738a53073d70316
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868780"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438730"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "91868780"
 |Feature|EXECUTE|仅支持执行本机编译存储过程和用户定义函数。|  
 |Feature|用户定义聚合|不能在本机编译的存储过程中使用用户定义的聚合函数。 从过程中删除对该函数的引用。|  
 |Feature|浏览模式元数据|本机编译的存储过程不支持浏览模式元数据。 确保将会话选项 **NO_BROWSETABLE** 设置为 OFF。|  
-|Feature|带 FROM 子句的 DELETE|表源在本机编译存储过程中的 **FROM** 语句不支持 **DELETE** 子句。<br /><br /> 在指示要执行删除操作的表时，支持带**DELETE** 子句的 **FROM** 。|  
+|Feature|带 FROM 子句的 DELETE|表源在本机编译存储过程中的 **FROM** 语句不支持 **DELETE** 子句。<br /><br /> 在指示要执行删除操作的表时，支持带 **DELETE** 子句的 **FROM** 。|  
 |Feature|带 FROM 子句的 UPDATE|本机编译的存储过程中的 **FROM** 语句不支持 **UPDATE** 子句。| 
 |Feature|临时程序|临时存储过程无法进行本机编译。 请创建永久的本机编译存储过程或临时的解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。|  
 |隔离级别|READ UNCOMMITTED|本机编译的存储过程不支持隔离级别 READ UNCOMMITTED。 请使用支持的隔离级别，如 SNAPSHOT。|  

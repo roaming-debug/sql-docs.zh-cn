@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7255e91ed01ed5800053a274831e43aebaf8e1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 126a88c46bb64a83b5392532aa527dc9eb088770
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448665"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440098"
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

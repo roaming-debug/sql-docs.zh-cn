@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1952dc72148ee9e8d0d68b375f39f5fc3bedfc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2b8b8dd930fa6fff0b5be86ed0c83ad485326996
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488625"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439409"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>将列从一个表复制到另一个表 (数据库引擎)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "88488625"
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>将列定义从一个表复制到另一个表  
   
-1.  右键单击相应表，然后单击“设计”****，打开要复制的列所在的表以及要复制到的表。  
+1.  右键单击相应表，然后单击“设计”，打开要复制的列所在的表以及要复制到的表。  
   
 2.  单击包含要复制的列的表的选项卡，然后选择这些列。  
   
@@ -74,13 +74,13 @@ ms.locfileid: "88488625"
   
 2.  打开一个新的查询编辑器窗口。 
 
-3.  右键单击查询编辑器，然后单击“在编辑器中设计查询”****。 
+3.  右键单击查询编辑器，然后单击“在编辑器中设计查询”。 
 
-4.  在“添加表”**** 对话框中，选择源和目标表，单击“添加”****，然后关闭“添加表”**** 对话框。 
+4.  在“添加表”对话框中，选择源和目标表，单击“添加”，然后关闭“添加表”对话框。 
 
-5.  右键单击查询编辑器的打开区域，指向“更改类型”，然后单击“插入结果”********。  
+5.  右键单击查询编辑器的打开区域，指向“更改类型”，然后单击“插入结果”。  
 
-6.  在“选择插入结果的目标表”**** 对话框中，选择目标表。 
+6.  在“选择插入结果的目标表”对话框中，选择目标表。 
 
 7.  在查询设计器的上半部分，单击源表中的源列。
 

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 15a7386c08d2b9147858cab3fde212cf285902cb
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: = azuresqldb-current || >= sql-server-2016
+ms.openlocfilehash: f0fccea29a41e407c81136aa188ff1427e45daa9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88499357"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438700"
 ---
 # <a name="modify-an-index"></a>修改索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

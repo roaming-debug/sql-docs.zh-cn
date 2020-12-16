@@ -22,24 +22,24 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a0f2d13c26e6b19b30e551560d11be58ff71e48
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 2b4cd2af87ec181766ab98c9d1483ee6425e51e6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990050"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438992"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 创建用于定义外部进程资源的外部池。 资源池表示数据库引擎实例的物理资源（内存和 CPU）的子集。 资源调控器可以在多个资源池之间分发服务器资源，最多可为 64 个池。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 对于 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 对于 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部池控制 `rterm.exe`、`python.exe`、`BxlServer.exe`，以及它们生成的其他进程。
 ::: moniker-end
   
@@ -47,7 +47,7 @@ ms.locfileid: "90990050"
  
 
 ## <a name="syntax"></a>语法  
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
@@ -64,7 +64,7 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 ```  
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
@@ -93,7 +93,7 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 pool_name  
 外部资源池的用户定义名称。 pool_name 是字母数字，最多可包含 128 个字符。 此参数在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中必须是唯一的，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 MAX_CPU_PERCENT =value  
 出现 CPU 争用时，外部资源池中的所有请求可以接收的最大平均 CPU 带宽。 value 是一个整数。 value 的允许范围是 1 到 100。
 
@@ -105,7 +105,7 @@ MAX_PROCESSES =value
 外部资源池允许的最大进程数。 0 = 池的无限阈值，此阈值之后仅受计算机资源约束。
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 MAX_CPU_PERCENT =value  
 出现 CPU 争用时，外部资源池中的所有请求可以接收的最大平均 CPU 带宽。 value 是一个整数。 value 的允许范围是 1 到 100。
 
@@ -138,7 +138,7 @@ MAX_PROCESSES =value
 
 外部池已将 CPU 使用率限制为 75%。 最大内存为计算机上可用内存的 30%。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  
@@ -151,7 +151,7 @@ GO
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  

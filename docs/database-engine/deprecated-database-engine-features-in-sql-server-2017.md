@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: 16f81a4ac6265d37cb9e5d50a6500ca68740e394
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670514"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438840"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中弃用的数据库引擎功能
 
@@ -89,7 +89,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 不推荐使用的功能 | 替代功能 | 功能名称 | 功能 ID |
 |--------------------|-------------|--------------|------------|
-| 适用于**SET ROWCOUNT** 、 **INSERT**, **UPDATE**语句的 **DELETE** | TOP 关键字 | SET ROWCOUNT | 109 |
+| 适用于 **SET ROWCOUNT** 、 **INSERT**, **UPDATE** 语句的 **DELETE** | TOP 关键字 | SET ROWCOUNT | 109 |
 | 不带括号的 HOLDLOCK 表提示。 | 使用 HOLDLOCK 以及括号。 | 不带括号的 HOLDLOCK 表提示 | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>SQL Server 未来版本中弃用的功能
@@ -329,7 +329,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 由三部分和四部分组成的列引用。 | 由两部分组成的名称是符合标准的行为。|两个以上的部分构成的列名称 |
 | 用引号引起来的字符串用作 SELECT 列表中表达式的列别名：<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | 字符串文字作为列别名 |
 | 编号过程 | 无。 请勿使用。 | ProcNums |
-| 在 DROP INDEX 中使用*table_name.index_name* 语法|在 DROP INDEX 中使用*index_name* ON *table_name* 语法。|DROP INDEX 具有两部分构成的名称 |
+| 在 DROP INDEX 中使用 *table_name.index_name* 语法|在 DROP INDEX 中使用 *index_name* ON *table_name* 语法。|DROP INDEX 具有两部分构成的名称 |
 | 不使用分号结束 Transact-SQL 语句。|使用分号 ( ; ) 结束 Transact-SQL 语句。 | 无 |
 | GROUP BY ALL|将自定义逐案例解决方案与 UNION 或派生表配合使用。 | GROUP BY ALL |
 | ROWGUIDCOL 在 DML 语句中用作列名。|请使用 $rowguid。|ROWGUIDCOL |

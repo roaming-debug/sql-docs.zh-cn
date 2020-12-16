@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6aa1bf54d0d21ea05c16dc4808c6e7ff4191236d
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: a0d455bc9feca7aa03bc70a91a563612717f9f59
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688219"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439052"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -67,7 +67,7 @@ WITH
   
  如果省略 SERVICE_NAME 子句，则路由的服务名称保持不变。  
   
- BROKER_INSTANCE ='broker**instance'** _\__   
+ BROKER_INSTANCE ='broker **instance'** _\__   
  指定承载目标服务的数据库。  broker_instance 参数必须是远程数据库的 Broker 实例标识符，该标识符可以通过在所选数据库中运行以下查询获得：  
   
 ```sql  
@@ -81,10 +81,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- LIFETIME **=** route_lifetime\__  
+ LIFETIME **=** route _lifetime\__  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在路由表中保留路由的时间（秒）。 在生存期结束后，相应的路由即过期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为新会话选择路由时将不再考虑该路由。 如果省略此子句，则路由的生存期保持不变。  
   
- ADDRESS ='next**hop**address' _\_\__  
+ ADDRESS ='next **hop** address' _\_\__  
 
  对于 Azure SQL 托管实例，`ADDRESS` 必须是本地的。
 
@@ -111,7 +111,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- MIRROR_ADDRESS **='** next_hop\_mirror\_address\__ **'**  
+ MIRROR_ADDRESS **='** next _hop\_mirror\_address\__ **'**  
  指定镜像对的镜像服务器的网络地址，镜像对的主体服务器位于 next_hop_address  。 next_hop_mirror_address 按以下格式指定 TCP/IP 地址  ：  
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
