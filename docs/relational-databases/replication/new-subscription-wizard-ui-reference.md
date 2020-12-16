@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3e4bef2f1c7d5ff091e1efb6978fb6ebef0794ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 813994fd20542850dadaaffb9b8966a4f7a3d6fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470135"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469028"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>新建订阅向导（用户界面参考）
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

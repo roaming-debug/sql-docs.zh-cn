@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfa866c6c03234a28fbccb14a2c45cea2571090
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 81929c8da672e9294d276b5b562e55886a1c3515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918467"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468998"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>对发布数据库进行架构更改
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "86918467"
   
 -   对已发布的表执行 DDL 时，“未提交读”不是受支持的隔离级别。  
   
--   不应使用**SET CONTEXT_INFO** 来修改已对发布的对象执行架构更改的事务的上下文。  
+-   不应使用 **SET CONTEXT_INFO** 来修改已对发布的对象执行架构更改的事务的上下文。  
   
 #### <a name="adding-columns"></a>添加列  
   
@@ -151,7 +151,7 @@ ms.locfileid: "86918467"
         |**hierarchyid**|允许更改|阻止更改|阻止更改|  
         |**geography** 和 **geometry**|允许更改|允许更改*|阻止更改|  
         |**文件流 (filestream)**|允许更改|阻止更改|阻止更改|  
-        |**date**、 **time**、 **datetime2**和 **datetimeoffset**|允许更改|允许更改*|阻止更改|  
+        |**date**、 **time**、 **datetime2** 和 **datetimeoffset**|允许更改|允许更改*|阻止更改|  
   
          *SQL Server Compact 订阅服务器在订阅服务器中转换这些数据类型。  
   

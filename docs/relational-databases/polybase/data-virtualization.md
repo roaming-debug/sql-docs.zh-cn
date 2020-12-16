@@ -8,14 +8,14 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
+monikerRange: '>= sql-server-ver15'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 6c27959422023c0407d7abe3a1219c6a242bae7f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524014"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469068"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>对 ODBC 数据源使用“外部表”向导
 

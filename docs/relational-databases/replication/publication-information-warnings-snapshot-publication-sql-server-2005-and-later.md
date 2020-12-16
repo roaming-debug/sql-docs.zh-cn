@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a7930a4badc30f1e41f0dd5b9eb577ab19f0da95
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 30520fe81c7de54a154ed8b287b9006b1bd6a8fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423441"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469018"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>发布信息，警告（快照发布，SQL Server 2005 及更高版本）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

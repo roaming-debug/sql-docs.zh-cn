@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0da148cb3d1d733e506aee2ce06b5494e44c90
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e21d436502329d7df0682e661de3548377af397d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96504911"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469158"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>通过内存中 OLTP 使用查询存储
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

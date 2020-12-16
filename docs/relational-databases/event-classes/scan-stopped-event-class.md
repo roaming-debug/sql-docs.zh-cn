@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8704dafdf5586f41cb2ad7d3a3fbd9dc0f2565f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 44b507f95be070458b79509d344fc648a10974a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330503"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469568"
 ---
 # <a name="scanstopped-event-class"></a>Scan:Stopped 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

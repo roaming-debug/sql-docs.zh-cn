@@ -9,13 +9,13 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 23eadb2089e3f692e5e054441b7617e09e71ac01
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15'
+ms.openlocfilehash: b03aa87cd92bd1aadbbb96a4019c76f3062dfb99
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005852"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469128"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>配置 PolyBase 以访问 SQL Server 中的外部数据
 
