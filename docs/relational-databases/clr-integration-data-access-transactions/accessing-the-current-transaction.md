@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c82c4e4f5b1f1af6194ff409a684ca239881487a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9220519a926ca75a00843dba54dfad797064aee
+ms.sourcegitcommit: 52252e8b4c9b50d3915aecd3135e8901d345e7e2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765399"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599844"
 ---
 # <a name="accessing-the-current-transaction"></a>访问当前事务
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  如果事务处于活动状态，则在中输入运行的公共语言运行时（CLR）代码时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，该事务将通过**system.web**类公开。 **Transaction。 current**属性用于访问当前事务。 在大多数情况下，不必显式访问事务。 对于数据库连接，ADO.NET 会在调用**Open**方法时自动检查**transaction** ，并以透明方式在该事务中登记连接（除非在连接字符串中将**征用**关键字设置为 false）。  
+  如果事务处于活动状态，则在公共语言运行时 (CLR) 上运行的编写代码时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，将通过 **system.web** 类公开该事务。 **Transaction。 current** 属性用于访问当前事务。 在大多数情况下，不必显式访问事务。 对于数据库连接，ADO.NET 会在调用 **Open** 方法时自动检查 **transaction** ，并以透明方式在该事务中登记连接 (除非) 的连接字符串中将 **征用** 关键字设置为 false。  
   
- 您可能需要在以下情况下直接使用**Transaction**对象：  
+ 您可能需要在以下情况下直接使用 **Transaction** 对象：  
   
 -   如果您要登记未自动登记的资源或因为某个原因而未在初始化期间登记的资源。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "85765399"
 ## <a name="canceling-an-external-transaction"></a>取消外部事务  
  可以用以下方式从托管过程或函数取消外部事务：  
   
--   通过使用输出参数，托管过程或函数可以返回值。 调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程可以检查返回值，并在适当的情况下执行**回滚事务**。  
+-   通过使用输出参数，托管过程或函数可以返回值。 调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程可以检查返回值，并在适当的情况下执行 **回滚事务**。  
   
--   托管过程或函数可以引发自定义异常。 调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程可以捕获由托管过程或函数在 try/catch 块中引发的异常，并执行**回滚事务**。  
+-   托管过程或函数可以引发自定义异常。 调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程可以捕获由托管过程或函数在 try/catch 块中引发的异常，并执行 **回滚事务**。  
   
--   如果满足特定条件，托管过程或函数可以通过调用**transaction**方法来取消当前事务。  
+-   如果满足特定条件，托管过程或函数可以通过调用 **transaction** 方法来取消当前事务。  
   
- 当在托管过程或函数中调用该函数时， **Transaction**方法会引发异常，并在 try/catch 块中包装。 错误消息类似于以下内容：  
+ 当在托管过程或函数中调用该函数时， **Transaction** 方法会引发异常，并在 try/catch 块中包装。 错误消息类似于以下内容：  
   
 ```  
 Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0  
@@ -65,7 +65,7 @@ The context transaction which was active before entering user defined routine, t
  也应出现该异常，并且为了让执行得以继续，在执行激发触发器的操作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句周围必须有 try/catch 块。 尽管引发了两个异常，但事务将回滚，并且不提交更改。  
   
 ### <a name="example"></a>示例  
- 下面是使用**事务 Rollback**方法从托管过程回滚事务的示例。 请注意事务前后的 try/catch 块 **。** 此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本创建了一个程序集和托管存储过程。 请注意， **EXEC uspRollbackFromProc**语句包装在 try/catch 块中，以便捕获托管过程完成执行时引发的异常。  
+ 下面是使用 **事务 Rollback** 方法从托管过程回滚事务的示例。 请注意事务前后的 try/catch 块 **。** 此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本创建了一个程序集和托管存储过程。 请注意， **EXEC uspRollbackFromProc** 语句包装在 try/catch 块中，以便捕获托管过程完成执行时引发的异常。  
   
 ```csharp  
 using System;  
