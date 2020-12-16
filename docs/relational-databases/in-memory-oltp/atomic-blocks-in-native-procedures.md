@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84adfac47c755bccee6603a632dfa44aa2c151b2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e5de0ea599650792feef01508c1eed54aed68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867355"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465428"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>本机过程中的 ATOMIC 块
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91867355"
   
  如果在会话上没有处于活动状态的事务，则 **BEGIN ATOMIC** 将开始一个新事务。 如果在该块的作用域外未引发异常，则在该块的末尾将提交该事务。 如果该块引发异常（也就是说，未在该块内捕获和处理异常），则该事务将被回滚。 对于跨单个原子块的事务（单个本机编译的存储过程），你无需编写显式的 **BEGIN TRANSACTION** 和 **COMMIT** 或 **ROLLBACK** 语句。  
   
- 本机编译的存储过程支持使用 **TRY**、 **CATCH**和 **THROW** 构造进行错误处理。 不支持**RAISERROR** 。  
+ 本机编译的存储过程支持使用 **TRY**、 **CATCH** 和 **THROW** 构造进行错误处理。 不支持 **RAISERROR** 。  
   
  下面的示例说明针对原子块和本机编译存储过程的错误处理行为：  
   
@@ -132,19 +132,19 @@ GO
 ## <a name="session-settings"></a>会话设置  
  在编译存储过程时原子块中的会话设置是固定的。 某些设置可使用 **BEGIN ATOMIC** 指定，而其他设置则始终固定为相同值。  
   
- 以下选项对于 **BEGIN ATOMIC**而言是必需的：  
+ 以下选项对于 **BEGIN ATOMIC** 而言是必需的：  
   
 |必需设置|说明|  
 |----------------------|-----------------|  
-|**TRANSACTION ISOLATION LEVEL**|支持的值为 **SNAPSHOT**、 **REPEATABLEREAD**和 **SERIALIZABLE**。|  
+|**TRANSACTION ISOLATION LEVEL**|支持的值为 **SNAPSHOT**、 **REPEATABLEREAD** 和 **SERIALIZABLE**。|  
 |**LANGUAGE**|确定日期和时间格式以及系统消息。 支持 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中的所有语言和别名。|  
   
  以下设置是可选的：  
   
 |可选设置|说明|  
 |----------------------|-----------------|  
-|**DATEFORMAT**|支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式。 指定后， **DATEFORMAT** 将取代与 **LANGUAGE**相关联的默认日期格式。|  
-|**DATEFIRST**|指定后， **DATEFIRST** 将取代与 **LANGUAGE**相关联的默认设置。|  
+|**DATEFORMAT**|支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式。 指定后， **DATEFORMAT** 将取代与 **LANGUAGE** 相关联的默认日期格式。|  
+|**DATEFIRST**|指定后， **DATEFIRST** 将取代与 **LANGUAGE** 相关联的默认设置。|  
 |**DELAYED_DURABILITY**|支持的值为 **OFF** 和 **ON**。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、默认或延迟的持久。有关详细信息，请参阅[控制事务持久性](../../relational-databases/logs/control-transaction-durability.md)。|  
   
  下面的 SET 选项对于所有本机编译存储过程中的所有原子块具有相同的系统默认值：  

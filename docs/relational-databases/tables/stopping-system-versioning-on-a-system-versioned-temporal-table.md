@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2686ba2c5ac8e4db03f49a1d090ed8de1066b2c7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c486e78d8cd05d4af130626586e8a9817ab779a1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550941"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464488"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止对由系统控制版本的时态表进行系统版本控制
 
@@ -25,7 +25,7 @@ ms.locfileid: "89550941"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-你可能希望暂时或永久停止对临时表的版本控制。 可以通过将 **SYSTEM_VERSIONING** 子句设置为 **OFF**实现此操作。
+你可能希望暂时或永久停止对临时表的版本控制。 可以通过将 **SYSTEM_VERSIONING** 子句设置为 **OFF** 实现此操作。
 
 ## <a name="setting-system_versioning--off"></a>将 SYSTEM_VERSIONING 设置为 OFF
 
@@ -37,11 +37,11 @@ ms.locfileid: "89550941"
 
 ### <a name="important-remarks"></a>重要提示
 
-- 历史记录表会**停止**捕获 **SYSTEM_VERSIONING = OFF** 的持续时间更新。
+- 历史记录表会 **停止** 捕获 **SYSTEM_VERSIONING = OFF** 的持续时间更新。
 - 设置 SYSTEM_VERSIONING = OFF 或删除 SYSTEM_TIME 时间段时，时态表上不会出现数据丢失的情况    。
 - 设置 **SYSTEM_VERSIONING = OFF** 且不删除 **SYSTEM_TIME** 时间段时，系统将继续更新每个插入和更新操作的时间段列。 在当前表中执行的删除操作是永久性的。
 - 删除 **SYSTEM_TIME** 时间段以完全删除该时间段列。
-- 设置 **SYSTEM_VERSIONING = OFF**时，具有足够权限的所有用户都能够修改历史记录表的架构和内容，甚至还可以永久删除该历史记录表。
+- 设置 **SYSTEM_VERSIONING = OFF** 时，具有足够权限的所有用户都能够修改历史记录表的架构和内容，甚至还可以永久删除该历史记录表。
 - 如果使用临时查询扩展（如引用 SYSTEM_TIME  ）通过 SCHEMABINDING 创建了其他对象，则无法设置 SYSTEM_VERSIONING = OFF  。 如果设置 SYSTEM_VERSIONING = OFF  ，则此限制可防止这些对象失败。
 
 ### <a name="permanently-remove-system_versioning"></a>永久删除 SYSTEM_VERSIONING
@@ -57,7 +57,7 @@ DROP PERIOD FOR SYSTEM_TIME;
 
 ### <a name="temporarily-remove-system_versioning"></a>暂时删除 SYSTEM_VERSIONING
 
-以下是需要将系统版本控制设置为 **OFF**的操作列表：
+以下是需要将系统版本控制设置为 **OFF** 的操作列表：
 
 - 从历史记录中删除不必要的数据（**DELETE** 或 **TRUNCATE**）
 - 从没有版本控制的当前表中删除数据（**DELETE**、 **TRUNCATE**）

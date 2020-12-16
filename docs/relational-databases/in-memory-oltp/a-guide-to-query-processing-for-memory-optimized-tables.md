@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bd48189958a95a54efa128a7b0a9887b4e04b4c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eed83fcd8a8b861f102c90fbc73d28d51bd5fa56
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867419"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465478"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +83,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Order 表的数据是使用 CustomerID 列的非聚集索引检索的。 此索引包含 CustomerID 列（用于联接）和主键列 OrderID（返回给用户）。 返回 Order 表的其他列需要查找 Order 表的聚集索引。  
   
--   逻辑运算符 **Inner Join** 是通过物理运算符 **Merge Join**实现的。 其他物理联接类型为 **Nested Loops** 和 **Hash Join**。 **Merge Join** 运算符利用两个索引都按联接列 CustomerID 排序这一事实。  
+-   逻辑运算符 **Inner Join** 是通过物理运算符 **Merge Join** 实现的。 其他物理联接类型为 **Nested Loops** 和 **Hash Join**。 **Merge Join** 运算符利用两个索引都按联接列 CustomerID 排序这一事实。  
   
  考虑一个与此查询稍有不同的查询，它返回 Order 表的所有行，而不仅是 OrderID：  
   

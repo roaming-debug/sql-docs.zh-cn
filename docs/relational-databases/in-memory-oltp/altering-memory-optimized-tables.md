@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eed3fa25e6c9378d7996260f25c611f8c4e7d025
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: da12d83efd43c7ca6113348adee8e3bde14d9472
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867408"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465468"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
 
@@ -52,7 +52,7 @@ ms.locfileid: "91867408"
 
  本机编译的存储过程都需要绑定到架构，即是说它们对所访问的内存优化表和所引用的列有一种绑定到架构的依赖关系。 架构绑定依赖关系是一种两个实体之间的关系，只要引用实体存在，这种关系就可以防止对被引用的实体进行删除或不兼容地更改。  
   
- 例如，如果绑定到架构的本机编译存储过程从表 *mytable* 中引用了 *c1*列，则 *c1* 列不能被删除。 同样，如果一个过程包含一个没有列列表的 INSERT 语句（如 `INSERT INTO dbo.mytable VALUES (...)`），那么表中没有可被删除的列。  
+ 例如，如果绑定到架构的本机编译存储过程从表 *mytable* 中引用了 *c1* 列，则 *c1* 列不能被删除。 同样，如果一个过程包含一个没有列列表的 INSERT 语句（如 `INSERT INTO dbo.mytable VALUES (...)`），那么表中没有可被删除的列。  
 
 ## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>记录内存优化表上的 ALTER TABLE
 

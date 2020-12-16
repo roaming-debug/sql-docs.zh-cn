@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f336e026d95db0de5ad40a9fb4ebc90d8165f609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998996"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465518"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式化文件 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -270,12 +270,12 @@ ms.locfileid: "85998996"
   
 |类型类别|\<COLUMN> 数据类型|数据类型<br /><br /> 的可选 XML 属性|数据类型<br /><br /> 的可选 XML 属性|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|已修复|**SQLBIT**、 **SQLTINYINT**、 **SQLSMALLINT**、 **SQLINT**、 **SQLBIGINT**、 **SQLFLT4**、 **SQLFLT8**、 **SQLDATETIME**、 **SQLDATETIM4**、 **SQLDATETIM8**、 **SQLMONEY**、 **SQLMONEY4**、 **SQLVARIANT**和 **SQLUNIQUEID**|无。|NULLABLE|  
+|已修复|**SQLBIT**、 **SQLTINYINT**、 **SQLSMALLINT**、 **SQLINT**、 **SQLBIGINT**、 **SQLFLT4**、 **SQLFLT8**、 **SQLDATETIME**、 **SQLDATETIM4**、 **SQLDATETIM8**、 **SQLMONEY**、 **SQLMONEY4**、 **SQLVARIANT** 和 **SQLUNIQUEID**|无。|NULLABLE|  
 |变量号|**SQLDECIMAL** 和 **SQLNUMERIC**|无。|NULLABLE、PRECISION、SCALE|  
-|LOB|**SQLIMAGE**、 **CharLOB**、 **SQLTEXT**和 **SQLUDT**|无。|NULLABLE|  
+|LOB|**SQLIMAGE**、 **CharLOB**、 **SQLTEXT** 和 **SQLUDT**|无。|NULLABLE|  
 |字符 LOB|**SQLNTEXT**|无。|NULLABLE|  
 |二进制字符串|**SQLBINARY** 和 **SQLVARYBIN**|无。|NULLABLE、LENGTH|  
-|字符串|**SQLCHAR**、 **SQLVARYCHAR**、 **SQLNCHAR**和 **SQLNVARCHAR**|无。|NULLABLE、LENGTH|  
+|字符串|**SQLCHAR**、 **SQLVARYCHAR**、 **SQLNCHAR** 和 **SQLNVARCHAR**|无。|NULLABLE、LENGTH|  
   
 > [!IMPORTANT]  
 >  若要大容量导出或导入 SQLXML 数据，请在格式化文件中使用下列数据类型之一：SQLCHAR 或 SQLVARYCHAR（数据以客户端代码页或排序规则隐含的代码页的形式发送）、SQLNCHAR 或 SQLNVARCHAR（数据以 Unicode 的形式发送）或者 SQLBINARY 或 SQLVARYBIN（数据不经任何转换直接发送）。  
@@ -291,7 +291,7 @@ ms.locfileid: "85998996"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（BULK INSERT 和 OPENROWSET 的大容量行集访问接口）  
   
-     在将数据批量导入表中时，[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用 \<ROW> 组件来生成输入行集。 此外，[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句还将根据 \<ROW> 下指定的列类型和目标表中的对应列，进行适当的类型转换。 如果格式化文件和目标表中指定的列类型之间存在不匹配，还将进行额外的类型转换。 与 **bcp**相比，此额外的类型转换可能引起 BULK INSERT 或 OPENROWSET 的 BULK 行集提供程序中的行为出现某些差异（即损失精度）。  
+     在将数据批量导入表中时，[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用 \<ROW> 组件来生成输入行集。 此外，[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句还将根据 \<ROW> 下指定的列类型和目标表中的对应列，进行适当的类型转换。 如果格式化文件和目标表中指定的列类型之间存在不匹配，还将进行额外的类型转换。 与 **bcp** 相比，此额外的类型转换可能引起 BULK INSERT 或 OPENROWSET 的 BULK 行集提供程序中的行为出现某些差异（即损失精度）。  
   
      无需任何其他信息，仅利用 \<ROW> 元素中的信息即可构造行。 因此，可以使用 SELECT 语句 (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*) 来生成行集。  
   

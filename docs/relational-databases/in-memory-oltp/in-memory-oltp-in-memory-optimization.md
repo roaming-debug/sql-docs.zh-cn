@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42f9feb302418cd42cd49cd53dc866dbdccc2301
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9f462f256c98c4482af67527401cc6d30f3f0776
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867680"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465378"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>内存中 OLTP 和内存优化
 
@@ -89,7 +89,7 @@ ms.locfileid: "91867680"
 
 - _视频标题：_ &nbsp; **SQL Server 2016 中的内存中 OLTP**
 - _发布日期：_ &nbsp; 2019 年 3 月 10 日，发布于 `YouTube.com`。
-- _持续时间：_ &nbsp; 17:32 &nbsp; &nbsp;（有关视频链接，请参阅以下[索引](#anchorname-index-17minute-video)。）
+- _持续时间：_ &nbsp; 17:32 &nbsp; &nbsp;（有关视频链接，请参阅以下 [索引](#anchorname-index-17minute-video)。）
 - _：_ &nbsp; SQL Server 高级项目经理 Jos de Bruijn
 
 ### <a name="demo-can-be-downloaded"></a>可以下载演示

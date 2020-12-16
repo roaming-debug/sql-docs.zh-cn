@@ -14,13 +14,13 @@ helpviewer_keywords: ''
 ms.assetid: ''
 author: s-r-k
 ms.author: karam
-monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 0d9a618e8170d08250c15c75e83d5d2dbc627447
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+monikerRange: = azuresqldb-current || >= sql-server-ver15
+ms.openlocfilehash: 8d116fbf036540337bef9d0b21bb66f79017bfd2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790300"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464498"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
