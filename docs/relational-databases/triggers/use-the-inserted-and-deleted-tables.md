@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1caf51460496fa734bed5e2a88cce3abf9b138e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bd89afe79f1e6cf7a5745b04378c1b403142c56e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427389"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426398"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入的和删除的表
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88427389"
 > [!NOTE]  
 >  如果触发器操作取决于数据修改所影响的行数，则应对多行数据修改（基于 SELECT 语句的 INSERT、DELETE 或 UPDATE）使用测试（例如检查 @@ROWCOUNT），然后采取相应的措施。 有关详细信息，请参阅 [创建 DML 触发器以处理多行数据](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)。
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不允许在 AFTER 触发器的插入和删除的表中引用 **text**、 **ntext**或 **image** 列。 但会包括这些数据类型，这只是为了向后兼容。 大量数据的首选存储是使用 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据类型。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不允许在 AFTER 触发器的插入和删除的表中引用 **text**、 **ntext** 或 **image** 列。 但会包括这些数据类型，这只是为了向后兼容。 大量数据的首选存储是使用 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据类型。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  **在触发器中使用插入的表以强制实施业务规则的示例**  
   

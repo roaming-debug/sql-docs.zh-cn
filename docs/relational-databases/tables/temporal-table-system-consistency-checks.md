@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8df54961057d12191e732fc4f3ec287f9bd32ef9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 31aaceb646bf735731317177f579df638da1b5c9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523464"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426525"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>时态表系统一致性检查
 
@@ -29,7 +29,7 @@ ms.locfileid: "89523464"
 
 ## <a name="system-consistency-checks"></a>系统一致性检查
 
-在将 **SYSTEM_VERSIONING** 设置为 **ON**之前，系统将对历史记录表和当前表执行一系列检查。 如果历史记录表不为空，则这些检查分为架构检查和数据检查。 此外，系统还会执行运行时一致性检查。
+在将 **SYSTEM_VERSIONING** 设置为 **ON** 之前，系统将对历史记录表和当前表执行一系列检查。 如果历史记录表不为空，则这些检查分为架构检查和数据检查。 此外，系统还会执行运行时一致性检查。
 
 ### <a name="schema-check"></a>架构检查
 

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76eb3c73bf93b3cc8f037f96737f491c5d473173
-ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 203522bf6cc70e5df2c55d9a179081c92775f92f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "96130863"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426858"
 ---
 # <a name="temporal-tables"></a>临时表
 
