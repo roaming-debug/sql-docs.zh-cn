@@ -9,13 +9,13 @@ ms.date: 11/12/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a460ccdd3adcebfb43e6039527cf983b14486757
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 1036f81b62134b2301bb2d800e9481bd06dcdcee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870048"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471458"
 ---
 # <a name="install-sql-server-java-language-extension-on-linux"></a>在 Linux 上安装 SQL Server Java 语言扩展
 

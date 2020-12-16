@@ -10,13 +10,13 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
 ms.reviewer: jrasnick
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a45d59e3891e08f2ae5c5b5d64258b5ebcc371a8
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: dc97f307022a28bcb2df00da4335c8676d32342f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688326"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471948"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT（并行数据仓库）
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

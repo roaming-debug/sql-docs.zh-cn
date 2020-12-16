@@ -32,13 +32,13 @@ helpviewer_keywords:
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b44d9306d08d1e75f1d0f0477e0c58c207bd70e8
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a3c1a21e36d379bca1875ee96865f9affe2151ad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300862"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471918"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -146,14 +146,14 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  一个可选的关键字，可以将它用在 INSERT 和目标表之间。  
   
  server_name  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  表或视图所在的链接服务器的名称。 server_name 可以指定为[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)名称，或通过使用 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数。  
   
  如果将 server_name 指定为链接服务器，则需要 database_name 和 schema_name  。 如果使用 OPENDATASOURCE 指定 server_name，则 database_name 和 schema_name 可能不适用于所有数据源，并且受到访问远程对象的 OLE DB 访问接口的性能的限制  。  
   
  *database_name*  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  数据库的名称。  
   
@@ -168,7 +168,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  table_or_view_name 引用的视图必须可更新，并且只在该视图的 FROM 子句中引用一个基表。 例如，多表视图中的 INSERT 必须使用只引用一个基表中的各列的 column_list。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
  rowset_function_limited  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数。 使用这些函数受到访问远程对象的 OLE DB 访问接口的性能的限制。  
   
@@ -182,7 +182,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
  对作为 INSERT 语句目标的表指定 TABLOCK 提示与指定 TABLOCKX 提示具有相同的效果。 对表采用排他锁。  
   
- ( *column_list* )  
+ (*column_list*)  
  要在其中插入数据的一列或多列的列表。 必须用括号将 column_list 括起来，并且用逗号进行分隔。  
   
  如果某列不在 column_list 中，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必须能够基于该列的定义提供一个值；否则不能加载行。 如果列满足下面的条件，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将自动为列提供值：  
@@ -263,35 +263,35 @@ OUTPUT 子句
  包含用于筛选 \<dml_statement_with_output_clause> 所返回行的有效 \<search_condition> 的任何 WHERE 子句。 有关详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。 在此上下文中使用时，\<search_condition> 不能包含子查询、执行数据访问的标量用户定义函数、聚合函数、TEXTPTR 或全文搜索谓词。 
   
  DEFAULT VALUES  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  强制新行包含为每个列定义的默认值。  
   
  BULK  
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  由外部工具用来上载二进制数据流。 该选项并不旨在用于 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、SQLCMD、OSQL 之类的工具或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 之类的数据访问应用程序编程接口。  
   
  FIRE_TRIGGERS  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定将在二进制数据流上载操作期间执行目标表中定义的所有插入触发器。 有关详细信息，请参阅 [BULK INSERT (Transact SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
  CHECK_CONSTRAINTS  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定在二进制数据流上载操作期间，必须检查所有对目标表或视图的约束。 有关详细信息，请参阅 [BULK INSERT (Transact SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
  KEEPNULLS  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定在二进制数据流上载操作期间空列应该保留 null 值。 有关详细信息，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
  KILOBYTES_PER_BATCH = kilobytes_per_batch  
  将每个批处理中数据的近似千字节数 (KB) 指定为 kilobytes_per_batch。 有关详细信息，请参阅 [BULK INSERT (Transact SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
- ROWS_PER_BATCH = *rows_per_batch*  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ ROWS_PER_BATCH =*rows_per_batch*  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指示二进制数据流中近似的数据行数量。 有关详细信息，请参阅 [BULK INSERT (Transact SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
@@ -726,7 +726,7 @@ GO
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. 通过使用链接服务器向远程表插入数据  
  下面的示例将行插入一个远程表中。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分。  
   
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 ```sql
 USE master;  
@@ -755,7 +755,7 @@ GO
 #### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>N. 通过使用 OPENQUERY 函数向远程表插入数据  
  下面的示例通过指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 行集函数向远程表插入一行。 在之前例子中创建的链接服务器名称用于此示例。  
   
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
@@ -768,7 +768,7 @@ GO
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. 通过使用 OPENDATASOURCE 函数向远程表插入数据  
  下面的示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数向远程表插入一行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称 。  
   
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 ```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -785,7 +785,7 @@ GO
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. 插入到使用 PolyBase 创建的外部表中  
  将数据从 SQL Server 导出到 Hadoop 或 Azure 存储空间。 首先，创建一个指向目标文件或目录的外部表。 然后，使用 INSERT INTO 将数据从本地 SQL Server 表导出到外部数据源。 INSERT INTO 语句将创建目标文件或目录（如果不存在），而 SELECT 语句的结果将以指定文件格式导出到指定位置。  有关详细信息，请参阅 [PolyBase 入门](../../relational-databases/polybase/polybase-guide.md)。  
   
-**适用于** ： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 ```sql
 -- Create an external table.   
@@ -861,7 +861,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R. 将 OPENROWSET 函数与 BULK 一起使用来将数据大容量加载到表中  
  下面的示例通过指定 OPENROWSET 函数，将来自数据文件的行插入表中。 出于性能优化目的，指定了 IGNORE_TRIGGERS 表提示。 若要查看更多示例，请参阅[使用 BULK INSERT 或 OPENROWSET (BULK...) 导入批量数据 (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 ```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  

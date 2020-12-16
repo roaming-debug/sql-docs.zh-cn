@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 657aabe4-d3da-475e-87e5-cf9d33c976b1
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a65f7e767313e6bd66a11a3ef71c914cb26cf67
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fb9133495b42f64b9b579f4f5aee2629ca5808fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88330273"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469598"
 ---
 # <a name="scans-event-category"></a>Scans 事件类别
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

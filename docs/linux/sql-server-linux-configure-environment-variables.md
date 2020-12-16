@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 66a40af981670fd30f8ff6d20c34364ba084e3dd
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 737004c651ff7cb335557cbbfe61e9df516e2f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115522"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471618"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
 
@@ -27,7 +27,7 @@ ms.locfileid: "92115522"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 可在 Linux 上使用多种不同的环境变量配置 SQL Server 2019。 这些变量用于两个方案：
 
@@ -46,7 +46,7 @@ ms.locfileid: "92115522"
 
 | 环境变量 | 说明 |
 |-----|-----|
-| **ACCEPT_EULA** | 将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
+| **ACCEPT_EULA** | 将 **ACCEPT_EULA** 变量设置为任意值，以确认接受 [最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
 | **MSSQL_SA_PASSWORD** | 配置 SA 用户密码。 |
 | **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： </br></br>**Evaluation**</br>**开发人员**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**产品密钥**</br></br>如果指定产品密钥，则必须采用 #####-#####-#####-#####-##### 格式，其中“#”是数字或字母。|
 | **MSSQL_LCID** | 设置用于 SQL Server 的语言 ID。 例如，1036 为法语。 |
@@ -66,11 +66,11 @@ ms.locfileid: "92115522"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 | 环境变量 | 说明 |
 |-----|-----|
-| **ACCEPT_EULA** | 将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
+| **ACCEPT_EULA** | 将 **ACCEPT_EULA** 变量设置为任意值，以确认接受 [最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
 | **MSSQL_SA_PASSWORD** | 配置 SA 用户密码。 |
 | **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： </br></br>**Evaluation**</br>**开发人员**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**产品密钥**</br></br>如果指定产品密钥，则必须采用 #####-#####-#####-#####-##### 格式，其中“#”是数字或字母。|
 | **MSSQL_LCID** | 设置用于 SQL Server 的语言 ID。 例如，1036 为法语。 |
@@ -132,7 +132,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 如果在 Linux/macOS 上运行 Docker，请将以下语法与单引号配合使用：
 

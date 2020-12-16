@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43ec99d77ea10b33dd06427f97444c995534dba2
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a08d8a7c2449b1d9cb1f850290040c18d27a06a5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662136"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473148"
 ---
 # <a name="spatial-data-sql-server"></a>空间数据 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

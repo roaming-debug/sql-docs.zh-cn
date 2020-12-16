@@ -10,13 +10,13 @@ ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 16e1d3458e04d1693afeca030e0ecb89f434fc1d
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 1e0ace10e1a976128146b82d77660d1edc06040a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785046"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471488"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>使用共享配置复制快照文件夹
 

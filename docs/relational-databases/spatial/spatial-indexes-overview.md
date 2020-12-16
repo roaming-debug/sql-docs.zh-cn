@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5375afc7e8a115c9398f7ab567c06cb731eb62
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473138"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持空间数据和空间索引。 “空间索引” ** 是一种扩展索引，允许您对空间列编制索引。 空间列是包含空间数据类型（如 **geometry** 或 **geography**）的数据的表列。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持空间数据和空间索引。 “空间索引”  是一种扩展索引，允许您对空间列编制索引。 空间列是包含空间数据类型（如 **geometry** 或 **geography**）的数据的表列。  
   
 > [!IMPORTANT]  
 >   有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括影响空间索引的功能），请下载白皮书 [SQL Server 2012 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
@@ -64,7 +64,7 @@ ms.locfileid: "92006274"
 >  当数据库兼容级别设置为 100 或更低时，空间索引的网格密度显示在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目录视图的 level_1_grid、level_2_grid、level_3_grid 和 level_4_grid 列中。 **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** 分割方案选项不会填充这些列。 使用自动网格选项时，sys.spatial_index_tessellations 目录视图对这些列使用 **NULL** 值。  
   
 ###  <a name="tessellation"></a><a name="tessellation"></a> 分割  
- 将索引空间分解成网格层次结构后，空间索引将逐行读取空间列中的数据。 读取空间对象（或实例）的数据后，空间索引将为该对象执行 ** 分割过程。 分割过程通过将对象与其接触的网格单元集（“接触单元”**）相关联使该对象适合网格层次结构。 从网格层次结构的第 1 级开始，分割过程以“广度优先” ** 方式对整个级别进行处理。 在可能的情况下，此过程可以连续处理所有四个级别，一次处理一个级别。  
+ 将索引空间分解成网格层次结构后，空间索引将逐行读取空间列中的数据。 读取空间对象（或实例）的数据后，空间索引将为该对象执行 分割过程。 分割过程通过将对象与其接触的网格单元集（“接触单元”）相关联使该对象适合网格层次结构。 从网格层次结构的第 1 级开始，分割过程以“广度优先”  方式对整个级别进行处理。 在可能的情况下，此过程可以连续处理所有四个级别，一次处理一个级别。  
   
  分割过程的输出为对象的空间索引中所记录的接触单元集。 通过引用这些已记录单元，空间索引可以确定该对象在空间中相对于空间列中也存储在索引中的其他对象的位置。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "92006274"
   
 -   覆盖规则  
   
-     如果一个对象完全盖住了某个单元，则称该单元由该对象所“覆盖” ** 。 被覆盖的单元会参与计数，但不进行分割。 此规则应用于网格层次结构的所有级别。 覆盖规则简化了分割过程，并减少了空间索引记录的数据量。  
+     如果一个对象完全盖住了某个单元，则称该单元由该对象所“覆盖”  。 被覆盖的单元会参与计数，但不进行分割。 此规则应用于网格层次结构的所有级别。 覆盖规则简化了分割过程，并减少了空间索引记录的数据量。  
   
 -   每对象单元数规则  
   
-     此规则强制执行** 每个对象的单元数限制，该限制确定每个对象可以具有的最大单元数（级别 1 例外）。 在较低级别上，每个对象的单元数规则控制可以记录有关该对象的信息量。  
+     此规则强制执行每个对象的单元数限制，该限制确定每个对象可以具有的最大单元数（级别 1 例外）。 在较低级别上，每个对象的单元数规则控制可以记录有关该对象的信息量。  
   
 -   最深单元规则  
   
@@ -88,14 +88,14 @@ ms.locfileid: "92006274"
  这些分割规则依次逐步应用于每个网格级别。 此部分的其余内容更详细地介绍了这些分割规则。  
   
 #### <a name="covering-rule"></a>覆盖规则  
- 如果一个对象完全盖住了某个单元，则称该单元由该对象所“覆盖” ** 。 例如，在下图中，一个第 2 级单元 15.11 完全由八边形的中间部分所覆盖。  
+ 如果一个对象完全盖住了某个单元，则称该单元由该对象所“覆盖”  。 例如，在下图中，一个第 2 级单元 15.11 完全由八边形的中间部分所覆盖。  
   
  ![表面优化](../../relational-databases/spatial/media/spndx-opt-covering.gif "表面优化")  
   
  被覆盖的单元会参与计数并记录在索引中，但不再进行分割。  
   
 #### <a name="cells-per-object-rule"></a>每对象单元数规则  
- 每个对象的分割程度主要取决于空间索引的** 每对象单元数限制。 此限制确定了对于每个对象分割可以计数的最大单元数。 然而，请注意，每对象单元数规则不对第 1 级强制执行，因此可能超出此限制。 如果第 1 级计数达到（或超出）每对象单元数限制，则在较低级别不再进行分割。  
+ 每个对象的分割程度主要取决于空间索引的每对象单元数限制。 此限制确定了对于每个对象分割可以计数的最大单元数。 然而，请注意，每对象单元数规则不对第 1 级强制执行，因此可能超出此限制。 如果第 1 级计数达到（或超出）每对象单元数限制，则在较低级别不再进行分割。  
   
  只要计数低于每对象单元数限制，分割过程就将继续。 从编号最低的接触单元（例如上图中的单元 15.6）开始，此过程将测试每个单元以评估是对其进行计数还是进行分割。 如果分割某单元将超出每对象单元数限制，将对该单元进行计数而不进行分割。 否则，将对该单元进行分割，而对由对象接触的较低级别的单元进行计数。 分割过程将以这种方式在整个级别的广度范围内继续进行。 此过程对低级别网格的分割单元依次逐步进行重复，直至达到限制或不再有要计数的单元为止。  
   
@@ -114,11 +114,11 @@ ms.locfileid: "92006274"
  ![最深单元优化](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "最深单元优化")  
   
 ###  <a name="tessellation-schemes"></a><a name="schemes"></a> 分割方案  
- 空间索引的行为部分取决于“分割方案” **。 分割方案特定于数据类型。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空间索引支持两种分割方案：  
+ 空间索引的行为部分取决于“分割方案” 。 分割方案特定于数据类型。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空间索引支持两种分割方案：  
   
--   “几何图形网格分割”**，这是适用于 **geometry** 数据类型的方案。  
+-   “几何图形网格分割”，这是适用于 **geometry** 数据类型的方案。  
   
--   “地理网格分割”**，该方案适用于数据类型为 **geography** 的列。  
+-   “地理网格分割”，该方案适用于数据类型为 **geography** 的列。  
   
 > [!NOTE]  
 >  空间索引的 **tessellation_scheme** 设置显示在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目录视图中。  
@@ -130,15 +130,15 @@ ms.locfileid: "92006274"
 >  可以使用 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句显式指定此分割方案。  
   
 ##### <a name="the-bounding-box"></a>边界框  
- 几何图形数据占有的平面可以是无限的。 然而，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空间索引需要有限空间。 为了建立有限空间以用于分解，几何图形网格分割方案需要矩形“边界框” **。 该边界框由四个坐标 **(** _x-min_ **，** _y-min_ **)** 和 **(** _x-max_ **，** _y-max_ **)** 定义，这些坐标存储为空间索引的属性。 这些坐标所表示的意义如下：  
+ 几何图形数据占有的平面可以是无限的。 然而，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空间索引需要有限空间。 为了建立有限空间以用于分解，几何图形网格分割方案需要矩形“边界框” 。 该边界框由四个坐标 **(** _x-min_ **，** _y-min_ **)** 和 **(** _x-max_ **，** _y-max_ **)** 定义，这些坐标存储为空间索引的属性。 这些坐标所表示的意义如下：  
   
--   ** x-min 是边界框左下角的 x 坐标。  
+-   x-min 是边界框左下角的 x 坐标。  
   
--   ** y-min 是左下角的 y 坐标。  
+-   y-min 是左下角的 y 坐标。  
   
--   ** x-max 是右上角的 x 坐标。  
+-   x-max 是右上角的 x 坐标。  
   
--   ** y-max 是右上角的 y 坐标。  
+-   y-max 是右上角的 y 坐标。  
   
 > [!NOTE]  
 >  这些坐标通过 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 BOUNDING_BOX 子句指定。  
@@ -200,7 +200,7 @@ ms.locfileid: "92006274"
   
 -   *geometry1*）的数据的表列。[STIntersects](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)(*geometry2*)= 1  
   
--   *geometry1.* [STOverlaps (geometry2) = 1](../../t-sql/spatial-geometry/stoverlaps-geometry-data-type.md) **  
+-   *geometry1.* [STOverlaps (geometry2) = 1](../../t-sql/spatial-geometry/stoverlaps-geometry-data-type.md)   
   
 -   *geometry1*[STTouches](../../t-sql/spatial-geometry/sttouches-geometry-data-type.md)(*geometry2*) = 1  
   

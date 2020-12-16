@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: bfc63894d7e2ada81ca230c1a66d32bd49d6d91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115721"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471398"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 配置使用情况和诊断数据收集
 
@@ -83,7 +83,7 @@ SQL Server 2017 始终收集和发送从安装过程开始的安装体验相关�
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. 在主机目录中添加包含行 `[telemetry]` 和 `customerfeedback = false` 的 `mssql.conf` 文件：
 
@@ -176,7 +176,7 @@ Microsoft SQL Server 2017 包含支持 Internet 的功能，可以收集关于�
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. 新的本地审核日志的目标目录将位于容器中。 在计算机的主机目录中为新的本地审核日志创建目标目录。 以下示例创建新的 **/audit** 目录：
 

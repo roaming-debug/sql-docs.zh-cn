@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 author: pmasl
 ms.author: pelopes
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6641172a4f38a445ce57cfd5b9b43f9b8758144f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f9fb820d31c071850d2a2fc510368be4f3bb1839
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246529"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473078"
 ---
 # <a name="parameters"></a>参数
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

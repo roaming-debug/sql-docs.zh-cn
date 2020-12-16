@@ -8,13 +8,13 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: d7e15c070b17fd0a3682f5572c9b7cd3ce2c1dee
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: b0d384b2d75b6eedc431b4b352de8915b7e8097d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115650"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471528"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server 容器的高可用性
 
@@ -32,7 +32,7 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 
 ![Kubernetes SQL Server 群集示意图](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-在上图中，`mssql-server` 是 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) 中的 SQL Server 实例（容器）**。 [副本集](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可确保在节点发生故障后自动恢复 Pod。 应用程序会连接到服务。 在这种情况下，该服务表示负载均衡器，承载着 `mssql-server` 发生故障后保持不变的 IP 地址。
+在上图中，`mssql-server` 是 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) 中的 SQL Server 实例（容器）。 [副本集](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可确保在节点发生故障后自动恢复 Pod。 应用程序会连接到服务。 在这种情况下，该服务表示负载均衡器，承载着 `mssql-server` 发生故障后保持不变的 IP 地址。
 
 Kubernetes 协调群集中的资源。 如果承载 SQL Server 实例容器的节点发生故障，该节点会使用 SQL Server 实例来启动新容器，并将其附加到同一个持久存储上。
 

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c965816a7eca3d0a512f87cdf556b4f194b20e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1513249d7c071d35a11423d405ee4b7d528d829b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463768"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472568"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理更改跟踪 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "88463768"
 ## <a name="understanding-change-tracking-overhead"></a>了解更改跟踪开销  
  启用表的更改跟踪后，会影响某些管理操作。 下表列出了应当注意的操作和影响。  
   
-|操作|启用更改跟踪后|  
+|Operation|启用更改跟踪后|  
 |---------------|-------------------------------------|  
 |DROP TABLE|会删除已删除表的所有更改跟踪信息。|  
 |ALTER TABLE DROP CONSTRAINT|删除 PRIMARY KEY 约束的尝试将失败。 必须先禁用更改跟踪，然后才能删除 PRIMARY KEY 约束。|  

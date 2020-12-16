@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: c9ac655959814370058059e86814d4ae1abcbc9a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: bd721eb2dc71fe768edfb21da5c94881fc879a07
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496989"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471638"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入门：在 SUSE Linux Enterprise Server 上安装 SQL Server 并创建数据库
 
@@ -26,7 +26,7 @@ ms.locfileid: "92496989"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 在本快速入门中，将在 SUSE Linux Enterprise Server (SLES) v12 上安装 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
 
@@ -48,7 +48,7 @@ ms.locfileid: "92496989"
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 必须拥有 SLES v12 SP2、SP3、SP4 或 SP5 计算机（内存至少为 2 GB）  。 文件系统必须是 XFS 或 EXT4   。 其他文件系统（如 BTRFS）均不受支持  。
 
@@ -101,7 +101,7 @@ ms.locfileid: "92496989"
    sudo zypper install -y mssql-server
    ```
 
-4. 包安装完成后，运行 **mssql-conf setup** ，按照提示设置 SA 密码并选择版本。
+4. 包安装完成后，运行 **mssql-conf setup**，按照提示设置 SA 密码并选择版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -129,7 +129,7 @@ ms.locfileid: "92496989"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server-2019"></a><a id="install"></a>安装 SQL Server 2019
 
@@ -159,7 +159,7 @@ ms.locfileid: "92496989"
    sudo zypper install -y mssql-server
    ```
 
-4. 包安装完成后，运行 **mssql-conf setup** ，按照提示设置 SA 密码并选择版本。
+4. 包安装完成后，运行 **mssql-conf setup**，按照提示设置 SA 密码并选择版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -196,7 +196,7 @@ ms.locfileid: "92496989"
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. 使用 unixODBC 开发人员包安装 **mssql-tools** 。 有关详细信息，请参阅[安装 Microsoft ODBC Driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
+1. 使用 unixODBC 开发人员包安装 **mssql-tools**。 有关详细信息，请参阅[安装 Microsoft ODBC Driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel

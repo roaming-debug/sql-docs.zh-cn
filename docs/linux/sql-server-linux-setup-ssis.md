@@ -8,18 +8,18 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a8ec33ad6d3c2bfc9c8f3adab2acad2fdb74ce0d
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e34fd6c218950b86a46f43842c06408feefedfc9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088767"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471438"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安装 SQL Server Integration Services (SSIS)
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-按照本文中的步骤在 Linux 上安装 SQL Server Integration Services (mssql-server-is****)。 有关此版 Integration Services for Linux 支持的功能的信息，请参阅[发行说明](sql-server-linux-release-notes.md)。
+按照本文中的步骤在 Linux 上安装 SQL Server Integration Services (mssql-server-is)。 有关此版 Integration Services for Linux 支持的功能的信息，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
 可以在以下平台上安装 SQL Server Integration Services：
 
@@ -28,7 +28,7 @@ ms.locfileid: "88088767"
 
 ## <a name="install-ssis-on-ubuntu"></a><a name="ubuntu"></a>在 Ubuntu 上安装 SSIS
 
-要在 Ubuntu 上安装 mssql-server-is 包，请按照以下步骤操作****：
+要在 Ubuntu 上安装 mssql-server-is 包，请按照以下步骤操作：
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -52,7 +52,7 @@ ms.locfileid: "88088767"
    sudo apt-get install -y mssql-server-is
    ```
 
-1. 安装 Integration Services 后，运行 ssis-conf****。 有关详细信息，请参阅[使用 ssis-conf 在 Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
+1. 安装 Integration Services 后，运行 ssis-conf。 有关详细信息，请参阅[使用 ssis-conf 在 Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
@@ -67,7 +67,7 @@ ms.locfileid: "88088767"
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. 导入公共存储库 GPG 密钥。
 
@@ -88,7 +88,7 @@ ms.locfileid: "88088767"
    sudo apt-get install -y mssql-server-is
    ```
 
-1. 安装 Integration Services 后，运行 ssis-conf****。 有关详细信息，请参阅[使用 ssis-conf 在 Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
+1. 安装 Integration Services 后，运行 ssis-conf。 有关详细信息，请参阅[使用 ssis-conf 在 Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
@@ -104,7 +104,7 @@ ms.locfileid: "88088767"
 
 ### <a name="update-ssis"></a>更新 SSIS
 
-如果已安装 mssql-server-fts，可使用下列命令将其更新至最新版本****：
+如果已安装 mssql-server-fts，可使用下列命令将其更新至最新版本：
 
 ```bash
 sudo apt-get install mssql-server-is
@@ -112,14 +112,14 @@ sudo apt-get install mssql-server-is
 
 ### <a name="remove-ssis"></a>删除 SSIS
 
-要删除 mssql-server-is，请运行以下命令****：
+要删除 mssql-server-is，请运行以下命令：
 
 ```bash
 sudo apt-get remove mssql-server-is
 ```
 
 ## <a name="install-ssis-on-rhel"></a><a name="RHEL"></a>在 RHEL 上安装 SSIS
-要在 RHEL 上安装 mssql-server-is 包，请按照以下步骤操作****：
+要在 RHEL 上安装 mssql-server-is 包，请按照以下步骤操作：
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -136,7 +136,7 @@ sudo apt-get remove mssql-server-is
    sudo yum install -y mssql-server-is
    ```
 
-1. 安装后，运行 ssis-conf****。 有关详细信息，请参阅[使用 ssis-conf 在 Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
+1. 安装后，运行 ssis-conf。 有关详细信息，请参阅[使用 ssis-conf 在 Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
@@ -151,7 +151,7 @@ sudo apt-get remove mssql-server-is
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. 下载 SQL Server Red Hat 存储库配置文件。
 
@@ -165,7 +165,7 @@ sudo apt-get remove mssql-server-is
    sudo yum install -y mssql-server-is
    ```
 
-1. 安装后，运行 ssis-conf****。 有关详细信息，请参阅[使用 ssis-conf 在 Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
+1. 安装后，运行 ssis-conf。 有关详细信息，请参阅[使用 ssis-conf 在 Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
@@ -181,14 +181,14 @@ sudo apt-get remove mssql-server-is
 
 ### <a name="update-ssis"></a>更新 SSIS
 
-如果已安装 mssql-server-fts，可使用下列命令将其更新至最新版本****：
+如果已安装 mssql-server-fts，可使用下列命令将其更新至最新版本：
 
 ```bash
 sudo yum update mssql-server-is
 ```
 
 ### <a name="remove-ssis"></a>删除 SSIS
-要删除 mssql-server-is，请运行以下命令****：
+要删除 mssql-server-is，请运行以下命令：
 
 ```bash
 sudo yum remove mssql-server-is
@@ -196,9 +196,9 @@ sudo yum remove mssql-server-is
 
 ## <a name="unattended-installation"></a>无人参与的安装
 
-要将 ssis-conf setup 作为无人参与的安装运行，请执行以下步骤****：
+要将 ssis-conf setup 作为无人参与的安装运行，请执行以下步骤：
 
-1. 指定 -n（无提示）选项****。
+1. 指定 -n（无提示）选项。
 1. 通过设置环境变量来提供所需的值。
 
 下面的示例执行以下操作：
@@ -206,7 +206,7 @@ sudo yum remove mssql-server-is
 - 安装 SSIS
 - 通过为 SSIS_PID 环境变量提供值来指定开发人员版本
 - 通过提供 ACCEPT_EULA 环境变量的值来接受 Microsoft 软件许可条款
-- 通过指定 -n（无提示）选项来运行无人参与安装****
+- 通过指定 -n（无提示）选项来运行无人参与安装
 
 ```
 sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 

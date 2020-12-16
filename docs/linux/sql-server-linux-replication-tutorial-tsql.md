@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 titleSuffix: SQL Server on Linux
-monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 0a11581be84e9e9864c1709242b9897160403468
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: 2e423c615d026c21c3a5cc3ecaec04aaf5a44a3c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785027"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471478"
 ---
 # <a name="configure-replication-with-t-sql"></a>使用 T-SQL 配置复制
 

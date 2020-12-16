@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb02f98fbfad4dbad81983afd09daf04ed1e0176
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03187f310687792ebb07d4fd3d67e7a58ce83323
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006362"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473178"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>创建、修改和删除空间索引
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "92006362"
   
   
 ##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> 对空间索引的限制  
- 只能对类型为 **geometry** 或 **geography**的列创建空间索引。  
+ 只能对类型为 **geometry** 或 **geography** 的列创建空间索引。  
   
 ### <a name="table-and-view-restrictions"></a>针对表和视图的限制  
  只能对具有主键的表定义空间索引。 表中主键列的最大数目为 15。  

@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ada149941022761d0135adff7b1b65db592cc48
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1afee97fd7b7c70d30def7383e4b83453b90f19b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067444"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472028"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -131,26 +131,26 @@ ALTER AUTHORIZATION ON
 |类|Products|    
 |-|-|    
 |OBJECT|**适用范围**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
-|ASSEMBLY|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|ASYMMETRIC KEY|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ASSEMBLY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ASYMMETRIC KEY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |AVAILABILITY GROUP |适用范围：SQL Server 2012 和更高版本。|
-|CERTIFICATE|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|CONTRACT|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
-|DATABASE|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 有关详细信息，请参阅下面的 [ALTER AUTHORIZATION FOR 数据库](#AlterDB)部分。|    
-|ENDPOINT|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
-|FULLTEXT CATALOG|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|FULLTEXT STOPLIST|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|MESSAGE TYPE|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
-|REMOTE SERVICE BINDING|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
-|ROLE|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|ROUTE|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
+|CERTIFICATE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|CONTRACT|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
+|DATABASE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 有关详细信息，请参阅下面的 [ALTER AUTHORIZATION FOR 数据库](#AlterDB)部分。|    
+|ENDPOINT|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
+|FULLTEXT CATALOG|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|FULLTEXT STOPLIST|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|MESSAGE TYPE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
+|REMOTE SERVICE BINDING|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
+|ROLE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ROUTE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
 |SCHEMA|**适用范围**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
-|SEARCH PROPERTY LIST|**适用于** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|SERVER ROLE|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
-|SERVICE|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
-|SYMMETRIC KEY|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|TYPE|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|XML SCHEMA COLLECTION|**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|SEARCH PROPERTY LIST|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|SERVER ROLE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
+|SERVICE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
+|SYMMETRIC KEY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|TYPE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|XML SCHEMA COLLECTION|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
     
  entity_name    
  实体名。    
@@ -196,7 +196,7 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|主体必须为登录名。|    
   
 ## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a>对数据库执行 ALTER AUTHORIZATION  
-**适用范围** ：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**适用范围**：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 ### <a name="for-sql-server"></a>对于 SQL Server：  
 **对新所有者的要求：**    
 新所有者主体必须是以下项之一：  
@@ -334,7 +334,7 @@ GO
 ### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D. 将端点的所有权转移给 SQL Server 登录名    
  以下示例将 `CantabSalesServer1` 端点的所有权转移给 `JaePak`。 由于该端点是服务器级安全对象，因此只能将它转移给服务器级别主体。    
     
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。    
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。    
     
 ```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
@@ -352,7 +352,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ```    
     
 ### <a name="f-changing-the-owner-of-a-database"></a>F. 更改数据库所有者    
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。    
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。    
     
  以下示例将 `Parts` 数据库的所有者更改为登录名 `MichikoOsada`。    
     

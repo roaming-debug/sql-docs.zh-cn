@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: c72c5a2f4aaa408c67cc9191f803e0af6469857d
-ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest
+ms.openlocfilehash: 41044fb94489fe85cc024379422f953cb9e78ddc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "96124675"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472088"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 

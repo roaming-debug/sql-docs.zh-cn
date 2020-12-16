@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a83155dd566812248e37d509e34600a1beeb677
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d7dc4905411b6673d0e4a2127e3885918d509bbb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007198"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473908"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式化文件跳过表列 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 > [!IMPORTANT]  
 >  可能必须通过 `-S` 参数指定要连接的服务器实例的名称。 此外，可能还须通过 `-U` 和 `-P` 参数指定用户名和密码。 有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
 
-以上命令创建了一个非 XML 格式化文件， `myTestSkipCol_Default.fmt`。 此格式化文件称为 *默认格式化文件* ，因为它是 **bcp**生成的格式。 默认格式化文件说明数据文件字段与表列之间的一一对应关系。  
+以上命令创建了一个非 XML 格式化文件， `myTestSkipCol_Default.fmt`。 此格式化文件称为 *默认格式化文件* ，因为它是 **bcp** 生成的格式。 默认格式化文件说明数据文件字段与表列之间的一一对应关系。  
   
  以下截图显示了此示例默认格式化文件中的值。 
   
@@ -150,7 +150,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 > [!IMPORTANT]  
 >  可能必须通过 `-S` 参数指定要连接的服务器实例的名称。 此外，可能还须通过 `-U` 和 `-P` 参数指定用户名和密码。 有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
  
-以上命令将创建 XML 格式化文件 `myTestSkipCol_Default.xml`。 此格式化文件称为 *默认格式化文件* ，因为它是 **bcp**生成的格式。 默认格式化文件说明数据文件字段与表列之间的一一对应关系。  
+以上命令将创建 XML 格式化文件 `myTestSkipCol_Default.xml`。 此格式化文件称为 *默认格式化文件* ，因为它是 **bcp** 生成的格式。 默认格式化文件说明数据文件字段与表列之间的一一对应关系。  
   
 ```xml
 <?xml version="1.0"?>  

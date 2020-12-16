@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5c4d25ed48715c9317ebe0df37ee4d2779abe10
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2239ed32aece0d91e880958b3d21f072da7a8ac4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96125106"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473048"
 ---
 # <a name="create-synonyms"></a>创建同义词
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ed7d71fb9c4e1306826c281806c66db38285e06d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 50ff8dde3d4c15217630500b07786674b518afc1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868626"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473388"
 ---
 # <a name="mssql_eng018752"></a>MSSQL_ENG018752
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91868626"
 |消息正文|一次只能有一个日志读取器代理或日志相关过程(sp_repldone、sp_replcmds 和 sp_replshowcmds)连接到某个数据库。 如果执行了一个日志相关过程，那么在启动日志读取器代理或者执行另一个日志相关过程之前，请删除执行第一个过程时所用的连接，或者在该连接上执行 sp_replflush。|  
   
 ## <a name="explanation"></a>说明  
- 有多个当前连接正在尝试执行以下任一日志相关过程: **sp_repldone**、 **sp_replcmds**或 **sp_replshowcmds**。 存储过程 [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md) 和 [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) 是日志读取器代理用来在已发布数据库中查找和更新已复制事务的相关信息的存储过程。 存储过程 [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md) 用于解决事务性复制发生的某些类型的问题。  
+ 有多个当前连接正在尝试执行以下任一日志相关过程: **sp_repldone**、 **sp_replcmds** 或 **sp_replshowcmds**。 存储过程 [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md) 和 [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) 是日志读取器代理用来在已发布数据库中查找和更新已复制事务的相关信息的存储过程。 存储过程 [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md) 用于解决事务性复制发生的某些类型的问题。  
   
  在以下情形下将引发此错误：  
   
@@ -44,20 +44,20 @@ ms.locfileid: "91868626"
   
      有时看起来像是有多个代理，则可能其中一个代理是执行孤立进程的结果。  
   
--   如果启动了已发布数据库的日志读取器代理，而用户在同一个数据库上执行 **sp_repldone**、 **sp_replcmds**或 **sp_replshowcmds** ，则在执行存储过程的应用程序（如 **sqlcmd**）中将引发此错误。  
+-   如果启动了已发布数据库的日志读取器代理，而用户在同一个数据库上执行 **sp_repldone**、 **sp_replcmds** 或 **sp_replshowcmds** ，则在执行存储过程的应用程序（如 **sqlcmd**）中将引发此错误。  
   
--   如果已发布数据库的日志读取器代理不在运行状态，而用户在执行 **sp_repldone**、 **sp_replcmds**或 **sp_replshowcmds** 后没有关闭用于执行此过程的连接，则当日志读取器代理尝试连接到数据库时将引发此错误。  
+-   如果已发布数据库的日志读取器代理不在运行状态，而用户在执行 **sp_repldone**、 **sp_replcmds** 或 **sp_replshowcmds** 后没有关闭用于执行此过程的连接，则当日志读取器代理尝试连接到数据库时将引发此错误。  
   
 ## <a name="user-action"></a>用户操作  
  以下步骤可以帮助您解决这个问题。 如果任何一个步骤能正确启动日志读取器代理，则没有必要完成剩余的步骤。  
   
 -   检查日志读取器代理的历史记录，查找可能导致此错误的其他任何错误。 有关在复制监视器中查看代理状态和错误详细资料的信息，请参阅[使用复制监视器查看信息和执行任务](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
--   检查 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) 的输出，查找连接到已发布数据库的具体进程标识号(SPID)。 关闭所有可能运行 **sp_repldone**、 **sp_replcmds**或 **sp_replshowcmds**的连接。  
+-   检查 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) 的输出，查找连接到已发布数据库的具体进程标识号(SPID)。 关闭所有可能运行 **sp_repldone**、 **sp_replcmds** 或 **sp_replshowcmds** 的连接。  
   
 -   重新启动日志读取器代理。 有关详细信息，请参阅[启动和停止复制代理 (SQL Server Management Studio)](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   在分发服务器上重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务（使之在群集中脱机或联机）。 如果计划的作业有可能在任何其他 **实例中执行了**sp_repldone **、** sp_replcmds **或** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则也要为那些实例重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。 有关详细信息，请参阅[启动、停止或暂停 SQL Server 代理服务](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)。  
+-   在分发服务器上重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务（使之在群集中脱机或联机）。 如果计划的作业有可能在任何其他 **实例中执行了** sp_repldone **、** sp_replcmds **或** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则也要为那些实例重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。 有关详细信息，请参阅[启动、停止或暂停 SQL Server 代理服务](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)。  
   
 -   对发布服务器上的发布数据库执行 [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)，然后重新启动日志读取器代理。  
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a4ac1f679400a021b8a61b0e5c0b3adbdffcdf29
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 18d85b6072e5c24f344c4435e3d8a3f67317c2d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380082"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471908"
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]

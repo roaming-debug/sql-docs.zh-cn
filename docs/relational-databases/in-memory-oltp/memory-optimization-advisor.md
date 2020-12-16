@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0626ff511e504a4718a426ae9b1ca85c674ab5f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868571"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473868"
 ---
 # <a name="memory-optimization-advisor"></a>内存优化顾问
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91868571"
  有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](/previous-versions/dn673538(v=msdn.10))。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用内存优化顾问进行演练  
- 在 **对象资源管理器**中，右键单击要转换的表，然后选择 **“内存优化顾问”** 。 这将显示 **“表内存优化顾问”** 的欢迎使用页。  
+ 在 **对象资源管理器** 中，右键单击要转换的表，然后选择 **“内存优化顾问”** 。 这将显示 **“表内存优化顾问”** 的欢迎使用页。  
   
 ### <a name="memory-optimization-checklist"></a>内存优化核对清单  
  当您在 **“表内存优化顾问”** 的欢迎使用页中单击 **“下一步”** 时，将会看到内存优化核对清单。 内存优化表并不支持基于磁盘的表中的所有功能。 内存优化核对清单将报告基于磁盘的表是否使用了与内存优化表不兼容的任何功能。 **“表内存优化顾问”** 不会修改基于磁盘的表，以便它可以迁移到使用内存中 OLTP。 您必须首先进行这些更改，然后才能继续迁移。 对于找到的每个不兼容之处， **“表内存优化顾问”** 都会显示一个链接，指向可帮助您修改基于磁盘的表的信息。  
@@ -99,7 +99,7 @@ ms.locfileid: "91868571"
   
  如果主键不存在并且该表正迁移到非持久表，则该屏幕将不会出现。  
   
- 对于文本列（类型为 **char**、 **nchar**、 **varchar**和 **nvarchar**的列），必须选择相应的排序规则。 对于内存优化表上的列，内存中 OLTP 仅支持 BIN2 排序规则，并且不支持具有增补字符的排序规则。 有关支持的排序规则以及排序规则中更改的潜在影响的信息，请参阅 [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) 。  
+ 对于文本列（类型为 **char**、 **nchar**、 **varchar** 和 **nvarchar** 的列），必须选择相应的排序规则。 对于内存优化表上的列，内存中 OLTP 仅支持 BIN2 排序规则，并且不支持具有增补字符的排序规则。 有关支持的排序规则以及排序规则中更改的潜在影响的信息，请参阅 [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) 。  
   
  可为主键配置以下参数：  
   

@@ -10,13 +10,13 @@ ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a945b716b6de0d4fcb61ccbfd296eded645243d4
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: ce4e17be837794382435c8a5369ef92a44a5b91a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785030"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471498"
 ---
 # <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>使用非默认端口配置复制 (SQL Server Linux)
 

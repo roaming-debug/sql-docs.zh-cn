@@ -9,13 +9,13 @@ ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
-monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 7faa2b0101ee1f54484fce2a0756812a4ad611e1
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: aa16f66c42dcd5532f66aa19394f54e7bfc39575
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785015"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471468"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux 上的 SQL Server 复制
 

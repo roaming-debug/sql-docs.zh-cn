@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c1a4185e9234d9ee0a19acc0dfba0879c31ccfc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 507fde1100c35ecff2d637c9aeb57f3888f8df9d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448656"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469618"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 事件类
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -11,13 +11,13 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c4a22b43650292055a7b1c48b9408b4d8e85f6c
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 54eb732e45515176f7fd1e8b258310e7de2b535c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785048"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471508"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>配置 Linux 上的 SQL Server 复制
 
@@ -73,9 +73,9 @@ ms.locfileid: "91785048"
 
 1. 在 SSMS 上，连接到对象资源管理器中的 SQL Server 实例。
 
-1. 右键单击“复制”文件夹，然后单击“配置分发...”********。
+1. 右键单击“复制”文件夹，然后单击“配置分发...”。
 
-1. 按照配置分发向导上的说明操作操作****。
+1. 按照配置分发向导上的说明操作操作。
 
 ### <a name="create-publication-and-articles"></a>创建发布和项目
 
@@ -83,7 +83,7 @@ ms.locfileid: "91785048"
 
 1. 在对象资源管理器中，单击“复制” > “本地发布”> “新建发布...”  。
 
-1. 按照“新建发布”向导上的说明配置复制的类型和属于该发布的项目****。
+1. 按照“新建发布”向导上的说明配置复制的类型和属于该发布的项目。
 
 ### <a name="configure-the-subscription"></a>配置订阅
 
@@ -93,7 +93,7 @@ ms.locfileid: "91785048"
 
 使用复制监视器监视复制作业。
 
-在对象资源管理器中，右键单击“复制”，然后单击“启动复制监视器”********。
+在对象资源管理器中，右键单击“复制”，然后单击“启动复制监视器”。
 
 ## <a name="next-steps"></a>后续步骤
 

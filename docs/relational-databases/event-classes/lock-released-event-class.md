@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d79a3367fb115c775d51ac5badc7e399e667ded
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f29ba9f35350d2f3a736a532bab4667cae0232be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448649"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469588"
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released 事件类
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
