@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b359aff3a8164c9d25782b0b10c05f1b68ac5230
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3628c3a508aed473604bcc0b3f1d3d7f2b8e5264
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908856"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432204"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用复制监视器查看信息和执行任务
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "86908856"
 复制监视器提供了下列选项卡，以显示有关选定发布服务器的信息：   
 -   **发布** - 显示选定发布服务器上所有发布的相关信息。   
 -   **订阅监视列表** - 显示有关所选发布服务器上所有可用发布中包含错误、警告或最差性能的订阅的信息。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以前版本的分发服务器，不显示此选项卡。    
--   **代理**选项卡 - 显示所有类型的复制所使用的代理和作业的详细信息。 使用该选项卡，还可以启动和停止每个代理和作业。 若要查看每个选项卡上各个选项的详细信息，请在右窗格中单击该选项卡，再单击菜单栏上的 **“帮助”** 。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+-   **代理** 选项卡 - 显示所有类型的复制所使用的代理和作业的详细信息。 使用该选项卡，还可以启动和停止每个代理和作业。 若要查看每个选项卡上各个选项的详细信息，请在右窗格中单击该选项卡，再单击菜单栏上的 **“帮助”** 。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="perform-tasks"></a>执行任务
   
