@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d213b41fe392bbc82f663360879b7d67b07675be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09be06fc9f84b46a93363c8386b492f987872583
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767548"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463098"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 轮换 Always Encrypted 密钥
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -78,7 +78,7 @@ SQL Server Management Studio 将获取使用旧列主密钥保护的列加密密
 > [!WARNING]
 > 如果你在列加密密钥的对应列主密钥可供应用程序使用之前删除列加密密钥的值，应用程序将再也无法对数据库列解密。
 
-1.  使用**对象资源管理器**导航到“安全”>“始终加密密钥”文件夹并找到要替换的现有列主密钥。
+1.  使用 **对象资源管理器** 导航到“安全”>“始终加密密钥”文件夹并找到要替换的现有列主密钥。
 2.  右键单击现有的列主密钥，然后选择“清理” 。
 3.  查看要删除的列加密密钥值列表。
 4.  单击“确定”。
@@ -89,7 +89,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 
 如果你选择从数据库中删除旧列主密钥的定义，可使用以下步骤。
 
-1. 使用**对象资源管理器**导航到“安全”>“始终加密密钥”>“列主密钥”文件夹，并找到要从数据库中删除的旧列主密钥。
+1. 使用 **对象资源管理器** 导航到“安全”>“始终加密密钥”>“列主密钥”文件夹，并找到要从数据库中删除的旧列主密钥。
 2. 右键单击旧列主密钥，然后选择“删除” 。 （这将生成并发出 [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) 语句，以删除列主密钥元数据。）
 3. 单击“确定”。
 
@@ -123,11 +123,11 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 1.  为数据库打开该向导：右键单击数据库，指向“任务”，然后单击“加密列”。 
 2.  查看“简介”页，然后单击“下一步”。 
 3.  在“列选择”  页上，展开表并找到你要替换的所有列，这些列当前使用旧的列加密密钥加密。
-4.  对于使用旧列加密密钥进行加密的每个列，将“加密密钥”设置为自动生成的新密钥。 **注意：** 或者，也可以在运行该向导之前创建新的列加密密钥 - 请参阅[使用“新建列加密密钥”对话框提供列加密密钥](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)。
+4.  对于使用旧列加密密钥进行加密的每个列，将“加密密钥”设置为自动生成的新密钥。 **注意：** 或者，也可以在运行该向导之前创建新的列加密密钥 - 请参阅 [使用“新建列加密密钥”对话框提供列加密密钥](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)。
 5.  在“主密钥配置”页上，选择一个位置来存储新密钥，并选择主密钥源，然后单击“下一步”。 **注意：** 若要使用现有列加密密钥（而不是自动生成的密钥），无需在此页上执行任何操作。
 6.  在“验证”页上，选择是要立即运行脚本还是创建 PowerShell 脚本，然后单击“下一步”。 
 7.  在“摘要”页上，先审阅已选择的选项，再单击“完成”并在完成后关闭向导。
-8.  使用 **对象资源管理器**导航到“安全”/“始终加密密钥”/“列加密密钥”文件夹，并找到要从数据库中删除的旧列加密密钥。  右键单击该密钥，然后选择“删除” 。
+8.  使用 **对象资源管理器** 导航到“安全”/“始终加密密钥”/“列加密密钥”文件夹，并找到要从数据库中删除的旧列加密密钥。  右键单击该密钥，然后选择“删除” 。
 
 ### <a name="permissions-for-rotating-column-encryption-keys"></a>轮换列加密密钥所需的权限
 

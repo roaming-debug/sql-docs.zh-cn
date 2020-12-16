@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 689a7c4082cf1da7acf136294d63c32528edeac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e386227a557d6073f631708152aa0d9faf8f5594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88329873"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460540"
 ---
 # <a name="spcacheinsert-event-class"></a>SP:CacheInsert 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

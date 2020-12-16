@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b3daf000381fbfaa5481ae18f348bd987689e46b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 71c71e4809b573dae9507b52bc3d32e5b6f5142e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84938941"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460740"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 连接配置 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -97,7 +97,7 @@ RECONFIGURE
 |name|**nvarchar(35)**|配置选项的名称。|  
 |**最小值**|**int**|配置选项的最小值。|  
 |**最大值**|**int**|配置选项的最大值。|  
-|**config_value**|**int**|使用 **sp_configure**设置的值。|  
+|**config_value**|**int**|使用 **sp_configure** 设置的值。|  
 |**run_value**|**int**|PolyBase 正在使用当前值。 此值通过运行 RECONFIGURE 进行设置。<br /><br /> **config_value** 和 **run_value** 通常是相同的，除非该值正在进行更改。<br /><br /> 如果正在进行重新配置，则可能需要重启计算机，运行值才会准确。|  
   
 ## <a name="general-remarks"></a>一般备注  

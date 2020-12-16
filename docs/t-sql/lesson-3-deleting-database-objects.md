@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a032737a39cf22e1b2d5516c615ced9d59dfc43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 517042032a8b7b146f02b620ca6d47a90ae074a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467525"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462268"
 ---
 # <a name="lesson-3-delete-database-objects"></a>第 3 课：删除数据库对象
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

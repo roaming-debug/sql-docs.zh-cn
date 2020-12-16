@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 46a83efe3efcab212d3569c5f2f32c232f1962c5
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 52ad20f534dc865014a760ee0408ccb77181c688
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125862"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463638"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server 安装指南
 

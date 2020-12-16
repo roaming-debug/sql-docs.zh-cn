@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3e8a42bce62455b998ee9e4c121256bab7953a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4daec2e6e616ef0922e5700c77539e61496b69aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646017"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462598"
 ---
 # <a name="delete-foreign-key-relationships"></a>删除外键关系
 
@@ -54,7 +54,7 @@ ms.locfileid: "88646017"
   
 1.  在 **“对象资源管理器”** 中，展开具有约束的表，再展开 **“键”**。  
   
-2.  右键单击该约束，然后单击“删除”****。  
+2.  右键单击该约束，然后单击“删除”。  
   
 3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
 

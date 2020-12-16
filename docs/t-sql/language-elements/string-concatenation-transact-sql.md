@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 889d6d6c8b76c57b906cd0a6a87e250619084322
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1e8263bb5fdf0862019456f20e7a52a342834a78
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193259"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464278"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+（字符串串联）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ expression + expression
 
 ## <a name="arguments"></a>参数
  *expression*  
- 字符和二进制数据类型类别中的任何一个数据类型的有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，但 image、ntext 或 text 数据类型除外************。 两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。  
+ 字符和二进制数据类型类别中的任何一个数据类型的有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，但 image、ntext 或 text 数据类型除外。 两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。  
   
  在二进制字符串之间串联二进制字符串和任何字符串时，必须显式转换字符数据。 以下示例显示了对于二进制串联，何时必须使用 `CONVERT` 或 `CAST`，何时不需要使用 `CONVERT` 或 `CAST`。  
   
@@ -88,7 +88,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ```  
   
 ### <a name="b-combining-numeric-and-date-data-types"></a>B. 组合数值和日期数据类型  
- 以下示例使用 `CONVERT` 函数串联 numeric 和 date 数据类型********。  
+ 以下示例使用 `CONVERT` 函数串联 numeric 和 date 数据类型。  
   
 ```sql  
 -- Uses AdventureWorks  

@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 99b04548244da3bda45346e7aa4a7c4d72481789
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868159"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463088"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：使用 SSMS 的具有安全 Enclave 的 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]

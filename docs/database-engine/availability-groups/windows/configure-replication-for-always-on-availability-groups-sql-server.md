@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 505982d700608d34e909248b02ade932d470c4b5
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d86a45512af5676bf2097f39bf241327c10bbd5e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584435"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463688"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>使用 AlwaysOn 可用性组配置复制
 

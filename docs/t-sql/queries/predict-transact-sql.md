@@ -18,13 +18,13 @@ helpviewer_keywords:
 - PREDICT clause
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
-ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest'
+ms.openlocfilehash: 83205b4a11be46888f8c7da8f29c84494d012740
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96523046"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460850"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "96523046"
 
 ## <a name="syntax"></a>语法
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ```syntaxsql
 PREDICT  
@@ -60,7 +60,7 @@ MODEL = @model | model_literal
 
 ::: moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 ```syntaxsql
 PREDICT  
@@ -95,19 +95,19 @@ WITH ( <result_set_definition> )
 
 **MODEL**
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017"
 `MODEL` 参数用于指定用于评分或预测的模型。 将模型指定为变量或文字或标量表达式。
 
 `PREDICT` 支持使用 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 和 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 包训练的模型。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 `MODEL` 参数用于指定用于评分或预测的模型。 将模型指定为变量或文字或标量表达式。
 
 在 Azure SQL 托管实例中，`PREDICT` 支持 [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) 格式的模型，或使用 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 和 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 包训练的模型。
 ::: moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 `MODEL` 参数用于指定用于评分或预测的模型。 将模型指定为变量或文字或标量表达式或标量子查询。
 
 在 Azure Synapse Analytics 中，`PREDICT` 支持 [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) 格式的模型。
@@ -139,7 +139,7 @@ WITH 子句用于指定 `PREDICT` 函数返回的输出的架构。
 
 任何与数据、模型或列格式相关的错误消息都由与模型关联的基础预测函数返回。
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017"
 ## <a name="remarks"></a>备注
 
 Windows 和 Linux 上的所有版本的 SQL Server 2017 或更高版本都支持 `PREDICT` 功能。 无需启用[机器学习服务](../../machine-learning/sql-server-machine-learning-services.md)即可使用 `PREDICT`。
@@ -147,13 +147,13 @@ Windows 和 Linux 上的所有版本的 SQL Server 2017 或更高版本都支持
 
 ### <a name="supported-algorithms"></a>支持的算法
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017"
 使用的模型必须是使用 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 或 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 包中支持的算法之一创建的。 若要查看当前支持的模型列表，请参阅[使用 PREDICT T-SQL 函数本机评分](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)。
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 支持可转换为 [ONNX](https://onnx.ai/) 模型格式的算法。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 支持可转换为 [ONNX](https://onnx.ai/) 模型格式的算法，以及使用 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 或 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 包中支持的算法之一创建的模型。 若要查看 RevoScaleR 和 revoscalepy 中当前支持的算法的列表，请参阅[使用 PREDICT T-SQL 函数本机评分](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)。
 ::: moniker-end
 
@@ -169,7 +169,7 @@ Windows 和 Linux 上的所有版本的 SQL Server 2017 或更高版本都支持
 
 此示例引用 `SELECT` 语句的 `FROM` 子句中的 `PREDICT` 函数：
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ```sql
 SELECT d.*, p.Score
@@ -179,7 +179,7 @@ FROM PREDICT(MODEL = @model,
 
 :::moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
@@ -198,7 +198,7 @@ FROM PREDICT(MODEL = @model,
 - 为 `PREDICT` 函数指定的别名 p 用于引用 `PREDICT` 函数返回的预测列。 列名应与模型的输出名称相同。
 - 所有输入数据列和预测列都可显示在 SELECT 语句中。
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 可以重写前面的示例查询，通过将 `MODEL` 指定为标量子查询来创建视图：
 
@@ -216,7 +216,7 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 一个常见的预测用例是生成输入数据的评分，然后将预测值插入到表中。 下面的示例假定，应用程序调用操作会使用存储过程将包含预测值的行插入到表中：
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
@@ -228,7 +228,7 @@ FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 
 :::moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
@@ -249,6 +249,6 @@ FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score
 ## <a name="next-steps"></a>后续步骤
 
 - [使用 PREDICT T-SQL 函数本机计分](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)
-::: moniker range="=azure-sqldw-latest||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest||=azuresqldb-mi-current"
 -   [了解有关 ONNX 模型的详细信息](/azure/machine-learning/concept-onnx#get-onnx-models)
 ::: moniker-end

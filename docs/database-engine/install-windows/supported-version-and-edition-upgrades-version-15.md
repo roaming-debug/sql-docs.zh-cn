@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 37f12250c3a0bf4ae4ca3492ae9c1d9cbb8ee8ea
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2017'
+ms.openlocfilehash: 6b92acc4dbf0b7b9418e382019f48ec1d1c6a36a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125838"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463558"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2019"></a>支持的版本和版本升级 (SQL Server 2019)
 

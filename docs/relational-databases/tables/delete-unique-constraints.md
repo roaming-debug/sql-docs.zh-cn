@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56065a74319773012d88ddd9bb09987187e6f4c7
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0a2ad9953050271d42aa2770c6bd3a02d787f9d9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646647"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462608"
 ---
 # <a name="delete-unique-constraints"></a>删除唯一约束
 
@@ -56,21 +56,21 @@ ms.locfileid: "88646647"
   
 1.  在对象资源管理器中，展开包含唯一约束的表，再展开 **“约束”**。  
   
-2.  右键单击该键，然后选择“删除”****。  
+2.  右键单击该键，然后选择“删除”。  
   
 3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”**。  
   
 #### <a name="to-delete-a-unique-constraint-using-table-designer"></a>使用表设计器删除唯一约束  
   
-1.  在“对象资源管理器”**** 中，右键单击具有唯一约束的表，然后单击“设计”****。  
+1.  在“对象资源管理器”中，右键单击具有唯一约束的表，然后单击“设计”。  
   
 2.  在“表设计器”菜单上，单击“索引/键”。  
   
-3.  在“索引/键”**** 对话框中，从“选定的主键/唯一键和索引”**** 列表中选择唯一键。  
+3.  在“索引/键”对话框中，从“选定的主键/唯一键和索引”列表中选择唯一键。  
   
 4.  单击 **“删除”** 。  
   
-5.  在“文件”菜单上，单击“保存表名称”******** __。  
+5.  在“文件”菜单上，单击“保存表名称” 。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

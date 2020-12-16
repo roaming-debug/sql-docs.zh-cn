@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9cb3512b81520337dcf072c5367110a8e655449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ca41f73a5dc100de1a86f890f4224c1769b211fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428479"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463528"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 事件类
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

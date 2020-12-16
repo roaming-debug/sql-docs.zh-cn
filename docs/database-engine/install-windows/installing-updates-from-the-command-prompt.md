@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e89e825dc8b5fd2748dc380c8b065e0baac02821
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: f4c99cbcdbb9d61697b36c2ff57f9ec74726060c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125856"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463628"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>从命令提示符安装更新
 

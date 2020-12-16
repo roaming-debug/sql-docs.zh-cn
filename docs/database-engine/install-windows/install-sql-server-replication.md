@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 55a8a744c384df0536cef1073e05b2fc61a7a1ac
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d258594f464a18d1c2495c2ca868a043d91e415e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125925"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460710"
 ---
 # <a name="install-sql-server-replication"></a>安装 SQL Server 复制
 

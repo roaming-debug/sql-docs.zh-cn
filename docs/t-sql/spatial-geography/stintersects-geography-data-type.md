@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce978df17e7f0fd904e630fb3e8eaf84db375765
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6e0207a0e72b65b032d6860289403fbcd78a776c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88445229"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462278"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects（geography 数据类型）
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

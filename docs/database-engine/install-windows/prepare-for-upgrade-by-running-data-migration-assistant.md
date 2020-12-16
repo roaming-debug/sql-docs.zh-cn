@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4cd334b5301b2074ff7a36b8a7625cc3b50cc552
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ae52c9ea34bd8731a70e4e8a077bd2abc5aa9980
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125801"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463598"
 ---
 # <a name="prepare-for-upgrade-by-running-data-migration-assistant"></a>运行数据迁移助手以准备升级
 

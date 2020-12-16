@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a433fbfe50e2a673ab29595729f7c8b83f9444ae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4b57082f1ce4f76e191c0237e80f404199a9ac4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538206"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462638"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>更改由系统控制版本的时态表的架构
 
@@ -58,7 +58,7 @@ ALTER TABLE dbo.Department
 
 ### <a name="important-remarks"></a>重要提示
 
-- 若要更改临时表的架构，需要具有对当前和历史记录表的**CONTROL** 权限。
+- 若要更改临时表的架构，需要具有对当前和历史记录表的 **CONTROL** 权限。
 - 在 **ALTER TABLE** 操作过程中，系统持有这两个表的架构锁。
 - 指定的架构更改会以合适的方式（具体取决于更改的类型）传播到历史记录表。
 - 如果你添加不可为 null 的列，或将现有列更改为不可为 null，则必须指定现有行的默认值。 系统将使用相同的值生成额外的默认值，并将其应用于历史记录表。 将 **DEFAULT** 添加到非空表是在所有除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition（在此版本上为元数据操作）以外的版本上的数据操作的大小。

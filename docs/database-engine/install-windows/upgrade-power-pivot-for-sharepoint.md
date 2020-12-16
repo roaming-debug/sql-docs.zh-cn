@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 6169741cf4e744aa89c17c960a83a6af18d54851
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 03041d41745e51d858f56bfcd21407ad58530dd9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670180"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460690"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升级 Power Pivot for SharePoint
 
@@ -153,7 +153,7 @@ ms.locfileid: "91670180"
     Get-Service | where {$_.displayname -like "*SharePoint*"}  
     ```  
   
-3.  验证 **SharePoint** 服务 **SQL Server Analysis Services** 和 **SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务**是否已在 SharePoint 管理中心启动，或使用以下 PowerShell 命令：  
+3.  验证 **SharePoint** 服务 **SQL Server Analysis Services** 和 **SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务** 是否已在 SharePoint 管理中心启动，或使用以下 PowerShell 命令：  
   
     ```  
     get-SPserviceinstance | where {$_.typename -like "*sql*"}  
@@ -165,9 +165,9 @@ ms.locfileid: "91670180"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  在运行 **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows 服务的第一台 SharePoint 应用程序服务器上**运行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装程序**，以升级 POWERPIVOT 实例。 在 SQL Server 安装向导的“安装”页上选择升级选项。 有关详细信息，请参阅 [使用安装向导（安装程序）升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
+5.  在运行 **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows 服务的第一台 SharePoint 应用程序服务器上 **运行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装程序**，以升级 POWERPIVOT 实例。 在 SQL Server 安装向导的“安装”页上选择升级选项。 有关详细信息，请参阅 [使用安装向导（安装程序）升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
-6.  在运行配置工具前**重新启动服务器** 。 此步骤可确保 SQL Server 安装程序安装的所有更新或必备组件在系统上得到完全配置。  
+6.  在运行配置工具前 **重新启动服务器** 。 此步骤可确保 SQL Server 安装程序安装的所有更新或必备组件在系统上得到完全配置。  
   
 7.  **在 SharePoint 2013 场中的每个服务器上运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ) 服务的第一台 SharePoint 应用程序服务器上** 配置工具[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，以在 SharePoint 中升级解决方案和 Web 服务。 不能使用管理中心执行此步骤。  
   

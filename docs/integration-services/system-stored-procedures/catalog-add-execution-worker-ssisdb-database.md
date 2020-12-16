@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 author: chugugrace
 ms.author: chugu
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 102277139885379f4c2f75c912756e09131ec546
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>= sql-server-2017'
+ms.openlocfilehash: 905913f8728f82a14de1ed2aadf0e2e496946dd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96129953"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460590"
 ---
 # <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker（SSISDB 数据库）
 

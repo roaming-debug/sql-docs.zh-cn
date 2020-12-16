@@ -12,13 +12,13 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 2f52e71caddf2c2c7800e094ba3e40905a8d8833
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016'
+ms.openlocfilehash: c64496a35786208712dfc8beff49171595eb3c30
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463248"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 参考
 

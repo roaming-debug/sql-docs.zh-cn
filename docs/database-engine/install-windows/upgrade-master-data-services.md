@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f1f6773818c14920b2288aa72cca4d0dd994af5
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 1bd6c09d395ac201c5130d5253bef50ea9d126be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125761"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460680"
 ---
 # <a name="upgrade-master-data-services"></a>升级 Master Data Services
 

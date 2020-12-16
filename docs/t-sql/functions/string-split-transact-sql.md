@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a7c3220138c0f375b043f41044d5023fdb355ff5
-ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017
+ms.openlocfilehash: d30220685c2654c745c40ecc8782b79049f5c598
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93405044"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461188"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 

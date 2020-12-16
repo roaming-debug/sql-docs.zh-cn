@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7fbaf22758dcf62d2159e63ee3af3c0507f3f607
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460570"
 ---
 # <a name="set-or-change-the-database-collation"></a>设置或更改数据库排序规则
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,23 +48,21 @@ ms.locfileid: "92907370"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
--   仅限 Windows Unicode 的排序规则只能与 COLLATE 子句一起使用，以便将排序规则应用于列级别和表达式级别数据上的 **nchar** 、 **nvarchar** 和 **ntext** 数据类型。 它们不能与 COLLATE 子句一起使用以更改数据库或服务器实例的排序规则。  
+-   仅限 Windows Unicode 的排序规则只能与 COLLATE 子句一起使用，以便将排序规则应用于列级别和表达式级别数据上的 **nchar**、 **nvarchar** 和 **ntext** 数据类型。 它们不能与 COLLATE 子句一起使用以更改数据库或服务器实例的排序规则。  
   
 -   如果指定的排序规则或者被引用的对象所使用的排序规则使用 Windows 不支持的代码页，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将显示错误。  
 
--   在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上创建数据库后，不能使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 更改排序规则。 只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行更改。
-  
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 你可以在 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) 和 [SQL Server 排序规则名称 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)中找到支持的排序规则名称，或者可以使用 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 系统函数。  
   
 更改数据库排序规则时，需要更改下列内容：  
   
--   将系统表中的任何 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 或 **ntext** 列更改为使用新的排序规则。  
+-   将系统表中的任何 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar** 或 **ntext** 列更改为使用新的排序规则。  
   
--   存储过程和用户定义函数的所有现有 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 或 **ntext** 参数和标量返回值均已更改为新的排序规则。  
+-   存储过程和用户定义函数的所有现有 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar** 或 **ntext** 参数和标量返回值均已更改为新的排序规则。  
   
--   **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 或 **ntext** 系统数据类型和基于这些系统数据类型的所有用户定义的数据类型均已更改为新的默认排序规则。  
+-   **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar** 或 **ntext** 系统数据类型和基于这些系统数据类型的所有用户定义的数据类型均已更改为新的默认排序规则。  
   
 可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句的 `COLLATE` 子句来更改在用户数据库中创建的任何新对象的排序规则。 使用此语句不能更改任何现有用户定义的表中列的排序规则  。 使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 的 `COLLATE` 子句可以更改这些列的排序规则。  
 

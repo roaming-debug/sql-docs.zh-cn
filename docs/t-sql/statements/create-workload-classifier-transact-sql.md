@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
-monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 0a9c2fc146de0ea8b6e5ab769b0eccfc1bca6d12
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 7c2b5d7bb93383e53a7d90f703172220a5427f3a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067289"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464048"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 

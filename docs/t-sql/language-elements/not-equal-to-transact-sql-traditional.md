@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fdd50143dd1ca8bc0b4dbed97aa1b9ab08ca1b2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7c7c0c04e88a06eb9cfac4f92dddaa08523fba0e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92187417"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460950"
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>不等于 (Transact SQL) - 传统
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

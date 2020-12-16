@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 59637197b72232df9f5054b88ea9a111f34b58a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384795"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464088"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -128,7 +128,7 @@ DELETE
  在表示要从中删除行的表或视图的 FROM *table_source* 子句中指定的别名。  
   
  server_name  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  表或视图所在服务器的名称（使用链接服务器名称或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数作为服务器名称）。 如果指定了 server_name，则需要 database_name 和 schema_name  。  
   
@@ -146,11 +146,11 @@ DELETE
  table_or_view_name 引用的视图必须可更新，并且只在视图定义的 FROM 子句中引用一个基表。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
  rowset_function_limited  
- **适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数，视提供程序的功能而定。  
   
- WITH **(** \<table_hint_limited> [... *n* ] **)**  
+ WITH **(** \<table_hint_limited> [... *n*] **)**  
  指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  \<OUTPUT_Clause>  
@@ -168,7 +168,7 @@ DELETE
   
  基于 WHERE 子句中所指定的条件，有两种形式的删除操作：  
   
--   搜索删除指定搜索条件以限定要删除的行。 例如，WHERE *column_name* = *value* 。  
+-   搜索删除指定搜索条件以限定要删除的行。 例如，WHERE *column_name* = *value*。  
   
 -   定位删除使用 CURRENT OF 子句指定游标。 删除操作在游标的当前位置执行。 这比使用 WHERE *search_condition* 子句限定待删除行的搜索 DELETE 语句更为精确。 如果搜索条件不唯一标识单行，则搜索 DELETE 语句删除多行。  
   
@@ -187,7 +187,7 @@ DELETE
  cursor_variable_name  
  游标变量的名称。 游标变量必须引用允许更新的游标。  
   
- OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  关键字，指示用于自定义[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理语句的方式的优化器提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳实践  
@@ -361,7 +361,7 @@ GO
 ###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> 从远程表中删除行  
  本节中的示例说明如何使用[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[行集函数](../functions/opendatasource-transact-sql.md)引用一个远程表，以便从该表中删除行。 远程表存在于不同的服务器或 SQL Server 实例上。  
   
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. 通过使用链接服务器从远程表删除数据  
  下面的示例将删除远程表中的行。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分。  

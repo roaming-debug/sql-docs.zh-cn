@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44a46f19848fb94ab0eb2af718ea737bd60705dd
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ebe94b0a4d678b888d99e51b7bda4c0addd0f17b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505248"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461918"
 ---
 # <a name="establish-a-performance-baseline"></a>建立性能基线
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

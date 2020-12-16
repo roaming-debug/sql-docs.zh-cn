@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7db4bfe275db8f0761090820a7e86cf18d2250f0
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 89009f02f07f6d22d8599f1918f110894a8c997e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96116127"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464238"
 ---
 # <a name="--subtraction-assignment-transact-sql"></a>-=（减法赋值）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

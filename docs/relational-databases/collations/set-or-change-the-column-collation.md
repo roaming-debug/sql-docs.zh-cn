@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98faafb23e6f5c3f981fdf04eca99a7ab3eb7a7b
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3f408175a59484aa162c0db654ebf4b1d5656901
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384803"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460580"
 ---
 # <a name="set-or-change-the-column-collation"></a>设置或更改列排序规则
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  可以覆盖 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 和 **ntext** 数据的数据库排序规则，方法是为表的特定列指定不同的排序规则并使用以下方式之一：  
+  可以覆盖 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar** 和 **ntext** 数据的数据库排序规则，方法是为表的特定列指定不同的排序规则并使用以下方式之一：  
   
 -   [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 的 COLLATE 子句，如以下示例所示。 
 
@@ -127,7 +127,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
  为防止出现此错误，可以使用下列方法之一：  
   
--   指定临时表列使用用户数据库（而不是 **tempdb** ）的默认排序规则。 如果系统需要，这可以使临时表在多个数据库中使用具有类似格式的表。  
+-   指定临时表列使用用户数据库（而不是 **tempdb**）的默认排序规则。 如果系统需要，这可以使临时表在多个数据库中使用具有类似格式的表。  
   
     ```sql  
     CREATE TABLE #TestTempTab  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 55220291257cf90f7345acb63ce2369b9308f435
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ea2612ddb838ba9d38ffc4a5421db78881bdca3b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125743"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460670"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>升级或修补复制的数据库
 

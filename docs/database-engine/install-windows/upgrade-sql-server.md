@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c30eb3d39c79b57b4cc937fcb118b7bb63fe7474
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: eaf66c17921094aa6a0e4ce10224ab4eaeaf108c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125687"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460640"
 ---
 # <a name="upgrade-sql-server"></a>升级 SQL Server
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]

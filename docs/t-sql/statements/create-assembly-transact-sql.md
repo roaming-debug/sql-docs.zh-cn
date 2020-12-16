@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: badcd52070da65122e113116be763c903b3e509a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 4ae266962891a52ae9e2b201f7817365e71f8a74
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300164"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460790"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -62,7 +62,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  程序集的名称。 此名称必须在数据库中唯一，并且是有效的[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
  AUTHORIZATION owner_name  
- 指定作为程序集所有者的用户或角色的名称。 owner_name 必须是当前用户所属的角色的名称，或当前用户必须具有对 owner_name 的 IMPERSONATE 权限  。 如果未指定，则所有权授予当前用户。  
+ 指定作为程序集所有者的用户或角色的名称。 owner_name 必须是当前用户所属的角色的名称，或当前用户必须具有对 owner_name 的 IMPERSONATE 权限。 如果未指定，则所有权授予当前用户。  
   
  \<client_assembly_specifier>  
 指定正在上载的程序集所在的本地路径或网络位置，以及与程序集对应的清单文件名。  \<client_assembly_specifier> 可表示为固定字符串或其值等于固定字符串的、带有变量的表达式。 CREATE ASSEMBLY 不支持加载多模块程序集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还将在同一位置查找此程序集的所有相关程序集，并使用与根级别程序集相同的所有者将其上载。 如果没有找到这些相关程序集且它们尚未加载到当前数据库中，则 CREATE ASSEMBLY 失败。 如果相关程序集已加载到当前数据库中，则这些程序集的所有者必须与新创建的程序集的所有者相同。
@@ -78,11 +78,11 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- varbinary_literal   
- 是 varbinary  文本。  
+ varbinary_literal  
+ 是 varbinary 文本。  
   
  *varbinary_expression*  
- varbinary  类型的表达式。  
+ varbinary 类型的表达式。  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
 > [!IMPORTANT]
@@ -107,7 +107,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 >   
 >  对于访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例外部资源的程序集，我们推荐使用 EXTERNAL_ACCESS。 EXTERNAL_ACCESS 程序集包含 SAFE 程序集的可靠性和可伸缩性保护，但从安全角度而言，它与 UNSAFE 程序集类似。 原因是在默认情况下，EXTERNAL_ACCESS 程序集中的代码以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户身份运行并访问此帐户的外部资源，除非此代码显式模拟调用方。 因此，创建 EXTERNAL_ACCESS 程序集的权限应只授予以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户身份运行代码的可信登录。 有关模拟的详细信息，请参阅 [CLR 集成安全性](../../relational-databases/clr-integration/security/clr-integration-security.md)。  
 >   
->  指定 UNSAFE 将使程序集中的代码在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程空间中完全自由地执行操作，但这些操作可能危及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的可靠性。 UNSAFE 程序集也可能破坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或公共语言运行时的安全系统。 UNSAFE 权限只应授予高度可信的程序集。 只有 sysadmin  固定服务器角色的成员才能创建并更改 UNSAFE 程序集。  
+>  指定 UNSAFE 将使程序集中的代码在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程空间中完全自由地执行操作，但这些操作可能危及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的可靠性。 UNSAFE 程序集也可能破坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或公共语言运行时的安全系统。 UNSAFE 权限只应授予高度可信的程序集。 只有 sysadmin 固定服务器角色的成员才能创建并更改 UNSAFE 程序集。  
   
  有关程序集的权限集的详细信息，请参阅[设计程序集](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
@@ -152,9 +152,9 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ## <a name="permissions"></a>权限  
  需要 CREATE ASSEMBLY 权限。  
   
- 如果指定 PERMISSION_SET = EXTERNAL_ACCESS，则需要对服务器的 EXTERNAL ACCESS ASSEMBLY  权限。 如果指定 PERMISSION_SET = UNSAFE，则需要对服务器的 UNSAFE ASSEMBLY  权限。  
+ 如果指定 PERMISSION_SET = EXTERNAL_ACCESS，则需要对服务器的 EXTERNAL ACCESS ASSEMBLY 权限。 如果指定 PERMISSION_SET = UNSAFE，则需要对服务器的 UNSAFE ASSEMBLY 权限。  
   
- 如果程序集已经存在于数据库中，则用户必须是将上载的程序集所引用的所有程序集的所有者。 若要使用文件路径上传程序集，则当前用户必须是经过 Windows 身份验证的登录名或 sysadmin  固定服务器角色的成员。 执行 CREATE ASSEMBLY 的用户的 Windows 登录名必须对此语句中加载的共享和文件具有读取权限。  
+ 如果程序集已经存在于数据库中，则用户必须是将上载的程序集所引用的所有程序集的所有者。 若要使用文件路径上传程序集，则当前用户必须是经过 Windows 身份验证的登录名或 sysadmin 固定服务器角色的成员。 执行 CREATE ASSEMBLY 的用户的 Windows 登录名必须对此语句中加载的共享和文件具有读取权限。  
 
 ### <a name="permissions-with-clr-strict-security"></a>CLR 严格安全性的权限    
 启用 `CLR strict security` 时，创建 CLR 程序集需要以下权限：
@@ -170,7 +170,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>示例 A：从 dll 创建程序集  
   
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  以下示例假定：[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]示例安装在本地计算机的默认位置，且 HelloWorld.csproj 示例应用程序已编写。 有关详细信息，请参阅 [Hello World 示例](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130))。  
   
@@ -185,7 +185,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>示例 B：从程序集位创建程序集  
   
-**适用于** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  将示例位（不完整或无效）替换为程序集位。  
   

@@ -20,13 +20,13 @@ helpviewer_keywords:
 - ALTER VIEW statement
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1dc4ea0d7c8f156c0cb64b09a362ca62fa9642da
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 568db6bf4dc8dac8e64d2090dc171238dc2625ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067427"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464058"
 ---
 # <a name="alter-materialized-view-transact-sql"></a>ALTER MATERIALIZED VIEW (Transact-SQL)  
 

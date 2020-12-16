@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48ea2ba928333eef0980ad199e33f93f94a859c6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ec7815d623208c5e2860fd233ba5a290e2e8762b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195419"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460900"
 ---
 # <a name="unary-operators---positive"></a>一元运算符 - 正
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -54,10 +54,10 @@ ms.locfileid: "92195419"
 
 ## <a name="arguments"></a>参数
  *numeric_expression*  
- 具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)********。  
+ 具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>结果类型  
- 返回 *numeric_expression*的数据类型。  
+ 返回 *numeric_expression* 的数据类型。  
   
 ## <a name="remarks"></a>备注  
  尽管一元加号可以出现在任何数值表达式之前，但它对表达式返回的值不执行操作。 很明显，负表达式不会返回正值。 若要返回负表达式的正值，请使用 [ABS](../../t-sql/functions/abs-transact-sql.md) 函数。  

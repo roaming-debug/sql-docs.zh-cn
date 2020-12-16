@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efbd90e43c4f2bf7863106330b59f436c31b6238
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cdadcfea01226f1076e26a08316f79b1c0d7a4d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868533"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460390"
 ---
 # <a name="native-compilation-advisor"></a>本机编译顾问
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91868533"
  有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](/previous-versions/dn673538(v=msdn.10))。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用本机编译顾问的演练  
- 在 **对象资源管理器**中，右键单击要转换的存储过程，然后选择 **“本机编译顾问”** 。 这将显示 **“存储过程本机编译顾问”** 的欢迎使用页。 单击“下一步”以继续。  
+ 在 **对象资源管理器** 中，右键单击要转换的存储过程，然后选择 **“本机编译顾问”** 。 这将显示 **“存储过程本机编译顾问”** 的欢迎使用页。 单击“下一步”以继续。  
   
 ### <a name="stored-procedure-validation"></a>存储过程验证  
  此页将报告存储过程是否使用与本机编译不兼容的任何构造。 您可以单击 **“下一步”** 查看详细信息。 如果存在与本机编译不兼容的构造，可以单击 **“下一步”** 查看详细信息。  

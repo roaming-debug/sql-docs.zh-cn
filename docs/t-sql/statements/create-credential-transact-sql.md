@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 472a4f7a509249d195c39cf90181799672ff0b21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 88307a27daf1bd601c24e318817f41426c9035f3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467220"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464128"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. 使用 SAS 令牌创建凭据
 
-**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)，以及 Azure SQL 托管实例。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)，以及 Azure SQL 托管实例。
 
 下面的示例使用 SAS 令牌创建共享访问签名凭据。 若要详细了解如何在 Azure 容器上创建存储访问策略和共享访问签名，以及使用共享访问签名创建凭据，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。
 

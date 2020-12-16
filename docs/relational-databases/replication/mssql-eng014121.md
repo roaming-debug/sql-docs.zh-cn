@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c8595854-cce1-4566-ad64-d565555caded
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 32a6c0d21942c7060ff7a2a9cce4111f7d34ed5a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: c35e887b2e96812df17489fea64dfdc1d574b3b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482390"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461848"
 ---
 # <a name="mssql_eng014121"></a>MSSQL_ENG014121
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

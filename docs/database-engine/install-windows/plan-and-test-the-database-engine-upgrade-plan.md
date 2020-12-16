@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd123a6f634177b455b57229bffb2375aab385dd
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 5e98874d2e5d1673a4f666de81b82e92b20bfa9f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125846"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463618"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>计划并测试数据库引擎升级计划
 

@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 author: markingmyname
 ms.author: maghan
-monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7532adbc05c0df1a9d8a15de59a8700ce67fa1de
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017
+ms.openlocfilehash: 7ee970fa48cfe96e5c8c233a2691184f6801593d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91226987"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463890"
 ---
 # <a name="set-statements-transact-sql"></a>SET 语句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]

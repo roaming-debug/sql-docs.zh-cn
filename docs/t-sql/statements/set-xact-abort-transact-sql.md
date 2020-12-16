@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142b1edf321de63fb6a2ee6552c9bfc1255c1f93
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c5546e5b11fccd141beec8a83eba9ac402e031ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "89539804"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463930"
 ---
 # <a name="set-xact_abort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
 

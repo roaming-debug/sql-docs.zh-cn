@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5785322c1a20b9607a7104998017b8f90a558701
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: c204e7557061bc9984b4db818e3203cd929b1453
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130789"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460600"
 ---
 # <a name="about-log-shipping-sql-server"></a>关于日志传送 (SQL Server)
 

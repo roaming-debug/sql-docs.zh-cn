@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13117bad78c1cfc843bbe68caeb2abb5c5f64dff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4f6dc92d2d77f453f6838ebe990ed5426c665689
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723219"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460470"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>内存优化表的哈希索引疑难解答
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ go
   
 ### <a name="monitor-statistics-for-chains-and-empty-buckets"></a>监视链和空桶的统计信息  
   
-你可以通过运行以下 T-SQL SELECT 来监视哈希索引的统计运行状况。 SELECT 语句使用名为 **sys.dm_db_xtp_hash_index_stats**的数据管理视图 (DMV)。  
+你可以通过运行以下 T-SQL SELECT 来监视哈希索引的统计运行状况。 SELECT 语句使用名为 **sys.dm_db_xtp_hash_index_stats** 的数据管理视图 (DMV)。  
   
 ```sql
 SELECT  
@@ -116,7 +116,7 @@ ORDER BY [table], [index];
 2. 在表中填充数千行。  
     a. 取模运算符用于配置 StatusCode 列中的值重复率。  
     b. 此循环在大约 1 分钟内插入 262,144 行。  
-3. 列显一条消息，要求你从 **sys.dm_db_xtp_hash_index_stats**运行上述 SELECT。  
+3. 列显一条消息，要求你从 **sys.dm_db_xtp_hash_index_stats** 运行上述 SELECT。  
 
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  
@@ -174,11 +174,11 @@ go
 - 插入主键索引和 ix_OrderSequence 的唯一值。  
 - 插入了几十万行，但只呈现了 `StatusCode` 的 8 个非重复值。 因此，索引 ix_StatusCode 中的值重复率很高。  
   
-为了在桶计数不最佳时进行问题排查，请从 **sys.dm_db_xtp_hash_index_stats**检查 SELECT 的以下输出。 对于这些结果，我们添加 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` 到从 D.1 部分复制的 SELECT。  
+为了在桶计数不最佳时进行问题排查，请从 **sys.dm_db_xtp_hash_index_stats** 检查 SELECT 的以下输出。 对于这些结果，我们添加 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` 到从 D.1 部分复制的 SELECT。  
   
 `SELECT` 结果显示在代码后面。为了能够更好地展示结果，我们人为地将结果拆分为两个范围较窄的结果表。  
   
-- 这里是 *桶计数*的结果。  
+- 这里是 *桶计数* 的结果。  
   
 | IndexName | total_bucket_count | empty_bucket_count | EmptyBucketPercent |  
 | :-------- | -----------------: | -----------------: | -----------------: |  
@@ -186,7 +186,7 @@ go
 | ix_StatusCode | 8 | 4 | 50 |  
 | PK_SalesOrd_B14003... | 262144 | 96525 | 36 |  
   
-- 接下来是 *链长度*的结果。  
+- 接下来是 *链长度* 的结果。  
   
 | IndexName | avg_chain_length | max_chain_length |  
 | :-------- | ---------------: | ---------------: |  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13bf3e27aba6ea559ad5c1757b00367108685a9f
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 02c86482a858283c612e96cf994aecfdcccb4633
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94583277"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463698"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 群集服务处于脱机状态
 

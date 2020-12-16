@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e527cbe28eb2685d79d37393396508a0c316677d
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: dd6c78880419b2330e109d4e1f1416c99f84963d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125774"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460700"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
 
