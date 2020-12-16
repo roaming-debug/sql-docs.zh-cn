@@ -43,13 +43,13 @@ helpviewer_keywords:
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d749835aa5a71aa99cd0f8f417b7e0ace68b467f
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: ec951a21f6d228fad6104faadb767e379e4efcec
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496863"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490017"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 文件和文件组选项
 
@@ -59,7 +59,7 @@ ms.locfileid: "92496863"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -139,7 +139,7 @@ REMOVE FILE logical_file_name 从 [!INCLUDE[ssNoVersion](../../includes/ssnovers
 logical_file_name 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引用文件时所用的逻辑名称。
 
 > [!WARNING]
-> 删除具有与其关联的 `FILE_SNAPSHOT` 备份的数据库文件将会成功，但不会删除任何关联的快照，以免使引用该数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **适用于** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
+> 删除具有与其关联的 `FILE_SNAPSHOT` 备份的数据库文件将会成功，但不会删除任何关联的快照，以免使引用该数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
 
 MODIFY FILE 指定应修改的文件。 一次只能更改一个 \<filespec> 属性。 必须始终在 \<filespec> 中指定 NAME，以标识要修改的文件。 如果指定了 SIZE，那么新大小必须比文件当前大小要大。
 
@@ -178,7 +178,7 @@ NEWNAME new_logical_file_name 指定文件的新逻辑名称。
 
 new_logical_file_name 用于替换现有逻辑文件名称的名称。 该名称在数据库中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 该名称可以是字符或 Unicode 常量、常规标识符或分隔标识符。
 
-FILENAME { 'os\_file\_name' | ' _filestream\_path' | 'memory\_optimized\_data\_path'} 指定操作系统（物理）文件名_ 
+FILENAME { 'os\_file\_name' | '_filestream\_path' | 'memory\_optimized\_data\_path'} 指定操作系统（物理）文件名_ 
 
 ' os_file_name ' 对于标准 (ROWS) 文件组，这是在创建文件时操作系统所使用的路径和文件名。 该文件必须驻留在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器上。 在执行 ALTER DATABASE 语句前，指定的路径必须已经存在。
 
@@ -209,9 +209,9 @@ SIZE size 指定文件大小。 SIZE 不适用于 FILESTREAM 文件组。
 
 size 文件的大小。
 
-与 ADD FILE 一起指定时， *size* 是文件的初始大小。 与 MODIFY FILE 一起指定时， *size* 是文件的新大小，而且必须大于文件的当前大小。
+与 ADD FILE 一起指定时，*size* 是文件的初始大小。 与 MODIFY FILE 一起指定时，*size* 是文件的新大小，而且必须大于文件的当前大小。
 
-如果没有为主文件提供 *size* ，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会使用 **model** 数据库中主文件的大小。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size* ，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 1 MB 作为该文件的大小。
+如果没有为主文件提供 *size*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会使用 **model** 数据库中主文件的大小。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 1 MB 作为该文件的大小。
 
 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 若要指定兆字节的分数，请通过将数字乘以 1024 将该值转换为千字节。 例如，应指定 1536 KB 而不是 1.5MB (1.5 x 1024 = 1536)。
 
@@ -223,7 +223,7 @@ size 文件的大小。
 
 MAXSIZE { max_size| UNLIMITED } 指定文件可增大到的最大文件大小。
 
-max_size 最大的文件大小。 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 如果未指定 *max_size* ，文件大小将一直增长到磁盘变满为止。
+max_size 最大的文件大小。 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 如果未指定 *max_size*，文件大小将一直增长到磁盘变满为止。
 
 UNLIMITED 指定文件将增长到磁盘充满。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定为不限制增长的日志文件的最大大小为 2 TB，而数据文件的最大大小为 16 TB。 为 FILESTREAM 容器指定此选项时，没有最大大小。 它将继续增大，直到磁盘已满。
 
@@ -269,11 +269,11 @@ CONTAINS FILESTREAM 指定文件组在文件系统中存储 FILESTREAM 二进制
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**适用于** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）
 
 指定文件组在文件系统中存储内存优化数据。 有关详细信息，请参阅[内存中 OLTP - 内存中优化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每个数据库只允许一个 `MEMORY_OPTIMIZED_DATA` 文件组。 在创建内存优化表时，文件组不能为空。 其中必须至少包含一个文件。 *filegroup_name* 引用一个路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。
 
-REMOVE FILEGROUP filegroup_name 从数据库中删除文件组。 除非文件组为空，否则无法将其删除。 首先从文件组中删除所有文件。 有关详细信息，请参阅本主题前面的“REMOVE FILE *logical_file_name* ”。
+REMOVE FILEGROUP filegroup_name 从数据库中删除文件组。 除非文件组为空，否则无法将其删除。 首先从文件组中删除所有文件。 有关详细信息，请参阅本主题前面的“REMOVE FILE *logical_file_name*”。
 
 > [!NOTE]
 > 除非 FILESTREAM 垃圾回收器已从 FILESTREAM 容器中删除所有文件，否则删除 FILESTREAM 容器的 `ALTER DATABASE REMOVE FILE` 操作将失败并返回错误。 请参阅本主题后面的[删除 FILESTREAM 容器](#removing-a-filestream-container)部分。
@@ -292,7 +292,7 @@ AUTOGROW_SINGLE_FILE 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversi
 
 AUTOGROW_ALL_FILES
 
-**适用于** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）
 
 当文件组中的某个文件达到自动增长阈值时，文件组中的所有文件都会增长。
 
@@ -664,7 +664,7 @@ GO
 
 ## <a name="see-also"></a>另请参阅
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
@@ -679,11 +679,11 @@ GO
 - [数据库文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL 托管实例 \*_**<br />&nbsp;
@@ -774,15 +774,15 @@ SIZE size 指定文件大小。
 
 size 文件的大小。
 
-与 ADD FILE 一起指定时， *size* 是文件的初始大小。 与 MODIFY FILE 一起指定时， *size* 是文件的新大小，而且必须大于文件的当前大小。
+与 ADD FILE 一起指定时，*size* 是文件的初始大小。 与 MODIFY FILE 一起指定时，*size* 是文件的新大小，而且必须大于文件的当前大小。
 
-如果没有为主文件提供 *size* ，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会使用 **model** 数据库中主文件的大小。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size* ，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 1 MB 作为该文件的大小。
+如果没有为主文件提供 *size*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会使用 **model** 数据库中主文件的大小。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 1 MB 作为该文件的大小。
 
 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 若要指定兆字节的分数，请通过将数字乘以 1024 将该值转换为千字节。 例如，应指定 1536 KB 而不是 1.5MB (1.5 x 1024 = 1536)。
 
 MAXSIZE { max_size| UNLIMITED } 指定文件可增大到的最大文件大小。
 
-max_size 最大的文件大小。 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 如果未指定 *max_size* ，文件大小将一直增长到磁盘变满为止。
+max_size 最大的文件大小。 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 如果未指定 *max_size*，文件大小将一直增长到磁盘变满为止。
 
 UNLIMITED 指定文件将增长到磁盘充满。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定为不限制增长的日志文件的最大大小为 2 TB，而数据文件的最大大小为 16 TB。
 
@@ -813,7 +813,7 @@ GO
 ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_fg;
 ```
 
-REMOVE FILEGROUP filegroup_name 从数据库中删除文件组。 除非文件组为空，否则无法将其删除。 首先从文件组中删除所有文件。 有关详细信息，请参阅本主题前面的“REMOVE FILE *logical_file_name* ”。
+REMOVE FILEGROUP filegroup_name 从数据库中删除文件组。 除非文件组为空，否则无法将其删除。 首先从文件组中删除所有文件。 有关详细信息，请参阅本主题前面的“REMOVE FILE *logical_file_name*”。
 
 MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME =_new\_filegroup\_name_ } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8e5da6272ce3bb60852e10f3bac9cd3fa9a1435f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9597b6c0811ff2fe917a2282b43e677b74eebd4f
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426859"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490067"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "88426859"
  指定与表级 DEFAULT 定义相关联的列。  
   
  WITH VALUES  
- 添加列和 DEFAULT 约束时，如果列允许为空，那么对于现有行，使用 WITH VALUES 会将新列的值设置为 DEFAULT constant_expression 中给定的值。 如果要添加的列不允许为空，那么对于现有行，列值始终设置为 DEFAULT constant_expression 中给定的值。 自 SQL Server 2012 起，这可能是元数据操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)。
+ 添加列和 DEFAULT 约束时，如果列允许为空，那么对于现有行，使用 WITH VALUES 会将新列的值设置为 DEFAULT constant_expression 中给定的值。 如果要添加的列不允许为空，那么对于现有行，列值始终设置为 DEFAULT constant_expression 中给定的值。 自 SQL Server 2012 起，这可能是元数据操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation)。
 如果在没有同时添加相关列的情况下使用它，它将不起作用。 
   
  CHECK  

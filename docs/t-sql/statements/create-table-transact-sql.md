@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 9fb4195047df5e996cbef4a3fbceb1367172df6b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521138"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490077"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -420,7 +420,7 @@ FILESTREAM_ON { partition_scheme_name | filegroup | "default" } 适用对象：[
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 语句将堆转换为聚集索引。 在这种情况下，可以指定不同的 FILESTREAM 文件组、分区方案或 NULL。
 - [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 语句将聚集索引转换为堆。 在这种情况下，可以指定不同的 FILESTREAM 文件组、分区方案或 "default"。
 
-`FILESTREAM_ON <filegroup>` 子句中的文件组或在分区方案中指定的每个 FILESTREAM 文件组须定义有一个文件。 须使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句来定义此文件；否则，会引发错误。
+`FILESTREAM_ON <filegroup>` 子句中的文件组或在分区方案中指定的每个 FILESTREAM 文件组须定义有一个文件。 须使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句来定义此文件；否则，会引发错误。
 
 有关 FILESTREAM 相关话题，请参阅 [二进制大型对象 - Blob 数据](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。
 

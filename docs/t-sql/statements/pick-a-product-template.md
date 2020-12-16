@@ -13,13 +13,13 @@ dev_langs:
 helpviewer_keywords: ''
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 73b7f235802ed6217c826b16a81943721fc4b45e
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
+ms.openlocfilehash: 4aae8923eb9d1d941c6f7eafa031ad08984eba60
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496918"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490037"
 ---
 # <a name="title-transact-sql"></a>标题 (Transact-SQL)
 
@@ -31,7 +31,7 @@ ms.locfileid: "92496918"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -54,11 +54,11 @@ ms.locfileid: "92496918"
 
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md)
     :::column-end:::
     :::column:::
         \* SQL 数据库 \*&nbsp;
@@ -78,11 +78,11 @@ ms.locfileid: "92496918"
 
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 数据库](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
@@ -100,11 +100,11 @@ ms.locfileid: "92496918"
 ## <a name="azure-sql-managed-instance"></a>Azure SQL 托管实例
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 数据库](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
