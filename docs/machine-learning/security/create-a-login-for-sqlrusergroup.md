@@ -7,13 +7,13 @@ ms.date: 01/25/2019
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fcdb8353abe029291352f031d5261849514ef8fd
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 9734b1315aa782f83f8f02cfb9d0d78da52460d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92195751"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470728"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>为 SQLRUserGroup 创建登录名
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
