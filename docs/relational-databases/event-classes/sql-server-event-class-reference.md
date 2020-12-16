@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a5925044ef5183baed66eeecfe9a5b1549db2b6
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e834511e03a37923e0124cf8e64a0ab35c242bad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868717"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483689"
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 事件类参考
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

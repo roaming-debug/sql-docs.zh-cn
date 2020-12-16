@@ -12,13 +12,13 @@ helpviewer_keywords:
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b6c05db7b6022aec3b7f6123f0a070f238560db8
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: fc56c4baae161570f3167323bf7c6b9d26d6beb1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989871"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483739"
 ---
 # <a name="accelerated-database-recovery"></a>加速数据库恢复
 
