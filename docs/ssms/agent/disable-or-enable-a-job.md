@@ -16,13 +16,13 @@ ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0a05ea8209ae22ef7408d29fe58cc2aca9985c7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f0e345b59e3bd625e65dcc9d4c28d063735c9c03
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037960"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423702"
 ---
 # <a name="disable-or-enable-a-job"></a>禁用或启用作业
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "92037960"
   
 #### <a name="to-disable-or-enable-a-job"></a>禁用或启用作业  
   
-1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
+1.  在 **对象资源管理器** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
 2.  展开 **“SQL Server 代理”**。  
   
-3.  展开“作业”****，然后右键单击要禁用或启用的作业。  
+3.  展开“作业”，然后右键单击要禁用或启用的作业。  
   
 4.  若要禁用作业，请单击 **“禁用”**。 若要启用作业，请单击 **“启用”**。  
   

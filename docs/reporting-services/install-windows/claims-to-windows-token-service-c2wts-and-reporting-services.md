@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 78d7265398cab553a9378fecc54b25a32d36e84d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891597"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489827"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) 和 Reporting Services
 
@@ -31,7 +31,7 @@ ms.locfileid: "91891597"
 
 1. 通过确定 SSRS 服务帐户、设置 SPN 和更新 rsreportserver.config 文件，为 Reporting Services（本机模式）实例配置 Kerberos 身份验证，从而使用 RSWindowsNegotiate 身份验证类型。 [为报表服务器注册服务主体名称 (SPN)](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. 按照[配置 c2WTS 所需的步骤](?view=sql-server-2017#steps-needed-to-configure-c2wts)中的步骤执行操作
+2. 按照[配置 c2WTS 所需的步骤](#steps-needed-to-configure-c2wts)中的步骤执行操作
  
 
 ## <a name="sharepoint-mode-integration"></a>SharePoint 模式集成
@@ -72,7 +72,7 @@ C2WTS 创建的令牌将仅用于约束委派（对特定服务的约束）以�
 
     * 右键单击各服务帐户并且打开“属性”对话框。 在该对话框中，单击 **“委派”** 选项卡。
 
-        只有在对象具有分配给它的服务主体名 (SPN) 的情况下，“委派”选项卡才可见。 C2WTS 不要求在 C2WTS 帐户上具有 SPN；但如果没有 SPN，“委派”选项卡将不可见  。 配置约束委派的另一个方法是使用 **ADSIEdit**之类的实用工具。
+        只有在对象具有分配给它的服务主体名 (SPN) 的情况下，“委派”选项卡才可见。 C2WTS 不要求在 C2WTS 帐户上具有 SPN；但如果没有 SPN，“委派”选项卡将不可见  。 配置约束委派的另一个方法是使用 **ADSIEdit** 之类的实用工具。
 
     * “委派”选项卡上的主要配置选项如下：
 
@@ -84,7 +84,7 @@ C2WTS 创建的令牌将仅用于约束委派（对特定服务的约束）以�
     * 选择“用户或计算机...&#42;”并输入托管服务的帐户  。 例如，如果在名为 sqlservice 的帐户下运行 SQL Server，则输入 `sqlservice`  。 
       对于报表查看器 Web 部件  ，这是 Reporting Services（本机模式）实例的服务帐户。
 
-    * 选择服务列表。 将显示该帐户可用的 SPN。 如果在该帐户上没有看到列出的服务，则它可能已丢失或放置在不同的帐户上。 可以使用 SetSPN 实用工具调整 SPN。 对于报表查看器 Web 部件  ，将看到[报表查看器 Web 部件配置](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration)中配置的 http SPN。
+    * 选择服务列表。 将显示该帐户可用的 SPN。 如果在该帐户上没有看到列出的服务，则它可能已丢失或放置在不同的帐户上。 可以使用 SetSPN 实用工具调整 SPN。 对于报表查看器 Web 部件  ，将看到[报表查看器 Web 部件配置](#report-viewer-native-mode-web-part-configuration)中配置的 http SPN。
 
     * 选择“确定”以退出对话框。
 

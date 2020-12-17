@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4a4e57c2a1dffe8a41cf54827a0ae03b1e3cb18
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 69c82046e9c253bc6ceb43d7cf01d87e3df05bff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039121"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480698"
 ---
 # <a name="change-font-color-size-and-style"></a>更改字体颜色、大小和样式
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

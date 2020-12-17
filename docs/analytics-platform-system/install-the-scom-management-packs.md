@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c4cdbd3a640e49bc9a43e30d4bf98cff7bf71194
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: d8f4145b85d505ccdf1d0fe26b22f2cdf02d9e90
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523822"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641490"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>安装 SQL Server Operations Manager (SCOM) 用于分析平台系统的管理包
 按照以下步骤下载并安装适用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理包。 从 SCOM 监视 SQL Server PDW 需要管理包。  
   
 ## <a name="before-you-begin"></a><a name="BeforeBegin"></a>开始之前  
-**必备条件**  
+**先决条件**  
   
 必须安装并运行 System Center Operations Manager。 SQL Server PDW 2012 需要 System Center Operations Manager 2007 R2、System Center Operations Manager 2012 或 System Center Operations Manager 2012 Service Pack 1。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "92523822"
   
 对于设备管理，请下载 [SQL Server 设备基本管理包](/previous-versions/system-center/packs/gg602398(v=technet.10))。  
   
-对于不带 AP 的较早版本的版本，请下载[适用于 Microsoft SQL Server 2012 并行数据仓库设备的 System Center 监视包](./download-and-apply-microsoft-updates.md?view=aps-pdw-2016-au7)。  
+对于不带 AP 的较早版本的版本，请下载[适用于 Microsoft SQL Server 2012 并行数据仓库设备的 System Center 监视包](./download-and-apply-microsoft-updates.md?view=aps-pdw-2016-au7&preserve-view=true)。  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
@@ -51,7 +51,7 @@ ms.locfileid: "92523822"
   
     !["确认安装" 步骤中的 "SQL Server 设备基础监视 MP 安装程序" 向导的屏幕截图，安装选项带有红色圆圈。](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  单击“关闭”。  
+5.  单击“关闭”  。  
   
     ![单击 "关闭"](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "92523822"
   
     ![PDWMP 安装程序向导的屏幕截图，其中安装选项以红色圆圈的 "确认安装" 步骤。](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  单击“关闭”。  
+5.  单击“关闭”  。  
   
     ![安装完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

@@ -13,12 +13,12 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 54f256fde4a15aa5a364965fc11469f9381b8e4c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 326d2c6f29f89af63037a0ca3d9e5111b83c828d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462828"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643385"
 ---
 # <a name="azure-synapse-analytics-and-parallel-data-warehouse-catalog-views"></a>Azure Synapse Analytics 和并行数据仓库目录视图
 
@@ -65,11 +65,11 @@ ms.locfileid: "97462828"
 
  以下目录视图仅适用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ：
 
- [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](./sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest) 
+ [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](./sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) 
 
- [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](./sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest) 
+ [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](./sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) 
 
- [sys.pdw_materialized_view_mappings &#40;transact-sql&#41;](./sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest) (预览) 
+ [sys.pdw_materialized_view_mappings &#40;transact-sql&#41;](./sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) (预览) 
 
  [sys.pdw_permanent_table_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)
 
@@ -77,7 +77,7 @@ ms.locfileid: "97462828"
   
  [sys.workload_management_workload_classifiers &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
   
- [sys.workload_management_workload_groups &#40;Transact-sql&#41;](./sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest)
+ [sys.workload_management_workload_groups &#40;Transact-sql&#41;](./sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 
 ## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 目录视图
 

@@ -15,13 +15,13 @@ ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b0a3f17e599b23144b47ac2747b270cb0d1fe9a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 0eebafdfdb1c0f1fe948b6f68e391931d5fc7a87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035620"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424273"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,9 +58,9 @@ ms.locfileid: "92035620"
   
 3.  单击加号以便展开 **“代理”** 文件夹。  
   
-4.  单击加号以展开包含要删除的代理帐户的子系统（例如，“ActiveX 脚本”****）。  
+4.  单击加号以展开包含要删除的代理帐户的子系统（例如，“ActiveX 脚本”）。  
   
-5.  右键单击要删除的代理帐户，然后选择“删除”****。  
+5.  右键单击要删除的代理帐户，然后选择“删除”。  
   
 6.  在 **“删除对象”** 对话框中，确认选择了正确的代理帐户。 选中 **“重新分配给”** 复选框以向其他帐户重新分配引用此代理帐户的作业步骤。  
   

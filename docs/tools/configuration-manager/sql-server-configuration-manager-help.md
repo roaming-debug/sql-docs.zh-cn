@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a881d4e40717fa943f0674d5af7c570e41bf2fcc
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: a9804ef6634a576cbdb8ee32a21b1b1d174d9825
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901791"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483789"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 配置管理器帮助
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "88901791"
   
 #### <a name="to-open-sql-server-configuration-manager"></a>打开 SQL Server 配置管理器  
   
--   在“开始”**** 菜单上，依次指向“所有程序”****、“Microsoft SQL Server”****（版本）、“配置工具”****，然后单击“SQL Server 配置管理器”****。  
+-   在“开始”菜单上，依次指向“所有程序”、“Microsoft SQL Server”（版本）、“配置工具”，然后单击“SQL Server 配置管理器”。  
   
   
  **使用 [!INCLUDE[win8](../../includes/win8-md.md)] 访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器**  

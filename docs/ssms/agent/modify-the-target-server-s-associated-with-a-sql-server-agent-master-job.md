@@ -11,13 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b7210c3f59647dccb2c9c07c0f0fb7cfd25d8fe6
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1acd843f5ab929b6b2a68645c5c1bb4c508c7053
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037860"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97422778"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>修改与 SQL Server 代理主作业关联的目标服务器
 
@@ -48,7 +48,7 @@ ms.locfileid: "92037860"
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要修改目标服务器的作业，然后选择“属性”****。  
+4.  右键单击要修改目标服务器的作业，然后选择“属性”。  
   
 5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“目标” 。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“目标”页）](../../ssms/agent/job-properties-new-job-targets-page.md)。  
   

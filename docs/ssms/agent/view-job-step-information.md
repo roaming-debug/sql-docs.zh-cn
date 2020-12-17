@@ -16,13 +16,13 @@ ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0f74ab9949662ceffce1965ebf4fefcc9086e5e9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c3141dfe74272758450b33a1302be4fe339eeb82
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038688"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480658"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "92038688"
   
 1.  在“对象资源管理器”中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的实例，然后展开此实例。  
   
-2.  依次展开“SQL Server 代理”**** 和“作业”****，右键单击包含要查看的作业步骤的作业，再单击“属性”****。  
+2.  依次展开“SQL Server 代理”和“作业”，右键单击包含要查看的作业步骤的作业，再单击“属性”。  
   
 3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页。  
   

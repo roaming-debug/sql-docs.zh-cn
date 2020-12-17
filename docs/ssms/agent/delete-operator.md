@@ -13,13 +13,13 @@ ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f61eb97840a2de7d4238146d30c7ed984d5024d8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 9a503de7dc671413c4a1b27cfc0e234ddc6e3e48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037978"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423414"
 ---
 # <a name="delete-operator"></a>Delete 运算符
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -17,13 +17,13 @@ ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4eba0199c490bd2d96e202184b055150eed03933
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5f5b2a54dcea75f1f1d9a51a5cef6e29c7eefae7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039171"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423589"
 ---
 # <a name="delete-one-or-more-jobs"></a>删除一个或多个作业
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "92039171"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  依次展开“SQL Server 代理”**** 和“作业”****，右键单击要删除的作业，再单击“删除”****。  
+2.  依次展开“SQL Server 代理”和“作业”，右键单击要删除的作业，再单击“删除”。  
   
-3.  在“删除对象”**** 对话框中，确认选择了要删除的作业。  
+3.  在“删除对象”对话框中，确认选择了要删除的作业。  
   
 4.  单击“确定”。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "92039171"
   
 2.  展开 **“SQL Server 代理”**。  
   
-3.  右键单击“作业活动监视器”****，然后单击“查看作业活动”****。  
+3.  右键单击“作业活动监视器”，然后单击“查看作业活动”。  
   
-4.  在作业活动监视器中，选择要删除的作业，右键单击选择的作业，然后选择“删除作业”****。  
+4.  在作业活动监视器中，选择要删除的作业，右键单击选择的作业，然后选择“删除作业”。  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   

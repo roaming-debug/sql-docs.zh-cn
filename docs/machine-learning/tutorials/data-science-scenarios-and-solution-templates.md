@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 82c949647cf670c0e335b2c4446c248fea86581d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e7d7b36c2c19d48fec393e38c741244f6713dcd3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196321"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470628"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>数据科学方案和解决方案模板
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "92196321"
 本文介绍了大量 SQL Server 机器学习解决方案模板。 这些模板演示最佳做法并提供构建基块，帮助快速实现机器学习解决方案。 每个模板都旨在解决特定行业的特定数据科学问题。
 每个模板中的任务从数据准备和特征工程扩展到模型定型和计分。 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 使用这些模板了解 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 的工作原理。 然后，可以根据自己的方案自定义模板并构建自定义解决方案。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 使用这些模板了解 SQL Server 机器学习服务的工作方式。 然后，可以根据自己的方案自定义模板并构建自定义解决方案。
 ::: moniker-end
 

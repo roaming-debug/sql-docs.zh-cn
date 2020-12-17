@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ba79137a-cb72-4bf3-a650-e11d02cfce10
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b46daa7c59e39c4482dbf91e2f3303793a51773b
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: b0b7f20f3761a3e39a3899a919d400f339c8285e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901583"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481548"
 ---
 # <a name="sql-server-browser-properties-advanced-tab"></a>SQL Server 浏览器属性（“高级”选项卡）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

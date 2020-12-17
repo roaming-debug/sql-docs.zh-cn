@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6bf16d51d0180b56007f237001d01cedfecf8d
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 31e6b8705054001cb603af324ffb87d55bc18100
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870270"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470208"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>教程：准备数据以通过 SQL 机器学习在 R 中执行聚类分析
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 此系列教程由四个部分组成，这是第二部分。你将从数据库准备数据，以便在 SQL Server 机器学习服务中或大数据群集上通过 R 执行聚类分析。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 此系列教程由四个部分组成，这是第二部分。你将从数据库准备数据，以便通过 SQL Server 机器学习服务在 R 中执行聚类分析。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 此系列教程由四个部分组成，这是第二部分。你将从数据库准备数据，以便通过 SQL Server 2016 R Services 在 R 中执行聚类分析。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 此系列教程由四个部分组成，这是第二部分。你将从数据库准备数据，以便通过 Azure SQL 托管实例机器学习服务在 R 中执行聚类分析。
 ::: moniker-end
 

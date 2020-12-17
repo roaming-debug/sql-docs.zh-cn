@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3e07dd36e3ee4f27aa91e034848cab48e2f53105
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: b8d459824641e07f5b17bcf9aefbddb334d2b2da
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038773"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489575"
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server 代理错误日志
 
@@ -35,13 +35,13 @@ ms.locfileid: "92038773"
   
 -   警告消息，提供有关潜在问题的信息，例如“作业 \<*job_name*> 在运行时被删除。”  
   
--   错误消息，通常需要系统管理员干预，例如“无法启动邮件会话”。 可以通过 **net send**将错误消息发送给特定用户或计算机。  
+-   错误消息，通常需要系统管理员干预，例如“无法启动邮件会话”。 可以通过 **net send** 将错误消息发送给特定用户或计算机。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最多可以维护九个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志。 每个存档日志都有一个扩展名，指示该日志的相对存在时间。 例如，扩展名 .1 表示最新的存档错误日志，而扩展名 .9 表示最旧的存档错误日志。  
   
 默认情况下，执行跟踪消息不写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理日志错误，因为它们会将日志填满。 如果错误日志已满，会降低选择和分析更严重的错误的能力。 因为日志会增加服务器的处理负荷，所以请务必仔细考虑是否值得将执行跟踪消息捕获到错误日志中。 通常，最好仅在调试某个特定问题时捕获所有消息。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理停止后，可以修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的位置。 如果错误日志为空，则无法打开日志。 可以随时使用 [dbo.sp_cycle_agent_errorlog](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md?view=sql-server-2017) 循环访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理日志，无需停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理停止后，可以修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的位置。 如果错误日志为空，则无法打开日志。 可以随时使用 [dbo.sp_cycle_agent_errorlog](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md) 循环访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理日志，无需停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。  
   
 **查看 SQL Server 代理错误日志**  
   

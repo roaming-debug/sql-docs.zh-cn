@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f80767ef3b371260e916aef386dd1c8dbc755586
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dc6b582895a684386ed2d14b0c31612dcd0a47d1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777726"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641563"
 ---
 # <a name="transparent-data-encryption"></a>透明数据加密
 可以采取多种预防措施来帮助保护数据库，例如，设计安全系统、加密机密资产，以及围绕数据库服务器构建防火墙。 但是，对于物理媒体 (例如驱动器或备份磁带) 被盗的情况，恶意方只需还原或附加数据库并浏览数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
@@ -142,7 +142,7 @@ TDE 证书必须使用数据库主密钥加密才能被下列语句接受。
 ## <a name="considerations"></a>注意事项  
 当进行数据库加密操作的重新加密扫描时，将禁用对数据库的维护操作。  
   
-可以使用 **sys. dm_pdw_nodes_database_encryption_keys** 动态管理视图来查找数据库加密的状态。 有关详细信息，请参阅本文前面的 *目录视图和动态管理视图* 部分。  
+您可以使用 **sys.dm_pdw_nodes_database_encryption_keys** 动态管理视图查找数据库加密状态。 有关详细信息，请参阅本文前面的 *目录视图和动态管理视图* 部分。  
   
 ### <a name="restrictions"></a>限制  
 在 `CREATE DATABASE ENCRYPTION KEY` 、、 `ALTER DATABASE ENCRYPTION KEY` 或语句期间，不允许执行以下操作 `DROP DATABASE ENCRYPTION KEY` `ALTER DATABASE...SET ENCRYPTION` 。  
@@ -197,7 +197,7 @@ SELECT TOP 1 encryption_state
 所有在数据库加密密钥更改前写入事务日志的数据都将使用之前的数据库加密密钥加密。  
   
 ### <a name="pdw-activity-logs"></a>PDW 活动日志  
-SQL Server PDW 维护一组旨在进行故障排除的日志。  (注意，这并不是事务日志、SQL Server 错误日志或 Windows 事件日志。 ) 这些 PDW 活动日志可以包含明文形式的完整语句，其中某些语句可以包含用户数据。 典型的示例包括 **INSERT** 和 **UPDATE** 语句。 可以使用 **sp_pdw_log_user_data_masking**显式打开或关闭用户数据屏蔽。 启用加密 SQL Server PDW 会自动打开 PDW 活动日志中用户数据的屏蔽，以便对其进行保护。 **sp_pdw_log_user_data_masking** 也可用于在不使用 TDE 时屏蔽语句，但不建议这样做，因为这样可以大大降低 Microsoft 支持部门团队分析问题的能力。  
+SQL Server PDW 维护一组旨在进行故障排除的日志。  (注意，这并不是事务日志、SQL Server 错误日志或 Windows 事件日志。 ) 这些 PDW 活动日志可以包含明文形式的完整语句，其中某些语句可以包含用户数据。 典型的示例包括 **INSERT** 和 **UPDATE** 语句。 可以使用 **sp_pdw_log_user_data_masking** 显式打开或关闭用户数据屏蔽。 启用加密 SQL Server PDW 会自动打开 PDW 活动日志中用户数据的屏蔽，以便对其进行保护。 **sp_pdw_log_user_data_masking** 也可用于在不使用 TDE 时屏蔽语句，但不建议这样做，因为这样可以大大降低 Microsoft 支持部门团队分析问题的能力。  
   
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>透明数据加密与 tempdb 系统数据库  
 使用 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)启用加密时，将加密 tempdb 系统数据库。 这在任何数据库可以使用 TDE 之前都是必需的。 这可能会对同一实例 SQL Server PDW 上的未加密数据库产生性能影响。  
@@ -207,12 +207,12 @@ SQL Server PDW 维护一组旨在进行故障排除的日志。  (注意，这�
   
 系统可以访问密钥，而无需人工干预 (例如提供密码) 。 如果证书不可用，系统将输出一个错误，该错误说明在有正确的证书可用之前无法解密 DEK。  
   
-将数据库从一台设备移到另一台设备时，必须先在目标服务器上还原用于保护其 "DEK" 的证书。 然后，可以照常还原数据库。 有关详细信息，请参阅标准 SQL Server 文档： [将受 TDE 保护的数据库移到另一个 SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15)。  
+将数据库从一台设备移到另一台设备时，必须先在目标服务器上还原用于保护其 "DEK" 的证书。 然后，可以照常还原数据库。 有关详细信息，请参阅标准 SQL Server 文档： [将受 TDE 保护的数据库移到另一个 SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。  
   
 只要存在使用数据库备份的数据库备份，就应保留用于加密 Dek 的证书。 证书备份必须包含证书私钥，因为在没有私钥的情况下，不能将证书用于数据库还原。 这些证书私钥备份存储在单独的文件中，由必须为证书还原提供的密码进行保护。  
   
 ## <a name="restoring-the-master-database"></a>还原 master 数据库  
-在灾难恢复过程中，可以使用 **DWConfig**还原 master 数据库。  
+在灾难恢复过程中，可以使用 **DWConfig** 还原 master 数据库。  
   
 -   如果控制节点未更改（即，如果在从其创建备份 master 数据库的相同和未更改的设备上还原了 master 数据库），则无需执行其他操作即可读取 DMK 和所有证书。  
   
@@ -246,7 +246,7 @@ SQL Server PDW 维护一组旨在进行故障排除的日志。  (注意，这�
   
 在升级过程中，如果用户数据库已加密并且未提供 DMK 密码，升级操作将失败。 替换过程中，如果存在 DMK 时未提供正确的密码，则该操作将跳过 DMK 恢复步骤。 所有其他步骤都将在 "替换 VM" 操作结束时完成，但该操作将在结束时报告失败以指示需要执行其他步骤。 在 "安装日志" (位于 **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup \\<时间戳> \detail-setup**) 中，末尾附近会显示以下警告。  
   
-`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
+`**_ WARNING \_\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
 在 PDW 中手动执行这些语句，然后重新启动设备，以便恢复 DMK：  
   

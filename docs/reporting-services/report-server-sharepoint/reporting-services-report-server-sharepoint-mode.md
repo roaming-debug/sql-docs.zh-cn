@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d6605fd1fd9aee53bc117701acddd5ffe28e16d8
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 73963eb8f7f1e9b1d15e709929fce713301aa450
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934715"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424948"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 报表服务器（SharePoint 模式）
 
@@ -63,7 +63,7 @@ ms.locfileid: "91934715"
   
 ## <a name="connected-mode-and-local-mode"></a>连接模式和本地模式
 
- SQL Server 2008 R2 版本引入了新的“本地模式”**，可用于从安装了用于 SharePoint 2010 产品的 Microsoft SQL Server 2008 R2 或更高版本的 Reporting Services 外接程序的 SharePoint 2010 服务器查看报表。  
+ SQL Server 2008 R2 版本引入了新的“本地模式”，可用于从安装了用于 SharePoint 2010 产品的 Microsoft SQL Server 2008 R2 或更高版本的 Reporting Services 外接程序的 SharePoint 2010 服务器查看报表。  
   
 -   *本地模式*：本地模式允许从 SharePoint 文档库在本地呈现报表，而无需与 Reporting Services 报表服务器集成。 用于 SharePoint 产品的 Reporting Services 外接程序是必需的，但 Reporting Services 报表服务器不是。 外接程序可以以多种不同的方式进行安装，包括 SharePoint 2010 产品准备工具。 有关本地模式的详细信息，请参阅[报表查看器中的本地模式报表和连接模式报表](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)和[在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   

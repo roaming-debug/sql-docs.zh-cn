@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e05dfa8cf6b519468ec631c5b6aa0eb49c040141
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 9b68a151b1c08d1cfd2dba0ce32665284208bf20
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934256"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424859"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint"></a>在 SharePoint 中激活报表服务器文件同步功能
 

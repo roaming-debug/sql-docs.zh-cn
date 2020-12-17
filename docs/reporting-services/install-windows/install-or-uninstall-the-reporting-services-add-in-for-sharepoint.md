@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: b4c8232909187894df11b7b1198fdb3416fbd1e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890857"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425432"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>安装或卸载用于 SharePoint 的 Reporting Services 加载项 (SSRS)
 
@@ -69,7 +69,7 @@ ms.locfileid: "91890857"
 Rssharepoint.msi /?  
 ```  
   
-1.  下载**外接程序的安装程序 (** rsSharepoint.msi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] )。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+1.  下载 **外接程序的安装程序 (** rsSharepoint.msi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] )。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
 2.  以管理员身份运行 **rsSharepoint.msi** 以启动安装向导。 向导将显示“欢迎”页、软件许可条款和注册信息页。 安装程序将在以下路径下创建文件夹，并将文件复制到该文件夹中：  
   
@@ -84,7 +84,7 @@ Rssharepoint.msi /?
 ###  <a name="files-only-installation"></a><a name="bkmk_files_only_installation"></a> “仅文件”安装  
  若要安装文件但跳过自定义操作安装阶段，则可以从命令行中使用 SKIPCA 选项来运行 rssharepoint.msi：  
   
-1.  使用 **管理员权限**打开命令提示符。  
+1.  使用 **管理员权限** 打开命令提示符。  
   
 2.  运行以下命令：  
   
@@ -101,7 +101,7 @@ Rssharepoint.msi /?
   
 2.  运行自定义操作可执行文件：  
   
-    1.  导航到包含文件 **rsCustomAction.exe**的文件夹。 此文件通过外接程序的“仅文件”安装复制到您的计算机。 **rsCustomAction.exe** 位于 **%Temp%** 目录中。 要导航到此文件，请从命令提示符键入以下信息：  
+    1.  导航到包含文件 **rsCustomAction.exe** 的文件夹。 此文件通过外接程序的“仅文件”安装复制到您的计算机。 **rsCustomAction.exe** 位于 **%Temp%** 目录中。 要导航到此文件，请从命令提示符键入以下信息：  
   
          **CD %temp%** 。  
   
@@ -123,7 +123,7 @@ Rssharepoint.msi /?
   
  执行静默安装：  
   
-1.  使用 **管理员权限**打开命令提示符。  
+1.  使用 **管理员权限** 打开命令提示符。  
   
 2.  运行以下命令：  
   
@@ -166,7 +166,7 @@ Rssharepoint.msi /?
 ### <a name="uninstall-from-the-command-line"></a>从命令行卸载  
  从命令行卸载外接程序：  
   
-1.  使用 **管理员权限**打开命令提示符。  
+1.  使用 **管理员权限** 打开命令提示符。  
   
 2.  运行以下命令：  
   
@@ -179,7 +179,7 @@ Rssharepoint.msi /?
 ### <a name="uninstall-the-add-in-from-the-local-server-only"></a>仅从本地服务器卸载外接程序  
  卸载外接程序的以前方法会从场中删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能和对象。 如果具有多服务器场且只想从本地计算机卸载外接程序而使 SharePoint 场正常工作，请执行以下步骤：  
   
-1.  使用 **管理员权限**打开命令提示符。  
+1.  使用 **管理员权限** 打开命令提示符。  
   
 2.  运行以下命令：  
   
@@ -191,7 +191,7 @@ Rssharepoint.msi /?
   
  如果您想要从 SharePoint 撤消注册 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能，但在磁盘上保留这些文件以供以后使用，请执行以下步骤：  
   
-1.  使用 **管理员权限**打开命令提示符。  
+1.  使用 **管理员权限** 打开命令提示符。  
   
 2.  运行以下命令：  
   
@@ -204,7 +204,7 @@ Rssharepoint.msi /?
 ##  <a name="how-to-repair-rssharepointmsi-from-the-command-line"></a><a name="bkmk_repair"></a> 如何从命令行修复 rssharepoint.msi  
  若要使用命令行修复或卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，请执行以下步骤：  
   
-1.  使用 **管理员权限**打开命令提示符。  
+1.  使用 **管理员权限** 打开命令提示符。  
   
 2.  运行以下命令：  
   

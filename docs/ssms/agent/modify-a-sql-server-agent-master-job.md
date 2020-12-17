@@ -15,13 +15,13 @@ ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 94b49959ff78e318d3053a3df737e0ca7e5ab388
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 01971130558d8b523572e2e511e76436b9f5544f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035594"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482177"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>修改 SQL Server 代理主作业
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

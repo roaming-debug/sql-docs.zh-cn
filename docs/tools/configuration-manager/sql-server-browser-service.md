@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e845b90debe16d1d463a3db9f99145b93e1654e
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 2bebb6174f1632973d669262e5422b08e4ccea8d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901775"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483759"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser 服务
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

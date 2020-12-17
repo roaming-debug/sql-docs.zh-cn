@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 878d189aba259e5b69f5c27dbbc8b80b3f7f880b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196983"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642974"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 数据定义 - CREATE MEMBER
 
@@ -31,7 +31,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
 ......[,SCOPE_ISOLATION = CUBE]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *Cube_Name*  
  一个有效的字符串表达式，用于提供要创建成员的多维数据集的名称。  
   
@@ -115,7 +115,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|在一个计算成员引用另一个计算成员（即计算成员相交）的情况下，计算成员的求解次序。|  
 |FORMAT_STRING|一种在显示单元值时客户端应用程序可以使用的 Office 样式格式字符串。|  
 |VISIBLE|指示计算成员在架构行集中是否可见的值。 可以使用 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 函数将可见计算成员添加到集。 非零值表示计算成员可见。 此属性的默认值为 *Visible*。<br /><br /> 不可见（此值设置为零时）的计算成员通常用作更复杂的计算成员中的中间步骤。 这些计算成员也可以由其他类型的成员（如度量值）引用。|  
-|NON_EMPTY_BEHAVIOR|解析空单元时，用来确定计算成员的行为的度量值或集。<br /><br /> 警告此属性已弃用。 ** \* \* \* \* ** 避免将其设置。 有关详细信息，请参阅 [SQL Server 2014 中不推荐使用的 Analysis Services 功能](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) 。|  
+|NON_EMPTY_BEHAVIOR|解析空单元时，用来确定计算成员的行为的度量值或集。<br /><br /> 警告此属性已弃用。 **\* \* \* \*** 避免将其设置。 有关详细信息，请参阅 [SQL Server 2014 中不推荐使用的 Analysis Services 功能](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014&preserve-view=true) 。|  
 |CAPTION|客户端应用程序用作成员标题的字符串。|  
 |DISPLAY_FOLDER|标识客户端应用程序用来显示成员的显示文件夹路径的字符串。 文件夹级别的分隔符由客户端应用程序定义。 对于提供的工具和客户端 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，) 的反斜杠 (\\ 是级别分隔符。 若要为已定义的成员提供多个显示文件夹，请使用分号 (; ) 来分隔文件夹。|  
 |ASSOCIATED_MEASURE_GROUP|与此成员关联的度量值组的名称。|  

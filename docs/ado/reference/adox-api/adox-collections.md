@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc807900a08869ef46628b8aca2456326e617c87
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d256e9a650359a9fdc961a04ddb3c32216961094
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985818"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641360"
 ---
 # <a name="adox-collections"></a>ADOX 集合
 
@@ -32,10 +32,10 @@ ms.locfileid: "88985818"
 |[过程](./procedures-collection-adox.md)|包含目录的所有 **过程** 对象。|  
 |[表](./tables-collection-adox.md)|包含目录的所有 **表** 对象。|  
 |[用户](./users-collection-adox.md)|包含目录或组的所有存储的 **用户** 对象。|  
-|[Views](./views-collection-adox.md)|包含目录的所有 **视图** 对象。|  
+|[视图](./views-collection-adox.md)|包含目录的所有 **视图** 对象。|  
   
 ## <a name="see-also"></a>另请参阅  
- [ADOX API 参考](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API 参考](./adox-object-model.md)   
  [ADOX 对象模型](./adox-object-model.md)   
  [ADOX 对象](./adox-objects.md)   
  [数据定义语言和安全性的 ADO 扩展 (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -18,13 +18,13 @@ ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 33621e680b958bf6945fb26fa82209ee640ba9f2
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d0ec97acbbae3f0e5947348ba35308bd3cfc86ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033710"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424834"
 ---
 # <a name="assign-alerts-to-an-operator"></a>向操作员分配警报
 
@@ -60,11 +60,11 @@ ms.locfileid: "92033710"
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要为其分配警报的操作员，再选择“属性”****，然后选择“通知”**** 页。  
+4.  右键单击要为其分配警报的操作员，再选择“属性”，然后选择“通知”页。  
   
-5.  在“_operator\_name_ 属性”**** 对话框的“选择页”**** 下，选择“通知”****。  
+5.  在“_operator\_name_ 属性”对话框的“选择页”下，选择“通知”。  
   
-6.  在 **“按以下方式查看发送给此用户的通知”** 下，选择 **“警报”** 查看发送给此操作员的警报列表或选择 **“作业”** 查看向此操作员发送通知的作业列表。 选中下列一个或多个复选框来根据需要定义每个通知的通知方法：“电子邮件”****、“寻呼程序”**** 或“Net send”****。  
+6.  在 **“按以下方式查看发送给此用户的通知”** 下，选择 **“警报”** 查看发送给此操作员的警报列表或选择 **“作业”** 查看向此操作员发送通知的作业列表。 选中下列一个或多个复选框来根据需要定义每个通知的通知方法：“电子邮件”、“寻呼程序”或“Net send”。  
   
 7.  完成后，单击 **“确定”** 。  
   

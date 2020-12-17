@@ -23,13 +23,13 @@ ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9192b3b68c649b7e8e45f13b5b95a91aea1ff8a1
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 60ade9965f92b1c9ff5e459f1af109bd37c6a9c5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035720"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482272"
 ---
 # <a name="change-an-operator39s-availability"></a>更改操作员的可用性
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "92035720"
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要启用或禁用的操作员，选择“属性”****，然后单击“常规”**** 选项卡。  
+4.  右键单击要启用或禁用的操作员，选择“属性”，然后单击“常规”选项卡。  
   
 5.  在“_operator\_name_ 属性”对话框中，选中或清除“启用”复选框。  
   

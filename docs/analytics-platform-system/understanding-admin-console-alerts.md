@@ -9,17 +9,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c063e9e5cef56901a6c7f879269eff8e6b60696b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6ed0b0061d510f653b1152a17b6fff1a0df61e97
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778486"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641583"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>了解分析平台系统中的管理控制台警报
 警报显示在装置 **管理员控制台** 和 **System Center Operations Manager** (SCOM) 中。 使用此警报列表来帮助确定哪些警报需要进一步调查。  
   
-有关使用 Internet Explorer 连接到 **管理控制台** 的信息，请参阅 [使用管理控制台监视设备 &#40;分析平台系统&#41;](monitor-the-appliance-by-using-the-admin-console.md)。 有关 **SCOM**的信息，请参阅 [使用 System Center Operations Manager &#40;Analytics 平台系统监视设备&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+有关使用 Internet Explorer 连接到 **管理控制台** 的信息，请参阅 [使用管理控制台监视设备 &#40;分析平台系统&#41;](monitor-the-appliance-by-using-the-admin-console.md)。 有关 **SCOM** 的信息，请参阅 [使用 System Center Operations Manager &#40;Analytics 平台系统监视设备&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
 有关使用 Transact-sql 获取警报信息的信息 \- ，请参阅 [使用系统视图监视设备 &#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-views.md)。  
   
@@ -27,9 +27,9 @@ ms.locfileid: "88778486"
 指示正常状态的警报名称通常不需要调查。 包含单词 NON_CRITICAL 的警报名称有时需要执行操作。 所有其他类型的警报都需要进行调查。  
   
 ## <a name="alert-list"></a>警报列表  
-警报按 **警报名称**的字母顺序列出。 所有可能的警报都不在列表中。 对于不同的供应商，某些警报的措辞略有不同。  
+警报按 **警报名称** 的字母顺序列出。 所有可能的警报都不在列表中。 对于不同的供应商，某些警报的措辞略有不同。  
   
-|**警报名称**|**是否需要执行操作？**|**State**|**严重性**|**描述**|**详细信息**|  
+|**警报名称**|**是否需要执行操作？**|**状态**|**严重性**|**说明**|**详细信息**|  
 |------------------|------------------------|-------------|----------------|-------------------|------------------------|  
 |Ambari 代理的状态为 "严重"。|是|失败|错误|此 Ambari 代理资源失败 (状态： 4) 或处于脱机状态 (状态： 3) 。 如果脱机处于挂起状态，则包括其他脱机状态 (状态： 130) 。 状态在组件的 "hadoop_service_status" 属性中报告。|查看 Head 和 Data 节点上的群集资源。|  
 |Ambari 代理具有非关键状态。|是|已降级|警告|由于以下原因之一，此 Ambari 代理资源处于非严重状态：-资源处于继承状态 (状态： 0) -资源处于挂起状态 (状态： 128) -资源处于联机挂起状态 (状态： 129) -资源正在执行初始化 (状态： 1) 状态在组件的 "hadoop_service_status" 属性中报告。|查看 Head 和 Data 节点上的群集资源。|  
@@ -151,8 +151,8 @@ ms.locfileid: "88778486"
 |虚拟磁盘处于非严重状态。|是|已降级|警告|存储空间虚拟磁盘状态指示存在不严重的警告，但系统仍可正常运行 (状态： 1-Warning) 。 状态在组件的 "virtual_disk_status" 属性中报告。  属性 "virtual_disk_oper_status" 中显示的操作状态可能提供有关该问题的详细信息。  如果虚拟磁盘已移至另一个节点，请查看群集共享卷组件的状态，并将磁盘移回预期所有者，其名称由名称中 N 后面的数字指示，例如。 N01D01 属于 HSA01。|有关详细信息，请查看 log "Application and service logs\Microsoft\Windows\StorageSpaces-Driver\Operational" 中的节点事件。  镜像的运行状况可能会受到单个磁盘丢失的影响，因此磁盘本身可能发生了另一个警报。|  
 |虚拟磁盘的状态为 "正常"。|否|可运行|信息|存储空间虚拟磁盘状态 (状态： 0-正常) 。 状态在组件的 "virtual_disk_status" 属性中报告。||  
 |虚拟磁盘的状态为 "未知"。|是|可运行|警告|无法确定存储空间虚拟磁盘状态 (状态： 5-未知) 。 状态在组件的 "virtual_disk_status" 属性中报告。  属性 "virtual_disk_oper_status" 中显示的操作状态可能提供有关该问题的详细信息。  如果虚拟磁盘已移至另一个节点，请查看群集共享卷组件的状态，并将磁盘移回预期所有者，其名称由名称中 N 后面的数字指示，例如。 N01D01 属于 HSA01。|有关详细信息，请查看 log "Application and service logs\Microsoft\Windows\StorageSpaces-Driver\Operational" 中的节点事件。|  
-|卷可用空间状态为 "严重"。|是|已降级|错误|卷可用空间严重不足！ 当前使用的卷磁盘空间超出了总容量的90%。 清除不必要的文件/数据以确保正常的设备操作。|管理控制台报告已分配的空间，而不一定已使用空间。 您可以使用 DBCC PDW_SHOWSPACEUSED 来调查所使用的与已分配的空间。 你还可以使用 DBCC SHRINKLOG <!--缺少链接 [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../t-sql/statements/alter-database-transact-sql.md?view=sql-server-ver15) 收缩数据库。|  
-|卷可用空间状态为 "非关键"。|可选|可运行|警告|当前使用的卷磁盘空间介于70% 和90% 之间。 查看此卷上使用的磁盘空间，清除不必要的文件/数据以确保正常的设备操作。|管理控制台报告已分配的空间，而不一定已使用空间。 您可以使用 [DBCC PDW_SHOWSPACEUSED](../t-sql/statements/alter-database-transact-sql.md?view=sql-server-ver15) 来调查所使用的与已分配的空间。 你还可以使用 DBCC SHRINKLOG <!--缺少链接 [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../t-sql/statements/alter-database-transact-sql.md?view=sql-server-ver15) 收缩数据库。|  
+|卷可用空间状态为 "严重"。|是|已降级|错误|卷可用空间严重不足！ 当前使用的卷磁盘空间超出了总容量的90%。 清除不必要的文件/数据以确保正常的设备操作。|管理控制台报告已分配的空间，而不一定已使用空间。 您可以使用 DBCC PDW_SHOWSPACEUSED 来调查所使用的与已分配的空间。 你还可以使用 DBCC SHRINKLOG <!--缺少链接 [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../t-sql/statements/alter-database-transact-sql.md) 收缩数据库。|  
+|卷可用空间状态为 "非关键"。|可选|可运行|警告|当前使用的卷磁盘空间介于70% 和90% 之间。 查看此卷上使用的磁盘空间，清除不必要的文件/数据以确保正常的设备操作。|管理控制台报告已分配的空间，而不一定已使用空间。 您可以使用 [DBCC PDW_SHOWSPACEUSED](../t-sql/statements/alter-database-transact-sql.md) 来调查所使用的与已分配的空间。 你还可以使用 DBCC SHRINKLOG <!--缺少链接 [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../t-sql/statements/alter-database-transact-sql.md) 收缩数据库。|  
 |卷可用空间状态正常。|否|可运行|信息|此卷上有足够的可用磁盘空间。 当前使用的卷磁盘空间低于70%。|指示组件之前报告了不同的状态，但由于已返回到正常状态。|  
   
 <!-- MISSING LINKS ## See Also  

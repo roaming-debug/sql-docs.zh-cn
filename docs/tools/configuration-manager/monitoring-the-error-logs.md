@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9acc379c39cbaafc71ed4117fe3760d6ae269eb4
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 164677484f24744ac61d9d4e2da4ce93425f3a77
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900195"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483809"
 ---
 # <a name="monitoring-the-error-logs"></a>监视错误日志
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

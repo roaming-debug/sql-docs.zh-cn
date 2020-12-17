@@ -17,13 +17,13 @@ ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e54498ffd749417a6ae4991cfcdaeeb1c91a85d8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 62e4eb1574d48ecd40af46ba081f6443bdafb000
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036523"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482222"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>管理整个企业内的作业
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

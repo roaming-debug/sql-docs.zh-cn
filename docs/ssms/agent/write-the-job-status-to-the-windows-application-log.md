@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6589593d7d040f4e2f9a2bf5a690dbb42d89d142
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c85762cabe7b30c2873e5bbdfef5301f1fcefddf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038100"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482090"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
 
@@ -59,11 +59,11 @@ ms.locfileid: "92038100"
   
 4.  请检查 **“写入 Windows 应用程序事件日志”**，然后执行下列操作之一：  
   
-    -   单击“当作业成功时”****，以在作业成功完成时记录作业状态。  
+    -   单击“当作业成功时”，以在作业成功完成时记录作业状态。  
   
-    -   单击“当作业失败时”****，以在作业未成功完成时记录作业状态。  
+    -   单击“当作业失败时”，以在作业未成功完成时记录作业状态。  
   
-    -   单击“当作业完成时”****，以便无论完成状态如何，都记录作业状态。  
+    -   单击“当作业完成时”，以便无论完成状态如何，都记录作业状态。  
   
 ## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理对象  
 **将作业状态写入 Windows 应用程序日志**  

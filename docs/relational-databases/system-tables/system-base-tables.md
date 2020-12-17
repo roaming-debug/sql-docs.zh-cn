@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 35d75fe78e9631423f6dc9acc48cd89ef41d8d79
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810193"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641890"
 ---
 # <a name="system-base-tables"></a>系统基表
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "91810193"
 |**sys.sysguidrefs**|存在于每个数据库中。 每个 GUID 分类 ID 引用均存在对应的一行。|  
   
 ## <a name="updating-system-base-tables"></a>更新系统基表    
-您可以通过 "系统目录" 视图查看系统表中的数据。 若要更新系统基础表中的元数据，请使用相应的 TSQL 接口 (例如，DDL 语句) 。 无法手动更新系统表。 当您对系统表执行直接更新时，SQL Server 将报告以下消息。
+可通过系统目录视图查看系统表中的数据。 若要更新系统基础表中的元数据，请使用相应的 TSQL 接口 (例如，DDL 语句) 。 无法手动更新系统表。 当您对系统表执行直接更新时，SQL Server 将报告以下消息。
 
 ### <a name="a-system-table-is-manually-updated"></a>手动更新系统表
 消息 17659：警告：系统表 ID <id> 已直接在数据库 ID <id> 中更新，但可能未维护缓存一致性。 应重新启动 SQL Server。
@@ -100,4 +100,4 @@ ms.locfileid: "91810193"
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>手动更新系统表后执行 DBCC_CHECKDB 命令
 消息3859：警告：在数据库 ID 17 中，系统目录已直接更新，最近 date_time。
 
-如果对系统表执行手动更新并遇到问题，系统可能会要求从备份还原或将数据从受影响的数据库复制到新数据库。 了解有关 [用户操作错误消息](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action)的详细信息。
+如果对系统表执行手动更新并遇到问题，系统可能会要求从备份还原或将数据从受影响的数据库复制到新数据库。 了解有关 [用户操作错误消息](../errors-events/mssqlserver-8992-database-engine-error.md#user-action)的详细信息。

@@ -16,13 +16,13 @@ ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6a480e487254f0acc266f6295cee385be172f76e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 61e860575b5b8f4ed7d7c875ec804089b9b3800b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037392"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423978"
 ---
 # <a name="edit-an-operator"></a>编辑运算符
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "92037392"
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要编辑的操作员，然后选择“属性”****。  
+4.  右键单击要编辑的操作员，然后选择“属性”。  
   
     有关“_operator\_name_ 属性”对话框包含的可用选项的详细信息，请参阅：  
   

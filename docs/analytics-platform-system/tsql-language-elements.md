@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ba4b4992b97cb930005458640215497f0487016f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778406"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641550"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>并行数据仓库的 t-sql 语言元素
 用于分析平台系统 (AP 的 t-sql 语言元素) SQL Server 并行数据仓库 (PDW) 。
@@ -23,7 +23,7 @@ ms.locfileid: "88778406"
 * [语法约定](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [对象命名规则](../relational-databases/databases/database-identifiers.md)
 * [保留的关键字](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [排序规则](../t-sql/statements/collations.md?view=sql-server-ver15)
+* [排序规则](../t-sql/statements/collations.md)
 * [注释](../t-sql/language-elements/comment-transact-sql.md)
 * [常量](../t-sql/data-types/constants-transact-sql.md)
 * [数据类型](../t-sql/data-types/data-types-transact-sql.md)
@@ -89,7 +89,7 @@ ms.locfileid: "88778406"
 * [@@VERSION](../t-sql/functions/version-transact-sql-configuration-functions.md)
 * [ABS](../t-sql/functions/abs-transact-sql.md)
 * [ACOS](../t-sql/functions/acos-transact-sql.md)
-* [ASCII](../t-sql/functions/ascii-transact-sql.md)
+* ASCII 
 * [ASIN](../t-sql/functions/asin-transact-sql.md)
 * [ATAN](../t-sql/functions/atan-transact-sql.md)
 * [ATN2](../t-sql/functions/atn2-transact-sql.md)

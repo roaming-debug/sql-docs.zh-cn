@@ -9,13 +9,13 @@ ms.author: maghan
 reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4227c2ad60e30994287fd0fc8c2524787c19b534
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 564e6ad8cc4ab7cc14d816b34e5332412f912739
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300369"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489727"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支持
 
@@ -45,11 +45,11 @@ Active Directory 密码验证是一种连接到之前列出的 Azure SQL 产品�
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 集成身份验证
 
-Active Directory 集成身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到列出的 Azure SQL 产品的机制  。 如果使用 Azure Active Directory 凭据从联盟域登录 Windows，请使用这种方法进行连接。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/sql-database/sql-database-aad-authentication)。
+Active Directory 集成身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到列出的 Azure SQL 产品的机制。 如果使用 Azure Active Directory 凭据从联盟域登录 Windows，请使用这种方法进行连接。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/sql-database/sql-database-aad-authentication)。
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 交互式身份验证
 
-使用 SSDT 连接到列出的 Azure SQL 产品时，Active Directory 交互式身份验证可用，但仅用于  。
+使用 SSDT 连接到列出的 Azure SQL 产品时，Active Directory 交互式身份验证可用，但仅用于 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2&preserve-view=true) 或更高版本。
 
 - [下载并安装任何版本的 .NET Framework](https://www.microsoft.com/net/download/all)。
 - [Visual Studio 2017 版本 15.6](/visualstudio/releasenotes/vs2017-relnotes) 或更高版本。

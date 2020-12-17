@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4f6f001aa71a5ae2fd397fae2d89bdd951956987
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 735176a4fbb92d91d446f47492b2ddaa11098b2e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713825"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489265"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>第 1 课：数据库引擎优化顾问 (DTA) 基本导览
 
@@ -32,10 +32,10 @@ ms.locfileid: "88713825"
 
 - 安装 [SQL Server Management Studio。](../../ssms/download-sql-server-management-studio-ssms.md)
 - 安装 [SQL Server 2017 Developer Edition。](https://www.microsoft.com/sql-server/sql-server-downloads)
-- 下载 [AdventureWorks2017 示例数据库。](../../samples/adventureworks-install-configure.md?view=sql-server-2017)
+- 下载 [AdventureWorks2017 示例数据库。](../../samples/adventureworks-install-configure.md)
 
 
-此处提供在 SSMS 中还原数据库的说明：[还原数据库。](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
+此处提供在 SSMS 中还原数据库的说明：[还原数据库。](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
 
   >[!NOTE]
   > 本教程适用于熟悉如何使用 SQL Server Management Studio 和基本数据库管理任务的用户。 
