@@ -15,13 +15,13 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eca2f9ee0bfadddd91443c01089139c7b08a308c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 24c614f6b7fa00eb566dc7d8d25a6686494cfebc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035624"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409110"
 ---
 # <a name="create-a-job-category"></a>创建作业类别
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92035624"
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>开始之前  
   
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>限制和局限  
-多服务器类别仅存在于主服务器上。 主服务器上仅提供了一个默认作业类别：“[未分类(多服务器)]”****。 下载多服务器作业后，其类别将在目标服务器上更改为“来自 MSX 的作业” **** 。  
+多服务器类别仅存在于主服务器上。 主服务器上仅提供了一个默认作业类别：“[未分类(多服务器)]”。 下载多服务器作业后，其类别将在目标服务器上更改为“来自 MSX 的作业”  。  
   
 ### <a name="security"></a><a name="Security"></a>安全性  
 有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "92035624"
   
 3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在“管理作业类别” ****_server_name_ 对话框中，单击“添加” ****。  
+4.  在“管理作业类别” _server_name_ 对话框中，单击“添加” 。  
   
 5.  在新对话框的 **“名称”** 框中，输入新作业类别的名称。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "92035624"
   
 7.  单击“确定”。  
   
-8.  在“管理作业类别” ****_server_name_ 对话框中，单击“刷新” **** 以确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
+8.  在“管理作业类别” _server_name_ 对话框中，单击“刷新”  以确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
   
 有关这些对话框的详细信息，请参阅 [作业类别 - 管理作业类别](../../ssms/agent/job-categories-manage-job-categories.md) 和 [作业类别属性 - 新建作业类别](../../ssms/agent/job-categories-properties-new-job-category.md)。  
   

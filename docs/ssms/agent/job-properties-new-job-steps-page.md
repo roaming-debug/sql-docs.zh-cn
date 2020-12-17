@@ -13,13 +13,13 @@ ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a440c4770726615e185bf41688814f0567e6ce28
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5fd49af8bafd3a47fefa3a1b232eefcab3990108
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037884"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466498"
 ---
 # <a name="job-properties---new-job-steps-page"></a>作业属性 - 新建作业（“步骤”页）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

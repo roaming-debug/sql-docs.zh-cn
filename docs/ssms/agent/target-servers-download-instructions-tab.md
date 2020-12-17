@@ -13,13 +13,13 @@ ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cd3683f46ac0f7f3d2264d01684288a304faa394
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1be6f257ea74321c8a56d8c38ae6622417527fd8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038095"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440398"
 ---
 # <a name="target-servers-download-instructions-tab"></a>目标服务器（“下载指令”选项卡）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -13,13 +13,13 @@ ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f22ef0abbe86a4180a23531f8551d29bff76c5c9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 28f2911f6844f5ce7d26bbce630d828b5e1a2094
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030343"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402490"
 ---
 # <a name="post-download-instructions"></a>发布下载指令
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "92030343"
 查看下载指令的说明。  
   
 **轮询间隔**  
-设置目标服务器的轮询间隔。 仅适用于“设置轮询间隔”**** 指令。  
+设置目标服务器的轮询间隔。 仅适用于“设置轮询间隔”指令。  
   
 **所有目标服务器**  
 选择此选项可以将下载指令发布到所有目标服务器。  

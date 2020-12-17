@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c6236befd5ba532c1ed80de0da9c67072526d2b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 99fad5d6f8ec325e51eb898e34400c1ce8bbaea8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195117"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470538"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>在 SQL Server 和 XDF 文件之间移动数据（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92195117"
     ----|----|----
     5|38|48
     
-2. 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询定义想要从 SQL Server 导入的数据。  稍后，将此变量用作 rxImport 的 inData 参数******。
+2. 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询定义想要从 SQL Server 导入的数据。  稍后，将此变量用作 rxImport 的 inData 参数。
   
     ```R
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")
@@ -67,7 +67,7 @@ ms.locfileid: "92195117"
     
     [rxImport](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) 函数可以将数据从任何受支持的数据源导入到本地 XDF 文件。 如果想要对数据进行多种不同的分析，但避免反复运行相同的查询，则使用数据的本地副本会非常方便。
 
-5. 通过将之前定义为参数的变量传递给 RxSqlServerData，创建数据源对象****。
+5. 通过将之前定义为参数的变量传递给 RxSqlServerData，创建数据源对象。
   
     ```R
     sqlServerImportDS <- RxSqlServerData(
@@ -76,7 +76,7 @@ ms.locfileid: "92195117"
         colInfo = importColInfo)
     ```
   
-6. 调用 rxImport，将数据写入当前工作目录中一个名为 `ccFraudSub.xdf` 的文件****。
+6. 调用 rxImport，将数据写入当前工作目录中一个名为 `ccFraudSub.xdf` 的文件。
   
     ```R
     localDS <- rxImport(inData = sqlServerImportDS,
@@ -84,7 +84,7 @@ ms.locfileid: "92195117"
         overwrite = TRUE)
     ```
   
-    rxImport 函数返回的 `localDs` 对象为轻量 RxXdfData 数据源对象，表示存储在本地磁盘上的 `ccFraud.xdf` 数据文件********。
+    rxImport 函数返回的 `localDs` 对象为轻量 RxXdfData 数据源对象，表示存储在本地磁盘上的 `ccFraud.xdf` 数据文件。
   
 7. 对 XDF 文件调用 [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 以验证数据架构是否相同。
   
@@ -102,7 +102,7 @@ ms.locfileid: "92195117"
     Var 4: state, Type: factor, no factor levels available
     ```
 
-8. 现在，可以调用各种不同的 R 函数以分析 localDs 对象，正如对 SQL Server 上的源数据执行的操作一样****。 例如，可以按 gender 进行汇总：
+8. 现在，可以调用各种不同的 R 函数以分析 localDs 对象，正如对 SQL Server 上的源数据执行的操作一样。 例如，可以按 gender 进行汇总：
   
     ```R
     rxSummary(~gender + cardholder + balance + state, data = localDS)
@@ -110,9 +110,9 @@ ms.locfileid: "92195117"
 
 ## <a name="next-steps"></a>后续步骤
 
-本教程为介绍 RevoScaleR**** 和 SQL Server 的多部分系列教程画上了句号。 它介绍了许多与数据相关的计算概念，为你处理自己的数据和项目需求打下了基础。
+本教程为介绍 RevoScaleR 和 SQL Server 的多部分系列教程画上了句号。 它介绍了许多与数据相关的计算概念，为你处理自己的数据和项目需求打下了基础。
 
-若要加深对 RevoScaleR 的了解，可返回到 R 教程列表，逐步完成你可能错过的任何练习****。 或者，查看目录中的操作方法文章，获取有关一般任务的信息。
+若要加深对 RevoScaleR 的了解，可返回到 R 教程列表，逐步完成你可能错过的任何练习。 或者，查看目录中的操作方法文章，获取有关一般任务的信息。
 
 > [!div class="nextstepaction"]
 > [SQL Server 的 R 教程](./r-tutorials.md)

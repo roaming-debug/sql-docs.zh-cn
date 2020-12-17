@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 18cd0c279493dcb41d043d3f76d6debe71eb402c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 7f7b7a22376cba31a54f5682e041e225cb15760c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194461"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470338"
 ---
 # <a name="python-tutorial-train-and-save-a-python-model-using-t-sql"></a>Python 教程：使用 T-SQL 定型和保存 Python 模型
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "92194461"
 
 ## <a name="split-the-sample-data-into-training-and-testing-sets"></a>将示例数据拆分为定型集和测试集
 
-1. 创建名为 PyTrainTestSplit 的存储过程，以将 nyctaxi_sample 表中的数据划分为两部分：nyctaxi_sample_training 和 nyctaxi_sample_testing****。 
+1. 创建名为 PyTrainTestSplit 的存储过程，以将 nyctaxi_sample 表中的数据划分为两部分：nyctaxi_sample_training 和 nyctaxi_sample_testing。 
 
    此时应该已创建此存储过程，但你也可运行以下代码来创建该过程：
 
@@ -71,8 +71,8 @@ ms.locfileid: "92194461"
 
 数据准备就绪后，可以使用它来定型模型。 为此，可以调用运行某些 Python 代码的存储过程，并将其作为定型数据表的输入。 在本教程中，你将创建两个模型，并且这两个模型都是二元分类模型：
 
-+ 存储过程 PyTrainScikit 使用 scikit-learn 包创建小费预测模型********。
-+ 存储过程 TrainTipPredictionModelRxPy 使用 revoscalepy 包创建小费预测模型********。
++ 存储过程 PyTrainScikit 使用 scikit-learn 包创建小费预测模型。
++ 存储过程 TrainTipPredictionModelRxPy 使用 revoscalepy 包创建小费预测模型。
 
 每个存储过程都使用你提供的输入数据来创建和定型逻辑回归模型。 所有 Python 代码都包装在系统存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中。
 
@@ -80,7 +80,7 @@ ms.locfileid: "92194461"
 
 ### <a name="pytrainscikit"></a>PyTrainScikit
 
-1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，打开一个新“查询”窗口并运行以下语句以创建存储过程 PyTrainScikit********。  因为存储过程包含输入数据的定义，所以无需提供输入查询。
+1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，打开一个新“查询”窗口并运行以下语句以创建存储过程 PyTrainScikit。  因为存储过程包含输入数据的定义，所以无需提供输入查询。
 
    ```sql
    DROP PROCEDURE IF EXISTS PyTrainScikit;
@@ -127,14 +127,14 @@ ms.locfileid: "92194461"
    INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
    ```
 
-   数据处理和模型调整可能需要几分钟时间。 通过管道传递到 Python 的 stdout 流的消息会显示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的“消息”窗口中********。 例如：
+   数据处理和模型调整可能需要几分钟时间。 通过管道传递到 Python 的 stdout 流的消息会显示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的“消息”窗口中。 例如：
 
    ```text
    STDOUT message(s) from external script:
    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy
    ```
 
-3. 打开表 nyc\_taxi_models**。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
+3. 打开表 nyc\_taxi_models。 可以看到已添加了一个新行，在列 _model_ 中包含序列化模型。
 
    ```text
    SciKit_model
@@ -143,11 +143,11 @@ ms.locfileid: "92194461"
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
-此存储过程使用新的 revoscalepy 包，此包为 Python 的新包****。 它所包含的对象、转换和算法与为 R 语言的 RevoScaleR 包提供的对象、转换和算法类似****。 
+此存储过程使用新的 revoscalepy 包，此包为 Python 的新包。 它所包含的对象、转换和算法与为 R 语言的 RevoScaleR 包提供的对象、转换和算法类似。 
 
-通过使用 revoscalepy，可以创建远程计算上下文、在计算上下文之间移动数据、转换数据并使用常见算法（如逻辑和线性回归、决策树等）定型预测模型****。 有关详细信息，请参阅 [SQL Server 中的 revoscalepy 模块](../python/ref-py-revoscalepy.md)和 [revoscalepy 函数参考](/r-server/python-reference/revoscalepy/revoscalepy-package)。
+通过使用 revoscalepy，可以创建远程计算上下文、在计算上下文之间移动数据、转换数据并使用常见算法（如逻辑和线性回归、决策树等）定型预测模型。 有关详细信息，请参阅 [SQL Server 中的 revoscalepy 模块](../python/ref-py-revoscalepy.md)和 [revoscalepy 函数参考](/r-server/python-reference/revoscalepy/revoscalepy-package)。
 
-1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，打开新的“查询”窗口并运行以下语句以创建存储过程 TrainTipPredictionModelRxPy****__。  因为存储过程已包含输入数据的定义，所以无需提供输入查询。
+1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，打开新的“查询”窗口并运行以下语句以创建存储过程 TrainTipPredictionModelRxPy。  因为存储过程已包含输入数据的定义，所以无需提供输入查询。
 
    ```sql
    DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
@@ -184,11 +184,11 @@ ms.locfileid: "92194461"
 
    此存储过程在模型定型过程中执行以下步骤：
 
-   + SELECT 查询应用自定义标量函数 fnCalculateDistance 计算上车与下车位置之间的直接距离__。 查询的结果存储在默认 Python 输入变量 `InputDataset` 中。
+   + SELECT 查询应用自定义标量函数 fnCalculateDistance 计算上车与下车位置之间的直接距离。 查询的结果存储在默认 Python 输入变量 `InputDataset` 中。
    + 二进制变量 tipped 用作标签或结果列，模型使用以下这些特征列进行调整：passenger_count、trip_distance、trip_time_in_secs 和 direct_distance   。
-   + 定型后的模型将进行序列化并存储在 Python 变量 `logitObj` 中。 通过添加 T-SQL 关键字 OUTPUT，可以将变量添加为存储过程的输出。 在下一步中，该变量用于将模型的二进制代码插入到数据库表 nyc_taxi_models 中__。 借助此机制，可轻松存储和重新使用模型。
+   + 定型后的模型将进行序列化并存储在 Python 变量 `logitObj` 中。 通过添加 T-SQL 关键字 OUTPUT，可以将变量添加为存储过程的输出。 在下一步中，该变量用于将模型的二进制代码插入到数据库表 nyc_taxi_models 中。 借助此机制，可轻松存储和重新使用模型。
 
-2. 按如下所示运行存储过程，将定型后的 revoscalepy 模型插入到表 nyc_taxi_models 中******。
+2. 按如下所示运行存储过程，将定型后的 revoscalepy 模型插入到表 nyc_taxi_models 中。
 
    ```sql
    DECLARE @model VARBINARY(MAX);
@@ -196,14 +196,14 @@ ms.locfileid: "92194461"
    INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
    ```
 
-   数据处理和模型调整可能需要一些时间。 通过管道传递到 Python 的 stdout 流的消息会显示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的“消息”窗口中********。 例如：
+   数据处理和模型调整可能需要一些时间。 通过管道传递到 Python 的 stdout 流的消息会显示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的“消息”窗口中。 例如：
 
    ```text
    STDOUT message(s) from external script:
    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy
    ```
 
-3. 打开表 nyc_taxi_models。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
+3. 打开表 nyc_taxi_models。 可以看到已添加了一个新行，在列 _model_ 中包含序列化模型。
 
    ```text
    revoscalepy_model

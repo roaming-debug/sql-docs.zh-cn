@@ -10,13 +10,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 22695214f9f3b375d285a8b3bb03bc1471535b17
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 76e746701aa331cf1720ea56befd5956fd65cfd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192368"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470458"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>用于 SQL 机器学习 Python 和 R 教程的 Iris 演示数据
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "92192368"
     GO
     ```
 
-3. 若要实际填充表，请运行存储过程并指定应在其中写入数据的表。 运行时，存储过程执行 Python 或 R 代码，该代码加载内置 Iris 数据集，然后将数据插入“iris_data”表****。
+3. 若要实际填充表，请运行存储过程并指定应在其中写入数据的表。 运行时，存储过程执行 Python 或 R 代码，该代码加载内置 Iris 数据集，然后将数据插入“iris_data”表。
 
     ```sql
     INSERT INTO iris_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species", "SpeciesId")

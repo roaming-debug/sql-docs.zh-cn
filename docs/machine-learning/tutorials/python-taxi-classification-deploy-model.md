@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c67f28d8cefb03edc2a12b97657d4054359727c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 4e101a017197d83217a574ca6521dd60328f536a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180317"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470328"
 ---
 # <a name="python-tutorial-run-predictions-using-python-embedded-in-a-stored-procedure"></a>Python 教程：使用存储过程中嵌入的 Python 来运行预测
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88180317"
 + 提供要使用的确切模型的名称作为存储过程的输入参数。 该存储过程使用存储过程中的 SELECT 语句，从数据库表 `nyc_taxi_models` 中加载序列化模型。
 + 序列化模型存储在 Python 变量 `mod` 中，以便使用 Python 进行进一步处理。
 + 需要进行评分的新事例将从 `@input_data_1` 中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询获得。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。
-+ 两个存储过程都使用 `sklearn` 中的函数来计算准确度指标 AUC（曲线下面积）。 仅当同时提供目标标签（给小费的列）时，才能生成诸如 AUC 之类的准确度指标__。 预测不需要目标标签（变量 `y`），但准确度指标需要。
++ 两个存储过程都使用 `sklearn` 中的函数来计算准确度指标 AUC（曲线下面积）。 仅当同时提供目标标签（给小费的列）时，才能生成诸如 AUC 之类的准确度指标。 预测不需要目标标签（变量 `y`），但准确度指标需要。
 
   因此，如果没有要评分的数据的目标标签，则可以修改存储过程以删除 AUC 计算，并从特征中仅返回给小费的概率（存储过程中的变量 `X`）。
 
@@ -60,7 +60,7 @@ ms.locfileid: "88180317"
 
 运行以下 T-SQL 语句以创建存储过程。 此存储过程需要基于 scikit-learn 包的模型，因为它使用特定于该包的函数。
 
-包含输入的数据帧将传递到逻辑回归模型 `mod` 的 `predict_proba` 函数。 `predict_proba` 函数 (`probArray = mod.predict_proba(X)`) 返回一个 float，其表示将给小费（任意金额）的概率****。
+包含输入的数据帧将传递到逻辑回归模型 `mod` 的 `predict_proba` 函数。 `predict_proba` 函数 (`probArray = mod.predict_proba(X)`) 返回一个 float，其表示将给小费（任意金额）的概率。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
@@ -104,7 +104,7 @@ GO
 
 ### <a name="predicttiprxpy"></a>PredictTipRxPy
 
-此存储过程使用与先前存储过程相同的输入并创建相同的评分类型，但使用具有 SQL Server 机器学习的 revoscalepy 包中的函数****。
+此存储过程使用与先前存储过程相同的输入并创建相同的评分类型，但使用具有 SQL Server 机器学习的 revoscalepy 包中的函数。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
@@ -147,14 +147,14 @@ GO
 
 ## <a name="run-batch-scoring-using-a-select-query"></a>使用 SELECT 查询运行批评分
 
-PredictTipSciKitPy 存储过程和 PredictTipRxPy 存储过程需要两个输入参数********：
+PredictTipSciKitPy 存储过程和 PredictTipRxPy 存储过程需要两个输入参数：
 
 + 检索用于评分的数据的查询
 + 已定型模型的名称
 
 通过将这些参数传递给存储过程，可选择特定的模型或更改用于评分的数据。
 
-1. 若要使用 scikit-learn 模型进行评分，请调用存储过程 PredictTipSciKitPy，并将模型名称和查询字符串作为输入传递********。
+1. 若要使用 scikit-learn 模型进行评分，请调用存储过程 PredictTipSciKitPy，并将模型名称和查询字符串作为输入传递。
 
    ```sql
    DECLARE @query_string nvarchar(max) -- Specify input query
@@ -167,9 +167,9 @@ PredictTipSciKitPy 存储过程和 PredictTipRxPy 存储过程需要两个输入
 
    存储过程返回作为输入查询的一部分传递的每个行程的预测概率。 
 
-   如果使用 SSMS (SQL Server Management Studio) 来运行查询，则概率将在“结果”窗格中显示为表。 “消息”窗格输出精度指标（AUC 或曲线下面积），值约 0.56****。
+   如果使用 SSMS (SQL Server Management Studio) 来运行查询，则概率将在“结果”窗格中显示为表。 “消息”窗格输出精度指标（AUC 或曲线下面积），值约 0.56。
 
-2. 若要使用 revoscalepy 模型进行评分，请调用存储过程 PredictTipRxPy，并将模型名称和查询字符串作为输入传递********。
+2. 若要使用 revoscalepy 模型进行评分，请调用存储过程 PredictTipRxPy，并将模型名称和查询字符串作为输入传递。
 
    ```sql
    DECLARE @query_string nvarchar(max) -- Specify input query
@@ -200,7 +200,7 @@ PredictTipSciKitPy 存储过程和 PredictTipRxPy 存储过程需要两个输入
 
 ### <a name="predicttipsinglemodescikitpy"></a>PredictTipSingleModeSciKitPy
 
-花一点时间查看使用 scikit-learn 模型执行评分的存储过程的代码****。
+花一点时间查看使用 scikit-learn 模型执行评分的存储过程的代码。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
@@ -267,7 +267,7 @@ GO
 
 ### <a name="predicttipsinglemoderxpy"></a>PredictTipSingleModeRxPy
 
-以下存储过程使用 revoscalepy 模型执行评分****。
+以下存储过程使用 revoscalepy 模型执行评分。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
@@ -338,7 +338,7 @@ GO
 
 ### <a name="generate-scores-from-models"></a>从模型生成分数
 
-创建存储过程后，就可以轻松地根据每个模型生成分数。 只需打开新的“查询”窗口，然后为每个特征列键入或粘贴参数****。 这些特征列的七个必需值依次为：
+创建存储过程后，就可以轻松地根据每个模型生成分数。 只需打开新的“查询”窗口，然后为每个特征列键入或粘贴参数。 这些特征列的七个必需值依次为：
 
 + *passenger_count*
 + *trip_distance*
@@ -348,13 +348,13 @@ GO
 + *dropoff_latitude*
 + *dropoff_longitude*
 
-1. 若要使用 revoscalepy 模型生成预测，请运行以下语句****：
+1. 若要使用 revoscalepy 模型生成预测，请运行以下语句：
   
    ```sql
    EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
    ```
 
-2. 若要使用 scikit-learn 模型生成分数，请运行以下语句****：
+2. 若要使用 scikit-learn 模型生成分数，请运行以下语句：
 
    ```sql
    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303

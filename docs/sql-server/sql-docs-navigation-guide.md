@@ -9,13 +9,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd724e9caf8f104e366e34b7f64f6461681620b0
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017'
+ms.openlocfilehash: 98fd46528437cd9a82ec7d47539db230b8be8eb8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200317"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409393"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文档导航指南
 

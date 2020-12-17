@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 52a3ee78a73e2ba3e600d7dae99019d481da73a7
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987701"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559109"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>演练：扩展数据库项目部署以修改部署计划
 
@@ -64,7 +64,7 @@ ms.locfileid: "91987701"
   
 4.  在“框架”选项卡上，选择“System.ComponentModel.Composition”。  
   
-5.  单击“浏览”**** 并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies**** 目录，选择 Microsoft.SqlServer.TransactSql.ScriptDom.dll****，然后单击“确定”****。  
+5.  单击“浏览”并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies 目录，选择 Microsoft.SqlServer.TransactSql.ScriptDom.dll，然后单击“确定”。  
   
 6.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”。 单击“浏览”，并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin 文件夹。 选择“Microsoft.SqlServer.Dac.dll”、“Microsoft.SqlServer.Dac.Extensions.dll”和“Microsoft.Data.Tools.Schema.Sql.dll”条目，并单击“添加”，然后单击“确定”。  
   
@@ -775,7 +775,7 @@ ms.locfileid: "91987701"
         > 如果您部署的数据库项目与目标数据库相同，则结果报告将没有太大的用处。 若要获得更有用的结果，请将更改部署到数据库或部署新的数据库。  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>使用生成的 dacpac 文件进行的命令行部署  
-在生成 SQL 项目之后，将创建一个 dacpac 文件，该文件可用于从命令行部署架构并且可支持从其他计算机（如生成计算机）进行部署。 SqlPackage 是一个命令行实用工具，它支持通过各种选项部署 dacpacs，用户可使用这些选项部署 dacpac 或生成部署脚本以及执行其他操作。 有关详细信息，请参阅 [SqlPackage.exe](../tools/sqlpackage.md)。  
+在生成 SQL 项目之后，将创建一个 dacpac 文件，该文件可用于从命令行部署架构并且可支持从其他计算机（如生成计算机）进行部署。 SqlPackage 是一个命令行实用工具，它支持通过各种选项部署 dacpacs，用户可使用这些选项部署 dacpac 或生成部署脚本以及执行其他操作。 有关详细信息，请参阅 [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md)。  
   
 > [!NOTE]  
 > 若要使用定义的 DeploymentContributors 属性成功部署从项目生成的 dacpacs，则必须在将使用的计算机上安装包含部署参与者的 DLL。 这是因为这些 DLL 已标记为成功完成部署所需的项。  

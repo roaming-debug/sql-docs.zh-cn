@@ -22,13 +22,13 @@ ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4f7d4af9a2e2b35ebb2ac10a594141a4fa7ca9a5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 2d135926a87fe6350ace308a6efd44a93accfcd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034904"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408897"
 ---
 # <a name="make-a-master-server"></a>设置主服务器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "92034904"
   
 1.  在“对象资源管理器”中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，再单击“将其设置为主服务器”****。 **主服务器向导** 将引导您完成设置主服务器和添加目标服务器的过程。  
+2.  右键单击“SQL Server 代理”，指向“多服务器管理”，再单击“将其设置为主服务器”。 **主服务器向导** 将引导您完成设置主服务器和添加目标服务器的过程。  
   
-3.  从“主服务器操作员”**** 中，配置主服务器的操作员。若要通过电子邮件或寻呼程序向操作员发送通知，必须配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以发送电子邮件。 若要使用 **net send**向操作员发送通知，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理所在的服务器上运行 Messenger 服务。  
+3.  从“主服务器操作员”中，配置主服务器的操作员。若要通过电子邮件或寻呼程序向操作员发送通知，必须配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以发送电子邮件。 若要使用 **net send** 向操作员发送通知，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理所在的服务器上运行 Messenger 服务。  
   
     **电子邮件地址**  
     设置操作员的电子邮件地址。  

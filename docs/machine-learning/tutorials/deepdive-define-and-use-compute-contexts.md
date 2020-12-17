@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bf4385405c227fb337dda910c3f1ef158eff223
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 074597a032fbcaa8231dfea22d567204cb079f58
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195139"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470548"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>定义并使用计算上下文（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "92195139"
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-4. 向 **RxInSqlServer** 构造函数传递参数，以创建*计算上下文对象*。
+4. 向 **RxInSqlServer** 构造函数传递参数，以创建 *计算上下文对象*。
 
     ```R
     sqlCompute <- RxInSqlServer(  

@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 732a4c1c37367a6faa78dd3da9919fd1cec2f774
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e2d4d278f48cd453afb0666d0c9752c86b4a7e65
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178858"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470618"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>SQL Server 中的机器学习故障排除
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

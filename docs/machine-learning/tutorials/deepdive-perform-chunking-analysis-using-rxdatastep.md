@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c636a33632a44e9cc5d1510bb73b5967a68f21ab
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 38749e2c0e0bea1d70b253a9bc1dcbcae1c54de3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195109"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470518"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>使用 rxDataStep 执行分块分析（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "92195109"
     ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
     97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 
-10. 若要删除中间结果表，请调用 rxSqlServerDropTable****。
+10. 若要删除中间结果表，请调用 rxSqlServerDropTable。
   
     ```R
     rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)

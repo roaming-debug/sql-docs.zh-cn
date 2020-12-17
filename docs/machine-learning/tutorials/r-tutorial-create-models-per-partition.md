@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ec0323d35c05c34de763fbdece37546f7c8252df
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8b9d2d95bb16ea5d94245a2a50866d6ff0701b92
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193652"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470078"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程：在 SQL Server 中使用 R 创建基于分区的模型
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]

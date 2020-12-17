@@ -18,13 +18,13 @@ ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c8a5a8ceb8aaa26d9c18a9b37e4acb84247f2e9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 11ea9a4bff085843b571fbf69df5b79d9c3a9f8a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466448"
 ---
 # <a name="notify-an-operator-of-job-status"></a>向操作员通知作业状态
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "92038811"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”****，展开“作业”****，右键单击要编辑的作业，再选择“属性”****。  
+2.  展开“SQL Server 代理”，展开“作业”，右键单击要编辑的作业，再选择“属性”。  
   
 3.  在 **“作业属性”** 对话框中，选择 **“通知”** 页。  
   
-4.  如果想通过电子邮件通知操作员，请选中“电子邮件”****，再从列表中选择操作员，然后选择下列选项之一：  
+4.  如果想通过电子邮件通知操作员，请选中“电子邮件”，再从列表中选择操作员，然后选择下列选项之一：  
   
     -   **当作业成功时** - 在作业成功完成后通知操作员。  
   

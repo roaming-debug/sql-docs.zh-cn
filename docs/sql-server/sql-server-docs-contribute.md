@@ -9,13 +9,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a268ef27e1f2e5337e2325fb464656e255b454c
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017'
+ms.openlocfilehash: 436ef0f3d46fde6744624ea182c7c0433f9b491b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005834"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409463"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何参与编辑 SQL Server 文档
 

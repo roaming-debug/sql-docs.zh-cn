@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 28dcbe177f5bc91ea73170978e2da9022154976f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196328"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470658"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>SQL Server 中的常见 R 脚本错误
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -57,7 +57,7 @@ R 脚本可以在 SQL Server 上下文中返回不同的值，原因如下：
 
 ## <a name="implied-authentication-for-remote-execution-via-odbc"></a>通过 ODBC 远程执行隐式身份验证
 
-如果使用 RevoScaleR 函数连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机，以运行 R 命令，则在使用将数据写入到服务器的 ODBC 调用时，可能会遇到错误****。 仅当你使用 Windows 身份验证时，才会发生此错误。
+如果使用 RevoScaleR 函数连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机，以运行 R 命令，则在使用将数据写入到服务器的 ODBC 调用时，可能会遇到错误。 仅当你使用 Windows 身份验证时，才会发生此错误。
 
 原因是为 R 服务创建的辅助角色帐户没有连接到服务器的权限。 因此，无法代表你执行 ODBC 调用。 使用 SQL 登录不会出现此问题，因为使用 SQL 登录时，凭据会从 R 客户端显式传递到 SQL Server 实例，然后传递到 ODBC。 但是，使用 SQL 登录也不如使用 Windows 身份验证安全。
 

@@ -8,13 +8,13 @@ ms.date: 08/06/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f19c86fe5b61b46a95db7988657b1e5ed833f9fd
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: =sql-server-2016
+ms.openlocfilehash: d1910099e1f0aa4a8f3e58f1faa01dfbe177c517
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227087"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470758"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>什么是 SQL Server 2016 R Services？
 
@@ -55,7 +55,7 @@ R Services 使用扩展性框架在 SQL Server 中运行 R 脚本。 详细了�
 
 + 最常见的方法是使用 T-SQL 存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-+ 还可以使用首选的 R 客户端并编写将执行（称为“远程计算上下文”）推送到远程 SQL Server 的脚本**。 有关详细信息，请参阅如何[设置数据科学客户端 R 开发](../r/set-up-a-data-science-client.md)。
++ 还可以使用首选的 R 客户端并编写将执行（称为“远程计算上下文”）推送到远程 SQL Server 的脚本。 有关详细信息，请参阅如何[设置数据科学客户端 R 开发](../r/set-up-a-data-science-client.md)。
 
 <a name="version"></a>
 

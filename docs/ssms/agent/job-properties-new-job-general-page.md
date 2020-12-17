@@ -13,13 +13,13 @@ ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9da8480712a40612b4078af57864dffdec561c4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 992a0ecbc8ec36ce88ca44490d04a6354828a116
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037911"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408856"
 ---
 # <a name="job-properties---new-job-general-page"></a>作业属性 - 新建作业（“常规”页）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,19 +49,19 @@ ms.locfileid: "92037911"
 启用作业。 虽然可以使用 **sp_start_job** 存储过程启动作业，但是如果不启用作业，作业将不会响应计划或警报。  
   
 **Source**  
-显示作业的主服务器。 仅在“作业属性”-“常规”**** 页上可用。  
+显示作业的主服务器。 仅在“作业属性”-“常规”页上可用。  
   
 **创建时间**  
-显示作业的创建日期和时间。 仅在“作业属性”-“常规”**** 页上可用。  
+显示作业的创建日期和时间。 仅在“作业属性”-“常规”页上可用。  
   
 **上次修改时间**  
-显示上次修改作业的日期和时间。 仅在“作业属性”-“常规”**** 页上可用。  
+显示上次修改作业的日期和时间。 仅在“作业属性”-“常规”页上可用。  
   
 **上次执行时间**  
-显示上次执行作业的日期和时间。 仅在“作业属性”-“常规”**** 页上可用。  
+显示上次执行作业的日期和时间。 仅在“作业属性”-“常规”页上可用。  
   
 **查看作业历史记录**  
-查看作业的历史记录。 仅在“作业属性”-“常规”**** 页上可用。  
+查看作业的历史记录。 仅在“作业属性”-“常规”页上可用。  
   
 ## <a name="see-also"></a>另请参阅  
 [执行作业](../../ssms/agent/implement-jobs.md)  

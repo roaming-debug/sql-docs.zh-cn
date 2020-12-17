@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412517"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470108"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R 教程：在 SQL 存储过程中运行预测
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "92412517"
 
 + 批处理评分模式：使用 SELECT 查询作为存储过程的输入。 存储过程将返回与输入事例对应的观测表。
 
-+ **单个评分模式** ：传递一组单独的参数值作为输出。  存储过程将返回单个行或值。
++ **单个评分模式**：传递一组单独的参数值作为输出。  存储过程将返回单个行或值。
 
 在本文中，你将：
 

@@ -7,13 +7,13 @@ ms.date: 11/06/2019
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6295756f727dacffbfa54c1dccaf223cfac58351
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 9c8986f3407eaa5241b3534ec8988837164e049f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956883"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470808"
 ---
 # <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML（SQL Server 机器学习服务中的 R 包）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -140,7 +140,7 @@ MicrosoftML 中的函数可在封装在存储过程中的代码中调用。 大�
 
 适用于 R 的 MicrosoftML 包在 SQL Server 2017 中安装为“开箱即用”。 如果升级实例的 R 组件，它还可以与 SQL Server 2016 一起使用：[使用绑定升级 SQL Server 的实例](../install/upgrade-r-and-python.md)
 
-默认情况下不加载此包。 因此首先需加载 MicrosoftML 包，然后在需要使用远程计算上下文/相关连接或数据源对象时加载 RevoScaleR********。 然后，引用所需的各个函数。
+默认情况下不加载此包。 因此首先需加载 MicrosoftML 包，然后在需要使用远程计算上下文/相关连接或数据源对象时加载 RevoScaleR。 然后，引用所需的各个函数。
 
 ```R
 library(microsoftml);

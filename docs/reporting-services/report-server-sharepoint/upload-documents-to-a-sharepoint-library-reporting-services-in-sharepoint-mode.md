@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2af61cc504fe89a4a8992397df69816f411f353f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 0d033bdfe9ae0d2773e7c3d8622b7321ed60e02e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935491"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461418"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）
 
@@ -32,7 +32,7 @@ ms.locfileid: "91935491"
 > [!NOTE]  
 >  报表服务器必须配置为使用 SharePoint 模式，且 SharePoint 产品的实例必须安装了 Reporting Services 外接程序，此外接程序提供了从 SharePoint 站点中存储和访问报表服务器项的程序文件。  
   
- 若要将文档上载到库中，您必须拥有站点级别的“添加项”权限。 如果您使用的是默认安全设置，将对拥有“完全控制”级别权限的“所有者” **** 组成员和拥有“参与讨论”级别权限的“成员” **** 组授予该权限。  
+ 若要将文档上载到库中，您必须拥有站点级别的“添加项”权限。 如果您使用的是默认安全设置，将对拥有“完全控制”级别权限的“所有者”  组成员和拥有“参与讨论”级别权限的“成员”  组授予该权限。  
   
 ## <a name="add-a-report-definition-or-report-model-to-a-library"></a>向库中添加报表定义或报表模型
   

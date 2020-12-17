@@ -6,12 +6,12 @@ metadata:
   title: Microsoft SQL 文档 | Microsoft Docs
   description: 了解如何使用 SQL Server 和 Azure SQL 管理你的本地和云端数据库需求。 (快速链接：https://aka.ms/sqldocs)
   ms.topic: hub-page
-  ms.openlocfilehash: 2aceef5d8f718cc0720727e32a53b1986ef16c1a
-  ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+  ms.openlocfilehash: 484438ba00d9a99b5666361536ec2eea59851d4f
+  ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 12/01/2020
-  ms.locfileid: "96443057"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "97617536"
 highlightedContent:
   items:
   - title: 试用 SQL Server 2019
@@ -63,7 +63,7 @@ conceptualContent:
       url: azure-data-studio/quickstart-sql-server.md
       itemType: quickstart
     - text: 连接并查询 (SSMS)
-      url: ssms/tutorials/connect-query-sql-server.md
+      url: ssms/quickstarts/ssms-connect-query-sql-server.md
       itemType: quickstart
     - text: 编写 Transact-SQL
       url: t-sql/tutorial-writing-transact-sql-statements.md

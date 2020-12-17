@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9584b479d77efaa6c114cd160964e0fbf09c77d7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: f8e0b03d5ea3be6473c8e00a8d62ef5900f33973
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901025"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465728"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88901025"
  有关如何移动 master 数据库的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“移动系统数据库”主题。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书的“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”主题中介绍了所有支持的启动参数。 -T*trace#* 的启动参数指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例应该以有效的指定跟踪标志 (*trace#* ) 启动。 跟踪标记用于以非标准行为启动服务器。 有关跟踪标志的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“跟踪标志（[!INCLUDE[tsql](../../includes/tsql-md.md)]）”主题。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书的“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”主题中介绍了所有支持的启动参数。 -T *trace#* 的启动参数指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例应该以有效的指定跟踪标志 (*trace#* ) 启动。 跟踪标记用于以非标准行为启动服务器。 有关跟踪标志的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“跟踪标志（[!INCLUDE[tsql](../../includes/tsql-md.md)]）”主题。  
   
 > [!CAUTION]  
 >  您可能会看到在 Internet 上描述的其他未记录的启动参数和跟踪标志。 创建未记录的启动参数和跟踪标志是为了满足某些不常见问题或者强制测试所需的某些条件。 使用未记录的启动参数可能会导致意外结果。 除非 Microsoft 客户支持服务部门指示，否则不要使用未记录的参数。  

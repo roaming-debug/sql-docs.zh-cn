@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59a25c594d45c57c7fe9a7f9baeb87c1fa49e3de
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 38b7faba88897317e1165b8938b0f6bfc69941de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987403"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440468"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 数据警报
 

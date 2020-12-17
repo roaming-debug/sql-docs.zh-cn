@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: d0be29c2-19df-4882-9832-2efdbefb4b89
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 552546b473611dd67f921829b3673deef950aa3c
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: a1bbc35e0b6a2f8fad154926710769889b74cdcf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901084"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463778"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-advanced"></a>SQL 全文筛选器后台程序启动器（高级）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

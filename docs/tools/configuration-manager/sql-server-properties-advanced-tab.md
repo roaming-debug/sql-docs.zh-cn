@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2acca0bd84985700395cb3d073e6476167577b68
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ab2a821d2c7d14f16caefb7f881f69962b3eaa94
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901183"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465768"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 属性（“高级”选项卡）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -70,6 +70,6 @@ ms.locfileid: "88901183"
  显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的版本号。  
   
  **虚拟服务器名称**  
- 在群集服务器上安装**后的** 虚拟服务器名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 在群集服务器上安装 **后的** 虚拟服务器名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
   

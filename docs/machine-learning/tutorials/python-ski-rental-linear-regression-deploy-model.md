@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 07c62ab016f7db61d3619b19bb194bee1109651e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: de98a94f997d7107f0a2157d80919b16631ee7de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173402"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470418"
 ---
 # <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Python 教程：通过 SQL 机器学习部署线性回归模型
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 本教程系列由四个部分组成。在第四部分中，你将使用机器学习服务或大数据群集将在 Python 中开发的线性回归模型部署到 SQL Server 数据库中。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 本教程系列由四个部分组成，在第四部分中，你将使用机器学习服务将在 Python 中开发的线性回归模型部署到 SQL Server 数据库中。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 本教程系列由四个部分组成，在第四部分中，将使用机器学习服务将在 Python 中开发的线性回归模型部署到 Azure SQL 托管实例数据库。
 ::: moniker-end
 

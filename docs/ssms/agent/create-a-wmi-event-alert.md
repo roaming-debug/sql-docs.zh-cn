@@ -13,13 +13,13 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6511ea5b72a4031ec212d463b6cf8a6f7b977a9e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1ae08f86a984f4a8bdbc73db02fb41e335250e4f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035066"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464468"
 ---
 # <a name="create-a-wmi-event-alert"></a>创建 WMI 事件警报
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92035066"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种易用的图形方式来管理整个警报系统，这也是配置警报基础结构的推荐方式。  
   
--   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 \@database_name**** 为“master”**** 或 NULL，否则 xp_logevent**** 不会触发警报。  
+-   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 \@database_name 为“master”或 NULL，否则 xp_logevent 不会触发警报。  
   
 -   仅支持运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的计算机上的 WMI 命名空间。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "92035066"
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“警报”**** 并选择“新建警报”****。  
+3.  右键单击“警报”并选择“新建警报”。  
   
 4.  在 **“新建警报”** 对话框的 **“名称”** 框中，输入此警报的名称。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "92035066"
   
 6.  在 **“类型”** 列表中，选择 **“WMI 事件警报”**。  
   
-7.  在“WMI 事件警报定义”**** 下的“命名空间”**** 框中，为标识触发该警报的 WMI 事件的 WMI 查询语言 (WQL) 语句指定 WMI 命名空间。  
+7.  在“WMI 事件警报定义”下的“命名空间”框中，为标识触发该警报的 WMI 事件的 WMI 查询语言 (WQL) 语句指定 WMI 命名空间。  
   
 8.  在 **“查询”** 框中，指定标识该警报所响应事件的 WQL 语句。  
   

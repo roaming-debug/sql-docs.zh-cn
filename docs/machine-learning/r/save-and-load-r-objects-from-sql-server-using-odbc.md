@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 203645002fcd6c46d1c1f786450e2c0c69e10d67
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 11ca3aaf1a05e2f0a00065751ced9cd563a964ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195783"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470778"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>使用 ODBC 保存和加载 SQL Server 中的 R 对象
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

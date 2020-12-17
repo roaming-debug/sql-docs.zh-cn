@@ -13,13 +13,13 @@ ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9d296f5c98466bfd8981053f571a6a3212091d8a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5767396a17a222ea0e90658eb7bc97171f0df409
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037755"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440408"
 ---
 # <a name="target-servers-target-server-status-tab"></a>目标服务器（“目标服务器状态”选项卡）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

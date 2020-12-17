@@ -7,13 +7,13 @@ ms.date: 10/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d15f31dc2c289df910b06de8cb1f48647dbde33c
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 53c3e7f55fa21d033bfda3f2e660bd1b9a92991f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384746"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470738"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>使用 R 代码分析函数提高性能
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

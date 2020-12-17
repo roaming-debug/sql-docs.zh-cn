@@ -13,13 +13,13 @@ ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a97862543bfb4daa3a78a3d4ea7828fe8b36ab37
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: fd0cc61cdb5d0a212de686157fb9fd705412f3d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036646"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466618"
 ---
 # <a name="alert-properties-history-page"></a>警报属性（“历史记录”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "92036646"
 
 ## <a name="options"></a>选项  
 **上次警报的日期**  
-显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”****。  
+显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”。  
   
 **上次响应的日期**  
-显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”****。  
+显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”。  
   
 **出现次数**  
 自从创建警报后或从上次重置计数后，该事件发生的总次数。  
