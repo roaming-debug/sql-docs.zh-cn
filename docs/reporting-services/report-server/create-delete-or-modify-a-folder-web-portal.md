@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1c2094a4ee16d33c6e076440e56a55434b2347a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6826e09f85e001e9932e2c6f85c400f722534c2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987183"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409343"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>创建、删除或修改文件夹 - Reporting Services
   可以创建文件夹来组织和管理发布到报表服务器的项。 创建文件夹有助于用户查找他们关注的报表。 对于内容管理员来说，文件夹提供了应用权限的框架。 可以对特定的文件夹创建角色分配，来限制对处于开发阶段或者不应大范围分布的报表的访问。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="to-create-a-folder"></a>创建文件夹  
   
@@ -69,13 +69,13 @@ ms.locfileid: "91987183"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
  
 ## <a name="to-create-a-folder"></a>创建文件夹  
   
 1. 打开[报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)。  
   
-2. 导航到想要在其中找到新文件夹的文件夹或子文件夹。 通过选择页面左上方工具栏上的“浏览”**** 按钮来选择“主页”**** 文件夹，以在文件夹层次结构的顶部创建该文件夹。  
+2. 导航到想要在其中找到新文件夹的文件夹或子文件夹。 通过选择页面左上方工具栏上的“浏览”按钮来选择“主页”文件夹，以在文件夹层次结构的顶部创建该文件夹。  
   
 3. 选择报表服务器工具栏右上方的“新建”按钮，然后从下拉菜单中选择“文件夹”。  
   

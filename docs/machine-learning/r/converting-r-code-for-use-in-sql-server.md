@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 3badcbfeb967f76cef945bf3ebe108c44825772e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 56a52c3245d364bd1b111dbe5fedbda9da48e493
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098866"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470948"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>转换 R 代码以在 SQL Server（数据库内）实例中执行
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "92098866"
 
 ### <a name="improve-performance-and-security"></a>提高性能和安全性
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + 避免将预测或中间结果写入文件。 改为将预测写入表，以避免数据移动。
 ::: moniker-end
 
@@ -117,7 +117,7 @@ ms.locfileid: "92098866"
 
 + 尝试使用 T-SQL 而不是使用 R 代码进行基于集的计算的方法。
 
-  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
   例如，该 R 解决方案显示用户定义的 T-SQL 函数和 R 如何执行相同的特征工程任务：[数据科学端到端演练](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)。
   ::: moniker-end
 
@@ -169,6 +169,6 @@ ms.locfileid: "92098866"
 
 + [R 教程：使用二元分类来预测纽约市出租车费用](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [端到端数据科学解决方案](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)包含了对使用 R 和 T-SQL 的功能工程的比较
 ::: moniker-end

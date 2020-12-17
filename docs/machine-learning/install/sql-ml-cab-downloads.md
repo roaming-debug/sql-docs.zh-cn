@@ -8,23 +8,23 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1d36936a0dc921a02897bcf7f9a9bfceb6766293
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: a356a006e2defb8fd8c99f479280ff75c5ea45d9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956776"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471158"
 ---
 # <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>用于脱机安装 SQL Server 机器学习服务的累积更新的 CAB 下载
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 下载适用于 SQL Server 机器学习服务的 Python 和 R CAB 文件。 这些 CAB 文件包含对机器学习服务（Python 和 R）功能的更新，在不访问 Internet 的服务器上安装 SQL Server 时，可以使用这些文件。
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 下载适用于 SQL Server 2016 R Services 的 Python 和 R CAB 文件。 这些 CAB 文件包含对 R Services 功能的更新，在不访问 Internet 的服务器上安装 SQL Server 时，可以使用这些文件。
 ::: moniker-end
 
@@ -32,17 +32,17 @@ ms.locfileid: "91956776"
 
 ## <a name="prerequisites"></a>先决条件
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 开始使用基线安装。 在 SQL Server 机器学习服务上，初始版本为基线安装。 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 开始使用基线安装。  在 SQL Server 2016 R Services 上，可从初始版本、SP1 或 SP2 开始。 
 ::: moniker-end
 
 也可以应用累积更新。
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 ## <a name="sql-server-2019-cabs"></a>SQL Server 2019 CAB
 
@@ -83,7 +83,7 @@ CAB 文件按时间倒序列出。 下载 CAB 文件并将其传输到目标计�
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017 CAB
 
@@ -154,7 +154,7 @@ CAB 文件按时间倒序列出。 下载 CAB 文件并将其传输到目标计�
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 <a name="bkmk_2016Installers"></a>
 

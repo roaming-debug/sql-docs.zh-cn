@@ -8,13 +8,13 @@ ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: 28b2d4cf892aa21b44d989fb56351a6ab5448bff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864258"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482281"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 

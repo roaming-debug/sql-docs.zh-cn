@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fcf85aa9657da37d2fc1f64300c5a773d6de63ca
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 85f3fd590ee204cac018cffd59d0ba180831d8df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476518"
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,13 +63,13 @@ sqlps
  指定 **sqlps** 实用工具的输入采用文本字符串格式 (**Text**) 或序列化的 CLIXML 格式 (**XML**)。  
   
  **-Command**  
- 指定 **sqlps** 实用工具要运行的命令。 **Sqlps** 实用工具运行命令，然后退出，除非还指定了 **-NoExit** 。 请不要在 **-Command**后指定任何其他开关，如果指定，它们将被读作命令参数。  
+ 指定 **sqlps** 实用工具要运行的命令。 **Sqlps** 实用工具运行命令，然后退出，除非还指定了 **-NoExit** 。 请不要在 **-Command** 后指定任何其他开关，如果指定，它们将被读作命令参数。  
   
  **-**  
  **-Command-** 指定 **sqlps** 实用工具从标准输入读取输入内容。  
   
  *script_block* [ **-args**_argument\_array_ ]  
- 指定要运行的 PowerShell 命令块，块必须用大括号 {} 括起来。 仅当从*script_block* 或其他 **script_block** 实用工具会话调用 **script_block** 实用工具时，才能指定 **script_block** 。 *Argument_array* 是 PowerShell 变量的数组，包含 *script_block*中 PowerShell 命令的参数。  
+ 指定要运行的 PowerShell 命令块，块必须用大括号 {} 括起来。 仅当从 *script_block* 或其他 **script_block** 实用工具会话调用 **script_block** 实用工具时，才能指定 **script_block** 。 *Argument_array* 是 PowerShell 变量的数组，包含 *script_block* 中 PowerShell 命令的参数。  
   
  *字符串* [ *command_parameters* ]  
  指定包含要运行的 PowerShell 命令的字符串。 使用 **"&{** _command_ **}"** 格式。 双引号指明是字符串，调用运算符 (&) 使 **sqlps** 实用工具运行命令。  

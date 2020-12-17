@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5eea383c3346086544224007efdb7f998d009ade
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: dc1a5d6d5710d202d1bdc25a8e21cca550acf15f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901667"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481518"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>SQL Server Integration Services 属性（“登录”选项卡）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  使用 “属性”[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **** 对话框中的“登录”**** 选项卡可指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务使用的帐户，并且可启动和停止该服务。  
+  使用 “属性”[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对话框中的“登录”选项卡可指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务使用的帐户，并且可启动和停止该服务。  
   
 ## <a name="options"></a>选项  
  **本地系统帐户**  

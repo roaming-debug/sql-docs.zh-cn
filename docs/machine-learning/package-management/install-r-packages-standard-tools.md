@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 55d2917d149a4c88dbfddf614971c8d4f1e60d26
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 5943de8bcc6588572bc3acebed5b3ba4104b7a96
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869947"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471058"
 ---
 # <a name="install-packages-with-r-tools"></a>使用 R 工具安装包
 
@@ -24,7 +24,7 @@ ms.locfileid: "94869947"
 除了标准 R 工具之外，还可以使用以下工具安装 R 包：
 
 + [RevoScaleR](install-r-packages-with-revoscaler.md)
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [T-SQL](install-r-packages-with-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
 
@@ -35,13 +35,13 @@ ms.locfileid: "94869947"
 
 + R 包库位于 SQL Server 实例的“程序文件”文件夹中，默认情况下，在此文件夹中安装需要管理员权限。 有关详细信息，请参阅[包库位置](../package-management/r-package-information.md#default-r-library-location)。
 
-  ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2017"
   非管理员可以使用 RevoScaleR 9.0.1 或更高版本或使用 CREATE EXTERNAL LIBRARY 安装包。 dbo_owner 用户或具有 CREATE EXTERNAL LIBRARY 权限的用户可以将 R 包安装到当前数据库  。 有关详细信息，请参阅：
   + [使用 RevoScaleR 安装 R 包](install-r-packages-with-revoscaler.md)
   + [使用 T-SQL (CREATE EXTERNAL LIBRARY) 将 R 包安装在 SQL Server 上](install-r-packages-with-tsql.md)
   ::: moniker-end
 
-  ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2016"
   非管理员可以使用 RevoScaleR 9.0.1 及更高版本安装包。 dbo_owner 用户可以将 R 包安装到当前数据库  。 有关详细信息，请参阅[使用 RevoScaleR 安装 R 包](install-r-packages-with-revoscaler.md)。
   ::: moniker-end
 
@@ -56,13 +56,13 @@ ms.locfileid: "94869947"
 
 1. 确定实例库的位置（请参阅[获取 R 包信息](../package-management/r-package-information.md)），并导航到安装 R 工具的文件夹。
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    例如，SQL Server 默认实例的默认路径为：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    例如，SQL Server 默认实例的默认路径为：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
@@ -87,13 +87,13 @@ zip 文件位于 SQL Server 实例上后，即可使用服务器上的标准 R �
 
 1. 确定实例库的位置（请参阅[获取 R 包信息](../package-management/r-package-information.md)），并导航到安装 R 工具的文件夹。 
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    例如，SQL Server 默认实例的默认路径为：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    例如，SQL Server 默认实例的默认路径为：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`

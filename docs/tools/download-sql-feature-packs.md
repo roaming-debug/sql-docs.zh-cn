@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: 44d46bd260b1f59b9d1bcffd4a7bfb6ea46c248c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 40ce4c62a28f404ceb3295f9644a8aefb4c789f8
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713745"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489787"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>下载 SQL Server 扩展的功能和工具
 
@@ -50,7 +50,7 @@ ms.locfileid: "88713745"
 | [SQL Server 语义语言统计信息](../relational-databases/search/install-and-configure-semantic-search.md) | 语义语言统计数据库是 Microsoft SQL Server 中的统计语义搜索功能的必需组件。 |
 | [SQL Server 共享管理对象](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server 管理对象 (SMO) 是一个 .NET Framework 对象模型，软件开发人员使用该模型可以创建用于管理 SQL Server 对象和服务的客户端应用程序。 |
 | [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | SQL Server System CLR Types 包包含用于在 SQL Server 中实现几何、地理和层次结构 ID 类型的组件。 **注意：此组件还要求安装 [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** 。 |
-| [Windows PowerShell Extensions for Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md?view=sql-server-2017) | Microsoft Windows PowerShell Extensions for SQL Server 提供了一个访问接口和一组 cmdlet，管理员和开发人员利用它们可以生成用于管理 SQL Server 实例的 PowerShell 脚本。 |
+| [Windows PowerShell Extensions for Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md) | Microsoft Windows PowerShell Extensions for SQL Server 提供了一个访问接口和一组 cmdlet，管理员和开发人员利用它们可以生成用于管理 SQL Server 实例的 PowerShell 脚本。 |
 |||
 
 ## <a name="database-engine"></a>数据库引擎

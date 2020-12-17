@@ -8,13 +8,13 @@ ms.date: 11/06/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e62b61e2b90f3a2f3ec837115d99a65070571c57
-ms.sourcegitcommit: 06cb1751b1bc7420dbe4ad4555ab1afc5fc5bd71
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 7ee2efbd49ff1d04ae9ed2ffe442a2a9479e35cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94361748"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471758"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>什么是 SQL Server 语言扩展？
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]

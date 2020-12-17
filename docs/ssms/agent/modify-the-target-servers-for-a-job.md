@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9dd059571a35162cabe462500751331667552e26
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e070d2afa3b26d7c7d0c63f597571a3f526ae1d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035580"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482189"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>修改作业的目标服务器
 
@@ -51,9 +51,9 @@ ms.locfileid: "92035580"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”****，再展开“作业”****，右键单击某个作业，然后单击“属性”****。  
+2.  展开“SQL Server 代理”，再展开“作业”，右键单击某个作业，然后单击“属性”。  
   
-3.  在“作业属性****”对话框中，选择“目标”**** 页，然后单击“目标为本地服务器”**** 或“目标为多台服务器”****。  
+3.  在“作业属性”对话框中，选择“目标”页，然后单击“目标为本地服务器”或“目标为多台服务器”。  
   
     如果选择 **“目标为多台服务器”**，请选中服务器名称左边的框将其指定为作业的目标服务器。 验证未选中不作为作业的目标服务器旁的复选框。  
   

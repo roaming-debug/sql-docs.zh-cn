@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: a605417c-4ba7-4f3f-baa9-14166f97c478
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 34408b045a5c58dee63bc816c3fbd524efe25efc
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d7f2f32a10a88fc53fa44b1027668ee46b619289
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900078"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481628"
 ---
 # <a name="nsltservice-namegt-properties-advanced-tab"></a>NS$&lt;服务名称&gt; 属性（“高级”选项卡）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

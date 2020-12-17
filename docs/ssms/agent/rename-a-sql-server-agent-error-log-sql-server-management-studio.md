@@ -16,13 +16,13 @@ ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e636d3a46feb104325e86fd53f98bbc108ce5be5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 28f93c2923c68f2f0585eced379548a87e1275f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034940"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472308"
 ---
 # <a name="rename-a-sql-server-agent-error-log"></a>重命名 SQL Server 代理错误日志
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,8 +63,8 @@ ms.locfileid: "92034940"
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“错误日志”**** 文件夹，然后选择“配置”****。  
+3.  右键单击“错误日志”文件夹，然后选择“配置”。  
   
-4.  在 **“配置 SQL Server 代理错误日志”** 对话框的 **“错误日志文件”** 框中，输入错误日志的新文件路径和文件名称。 或者，单击省略号 **(...)** 以打开“指定代理错误日志位置”**** 对话框。  
+4.  在 **“配置 SQL Server 代理错误日志”** 对话框的 **“错误日志文件”** 框中，输入错误日志的新文件路径和文件名称。 或者，单击省略号 **(...)** 以打开“指定代理错误日志位置”对话框。  
   
 5.  完成后，单击 **“确定”** 。  

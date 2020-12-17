@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a4a12d71818ad4b900a7959904c47cb0baad4357
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 55f416890794509f2fd141c2a907222a7d72c47e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870294"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470138"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>教程：准备数据以通过 SQL 机器学习在 R 中训练预测模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 此系列教程由四个部分组成，这是第二部分。你将使用 R 从数据库准备数据。在此系列的后面部分，你将在 SQL Server 机器学习服务中或大数据群集上通过 R 使用该数据训练并部署预测模型。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 此系列教程由四个部分组成，这是第二部分。你将使用 R 从数据库准备数据。在此系列的后面部分，你将在 SQL Server 机器学习服务中通过 R 使用该数据训练并部署预测模型。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 此系列教程由四个部分组成，这是第二部分。你将使用 R 从数据库准备数据。在此系列的后面部分，你将在 SQL Server R Services 中通过 R 使用该数据训练并部署预测模型。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 此系列教程由四个部分组成，这是第二部分，将使用 R 从数据库准备数据。在此系列的后面部分，将通过 Azure SQL 托管实例机器学习服务使用此数据来训练预测模型并将其部署到 R 中。
 ::: moniker-end
 

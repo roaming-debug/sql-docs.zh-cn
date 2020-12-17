@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9dd953a78a992a9a5fed7135ae0aee02f88e4de9
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: c5b190c50dbbeebef94cdd15314539e5ce501160
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257490"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489637"
 ---
 # <a name="install-azure-data-cli-azdata-with-windows-installer"></a>使用 Windows Installer 安装 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
@@ -33,12 +33,12 @@ ms.locfileid: "92257490"
 
 若要使用 Windows Installer 卸载 `azdata`，请按照相应操作系统的说明进行操作。
 
-| 平台      | Instructions                                           |
+| 平台      | 说明                                           |
 | ------------- |--------------------------------------------------------|
 | Windows 10| “开始”>“设置”>“应用”                                |
 | Windows 8     | “开始”>“控制面板”>“程序”>“卸载程序” |
 
-要卸载的程序名为 `Azdata CLI`。 选择此应用程序，然后单击 `Uninstall` 按钮。
+要卸载的程序名为 `Azure Data CLI`。 选择此应用程序，然后单击 `Uninstall` 按钮。
 
 ## <a name="next-steps"></a>后续步骤
 

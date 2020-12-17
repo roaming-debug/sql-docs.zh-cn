@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3b87208c7e1105d881816297cc70c8cee54f46f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 96aaa12ce934da18818bd99fde009f6ec0747aee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037250"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480728"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
 
@@ -51,7 +51,7 @@ ms.locfileid: "92037250"
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击包含要查看的信息的警报，然后选择“属性”****。  
+4.  右键单击包含要查看的信息的警报，然后选择“属性”。  
   
     有关 _alert\_name_“警报属性”对话框中包含的可用选项的详细信息，请参阅：  
   

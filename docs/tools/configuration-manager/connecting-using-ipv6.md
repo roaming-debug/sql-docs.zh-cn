@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 698d201e07ef7e84bcc552d9ec815012af2d968d
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: a429bb74fce5226ddd65d853da8c1d67d94e6636
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900532"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481668"
 ---
 # <a name="connecting-using-ipv6"></a>使用 IPv6 进行连接
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ada99a4058b2b3657a9064e42f2f2ca1f2aedbb3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196231"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470008"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R 创建图形和绘图（演练）
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,21 +43,21 @@ ms.locfileid: "92196231"
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2), " seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate plot.", sep=""))
     ```
 
-2. 在开发环境的 R 图形设备中返回图像。  例如，在 RStudio 中，单击“绘图” **** 窗口。  [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]中将打开一个单独的图形窗口。
+2. 在开发环境的 R 图形设备中返回图像。  例如，在 RStudio 中，单击“绘图”  窗口。  [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]中将打开一个单独的图形窗口。
 
     ![使用 rxHistogram 绘制费用金额](media/rsql-e2e-rxhistogramresult.png "使用 rxHistogram 绘制费用金额")
 
     > [!NOTE]
     > 图形看起来是否不同？
     >  
-    > 这是因为 inDataSource 仅使用前 1000 行__。 由于没有 ORDER BY 子句，无法确定使用 TOP 的行顺序，因此数据和生成的图形可能会有所不同。
+    > 这是因为 inDataSource 仅使用前 1000 行。 由于没有 ORDER BY 子句，无法确定使用 TOP 的行顺序，因此数据和生成的图形可能会有所不同。
     > 这一特定图像使用大约 10,000 行数据生成。 建议试验不同数量的行，获取不同的图形，并记下它在环境中返回结果所需的时间。
 
 ## <a name="create-a-map-plot"></a>创建地图绘图
 
 通常，数据库服务器会阻止 Internet 访问。 使用需要下载地图或其他图像以生成图的 R 包时，这可能会带来不便。 但是，在你开发自己的应用程序时，你可能会发现以下这种解决方法会很有用。 基本思路为，在客户端上生成地图表示形式，然后在地图上覆盖作为属性存储在 SQL Server 表中的点。
 
-1. 定义创建 R 绘图对象的函数。 自定义 R 函数 mapPlot 会创建一个散点图，该散点图使用出租车接客位置，并绘制从每个位置开始的搭乘数**。 它使用 ggplot2 和 ggmap 包，应[已安装并加载](walkthrough-data-science-end-to-end-walkthrough.md#add-packages)了这两个包 。
+1. 定义创建 R 绘图对象的函数。 自定义 R 函数 mapPlot 会创建一个散点图，该散点图使用出租车接客位置，并绘制从每个位置开始的搭乘数。 它使用 ggplot2 和 ggmap 包，应[已安装并加载](walkthrough-data-science-end-to-end-walkthrough.md#add-packages)了这两个包 。
 
     ```R
     mapPlot <- function(inDataSource, googMap){
@@ -72,7 +72,7 @@ ms.locfileid: "92196231"
     ```
 
     + mapPlot 函数采用两个参数：之前使用 RxSqlServerData 定义的现有数据对象，以及从客户端传递的地图表示形式。
-    + 在以 ds 变量开头的行中，rxImport 用于将来自先前创建的数据源 inDataSource 的数据加载到内存中****。 （该数据源仅包含 1000 行；如果要创建包含更多数据点的地图，则可以替换其他数据源。）
+    + 在以 ds 变量开头的行中，rxImport 用于将来自先前创建的数据源 inDataSource 的数据加载到内存中。 （该数据源仅包含 1000 行；如果要创建包含更多数据点的地图，则可以替换其他数据源。）
     + 只要使用开放源代码 R 函数，就必须将数据加载到本地内存中的数据帧。 但是，通过调用 [rxImport ](/r-server/r-reference/revoscaler/rximport)函数，你可以在远程计算上下文的内存中运行。
 
 2. 将计算上下文更改为本地，并加载创建地图所需的库。
@@ -97,7 +97,7 @@ ms.locfileid: "92196231"
     plot(myplots[[1]][["myplot"]]);
     ````
 
-    + `googMap` 中的地图数据作为参数传递给远程执行的函数 mapPlot**。 这些地图是在本地环境中生成的，因此必须将其传递到函数，以便在 SQL Server 的上下文中创建绘图。
+    + `googMap` 中的地图数据作为参数传递给远程执行的函数 mapPlot。 这些地图是在本地环境中生成的，因此必须将其传递到函数，以便在 SQL Server 的上下文中创建绘图。
 
     + 当以 `plot` 开头的行运行时，呈现的数据将序列化为本地 R 环境，以便可以在 R 客户端中查看它。
 

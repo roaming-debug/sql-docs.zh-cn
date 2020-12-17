@@ -9,13 +9,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 03/01/2017
-ms.openlocfilehash: cfddbdca35d24589b3fa87976cbfb547f14a46ee
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.date: 12/13/2020
+ms.openlocfilehash: b99ed7142dece1c256962b21dacf46bc78470967
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891787"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489847"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>添加和验证数据连接（报表生成器和 SSRS）
 
@@ -25,7 +25,7 @@ ms.locfileid: "91891787"
 
 若要创建嵌入数据源，您必须具有到外部数据源的连接信息并知道需要何种权限才能访问数据。 此信息通常来自数据源的所有者。 可以测试该连接以验证指定的凭据是否有效。
 
-有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和[在报表生成器中指定凭据](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017)
+有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和[在报表生成器中指定凭据](./specify-credential-and-connection-information-for-report-data-sources.md)
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "91891787"
 
 5. 单击 **“详细信息”** ，然后使用该信息来解决问题。
 
-    有关详细信息，请参阅 [在报表生成器中指定凭据](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017)。
+    有关详细信息，请参阅 [在报表生成器中指定凭据](./specify-credential-and-connection-information-for-report-data-sources.md)。
 
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

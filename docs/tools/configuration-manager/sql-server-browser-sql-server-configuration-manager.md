@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 5b615023-3c76-4b95-bbd0-9c39f3353f4b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a487eeed925dc25220a7c11e5a49b305949230c
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 03066279715aef82deca8579dc76a3768f29bbe6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901768"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481538"
 ---
 # <a name="sql-server-browser-sql-server-configuration-manager"></a>SQL Server Browser（SQL Server 配置管理器）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dd26583a850cc3734c2201b0640da99ce971fa8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036260"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476898"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  **sqlcmd** 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的临时、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 **sqlcmd** ，或要生成可使用 **sqlcmd**运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 通常以下列方式使用 **sqlcmd** 实用工具：  
+  **sqlcmd** 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的临时、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 **sqlcmd** ，或要生成可使用 **sqlcmd** 运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 通常以下列方式使用 **sqlcmd** 实用工具：  
   
--   用户输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，请在 Windows 搜索中输入“cmd”，然后单击“命令提示符”将其打开。 在命令提示符处，键入 **sqlcmd** ，后面跟随所需的选项列表。 有关 **sqlcmd**支持的选项的完整列表，请参阅 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
+-   用户输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，请在 Windows 搜索中输入“cmd”，然后单击“命令提示符”将其打开。 在命令提示符处，键入 **sqlcmd** ，后面跟随所需的选项列表。 有关 **sqlcmd** 支持的选项的完整列表，请参阅 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
   
 -   用户通过下列方式提交 **sqlcmd** 作业：指定要执行的单个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，或将实用工具指向要执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所在的文本文件。 输出通常定向到一个文本文件，但也可能在命令提示符处显示。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "92036260"
     > **提示！！** 若要查看 **sqlcmd** 实用工具所支持选项的列表，请运行： `sqlcmd -?`。  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>使用 sqlcmd 以交互方式运行 Transact-SQL 语句  
- 你可以使用 **sqlcmd** 实用工具以交互方式在命令提示符窗口中执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **以交互方式执行**语句，请在未使用 **-Q**、 **-q**、 **-Z**或 **-i** 选项指定任何输入文件或查询的情况下运行实用工具。 例如：  
+ 你可以使用 **sqlcmd** 实用工具以交互方式在命令提示符窗口中执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **以交互方式执行** 语句，请在未使用 **-Q**、 **-q**、 **-Z** 或 **-i** 选项指定任何输入文件或查询的情况下运行实用工具。 例如：  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -385,7 +385,7 @@ ms.locfileid: "92036260"
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
 ### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. 在 Windows 脚本文件中使用 sqlcmd  
- 在 .bat 文件中， **sqlcmd**命令（如 `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` ）可以与 VBScript 一起执行。 此时，不要使用交互选项。 执行 .bat 文件的计算机上必须安装**sqlcmd** 。  
+ 在 .bat 文件中， **sqlcmd** 命令（如 `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` ）可以与 VBScript 一起执行。 此时，不要使用交互选项。 执行 .bat 文件的计算机上必须安装 **sqlcmd** 。  
   
  首先，创建以下四个文件：  
   
@@ -453,7 +453,7 @@ ms.locfileid: "92036260"
  `SQLCMD returned 100 to the command shell`  
   
 ### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. 使用 sqlcmd 在 Azure SQL 数据库上设置加密  
- 可对与 **数据的连接执行**sqlcmd [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 以指定加密和证书信任。 有两个 **sqlcmd**选项可供选择：  
+ 可对与 **数据的连接执行** sqlcmd [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 以指定加密和证书信任。 有两个 **sqlcmd** 选项可供选择：  
   
 -   -N 开关，客户端使用它来请求加密连接。 此选项等同于 ADO.net 选项 `ENCRYPT = true`。  
   

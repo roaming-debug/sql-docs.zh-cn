@@ -7,13 +7,13 @@ ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eb16c276b9cc716f52e6ce73da5ec4ba3843dfbd
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 36b68809377492e3643ebc7c60e0b2111d52f638
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678890"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484239"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>在 SharePoint 模式下安装第一个 Report Server
 
@@ -115,21 +115,21 @@ ms.locfileid: "92678890"
 
 3.  如果看到“产品密钥”页，请键入密钥或接受 Enterprise Evaluation 版本的默认密钥  。  
   
-     选择“ **下一页** ”。  
+     选择“**下一页**”。  
   
 4.  如果您看到许可条款页，则查看并接受许可条款。 对于你同意发送功能使用情况数据来帮助改进产品功能和支持，Microsoft 深表感谢。  
   
-     选择“ **下一页** ”。  
+     选择“**下一页**”。  
 
 5.  建议选择“使用 Microsoft 更新检查更新(推荐)”  。 此为可选项。
   
-     选择“ **下一页** ”。   
+     选择“**下一页**”。   
   
 6.  在“安装安装程序文件”页上，根据你的计算机上已安装的内容，可能会看到以下消息  ：  
   
     -   “一个或多个受影响的文件具有挂起的操作。 安装过程完成后，必须重新启动计算机。”  
   
-    -   选择“ **下一页** ”。  
+    -   选择“**下一页**”。  
   
 7.  如果看到“安装规则”  页。 查看任何警告或妨碍安装的问题。 然后，选择“下一步”  。
  
@@ -137,11 +137,11 @@ ms.locfileid: "92678890"
   
     -   **Reporting Services - SharePoint**  
   
-    -   **用于 SharePoint 产品的 Reporting Services 外接程序** 。  
+    -   **用于 SharePoint 产品的 Reporting Services 外接程序**。  
   
     -   （可选）还可以选择“数据库引擎服务”以提供完整的环境，但是你应有托管 SharePoint 数据库的 SQL Server 数据库引擎实例  。  
   
-     选择“ **下一页** ”。  
+     选择“**下一页**”。  
   
      ![“功能选择”页面的屏幕截图，其中选择了“Reporting Services - SharePoint”和“用于 SharePoint 产品的 Reporting Services 加载项”选项。](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
   
@@ -151,7 +151,7 @@ ms.locfileid: "92678890"
   
 10. 如果您看到 **“服务器配置”** 页，则键入相应的凭据。 如果要使用 Reporting Services 数据警报或订阅功能，则需要将 SQL Server 代理的“启动类型”更改为“自动”   。 根据已在计算机上安装的项，您可能不会看到 **“服务器配置”** 页。  
   
-     选择“ **下一页** ”。  
+     选择“**下一页**”。  
   
 11. 如果选择了“数据库引擎服务”，你将看到“数据库引擎配置”页，请将相应的帐户添加到 SQL 管理员列表，然后选择“下一步”   。  
   
@@ -193,13 +193,13 @@ ms.locfileid: "92678890"
     > [!NOTE]
     > 在标准 Windows PowerShell 窗口中无法识别 SharePoint 命令。 使用“SharePoint 命令行管理程序”  。  
   
-4.  运行以下 PowerShell 命令安装 Reporting Services SharePoint 服务。 命令成功完成后会在 Management Shell 中显示一个新行。 当命令成功完成时， **不会向 Management Shell 返回任何消息** ：  
+4.  运行以下 PowerShell 命令安装 Reporting Services SharePoint 服务。 命令成功完成后会在 Management Shell 中显示一个新行。 当命令成功完成时，**不会向 Management Shell 返回任何消息** ：  
   
     ```  
     Install-SPRSService  
     ```  
   
-5.  运行以下 PowerShell 命令安装 Reporting Services 服务代理。 命令成功完成后会在 Management Shell 中显示一个新行。 当命令成功完成时， **不会向 Management Shell 返回任何消息** ：  
+5.  运行以下 PowerShell 命令安装 Reporting Services 服务代理。 命令成功完成后会在 Management Shell 中显示一个新行。 当命令成功完成时，**不会向 Management Shell 返回任何消息** ：  
   
     ```  
     Install-SPRSServiceProxy  

@@ -16,13 +16,13 @@ ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 56fb2ab9d8f7de8e6e2a143939b3c8007446ef8a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 994faf31dd5cffac9c69fa996478baf539465b99
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035524"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472268"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,17 +53,17 @@ ms.locfileid: "92035524"
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>设置作业步骤的成功流或失败流  
   
-1.  在 **对象资源管理器**中，展开 **“SQL Server 代理”**，然后展开 **“作业”**。  
+1.  在 **对象资源管理器** 中，展开 **“SQL Server 代理”**，然后展开 **“作业”**。  
   
-2.  右键单击要编辑的作业，然后单击“属性”****。  
+2.  右键单击要编辑的作业，然后单击“属性”。  
   
 3.  选择 **“步骤”** 页，单击一个步骤，再单击 **“编辑”**。  
   
 4.  在 **“作业步骤属性”** 对话框中，选择 **“高级”** 页。  
   
-5.  在“成功时要执行的操作”**** 列表中，单击作业步骤成功完成时要执行的操作。  
+5.  在“成功时要执行的操作”列表中，单击作业步骤成功完成时要执行的操作。  
   
-6.  在 **“重试次数”** 框中输入介于 0 到 9999 之间的次数，应将作业步骤重复该次数，然后才能认为其失败。 如果在“重试次数”**** 框中输入的值大于 0，则应在“重试间隔（分钟）”**** 框中输入介于 1 到 9999 之间的分钟数，必须经过该间隔后才能重试作业步骤。  
+6.  在 **“重试次数”** 框中输入介于 0 到 9999 之间的次数，应将作业步骤重复该次数，然后才能认为其失败。 如果在“重试次数”框中输入的值大于 0，则应在“重试间隔（分钟）”框中输入介于 1 到 9999 之间的分钟数，必须经过该间隔后才能重试作业步骤。  
   
 7.  在 **“失败时要执行的操作”** 列表中，单击作业步骤失败时要执行的操作。  
   

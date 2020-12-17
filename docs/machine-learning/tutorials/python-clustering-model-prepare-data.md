@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2cd244454b78e1199d59dcfe6539498328eac674
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 518406668e890aeddf656394ca9277610bc34f3f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870424"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470408"
 ---
 # <a name="python-tutorial-prepare-data-to-categorize-customers-with-sql-machine-learning"></a>Python 教程：准备数据以通过 SQL 机器学习对客户进行聚类分析
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 此教程包括四分部分，在第二部分中，你将使用 Python 从数据库还原和准备数据。 在本系列的后续部分中，你将在 SQL Server 机器学习服务中或大数据群集上通过 Python 使用这些数据训练并部署聚类分析模型。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 此教程包括四分部分，在第二部分中，你将使用 Python 从数据库还原和准备数据。 在本系列的后续部分中，使用这些数据在 Python 中通过 SQL Server 机器学习服务来定型和部署聚类分析模型。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 此教程包括四分部分，在第二部分中，你将使用 Python 从数据库还原和准备数据。 在本系列的后面部分，将通过 Azure SQL 托管实例机器学习服务在 Python 中使用此数据训练和部署聚类分析模型。
 ::: moniker-end
 

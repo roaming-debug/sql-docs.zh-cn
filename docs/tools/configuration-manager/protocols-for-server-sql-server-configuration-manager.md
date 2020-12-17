@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ee30d5f5-7f6a-4101-849e-73dfcc1b2528
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f7d2c20b9b381c8c5fe635fc38cd5cb44eda74dd
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 56dbca8fa6e32a73c0393c7a8da797e6c3f08c95
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901638"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483799"
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>适用于 &lt;服务器&gt; 的协议（SQL Server 配置管理器）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

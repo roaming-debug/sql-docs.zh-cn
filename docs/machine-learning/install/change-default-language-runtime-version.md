@@ -8,13 +8,13 @@ ms.date: 08/14/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 457d728bd0e4abb5c2cf70063c0330924104c482
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 8ba60de81e880c03db50031c8489850b28a77018
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869972"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471208"
 ---
 # <a name="change-the-default-r-or-python-language-runtime-version"></a>更改默认 R 或 Python 语言运行时版本
 

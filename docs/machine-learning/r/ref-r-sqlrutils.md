@@ -7,13 +7,13 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a458b1eadff2cd4ef36c73a75eb90a3d25530fa
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ac81810036e4159843142cb419deb3d06c57848c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195807"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470788"
 ---
 # <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>Sqlrutils（SQL Server 机器学习服务中的 R 包）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -39,7 +39,7 @@ Sqlrutils 包分布于多种 Microsoft 产品中，但不管你是在 SQL Server
 
 ## <a name="functions-list"></a>函数列表
 
-下一节概述可从 sqlrutils 包中调用以开发包含嵌入式 R 代码的存储过程的函数****。 有关每个方法或函数的参数的详细信息，请参阅包的 R 帮助：`help(package="sqlrutils")`
+下一节概述可从 sqlrutils 包中调用以开发包含嵌入式 R 代码的存储过程的函数。 有关每个方法或函数的参数的详细信息，请参阅包的 R 帮助：`help(package="sqlrutils")`
 
 |函数 | 描述 |
 |------|-------------|

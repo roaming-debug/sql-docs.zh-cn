@@ -8,13 +8,13 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 10/19/2020
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e8bb8de8d13a9b7696bb6505363b15d38cd35994
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ed31e889e195cffb828f5e04e131ffd2cb71fa84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194271"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466658"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>服务器属性高级页 - Power BI 报表服务器和 Reporting Services
 
@@ -27,7 +27,7 @@ ms.locfileid: "92194271"
 ## <a name="options"></a>选项
 
 ### <a name="accesscontrolallowcredentials"></a>AccessControlAllowCredentials
-（Power BI 报表服务器、Reporting Services 2017 及更高版本）指示当 `credentials` 标志设置为 true 时，是否可以公开对客户端请求的响应。 默认值是 **false**秒。
+（Power BI 报表服务器、Reporting Services 2017 及更高版本）指示当 `credentials` 标志设置为 true 时，是否可以公开对客户端请求的响应。 默认值是 **false** 秒。
 
 ### <a name="accesscontrolallowheaders"></a>AccessControlAllowHeaders
 （仅适用于 Power BI 报表服务器、Reporting Services 2017 及更高版本）客户端发出请求时，服务器允许的以逗号分隔的标头列表。 此属性可为空字符串，指定 * 可允许所有标头。
@@ -155,19 +155,19 @@ ms.locfileid: "92194271"
 （仅 Power BI 报表服务器）指示客户能否从 Power BI 报表服务器上的 Power BI 视觉对象中导出基础数据。 值为 True 表示已启用该功能。
 
 ### <a name="enableremoteerrors"></a>EnableRemoteErrors
-包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 **true** 和 **false**。 默认值是 **false**秒。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。  
+包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 **true** 和 **false**。 默认值是 **false** 秒。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。  
 
 ### <a name="enabletestconnectiondetailederrors"></a>EnableTestConnectionDetailedErrors
 指示当用户使用报表服务器测试数据源连接时，是否向客户端计算机发送详细的错误消息。 默认值为 **true**。 如果此选项设置为 **false**，则只发送一般错误消息。
 
 ###  <a name="executionlogdayskept"></a>ExecutionLogDaysKept  
-在执行日志中保留报表执行信息的天数。 此属性的有效值包括 **-1** 到 **2**、**147**、**483**、**647**。 如果值为“-1”，则不会从执行日志表中删除条目。 默认值是 **60**秒。  
+在执行日志中保留报表执行信息的天数。 此属性的有效值包括 **-1** 到 **2**、**147**、**483**、**647**。 如果值为“-1”，则不会从执行日志表中删除条目。 默认值是 **60** 秒。  
 
 > [!NOTE]
-> 将值设置为“0”**会从执行日志中删除** ** 所有条目。 值为“-1”将保留执行日志的条目，不会删除它们****。
+> 将值设置为“0”**会从执行日志中删除** 所有条目。 值为“-1”将保留执行日志的条目，不会删除它们。
 
 ### <a name="executionloglevel"></a>ExecutionLogLevel
-设置执行日志级别。 默认为正常**。
+设置执行日志级别。 默认为正常。
 
 ### <a name="externalimagestimeout"></a>ExternalImagesTimeout
 确定在连接超时之前，必须对外部映像文件检索的时间长度。默认值为 **600** 秒。  
@@ -179,13 +179,13 @@ ms.locfileid: "92194271"
 设置报表的最大文件大小（以 MB 为单位）。 默认值为 1000 *。最大值为 2000*。
 
 ### <a name="modelcleanupcycleminutes"></a>ModelCleanupCycleMinutes 
-（仅适用于 Power BI 报表服务器）设置在数分钟内检查内存中未使用的模型的频率。 默认为 15**.
+（仅适用于 Power BI 报表服务器）设置在数分钟内检查内存中未使用的模型的频率。 默认为 15.
 
 ### <a name="modelexpirationminutes"></a>ModelExpirationMinutes 
 （仅适用于 Power BI 报表服务器）设置在数分钟内从内存中逐出未使用的模型时的频率。 默认值为 60。
 
 ###  <a name="myreportsrole"></a>MyReportsRole  
-对用户的“我的报表”文件夹创建安全策略时所用角色的名称。 默认值是 **My Reports Role**秒。  
+对用户的“我的报表”文件夹创建安全策略时所用角色的名称。 默认值是 **My Reports Role** 秒。  
 
 ### <a name="officeaccesstokenexpirationseconds"></a>OfficeAccessTokenExpirationSeconds 
 （仅适用于 Power BI 报表服务器、Reporting Services 2019 及更高版本）设置希望 Office 访问令牌到期的时间（以秒为单位）。 默认值为 60。
@@ -194,7 +194,7 @@ ms.locfileid: "92194271"
 （仅适用于 Power BI 报表服务器）设置用于查看 Excel 工作簿的 Office Online Server 实例地址。
 
 ### <a name="rdlxreporttimetout"></a>RDLXReportTimetout
-在报表服务器命名空间中托管的所有报表的 RDLX 报表（SharePoint Server 中的 Power View 报表）** 处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则处理期间命名空间中的报表不会超时。 默认值是 **1800**秒。
+在报表服务器命名空间中托管的所有报表的 RDLX 报表（SharePoint Server 中的 Power View 报表）处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则处理期间命名空间中的报表不会超时。 默认值是 **1800** 秒。
 
 ### <a name="requireintune"></a>RequireIntune
 （仅适用于 Power BI 报表服务器、Reporting Services 2017 及更高版本）要求 Intune 通过 Power BI 移动应用访问组织报表。 默认值为 False。
@@ -206,7 +206,7 @@ ms.locfileid: "92194271"
 （仅适用于 Power BI 报表服务器）针对嵌入了 AS 模型的 Power BI 报表的计划刷新的数据刷新超时时间（以分钟为单位）。 默认值为 120 分钟。
 
 ### <a name="sessiontimeout"></a>SessionTimeout
-会话保持活动状态的时间长度（以秒为单位）。 默认值是 **600**秒。  
+会话保持活动状态的时间长度（以秒为单位）。 默认值是 **600** 秒。  
 
 ### <a name="sharepointintegratedmode"></a>SharePointIntegratedMode
 此只读属性指示服务器模式。 如果此值为 False，则报表服务器在本机模式下运行。  
@@ -218,7 +218,7 @@ ms.locfileid: "92194271"
 在 Web 门户的页面标题中显示的报表服务器站点的名称。 默认值是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 此属性可以是空字符串。 最大长度为 8,000 个字符。  
 
 ### <a name="snapshotcompression"></a>SnapshotCompression
-定义如何压缩快照。 默认值是 **SQL**秒。 有效值如下：
+定义如何压缩快照。 默认值是 **SQL** 秒。 有效值如下：
 
 |值|说明|
 |---------|---------|
@@ -230,13 +230,13 @@ ms.locfileid: "92194271"
 指定所存储的参数能够保存的最大天数。 有效值为 **-1**、 **+1** 到 **2,147,483,647**。 默认值为 **180** 天。  
 
 ### <a name="storedparametersthreshold"></a>StoredParametersThreshold
-指定报表服务器可以存储的参数值的最大数目。 有效值为 **-1**、 **+1** 到 **2,147,483,647**。 默认值是 **1500**秒。  
+指定报表服务器可以存储的参数值的最大数目。 有效值为 **-1**、 **+1** 到 **2,147,483,647**。 默认值是 **1500** 秒。  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
 （仅适用于 Power BI 报表服务器 2019 年 1 月、Reporting Services 2019 及更高版本）设置允许在可呈现的“超链接”操作上定义的 URI 方案的逗号分隔列表，或设置“&ast;”以启用所有超链接方案。 例如，设置“http、https”将允许指向“https://www. contoso.com”的超链接，但会删除指向“mailto:bill@contoso.com”或“javascript:window.open(‘ www.contoso.com’, ‘_blank’)”的超链接。 默认为“&ast;”。
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
-在报表服务器命名空间中托管的所有报表的默认报表处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则处理期间命名空间中的报表不会超时。 默认值是 **1800**秒。  
+在报表服务器命名空间中托管的所有报表的默认报表处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则处理期间命名空间中的报表不会超时。 默认值是 **1800** 秒。  
 
 ### <a name="systemsnapshotlimit"></a>SystemSnapshotLimit
 为报表存储的快照的最大数目。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则无快照限制。  

@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307e262c57409725014a202b4a48143b5228763e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f4a350830a4d0672877cb94deb9b4baf8e602944
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036295"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466268"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定断点筛选器
 
@@ -45,7 +45,7 @@ ms.locfileid: "92036295"
   
     -   **MachineName** 是运行数据库引擎实例的计算机。  
   
-    -   **ProcessID**和 **ProcessName** 是运行数据库引擎实例的操作系统进程。  
+    -   **ProcessID** 和 **ProcessName** 是运行数据库引擎实例的操作系统进程。  
   
     -   **ThreadID** 和 **ThreadName** 是在数据库引擎实例中运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、过程或功能的操作系统线程。  
   

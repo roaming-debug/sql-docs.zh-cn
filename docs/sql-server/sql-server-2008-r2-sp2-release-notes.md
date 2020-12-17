@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebebc4ed225e131db50df4c4c0b1ee3eb6da51b7
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 33d919b5536994da040ce4cca4d4ac32a0e735c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384609"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466678"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 本发行说明文档介绍了在安装 Microsoft SQL Server 2008 R2 Service Pack 2 或者解决其相关问题之前应该了解的一些已知问题。 本发行说明文档适用于 SQL Server 2008 R2 SP2 的所有版本且只以联机形式提供。 文本档定期更新。  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 Service Pack 2 中的新增功能  
-添加了动态管理视图 (DMV) **sys.dm_db_stats_properties** 。 您可以使用此 DMV 为当前数据库中指定的表或索引视图返回统计信息属性。 例如，此 DMV 可返回取样的行数和直方图梯级数。  
+添加了动态管理视图 (DMV) **sys.dm_db_stats_properties**。 您可以使用此 DMV 为当前数据库中指定的表或索引视图返回统计信息属性。 例如，此 DMV 可返回取样的行数和直方图梯级数。  
   
 ## <a name="20-before-you-install"></a>2.0 安装前  
 有关如何安装 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 更新的信息，请参阅 [SQL Server 2008 R2 服务文档](/previous-versions/sql/sql-server-2008-r2/dd638062(v=sql.105))(#sql-server-2008-r2-服务文档)。  
@@ -56,9 +56,9 @@ ms.locfileid: "94384609"
 |没有安装 SQL Server 2008 R2 Management Studio 的 64 位版|安装 SQL Server 2008 R2 Management Studio（包括 SP2）|SQLManagementStudio_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=251791) (#此处)），以安装免费的 SQL Server 2008 R2 SP2 Management Studio Express Edition。|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 如果另一进程锁定了 SQAGTRES.dll 可能会导致安装程序失败  
-**问题** ：SQL Server 安装程序操作可能失败，出现以下错误：`Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.`根本原因是另一进程锁定了 C:\Windows\system32\SQAGTRES.DLL，从而导致安装程序无法更新该文件。  
+**问题**：SQL Server 安装程序操作可能失败，出现以下错误：`Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.`根本原因是另一进程锁定了 C:\Windows\system32\SQAGTRES.DLL，从而导致安装程序无法更新该文件。  
   
-**解决方法** ：将 C:\Windows\system32\SQAGTRES.DLL 重命名为临时名称，比如 C:\Windows\system32\SQAGTRES_old.DLL，然后在安装错误消息处选择重试选项。 这样，安装程序就可以继续运行了。 重新启动之后，您可以删除临时文件 C:\Windows\system32\SQAGTRES_old.DLL。  
+**解决方法**：将 C:\Windows\system32\SQAGTRES.DLL 重命名为临时名称，比如 C:\Windows\system32\SQAGTRES_old.DLL，然后在安装错误消息处选择重试选项。 这样，安装程序就可以继续运行了。 重新启动之后，您可以删除临时文件 C:\Windows\system32\SQAGTRES_old.DLL。  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 此 Service Pack 中已修复的已知问题  
 有关此 Service Pack 中已修复的 Bug 和已知问题的完整列表，请参阅此 [主知识库文章](https://support.microsoft.com/kb/2630455)。  

@@ -1,19 +1,19 @@
 ---
 description: 安装 SQL Server Reporting Services
 title: 安装 SQL Server Reporting Services | Microsoft Docs
-ms.date: 05/01/2020
+ms.date: 12/11/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 74713128e0a7e1c749bcde676d02c63ec05e3632
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 35924e9e1f5a72533ef1b30d983b99493858274d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891927"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484229"
 ---
 # <a name="install-sql-server-reporting-services"></a>安装 SQL Server Reporting Services
 
@@ -21,12 +21,12 @@ ms.locfileid: "91891927"
 
 SQL Server Reporting Services 安装涉及到用于存储报表项、呈现报表以及处理订阅和其他报表服务的服务器组件。 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 通过 Microsoft 下载中心下载 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)。
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 通过 Microsoft 下载中心下载 [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252)。
 
 ::: moniker-end
@@ -127,7 +127,7 @@ URL 预留由前缀、主机名、端口和虚拟目录组成：
 
 有关如何安装 SQL Server Reporting Services 本机模式的信息，请参阅[安装 Reporting Services 本机模式报表服务器](install-reporting-services-native-mode-report-server.md)。 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 有关如何在 SharePoint 集成模式下安装 SQL Server 2016 Reporting Services（及更早版本）的信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)。
 

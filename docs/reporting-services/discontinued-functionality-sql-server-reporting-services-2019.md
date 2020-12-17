@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/19/2019
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d062e301346e11984b0ab0d72c418f71db992fd2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 7324c40b38ed25b1a603586ef90b4077acb0f36e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74320291"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472548"
 ---
 # <a name="discontinued-functionality-in-sql-server-2019-reporting-services-ssrs"></a>SQL Server 2019 Reporting Services (SSRS) 中停止使用的功能
 

@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27e2596894e6d36742472ad1d3ae192fc37787e6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765936"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489667"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>为 SQL Server 大数据群集部署配置 Azure Kubernetes 服务
 
@@ -149,7 +149,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
 
 ## <a name="connect-to-the-cluster"></a>连接到群集
 
-1. 若要配置 kubectl 以连接到 Kubernetes 群集，请运行 [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) 命令。 此步骤下载凭据并配置 kubectl CLI 以使用这些凭据。
+1. 若要配置 kubectl 以连接到 Kubernetes 群集，请运行 [az aks get-credentials](/cli/azure/aks#az-aks-get-credentials) 命令。 此步骤下载凭据并配置 kubectl CLI 以使用这些凭据。
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,7 +165,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
 
 如果使用上述命令创建 Azure Kubernetes 服务时遇到任何问题，请尝试以下解决方法：
 
-- 请确保已安装[最新 Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest)。
+- 请确保已安装[最新 Azure CLI](/cli/azure/install-azure-cli)。
 - 使用另一个资源组和群集名称来测试上述步骤。
 - 请参阅详细的[有关 AKS 的故障排除文档](/azure/aks/troubleshooting)。
 

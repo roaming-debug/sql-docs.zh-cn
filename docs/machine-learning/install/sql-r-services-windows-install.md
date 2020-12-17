@@ -9,13 +9,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
-monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: =sql-server-2016
+ms.openlocfilehash: 05802b7d3a0bc9f4922cb1db68162d89a576f18c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956761"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471128"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
 

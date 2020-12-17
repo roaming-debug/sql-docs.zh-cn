@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 89643fabf2db39e7006e0efaac87adb991893f67
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 0ed09befa391211f8fc5457036f4362bfbf45894
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098836"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470868"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用存储过程操作 R 代码
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "92098836"
 
 下面的教程提供了在批处理和单行模式下使用存储过程进行评分的示例：
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [SQL Server 中 R 的端到端数据科学演练](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 + [R 教程：使用二元分类来预测纽约市出租车费用](../tutorials/r-taxi-classification-introduction.md)
 ::: moniker-end
 
@@ -63,11 +63,11 @@ ms.locfileid: "92098836"
 
 如果你的 R 解决方案使用复杂的聚合或涉及大型数据集，则可以利用 SQL Server 的高效内存中聚合和列存储索引，然后让 R 代码处理统计计算和评分。
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>为其他平台或计算上下文调整 R 代码
 
-在 SQL Server 安装程序中使用[独立服务器选项](../install/sql-machine-learning-standalone-windows-install.md)或安装非 SQL 品牌的产品 Microsoft Machine Learning Server（以前称为“Microsoft R Server”）时，针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据运行的同一 R 代码可用于其他数据源，例如用于 HDFS 的 Spark****：
+在 SQL Server 安装程序中使用[独立服务器选项](../install/sql-machine-learning-standalone-windows-install.md)或安装非 SQL 品牌的产品 Microsoft Machine Learning Server（以前称为“Microsoft R Server”）时，针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据运行的同一 R 代码可用于其他数据源，例如用于 HDFS 的 Spark：
 
 + [Machine Learning Server 文档](/r-server/)
 

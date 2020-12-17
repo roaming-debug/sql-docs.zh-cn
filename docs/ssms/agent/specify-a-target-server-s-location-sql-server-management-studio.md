@@ -14,13 +14,13 @@ ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ec7ed61678519716e84e74e13b9d954628a3ea45
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 3e09fbc094ddf75a56b2b4c48eac4ecb23b47b7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035502"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482160"
 ---
 # <a name="specify-a-target-server39s-location"></a>指定目标服务器的位置
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "92035502"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要指定目标服务器的位置的 master 服务器。  
   
-2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，然后选择“管理目标服务器”****。  
+2.  右键单击“SQL Server 代理”，指向“多服务器管理”，然后选择“管理目标服务器”。  
   
-3.  右键单击某一目标服务器，再选择“属性”****。  
+3.  右键单击某一目标服务器，再选择“属性”。  
   
 4.  在 **“位置”** 框中，输入该服务器的位置，然后单击 **“确定”**。  
   

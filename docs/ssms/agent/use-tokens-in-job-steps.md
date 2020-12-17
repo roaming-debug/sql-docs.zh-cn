@@ -17,13 +17,13 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f222f011015f4cf23cf4640b7c4bc2136d338583
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f888cc014c5cce3280f572c8a7eeddf194704624
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037253"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482150"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92037253"
 > [!IMPORTANT]  
 > 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括：A-DBN、A-SVR、A-ERR、A-SEV、A-MSG 和 WMI（属性）     。 请注意，在此版本中，对标记的使用扩展至所有警报。  
 >   
-> 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”****，选择“属性”****，并在“警报系统”**** 页上选择“为警报的所有作业响应替换标记”**** 以启用这些标记。  
+> 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，并在“警报系统”页上选择“为警报的所有作业响应替换标记”以启用这些标记。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记替换简单且有效： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以准确的文字字符串值替换标记。 所有标记都是区分大小写的。 您的作业步骤必须考虑到这一点，并且将所用标记正确地用引号引起来或将替换字符串转换为正确的数据类型。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "92037253"
   
 在这种情况下，不会执行已插入的语句 `SELECT @@VERSION`。 相反，多余的单引号会导致服务器将已插入语句作为字符串进行分析。 如果标记替换字符串不包含单引号，则不会转义任何字符，并且包含此标记的作业步骤会按预期方式执行。  
   
-若要在作业步骤中调试标记使用，请使用 `PRINT N'$(ESCAPE_SQUOTE(SQLDIR))'` 之类的输出语句并将作业步骤输出保存到文件或表。 可以使用“作业步骤属性”**** 对话框的“高级”**** 页指定作业步骤输出文件或表。  
+若要在作业步骤中调试标记使用，请使用 `PRINT N'$(ESCAPE_SQUOTE(SQLDIR))'` 之类的输出语句并将作业步骤输出保存到文件或表。 可以使用“作业步骤属性”对话框的“高级”页指定作业步骤输出文件或表。  
   
 ## <a name="sql-server-agent-tokens-and-macros"></a>SQL Server 代理标记和宏  
 下列各表列出并说明了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理支持的标记和宏。  
@@ -85,7 +85,7 @@ ms.locfileid: "92037253"
 |**(TIME)**|当前时间（以 HHMMSS 格式表示）。|  
 |**(STRTTM)**|作业开始执行的时间（以 HHMMSS 格式表示）。|  
 |**(STRTDT)**|作业开始执行的日期（以 YYYYMMDD 格式表示）。|  
-|**(WMI(** property **))** |对于为响应 WMI 警报而运行的作业，属性值由 property ** 指定。 例如，`$(WMI(DatabaseName))` 为导致警报运行的 WMI 事件提供 **DatabaseName** 属性值。|  
+|**(WMI(** property **))** |对于为响应 WMI 警报而运行的作业，属性值由 property 指定。 例如，`$(WMI(DatabaseName))` 为导致警报运行的 WMI 事件提供 **DatabaseName** 属性值。|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server 代理转义宏  
   
@@ -97,11 +97,11 @@ ms.locfileid: "92037253"
 |**$(ESCAPE_NONE(** token\_name **))**|替换标记而不转义字符串中的任何字符。 提供此宏是为了在仅需要来自受信任用户的标记替换字符串的环境中支持向后兼容。 有关详细信息，请参阅本主题后面的“更新作业步骤以使用宏”。|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>更新作业步骤以使用宏  
-下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何处理标记替换。 若要启用或禁用警报标记替换，请在对象资源管理器中右键单击“SQL Server 代理”****，选择“属性”****，然后在“警报系统”**** 页上选中或清除“为警报的所有作业响应替换标记”**** 复选框。  
+下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何处理标记替换。 若要启用或禁用警报标记替换，请在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，然后在“警报系统”页上选中或清除“为警报的所有作业响应替换标记”复选框。  
   
 |标记语法|启用警报标记替换|禁用警报标记替换|  
 |----------------|------------------------------|-------------------------------|  
-|使用转义宏|成功替换作业中的所有标记。|不替换由警报激活的标记。 这些标记包括 **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**和 **WMI(** _property_ **)** 。 成功替换其他静态标记。|  
+|使用转义宏|成功替换作业中的所有标记。|不替换由警报激活的标记。 这些标记包括 **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG** 和 **WMI(** _property_ **)** 。 成功替换其他静态标记。|  
 |不使用转义宏|任何包含标记的作业均失败。|任何包含标记的作业均失败。|  
   
 ## <a name="token-syntax-update-examples"></a>标记语法更新示例  

@@ -43,13 +43,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: df5c82ef6887dba2d261a1517d1d1f9b871d5ec4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039014"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478808"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
 
@@ -79,7 +79,7 @@ ms.locfileid: "92039014"
 
 **生成和发布脚本**
 
-1. 在 **对象资源管理器**中，展开包含要为其编写脚本的数据库的实例的节点。
+1. 在 **对象资源管理器** 中，展开包含要为其编写脚本的数据库的实例的节点。
 
 2. 指向“任务”  ，然后选择“生成脚本”  。
 
@@ -146,7 +146,7 @@ ms.locfileid: "92039014"
 
 ### <a name="advanced-scripting-options-page"></a><a name="AdvScriptOpt"></a> “高级脚本编写选项”页
 
-使用此页可以指定希望此向导生成脚本的方式。 此页中提供有许多不同的选项。 如果在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] “数据库引擎类型” **中指定的 SQL Server 或**版本不支持这些选项，则这些选项将灰显。
+使用此页可以指定希望此向导生成脚本的方式。 此页中提供有许多不同的选项。 如果在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] “数据库引擎类型” **中指定的 SQL Server 或** 版本不支持这些选项，则这些选项将灰显。
 
 ![高级选项](media/generate-and-publish-scripts-wizard/advanced.png)
 
@@ -156,23 +156,23 @@ ms.locfileid: "92039014"
 
 - **ANSI 填充** - 在脚本中包括 **ANSI PADDING ON** 。 默认值为 **True**。
 
-- **追加到文件** - 值为 **True**时，此脚本将被添加到在 **“设置脚本编写选项”** 页上指定的现有脚本的底部。 值为 **False**时，新脚本将覆盖以前的脚本。 默认值为 **False**。
+- **追加到文件** - 值为 **True** 时，此脚本将被添加到在 **“设置脚本编写选项”** 页上指定的现有脚本的底部。 值为 **False** 时，新脚本将覆盖以前的脚本。 默认值为 **False**。
 
 - 检查对象是否存在  - 设置为 True  时，将在为 SQL 对象生成 create 语句之前添加存在检查。 例如：表、视图、函数或存储过程。 CREATE 语句包装在 IF 语句中。 如果你知道目标是干净的，脚本会更清晰。 如果你不希望对象存在于目标上，则会收到错误。 默认值为 **False**。
 
 - 出错时继续编写脚本 - 值为 False 时，将在出现错误时停止编写脚本   。 值为 True 时，将继续编写脚本  。 默认值为 **False**。
 
-- **将 UDDT 转换为基类型** - 值为 **True**时，用户定义数据类型 (UDDT) 被转换为用于创建它们的基本数据类型。 如果其中运行脚本的数据库中没有 UDDT，请使用 True  。 值为 **False**时，使用 UDDT。 默认值为 **False**。
+- **将 UDDT 转换为基类型** - 值为 **True** 时，用户定义数据类型 (UDDT) 被转换为用于创建它们的基本数据类型。 如果其中运行脚本的数据库中没有 UDDT，请使用 True  。 值为 **False** 时，使用 UDDT。 默认值为 **False**。
 
 - **生成依赖对象的脚本** - 为执行选定对象的脚本时必须存在的任何对象生成脚本。 默认值为 **True**。
 
-- **包含说明性标头** - 值为 **True**时，说明性注释将被添加到脚本中，将脚本分成若干个部分，每个对象为一个部分。 默认值为 **False**。
+- **包含说明性标头** - 值为 **True** 时，说明性注释将被添加到脚本中，将脚本分成若干个部分，每个对象为一个部分。 默认值为 **False**。
 
-- **包含 if NOT EXISTS** - 值为 **True**时，脚本包含一个用于检查对象在数据库中是否已经存在的语句，并在对象已经存在的情况下不尝试创建新对象。 默认值为 **False**。
+- **包含 if NOT EXISTS** - 值为 **True** 时，脚本包含一个用于检查对象在数据库中是否已经存在的语句，并在对象已经存在的情况下不尝试创建新对象。 默认值为 **False**。
 
-- **包含系统约束名称** - 值为 False 时，在源数据库上自动命名的约束的默认值将在目标数据库上被自动重命名  。 值为 **True**时，约束将在源数据库和目标数据库上具有相同名称。
+- **包含系统约束名称** - 值为 False 时，在源数据库上自动命名的约束的默认值将在目标数据库上被自动重命名  。 值为 **True** 时，约束将在源数据库和目标数据库上具有相同名称。
 
-- **包含不支持的语句** - 值为 **False**时，脚本不包含选定服务器版本或引擎类型上不支持的对象的语句。 值为 **True**时，脚本包含不支持的对象。 不支持的对象的每个语句都有注释，指明必须先编辑语句，然后才能对选定 SQL Server 版本或引擎类型运行脚本。 默认值为 **False**。
+- **包含不支持的语句** - 值为 **False** 时，脚本不包含选定服务器版本或引擎类型上不支持的对象的语句。 值为 **True** 时，脚本包含不支持的对象。 不支持的对象的每个语句都有注释，指明必须先编辑语句，然后才能对选定 SQL Server 版本或引擎类型运行脚本。 默认值为 **False**。
 
 - **架构限定对象名称** - 在创建的对象的名称中包括架构名称。 默认值为 **True**。
 
@@ -272,7 +272,7 @@ ms.locfileid: "92039014"
     2. 数据库引擎版本的脚本：Microsoft Azure SQL 数据仓库版  。
 5. 依次选择“保存或发布脚本”  和“完成”  。
 
-系统不会记住第 4 步中设置的选项。 如果想要记住这些选项，请按照 **如何将默认脚本选项设置为 SQL 数据仓库**中的说明进行操作。
+系统不会记住第 4 步中设置的选项。 如果想要记住这些选项，请按照 **如何将默认脚本选项设置为 SQL 数据仓库** 中的说明进行操作。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -13,13 +13,13 @@ ms.assetid: 10bc2dd1-0505-4527-8ec7-d3b4e5d6352b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e31e684e4cc7ef25dd9b2724fc15eaab085eeb5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 81288b1c579877cb926e7866e07e8de197f1a0e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038791"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476988"
 ---
 # <a name="recycle-sql-server-agent-error-logs"></a>回收 SQL Server 代理错误日志
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

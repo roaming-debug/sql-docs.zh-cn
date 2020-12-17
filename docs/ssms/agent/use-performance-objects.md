@@ -21,13 +21,13 @@ ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fb2e78a371639f3898e21c2661a44c91ba241545
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f6b7aa5d5028dabe94e9112ca935afc3e5199fd6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035483"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476958"
 ---
 # <a name="use-performance-objects"></a>使用性能对象
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,8 +43,8 @@ ms.locfileid: "92035483"
   
 |实例类型|对象名称|  
 |-----------------|---------------|  
-|默认|**SQLAgent：** 对象__：计数器__|  
-|名为|**SQLAgent$**<br /> **&#42;instance_name&#42; ：** 对象__：计数器__|  
+|默认|**SQLAgent：** 对象：计数器|  
+|名为|**SQLAgent$**<br /> **&#42;instance_name&#42; ：** 对象：计数器|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的下列性能对象。  
   

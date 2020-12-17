@@ -11,13 +11,13 @@ ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7de123e287eff695f443141ae6a604284126ef30
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: bc6817d379fe9fcb5c6cfc32ae40e6e52192f613
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037840"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476978"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>从 SQL Server 代理主作业中删除步骤
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "92037840"
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要从中删除步骤的作业，然后选择“属性”****。  
+4.  右键单击要从中删除步骤的作业，然后选择“属性”。  
   
 5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“步骤”  。  
 
