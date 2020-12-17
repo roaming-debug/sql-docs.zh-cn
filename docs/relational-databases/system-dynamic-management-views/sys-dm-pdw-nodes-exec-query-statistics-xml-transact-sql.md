@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 540a5632997c025a98e259e23f87780134649b75
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 65791195a30dcd23b184dbceeafdd786b64f857e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482551"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644079"
 ---
 # <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>dm_pdw_nodes_exec_query_statistics_xml (Transact-sql) 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "97482551"
 |query_plan|**xml**|包含与 *plan_handle* 包含部分统计信息的查询执行计划的运行时显示计划表示形式。 显示计划的格式为 XML。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。 可以为 NULL。|
 
 ## <a name="remarks"></a>备注
-[Sys.dm_exec_query_statistics_xml](./sys-dm-exec-query-statistics-xml-transact-sql.md?view=sql-server-ver15)适用的相同备注。   
+[Sys.dm_exec_query_statistics_xml](./sys-dm-exec-query-statistics-xml-transact-sql.md)适用的相同备注。   
 
 ## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;的 Azure Synapse 分析和并行数据仓库动态管理视图 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
  ## <a name="next-steps"></a>后续步骤

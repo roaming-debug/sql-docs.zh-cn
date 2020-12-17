@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 77ea4640834cff6b2ca28127aef55e14de94fe97
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: b97a4a51a8edbce4172b92fee7a418b38ce42bc4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245156"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472538"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>在警报设计器中编辑数据警报
 

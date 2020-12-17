@@ -8,25 +8,25 @@ ms.date: 06/03/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb55bf9bac934f78b0a309663ced729a8ef6534
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ca07166159b1d637b58f9eb7056218d1fc504a66
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869765"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471018"
 ---
 # <a name="get-python-package-information"></a>获取 Python 包信息
 
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 本文介绍如何获取 [SQL Server 的机器学习服务上](../sql-server-machine-learning-services.md)以及[大数据群集](../../big-data-cluster/machine-learning-services.md)上安装的 Python 包的相关信息（包括版本和安装位置）。 示例 Python 脚本显示如何列出安装路径和版本等包信息。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 本文介绍如何获取关于 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)上安装的 Python 包的信息（包括版本和安装位置）。 示例 Python 脚本显示如何列出安装路径和版本等包信息。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 本文介绍如何获取关于 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)上安装的 Python 包的信息（包括版本和安装位置）。 示例 Python 脚本显示如何列出安装路径和版本等包信息。
 ::: moniker-end
 
@@ -37,7 +37,7 @@ ms.locfileid: "94869765"
 在 SQL Server 上的数据库内运行的所有脚本或代码都必须加载实例库中的函数。 SQL Server 无法访问安装到其他库的包。 这也适用于远程客户端：在服务器计算上下文中运行的任何 Python 代码只能使用实例库中安装的包。
 若要保护服务器资产，只能由计算机管理员修改默认实例库。
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Python 的二进制文件的默认路径为：
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
@@ -45,7 +45,7 @@ Python 的二进制文件的默认路径为：
 这里假设默认 SQL 实例为 MSSQLSERVER。 如果将 SQL Server 安装作为用户定义的命名实例，则改用给定名称。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 Python 的二进制文件的默认路径为：
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES`
@@ -60,7 +60,7 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 > [!IMPORTANT]
 > 在 Azure SQL 托管实例上，运行 sp_configure 和 RECONFIGURE 命令会触发 SQL Server 重启，以使 RG 设置生效。 这可能会导致几秒钟不可用。
 ::: moniker-end
@@ -75,7 +75,7 @@ EXECUTE sp_execute_external_script
 
 有关变量 `sys.path` 以及如何使用它为模块设置解释器搜索路径的详细信息，请参阅[模块搜索路径](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 > [!NOTE]
 > 请勿尝试使用 pip 或类似方法直接在 SQL 包库中安装 Python 包。 相反，请使用 sqlmlutils 在 SQL 实例中安装包。 有关详细信息，请参阅[使用 sqlmlutils 安装 Python 包](install-additional-python-packages-on-sql-server.md)。
 ::: moniker-end
@@ -161,9 +161,9 @@ print(sys.version)
 
 ## <a name="next-steps"></a>后续步骤
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [使用 Python 工具来安装包](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [使用 sqlmlutils 来安装新的 Python 包](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

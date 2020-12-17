@@ -8,25 +8,25 @@ ms.date: 05/27/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bbc530a84ca09ce5e2797bc770e50a20fc5113e
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ee042503a0d88a878b96caba480551e9553d6a88
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869962"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470998"
 ---
 # <a name="get-r-package-information"></a>获取 R 包信息
 
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 本文介绍如何获取在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)和[大数据群集](../../big-data-cluster/machine-learning-services.md)上安装的 R 包的相关信息。 示例 R 脚本显示如何列出包信息，如安装路径和版本。
 ::: moniker-end
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 本文介绍如何获取在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)上安装的 R 包的相关信息。 示例 R 脚本显示如何列出包信息，如安装路径和版本。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 本文介绍如何获取在 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)上安装的 R 包的相关信息。 示例 R 脚本显示如何列出包信息，如安装路径和版本。
 ::: moniker-end
 
@@ -37,7 +37,7 @@ ms.locfileid: "94869962"
 在 SQL Server 上的数据库内运行的所有脚本都必须加载实例库中的函数。 SQL Server 无法访问安装到其他库的包。 这也适用于远程客户端：在服务器计算上下文中运行的任何 R 脚本只能使用实例库中安装的包。
 若要保护服务器资产，只能由计算机管理员修改默认实例库。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 R 的二进制文件的默认路径为：
 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
@@ -45,7 +45,7 @@ R 的二进制文件的默认路径为：
 这里假设默认 SQL 实例为 MSSQLSERVER。 如果将 SQL Server 安装作为用户定义的命名实例，则改用给定名称。
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 R 的二进制文件的默认路径为：
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
@@ -53,7 +53,7 @@ R 的二进制文件的默认路径为：
 这里假设默认 SQL 实例为 MSSQLSERVER。 如果将 SQL Server 安装作为用户定义的命名实例，则改用给定名称。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 R 的二进制文件的默认路径为：
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
@@ -73,7 +73,7 @@ GO
 
 ## <a name="default-microsoft-r-packages"></a>默认 Microsoft R 包
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 以下 Microsoft R 包随 SQL Server R Services 一起安装。
 
@@ -84,7 +84,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 在安装过程中选择了 R 功能时，将随 SQL Server 机器学习服务一起安装以下 Microsoft R 包。
 
@@ -97,7 +97,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 
 在安装过程中选择了 R 功能时，将随 SQL Server 机器学习服务一起安装以下 Microsoft R 包。
 
@@ -114,7 +114,7 @@ GO
 
 默认情况下，会通过服务包和累积更新刷新 R 包。 只能通过产品升级或将 R 支持绑定到 Microsoft Machine Learning Server 来实现核心 R 组件的其他包和完整版本升级。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 此外，还可以通过组件升级将 MicrosoftML 和 olapR 包添加到 SQL Server 实例中。
 ::: moniker-end
 
@@ -178,9 +178,9 @@ print(packageDescription("MicrosoftML"))
 
 ## <a name="next-steps"></a>后续步骤
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [使用 R 工具安装包](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [使用 sqlmlutils 安装新的 R 包](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

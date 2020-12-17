@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 11e051a87e0b5d051cf62c702c13f1189a21ca05
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017'
+ms.openlocfilehash: 9df3f0d56e3d210389110cdf155bd79a32c7c978
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870485"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471188"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -39,7 +39,7 @@ ms.locfileid: "94870485"
   + 使用不同的库和可执行文件将创建不一致的结果，而不是 SQL Server 中运行的结果。
   + SQL Server 无法管理在外部库中运行的 R 和 Python 脚本，从而导致资源争用。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 > [!NOTE]
 > 默认情况下，机器学习服务安装在 SQL Server 大数据群集上。 如果使用大数据群集，则无需按照本文中的步骤进行操作。 有关详细信息，请参阅[在大数据群集上使用机器学习服务（Python 和 R）](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
@@ -51,11 +51,11 @@ ms.locfileid: "94870485"
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 有关哪些 SQL Server 版本支持将 Python 和 R 与机器学习服务集成的详细信息，请参阅 [SQL Server 2017 的版本和受支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 有关哪些 SQL Server 版本支持将 Python 和 R 与机器学习服务集成的详细信息，请参阅 [SQL Server 2019 (15.x) 的版本和受支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。
 ::: moniker-end
 
@@ -67,17 +67,17 @@ ms.locfileid: "94870485"
   
 1. 在“安装”选项卡上，选择“全新 SQL Server 独立安装或向现有安装添加功能” 。
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![全新 SQL Server 独立安装](media/2017setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![全新 SQL Server 独立安装](media/2019setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
 1. 在“功能选择”  页上，选择以下选项：
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
 
    - **数据库引擎服务**
      
@@ -89,7 +89,7 @@ ms.locfileid: "94870485"
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
 
    - **数据库引擎服务**
      
@@ -109,15 +109,15 @@ ms.locfileid: "94870485"
      
      选中此选项可添加 Microsoft Python 包、Python 3.5 可执行文件以及从 Anaconda 分发中选择库。
      
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    有关安装和使用 Java 的信息，请参阅[在 Windows 上安装 SQL Server 语言扩展](../../language-extensions/install/windows-java.md)。
    ::: moniker-end
    
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![R 和 Python 的功能选项](media/2017setup-features-page-mls-rpy.PNG "R 和 Python 的安装选项")
    ::: moniker-end
    
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![R 和 Python 的功能选项](media/2019setup-features-page-mls-rpy.png "R 和 Python 的安装选项")
    ::: moniker-end
    
@@ -125,7 +125,7 @@ ms.locfileid: "94870485"
    > 
    > 不要选择 Machine Learning Server（独立）对应的选项。 在“共享功能”下安装 Machine Learning Server 的选项适用于在单独的计算机上使用。
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 4. 在“同意安装 Microsoft R Open”页上，选择“接受”，然后选择“下一步”  。 
 
@@ -151,7 +151,7 @@ ms.locfileid: "94870485"
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 1. 在“同意安装 Microsoft R Open”页上，选择“接受”，然后选择“下一步”  。 该许可协议涵盖 Microsoft R Open，其中包括分发开源 R 基础包和工具，以及 Microsoft 开发团队提供的增强型 R 包和连接提供程序。
 
@@ -272,7 +272,7 @@ ms.locfileid: "94870485"
 >
 > 例如，可以添加以下行来生成任意列名：`WITH RESULT SETS ((Col1 AS int))`
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 <!-- There are no updates yet available for 2019, and there's no 2019 update list site. When updates become available, add 2019 information to this section. -->
 
 <a name="apply-cu"></a>
@@ -313,7 +313,7 @@ ms.locfileid: "94870485"
 * [为 SQLRUserGroup 创建登录名](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 * [管理磁盘配额](/windows/desktop/fileio/managing-disk-quotas)以避免外部脚本运行耗尽磁盘空间的任务
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 在 Windows 上的 SQL Server 2019 中，隔离机制已发生更改。 此机制会影响 SQLRUserGroup、防火墙规则、文件权限和默示身份验证。 有关详细信息，请参阅 [机器学习服务的隔离更改](sql-server-machine-learning-services-2019.md)。
 ::: moniker-end
 
@@ -331,7 +331,7 @@ ms.locfileid: "94870485"
 
 现在所有工作已顺利进行，可能还需要优化服务器以支持机器学习，或安装预先训练的机器学习模型。
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ### <a name="add-more-worker-accounts"></a>添加更多辅助角色帐户
 
 如果预期会有很多用户同时运行脚本，则可以增加分配给 Launchpad 服务的辅助角色帐户数目。 有关详细信息，请参阅[在 SQL Server 机器学习服务中扩展外部脚本的并发执行](../administration/scale-concurrent-execution-external-scripts.md)。

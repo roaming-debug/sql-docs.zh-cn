@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ed406e7bb91f18149b0d42db90ed248de0d86c8
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 651abd2ca0261deae83d77a15b88840499dce957
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84535409"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482234"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 报表服务器（本机模式）
   配置为本机模式的报表服务器将作为应用程序服务器运行，并专门通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件提供所有处理和管理功能。  
@@ -52,7 +52,7 @@ ms.locfileid: "84535409"
   
 -   对承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据库管理员权限。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 -   如果要在域控制器上安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则您必须是域管理员。  
 

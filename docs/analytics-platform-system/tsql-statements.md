@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: df390f724f6903a1cd87deee1f9d48b363ce4f57
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 248d8b23ff5dac688f9ed61b38551f9012cf46f6
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489625"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641573"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>并行数据仓库的 t-sql 语句
 Transact-sql (用于分析平台系统的 T-sql) 语句 (AP) SQL Server 并行数据仓库 (PDW) 。
@@ -60,11 +60,11 @@ Transact-sql (用于分析平台系统的 T-sql) 语句 (AP) SQL Server 并行�
 ## <a name="database-console-commands"></a>数据库控制台命令
 * [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md)
 * [DBCC FREEPROCCACHE](/previous-versions/sql/sql-server-2016/mt204018(v=sql.130))
-* [DBCC SHRINKLOG](../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md?view=aps-pdw-2016-au7)
-* [DBCC PDW_SHOWEXECUTIONPLAN](../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md?view=aps-pdw-2016-au7)
-* [DBCC PDW_SHOWPARTITIONSTATS](../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md?view=aps-pdw-2016-au7)
+* [DBCC SHRINKLOG](../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md?view=aps-pdw-2016-au7&preserve-view=true)
+* [DBCC PDW_SHOWEXECUTIONPLAN](../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
+* [DBCC PDW_SHOWPARTITIONSTATS](../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 * [DBCC PDW_SHOWSPACEUSED](../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md)
-* [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md?view=sql-server-ver15)
+* [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 
 ## <a name="query-statements"></a>查询语句
 * [SELECT](../t-sql/queries/select-transact-sql.md)

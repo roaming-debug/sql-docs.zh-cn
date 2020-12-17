@@ -15,13 +15,13 @@ helpviewer_keywords:
 - creating, alerts
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0d166462c2a542d834e92da03735e6e8294290d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: e83db2f4ce3a049a6c285b36a2d6a611369ca7bb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243294"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484349"
 ---
 # <a name="data-alert-designer"></a>数据警报设计器
 
@@ -62,7 +62,7 @@ ms.locfileid: "87243294"
   
   
 ### <a name="alert-data"></a>警报数据  
- 在打开数据警报设计器时，它将从报表生成所有数据馈送并使它们变得可用，并且“报表数据名称”下拉列表将包含各个馈送的名称****。 在您创建警报定义时数据馈送将缓存在内存中，并且当您在数据馈送之间切换以便浏览报表数据时将快速填充显示数据馈送数据的表。  
+ 在打开数据警报设计器时，它将从报表生成所有数据馈送并使它们变得可用，并且“报表数据名称”下拉列表将包含各个馈送的名称。 在您创建警报定义时数据馈送将缓存在内存中，并且当您在数据馈送之间切换以便浏览报表数据时将快速填充显示数据馈送数据的表。  
   
  创建数据警报定义的第一步是选择包含您希望监视警报的数据的报表数据馈送。 报表可以有零个或多个数据馈送。 如果某个报表没有数据馈送，则无法对其创建警报。 数据馈送可由任何数据区域生成，包括所有类型的图表、仪表、指示器以及表、矩阵和列表。  
   

@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 18d1cc11b8ab4d4501e62ac5acfbffaeab32c892
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935326"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466578"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>向报表历史记录添加快照
 
@@ -24,9 +24,9 @@ ms.locfileid: "91935326"
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>向报表历史记录中手动添加快照
   
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
-1. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头****。
+1. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头。
   
 2. 在下拉菜单中，单击 **“查看报表历史记录”** 。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "91935326"
   
 1. 对于已配置为作为报表执行快照运行的报表，可以设置其他属性以在每次刷新该快照时将该快照的副本保存到报表历史记录。  
   
-2. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头****。  
+2. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头。  
   
 3. 在下拉菜单中，单击 **“管理”** 。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91935326"
   
 ## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>基于计划自动向报表历史记录中添加快照  
   
-1. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头****。  
+1. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头。  
   
 2. 在下拉菜单中，单击 **“管理”** 。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "91935326"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## <a name="to-manually-add-snapshots-to-report-history"></a>向报表历史记录中手动添加快照
   

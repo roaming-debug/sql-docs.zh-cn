@@ -9,13 +9,13 @@ author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a732734e256d553c4917545d24021b02d7232b01
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 4cce378546ef8c6fa9405f24fb9157dc6a249969
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988455"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471248"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>从 Python 或 R 脚本到 SQL Server 的环回连接
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "91988455"
 
 ### <a name="connection-string-on-windows"></a>Windows 上的连接字符串
 
-若要在 Windows 的 SQL Server 上进行身份验证，Python 或 R 脚本可以使用 Trusted_Connection 连接字符串属性作为执行 sp_execute_external_script 的同一用户进行身份验证****。
+若要在 Windows 的 SQL Server 上进行身份验证，Python 或 R 脚本可以使用 Trusted_Connection 连接字符串属性作为执行 sp_execute_external_script 的同一用户进行身份验证。
 
 以下是 Windows 上的环回连接字符串示例：
 
@@ -38,7 +38,7 @@ ms.locfileid: "91988455"
 
 ### <a name="connection-string-on-linux"></a>Linux 上的连接字符串
 
-若要在 Linux 的 SQL Server 上进行身份验证，Python 或 R 脚本需要使用 ODBC 驱动程序的 ClientCertificate 和 ClientKey 属性来作为执行 `sp_execute_external_script` 的同一用户进行身份验证********。 这需要使用[最新的 ODBC 驱动程序](../../connect/odbc/download-odbc-driver-for-sql-server.md)版本 17.4.1.1。
+若要在 Linux 的 SQL Server 上进行身份验证，Python 或 R 脚本需要使用 ODBC 驱动程序的 ClientCertificate 和 ClientKey 属性来作为执行 `sp_execute_external_script` 的同一用户进行身份验证。 这需要使用[最新的 ODBC 驱动程序](../../connect/odbc/download-odbc-driver-for-sql-server.md)版本 17.4.1.1。
 
 以下是 Linux 上的环回连接字符串示例：
 
@@ -46,7 +46,7 @@ ms.locfileid: "91988455"
 "Driver=ODBC Driver 17 for SQL Server;Server=fe80::8012:3df5:0:5db1%eth0;Database=nameOfDatabase;ClientCertificate=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitecert.pem;ClientKey=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitekey.pem;TrustServerCertificate=Yes;Trusted_Connection=no;Encrypt=Yes"
 ```
 
-服务器地址、客户端证书文件位置和客户端密钥文件位置对于每个 `sp_execute_external_script` 都是唯一的，可通过使用 API“rx_get_sql_loopback_connection_string()”（适用于 Python）或“rxGetSqlLoopbackConnectionString()”（适用于 R）来获取这些信息********。
+服务器地址、客户端证书文件位置和客户端密钥文件位置对于每个 `sp_execute_external_script` 都是唯一的，可通过使用 API“rx_get_sql_loopback_connection_string()”（适用于 Python）或“rxGetSqlLoopbackConnectionString()”（适用于 R）来获取这些信息。
 
 有关连接字符串属性的详细信息，请参阅 Microsoft ODBC Driver for SQL Server 的 [DSN 和连接字符串关键字和属性](../../connect/odbc/dsn-connection-string-attribute.md?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes)。
 

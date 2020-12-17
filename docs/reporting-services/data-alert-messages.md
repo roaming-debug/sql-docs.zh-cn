@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6af7f155edba97ea558c7bc6427bb5ef143eea47
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 7c7f28e92a29dd355d4b74de2121e1c386816116
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245159"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425322"
 ---
 # <a name="data-alert-messages"></a>数据警报消息
 
@@ -45,7 +45,7 @@ SQL Server Reporting Services 数据警报通过电子邮件传递两种类型�
   
 1.  **代表** 包含创建数据警报定义的人员姓名。  
   
-2.  如果您在报表定义中提供了说明，则它会在 **代表**下显示。  
+2.  如果您在报表定义中提供了说明，则它会在 **代表** 下显示。  
   
 3.  **警报结果** 显示报表数据馈送中符合在警报定义中以表格格式指定的规则的行，或显示错误说明。 对于显示的行数没有限制。  
   

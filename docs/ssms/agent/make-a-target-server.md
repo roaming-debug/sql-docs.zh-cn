@@ -20,13 +20,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dcb200c472eb0284af8ef829687b89b5ae0340b7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 20a6fb0b2f32c838290d113529661e34a805e4df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036540"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472348"
 ---
 # <a name="make-a-target-server"></a>设置目标服务器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "92036540"
   
 1.  在“对象资源管理器”中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，然后单击“使其成为目标服务器”****。 **“目标服务器向导”** 会指导您完成生成目标服务器的过程。  
+2.  右键单击“SQL Server 代理”，指向“多服务器管理”，然后单击“使其成为目标服务器”。 **“目标服务器向导”** 会指导您完成生成目标服务器的过程。  
   
 3.  从 **“选择主服务器”** 页中，选择此目标服务器将从中接收作业的主服务器。  
   

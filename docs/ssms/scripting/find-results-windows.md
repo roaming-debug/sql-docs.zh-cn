@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54e72e8fa66c442b8bd0edf5c0c2afb3fc961560
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 74b2483037d44436bb0ae3ef6f1c3de2fe9fa852
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901260"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466348"
 ---
 # <a name="find-results-windows"></a>“查找结果”窗口
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

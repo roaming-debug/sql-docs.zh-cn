@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1de79327a877be44f6c17639a7c3a9e0fb1425ad
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7215b2bc235b846e67484e19a77ba75cea2f9881
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093560"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480558"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 编辑器 (SQL Server Management Studio)
 
@@ -85,7 +85,7 @@ ms.locfileid: "89093560"
 ## <a name="data-view"></a>数据视图  
  “数据”视图提供一个可用于修改 .xml 文件的数据网格。 在“数据”视图中只能编辑 XML 文件中的内容（不包括标记和结构）。  
   
- “数据”视图中有两个单独的区域：“数据表”和“数据”。 “数据表”**** 区域用于按照嵌套顺序（从最外层到最内层）列出 XML 文件中所定义的关系。 **“数据”** 区域是一个数据网格，会根据“数据表”区域中的所选内容显示数据。  
+ “数据”视图中有两个单独的区域：“数据表”和“数据”。 “数据表”区域用于按照嵌套顺序（从最外层到最内层）列出 XML 文件中所定义的关系。 **“数据”** 区域是一个数据网格，会根据“数据表”区域中的所选内容显示数据。  
   
 > [!NOTE]  
 >  新创建的 XML 文件不包含数据，因此不能在“数据”视图中显示。 另外，有一些 XML 文档实例根本不能调用“数据”视图。 即使系统认为 XML 文件的格式正确，但如果其中的数据不是结构化数据，则在尝试切换到“数据”视图时将生成以下消息：“尽管此文档的格式良好，但它包含了数据视图无法显示的结构”。  

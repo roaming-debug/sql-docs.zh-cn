@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5585f26247ad360fa848a24109416a59c49c94a6
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 412d1501344f5cdcb64ebd08cc9d328f4b7090c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793774"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469978"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型并在 SQL Server 中使用它（演练）
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]

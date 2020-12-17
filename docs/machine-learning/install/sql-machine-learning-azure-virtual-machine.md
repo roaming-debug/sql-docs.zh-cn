@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 576a19cf5a86893c248f11897f9a2d83a80598bc
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: e8eb32776aa72095c03305d4eb31cf5bb220ebe4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956968"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471238"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>在 Azure 虚拟机上安装带有 Python 和 R 的 SQL Server 机器学习服务
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]

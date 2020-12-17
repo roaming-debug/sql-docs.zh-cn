@@ -11,13 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ce4f45c80a7ccc0645d42b21ab9487a0360eb30
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1dcdc5052c48c3ff2b2fe7924a9a097d0efcf0a5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035695"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472388"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
 
@@ -48,9 +48,9 @@ ms.locfileid: "92035695"
   
 3. 单击加号以便展开 **“作业”** 文件夹。  
   
-4. 右键单击要编辑其计划的作业，然后选择“属性”****。  
+4. 右键单击要编辑其计划的作业，然后选择“属性”。  
   
-5. 在“作业属性 – _job\_name_”对话框中的“选择页”下，选择“计划”************。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“计划”页）](../../ssms/agent/job-properties-new-job-schedules-page.md)。  
+5. 在“作业属性 – _job\_name_”对话框中的“选择页”下，选择“计划”。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“计划”页）](../../ssms/agent/job-properties-new-job-schedules-page.md)。  
   
 6. 完成后，单击 **“确定”** 。  
   

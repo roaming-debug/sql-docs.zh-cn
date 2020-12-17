@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ed1adfff31afc57f50e6b5e0757370b152cd544
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: da47f54b73faf9507e5c815526bb14d1aa6d8396
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956498"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471288"
 ---
 # <a name="python-language-extension-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的 Python 语言扩展
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]

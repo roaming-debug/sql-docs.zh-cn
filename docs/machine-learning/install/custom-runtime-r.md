@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b058fe7aa723eddcdcf97158d19a053bf2b062b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 554c3a08cc29cfbc6addef598698c40df31f9990
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870044"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471228"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>为 SQL Server 安装 R 自定义运行时
 
@@ -26,7 +26,7 @@ ms.locfileid: "94870044"
 
 + 使用 SQL Server 2019 安装机器学习服务。 完成一些其他配置步骤后，可将语言扩展与用于 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > 本文介绍如何在 Windows 上安装适用于 R 的自定义运行时。 若要在 Linux 上安装，请参阅[在 Linux 上安装适用于 SQL Server 的 R 自定义运行时](custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)
@@ -182,7 +182,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 你可以安装 SQL Server on Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 和 Ubuntu。 有关详细信息，请参阅 [Linux 上的 SQL Server 安装指南中的“受支持的平台”部分](../../linux/sql-server-linux-setup.md#supportedplatforms)。
 

@@ -16,13 +16,13 @@ ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d843e9c816a0d78da0cf2feb5c31c666203a3133
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 214a1f98358a35602864f7964e497290c28e3992
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033030"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474428"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>引用计划的作业
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -8,13 +8,13 @@ ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c85fc8de816c24496fe0ffb353f7d51e20b07389
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+monikerRange: '>= sql-server-2017'
+ms.openlocfilehash: 6f5b449b587cab543a14c9c815eac60889112ff8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866043"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484259"
 ---
 # <a name="find-the-product-key-for-sql-server-reporting-services"></a>查找 SQL Server Reporting Services 的产品密钥
 

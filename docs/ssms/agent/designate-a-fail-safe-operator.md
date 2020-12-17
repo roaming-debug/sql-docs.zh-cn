@@ -16,13 +16,13 @@ ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 139694d124788cc68aec005f3c35b2ee47a39ef4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5e8774eeb1f0c13350e81a6cb5635695c80a3eb8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037970"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423372"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定防故障操作员
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,16 +51,16 @@ ms.locfileid: "92037970"
   
 #### <a name="to-designate-a-fail-safe-operator"></a>指定防故障操作员  
   
-1.  在“对象资源管理器”**** 中，单击加号以展开服务器，该服务器包含要指定为防故障操作员的 SQL Server 代理操作员。  
+1.  在“对象资源管理器”中，单击加号以展开服务器，该服务器包含要指定为防故障操作员的 SQL Server 代理操作员。  
   
-2.  右键单击“SQL Server 代理”****，然后选择“属性”****。  
+2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   
-3.  在“SQL Server 代理属性 - server\_name”对话框的“选择页”下，选择“警报系统”************__。  
+3.  在“SQL Server 代理属性 - server\_name”对话框的“选择页”下，选择“警报系统”。  
   
-4.  在“防故障操作员”**** 下，选中“启用防故障操作员”****。  
+4.  在“防故障操作员”下，选中“启用防故障操作员”。  
   
-5.  在“操作员”**** 列表中，选择想要执行防故障的操作员。  
+5.  在“操作员”列表中，选择想要执行防故障的操作员。  
   
-6.  选中以下任何或所有复选框以指定通知操作员的方法：“电子邮件”****、“寻呼程序”**** 或“Net send”****。  
+6.  选中以下任何或所有复选框以指定通知操作员的方法：“电子邮件”、“寻呼程序”或“Net send”。  
   
 7.  完成后，单击 **“确定”** 。  

@@ -10,22 +10,22 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: 8d0a533d7bd15eb8901c0aba29894e61bbf840ad
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: abbda73ac3aeda94ee8752dbbe638d93bc3d5573
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627525"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425108"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]
 
@@ -150,7 +150,7 @@ ms.locfileid: "84627525"
 |--------------|-----------------|  
 |名称|键入区分大小写的参数名称。 名称必须以字母开头，可以包含字母、数字、下划线 (_)。 名称中不能包含空格。 对于自动生成的参数，其名称会与数据集查询中的参数相匹配。 默认情况下，手动创建的参数与 ReportParameter1 相类似。|  
 |Prompt|在报表查看器工具栏上的参数旁边显示的文本。|  
-|数据类型|报表参数必须为以下数据类型之一：<br /><br /> **Boolean**中所创建的移动报表中使用。 用户通过单选按钮选择 True 或 False。<br /><br /> **DateTime**。 用户从日历控件中选择日期。<br /><br /> **Integer**。 用户在文本框中键入值。<br /><br /> **Float**。 用户在文本框中键入值。<br /><br /> **文本**。 用户在文本框中键入值。<br /><br /> 为参数定义可用值时，用户可从下拉列表中选择值，即使数据类型为 **DateTime**也是如此。<br /><br /> 有关报表数据类型的详细信息，请参阅 [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)。|  
+|数据类型|报表参数必须为以下数据类型之一：<br /><br /> **Boolean** 中所创建的移动报表中使用。 用户通过单选按钮选择 True 或 False。<br /><br /> **DateTime**。 用户从日历控件中选择日期。<br /><br /> **Integer**。 用户在文本框中键入值。<br /><br /> **Float**。 用户在文本框中键入值。<br /><br /> **文本**。 用户在文本框中键入值。<br /><br /> 为参数定义可用值时，用户可从下拉列表中选择值，即使数据类型为 **DateTime** 也是如此。<br /><br /> 有关报表数据类型的详细信息，请参阅 [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)。|  
 |允许空值|如果参数的值可为空字符串或为空白，请选择此选项。<br /><br /> 如果为参数指定有效值，并希望将空白值作为有效值之一，则必须在指定的值中包含空白值。 选择此选项并不会自动在可用值中包含空白值。|  
 |允许 Null 值|如果参数的值可为 Null，请选择此选项。<br /><br /> 如果为参数指定有效值，并希望将 Null 作为有效值之一，则必须在指定的值中包含 Null。 选择此选项并不会自动在可用值中包含 Null。|  
 |允许多个值|提供可用值以创建下拉列表，供用户从中选择。 这是确保只在数据集查询中提交有效值的好方法。<br /><br /> 如果参数值可为下拉列表中显示的多个值，请选择此选项。 不允许为 Null 值。 选择此选项后，将向参数下拉列表中的可用值列表添加复选框。 列表的顶部包括 **“全选”** 复选框。 用户可以选中所需的值。<br /><br /> 如果用于提供值的数据快速更改，则用户看到的列表可能不是最新列表。|  
@@ -215,7 +215,7 @@ ms.locfileid: "84627525"
  另一种将参数用于雇员或个人数据的安全方法是：基于包含 Users 集合中的 **UserID** 字段的表达式选择数据。 Users 集合提供了获取报表运行用户的标识的方法，并使用该标识检索用户特定的数据。  
   
 > [!IMPORTANT]  
->  在任何包括 **String**类型参数的报表中，请务必使用可用值列表（也称为有效值列表），并确保任何运行该报表的用户仅具有查看该报表中数据所必需的权限。 定义 **String**类型的参数时，系统将向用户显示一个可以使用任何值的文本框。 可用值列表限制可以输入的值。 如果报表参数与数据集参数关联，并但您没有使用可用值列表，则报表用户可能会在文本框中键入 SQL 语法，从而导致报表和服务器容易受到 SQL 注入攻击。 如果用户有足够的权限执行新的 SQL 语句，则可能在服务器上产生意外结果。  
+>  在任何包括 **String** 类型参数的报表中，请务必使用可用值列表（也称为有效值列表），并确保任何运行该报表的用户仅具有查看该报表中数据所必需的权限。 定义 **String** 类型的参数时，系统将向用户显示一个可以使用任何值的文本框。 可用值列表限制可以输入的值。 如果报表参数与数据集参数关联，并但您没有使用可用值列表，则报表用户可能会在文本框中键入 SQL 语法，从而导致报表和服务器容易受到 SQL 注入攻击。 如果用户有足够的权限执行新的 SQL 语句，则可能在服务器上产生意外结果。  
 >   
 >  如果报表参数与数据集参数无关联，并且参数值包含在报表中，则报表用户可能会在参数值中键入表达式语法或 URL，并将报表呈现为 Excel 或 HTML 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
 >   

@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0270966cb84ee7fab587f92a5c84f9f52ad128f0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 58d9f3921500e2fd7fd1fa02046d4f89d67ccbeb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036593"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478788"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
 
@@ -29,7 +29,7 @@ ms.locfileid: "92036593"
 > [!IMPORTANT]  
 > [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”**。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”。  
 
 ## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>SQL Server 代理的好处 
 
@@ -57,7 +57,7 @@ ms.locfileid: "92036593"
   
 -   通过执行 sp_start_job 存储过程。  
   
-作业中的每个操作都是一个“作业步骤” **。 例如，作业步骤可以运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、执行 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包或向 Analysis Services 服务器发出命令。 作业步骤作为作业的一部分进行管理。  
+作业中的每个操作都是一个“作业步骤” 。 例如，作业步骤可以运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、执行 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包或向 Analysis Services 服务器发出命令。 作业步骤作为作业的一部分进行管理。  
   
 所有作业步骤均在特定的安全上下文中运行。 对于使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的作业步骤，请使用 EXECUTE AS 语句设置作业步骤的安全上下文。 对于其他类型的作业步骤，请使用代理帐户来设置作业步骤的安全上下文。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "92036593"
 有关详细信息，请参阅 [创建计划并将计划附加到作业](../../ssms/agent/create-and-attach-schedules-to-jobs.md)。  
   
 ### <a name="alerts"></a>警报  
-“警报” ** 是对特定事件的自动响应。 例如，事件可以是启动的作业，也可以是达到特定阈值的系统资源。 可以定义警报产生的条件。  
+“警报”  是对特定事件的自动响应。 例如，事件可以是启动的作业，也可以是达到特定阈值的系统资源。 可以定义警报产生的条件。  
   
 警报可以响应下列任一条件：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "92036593"
 有关详细信息，请参阅 [“警报”](../../ssms/agent/alerts.md)。  
   
 ### <a name="operators"></a>运算符  
-“操作员” ** 定义的是负责维护一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的个人的联系信息。 在有些企业中，操作员职责被分配给一个人。 在拥有多个服务器的企业中，操作员职责可以由多人分担。 操作员不涉及安全信息，因此不会定义安全主体。  
+“操作员”  定义的是负责维护一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的个人的联系信息。 在有些企业中，操作员职责被分配给一个人。 在拥有多个服务器的企业中，操作员职责可以由多人分担。 操作员不涉及安全信息，因此不会定义安全主体。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以通过下列一种或多种方式通知操作员有警报出现：  
   
@@ -105,7 +105,7 @@ ms.locfileid: "92036593"
 -   **net send**  
   
 > [!NOTE]  
-> **代理所在的计算机必须启动 Windows Messenger 服务，才能使用**net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送通知。  
+> **代理所在的计算机必须启动 Windows Messenger 服务，才能使用** net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送通知。  
   
 > [!IMPORTANT]  
 > 在 **的未来版本中，将从** 代理中删除寻呼程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
@@ -115,10 +115,10 @@ ms.locfileid: "92036593"
 可以将操作员定义为一组个人的别名。 这样，该组的所有成员就可以同时收到通知。 有关详细信息，请参阅[运算符](../../ssms/agent/operators.md)。  
   
 ## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server 代理管理的安全性  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在 **msdb**数据库中使用了 **SQLAgentUserRole**、 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 固定数据库角色，用于控制非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin **固定服务器角色成员的用户对** 代理的访问。 除了这些固定数据库角色之外，子系统和代理还有助于数据库管理员确保每个作业步骤运行时都具有执行其任务所需的最低权限。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在 **msdb** 数据库中使用了 **SQLAgentUserRole**、 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 固定数据库角色，用于控制非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin **固定服务器角色成员的用户对** 代理的访问。 除了这些固定数据库角色之外，子系统和代理还有助于数据库管理员确保每个作业步骤运行时都具有执行其任务所需的最低权限。  
   
 ### <a name="roles"></a>角色  
-**msdb**数据库中的 **SQLAgentUserRole**、 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole**固定数据库角色的成员，以及 **sysadmin** 固定服务器角色的成员具有访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的权限。 不属于这些角色的用户不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。 有关用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的角色的详细信息，请参阅 [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
+**msdb** 数据库中的 **SQLAgentUserRole**、 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 固定数据库角色的成员，以及 **sysadmin** 固定服务器角色的成员具有访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的权限。 不属于这些角色的用户不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。 有关用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的角色的详细信息，请参阅 [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ### <a name="subsystems"></a>子系统  
 子系统是预定义的对象，表示作业步骤可用的功能。 每个代理都可以访问一个或多个子系统。 子系统可以提供安全性，因为它们分隔了对可用于代理的功能的访问。 除了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤，每个作业步骤都在代理的上下文中运行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤使用 EXECUTE AS 命令将安全上下文设置为作业的所有者。  
@@ -147,7 +147,7 @@ ms.locfileid: "92036593"
 ### <a name="proxies"></a>代理  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用代理管理安全上下文。 一个代理可用于多个作业步骤。 **sysadmin** 固定服务器角色的成员可创建代理。  
   
-每个代理对应于一个安全凭据。 每个代理都可与一组子系统和一组登录名相关联。 代理仅可用于使用与该代理相关联的子系统的作业步骤。 若要创建使用特定代理的作业步骤，作业所有者必须使用与此代理相关联的登录名，或者是对代理具有无限访问权限的角色成员。 **sysadmin** 固定服务器角色的成员可以无限制地访问代理。 **SQLAgentUserRole**、 **SQLAgentReaderRole**或 **SQLAgentOperatorRole** 的成员仅能使用授予他们特定访问权限的代理。 这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的每个成员用户必须获得访问特定代理的权限，才能创建使用那些代理的作业步骤。  
+每个代理对应于一个安全凭据。 每个代理都可与一组子系统和一组登录名相关联。 代理仅可用于使用与该代理相关联的子系统的作业步骤。 若要创建使用特定代理的作业步骤，作业所有者必须使用与此代理相关联的登录名，或者是对代理具有无限访问权限的角色成员。 **sysadmin** 固定服务器角色的成员可以无限制地访问代理。 **SQLAgentUserRole**、 **SQLAgentReaderRole** 或 **SQLAgentOperatorRole** 的成员仅能使用授予他们特定访问权限的代理。 这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的每个成员用户必须获得访问特定代理的权限，才能创建使用那些代理的作业步骤。  
   
 ## <a name="related-tasks"></a>Related Tasks  
 使用以下步骤来配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以自动管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  

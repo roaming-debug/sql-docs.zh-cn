@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b66b4f303572e5eaad5d8b6a8d0e85c3f725015d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: de726644bbd239dfe095a1c2a1860d95f213eb29
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034890"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408833"
 ---
 # <a name="operator-properties---new-operator-general-page"></a>操作员属性 - 新建操作员（“常规”页）
 
@@ -41,7 +41,7 @@ ms.locfileid: "92034890"
 指定操作员的电子邮件地址。  
   
 **Net send 地址**  
-指定用于 **net send**的地址。  
+指定用于 **net send** 的地址。  
   
 **寻呼电子邮件名称**  
 指定用于操作员的寻呼程序的电子邮件地址。  

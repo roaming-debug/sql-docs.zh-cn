@@ -17,13 +17,13 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f51138ef9e52a8bd44f160f0f9f2fa8366a290a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 79a7b516e7c108cc6e57eca4bf38f959f4ce779a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038107"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474328"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>将执行跟踪消息写入到 SQL Server 代理错误日志中
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,8 +61,8 @@ ms.locfileid: "92038107"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要将执行跟踪消息写入到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的服务器。  
   
-2.  右键单击“SQL Server 代理”****，然后选择“属性”****。  
+2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   
-3.  在“SQL Server 代理属性 - server\_name”对话框中，在“常规”页的“错误日志”下，选中“包含执行跟踪消息”复选框****************__。  
+3.  在“SQL Server 代理属性 - server\_name”对话框中，在“常规”页的“错误日志”下，选中“包含执行跟踪消息”复选框。  
   
 4.  单击“确定”。  

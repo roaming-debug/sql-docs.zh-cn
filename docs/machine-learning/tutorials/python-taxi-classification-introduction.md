@@ -9,26 +9,26 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b8e0e8df7bd2a5453299751df682e0c33502c25
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 2dd02ddc0dccb0ca41d16688039fa33ad406abd8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94585069"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470358"
 ---
 # <a name="python-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Python 教程：使用二元分类来预测纽约市出租车费用
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在本面向 SQL 程序员的由五部分组成的系列教程中，你将学习如何在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)或[大数据群集](../../big-data-cluster/machine-learning-services.md)中集成 Python。
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 在本面向 SQL 程序员的由五部分组成的系列教程中，你将学习如何在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中集成 Python。
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 在本面向 SQL 程序员的由五部分组成的系列教程中，你将学习如何在 [Azure SQL 托管实例中的机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)上集成 Python。
 ::: moniker-end
 
@@ -57,7 +57,7 @@ ms.locfileid: "94585069"
 
 ## <a name="prerequisites"></a>必备知识
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 + [使用 Python 安装 SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 ::: moniker-end
 

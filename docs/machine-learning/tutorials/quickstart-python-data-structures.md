@@ -9,13 +9,13 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ad1aba8a87e5668949f3e7810f0ee6066932171
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: cebd0158319e7d58de923dc10aeae40ce6df72fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870146"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470288"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习使用 Python 时的数据结构和对象
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: cawrites
 ms.author: chadam
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6356874ac61790fe27730961e0429db92760bfce
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
+ms.openlocfilehash: 105fc8245fa216396117ed32c55aa0b2821f6c0c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96121249"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477138"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户疑难解答 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

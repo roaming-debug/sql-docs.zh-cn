@@ -7,13 +7,13 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0095984a9358f742147e84e69847ab32781cab07
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 87d4fbcfa114b9f80f19495b3d3728c2dd7678ac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956878"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470828"
 ---
 # <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR（SQL Server 机器学习服务中的 R 包）
 
@@ -143,7 +143,7 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 
 可在存储过程中封装的 R 代码中调用 RevoScaleR 中的函数。 大多数开发者会在本地构建 RevoScaleR 解决方案，然后将已完成的 R 代码迁移到存储过程作为部署练习。
 
-在本地运行时，通常可在命令行或 R 开发环境中运行 R 脚本，并使用 RevoScaleR 函数之一指定 SQL Server 计算上下文****。 可将远程计算上下文用于整个代码或单个函数。 例如，你可能希望将模型定型卸载到服务器上以使用最新数据并避免数据移动。
+在本地运行时，通常可在命令行或 R 开发环境中运行 R 脚本，并使用 RevoScaleR 函数之一指定 SQL Server 计算上下文。 可将远程计算上下文用于整个代码或单个函数。 例如，你可能希望将模型定型卸载到服务器上以使用最新数据并避免数据移动。
 
 准备好将 R 脚本封装在存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中时，建议将代码重写为具有明确定义的输入和输出的单个函数。 
 

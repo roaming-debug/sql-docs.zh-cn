@@ -18,13 +18,13 @@ ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 862d34f4f26fbeee44e51fe842eb565638fedc04
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d5df0229f84063f11f80fdefa78afffc6b8e2d40
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97422865"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>设置警报寻呼地址的格式
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "92037370"
   
 3.  在 **“选择页”** 下，选择 **“警报系统”**。  
   
-4.  在“寻呼电子邮件的地址格式”**** 字段的“收件人行”**** 和“抄送行”**** 框中，输入寻呼地址的前缀或后缀。 发送通知时，将插入操作员的实际寻呼地址。  
+4.  在“寻呼电子邮件的地址格式”字段的“收件人行”和“抄送行”框中，输入寻呼地址的前缀或后缀。 发送通知时，将插入操作员的实际寻呼地址。  
   
 5.  在 **“主题”** 框中，输入主题行的前缀或后缀。  
   
-6.  选择“在通知页中包含电子邮件的正文部分”**** 复选框，以便在寻呼消息中包含完整电子邮件（与仅包含主题行相对）。  
+6.  选择“在通知页中包含电子邮件的正文部分”复选框，以便在寻呼消息中包含完整电子邮件（与仅包含主题行相对）。  
   
 7.  完成后，单击 **“确定”** 。  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8bae1b0ae40d9895cedc094cf4a31386199f5e1
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: aa8a9fbbcadfcdd3c266de4b1453ea7e5402e1af
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891227"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466648"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的浏览器支持
 
@@ -83,7 +83,7 @@ ms.locfileid: "91891227"
 
  **(+)** 最新公开发布的版本
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  如果当前使用与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]相集成的 SharePoint 产品，请参阅  [在 SharePoint 2016 中计划浏览器支持](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)。
 
@@ -147,7 +147,7 @@ ms.locfileid: "91891227"
 
  **(+)** 最新公开发布的版本
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  有关 SharePoint 2016 浏览器支持的详细信息，请参阅 [在 SharePoint 2013 中计划浏览器支持](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)。
 

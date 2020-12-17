@@ -13,13 +13,13 @@ ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bf0e3d57a0d759f45634cf06dd1d54c4b22d014b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: cebd4c7204c1f416a40e0ac61bd91212b655eb99
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036631"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472408"
 ---
 # <a name="alert-properties---new-alert-options-page"></a>警报属性 - 新建警报（“选项”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

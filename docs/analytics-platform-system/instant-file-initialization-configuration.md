@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 62b76b616786c593d395ee8720bba4c012390290
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6843efa430fcd43149d048c9d21c5120954ab896
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766886"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637813"
 ---
 # <a name="instant-file-initialization-configuration"></a>即时文件初始化配置
 即时文件初始化是一项 SQL Server 功能，使数据文件操作能够更快地运行。 选中此复选框可打开的即时文件初始化，将提高 SQL Server PDW 的性能。 但是，如果这会给您的企业带来安全风险，则不要选中该框。  
@@ -25,7 +25,7 @@ ms.locfileid: "88766886"
 当启用 TDE 时，即时文件初始化功能不可用。  
   
 ## <a name="add-permission-for-the-backup-account"></a>添加备份帐户权限  
-备份过程需要 (可以访问备份存储位置的 Windows 用户帐户) 的网络凭据。 通过使用 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 过程授权 PDW 使用帐户。 有关整个备份过程，请参阅 [备份数据库](../t-sql/statements/backup-transact-sql.md?view=sql-server-ver15) 。 若要使用即时文件初始化，必须向备份帐户授予 `Perform volume maintenance tasks` 权限。  
+备份过程需要 (可以访问备份存储位置的 Windows 用户帐户) 的网络凭据。 通过使用 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 过程授权 PDW 使用帐户。 有关整个备份过程，请参阅 [备份数据库](../t-sql/statements/backup-transact-sql.md) 。 若要使用即时文件初始化，必须向备份帐户授予 `Perform volume maintenance tasks` 权限。  
   
 1.  在备份服务器上，打开 **本地安全策略** 应用程序 (`secpol.msc`) 。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "88766886"
   
 3.  在右侧窗格中，双击“执行卷维护任务”。  
   
-4.  单击“添加用户或组” **** ，添加用于备份的任何用户帐户。  
+4.  单击“添加用户或组”  ，添加用于备份的任何用户帐户。  
   
 5.  单击“应用” ，然后关闭所有“本地安全策略”  对话框。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "88766886"
     > [!WARNING]  
     > 关闭即时文件初始化时，上述功能的安全注意事项可能仍适用于启用即时文件初始化时删除的文件。  
   
-4.  单击“应用”。 此更改将在下一次重新启动设备服务时，传播 SQL Server PDW 上的 SQL Server 实例。 若要立即重新启动设备服务，请参阅 [PDW 服务状态 &#40;分析平台系统&#41;](pdw-services-status.md)。  
+4.  单击“应用”  。 此更改将在下一次重新启动设备服务时，传播 SQL Server PDW 上的 SQL Server 实例。 若要立即重新启动设备服务，请参阅 [PDW 服务状态 &#40;分析平台系统&#41;](pdw-services-status.md)。  
   
 5.  你可能需要重复上述步骤以 **添加备份帐户的权限** ，以删除 " **执行卷维护任务** " 权限。  
   

@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 966929c35df641a6a464c14481c03a11e45bc34a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 77c2134ee706b7cd86676501aec703f8468d6a5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038114"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476948"
 ---
 # <a name="view-sql-server-agent-error-log"></a>查看 SQL Server 代理错误日志
 
@@ -66,9 +66,9 @@ ms.locfileid: "92038114"
   
 3.  单击加号以展开 **“错误日志”** 文件夹。  
   
-4.  右键单击要查看的错误日志，并选择“查看代理日志”****。  
+4.  右键单击要查看的错误日志，并选择“查看代理日志”。  
   
-    “日志文件查看器 - server_name”对话框中提供以下选项****__：  
+    “日志文件查看器 - server_name”对话框中提供以下选项：  
   
     **加载日志**  
     打开一个对话框，您可以在其中指定要加载的日志文件。  

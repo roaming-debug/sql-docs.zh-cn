@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f5e6f93c102c4f08d2f52e0359e77d2c450a74d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 65d2d4fbf10a2ac0dac19d5653bf3f89fe39b41a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039103"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476938"
 ---
 # <a name="complete-transact-sql-snippets"></a>完成 Transact-SQL 代码段
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

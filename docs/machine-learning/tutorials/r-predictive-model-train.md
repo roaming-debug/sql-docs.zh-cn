@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 597cbdc270c902b6c13f17b6fe66a369357a539d
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 3f9cd6dd00e45f89d178bad737b4bd958e07de7c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870286"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470128"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>教程：通过 SQL 机器学习在 R 中创建预测模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 此系列教程由四个部分组成，这是第三部分。你将在 R 中训练预测模型。在此系列的下一部分中，你将在机器学习服务中或大数据群集上将此模型部署到 SQL Server 数据库中。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 此系列教程由四个部分组成，这是第三部分。你将在 R 中训练预测模型。在此系列的下一部分中，你将通过机器学习服务将此模型部署到 SQL Server 数据库中。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 此系列教程由四个部分组成，这是第三部分，将在 R 中训练预测模型。在此系列的下一部分中，将通过 SQL Server R Services 将此模型部署到数据库中。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 此系列教程由四个部分组成，这是第三部分，将在 R 中训练预测模型。在此系列的下一部分中，将通过机器学习服务将此模型部署到 Azure SQL 托管实例数据库中。
 ::: moniker-end
 

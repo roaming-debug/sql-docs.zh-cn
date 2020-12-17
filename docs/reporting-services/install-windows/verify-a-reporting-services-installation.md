@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7f8b963f2b46ec68d0306e29e487f6c59f537ae
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 3359888ec94a9893dc018782f73827f876e95037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934481"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472398"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 验证安装时应遵循的步骤取决于报表服务器的模式。  
@@ -28,7 +28,7 @@ ms.locfileid: "91934481"
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> 验证 SharePoint 模式安装  
   
@@ -87,7 +87,7 @@ ms.locfileid: "91934481"
   
 1.  运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到您刚安装的报表服务器实例。 “Web 服务 URL”页包括指向报表服务器 Web 服务的链接。 单击该链接可验证您是否可以访问该服务器。 如果未配置报表服务器数据库，请先进行配置，再单击该链接。  
   
-2.  打开“服务”控制台应用程序并验证报表服务器服务是否正在运行。 若要查看报表服务器服务的状态，请单击“开始”，指向“控制面板”，双击“管理工具”，再双击“服务”****************。 出现服务列表后，滚动到“报表服务器 (MSSQLSERVER)”****。 该服务的状态应为 **“已启动”**。  
+2.  打开“服务”控制台应用程序并验证报表服务器服务是否正在运行。 若要查看报表服务器服务的状态，请单击“开始”，指向“控制面板”，双击“管理工具”，再双击“服务”。 出现服务列表后，滚动到“报表服务器 (MSSQLSERVER)”。 该服务的状态应为 **“已启动”**。  
   
 3.  打开浏览器，在地址栏中键入报表服务器的 URL。 该地址由安装过程中为报表服务器指定的服务器名称和虚拟目录名组成。 默认情况下，报表服务器虚拟目录的名称为 **ReportServer**。 可以使用以下 URL 验证报表服务器安装： https://\<computer name>/ReportServer\<_instance name> 。 如果将报表服务器安装为命名实例，URL 将有所不同。 有关 URL 格式的详细信息，请参阅[配置报表服务器 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。 如果你在 Windows Vista 或 Windows Server 2008 上是本地管理员，请参阅[为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019, contperfq4
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c7fa9d7702fb93fd4fe8334f873eb1b66c0f61d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: d07154cdde04c173f1d775df9597f5ccdbc62e61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115136"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470708"
 ---
 # <a name="grant-users-permission-to-execute-python-and-r-scripts-with-sql-server-machine-learning-services"></a>授予用户在 SQL Server 机器学习服务中执行 Python 和 R 脚本的权限
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]

@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: seo-lt-2019
 ms.date: 10/14/2020
-ms.openlocfilehash: 59f7fdf4427a6f63da0a36a73697b2f5dbce7784
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 28369cdd9f2336e9666f65bbaa99b13a31c77d13
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081556"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489797"
 ---
 # <a name="manage-authentication-to-sql-server-in-powershell"></a>使用 PowerShell 管理对 SQL Server 的身份验证
 
@@ -66,10 +66,10 @@ function sqldrive
 }  
   
 ## Use the sqldrive function to create a SQLAuth virtual drive.  
-sqldrive SQLAuth  
+sqldrive SQLAuth
   
-## CD to the virtual drive, which invokes the supplied authentication credentials.  
-cd SQLAuth  
+## Set-Location to the virtual drive, which invokes the supplied authentication credentials.  
+sl SQLAuth:
 ```
 
 ## <a name="sql-server-authentication-using-invoke-sqlcmd"></a>使用 Invoke-Sqlcmd 的 SQL Server 身份验证

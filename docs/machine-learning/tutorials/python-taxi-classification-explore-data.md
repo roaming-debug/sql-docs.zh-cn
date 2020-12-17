@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: bd2c27bbefa22355c63d78a3f5822951b4ca3a94
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0f52df34bb04a94baf14076a9ea345712166ae5a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178565"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470318"
 ---
 # <a name="python-tutorial-explore-and-visualize-data"></a>Python 教程：浏览并可视化数据
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88178565"
 
 首先，请花一分钟时间浏览数据架构，因为我们做了一些更改，以便更轻松地使用 NYC 出租车数据
 
-+ 原始数据集对出租车标识符和行程记录使用了不同文件。 我们已将两个原始数据集加入列 medallion、hack_license 和 pickup_datetime______。  
++ 原始数据集对出租车标识符和行程记录使用了不同文件。 我们已将两个原始数据集加入列 medallion、hack_license 和 pickup_datetime。  
 + 原始数据集跨多个文件，且非常庞大。 我们缩减了采样，仅获取 1% 的原始记录。 当前数据表包含 1,703,957 行和 23 列。
 
 **出租车标识符**
@@ -55,7 +55,7 @@ ms.locfileid: "88178565"
 
 每条费用记录都包括付费信息，如付款类型、总付款和小费金额。
 
-最后三列可用于各种机器学习任务。  Tip_amount 列包含连续数值，并且可用作回归分析的 **label** 列。 tipped 列只有是/否值，用于二元分类。  Tip_class 列有多个**级别标签**，因此可以用作多级分类任务的标签。
+最后三列可用于各种机器学习任务。  Tip_amount 列包含连续数值，并且可用作回归分析的 **label** 列。 tipped 列只有是/否值，用于二元分类。  Tip_class 列有多个 **级别标签**，因此可以用作多级分类任务的标签。
 
 标签列使用的值都基于 `tip_amount` 列，并使用以下业务规则：
 
@@ -77,19 +77,19 @@ ms.locfileid: "88178565"
 
 ## <a name="create-plots-using-python-in-t-sql"></a>使用 T-SQL 中的 Python 创建绘图
 
-开发数据科学解决方案通常包括深入的数据探索和数据可视化。 由于可视化是理解数据和离群值的分布的强大工具，因此 Python 提供了许多用于可视化数据的包。 Matplotlib 模块是最受欢迎的可视化库之一，其中包含许多用于创建直方图、散点图、箱线图和其他数据浏览图表的函数****。
+开发数据科学解决方案通常包括深入的数据探索和数据可视化。 由于可视化是理解数据和离群值的分布的强大工具，因此 Python 提供了许多用于可视化数据的包。 Matplotlib 模块是最受欢迎的可视化库之一，其中包含许多用于创建直方图、散点图、箱线图和其他数据浏览图表的函数。
 
-在本部分中，你可了解如何使用存储过程处理各种绘图。 将 Python 对象 `plot` 存储为 varbinary 数据，然后将其写入可在其他位置共享或查看的文件，而不是在服务器上打开该图像****。
+在本部分中，你可了解如何使用存储过程处理各种绘图。 将 Python 对象 `plot` 存储为 varbinary 数据，然后将其写入可在其他位置共享或查看的文件，而不是在服务器上打开该图像。
 
 ### <a name="create-a-plot-as-varbinary-data"></a>创建绘图作为 varbinary 数据
 
-存储过程将序列化的 Python `figure` 对象作为 varbinary 数据流返回****。 无法直接查看二进制数据，但可以在客户端上使用 Python 代码来反序列化和查看这些图形，然后将该图像文件保存到客户端计算机上。
+存储过程将序列化的 Python `figure` 对象作为 varbinary 数据流返回。 无法直接查看二进制数据，但可以在客户端上使用 Python 代码来反序列化和查看这些图形，然后将该图像文件保存到客户端计算机上。
 
-1. 如果 PowerShell 脚本尚未创建存储过程 PyPlotMatplotlib，请执行此操作****。
+1. 如果 PowerShell 脚本尚未创建存储过程 PyPlotMatplotlib，请执行此操作。
 
     - 变量 `@query` 定义查询文本 `SELECT tipped FROM nyctaxi_sample`，该文本作为脚本输入变量 `@input_data_1` 的参数传递给 Python 代码块。
     - Python 脚本非常简单：matplotlib `figure` 对象用于制作直方图和散点图，然后使用 `pickle` 库对这些对象进行序列化。
-    - Python 图形对象序列化为 pandas 数据帧进行输出****。
+    - Python 图形对象序列化为 pandas 数据帧进行输出。
   
     ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
@@ -184,7 +184,7 @@ ms.locfileid: "88178565"
 
 5. 如果连接成功，应看到如下所示的消息：
   
-   绘图已保存到目录: xxxx**
+   绘图已保存到目录: xxxx
   
 6. 已在 Python 工作目录中创建输出文件。 要查看绘图，请查找 Python 工作目录，然后打开该文件。 下图显示了保存到客户端计算机上的绘图。
   

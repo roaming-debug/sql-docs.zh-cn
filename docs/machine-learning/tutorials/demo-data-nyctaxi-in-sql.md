@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2dab1d48ca2aa98e4a70a08bac492366f2632b79
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 77bcd682aa8d58437421134a697bcb715efe595d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470468"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>用于 SQL Server Python 和 R 教程的纽约市出租车演示数据
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "94584949"
 
 文件大小约为 90 MB。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 >[!NOTE]
 >若要还原 [SQL Server 大数据群集](../../big-data-cluster/big-data-cluster-overview.md)上的示例数据库，请下载[NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) 并遵循[将数据库还原到 SQL Server 大数据群集主实例](../../big-data-cluster/data-ingestion-restore-database.md)中的说明进行操作。
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 >[!NOTE]
 >若要还原 [Azure SQL 托管实例中的机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)上的示例数据库，请按照[快速入门：将数据库还原到 Azure SQL 托管实例](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)中的说明，使用纽约市出租车演示数据库 .bak 文件进行操作：[https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)。
 ::: moniker-end

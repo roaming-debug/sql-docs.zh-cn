@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: bd60220151fb8f389ac7c82c1bdb0f10cf46bba1
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: d261cbabe0e5bdb22db537a10ef259b9b9d39e6c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713805"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489907"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>第 2 课：使用数据库引擎优化顾问
 
@@ -32,10 +32,10 @@ ms.locfileid: "88713805"
 
 - 安装 [SQL Server Management Studio。](../../ssms/download-sql-server-management-studio-ssms.md)
 - 安装 [SQL Server 2017 Developer Edition。](https://www.microsoft.com/sql-server/sql-server-downloads)
-- 下载 [AdventureWorks2017 示例数据库。](../../samples/adventureworks-install-configure.md?view=sql-server-2017)
+- 下载 [AdventureWorks2017 示例数据库。](../../samples/adventureworks-install-configure.md)
 
 
-此处提供在 SSMS 中还原数据库的说明：[还原数据库。](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
+此处提供在 SSMS 中还原数据库的说明：[还原数据库。](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
 
   >[!NOTE]
   > 本教程适用于熟悉使用 SQL Server Management Studio 和基本数据库管理任务的用户。 
@@ -73,7 +73,7 @@ ms.locfileid: "88713805"
 
    ![查找之前保存的脚本](media/dta-tutorials/dta-script.png)
   
-5.  在“用于工作负载分析的数据库”**** 列表中选择 AdventureWorks2017，在“选择要优化的数据库和表”**** 网格中选择 AdventureWorks2017，并选择“保存优化日志”****。 “用于工作负荷分析的数据库”指定数据库引擎优化顾问在优化工作负荷时连接到的第一个数据库。 优化开始之后，数据库引擎优化顾问连接到由工作负荷中包含的 `USE DATABASE` 语句所指定的数据库。  
+5.  在“用于工作负载分析的数据库”列表中选择 AdventureWorks2017，在“选择要优化的数据库和表”网格中选择 AdventureWorks2017，并选择“保存优化日志”。 “用于工作负荷分析的数据库”指定数据库引擎优化顾问在优化工作负荷时连接到的第一个数据库。 优化开始之后，数据库引擎优化顾问连接到由工作负荷中包含的 `USE DATABASE` 语句所指定的数据库。  
 
   ![用于 db 的 DTA 选项](media/dta-tutorials/dta-select-db.png)
   
@@ -88,15 +88,15 @@ ms.locfileid: "88713805"
   ![启动 DTA 分析](media/dta-tutorials/dta-start-analysis.png)
 
   
-8.  分析完成之后，在“操作”菜单中，单击“保存建议”，将建议保存为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 在“另存为”**** 对话框中，导航到要保存建议脚本的目录，然后键入文件名 **MyRecommendations**。  
+8.  分析完成之后，在“操作”菜单中，单击“保存建议”，将建议保存为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 在“另存为”对话框中，导航到要保存建议脚本的目录，然后键入文件名 **MyRecommendations**。  
 
   ![保存 DTA 建议](media/dta-tutorials/dta-save-recommendations.png)
 
 ## <a name="view-tuning-recommendations"></a>查看优化建议
   
-1.  在“建议”选项卡上，使用选项卡式页面底部的滚动条可以查看所有“索引建议”列。 每一行代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问建议删除或创建的一个数据库对象（索引或索引视图）。 滚动到最右边的列，并单击“定义”。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问将显示“SQL 脚本预览”窗口，从中可以查看创建或删除该行中的数据库对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本****。 单击“关闭”按钮以关闭预览窗口。  
+1.  在“建议”选项卡上，使用选项卡式页面底部的滚动条可以查看所有“索引建议”列。 每一行代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问建议删除或创建的一个数据库对象（索引或索引视图）。 滚动到最右边的列，并单击“定义”。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问将显示“SQL 脚本预览”窗口，从中可以查看创建或删除该行中的数据库对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 单击“关闭”按钮以关闭预览窗口。  
   
-    如果难以找到包含链接的“定义”****，则请单击以清除选项卡式页面底部的“显示现有对象”**** 复选框，从而减少所显示的行数。 如果清除此复选框，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问将仅显示已为其生成建议的对象。 选中“显示现有对象”复选框，可以查看 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中当前存在的所有数据库对象。 使用选项卡式页面右侧的滚动条可以查看所有对象。
+    如果难以找到包含链接的“定义”，则请单击以清除选项卡式页面底部的“显示现有对象”复选框，从而减少所显示的行数。 如果清除此复选框，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问将仅显示已为其生成建议的对象。 选中“显示现有对象”复选框，可以查看 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中当前存在的所有数据库对象。 使用选项卡式页面右侧的滚动条可以查看所有对象。
 
   ![DTA 索引建议](media/dta-tutorials/dta-recommendation.png)  
   
@@ -108,16 +108,16 @@ ms.locfileid: "88713805"
   
     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查询编辑器中打开 MySessionRecommendations.sql 脚本进行查看。 通过在查询编辑器中执行脚本，可将建议应用于 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库。但现在不要执行该操作。 不运行该脚本，直接在查询编辑器中将其关闭。  
   
-    另外，也可以通过单击[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问“操作”**** 菜单上的“应用建议”**** 选项来应用建议。但现在不要在本练习中应用这些建议。  
+    另外，也可以通过单击[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问“操作”菜单上的“应用建议”选项来应用建议。但现在不要在本练习中应用这些建议。  
   
-4.  如果“建议”**** 选项卡上存在多个建议，请清除“索引建议”**** 网格中列出数据库对象的某些行。  
+4.  如果“建议”选项卡上存在多个建议，请清除“索引建议”网格中列出数据库对象的某些行。  
   
 5.  在 **“操作”** 菜单上，单击 **“评估建议”** 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问将创建一个新的优化会话，从中可以评估 MySession 原有建议的子集。  
   
 6.  输入新的“会话名称” **EvaluateMySession**，然后单击工具栏中的“开始分析”按钮。 可以对新的优化会话重复步骤 2 和步骤 3 以查看其建议。  
   
 ### <a name="summary"></a>总结  
-如果在运行会话之后必须更改优化选项，则可能有必要评估优化建议的子集。 例如，如果在指定会话的优化选项时要求 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问考虑索引视图，但在生成了建议后又决定不使用索引视图。 那么，可以使用“操作”菜单上的“评估建议”选项让 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问在不考虑索引视图的情况下重新评估会话。 使用“评估建议”**** 选项时，将假设将以前生成的建议应用于当前物理设计，以获得第二个优化会话的物理设计。  
+如果在运行会话之后必须更改优化选项，则可能有必要评估优化建议的子集。 例如，如果在指定会话的优化选项时要求 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问考虑索引视图，但在生成了建议后又决定不使用索引视图。 那么，可以使用“操作”菜单上的“评估建议”选项让 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问在不考虑索引视图的情况下重新评估会话。 使用“评估建议”选项时，将假设将以前生成的建议应用于当前物理设计，以获得第二个优化会话的物理设计。  
   
 在“报告”选项卡中可以查看更多优化结果信息，这将在本课程的下一个任务中介绍。  
 

@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e8df9091a470672acb3a52e13c1e8f62bf478bbe
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 7201a76acbca92060a90ebbc4cf881a774821571
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038230"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472318"
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>操作员属性 - 新建操作员（“通知”页）
 
@@ -52,7 +52,7 @@ ms.locfileid: "92038230"
 通过将电子邮件发送到寻呼地址来通知此操作员。  
   
 **Net send**  
-使用 **net send**通知此操作员。  
+使用 **net send** 通知此操作员。  
   
 ## <a name="see-also"></a>另请参阅  
 [运算符](../../ssms/agent/operators.md)  

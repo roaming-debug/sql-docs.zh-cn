@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 532bbc5c8061a02e5e05ec56b5f6a1853f252d42
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: = sql-server-2016
+ms.openlocfilehash: c7ca2a221b40d636e3dda791bff7ec1d19c402ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890844"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425107"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>在命令提示符处安装 Reporting Services 2016
 

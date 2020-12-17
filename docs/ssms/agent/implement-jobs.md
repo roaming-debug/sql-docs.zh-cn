@@ -16,13 +16,13 @@ ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f9e6a036c6647abe0cac99d28e3f00d440bb666a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1ffb148bbc95b5b7d6fdbf314b5bf7639b2ff318
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466488"
 ---
 # <a name="implement-jobs"></a>执行作业
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: fc700631df6289c0529fdfd65d73b630cfac00f1
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: b262b29028afbc0497c0efb2728fa1065cd14d10
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94585037"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470378"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Python 教程：通过 SQL 机器学习使用线性回归来预测雪橇租赁
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在这个由四个部分组成的教程系列中，你将在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 Python 和线性回归来预测雪橇租赁次数。 本教程使用 [Azure Data Studio 中的 Python 笔记本](../../azure-data-studio/notebooks/notebooks-guidance.md)。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 在这个由四个部分组成的教程系列中，你将在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中使用 Python 和线性回归来预测雪橇租赁次数。 本教程使用 [Azure Data Studio 中的 Python 笔记本](../../azure-data-studio/notebooks/notebooks-guidance.md)。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 在这个由四个部分组成的教程系列中，你将在 [Azure SQL Server 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)中使用 Python 和线性回归来预测雪橇租赁次数。 本教程使用 [Azure Data Studio 中的 Python 笔记本](../../azure-data-studio/notebooks/notebooks-guidance.md)。
 ::: moniker-end
 
@@ -47,13 +47,13 @@ ms.locfileid: "94585037"
 
 ## <a name="prerequisites"></a>先决条件
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 * SQL Server 机器学习服务 — 如需安装机器学习服务，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 * SQL Server 机器学习服务 - 如需安装机器学习服务，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 * Azure SQL 托管实例机器学习服务 - 有关信息，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 * 使用 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 将示例数据库还原到 Azure SQL 托管实例。
@@ -80,12 +80,12 @@ ms.locfileid: "94585037"
 
 本教程中使用的示例数据库已保存到 .bak 数据库备份文件，以供下载和使用。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
 > 如果在大数据群集上使用机器学习服务，请了解如何[将数据库还原成 SQL Server 大数据群集主实例](../../big-data-cluster/data-ingestion-restore-database.md)。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 1. 下载文件 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak)。
 
 1. 使用以下详细信息，按 Azure Data Studio 中[从备份文件还原数据库](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)中的说明操作：
@@ -100,7 +100,7 @@ ms.locfileid: "94585037"
    SELECT * FROM [dbo].[rental_data];
    ```
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 1. 下载文件 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak)。
 
 1. 按照 SQL Server Management Studio 中的[将数据库还原到托管实例](/azure/sql-database/sql-database-managed-instance-get-started-restore)中的说明，使用以下详细信息：

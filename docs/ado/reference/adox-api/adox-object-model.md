@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e08a73f18bfbf750ff9181591106552b4232938
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ace01fe36816e28abc7fa533b2029b31bf1afa17
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985718"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641167"
 ---
 # <a name="adox-object-model"></a>ADOX 对象模型
 下图说明了如何在 ADOX 中表示和相关对象。 有关特定对象或集合的详细信息，请参阅特定的参考主题或 [Adox 对象](./adox-objects.md) 和 [adox 集合](./adox-collections.md)。  
@@ -28,7 +28,7 @@ ms.locfileid: "88985718"
  每个 [表](./table-object-adox.md)、 [索引](./index-object-adox.md)和 [列](./column-object-adox.md) 对象还具有标准 ADO [属性](../ado-api/properties-collection-ado.md) 集合。  
   
 ## <a name="see-also"></a>另请参阅  
- [ADOX API 参考](?view=sql-server-ver15)   
+ [ADOX API 参考]()   
  [ADOX 代码示例](./adox-code-examples.md)   
  [ADOX 集合](./adox-collections.md)   
  [ADOX 枚举常量](./adox-enumerated-constants.md)   

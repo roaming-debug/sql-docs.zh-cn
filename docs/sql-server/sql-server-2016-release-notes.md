@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 318dfd44b3c931b124372ce5ea60681b8c1e7e99
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 720da25fe19f064c6a6eb3b363832b76113e2c5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235481"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409693"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -151,15 +151,15 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
     如果已安装 SQL Server 2016，请按顺序执行以下步骤：
 
-    1.  下载合适的 *vcredist_\*exe* 。
+    1.  下载合适的 *vcredist_\*exe*。
     1.  停止数据库引擎的所有实例的 SQL Server 服务。
-    1.  安装 **KB 3138367** 。
+    1.  安装 **KB 3138367**。
     1.  重新启动计算机。
 
 
  - 安装  [KB 3164398 - 适用于 SQL Server 2016 MSVCRT 系统必备的关键更新](https://support.microsoft.com/kb/3164398)。
 
-    如果使用 **KB 3164398** ，可以在 SQL Server 安装过程中、通过 Microsoft 更新或从 Microsoft 下载中心进行安装。
+    如果使用 **KB 3164398**，可以在 SQL Server 安装过程中、通过 Microsoft 更新或从 Microsoft 下载中心进行安装。
 
     - **在 SQL Server 2016 安装过程中：** 如果运行 SQL Server 安装程序的计算机具有 Internet 访问权限，那么作为整个 SQL Server 安装的一部分，SQL Server 安装程序将检查更新。 如果接受更新，安装程序将下载二进制文件并在安装过程中对文件进行更新。
 

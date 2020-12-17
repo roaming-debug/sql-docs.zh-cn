@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 70fc5f62a4b9bfcda50d4d850a89b4c3ac93ad91
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: ad6556e856c9329d0fc324a77a2d74f655d18340
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033696"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424750"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>将作业分配到作业类别
 
@@ -52,7 +52,7 @@ ms.locfileid: "92033696"
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要编辑的作业，然后选择“属性”****。  
+4.  右键单击要编辑的作业，然后选择“属性”。  
   
 5.  在“作业属性 - _job\_name_”对话框的“类别”列表中，选择要分配给作业的作业类别。  
   
