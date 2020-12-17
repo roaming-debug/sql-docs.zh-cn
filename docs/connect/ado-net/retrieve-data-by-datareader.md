@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 06bfaa994c2b29959f44cfc554122465db9e0394
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772171"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559199"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>按 DataReader 检索数据
 
@@ -53,7 +53,7 @@ reader = command.ExecuteReader();
 > 当 DataReader 打开时，该 DataReader 将以独占方式使用 Connection  。 在原始 DataReader 关闭之前，将无法对 Connection 执行任何命令（包括创建另一个 DataReader）  。  
 
 > [!NOTE]
-> 不要在类的 Finalize 方法中对 Connection、DataReader 或任何其他托管对象调用 Close 或 Dispose    。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 Finalize 方法。 有关详细信息，请参阅[垃圾回收](/dotnet/standard/garbage-collection/index.md)。
+> 不要在类的 Finalize 方法中对 Connection、DataReader 或任何其他托管对象调用 Close 或 Dispose    。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 Finalize 方法。 有关详细信息，请参阅[垃圾回收](/dotnet/standard/garbage-collection/index)。
  
 ## <a name="retrieve-multiple-result-sets-using-nextresult"></a>使用 NextResult 检索多个结果集
 

@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a0c5e38eb93aa8394836edc7d92726a0d2c9bd13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 894dfe8b6b3c4832a687cd10b2ed21644d1f7227
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472689"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439342"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>迁移 Reporting Services 安装（SharePoint 模式）
 
@@ -62,11 +62,11 @@ ms.locfileid: "88472689"
   
 |数据库|示例名称|说明|  
 |--------------|------------------|-|  
-|目录数据库|ReportingService_[service application GUID] (&#42;)****|用户迁移。|  
-|Temp 数据库|ReportingService_[service application GUID]TempDB (&#42;)****|用户迁移。|  
+|目录数据库|ReportingService_[service application GUID] (&#42;)|用户迁移。|  
+|Temp 数据库|ReportingService_[service application GUID]TempDB (&#42;)|用户迁移。|  
 |警报数据库|ReportingService_[服务应用程序 GUID]_Alerting|在创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序时创建。|  
   
- (&#42;) 该表中所示的示例名称遵循在你创建新的 SSRS 服务应用程序时 SSRS 使用的命名约定****。 如果您在从不同的服务器进行迁移，则您的目录和 tempDB 将具有来自原始安装的名称。  
+ (&#42;) 该表中所示的示例名称遵循在你创建新的 SSRS 服务应用程序时 SSRS 使用的命名约定。 如果您在从不同的服务器进行迁移，则您的目录和 tempDB 将具有来自原始安装的名称。  
   
 ####  <a name="backup-operations"></a><a name="bkmk_backup_operations"></a> 备份操作  
  本节介绍迁移所需的信息的类型以及用于完成备份的工具或过程。  

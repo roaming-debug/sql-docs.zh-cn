@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: eb35ae0143b2146d5d5d38ebf0f2ab6d51a94049
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933762"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439322"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密密钥 - 备份和还原加密密钥
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91933762"
   
  **本机模式：** 报表服务器配置管理器或 rskeymgmt 实用工具。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint 模式：** SharePoint 管理中心页或 PowerShell。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "91933762"
   
 1.  启动报表服务器配置管理器，然后连接到要配置的报表服务器实例。  
   
-2.  单击“加密密钥”，再选择“备份”********。  
+2.  单击“加密密钥”，再选择“备份”。  
   
 3.  键入强密码。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "91933762"
   
 1.  启动报表服务器配置管理器，然后连接到要配置的报表服务器实例。  
   
-2.  在“加密密钥”页上，选择“还原”****。  
+2.  在“加密密钥”页上，选择“还原”。  
   
 3.  选择包含备份副本的 .snk 文件。  
   

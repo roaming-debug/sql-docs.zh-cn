@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d92479dbc8cc705e263b0828926bc2a5e86312b6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6474b863e5078b94da5dc79c1c1a7f90b3faf761
+ms.sourcegitcommit: e120899c5e72ce3108d1e459703ccd2ea6a84a5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778446"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97353708"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>在 Visual Studio Code 中的 SQL Server 大数据群集上提交 Spark 作业
 
@@ -28,7 +28,7 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 
 完成本文中的步骤需要以下各项：
 
-- SQL Server 大数据群集。 请参阅 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)。
+- SQL Server 大数据群集。 请参阅 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview)。
 - [Visual Studio Code](https://code.visualstudio.com/)。
 - [Mono](https://www.mono-project.com/docs/getting-started/install/)。 Mono 仅适用于 Linux 和 macOS。
 - [为 Visual Studio Code 设置 PySpark 交互式环境](/azure/hdinsight/set-up-pyspark-interactive-environment)。
@@ -256,4 +256,4 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 3. 查看“输出”视图以进行验证  。  
 
 ## <a name="next-steps"></a>后续步骤
-有关 SQL Server 大数据群集和相关方案的详细信息，请参阅 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)。
+有关 SQL Server 大数据群集和相关方案的详细信息，请参阅 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview)。

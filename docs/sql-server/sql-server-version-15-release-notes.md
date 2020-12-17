@@ -9,13 +9,13 @@ ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7472d3c02c0858935f1221521fc88275789ca261
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: = sql-server-ver15
+ms.openlocfilehash: 9762de193eae8ad4e67e77ae54c9778e92357c45
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248076"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402590"
 ---
 # <a name="sql-server-2019-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 发行说明
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]

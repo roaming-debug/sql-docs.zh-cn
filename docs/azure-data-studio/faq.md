@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: alayu, maghan
 ms.custom: seodec18
 ms.date: 10/28/2020
-ms.openlocfilehash: 212115d87f747d1ee35bc4d9445833daee5d25e5
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 33a7470f3b80d74201c127823db938b11df068e6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035933"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559029"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio 常见问题解答
 
@@ -93,7 +93,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 是的。
 
-[SqlPackage.exe](../tools/sqlpackage-download.md) 现在可以在适用于 Windows、macOS 和 Linux 的 .NET Core 上使用。  SQL 项目 (SSDT) 功能是在 Azure Data Studio 的 [SQL 数据库项目扩展](extensions/sql-database-project-extension.md)中启用的。
+[SqlPackage.exe](../tools/sqlpackage/sqlpackage-download.md) 现在可以在适用于 Windows、macOS 和 Linux 的 .NET Core 上使用。  SQL 项目 (SSDT) 功能是在 Azure Data Studio 的 [SQL 数据库项目扩展](extensions/sql-database-project-extension.md)中启用的。
 
 ## <a name="will-sql-powershell-cmdlets-be-available-on-linux-and-macos"></a>SQL PowerShell cmdlet 是否可在 Linux 和 macOS 上使用？
 

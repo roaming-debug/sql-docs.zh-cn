@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: fd971797825b0af5b98ab498ce96549aad468e0c
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 19bdca4ab4b380d5a971078eb8e264cb409caa7c
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518977"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559079"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>如何：安装和管理功能扩展
 
@@ -37,7 +37,7 @@ ms.locfileid: "85518977"
 |扩展类型|命令行服务|安装文件夹|  
 |------------------|------------------------|------------------|  
 |SQL Server 单元测试的自定义测试条件|MSBuild/MSTest 可用于从 Visual Studio 2013 和类似命令行工具的开发人员命令提示符处运行单元测试。|在 Visual Studio 内运行时也是如此。|  
-|生成参与者<br /><br />部署参与者|[SqlPackage.exe](../tools/sqlpackage.md)，或通过在生成数据库项目时使用 MSBuild 部署或发布目标。|MSBuild：在 Visual Studio 内运行时也是如此。<br /><br />[SqlPackage.exe](../tools/sqlpackage.md)：如果位于 Visual Studio 目录中，则与之前相同。<br /><br />如果 SqlPackage.exe 和其他 DacFx DLLs 位于该目录之外，则扩展应放置在相同的目录或 C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions 中。|  
+|生成参与者<br /><br />部署参与者|[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md)，或通过在生成数据库项目时使用 MSBuild 部署或发布目标。|MSBuild：在 Visual Studio 内运行时也是如此。<br /><br />[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md)：如果位于 Visual Studio 目录中，则与之前相同。<br /><br />如果 SqlPackage.exe 和其他 DacFx DLLs 位于该目录之外，则扩展应放置在相同的目录或 C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions 中。|  
 |静态代码分析规则|MSBuild 可用于生成项目和运行静态代码分析。<br /><br />此外，可使用 CodeAnalysisService API 从你自己的应用程序运行代码分析。 在这种情况下，扩展查找规则与使用 SqlPackage.exe 时的作用相同。|对于生成和部署参与者也是如此。|  
   
 > [!NOTE]  

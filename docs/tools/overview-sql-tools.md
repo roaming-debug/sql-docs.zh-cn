@@ -11,13 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 668ab3177cb49cfcbafc81500325740c941046d0
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: df6a1e45a31bffd87ea7db06e0569162f7896fc0
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006625"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559299"
 ---
 # <a name="sql-tools-overview"></a>SQL 工具概述
 
@@ -37,8 +37,8 @@ ms.locfileid: "92006625"
 | 工具 | 说明 | 操作系统 |
 |:--|:--|:--|
 | [ **![ADS 映像](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | 可以运行按需 SQL 查询，查看结果并将其保存为文本、JSON 或 Excel 格式的轻型编辑器。 编辑数据，组织你最喜欢的数据库连接，并以熟悉的对象浏览体验浏览数据库对象。 | **Windows</br>macOS</br>Linux** |
-| [ **![SSMS 映像](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | 管理具有完整 GUI 支持的 SQL Server 实例或数据库。 访问、配置、管理和开发 SQL Server、Azure SQL 数据库和 Azure Synapse Analytics 的所有组件。 在一个综合实用工具中汇集了大量图形工具和丰富的脚本编辑器，为各种技能水平的开发者和数据库管理员提供对 SQL 的访问权限。 | **Windows** |
-| [ **![SSDT 映像](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools (SSDT)** ](../ssdt/download-sql-server-data-tools-ssdt.md) | 一款新式开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Analysis Services (AS) 数据模型、Integration Services (IS) 包和 Reporting Services (RS) 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 [Visual Studio](https://visualstudio.microsoft.com/downloads/) 中开发应用程序一样轻松。 | **Windows** |
+| [ **![SSMS 映像](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)**](../ssms/download-sql-server-management-studio-ssms.md) | 管理具有完整 GUI 支持的 SQL Server 实例或数据库。 访问、配置、管理和开发 SQL Server、Azure SQL 数据库和 Azure Synapse Analytics 的所有组件。 在一个综合实用工具中汇集了大量图形工具和丰富的脚本编辑器，为各种技能水平的开发者和数据库管理员提供对 SQL 的访问权限。 | **Windows** |
+| [ **![SSDT 映像](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools (SSDT)**](../ssdt/download-sql-server-data-tools-ssdt.md) | 一款新式开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Analysis Services (AS) 数据模型、Integration Services (IS) 包和 Reporting Services (RS) 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 [Visual Studio](https://visualstudio.microsoft.com/downloads/) 中开发应用程序一样轻松。 | **Windows** |
 | [ **![VS Code 映像](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | Visual Studio Code 的 [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) 为官方 Visual Studio Code 扩展，它支持连接到 SQL Server，并在 Visual Studio Code 中为 T-SQL 提供丰富的编辑体验。 在轻型编辑器中编写 T-SQL 脚本。 | **Windows</br>macOS</br>Linux** |
 
 ## <a name="command-line-tools"></a>命令行工具
@@ -48,11 +48,11 @@ ms.locfileid: "92006625"
 | 工具 | 说明 | 操作系统 |
 |:--|:--|:--|
 |[**bcp**](bcp-utility.md)|大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据     。| **Windows</br>macOS</br>Linux** |
-|[**mssql-cli（预览版）** ](mssql-cli.md)|**mssql-cli** 是一项用于查询 SQL Server 的交互式命令行工具。 此外，使用具有 IntelliSense、语法高亮等功能的命令行工具查询 SQL Server。 | **Windows</br>macOS</br>Linux** |
+|[**mssql-cli（预览版）**](mssql-cli.md)|**mssql-cli** 是一项用于查询 SQL Server 的交互式命令行工具。 此外，使用具有 IntelliSense、语法高亮等功能的命令行工具查询 SQL Server。 | **Windows</br>macOS</br>Linux** |
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** 配置在 Linux 上运行的 SQL Server。 | **Linux** |
-|[**mssql-scripter（预览版）** ](https://github.com/Microsoft/mssql-scripter) | mssql-scripter  是 SQL Server 数据库的多平台命令行体验。 | **Windows</br>macOS</br>Linux** |
+|[**mssql-scripter（预览版）**](https://github.com/Microsoft/mssql-scripter) | mssql-scripter  是 SQL Server 数据库的多平台命令行体验。 | **Windows</br>macOS</br>Linux** |
 | [**sqlcmd**](sqlcmd-utility.md) |可以在命令提示符下，使用 sqlcmd  实用工具输入 Transact-SQL 语句、系统过程和脚本文件。 | **Windows</br>macOS</br>Linux** |
-| [**sqlpackage**](sqlpackage.md) |sqlpackage  是一个命令行实用工具，可自动处理多个数据库开发任务。 |**Windows</br>macOS</br>Linux** |
+| [**sqlpackage**](sqlpackage/sqlpackage.md) |sqlpackage  是一个命令行实用工具，可自动处理多个数据库开发任务。 |**Windows</br>macOS</br>Linux** |
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| SQL Server PowerShell  提供了用于处理 SQL 的 cmdlet。 | **Windows</br>macOS</br>Linux** |
 
 ## <a name="migration-and-other-tools"></a>迁移和其他工具

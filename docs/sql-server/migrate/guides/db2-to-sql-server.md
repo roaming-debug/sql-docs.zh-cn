@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 08/17/2020
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: release-landing
+ms.technology: migration-guide
 ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a4aa024d94908800c020fdc5d2362d48d03becd
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: 81b631c6b5810fc45ce3b14449a458544fdf6200
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97100353"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>迁移指南：从 DB2 迁移到 SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -56,18 +56,18 @@ ms.locfileid: "92734663"
 
 1. 为“连接到 DB2”对话框上的 DB2 连接详细信息输入值。 
 
-   :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="提供项目详细信息，然后选择“确定”以保存。":::
+   :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="“连接到 DB2 ”实例":::
 
 
 1. 右键单击要迁移的 DB2 架构，然后选择“创建报表”。 这将生成一个 HTML 报表。 或者，可以在选择架构后，从导航栏中选择“创建报表”。 
 
-   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="提供项目详细信息，然后选择“确定”以保存。":::
+   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="右键单击架构，然后选择“创建报表”":::
 
 1. 查看 HTML 报表，了解转换统计信息以及任何错误或警告。 另外，还可以在 Excel 中打开报表以获取 DB2 对象的清单，以及执行架构转换所需的工作量。 报表的默认位置在 SSMAProjects 内的报表文件夹中。
 
    例如：`drive:\<username>\Documents\SSMAProjects\MyDB2Migration\report\report_<date>`。 
 
-   :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="提供项目详细信息，然后选择“确定”以保存。":::
+   :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="查看报表以确定任何错误或警告":::
 
 
 ### <a name="validate-data-types"></a>验证数据类型
@@ -78,7 +78,7 @@ ms.locfileid: "92734663"
 1. 选择“项目设置”。 
 1. 选择“类型映射”选项卡。 
 
-   :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="提供项目详细信息，然后选择“确定”以保存。":::
+   :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="选择架构，然后选择类型映射":::
 
 1. 可以通过在“DB2 元数据资源管理器”中选择表来更改每个表的类型映射。 
 
@@ -92,16 +92,16 @@ ms.locfileid: "92734663"
     1. 选择连接到目标服务器上的现有数据库，或提供新名称以在目标服务器上创建新数据库。 
     1. 选择“连接”  。 
 
-   :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="提供项目详细信息，然后选择“确定”以保存。":::
+   :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="填写详细信息以连接到 SQL Server":::
 
 
 1. 右键单击架构，然后选择“转换架构”。 或者，可以在选择架构后，从顶部导航栏中选择“转换架构”。 
 
-   :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="提供项目详细信息，然后选择“确定”以保存。":::
+   :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="右键单击架构，然后选择“转换架构”":::
 
 1. 转换完成后，比较并查看架构的结构，以识别潜在问题并根据建议解决这些问题。 
 
-   :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="提供项目详细信息，然后选择“确定”以保存。":::
+   :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="比较并查看架构的结构，以识别潜在问题并根据建议解决这些问题。":::
 
 1. 在本地保存该项目以进行脱机架构修正练习。 在“文件”菜单中选择“保存项目”。 
 
@@ -114,20 +114,20 @@ ms.locfileid: "92734663"
 
 1. 发布架构：右键单击“SQL Server 元数据资源管理器”中的“数据库”节点中的数据库，然后选择“与数据库同步”。
 
-   :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="提供项目详细信息，然后选择“确定”以保存。":::
+   :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="右键单击数据库，然后选择“与数据库同步”":::
 
 1. 迁移数据：右键单击“DB2 元数据资源管理器”中的架构，然后选择“迁移数据”。 
 
-   :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="提供项目详细信息，然后选择“确定”以保存。":::
+   :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="右键单击架构，然后选择“迁移数据”":::
 
 1. 提供 DB2 和 SQL Server 实例的连接详细信息。 
 1. 查看“数据迁移报表”。 
 
-   :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="提供项目详细信息，然后选择“确定”以保存。":::
+   :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="查看“数据迁移报表”":::
 
 1. 使用 SQL Server Management Studio 连接到 SQL Server 实例，并通过查看数据和架构来验证迁移。 
 
-   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="提供项目详细信息，然后选择“确定”以保存。":::
+   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="在 SSMS 中比较架构":::
 
 ## <a name="post-migration"></a>迁移后 
 

@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b698f7e3d566cd49a0106c0cdf834be894cb92f
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 2f06c967c894092d8d89224948ed1772c9e70ed5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764778"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461468"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>设置处理选项（SharePoint 集成模式下的 Reporting Services）
 
@@ -75,7 +75,7 @@ ms.locfileid: "83764778"
   
 2.  单击向下箭头，然后选择 **“管理处理选项”** 。  
   
-3.  如果要使用在报表服务器级指定的值，请在“处理超时”中选择“使用站点默认设置” 。 如果要用无超时或不同的超时值来替代该值，请选择“不对报表处理时间设置超时”或“限制报表处理时间(秒)”********。  
+3.  如果要使用在报表服务器级指定的值，请在“处理超时”中选择“使用站点默认设置” 。 如果要用无超时或不同的超时值来替代该值，请选择“不对报表处理时间设置超时”或“限制报表处理时间(秒)”。  
   
 ## <a name="set-report-history-options-and-limits"></a>设置报表历史记录选项和限值
   

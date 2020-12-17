@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cbe9bfd3727e90b330ea894ba3e2fdc590486a29
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 33a2a8e5eee76214f9d7fdf3cedd8baaf4eeaa8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035666"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440438"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
 
@@ -50,23 +50,23 @@ ms.locfileid: "92035666"
 ## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
 **将 SQL 登录帐户或 msdb 角色添加到 SQL Server 代理固定数据库角色**  
   
-1.  在 **对象资源管理器**中，展开某个服务器。  
+1.  在 **对象资源管理器** 中，展开某个服务器。  
   
 2.  展开 **“安全性”**，然后展开 **“登录名”**。  
   
-3.  右键单击要添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的登录帐户，然后选择“属性”****。  
+3.  右键单击要添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的登录帐户，然后选择“属性”。  
   
-4.  在 **“登录属性”** 对话框的 **“用户映射”** 页上，选择包含 **msdb**的行。  
+4.  在 **“登录属性”** 对话框的 **“用户映射”** 页上，选择包含 **msdb** 的行。  
   
 5.  在 **“数据库角色成员身份: msdb”** 下，选中适当的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色。  
   
 **配置代理帐户以创建和管理 SQL Server 代理作业步骤**  
   
-1.  在 **对象资源管理器**中，展开某个服务器。  
+1.  在 **对象资源管理器** 中，展开某个服务器。  
   
 2.  展开 **“SQL Server 代理”**。  
   
-3.  右键单击“代理”****，再选择“新建代理”****。  
+3.  右键单击“代理”，再选择“新建代理”。  
   
 4.  在 **“新建代理帐户”** 对话框的 **“常规”** 页上，指定新代理的代理名称、凭据名称和说明。 请注意，在创建 SQL Server 代理的代理帐户之前，必须先创建一个凭据。 有关创建凭据的详细信息，请参阅[如何：创建凭据](../../relational-databases/security/authentication-access/create-a-credential.md)和 [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)。  
   

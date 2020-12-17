@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 28f69b4aa47b45708832162b2b4b8429a847bc65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 04b8fa62adfc5cb78ec52f2d87617f9136042aa7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454529"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402556"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>用于 SSRS 服务应用程序的设置订阅和警报
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和数据警报需要 SQL Server 代理，还需配置 SQL Server 代理权限。 如果您看到指示“需要 SQL Server 代理”的错误消息，而您已验证 SQL Server 代理正在运行，则您需要更新或验证权限。 本主题限于 SharePoint 模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并说明使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅来更新 SQL Server 代理权限的三种方式。 对于服务应用程序、msdb 和 master 数据库中的对象，在本主题的步骤中使用的凭据必须具有足够的权限来将执行权限授予 RSExecRole。  
@@ -76,7 +76,7 @@ ms.locfileid: "88454529"
   
 2.  在 **“开始”** 菜单上，单击 **“所有程序”**。  
   
-3.  展开“Microsoft SharePoint 2016 产品”，然后单击“SharePoint 2016 Management Shell”********。
+3.  展开“Microsoft SharePoint 2016 产品”，然后单击“SharePoint 2016 Management Shell”。
   
 4.  通过替换报表服务器数据库的名称、应用程序池帐户和语句路径来更新下面的 PowerShell cmdlet。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "88454529"
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中加载 Transact-SQL 脚本  
   
-1.  要打开 SQL Server Management Studio，请在“开始”菜单上单击“[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]”，然后单击“SQL Server Management Studio”********。  
+1.  要打开 SQL Server Management Studio，请在“开始”菜单上单击“[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]”，然后单击“SQL Server Management Studio”。  
   
 2.  在 **“连接到服务器”** 对话框中，设置以下选项：  
   

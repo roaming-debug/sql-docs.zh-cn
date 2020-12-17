@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 89373613f18b760ab3aa55af1e9ede889c06aa5c
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: c7656957aa0a45b4456ae2e27408d3176dd0c5b6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901219"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463808"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER 属性的协议（“证书”选项卡）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  使用“MSSQLSERVER 协议的属性”**** 对话框中的“证书”**** 选项卡可以选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 证书，也可以查看证书的属性。 在选择证书之前，所有字段均为空。  
+  使用“MSSQLSERVER 协议的属性”对话框中的“证书”选项卡可以选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 证书，也可以查看证书的属性。 在选择证书之前，所有字段均为空。  
   
  用户的证书存储在本地计算机上。 若要加载供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的证书，您必须在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务所用的同一用户帐户下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
