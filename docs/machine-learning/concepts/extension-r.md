@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 431d76d63d08ed23fd62669dc52548082582f2ef
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 41c0eb01dbcd2838a1c6f388e8b4304ef1eb3c7f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956503"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471278"
 ---
 # <a name="r-language-extension-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的 R 语言扩展
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

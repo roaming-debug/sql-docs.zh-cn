@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2cb011f6d5140099a82a3d41587c5f7a93fac009
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: = sql-server-2017
+ms.openlocfilehash: 83829530014c83279bcde7dc8aa4be17496bdf50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985623"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409494"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91985623"
     3. 再次对原始共享名称选中“针对文件 I/O 流访问启用 FILESTREAM”  ，然后单击“应用”  。
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **问题及其对客户的影响：**  在用户权限页上，当向实体树视图中的根级别授予权限时，看到以下错误：`"The model permission cannot be saved. The object guid is not valid"`
+- **问题及其对客户的影响：** 在用户权限页上，当向实体树视图中的根级别授予权限时，看到以下错误：`"The model permission cannot be saved. The object guid is not valid"`
 
 - **解决方法：** 
   - 向树视图中的子节点而非根级别授予权限。
@@ -71,7 +71,7 @@ ms.locfileid: "91985623"
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 候选发布（RC1 - 2017 年 7 月）
 ### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SQL Server Integration Services (SSIS)（RC1 - 2017 年 7 月）
-- **问题及其对客户的影响：** 存储过程 **[catalog].[create_execution]** 的参数 *runincluster*重命名为 *runinscaleout*，以保持一致性和可读性。
+- **问题及其对客户的影响：** 存储过程 **[catalog].[create_execution]** 的参数 *runincluster* 重命名为 *runinscaleout*，以保持一致性和可读性。
 - **解决方法：** 如果现有脚本在 Scale Out 中运行包，必须将参数名称从 runincluster 更改为 runinscaleout，以使脚本在 RC1 中正常运行   。
 
 - **问题及其对客户的影响：** SQL Server Management Studio (SSMS) 17.1 及更早版本无法在 RC1 的 Scale Out 中触发包执行。 错误消息为：“\@runincluster 不是过程 create_execution 的参数。” SSMS 的下一个版本，即版本 17.2 中修复了此问题。 SSMS 的版本 17.2 及更高版本支持 Scale Out 中的新参数名称和包执行。 

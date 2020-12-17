@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 922445116df06017b84aa84bf8dff8f924f2aeae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935570"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474548"
 ---
 # <a name="create-a-report-server-database-report-server-configuration-manager"></a>创建报表服务器数据库（报表服务器配置管理器）  
 
@@ -25,7 +25,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机�
 
 这两个数据库一起创建，并按名称绑定。 默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例下，这两个数据库分别命名为 **reportserver** 和 **reportservertempdb**。 这两个数据库统称为“报表服务器数据库”或“报表服务器目录”   。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式包含用于数据警报元数据的第三个数据库  。 为每个 SSRS 服务应用程序创建三个数据库。 默认情况下，数据库名称包含表示服务应用程序的 GUID。 
 
@@ -53,7 +53,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePo
   
 - **手动**。 使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 如果使用远程 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 来承载该数据库，则必须手动创建报表服务器数据库。 有关详细信息，请参阅[创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-mode"></a>SharePoint 模式 
 “报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项（“仅安装”） 。 此选项安装所有 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下某个方式至少创建一个 SSRS 服务应用程序：  
@@ -67,14 +67,14 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePo
 ## <a name="database-server-version-requirements"></a>数据库服务器版本要求
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用来承载报表服务器数据库。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例可以是本地或远程实例。 以下是可用于承载报表服务器数据库的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 支持版本：  
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 - Azure SQL 托管实例
 
 - SQL Server 2019
 
 ::: moniker-end
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 - SQL Server 2017  
 ::: moniker-end

@@ -24,13 +24,13 @@ ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e275d0465f436e20ac590e40a001fb8c335a573
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 770f6c82bfdafb20d826ae11b52ada0a0b1a5702
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92032920"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478858"
 ---
 # <a name="operators"></a>运算符
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

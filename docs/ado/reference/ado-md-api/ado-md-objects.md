@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a75672db242d5b7388eb625bc028728c8522b11c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c988c6a1bbe0d8d582af3ab8a355f1109906401c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987428"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639644"
 ---
 # <a name="ado-md-objects"></a>ADO MD 对象
 
@@ -44,10 +44,10 @@ ms.locfileid: "88987428"
   
  这些对象之间的关系如 [ADO MD 对象模型](./ado-md-object-model.md)中所示。  
   
- 许多 ADO MD 对象可以包含在相应的集合中。 例如， [CubeDef](./cubedef-object-ado-md.md)对象可以包含在**目录**的[CubeDefs](./cubedefs-collection-ado-md.md)集合中。 有关详细信息，请参阅 [ADO MD 集合](./ado-md-collections.md)。  
+ 许多 ADO MD 对象可以包含在相应的集合中。 例如， [CubeDef](./cubedef-object-ado-md.md)对象可以包含在 **目录** 的 [CubeDefs](./cubedefs-collection-ado-md.md)集合中。 有关详细信息，请参阅 [ADO MD 集合](./ado-md-collections.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO MD API 参考](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API 参考](./ado-md-object-model.md)   
  [ADO MD 代码示例](./ado-md-code-examples.md)   
  [ADO MD 集合](./ado-md-collections.md)   
  [ADO MD 枚举常量](./ado-md-enumerated-constants.md)   

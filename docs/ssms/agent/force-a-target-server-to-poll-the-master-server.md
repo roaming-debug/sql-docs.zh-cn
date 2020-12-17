@@ -16,13 +16,13 @@ ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 966acd47edc24294f5ca1a9bd0a0d7f88927f4aa
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 4aaac1b02996efdf950e4a0fecac054b25a9055c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474458"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>强制目标服务器轮询主服务器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,8 +52,8 @@ ms.locfileid: "92037944"
 ## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
 **强制目标服务器轮询主服务器**  
   
-1.  在 **对象资源管理器**中，展开主服务器。  
+1.  在 **对象资源管理器** 中，展开主服务器。  
   
-2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，再单击“管理目标服务器”****。  
+2.  右键单击“SQL Server 代理”，指向“多服务器管理”，再单击“管理目标服务器”。  
   
 3.  单击目标服务器，再单击 **“强制轮询”**。  

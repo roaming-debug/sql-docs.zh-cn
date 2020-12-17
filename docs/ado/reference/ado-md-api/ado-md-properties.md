@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1ffc556d5c4138f35b1831a8aebeb15622328d4c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987418"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637857"
 ---
 # <a name="ado-md-properties"></a>ADO MD 属性
 
-|properties|说明|  
+|Property|说明|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-ado-md.md)|指示当前单元集或目录当前属于哪个 ADO **连接** 对象。|  
-|[Caption](./caption-property-ado-md.md)|指示在显示 **级别** 或 **成员** 对象时要使用的文本标题。|  
+|[标题](./caption-property-ado-md.md)|指示在显示 **级别** 或 **成员** 对象时要使用的文本标题。|  
 |[ChildCount](./childcount-property-ado-md.md)|指示当前 **成员** 对象作为层次结构中的父级的成员的数目。|  
-|[Children](./children-property-ado-md.md)|返回当前**成员**是层次结构中的父成员的**成员**的集合。|  
+|[Children](./children-property-ado-md.md)|返回当前 **成员** 是层次结构中的父成员的 **成员** 的集合。|  
 |[Count](../ado-api/count-property-ado.md)|指示集合中的对象数。|  
-|[Depth](./depth-property-ado-md.md)|指示 **级别** 与层次结构级别的根之间的级别数。|  
+|[深度](./depth-property-ado-md.md)|指示 **级别** 与层次结构级别的根之间的级别数。|  
 |[说明](./description-property-ado-md.md)|返回当前对象的文本说明。|  
 |[DimensionCount](./dimensioncount-property-ado-md.md)|指示轴上的维度数。|  
 |[DrilledDown](./drilleddown-property-ado-md.md)|指示是否没有子级在轴上紧跟在该成员之后。|  
@@ -43,16 +43,16 @@ ms.locfileid: "88987418"
 |[名称](./name-property-ado-md.md)|指示对象的名称。|  
 |[序数 (单元) ](./ordinal-property-ado-md-cell.md)|按单元格集中的位置唯一标识单元格。|  
 |[序号 (位置) ](./ordinal-property-ado-md-position.md)|唯一标识沿轴的位置。|  
-|[Parent](./parent-property-ado-md.md)|指示作为层次结构中当前成员的父成员的成员。|  
+|[父级](./parent-property-ado-md.md)|指示作为层次结构中当前成员的父成员的成员。|  
 |[ParentSameAsPrev](./parentsameasprev-property-ado-md.md)|指示此位置成员的父级是否与紧前面的成员的父级相同。|  
-|[Source](./source-property-ado-md.md)|指示单元集中的数据的源。|  
-|[State](./state-property-ado-md.md)|指示单元集的当前状态。|  
-|[类型](./type-property-ado-md.md)|指示当前成员的类型。|  
+|[源](./source-property-ado-md.md)|指示单元集中的数据的源。|  
+|[状态](./state-property-ado-md.md)|指示单元集的当前状态。|  
+|[Type](./type-property-ado-md.md)|指示当前成员的类型。|  
 |[UniqueName](./uniquename-property-ado-md.md)|指示当前对象的明确名称。|  
 |[值](./value-property-ado-md.md)|指示当前单元格的值。|  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO MD API 参考](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API 参考](./ado-md-object-model.md)   
  [ADO MD 代码示例](./ado-md-code-examples.md)   
  [ADO MD 集合](./ado-md-collections.md)   
  [ADO MD 枚举常量](./ado-md-enumerated-constants.md)   

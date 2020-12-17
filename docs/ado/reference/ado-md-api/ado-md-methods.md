@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2302849edafee15448c3485e967c2e792a8b7984
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 2effdf660a0b8a32c0b932b3a7843d0f5ee8944f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098646"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637901"
 ---
 # <a name="ado-md-methods"></a>ADO MD 方法
 
@@ -30,7 +30,7 @@ ms.locfileid: "92098646"
 |[打开](./open-method-ado-md.md)|检索多维查询的结果，并将结果返回到单元集。|  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO MD API 参考](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API 参考](./ado-md-object-model.md)   
  [ADO MD 代码示例](./ado-md-code-examples.md)   
  [ADO MD 集合](./ado-md-collections.md)   
  [ADO MD 枚举常量](./ado-md-enumerated-constants.md)   

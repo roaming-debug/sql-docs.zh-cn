@@ -15,13 +15,13 @@ ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6f3feae6e042868affbb48926958459aa5ff203b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: b62b0e833af56de2f7c575a08a7093615c81265e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035506"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472248"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "92035506"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，再单击“管理目标服务器”****。  
+2.  右键单击“SQL Server 代理”，指向“多服务器管理”，再单击“管理目标服务器”。  
   
 3.  在 **“目标服务器状态”** 选项卡上，单击 **“发布指令”**。  
   

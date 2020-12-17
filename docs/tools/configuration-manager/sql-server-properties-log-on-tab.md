@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 08ba7ffa0d0282b6311502813d207d58a44d5e62
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 79f44e0dc2cd86fa4d2d839ed0542e8db697ee26
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901043"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478388"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 属性（“登录”选项卡）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

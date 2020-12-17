@@ -8,13 +8,13 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 1b13134166c4c17bea73d2990ceaf678fe1b4b2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935196"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478838"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Azure SQL 连接类型 (SSRS)
 
@@ -130,7 +130,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 如果查询文本包含查询变量或具有输入参数的存储过程，则将自动生成数据集的对应查询参数和报表的报表参数。 查询文本不得包含针对每个查询变量的 DECLARE 语句。  
   
- 例如，下面的 SQL 查询将创建一个名为 **EmpID**的报表参数：  
+ 例如，下面的 SQL 查询将创建一个名为 **EmpID** 的报表参数：  
 
 ```sql
 SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN  
@@ -152,7 +152,7 @@ WHERE EmployeeID = (@EmpID)
 
 有关平台和版本支持的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 
 ## <a name="azure-sql-database-and-aad"></a>Azure SQL 数据库和 AAD
 

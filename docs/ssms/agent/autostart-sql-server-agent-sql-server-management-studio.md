@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9916bd14969b7bf9065e98ecb07fc131d8391f30
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 32006b2ac6581e4f5bc3a303cc5f6475483708c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035738"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472368"
 ---
 # <a name="autostart-sql-server-agent"></a>自动启动 SQL Server 代理
 
@@ -57,6 +57,6 @@ ms.locfileid: "92035738"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要将 SQL Server 代理配置为自动重新启动的服务器。  
   
-2.  右键单击“SQL Server 代理”****，然后单击“属性”****。  
+2.  右键单击“SQL Server 代理”，然后单击“属性”。  
   
 3.  在 **“常规”** 页上，选中 **“SQL Server 代理意外停止时自动重新启动”**。  

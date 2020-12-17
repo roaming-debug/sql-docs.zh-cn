@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c633ec82adaa25458f2e9d22caf0cd00704d5aab
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d077e6ccd2b6a38274d3931f9e1496411dafb5f8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901396"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476488"
 ---
 # <a name="viewing-the-windows-application-log"></a>查看 Windows 应用程序日志
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

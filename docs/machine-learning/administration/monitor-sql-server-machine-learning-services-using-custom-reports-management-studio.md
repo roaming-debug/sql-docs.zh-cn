@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 1dd9f995efad5f8e4209baf5827c7be8ccdd8886
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115281"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471348"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>使用 SQL Server Management Studio 中的自定义报表监视 Python 和 R 脚本执行
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92115281"
 
 1. 从 GitHub 下载适用于 SQL Server 机器学习服务的 [SSMS 自定义报告](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)。
 
-   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   ::: moniker range="=azuresqldb-mi-current"
    >[!NOTE]
    > Azure SQL 托管实例不支持自定义报表“ML 服务 - 配置实例”。
    ::: moniker-end

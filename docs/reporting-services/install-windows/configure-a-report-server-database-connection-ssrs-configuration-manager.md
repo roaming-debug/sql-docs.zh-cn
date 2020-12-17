@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 01/04/2020
-ms.openlocfilehash: ee2e8a95155cd235210acecee2a5ca15b5ae79c8
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c7739675f03e5c7d895939a286d4f262c8302586
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935276"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472508"
 ---
 # <a name="configure-a-report-server-database-connection-report-server-configuration-manager"></a>配置报表服务器数据库连接（报表服务器配置管理器）
 
@@ -91,7 +91,7 @@ ms.locfileid: "91935276"
   
 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例配置为使用 Windows 身份验证且与报表服务器计算机位于同一个域或可信域中，则可将连接配置为使用通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具作为连接属性进行管理的服务帐户或域用户帐户。 如果数据库服务器位于另一个域中，或者您使用的是工作组安全性，则必须将连接配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名。 在这种情况下，一定要对连接进行加密。  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > 使用 Azure SQL 托管实例承载报表服务器数据库时，SQL Server 身份验证是唯一受支持的凭据类型。 此外，请注意，托管实例无法承载报表服务器实例。
@@ -120,7 +120,7 @@ ms.locfileid: "91935276"
 
 - **ReportServer** 数据库的 **public** 和 **RSExecRole** 角色。  
 
-- **master** 、 **msdb**和 **ReportServerTempDB**数据库的 **RSExecRole** 角色。  
+- **master** 、 **msdb** 和 **ReportServerTempDB** 数据库的 **RSExecRole** 角色。  
 
 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具创建或修改连接时，将自动授予这些权限。 如果使用 rsconfig 实用工具并且要为该连接指定不同的帐户，则必须为该新帐户更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中创建用来更新报表服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的脚本文件。  
 

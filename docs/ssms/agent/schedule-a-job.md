@@ -15,13 +15,13 @@ ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 75bb7c1f392487db9a9c851753d0c3c2591f106e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 18cb7d2e1c6ccf51ed1921d65a0c31fa84c54b5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035525"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478818"
 ---
 # <a name="schedule-a-job"></a>安排作业计划
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92035525"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”****，展开“作业”****，右键单击要计划的作业，并单击“属性”****。  
+2.  展开“SQL Server 代理”，展开“作业”，右键单击要计划的作业，并单击“属性”。  
   
 3.  选择 **“计划”** 页，再单击 **“新建”**。  
   
@@ -70,19 +70,19 @@ ms.locfileid: "92035525"
   
     -   如果希望反复运行计划，则单击 **“重复执行”** 。 若要设置重复执行的计划，请完成对话框上的 **“频率”**、 **“每天频率”** 和 **“持续时间”** 组。  
   
-    -   如果希望仅运行一次计划，请单击 **“执行一次”** 。 若要设置“执行一次”**** 计划，请完成对话框上的“执行一次”**** 组。  
+    -   如果希望仅运行一次计划，请单击 **“执行一次”** 。 若要设置“执行一次”计划，请完成对话框上的“执行一次”组。  
   
 #### <a name="to-attach-a-schedule-to-a-job"></a>将计划附加到作业中  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”****，展开“作业”****，右键单击要计划的作业，然后单击“属性”****。  
+2.  展开“SQL Server 代理”，展开“作业”，右键单击要计划的作业，然后单击“属性”。  
   
 3.  选择 **“计划”** 页，再单击 **“选取”**。  
   
 4.  选择要附加的计划，然后单击 **“确定”**。  
   
-5.  在“作业属性”**** 对话框中，双击附加的计划。  
+5.  在“作业属性”对话框中，双击附加的计划。  
   
 6.  验证是否正确设置了 **“开始日期”** 。 如果该选项的设置不正确，则将日期设置为要让计划启动的日期，然后单击 **“确定”**。  
   

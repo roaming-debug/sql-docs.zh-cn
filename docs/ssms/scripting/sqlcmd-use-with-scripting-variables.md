@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca718daf11f544120db3a17aed21f73b2e467c54
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 96f2987363fd52cc92127b6b54ffcd2a98b9ae10
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036245"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476878"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 与脚本变量结合使用
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "92036245"
   
  可以使用 setvar 命令显式定义脚本变量，也可以使用 sqlcmd -v 选项隐式定义脚本变量。  
   
- 本主题还包含有关使用 **SET**在 Cmd.exe 命令提示符下定义环境变量的示例。  
+ 本主题还包含有关使用 **SET** 在 Cmd.exe 命令提示符下定义环境变量的示例。  
   
 ## <a name="setting-scripting-variables-by-using-the-setvar-command"></a>使用 setvar 命令设置脚本变量  
- **setvar** 命令用于定义脚本变量。 内部存储使用 **setvar** 命令定义的变量。 不应将脚本变量与使用 **SET**在命令提示符下定义的环境变量相混淆。 如果脚本引用的变量不是环境变量，或不是使用 **setvar**定义的变量，则会返回错误消息，并将停止执行脚本。 有关详细信息，请参阅 **sqlcmd 实用工具** 中的 [-b](../../tools/sqlcmd-utility.md)选项。  
+ **setvar** 命令用于定义脚本变量。 内部存储使用 **setvar** 命令定义的变量。 不应将脚本变量与使用 **SET** 在命令提示符下定义的环境变量相混淆。 如果脚本引用的变量不是环境变量，或不是使用 **setvar** 定义的变量，则会返回错误消息，并将停止执行脚本。 有关详细信息，请参阅 **sqlcmd 实用工具** 中的 [-b](../../tools/sqlcmd-utility.md)选项。  
   
 ## <a name="variable-precedence-low-to-high"></a>变量优先级（从低到高）  
  如果有多类变量具有相同的名称，则使用优先级最高的变量。  
@@ -44,7 +44,7 @@ ms.locfileid: "92036245"
   
 2.  用户级环境变量  
   
-3.  启动**SET X=Y**之前在命令提示符下设置的命令 shell ( **SET X=Y**)  
+3.  启动 **SET X=Y** 之前在命令提示符下设置的命令 shell ( **SET X=Y**)  
   
 4.  sqlcmd -v X=Y  
   
@@ -101,7 +101,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 -   如果引号属于变量值的一部分，则必须对其进行转义。 例如：:`setvar MyVar "spac""e"`。  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>有关 Cmd.exe SET 变量值和变量名的原则  
- 使用 SET 定义的变量是 Cmd.exe 环境的一部分并可以通过 **sqlcmd**进行引用。 遵循以下指南：  
+ 使用 SET 定义的变量是 Cmd.exe 环境的一部分并可以通过 **sqlcmd** 进行引用。 遵循以下指南：  
   
 -   变量名不能包含空格字符或引号。  
   

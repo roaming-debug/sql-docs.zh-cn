@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247536"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477058"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>报表设计和报表部署的规划 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了几种创作和部署分页报表的方法。 了解如何计划协同工作的报表创作环境和报表服务器环境。
@@ -53,7 +53,7 @@ ms.locfileid: "87247536"
   
 -   **Web 门户：** 从 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 将报表上传到本机模式报表服务器。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 -   **SharePoint：** 将报表上传到配置有 SharePoint 模式报表服务器的 SharePoint 站点。  
 
@@ -73,7 +73,7 @@ ms.locfileid: "87247536"
   
  可以从报表服务器提取报表定义文件 (.rdl) 的只读副本。 在本机模式报表服务器上，浏览到 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，选择报表并单击“下载”。 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 在 SharePoint 模式部署中，浏览到文档库，选择该报表并单击 **“下载副本”** 。  
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66e47d79ebbd9ec9e408db412c74d0c50916e711
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: f276aba45a4442e06a38c0a850b299ed47d993ac
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098676"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637951"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 代码示例
 使用以下代码示例来了解如何使用 ADO MD 对象、方法和属性。 这些示例是随 SQL Server 7.0 Microsoft SQL Server OLAP 服务一起安装的示例应用程序的子集。  
@@ -30,7 +30,7 @@ ms.locfileid: "92098676"
 -   [Visual Basic Scripting Edition 中的 ADO MD 代码示例](./ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO MD API 参考](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API 参考](./ado-md-object-model.md)   
  [ADO MD 集合](./ado-md-collections.md)   
  [ADO MD 枚举常量](./ado-md-enumerated-constants.md)   
  [ADO MD 方法](./ado-md-methods.md)   

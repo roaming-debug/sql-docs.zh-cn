@@ -18,13 +18,13 @@ ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bad9dcc1d3fad1e7f0359d7805f93cbe44cb7652
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1c3aa127a22f45d403de94484b590a3fc5db1616
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035038"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477118"
 ---
 # <a name="create-an-operator"></a>创建操作员
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "92035038"
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“操作员”**** 文件夹，然后选择“新建操作员”****。  
+3.  右键单击“操作员”文件夹，然后选择“新建操作员”。  
   
     在 **“新建操作员”** 对话框的 **“常规”** 页上提供以下选项：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "92035038"
     指定操作员的电子邮件地址。  
   
     **Net send 地址**  
-    指定用于 **net send**的地址。  
+    指定用于 **net send** 的地址。  
   
     **寻呼电子邮件名称**  
     指定用于操作员的寻呼程序的电子邮件地址。  
@@ -109,7 +109,7 @@ ms.locfileid: "92035038"
     通过将电子邮件发送到寻呼地址来通知此操作员。  
   
     **Net send**  
-    使用 **net send**通知此操作员。  
+    使用 **net send** 通知此操作员。  
   
 4.  在完成了新操作员的创建后，单击 **“确定”**。  
   

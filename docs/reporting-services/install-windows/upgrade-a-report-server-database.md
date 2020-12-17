@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: b4d5b4e01abaf0643f6f121be28abe98972078a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891167"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472428"
 ---
 # <a name="upgrade-a-report-server-database"></a>升级报表服务器数据库
 
@@ -25,7 +25,7 @@ ms.locfileid: "91891167"
   
  **本机模式：** 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式中，报表服务器数据库实际包含两个数据库，其默认名称分别为 ReportServer 和 ReportServerTempDB。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint 模式：** 在 SQL Server 2016 Reporting Services SharePoint 模式中，报表服务器数据库实际上是为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的每个实例创建的数据库集合。  
 

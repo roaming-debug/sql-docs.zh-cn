@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1526f1c9eaaf4924ec248b523bd44148398e031b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 28dbaf6f3496004ba90731d6bf5eaef693036e19
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870106"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471048"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>使用 RevoScaleR 安装 R 包
 
@@ -21,7 +21,7 @@ ms.locfileid: "94870106"
 
 本文介绍如何使用 [RevoScaleR](../r/ref-r-revoscaler.md)（9.0.1 版及更高版本）函数在附带机器学习服务或 R Services 的 SQL Server 上安装 R 包。 远程非管理员可以使用 RevoScaleR 函数在 SQL Server 上安装包，而无需直接访问服务器。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 > [!NOTE]
 > SQL Server R Services 客户必须执行[组件升级](../install/upgrade-r-and-python.md)才能获取 RevoScaleR 包管理函数。 有关如何检索包版本和内容的说明，请参阅[获取 R 包信息](../package-management/r-package-information.md)。
 ::: moniker-end

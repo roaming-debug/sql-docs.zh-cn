@@ -27,13 +27,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: fcd184e195ce8c81e16ca4ceaaab03a1f156a812
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005947"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471828"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 实用工具
 
@@ -248,7 +248,7 @@ sqlcmd
   >将 `-G` 和 `-U` 选项与 SQLCMD 结合使用时，存在以下已知问题：将 `-U` 选项放在 `-G` 选项前面可能会导致身份验证失败。 始终先使用 `-G` 选项，再后跟 `-U` 选项。
 
 -H workstation_name  
- 工作站的名称。 此选项设置 **sqlcmd** 脚本变量 SQLCMDWORKSTATION。 工作站名称列出在 **sys.sysprocesses** 目录视图的 **hostname** 列中，并且可使用存储过程 **sp_who**返回。 如果不指定此选项，则默认为当前计算机名称。 此名称可用来标识不同的 
+ 工作站的名称。 此选项设置 **sqlcmd** 脚本变量 SQLCMDWORKSTATION。 工作站名称列出在 **sys.sysprocesses** 目录视图的 **hostname** 列中，并且可使用存储过程 **sp_who** 返回。 如果不指定此选项，则默认为当前计算机名称。 此名称可用来标识不同的 
 
 sqlcmd 会话。  
 
@@ -270,7 +270,7 @@ sqlcmd 会话。
 
 建议使用强密码。
 
-#### <a name="use-a-strong-password"></a>[**使用强密码！** ](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-password"></a>[**使用强密码！**](../relational-databases/security/strong-passwords.md)
 
  通过向控制台输出密码提示，可以显示密码提示，如下所示： `Password:`  
   
@@ -311,7 +311,7 @@ sqlcmd 会话。
 > [!NOTE]  
 >  OSQLUSER 环境变量可用于实现向后兼容性。 SQLCMDUSER 环境变量优先于 OSQLUSER 环境变量。 也就是说， **sqlcmd** 和 **osql** 可以彼此相邻使用而不会相互干扰。 此外，现有的 **osql** 脚本可以继续使用。  
   
- 如果 -U 选项和 -P 选项均未指定，sqlcmd 会尝试使用 Microsoft Windows 身份验证模式进行连接。 身份验证基于运行 **sqlcmd**的用户的 Windows 帐户。  
+ 如果 -U 选项和 -P 选项均未指定，sqlcmd 会尝试使用 Microsoft Windows 身份验证模式进行连接。 身份验证基于运行 **sqlcmd** 的用户的 Windows 帐户。  
   
  如果 -U 选项与 -E 选项（将在本主题的后面进行说明）一起使用，则会生成错误消息。 如果 -U 选项后跟多个参数，便会生成错误消息并退出程序。  
   
@@ -357,7 +357,7 @@ sqlcmd 会话。
  此选项可以使用多次：-iinput\_file -II input_file。  
   
  -o output_file  
- 标识从 **sqlcmd**接收输出的文件。  
+ 标识从 **sqlcmd** 接收输出的文件。  
   
  如果指定了 **-u** ，则 *output_file* 以 Unicode 格式存储。 如果文件名无效，将生成一个错误消息，并且 **sqlcmd** 将退出。 **sqlcmd** 不支持向同一文件并发写入多个 **sqlcmd** 进程。 文件输出将损坏或不正确。 请参阅同样与文件格式相关的 -f 开关。 如果不存在，则将创建此文件。 前一个 **sqlcmd** 会话中的同名文件将被覆盖。 此处指定的文件不是 **stdout** 文件。 如果指定了 stdout 文件，就不会使用此文件。  
   
@@ -423,7 +423,7 @@ sqlcmd 会话。
 >  实际的超时值可能会与指定的 time_out  值相差几秒。  
   
  -vvar =  value[ var = value...]  
- 创建可在 **sqlcmd**脚本中使用的 **sqlcmd** 脚本变量。 如果该值包含空格，则将其用引号引起来。 可以指定多个 _var_="_values_"值。 如果指定的任何值中有错误， **sqlcmd** 会生成错误消息，然后退出。  
+ 创建可在 **sqlcmd** 脚本中使用的 **sqlcmd** 脚本变量。 如果该值包含空格，则将其用引号引起来。 可以指定多个 _var_="_values_"值。 如果指定的任何值中有错误， **sqlcmd** 会生成错误消息，然后退出。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -437,7 +437,7 @@ sqlcmd 会话。
  指定要在列标题之间输出的行数。 默认为每一组查询结果输出一次标题。 此选项设置 **sqlcmd** 脚本变量 SQLCMDHEADERS。 使用 -1 指定不要打印的标题。 任何无效的值都将导致 **sqlcmd** 生成错误消息并随后退出。  
   
  **-k** [**1** | **2**]  
- 删除输出中的所有控制字符，例如制表符和换行符。 此参数在返回数据时保留列格式。 如果指定了 1，则控制字符被一个空格替代。 如果指定了 2，则连续的控制字符被一个空格替代。 **-k** 与 **-k1**相同。  
+ 删除输出中的所有控制字符，例如制表符和换行符。 此参数在返回数据时保留列格式。 如果指定了 1，则控制字符被一个空格替代。 如果指定了 2，则连续的控制字符被一个空格替代。 **-k** 与 **-k1** 相同。  
   
  -s col_separator  
  指定列分隔符字符。 默认为空格。 此选项设置 **sqlcmd** 脚本变量 SQLCMDCOLSEP。 若要使用对操作系统有特殊含义的字符，如“与”符号 (&) 或分号 (;)，请将该字符用双引号 (") 引起来。 列分隔符可以是任意 8 位字符。  
@@ -468,7 +468,7 @@ sqlcmd 会话。
 - **图像**  
   
 > [!NOTE]  
->  根据实现，UDT 可以使用固定的长度。 如果此固定长度 UDT 的长度比 *display_width*短，则返回的 UDT 值将不受影响。 但是，如果此长度比 *display_width*长，则输出会被截断。  
+>  根据实现，UDT 可以使用固定的长度。 如果此固定长度 UDT 的长度比 *display_width* 短，则返回的 UDT 值将不受影响。 但是，如果此长度比 *display_width* 长，则输出会被截断。  
    
   
 > [!IMPORTANT]  
@@ -491,12 +491,12 @@ sqlcmd 会话。
   
  **错误报告选项**  
   **-b**  
- 指定发生错误时， **sqlcmd** 退出并返回一个 DOS ERRORLEVEL 值。 当 SQL Server 错误消息的严重级别高于 10 时，返回给 DOS ERRORLEVEL 变量的值为 1；否则返回的值为 0 。 如果除 **-b** 选项外还设置了 **-V**选项，则当严重级别低于使用 **-V** 设置的值时， **sqlcmd**将不报告错误。 命令提示符批处理文件可以测试 ERRORLEVEL 的值并相应处理错误。 **sqlcmd** 不对严重级别 10 报告错误（信息性消息）。  
+ 指定发生错误时， **sqlcmd** 退出并返回一个 DOS ERRORLEVEL 值。 当 SQL Server 错误消息的严重级别高于 10 时，返回给 DOS ERRORLEVEL 变量的值为 1；否则返回的值为 0 。 如果除 **-b** 选项外还设置了 **-V** 选项，则当严重级别低于使用 **-V** 设置的值时， **sqlcmd** 将不报告错误。 命令提示符批处理文件可以测试 ERRORLEVEL 的值并相应处理错误。 **sqlcmd** 不对严重级别 10 报告错误（信息性消息）。  
   
  如果 **sqlcmd** 脚本包含错误的注释、语法错误或缺少脚本变量，则返回的 ERRORLEVEL 为 1。  
   
  -m error_level  
- 控制发送到 **stdout**的错误消息类型。 将发送严重级别大于或等于此级别的消息。 如果此值设置为 **-1**，将发送所有消息（包括信息性消息）。 **-m** 和 **-1**之间不允许有空格。 例如， **-m-1** 有效，而 **-m-1** 无效。  
+ 控制发送到 **stdout** 的错误消息类型。 将发送严重级别大于或等于此级别的消息。 如果此值设置为 **-1**，将发送所有消息（包括信息性消息）。 **-m** 和 **-1** 之间不允许有空格。 例如， **-m-1** 有效，而 **-m-1** 无效。  
   
  此选项还设置 **sqlcmd** 脚本变量 SQLCMDERRORLEVEL。 此变量的默认值为 0。  
   
@@ -541,7 +541,7 @@ sqlcmd 会话。
   
  如果指定了可选参数 **1** ，则统计信息的输出格式为以冒号分隔的格式，此格式可以由脚本轻松导入到电子表格中或进行处理。  
   
- 如果可选参数是除 **1**之外的任何值，则将生成错误并且 **sqlcmd** 将退出。  
+ 如果可选参数是除 **1** 之外的任何值，则将生成错误并且 **sqlcmd** 将退出。  
   
  **-X**[**1**]  
  从批处理文件执行 **sqlcmd** 时，将禁用可能危及系统安全的命令。 禁用的命令仍然可以被识别； **sqlcmd** 发出警告消息并继续。 如果指定了可选参数 **1** ，则 **sqlcmd** 将生成错误消息，然后退出。 使用 **-X** 选项时，将禁用以下命令：  
@@ -574,7 +574,7 @@ sqlcmd 会话。
   
 2.  用户级环境变量  
   
-3.  运行**sqlcmd** 之前在命令提示符处设置的命令 shell ( **SET**X=Y)。  
+3.  运行 **sqlcmd** 之前在命令提示符处设置的命令 shell ( **SET** X=Y)。  
   
 4.  **sqlcmd-v** X=Y  
   
@@ -667,7 +667,7 @@ sqlcmd 会话。
   
 - 显式使用 **:Setvar** 命令。  
   
-- 在运行 **sqlcmd**之前定义一个环境变量。  
+- 在运行 **sqlcmd** 之前定义一个环境变量。  
   
 > [!NOTE]  
 >  **-X** 选项可阻止将环境变量传递给 **sqlcmd**。  
@@ -684,12 +684,12 @@ sqlcmd 会话。
  显示当前设置的脚本变量列表。  
   
 > [!NOTE]  
->  只显示由 **sqlcmd**设置的脚本变量和使用 **:Setvar** 命令设置的脚本变量。  
+>  只显示由 **sqlcmd** 设置的脚本变量和使用 **:Setvar** 命令设置的脚本变量。  
   
  **输出命令**  
   **:Error**   
  _**\<**_  _filename_  **_>|_ STDERR|STDOUT**  
- 将所有错误输出重定向到 *file name*指定的文件、 **stderr** 或 **stdout**。 **Error** 命令可以在一个脚本中多次出现。 默认情况下，错误输出将发送到 **stderr**。  
+ 将所有错误输出重定向到 *file name* 指定的文件、 **stderr** 或 **stdout**。 **Error** 命令可以在一个脚本中多次出现。 默认情况下，错误输出将发送到 **stderr**。  
   
  *file name*  
  创建并打开一个要接收输出的文件。 若该文件已经存在，则将其截断为零字节。 若该文件不可用（由于权限或其他原因），将不会切换输出，也不会将输出发送到上次指定的目标或默认目标。  
@@ -701,10 +701,10 @@ sqlcmd 会话。
  将错误输出切换到 **stdout** 流。 如果已经重定向，流的重定向目标将会收到错误输出。  
   
  **:Out \<** _filename_ **>** | **STDERR**| **STDOUT**  
- 创建所有查询结果并将它们重定向到 *file name*指定的文件、 **stderr** 或 **stdout**。 默认情况下，输出将发送到 **stdout**。 若该文件已经存在，则将其截断为零字节。 **Out** 命令可以在一个脚本中多次出现。  
+ 创建所有查询结果并将它们重定向到 *file name* 指定的文件、 **stderr** 或 **stdout**。 默认情况下，输出将发送到 **stdout**。 若该文件已经存在，则将其截断为零字节。 **Out** 命令可以在一个脚本中多次出现。  
   
  **:Perftrace \<** _filename_ **>** | **STDERR**| **STDOUT**  
- 创建所有性能跟踪信息并将它们重定向到 *file name*指定的文件、 **stderr** 或 **stdout**。 默认情况下，性能跟踪输出将发送到 **stdout**。 若该文件已经存在，则将其截断为零字节。 **Perftrace** 命令可以在一个脚本中多次出现。  
+ 创建所有性能跟踪信息并将它们重定向到 *file name* 指定的文件、 **stderr** 或 **stdout**。 默认情况下，性能跟踪输出将发送到 **stdout**。 若该文件已经存在，则将其截断为零字节。 **Perftrace** 命令可以在一个脚本中多次出现。  
   
  **执行控制命令**  
   **:On Error**[ **exit** | **ignore**]  
@@ -718,7 +718,7 @@ sqlcmd 会话。
  导致 **sqlcmd** 退出。  
   
  [ **:** ] **EXIT**[ **(** _statement_ **)** ]  
- 允许将 SELECT 语句的结果用作 **sqlcmd**的返回值。 如果为数值，最后一个结果行的第一列将转换为 4 字节的整数（长整型）。 MS-DOS、Linux 和 Mac 将低字节传递给父进程或操作系统错误级别。 Windows 200x 传递整个 4 字节整数。 语法为：  
+ 允许将 SELECT 语句的结果用作 **sqlcmd** 的返回值。 如果为数值，最后一个结果行的第一列将转换为 4 字节的整数（长整型）。 MS-DOS、Linux 和 Mac 将低字节传递给父进程或操作系统错误级别。 Windows 200x 传递整个 4 字节整数。 语法为：  
   
  `:EXIT(query)`  
   
@@ -823,7 +823,7 @@ sqlcmd 会话。
  列出 **sqlcmd** 命令以及每个命令的简短说明。  
   
 ### <a name="sqlcmd-file-names"></a>sqlcmd 文件名  
- 可以使用**sqlcmd** 选项或 **sqlcmd** 命令指定 **sqlcmd** 输入文件。 可以使用 **-o** 选项或 **:Error**、 **:Out** 和 **:Perftrace** 命令指定输出文件。 以下是使用这些文件的一些原则：  
+ 可以使用 **sqlcmd** 选项或 **sqlcmd** 命令指定 **sqlcmd** 输入文件。 可以使用 **-o** 选项或 **:Error**、 **:Out** 和 **:Perftrace** 命令指定输出文件。 以下是使用这些文件的一些原则：  
   
 - :Error、:Out 和 :Perftrace 应使用不同的 \<**_filename_**>   。 如果使用了相同的 \<**_filename_**>，这些命令的输入可能会混杂在一起。  
   

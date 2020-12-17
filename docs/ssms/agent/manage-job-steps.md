@@ -25,13 +25,13 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: efaef467cc332d0d398849693b52718c789b96d4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: fba52970690e217bd8f92867122b27f6c3ac2f34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038240"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477018"
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -163,7 +163,7 @@ Set oServer = nothing
   
 -   标识要运行作业步骤的数据库 OLAP 服务器。  
   
--   键入要执行的语句。 对于  Execute[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **** 方法，此语句必须为 XML。 对于  Discover[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **** 方法，此语句可能不包含完整的 SOAP 信封或 XML。 注意：虽然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持完整的 SOAP 信封和 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤却不支持。  
+-   键入要执行的语句。 对于  Execute[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]  方法，此语句必须为 XML。 对于  Discover[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]  方法，此语句可能不包含完整的 SOAP 信封或 XML。 注意：虽然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持完整的 SOAP 信封和 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤却不支持。  
   
 ### <a name="analysis-services-query-job-steps"></a>Analysis Services 查询作业步骤  
 创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] 查询作业步骤时，必须：  
@@ -197,7 +197,7 @@ Set oServer = nothing
   
 -   添加或修改命令行选项。  
   
-请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录** 作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”**** 选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
+请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录** 作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
   
 有关创建运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的作业步骤的详细信息，请参阅 [包的 SQL Server 代理作业](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
   

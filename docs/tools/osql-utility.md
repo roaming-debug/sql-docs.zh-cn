@@ -25,13 +25,13 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2c3767addadd34aebac1b29ee1b7fbdba189ae43
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 29f495dda754d3456e8d8df8811620548426cd89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002986"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478438"
 ---
 # <a name="osql-utility"></a>osql 实用工具
 
@@ -103,10 +103,10 @@ C:\>osql
  指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例的 _server\_name_\\_instance\_name_。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
   
  **-H** _wksta_name_  
- 工作站的名称。 工作站名称存储在 **sysprocesses.hostname** 中，并由 **sp_who**显示。 如果不指定此选项，则采用当前计算机名称。  
+ 工作站的名称。 工作站名称存储在 **sysprocesses.hostname** 中，并由 **sp_who** 显示。 如果不指定此选项，则采用当前计算机名称。  
   
  **-d** _db_name_  
- 启动 *osql* 时发出一个 USE **db_name**语句。  
+ 启动 *osql* 时发出一个 USE **db_name** 语句。  
   
  **-l** _time_out_  
  指定 **osql** 登录超时之前的秒数。登录到 **osql** 的默认超时时间为 8 秒。  
@@ -164,10 +164,10 @@ osql -E -q "select name, object_id from %table%"
  将消息输出重定向到屏幕 (**stderr**)。 如果不指定参数，或指定参数为 **0**，则仅重定向严重级别为 11 或更高的错误信息。 如果指定参数为 **1**，则将重定向所有的消息输出（包括“print”）。  
   
  **-i** _input_file_  
- 标识包含一批 SQL 语句或存储过程的文件。 小于 ( **\<** ) 比较运算符可以代替 **-i**使用。  
+ 标识包含一批 SQL 语句或存储过程的文件。 小于 ( **\<** ) 比较运算符可以代替 **-i** 使用。  
   
  **-o** _output_file_  
- 标识从 **osql**接收输出的文件。 大于 ( **>** ) 比较运算符可以代替 **-o**使用。  
+ 标识从 **osql** 接收输出的文件。 大于 ( **>** ) 比较运算符可以代替 **-o** 使用。  
   
  如果 *input_file* 不是 Unicode 并且未指定 **-u** ，则以 OEM 格式存储 *output_file* 。 如果 *input_file* 是 Unicode 或指定了 **-u** ，则以 Unicode 格式存储 *output_file* 。  
   
@@ -184,7 +184,7 @@ osql -E -q "select name, object_id from %table%"
  指定在将货币、日期和时间数据转换为字符数据时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ODBC 驱动程序使用客户端设置。  
   
  **-O**  
- 指定停用某些 **osql** 功能以便与 **isql**的早期版本的行为匹配。 下列功能停用：  
+ 指定停用某些 **osql** 功能以便与 **isql** 的早期版本的行为匹配。 下列功能停用：  
   
 -   EOF 批处理  
   
@@ -195,14 +195,14 @@ osql -E -q "select name, object_id from %table%"
  同时还将 DOS ERRORLEVEL 的默认值设置为 -1。  
   
 > [!NOTE]  
->  **-n**、 **-O** 和 **-D** 选项不再受 **osql**支持。  
+>  **-n**、 **-O** 和 **-D** 选项不再受 **osql** 支持。  
   
 ## <a name="remarks"></a>备注  
- **osql** 实用工具从操作系统直接启动，并且使用本文中列出的区分大小写的选项。 **osql**启动后将接受 SQL 语句，然后以交互方式将这些语句发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 结果被格式化并在屏幕 (**stdout**) 上显示。 可使用 QUIT 或 EXIT 退出 **osql**。  
+ **osql** 实用工具从操作系统直接启动，并且使用本文中列出的区分大小写的选项。 **osql** 启动后将接受 SQL 语句，然后以交互方式将这些语句发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 结果被格式化并在屏幕 (**stdout**) 上显示。 可使用 QUIT 或 EXIT 退出 **osql**。  
   
- 如果启动 **osql**时不指定用户名，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将检查并使用环境变量，如 **osqluser=(** _user_ **)** 或 **osqlserver=(** _server_ **)** 。 如果未设置环境变量，则使用工作站用户名。 如果未指定服务器，则使用工作站名称。  
+ 如果启动 **osql** 时不指定用户名，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将检查并使用环境变量，如 **osqluser=(** _user_ **)** 或 **osqlserver=(** _server_ **)** 。 如果未设置环境变量，则使用工作站用户名。 如果未指定服务器，则使用工作站名称。  
   
- 如果 **-U** 或 **-P** 选项都没有使用，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证模式进行连接。 身份验证根据运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **的用户的**Windows 帐户进行。  
+ 如果 **-U** 或 **-P** 选项都没有使用，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证模式进行连接。 身份验证根据运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **的用户的** Windows 帐户进行。  
   
  **osql** 实用工具使用 ODBC API。 对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ISO 连接选项，该实用工具使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ODBC 驱动程序的默认设置。 有关详细信息，请参阅“ANSI 选项的效果”。  
   
@@ -210,7 +210,7 @@ osql -E -q "select name, object_id from %table%"
 >  **osql** 实用工具不支持 CLR 用户定义数据类型。 若要处理这些数据类型，必须使用 **sqlcmd** 实用工具。 有关详细信息，请参阅 [sqlcmd Utility](../tools/sqlcmd-utility.md)。  
   
 ## <a name="osql-commands"></a>OSQL 命令  
- 除了 [!INCLUDE[tsql](../includes/tsql-md.md)] osql **中的**语句外，还可以使用以下命令。  
+ 除了 [!INCLUDE[tsql](../includes/tsql-md.md)] osql **中的** 语句外，还可以使用以下命令。  
   
 |Command|说明|  
 |-------------|-----------------|  
@@ -220,7 +220,7 @@ osql -E -q "select name, object_id from %table%"
 |Ctrl+C|结束查询但不退出 **osql**。|  
   
 > [!NOTE]  
->  !! 和 ED 命令不再受 **osql**支持。  
+>  !! 和 ED 命令不再受 **osql** 支持。  
   
  仅当命令终止符 GO（默认）、RESET EXIT、QUIT 和 Ctrl+C 出现在一行的开始（紧跟 **osql** 提示符）时，才会被识别。  
   
@@ -257,18 +257,18 @@ osql -E -i titles.qry -o titles.res
 ```  
   
 > [!IMPORTANT]  
->  如果可能，请使用 **-E**选项（信任连接）。  
+>  如果可能，请使用 **-E** 选项（信任连接）。  
   
- 以交互方式使用 osql 时，可使用 :r_file\_name_ 将操作系统文件读入命令缓冲区。 这会将 *file_name* 中的 SQL 脚本作为单个批处理直接发送给服务器。  
+ 以交互方式使用 osql 时，可使用 :r _file\_name_ 将操作系统文件读入命令缓冲区。 这会将 *file_name* 中的 SQL 脚本作为单个批处理直接发送给服务器。  
   
 > [!NOTE]  
->  使用 **osql**时，如果批处理分隔符 GO 出现在 SQL 脚本文件中，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将其视为语法错误。  
+>  使用 **osql** 时，如果批处理分隔符 GO 出现在 SQL 脚本文件中，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将其视为语法错误。  
   
 ## <a name="inserting-comments"></a>插入注释  
- 可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **提交给**的 Transact-SQL 语句中包含注释。 允许使用两种类型的注释样式：`/*...*/` 和 `--`。  
+ 可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **提交给** 的 Transact-SQL 语句中包含注释。 允许使用两种类型的注释样式：`/*...*/` 和 `--`。  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>使用 EXIT 返回 osql 中的结果  
- 可以使用 SELECT 语句的结果作为 **osql**的返回值。 如果为数值，则最后一个结果行的最后一列将转换为 4 字节的整数（长整型）。 MS-DOS 将低字节传递给父进程或操作系统错误级别。 Windows 则传递整个 4 字节整数。 语法为：  
+ 可以使用 SELECT 语句的结果作为 **osql** 的返回值。 如果为数值，则最后一个结果行的最后一列将转换为 4 字节的整数（长整型）。 MS-DOS 将低字节传递给父进程或操作系统错误级别。 Windows 则传递整个 4 字节整数。 语法为：  
   
 ```  
 EXIT ( < query > )  

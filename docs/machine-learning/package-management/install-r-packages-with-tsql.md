@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b525a2cd2a5450aec3df9a7d3157bc4aff05735f
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2017
+ms.openlocfilehash: 61917bb0c62bdcbee114843bdd78bde80ae17619
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870095"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471008"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>使用 T-SQL (CREATE EXTERNAL LIBRARY) 将 R 包安装在 SQL Server 上
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8402ec9094b7e765764d5e650ac27a0b87b0e5d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793744"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471118"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>在 SQL Server 上安装预先定型的机器学习模型
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "92793744"
 
 必须启用外部脚本，并且必须运行 SQL Server LaunchPad 服务。 安装说明提供了启用和验证这些功能的步骤。 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 [MicrosoftML R 包](/machine-learning-server/r-reference/microsoftml/microsoftml-package)或 [microsoftml Python 包](/machine-learning-server/python-reference/microsoftml/microsoftml-package)包含预先定型的模型。
 
 [SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)包含机器学习库的两种语言版本，因此无需执行任何其他操作即可满足此必备条件。 由于存在这些库，所以能使用本文中所述的 PowerShell 脚本将预先定型的模型添加到这些库。
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 [MicrosoftML R 包](/machine-learning-server/r-reference/microsoftml/microsoftml-package)包含预先定型的模型。
 
 [SQL Server R Services](sql-r-services-windows-install.md)（仅 R）不包含现成的 [MicrosoftML 包](/machine-learning-server/r-reference/microsoftml/microsoftml-package)。 若要添加 MicrosoftML，必须执行[组件升级](../install/upgrade-r-and-python.md)。 组件升级的一个优点是可以同时添加预先定型的模型，所以无需运行 PowerShell 脚本。 不过如果已经升级，但第一次没有添加预先定型的模型，则可以按照本文所述的内容运行 PowerShell 脚本。 SQL Server 的两个版本都适用。 在执行此操作之前，请确认 MicrosoftML 库存在于 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`。

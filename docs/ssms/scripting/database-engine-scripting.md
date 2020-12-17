@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae4d356751aa466b6ca13455c514cea91cd95c21
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0972ef38fd5af52b1141e0b14b65b1d08e2c675b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039071"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476928"
 ---
 # <a name="database-engine-scripting"></a>数据库引擎脚本
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92039071"
   
 -   PowerShell 脚本文件可用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 PowerShell 作业步骤的输入，这些步骤按预订的时间间隔或者作为对系统事件的响应来运行脚本。  
   
--   用于启动 PowerShell 和导入 **模块的** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具。 然后，您可以执行该模块支持的所有操作。 可以在命令提示符中启动 **sqlps** 实用工具，也可以通过在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 对象资源管理器树中右键单击节点并选择“启动 PowerShell”**** 来启动 sqlps 实用工具。  
+-   用于启动 PowerShell 和导入 **模块的** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具。 然后，您可以执行该模块支持的所有操作。 可以在命令提示符中启动 **sqlps** 实用工具，也可以通过在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 对象资源管理器树中右键单击节点并选择“启动 PowerShell”来启动 sqlps 实用工具。  
   
 ## <a name="database-engine-queries"></a>数据库引擎查询  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询脚本包含三种类型的元素：  

@@ -9,13 +9,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d8f65baaec3038431455712d64803459a96e45c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
+ms.openlocfilehash: 842daa6574dc660346733e7b74b539eba5c7f7b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956954"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471028"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function-with-sql-machine-learning"></a>结合利用 SQL 机器学习和 PREDICT T-SQL 函数的本机评分功能
 
@@ -60,13 +60,13 @@ ms.locfileid: "91956954"
 | Azure SQL Edge | 是 | 否 |
 | Azure Synapse Analytics | 是 | 否 |
 
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="onnx-models"></a>ONNX 模型
 
 模型须为 [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) 模型格式。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ### <a name="revoscale-models"></a>RevoScale 模型
 
 必须使用 [RevoScaleR](../r/ref-r-revoscaler.md) 或 [revoscalepy](../python/ref-py-revoscalepy.md) 包以及下面列出的某个支持的 rx 算法对该模型进行预定型。
@@ -106,7 +106,7 @@ Revoscalepy 和 RevoScaleR 支持以下算法。
 ::: moniker-end
 
 ## <a name="examples"></a>示例
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="predict-with-an-onnx-model"></a>使用 ONNX 模型进行预测
 
 此示例演示了如何使用存储在 `dbo.models` 表中的 ONNX 模型进行本机评分。
@@ -145,7 +145,7 @@ FROM PREDICT(MODEL = @model, DATA = predict_input, RUNTIME=ONNX) WITH (variable1
 > 由于 PREDICT 返回的列和值可能因模型类型而有所不同，因此必须使用 WITH 子句定义返回数据的架构   。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017"
 ### <a name="predict-with-revoscale-model"></a>使用 RevoScale 模型进行预测
 
 此示例使用 R 中的 RevoScaleR 创建一个模型，然后调用 T-SQL 中的实时预测函数。

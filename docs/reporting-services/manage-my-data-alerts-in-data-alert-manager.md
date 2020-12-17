@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2a6edd53f73eeac5b2033ad399f0a46bee66ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: db36e1374b94c95691b73e97837aa025d4fb07d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245071"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477098"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>在数据警报管理器中管理我的数据警报
 
