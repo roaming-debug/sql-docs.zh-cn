@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7223e1b1289d3cb2ea87763e693f65c3479afcdd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ae05adf9876b572bd01c9b7f239ef8aa08e67337
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194499"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489967"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>创建数据库和权限（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -96,7 +96,7 @@ GO
   
     在使用服务器运行 R 代码之前，建议检查是否可以从 R 开发环境访问数据库。 [Visual Studio 中的服务器资源管理器](/previous-versions/x603htbk(v=vs.140)) 和 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 是具有强大的数据库连接和管理功能的免费工具。
   
-    如果不想安装附加的数据库管理工具，可以在控制面板中使用 [ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md?view=sql-server-2017) 创建到 SQL Server 实例的测试连接。 如果该数据库配置正确，并输入了正确的用户名和密码，则应能看到刚刚创建的数据库，并能将其选为默认数据库。
+    如果不想安装附加的数据库管理工具，可以在控制面板中使用 [ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md) 创建到 SQL Server 实例的测试连接。 如果该数据库配置正确，并输入了正确的用户名和密码，则应能看到刚刚创建的数据库，并能将其选为默认数据库。
   
     连接失败的常见原因包括未为服务器启用远程连接，并且未启用 Named Pipes 协议。 可以在本文中找到更多故障排除提示：[排查连接到 SQL Server 数据库引擎时的问题](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。
   
