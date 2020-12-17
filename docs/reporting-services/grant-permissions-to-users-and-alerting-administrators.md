@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: df5e996ffdc9a307b14c8befd71c64036927b562
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 87c453d6b896a998d6a3229d57db905cf57cc0fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891497"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472528"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>向用户和警报管理员授予权限
 

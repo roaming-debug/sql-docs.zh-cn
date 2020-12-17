@@ -13,13 +13,13 @@ ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2c27fa0cc8325a31cc851511375a01210e7f9d9b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 18cbd660ed24526331aed570415eccd314127c73
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036636"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472438"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>警报属性 - 新建警报（“常规”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92036636"
   
 ## <a name="sql-server-event-alert-options"></a>SQL Server 事件警报选项  
 **数据库名称**  
-为该事件指定一个数据库，或者指定“所有数据库”****，这样不管在哪一个数据库中发生该事件，都会对消息作出响应。  
+为该事件指定一个数据库，或者指定“所有数据库”，这样不管在哪一个数据库中发生该事件，都会对消息作出响应。  
   
 **错误号**  
 指定此事件将用于响应错误，并指定错误号。  

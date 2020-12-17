@@ -7,13 +7,13 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f34a6d26e48c1a77d7e289b197495d707bb9fd12
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: fc9c222bfb1229deea7ef734658b1d3b6b86149d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956868"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470798"
 ---
 # <a name="olapr-r-package-in-sql-server-machine-learning-services"></a>olapR（SQL Server 机器学习服务中的 R 包）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

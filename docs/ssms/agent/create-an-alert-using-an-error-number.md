@@ -15,13 +15,13 @@ ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6cd2a92ccc47e48493f35ce95c11a0870cd7d4df
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 3cf6f420007e367a2c82d85fcb5e257d713fe79c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035079"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464408"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>使用错误号创建警报
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "92035079"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种易用的图形方式来管理整个警报系统，这也是配置警报基础结构的推荐方式。  
   
--   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 \@database_name**** 为“master”**** 或 NULL，否则 xp_logevent**** 不会触发警报。  
+-   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 \@database_name 为“master”或 NULL，否则 xp_logevent 不会触发警报。  
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   
@@ -52,7 +52,7 @@ ms.locfileid: "92035079"
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“警报”**** 并选择“新建警报”****。  
+3.  右键单击“警报”并选择“新建警报”。  
   
 4.  在 **“新建警报”** 对话框的 **“名称”** 框中，输入此警报的名称。  
   

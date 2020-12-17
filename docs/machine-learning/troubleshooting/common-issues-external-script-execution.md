@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e2fb03c2b4b79db7d97a3ad66d46d79e669983c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: b57fdb3abd3482d6a395e1e6690f2e628a2a3e9e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194519"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470678"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>解决启动板服务和 SQL Server 中外部脚本执行的问题
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -77,7 +77,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 本节列出了 Launchpad 返回的最常见的错误消息。
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="unable-to-launch-runtime-for-r-script"></a>“无法启动 R 脚本的运行时”
 
 如果 R 用户的 Windows 组（也用于 Python）无法登录到运行 R Services 的实例，则可能会看到以下错误：
@@ -186,12 +186,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 若要解决此问题，必须将包重新安装到 SQL Server 实例库。
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 >[!NOTE]
 >如果已升级 SQL Server 2016 实例以使用最新版本的 Microsoft R，则默认库位置会有所不同。 有关详细信息，请参阅 [使用 SqlBindR 升级 R Services 的实例](../install/upgrade-r-and-python.md)。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Launchpad 由于 DLL 不匹配而关闭
 
 如果安装具有其他功能的数据库引擎，修补服务器，然后在以后使用原始媒体添加机器学习功能，则可能安装了错误版本的机器学习组件。 Launchpad 检测到版本不匹配时，它将关闭并创建转储文件。

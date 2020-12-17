@@ -8,21 +8,21 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d446416076160642f86c035082481d318479d594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956791"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471178"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>使用 SQL Server 安装程序安装 Machine Learning Server（独立版）或 R Server（独立版）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 SQL Server 外部运行的独立机器学习服务器。 它称为 Machine Learning Server（独立版）  ，包括 Python 和 R。 
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 SQL Server 外部运行的独立机器学习服务器。 在 SQL Server 2016 中，此功能称为 **R Server（独立版）** 。  
 ::: moniker-end
 
@@ -59,7 +59,7 @@ SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="run-setup"></a>运行安装程序
 
 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。
@@ -69,13 +69,13 @@ SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 
 2. 单击“安装”选项卡，选择“安装新 Machine Learning Server (独立版)”   。
     
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![安装 Machine Learning Server 独立版](media/2017setup-installation-page-mlsvr.png "开始安装 Machine Learning Server 独立版")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![安装 Machine Learning Server 独立版](media/2019setup-installation-page-mlsvr.png "开始安装 Machine Learning Server 独立版")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
 
 3. 完成规则检查后，接受 SQL Server 许可条款，并选择新的安装。
 
@@ -86,13 +86,13 @@ SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 
     - “R”和“Python”默认情况下均处于选中状态   。 你可以取消选择任一语言，但我们建议你至少安装一种受支持的语言。
 
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![选择 R 或 Python 功能](media/2017setup-features-page-mlsvr-rpy.png "开始安装 Machine Learning Server 独立版")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![选择 R 或 Python 功能](media/2019setup-features-page-mlsvr-rpy.png "开始安装 Machine Learning Server 独立版")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
     
    应忽略所有其他选项。 
     
@@ -228,7 +228,7 @@ R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQ
 + [快速入门：在 T-SQL 中运行 R](../tutorials/quickstart-r-create-script.md)
 + [教程：适用于 R 开发人员的数据库内分析](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server 一起使用：
 
 + [Python 教程：在 SQL Server 机器学习服务中使用线性回归来预测雪橇租赁](../tutorials/python-ski-rental-linear-regression-deploy-model.md)

@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 689d304798da13a8c8647598ac13d9ca232c6bfc
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 307384f199cf81d051c53bd9fca8047918e12783
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934698"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472498"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>向场中添加另一个报表服务器（SSRS 扩展）
 

@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b50750368dd5c8b9d558a587699fde1e7d94af15
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: db28a38415d62abe9bab3540c47567a92df25104
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180334"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470348"
 ---
 # <a name="python-tutorial-create-data-features-using-t-sql"></a>Python 教程：使用 T-SQL 创建数据特征
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "88180334"
 
 原始数据中报告的距离值是基于所报告的计量距离得出的，并不一定表示地理距离或行程距离。 因此，需要使用源 NYC Taxi 数据集中提供的坐标计算接客点和落客点之间的直接距离。 可通过使用自定义 [函数中的](https://en.wikipedia.org/wiki/Haversine_formula) Haversine formula [!INCLUDE[tsql](../../includes/tsql-md.md)] （半正矢公式）实现。
 
-使用一个自定义 T-SQL 函数 _fnCalculateDistance_通过半正矢公式计算距离，并使用另一个自定义 T-SQL 函数 _fnEngineerFeatures_创建包含所有功能的表。
+使用一个自定义 T-SQL 函数 _fnCalculateDistance_ 通过半正矢公式计算距离，并使用另一个自定义 T-SQL 函数 _fnEngineerFeatures_ 创建包含所有功能的表。
 
 ### <a name="calculate-trip-distance-using-fncalculatedistance"></a>使用 fnCalculateDistance 计算行程距离
 
 1. fnCalculateDistance 函数包含在示例数据库中。 花点时间查看代码。
   
-2. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依次展开“可编程性”****、“函数”**** 及“标量值函数”****。
-   右键单击“fnCalculateDistance”__，然后选择“修改”****，以在新查询窗口中打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。
+2. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依次展开“可编程性”、“函数”及“标量值函数”。
+   右键单击“fnCalculateDistance”，然后选择“修改”，以在新查询窗口中打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)

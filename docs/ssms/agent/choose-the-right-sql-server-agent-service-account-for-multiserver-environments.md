@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 34290297d01ad6aca8fff72c7ed257eccb8985fb
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d5a25c6532207eb709d90ac1acb91c7ff8d031c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035125"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472358"
 ---
 # <a name="choose-the-right-sql-server-agent-service-account-for-multiserver-environments"></a>为多服务器环境选择正确的 SQL Server 代理服务帐户
 
@@ -39,7 +39,7 @@ ms.locfileid: "92035125"
   
 -   当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务使用本地系统帐户运行时，仅当主服务器和目标服务器位于同一台计算机上时，才支持主服务器 - 目标服务器操作。 如果使用此配置，则在将目标服务器登记到主服务器时返回以下信息：  
   
-    “请确保 <target_server_computer_name>** 的代理启动帐户拥有以 targetServer 身份登录的权限”。  
+    “请确保 <target_server_computer_name> 的代理启动帐户拥有以 targetServer 身份登录的权限”。  
   
     您可以忽略此信息性消息。 登记操作将成功完成。  
   

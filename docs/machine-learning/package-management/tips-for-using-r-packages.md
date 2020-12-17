@@ -8,13 +8,13 @@ ms.date: 08/06/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c43c5e252c016d8d2094dc2b26d6e87fe3f05749
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: e7480b4d31685be402c98892557ddfb5f7db0ab5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869946"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470978"
 ---
 # <a name="tips-for-using-r-packages"></a>使用 R 包的提示
 
@@ -36,11 +36,11 @@ R 包常常依赖于多个其他包，其中一些包可能在实例使用的默
 
 可以从多个来源获取 R 包，例如 [CRAN](https://cran.r-project.org/) 和 [Bioconductor](https://www.bioconductor.org/)。 R 语言的官方站点 (<https://www.r-project.org/>) 列出了许多这样的资源。 Microsoft 提供 [MRAN](https://mran.microsoft.com/) 来分发开放源代码 R 包 ([MRO](https://mran.microsoft.com/open)) 和其他包。 许多包被发布到了 GitHub 中，开发人员可以从其中获取源代码。
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 R 包在多个计算平台上运行。 确保安装的版本为 Windows 二进制文件。
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 R 包在多个计算平台上运行。 请确保安装的版本为 Linux 二进制文件。
 ::: moniker-end
 
@@ -90,9 +90,9 @@ library(xxx) 出错：没有名为“package-name”的包
 
 ## <a name="see-also"></a>另请参阅
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [使用 R 工具安装包](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [使用 sqlmlutils 安装新的 R 包](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

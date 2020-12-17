@@ -10,13 +10,13 @@ ms.author: maghan
 ms.reviewer: alayu, sstein, maghan
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 03bc52a6f8941bbc8d04f8f795876b0ca664f08c
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 345d188106877f5f5aa6740c7e4db7c0c0511bfb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462281"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471778"
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server-preview"></a>用于 SQL Server 的 mssql-cli 命令行查询工具（预览版）
 

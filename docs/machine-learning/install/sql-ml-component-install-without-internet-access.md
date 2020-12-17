@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 5190cc4e8525daf79354005132705ae1a27b32a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636149"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471108"
 ---
 # <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>在没有 Internet 访问的情况下，在计算机上安装 SQL Server 机器学习服务 Python 和 R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91636149"
 
 在独立服务器上，已通过 CAB 文件添加了机器学习和 R/Python 特定语言功能。 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 ## <a name="sql-server-2019-offline-install"></a>SQL Server 2019 脱机安装
 
 若要在独立服务器上安装 SQL Server 机器学习服务（R 和 Python），首先下载 SQL Server 的初始版本以及用于支持 R 和 Python 的相应 CAB 文件。 即使你计划立即更新服务器以使用最新的累积更新，也必须先安装初始版本。
@@ -63,7 +63,7 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 脱机安装
 
 若要在独立服务器上安装 SQL Server 机器学习服务（R 和 Python），首先下载 SQL Server 的初始版本以及用于支持 R 和 Python 的相应 CAB 文件。 即使你计划立即更新服务器以使用最新的累积更新，也必须先安装初始版本。
@@ -92,7 +92,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 脱机安装
 
@@ -142,7 +142,7 @@ Python CAB 文件需要放置在 %TEMP% 文件夹中。 对于 R，你可以使�
 
 建议将最新的累积更新应用于数据库引擎和机器学习组件。 累积更新通过安装程序进行安装。 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 1. 从基线实例开始。 只能将累积更新应用于初始版本的 SQL Server 的现有安装。
 
 2. 在连接到 Internet 的设备上，转到你的 SQL Server 版本的累积更新列表：
@@ -150,7 +150,7 @@ Python CAB 文件需要放置在 %TEMP% 文件夹中。 对于 R，你可以使�
    + SQL Server 2019 更新（更新目前尚不可用于 2019 版） 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. 从基线实例开始。 只能将累积更新应用于初始版本的 SQL Server 的现有安装。
 
 2. 在连接到 Internet 的设备上，转到你的 SQL Server 版本的累积更新列表：
@@ -158,7 +158,7 @@ Python CAB 文件需要放置在 %TEMP% 文件夹中。 对于 R，你可以使�
    + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. 从基线实例开始。 只能将累积更新应用于 SQL Server 2016 初始版本、SQL Server 2016 SP 1 或 SQL Server 2016 SP 2 的现有安装。
 
 2. 在连接到 Internet 的设备上，转到你的 SQL Server 版本的累积更新列表：
@@ -193,7 +193,7 @@ Python CAB 文件需要放置在 %TEMP% 文件夹中。 对于 R，你可以使�
 
 ## <a name="post-install-configuration"></a>安装后配置
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 安装完成后，请重启服务，然后将服务器配置为启用脚本执行：
 
 + [启用外部脚本执行](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
@@ -204,7 +204,7 @@ SQL Server 机器学习服务的初始脱机安装需要与联机安装相同的
 + [按需进行其他配置](sql-machine-learning-services-windows-install.md#additional-configuration)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 安装完成后，请重启服务，然后将服务器配置为启用脚本执行：
 
 + [启用外部脚本执行](sql-r-services-windows-install.md#bkmk_enableFeature)

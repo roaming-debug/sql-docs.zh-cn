@@ -7,13 +7,13 @@ ms.date: 11/05/2019
 ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 076b20d277ef8608fd8c9fc30b4bce303d4ef06b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: dee3e9f8cb8c9c5f4492fd32c91c2e99112879cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870157"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471748"
 ---
 # <a name="create-a-java-jar-file-from-class-files"></a>从类文件创建 Java jar 文件
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]

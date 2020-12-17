@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f5356abbfc1dbafb110c18a7ea60b4dd5282a987
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 094261f20c1b673df6041d477018f76b5189c595
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030478"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472258"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）
 
@@ -63,7 +63,7 @@ ms.locfileid: "92030478"
   
 2.  单击加号以便展开 **“本地服务器组”** 文件集。  
   
-3.  右键单击要设置服务启动帐户的服务器实例，然后选择“SQL Server 配置管理器…”****。  
+3.  右键单击要设置服务启动帐户的服务器实例，然后选择“SQL Server 配置管理器…”。  
   
 4.  在“用户帐户控制”对话框中，单击“是”。  
   
@@ -71,12 +71,12 @@ ms.locfileid: "92030478"
   
 6.  在详细信息窗格中，右键单击“SQL Server 代理 _(server\_name)_ ”（其中 server_name 是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例的名称），然后选择“属性”。  
   
-7.  在“SQL Server 代理(server\_name)_属性”****_ **** 对话框的“登录”**** 选项卡中，选择“登录身份”**** 下的以下选项之一：  
+7.  在“SQL Server 代理(server\_name)_属性”_ 对话框的“登录”选项卡中，选择“登录身份”下的以下选项之一：  
   
     -   **内置帐户**：如果你的作业仅需要本地服务器中的资源，则选择此选项。 有关如何选择 Windows 内置帐户类型的信息，请参阅 [为 SQL Server 代理服务选择帐户](./select-an-account-for-the-sql-server-agent-service.md)。  
   
         > [!IMPORTANT]  
-        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务不支持 **** 中的 Local Service [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]帐户。  
+        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务不支持  中的 Local Service [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]帐户。  
   
     -   **本帐户**：如果作业需要网络上的资源（包括应用程序资源），如果要将事件转发到其他 Windows 应用程序日志，或者如果要通过电子邮件或寻呼程序来通知操作员，则选择此选项。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "92030478"
   
         1.  在 **“帐户名称”** 框中，输入将用来运行 SQL Server 代理的帐户。 或者，单击 **“浏览”** 打开 **“选择用户或组”** 对话框并选择要使用的帐户。  
   
-        2.  在 **“密码”** 框中，输入帐户密码。 在“确认密码”**** 框中重新输入密码。  
+        2.  在 **“密码”** 框中，输入帐户密码。 在“确认密码”框中重新输入密码。  
   
 8.  单击“确定”。  
   

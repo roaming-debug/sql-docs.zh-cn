@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38b89e893efa43df3ae2c78aacd6431727d7765e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c305ebb95a57f8686fb2dbc49e125e7ca09d844e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036267"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408314"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - 启动实用工具
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   使用 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)，可以在命令提示符处、在 SQLCMD 模式下的查询编辑器中、在 Windows 脚本文件中或者在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的操作系统 (Cmd.exe) 作业步骤中输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、系统过程和脚本文件。
 > [!NOTE]  
->  Windows 身份验证是 **sqlcmd**的默认身份验证模式。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须使用 **-U** 和 **-P** 选项指定用户名和密码。  
+>  Windows 身份验证是 **sqlcmd** 的默认身份验证模式。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须使用 **-U** 和 **-P** 选项指定用户名和密码。  
   
 > [!NOTE]  
 >  默认情况下， [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 会安装为命名实例 **sqlexpress**。  

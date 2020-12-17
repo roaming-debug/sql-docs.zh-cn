@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 689bb92eabac3b909291845cb44bdf951f4f7977
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: b8ad8329967249d200fabc46a7bb808f5ac143a8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427099"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472478"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>为 Reporting Services 服务应用程序配置电子邮件
 
@@ -33,13 +33,13 @@ ms.locfileid: "88427099"
   
 3.  在 **“名称”** 列表中，单击 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的名称。  
   
-4.  在“管理 Reporting Services 应用程序”页上，单击“电子邮件设置”********。  
+4.  在“管理 Reporting Services 应用程序”页上，单击“电子邮件设置”。  
   
 5.  选择 **“使用 SMTP 服务器”**。  
   
 6.  在 **“出站 SMTP 服务器”** 框中，键入 SMTP 服务器的名称。  
   
-7.  在“发件人地址”框中，键入电子邮件地址****。  
+7.  在“发件人地址”框中，键入电子邮件地址。  
   
      此地址为所有警报电子邮件的发件人。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "88427099"
   
 ### <a name="ntlm-authentication"></a>NTLM 身份验证  
   
-1.  如果您的电子邮件环境需要 NTLM 身份验证且不允许匿名访问，则需要修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的电子邮件传递扩展插件配置。 例如，如果你在“管理订阅” **** 页面上的“上次结果” **** 中看到以下页面：订阅。  
+1.  如果您的电子邮件环境需要 NTLM 身份验证且不允许匿名访问，则需要修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的电子邮件传递扩展插件配置。 例如，如果你在“管理订阅”  页面上的“上次结果”  中看到以下页面：订阅。  
   
     -   发送邮件失败：SMTP 服务器需要安全连接或客户端未经身份验证。 服务器响应为：5.7.1 客户端未经身份验证 将不重新发送邮件。  
   

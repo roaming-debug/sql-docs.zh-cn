@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7dbb9e32c1b5f68334ae1ccab17a85c23c069112
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: afd34354290134d0973c1105a902b96c4bbdd706
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192617"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469998"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教程：面向 R 数据科学家的 SQL 开发
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "92192617"
 在 SQL Server 上安装包时有多个选项可选。 例如，SQL Server 提供 [R 包管理](../package-management/install-additional-r-packages-on-sql-server.md)功能，让数据库管理员可以创建包存储库，并为用户分配相应权限来安装自己的包。 但是，如果你是计算机上的管理员，则可以使用 R 安装新包，只要安装到正确的库中即可。
 
 > [!NOTE]
-> 在服务器上，即使出现提示，也**不要**安装到用户库。 如果安装到用户库，SQL Server 实例将找不到或无法运行包。 有关详细信息，请参阅 [在 SQL Server 上安装新的 R 包](../package-management/install-additional-r-packages-on-sql-server.md)。
+> 在服务器上，即使出现提示，也 **不要** 安装到用户库。 如果安装到用户库，SQL Server 实例将找不到或无法运行包。 有关详细信息，请参阅 [在 SQL Server 上安装新的 R 包](../package-management/install-additional-r-packages-on-sql-server.md)。
 
-1. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机上，**以管理员身份**打开 RGui.exe。  如果已使用默认设置安装 SQL Server R Services，则可以在 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64 中找到 Rgui.exe。
+1. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机上，**以管理员身份** 打开 RGui.exe。  如果已使用默认设置安装 SQL Server R Services，则可以在 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64 中找到 Rgui.exe。
 
 2. 在 R 提示符处，运行下面的 R 命令：
   

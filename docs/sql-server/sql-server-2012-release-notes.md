@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: caca5016c6d461af5cd665ae0ada144cd5fd1c2e
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: dc92ae7c943729e7c95529b948caca95404dec3a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384653"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474528"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

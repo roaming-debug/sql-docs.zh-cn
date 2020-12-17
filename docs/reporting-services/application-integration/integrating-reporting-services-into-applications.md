@@ -9,13 +9,13 @@ ms.technology: application-integration
 ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 889967d4a7731b25b2704b8695c6b8797d367430
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 32f366bcce7ce8fd40890cd2a383a41518b78758
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74796953"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466668"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>将 Reporting Services 集成到应用程序中
 

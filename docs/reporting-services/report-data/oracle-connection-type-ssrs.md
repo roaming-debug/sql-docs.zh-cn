@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f92b7e0a414cbe6b9cbdb9dcc04cc8779ff4cff6
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+ms.openlocfilehash: 1df8e6c21f4aba600d36314ea224d1a77d6f2332
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328469"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464438"
 ---
 # <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Oracle 连接类型（SSRS 和 Power BI 报表服务器）
 
@@ -141,7 +141,7 @@ Data Source="Oracle"; Unicode="True"
 
 如果查询包括查询变量，则将自动生成对应的报表参数。 此扩展插件支持命名参数。 对于 Oracle 版本 9 或更高版本而言，支持多值参数。  
   
- 报表参数是用可能需要修改的默认属性值创建的。 例如，每个报表参数的数据类型均为 **Text** 。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
+ 报表参数是用可能需要修改的默认属性值创建的。 例如，每个报表参数的数据类型均为 **Text**。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 ##  <a name="remarks"></a><a name="Remarks"></a> 注释  
 
@@ -156,7 +156,7 @@ Data Source="Oracle"; Unicode="True"
 
 您还可以通过使用 OLE DB 数据源类型从 Oracle 数据库中检索数据。 有关详细信息，请参阅 [OLE DB 连接类型 (SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)。  
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2017"
 
 ### <a name="report-models"></a>报表模型
 

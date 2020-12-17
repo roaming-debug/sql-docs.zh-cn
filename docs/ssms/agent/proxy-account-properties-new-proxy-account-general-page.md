@@ -13,13 +13,13 @@ ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a70ba36150771ef90f3cfc9461c018c212da4c73
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: efff382c4b65711f71e619ff33cee26c13210c87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037289"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474398"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>代理帐户属性 - 新建代理帐户（“常规”页）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "92037289"
 > 提供的凭据名称必须是一个现有凭据的名称。 有关创建凭据的信息，请参阅[如何：创建代理](../../relational-databases/security/authentication-access/create-a-credential.md)  
   
 **...**  
-启动“选择凭据”**** 对话框。  
+启动“选择凭据”对话框。  
   
 **说明**  
 键入代理的说明。  

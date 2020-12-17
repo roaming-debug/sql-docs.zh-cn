@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 571943e82ca844339a03a2e2af92199c3df16601
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ef96e0ac95014fad9e479ef039df547dee6b8471
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870431"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470438"
 ---
 # <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 教程：构建一个模型以通过 SQL 机器学习对客户进行聚类分析
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在这个由四部分组成的教程系列的第三部分中，你将在 Python 中创建一个 K-Means 模型来执行聚类分析。 在本系列的下一部分中，你将在 SQL Server 机器学习服务中或大数据群集上将此模型部署到数据库中。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 在这个由四部分组成的教程系列的第三部分中，你将在 Python 中创建一个 K-Means 模型来执行聚类分析。 在本系列的下一部分中，你将使用 SQL Server 机器学习服务将此模型部署到数据库中。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 在这个由四部分组成的教程系列的第三部分中，你将在 Python 中创建一个 K-Means 模型来执行聚类分析。 在本系列的下一部分中，你将使用 Azure SQL 托管实例机器学习服务在数据库中部署此模型。
 ::: moniker-end
 

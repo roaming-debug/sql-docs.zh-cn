@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 62c7a271a7caf3afa588a48c0ac54ef86a38f785
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: a8520c1ac48b88fe0aaf66096b76cdc7b705a272
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870320"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470218"
 ---
 # <a name="tutorial-build-a-clustering-model-in-r-with-sql-machine-learning"></a>教程：通过 SQL 机器学习在 R 中构建聚类分析模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 此系列教程由四个部分组成，这是第三部分。你将在 R 中构建一个 K-Means 模型来执行聚类分析。 在本系列的下一部分中，你将在 SQL Server 机器学习服务中或大数据群集上将此模型部署到数据库中。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 此系列教程由四个部分组成，这是第三部分。你将在 R 中构建一个 K-Means 模型来执行聚类分析。 在本系列的下一部分中，你将使用 SQL Server 机器学习服务将此模型部署到数据库中。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 此系列教程由四个部分组成，这是第三部分。你将在 R 中构建一个 K-Means 模型来执行聚类分析。 在此系列的下一部分中，你将使用 SQL Server R Services 将此模型部署到数据库中。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 此系列教程由四个部分组成，这是第三部分。你将在 R 中构建一个 K-Means 模型来执行聚类分析。 在本系列的下一部分中，你将使用 Azure SQL 托管实例机器学习服务在数据库中部署此模型。
 ::: moniker-end
 

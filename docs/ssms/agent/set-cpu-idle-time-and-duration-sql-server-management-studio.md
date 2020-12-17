@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab8d7167e81b5a7cdf665f1312b1b414d95d9f7b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 0fcfaa029005d9b45be6ce9c6e242e4e7cc0de42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037781"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472288"
 ---
 # <a name="set-cpu-idle-time-and-duration"></a>设置 CPU 空闲时间和持续时间
 
@@ -40,12 +40,12 @@ ms.locfileid: "92037781"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”****，再单击“属性”****，然后选择“高级”**** 页。  
+2.  右键单击“SQL Server 代理”，再单击“属性”，然后选择“高级”页。  
   
 3.  在 **“空闲 CPU 条件”** 下，执行下列操作：  
   
     -   选中 **“定义空闲 CPU 条件”**。  
   
-    -   在“CPU 平均使用率低于”****（对于所有 CPU 而言）框中指定百分比。 此选项设置 CPU 必须低于什么使用率级别才能变为空闲状态。  
+    -   在“CPU 平均使用率低于”（对于所有 CPU 而言）框中指定百分比。 此选项设置 CPU 必须低于什么使用率级别才能变为空闲状态。  
   
     -   在 **“并且保持低于此级别”** 框中指定秒数。 此选项设置 CPU 最小使用率必须保持多长时间 CPU 才能变为空闲状态。  

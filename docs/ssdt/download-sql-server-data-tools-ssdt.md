@@ -12,13 +12,13 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 39f1f79701a0a3fd871b2b273a48197b8b42187b
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: b69137a197cab3054eeae2ee180a2624e7d564e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005891"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474438"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>下载 SQL Server Data Tools (SSDT) for Visual Studio
 

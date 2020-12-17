@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 07b2cf5a77199f64d89d8dd61f8ec89268d759c5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: e80e3414271d520b5fd74d4a943a173a1ecdbfac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173398"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470398"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Python 教程：准备数据以通过 SQL 机器学习训练线性回归模型
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 此教程系列包括四个部分，在第二部分中，你将使用 Python 从数据库准备数据。 在本系列的后面部分，你将在 SQL Server 机器学习服务中或大数据群集上通过 Python 使用此数据训练并部署线性回归模型。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 此教程系列包括四个部分，在第二部分中，你将使用 Python 从数据库准备数据。 在本系列的后面部分，你将通过 SQL Server 机器学习服务在 Python 中使用此数据定型和部署线性回归模型。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 此教程系列包括四个部分，在第二部分中，你将使用 Python 从数据库准备数据。 在本系列的后面部分，你将通过 Azure SQL 托管实例机器学习服务在 Python 中使用此数据定型和部署线性回归模型。
 ::: moniker-end
 

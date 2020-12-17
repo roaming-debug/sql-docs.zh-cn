@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a6435b5e113d7ac79546e415479acb47e1c90b89
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 9ef302fbbcc11fa5363538092f35b65a94906b8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87235693"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466638"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>在数据警报管理器中管理 SharePoint 站点上的所有数据警报
 
@@ -39,7 +39,7 @@ SharePoint 警报管理员可以查看由任何站点用户创建的数据警报
   
 3.  滚动到该列表的底部，然后单击 **“站点设置”** 。  
   
-4.  在 **Reporting Services**下，单击 **“管理数据警报”** 。  
+4.  在 **Reporting Services** 下，单击 **“管理数据警报”** 。  
   
 5.  单击 **“查看用户警报”** 列表旁的向下箭头并且选择您要查看其警报的用户。  
   

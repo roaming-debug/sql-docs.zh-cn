@@ -7,13 +7,13 @@ ms.date: 06/13/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1b3c857d5ba86fa1cb10097cf91ee5d591b67f94
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: c425d2c544069f19414e6731cdcd1f9290f07f36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869810"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470968"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>启用或禁用 SQL Server 的远程包管理
 [!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]

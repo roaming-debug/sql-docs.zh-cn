@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.date: 08/12/2020
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c34b07a774d0afa4fd4055985a4672ce04d61f74
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017'
+ms.openlocfilehash: e74d0961c6aa01c3d32df015ddf3665e412fef15
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988703"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466538"
 ---
 # <a name="previous-versions-of-sql-server-documentation"></a>SQL Server 早期版本文档
 

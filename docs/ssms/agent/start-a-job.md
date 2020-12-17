@@ -15,13 +15,13 @@ ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 253a11b25872ca3abcbaaf37cf1a93954c2eefb2
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 27183ba9d7429e7703e3fba011ad5471d6c192db
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037800"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408826"
 ---
 # <a name="start-a-job"></a>启动作业
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,13 +58,13 @@ ms.locfileid: "92037800"
   
 2.  展开 **“SQL Server 代理”** ，再展开 **“作业”**。 根据您希望作业以何种方式启动，执行下列操作之一：  
   
-    -   如果使用的是单台服务器或目标服务器，或者正在一台主服务器上运行一个本地服务器作业，请右键单击要启动的作业，然后单击“启动作业”****。  
+    -   如果使用的是单台服务器或目标服务器，或者正在一台主服务器上运行一个本地服务器作业，请右键单击要启动的作业，然后单击“启动作业”。  
   
-    -   若要启动多个作业，请右键单击“作业活动监视器”****，然后单击“查看作业活动”****。 在作业活动监视器中，可以选择多个作业，右键单击所选作业，再单击“启动作业”****。  
+    -   若要启动多个作业，请右键单击“作业活动监视器”，然后单击“查看作业活动”。 在作业活动监视器中，可以选择多个作业，右键单击所选作业，再单击“启动作业”。  
   
-    -   如果使用的是主服务器并且希望所有目标服务器同时运行作业，请右键单击要启动的作业、单击“启动作业”****，然后单击“在所有目标服务器上启动”****。  
+    -   如果使用的是主服务器并且希望所有目标服务器同时运行作业，请右键单击要启动的作业、单击“启动作业”，然后单击“在所有目标服务器上启动”。  
   
-    -   如果使用的是主服务器并且希望指定运行作业的目标服务器，请右键单击要启动的作业、单击“启动作业”****，然后单击“在特定的目标服务器上启动”****。 在 **“发布下载指令”** 对话框中，选中 **“以下目标服务器”** 复选框，然后选择运行该作业的每台目标服务器。  
+    -   如果使用的是主服务器并且希望指定运行作业的目标服务器，请右键单击要启动的作业、单击“启动作业”，然后单击“在特定的目标服务器上启动”。 在 **“发布下载指令”** 对话框中，选中 **“以下目标服务器”** 复选框，然后选择运行该作业的每台目标服务器。  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d415b9e263841757e7557e30cf3beb80e5afaa0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1dda91d82f56fc8e8ff46904eaa9fdd163ce56c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246371"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474498"
 ---
 # <a name="access-report-server-items-using-url-access"></a>使用 URL 访问报表服务器项
   本主题介绍如何使用 rs:Command=Value 访问报表服务器数据库或 SharePoint 网站中不同类型的目录项 。 不必实际添加此参数字符串。 如果您省略此字符串，报表服务器将会计算项类型，并且自动选择适当的参数值。 但是，在 URL 中使用 rs:Command=Value 字符串可改进报表服务器的性能 。  
@@ -32,7 +32,7 @@ ms.locfileid: "87246371"
   
  - **本机** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  - **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
@@ -46,7 +46,7 @@ ms.locfileid: "87246371"
   
  **本机** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
 
@@ -57,7 +57,7 @@ ms.locfileid: "87246371"
   
  **本机** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
@@ -84,7 +84,7 @@ ms.locfileid: "87246371"
   
  **本机** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren`  
 

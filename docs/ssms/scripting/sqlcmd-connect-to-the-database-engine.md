@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4e11f3aa1eb4221790241c4beaaebc4b8ae0cfa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9cf769ae3dc43e6e8c0601d25322627d7dec4920
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901557"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466228"
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd - 连接到数据库引擎
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88901557"
   
 -   **sqlcmd** 使用为连接字符串中指定的协议，如下所述。  
   
--   如果连接字符串中未指定任何协议，则 **sqlcmd** 将使用连接到的别名中定义的协议。 若要将 **sqlcmd**配置为通过创建别名使用特定网络协议，请参阅[创建或删除供客户端使用的服务器别名 (SQL Server 配置管理器)](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)。  
+-   如果连接字符串中未指定任何协议，则 **sqlcmd** 将使用连接到的别名中定义的协议。 若要将 **sqlcmd** 配置为通过创建别名使用特定网络协议，请参阅 [创建或删除供客户端使用的服务器别名 (SQL Server 配置管理器)](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)。  
   
 -   如果未通过其他方法指定协议， **sqlcmd** 将使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中的协议顺序确定的网络协议。  
   

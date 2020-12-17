@@ -13,13 +13,13 @@ ms.assetid: 6d3f9b24-d214-4e82-b161-c00ff8eff813
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 996116c47d1ed766daac4ecfd77fd5bab11d6a75
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f32f33d18ce4832d710fcb93c71a6c72166eaaf7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037360"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408867"
 ---
 # <a name="job-properties---new-job-alerts-page"></a>作业属性 - 新建作业（“警报”页）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

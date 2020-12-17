@@ -13,13 +13,13 @@ ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 15d0e96d85a5049f90f048cf48713678969d40c0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 275a665708d7b0b6ee3ce11b63f9e73010ea5c53
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037870"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466478"
 ---
 # <a name="job-properties---new-job-targets-page"></a>作业属性 - 新建作业（“目标”页）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

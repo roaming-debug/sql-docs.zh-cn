@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 7c9fb33f32a5807f46136ec1ede69386927621ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96122768"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471138"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>从命令行安装具有 R 和 Python 的 SQL Server 机器学习服务
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "96122768"
 
 通过命令提示符安装时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）。 /QS 开关仅显示进度，不接受任何输入，也不显示错误消息（如果遇到）。 仅当指定 /Action=install 时才支持 /QS 参数。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 | 参数 | 说明 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 安装数据库内版本：SQL Server R Services（数据库内）。  |
@@ -52,7 +52,7 @@ ms.locfileid: "96122768"
 | /MRCACHEDIRECTORY | 对于脱机安装，设置包含 R 组件 CAB 文件的文件夹。 |
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 | 参数 | 说明 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 安装数据库内版本：SQL Server 机器学习服务（数据库内）。  |
@@ -67,7 +67,7 @@ ms.locfileid: "96122768"
 | /MPYCACHEDIRECTORY | 保留供将来使用。 使用 %TEMP% 存储 Python 组件 CAB 文件，以便在没有 Internet 连接的计算机上安装。 |
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 | 参数 | 说明 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 安装数据库内版本：SQL Server 机器学习服务（数据库内）。  |
@@ -92,7 +92,7 @@ ms.locfileid: "96122768"
 > [!IMPORTANT]
 > 安装完成后，还需要进行两个额外的配置步骤。 执行这些任务之后才能完成集成。 有关说明，请参阅[安装后任务](#post-install)。
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ### <a name="sql-server-machine-learning-services-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server 机器学习服务：数据库引擎、具有 Python 和 R 的高级分析
 
 对于数据库引擎实例的并发安装，请提供实例名称和管理员 (Windows) 登录名。 包括用于安装核心和语言组件的功能，以及接受所有许可条款。
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 ### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>SQL Server R Services：数据库引擎和具有 R 的高级分析
 
 对于数据库引擎实例的并发安装，请提供实例名称和管理员 (Windows) 登录名。 包括用于安装核心和语言组件的功能，以及接受所有许可条款。
@@ -141,13 +141,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 需要再执行两个任务才能完成安装：
 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 1. 重启数据库引擎服务。
 
 1. SQL Server 机器学习服务：启用外部脚本后才能使用此功能。 按照[安装 SQL Server 机器学习服务（数据库内）](sql-machine-learning-services-windows-install.md)中的说明执行下一步。 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. 重启数据库引擎服务。
 
 1. SQL Server R Services：启用外部脚本后才能使用此功能。 按照[安装 SQL Server R Services（数据库内）](sql-r-services-windows-install.md)中的说明执行下一步。 
@@ -177,7 +177,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 独立服务器是未绑定到数据库引擎实例的“共享功能”。 以下示例显示了用于安装独立服务器的有效语法。
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 SQL Server Machine Learning Server 支持独立服务器上的 Python 和 R：
 
 ```cmd
@@ -185,7 +185,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 SQL Server R Server 仅适用于 R：
 
 ```cmd

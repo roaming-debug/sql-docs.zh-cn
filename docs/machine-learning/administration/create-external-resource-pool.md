@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f2c66fec80ce27e3e7a9ffca7a00194ff3b81b
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: da6f6817856efd9dd0310211998230d49e6f3d1b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283758"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471388"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>为 SQL Server 机器学习服务创建资源池
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "89283758"
   
 1.  对 Resource Governor 配置的所有更改将在整个服务器上强制执行。 这些更改会影响使用服务器默认池的工作负载，以及使用外部池的工作负载。
   
-     若要更细致地控制哪些工作负载优先获得资源，可以新建用户定义的外部资源池。 定义一个分类函数并将其分配给外部资源池。 “EXTERNAL”是新的关键字****。
+     若要更细致地控制哪些工作负载优先获得资源，可以新建用户定义的外部资源池。 定义一个分类函数并将其分配给外部资源池。 “EXTERNAL”是新的关键字。
   
      创建新的用户定义的外部资源池。 在以下示例中，池命名为 **ds_ep**。
   
@@ -113,7 +113,7 @@ ms.locfileid: "89283758"
   
 分类函数检查传入的任务。 它确定任务是否可以使用当前资源池来运行。 不符合分类函数条件的任务将分配回到服务器的默认资源池。
   
-1. 首先，指定资源调控器应使用分类器函数来确定资源池。 可将“null”指定为分类器函数的占位符****。
+1. 首先，指定资源调控器应使用分类器函数来确定资源池。 可将“null”指定为分类器函数的占位符。
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH (classifier_function = NULL);

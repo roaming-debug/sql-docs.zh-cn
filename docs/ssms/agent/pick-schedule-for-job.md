@@ -15,13 +15,13 @@ ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c095370f69aaa1e9f06cfc3e57500c09442c728a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 860d949cf17c41daee42a3261785e5b067b32ce0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030707"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474418"
 ---
 # <a name="pick-schedule-for-job"></a>为作业选取计划
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92030707"
 列出附加到计划的作业编号。 单击编号可以查看相应作业的属性。  
   
 **属性**  
-启动“作业计划属性”**** 对话框，可以在该对话框中查看该计划的有关信息。  
+启动“作业计划属性”对话框，可以在该对话框中查看该计划的有关信息。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建计划并将计划附加到作业](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  

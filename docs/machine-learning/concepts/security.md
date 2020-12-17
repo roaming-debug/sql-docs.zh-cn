@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.custom: contperfq1, seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3704d0faa89ffbc2151f31aa6e41b320e0d33ca0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869993"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471298"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中扩展性框架的安全体系结构
 
@@ -72,7 +72,7 @@ SQL Server 的数据库登录名和角色的数据安全模型扩展到外部脚
 
 <a name="launchpad"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="services-used-in-external-processing-launchpad"></a>用于外部处理的服务 (Launchpad)
 
@@ -88,7 +88,7 @@ SQL Server 还将调用用户的标识映射到用于启动附属进程的低权
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="services-used-in-external-processing-launchpad"></a>用于外部处理的服务 (Launchpad)
 
@@ -104,7 +104,7 @@ SQL Server 还将调用用户的标识映射到用于启动附属进程的低权
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="services-used-in-external-processing"></a>用于外部处理的服务
 
@@ -118,7 +118,7 @@ SQL Server 还将调用用户的标识映射到用于启动附属进程的低权
 
 <a name="sqlrusergroup"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="identities-used-in-processing-sqlrusergroup"></a>用于处理的标识 (SQLRUserGroup)
 
@@ -148,7 +148,7 @@ SQLRUserGroup（SQL 受限用户组）由 SQL Server 安装程序创建，并且
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="appcontainer-isolation"></a>AppContainer 隔离
 
@@ -165,7 +165,7 @@ SQLRUserGroup（SQL 受限用户组）由 SQL Server 安装程序创建，并且
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="identity-mapping"></a>标识映射
 
@@ -189,7 +189,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 <a name="implied-authentication"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="implied-authentication-loopback-requests"></a>默示身份验证（环回请求）
 
@@ -209,7 +209,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="implied-authentication-loopback-requests"></a>默示身份验证（环回请求）
 
@@ -227,7 +227,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="implied-authentication-loopback-requests"></a>默示身份验证（环回请求）
 

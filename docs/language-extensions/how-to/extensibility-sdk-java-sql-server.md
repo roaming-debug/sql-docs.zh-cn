@@ -7,13 +7,13 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 011d8ba2e9c92d0df6fe2956c190f61934948f54
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3357beba32fc9efb2f288f16eb90b0af5673f109
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870127"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471728"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>SQL Server 的用于 Java 的 Microsoft 扩展性 SDK
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]

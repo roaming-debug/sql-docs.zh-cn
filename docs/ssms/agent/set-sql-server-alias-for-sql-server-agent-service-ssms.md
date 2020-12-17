@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fce7b2b128920038f20967c72567d2d51db8b48
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 4530aebde58448903015b8f948ad8f005d9134ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038794"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472238"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务设置 SQL Server 别名
 
@@ -58,9 +58,9 @@ ms.locfileid: "92038794"
   
 #### <a name="to-set-a-sql-server-alias-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务设置 SQL Server 别名  
   
-1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 实例，再展开该实例。  
+1.  在 **对象资源管理器** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 实例，再展开该实例。  
   
-2.  右键单击“SQL Server 代理”****，然后单击“属性”****。  
+2.  右键单击“SQL Server 代理”，然后单击“属性”。  
   
 3.  在“SQL Server 代理属性 _server\_name_”对话框的“选择页”下，选择“连接”，然后  
   

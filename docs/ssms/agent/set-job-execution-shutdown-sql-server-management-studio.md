@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8c026afb3b77baf2fb274909e73e3dd527487d2e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 6b94cc2703613e53703b9531f574bc5e925a1c55
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036520"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474388"
 ---
 # <a name="set-job-execution-shutdown"></a>设置作业执行关闭
 
@@ -38,7 +38,7 @@ ms.locfileid: "92036520"
 ### <a name="security"></a><a name="Security"></a>安全性  
   
 #### <a name="permissions"></a><a name="Permissions"></a>权限  
-默认情况下，sysadmin**** 固定服务器角色的成员可设置在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理自己结束之前，[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理等待作业执行完的时间。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+默认情况下，sysadmin 固定服务器角色的成员可设置在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理自己结束之前，[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理等待作业执行完的时间。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -52,8 +52,8 @@ ms.locfileid: "92036520"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要设置作业执行关闭间隔的服务器。  
   
-2.  右键单击“SQL Server 代理”****，然后选择“属性”****。  
+2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   
 3.  在 **“选择页”** 下，选择 **“作业系统”**。  
   
-4.  设置“关闭超时间隔(秒)”**** 以延长或缩短关闭超时间隔。 这决定了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理本身结束之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理等待作业执行完成的时间长度。  
+4.  设置“关闭超时间隔(秒)”以延长或缩短关闭超时间隔。 这决定了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理本身结束之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理等待作业执行完成的时间长度。  

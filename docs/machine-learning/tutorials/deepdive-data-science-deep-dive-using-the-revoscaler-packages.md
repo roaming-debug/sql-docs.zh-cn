@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6fe6713479c0a9c62c1f56e358c27084dc9bbdc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 9d7300acb587dd25c294918fe5ae3a6d6a90ddbc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195159"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470568"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教程：对 SQL Server 数据使用 RevoScaleR R 函数
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

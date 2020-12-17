@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c02bbd25b399158359588ac1852839fc8570a55
-ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b62e62de6169a01641bd70f7f4cd60341b9b46c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96934045"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474248"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
 

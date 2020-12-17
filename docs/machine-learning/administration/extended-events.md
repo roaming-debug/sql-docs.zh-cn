@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 12839d5c10e5ba50cc1b57b297ee1afa9569fe15
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 2cd28eaa17a52e0e0ae525f5977dbd5f6a26bf64
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115710"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471358"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用扩展事件监视 Python 和 R 脚本
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -85,7 +85,7 @@ AND p.name = 'SQLSatellite';
 
 SQL Server 机器学习服务启动在 SQL Server 进程外部运行的一些服务。 若要捕获与这些外部进程相关的事件，必须创建一个事件跟踪配置文件，并将该文件放在与进程的可执行文件相同的目录中。  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!IMPORTANT]
 > 自 SQL Server 2019 起，隔离机制已发生更改。 因此，需要为存储事件跟踪配置文件的目录授予适当的权限。 有关如何设置这些权限的详细信息，请参阅 [Windows 上 SQL Server 2019 中的“文件权限”部分：机器学习服务的隔离更改](../install/sql-server-machine-learning-services-2019.md#file-permissions)。
 ::: moniker-end

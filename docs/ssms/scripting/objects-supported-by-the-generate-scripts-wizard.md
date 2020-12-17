@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9715b44bdd664378842bad70ed4f0d0fea913ab
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6ba406c4418979f4cdc57363806c9561b3480959
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901838"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474268"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>生成脚本向导支持的对象
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

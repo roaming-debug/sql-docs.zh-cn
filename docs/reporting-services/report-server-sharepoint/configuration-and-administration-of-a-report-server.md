@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd798a81558119eee4777893272531ce14f113c9
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 4ba7f67892a1d579991cd8a244c80295c7fb2ea4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767080"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474488"
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-ssrs-report-server"></a>配置和管理 SQL Server Reporting Services (SSRS) 报表服务器
 

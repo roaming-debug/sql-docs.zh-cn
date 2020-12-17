@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b5f930568e655df645cbaed140f163ada3e3afa
-ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: fe2d2a741e6e671eaadef96ee8539862535e51d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96934015"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470098"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>R 教程：训练并保存模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]

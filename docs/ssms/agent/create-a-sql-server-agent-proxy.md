@@ -13,13 +13,13 @@ ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2a02fa7761564ce1e10a041399058c564b183fcb
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5c1d585b1d769c35f63cd608c266ee510613a9bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035110"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464428"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>创建 SQL Server 代理的代理帐户
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92035110"
   
 #### <a name="permissions"></a><a name="Permissions"></a>权限  
   
--   只有 **sysadmin** 固定服务器角色的成员才有权创建、修改或删除代理帐户。 必须将不属于 **sysadmin** 固定服务器角色的成员的用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中的以下** 代理固定数据库角色之一，才能使用代理： **SQLAgentUserRole**、 **SQLAgentReaderRole**或 **SQLAgentOperatorRole**。  
+-   只有 **sysadmin** 固定服务器角色的成员才有权创建、修改或删除代理帐户。 必须将不属于 **sysadmin** 固定服务器角色的成员的用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中的以下** 代理固定数据库角色之一，才能使用代理： **SQLAgentUserRole**、 **SQLAgentReaderRole** 或 **SQLAgentOperatorRole**。  
   
 -   如果除了代理之外还需要创建凭据，则需要 **ALTER ANY CREDENTIAL** 权限。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "92035110"
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“代理”**** 文件夹，然后选择“新建代理”****。  
+3.  右键单击“代理”文件夹，然后选择“新建代理”。  
   
 4.  在 **“新建代理帐户”** 对话框的 **“常规”** 页中，在 **“代理名称”** 框中输入代理帐户的名称。  
   

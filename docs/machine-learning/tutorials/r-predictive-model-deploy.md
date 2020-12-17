@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: bed9217da00b7ca2cdd9bbb43e92d58c8f59b678
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: bc5cb5f0b5a79b7e9ff81171e0a1b7b31ad580db
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870261"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470158"
 ---
 # <a name="tutorial-deploy-a-predictive-model-in-r-with-sql-machine-learning"></a>教程：通过 SQL 机器学习在 R 中部署预测模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在这个由四个部分组成的教程系列的第四部分中，你将把用 R 开发的机器学习模型部署到 SQL Server 机器学习服务或大数据群集中。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 在这个由四个部分组成的教程系列的第四部分中，你将使用机器学习服务将在 R 中开发的机器学习模型部署到 SQL Server 中。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 在这个由四个部分组成的教程系列的第四部分中，你将使用 SQL Server R Services 将在 R 中开发的机器学习模型部署到 SQL Server 中。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 在这个由四个部分组成的教程系列的第四部分中，你将使用机器学习服务将在 R 中开发的机器学习模型部署到 Azure SQL 托管实例中。
 ::: moniker-end
 

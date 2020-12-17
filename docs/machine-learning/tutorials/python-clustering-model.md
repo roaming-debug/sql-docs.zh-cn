@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a347a4231203761bae260bd7f32252f058bb44d2
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: be2b0e6a54ccdd0205719b7b1d466542313d1888
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870402"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470388"
 ---
 # <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Python 教程：将 K-Means 聚类分析与 SQL 机器学习配合使用，对客户进行聚类分析
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 本系列教程由四个部分组成，引导你使用 Python 在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或在[大数据群集](../../big-data-cluster/machine-learning-services.md)上开发和部署 K-Means 聚类分析模型，以便对客户数据进行聚类分析。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 本系列教程由四个部分组成，引导你使用 Python 在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中开发和部署 K-Means 群集模型，以便对客户数据进行聚类分析。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 本系列教程由四个部分组成，引导你使用 Python 在 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)中开发和部署 K-Means 群集模型，以便对客户数据进行聚类分析。
 ::: moniker-end
 
@@ -50,13 +50,13 @@ ms.locfileid: "94870402"
 
 ## <a name="prerequisites"></a>先决条件
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 * 支持 Python 语言的 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md) - 按照 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%252fsql%252fmachine-learning%252ftoc.json&view=sql-server-linux-ver15&preserve-view=true)中的安装说明进行操作。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 * 支持 Python 语言的 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md) - 按照 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)中的安装说明进行操作。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 * Azure SQL 托管实例机器学习服务。 有关信息，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 * 用于将示例数据库还原到 Azure SQL 托管实例的 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
@@ -80,12 +80,12 @@ ms.locfileid: "94870402"
 
 本教程中使用的示例数据集已保存到 **.bak** 数据库备份文件，以供下载和使用。 此数据集派生自 [事务处理性能委员会 (TPC)](http://www.tpc.org/) 提供的 [tpcx-bb](http://www.tpc.org/tpcx-bb/default5.asp) 数据集。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
 > 如果在大数据群集上使用机器学习服务，请了解如何[将数据库还原成 SQL Server 大数据群集主实例](../../big-data-cluster/data-ingestion-restore-database.md)。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 1. 下载 [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) 文件。
 
 1. 使用以下详细信息，按 Azure Data Studio 中[从备份文件还原数据库](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)中的说明操作：
@@ -100,7 +100,7 @@ ms.locfileid: "94870402"
     SELECT * FROM [dbo].[customer];
     ```
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 1. 下载 [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) 文件。
 
 1. 使用以下详细信息，按 SQL Server Management Studio 中[将数据库还原到托管实例](/azure/sql-database/sql-database-managed-instance-get-started-restore)的说明操作：
