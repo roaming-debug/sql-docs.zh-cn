@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e4be9a253767dc25f2db37941ed9d9e1c9c415f7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5a1abf0ec9dcfdaccdafa83c0520508e82e6eafe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035590"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482171"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>修改 SQL Server 代理程序代理
 
@@ -56,9 +56,9 @@ ms.locfileid: "92035590"
   
 3.  单击加号以便展开 **“代理”** 文件夹。  
   
-4.  单击加号以展开代理的子系统节点（例如，“ActiveX 脚本”****）。  
+4.  单击加号以展开代理的子系统节点（例如，“ActiveX 脚本”）。  
   
-5.  右键单击要修改属性的代理帐户，然后选择“属性”****。  
+5.  右键单击要修改属性的代理帐户，然后选择“属性”。  
   
 6.  在“_proxy\_name_ 代理帐户属性”对话框中，根据需要更改代理帐户。 有关此对话框中的选项的详细信息，请参阅 [创建 SQL Server 代理的代理](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   

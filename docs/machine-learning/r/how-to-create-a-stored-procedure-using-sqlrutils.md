@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 5af17aa003de878a79d6c7a5b9710851b8655d0b
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: f90c1b004dae28f98b1b7f250cf16e0ed0d2ae5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098826"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470858"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>使用 sqlrutils 创建存储过程
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92098826"
 - 逻辑
 - raw
 
-如果输入类型不是上述类型之一，则需进行序列化并作为 *raw*传入函数。 在这种情况下，该函数还必须包括要反序列化输入的代码。
+如果输入类型不是上述类型之一，则需进行序列化并作为 *raw* 传入函数。 在这种情况下，该函数还必须包括要反序列化输入的代码。
 
 ### <a name="outputs"></a>Outputs
 
