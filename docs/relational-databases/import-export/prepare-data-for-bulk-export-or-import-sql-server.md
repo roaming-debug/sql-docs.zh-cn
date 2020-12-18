@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d92e83fd3bba6c5ee6ae6af3743de98000e05575
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866669"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407936"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>准备用于批量导出或导入的数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "91866669"
   
 -   若要从包含固定长度或固定宽度字段的数据文件导入数据，请使用格式化文件。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。  
   
--   逗号分隔值 (CSV) 文件不受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量导入操作支持。 但是，在某些情况下，CSV 文件可在将数据大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时用作数据文件。 请注意，CSV 文件的字段终止符不一定是逗号。 若要能够用作大容量导入的数据文件，CSV 文件必须满足以下限制条件：  
+-  从 SQL Server 2017 开始，CSV 文件可在将数据大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时用作数据文件。 请注意，CSV 文件的字段终止符不一定是逗号。 若要能够用作大容量导入的数据文件，CSV 文件必须满足以下限制条件：  
   
     -   数据字段不包含任何字段终止符。  
   

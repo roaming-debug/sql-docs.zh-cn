@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f47f17c4391d548ff2e087afb12080a84660b832
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300436"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464168"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -219,7 +219,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 index_name  
    指定索引的名称。 *index_name* 在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
- **(** _column_  [ **,** ... *n* ] **)**  
+ **(** _column_  [ **,** ...*n* ] **)**  
     指定要存储的列。 非聚集列存储索引限定为 1024 个列。  
    每个列都必须采用列存储索引支持的数据类型。 有关受支持数据类型的列表，请参阅[限制和局限](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)。  
 
@@ -402,7 +402,7 @@ filegroup_name
 这些限制仅适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 在此版本中，我们引入了可更新的聚集列存储索引。 非聚集列存储索引仍为只读。  
 
 -   更改跟踪。 不能将更改跟踪与列存储索引配合使用。  
--   变更数据捕获。 不能对非聚集列存储索引 (NCCI) 使用变更数据捕获，因为这类索引是只读的。 它适用于聚集列存储索引 (CCI)。  
+-   变更数据捕获。 不能对具有聚集列存储索引的表启用变更数据捕获。 从 SQL Server 2016 开始，可以对具有非聚集列存储索引的表启用此功能。  
 -   可读辅助副本。 不能通过 Always OnReadable 可用性组的可读辅助副本访问聚集列存储索引 (CCI)。  可以通过可读辅助副本访问非聚集列存储索引 (NCCI)。  
 -   多重活动结果集 (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用 MARS 对包含列存储索引的表执行只读连接。 不过，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 不支持使用 MARS 对包含列存储索引的表执行并发数据操作语言 (DML) 操作。 如果发生这种情况，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会终止连接，并中止事务。  
 -  无法在视图或索引视图上创建非聚集列存储索引。

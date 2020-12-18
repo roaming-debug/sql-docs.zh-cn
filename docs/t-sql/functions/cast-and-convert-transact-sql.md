@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1472a8d7117fb45fc7f9d4adb04f690ed9662ea2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c54cdea7db9d713f4a82f9628f497e5b37f1d544
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412674"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484249"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -104,10 +104,10 @@ style
 |-|21、25 或 121   (<sup>2</sup>)|time、date、datetime2 和 datetimeoffset 的 ODBC 规范（带毫秒）默认值|yyyy-mm-dd hh:mi:ss.mmm（24 小时制）|  
 |22|-|美国| mm/dd/yy hh:mi:ss AM（或 PM）|
 |-|23|ISO8601|yyyy-mm-dd|
-|-|**126** ( <sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm（无空格）<br /><br /> **注意：** 毫秒 (mmm) 值为 0 时，不会显示毫秒小数部分的值。 例如，值“2012-11-07T18:26:20.000”显示为“2012-11-07T18:26:20”。| 
-|-|**127** ( <sup>6, 7</sup>)|带时区 Z 的 ISO8601。|yyyy-MM-ddThh:mm:ss.fffZ（不带空格）<br /><br /> **注意：** 毫秒 (mmm) 值为 0 时，不会显示毫秒小数值。 例如，值“2012-11-07T18:26:20.000”显示为“2012-11-07T18:26:20”。|  
-|-|**130** ( <sup>1,</sup><sup>2</sup>)|回历 (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> 在此样式中，mon 表示完整月份名称的多标记回历 unicode 表示形式。 该值在 SSMS 的默认 US 安装中不会正确呈现。|  
-|-|**131** ( <sup>2</sup>)|回历 (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
+|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm（无空格）<br /><br /> **注意：** 毫秒 (mmm) 值为 0 时，不会显示毫秒小数部分的值。 例如，值“2012-11-07T18:26:20.000”显示为“2012-11-07T18:26:20”。| 
+|-|**127**(<sup>6, 7</sup>)|带时区 Z 的 ISO8601。|yyyy-MM-ddThh:mm:ss.fffZ（不带空格）<br /><br /> **注意：** 毫秒 (mmm) 值为 0 时，不会显示毫秒小数值。 例如，值“2012-11-07T18:26:20.000”显示为“2012-11-07T18:26:20”。|  
+|-|**130** (<sup>1,</sup><sup>2</sup>)|回历 (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> 在此样式中，mon 表示完整月份名称的多标记回历 unicode 表示形式。 该值在 SSMS 的默认 US 安装中不会正确呈现。|  
+|-|**131** (<sup>2</sup>)|回历 (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
   
 <sup>1</sup> 这些样式值返回不确定的结果。 包括所有 (yy)（不带世纪数位）样式和一部分 (yyyy)（带世纪数位）样式。
   
@@ -167,7 +167,7 @@ style
 |值|输出|  
 |---|---|
 |**0** （默认值）|将 ASCII 字符转换为二进制字节，或者将二进制字节转换为 ASCII 字符。 每个字符或字节按照 1:1 进行转换。<br /><br /> 对于二进制 data_type，则会在结果左侧添加字符 0x。|  
-|**1** , **2**|对于二进制 data_type，则表达式必须为字符表达式。 expression 必须具有偶数数量的十六进制数字（0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f）。 如果将 style 设置为 1，则表达式必须将 0x 作为前两个字符。 如果表达式中包含的字符数为奇数或者包含任何无效的字符，则会引发错误。<br /><br /> 如果转换后的表达式长度大于 data_type 长度，则会在右侧截断结果。<br /><br /> 如果固定长度 data_types 大于转换后的结果，则在结果右侧添加零。<br /><br /> 字符类型的 data_type 要求二进制表达式。 每个二进制字符均转换为两个十六进制字符。 如果转换后的表达式长度大于 data_type 长度，则会在右侧将其截断。<br /><br /> 对于固定大小的字符类型 data_type ，并且转换后的结果长度小于其 data_type 长度，则会在转换后的表达式右侧添加空格，以使十六进制数字的个数保持为偶数 。<br /><br /> 对于 style 2，将在转换后的结果左侧添加字符 0x。|  
+|**1**, **2**|对于二进制 data_type，则表达式必须为字符表达式。 expression 必须具有偶数数量的十六进制数字（0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f）。 如果将 style 设置为 1，则表达式必须将 0x 作为前两个字符。 如果表达式中包含的字符数为奇数或者包含任何无效的字符，则会引发错误。<br /><br /> 如果转换后的表达式长度大于 data_type 长度，则会在右侧截断结果。<br /><br /> 如果固定长度 data_types 大于转换后的结果，则在结果右侧添加零。<br /><br /> 字符类型的 data_type 要求二进制表达式。 每个二进制字符均转换为两个十六进制字符。 假设转换后的表达式长度大于 data_type 长度。 在这种情况下，它会被截断。<br /><br /> 对于固定大小的字符类型 data_type ，并且转换后的结果长度小于其 data_type 长度，则会在转换后的表达式右侧添加空格，以使十六进制数字的个数保持为偶数 。<br /><br /> 对于 style 2，不会在转换后的结果左侧添加字符 0x。|  
   
 ## <a name="implicit-conversions"></a>隐式转换
 隐式转换不需要规范 CAST 函数或 CONVERT 函数。 显示转换需要规范 CAST 函数或 CONVERT 函数。 以下图例显示了可对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统提供的数据类型执行的所有显式和隐式数据类型转换。 这些包括 bigint、sql_variant 和 xml  。 不存在对 sql_variant 数据类型的赋值进行的隐式转换，但是存在转换为 sql_variant 的隐式转换 。

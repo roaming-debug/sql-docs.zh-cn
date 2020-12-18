@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba0eb3c9907acfe02939c49ea253869adbfc992b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eca1dbef6ff7d519200e46cff7879d7cb0a9b128
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867346"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478248"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>通过重新组织或重新生成索引来解决索引碎片问题
 
@@ -148,7 +148,7 @@ object_id   TableName    index_id    IndexName                                  
 
 有关详细信息，请参阅 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)。
 
-### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-tsql"></a>使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 检查列存储索引的碎片的具体步骤
+### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql"></a>使用 Transact-SQL 检查列存储索引的碎片的具体步骤
 
 下面的示例查找 `AdventureWorksDW2016` 数据库中 `dbo.FactResellerSalesXL_CCI` 表内所有索引的平均碎片百分比。
 
@@ -180,7 +180,7 @@ object_id   TableName                   index_id    IndexName                   
 ### <a name="check-index-fragmentation-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 检查索引碎片
 
 > [!NOTE]
-> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 不能用于计算 SQL Server 中列存储索引的碎片，并且不能用于计算 Azure SQL 数据库中任何索引的碎片。 在这些情况下，请使用上述 [!INCLUDE[tsql](../../includes/tsql-md.md)] [示例](#to-check-the-fragmentation-of-a-columnstore-index-using-)。
+> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 不能用于计算 SQL Server 中列存储索引的碎片，并且不能用于计算 Azure SQL 数据库中任何索引的碎片。 使用上面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [示例](#to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql)。
 
 1. 在“对象资源管理器”中，展开其中包含要检查索引碎片的表的数据库。
 2. 展开 **“表”** 文件夹。

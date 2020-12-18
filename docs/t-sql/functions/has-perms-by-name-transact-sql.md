@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 8574b99c65972f566817749f34d89e3f6d3ca3e5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91115227"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900951"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  类型为 sysname 的可选标量表达式，表示测试权限的安全对象子实体的名称。 默认值为 NULL。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及更高版本中，子安全对象不能使用 '[sub name]' 形式的括号。 请改用 **'** _sub name_ **'** 。  
+>  子安全对象不能使用 **'[** _sub name_ **]'** 形式的括号。 请改用 **'** _sub name_ **'** 。  
   
  *sub-securable_class*  
  类型为 nvarchar(60) 的可选标量表达式，表示测试权限的安全对象子实体的类。 默认值为 NULL。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 199177f4df8c97bfaf651b1d4ad42d5d864b757d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5ea494a48932fac171eb4d9e8bc3e032001e55b
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465079"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999226"
 ---
 # <a name="heterogeneous-database-replication"></a>异类数据库复制  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88465079"
   |场景|2016 或更早版本 |2017 或更高版本 |
   |-------|-------|--------|
   |从 Oracle 复制 |仅支持 Oracle 10g 或更早版本 |仅支持 Oracle 10g 或更早版本 |
-  |复制到 Oracle |最高为 Oracle 12c |不支持 |
+  |复制到 Oracle |Oracle 12c 之前的所有版本 |不支持 |
 
 
  不推荐异类复制到非 SQL Server 订阅服务器。 不推荐使用 Oracle 发布。 若要移动数据，请创建使用变更数据捕获和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]的解决方案。  

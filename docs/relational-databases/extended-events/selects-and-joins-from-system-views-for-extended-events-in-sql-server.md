@@ -11,13 +11,13 @@ ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2dc811a3e3217c3aa6bf2d9a006cfd1ff0c7796b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868792"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481468"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件系统视图中的 SELECT 和 JOIN
 
@@ -121,7 +121,7 @@ ms.locfileid: "91868792"
 ![新建会话 > 常规，在服务器启动时启动事件会话。](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-接下来在“事件”  部分中，我们看到已选中 **lock_deadlock** 事件。 对于该事件，我们看到已选择三个**操作**。 这意味着已单击“配置”  按钮，该按钮单击后变成灰色。
+接下来在“事件”  部分中，我们看到已选中 **lock_deadlock** 事件。 对于该事件，我们看到已选择三个 **操作**。 这意味着已单击“配置”  按钮，该按钮单击后变成灰色。
 
 ![新建会话 > 事件，全局字段 (操作)](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
@@ -675,7 +675,7 @@ SELECT  --C.5
 
 
 ```
-/***  5 sampled rows from the actual 153 rows returned.
+/**_  5 sampled rows from the actual 153 rows returned.
     NOTE:  'resource_type' under 'Column'.
 
 Package     Object          Object-Type   O--C   Column          Column-Type-Name     Column-Type   Column-Value   C--M   Map-Value        Map-Key
@@ -689,7 +689,7 @@ sqlserver   lock_deadlock   event         o--c   resource_type   lock_resource_t
 Therefore, on your CREATE EVENT SESSION statement, in its ADD EVENT WHERE clause,
 you could put:
     WHERE( ... resource_type = 6 ...)  -- Meaning:  6 = PAGE.
-***/
+_*_/
 ```
 
 
@@ -700,7 +700,7 @@ you could put:
 
 以下 SELECT 语句将返回目标的每个参数。 每个参数都标记了是否为必选参数。 为参数指定的值将影响目标的行为。
 
-- 请注意 WHERE 子句项：object_type = 'customizable'  。
+- 请注意 WHERE 子句项：_object_type = 'customizable'*。
 - 此外，你需要编辑 WHERE 子句 o.name = 的值。 
 
 
@@ -754,7 +754,7 @@ package0   event_file   lazy_create_blob     boolean              Not_mandatory 
 package0   event_file   max_file_size        uint64               Not_mandatory   Maximum file size in MB
 package0   event_file   max_rollover_files   uint32               Not_mandatory   Maximum number of files to retain
 package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory   Not used
-***/
+**_/
 ```
 
 
@@ -766,7 +766,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 此 DMV SELECT 语句将返回活动事件会话目标的数据行。 数据被转换为 XML 格式，使其返回的单元格可单击，从而可在 SSMS 中轻松显示。
 
 - 如果事件会话已停止，则 SELECT 语句将不返回任何行。
-- 你需要编辑 WHERE 子句 o.name = 的值。 
+- 你需要编辑 WHERE 子句 _s.name =* 的值。
 
 
 ```sql

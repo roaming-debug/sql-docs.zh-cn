@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e6692984d0383a671ed66b9a7b36032e185aea0b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 81ac71e3e236209592087ffb0a11cde47cc6f18e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003140"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481288"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑， **bcp** 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符”  。  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>bcp 的前缀长度提示  
- 如果交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、 **-c**、 **-w**或 **-N**）的 **in**或 **out**选项，则该命令会提示输入每个数据字段的前缀长度，如下所示：  
+ 如果交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、 **-c**、 **-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的前缀长度，如下所示：  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -59,12 +59,12 @@ ms.locfileid: "86003140"
 |**varchar**|2|2|2|2|  
 |**nchar**|2|2|2|2|  
 |**nvarchar**|2|2|2|2|  
-|**text***|4|4|4|4|  
-|**ntext***|4|4|4|4|  
-|**binary**|2|2|2|2|  
+|**text** _|4|4|4|4|  
+|_*ntext**_|4|4|4|4|  
+|_ *binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
-|**image***|4|4|4|4|  
-|**datetime**|0|1|0|1|  
+|**image** _|4|4|4|4|  
+|_ *datetime**|0|1|0|1|  
 |**smalldatetime**|0|1|0|1|  
 |**decimal**|1|1|1|1|  
 |**numeric**|1|1|1|1|  
@@ -85,13 +85,13 @@ ms.locfileid: "86003140"
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \***的未来版本中将删除**ntext **、** text **和** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
+ \***的未来版本中将删除** ntext **、** text **和** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
   
 ##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> 大容量导入时的前缀长度  
  大容量导入数据时，前缀长度为最初创建数据文件时指定的值。 如果数据文件不是由 **bcp** 命令创建，那么可能没有长度前缀字符。 在这种情况下，将前缀长度指定为 0。  
   
 > [!NOTE]  
->  若要在不是使用 **bcp**创建的数据文件中指定前缀长度，请使用本主题前面的 [批量导出时的前缀长度](#PrefixLengthsExport)中介绍的长度。  
+>  若要在不是使用 **bcp** 创建的数据文件中指定前缀长度，请使用本主题前面的 [批量导出时的前缀长度](#PrefixLengthsExport)中介绍的长度。  
   
 ## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   

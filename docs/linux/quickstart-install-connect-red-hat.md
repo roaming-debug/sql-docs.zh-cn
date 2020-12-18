@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 81e34f795391ad53728f35c8fed6e6b2363b3f7a
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: d3663fb72891f31cdd710fefebaef906c5b14762
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115670"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471668"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入门：在 Red Hat 上安装 SQL Server 并创建数据库
 
@@ -28,7 +28,7 @@ ms.locfileid: "92115670"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 本快速入门介绍如何在 Red Hat Enterprise Linux (RHEL) 8 上安装 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询。
 
@@ -40,16 +40,16 @@ ms.locfileid: "92115670"
 ## <a name="prerequisites"></a>先决条件
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-必须拥有 RHEL 7.3-7.8 或 8.0-8.2 计算机（内存至少为 2 GB）。
+必须拥有 RHEL 7.3 - 7.8 或 8.0 - 8.3 计算机（内存至少为 2 GB）。
 
 ::: moniker-end
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-必须拥有 RHEL 7.3、7.4、7.5、7.6 或 8.0 计算机（内存至少为 2 GB）。
+必须拥有 RHEL 7.3 - 7.8 或 8.0 - 8.3 计算机（内存至少为 2 GB）。
 
 ::: moniker-end
 
@@ -129,7 +129,7 @@ ms.locfileid: "92115670"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server"></a><a id="install"></a>安装 SQL Server
 

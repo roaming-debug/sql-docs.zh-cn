@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4053b827b51eda8f238e6cada863773d625d1f59
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394982"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999222"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -223,14 +223,14 @@ replmerg [-?]
  用于连接到 FTP 服务的用户名。 如果不指定，则使用 anonymous。  
   
  **-HistoryVerboseLevel** [**1**\|**2**\|**3**]  
- 指定在合并操作期间记录的历史记录数量。 选择 **1**可将历史日志记录对性能的影响减至最小。  
+ 指定在合并操作期间记录的历史记录数量。 选择 **1** 可将历史日志记录对性能的影响减至最小。  
   
 |HistoryVerboseLevel 值|说明|  
 |-------------------------------|-----------------|  
 |**0**|记录最终的代理状态消息、最终的会话详细信息和任何错误。|  
 |**1**|记录每个会话状态的增量会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。|  
 |**2**|默认。 记录每个会话状态的增量会话详细信息和项目级别会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。 同时还会记录代理状态消息。|  
-|**3**|除了将更多地记录代理进度消息之外，其他与 **-HistoryVerboseLevel** = **2**时相同。|  
+|**3**|除了将更多地记录代理进度消息之外，其他与 **-HistoryVerboseLevel** = **2** 时相同。|  
   
  **-Hostname** _host_name_  
  本地计算机的网络名。 默认为本地计算机名称。  
@@ -245,13 +245,13 @@ replmerg [-?]
  指定连接到需要进行身份验证的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制侦听器 ISAPI DLL 时所使用的密码。  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
- 指定连接到需要进行身份验证的代理服务器（在 *internet_proxy_server*中定义）时所使用的登录名。  
+ 指定连接到需要进行身份验证的代理服务器（在 *internet_proxy_server* 中定义）时所使用的登录名。  
   
  **–InternetProxyPassword**  *internet_proxy_password*  
- 指定连接到需要进行身份验证的代理服务器（在 *internet_proxy_server*中定义）时所使用的密码。  
+ 指定连接到需要进行身份验证的代理服务器（在 *internet_proxy_server* 中定义）时所使用的密码。  
   
  **-InternetProxyServer**  *internet_proxy_server*  
- 指定当访问 *internet_url*中指定的 HTTP 资源时要使用的代理服务器。  
+ 指定当访问 *internet_url* 中指定的 HTTP 资源时要使用的代理服务器。  
   
  **-InternetSecurityMode** [**0**\|**1**]  
  指定在 Web 同步期间连接到 Web 服务器时所使用的 IIS 安全模式。 值为 **0** ，表示为基本身份验证，值为 **1** ，表示为 Windows 集成身份验证（默认）。  
@@ -271,7 +271,7 @@ replmerg [-?]
  **-MakeGenerationInterval** _make_generation_interval_seconds_  
  等待创建生成或更改批的秒数或下载到客户端的秒数。 默认值为 **1** 秒。  
   
- Makegeneration 是准备要下载到订阅服务器的发布服务器更改的进程，这可能是下载期间的性能瓶颈。 如果 makegeneration 进程已按 **-MakeGenerationInterval**指定的间隔运行，则将为当前同步会话跳过该进程。 此操作将有助于同步并发，在订阅服务器不希望下载更改时尤为有用。  
+ Makegeneration 是准备要下载到订阅服务器的发布服务器更改的进程，这可能是下载期间的性能瓶颈。 如果 makegeneration 进程已按 **-MakeGenerationInterval** 指定的间隔运行，则将为当前同步会话跳过该进程。 此操作将有助于同步并发，在订阅服务器不希望下载更改时尤为有用。  
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数目为 **MaxBcpThreads** 与在发布数据库的系统表 **sysmergeschemachange** 中列出的大容量复制请求数这二者中的较小者。 **MaxBcpThreads** 的值必须大于 0，并且不存在任何硬编码的上限。 默认值为 **1**。  
@@ -292,7 +292,12 @@ replmerg [-?]
  指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 **1**，则输出所有的进度报告消息。 如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
   
  **-ParallelUploadDownload** [**0**\|**1**]  
- 指定合并代理是否应并行处理上载到发布服务器和下载到订阅服务器的更改，这对于具有高带宽的大容量环境很有用。 如果 **ParallelUploadDownload** 为 **1**，则启用并行处理。  
+ 指定合并代理是否应并行处理上载到发布服务器和下载到订阅服务器的更改，这对于具有高带宽的大容量环境很有用。 不过，将 ParallelUploadDownload 设置为 1 时，请注意下面的警告 。
+ 
+此参数已加入可能很快弃用的参数的列表。 建议将 ParallelUploadDownload 参数设置为 0，并避免使用“大容量服务器到服务器”合并代理配置文件，因为此配置文件中已将 ParallelUploadDownload 设置为 1 。
+
+> [!WARNING]
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]
   
  **-PacketSize**  
  数据包大小（按字节计）。 默认值为 4096（字节）。  

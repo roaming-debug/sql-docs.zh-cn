@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f1e526621d9ff769094830af5cf312eb8c1f17f9
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323510"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教程：对 Linux 上的 SQL Server 使用 Active Directory 身份验证
 
@@ -64,7 +64,11 @@ ms.locfileid: "92115920"
    ```
 
    > [!NOTE]
-   > 为 SQL Server 提供专用 AD 帐户是最佳安全做法，这样一来，SQL Server 的凭据就不会与使用同一帐户的其他服务共享。 但是，如果你知道帐户的密码（在下一步中生成 keytab 文件时需要），则可以选择重复使用现有 AD 帐户。 此外，应在用户帐户上启用该帐户以支持 128 位和 256 位 Kerberos AES 加密（msDS-SupportedEncryptionTypes 属性）  。
+   > 为 SQL Server 提供专用 AD 帐户是最佳安全做法，这样一来，SQL Server 的凭据就不会与使用同一帐户的其他服务共享。 但是，如果你知道帐户的密码（在下一步中生成 keytab 文件时需要），则可以选择重复使用现有 AD 帐户。 此外，应在用户帐户上启用该帐户以支持 128 位和 256 位 Kerberos AES 加密（msDS-SupportedEncryptionTypes 属性）  。 若要验证帐户是否已启用 AES 加密，请在“Active Directory 用户和计算机”实用工具中找到帐户，并选择“属性”。  在“属性”中找到“帐户”选项卡，并验证是否选中了具有以下标题的两个复选框。  
+   >
+   > 1. **此帐户支持 Kerberos AES 128 位加密**
+   >
+   > 2. **此帐户支持 Kerberos AES 256 位加密**
 
 2. 使用 **setspn.exe** 工具为此帐户设置 ServicePrincipalName (SPN)。 必须完全按照以下示例设置 SPN 的格式。 可通过在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主机上运行 `hostname --all-fqdns` 来查找 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主机的完全限定域名。 除非已将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置为使用其他端口号，否则 TCP 端口应为 1433。
 
@@ -74,7 +78,7 @@ ms.locfileid: "92115920"
    ```
 
    > [!NOTE]
-   > 如果收到错误 (`Insufficient access rights`)，请与域管理员联系，确保你有足够的权限在此帐户上设置 SPN。 用于注册 SPN 的帐户将需要“写入 servicePrincipalName”权限  。 有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。
+   > 如果收到错误 (`Insufficient access rights`)，请与域管理员联系，确保你有足够的权限在此帐户上设置 SPN。 用于注册 SPN 的帐户将需要“写入 servicePrincipalName”权限。 有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。
    >
    > 如果以后更改 TCP 端口，则必须使用新端口号再次运行 **setspn** 命令。 还需要按照下一部分中的步骤将新的 SPN 添加到 SQL Server 服务 keytab。
 
@@ -102,7 +106,7 @@ ms.locfileid: "92115920"
    > [!NOTE]
    > SPN 可能需要几分钟才能在域中传播，特别是在域很大的情况下。 如果收到错误 (`kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM`)，请等待几分钟，然后重试。</br></br> 以上命令只有在服务器已加入 AD 域时才起作用，上一部分已说明。
 
-1. 使用 [ktpass](/windows-server/administration/windows-commands/ktpass)，然后在 Windows 计算机命令提示符处使用以下命令为每个 SPN 添加 keytab 条目  ：
+1. 使用 [ktpass](/windows-server/administration/windows-commands/ktpass)，然后在 Windows 计算机命令提示符处使用以下命令为每个 SPN 添加 keytab 条目：
 
     - `<DomainName>\<UserName>` - 可以是 MSA 或 AD 用户帐户
     - `@CONTOSO.COM` - 使用你的域名
@@ -138,7 +142,7 @@ ms.locfileid: "92115920"
     sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
     ```
 
-1. 以下配置选项需要使用 mssql-conf 工具来设置，以指定访问 keytab 文件时要使用的帐户  。
+1. 以下配置选项需要使用 mssql-conf 工具来设置，以指定访问 keytab 文件时要使用的帐户。
 
    ```bash
    sudo mssql-conf set network.privilegedadaccount <username>
@@ -201,7 +205,7 @@ sqlcmd -S mssql-host.contoso.com
 
 ### <a name="ssms-on-a-domain-joined-windows-client"></a>已加入域的 Windows 客户端上的 SSMS
 
-使用域凭据登录已加入域的 Windows 客户端。 确保已安装 SQL Server Management Studio，然后通过在“连接到服务器”对话框中指定“Windows 身份验证”来连接到 SQL Server 实例（例如，`mssql-host.contoso.com`）   。
+使用域凭据登录已加入域的 Windows 客户端。 确保已安装 SQL Server Management Studio，然后通过在“连接到服务器”对话框中指定“Windows 身份验证”来连接到 SQL Server 实例（例如，`mssql-host.contoso.com`）。
 
 ### <a name="ad-authentication-using-other-client-drivers"></a>使用其他客户端驱动程序的 AD 身份验证
 
@@ -240,7 +244,7 @@ systemctl restart mssql-server
 
 这对于想要手动配置 SQL Server 尝试与之通信的域控制器的方案可能很有用。 通过使用 **krb5.conf** 中的 KDC 列表来使用 openldap 库机制。
 
-首先，将 disablessd 和 enablekdcfromkrb5conf 设置为 true，然后重启 SQL Server   ：
+首先，将 disablessd 和 enablekdcfromkrb5conf 设置为 true，然后重启 SQL Server：
 
 ```bash
 sudo mssql-conf set network.disablesssd true
@@ -274,4 +278,4 @@ CONTOSO.COM = {
 接下来，探索 Linux 上的 SQL Server 的其他安全方案。
 
 > [!div class="nextstepaction"]
-> [加密与 Linux 上的 SQL Server 的连接](sql-server-linux-encrypted-connections.md)
+> [加密与 Linux 上 SQL Server 的连接](sql-server-linux-encrypted-connections.md)

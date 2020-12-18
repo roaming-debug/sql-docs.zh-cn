@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d36cb40971fc371022eb71dc922eb22a198bab9e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 88b25ab93d2baf680464d70b08bf6962b6aafb4c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001717"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407557"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "86001717"
         > [!NOTE]  
         >  如果指定了 **-n** （本机数据）或 **-N** （Unicode 本机）开关，则不会插入终止符。  
   
-    -   如果交互 **bcp** 命令包含 **in** 或 **out** 选项，而不包含格式化文件开关 ( **-f**) 或数据格式开关（ **-n**、 **-c**、 **-w**或 **-N**），并且选择不指定前缀长度和字段长度，则每个字段的字段终止符的命令提示符默认为无：  
+    -   如果交互 **bcp** 命令包含 **in** 或 **out** 选项，而不包含格式化文件开关 ( **-f**) 或数据格式开关（ **-n**、 **-c**、 **-w** 或 **-N**），并且选择不指定前缀长度和字段长度，则每个字段的字段终止符的命令提示符默认为无：  
   
          `Enter field terminator [none]:`  
   
@@ -138,8 +138,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|说明|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='***field_terminator***’**|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
-    |ROWTERMINATOR **='***row_terminator***’**|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
+    |FIELDTERMINATOR ='field_terminator'|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
+    |ROWTERMINATOR ='row_terminator'|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
   
      有关详细信息，请参阅 [BULK INSERT (Transact SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   

@@ -17,13 +17,13 @@ dev_langs:
 - TSQL
 author: kevinvngo
 ms.author: kevin
-monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
-ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96787961"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460780"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -432,6 +432,18 @@ COPY 命令将具有更好的性能，具体取决于工作负载。 为了获�
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>文件的数量和大小有限制吗？
 文件的数量或大小没有限制；但是，为了获得最佳性能，建议文件至少为 4 MB。
+
+### <a name="are-there-any-known-issues-with-the-copy-statement"></a>COPY 语句是否存在已知问题？
+如果有在 2020/12/07 之前创建的 Synapse 工作区，则使用托管标识进行身份验证时，可能会遇到类似的错误消息：
+
+*com.microsoft.sqlserver.jdbc.SQLServerException：此服务器尚未启用托管服务标识。请先启用托管服务标识，再重试。*
+
+请按照以下步骤操作，通过重新注册工作区的托管标识来规避此问题：
+
+1. 在 Azure 门户中转到 Synapse 工作区
+2. 转到“托管标识”边栏选项卡 
+3. 如果已选中“允许管道”选项，则必须取消选中此设置并保存
+4. 选中“允许管道”选项并保存
 
 
 ## <a name="see-also"></a>另请参阅  

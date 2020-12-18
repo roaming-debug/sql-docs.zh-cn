@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f02f8883b0a6f913eee65047a183d013c75b800b
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: b52093904be2bd3ae649e4472dc9b08ffdea89b6
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834344"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901022"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 
@@ -189,13 +189,13 @@ ms.locfileid: "91834344"
   |服务|虚拟帐户名称|
   |-------------|--------------------------|
   |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务的默认实例|**NT SERVICE\MSSQLSERVER**|
-  |名为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 **的**服务的命名实例|**NT SERVICE\MSSQL$PAYROLL**|
+  |名为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 **的** 服务的命名实例|**NT SERVICE\MSSQL$PAYROLL**|
   |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务，位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|
   |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务，位于名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PAYROLL **的**|**NT SERVICE\SQLAGENT$PAYROLL**|
 
 有关托管服务帐户和虚拟帐户的详细信息，请参阅 **服务帐户分步指南** 的 [托管服务和虚拟帐户概念](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) 部分以及 [托管服务帐户常见问题解答 (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)。
 
-**安全说明：** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 应尽可能使用 [MSA](#MSA)、[gMSA](#GMSA) 或[虚拟帐户](#VA_Desc)。 如果无法使用 MSA、gMSA 和虚拟帐户，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务中使用特定的低特权用户帐户或域帐户，请勿使用共享帐户。 对不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务使用单独的帐户。 不要向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户或服务组授予其他权限。 在支持服务 SID 的情况下，将通过组成员身份或直接将权限授予服务 SID。
+**安全说明：** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 应尽可能使用 [MSA](#MSA)、[gMSA](#GMSA) 或 [虚拟帐户](#VA_Desc)。 如果无法使用 MSA、gMSA 和虚拟帐户，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务中使用特定的低特权用户帐户或域帐户，请勿使用共享帐户。 对不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务使用单独的帐户。 不要向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户或服务组授予其他权限。 在支持服务 SID 的情况下，将通过组成员身份或直接将权限授予服务 SID。
 
 ### <a name="automatic-startup"></a><a name="Auto_Start"></a> 自动启动
 
@@ -270,20 +270,9 @@ ms.locfileid: "91834344"
 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序授予的权限|
 |---------------------------------------|------------------------------------------------------------|
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT SERVICE\MSSQLSERVER。 命名实例：NT Service\SQLAGENT$InstanceName。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> 启动 SQL 编写器的权限<br /><br /> 读取事件日志服务的权限<br /><br /> 读取远程过程调用服务的权限|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理：\*<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT Service\SQLSERVERAGENT。 命名实例：NT Service\SQLAGENT$InstanceName。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)|
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> （所有权限都授予本地 Windows 组。 默认实例：SQLServerMSASUser$ComputerName$MSSQLSERVER。 命名实例：SQLServerMSASUser$ComputerName$InstanceName。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例：SQLServerMSASUser$ComputerName$PowerPivot。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> 仅适用于表格：<br /><br /> **增加进程工作集** (SeIncreaseWorkingSetPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> “锁定内存页”(SeLockMemoryPrivilege) - 仅当完全关闭分页时才需要。<br /><br /> 仅适用于故障转移群集安装：<br /><br /> **提高计划优先级** (SeIncreaseBasePriorityPrivilege)|
-|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT SERVICE\ReportServer。 命名实例：NT SERVICE\\ReportServer$InstanceName。）|**以服务身份登录** (SeServiceLogonRight)|
-|**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例和命名实例：NT SERVICE\MsDtsServer130。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 没有针对命名实例的单独进程。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> 应用程序事件日志的写入权限。<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **身份验证后模拟客户端** (SeImpersonatePrivilege)|
-|**全文搜索：**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT Service\MSSQLFDLauncher。 命名实例：NT Service\ MSSQLFDLauncher$InstanceName。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)|
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser：**<br /><br /> （所有权限都授予本地 Windows 组。 默认实例或命名实例：SQLServer2005SQLBrowserUser$ComputerName。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 没有针对命名实例的单独进程。）|**以服务身份登录** (SeServiceLogonRight)|
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 编写器：**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例或命名实例：NT Service\SQLWriter。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 编写器没有针对命名实例的单独进程。）|SQLWriter 服务在具有所需的所有权限的 LOCAL SYSTEM 帐户下运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不检查此服务或为其授予权限。|
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器：**|**以服务身份登录** (SeServiceLogonRight)|
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端：**|**以服务身份登录** (SeServiceLogonRight)|
-|**PolyBase 引擎和 DMS**| **以服务身份登录** (SeServiceLogonRight)|
-|**启动板：**|**以服务身份登录** (SeServiceLogonRight) <br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br />**跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br />**调整进程的内存配额** (SeIncreaseQuotaPrivilege)|
-|**R Services/机器学习服务：** **SQLRUserGroup**（SQL 2016 和 2017） |默认情况下，没有“允许在本地登录”权限 |
-|机器学习服务“所有应用程序包”的 [AppContainer] (SQL 2019) |SQL Server“Binn”、R_Services 和 PYTHON_Services 目录的读取和执行权限 |
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT SERVICE\MSSQLSERVER。 命名实例：NT Service\MSSQLServer$InstanceName。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> 启动 SQL 编写器的权限<br /><br /> 读取事件日志服务的权限<br /><br /> 读取远程过程调用服务的权限|
+
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理：\*<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT Service\SQLSERVERAGENT。 命名实例：**NT Service\SQLAGENT$** _InstanceName_.)|**作为服务登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> 调整进程的内存配额 (SeIncreaseQuotaPrivilege)| |[!INCLUDE[ssAS](../../includes/ssas-md.md)] ：<br /><br /> （所有权限都授予本地 Windows 组。 默认实例：SQLServerMSASUser$ComputerName$MSSQLSERVER。 命名实例：SQLServerMSASUser$ComputerName$InstanceName。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例：**SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_.)|**作为服务登录** (SeServiceLogonRight)<br /><br /> 仅适用于表格：<br /><br /> **增加进程工作集** (SeIncreaseWorkingSetPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> “锁定内存页”(SeLockMemoryPrivilege) - 仅当完全关闭分页时才需要。<br /><br /> 仅适用于故障转移群集安装：<br /><br /> 提高计划优先级 (SeIncreaseBasePriorityPrivilege)| ||[!INCLUDE[ssRS](../../includes/ssrs.md)] ：<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT SERVICE\ReportServer。 命名实例：**NT SERVICE\\ReportServer$** _InstanceName_.)| (SeServiceLogonRight)| |**作为服务登录[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例和命名实例：NT SERVICE\MsDtsServer130。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 没有针对命名实例的单独进程。)|**作为服务登录** (SeServiceLogonRight)<br /><br /> 应用程序事件日志的写入权限。<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> 身份验证后模拟客户端 (SeImpersonatePrivilege)| |全文搜索 ：<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT Service\MSSQLFDLauncher。 命名实例：**NT Service\ MSSQLFDLauncher$** _InstanceName_.)|**作为服务登录** (SeServiceLogonRight)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)| |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器：<br /><br /> （所有权限都授予本地 Windows 组。 默认实例或命名实例：SQLServer2005SQLBrowserUser$ComputerName。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器没有针对命名实例的单独进程。)|**作为服务登录** (SeServiceLogonRight)| | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例或命名实例：NT Service\SQLWriter。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 编写器没有针对已命名实例的单独的进程。）SQLWriter 服务在具有所需的所有权限的 LOCAL SYSTEM 帐户下运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 设置不为此服务检查或授予权限。| | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式播放控制器:** |**作为服务登录** (SeServiceLogonRight)| | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式播放客户端:** |**作为服务登录** (SeServiceLogonRight)| |**PolyBase 引擎和 DMS**| **作为服务登录** (SeServiceLogonRight)| |**Launchpad:** |**作为服务登录** (SeServiceLogonRight) <br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br />**跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br />调整进程的内存配额 (SeIncreaseQuotaPrivilege)| |R 服务/机器学习服务 ：**SQLRUserGroup** (SQL 2016 and 2017) |默认没有“**允许本地登录**”权限 | |**机器学习服务** '**所有应用程序包' [AppContainer]** (SQL 2019) |对 SQL Server 'Binn'、R_Services 和 PYTHON_Services 目录的 **读取和执行权限** |
 
  \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的实例上处于禁用状态。
 
@@ -444,12 +433,12 @@ ms.locfileid: "91834344"
 
 ### <a name="wmi"></a><a name="WMI"></a> WMI
 
-Windows Management Instrumentation (WMI) 必须能够连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 为了支持这一点，需在**中预配 Windows WMI 提供程序 (** NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 的 per-service SID。
+Windows Management Instrumentation (WMI) 必须能够连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 为了支持这一点，需在 **中预配 Windows WMI 提供程序 (** NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 的 per-service SID。
 
 SQL WMI 提供程序需要以下最低权限：
 
 - msdb 数据库的 **db_ddladmin** 或 **db_owner** 固定服务器角色中的成员资格。
-- 服务器中的**CREATE DDL EVENT NOTIFICATION** 权限。
+- 服务器中的 **CREATE DDL EVENT NOTIFICATION** 权限。
 - **中的** CREATE TRACE EVENT NOTIFICATION [!INCLUDE[ssDE](../../includes/ssde-md.md)]权限。
 - **VIEW ANY DATABASE** 服务器级别权限。
 

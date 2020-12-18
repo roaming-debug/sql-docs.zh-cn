@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 08bfc658b939520cb7b694d39c3c9bee557172a1
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257966"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934039"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service for Oracle by Attunity
 
@@ -29,6 +29,7 @@ ms.locfileid: "92257966"
 
 通过以下链接下载用于对应的 SQL Server 版本的 Microsoft Change Data Capture Designer and Service for Oracle by Attunity：
 
+- [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service 功能包](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service 功能包](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service 功能包](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Microsoft SQL Server 2019 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=100303)
@@ -57,6 +58,8 @@ ms.locfileid: "92257966"
 -   Oracle 数据库 10g 发行版 2
 -   Oracle 数据库 11g 发行版 1 和发行版 2
 -   经典安装的 Oracle Database 12c。 （不支持多租户安装。）  
+-   Oracle Database 18c 经典安装。 （不支持多租户安装。） 
+-   Oracle Database 19c 经典安装。 （不支持多租户安装。） 
   
 ### <a name="target-sql-server-database"></a>目标 SQL Server 数据库  
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  

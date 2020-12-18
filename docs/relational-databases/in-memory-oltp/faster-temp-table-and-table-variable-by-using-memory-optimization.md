@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eac4d8a51dabb844ff6f3607383e676ecf0fc16a
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09d3e92d2e181264965a1d4525d13f7d13b4504d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175974"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460480"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>通过使用内存优化获得更快的临时表和表变量
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -210,7 +210,7 @@ DECLARE @tvTableD TABLE
   
 #### <a name="d1-convert-inline-to-explicit"></a>D.1 从内联转换为显式  
   
-前面的语法是要以 *内联*方式创建表变量。 内联语法不支持内存优化。 因此，让我们针对 TYPE 将内联语法转换为显式语法。  
+前面的语法是要以 *内联* 方式创建表变量。 内联语法不支持内存优化。 因此，让我们针对 TYPE 将内联语法转换为显式语法。  
   
 作用域：在由 go 关键字分隔的批处理语句中第一组语句创建的 TYPE 定义即使在服务器关闭并重新启动之后仍然有效。 但是在第一个 go 分隔符之后，声明的表 @tvTableC 仅会保留到到达下一个 go 分隔符，并且批处理将结束。  
   
@@ -265,7 +265,7 @@ CREATE TYPE dbo.typeTableD
   
 ## <a name="e-prerequisite-filegroup-for-sql-server"></a>E. SQL Server 的先决条件 FILEGROUP  
   
-在 Microsoft SQL Server 上，若要使用内存优化功能，数据库必须具有使用 **MEMORY_OPTIMIZED_DATA**声明的 FILEGROUP。  
+在 Microsoft SQL Server 上，若要使用内存优化功能，数据库必须具有使用 **MEMORY_OPTIMIZED_DATA** 声明的 FILEGROUP。  
   
 - Azure SQL 数据库不需要创建此 FILEGROUP。  
   
@@ -411,7 +411,7 @@ Beginning execution loop
 Batch execution completed 5001 times.  
 2016-04-20 00:27:05.440  = End time, _tempdb.  
 ---- Tests done. ----  
-***/
+**_/
 ```
   
   

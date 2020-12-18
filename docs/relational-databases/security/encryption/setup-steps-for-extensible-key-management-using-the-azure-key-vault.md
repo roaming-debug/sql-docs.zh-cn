@@ -2,7 +2,7 @@
 title: 使用 Azure 密钥保管库设置透明数据加密 (TDE) 可扩展密钥管理
 description: 为 Azure 密钥保管库安装和配置 SQL Server 连接器。
 ms.custom: seo-lt-2019
-ms.date: 10/08/2020
+ms.date: 11/25/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,15 +12,16 @@ helpviewer_keywords:
 - EKM, with key vault setup
 - SQL Server Connector, setup
 - SQL Server Connector
+- TDE, AKV, EKM
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: Rupp29
 ms.author: arupp
-ms.openlocfilehash: 4df1fb243b2e811b216b03ec453164ae1a00b1af
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 03ed7f3bca347bbb65ea0b51c807547d7bdb5656
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130214"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489593"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>使用 Azure 密钥保管库设置 SQL Server TDE 可扩展密钥管理
 
@@ -258,13 +259,13 @@ ms.locfileid: "96130214"
 1. 在密钥保管库中生成非对称密钥。 可以通过以下两种方式之一实现此目的：导入现有密钥或创建新密钥。  
 
      > [!NOTE]
-     > SQL Server 仅支持 2048 位 RSA 密钥。
+     > SQL Server 仅支持 2048 位和 3072 位 RSA 密钥，以及 2048 位和 3072 位 RSA-HSM 密钥。
 
 ### <a name="best-practices"></a>最佳做法
 
 为了确保快速恢复密钥并能够访问 Azure 外的数据，建议采用以下最佳做法：
 
-- 在本地硬件安全模块 (HSM) 设备上创建加密密钥。 确保使用非对称 RSA 2048 密钥，以便得到 SQL Server 的支持。
+- 在本地硬件安全模块 (HSM) 设备上创建加密密钥。 确保使用非对称 RSA 2048 或 3072 密钥，以便得到 SQL Server 的支持。
 - 将加密密钥导入到 Azure 密钥保管库。 此过程在后续部分中介绍。
 - 在首次使用 Azure 密钥保管库中的密钥之前，先进行 Azure 密钥保管库密钥备份。 有关详细信息，请参阅 [Backup-AzureKeyVaultKey]() 命令。
 - 每次更改密钥（例如添加 ACL、标记或密钥属性）时，务必再进行一次 Azure 密钥保管库密钥备份。
@@ -274,7 +275,7 @@ ms.locfileid: "96130214"
 
 ### <a name="types-of-keys"></a>密钥类型
 
-可以在与 SQL Server 配合使用的 Azure 密钥保管库中生成两种类型的密钥之一。 这两种密钥都是非对称 2048 位 RSA 密钥。  
+可以在兼容 SQL Server 的 Azure 密钥保管库中生成四种类型的密钥。 非对称 2048 位和 3072 位 RSA 密钥，以及 2048 位和 3072 位 RSA-HSM 密钥。
   
 - **受软件保护的密钥**：在软件中处理，在静止时加密。 对受软件保护的密钥的操作在 Azure 虚拟机上进行。 对于不在生产部署中使用的密钥，建议使用此类型。  
 
@@ -341,6 +342,7 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 > - 从版本 1.0.4.0 开始，支持私有 Azure 云，包括 Azure 中国、Azure 德国和 Azure 政府。
 > - 1\.0.5.0 版在指纹算法方面进行了一项重大更改。 升级到 1.0.5.0 后，可能会遭遇数据库还原失败。 有关详细信息，请参阅[知识库文章 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。
 > - 从版本 1.0.5.0（时间戳：2020 年 9 月）开始，SQL Server 连接器支持筛选消息和网络请求重试逻辑。
+> - 从更新版本 1.0.5.0（时间戳：2020 年 11 月）开始，SQL Server 连接器支持 RSA 2048、RSA 3072、RSA-HSM 2048 和 RSA-HSM 3072 密钥。
   
   ![SQL Server 连接器安装向导的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

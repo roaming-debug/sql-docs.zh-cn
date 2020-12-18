@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 613546be790bac993f1242c6bfba470e95eb8685
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 6721d36159003077cf771fbff6a0e7a50a182ed2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197033"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490007"
 ---
 # <a name="install-integration-services-ssis"></a>安装 Integration Services (SSIS)
 
@@ -115,7 +115,7 @@ ms.locfileid: "92197033"
 
 - **SQL Server Data Tools (SSDT)** 。 我们已不再使用适用于 Visual Studio 2019 的 SSDT 独立安装程序。 对于 Visual Studio 2019，现可从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview) 获取 SSIS 设计器扩展。
 
-- **用于 Azure 的 Integration Services 功能包**。 要下载并安装功能包，请参阅[用于 Azure 的 Microsoft SQL Server 2017 Integration Services 功能包](../azure-feature-pack-for-integration-services-ssis.md?view=sql-server-2017)。 通过安装功能包，可将包连接到 Azure 云中的存储和分析服务，包括以下服务：
+- **用于 Azure 的 Integration Services 功能包**。 要下载并安装功能包，请参阅[用于 Azure 的 Microsoft SQL Server Integration Services 功能包](../azure-feature-pack-for-integration-services-ssis.md)。 通过安装功能包，可将包连接到 Azure 云中的存储和分析服务，包括以下服务：
 
   - Azure Blob 存储。
 

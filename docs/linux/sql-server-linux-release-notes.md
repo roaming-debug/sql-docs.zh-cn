@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: dd0473eea265df700c1224ba4db8edf2dbff9e9e
-ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
+ms.openlocfilehash: a585314a26e90b76d18117be2eafe6f78e399dc3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90013670"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322035"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的发行说明
 
@@ -28,8 +28,8 @@ ms.locfileid: "90013670"
 
 | 平台 | 文件系统 | 安装指南 |
 |-----|-----|-----|
-| Red Hat Enterprise Linux Server 7.3、7.4、7.5、7.6 或 8 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-suse.md) |
+| Red Hat Enterprise Linux 7.3 - 7.8 或 8.0 - 8.3 服务器 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 - SP5 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04 LTS、18.04 LTS | XFS 或 EXT4 | [安装指南](quickstart-install-connect-ubuntu.md) | 
 | 适用于 Windows、Mac 或 Linux 的 Docker 引擎 1.8 及更高版本 | 空值 | [安装指南](quickstart-install-connect-docker.md) | 
 

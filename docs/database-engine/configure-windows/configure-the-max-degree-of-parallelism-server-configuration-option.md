@@ -17,47 +17,44 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: a294cbfbb165e6cc37f931cdd5d3a40406713f86
-ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
+ms.openlocfilehash: 5b07fbe64b4625fdddbf35189d210ae240f4348f
+ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94447113"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97038975"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>配置 max degree of parallelism 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 SQL Server 中配置最大并行度 (MAXDOP) 服务器配置选项。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在具有多个微处理器或 CPU 的计算机上运行时，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会检测是否可以使用并行。 并行度为每次并行计划的执行设置运行单个语句时要使用的处理器数。 您可以使用 **max degree of parallelism** 选项来限制并行计划执行时所用的处理器数。 有关最大并行度 (MAXDOP) 所设置的限制的详细信息，请参阅此页中的[限制和局限](#Restrictions)部分。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 考虑为查询、索引数据定义语言 (DDL) 操作、并行插入、联机更改列、并行统计信息集合以及静态的和由键集驱动的游标填充实施并行执行计划。
+  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 SQL Server 中配置最大并行度 (MAXDOP) 服务器配置选项。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在具有多个微处理器或 CPU 的计算机上运行时，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会检测是否可以使用并行。 并行度为每次并行计划的执行设置运行单个语句时要使用的处理器数。 您可以使用 **max degree of parallelism** 选项来限制并行计划执行时所用的处理器数。 有关最大并行度 (MAXDOP) 所设置的限制的详细信息，请参阅此页中的[注意事项](#Considerations)部分。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 考虑为查询、索引数据定义语言 (DDL) 操作、并行插入、联机更改列、并行统计信息集合以及静态的和由键集驱动的游标填充实施并行执行计划。
 
 > [!NOTE]
 > [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 介绍有关在安装过程中如何基于可用处理器数量设置 MAXDOP 服务器配置的自动建议。 安装程序用户界面允许接受建议的设置或输入自己的值。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../../sql-server/install/instance-configuration.md#maxdop)。
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
-  
--   如果 affinity mask 选项不设置为默认值，则可能会限制可用于对称多处理 (SMP) 系统上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的处理器数。  
-
--   将按[任务](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)设置最大并行度 (MAXDOP) 限制。 它不是按[请求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)限制或按查询限制。 这意味着在并行查询执行期间，一个请求可生成多个任务（不超过 MAXDOP 限制），并且每个任务将使用一个工作线程和一个计划程序。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)中的“计划并行任务”部分。 
-  
-###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
-  
+###  <a name="considerations"></a><a name="Considerations"></a> 注意事项  
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
+
+-   如果 affinity mask 选项不设置为默认值，则可能会限制可用于对称多处理 (SMP) 系统上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的处理器数。 
   
--   若要使服务器能够确定最大并行度，请将此选项设置为默认值 0。 若将 maximum degree of parallelism 设置为 0， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将能够使用至多 64 个可用的处理器。 若要取消生成并行计划，请将 **max degree of parallelism** 设置为 1。 将该值设置为 1 到 32,767 之间的数值来指定执行单个查询所使用的最大处理器核数。 如果指定的值比可用的处理器数大，则使用实际可用数量的处理器。 如果计算机只有一个处理器，将忽略 **max degree of parallelism** 值。  
+-   若将最大并行度 (MAXDOP) 设置为 0，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将能够使用至多 64 个可用的处理器。 但在大多数情况下，不推荐使用此值。 有关最大并行度的建议值的详细信息，请参阅此页中的[建议](#Recommendations)部分。
+
+-   若要取消生成并行计划，请将 **max degree of parallelism** 设置为 1。 将该值设置为 1 到 32,767 之间的数值来指定执行单个查询所使用的最大处理器核数。 如果指定的值比可用的处理器数大，则使用实际可用数量的处理器。 如果计算机只有一个处理器，将忽略 **max degree of parallelism** 值。  
+
+-   将按[任务](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)设置最大并行度限制。 它不是按[请求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)限制或按查询限制。 这意味着在并行查询执行期间，一个请求可生成多个任务（不超过 MAXDOP 限制），并且每个任务将使用一个工作线程和一个计划程序。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)中的“计划并行任务”部分。 
   
--   您可以通过在查询语句中指定 MAXDOP 查询提示来覆盖查询中的 max degree of parallelism 值。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
-  
+-   可重写“最大并行度”服务器配置值：
+    -   在查询级别，使用 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。     
+    -   在数据库级别，请使用 MAXDOP [数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
+    -   在工作负载级别，请使用 MAX_DOP [Resource Governor 工作负载组配置选项](../../t-sql/statements/create-workload-group-transact-sql.md)。
+
 -   索引操作（如创建或重新生成索引、或删除聚集索引）可能会大量占用资源。 您可以通过在索引语句中指定 MAXDOP 索引选项来覆盖索引操作的 max degree of parallelism 值。 MAXDOP 值在执行时应用于语句，但不存储在索引元数据中。 有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 -   除了查询和索引操作之外，此选项还控制 DBCC CHECKTABLE、DBCC CHECKDB 和 DBCC CHECKFILEGROUP 的并行。 使用跟踪标志 2528，可以禁用为这些语句所做的并行执行计划。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
-> [!TIP]
-> 要在查询级别完成此操作，请使用 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。     
-> 要在数据库级别完成此操作，请使用 MAXDOP [数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。      
-> 要在工作负荷级别完成此操作，请使用 MAX_DOP [Resource Governor 工作负荷组配置选项](../../t-sql/statements/create-workload-group-transact-sql.md)。      
-
-###  <a name="guidelines"></a><a name="Guidelines"></a> 准则  
+###  <a name="recommendations"></a><a name="Recommendations"></a> <a name="Guidelines"></a> 建议  
 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，在服务启动期间，如果 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在启动时检测到每个 NUMA 节点或插槽内的物理内核数目超过 8 个，在默认情况下就会自动创建 soft-NUMA 节点。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 将相同物理内核中的逻辑处理器放入不同的 soft-NUMA 节点中。 下表中的建议旨在将并行查询的所有工作线程保持在相同 soft-NUMA 节点中。 这将提高跨工作负荷 NUMA 节点查询和分布工作线程的性能。 有关详细信息，请参阅 [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)。
 
 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，请使用以下准则配置“最大并行度”服务器配置值：
@@ -105,7 +102,7 @@ ms.locfileid: "94447113"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `max degree of parallelism` 选项的值配置为 `16`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `max degree of parallelism` 选项的值配置为 `16`。  
   
 ```sql  
 USE AdventureWorks2012 ;  
