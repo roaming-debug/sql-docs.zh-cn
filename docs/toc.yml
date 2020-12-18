@@ -8507,7 +8507,13 @@
         - name: 快速入门
           items:
             - name: 连接并查询 SQL Server
-              href: ssms/quickstarts/connect-query-sql-server.md
+              href: ssms/quickstarts/ssms-connect-query-sql-server.md
+            - name: 在 Azure VM 上连接并查询 SQL Server
+              href: ssms/quickstarts/ssms-connect-query-sql-server-azure-vm.md
+            - name: 连接并查询 Azure SQL 数据库
+              href: ssms/quickstarts/ssms-connect-query-azure-sql.md
+            - name: 在 Azure Synapse Analytics 中连接并查询专用 SQL 池
+              href: ssms/quickstarts/ssms-connect-query-azure-synapse-analytics.md
         - name: 教程
           items:
             - name: SSMS 配置
