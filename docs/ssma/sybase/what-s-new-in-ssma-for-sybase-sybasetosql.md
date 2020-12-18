@@ -4,22 +4,29 @@ description: 了解针对每个版本的 Sybase (SybaseToSQL) SQL Server 迁移�
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 57b589ef62259904d63106298326dd537d33fc15
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: c9bbea58446a4e42410273e6d20f2649121ee813
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036057"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665854"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL 的 SSMA 中的新增功能) 
 
 本文列出了适用于 SAP ASE 的 SQL Server 迁移助手 (SSMA) ， (以前的 SSMA 用于 Sybase) 每个版本中的更改。
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+适用于 SAP ASE 的 SSMA 的8.16 版本包含以下更改：
+
+* 删除对旧分析器的支持
+* 修复了对象未从数据库刷新的问题
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -81,7 +88,7 @@ SSMA for SAP ASE 的 8.8 8.8 版本包括：
 
 除了旨在提高可用性和性能的目标修补集外，通过添加使用户能够在转换后的代码中省略 SSMA 扩展属性的设置，还增强了 SSMA for SAP ASE 的 v 8.6 版本。
 
-若要利用此设置，请在 SSMA for SAP ASE 中导航到 " **工具** " "  >  **项目设置** " "  >  **常规**  >  **转换** "，然后在 " **杂项** " 下，将 " **省略扩展属性** " 设置的值更新为 **"是"** 。
+若要利用此设置，请在 SSMA for SAP ASE 中导航到 "**工具**" "  >  **项目设置**" "  >  **常规**  >  **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
 
 ![省略扩展属性设置](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -137,7 +144,7 @@ SSMA for SAP ASE 的 v2.0 版本增强了目标修补程序，旨在提高质量
 
   ![SQL 数据库 MI 项目](../media/ssma-newproject-sqldbmi.png)
 
-* 转换后 **修补顾问** 。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
+* 转换后 **修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
 
 * 初步的数据库/架构选择。
 
@@ -359,6 +366,6 @@ SSMA 的2008年6月发行版包含以下更改：
 
 2006 年 7 月发布的用于 Sybase 的 SSMA 是初次发布。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [入门用于 Sybase &#40;SybaseToSQL 的 SSMA&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

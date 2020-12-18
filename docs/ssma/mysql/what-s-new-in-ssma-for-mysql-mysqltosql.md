@@ -4,22 +4,32 @@ description: 了解每个版本的 SQL Server 迁移助手 (SSMA) for MySQL (MyS
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: efd716c1e41597e276c4b33bb19122d70b91dd03
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: b97f27f2e6c1fbed9109abbde012d7a8cf97935a
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036033"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665828"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新增功能 (MySQLToSql)
 
 本文列出了每个版本中的 MySQL 更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+SSMA for MySQL 的8.16 版本包含以下更改：
+
+* 添加对计算列的支持
+* 修复 `INSERT` 具有唯一约束和主键的表的转换语句时的问题
+* 更新分析器以与 `ANSI_QUOTES` `NO_BACKSLASH_ESCAPES` 服务器模式相关
+* 删除对旧分析器的支持
+* 修复了对象未从数据库刷新的问题
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -83,7 +93,7 @@ SSMA for MySQL 的 v4.0 版本在图形用户界面中提供了细微的修复�
 
 除了旨在提高可用性和性能的目标修补集外，通过添加使用户能够在转换后的代码中省略 SSMA 扩展属性的设置，增强了 SSMA for MySQL 的 v 8.6 版本。
 
-若要利用此设置，请在 SSMA for MySQL 中导航到 " **工具** " "  >  **项目设置** " "  >  **常规**  >  **转换** "，然后在 " **杂项** " 下，将 " **省略扩展属性** " 设置的值更新为 **"是"** 。
+若要利用此设置，请在 SSMA for MySQL 中导航到 "**工具**" "  >  **项目设置**" "  >  **常规**  >  **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
 
 ![省略扩展属性设置](../mysql/media/ssma-omit-extended-properties.png)
 
@@ -137,7 +147,7 @@ SSMA for MySQL 的 v2.0 版本增强了旨在提高质量和转换指标的目�
 
   ![SQL MI 项目](../media/ssma-newproject-sqldbmi.png)
 
-* 转换后 **修补顾问** 。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
+* 转换后 **修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
 
 * 初步的数据库/架构选择。
 

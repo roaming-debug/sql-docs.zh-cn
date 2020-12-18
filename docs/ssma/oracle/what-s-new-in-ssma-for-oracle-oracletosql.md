@@ -4,22 +4,30 @@ description: 了解针对每个版本的 Oracle (OracleToSQL) SQL Server 迁移�
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: d7bcff5c96935dee5b696b0fa828cf3ba33eb56e
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 84a94725df5f3d1d817ed9f6de1048b9a54d6c64
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036013"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665838"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle (OracleToSQL 的 SSMA 中的新增功能) 
 
 本文列出了每个版本的 Oracle 更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+用于 Oracle 的 SSMA 的8.16 版本包含以下更改：
+
+* 添加对标识列的支持
+* 删除对旧分析器的支持
+* 修复了对象未从数据库刷新的问题
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -110,7 +118,7 @@ SSMA for Oracle 的 v4.0 版本在图形用户界面中提供了细微的修复�
 
 除了旨在提高可用性和性能的目标修补集外，通过添加使用户能够在转换后的代码中省略 SSMA 扩展属性的设置，还增强了 SSMA for Oracle 的 v 8.6 版本。
 
-若要利用此设置，请在 SSMA for Oracle 中导航到 " **工具** " "  >  **项目设置** " "  >  **常规**  >  **转换** "，然后在 " **杂项** " 下，将 " **省略扩展属性** " 设置的值更新为 **"是"** 。
+若要利用此设置，请在 SSMA for Oracle 中导航到 "**工具**" "  >  **项目设置**" "  >  **常规**  >  **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
 
 ![省略扩展属性设置](../oracle/media/ssma-omit-extended-properties.png)
 
@@ -196,7 +204,7 @@ SSMA for Oracle 的 v2.0 版本通过旨在改进质量和转换指标的目标�
 
   面向 Azure SQL 托管实例时，某些功能（包括测试人员和服务器端数据迁移）不受支持。 在[此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)阅读详细信息。
 
-* 转换后 **修补顾问** 。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
+* 转换后 **修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
 
 * 初步的数据库/架构选择。
 
