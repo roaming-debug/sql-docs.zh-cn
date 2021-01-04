@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5de7b0a5b155c519a7a7d24331fb9ad2dc571e3e
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: cbc258c5da9252a4463caf4b9b096c5a899d9e0a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764969"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409683"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服务应用程序
 
@@ -147,7 +147,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  选择此选项可指定一个帐户。  
   
  **帐户**  
- 输入一个 Windows 域用户帐户。 使用如下格式：\<domain>\\<user account\>。  
+ 输入一个 Windows 域用户帐户。 使用以下格式：\<domain>\\<user account\>。  
   
  **密码**  
  键入密码。  

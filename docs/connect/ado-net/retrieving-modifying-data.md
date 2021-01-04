@@ -1,7 +1,7 @@
 ---
 title: 检索和修改数据
-description: 在 .NET Framework 中，Microsoft SqlClient Data Provider for SQL Server 充当应用程序和数据源之间的桥梁，用于读取和更新数据。
-ms.date: 11/13/2020
+description: 在 NET 中，Microsoft SqlClient Data Provider for SQL Server 充当应用程序和数据源之间的桥梁，用于读取和更新数据。
+ms.date: 11/30/2020
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: d6e4d6c298c632c446e1671b5d9adabaa19e0776
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: c3cf3766ffc6c8acf6025b58aa0adbaafafa2188
+ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761485"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97038955"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中检索和修改数据
 
@@ -41,6 +41,10 @@ ms.locfileid: "96761485"
 
 [DataAdapter 和 DataReader](dataadapters-datareaders.md)  
 包含说明 DataReader、DataAdapter、参数、处理 DataAdapter 事件和执行批操作的主题。
+
+[事务和并发](transactions-and-concurrency.md) 包含描述如何执行本地事务、分布式事务和使用乐观并发的主题。
+
+[检索数据库架构信息](retrieving-database-schema-information.md) 描述如何获取数据库中可用的数据库或目录、表和视图、对于表存在的约束以及数据源中的其他架构信息。
 
 ## <a name="see-also"></a>请参阅
 

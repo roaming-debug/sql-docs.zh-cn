@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 2bd589ebacd9ea35e15881eaaeb022d4f2302986
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e0c68752d21de5945c06433af8c08f6208322f7c
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97103163"
 ---
 # <a name="configure-advanced-data-security-for-azure-arc-enabled-sql-server-instance"></a>为已启用 Azure Arc 的 SQL Server 实例配置高级数据安全
 
@@ -50,17 +50,17 @@ ms.locfileid: "91988023"
 
 1. 有关详细信息，请参阅 [Azure Arc 的扩展管理](/azure/azure-arc/servers/manage-vm-extensions)
 
-## <a name="enable-advanced-data-security"></a>启用高级数据安全
+## <a name="enable-azure-defender"></a>启用 Azure Defender
 
-接下来，需要为 SQL Server 实例启用高级数据安全。
+接下来，你需要为 SQL Server 实例启用 Azure Defender。
 
 1. 从侧边栏转到“安全中心”，并打开“定价和设置”页面。
 
 1. 选择为上一步中的 MMA 扩展配置的工作区
 
-1. 选择“标准”。 请确保已启用“计算机上的 SQL Server (预览版)”选项。
+1. 选择“启用 Azure Defender”。 请确保已启用“计算机上的 SQL Server”选项。
 
-   ![升级工作区](media/configure-advanced-data-security/upgrade-log-analytics-workspace.png)
+   ![升级工作区](media/configure-advanced-data-security/enable-azure-defender.png)
 
  > [!NOTE]
    > 首次扫描将在启用高级数据安全后的 24 小时内进行，以生成漏洞评估。 之后，将在每周的星期日执行自动扫描。

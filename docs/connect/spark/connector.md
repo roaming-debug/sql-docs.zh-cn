@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 7450ebddf94a4378313bb1793bcefe34a88407a5
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: b4c7027fd4695e1c1110fb19ae8cefc9be34ac10
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442951"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438850"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Apache Spark 连接器：SQL Server 和 Azure SQL
 
@@ -25,7 +25,7 @@ ms.locfileid: "96442951"
 
 [Apache Spark](https://spark.apache.org/) 是用于大规模数据处理的统一分析引擎。
 
-你可以通过 Maven 坐标将连接器导入项目：`com.microsoft.azure:spark-mssql-connector:1.0.0`。 也可以从源构建连接器，或从 GitHub 的“发布”部分下载 jar。 有关连接器的最新信息，请参阅 [SQL Spark 连接器 GitHub 存储库](https://github.com/microsoft/sql-spark-connector)。
+可以从 [Maven](https://search.maven.org/search?q=spark-mssql-connector) 获取连接器。 若要导入连接器，请使用坐标 `com.microsoft.azure:spark-mssql-connector:<latest version>`。 也可以从源构建连接器，或从 GitHub 的“发布”部分下载 jar。 有关连接器的最新信息，请参阅 [SQL Spark 连接器 GitHub 存储库](https://github.com/microsoft/sql-spark-connector)。
 
 ## <a name="supported-features"></a>支持的功能
 
