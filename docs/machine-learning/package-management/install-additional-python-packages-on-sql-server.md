@@ -7,46 +7,58 @@ ms.date: 08/26/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b77fb8eac5b2c14bb181e2e10d9a32721ccec42b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: cd0528125a4bd74b259fd02facb0589f4e123aad
+ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870389"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97617546"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装 Python 包
 
 [!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数将新的 Python 包安装到 [SQL Server 上的机器学习服务](../sql-server-machine-learning-services.md)实例以及[大数据群集](../../big-data-cluster/machine-learning-services.md)。 安装的包可用于使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL 语句在数据库内运行的 Python 脚本。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数将新的 Python 包安装到 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)实例。 安装的包可用于使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL 语句在数据库内运行的 Python 脚本。
 ::: moniker-end
 
 有关包位置和安装路径的详细信息，请参阅[获取 Python 包信息](../package-management/python-package-information.md)。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
-> 本文中所述的 sqlmlutils 包用于将 Python 包添加到 SQL Server 2019 或更高版本。 对于 SQL Server 2017 及更早版本，请参阅[使用 Python 工具安装包](./install-python-packages-standard-tools.md?view=sql-server-2017)。
+> 本文中所述的 sqlmlutils 包用于将 Python 包添加到 SQL Server 2019 或更高版本。 对于 SQL Server 2017 及更早版本，请参阅[使用 Python 工具安装包](./install-python-packages-standard-tools.md?view=sql-server-2017&preserve-view=true)。
 ::: moniker-end
 
 ## <a name="prerequisites"></a>先决条件
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + 必须使用 Python 语言选项安装 [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。
 ::: moniker-end
 
 + 在用于连接到 SQL Server 的客户端计算机上安装 [Azure Data Studio](../../azure-data-studio/what-is.md)。 你可以使用其他数据库管理或查询工具，但本文采用 Azure Data Studio。
 
-+ 在 Azure Data Studio 中安装 Python 内核。 此外，还可以从命令行安装和使用 Python，并且可能需要一个 Python 开发环境，例如具有 [Python 扩展](https://marketplace.visualstudio.com/items?itemName=ms-python.python)的 [Visual Studio Code](https://code.visualstudio.com/download)。
++ 在 Azure Data Studio 中安装 Python 内核。 此外，还可以通过命令行安装和使用 Python，并且可以使用其他 Python 开发环境，例如具有 [Python 扩展](https://marketplace.visualstudio.com/items?itemName=ms-python.python)的 [Visual Studio Code](https://code.visualstudio.com/download)。
+
+  客户端计算机上的 Python 版本必须与服务器上的 Python 版本匹配，并且安装的包必须与你拥有的 Python 版本一致。
+  若要了解每个 SQL Server 版本包含哪个 Python 版本，请参阅 [Python 和 R 版本](../sql-server-machine-learning-services.md#versions)。
+  
+  若要验证特定 SQL Server 实例上的 Python 版本，请使用以下 T-SQL 命令。
+
+  ```sql
+  EXECUTE sp_execute_external_script
+    @language = N'Python',
+    @script = N'
+  import sys
+  print(sys.version)
+  '
+  ```
 
 ### <a name="other-considerations"></a>其他注意事项
-
-+ 包必须与所拥有的 Python 版本兼容，并且服务器上的 Python 版本必须与客户端计算机上的 Python 版本一致。 若要了解每个 SQL Server 版本包含哪个 Python 版本，请参阅 [Python 和 R 版本](../sql-server-machine-learning-services.md#versions)。 要确认特定 SQL 实例中的 Python 版本，请参阅[查看 Python 版本](python-package-information.md#bkmk_SQLPythonVersion)。
 
 + Python 包库位于 SQL Server 实例的“程序文件”文件夹中，默认情况下，在此文件夹中安装需要管理员权限。 有关详细信息，请参阅[包库位置](../package-management/python-package-information.md#default-python-library-location)。
 
@@ -106,7 +118,7 @@ pip install sqlmlutils
 
 如果用于连接到 SQL Server 的客户端计算机具有 Internet 访问权限，则可以通过 Internet 使用 sqlmlutils 查找 text-tools 包和任何依赖项，然后将该包远程安装到 SQL Server 实例 。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 1. 在客户端计算机上，打开 Python 或 Python 环境。
 
@@ -114,7 +126,7 @@ pip install sqlmlutils
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15||=azuresqldb-mi-current"
 
 1. 在客户端计算机上，打开 Python 或 Python 环境。
 
@@ -148,13 +160,13 @@ pip install sqlmlutils
 
 在本例中，text-tools 没有依赖项，因此 `text-tools` 文件夹中只有一个文件可供安装。 而类似于 scikit-plot 的包有 11 个依赖项，因此你会在文件夹中找到 12 个文件（即 scikit-plot 包及其 11 个依赖包），然后可安装每个文件 。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 运行以下 Python 脚本。 替换包的实际文件路径和名称，以及你自己的 SQL Server 数据库连接信息（如果使用 Windows 身份验证，无需 `uid` 和 `pwd` 参数）。 对文件夹中的每个包文件重复 `sqlmlutils.SQLPackageManager` 语句。
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15||=azuresqldb-mi-current"
 
 运行以下 Python 脚本。 替换包的实际文件路径和名称，以及你自己的 SQL Server 数据库连接信息。 对文件夹中的每个包文件重复 `sqlmlutils.SQLPackageManager` 语句。
 
@@ -188,6 +200,17 @@ print(first_match)
 
 ```python
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
+```
+
+## <a name="more-sqlmlutils-functions"></a>更多 sqlmlutils 函数
+
+Sqlmlutils 包包含许多用于管理 Python 包以及用于在 SQL Server 中创建、管理和运行存储过程和查询的函数。 有关详细信息，请参阅 [sqlmlutils Python README 文件](https://github.com/microsoft/sqlmlutils/tree/master/Python)。
+
+有关任何 sqlmlutils 函数的信息，请使用 Python 帮助函数 。 例如：
+
+```Python
+import sqlmlutils
+help(SQLPackageManager.install)
 ```
 
 ## <a name="next-steps"></a>后续步骤

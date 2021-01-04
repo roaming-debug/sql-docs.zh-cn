@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: e80892bfef7ee2c8cf22aef1b491ab5ea0c0addd
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 5f0401081e6d437bcc0290c111bb5325e476650e
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97103183"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>将 SQL Server 连接到 Azure Arc
 
@@ -22,13 +22,14 @@ ms.locfileid: "93235561"
 ## <a name="prerequisites"></a>必备知识
 
 * 你的计算机上至少安装了一个 SQL Server 实例
-* 对于 Windows 计算机，已安装 Azure PowerShell。 按照这些说明[安装 Azure PowerShell](/powershell/azure/install-az-ps)。
-* 对于 Linux 计算机，已下载 Azure CLI 并连接到 Azure 帐户。 按照说明[安装 Azure CLI](/cli/azure/install-azure-cli-apt)。
-* 已注册 Microsoft.AzureData 资源提供程序。 有关资源提供程序的详细信息，请参阅 Azure 资源提供程序和类型。
-    * 在 PowerShell 中运行 `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureData`
-    * 在 Linux 中运行 `az provider register --namespace 'Microsoft.AzureData`
-
-
+* Microsoft.AzureArcData 资源提供程序已使用以下方法之一注册：  
+    * 使用 Azure 门户：
+        - 选择 **订阅** 
+        - 选择自己的订阅
+        - 在“设置”下，选择“资源提供程序” 
+        - 搜索 `Microsoft.AzureArcData`，并选择“注册”
+    * 使用 PowerShell 运行 `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureArcData`
+    * 使用 CLI 运行 `az provider register --namespace 'Microsoft.AzureArcData`
 
 ## <a name="generate-a-registration-script-for-sql-server"></a>为 SQL Server 生成注册脚本
 
@@ -37,7 +38,7 @@ ms.locfileid: "93235561"
 1. 搜索“SQL Server - Azure Arc”资源类型，并通过“创建”边栏选项卡添加新资源。
 
 ![开始创建](media/join/start-creation-of-sql-server-azure-arc-resource.png)
-    
+
 2. 查看先决条件，并转到“服务器详细信息”选项卡。  
 
 3. 选择订阅、资源组、Azure 区域和主机操作系统。 如果需要，还要指定你的网络用于连接到 Internet 的代理。
@@ -92,11 +93,11 @@ ms.locfileid: "93235561"
 
 ![验证已连接的 SQL server ](media/join/validate-sql-server-azure-arc.png)
 
-## <a name="un-register-the-sql-server---azure-arc-resources"></a>取消注册“SQL Server - Azure Arc”资源
+## <a name="disconnect-your-sql-server-instance"></a>断开 SQL Server 实例的连接
 
-若要删除现有“SQL Server - Azure Arc”资源，请转到包含该资源的资源组，并将其从组中资源的列表中删除。
+若要从 Azure Arc 断开 SQL Server 实例的连接，请转到 Azure 门户，打开该实例的“SQL Server - Azure Arc”资源，然后单击“取消注册”按钮。
 
-![取消注册 SQL Server](media/join/delete-sql-server-azure-arc.png)
+![取消注册 SQL Server](media/join/unregister-sql-server-azure-arc.png)
 
 ## <a name="next-steps"></a>后续步骤
 

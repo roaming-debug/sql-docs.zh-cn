@@ -5,16 +5,16 @@ description: 使用已启用 Azure Arc 的 SQL Server 管理 SQL Server 实例
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 10/07/2020
+ms.date: 12/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: c1ba7f7552b5050e3c1fa7bc765acfa431f3df30
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987983"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97103142"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>已启用 Azure Arc 的 SQL Server（预览）
 
@@ -43,8 +43,9 @@ ms.locfileid: "91987983"
 
 ### <a name="required-permissions"></a>所需的权限
 
-若要将 SQL Server 实例和宿主连接到 Azure Arc，你必须有一个帐户且该帐户有权执行以下操作：
-   * Microsoft.AzureData/*
+要将 SQL Server 实例和宿主计算机连接到 Azure Arc，必须有一个帐户且该帐户有权执行以下操作：
+   * Microsoft.AzureArcData/sqlServerInstances/read
+   * Microsoft.AzureArcData/sqlServerInstances/write
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
@@ -58,6 +59,10 @@ ms.locfileid: "91987983"
 ### <a name="networking-configuration-and-resource-providers"></a>网络配置和资源提供程序
 
 查看 Connected Machine 代理所需的[网络配置、传输层安全性和资源提供程序](/azure/azure-arc/servers/agent-overview#prerequisites)。
+
+将 SQL Server 实例连接到 Azure Arc 需要资源提供程序 `Microsoft.AzureArcData`。请参阅[先决条件](connect.md#prerequisites)部分中的资源提供程序注册说明。
+
+如果已将 SQL Server 实例连接到 Azure Arc，请按照以下步骤将现有“SQL Server - Azure Arc”资源迁移到新的命名空间。
 
 ### <a name="supported-azure-regions"></a>支持的 Azure 区域
 

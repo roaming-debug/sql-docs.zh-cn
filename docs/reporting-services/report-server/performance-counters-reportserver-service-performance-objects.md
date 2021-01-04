@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fe50faeeb134ca9162f5de25b6c775d3b6eea829
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 8224c126d9f23cb5f13c517400ec79e04d127ff5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466608"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>性能计数器 - ReportServer 服务，性能对象
   该主题描述了作为 **部署的一部分的** ReportServer:Service **和** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 性能对象的性能计数器。  
@@ -38,7 +38,7 @@ ms.locfileid: "91986944"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> ReportServer:Service 性能计数器（本机模式报表服务器）  
- **ReportServer:Service** 性能对象包含一个计数器集合，用于跟踪报表服务器实例的与 HTTP 相关的事件以及与内存相关的事件。 此性能对象对计算机上的每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例显示一次，可以在每个实例的性能对象中添加或删除计数器。 默认实例的计数器以 **ReportServer:Service**格式显示。 命名实例的计数器以 ReportServer$\<***instance_name***>:Service 格式显示。  
+ **ReportServer:Service** 性能对象包含一个计数器集合，用于跟踪报表服务器实例的与 HTTP 相关的事件以及与内存相关的事件。 此性能对象对计算机上的每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例显示一次，可以在每个实例的性能对象中添加或删除计数器。 默认实例的计数器以 **ReportServer:Service** 格式显示。 命名实例的计数器以 *ReportServer$\<**_instance_name_*_>:Service_ 格式显示。  
   
  **ReportServer:Service** 性能对象是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的新增功能，它提供 Internet Information Services (IIS) 和以前版本的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 所含的计数器的子集。 这些新计数器是特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，用于跟踪报表服务器中与 HTTP 相关的事件，例如请求、连接和登录尝试。 此外，此性能对象还包括用于跟踪内存管理事件的计数器。  
   

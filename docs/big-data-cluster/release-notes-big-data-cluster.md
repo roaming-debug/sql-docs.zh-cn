@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b3265c99e185f4a8fcbe68e400ab1277b1e72671
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: f328e136bc0b07f23083153277ac98588702b373
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442885"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489657"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 大数据群集发行说明
 
@@ -191,6 +191,12 @@ SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>已知问题
+
+### <a name="msdtc-capabilities-can-not-be-enabled-for-sql-server-master-instance-running-within-bdc"></a>无法为在 BDC 中运行的 SQL Server 主实例启用 MSDTC 功能
+
+- **受影响的版本**：所有大数据群集部署配置（无论是何种版本）。
+
+- **问题及其对客户的影响**：SQL Server 作为 SQL Server 主实例部署到 BDC 中后，无法启用 MSDTC 功能。 没有针对此问题的解决方法。
 
 ### <a name="ha-sql-server-database-encryption-key-encryptor-rotation"></a>HA SQL Server 数据库加密密钥加密程序轮换
 

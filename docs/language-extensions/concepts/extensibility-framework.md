@@ -8,13 +8,13 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 40fd6b73bf28b6a201a1c0fedd1624a09d67b9c0
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 344e5f35e35202b6a44a4932db8a27424fdb8753
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935374"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471798"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 语言扩展中的扩展性体系结构
 
@@ -38,15 +38,15 @@ The following diagram visually describes opportunities and benefits of the exten
 
 体系结构设计为使外部代码可在与 SQL Server 不同的进程中运行，但是具有在内部为 SQL Server 上的数据和操作管理请求链的组件。 
   
-  ***Windows 中的组件体系结构：***
+  Windows 中的组件体系结构：_*
 
   ![Windows 上的组件体系结构](../media/generic-architecture-windows.png "Windows 上的组件体系结构")
   
-  ***Linux 中的组件体系结构：***
+  _*_Linux 中的组件体系结构：_*_
   
   ![Linux 上的组件体系结构](../media/generic-architecture-linux.png "WindowsLinux 上的组件体系结构")
   
-组件包括 Launchpad 服务，用于调用外部运行时（例如 Java）和特定于库的逻辑，以便加载解释器和库。
+组件包括 Launchpad 服务，该服务用于调用外部运行时（例如 Java）和特定于库的逻辑，以便加载解释器和库。
 
 <a name="launchpad"></a>
 

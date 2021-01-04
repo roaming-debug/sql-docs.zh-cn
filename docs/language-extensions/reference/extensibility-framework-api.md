@@ -8,13 +8,13 @@ ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3cc4e75f044476579859443b6a7407d01c3e92ea
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 244a8ce680704b0b25f9d0499e1a7802661d56cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956858"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471688"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>适用于 SQL Server 的 Extensibility Framework API
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -389,13 +389,13 @@ SQLRETURN GetResults(
     SQLUSMALLINT    TaskId,
     SQLULEN*        RowsNumber,
     SQLPOINTER**    Data,
-    SQLINTEGER***   StrLen_or_Ind
+    SQLINTEGER**_   StrLen_or_Ind
 );
 ```
 
-### <a name="arguments"></a>参数
+### <a name="arguments"></a>自变量
 
-*SessionId*  
+SessionId  
 \[输入\] 唯一标识此脚本会话的 GUID。
 
 *TaskId*  
@@ -453,12 +453,12 @@ StrLen_or_Ind \[输出\] 指向缓冲区的指针，该缓冲区包含指示 Par
 检索接口版本。
 此函数返回表示扩展插件接口版本的整数。 支持的值：
 1. 版本 1 是初始 API 版本。 在 SQL Server 2019 RTM 中受支持。
-1. 版本 2 添加了对 InstallExternalLibrary 和 UninstallExternalLibrary API 的支持，并且在 SQL Server 2019 CU3 中支持。                            
+1. 版本 2 添加了对 InstallExternalLibrary 和 UninstallExternalLibrary API 的支持，并且在 SQL Server 2019 CU3 中支持。                            
 
 ### <a name="syntax"></a>语法
 
 ```cpp
-SQLUSMALLINT GetInterfaceVersion();
+SQLUSMALLINT GetInterfaceVersion();
 ```
 
 ## <a name="cleanupsession"></a>CleanupSession

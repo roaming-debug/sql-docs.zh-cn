@@ -8,13 +8,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
-ms.date: 10/22/2020
-ms.openlocfilehash: e4030cac39eca0d57af3bf2bcefad293e83971c2
-ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
+ms.date: 12/15/2020
+ms.openlocfilehash: 7b52827de249153adc54d148ead5d93a015d152d
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94704162"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559089"
 ---
 # <a name="sql-database-projects-extension-preview"></a>SQL 数据库项目扩展（预览版）
 
@@ -61,6 +61,31 @@ SQL 数据库项目扩展（预览版）是在基于项目的开发环境中开�
 - 任务（生成/发布）不是用户定义的。
 - 发布 DacFx 定义的目标。
 - WSL 环境支持受限。
+
+## <a name="workspace"></a>工作区
+Azure Data Studio 中的 SQL 数据库项目包含在逻辑工作区中。  工作区管理“资源管理器”窗格中可见的文件夹以及“项目”窗格中可见的项目。 添加和删除工作区中的项目可以通过“项目”窗格中的 Azure Data Studio 界面完成。 但是，如有需要，可以在 `.code-workspace` 文件中手动编辑工作区的设置。
+
+在下面的示例 `.code-workspace` 文件中，`folders` 数组列出了“资源管理器”窗格中包含的所有文件夹，`settings` 内的 `dataworkspace.projects` 数组列出了“项目”窗格中包含的所有 SQL 项目。
+
+```json
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "name": "WideWorldImportersDW",
+            "path": "..\\WideWorldImportersDW"
+        }
+    ],
+    "settings": {
+        "dataworkspace.projects": [
+            "AdventureWorksLT.sqlproj",
+            "..\\WideWorldImportersDW\\WideWorldImportersDW.sqlproj"
+        ]
+    }
+}
+```
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: ea2f8a65cb8ca16efd625309f73d7dccc3e27505
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e70f6da7755b28c400cc80a5ee6de79a004e4e42
+ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911663"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97038915"
 ---
 # <a name="sql-server-security"></a>SQL Server 安全性
 
@@ -36,6 +36,9 @@ SQL Server 数据库应用程序的安全要求应该在设计时就加以考虑
 ## <a name="in-this-section"></a>在本节中  
 [SQL Server 中的身份验证](authentication-sql-server.md)  
 介绍了 SQL Server 登录和身份验证，并收录了其他资源的链接。 
+
+[Azure Active Directory 身份验证](azure-active-directory-authentication.md)  
+介绍如何通过 SqlClient 使用受支持的 Azure Active Directory 身份验证模式连接到 Azure SQL 数据源。
   
 [SQL Server 中的应用程序安全方案](application-security-scenarios-sql-server.md)  
 包含对 ADO.NET 和 SQL Server 应用程序的各种应用程序安全方案进行讨论的主题。  
