@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 43a5cc755eb07fe80a0d33d6b5b892e2a65ab21e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460780"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638723"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -131,7 +131,7 @@ WITH
 >Polybase 中的文件类型“分隔文本”被替换为“CSV”文件格式，后者可以通过 FIELDTERMINATOR 参数配置默认逗号分隔符。 
 
 *FILE_FORMAT = external_file_format_name*</br>
-*FILE_FORMAT* 仅适用于 Parquet 和 ORC 文件，用于指定为外部数据存储文件类型和压缩方法的外部文件格式对象的名称。 若要创建外部文件格式，请使用 [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest)。
+*FILE_FORMAT* 仅适用于 Parquet 和 ORC 文件，用于指定为外部数据存储文件类型和压缩方法的外部文件格式对象的名称。 若要创建外部文件格式，请使用 [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md)。
 
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* 指定访问外部存储帐户的身份验证机制。 身份验证方法包括：
@@ -256,7 +256,7 @@ ROW TERMINATOR 的 UTF-8 不支持扩展的 ASCII 和多字节字符。
 *FIRSTROW* 适用于 CSV，它为 COPY 命令指定在所有文件中最先读取的行号。 值从 1 开始，1 是默认值。 如果值设置为二，则在加载数据时，会跳过每个文件中的第一行（标头行）。 如果有行终止符，则跳过该行。
 
 DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }</br>
-DATEFORMAT 仅适用于 CSV，它指定映射到 SQL Server 日期格式的日期格式。 有关所有 Transact-SQL 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15)。 COPY 命令中的 DATEFORMAT 优先于[在会话级别配置的 DATEFORMAT](set-dateformat-transact-sql.md?view=sql-server-ver15)。
+DATEFORMAT 仅适用于 CSV，它指定映射到 SQL Server 日期格式的日期格式。 有关所有 Transact-SQL 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)。 COPY 命令中的 DATEFORMAT 优先于[在会话级别配置的 DATEFORMAT](set-dateformat-transact-sql.md)。
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>
 *ENCODING* 仅适用于 CSV。 默认值为 UTF8。 指定 COPY 命令加载的文件的数据编码标准。 
@@ -275,8 +275,8 @@ IDENTITY_INSERT 指定是否将导入数据文件中的标识值用于标识列�
 
 执行 Copy 命令的用户必须具有以下权限： 
 
-- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
-- [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
+- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
+- [INSERT ](grant-database-permissions-transact-sql.md#remarks)
 
 需要 INSERT 和 ADMINISTER BULK OPERATIONS 权限。 在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 权限。
 

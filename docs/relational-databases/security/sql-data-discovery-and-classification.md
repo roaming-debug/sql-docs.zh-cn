@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: ed1b0cb22d26895d5b01e59d36ede00f44ce4cd1
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: eab3c943f1191c2d52f6d476c1e0a83b74b6f0df
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439498"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638013"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "92439498"
     ![显示顶部菜单的屏幕截图，其中突出显示了“保存”选项。][8]
 
 
-6. 要生成数据库分类状态的完整摘要报表，请在窗口顶部菜单中单击“查看报表”  。 （也可以使用 SSMS 生成报告。 右键单击要生成报告的数据库，然后选择“任务” > “数据发现和分类” > “生成报告...”  ）
+6. 要生成数据库分类状态的完整摘要报表，请在窗口顶部菜单中单击“查看报表”。 （也可以使用 SSMS 生成报告。 右键单击要生成报告的数据库，然后选择“任务” > “数据发现和分类” > “生成报告...”  ）
 
     ![显示顶部菜单的屏幕截图，其中突出显示了“查看报表”选项。][9]
 
@@ -101,22 +101,22 @@ ms.locfileid: "92439498"
 
    你可以使用以下菜单选项来管理信息保护策略：
 
-* **设置信息保护策略文件** ：使用所选 JSON 文件中定义的信息保护策略。
+* **设置信息保护策略文件**：使用所选 JSON 文件中定义的信息保护策略。
 
-* **导出信息保护策略** ：将信息保护策略导出到 JSON 文件。
+* **导出信息保护策略**：将信息保护策略导出到 JSON 文件。
 
-* **重置信息保护策略** ：将信息保护策略重置为默认信息保护策略。
+* **重置信息保护策略**：将信息保护策略重置为默认信息保护策略。
 
 > [!IMPORTANT]
 > 信息保护策略文件不存储在 SQL Server 中。
-> SSMS 使用默认的信息保护策略。 如果自定义的信息保护策略失败，SSMS 将无法使用默认策略。 数据分类失败。 要解决此问题，请单击“重置信息保护策略”以使用默认策略并重新启用数据分类  。
+> SSMS 使用默认的信息保护策略。 如果自定义的信息保护策略失败，SSMS 将无法使用默认策略。 数据分类失败。 要解决此问题，请单击“重置信息保护策略”以使用默认策略并重新启用数据分类。
 
 ## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>访问分类元数据
 
 SQL Server 2019 引入了 [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 系统目录视图。 此视图返回信息类型和敏感度标签。 
 
 > [!NOTE]
-> 此视图需要 VIEW ANY SENSITIVITY CLASSIFICATION 权限  。 有关详细信息，请参阅 [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15)。
+> 此视图需要 VIEW ANY SENSITIVITY CLASSIFICATION 权限。 有关详细信息，请参阅 [Metadata Visibility Configuration](./metadata-visibility-configuration.md)。
 
 在 SQL Server 2019 实例上，查询 `sys.sensitivity_classifications` 以查看所有具有相应分类的已分类列。 例如： 
 
@@ -196,12 +196,10 @@ FROM
 # <a name="powershell-cmdlet"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
 可以使用 PowerShell Cmdlet 添加/删除列分类，以及检索整个数据库的所有分类并获取建议。
 
-- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
-- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
-- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
-- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
-
----
+- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification)
+- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations)
+- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification)
+- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification)
 
 ## <a name="next-steps"></a><a id="subheading-6"></a>后续步骤
 

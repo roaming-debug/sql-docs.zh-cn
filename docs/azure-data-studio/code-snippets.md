@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: aa1826539a6b9d2a5f649159e566d3ceda8d624d
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: bd86afbe288be3b92b15b6702ec46903f56a2ad5
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364124"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637800"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>创建和使用代码片段，以便在 Azure Data Studio 中快速创建 Transact-SQL (T-SQL) 脚本
 
@@ -89,16 +89,16 @@ Azure Data Studio 提供几个 T-SQL 片段，以帮助快速生成正确的语�
        "description": "User-defined snippet example 2"
        }
        }
-       ```
+    ```
 
-4. Save the sql.json file.
+4. 保存 sql json 文件。
 
-5. Open a new query editor window by clicking **Ctrl+N**.
+5. 单击 Ctrl+N，打开新的查询编辑器窗口。
 
-6. Type **sql**, and you see the two user snippets you just added; *sqlCreateTable2* and *sqlSelectTop5*.
+6. 键入 sql，将看到刚刚添加的两个用户片段：sqlCreateTable2 和 sqlSelectTop5 。
 
-Select one of the new snippets and give it a test run!
+选择其中一个新片段，并测试运行!
 
-## Next steps
+## <a name="next-steps"></a>后续步骤
 
-For information about the SQL editor, see [Code editor tutorial](tutorial-sql-editor.md).
+有关 SQL 编辑器的信息，请参阅[代码编辑器教程](tutorial-sql-editor.md)。

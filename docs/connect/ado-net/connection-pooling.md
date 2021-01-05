@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41b139d2f22a9cb3137879d96224b02eafc24bab
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 783fad79522c52685349defca93360c4ea8c80c9
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761495"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771633"
 ---
 # <a name="connection-pooling"></a>连接池
 
@@ -25,7 +25,7 @@ ms.locfileid: "96761495"
 
 连接到数据源可能需要很长时间。 为了最大程度地降低打开连接的成本，ADO.NET 使用一种称为“连接池”的优化技术，这种技术可最大程度地降低重复打开和关闭连接所造成的成本。
 
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
 
 [SQL Server 连接池 (ADO.NET)](sql-server-connection-pooling.md)  
 概述连接池并说明 SQL Server 中连接池的工作原理。

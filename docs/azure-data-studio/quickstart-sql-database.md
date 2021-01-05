@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 7eb89be3b94565f7a8642dad893642176a22822b
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: c168ceb916ac1b65f4e6d45c9ee1054b15b0cb75
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439291"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637654"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>快速入门：使用 Azure Data Studio 连接和查询 Azure SQL 数据库
 
@@ -24,7 +24,7 @@ ms.locfileid: "92439291"
 
 若要完成此快速入门，需要 Azure Data Studio 和 Azure SQL 数据库服务器。
 
-- [安装 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
+- [安装 Azure Data Studio](./download-azure-data-studio.md)
 
 如果你没有 Azure SQL Server，请完成以下 Azure SQL 数据库快速入门之一。 请记住完全限定服务器名称和登录凭据以用于后续步骤：
 
@@ -45,7 +45,7 @@ ms.locfileid: "92439291"
 
    | 设置       | 建议的值 | 说明 |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **服务器名称** | 完全限定的服务器名称 | 类似于 **servername.database.windows.net** 。 |
+   | **服务器名称** | 完全限定的服务器名称 | 类似于 **servername.database.windows.net**。 |
    | **身份验证** | SQL 登录名| 本教程使用 SQL 身份验证。 |
    | **用户名** | 服务器管理员帐户用户名 | 用于创建服务器的帐户的用户名。 |
    | **密码(SQL 登录名)** | 服务器管理员帐户密码 | 用于创建服务器的帐户的密码。 |

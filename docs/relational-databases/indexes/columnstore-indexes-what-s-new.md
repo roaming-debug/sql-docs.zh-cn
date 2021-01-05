@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d94afd3698b8911288ee7794d8ee32cdc1b0f3f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a9fc87cef0244afc4459c789f94855c0c0530ddd
+ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480148"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697119"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "97480148"
 |创建表时，请指定列存储索引|||是|是|是|是|是|  
 |Always On 支持列存储索引|是|是|是|是|是|是|是| 
 |Always On 可读次要副本支持只读非聚集列存储索引|是|是|是|是|是|是|是|  
-|Always On 可读次要副本支持可更新列存储索引|||是||是 是|||  
+|Always On 可读次要副本支持可更新列存储索引|||是||是|||  
 |堆或 B 树上的只读非聚集列存储索引|是|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|  
 |堆或 B 树上的可更新非聚集列存储索引|||是|是|是|是|是|  
 |允许在使用非聚集列存储索引的堆或 B 树上实施额外的 B 树索引|是|是|是|是|是|是|是|  
-|可更新的聚集列存储索引||是|是|是||是 是|是|  
-|基于聚集列存储索引的 B 树索引|||是|是||是 是|是|  
-|基于内存优化表的列存储索引|||是|是||是 是|是|  
+|可更新的聚集列存储索引||是|是|是||是|是|  
+|基于聚集列存储索引的 B 树索引|||是|是||是|是|  
+|基于内存优化表的列存储索引|||是|是||是|是|  
 |非聚集列存储索引定义支持使用筛选的条件|||是|是|是|是|是|  
 |`CREATE TABLE` 和 `ALTER TABLE` 中的列存储索引的压缩延迟选项|||是|是|是|是|是|
 |列存储索引具有一个非持久化计算列||||是|是|||   
