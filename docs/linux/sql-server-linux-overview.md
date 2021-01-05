@@ -8,37 +8,27 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 759b8d7067ca9215e8b9862b810294667e4d409b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 593a966baf3565ef2ed6d30eba92901dc8cbcca2
+ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471518"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97515346"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-::: moniker range="= sql-server-2017 "
+::: moniker range="= sql-server-2017 || = sql-server-linux-2017"
 从 SQL Server 2017 开始，SQL Server 在 Linux 上运行。 它属于相同的 SQL Server 数据库引擎，具有许多相似的功能和服务，且不受操作系统的影响。
+
+> [!TIP]
+> [SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15&preserve-view=true) 现已可用！ 要了解最新版本中的 Linux 新增功能，请参阅[适用于 Linux 的 SQL Server 2019 中的新增功能](sql-server-linux-whats-new-2019.md?view=sql-server-ver15&preserve-view=true)。
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
 SQL Server 2019 在 Linux 上运行。 它属于相同的 SQL Server 数据库引擎，具有许多相似的功能和服务，且不受操作系统的影响。 有关此版本的详细信息，请参阅[适用于 Linux 的 SQL Server 2019 中的新增功能](sql-server-linux-whats-new-2019.md)。
 ::: moniker-end
-
-::: moniker range="= sql-server-2017"
-> [!TIP]
-> [SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15) 现已可用！ 要了解最新版本中的 Linux 新增功能，请参阅[适用于 Linux 的 SQL Server 2019 中的新增功能](sql-server-linux-whats-new-2019.md?view=sql-server-ver15)。
-::: moniker-end
-
-::: moniker range="= sql-server-linux-2017"
-> [!TIP]
-> [SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) 现已可用！ 要了解最新版本中的 Linux 新增功能，请参阅[适用于 Linux 的 SQL Server 2019 中的新增功能](sql-server-linux-whats-new-2019.md?view=sql-server-linux-ver15)。
-::: moniker-end
-
-> [!TIP]
-> SQL Server 2019 现已可用！ 要了解最新版本中的 Linux 新增功能，请参阅[适用于 Linux 的 SQL Server 2019 中的新增功能](sql-server-linux-whats-new-2019.md)。
 
 ## <a name="install"></a>安装
 
@@ -78,7 +68,7 @@ SQL Server 2017 在所有支持的平台（包括 Linux）上具有相同的基�
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 在所有支持的平台（包括 Linux）上具有相同的基础数据库引擎。 因此，在 Linux 上，许多现有功能运行方式相同。 文档的这一部分从 Linux 的角度展示了其中部分功能。 它还展示了 Linux 上有独特要求的部分。
 
-如果你已熟悉 Linux 上的 SQL Server，请查看[发行说明](sql-server-linux-release-notes-2019.md)，了解此版本的常规指南和已知问题。 然后查看 [Linux 上的 SQL Server 2019 的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)。
+如果你已熟悉 Linux 上的 SQL Server，请查看[发行说明](sql-server-linux-release-notes-2019.md)，了解此版本的常规指南和已知问题。 然后查看 [Linux 上的 SQL Server 2019 的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
 
 ::: moniker-end
 

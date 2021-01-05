@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: 0e0cf7b17061340f347af536cad762f63cc38ef3
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 08ea5c807e6a8b6bb2d53286bf7a338ee9ba70d2
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489093"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637273"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,13 +61,13 @@ ms.locfileid: "97489093"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL 托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -869,10 +869,10 @@ GO
         \* SQL 数据库 \*
     :::column-end:::
     :::column:::
-        [SQL 托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -997,7 +997,7 @@ MAXSIZE 指定数据库的最大大小。 MAXSIZE 必须对指定 EDITION（服�
 |100 MB|√|√|√|√|√|
 |500 MB|√|√|√|√|√|
 |1 GB|√|√|√|√|√|
-|2 GB|√ (D)|√|√ (D)|√|√|
+|2 GB|√ (D)|√|√|√|√|
 |5 GB|空值|√|√|√|√|
 |10 GB|空值|√|√|√|√|
 |20 GB|空值|√|√|√|√|
@@ -1007,7 +1007,7 @@ MAXSIZE 指定数据库的最大大小。 MAXSIZE 必须对指定 EDITION（服�
 |100 GB|空值|√|√|√|√|
 |150 GB|空值|√|√|√|√|
 |200 GB|空值|√|√|√|√|
-|250 GB|空值|√ (D)|√ (D)|√ (D)|√ (D)|
+|250 GB|空值|√ (D)|√ (D)|√|√|
 |300 GB|空值|空值|√|√|√|
 |400 GB|空值|空值|√|√|√|
 |500 GB|空值|空值|√|√ (D)|√|
@@ -1155,7 +1155,7 @@ source_server_name 源数据库所在的 [!INCLUDE[ssSDS](../../includes/sssds-m
 
 `MAXSIZE` 提供限制数据库大小的功能。 如果数据库的大小达到其 `MAXSIZE`，你将收到错误代码 40544。 如果发生这种情况，您不能插入或更新数据或创建新的对象（如表、存储过程、视图和函数）。 不过，您仍可以读取和删除数据、截断表、删除表和索引以及重新建立索引。 然后，可以将 `MAXSIZE` 更新为比当前数据库大小更大的值，或者删除一些数据以释放存储空间。 在您可以插入新数据之前，可能有长达十五分钟的延迟。
 
-若要在以后更改大小、版本或服务目标值，请使用 [ALTER DATABASE - Azure SQL 数据库](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-currentls)。
+若要在以后更改大小、版本或服务目标值，请使用 [ALTER DATABASE - Azure SQL 数据库](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)。
 
 `CATALOG_COLLATION` 参数仅在数据库创建期间可用。
 
@@ -1285,7 +1285,7 @@ CREATE DATABASE test_zone_redundancy
 ## <a name="see-also"></a>另请参阅
 
 - [sys.dm_database_copies - Azure SQL 数据库](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
-- [ALTER DATABASE - Azure SQL 数据库](alter-database-transact-sql.md?view=azuresqldb-currentls)
+- [ALTER DATABASE - Azure SQL 数据库](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
@@ -1295,13 +1295,13 @@ CREATE DATABASE test_zone_redundancy
         [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL 托管实例 \*_**
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -1347,7 +1347,7 @@ Collation_name 指定数据库的默认排序规则。 排序规则名称既可�
 - 不支持 `WITH` 选项。
 
   > [!TIP]
-  > 解决方法是使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-mi-current)。 在 `CREATE DATABASE` 之后设置数据库选项并添加文件。
+  > 解决方法是使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)。 在 `CREATE DATABASE` 之后设置数据库选项并添加文件。
 
 ## <a name="permissions"></a>权限
 
@@ -1369,7 +1369,7 @@ CREATE DATABASE TestDB1;
 
 ## <a name="see-also"></a>另请参阅
 
-请参阅 [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+请参阅 [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest"
@@ -1379,10 +1379,10 @@ CREATE DATABASE TestDB1;
         [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL 托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1456,7 +1456,7 @@ SERVICE_OBJECTIVE 指定计算大小（服务目标）。 有关 Azure Synapse �
 
 使用 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 查看数据库属性。
 
-使用 [ALTER DATABASE - Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) 在以后更改最大大小或服务目标值。
+使用 [ALTER DATABASE - Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) 在以后更改最大大小或服务目标值。
 
 Azure Synapse 设置为 COMPATIBILITY_LEVEL 130，且不得更改。 有关详细信息，请参阅[在 Azure SQL 数据库中通过兼容性级别 130 优化查询性能](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
 
@@ -1499,7 +1499,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 ## <a name="see-also"></a>另请参阅
 
-- [ALTER DATABASE- Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [ALTER DATABASE- Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [CREATE TABLE- Azure Synapse Analytics](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)
 - [DROP DATABASE - Transact-SQL](../../t-sql/statements/drop-database-transact-sql.md)
 
@@ -1511,13 +1511,13 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL 托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Analytics Platform<br />System (PDW) \*_**
@@ -1652,7 +1652,7 @@ CREATE DATABASE mytest
 
 ## <a name="see-also"></a>另请参阅
 
-- [ALTER DATABASE - Analytics Platform System](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [ALTER DATABASE - Analytics Platform System](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end

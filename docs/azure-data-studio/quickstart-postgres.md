@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: sunilagarwal
 ms.author: sunila
-ms.openlocfilehash: fddbceec338a05d693fd9d1e039d08e271bbc01f
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 389c8b745a3768f63e2f702a7f48e8c110262fb7
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785001"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637704"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>快速入门：使用 Azure Data Studio 连接并查询 PostgreSQL
 
@@ -24,7 +24,7 @@ ms.locfileid: "91785001"
 
 若要完成本快速入门，需要 Azure Data Studio、Azure Data Studio 的 PostgreSQL 扩展以及对 PostgreSQL 服务器的访问权限。
 
-- [安装 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)。
+- [安装 Azure Data Studio](./download-azure-data-studio.md)。
 - [安装 Azure Data Studio 的 PostgreSQL 扩展](./extensions/postgres-extension.md)。
 - [安装 PostgreSQL](https://www.postgresql.org/download/)。 （或者，可以使用 [az postgres up](/azure/postgresql/quickstart-create-server-up-azure-cli) 在云中创建 Postgres 数据库）。 
 

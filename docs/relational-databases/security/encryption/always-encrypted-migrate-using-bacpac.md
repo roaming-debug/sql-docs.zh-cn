@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4260afaf34e531f219e7a4b76c51dca4b0179910
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1930de1abe9a27f27ae771e67c139c3c3dfa6cc5
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480888"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559309"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>导出和导入使用 Always Encrypted 的数据库 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97480888"
 - [导入 BACPAC 文件以创建新的用户数据库](../../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)
 - [将 Azure SQL 数据库导出到 BACPAC 文件](/azure/sql-database/sql-database-export)
 - [将 BACPAC 文件导入到 Azure SQL 数据库中的数据库](/azure/sql-database/sql-database-import)
-- [SqlPackage.exe](../../../tools/sqlpackage.md)
+- [SqlPackage.exe](../../../tools/sqlpackage/sqlpackage.md)
 
 ## <a name="permissions-for-migrating-databases-with-encrypted-columns"></a>迁移包含加密列的数据库所需的权限
 

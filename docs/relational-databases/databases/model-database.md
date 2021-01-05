@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0e1af46a47e6e0e09c8e538fed06ecd1eb1ccc41
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 01d5e44a93776560b5e89c0dc03a36b780f7ab8d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88465410"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637692"
 ---
 # <a name="model-database"></a>model 数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88465410"
 |主数据|modeldev|model.mdf|以 64 MB 的速度自动增长到磁盘充满为止。|  
 |日志|modellog|modellog.ldf|以 64 MB 的速度自动增长到最大 2 TB。|  
 
-对于 SQL Server 2014，请参阅[模型数据库](/previous-versions/sql/2014/relational-databases/databases/model-database?view=sql-server-2014)，了解默认文件增加值。  
+对于 SQL Server 2014，请参阅[模型数据库](/previous-versions/sql/2014/relational-databases/databases/model-database?view=sql-server-2014&preserve-view=true)，了解默认文件增加值。  
 
  若要移动 **model** 数据库或日志文件，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
   

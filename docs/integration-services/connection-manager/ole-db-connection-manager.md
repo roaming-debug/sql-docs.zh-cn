@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bdeaca276e64ec436b3ee39cc97439bbdc25aa98
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7c50a2e201bcba99299998dc232e1246005eb168
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719308"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639195"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 连接管理器
 
@@ -112,7 +112,7 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
     
 1. 在 Azure 门户上为托管实例[预配 Azure Active Directory 管理员](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)（如果尚未执行该操作）。 Azure AD 管理员可以是 Azure AD 用户或 Azure AD 组。 如果为具有托管标识的组授予管理员角色，请跳过步骤 2-4。 管理员将拥有对数据库的完全访问权限。
 
-1. 为数据工厂托管标识[创建登录名](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current)。 在 SQL Server Management Studio (SSMS) 中，使用 SQL Server 帐户 sysadmin  连接到托管实例。 在 master  数据库中，运行以下 T-SQL：
+1. 为数据工厂托管标识[创建登录名](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)。 在 SQL Server Management Studio (SSMS) 中，使用 SQL Server 帐户 sysadmin  连接到托管实例。 在 master  数据库中，运行以下 T-SQL：
 
     ```sql
     CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
@@ -124,7 +124,7 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 授予数据工厂托管标识所需的权限，就像通常为 SQL 用户和其他用户所做的那样。 运行以下代码。 有关更多选项，请参阅[本文档](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current)。
+1. 授予数据工厂托管标识所需的权限，就像通常为 SQL 用户和其他用户所做的那样。 运行以下代码。 有关更多选项，请参阅[本文档](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)。
 
     ```sql
     ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];

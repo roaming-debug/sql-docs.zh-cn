@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - role switching [SQL Server]
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3aefc181c1dc42e939579dcdce274a27086dd1ed
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 3b1c872205f92f33b1e2f3c7e831cf841380d79d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362227"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637609"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>数据库镜像会话期间的角色切换 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "87362227"
 3.  如果重做队列中有任何等待的日志，则镜像服务器将完成前滚镜像数据库的操作。 所需时间取决于系统速度、最新工作负荷以及重做队列中的日志量。 对于同步运行模式，可通过限制重做队列的大小调整故障转移时间。 不过，这会导致主体服务器的速度下降，以便镜像服务器能够与其同步。  
   
     > [!NOTE]  
-    >  若要了解重做队列的当前大小，请使用数据库镜像性能对象中的 **Redo Queue** 性能计数器（有关详细信息，请参阅[监视数据库镜像(SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)）。  
+    >  若要了解重做队列的当前大小，请使用数据库镜像性能对象中的 **Redo Queue** 性能计数器（有关详细信息，请参阅 [监视数据库镜像(SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)）。  
   
 4.  镜像服务器成为新的主体服务器，而以前的主体服务器成为新的镜像服务器。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "87362227"
   
  ![自动故障转移](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "自动故障转移 (automatic failover)")  
   
- 最初，所有三个服务器都已连接（会话具有完全仲裁）。 **Partner_A** 为主体服务器， **Partner_B** 为镜像服务器。 **Partner_A** （或 **Partner_A**上的主体数据库）变得不可用。 见证服务器和 **Partner_B** 都将认定主体服务器不可用，会话保留仲裁。 **Partner_B** 变为主体服务器，并将其数据库的副本用作新的主体数据库。 最后， **Partner_A** 重新连接到会话并发现 **Partner_B** 现在拥有主体角色。 **Partner_A** 接下来将接管镜像角色。  
+ 最初，所有三个服务器都已连接（会话具有完全仲裁）。 **Partner_A** 为主体服务器， **Partner_B** 为镜像服务器。 **Partner_A** （或 **Partner_A** 上的主体数据库）变得不可用。 见证服务器和 **Partner_B** 都将认定主体服务器不可用，会话保留仲裁。 **Partner_B** 变为主体服务器，并将其数据库的副本用作新的主体数据库。 最后， **Partner_A** 重新连接到会话并发现 **Partner_B** 现在拥有主体角色。 **Partner_A** 接下来将接管镜像角色。  
   
  执行故障转移后，客户端必须重新连接到当前的主体数据库。 有关详细信息，请参阅 [将客户端连接到数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
@@ -244,7 +244,7 @@ ms.locfileid: "87362227"
   
  ![可能会丢失数据的强制服务](../../database-engine/database-mirroring/media/dbm-forced-service.gif "可能会丢失数据的强制服务")  
   
- 在图中，原始主体服务器 **Partner_A**不可用于镜像服务器 **Partner_B**，从而导致镜像数据库断开连接。 确定 **Partner_A** 不可用于客户端之后，数据库管理员对 **Partner_B** 进行强制服务，这可能会造成数据丢失。 **Partner_B** 变为主体服务器，并在数据库公开（也就是未镜像）的情况下运行。 此时，客户端可以重新连接到 **Partner_B**。  
+ 在图中，原始主体服务器 **Partner_A** 不可用于镜像服务器 **Partner_B**，从而导致镜像数据库断开连接。 确定 **Partner_A** 不可用于客户端之后，数据库管理员对 **Partner_B** 进行强制服务，这可能会造成数据丢失。 **Partner_B** 变为主体服务器，并在数据库公开（也就是未镜像）的情况下运行。 此时，客户端可以重新连接到 **Partner_B**。  
   
  当 **Partner_A** 变得可用时，它会重新连接到新的主体服务器，从而重新加入会话并担当镜像角色。 镜像会话便会立即挂起，而尚未同步新的镜像数据库。 会话挂起之后，数据库管理员可以确定是恢复会话，还是在极特殊情况下删除镜像并尝试对以前主体数据库中的数据进行补救。 在此事例中，数据库管理员选择恢复镜像。 此时， **Partner_A** 接管镜像服务器的角色并将以前的主体数据库回滚到上次成功同步事务的时间点；如果在强制服务之前，未将所有提交的事务写入镜像服务器上的磁盘，则这些事务将丢失。 然后，**Partner_A** 通过应用自以前镜像服务器变为新主体服务器以来对新主体数据库所做的所有更改，前滚新的镜像数据库。  
   

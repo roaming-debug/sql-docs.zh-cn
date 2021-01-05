@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f0e1d76ae7977eac4d761c76a27e10619f300ca1
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f33a5a6890d12628faf3144a0ca6e8471a15c73d
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115680"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559279"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>使用 Windows 上的 SSMS 或 SqlPackage.exe 在 Linux 上导出和导入数据库
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-本文章说明如何使用 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 和 [SqlPackage.exe](../tools/sqlpackage.md) 在 Linux 的 SQL Server 上导出和导入数据库。 SSMS 和 SqlPackage.exe 是 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用此方法。
+本文章说明如何使用 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 和 [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) 在 Linux 的 SQL Server 上导出和导入数据库。 SSMS 和 SqlPackage.exe 是 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用此方法。
 
 应始终安装和使用最新版本的 SQL Server Management Studio (SSMS)，如[使用 Windows 上的 SSMS 连接到 Linux 上的 SQL Server](sql-server-linux-manage-ssms.md) 中所述
 
@@ -64,7 +64,7 @@ ms.locfileid: "92115680"
 
 ## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> SqlPackage 命令行选项
 
-还可以使用 SQL Server Data Tools (SSDT) 命令行工具 [SqlPackage.exe](../tools/sqlpackage.md) 来导出和导入 BACPAC 文件。
+还可以使用 SQL Server Data Tools (SSDT) 命令行工具 [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) 来导出和导入 BACPAC 文件。
 
 下面的示例命令导出 BACPAC 文件：
 
@@ -80,4 +80,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>另请参阅
-有关如何使用 SSMS 的详细信息，请参阅[使用 SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)。 有关 SqlPackage.exe 的详细信息，请参阅 [SqlPackage 参考文档](../tools/sqlpackage.md)。
+有关如何使用 SSMS 的详细信息，请参阅[使用 SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)。 有关 SqlPackage.exe 的详细信息，请参阅 [SqlPackage 参考文档](../tools/sqlpackage/sqlpackage.md)。
