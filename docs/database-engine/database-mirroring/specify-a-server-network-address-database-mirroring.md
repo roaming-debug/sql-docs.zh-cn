@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 87872d393af6b9312a3cfc4b33cc39233be3a463
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28214674672887e57abeb2b8f7381eab2d744405
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789608"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641610"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定服务器网络地址（数据库镜像）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "85789608"
   
          computer_name . _domain_segment_[... **.** _domain_segment_]  
   
-         其中， *computer_name*是运行服务器实例的计算机的网络名称， *domain_segment*[... **.** _domain_segment_] 是服务器的其余域信息；例如： `localinfo.corp.Adventure-Works.com`。  
+         其中， *computer_name* 是运行服务器实例的计算机的网络名称， *domain_segment*[... **.** _domain_segment_] 是服务器的其余域信息；例如： `localinfo.corp.Adventure-Works.com`。  
   
          在公司或组织内确定域段的内容和数量。 如果您不知道服务器的完全限定域名，请与系统管理员联系。  
   

@@ -6,7 +6,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ff824174a3c9f806267e5b2a6a58e056fb57d513
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7584e4611d957f48efcb73d12b5965f0a4727b45
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643415"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642013"
 ---
 # <a name="configure-database-mirroring"></a>配置数据库镜像
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "85643415"
   
      服务器网络地址的语法如下：  
   
-     TCP<b>\://</b> _\<system-address\>_ <b>\:</b> _\<port\>_  
+     TCP <b>\://</b> _\<system-address\>_ <b>\:</b> _\<port\>_  
   
      其中，\<system-address> 是明确标识目标计算机系统的字符串，\<port> 是伙伴服务器实例的镜像终结点使用的端口号 。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   

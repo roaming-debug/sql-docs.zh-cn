@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fd18ca39f11525f3fd91f759ff34f4ce6ebd0dbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f15bfe798c4fdec07be55f9dbb871c2980bc777
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789699"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642061"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>数据库镜像和日志传送 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "85789699"
   
  在日志传送会话期间，主数据库上的备份作业将在备份文件夹中创建日志备份。 辅助服务器的复制作业将从该位置复制备份。 若要使备份作业和复制作业成功，它们必须都能访问日志传送备份文件夹。 若要使主服务器达到最大可用性，我们建议在独立主机上的共享备份位置建立备份文件夹。 确保所有日志传送服务器（包括镜像/主服务器）都能访问共享备份位置（称为“备份共享”）。  
   
- 若要使日志传送在数据库镜像故障转移后仍能继续进行，还必须使用主体数据库上用于主服务器的配置将镜像服务器配置为主服务器。 镜像数据库处于还原状态，这样可以防止备份作业备份镜像数据库中的日志。 这将确保镜像/主数据库不会影响主体/主数据库，后者的日志备份当前正被辅助服务器复制。 为了防止虚假警报，在镜像/主数据库上执行备份作业之后，备份作业将向**log_shipping_monitor_history_detail** 表中记录一条消息，然后代理作业将返回成功状态。  
+ 若要使日志传送在数据库镜像故障转移后仍能继续进行，还必须使用主体数据库上用于主服务器的配置将镜像服务器配置为主服务器。 镜像数据库处于还原状态，这样可以防止备份作业备份镜像数据库中的日志。 这将确保镜像/主数据库不会影响主体/主数据库，后者的日志备份当前正被辅助服务器复制。 为了防止虚假警报，在镜像/主数据库上执行备份作业之后，备份作业将向 **log_shipping_monitor_history_detail** 表中记录一条消息，然后代理作业将返回成功状态。  
   
  镜像/主数据库在日志传送会话中处于非活动状态。 但是，如果镜像进行故障转移，则以前的镜像数据库将作为主体数据库联机。 此时，该数据库也将作为日志传送主数据库变为活动状态。 以前无法在该数据库中传送日志的日志传送备份作业也将开始传送日志。 相反，故障转移将使以前的主体/主数据库成为新的镜像/主数据库并进入还原状态，同时该数据库上的备份作业也将停止备份日志。  
   

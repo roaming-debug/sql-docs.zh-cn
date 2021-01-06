@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dd2fffbce8d2db5bb5bafbcb49b1f37ea48873c7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a8ed14b14198bb95db838e76ca07bffe5875ce69
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726041"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642580"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
 
@@ -131,7 +131,7 @@ ms.locfileid: "91726041"
  以下 **SSISDB** 目录属性将定义此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的行为方式。 可以使用“目录属性”对话框或使用 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)和 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)查看和修改属性。  
   
  **定期清理日志**  
- 当此属性设置为 **True**时，操作清除作业步骤将会运行。  
+ 当此属性设置为 **True** 时，操作清除作业步骤将会运行。  
   
  **保持期(天)**  
  定义可允许的操作数据的最长保存时间（以天为单位）。 将删除较旧的数据。  
@@ -139,7 +139,7 @@ ms.locfileid: "91726041"
  最小值为一天。 最大值仅受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] int 数据的最大值的限制。 有关此数据类型的信息，请参阅 [int、bigint、smallint 和 tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。  
   
  **定期删除旧版本**  
- 当此属性设置为 **True**时，项目版本清除作业步骤将会运行。  
+ 当此属性设置为 **True** 时，项目版本清除作业步骤将会运行。  
   
  **每个项目的最大版本数**  
  定义在目录中存储项目的多少个版本。 将删除较旧版本的项目。  
@@ -456,7 +456,7 @@ ms.locfileid: "91726041"
            FROM Executable File = 'C:\Program Files\Microsoft SQL Server\YourSQLServerDefaultCompatibilityLevel\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
     ```  
 
-    可以从 [SQL Server 默认兼容级别的列表](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=sql-server-ver15#arguments)中找到 `YourSQLServerDefaultCompatibilityLevel` 的值。
+    可以从 [SQL Server 默认兼容级别的列表](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#arguments)中找到 `YourSQLServerDefaultCompatibilityLevel` 的值。
   
     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR 存储过程要求将 UNSAFE 权限授予该登录名，因为该登录名需要对受限制资源（如 Microsoft Win32 API）的更高访问权限。 有关 UNSAFE 代码权限的详细信息，请参阅 [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
 
@@ -653,9 +653,9 @@ ms.locfileid: "91726041"
   
 1.  将 SSISDB 数据库移出可用性组，或者如果 SSISDB 是可用性组中唯一的数据库，则删除可用性组。 在可用性组的主节点上，启动 SQL Server Management Studio 来执行此任务。  
   
-2.  从所有 **副本节点**删除 SSISDB 数据库。  
+2.  从所有 **副本节点** 删除 SSISDB 数据库。  
   
-3.  在 **主节点**上升级 SSISDB 数据库。 在 SQL Server Management Studio 内的“对象资源管理器” 中，展开“Integration Services 目录” ，右键单击“SSISDB” ，然后选择“数据库升级” 。 按照“SSISDB 升级向导”  中的说明来升级数据库。 在主节点上，本地启动 SSIDB 升级向导。  
+3.  在 **主节点** 上升级 SSISDB 数据库。 在 SQL Server Management Studio 内的“对象资源管理器” 中，展开“Integration Services 目录” ，右键单击“SSISDB” ，然后选择“数据库升级” 。 按照“SSISDB 升级向导”  中的说明来升级数据库。 在主节点上，本地启动 SSIDB 升级向导。  
   
 4.  按照[步骤 2：将 SSISDB 添加到 AlwaysOn 可用性组](#Step2)中的说明将 SSISDB 添加回可用性组。  
   

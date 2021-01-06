@@ -7,26 +7,26 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d0cd1e6c7af5fd4d2f8742e88b4b8853645fe5a7
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 9ec5d4f34d299876614383c79fb79f2c2be9114d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115434"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641265"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 的新增功能
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-本文介绍了可用于在 Linux 上运行的 SQL Server 2019 的主要功能和服务。 有关包下载和已知问题，请参阅[发行说明](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15)。
+本文介绍了可用于在 Linux 上运行的 SQL Server 2019 的主要功能和服务。 有关包下载和已知问题，请参阅[发行说明](sql-server-linux-release-notes-2019.md)。
 
 ## <a name="ubuntu-1804-supported"></a>支持 Ubuntu 18.04
 
-自 SQL Server 2019 CU3 起，现在支持 Ubuntu 18.04。 查看[在 Ubuntu 上安装 SQL Server 并创建数据库](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15)快速入门。
+自 SQL Server 2019 CU3 起，现在支持 Ubuntu 18.04。 查看[在 Ubuntu 上安装 SQL Server 并创建数据库](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true)快速入门。
 
 ## <a name="rhel-8-supported"></a>支持 RHEL 8
 
-自 SQL Server 2019 CU1 起，现已支持 RHEL 8。 查看[在 Red Hat 上安装 SQL Server 并创建数据库](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15)快速入门。
+自 SQL Server 2019 CU1 起，现已支持 RHEL 8。 查看[在 Red Hat 上安装 SQL Server 并创建数据库](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15&preserve-view=true)快速入门。
 
 ## <a name="updates"></a>更新
 
@@ -48,12 +48,12 @@ ms.locfileid: "92115434"
 
 要在 Linux 上安装 SQL Server，请使用以下教程之一：
 
-- [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15)
-- [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md?view=sql-server-linux-ver15)
-- [在 Ubuntu 上安装](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15)
-- [在 Docker 上运行](quickstart-install-connect-docker.md?view=sql-server-linux-ver15)
+- [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15&preserve-view=true)
+- [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md?view=sql-server-linux-ver15&preserve-view=true)
+- [在 Ubuntu 上安装](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true)
+- [在 Docker 上运行](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true)
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](sql-server-linux-faq.md)。 要查看 SQL Server 2019 中引入的其他改进，请参阅 [SQL Server 2019 的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)。
+有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](sql-server-linux-faq.md)。 要查看 SQL Server 2019 中引入的其他改进，请参阅 [SQL Server 2019 的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true)。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 14f3a13e566fc56332c79fd104ef584be098cda7
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 29c96381f9781df7cb1cbedb351cce1524f440fd
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714185"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642610"
 ---
 # <a name="install-distributed-replay"></a>安装 Distributed Replay
 
@@ -192,7 +192,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 -   命令行的值覆盖配置文件中的值  
   
- 有关如何使用配置文件的详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md?view=sql-server-ver15)。  
+ 有关如何使用配置文件的详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。  
   
 > [!IMPORTANT]  
 >  安装 Distributed Replay 之后，您必须在控制器和客户端计算机上创建防火墙规则，并授予每台客户端计算机对目标服务器的权限。 有关详细信息，请参阅 [完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  

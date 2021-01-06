@@ -6,7 +6,7 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], removing
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3da88574635b01afd7f309bb09b8850e072a241
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b921f442c84d94615655b7aeeea2686775d33cf
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735175"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641277"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85735175"
   
 -   每台伙伴服务器实例使用的数据库为数据库的单独副本。  
   
--   由于镜像数据库是使用 RESTORE WITH NORECOVERY 创建的，因此镜像数据库的状态为 RESTORING（请查看 **sys.databases** 的 **state**列）。 此时，您可以删除以前的镜像数据库或使用 WITH RECOVERY 还原以前的镜像数据库。 恢复该数据库时，由于恢复将启动新的恢复分支，因此将与以前的主体数据库不同。  
+-   由于镜像数据库是使用 RESTORE WITH NORECOVERY 创建的，因此镜像数据库的状态为 RESTORING（请查看 **sys.databases** 的 **state** 列）。 此时，您可以删除以前的镜像数据库或使用 WITH RECOVERY 还原以前的镜像数据库。 恢复该数据库时，由于恢复将启动新的恢复分支，因此将与以前的主体数据库不同。  
   
 > [!NOTE]  
 >  若要在停止会话后继续镜像，必须建立新的数据库镜像会话。 如果在停止镜像后创建日志备份，必须在重新启动镜像之前将该日志备份应用到镜像数据库中。  

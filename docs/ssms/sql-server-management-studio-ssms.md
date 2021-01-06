@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 396df64c5c5be5d7ea9c5fc67d7cb1ff0a7d990f
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 1b523e86ff04de37bf0177430502c92132872e6b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243846"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641692"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>什么是 SQL Server Management Studio (SSMS)？
 
@@ -43,7 +43,7 @@ ms.locfileid: "93243846"
 |如何使用“模板资源管理器”生成和管理用于加快查询和脚本开发速度的样板文本文件  。|[模板资源管理器](../ssms/template/template-explorer.md)|  
 |如何使用不推荐使用的“解决方案资源管理器”  生成用于管理诸如脚本和查询等管理项的项目。|[解决方案资源管理器](../ssms/solution/solution-explorer.md)|  
 |如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中包含的可视化设计工具。|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 语言编辑器交互式生成和调试查询和脚本。|[查询和文本编辑器](./f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
+|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 语言编辑器交互式生成和调试查询和脚本。|[查询和文本编辑器](./f1-help/database-engine-query-editor-sql-server-management-studio.md)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>适用于商业智能的 SQL Server Management Studio
 

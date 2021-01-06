@@ -15,19 +15,19 @@ ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 85f3fd590ee204cac018cffd59d0ba180831d8df
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b7f709d7884748d24467ea8825d40775a6a4dc2d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476518"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642250"
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **sqlps** 实用工具可启动 Windows PowerShell 会话，同时加载和注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]改用 sqlps PowerShell 模块。 有关 **sqlps** 模块的详细信息，请参阅 [Import the SQLPS Module](../powershell/download-sql-server-ps-module.md?view=sql-server-ver15)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]改用 sqlps PowerShell 模块。 有关 **sqlps** 模块的详细信息，请参阅 [Import the SQLPS Module](../powershell/download-sql-server-ps-module.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -123,5 +123,5 @@ sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"
   
 ## <a name="see-also"></a>另请参阅  
  [启用或禁用服务器网络协议](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
- [SQL Server PowerShell](../powershell/sql-server-powershell.md?view=sql-server-ver15)  
+ [SQL Server PowerShell](../powershell/sql-server-powershell.md)  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3dc21f30222704622f86732c11bd5f1db7b46d1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6411d6f3810153614de0e60e9b20555e061836e3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112023"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641596"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
   当你向报表中添加地图或地图层、自定义报表中的现有地图或地图层、预览报表中的地图或发布具有地图的报表时， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的地图可能会出现问题。 使用本主题可以帮助解决这些问题。  
@@ -207,6 +207,6 @@ ms.locfileid: "87112023"
   
 ## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [报表生成器故障排除](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
+ [报表生成器故障排除](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014&preserve-view=true)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0972ef38fd5af52b1141e0b14b65b1d08e2c675b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 54297946ffc20ec7699536e5bd5c0504497d1f84
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476928"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642372"
 ---
 # <a name="database-engine-scripting"></a>数据库引擎脚本
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "97476928"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|介绍如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的代码和文本编辑器来以交互方式开发、调试和运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本|[查询和文本编辑器 (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)|  
+|介绍如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的代码和文本编辑器来以交互方式开发、调试和运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本|[查询和文本编辑器 (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md)|  
 |介绍如何使用 **实用工具一起运行的** 实用工具从命令提示符运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，包括以交互方式开发脚本的能力。|[sqlcmd 操作指南主题](./sqlcmd-start-the-utility.md)|  
 |介绍如何将 SQL Server 组件集成到 Windows PowerShell 环境中，然后生成 PowerShell 脚本以便管理 SQL Server 实例和对象。|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |介绍如何使用 **“生成和发布脚本”** 向导创建从数据库重新创建一个或多个对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。|[生成脚本 (SQL Server Management Studio)](./generate-scripts-sql-server-management-studio.md)|  

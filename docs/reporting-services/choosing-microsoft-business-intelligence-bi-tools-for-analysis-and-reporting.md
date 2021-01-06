@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: d6880689d05328b09c4f50b87ef8182c1c927afa
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: fa6dab95ec14a40c553f3f47dcde1dee480eb1cc
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891207"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642332"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商业智能 (BI) 工具进行分析和报告
 
@@ -33,7 +33,7 @@ ms.locfileid: "91891207"
 |**自助式 BI**|分析人员/最终用户||||||  
 |方便地发现并访问公共和公司数据||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure 数据目录](https://azure.microsoft.com/services/data-catalog/)||  
 |创建强大的数据模型||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
-|执行自助式预测分析||||||[Excel 数据挖掘外接程序](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
+|执行自助式预测分析||||||[Excel 数据挖掘外接程序](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&preserve-view=true) |  
 |可视化和浏览数据||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [三维地图](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
 |使用自然语言查询提问|||||[问答](/power-bi/consumer/end-user-q-and-a)|
 |使用移动设备访问报告||||[HTML 5（支持查看 10 MB 以内的文件）](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5（支持查看 250 MB 以内的文件）](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 设备上的 Power BI 移动应用](/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 设备上的 Power BI 移动应用](/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [适用于 Windows 10 的 Power BI 移动应用](/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
@@ -45,6 +45,6 @@ ms.locfileid: "91891207"
 |创建操作报表||||||[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)*|  
 |创建自定义和嵌入式报表|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**高级分析**|数据科学家||||||  
-|执行自助式预测分析||||||[Excel 数据挖掘外接程序](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
+|执行自助式预测分析||||||[Excel 数据挖掘外接程序](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&preserve-view=true) |  
 |使用数据挖掘算法||||||[Analysis Services 中的数据挖掘](/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](../machine-learning/r/sql-server-r-services.md?viewFallbackFrom=sql-server-ver15)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

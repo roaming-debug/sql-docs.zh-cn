@@ -12,12 +12,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: fdadefa5b898a2b37c7e5a7f087c429ccc6b8d4f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bf8ef986da54559c5928677643f6bd99c63c2266
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438956"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643013"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -172,7 +172,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option"></a>有序聚集列存储索引选项 
 
-聚集列存储索引 (CCI) 是用于在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中创建表的默认索引。  在将 CCI 中的数据在压缩到列存储段之前，不会对其进行排序。  使用 ORDER 创建 CCI 时，先对数据进行排序，然后再将其添加到索引段中，这样可以提高查询性能。 有关详细信息，请查看[使用有序聚集列存储索引进行性能调整](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)。  
+聚集列存储索引 (CCI) 是用于在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中创建表的默认索引。  在将 CCI 中的数据在压缩到列存储段之前，不会对其进行排序。  使用 ORDER 创建 CCI 时，先对数据进行排序，然后再将其添加到索引段中，这样可以提高查询性能。 有关详细信息，请查看[使用有序聚集列存储索引进行性能调整](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest&preserve-view=true)。  
 
 可以在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 支持的任何数据类型的列（字符串列除外）上创建有序的 CCI。  
 
@@ -596,4 +596,4 @@ WITH
 [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
-[sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md?view=azure-sqldw-latest) 
+[sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) 

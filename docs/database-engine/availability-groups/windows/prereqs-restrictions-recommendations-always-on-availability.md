@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3ff589af87c2fbf6bb5bca7670a2a38d6c8abc16
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ec3a84dc54dcaf373f8fd817c259602c7901410d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130154"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642511"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

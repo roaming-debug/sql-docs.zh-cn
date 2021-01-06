@@ -6,7 +6,7 @@ ms.date: 11/10/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], preparing for mirroring
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 74cd9b60e38fb011360bbfc678ccd49509531b59
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1fa476693286b32cb2910526bb0ea7431faa5120
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735238"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642142"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>为镜像准备镜像数据库 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85735238"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
--   不能镜像 **master**、 **msdb**、 **temp**或 **model** 系统数据库。  
+-   不能镜像 **master**、 **msdb**、 **temp** 或 **model** 系统数据库。  
   
 -   不能镜像属于 [AlwaysOn 可用性组](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)的数据库。  
   

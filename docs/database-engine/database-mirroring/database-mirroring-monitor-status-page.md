@@ -6,19 +6,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81cf4f45b3c3a1cd647f007179655c08995d1a1c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 82904684508369a48e1bf9fd56abaa6015aaa553
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789675"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642004"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>数据库镜像监视器（状态页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

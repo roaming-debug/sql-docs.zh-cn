@@ -11,16 +11,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 843773990f5e7e669ed16fcc698a6ae88a56c9ac
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0b836e9a86fe6b323dbcacfb3f408889f87fa6bd
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475618"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641678"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 针对英语安装断字符和词干分析器的新版本（版本 14.0.4999.1038），以替换这些组件的以前版本（版本 12.0.6828.0）。 有关新组件的更改的行为的信息，请参阅 [全文搜索的行为更改](./full-text-search.md?view=sql-server-ver15)。 本主题说明如何在这些组件的新版本和以前的版本间切换。 对于群集安装，应对所有主节点和被动节点进行这些更改。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 针对英语安装断字符和词干分析器的新版本（版本 14.0.4999.1038），以替换这些组件的以前版本（版本 12.0.6828.0）。 有关新组件的更改的行为的信息，请参阅 [全文搜索的行为更改](./full-text-search.md)。 本主题说明如何在这些组件的新版本和以前的版本间切换。 对于群集安装，应对所有主节点和被动节点进行这些更改。  
   
  以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用不同 CLSID 所表示的不同断字符，这些 CLSID 分别用于美国英语 (LCID 1033) 和英国英语 (LCID 2057)。 在此发行版中，这两个 LCID 使用具有相同 CLSID 的相同组件，如下表中所示：  
   
@@ -127,5 +127,5 @@ ms.locfileid: "97475618"
   
 ## <a name="see-also"></a>另请参阅  
  [将搜索功能所使用的断字符还原到以前的版本](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [对全文搜索的行为更改](./full-text-search.md?view=sql-server-ver15)  
+ [对全文搜索的行为更改](./full-text-search.md)  
   

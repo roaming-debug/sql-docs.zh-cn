@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 36fde81f6317d45b2169282d99e4eef27b3467b3
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 67f25ef21a7d4897bba7242da796bd41f9fc655e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714265"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642183"
 ---
 # <a name="sqlservr-application"></a>sqlservr 应用程序
 
@@ -49,20 +49,20 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 -s instance_name 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 要连接到的实例。 如果未指定命名实例， **sqlservr** 将启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的默认实例。
 
 > [!IMPORTANT]
->启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例时，必须在该实例的相应目录中使用 **sqlservr** 应用程序。 对于默认实例，从 \MSSQL\Binn 目录运行 **sqlservr** 。 对于命名实例，从 \MSSQL$ **instance_name** \Binn 目录运行*sqlservr*。
+>启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例时，必须在该实例的相应目录中使用 **sqlservr** 应用程序。 对于默认实例，从 \MSSQL\Binn 目录运行 **sqlservr** 。 对于命名实例，从 \MSSQL$ **instance_name** \Binn 目录运行 *sqlservr*。
 
  -c 指示独立于 Windows 服务控制管理器启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 从命令提示符下启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时可使用此选项，以缩短 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的启动时间。
 
 > [!NOTE]
 >使用此选项时，将无法通过使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务管理器或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net stop **命令停止** 。如果注销计算机，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将停止。）
 
--d master_path 指示 master 数据库文件的完全限定的路径。 **-d** 与 *master_path*之间没有空格。 如果没有提供此选项，则使用现有的注册表参数。
+-d master_path 指示 master 数据库文件的完全限定的路径。 **-d** 与 *master_path* 之间没有空格。 如果没有提供此选项，则使用现有的注册表参数。
 
 -f 以最小配置启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。 在配置值的设置（例如，过度分配内存）妨碍服务器启动时，这非常有用。
 
--e error_log_path 指示错误日志文件的完全限定的路径。 如果未指定，则默认位置为 `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog`（对于默认实例）和 `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog`（对于命名实例）。 在 **-e** 和 *error_log_path*之间没有空格。
+-e error_log_path 指示错误日志文件的完全限定的路径。 如果未指定，则默认位置为 `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog`（对于默认实例）和 `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog`（对于命名实例）。 在 **-e** 和 *error_log_path* 之间没有空格。
 
--l master_log_path 指示 master 数据库事务日志文件的完全限定的路径。 **-l** 与 *master_log_path*之间没有空格。
+-l master_log_path 指示 master 数据库事务日志文件的完全限定的路径。 **-l** 与 *master_log_path* 之间没有空格。
 
 -m 指示以单用户模式启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。 如果以单用户模式启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，则只有一个用户可以连接。 确保将已完成事务定期从磁盘缓存写入数据库设备的 CHECKPOINT 机制将不启动。 通常情况下，在遇到需要修复系统数据库这样的问题时才使用该选项。启用 **sp_configure allow updates** 选项。 默认情况下， **allow updates** 被禁用。
 
@@ -85,8 +85,8 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 |参数 | 详细信息|
 |:-----|:-----|
-|**-h** | 启用 AWE 时，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本的 32 位实例中为热添加内存元数据保留虚拟内存地址空间。 通过 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支持。 有关详细信息，请参阅 [SQL Server 2016 中不再使用的 SQL Server 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server.md?view=sql-server-ver15)。|
-|**-g** | *memory_to_reserve*<br/><br>适用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 32 位实例的早期版本。 通过 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支持。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为位于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中但在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存池之外的内存分配保留的内存整数量 (MB)。 有关详细信息，请参阅 [SQL Server 2014“服务器内存配置选项”文档](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)。|
+|**-h** | 启用 AWE 时，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本的 32 位实例中为热添加内存元数据保留虚拟内存地址空间。 通过 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支持。 有关详细信息，请参阅 [SQL Server 2016 中不再使用的 SQL Server 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server.md)。|
+|**-g** | *memory_to_reserve*<br/><br>适用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 32 位实例的早期版本。 通过 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支持。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为位于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中但在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存池之外的内存分配保留的内存整数量 (MB)。 有关详细信息，请参阅 [SQL Server 2014“服务器内存配置选项”文档](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014&preserve-view=true)。|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>另请参阅

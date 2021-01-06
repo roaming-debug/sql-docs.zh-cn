@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 28b2d4cf892aa21b44d989fb56351a6ab5448bff
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b04cb475579c73a26ec5977ce52b9521ce69552a
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482281"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642637"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -222,8 +222,8 @@ ms.locfileid: "97482281"
 
 |新增功能或更新 | 详细信息 |
 |:---|:---| 
-|新内存设置选项 | 在安装过程中设置“最小服务器内存(MB)”  和“最大服务器内存(MB)”  服务器配置。 请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 和 `SQLMAXMEMORY` 参数。 建议值遵循[服务器内存配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)中的内存配置准则。| 
-|新并行度设置选项 | 在安装过程中设置“最大并行度”  服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 参数。 默认值遵循[配置服务器配置选项“最大并行度”](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的最大并行度准则。| 
+|新内存设置选项 | 在安装过程中设置“最小服务器内存(MB)”  和“最大服务器内存(MB)”  服务器配置。 请参阅[“数据库引擎配置 - 内存”页](./install/instance-configuration.md#memory)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 和 `SQLMAXMEMORY` 参数。 建议值遵循[服务器内存配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)中的内存配置准则。| 
+|新并行度设置选项 | 在安装过程中设置“最大并行度”  服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](./install/instance-configuration.md#maxdop)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 参数。 默认值遵循[配置服务器配置选项“最大并行度”](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的最大并行度准则。| 
 |服务器/CAL 许可证产品密钥的设置警告|如果输入了企业服务器/CAL 许可证产品密钥，且计算机上有 20 多个物理内核，或者在启用超线程时有 40 个逻辑内核，则安装过程中会显示警告。 用户仍然可以确认限制并继续设置，或者输入支持操作系统最大处理器数量的许可证密钥。|
 | &nbsp; | &nbsp; |
 

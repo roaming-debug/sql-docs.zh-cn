@@ -6,7 +6,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - quorum [SQL Server], database mirroring
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c28e70d2f66dffc00ff2ac9138f97dc8d0e08991
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f30f336ade4b3ab911d6ed365ddfa637230ea02e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789662"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641316"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：见证服务器如何影响数据库可用性（数据库镜像）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -99,9 +99,9 @@ ms.locfileid: "85789662"
   
  ![见证服务器与伙伴的协作方式](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "见证服务器与伙伴的协作方式")  
   
- 方案 1 显示的是：在原始主体服务器 (**Partner_A**) 失败后，见证服务器和镜像服务器如何同时认定主体 **Partner_A**不再可用并构成仲裁。 然后，镜像服务器 **Partner_B** 承担主体角色。 出现自动故障转移时， **Partner_B**使其数据库副本联机。 然后 **Partner_B** 出现故障，数据库脱机。 随后，先前的主体服务器 **Partner_A**重新连接到见证服务器重新获取仲裁，但是通过与见证服务器通信， **Partner_A** 获知不能使其数据库副本联机，因为 **Partner_B** 现在拥有主体角色。 当 **Partner_B** 重新加入会话时，将使数据库恢复联机。  
+ 方案 1 显示的是：在原始主体服务器 (**Partner_A**) 失败后，见证服务器和镜像服务器如何同时认定主体 **Partner_A** 不再可用并构成仲裁。 然后，镜像服务器 **Partner_B** 承担主体角色。 出现自动故障转移时， **Partner_B** 使其数据库副本联机。 然后 **Partner_B** 出现故障，数据库脱机。 随后，先前的主体服务器 **Partner_A** 重新连接到见证服务器重新获取仲裁，但是通过与见证服务器通信， **Partner_A** 获知不能使其数据库副本联机，因为 **Partner_B** 现在拥有主体角色。 当 **Partner_B** 重新加入会话时，将使数据库恢复联机。  
   
- 在方案 2 中，见证服务器丢失仲裁，而伙伴 **Partner_A** 和 **Partner_B**彼此保留仲裁，数据库保持联机。 然后，伙伴们也失去其仲裁，数据库处于脱机状态。 随后，主体服务器 **Partner_A**重新连接到见证服务器以重新获取仲裁。 见证服务器确认 **Partner_A** 仍拥有主体角色，并且 **Partner_A** 使数据库恢复联机。  
+ 在方案 2 中，见证服务器丢失仲裁，而伙伴 **Partner_A** 和 **Partner_B** 彼此保留仲裁，数据库保持联机。 然后，伙伴们也失去其仲裁，数据库处于脱机状态。 随后，主体服务器 **Partner_A** 重新连接到见证服务器以重新获取仲裁。 见证服务器确认 **Partner_A** 仍拥有主体角色，并且 **Partner_A** 使数据库恢复联机。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   

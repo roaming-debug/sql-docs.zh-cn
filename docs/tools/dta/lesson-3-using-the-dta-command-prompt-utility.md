@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 53eacd0177862b81d32b44616dc67cc0beb90f79
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 064d7fc2d47cbd4f688d113f60be6080ca90fee1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489147"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642581"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 课：使用 dta 命令提示实用工具
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97489147"
   
 本教程使用 AdventureWorks2017 示例数据库。 出于安全原因，默认情况下不安装该示例数据库。 若要安装示例数据库，请参阅 [安装 SQL Server 示例和示例数据库](../../samples/adventureworks-install-configure.md)。  
   
-以下任务将指导你打开命令提示符，启动 **dta** 命令提示实用工具，查看其语法帮助，并优化在 [优化工作负荷](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15)中创建的一个简单工作负荷 MyScript.sql。  
+以下任务将指导你打开命令提示符，启动 **dta** 命令提示实用工具，查看其语法帮助，并优化在 [优化工作负荷](./lesson-2-using-database-engine-tuning-advisor.md)中创建的一个简单工作负荷 MyScript.sql。  
 
 ## <a name="prerequisites"></a>先决条件 
 
@@ -84,7 +84,7 @@ ms.locfileid: "97489147"
 
   ![结合使用 CMD 和 DTA](media/dta-tutorials/dta-cmd.png)
   
-3.  数据库引擎优化顾问完成了优化工作负荷后，将显示一个消息指示优化会话已成功完成。 若要查看优化结果，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 打开 MySession2OutputScript.sql 和 MySession2Output.xml 文件。 此外，也可以在数据库引擎优化顾问 GUI 中打开 MySession2 优化会话并查看其建议和报告，执行的方式与 [查看优化建议](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15) 和 [查看优化报告](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15)中执行的方式相同。  
+3.  数据库引擎优化顾问完成了优化工作负荷后，将显示一个消息指示优化会话已成功完成。 若要查看优化结果，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 打开 MySession2OutputScript.sql 和 MySession2Output.xml 文件。 此外，也可以在数据库引擎优化顾问 GUI 中打开 MySession2 优化会话并查看其建议和报告，执行的方式与 [查看优化建议](./lesson-2-using-database-engine-tuning-advisor.md) 和 [查看优化报告](./lesson-2-using-database-engine-tuning-advisor.md)中执行的方式相同。  
   
  
 ## <a name="after-you-finish-this-tutorial"></a>学完本教程后  
