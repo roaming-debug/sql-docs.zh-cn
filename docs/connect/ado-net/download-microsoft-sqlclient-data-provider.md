@@ -1,7 +1,7 @@
 ---
 title: 下载 SQL Server 的 Microsoft SqlClient 数据提供程序
 description: ADO.NET 和 Microsoft SqlClient Data Provider for SQL Server 的下载页面。
-ms.date: 11/19/2020
+ms.date: 01/04/2020
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 901fea5f663bd22fe157e57fc2309f35ce7aba61
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 7e6f907b7565b9934231355464fdd91c3222e13e
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011826"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878798"
 ---
 # <a name="download-microsoft-sqlclient-data-provider-for-sql-server"></a>下载 SQL Server 的 Microsoft SqlClient 数据提供程序
 
@@ -26,6 +26,7 @@ ms.locfileid: "95011826"
 NuGet.org 上提供了 Microsoft.Data.SqlClient 包。请参阅以下链接中的“依赖项”部分，下载依赖项。
 
 ## <a name="download-stable-versions-of-microsoft-sqlclient-data-provider-for-sql-server"></a>下载 Microsoft SqlClient Data Provider for SQL Server 的稳定版本
+ * [2.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/2.1.1)
  * [2.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/2.1.0)
  * [2.0.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/2.0.1)
  * [2.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/2.0.0)

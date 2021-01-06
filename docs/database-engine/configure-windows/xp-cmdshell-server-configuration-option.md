@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 author: markingmyname
 ms.author: maghan
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 06/12/2020
-ms.openlocfilehash: 004a7b0a50a657632bb2b9970f0558857d416494
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: d12ea9c15f2a07fa6fdd4bc5dd5538fd1522d267
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257973"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878830"
 ---
 # <a name="xp_cmdshell-server-configuration-option"></a>xp_cmdshell 服务器配置选项
 
