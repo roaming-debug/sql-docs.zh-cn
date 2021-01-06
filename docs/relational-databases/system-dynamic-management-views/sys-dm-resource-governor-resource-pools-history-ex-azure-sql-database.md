@@ -2,7 +2,7 @@
 description: 'sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) '
 title: sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 01/05/2021
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,23 +21,23 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 8aafaca36fb5ef1d96ddbd9f369a3ba4f06a596d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 32082b09a5e583e68f2f06794d80d1d3f21b4e76
+ms.sourcegitcommit: 11ca2305a8d7e420daf772eb97861706c9e08e31
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484579"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97928436"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) 
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-在 Azure SQL 数据库的资源池统计信息的总) 中，在过去32分钟 (128 recs 返回快照20秒。  
-  
+每一行代表 Azure SQL 数据库中资源池统计信息的定期快照。 快照在数据库引擎启动时创建，每隔几秒钟一次。 当前快照与前一个快照之间的间隔可能会有所不同，并在列中提供 `duration_ms` 。 返回最新的可用快照，每个资源池最多可包含128个快照。
+
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|资源池的 ID。 不可为 null。
-|**name**|sysname|资源池的名称。 不可为 null。|
+|name|sysname|资源池的名称。 不可为 null。|
 |**snapshot_time**|datetime2|拍摄的资源池统计信息快照的日期时间|
 |**duration_ms**|int|当前快照与前一个快照之间的持续时间|
 |**statistics_start_time**|datetime2|为该池重置统计信息的时间。 不可为 null。|

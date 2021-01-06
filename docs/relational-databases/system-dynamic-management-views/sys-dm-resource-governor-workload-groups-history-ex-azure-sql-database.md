@@ -2,7 +2,7 @@
 description: sys.dm_resource_governor_workload_groups_history_ex（Azure SQL 数据库）
 title: Azure SQL Database (sys.dm_resource_governor_workload_groups_history_ex) |Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 01/05/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,23 +19,23 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: d761d1ca80037e26f8757ec681929dd5356b182f
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 69f310b699e59845dbd62a908a6a49bfb6efb42f
+ms.sourcegitcommit: 11ca2305a8d7e420daf772eb97861706c9e08e31
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834406"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97928446"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-在 Azure SQL 数据库的资源池统计信息的总) 中，在过去32分钟 (128 秒内返回快照20秒。
+每一行代表 Azure SQL 数据库中工作负荷组统计信息的定期快照。 快照在数据库引擎启动时创建，每隔几秒钟一次。 当前快照与前一个快照之间的间隔可能会有所不同，并在列中提供 `duration_ms` 。 返回最新的可用快照，每个工作负荷组最多支持128个快照。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**pool_id**| int |资源池的 ID。 不可为 null。|
 |**group_id**| int |工作负荷组的 ID。 不可为 null。|
-|**name**| nvarchar(256) |工作负荷组的名称。 不可为 null。|
+|name| nvarchar(256) |工作负荷组的名称。 不可为 null。|
 |**snapshot_time**| datetime |拍摄的资源组统计快照的日期时间。|
 |**duration_ms**| int |当前快照与前一个快照之间的持续时间。|
 |**active_worker_count**| int |当前快照中的总工作进程数。|
@@ -80,7 +80,7 @@ ms.locfileid: "91834406"
 
 此视图需要 VIEW SERVER STATE 权限。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 用户可以使用此动态管理视图来监视用户工作负荷池的近乎实时的资源消耗以及 Azure SQL 数据库实例的系统内部池。
 
