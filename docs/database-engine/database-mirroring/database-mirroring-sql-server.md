@@ -6,7 +6,7 @@ ms.date: 05/16/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server]
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c1b95d55a979738f787e4814a9f40f929c521868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 906dc46e076ce49242ecb0aa416d13cbb770147e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754731"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644420"
 ---
 # <a name="database-mirroring-sql-server"></a>数据库镜像 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -212,7 +212,7 @@ ms.locfileid: "85754731"
 |`SSInstance_2`|Partner|见证|Partner|Partner|  
 |`SSInstance_3`|Partner|Partner|见证|见证|  
   
- 下图说明了都作为伙伴参与两个镜像会话的两个服务器实例。 一个会话用于名为 **Db_1**的数据库，另一个会话用于名为 **Db_2**的数据库。  
+ 下图说明了都作为伙伴参与两个镜像会话的两个服务器实例。 一个会话用于名为 **Db_1** 的数据库，另一个会话用于名为 **Db_2** 的数据库。  
   
  ![两个并发会话中的两个服务器实例](../../database-engine/database-mirroring/media/dbm-concurrent-sessions.gif "两个并发会话中的两个服务器实例")  
   

@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f8479b88d100f9687469ad615d0b92c50aedb6ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b77b54ba48dc2c3820d055227411f61983b1a7c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771827"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644277"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>监视数据库镜像 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "85771827"
      如果新状态行中的值超过阈值，则系统便会向 Windows 事件日志发送提示性事件。 系统管理员可以随后根据这些事件手动配置警报。 有关详细信息，请参阅 [使用镜像性能度量的警告阈值和警报 (SQL Server)](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
 ###  <a name="tools-for-monitoring-database-mirroring-status"></a><a name="tools_for_monitoring_dbm_status"></a> 数据库镜像状态监视工具  
- 可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 系统存储过程来监视镜像状态。 两个系统管理员（即 sysadmin 固定服务器角色成员以及在**msdb** 数据库中，由系统管理员添加到 **dbm_monitor** 固定数据库角色的用户）均可使用这些工具监视本地服务器实例上任何镜像数据库中的数据库镜像。 使用上述任意一种工具时，系统管理员还可以手动刷新镜像状态。  
+ 可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 系统存储过程来监视镜像状态。 两个系统管理员（即 sysadmin 固定服务器角色成员以及在 **msdb** 数据库中，由系统管理员添加到 **dbm_monitor** 固定数据库角色的用户）均可使用这些工具监视本地服务器实例上任何镜像数据库中的数据库镜像。 使用上述任意一种工具时，系统管理员还可以手动刷新镜像状态。  
   
 > [!NOTE]  
 >  系统管理员还可以配置并查看关键绩效指标的警告阈值。 有关详细信息，请参阅 [使用镜像性能度量的警告阈值和警报 (SQL Server)](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
@@ -92,7 +92,7 @@ ms.locfileid: "85771827"
     |[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)|返回所监视数据库的状态行，使您能够选择此过程是否预先获取最新的状态。|  
     |[sp_dbmmonitordropmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)|停止并删除服务器实例上所有数据库的镜像监视器作业。|  
   
-     **dbmmonitor** 系统存储过程可以用作数据库镜像监视器的附加补充。 例如，即使使用 **sp_dbmmonitoraddmonitoring**配置监视，也可以使用数据库镜像监视器查看状态。  
+     **dbmmonitor** 系统存储过程可以用作数据库镜像监视器的附加补充。 例如，即使使用 **sp_dbmmonitoraddmonitoring** 配置监视，也可以使用数据库镜像监视器查看状态。  
   
 ### <a name="how-monitoring-works"></a>监视的工作原理  
  本部分介绍数据库镜像状态表、数据库镜像监视器作业和监视器，并介绍用户如何监视数据库镜像状态以及如何删除镜像作业。  
@@ -110,7 +110,7 @@ ms.locfileid: "85771827"
 >  除非数据库镜像监视器当前正在由 **sysadmin** 固定服务器角色成员使用，否则，只有在具有“数据库镜像监视器作业”并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理正在运行时，才能自动更新状态表。  
   
 #### <a name="database-mirroring-monitor-job"></a>数据库镜像监视器作业  
- 数据库镜像监视作业（ **“数据库镜像监视器作业”** ）独立于数据库镜像监视器运行。 仅当使用**启动镜像会话时，才能自动创建** “数据库镜像监视器作业” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 如果始终使用 ALTER DATABASE *database_name* SET PARTNER 命令开始镜像，则仅当系统管理员运行 **sp_dbmmonitoraddmonitoring** 存储过程时，该作业才存在。  
+ 数据库镜像监视作业（ **“数据库镜像监视器作业”** ）独立于数据库镜像监视器运行。 仅当使用 **启动镜像会话时，才能自动创建** “数据库镜像监视器作业” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 如果始终使用 ALTER DATABASE *database_name* SET PARTNER 命令开始镜像，则仅当系统管理员运行 **sp_dbmmonitoraddmonitoring** 存储过程时，该作业才存在。  
   
  创建 **“数据库镜像监视器作业”** 之后，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理正在运行，则默认情况下，每分钟调用一次作业。 然后，作业会调用 **sp_dbmmonitorupdate** 系统存储过程。  
   

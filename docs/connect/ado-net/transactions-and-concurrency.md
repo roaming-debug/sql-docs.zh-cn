@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: a30a3d3184c411fc0b54c0e26330a8fb138ffdae
-ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
+ms.openlocfilehash: 2a00ef1ec1f2f5d8ee892289021f42cb139b5a12
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97051252"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771292"
 ---
 # <a name="transactions-and-concurrency"></a>事务和并发性
 
@@ -35,16 +35,16 @@ ms.locfileid: "97051252"
 
 ## <a name="in-this-section"></a>在本节中
 
- [本地事务](local-transactions.md)  
- 演示如何对数据库执行事务。  
+[本地事务](local-transactions.md)  
+演示如何对数据库执行事务。  
   
- [分布式事务](distributed-transactions.md)  
- 描述如何在 ADO.NET 中执行分布式事务。  
+[分布式事务](distributed-transactions.md)  
+描述如何在 ADO.NET 中执行分布式事务。  
   
- [System.Transactions 与 SQL Server 的集成](system-transactions-integration-with-sql-server.md)  
- 说明 <xref:System.Transactions> 与 SQL Server 集成以使用分布式事务。  
+[System.Transactions 与 SQL Server 的集成](system-transactions-integration-with-sql-server.md)  
+说明 <xref:System.Transactions> 与 SQL Server 集成以使用分布式事务。  
   
- [乐观并发](optimistic-concurrency.md) 介绍乐观并发和保守式并发，以及如何测试并发冲突。  
+[乐观并发](optimistic-concurrency.md) 介绍乐观并发和保守式并发，以及如何测试并发冲突。  
 
 ## <a name="see-also"></a>另请参阅
 
@@ -52,4 +52,5 @@ ms.locfileid: "97051252"
 - [连接到数据源](connecting-to-data-source.md)
 - [命令和参数](commands-parameters.md)
 - [DataAdapter 和 DataReader](dataadapters-datareaders.md)
+- [DbProviderFactories](dbproviderfactories.md)
 - [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

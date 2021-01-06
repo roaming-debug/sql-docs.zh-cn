@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: df9c6895c827a021947937ba84aebd0dd9313915
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: d9e40c9c50486f7967b60d51910273c382606713
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713685"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643436"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>导入跟踪模板 (SQL Server Profiler)
 
@@ -35,7 +35,7 @@ ms.locfileid: "88713685"
   
 ## <a name="see-also"></a>另请参阅  
  [创建跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [修改跟踪模板 (SQL Server Profiler)](./modify-trace-templates.md?view=sql-server-ver15)   
+ [修改跟踪模板 (SQL Server Profiler)](./modify-trace-templates.md)   
  [从正在运行的跟踪中派生模板 (SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [从跟踪文件或跟踪表派生模板 (SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [导出跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   

@@ -6,7 +6,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - parallel redo [SQL Server]
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9d83569a79980097a18ebff39b3628401a4387c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b8f2e5435f6f168a113cf78b1539e97c4935972
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754669"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643917"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>估计在角色切换期间服务的中断（数据库镜像）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85754669"
  在 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]中，并行重做被优化为针对每四个 CPU 使用一个线程。 若要估计并行重做的前滚时间，访问正在运行的测试系统要比访问测试数据库更能得到准确的结果。 当监视镜像服务器中的重做队列时，会增加主体服务器中的负荷。 在正常操作中，重做队列接近于零。 增加主体服务器上的负荷，直到重做队列开始不断增长；系统随后将会达到最大重做速度，而此时的 **Redo Bytes/sec** 性能计数器即表示最大重做速度。 有关详细信息，请参阅 [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)。  
   
 ## <a name="estimating-interruption-of-service-during-automatic-failover"></a>估计自动故障转移过程中的服务中断  
- 下图阐释了错误检测和故障转移时间如何影响在 **Partner_B**中完成自动故障转移所需的总时间。 故障转移需要一定的时间前滚数据库（重做阶段），另外还需要一小段时间使数据库联机。 撤消阶段涉及回滚任何未提交的事务，这一阶段发生在新的主体数据库联机之后，并在故障转移后继续。 在撤消阶段，数据库是可用的。  
+ 下图阐释了错误检测和故障转移时间如何影响在 **Partner_B** 中完成自动故障转移所需的总时间。 故障转移需要一定的时间前滚数据库（重做阶段），另外还需要一小段时间使数据库联机。 撤消阶段涉及回滚任何未提交的事务，这一阶段发生在新的主体数据库联机之后，并在故障转移后继续。 在撤消阶段，数据库是可用的。  
   
  ![错误检测和故障转移时间](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "错误检测和故障转移时间")  
   

@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d581d8dcf038b56a6b3df5b5ecc67a9a32b4255f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0d28550dba1a4703bab01324910436b7256597bb
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485229"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643833"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "97485229"
  本示例展示内存中 OLTP 功能。 它演示内存优化表和本机编译存储过程，可用于展示内存中 OLTP 的性能优势。  
   
 > [!NOTE]  
->  若要查看关于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的此主题，请参阅 [演示内存中 OLTP 的 AdventureWorks 扩展](./overview-and-usage-scenarios.md?view=sql-server-ver15#in-memory-oltp-overview)。  
+>  若要查看关于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的此主题，请参阅 [演示内存中 OLTP 的 AdventureWorks 扩展](./overview-and-usage-scenarios.md#in-memory-oltp-overview)。  
   
  该示例将 AdventureWorks 数据库中的五个表迁移到内存优化表，并包括销售订单处理演示工作负荷。 可以使用此演示工作负荷了解在服务器上使用内存中 OLTP 的性能优势。  
   

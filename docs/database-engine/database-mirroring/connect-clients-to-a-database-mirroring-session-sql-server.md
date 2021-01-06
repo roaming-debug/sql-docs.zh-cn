@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8da63d8ff15d03b55586a72a578d6074fa2a5473
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 680273a6bab1283be56d130c84b4c156d8fcd280
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789768"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644324"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85789768"
   
  如果此尝试失败，则数据访问接口将尝试使用故障转移伙伴名称（如果可用）。 如果任一伙伴名称都正确标识了当前主体服务器，则数据访问接口通常都会成功打开初始连接。 完成此连接后，数据访问接口将下载当前镜像服务器的服务器实例名称。 此名称作为故障转移伙伴名称存储在缓存中，从而覆盖客户端提供的故障转移伙伴名称（如果有）。 此后，.NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会更新故障转移伙伴名称。 相反，每当后续连接或连接重置返回不同的伙伴名称时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 便会更新高速缓存。  
   
- 下图针对名为 **Db_1**的镜像数据库说明了到初始伙伴 **Partner_A**的客户端连接。 此图显示的情况是：客户端提供的初始伙伴名称正确标识了当前主体服务器 **Partner_A**。 初始连接尝试成功，数据访问接口在其本地缓存中将镜像服务器（当前为 **Partner_B**）的名称存储为故障转移伙伴名称。 最后，客户端连接到 **Db_1** 数据库的主体副本。  
+ 下图针对名为 **Db_1** 的镜像数据库说明了到初始伙伴 **Partner_A** 的客户端连接。 此图显示的情况是：客户端提供的初始伙伴名称正确标识了当前主体服务器 **Partner_A**。 初始连接尝试成功，数据访问接口在其本地缓存中将镜像服务器（当前为 **Partner_B**）的名称存储为故障转移伙伴名称。 最后，客户端连接到 **Db_1** 数据库的主体副本。  
   
  ![初始伙伴为主体的客户端连接](../../database-engine/database-mirroring/media/dbm-initial-connection.gif "初始伙伴为主体的客户端连接")  
   

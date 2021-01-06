@@ -12,12 +12,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f85253912eac3091423972770ac808492c1b65e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4a2624566444f5cc3b9531d5b6767937dabb2da6
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479468"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643980"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>将搜索功能所使用的断字符还原到以前的版本（SQL Server 搜索）
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -381,4 +381,4 @@ ms.locfileid: "97479468"
   
 ## <a name="see-also"></a>另请参阅  
  [更改用于美国英语和英国英语的断字符](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [对全文搜索的行为更改](./full-text-search.md?view=sql-server-ver15)
+ [对全文搜索的行为更改](./full-text-search.md)

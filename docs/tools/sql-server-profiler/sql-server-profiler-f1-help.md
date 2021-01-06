@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 11e66adad7e724f0ed18c53693c4c56567fb9d8e
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 6b6e67a848b365a32a1177d2655b49992ef185eb
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713795"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643422"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 对话框
 
@@ -52,7 +52,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 |---|---
 |“事件”列|通过选中或清除事件列中的复选框，指定跟踪的事件。 **“事件”** 按事件类别进行组织。 模板中指定的事件类是自动选择的。 有关详细信息，请参阅 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
 |数据列|通过选中与所需的事件和数据列对应的框，指定跟踪的数据列。 对于在跟踪中包括的每个事件，将默认选中所有相关事件列。  
-|筛选器|通过单击数据列标题并输入筛选条件指定筛选器。 筛选出来的数据列由 **“编辑筛选器”** 对话框中列标签左边的筛选器图标指示。 有关详细信息，请参阅 [SQL Server Profiler - 编辑筛选器](?view=sql-server-ver15)。  
+|筛选器|通过单击数据列标题并输入筛选条件指定筛选器。 筛选出来的数据列由 **“编辑筛选器”** 对话框中列标签左边的筛选器图标指示。 有关详细信息，请参阅 [SQL Server Profiler - 编辑筛选器]()。  
 |**显示所有事件**|显示所有可用事件。 默认情况下，仅显示 **“事件选择”** 网格中选定的行。 取消选中此框，将隐藏 **“事件选择”** 网格中所有未选定的事件。  
 |**显示所有列**|显示所有可用数据列。 默认情况下，仅显示选定的数据列。 取消选中此框，将隐藏 **“事件选择”** 网格中所有未选定的数据列。  
 |**列筛选器**|启动“编辑筛选器”对话框。 您可以使用此对话框编辑数据列筛选器。  
@@ -118,7 +118,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 |**显示所有事件**|显示所有可用事件。 默认情况下，仅显示 **“事件选择”** 网格中选定的行。 取消选中此框，将隐藏 **“事件选择”** 网格中所有未选定的事件。 如果选中了 **“显示所有事件”** ，并且您正在查看跟踪文件或表，则跟踪过程中记录的所有事件都将显示在跟踪窗口中。  
 |**显示所有列**|显示所有可用数据列。 默认情况下，仅显示选定的数据列。 取消选中此框，将隐藏 **“事件选择”** 网格中所有未选定的数据列。  
 |**列筛选器**|启动“编辑筛选器”对话框，该对话框将在已筛选数据列的列标签左侧显示筛选器图标。 使用 **“编辑筛选器”** 对话框可编辑数据列筛选器。  
-|**组织列**|选择要跟踪的**事件**和数据列后，单击“组织列”**** 将强制网格对跟踪结果窗口中的列重新排序。  
+|**组织列**|选择要跟踪的 **事件** 和数据列后，单击“组织列”将强制网格对跟踪结果窗口中的列重新排序。  
 
 ## <a name="trace-table-properties"></a>跟踪表属性
 ### <a name="events-selection-tab"></a>“事件选择”选项卡
@@ -133,7 +133,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 |**显示所有事件**|显示所有可用事件。 默认情况下，仅显示 **“事件选择”** 网格中选定的行。 取消选中此框，将隐藏 **“事件选择”** 网格中所有未选定的事件。 如果选中了 **“显示所有事件”** ，并且您正在查看跟踪文件或表，则跟踪过程中记录的所有事件都将显示在跟踪窗口中。  
 |**显示所有列**|显示所有可用数据列。 默认情况下，仅显示选定的数据列。 取消选中此框，将隐藏 **“事件选择”** 网格中所有未选定的数据列。  
 |**列筛选器**|启动“编辑筛选器”对话框，该对话框在列标签的左侧显示一个筛选器图标。 您可以使用此对话框编辑数据列筛选器。  
-|**组织列** |选择要跟踪的**事件**和数据列后，单击“组织列”**** 将强制网格对跟踪结果窗口中的列重新排序。  
+|**组织列** |选择要跟踪的 **事件** 和数据列后，单击“组织列”将强制网格对跟踪结果窗口中的列重新排序。  
 
 ## <a name="performance-counters-limit"></a>性能计数器限制
 使用“性能计数器限制”对话框可以在将系统监视器性能日志文件与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪关联时限制该文件中的信息。 对于相应的关联，您可以使用此对话框选择应该显示和使用的计数器。  
@@ -181,7 +181,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 ## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>源表（数据库引擎优化顾问 - 选择工作负荷表）
 Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。  
 - 在 Profiler 中，使用“源表”对话框为跟踪表指定源表。 源表是一个加载跟踪的表，重播跟踪时需要查看或使用其内容。  
-- 在优化顾问中，使用“选择工作负荷表”**** 对话框选择包含 profiler 跟踪信息的数据库表，以用作优化工作负荷或在开始优化分析前预览表的内容。  
+- 在优化顾问中，使用“选择工作负荷表”对话框选择包含 profiler 跟踪信息的数据库表，以用作优化工作负荷或在开始优化分析前预览表的内容。  
 
 |Item|说明
 |---|---

@@ -4,7 +4,7 @@ description: 介绍如何使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server
 ms.date: 11/05/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
@@ -15,12 +15,12 @@ author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e9e5bc99c773b9d7be120ca881cb862de53e8e73
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2d4df010b8034147093725b630f652e3123f9719
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460760"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643669"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>为 Always On 可用性组配置灵活的自动故障转移策略
 

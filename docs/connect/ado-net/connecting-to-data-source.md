@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 0fdf91c5a4da33b585f10939cd6a801a46b236b3
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 65bbd662c7eeab5114262efa96c009d1ebbf0323
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761515"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771645"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>连接到 ADO.NET 中的数据源
 
@@ -27,7 +27,7 @@ ms.locfileid: "96761515"
 
 Microsoft SqlClient Data Provider for SQL Server 包括一个派生自 <xref:System.Data.Common.DbConnection> 类的 <xref:Microsoft.Data.SqlClient.SqlConnection> 类型。
 
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
 
 [建立连接](establishing-connection.md)\
 说明如何使用 Connection 对象与数据源建立连接。
@@ -41,3 +41,5 @@ Microsoft SqlClient Data Provider for SQL Server 包括一个派生自 <xref:Sys
 - [连接池](connection-pooling.md)
 - [命令和参数](commands-parameters.md)
 - [DataAdapter 和 DataReader](dataadapters-datareaders.md)
+- [事务和并发性](transactions-and-concurrency.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

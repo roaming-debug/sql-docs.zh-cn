@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 03af2a8544763aab7609fd713790622bbb1bfef4
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 808acdf89350f539f03f6fdc75f2f7a5ed5b7707
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419758"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771609"
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET 中的数据类型映射
 
@@ -42,3 +42,5 @@ ADO.NET 基于通用类型系统，该系统定义在运行时中声明、使用
 
 - [SQL Server 数据类型和 ADO.NET](./sql/sql-server-data-types.md)
 - [配置参数](configure-parameters.md)
+- [检索数据库架构信息](retrieving-database-schema-information.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

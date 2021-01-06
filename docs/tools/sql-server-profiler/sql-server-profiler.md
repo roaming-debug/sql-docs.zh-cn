@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 485bb37dee0c118cf313bd7b3740b56c41e20c90
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 3169f8fbbc86fc95a62631c0cc93d77b6a46b0a4
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713775"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643384"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
@@ -118,7 +118,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 
 
 ### <a name="trace"></a>跟踪
 
-跟踪基于选定的事件、数据列和筛选器捕获数据。 例如，可创建跟踪来监视异常错误。 为此，请选择 **Exception** 事件类以及 **Error**、 **State**和 **Severity** 数据列。 需要收集这三列的数据，以使跟踪结果可提供有意义的数据。 然后，可运行以此方式配置的跟踪，并可收集有关服务器中发生的任何 **Exception** 事件的数据。 可以保存跟踪数据，也可以立刻将其用于分析。 尽管某些事件（如 **Exception** 事件）永远不会被重播，但跟踪以后可以被重播。 还可以将跟踪保存为模板，以便在将来生成类似的跟踪。  
+跟踪基于选定的事件、数据列和筛选器捕获数据。 例如，可创建跟踪来监视异常错误。 为此，请选择 **Exception** 事件类以及 **Error**、 **State** 和 **Severity** 数据列。 需要收集这三列的数据，以使跟踪结果可提供有意义的数据。 然后，可运行以此方式配置的跟踪，并可收集有关服务器中发生的任何 **Exception** 事件的数据。 可以保存跟踪数据，也可以立刻将其用于分析。 尽管某些事件（如 **Exception** 事件）永远不会被重播，但跟踪以后可以被重播。 还可以将跟踪保存为模板，以便在将来生成类似的跟踪。  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了以下两种用于跟踪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的方法：使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 进行跟踪，或使用系统存储过程进行跟踪。  
 
@@ -164,7 +164,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 
 |介绍如何重播至光标处。|[重播至光标处 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)|  
 |介绍了如何重播 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。|[重播 Transact-SQL 脚本 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
 |说明如何创建跟踪模板。|[创建跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)|  
-|说明如何修改跟踪模板。|[修改跟踪模板 (SQL Server Profiler)](./modify-trace-templates.md?view=sql-server-ver15)|  
+|说明如何修改跟踪模板。|[修改跟踪模板 (SQL Server Profiler)](./modify-trace-templates.md)|  
 |说明如何设置全局跟踪选项。|[设置全局跟踪选项 (SQL Server Profiler)](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)|  
 |说明如何在跟踪时查找值或数据列。|[在跟踪时查找值或数据列 (SQL Server Profiler)](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |说明如何从正在运行的跟踪派生模板。|[从正在运行的跟踪中派生模板 (SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
@@ -173,7 +173,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 
 |说明如何导出跟踪模板。|[导出跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |说明如何导入跟踪模板。|[导入跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |说明如何从跟踪提取脚本。|[从跟踪提取脚本 (SQL Server Profiler)](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|说明如何将跟踪与 Windows 性能日志数据关联。|[将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)](./correlate-a-trace-with-windows-performance-log-data.md?view=sql-server-ver15)|  
+|说明如何将跟踪与 Windows 性能日志数据关联。|[将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)](./correlate-a-trace-with-windows-performance-log-data.md)|  
 |说明如何组织跟踪中显示的列。|[组织跟踪中显示的列 (SQL Server Profiler)](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |介绍了如何启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。|[启动 SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |说明如何保存跟踪和跟踪模板。|[保存跟踪和跟踪模板](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  

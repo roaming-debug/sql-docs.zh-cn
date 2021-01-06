@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41b81d0adedf48f0e33efe6c60d83dd4ed7b597a
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: aca7b1adb8ce91a12832bccfd6cbd27b07229d22
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428185"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771477"
 ---
 # <a name="updating-data-in-a-data-source"></a>更新数据源中的数据
 
@@ -43,4 +43,6 @@ ms.locfileid: "96428185"
 ## <a name="see-also"></a>请参阅
 
 - [使用命令修改数据](use-commands-to-modify-data.md)
+- [通过 DataAdapter 更新数据源](update-data-sources-with-dataadapters.md)
 - [命令和参数](commands-parameters.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)
