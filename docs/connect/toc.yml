@@ -136,6 +136,25 @@
               href: ../connect/ado-net/common-schema-collections.md
             - name: SQL Server 架构集合
               href: ../connect/ado-net/sql-server-schema-collections.md
+        - name: DbProviderFactories
+          href: ../connect/ado-net/dbproviderfactories.md
+          items:
+            - name: 获取 SqlClientFactory
+              href: ../connect/ado-net/obtain-sqlclientfactory.md
+        - name: 检索标识或自动编号值
+          href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
+        - name: 检索二进制数据
+          href: ../connect/ado-net/retrieve-binary-data.md
+        - name: 使用存储过程修改数据
+          href: ../connect/ado-net/modify-data-with-stored-procedures.md
+        - name: SqlClient 中的数据跟踪
+          href: ../connect/ado-net/data-tracing.md
+        - name: SqlClient 中的性能计数器
+          href: ../connect/ado-net/performance-counters.md
+        - name: 异步编程
+          href: ../connect/ado-net/asynchronous-programming.md
+        - name: SqlClient 流式处理支持
+          href: ../connect/ado-net/sqlclient-streaming-support.md
     - name: SQL Server 和 ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
