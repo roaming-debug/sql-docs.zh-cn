@@ -2,7 +2,7 @@
 title: 使用 Azure Active Directory 身份验证进行连接
 description: 了解如何开发结合使用 Azure Active Directory 身份验证功能与 Microsoft JDBC Driver for SQL Server 的 Java 应用程序。
 ms.custom: ''
-ms.date: 09/23/2020
+ms.date: 01/04/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf829dfabdd291367990ef21280208ac0741154c
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 68d8b2a131fa6ab1c9e287f70cb584db3aeedacc
+ms.sourcegitcommit: 6154ee7f20bccce9d458ac7f3b0a21b9613d1131
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081306"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97902635"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 
@@ -54,9 +54,9 @@ Microsoft JDBC Driver for SQL Server 中支持 Azure Active Directory 身份验�
 对于其他身份验证模式，必须在客户端计算机上安装以下组件：
 * Java 7 或更高版本
 * Microsoft JDBC Driver 6.0（或更高版本）for SQL Server
-* 如果使用的是基于访问令牌的身份验证模式，必须有 [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 及其依赖项，才能运行本文中的示例。 有关详细信息，请参阅**使用访问令牌进行连接**部分。
-* 如果使用的是 ActiveDirectoryPassword  身份验证模式，必须有 [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 及其依赖项。 有关详细信息，请参阅**使用 ActiveDirectoryPassword 身份验证模式进行连接**部分。
-* 如果使用的是 ActiveDirectoryIntegrated  模式，必须有 azure-activedirectory-library-for-java 及其依赖项。 有关详细信息，请参阅**使用 ActiveDirectoryIntegrated 身份验证模式进行连接**部分。
+* 如果使用的是基于访问令牌的身份验证模式，必须有 [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 及其依赖项，才能运行本文中的示例。 有关详细信息，请参阅 **使用访问令牌进行连接** 部分。
+* 如果使用的是 ActiveDirectoryPassword  身份验证模式，必须有 [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 及其依赖项。 有关详细信息，请参阅 **使用 ActiveDirectoryPassword 身份验证模式进行连接** 部分。
+* 如果使用的是 ActiveDirectoryIntegrated  模式，必须有 azure-activedirectory-library-for-java 及其依赖项。 有关详细信息，请参阅 **使用 ActiveDirectoryIntegrated 身份验证模式进行连接** 部分。
 
 ## <a name="connecting-using-activedirectorymsi-authentication-mode"></a>使用 ActiveDirectoryMSI 身份验证模式进行连接
 下面的示例展示了如何使用 `authentication=ActiveDirectoryMSI` 模式。 从 Azure 资源（例如 Azure 虚拟机、应用服务或与 Azure Active Directory 联合的函数应用）内部运行此示例。
@@ -87,7 +87,7 @@ public class AAD_MSI {
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryMSI");
         // Optional
-        ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
+        ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
 
         try (Connection connection = ds.getConnection(); 
                 Statement stmt = connection.createStatement();
