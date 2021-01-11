@@ -6,7 +6,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9e5afd2b469b580ca3a183cff940887847729792
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: afd66ca781ca5f0a982fe5e932fd783c6c599a93
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789724"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642117"
 ---
 # <a name="database-mirroring---allow-network-access---windows-authentication"></a>数据库镜像 - 允许网络访问 - Windows 身份验证
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "85789724"
   
 -   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例基于不同的域帐户（在相同的域或受信任的域中）作为服务运行，则必须在每个远程服务器实例上的 **master** 中创建各帐户的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。  
   
--   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例作为网络服务帐户运行，则必须在每个远程服务器实例上的 master 中创建各主机帐户 (DomainName\\ComputerName$) ** 的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。 其原因在于，基于网络服务帐户运行的服务器实例使用主机的域帐户进行身份验证。  
+-   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例作为网络服务帐户运行，则必须在每个远程服务器实例上的 master 中创建各主机帐户 (*DomainName* **\\** ComputerName$) 的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。 其原因在于，基于网络服务帐户运行的服务器实例使用主机的域帐户进行身份验证。  
   
 > [!NOTE]  
 >  确保每个服务器实例都有一个端点。 有关详细信息，请参阅 [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  

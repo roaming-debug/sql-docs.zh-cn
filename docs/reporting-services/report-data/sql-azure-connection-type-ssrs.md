@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016'
-ms.openlocfilehash: 1b13134166c4c17bea73d2990ceaf678fe1b4b2c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4dc1fcf4aa738a018274f65d7d707f6461b9c45c
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478838"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878840"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Azure SQL 连接类型 (SSRS)
 
@@ -156,7 +156,7 @@ WHERE EmployeeID = (@EmpID)
 
 ## <a name="azure-sql-database-and-aad"></a>Azure SQL 数据库和 AAD
 
-可以结合使用 Azure SQL 数据库与 Azure Active Directory (AAD) 直通身份验证。
+可以结合使用 Azure SQL 数据库与 Azure Active Directory (AAD)。
 
 正确设置以下项后，可以实现此方案：
 

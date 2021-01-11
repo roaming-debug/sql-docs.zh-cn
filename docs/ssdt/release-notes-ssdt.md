@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
-ms.openlocfilehash: c59e142ec924a573e127d9caa0cd7d6ac9bf9e8f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a380eabba4a20a65fd291b938d270a440f66d754
+ms.sourcegitcommit: 44eebb659f9b226c08aea6c31a909b22ad4fec60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440488"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860599"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
 
@@ -44,6 +44,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1597nbsp-ssdt-for-vs-2017"></a>15.9.7,&nbsp; SSDT for VS 2017
+
+发布时间：&nbsp; 2021 年 1 月 5 日  
+生成号：&nbsp; 14.0.16228.0  
+SSDT for Visual Studio 2017。 
+
+### <a name="whats-new"></a>新增功能
+
+| 新项 | 详细信息 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | 在 IR 创建向导中使创建 SSISDB 可选。 |
+| Integration Services (SSIS) | 修复了以下问题：当不同的订阅有相同的名称时，IR 创建向导和启用了 Azure 的项目向导中的 Azure 订阅组合框项是重复的。 |
+| Integration Services (SSIS) | 修复了以下问题：有时，无法在 IR 创建向导中启用“连接”按钮。 |
+| Integration Services (SSIS) | 修复了以下问题：当不同的订阅有相同的名称时，IR 创建向导和启用了 Azure 的项目向导中的 Azure 订阅组合框项是重复的。 |
+| Integration Services (SSIS) | 修复了以下问题：在当前区域设置为德国时，脚本组件 bufferwrapper.cs 下自动生成的代码添加额外的双引号。 |
+| Integration Services (SSIS) | 修复了当目标服务器版本为 SQL Server 2012、2014、2016 时不显示“下载 WSDL”按钮的问题。 |
+| Integration Services (SSIS) | 修复了由于内存不足异常而导致大型项目生成失败的问题。 |
+| Integration Services (SSIS) | 修复了在包部署模型中将包另存为文件系统或 MSDB 的副本时，包未降级到项目的当前目标服务器版本的问题。 |
+| Integration Services (SSIS) | 修复了由于“无此类接口”错误而导致维度处理目标无法工作的问题。 |
+| Integration Services (SSIS) | 修复了一些与辅助功能和高 DPI 相关的问题。 |
+
+### <a name="known-issues"></a>已知问题
+
+| 已知问题 | 详细信息 |
+| :---------- | :------ |
+| 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 | 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。 |
+| &nbsp; | &nbsp; |
+
 
 ## <a name="1596nbsp-ssdt-for-vs-2017"></a>15.9.6,&nbsp; SSDT for VS 2017
 

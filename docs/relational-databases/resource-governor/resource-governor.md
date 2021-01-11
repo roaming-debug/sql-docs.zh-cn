@@ -2,7 +2,7 @@
 title: 资源调控器 | Microsoft Docs
 description: 了解 SQL Server Resource Governor 功能，该功能可以限制传入应用程序请求可使用的 CPU、物理 I/O 和内存的使用量。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/21/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -13,17 +13,20 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 29d63602d4e3553ee2e5f1cb9053e445265fd301
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 6b5f22541039f781e49615b5e8916d138a5c375b
+ms.sourcegitcommit: bb54e4c9dd8c97365b7a96dfcd557b8b86d06978
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506534"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97736885"
 ---
 # <a name="resource-governor"></a>Resource Governor
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor 是一项可用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负载和系统资源使用情况的功能。 通过 Resource Governor，可以指定针对传入应用程序请求可使用的 CPU、物理 I/O 和内存的使用量的限制。  
   
+> [!NOTE]
+> 尽管 [Azure SQL 数据库利用 Resource Governor](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/)（以及其他技术）来管理资源，但不支持用户在 Azure SQL 数据库中配置自定义资源池和工作负荷组。 Azure Synapse Analytics 通过[工作负荷分类功能](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification)以不同方式实现类似的 Resource Governor 行为。
+
 ## <a name="benefits-of-resource-governor"></a>资源调控器的优势  
  利用资源调控器，您可以通过指定传入请求的资源消耗限制来管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷和资源。 在资源调控器上下文中，工作负荷是一组大小相似的查询或请求，可以且应该视为单个实体。 这并不是必需的，但是工作负荷的资源使用模式越统一，通过资源调控器可能获得的益处越多。 资源限制可以实时重新配置，对正在执行的工作负荷影响非常小。  
   
@@ -61,8 +64,8 @@ ms.locfileid: "96506534"
   
 -   **分类。** 分类过程会根据传入会话的特征将其分配给工作负荷组。 您可以通过编写用户定义函数（称为分类器函数）来定制分类逻辑。 资源调控器还支持用于实现分类规则的分类器用户定义的函数。 有关详细信息，请参阅 [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md)。  
   
-> [!NOTE]  
->  资源调控器不向专用管理员连接 (DAC) 施加任何控制。 无需对在内部工作负荷组和资源池中运行的 DAC 查询进行分类。  
+> [!NOTE]
+> 资源调控器不向专用管理员连接 (DAC) 施加任何控制。 无需对在内部工作负荷组和资源池中运行的 DAC 查询进行分类。  
   
  在资源调控器的上下文中，您可以将前面的概念视为组件。 下图显示了这些组件及其在数据库引擎环境中相互之间的关系。 从处理的角度，简化的流程如下所示：  
   

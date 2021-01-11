@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55bb82e19a97a91dbe00b44b195e74a250ddf1dc
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+ms.openlocfilehash: f90e59f3e54b69a98e7ca058da971677faaafd0d
+ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900953"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697114"
 ---
 # <a name="about-change-data-capture-sql-server"></a>关于变更数据捕获 (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-> [!NOTE]
-> 从 CU18 开始的 Linux 上的 SQL Server 2017 和 Linux 上的 SQL Server 2019 都支持 CDC。
+
 
   变更数据捕获可记录应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的插入、更新和删除活动。 这样，就可以按易于使用的关系格式提供这些更改的详细信息。 将为修改的行捕获列信息以及将更改应用于目标环境所需的元数据，并将其存储在镜像所跟踪源表的列结构的更改表中。 系统提供了一些表值函数，以便使用者可以系统地访问更改数据。  
   
@@ -54,11 +53,11 @@ ms.locfileid: "96900953"
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>数据库的变更数据捕获有效性间隔  
  数据库的变更数据捕获有效性间隔是指更改数据可供捕获实例使用的时段。 有效性间隔从为数据库表创建第一个捕获实例时开始，并一直持续到当前时间。  
   
- 如果没有定期系统地清除数据，更改表中存储的数据将会变得非常大。 变更数据捕获清除进程负责实施基于保持期的清除策略。 首先，它移动有效性间隔的低端点以满足时间限制。 然后，它删除过期的更改表项。 默认情况下，数据保持期为三天。  
+ 如果没有定期系统地清除数据，更改表中存储的数据将会变得非常大。 变更数据捕获清除进程负责实施基于保持期的清除策略。 首先，它移动有效性间隔的低端点以满足时间限制。 然后，它删除过期的更改表项。 默认情况下，数据保留期为三天。  
   
- 在高端，当捕获进程提交每批新的更改数据时，将在 **cdc.lsn_time_mapping** 中为每个具有更改表项的事务添加新的项。 在映射表中，将保留提交日志序列号 (LSN) 和事务提交时间（分别为 start_lsn 和 tran_end_time 列）。 位于 **cdc.lsn_time_mapping** 中的最大 LSN 值表示数据库有效性窗口的高水印。 其相应提交时间将作为基于保持期的清除操作计算新的低水印的基础。  
+ 在高端，当捕获进程提交每批新的更改数据时，将在 **cdc.lsn_time_mapping** 中为每个具有更改表项的事务添加新的项。 在映射表中，将保留提交日志序列号 (LSN) 和事务提交时间（分别为 start_lsn 和 tran_end_time 列）。 位于 **cdc.lsn_time_mapping** 中的最大 LSN 值表示数据库有效性窗口的高水印。 其相应提交时间将作为基于保留期的清除操作计算新的低水印的基础。  
   
- 由于捕获进程从事务日志中提取更改数据，因此，向源表提交更改的时间与更改出现在其关联更改表中的时间之间存在内在的延迟。 虽然这种延迟通常很小，但务必记住，在捕获进程处理相关日志项之前无法使用更改数据。  
+ 由于捕获进程从事务日志中提取更改数据，因此，向源表提交更改的时间与更改出现在其关联更改表中的时间之间存在内置延迟。 虽然这种延迟通常很小，但务必记住，在捕获进程处理相关日志项之前无法使用更改数据。  
   
 ## <a name="change-data-capture-validity-interval-for-a-capture-instance"></a>捕获实例的变更数据捕获有效性间隔  
  虽然数据库有效性间隔和各个捕获实例的有效性间隔通常是一致的，但并非始终是这种情况。 捕获实例的有效性间隔从捕获进程识别捕获实例并开始将关联更改记录到其更改表时开始。 因此，如果捕获实例是在不同时间创建的，则每个实例最初具有不同的低端点。 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 返回的结果集中的 start_lsn 列显示每个定义的捕获实例的当前低端点。 当清除进程清除更改表项时，它将调整所有捕获实例的 start_lsn 值，以反映可用更改数据的新低水印。 仅调整那些 start_lsn 值当前低于新的低水印的捕获实例。 随着时间的推移，如果没有创建新的捕获实例，所有单个实例的有效性间隔将逐渐与数据库有效性间隔保持一致。  
@@ -138,9 +137,20 @@ CREATE TABLE T1(
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
-## <a name="columnstore-indexes"></a>列存储索引
+## <a name="limitations"></a>限制
 
+更改数据捕获具有以下限制： 
+
+**Linux**   
+从 CU18 开始的 Linux 上的 SQL Server 2017 和 Linux 上的 SQL Server 2019 都支持 CDC。
+
+列存储索引   
 不能对具有聚集列存储索引的表启用变更数据捕获。 从 SQL Server 2016 开始，可以对具有非聚集列存储索引的表启用此功能。
+
+使用变量进行分区切换   
+对于 `ALTER TABLE ... SWITCH TO ... PARTITION ...` 语句，不支持在带有变更数据捕获 (CDC) 的数据库或表上使用带有分区切换的变量。 有关详细信息，请参阅[分区切换限制](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching)。 
+
+
 
 ## <a name="see-also"></a>另请参阅  
  [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

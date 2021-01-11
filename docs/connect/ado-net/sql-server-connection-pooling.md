@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: ef687114ff2ceceabc1ed87d67a4585a5846029d
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: a878d8250a3e402cd1043dc289eb1712af45f385
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563074"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771521"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 连接池 (ADO.NET)
 
@@ -41,7 +41,7 @@ ms.locfileid: "96563074"
 > [!NOTE]
 > 默认情况下，“`blocking period`”机制不适用于 Azure SQL Server。 可以通过修改 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString> 中的 <xref:Microsoft.Data.SqlClient.PoolBlockingPeriod> 属性来更改此行为，但 .NET Standard 除外。
 
-## <a name="pool-creation-and-assignment"></a>池的创建和分配
+## <a name="pool-creation-and-assignment"></a>池创建和分配
 
 在初次打开连接时，将根据完全匹配算法创建连接池，该算法将池与连接中的连接字符串关联。 每个连接池都与一个不同的连接字符串相关联。 打开新连接时，如果连接字符串并非与现有池完全匹配，将创建一个新池。
 
@@ -59,7 +59,7 @@ ms.locfileid: "96563074"
 
 [!code-csharp[SqlConnection_Pooling#1](~/../sqlclient/doc/samples/SqlConnection_Pooling.cs#1)]
 
-## <a name="adding-connections"></a>添加连接
+## <a name="add-connections"></a>添加连接
 
 连接池是为每个唯一的连接字符串创建的。 当创建一个池后，将创建多个连接对象并将其添加到该池中，以满足最小池大小的需求。 根据需要将连接添加到池中，直到达到指定的最大池大小（默认值为 100）。 连接在关闭或断开时释放回池中。
 
@@ -75,7 +75,7 @@ ms.locfileid: "96563074"
 
 有关与打开和关闭与连接相关联的事件的详细信息，请参阅 SQL Server 文档中的 [Audit Login 事件类](/sql/relational-databases/event-classes/audit-login-event-class)和 [Audit Logout 事件类](/sql/relational-databases/event-classes/audit-logout-event-class)。
 
-## <a name="removing-connections"></a>移除连接
+## <a name="remove-connections"></a>删除连接
 
 如果连接空闲时间达到约 4-8 分钟，或池程序检测到与服务器的连接已断开，连接池程序会将该连接从池中移除。
 
@@ -84,7 +84,7 @@ ms.locfileid: "96563074"
 
 如果存在一个与已消失的服务器的连接，即使连接池进程尚未检测到断开的连接，也可以从池中取出此连接并将连接标记为无效。 这种情况是因为检查连接是否仍有效的系统开销将造成与服务器的另一次往返，从而抵消了池进程的优势。 发生此情况时，初次尝试使用该连接将检测连接是否曾断开，并引发异常。
 
-## <a name="clearing-the-pool"></a>清除池
+## <a name="clear-the-pool"></a>清除池
 
 Microsoft SqlClient Data Provider for SQL Server 引入了两种新的方法来清除池：<xref:Microsoft.Data.SqlClient.SqlConnection.ClearAllPools%2A> 和 <xref:Microsoft.Data.SqlClient.SqlConnection.ClearPool%2A>。 `ClearAllPools` 清除指定提供程序的连接池，`ClearPool` 清除与特定连接关联的连接池。
 
@@ -97,7 +97,7 @@ Microsoft SqlClient Data Provider for SQL Server 引入了两种新的方法来�
 
 当连接关闭时，它将被释放回池中，并根据其事务上下文放入相应的子部分。 因此，即使分布式事务仍然挂起，仍可以关闭该连接而不会生成错误。 这样，你就可以在之后提交或中止分布式事务。
 
-## <a name="controlling-connection-pooling-with-connection-string-keywords"></a>使用连接字符串关键字控制连接池
+## <a name="control-connection-pooling-with-connection-string-keywords"></a>用连接字符串关键字控制连接池
 
 `ConnectionString` 对象的 <xref:Microsoft.Data.SqlClient.SqlConnection> 属性支持连接字符串键/值对，可以用于调整连接池逻辑的行为。 有关详细信息，请参阅 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>。
 
@@ -105,11 +105,11 @@ Microsoft SqlClient Data Provider for SQL Server 引入了两种新的方法来�
 
 池碎片是许多 Web 应用程序中的一个常见问题，应用程序可能会创建大量在进程退出后才会释放的池。 这样，将打开大量的连接，占用许多内存，从而导致性能降低。
 
-### <a name="pool-fragmentation-due-to-integrated-security"></a>因为集成安全性产生的池碎片
+### <a name="pool-fragmentation-due-to-integrated-security"></a>由于集成安全性而产生的池碎片
 
 连接根据连接字符串以及用户标识来建立池连接。 因此，如果使用网站上的基本身份验证或 Windows 身份验证以及集成的安全登录，每个用户将获得一个池。 尽管这样可以提高单个用户的后续数据库请求的性能，但是该用户无法利用其他用户建立的连接。 这样还使每个用户至少产生一个与数据库服务器的连接。 这对特定 Web 应用程序结构会产生副作用，因为开发人员必须衡量安全性和审计要求。
 
-### <a name="pool-fragmentation-due-to-many-databases"></a>因为许多数据库产生的池碎片
+### <a name="pool-fragmentation-due-to-many-databases"></a>由于多个数据库导致的池碎片
 
 许多 Internet 服务提供商在一台服务器上托管多个网站。 他们可能使用单个数据库确认窗体身份验证登录，然后为该用户或用户组打开与特定数据库的连接。 与身份验证数据库的连接将建立池连接，供每个用户使用。 但是，每个数据库的连接存在一个独立的池，这会增加与服务器的连接数。
 
@@ -123,7 +123,7 @@ Microsoft SqlClient Data Provider for SQL Server 引入了两种新的方法来�
 
 通过调用 `sp_setapprole` 系统存储过程激活了 SQL Server 应用程序角色之后，该连接的安全上下文无法重置。 但是，如果启用了池，连接将返回池，在重复使用池连接时会出错。
 
-### <a name="application-role-alternatives"></a>应用程序角色替代项
+### <a name="application-role-alternatives"></a>应用程序角色备选项
 
 建议您利用可以使用的安全机制，而不使用应用程序角色。
 
@@ -131,3 +131,5 @@ Microsoft SqlClient Data Provider for SQL Server 引入了两种新的方法来�
 
 - [连接池](connection-pooling.md)
 - [SQL Server 和 ADO.NET](./sql/index.md)
+- [SqlClient 中的性能计数器](performance-counters.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

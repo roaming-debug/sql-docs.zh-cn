@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c07ce738ea3364cba27cd2872894ff4701f41dfe
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5dd2c6c6f33f9a115196d9a2afc3ca700b3a4631
+ms.sourcegitcommit: a81823f20262227454c0b5ce9c8ac607aaf537e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476678"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684204"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -110,15 +110,95 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- PARTITION BY  
+
+开窗函数在其 `OVER` 子句中具有以下参数：
+- [PARTITION BY](#partition-by)：将查询结果集分为多个分区。
+- [ORDER BY](#order-by)：定义结果集的每个分区中行的逻辑顺序。 
+- [ROWS/RANGE](#rows-or-range)：通过指定分区中的起点和终点来限制分区中的行数。 它需要 `ORDER BY` 参数，如果指定了 `ORDER BY` 参数，则默认值是从分区起点到当前元素。
+
+如果未指定任何参数，则将对整个结果集应用开窗函数。
+```sql
+select 
+      object_id
+    , [min] = min(object_id) over()
+    , [max] = max(object_id) over()
+from sys.objects
+```
+ 
+|object_id | 分钟 | max |
+|---|---|---|
+| 3 | 3 | 2139154666 |
+| 5 | 3 | 2139154666 |
+| ... | ... | ... |
+| 2123154609 |  3 | 2139154666 |
+| 2139154666 |  3 | 2139154666 |
+
+### <a name="partition-by"></a>PARTITION BY  
  将查询结果集分为多个分区。 开窗函数分别应用于每个分区，并为每个分区重新启动计算。  
+
+```sqlsyntax
+PARTITION BY *value_expression* 
+```
+ 
+ 如果未指定 PARTITION BY，则此函数将查询结果集的所有行视为单个分区。
+如果未指定 `ORDER BY` 子句，则将对分区中的所有行应用函数。
   
- value_expression  
- 指定行集按其分区的列。 value_expression 只能引用可供 FROM 子句使用的列。 value_expression 不能引用选择列表中的表达式或别名。 value_expression 可以是列表达式、标量子查询、标量函数或用户定义的变量。  
+#### <a name="partition-by-value_expression"></a>PARTITION BY value_expression   
+ 指定行集按其分区的列。 value_expression 只能引用可供 FROM 子句使用的列。 value_expression 不能引用选择列表中的表达式或别名。 value_expression 可以是列表达式、标量子查询、标量函数或用户定义的变量。 
+ 
+ ```sql
+ select 
+      object_id, type
+    , [min] = min(object_id) over(partition by type)
+    , [max] = max(object_id) over(partition by type)
+from sys.objects
+```
+
+|object_id | type | 分钟 | max |
+|---|---|---|---|
+| 68195293  | PK    | 68195293  | 711673583 |
+| 631673298 | PK    | 68195293  | 711673583 |
+| 711673583 | PK    | 68195293  | 711673583 |
+| ... | ... | ... |
+| 3 | S | 3 | 98 |
+| 5 | S |   3   | 98 |
+| ... | ... | ... |
+| 98    | S |   3   | 98 |
+| ... | ... | ... |
   
- \<ORDER BY clause>  
- 定义结果集的每个分区中行的逻辑顺序。 也就是说，它指定按其执行开窗函数计算的逻辑顺序。  
-  
+### <a name="order-by"></a>ORDER BY  
+
+```sqlsyntax
+ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]  
+```
+
+ 定义结果集的每个分区中行的逻辑顺序。 也就是说，它指定按其执行开窗函数计算的逻辑顺序。 
+ - 如果未指定，则默认顺序为 `ASC`，且开窗函数将使用分区中的所有行。
+ - 如果指定了此参数，但未在 ROWS/RANGE 中指定，则默认值 `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` 将由可接受可选 ROWS/RANGE 规范（例如 `min` 或 `max`）的函数作为窗口帧的默认值。 
+ 
+```sql
+select 
+      object_id, type
+    , [min] = min(object_id) over(partition by type order by object_id)
+    , [max] = max(object_id) over(partition by type order by object_id)
+from sys.objects
+```
+
+|object_id | type | 分钟 | max |
+|---|---|---|---|
+| 68195293  | PK    | 68195293  | 68195293 |
+| 631673298 | PK    | 68195293  | 631673298 |
+| 711673583 | PK    | 68195293  | 711673583 |
+| ... | ... | ... |
+| 3 | S | 3 | 3 |
+| 5 | S |   3 | 5 |
+| 6 | S |   3 | 6 |
+| ... | ... | ... |
+| 97    | S |   3 | 97 |
+| 98    | S |   3 | 98 |
+| ... | ... | ... |
+
+
  order_by_expression  
  指定用于进行排序的列或表达式。 order_by_expression 只能引用可供 FROM 子句使用的列。 不能将整数指定为表示列名或别名。  
   
@@ -128,17 +208,40 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
   
- ROWS | RANGE  
+### <a name="rows-or-range"></a>ROWS 或 RANGE  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  通过指定分区中的起点和终点，进一步限制分区中的行数。 这是通过按照逻辑关联或物理关联对当前行指定某一范围的行实现的。 物理关联通过使用 ROWS 子句实现。  
   
  ROWS 子句通过指定当前行之前或之后的固定数目的行，限制分区中的行数。 此外，RANGE 子句通过指定针对当前行中的值的某一范围的值，从逻辑上限制分区中的行数。 基于 ORDER BY 子句中的顺序对之前和之后的行进行定义。 窗口框架“RANGE …CURRENT ROW ...”包括在 ORDER BY 表达式中与当前行具有相同值的所有行。 例如，ROWS BETWEEN 2 PRECEDING AND CURRENT ROW 意味着该函数对其操作的行的窗口在大小上是 3 行，开头为之前的 2 行，再包括当前行。  
+ 
+```sql
+select
+      object_id
+    , [preceding]   = count(*) over(order by object_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW )
+    , [central] = count(*) over(order by object_id ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING )
+    , [following]   = count(*) over(order by object_id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
+from sys.objects
+order by object_id asc
+```
+
+|object_id | 前面 | 中心 | 后面 |
+|---|---|---|---|
+| 3 | 1 | 3 | 156 |
+| 5 | 2 | 4 | 155 |
+| 6 | 3 | 5 | 154 |
+| 7 | 4 | 5 | 153 |
+| 8 | 5 | 5 | 152 |
+| ...   | ...   | ...   | ... |
+| 2112726579    | 153   | 5 | 4 |
+| 2119678599    | 154   | 5 | 3 |
+| 2123154609    | 155   | 4 | 2 |
+| 2139154666    | 156   | 3 | 1 | 
   
 > [!NOTE]  
 >  ROWS 或 RANGE 要求指定 ORDER BY 子句。 如果 ORDER BY 包含多个顺序表达式，则 CURRENT ROW FOR RANGE 在确定当前行时将考虑 ORDER BY 列表中的所有列。  
   
- UNBOUNDED PRECEDING  
+#### <a name="unbounded-preceding"></a>UNBOUNDED PRECEDING  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  指定窗口在分区中的第一行开始。 UNBOUNDED PRECEDING 只能指定为窗口起点。  
@@ -146,17 +249,20 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<unsigned value specification> PRECEDING  
  使用 \<unsigned value specification> 指定，用以指示要置于当前行之前的行或值的数目。 对于 RANGE 则不允许这样指定。  
   
- CURRENT ROW  
+#### <a name="current-row"></a>CURRENT ROW  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  在与 ROWS 一起使用时指定窗口在当前行开始或结束，或者在与 RANGE 一起使用时指定当前值。 CURRENT ROW 可指定为既是起点，又是终点。  
   
- BETWEEN \<window frame bound > AND \<window frame bound >  
+#### <a name="between-and"></a>BETWEEN AND  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
+```sqlsyntax
+BETWEEN <window frame bound > AND <window frame bound >  
+```
  与 ROWS 或 RANGE 一起使用，以便指定窗口的下（开始）边界和上（结束）边界点。 \<window frame bound> 定义边界起点，\<window frame bound> 定义边界终点。 上限不能小于下限。  
   
- UNBOUNDED FOLLOWING  
+#### <a name="unbounded-following"></a>UNBOUNDED FOLLOWING  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  指定窗口在分区的最后一行结束。 UNBOUNDED FOLLOWING 只能指定为窗口终点。 例如，RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING 定义以当前行开始、以分区的最后一行结束的窗口。  

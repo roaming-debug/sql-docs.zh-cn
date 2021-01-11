@@ -1,6 +1,7 @@
 ---
 title: 标题 (Transact-SQL) | Microsoft Docs
-description: ''
+description: Transact-SQL 参考文档的模板文章
+ROBOTS: NOINDEX
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -14,14 +15,16 @@ helpviewer_keywords: ''
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 4aae8923eb9d1d941c6f7eafa031ad08984eba60
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: a809afbe02a135a03d8257d2fd7c65b1d33e51fa
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97490037"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642353"
 ---
 # <a name="title-transact-sql"></a>标题 (Transact-SQL)
+
+<!--REMOVE tbe ROBOTS metadata line above and this comment in an actual article!! -->
 
 设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的数据库选项。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。
 
@@ -38,13 +41,13 @@ ms.locfileid: "97490037"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL 数据库](pick-a-product-template.md?view=azuresqldb-current)
+        [SQL 数据库](pick-a-product-template.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL 托管实例](pick-a-product-template.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](pick-a-product-template.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](pick-a-product-template.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](pick-a-product-template.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -64,10 +67,10 @@ ms.locfileid: "97490037"
         \* SQL 数据库 \*&nbsp;
     :::column-end:::
     :::column:::
-        [SQL 托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -85,13 +88,13 @@ ms.locfileid: "97490037"
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL 数据库](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL 数据库](alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL 托管实例 \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -107,10 +110,10 @@ ms.locfileid: "97490037"
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL 数据库](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL 数据库](alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL 托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL 托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

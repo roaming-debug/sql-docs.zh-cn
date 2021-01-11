@@ -1,7 +1,7 @@
 ---
 title: 什么是 PolyBase？ | Microsoft Docs
 description: 借助 PolyBase，SQL Server 实例可处理从外部数据源（如 Hadoop 和 Azure Blob 存储）中读取数据的 Transact-SQL 查询。
-ms.date: 06/10/2019
+ms.date: 12/14/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: overview
@@ -15,44 +15,46 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
+ms.custom: contperf-fy21q2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 43d5d214f1720513955c27c45349da74afe3888e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: afcc848a169ec6a9c9dd02ecee50718d7e1508c1
+ms.sourcegitcommit: 81f06a754fcaf4b72136859ccb18c82693f24780
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473358"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811532"
 ---
 # <a name="what-is-polybase"></a>什么是 PolyBase？
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
-<!--SQL Server 2016/2017-->
-::: moniker range="= sql-server-2016 || = sql-server-2017 || >= aps-pdw-2016 || = azure-sqldw-latest"
+借助 PolyBase，SQL Server 实例可处理从外部数据源中读取数据的 Transact-SQL 查询。 同一查询还可以访问 SQL Server 实例中的关系表。 借助 PolyBase，同一查询还可以联接外部源和 SQL Server 中的数据。
 
-借助 PolyBase，SQL Server 2016 实例可处理从 Hadoop 中读取数据的 Transact-SQL 查询。 同一查询还可以访问 SQL Server 中的关系表。 借助 PolyBase，同一查询还可以联接 Hadoop 和 SQL Server 中的数据。 在 SQL Server 中，[外部表](../../t-sql/statements/create-external-table-transact-sql.md)或[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)提供对 Hadoop 的连接。
+若要在 SQL Server 实例中使用 PolyBase，请执行以下操作：
+
+1. [在 Windows 上安装 PolyBase](polybase-installation.md)
+1. 创建[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)
+1. 创建[外部表](../../t-sql/statements/create-external-table-transact-sql.md)
+
+它们一起提供与外部数据源的连接。
+
+SQL Server 2016 引入了 PolyBase，支持连接到 Hadoop 和 Azure Blob 存储。
+
+SQL Server 2019 引入了其他连接器，包括 SQL Server、Oracle、Teradata 和 MongoDB。
 
 ![PolyBase 逻辑](../../relational-databases/polybase/media/polybase-logical.png "PolyBase 逻辑")
 
-PolyBase 将一些计算推送到 Hadoop 节点，以优化总体查询。 不过，PolyBase 外部访问不仅限于 Hadoop。 其他未结构化的非关系表也受支持，如带分隔符的文本文件。
+PolyBase 将一些计算推送到外部源，以优化总体查询。 PolyBase 外部访问不仅限于 Hadoop。 其他未结构化的非关系表也受支持，如带分隔符的文本文件。
 
-> [!TIP]
-> SQL Server 2019 为 PolyBase 引入了新的连接器，包括 SQL Server、Oracle、Teradata 和 MongoDB。 有关详细信息，请参阅 [SQL Server 2019 的 PolyBase 文档](polybase-guide.md?view=sql-server-ver15)
+外部连接器的示例包括：
 
-::: moniker-end
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
-
-借助 PolyBase，SQL Server 实例可处理从外部数据源中读取数据的 Transact-SQL 查询。 SQL Server 2016 及更高版本可以访问 Hadoop 和 Azure Blob 存储中的外部数据。 从 SQL Server 2019 开始，现在可以使用 PolyBase 访问 [SQL Server](polybase-configure-sql-server.md)、[Oracle](polybase-configure-oracle.md)、[Teradata](polybase-configure-teradata.md) 和 [MongoDB](polybase-configure-mongodb.md) 中的外部数据。
-
-访问外部数据的相同查询还可以定位 SQL Server 实例中的关系表。 这样可以将外部源中的数据与数据库中的高价值关系数据合并。 在 SQL Server 中，[外部表](../../t-sql/statements/create-external-table-transact-sql.md)或[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)提供对 Hadoop 的连接。
-
-PolyBase 将一些计算推送到 Hadoop 节点，以优化总体查询。 不过，PolyBase 外部访问不仅限于 Hadoop。 其他未结构化的非关系表也受支持，如带分隔符的文本文件。
-
-::: moniker-end
+- [SQL Server](polybase-configure-sql-server.md)
+- [Oracle](polybase-configure-oracle.md)
+- [Teradata](polybase-configure-teradata.md)
+- [MongoDB](polybase-configure-mongodb.md)
 
 ### <a name="supported-sql-products-and-services"></a>支持的 SQL 产品和服务
 
@@ -68,20 +70,20 @@ PolyBase 对以下 Microsoft SQL 产品提供这些相同功能：
 
 ## <a name="why-use-polybase"></a>为什么要用 PolyBase？
 
-过去联接 SQL Server 数据与外部数据的难度更大。 具体有下列两种不方便的方法：
+PolyBase 允许你将来自 SQL Server 实例的数据与外部数据连接起来。 在 PolyBase 将数据连接到外部数据源之前，你可以：
 
-- 传输一半数据，这样所有数据都采用一种格式或其他格式。
+- 传输一半数据，这样所有数据都在一个位置。
 - 查询两个数据源，然后编写自定义查询逻辑，以在客户端一级联接和集成数据。
 
-PolyBase 使用 T-SQL 来联接数据，因此可避免使用这两种不方便的方法。
+PolyBase 允许你简单地使用 Transact-SQL 来联接数据。
 
-为了简单起见，PolyBase 不要求在 Hadoop 环境中安装其他软件。 查询外部数据所用的 T-SQL 语法也是用于查询数据库表的语法。 PolyBase 实现的所有支持操作全都以透明方式发生。 查询作者无需对 Hadoop 有任何了解。
+PolyBase 不要求向 Hadoop 环境安装其他软件。 查询外部数据所用的 T-SQL 语法也是用于查询数据库表的语法。 PolyBase 实现的所有支持操作全都以透明方式发生。 查询作者无需对外部源有任何了解。
 
 ### <a name="polybase-uses"></a>PolyBase 用法
 
 PolyBase 支持在 SQL Server 中使用以下方案：
 
-- **通过 SQL Server 或 PDW 查询 Hadoop 中存储的数据。** 用户将数据存储在经济高效的分布式、可扩展系统中，例如 Hadoop。 PolyBase 使得使用 T-SQL 查询数据更加容易。
+- 通过 SQL Server 实例或 PDW 查询 Hadoop 中存储的数据。 用户将数据存储在经济高效的分布式、可扩展系统中，例如 Hadoop。 PolyBase 使得使用 T-SQL 查询数据更加容易。
 
 - **查询存储在 Azure Blob 存储中的数据。** Azure blob 存储是一个方便存储供 Azure 服务使用的数据的位置。  PolyBase 使得使用 T-SQL 访问数据变得更加容易。
 
@@ -97,23 +99,10 @@ PolyBase 支持在 SQL Server 中使用以下方案：
 
 - **缩放计算资源。** 若要提高查询性能，可以使用 SQL Server [PolyBase 横向扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。 这使并行数据可以在 SQL Server 实例和 Hadoop 节点之间传输，并为处理外部数据添加计算资源。
 
-<!--SQL Server 2016/2017-->
-::: moniker range="=sql-server-2016||=sql-server-2017"
-
 ## <a name="next-steps"></a>后续步骤
 
 在使用 PolyBase 之前，必须[安装 PolyBase 功能](polybase-installation.md)。 然后，请参阅以下配置指南，具体取决于你的数据源：
 
-- [Hadoop](polybase-configure-hadoop.md)
-- [Azure Blob 存储](polybase-configure-azure-blob-storage.md)
-
-::: moniker-end
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15"
-
-## <a name="next-steps"></a>后续步骤
-
-在使用 PolyBase 之前，必须[安装 PolyBase 功能](polybase-installation.md)。 然后，请参阅以下配置指南，具体取决于你的数据源：
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob 存储](polybase-configure-azure-blob-storage.md)
 - [SQL Server](polybase-configure-sql-server.md)
@@ -121,5 +110,3 @@ PolyBase 支持在 SQL Server 中使用以下方案：
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
 - [ODBC 泛型类型](polybase-configure-odbc-generic.md)
-
-::: moniker-end

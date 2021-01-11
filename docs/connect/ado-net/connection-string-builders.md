@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: bdb4294fda1f26ec346f786ec29061f8d4f9ee27
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 38c1ad34fb4819460c08f00da4c1dbd31749b7cb
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419774"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771429"
 ---
 # <a name="connection-string-builders"></a>连接字符串生成器
 
@@ -27,7 +27,7 @@ ms.locfileid: "96419774"
 
 在 ADO.NET 的早期版本中，不会对具有串联字符串值的连接字符串进行编译时检查，因此在运行时会产生不正确的关键字 <xref:System.ArgumentException>。 Microsoft SqlClient Data Provider for SQL Server 包括从 <xref:System.Data.Common.DbConnectionStringBuilder> 继承的强类型连接字符串生成器类 <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType>。
 
-## <a name="connection-string-injection-attacks"></a>连接字符串注入式攻击
+## <a name="connection-string-injection-attacks"></a>连接字符串注入攻击
 
 当使用动态字符串串联根据用户输入生成连接字符串时，可能发生连接字符串注入式攻击。 如果未验证字符串并且未转义恶意文本或字符，则攻击者可能会访问服务器上的敏感数据或其他资源。 例如，攻击者可以通过提供分号并追加其他值来发起攻击。 通过使用“last one wins”算法解析连接字符串，恶意输入将替换为合法值。
 
@@ -44,7 +44,7 @@ data source=(local);Integrated Security=True;
 initial catalog="AdventureWorks;NewValue=Bad"
 ```
 
-## <a name="building-connection-strings-from-configuration-files"></a>从配置文件生成连接字符串
+## <a name="build-connection-strings-from-configuration-files"></a>从配置文件生成连接字符串
 
 如果事先知道连接字符串的某些元素，则可以将其存储在配置文件中，并在运行时检索它们以构造完整连接字符串。 例如，可能事先知道数据库的名称，但不知道服务器的名称。 或者，您可能希望用户在运行时提供用户名和密码，而不能在连接字符串中插入其他值。
 
@@ -71,6 +71,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
 
 [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](~/../sqlclient/doc/samples/SqlConnectionStringBuilder_UserNamePwd.cs#1)]
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [连接字符串](connection-strings.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

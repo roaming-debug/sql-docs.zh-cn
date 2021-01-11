@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: dfbe41fe29a3dadc69a2a428f1bf8b606a2a7050
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97559199"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771324"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>按 DataReader 检索数据
 
@@ -42,9 +42,9 @@ reader = command.ExecuteReader();
 
 [!code-csharp[DataWorks SqlClient.HasRows#1](~/../sqlclient/doc/samples/SqlDataReader_HasRows.cs#1)]
 
-## <a name="closing-the-datareader"></a>关闭 DataReader  
+## <a name="close-the-datareader"></a>关闭 DataReader  
 
-每次使用完 DataReader 对象后都应调用 Close 方法 。
+使用完 `DataReader` 对象后，请始终调用 `Close()` 方法。
 
 > [!NOTE]
 > 如果 Command 包含输出参数或返回值，那么在 DataReader 关闭之前，将无法访问这些值 。  
@@ -71,4 +71,5 @@ reader = command.ExecuteReader();
 
 - [DataAdapter 和 DataReader](dataadapters-datareaders.md)
 - [命令和参数](commands-parameters.md)
+- [检索数据库架构信息](retrieving-database-schema-information.md)
 - [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 091f7c2736c240951beb0f434fdcd2efb39a9b59
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d738650db9dbb7b0b2ed3f9411945173f73f748f
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428186"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771269"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>使用 CommandBuilder 生成命令
 
@@ -39,9 +39,9 @@ ms.locfileid: "96428186"
 
 当与 `DataAdapter` 关联时，<xref:System.Data.Common.DbCommandBuilder> 会自动生成 `InsertCommand` 的 `UpdateCommand`、`DeleteCommand` 和 `DataAdapter` 属性（如果它们为空引用）。 如果某个属性已存在 `Command`，则使用现有 `Command`。
 
-通过联接两个或更多个表来创建的数据库视图不会被视为单个数据库表。 在此实例中，不能使用 <xref:System.Data.Common.DbCommandBuilder> 自动生成命令；必须显式指定命令。
+通过联接两个或更多个表来创建的数据库视图不会被视为单个数据库表。 在此实例中，不能使用 <xref:System.Data.Common.DbCommandBuilder> 自动生成命令；必须显式指定命令。 有关显式设置命令以将对 `DataSet` 的更新解析回数据源的信息，请参见[通过 DataAdapter 更新数据源](update-data-sources-with-dataadapters.md)。
 
-您可能需要将输出参数映射回 `DataSet` 的更新行。 一项常见的任务是从数据源中检索自动生成的标识字段或时间戳的值。 默认情况下，<xref:System.Data.Common.DbCommandBuilder> 不会将输出参数映射到更新行中的列。 在此实例中，必须显式指定命令。
+您可能需要将输出参数映射回 `DataSet` 的更新行。 一项常见的任务是从数据源中检索自动生成的标识字段或时间戳的值。 默认情况下，<xref:System.Data.Common.DbCommandBuilder> 不会将输出参数映射到更新行中的列。 在此实例中，必须显式指定命令。 有关将自动生成的标识字段映射回插入行的列的示例，请参见[检索标识或自动编号值](retrieve-identity-or-autonumber-values.md)。
 
 ## <a name="rules-for-automatically-generated-commands"></a>自动生成的命令的规则
 
@@ -74,13 +74,13 @@ ms.locfileid: "96428186"
 
 如果列名称或表名称包含任何特殊字符（如空格、句点、问号或其他非字母数字字符），则即使这些字符用括号分隔，自动命令生成逻辑也可能会失败。 根据具体提供程序，通过设置 QuotePrefix 和 QuoteSuffix 参数，生成逻辑可以处理空格，但无法转义特殊字符。 支持格式为 catalog.schema.table 的完全限定表名。
 
-## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>使用 CommandBuilder 自动生成 SQL 语句
+## <a name="use-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>使用 CommandBuilder 自动生成 SQL 语句
 
 若要为 `DataAdapter` 自动生成 SQL 语句，请先设置 `SelectCommand` 的 `DataAdapter` 属性，然后创建 `CommandBuilder` 对象，并将该对象指定为 `DataAdapter` 将自动为其生成 SQL 语句的 `CommandBuilder` 的自变量。
 
 [!code-csharp[SqlCommandBuilder_Create#1](~/../sqlclient/doc/samples/SqlCommandBuilder_Create.cs#1)]
 
-## <a name="modifying-the-selectcommand"></a>修改 SelectCommand
+## <a name="modify-the-selectcommand"></a>修改 SelectCommand
 
 如果您在自动生成 INSERT、UPDATE 或 DELETE 命令后修改 `CommandText` 的 `SelectCommand`，则可能会发生异常。 如果修改后的 `SelectCommand.CommandText` 包含的架构信息与自动生成 INSERT、UPDATE 或 DELETE 命令时使用的 `SelectCommand.CommandText` 不一致，则以后对 `DataAdapter.Update` 方法的调用可能会试图访问 `SelectCommand` 所引用的当前表中已不存在的列，并且将会引发异常。
 
@@ -100,3 +100,4 @@ ms.locfileid: "96428186"
 
 - [命令和参数](commands-parameters.md)
 - [执行命令](execute-command.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

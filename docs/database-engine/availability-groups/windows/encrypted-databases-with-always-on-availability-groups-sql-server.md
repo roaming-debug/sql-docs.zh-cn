@@ -5,7 +5,7 @@ ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords:
 - Transparent Data Encryption, AlwaysOn Availability Groups
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 2569f44e4642df714c8108b6540b81d013d30b82
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: 8001dbf4a5799d275bced4f565ee00a7a70d6c61
+ms.sourcegitcommit: 44eebb659f9b226c08aea6c31a909b22ad4fec60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584292"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860598"
 ---
 # <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>将加密数据库添加到 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,15 +33,13 @@ ms.locfileid: "94584292"
   
      为使解密的数据库可添加到某一可用性组，请使用向导：  
   
-    1.  创建主数据库的日志备份。  
+    1.  创建主数据库的完整数据库备份。 
   
-    2.  创建主数据库的完整数据库备份。  
+    2.  创建主数据库的日志备份。  
   
     3.  在承载辅助副本的服务器实例上，还原数据库备份。  
-  
-    4.  从主数据库创建新的日志备份。  
-  
-    5.  在辅助数据库上还原此日志备份。  
+    
+    4.  在辅助数据库上还原日志备份。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   

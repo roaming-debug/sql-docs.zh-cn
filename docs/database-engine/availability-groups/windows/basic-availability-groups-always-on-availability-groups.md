@@ -5,23 +5,23 @@ ms.custom: seodec18
 ms.date: 02/01/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 88704561006f0beff14ae69fff2b79c14ef3114b
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: 50db7fba110c33cc6c50211cd1b431bf1380ba26
+ms.sourcegitcommit: 44eebb659f9b226c08aea6c31a909b22ad4fec60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584599"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860579"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>单一数据库的基本 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  AlwaysOn Basic 可用性组为 SQL Server 2016 和 SQL Server 2017 Standard Edition 提供高可用性解决方案。 基本可用性组支持单个数据库的故障转移环境。 它的创建和管理与传统（高级）的 [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 的 Enterprise Edition 非常类似。 本文档概述了基本可用性组的差异和限制。  
-  
+ Always On 基本可用性组为 SQL Server Standard Edition 2016 版及更高版本提供高可用性解决方案。 基本可用性组支持单个数据库的故障转移环境。 它的创建和管理与传统（高级）的 [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 的 Enterprise Edition 非常类似。 本文档概述了基本可用性组的差异和限制。
+
 ## <a name="features"></a>功能  
  AlwaysOn 基本可用性组取代已弃用的数据库镜像功能，并提供类似级别的功能支持。 基本可用性组使主数据库可以维护单一的副本。 此副本可以使用同步提交模式或异步提交模式。 有关可用性模式的详细信息，请参阅[可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。 次要副本将保持非活动状态，除非需要进行故障转移。 此故障转移会反转主要和次要角色分配，导致次要副本成为活动的主数据库。 有关故障转移的详细信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。 基本可用性组可以在跨本地和 Microsoft Azure 的混合环境中运行。  
   

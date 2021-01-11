@@ -5,7 +5,7 @@ ms.custom: seodec18
 ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 864fca7c1d2983bec6296f1e82304cff31f658cb
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: f07f8eaa1dc5657c2dfdb296bc9efffec9b308b2
+ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584196"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697134"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>将复制的发布服务器数据库作为 Always On 可用性组的一部分管理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -99,6 +99,27 @@ ms.locfileid: "94584196"
     ```  
   
      此时，可保留或删除已发布的数据库的副本。  
+
+## <a name="remove-original-publisher"></a>删除原始发布服务器
+
+可能存在要从 Always On 可用性组中删除原始发布服务器的实例（替换旧服务器、OS 升级等）。 按照此部分中的步骤从可用性组中删除发布服务器。 
+
+假设你有服务器 N1、N2 和 D1，其中 N1 和 N2 是可用性组 AG1 的主副本和辅助副本，N1 是事务发布的原始发布服务器，而 D1 是分发服务器。 你希望将原始发布服务器 N1 替换为新发布服务器 N3。 
+
+若要删除发布服务器，请按照以下步骤操作： 
+
+1. 在节点 N3 中安装和配置 SQL Server。 SQL Server 版本必须与原始发布服务器相同。 
+1. 在分发服务器 D1 上，使用 [sp_adddistpublisher](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 将 N3 添加为发布服务器。 
+1. 将 N3 配置为将 D1 作为其分发服务器的发布服务器。 
+1. 将 N3 作为副本添加到可用性组 AG1。 
+1. 在 N3 副本上，验证发布的推送订阅服务器是否显示为链接服务器。 使用 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 或 SQL Server Management Studio。 
+1. 同步 N3 后，将可用性组作为主副本故障转移到 N3。 
+1. 从可用性组 AG1 中删除 N1。 
+
+请考虑以下要求：
+- 不要从分发服务器中删除原始发布服务器的远程服务器（本例为 N1）或与之关联的任何元数据，即使无法再访问该服务器也是如此。 在分发服务器上需要原始发布服务器的服务器元数据来满足发布元数据查询，如果没有，复制将失败。 
+- 对于 SQL Server 2014，在删除原始发布服务器后，你将不能使用原始发布服务器名称在复制监视器中管理复制。 如果尝试在复制监视器中将新副本注册为发布服务器，则不会显示信息，因为没有与之关联的元数据。 若要在此方案中管理复制，必须右键单击 SQL Server Management Studio (SSMS) 中的单个发布和订阅。
+- 对于 SQL Server 2016 SP2-CU3、SQL Server 2017 CU6 及更高版本，请在复制监视器中注册可用性组发布服务器的侦听器，以使用 SQL Server Management Studio 17.7 和更高版本管理复制。 
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   

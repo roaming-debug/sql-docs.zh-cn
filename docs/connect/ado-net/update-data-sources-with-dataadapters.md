@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 0be62b3c2a63f7b25889e25f88969aa5aaa9b50e
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 6f2feb876d0f232f4d7951de8ee1cc84587e6486
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772173"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771323"
 ---
 # <a name="update-data-sources-with-dataadapters"></a>通过 DataAdapter 更新数据源
 
@@ -75,7 +75,7 @@ ms.locfileid: "96772173"
 
 ## <a name="autoincrement-columns"></a>AutoIncrement 列
 
-如果数据源中的表具有自动递增列，则可以通过以下方式填充 `DataSet` 中的列：作为存储过程的输出参数返回自动递增值并将其映射到表中的一列、返回由存储过程或 SQL 语句返回的结果集第一行中的自动递增值或者使用 `RowUpdated` 的 `DataAdapter` 事件来执行其他 SELECT 语句。
+如果数据源中的表具有自动递增列，则可以通过以下方式填充 `DataSet` 中的列：作为存储过程的输出参数返回自动递增值并将其映射到表中的一列、返回由存储过程或 SQL 语句返回的结果集第一行中的自动递增值或者使用 `RowUpdated` 的 `DataAdapter` 事件来执行其他 SELECT 语句。 有关详细信息和示例，请参阅[检索标识或自动编号值](retrieve-identity-or-autonumber-values.md)。
 
 ## <a name="ordering-of-inserts-updates-and-deletes"></a>插入、更新和删除的顺序
 
@@ -172,4 +172,5 @@ GO
 ## <a name="see-also"></a>另请参阅
 
 - [DataAdapter 和 DataReader](dataadapters-datareaders.md)
+- [检索标识或自动编号值](retrieve-identity-or-autonumber-values.md)
 - [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

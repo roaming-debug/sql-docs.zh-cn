@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c632d83b092f5f68ce5bbca32d4315821252603c
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e6c50bf7255dc77edfd0b93e03dedeec83ed4c4d
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772174"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771497"
 ---
 # <a name="populate-a-dataset-from-a-dataadapter"></a>从 DataAdapter 填充 DataSet
 
@@ -52,13 +52,13 @@ ADO.NET <xref:System.Data.DataSet> 是数据常驻内存的表示形式，可提
 
 如果 `DataAdapter` 遇到多个结果集，则将在 `DataSet`中创建多个表。 这些表的命名方式为默认名称 Table 加上 *N*，N 从 0 开始递增，如以 Table0 为第一个表名，依次类推。 如果以参数形式向 `Fill` 方法传递表名，则这些表的命名方式为默认名称 TableName 加上 *N*，N 从 0 开始递增，如以 TableName0 为第一个表名，依次类推。  
   
-## <a name="populating-a-dataset-from-multiple-dataadapters"></a>从多个 DataAdapter 填充 DataSet  
+## <a name="populate-a-dataset-from-multiple-dataadapters"></a>从多个 DataAdapter 填充 DataSet  
 
- 一个 `DataSet` 可以与任意数量的 `DataAdapter` 对象一起使用。 每个 `DataAdapter` 都可用于填充一个或多个 `DataTable` 对象并将更新解析回相关数据源。 `DataRelation` 和 `Constraint` 对象可以在本地添加到 `DataSet` ，这样您就可以关联来自不同数据源的数据。 例如， `DataSet` 可以包含来自 Microsoft SQL Server 数据库、通过 OLE DB 公开的 IBM DB2 数据库以及对 XML 进行流处理的数据源的数据。 一个或多个 `DataAdapter` 对象可以处理与每个数据源的通信。  
+一个 `DataSet` 可以与任意数量的 `DataAdapter` 对象一起使用。 每个 `DataAdapter` 都可用于填充一个或多个 `DataTable` 对象并将更新解析回相关数据源。 `DataRelation` 和 `Constraint` 对象可以在本地添加到 `DataSet` ，这样您就可以关联来自不同数据源的数据。 例如， `DataSet` 可以包含来自 Microsoft SQL Server 数据库、通过 OLE DB 公开的 IBM DB2 数据库以及对 XML 进行流处理的数据源的数据。 一个或多个 `DataAdapter` 对象可以处理与每个数据源的通信。  
   
 ### <a name="example"></a>示例  
 
- 以下代码示例从 Microsoft SQL Server 上的 `Northwind` 数据库填充客户列表，从存储在 Microsoft Access 2000 上的 `Northwind` 数据库填充订单列表。 已填充的表通过 `DataRelation`相关联，这样，客户列表将与相应客户的订单一起显示出来。
+以下代码示例从 Microsoft SQL Server 上的 `Northwind` 数据库填充客户列表，从存储在 Microsoft Access 上的 `Northwind` 数据库填充订单列表。 已填充的表通过 `DataRelation`相关联，这样，客户列表将与相应客户的订单一起显示出来。
 
 [!code-csharp[SqlDataAdapter_FillDataSet#2](~/../sqlclient/doc/samples/SqlDataAdapter_FillDataSet.cs#2)]
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c3cf3766ffc6c8acf6025b58aa0adbaafafa2188
-ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
+ms.openlocfilehash: 4275b7de0f31d03aa36ef31d8801fcdc0e9ec853
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97038955"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771531"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中检索和修改数据
 
@@ -42,9 +42,35 @@ ms.locfileid: "97038955"
 [DataAdapter 和 DataReader](dataadapters-datareaders.md)  
 包含说明 DataReader、DataAdapter、参数、处理 DataAdapter 事件和执行批操作的主题。
 
-[事务和并发](transactions-and-concurrency.md) 包含描述如何执行本地事务、分布式事务和使用乐观并发的主题。
+[事务和并发性](transactions-and-concurrency.md)  
+包含说明如何执行本地事务、分布式事务及使用开放式并发的主题。
 
-[检索数据库架构信息](retrieving-database-schema-information.md) 描述如何获取数据库中可用的数据库或目录、表和视图、对于表存在的约束以及数据源中的其他架构信息。
+[检索数据库架构信息](retrieving-database-schema-information.md)  
+说明如何获取可用数据库或编录、数据库中的表和视图、表存在的约束以及数据源中的其他架构信息。
+
+[DbProviderFactories](dbproviderfactories.md)  
+描述提供程序工厂模型及说明如何在 `System.Data.Common` 命名空间中使用基类。  
+
+[检索标识或自动编号值](retrieve-identity-or-autonumber-values.md)  
+提供一个示例，该示例将为 SQL Server 表中的“标识”列生成的值映射到表中插入行的某一列。 讨论在 `DataTable` 中合并标识值。  
+  
+[检索二进制数据](retrieve-binary-data.md)  
+说明如何使用 `CommandBehavior`.`SequentialAccess` 检索二进制数据或大数据结构 以修改 `DataReader` 的默认行为。  
+  
+[使用存储过程修改数据](modify-data-with-stored-procedures.md)  
+说明如何使用存储过程的输入参数和输出参数在数据库中插入行，同时返回新标识值。  
+
+[SqlClient 中的数据跟踪](data-tracing.md)  
+介绍用于 SQL Server 的 Microsoft SqlClient 数据提供程序如何提供内置数据跟踪功能。  
+  
+[SqlClient 中的性能计数器](performance-counters.md)  
+介绍适用于 SQL Server 的 Microsoft SqlClient 数据提供程序的性能计数器。  
+  
+[异步编程](asynchronous-programming.md)  
+介绍用于 SQL Server 的 Microsoft SqlClient 数据提供程序对异步编程的支持。  
+  
+[SqlClient 流式处理支持](sqlclient-streaming-support.md)  
+讨论如何编写在不将其完全加载到内存的情况下从 SQL Server 流式处理数据的应用程序。  
 
 ## <a name="see-also"></a>请参阅
 

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: d72660a55fa047864148c90ae4087782302adc22
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 90985f155392a78da408ffbda3e1d2c0b12d4648
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772170"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771599"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 参数
 
@@ -75,5 +75,6 @@ UPDATE Customers SET CompanyName = @CompanyName
 - [DataAdapter 和 DataReader](dataadapters-datareaders.md)
 - [命令和参数](commands-parameters.md)
 - [通过 DataAdapter 更新数据源](update-data-sources-with-dataadapters.md)
+- [使用存储过程修改数据](modify-data-with-stored-procedures.md)
 - [ADO.NET 中的数据类型映射](data-type-mappings-ado-net.md)
 - [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/27/2020
-ms.openlocfilehash: 4569c61552a03e928d01e47940ae02e7fee9dcec
-ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
+ms.date: 12/17/2020
+ms.openlocfilehash: 346e964b30f76bf79c20d6f348636a626a8beee2
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96523078"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642366"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -26,9 +26,89 @@ ms.locfileid: "96523078"
 
 ## <a name="current-ssms-release"></a>当前 SSMS 版本
 
+### <a name="188"></a>18.8
+
+![下载](media/download-icon.png) [下载 SSMS 18.8](download-sql-server-management-studio-ssms.md)
+
+- 版本号：18.8
+- 生成号：15.0.18369.0
+- 发行日期：2020 年 12 月 17 日
+
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40a)
+
+SSMS 18.8 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早期版本，请参阅 [SSMS 的早期版本](release-notes-ssms.md#previous-ssms-releases)。
+
+#### <a name="whats-new-in-188"></a>18.8 中的新增功能
+
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+
+| 新建项 | 详细信息 |
+|----------|---------|
+| Azure Data Studio 安装集成 | 安装 SSMS 会安装 Azure Data Studio 1.25.1。 |
+| Analysis Services | 添加了对 Power BI Premium Gen2 工作区的支持。 |
+| 审核 | 添加了对 EXTERNAL_MONITOR 和“operator audit”的支持。  有关详细信息，请参阅配置[文档](https://docs.microsoft.com/azure/azure-sql/managed-instance/auditing-configure)。 |
+| Integration Services | 改进了 IR 创建向导，以便在创建 SSIS IR 时可以根据需要创建 SSISDB |
+
+#### <a name="bug-fixes-in-188"></a>18.8 中的 bug 修复
+
+| 新项 | 详细信息 |
+|----------|---------|
+| 可访问性 | 修复了影响 ProgressReport 对话框中的讲述人的问题 |
+| 活动监视器 | 修复了“耗费大量资源的活动查询”网格中的“编辑查询文本”上下文菜单不起作用的问题 |
+| Always Encrypted | 修复了 SSMS 可能引发运行时错误的问题（“找不到类”） |
+| 高 DPI/缩放 | 改进了 ProgressReport 对话框的 4k 显示 |
+| 高 DPI/缩放 | 修复了 Integration Services 中的“新建计划 - 包”窗体中的问题 |
+| 常规 SSMS |  修复了在尝试显示某个标识种子或标识增量超出了 bigint 大小的列的属性时，SSMS 可能会引发错误的问题。
+| 常规 SSMS | 修复了 SSMS 中由于菜单项“项目导出模板…”而导致的崩溃，该菜单项不应该显示 |
+| 常规 SSMS | 修复了枚举文件夹中的备份时可能导致 SSMS 崩溃的问题 |
+| 常规 SSMS | 缓解了显示查询结果时导致 SSMS 泄漏句柄和内存的问题 |
+| 常规 SSMS | 修复了用户无法为特定类型（SQL 2014 和更高版本上的 UniqueIdentifier、SQL 2017 和更高版本上的 VarCharMax/NVarCharMax/VarBinaryMax）的列创建聚集列存储索引的问题 |
+| 常规 SSMS | 修复了在“结果网格”中重新排序 XML 列不起作用这一长期悬而未决的问题。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/32890930) |
+| 常规 SSMS | 修复了 SSMS 错误地显示有关“具有内存优化对象的数据库不支持更改跟踪”的警告的问题 |
+| 生成脚本向导 | 修复了 SQL Server 2014 及更早版本上数据库对象枚举遭抑制的问题。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)。 |
+| 复制工具 | 修复了 SQL 复制监视器没有执行自动连接设置，从而强制用户每次手动重新连接的问题。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/40394743) |
+| SMO/脚本 | 修复了尝试在 SQL Azure DB 中对加密视图使用“生成脚本...”时遇到的问题 |
+| XEvent UI | 修复了从其他应用程序切换到 SSMS 时可能导致 SSMS 崩溃的问题。 |
+| XEvent UI | 还原了 18.7 中由于附加引号而导致 XEvent 创建出现 bug 的改进。 此更改是暂时的，并且在后续版本中会恢复改进，而不会引发 bug。 |
+
+#### <a name="known-issues-188"></a>已知问题 (18.8)
+
+| 新项 | 详细信息 | 解决方法 |
+|----------|---------|------------|
+| Analysis Services | 通过 msmdpump.dll 连接到 SSAS 时出错。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696)。 | 空值 |
+| Analysis Services | 在极少数情况下，如果在使用升级设置升级 SSMS 后尝试打开 DAX 编辑器，则会看到“对象未设置为对象实例”错误。 | 卸载并重新安装 SQL Server Management Studio。  如果重新安装后未解决问题，请关闭所有 SSMS 实例、备份，然后删除 `%AppData%\Microsoft\SQL Server Management Studio` 和 `%LocalAppData%\Microsoft\SQL Server Management Studio`。 |
+| 常规 SSMS | “新建服务器审核规范”对话框可能会导致 SSMS 发生故障，并显示访问冲突错误。 | 空值 |
+| 常规 SSMS | 应将使用 SMO 的 SSMS 扩展重新编译为面向新的特定于 SSMS 的 SMO v161 包。 可在 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 找到预览版本 </br></br> 针对以前 160 个版本的 Microsoft.SqlServer.SqlManagementObjects 包编译的扩展仍起作用。 | 空值 |
+| Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 | 删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 |
+| Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 | 在“Computer\HKEY_CLASSES_ROOT\AppID”和“Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下识别与 Integration Services 相关的注册表位置，并在这些配置单元中，将名为“LocalService”的注册表项重命名为“LocalService_A”，以用于我们尝试连接的特定版本的 Integration Services |
+
+
+可参考 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server)了解其他已知问题，并向产品团队提供反馈。
+
+## <a name="previous-ssms-releases"></a>SSMS 的早期版本
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
+
+通过选择相关部分中的下载链接下载以前的 SSMS 版本。
+
+| SSMS 版本 | 生成号 | 发布日期 |
+|--------------|--------------|--------------|
+| [18.7.1](#1871) | 15.0.18358.0 | 2020 年 10 月 27 日 |
+| [18.7](#187) | 15.0.18357.0 | 2020 年 10 月 20 日 |
+| [18.6](#186) | 15.0.18338.0 | 2020 年 7 月 22 日 |
+| [18.5.1](#1851) | 15.0.18333.0 | 2020 年 6 月 9 日 |
+| [18.5](#185) | 15.0.18330.0 | 2020 年 4 月 7 日 |
+| [18.4](#184) | 15.0.18206.0 | 2019 年 11 月 4 日 |
+| [18.3.1](#1831) | 15.0.18183.0 | 2019 年 10 月 2日 |
+| [18.2](#182) | 15.0.18142.0 | 2019 年 7 月 25 日 |
+| [18.1](#181) | 15.0.18131.0 | 2019 年 6 月 11 日 |
+| [18.0](#180) | 15.0.18118.0 | 2019 年 4 月 24 日 |
+| [17.9.1](#1791) | 14.0.17289.0 | 2018 年 11 月 21 日 |
+| [16.5.3](#1653) | 13.0.16106.4 | 2017 年 1 月 30 日 |
+
 ### <a name="1871"></a>18.7.1
 
-![下载](media/download-icon.png) [下载 SSMS 18.7](download-sql-server-management-studio-ssms.md)
+![下载](media/download-icon.png) [下载 SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2147207)
 
 - 版本号：18.7.1
 - 生成号：15.0.18358.0
@@ -64,31 +144,9 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 | 在“Computer\HKEY_CLASSES_ROOT\AppID”和“Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下识别与 Integration Services 相关的注册表位置，并在这些配置单元中，将名为“LocalService”的注册表项重命名为“LocalService_A”，以用于我们尝试连接的特定版本的 Integration Services |
 | “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 无服务器 SQL 池](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相关的更改，因此低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 无服务器 SQL 池结合使用，需要使用 SSMS 18.7 或更高版本。 |
 
-可参考 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server)了解其他已知问题，并向产品团队提供反馈。
-
-## <a name="previous-ssms-releases"></a>SSMS 的早期版本
-
-[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
-
-通过选择相关部分中的下载链接下载以前的 SSMS 版本。
-
-| SSMS 版本 | 生成号 | 发布日期 |
-|--------------|--------------|--------------|
-| [18.7](#187) | 15.0.18357.0 | 2020 年 10 月 20 日 |
-| [18.6](#186) | 15.0.18338.0 | 2020 年 7 月 22 日 |
-| [18.5.1](#1851) | 15.0.18333.0 | 2020 年 6 月 9 日 |
-| [18.5](#185) | 15.0.18330.0 | 2020 年 4 月 7 日 |
-| [18.4](#184) | 15.0.18206.0 | 2019 年 11 月 4 日 |
-| [18.3.1](#1831) | 15.0.18183.0 | 2019 年 10 月 2日 |
-| [18.2](#182) | 15.0.18142.0 | 2019 年 7 月 25 日 |
-| [18.1](#181) | 15.0.18131.0 | 2019 年 6 月 11 日 |
-| [18.0](#180) | 15.0.18118.0 | 2019 年 4 月 24 日 |
-| [17.9.1](#1791) | 14.0.17289.0 | 2018 年 11 月 21 日 |
-| [16.5.3](#1653) | 13.0.16106.4 | 2017 年 1 月 30 日 |
-
 ### <a name="187"></a>18.7
 
-![下载](media/download-icon.png) [下载 SSMS 18.7](download-sql-server-management-studio-ssms.md)
+![下载](media/download-icon.png) [下载 SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2146265)
 
 - 版本号：18.7
 - 生成号：15.0.18357.0

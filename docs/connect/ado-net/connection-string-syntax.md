@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: f61b867b70825595a012b2167d2c63b13409a8e2
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 42b1f8704be721c0b52b3c42946c9abbf7efd7db
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442814"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771618"
 ---
 # <a name="connection-string-syntax"></a>连接字符串语法
 
@@ -84,17 +84,17 @@ Windows 身份验证是用于连接到 SQL Server 的首选方法。 但是，�
 
 在生成连接字符串时，您还可以将 <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> 的 `SqlConnectionStringBuilder` 属性设置为实例名。 <xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> 对象的 <xref:Microsoft.Data.SqlClient.SqlConnection> 属性是只读的。
 
-### <a name="type-system-version-changes"></a>类型系统版本更改
+### <a name="type-system-version-changes"></a>Type system version 变更
 
 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 中的 `Type System Version` 关键字指定 SQL Server 类型的客户端表示形式。 有关 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 关键字的更多信息，请参见 `Type System Version`。
 
-## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>连接并附加到 SQL Server Express 用户实例
+## <a name="connect-and-attach-to-sql-server-express-user-instances"></a>连接并附加到 SQL Server Express 用户实例
 
 用户实例是 SQL Server Express 中的一个功能。 它们允许以最低权限的本地 Windows 帐户运行的用户附加并运行 SQL Server 数据库，而无需具有管理权限。 使用用户 Windows 凭据执行用户实例，而不是作为服务执行用户实例。
 
 有关使用用户实例的详细信息，请参阅 [SQL Server Express 用户实例](./sql/sql-server-express-user-instances.md)。
 
-## <a name="using-trustservercertificate"></a>使用 TrustServerCertificate
+## <a name="use-trustservercertificate"></a>使用 TrustServerCertificate
 
 `TrustServerCertificate` 关键字仅在连接到具有有效证书的 SQL Server 实例时有效。 将 `TrustServerCertificate` 设置为 `true` 时，传输层使用 TLS/SSL 将通道加密，并跳过遍历证书链以验证信任的过程。
 
@@ -105,7 +105,7 @@ Windows 身份验证是用于连接到 SQL Server 的首选方法。 但是，�
 > [!NOTE]
 > 如果 `TrustServerCertificate` 设置为 `true` 并已启动加密，将使用对服务器指定的加密级别，即使 `Encrypt` 在连接字符串中被设置为 `false`。 否则连接将会失败。
 
-### <a name="enabling-encryption"></a>启用加密
+### <a name="enable-encryption"></a>启用加密功能
 
 如果要在未向服务器预配证书的情况下启用加密，必须在 SQL Server 配置管理器中设置“强制协议加密”和“信任服务器证书”选项。 在这种情况下，如果服务器上未设置可验证的证书，加密将使用不带验证的自签名服务器证书。
 
@@ -129,3 +129,4 @@ Windows 身份验证是用于连接到 SQL Server 的首选方法。 但是，�
 
 - [连接字符串](connection-strings.md)
 - [连接到数据源](connecting-to-data-source.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

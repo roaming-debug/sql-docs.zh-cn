@@ -5,17 +5,17 @@ ms.custom: seodec18
 ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: df4daf119464ccf90c751f97daeea0379d8e8a21
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: b6335c43c179dfcdb94ecae98b829f3ff8bb50aa
+ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506341"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697103"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>配置 Always On 分布式可用性组  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -155,6 +155,10 @@ GO
 ## <a name="create-distributed-availability-group-on-first-cluster"></a>在第一个群集上创建分布式可用性组  
  在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、`ag1` 和 `ag2`。  
   
+# <a name="automatic-seeding"></a>[自动种子设定](#tab/automatic)
+
+若要使用自动种子设定创建分布式可用性组，请使用以下 Transact-SQL 代码： 
+
 ```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
    WITH (DISTRIBUTED)   
@@ -176,6 +180,35 @@ CREATE AVAILABILITY GROUP [distributedag]
 GO   
 ```  
   
+
+# <a name="manual-seeding"></a>[手动种子设定](#tab/manual)
+
+若要使用手动种子设定创建分布式可用性组，请使用以下 Transact-SQL 代码： 
+
+```sql
+CREATE AVAILABILITY GROUP [distributedag]  
+   WITH (DISTRIBUTED)   
+   AVAILABILITY GROUP ON  
+      'ag1' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL   
+      ),   
+      'ag2' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL   
+      );    
+GO   
+
+```
+
+---
+
 > [!NOTE]  
 >  **LISTENER_URL** 为每个可用性组指定了侦听程序与可用性组的数据库镜像端点。 在此示例中，为端口 `5022` （不是用于创建侦听程序的端口 `60173` ）。 如果使用的是负载均衡器，对于 Azure 中的实例，请[向分布式可用性组端口添加负载均衡规则](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 向侦听器端口添加规则，除了 SQL Server 实例端口。 
 
@@ -196,6 +229,10 @@ ALTER AVAILABILITY GROUP [distributedag]
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>在第二个群集上联接分布式可用性组  
  然后，在第二个 WSFC 上联接分布式可用性组。  
   
+# <a name="automatic-seeding"></a>[自动种子设定](#tab/automatic)
+
+若要使用自动种子设定联接分布式可用性组，请使用以下 Transact-SQL 代码： 
+
 ```sql  
 ALTER AVAILABILITY GROUP [distributedag]   
    JOIN   
@@ -216,6 +253,61 @@ ALTER AVAILABILITY GROUP [distributedag]
       );    
 GO  
 ```  
+
+
+
+# <a name="manual-seeding"></a>[手动种子设定](#tab/manual)
+
+若要使用手动种子设定联接分布式可用性组，请使用以下 Transact-SQL 代码： 
+
+```sql
+ALTER AVAILABILITY GROUP [distributedag]   
+   JOIN   
+   AVAILABILITY GROUP ON  
+      'ag1' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL   
+      ),   
+      'ag2' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL  
+      );    
+GO  
+```
+
+如果使用手动种子设定在转发器上创建数据库，请从全局主数据库执行完整备份和事务日志备份，并使用 NONRECOVERY 选项将其还原到转发器。 例如：
+
+在全局主数据库上备份： 
+
+```sql
+BACKUP DATABASE [db1] 
+TO DISK = '<full backup location>' WITH FORMAT
+BACKUP LOG [db1] 
+TO DISK = '<log backup location>' WITH FORMAT
+```
+
+还原到转发器： 
+
+```sql
+RESTORE DATABASE [db1] 
+FROM DISK = '<full backup location>' WITH NORECOVERY
+RESTORE LOG [db1] FROM DISK = '<log backup location>' WITH NORECOVERY
+```
+
+之后，在转发器上运行以下内容
+
+```sql
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [distributedag]
+```
+
+---
+
 
 ## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a> 联接第二个可用性组的辅助数据库
 当第二个可用性组的次要副本上的数据库处于正在还原状态后，必须手动将它联接到可用性组。

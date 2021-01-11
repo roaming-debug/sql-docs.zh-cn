@@ -1,5 +1,5 @@
 ---
-title: 备份到 URL 的最佳做法和疑难解答
+title: 备份到 URL 的最佳做法和故障排除
 description: 了解 SQL Server 备份和还原到 Azure Blob 存储的最佳做法和故障排除提示。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
@@ -11,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4212c397c712351e951060032f6e7a2ece6a5c3f
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: dc7532aaead7b2257755f2db689c2cbbbd05d3c3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129033"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639046"
 ---
-# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>从 SQL Server 备份到 URL 的最佳做法和疑难解答
+# <a name="sql-server-back-up-to-url-best-practices-and-troubleshooting"></a>从 SQL Server 备份到 URL 的最佳做法和故障排除
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
@@ -52,86 +52,118 @@ ms.locfileid: "96129033"
 -   按照[管理备份](#managing-backups-mb1)部分的建议使用 `WITH COMPRESSION` 选项，在备份大型文件时这一点非常重要。  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>备份到 URL 或从 URL 还原故障排除  
- 以下内容提供了在备份到 Azure Blob 存储服务或从中还原时出现问题的一些快速解决方法。  
-  
- 要避免由于不支持的选项或限制导致的错误，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 一文，查看限制列表以及 BACKUP 和 RESTORE 命令的支持信息。  
-  
- **身份验证错误：**  
-  
--   `WITH CREDENTIAL` 是一个新选项，在备份到 Azure Blob 存储服务或从中还原时需要该选项。 与凭据有关的失败可能包括：  
-  
-     **BACKUP** 或 **RESTORE** 命令中指定的凭据不存在。 要避免此问题，如果备份语句中没有指定凭据，可以使用 T-SQL 语句来创建凭据。 以下是您可以使用的一个示例：  
-  
-    ```sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE credential_identity = 'mycredential')  
-    CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    , SECRET = '<storage access key>' ;  
-    ```  
-  
--   凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 db_backupoperator 且拥有“更改任意凭据”权限的登录帐户。  
-  
--   验证存储帐户名称和密钥值。 在凭据中存储的信息必须与你在备份和还原操作中使用的 Azure 存储帐户的属性值匹配。  
-  
- _ *备份错误/失败：* *  
-  
--   并行备份到同一 blob 导致一个备份失败，发生 **“初始化失败”** 错误。  
-  
--   如果使用的是页 Blob（例如 `BACKUP... TO URL... WITH CREDENTIAL`），请使用以下错误日志帮助解决备份错误：  
-  
-    -   设置跟踪标志 3051 以启用记录到具有以下格式的特定错误日志：  
-  
-        `BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log` 其中，`\<action>` 为以下值之一：  
-  
-        -   **DB**  
-        -   **FILELISTONLY**  
-        -   **LABELONLY**  
-        -   **HEADERONLY**  
-        -   **VERIFYONLY**  
-  
-    -   还可以查看 Windows 事件日志（位于应用程序日志之下，名为“`SQLBackupToUrl`”），查找相关信息。  
 
-    -   在备份大型数据库时，请考虑 COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE 和多个 URL 参数。  请参阅[将 VLDB 备份到 Azure Blob 存储](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage)
+以下内容提供了在备份到 Azure Blob 存储服务或从中还原时出现问题的一些快速解决方法。  
   
-        ```console
-        Msg 3202, Level 16, State 1, Line 1
-        Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
-        Msg 3013, Level 16, State 1, Line 1
-        BACKUP DATABASE is terminating abnormally.
-        ```
+要避免由于不支持的选项或限制导致的错误，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 一文，查看限制列表以及 BACKUP 和 RESTORE 命令的支持信息。  
 
-        ```sql  
-        BACKUP DATABASE TestDb
-        TO URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak',
-        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_1.bak',
-        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_2.bak'
-        WITH COMPRESSION, MAXTRANSFERSIZE = 4194304, BLOCKSIZE = 65536;  
-        ```  
+初始化失败 
 
--   从压缩备份中还原时，您可能看到以下错误：  
+并行备份到同一 blob 导致一个备份失败，发生 **“初始化失败”** 错误。 
+
+如果使用的是页 Blob（例如 `BACKUP... TO URL... WITH CREDENTIAL`），请使用以下错误日志帮助解决备份错误：  
   
-    -   `SqlException 3284 occurred. Severity: 16 State: 5  
-        Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.`  
+设置跟踪标志 3051 以启用记录到具有以下格式的特定错误日志：  
   
-        要解决此错误，请重新发布指定了 BLOCKSIZE = 65536 的 RESTORE 语句   。  
+`BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log` 其中，`\<action>` 为以下值之一：  
   
--   由于 blob 具有活动租约，备份期间出错：失败的备份活动可能导致 blob 产生活动租约。  
+-   **DB**  
+-   **FILELISTONLY**  
+-   **LABELONLY**  
+-   **HEADERONLY**  
+-   **VERIFYONLY**  
   
-     如果重新尝试执行备份语句，备份操作可能失败，出现类似于以下的错误：  
+还可以查看 Windows 事件日志（位于应用程序日志之下，名为“`SQLBackupToUrl`”），查找相关信息。  
+
+**由于出现 I/O 设备错误，因此无法执行该请求。**
+
+在备份大型数据库时，请考虑 COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE 和多个 URL 参数。  请参阅[将 VLDB 备份到 Azure Blob 存储](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage)
+
+错误： 
+
+```console
+Msg 3202, Level 16, State 1, Line 1
+Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 
+1117(The request could not be performed because of an I/O device error.)
+Msg 3013, Level 16, State 1, Line 1
+BACKUP DATABASE is terminating abnormally.
+```
+
+示例解析： 
+
+```sql  
+BACKUP DATABASE TestDb
+TO URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak',
+URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_1.bak',
+URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_2.bak'
+WITH COMPRESSION, MAXTRANSFERSIZE = 4194304, BLOCKSIZE = 65536;  
+```  
+
+设备上的消息文件标记未对齐。
+
+从压缩备份中还原时，您可能看到以下错误：  
   
-     `Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request.`  
+```
+SqlException 3284 occurred. Severity: 16 State: 5  
+Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.
+Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.  
+```
   
-     如果尝试对具有活动租约的备份 blob 文件执行还原语句，则还原操作失败，出现类似于以下的错误：  
+要解决此错误，请重新发布指定了 BLOCKSIZE = 65536 的 RESTORE 语句   。  
   
-     `Exception Message: The remote server returned an error: (409) Conflict..`  
+**失败的备份活动可能导致 blob 产生活动租约。**
+
+由于 blob 具有活动租约，备份期间出错：`Failed backup activity can result in blobs with active leases.`  
+
+如果重新尝试执行备份语句，备份操作可能失败，出现类似于以下的错误：  
+
+```
+Backup to URL received an exception from the remote endpoint. Exception Message: 
+The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request. 
+```
+
+如果尝试对具有活动租约的备份 blob 文件执行还原语句，则还原操作失败，出现类似于以下的错误：  
   
-     发生这种错误时，需要删除 blob 文件。 有关此情形和如何解决此问题的详细信息，请参阅 [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
+`Exception Message: The remote server returned an error: (409) Conflict..`  
+  
+发生这种错误时，需要删除 blob 文件。 有关此情形和如何解决此问题的详细信息，请参阅 [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
+
+操作系统错误 50：不支持该请求
+ 
+备份数据库时，可能会由于以下原因而出现错误 `Operating system error 50(The request is not supported)`： 
+
+   - 指定的存储帐户不是常规用途 V1/V2。
+   - SAS 令牌超过 128 个字符。
+   - 创建凭据时，SAS 令牌的令牌开头有一个 `?` 符号。 如果是，请删除它。
+   - 当前连接无法使用存储资源管理器或 SQL Server Management Studio (SSMS) 从当前计算机连接到存储帐户。 
+   - 分配给 SAS 令牌的策略已过期。 使用 Azure 存储资源管理器创建新策略，并使用该策略创建新的 SAS 令牌，或者更改凭据并再次尝试备份。 
+
+**身份验证错误**
+  
+`WITH CREDENTIAL` 是一个新选项，在备份到 Azure Blob 存储服务或从中还原时需要该选项。
+
+与凭据有关的失败可能包括：`The credential specified in the **BACKUP** or **RESTORE** command does not exist. `
+
+要避免此问题，如果备份语句中没有指定凭据，可以使用 T-SQL 语句来创建凭据。 以下是您可以使用的一个示例：  
+
+  
+```sql  
+IF NOT EXISTS  
+(SELECT * FROM sys.credentials   
+WHERE credential_identity = 'mycredential')  
+CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
+, SECRET = '<storage access key>' ;  
+```  
+  
+凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 db_backupoperator 且拥有“更改任意凭据”权限的登录帐户。  
+  
+验证存储帐户名称和密钥值。 在凭据中存储的信息必须与你在备份和还原操作中使用的 Azure 存储帐户的属性值匹配。  
+  
   
 ## <a name="proxy-errors"></a>代理错误  
  如果您使用代理服务器访问 Internet，可能会发现以下问题：  
   
- **代理服务器限制连接：**  
+ _代理服务器连接限制*  
   
  代理服务器可能具有限制每分钟连接次数的设置。 “备份到 URL”进程是一个多线程进程，因此可能超过此限制。 如果出现此情况，代理服务器将终止连接。 若要解决此问题，请更改代理设置，使 SQL Server 不使用该代理。 下面是一些您可能在错误日志中看到的类型或错误消息的示例：  
   

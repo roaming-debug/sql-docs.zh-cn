@@ -1,7 +1,7 @@
 ---
 title: 导出到 Microsoft Excel（报表生成器）| Microsoft Docs
 description: 在报表生成器中，Excel 呈现扩展插件将分页报表呈现为 Office Open XML 格式，以用于 Microsoft Excel。
-ms.date: 01/09/2017
+ms.date: 12/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 865caa0938aa89feacbb5e330eb38f292039446c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4e8b43d3e9e772b06961602bf2d8bd69aa51216e
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342895"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878850"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>导出到 Microsoft Excel（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 呈现扩展插件将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表呈现为 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 呈现扩展插件，Excel 中的列宽度更精确地反映了报表中的列宽度。  
@@ -26,7 +26,7 @@ ms.locfileid: "80342895"
  有关如何导出到 Excel 的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
   
 > [!IMPORTANT]  
->  定义 **String**类型的参数时，系统将向用户显示一个可以使用任何值的文本框。 如果报表参数未与查询参数关联，并且参数值包含在报表中，则报表用户可以在参数值中键入表达式语法、脚本或 URL，并将报表呈现为 Excel 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
+>  定义 **String** 类型的参数时，系统将向用户显示一个可以使用任何值的文本框。 如果报表参数未与查询参数关联，并且参数值包含在报表中，则报表用户可以在参数值中键入表达式语法、脚本或 URL，并将报表呈现为 Excel 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
 >   
 >  若要降低无意中运行恶意脚本的风险，请仅从可信来源打开呈现的报表。 有关保护报表的详细信息，请参阅 [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "80342895"
   
 -   如果控制另一个报表项是否切换的报表项不是位于要切换的报表项的上一或下一行/列，则还会禁用大纲功能。  
   
- 有关 Excel 限制的详细信息，请参阅 [Excel 规范和限制](https://support.office.com/article/Excel-specifications-and-limits-CA36E2DC-1F09-4620-B726-67C00B05040F)。  
+ 有关 Excel 限制的详细信息，请参阅 [Excel 规范和限制](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3)。  
   
 ### <a name="sizes-of-excel-2003-xls-files"></a>Excel 2003 (.xls) 文件的大小  
   
@@ -249,7 +249,7 @@ ms.locfileid: "80342895"
   
  文档结构图大纲呈现为可折叠的 Excel 大纲。 大纲结构与文档结构图的嵌套结构相匹配。 大纲的扩展和折叠状态从第二级开始。  
   
- 结构图的根节点是报表名称 \<reportname>.rdl，它是不可交互的  。 文档结构图链接字体是宋体 (10pt)。  
+ 结构图的根节点是报表名称 \<*reportname*>.rdl，它是不可交互的。 文档结构图链接字体是宋体 (10pt)。  
   
 ### <a name="drillthrough-links"></a>钻取链接  
  文本框中出现的钻取链接在用于呈现文本的单元格中呈现为 Excel 超链接。 图像和图表的钻取链接在呈现的图像上呈现为 Excel 超链接。 单击钻取链接时，将打开客户端的默认浏览器并导航到目标的 HTML 视图。  

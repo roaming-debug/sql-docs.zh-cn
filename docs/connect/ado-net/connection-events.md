@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 67b805e4ec95047b843e6b72ba10dc8fee4688d5
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 8151915dc6c16c6225fec9ab90cb5a88e86b992f
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419818"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771435"
 ---
 # <a name="connection-events"></a>连接事件
 
@@ -32,7 +32,7 @@ Microsoft SqlClient Data Provider for SQL Server 中的 Connection 对象有两�
 |**InfoMessage**|当从数据源中返回信息性消息时发生。 信息性消息是数据源中不会引发异常的消息。|  
 |**StateChange**|当 Connection 的状态更改时发生。|  
 
-## <a name="working-with-the-infomessage-event"></a>使用 InfoMessage 事件
+## <a name="work-with-the-infomessage-event"></a>使用 InfoMessage 事件
 
 您可以使用 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 对象的 <xref:Microsoft.Data.SqlClient.SqlConnection> 事件从 SQL Server 数据源中检索警告和信息性消息。 从数据源返回的严重程度为 11 到 16 的错误将引发异常。 但是，<xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 事件可用于从数据源中获取与错误无关联的消息。 对于 Microsoft SQL Server，任何严重程度等于或小于 10 的错误都将被视为信息性消息，将使用 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 事件来捕获。 有关详细信息，请参阅[数据库引擎错误严重性](/sql/relational-databases/errors-events/database-engine-error-severities)一文。
 
@@ -44,7 +44,7 @@ Microsoft SqlClient Data Provider for SQL Server 中的 Connection 对象有两�
 
 [!code-csharp[SqlConnection_._InfoMessage#1](~/../sqlclient/doc/samples/SqlConnection_InfoMessage_StateChange.cs#1)]
 
-## <a name="handling-errors-as-infomessages"></a>将错误作为信息性消息处理
+## <a name="handle-errors-as-infomessages"></a>以 InfoMessages 形式处理错误
 
 通常，只有从服务器发出的信息性消息和警告消息才会触发 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 事件。 但是，真正的错误发生时，启动服务器操作的 ExecuteNonQuery 或 ExecuteReader 方法将暂停执行，并引发异常。
 
@@ -53,7 +53,7 @@ Microsoft SqlClient Data Provider for SQL Server 中的 Connection 对象有两�
 > [!NOTE]
 > 严重程度等于或大于 17 的错误会造成服务器停止处理命令，这种错误必须作为异常来处理。 在这种情况下，无论如何在 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 事件中处理该错误，都会引发异常。
 
-## <a name="working-with-the-statechange-event"></a>使用 StateChange 事件
+## <a name="work-with-the-statechange-event"></a>使用 StateChange 事件
 
 StateChange 事件在 Connection 的状态更改时发生。 StateChange 事件接收 <xref:System.Data.StateChangeEventArgs>，使你能够使用 OriginalState 和 CurrentState 属性来确定 Connection 状态的更改。 OriginalState 属性是一个 <xref:System.Data.ConnectionState> 枚举，指示更改前的 Connection 状态。 CurrentState 是一个 <xref:System.Data.ConnectionState> 枚举，指示更改后的 Connection 状态。
 
@@ -64,3 +64,4 @@ StateChange 事件在 Connection 的状态更改时发生。 StateChange 事件�
 ## <a name="see-also"></a>另请参阅
 
 - [连接到数据源](connecting-to-data-source.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: 8f1e0ac5fc52576f0e47ccb8be4b8e90899c6e68
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563113"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771447"
 ---
 # <a name="connection-strings-and-configuration-files"></a>连接字符串和配置文件
 
@@ -27,11 +27,11 @@ ms.locfileid: "96563113"
 
 在应用程序代码中嵌入连接字符串可能导致安全漏洞和维护问题。 使用 [Ildasm.exe（IL 反汇编程序）](/dotnet/framework/tools/ildasm-exe-il-disassembler)工具可以查看编译到应用程序源代码中的未加密连接字符串。 此外，如果连接字符串发生更改，则必须重新编译应用程序。 因此，我们建议您将连接字符串存储在应用程序配置文件中。
 
-## <a name="working-with-application-configuration-files"></a>使用应用程序配置文件
+## <a name="work-with-application-configuration-files"></a>使用应用程序配置文件
 
 应用程序配置文件包含特定应用程序特有的设置。 例如，ASP.NET 应用程序能包含一个或多个 web.config 文件，Windows 应用程序可能包含一个可选 app.config 文件。 虽然配置文件的名称和位置会因应用程序宿主的不同而有所不同，但配置文件可以有相同的元素。
 
-### <a name="the-connectionstrings-section"></a>connectionStrings 节
+### <a name="the-connectionstrings-section"></a>connectionStrings 部分
 
 连接字符串可作为键/值对存储在应用程序配置文件 configuration 元素的 connectionStrings 节中。 子元素包括 add、clear 和 remove。
 
@@ -52,7 +52,7 @@ ms.locfileid: "96563113"
 > [!NOTE]
 > 您可以将连接字符串的一部分保存在配置文件中，并使用 <xref:System.Data.Common.DbConnectionStringBuilder> 类在运行时将该字符串补充完整。 如果您预先不知道连接字符串的元素，或者不希望将敏感信息保存到配置文件中，这一方法会很有用。 有关详细信息，请参阅[连接字符串生成器](connection-string-builders.md)。
 
-### <a name="using-external-configuration-files"></a>使用外部配置文件
+### <a name="use-external-configuration-files"></a>使用外部配置文件
 
 外部配置文件是单独的文件，此类文件包含由一部分组成的配置文件的片段。 外部配置文件由主配置文件引用。 如果在部署完应用程序后连接字符串可能会被编辑，那么将 connectionStrings 节存储在物理上独立的文件中会很有用。 例如，标准 ASP.NET 行为是在修改配置文件后重新启动应用程序域，这将导致状态信息丢失。 然而，修改外部配置文件不会导致重新启动应用程序。 外部配置文件并不局限于由 ASP.NET 使用，Windows 应用程序也可以使用。 此外，文件访问安全性和权限也可以用于限制对外部配置文件的访问。 运行时使用外部配置文件是透明的，且不需要特殊编码。
 
@@ -82,7 +82,7 @@ ms.locfileid: "96563113"
 > [!NOTE]
 > machine.config 文件还包含 connectionStrings 节，此节包含 Visual Studio 使用的连接字符串。 当按提供程序名称从 Windows 应用程序中的 app.config 文件检索连接字符串时，首先加载 machine.config 中的连接字符串，然后加载 app.config 中的项。在 connectionStrings 元素删除所有继承自内存中数据结构的引用后将立即添加 clear，以便只考虑在本地 app.config 文件中指定的连接字符串。
 
-### <a name="working-with-the-configuration-classes"></a>使用配置类
+### <a name="work-with-the-configuration-files"></a>使用配置文件
 
 从 .NET Framework 2.0 开始，当使用本地计算机上的配置文件时，将使用 <xref:System.Configuration.ConfigurationManager>，从而替换已不推荐使用的 <xref:System.Configuration.ConfigurationSettings>。 <xref:System.Web.Configuration.WebConfigurationManager> 与 ASP.NET 配置文件一起使用。 该管理器可以使用 Web 服务器上的配置文件，并允许以编程方式访问配置文件节（如 system.web）。
 
@@ -118,7 +118,7 @@ ms.locfileid: "96563113"
 
 [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](~/../SqlClient/doc/samples/ConnectionStringSettings_RetrieveFromConfigByProvider.cs#1)]
 
-## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>使用受保护配置加密配置文件节
+## <a name="encrypt-configuration-file-sections-using-protected-configuration"></a>使用受保护的配置来加密配置文件部分
 
 ASP.NET 2.0 引入了一个称为“受保护配置”的新功能，可以通过此功能来加密配置文件中的敏感信息。 虽然受保护配置主要是为 ASP.NET 应用程序设计的，但它也可以用于加密 Windows 应用程序中的配置文件节。 有关受保护配置功能的详细说明，请参阅[使用受保护的配置加密配置信息](/previous-versions/aspnet/53tyfkaw(v=vs.100))。
 
@@ -136,7 +136,7 @@ ASP.NET 2.0 引入了一个称为“受保护配置”的新功能，可以通�
 
 在运行时检索加密连接字符串时，.NET Framework 会使用指定的提供程序来解密 CipherValue 并将其提供给应用程序。 你无需额外编写任何代码来管理解密过程。
 
-### <a name="protected-configuration-providers"></a>受保护配置提供程序
+### <a name="protected-configuration-providers"></a>受保护的配置提供程序
 
 受保护配置提供程序是在本地计算机的 machine.config 文件的 configProtectedData 节中注册的（如下面的片段所示），此片段演示 .NET Framework 附带的两个受保护配置提供程序。 此处显示的值已被截断，以便于阅读。
 
@@ -160,7 +160,7 @@ ASP.NET 2.0 引入了一个称为“受保护配置”的新功能，可以通�
 
 这两种提供程序都可以对数据进行强加密。 但是，如果计划在多台服务器（如网络场）上使用相同的加密配置文件，则只有通过 <xref:System.Configuration.RsaProtectedConfigurationProvider> 才能导出用于加密数据的加密密钥，并将其导入其他服务器。 有关详细信息，请参阅[导入和导出受保护配置的 RSA 密钥容器](/previous-versions/aspnet/yxw286t2(v=vs.100))。
 
-### <a name="using-the-configuration-classes"></a>使用配置类
+### <a name="use-the-configuration-classes"></a>使用配置类
 
 <xref:System.Configuration> 命名空间提供以编程方式使用配置设置的类。 <xref:System.Configuration.ConfigurationManager> 类可提供对计算机、应用程序和用户配置文件的访问。 如果要创建 ASP.NET 应用程序，可以使用 <xref:System.Web.Configuration.WebConfigurationManager> 类，它可提供相同的功能，同时还允许访问 ASP.NET 应用程序特有的设置（如 \<system.web> 中的设置）。
 
@@ -194,5 +194,6 @@ ASP.NET 2.0 引入了一个称为“受保护配置”的新功能，可以通�
 - [连接字符串生成器](connection-string-builders.md)
 - [保护连接信息](protecting-connection-information.md)
 - [使用配置类](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [配置应用程序](/dotnet/framework/configure-apps/index)
+- [配置应用](/dotnet/framework/configure-apps/index)
 - [ASP.NET 网站管理](/previous-versions/aspnet/6hy1xzbw(v=vs.100))
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

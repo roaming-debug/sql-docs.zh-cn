@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: c8f93191b689599a24ad960d316a02901de2e6e0
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584859"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643806"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>卸载对 AlwaysOn 可用性组的次要副本的只读工作负荷
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -162,7 +162,7 @@ ms.locfileid: "94584859"
   
  只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以创建和更新临时统计信息。 但是，您可以借助用于永久统计信息的相同工具来删除临时统计信息和监视其属性：  
   
--   使用 [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句删除临时统计信息。  
+-   使用 [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句删除临时统计信息。  
   
 -   使用 **sys.stats** 和 **sys.stats_columns** 目录视图监视统计信息。 **sys_stats** 包含一个 **is_temporary** 列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: e37d77304644d1adb50bb195dd32d4c4e1222c09
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 257ed7d43f8ab204c7c7e7575c69251be6f2efdf
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126366"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771617"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET 中的连接字符串
 
@@ -69,9 +69,9 @@ Keyword=a=b=c
 
 键入错误会导致错误。 例如，“`Integrated Security=true`”是有效的，而“`IntegratedSecurity=true`”则会导致出错。
 
-在运行时从未验证的用户手动输入构造的连接字符串易受字符串注入式攻击，从而危害数据源的安全。 为了解决这些问题，我们创建了[连接字符串生成器](connection-string-builders.md)。 此连接字符串生成器将参数作为强类型属性公开，并在连接字符串发送到数据源之前对其进行验证。
+在运行时从无效用户手动输入构造的连接字符串易受字符串注入式攻击，从而危害数据源的安全。 为了解决这些问题，创建了 <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> 类。 此[连接字符串生成器](connection-string-builders.md)类将参数作为强类型属性公开，并在连接字符串发送到数据源之前对其进行验证。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 [连接字符串生成器](connection-string-builders.md)\
 演示如何使用 `ConnectionStringBuilder` 类在运行时构造有效的连接字符串。
@@ -84,3 +84,7 @@ Keyword=a=b=c
 
 [保护连接信息](protecting-connection-information.md)\
 演示保护用于连接到数据源的信息的各项技术。
+
+## <a name="see-also"></a>另请参阅
+
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

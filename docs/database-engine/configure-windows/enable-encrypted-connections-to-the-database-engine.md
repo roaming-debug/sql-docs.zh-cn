@@ -1,6 +1,6 @@
 ---
 title: 启用加密连接 | Microsoft Docs
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 08/29/2019
 ms.prod: sql
 ms.prod_service: security
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: b18a3131329e0485221a0ae2cdaafd0726a4f31c
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670960"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878947"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
 
@@ -71,7 +71,7 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
  客户端必须能够验证服务器所用证书的所有权。 如果客户端具有对服务器证书进行签名的证书颁发机构所颁发的公钥证书，则不需要进一步的配置。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 包含多个证书颁发机构所颁发的公钥证书。 如果服务器证书由公共或私人证书颁发机构进行签名，而客户端没有该机构颁发的公钥证书，则必须安装对服务器证书进行签名的证书颁发机构所颁发的公钥证书。  
   
 > [!NOTE]  
-> 若要在故障转移群集中使用加密，必须在故障转移群集的所有节点上安装带有虚拟服务器的完全限定 DNS 名称的服务器证书。 例如，如果你有一个双节点群集，节点名称分别为 ***test1.\*\<your company>\*.com*** 和 ***test2.\*\<your company>\*.com***并且又拥有名为 ***virtsql*** 的虚拟服务器，你需要在两个节点上为 ***virtsql.\*\<your company>\*.com*** 安装证书。 可设置“SQL Server 网络配置”的“virtsql 的协议”属性框上的“ForceEncryption”选项，将其值设置为“是”   。
+> 若要在故障转移群集中使用加密，必须在故障转移群集的所有节点上安装带有虚拟服务器的完全限定 DNS 名称的服务器证书。 例如，如果你有一个双节点群集，节点名称分别为 _test1.\_\<your company>\*.com* 和 **_test2.\_\<your company>\*.com*** 并且又拥有名为 *virtsql_ 的虚拟服务器，你需要在两个节点上为 _ *_virtsql.\_\<your company>\*.com*** 安装证书。 可设置“SQL Server 网络配置”的“virtsql 的协议”属性框上的“ForceEncryption”选项，将其值设置为“是”   。
 
 > [!NOTE]
 > 在 Azure VM 上创建从 Azure 搜索索引器到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密连接时，请参阅 [在 Azure VM 上配置从 Azure 搜索索引器到 SQL Server 的连接](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers)。 

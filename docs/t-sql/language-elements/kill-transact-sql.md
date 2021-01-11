@@ -35,12 +35,12 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a42d01bead1a5d3882dcce0df67cda7785724b5e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 13afe3aa357bfd968874ae1f89bf0720c39fe49c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466148"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644448"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,8 @@ KILL 结束正常连接，这会在内部停止与指定会话 ID 关联的事�
 ```syntaxsql  
 -- Syntax for SQL Server  
   
-KILL { session ID | UOW } [ WITH STATUSONLY ]   
+KILL { session ID [ WITH STATUSONLY ] | UOW [ WITH STATUSONLY | COMMIT | ROLLBACK ] }    
+
 ```  
   
 ```syntaxsql  
@@ -69,26 +70,37 @@ KILL 'session_id'
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-session ID  
-要结束的进程的会话 ID。 session ID 是在建立连接时为每个用户连接分配的唯一整数 (int)。 在连接期间，会话 ID 值与该连接捆绑在一起。 连接结束时，则释放该整数值，并且可以将它重新分配给新的连接。  
+
+session ID   
+要结束的进程的会话 ID。 `session_id` 是在建立连接时为每个用户连接分配的唯一整数 (int)。 在连接期间，会话 ID 值与该连接捆绑在一起。 连接结束时，则释放该整数值，并且可以将它重新分配给新的连接。  
+
 以下查询可帮助确定想要终止的 `session_id`：  
+
  ```sql  
  SELECT conn.session_id, host_name, program_name,
      nt_domain, login_name, connect_time, last_request_end_time 
 FROM sys.dm_exec_sessions AS sess
 JOIN sys.dm_exec_connections AS conn
     ON sess.session_id = conn.session_id;
+
 ```  
+
+
+UOW   
+标识分布式事务的工作单元 ID (UOW)。 UOW 是可以从 `sys.dm_tran_locks` 动态管理视图的 request_owner_guid 列获取的 GUID。 也可以从错误日志中或通过 MS DTC 监视器获取 UOW。 有关监视分布式事务的详细信息，请参阅 MS DTC 文档。  
   
-UOW  
-**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
-  
-标识分布式事务的工作单元 ID (UOW)。 UOW 是可以从 sys.dm_tran_locks 动态管理视图的 request_owner_guid 列获取的 GUID。 也可以从错误日志中或通过 MS DTC 监视器获取 UOW。 有关监视分布式事务的详细信息，请参阅 MS DTC 文档。  
-  
-使用 KILL UOW 可停止孤立的分布式事务。 这些事务不与任何实际会话 ID 相关联，但与会话 ID =“-2”虚拟关联。 可使标识孤立事务变得更为简单，其方法是查询 sys.dm_tran_locks、sys.dm_exec_sessions 或 sys.dm_exec_requests 动态管理视图中的会话 ID 列。  
-  
-WITH STATUSONLY  
-生成由于更早的 KILL 语句而正在回滚的指定会话 ID 或 UOW 的进度报告。 KILL WITH STATUSONLY 不结束或回滚会话 ID 或 UOW。 此命令只显示当前回滚进度。  
+使用 KILL \<UOW> 可停止未解析的分布式事务。 这些事务不与任何实际会话 ID 相关联，但与会话 ID =“-2”虚拟关联。 此会话 ID 可使标识未解析的事务变得更为简单，其方法是查询 `sys.dm_tran_locks`、` sys.dm_exec_sessions` 或 `sys.dm_exec_requests` 动态管理视图中的会话 ID 列。  
+
+WITH STATUSONLY   
+用于生成由于更早的 KILL 语句而正在回滚的指定 UOW 或 `session_id` 的进度报告。 KILL WITH STATUSONLY 不结束或回滚 UOW 或会话 ID。 此命令只显示当前回滚进度。
+
+WITH COMMIT   
+用于通过提交终止未解析的分布式事务。 仅适用于分布式事务，必须指定 UOW 才能使用此选项。  有关详细信息，请参阅[分布式事务](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions)。
+
+WITH ROLLBACK   
+用于使用回滚终止未解析的分布式事务。 仅适用于分布式事务，必须指定 UOW 才能使用此选项。  有关详细信息，请参阅[分布式事务](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions)。
+
+
   
 ## <a name="remarks"></a>备注  
 KILL 常用于结束使用锁来阻止其他重要进程的进程。 KILL 还可用于停止执行使用必要系统资源的查询的进程。 无法结束系统进程和运行扩展存储过程的进程。  

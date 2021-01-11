@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: b1427fa78e52c985478996bfb41cb7a20e1ee608
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 772ecef470b69a34e4bd4b0eba2ca60255657eaf
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428183"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771419"
 ---
 # <a name="executing-a-command"></a>执行命令
 
@@ -34,7 +34,7 @@ Microsoft SqlClient Data Provider for SQL Server 具有从 <xref:System.Data.Com
 |`ExecuteNonQuery`|执行不返回任何行的命令。|  
 |`ExecuteXMLReader`|返回 <xref:System.Xml.XmlReader>。 只用于 `SqlCommand` 对象。|
 
- 每个强类型命令对象还支持指定如何解释命令字符串的 <xref:System.Data.CommandType> 枚举，如下表所述。
+每个强类型命令对象还支持指定如何解释命令字符串的 <xref:System.Data.CommandType> 枚举，如下表所述。
 
 |CommandType|描述|
 |-----------------|-----------------|  
@@ -55,8 +55,10 @@ Microsoft SqlClient Data Provider for SQL Server 具有从 <xref:System.Data.Com
 
 [!INCLUDE[appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
 
-Microsoft SqlClient Data Provider for SQL Server 添加了性能计数器，使你能够检测与命令执行失败相关的间歇性问题。
+Microsoft SqlClient Data Provider for SQL Server 添加了性能计数器，使你能够检测与命令执行失败相关的间歇性问题。 有关详细信息，请参阅 [SqlClient 中的性能计时器](performance-counters.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - [命令和参数](commands-parameters.md)
+- [DataAdapter 和 DataReader](dataadapters-datareaders.md)
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)

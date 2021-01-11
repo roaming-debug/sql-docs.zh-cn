@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 146063d665b89a8541c34d9cc3b0b6da3939d801
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: 1d170d712269bf169d069ef7b93f975de855f8ec
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563093"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771399"
 ---
 # <a name="protecting-connection-information"></a>保护连接信息
 
@@ -27,7 +27,7 @@ ms.locfileid: "96563093"
 
 根据以下因素可能会出现与连接字符串有关的安全漏洞：所使用的身份验证类型，连接字符串持久地位于内存和磁盘中的方式，以及在运行时构造连接字符串所采用的技术。
 
-## <a name="use-windows-authentication"></a>Use Windows Authentication
+## <a name="use-windows-authentication"></a>使用 Windows 身份验证
 
 为了帮助限制对数据源的访问，必须保护诸如用户 ID、密码和数据源名称等连接信息的安全。 为避免公开用户信息，建议尽可能使用 Windows 身份验证（有时也称为“集成安全性”）。 使用 `Integrated Security` 或 `Trusted_Connection` 关键字在连接字符串中指定 Windows 身份验证后，不必再使用用户 ID 和密码。 在使用 Windows 身份验证时，用户由 Windows 进行身份验证，通过对 Windows 用户和组授予权限来确定他们是否可访问服务器和数据库资源。
 
@@ -41,11 +41,11 @@ ms.locfileid: "96563093"
 
 固定标识帐户应是低权限帐户，仅被授予数据库中的必要权限。 此外，您还应该加密配置文件，从而使用户名和密码不会以明文形式公开。
 
-## <a name="avoid-injection-attacks-with-connection-string-builders"></a>利用连接字符串生成器避免注入攻击
+## <a name="avoid-injection-attacks-with-connection-string-builders"></a>利用连接字符串生成器避免注入式攻击
 
 当动态字符串串联根据用户输入的内容构建连接字符串时，会发生连接字符串注入攻击。 如果用户输入的内容未经验证，并且恶意文本或字符串未被转义，则攻击者可能会访问敏感数据或服务器上的其他资源。 为解决此问题，Microsoft SqlClient Data Provider for SQL Server 引入了新的连接字符串生成器类，以验证连接字符串语法并确保不引入其他参数。 有关详细信息，请参阅[连接字符串生成器](connection-string-builders.md)。
 
-## <a name="use-persist-security-infofalse"></a>使用 Persist Security Info=False
+## <a name="use-persist-security-infofalse"></a>使用“Persist Security Info=false”
 
 `Persist Security Info` 的默认值为 false；建议在所有连接字符串中使用此默认值。 如果将 `Persist Security Info` 设置为 `true` 或 `yes`，则允许在打开连接后通过连接获取安全敏感信息（包括用户 ID 和密码）。 如果将 `Persist Security Info` 设置为 `false` 或 `no`，则在使用安全信息打开连接后会丢弃安全信息，这可确保不受信任的来源不能访问安全敏感信息。
 
@@ -58,3 +58,4 @@ ms.locfileid: "96563093"
 ## <a name="see-also"></a>另请参阅
 
 - [使用受保护的配置来加密配置信息](/previous-versions/aspnet/53tyfkaw(v=vs.100))
+- [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-sql-server.md)
