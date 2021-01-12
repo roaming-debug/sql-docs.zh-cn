@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_cluster_nodes dynamic management view
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 532af156f9d22773a0946fff0706179e96207e84
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5276063293d8356902f0afcbf741281bedc24f6d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834261"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101509"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "91834261"
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例（虚拟服务器）配置中的节点名称。|  
 |状态|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例中节点的状态：0、1、2、3、-1。 有关详细信息，请参阅 [GetClusterNodeState 函数](/windows/win32/api/clusapi/nf-clusapi-getclusternodestate)。|  
-|status_description|**nvarchar (20) **|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集节点的状态的描述。<br /><br /> 0 = 正常运行<br /><br /> 1 = 停止<br /><br /> 2 = 已暂停<br /><br /> 3 = 正在联接<br /><br /> -1 = 未知|  
+|status_description|**nvarchar (20)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集节点的状态的描述。<br /><br /> 0 = 正常运行<br /><br /> 1 = 停止<br /><br /> 2 = 已暂停<br /><br /> 3 = 正在联接<br /><br /> -1 = 未知|  
 |is_current_owner|bit|1 表示此节点是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集资源的当前所有者。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  启用故障转移群集时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可在指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例（虚拟服务器）配置一部分的故障转移群集的任何节点上运行。  
   
 > **注意：** 此视图将替换 fn_virtualservernodes 函数，该函数将在未来版本中弃用。  

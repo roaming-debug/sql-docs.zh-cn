@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_cluster_networks (Transact-SQL)
-title: sys. dm_hadr_cluster_networks (Transact-sql) |Microsoft Docs
+title: sys.dm_hadr_cluster_networks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_networks dynamic management view
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 832ade6b7e10eaa2a8bbcddfbdcc685ff7664f96
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d97862778240fac789f95c00a474df12770f8ef3
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546540"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101589"
 ---
 # <a name="sysdm_hadr_cluster_networks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "89546540"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|WSFC 群集中某节点的计算机名称。|  
-|**network_subnet_ip**|**nvarchar (48) **|该计算机所属子网的网络 IP 地址。 该地址可以是 IPv4 或 IPv6 地址。|  
-|**network_subnet_ipv4_mask**|**nvarchar (45) **|指定 IP 地址所属子网的网络子网掩码。 **network_subnet_ipv4_mask**在[CREATE Availability GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)或[ALTER AVAILABILITY group](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的 WITH DHCP 子句中指定 DHCP <network_subnet_option> 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br /><br /> NULL = IPv6 子网。|  
+|**network_subnet_ip**|**nvarchar (48)**|该计算机所属子网的网络 IP 地址。 该地址可以是 IPv4 或 IPv6 地址。|  
+|**network_subnet_ipv4_mask**|**nvarchar (45)**|指定 IP 地址所属子网的网络子网掩码。 **network_subnet_ipv4_mask** 在 [CREATE Availability GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)或 [ALTER AVAILABILITY group](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的 WITH DHCP 子句中指定 DHCP <network_subnet_option> 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br /><br /> NULL = IPv6 子网。|  
 ||||  
 |**network_subnet_prefix_length**|**int**|指定该计算机所属子网的网络 IP 前缀长度。|  
 |**is_public**|**bit**|该网络在 WSFC 群集中是专用还是公共网络，可为下列值之一：<br /><br /> 0 = 专用<br /><br /> 1 = 公共|  
@@ -56,7 +56,7 @@ ms.locfileid: "89546540"
 ## <a name="see-also"></a>另请参阅  
  [故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [&#40;Transact-sql 监视可用性组&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [sys. dm_os_cluster_nodes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [sys.dm_os_cluster_nodes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

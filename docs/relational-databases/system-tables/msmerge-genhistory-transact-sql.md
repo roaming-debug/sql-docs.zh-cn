@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_genhistory system table
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4031540d14a0af583fa544d51fc43eddf589a9f1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7ccd9f9b6cc2780681f1f76c0764aaf423c2af36
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544487"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100554"
 ---
 # <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89544487"
 |**pubid**|**uniqueidentifier**|发布标识符。|  
 |**产生**|**bigint**|代值。|  
 |**art_nick**|**int**|项目的昵称。|  
-|**nicknames**|**varbinary (1001) **|已悉知具有此生成的其他订阅服务器的别名列表。 用来避免将生成发送给已看到那些更改的订阅服务器。 别名列表中的别名按顺序排序，以便提高搜索效率。 如果别名数目超过此字段的容量，将不会从此优化中获益。|  
+|**nicknames**|**varbinary (1001)**|已悉知具有此生成的其他订阅服务器的别名列表。 用来避免将生成发送给已看到那些更改的订阅服务器。 别名列表中的别名按顺序排序，以便提高搜索效率。 如果别名数目超过此字段的容量，将不会从此优化中获益。|  
 |**coldate**|**datetime**|将当前生成添加到表时的日期。|  
 |**genstatus**|**tinyint**|生成具有下列状态：<br /><br /> **0** = 打开。<br /><br /> **1** = 关闭。<br /><br /> **2** = 关闭，并在另一个订阅服务器上发出。|  
 |**changecount**|**int**|给定生成中反映的更改数|  

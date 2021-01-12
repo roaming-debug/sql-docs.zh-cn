@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5d0a2dae85606a5e1cb0ffd5f86776e7aae25680
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7fa737644611f24d9d0858fd04066d3ba0571ee3
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809775"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102716"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc。 &lt;&gt; (transact-sql 的 _CT capture_instance) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  对源表启用变更数据捕获时创建的更改表。 该表为对源表执行的每个插入和删除操作返回一行，为对源表执行的每个更新操作返回两行。 如果在启用源表时未指定更改表的名称，则会使用一个派生的名称。 名称的格式为 cdc。*capture_instance*_CT 其中 *capture_instance* 是源表的架构名称和格式 *schema_table*的源表名称。 例如，如果对**AdventureWorks**示例数据库中的表**Person**启用了变更数据捕获，则派生的更改表名称将为**cdc。Person_Address_CT**。  
+  对源表启用变更数据捕获时创建的更改表。 该表为对源表执行的每个插入和删除操作返回一行，为对源表执行的每个更新操作返回两行。 如果在启用源表时未指定更改表的名称，则会使用一个派生的名称。 名称的格式为 cdc。*capture_instance* _CT 其中 *capture_instance* 是源表的架构名称和格式 *schema_table* 的源表名称。 例如，如果对 **AdventureWorks** 示例数据库中的表 **Person** 启用了变更数据捕获，则派生的更改表名称将 **cdc.Person_Address_CT**。  
   
  建议不要 **直接查询系统表**。 请改为执行 [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 和 [cdc.fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance 函数。  
   
@@ -44,21 +44,21 @@ ms.locfileid: "91809775"
 |*\<captured source table columns>*|多种多样|更改表中的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中未指定任何列，则源表中的所有列将包括在此表中。|  
 |**__ $ command_id** |**int** |跟踪事务中的操作顺序。 |  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 
 `__$command_id`列是列在版本2012到2016的累积更新中引入。 有关版本和下载信息，请参阅知识库文章 3030352 [修复：为 Microsoft SQL Server 数据库启用变更数据捕获后，更改表的排序顺序不正确](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)。  有关详细信息，请参阅 [升级到最新 CU 后，CDC 功能可能会在升级为 SQL Server 2012、2014和2016后中断](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016)。
 
 ## <a name="captured-column-data-types"></a>已捕获列的数据类型  
  此表中包含的已捕获列具有与其对应源列相同的数据类型和值，但下述情况例外：  
   
--   **时间戳** 列定义为 **二进制 (8) **。  
+-   **时间戳** 列定义为 **二进制 (8)**。  
   
 -   **标识** 列定义为 **int** 或 **bigint**。  
   
  不过，这些列中的值与源列的值相同。  
   
 ### <a name="large-object-data-types"></a>大型对象数据类型  
- 当 __ $ operation = 1 **text**或**image** **ntext** **NULL** \_ \_ $operation = 3 时，将始终为数据类型为 image、text 和 ntext 的列分配 NULL 值。 如果在更新过程中更改了列**NULL** ，则在 (= 3 时，将为数据类型**varbinary (max) **、 **varchar (max) **或**nvarchar) max $operation**分配 NULL 值 \_ \_ 。 当 \_ \_ $operation = 1 时，将在删除时为这些列分配其值。 捕获实例中包含的计算列的值始终为 **NULL**。  
+ 当 __ $ operation = 1 或   \_ \_ $operation = 3 时，将始终为数据类型为 image、text 和 ntext 的列分配 NULL 值。 如果在更新过程中更改了列 ，则在 (= 3 时，将为数据类型 **varbinary (max)**、 **varchar (max)** 或 **nvarchar) max $operation** 分配 NULL 值 \_ \_ 。 当 \_ \_ $operation = 1 时，将在删除时为这些列分配其值。 捕获实例中包含的计算列的值始终为 **NULL**。  
   
  默认情况下，在一个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句中可添加到已捕获列的最大大小为 65,536 字节或 64 KB。 若要增加此大小以支持较大的 LOB 数据，请使用 " [配置最大文本复制大小" 服务器配置选项](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) 来指定更大的最大大小。 有关详细信息，请参阅 [配置 max text repl size 服务器配置选项](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  
   

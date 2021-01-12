@@ -1,6 +1,6 @@
 ---
 description: sys.fn_my_permissions (Transact-SQL)
-title: sys. fn_my_permissions (Transact-sql) |Microsoft Docs
+title: sys.fn_my_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 75ff0dfb3355158a3dedbc9d5e066dbce0ac441f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5e67f2be709f91ee3214f490cfbcc2b932ad7dc5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427749"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101315"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
 ## <a name="arguments"></a>参数  
  securable  
- 安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 securable 是 sysname 类型的标量表达式******。 *安全* 对象的名称可以是多部分名称。  
+ 安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 securable 是 sysname 类型的标量表达式。 *安全* 对象的名称可以是多部分名称。  
   
  "*securable_class*"  
  为其列出权限的安全对象的类的名称。 *securable_class* 是 **sysname**。 *securable_class* 必须是下列其中一项：应用程序角色、程序集、非对称密钥、证书、协定、数据库、终结点、全文目录、登录名、消息类型、对象、远程服务绑定、角色、路由、架构、服务器、服务、对称密钥、类型、用户和 XML 架构集合。  
@@ -81,7 +81,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- 如果默认值是作为 *安全* 对象或 *securable_class*的值提供的，则该值将被解释为 NULL。  
+ 如果默认值是作为 *安全* 对象或 *securable_class* 的值提供的，则该值将被解释为 NULL。  
   
 ## <a name="examples"></a>示例  
   

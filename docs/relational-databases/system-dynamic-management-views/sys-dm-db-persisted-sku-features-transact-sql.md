@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_persisted_sku_features (Transact-SQL)
-title: sys. dm_db_persisted_sku_features (Transact-sql) |Microsoft Docs
+title: sys.dm_db_persisted_sku_features (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - editions [SQL Server]
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 552bb8927c8609a2cfa406243be102372b855c0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9221515e0c8a6c0704f0a036d851241d849d5f3d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548637"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101654"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  的某些功能改变了在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 数据库文件中存储信息的方式。 这些功能仅限于特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 不能将包含这些功能的数据库移到不支持这些功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 使用 sys. dm_db_persisted_sku_features 动态管理视图可列出当前数据库中启用的特定于版本的功能。
+  的某些功能改变了在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 数据库文件中存储信息的方式。 这些功能仅限于特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 不能将包含这些功能的数据库移到不支持这些功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 使用 sys.dm_db_persisted_sku_features 动态管理视图可列出当前数据库中启用的特定于版本的功能。
   
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）。
   
@@ -45,19 +45,19 @@ ms.locfileid: "89548637"
 ## <a name="remarks"></a>备注  
  如果数据库未使用特定版本可能限制的任何功能，则视图不返回任何行。  
   
- sys. dm_db_persisted_sku_features 可能会列出以下数据库更改的功能，这些功能仅限于特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本：  
+ sys.dm_db_persisted_sku_features 可能会列出以下数据库更改的功能，这些功能仅限于特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本：  
   
--   **ChangeCapture**：指示数据库已启用更改数据捕获。 若要删除变更数据捕获，请使用 [sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 存储过程。 有关详细信息，请参阅[关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)。  
+-   **ChangeCapture**：指示数据库已启用更改数据捕获。 若要删除变更数据捕获，请使用 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 存储过程。 有关详细信息，请参阅[关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)。  
   
 -   **ColumnStoreIndex**：指示至少有一个表具有列存储索引。 若要使数据库移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持此功能的版本，请使用 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 或 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 语句删除列存储索引。 有关详细信息，请参阅 [列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
   
-    **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。  
+    **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。  
   
--   **压缩**：指示至少一个表或索引使用数据压缩或 vardecimal 存储格式。 若要使数据库移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持此功能的版本，请使用 [alter TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 [alter INDEX](../../t-sql/statements/alter-index-transact-sql.md) 语句删除数据压缩。 若要删除 vardecimal 存储格式，请使用 sp_tableoption 语句。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
+-   **压缩**：指示至少一个表或索引使用数据压缩或 vardecimal 存储格式。 若要使数据库移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持此功能的版本，请使用 [alter TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 [alter INDEX](../../t-sql/statements/alter-index-transact-sql.md) 语句删除数据压缩。 若要删除 vardecimal 存储格式，请使用 sp_tableoption 语句。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
--   **MultipleFSContainers**：指示数据库使用多个 FILESTREAM 容器。 数据库具有一个 FILESTREAM 文件组，其中包含多个容器 (文件) 。 有关详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
+-   **MultipleFSContainers**：指示数据库使用多个 FILESTREAM 容器。 数据库具有一个 FILESTREAM 文件组，其中包含多个容器 (文件) 。 有关详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
   
--   **InMemoryOLTP**：指示数据库使用内存中 OLTP。 数据库具有 MEMORY_OPTIMIZED_DATA 文件组。 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
+-   **InMemoryOLTP**：指示数据库使用 In-Memory OLTP。 数据库具有 MEMORY_OPTIMIZED_DATA 文件组。 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
   **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）。 
   

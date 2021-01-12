@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_generation_partition_mappings system table
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4ae8e89600a76da91ccf06d0a561319af9bec3f1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7e4bc8d5e833f5ca4c9c19c81985f744c497dfcd
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544507"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102035"
 ---
 # <a name="msmerge_generation_partition_mappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_generation_partition_mappings**表用于跟踪对合并发布中的分区所做的更改。 该表存储在发布和订阅数据库中。  
+  **MSmerge_generation_partition_mappings** 表用于跟踪对合并发布中的分区所做的更改。 该表存储在发布和订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

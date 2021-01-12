@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubsetfilters system table
 ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 932a237037073f81564b9a5f1a2cba89ba4d892b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4978af42a06f1e54c8457f0db4a2d5c5fe2601ea
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542845"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099585"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "89542845"
 |**art_nickname**|**int**|项目的别名。|  
 |**join_articlename**|**sysname**|表名，要联接该表以确定行是否属于该表。|  
 |**join_nickname**|**int**|表的别名，要联接该表以确定行是否属于该表。|  
-|**join_unique_key**|**int**|指示 **join_tablename**的唯一键的联接：<br /><br /> 0 = 不是唯一键。<br /><br /> 1 = 是唯一键。|  
+|**join_unique_key**|**int**|指示 **join_tablename** 的唯一键的联接：<br /><br /> 0 = 不是唯一键。<br /><br /> 1 = 是唯一键。|  
 |**expand_proc**|**sysname**|存储过程名，合并代理使用该存储过程识别需要向订阅服务器发送或从订阅服务器中删除的行。|  
 |**join_filterclause**|**nvarchar(1000)**|用于联接的筛选子句。|  
 |**filter_type**|**tinyint**|指定筛选器类型，可以为下面的一种：<br /><br /> 1 = 联接筛选器。<br /><br /> 2 = 逻辑记录链接。<br /><br /> 3 = 同时为联接筛选器和逻辑记录链接。|  

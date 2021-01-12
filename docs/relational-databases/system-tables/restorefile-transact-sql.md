@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring files [SQL Server], restorefile system table
 - file restores [SQL Server], restorefile system table
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 366c6bd83e46b2a8586590552bfd05e2975b9e04
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a11f4e9e96a12b0c93c9812bde8422e17667d8ad
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546998"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099587"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "89546998"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**int**|标识相应还原操作的唯一标识号。 引用 **restorehistory (restore_history_id) **。|  
-|**file_number**|**数值 (10，0) **|被还原文件的文件标识号。 每个数据库中的此标识号必须是唯一的。 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，此值的填充方式与完全还原时的填充方式相同。|  
+|**restore_history_id**|**int**|标识相应还原操作的唯一标识号。 引用 **restorehistory (restore_history_id)**。|  
+|**file_number**|**数值 (10，0)**|被还原文件的文件标识号。 每个数据库中的此标识号必须是唯一的。 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，此值的填充方式与完全还原时的填充方式相同。|  
 |**destination_phys_drive**|**nvarchar(260)**|将文件还原到的驱动器或分区。 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，此值的填充方式与完全还原时的填充方式相同。|  
 |**destination_phys_name**|**nvarchar(260)**|文件名，其中不含将文件还原到的驱动器或分区信息。 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，此值的填充方式与完全还原时的填充方式相同。|  
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_faileditems database mail view
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6c86c282b80c346c4d9378c9488e0503bbb85212
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 0fc32200b893022e16bcd4ee7049da82c4572660
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548907"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100117"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "89548907"
 |**者**|**varchar(max)**|消息收件人的电子邮件地址。|  
 |**copy_recipients**|**varchar(max)**|接收消息副本的用户的电子邮件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|接收消息副本但其姓名未出现在消息标头中的用户的电子邮件地址。|  
-|**subject**|**nvarchar (510) **|消息的主题行。|  
+|**subject**|**nvarchar (510)**|消息的主题行。|  
 |**body**|**varchar(max)**|消息正文。|  
-|**body_format**|**varchar (20) **|消息正文的格式。 可能值为 TEXT 和 HTML。|  
-|**importance**|**varchar (6) **|消息的 **重要性** 参数。|  
-|**程度**|**varchar (12) **|消息的 **敏感度** 参数。|  
+|**body_format**|**varchar (20)**|消息正文的格式。 可能值为 TEXT 和 HTML。|  
+|**importance**|**varchar (6)**|消息的 **重要性** 参数。|  
+|**程度**|**varchar (12)**|消息的 **敏感度** 参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
-|**Attachment_encoding**|**varchar (20) **|邮件附件的类型。|  
+|**Attachment_encoding**|**varchar (20)**|邮件附件的类型。|  
 |**查询**|**varchar(max)**|邮件程序所执行的查询。|  
 |**execute_query_database**|**sysname**|邮件程序在其中执行查询的数据库上下文。|  
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
@@ -57,7 +57,7 @@ ms.locfileid: "89548907"
 |**send_request_date**|**datetime**|将消息放在邮件队列中的日期和时间。|  
 |**send_request_user**|**sysname**|提交消息的用户。 这是数据库邮件过程的用户上下文，不是邮件的“发件人:”字段。|  
 |**sent_account_id**|**int**|发送消息所用数据库邮件帐户的标识符。 对于该视图，始终为 NULL。|  
-|**sent_status**|**varchar (8) **|邮件的状态。 此视图始终 **失败** 。|  
+|**sent_status**|**varchar (8)**|邮件的状态。 此视图始终 **失败** 。|  
 |**sent_date**|**datetime**|从邮件队列中删除消息的日期和时间。|  
 |**last_mod_date**|**datetime**|上次修改行的日期和时间。|  
 |**last_mod_user**|**sysname**|上次修改行的用户。|  

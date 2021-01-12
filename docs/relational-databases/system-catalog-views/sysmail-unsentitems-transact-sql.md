@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7ef61a0c08d1ddc2e3a268571521b4da47cee90f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 0e8ffcc7ae60096de1b0355ed113ffb55e02e286
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543947"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100104"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,13 +49,13 @@ ms.locfileid: "89543947"
 |**者**|**varchar(max)**|消息收件人的电子邮件地址。|  
 |**copy_recipients**|**varchar(max)**|接收消息副本的用户的电子邮件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|接收消息副本但其姓名未出现在消息标头中的用户的电子邮件地址。|  
-|**subject**|**nvarchar (510) **|消息的主题行。|  
+|**subject**|**nvarchar (510)**|消息的主题行。|  
 |**body**|**varchar(max)**|消息正文。|  
-|**body_format**|**varchar (20) **|消息正文的格式。 可能的值为 **TEXT** 和 **HTML**。|  
-|**importance**|**varchar (6) **|消息的 **重要性** 参数。|  
-|**程度**|**varchar (12) **|消息的 **敏感度** 参数。|  
+|**body_format**|**varchar (20)**|消息正文的格式。 可能的值为 **TEXT** 和 **HTML**。|  
+|**importance**|**varchar (6)**|消息的 **重要性** 参数。|  
+|**程度**|**varchar (12)**|消息的 **敏感度** 参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
-|**attachment_encoding**|**varchar (20) **|邮件附件的类型。|  
+|**attachment_encoding**|**varchar (20)**|邮件附件的类型。|  
 |**query**|**varchar(max)**|邮件程序所执行的查询。|  
 |**execute_query_database**|**sysname**|邮件程序在其中执行查询的数据库上下文。|  
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
@@ -67,7 +67,7 @@ ms.locfileid: "89543947"
 |**send_request_date**|**datetime**|将消息放在邮件队列中的日期和时间。|  
 |**send_request_user**|**sysname**|提交消息的用户。 这是数据库邮件过程的用户上下文，不是消息的 " **发件** 字段" 字段。|  
 |**sent_account_id**|**int**|发送消息所用数据库邮件帐户的标识符。 对于该视图，始终为 NULL。|  
-|**sent_status**|**varchar (8) **|如果数据库邮件尚未尝试发送邮件，则将 **发送** 该邮件。 如果数据库邮件无法发送消息，但正在重试，将 **重试** 。|  
+|**sent_status**|**varchar (8)**|如果数据库邮件尚未尝试发送邮件，则将 **发送** 该邮件。 如果数据库邮件无法发送消息，但正在重试，将 **重试** 。|  
 |**sent_date**|**datetime**|数据库邮件上次尝试发送邮件的日期和时间。 如果数据库邮件尚未尝试发送消息，则为 NULL。|  
 |**last_mod_date**|**datetime**|上次修改行的日期和时间。|  
 |**last_mod_user**|**sysname**|上次修改行的用户。|  

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 35d75fe78e9631423f6dc9acc48cd89ef41d8d79
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c5805fd84eb9bce1092cdfae59a9711c2d63edb8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641890"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102053"
 ---
 # <a name="system-base-tables"></a>系统基表
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "97641890"
 ## <a name="system-base-tables"></a>系统基表  
  下表列出并描述了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每个系统基表。  
   
-|基表|说明|  
+|基表|描述|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|存在于每个数据库中。 每一行表示数据库中的一个对象。|  
 |**sys.sysbinobjs**|存在于每个数据库中。 数据库中的每个 Service Broker 实体都存在对应的一行。 Service Broker 实体包括以下内容：<br /><br /> 消息类型<br /><br /> 服务约定<br /><br /> 服务<br /><br /> 名称和类型使用固定的二进制排序规则。|  

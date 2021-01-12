@@ -1,6 +1,6 @@
 ---
 description: sys.dm_audit_class_type_map (Transact-SQL)
-title: sys. dm_audit_class_type_map (Transact-sql) |Microsoft Docs
+title: sys.dm_audit_class_type_map (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_audit_class_type_map dynamic management view
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b0f54982dba94080bc6d0ac19ed5148624770bfe
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 87e5c38a75b59696121650fbb80cc1cad9b145e6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412799"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100053"
 ---
 # <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91412799"
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|审核的实体的类类型。 映射到写入审核日志并由 **get_audit_file ( # B1 ** 函数返回的 class_type。 不可为 null。|  
+|**class_type**|**char(2)**|审核的实体的类类型。 映射到写入审核日志并由 **get_audit_file ( # B1** 函数返回的 class_type。 不可为 null。|  
 |**class_type_desc**|**nvarchar(120)**|可审核实体的名称。 不可为 null。|  
 |**securable_class_desc**|**nvarchar(120)**|映射到要审核的 class_type 的安全对象。 如果 class_type 不映射到安全对象，则为 NULL。 可以与 sys.dm_audit_actions 中的 class_desc 相关。|  
   
@@ -59,7 +59,7 @@ ms.locfileid: "91412799"
  [sys.database_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
  [sys.dm_server_audit_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys. dm_audit_class_type_map](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys.dm_audit_class_type_map](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [创建服务器审核和服务器审核规范](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

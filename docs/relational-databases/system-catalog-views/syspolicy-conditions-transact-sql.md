@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 05389c23d73c80af8544696977daf3edd04a4042
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: edaf380a4a6a8f938c4b8601cb60999a0e99a330
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518897"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100084"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "89518897"
 |condition_id|**int**|此条件的标识符。 每个条件表示由一个或多个条件表达式组成的集合。|  
 |name|**sysname**|条件名称。|  
 |date_created|**datetime**|条件的创建日期和时间。|  
-|description|**nvarchar(max)**|条件说明。 说明列是可选的，可以为 NULL。|  
+|说明|**nvarchar(max)**|条件说明。 说明列是可选的，可以为 NULL。|  
 |created_by|**sysname**|创建条件的登录名。|  
 |modified_by|**sysname**|最近修改条件的登录名。 如果从未进行修改，则为 NULL。|  
 |date_modified|**datetime**|条件的创建日期和时间。 如果从未进行修改，则为 NULL。|  
 |is_name_condition|**smallint**|指定该条件是否为命名条件。<br /><br /> 0 = 条件表达式不包含 @Name 变量。<br /><br /> 1 = 条件表达式包含 @Name 变量。|  
 |facet|**nvarchar(max)**|条件所基于的方面的名称。|  
-|表达式|**nvarchar(max)**|方面状态的表达式。|  
+|Expression|**nvarchar(max)**|方面状态的表达式。|  
 |obj_name|**sysname**|如果条件表达式包含 @Name，则为赋给此变量的对象名。|  
   
 ## <a name="remarks"></a>备注  

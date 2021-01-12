@@ -1,6 +1,6 @@
 ---
 description: sys.resource_governor_resource_pools (Transact-SQL)
-title: sys. resource_governor_resource_pools (Transact-sql) |Microsoft Docs
+title: sys.resource_governor_resource_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_resource_pools catalog view
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 24c19d78cdd0d4b38398b4212568134aaee74e15
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9ffab459e53f26d040c301adf818618b28fa05f1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550422"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101769"
 ---
 # <a name="sysresource_governor_resource_pools-transact-sql"></a>sys.resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,14 +45,14 @@ ms.locfileid: "89550422"
 |max_iops_per_volume|**int**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 针对该池的每个卷设置的每秒最大 I/O 操作数 (IOPS)。 0 = 无限制。 不能为 null。|  
   
 ## <a name="remarks"></a>备注  
- 目录视图显示存储的元数据。 若要查看内存中的配置，请使用对应的动态管理视图 [&#40;transact-sql&#41;dm_resource_governor_resource_pools ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
+ 目录视图显示存储的元数据。 若要查看内存中的配置，请使用对应的动态管理视图， [sys.dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  若要查看内容，则需要拥有 VIEW ANY DEFINITION 权限；若要更改内容，则需要拥有 CONTROL SERVER 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [Resource Governor 目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
- [sys. dm_resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [sys.resource_governor_external_resource_pools (Transact-SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)  
   

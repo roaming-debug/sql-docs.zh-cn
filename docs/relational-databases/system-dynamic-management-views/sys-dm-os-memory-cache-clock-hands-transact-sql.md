@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_cache_clock_hands dynamic management view
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bb93ff8ecf087037faf14b8bcf30533611531c31
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c994aa8b67c6fb6f8f3e7c199eac278813cd167e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97326859"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099773"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97326859"
 |name|**nvarchar(256)**|缓存的名称。 不可为 null。|  
 |type|**nvarchar(60)**|缓存存储的类型。 可存在相同类型的多个缓存。 不可为 null。|  
 |**clock_hand**|**nvarchar(60)**|手动类型。 这是以下各项之一：<br /><br /> 外部<br /><br /> 内部<br /><br /> 不可为 null。|  
-|**clock_status**|**nvarchar(60)**|时钟的状态。 这是以下各项之一：<br /><br /> 已挂起<br /><br /> 正在运行<br /><br /> 不可为 null。|  
+|**clock_status**|**nvarchar(60)**|时钟的状态。 这是以下各项之一：<br /><br /> 已挂起<br /><br /> 运行<br /><br /> 不可为 null。|  
 |**rounds_count**|**bigint**|通过缓存执行的、旨在删除项的清扫数。 不可为 null。|  
 |**removed_all_rounds_count**|**bigint**|所有清扫删除的项数。 不可为 null。|  
 |**updated_last_round_count**|**bigint**|上次清扫中更新的项数。 不可为 null。|  

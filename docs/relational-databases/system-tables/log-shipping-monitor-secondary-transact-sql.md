@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_secondary system table
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 823295ed5746abcf0e02fca4680a196c8687bc86
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: fbe298651268089a668e6be5a334c49d8623ddb9
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538285"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102112"
 ---
 # <a name="log_shipping_monitor_secondary-transact-sql"></a>log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "89538285"
 |**restore_threshold**|**int**|两次还原操作之间允许的间隔时间（分钟），一旦超过此值，就会生成警报。|  
 |**threshold_alert**|**int**|超过还原阈值时引发的警报。|  
 |**threshold_alert_enabled**|**bit**|确定是否启用了还原阈值警报。 1 = 启用。<br /><br /> 0 = 禁用。|  
-|**last_copied_file**|**nvarchar (500) **|上次复制到辅助服务器的备份文件的文件名。|  
+|**last_copied_file**|**nvarchar (500)**|上次复制到辅助服务器的备份文件的文件名。|  
 |**last_copied_date**|**datetime**|上次复制到辅助服务器的时间和日期。|  
 |**last_copied_date_utc**|**datetime**|上次对辅助服务器执行复制操作的时间和日期，以通用协调时间表示。|  
-|**last_restored_file**|**nvarchar (500) **|上次还原到辅助数据库的备份文件的文件名。|  
+|**last_restored_file**|**nvarchar (500)**|上次还原到辅助数据库的备份文件的文件名。|  
 |**last_restored_date**|**datetime**|上次对辅助数据库执行还原操作的时间和日期。|  
 |**last_restored_date_utc**|**datetime**|上次对辅助数据库执行还原操作的时间和日期，以通用协调时间表示。|  
 |**last_restored_latency**|**int**|在主数据库上创建日志备份的时间与在辅助数据库上还原日志备份的时间间隔（分钟）。<br /><br /> 初始值为 NULL。|  

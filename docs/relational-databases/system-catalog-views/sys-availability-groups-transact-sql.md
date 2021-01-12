@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_groups catalog view
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: eabda9900b854037eca713ac343e04e930eea1e2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c912d3cb46d4545bf0501281cec23c8f9ce4fb97
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810186"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101807"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "91810186"
 |**failure_condition_level**|**int**|用户定义的失败条件级别，在此级别下必须触发自动故障转移，其中一个整数值是此表下表中显示的一个整数值。<br /><br /> 失败条件级别的范围 (1-5) 是从最少限制的级别 1 到最多限制的级别 5。 给定的条件级别包含所有限制较少的级别。 因此，最严格的条件级别 5 包含四个限制较少的级别 (1-4)，级别 4 包含级别 1-3，依此类推。<br /><br /> 若要更改此值，请使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的 FAILURE_CONDITION_LEVEL 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
 |**health_check_timeout**|**int**|在假定服务器实例速度较慢或未响应之前， [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系统存储过程返回服务器运行状况信息的等待时间 (以毫秒为单位) 。 默认值为 30000 毫秒（30 秒）。<br /><br /> 若要更改此值，请使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的 HEALTH_CHECK_TIMEOUT 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
 |**automated_backup_preference**|**tinyint**|用于对此可用性组中的可用性数据库执行备份的首选位置。 下面是可能的值及其说明。<br /><br /> <br /><br /> 0：主要。 备份应该始终在主副本上发生。<br /><br /> 1：仅辅助副本。 首选是对辅助副本执行备份。<br /><br /> 2：首选辅助副本。 首选是对辅助副本执行备份，但如果没有可用于备份操作的辅助副本，对主副本执行备份是可接受的。 这是默认行为。<br /><br /> 3：任何副本。 没有是对主副本执行备份还是对辅助副本执行备份的优先选择。<br /><br /> <br /><br /> 有关详细信息，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。|  
-|**automated_backup_preference_desc**|**nvarchar(60)**|**Automated_backup_preference**的说明，请执行以下操作之一：<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> 无|  
+|**automated_backup_preference_desc**|**nvarchar(60)**|**Automated_backup_preference** 的说明，请执行以下操作之一：<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> NONE|  
 |**version**|**smallint**|存储在 Windows 故障转移群集中的可用性组元数据的版本。 添加新功能时，此版本号会递增。|  
 |**basic_features**|**bit**|指定这是否为基本可用性组。 有关详细信息，请参阅[基本可用性组（Always On 可用性组）](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。|  
-|**dtc_support**|**bit**|指定是否为此可用性组启用了 DTC 支持。 "**创建可用性组**" 的**DTC_SUPPORT**选项控制此设置。|  
-|**db_failover**|**bit**|指定可用性组是否支持数据库运行状况条件的故障转移。 "**创建可用性组**" 的**DB_FAILOVER**选项控制此设置。|  
+|**dtc_support**|**bit**|指定是否为此可用性组启用了 DTC 支持。 "**创建可用性组**" 的 **DTC_SUPPORT** 选项控制此设置。|  
+|**db_failover**|**bit**|指定可用性组是否支持数据库运行状况条件的故障转移。 "**创建可用性组**" 的 **DB_FAILOVER** 选项控制此设置。|  
 |**is_distributed**|**bit**|指定这是否为分布式可用性组。 有关详细信息，请参阅[分布式可用性组&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)。|
 |**cluster_type**|**tinyint**|0： Windows Server 故障转移群集 <br/><br/>1：外部群集 (例如，Linux Pacemaker) <br/><br/>2：无|
 |**cluster_type_desc**|**nvarchar(60)**|群集类型的文本说明|

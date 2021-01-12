@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_mailattachments database mail view
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f3f29f688e750b853c288c901cd81b9891a285c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9fe55316cc27c21849379afe400d2950a5bcf882
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542372"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100120"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89542372"
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|附件的标识符。|  
 |**mailitem_id**|**int**|包含附件的邮件项的标识符。|  
-|**filename**|**nvarchar (520) **|附件的文件名。 如果 **attach_query_result** 为1且 **query_attachment_filename** 为 NULL，数据库邮件将创建任意文件名。|  
+|**filename**|**nvarchar (520)**|附件的文件名。 如果 **attach_query_result** 为1且 **query_attachment_filename** 为 NULL，数据库邮件将创建任意文件名。|  
 |**filesize**|**int**|附件的大小（字节）。|  
 |**接触**|**varbinary(max)**|附件的内容。|  
 |**last_mod_date**|**datetime**|上次修改行的日期和时间。|  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
-title: sys. dm_os_buffer_pool_extension_configuration (Transact-sql) |Microsoft Docs
+title: sys.dm_os_buffer_pool_extension_configuration (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_pool_extension_configuration dynamic management view
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73fae53ccdba1ba02307996972a9fe409222d19a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5477a9da1810c64b6c6c359694f3db9254948efa
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539381"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101519"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "89539381"
   
 
   
-| 列名称 | 数据类型 | 说明 |
+| 列名称 | 数据类型 | 描述 |
 | :---------- | :-------- | :---------- |
 |path|**nvarchar** (256) |缓冲池扩展缓存的路径和文件名。 可以为 NULL。|  
 |file_id|**int**|缓冲池扩展文件的 ID。 不可为 null。|  

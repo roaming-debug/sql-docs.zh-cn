@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_secondary_databases system table
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5160975171ab32f0c44d807ec445eeaabc5ff4c2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9a7fb2574f436c5abe40b98723860f03f73a27c4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540331"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102097"
 ---
 # <a name="log_shipping_secondary_databases-transact-sql"></a>log_shipping_secondary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89540331"
 |**block_size**|**int**|用作备份设备的块大小（字节）。|  
 |**buffer_count**|**int**|备份或还原操作使用的缓冲区总数。|  
 |**max_transfer_size**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向备份设备发出的最大输入或输出请求的大小（字节）。|  
-|**last_restored_file**|**nvarchar (500) **|上次还原到辅助数据库的备份文件的文件名。|  
+|**last_restored_file**|**nvarchar (500)**|上次还原到辅助数据库的备份文件的文件名。|  
 |**last_restored_date**|**datetime**|上次对辅助数据库执行还原操作的时间和日期。|  
   
 ## <a name="see-also"></a>另请参阅  

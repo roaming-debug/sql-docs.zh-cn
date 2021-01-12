@@ -17,14 +17,14 @@ helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2e84ad652e1253a9026d61ec0f0a28b571b699a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cd2f3ac634f737772691c3fdb7a1d4ab4d736123
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89524941"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102737"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "89524941"
   备份时数据库中的每个文件组在表中占一行。 **backupfilegroup** 存储在 **msdb** 数据库中。  
   
 > [!NOTE]  
->  **Backupfilegroup**表显示了数据库的文件组配置，而不是备份集的配置文件组。 若要确定备份集中是否包含文件，请使用[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)表的**is_present**列。  
+>  **Backupfilegroup** 表显示了数据库的文件组配置，而不是备份集的配置文件组。 若要确定备份集中是否包含文件，请使用 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)表的 **is_present** 列。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|包含该文件组的备份集。|  
 |name|**sysname**|文件组的名称。|  
-|**filegroup_id**|**int**|文件组的 ID；在数据库中唯一。 对应于**sys.databases**中的**data_space_id** 。|  
+|**filegroup_id**|**int**|文件组的 ID；在数据库中唯一。 对应于 **sys.databases** 中的 **data_space_id** 。|  
 |**filegroup_guid**|**uniqueidentifier**|文件组的全局唯一标识符。 可以为 NULL。|  
 |type|**char(2)**|内容类型，可为下列类型之一：<br /><br /> FG =“行”文件组<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件组|  
 |**type_desc**|**nvarchar(60)**|函数类型的说明，可为下列值之一：<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
@@ -49,7 +49,7 @@ ms.locfileid: "89524941"
 ## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
->  相同的文件组名称可以出现在不同数据库中；但是，每个文件组都有自己的 GUID。 因此， ** (backup_set_id，filegroup_guid) ** 是一个唯一键，用于标识 **backupfilegroup**中的文件组。  
+>  相同的文件组名称可以出现在不同数据库中；但是，每个文件组都有自己的 GUID。 因此， **(backup_set_id，filegroup_guid)** 是一个唯一键，用于标识 **backupfilegroup** 中的文件组。  
   
  通过 VERIFYONLY 从 *BACKUP_DEVICE* 还原将用介质集标头中的相应值填充 **backupmediaset** 表的列。  
   

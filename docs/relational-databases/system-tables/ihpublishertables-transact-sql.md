@@ -16,23 +16,23 @@ dev_langs:
 helpviewer_keywords:
 - IHpublishertables system table
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3e1a7f5485768a0d8c80211dd3a33d992419f104
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 604f5ddba7eb007833adcab0a4a026cd1fe3a124
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540899"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100561"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **IHpublishertables**系统表表示在发布服务器上存储的元数据。 使用当前分发服务器从非 SQL Server 发布服务器发布的每个源表在此表中对应一行。 此表存储在分发数据库中。  
+  **IHpublishertables** 系统表表示在发布服务器上存储的元数据。 使用当前分发服务器从非 SQL Server 发布服务器发布的每个源表在此表中对应一行。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|table_id****|**int**|标识已发布的表。|  
+|table_id|**int**|标识已发布的表。|  
 |**publisher_id**|**smallint**|标识发布表的非 SQL Server 发布服务器。|  
 |name|**sysname**|已发布的表的名称。|  
 |**owner**|**sysname**|表的所由者。|  

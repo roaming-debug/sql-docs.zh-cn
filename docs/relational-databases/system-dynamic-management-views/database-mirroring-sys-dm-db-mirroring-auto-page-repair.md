@@ -1,6 +1,6 @@
 ---
-description: 数据库镜像-sys. dm_db_mirroring_auto_page_repair
-title: sys. dm_db_mirroring_auto_page_repair (Transact-sql) |Microsoft Docs
+description: 数据库镜像-sys.dm_db_mirroring_auto_page_repair
+title: sys.dm_db_mirroring_auto_page_repair (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - sys.dm_db_mirroring_auto_page_repair dynamic management view
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1d82a2f1a152bacf4458a92727d62da5d93f4c31
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: cef38d675dde0d36ca97f63c16f8d4589760a620
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537257"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101666"
 ---
-# <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>数据库镜像-sys. dm_db_mirroring_auto_page_repair
+# <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>数据库镜像-sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   对服务器实例上所有镜像数据库的每个自动页修复尝试返回一行。 该视图包含对应于给定镜像数据库上最新自动页修复尝试的行，每个数据库最多可对应 100 行。 只要一个数据库对应的行达到最大值，则它的下个自动页修复尝试对应的行将替换现有的一个项。 下表定义了各个列的含义。  

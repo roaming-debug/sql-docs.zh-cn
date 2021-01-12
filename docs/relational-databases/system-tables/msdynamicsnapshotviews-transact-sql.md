@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSdynamicsnapshotviews system table
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6a89b139970822482e8b0745d9ceeefe8bba3f94
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 00561f1934d84c1c44b561ea62ff512ee9acf0f8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538266"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102077"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdynamicsnapshotviews**表跟踪快照代理创建的所有临时筛选数据快照视图，系统使用它来清理视图，以防 SQL Server 代理或快照代理异常关闭。 该表存储在发布数据库和订阅数据库中。  
+  **MSdynamicsnapshotviews** 表跟踪快照代理创建的所有临时筛选数据快照视图，系统使用它来清理视图，以防 SQL Server 代理或快照代理异常关闭。 该表存储在发布数据库和订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

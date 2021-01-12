@@ -1,6 +1,6 @@
 ---
 description: sys.dm_broker_queue_monitors (Transact-SQL)
-title: sys. dm_broker_queue_monitors (Transact-sql) |Microsoft Docs
+title: sys.dm_broker_queue_monitors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 15090a3b52be40dba3735bb0b10ef185efe5de2b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a553a293d5423b4731f0f2547a6b5d9d4d5c60ac
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551293"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099950"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89551293"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|数据库的对象标识符，该数据库包含了监视器所观察的队列。 可以为 null.|  
 |**queue_id**|**int**|监视器所观察的队列的对象标识符。 可以为 null.|  
-|State|**nvarchar(32)**|监视器的状态。 可以为 null. 这是以下各项之一：<br /><br /> **不用**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|监视器的状态。 可以为 null. 这是以下各项之一：<br /><br /> **不用**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|来自队列的 RECEIVE 上次返回空结果时的时间。 可以为 null.|  
 |**last_activated_time**|**datetime**|此队列监视器上次激活存储过程时的时间。 可以为 null.|  
 |**tasks_waiting**|**int**|当前正在 RECEIVE 语句中等待此队列的会话数。 可以为 null.<br /><br /> 注意：此数字包括执行 receive 语句的任何会话，不管队列监视器是否启动了该会话。 它表示您是否与 RECEIVE 一起使用 WAITFOR。 基本上，这些任务都在等待到达队列的消息。|  

@@ -1,6 +1,6 @@
 ---
 description: sys.fn_trace_gettable (Transact-SQL)
-title: sys. fn_trace_gettable (Transact-sql) |Microsoft Docs
+title: sys.fn_trace_gettable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - fn_trace_gettable function
 - sys.fn_trace_gettable function
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 85ffb20fb0ead23c8027ab9b4ba45f906fe8c097
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 1f1593e1d12621b5dbe858b0f012322f447111e4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464735"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101287"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +45,10 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="arguments"></a>参数  
  "*filename*"  
- 指定要读取的初始跟踪文件。 *filename* 为 **nvarchar (256) **，无默认值。  
+ 指定要读取的初始跟踪文件。 *filename* 为 **nvarchar (256)**，无默认值。  
   
  *number_files*  
- 指定要读取的滚动更新文件数。 此数目包括 *filename*中指定的初始文件。 *number_files* 是 **int**。  
+ 指定要读取的滚动更新文件数。 此数目包括 *filename* 中指定的初始文件。 *number_files* 是 **int**。  
   
 ## <a name="remarks"></a>备注  
  如果 *number_files* 指定为 **默认值**，则 **fn_trace_gettable** 将读取所有滚动更新文件，直到到达跟踪结尾为止。 **fn_trace_gettable** 返回一个表，该表包含指定跟踪的所有有效列。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_trace_setevent ](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
@@ -87,7 +87,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
   

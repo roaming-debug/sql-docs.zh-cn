@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_tasks dynamic management view
 ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ad9b7bdf0911fef6334d5ca3cd7c6677de6960d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6f9639c03609e985017501e9d9c4f3669cb0eb44
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478998"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099983"
 ---
 # <a name="sysdm_clr_tasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97478998"
 |**appdomain_address**|**varbinary(8)**|此任务在其中运行的应用程序域的地址。|  
 |**state**|**nvarchar(128)**|任务的当前状态。|  
 |**abort_state**|**nvarchar(128)**|中止任务时当前所处的状态（如果取消任务）。中止任务时涉及多个状态。|  
-|**type**|**nvarchar(128)**|任务类型。|  
+|type|**nvarchar(128)**|任务类型。|  
 |**affinity_count**|**int**|任务的关联。|  
 |**forced_yield_count**|**int**|强制产生任务的次数。|  
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_identity_range_allocations system table
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aba2d603c53827f63ceb39fdfdaae7819e4e1bff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 639652550d17b7a3864404c78ffd4ced7a1317fd
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545637"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100549"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "89545637"
 |**subscriber_db**|**nvarchar(128)**|订阅数据库的名称。|  
 |**is_pub_range**|**bit**|列出是否将标识范围分配给发布服务器。|  
 |**ranges_allocated**|**tinyint**|已分配的标识范围数。|  
-|**range_begin**|**数值 (38) **|范围的起始值。|  
-|**range_end**|**数值 (38) **|范围中的最后一个值。|  
-|**next_range_begin**|**数值 (38) **|要分配的下一个范围的起始值。|  
-|**next_range_end**|**数值 (38) **|要分配的下一个范围中的最后一个值。|  
-|**max_used**|**数值 (38) **|所使用的最大标识值。|  
+|**range_begin**|**数值 (38)**|范围的起始值。|  
+|**range_end**|**数值 (38)**|范围中的最后一个值。|  
+|**next_range_begin**|**数值 (38)**|要分配的下一个范围的起始值。|  
+|**next_range_end**|**数值 (38)**|要分配的下一个范围中的最后一个值。|  
+|**max_used**|**数值 (38)**|所使用的最大标识值。|  
 |**time_of_allocation**|**datetime**|执行分配的时间。|  
   
 ## <a name="see-also"></a>另请参阅  

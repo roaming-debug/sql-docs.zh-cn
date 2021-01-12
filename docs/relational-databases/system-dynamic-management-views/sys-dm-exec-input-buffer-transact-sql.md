@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68673cb11ce5a003b2c9317939942b1d602095be
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e6b15da477c8fb5a4eb8cdc7ef302ebd8a41fae6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477258"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099733"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-sql) 
 
@@ -40,7 +40,7 @@ ms.locfileid: "97477258"
 sys.dm_exec_input_buffer ( session_id , request_id )
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 *session_id* 要查找的批处理的会话 ID。 *session_id* 为 **smallint**。 可以从以下动态管理对象中获取 *session_id* ：
 

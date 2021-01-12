@@ -1,6 +1,6 @@
 ---
 description: sys.dm_broker_connections (Transact-SQL)
-title: sys. dm_broker_connections (Transact-sql) |Microsoft Docs
+title: sys.dm_broker_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8ce810ed6014710b6d4a9a3cb61da9fe4e0605cd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: e95fce78ca6b416de83f9cf5ec991a131b054839
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537666"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099982"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89537666"
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|连接的标识符。 可以为 null.|  
 |**transport_stream_id**|**uniqueidentifier**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网络接口的标识符 (将此连接所使用的 SNI) 连接用于 tcp/ip 通信。 可以为 null.|  
-|State|**smallint**|连接的当前状态。 可以为 null. 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已关闭|  
+|**state**|**smallint**|连接的当前状态。 可以为 null. 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已关闭|  
 |**state_desc**|**nvarchar(60)**|连接的当前状态。 可以为 null. 可能的值：<br /><br /> 新增功能<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|打开连接的日期和时间。 可以为 null.|  
 |**login_time**|**datetime**|连接登录成功的日期和时间。 可以为 null.|  
@@ -69,7 +69,7 @@ ms.locfileid: "89537666"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|到|关系|  
+|From|目标|Relationship|  
 |----------|--------|------------------|  
 |**dm_broker_connections.connection_id**|**dm_exec_connections.connection_id**|一对一|  
   
