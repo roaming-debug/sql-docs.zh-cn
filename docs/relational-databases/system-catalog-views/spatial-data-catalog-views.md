@@ -11,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0254566d2d388bdad78ed92b84f9e7f2d63865a8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ad3a1c13b6457e24ed8499579f9db4e69b7d3250
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550519"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096833"
 ---
 # <a name="spatial-data-catalog-views"></a>空间数据目录视图
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89550519"
  [sys.spatial_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
  表示空间索引的主索引信息。  
   
- [sys. spatial_reference_systems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md)  
+ [sys.spatial_reference_systems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md)  
  列出支持的空间引用系统 (SRID)。  
   
   

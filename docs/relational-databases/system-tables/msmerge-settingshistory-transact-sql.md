@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_settingshistory system table
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 841f2986d09bd048f857e45a8bde3c5db6d0fc70
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 10beb9d65bba15ef0b21acd2242fcbaf1d515dca
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545590"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098575"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_settingshistory**表用于维护对合并复制的项目和发布属性所做更改的历史记录，其中每个更改合并复制拓扑。 此表还存储有关设置初始属性设置条件的信息。 该表存储在发布数据库和订阅数据库中。  
+  **MSmerge_settingshistory** 表用于维护对合并复制的项目和发布属性所做更改的历史记录，其中每个更改合并复制拓扑。 此表还存储有关设置初始属性设置条件的信息。 该表存储在发布数据库和订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "89545590"
 |propertyname|**sysname**|设置或更改的属性的名称|  
 |**previousvalue**|**sysname**|被更改的属性的以前的属性值。|  
 |**newvalue**|**sysname**|更改后或创建时的属性值。|  
-|**eventtext**|**nvarchar (2000) **|说明事件的字符串。|  
+|**eventtext**|**nvarchar (2000)**|说明事件的字符串。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

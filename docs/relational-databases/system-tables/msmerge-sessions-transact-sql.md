@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8bcfbf7faab359bec8241428aad9e471d4ed79be
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7247b3a8cf652de741fedf08a5141f6090fbcae8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545615"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098589"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_sessions**表包含历史记录行，其中包含之前合并代理作业会话的结果。 每运行一次合并代理，都会在表中添加一个新行。 此表存储在分发数据库中。  
+  **MSmerge_sessions** 表包含历史记录行，其中包含之前合并代理作业会话的结果。 每运行一次合并代理，都会在表中添加一个新行。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

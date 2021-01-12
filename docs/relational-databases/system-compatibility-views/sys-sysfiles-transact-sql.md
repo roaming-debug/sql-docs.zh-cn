@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sysfiles system table
 - sys.sysfiles compatibility view
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: dfc6430023a4123e029ebdec4f2fca56491b3632
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 862ffbdd0967068ef1b8345176edb4551e542196
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455099"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099058"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88455099"
 |**groupid**|**smallint**|文件组标识号。|  
 |**大小**|**int**|文件大小（8 KB 页）。|  
 |**maxsize**|**int**|最大文件大小（以 8 KB 为单位的页）。<br /><br /> 0 = 无增长。<br /><br /> -1 = 文件将一直增长到磁盘充满为止。<br /><br /> 268435456 = 日志文件将增长到最大大小 2 TB。<br /><br /> 注意：如果使用无限制的日志文件大小升级的数据库，日志文件的最大大小将报告为-1。|  
-|**年**|**int**|数据库的增长大小。 根据 **状态**的值，可以是页数或文件大小的百分比。<br /><br /> 0 = 无增长。|  
+|**年**|**int**|数据库的增长大小。 根据 **状态** 的值，可以是页数或文件大小的百分比。<br /><br /> 0 = 无增长。|  
 |**status**|**int**|以兆字节 (MB) 或 kb (KB) **增长** 值的状态位。<br /><br /> 0x2 = 磁盘文件。<br /><br /> 0x40 = 日志文件。<br /><br /> 0x100000 = 增长。 该值是百分比，不是页数。|  
 |**性能**|**int**|保留。|  
 |name|**sysname**|文件的逻辑名称。|  

@@ -1,6 +1,6 @@
 ---
 description: sys.server_event_session_targets (Transact-SQL)
-title: sys. server_event_session_targets (Transact-sql) |Microsoft Docs
+title: sys.server_event_session_targets (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_session_targets catalog view
 - xe
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 931941d6d660f90030211c9baa47907cf7531007
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a3b36cfd632ec01ab483021f7ee9705d7871540d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551384"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097886"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89551384"
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |target_id|**int**|目标的 ID。 ID 在事件会话对象中是唯一的。 不可为 null。|  
 |name|**sysname**|事件目标的名称。 不可为 null。|  
-|包|**sysname**|包含事件目标的事件包的名称。 不可为 null。|  
+|程序包|**sysname**|包含事件目标的事件包的名称。 不可为 null。|  
 |name|**sysname**|包含事件目标的模块的名称。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
@@ -47,9 +47,9 @@ ms.locfileid: "89551384"
 ## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-| From | 到 | 关系 |
+| From | 目标 | Relationship |
 | ---- | -- | ------------ |
-|sys.server_event_session_targets.event_session_id|sys. server_event_sessions event_session_id|多对一|  
+|sys.server_event_session_targets.event_session_id|sys.server_event_sessions sys.server_event_sessions.event_session_id|多对一|  
   
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

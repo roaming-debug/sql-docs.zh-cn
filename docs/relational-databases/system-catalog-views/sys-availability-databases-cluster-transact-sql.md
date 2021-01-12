@@ -1,6 +1,6 @@
 ---
 description: sys.availability_databases_cluster (Transact-SQL)
-title: sys. availability_databases_cluster (Transact-sql) |Microsoft Docs
+title: sys.availability_databases_cluster (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3d600d524c5bee67113c98065989b0706acbd0f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 1316bf5c7a619eb5f9c204ec32e1ac6e63e5d4bb
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551482"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099217"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,17 +41,17 @@ ms.locfileid: "89551482"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|数据库参与其中的可用性组（如果有）的唯一标识符。<br /><br /> NULL = 数据库不是可用性组中的可用性副本的一部分。|  
-|**group_database_id**|**uniqueidentifier**|数据库在其参与的可用性组（如果有）中的唯一标识符。 对于主副本上的此数据库以及已将数据库联接到可用性组的每个辅助副本， **group_database_id**都是相同的。<br /><br /> NULL = 数据库不是任何可用性组中的可用性副本的一部分。|  
+|**group_database_id**|**uniqueidentifier**|数据库在其参与的可用性组（如果有）中的唯一标识符。 对于主副本上的此数据库以及已将数据库联接到可用性组的每个辅助副本， **group_database_id** 都是相同的。<br /><br /> NULL = 数据库不是任何可用性组中的可用性副本的一部分。|  
 |**database_name**|**sysname**|已添加到可用性组的数据库的名称。|  
   
 ## <a name="permissions"></a>权限  
- 如果 **availability_databases_cluster** 的调用方不是数据库的所有者，则查看对应行所需的最小权限为 ALTER any DATABASE 或 VIEW any database 服务器级权限，或 **master** 数据库中的 CREATE database 权限。  
+ 如果 **sys.availability_databases_cluster** 的调用方不是数据库的所有者，则查看对应行所需的最小权限为 ALTER any DATABASE 或 VIEW any database 服务器级权限，或 **master** 数据库中的 CREATE database 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. dm_hadr_database_replica_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   
- [sys. dm_hadr_database_replica_cluster_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)   
+ [sys.dm_hadr_database_replica_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   
+ [sys.dm_hadr_database_replica_cluster_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

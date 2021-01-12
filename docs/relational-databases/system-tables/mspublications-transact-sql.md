@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublications system table
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0d11bb73f18dc750f32c6f7ba2ee02487324e946
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 089270c4c95b35e25f44339a7f001b5ac194ec01
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89524255"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098167"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89524255"
 |**allow_pull**|**bit**|指示是否可为给定发布创建请求订阅。|  
 |**allow_anonymous**|**bit**|指示是否可为给定发布创建匿名订阅。|  
 |description|**nvarchar(255)**|发布的说明。|  
-|**vendor_name**|**nvarchar (100) **|供应商的名称（如果发布服务器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）。|  
+|**vendor_name**|**nvarchar (100)**|供应商的名称（如果发布服务器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）。|  
 |**保留**|**int**|发布的保持期（以小时为单位）。|  
 |**sync_method**|**int**|同步方法包括：<br /><br /> **0** = 本机 (生成) 的所有表的本机模式大容量复制输出。<br /><br /> **1** = 字符 (生成) 的所有表的字符模式大容量复制输出。<br /><br /> **3** = 并发 (生成所有表的本机模式大容量复制输出，但在快照) 期间不锁定表。<br /><br /> **4** = Concurrent_c (生成所有表的字符模式大容量复制输出，但在快照过程中并不锁定表) <br /><br /> 值 **3** 和 **4** 可用于事务复制和合并复制，但不适用于快照复制。|  
 |**allow_subscription_copy**|**bit**|启用或禁用对订阅此发布的订阅数据库的复制功能。 **0** 表示禁用复制， **1** 表示启用复制。|  

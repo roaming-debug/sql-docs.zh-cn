@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobstepslogs system table
 ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 067edf1d3c58df81eac4e49a6ea8d73385d7e21c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 815133f093a108d7f1e4b9841ffbd3310b3dd758
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544556"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097410"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89544556"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**int**|作业步骤日志的 ID。|  
-|**日志**|**nvarchar(max)**|作业步骤日志内容。|  
+|**log**|**nvarchar(max)**|作业步骤日志内容。|  
 |**date_created**|**datetime**|创建作业步骤日志的日期和时间。|  
 |**date_modified**|**datetime**|上次修改作业步骤日志的日期和时间。|  
 |**log_size**|**int**|作业步骤日志的大小（以字节为单位）。|  

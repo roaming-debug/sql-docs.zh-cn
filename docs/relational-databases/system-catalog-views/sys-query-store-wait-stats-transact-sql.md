@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ab48b6155e26873c22a3b951ef65705d3addd79
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d3df8f87d73ac8ca25fe2e7e83d7bbc3d0da01f2
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466918"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097953"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-sql) 
 
@@ -56,7 +56,7 @@ ms.locfileid: "97466918"
 |整数值|等待类别|等待类型包括在类别中|  
 |-----------------|---------------|-----------------|  
 |**0**|**Unknown**|未知 |  
-|**1**|**CPU**|SOS_SCHEDULER_YIELD|
+|**1**|CPU |SOS_SCHEDULER_YIELD|
 |**2**|**工作线程**|THREADPOOL|
 |**3**|**Lock**|LCK_M_%|
 |**4**|**闩锁**|LATCH_%|
@@ -66,7 +66,7 @@ ms.locfileid: "97466918"
 |_ *8**|**SQL CLR**|CLR%，SQLCLR%|
 |**9**|**镜像**|DBMIRROR%|
 |**10**|**事务**|事务%，DTC%，TRAN_MARKLATCH_%，MSQL_XACT_%，TRANSACTION_MUTEX|
-|**11**|**闲置**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_QUEUE、XE_TIMER_EVENT|
+|**11**|**时间**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_QUEUE、XE_TIMER_EVENT|
 |**12**|**预防**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(但不 BROKER_RECEIVE_WAITFOR)**|
 |**14**|**事务日志 IO**|数据库准备、LOGBUFFER、LOGMGR_RESERVE_APPEND、LOGMGR_FLUSH、LOGMGR_PMM_LOG、CHKPT.、WRITELOG|

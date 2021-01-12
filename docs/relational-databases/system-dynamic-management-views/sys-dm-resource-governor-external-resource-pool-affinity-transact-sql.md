@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_resource_governor_external_resource_pool_affinity (Transact-sql) '
-title: sys. dm_resource_governor_external_resource_pool_affinity (Transact-sql) |Microsoft Docs
+description: 'sys.dm_resource_governor_external_resource_pool_affinity (Transact-sql) '
+title: sys.dm_resource_governor_external_resource_pool_affinity (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - sys.dm_resource_governor_external_resource_pool_affinity
 - dm_resource_governor_external_resource_pool_affinity
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9ad8fa57e43d1b456434f007e224464af11aa53e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: eef4f3a36c61a24a1a90c5904db578634a791a80
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546482"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097501"
 ---
-# <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys. dm_resource_governor_external_resource_pool_affinity (Transact-sql) 
+# <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys.dm_resource_governor_external_resource_pool_affinity (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
@@ -51,7 +51,7 @@ ms.locfileid: "89546482"
 
 [SQL Server 中机器学习的资源调控](../../machine-learning/administration/resource-governor.md)
 
-[sys. dm_resource_governor_resource_pool_affinity &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[sys.dm_resource_governor_resource_pool_affinity &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
 [“已启用外部脚本”服务器配置选项](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 

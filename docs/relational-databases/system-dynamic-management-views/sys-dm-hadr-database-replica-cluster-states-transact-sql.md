@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
-title: sys. dm_hadr_database_replica_cluster_states (Transact-sql) |Microsoft Docs
+title: sys.dm_hadr_database_replica_cluster_states (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_database_replica_cluster_states dynamic management view
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 11f2e6ddb0a51170ebf9da0ed4f5f9d673359e03
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f97172a1f417b237a8e1ee4d16fc573cd94f571d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543862"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097656"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  返回一行信息，这些信息可便于洞察 Windows Server 故障转移群集 (WSFC) 上每个 AlwaysOn 可用性组中的可用性数据库的运行状况。 查询 " **dm_hadr_database_replica_states** "，回答以下问题：  
+  返回一行信息，这些信息可便于洞察 Windows Server 故障转移群集 (WSFC) 上每个 AlwaysOn 可用性组中的可用性数据库的运行状况。 查询 **sys.dm_hadr_database_replica_states** 回答以下问题：  
   
 -   可用性组中的所有数据库是否都已做好故障转移准备？  
   

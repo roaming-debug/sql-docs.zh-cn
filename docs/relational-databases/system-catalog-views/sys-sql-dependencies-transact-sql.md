@@ -1,6 +1,6 @@
 ---
 description: sys.sql_dependencies (Transact-SQL)
-title: sys. sql_dependencies (Transact-sql) |Microsoft Docs
+title: sys.sql_dependencies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_dependencies catalog view
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6dc1bb60a075f75aabb737a0eccc35b8269f8db2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7c20d20cedd1304136af2d57f599aa2797dd4eee
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548649"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099177"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89548649"
   对在定义另一引用对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式或语句中引用的被引用的实体的每一依赖关系，均存在对应的一行。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改用 [sys.databases sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 。  
 
   
 |列名称|数据类型|说明|  

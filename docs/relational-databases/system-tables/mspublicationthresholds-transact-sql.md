@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSpublicationthresholds system table
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8f43705f8fec92e39e55a4fa4f62cf24aa9f25be
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3fc1c3f5290e5c3f540e070c2de5790414ffb6dd
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540290"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098208"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSpublicationthresholds**表用于跟踪发布的复制性能指标，其中每一行对应于所监视的每个阈值。 此表存储在分发数据库中。  
+  **MSpublicationthresholds** 表用于跟踪发布的复制性能指标，其中每一行对应于所监视的每个阈值。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cce33fa91f6ea11cda33e622edd39ec764b2c2ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2f44fb1f1b07b53705b45825955918c3026a2485
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537803"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097309"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "89537803"
 |**alert_id**|**int**|警报的 ID。|  
 |**status**|**int**|用户定义的值：<br /><br /> **0** = 通往。<br /><br /> **1** = 服务。|  
 |**agent_type**|**int**|代理类型：<br /><br /> **1** = 快照代理。<br /><br /> **2** = 日志读取器代理。<br /><br /> **3** = 分发代理。<br /><br /> **4** = 合并代理。|  
-|**agent_id**|**int**|表中的代理 ID **MSsnapshot_agents**、 **MSlogreader_agents**、 **MSdistribution_agents**或 **MSmerge_agents**。|  
-|**error_id**|**int**|存储在 **MSrepl_errors**中的错误的 ID。|  
+|**agent_id**|**int**|表中的代理 ID **MSsnapshot_agents**、 **MSlogreader_agents**、 **MSdistribution_agents** 或 **MSmerge_agents**。|  
+|**error_id**|**int**|存储在 **MSrepl_errors** 中的错误的 ID。|  
 |**alert_error_code**|**int**|将此记录记入日志时所引发警报的消息 ID。|  
 |**time**|**datetime**|插入记录的时间。|  
 |**publisher**|**sysname**|与激发此警报的代理相关联的发布服务器的名称。|  

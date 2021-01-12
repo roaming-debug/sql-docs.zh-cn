@@ -19,15 +19,15 @@ helpviewer_keywords:
 - syscolumns system table
 - sys.syscolumns compatibility view
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae2c5a8353b896e418f15744e7b4e527183a9e79
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a9ecd4982135135fbf23c700a30318d86026d266
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466958"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099188"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "97466958"
 |**offset**|**smallint**|此列所在行的偏移量。|  
 |**collationid**|**int**|列的排序规则的 ID。 对于非字符列，此值为 NULL。|  
 |**status**|**tinyint**|用于说明列或参数的属性的位图：<br /><br /> 0x08 = 列允许空值。<br /><br /> 0x10 = 在添加 **varchar** 或 **varbinary** 列后，ANSI 填充已生效。 为 **varchar** 保留尾随空格，并保留 **varbinary** 列的尾随零。<br /><br /> 0x40 = 参数为 OUTPUT 参数。<br /><br /> 0x80 = 列为标识列。|  
-|**type**|**tinyint**|**Sys** 中的物理存储类型。**类型**。|  
+|type|**tinyint**|**Sys** 中的物理存储类型。**类型**。|  
 |**usertype**|**smallint**|**Sys.databases 类型** 的用户定义数据类型的 ID。 如果数据类型的数字超过 32,767，则溢出或返回 NULL。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|此列的精度级别。<br /><br /> -1 = **xml** 或大值类型。|  

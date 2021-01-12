@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_primary system table
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f349cd5cfc01141ea7127847cb9006adfeaa3bad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 076398da53bf4886a0b8e3f387df949d29cb8b03
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547154"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098687"
 ---
 # <a name="log_shipping_monitor_primary-transact-sql"></a>log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89547154"
 |**backup_threshold**|**int**|备份操作之间的占用时间阈值（分钟），一旦超过此值，就会生成警报。|  
 |**threshold_alert**|**int**|超过备份阈值时引发的警报。|  
 |**threshold_alert_enabled**|**bit**|确定是否启用备份阈值警报。 1 = 启用。<br /><br /> 0 = 禁用。|  
-|**last_backup_file**|**nvarchar (500) **|最近一次事务日志备份的绝对路径。|  
+|**last_backup_file**|**nvarchar (500)**|最近一次事务日志备份的绝对路径。|  
 |**last_backup_date**|**datetime**|上一次在主数据库上执行事务日志备份操作的时间和日期。|  
 |**last_backup_date_utc**|**datetime**|上一次在主数据库上执行事务日志备份操作的时间和日期，使用协调世界时表示。|  
 |**history_retention_period**|**int**|日志传送历史记录在删除前保留在给定主数据库中的时间（分钟）。|  

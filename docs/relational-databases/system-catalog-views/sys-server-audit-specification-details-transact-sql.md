@@ -1,6 +1,6 @@
 ---
 description: sys.server_audit_specification_details (Transact-SQL)
-title: sys. server_audit_specification_details (Transact-sql) |Microsoft Docs
+title: sys.server_audit_specification_details (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -18,30 +18,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audit_specification_details catalog view
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 20f119f3db641ebffd61ba4465abeea3c99515e5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 714a6804a75342b732d88bd0442997fc8be362f1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550399"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097938"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  包含服务器实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核中的服务器审核规范详细信息（操作）的相关信息。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 有关所有 audit_action_id 及其名称的列表，请查询 [dm_audit_actions sys.databases &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)。  
+  包含服务器实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核中的服务器审核规范详细信息（操作）的相关信息。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 有关所有 audit_action_id 及其名称的列表，请 [&#40;transact-sql&#41;查询 sys.dm_audit_actions ](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |server_specification_id|**int**|审核服务器规范的 ID|  
 |audit_action_id|**int**|审核操作的 ID|  
 |audit_action_name|**sysname**|组名称或审核操作名称|  
-|class|**tinyint**|预留|  
-|class_desc|**nvarchar(60)**|预留|  
-|major_id|**int**|预留|  
-|minor_id|**int**|预留|  
-|audited_principal_id|**int**|预留|  
+|class|**tinyint**|保留|  
+|class_desc|**nvarchar(60)**|保留|  
+|major_id|**int**|保留|  
+|minor_id|**int**|保留|  
+|audited_principal_id|**int**|保留|  
 |audited_result|**nvarchar(60)**|审核结果：<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|审核对象是否为组：<br /><br /> 0 - 不是组<br /><br /> 1 - 组|  
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - syspublications system table
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 20b5615cc4f0b11b05eb69f4233e20f7a7379378
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8ba6fbe6033bff1f113a0ee128357d49a1f57e7f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550962"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097308"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "89550962"
 |**autogen_sync_procs**|**bit**|指定是否在发布服务器中为立即更新订阅生成同步存储过程。 **1** 表示在发布服务器上生成它。|  
 |**保留**|**int**|为给定发布保存的更改数量（小时）。|  
 |**allowed_queued_tran**|**bit**|指定是否启用在订阅服务器上对更改进行排队，直到更改可以在发布服务器上应用为止。 如果为 **1**，则订阅服务器上的更改将排队。|  
-|**snapshot_in_defaultfolder**|**bit**|指定是否在默认文件夹中存储快照文件。<br /><br /> **0** = 快照文件存储在 *alternate_snapshot_folder*指定的备用位置。<br /><br /> **1** = 可以在默认文件夹中找到快照文件。|  
+|**snapshot_in_defaultfolder**|**bit**|指定是否在默认文件夹中存储快照文件。<br /><br /> **0** = 快照文件存储在 *alternate_snapshot_folder* 指定的备用位置。<br /><br /> **1** = 可以在默认文件夹中找到快照文件。|  
 |**alt_snapshot_folder**|**nvarchar(255)**|指定快照的备用文件夹的位置。|  
 |**pre_snapshot_script**|**nvarchar(255)**|指定指向 **.sql** 文件位置的指针。 在订阅服务器上应用快照时，分发代理将在运行任何复制的对象脚本之前运行快照前脚本。|  
 |**post_snapshot_script**|**nvarchar(255)**|指定指向 **.sql** 文件位置的指针。 在初始同步过程中，分发代理将在应用所有其他复制的对象脚本和数据之后运行快照后脚本。|  
@@ -59,7 +59,7 @@ ms.locfileid: "89550962"
 |**ftp_port**|**int**|分发服务器的 FTP 服务的端口号。 指定发布快照文件的位置，以便分发代理选择|  
 |**ftp_subdirectory**|**nvarchar(255)**|指定当发布支持使用 FTP 传播快照时的快照文件的位置以供分发代理获取。|  
 |**ftp_login**|**sysname**|用于连接到 FTP 服务的用户名。|  
-|**ftp_password**|**nvarchar (524) **|用于连接到 FTP 服务的用户密码。|  
+|**ftp_password**|**nvarchar (524)**|用于连接到 FTP 服务的用户密码。|  
 |**allow_dts**|**bit**|指定发布是否允许数据转换。 **1** 指定允许 DTS 转换。|  
 |**allow_subscription_copy**|**bit**|指定是否已启用复制订阅该发布的订阅数据库的功能。 **1** 表示允许复制。|  
 |**centralized_conflicts**|**bit**|指定冲突记录是否存储在发布服务器上：<br /><br /> **0** = 在导致冲突的发布服务器和订阅服务器上存储冲突记录。<br /><br /> **1** = 冲突记录存储在发布服务器上。|  

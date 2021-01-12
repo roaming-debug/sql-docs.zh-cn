@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublications system table
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 61a1845ac54b42148b468462835cf041844007bc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a97462b4224244633a945f2108370b8c4f549f63
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540949"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098232"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,16 +43,16 @@ ms.locfileid: "89540949"
 |**allow_queued_tran**|**bit**|指定是否启用在订阅服务器上对更改进行排队，直到更改可以在发布服务器上应用为止。 如果为 **1**，则订阅服务器上的更改将排队。 *非 SQL 发布服务器不支持此列。*|  
 |**allow_sync_tran**|**bit**|指定是否允许对发布使用立即更新订阅。 **1** 表示允许立即更新订阅。 *非 SQL 发布服务器不支持此列。*|  
 |**autogen_sync_procs**|**bit**|指定是否在发布服务器中为立即更新订阅生成同步存储过程。 **1** 表示在发布服务器上生成它。 *非 SQL 发布服务器不支持此列。*|  
-|**snapshot_in_defaultfolder**|**bit**|指定是否在默认文件夹中存储快照文件。 如果为 **0**，则将快照文件存储在 *alternate_snapshot_folder*指定的备用位置中。 如果为 **1**，则可以在默认文件夹中找到快照文件。|  
-|**alt_snapshot_folder**|**nvarchar (510) **|指定快照的备用文件夹的位置。|  
-|**pre_snapshot_script**|**nvarchar (510) **|指定指向 **.sql** 文件位置的指针。 在订阅服务器上应用快照时，分发代理将在运行任何复制的对象脚本之前运行快照前脚本。|  
-|**post_snapshot_script**|**nvarchar (510) **|指定指向 **.sql** 文件位置的指针。 在初始同步过程中，分发代理将在应用所有其他复制的对象脚本和数据之后运行快照后脚本。|  
+|**snapshot_in_defaultfolder**|**bit**|指定是否在默认文件夹中存储快照文件。 如果为 **0**，则将快照文件存储在 *alternate_snapshot_folder* 指定的备用位置中。 如果为 **1**，则可以在默认文件夹中找到快照文件。|  
+|**alt_snapshot_folder**|**nvarchar (510)**|指定快照的备用文件夹的位置。|  
+|**pre_snapshot_script**|**nvarchar (510)**|指定指向 **.sql** 文件位置的指针。 在订阅服务器上应用快照时，分发代理将在运行任何复制的对象脚本之前运行快照前脚本。|  
+|**post_snapshot_script**|**nvarchar (510)**|指定指向 **.sql** 文件位置的指针。 在初始同步过程中，分发代理将在应用所有其他复制的对象脚本和数据之后运行快照后脚本。|  
 |**compress_snapshot**|**bit**|指定写入 *alt_snapshot_folder* 位置的快照将压缩为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 **0** 指定不压缩快照。|  
 |**ftp_address**|**sysname**|分发服务器的 FTP 服务的网络地址。 指定发布快照文件所在的位置以供分发代理拾取。|  
 |**ftp_port**|**int**|分发服务器的 FTP 服务的端口号。 指定发布快照文件的位置，以便分发代理选择|  
-|**ftp_subdirectory**|**nvarchar (510) **|指定如果发布支持使用 FTP 传播快照，分发代理应从何处拾取快照文件。|  
+|**ftp_subdirectory**|**nvarchar (510)**|指定如果发布支持使用 FTP 传播快照，分发代理应从何处拾取快照文件。|  
 |**ftp_login**|**nvarchar(256)**|用于连接到 FTP 服务的用户名。|  
-|**ftp_password**|**nvarchar (1048) **|用于连接到 FTP 服务的用户密码。|  
+|**ftp_password**|**nvarchar (1048)**|用于连接到 FTP 服务的用户密码。|  
 |**allow_dts**|**bit**|指定发布允许数据转换。 **1** 指定允许 DTS 转换。 *非 SQL 发布服务器不支持此列。*|  
 |**allow_anonymous**|**bit**|指示是否允许对发布使用匿名订阅，其中 **1** 表示允许使用匿名订阅。|  
 |**centralized_conflicts**|**bit**|指定冲突记录是否存储在发布服务器上：<br /><br /> **0** = 在导致冲突的发布服务器和订阅服务器上存储冲突记录。<br /><br /> **1** = 冲突记录存储在发布服务器上。<br /><br /> *非 SQL 发布服务器不支持此列。*|  
@@ -69,7 +69,7 @@ ms.locfileid: "89540949"
 |**保留**|**int**|为给定发布保存的更改数量（小时）。|  
 |**allow_subscription_copy**|**bit**|指定是否已启用复制订阅该发布的订阅数据库的功能。 **1** 表示允许复制。|  
 |**allow_initialize_from_backup**|**bit**|指示订阅服务器是否能够从备份而不是从初始快照来初始化对此发布的订阅。 **1** 表示可以从备份中初始化订阅， **0** 表示不能。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。 *非 SQL 发布服务器不支持此列。*|  
-|**min_autonosync_lsn**|**二进制 (1) **|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**min_autonosync_lsn**|**二进制 (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|指示发布是否支持架构复制。 **1** 指示复制在发布服务器上执行的 ddl 语句， **0** 指示不复制 ddl 语句。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。 *非 SQL 发布服务器不支持此列。*|  
 |**options**|**int**|指定其他发布选项的位图，其中位选项值包括：<br /><br /> **0x1** -已启用对等复制。<br /><br /> **0x2** -仅发布本地更改。<br /><br /> **0x4** -为非 SQL Server 订阅服务器启用。|  
   

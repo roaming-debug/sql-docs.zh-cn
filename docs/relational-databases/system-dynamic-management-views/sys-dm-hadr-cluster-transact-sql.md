@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_cluster (Transact-SQL)
-title: sys. dm_hadr_cluster (Transact-sql) |Microsoft Docs
+title: sys.dm_hadr_cluster (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2019
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b8bc19f3e73c00c2148cba2fb0381d73a36d6eb2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: aa289a58047e1108e94a6b70f86eb366807f5af1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532953"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097638"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  如果承载启用了的实例的 Windows Server 故障转移群集 (WSFC) 节点 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 具有 WSFC 仲裁，则 **dm_hadr_cluster** 会返回一个显示群集名称和有关仲裁的信息的行。 如果 WSFC 节点没有仲裁，则不返回任何行。  
+  如果 Windows Server 故障转移群集 (为启用了具有 WSFC 仲裁的实例而承载的实例的 WSFC) 节点 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ，则 **sys.dm_hadr_cluster** 会返回一个显示群集名称和有关仲裁的信息的行。 如果 WSFC 节点没有仲裁，则不返回任何行。  
  > [!TIP]
  > 从开始 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ，此动态管理视图除了支持 Always On 可用性组外，还支持 Always On 故障转移群集实例。
 
@@ -39,9 +39,9 @@ ms.locfileid: "89532953"
 |-----------------|---------------|-----------------|  
 |**cluster_name**|**nvarchar(128)**|承载启用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 实例的 WSFC 群集的名称。|  
 |**quorum_type**|**tinyint**|此 WSFC 群集使用的仲裁的类型，可为下列值之一：<br /><br /> 0 = 节点的大多数。 此仲裁配置可以承受半数（舍入）减 1 个节点故障。 例如，对于七个节点的群集，此仲裁配置可以承受三个节点故障。<br /><br /> 1 = 节点和磁盘的大多数。 如果磁盘见证服务器保持联机，此仲裁配置可以承受半数（舍入）节点故障。 例如，一个磁盘见证服务器保持联机的六节点群集可以承受三个节点故障。 如果磁盘见证服务器脱机或失败，此仲裁配置可以承受半数（舍入）减 1 个节点故障。 例如，一个磁盘见证服务器已失败的六节点群集可以承受两个 (3-1=2) 节点故障。<br /><br /> 2 = 节点和文件共享的大多数。 此仲裁配置的工作方式与“节点和磁盘的大多数”的工作方式类似，但使用文件共享见证服务器而不是磁盘见证服务器。<br /><br /> 3 = 无大多数: 仅限磁盘。 如果仲裁磁盘联机，此仲裁配置可以承受除一个节点之外的所有节点故障。<br /><br /> 4 = 未知仲裁。 群集的未知仲裁。<br /><br /> 5 = 云见证。 群集利用 Microsoft Azure 进行仲裁仲裁。 如果云见证可用，则群集可能会占用一半节点的故障， (向上舍入) 。|  
-|**quorum_type_desc**|**varchar(50)**|**Quorum_type**的说明，请执行以下操作之一：<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY <br /><br /> UNKNOWN_QUORUM <br /><br /> CLOUD_WITNESS|  
+|**quorum_type_desc**|**varchar(50)**|**Quorum_type** 的说明，请执行以下操作之一：<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY <br /><br /> UNKNOWN_QUORUM <br /><br /> CLOUD_WITNESS|  
 |**quorum_state**|**tinyint**|WSFC 仲裁的状态，可为下列值之一：<br /><br /> 0 = 未知仲裁状态<br /><br /> 1 = 标准仲裁<br /><br /> 2 = 强制仲裁|  
-|**quorum_state_desc**|**varchar(50)**|**Quorum_state**的说明，请执行以下操作之一：<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
+|**quorum_state_desc**|**varchar(50)**|**Quorum_state** 的说明，请执行以下操作之一：<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  

@@ -14,19 +14,18 @@ f1_keywords:
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- database_query_store_options catalog view
 - sys.database_query_store_options catalog view
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: ''
-ms.date: 05/27/2020
+ms.date: 1/8/2021
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8fce0932d546470206bbc7752429090c0212158
-ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
+ms.openlocfilehash: 273e5c4446853c3f44d0c99535880c9c9da2aa5f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98005408"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098048"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-sql) 
 
@@ -49,12 +48,17 @@ ms.locfileid: "98005408"
 |**max_storage_size_mb**|**bigint**|查询存储的最大磁盘大小（mb (MB) ）。 默认值为 **100** MB，最大为 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] **1 GB** （从开始） [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 。<br />对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 高级版，默认值为 1 GB，对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 10 MB。<br /><br /> 使用语句进行更改 `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` 。|  
 |**stale_query_threshold_days**|**bigint**|查询的信息在查询存储中保留的天数。 默认值为 **30**。 设置为0可禁用保留策略。<br />对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 7 天。<br /><br /> 使用语句进行更改 `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` 。|  
 |**max_plans_per_query**|**bigint**|限制最大存储计划数。 默认值为 **200**。 如果达到最大值，查询存储将停止捕获该查询的新计划。 如果设置为0，则将删除已捕获计划数的限制。<br /><br /> 使用语句进行更改 `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` 。|  
-|**query_capture_mode**|**smallint**|当前处于活动状态的查询捕获模式：<br /><br /> **1** = 所有-捕获所有查询。 这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本) 的默认配置值。<br /><br /> 2 = 根据执行计数和资源消耗自动捕获相关查询。 这是 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 的默认配置值。<br /><br /> 3 = 无-停止捕获新查询。 查询存储将继续为已经捕获的查询收集编译和运行时统计信息。 请谨慎使用此配置，因为可能会遗漏捕获重要的查询。|  
-|**query_capture_mode_desc**|**nvarchar(60)**|查询存储实际捕获模式的文本说明：<br /><br /> 所有 (默认值都 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) <br /><br /> **自动** () 的默认值 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]<br /><br /> NONE|  
+|**query_capture_mode**|**smallint**|当前处于活动状态的查询捕获模式：<br /><br /> **1** = 所有-捕获所有查询。 这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本) 的默认配置值。<br /><br /> 2 = 根据执行计数和资源消耗自动捕获相关查询。 这是 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 的默认配置值。<br /><br /> 3 = 无-停止捕获新查询。 查询存储将继续为已经捕获的查询收集编译和运行时统计信息。 请谨慎使用此配置，因为可能会遗漏捕获重要的查询。 <br /><br /> 4 = 自定义-允许使用 [QUERY_CAPTURE_POLICY 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md#SettingOptions)对查询捕获策略进行更多的控制。<br /> **适用于**：[!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 及更高版本。|  
+|**query_capture_mode_desc**|**nvarchar(60)**|查询存储实际捕获模式的文本说明：<br /><br /> 所有 (默认值都 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) <br /><br /> **自动** () 的默认值 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]<br /><br /> NONE <br /><br /> CUSTOM|  
+|**capture_policy_execution_count**|**int**|查询捕获模式自定义策略选项。 定义在评估期间执行查询的次数。 默认值为 30。<br />**适用于**：[!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 及更高版本。| 
+|**capture_policy_total_compile_cpu_time_ms**|**bigint**|查询捕获模式自定义策略选项。 定义查询在评估期间使用的总编译 CPU 时间。 默认值为 1000。<br /> **适用于**：[!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 及更高版本。|
+|**capture_policy_total_execution_cpu_time_ms**|**bigint**|查询捕获模式自定义策略选项。 定义查询在评估期间使用的总执行 CPU 时间。 默认值为 100。<br /> **适用于**：[!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 及更高版本。|
+|**capture_policy_stale_threshold_hours**|**int**|查询捕获模式自定义策略选项。 定义评估间隔时段以确定是否应捕获查询。 默认值为24小时。<br /> **适用于**：[!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 及更高版本。|
 |**size_based_cleanup_mode**|**smallint**|控制当数据总量接近最大大小时是否自动激活清除：<br /><br /> 0 = 不会自动激活基于大小的清理。<br /><br /> **1** = 如果磁盘上的大小达到 *max_storage_size_mb* 的 **90%** ，将自动激活自动大小的清理。 这是默认的配置值。<br /><br />基于大小的清除首先会删除成本最低和最旧的查询。 达到约 **80%** 的 *max_storage_size_mb* 时，它将停止。|  
 |**size_based_cleanup_mode_desc**|**nvarchar(60)**|查询存储的实际基于大小的清理模式的文本说明：<br /><br /> OFF <br /> **自动** (默认值) |  
 |**wait_stats_capture_mode**|**smallint**|控制查询存储是否执行等待统计信息的捕获： <br /><br /> 0 = OFF <br /> **1** = 开启<br /> **适用于**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及更高版本。|
-|**wait_stats_capture_mode_desc**|**nvarchar(60)**|实际等待统计信息捕获模式的文本说明： <br /><br /> OFF <br /> **在** (默认) <br /> **适用于**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及更高版本。| 
+|**wait_stats_capture_mode_desc**|**nvarchar(60)**|实际等待统计信息捕获模式的文本说明： <br /><br /> OFF <br /> **在** (默认) <br /> **适用于**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及更高版本。|
+|**actual_state_additional_info**|**nvarchar (8000)**|当前未使用。 将来可能会实现。|
   
 ## <a name="permissions"></a>权限  
  需要 `VIEW DATABASE STATE` 权限。  
@@ -71,5 +75,3 @@ ms.locfileid: "98005408"
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
-  
-  

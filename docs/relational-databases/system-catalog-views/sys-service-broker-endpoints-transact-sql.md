@@ -1,6 +1,6 @@
 ---
 description: sys.service_broker_endpoints (Transact-SQL)
-title: sys. service_broker_endpoints (Transact-sql) |Microsoft Docs
+title: sys.service_broker_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_broker_endpoints catalog view
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7ee3bd0e5e09ab2e8511596f3920e0e8408f1b6f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d8e8a6590dedf9c43da14147c503d1e62423e595
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539544"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096678"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Service Broker 端点在此目录视图中占一行。 对于此视图中的每一行，都存在一个对应的行，其中包含具有 TCP 配置元数据的**tcp_endpoints**视图中的相同**endpoint_id** 。 TCP 是唯一允许 Service Broker 使用的协议。  
+  Service Broker 端点在此目录视图中占一行。 对于此视图中的每一行，都有一个对应的行在包含 TCP 配置元数据的 **sys.tcp_endpoints** 视图中具有相同的 **endpoint_id** 。 TCP 是唯一允许 Service Broker 使用的协议。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

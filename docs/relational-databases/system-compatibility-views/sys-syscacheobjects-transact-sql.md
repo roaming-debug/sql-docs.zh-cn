@@ -19,14 +19,14 @@ helpviewer_keywords:
 - syscacheobjects system table
 - sys.syscacheobjects compatibility view
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 25160eb8e7a25e2a4ec6d2f8b318fc78e7af61ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4b33b97a5b3753d63e1df4759d26970cf6359ee2
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399673"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097797"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "88399673"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|存储桶 ID。 该值表示从 0 到（目录大小 - 1）的范围。 目录大小为哈希表的大小。|  
 |**cacheobjtype**|**nvarchar(17)**|缓存中的对象类型：<br /><br /> 编译计划<br /><br /> 可执行计划<br /><br /> 分析树<br /><br /> 游标<br /><br /> 扩展存储过程|  
-|**objtype**|**nvarchar(8)**|对象的类型：<br /><br /> 存储过程<br /><br /> 预定义语句<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)]从**sqlcmd**或**osql**实用工具（而不是远程过程调用）提交作为语言事件的即席查询 () <br /><br /> ReplProc（复制过程）<br /><br /> 触发器<br /><br /> 查看<br /><br /> 默认<br /><br /> 用户表<br /><br /> 系统表<br /><br /> 勾选标记<br /><br /> 规则|  
+|**objtype**|**nvarchar(8)**|对象的类型：<br /><br /> 存储过程<br /><br /> 预定义语句<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)]从 **sqlcmd** 或 **osql** 实用工具（而不是远程过程调用）提交作为语言事件的即席查询 () <br /><br /> ReplProc（复制过程）<br /><br /> 触发器<br /><br /> 视图<br /><br /> 默认<br /><br /> 用户表<br /><br /> 系统表<br /><br /> 检查<br /><br /> 规则|  
 |**objid**|**int**|用于在缓存中查找对象的主键之一。 这是存储在 **sysobjects** 中的数据库对象的对象 ID (过程、视图、触发器等) 上。 对于 "临时" 或 "已准备好的 SQL" 等缓存对象， **objid** 为内部生成的值。|  
 |**dbid**|**smallint**|在其中编译缓存对象的数据库 ID。|  
-|**dbidexec**|**smallint**|执行查询的数据库 ID。<br /><br /> 对于大多数对象， **dbidexec** 与 **dbid**具有相同的值。<br /><br /> 对于系统视图， **dbidexec** 是用于执行查询的数据库 ID。<br /><br /> 对于即席查询， **dbidexec** 为0。 这意味着 **dbidexec** 与 **dbid**具有相同的值。|  
-|**uid**|**smallint**|表示特殊查询计划和已准备好的计划的计划创建者。<br /><br /> -2 = 提交的批处理不依赖于隐式名称解析并可在不同的用户间共享。 这是首选方法。 任何其他值表示数据库中提交查询的用户的用户 ID。<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
+|**dbidexec**|**smallint**|执行查询的数据库 ID。<br /><br /> 对于大多数对象， **dbidexec** 与 **dbid** 具有相同的值。<br /><br /> 对于系统视图， **dbidexec** 是用于执行查询的数据库 ID。<br /><br /> 对于即席查询， **dbidexec** 为0。 这意味着 **dbidexec** 与 **dbid** 具有相同的值。|  
+|**标识号**|**smallint**|表示特殊查询计划和已准备好的计划的计划创建者。<br /><br /> -2 = 提交的批处理不依赖于隐式名称解析并可在不同的用户间共享。 这是首选方法。 任何其他值表示数据库中提交查询的用户的用户 ID。<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
 |**refcounts**|**int**|引用该缓存对象的其他缓存对象数。 计数 1 为基数。|  
 |**usecounts**|**int**|自开始以来使用该缓存对象的次数。|  
 |**pagesused**|**int**|缓存对象占用的页数。|  
@@ -58,7 +58,7 @@ ms.locfileid: "88399673"
 |**lastreads**|**bigint**|仅为保持向后兼容。 始终返回 0。|  
 |**lastwrites**|**bigint**|仅为保持向后兼容。 始终返回 0。|  
 |**sqlbytes**|**int**|过程定义或提交的批处理的长度（以字节为单位）。|  
-|**transact-sql**|**nvarchar(3900)**|模块定义或提交的批处理的前 3900 个字符。|  
+|**sql**|**nvarchar(3900)**|模块定义或提交的批处理的前 3900 个字符。|  
   
 ## <a name="see-also"></a>另请参阅  
  [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  

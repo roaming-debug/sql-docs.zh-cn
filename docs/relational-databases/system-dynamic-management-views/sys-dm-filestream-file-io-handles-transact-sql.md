@@ -1,6 +1,6 @@
 ---
 description: sys.dm_filestream_file_io_handles (Transact-SQL)
-title: sys. dm_filestream_file_io_handles (Transact-sql) |Microsoft Docs
+title: sys.dm_filestream_file_io_handles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_handle catalog view
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7e8e059ad9d10ccd3b8fd0b51299cc91edb5c6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4c92c42554123c96013b8d17721b3d0861154a35
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89533300"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097658"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   显示命名空间所有者 (NSO) 已知的文件句柄。 此视图显示了使用 **OpenSqlFilestream** 获取的客户端的 Filestream 句柄。  
   
-|列|类型|说明|  
+|列|类型|描述|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|显示与客户端的句柄关联的内部 NSO 结构的地址。 可以为 Null。|  
 |**creation_request_id**|**int**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 不可为 null。|  
@@ -39,7 +39,7 @@ ms.locfileid: "89533300"
 |**handle_id**|**int**|显示驱动程序分配给此句柄的唯一 ID。 不可为 null。|  
 |**creation_client_thread_id**|**varbinary(8)**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 可以为 Null。|  
 |**creation_client_process_id**|**varbinary(8)**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 可以为 Null。|  
-|**filestream_transaction_id**|**varbinary(128)**|显示与给定句柄相关联的事务的 ID。 这是 **get_filestream_transaction_context** 函数返回的值。 使用此字段可以联接到 **sys.databases. dm_filestream_file_io_requests** 视图。 可以为 Null。|  
+|**filestream_transaction_id**|**varbinary(128)**|显示与给定句柄相关联的事务的 ID。 这是 **get_filestream_transaction_context** 函数返回的值。 使用此字段可以联接到 " **sys.dm_filestream_file_io_requests** " 视图。 可以为 Null。|  
 |**access_type**|**nvarchar(60)**|不可为 null。|  
 |**logical_path**|**nvarchar(256)**|显示此句柄打开的文件的逻辑路径名。 这与返回的路径相同 **。** **Varbinary** 的 PathName 方法 (**max**) filestream。 可以为 Null。|  
 |**physical_path**|**nvarchar(256)**|显示文件的实际 NTFS 路径名。 这与返回的路径相同 **。** **Varbinary** (**Max**) filestream 的 .physicalpathname 方法。 它由跟踪标志 5556 启用。 可以为 Null。|  

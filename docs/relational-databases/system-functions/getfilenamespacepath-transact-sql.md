@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 046ff4071ae4ac45338d45916afeb9d2491d2d6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9ecda7d44603636ff12eef955dd83e7659cb9dc7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419571"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097477"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88419571"
  *列名*  
  VARBINARY (MAX) **file_stream** 列的列名称。  
   
- *列名*的值必须是有效的列名称。 它不能是表达式，也不能是从其他数据类型的列转换或强制转换的值。  
+ *列名* 的值必须是有效的列名称。 它不能是表达式，也不能是从其他数据类型的列转换或强制转换的值。  
   
  *is_full_path*  
  整数表达式，指定是返回相对路径还是绝对路径。 *is_full_path* 可以具有以下值之一：  
@@ -51,8 +51,8 @@ ms.locfileid: "88419571"
 |**0**|返回数据库级目录内的相对路径。<br /><br /> 此为默认值。|  
 |**1**|返回以 `\\computer_name` 开头的完整 UNC 路径。|  
   
- *\@选*  
- 一个整数表达式，定义路径的服务器组件应如何进行格式化。 * \@ 选项*可以具有以下值之一：  
+ *\@选项*  
+ 一个整数表达式，定义路径的服务器组件应如何进行格式化。 *\@ 选项* 可以具有以下值之一：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -68,7 +68,7 @@ ms.locfileid: "88419571"
  当数据库属于 Always On 可用性组时， **FileTableRootPath** 函数将返回虚拟网络名称 (VNN) ，而不是计算机名。  
   
 ## <a name="general-remarks"></a>一般备注  
- **GetFileNamespacePath**函数返回的路径是采用以下格式的逻辑目录或文件路径：  
+ **GetFileNamespacePath** 函数返回的路径是采用以下格式的逻辑目录或文件路径：  
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   

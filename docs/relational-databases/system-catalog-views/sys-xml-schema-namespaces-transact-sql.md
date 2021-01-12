@@ -18,24 +18,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_namespaces catalog view
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8709142f4ff0e1db417cb67fdb5ea516400ead82
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 12a89fa3b56275f414be2cde87755224a007b84c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545358"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097839"
 ---
 # <a name="sysxml_schema_namespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  对于每个 XSD 定义的 XML 命名空间，相应地返回一行。 以下元组是唯一的： **collection_id**、 **namespace_id**、 **collection_id**和 **名称**。  
+  对于每个 XSD 定义的 XML 命名空间，相应地返回一行。 以下元组是唯一的： **collection_id**、 **namespace_id**、 **collection_id** 和 **名称**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**xml_collection_id**|**int**|包含此命名空间的 XML 架构集合的 ID。|  
-|name |**nvarchar(4000)**|XML 命名空间的名称。 空 **名称** 表示没有目标命名空间。|  
+|name|**nvarchar(4000)**|XML 命名空间的名称。 空 **名称** 表示没有目标命名空间。|  
 |**xml_namespace_id**|**int**|以 1 为基数的序号，用于唯一标识数据库中的 XML 命名空间。|  
   
 ## <a name="permissions"></a>权限  

@@ -16,29 +16,29 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_tombstone system table
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dc137583386c4b098960d762484ef526f2f95f14
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2b8f54ce66145ddc298bb44594c48f74ddd62be0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545537"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098587"
 ---
 # <a name="msmerge_tombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_tombstone**表包含有关已删除行的信息，并允许将删除传播到其他订阅服务器。 该表存储在发布数据库和订阅数据库中。  
+  **MSmerge_tombstone** 表包含有关已删除行的信息，并允许将删除传播到其他订阅服务器。 该表存储在发布数据库和订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**rowguid**|**uniqueidentifier**|行标识符。|  
 |**tablenick**|**int**|表的别名。|  
 |type|**tinyint**|删除的类型：<br /><br /> 1 = 用户删除。<br /><br /> 5 = 行不再属于筛选分区。<br /><br /> 6 = 系统删除。|  
-|**衍生**|**varbinary (249) **|指示被删除的记录的版本，以及删除此记录时已知的更新。 出现两台订阅服务器在同一时间分别对一个行执行更新和删除操作的情况时，允许规则执行一致的冲突解决。|  
+|**衍生**|**varbinary (249)**|指示被删除的记录的版本，以及删除此记录时已知的更新。 出现两台订阅服务器在同一时间分别对一个行执行更新和删除操作的情况时，允许规则执行一致的冲突解决。|  
 |**产生**|**int**|在删除行时赋值。 如果订阅服务器请求第 N 代，则只发送代 >= N 的逻辑删除。|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|标识被删除的行所属的逻辑记录。|  
-|**logical_record_lineage**|**Varbinary (501) **|订阅服务器别名和版本号对，用于维护此行所属的逻辑记录的删除历史记录。|  
+|**logical_record_lineage**|**Varbinary (501)**|订阅服务器别名和版本号对，用于维护此行所属的逻辑记录的删除历史记录。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

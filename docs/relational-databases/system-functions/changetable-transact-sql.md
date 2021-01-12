@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1c547cee24397cc9cc1c0b139bd728aef92c2b3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6ffbd16a2a62b9adcc5ff4e2f31dcee9f133538a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472778"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098712"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ CHANGETABLE (
 ( column_name [ , ...n ] ) , ( value [ , ...n ] )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  更改 *表* ， *last_sync_version*  
  返回自 *last_sync_version* 指定的版本以来对某个表进行的所有更改的跟踪信息。  
   
@@ -75,7 +75,7 @@ CHANGETABLE (
  column_name  
  指定一个或多个主键列的名称。 可以按任意顺序指定多个列名。  
   
- 值  
+ *值*  
  是主键的值。 如果有多个主键列，则这些值的指定顺序必须与列在 *column_name* 列表中的显示顺序相同。  
   
  方式 *table_alias* [ (*column_alias* [,.。。*n* ] ) ]  

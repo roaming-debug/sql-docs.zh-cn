@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_database_replica_states (Transact-SQL)
-title: sys. dm_hadr_database_replica_states (Transact-sql) |Microsoft Docs
+title: sys.dm_hadr_database_replica_states (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2018
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 31d6534b055b9bc82052445202d35ff5a63bcb19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 18642535521a50c7beb005c0ae8181f04ac3c6d5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89533191"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097573"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,17 +69,17 @@ ms.locfileid: "89533191"
 |**redo_rate**|**bigint**|在给定的辅助数据库上重做日志记录的平均速率（kb (KB) 。|  
 |**filestream_send_rate**|**bigint**|FILESTREAM 文件传送到辅助副本的速率（KB/秒）。|  
 |**end_of_log_lsn**|**numeric(25,0)**|日志 LSN 的本地结尾。 与主数据库和辅助数据库上日志缓存中的最后一个日志记录相对应的实际 LSN。 在主副本上，辅助行反映了辅助副本已发送到主副本的最新进度消息中日志 LSN 的结尾。<br /><br /> **end_of_log_lsn** 反映了用零填充的日志块 ID。 它不是实际的日志序列号。 有关详细信息，请参阅本主题后面 [的了解 LSN 列值](#LSNcolumns)。|  
-|**last_commit_lsn**|**数值 (25，0) **|与事务日志中的最后提交的记录相对应的实际日志序列号。<br /><br /> 主数据库上，这对应于上次处理的提交记录。 辅助数据库的行显示辅助副本已发送到主副本的日志序列号。<br /><br /> 在辅助副本上，这是已重做的最后一个提交记录。|  
+|**last_commit_lsn**|**数值 (25，0)**|与事务日志中的最后提交的记录相对应的实际日志序列号。<br /><br /> 主数据库上，这对应于上次处理的提交记录。 辅助数据库的行显示辅助副本已发送到主副本的日志序列号。<br /><br /> 在辅助副本上，这是已重做的最后一个提交记录。|  
 |**last_commit_time**|**datetime**|与最后一个提交记录对应的时间。<br /><br /> 在辅助数据库上，此时间与主数据库上的时间相同。<br /><br /> 在主副本上，每个辅助数据库行都显示承载该辅助数据库的辅助副本报告回主副本的时间。 主数据库行与给定的辅助数据库行之间的时间差值约为恢复点目标 (RPO) ，前提是该重做过程被发现并且辅助副本已将进度报告回主副本。|  
 |**low_water_mark_for_ghosts**|**bigint**|针对数据库的单调递增的数字，指示主数据库上虚影清除使用的低水印。 如果这个数字没有随着时间的推移而增加，则意味着虚影清除可能未发生。 为了确定要清除的虚影行，主副本会在所有可用性副本（包括主副本）上将该列的最小值用于此数据库。|  
 |**secondary_lag_seconds**|**bigint**|在同步期间，辅助副本在主副本后的秒数。<br /><br />适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
   
 ##  <a name="understanding-the-lsn-column-values"></a><a name="LSNcolumns"></a> 了解 LSN 列值  
- **End_of_log_lsn**、 **last_hardened_lsn**、 **last_received_lsn**、 **last_sent_lsn**、 **recovery_lsn**和**truncation_lsn**列的值并不是 (lsn) 的实际日志序列号。 上述各值反映了用零填充的日志块 ID。  
+ **End_of_log_lsn**、 **last_hardened_lsn**、 **last_received_lsn**、 **last_sent_lsn**、 **recovery_lsn** 和 **truncation_lsn** 列的值并不是 (lsn) 的实际日志序列号。 上述各值反映了用零填充的日志块 ID。  
   
- **end_of_log_lsn**、 **last_hardened_lsn**和 **recovery_lsn** 为刷新 lsn。 例如， **last_hardened_lsn** 指示下一个块的开始，超过了磁盘上已有的块。  因此，< **last_hardened_lsn** 的值都在磁盘上。  不会刷新 >= 此值的 LSN。  
+ **end_of_log_lsn**、 **last_hardened_lsn** 和 **recovery_lsn** 为刷新 lsn。 例如， **last_hardened_lsn** 指示下一个块的开始，超过了磁盘上已有的块。  因此，< **last_hardened_lsn** 的值都在磁盘上。  不会刷新 >= 此值的 LSN。  
   
- 在 **dm_hadr_database_replica_states**返回的 lsn 值中，只有 **LAST_REDONE_LSN** 是实际 lsn。  
+ 在 **sys.dm_hadr_database_replica_states** 返回的 LSN 值中，只有 **LAST_REDONE_LSN** 是实际 lsn。  
   
 ## <a name="security"></a>安全性  
   

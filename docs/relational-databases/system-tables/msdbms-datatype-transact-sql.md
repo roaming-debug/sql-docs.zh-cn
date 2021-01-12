@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSdbms_datatype system table
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9fc19ad90c8dcf73c9e0bc368b30ee41ca4fa125
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: daf45f65ddc0e7ea496a60a3da8b9fc9d270fc73
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89524930"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098202"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdbms_datatype**表包含每个受支持的数据库管理系统上的本机数据类型的完整列表 (DBMS) 用作异类数据库复制中的发布服务器或订阅服务器。 该表存储在 **msdb** 数据库中。  
+  **MSdbms_datatype** 表包含每个受支持的数据库管理系统上的本机数据类型的完整列表 (DBMS) 用作异类数据库复制中的发布服务器或订阅服务器。 该表存储在 **msdb** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

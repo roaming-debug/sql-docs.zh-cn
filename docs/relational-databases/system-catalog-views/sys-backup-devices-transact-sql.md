@@ -1,6 +1,6 @@
 ---
 description: sys.backup_devices (Transact-SQL)
-title: sys. backup_devices (Transact-sql) |Microsoft Docs
+title: sys.backup_devices (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - backup devices [SQL Server], viewing information
 - sys.backup_devices catalog view
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b58bfc803d66b8782631ec4fd3d9223041dbce73
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: cddc056b4e83c6bb3e01d901eb4106318b7cd71b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551474"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099245"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89551474"
 |-----------------|---------------|-----------------|  
 |name|**sysname**|备份设备的名称。 在集中是唯一的。|  
 |type|**tinyint**|备份设备的类型：<br /><br /> 2 = 磁盘<br /><br /> 3 = 软盘（已过时）<br /><br /> 5 = 磁带<br /><br /> 6 = 管道（已过时）<br /><br /> 7 = 虚拟设备（供第三方备份供应商选择使用）<br /><br /> 9 = URL<br /><br />通常，只使用磁盘 (2) 和 URL (9) 。|  
-|**type_desc**|**nvarchar(60)**|备份设备类型的说明：<br /><br /> DISK<br /><br /> DISKETTE（已过时）<br /><br /> TAPE<br /><br /> PIPE（已过时）<br /><br /> VIRTUAL_DEVICE（供第三方备份供应商选择使用）<br /><br /> 代码 <br /><br /> 通常，只使用磁盘和 URL。|  
+|**type_desc**|**nvarchar(60)**|备份设备类型的说明：<br /><br /> DISK<br /><br /> DISKETTE（已过时）<br /><br /> TAPE<br /><br /> PIPE（已过时）<br /><br /> VIRTUAL_DEVICE（供第三方备份供应商选择使用）<br /><br /> URL <br /><br /> 通常，只使用磁盘和 URL。|  
 |**physical_name**|**nvarchar(260)**|备份设备的物理文件名或路径。|  
   
 ## <a name="permissions"></a>权限  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_queue system table
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: caabac10703a39aa88afd357fd1596379f82978d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ca7e44f973e0e9150511f70e19dec81b5383d994
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538244"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098124"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89538244"
 |**publisher_db**|**sysname**|发布数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**tranid**|**sysname**|执行排队命令时所使用的事务 ID。|  
-|**data**|varbinary(8000)****|存储有关排队命令信息的压缩字节流。|  
+|**data**|varbinary(8000)|存储有关排队命令信息的压缩字节流。|  
 |**datalen**|**int**|数据的长度（字节）。|  
 |**commandtype**|**int**|排队的命令类型包括：<br /><br /> 1 = 事务中的用户命令。<br /><br /> 2 = 订阅同步命令。|  
 |**insertdate**|**datetime**|插入日期。|  

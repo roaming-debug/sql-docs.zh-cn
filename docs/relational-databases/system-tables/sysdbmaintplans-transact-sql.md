@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdbmaintplans system table
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 160abf3a360d18e3ba83df0f11cc9982984df049
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2aec8e8b94dc341225a5e34e35f2f168fa83e56e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516823"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098062"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89516823"
 |**remote_history_server**|**sysname**|远程服务器的名称，可以将历史报表写入该远程服务器中。|  
 |**max_remote_history_rows**|**int**|远程服务器上的系统表中所分配的最大行数，可以将历史报表写入该远程服务器中。|  
 |**user_defined_1**|**int**|默认值为 NULL。|  
-|**user_defined_2**|**nvarchar (100) **|默认值为 NULL。|  
+|**user_defined_2**|**nvarchar (100)**|默认值为 NULL。|  
 |**user_defined_3**|**datetime**|默认值为 NULL。|  
 |**user_defined_4**|**uniqueidentifier**|默认值为 NULL。|  
 |**log_shipping**|**bit**|日志传送状态：<br /><br /> **0** = 禁用 **1** = 已启用|  

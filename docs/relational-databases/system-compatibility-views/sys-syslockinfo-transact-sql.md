@@ -19,14 +19,14 @@ helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 9714fab678f8466daf76d5963e1383b5e7d2dc52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d552fdbb75c4aa1cb786025a8d1c866b89135e12
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490052"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099052"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88490052"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|锁资源的文本化描述。 包含资源名称的一部分。|  
-|**rsc_bin**|**binary(16)**|二进制锁资源。 包含锁管理器中所含的实际锁资源。 对于知道用于生成其自己的格式化锁资源的锁资源格式，以及如何在 **syslockinfo**上执行自联接的工具，将包括此列。|  
+|**rsc_bin**|**binary(16)**|二进制锁资源。 包含锁管理器中所含的实际锁资源。 对于知道用于生成其自己的格式化锁资源的锁资源格式，以及如何在 **syslockinfo** 上执行自联接的工具，将包括此列。|  
 |**rsc_valblk**|**binary(16)**|锁值块。 有些资源类型可以在特定的锁资源中包含附加数据，锁管理器不对这类锁资源进行哈希运算以决定具体某个锁资源的所有关系。 例如，页锁不归具体的对象 ID 所有。 但是，对于锁升级和出于其他目的， 页锁的对象 ID 可以包括在锁值块中。|  
 |**rsc_dbid**|**smallint**|与资源关联的数据库 ID。|  
 |**rsc_indid**|**smallint**|与资源关联的索引 ID（如果适合）。|  
@@ -57,7 +57,7 @@ ms.locfileid: "88490052"
 |**req_spid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 请求锁的会话的内部进程 ID。|  
 |**req_ecid**|**int**|执行上下文 ID (ECID)。 用于指示并行操作内拥有具体某个锁的线程。|  
 |**req_ownertype**|**smallint**|与锁关联的对象类型：<br /><br /> 1 = 事务<br /><br /> 2 = 游标<br /><br /> 3 = 会话<br /><br /> 4 = ExSession<br /><br /> 注意，3 和 4 代表会话锁的特殊版本，分别跟踪数据库锁和文件组锁。|  
-|**req_transactionID**|**bigint**|**Syslockinfo**和探查器事件中使用的唯一事务 ID|  
+|**req_transactionID**|**bigint**|**Syslockinfo** 和探查器事件中使用的唯一事务 ID|  
 |**req_transactionUOW**|**uniqueidentifier**|标识 DTC 事务的工作单元 ID (UOW)。 对于非 MS DTC 事务，UOW 设置为 0。|  
   
 ## <a name="permissions"></a>权限  

@@ -1,6 +1,6 @@
 ---
 description: sys.server_event_session_events (Transact-SQL)
-title: sys. server_event_session_events (Transact-sql) |Microsoft Docs
+title: sys.server_event_session_events (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_session_events catalog view
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7f58a80a3d3d85fd7411d629d9d018a40002641
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 48e6ae7653dc4ba2bb37bab71d597c405f35d626
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551399"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096696"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "89551399"
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |event_id|**int**|事件的 ID。 此 ID 在事件会话对象中是唯一的。 不可为 null。|  
 |name|**sysname**|事件的名称。 不可为 null。|  
-|包|**sysname**|包含事件的事件包的名称。 不可为 null。|  
+|程序包|**sysname**|包含事件的事件包的名称。 不可为 null。|  
 |name|**sysname**|包含事件的模块的名称。 不可为 null。|  
-|predicate|**nvarchar (3000) **|应用于事件的谓词表达式。 可以为 Null。|  
-|predicate_xml|**nvarchar (3000) **|应用于事件的 XML 谓词表达式。 可以为 Null。|  
+|predicate|**nvarchar (3000)**|应用于事件的谓词表达式。 可以为 Null。|  
+|predicate_xml|**nvarchar (3000)**|应用于事件的 XML 谓词表达式。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
@@ -49,9 +49,9 @@ ms.locfileid: "89551399"
 ## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-| From | 到 | 关系 |
+| From | 目标 | Relationship |
 | ---- | -- | ------------ |
-|sys.server_event_session_events.event_session_id|sys. server_event_sessions event_session_id|多对一|  
+|sys.server_event_session_events.event_session_id|sys.server_event_sessions sys.server_event_sessions.event_session_id|多对一|  
   
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

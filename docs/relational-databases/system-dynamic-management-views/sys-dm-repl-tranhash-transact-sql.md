@@ -1,6 +1,6 @@
 ---
 description: sys.dm_repl_tranhash (Transact-SQL)
-title: sys. dm_repl_tranhash (Transact-sql) |Microsoft Docs
+title: sys.dm_repl_tranhash (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,28 +17,28 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_tranhash dynamic management view
 ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 35bb540ff2b73a44de324a51937552ae7cc3ec56
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d099f878fd2507d0f491723ffc494ce335246843
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536879"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098838"
 ---
 # <a name="sysdm_repl_tranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关事务发布中正在复制的事务的信息。  
   
-|column_name|data_type|description|  
+|column_name|data_type|说明|  
 |------------------|----------------|-----------------|  
 |**存储桶**|**bigint**|哈希表中的存储桶数。|  
 |**hashed_trans**|**bigint**|当前批次中复制的已提交事务数。|  
 |**completed_trans**|**bigint**|到目前为止的争用事务数。|  
 |**compensated_trans**|**bigint**|包含部分回滚的事务数。|  
-|**first_begin_lsn**|**nvarchar (64) **|当前批次中最早的起始日志序列号 (LSN)。|  
-|**last_commit_lsn**|**nvarchar (64) **|当前批次中最后提交的 LSN。|  
+|**first_begin_lsn**|**nvarchar (64)**|当前批次中最早的起始日志序列号 (LSN)。|  
+|**last_commit_lsn**|**nvarchar (64)**|当前批次中最后提交的 LSN。|  
   
 ## <a name="permissions"></a>权限  
  要求对发布数据库具有 VIEW DATABASE STATE 权限才能调用 **dm_repl_tranhash**。  
