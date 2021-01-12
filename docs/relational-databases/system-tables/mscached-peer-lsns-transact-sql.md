@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MScached_peer_lsns system table
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 23d4339d7a907cd755934df4803e38f5ba769b5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f1b9c527f1411f84afeef72d60c266ef1f3a91ea
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550987"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092414"
 ---
 # <a name="mscached_peer_lsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MScached_peer_lsns**表用于跟踪事务日志中的 LSN 值，这些值用于确定将哪些命令返回到对等复制中的给定订阅服务器。 此表存储在分发数据库中。  
+  **MScached_peer_lsns** 表用于跟踪事务日志中的 LSN 值，这些值用于确定将哪些命令返回到对等复制中的给定订阅服务器。 此表存储在分发数据库中。  
   
 ## <a name="definition"></a>定义  
   

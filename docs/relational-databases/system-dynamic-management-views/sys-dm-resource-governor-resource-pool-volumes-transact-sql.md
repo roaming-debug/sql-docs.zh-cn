@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_resource_governor_resource_pool_volumes (Transact-sql) '
-title: sys. dm_resource_governor_resource_pool_volumes (Transact-sql) |Microsoft Docs
+description: 'sys.dm_resource_governor_resource_pool_volumes (Transact-sql) '
+title: sys.dm_resource_governor_resource_pool_volumes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - dm_resource_governor_resource_pool_volumes
 - sys.dm_resource_governor_resource_pool_volumes
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7fd7feb957b93590d76ff92aab14fd745b7c43dd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9c6707bfd8b1c29073239821cd0fa3c0425ef089
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543833"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093972"
 ---
-# <a name="sysdm_resource_governor_resource_pool_volumes-transact-sql"></a>sys. dm_resource_governor_resource_pool_volumes (Transact-sql) 
+# <a name="sysdm_resource_governor_resource_pool_volumes-transact-sql"></a>sys.dm_resource_governor_resource_pool_volumes (Transact-sql) 
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-  对于每个磁盘卷返回有关当前资源池 IO 统计信息的信息。 此信息也可在 [sys. dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)中的资源池级别使用。  
+  对于每个磁盘卷返回有关当前资源池 IO 统计信息的信息。 此信息也可在 [sys.dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)的资源池级别使用。  
   
   
 |列名称|数据类型|说明|  
@@ -57,10 +57,10 @@ ms.locfileid: "89543833"
 ## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys. resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys.resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

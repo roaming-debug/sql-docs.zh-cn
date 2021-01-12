@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_commands system table
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8596aefdaecce0e7d39033b2a484ebfe6a4f46b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c939e1c5112aee07738ad5d368cb0ef05d804618
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540248"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98090925"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSrepl_commands**表包含复制的命令行。 此表存储在分发数据库中。  
+  **MSrepl_commands** 表包含复制的命令行。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "89540248"
 |**originator_id**|**int**|发起方的 ID。|  
 |**command_id**|**int**|命令的 ID。|  
 |**partial_command**|**bit**|指示这是否为部分命令。|  
-|**command**|**varbinary (1024) **|命令值。|  
+|**command**|**varbinary (1024)**|命令值。|  
 |**hashkey**|**int**|仅供内部使用。|  
 |**originator_lsn**|**varbinary(16)**|标识原始发布中命令的 LSN。 这在对等事务复制中使用。|  
   

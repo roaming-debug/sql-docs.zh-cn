@@ -18,15 +18,15 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: d60c081eecf88868db4541bc79960bf1bbd8723c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c3a358e23d9428440166dd98a0f29ca8e4ea11c5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97412888"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093091"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -48,7 +48,7 @@ ms.locfileid: "97412888"
 |event_type|**nvarchar (64)**|事件的类型。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |**event_subtype**|**int**|发生的事件的子类型。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |**event_subtype_desc**|**nvarchar (64)**|事件子类型的说明。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
-|severity |**int**|错误的严重性。 可能的值包括：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
+|severity |**int**|错误的严重性。 可能的值为：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
 |**event_count**|**int**|在指定的时间间隔内，针对指定数据库发生此事件的次数 (**start_time** 并 **end_time**) 。|  
 |description|**nvarchar(max)**|对事件的详细说明。<br /><br /> 有关可能值的列表，请参阅 [事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |**additional_data**|**XML**|*注意：对于 Azure SQL 数据库 V12，此值始终为 NULL。请参阅 [示例](#Deadlock) 部分，了解如何检索 V12 的死锁事件。*<br /><br /> 对于 **死锁** 事件，此列包含死锁图。 对于其他事件类型，该列为 NULL。 |  
@@ -83,7 +83,7 @@ ms.locfileid: "97412888"
 |**连接**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用 TEMPDB，已终止该会话。 请尝试修改您的查询以减少使用临时表空间。 有关详细信息，请参阅 [资源限制](/previous-versions/azure/dn338081(v=azure.100))。|  
 |**连接**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用事务日志空间，已终止该会话。 请尝试在单个事务中修改更少的行。 有关详细信息，请参阅 [资源限制](/previous-versions/azure/dn338081(v=azure.100))。|  
 |**连接**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用内存，已终止该会话。 请尝试修改您的查询以处理更少的行。 有关详细信息，请参阅 [资源限制](/previous-versions/azure/dn338081(v=azure.100))。|  
-|**搜索引擎优化**|**死**|0|**死**|2|发生死锁。|  
+|**搜索引擎优化**|**deadlock**|0|**deadlock**|2|发生死锁。|  
   
 ## <a name="permissions"></a>权限
 

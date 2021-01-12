@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_history system table
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 803333fc2cd28c94005c33a909c990de598e232c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1431788854f869eadd84f06ea2bb1885b95286f2
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89524132"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092397"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSsnapshot_history**表包含与本地分发服务器关联的快照代理的历史记录行。 此表存储在分发数据库中。  
+  **MSsnapshot_history** 表包含与本地分发服务器关联的快照代理的历史记录行。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

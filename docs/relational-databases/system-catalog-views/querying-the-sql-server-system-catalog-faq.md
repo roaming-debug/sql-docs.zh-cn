@@ -17,14 +17,14 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 346ae709b81c1d5f3892a7e7b5acfd98c3ff7d3b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a67ede3c053d3b9458e1b880a268e923226f68d1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539755"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093257"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>查询 SQL Server 系统目录常见问题
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -780,7 +780,7 @@ GO
 ###  <a name="how-do-i-find-the-views-transact-sql-functions-and-transact-sql-stored-procedures-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ26"></a> 如何实现查找依赖于指定 CLR 用户定义类型或别名类型的视图、Transact-sql 函数和 Transact-sql 存储过程？  
  运行以下查询之前，请使用有效名称替换 `<database_name>`，并使用有效的架构限定的 CLR 用户定义类型和别名类型名称替换 `<schema_name.data_type_name>`。  
   
- 在函数或过程中定义的参数为隐式架构绑定。 因此，可以使用 [sys. sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) 目录视图查看依赖于 CLR 用户定义类型或别名类型的参数。 过程和触发器均未绑定到架构。 这意味着不会维护任何在过程或触发器的主体中定义的表达式与 CLR 用户定义类型或别名类型之间的依赖关系。 具有依赖于 CLR 用户定义类型或别名类型的表达式的架构绑定视图和架构绑定的用户定义函数在 **sql_dependencies sys.databases** 目录视图中进行维护。 不维护类型和 CLR 函数及类型和 CLR 过程之间的依赖关系。  
+ 在函数或过程中定义的参数为隐式架构绑定。 因此，可以使用 [sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) 目录视图来查看依赖于 CLR 用户定义类型或别名类型的参数。 过程和触发器均未绑定到架构。 这意味着不会维护任何在过程或触发器的主体中定义的表达式与 CLR 用户定义类型或别名类型之间的依赖关系。 具有依赖于 CLR 用户定义类型或别名类型的表达式的架构绑定视图和架构绑定用户定义函数在 **sys.sql_dependencies** 目录视图中维护。 不维护类型和 CLR 函数及类型和 CLR 过程之间的依赖关系。  
   
  以下查询返回指定 CLR 用户定义类型或别名类型在视图、[!INCLUDE[tsql](../../includes/tsql-md.md)] 函数和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程中的所有架构绑定依赖关系。  
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublisherindexes system table
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5b7e4d37acf72277f88290372a1a7c29b7343473
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 03915f08ecf8aeb222f45e86af3988c64cab575b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540931"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092433"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89540931"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**publisherindex_id**|**int**|标识已发布的索引。|  
-|table_id****|**int**|标识索引所属的 [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) 中的表。|  
+|table_id|**int**|标识索引所属的 [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) 中的表。|  
 |**publisher_id**|**smallint**|标识从中发布索引的非 SQL Server 发布服务器。|  
 |name|**sysname**|已发布的索引的名称。|  
 |type|**nvarchar(255)**|[IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md)系统表中支持的索引类型。|  

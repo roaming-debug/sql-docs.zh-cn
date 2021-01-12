@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fc5b4b67074c85aef7d5d6d0f7c889a02cbb047d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 85058a3d551a385e4d2de8aed2ea9f56dc3b19c7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489712"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093881"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +41,14 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="arguments"></a>参数  
  column_name  
- **Varbinary (max) ** FILESTREAM 列的列名称。 *column_name* 必须是列名称。 它不能是表达式，也不能是 CAST 或 CONVERT 语句的结果。  
+ **Varbinary (max)** FILESTREAM 列的列名称。 *column_name* 必须是列名称。 它不能是表达式，也不能是 CAST 或 CONVERT 语句的结果。  
   
- 如果请求任何其他数据类型的列的路径名或对于 **varbinary (max) ** columnthat，则不会有 FILESTREAM 存储属性导致查询编译时错误。  
+ 如果请求任何其他数据类型的列的路径名或对于 **varbinary (max)** columnthat，则不会有 FILESTREAM 存储属性导致查询编译时错误。  
   
- *\@选*  
- 一个整数 [表达式](../../t-sql/language-elements/expressions-transact-sql.md) ，定义路径的服务器组件应如何进行格式化。 * \@ 选项*可以为下列值之一。 默认值为 0。  
+ *\@选项*  
+ 一个整数 [表达式](../../t-sql/language-elements/expressions-transact-sql.md) ，定义路径的服务器组件应如何进行格式化。 *\@ 选项* 可以为下列值之一。 默认值为 0。  
   
-|Value|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0|返回转换为 BIOS 格式的服务器名称，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|返回未经转换的服务器名称，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -61,7 +61,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  当数据库属于 Always On 可用性组时， *use_replica_computer_name* 的值对 **PathName** 函数的输出具有以下影响：  
   
-|Value|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |未指定。|函数返回路径中的虚拟网络名称 (VNN)。|  
 |0|函数返回路径中的虚拟网络名称 (VNN)。|  

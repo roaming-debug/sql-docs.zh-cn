@@ -1,6 +1,6 @@
 ---
-description: 数据库镜像见证服务器目录视图-sys. database_mirroring_witnesses
-title: sys. database_mirroring_witnesses (Transact-sql) |Microsoft Docs
+description: 数据库镜像见证服务器目录视图-sys.database_mirroring_witnesses
+title: sys.database_mirroring_witnesses (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sys.database_mirroring_witnesses catalog view
 - witness [SQL Server], sys.database_mirroring_witnesses catalog view
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a321ea1734ce63941e2ba3ebac30bb0149891d09
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 09eae37eb4eb380ad56c36d837a8454a50a58f8d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548812"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092647"
 ---
-# <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>数据库镜像见证服务器目录视图-sys. database_mirroring_witnesses
+# <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>数据库镜像见证服务器目录视图-sys.database_mirroring_witnesses
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   服务器在数据库镜像合作关系中充当的每个见证服务器角色在表中都占用一行。 
@@ -43,12 +43,12 @@ ms.locfileid: "89548812"
 |**mirror_server_name**|**sysname**|伙伴服务器的名称，该服务器的数据库副本当前是镜像数据库。|  
 |**safety_level**|**tinyint**|镜像数据库中更新的事务安全设置：<br /><br /> 0 = 未知状态<br /><br /> 1 = Off（异步）<br /><br /> 2 = Full（同步）<br /><br /> 使用自动故障转移的见证服务器要求具有完全事务安全性，这是默认设置。|  
 |**safety_level_desc**|**nvarchar(60)**|对镜像数据库中更新的安全保证的说明：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
-|**safety_sequence_number**|**int**|更新 **safety_level**更改的序列号。|  
+|**safety_sequence_number**|**int**|更新 **safety_level** 更改的序列号。|  
 |**role_sequence_number**|**int**|镜像伙伴所充当的主体/镜像数据库角色的更改的更新序列号。|  
 |**mirroring_guid**|**uniqueidentifier**|镜像合作关系的标识符。|  
 |**family_guid**|**uniqueidentifier**|数据库备份系列的标识符。 用于检测匹配的还原状态。|  
 |**is_suspended**|**bit**|数据库镜像挂起。|  
-|**is_suspended_sequence_number**|**int**|用于设置 **is_suspended**的序列号。|  
+|**is_suspended_sequence_number**|**int**|用于设置 **is_suspended** 的序列号。|  
 |**partner_sync_state**|**tinyint**|镜像会话的同步状态：<br /><br /> 5 = 同步伙伴。 可以进行故障转移。 有关故障转移的要求的信息，请参阅 [数据库镜像会话期间的角色切换 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。<br /><br /> 6 = 不同步伙伴。 现在无法进行故障转移。|  
 |**partner_sync_state_desc**|**nvarchar(60)**|镜像会话同步状态的说明：<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "89548812"
   
 ## <a name="see-also"></a>另请参阅  
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [sys. database_mirroring &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys.database_mirroring &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

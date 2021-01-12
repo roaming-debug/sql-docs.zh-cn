@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_contents system table
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 32041fc09c105509e050aa230ab05d1e8b3de6e6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 52edaacaa839beeedb60b706803d268528d98492
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547081"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091400"
 ---
 # <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "89547081"
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|已发布表的别名。|  
 |**rowguid**|**uniqueidentifier**|给定行的行标识符。|  
-|**产生**|**bigint**|由 **tablenick** 和 **rowguid**标识的行的生成。|  
+|**产生**|**bigint**|由 **tablenick** 和 **rowguid** 标识的行的生成。|  
 |**partchangegen**|**bigint**|与上次数据更改相关联的代（不论行是否属于已筛选发布，这些更改都可能已经发生）。|  
-|**衍生**|**varbinary (501) **|用于维护此行的更改历史记录的订阅服务器的别名和版本号对。|  
-|**colvl**|**varbinary (7489) **|列版本信息。|  
-|**marker**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**logical_record_parent_rowguid**|**uniqueidentifier**|通过**rowguid**) 为逻辑记录中的每个对应子行标识**MSmerge_contents** (中的顶级父行。|  
-|**logical_record_lineage**|**varbinary (501) **|用于维护逻辑记录中的顶级父行的更改的历史记录的订阅服务器的别名、版本号对。 对于逻辑记录中的所有子行，此值为 NULL。|  
+|**衍生**|**varbinary (501)**|用于维护此行的更改历史记录的订阅服务器的别名和版本号对。|  
+|**colvl**|**varbinary (7489)**|列版本信息。|  
+|**'**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**logical_record_parent_rowguid**|**uniqueidentifier**|通过 **rowguid**) 为逻辑记录中的每个对应子行标识 **MSmerge_contents** (中的顶级父行。|  
+|**logical_record_lineage**|**varbinary (501)**|用于维护逻辑记录中的顶级父行的更改的历史记录的订阅服务器的别名、版本号对。 对于逻辑记录中的所有子行，此值为 NULL。|  
 |**logical_relation_change_gen**|**bigint**|与导致逻辑记录重新调整的上次更改相关联的代（即将现有行移入或移出逻辑记录）。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublisherconstraints system table
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 24ab58c617748d52c8c7463454b4d701bf826c42
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d53c7bdee115715b8513356f02a3afddc75ec118
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545744"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092435"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "89545744"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**publisherconstraint_id**|**int**|标识所发布的约束。|  
-|table_id****|**int**|标识约束所属的 [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) 中的表。|  
+|table_id|**int**|标识约束所属的 [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) 中的表。|  
 |**publisher_id**|**smallint**|标识正在发布该列的非 SQL Server 发布服务器。|  
-|**名称**|**Sysname**|所发布的约束的名称。|  
-|**类型**|**nvarchar(255)**|[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)系统表中受支持的约束类型。|  
+|**Name**|**Sysname**|所发布的约束的名称。|  
+|类型|**nvarchar(255)**|[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)系统表中受支持的约束类型。|  
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

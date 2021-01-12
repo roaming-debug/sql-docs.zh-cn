@@ -1,6 +1,6 @@
 ---
 description: sys.server_audits (Transact-SQL)
-title: sys. server_audits (Transact-sql) |Microsoft Docs
+title: sys.server_audits (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audits catalog view
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ea8ed9b7b779b9a81743ab909aa2bbba1e3c4856
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 3bb5b8b56cb2fec01b6fe655f3f51841cc7ebb21
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539595"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093082"
 ---
 # <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "89539595"
 |modify_date|**datetime**|上次修改审核的 UTC 日期。|  
 |principal_id|**int**|向服务器注册的审核所有者的 ID。|  
 |type|**char(2)**|审核类型：<br /><br /> SL-NT 安全事件日志<br /><br /> AL-NT 应用程序事件日志<br /><br /> 文件系统上的 FL 文件|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
+|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> 文件|  
 |**on_failure**|**tinyint**|失败时要写入的操作项：<br /><br /> 0-继续<br /><br /> 1-关闭服务器实例<br /><br /> 2-失败操作|  
 |**on_failure_desc**|**nvarchar(60)**|失败时要写入的操作项：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-已禁用<br /><br /> 1 - 启用|  
 |**queue_delay**|**int**|写入磁盘前等待的最长时间（以毫秒为单位）。 如果为0，则审核将保证写入，然后事件才能继续。|  
-|**predicate**|**nvarchar (3000) **|应用于事件的谓词表达式。|  
+|**predicate**|**nvarchar (3000)**|应用于事件的谓词表达式。|  
   
 ## <a name="permissions"></a>权限  
  具有 **ALTER ANY SERVER AUDIT** 或 **VIEW any DEFINITION** 权限的主体有权访问此目录视图。 此外，不能拒绝主体 **VIEW ANY DEFINITION** 权限。  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSqreader_agents system table
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 22792d4f3d2c6d0042f3dcb0af86e63581f5dea7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ba25120b643c8ca806ade38eda703e4b6fcc9930
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540273"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98090704"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "89540273"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|队列读取器代理的 ID。|  
-|name |**nvarchar (100) **|队列读取器代理的名称。|  
-|**job_id**|**binary(16)**|**Sysjobs**表中的唯一作业 ID 号。|  
-|**profile_id**|**int**|**MSagent_profiles**表中的配置文件 ID。|  
+|name|**nvarchar (100)**|队列读取器代理的名称。|  
+|**job_id**|**binary(16)**|**Sysjobs** 表中的唯一作业 ID 号。|  
+|**profile_id**|**int**|**MSagent_profiles** 表中的配置文件 ID。|  
 |**job_step_uid**|**uniqueidentifier**|启动代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的唯一 ID。|  
   
 ## <a name="see-also"></a>另请参阅  

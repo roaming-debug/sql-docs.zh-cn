@@ -1,6 +1,6 @@
 ---
 description: cdc.change_tables (Transact-SQL)
-title: change_tables (Transact-sql) |Microsoft Docs
+title: cdc.change_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - cdc.change_tables
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0205d5ca01ab1d969af8803bfa0e7f11daaafb08
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 28da42d6fbf03a01dc1c0719bd62a6270cb6525e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538376"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091500"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  为数据库中的每个更改表返回一行。 对源表启用变更数据捕获时，将创建一个更改表。 我们建议您不要直接查询系统表， 请改为执行 [sys.databases. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 存储过程。  
+  为数据库中的每个更改表返回一行。 对源表启用变更数据捕获时，将创建一个更改表。 我们建议您不要直接查询系统表， 请改为执行 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 存储过程。  
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -44,9 +44,9 @@ ms.locfileid: "89538376"
 |index_name|**sysname**|用于唯一标识源表中的行的索引名称。 **index_name** 为源表的主键索引的名称，或者在对源表启用了变更数据捕获时指定的唯一索引的名称。<br /><br /> NULL = 在变更数据捕获启用时，源表无主键，且未指定唯一索引。<br /><br /> 注意：如果对具有主键的表启用了变更数据捕获，则不管是否启用了净更改，"变更数据捕获" 功能都将使用索引。 启用变更数据捕获之后，将不允许对主键进行修改。 如果该表没有主键，则仍可以启用变更数据捕获，但是只能将净更改设置为 False。 启用变更数据捕获之后，即可以创建主键。 由于变更数据捕获功能不使用主键，因此还可以修改主键。|  
 |filegroup_name|**sysname**|更改表所驻留的文件组的名称。<br /><br /> NULL = 更改表在数据库的默认文件组中。|  
 |create_date|**datetime**|启用源表的日期。|  
-|**partition_switch**|**bit**|指示是否可以对启用了变更数据捕获的表执行**ALTER TABLE**的**SWITCH PARTITION**命令。 0 指示分区切换被阻止。 未分区表始终返回 1。|  
+|**partition_switch**|**bit**|指示是否可以对启用了变更数据捕获的表执行 **ALTER TABLE** 的 **SWITCH PARTITION** 命令。 0 指示分区切换被阻止。 未分区表始终返回 1。|  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

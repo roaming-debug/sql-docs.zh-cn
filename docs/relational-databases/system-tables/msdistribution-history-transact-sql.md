@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_history system table
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a97b83feb047e5e45e3de2a19475f8cc42033db0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 541a976e55a62dd9802f5d5a54cc31487ad5680e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547119"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091447"
 ---
 # <a name="msdistribution_history-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdistribution_history**表包含与本地分发服务器关联的分发代理的历史记录行。 此表存储在分发数据库中。  
+  **MSdistribution_history** 表包含与本地分发服务器关联的分发代理的历史记录行。 此表存储在分发数据库中。  
   
 ## <a name="definition"></a>定义  
   
@@ -49,7 +49,7 @@ ms.locfileid: "89547119"
 |**delivery_rate**|**float**|平均每秒传递的命令数。|  
 |**delivery_latency**|**int**|命令从进入分发数据库到应用于订阅服务器之间的滞后时间。 以毫秒为单位。|  
 |**total_delivered_commands**|**bigint**|创建订阅后所传递的命令总数。|  
-|**error_id**|**int**|**MSrepl_error**系统表中的错误的 ID。|  
+|**error_id**|**int**|**MSrepl_error** 系统表中的错误的 ID。|  
 |**updateable_row**|**bit**|如果可以覆盖历史记录行，则设置为 **1** 。|  
 |**timestamp**|**timestamp**|该表的时间戳列。|  
   

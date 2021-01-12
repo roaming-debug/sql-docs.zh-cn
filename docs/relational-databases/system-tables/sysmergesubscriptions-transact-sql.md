@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aef0f508cc4d3c3034fe49c7e46762f3b9bb2645
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e3caa66b5e8e938a0e54f7212b37e0442e29ebfe
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537843"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98090615"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89537843"
 |subscriber_type|**int**|订阅服务器的类型：<br /><br /> **1** = 全局。<br /><br /> **2** = 本地。<br /><br /> **3** = 匿名。|  
 |subscription_type|**int**|订阅的类型：<br /><br /> **0** = 推送。<br /><br /> **1** = 请求。<br /><br /> **2** = 匿名。|  
 |sync_type|**tinyint**|同步类型：<br /><br /> **1** = 自动。<br /><br /> **2** = 不同步。|  
-|description|**nvarchar(255)**|对订阅的简短说明。|  
+|说明|**nvarchar(255)**|对订阅的简短说明。|  
 |priority|**real**|指定订阅优先级并允许实现基于优先级的冲突解决。 对于所有本地或匿名订阅，等于 **0.00** 。|  
 |recgen|**bigint**|上次接收的生成的编号。|  
 |recguid|**uniqueidentifier**|上次接收的生成的唯一 ID。|  

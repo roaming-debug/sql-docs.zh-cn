@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 615dd195f9553242b92b8830462036ab6384b665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 40201cb1fed3938da075b3fd5e97380eb0dddfc5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474647"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093841"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ fn_syscollector_get_execution_details ( log_id )
 |id|**int**|日志记录项的唯一标识符。|  
 |event|**sysname**|生成日志记录项的事件的名称。|  
 |computer|**nvarchar**|生成日志记录条目时运行包的计算机。|  
-|运算符后的表达式|**nvarchar**|运行生成日志记录项的包的人员或代理的用户名。|  
+|operator|**nvarchar**|运行生成日志记录项的包的人员或代理的用户名。|  
 |source|**nvarchar**|生成日志记录项的可执行文件的名称。|  
 |sourceid|**uniqueidentifier**|生成日志记录项的可执行文件的 GUID。|  
 |executionid|**uniqueidentifier**|生成日志记录条目的可执行文件的执行实例的 GUID。|  
@@ -58,10 +58,10 @@ fn_syscollector_get_execution_details ( log_id )
 |endtime|**datetime**|包完成的时间。|  
 |datacode|**int**|用于标识与日志项关联的事件的整数值。 “0”指示事件未提供标识符。|  
 |databytes|**图像**|用于标识返回值的字节数组。|  
-|消息|**nvarchar**|事件以及与事件关联的信息的说明。|  
+|message|**nvarchar**|事件以及与事件关联的信息的说明。|  
   
 ## <a name="permissions"></a>权限  
- 需要 **dc_operator**的 SELECT 权限。  
+ 需要 **dc_operator** 的 SELECT 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [在 SQL Server Data Tools 中启用包日志记录](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   

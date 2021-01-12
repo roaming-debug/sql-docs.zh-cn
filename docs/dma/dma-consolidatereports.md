@@ -14,18 +14,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 4d1bcf2cdc9997ea33be87184c38447b7cd62973
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523914"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091603"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 评估企业和合并评估报告
 
 以下分步说明可帮助你使用数据迁移助手来执行用于升级本地 SQL Server 或 SQL Server 在 Azure Vm 上运行或迁移到 Azure SQL 数据库的已成功缩放评估。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备知识
 
 - 指定网络上的工具计算机，DMA 将从该计算机启动。 确保此计算机已连接到 SQL Server 目标。
 - 下载和安装：
@@ -34,7 +34,7 @@ ms.locfileid: "92523914"
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) 4.5 或更高版本。
   - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17.0 或更高版本。
   - [Power BI 桌面](/power-bi/fundamentals/desktop-get-the-desktop)。
-  - [Azure PowerShell 模块](/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Azure PowerShell 模块](/powershell/azure/install-az-ps)
 - 下载并解压缩：
   - [DMA 报告 Power BI 模板](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip)。
   - [LoadWarehouse 脚本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip)。
@@ -45,7 +45,7 @@ ms.locfileid: "92523914"
 
 若要加载模块，请执行以下步骤：
 
-1. 导航到 C:\Program Files\WindowsPowerShell\Modules，并创建名为 **DataMigrationAssistant**的文件夹。
+1. 导航到 C:\Program Files\WindowsPowerShell\Modules，并创建名为 **DataMigrationAssistant** 的文件夹。
 2. 打开 [PowerShell 模块](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip)，然后将它们保存到所创建的文件夹中。
 
       ![PowerShell 模块](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
@@ -80,7 +80,7 @@ ms.locfileid: "92523914"
 >
 > 对于默认实例，请将实例名称设置为 MSSQLServer。
 
-使用 csv 文件导入数据时，请确保数据 **实例名称** 和 **数据库名称**只有两列，并且这些列没有标头行。
+使用 csv 文件导入数据时，请确保数据 **实例名称** 和 **数据库名称** 只有两列，并且这些列没有标头行。
 
  ![csv 文件内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
@@ -89,7 +89,7 @@ ms.locfileid: "92523914"
 > [!IMPORTANT]
 > 对于默认实例，请将实例名称设置为 MSSQLServer。
 
-创建名为 **EstateInventory** 的数据库和名为 **DatabaseInventory**的表。 包含此清单数据的表可以具有任意数量的列，只要存在以下四列：
+创建名为 **EstateInventory** 的数据库和名为 **DatabaseInventory** 的表。 包含此清单数据的表可以具有任意数量的列，只要存在以下四列：
 
 - ServerName
 - InstanceName
@@ -106,7 +106,7 @@ ms.locfileid: "92523914"
 
 ### <a name="if-using-an-instance-inventory"></a>如果使用实例清单
 
-创建名为 **EstateInventory** 的数据库和名为 **InstanceInventory**的表。 包含此清单数据的表可以具有任意数量的列，只要存在以下四列：
+创建名为 **EstateInventory** 的数据库和名为 **InstanceInventory** 的表。 包含此清单数据的表可以具有任意数量的列，只要存在以下四列：
 
 - ServerName
 - InstanceName
@@ -126,12 +126,12 @@ ms.locfileid: "92523914"
 |参数  |描述 |
 |---------|---------|
 |**getServerListFrom** | 你的清单。 可能的值为 **SqlServer** 和 **CSV**。<br/>有关详细信息，请参阅 [创建 SQL server 清点](#create-inventory)。 |
-|**csvPath** | CSV 清单文件的路径。  仅当 **getServerListFrom** 设置为  **CSV**时使用。 |
-|**serverName** | 在**getServerListFrom**参数中使用**SqlServer**时清单的 SQL Server 实例名称。 |
+|**csvPath** | CSV 清单文件的路径。  仅当 **getServerListFrom** 设置为  **CSV** 时使用。 |
+|**serverName** | 在 **getServerListFrom** 参数中使用 **SqlServer** 时清单的 SQL Server 实例名称。 |
 |**databaseName** | 承载库存表的数据库。 |
 |**useInstancesOnly** | 位标志，用于指定是否使用实例列表进行评估。  如果设置为0，则 DatabaseInventory 表将用于生成评估目标列表。 |
 |**AssessmentName** | DMA 评估的名称。 |
-|**TargetPlatform** | 要执行的评估目标类型。  可能的值包括 **AzureSQLDatabase**、 **ManagedSqlServer**、 **SQLServer2012**、 **2014**、 **sqlserver2016-ssei-expr**、 **SQLServerLinux2017**、 **SQLServerWindows2017**、  **SqlServerWindows2019**和 **SqlServerLinux2019**。  |
+|**TargetPlatform** | 要执行的评估目标类型。  可能的值包括 **AzureSQLDatabase**、 **ManagedSqlServer**、 **SQLServer2012**、 **2014**、 **sqlserver2016-ssei-expr**、 **SQLServerLinux2017**、 **SQLServerWindows2017**、  **SqlServerWindows2019** 和 **SqlServerLinux2019**。  |
 |**AuthenticationMethod** | 用于连接到要评估的 SQL Server 目标的身份验证方法。 可能的值为 **和 sqlauth** 和 **WindowsAuth**。 |
 |**OutputLocation** | 要在其中存储 JSON 评估输出文件的目录。 评估可能需要很长时间，具体取决于要评估的数据库数和数据库中的对象数。 所有评估完成后，文件将写入。 |
 
@@ -150,7 +150,7 @@ ms.locfileid: "92523914"
 |参数  |描述 |
 |---------|---------|
 |**processTo** | 将处理 JSON 文件的位置。 可能的值为 **SQLServer** 和 **AzureSQLDatabase**。 |
-|**serverName** | 数据将处理到的 SQL Server 实例。  如果为**processTo**参数指定**AzureSQLDatabase** ，则仅包含 SQL Server 名称 (不包含 database.windows.net) 。 面向 Azure SQL 数据库时，系统将提示你提供两个登录名;第一种是 Azure 租户凭据，第二种是 Azure SQL Server 的管理员登录名。 |
+|**serverName** | 数据将处理到的 SQL Server 实例。  如果为 **processTo** 参数指定 **AzureSQLDatabase** ，则仅包含 SQL Server 名称 (不包含 database.windows.net) 。 面向 Azure SQL 数据库时，系统将提示你提供两个登录名;第一种是 Azure 租户凭据，第二种是 Azure SQL Server 的管理员登录名。 |
 |**CreateDMAReporting** | 要创建的用于处理 JSON 文件的临时数据库。  如果指定的数据库已经存在，并且将此参数设置为1，则不会创建对象。  此参数可用于重新创建已删除的单个对象。 |
 |**CreateDataWarehouse** | 创建 Power BI 报表将使用的数据仓库。 |
 |**databaseName** | DMAReporting 数据库的名称。 |
@@ -173,7 +173,7 @@ DmaProcessor 完成对评估文件的处理后，数据将加载到 ReportData �
 
 ## <a name="set-your-database-owners"></a>设置数据库所有者
 
-虽然不是必需的，但若要从报表中获得最大的价值，建议你在 " **dimDBOwner** " 维度中设置数据库所有者，然后在**FactAssessment**表中更新**DBOwnerKey** 。  按照此过程操作，可以根据特定数据库所有者对 Power BI 报表进行切片和筛选。
+虽然不是必需的，但若要从报表中获得最大的价值，建议你在 " **dimDBOwner** " 维度中设置数据库所有者，然后在 **FactAssessment** 表中更新 **DBOwnerKey** 。  按照此过程操作，可以根据特定数据库所有者对 Power BI 报表进行切片和筛选。
 
 还可以使用 LoadWarehouse 脚本提供用于设置数据库所有者的基本 TSQL 语句。
 
@@ -274,7 +274,7 @@ Power BI 报表中显示的详细信息如以下部分所示。
 
 - InstanceDatabase
 - ChangeCategory
-- Title
+- 标题
 - ObjectType
 - ImpactedObjectName
 

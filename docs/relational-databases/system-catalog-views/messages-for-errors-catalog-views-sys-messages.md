@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sys.messages catalog view
 - error numbers [SQL Server]
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 30cfb208d709f19743216369b23e6b7bef9dfc38
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 590ad007eebcf37765752272ef775e0d3d2443f0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810393"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092536"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>（错误）消息目录视图 - sys.messages
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "91810393"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|消息的 ID。 此 ID 在服务器中是唯一的。 编号在 50000 以下的消息 ID 是系统消息。|  
-|**language_id**|**smallint**|用于 **文本** 的语言 ID，如 **sys.syslanguages**中所定义。 这对于指定 **message_id**是唯一的。|  
-|severity |**tinyint**|消息的严重级别，在 1 到 25 之间。 这对于 **message_id**中的所有消息语言都是相同的。|  
-|**is_event_logged**|**bit**|1 = 出现错误时将消息记入事件日志。 这对于 **message_id**中的所有消息语言都是相同的。|  
+|**language_id**|**smallint**|用于 **文本** 的语言 ID，如 **sys.syslanguages** 中所定义。 这对于指定 **message_id** 是唯一的。|  
+|severity |**tinyint**|消息的严重级别，在 1 到 25 之间。 这对于 **message_id** 中的所有消息语言都是相同的。|  
+|**is_event_logged**|**bit**|1 = 出现错误时将消息记入事件日志。 这对于 **message_id** 中的所有消息语言都是相同的。|  
 |**text**|**nvarchar(2048)**|对应的 **language_id** 处于活动状态时使用的消息文本。|  
   
 ## <a name="permissions"></a>权限  

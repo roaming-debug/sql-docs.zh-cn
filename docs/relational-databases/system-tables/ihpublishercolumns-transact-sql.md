@@ -16,26 +16,26 @@ dev_langs:
 helpviewer_keywords:
 - IHpublishercolumns system table
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 49d4da72bc68d375b7c918768b656e025c4dc6f2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 44704435eca9e065e7065f025b4c99accab7fa7f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89524804"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092467"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **IHpublishercolumns**系统表表示在发布服务器上存储的元数据。 每个使用当前分发服务器从非 SQL Server 发布服务器复制的列都在该表中对应一行。 **IHpublishercolumns**中的数据类型信息特定于从中发布数据 (DBMS) 的非 SQL Server 数据库管理系统。 此表存储在分发数据库中。  
+  **IHpublishercolumns** 系统表表示在发布服务器上存储的元数据。 每个使用当前分发服务器从非 SQL Server 发布服务器复制的列都在该表中对应一行。 **IHpublishercolumns** 中的数据类型信息特定于从中发布数据 (DBMS) 的非 SQL Server 数据库管理系统。 此表存储在分发数据库中。  
   
 ## <a name="definition"></a>定义  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|标识已发布列。|  
-|table_id****|**int**|标识列所属的 [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) 中的源表。|  
+|table_id|**int**|标识列所属的 [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) 中的源表。|  
 |**publisher_id**|**smallint**|标识正在发布该列的非 SQL Server 发布服务器。|  
 |name|**sysname**|已发布列的名称。|  
 |**column_ordinal**|**int**|按顺序标识列。|  

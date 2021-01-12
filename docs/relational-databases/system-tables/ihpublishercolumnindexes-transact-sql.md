@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - IHpublishercolumnindexes system table
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5e8c4f3de523b1809ceed4a71c5384d853f92414
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ab3d300d9dc76dd1d4922e6d62b4a6e0f8e1e492
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545738"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092485"
 ---
 # <a name="ihpublishercolumnindexes-transact-sql"></a>IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **IHpublishercolumnindexes**系统表将[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)系统表中非 SQL Server 发布的列映射到[IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md)系统表中的索引。 此表存储在分发数据库中。  
+  **IHpublishercolumnindexes** 系统表将 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)系统表中非 SQL Server 发布的列映射到 [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md)系统表中的索引。 此表存储在分发数据库中。  
   
 ## <a name="definition"></a>定义  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xe_packages (Transact-SQL)
-title: sys. dm_xe_packages (Transact-sql) |Microsoft Docs
+title: sys.dm_xe_packages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b3bf921d551a10a53c0ecbab16721f4e8240df7a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f4d23f493b669744f0c3bb53b6148056131ebe17
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536916"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093920"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89536916"
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|包的名称。 包自身便可显示说明。 不可为 null。|  
 |guid|**uniqueidentifier**|标识包的 GUID。 不可为 null。|  
-|description|**nvarchar (3072) **|包说明。 包作者设置的 descriptionis 不能为 null。|  
+|说明|**nvarchar (3072)**|包说明。 包作者设置的 descriptionis 不能为 null。|  
 |capabilities|**int**|说明此包的功能的位图。 可以为 Null。|  
 |capabilities_desc|**nvarchar(256)**|此包可能具有的所有功能的列表。 可以为 Null。|  
 |module_guid|**nvarchar(60)**|公开此包的模块的 GUID。 不可为 null。|  
@@ -53,11 +53,11 @@ ms.locfileid: "89536916"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-| From | 到 | 关系 |
+| From | 目标 | Relationship |
 | ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|多对一|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

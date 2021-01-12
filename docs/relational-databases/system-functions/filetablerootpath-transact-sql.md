@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 713b0612ecbe67669955290a3abbb47732fe82b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f08273adcf261ecfdafaa70793d50b31360f7e40
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397193"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093852"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +41,8 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  *FileTable_name*  
  FileTable 的名称。 *FileTable_name* 的类型为 **nvarchar**。 这是一个可选参数。 默认值为当前数据库。 指定 *schema_name* 也是可选的。 可以将 NULL 传递给 *FileTable_name* 以使用默认参数值  
   
- *\@选*  
- 一个整数表达式，定义路径的服务器组件应如何进行格式化。 * \@ 选项*可以具有以下值之一：  
+ *\@选项*  
+ 一个整数表达式，定义路径的服务器组件应如何进行格式化。 *\@ 选项* 可以具有以下值之一：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -58,7 +58,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
 ## <a name="general-remarks"></a>一般备注  
  如果满足以下条件之一， **FileTableRootPath** 函数将返回 NULL：  
   
--   *FileTable_name*的值无效。  
+-   *FileTable_name* 的值无效。  
   
 -   调用方没有足够的权限引用指定表或当前数据库。  
   
@@ -84,7 +84,7 @@ WHERE Name = N'document.docx';
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- **FileTableRootPath**函数需要：  
+ **FileTableRootPath** 函数需要：  
   
 -   拥有 FileTable 的 SELECT 权限以获取特定 FileTable 的根路径。  
   
