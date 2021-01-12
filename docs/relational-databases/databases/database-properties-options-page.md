@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: bf329c6537df49ace1ae78bba64e146641e1e664
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 87c3b10b95a37c74ea1595dca15341aeffe5c261
+ms.sourcegitcommit: 4a813a0741502c56c0cd5ecaafafad2e857a9d7f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195030"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98031096"
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92195030"
  通过从列表中进行选择来指定数据库的排序规则。 有关详细信息，请参阅 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)。  
   
  **恢复模式**  
- 指定下列模式之一来恢复数据库：**完整**、**大容量日志**或**简单**。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
+ 指定下列模式之一来恢复数据库：**完整**、**大容量日志** 或 **简单**。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
  **兼容性级别**  
  指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关可能的值，请参阅 [ALTER DATABASE (Transact-SQL) 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 升级 SQL Server 数据库时，如果可能，保留该数据库的兼容性级别，或更改为新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的最低级别。 
@@ -154,7 +154,7 @@ ms.locfileid: "92195030"
  指定是否启用数据库的算术中止选项。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则溢出错误或被零除错误会导致查询或批处理终止。 如果错误发生在事务内，则回滚事务。 如果设置为 **False**，则会显示一条警告消息，但是会继续执行查询、批处理或事务，就像没有出错一样。 有关详细信息，请参阅 [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)。  
   
  **串联的 Null 结果为 Null**  
- 指定在与 Null 值连接时的行为。 当属性值为 **True**时， **字符串** + NULL 会返回 NULL。 如果设置为 **False**，则结果为 **string**。 有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。  
+ 指定在与 Null 值连接时的行为。 当属性值为 **True** 时， **字符串** + NULL 会返回 NULL。 如果设置为 **False**，则结果为 **string**。 有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。  
   
  **跨数据库所有权链接已启用**  
  该只读值指示跨数据库所有权链接是否已启用。 如果设置为 **True**，则数据库可以为跨数据库所有权链的源或目标。 使用 ALTER DATABASE 语句设置此属性。  
@@ -165,7 +165,7 @@ ms.locfileid: "92195030"
  如果设置为 **False**，则不维护相关统计信息。  
  
  延迟持续性  
- 启用此功能。  
+ 启用此功能。 有关详细信息，请参阅[控制事务持续性](../logs/control-transaction-durability.md)。
  
  读提交快照处于打开状态  
  启用此功能。  
@@ -183,13 +183,13 @@ ms.locfileid: "92195030"
  指定触发器是否可以由其他触发器激发。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则会启用对触发器的递归激发。 如果设置为 **False**，则只禁用直接递归。 若要禁用间接递归，请使用 sp_configure 将 nested triggers 服务器选项设置为 0。 有关详细信息，请参阅 [创建嵌套触发器](../../relational-databases/triggers/create-nested-triggers.md)。  
   
  **可信**  
- 当显示 **True**时，该只读选项指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在数据库中建立的模拟上下文内访问数据库以外的资源。 可以使用 EXECUTE AS 用户语句或数据库模块上的 EXECUTE AS 子句在数据库内建立模拟上下文。  
+ 当显示 **True** 时，该只读选项指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在数据库中建立的模拟上下文内访问数据库以外的资源。 可以使用 EXECUTE AS 用户语句或数据库模块上的 EXECUTE AS 子句在数据库内建立模拟上下文。  
   
  若要具有访问权限，数据库的所有者也需要具有服务器级的 AUTHENTICATE SERVER 权限。  
   
- 使用此属性，还可以在数据库内创建和执行不安全的程序集和外部访问程序集。 除了将此属性设置为 **True**以外，数据库的所有者还必须拥有服务器级的 EXTERNAL ACCESS ASSEMBLY 或 UNSAFE ASSEMBLY 权限。  
+ 使用此属性，还可以在数据库内创建和执行不安全的程序集和外部访问程序集。 除了将此属性设置为 **True** 以外，数据库的所有者还必须拥有服务器级的 EXTERNAL ACCESS ASSEMBLY 或 UNSAFE ASSEMBLY 权限。  
   
- 默认情况下，所有用户数据库和所有系统数据库（ **MSDB**除外）都将此属性设置为 **False**。 对于 **model** 和 **tempdb** 数据库，不能更改此值。  
+ 默认情况下，所有用户数据库和所有系统数据库（ **MSDB** 除外）都将此属性设置为 **False**。 对于 **model** 和 **tempdb** 数据库，不能更改此值。  
   
  每当数据库附加到服务器时，都要将 TRUSTWORTHY 设置为 **False** 。  
   
@@ -198,11 +198,11 @@ ms.locfileid: "92195030"
  若要设置此属性，请使用 ALTER DATABASE 语句。  
   
  **VarDecimal 存储格式已启用**  
- 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始，此选项为只读选项。 为 **True**时，此数据库将启用 vardecimal 存储格式。 数据库中的任何表使用 vardecimal 存储格式时，无法禁用该存储格式。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，对于所有的用户数据库都将启用 vardecimal 存储格式。 此选项使用 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。  
+ 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始，此选项为只读选项。 为 **True** 时，此数据库将启用 vardecimal 存储格式。 数据库中的任何表使用 vardecimal 存储格式时，无法禁用该存储格式。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，对于所有的用户数据库都将启用 vardecimal 存储格式。 此选项使用 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。  
   
 ## <a name="recovery"></a>恢复  
  **页验证**  
- 指定用于发现和报告由磁盘 I/O 错误导致的不完整 I/O 事务的选项。 可能的值为 **None**、 **TornPageDetection**和 **Checksum**。 有关详细信息，请参阅 [管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)在  中还原页。  
+ 指定用于发现和报告由磁盘 I/O 错误导致的不完整 I/O 事务的选项。 可能的值为 **None**、 **TornPageDetection** 和 **Checksum**。 有关详细信息，请参阅 [管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)在  中还原页。  
   
  **目标恢复时间（秒）**  
  指定在发生崩溃的情况下恢复指定数据库的最长时间（秒）。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
@@ -225,7 +225,7 @@ Service Broker 标识符
  查看数据库的当前状态。 该策略不能编辑。 有关 **“数据库状态”** 的详细信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
 
  **已启用加密**  
- 设置为 **True**时，会对此数据库启用数据库加密。 加密时需要数据库加密密钥。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
+ 设置为 **True** 时，会对此数据库启用数据库加密。 加密时需要数据库加密密钥。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
  
  **限制访问**  
  指定哪些用户可以访问该数据库。 可能的值包括：  
