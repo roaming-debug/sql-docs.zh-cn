@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 4a3857e9e98bfbe7fcc86ee07272698f0fcac763
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 3228a21b43fd5b5ed2a23c5e13b47353e55cd028
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418661"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093263"
 ---
 # <a name="mssqlserver_3859"></a>MSSQLSERVER_3859
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,4 +77,4 @@ ms.locfileid: "92418661"
 
 ## <a name="more-information"></a>详细信息
 
-有关详细信息，请参阅：[系统基表](/sql/relational-databases/system-tables/system-base-tables)。
+有关详细信息，请参阅：[系统基表](../system-tables/system-base-tables.md)。

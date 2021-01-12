@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 monikerRange: '>= sql-server-linux-2017 || >= sql-server-2017'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 615e3d2ec9c64be70535c9a45a9f31e94d34b139
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: f3bf3cff9f7497c5f880cbd75aef26b387c7415e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878761"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093275"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入门：使用 Docker 运行 SQL Server 容器映像
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -502,7 +502,7 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
 
 - [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [适用于 Windows 的 SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
 - [mssql-cli（预览版）](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 - [PowerShell Core](sql-server-linux-manage-powershell-core.md)
 

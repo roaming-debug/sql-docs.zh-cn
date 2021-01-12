@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 23b04ae0e205a70b195b7da39a666256463bfa1c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 85d9e42b9c0ac537d6f33bd884b898374119972d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192847"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099311"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -153,7 +153,7 @@ ON
 ### <a name="transact-sql-support"></a>Transact-SQL 支持  
  此新功能在 Transact-SQL 外围应用中引入了以下更改：
 
-- **sys.master_files** 系统视图中新增一个 **int**列，即 **credential_id** 。 credential_id 列用于实现将 Azure 存储数据文件交叉引用回为其创建的凭据的 `sys.credentials`。 你可以使用它来排除故障，例如，当有数据库文件使用凭据时无法删除凭据。  
+- **sys.master_files** 系统视图中新增一个 **int** 列，即 **credential_id** 。 credential_id 列用于实现将 Azure 存储数据文件交叉引用回为其创建的凭据的 `sys.credentials`。 你可以使用它来排除故障，例如，当有数据库文件使用凭据时无法删除凭据。  
   
 ##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> 排查“Microsoft Azure 中的 SQL Server 数据文件”功能问题  
  为避免不受支持的功能或限制造成的错误，首先请查看 [Limitations](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations)。  
@@ -177,7 +177,7 @@ ON
   
  **数据库错误**  
   
-**创建数据库时出错** 解决方法：有关第 4 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-4-restore-database-to-virtual-machine-from-url.md)。  
+**创建数据库时出错** 解决方法：有关第 4 课中提供的说明，请参阅 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#4----restore-database-to-virtual-machine-from-url)。  
   
 **运行 Alter 语句时出错** 解决方案：确保在数据库联机时执行 Alter Database 语句。 将数据文件复制到 Azure 存储时，始终创建页 Blob 而不是块 Blob。 否则，ALTER Database 将失败。 有关第 7 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   

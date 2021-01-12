@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7b6583ce7fb4ae2d0b37d898b549a385cfc09763
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: dc5d54c3d64d43eb4b68a6762e3bd024587937ab
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115430"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094647"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 的常见问题解答 (FAQ)
 
@@ -105,7 +105,7 @@ ms.locfileid: "92115430"
 
 1. 是否有可在 Linux 上运行的类似 SSMS 的工具？
 
-   新 Azure Data Studio 是一款用于管理 SQL Server 的跨平台工具。 有关详细信息，请参阅[什么是 Azure Data Studio](../azure-data-studio/what-is.md)。
+   新 Azure Data Studio 是一款用于管理 SQL Server 的跨平台工具。 有关详细信息，请参阅[什么是 Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)。
 
 1. Linux 上是否提供 sqlcmd 和 bcp 等命令？
 

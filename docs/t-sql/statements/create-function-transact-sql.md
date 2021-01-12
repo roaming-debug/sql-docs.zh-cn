@@ -39,14 +39,14 @@ helpviewer_keywords:
 - TVF
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 37904c7f99fc766913521bf9fd598941ec8407ef
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: cb4c79d1f4c8c7b8103ff9d34b8f32fd497b8c6a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300831"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095785"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
@@ -296,7 +296,7 @@ function_name 是用户定义函数的名称。 函数名称必须符合[标识�
 
 [ type_schema_name. parameter_data_type 是参数的数据类型及其所属的架构，后者为可选项。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，允许使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型和用户定义表类型）。 对于 CLR 函数，允许使用除 text、ntext、image、用户定义表类型和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）   。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 **cursor** 和 **table** 指定为参数数据类型。
 
-如果未指定 *type_schema_name* ，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会按以下顺序查找 *scalar_parameter_data_type* ：
+如果未指定 *type_schema_name*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会按以下顺序查找 *scalar_parameter_data_type*：
 
 - 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型名称的架构。
 - 当前数据库中当前用户的默认架构。
@@ -331,7 +331,7 @@ select_stmt 定义内联表值函数 (TVF) 返回值的单个 SELECT 语句。
 
 ORDER (\<order_clause>) 指定从表值函数中返回结果的顺序。 有关详细信息，请参阅本主题后面的“[在 CLR 表值函数中使用排序顺序](#using-sort-order-in-clr-table-valued-functions)”部分。
 
-EXTERNAL NAME \<method_specifier> *assembly_name* . *class_name* . *method_name*
+EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP1 及更高版本）
 
 指定创建的函数名称应引用的程序集和方法。
@@ -355,9 +355,9 @@ EXTERNAL NAME \<method_specifier> *assembly_name* . *class_name* . *method_name*
 > - 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能执行 CLR 代码。 可以创建、修改和删除引用公共语言运行时模块的数据库对象；不过，只有在启用 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之后，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用。 若要启用此选项，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。
 > - 此选项在包含数据库中不可用。
 
-*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,... *n* ] ) 为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数定义表数据类型。 表声明包含列定义和列约束（或表约束）。 表始终放在主文件组中。
+*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) 为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数定义表数据类型。 表声明包含列定义和列约束（或表约束）。 表始终放在主文件组中。
 
-*\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,... *n* ] ) 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（ [在某些区域以预览版提供](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)）。
+*\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] ) 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（[在某些区域以预览版提供](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)）。
 
 定义 CLR 函数的表数据类型。 表声明仅包含列名称和数据类型。 表始终放在主文件组中。
 
@@ -733,7 +733,7 @@ GO
 
 此示例会创建 CLR 函数 `len_s`。 在创建该函数之前，程序集 `SurrogateStringFunction.dll` 已在本地数据库中注册。
 
-**适用对象** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP1 及更高版本）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP1 及更高版本）
 
 ```sql
 DECLARE @SamplesPath nvarchar(1024);

@@ -22,14 +22,14 @@ helpviewer_keywords:
 - conversations [Service Broker], groups
 - conversations [Service Broker], moving
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 221c16ac567c7dfffa86d2c2259bd86d62cc1d8a
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a789534b4ff40a7d9f6f360c941bd920ce23c44e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498108"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095654"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,18 +50,18 @@ MOVE CONVERSATION conversation_handle
 
 ## <a name="arguments"></a>参数
  *conversation_handle*  
- 一个变量或常量，包含要移动的会话的会话句柄。 conversation_handle 的类型必须为 uniqueidentifier******。  
+ 一个变量或常量，包含要移动的会话的会话句柄。 conversation_handle 的类型必须为 uniqueidentifier。  
   
- TO conversation_group_id**  
- 一个变量或常量，包含会话将要移至的会话组的标识符。 conversation_group_id 的类型必须为 uniqueidentifier******。  
+ TO conversation_group_id  
+ 一个变量或常量，包含会话将要移至的会话组的标识符。 conversation_group_id 的类型必须为 uniqueidentifier。  
   
 ## <a name="remarks"></a>注解  
- MOVE CONVERSATION 语句将由 conversation_handle 指定的会话移动到由 conversation_group_id 标识的会话组****。 只能在与相同队列关联的会话组之间重定向对话框。  
+ MOVE CONVERSATION 语句将由 conversation_handle 指定的会话移动到由 conversation_group_id 标识的会话组。 只能在与相同队列关联的会话组之间重定向对话框。  
   
 > [!IMPORTANT]  
->  如果 MOVE CONVERSATION 语句不是批处理或存储过程中的第一个语句，前面的语句必须以分号 (;)（[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句终止符）结尾****。  
+>  如果 MOVE CONVERSATION 语句不是批处理或存储过程中的第一个语句，前面的语句必须以分号 (;)（[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句终止符）结尾。  
   
- MOVE CONVERSATION 语句将锁定与 conversation_handle 关联的会话组和由 conversation_group_id 指定的会话组，直到包含该语句的事务提交或回滚****。  
+ MOVE CONVERSATION 语句将锁定与 conversation_handle 关联的会话组和由 conversation_group_id 指定的会话组，直到包含该语句的事务提交或回滚。  
   
  MOVE CONVERSATION 在用户定义函数中无效。  
   

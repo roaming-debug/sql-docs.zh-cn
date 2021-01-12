@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 870f9b9f4d3fcc8186ed1d16faee861ed63e4135
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 8b9d79dc7b23339b5b152695daf5efc5c47847a4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418687"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099337"
 ---
 # <a name="mssqlserver_17112"></a>MSSQLSERVER_17112
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92418687"
 
 ## <a name="explanation"></a>说明
 
-此错误表示指定的[数据库引擎服务启动选项](/sql/database-engine/configure-windows/database-engine-service-startup-options)无效。 如果未正确指定启动选项，则 SQL Server 无法启动或可能不会按预期运行。 还会引发错误 17112。
+此错误表示指定的[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)无效。 如果未正确指定启动选项，则 SQL Server 无法启动或可能不会按预期运行。 还会引发错误 17112。
 
 在某些情况下，实例可能会启动，但当你查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志时，启动参数看起来不正确：
 
@@ -67,5 +67,5 @@ ms.locfileid: "92418687"
 
 请参阅下列主题，详细了解此主题：
 
-- [数据库引擎服务启动选项](/sql/database-engine/configure-windows/database-engine-service-startup-options)
-- [SCM 服务 - 配置服务器启动选项](/sql/database-engine/configure-windows/scm-services-configure-server-startup-options)
+- [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+- [SCM 服务 - 配置服务器启动选项](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)

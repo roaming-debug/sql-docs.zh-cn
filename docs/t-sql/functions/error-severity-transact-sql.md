@@ -20,15 +20,15 @@ helpviewer_keywords:
 - CATCH block
 - ERROR_SEVERITY function
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70761565d21d9a9f79634bbd0a70db71c3008e2c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b23ff01d4ae18fef4ab6092cf19a91b461e98526
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482018"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093612"
 ---
 # <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ERROR_SEVERITY ( )
 
 如果在 CATCH 块作用域外调用，`ERROR_SEVERITY` 返回 NULL。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 `ERROR_SEVERITY` 支持在 CATCH 块作用域内的任意位置调用。  
   
 无论 `ERROR_SEVERITY` 运行多少次或在 `CATCH` 块作用域内的任意位置运行，它都将返回错误的错误严重性值。 这与 @@ERROR 之类的函数不同，后者只在导致错误的语句的后一个语句中返回错误号。  

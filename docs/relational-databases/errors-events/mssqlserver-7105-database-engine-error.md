@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rgward
 ms.author: ramakoni
-ms.openlocfilehash: bfcd8763c649f83bb9e72881c6facda29917f7b8
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 7aa3b39996f8dc282e11d92706743a7ba42998da
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418707"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099262"
 ---
 # <a name="mssqlserver_7105"></a>MSSQLSERVER_7105
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "92418707"
 1. 如消息中所示，首先应该是针对数据库运行 `DBCC CHECKDB` 或针对出现问题的表运行 `DBCC CHECKTABLE`。
 
     - 消息中提供了数据库 ID。
-    - 若要在不运行 `DBCC CHECKDB` 的情况下精确找到受影响的表，你将需要找出出现错误的查询所访问的表。 一种方法是使用 SQL 探查器来跟踪查询。 但是，在 [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] 和 [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 中，你或许可使用 system_health 扩展事件会话来查找查询。 若要详细了解如何使用 system_health 会话，请参阅此链接：[使用 system_health 会话](/sql/relational-databases/extended-events/use-the-system-health-session)。
+    - 若要在不运行 `DBCC CHECKDB` 的情况下精确找到受影响的表，你将需要找出出现错误的查询所访问的表。 一种方法是使用 SQL 探查器来跟踪查询。 但是，在 [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] 和 [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 中，你或许可使用 system_health 扩展事件会话来查找查询。 若要详细了解如何使用 system_health 会话，请参阅此链接：[使用 system_health 会话](../extended-events/use-the-system-health-session.md)。
 
     - 与任何数据库一致性问题一样，可通过从不包含此问题的已知完好备份中进行还原来解决这些错误。
 

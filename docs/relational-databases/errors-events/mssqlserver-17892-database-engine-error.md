@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 59cf1ed10d71bf9813f2ce814d88e7f7d64b6b2e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 905b961e2fbf882f59b050a3acb7ba0f9c2f9046
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418681"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099309"
 ---
 # <a name="mssqlserver_17892"></a>MSSQLSERVER_17892
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92418681"
 
 ## <a name="explanation"></a>说明
 
-登录触发器代码无法成功执行时，会引发错误 17892。 [登录触发器](/sql/relational-databases/triggers/logon-triggers)将为响应 LOGON 事件而激发存储过程。 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例建立用户会话时将引发此事件。 将向用户报告如下错误消息：
+登录触发器代码无法成功执行时，会引发错误 17892。 [登录触发器](../triggers/logon-triggers.md)将为响应 LOGON 事件而激发存储过程。 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例建立用户会话时将引发此事件。 将向用户报告如下错误消息：
 
 > 消息 17892，级别 14，状态 1，服务器 \<Server Name>，行 1  
 由于执行触发器，登录名 \<Login Name> 的登录失败。
@@ -52,7 +52,7 @@ ms.locfileid: "92418681"
 
 可根据所面临的场景使用以下解决方案之一。
 
-- **场景 1** ：你目前可使用管理员帐户访问打开的指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的会话
+- **场景 1**：你目前可使用管理员帐户访问打开的指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的会话
 
   在这种情况下，你可采取修复触发器代码所需的纠正措施。
 
@@ -62,15 +62,15 @@ ms.locfileid: "92418681"
   
   或者，你可只删除或禁用登录触发器，使用户能够继续登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 
-- **场景 2** ：你当前没有任何会话在管理员权限下打开，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上已启用专用管理员连接 (DAC)。
+- **场景 2**：你当前没有任何会话在管理员权限下打开，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上已启用专用管理员连接 (DAC)。
 
-    在这种情况下，由于 DAC 连接不受登录触发器的影响，因此可使用 DAC 连接来执行在案例 1 中讨论的相同步骤。 有关 DAC 连接的详细信息，请参阅：[用于数据库管理员的诊断连接](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators)。
+    在这种情况下，由于 DAC 连接不受登录触发器的影响，因此可使用 DAC 连接来执行在案例 1 中讨论的相同步骤。 有关 DAC 连接的详细信息，请参阅：[用于数据库管理员的诊断连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。
 
     若要确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上是否已启用 DAC，可查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中是否有如下所示的消息：
 
     > 2020-02-09 16:17:44.150 已建立服务器专用管理员连接支持，以在端口 1434 进行本地侦听。  
 
-- **场景 3** ：你既没有在服务器上启用 DAC，当前也没有指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的管理员会话。
+- **场景 3**：你既没有在服务器上启用 DAC，当前也没有指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的管理员会话。
 
     在这种情况下，只能执行以下步骤来解决此问题：
   
@@ -80,7 +80,7 @@ ms.locfileid: "92418681"
         > [!NOTE]
         > 上述过程需要 SA 或等效的管理员帐户。
   
-         若要详细了解这些内容和其他启动选项，请参阅：[数据库引擎服务启动选项](/sql/database-engine/configure-windows/database-engine-service-startup-options)。
+         若要详细了解这些内容和其他启动选项，请参阅：[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。
 
 ## <a name="more-information"></a>详细信息
 

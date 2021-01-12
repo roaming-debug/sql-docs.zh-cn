@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 846ce27ff8e7d9560a6d4cc691d1523fddd913fa
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 5252cae293cd4c700f359b8168e0d5d5d10a70cf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418694"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099229"
 ---
 # <a name="mssqlserver_832"></a>MSSQLSERVER_832
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,4 +60,4 @@ ms.locfileid: "92418694"
 
 即使 `DBCC CHECKDB` 在写入磁盘后，也可能不会报告此状态下的页面错误。 这是因为不正确的修改可能位于既不包含任何数据，也不包含任何重要的页面或行结构信息的页面位置，或者可能是对 CHECKDB 无法检测到的数据所做的修改。  
 
-有关消息 832 的更多详细信息，另请参阅白皮书 [SQL Server I/O 基础知识，第 2 章](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))。
+有关消息 832 的更多详细信息，另请参阅白皮书 [SQL Server I/O 基础知识，第 2 章](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))。

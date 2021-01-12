@@ -24,14 +24,14 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 852957ca30b73c1b252c27a4581679f360f1e96e
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9e0d729d951de184aa16717e784f14ae244639d8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300722"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098476"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -91,7 +91,7 @@ table_name 是要将数据批量导入其中的表或视图的名称。 只能�
 
 ' data_file ' 是数据文件的完整路径，该数据文件包含要导入到指定表或视图的数据。 使用 BULK INSERT 可以从磁盘或 Azure Blob 存储（包括网络、软盘、硬盘等）导入数据。
 
-*data_file* 必须基于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器指定一个有效路径。 如果 *data_file* 为远程文件，则指定通用命名约定 (UNC) 名称。 UNC 名称采用以下格式：\\\\*系统名称*\\*共享名称*\\*路径*\\*文件名* 。 例如：
+*data_file* 必须基于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器指定一个有效路径。 如果 *data_file* 为远程文件，则指定通用命名约定 (UNC) 名称。 UNC 名称采用以下格式：\\\\*系统名称*\\*共享名称*\\*路径*\\*文件名*。 例如：
 
 ```sql
 BULK INSERT Sales.Orders
@@ -122,7 +122,7 @@ CHECK_CONSTRAINTS 指定在批量导入操作期间，必须检查所有对目�
 > [!NOTE]
 > MAXERRORS 选项不适用于约束检查。
 
-CODEPAGE = { 'ACP' \| 'OEM' \| 'RAW' \| 'code_page' }：指定数据文件中数据的代码页        。 仅当数据含有字符值大于 **127** 或小于 **32** 的 **char** 、 **varchar** 或 **text** 列时，CODEPAGE 才适用。 有关示例，请参阅[指定代码页](#d-specifying-a-code-page)。
+CODEPAGE = { 'ACP' \| 'OEM' \| 'RAW' \| 'code_page' }：指定数据文件中数据的代码页        。 仅当数据含有字符值大于 **127** 或小于 **32** 的 **char**、**varchar** 或 **text** 列时，CODEPAGE 才适用。 有关示例，请参阅[指定代码页](#d-specifying-a-code-page)。
 
 > [!IMPORTANT]
 > Linux for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 不支持 CODEPAGE 选项。 对于 [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)]，只能对 CODEPAGE 使用“RAW”选项。
@@ -132,8 +132,8 @@ CODEPAGE = { 'ACP' \| 'OEM' \| 'RAW' \| 'code_page' }：指定数据文件中数
 
 |CODEPAGE 值|说明|
 |--------------------|-----------------|
-|ACP|数据类型为 **char** 、 **varchar** 或 **text** 的列从 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|
-|OEM（默认值）|数据类型为 **char** 、 **varchar** 或 **text** 的列从系统 OEM 代码页转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|
+|ACP|数据类型为 **char**、**varchar** 或 **text** 的列从 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|
+|OEM（默认值）|数据类型为 **char**、**varchar** 或 **text** 的列从系统 OEM 代码页转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|
 |RAW|不进行从一个代码页到另一个代码页的转换；这是最快的选项。|
 |*code_page*|特定的代码页码，例如 850。<br /><br /> &#42;&#42; 重要提示 &#42;&#42; 低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|
 | &nbsp; | &nbsp; |
@@ -144,10 +144,10 @@ DATAFILETYPE = { 'char' \| 'native' \| 'widechar' \| 'widenative' }：指定 BUL
 
 |DATAFILETYPE 值|所有数据都表示为：|
 |------------------------|------------------------------|
-|**char** （默认值）|字符格式。<br /><br /> 有关详细信息，请参阅[使用字符格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。|
+|**char**（默认值）|字符格式。<br /><br /> 有关详细信息，请参阅[使用字符格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。|
 |**native**|本机（数据库）数据类型。 通过使用 **bcp** 实用工具从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批量导入数据来创建本机数据文件。<br /><br /> 与 char 值相比，本机值提供更高的性能。 使用不包含任何扩展/双字节字符集 (DBCS) 字符的数据文件在多个 SQL Server 实例之间批量传输数据时，建议使用本机格式。<br /><br /> 有关详细信息，请参阅[使用本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)。|
 |**widechar**|Unicode 字符。<br /><br /> 有关详细信息，请参阅 [使用 Unicode 字符格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。|
-|**widenative**|本机（数据库）数据类型， **char** 、 **varchar** 和 **text** 列除外，这些列中的数据均以 Unicode 格式存储。 通过使用 **bcp** 实用工具从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批量导入数据来创建 **widenative** 数据文件。<br /><br /> 与 **widechar** 相比， **widenative** 值可以提供更高的性能。 如果数据文件包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 扩展字符，则指定 **widenative** 。<br /><br /> 有关详细信息信息，请参阅 [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|
+|**widenative**|本机（数据库）数据类型，**char**、**varchar** 和 **text** 列除外，这些列中的数据均以 Unicode 格式存储。 通过使用 **bcp** 实用工具从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批量导入数据来创建 **widenative** 数据文件。<br /><br /> 与 **widechar** 相比，**widenative** 值可以提供更高的性能。 如果数据文件包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 扩展字符，则指定 **widenative**。<br /><br /> 有关详细信息信息，请参阅 [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|
 | &nbsp; | &nbsp; |
 
 ERRORFILE ='file_name' 指定用于收集格式有误且不能转换为 OLE DB 行集的行的文件。 这些行将按原样从数据文件复制到此错误文件中。
@@ -179,9 +179,9 @@ KEEPNULLS 指定空列在批量导入操作期间应保留 Null 值，而不插�
 
 KILOBYTES_PER_BATCH = kilobytes_per_batch 将每个批处理中数据的近似千字节数 (KB) 指定为 kilobytes_per_batch。 默认情况下，KILOBYTES_PER_BATCH 是未知的。 有关性能注意事项的信息，请参阅本主题后面的“备注”。
 
-LASTROW = last_row 指定要加载的最后一行的行号  。 默认值为 0，表示指定数据文件中的最后一行。
+LASTROW = last_row 指定要加载的最后一行的行号。 默认值为 0，表示指定数据文件中的最后一行。
 
-MAXERRORS = max_errors 指定允许在数据中出现的最大语法错误数，超过该数量后将取消大容量导入操作。 大容量导入操作无法导入的每一行都将被忽略并且计为一个错误。 如果未指定 *max_errors* ，则默认值为 10。
+MAXERRORS = max_errors 指定允许在数据中出现的最大语法错误数，超过该数量后将取消大容量导入操作。 大容量导入操作无法导入的每一行都将被忽略并且计为一个错误。 如果未指定 *max_errors*，则默认值为 10。
 
 > [!NOTE]
 > MAX_ERRORS 选项不适用于约束检查，也不适用于转换 **money** 和 **bigint** 数据类型。
@@ -224,7 +224,7 @@ FORMATFILE = 'format_file_path' 指定格式化文件的完整路径。 描述�
 
 FIELDTERMINATOR ='field_terminator' 指定要用于 char 和 widechar 数据文件的字段终止符  。 默认字段终止符为 \t（制表符）。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。
 
-ROWTERMINATOR ='row_terminator' 指定要用于 char 和 widechar 数据文件的行终止符  。 默认行终止符为 **\r\n** （换行符）。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。
+ROWTERMINATOR ='row_terminator' 指定要用于 char 和 widechar 数据文件的行终止符  。 默认行终止符为 **\r\n**（换行符）。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。
 
 ## <a name="compatibility"></a>兼容性
 
@@ -330,7 +330,7 @@ BULK INSERT 语句可在用户定义的事务内执行，以便将数据导入�
 
 如果用户使用的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，则系统将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程帐户的安全配置文件。 使用 SQL Server 身份验证的登录名不能在数据库引擎外部进行身份验证。 因此，当 BULK INSERT 命令由使用 SQL Server 身份验证的登录名启动时，使用 SQL Server 进程帐户（SQL Server 数据库引擎服务使用的帐户）的安全上下文建立到数据的连接。 要成功读取源数据，您必须授予 SQL Server 数据库引擎使用的帐户访问源数据的权限。与此相反，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户使用 Windows 身份验证登录，则该用户只能读取用户帐户可以访问的那些文件，而不考虑 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的安全配置文件。
 
-如果在一台计算机上使用 **sqlcmd** 或 **osql** 执行 BULK INSERT 语句，将数据插入第二台计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，同时使用 UNC 路径在第三台计算机上指定 *data_file* ，可能会收到 4861 错误。
+如果在一台计算机上使用 **sqlcmd** 或 **osql** 执行 BULK INSERT 语句，将数据插入第二台计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，同时使用 UNC 路径在第三台计算机上指定 *data_file*，可能会收到 4861 错误。
 
 若要解决此问题，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证并指定一个使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程帐户安全配置文件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，或者配置 Windows 以启用安全帐户委托。 有关如何使用户帐户可信以进行委托的信息，请参阅 Windows 帮助。
 
@@ -406,7 +406,7 @@ EXEC(@bulk_cmd);
 ```
 
 > [!NOTE]
-> 由于 Microsoft Windows 处理文本文件的方式，（ **\n** 自动替换为 **\r\n** ）。
+> 由于 Microsoft Windows 处理文本文件的方式，（ **\n** 自动替换为 **\r\n**）。
 
 > [!IMPORTANT]
 > Azure SQL 数据库仅支持从 Azure blob 存储读取内容。

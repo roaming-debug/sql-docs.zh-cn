@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d28550dba1a4703bab01324910436b7256597bb
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: b4cf02b18cdaef035cd27b568d5f8d84f0a25619
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643833"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094590"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -183,10 +183,10 @@ ms.locfileid: "97643833"
   
  HASH 索引可用于进一步优化工作负荷。 这些索引特别针对点查找和行插入进行了优化。 但是，必须考虑到这些索引不支持范围扫描、有序扫描或是对前导索引键列进行的搜索。 因此，使用这些索引时需要谨慎。 此外，还需要在创建时指定 bucket_count。 它通常应设置为索引键值的一到二倍之间，不过估计过高通常不是什么问题。  
   
-有关详细信息，请参阅联机丛书以详细了解[索引指南](/sql/relational-databases/indexes/guidelines-for-online-index-operations)和[选择正确 bucket_count](https://sqlserver-help.com/tag/bucket_count/) 的指南。  
+有关详细信息，请参阅联机丛书以详细了解[索引指南](../indexes/guidelines-for-online-index-operations.md)和[选择正确 bucket_count](https://sqlserver-help.com/tag/bucket_count/) 的指南。  
 
 联机丛书提供有关以下主题的详细信息：
-- [索引指南](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [索引指南](./indexes-for-memory-optimized-tables.md) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  迁移的表中的索引针对演示销售订单处理工作负荷进行了优化。 该工作负荷依赖于表 Sales.SalesOrderHeader_inmem 和 Sales.SalesOrderDetail_inmem 中的插入和点查找，还依赖于对表 Production.Product_inmem 和 Sales.SpecialOffer_inmem 中的主键列进行的点查找。  
   

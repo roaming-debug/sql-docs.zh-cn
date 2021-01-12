@@ -18,14 +18,14 @@ helpviewer_keywords:
 - status information [SQL Server], FETCH
 - '@@FETCH_STATUS function'
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4e8e3c851b411be330d60eb5733d94614c644fbb
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ef3c22679bed84906f325095f28155dd34f16a09
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117095"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092313"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "91117095"
   
 例如，用户从一个游标执行一条 FETCH 语句，然后调用一个存储过程，此存储过程打开并处理另一个游标的结果。 从被调用的存储过程返回控制时，`@@FETCH_STATUS` 反映的是在存储过程中执行的最后的 FETCH 语句的结果，而不是在调用存储过程之前执行的 FETCH 语句的结果。  
   
-若要检索特定游标的最后提取状态，请查询 sys.dm_exec_cursors 动态管理函数的 fetch_status 列********。  
+若要检索特定游标的最后提取状态，请查询 sys.dm_exec_cursors 动态管理函数的 fetch_status 列。  
   
 ## <a name="examples"></a>示例  
 此示例使用 `@@FETCH_STATUS` 来控制 `WHILE` 循环中的游标活动。  

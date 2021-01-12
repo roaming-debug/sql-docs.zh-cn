@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 409e87d937641386747ccf5210551aadb3f5b761
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 9eec7ad0a11116b1eb9e8bf1c33b57ff3bd2b419
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195551"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099276"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,10 +101,10 @@ ms.locfileid: "92195551"
 |2007-12-05 20:12:56.34|登录|用户‘<user_name>’登录失败。 [客户端: <ip address>]|  
   
 > [!NOTE]  
-> 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是使用 Windows 身份验证模式安装的，并随后更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证模式，则最初会禁用 **sa** 登录名。 这将导致状态 7 错误：“用户‘sa’登录失败。”若要启用 **sa** 登录名，请参阅[更改服务器身份验证模式](~/database-engine/configure-windows/change-server-authentication-mode.md)。  
+> 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是使用 Windows 身份验证模式安装的，并随后更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证模式，则最初会禁用 **sa** 登录名。 这将导致状态 7 错误：“用户‘sa’登录失败。”若要启用 **sa** 登录名，请参阅 [更改服务器身份验证模式](~/database-engine/configure-windows/change-server-authentication-mode.md)。  
   
 ## <a name="user-action"></a>用户操作  
-如果您尝试使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请验证是否将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用混合身份验证模式。 有关更改 SQL Server 身份验证模式的详细信息，请查看[更改服务器身份验证模式](https://docs.microsoft.com/sql/database-engine/configure-windows/change-server-authentication-mode)
+如果您尝试使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请验证是否将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用混合身份验证模式。 有关更改 SQL Server 身份验证模式的详细信息，请查看[更改服务器身份验证模式](../../database-engine/configure-windows/change-server-authentication-mode.md)
   
 如果尝试使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名是否存在以及拼写是否正确。  
   
@@ -116,4 +116,4 @@ ms.locfileid: "92195551"
   
 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]支持包含的数据库，请确认在迁移到包含的数据库用户后未删除登录名。  
   
-在本地连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，在 **NT AUTHORITY\NETWORK SERVICE** 下运行的服务的连接必须使用计算机完全限定域名进行身份验证。 有关详细信息，请参阅本主题中的[如何在 ASP.NET 中使用网络服务帐户来访问资源](/previous-versions/msp-n-p/ff647402(v=pandp.10))  
+在本地连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，在 **NT AUTHORITY\NETWORK SERVICE** 下运行的服务的连接必须使用计算机完全限定域名进行身份验证。 有关详细信息，请参阅本主题中的[如何在 ASP.NET 中使用网络服务帐户来访问资源](/previous-versions/msp-n-p/ff647402(v=pandp.10))

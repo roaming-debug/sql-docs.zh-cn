@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a973fd5ec66f101c162e35baec0269f7b6d3d601
-ms.sourcegitcommit: d8a9ad86401bff422d506078c6200494c795e7c0
+ms.openlocfilehash: cccb47e059938745aa6166902402c8b94b674722
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765206"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099310"
 ---
 # <a name="best-practices-with-query-store"></a>查询存储最佳做法
 
@@ -34,7 +34,7 @@ ms.locfileid: "97765206"
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a>在 Azure SQL 数据库中使用 Query Performance Insight
 
-如果在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中运行查询存储，则可以使用 [Query Performance Insight](/azure/sql-database/sql-database-query-performance) 来分析一定时段内的资源消耗情况。 虽然可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [Azure Data Studio](../../azure-data-studio/what-is.md) 来获取所有查询的详细资源消耗情况（例如 CPU、内存和 I/O），但使用 Query Performance Insight 可以快速且有效地确定查询对数据库总体 DTU 消耗情况的影响。 有关详细信息，请参阅 [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use)（Azure SQL 数据库的 Query Performance Insight）。
+如果在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中运行查询存储，则可以使用 [Query Performance Insight](/azure/sql-database/sql-database-query-performance) 来分析一定时段内的资源消耗情况。 虽然可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) 来获取所有查询的详细资源消耗情况（例如 CPU、内存和 I/O），但使用 Query Performance Insight 可以快速且有效地确定查询对数据库总体 DTU 消耗情况的影响。 有关详细信息，请参阅 [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use)（Azure SQL 数据库的 Query Performance Insight）。
 
 本部分介绍最佳的配置默认值，这些默认值旨在确保 Query Store 以及依赖功能能够可靠运行。 默认配置已针对持续数据收集操作进行优化，即，在 OFF/READ_ONLY 状态下花费最少的时间。 有关所有可用的查询存储选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)。
 

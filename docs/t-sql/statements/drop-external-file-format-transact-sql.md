@@ -11,15 +11,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8cf9009b-59f9-4aac-bef1-dcf2cf0708b2
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60e659fa86be685ec79a4247ac853e1461d49cf0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b3bb2aa5bff79c4e3f256ab999511249e3daca76
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478488"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095683"
 ---
 # <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
  *external_file_format_name*  
  要删除的外部文件格式名。  
   
-## <a name="metadata"></a>元数据  
+## <a name="metadata"></a>Metadata  
  要查看外部文件格式列表，请使用 [sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) 系统视图。  
   
 ```sql  
