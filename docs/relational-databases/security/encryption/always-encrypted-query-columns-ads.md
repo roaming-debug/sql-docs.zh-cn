@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ac5e42497a0167a0e935c116a1efd9cc466300c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0a61514ff76bbae9e403683529d017f6fcb1c079
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477608"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101840"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>通过 Azure Data Studio 查询使用 Always Encrypted 的列
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-本文介绍如何使用 [Azure Data Studio](../../../azure-data-studio/what-is.md) 查询使用 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 加密的列。 使用 Azure Data Studio，可以执行以下操作：
+本文介绍如何使用 [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) 查询使用 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 加密的列。 使用 Azure Data Studio，可以执行以下操作：
 - 检索存储在加密列中的密码文本值。 
 - 检索存储在加密列中的纯文本值。  
 - 发送定目标到加密列的纯文本值（例如，在 `INSERT` 或 `UPDATE` 语句中，以及作为 `SELECT` 语句中 `WHERE` 子句的查找参数）。 

@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: 2328cb73bbd101af12074620d0f755209e6dd185
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: b1725b11a5cc491c4624a7196240546a649f9afa
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489837"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102205"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误
 
@@ -68,7 +68,7 @@ ms.locfileid: "97489837"
 
 使用下面的 cmdlet 或命令，以确保已向逻辑 SQL Server 实例分配标识：
 
-- Azure PowerShell：[Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- Azure PowerShell：[Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer) 
 
 - Azure CLI：[az-sql-server-show](/cli/azure/sql/server#az-sql-server-show)
 
@@ -76,7 +76,7 @@ ms.locfileid: "97489837"
 
 使用下面的 cmdlet 或命令，以配置逻辑 SQL Server 实例的 Azure AD 标识 (AppId)：
 
-- Azure PowerShell：[Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0)（含 `-AssignIdentity` 选项）。
+- Azure PowerShell：[Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver)（含 `-AssignIdentity` 选项）。
 
 - Azure CLI：[az sql server update](/cli/azure/sql/server#az-sql-server-update)（含 `--assign_identity` 选项）。
 
@@ -103,7 +103,7 @@ ms.locfileid: "97489837"
 
 1. 使用下面的 cmdlet 或命令，以获取具体逻辑 SQL Server 实例的密钥 URI：
 
-    - Azure PowerShell：[Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell：[Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey)
 
     - Azure CLI：[az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-show) 
 

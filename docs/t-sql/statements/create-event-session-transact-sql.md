@@ -21,14 +21,14 @@ helpviewer_keywords:
 - event sessions [SQL Server]
 - CREATE EVENT SESSION statement
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 793db1e49becc3ea8b16076adae308c2b6c7f237
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 006ef49a390045d5c6d7d8c8c174da90e37f4f91
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300201"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100842"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
@@ -167,7 +167,7 @@ MAX_MEMORY =size [ KB | MB ]：指定要分配给会话的最大内存量，以�
 
 EVENT_RETENTION_MODE = { ALLOW_SINGLE_EVENT_LOSS | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }：指定要用于处理事件丢失的事件保留模式。
 
-**ALLOW_SINGLE_EVENT_LOSS** ：一个事件可能会从会话中丢失。 只有在所有事件缓冲区均已满时才删除单个事件。 通过在事件缓冲区已满时丢失单个事件，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可实现足以满足要求的性能特征，同时还可使处理的事件流中的数据丢失降到最低。
+**ALLOW_SINGLE_EVENT_LOSS**：一个事件可能会从会话中丢失。 只有在所有事件缓冲区均已满时才删除单个事件。 通过在事件缓冲区已满时丢失单个事件，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可实现足以满足要求的性能特征，同时还可使处理的事件流中的数据丢失降到最低。
 
 ALLOW_MULTIPLE_EVENT_LOSS：包含多个事件的已满事件缓冲区可能会从会话中丢失。 丢失事件的数目取决于分配给会话的内存大小、内存的分区情况以及缓冲区中事件的大小。 在事件缓冲区迅速达到已满状态时，该选项可将对服务器性能的影响降至最低，但可能会有大量的事件从会话中丢失。
 
@@ -186,7 +186,7 @@ MAX_EVENT_SIZE =size [ KB | MB ]：指定允许的事件大小上限。 MAX_EVEN
 
 MEMORY_PARTITION_MODE = { NONE | PER_NODE | PER_CPU }：指定事件缓冲区的创建位置。
 
-**NONE** ：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中创建一组缓冲区。
+**NONE**：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中创建一组缓冲区。
 
 PER_NODE：为每个 NUMA 节点创建一组缓冲区。
 
@@ -201,7 +201,7 @@ STARTUP_STATE = { ON | OFF }：指定在 [!INCLUDE[ssNoVersion](../../includes/s
 
 ON：事件会话随之启动。
 
-**OFF** ：事件会话不随之启动。
+**OFF**：事件会话不随之启动。
 
 ## <a name="remarks"></a>备注
 

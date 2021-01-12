@@ -21,14 +21,14 @@ helpviewer_keywords:
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 549f9157341c6b9508e63c0fadcdb06bade25d18
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ce2693109669da084a67849105e859066f818213
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538095"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102367"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -250,7 +250,7 @@ BOUNDING_BOX
  > [!NOTE]
  > 边界框坐标只在 USING GEOMETRY_GRID 子句内应用。  
  >
- > *xmax* 必须大于 *xmin*，*ymax* 必须大于 *ymin*。 你可以指定任何有效的[浮点](../../t-sql/data-types/float-and-real-transact-sql.md)值表示形式，前提是：*xmax* > *xmin* 且 *ymax* > *ymin*。 否则，将引发相应错误。  
+ > *xmax* 必须大于 *xmin*，*ymax* 必须大于 *ymin*。 你可以指定任何有效的 [浮点](../../t-sql/data-types/float-and-real-transact-sql.md)值表示形式，前提是：*xmax* > *xmin* 且 *ymax* > *ymin*。 否则，将引发相应错误。  
  >
  > 这里没有默认值。  
  >
@@ -308,7 +308,7 @@ CELLS_PER_OBJECT =n
 |GEOGRAPHY_GRID|**16**|  
 |GEOGRAPHY_AUTO_GRID|**12**|  
   
-在顶级，如果对象包含的单元格多于 *n*指定的单元格，则索引操作将根据需要使用尽可能多的单元格来提供完整的顶级分割。 在这种情况下，对象收到的单元格数可能会大于指定的单元格数。 此时，最大数即为顶级网格生成的单元格数，具体取决于密度。  
+在顶级，如果对象包含的单元格多于 *n* 指定的单元格，则索引操作将根据需要使用尽可能多的单元格来提供完整的顶级分割。 在这种情况下，对象收到的单元格数可能会大于指定的单元格数。 此时，最大数即为顶级网格生成的单元格数，具体取决于密度。  
   
 “每个对象的单元格数”分割规则使用 CELLS_PER_OBJECT 值。 有关分割规则的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   

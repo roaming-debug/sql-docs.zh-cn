@@ -17,20 +17,20 @@ helpviewer_keywords:
 - '@@DBTS function'
 - timestamp data type
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1f11adca5f8a3fe72a0365e84a746cdec2d5e049
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 86b50a1dc5aa704e9d6aa6bbc7677fa056f875be
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417403"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101167"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-此函数返回当前数据库的当前 timestamp 数据类型的值****。 当前数据库将具有确保唯一的时间戳值。
+此函数返回当前数据库的当前 timestamp 数据类型的值。 当前数据库将具有确保唯一的时间戳值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,12 +46,12 @@ ms.locfileid: "88417403"
 **varbinary**
   
 ## <a name="remarks"></a>备注  
-@@DBTS 返回当前数据库最后使用的时间戳值。 插入或更新包含 timestamp 列的行时，会产生一个新的时间戳值****。
+@@DBTS 返回当前数据库最后使用的时间戳值。 插入或更新包含 timestamp 列的行时，会产生一个新的时间戳值。
   
 事务隔离级别的更改不会影响 @@DBTS 函数。
   
 ## <a name="examples"></a>示例  
-此示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库返回当前的 timestamp****。
+此示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库返回当前的 timestamp。
   
 ```sql
 USE AdventureWorks2012;  

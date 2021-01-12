@@ -19,15 +19,15 @@ helpviewer_keywords:
 - assignment operators, +=
 - augmented operators, +=
 ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1f30ab28df95569466864bc9ad2fdbfab4e5123
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1c140365e95935719653805c1ce3e7a631fdbacf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481888"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101062"
 ---
 # <a name="-addition-assignment-transact-sql"></a>+=（加法赋值）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ expression += expression
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  有关详细信息，请参阅 [+（加法）(Transact-SQL)](../../t-sql/language-elements/add-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  

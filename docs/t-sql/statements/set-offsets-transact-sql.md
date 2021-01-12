@@ -21,14 +21,14 @@ helpviewer_keywords:
 - offsets [SQL Server]
 - SET OFFSETS statement
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8accd5a69be5182b0828eefcf8ac7f41e1ce0caf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f390c891b8d4f3254d51ee59448ea663310f6df3
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544115"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100717"
 ---
 # <a name="set-offsets-transact-sql"></a>SET OFFSETS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,10 +50,10 @@ SET OFFSETS keyword_list { ON | OFF }
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- keyword_list**  
+ keyword_list  
  用逗号分隔的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 构造列表，包括 SELECT、FROM、ORDER、TABLE、PROCEDURE、STATEMENT、PARAM 和 EXECUTE。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  SET OFFSETS 只用在 DB-Library 应用程序中。  
   
  SET OFFSETS 的设置是在分析时设置，而不是在执行或运行时设置。 在分析时进行设置意味着：SET 语句只要出现在批处理或存储过程中，该设置即生效，与代码执行实际上是否到达该点无关；并且 SET 语句在任何语句执行之前生效。 例如，假设 SET 语句在 IF...ELSE 语句块中，而在执行过程中从未到达过该语句块，但由于分析了 IF...ELSE 语句块，因此 SET 语句仍生效。  

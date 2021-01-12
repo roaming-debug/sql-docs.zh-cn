@@ -22,14 +22,14 @@ helpviewer_keywords:
 - REMOTE_PROC_TRANSACTIONS option
 - active transactions
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3c52d51d99e830269befd913e389f42ffe124f13
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ecfcda70eb37c4b7b10db2ac49a02996140060da
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544082"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100676"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
  ON | OFF  
  设置为 ON 时，从本地事务执行远程存储过程时将启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务。 设置为 OFF 时，从本地事务调用远程存储过程将不启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  当 REMOTE_PROC_TRANSACTIONS 设置为 ON 时，调用远程存储过程将启动分布式事务，并用 MS DTC 登记该事务。 调用远程存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是事务创建者，负责控制事务的完成。 当为连接发出后续 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句时，主控实例请求 MS DTC 在所涉及的计算机间管理分布式事务的完成。  
   
  在启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务后，可以对已定义为远程服务器的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例调用远程存储过程。 远程服务器全部登记在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务中，而 MS DTC 确保在每台远程服务器上完成该事务。  

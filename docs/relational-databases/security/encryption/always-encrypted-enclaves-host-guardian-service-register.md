@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1774e2b2a27b2b1f0c36b298f98c916318fd1543
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5d1b2a7209de25b1ce5c988ec9a46b77369dcf70
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477648"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101819"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>向主机保护者服务注册计算机
 
@@ -243,7 +243,7 @@ Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputerna
 
 向 HGS 注册 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机（对于 TPM 模式，执行[步骤 4A](#step-4a-register-a-computer-in-tpm-mode)，对于主机密钥模式，执行[步骤 4B](#step-4b-register-a-computer-in-host-key-mode)）之后，应确认它能够成功证明。
 
-可以检查 HGS 证明客户端的配置，并随时使用 [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps) 执行证明尝试。
+可以检查 HGS 证明客户端的配置，并随时使用 [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration) 执行证明尝试。
 该命令的输出应如下所示：
 
 ```

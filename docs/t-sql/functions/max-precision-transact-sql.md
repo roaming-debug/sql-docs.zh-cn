@@ -20,19 +20,19 @@ helpviewer_keywords:
 - '@@MAX_PRECISION function'
 - data types [SQL Server], precision
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 31b1c96a3cb6ab0a0a957ebcbff2d49776d658c8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b04104c842f1de5242d770635d7aec9ab1f62048
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115140"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102515"
 ---
 # <a name="x40x40max_precision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  按照服务器中的当前设置，返回 decimal 和 numeric 数据类型所用的精度级别********。  
+  按照服务器中的当前设置，返回 decimal 和 numeric 数据类型所用的精度级别。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

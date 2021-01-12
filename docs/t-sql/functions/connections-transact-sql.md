@@ -20,14 +20,14 @@ helpviewer_keywords:
 - number of connection attempts
 - attempted connections
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6bfa624000d0bcd036dbf75570d03db945430e31
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 32275f46ea789f5507fff4a2594d7eb8d84604f6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116115"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101257"
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "91116115"
 ## <a name="remarks"></a>注解  
 连接与用户不同。 应用程序可以打开多个与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，而不需要用户观察这些连接。
   
-为包含几个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息的报表运行“sp_monitor”****，包括试图连接统计信息。
+为包含几个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息的报表运行“sp_monitor”，包括试图连接统计信息。
   
 @@MAX_CONNECTIONS 是允许同时连接到服务器的最大连接数。 @@CONNECTIONS 随每次登录尝试而增加，因此 @@CONNECTIONS 可以超过 @@MAX_CONNECTIONS。
   
