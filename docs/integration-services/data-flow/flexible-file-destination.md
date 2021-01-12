@@ -13,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 253bd5f8accf3e2fd9fc28dcaa535bea6f736316
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: d331004e82b155a1c101a31253a82e029ec4a31b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127162"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091642"
 ---
 # <a name="flexible-file-destination"></a>灵活的文件目标
 
@@ -53,7 +53,7 @@ ms.locfileid: "96127162"
 - **escapeChar：** 用于转义输入文件内容中的列分隔符的特殊字符。 不能同时指定表的 escapeChar 和 quoteChar。 只能使用一个字符。 没有默认值。
 - **quoteChar：** 将字符串值用引号括起来的字符。 引号字符内的列和行分隔符将被视为字符串值的一部分。 此属性适用于输入和输出数据集。 不能同时指定表的 escapeChar 和 quoteChar。 只能使用一个字符。 没有默认值。
 - **nullValue：** 用于表示 null 值的一个或多个字符。 默认值为 \N。
-- **encodingName：** 指定编码名称。 请参阅 [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8) 属性。
+- **encodingName：** 指定编码名称。 请参阅 [Encoding.EncodingName](/dotnet/api/system.text.encoding) 属性。
 - **skipLineCount：** 指示从输入文件读取数据时要跳过的非空行数。 如果同时指定了 skipLineCount 和 firstRowAsHeader，则先跳过行，然后从输入文件读取标头信息。
 - **treatEmptyAsNull：** 指定是否在从输入文件读取数据时将 null 或空字符串视为 null 值。 默认值为 True。
 

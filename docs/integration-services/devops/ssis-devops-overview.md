@@ -9,18 +9,18 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 597792aa200edf6dcb9cfe49c95ab5e1befa0c55
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: ce752b03e085ab70b033876d5c30ae3ff96d777c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92343649"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091534"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>SQL Server Integration Services (SSIS) DevOps 工具 Azure DevOps 扩展
 
 可从 Azure DevOps 市场获取 [SSIS DevOps 工具](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools)扩展。
 
-如果你没有 Azure DevOps 组织，首先请注册 [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)，然后根据[这些步骤](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension)添加 SSIS DevOps 工具扩展 。
+如果你没有 Azure DevOps 组织，首先请注册 [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops&preserve-view=true)，然后根据[这些步骤](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops&preserve-view=true#add-an-extension)添加 SSIS DevOps 工具扩展 。
 
 SSIS DevOps 工具包括 SSIS 生成任务、SSIS 部署发布任务和 SSIS 目录配置任务   。
 
@@ -58,13 +58,13 @@ SSIS DevOps 工具包括 SSIS 生成任务、SSIS 部署发布任务和 SSIS 目
 
 #### <a name="output-path"></a>输出路径
 
-用于保存生成结果的单独文件夹的路径，这些结果可通过[发布生成项目任务](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops)发布为生成项目。
+用于保存生成结果的单独文件夹的路径，这些结果可通过[发布生成项目任务](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops&preserve-view=true)发布为生成项目。
 
 ### <a name="limitations-and-known-issues"></a>限制和已知问题
 
 - SSIS 生成任务依赖于 Visual Studio 和 SSIS 设计器，这对于生成代理是必需的。 因此，要在管道中运行 SSIS 生成任务，必须为 Microsoft 托管代理选择 vs2017-win2016，或在自托管代理上安装 Visual Studio 和 SSIS 设计器（VS2017 + SSDT2017 或 VS2019 + SSIS 项目扩展）。
 
-- 要使用任何现成组件（包括 SSIS Azure 功能包和其他第三方组件）生成 SSIS 项目，必须在运行管道代理的计算机上安装这些现成组件。  对于 Microsoft 托管代理，用户可以添加 [PowerShell 脚本任务](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops)或[命令行脚本任务](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)，以便在执行 SSIS 生成任务之前下载和安装组件。 下面是用于安装 Azure 功能包的示例 PowerShell 脚本： 
+- 要使用任何现成组件（包括 SSIS Azure 功能包和其他第三方组件）生成 SSIS 项目，必须在运行管道代理的计算机上安装这些现成组件。  对于 Microsoft 托管代理，用户可以添加 [PowerShell 脚本任务](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops&preserve-view=true)或[命令行脚本任务](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops&preserve-view=true)，以便在执行 SSIS 生成任务之前下载和安装组件。 下面是用于安装 Azure 功能包的示例 PowerShell 脚本： 
 
 ```powershell
 wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
@@ -172,7 +172,7 @@ SSIS 目录配置 JSON 文件的源。 源可以是“文件路径”，也可�
 
 SSIS 目录配置 JSON 文件的路径。 只有在选择“文件路径”作为配置文件源时，此属性才可见。
 
-若要在配置 JSON 文件中使用[管道变量](/azure/devops/pipelines/process/variables)，你需要在此任务之前添加[文件转换任务](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)，以将配置值替换为管道变量。 有关详细信息，请参阅 [JSON 变量替换](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops#json-variable-substitution)。
+若要在配置 JSON 文件中使用[管道变量](/azure/devops/pipelines/process/variables)，你需要在此任务之前添加[文件转换任务](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops&preserve-view=true)，以将配置值替换为管道变量。 有关详细信息，请参阅 [JSON 变量替换](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops&preserve-view=true#json-variable-substitution)。
 
 #### <a name="inline-configuration-json"></a>内联配置 JSON
 

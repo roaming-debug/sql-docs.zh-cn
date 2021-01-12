@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: cawrites
 ms.author: chadam
 manager: erikre
-ms.openlocfilehash: e8c0a889b764f81aaf8ac34cf566b52bf1e86c83
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6e6b362f9e121f10515753d46ee098387348f272
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643263"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091730"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>为 Always On 可用性组配置侦听程序
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -310,7 +310,7 @@ Start-Clustergroup yourListenerGroupName
   
     -   **将 Windows PowerShell 用于故障转移群集：**  
   
-        1.  使用 [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) 创建网络名称和 IP 地址资源。  
+        1.  使用 [Add-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee460983(v=technet.10)) 创建网络名称和 IP 地址资源。  
   
         2.  使用 [Start-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461056(v=technet.10)) 启动网络名称资源。  
   
@@ -328,4 +328,4 @@ Start-Clustergroup yourListenerGroupName
 
 现在你已经创建了侦听器，请将应用程序配置为[连接到侦听器](listeners-client-connectivity-application-failover.md)。 还可以查看各种[可用性组监视策略](monitoring-of-availability-groups-sql-server.md)，以确保可用性组正常运行。
 
-还可以[查看侦听器的属性](view-availability-group-listener-properties-sql-server.md)，或了解如何[删除侦听器](remove-an-availability-group-listener-sql-server.md)（如有必要）。 
+还可以[查看侦听器的属性](view-availability-group-listener-properties-sql-server.md)，或了解如何[删除侦听器](remove-an-availability-group-listener-sql-server.md)（如有必要）。

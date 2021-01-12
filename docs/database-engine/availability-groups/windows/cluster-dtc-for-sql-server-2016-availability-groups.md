@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 981ce2dcfadf234383382103a33faf4f0ab9302e
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4fd420fd7d07af5a6efa81cdb7e716020c03a89b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643040"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091795"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>如何为 AlwaysOn 可用性组群集 DTC 服务
 
@@ -48,7 +48,7 @@ ms.locfileid: "97643040"
 |任务|参考|  
 |-----------------|----------|  
 |为群集 DTC 资源安全启用网络访问权限。|[Enable Network Access Securely for MS DTC](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))（为 MS DTC 安全启用网络访问权限）|
-|停止并禁用本地 DTC 服务。|[配置服务启动方式](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
+|停止并禁用本地 DTC 服务。|[配置服务启动方式](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755249(v=ws.11))|
 |为可用性组中的每个实例循环 SQL Server 服务。  根据需要故障转移可用性组。|[执行可用性组的计划手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
 - 如果服务器是 Windows Server 2012 R2，则操作系统必须应用 [KB 3030373](https://support.microsoft.com/kb/3090973) 。

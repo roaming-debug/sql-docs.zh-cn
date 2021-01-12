@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 8f680d2569bd05a5adb922e273378f920830a1ea
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 82d5aee8d0fa37ca66c49cf00b22385a896c653d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481488"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091773"
 ---
 # <a name="compatibility-certification"></a>兼容性认证
 
@@ -41,7 +41,7 @@ ms.locfileid: "97481488"
 
 这是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 持续集成操作模型的基本原则。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在 Azure 中持续改进和升级，但由于现有数据库保持其当前兼容性级别，因此即使在升级到基础 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 数据库后，它们仍将继续按设计的形式工作。 
 
-SharePoint Server 2016 和 SharePoint Server 2019 也通过这种方式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]上获得了认证，因此，你可以部署任何可使用这些 SharePoint Server 版本支持的数据库兼容级别的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 有关详细信息，请参阅 [SharePoint Server 2016 的硬件和软件要求](https://docs.microsoft.com/sharepoint/install/hardware-and-software-requirements#minimum-requirements-for-a-database-server-in-a-farm)和 [SharePoint Server 2019 的硬件和软件要求](https://docs.microsoft.com/sharepoint/install/hardware-and-software-requirements-2019#minimum-requirements-for-a-database-server-in-a-farm)。
+SharePoint Server 2016 和 SharePoint Server 2019 也通过这种方式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]上获得了认证，因此，你可以部署任何可使用这些 SharePoint Server 版本支持的数据库兼容级别的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 有关详细信息，请参阅 [SharePoint Server 2016 的硬件和软件要求](/sharepoint/install/hardware-and-software-requirements#minimum-requirements-for-a-database-server-in-a-farm)和 [SharePoint Server 2019 的硬件和软件要求](/sharepoint/install/hardware-and-software-requirements-2019#minimum-requirements-for-a-database-server-in-a-farm)。
 
 ## <a name="managing-upgrade-risk-with-compatibility-certification"></a>利用兼容性认证管理升级风险
 使用兼容性认证是数据库现代化的一种非常有用的方法。 通过基于兼容性级别进行认证，开发人员可以将应用程序的技术要求设置为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 上受支持，但应用程序生命周期将从数据库平台生命周期分离出来。 这样，公司便可以根据生命周期策略的要求来升级 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、利用不依赖于代码的全新可伸缩性和性能增强，以及通过升级连接应用程序以保持其功能状态。
@@ -115,4 +115,4 @@ SharePoint Server 2016 和 SharePoint Server 2019 也通过这种方式在 [!INC
 ## <a name="see-also"></a>另请参阅 
 [修改数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)       
 [查看或更改数据库的兼容级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)       
-[升级数据库兼容性级别的最佳做法](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)      
+[升级数据库兼容性级别的最佳做法](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)

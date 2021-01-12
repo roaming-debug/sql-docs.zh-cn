@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 63e40e66003737798c444f220058feceab69411a
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: b22910f0a794925d07358fa73f3bd6d7a7c6e15a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678925"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091654"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 
@@ -28,7 +28,7 @@ ms.locfileid: "92678925"
 
 用于 Azure 的 SQL Server Integration Services (SSIS) 功能包是一个扩展包，可为 SSIS 提供本页面上列出的组件，用于连接到 Azure 服务、在 Azure 与本地数据源之间传输数据以及处理 Azure 中存储的数据。
 
-[![下载用于 Azure 的 SSIS 功能包](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430)下载
+[![下载用于 Azure 的 SSIS 功能包](/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430)下载
 
 - 对于 SQL Server 2019 - [用于 Azure 的 Microsoft SQL Server 2019 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=100430)
 - 对于 SQL Server 2017 - [用于 Azure 的 Microsoft SQL Server 2017 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=54798)

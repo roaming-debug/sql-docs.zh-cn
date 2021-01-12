@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e971592b20dd2321e4265752cb8b01c38387b639
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 697cf043c4582796015b061c857145c214d105fb
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670750"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091736"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>启动、停止、暂停、继续、重启 SQL Server 服务
 
@@ -198,7 +198,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
   
 ### <a name="to-start-the-database-engine-with-startup-options"></a><a name="dbStartup"></a> 使用启动选项启动数据库引擎  
 
-- 将启动选项添加到 **net start "SQL Server (MSSQLSERVER)"** 语句末尾，之间用空格分隔开。 使用 **net start**启动时，启动选项使用正斜杠 (/) 而不是连字符 (-)。  
+- 将启动选项添加到 **net start "SQL Server (MSSQLSERVER)"** 语句末尾，之间用空格分隔开。 使用 **net start** 启动时，启动选项使用正斜杠 (/) 而不是连字符 (-)。  
   
     **net start "SQL Server (MSSQLSERVER)" /f /m**
   
@@ -342,7 +342,7 @@ SQL Server 组件是作为 Windows 服务运行的可执行程序。 作为 Wind
   
 ##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> 使用服务控制器类
 
-可以使用 ServiceController 类来控制 SQL Server 服务或其他任何 Windows 服务。 有关如何做到这一点的示例，请参阅 [ServiceController 类](/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8)。
+可以使用 ServiceController 类来控制 SQL Server 服务或其他任何 Windows 服务。 有关如何做到这一点的示例，请参阅 [ServiceController 类](/dotnet/api/system.serviceprocess.servicecontroller)。
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>在 Linux 上管理 SQL Server 服务
 

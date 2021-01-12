@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24af2c500ddd9a14dd5d8b1c68f7ecdefda6bc33
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 83182354415b7dd442acee73e91ca7e11c20ce74
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670827"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091717"
 ---
 # <a name="agent-xps-server-configuration-option"></a>“代理 XP”服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,5 +61,4 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [自动执行管理任务（SQL Server 代理）](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)   
- [启动、停止或暂停 SQL Server 代理服务](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
-  
+ [启动、停止或暂停 SQL Server 代理服务](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
