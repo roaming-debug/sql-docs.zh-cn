@@ -1,6 +1,6 @@
 ---
-description: 'fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql) '
-title: fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql) |Microsoft Docs
+description: '&lt; &gt; (transact-sql 的 capture_instance cdc.fn_cdc_get_net_changes_) '
+title: cdc.fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_net_changes_<capture_instance>
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 731effd8310521308f9097323d10fcc57bcb9921
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7dee462b6b4a66b61d790bb06673d36f0907ef73
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498193"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099676"
 ---
-# <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql) 
+# <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>&lt; &gt; (transact-sql 的 capture_instance cdc.fn_cdc_get_net_changes_) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为 (LSN) 范围内的指定日志序列号内的每个源行返回一个净更改行。  
@@ -35,7 +35,7 @@ ms.locfileid: "88498193"
   
  如果源行在 LSN 范围内有多个更改，则在下面描述的枚举函数返回一个反映该行最终内容的行。 例如，如果事务在源表中插入行，并且 LSN 范围内的后续事务更新该行中的一个或多个列，则该 **函数只返回一行，** 其中包含更新后的列值。  
   
- 此枚举函数是在对某源表启用变更数据捕获并指定净跟踪时创建的。 若要启用净跟踪，源表必须具有主键或唯一索引。 函数名称是派生的，并使用格式为 cdc. fn_cdc_get_net_changes_*capture_instance*，其中 *capture_instance* 是为捕获实例指定的值（当源表启用变更数据捕获时）。 有关详细信息，请参阅 [sys.databases&#41;sp_cdc_enable_table &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
+ 此枚举函数是在对某源表启用变更数据捕获并指定净跟踪时创建的。 若要启用净跟踪，源表必须具有主键或唯一索引。 函数名称是派生的，并使用格式 cdc.fn_cdc_get_net_changes_ *capture_instance*，其中 *capture_instance* 是在源表启用变更数据捕获时为捕获实例指定的值。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.sp_cdc_enable_table ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,12 +54,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>参数  
  *from_lsn*  
- LSN，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn* 是 ** (10) 的二进制 **。  
+ LSN，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn* 是 **(10) 的二进制**。  
   
  结果集中仅包含 [cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 更改表中值为 __ $ start_lsn 大于或等于 *from_lsn* 的行。  
   
  *to_lsn*  
- LSN，它表示要包含在结果集中的 LSN 范围的高端点。 *to_lsn* 是 ** (10) 的二进制 **。  
+ LSN，它表示要包含在结果集中的 LSN 范围的高端点。 *to_lsn* 是 **(10) 的二进制**。  
   
  结果集中仅包含 [cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 更改表中 *值为 __* $ start_lsn 小于或等于 from_lsn 或等于 *to_lsn* 的行。  
   
@@ -97,7 +97,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="examples"></a>示例  
  下面的示例使用函数 `cdc.fn_cdc_get_net_changes_HR_Department` 来报告在 `HumanResources.Department` 特定时间间隔内对源表所做的净更改。  
   
- 首先，`GETDATE` 函数用于标记时间间隔的开始。 在将多个 DML 语句应用到源表后，再次调用 `GETDATE` 函数可标识时间间隔的结束。 然后，使用函数 [fn_cdc_map_time_to_lsn sys.databases](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 将时间间隔映射到由 lsn 值界定的变更数据捕获查询范围。 最后，查询函数 `cdc.fn_cdc_get_net_changes_HR_Department` 以获取该时间间隔内对源表所做的净更改。 请注意，插入后又删除的行在函数返回的结果集中不会出现。 这是因为在查询窗口中先添加然后又删除的行在时间间隔内对源表不生成任何净更改。 在运行此示例之前，必须先在 [sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)中运行示例 B。  
+ 首先，`GETDATE` 函数用于标记时间间隔的开始。 在将多个 DML 语句应用到源表后，再次调用 `GETDATE` 函数可标识时间间隔的结束。 然后，使用函数 [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 将时间间隔映射到由 lsn 值界定的变更数据捕获查询范围。 最后，查询函数 `cdc.fn_cdc_get_net_changes_HR_Department` 以获取该时间间隔内对源表所做的净更改。 请注意，插入后又删除的行在函数返回的结果集中不会出现。 这是因为在查询窗口中先添加然后又删除的行在时间间隔内对源表不生成任何净更改。 在运行此示例之前，必须先在 [sys.sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)中运行示例 B。  
   
 ```  
 USE AdventureWorks2012;  
@@ -127,10 +127,10 @@ SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all'
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys. fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys. sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys. sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [&#62;  &#40;Transact-sql&#41;cdc.fn_cdc_get_all_changes_&#60;capture_instance ](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 1ab5c24dadbe3e8d0ad333cd67452c752cb2937b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1210ec1da44d68aaf778145da8a02bf3f3092e2c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478988"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093833"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -44,7 +44,7 @@ fn_get_audit_file ( file_pattern,
     { default | audit_record_offset | NULL } )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *file_pattern*  
  指定要读取的审核文件集的目录（或路径）和文件名。 类型为 **nvarchar (260)**。 
  
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>返回的表  
  下表描述此函数可返回的审核文件内容。  
   
-| 列名称 | 类型 | 说明 |  
+| 列名称 | 类型 | 描述 |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 操作的 ID。 不可为 Null。 |  
 | additional_information | **nvarchar(4000)** | 仅适用于单个事件的唯一信息，以 XML 的形式返回。 有少量的可审核操作包含此类信息。<br /><br /> 对于具有与操作相关联的 TSQL 堆栈的操作，将以 XML 格式显示一个级别的 TSQL 堆栈。 该 XML 格式如下：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 指示框架的当前嵌套级别。 模块名称表示为由三部分组成的格式（database_name、schema_name 和 object_name）。  模块名称将被解析为对无效的 xml 字符（如、、、）进行转义 `'\<'` `'>'` `'/'` `'_x'` 。 它们将被转义为 `_xHHHH\_` 。 HHHH 代表该字符对应的四位十六进制 UCS-2 代码。<br /><br /> 可以为 Null。 如果事件没有报告其他信息，则返回 NULL。 |
@@ -103,8 +103,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | 触发可审核操作的日期和时间。 不可为 null。 |  
 | file_name | **varchar(260)** | 作为记录来源的审核日志文件的路径和名称。 不可为 null。 |
 | is_column_permission | **bit** | 指示是否为列级权限的标志。 不可为 null。 当 permission_bitmask = 0 时返回 0。<br /> 1 = true<br /> 0 = false |
-| object_id | **int** | 发生审核的实体的 ID。 其中包括：<br /> 服务器对象<br /> 数据库<br /> 数据库对象<br /> 架构对象<br /> 不可为 null。 如果实体是服务器本身或者没有在对象级别执行审核，则返回 0。 例如，对于 Authentication，则返回 NULL。 |  
-| object_name | **sysname** | 发生审核的实体的名称。 其中包括：<br /> 服务器对象<br /> 数据库<br /> 数据库对象<br /> 架构对象<br /> 可以为 Null。 如果实体是 Server 自身或者没有在对象级别执行审核，则返回 NULL。 例如，对于 Authentication，则返回 NULL。 |
+| object_id | **int** | 发生审核的实体的 ID。 这包括：<br /> 服务器对象<br /> 数据库<br /> 数据库对象<br /> 架构对象<br /> 不可为 null。 如果实体是服务器本身或者没有在对象级别执行审核，则返回 0。 例如，对于 Authentication，则返回 NULL。 |  
+| object_name | **sysname** | 发生审核的实体的名称。 这包括：<br /> 服务器对象<br /> 数据库<br /> 数据库对象<br /> 架构对象<br /> 可以为 Null。 如果实体是 Server 自身或者没有在对象级别执行审核，则返回 NULL。 例如，对于 Authentication，则返回 NULL。 |
 | permission_bitmask | **varbinary(16)** | 在某些操作中，这是授予、拒绝或撤消的权限。 |
 | response_rows | **bigint** | **适用** 于： Azure SQL 数据库和 SQL 托管实例<br /><br /> 在结果集中返回的行数。 |  
 | schema_name | **sysname** | 在其中执行操作的架构上下文。 可以为 Null。 对于在架构外发生的审核，返回 NULL。 |  
