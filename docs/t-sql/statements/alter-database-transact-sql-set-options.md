@@ -28,15 +28,15 @@ helpviewer_keywords:
 - auto_update_statistics
 - Query Store options
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 97139ed9331853a5d84d261c69510993fb7231a2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 652a4b13db3fdd98b774a5c884e68848a3b0b847
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642258"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099563"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -2005,10 +2005,6 @@ OFF
 
 如果在 READ_ONLY 数据库中设置 ALLOW_SNAPSHOT_ISOLATION，则以后将数据库设置为 READ_WRITE 时，仍将保留该设置。
 
-可以为 master、model、msdb 和 tempdb 数据库更改 ALLOW_SNAPSHOT_ISOLATION 设置。 如果为 tempdb 更改该设置，则每次停止并重新启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时会保留该设置。 如果为 model 更改该设置，则该设置将成为除 tempdb 以外的所有新建数据库的默认设置。
-
-对于 master 和 msdb 数据库，默认情况下该选项设置为 ON。
-
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `snapshot_isolation_state` 列确定此选项的当前设置。
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }     
@@ -2809,7 +2805,7 @@ TOTAL_COMPILE_CPU_TIME_MS
 TOTAL_EXECUTION_CPU_TIME_MS     
 定义查询在评估期间使用的总执行 CPU 时间。 默认值为 100，这意味着对于默认的过时捕获策略阈值，查询必须在一天内在执行期间总共花费至少100 ms 的 CPU 时间，才能持久存储在查询存储中。 TOTAL_EXECUTION_CPU_TIME_MS 的类型为 int。
 
-\<snapshot_option> ::=
+**\<snapshot_option> ::=**
 
 确定事务隔离级别。
 

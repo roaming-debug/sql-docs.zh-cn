@@ -15,12 +15,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f462f256c98c4482af67527401cc6d30f3f0776
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 281fe018c5c2d5e0717fb2c35dfcc8c3c9e8c3fc
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465378"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100220"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>内存中 OLTP 和内存优化
 
@@ -56,7 +56,7 @@ ms.locfileid: "97465378"
 |[内存中 OLTP 代码示例](./sample-database-for-in-memory-oltp.md)|包含说明如何创建和使用内存优化的表的代码示例。|  
 |[Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)|介绍内存优化的表。|  
 |[内存优化表变量](./faster-temp-table-and-table-variable-by-using-memory-optimization.md)|一个代码示例，其中展示如何使用内存优化的表变量代替传统的表变量以减少 tempdb 的使用次数。|  
-|[内存优化表上的索引](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables)|介绍内存优化索引。|  
+|[内存优化表上的索引](./indexes-for-memory-optimized-tables.md)|介绍内存优化索引。|  
 |[本机编译的存储过程](./a-guide-to-query-processing-for-memory-optimized-tables.md)|介绍本机编译的存储过程。|  
 |[管理内存中 OLTP 的内存](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))|了解和管理系统中的内存用量。|  
 |[创建和管理用于内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|论述数据和差异文件，其中存储有关内存优化的表中事务的信息。|  
@@ -136,4 +136,3 @@ ms.locfileid: "97465378"
 
 ## <a name="see-also"></a>另请参阅  
  [数据库功能](../databases/databases.md)  
-  
