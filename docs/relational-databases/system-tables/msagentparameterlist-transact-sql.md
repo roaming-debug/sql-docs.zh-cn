@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - Msagentparameterlist system table
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b5fcded0e1ffe97578832f773e65d2d08e1c41d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8f92e12e48a088c0328d14653ddafd069135201f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551033"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094833"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Msdb.dbo.msagentparameterlist**表包含复制代理参数信息，用于指定可为给定代理类型设置的参数。 该表存储在 **msdb** 数据库中。  
+  **Msdb.dbo.msagentparameterlist** 表包含复制代理参数信息，用于指定可为给定代理类型设置的参数。 该表存储在 **msdb** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

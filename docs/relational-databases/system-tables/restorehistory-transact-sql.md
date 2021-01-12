@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - restorehistory system table
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 03b5887ee905d5a39bce5ef9e73e78e27b581972
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c4d164bdceaea91650a0d1bd8226133b22692912
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540826"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096154"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89540826"
 |**restore_date**|**datetime**|还原操作开始的日期和时间。 可以为 NULL。|  
 |**destination_database_name**|**nvarchar(128)**|还原操作的目标数据库的名称。 可以为 NULL。|  
 |user_name|**nvarchar(128)**|执行还原操作的用户的名称。 可以为 NULL。|  
-|**backup_set_id**|**int**|标识被还原的备份集的唯一标识号。 引用 **backupset (backup_set_id) **。|  
+|**backup_set_id**|**int**|标识被还原的备份集的唯一标识号。 引用 **backupset (backup_set_id)**。|  
 |**restore_type**|**char(1)**|还原操作的类型：<br /><br /> D = 数据库<br /><br /> F = 文件<br /><br /> G = 文件组<br /><br /> I = 差异<br /><br /> L = 日志<br /><br /> V = 仅验证<br /><br /> 可以为 NULL。|  
 |**replace**|**bit**|指示还原操作是否指定了 REPLACE 选项：<br /><br /> 1 = 已指定<br /><br /> 0 = 未指定<br /><br /> 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，0 是唯一的选项。|  
 |**recovery**|**bit**|指示还原操作指定的是 RECOVERY 选项还是 NORECOVERY 选项：<br /><br /> 1 = RECOVERY<br /><br /> 可以为 NULL。<br /><br /> 数据库恢复到数据库快照时，只有1个选项。<br /><br /> 0 = NORECOVERY|  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - syslanguages system table
 - sys.syslanguages compatibility view
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2568e89347bd14ba71e557822d45da5821d53e10
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2174d08692915c5053486f403462d2c1ac16966d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475138"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094190"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "97475138"
 |爱沙尼亚语|1061|1061|  
 |拉脱维亚语|1062|1062|  
 |立陶宛语|1063|1063|  
-|葡萄牙语(巴西)|1046|1046|  
+|葡萄牙语（巴西）|1046|1046|  
 |繁体中文|1028|1028|  
 |韩语|1042|1042|  
 |简体中文|2052|2052|  

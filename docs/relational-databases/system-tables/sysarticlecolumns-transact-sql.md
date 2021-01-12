@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysarticlecolumns system table
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 142ed0bfaad34607422b69929450ae9f7b09bd9e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8e6a7f9bcc3a7c300366a761564c45465988d60a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540208"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094675"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89540208"
 |**colid**|**smallint**|标识项目中的列。|  
 |**is_udt**|**bit**|表示列是否为用户定义数据类型 (UDT) 列。 值为 **1** 指示 UDT 列。|  
 |**is_xml**|**bit**|指示列是否为 **xml** 列。 值 **1** 指示 xml 列。|  
-|**is_max**|**bit**|指示列是否为大值数据类型列、 **varchar (max) **、 **nvarchar (max) **和 **varbinary (max) **。 值 **1** 表示大值列。|  
+|**is_max**|**bit**|指示列是否为大值数据类型列、 **varchar (max)**、 **nvarchar (max)** 和 **varbinary (max)**。 值 **1** 表示大值列。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

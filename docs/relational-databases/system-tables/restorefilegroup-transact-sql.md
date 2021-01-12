@@ -17,14 +17,14 @@ helpviewer_keywords:
 - filegroups [SQL Server], restorefilegroup system table
 - restorefilegroup system table
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 52d1fb66f32d17521343c979493766f2d1ff086a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b4be126afb404fcff25dfa5ce036a70189d7b640
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545318"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096164"
 ---
 # <a name="restorefilegroup-transact-sql"></a>restorefilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89545318"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**int**|标识相应还原操作的唯一标识号。 引用 **restorehistory (restore_history_id) **。|  
+|**restore_history_id**|**int**|标识相应还原操作的唯一标识号。 引用 **restorehistory (restore_history_id)**。|  
 |filegroup_name|**nvarchar(128)**|被还原的文件组的名称 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，此值的填充方式与完全还原时的填充方式相同。|  
   
 ## <a name="remarks"></a>备注  

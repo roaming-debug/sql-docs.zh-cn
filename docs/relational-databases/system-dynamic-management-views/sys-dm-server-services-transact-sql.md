@@ -1,6 +1,6 @@
 ---
 description: sys.dm_server_services (Transact-SQL)
-title: sys. dm_server_services (Transact-sql) |Microsoft Docs
+title: sys.dm_server_services (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2018
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c1b013b97e15fafbc35c1f2120892d9382ea1bc2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2133cd83a96a6db171f078c89dec887aec0e0646
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546462"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095067"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "89546462"
 |last_startup_time|**datetimeoffset(7)**|上次启动服务的日期和时间。 可以为 Null。|  
 |service_account|**nvarchar(256)**|授权来控制服务的帐户。 此帐户可以启动或停止服务，或修改服务属性。 不能为 null。|  
 |filename|**nvarchar(256)**|服务可执行文件的路径和文件名。 不能为 null。|  
-|is_clustered|**nvarchar (1) **|指示服务是否作为群集服务器的资源安装。 不能为 null。|  
+|is_clustered|**nvarchar (1)**|指示服务是否作为群集服务器的资源安装。 不能为 null。|  
 |cluster_nodename|**nvarchar(256)**|安装此服务的群集节点的名称。 可以为 Null。|
-|instant_file_initialization_enabled|**nvarchar (1) **|指定是否为服务启用即时文件初始化 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。<br /><br />Y = 为服务启用即时文件初始化。<br /><br />N = 为服务禁用即时文件初始化。<br /><br /> 可以为 Null。<br /><br /> **注意：** 不适用于其他服务，例如 SQL Server 代理。<br /><br /> **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从 SP4 和 [!INCLUDE[sssql11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高) 版本开始 (。|  
+|instant_file_initialization_enabled|**nvarchar (1)**|指定是否为服务启用即时文件初始化 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。<br /><br />Y = 为服务启用即时文件初始化。<br /><br />N = 为服务禁用即时文件初始化。<br /><br /> 可以为 Null。<br /><br /> **注意：** 不适用于其他服务，例如 SQL Server 代理。<br /><br /> **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从 SP4 和 [!INCLUDE[sssql11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高) 版本开始 (。|  
 
 ## <a name="security"></a>安全性  
   
@@ -53,5 +53,5 @@ ms.locfileid: "89546462"
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. dm_server_registry &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
+ [sys.dm_server_registry &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

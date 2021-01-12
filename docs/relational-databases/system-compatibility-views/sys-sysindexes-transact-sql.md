@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sysindexes system table
 - sys.sysindexes compatibility view
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 4b78a272e9fa2ec3a0cc3d4418986078ff02f457
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: cf8982115b1a4399c327aefc66a5e99a1d46c575
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399403"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094187"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88399403"
 |**groupid**|**smallint**|在其上创建对象的文件组 ID。<br /><br /> NULL = 当 **indid** > 1 时，对索引进行分区。<br /><br /> NULL = 当 **indid** 为0或1时，对表进行分区。|  
 |**dpages**|**int**|对于 **indid** = 0 或 **indid** = 1， **dpages** 是所使用的数据页的计数。<br /><br /> 对于 **indid** > 1， **dpages** 是使用的索引页数。<br /><br /> 0 = 当 **indid** > 1 时，对索引进行分区。<br /><br /> 0 = 当 **indid** 为0或1时，对表进行分区。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
 |**保护**|**int**|对于 **indid** = 0 或 **indid** = 1， **reserved** 是为所有索引和表数据分配的页数。<br /><br /> 对于 **indid** > 1， **reserved** 是为索引分配的页数。<br /><br /> 0 = 当 **indid** > 1 时，对索引进行分区。<br /><br /> 0 = 当 **indid** 为0或1时，对表进行分区。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
-|**used**|**int**|对于 **indid** = 0 或 **indid** = 1， **使用** 的是用于所有索引和表数据的总页数。<br /><br /> 对于 **indid** > 1， **使用** 的是用于索引的页数。<br /><br /> 0 = 当 **indid** > 1 时，对索引进行分区。<br /><br /> 0 = 当 **indid** 为0或1时，对表进行分区。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
+|**广泛**|**int**|对于 **indid** = 0 或 **indid** = 1， **使用** 的是用于所有索引和表数据的总页数。<br /><br /> 对于 **indid** > 1， **使用** 的是用于索引的页数。<br /><br /> 0 = 当 **indid** > 1 时，对索引进行分区。<br /><br /> 0 = 当 **indid** 为0或1时，对表进行分区。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
 |**rowcnt**|**bigint**|基于 **indid** = 0 和 **indid** = 1 的数据级行计数。<br /><br /> 0 = 当 **indid** > 1 时，对索引进行分区。<br /><br /> 0 = 当 **indid** 为0或1时，对表进行分区。|  
 |**rowmodctr**|**int**|对自上次更新表的统计信息后插入、删除或更新行的总数进行计数。<br /><br /> 0 = 当 **indid** > 1 时，对索引进行分区。<br /><br /> 0 = 当 **indid** 为0或1时，对表进行分区。<br /><br /> 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本中， **rowmodctr** 与早期版本不完全兼容。 有关详细信息，请参阅“备注”。|  
 |**reserved3**|**int**|返回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -66,12 +66,12 @@ ms.locfileid: "88399403"
 |name|**sysname**|索引或统计信息的名称。 当 **indid** = 0 时返回 NULL。 修改应用程序以查找 NULL 堆名。|  
 |**statblob**|**图像**|统计信息二进制大型对象 (BLOB)。<br /><br /> 返回 NULL。|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**各**|**int**|基于 **indid** = 0 和 **indid** = 1 的数据级行计数，并为 **indid** >1 重复值。|  
+|**rows**|**int**|基于 **indid** = 0 和 **indid** = 1 的数据级行计数，并为 **indid** >1 重复值。|  
   
 ## <a name="remarks"></a>备注  
  不得使用定义为保留的列。  
   
- 如果表或索引包含 ROW_OVERFLOW 分配单元中的数据，则 **dpages**、 **reserved**和 **used** 列将不会返回准确的结果。 此外，将单独跟踪每个索引的页计数，并且不对基表的页计数进行聚合。 若要查看页计数，请使用 [sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) 或 [sys.databases](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) 目录视图，或者 [dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 动态管理视图。  
+ 如果表或索引包含 ROW_OVERFLOW 分配单元中的数据，则 **dpages**、 **reserved** 和 **used** 列将不会返回准确的结果。 此外，将单独跟踪每个索引的页计数，并且不对基表的页计数进行聚合。 若要查看页计数，请使用 [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) 或 [sys.databases](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) 目录视图或 [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 动态管理视图。  
   
  在 SQL Server 2000 和更早期版本中，[!INCLUDE[ssDE](../../includes/ssde-md.md)]维护行级修改计数器。 现在，此类计数器在列级维护。 因此， **rowmodctr** 列的计算结果与早期版本中的结果相似，但并不完全相同。  
   

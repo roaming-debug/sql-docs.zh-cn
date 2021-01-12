@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ae2abdcaf4014df405ebf6dcefff8e2207530a93
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e6e3c54c859a542f5992a0e2199099e6b93bb27c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545723"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096250"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSlogreader_history**表包含与本地分发服务器关联的日志读取器代理的历史记录行。 此表存储在分发数据库中。  
+  **MSlogreader_history** 表包含与本地分发服务器关联的日志读取器代理的历史记录行。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "89545723"
 |**average_commands**|**int**|会话中传递的平均命令数。|  
 |**delivery_rate**|**float**|平均每秒传递的命令数。|  
 |**delivery_latency**|**int**|命令从进入发布数据库到进入分发数据库之间的滞后时间。 以毫秒为单位。|  
-|**error_id**|**int**|**MSrepl_error**系统表中的错误的 ID。|  
+|**error_id**|**int**|**MSrepl_error** 系统表中的错误的 ID。|  
 |**timestamp**|**timestamp**|该表的时间戳列。|  
 |**updateable_row**|**bit**|如果可以覆盖历史记录行，则设置为 **1** 。|  
   

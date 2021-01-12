@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_fts_index_physical_stats dynamic management view
 ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3fd365f2e3a503b295f14b90a61702e3b8106bb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a89fdf2ed35d3f3725407bb467138ec3874df81f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475028"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095185"
 ---
 # <a name="sysdm_db_fts_index_physical_stats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "97475028"
   
 ||||  
 |-|-|-|  
-|**列名**|**类型**|**说明**|  
+|**列名**|类型|**说明**|  
 |object_id|int|包含索引的表的对象 ID。|  
 |**fulltext_index_page_count**|**bigint**|提取的逻辑大小（用索引页数表示）。|  
 |**keyphrase_index_page_count**|**bigint**|提取的逻辑大小（用索引页数表示）。|  
@@ -44,7 +44,7 @@ ms.locfileid: "97475028"
 ## <a name="general-remarks"></a>一般备注  
  有关详细信息，请参阅 [管理和监视语义搜索](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
   
-## <a name="metadata"></a>元数据  
+## <a name="metadata"></a>Metadata  
  有关语义索引状态的信息，请查询以下动态管理视图：  
   
 -   [sys.dm_fts_index_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  

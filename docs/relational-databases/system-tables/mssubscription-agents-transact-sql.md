@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_agents system table
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e92e0e3476aa377577d00fca63a8348c47d09002
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e8569eba1925879f2f757953f36e4ae632292100
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540847"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094709"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89540847"
 |**publisher_db**|**sysname**|发布数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**subscription_type**|**int**|订阅类型：<br /><br /> 0 = 推送。<br /><br /> 1 = 请求<br /><br /> 2 = 匿名请求。|  
-|**queue_id**|**sysname**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]发布服务器上的消息队列的 ID。 对于基于 SQL 的排队更新，将*queue_id*设置为**sql** 。|  
+|**queue_id**|**sysname**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]发布服务器上的消息队列的 ID。 对于基于 SQL 的排队更新，将 *queue_id* 设置为 **sql** 。|  
 |**update_mode**|**tinyint**|更新的类型：<br /><br /> **0** = 只读。<br /><br /> **1** = 立即更新。<br /><br /> **2** = 使用消息队列的排队更新。<br /><br /> **3** = 使用消息队列作为故障转移的立即更新和排队更新。<br /><br /> **4** = 使用 SQL Server 队列的排队更新。<br /><br /> **5** = 使用 SQL Server 队列进行排队更新故障转移的立即更新。|  
 |**failover_mode**|**bit**|如果选择了更新的故障转移类型，则此参数值为选择的故障转移类型：<br /><br /> **0** = 正在使用即时更新。 不启用故障转移。<br /><br /> **1** = 正在使用排队更新。 已启用故障转移。 用于故障转移的队列在 *update_mode* 值中指定。|  
 |spid|**int**|当前正在运行或刚运行过的分发代理使用的连接的系统进程 ID。|  

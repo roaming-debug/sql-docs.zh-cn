@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.dm_os_child_instances dynamic management view
 - monitoring server health
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 81cceff6a1336fadecb84f1d70c5f41c7625dc07
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9b46f17c349015fee41f91ddb64fc6773ca8c5ee
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834453"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094049"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,13 +50,13 @@ ms.locfileid: "91834453"
 |**instance_pipe_name**|**nvarchar(260)**|创建用户实例时，便会创建与应用程序连接的命名管道。 可以在连接字符串中使用该名称以连接到该用户实例。|  
 |**os_process_id**|**Int**|该用户实例的 Windows 进程的进程号。|  
 |**os_process_creation_date**|**日期时间**|上次启动该用户实例进程的日期和时间。|  
-|**heart_beat**|**nvarchar (5) **|该用户实例的当前状态，可以是 ALIVE 或 DEAD。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**heart_beat**|**nvarchar (5)**|该用户实例的当前状态，可以是 ALIVE 或 DEAD。|  
+|pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  有关动态管理视图的详细信息，请参阅联机丛书中的 [动态管理视图和函数 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.indexes catalog view
 ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ed2a3a496764f58770351a70cd03153e6d3d108
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a06c0570f55a46ae29d994f5eed8b34b95d72b39
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97412995"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094547"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97412995"
 |object_id|**int**|该索引所属对象的 ID。|  
 |name|**sysname**|索引的名称。 **名称** 仅在对象中是唯一的。<br /><br /> NULL = 堆|  
 |index_id|**int**|索引的 ID。 **index_id** 仅在对象中是唯一的。<br /><br /> 0 = 堆<br /><br /> 1或 5 = 聚集索引 (B 树，列存储) <br /><br /> > 1 和 <> 5 = 非聚集索引|  
-|**type**|**tinyint**|索引的类型：<br /><br /> 0 = 堆<br /><br /> 1 = 聚集<br /><br /> 2 = 非聚集<br /><br /> 3 = XML<br /><br /> 4 = 空间<br /><br /> 5 = 聚集列存储索引。 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 6 = 非聚集列存储索引。 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 7 = 非聚集哈希索引。 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。|  
+|type|**tinyint**|索引的类型：<br /><br /> 0 = 堆<br /><br /> 1 = 聚集<br /><br /> 2 = 非聚集<br /><br /> 3 = XML<br /><br /> 4 = 空间<br /><br /> 5 = 聚集列存储索引。 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 6 = 非聚集列存储索引。 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 7 = 非聚集哈希索引。 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。|  
 |**type_desc**|**nvarchar(60)**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> 聚集列存储- **适用** 于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更高版本。<br /><br /> 非聚集列存储- **适用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本。<br /><br /> 非聚集哈希：仅内存优化表支持非聚集哈希索引。 sys.hash_indexes 视图显示当前哈希索引和哈希属性。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.hash_indexes ](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)。 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。|  
 |**is_unique**|**bit**|1 = 索引是唯一的。<br /><br /> 0 = 索引不是唯一的。<br /><br /> 对于聚集列存储索引始终为 0。|  
 |**data_space_id**|**int**|此索引的数据空间的 ID。 数据空间是文件组或分区方案。<br /><br /> 0 = **object_id** 是表值函数或内存中索引。|  

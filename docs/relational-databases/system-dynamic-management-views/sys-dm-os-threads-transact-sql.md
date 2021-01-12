@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96a25a69c14919c4e0108537af105108a813c3fd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c0163e4176202f4bfe8b55ecca0fe4812ec5d26b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472868"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096490"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "97472868"
 |affinity|**bigint**|该线程运行时使用的 CPU 掩码。 这取决于 **ALTER SERVER CONFIGURATION SET PROCESS 地缘** 语句配置的值。 在软关联的情况下，可能与计划程序不同。|  
 |优先级|**int**|该线程的优先级值。|  
 |Locale|**int**|线程的缓存区域设置 LCID。|  
-|Token|**varbinary(8)**|线程的缓存模拟令牌句柄。|  
+|令牌|**varbinary(8)**|线程的缓存模拟令牌句柄。|  
 |is_impersonating|**int**|指示该线程是否使用 Win32 模拟。<br /><br /> 1 = 该线程使用与进程默认的安全凭据不同的安全凭据。 这表明线程正在模拟创建该进程的实体以外的其他实体。|  
 |is_waiting_on_loader_lock|**int**|指示线程是否正在等待加载程序锁的操作系统状态。|  
 |fiber_data|**varbinary(8)**|线程当前运行的 Win32 纤程。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置了轻型池时，这才适用。|  

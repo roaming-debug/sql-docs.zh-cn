@@ -1,6 +1,6 @@
 ---
 description: sys.fn_cdc_get_column_ordinal (Transact-SQL)
-title: sys. fn_cdc_get_column_ordinal (Transact-sql) |Microsoft Docs
+title: sys.fn_cdc_get_column_ordinal (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - fn_cdc_get_column_ordinal
 - sys.fn_cdc_get_column_ordinal
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: edf094b9476813e649bb12038f243407e8d11f2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4ebab4e1b02b325c5abb7e7b6fbc62b2b970ae50
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322123"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094986"
 ---
 # <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
  **int**  
   
 ## <a name="remarks"></a>备注  
- 此函数用于标识变更数据捕获更新掩码内的已捕获列的序号位置。 它主要与函数 [fn_cdc_is_bit_set sys.databases](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) 结合使用，以便在查询变更数据时从更新掩码中提取信息。  
+ 此函数用于标识变更数据捕获更新掩码内的已捕获列的序号位置。 它主要与函数 [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) 结合使用，以便在查询变更数据时从更新掩码中提取信息。  
   
 ## <a name="permissions"></a>权限  
  需要对源表的所有已捕获列具有 SELECT 权限。 如果对捕获实例指定了变更数据捕获组件的数据库角色，则同时需要具有该角色的成员身份。  
@@ -79,8 +79,8 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [变更数据捕获函数 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [sys. sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [sys. sp_cdc_get_captured_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys.sp_cdc_get_captured_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
  [sys.fn_cdc_is_bit_set &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
   
   

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysoperators system table
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a5784e4084fa8481f8293d68b81d4ab8c52f626a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 124ba525abf1bc9e96b065d9ef824ec35ef37b50
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540350"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096263"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "89540350"
 |**id**|**int**|操作员 ID。|  
 |name|**sysname**|运算符的名称。|  
 |**enabled**|**tinyint**|警报通知的状态 (Boolean)。 如果为 **1**，则在发生警报时，此操作员可以接收通知。|  
-|**email_address**|**nvarchar (100) **|该操作员的电子邮件地址。|  
+|**email_address**|**nvarchar (100)**|该操作员的电子邮件地址。|  
 |**last_email_date**|**int**|该操作员上次接收电子邮件警报通知的日期。|  
 |**last_email_time**|**int**|该操作员上次接收电子邮件警报通知的时间。|  
-|**pager_address**|**nvarchar (100) **|该操作员的寻呼地址。|  
+|**pager_address**|**nvarchar (100)**|该操作员的寻呼地址。|  
 |**last_pager_date**|**int**|该操作员上次接收寻呼警报通知的日期。|  
 |**last_pager_time**|**int**|该操作员上次接收寻呼警报通知的时间。|  
 |**weekday_pager_start_time**|**int**|工作日（从星期一到星期五）中的某一时间，该操作员在该时间后可以接收寻呼警报通知。|  
@@ -50,7 +50,7 @@ ms.locfileid: "89540350"
 |**sunday_pager_start_time**|**int**|星期日当天的某一时间，该操作员在该时间后可以接收寻呼警报通知。|  
 |**sunday_pager_end_time**|**int**|星期日当天的某一时间，该操作员在该时间后不能接收寻呼警报通知。|  
 |**pager_days**|**tinyint**|表示一周中某几天的位掩码，该操作员在这几天内可以接收寻呼警报通知。|  
-|**netsend_address**|**nvarchar (100) **|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**netsend_address**|**nvarchar (100)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**last_netsend_date**|**int**|上次将最近网络消息发送到指定操作员 ID 的日期。|  
 |**last_netsend_time**|**int**|上次将最新网络消息发送到指定操作员 ID 的时间。|  
 |**category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

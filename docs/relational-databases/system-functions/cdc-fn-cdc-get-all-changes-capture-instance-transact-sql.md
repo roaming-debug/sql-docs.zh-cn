@@ -1,6 +1,6 @@
 ---
-description: 'fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) '
-title: fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) |Microsoft Docs
+description: '&lt; &gt; (transact-sql 的 capture_instance cdc.fn_cdc_get_all_changes_) '
+title: cdc.fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_all_changes_<capture_instance>
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: aa461859dcc7d2adc359139e4740ea9272161bf8
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8bb04e74ab2dd613173bf194fe4ca5412d79ac7e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989935"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095024"
 ---
-# <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) 
+# <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>&lt; &gt; (transact-sql 的 capture_instance cdc.fn_cdc_get_all_changes_) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为在指定日志序列号 (LSN) 范围内应用到源表的每项更改返回一行。 如果源行在该间隔内有多项更改，则每项更改都会表示在返回的结果集中。 除了返回更改数据外，四个元数据列还提供了将更改应用到另一个数据源所需的信息。 行筛选选项可控制元数据列的内容以及结果集中返回的行。 当指定“all”行筛选选项时，针对每项更改将只有一行来标识该更改。 当指定“all update old”选项时，更新操作会表示为两行：一行包含更新之前已捕获列的值，另一行包含更新之后已捕获列的值。  
   
- 此枚举函数是在对源表启用变更数据捕获时创建的。 函数名称是派生的，并使用格式为 **cdc. fn_cdc_get_all_changes_**_capture_instance_ 其中 *capture_instance* 是为捕获实例指定的值（当源表启用变更数据捕获时）。  
+ 此枚举函数是在对源表启用变更数据捕获时创建的。 函数名称是派生的，并使用 **cdc.fn_cdc_get_all_changes_**_capture_instance_ 格式，其中 *capture_instance* 是在源表启用变更数据捕获时为捕获实例指定的值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,14 +45,14 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 }  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *from_lsn*  
- LSN 值，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn* 是 ** (10) 的二进制 **。  
+ LSN 值，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn* 是 **(10) 的二进制**。  
   
  结果集中仅包含 [cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 更改表中值为 **__ $ start_lsn** 大于或等于 *from_lsn* 的行。  
   
  *to_lsn*  
- LSN 值，它表示要包含在结果集中的 LSN 范围的高端点。 *to_lsn* 是 ** (10) 的二进制 **。  
+ LSN 值，它表示要包含在结果集中的 LSN 范围的高端点。 *to_lsn* 是 **(10) 的二进制**。  
   
  结果集中仅包含 [cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 更改表中值为 **__ $ start_lsn** 大于或等于 *from_lsn* 且小于 *等于 to_lsn 的* 行。  
   
@@ -61,7 +61,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  可以是下列选项之一：  
   
- 全部  
+ all  
  返回指定 LSN 范围内的所有更改。 对于由更新操作导致的更改，此选项只返回在应用更新之后包含新值的行。  
   
  all update old  
@@ -83,7 +83,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="remarks"></a>备注  
  如果指定的 LSN 范围不在捕获实例的更改跟踪时间线范围之内，则函数将返回错误 208（“为过程或函数 cdc.fn_cdc_get_all_changes 提供的参数数目不足。”）。  
   
- 当 **__ $ operation** = 1 或 **__ $ operation** = 3 时，将始终为数据类型为**image**、 **text**和**ntext**的列分配 NULL 值。 如果在更新过程中更改了列，则在 **__ $ operation** = 3 时，将为数据类型**varbinary (max) **、 **varchar (max) **或**nvarchar (max) **分配 NULL 值。 当 **__ $ operation** = 1 时，将在删除时为这些列分配其值。 捕获实例中包含的计算列的值始终为 NULL。  
+ 当 **__ $ operation** = 1 或 **__ $ operation** = 3 时，将始终为数据类型为 **image**、 **text** 和 **ntext** 的列分配 NULL 值。 如果在更新过程中更改了列，则在 **__ $ operation** = 3 时，将为数据类型 **varbinary (max)**、 **varchar (max)** 或 **nvarchar (max)** 分配 NULL 值。 当 **__ $ operation** = 1 时，将在删除时为这些列分配其值。 捕获实例中包含的计算列的值始终为 NULL。  
   
 ## <a name="examples"></a>示例  
  有几个 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 模板可用于演示如何使用变更数据捕获查询函数。 这些模板在的 " **视图** " 菜单中可用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。 有关详细信息，请参阅 [模板资源管理器](../../ssms/template/template-explorer.md)。  
@@ -106,11 +106,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys. fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys. sp_cdc_get_ddl_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
- [sys. sp_cdc_get_captured_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys. sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [&#62; &#40;Transact-sql&#41;cdc.fn_cdc_get_net_changes_&#60;capture_instance ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
+ [sys.sp_cdc_get_captured_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysalerts system table
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9b0c2fec2d053f80cd9baa9d9bd4d0bfc971e2ec
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ff1e70701882c1740ae91212c8d33ae5e7e3040b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538381"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094867"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89538381"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|警报 ID。|  
 |name|**sysname**|警报名称。|  
-|**event_source**|**nvarchar (100) **|事件源：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**event_source**|**nvarchar (100)**|事件源：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**event_category_id**|**int**|留待将来使用。|  
 |**event_id**|**int**|留待将来使用。|  
 |**message_id**|**int**|用户定义的消息 ID 或对触发此警报的 **sysmessages** 消息的引用。|  
@@ -50,7 +50,7 @@ ms.locfileid: "89538381"
 |**notification_message**|**nvarchar(512)**|与警报一起发送的其他信息。|  
 |**include_event_description**|**tinyint**|表示是否通过电子邮件、寻呼程序或 Net send 发送事件描述的位掩码。 有关值，请参阅下图。|  
 |**database_name**|**nvarchar(512)**|此警报必须在其中发生才能触发该警报的数据库。|  
-|**event_description_keyword**|**nvarchar (100) **|为触发警报而必须匹配的错误模式。|  
+|**event_description_keyword**|**nvarchar (100)**|为触发警报而必须匹配的错误模式。|  
 |**occurrence_count**|**int**|此警报的发生次数。|  
 |**count_reset_date**|**int**|日期 (日期) 计数将重置为 **0**。|  
 |**count_reset_time**|**int**|时间计数将重置为 **0**。|  

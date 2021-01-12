@@ -1,6 +1,6 @@
 ---
 description: sys.master_key_passwords (Transact-SQL)
-title: sys. master_key_passwords (Transact-sql) |Microsoft Docs
+title: sys.master_key_passwords (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2020
 ms.prod: sql
@@ -18,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_key_passwords catalog view
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c928b85aed482e774b8b180c6f97c2138f7ad0d0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 1552e621ba2b0d16e8a9e505a460b682bf33accd
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539677"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095550"
 ---
 # <a name="sysmaster_key_passwords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  为使用 **sp_control_dbmasterkey_password** 存储过程添加的每个数据库主密钥密码返回一行。 用于保护主密钥的密码存储在凭据存储区中。 凭据名称采用以下格式： # #DBMKEY_<database_family_guid>_<random_password_guid # #。 该密码存储为凭据机密。 对于使用**sp_control_dbmasterkey_password**添加的每个密码，都有**一行。**  
+  为使用 **sp_control_dbmasterkey_password** 存储过程添加的每个数据库主密钥密码返回一行。 用于保护主密钥的密码存储在凭据存储区中。 凭据名称采用以下格式： # #DBMKEY_<database_family_guid>_<random_password_guid # #。 该密码存储为凭据机密。 对于使用 **sp_control_dbmasterkey_password** 添加的每个密码，都有 **一行。**  
   
- 此视图中的每一行都显示了一个 **credential_id** **family_guid** ，以及数据库的主密钥，该密钥受与该凭据关联的密码保护。 在**credential_id**上，与**sys.** credential 的联接将返回有用的字段，例如**create_date**和凭据名称。  
+ 此视图中的每一行都显示了一个 **credential_id** **family_guid** ，以及数据库的主密钥，该密钥受与该凭据关联的密码保护。 在 **credential_id** 上，与 **sys.** credential 的联接将返回有用的字段，例如 **create_date** 和凭据名称。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

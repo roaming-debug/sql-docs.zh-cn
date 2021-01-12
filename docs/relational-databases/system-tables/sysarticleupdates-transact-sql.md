@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysarticleupdates system table
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9ca984460c74628f919e16c77c3a3a97fa732b52
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a54ffa1056efb88336a776cf2a243c4e495a2d8d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518024"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096072"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89518024"
 |**autogen**|**bit**|指示自动生成存储过程：<br /><br /> **0** = False，不自动。<br /><br /> **1** = True，自动。|  
 |**sync_upd_trig**|**int**|项目表上自动版本控制触发器的 ID。|  
 |**conflict_tableid**|**int**|冲突表的 ID。|  
-|**ins_conflict_proc**|**int**|用于将冲突写入 **conflict_table**的过程的 ID。|  
+|**ins_conflict_proc**|**int**|用于将冲突写入 **conflict_table** 的过程的 ID。|  
 |**identity_support**|**bit**|指定使用排队更新时是否启用自动标识范围处理。 **0** 表示没有标识范围支持。|  
   
 ## <a name="see-also"></a>另请参阅  

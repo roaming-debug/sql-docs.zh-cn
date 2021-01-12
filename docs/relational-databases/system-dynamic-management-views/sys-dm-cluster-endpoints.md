@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cluster_endpoints dynamic management view
 ms.assetid: ''
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-2017'
-ms.openlocfilehash: 93ffc0861302b5ffbae6d8383f852480d1b80f3f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9f9d78015c5413c7e0ec4e827240e7465969d189
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478958"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095245"
 ---
 # <a name="sysdm_cluster_endpoints-transact-sql"></a>sys.dm_cluster_endpoints (Transact-sql) 
 [!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "97478958"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|`sysname`|在 SQL 大数据群集中外部公开的服务的名称。 终结点的唯一标识符。 此视图的键。 不可为 null。 |  
-|description|`nvarchar(4000)`|服务说明。 不可为 null。 |
+|说明|`nvarchar(4000)`|服务说明。 不可为 null。 |
 |endpoint|`sysname`|终结点 url 或连接属性。 不可为 null。 |
 |protocol_desc|`sysname`|终结点协议说明 |
 

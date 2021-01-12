@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log_full view
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b60d6f7efb33398789795753f8921ad9d5c55d1f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ddb6f45318528fd88b112453f3f6f6b0aa456b3d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546711"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094230"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,19 +36,19 @@ ms.locfileid: "89546711"
 |log_id|**bigint**|标识收集组的每次执行。 用于将此视图与其他详细日志联接起来。 可以为 Null。|  
 |parent_log_id|**bigint**|标识父包或父收集组。 不可为 null。 各个 ID 以父子关系链接在一起，这样，您便可以确定哪个包是由哪个收集组启动的。 此视图将日志项按其父子链接进行分组并缩进包的名称，从而使调用链清晰可见。|  
 |name|**nvarchar(4000)**|此日志项所表示的收集组或包的名称。 可以为 Null。|  
-|状态|**smallint**|指示收集组或包的当前状态。 可以为 Null。<br /><br /> 值为：<br /><br /> 0 = 正在运行<br /><br /> 1 = 完成<br /><br /> 2 = 失败|  
+|status|**smallint**|指示收集组或包的当前状态。 可以为 Null。<br /><br /> 值为：<br /><br /> 0 = 正在运行<br /><br /> 1 = 完成<br /><br /> 2 = 失败|  
 |runtime_execution_mode|**smallint**|指示收集组活动是收集数据还是上载数据。 可以为 Null。|  
 |start_time|**datetime**|收集组或包的开始时间。 可以为 Null。|  
 |last_iteration_time|**datetime**|对于连续运行的包而言，是包上次捕获快照的时间。 可以为 Null。|  
 |finish_time|**datetime**|已完成的包和收集组完成运行的时间。 可以为 Null。|  
 |duration|**int**|包或收集组已经运行的时间（以秒为单位）。 可以为 Null。|  
 |failure_message|**nvarchar(2048)**|收集组或包失败时该组件的最新错误消息。 可以为 Null。 若要获取更详细的错误信息，请使用 [fn_syscollector_get_execution_details &#40;transact-sql&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) 函数。|  
-|运算符后的表达式|**nvarchar(128)**|标识启动了收集组或包的用户。 可以为 Null。|  
+|operator|**nvarchar(128)**|标识启动了收集组或包的用户。 可以为 Null。|  
 |package_execution_id|**uniqueidentifier**|提供指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 日志表的链接。 可以为 Null。|  
 |collection_set_id|**int**|提供指向 msdb 中数据收集配置表的链接。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
- 需要 **dc_operator**的 SELECT。  
+ 需要 **dc_operator** 的 SELECT。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   

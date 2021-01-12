@@ -1,6 +1,6 @@
 ---
 description: sys.column_store_segments (Transact-SQL)
-title: sys. column_store_segments (Transact-sql) |Microsoft Docs
+title: sys.column_store_segments (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/24/2020
 ms.prod: sql
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_segments catalog view
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3957a13e4d3e7f5eff32b0417e65d33a573e5510
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 189a5cca5cfac0cce6437ccc256d461140f3c40b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364144"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095594"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "91364144"
 |**null_value**|**bigint**|用于表示 Null 的值。|  
 |**on_disk_size**|**bigint**|段大小（字节）。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 的列存储段编码类型由选择，其 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 目标是通过分析分段数据来实现最低的存储成本。 如果数据大多不同，则 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 使用基于值的编码。 如果数据主要不是唯一的，则 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 使用基于哈希的编码。 基于字符串和基于值的编码之间的选择与要存储的数据的类型有关，无论字符串数据还是二进制数据。 如果可能，所有编码都利用位打包和长度为长度的编码。
  
 ## <a name="permissions"></a>权限  
@@ -81,8 +81,8 @@ GO
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys. all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys. computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   

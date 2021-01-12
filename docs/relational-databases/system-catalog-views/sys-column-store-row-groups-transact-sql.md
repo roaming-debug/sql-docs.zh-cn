@@ -19,14 +19,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_row_groups catalog view
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 95d7d35ad00eb1e134f7eec2165c2c59dea933e2
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c6e99ae69d27bbaebbd0fa8bd720820f14064d9b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036073"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095617"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "93036073"
   
  当行组中的已删除行数量增长到占总行数的较大百分比时，该表的效率将下降。 重新生成列存储索引以减少表的大小，同时减少读取该表所需的磁盘 I/O。 若要重新生成列存储索引，请使用 **ALTER index** 语句的 **rebuild** 选项。  
   
- 可更新的列存储首先将新数据插入到处于行存储格式的 **打开** 行组中，有时也称为增量表。  打开的行组已满后，其状态将更改为 " **已关闭** "。 由元组移动器将关闭的行组压缩为列存储格式，并将状态更改为已 **压缩** 。  元组搬运者是一个后台进程，它定期唤醒并检查是否有任何关闭的行组正准备要压缩成列存储行组。  元组搬运者还取消分配其中已删除每个行的行组。 解除分配的行组被标记为 **TOMBSTONE** 。 若要立即运行元组移动器，请使用 **ALTER INDEX** 语句的 "重新 **组织** " 选项。  
+ 可更新的列存储首先将新数据插入到处于行存储格式的 **打开** 行组中，有时也称为增量表。  打开的行组已满后，其状态将更改为 " **已关闭**"。 由元组移动器将关闭的行组压缩为列存储格式，并将状态更改为已 **压缩**。  元组搬运者是一个后台进程，它定期唤醒并检查是否有任何关闭的行组正准备要压缩成列存储行组。  元组搬运者还取消分配其中已删除每个行的行组。 解除分配的行组被标记为 **TOMBSTONE**。 若要立即运行元组移动器，请使用 **ALTER INDEX** 语句的 "重新 **组织**" 选项。  
   
  如果列存储行组已填充，它将进行压缩并停止接受新行。 当从压缩组中删除行时，这些行将保留但标记为已删除。 对压缩组的更新将实现为压缩组中的删除以及对打开组的插入。  
   

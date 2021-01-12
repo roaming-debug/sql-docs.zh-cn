@@ -1,6 +1,6 @@
 ---
 description: sys.dm_repl_schemas (Transact-SQL)
-title: sys. dm_repl_schemas (Transact-sql) |Microsoft Docs
+title: sys.dm_repl_schemas (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 45ca3d11d1299e2fa308e823f196251066fb6202
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 549f5beaae81d181f391936d1acecbc4aeb5b77a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536891"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095065"
 ---
 # <a name="sysdm_repl_schemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,20 +37,20 @@ ms.locfileid: "89536891"
 |**tabid**|**bigint**|已复制的表的 ID。|  
 |**indexid**|**smallint**|已发布的表上的聚集索引的 ID。|  
 |**idSch**|**bigint**|表架构的 ID。|  
-|**tabschema**|**nvarchar (510) **|表架构的名称。|  
+|**tabschema**|**nvarchar (510)**|表架构的名称。|  
 |**ccTabschema**|**smallint**|表架构的字符长度。|  
-|**tabname**|**nvarchar (510) **|已发布表的名称。|  
+|**tabname**|**nvarchar (510)**|已发布表的名称。|  
 |**ccTabname**|**smallint**|已发布的表名的字符长度。|  
 |**rowsetid_delete**|**bigint**|已删除的行的 ID。|  
 |**rowsetid_insert**|**bigint**|已插入的行的 ID。|  
 |**num_pk_cols**|**int**|主键列数。|  
-|**pcitee**|**二进制 (8000) **|指向用于对计算列进行计算的查询表达式结构的指针。|  
+|**pcitee**|**二进制 (8000)**|指向用于对计算列进行计算的查询表达式结构的指针。|  
 |**re_numtextcols**|**int**|已复制的表中的二进制大型对象列数。|  
-|**re_schema_lsn_begin**|**二进制 (8000) **|架构版本日志记录的开始日志序列号 (LSN)。|  
-|**re_schema_lsn_end**|**二进制 (8000) **|架构版本日志记录的结束 LSN。|  
+|**re_schema_lsn_begin**|**二进制 (8000)**|架构版本日志记录的开始日志序列号 (LSN)。|  
+|**re_schema_lsn_end**|**二进制 (8000)**|架构版本日志记录的结束 LSN。|  
 |**re_numcols**|**int**|已发布的列数。|  
 |**re_colid**|**int**|发布服务器上的列标识符。|  
-|**re_awcName**|**nvarchar (510) **|已发布的列的名称。|  
+|**re_awcName**|**nvarchar (510)**|已发布的列的名称。|  
 |**re_ccName**|**smallint**|列名中的字符数。|  
 |**re_pk**|**tinyint**|已发布的列是否为主键的一部分。|  
 |**re_unique**|**tinyint**|已发布的列是否为唯一索引的一部分。|  
@@ -65,8 +65,8 @@ ms.locfileid: "89536891"
 |**re_fAnsiTrim**|**tinyint**|指定是否对已发布的列使用 ANSI 剪裁。|  
 |**re_computed**|**smallint**|指定已发布的列是否为计算列。|  
 |**se_rowsetid**|**bigint**|行集的 ID。|  
-|**se_schema_lsn_begin**|**二进制 (8000) **|架构版本日志记录的开始 LSN。|  
-|**se_schema_lsn_end**|**二进制 (8000) **|架构版本日志记录的结束 LSN。|  
+|**se_schema_lsn_begin**|**二进制 (8000)**|架构版本日志记录的开始 LSN。|  
+|**se_schema_lsn_end**|**二进制 (8000)**|架构版本日志记录的结束 LSN。|  
 |**se_numcols**|**int**|列数。|  
 |**se_colid**|**int**|订阅服务器上的列的 ID。|  
 |**se_maxlen**|**smallint**|列的最大长度。|  

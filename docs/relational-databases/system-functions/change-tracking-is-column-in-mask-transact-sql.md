@@ -17,15 +17,15 @@ helpviewer_keywords:
 - change tracking [SQL Server], CHANGE_TRACKING_IS_COLUMN_IN_MASK
 - CHANGE_TRACKING_IS_COLUMN_IN_MASK
 ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1961dec1f32006d7a4b3d91b7b8763f34ce3514
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a9d5ee6c44e0b0ca9544ee4a32b7cbd455497fe6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440607"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095007"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "97440607"
 CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  column_id  
  是正在被检查的列的 ID。 可以使用 [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) 函数获取列 ID。  
   
@@ -54,7 +54,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>返回值  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK 返回下列值。  
   
-|返回值|说明|  
+|返回值|描述|  
 |------------------|-----------------|  
 |0|指定的列不在 *change_columns* 列表中。|  
 |1|指定的列位于 *change_columns* 列表。|  

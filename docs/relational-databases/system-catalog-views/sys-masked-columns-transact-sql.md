@@ -16,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - sys.masked_columns catalog view
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a146c289ddd50484a515413571cc67588b687d1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e5096f57c8e0b06c1f0403c446eb5417cd13b6f1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97458481"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095534"
 ---
 # <a name="sysmasked_columns-transact-sql"></a>sys.masked_columns (Transact-sql) 
 
@@ -32,7 +32,7 @@ ms.locfileid: "97458481"
 
   使用 " **sys.masked_columns** " 视图可查询应用了动态数据掩码函数的表列。 该视图继承自 **sys.columns** 视图。 该视图会返回 **sys.columns** 视图中的所有列，以及 **is_masked** 和 **masking_function** 列，表明该列是否被屏蔽，以及在该列被屏蔽的情况下定义了什么屏蔽函数。 该视图仅显示在其上应用了屏蔽函数的列。  
   
-|列名称|数据类型|说明|  
+|列名称|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|此列所属对象的 ID。|  
 |name|**sysname**|列的名称。 在对象中是唯一的。|  

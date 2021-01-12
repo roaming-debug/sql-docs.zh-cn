@@ -22,14 +22,14 @@ helpviewer_keywords:
 - compatibility [SQL Server], system tables
 - user IDs [SQL Server]
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 3eb92654dfb25a0e66d2e071040e487e6a404366
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7ba0c3b5c023d1d2b6a3d025de7f96f49a4b3c1a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482026"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095284"
 ---
 # <a name="system-compatibility-views-transact-sql"></a> (Transact-sql) 的系统兼容性视图
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,20 +46,20 @@ ms.locfileid: "88482026"
 |**usertype**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
-|**uid**|**sysobjects**|**sys.objects**|  
-|**uid**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**标识号**|**sysobjects**|**sys.objects**|  
+|**标识号**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**授权者**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**uid**|**systypes**|**sys.types**|  
-|**uid**|**sysusers**|**sys.database_principals**|  
+|**标识号**|**systypes**|**sys.types**|  
+|**标识号**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
 |**gid**|**sysusers**|**sys.database_principals**|  
-|**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**标识号**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**标识号**|**sysprocesses**|**sys.dm_exec_requests**|  
   
  在用户数据库中引用时，在 SQL Server 2000 (（如 **sys.syslanguages** 或 **sys.syscacheobjects**) ）中被公布为弃用的系统表现在将绑定到 **sys** 架构中的后向兼容性视图。 因为多个版本均已不推荐使用 SQL Server 2000 系统表，此更改不被视为重大更改。  
   
- 示例：如果用户在用户数据库中创建名为 **sys.syslanguages** 的用户表，则在 SQL Server 2008 中， `SELECT * from dbo.syslanguages;` 该数据库中的语句将返回用户表中的值。 从 SQL Server 2012 开始，此做法将从系统视图 **sys.sys语言**返回数据。  
+ 示例：如果用户在用户数据库中创建名为 **sys.syslanguages** 的用户表，则在 SQL Server 2008 中， `SELECT * from dbo.syslanguages;` 该数据库中的语句将返回用户表中的值。 从 SQL Server 2012 开始，此做法将从系统视图 **sys.sys语言** 返回数据。  
   
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

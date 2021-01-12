@@ -1,6 +1,6 @@
 ---
 description: sys.dm_audit_actions (Transact-SQL)
-title: sys. dm_audit_actions (Transact-sql) |Microsoft Docs
+title: sys.dm_audit_actions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_audit_actions dynamic management view
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 897d83dcf6c85606ac513d9075cca9ebc316a6cf
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7f880fa229e64990b729d193c6e39bfb05523788
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412801"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095285"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91412801"
 |**class_desc**|**nvarchar(120)**|应用审核操作对象的类的名称。 可以为任何 Server、Database 或 Schema 作用域对象之一，但是不包括 Schema 对象。 不可为 null。|  
 |**parent_class_desc**|**nvarchar(120)**|class_desc 所描述对象的父类的名称。 如果 class_desc 为 Server，则为 NULL。|  
 |**covering_parent_action_name**|**nvarchar(120)**|包含此行中所述的审核操作的审核操作或审核组的名称。 该名称用于创建操作和覆盖操作的层次结构。 可以为 Null。|  
-|**configuration_level**|**nvarchar (10) **|指示此行中指定的操作或操作组在“组”或“操作”级别是可配置的。 如果操作不可配置，则为 NULL。|  
+|**configuration_level**|**nvarchar (10)**|指示此行中指定的操作或操作组在“组”或“操作”级别是可配置的。 如果操作不可配置，则为 NULL。|  
 |**containing_group_name**|**nvarchar(120)**|包含指定操作的审核组的名称。 如果名称中的值为组，则为 NULL。|  
   
 ## <a name="permissions"></a>权限  

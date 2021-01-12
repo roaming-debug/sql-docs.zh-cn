@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sysperfinfo compatibility view
 - sysperfinfo system table
 ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 1122c224e21fa633c2c04cd156a49878fefc7daa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 477121d623733b5bafcf4385d8069715a333175e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482097"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095393"
 ---
 # <a name="syssysperfinfo-transact-sql"></a>sys.sysperfinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88482097"
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar(128)**|性能对象名称，例如 **SQLServer： LockManager** 或 **sqlserver： BufferManager**。|  
 |**counter_name**|**nchar(128)**|对象中性能计数器的名称，如请求的 **页面请求** 或 **锁**。|  
-|**instance_name**|**nchar(128)**|计数器的命名实例。 例如，会为每种类型的锁（如 **表**、 **页**、 **键**等等）维护计数器。 实例名在相似的计数器之间是有区别的。|  
+|**instance_name**|**nchar(128)**|计数器的命名实例。 例如，会为每种类型的锁（如 **表**、 **页**、 **键** 等等）维护计数器。 实例名在相似的计数器之间是有区别的。|  
 |**cntr_value**|**bigint**|实际计数器值。 通常，该值是一个级别或对实例事件发生进行计数的单调递增计数器。|  
 |**cntr_type**|**int**|Windows 性能体系结构定义的计数器类型。|  
   

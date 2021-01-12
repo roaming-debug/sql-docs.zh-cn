@@ -1,6 +1,6 @@
 ---
 description: sys.fn_cdc_get_max_lsn (Transact-SQL)
-title: sys. fn_cdc_get_max_lsn (Transact-sql) |Microsoft Docs
+title: sys.fn_cdc_get_max_lsn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - fn_cdc_get_max_lsn
 - sys.fn_cdc_get_max_lsn
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 314fac004523b27d5766cca264535dcca6dd058e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 59613b93de2a086bfd4d0bac7fa0f8a8983d8ce5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322133"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094981"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  从 [cdc lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 系统表中的 start_lsn 列返回 (LSN) 的最大日志序列号。 您可以使用此函数为任何捕获实例返回变更数据捕获时间线的高端点。  
+  返回 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 系统表中 start_lsn 列 (LSN) 的最大日志序列号。 您可以使用此函数为任何捕获实例返回变更数据捕获时间线的高端点。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sys.fn_cdc_get_max_lsn ()
  **binary(10)**  
   
 ## <a name="remarks"></a>备注  
- 此函数返回 [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 表的 start_lsn 列中的最大 LSN。 同样，它也是将更改传播到数据库更改表时捕获进程最后处理的 LSN。 它用作与为数据库定义的捕获实例相关联的所有时间线的高端点。  
+ 此函数返回 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 表的 start_lsn 列中的最大 LSN。 同样，它也是将更改传播到数据库更改表时捕获进程最后处理的 LSN。 它用作与为数据库定义的捕获实例相关联的所有时间线的高端点。  
   
  该函数通常用于获取查询间隔内的相应高端点。  
   
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys.fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

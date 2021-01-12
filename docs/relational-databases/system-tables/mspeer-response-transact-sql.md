@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_response system table
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7e6133bee999ad828516f908aaf770321a59ec3c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: fdf2ec05835bc63f30e5304e8b8226b54be6becb
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545552"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096181"
 ---
 # <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSpeer_response**表用于对等复制，以存储每个节点对发布状态请求的响应。 该表存储在发布数据库中。  
+  **MSpeer_response** 表用于对等复制，以存储每个节点对发布状态请求的响应。 该表存储在发布数据库中。  
   
 ## <a name="definition"></a>定义  
   

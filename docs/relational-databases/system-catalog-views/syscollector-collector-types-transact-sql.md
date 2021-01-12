@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 694f14e95c0bec4edaf94c7a2c8a3885ad841c24
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 04a9bc5f6336119d08285ae73dfa7a09ae5d3648
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537276"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094241"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "89537276"
 |**upload_package_id**|**uniqueidentifer**|上载包的 GUID。 不可为 null。|  
 |**upload_package_path**|**nvarchar(4000)**|提供上载包的路径。 可以为 Null。|  
 |**upload_package_name**|**sysname**|上载包的名称。 不可为 null。|  
-|**is_system**|**bit**|打开 (1) 或关闭 (0) ，以指示收集器类型是随数据收集器一起提供的还是由 **dc_admin**以后添加的。 这可以是内部开发的或由第三方开发的自定义类型。 不可为 null。|  
+|**is_system**|**bit**|打开 (1) 或关闭 (0) ，以指示收集器类型是随数据收集器一起提供的还是由 **dc_admin** 以后添加的。 这可以是内部开发的或由第三方开发的自定义类型。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
- 需要 **dc_operator** **dc_proxy**选择。  
+ 需要 **dc_operator** **dc_proxy** 选择。  
   
 ## <a name="change-history"></a>更改历史记录  
   

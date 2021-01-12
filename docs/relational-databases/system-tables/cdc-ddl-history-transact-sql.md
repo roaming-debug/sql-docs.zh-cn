@@ -1,6 +1,6 @@
 ---
 description: cdc.ddl_history (Transact-SQL)
-title: ddl_history (Transact-sql) |Microsoft Docs
+title: cdc.ddl_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - cdc.ddl_history
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8583394eb282b24f77bb37a81afa23c91ac50d0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7536929659cf4c1c329116a27ab456efc0d9e5e0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544689"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094917"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为对启用了变更数据捕获的表所做的每一项数据定义语言 (DDL) 更改返回一行。 可以使用此表来确定源表发生 DDL 更改的时间以及更改的内容。 此表中不包含未发生 DDL 更改的源表的任何条目。  
   
- 我们建议您不要直接查询系统表， 请改为执行 [sys.databases. sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) 存储过程。  
+ 我们建议您不要直接查询系统表， 请改为执行 [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) 存储过程。  
    
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "89544689"
 |**ddl_time**|**datetime**|对源表所做的 DDL 更改的日期和时间。|  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

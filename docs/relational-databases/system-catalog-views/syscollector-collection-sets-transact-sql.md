@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e03a5f7ef7ee05e91b3a3b36798c2cb23a883005
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: cc9b5754c1df9957f1a3e8b5e53d0465690a78a7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537912"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094250"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "89537912"
 |upload_job_id|**uniqueidentifier**|标识收集上载作业。 可以为 Null。|  
 |logging_level|**smallint**|指定日志记录级别（0、1 或 2）。 不可为 null。|  
 |days_until_expiration|**smallint**|收集的数据保存在管理数据仓库中的天数。 不可为 null。|  
-|description|**nvarchar(4000)**|描述收集组。 可以为 Null。|  
+|说明|**nvarchar(4000)**|描述收集组。 可以为 Null。|  
 |dump_on_any_error|**bit**|打开 (1) 或关闭 (0) ，以指示是否 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 在出现任何错误时创建转储文件。 不可为 null。|  
 |dump_on_codes|**nvarchar(max)**|包含用于触发转储文件的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 错误代码的列表。 可以为 Null。|  
   

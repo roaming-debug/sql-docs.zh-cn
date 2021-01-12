@@ -1,6 +1,6 @@
 ---
 description: sys.spatial_index_tessellations (Transact-SQL)
-title: sys. spatial_index_tessellations (Transact-sql) |Microsoft Docs
+title: sys.spatial_index_tessellations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.spatial_index_tessellations catalog view
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 783c73ba514e348cd515929ae988c4097225ec5b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ddf7b9cd75999da6cc48f6e7a83bab7a733f822b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539485"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095409"
 ---
 # <a name="sysspatial_index_tessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "89539485"
 >  有关分割的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
 
-|列名称|数据类型|说明|  
+|列名称|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|定义了索引的对象的 ID。 每个 (object_id，index_id) 对在 [spatial_indexes sys.databases](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)中都有相应的条目。|  
+|object_id|**int**|定义了索引的对象的 ID。 每个 (object_id，index_id) 对在 [sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)中都有相应的条目。|  
 |index_id|**int**|定义了索引列的空间索引的 ID。|  
 |tessellation_scheme|**sysname**|分割方案的名称，如下所示： GEOMETRY_GRID、GEOGRAPHY_GRID|  
-|bounding_box_xmin|**float(53)**|边界框左下角的 X 坐标，其中之一： NULL = 不适用于给定的分割方案 (例如 GEOGRAPHY_GRID) *n* = 如果 tessellation_scheme 为 GEOMETRY_GRID，则为最小 x 坐标值。                     **注意：** 边界框参数定义的坐标将根据其 [空间引用标识符 (SRID) ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)解释为每个对象。|  
+|bounding_box_xmin|**float(53)**|边界框左下角的 X 坐标，其中之一： NULL = 不适用于给定的分割方案 (例如 GEOGRAPHY_GRID) *n* = 如果 tessellation_scheme 为 GEOMETRY_GRID，则为最小 x 坐标值。                     **注意：** 边界框参数定义的坐标将根据其 [空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)解释为每个对象。|  
 |bounding_box_ymin|**float(53)**|边界框左下角的 Y 坐标，其中之一： NULL = 不适用于给定分割方案 (例如 GEOGRAPHY_GRID) *n* = 如果 tessellation_scheme 为 GEOMETRY_GRID，则为最小 y 坐标值|  
 |bounding_box_xmax|**float(53)**|边界框右上角的 X 坐标，其中之一： NULL = 不适用于给定分割方案 (例如 GEOGRAPHY_GRID) *n* = 如果 tessellation_scheme 为 GEOMETRY_GRID，则为最大 x 坐标值|  
 |bounding_box_ymax|**float(53)**|边界框右上角的 Y 坐标，其中之一： NULL = 不适用于给定分割方案 (例如 GEOGRAPHY_GRID) *n* = 如果 tessellation_scheme 为 GEOMETRY_GRID，则为最大 y 坐标值|  

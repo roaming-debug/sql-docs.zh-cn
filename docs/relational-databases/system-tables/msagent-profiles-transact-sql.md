@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSagent_profiles system table
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2f9b44e872ef5175d07a679c330b7662ff9e5bf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 237ecf85225d5c16160ee4b04f6e0ccdc41f2e31
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540894"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094792"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "89540894"
 |**profile_id**|**int**|配置文件 ID。|  
 |**profile_name**|**sysname**|代理类型的唯一配置文件名。|  
 |**agent_type**|**int**|代理的类型：<br /><br /> **1** = 快照代理<br /><br /> **2** = 日志读取器代理<br /><br /> **3** = 分发代理<br /><br /> **4** = 合并代理<br /><br /> **9** = 队列读取器代理|  
-|type|**int**|配置文件的类型：<br /><br /> **0** = 系统**1** = 自定义|  
-|description|**nvarchar (3000) **|配置文件的说明。|  
+|type|**int**|配置文件的类型：<br /><br /> **0** = 系统 **1** = 自定义|  
+|description|**nvarchar (3000)**|配置文件的说明。|  
 |**def_profile**|**bit**|指定该配置文件是否是该代理类型的默认值。|  
   
 ## <a name="see-also"></a>另请参阅  

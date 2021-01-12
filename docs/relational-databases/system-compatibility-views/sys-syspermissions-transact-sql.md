@@ -19,14 +19,14 @@ helpviewer_keywords:
 - syspermissions system table
 - sys.syspermissions compatibility view
 ms.assetid: ba9a9a88-55d2-41a7-b09b-342e8b9a54c5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 62a64d7c1ede52ee990c8021d13d8b4de6a52ff6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c2c3a9d1c0ccbba7c947f2f943f75124f320e4fd
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482077"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095427"
 ---
 # <a name="syssyspermissions-transact-sql"></a>sys.syspermissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88482077"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|对象权限的对象 ID。<br /><br /> 0 = 语句权限。|  
-|**grantee**|**smallint**|受权限影响的用户、组或角色的 ID。|  
+|**被授权者**|**smallint**|受权限影响的用户、组或角色的 ID。|  
 |**授权者**|**smallint**|被授予或拒绝权限的用户、组或角色的 ID。|  
 |**actadd**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**actmod**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

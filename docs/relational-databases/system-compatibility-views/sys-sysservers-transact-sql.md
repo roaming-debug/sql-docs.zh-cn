@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sysservers system table
 - sys.sysservers compatibility view
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: ea79d90f7ccb75243246cc64713c746e05c8996c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 1cf2a9649745eeeb5fbf10667b9849c0c1de5dec
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475090"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095318"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,14 +59,14 @@ ms.locfileid: "88475090"
 |**pub**|**bit**|1 = **sp_serveroption \@ pub** 设置为 **true** 或 **on**。<br /><br /> 0 = **sp_serveroption \@ pub** 设置为 **false** 或 **off**。|  
 |**sub**|**bit**|1 = **sp_serveroption \@ 子项** 设置为 **true** 或 **on**。<br /><br /> 0 = **sp_serveroption \@ sub** 设置为 **false** 或 **off**。|  
 |dist|**bit**|1 = **sp_serveroption \@ dist** 设置为 **true** 或 **on**。<br /><br /> 0 = **sp_serveroption \@ dist** 设置为 **false** 或 **off**。|  
-|**dpub**|**bit**|1 = **sp_serveroption \@ ** 设置为 **true** 或 **on 的**dpub。<br /><br /> 0 = **sp_serveroption \@ dpub** 设置为 **false** 或 **off**。|  
+|**dpub**|**bit**|1 = **sp_serveroption \@** 设置为 **true** 或 **on 的** dpub。<br /><br /> 0 = **sp_serveroption \@ dpub** 设置为 **false** 或 **off**。|  
 |**rpcout**|**bit**|1 = **sp_serveroption \@ rpc out** 设置为 **true** 或 **on**。<br /><br /> 0 = **sp_serveroption \@ rpc out** 设置为 **false** 或 **off**。|  
 |**dataaccess**|**bit**|1 = **sp_serveroption 的 \@ 数据访问** 设置为 **true** 或 **on**。<br /><br /> 0 = **sp_serveroption \@ 数据访问** 设置为 **false** 或 **off**。|  
 |**collationcompatible**|**bit**|1 = **sp_serveroption \@ 排序规则兼容性** 设置为 **true** 或 **on**。<br /><br /> 0 = **sp_serveroption \@ 排序规则兼容性** 设置为 **false** 或 **off**。|  
 |**系统**|**bit**|1 = **sp_serveroption \@ 系统** 设置为 **true** 或 **on**。<br /><br /> 0 = **sp_serveroption \@ 系统** 设置为 **false** 或 **off**。|  
 |**useremotecollation**|**bit**|1 = **sp_serveroption \@ 远程排序规则** 设置为 **true** 或 **on**。<br /><br /> 0 = **sp_serveroption \@ 远程排序规则** 设置为 **false** 或 **off**。|  
 |**lazyschemavalidation**|**bit**|1 = **sp_serveroption \@ 延迟架构验证** 设置为 **true** 或 **on**。<br /><br /> 0 = **sp_serveroption \@ 延迟架构验证** 设置为 **false** 或 **off**。|  
-|**归类**|**sysname**|按 **sp_serveroption \@ 排序规则名称**设置的服务器排序规则。|  
+|**归类**|**sysname**|按 **sp_serveroption \@ 排序规则名称** 设置的服务器排序规则。|  
 |**nonsqlsub**|bit|0 = 服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例<br /><br /> 1 = 服务器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例|  
   
 ## <a name="see-also"></a>另请参阅  

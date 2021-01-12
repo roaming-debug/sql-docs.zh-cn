@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.systypes compatibility view
 - systypes system table
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bd2a68f151a136a5bb9de7efd170c7178d8001e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b00fc15f26b54acf7de52684949473c0bbd6ed19
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464668"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095347"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "97464668"
 |**usertype**|**smallint**|用户类型 ID。 如果数据类型的数字超过 32,767，则溢出或返回 NULL。|  
 |variable|**bit**|可变长度数据类型。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**allownulls**|**bit**|指示此数据类型的默认为空性。 如果使用 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)指定了可为 null 性，则会重写此默认值。|  
-|**type**|**tinyint**|物理存储数据类型。|  
+|type|**tinyint**|物理存储数据类型。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|此数据类型的精度级别。<br /><br /> -1 = **xml** 或大值类型。|  
 |**scale**|**tinyint**|此数据类型根据精度确定的小数位数。<br /><br /> NULL = 数据类型不是数值。|  

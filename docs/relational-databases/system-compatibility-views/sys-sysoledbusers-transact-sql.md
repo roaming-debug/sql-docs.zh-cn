@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sysoledbusers system table
 - sys.sysoledbusers compatibility view
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 01a2683f063280800606ebd42ba9ce65a286ab82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 442ca09761a75a5ca53b028bf8ac0a7f58c59314
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482110"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095435"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "88482110"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|服务器的安全标识号 (SID)。|  
-|**rmtloginame**|**nvarchar (** 128 **) **|**Loginsid**映射到的链接**rmtservid**的远程登录名。|  
-|**rmtpassword**|**nvarchar (** 128 **) **|返回 NULL。|  
-|**loginsid**|**varbinary(** 85 **)**|要映射的本地登录 SID。|  
+|**rmtloginame**|**nvarchar (** 128 **)**|**Loginsid** 映射到的链接 **rmtservid** 的远程登录名。|  
+|**rmtpassword**|**nvarchar (** 128 **)**|返回 NULL。|  
+|**loginsid**|**varbinary (** 85 **)**|要映射的本地登录 SID。|  
 |**status**|**smallint**|如果为 1，则映射应使用用户凭据。|  
 |**changedate**|**datetime**|最近更改映射信息的日期。|  
   

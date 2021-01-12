@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xtp_gc_stats (Transact-SQL)
-title: sys. dm_xtp_gc_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_xtp_gc_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,25 +17,25 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e69ed7bc99077962489a81e44484fb2a90b33b70
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a25b5e02c4a89bce85ae65575f80a588163074f7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543801"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096388"
 ---
 # <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   提供有关 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 垃圾回收进程的当前行为的信息（总体统计信息）。  
   
- 行在常规事务处理过程中或是由主垃圾回收线程（称为空闲工作线程）进行垃圾回收。 当用户事务提交时，它取消排队从垃圾回收队列中一个工作项， ([dm_xtp_gc_queue_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)) 。 可以进行垃圾回收但是未由主用户事务访问的任何行都在灰尘角扫描（针对较少访问的索引区域的扫描）过程中由空闲工作线程进行垃圾回收。  
+ 行在常规事务处理过程中或是由主垃圾回收线程（称为空闲工作线程）进行垃圾回收。 当用户事务提交时，它会从垃圾回收队列中取消排队一个工作项， ([sys.dm_xtp_gc_queue_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)) 。 可以进行垃圾回收但是未由主用户事务访问的任何行都在灰尘角扫描（针对较少访问的索引区域的扫描）过程中由空闲工作线程进行垃圾回收。  
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|列名称|类型|说明|  
+|列名称|类型|描述|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|自启动服务器以来垃圾回收子系统检查的行数。|  
 |rows_no_sweep_needed|**bigint**|已在未进行灰尘角扫描的情况下删除的行数。|  

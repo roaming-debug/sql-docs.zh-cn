@@ -17,14 +17,14 @@ helpviewer_keywords:
 - suspect_pages system table
 - suspect pages [SQL Server]
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0c601496075c71d70af89b0413e5bcbf3a6ba8b2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c2b5952f12c857a7bf58c066744e1c366279b1e4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544469"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096121"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89544469"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|应用此页的数据库的 ID。|  
 |file_id|**int**|数据库中文件的 ID。|  
-|**page_id**|**bigint**|可疑页的 ID。 每一页都有一个 32 位值的页 ID，该值标识页在数据库中的位置。 **Page_id**是 8 KB 页的数据文件的偏移量。 每个页 ID 在文件中都是唯一的。|  
+|**page_id**|**bigint**|可疑页的 ID。 每一页都有一个 32 位值的页 ID，该值标识页在数据库中的位置。 **Page_id** 是 8 KB 页的数据文件的偏移量。 每个页 ID 在文件中都是唯一的。|  
 |event_type|**int**|错误类型；其具体类型有：<br /><br /> 1 = 导致出现可疑页的 823 错误（如磁盘错误）或校验和错误或页撕裂之外的 824 错误（如页 ID 错误）。<br /><br /> 2 = 校验和错误。<br /><br /> 3 = 页撕裂。<br /><br /> 4 = 已还原（页在标记为错误后已还原）。<br /><br /> 5 = 已修复（DBCC 修复了页）。<br /><br /> 7 = 已由 DBCC 释放。|  
 |**error_count**|**int**|错误出现的次数。|  
 |**last_update_date**|**datetime**|上次更新的日期时间戳。|  

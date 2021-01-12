@@ -17,14 +17,14 @@ helpviewer_keywords:
 - syscollector_execution_stats view
 - data collector view
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d0819aba312ddfaceaff092815b1c78297308dd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 10df8c89b0fbb719caea1503019853d89f256995
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550341"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094217"
 ---
 # <a name="syscollector_execution_stats-transact-sql"></a>syscollector_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89550341"
 |**log_time**|**datetime**|记录此信息的时间。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
- 需要 **dc_operator**的 SELECT 权限。  
+ 需要 **dc_operator** 的 SELECT 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   

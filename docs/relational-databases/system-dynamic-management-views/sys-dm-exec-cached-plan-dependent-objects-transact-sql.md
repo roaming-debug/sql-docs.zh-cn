@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cached_plan_dependent_objects dynamic management function
 ms.assetid: 9b6cf5f7-b267-44fb-aac8-f49c9aa10cc1
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29b533890f22891d8bd7e4cfe7a0323507874753
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: aa6696254dc4864fec85a71c5e796356b00273e8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464608"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094110"
 ---
 # <a name="sysdm_exec_cached_plan_dependent_objects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "97464608"
 sys.dm_exec_cached_plan_dependent_objects(plan_handle)  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 *plan_handle*  
 是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询执行计划。 *plan_handle* 为 **varbinary (64)**。   
 
@@ -71,7 +71,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|功能|On|关系|  
+|From|目标|开|Relationship|  
 |----------|--------|--------|------------------|  
 |**dm_exec_cached_plan_dependent_objects**|**dm_os_memory_objects**|**memory_object_address**|一对一|  
   

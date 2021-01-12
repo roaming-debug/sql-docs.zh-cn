@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_articlehistory system table
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5fcf637d540b541f0a96e6a8f8322c34799ddcb2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 89a5e3969d6f55a38ecfdcb6abf2a41e322ce89f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544515"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096231"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_articlehistory**表跟踪合并代理同步会话期间对项目所做的更改，每个项目发生更改。 此表存储在分发数据库中。  
+  **MSmerge_articlehistory** 表跟踪合并代理同步会话期间对项目所做的更改，每个项目发生更改。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "89544515"
 |**duration**|**int**|代理处理项目所用的时间（秒）。|  
 |**插入**|**int**|在同步期间应用到特定项目的插入的数目。 在同步过程中此值将增大，结束值代表总数。|  
 |**更新**|**int**|在同步期间应用到特定项目的更新的数目。 在同步过程中此值将增大，结束值代表总数。|  
-|**清除**|**int**|在同步期间应用到特定项目的删除的数目。 在同步过程中此值将增大，结束值代表总数。|  
+|**删除**|**int**|在同步期间应用到特定项目的删除的数目。 在同步过程中此值将增大，结束值代表总数。|  
 |**存在**|**int**|同步期间发生的冲突的数目。 在同步过程中此值将增大，结束值代表总数。|  
 |**conflicts_resolved**|**int**|同步期间发生并已经解决的冲突的数目。 在同步过程中此值将增大，结束值代表总数。|  
 |**rows_retried**|**int**|在同步期间重试的错误行的数目。  在同步过程中此值将增大，结束值代表总数。|  

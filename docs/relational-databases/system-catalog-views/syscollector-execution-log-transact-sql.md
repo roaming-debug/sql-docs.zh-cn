@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 145d22131701c3b7342cb83e1e95735dc7726408
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f6c9cc330c87debc0a80a9d282ea8c40c904c59c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550342"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094234"
 ---
 # <a name="syscollector_execution_log-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "89550342"
 |last_iteration_time|**datetime**|对于连续运行的包而言，是包上次捕获快照的时间。 可以为 Null。|  
 |finish_time|**datetime**|已完成的包和收集组完成运行的时间。 可以为 Null。|  
 |runtime_execution_mode|**smallint**|指示收集组活动是收集数据还是上载数据。 可以为 Null。<br /><br /> 值为：<br /><br /> 0 = 收集<br /><br /> 1 = 上载|  
-|状态|**smallint**|指示收集组或包的当前状态。 不可为 null。<br /><br /> 值为：<br /><br /> 0 = 正在运行<br /><br /> 1 = 完成<br /><br /> 2 = 失败|  
-|运算符后的表达式|**nvarchar(128)**|标识启动了收集组或包的用户。 不可为 null。|  
+|status|**smallint**|指示收集组或包的当前状态。 不可为 null。<br /><br /> 值为：<br /><br /> 0 = 正在运行<br /><br /> 1 = 完成<br /><br /> 2 = 失败|  
+|operator|**nvarchar(128)**|标识启动了收集组或包的用户。 不可为 null。|  
 |package_id|**uniqueidentifier**|标识生成此日志的收集组或包。 可以为 Null。|  
 |package_name|**nvarchar(4000)**|生成此日志的包的名称。 可以为 Null。|  
 |package_execution_id|**uniqueidentifier**|提供指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 日志表的链接。 可以为 Null。|  

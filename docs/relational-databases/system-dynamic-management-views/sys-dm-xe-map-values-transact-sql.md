@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xe_map_values (Transact-SQL)
-title: sys. dm_xe_map_values (Transact-sql) |Microsoft Docs
+title: sys.dm_xe_map_values (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_map_values dynamic management view
 - xe
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 235f6d9bf0d84985d9749f9cae5ee2b93460feae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 6b7aee22e48449dbec0f5eb3d795169a3f2ad4e6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546350"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095032"
 ---
 # <a name="sysdm_xe_map_values-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "89546350"
 |name|**nvarchar(256)**|映射的名称。 名称在本地系统中是唯一的。 不可为 null。|  
 |object_package_guid|**uniqueidentifier**|包含映射的包的 GUID。 不可为 null。|  
 |map_key|**int**|内部键值。 不可为 null。|  
-|map_value|**nvarchar (3072) **|键值的说明。 不可为 null。|  
+|map_value|**nvarchar (3072)**|键值的说明。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  
   
-|From|到|关系|  
+|From|目标|Relationship|  
 |----------|--------|------------------|  
 |dm_xe_map_values.object_package_guid<br /><br /> dm_xe_map_values.name|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|多对一| 
   
