@@ -21,15 +21,15 @@ helpviewer_keywords:
 - CATCH block
 - states [SQL Server], error numbers
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81519e9f529cea23c12bab3ec55c3164e848a543
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0add98a5f8e05a9d0deddaf4bfa2428ba6b0ff08
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468198"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98087712"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
 
@@ -55,7 +55,7 @@ ERROR_STATE ( )
   
  如果在 CATCH 块作用域以外调用，则返回 NULL。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  某些错误消息可能在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]代码中多处出现。 例如，几种不同情况下都可能发生“1105”错误。 每个引发错误的特定情况都分配唯一的状态代码。  
   
  查看记录已知问题的数据库（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库）时，可以使用状态号确定所记录的问题是否与曾遇到的错误相同。 例如，如果一篇知识库文章讨论状态号为 2 的 1105 错误消息，而所收到的 1105 错误消息的状态号为 3，则您遇到的错误原因可能不同于该篇文章所报告的原因。  

@@ -18,12 +18,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 15cae5bf8c97de6170c11cfc991afdb31033963d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 65792225a4fe990720d4df1199dfe0e3683e0b63
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464158"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98082537"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97464158"
 
 ::: moniker range="=azuresqldb-mi-current"
 > [!NOTE]
-> 在 Azure SQL 托管实例中，可以通过先删除某个库，然后使用 sqlmlutils 安装更改的版本来更改此库。 有关 sqlmlutils 的详细信息，请参阅[使用 sqlmlutils 安装 Python 包](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)和[使用 sqlmlutils 安装新的 R 包](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)。
+> 在 Azure SQL 托管实例中，可以通过先删除某个库，然后使用 sqlmlutils 安装更改的版本来更改此库。 有关 sqlmlutils 的详细信息，请参阅[使用 sqlmlutils 安装 Python 包](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current&preserve-view=true)和[使用 sqlmlutils 安装新的 R 包](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current&preserve-view=true)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
