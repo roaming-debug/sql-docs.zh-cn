@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: aa516146c4db55cbfcb3b3f3817cdcf9d11216be
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b72b618559f02fed01e1760168f72ea4a12065ae
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096698"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151278"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98096698"
 |create_date|**datetime**|创建文件审核的 UTC 日期。|  
 |modify_date|**datatime**|上次修改文件审核的 UTC 日期。|  
 |principal_id|**int**|在服务器上注册的审核的所有者的 ID。|  
-|type|**char(2)**|审核类型：<br /><br /> 0 = NT 安全事件日志<br /><br /> 1 = NT 应用程序事件日志<br /><br /> 2 = 文件系统中的文件|  
+|type|**char(2)**|审核类型：<br /><br /> SL = NT 安全事件日志<br /><br /> AL = NT 应用程序事件日志<br /><br /> FL = 文件系统上的文件|  
 |type_desc|**nvarchar(60)**|审核类型说明。|  
 |on_failure|**tinyint**|失败时的状态：<br /><br /> 0 = 继续<br /><br /> 1 = 关闭服务器实例<br /><br /> 2 = 失败操作|  
 |on_failure_desc|**nvarchar(60)**|失败时要写入的操作项：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
