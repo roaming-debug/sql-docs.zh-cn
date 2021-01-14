@@ -10,12 +10,12 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 0ed29ad1b6a6b548b910ecce3d2b89da9bfb0180
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 94939adb2934e16ed7d1c81c33ebab4631c4b114
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478878"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172509"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什么是 SQL Server 的外延安全更新程序？
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -322,7 +322,7 @@ Azure SQL 托管实例是 Azure 中几乎与 [!INCLUDE[ssNoVersion](../../includ
 
 客户可以将旧的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境迁移到 Azure SQL 托管实例（完全托管的数据平台服务 (PaaS)，它提供“无版本”选项来消除终止支持日期方面的顾虑），也可以迁移到 Azure 虚拟机来获得安全更新程序。 迁移的数据库会继续与旧系统兼容。 有关详细信息，请参阅[兼容性认证](../../database-engine/install-windows/compatibility-certification.md)。
 
-在终止支持日期 2019 年 7 月 9 日之后的三年内，外延安全更新程序将提供给 Azure 虚拟机中的 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]。 对于要从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 升级的客户，支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有后续版本。 对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，客户必须使用受支持的最新 Service Pack。 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，建议客户使用最新累积更新。 请注意，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，将不提供 Service Pack，而只提供累积更新和常规分发版本 (GDR)。
+在终止支持日期 2019 年 7 月 9 日之后的三年内，外延安全更新程序将提供给 Azure 虚拟机中的 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]。 对于要从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 升级的客户，支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有后续版本。 对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]，客户必须使用受支持的最新 Service Pack。 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，建议客户使用最新累积更新。 请注意，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，将不提供 Service Pack，而只提供累积更新和常规分发版本 (GDR)。
 
 Azure SQL 托管实例是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中实例范围内部署选项，它提供最广泛的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎兼容性和本机虚拟网络 (VNET) 支持，因此你可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库迁移到托管实例，而无需更改应用。 它将丰富的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外围应用与完全托管智能服务的运营和财务优势相结合。 利用新的 Azure 数据库迁移服务，将 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 迁移到 Azure SQL 托管实例，几乎不需要更改应用程序代码。
 

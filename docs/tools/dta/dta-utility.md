@@ -21,12 +21,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
-ms.openlocfilehash: ebeb72707e1dd65344b30ffe88c0ae5b4425f796
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a80c3fc49962ad4a67430163f81d00b37c05329b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786020"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169215"
 ---
 # <a name="dta-utility"></a>dta 实用工具
 
@@ -164,7 +164,7 @@ dta -d AdventureWorks2012 ...
 >  如果删除该会话，则 **dta** 实用工具不会删除用户指定的优化日志表的内容。 优化超大型工作负荷时，建议为优化日志指定一个表。 由于优化大型工作负荷可导致优化日志增大，因此使用表时删除会话的速度可快得多。  
   
  **-F**  
- 允许 **dta** 覆盖现有的输出文件。 如果已经存在同名输出文件，并且没有指定 **-F** ，则 **dta**将返回错误。 你可以使用具有 **-of** 、 **-or**或 **-ox**的 **-F**。  
+ 允许 **dta** 覆盖现有的输出文件。 如果已经存在同名输出文件，并且没有指定 **-F** ，则 **dta** 将返回错误。 你可以使用具有 **-of** 、 **-or** 或 **-ox** 的 **-F**。  
   
  **-fa** _physical_design_structures_to_add_  
  指定 **dta** 应在建议中包括的物理设计结构的类型。 下表列出并说明了可为此参数指定的值。 未指定任何值时，dta  将使用默认值 -fa IDX  。  
@@ -184,7 +184,7 @@ dta -d AdventureWorks2012 ...
 [数据引擎优化顾问 (DTA) 中的列存储索引建议](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)。
  ||  
 |-|  
-|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
+|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
 
   
  **-fk** _keep_existing_option_  
@@ -210,10 +210,10 @@ dta -d AdventureWorks2012 ...
  ALIGNED 表示在 **dta** 生成的建议中，每个建议的索引都完全按定义该索引的基础表所用的方式进行分区。 索引视图中的非聚集索引与索引视图对齐。 只能为此参数指定一个值。 默认值为 -fp NONE  。  
   
  **-fx** _drop_only_mode_  
- 指定 **dta** 仅考虑删除现有物理设计结构。 没有考虑任何新的物理设计结构。 如果指定此选项， **dta** 将评估现有物理设计结构的使用情况，并建议删除很少使用的结构。 此参数不带任何值， 它不能与 **-fa**、 **-fp**或 **-fk ALL** 参数一起使用。  
+ 指定 **dta** 仅考虑删除现有物理设计结构。 没有考虑任何新的物理设计结构。 如果指定此选项， **dta** 将评估现有物理设计结构的使用情况，并建议删除很少使用的结构。 此参数不带任何值， 它不能与 **-fa**、 **-fp** 或 **-fk ALL** 参数一起使用。  
   
  **-ID** _session_ID_  
- 为优化会话指定一个数字标识符。 如果未指定，则 **dta** 将生成一个 ID 号。 可以使用此标识符查看现有优化会话的信息。 如果不指定 **-ID**值，则必须用 **-s**指定会话名。  
+ 为优化会话指定一个数字标识符。 如果未指定，则 **dta** 将生成一个 ID 号。 可以使用此标识符查看现有优化会话的信息。 如果不指定 **-ID** 值，则必须用 **-s** 指定会话名。  
   
  **-ip**  
  指定计划高速缓存可用作工作负荷。 分析显式选择的数据库的前 1000 个计划缓存事件。 可使用 -n  选项更改此值。  
@@ -222,7 +222,7 @@ dta -d AdventureWorks2012 ...
  指定查询存储可用作工作负载。 对于显式选择的数据库，将分析查询存储中的前 1,000 个事件。 可使用 -n  选项更改此值。  有关详细信息，请参阅[查询存储](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查询存储中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
  ||  
 |-|  
-|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
+|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
      
  **-if** _workload_file_  
  指定用作优化输入的工作负荷文件的路径和文件名。 该文件必须采用下列格式之一：.trc（SQL Server Profiler 跟踪文件）、.sql（SQL 文件）或 .log（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 跟踪文件）。 必须指定一个工作负荷文件或一个工作负荷表。  
@@ -281,24 +281,24 @@ dta -iq -I 48
 在此示例中，DTA 将查询存储用作工作负载源，只考虑在过去 48 小时内执行的查询。  
   ||  
 |-|  
-|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
+|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
 
 
   
  **-of** _output_script_file_name_  
  指定 **dta** 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本将建议写入指定的文件名和目标。  
   
- 可以将 **-F** 与此选项一起使用。 请确保文件名是唯一的，尤其在使用了 **-or** 和 **-ox**时更应注意。  
+ 可以将 **-F** 与此选项一起使用。 请确保文件名是唯一的，尤其在使用了 **-or** 和 **-ox** 时更应注意。  
   
  **-or** _output_xml_report_file_name_  
  指定 **dta** 使用 XML 将建议写入输出报告。 如果提供了文件名，建议就会被写入该文件名。 否则， **dta** 将使用会话名生成文件名，并将该文件名写入当前目录。  
   
- 可以将 **-F** 与此选项一起使用。 请确保文件名是唯一的，尤其在使用了 **-of** 和 **-ox**时更应注意。  
+ 可以将 **-F** 与此选项一起使用。 请确保文件名是唯一的，尤其在使用了 **-of** 和 **-ox** 时更应注意。  
   
  **-ox** _output_XML_file_name_  
  指定 **dta** 使用 XML 文件将建议写入指定的文件名和目标。 请确保数据库引擎优化顾问有写入目标目录的权限。  
   
- 可以将 **-F** 与此选项一起使用。 请确保文件名是唯一的，尤其在使用了 **-of** 和 **-or**时更应注意。  
+ 可以将 **-F** 与此选项一起使用。 请确保文件名是唯一的，尤其在使用了 **-of** 和 **-or** 时更应注意。  
   
  **-P** _password_  
  指定登录 ID 的密码。 如果未使用此选项， **dta** 将提示输入密码。  
@@ -341,9 +341,9 @@ dta -iq -I 48
  指定优化会话的名称。 如果未指定 **-ID** ，则必须使用此选项。  
   
  **-Tf** _table_list_file_  
- 指定包含要优化的一组表的文件名。 文件中列出的每个表应另起一行。 表名的命名应限定为三个部分，例如， **AdventureWorks2012.HumanResources.Department**。 为了调用表的扩展功能，可以选择在现有表名后加上一个数字，指示表中的预定行数。 数据库引擎优化顾问在优化或评估引用这些表的工作负荷中的语句时，将考虑这些预定行数。 请注意， *number_of_rows* 计数和 *table_name*之间可以有一个或多个空格。  
+ 指定包含要优化的一组表的文件名。 文件中列出的每个表应另起一行。 表名的命名应限定为三个部分，例如， **AdventureWorks2012.HumanResources.Department**。 为了调用表的扩展功能，可以选择在现有表名后加上一个数字，指示表中的预定行数。 数据库引擎优化顾问在优化或评估引用这些表的工作负荷中的语句时，将考虑这些预定行数。 请注意， *number_of_rows* 计数和 *table_name* 之间可以有一个或多个空格。  
   
- 以下是 *table_list_file*的文件格式：  
+ 以下是 *table_list_file* 的文件格式：  
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
@@ -409,13 +409,13 @@ AdventureWorks2012.Production.Product  2000000
 
 table_list.txt 的内容指定：  
 
-- 应当仅优化数据库中的 **Customer**、 **Store**和 **Product** 表。  
+- 应当仅优化数据库中的 **Customer**、 **Store** 和 **Product** 表。  
   
 - **Customer** 和 **Product** 表中的行数分别假定为 100,000 和 2,000,000。  
   
 - **Store** 中的行数假定为表中的当前行数。  
 
-    请注意， *table_list_file*中的行数计数和前面的表名间可以有一个或多个空格。  
+    请注意， *table_list_file* 中的行数计数和前面的表名间可以有一个或多个空格。  
     
     优化时间为 2 小时 (`-A 120`)，输出将写入 XML 文件 (`-ox XMLTune.xml`)。  
 

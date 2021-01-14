@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017'
-ms.openlocfilehash: 9df3f0d56e3d210389110cdf155bd79a32c7c978
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 592a365024edbbe4ee2743a156ee480b76849ba9
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471188"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096836"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -191,7 +191,7 @@ ms.locfileid: "97471188"
     > [!TIP]
     > 可以从此页下载并安装相应的版本：[下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
     > 
-    > 还可以使用 [Azure Data Studio](../../azure-data-studio/what-is.md)，它支持管理任务和针对 SQL Server 的查询。
+    > 还可以使用 [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md)，它支持管理任务和针对 SQL Server 的查询。
   
 2. 连接到安装了机器学习服务的实例，单击“新建查询”打开查询窗口，然后运行以下命令：
 

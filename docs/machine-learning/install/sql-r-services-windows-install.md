@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperf-fy20q4
 monikerRange: =sql-server-2016
-ms.openlocfilehash: 5a4aefa522486eda1a955254d33ca7dd312c6cc6
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 78b208be4f893f7029ae09c7c0b624b3642b8f35
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878870"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100184"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
 
@@ -110,7 +110,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 ##  <a name="enable-script-execution"></a>启用脚本执行
 
-1. 打开 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 或 [Azure Data Studio](../../azure-data-studio/what-is.md)。
+1. 打开 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 或 [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md)。
 
 1. 连接到安装了 R Services 的实例，单击“新建查询”打开查询窗口，然后运行以下命令：
 

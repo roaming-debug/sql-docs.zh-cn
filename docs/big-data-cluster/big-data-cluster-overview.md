@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
-ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
+ms.openlocfilehash: ced001726b7a8306f2064c1436ddb41cf65a6eb0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92914333"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091803"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
@@ -69,7 +69,7 @@ SQL Server 大数据群集包括可缩放的 HDFS 存储池  。 这可用于存
 
 通过命令行工具、API、门户和动态管理视图的组合提供管理和监视。
 
-可以使用 [Azure Data Studio](../azure-data-studio/what-is.md) 在大数据群集上执行各种任务：
+可以使用 [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) 在大数据群集上执行各种任务：
 - 用于常见管理任务的内置片段。
 - 浏览 HDFS、上传文件、预览文件和创建目录的能力。
 - 创建、打开和运行与 Jupyter 兼容的笔记本的能力。

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0528125a4bd74b259fd02facb0589f4e123aad
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: dcb3806c4ac165080e791db01d829272b3297e8a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97617546"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091546"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装 Python 包
 
@@ -40,7 +40,7 @@ ms.locfileid: "97617546"
 + 必须使用 Python 语言选项安装 [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。
 ::: moniker-end
 
-+ 在用于连接到 SQL Server 的客户端计算机上安装 [Azure Data Studio](../../azure-data-studio/what-is.md)。 你可以使用其他数据库管理或查询工具，但本文采用 Azure Data Studio。
++ 在用于连接到 SQL Server 的客户端计算机上安装 [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md)。 你可以使用其他数据库管理或查询工具，但本文采用 Azure Data Studio。
 
 + 在 Azure Data Studio 中安装 Python 内核。 此外，还可以通过命令行安装和使用 Python，并且可以使用其他 Python 开发环境，例如具有 [Python 扩展](https://marketplace.visualstudio.com/items?itemName=ms-python.python)的 [Visual Studio Code](https://code.visualstudio.com/download)。
 

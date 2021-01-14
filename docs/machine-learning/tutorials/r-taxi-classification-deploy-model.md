@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
-ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 026090f3eb61e2bd2ffe2b96eb09751cc3543dbf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470108"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101852"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R 教程：在 SQL 存储过程中运行预测
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ GO
 
 + SELECT 语句从数据库中获取序列化的模型，并将模型存储在 R 变量 `mod` 中以便使用 R 对其进行进一步处理。
 
-+ 从 `@inquery` 中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询中获得要评分的新案例，它是存储过程的第一个参数。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。 此数据帧将被传递给 [PREDICT](/sql/t-sql/queries/predict-transact-sql) 函数，该函数将生成评分。
++ 从 `@inquery` 中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询中获得要评分的新案例，它是存储过程的第一个参数。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。 此数据帧将被传递给 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函数，该函数将生成评分。
   
   `OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));`
   

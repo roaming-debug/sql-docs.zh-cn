@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: 968bcd1560fd4fd24dddfaf45cfe606518235b60
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: fad1ac64dcc1024d5dad091670300b8d39fa0632
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081886"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092679"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 
@@ -23,7 +23,7 @@ ms.locfileid: "92081886"
 
 **[安装 SQL Server PowerShell](download-sql-server-ps-module.md)**
 
-SQL Server PowerShell 模块有两种；[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver) 和 [SQLPS](https://docs.microsoft.com/powershell/module/sqlps) 。
+SQL Server PowerShell 模块有两种；[SqlServer](/powershell/module/sqlserver) 和 [SQLPS](/powershell/module/sqlps) 。
 
 SqlServer 模块是当前要使用的 PowerShell 模块。
 
@@ -43,7 +43,7 @@ SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，还包含新的 cmdl
 
 **若导入 SQLPS 模块，请更新 PowerShell 脚本。**
 
-如果具有任何运行 `Import-Module -Name SQLPS` 的 PowerShell 脚本，并希望利用新的提供程序功能和新的 cmdlet，则必须将它们更改为 `Import-Module -Name SqlServer`。 新模块会安装到 `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` 文件夹。 因此，不需要更新 $env:PSModulePath 变量。 如果脚本使用名为 SqlServer 的第三方或社区版本模块，请使用 Prefix 参数以避免名称冲突****。
+如果具有任何运行 `Import-Module -Name SQLPS` 的 PowerShell 脚本，并希望利用新的提供程序功能和新的 cmdlet，则必须将它们更改为 `Import-Module -Name SqlServer`。 新模块会安装到 `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` 文件夹。 因此，不需要更新 $env:PSModulePath 变量。 如果脚本使用名为 SqlServer 的第三方或社区版本模块，请使用 Prefix 参数以避免名称冲突。
 
 建议使用 Import-Module SQLServer 来启动脚本，以避免在同一台计算机上安装 SQLPS 模块的情况下出现并行问题。
 

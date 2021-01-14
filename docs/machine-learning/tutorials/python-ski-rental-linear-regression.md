@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: b262b29028afbc0497c0efb2728fa1065cd14d10
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f63ffdc74fab82ca5bbf803e3dbc34c66ae5e629
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470378"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101971"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Python 教程：通过 SQL 机器学习使用线性回归来预测雪橇租赁
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "97470378"
 * 使用 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 将示例数据库还原到 Azure SQL 托管实例。
 ::: moniker-end
 
-* Python IDE - 本教程在 [Azure Data Studio](../../azure-data-studio/what-is.md) 中使用 Python 笔记本。 有关详细信息，请参阅[如何使用 Azure Data Studio 中的笔记本](../../azure-data-studio/notebooks/notebooks-guidance.md)。
+* Python IDE - 本教程在 [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) 中使用 Python 笔记本。 有关详细信息，请参阅[如何使用 Azure Data Studio 中的笔记本](../../azure-data-studio/notebooks/notebooks-guidance.md)。
 
-* SQL 查询工具 - 本教程假定使用的是 [Azure Data Studio](../../azure-data-studio/what-is.md)。
+* SQL 查询工具 - 本教程假定使用的是 [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md)。
 
 * 附加 Python 包 - 在本教程系列中的示例所使用的以下 Python 包中，有些可能是默认未安装的：
 

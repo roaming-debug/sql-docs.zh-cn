@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 85ee78e0d7558cf2ad683321a13a842ff5d8daf5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3e71b33eb08fd386232e992e9b47da7b5057aa32
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471328"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170719"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用 Resource Governor 管理 Python 和 R 工作负载
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -36,7 +36,7 @@ Python 和 R 中的机器学习算法需要大量计算。 根据工作负载优
  
 默认情况下，外部进程最多可使用本地服务器上总主机内存的 20%。 可借助使用了所有对外部进程可用的容量的 R 和 Python 进程，修改默认资源池以在服务器范围内进行更改。
 
-另外，还可以使用关联工作负载组和分类器创建自定义外部资源池，以确定对源自特定程序、主机或所提供的其他条件的请求的资源分配。 外部资源池是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中引入的一种资源池，可帮助管理数据库引擎外部的 R 和 Python 进程。
+另外，还可以使用关联工作负载组和分类器创建自定义外部资源池，以确定对源自特定程序、主机或所提供的其他条件的请求的资源分配。 外部资源池是 [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 中引入的一种资源池，可帮助管理数据库引擎外部的 R 和 Python 进程。
 
 1. [启用资源调控](../../relational-databases/resource-governor/enable-resource-governor.md)（默认情况下处于关闭状态）。
 

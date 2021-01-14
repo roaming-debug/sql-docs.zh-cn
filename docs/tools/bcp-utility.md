@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: ac37754513e5c204399e8ac4ae57141f229b4681
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 018508727950aa370fb7b3879541d04ff8384ced
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465788"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169295"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 
@@ -174,7 +174,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|客户端使用的默认代码页。 未指定 **-C** 时使用的默认代码页。|  
 |RAW|不进行代码页间的转换。 因为不进行转换，所以这是最快的选项。|  
-|*code_page*|特定的代码页编号，例如 850。<br /><br /> 低于 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) 的版本不支持代码页 65001（UTF-8 编码）。 版本 13 和后续版本可将 UTF-8 编码导入以前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。|  
+|*code_page*|特定的代码页编号，例如 850。<br /><br /> 低于 13 ([!INCLUDE[ssSQL15](../includes/sssql16-md.md)]) 的版本不支持代码页 65001（UTF-8 编码）。 版本 13 和后续版本可将 UTF-8 编码导入以前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。|  
 |||
   
  **-d** _**database\_name**_<a name="d"></a>   
@@ -429,7 +429,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **120** = [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
+ **130** = [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]  
   
  例如，若要为 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]不支持、但是在较高版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中引入的类型生成数据，请使用 -V80 选项。  
   

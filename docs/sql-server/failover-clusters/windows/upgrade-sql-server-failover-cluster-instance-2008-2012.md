@@ -12,12 +12,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 90ab761cdc9a84008803ebb4bc5493eb87778f20
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4d9e3116902ae96eaa97e9624ea33ba3fa8952d3
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642671"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171579"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升级在 Windows Server 2008/2008 R2/2012 群集上运行的 SQL Server 实例
 
@@ -30,7 +30,7 @@ ms.locfileid: "97642671"
 
 -   迁移前，并行群集不应安装 [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]。
 
--   对于使用严格意义的可用性组（包含或不包含 SQL FCI）的群集，使用分布式可用性组可极大地限制迁移该群集时的停机时间，但这需要所有实例都运行 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] RTM（或更高）版本。
+-   对于使用严格意义的可用性组（包含或不包含 SQL FCI）的群集，使用分布式可用性组可极大地限制迁移该群集时的停机时间，但这需要所有实例都运行 [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] RTM（或更高）版本。
 
 -   所有迁移策略都需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sysadmin 角色。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务所用的所有 Windows 用户（即运行复制代理的 Windows 帐户）都必须具有新环境中每台计算机的 OS 级别权限。
 
@@ -54,11 +54,11 @@ ms.locfileid: "97642671"
 \*不包括可用性组侦听程序名称
 
 ## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>应用场景 1：采用 SQL Server 可用性组且不使用故障转移群集实例 (FCI) 的 Windows 群集
-如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序使用可用性组 (AG)，且没有故障转移群集实例，则可通过在 Windows Server 2016/2012 R2 的其他 Windows 群集上创建并行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 部署，将其迁移到新群集。 此后，可以创建分布式 AG，其中的目标群集为当前生产群集的辅助群集。 这不需要用户升级到 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 或更高版本。
+如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序使用可用性组 (AG)，且没有故障转移群集实例，则可通过在 Windows Server 2016/2012 R2 的其他 Windows 群集上创建并行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 部署，将其迁移到新群集。 此后，可以创建分布式 AG，其中的目标群集为当前生产群集的辅助群集。 这不需要用户升级到 [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] 或更高版本。
 
 ###  <a name="to-perform-the-upgrade"></a>执行升级
 
-1.  根据需要将任意实例升级到 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 或更高版本。 并行实例应运行相同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。
+1.  根据需要将任意实例升级到 [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] 或更高版本。 并行实例应运行相同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。
 
 2.  为目标群集创建可用性组。 如果目标群集的主节点不是 FCI，则创建一个侦听程序。
 

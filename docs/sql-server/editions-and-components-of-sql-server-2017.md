@@ -35,12 +35,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017'
-ms.openlocfilehash: f5d591fb4ca068251cc0a4effbdd9477f80e4606
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 12e4018a5431284bbe7eb7f0faf5e930353c2880
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97402599"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102640"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的各版本和支持的功能
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "97402599"
 
 ### <a name="try-sql-server"></a>试用 SQL Server    
     
-> [![从评估中心下载](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) [从评估中心下载 SQL Server 2017](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)    
+> [![从评估中心下载](/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) [从评估中心下载 SQL Server 2017](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)    
 
 <!---    
 > ![Azure Virtual Machine small](/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
@@ -136,7 +136,7 @@ ms.locfileid: "97402599"
 |每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的缓冲池的最大内存|操作系统支持的最大值|128 GB|64 GB|1410 MB|1410 MB|
 |每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的列存储段缓存的最大内存|不受限制的内存| 32 GB| 16 GB| 352 MB| 352 MB|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中每个数据库的最大内存优化数据大小|不受限制的内存| 32 GB| 16 GB| 352 MB| 352 MB|  
-|每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例利用的最大内存|操作系统支持的最大值|表格：16 GB<br /><br /> MOLAP：64 GB|不适用|空值|不适用|  
+|每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例利用的最大内存|操作系统支持的最大值|表格：16 GB<br /><br /> MOLAP：64 GB|不适用|不可用|不适用|  
 |每个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]实例利用的最大内存|操作系统支持的最大值|64 GB|64 GB|4 GB|不适用|
 |最大关系数据库大小|524 PB|524 PB|524 PB|10 GB|10GB|  
   
@@ -400,7 +400,7 @@ ms.locfileid: "97402599"
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|否|否| 
 |StreamInsight HA|StreamInsight Premium Edition|否|否|否|否|   
 
-> [![下载 SSMS](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载最新版 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)     
+> [![下载 SSMS](/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载最新版 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)     
   
 ## <a name="next-steps"></a>后续步骤 
  [SQL Server 的产品规格](./index.yml)   

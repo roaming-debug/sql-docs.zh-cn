@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 21730bf32e66c5954b2447037286dfdc10717e9c
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 960f146d7cd6943d27a0ecce2c1edaedc41de472
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081536"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102892"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>安装 SQL Server PowerShell 模块
 
@@ -133,7 +133,7 @@ Import-Module SqlServer -Version 21.1.18218
 PowerShell 库中可能提供 SqlServer 模块的预发行（或“预览”）版本。
 
 > [!IMPORTANT]
-> 可通过传递 -AllowPrerelease 切换，使用更新后的 Find-Module 和 Install-Module cmdlet（属于 [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) 模块）找到并安装这些版本。****** 若要使用这些 cmdlet，请安装 PowerShellGet 模块，然后打开一个新的会话。
+> 可通过传递 -AllowPrerelease 切换，使用更新后的 Find-Module 和 Install-Module cmdlet（属于 [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) 模块）找到并安装这些版本。 若要使用这些 cmdlet，请安装 PowerShellGet 模块，然后打开一个新的会话。
 
 ### <a name="to-discover-pre-release-versions-of-the-sqlserver-module"></a>发现 SqlServer 模块的预发行版本
 
@@ -165,11 +165,11 @@ Install-Module SqlServer -RequiredVersion 21.1.18218-preview -AllowPrerelease
 
 ## <a name="cmdlet-reference"></a>Cmdlet 参考
 
-- [SqlServer cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)
-- [SQLPS cmdlet](https://docs.microsoft.com/powershell/module/sqlps)
+- [SqlServer cmdlet](/powershell/module/sqlserver)
+- [SQLPS cmdlet](/powershell/module/sqlps)
 
 ## <a name="next-steps"></a>后续步骤
 
 - [SQL Server PowerShell](sql-server-powershell.md)
-- [SQL Server PowerShell cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQL Server PowerShell cmdlet](/powershell/module/sqlserver)
 - [将 PowerShell 和 Azure Data Studio 结合使用](../azure-data-studio/extensions/powershell-extension.md)

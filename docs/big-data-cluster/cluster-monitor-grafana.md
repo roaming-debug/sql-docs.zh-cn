@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d258ac514cd998fd121c87a8d6da4a2694878c3e
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: ee0ceb3a9f86fc2a7fabe44e9279b7e63dabfb8b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378345"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091682"
 ---
 # <a name="monitor-cluster-with-azdata-and-grafana-dashboard"></a>使用 azdata 和 Grafana Dashboard 监视群集
 
@@ -24,7 +24,7 @@ ms.locfileid: "92378345"
 ## <a name="prerequisites"></a>先决条件
 
 - [SQL Server 2019 大数据群集](deployment-guidance.md)
-- [azdata 命令行工具](deploy-install-azdata.md)
+- [azdata 命令行工具](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>功能
 

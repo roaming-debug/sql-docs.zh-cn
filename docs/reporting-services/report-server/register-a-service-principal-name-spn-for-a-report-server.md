@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c87da88bcec8d1fcc29c282a1e012121a81f6f45
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 38985454ae83a73fd27dac886fd0f4ee10e5ad55
+ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986683"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125579"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>为报表服务器注册服务主体名称 (SPN)
   如果要在使用 Kerberos 协议进行相互身份验证的网络中部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并且将报表服务器服务配置为以域用户帐户身份运行，则必须为报表服务器服务创建服务主体名称 (SPN)。  
@@ -66,7 +66,7 @@ Setspn -s http/<computer-name>.<domain-name> <domain-user-account>
   
 6.  打开 **RsReportServer.config** 文件并找到 `<AuthenticationTypes>` 部分。  
   
-7.  添加 `<RSWindowsNegotiate/>` 作为该部分的第一个项，以启用 Kerberos。  
+7.  添加 `<RSWindowsNegotiate />` 作为该部分的第一个项，以启用 Kerberos。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置服务帐户（报表服务器配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   

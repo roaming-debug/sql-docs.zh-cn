@@ -10,22 +10,22 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 80535a9baefe60301927723511a5bf1afeb805a8
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: be07fa7f00f38f4f7ff3782593b19a584627e2f7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378352"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091695"
 ---
 # <a name="monitor-cluster-with-azdata-and-kubectl"></a>使用 azdata 和 kubectl 监视群集
 
 ## <a name="use-azdata"></a>使用 azdata
 
-还可以使用 [azdata](deploy-install-azdata.md) 命令来查看终结点和群集状态。
+还可以使用 [azdata](../azdata/install/deploy-install-azdata.md) 命令来查看终结点和群集状态。
 
 ### <a name="service-endpoints"></a>服务终结点
 
-1. 使用 [azdata login](reference-azdata.md) 登录大数据群集。 将 --controller-endpoint  参数设置为控制器终结点的外部 IP 地址。
+1. 使用 [azdata login](../azdata/reference/reference-azdata.md) 登录大数据群集。 将 --controller-endpoint  参数设置为控制器终结点的外部 IP 地址。
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -39,7 +39,7 @@ ms.locfileid: "92378352"
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 
-1. 运行 [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md) 可获取一个列表，其中包含每个终结点的描述及其对应的 IP 地址和端口值。 
+1. 运行 [`azdata bdc endpoint list`](../azdata/reference/reference-azdata-bdc-endpoint.md) 可获取一个列表，其中包含每个终结点的描述及其对应的 IP 地址和端口值。 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -65,7 +65,7 @@ ms.locfileid: "92378352"
 
 ### <a name="view-cluster-status"></a>查看群集状态
 
-可以通过 [`azdata bdc status show`](reference-azdata-bdc-status.md) 命令查看群集的状态。
+可以通过 [`azdata bdc status show`](../azdata/reference/reference-azdata-bdc-status.md) 命令查看群集的状态。
 
 ```bash
 azdata bdc status show
@@ -150,7 +150,7 @@ azdata bdc status show
 
 ### <a name="view-specific-resource-status"></a>查看特定资源的状态
 
-可通过 [azdata bdc status show](reference-azdata-bdc-status.md) 命令查看群集中特定资源的状态。 使用此命令时，可以使用 `--resource` 参数进行筛选。 `--resource` 参数输入的几个示例包括：
+可通过 [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) 命令查看群集中特定资源的状态。 使用此命令时，可以使用 `--resource` 参数进行筛选。 `--resource` 参数输入的几个示例包括：
 
 - master
 - 控制
@@ -242,7 +242,7 @@ azdata bdc status show --all --resource storage-0
 
 ### <a name="view-controller-status"></a>查看控制器状态
 
-可以通过 [`azdata bdc control status show`](reference-azdata-bdc-control-status.md) 命令查看控制器状态。 它提供类似链接，可链接到与大数据群集的控制器组件相关的监视仪表板。
+可以通过 [`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md) 命令查看控制器状态。 它提供类似链接，可链接到与大数据群集的控制器组件相关的监视仪表板。
 
 
 ## <a name="next-steps"></a>后续步骤

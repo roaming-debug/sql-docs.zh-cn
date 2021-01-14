@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: 346e964b30f76bf79c20d6f348636a626a8beee2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 98211695d60592c8178c4b60e45f2105c3b86db4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642366"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102653"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -188,7 +188,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 常规 SSMS | 修复了以下问题：在尝试连接到 Azure SQL DB 时，可能需要数秒钟（用户数据库中的 SQL 登录）。 |
 | 常规 SSMS | 修复了以下问题：SSMS 不处理/不显示捕获到的死锁（.xdl 文件）。 |
 | 常规 SSMS | 修复了以下问题：无法尝试打开 SQL Server 2008 R2 及更低版本的错误日志设置，找不到 ErrorLogSizeKb 属性。 |
-| 常规 SSMS | 关于 [Azure Synapse Analytics 无服务器 SQL 池](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)支持的常规修复和改进。 |
+| 常规 SSMS | 关于 [Azure Synapse Analytics 无服务器 SQL 池](/azure/synapse-analytics/sql/on-demand-workspace-overview)支持的常规修复和改进。 |
 | 导入平面文件 | 修复了以下问题：向导没有检测到文件可能被另一个应用程序使用，而是抛出了错误。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/40761574)。 |
 | 导入/导出数据层应用程序 | 修复了以下问题：导入 bacpac 时，默认服务层为标准 S0（与 Azure 门户和 SqlPackage.exe 行为相同）。 |
 | 导入平面文件 | 修复了以下问题：向导没有检测到文件可能被另一个应用程序使用，而是抛出了错误。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035/suggestions/40761574)。 |
@@ -220,7 +220,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 生成脚本向导 | 尝试枚举 SQL Server 2014 及更低版本上的数据库对象时，向导失败。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)。 | 使用 SSMS 18.6 在 SQL 2014 和更早版本的生成脚本向导中选择对象。 |
 | Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 解决方法：删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 | 空值 |
 | Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 解决方法：在“Computer\HKEY_CLASSES_ROOT\AppID”和“Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下识别与 Integration Services 相关的注册表位置，并在这些配置单元中，将名为“LocalService”的注册表项重命名为“LocalService_A”，以用于我们尝试连接的特定版本的 Integration Services | 不适用 |
-| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 无服务器 SQL 池](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相关的更改，因此低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 无服务器 SQL 池结合使用，需要使用 SSMS 18.7 或更高版本。 |
+| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 无服务器 SQL 池](/azure/synapse-analytics/sql/on-demand-workspace-overview)相关的更改，因此低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 无服务器 SQL 池结合使用，需要使用 SSMS 18.7 或更高版本。 |
 | 查询存储 | 右键单击时查询存储的对象资源管理器节点时引发错误。 | 通过展开节点并右键单击各个子选项，直接访问项。 |
 
 ### <a name="186"></a>18.6

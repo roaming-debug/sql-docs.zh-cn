@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05441d59b725a172fddfb83ae116cda2d3ca5596
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 90e585e887e9415a8cf1f9d0104595547f2d1c87
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935547"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171979"
 ---
 # <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>订阅设置和文件共享帐户（报表服务器配置管理器）
   使用 **配置管理器的**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] “订阅设置”页为本机模式报表服务器和文件共享订阅配置文件共享帐户。 文件共享帐户运行使用将报表传递给文件共享的多个订阅中的单组凭据。 需要更改凭据时，可以为文件共享帐户配置更改并且无需更新每个单独的订阅。  
   
  两个工作流与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件共享订阅共存：  
   
--   使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版本中的新增功能， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理员可以配置单个文件共享帐户，用于一个或多个订阅。 配置  “指定文件共享帐户”，然后在单独的订阅配置页中，用户选择“使用文件共享帐户”  。  
+-   使用 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 版本中的新增功能， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理员可以配置单个文件共享帐户，用于一个或多个订阅。 配置  “指定文件共享帐户”，然后在单独的订阅配置页中，用户选择“使用文件共享帐户”  。  
   
 -   使用目标文件共享的特定凭据配置单独的订阅。  
   

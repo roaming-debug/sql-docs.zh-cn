@@ -11,12 +11,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017
-ms.openlocfilehash: 0c70b2a7202ea7bcd14128a544487ec011c9c7b8
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: cd13f9fea3ade8f0bcb92e77470ab74f40d69ae2
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643304"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98167669"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "97643304"
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server 2017 CTP 2.1（2017 年 5 月）
 ### <a name="documentation-ctp-21"></a>文档 (CTP 2.1)
-- **问题及其对客户的影响：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文档受到限制，且其内容包含在 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文档集中。  文章中的 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 专属内容使用“适用于”  进行标注。 
+- **问题及其对客户的影响：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文档受到限制，且其内容包含在 [!INCLUDE[ssSQL15_md](../includes/sssql16-md.md)] 文档集中。  文章中的 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 专属内容使用“适用于”  进行标注。 
 - **问题及其对客户的影响：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 没有可用的脱机内容。
 
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
@@ -129,7 +129,7 @@ ms.locfileid: "97643304"
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-20-april--2017"></a>SQL Server 2017 CTP 2.0（2017 年 4 月）
 ### <a name="documentation-ctp-20"></a>文档 (CTP 2.0)
-- **问题及其对客户的影响：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文档受到限制，且其内容包含在 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文档集中。  文章中的 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 专属内容使用“适用于”  进行标注。 
+- **问题及其对客户的影响：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文档受到限制，且其内容包含在 [!INCLUDE[ssSQL15_md](../includes/sssql16-md.md)] 文档集中。  文章中的 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 专属内容使用“适用于”  进行标注。 
 - **问题及其对客户的影响：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 没有可用的脱机内容。
 
 ### <a name="always-on-availability-groups"></a>AlwaysOn 可用性组

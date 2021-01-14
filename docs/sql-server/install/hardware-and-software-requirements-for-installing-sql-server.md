@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: chadam
 author: cawrites
-ms.openlocfilehash: a2fb4a36b5ef11a67f9896584ed7fb101d4a042e
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 8583c629fc43656e082d32ec00b1e942d2e92b3d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127529"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170609"
 ---
 # <a name="sql-server-2016-and-2017-hardware-and-software-requirements"></a>SQL Server 2016 和 2017：硬件和软件要求
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "96127529"
   
 |组件|要求|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] 和更高版本需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 才能运行数据库引擎、Master Data Services 或复制。 SQL Server 安装程序自动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 还可以从[适用于 Windows 的 Microsoft .NET Framework 4.6（Web 安装程序）](https://support.microsoft.com/kb/3045560)手动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。<br/><br/> 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的详细信息、建议和指南，请参阅 [面向开发人员的 .NET Framework 部署指南](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>在安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 之前，[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 和 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 需要 [KB2919355](https://support.microsoft.com/kb/2919355)。|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql16-md.md)] 和更高版本需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 才能运行数据库引擎、Master Data Services 或复制。 SQL Server 安装程序自动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 还可以从[适用于 Windows 的 Microsoft .NET Framework 4.6（Web 安装程序）](https://support.microsoft.com/kb/3045560)手动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。<br/><br/> 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的详细信息、建议和指南，请参阅 [面向开发人员的 .NET Framework 部署指南](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>在安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 之前，[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 和 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 需要 [KB2919355](https://support.microsoft.com/kb/2919355)。|  
 |网络软件|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 支持的操作系统具有内置网络软件。 独立安装项的命名实例和默认实例支持以下网络协议：共享内存、命名管道、TCP/IP 和 VIA。<br/><br/> **注意：** 故障转移群集不支持 VIA 协议。 与 SQL Server 实例在同一故障转移群集节点上运行的客户端或应用程序可以使用 Shared Memory 协议，通过其本地管道地址连接到 SQL Server。 不过，这种连接无法感知群集，因此会在实例故障转移后无法连接。 因此，不建议使用这种连接，只能用于极个别的方案。<br/><br/> **重要提示：** 不推荐使用 VIA 协议。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> 有关网络协议和网络库的详细信息，请参阅 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)。|  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装该产品所需的以下软件组件：  

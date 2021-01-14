@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: d3c051a2c72e911ddbf9d310929fe15628b8b5a2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3acd5153599c6237117e52b483247033ebf983ec
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471318"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091622"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>将 SQL 表中的数据插入 Python pandas 数据框
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97471318"
 * 用于将示例数据库还原到 Azure SQL 托管实例的 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
-* Azure Data Studio。 如需安装，请参阅 [Azure Data Studio](../../azure-data-studio/what-is.md)。
+* Azure Data Studio。 如需安装，请参阅 [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md)。
 
 * [还原示例数据库](../../samples/adventureworks-install-configure.md)以获取本文中使用的示例数据。
 

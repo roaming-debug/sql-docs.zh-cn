@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016
-ms.openlocfilehash: d1910099e1f0aa4a8f3e58f1faa01dfbe177c517
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 66e023799f69f35b8e220983b261d9e5ae074f24
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470758"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102226"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>什么是 SQL Server 2016 R Services？
 
@@ -92,7 +92,7 @@ SQL Server 2016 Service Pack (SP) 2 及更高版本的累积更新 (CU) 14 包�
 
 1. 配置开发工具。 可用工具如下：
 
-    + 使用 [Azure Data Studio](../../azure-data-studio/what-is.md) 或 [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) 以采用 T-SQL 和存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 来执行 R 脚本。
+    + 使用 [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) 或 [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) 以采用 T-SQL 和存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 来执行 R 脚本。
     + 使用开发便携式计算机或工作站上的 R 来执行脚本。 可以在本地拉取数据，也可以使用 [RevoScaleR](../r/ref-r-revoscaler.md) 将执行远程推送到 SQL Server。 有关详细信息，请参阅如何[设置数据科学客户端 R 开发](../r/set-up-a-data-science-client.md)。
 
 1. 编写第一个 R 脚本
