@@ -11,12 +11,12 @@ ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: be6c23f2943a437565ead1512922408e609c0300
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c309c86f4f6609f1bd5383d311e1ce5781350fd9
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438812"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975425"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>完成数据库引擎升级
 
@@ -28,7 +28,7 @@ ms.locfileid: "97438812"
   
 - **备份数据库：** 为每个数据库执行完整备份。  
 
-- **启用新功能：** 在 SQL Server 2016 和 SQL Server 2017 中，仅在数据库的 DATABASE_COMPATIBILITY 级别更改为 130 或更高级别后，才会启用某些更改。  有关详细信息和建议工作流，请参阅 [更改数据库兼容性模式和使用 Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 如果数据库在 SQL Server 2014 中创建了内存优化表，请查看[内存优化表的统计信息](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)。
+- **启用新功能：** 在 SQL Server 2016、2017 和 2019 版中，只有在数据库的 DATABASE_COMPATIBILITY 级别更改为 130 或更高级别后，才会启用某些更改。  有关详细信息和建议工作流，请参阅 [更改数据库兼容性模式和使用 Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 如果数据库在 SQL Server 2014 中创建了内存优化表，请查看[内存优化表的统计信息](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)。
   
 - **Integration Services：**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "97438812"
   
 - **Reporting Services：** 对于新安装升级，请还原 Reporting Services 加密密钥。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
-- **Master Data Services：** 升级 MDS 数据库架构并创建 SQL Server 2017 Web 应用程序。 有关详细信息，请参阅 [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)。  
+- **Master Data Services：** 升级 MDS 数据库架构并创建 SQL Server 2019 Web 应用程序。 有关详细信息，请参阅 [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)。  
   
 - **Data Quality Services：** 升级 DQS 数据库架构并验证 DQS 数据库架构升级。 有关详细信息，请参阅 [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)。  
   

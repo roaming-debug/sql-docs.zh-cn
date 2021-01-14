@@ -2,11 +2,13 @@
 title: 统计信息
 description: 查询优化器使用统计信息来创建可提高查询性能的查询计划。 了解使用查询优化的概念和指导原则。
 ms.custom: ''
-ms.date: 11/23/2020
+ms.date: 1/7/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
 - query performance [SQL Server], statistics
@@ -20,21 +22,20 @@ helpviewer_keywords:
 - index statistics [SQL Server]
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
-ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d88b24a6602ece47194997a829c4f2824d4a6c71
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 77bd2f1cb2cd3e028bccbc5185f2336812f3f891
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475348"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005422"
 ---
 # <a name="statistics"></a>统计信息
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  查询优化器使用统计信息来创建可提高查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在一些情况下，需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
+  查询优化器使用统计信息来创建可提高查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在一些情况下，需要创建附加的统计信息或修改查询设计以得到最佳结果。 本文讨论用于高效使用查询优化统计信息的统计信息概念，并提供相关指南。  
   
 ##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> 组件和概念  
 ### <a name="statistics"></a>统计信息  
@@ -85,10 +86,10 @@ ms.locfileid: "97475348"
 |(CustomerId, ItemId, Price)|具有与 CustomerId、ItemId 和 Price 匹配的值的行| 
 
 ### <a name="filtered-statistics"></a>筛选的统计信息  
- 筛选统计信息可以提高以下从定义完善的数据子集选择数据的查询的查询性能。 筛选统计信息使用筛选器谓词来选择统计信息中包括的数据子集。 与全表统计信息相比，设计完美的筛选统计信息可以改进查询执行计划。 有关筛选器谓词的详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。 有关何时创建筛选的统计信息的详细信息，请参阅本主题中的 [何时创建统计信息](#CreateStatistics) 部分。  
+ 筛选统计信息可以提高以下从定义完善的数据子集选择数据的查询的查询性能。 筛选统计信息使用筛选器谓词来选择统计信息中包括的数据子集。 与全表统计信息相比，设计完美的筛选统计信息可以改进查询执行计划。 有关筛选器谓词的详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。 若要详细了解何时创建筛选的统计信息，请参阅本文中的[何时创建统计信息](#CreateStatistics)部分。  
  
 ### <a name="statistics-options"></a>统计信息选项  
- 可以设置三个选项来影响何时以及如何创建和更新统计信息。 这些选项仅在数据库级别设置。  
+ 有 3 个选项会影响何时以及如何创建和更新统计信息。 仅可在数据库级别配置这些选项。  
   
 #### <a name="auto_create_statistics-option"></a><a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS 选项  
  在自动创建统计信息选项 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 为 ON 时，查询优化器将根据需要在查询谓词中的单独列上创建统计信息，以便改进查询计划的基数估计。 这些单列统计信息在现有统计信息对象中尚未具有[直方图](#histogram)的列上创建。 AUTO_CREATE_STATISTICS 选项不确定是否为索引创建了统计信息。 此选项也不生成筛选统计信息。 它严格应用于全表的单列统计信息。  
@@ -113,7 +114,7 @@ ORDER BY s.name;
     * 如果在评估时间统计信息时表基数为 500 或更低，则每达到 500 次修改时更新一次。
     * 如果在评估时间统计信息时表基数大于 500，则每达到 500 + 修改次数的百分之二十时更新一次。
 
-* 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)为 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。 它的计算方式为 1000 与当前的表基数乘积的平方根。 例如，如果表中包含 200 万行，则计算为 sqrt(1000 * 2000000) = 44721.359。 进行此更改后，将会更频繁地更新大型表的统计信息。 但是，如果数据库的兼容性级别低于 130，则 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值适用。 ?
+* 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)为 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。 它的计算方式为 1000 与当前的表基数乘积的平方根。 例如，如果表中包含 200 万行，则计算为 sqrt(1000 * 2000000) = 44721.359。 进行此更改后，将会更频繁地更新大型表的统计信息。 但是，如果数据库的兼容性级别低于 130，则 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值适用。 
 
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或者在[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 和更低级别下的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本中，启用[跟踪标志 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用降低的动态统计信息更新阈值。
@@ -139,9 +140,13 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
 > [!NOTE]
 > 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中设置异步统计信息更新选项，需在“数据库属性”窗口的“选项”页中同时将“自动更新统计信息”和“自动异步更新统计信息”选项设置为“True”。
   
-统计信息更新可以是同步（默认设置）或异步的。 对于同步统计信息更新，查询将始终用最新的统计信息编译和执行；在统计信息过期时，查询优化器将在编译和执行查询前等待更新的统计信息。 对于异步统计信息更新，查询将用现有的统计信息编译，即使现有统计信息已过期。如果在查询编译时统计信息过期，查询优化器可以选择非最优查询计划。 在异步更新完成后编译的查询将从使用更新的统计信息中受益。  
-  
-执行更改数据分布的操作（例如截断表或对很大百分比的行执行大容量更新）时，考虑使用同步统计信息。 如果您在完成该操作后未更新统计信息，则使用同步统计信息将确保对更改的数据执行查询前统计信息是最新的。  
+统计信息更新可以是同步（默认设置）或异步的。 
+
+* 对于同步统计信息更新，查询将始终用最新的统计信息编译和执行。 如果统计信息过期，查询优化器会等待更新的统计信息，然后再编译和执行查询。 
+
+* 对于异步统计信息更新，即使现有统计信息已过期，查询也会用现有的统计信息编译。 如果查询编译时统计信息过期，查询优化器可选择次优的查询计划。 通常，很快就会更新统计信息。 同样地，使用更新的统计信息将有利于在统计信息更新完成之后编译的查询。   
+
+执行更改数据分布的操作（例如截断表或对很大百分比的行执行大容量更新）时，考虑使用同步统计信息。 如果你在完成该操作后未手动更新统计信息，那么使用同步统计信息将确保对更改的数据执行查询前统计信息是最新的。  
   
 在以下情况下，考虑使用异步统计信息来实现可预测性更高的查询响应时间：  
   
@@ -154,10 +159,13 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
 
 异步统计信息更新由后台请求执行。 当请求准备好将更新后的统计信息写入数据库时，它将尝试获取统计信息元数据对象上的架构修改锁。 如果其他会话已经锁定了同一对象，则将阻止异步统计信息更新，直到可以获取架构修改锁。 类似地，需要获取统计信息元数据对象上架构稳定性锁以编译查询的会话可能被已经持有或正在等待获取架构修改锁的异步统计信息更新后台会话阻止。 因此，对于具有非常频繁的查询编译和频繁统计信息更新的工作负载，使用异步统计信息可能会增加由于锁定阻止而导致并发问题的可能性。
 
-在 Azure SQL 数据库中，如果启用 ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，可以使用异步统计信息更新来避免潜在并发问题。 启用此配置后，后台请求会在单独的低优先级队列中等待获取架构修改锁，从而允许其他请求继续使用现有统计信息编译查询。 当没有其他会话锁定统计信息元数据对象时，后台请求将获取其架构修改锁和更新统计信息。 如果后台请求在几分钟的超时期限内无法获取锁定（不太可能发生这种情况），将中止异步统计信息更新。在这种情况下，在触发另一次自动统计信息更新或者[手动更新](update-statistics.md)统计信息之前，不会更新统计信息。
+在 Azure SQL 数据库和 Azure SQL 托管实例中，如果启用 ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，可使用异步统计信息更新来避免潜在并发问题。 启用此配置后，后台请求会在单独的低优先级队列中等待获取架构修改 (Sch-M) 锁，从而允许其他请求继续使用现有统计信息编译查询。 当没有其他会话锁定统计信息元数据对象时，后台请求将获取其架构修改锁和更新统计信息。 如果后台请求在几分钟的超时期限内无法获取锁定（不太可能发生这种情况），将中止异步统计信息更新。在这种情况下，在触发另一次自动统计信息更新或者[手动更新](update-statistics.md)统计信息之前，不会更新统计信息。
+
+> [!Note]
+> ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY 数据库范围的配置选项现可在 Azure SQL 数据库和 Azure SQL 托管实例中使用，它根据计划会包含在 SQL Server vNext 中。 
 
 #### <a name="incremental"></a>INCREMENTAL  
- CREATE STATISTICS 的 INCREMENTAL 选项为 ON 时，创建的统计信息为每个分区的统计信息。 为 OFF 时，删除统计信息树并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新计算统计信息。 默认为 OFF。 此设置覆盖数据库级别 INCREMENTAL 属性。 要深入了解如何创建增量统计信息，请参阅 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。 要深入了解如何自动创建每个分区的统计信息，请参阅[数据库属性（“选项”页）](../../relational-databases/databases/database-properties-options-page.md#automatic)和 [ALTER DATABASE SET 选项 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 
+ CREATE STATISTICS 的 INCREMENTAL 选项为 ON 时，创建的统计信息为每个分区的统计信息。 为 OFF 时，会删除统计信息树，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会重新计算统计信息。 默认为 OFF。 此设置覆盖数据库级别 INCREMENTAL 属性。 要深入了解如何创建增量统计信息，请参阅 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。 要深入了解如何自动创建每个分区的统计信息，请参阅[数据库属性（“选项”页）](../../relational-databases/databases/database-properties-options-page.md#automatic)和 [ALTER DATABASE SET 选项 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 
   
  在将新分区添加到某个大型表时，应更新统计信息以便包括这些新分区。 但是，浏览整个表（FULLSCAN 或 SAMPLE 选项）所需的时间可能会相当长。 此外，因为可能只需针对新分区的统计信息，所以，扫描整个表不是必需的。 该增量选项将在每个分区的基础上创建和存储统计信息，并且在更新时，只刷新需要新统计信息的那些分区上的统计信息  
   
@@ -201,7 +209,7 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
   
 在创建多列统计信息时，统计信息对象定义中列的顺序将影响生成基数估计的密度的效率。 统计信息对象在统计信息对象定义中存储键列的每个前缀的密度。 有关密度的详细信息，请参阅此页中的[密度](#density)部分。  
   
-为了创建用于基数估计的密度，查询谓词中的列必须匹配统计信息对象定义中列的前缀之一。 例如，以下内容在列 `LastName`、 `MiddleName`和 `FirstName`上创建多列统计信息对象。  
+为了创建用于基数估计的密度，查询谓词中的列必须匹配统计信息对象定义中列的前缀之一。 例如，下面的示例会在列 `LastName`、`MiddleName` 和 `FirstName` 上创建多列统计信息对象。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -261,7 +269,7 @@ GO
  因为临时统计信息存储于 **tempdb** 中，所以重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
     
 ## <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> 何时更新统计信息  
- 查询优化器确定统计信息何时可能过期，然后在查询计划需要统计信息时更新它们。 在某些情况下，将 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 设置为 ON 时，可以通过更频繁地更新统计信息来优化查询计划，并因此提高查询性能。 可以使用 UPDATE STATISTICS 语句或存储过程 sp_updatestats 来更新统计信息。  
+ 查询优化器确定统计信息何时可能过期，然后在查询计划需要统计信息时更新它们。 在某些情况下，将 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 设置为 ON 时，可通过更频繁地更新统计信息来优化查询计划，进而提高查询性能。 可以使用 UPDATE STATISTICS 语句或存储过程 sp_updatestats 来更新统计信息。  
   
  更新统计信息可确保查询使用最新的统计信息进行编译。 不过，更新统计信息会导致查询重新编译。 我们建议不要太频繁地更新统计信息，因为需要在改进查询计划和重新编译查询所用时间之间权衡性能。 具体的折衷方案取决于你的应用程序。  
   
@@ -390,7 +398,7 @@ GO
 ```  
   
 ### <a name="improving-cardinality-estimates-with-plan-guides"></a>使用计划指南改进基数估计  
- 对于某些应用程序，查询计划指南可能不适用，因为您无法更改查询，或者使用 RECOMPILE 查询提示可能导致过多的重新编译。 您可以使用计划指南来指定 USE PLAN 之类的其他提示，以便在向应用程序供应商调查应用程序变化的同时，控制查询的行为。 有关计划指南的详细信息，请参阅 [Plan Guides](../../relational-databases/performance/plan-guides.md)。  
+ 对于某些应用程序，查询计划指南可能不适用，原因是你无法更改查询，或者使用 RECOMPILE 查询提示可能导致过多的重新编译。 您可以使用计划指南来指定 USE PLAN 之类的其他提示，以便在向应用程序供应商调查应用程序变化的同时，控制查询的行为。 有关计划指南的详细信息，请参阅 [Plan Guides](../../relational-databases/performance/plan-guides.md)。  
   
   
 ## <a name="see-also"></a>另请参阅  

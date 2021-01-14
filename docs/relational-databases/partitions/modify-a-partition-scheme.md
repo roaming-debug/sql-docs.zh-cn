@@ -2,7 +2,7 @@
 description: 修改分区方案
 title: 修改分区方案 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 1/5/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -11,12 +11,12 @@ ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78426696f05d1983e57238a969c232872ac859ae
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fb261e69d3491f717be8b34bb2b0f699a4d37840
+ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97406531"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952027"
 ---
 # <a name="modify-a-partition-scheme"></a>修改分区方案
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,6 +40,9 @@ ms.locfileid: "97406531"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  受 ALTER PARTITION SCHEME 影响的所有文件组都必须处于联机状态。  
+
+> [!NOTE]
+> Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中仅支持主文件组。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   

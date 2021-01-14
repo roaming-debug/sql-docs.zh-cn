@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25835dd5fbac5f95434d46ac152d44ea6974496
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 00b4856ab0c057b7f63aae44834884bc775d8e92
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440128"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102165"
 ---
 # <a name="diagnose-and-resolve-spinlock-contention-on-sql-server"></a>诊断和解决 SQL Server 上的旋转锁争用问题
 
@@ -137,7 +137,7 @@ order by spins desc
 
 2. **步骤 2**：从 sys.dm\_ os_spinlock_stats 中捕获统计信息，以找到发生最多争用的旋转锁类型。
 
-3. **步骤 3**：获取 sqlservr.exe 的调试符号 (sqlservr.pdb)，并将这些符号放在与 SQL Server 实例的 SQL Server 服务 .exe 文件 (sqlservr.exe) 相同的目录中。\若要查看回避事件的调用堆栈，必须具有针对所运行的特定 SQL Server 版本的符号。 Microsoft 符号服务器上提供 SQL Server 符号。 有关如何从 Microsoft 符号服务器下载符号的详细信息，请参阅[使用符号调试](https://docs.microsoft.com/windows/win32/dxtecharts/debugging-with-symbols)。
+3. **步骤 3**：获取 sqlservr.exe 的调试符号 (sqlservr.pdb)，并将这些符号放在与 SQL Server 实例的 SQL Server 服务 .exe 文件 (sqlservr.exe) 相同的目录中。\若要查看回避事件的调用堆栈，必须具有针对所运行的特定 SQL Server 版本的符号。 Microsoft 符号服务器上提供 SQL Server 符号。 有关如何从 Microsoft 符号服务器下载符号的详细信息，请参阅[使用符号调试](/windows/win32/dxtecharts/debugging-with-symbols)。
 
 4. **步骤 4**：使用 SQL Server 扩展事件跟踪需要注意的旋转锁类型的退避事件。
 
@@ -237,7 +237,7 @@ drop event session spin_lock_backoff on server
 通过分析输出，我们可以看到 SOS_CACHESTORE 旋转的最常见代码路径的调用堆栈。 在 CPU 使用率很高的时间段内，该脚本在几个不同的时间运行，以检查返回的调用堆栈中的一致性。 请注意，两个输出（35,668 和 8,506）之间插槽桶计数最高的调用堆栈相同。 这些调用堆栈的“插槽计数”比下一最高计数条目大两个数量级。 此条件指示需要关注的代码路径。
 
 > [!NOTE]
-> 看到之前脚本返回的调用堆栈并不少见。 当脚本运行 1 分钟时，我们观察到插槽计数 \> 1000 的堆栈可能会出现问题，且插槽计数 \> 10,000 的堆栈可能会出现问题。
+> 看到之前脚本返回的调用堆栈并不少见。 在脚本运行了 1 分钟时，我们观察到槽计数大于 1000 的调用堆栈出现问题，但槽计数大于 10,000 的调用堆栈由于槽数更多，因此更可能出现问题。
 
 > [!NOTE]
 > 为了便于阅读，已清除以下输出的格式设置。

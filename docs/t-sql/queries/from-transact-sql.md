@@ -1,8 +1,6 @@
 ---
+title: FROM 子句，以及 JOIN、APPLY 和 PIVOT (T-SQL)
 description: FROM 子句以及 JOIN、APPLY、PIVOT (Transact-SQL)
-title: FROM：JOIN、APPLY、PIVOT (T-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,6 +11,8 @@ f1_keywords:
 - FROM_TSQL
 - FROM
 - JOIN_TSQL
+- OUTER_JOIN_TSQL
+- INNER_JOIN_TSQL
 - CROSS_TSQL
 - CROSS_APPLY_TSQL
 - APPLY_TSQL
@@ -34,13 +34,15 @@ helpviewer_keywords:
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
+ms.custom: ''
+ms.date: 06/01/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 188610b1f6eef0835bf20f7b86e99647df699539
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 70cda7e45f17bb1dbeeaa69178e0538296572ae7
+ms.sourcegitcommit: b652ff2f0f7edbb5bd2f8fdeac56348e4d84f8fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464218"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98112669"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句以及 JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -56,9 +58,9 @@ SELECT 语句通常需要使用 FROM 子句。 当没有列出表列以及列出
 
 本文还讨论了可以在 FROM 子句中使用的以下关键字：
 
-- JOIN
+- [JOIN](../../relational-databases/performance/joins.md)
 - APPLY
-- PIVOT
+- [PIVOT](from-using-pivot-and-unpivot.md)
 
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -199,20 +201,14 @@ FROM { <table_source> [ ,...n ] }
  WITH (\<table_hint> )  
  指定查询优化器对此表和此语句使用优化或锁定策略。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
- rowset_function  
-
+rowset_function  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
-
-  
- 指定其中一个行集函数（如 OPENROWSET），该函数返回可用于替代表引用的对象。 有关行集函数的列表的详细信息，请参阅[行集函数 (Transact-SQL)](../functions/opendatasource-transact-sql.md)。  
+指定其中一个行集函数（如 OPENROWSET），该函数返回可用于替代表引用的对象。 有关行集函数的列表的详细信息，请参阅[行集函数 (Transact-SQL)](../functions/opendatasource-transact-sql.md)。  
   
  使用 OPENROWSET 和 OPENQUERY 函数指定远程对象依赖于访问该对象的 OLE DB 访问接口的性能。  
   
  bulk_column_alias  
-
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
-
-  
  代替结果集内列名的可选别名。 只允许在使用 OPENROWSET 函数和 BULK 选项的 SELECT 语句中使用列别名。 使用 bulk_column_alias 时，为每个表列指定别名，顺序与这些列在文件中的顺序相同。  
   
 > [!NOTE]  
@@ -221,12 +217,9 @@ FROM { <table_source> [ ,...n ] }
  user_defined_function  
  指定表值函数。  
   
- OPENXML \<openxml_clause>  
-
+OPENXML \<openxml_clause>  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
-
-  
- 通过 XML 文档提供行集视图。 有关详细信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。  
+通过 XML 文档提供行集视图。 有关详细信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。  
   
  derived_table  
  从数据库中检索行的子查询。 derived_table 用作外部查询的输入。  
@@ -236,17 +229,12 @@ FROM { <table_source> [ ,...n ] }
  column_alias  
  代替派生表的结果集内列名的可选别名。 在选择列表中的每个列包括一个列别名，并将整个列别名列表用圆括号括起来。  
   
- table_or_view_name FOR SYSTEM_TIME \<system_time>  
-
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
-
-  
- 指定从指定时态表及其链接的系统版本控制的历史记录表返回特定版本的数据  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]（及更高版本）和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+指定从指定时态表及其链接的系统版本控制的历史记录表返回特定版本的数据  
   
 ### <a name="tablesample-clause"></a>Tablesample 子句
-**适用于：** SQL Server、SQL 数据库 
- 
- 指定返回来自表的数据样本。 该样本可以是近似的。 此子句可对 SELECT 或 UPDATE 语句中的任何主表或联接表使用。 不能对视图指定 TABLESAMPLE。  
+**适用于：** SQL Server、SQL 数据库 - 指定返回来自表的数据样本。 该样本可以是近似的。 此子句可对 SELECT 或 UPDATE 语句中的任何主表或联接表使用。 不能对视图指定 TABLESAMPLE。  
   
 > [!NOTE]  
 >  对升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据库使用 TABLESAMPLE 时，数据库的兼容级别必须设置为 110 或更高，在递归公用表表达式 (CTE) 查询中不允许 PIVOT。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
@@ -381,35 +369,24 @@ ON (p.ProductID = v.ProductID);
  UNPIVOT \<unpivot_clause>  
  指定输入表从 column_list 中的多个列缩减为名为 pivot_column 的单个列 。 有关 PIVOT 和 UNPIVOT 的详细信息，请参阅[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
- AS OF \<date_time>  
-
+AS OF \<date_time>  
 **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
-
+返回一个表，其中为包含过去指定时间点的实际（当前）值的每个行提供一条记录。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果以返回在 \<date_time> 参数指定的时间点有效的行中的值。 如果 system_start_time_column_name 值小于或等于 \<date_time> 参数值，并且 system_end_time_column_name 值大于 \<date_time> 参数值，则此行的值视为有效   。   
   
- 返回一个表，其中为包含过去指定时间点的实际（当前）值的每个行提供一条记录。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果以返回在 \<date_time> 参数指定的时间点有效的行中的值。 如果 system_start_time_column_name 值小于或等于 \<date_time> 参数值，并且 system_end_time_column_name 值大于 \<date_time> 参数值，则此行的值视为有效   。   
+从 \<start_date_time> 至 \<end_date_time>
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]（及更高版本）和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+返回一个表，其中包含在指定的时间范围内保持活动状态的所有记录版本的值，不管这些版本是在 FROM 自变量的 \<start_date_time> 参数之前开始活动，还是在 TO 自变量的 \<end_date_time> 参数值之后停止活动 。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果，以返回在指定时间范围内任意时间保持活动状态的所有行版本的值。 正好在 FROM 终结点定义的下限时间激活的行将包括在内，正好在 TO 终结点定义的上限时间激活的行将被排除。  
   
- FROM \<start_date_time> TO \<end_date_time>
-
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
-
-  
- 返回一个表，其中包含在指定的时间范围内保持活动状态的所有记录版本的值，不管这些版本是在 FROM 自变量的 \<start_date_time> 参数之前开始活动，还是在 TO 自变量的 \<end_date_time> 参数值之后停止活动 。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果，以返回在指定时间范围内任意时间保持活动状态的所有行版本的值。 正好在 FROM 终结点定义的下限时间激活的行将包括在内，正好在 TO 终结点定义的上限时间激活的行将被排除。  
-  
- BETWEEN \<start_date_time> AND \<end_date_time>  
-
+BETWEEN \<start_date_time> AND \<end_date_time>  
 **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+与上面的 FROM \<start_date_time> TO \<end_date_time> 描述相同，不过，它包括 \<end_date_time> 终结点定义的上限时间激活的行。  
   
- 与上面的 FROM \<start_date_time> TO \<end_date_time> 描述相同，不过，它包括 \<end_date_time> 终结点定义的上限时间激活的行。  
-  
- CONTAINED IN (\<start_date_time> , \<end_date_time>)  
-
+CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
-
+返回一个表，其中包含在 CONTAINED IN 参数的两个日期时间值定义的时间范围内打开和关闭的所有记录版本的值。 正好在下限时间激活的记录，或者在上限时间停止活动的行将包括在内。  
   
- 返回一个表，其中包含在 CONTAINED IN 参数的两个日期时间值定义的时间范围内打开和关闭的所有记录版本的值。 正好在下限时间激活的记录，或者在上限时间停止活动的行将包括在内。  
-  
- ALL  
- 返回具有当前表和历史记录表中所有行中的值的表。  
+ALL  
+返回具有当前表和历史记录表中所有行中的值的表。  
   
 ## <a name="remarks"></a>备注  
  FROM 子句支持用于联接表和派生表的 SQL-92-SQL 语法。 SQL-92 语法提供 INNER、LEFT OUTER、RIGHT OUTER、FULL OUTER 和 CROSS 联接运算符。  
@@ -635,8 +612,7 @@ GO
 ### <a name="m-using-for-system_time"></a>M. 使用 FOR SYSTEM_TIME  
   
 **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
-  
- 下面的示例使用 FOR SYSTEM_TIME AS OF date_time_literal_or_variable 参数返回自 2014 年 1 月 1 日起的活跃（最新）表行。  
+下面的示例使用 FOR SYSTEM_TIME AS OF date_time_literal_or_variable 参数返回自 2014 年 1 月 1 日起的活跃（最新）表行。  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -648,7 +624,7 @@ FOR SYSTEM_TIME AS OF '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- 下面的示例使用 FOR SYSTEM_TIME FROM date_time_literal_or_variable TO date_time_literal_or_variable 参数返回定义期限（从 2013 年 1 月 1 日开始，到 2014 年 1 月 1 日截止，不包括上限时间）内的所有活跃行。  
+下面的示例使用 FOR SYSTEM_TIME FROM date_time_literal_or_variable TO date_time_literal_or_variable 参数返回定义期限（从 2013 年 1 月 1 日开始，到 2014 年 1 月 1 日截止，不包括上限时间）内的所有活跃行。  
   
 ```sql
 SELECT DepartmentNumber,   

@@ -27,14 +27,14 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ea6018e34db8ddc07a1e30cec6089994e402b9e6
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 36b22f01bbc9bd089cf6f651d8f97d2d2d2b3d32
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96124032"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093464"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -160,9 +160,11 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  如果将分区函数 `myRangePF4` 更改为添加一个分区，则文件组 `test5fg` 将接收到新创建的分区。  
 
-### <a name="e-creating-a-partition-scheme-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. 仅在 PRIMARY 上创建分区方案 - [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 仅支持 PRIMARY
+### <a name="e-creating-a-partition-scheme-only-on-primary"></a>E. 仅在 PRIMARY 上创建分区方案
 
- 以下示例创建一个分区函数，将表或索引分为四个分区。 然后创建一个分区方案，指定在 PRIMARY 文件组中创建所有分区。  
+ Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中不支持添加文件和文件组，但支持通过仅跨 PRIMARY 文件组进行分区来进行表分区。 
+
+以下示例创建一个分区函数，将表或索引分为四个分区。 然后创建一个分区方案，指定在 PRIMARY 文件组中创建所有分区。  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF1 (INT)  

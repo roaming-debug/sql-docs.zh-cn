@@ -83,14 +83,14 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 07/26/2019
+ms.date: 01/07/2020
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 6d815a88b9ac185871ed12b8192f6a5a7741f23a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f3d0be0d607a8f6a810e9d1f24fbbbff1dc11a69
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440238"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005363"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -832,7 +832,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 
 ##  <a name="feature-parameters"></a><a name="Feature"></a> 功能参数  
- 若要安装特定功能，请使用 /FEATURES 参数并指定下表中的父功能或功能值： 有关 SQL Server 各版本支持的功能列表，请参阅 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 的版本和支持的功能。 
+ 若要安装特定功能，请使用 /FEATURES 参数并指定下表中的父功能或功能值： 有关 SQL Server 各版本支持的功能的列表，请参阅 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 各个版本及其支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)、[[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 各个版本及其支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)或 [[!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 各个版本及其支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。
   
 |父功能参数|功能参数|说明|  
 |:---|:---|:---|  
@@ -845,9 +845,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||PolyBaseCore | 从 SQL Server 2019 开始，与 **PolyBase** 配对以安装 Polybase 技术，该技术支持使用标准 T-SQL 语句实现跨 Oracle、Teradata、SQL Server 以及其他关系和非关系数据的真正集成查询。 |
 || PolyBaseJava | 从 SQL Server 2019 开始，与 **PolyBase** 配对以安装 PolyBase Java 连接器，该连接器支持使用标准 T-SQL 语句实现对 HDFS 数据的真正集成查询。
 ||AdvancedAnalytics |安装 [SQL Server 机器学习服务](../../machine-learning/install/sql-machine-learning-services-windows-install.md)或 [SQL Server 2016 R Services（数据库内）](../../machine-learning/install/sql-r-services-windows-install.md)。|  
-||SQL_INST_MR |适用于 [SQL Server 机器学习服务](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。 与 AdvancedAnalytics 配对以安装 R Open 和专有 R 包。|  
-||SQL_INST_MPY|适用于 [SQL Server 机器学习服务](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。 与 AdvancedAnalytics 配对以安装 Anaconda 和专有 Python 包。|  
-||SQL_INST_JAVA |适用于 [SQL Server 机器学习服务](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。 与 **AdvancedAnalytics** 配对以安装扩展，这些扩展支持使用标准 T-SQL 语句实现与 Java 的集成。|  
+||SQL_INST_MR |适用于 [SQL Server 机器学习服务](../../machine-learning/install/sql-machine-learning-services-windows-install.md)2017 版或更高版本）和 [SQL Server 2016 R Services（数据库内）](../../machine-learning/install/sql-r-services-windows-install.md)。 与 AdvancedAnalytics 配对以安装 R Open 和专有 R 包。|  
+||SQL_INST_MPY|适用于 [SQL Server 机器学习服务](../../machine-learning/install/sql-machine-learning-services-windows-install.md)（2017 版或更高版本）。 与 AdvancedAnalytics 配对以安装 Anaconda 和专有 Python 包。|  
+||SQL_INST_JAVA |适用于 [SQL Server Java 语言扩展](../../language-extensions/install/windows-java.md)（2019 版及更高版本）。 与 **AdvancedAnalytics** 配对以安装扩展，这些扩展支持使用标准 T-SQL 语句实现与 Java 的集成。|  
 |AS||安装所有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件。|  
 |RS||安装所有的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。 从 SQL Server 2017 开始已删除。 |  
 |RS_SHP||安装用于 SharePoint 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。 从 SQL Server 2017 开始已删除。|  

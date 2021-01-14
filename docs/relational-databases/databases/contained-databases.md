@@ -17,12 +17,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc6e5734edbf7203f98d1b7fc7a685e699aaa635
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bbad843d482945a29cb03fde9545b1c19fb354f9
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481428"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098387"
 ---
 # <a name="contained-databases"></a>包含的数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -128,15 +128,13 @@ ms.locfileid: "97481428"
 ##  <a name="limitations"></a><a name="Limitations"></a> 限制  
  部分包含数据库不允许以下功能。  
   
--   部分包含数据库不能使用复制、更改数据捕获或更改跟踪。  
+-   复制、变更数据捕获或更改跟踪。  
   
 -   编号过程  
   
 -   绑定到架构的对象，且依赖于可更改排序规则的内置功能  
   
--   绑定因排序规则更改而导致的变化，包括对对象、列、符号或类型的引用。  
-  
--   复制、变更数据捕获和更改跟踪。  
+-   绑定因排序规则更改而导致的变化，包括对对象、列、符号或类型的引用。
   
 > [!WARNING]  
 >  目前允许临时存储过程。 因为临时存储过程违反包含，所以，预计在将来的包含数据库版本中将不再支持临时存储过程。  

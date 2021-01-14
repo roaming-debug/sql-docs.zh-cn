@@ -15,18 +15,18 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 3481a3d5252752e1cf952375d1c35c1c4b9939f1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a8a0e3db546f4a74e1ec9bcc3c6312d8ca848777
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438826"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975460"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>向 SQL Server 的实例添加功能（安装程序）
 
 [!INCLUDE [ SQL Server - Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-本文提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加功能的分步过程。 某些 SQL Server 组件或服务特定于 SQL Server 的实例。 它们也称为识别实例的组件或服务。 它们与托管它们的实例共享相同的版本，并且专用于该实例。 你可以向 SQL Server 实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关 SQL Server 各版本支持的功能列表，请参阅 [SQL Server 2017 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。
+本文提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加功能的分步过程。 某些 SQL Server 组件或服务特定于 SQL Server 的实例。 它们也称为识别实例的组件或服务。 它们与托管它们的实例共享相同的版本，并且专用于该实例。 你可以向 SQL Server 实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关 SQL Server 各版本支持的功能的列表，请参阅 [SQL Server 2017 各个版本及其支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)或 [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)。
 
 若要从命令提示符向 SQL Server 实例添加功能，请参阅[从命令提示符安装 SQL Server](./install-sql-server-from-the-command-prompt.md)。
 
@@ -58,7 +58,7 @@ ms.locfileid: "97438826"
 
 7. 在“安装类型”页上，选择“向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的现有实例中添加功能”选项，然后选择要更新的实例。
 
-8. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。 每个组件都只能在给定的 SQL Server 实例上安装一次。 若要安装多个组件，则必须安装其他的 SQL Server 实例。
+8. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 2017 各个版本及其支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)和 [SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)。 每个组件都只能在给定的 SQL Server 实例上安装一次。 若要安装多个组件，则必须安装其他的 SQL Server 实例。
 
     在右侧窗格中显示所选功能的必备组件。 SQL Server 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。
 

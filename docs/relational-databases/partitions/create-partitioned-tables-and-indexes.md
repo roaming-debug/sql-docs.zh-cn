@@ -2,7 +2,7 @@
 description: 创建已分区表和已分区索引
 title: 创建已分区表和已分区索引 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 1/5/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 791c2fa9d0ea4aad3c59f0edbafb2a28a2585d25
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 387a2f88afd22004f7146384ce29ddc2ba2f2da7
+ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464848"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952045"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>创建已分区表和已分区索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,6 +50,9 @@ ms.locfileid: "97464848"
 3.  创建一个将已分区表或已分区索引的分区映射到新文件组的分区方案。  
   
 4.  创建或修改表或索引，并指定分区方案作为存储位置。  
+ 
+> [!NOTE]
+> Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中仅支持主文件组。  
   
  **本主题内容**  
   
@@ -96,7 +99,7 @@ ms.locfileid: "97464848"
 3.  在 **“行”** 下单击 **“添加”**。 在新行中，输入文件组名称。  
   
     > [!WARNING]  
-    >  当创建分区时，除了为边界值指定的文件组数外，还必须始终具有一个额外的文件组。  
+    >  如果指定多个文件组，则在创建分区时，除了为边界值指定的文件组数外，还必须始终具有一个额外的文件组。  
   
 4.  继续添加行，直到您创建了已分区表的所有文件组。  
   
@@ -138,7 +141,7 @@ ms.locfileid: "97464848"
   
      完成此页后，单击 **“下一步”** 。  
   
-6.  在 **“映射分区”** 页的 **“范围”** 下，选择 **“左边界”** 或 **“右边界”** 以指定在创建的每个文件组内是包括最高边界值还是最低边界值。 当创建分区时，除了为边界值指定的文件组数外，还必须始终输入一个额外的文件组。  
+6.  在 **“映射分区”** 页的 **“范围”** 下，选择 **“左边界”** 或 **“右边界”** 以指定在创建的每个文件组内是包括最高边界值还是最低边界值。 如果指定多个文件组，则在创建分区时，除了为边界值指定的文件组数外，还必须始终输入一个额外的文件组。  
   
      在 **“选择文件组并指定边界值”** 网格的 **“文件组”** 下，选择要对数据进行分区的文件组。 在 **“边界”** 下，输入每个文件组的边界值。 如果边界值为左侧空，则分区函数使用分区函数名称将整个表或索引映射到单个分区。  
   
@@ -345,6 +348,34 @@ ms.locfileid: "97464848"
         ON myRangePS1 (col1) ;  
     GO  
     ```  
+
+
+#### <a name="to-create-a-partitioned-table-in-azure-sqldbesa"></a>若要在 Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中创建已分区表
+
+Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中不支持添加文件和文件组，但支持通过仅跨 PRIMARY 文件组进行分区来进行表分区。
+  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+  
+1.  在标准菜单栏上，单击 **“新建查询”** 。  
+  
+1.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例会创建一个分区功能和一个分区方案。 将创建一个新表，该表具有指定为存储位置的分区方案。 
+
+    ```
+    -- Creates a partition function called myRangePF1 that will partition a table into four partitions  
+    CREATE PARTITION FUNCTION myRangePF1 (int)  
+        AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
+    GO  
+    -- Creates a partition scheme called myRangePS1 that applies myRangePF1 to the PRIMARY filegroup 
+    CREATE PARTITION SCHEME myRangePS1  
+        AS PARTITION myRangePF1  
+        ALL TO ('PRIMARY') ;  
+    GO  
+    -- Creates a partitioned table called PartitionTable that uses myRangePS1 to partition col1  
+    CREATE TABLE PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
+        ON myRangePS1 (col1) ;  
+    GO
+    ```  
+
   
 #### <a name="to-determine-if-a-table-is-partitioned"></a>确定表是否分区  
   
