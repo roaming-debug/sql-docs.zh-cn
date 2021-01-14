@@ -1,6 +1,6 @@
 ---
 description: sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
-title: sys. sp_xtp_merge_checkpoint_files (Transact-sql) |Microsoft Docs
+title: sys.sp_xtp_merge_checkpoint_files (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/28/2016
 ms.prod: sql
@@ -18,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bd8cf3735ecc240a0d99929fc0ef1c40d931887
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 16cf2326ad9b732d2d01f75a14ccb9026111803f
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541041"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98167959"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-  **sys. sp_xtp_merge_checkpoint_files** 合并指定事务范围内的所有数据和差异文件。  
+  **sys.sp_xtp_merge_checkpoint_files** 合并指定事务范围内的所有数据和差异文件。  
   
- 有关详细信息，请参阅 [创建和管理内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
+ 有关详细信息，请参阅 [创建和管理 Memory-Optimized 对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ||  
 |-|  
-|**注意**：此存储过程在中已弃用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。 此方法不再需要，因此无法使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。|  
+|**注意**：此存储过程在中已弃用 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 。 此方法不再需要，因此无法使用 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 。|  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,10 +51,10 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  数据库的名称，将对该数据库调用合并。 如果数据库没有内存中表，则此过程将返回用户错误。 如果数据库处于离线状态，则它恢复错误。  
   
  *lower_bound_Tid*  
-  (bigint) 数据文件的事务的下限，如 [sys. dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) 与合并的开始检查点文件相对应。 对于无效的 transactonId 值将生成错误。  
+  (bigint) 数据文件的事务的下限，如 [sys.dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) 对应于合并的开始检查点文件中所示。 对于无效的 transactonId 值将生成错误。  
   
  *upper_bound_Tid*  
-  (bigint) 数据文件的事务的上限，如 [dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)中所示。 对于无效的 transactonId 值将生成错误。  
+  (bigint) 数据文件的事务的上限，如 [sys.dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)中所示。 对于无效的 transactonId 值将生成错误。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  

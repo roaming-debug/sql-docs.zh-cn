@@ -21,12 +21,12 @@ ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08cd6d78f4da2d0f5dc68ad43db29bc0542411e9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2fa75ed45028187c4855aaf80f25f9a30c6000c7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092881"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171449"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,10 +42,10 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 与更新的版本有很大差异，在 [SQL Server 2014](#bkmk_2014)的主题中对此进行了深入讨论。**
   
-## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本  
- 下表对中的列进行了说明 `sys.dm_db_xtp_checkpoint_stats` ，从开始 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
+## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本  
+ 下表对中的列进行了说明 `sys.dm_db_xtp_checkpoint_stats` ，从开始 **[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]** 。  
   
-|列名称|类型|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|控制器观察到的最后一个 LSN。|  
 |end_of_log_lsn|**数值 (38)**|日志结尾的 LSN。|  
@@ -87,7 +87,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  下表对中的列 `sys.dm_db_xtp_checkpoint_stats` 进行了说明 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
   
-|列名称|类型|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|该线程的当前日志序列号 (LSN) 和日志结尾之间的日志字节数。|  
 |total_log_blocks_processed|**bigint**|自服务器启动以来处理的日志块总数。|  

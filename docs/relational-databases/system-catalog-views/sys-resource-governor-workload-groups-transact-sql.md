@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 83d699e2da5e1de1e25a2618171924843c569188
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 70718b01e07cc883a030107e461e4390ca4e7cac
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101745"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169635"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98101745"
 |max_dop|**int**|工作负荷组的最大并行度。 默认值为 0，表示使用全局设置。 不可为 null。<br /><br /> **Node：** 此设置将替代查询选项 **maxdop**。|  
 |group_max_requests|**int**|并发请求的最大数目。 默认值为 0，指定没有限制。 不可为 null。|  
 |pool_id|**int**|此工作负荷组使用的资源池的 ID。|  
-|external_pool_id|**int**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 此工作负荷组使用的外部资源池的 ID。|  
+|external_pool_id|**int**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。<br /><br /> 此工作负荷组使用的外部资源池的 ID。|  
   
 ## <a name="remarks"></a>备注  
  目录视图显示存储的元数据。 若要查看内存中的配置，请使用对应的动态管理视图， [sys.dm_resource_governor_workload_groups &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)。  

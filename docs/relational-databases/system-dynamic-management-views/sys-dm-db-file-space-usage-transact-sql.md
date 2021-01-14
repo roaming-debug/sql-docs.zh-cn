@@ -21,12 +21,12 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bca14dfbb84763a15791aa4bdefc8b857df9e87e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 93bbb10cd8274b79aca1b40217f15b1ea19f65f4
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095158"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172129"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "98095158"
 |user_object_reserved_page_count|**bigint**|从统一区为数据库中的用户对象分配的总页数。 计数中包括已分配区中未使用的页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 您可以使用 [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) 目录视图中的 total_pages 列来返回用户对象中每个分配单元的保留页计数。 但请注意，total_pages 列包括 IAM 页。|  
 |internal_object_reserved_page_count|**bigint**|从统一区为文件中的内部对象分配的总页数。 计数中包括已分配区中未使用的页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 不存在可返回每个内部对象的页计数的目录视图或动态管理对象。|  
 |mixed_extent_page_count|**bigint**|文件的已分配混合区中的已分配和未分配总页数。 混合区包含分配给不同对象的页。 此计数包含文件中的所有 IAM 页。|
-|modified_extent_page_count|**bigint**|**适用对象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。<br /><br />自上次完整数据库备份以来，在文件分配的范围内修改的总页数。 修改后的页计数可用于跟踪自上次完整备份以来数据库的差异变化量，以确定是否需要进行差异备份。|
+|modified_extent_page_count|**bigint**|**适用对象**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和更高版本。<br /><br />自上次完整数据库备份以来，在文件分配的范围内修改的总页数。 修改后的页计数可用于跟踪自上次完整备份以来数据库的差异变化量，以确定是否需要进行差异备份。|
 |pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
 |distribution_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 与分布关联的唯一数字 id。|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "98095158"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|目标|Relationship|  
+|From|功能|Relationship|  
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id、file_id|sys.dm_io_virtual_file_stats.database_id、file_id|一对一|  
   

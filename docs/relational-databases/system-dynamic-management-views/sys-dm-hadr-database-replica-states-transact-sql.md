@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 18642535521a50c7beb005c0ae8181f04ac3c6d5
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8287eab936b7f95cc0cbaba78d4d7a90e403c42c
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097573"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171159"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "98097573"
 |**last_commit_lsn**|**数值 (25，0)**|与事务日志中的最后提交的记录相对应的实际日志序列号。<br /><br /> 主数据库上，这对应于上次处理的提交记录。 辅助数据库的行显示辅助副本已发送到主副本的日志序列号。<br /><br /> 在辅助副本上，这是已重做的最后一个提交记录。|  
 |**last_commit_time**|**datetime**|与最后一个提交记录对应的时间。<br /><br /> 在辅助数据库上，此时间与主数据库上的时间相同。<br /><br /> 在主副本上，每个辅助数据库行都显示承载该辅助数据库的辅助副本报告回主副本的时间。 主数据库行与给定的辅助数据库行之间的时间差值约为恢复点目标 (RPO) ，前提是该重做过程被发现并且辅助副本已将进度报告回主副本。|  
 |**low_water_mark_for_ghosts**|**bigint**|针对数据库的单调递增的数字，指示主数据库上虚影清除使用的低水印。 如果这个数字没有随着时间的推移而增加，则意味着虚影清除可能未发生。 为了确定要清除的虚影行，主副本会在所有可用性副本（包括主副本）上将该列的最小值用于此数据库。|  
-|**secondary_lag_seconds**|**bigint**|在同步期间，辅助副本在主副本后的秒数。<br /><br />适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
+|**secondary_lag_seconds**|**bigint**|在同步期间，辅助副本在主副本后的秒数。<br /><br />适用于：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
   
 ##  <a name="understanding-the-lsn-column-values"></a><a name="LSNcolumns"></a> 了解 LSN 列值  
  **End_of_log_lsn**、 **last_hardened_lsn**、 **last_received_lsn**、 **last_sent_lsn**、 **recovery_lsn** 和 **truncation_lsn** 列的值并不是 (lsn) 的实际日志序列号。 上述各值反映了用零填充的日志块 ID。  

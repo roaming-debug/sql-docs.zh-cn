@@ -21,12 +21,12 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02ab47e249eed0d82a2d373685b34c11584dcfe0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 240737da03fa21d1076251062d99f64b46aecad8
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099920"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168150"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "98099920"
 返回当前数据库中 (表或索引视图) 的指定数据库对象的统计信息直方图 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 类似于 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
 
 > [!NOTE] 
-> 从 SP1 CU2 开始，可以使用这一 DMF [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)]
+> 从 SP1 CU2 开始，可以使用这一 DMF [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]
 
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名称|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|要返回统计信息对象属性的对象（表或索引视图）的 ID。|  
 |stats_id |**int**|统计信息对象的 ID。 在表或索引视图中是唯一的。 有关详细信息，请参阅 [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|  

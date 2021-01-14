@@ -18,12 +18,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57a595a2bcb78d86c3a770db6b584974c229a0df
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9c01a9e02576d666c39df13dc6e7e01f6d622a7d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483649"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169869"
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -99,7 +99,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供在查询存储中监视性能和解决问题所需的所有必要的视图和过程。
 
-在中 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] ，可以使用查询存储系统视图查找计划选择回归。 从开始 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ，将 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 检测并显示潜在的计划选择回归和建议的操作，这些操作应在 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV 中应用。 DMV 显示了有关问题的信息、问题的重要性，以及详细信息，如标识的查询、回归计划的 ID、用作比较基线的计划的 ID 以及 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可以执行以修复问题的语句。
+在中 [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] ，可以使用查询存储系统视图查找计划选择回归。 从开始 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ，将 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 检测并显示潜在的计划选择回归和建议的操作，这些操作应在 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV 中应用。 DMV 显示了有关问题的信息、问题的重要性，以及详细信息，如标识的查询、回归计划的 ID、用作比较基线的计划的 ID 以及 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可以执行以修复问题的语句。
 
 | type | description | datetime | score | 详细信息 | ... |
 | --- | --- | --- | --- | --- | --- |

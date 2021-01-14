@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 542db6b144471e2942bb160f1b91d7e2628ace69
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5324370d1635914fbf6436e97cfaaee7d062329b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097882"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171659"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "98097882"
 |**is_nonsql_subscriber**|**bit**|服务器为非 SQL Server 复制订阅服务器。|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|如果是 1，则调用远程存储过程将启动分布式事务，并用 MS DTC 登记该事务。 有关详细信息，请参阅 [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)的数据。|  
 |modify_date|**datetime**|上次更改服务器信息的日期。|  
-|**is_rda_server**|**bit**|**适用于：** 从开始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />服务器为远程数据存档 (启用 stretch) 启用。 有关详细信息，请参阅在 [服务器上启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。|
+|**is_rda_server**|**bit**|**适用于：** 从开始 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 。<br /><br />服务器为远程数据存档 (启用 stretch) 启用。 有关详细信息，请参阅在 [服务器上启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。|
   
 ## <a name="permissions"></a>权限  
  **Provider_string** 中的值始终为 NULL，除非调用方具有 ALTER ANY 链接服务器权限。  

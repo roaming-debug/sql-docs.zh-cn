@@ -21,12 +21,12 @@ ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf45b9d2c8293b0a7788b8f8690bf24886433681
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e73ce211ddc5dfd0ee78835e60402b1e166f370a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091614"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172289"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "98091614"
   
 -   视图 (V)  
   
-|列名称|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|此列所属对象的 ID。|  
 |name|**sysname**|列的名称。 在对象中是唯一的。|  
@@ -74,13 +74,13 @@ ms.locfileid: "98091614"
 |rule_object_id|**int**|使用 sys.sp_bindrule 绑定到列的独立规则的 ID。<br /><br /> 0 = 无独立规则。 有关列级检查约束，请参阅 [&#40;transact-sql&#41;sys.check_constraints ](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)。|  
 |is_sparse|**bit**|1 = 列为稀疏列。 有关详细信息，请参阅 [使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。|  
 |is_column_set|**bit**|1 = 列为列集。 有关详细信息，请参阅 [使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。|  
-|generated_always_type|**tinyint**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 标识生成列值 (对于系统表中的列，将始终为 0) ：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 有关详细信息，请参阅 [&#40;关系数据库&#41;的临时表 ](../../relational-databases/tables/temporal-tables.md)。|  
-|generated_always_type_desc|**nvarchar(60)**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 值的文本说明 `generated_always_type` (始终 NOT_APPLICABLE 系统表中的列)  <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
-|encryption_type|**int**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密类型：<br /><br /> 1 = 确定性加密<br /><br /> 2 = 随机加密|  
-|encryption_type_desc|**nvarchar (64)**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密类型说明：<br /><br /> 随机化<br /><br /> DETERMINISTIC|  
-|encryption_algorithm_name|**sysname**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密算法的名称。<br /><br /> 仅支持 AEAD_AES_256_CBC_HMAC_SHA_512。|  
-|column_encryption_key_id|**int**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> CEK 的 ID。|  
-|column_encryption_key_database_name|**sysname**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]。<br /><br /> 列加密密钥与列的数据库不同时存在的数据库的名称。 如果该键存在于与列相同的数据库中，则为 NULL。|  
+|generated_always_type|**tinyint**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 标识生成列值 (对于系统表中的列，将始终为 0) ：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 有关详细信息，请参阅 [&#40;关系数据库&#41;的临时表 ](../../relational-databases/tables/temporal-tables.md)。|  
+|generated_always_type_desc|**nvarchar(60)**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 值的文本说明 `generated_always_type` (始终 NOT_APPLICABLE 系统表中的列)  <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|encryption_type|**int**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密类型：<br /><br /> 1 = 确定性加密<br /><br /> 2 = 随机加密|  
+|encryption_type_desc|**nvarchar (64)**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密类型说明：<br /><br /> 随机化<br /><br /> DETERMINISTIC|  
+|encryption_algorithm_name|**sysname**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密算法的名称。<br /><br /> 仅支持 AEAD_AES_256_CBC_HMAC_SHA_512。|  
+|column_encryption_key_id|**int**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> CEK 的 ID。|  
+|column_encryption_key_database_name|**sysname**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本、[!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]。<br /><br /> 列加密密钥与列的数据库不同时存在的数据库的名称。 如果该键存在于与列相同的数据库中，则为 NULL。|  
 |is_hidden|**bit**|**适用于**：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指示是否隐藏列：<br /><br /> 0 = 常规、非隐藏、可见列<br /><br /> 1 = 隐藏列|  
 |is_masked|**bit**|**适用于**：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指示是否由动态数据掩码屏蔽列：<br /><br /> 0 = 常规、非掩码列<br /><br /> 1 = 列被屏蔽|  
 

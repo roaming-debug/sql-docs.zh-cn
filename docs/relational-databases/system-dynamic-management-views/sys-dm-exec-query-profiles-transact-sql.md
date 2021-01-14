@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80c59436a83795f4111dfae2997b8678b94e617e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 461898cf3bf9e694e8d8272608861fdbfa0aff79
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096589"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170249"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "98096589"
 |segment_read_count|**int**|迄今为止的段预读数。|  
 |segment_skip_count|**int**|迄今为止跳过的段数。| 
 |actual_read_row_count|**bigint**|应用驻留谓词之前由运算符读取的行数。| 
-|estimated_read_row_count|**bigint**|**适用于：** 从 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 开始。 <br/>在应用残留谓词之前估计要由运算符读取的行数。|  
+|estimated_read_row_count|**bigint**|**适用于：** 从 [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1 开始。 <br/>在应用残留谓词之前估计要由运算符读取的行数。|  
   
 ## <a name="general-remarks"></a>一般备注  
  如果查询计划节点没有任何 i/o，则所有与 i/o 相关的计数器都将设置为 NULL。  
@@ -84,7 +84,7 @@ ms.locfileid: "98096589"
   
 -   如果存在并行扫描，则此 DMV 将报告处理扫描的每个并行线程的计数器。
  
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始， *标准查询执行统计信息分析基础结构* 与 *轻型查询执行统计分析基础结构* 并存。 `SET STATISTICS XML ON` 和 `SET STATISTICS PROFILE ON` 始终使用 *标准查询执行统计分析基础结构*。 `sys.dm_exec_query_profiles`若要填充，必须启用查询分析基础结构之一。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。    
+从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 开始， *标准查询执行统计信息分析基础结构* 与 *轻型查询执行统计分析基础结构* 并存。 `SET STATISTICS XML ON` 和 `SET STATISTICS PROFILE ON` 始终使用 *标准查询执行统计分析基础结构*。 `sys.dm_exec_query_profiles`若要填充，必须启用查询分析基础结构之一。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。    
 
 >[!NOTE]
 > 正在调查的查询必须在启用了查询分析基础结构 **后** 开始，在查询开始后启用它将不会在中生成结果 `sys.dm_exec_query_profiles` 。 有关如何启用查询分析基础结构的详细信息，请参阅 [查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。

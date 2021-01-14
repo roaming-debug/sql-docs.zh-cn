@@ -21,12 +21,12 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf190b2c0a973db9e2955cd928e1b716d847d26b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 43fb4dff1730aa0d8e19d411838f76b965fbca01
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467018"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171989"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97467018"
 |-----------------|---------------|-----------------|  
 |name|**sysname**|主体名称，在数据库中唯一。|  
 |principal_id|**int**|主体 ID，在数据库中唯一。|  
-|**type**|**char(1)**|主体类型：<br /><br /> A = 应用程序角色<br /><br /> C = 映射到证书的用户<br /><br /> E = 来自 Azure Active Directory 的外部用户<br /><br /> G = Windows 组<br /><br /> K = 映射到非对称密钥的用户<br /><br /> R = 数据库角色<br /><br /> S = SQL 用户<br /><br /> U = Windows 用户<br /><br /> X = Azure Active Directory 组或应用程序中的外部组|  
+|type|**char(1)**|主体类型：<br /><br /> A = 应用程序角色<br /><br /> C = 映射到证书的用户<br /><br /> E = 来自 Azure Active Directory 的外部用户<br /><br /> G = Windows 组<br /><br /> K = 映射到非对称密钥的用户<br /><br /> R = 数据库角色<br /><br /> S = SQL 用户<br /><br /> U = Windows 用户<br /><br /> X = Azure Active Directory 组或应用程序中的外部组|  
 |**type_desc**|**nvarchar(60)**|主体类型的说明。<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|SQL 名称未指定架构时要使用的名称。 对于非 S、U 或 A 类型的主体，为 Null。|  
 |create_date|**datetime**|主体的创建时间。|  
@@ -49,7 +49,7 @@ ms.locfileid: "97467018"
 |**authentication_type_desc**|**nvarchar(60)**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 身份验证类型说明。 下面是可能的值及其说明。<br /><br /> 无：无身份验证<br />实例：实例身份验证<br />数据库：数据库身份验证<br />WINDOWS： Windows 身份验证<br />外部： Azure Active Directory 身份验证|  
 |**default_language_name**|**sysname**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指示此主体的默认语言。|  
 |**default_language_lcid**|**int**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指示此主体的默认 LCID。|  
-|**allow_encrypted_value_modifications**|**bit**|**适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 取消在大容量复制操作期间对服务器进行加密元数据检查。 这样，用户便可以使用 Always Encrypted、在表或数据库之间对数据进行大容量复制，而无需解密数据。 默认为 OFF。 |      
+|**allow_encrypted_value_modifications**|**bit**|**适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 及更高版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 取消在大容量复制操作期间对服务器进行加密元数据检查。 这样，用户便可以使用 Always Encrypted、在表或数据库之间对数据进行大容量复制，而无需解密数据。 默认为 OFF。 |      
   
 ## <a name="remarks"></a>备注  
  *PasswordLastSetTime* 属性可用于 SQL Server 的所有受支持的配置，但其他属性仅在 SQL Server 在 Windows Server 2003 或更高版本上运行并且启用了 CHECK_POLICY 和 CHECK_EXPIRATION 时才可用。 有关详细信息，请参阅 [密码策略](../../relational-databases/security/password-policy.md) 。

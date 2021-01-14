@@ -12,18 +12,18 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: eda1a559e9936deae31a5511dacd695e8ec6f24e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: b67ff423ecfe90090c734f370e2d1df0c9958605
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195031"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172439"
 ---
 # <a name="tracing-master-data-services"></a>跟踪 (Master Data Services)
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Web.config 文件包含跟踪部分，如下所示。 此部分是 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
+  Web.config 文件包含跟踪部分，如下所示。 此部分是 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
 ```  
 <sources>  
@@ -67,7 +67,7 @@ ms.locfileid: "92195031"
     |CorrelationID|每个请求都分配有一个相关 ID。 此请求触发的所有跟踪都使用同一个相关 ID。<br /><br /> 当 UI 出错时，错误消息中会显示相关 ID。|  
     |操作|请求操作名称。 如果是 Web UI 请求，则操作名称为 URL。 如果是 API 请求，则操作名称为服务名称。|  
     |Level|此跟踪条目的级别。|  
-    |Message|跟踪的消息正文|  
+    |消息|跟踪的消息正文|  
   
 ## <a name="external-resources"></a>外部资源  
  msdn.com 上的博文 [Troubleshooting Logging Improvement（日志记录故障排除改进）](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)。  

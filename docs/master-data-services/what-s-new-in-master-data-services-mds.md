@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1aa72c49e5862621da193d4e4a400813c7cd0d91
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 7e731d14967d808aa57f3fa0e001e5e593238ffd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480566"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170429"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 中的新增功能
 
@@ -30,7 +30,7 @@ ms.locfileid: "89480566"
   
  **下载**  
   
--   若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 。  
+-   若要下载 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 。  
   
 -   已经拥有 Azure 帐户？  然后转到 **[此处](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** 启动装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "89480566"
   
  在此版本的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，我们通过引入以下新权限来提供等级更高的权限：“读取”、“创建”、“更新”和“删除”。 例如，只拥有“更新”权限的用户现在无需创建或删除数据，即可更新主数据。 当你向用户分配“创建”、“更新”或“删除”权限时，系统会自动为该用户分配“读取”权限。 你还可以组合“读取”、“创建”、“更新”和“删除”权限。  
   
- 升级到 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，旧权限将转换为下表中所示的新权限。  
+ 升级到 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，旧权限将转换为下表中所示的新权限。  
   
 |以前版本中的权限|新权限|  
 |------------------------------------|--------------------|  
@@ -113,7 +113,7 @@ ms.locfileid: "89480566"
   
 ## <a name="improved-troubleshooting"></a>提高了故障排除方便性  
   
- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中增加了更多的功能来改进调试，并使问题排查更简便。 有关详细信息，请参阅[跟踪 (Master Data Services)](../master-data-services/tracing-master-data-services.md)。  
+ [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中增加了更多的功能来改进调试，并使问题排查更简便。 有关详细信息，请参阅[跟踪 (Master Data Services)](../master-data-services/tracing-master-data-services.md)。  
   
 ## <a name="improved-manageability"></a>提高了可管理性  
   
@@ -198,7 +198,7 @@ ms.locfileid: "89480566"
   
  **成员修订历史记录**  
   
- 当成员发生变化时，系统都会记录成员修订历史记录。 你可以回滚修订历史记录，以及查看和批注修订。 使用“日志保留天数”属性可以指定历史数据的保留期限。 **** 有关详细信息，请参阅[成员修订历史记录 (Master Data Services)](../master-data-services/member-revision-history-master-data-services.md)。  
+ 当成员发生变化时，系统都会记录成员修订历史记录。 你可以回滚修订历史记录，以及查看和批注修订。 使用“日志保留天数”属性可以指定历史数据的保留期限。  有关详细信息，请参阅[成员修订历史记录 (Master Data Services)](../master-data-services/member-revision-history-master-data-services.md)。  
   
  **合并冲突**  
   
@@ -220,7 +220,7 @@ ms.locfileid: "89480566"
   
  **在 Excel 的 MDS 外接程序中保存或打开查询文件**  
   
- 在“实体资源管理器”页中，你可以单击“Excel”来保存快捷查询文件。 **** 或者，你可以在 Excel 的 MDS 外接程序中打开存储在计算机上的查询文件。 可以使用 QueryOpener 应用程序打开保存的文件。 有关详细信息，请参阅[快捷查询文件（Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
+ 在“实体资源管理器”页中，你可以单击“Excel”来保存快捷查询文件。  或者，你可以在 Excel 的 MDS 外接程序中打开存储在计算机上的查询文件。 可以使用 QueryOpener 应用程序打开保存的文件。 有关详细信息，请参阅[快捷查询文件（Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
   
  查询文件包含资源管理器页中的筛选器和层次结构信息。  
    

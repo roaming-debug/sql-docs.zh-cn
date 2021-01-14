@@ -21,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1c9ac32f202766e118f7e44d3cf7c0d7fafdb6a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a1ad13d4cdbcf8820a318a87f4ef9f52c488a406
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482798"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171259"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -39,8 +39,8 @@ ms.locfileid: "97482798"
 |session_id|**smallint**|与此请求相关的会话的 ID。 不可为 null。|  
 |request_id|**int**|请求的 ID。 在会话的上下文中是唯一的。 不可为 null。|  
 |start_time|**datetime**|请求到达时的时间戳。 不可为 null。|  
-|status|**nvarchar(30)**|请求的状态。 可以是以下位置之一：<br /><br /> 背景<br />正在运行<br />可运行<br />Sleeping<br />已挂起<br /><br /> 不可为 null。|  
-|command|**nvarchar(32)**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
+|status|**nvarchar(30)**|请求的状态。 可以是以下位置之一：<br /><br /> 背景<br />运行<br />可运行<br />Sleeping<br />已挂起<br /><br /> 不可为 null。|  
+|命令|**nvarchar(32)**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
 |sql_handle|**varbinary(64)**|是唯一标识查询所属的批处理或存储过程的标记。 可以为 Null。| 
 |statement_start_offset|**int**|指示当前正在执行的批处理或持久化对象当前正在执行的语句的开始位置（以字节为单位），从0开始。 可以与 `sql_handle` 、 `statement_end_offset` 和 `sys.dm_exec_sql_text` 动态管理函数一起使用，以检索请求的当前正在执行的语句。 可以为 Null。|  
 |statement_end_offset|**int**|指示当前正在执行的批处理或持久化对象当前正在执行的语句的结束位置（以字节为单位，从0开始）。 可以与 `sql_handle` 、 `statement_start_offset` 和 `sys.dm_exec_sql_text` 动态管理函数一起使用，以检索请求的当前正在执行的语句。 可以为 Null。|  
@@ -91,9 +91,9 @@ ms.locfileid: "97482798"
 |query_plan_hash|**二进制 (8)**|对查询执行计划计算的二进制哈希值，用于标识类似的查询执行计划。 可以使用查询计划哈希查找具有类似执行计划的查询的累积成本。|  
 |statement_sql_handle|**varbinary(64)**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 单个查询的 SQL 句柄。<br /><br />如果没有为数据库启用查询存储，则此列为 NULL。 |  
 |statement_context_id|**bigint**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 要 sys.query_context_settings 的可选外键。<br /><br />如果没有为数据库启用查询存储，则此列为 NULL。 |  
-|dop |**int** |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 查询的并行度。 |  
-|parallel_worker_count |**int** |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 如果这是并行查询，则为保留的并行工作线程数。  |  
-|external_script_request_id |**uniqueidentifier** |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 与当前请求关联的外部脚本请求 ID。 |  
+|dop |**int** |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。<br /><br /> 查询的并行度。 |  
+|parallel_worker_count |**int** |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。<br /><br /> 如果这是并行查询，则为保留的并行工作线程数。  |  
+|external_script_request_id |**uniqueidentifier** |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。<br /><br /> 与当前请求关联的外部脚本请求 ID。 |  
 |is_resumable |**bit** |**适用于**：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 及更高版本。<br /><br /> 指示请求是否为可恢复索引操作。 |  
 |page_resource |**二进制 (8)** |适用于：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果列包含页，则为页资源的8字节的十六进制表示形式 `wait_resource` 。 有关详细信息，请参阅 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
 |page_server_reads|**bigint**|**适用** 于： Azure SQL 数据库超大规模<br /><br /> 此请求执行的页服务器读取次数。 不可为 null。|  

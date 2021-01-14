@@ -21,12 +21,12 @@ ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0b3fc39ead58c75422ac5cdf69311d909d3cf59
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 35787c46218b327eacc33dc40f652a04786bb156
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099912"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168083"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名称|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|要返回统计信息对象属性的对象（表或索引视图）的 ID。|  
 |stats_id|**int**|统计信息对象的 ID。 在表或索引视图中是唯一的。 有关详细信息，请参阅 [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|  
@@ -57,8 +57,8 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|用于统计信息计算的抽样总行数。|  
 |steps|**int**|直方图中的梯级数。 有关详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。|  
 |unfiltered_rows|**bigint**|应用筛选表达式（用于筛选的统计信息）之前表中的总行数。 如果未筛选统计信息，则 unfiltered_rows 等于行列中返回的值。|  
-|modification_counter|**bigint**|自上次更新统计信息以来前导统计信息列（构建直方图的列）的总修改次数。<br /><br /> 内存优化表：开始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 此列中包含：自上次更新统计信息或重新启动数据库后，对表进行的修改总数。|  
-|persisted_sample_percent|**float**|持久样本百分比用于未显式指定采样百分比的统计信息更新。 如果值为零，则不为此统计信息设置持久样本百分比。<br /><br /> **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|modification_counter|**bigint**|自上次更新统计信息以来前导统计信息列（构建直方图的列）的总修改次数。<br /><br /> 内存优化表：开始 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 此列中包含：自上次更新统计信息或重新启动数据库后，对表进行的修改总数。|  
+|persisted_sample_percent|**float**|持久样本百分比用于未显式指定采样百分比的统计信息更新。 如果值为零，则不为此统计信息设置持久样本百分比。<br /><br /> **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> 注释  
  **sys.dm_db_stats_properties** 在以下任何条件下返回空行集：  

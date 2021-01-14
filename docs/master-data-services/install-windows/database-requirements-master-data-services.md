@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f3e21ddbcf4d3599548a827e169f2c0d63f114e8
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 21224e52ae9109f5404fc6a6ee11ad59e525995b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194419"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171169"
 ---
 # <a name="database-requirements-master-data-services"></a>数据库要求 (Master Data Services)
 
@@ -36,9 +36,9 @@ ms.locfileid: "92194419"
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库可以承载在以下版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上：  
   
  
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Enterprise（64 位）x64  
+-   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Enterprise（64 位）x64  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Developer（64 位）x64  
+-   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Developer（64 位）x64  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence（64 位）x64  
   
@@ -65,7 +65,7 @@ ms.locfileid: "92194419"
   
 |类型|说明|  
 |----------|-----------------|  
-|用户帐户|在 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]中，可以使用 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以承载 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。 用户帐户必须属于 **** 实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 有关 **sysadmin** 角色的详细信息，请参阅 [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)。|  
+|用户帐户|在 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]中，可以使用 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以承载 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。 用户帐户必须属于  实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 有关 **sysadmin** 角色的详细信息，请参阅 [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)。|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 管理员帐户|创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库时，必须指定要作为 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 系统管理员的域用户帐户。 对于与此数据库关联的所有 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序，此用户可以更新所有模型以及所有功能区域中的所有数据。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)。|  
   
 ### <a name="database-backup"></a>数据库备份  

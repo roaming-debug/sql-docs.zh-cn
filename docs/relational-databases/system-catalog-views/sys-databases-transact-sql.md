@@ -21,12 +21,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5794b2720340fac295720ac2a4ab05a7906a9226
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d17f07aa99165f71e5e88b3033fcf12793a6f86c
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093157"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171189"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -43,7 +43,7 @@ ms.locfileid: "98093157"
 |**source_database_id**|**int**|Non-NULL = 该数据库快照的源数据库 ID。<br /> NULL = 非数据库快照。|  
 |**owner_sid**|**varbinary(85)**|注册到服务器的数据库外部所有者的 SID（安全标识符）。 有关谁可以拥有数据库的信息，请参阅 [ALTER authorization](../../t-sql/statements/alter-authorization-transact-sql.md)中的 **alter authorization for** database 部分。|  
 |create_date|**datetime**|数据库的创建或重命名日期。 对于 **tempdb**，每次服务器重启时，此值都会发生更改。|  
-|**compatibility_level**|**tinyint**|对应于兼容行为的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的整数：<br /><br /><table border="0"><tr><td>**值**</td><td>**适用于**</td></tr><tr><td>70</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]</td></tr><tr><td>80</td><td>[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 周一至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]</td></tr><tr><td>90</td><td>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 周一至 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]</td></tr><tr><td>100</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>110</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>120</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>130</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>140</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>150</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr></table>|  
+|**compatibility_level**|**tinyint**|对应于兼容行为的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的整数：<br /><br /><table border="0"><tr><td>**值**</td><td>**适用于**</td></tr><tr><td>70</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]</td></tr><tr><td>80</td><td>[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 周一至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]</td></tr><tr><td>90</td><td>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 周一至 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]</td></tr><tr><td>100</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>110</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>120</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>130</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>140</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>150</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr></table>|  
 |**collation_name**|**sysname**|数据库的排序规则。 作为数据库中的默认排序规则。<br /> NULL = 数据库不处于联机状态，或者 AUTO_CLOSE 设置为 ON 且数据库已关闭。|  
 |**user_access**|**tinyint**|用户访问设置：<br /> 0 = 已指定 MULTI_USER<br /> 1 = 已指定 SINGLE_USER<br /> 2 = 已指定 RESTRICTED_USER|  
 |**user_access_desc**|**nvarchar(60)**|用户访问设置的说明。|  
@@ -82,7 +82,7 @@ ms.locfileid: "98093157"
 |**is_db_chaining_on**|**bit**|1 = 跨数据库所有权链接为 ON<br /> 0 = 跨数据库所有权链接为 OFF|  
 |**is_parameterization_forced**|**bit**|1 = 参数化为 FORCED<br /> 0 = 参数化为 SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = 数据库具有加密的主密钥<br /> 0 = 数据库没有加密的主密钥|  
-|**is_query_store_on**|**bit**|1 = 为此数据库启用查询存储。 选中 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 查看查询存储状态。<br /> 0 = 未启用查询存储<br /> 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）  。|  
+|**is_query_store_on**|**bit**|1 = 为此数据库启用查询存储。 选中 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 查看查询存储状态。<br /> 0 = 未启用查询存储<br /> 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）  。|  
 |is_published|**bit**|1 = 数据库为事务复制拓扑或快照复制拓扑中的发布数据库<br /> 0 = 不是发布数据库|  
 |**is_subscribed**|**bit**|未使用此列。 它将始终返回 0，而与数据库的订阅服务器状态无关。|  
 |**is_merge_published**|**bit**|1 = 数据库为合并复制拓扑中的发布数据库<br /> 0 = 不是合并复制拓扑中的发布数据库|  
@@ -113,8 +113,8 @@ ms.locfileid: "98093157"
 |**delayed_durability_desc**|**nvarchar(60)**|延迟持续性设置：<br /> DISABLED<br /> ALLOWED<br /> FORCED<br /> 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |**is_memory_optimized_elevate_to_snapshot_on**|**bit**|在会话设置 TRANSACTION ISOLATION LEVEL 设置为较低的隔离级别、READ COMMITTED 或 READ UNCOMMITTED 时，使用 SNAPSHOT 隔离访问内存优化表。<br /> 1 = 最低隔离级别为 SNAPSHOT。<br /> 0 = 隔离级别未进行提升。|  
 |**is_federation_member**|**bit**|指示该数据库是否为联合的成员。<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_remote_data_archive_enabled**|**bit**|指示是否延伸数据库。<br /> 0 = 数据库未启用延伸。<br /> 1 = 数据库已启用延伸。<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]<br /> 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
-|**is_mixed_page_allocation_on**|**bit**|指示数据库中的表和索引是否可以从混合区分配初始页。<br /> 0 = 数据库中的表和索引始终从统一区分配初始页面。<br /> 1 = 数据库中的表和索引可以分配混合区中的初始页面。<br /> 有关详细信息，请参阅 `SET MIXED_PAGE_ALLOCATION` [ALTER DATABASE SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)的选项。<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|  
+|**is_remote_data_archive_enabled**|**bit**|指示是否延伸数据库。<br /> 0 = 数据库未启用延伸。<br /> 1 = 数据库已启用延伸。<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]<br /> 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
+|**is_mixed_page_allocation_on**|**bit**|指示数据库中的表和索引是否可以从混合区分配初始页。<br /> 0 = 数据库中的表和索引始终从统一区分配初始页面。<br /> 1 = 数据库中的表和索引可以分配混合区中的初始页面。<br /> 有关详细信息，请参阅 `SET MIXED_PAGE_ALLOCATION` [ALTER DATABASE SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)的选项。<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从) 开始 ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|  
 |**is_temporal_history_retention_enabled**|**bit**|指示是否启用时态保留策略清理任务。<br /><br />1 = 启用时态保留<br />0 = 禁用时态保留<br />适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|目录排序规则设置：<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|目录排序规则设置：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|

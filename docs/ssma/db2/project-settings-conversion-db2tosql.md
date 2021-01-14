@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 165287fd2d699c56dc635d85fd58a1b081a497a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f39965e87911f7fef8d50c0b0888d552a451a90
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427029"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172649"
 ---
 # <a name="project-settings-conversion-db2tosql"></a> (转换的项目设置)  (DB2ToSQL) 
 " **项目设置** " 对话框的 "转换" 页包含用于自定义 SSMA 将 DB2 语法转换为语法的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -37,7 +37,7 @@ ms.locfileid: "88427029"
   
 **完整模式：** 不  
   
-## <a name="miscellaneous-options"></a>其他选项  
+## <a name="miscellaneous-options"></a>“杂项”选项  
   
 ### <a name="cast-rownum-expressions-as-integers"></a>将 ROWNUM 表达式强制转换为整数  
 当 SSMA 转换 ROWNUM 表达式时，它会将该表达式转换为 TOP 子句，后跟表达式。 以下示例显示了 DB2 DELETE 语句中的 ROWNUM：  
@@ -71,7 +71,7 @@ TOP 要求 TOP 子句表达式的计算结果为一个整数。 如果整数为�
   
 1.  **数据库架构：** 在此模式下，DB2 架构 "sch1" 默认映射到 SQL Server 数据库 "sch1" 中 SQL Server 架构的 "dbo"。  
   
-2.  架构**到架构：** 在此模式下，DB2 架构 "sch1" 默认映射到 "sch1" SQL Server "连接" 对话框中提供的默认 SQL Server 数据库中的 ""。  
+2.  架构 **到架构：** 在此模式下，DB2 架构 "sch1" 默认映射到 "sch1" SQL Server "连接" 对话框中提供的默认 SQL Server 数据库中的 ""。  
   
 在 " **模式** " 框中选择转换模式时，SSMA 将应用以下设置：  
   
@@ -145,7 +145,7 @@ SSMA 可以将对包装函数的调用转换为对过程的调用。 这会创�
   
 -   如果选择 " **始终**"，则 SSMA 会尝试将包装函数调用转换为过程调用。 如果当前上下文不允许此转换，则生成错误消息。 这样就不会在生成的代码中留下任何函数调用。  
   
--   如果尽可能选择，SSMA 仅在函数具有输出参数 **时**才会移动到过程调用。 如果无法移动，则会删除参数的 output 属性。 在所有其他情况下，SSMA 将保留函数调用。  
+-   如果尽可能选择，SSMA 仅在函数具有输出参数 **时** 才会移动到过程调用。 如果无法移动，则会删除参数的 output 属性。 在所有其他情况下，SSMA 将保留函数调用。  
   
 -   如果选择 " **从不**"，则 SSMA 会将所有函数调用作为函数调用。 有时，由于性能方面的原因，此选择可能无法接受。  
   
@@ -259,7 +259,7 @@ SSMA 可以将 DB2 TO_CHAR (日期、格式) 转换为 sysdb 数据库中的过�
   
 -   如果选择 " **使用 TO_CHAR_DATE 函数**"，SSMA 会将 TO_CHAR (日期、格式) 转换为使用英语转换的 TO_CHAR_DATE 函数。  
   
--   如果选择 " **使用 TO_CHAR_DATE_LS 函数" (NLS 服务) **，则 SSMA 会将 TO_CHAR (DATE，格式) 转换为使用会话语言进行转换 TO_CHAR_DATE_LS 函数  
+-   如果选择 " **使用 TO_CHAR_DATE_LS 函数" (NLS 服务)**，则 SSMA 会将 TO_CHAR (DATE，格式) 转换为使用会话语言进行转换 TO_CHAR_DATE_LS 函数  
   
 在 " **模式** " 框中选择转换模式时，SSMA 将应用以下设置：  
   
@@ -330,7 +330,7 @@ SSMA 可以通过检查是否有 NULL 值来模拟 DB2 顺序。 然后，它首
   
 -   如果选择 " **否**"，则不会将 ROWID 列添加到表中。  
   
--   对于包含触发器的表，为包含触发器的表添加**rowid 列**。  
+-   对于包含触发器的表，为包含触发器的表添加 **rowid 列**。  
   
 > [!WARNING]  
 > SQL Server 2005 的情况下为默认设置，SQL Server 2008，SQL Server 2012 和2014为 **包含触发器的表添加 ROWID 列**。  
@@ -472,7 +472,7 @@ SSMA 还提供了一个用于将 DB2 序列转换为 SSMA 序列模拟器的选�
 最后，还可以将分配给表中的列的序列转换为 SQL Server 标识值。 必须在 "DB2 **表** " 选项卡上指定序列与标识列之间的映射  
   
 ### <a name="convert-currval-outside-triggers"></a>在触发器外转换 CURRVAL  
-仅当转换序列生成器设置为 **使用列标识**时可见。 由于 DB2 序列是与表分离的对象，因此许多使用序列的表都使用触发器来生成和插入新的序列值。 SSMA 注释掉这些语句，或在注释掉会生成错误时将其标记为错误。  
+仅当转换序列生成器设置为 **使用列标识** 时可见。 由于 DB2 序列是与表分离的对象，因此许多使用序列的表都使用触发器来生成和插入新的序列值。 SSMA 注释掉这些语句，或在注释掉会生成错误时将其标记为错误。  
   
 -   如果选择 **"是"**，SSMA 将在转换后的序列 CURRVAL 上将所有引用标记为外部触发器，并发出警告。  
   

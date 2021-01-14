@@ -21,12 +21,12 @@ ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4cbcefbe3249a06e0f49fff5f0abe43010e9a54
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4409ba73ba7231f674ac60f3ed63b06b6c454fa7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101477"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170639"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "98101477"
 一个名为 SQLOS 的内部组件可创建模拟硬件处理器位置的节点结构。 可以通过使用 [软件 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) 来更改这些结构，以创建自定义节点布局。  
 
 > [!NOTE]
-> 从开始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将自动对某些硬件配置使用软件 NUMA。 有关详细信息，请参阅 [自动软件 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)。
+> 从开始 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] ， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将自动对某些硬件配置使用软件 NUMA。 有关详细信息，请参阅 [自动软件 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)。
   
 下表提供了有关这些节点的信息。  
   

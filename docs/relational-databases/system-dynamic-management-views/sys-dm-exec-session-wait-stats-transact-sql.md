@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 7555332848e338fe73e0add1a1fb4e9a3097256e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d0c91c8af4b0264c6cb418e858e18e0c252eda15
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098927"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171419"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys.dm_exec_session_wait_stats (Transact-sql) 
 
@@ -30,7 +30,7 @@ ms.locfileid: "98098927"
 
   返回有关对每个会话执行的线程所遇到的所有等待的信息。 您可以使用此视图诊断会话的性能问题 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以及特定查询和批处理。  此视图返回的会话与 [sys.dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 聚合的信息相同，但也提供 **session_id** 号。  
   
-**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。  
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

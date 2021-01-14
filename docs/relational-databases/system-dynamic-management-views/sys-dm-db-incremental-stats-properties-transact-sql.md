@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: b11acf31ca9f20aaf70acbe530106e58ca787439
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 27585efd99f537e6b2f6d3082c341533e8bbea3b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094126"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172089"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   返回当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中指定数据库对象（表）的增量统计信息属性。 使用 `sys.dm_db_incremental_stats_properties` （包含分区号）类似于 `sys.dm_db_stats_properties` （用于非增量统计信息）。 
   
-  此函数是在 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] Service pack 2 和 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] service pack 1 中引入的。
+  此函数是在 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] Service pack 2 和 [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] service pack 1 中引入的。
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名称|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|要返回统计信息对象属性的对象（表）的 ID。|  
 |stats_id|**int**|统计信息对象的 ID。 在表中是唯一的。 有关详细信息，请参阅 [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|

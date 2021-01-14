@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c03d436a85e174e1af17e47c8dc27d3ad2d6976
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fbf4875ec03cc961e696ae5f39bd0e29abccb4e9
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541882"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168304"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  **120** = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+ **130** = [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -64,7 +64,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="result-sets"></a>结果集  
  如果未指定参数，或未指定 *name* 参数， **sp_dbcmptlevel** 将返回错误。  
   
- 如果未指定 *名称* ， *则*将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 返回一条消息，显示指定数据库的当前兼容级别。  
+ 如果未指定 *名称* ， *则* 将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 返回一条消息，显示指定数据库的当前兼容级别。  
   
 ## <a name="remarks"></a>备注  
  有关兼容性级别的说明，请参阅 [ALTER DATABASE 兼容级别 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  

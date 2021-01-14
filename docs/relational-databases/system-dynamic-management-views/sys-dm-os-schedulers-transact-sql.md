@@ -21,12 +21,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6ac7202b637b6760d88756aef60a722f99f5b7b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6a2d8ed3f8eb3aa5a89ee7176863165a2a0a0b74
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099809"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171719"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,9 +62,9 @@ ms.locfileid: "98099809"
 |memory_object_address|**varbinary(8)**|计划程序内存对象的内存地址。 不可为 NULL。|  
 |task_memory_object_address|**varbinary(8)**|任务内存对象的内存地址。 不可为 null。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.dm_os_memory_objects ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]公开 SQLOS 使用的计划程序量程。|  
-| total_cpu_usage_ms |**bigint**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本 <br><br> 由非抢先式辅助角色报告的计划程序消耗的 CPU 总量。 不可为 null。|
+| total_cpu_usage_ms |**bigint**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本 <br><br> 由非抢先式辅助角色报告的计划程序消耗的 CPU 总量。 不可为 null。|
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 指示基于 [服务级别目标](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)的限制对于非 Azure 版本的，将始终为 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以为 Null。|
-|total_scheduler_delay_ms|**bigint**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本 <br><br> 一个工作线程切换到另一个工作线程之间切换的时间。 这可能是由于抢先式辅助角色延迟了下一个非抢先式辅助角色的计划，或是由于 OS 计划线程来自其他进程。 不可为 null。|
+|total_scheduler_delay_ms|**bigint**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本 <br><br> 一个工作线程切换到另一个工作线程之间切换的时间。 这可能是由于抢先式辅助角色延迟了下一个非抢先式辅助角色的计划，或是由于 OS 计划线程来自其他进程。 不可为 null。|
 |ideal_workers_limit|**int**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本 <br><br> 在计划程序上，理想情况下应该有多少辅助角色。 如果当前工作线程超出了不均衡任务加载的限制，则在这些工作人员处于空闲状态时，将会对其进行修剪。 不可为 null。|
 |pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   

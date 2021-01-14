@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4ce500e9a149844ee6516aac82975e0bbe1b6e7c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c4e27058097feb472f936696d225e5be978bb597
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097759"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172159"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "98097759"
 |**last_commit_lsn**|**numeric(25,0)**|与事务日志中的最后提交的记录相对应的实际日志序列号。<br /><br /> 主数据库上，这对应于上次处理的提交记录。 辅助数据库的行显示辅助副本已发送到主副本的日志序列号。<br /><br /> 在辅助副本上，这是已重做的最后一个提交记录。|  
 |**last_commit_time**|**datetime**|与最后一个提交记录对应的时间。<br /><br /> 在辅助数据库上，此时间与主数据库上的时间相同。<br /><br /> 在主副本上，每个辅助数据库行都显示承载该辅助数据库的辅助副本报告回主副本的时间。 主数据库行与给定的辅助数据库行之间的时间差值约为恢复点目标 (RPO) ，前提是该重做过程被发现并且辅助副本已将进度报告回主副本。|  
 |**low_water_mark_for_ghosts**|**bigint**|针对数据库的单调递增的数字，指示主数据库上虚影清除使用的低水印。 如果这个数字没有随着时间的推移而增加，则意味着虚影清除可能未发生。 为了确定要清除的虚影行，主副本会在所有可用性副本（包括主副本）上将该列的最小值用于此数据库。|  
-|**secondary_lag_seconds**|**bigint**|在同步期间，辅助副本在主副本后的秒数。<br /><br />适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
+|**secondary_lag_seconds**|**bigint**|在同步期间，辅助副本在主副本后的秒数。<br /><br />适用于：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
 |**quorum_commit_lsn**|**numeric(25,0)**|标识为仅供参考。 不支持。 不保证以后的兼容性。|
 |**quorum_commit_time**|**datetime**|标识为仅供参考。 不支持。 不保证以后的兼容性。|
 
