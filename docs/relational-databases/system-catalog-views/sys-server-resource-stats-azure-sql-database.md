@@ -19,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 142269f7c3cd8a5a1e764e2e48cf41f83490bd76
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8a913c3bf4f01828fcf75df1e3c69dca9149e2de
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464598"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241818"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>Azure SQL Database (sys.server_resource_stats) 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -59,22 +59,21 @@ ms.locfileid: "97464598"
 ## <a name="permissions"></a>权限  
  此视图可用于具有连接到 **master** 数据库的权限的所有用户角色。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **Sys.server_resource_stats** 返回的数据表示为使用的字节数或兆字节数 (中所述的总大小，) 除了 avg_cpu，这表示为运行的服务层/性能级别所允许的最大限制的百分比。  
  
 ## <a name="examples"></a>示例  
- 以下示例返回与上周相比平均参与至少 80% 的计算使用率的所有数据库。  
+下面的示例返回过去7天内的平均 CPU 使用率。  
   
 ```sql  
 DECLARE @s datetime;  
 DECLARE @e datetime;  
 SET @s= DateAdd(d,-7,GetUTCDate());  
 SET @e= GETUTCDATE();  
-SELECT resource_name, AVG(avg_cpu_percent) AS Average_Compute_Utilization   
+SELECT AVG(avg_cpu_percent) AS Average_Compute_Utilization   
 FROM sys.server_resource_stats   
 WHERE start_time BETWEEN @s AND @e  
-GROUP BY resource_name  
-HAVING AVG(avg_cpu_percent) >= 80  
+GO;
 ```  
     
 ## <a name="see-also"></a>另请参阅  
