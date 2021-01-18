@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: fcd184e195ce8c81e16ca4ceaaab03a1f156a812
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0c822321323eb5f74fda34df2d540b7c5c79c382
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471828"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151292"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 实用工具
 
@@ -917,13 +917,21 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
 
 - 使用集成安全性。  
 
-- 在自动化环境中使用 **-X** 。  
+- 在自动化环境中使用 -X[1]。
 
 - 使用适当的 NTFS 文件系统权限保护输入文件和输出文件。
 
 - 若要提高性能，请在一个 **sqlcmd** 会话中执行尽可能多的操作，而不是在一系列会话中来执行这些操作。
 
 - 将批处理或查询执行的超时值设置为大于您所预期的值。
+
+使用以下方法来帮助实现最高的正确性：
+
+- 使用 -V16 记录任何[严重性级别为 16 的消息](../relational-databases/errors-events/database-engine-error-severities.md#levels-of-severity)。  严重性级别为 16 的消息指示可由用户纠正的常规错误。
+
+- 退出进程后，请检查退出代码和 DOS ERRORLEVEL 变量。  正常情况下，sqlcmd 将返回 0，否则将按照 -V 的配置来设置 ERRORLEVEL。  换句话说，ERRORLEVEL 的值不应与 SQL Server 报告的错误号相同。 错误号是与系统函数 [@@ERROR](../t-sql/functions/error-transact-sql.md) 相对应 SQL Server 特定的值。  ERRORLEVEL 是 SQLCMD 特定的值，用于指示它（即 SQLCMD）终止的原因，并且它的值会通过指定 -b 命令行参数来影响。
+
+将使用 -V16 与检查退出代码和 DOS ERRORLEVEL 相结合，有助于捕获自动化环境（尤其是生产发布之前的质量检验关）中的错误。
 
 ## <a name="next-steps"></a>后续步骤
 

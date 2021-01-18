@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15e8b648603952226af45d485d5678f5d0d3bbd6
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 28d083e053e31c1fcce26e233ba22211e211a993
+ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548009"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125580"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>报表服务器 ExecutionLog 和 ExecutionLog3 视图
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器执行日志包含有关在一个或多个服务器上在本机模式扩展部署或 SharePoint 场中执行的报表的信息。 您可以使用报表执行日志来查明报表的请求频率、最常用的输出格式以及每个处理阶段所用的处理时间（毫秒）。 该日志包含与执行报表的数据集查询所用的时间长度和处理数据所用的时间长度有关的信息。 如果您是报表服务器管理员，则可以查看日志信息并标识长时间运行的任务，并且向报表作者就其可以改进的报表方面（数据集或处理）提出建议。  
@@ -27,7 +27,7 @@ ms.locfileid: "84548009"
 ##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> 查看日志信息  
  报表服务器执行日志将报表执行情况的有关数据记录在内部数据库表中。 表中的信息可从 SQL Server 视图获得。  
   
- 报表执行日志存储于默认名为 **ReportServer**的报表服务器数据库中。 SQL 视图提供执行日志信息。 “2”和“3”视图已在最近的版本中添加，并且包含新字段或者所包含字段的名称比以前版本更友好。 较旧的视图仍保留在产品中，这样，依赖于它们的自定义应用程序将不会受到影响。 如果您不依赖于较旧的视图，例如 ExecutionLog，则建议您使用最新视图 ExecutionLog**3**。  
+ 报表执行日志存储于默认名为 **ReportServer** 的报表服务器数据库中。 SQL 视图提供执行日志信息。 “2”和“3”视图已在最近的版本中添加，并且包含新字段或者所包含字段的名称比以前版本更友好。 较旧的视图仍保留在产品中，这样，依赖于它们的自定义应用程序将不会受到影响。 如果您不依赖于较旧的视图，例如 ExecutionLog，则建议您使用最新视图 ExecutionLog **3**。  
   
  本主题内容：  
   
@@ -328,11 +328,11 @@ select * from ExecutionLog2 order by TimeStart DESC
 |格式|呈现格式。|  
 |参数|用于执行报表的参数值。|  
 |ReportAction|可能的值：Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring|  
-|TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
-|TimeEnd||  
-|TimeDataRetrieval|检索数据、处理报表以及呈现报表所用的毫秒数。|  
-|TimeProcessing||  
-|TimeRendering||  
+|TimeStart|指示报表进程的持续时段的开始时间。|
+|TimeEnd|指示报表进程的持续时段的结束时间。|
+|TimeDataRetrieval|用于检索数据的毫秒数。|
+|TimeProcessing|用于处理报表的毫秒数。|
+|TimeRendering|用于呈现报表的毫秒数。|
 |源|报表执行源（1 = 实时，2 = 缓存，3 = 快照，4 = 历史记录）。|  
 |状态|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
 |ByteCount|所呈现的报表的大小（字节）。|  

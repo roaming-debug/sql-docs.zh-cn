@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3177050a3d7eaae65099e441792801292df11ec6
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: eea074af5270046bae6bb153cfb6fe79053335a4
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127473"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975484"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>处理多个 SQL Server 版本和实例
 
@@ -124,6 +124,7 @@ ms.locfileid: "96127473"
 * [使用安装向导安装 SQL Server（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
 * [支持的版本和版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)
 * [升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
+* [SQL Server 2019 各个版本及其支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md) 
 * [版本和 SQL Server 2017 支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)
 * [版本和 SQL Server 2016 支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)
 * [向后兼容性_已删除](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))
