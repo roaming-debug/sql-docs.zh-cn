@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e16ef746dd970926e61098eb66e8f8ddf6a98b1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ddc8c6bf630994b66ecd2977edc44bec888a0e8e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438741"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172669"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，内存优化表的行内数据大小不得长于 [8,060 字节](?viewFallbackFrom=sql-server-2014)。 但是，从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，在 Azure SQL 数据库中，现在可以创建具有多个大型列（例如，多个 varbinary(8000) 列）和 LOB 列（即 varbinary(max)、 varchar(max) 和 nvarchar(max)）的内存优化表，并使用本机编译的 T-SQL 模块和表类型对其进行操作。 
+在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 之前，内存优化表的行内数据大小不得长于 [8,060 字节](?viewFallbackFrom=sql-server-2014)。 但是，从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，在 Azure SQL 数据库中，现在可以创建具有多个大型列（例如，多个 varbinary(8000) 列）和 LOB 列（即 varbinary(max)、 varchar(max) 和 nvarchar(max)）的内存优化表，并使用本机编译的 T-SQL 模块和表类型对其进行操作。 
   
 不满足 8060 字节行大小限制的列将被放在单独的内部表的行外。 每个行外列均具有相应的内部表，而后者拥有单个非聚集索引。 有关用于行外列的内部表的详细信息，请参阅 [sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。 
  

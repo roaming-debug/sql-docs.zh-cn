@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 1c4563a10433d4cbead089da026d086f9c021ccb
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 78a84099b202ca55588e1365b27d80004d2cdaa5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126284"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172609"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -156,7 +156,7 @@ MAXDOP
          这些逻辑一致性检查可对索引对象的内部索引表及其引用的用户表进行交叉检查。 为了查找外部行，将构造内部查询来对内部表和用户表的完整交集执行查询。 运行此查询可能会对性能产生很大影响，并且无法跟踪其进度。 因此，建议您仅在以下情况下才指定 WITH EXTENDED_LOGICAL_CHECKS：怀疑存在与物理损坏无关的索引问题，或者已关闭页级校验并且怀疑存在列级硬件损坏。    
     -   如果索引为筛选索引，DBCC CHECKDB 将执行一致性检查以验证索引项是否满足筛选谓词的要求。   
       
-- 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，不再默认对持久化计算列、UDT 列和筛选索引运行其他检查，以避免昂贵的表达式计算。 此更改显著减少了针对包含这些对象的数据库的 CHECKDB 持续时间。 但是，始终会完成这些对象的物理一致性检查。 仅当指定了 EXTENDED_LOGICAL_CHECKS 选项时，才会在 EXTENDED_LOGICAL_CHECKS 选项中已包含的逻辑检查（索引视图、XML 索引和空间索引）之外，执行表达式计算。
+- 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，不再默认对持久化计算列、UDT 列和筛选索引运行其他检查，以避免昂贵的表达式计算。 此更改显著减少了针对包含这些对象的数据库的 CHECKDB 持续时间。 但是，始终会完成这些对象的物理一致性检查。 仅当指定了 EXTENDED_LOGICAL_CHECKS 选项时，才会在 EXTENDED_LOGICAL_CHECKS 选项中已包含的逻辑检查（索引视图、XML 索引和空间索引）之外，执行表达式计算。
 -  如果兼容级别为 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) 或更低，则除非指定 NOINDEX，否则 DBCC CHECKTABLE 将对单个表或索引视图及其所有非聚集索引和 XML 索引同时执行物理和逻辑一致性检查。 不支持空间索引。
     
  **了解数据库的兼容性级别**    

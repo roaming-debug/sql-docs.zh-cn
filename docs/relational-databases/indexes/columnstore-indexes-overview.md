@@ -19,17 +19,17 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ee9585dcc63aef88d88bedf597ec34439cea030
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c7b30279b49a21bbc50492b5a17224fe42d0b335
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481198"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171229"
 ---
 # <a name="columnstore-indexes-overview"></a>列存储索引：概述
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-列存储索引是存储和查询大型数据仓库事实数据表的标准。 此索引使用基于列的数据存储和查询处理，与面向行的传统存储相比，最多可实现 10 倍的数据仓库查询性能提升。 此外，与处理非压缩数据相比，处理压缩数据可将性能提升 10 倍。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 起，列存储索引支持操作分析，即能够对事务工作负载运行高性能实时分析。  
+列存储索引是存储和查询大型数据仓库事实数据表的标准。 此索引使用基于列的数据存储和查询处理，与面向行的传统存储相比，最多可实现 10 倍的数据仓库查询性能提升。 此外，与处理非压缩数据相比，处理压缩数据可将性能提升 10 倍。 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 起，列存储索引支持操作分析，即能够对事务工作负载运行高性能实时分析。  
   
 了解相关方案：  
   
@@ -109,7 +109,7 @@ ms.locfileid: "97481198"
 批处理模式执行是一种查询处理方法，用于同时处理多个行。 批模式执行与列存储存储格式紧密集成，并且围绕列存储存储格式进行了优化。 批处理模式执行有时亦称为基于矢量或矢量化执行。 对列存储索引执行的查询使用批处理模式执行，这通常可将查询性能提升 2 到 4 倍。 有关详细信息，请参阅[查询处理体系结构指南](../query-processing-architecture-guide.md#execution-modes)。 
   
 ##  <a name="why-should-i-use-a-columnstore-index"></a><a name="benefits"></a> 为何要使用列存储索引？  
-列存储索引可实现极高的数据压缩级别（通常是传统方法的 10 倍），从而明显降低数据仓库存储成本。 对于分析，列存储索引实现的性能比 btree 索引高出一个量级。 列存储索引是数据仓库和分析工作负载的首选数据存储格式。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，可以使用列存储索引对操作工作负荷执行实时分析。  
+列存储索引可实现极高的数据压缩级别（通常是传统方法的 10 倍），从而明显降低数据仓库存储成本。 对于分析，列存储索引实现的性能比 btree 索引高出一个量级。 列存储索引是数据仓库和分析工作负载的首选数据存储格式。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]开始，可以使用列存储索引对操作工作负荷执行实时分析。  
   
 列存储索引速度较快的原因：  
   
@@ -134,9 +134,9 @@ ms.locfileid: "97481198"
 对于扫描大量数据（尤其是大型表中）的分析查询，列存储索引可提高性能。 对数据仓库和分析工作负载（尤其是事实数据表）使用列存储索引，因为它们往往需要进行全表扫描，而不是表查找。  
   
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>是否可以在同一个表中组合行存储与列存储？  
-是的。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，可以对行存储表创建可更新的非聚集列存储索引。 列存储索引存储选定列的副本，所以需要为此数据留出额外空间，但选定数据可实现平均 10 倍的压缩率。 可以同时对列存储索引和行存储索引上的事务运行分析。 列存储随行存储表中的数据更改一起更新，因此这两个索引处理的是相同数据。  
+是的。 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起，可以对行存储表创建可更新的非聚集列存储索引。 列存储索引存储选定列的副本，所以需要为此数据留出额外空间，但选定数据可实现平均 10 倍的压缩率。 可以同时对列存储索引和行存储索引上的事务运行分析。 列存储随行存储表中的数据更改一起更新，因此这两个索引处理的是相同数据。  
   
-自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，可以对列存储索引创建一个或多个非聚集行存储索引，并对基础列存储执行高效表查找。 其他选项也可供使用。 例如，可以通过在行存储表中使用 UNIQUE 约束来强制主键约束。 由于非唯一值无法插入到行存储表中，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法将值插入列存储。  
+自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起，可以对列存储索引创建一个或多个非聚集行存储索引，并对基础列存储执行高效表查找。 其他选项也可供使用。 例如，可以通过在行存储表中使用 UNIQUE 约束来强制主键约束。 由于非唯一值无法插入到行存储表中，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法将值插入列存储。  
   
 ## <a name="metadata"></a>元数据  
 列存储索引中的所有列在元数据中作为包含性列存储。 列存储索引中没有任何键列。  
@@ -205,11 +205,11 @@ ms.locfileid: "97481198"
   
 |任务|参考主题|说明|  
 |----------|----------------------|-----------|  
-|将表创建为列存储。|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，你可以将表创建为聚集列存储索引。 无需先创建行存储表，再将它转换为列存储。|  
-|创建具有列存储索引的内存表。|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，你可以创建具有列存储索引的内存优化表。 也可以在创建表后使用 `ALTER TABLE ADD INDEX` 语法添加列存储索引。|  
+|将表创建为列存储。|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]开始，你可以将表创建为聚集列存储索引。 无需先创建行存储表，再将它转换为列存储。|  
+|创建具有列存储索引的内存表。|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]开始，你可以创建具有列存储索引的内存优化表。 也可以在创建表后使用 `ALTER TABLE ADD INDEX` 语法添加列存储索引。|  
 |将行存储表转换为列存储。|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|将现有堆集或二进制树转换为列存储。 示例演示了如何在执行此转换时处理现有的索引以及索引的名称。|  
 |将列存储表转换为行存储。|[创建群集索引 &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index) 或[将列存储表转换回行存储堆](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |通常不需要这样转换，但有时需要。 示例演示如何将列存储转换为堆或聚集索引。|  
-|在行存储表中创建列存储索引。|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|一个行存储表可以有一个列存储索引。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，列存储索引可以包含筛选条件。 示例演示了基本语法。|  
+|在行存储表中创建列存储索引。|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|一个行存储表可以有一个列存储索引。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]开始，列存储索引可以包含筛选条件。 示例演示了基本语法。|  
 |为操作分析创建高性能索引。|[开始使用列存储进行实时运营分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|描述了如何创建互补性列存储索引和 btree 索引，以便 OLTP 查询能够使用 btree 索引，分析查询能够使用列存储索引。|  
 |为数据仓库创建高性能列存储索引。|[用于数据仓库的列存储索引](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|介绍如何使用列存储表上的 btree 索引来创建高性能数据仓库查询。|  
 |使用 btree 索引对列存储索引强制主键约束。|[用于数据仓库的列存储索引](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|演示如何合并 btree 和列存储索引，以便对列存储索引强制主键约束。|  

@@ -8,18 +8,18 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 075a2e7ed11abe0ceadfa4f50ba82ca57ff97f0e
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: ecb634a770b4990bfbbc094b15498b03bdea4a57
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785153"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171999"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 创建和配置可用性组
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-本教程介绍如何为 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 创建和配置可用性组 (AG)。 与 Windows 上的 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] 及更早版本不同，你可以在创建或不创建基础 Pacemaker 群集的情况下启用 AG。 如果需要，稍后才会与群集进行集成。
+本教程介绍如何为 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 创建和配置可用性组 (AG)。 与 Windows 上的 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 及更早版本不同，你可以在创建或不创建基础 Pacemaker 群集的情况下启用 AG。 如果需要，稍后才会与群集进行集成。
 
 本教程包括以下任务：
  

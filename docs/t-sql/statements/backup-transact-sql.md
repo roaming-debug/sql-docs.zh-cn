@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016'
-ms.openlocfilehash: 4f0529b6b6a60c2c4997c9f9d49ad9e76efa8455
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 55b1a81a5cbb5078f331df0fb7f1f93048555337
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644422"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170559"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -250,7 +250,7 @@ TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-dat
 > [!NOTE]
 > NUL 磁盘设备将弃用发送给它的所有信息，且仅应用于测试。 这不适用于生产用途。
 > [!IMPORTANT]
-> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，备份到 URL 时只能备份到单个设备。 备份到 URL 时，若要备份到多个设备，必须使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本以及共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)。
+> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，备份到 URL 时只能备份到单个设备。 备份到 URL 时，若要备份到多个设备，必须使用 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和更高版本以及共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)。
 
 **URL 适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更高版本）。
 
@@ -288,7 +288,7 @@ MIRROR TO \<backup_device> [ ,...n ] 指定一组辅助备份设备（最多三�
 CREDENTIAL 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更高版本）。
 仅在创建到 Microsoft Azure Blob 存储服务的备份时使用。
 
-FILE_SNAPSHOT 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
+FILE_SNAPSHOT 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）。
 
 用于在使用 Azure Blob 存储服务存储所有 SQL Server 数据库文件时，创建数据库文件的 Azure 快照。 有关详细信息，请参阅 [Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照备份将数据库文件（数据和日志文件）的 Azure 快照保持为一致的状态。 一组一致的 Azure 快照构成备份并记录在备份文件中。 `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` 和 `BACKUP LOG TO URL WITH FILE_SNAPSHOT` 之间的唯一区别是后者会截断事务日志，而前者不会。 借助 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照备份，在完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立备份链时所需的初始完整备份之后，只需单个事务日志备份即可将数据库还原到事务日志备份的时间点。 此外，只需两次事务日志备份即可将数据库还原到两次事务日志备份之间的时间点。
 
@@ -696,7 +696,7 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
 
 只要操作系统支持数据库的排序规则，就可以在不同的平台之间执行备份操作，即使这些平台使用不同的处理器类型。
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，`MAXTRANSFERSIZE` 大于 65536 (64 KB) 的设置为[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 加密数据库启用优化的压缩算法，该算法先解密页面，然后将其压缩并再次对其进行加密。 如果未指定 `MAXTRANSFERSIZE` 或者使用了 `MAXTRANSFERSIZE = 65536` (64 KB)，对使用 TDE 加密的数据库执行备份压缩时会直接压缩加密的页面，且可能不会得到良好的压缩比率。 有关详细信息，请参阅[支持 TDE 的数据库的备份压缩](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases)。
+从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，`MAXTRANSFERSIZE` 大于 65536 (64 KB) 的设置为[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 加密数据库启用优化的压缩算法，该算法先解密页面，然后将其压缩并再次对其进行加密。 如果未指定 `MAXTRANSFERSIZE` 或者使用了 `MAXTRANSFERSIZE = 65536` (64 KB)，对使用 TDE 加密的数据库执行备份压缩时会直接压缩加密的页面，且可能不会得到良好的压缩比率。 有关详细信息，请参阅[支持 TDE 的数据库的备份压缩](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases)。
 
 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 开始，不再需要 `MAXTRANSFERSIZE` 设置来对 TDE 启用此优化的压缩算法。 如果备份命令指定 `WITH COMPRESSION`，或者将备份压缩默认服务器配置设置为 1，则 `MAXTRANSFERSIZE` 将自动增加到 128K 以启用优化算法。 如果备份命令指定 `MAXTRANSFERSIZE` 的值为 > 64K，则将采用提供的值。 换句话说，SQL Server 绝不会自动减小该值，只会增加它。 如果需要使用 `MAXTRANSFERSIZE = 65536` 备份 TDE 加密的数据库，则必须指定 `WITH NO_COMPRESSION`，或者确保将备份压缩默认服务器配置设置为 0。
 

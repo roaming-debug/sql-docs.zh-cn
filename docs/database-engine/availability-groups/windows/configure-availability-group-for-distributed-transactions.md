@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 93876b488d5e265bca363d213c04cb0611c185f4
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 5587622f0f61b7b7063b246d0599d46cc8c16f0c
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642173"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170779"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>为 Always On 可用性组配置分布式事务
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "97642173"
 为确保分布式事务的一致性，必须配置可用性组，使其将数据库注册为分布式事务资源管理器。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 在服务包 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]!INCLUDE[SQL2016] 版本中，不支持涉及可用性组中的数据库的跨数据库分布式事务（即，使用同一 SQL Server 实例上的数据库的事务）。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 没有此限制。 
+>[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 在服务包 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)]!INCLUDE[SQL2016] 版本中，不支持涉及可用性组中的数据库的跨数据库分布式事务（即，使用同一 SQL Server 实例上的数据库的事务）。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 没有此限制。 
 >
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 中的配置步骤相同。
+>[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 中的配置步骤相同。
 
 在分布式事务中，客户端应用程序和 Microsoft 分布式事务处理协调器（MS DTC 或 DTC）共同配合来确保多个数据源之间的事务一致性。 DTC 是在基于 Windows Server 的受支持操作系统上提供的服务。 DTC 充当分布式事务的“事务处理协调器”  。 SQL Server 实例通常充当“资源管理器”  。 当数据库位于可用性组中时，每个数据库需为其自身的资源管理器。 
 
@@ -45,7 +45,7 @@ ms.locfileid: "97642173"
 
 将可用性组配置为支持分布式事务前，必须满足以下先决条件：
 
-* 参与分布式事务的 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 的所有实例必须为 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更高版本。
+* 参与分布式事务的 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 的所有实例必须为 [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] 或更高版本。
 
 * 可用性组必须在 Windows Server 2016 或 Windows Server 2012 R2 上运行。 对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址：[https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973)。  
 
@@ -55,7 +55,7 @@ ms.locfileid: "97642173"
 
 
 
-可在 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更高版本上为分布式事务创建可用性组。 若要为分布式事务创建可用性组，请在可用性组定义中包含 `DTC_SUPPORT = PER_DB`。 以下脚本将为分布式事务创建可用性组。 
+可在 [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] 或更高版本上为分布式事务创建可用性组。 若要为分布式事务创建可用性组，请在可用性组定义中包含 `DTC_SUPPORT = PER_DB`。 以下脚本将为分布式事务创建可用性组。 
 
 ```sql
 CREATE AVAILABILITY GROUP MyAG
@@ -91,7 +91,7 @@ ALTER AVAILABILITY GROUP MyaAG
 ```
 
 >[!NOTE]
->从 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 开始，可更改分布式事务的可用性组。 对于 Service Pack 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 版本，则需要进行删除，然后使用 `DTC_SUPPORT = PER_DB` 设置重新创建可用性组。 
+>从 [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 开始，可更改分布式事务的可用性组。 对于 Service Pack 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] 版本，则需要进行删除，然后使用 `DTC_SUPPORT = PER_DB` 设置重新创建可用性组。 
 
 若要禁用分布式事务，请使用以下 Transact-SQL 命令：
 

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b8dd6ffa60bdf43b4e6d112ba26de959005f549
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: a036ba8c2b822d5663252b52beeb0ca2e526b969
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670530"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170549"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的数据库引擎功能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
-本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
+本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
 如果功能标记为已弃用，表示：
 -  该功能仅处于维护模式。 无法进行新的更改，包括与新功能的互操作性有关的更改。
@@ -45,7 +45,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```  
   
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server 的下一版本中弃用的功能
- 下一版 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将不再支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称。 **功能 ID** 值在跟踪事件中作为 ObjectId。  
+ 下一版 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将不再支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称  。 **功能 ID** 值在跟踪事件中作为 ObjectId。  
   
 |类别|不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  

@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01a80dd71397a4528c1d56882cec5934d750bb8f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c472b3996683512fb6ac7cd3f001d53ca1fd73ae
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093499"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170679"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -90,7 +90,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 
 **主要方案：**
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 开始，针对列存储索引使用非聚集索引以提高数据仓库查询性能。 有关详细信息，请参阅[列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)。
+从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 开始，针对列存储索引使用非聚集索引以提高数据仓库查询性能。 有关详细信息，请参阅[列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)。
 
 有关其他类型的索引，请参阅：
 
@@ -250,7 +250,7 @@ index_name
 column      
  索引所基于的一列或多列。 指定两个或多个列名，可为指定列的组合值创建组合索引。 在 table_or_view_name 后的括号中，按排序优先级列出组合索引中要包括的列。
 
-一个组合索引键中最多可组合 32 列。 组合索引键中的所有列必须在同一个表或视图中。 对于聚集索引，组合索引值允许的最大大小为 900 字节，对于非聚集索引则为 1,700 字节。 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前的版本，此限制为 16 列和 900 字节。
+一个组合索引键中最多可组合 32 列。 组合索引键中的所有列必须在同一个表或视图中。 对于聚集索引，组合索引值允许的最大大小为 900 字节，对于非聚集索引则为 1,700 字节。 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以前的版本，此限制为 16 列和 900 字节。
 
 无法将 ntext、text、varchar(max)、nvarchar(max)、varbinary(max)、xml 或 image 大型对象 (LOB) 数据类型的列指定为索引的键列      。 另外，即使 CREATE INDEX 语句中并未引用 ntext、text 或 image 列，视图定义中也不能包含这些列  。
 
@@ -351,7 +351,7 @@ table_or_view_name
 
 必须使用 SCHEMABINDING 定义视图，才能为视图创建索引。 必须先为视图创建唯一的聚集索引，才能为该视图创建非聚集索引。 有关索引视图的详细信息，请参阅“备注”部分。
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，该对象可以是聚集列存储索引存储的表。
+从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，该对象可以是聚集列存储索引存储的表。
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支持由三部分组成的名称格式 _database_name_.[_schema_name_]._object_name_，其中 *database_name* 为当前数据库，或 _database_name_ 为 `tempdb`，_object_name_ 以 # 开头。
 
@@ -621,7 +621,7 @@ CREATE INDEX 语句同其他查询一样优化。 为了节省 I/O 操作，查�
 对表（堆）创建聚集索引或删除和重新创建现有聚集索引时，要求数据库具有额外的可用工作区来容纳数据排序结果和原始表或现有聚集索引数据的临时副本。 有关聚集索引的详细信息，请参阅[创建聚集索引](../../relational-databases/indexes/create-clustered-indexes.md)和 [SQL Server 索引体系结构和设计指南](../../relational-databases/sql-server-index-design-guide.md)。
 
 ## <a name="nonclustered-indexes"></a>非聚集索引
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以为作为聚集列存储索引进行存储的表创建非聚集索引。 如果首先为作为堆或聚集索引进行存储的表创建非聚集索引，当后期将该表转换为聚集列存储索引时，该索引将会保留。 重新生成聚集列存储索引也不需要删除非聚集索引。
+从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以为作为聚集列存储索引进行存储的表创建非聚集索引。 如果首先为作为堆或聚集索引进行存储的表创建非聚集索引，当后期将该表转换为聚集列存储索引时，该索引将会保留。 重新生成聚集列存储索引也不需要删除非聚集索引。
 
 限制和局限：
 
@@ -682,7 +682,7 @@ CREATE INDEX 语句同其他查询一样优化。 为了节省 I/O 操作，查�
 有关 XML 索引的信息，请参阅 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md) 和 [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)。
 
 ## <a name="index-key-size"></a>索引键大小
-对于聚集索引，索引键的最大大小为 900 字节，对于非聚集索引为 1700 字节。 （对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本，此限制始终为 900 字节。）如果创建索引时，varchar 列中的现有数据未超过限制，则可以对这些列创建超过字节限制的索引；但是，以后在这些列上执行会导致总大小超过该限制的插入或更新操作时将失败。 聚集索引的索引键不能包含在 ROW_OVERFLOW_DATA 分配单元中具有现有数据的 **varcharr** 列。 如果对 **varchar** 列创建了聚集索引，并且 IN_ROW_DATA 分配单元中存在现有数据，则对该列执行的将数据推送到行外的后续插入或更新操作将会失败。
+对于聚集索引，索引键的最大大小为 900 字节，对于非聚集索引为 1700 字节。 （对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 之前的版本，此限制始终为 900 字节。）如果创建索引时，varchar 列中的现有数据未超过限制，则可以对这些列创建超过字节限制的索引；但是，以后在这些列上执行会导致总大小超过该限制的插入或更新操作时将失败。 聚集索引的索引键不能包含在 ROW_OVERFLOW_DATA 分配单元中具有现有数据的 **varcharr** 列。 如果对 **varchar** 列创建了聚集索引，并且 IN_ROW_DATA 分配单元中存在现有数据，则对该列执行的将数据推送到行外的后续插入或更新操作将会失败。
 
 非聚集索引可以在索引的叶级别包含非键列。 计算索引键大小时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]不考虑这些列。 有关详细信息，请参阅[创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)和 [SQL Server 索引体系结构和设计指南](../../relational-databases/sql-server-index-design-guide.md)。
 

@@ -14,12 +14,12 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 41b69dfc9cc5564025fd7b28d14094389ff52450
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460062"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171689"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -100,7 +100,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `AUTHORIZATION` 必须为 `GRANT`、 `REVOKE` 或 `DENY`。  
   
--   `PERMISSION` 确立允许或禁止哪个操作。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 可以指定 230 种权限。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 具有较少的权限，因为某些操作在 Azure 中不相关。 这些权限在[权限（数据库引擎）](../../../relational-databases/security/permissions-database-engine.md)主题和下面引用的图表中列出。  
+-   `PERMISSION` 确立允许或禁止哪个操作。 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] 可以指定 230 种权限。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 具有较少的权限，因为某些操作在 Azure 中不相关。 这些权限在[权限（数据库引擎）](../../../relational-databases/security/permissions-database-engine.md)主题和下面引用的图表中列出。  
   
 -   `ON SECURABLE::NAME` 是安全对象（服务器、服务器对象、数据库或数据库对象）的类型及其名称。 某些权限不需要 `ON SECURABLE::NAME` ，因为它是明确的或在上下文中不适当。 例如，`CREATE TABLE` 权限不需要 `ON SECURABLE::NAME` 子句。 （例如， `GRANT CREATE TABLE TO Mary;` 允许 Mary 创建表。）  
   
@@ -157,7 +157,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  上面列出的第一个权限 (`GRANT SELECT ON OBJECT::Region TO Ted;`) 的粒度最细，这就是说，该语句是授予 `SELECT`的可能的最少权限。 没有向它附带的从属对象授予权限。 好的主体始终会授予可能的最少权限，但（与此相反）以较高级别授权以简化授权系统。 因此，如果 Ted 需要对整个架构的权限，则只需在架构级别授予 `SELECT` 一次，而不是在表或视图级别授予 `SELECT` 多次。 数据库的设计对此策略可以有多成功的影响很大。 当数据库设计为需要相同权限的对象都包含在单个架构中时，此策略最有效。  
   
 ## <a name="list-of-permissions"></a>权限的列表  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 具有 230 个权限。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 拥有 219 个权限。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 拥有 214 个权限。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 拥有 195 个权限。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]和 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 拥有较少的权限，因为他们仅公开数据库引擎的一部分，且一些权限并不适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 
+ [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] 具有 230 个权限。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 拥有 219 个权限。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 拥有 214 个权限。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 拥有 195 个权限。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]和 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 拥有较少的权限，因为他们仅公开数据库引擎的一部分，且一些权限并不适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 
  
  [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  

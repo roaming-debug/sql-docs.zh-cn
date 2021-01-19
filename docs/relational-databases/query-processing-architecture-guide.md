@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 62ea3f9484c232112317af9f0cb7bf8d8facde2f
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 303b560a40d5c87e49a8d5d2693aa0f814d03f45
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639020"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170509"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -127,7 +127,7 @@ GO
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 有三个选项可用于显示执行计划：        
-> -  * *_[估计的执行计划](../relational-databases/performance/display-the-estimated-execution-plan.md)_* _，该计划是由查询优化器生成的已编译计划。        
+> -  **_[估计的执行计划](../relational-databases/performance/display-the-estimated-execution-plan.md)_* _，该计划是由查询优化器生成的已编译计划。        
 > -  _*_ [实际执行计划](../relational-databases/performance/display-an-actual-execution-plan.md) _*_ ，该计划与编译的计划及其执行上下文相同。 这包括在执行完成之后可用的运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。        
 > -  _*_ [实时查询统计信息](../relational-databases/performance/live-query-statistics.md) _*_ ，这与编译的计划及其执行上下文相同。 这包括执行过程中的运行时信息，每秒更新一次。 例如，运行时信息包括流经操作符的实际行数。       
 
@@ -443,7 +443,7 @@ WHERE name LIKE '%plans%';
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行计划包含下列主要组件： 
 
-- **已编译计划** （或查询计划）     
+- **已编译计划**（或查询计划）     
   由编译过程生成的查询计划主要是由任意数量的用户使用的可重入的只读数据结构。 它存储有关以下内容的信息：
   -  物理运算符，用于实现由逻辑运算符描述的操作。 
   -  这些运算符的顺序，用于确定访问、筛选和聚合数据的顺序。 
@@ -695,7 +695,7 @@ sql_handle
 * 一个经常被引用的执行计划，该计划的开销从未等于零。 除非遇到内存不足和当前开销为零的情况，否则该计划保留在计划缓存中，不会被删除。
 * 插入的一个即席执行计划，并且在内存不足情况出现之前没有再次引用该计划。 由于即席计划在初始化后当前开销为零，因此在[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]检查执行计划时，会发现当前开销为零，于是从计划缓存中删除该计划。 如果不存在内存不足的情况，当前开销为零的即席执行计划将保留在计划缓存中。
 
-若要从缓存中手动删除单个计划或所有计划，请使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。 [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) 也可用于清除任何缓存，包括计划缓存。 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，使用 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 清除范围内数据库的过程（计划）缓存。 通过 [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) 和 [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) 对某些配置设置进行的更改也会导致从计划缓存中删除计划。 可在 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks) 一文的“备注”部分中找到这些配置设置的列表。 此类配置更改将在错误日志中记录以下信息性消息：
+若要从缓存中手动删除单个计划或所有计划，请使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。 [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) 也可用于清除任何缓存，包括计划缓存。 从 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 开始，使用 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 清除范围内数据库的过程（计划）缓存。 通过 [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) 和 [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) 对某些配置设置进行的更改也会导致从计划缓存中删除计划。 可在 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks) 一文的“备注”部分中找到这些配置设置的列表。 此类配置更改将在错误日志中记录以下信息性消息：
 
 > `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
 
@@ -1098,7 +1098,7 @@ WHERE ProductID = 63;
 
 从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和数据库兼容性级别 110 开始，可以并行执行 `SELECT … INTO` 语句。 其他形式的 insert 运算符的工作方式与 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的方式相同。
 
-从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 和数据库兼容性级别 130 开始，在插入堆或聚集列存储索引 (CCI)，以及使用 TABLOCK 提示时，可以并行执行 `INSERT … SELECT` 语句。 还可以使用 TABLOCK 提示为并行启用到本地临时表（由 # 前缀标识）和全局临时表（由 ## 前缀标识）的插入。 有关详细信息，请参阅 [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)。
+从 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 和数据库兼容性级别 130 开始，在插入堆或聚集列存储索引 (CCI)，以及使用 TABLOCK 提示时，可以并行执行 `INSERT … SELECT` 语句。 还可以使用 TABLOCK 提示为并行启用到本地临时表（由 # 前缀标识）和全局临时表（由 ## 前缀标识）的插入。 有关详细信息，请参阅 [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)。
 
 并行执行计划可以填充静态和由键集驱动的游标。 然而，只有串行执行可以提供动态游标行为。 查询优化器始终为查询生成串行执行计划，这是动态游标的一部分。
 
@@ -1273,7 +1273,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种方
 
 > [!NOTE]
 > 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 之前，只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition、Developer Edition 和 Evaluation Edition 支持已分区表和已分区索引。   
-> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition 也支持已分区表和已分区索引。 
+> 从 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition 也支持已分区表和已分区索引。 
 
 ### <a name="new-partition-aware-seek-operation"></a>新增的可识别分区的查找操作
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 79e04e64a4fc89bb3e745d67b1cdbe929850b6ec
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f2295f8694a9573b0e9c541ea817e9e03e70f83e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642951"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171079"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>事务 - AlwaysOn 可用性组和数据库镜像
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "97642951"
 SQL Server 2017 支持用于可用性组中数据库的分布式事务。 包括支持相同 SQL Server 实例上的数据库或不同 SQL Server 实例上的数据库。 为数据库镜像配置的数据库不支持分布式事务。
 
 > [!NOTE]
-> [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 
+> [!INCLUDE[SQL Server 2016](../../../includes/sssql16-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 
 > 
-> 在服务包 2 之前的 [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)]!INCLUDE[SQL2016] 版本中，不支持涉及可用性组中的数据库的跨数据库分布式事务（即，使用同一 SQL Server 实例上的数据库的事务）。
+> 在服务包 2 之前的 [!INCLUDE[SQL Server 2016](../../../includes/sssql16-md.md)]!INCLUDE[SQL2016] 版本中，不支持涉及可用性组中的数据库的跨数据库分布式事务（即，使用同一 SQL Server 实例上的数据库的事务）。
 
 若要为分布式事务配置可用性组，请参阅[为分布式事务配置可用性组](configure-availability-group-for-distributed-transactions.md)。
 

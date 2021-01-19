@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f4361019a3f65dbe1fc4a1b65fe54e388175a84d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 59b0e82558e14e29e4fad69ddc86b76d982a634a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641767"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171099"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>使用可用性组向导 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "97641767"
   
     -   **自动种子设定**  
   
-         SQL Server 自动为此组中的每个数据库创建次要副本。 自动种子设定要求数据和日志文件路径在参与此组的每个 SQL Server 实例上均相同。 可在 [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] 及更高版本中使用。 请参阅[自动初始化 AlwaysOn 可用性组](automatically-initialize-always-on-availability-group.md)。
+         SQL Server 自动为此组中的每个数据库创建次要副本。 自动种子设定要求数据和日志文件路径在参与此组的每个 SQL Server 实例上均相同。 可在 [!INCLUDE[sssql16-md.md](../../../includes/sssql16-md.md)] 及更高版本中使用。 请参阅[自动初始化 AlwaysOn 可用性组](automatically-initialize-always-on-availability-group.md)。
     
     -   **完整的数据库和日志备份**  
   

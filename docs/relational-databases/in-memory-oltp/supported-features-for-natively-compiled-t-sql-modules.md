@@ -12,12 +12,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3624ab326c6712805d934839fe9403cfe14410e8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 42d638afd9fc98fb68eb024c0a712bea5f278a26
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485129"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170219"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,20 +42,20 @@ SELECT 子句：
 -   列名和别名（使用 AS 或 = 语法）。  
 
 -   标量子查询
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持标量子查询。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 开始，本机编译模块已支持标量子查询。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 DISTINCT 运算符。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 开始，本机编译模块已支持 DISTINCT 运算符。
 
         - 不支持 DISTINCT 聚合。  
 
 -   UNION 和 UNION ALL
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 UNION 和 UNION ALL 运算符。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 开始，本机编译模块已支持 UNION 和 UNION ALL 运算符。
 
 -   表分配  
 
@@ -66,12 +66,12 @@ FROM 子句：
 -   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 JOINS。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 开始，本机编译模块已支持 JOINS。
 
 -   子查询 `[AS] table_alias`。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。 
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持子查询。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 开始，本机编译模块已支持子查询。
 
 WHERE 子句：  
 
@@ -79,8 +79,8 @@ WHERE 子句：
 
 -   AND、BETWEEN  
 -   OR、NOT、IN、EXISTS
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 OR/NOT/IN/EXISTS 运算符。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 开始，本机编译模块已支持 OR/NOT/IN/EXISTS 运算符。
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句：

@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 830b03042589ac1e9f03e94b134a48d510a37c31
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 2043bf4c60a1154b719d81b583d055b60b85c6ec
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035830"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172329"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -398,7 +398,7 @@ GO
 如果 SET 选项不包含筛选索引所需的值，查询优化器将不考虑使用索引提示。 有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
 ## <a name="using-noexpand"></a>使用 NOEXPAND  
-NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯一聚集索引的视图。 如果查询包含对同时存在于索引视图和基表中的列的引用，而且查询优化器确定执行查询的最佳方法是使用索引视图，则查询优化器将对视图使用索引。 此功能称为*索引视图匹配*。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，仅在特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持查询优化器自动使用索引视图。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)、[SQL Server 2017 各个版本支持的功能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)和 [SQL Server 2019 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。  
+NOEXPAND 仅适用于 *索引视图*。 索引视图是包含为其创建的唯一聚集索引的视图。 如果查询包含对同时存在于索引视图和基表中的列的引用，而且查询优化器确定执行查询的最佳方法是使用索引视图，则查询优化器将对视图使用索引。 此功能称为 *索引视图匹配*。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1 之前，仅在特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持查询优化器自动使用索引视图。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)、[SQL Server 2017 各个版本支持的功能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)和 [SQL Server 2019 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。  
   
 但是，为了使查询优化器考虑使用索引视图进行匹配，或者使用通过 NOEXPAND 提示引用的索引视图，则必须将以下 SET 选项设置为 ON。  
 
@@ -419,7 +419,7 @@ NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯�
  若要强制查询优化器对索引视图使用索引，请指定 NOEXPAND 选项。 仅当查询中也命名了此视图时才能使用此提示。 如果某个查询没有在 FROM 子句中直接命名特定索引视图，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供用于在此查询中强制使用此视图的提示；但是，即使查询中未直接引用索引视图，查询优化器仍会考虑使用索引视图。 使用 NOEXPAND 表提示时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 仅自动创建索引视图的统计信息。 忽略此提示可能会导致出现执行计划警告：缺少无法通过手动创建统计信息解决的统计信息。 查询优化期间，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 将使用查询直接引用视图时自动或手动创建的视图统计信息，并使用 NOEXPAND 提示。    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>将表提示用作查询提示  
- 也可以使用 OPTION (TABLE HINT) 子句将*表提示*指定为查询提示。 我们建议仅在[计划指南](../../relational-databases/performance/plan-guides.md)的上下文中将表提示用作查询提示。 对于即席查询，请将这些提示仅指定为表提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
+ 也可以使用 OPTION (TABLE HINT) 子句将 *表提示* 指定为查询提示。 我们建议仅在[计划指南](../../relational-databases/performance/plan-guides.md)的上下文中将表提示用作查询提示。 对于即席查询，请将这些提示仅指定为表提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="permissions"></a>权限  
  KEEPIDENTITY、IGNORE_CONSTRAINTS 和 IGNORE_TRIGGERS 提示需要具有对表的 `ALTER` 权限。  

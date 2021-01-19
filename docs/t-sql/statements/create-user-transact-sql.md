@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c88b7acdabad8ff50b15a1dc840b9acf48e91d89
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 446e9fa7dc252da75bc1c14ecf3fbe0fdf92b3e8
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464118"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170319"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -240,7 +240,7 @@ SID = sid
  仅适用于包含的数据库中具有密码的用户（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证）。 指定新数据库用户的 SID。 如果未选择此选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动指派 SID。 使用 SID 参数在具有同一标识 (SID) 的多个数据库中创建用户。 当在多个数据库中创建用户以准备进行 Always On 故障转移时，这非常有用。 若要确定用户的 SID，请查询 sys.database_principals。  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  取消在大容量复制操作期间对服务器进行加密元数据检查。 这使用户能够在表或数据库之间大容量复制加密数据，而无需对数据进行解密。 默认为 OFF。  
   
@@ -458,7 +458,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. 创建用户以复制加密数据  
  以下示例会创建一个用户，该用户可以将受 Always Encrypted 功能保护的数据从一组包含加密列的表复制到另一组具有加密列的表中（在相同或不同的数据库中）。  有关详细信息，请参阅[迁移通过 Always Encrypted 保护的敏感数据](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。  
   
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```sql  
 CREATE USER [Chin]   

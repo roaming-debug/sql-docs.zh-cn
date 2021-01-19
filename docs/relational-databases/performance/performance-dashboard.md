@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 03bd2039fc132724ba78222c81a79c75f37764ff
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: ef87d8cdfb44d36faff5e06cfdc0b0f691142c03
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505117"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170399"
 ---
 # <a name="performance-dashboard"></a>性能仪表板
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "96505117"
 
 “等待”报表可筛选出所有空闲和睡眠的等待。 有关等待的详细信息，请参阅 [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 和[使用等待和队列优化 SQL Server 2005 性能](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc)。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重启时“耗费大量资源的查询”报表将重置，因为基础 DMV 中的数据已被清除。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，耗费大量资源的查询的详细信息可以在查询存储中找到。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重启时“耗费大量资源的查询”报表将重置，因为基础 DMV 中的数据已被清除。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，耗费大量资源的查询的详细信息可以在查询存储中找到。 
 
 
 > [!NOTE]

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49394aa04c726d015bbff3ea31a06ec47ffd64d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35ed1cf50f1d39af97ac636c8aba3ca36f90e7d7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478767"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171669"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 语句 - 参数 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -255,7 +255,7 @@ CREDENTIAL
  仅当从 Windows Azure Blob 存储服务还原备份时使用。  
   
 > [!NOTE]  
->  对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，从 URL 还原时只能从单个设备进行还原。 从 URL 还原时，若要从多个设备进行还原，必须使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658) 以及共享访问签名 (SAS) 令牌。 有关详细信息，请参阅[对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)和 [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell（使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程）](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)。  
+>  对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]，从 URL 还原时只能从单个设备进行还原。 从 URL 还原时，若要从多个设备进行还原，必须使用 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658) 以及共享访问签名 (SAS) 令牌。 有关详细信息，请参阅[对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)和 [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell（使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程）](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)。  
   
  REPLACE  
  支持的语句：[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -572,7 +572,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
 |---------------|-----------------------------------------|  
 |RESTORE|默认备份集文件号为 1。 一个 RESTORE 语句中只允许使用一个备份集 FILE 选项。 一定要按顺序指定备份集。|  
 |RESTORE FILELISTONLY|默认备份集文件号为 1。|  
-|RESTORE HEADERONLY|默认情况下，对介质集中的所有备份集进行处理。 RESTORE HEADERONLY 结果集将返回有关每个备份集的信息，包括它在介质集中的**位置**。 若要返回给定备份集的信息，请在 FILE 选项中使用它的位置号作为 backup_set_file_number 值。<br /><br /> 注意：对于磁带介质，RESTORE HEADER 只处理已加载磁带上的备份集。|  
+|RESTORE HEADERONLY|默认情况下，对介质集中的所有备份集进行处理。 RESTORE HEADERONLY 结果集将返回有关每个备份集的信息，包括它在介质集中的 **位置**。 若要返回给定备份集的信息，请在 FILE 选项中使用它的位置号作为 backup_set_file_number 值。<br /><br /> 注意：对于磁带介质，RESTORE HEADER 只处理已加载磁带上的备份集。|  
 |RESTORE VERIFYONLY|默认 backup_set_file_number 是 1。|  
   
 > [!NOTE]  

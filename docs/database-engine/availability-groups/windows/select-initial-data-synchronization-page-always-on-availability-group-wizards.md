@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fd729c01993f06c9017a898e1e804dde844e10f2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 73ee631c0dc853a60e07f09aa2ade5ce58487a0e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642143"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171089"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>“选择初始数据同步”页（AlwaysOn 可用性组向导）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97642143"
   
 ## <a name="automatic-seeding"></a><a name="Auto"></a>自动种子设定
  
- SQL Server 自动为此组中的每个数据库创建次要副本。 自动种子设定要求数据和日志文件路径在参与此组的每个 SQL Server 实例上均相同。 可在 [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] 及更高版本中使用。 请参阅[自动初始化 AlwaysOn 可用性组](automatically-initialize-always-on-availability-group.md)。
+ SQL Server 自动为此组中的每个数据库创建次要副本。 自动种子设定要求数据和日志文件路径在参与此组的每个 SQL Server 实例上均相同。 可在 [!INCLUDE[sssql16-md.md](../../../includes/sssql16-md.md)] 及更高版本中使用。 请参阅[自动初始化 AlwaysOn 可用性组](automatically-initialize-always-on-availability-group.md)。
 
 ##  <a name="full-database-and-log-backup"></a><a name="Full"></a>完整的数据库和日志备份 
  对于每个主数据库，“完整的数据库和日志备份”选项将在一个工作流中执行以下若干操作：创建主数据库的完整备份和日志备份、通过在托管次要副本的每个服务器实例上还原这些备份来创建对应的辅助数据库，以及将每个辅助数据库联接到可用性组  。  

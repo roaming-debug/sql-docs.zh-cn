@@ -15,18 +15,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 6ca048300bdfa2a9640a54211f8d82d3120597a6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7d4394c5fe4d790668bcc6733ce0aba0f643f7f3
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483729"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170889"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>更改数据库兼容性级别和使用查询存储
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本，某些更改仅在[数据库兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)更改后才会启用。 执行此操作的原因如下：  
+从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本，某些更改仅在[数据库兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)更改后才会启用。 执行此操作的原因如下：  
   
 - 由于升级是单向操作（不可能降级文件格式），将新功能的启用分离为数据库内的单独操作有一定作用。 可以将一项设置还原到之前的数据库兼容级别。  新的模式可以减少中断期间必然发生的事件的数量。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "97483729"
 > - 升级后，tempdb、model、msdb 和 Resource 数据库的兼容性级别将设置为当前兼容性级别。   
 > - master 系统数据库保留它在升级之前的兼容性级别。    
   
-用于启用新查询处理器功能的升级过程与产品的发布后服务模式相关。  这些修补程序中的一部分发布在[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) 下。  需要修补程序的客户可以选择加入这些修补程序而不会导致其他客户的意外回归。 查询处理器修补程序的发布后服务模式记录于 [此处](https://support.microsoft.com/kb/974006)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，转换到新的兼容级别意味着不再需要跟踪标志 4199 ，因为在最新的兼容级别中这些修复程序现在默认处于启用状态。 因此，作为升级过程的一部分，验证升级过程完成后未启用 4199 是很重要的。  
+用于启用新查询处理器功能的升级过程与产品的发布后服务模式相关。  这些修补程序中的一部分发布在[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) 下。  需要修补程序的客户可以选择加入这些修补程序而不会导致其他客户的意外回归。 查询处理器修补程序的发布后服务模式记录于 [此处](https://support.microsoft.com/kb/974006)。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，转换到新的兼容级别意味着不再需要跟踪标志 4199 ，因为在最新的兼容级别中这些修复程序现在默认处于启用状态。 因此，作为升级过程的一部分，验证升级过程完成后未启用 4199 是很重要的。  
 
 > [!NOTE]
 > 但是，仍需要跟踪标志 4199 才能启用 RTM 之后发布的任何适用的新查询处理器修补程序。

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 43c75b4462f8a725e5ce06d4d5eb545000bc8bb7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ea4130d49d35f1bdb9a5c74b74fff32052db9bc5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095758"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172049"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 
 ## <a name="arguments"></a>参数
  IF EXISTS  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  只有在默认值已存在时才对其进行有条件地删除。  
   
@@ -79,7 +79,7 @@ IF EXISTS (SELECT name FROM sys.objects
 GO  
 ```  
   
- 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可以使用以下语法。  
+ 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，可以使用以下语法。  
   
 ```sql  
 DROP DEFAULT IF EXISTS datedflt;  

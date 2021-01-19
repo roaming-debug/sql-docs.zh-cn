@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cccb11c84b9b5354d418dae19557f7f76e027cf
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 206aefdd3cd58b94124a0840cef7e788c5a29390
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095727"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171269"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -319,7 +319,7 @@ OUTPUT 子句
   
 与持有较少限制性大容量更新 (BU) 锁的 `BULK INSERT` 语句不同，具有 `TABLOCK` 提示的 `INSERT INTO … SELECT` 语句持有一个针对表的排他 (X) 锁。 也就是说不能使用同时执行的多个插入操作插入行。 
 
-但是，从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和数据库兼容性级别 130 开始，在插入堆或聚集列存储索引 (CCI) 时，可以并行执行单个 `INSERT INTO … SELECT` 语句。 使用 `TABLOCK` 提示时，可能会出现并行插入。  
+但是，从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和数据库兼容性级别 130 开始，在插入堆或聚集列存储索引 (CCI) 时，可以并行执行单个 `INSERT INTO … SELECT` 语句。 使用 `TABLOCK` 提示时，可能会出现并行插入。  
 
 以上语句的并行度具有以下要求，这类似于针对最小日志记录的要求：  
 -   目标表是空或非空堆。  

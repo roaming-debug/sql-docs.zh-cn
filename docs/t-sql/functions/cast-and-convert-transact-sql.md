@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24091fa04d0db4499f03e4722977a34cf70ae5ac
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7f17a896316ca0e85f11cf8359aa50a11c35faa5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097314"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171939"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -138,7 +138,7 @@ style
 |**0** （默认值）|最多包含 6 位。 根据需要使用科学记数法。|  
 |**1**|始终为 8 位值。 始终使用科学记数法。|  
 |**2**|始终为 16 位值。 始终使用科学记数法。|  
-|**3**|始终为 17 位值。 用于无损转换。 使用此样式，可以保证每个不重复的 float 或 real 值转换为不重复的字符串。<br /><br /> **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
+|**3**|始终为 17 位值。 用于无损转换。 使用此样式，可以保证每个不重复的 float 或 real 值转换为不重复的字符串。<br /><br /> **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |**126, 128, 129**|为了保持向后兼容而包括在内，而以后的版本可能不推荐这些值。|  
   
 ## <a name="money-and-smallmoney-styles"></a>money 和 smallmoney 样式

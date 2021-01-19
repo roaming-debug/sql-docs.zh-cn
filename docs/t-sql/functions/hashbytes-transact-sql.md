@@ -20,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b72eb876317282b421c64f0101c275970548f8f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: da6f1b1bdb357a6321207720d2ea64938f4ada41
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97421824"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170239"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -48,7 +48,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="arguments"></a>参数
 
 `<algorithm>`  
-标识用于对输入执行哈希操作的哈希算法。 这是必选参数，无默认值。 需要使用单引号。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，除 SHA2_256 和 SHA2_512 以外的所有算法都已过时。  
+标识用于对输入执行哈希操作的哈希算法。 这是必选参数，无默认值。 需要使用单引号。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，除 SHA2_256 和 SHA2_512 以外的所有算法都已过时。  
   
 `@input`  
 指定包含要对其执行哈希操作的数据的变量。  为 varchar、nvarchar 或 varbinary`@input`。  
@@ -68,7 +68,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="remarks"></a>备注  
 请考虑使用 `CHECKSUM` 或 `BINARY_CHECKSUM` 作为替代方案，以计算哈希值。
 
-自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，已弃用 MD2、MD4、MD5、SHA 和 SHA1 算法。 请改用 SHA2_256 或 SHA2_512。 旧算法将继续起作用，但会抛出弃用事件。
+自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起，已弃用 MD2、MD4、MD5、SHA 和 SHA1 算法。 请改用 SHA2_256 或 SHA2_512。 旧算法将继续起作用，但会抛出弃用事件。
 
 ## <a name="examples"></a>示例  
 ### <a name="return-the-hash-of-a-variable"></a>返回变量的哈希  

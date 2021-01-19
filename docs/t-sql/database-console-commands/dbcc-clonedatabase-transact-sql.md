@@ -38,12 +38,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: b273762ea8218106a35a23f02f95d1b156b50ae9
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 2de4f0e84b39d1384e342eab3b7b3d0bfd101611
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96128616"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172579"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,23 +73,23 @@ DBCC CLONEDATABASE
 源数据库要复制到的数据库的名称。 此数据库由 DBCC CLONEDATABASE 创建，创建之前不应存在。 
   
 NO_STATISTICS  
-指定是否需要将表/索引统计信息排除在克隆范围之外。 如果未指定此选项，表/索引统计信息自动包含在克隆范围之内。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始提供此选项。
+指定是否需要将表/索引统计信息排除在克隆范围之外。 如果未指定此选项，表/索引统计信息自动包含在克隆范围之内。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 开始提供此选项。
 
 NO_QUERYSTORE<br>
-指定是否需要将查询存储数据排除在克隆范围之外。 如果未指定此选项，在源数据库中启用了查询存储的情况下，系统会将查询存储数据复制到克隆中。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始提供此选项。
+指定是否需要将查询存储数据排除在克隆范围之外。 如果未指定此选项，在源数据库中启用了查询存储的情况下，系统会将查询存储数据复制到克隆中。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 开始提供此选项。
 
 VERIFY_CLONEDB  
-检查新数据库的一致性。  如果打算将克隆数据库用于生产，则需要此选项。  启用 VERIFY_CLONEDB 还会禁用统计信息和查询存储集合，因此它等效于运行 WITH VERIFY_CLONEDB、NO_STATISTICS 和 NO_QUERYSTORE。  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 开始提供此选项。
+检查新数据库的一致性。  如果打算将克隆数据库用于生产，则需要此选项。  启用 VERIFY_CLONEDB 还会禁用统计信息和查询存储集合，因此它等效于运行 WITH VERIFY_CLONEDB、NO_STATISTICS 和 NO_QUERYSTORE。  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 开始提供此选项。
 
 > [!NOTE]  
 > 可以使用下面的命令来确认克隆数据库已为生产准备就绪： <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
 
 SERVICEBROKER<br>
-指定是否应将与 Service Broker 相关的系统目录包含在克隆范围之内。  SERVICEBROKER 选项不能与 VERIFY_CLONEDB 结合使用。  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 开始提供此选项。
+指定是否应将与 Service Broker 相关的系统目录包含在克隆范围之内。  SERVICEBROKER 选项不能与 VERIFY_CLONEDB 结合使用。  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 开始提供此选项。
 
 BACKUP_CLONEDB  
-创建并验证克隆数据库的备份。  与 VERIFY_CLONEDB 配合使用时，系统先验证克隆数据库，再进行备份。  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 开始提供此选项。
+创建并验证克隆数据库的备份。  与 VERIFY_CLONEDB 配合使用时，系统先验证克隆数据库，再进行备份。  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 开始提供此选项。
   
 ## <a name="remarks"></a>备注
 DBCC CLONEDATABASE 可执行以下验证。 如果任何验证失败，则该命令失败。
@@ -149,11 +149,11 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 - COLUMNSTORE INDEX
 - CDB
 - CDC
-- CLR（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更高版本开始支持）
+- CLR（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 和更高版本开始支持）
 - DATABASE PROPERTIES
 - DEFAULT
 - FILES AND FILEGROUPS
-- 全文（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 开始支持）
+- 全文（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU2 开始支持）
 - FUNCTION
 - INDEX
 - LOGIN
@@ -161,9 +161,9 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 - PARTITION SCHEME
 - PROCEDURE   
 > [!NOTE]   
-> 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，所有版本均支持 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 开始支持 CLR 过程。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始支持本机编译过程。  
+> 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，所有版本均支持 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 开始支持 CLR 过程。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 开始支持本机编译过程。  
 
-- QUERY STORE（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始支持）   
+- QUERY STORE（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 开始支持）   
 > [!NOTE]   
 > 仅当源数据库上启用了查询存储数据时，才复制查询存储数据。 若要将最新的运行时统计信息作为查询存储的一部分进行复制，请执行 sp_query_store_flush_db，将运行时统计信息刷新至查询存储，然后再执行 DBCC CLONEDATABASE。  
 
@@ -175,8 +175,8 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 - STATISTICS
 - SYNONYM
 - TABLE
-- MEMORY OPTIMIZED TABLES（仅限 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更高版本）。
-- FILESTREAM AND FILETABLE OBJECTS（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本开始支持）。 
+- MEMORY OPTIMIZED TABLES（仅限 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 和更高版本）。
+- FILESTREAM AND FILETABLE OBJECTS（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 及更高版本开始支持）。 
 - TRIGGER
 - TYPE
 - UPGRADED DB
@@ -215,7 +215,7 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. 创建包含架构、统计信息和查询存储的克隆数据库 
-下面的示例创建 AdventureWorks 数据库的克隆，该数据库包含架构、统计信息和查询存储数据（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本）
+下面的示例创建 AdventureWorks 数据库的克隆，该数据库包含架构、统计信息和查询存储数据（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 及更高版本）
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
@@ -231,7 +231,7 @@ GO
 ```  
 
 ### <a name="c-creating-a-schema-only-clone-of-a-database-without-statistics-and-query-store"></a>C. 创建不含统计信息和查询存储的仅限架构的克隆数据库 
-下面的示例创建 AdventureWorks 数据库的克隆，其中不含统计信息和查询存储数据（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本）
+下面的示例创建 AdventureWorks 数据库的克隆，其中不含统计信息和查询存储数据（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 及更高版本）
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS, NO_QUERYSTORE;    
@@ -239,7 +239,7 @@ GO
 ```  
 
 ### <a name="d-creating-a-clone-of-a-database-that-is-verified-for-production-use"></a>D. 创建经验证可用于生产的克隆数据库
-下面的示例创建 AdventureWorks 数据库的克隆，该数据库仅限架构、不含统计信息和查询存储数据，并且经验证可用作生产数据库（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 及更高版本）。
+下面的示例创建 AdventureWorks 数据库的克隆，该数据库仅限架构、不含统计信息和查询存储数据，并且经验证可用作生产数据库（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 及更高版本）。
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB;    
@@ -247,7 +247,7 @@ GO
 ```  
   
 ### <a name="e-creating-a-clone-of-a-database-that-is-verified-for-production-use-that-includes-a-backup-of-the-cloned-database"></a>E. 创建经验证可用于生产且包含克隆数据库的备份的克隆数据库
-下面的示例创建 AdventureWorks 数据库的克隆，该克隆数据库仅限架构、不含统计信息和查询存储数据，并且经验证可用作生产数据库。  还将创建经验证的克隆数据库的备份（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 及更高版本）。
+下面的示例创建 AdventureWorks 数据库的克隆，该克隆数据库仅限架构、不含统计信息和查询存储数据，并且经验证可用作生产数据库。  还将创建经验证的克隆数据库的备份（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 及更高版本）。
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;    

@@ -18,12 +18,12 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 345601ea43048fca18fabb93b52d5d5f4eb153d0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0271ca850648af434d225429976b4e111e49d498
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472598"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171379"
 ---
 # <a name="about-change-tracking-sql-server"></a>关于更改跟踪 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "97472598"
 
 启用更改跟踪功能的每个表都有一个磁盘上的内部表，更改跟踪功能可以使用该表来确定更改版本以及自特定版本以来更改过的行。 每次苏醒时，“自动清除”线程就会扫描 SQL Server 实例上的所有用户数据库，标识启用了更改跟踪的数据库。 磁盘上的每个内部表都会根据数据库的保持期设置清除其过期记录。
 
-在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的 Service Pack 中增加了存储过程，用于对更改跟踪内部表执行手动清除。 [KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1) 中提供了该存储过程的详细信息。 
+在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 的 Service Pack 中增加了存储过程，用于对更改跟踪内部表执行手动清除。 [KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1) 中提供了该存储过程的详细信息。 
   
 ## <a name="see-also"></a>另请参阅  
  [启用和禁用更改跟踪 (SQL Server)](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   

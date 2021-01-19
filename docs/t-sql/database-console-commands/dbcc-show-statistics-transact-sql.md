@@ -34,12 +34,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0d83ada5889c27e960c8ab798c3784d2095a818
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 710a6211b588ab0dd4745b41af1f330c81241294
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480518"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170499"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 
@@ -58,7 +58,7 @@ DBCC SHOW_STATISTICS 根据统计信息对象中存储的数据显示标题、�
 > 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 开始，[sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) 动态管理视图可用于以编程方式检索包含在统计信息对象中的标头信息，以获取增量统计信息。
 
 > [!IMPORTANT]
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 开始，[sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 动态管理视图可用于以编程方式检索包含在统计信息对象中的直方图信息。
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU2 开始，[sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 动态管理视图可用于以编程方式检索包含在统计信息对象中的直方图信息。
 
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -120,7 +120,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |String Index|Yes 指示统计信息对象包含字符串摘要统计信息，以改进对使用 LIKE 运算符的查询谓词的基数估计；例如 `WHERE ProductName LIKE '%Bike'`。 字符串摘要统计信息与直方图分开存储，如果统计信息对象为 **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)** 、**nvarchar(max)** 、**text** 或 **ntext** 类型，则基于其第一个键列创建字符串摘要统计信息。|  
 |筛选表达式|包含在统计信息对象中的表行子集的谓词。 NULL = 未筛选的统计信息。 有关筛选谓词的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。 有关筛选统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。|  
 |Unfiltered Rows|应用筛选表达式前表中的总行数。 如果筛选表达式为 NULL，则 Unfiltered Rows 等于 Rows。|  
-|持久样本百分比|持久样本百分比用于未显式指定采样百分比的统计信息更新。 如果值为零，则不为此统计信息设置持久样本百分比。<br /><br /> **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
+|持久样本百分比|持久样本百分比用于未显式指定采样百分比的统计信息更新。 如果值为零，则不为此统计信息设置持久样本百分比。<br /><br /> **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4| 
   
 下表对指定 DENSITY_VECTOR 时结果集中所返回的列进行了说明。
   

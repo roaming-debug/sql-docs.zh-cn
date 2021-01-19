@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a7c1e12e2e0253f0f22df8dd5ea841671adc94ec
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 60c298991f80586ed9b830b856b84b3640ac509e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643772"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170789"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性组：互操作性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "97643772"
 
 以下功能可与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 互操作，但存在某些限制。 有关详细信息，请参阅链接的主题。
 
-- 跨数据库事务/分布式事务（[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 和 Windows Server 2016）。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
+- 跨数据库事务/分布式事务（[!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] 和 Windows Server 2016）。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - [查询统计信息系统数据收集器](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query)无法在具有不可读的辅助副本的环境中可靠运行。 若要使用查询统计信息系统数据收集器，请将所有辅助可用性组副本设置为允许[读取访问](configure-read-only-access-on-an-availability-replica-sql-server.md)。 
 
 ## <a name="features-that-do-not-interoperate-with-always-on-availability-groups"></a><a name="NoInterop"></a> 不能与 AlwaysOn 可用性组互操作的功能

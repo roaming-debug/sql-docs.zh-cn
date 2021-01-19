@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d731a2b41fb98d5ccf5ac9890e9c6de5ee94eacf
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c787027e1cebf844339a8cdc70bd23a6d8c974bd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100858"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171649"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 
@@ -201,7 +201,7 @@ FOR DATABASE_MIRRORING (
  也可以使用 ALGORITHM 参数指定端点使用的加密形式，如下所示：  
   
  **AES**  
- 指定端点必须使用 AES 算法。 这是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或更高版本中的默认值。  
+ 指定端点必须使用 AES 算法。 这是 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 或更高版本中的默认值。  
   
  RC4  
  指定端点必须使用 RC4 算法。 这是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的默认值。  

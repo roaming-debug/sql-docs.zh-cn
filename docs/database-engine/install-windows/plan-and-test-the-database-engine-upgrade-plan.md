@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 73c70e347de00a18f4c4ec5ce3228d6d000d16f0
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: 45b0ba2a207be68b0faaea0af0ba7592ae1f0f94
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975432"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172269"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>计划并测试数据库引擎升级计划
 
@@ -39,7 +39,7 @@ ms.locfileid: "97975432"
   
 -   当前环境：研究你当前的环境，了解所用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件和连接到你的环境的客户端。  
   
-    -   客户端提供程序：尽管升级不需要更新每个客户端的提供程序，但是你可以选择这样做。 如果计划升级 [!INCLUDE[sql14](../../includes/sssql14-md.md)] 或较旧版本，以下 [!INCLUDE[sql15](../../includes/sssql15-md.md)] 功能将要求为每个客户端提供更新的提供程序，或者更新的提供程序将提供其他功能：  
+    -   客户端提供程序：尽管升级不需要更新每个客户端的提供程序，但是你可以选择这样做。 如果计划升级 [!INCLUDE[sql14](../../includes/sssql14-md.md)] 或较旧版本，以下 [!INCLUDE[sql15](../../includes/sssql16-md.md)] 功能将要求为每个客户端提供更新的提供程序，或者更新的提供程序将提供其他功能：  
   
        -   [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   

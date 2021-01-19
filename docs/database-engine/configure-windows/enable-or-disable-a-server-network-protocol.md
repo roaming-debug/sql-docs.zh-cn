@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4b63c205a6953a751507abdd67abb229b5f15387
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b5f15490744ccfe8bfd47a69892f7033ddae361
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772500"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170999"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>启用或禁用服务器网络协议
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85772500"
 >  在安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 过程中，为 BUILTIN\Users 组添加一个登录名。 这可以使计算机的所有通过身份验证的用户作为 public 角色成员访问 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例。 可以安全地删除 BUILTIN\Users 登录名，以限制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对具有单独登录名或为使用此登录名的其他 Windows 组成员的计算机用户的访问。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 至 [!INCLUDE[sssql14](../../includes/sssql14-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据提供商在默认情况下仅支持 TLS 1.0 和 SSL 3.0。 如果通过更改操作系统 SChannel 层强制使用其他协议（如 TLS 1.1 或 TLS 1.2），与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接可能会失败，除非已安装相应的更新，将 TLS 1.1 和 1.2 的支持添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，<a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">此处</a>列出了这些更新。 从 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 开始，SQL Server 的所有发布版本均包括 TLS 1.2 支持，无需安全其他更新。
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 至 [!INCLUDE[sssql14](../../includes/sssql14-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据提供商在默认情况下仅支持 TLS 1.0 和 SSL 3.0。 如果通过更改操作系统 SChannel 层强制使用其他协议（如 TLS 1.1 或 TLS 1.2），与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接可能会失败，除非已安装相应的更新，将 TLS 1.1 和 1.2 的支持添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，<a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">此处</a>列出了这些更新。 从 [!INCLUDE[sssql15](../../includes/sssql16-md.md)] 开始，SQL Server 的所有发布版本均包括 TLS 1.2 支持，无需安全其他更新。
   
  **本主题内容**  
   

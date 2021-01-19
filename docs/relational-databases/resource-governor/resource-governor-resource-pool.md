@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d7de8dcd6291330e2e18136e2c16e16b36f3ef71
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 4028f19dc9d7ac319b083b5e6077021da59e7a9b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506561"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172309"
 ---
 # <a name="resource-governor-resource-pool"></a>资源调控器资源池
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "96506561"
   
 **默认池**  
   
-默认池是第一个预定义的用户池。 在进行任何配置之前，默认池只包含默认组。 不能创建或删除默认池，但可以更改。 默认池除了包含默认组，还可以包含用户定义的组。 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本，例程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作有默认资源池，外部进程（如执行 R 脚本）有默认外部资源池。  
+默认池是第一个预定义的用户池。 在进行任何配置之前，默认池只包含默认组。 不能创建或删除默认池，但可以更改。 默认池除了包含默认组，还可以包含用户定义的组。 对于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本，例程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作有默认资源池，外部进程（如执行 R 脚本）有默认外部资源池。  
   
 > [!NOTE]  
 >  可以更改默认组，但不能从默认池中移出。  

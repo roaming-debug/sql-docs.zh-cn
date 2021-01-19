@@ -18,12 +18,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 41525854d161d029beae6e0956bc11e536ab813b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bd6886f7ad5569d4eba40e9e603c9fccead17f71
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460300"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171219"
 ---
 # <a name="replication-agent-executables-concepts"></a>复制代理可执行文件概念
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "97460300"
 >  为便于阅读，这些示例中添加了换行符。 但在批处理文件中，命令必须位于一行中。  
   
 ### <a name="running-the-snapshot-agent"></a>运行快照代理  
- 此示例批处理文件从命令提示符调用快照代理，以生成 **AdvWorksSalesOrdersMerge** 发布的快照。 （下面的脚本使用 [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] 文件（版本 130）的路径。 你应当调整脚本以指向你的 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] 版本的文件。）  
+ 此示例批处理文件从命令提示符调用快照代理，以生成 **AdvWorksSalesOrdersMerge** 发布的快照。 （下面的脚本使用 [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] 文件（版本 130）的路径。 你应当调整脚本以指向你的 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] 版本的文件。）  
   
 ```  
 REM -- Declare variables  

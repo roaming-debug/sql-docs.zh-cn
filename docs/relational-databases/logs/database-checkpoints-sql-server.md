@@ -28,12 +28,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3583f0f780df284dc16e54eda6b2406ff8737911
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c98d84c8e3bc08bfae13c149cfc0487c57e40008
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473848"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171569"
 ---
 # <a name="database-checkpoints-sql-server"></a>数据库检查点 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "97473848"
 |名称|[!INCLUDE[tsql](../../includes/tsql-md.md)] 接口|说明|  
 |----------|----------------------------------|-----------------|  
 |自动|EXEC sp_configure **'** recovery interval **','** _seconds_ **'**|自动在后台发出，以满足 **recovery interval** 服务器配置选项建议的时间上限。 运行自动检查点直到完成。  基于未完成的写操作数和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否检测到写入滞后时间超过 50 毫秒的写操作增加，来调控自动检查点。<br /><br /> 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
-|间接|ALTER DATABASE ...SET TARGET_RECOVERY_TIME **=** _target\_recovery\_time_ { SECONDS &#124; MINUTES }|在后台发出，以满足给定数据库的用户指定的目标恢复时间要求。 从 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]开始，默认值是 1 分钟。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于针对服务器实例的恢复间隔设置。<br /><br /> 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。|  
+|间接|ALTER DATABASE ...SET TARGET_RECOVERY_TIME **=** _target\_recovery\_time_ { SECONDS &#124; MINUTES }|在后台发出，以满足给定数据库的用户指定的目标恢复时间要求。 从 [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]开始，默认值是 1 分钟。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于针对服务器实例的恢复间隔设置。<br /><br /> 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。|  
 |手动|CHECKPOINT [*checkpoint_duration*]|执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 命令时发出。 在连接的当前数据库中执行手动检查点操作。 默认情况下，手动检查点运行至完成。 调控方式与自动检查点的调控方式相同。  （可选） *checkpoint_duration* 参数指定完成检查点所需的时间（秒）。<br /><br /> 有关详细信息，请参阅 [检查点 (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)。|  
 |内部|无。|由各种服务器操作（如备份和数据库快照创建）发出，以确保磁盘映像与日志的当前状态匹配。|  
   
@@ -107,7 +107,7 @@ ms.locfileid: "97473848"
 然而，为间接检查点配置的数据库上的联机事务工作负荷会导致性能下降。 这是因为间接检查点使用的后台写入线程有时增加了服务器实例的总写入负荷。  
  
 > [!IMPORTANT]
-> 间接检查点是在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中创建的新数据库的默认行为，包括模型和 TempDB 数据库。          
+> 间接检查点是在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中创建的新数据库的默认行为，包括模型和 TempDB 数据库。          
 > 就地升级或从以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原的数据库，除非显式更改为使用间接检查点，否则将使用以前的自动检查点行为。       
 
 ### <a name="improved-indirect-checkpoint-scalability"></a><a name="ctp23"></a> 改进了间接检查点可伸缩性

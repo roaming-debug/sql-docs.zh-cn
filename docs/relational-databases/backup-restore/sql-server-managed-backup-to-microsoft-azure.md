@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 32a48093f40d048532ff58a1f91f450e52d6019b
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: ce723dfbf0171d3c1885c1574bf681fbb2c8e714
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129009"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172559"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>目标为 Microsoft Azure 的 SQL Server 托管备份
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 管理并自动执行将 SQL Server 备份到 Microsoft Azure Blob 存储。 你可以选择允许 SQL Server 基于你的数据库的事务工作负荷确定备份计划。 或者可以使用高级选项来定义计划。 保留期设置可确定备份存储在 Azure Blob 存储上的时间。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 支持指定保持期的时间点还原。  
   
- 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的过程和基础行为已更改。 有关详细信息，请参阅[将 SQL Server 2014 托管备份设置迁移到 SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)。  
+ 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]开始， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的过程和基础行为已更改。 有关详细信息，请参阅[将 SQL Server 2014 托管备份设置迁移到 SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)。  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 建议用于在 Microsoft Azure 虚拟机上运行的 SQL Server 实例。  

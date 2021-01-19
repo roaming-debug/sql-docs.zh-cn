@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: cb3e1a7c66aba0234145ba840f36643c6ca49d9c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a910ab091d961a48b7ff7822cb01924f1c9b1f82
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099401"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170379"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 
 ## <a name="arguments"></a>参数
  IF EXISTS  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）
   
  只有在同义词已存在时才对其进行有条件地删除。  
   
@@ -56,7 +56,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
  *synonym_name*  
  要删除的同义词的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  对同义词的引用不受架构限制；因此，可随时删除同义词。 只有在运行时才能发现对已删除的同义词的引用。  
   
  在动态 SQL 中可以创建、删除和引用同义词。  

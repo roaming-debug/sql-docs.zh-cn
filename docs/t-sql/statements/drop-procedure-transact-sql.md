@@ -26,12 +26,12 @@ ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9de2be24c9841de30ee40b82cc9271406d58f44
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c810d1e57b3e2cfb092e1091da0d95b082eb8c2d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096957"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172469"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 
 ## <a name="arguments"></a>参数
  IF EXISTS  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  有条件地删除过程（仅当其已存在时）。  
   
@@ -93,7 +93,7 @@ GO
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
- 以下示例删除 `dbo.uspMyProc` 存储过程（如果存在），但不会在该过程不存在时引发错误。 此语法是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新语法。  
+ 以下示例删除 `dbo.uspMyProc` 存储过程（如果存在），但不会在该过程不存在时引发错误。 此语法是 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中的新语法。  
   
 ```sql  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  

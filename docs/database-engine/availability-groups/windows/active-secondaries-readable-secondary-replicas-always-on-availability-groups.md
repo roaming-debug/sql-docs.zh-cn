@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c8f93191b689599a24ad960d316a02901de2e6e0
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 1b7be0ce3e3be27633c32e031f7c674804a43d8b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643806"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170809"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>卸载对 AlwaysOn 可用性组的次要副本的只读工作负荷
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "97643806"
  这意味着在主副本和辅助副本之间将会存在一定程度的滞后时间，通常只需几秒钟。 但是，在极少数情况下，例如在网络问题降低了网络吞吐量的情况下，滞后时间可能会较长。 在存在 I/O 瓶颈和数据移动操作处于挂起状态时，将增加滞后时间。 若要监视挂起的数据移动，可以使用 [AlwaysOn 面板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 或 [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 动态管理视图。  
   
 ####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> 具有内存优化表的数据库上的数据延迟  
- 在 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 中，存在关于活动次要副本上数据延迟的特殊注意事项 - 请参阅[[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]活动次要副本：可读次要副本](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)。 启动 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 在内存优化表的数据延迟方面没有特殊注意事项。 内存优化表的预期数据延迟相当于基于磁盘的表的延迟。  
+ 在 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 中，存在关于活动次要副本上数据延迟的特殊注意事项 - 请参阅[[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]活动次要副本：可读次要副本](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)。 启动 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] 在内存优化表的数据延迟方面没有特殊注意事项。 内存优化表的预期数据延迟相当于基于磁盘的表的延迟。  
   
 ###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> 只读工作负荷的影响  
  为辅助副本配置只读访问时，辅助数据库上的只读工作负荷占用来自重做线程的系统资源，如 CPU 和 I/O（对于基于磁盘的表），特别是在基于磁盘的表的只读工作负荷大量占用 I/O 的情况下。 访问内存优化表时没有 IO 影响，因为所有行都驻留在内存中。  

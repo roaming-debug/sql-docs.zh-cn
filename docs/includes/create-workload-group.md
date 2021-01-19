@@ -64,7 +64,7 @@ REQUEST_MAX_CPU_TIME_SEC = value </br>
 > [!NOTE]
 > 默认情况下，如果超过最长时间，Resource Governor 并不会阻止继续发出请求。 但会生成一个事件。 有关详细信息，请参阅 [CPU Threshold Exceeded 事件类](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。
 > [!IMPORTANT]
-> 从 [!INCLUDE[ssSQL15](sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 开始以及使用[跟踪标志 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 时，Resource Governor 将在超出最大时间时终止请求。
+> 从 [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 开始以及使用[跟踪标志 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 时，Resource Governor 将在超出最大时间时终止请求。
 
 REQUEST_MEMORY_GRANT_TIMEOUT_SEC = value </br>
 指定查询等待内存授予（工作缓冲区内存）变为可用状态的最长时间（以秒为单位）。 value 必须为 0 或一个正整数  。 value 的默认设置为 0，表示使用基于查询开销的内部计算来确定最长时间  。
@@ -97,7 +97,7 @@ USING { pool_name | "default" }  </br>
 > 预定义工作负荷组和资源池都使用小写名称，例如“default”。 对于使用区分大小写排序规则的服务器，应当注意这一点。 使用不区分大小写排序规则的服务器（例如 SQL_Latin1_General_CP1_CI_AS）会将“default”和“Default”视为相同。
 
 EXTERNAL external_pool_name | “default“</br>
-适用范围：[!INCLUDE[ssNoVersion](ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](sssql15-md.md)] 开始）  。
+适用范围：[!INCLUDE[ssNoVersion](ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](sssql16-md.md)] 开始）  。
 
 工作负荷组可以指定一个外部资源池。 可定义一个工作负荷组并关联两个池：
 

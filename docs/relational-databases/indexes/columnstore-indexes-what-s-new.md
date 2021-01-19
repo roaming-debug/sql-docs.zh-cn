@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9fc87cef0244afc4459c789f94855c0c0530ddd
-ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
+ms.openlocfilehash: 58f0348a84362b48520c9bd5cf46868cdaea60e0
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97697119"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171179"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "97697119"
   列存储功能摘要可用于各个版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、最新版 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
 
  > [!NOTE]
- > 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，列存储索引可用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 高级层、标准层（S3 及更高）以及所有 vCore 层。 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本，列存储索引可用于所有版本。 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]（早于 SP1）及更早版本，列存储索引仅可用于企业版。
+ > 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，列存储索引可用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 高级层、标准层（S3 及更高）以及所有 vCore 层。 对于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 及更高版本，列存储索引可用于所有版本。 对于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]（早于 SP1）及更早版本，列存储索引仅可用于企业版。
  
 ## <a name="feature-summary-for-product-releases"></a>产品版本的功能摘要  
  此表概述了列存储索引的主要功能以及提供这些功能的产品。  
 
-|列存储索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|列存储索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
 |多线程查询的批模式执行|是|是|是|是|是|是|是| 
 |单线程查询的批模式执行|||是|是|是|是|是|  
@@ -67,8 +67,8 @@ ms.locfileid: "97697119"
 ### <a name="functional"></a>功能
 - [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 支持聚集列存储索引中的非持久化计算列。 聚集列存储索引不支持持久化计算列。 无法在具有计算列的列存储索引上创建非聚集索引。 
 
-## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 添加了重要的增强功能，以此来改善列存储索引的性能和灵活性。 这些改进功能可以增强数据仓库方案的效果，并实现实时运营分析。  
+## [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
+ [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 添加了重要的增强功能，以此来改善列存储索引的性能和灵活性。 这些改进功能可以增强数据仓库方案的效果，并实现实时运营分析。  
   
 ### <a name="functional"></a>功能  
   

@@ -23,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a2c4ba7f0a52a7a9eae4a9407685c95b0b179c8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 371e5230707c4b82680213689f8e4cd4ddc45986
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480428"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170289"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -165,7 +165,7 @@ OBJECTPROPERTYEX ( id , property )
 |UserDataAccess|函数、视图|指示对象访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地实例中的用户数据和用户表。<br /><br /> 1 = 读取<br /><br /> 0 = 无<br /><br /> 基本数据类型：int|  
 |TableHasColumnSet|表|表具有列集。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 有关详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。|  
 |基数|表（系统或用户定义）、视图或索引|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指定对象中的行数。|  
-|TableTemporalType|表|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 指定表的类型。<br /><br /> 0 = 非时态表<br /><br /> 1 = 系统版本控制表的历史记录表<br /><br /> 2 = 系统版本控制时态表|  
+|TableTemporalType|表|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。<br /><br /> 指定表的类型。<br /><br /> 0 = 非时态表<br /><br /> 1 = 系统版本控制表的历史记录表<br /><br /> 2 = 系统版本控制时态表|  
   
 ## <a name="return-types"></a>返回类型  
  **sql_variant**  

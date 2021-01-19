@@ -20,12 +20,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: AndreasWolter
 ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b7839615ed830f91ced84f1c565d9c2d32bf3a3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b40dbcfc25bcc3b86868228fe5646c4318ed830c
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479418"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172219"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "97479418"
 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全对象都有可以授予主体的关联权限。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的权限在分配给登录名和服务器角色的服务器级别，以及分配给数据库用户和数据库角色的数据库级别进行管理。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的模型拥有与数据库权限相同的系统，但服务器级别权限不可用。 本主题包含权限的完整列表。 有关典型的权限实现，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
 [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] 的权限总数是 248。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 公布有 254 个权限。 大多数权限适用于所有平台，但有些则不适用。 例如，无法对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 授予服务器级别权限，并且只有几个权限对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 有意义。
-新权限将随着新版本逐步引入。 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 公布有 238 个权限。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公布有 230 个权限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公布有 219 个权限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公布有 214 个权限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公布有 195 个权限。 [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主题指定哪些权限时近期版本中的新权限。
+新权限将随着新版本逐步引入。 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 公布有 238 个权限。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 公布有 230 个权限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公布有 219 个权限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公布有 214 个权限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公布有 195 个权限。 [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主题指定哪些权限时近期版本中的新权限。
 
 了解权限后，通过 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)和 [DENY](../../t-sql/statements/deny-transact-sql.md) 语句，将服务器级别权限应用于登录名和数据库级别权限用户。 例如：   
 ```sql
@@ -158,25 +158,25 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
 |DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|ALTER ANY EVENT SESSION|  
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL DATA SOURCE|AEDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL FILE FORMAT|AEFF|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY MASK|AAMK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY MASK|AAMK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY REMOTE SERVICE BINDING|ALSB|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|更改任何安全策略|ALSP<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|更改任何安全策略|ALSP<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|更改任何敏感度分类|ALSP<br />适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（SQL Server 2019 (15.x) 至当前版本）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|DATABASE|CONTROL SERVER|
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
@@ -215,7 +215,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）。|SERVER|CONTROL SERVER|  
+|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 当前版本）。|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 仅适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
@@ -223,10 +223,10 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|DATABASE|UNMASK|UMSK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|UNMASK|UMSK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
-|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|VIEW SERVER STATE|  
-|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 当前版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|

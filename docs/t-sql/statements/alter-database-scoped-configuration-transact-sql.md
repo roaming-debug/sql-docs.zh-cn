@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest
-ms.openlocfilehash: 85c4646af6f5801bd617baef47aecf913374ae95
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8d314e90bbe869dec9ccdc31c45996c4834fc829
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099584"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170419"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -170,7 +170,7 @@ LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY }
 
 > [!TIP]
 > 要在查询级别完成此操作，请添加 QUERYTRACEON [查询提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，要在查询级别完成此操作，请添加 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，而不是使用跟踪标志。
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 开始，要在查询级别完成此操作，请添加 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，而不是使用跟踪标志。
 
 PRIMARY
 
@@ -182,7 +182,7 @@ PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
 
 > [!TIP]
 > 要在查询级别完成此操作，请参阅 OPTIMIZE FOR UNKNOWN [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，要在查询级别完成此操作，也可使用 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)。
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 开始，要在查询级别完成此操作，也可使用 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)。
 
 PRIMARY
 
@@ -196,7 +196,7 @@ PRIMARY
 
 > [!TIP]
 > 要在查询级别完成此操作，请添加 QUERYTRACEON [查询提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，要在查询级别完成此操作，请添加 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，而不是使用跟踪标志。
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 开始，要在查询级别完成此操作，请添加 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，而不是使用跟踪标志。
 
 PRIMARY
 
@@ -466,7 +466,7 @@ ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
 
 ### <a name="dacfx"></a>DacFx
 
-由于 `ALTER DATABASE SCOPED CONFIGURATION` 是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）中的新功能，可影响数据库模式，因此架构的导出（有数据或没有数据）无法导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的旧版本（如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）。 例如，从使用新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 数据库到 [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 或 [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md#bacpac) 的导出无法导入到下级服务器。
+由于 `ALTER DATABASE SCOPED CONFIGURATION` 是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）中的新功能，可影响数据库模式，因此架构的导出（有数据或没有数据）无法导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的旧版本（如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）。 例如，从使用新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 数据库到 [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 或 [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md#bacpac) 的导出无法导入到下级服务器。
 
 ### <a name="elevate_online"></a>ELEVATE_ONLINE
 

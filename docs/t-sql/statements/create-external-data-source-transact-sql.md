@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23f9507c0db019383aa1cef148a169d83e4a53be
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 74a6b4985ab31d69813e305c92ee80ae8bca75d2
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100806"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171639"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ ms.locfileid: "98100806"
 - 使用 [PolyBase][intro_pb] 执行数据虚拟化和数据加载
 - 使用 `BULK INSERT` 或 `OPENROWSET` 大容量加载操作
 
-**适用对象**：自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起
+**适用对象**：自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起
 
 ## <a name="syntax"></a>语法
 
@@ -91,8 +91,8 @@ WITH
 
 | 外部数据源    | 位置前缀 | 位置路径                                         | 产品/服务支持的位置 |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
-| Cloudera 或 Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起                       |
-| Azure 存储帐户 (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起          不支持分层命名空间 |
+| Cloudera 或 Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起                       |
+| Azure 存储帐户 (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起          不支持分层命名空间 |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起                       |
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起                       |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起                       |
@@ -212,7 +212,7 @@ PolyBase 支持大多数外部数据源的基于代理的身份验证。 创建�
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples-starting-with-sssql15"></a>示例（自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起）
+## <a name="examples-starting-with-sssql15"></a>示例（自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起）
 
 > [!IMPORTANT]
 > 有关如何安装和启用 PolyBase 的信息，请参阅[在 Windows 上安装 PolyBase](../../relational-databases/polybase/polybase-installation.md)

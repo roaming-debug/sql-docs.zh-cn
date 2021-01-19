@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: c9599042d8cab079c155496be1fb4e0194bc66fe
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a0257d403980bcb869a7ac1e06471cd1699dd16d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111143"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170599"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 
@@ -92,7 +92,7 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 查询数据存储在临时表中。 检查完所有请求的表和约束后，将返回结果集。
 DBCC CHECKCONSTRAINTS 检查 FOREIGN KEY 和 CHECK 约束的完整性，但并不检查表的磁盘上数据结构的完整性。 可使用 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 和 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) 执行这些数据结构检查。
   
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本
   
 如果已指定 table_name 或 table_id 并启用它用于系统版本控制，DBCC CHECKCONSTRAINTS 还会对指定表执行临时数据一致性检查 。 如果未指定 NO_INFOMSGS，此命令将在单独一行上在输出中返回每项一致性冲突。 输出格式将为 ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...)AND \<what is wrong with temporal table record>。
   

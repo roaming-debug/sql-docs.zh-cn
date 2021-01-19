@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eca1dbef6ff7d519200e46cff7879d7cb0a9b128
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 991a30108d0683d89d8bece48eb0d2de1c1e0d37
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478248"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171879"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>通过重新组织或重新生成索引来解决索引碎片问题
 
@@ -110,7 +110,7 @@ sys.dm_db_column_store_row_group_physical_stats 返回的结果集包含以下�
 |“计算的碎片(%)”值|适用于版本|修复语句|
 |-----------------------------------------------|--------------------------|--------------------------|
 |> = 20%|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|ALTER INDEX REBUILD|
-|> = 20%|自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起|ALTER INDEX REORGANIZE|
+|> = 20%|自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起|ALTER INDEX REORGANIZE|
 
 ### <a name="to-check-the-fragmentation-of-a-rowstore-index-using-tsql"></a>使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 检查行存储索引的碎片的具体步骤
 
@@ -234,7 +234,7 @@ object_id   TableName                   index_id    IndexName                   
 - 对于[列存储索引](columnstore-indexes-overview.md)，重新生成操作会：删除碎片；将所有行移到列存储中；以物理方式删除已在逻辑上从表中删除的行，从而回收磁盘空间。 
   
   > [!TIP]
-  > 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，通常不需要重新生成列存储索引，因为 `REORGANIZE` 以联机操作形式在后台执行重新生成的基本操作。 
+  > 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起，通常不需要重新生成列存储索引，因为 `REORGANIZE` 以联机操作形式在后台执行重新生成的基本操作。 
   
   有关语法示例，请参阅[示例：列存储重新生成](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)。
 
@@ -382,7 +382,7 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 ## <a name="considerations-specific-to-reorganizing-a-columnstore-index"></a>有关重新组织列存储索引的注意事项
 
-重新组织列存储索引时，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会将每个 CLOSED 增量行组作为压缩行组压缩到列存储中。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，`REORGANIZE` 命令会联机执行以下额外的碎片整理优化：
+重新组织列存储索引时，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会将每个 CLOSED 增量行组作为压缩行组压缩到列存储中。 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，`REORGANIZE` 命令会联机执行以下额外的碎片整理优化：
 
 - 在逻辑删除了 10% 或更多行时从行组中物理移除行。 删除的字节会在物理媒体上进行回收。 例如，如果具有 100 万行的压缩行组删除了 10 万行，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会移除已删除的行，并使用 90 万行重新压缩行组。 它通过移除已删除的行来节省存储。
 

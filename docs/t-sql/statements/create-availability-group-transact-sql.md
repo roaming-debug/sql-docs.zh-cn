@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: af27cbc5aaa05412052940b020ce9268a1c74ea3
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: fde4d33f9de2bd3103d1c48ad1a80fe211c8e1a3
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300403"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170339"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -85,7 +85,7 @@ CREATE AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer  
   
@@ -180,13 +180,13 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   有关此设置的详细信息，请参阅[数据库级别运行状况检测选项](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
   
  DTC_SUPPORT  **=** { PER_DB | NONE }  
- 指定是否通过分布式事务处理协调器 (DTC) 支持跨数据库事务。 仅从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始支持跨数据库事务。 PER_DB 创建支持这些事务的可用性组。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
+ 指定是否通过分布式事务处理协调器 (DTC) 支持跨数据库事务。 仅从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始支持跨数据库事务。 PER_DB 创建支持这些事务的可用性组。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
  BASIC  
- 用于创建基本可用性组。 基本可用性组限于一个数据库和两个副本：主要副本和次要副本。 此选项替换 SQL Server Standard Edition 上弃用的数据库镜像功能。 有关详细信息，请参阅[基本可用性组（Always On 可用性组）](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始支持基本可用性组。  
+ 用于创建基本可用性组。 基本可用性组限于一个数据库和两个副本：主要副本和次要副本。 此选项替换 SQL Server Standard Edition 上弃用的数据库镜像功能。 有关详细信息，请参阅[基本可用性组（Always On 可用性组）](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始支持基本可用性组。  
 
  DISTRIBUTED  
- 用于创建分布式可用性组。 此选项与 AVAILABILITY GROUP ON 参数一起使用，可连接不同 Windows Server 故障转移群集中的两个可用性组。  有关详细信息，请参阅[分布式可用性组&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，支持分布式可用性组。 
+ 用于创建分布式可用性组。 此选项与 AVAILABILITY GROUP ON 参数一起使用，可连接不同 Windows Server 故障转移群集中的两个可用性组。  有关详细信息，请参阅[分布式可用性组&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，支持分布式可用性组。 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  在 SQL Server 2017 中引入。 用于设置需要在主要副本提交事务之前提交的最小数量的同步次要副本。 保证 SQL Server 事务等待至事务日志在最小数量的次要副本上更新为止。 默认值为 0，可提供与 SQL Server 2016 相同的行为。 最小值为 0。 最大值为副本数量减 1。 此选项与同步提交模式中的副本相关。 当副本处于同步提交模式时，对主要副本的写入操作会等待至将次要同步副本上的写入提交到副本数据库事务日志为止。 如果托管次要同步副本的 SQL Server 停止响应，则托管主要副本的 SQL Server 将此次要副本标记为 NOT SYNCHRONIZED（未同步）并继续执行操作。 当无响应的数据库恢复联机状态时，它处于“未同步”状态，副本标记为不正常，直到主要副本可再次对其执行同步。 此设置可确保主要副本等待至最少数量的副本已提交每个事务。 如果最少数量的副本不可用，则主要副本上的提交会失败。 对于群集类型 `EXTERNAL`，可用性组添加到群集资源时，设置会更改。 请参阅[可用性组配置的高可用性和数据保护](../../linux/sql-server-linux-availability-group-ha.md)。
@@ -214,7 +214,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   
  \<server_instance> 指定承载副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的地址。 地址格式依赖于该实例是默认实例还是命名实例以及它是独立实例还是故障转移群集实例 (FCI)，如下所示：  
   
- { ' *system_name* [\\*instance_name* ]' | ' *FCI_network_name* [\\*instance_name* ]' }  
+ { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
  此地址由以下部分组成：  
   
@@ -356,7 +356,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   
  使用以逗号分隔的列表指定可能托管可读次要副本的所有服务器实例。 只读路由遵循在列表中指定服务器实例的顺序。 如果在副本的只读路由列表中包含副本的宿主服务器实例，通常将此服务器实例放在列表末尾比较好，这样在一个辅助副本可用时读意向连接将访问它。  
   
- 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可在可读次要副本间实现读意向请求的负载均衡。 可通过将副本放入只读路由列表中的一组嵌套括号中来指定。 有关详细信息和示例，请参阅[在只读副本间配置负载均衡](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。  
+ 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，可在可读次要副本间实现读意向请求的负载均衡。 可通过将副本放入只读路由列表中的一组嵌套括号中来指定。 有关详细信息和示例，请参阅[在只读副本间配置负载均衡](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。  
   
  无  
  指定此可用性副本为主要副本时不支持只读路由。 此选项为默认行为。  
@@ -427,7 +427,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
  MANUAL  
  指定手动种子设定（默认）。 此方法要求在主要副本上创建数据库的备份，并在次要可用性组的副本上手动还原该备份。  
   
- LISTENER ' _dns\_name_ '( \<listener_option\> ) 为此可用性组定义新的可用性组侦听器  。 LISTENER 是一个可选参数。  
+ LISTENER '_dns\_name_'( \<listener_option\> ) 为此可用性组定义新的可用性组侦听器  。 LISTENER 是一个可选参数。  
   
 > [!IMPORTANT]
 >  创建第一个侦听器之前，强烈建议阅读[创建或配置可用性组侦听程序 (SQL Server)](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
@@ -459,7 +459,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘** _four\_part\_ipv4\_address_ **’,‘** _four\_part\_ipv4\_mask_ **’)**  |  **(‘** _ipv6\_address_ **’)** } [ **,** ... *n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
+ WITH IP **(** { **(‘** _four\_part\_ipv4\_address_ **’,‘** _four\_part\_ipv4\_mask_ **’)**  |  **(‘** _ipv6\_address_ **’)** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
  指定可用性组侦听器使用一个或多个静态 IP 地址，而不使用 DHCP。 若要跨多个子网创建一个可用性组，每个子网均需要一个侦听器配置中的静态 IP 地址。 对于某一给定子网，静态 IP 地址可以是 IPv4 地址或 IPv6 地址。 请联系网络管理员，以获取每个托管新可用性组副本的子网的静态 IP 地址。  
   
  例如：  
@@ -507,7 +507,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   
 |副本选项|`COMPUTER01` 上的设置|`COMPUTER02` 上的设置|`COMPUTER03` 上的设置|说明|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
-|ENDPOINT_URL|TCP:// *COMPUTER01:5022*|TCP:// *COMPUTER02:5022*|TCP:// *COMPUTER03:5022*|在这个示例中，系统处于相同的域中，因此，端点 URL 可以使用计算机的名称作为系统地址。|  
+|ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|在这个示例中，系统处于相同的域中，因此，端点 URL 可以使用计算机的名称作为系统地址。|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|两个副本使用同步提交模式。 同步时，它们支持故障转移而不会丢失数据。 第三个副本，将使用异步提交可用性模式。|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|同步提交副本支持自动故障转移和计划的手动故障转移。 同步提交可用性模式副本支持仅限强制的手动故障转移。|  
 |BACKUP_PRIORITY|30|30|90|与同步提交副本相比，将更高的优先级 90 分配给异步提交副本。 备份往往发生在将托管异步提交副本的服务器实例上。|  

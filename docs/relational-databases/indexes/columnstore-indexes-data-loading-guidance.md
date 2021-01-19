@@ -12,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dd7431a208db3f0da1e2ee53522920319b40af0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b6a0b60d8b690490074187d977d9bd636d88aea3
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97407466"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172679"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列存储索引 - 数据加载指南
 
@@ -89,7 +89,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- 此命令以类似于 BCP 或批量插入的方式将数据加载到列存储索引，但操作是以单个批完成的。 如果临时表中的行数 < 102400，行将加载到增量行组；否则，行将直接加载到压缩行组。 一个重要限制是此 `INSERT` 操作是单线程操作。 要并行加载数据，可以创建多个临时表，或者针对临时表中不重叠的行范围发出 `INSERT`/`SELECT`。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中解除了这种限制。 以下命令从临时表并行加载数据，但需要指定 `TABLOCK`。 你可能会发现这与前面提到的有关 bulkload 的内容矛盾，但主要区别在于，在相同事务下执行临时表中的并行数据加载。
+ 此命令以类似于 BCP 或批量插入的方式将数据加载到列存储索引，但操作是以单个批完成的。 如果临时表中的行数 < 102400，行将加载到增量行组；否则，行将直接加载到压缩行组。 一个重要限制是此 `INSERT` 操作是单线程操作。 要并行加载数据，可以创建多个临时表，或者针对临时表中不重叠的行范围发出 `INSERT`/`SELECT`。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中解除了这种限制。 以下命令从临时表并行加载数据，但需要指定 `TABLOCK`。 你可能会发现这与前面提到的有关 bulkload 的内容矛盾，但主要区别在于，在相同事务下执行临时表中的并行数据加载。
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 

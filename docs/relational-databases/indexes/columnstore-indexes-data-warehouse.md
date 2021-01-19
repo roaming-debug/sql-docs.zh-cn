@@ -12,12 +12,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 702d2adcfda0f75937b9629467f14ca66f4acdad
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0ca8263c5d75fca3bc59164d8d3ff7acaa9c5f2e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97407461"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172729"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列存储索引 - 数据仓库
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "97407461"
   列存储索引与分区结合使用对于构建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据仓库而言必不可少。  
   
 ## <a name="whats-new"></a>新增功能  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 引入了以下用于增强列存储性能的功能：  
+ [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 引入了以下用于增强列存储性能的功能：  
   
 -   AlwaysOn 支持查询可读次要副本上的列存储索引。  
 -   多个活动的结果集 (MARS) 支持列存储索引。  
@@ -39,7 +39,7 @@ ms.locfileid: "97407461"
 -   数据库兼容级别 130 和更高级别的快照隔离。  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>通过结合使用非聚集索引和列存储索引来提高性能  
- 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，可以对聚集列存储索引定义非聚集索引。   
+ 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起，可以对聚集列存储索引定义非聚集索引。   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>示例︰借助非聚集索引提高表查找的效率  
  若要提高数据仓库中表查找的效率，可以创建专用于运行查询的非聚集索引，这种查询对于表查找的效率最高。 例如，查找匹配值或返回较小范围值的查询对于 B 树索引效果更好，而不是列存储索引。 它们无需通过列存储索引进行完整表扫描，只需通过 B 树索引执行二进制搜索就可以更快地返回正确结果。  
@@ -101,7 +101,7 @@ WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey);
 ```  
   
 ### <a name="improve-performance-by-enabling-row-level-and-row-group-level-locking"></a>通过启用行级和行组级锁定来提高性能  
- 为了在列存储索引功能上补充非聚集索引，[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 针对选择、更新和删除操作提供细粒度锁定功能。 可以通过在索引查找中对非聚集索引实施行级锁定，并在全表扫描中对列存储索引实施行组级锁定的方法来运行查询。 通过使用适当的行级和行组级锁定，可提高读/写并发效率。  
+ 为了在列存储索引功能上补充非聚集索引，[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 针对选择、更新和删除操作提供细粒度锁定功能。 可以通过在索引查找中对非聚集索引实施行级锁定，并在全表扫描中对列存储索引实施行组级锁定的方法来运行查询。 通过使用适当的行级和行组级锁定，可提高读/写并发效率。  
   
 ```sql  
 --Granular locking example  

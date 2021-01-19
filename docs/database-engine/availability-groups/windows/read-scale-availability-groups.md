@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4ccfc459fb5dbbc2a607fd0eb87853a776820098
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: c8f5f050598129e674a74e8b924c6b2ba274cb34
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642472"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171119"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>将读取缩放用于 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "97642472"
 
 ## <a name="read-scale-availability-groups-without-cluster"></a>不需要群集的读取缩放可用性组
 
-在 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 及更早版本中，所有可用性组都需要群集。 群集用于提供业务连续性，实现高可用性和灾难恢复 (HADR)。 此外，配置次要副本以执行读取操作。 如果目标不是高可用性，配置和运行群集消耗了相当大的运营开销。 SQL Server 2017 引入了不需要群集的读取缩放可用性组。 
+在 [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] 及更早版本中，所有可用性组都需要群集。 群集用于提供业务连续性，实现高可用性和灾难恢复 (HADR)。 此外，配置次要副本以执行读取操作。 如果目标不是高可用性，配置和运行群集消耗了相当大的运营开销。 SQL Server 2017 引入了不需要群集的读取缩放可用性组。 
 
 如果业务要求是转换主要副本上运行的任务关键型工作负荷的资源，用户现在可以使用只读路由或直接连接到可读次要副本。 而无需依赖于与任何群集技术的集成。 Windows 和 Linux 平台上的 SQL Server 2017 支持这些新功能。
 

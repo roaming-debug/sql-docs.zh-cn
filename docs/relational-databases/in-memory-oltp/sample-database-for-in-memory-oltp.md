@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4cf02b18cdaef035cd27b568d5f8d84f0a25619
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: bc7e46cf13da66476b53d68d5f2ea02fb29a69a5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094590"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172099"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "98094590"
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+-   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
   
 -   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16 GB 内存可供 SQL Server 使用。 有关内存中 OLTP 硬件的一般指南，请参阅下面的博客文章：[SQL Server 2014 中的内存中 OLTP 的硬件注意事项](blog-hardware-in-memory-oltp.md)
 
@@ -142,25 +142,25 @@ ms.locfileid: "98094590"
   
 -   内存优化表支持 *默认约束* ，大多数默认约束按原样迁移。 但是，原始表 Sales.SalesOrderHeader 包含两个为列 OrderDate 和 ModifiedDate 检索当前日期的默认约束。 在具有大量并发的高吞吐量订单处理工作负荷中，任何全局资源都可能成为争用点。 系统时间就是全局资源，我们观察到，它可能在运行插入销售订单的内存中 OLTP 工作负荷时成为瓶颈，特别是如果需要为销售订单表头中的多列以及销售订单详细信息检索系统时间。 此示例中解决问题的方式是仅为插入的每个销售订单检索系统时间一次，然后将该值用于 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的 datetime 列以及存储过程 Sales.usp_InsertSalesOrder_inmem。  
   
--   别名用户定义数据类型 (UDT) - 原始表将两个别名 UDT dbo.OrderNumber 和 dbo.AccountNumber 分别用于列 PurchaseOrderNumber 和 AccountNumber。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持别名 UDT，因而新表分别使用系统数据类型 nvarchar(25) 和 nvarchar(15)。  
+-   别名用户定义数据类型 (UDT) - 原始表将两个别名 UDT dbo.OrderNumber 和 dbo.AccountNumber 分别用于列 PurchaseOrderNumber 和 AccountNumber。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 在内存优化表中不支持别名 UDT，因而新表分别使用系统数据类型 nvarchar(25) 和 nvarchar(15)。  
   
 -   *索引键中可以为 Null 的列* - 在原始表中，列 SalesPersonID 可以为 Null，而在新表中，该列不可为 Null，并且默认约束值为 -1。 这种情况是因为内存优化表中的索引不能在索引键中具有可为 null 的列；-1 是这种情况下 NULL 的代理项。  
   
--   计算列 - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
+-   计算列 - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
 
     - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。  
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。
 
   
--   *中的内存优化表支持“外键约束”* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，前提是引用的表也是经过内存优化的。 引用也已迁移到内存优化的表的外键将保留在已迁移的表中，而其他外键则被忽略。  此外，SalesOrderHeader_inmem 是示例工作负荷中的热表，并且外键约束需要对所有 DML 操作进行附加处理，因为它需要在这些约束引用的所有其他表中进行查找。 因此，假设应用可确保 Sales.SalesOrderHeader_inmem 表的引用完整性，从而在插入行时不验证引用完整性。  
+-   *中的内存优化表支持“外键约束”* [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]，前提是引用的表也是经过内存优化的。 引用也已迁移到内存优化的表的外键将保留在已迁移的表中，而其他外键则被忽略。  此外，SalesOrderHeader_inmem 是示例工作负荷中的热表，并且外键约束需要对所有 DML 操作进行附加处理，因为它需要在这些约束引用的所有其他表中进行查找。 因此，假设应用可确保 Sales.SalesOrderHeader_inmem 表的引用完整性，从而在插入行时不验证引用完整性。  
   
--   *Rowguid* - 省略了 rowguid 列。 虽然内存优化表支持 uniqueidentifier，但是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中不支持选项 ROWGUIDCOL。 这种列通常用于合并复制或具有文件流列的表。 此示例不包括其中任何一种。  
+-   *Rowguid* - 省略了 rowguid 列。 虽然内存优化表支持 uniqueidentifier，但是 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]中不支持选项 ROWGUIDCOL。 这种列通常用于合并复制或具有文件流列的表。 此示例不包括其中任何一种。  
   
  Sales.SalesOrderDetail  
   
 -   *默认约束* - 类似于 SalesOrderHeader，未迁移需要系统时间/时间的默认约束，而是由插入销售订单的存储过程负责在第一次插入时插入当前系统日期/时间。  
   
--   *计算列* - 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，内存优化表不支持未作为计算列迁移的计算列 LineTotal。 要访问此列，请使用视图 Sales.vSalesOrderDetail_extended_inmem。  
+-   *计算列* - 在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中，内存优化表不支持未作为计算列迁移的计算列 LineTotal。 要访问此列，请使用视图 Sales.vSalesOrderDetail_extended_inmem。  
   
 -   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   

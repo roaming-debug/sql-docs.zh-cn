@@ -30,12 +30,12 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e1d8f3d96adfd912ae1e4707d8aaaf17ffec20b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7afde8d9db8beedc46ea597dc47e31877d170942
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476688"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172719"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结
  filegroup    
  指定要在其中创建新表的文件组的名称。 指定的文件组应存在于数据库中，否则 SQL Server 引擎会引发错误。   
  
- **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。
+ **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和更高版本。
   
 ## <a name="data-types"></a>数据类型  
  FILESTREAM 属性不转移到新表。 FILESTREAM BLOB 作为 varbinary(max) BLOB 复制并存储在新表中。 如果没有 FILESTREAM 属性，则 varbinary(max) 数据类型具有 2 GB 的限制。 如果某个 FILESTREAM BLOB 超过该值，则会引发 7119 错误并停止该语句。  
@@ -236,7 +236,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-copying-the-data-from-one-table-to-another-and-create-the-new-table-on-a-specified-filegroup"></a>F. 将数据从一个表复制到另一个表，并在指定的文件组上创建新表
 以下示例演示如何创建一个新表作为另一个表的副本，并将其加载到用户默认文件组之外的指定文件组。
 
- **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。
+ **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和更高版本。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

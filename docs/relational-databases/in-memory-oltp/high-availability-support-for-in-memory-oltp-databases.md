@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 92a09ac4702cae987c4fa5f4ccd420819c29073a
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 9b275387efa5cc44b012cccef82fb3284e594abb
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529428"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170539"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>对内存中 OLTP 数据库的高可用性支持
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91529428"
     次要副本维持持久内存优化表的内存中状态。 在发生自动或强制故障转移时，由于不需要恢复，因此故障转移到新的主要副本的时间相当于故障转移到基于磁盘的表的时间。 创建为 SCHEMA_ONLY 的内存优化表在此配置中受支持。 但是，由于未记录对这些表进行的更改，因此辅助副本上的这些表中不存在任何数据。  
   
 -   **可读取辅助角色**   
-    你可以访问和查询次要副本上的内存优化表（如果已针对读取访问进行配置）。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，次要副本上的读取时间戳与主要副本上的读取时间戳紧密同步，这意味着在主要副本上的更改很快在次要副本上变得可见。 这种紧密同步行为不同于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 内存中 OLTP。  
+    你可以访问和查询次要副本上的内存优化表（如果已针对读取访问进行配置）。 在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]中，次要副本上的读取时间戳与主要副本上的读取时间戳紧密同步，这意味着在主要副本上的更改很快在次要副本上变得可见。 这种紧密同步行为不同于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 内存中 OLTP。  
 
 ### <a name="considerations"></a>注意事项
 

@@ -17,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: e978c269a17f42bc75729303a860c61d4868f3fb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 45b22073dd0ac7e4c87d8fb838e9e55e346b5b5d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468608"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171459"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "97468608"
   
  您可以记录每个实例的服务器审核操作组，或记录每个数据库的数据库审核操作组或数据库审核操作。 在每次遇到可审核操作时，都将发生审核事件。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的所有版本均支持服务器级审核。 从 [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 开始，所有版本都支持数据库级审核。 在此之前，数据库级审核限制为 Enterprise、Developer 和 Evaluation 版本。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的所有版本均支持服务器级审核。 从 [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1 开始，所有版本都支持数据库级审核。 在此之前，数据库级审核限制为 Enterprise、Developer 和 Evaluation 版本。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 > [!NOTE]  
 >  本     主题适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]的信息，请参阅 [Get started with SQL database auditing（SQL 数据库审核入门）](/azure/azure-sql/database/auditing-overview)。  

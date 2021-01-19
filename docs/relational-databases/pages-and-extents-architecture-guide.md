@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fdc13dcfa509ed2df3ec39afe5a9aa591aa6e39
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 22e1a4832e3ef02d2b596ecd0dd4af3a08a7ec6e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461938"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171869"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -92,12 +92,12 @@ ms.locfileid: "97461938"
 
 一直到（并且包括）[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会将所有盘区分配给包含少量数据的表。 新表或索引通常从混合区分配页。 当表或索引增长到 8 页时，将变成使用统一区进行后续分配。 如果对现有表创建索引，并且该表包含的行足以在索引中生成 8 页，则对该索引的所有分配都使用统一区进行。 
 
-从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，用户数据库和 tempdb 中大多数分配的默认值都是使用统一盘区，但属于 [IAM 链](#IAM)的前八页的分配除外。 master、msdb 和 model 数据库的分配仍保留以前的行为。 
+从 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 开始，用户数据库和 tempdb 中大多数分配的默认值都是使用统一盘区，但属于 [IAM 链](#IAM)的前八页的分配除外。 master、msdb 和 model 数据库的分配仍保留以前的行为。 
 
 > [!NOTE]
 > 一直到，并且包括 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，跟踪标志 1118 可用于将默认分配更改为始终使用统一区。 有关此跟踪标志的详细信息，请参阅 [DBCC TRACEON - 跟踪标志](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 >   
-> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，将为 tempdb 和所有用户数据库自动启用 TF 1118 提供的功能。 对于用户数据库，此行为受 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 选项控制，同时默认值设置为禁用，且跟踪标志 1118 无效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
+> 从 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 开始，将为 tempdb 和所有用户数据库自动启用 TF 1118 提供的功能。 对于用户数据库，此行为受 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 选项控制，同时默认值设置为禁用，且跟踪标志 1118 无效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
 
 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，`sys.dm_db_database_page_allocations` 系统函数可以报告数据库、表、索引和分区的页分配信息。
 

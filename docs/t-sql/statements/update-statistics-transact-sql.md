@@ -22,12 +22,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8d9cc3f1218ab0e374359a57dce6cb13dc0b8a6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 3680ba07e290f8b531ab46576f76bd3ffeee3460
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099397"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170439"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -108,7 +108,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  对于基于默认抽样的查询计划并非最佳的特殊情况，SAMPLE 非常有用。 在大多数情况下，不必指定 SAMPLE，这是因为在默认情况下，查询优化器根据需要采用抽样，并以统计方式确定大量样本的大小，以便创建高质量的查询计划。 
  
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，在使用兼容性级别 130 时，并行执行数据采样以生成统计信息，从而提高统计信息收集的性能。 只要表大小超过某个阈值，查询优化器就会使用并行采样统计信息。 
+从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，在使用兼容性级别 130 时，并行执行数据采样以生成统计信息，从而提高统计信息收集的性能。 只要表大小超过某个阈值，查询优化器就会使用并行采样统计信息。 
    
  SAMPLE 不能与 FULLSCAN 选项一起使用。 如果未指定 SAMPLE 和 FULLSCAN，查询优化器则默认使用抽样数据并计算样本大小。  
   
@@ -136,7 +136,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 和 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 公开选定统计信息的持久样本百分比值。
  
- **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 开始）及更高版本（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 开始）。  
+ **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4 开始）及更高版本（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 开始）。  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 强制重新计算涵盖在 ON PARTITIONS 子句中指定的分区的叶级统计信息，然后合并它们以生成全局统计信息。 需要 WITH RESAMPLE，因为使用不同抽样率生成的分区统计信息不能合并在一起。  
   
@@ -171,7 +171,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本
 
 MAXDOP = max_degree_of_parallelism  
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
   
  在统计信息操作期间替代最大并行度配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   

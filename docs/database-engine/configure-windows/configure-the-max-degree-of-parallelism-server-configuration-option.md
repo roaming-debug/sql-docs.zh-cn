@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperf-fy20q4
-ms.openlocfilehash: e42d6b716202a5080e5d6330bc0a674f0c627878
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 7b0e4b8abf21d918e7d4d627c7ed82d5507394ec
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878919"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171059"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>配置 max degree of parallelism 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,9 +55,9 @@ ms.locfileid: "97878919"
 -   除了查询和索引操作之外，此选项还控制 DBCC CHECKTABLE、DBCC CHECKDB 和 DBCC CHECKFILEGROUP 的并行。 使用跟踪标志 2528，可以禁用为这些语句所做的并行执行计划。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 ###  <a name="recommendations"></a><a name="Recommendations"></a> <a name="Guidelines"></a> 建议  
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，在服务启动期间，如果 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在启动时检测到每个 NUMA 节点或插槽内的物理内核数目超过 8 个，在默认情况下就会自动创建 soft-NUMA 节点。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 将相同物理内核中的逻辑处理器放入不同的 soft-NUMA 节点中。 下表中的建议旨在将并行查询的所有工作线程保持在相同 soft-NUMA 节点中。 这将提高跨工作负荷 NUMA 节点查询和分布工作线程的性能。 有关详细信息，请参阅 [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)。
+从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，在服务启动期间，如果 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在启动时检测到每个 NUMA 节点或插槽内的物理内核数目超过 8 个，在默认情况下就会自动创建 soft-NUMA 节点。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 将相同物理内核中的逻辑处理器放入不同的 soft-NUMA 节点中。 下表中的建议旨在将并行查询的所有工作线程保持在相同 soft-NUMA 节点中。 这将提高跨工作负荷 NUMA 节点查询和分布工作线程的性能。 有关详细信息，请参阅 [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)。
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，请使用以下准则配置“最大并行度”服务器配置值：
+从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，请使用以下准则配置“最大并行度”服务器配置值：
 
 |服务器配置|处理器数目|指南|
 |----------------|-----------------|-----------------|
@@ -67,7 +67,7 @@ ms.locfileid: "97878919"
 |具有多个 NUMA 节点的服务器|每个 NUMA 节点大于 16 个逻辑处理器|将 MAXDOP 保持为每个 NUMA 节点逻辑处理器数量的一半，最大值为 16|
   
 > [!NOTE]
-> 上表中的 NUMA 节点是指，由 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本自动创建的 soft-NUMA 节点，或基于硬件的 NUMA 节点（如果 soft-NUMA 已遭禁用的话）。   
+> 上表中的 NUMA 节点是指，由 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本自动创建的 soft-NUMA 节点，或基于硬件的 NUMA 节点（如果 soft-NUMA 已遭禁用的话）。   
 >  为 Resource Governor 工作负荷组设置“最大并行度”选项时，请使用这些相同的准则。 有关详细信息，请参阅 [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)。
   
 从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，请使用以下准则配置“最大并行度”服务器配置值：

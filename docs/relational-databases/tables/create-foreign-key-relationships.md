@@ -14,12 +14,12 @@ ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdd110fd51d42ae13054a5d189c1180a9af623ee
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 933532a516f18aab01e1a32584590d65940c75b6
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484509"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170199"
 ---
 # <a name="create-foreign-key-relationships"></a>创建外键关系
 
@@ -42,7 +42,7 @@ ms.locfileid: "97484509"
 - FOREIGN KEY 约束可引用同一表中的其他列，并称之为自引用。
 - 在列级指定的 FOREIGN KEY 约束只能列出一个引用列。 此列的数据类型必须与定义约束的列的数据类型相同。
 - 在表级指定的 FOREIGN KEY 约束所具有的引用列数目必须与约束列列表中的列数相同。 每个引用列的数据类型也必须与列表中相应列的数据类型相同。
-- 对于表可包含的引用其他表的 FOREIGN KEY 约束的数目，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 没有预定义的限制。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 也不限制由引用特定表的其他表所拥有的 FOREIGN KEY 约束的数目。 但是，使用的 FOREIGN KEY 约束的实际数目受硬件配置以及数据库和应用程序设计的限制。 表最多可以将 253 个其他表和列作为外键引用（传出引用）。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本将可在单独的表中引用的其他表和列（传入引用）的数量限制从 253 提高至 10,000。 （兼容性级别至少必须为 130。）数量限制的提高带来了下列约束：
+- 对于表可包含的引用其他表的 FOREIGN KEY 约束的数目，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 没有预定义的限制。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 也不限制由引用特定表的其他表所拥有的 FOREIGN KEY 约束的数目。 但是，使用的 FOREIGN KEY 约束的实际数目受硬件配置以及数据库和应用程序设计的限制。 表最多可以将 253 个其他表和列作为外键引用（传出引用）。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本将可在单独的表中引用的其他表和列（传入引用）的数量限制从 253 提高至 10,000。 （兼容性级别至少必须为 130。）数量限制的提高带来了下列约束：
 
   - DELETE 和 UPDATE DML 操作支持大于 253 个外键引用。 不支持 MERGE 操作。
   - 对自身进行外键引用的表仍只能进行 253 个外键引用。

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9e0d729d951de184aa16717e784f14ae244639d8
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 12c1273473fd91c0ea5222add0288fac1b06f37b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098476"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170589"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -135,7 +135,7 @@ CODEPAGE = { 'ACP' \| 'OEM' \| 'RAW' \| 'code_page' }：指定数据文件中数
 |ACP|数据类型为 **char**、**varchar** 或 **text** 的列从 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|
 |OEM（默认值）|数据类型为 **char**、**varchar** 或 **text** 的列从系统 OEM 代码页转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|
 |RAW|不进行从一个代码页到另一个代码页的转换；这是最快的选项。|
-|*code_page*|特定的代码页码，例如 850。<br /><br /> &#42;&#42; 重要提示 &#42;&#42; 低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|
+|*code_page*|特定的代码页码，例如 850。<br /><br /> &#42;&#42; 重要提示 &#42;&#42; 低于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|
 | &nbsp; | &nbsp; |
 
 DATAFILETYPE = { 'char' \| 'native' \| 'widechar' \| 'widenative' }：指定 BULK INSERT 使用指定的数据文件类型值执行导入操作    。

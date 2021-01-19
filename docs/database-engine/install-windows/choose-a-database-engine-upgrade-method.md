@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: c36d6718455f85314f98219b860a801984804d9d
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: 4acdd7f1d8b6a39af4054f30381665d1504bcb71
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975435"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171829"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -86,10 +86,10 @@ ms.locfileid: "97975435"
  例如，可以使用这种方法来升级：  
   
 -   在不受支持的操作系统上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。    
--   由于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本不支持 x86 安装，请安装 x86 的 SQL Server。   
+-   由于 [!INCLUDE[ss2016](../../includes/sssql16-md.md)] 及更高版本不支持 x86 安装，请安装 x86 的 SQL Server。   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到新硬件和/或操作系统新版本。    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 结合服务器合并。   
--   由于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本不支持就地升级 SQL Server 2005，请使用 SQL Server 2005。 有关详细信息，请参阅[是否正在从 SQL Server 2005 进行升级](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)。
+-   由于 [!INCLUDE[ss2016](../../includes/sssql16-md.md)] 及更高版本不支持就地升级 SQL Server 2005，请使用 SQL Server 2005。 有关详细信息，请参阅[是否正在从 SQL Server 2005 进行升级](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)。
 
   
 新的安装升级所需的步骤根据你是否在使用连接存储或 SAN 存储而存在少许差异。  

@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: d28d41c85b267d3920e62773f3694cabb252c64b
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: e1dcbea42043d1077dd2b0c9e0f1127c9319842b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125456"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170739"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "96125456"
   
  SQL Server 支持通过以下方式将备份存储到 Microsoft Azure Blob 存储服务：  
   
--   **管理向 Microsoft Azure 进行的备份：** 使用与用于备份到磁盘和磁带相同的方法，现在可通过指定 URL 作为备份目标，备份到 Microsoft Azure 存储。 可使用此功能手动备份或配置自己的备份策略，如同对于本地存储或其他站点外选项所做的一样。 此功能也称为 **SQL Server 备份到 URL**。 有关详细信息，请参阅 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。 SQL Server 2012 SP1 CU2 或更高版本中提供此功能。 此功能在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中得到了增强，以便通过使用块 Blob、共享访问签名和条带化提高性能和改进功能。  
+-   **管理向 Microsoft Azure 进行的备份：** 使用与用于备份到磁盘和磁带相同的方法，现在可通过指定 URL 作为备份目标，备份到 Microsoft Azure 存储。 可使用此功能手动备份或配置自己的备份策略，如同对于本地存储或其他站点外选项所做的一样。 此功能也称为 **SQL Server 备份到 URL**。 有关详细信息，请参阅 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。 SQL Server 2012 SP1 CU2 或更高版本中提供此功能。 此功能在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中得到了增强，以便通过使用块 Blob、共享访问签名和条带化提高性能和改进功能。  
   
     > [!NOTE]  
     >  对于版本低于 SQL Server 2012 SP1 CU2 的 SQL Server，可使用外接程序“SQL Server 备份到 Microsoft Azure 工具”快速轻松地向 Microsoft Azure 存储创建备份。 有关详细信息，请参阅 [下载中心](https://go.microsoft.com/fwlink/?LinkID=324399)。  
@@ -42,7 +42,7 @@ ms.locfileid: "96125456"
 -   灵活、可靠、无限制的站点外存储：在 Microsoft Azure Blob 服务上存储备份是一种方便、灵活、易于访问的站点外备选方法。 为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份创建站点外存储就像修改您的现有脚本/作业一样简单。 场外存储通常应当远离生产数据库位置，以防止某个灾难可能同时影响场外和生产数据库位置。 通过选择地理复制 Blob 存储区，您在发生可能影响整个区域的灾难时多了一层额外的保护。 此外，备份副本随时随地可用，并可以轻松访问它们来执行还原。  
   
     > [!IMPORTANT]  
-    >  在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中使用块 blob 可以条带化备份集，支持对大小高达 12.8 TB 的文件进行备份。  
+    >  在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]中使用块 blob 可以条带化备份集，支持对大小高达 12.8 TB 的文件进行备份。  
   
 -   备份存档：Microsoft Azure Blob 存储服务提供一种更好地替代常用磁带方案的方法来存档备份。 选择磁带存储时可能需要将数据实际运输到场外设施，并且需要采取一些介质保护措施。 在 Microsoft Azure Blob 存储区中存储你的备份可以提供一个即时、高度可用、耐久的存档方案。  
   

@@ -24,12 +24,12 @@ ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 00926a8ee1244112d1fb5a01273e90d22a5753a7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: eeae562c4cfbf093d3b7237a044c51084331e8a9
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463967"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172239"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 语句 - VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -110,7 +110,7 @@ FROM <backup_device> [ ,...n ]
 >  RESTORE VERIFYONLY 不对数据库快照进行检查。 要在恢复操作之前验证数据库快照，可以运行 DBCC CHECKDB。  
   
 > [!NOTE]  
->  借助快照备份，RESTORE VERIFYONLY 可确认快照是否在备份文件中指定的位置处存在。 快照备份是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新功能。 有关快照备份的详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+>  借助快照备份，RESTORE VERIFYONLY 可确认快照是否在备份文件中指定的位置处存在。 快照备份是 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中的新功能。 有关快照备份的详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ## <a name="security"></a>安全性  
  在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码可防止未经授权而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作以及向介质追加备份集。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  

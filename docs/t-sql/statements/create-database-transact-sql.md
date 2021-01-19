@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: fbca8f9ddae17466aa99ae096efbf9b23d03c24c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7898cec5362efc7902623993f568600271c033d5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100849"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171609"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -371,7 +371,7 @@ SIZE size 指定文件的大小。
 
 size 文件的初始大小。
 
-如果没有为主文件提供 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用 model 数据库中主文件的大小。 model 数据库中主文件的默认大小为 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）或 1 MB（对于较早版本）。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）或 1 MB（对于较早版本）作为该文件的大小。 为主文件指定的大小至少应与 model 数据库的主文件大小相同。
+如果没有为主文件提供 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用 model 数据库中主文件的大小。 model 数据库中主文件的默认大小为 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）或 1 MB（对于较早版本）。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）或 1 MB（对于较早版本）作为该文件的大小。 为主文件指定的大小至少应与 model 数据库的主文件大小相同。
 
 可以使用千字节 (KB)、兆字节 (MB)、千兆字节 (GB) 或兆兆字节 (TB) 后缀。 默认值为 MB。 指定一个整数，不包含小数位。 *Size* 是一个整数值。 对于大于 2147483647 的值，使用更大的单位。
 
@@ -396,7 +396,7 @@ growth_increment 每次需要新空间时为文件添加的空间量。
 
 |版本|默认值|
 |-------------|--------------------|
-|从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始|数据 64 MB。 日志文件 64 MB。|
+|从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始|数据 64 MB。 日志文件 64 MB。|
 |从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始|数据 1 MB。 日志文件 10%。|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|数据 10%。 日志文件 10%。|
 

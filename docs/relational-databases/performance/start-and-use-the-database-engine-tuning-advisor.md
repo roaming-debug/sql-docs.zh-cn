@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9bf93bf9b59df77efe905a6c0debb722c63c3bbb
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 5b83b5781d8c40c0acc6ee79ab0730c249def7c5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643033"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172519"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "97643033"
 
       ||  
       |-|  
-      |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
+      |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
 
   
 -   将计划缓存用作工作负荷。 这样，可以避免手动创建工作负荷。 有关详细信息，请参阅本主题后面的 [优化数据库](#Tune) 。  
