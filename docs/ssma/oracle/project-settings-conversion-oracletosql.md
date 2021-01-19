@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
 ms.author: alexiva
-ms.openlocfilehash: 5c99ab8dec72a621ddb3f312e581907b0e4ba6d4
-ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
+ms.openlocfilehash: a999bcde42029b50772f18925a1f24432d558a3f
+ms.sourcegitcommit: 8fcee1bc2503bea81a0c9d02827193ab71d8ca32
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97665852"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564226"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>项目设置（转换）(OracleToSQL)
 
@@ -45,7 +45,7 @@ ms.locfileid: "97665852"
 |-|-|
 |**生成有关问题的消息**|指定 SSMA 是否在转换过程中生成信息性消息，在 "输出" 窗格中显示它们，并将它们添加到转换后的代码中。<br /><br />在 " **模式** " 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观模式：** 不<br />**完整模式：** 不|
 
-## <a name="miscellaneous-options"></a>其他选项
+## <a name="miscellaneous-options"></a>“杂项”选项
 
 |术语|定义|
 |-|-|
