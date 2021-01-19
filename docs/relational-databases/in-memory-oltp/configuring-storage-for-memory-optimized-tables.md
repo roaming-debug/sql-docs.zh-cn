@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a88af1af1e814ee6340f72553d74fdba1247c51e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ebedb1071dc5953bc78918f928f0f53a7145e282
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542883"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98167789"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>为内存优化表配置内存
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89542883"
 -   如果空间允许，检查点文件通常在所有容器中均匀分布。 如果使用 SQL Server 2014，需要预配的容器数为奇数，以实现均匀分布 - 自 2016 开始，奇数和偶数目的容器均可实现均匀分布。
   
 ## <a name="encryption"></a>加密  
- 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本中，在数据库上启用透明数据加密 (TDE) 期间，内存优化表的存储将进行静态加密。 有关详细信息，请参阅[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，即使在数据库上启用了 TDE，也不会对检查点文件加密。
+ 在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本中，在数据库上启用透明数据加密 (TDE) 期间，内存优化表的存储将进行静态加密。 有关详细信息，请参阅[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，即使在数据库上启用了 TDE，也不会对检查点文件加密。
 
  [非持久](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md) (SCHEMA_ONLY) 内存优化表中的数据在任何时候都不会写入磁盘。 因此，TDE 不适用于这类表。
   

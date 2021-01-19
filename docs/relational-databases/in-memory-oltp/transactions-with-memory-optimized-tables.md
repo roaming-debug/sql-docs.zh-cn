@@ -12,12 +12,12 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cef950e416d811133f1c12b524222c7caefc0db6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b191ae876e63e6a8aa6c40c0441963fef4c6acb1
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480098"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169069"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>具有内存优化表的事务
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -147,7 +147,7 @@ ALTER DATABASE CURRENT
 | **41325** | 可序列化验证失败。 将新行插入到了现有事务之前已扫描的区域。 我们将此称为虚拟行。 | 如果使用 SERIALIZABLE 隔离，并且某个并发事务的操作导致主键约束、唯一约束或外键约束冲突，则会发生此错误。 <br/><br/> 这种并发的约束冲突很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误，这一点与可重复读验证失败相似。 |  
 | **41301** | 依赖项失败：依赖另一个事务，但该事务随后无法提交。 | 此事务 (Tx1) 在另一个事务 (Tx2) 处于其验证或提交处理阶段时，通过读取该事务 (Tx2) 写入的数据依赖于 Tx2。 Tx2 随后无法提交。 Tx2 无法提交最常见的原因是可重复读 (41305) 和可序列化 (41325) 验证失败；不太常见的原因是日志 IO 失败。 |
 | 41823 和 41840 | 已达到内存优化表和表变量中的用户数据配额。 | 错误 41823 适用于 SQL Server Express/Web/Standard Edition，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的单一数据库。 错误 41840 适用于 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的弹性池。 <br/><br/> 在大多数情况下，这些错误表示已达到最大用户数据大小。从内存优化表中删除数据可解决该错误。 但是，也存在极少数特殊情况，即此错误是暂时性的。 因此，我们建议在第一次遇到这些错误时重试。<br/><br/> 同此列表中的其他错误一样，错误 41823 和 41840 会导致活动事务中止。 |
-| **41839** | 事务超出了最大提交依赖项数目。 |适用对象：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 更高版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]没有提交依赖关系数量限制。<br/><br/> 给定事务 (Tx1) 可以依赖的事务数具有限制。 这些事务是传出依赖项。 此外，可以依赖给定事务 (Tx1) 的事务数也有限制。 这些事务是传入依赖项。 两个限制均为 8。 <br/><br/> 导致此失败最常见的情况是有大量读取事务正在访问由单个写入事务写入的数据。 如果所有读取事务都在对相同数据执行大范围扫描，并且写入事务的验证或提交处理时间很长，例如，写入事务在 SERIALIZABLE 隔离下执行大范围扫描（延长了验证阶段的持续时间）或事务日志放置在慢速日志 IO 设备上（延长了提交处理的持续时间），则发生这种情况的可能性会增加。 如果读取事务正在执行大范围扫描，但只需访问几行数据，则可能缺少索引。 同样，如果写入事务正在 SERIALIZABLE 隔离下执行大范围扫描，但只需访问几行数据，这也是缺少索引的征兆。 <br/><br/> 可以使用跟踪标志 9926 解除提交依赖关系数量限制。 只有在确认不缺少索引后仍发生此错误条件时，才使用此跟踪标志，因为它可能会掩盖上述情况中的这些问题。 另需注意的是，复杂的依赖关系图会导致系统效率低下，这里的复杂是指每个事务都有大量传入和传出依赖项，并且每个事务都有许多层依赖关系。  |
+| **41839** | 事务超出了最大提交依赖项数目。 |适用对象：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]。 更高版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]没有提交依赖关系数量限制。<br/><br/> 给定事务 (Tx1) 可以依赖的事务数具有限制。 这些事务是传出依赖项。 此外，可以依赖给定事务 (Tx1) 的事务数也有限制。 这些事务是传入依赖项。 两个限制均为 8。 <br/><br/> 导致此失败最常见的情况是有大量读取事务正在访问由单个写入事务写入的数据。 如果所有读取事务都在对相同数据执行大范围扫描，并且写入事务的验证或提交处理时间很长，例如，写入事务在 SERIALIZABLE 隔离下执行大范围扫描（延长了验证阶段的持续时间）或事务日志放置在慢速日志 IO 设备上（延长了提交处理的持续时间），则发生这种情况的可能性会增加。 如果读取事务正在执行大范围扫描，但只需访问几行数据，则可能缺少索引。 同样，如果写入事务正在 SERIALIZABLE 隔离下执行大范围扫描，但只需访问几行数据，这也是缺少索引的征兆。 <br/><br/> 可以使用跟踪标志 9926 解除提交依赖关系数量限制。 只有在确认不缺少索引后仍发生此错误条件时，才使用此跟踪标志，因为它可能会掩盖上述情况中的这些问题。 另需注意的是，复杂的依赖关系图会导致系统效率低下，这里的复杂是指每个事务都有大量传入和传出依赖项，并且每个事务都有许多层依赖关系。  |
   
 ### <a name="retry-logic"></a>重试逻辑 
 

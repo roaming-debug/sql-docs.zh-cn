@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: d81ecf6b555022aeac47e810041d96a57f61b00b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 43f3bbae327731f6522b71c0fdaafbc9441fe9ca
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468208"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169746"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -249,7 +249,7 @@ SELECT *
 |ACP|将数据类型为 char、varchar 或 text 的列由 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页    。|
 |OEM（默认值）|将数据类型为 char、varchar 或 text 的列由系统 OEM 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页    。|
 |RAW|不执行从一个代码页到另一个代码页的转换。 这是执行最快的选项。|
-|*code_page*|指示数据文件中字符数据已编码的源代码页，例如 850。<br /><br /> **重要提示**：低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|
+|*code_page*|指示数据文件中字符数据已编码的源代码页，例如 850。<br /><br /> **重要提示**：低于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|
 
 ##### <a name="format"></a>FORMAT
 `FORMAT` = 'CSV' 适用范围：   [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。

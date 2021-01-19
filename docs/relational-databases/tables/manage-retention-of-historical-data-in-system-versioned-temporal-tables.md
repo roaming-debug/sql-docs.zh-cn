@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f742ece496377a224a67b12223b09d198327812a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c0dac2b5d344969f96016a86622ee4e07ab8c23d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484489"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98167972"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理由系统控制版本的临时表中历史数据的保留期
 
@@ -70,7 +70,7 @@ ms.locfileid: "97484489"
 
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>使用延伸向导延伸整个历史记录表
 
-适用于初学者的最简单方法是使用延伸向导为整个数据库启用延伸，然后在延伸向导中选择临时历史记录表（本示例假设你已将 Department 表配置为其他空数据库中的版本由系统控制的临时表）。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，你无法右键单击临时历史记录表本身和单击“延伸”。
+适用于初学者的最简单方法是使用延伸向导为整个数据库启用延伸，然后在延伸向导中选择临时历史记录表（本示例假设你已将 Department 表配置为其他空数据库中的版本由系统控制的临时表）。 在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]中，你无法右键单击临时历史记录表本身和单击“延伸”。
 
 1. 右键单击数据库，指向“任务”  ，指向“延伸”  ，然后单击“启用”  以启动向导。
 2. 在“选择表”  窗口中，选择临时历史记录表的复选框，然后单击“下一步”。

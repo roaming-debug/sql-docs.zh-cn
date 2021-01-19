@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 345c02a175643967a509900ab415b90708a3d9e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 910db0887a50e12163ddeda927159f5e6c97b74b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478298"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169275"
 ---
 # <a name="tempdb-database"></a>TempDB 数据库
 
@@ -213,7 +213,7 @@ GO
 将 `tempdb` 数据库放置在用户数据库使用的磁盘以外的磁盘中。
 
 ## <a name="performance-improvements-in-tempdb-for-sql-server"></a>SQL Server 中 tempdb 的性能提高
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，已通过以下方式进一步优化 `tempdb` 性能：  
+从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，已通过以下方式进一步优化 `tempdb` 性能：  
   
 - 已缓存的临时表和表变量。 缓存允许删除和创建临时对象的操作非常快速地运行。 缓存还可以减少页分配和元数据争用问题。  
 - 改进了分配页闩锁协议，减少了所用 `UP`（更新）闩锁的数量。  
