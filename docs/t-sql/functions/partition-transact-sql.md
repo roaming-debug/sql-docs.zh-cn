@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 95f101b79978c86e2b963891d495ff5a067b5fd9
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: e32332d4b258a4fb37b49aa4d6715483998cd83d
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96128376"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241864"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中任何指定的分区函数返回分区号，一组分区列值将映射到该分区号中。  
+  为 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中任何指定的分区函数返回分区号，一组分区列值将映射到该分区号中。
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   

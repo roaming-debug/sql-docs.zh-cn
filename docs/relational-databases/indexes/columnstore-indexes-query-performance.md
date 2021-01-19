@@ -12,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e662c2fe2037725785b7c7caeeff1c52f45c34d1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1ea031ed8c733a2ced272bf05c952b7f32aa7da4
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480138"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172769"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
 
@@ -32,7 +32,7 @@ ms.locfileid: "97480138"
     
 ### <a name="1-organize-data-to-eliminate-more-rowgroups-from-a-full-table-scan"></a>1.组织数据使更多行组不用进行全表扫描    
     
--   **利用插入顺序。** 通常情况下，在传统数据仓库中，数据实际上是按时间顺序插入的，而分析是在时间维度中完成的。 例如，按季度分析销售额。 对于此类型的工作负荷，行组消除自动发生。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，可以找出在查询处理过程中跳过的数字行组。    
+-   **利用插入顺序。** 通常情况下，在传统数据仓库中，数据实际上是按时间顺序插入的，而分析是在时间维度中完成的。 例如，按季度分析销售额。 对于此类型的工作负荷，行组消除自动发生。 在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中，可以找出在查询处理过程中跳过的数字行组。    
     
 -   **利用行存储聚集索引。** 如果常见的查询谓词在某一列（例如 C1）上，而该列与行的插入顺序无关，则可在列 C1 上创建一个行存储聚集索引，再通过删除行存储聚集索引来创建聚集列存储索引。 如果使用 `MAXDOP = 1` 显式创建聚集列存储索引，则得到的聚集列存储索引会在 C1 列上完美排序。 如果指定了 `MAXDOP = 8`，则值会在 8 个行组中重叠。 此策略的一个常见示例是当你最初使用大型数据集创建列存储索引时。 请注意，对于非聚集列存储索引 (NCCI)，如果基本行存储表具有聚集索引，则行已经排序。 在这种情况下，生成的非聚集列存储索引将自动进行排序。 要注意的重要一点是，列存储索引本身不维护行的顺序。 当插入新行或更新旧行时，你可能需要重复该过程，因为分析查询性能可能会降低    
     
@@ -52,7 +52,7 @@ ms.locfileid: "97480138"
     
  如果表中包含的行超过 100 万行，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法获得足够大的内存授予来使用 MAXDOP 创建索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会根据需要自动减少 `MAXDOP`，以便适合可用内存授予。  在某些情况下，DOP 必须减小到一个以便在受到约束的内存下生成索引。    
     
- 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，查询始终以批处理模式运行。 在以前版本中，仅当 DOP 大于 1 时，才使用批处理执行。    
+ 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，查询始终以批处理模式运行。 在以前版本中，仅当 DOP 大于 1 时，才使用批处理执行。    
     
 ## <a name="columnstore-performance-explained"></a>说明的列存储性能    
  列存储索引通过将高速内存中批处理模式处理与可极大减少 I/O 要求的技术组合使用来实现高查询性能。 由于分析查询扫描大量行，它们通常进行 IO 绑定，因此在查询执行过程中减少 I/O 对于列存储索引的设计至关重要。 数据读取到内存中后，减少内存中的操作数量很重要。    
@@ -82,7 +82,7 @@ ms.locfileid: "97480138"
     
  **列存储索引何时需要执行全表扫描？**    
     
- 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可以在聚集列存储索引上创建一个或多个常规非聚集 B 树索引，就像可以在行存储堆上创建一样。 非聚集 B 树索引可以加快具有相等谓词或包含小范围值的谓词的查询速度。 对于更复杂的谓词，查询优化器可以选择全表扫描。 如果没有跳过行组的功能，全表扫描会非常耗时，特别是对于大型表更是如此。    
+ 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，可以在聚集列存储索引上创建一个或多个常规非聚集 B 树索引，就像可以在行存储堆上创建一样。 非聚集 B 树索引可以加快具有相等谓词或包含小范围值的谓词的查询速度。 对于更复杂的谓词，查询优化器可以选择全表扫描。 如果没有跳过行组的功能，全表扫描会非常耗时，特别是对于大型表更是如此。    
     
  **分析查询何时从全表扫描的行组消除受益？**    
     
@@ -99,7 +99,7 @@ ms.locfileid: "97480138"
     
  并非所有查询执行运算符都可以在批处理模式下执行。 例如，DML 操作（如 Insert、Delete 或 Update）一次执行一行。 批处理模式运算符面向可提高查询性能的运算符（如 Scan、Join、Aggregate、sort 等）。 由于列存储索引是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引入的，因此需要持续扩展可以在批处理模式下执行的运算符。 下表按照产品版本显示了以批处理模式运行的运算符。    
     
-|批处理模式运算符|何时使用此项？|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|注释|    
+|批处理模式运算符|何时使用此项？|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|注释|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML 操作（insert、delete、update、merge）||否|否|否|DML 不是批处理模式操作，因为它不是并行的。 即使我们启用串行模式批处理操作，允许 DML 以批处理模式处理，我们也看不到明显的收益。|    
 |columnstore index scan|扫描|NA|是|是|对于列存储索引，我们可以将谓词推送到 SCAN 节点。|    
@@ -116,14 +116,14 @@ ms.locfileid: "97480138"
 |带有串行查询计划的单线程查询||否|否|是||    
 |sort|使用列存储索引的 SCAN 中的 Order by 子句。|否|否|是||    
 |top sort||否|否|是||    
-|window aggregates||NA|NA|是|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新运算符。|    
+|window aggregates||NA|NA|是|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中的新运算符。|    
     
-<sup>1</sup>适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层、标准层（S3 及更高）和所有 vCore 层，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+<sup>1</sup>适用于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层、标准层（S3 及更高）和所有 vCore 层，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
 
 有关详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)。
     
 ### <a name="aggregate-pushdown"></a>聚合下推    
- 聚合计算的常规执行路径是从 SCAN 节点提取符合条件的行，然后以批处理模式聚合值。 尽管这提供了良好的性能，但使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，可以将聚合运算推送到 SCAN 节点，以便在批处理模式执行的基础上将聚合计算的性能提高好几个数量级，前提是要满足以下条件： 
+ 聚合计算的常规执行路径是从 SCAN 节点提取符合条件的行，然后以批处理模式聚合值。 尽管这提供了良好的性能，但使用 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]，可以将聚合运算推送到 SCAN 节点，以便在批处理模式执行的基础上将聚合计算的性能提高好几个数量级，前提是要满足以下条件： 
  
 -    聚合为 `MIN`、`MAX`、`SUM`、`COUNT` 和 `COUNT(*)`。 
 -  聚合运算符必须基于 SCAN 节点或包含 `GROUP BY` 的 SCAN 节点。
@@ -157,7 +157,7 @@ FROM FactResellerSalesXL_CCI;
     
 让我们设想一个维度表 `Products`。 典型的主键是通常用字符串数据类型表示的 `ProductCode`。 为提高查询性能，最佳做法是创建代理键（通常为整数列），从事实数据表引用维度表中的行。 
     
-列存储索引非常高效地运行具有联接/涉及数值的谓词或基于整数的键的分析查询。 但是，在很多客户工作负荷中，我们发现使用基于字符串的列链接事实/维度表，结果是使用列存储索引的查询性能并不如预期。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通过将包含字符串列的谓词下推到 SCAN 节点，使用基于字符串的列显著提高了分析的性能。    
+列存储索引非常高效地运行具有联接/涉及数值的谓词或基于整数的键的分析查询。 但是，在很多客户工作负荷中，我们发现使用基于字符串的列链接事实/维度表，结果是使用列存储索引的查询性能并不如预期。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 通过将包含字符串列的谓词下推到 SCAN 节点，使用基于字符串的列显著提高了分析的性能。    
     
 字符串谓词下推利用为列创建的主/辅助字典来提高查询性能。 例如，让我们考虑在行组中创建一个包含 100 个不同字符串值的字符串列段。 假定有 100 万行，这意味着平均每个不同的字符串值被引用了 10,000 次。    
     

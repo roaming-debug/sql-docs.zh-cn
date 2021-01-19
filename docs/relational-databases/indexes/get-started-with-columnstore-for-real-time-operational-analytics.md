@@ -12,17 +12,17 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e89b5ab77b4b77d5cca83f6b3691027122444fe1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4e62692402f33bfc42957363794bad9a698b18bb
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465338"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172759"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>开始使用列存储进行实时运营分析
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 引入了实时运营分析，它可同时对相同的数据库表运行分析和 OLTP 工作负载。 除了实时运行分析以外，你还可以消除对 ETL 和数据仓库的需求。  
+  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 引入了实时运营分析，它可同时对相同的数据库表运行分析和 OLTP 工作负载。 除了实时运行分析以外，你还可以消除对 ETL 和数据仓库的需求。  
   
 ## <a name="real-time-operational-analytics-explained"></a>实时运行分析介绍  
  传统上，企业有用于运营工作负荷（即 OLTP）和分析工作负荷的独立系统。 对于此类系统，提取、转换和加载 (ETL) 作业会定期将数据从操作存储转移到分析存储。 分析数据通常存储在专用于运行分析查询的数据仓库或数据市场中。 尽管这种解决方案已成为标准，但在以下三个方面存在很大问题：  

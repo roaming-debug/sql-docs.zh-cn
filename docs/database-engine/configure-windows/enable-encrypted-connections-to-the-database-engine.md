@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b18a3131329e0485221a0ae2cdaafd0726a4f31c
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 1b5726aad103012b0ed7619749c1f6f669baa234
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878947"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241828"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
 
@@ -40,7 +40,7 @@ ms.locfileid: "97878947"
  必须为服务器计算机预配证书。 在服务器计算机上预配证书，即[将其导入 Windows](#single-server)。 必须将客户端计算机设置为[信任证书的根颁发机构](#about)。  
   
 > [!IMPORTANT]
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，安全套接字层 (SSL) 已停止使用。 请改用传输层安全性 (TLS)。
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，安全套接字层 (SSL) 已停止使用。 请改用传输层安全性 (TLS)。
 
 ## <a name="transport-layer-security-tls"></a>传输层安全 (TLS) (Transport Layer Security) (TLS)
 
@@ -92,7 +92,7 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 
 - 证书的“使用者”属性必须指明，证书公用名称 (CN) 与服务器计算机的主机名或完全限定的域名 (FQDN) 相同。 使用主机名时，必须在证书中指定 DNS 后缀。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在故障转移群集中运行，则公用名称必须与虚拟服务器的主机名或 FQDN 相同，并且在故障转移群集的所有节点上都必须提供这些证书。
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) 支持通配符证书。 SNAC 已被弃用，并已替换为 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 和 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。 其他客户端可能不支持通配符证书。 有关详细信息，请参阅客户端文档和[知识库 (KB) 258858](https://support.microsoft.com/kb/258858)。       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) 支持通配符证书。 SNAC 已被弃用，并已替换为 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 和 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。 其他客户端可能不支持通配符证书。      
   无法使用 SQL Server 配置管理器选择通配符证书。 要使用通配符证书，必须编辑 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 注册表项，并为“证书”值输入证书的指纹（不留空格）。  
 
   > [!WARNING]  

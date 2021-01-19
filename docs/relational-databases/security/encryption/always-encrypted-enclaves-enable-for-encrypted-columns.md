@@ -2,7 +2,7 @@
 description: 为现有加密列启用具有安全 enclave 的 Always Encrypted
 title: 为现有加密列启用具有安全 enclave 的 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 10/30/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -11,15 +11,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 3c23c10d99ab16e3da138a03eac14b48d2468909
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 03a57949624897b2cd2e0552892803c21a408b52
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477668"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534806"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>为现有加密列启用具有安全 enclave 的 Always Encrypted 
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 本文介绍如何解锁具有安全 enclave 的 Always Encrypted 的功能，以及如何对现有加密列启用 enclave 计算。  
 
@@ -74,5 +74,5 @@ ms.locfileid: "97477668"
 有关如何通过客户端工具轮换列加密的详细信息，请参阅[使用 SQL Server Management Studio 轮换 Always Encrypted 密钥](rotate-always-encrypted-keys-using-ssms.md)和[使用 PowerShell 轮换 Always Encrypted 密钥](rotate-always-encrypted-keys-using-powershell.md)。
 
 ## <a name="next-steps"></a>后续步骤
-- [查询使用具有安全 enclave 的 Always Encrypted 的列](always-encrypted-enclaves-query-columns.md)
+- [使用安全 enclave 运行 Transact-SQL 语句](always-encrypted-enclaves-query-columns.md)
 - [使用具有安全 enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md)
