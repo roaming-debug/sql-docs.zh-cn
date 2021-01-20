@@ -6,12 +6,12 @@ metadata:
   title: Microsoft SQL 文档 | Microsoft Docs
   description: 了解如何使用 SQL Server 和 Azure SQL 管理你的本地和云端数据库需求。 (快速链接：https://aka.ms/sqldocs)
   ms.topic: hub-page
-  ms.openlocfilehash: 484438ba00d9a99b5666361536ec2eea59851d4f
-  ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+  ms.openlocfilehash: 9e5ac2f53987c94f7a4fa84a55df23409861712e
+  ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 12/17/2020
-  ms.locfileid: "97617536"
+  ms.lasthandoff: 01/20/2021
+  ms.locfileid: "98594367"
 highlightedContent:
   items:
   - title: 试用 SQL Server 2019
@@ -33,27 +33,27 @@ productDirectory:
     links:
     - url: sql-server/index.yml
       text: 本地
-    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/
+    - url: /azure/azure-sql/virtual-machines/windows/
       text: 在 Azure VM 上
-    - url: https://docs.microsoft.com/previous-versions/sql/
+    - url: /previous-versions/sql/
       text: 先前版本 (SQL 2005-2012)
   - title: Azure 上的 SQL
     imageSrc: media/index/azure.svg
     links:
-    - url: https://docs.microsoft.com/azure/azure-sql/database/
+    - url: /azure/azure-sql/database/
       text: Azure SQL Database
-    - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
+    - url: /azure/azure-sql/managed-instance/
       text: Azure SQL 托管实例
-    - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
+    - url: /azure/azure-sql-edge/overview
       text: Azure SQL Edge
-    - url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
+    - url: /azure/synapse-analytics/overview-what-is/
       text: Azure Synapse Analytics
   - title: Linux 上的 SQL Server
     imageSrc: media/index/linux.svg
     links:
     - url: linux/sql-server-linux-overview.md
       text: 本地
-    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/linux/
+    - url: /azure/azure-sql/virtual-machines/linux/
       text: 在 Azure VM 上
 conceptualContent:
   items:
@@ -77,16 +77,16 @@ conceptualContent:
   - title: 新增功能
     links:
     - text: SQL Server 2019
-      url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15
+      url: ./sql-server/what-s-new-in-sql-server-ver15.md
       itemType: whats-new
     - text: SQL Server 大数据群集
-      url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
+      url: ./big-data-cluster/big-data-cluster-overview.md
       itemType: whats-new
     - text: Azure Data Studio
       url: azure-data-studio/release-notes-azure-data-studio.md
       itemType: whats-new
     - text: Azure 数据库迁移服务
-      url: https://docs.microsoft.com/azure/dms/dms-overview
+      url: /azure/dms/dms-overview
       itemType: whats-new
     - text: SQL Server 机器学习服务
       url: machine-learning/index.yml
@@ -103,10 +103,10 @@ conceptualContent:
       url: ssms/download-sql-server-management-studio-ssms.md
       itemType: deploy
     - text: Azure Data Studio
-      url: azure-data-studio/download.md
+      url: ./azure-data-studio/download-azure-data-studio.md
       itemType: deploy
     - text: Analysis Services (SSAS)
-      url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
+      url: /analysis-services/instances/install-windows/install-analysis-services/
       itemType: deploy
     - text: Integration Services (SSIS)
       url: integration-services/install-windows/install-integration-services.md
@@ -120,10 +120,10 @@ conceptualContent:
       url: https://datamigration.microsoft.com/
       itemType: overview
     - text: 数据库兼容性认证
-      url: https://aka.ms/dbcompat
+      url: ./database-engine/install-windows/compatibility-certification.md
       itemType: overview
     - text: Azure 数据库迁移服务 (DMS)
-      url: https://docs.microsoft.com/azure/dms/dms-overview
+      url: /azure/dms/dms-overview
       itemType: overview
     - text: 数据迁移助手 (DMA)
       url: dma/dma-overview.md
@@ -149,9 +149,9 @@ additionalContent:
       - text: 使用 SQL Server 的 DevOps
         url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
       - text: Azure SQL 数据库应用程序
-        url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
+        url: /azure/sql-database/sql-database-develop-overview
       - text: Azure SQL 数据库连接库
-        url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
+        url: /azure/sql-database/sql-database-connect-query#libraries
       - text: Transact-SQL (T-SQL)
         url: t-sql/language-reference.md
       - text: SQL PowerShell
@@ -161,24 +161,24 @@ additionalContent:
     - title: 报告和分析
       links:
       - text: Power BI 报表服务器
-        url: https://docs.microsoft.com/power-bi/report-server/get-started
+        url: /power-bi/report-server/get-started
       - text: Power BI 服务
-        url: https://docs.microsoft.com/power-bi/service-get-started
+        url: /power-bi/service-get-started
       - text: SQL Server Reporting Services (SSRS)
         url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
       - text: SQL Server Analysis Services (SSAS)
-        url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+        url: /analysis-services/analysis-services-overview
       - text: Azure Analysis Services
-        url: https://docs.microsoft.com/azure/analysis-services/
+        url: /azure/analysis-services/
     - title: 大数据和机器学习
       links:
       - text: SQL Server 大数据群集
-        url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
+        url: ./big-data-cluster/big-data-cluster-overview.md
       - text: 使用 Polybase 进行数据虚拟化
         url: relational-databases/polybase/polybase-guide.md
       - text: Azure Synapse Analytics
-        url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
+        url: /azure/synapse-analytics/overview-what-is/
       - text: Microsoft Analytics Platform System
-        url: analytics-platform-system/index.md
+        url: ./analytics-platform-system/home-analytics-platform-system-aps-pdw.md
       - text: SQL Server 机器学习服务（R 和 Python）
         url: machine-learning/index.yml

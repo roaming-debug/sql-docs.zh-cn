@@ -24,12 +24,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: e1af0f83181e6fbd479d2727b7da893b8bc20b59
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: a4798fbc01e015b85e31d9768fd8135af6d202f4
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639080"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596869"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -58,7 +58,7 @@ SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与
 如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18
 
 > [!Note]
-> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本](https://aka.ms/downloadssmsusenglish)。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
+> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本]()。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
 
 ## <a name="available-languages"></a>可用语言
 
@@ -68,7 +68,7 @@ SQL Server Management Studio 18.8：
 [中文（简体）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40a)
 
 > [!NOTE]
-> SQL Server PowerShell 模块可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)。
+> SQL Server PowerShell 模块可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](../powershell/download-sql-server-ps-module.md)。
 
 ## <a name="whats-new"></a>新增功能
 
@@ -158,7 +158,7 @@ SQL Server Management Studio 18.8：
 - 硬盘空间：2-10 GB 可用空间
 
 > [!NOTE]
-> 对于 Windows，SSMS 只能作为 32 位应用程序使用。 如果需要在 Windows 以外的操作系统上运行的工具，我们建议使用 Azure Data Studio。 Azure Data Studio 是一个跨平台工具，可在 macOS、Linux 以及 Windows 上运行。 有关详细信息，请参阅 [Azure Data Studio](../azure-data-studio/what-is.md)。
+> 对于 Windows，SSMS 只能作为 32 位应用程序使用。 如果需要在 Windows 以外的操作系统上运行的工具，我们建议使用 Azure Data Studio。 Azure Data Studio 是一个跨平台工具，可在 macOS、Linux 以及 Windows 上运行。 有关详细信息，请参阅 [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)。
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
@@ -166,10 +166,10 @@ SQL Server Management Studio 18.8：
 
 - [SQL 工具](../tools/overview-sql-tools.md)
 - [SQL Server Management Studio 文档](sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
 - [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [最新更新](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
-- [Azure 数据体系结构指南](https://docs.microsoft.com/azure/architecture/data-guide/)
+- [Azure 数据体系结构指南](/azure/architecture/data-guide/)
 - [SQL Server 博客](https://cloudblogs.microsoft.com/sqlserver/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

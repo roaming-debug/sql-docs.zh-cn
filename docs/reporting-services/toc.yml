@@ -415,8 +415,6 @@
       href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
     - name: 启用和禁用 RDL 沙盒
       href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
-    - name: 配置 Reporting Services 以使用使用者可选名称
-      href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: SharePoint 站点上的报表查看器 Web 部件
   href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
   items:
@@ -1267,6 +1265,8 @@
               href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
     - name: 配置本机模式报表服务器上的 SSL 连接
       href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
+    - name: 配置 Reporting Services 以使用使用者可选名称
+      href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: 报表订阅
   items:
     - name: SSRS 计划概述
