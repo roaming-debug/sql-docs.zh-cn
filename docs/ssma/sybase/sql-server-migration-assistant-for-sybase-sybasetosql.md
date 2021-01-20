@@ -11,12 +11,12 @@ ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 455f7b31ca4b64b92751551849fa22091c331892
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d961301d94eb9c14bb4fc924cf826c769843483e
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934606"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596611"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>Sybase (SybaseToSQL 的 SQL Server 迁移助手) 
 
@@ -29,9 +29,9 @@ ms.locfileid: "87934606"
 |部分|说明|
 |-----------|---------------|
 |[Sybase &#40;SybaseToSQL 的 SSMA 中的新增功能&#41;](../../ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md)|列出对 SSMA 版本的更改。|  
-|[为 Sybase &#40;SybaseToSQL&#41;安装 SSMA](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|包含一些文章，这些文章提供了在运行实例的计算机上为 Sybase 客户端和所需组件安装 SSMA 的先决条件和说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|[为 Sybase &#40;SybaseToSQL&#41;安装 SSMA ](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|包含一些文章，这些文章提供了在运行实例的计算机上为 Sybase 客户端和所需组件安装 SSMA 的先决条件和说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[入门用于 Sybase &#40;SybaseToSQL 的 SSMA&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)|介绍用户界面、项目和配置选项。|  
 |[将 Sybase ASE 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)|概述转换过程，并提供有关过程中每个步骤的详细信息。|  
 |[用户界面参考 &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)|包含用于 Sybase 对话框的 SSMA 文档。|  
 |[使用 SSMA for Sybase 控制台](working-with-ssma-for-sybase-console-sybasetosql.md)|包含有关 SSMA 控制台应用程序的文档。|  
-|[获取用于 Sybase 帮助的 SSMA](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|提供有关获取其他帮助的信息。|  
+|[获取用于 Sybase 帮助的 SSMA](../sql-server-migration-assistant.md)|提供有关获取其他帮助的信息。|

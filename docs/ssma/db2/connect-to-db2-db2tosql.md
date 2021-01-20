@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cef31b2968ea0241b3c999e0dbd781d70974b360
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c590a76696f2729bf5d1c6c5d4ca5b0242a63df6
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426969"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596729"
 ---
 # <a name="connect-to-db2-db2tosql"></a>连接到 DB2 (DB2ToSQL) 
 使用 " **连接到 db2** " 对话框连接到要迁移的 DB2 数据库。  
@@ -70,7 +70,6 @@ ms.locfileid: "88426969"
   
 连接字符串包含参数名称和值对。  
   
--   有关 OLE DB 连接字符串的信息，请参阅 MSDN Library 上的 [DB2 的 Microsoft OLE DB 提供程序](https://go.microsoft.com/fwlink/?LinkId=85640) 文章。  
+-   有关 OLE DB 连接字符串的信息，请参阅 MSDN Library 上的 [DB2 的 Microsoft OLE DB 提供程序](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) 文章。  
   
 对于 SSMA 连接字符串，请始终包含提供程序参数。 此外，请确保在连接到 DB2 时包含 Port 参数。  
-  

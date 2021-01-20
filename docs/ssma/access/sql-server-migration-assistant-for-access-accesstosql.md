@@ -11,12 +11,12 @@ ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: fdb846a0b43bd9816faf931d936c456093ac26e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 25e7694505f7f67702f476983c33120a87539887
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933991"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596425"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server 迁移助手访问 (AccessToSQL) 
 
@@ -28,7 +28,7 @@ ms.locfileid: "87933991"
   
 |部分|说明|
 |-----------|---------------|
-|[SSMA for Access 中的新增功能](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|列出对 SSMA 版本的更改。|  
+|[SSMA for Access 中的新增功能](./what-s-new-in-ssma-for-access-accesstosql.md)|列出对 SSMA 版本的更改。|  
 |[安装访问 SQL Server 迁移助手](installing-sql-server-migration-assistant-for-access-accesstosql.md)|列出了安装 SSMA 的先决条件、安装和许可 SSMA 的过程，以及指向最新版本的链接。|  
 |[使用 SQL Server 迁移助手入门访问 &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|介绍 SSMA 及其用户界面。|  
 |[准备要迁移的 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)|描述如何准备要转换为/SQL Azure 的 Access 数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
@@ -36,4 +36,4 @@ ms.locfileid: "87933991"
 |[将访问应用程序链接到 SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|描述如何将现有的 Access 应用程序用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[用户界面参考](user-interface-reference-accesstosql.md)|包含 SSMA 对话框的文档。|  
 |[使用 SSMA for Access 控制台](working-with-ssma-for-access-console-accesstosql.md)|包含有关 SSMA 控制台应用程序的文档|  
-|[获取访问的 SSMA 帮助](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|提供有关获取其他帮助的信息。|  
+|[获取访问的 SSMA 帮助](../sql-server-migration-assistant.md)|提供有关获取其他帮助的信息。|

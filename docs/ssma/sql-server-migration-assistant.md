@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 74420edaffb43ba1ea7d6ee20b7c1d12ea5d589d
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 2de9fc7fdc730cb09f96bff6633cab29521e175e
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005569"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596978"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
@@ -44,7 +44,7 @@ SSMA 支持以下目标版本。
 - SQL Server 2016
 - Windows 和 Linux 上的 SQL Server 2017
 - Windows 和 Linux 上的 SQL Server 2019
-- Azure SQL Database
+- Azure SQL 数据库
 - Azure SQL 托管实例
 - Azure Synapse Analytics * *
 
@@ -66,9 +66,9 @@ SSMA 支持以下目标版本。
   
 - **SQL Server 社区论坛** -提出 SQL Server 社区中的问题  
   
-  - [SQL Server 社区](https://go.microsoft.com/fwlink/?LinkId=42455) -由 SQL Server 社区监视的新闻组和论坛。 此站点还列出了诸如博客和网站之类的社区信息源。  
+  - [SQL Server 社区](../sql-server/index.yml) -由 SQL Server 社区监视的新闻组和论坛。 此站点还列出了诸如博客和网站之类的社区信息源。  
   
-  - [SQL Server Developer 中心社区](https://go.microsoft.com/fwlink/?LinkId=42456) -对 SQL Server 开发人员有用的新闻组、论坛和其他社区资源  
+  - [SQL Server Developer 中心社区](../sql-server/index.yml) -对 SQL Server 开发人员有用的新闻组、论坛和其他社区资源  
   
 - **辅助支持** -请参阅 [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) 并搜索 "SQL Server 迁移助手"。  选择你的版本，然后选择 "启动请求"。  SQL Server 迁移助手工具附带了辅助支持。  
   
@@ -102,4 +102,4 @@ SQL Server 文档中显示的内容仅在经过充分测试后才发布。 产�
   
 客户不得使用未记录的 API，其中包括但不限于：存储过程、扩展存储过程、函数、视图、表、列、属性或元数据。 Microsoft 客户支持不支持利用或使用未记录的入口点的数据库或应用程序。  
   
-对于利用和使用未记录的入口点的应用程序和数据库，升级至 SQL Server 的未来版本的服务器和数据库未得到保证。 必须将 SQL Server 特性和功能的使用限制为 Microsoft SQL Server 文档中包含的内容。 如果功能未在 Microsoft SQL Server 文档中记录，则它不属于 SQL Server 支持的部分。  
+对于利用和使用未记录的入口点的应用程序和数据库，升级至 SQL Server 的未来版本的服务器和数据库未得到保证。 必须将 SQL Server 特性和功能的使用限制为 Microsoft SQL Server 文档中包含的内容。 如果功能未在 Microsoft SQL Server 文档中记录，则它不属于 SQL Server 支持的部分。
