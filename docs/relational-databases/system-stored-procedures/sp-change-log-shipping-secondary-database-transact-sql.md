@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5fc10c705564c88fe157860d00a61fa5ea682cc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81a5c562ddade5c60458ad491a401dab916c59d4
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486264"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620291"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,9 +74,9 @@ sp_change_log_shipping_secondary_database
   
 `[ @restore_threshold = ] 'restore_threshold'` 在生成警报之前，还原操作允许间隔的分钟数。 *restore_threshold* 为 **int** ，且不能为 NULL。  
   
-`[ @threshold_alert = ] 'threshold_alert'` 超过还原阈值时引发的警报。 *threshold_alert* 的值为 **int**，默认值为14420。  
+`[ @threshold_alert = ] 'threshold_alert'` 超过还原阈值时引发的警报。 *threshold_alert* 的值为 **int**，默认值为14421。  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` 指定在超出 *restore_threshold*时是否引发警报。 1 = 启用；0 = 禁用。 *threshold_alert_enabled* 是 **bit** ，并且不能为 NULL。  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` 指定在超出 *restore_threshold* 时是否引发警报。 1 = 启用；0 = 禁用。 *threshold_alert_enabled* 是 **bit** ，并且不能为 NULL。  
   
 `[ @history_retention_period = ] 'history_retention_period'` 将保留历史记录的时间长度（分钟）。 *history_retention_period* 是 **int**。如果未指定值1440，则将使用该值。  
   
@@ -87,7 +87,7 @@ sp_change_log_shipping_secondary_database
  无  
   
 ## <a name="remarks"></a>备注  
- 必须从辅助服务器上的**master**数据库运行**sp_change_log_shipping_secondary_database** 。 此存储过程执行以下操作：  
+ 必须从辅助服务器上的 **master** 数据库运行 **sp_change_log_shipping_secondary_database** 。 此存储过程执行以下操作：  
   
 1.  必要时，更改 **log_shipping_secondary_database** 记录中的设置。  
   
@@ -97,7 +97,7 @@ sp_change_log_shipping_secondary_database
  只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  
   
 ## <a name="examples"></a>示例  
- 此示例演示如何使用 **sp_change_log_shipping_secondary_database** 来更新数据库 **LogShipAdventureWorks**的辅助数据库参数。  
+ 此示例演示如何使用 **sp_change_log_shipping_secondary_database** 来更新数据库 **LogShipAdventureWorks** 的辅助数据库参数。  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_secondary_database   
