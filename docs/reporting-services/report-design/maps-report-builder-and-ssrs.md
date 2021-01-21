@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e6dde5a520b845cac47fbfd3c4820d35958c9ba
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+ms.openlocfilehash: a88bd03c8dd4b545fdadf3bd809f9ce64191db79
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907255"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596787"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地图（报表生成器和 SSRS）
   若要针对地理背景实现业务数据的可视化，可以向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加地图。 您选择的地图类型取决于您要在报表中传达的信息。 您可以添加只显示位置的地图、气泡地图（气泡大小随着某地区的家庭数量而变化）、标记地图（标记样式随每个商店盈利情况最好的产品而变化）或线条地图（显示商店之间的路线）。  
@@ -143,7 +143,7 @@ ms.locfileid: "92907255"
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
 ##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> 添加 Bing 地图图块层  
- 您可以为 Bing 地图图块添加一个层，以便为由视区定义的当前地图视图提供地理背景。 若要添加图块层，必须指定 **“地理”** 坐标系和投影类型 **Mercator** 。 将自动从 Bing 地图 Web 服务中检索与您选择的视区中心和缩放级别匹配的图块。  
+ 您可以为 Bing 地图图块添加一个层，以便为由视区定义的当前地图视图提供地理背景。 若要添加图块层，必须指定 **“地理”** 坐标系和投影类型 **Mercator**。 将自动从 Bing 地图 Web 服务中检索与您选择的视区中心和缩放级别匹配的图块。  
   
  可通过指定下列选项自定义层：  
   
@@ -161,7 +161,7 @@ ms.locfileid: "92907255"
   
  有关分步说明，请参阅 [添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 有关图块的详细信息，请参阅 [Bing 地图图块系统](https://go.microsoft.com/fwlink/?linkid=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371)。  
+ 有关图块的详细信息，请参阅 [Bing 地图图块系统](/bingmaps/articles/bing-maps-tile-system)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
 ##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> 了解地图层和地图元素  
  一个地图可以具有多个层。 有三种类型的层。 每层显示一种类型的空间数据：  
@@ -252,5 +252,4 @@ ms.locfileid: "92907255"
  [向地图添加自定义位置（报表生成器和 SSRS）](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
-  
   

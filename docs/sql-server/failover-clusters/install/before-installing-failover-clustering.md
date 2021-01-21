@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a59216090f680492bf41aec72711c2e38f62034d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: a2ed61eb89deb29b22f82f39de4091f65be43cea
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642901"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595320"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "97642901"
 |描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集概念并提供指向关联内容和任务的链接。|[AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
 |描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移策略概念，并提供指向配置故障转移策略以满足您的组织要求的链接。|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |描述如何维护您的现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。|[故障转移群集实例管理和维护](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
-|介绍如何在 Windows Server 故障转移群集 (WSFC) 上安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|[如何安装群集 SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
+|介绍如何在 Windows Server 故障转移群集 (WSFC) 上安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|[如何安装群集 SQL Server Analysis Services](/previous-versions/sql/sql-server-2012/dn736073(v=msdn.10))|  
   
  
   
 ##  <a name="best-practices"></a><a name="BestPractices"></a> 最佳实践  
   
--   查看 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [发行说明](https://go.microsoft.com/fwlink/?LinkId=296445)  
+-   查看 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [发行说明](/previous-versions/sql/sql-server-15/dn169381(v=sql.15))  
   
 -   安装必备软件。 在运行安装程序以安装或升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]之前，请首先安装下列必备软件以缩短安装时间。 可以在每个故障转移群集节点上安装必备软件，然后在运行安装程序之前将这些节点重新启动一次。  
   
     -   Windows PowerShell 不再由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序安装。 Windows PowerShell 是安装 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] 组件和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 如果你的计算机上没有 Windows PowerShell，你可以按照 [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) （Windows 管理框架）页上的说明启用它。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][发行说明](https://go.microsoft.com/fwlink/?LinkId=296445)。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][发行说明](/previous-versions/sql/sql-server-15/dn169381(v=sql.15))。  
   
     -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重启计算机，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "97642901"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序支持文件。 您可以通过运行位于您的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装介质上的 SqlSupport.msi 来安装这些文件。  
   
--   确认 WSFC 群集上未安装防病毒软件。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 知识库文章 [Antivirus software may cause problems with cluster services（防病毒软件可能会导致群集服务出现问题）](https://go.microsoft.com/fwlink/?LinkId=116986)。  
+-   确认 WSFC 群集上未安装防病毒软件。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 知识库文章 [Antivirus software may cause problems with cluster services（防病毒软件可能会导致群集服务出现问题）](/troubleshoot/windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue)。  
   
 -   对故障转移群集安装的群集组命名时，群集组名称中不能包含以下任何字符：  
   
@@ -86,7 +86,7 @@ ms.locfileid: "97642901"
   
 -   如果群集解决方案中包含地理位置分散的群集节点，则还必须验证网络延迟和共享磁盘支持之类的附加项。  
   
-    -   有关 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]的详细信息，请参阅 [为故障转移群集验证硬件](https://go.microsoft.com/fwlink/?LinkId=196817) 和 [针对 Windows 故障转移群集的支持策略](https://go.microsoft.com/fwlink/?LinkId=196818)。  
+    -   有关 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]的详细信息，请参阅 [为故障转移群集验证硬件](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)) 和 [针对 Windows 故障转移群集的支持策略](https://go.microsoft.com/fwlink/?LinkId=196818)。  
   
 -   确认未对要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的磁盘进行压缩或加密。 如果尝试将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装到压缩驱动器或加密驱动器上， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将失败。  
   
@@ -116,13 +116,13 @@ ms.locfileid: "97642901"
   
     -   不支持在安装其他驱动器后对驱动器进行格式化。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集安装只支持使用本地磁盘安装 tempdb 文件。 确保为 tempdb 数据和日志文件指定的路径在所有群集节点上均有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源将无法联机。 有关详细信息，请参阅 [数据文件的存储类型](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) 和 [数据库引擎配置 - 数据目录](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集安装只支持使用本地磁盘安装 tempdb 文件。 确保为 tempdb 数据和日志文件指定的路径在所有群集节点上均有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源将无法联机。 有关详细信息，请参阅 [数据文件的存储类型](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) 和 [数据库引擎配置 - 数据目录](../../../database-engine/install-windows/install-sql-server.md)。  
   
--   如果您在 iSCSI 技术组件上部署 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，建议您多加注意。 有关详细信息，请参阅 [针对 iSCSI 技术组件的 SQL Server 支持](https://go.microsoft.com/fwlink/?LinkId=116960)。  
+-   如果您在 iSCSI 技术组件上部署 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，建议您多加注意。 有关详细信息，请参阅 [针对 iSCSI 技术组件的 SQL Server 支持](/troubleshoot/sql/admin/support-iscsi-technology-components)。  
   
--   有关详细信息，请参阅 [针对 Microsoft 群集的 SQL Server 支持策略](https://go.microsoft.com/fwlink/?LinkId=116958)。  
+-   有关详细信息，请参阅 [针对 Microsoft 群集的 SQL Server 支持策略](/troubleshoot/sql/failover-clusters/support-policy-clustered-configurations)。  
   
--   有关正确的仲裁驱动器配置的详细信息，请参阅 [仲裁驱动器配置信息](https://go.microsoft.com/fwlink/?LinkId=196816)。  
+-   有关正确的仲裁驱动器配置的详细信息，请参阅 [仲裁驱动器配置信息](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770620(v=ws.10))。  
   
 -   如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 源安装文件和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集位于不同的域中，若要安装该群集，需要将安装文件复制到可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的当前域中。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "97642901"
      如果您决定使用为同一子网配置的多个 IP 地址，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启动过程中可能会遇到客户端连接失败。  
   
 #### <a name="related-content"></a>相关内容  
- 有关 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 多站点故障转移的详细信息，请参阅 [Windows Server 2008 R2 故障转移群集站点](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) 和 [在多站点故障转移群集中设计群集服务或应用程序](https://go.microsoft.com/fwlink/?LinkId=177873)。  
+ 有关 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 多站点故障转移的详细信息，请参阅 [Windows Server 2008 R2 故障转移群集站点](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) 和 [在多站点故障转移群集中设计群集服务或应用程序](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197430(v=ws.10))。  
   
 ##  <a name="configure-windows-server-failover-cluster"></a><a name="WSFC"></a> 配置 Windows Server 故障转移群集  
   
@@ -262,5 +262,3 @@ ms.locfileid: "97642901"
  [系统配置检查器的检查参数](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [故障转移群集实例管理和维护](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  
   
-  
-

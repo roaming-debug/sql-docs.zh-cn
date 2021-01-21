@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8151915dc6c16c6225fec9ab90cb5a88e86b992f
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 3fb13f3cc163bb157f418d3bda99e0173d81b842
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771435"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596015"
 ---
 # <a name="connection-events"></a>连接事件
 
@@ -34,7 +34,7 @@ Microsoft SqlClient Data Provider for SQL Server 中的 Connection 对象有两�
 
 ## <a name="work-with-the-infomessage-event"></a>使用 InfoMessage 事件
 
-您可以使用 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 对象的 <xref:Microsoft.Data.SqlClient.SqlConnection> 事件从 SQL Server 数据源中检索警告和信息性消息。 从数据源返回的严重程度为 11 到 16 的错误将引发异常。 但是，<xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 事件可用于从数据源中获取与错误无关联的消息。 对于 Microsoft SQL Server，任何严重程度等于或小于 10 的错误都将被视为信息性消息，将使用 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 事件来捕获。 有关详细信息，请参阅[数据库引擎错误严重性](/sql/relational-databases/errors-events/database-engine-error-severities)一文。
+您可以使用 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 对象的 <xref:Microsoft.Data.SqlClient.SqlConnection> 事件从 SQL Server 数据源中检索警告和信息性消息。 从数据源返回的严重程度为 11 到 16 的错误将引发异常。 但是，<xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 事件可用于从数据源中获取与错误无关联的消息。 对于 Microsoft SQL Server，任何严重程度等于或小于 10 的错误都将被视为信息性消息，将使用 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 事件来捕获。 有关详细信息，请参阅[数据库引擎错误严重性](../../relational-databases/errors-events/database-engine-error-severities.md)一文。
 
 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> 事件接收 <xref:Microsoft.Data.SqlClient.SqlInfoMessageEventArgs> 对象，该对象在其 Errors 属性中包含来自数据源的消息的集合。 你可以查询此集合中的 Error 对象，以获取错误编号和消息文本以及错误的来源。 Microsoft SqlClient Data Provider for SQL Server 还包括有关该消息来自的数据库、存储过程和行号的详细信息。
 

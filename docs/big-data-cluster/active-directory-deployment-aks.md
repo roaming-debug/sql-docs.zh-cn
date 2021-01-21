@@ -9,16 +9,16 @@ ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3f6b3ce5f6a594e5be385ee1f7ea7d1c03c1f92a
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+ms.openlocfilehash: 4b11cef91203a9c7939d4d044220283db378e296
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94632937"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595631"
 ---
 # <a name="deploy-sql-server-big-data-clusters-in-ad-mode-on-azure-kubernetes-services-aks"></a>在 Azure Kubernetes 服务 (AKS) 上的 AD 模式下部署 SQL Server 大数据群集
 
-SQL Server 大数据群集支持 [Active Directory (AD) 部署模式](deploy-active-directory.md)用于标识和访问管理 (IAM)。 Azure Kubernetes 服务 (AKS) 的 IAM 难度大，因为 SQL Server 不支持受 Microsoft 标识平台广泛支持的行业标准协议（如 OAuth 2.0 和 OpenID Connect）。  
+SQL Server 大数据群集支持 [Active Directory (AD) 部署模式](./active-directory-prerequisites.md)用于标识和访问管理 (IAM)。 Azure Kubernetes 服务 (AKS) 的 IAM 难度大，因为 SQL Server 不支持受 Microsoft 标识平台广泛支持的行业标准协议（如 OAuth 2.0 和 OpenID Connect）。  
 
 本文介绍如何在 [Azure Kubernetes 服务 (AKS)](/azure/aks/intro-kubernetes) 中进行部署的同时，在 AD 模式下部署大数据群集 (BDC)。 
 

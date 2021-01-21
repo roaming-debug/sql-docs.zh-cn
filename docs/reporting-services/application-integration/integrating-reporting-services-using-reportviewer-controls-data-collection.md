@@ -10,18 +10,18 @@ ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 06/03/2020
-ms.openlocfilehash: 22f693824c244e02f313e488a067a0b732b2fa10
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 685b1004cea15c5e1c1708204e75b9c8ce7a40af
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423395"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596567"
 ---
 # <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>使用 ReportViewer 控件集成 Reporting Services - 数据收集
 
 为了更好地了解客户如何使用产品，控件收集匿名使用情况数据。 使用情况数据可使将来开发专注于与客户最相关的改进。
 
-Microsoft SQL Server 和报表查看器的数据收集和用例说明可在[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)中找到。
+Microsoft SQL Server 和报表查看器的数据收集和用例说明可在[隐私声明](../../sql-server/sql-server-privacy.md)中找到。
 
 ## <a name="opting-out-of-data-collection"></a>选择退出数据收集
 
@@ -43,7 +43,4 @@ protected void Page_Load(object sender, EventArgs e)
 ## <a name="see-also"></a>另请参阅
 
 [使用 WebForms 报表查看器控件](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
-[使用报表查看器控件集成 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
-
-
-
+[使用报表查看器控件集成 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)

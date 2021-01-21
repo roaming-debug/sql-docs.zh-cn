@@ -12,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: f473590243956cd2fcba1961d3580fa052d6f4c1
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 2515a93b025392735135cd13cbd734975f8ed221
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91934627"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596827"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -43,7 +43,7 @@ ms.locfileid: "91934627"
  有关可以升级的受支持版本的详细列表，请参阅 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
 > [!TIP]  
->  有关 SQL Server 的问题相关的最新信息，请参阅 [SQL Server 2016 发行说明](https://go.microsoft.com/fwlink/?LinkID=398124)。  
+>  有关 SQL Server 的问题相关的最新信息，请参阅 [SQL Server 2016 发行说明](../../sql-server/sql-server-2016-release-notes.md)。  
   
   
 ##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> 并行安装  
@@ -69,7 +69,7 @@ ms.locfileid: "91934627"
 
 * [升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)
 * [使用安装向导（安装程序）升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
+* [从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
   
   
 ##  <a name="pre-upgrade-checklist"></a><a name="bkmk_upgrade_checklist"></a> 升级准备一览表  
@@ -123,9 +123,9 @@ ms.locfileid: "91934627"
   
     2.  升级到新版本的报表服务器配置工具和实用工具包括本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具、命令行实用工具（如 RS.exe）和报表生成器。  
   
-    3.  其他客户端工具（如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ）是单独下载，需要单独升级。 有关详细信息，请参阅 [下载 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。
+    3.  其他客户端工具（如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ）是单独下载，需要单独升级。 有关详细信息，请参阅 [下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 为单独下载。 有关详细信息，请参阅 [Visual Studio 2015 中的 SQL Server Data Tools](https://msdn.microsoft.com/mt186501)。  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 为单独下载。 有关详细信息，请参阅 [Visual Studio 2015 中的 SQL Server Data Tools](/previous-versions/mt186501(v=msdn.10))。  
   
 6.  安装程序将重用服务控制管理器中 SQL Server Reporting Services 报表服务器服务的服务条目。 此服务条目包括报表服务器 Windows 服务帐户。  
   
@@ -236,13 +236,13 @@ ms.locfileid: "91934627"
   
 -   [升级到 SharePoint 2016 的过程概述](https://technet.microsoft.com/library/cc262483\(v=office.16\))。
 
--   [升级到 SharePoint 2013 的过程概述](https://go.microsoft.com/fwlink/p/?LinkId=256688)。
+-   [升级到 SharePoint 2013 的过程概述](/SharePoint/upgrade-and-update/overview-of-the-upgrade-process-from-sharepoint-2010-to-sharepoint-2013)。
   
--   [升级到 SharePoint 2013 之前的清除准备](https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [升级到 SharePoint 2013 之前的清除准备](/SharePoint/upgrade-and-update/clean-up-an-environment-before-an-upgrade-to-sharepoint-2013)。  
   
 -   [将数据库从 SharePoint 2013 升级到 SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\))。
 
--   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](/SharePoint/upgrade-and-update/upgrade-content-databases-from-sharepoint-2010-to-sharepoint-2013)。  
 
 ## <a name="next-steps"></a>后续步骤
 

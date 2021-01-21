@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: b04cb475579c73a26ec5977ce52b9521ce69552a
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 749e13242c81e5a566ae13dfd66385194639db37
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642637"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596221"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -26,7 +26,7 @@ ms.locfileid: "97642637"
 
 有关详细信息和已知问题，请参阅 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 发行说明](sql-server-version-15-release-notes.md)。
 
-要获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验，请使用[最新工具](https://aka.ms/getazuredatastudio)。
+要获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验，请使用[最新工具](../azure-data-studio/download-azure-data-studio.md)。
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 为 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 引入了 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]。 它还为 SQL Server 数据库引擎、SQL Server Analysis Services、SQL Server 机器学习服务、Linux 上的 SQL Server 和 SQL Server Master Data Services 提供了附加功能和改进。
 
@@ -76,7 +76,7 @@ ms.locfileid: "97642637"
 | &nbsp; | &nbsp; |
 
 ### <a name="intelligent-performance"></a>智能性能
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本的智能数据库创新的基础上构建，旨在确保[提高运行速度](https://docs.microsoft.com/archive/blogs/bobsql/)。 这些改进有助于克服已知的资源瓶颈，并提供配置数据库服务器的选项，以在所有工作负荷中提供可预测性能。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本的智能数据库创新的基础上构建，旨在确保[提高运行速度](/archive/blogs/bobsql/)。 这些改进有助于克服已知的资源瓶颈，并提供配置数据库服务器的选项，以在所有工作负荷中提供可预测性能。
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
@@ -130,10 +130,10 @@ ms.locfileid: "97642637"
 |新增功能或更新 | 详细信息 |
 |:---|:---|
 |新 Java 语言 SDK | 简化了可从 SQL Server 运行的 Java 程序的开发。 请参阅 [SQL Server 的用于 Java 的 Microsoft 扩展性 SDK](../language-extensions/how-to/extensibility-sdk-java-sql-server.md)。 |
-|Java 语言 SDK 是开放源代码的 |[Microsoft SQL Server 用于 Java 的 Microsoft 扩展性 SDK](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) 目前是开源的，可[在 GitHub 上获取](https://github.com/microsoft/sql-server-language-extensions)。|
+|Java 语言 SDK 是开放源代码的 |[Microsoft SQL Server 用于 Java 的 Microsoft 扩展性 SDK](../language-extensions/how-to/extensibility-sdk-java-sql-server.md) 目前是开源的，可[在 GitHub 上获取](https://github.com/microsoft/sql-server-language-extensions)。|
 |对 Java 数据类型的支持|请参阅 [Java 数据类型](../language-extensions/how-to/java-to-sql-data-types.md)。|
 |新默认 Java 运行时 | SQL Server 现在包括 Azul System 的 Zulu Embedded，用于在整个产品中提供 Java 支持。 请参阅 [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/)（SQL Server 2019 现已提供免费支持的 Java）。 |
-|SQL Server 语言扩展| 使用扩展性框架执行外部代码。 请参阅 [SQL Server 语言扩展](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
+|SQL Server 语言扩展| 使用扩展性框架执行外部代码。 请参阅 [SQL Server 语言扩展](../language-extensions/language-extensions-overview.md)。
 |注册外部语言|`CREATE EXTERNAL LANGUAGE` 是一种新的数据定义语言 (DDL)，可在 SQL Server 中注册外部语言（如 Java）。 请参阅 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md)。 |
 | &nbsp; | &nbsp; |
 
@@ -213,7 +213,7 @@ ms.locfileid: "97642637"
 |新增功能或更新 | 详细信息 |
 |:---|:---|
 | Microsoft 容器注册表 | [Microsoft 容器注册表](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)现在将 Docker Hub 替换为新的官方 Microsoft 容器映像，其中包括 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。 |
-| 非根容器 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了通过在默认情况下以非根用户身份启动 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 进程来创建更安全容器的功能。 请参阅[以非根用户的身份构建并运行 SQL Server 容器](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer)。 |
+| 非根容器 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了通过在默认情况下以非根用户身份启动 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 进程来创建更安全容器的功能。 请参阅[以非根用户的身份构建并运行 SQL Server 容器](../linux/sql-server-linux-docker-container-deployment.md)。 |
 | Red Hat 认证的容器映像 | 从 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 开始，可以在 Red Hat Enterprise Linux 上运行 SQL Server 容器。 |
 | PolyBase 和机器学习支持| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了使用 SQL Server 容器的新方法，例如机器学习服务和 PolyBase。 查看[容器 GitHub 存储库中的 SQL Server](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples) 中的一些示例。 |
 | &nbsp; | &nbsp; |

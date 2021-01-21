@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 196b326a9854242369efbdc6c697d292a1eb6e94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bca083e29d0d03a5a5470f58b4e004d81cd27a36
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492620"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596635"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>在报表服务器上配置自定义身份验证或窗体身份验证
 
@@ -28,7 +28,7 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
 > [!NOTE]
 >  若要创建自定义身份验证扩展插件，需要自定义代码并掌握 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 安全性方面的专业知识。 如果您不希望创建自定义身份验证扩展插件，则可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 组和帐户，但应大幅减小报表服务器部署的范围。 有关自定义身份验证的详细信息，请参阅 [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)。
 
-此外，如果希望在与 SharePoint 产品集成的 SQL Server Reporting Services 环境中使用窗体身份验证或自定义身份验证扩展插件，则必须将 SharePoint 站点配置为使用你所选的身份验证方法。 有关在 SharePoint 中配置身份验证的详细信息，请参阅 [Developer Network (MSDN) 上的](https://go.microsoft.com/fwlink/?LinkId=115575) Authentication Samples [!INCLUDE[msCoName](../../includes/msconame-md.md)] 身份验证示例。
+此外，如果希望在与 SharePoint 产品集成的 SQL Server Reporting Services 环境中使用窗体身份验证或自定义身份验证扩展插件，则必须将 SharePoint 站点配置为使用你所选的身份验证方法。 有关在 SharePoint 中配置身份验证的详细信息，请参阅 [Developer Network (MSDN) 上的](/previous-versions/office/sharepoint-2007-products-and-technologies/cc262069(v=office.12)) Authentication Samples [!INCLUDE[msCoName](../../includes/msconame-md.md)] 身份验证示例。
 
 
 

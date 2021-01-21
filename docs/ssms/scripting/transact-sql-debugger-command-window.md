@@ -14,18 +14,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 983f6d846d1cb9be973c4976798fb55580dc7f2f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9c895d2ac72f2c763357a2a2352009f8b2d7cab2
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476798"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597105"
 ---
 # <a name="transact-sql-debugger---command-window"></a>Transact-SQL 调试器 -“命令”窗口
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-使用“命令”窗口以对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查询编辑器窗口中当前所调试的代码运行命令，例如调试和编辑命令。 只有在调试模式下才可以使用 **“命令窗口”** 。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器支持许多在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]“命令”窗口中支持的命令。 有关详细信息，请参阅 [Visual Studio“命令”窗口](https://go.microsoft.com/fwlink/?LinkId=112007)。  
+使用“命令”窗口以对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查询编辑器窗口中当前所调试的代码运行命令，例如调试和编辑命令。 只有在调试模式下才可以使用 **“命令窗口”** 。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器支持许多在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]“命令”窗口中支持的命令。 有关详细信息，请参阅 [Visual Studio“命令”窗口](/previous-versions/visualstudio/visual-studio-2015/ide/reference/command-window)。  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -49,4 +49,4 @@ ms.locfileid: "97476798"
 
 ## <a name="see-also"></a>另请参阅
 
-[Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)
+[Transact-SQL 调试器](./transact-sql-debugger.md)

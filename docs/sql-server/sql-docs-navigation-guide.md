@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017'
-ms.openlocfilehash: 98fd46528437cd9a82ec7d47539db230b8be8eb8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4c8852c9b2ce3f7bce027632b741511a008cb646
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97409393"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595878"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文档导航指南
 
@@ -23,7 +23,7 @@ ms.locfileid: "97409393"
 
 ## <a name="hub-page"></a>中心页
 
-SQL Server 中心页可以在 [https://aka.ms/sqldocs](https://aka.ms/sqldocs) 中找到，是用于查找相关 SQL Server 内容的入口点。
+SQL Server 中心页可以在 [https://aka.ms/sqldocs](../index.yml?WT.mc_id=akams) 中找到，是用于查找相关 SQL Server 内容的入口点。
 
 始终可以通过从 SQL Server 技术文档集中每个页面顶部的标题中选择“SQL 文档”  来导航回到此页面： 
 
@@ -31,7 +31,7 @@ SQL Server 中心页可以在 [https://aka.ms/sqldocs](https://aka.ms/sqldocs) �
 
 ## <a name="offline-documentation"></a>脱机文档
 
-如果要在脱机系统上查看 SQL Server 文档，有两个选项可实现此操作。 可以在 SQL Server 技术文档中的任何位置创建 PDF，也可以使用 [SQL Server 脱机帮助查看器](sql-server-help-installation.md)下载脱机内容。 
+如果要在脱机系统上查看 SQL Server 文档，有两个选项可实现此操作。 可以在 SQL Server 技术文档中的任何位置创建 PDF，也可以使用 [SQL Server 脱机帮助查看器](./sql-server-offline-documentation.md)下载脱机内容。 
 
 如果要创建 PDF，请选择每个目录底部的“下载 PDF”链接  。
 

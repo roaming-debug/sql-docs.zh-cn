@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 841644a1429b4c143b7f2b31b5d6ec669bb0ff58
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: c987fdf269db9787392caa5f228f97155cf673a8
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642844"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597155"
 ---
 # <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>创建新的 AlwaysOn 故障转移群集实例（安装程序）
 
@@ -52,7 +52,7 @@ ms.locfileid: "97642844"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 高级/企业故障转移群集安装包括以下步骤：  
   
--   在有可能加入新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的每个节点上，按照 [“准备”一节](#prepare)中列出的“准备故障转移群集”安装步骤执行操作。 您在一个节点上运行“准备故障转移群集”之后，安装程序就会创建 Configuration.ini 文件，该文件列出您指定的所有设置。 在要准备的其他节点上，可以将第一个节点自动生成的 Configuration.ini 文件作为安装程序命令行的输入，而不需要重复执行这些安装步骤。 有关详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。 此步骤将准备好节点使其可以加入群集，但在此步骤结束时不会有可供使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
+-   在有可能加入新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的每个节点上，按照 [“准备”一节](#prepare)中列出的“准备故障转移群集”安装步骤执行操作。 您在一个节点上运行“准备故障转移群集”之后，安装程序就会创建 Configuration.ini 文件，该文件列出您指定的所有设置。 在要准备的其他节点上，可以将第一个节点自动生成的 Configuration.ini 文件作为安装程序命令行的输入，而不需要重复执行这些安装步骤。 有关详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。 此步骤将准备好节点使其可以加入群集，但在此步骤结束时不会有可供使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
   
 -   在准备好用于群集的节点后，在一个准备好的节点上运行安装程序。 此步骤将配置并完成故障转移群集实例。 完成此步骤以后，将有一个可供使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例，以前为该实例准备的所有节点将作为新建的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的可能节点。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "97642844"
   
  有关远程安装的详细信息，请参阅[支持的版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
- 有关在 WSFC 中安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的详细信息，请参阅 [如何安装群集 SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)。  
+ 有关在 WSFC 中安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的详细信息，请参阅 [如何安装群集 SQL Server Analysis Services](/previous-versions/sql/sql-server-2012/dn736073(v=msdn.10))。  
   
 ## <a name="prerequisites"></a>先决条件  
  在开始之前，请查阅以下 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书主题：  
@@ -103,7 +103,7 @@ ms.locfileid: "97642844"
   
 8.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击“下一步”以继续。 若要结束安装程序，请单击 **“取消”** 。  
   
-9. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)。  
+9. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)。  
   
      在右侧窗格中显示所选功能的必备组件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "97642844"
   
 17. 在“服务器配置 - 服务帐户”页上指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的登录帐户。 此页上配置的实际服务取决于您选择安装的功能。  
   
-     您可以为所有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务分配相同的登录帐户，也可以单独配置各个服务帐户。 将能够识别群集的服务（包括全文搜索和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理）的启动类型设置为“手动”，且在安装过程中不能进行更改。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议对各服务帐户进行单独配置，以便为每项服务提供最低特权，即向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务授予它们完成各自任务所必须拥有的最低权限。 有关详细信息，请参阅 [服务器配置 - 服务帐户](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+     您可以为所有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务分配相同的登录帐户，也可以单独配置各个服务帐户。 将能够识别群集的服务（包括全文搜索和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理）的启动类型设置为“手动”，且在安装过程中不能进行更改。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议对各服务帐户进行单独配置，以便为每项服务提供最低特权，即向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务授予它们完成各自任务所必须拥有的最低权限。 有关详细信息，请参阅 [服务器配置 - 服务帐户](../../../database-engine/install-windows/install-sql-server.md) 和 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
      若要为此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例中的所有服务帐户指定同一个登录帐户，请在该页底部的字段中提供凭据。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "97642844"
 30. 若要在您刚刚创建的单节点故障转移中添加节点，则在每个其他节点上运行安装程序，然后遵照 AddNode 操作的步骤。 有关详细信息，请参阅[在 AlwaysOn 故障转移群集实例中添加或删除节点（安装程序）](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
     > [!NOTE]  
-    >  若要添加多个节点，则可以使用配置文件来部署该安装。 有关详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
+    >  若要添加多个节点，则可以使用配置文件来部署该安装。 有关详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。  
     >   
     >  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例中的所有节点上安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本必须相同。 若要向现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例添加新节点，务必使安装的版本与现有故障转移群集实例的版本相同。  
   
@@ -257,7 +257,7 @@ ms.locfileid: "97642844"
   
 9. 在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击“下一步”以继续。 若要结束安装程序，请单击 **“取消”** 。  
   
-10. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)。  
+10. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)。  
   
      在右侧窗格中显示所选功能的必备组件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。  
   
@@ -320,7 +320,7 @@ ms.locfileid: "97642844"
   
 23. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关安装程序日志文件的信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-24. 重复以上步骤以准备故障转移群集实例的其他节点。 还可以使用自动生成的配置文件来准备其他节点。 有关详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
+24. 重复以上步骤以准备故障转移群集实例的其他节点。 还可以使用自动生成的配置文件来准备其他节点。 有关详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。  
   
 ## <a name="complete"></a>完成  
   
@@ -404,6 +404,5 @@ ms.locfileid: "97642844"
  有关日志文件位置的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-  
+ [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   

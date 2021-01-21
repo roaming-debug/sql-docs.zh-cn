@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein, mikeray
 ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
-ms.openlocfilehash: 29c39caf6885ee974c62ed153df982b435c72c95
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: 1c3bf8f69678ecf291594991650c3bb4c21d4652
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97619060"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596756"
 ---
 # <a name="quickstart-connect-and-query-a-sql-server-instance-on-an-azure-virtual-machine-using-sql-server-management-studio-ssms"></a>快速入门：使用 SQL Server Management Studio (SSMS) 连接和查询 Azure 虚拟机上的 SQL Server 实例
 
@@ -95,11 +95,11 @@ ms.locfileid: "97619060"
 
 | 要求 | 说明 |
 |---|---|
-| [启用 SQL Server 身份验证模式](/sql/database-engine/configure-windows/change-server-authentication-mode#use-ssms) | 除非已在虚拟网络上配置 Active Directory，否则需要进行 SQL Server 身份验证才能连接到远程 VM。 |
-| [创建 SQL 登录名](/sql/relational-databases/security/authentication-access/create-a-login) | 如果使用 SQL 身份验证，则需要提供带有用户名和密码的 SQL 登录名，并且该登录名还有权访问目标数据库。 |
+| [启用 SQL Server 身份验证模式](../../database-engine/configure-windows/change-server-authentication-mode.md#use-ssms) | 除非已在虚拟网络上配置 Active Directory，否则需要进行 SQL Server 身份验证才能连接到远程 VM。 |
+| [创建 SQL 登录名](../../relational-databases/security/authentication-access/create-a-login.md) | 如果使用 SQL 身份验证，则需要提供带有用户名和密码的 SQL 登录名，并且该登录名还有权访问目标数据库。 |
 | 启用 TCP/IP 协议 | SQL Server 必须允许通过 TCP 连接。 |
-| [启用 SQL Server 端口的防火墙规则](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) | VM 上的防火墙必须允许 SQL Server 端口（默认为 1433）上的入站流量。 |
-| [创建 TCP 1433 的网络安全组规则](https://docs.microsoft.com/azure/virtual-network/manage-network-security-group#create-a-security-rule) | 如果希望通过 Internet 连接，请允许 VM 接收 SQL Server 端口（默认为 1433）上的流量。 本地连接和仅虚拟网路连接对此无要求。 仅在 Azure 门户中需要此步骤。 |
+| [启用 SQL Server 端口的防火墙规则](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) | VM 上的防火墙必须允许 SQL Server 端口（默认为 1433）上的入站流量。 |
+| [创建 TCP 1433 的网络安全组规则](/azure/virtual-network/manage-network-security-group#create-a-security-rule) | 如果希望通过 Internet 连接，请允许 VM 接收 SQL Server 端口（默认为 1433）上的流量。 本地连接和仅虚拟网路连接对此无要求。 仅在 Azure 门户中需要此步骤。 |
 
 > [!TIP]
 > 在门户中配置连接时，已为你完成上表中的步骤。 只需使用这些步骤来确认配置或手动为 SQL Server 设置连接。

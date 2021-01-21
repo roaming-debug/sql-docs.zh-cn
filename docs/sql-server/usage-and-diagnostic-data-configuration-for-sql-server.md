@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 76ffe524200c2f8df136074bc089b13e7404d6bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6580e33a824807312fb7f2d37d5cab893dbab2a9
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901970"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596526"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>配置 SQL Server 使用情况和诊断数据收集 (CEIP)
 
@@ -50,7 +50,7 @@ AND instance_name = '_Total'
 - 通过使用错误和使用情况报告应用程序
 - 通过在服务器上设置注册表子项
 
-对于 Linux 上的 SQL Server，请参阅 [Linux 上的 SQL Server 客户反馈](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback)
+对于 Linux 上的 SQL Server，请参阅 [Linux 上的 SQL Server 客户反馈](../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md)
 
 > [!NOTE]
 > 只能在付费版本的 SQL Server 中禁用向 Microsoft 发送信息的功能。
@@ -66,7 +66,7 @@ AND instance_name = '_Total'
 设置完成后，SQL Server 组件和实例的使用情况和诊断数据收集设置可以通过“错误和使用情况报告”应用程序进行更改。 可将此应用程序作为 SQL Server 安装的一部分。 借助此工具，每个 SQL Server 实例都可以配置自己的使用情况报告设置。
 
 > [!NOTE]
-> 错误和使用情况报告应用程序在 SQL Server 的“配置工具”下列出。 使用此工具，可以 SQL Server 2017 中的相同方式，管理错误报告以及使用情况和诊断数据收集的偏好设置。 错误报告独立于使用情况和诊断数据收集，因此可以与使用情况和诊断数据收集分开启用或禁用。 错误报告收集发送到 Microsoft 的故障转储，其中可能包含[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)中所述的敏感信息。
+> 错误和使用情况报告应用程序在 SQL Server 的“配置工具”下列出。 使用此工具，可以 SQL Server 2017 中的相同方式，管理错误报告以及使用情况和诊断数据收集的偏好设置。 错误报告独立于使用情况和诊断数据收集，因此可以与使用情况和诊断数据收集分开启用或禁用。 错误报告收集发送到 Microsoft 的故障转储，其中可能包含[隐私声明](./sql-server-privacy.md)中所述的敏感信息。
 
 要启动 SQL Server 错误和使用情况报告，请单击或点击“启动”，然后在搜索框中搜索“错误”。 将显示 SQL Server 错误和使用情况报告项。 启动此工具后，可以管理为相应计算机上安装的实例和组件收集的使用情况和诊断数据以及严重错误。
 
@@ -144,7 +144,7 @@ SSMS 不会收集其自身的故障转储。 与 SSMS 相关的任何故障转�
  
 - Windows Server 2016 和 Windows 10
 
-    [在组织中配置 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+    [在组织中配置 Windows 诊断数据](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 和 Windows 7
 
     [WER 设置](/windows/desktop/wer/wer-settings)

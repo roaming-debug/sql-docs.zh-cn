@@ -34,12 +34,12 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c28f2c267c49f2a31fd07eecdbb9e593237a1835
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: f9276557c2c2d5d3f733d6f37d243eaee0eec68a
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778069"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534291"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>表、矩阵和列表（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中，表、矩阵和列表是在以行和列形式组织的单元中显示分页报表数据的数据区域。 单元通常包含文本数据（如文本、日期和数字），但它们还可以包含仪表、图表或报表项（例如图像）。 表、矩阵和列表常常统称为 Tablix 数据区域。  
@@ -88,7 +88,7 @@ ms.locfileid: "84778069"
   
  ![从工具箱添加的新列表，选中](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "从工具箱添加的新列表，选中")  
   
- 有关详细信息，请参阅 [创建带列表的发票和表单]。  
+ 有关详细信息，请参阅 [创建带列表的发票和表单](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
 ##  <a name="preparing-data"></a><a name="PreparingData"></a> 准备数据  
  表、矩阵和列表数据区域显示来自数据集的数据。 您可以在检索数据集数据的查询中准备数据，也可以通过设置表、矩阵或列表中的属性来准备数据。  

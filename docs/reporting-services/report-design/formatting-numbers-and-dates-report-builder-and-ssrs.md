@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 81a6c4e397ffba96af45a59a3ab26edaafeb05f4
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 9df64577305006d406be0f10e060a7ac60ed10df
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255480"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596890"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>设置数字和日期的格式（报表生成器和 SSRS）
   通过从相应数据区域的 **“属性”** 对话框的 **“数字”** 页选择格式，可以在数据区域中设置数字和日期的格式。  
@@ -45,7 +45,7 @@ ms.locfileid: "84255480"
   
 -   默认情况下，数字的格式设置反映客户端计算机上的区域性设置。 将格式设置字符串用于指定数字的显示方式，可使格式设置保持一致，而无论用户在何处查看报表。  
   
--   **“数字”** 页上提供的格式是 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 标准数字格式字符串的子集。 若要使用未显示在对话框中的自定义格式来设置数字或日期格式，可以将任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串用于数字或日期。 有关自定义格式字符串的详细信息，请参阅 MSDN 上的主题 [Formatting Types](https://go.microsoft.com/fwlink/?LinkId=112024) （设置类型的格式）。  
+-   **“数字”** 页上提供的格式是 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 标准数字格式字符串的子集。 若要使用未显示在对话框中的自定义格式来设置数字或日期格式，可以将任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串用于数字或日期。 有关自定义格式字符串的详细信息，请参阅 MSDN 上的主题 [Formatting Types](/previous-versions/) （设置类型的格式）。  
   
 -   如果已指定了自定义格式字符串，则它的优先级比特定于区域性的默认设置的优先级更高。 例如，假定设置了自定义格式字符串“#,###”以将数字 1234 显示为 1,234。 对于美国用户和欧洲的用户而言，它的含义可能是不同的。 在指定自定义格式之前，请考虑您选择的格式将会如何影响那些可能会查看报表的不同区域性的用户。  
   
@@ -61,5 +61,4 @@ ms.locfileid: "84255480"
  [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [设置仪表上刻度的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
-  
   

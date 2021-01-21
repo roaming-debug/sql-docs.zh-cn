@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b2dc1633af5b4f6ff8ff981d11766c67510786d
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 0d9f3036e7d8c580e770ded7bbbec6e5f29b2750
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778945"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596910"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，数据点是图表上的最小单个实体。 在非形状图上，根据数据点的图表类型来表示数据点。 例如，线条序列由一个或多个连接数据点组成。 在形状图上，数据点是通过构成整个图表的单个切片和段来表示的。 例如，饼图上的每个块都是一个数据点。 有关详细信息，请参阅 [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -75,7 +75,7 @@ ms.locfileid: "84778945"
 |#MAX|序列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|序列中所有 Y 值第一个值。|All|`=First(Fields!MyDataField.Value)`|  
   
- 若要设置关键字格式，请将 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串用括号括起来。 例如，若要在工具提示中将数据点的值指定为具有两个小数位数的数字，请将格式字符串“N2”放置到大括号中，例如序列上 **“工具提示”** 属性的“#VALY{N2}”。 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串的详细信息，请参阅 MSDN 上的 [Formatting Types](https://go.microsoft.com/fwlink/?LinkId=112024) （为类型设置格式）。 有关在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中设置数字格式的详细信息，请参阅[设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
+ 若要设置关键字格式，请将 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串用括号括起来。 例如，若要在工具提示中将数据点的值指定为具有两个小数位数的数字，请将格式字符串“N2”放置到大括号中，例如序列上 **“工具提示”** 属性的“#VALY{N2}”。 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串的详细信息，请参阅 MSDN 上的 [Formatting Types](/previous-versions/) （为类型设置格式）。 有关在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中设置数字格式的详细信息，请参阅[设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
  有关将关键字添加到图表的详细信息，请参阅[在序列上显示工具提示（报表生成器和 SSRS）](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)、[更改图例项的文本（报表生成器和 SSRS）](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
@@ -102,5 +102,4 @@ ms.locfileid: "84778945"
  [教程：向报表添加饼图（报表生成器）](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

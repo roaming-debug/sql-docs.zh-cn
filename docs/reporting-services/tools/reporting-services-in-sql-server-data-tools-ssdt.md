@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30e7824d1519fb09a7947dde1cfdc2b818ebc144
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9ed7c7d204fe315280e379206d56f122606d1f03
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916583"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597300"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是用于创建商业智能解决方案的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 环境。 SSDT 是报表设计器创作环境，你可以在其中打开、修改、预览、保存和部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表定义、共享数据源、共享数据集和报表部件。 SQL Server 不提供 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 下载 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是用于创建商业智能解决方案的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 环境。 SSDT 是报表设计器创作环境，你可以在其中打开、修改、预览、保存和部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表定义、共享数据源、共享数据集和报表部件。 SQL Server 不提供 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 下载 [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。 
   
  本主题介绍用于 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]解决方案、项目、项目模板和配置，以及可在报表设计器中使用的视图、菜单、工具栏和快捷键。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "86916583"
   
 -   **报表服务器项目向导。** 选择报表服务器向导项目时，将自动创建一个报表服务器项目并打开报表向导。 在该向导中，您可以根据每个页面上的说明来创建报表：创建到数据源的连接字符串，设置数据源凭据，设计查询，添加表或矩阵数据区域，指定报表数据和组，选取字体和颜色样式，将报表发布到报表服务器，在本地预览报表。 使用该向导创建报表之后，您可以通过使用报表服务器项目中的报表设计器来更改报表数据和报表设计器。  
   
- ![SSDT 中的“新建项目模板”](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "SSDT 中的“新建项目模板”")  
+ ![SSDT 中的“新建项目模板”](/analysis-services/analysis-services/media/ssdt-biprojects.png "SSDT 中的“新建项目模板”")  
   
   
 ##  <a name="report-designer-windows-and-panes"></a><a name="bkmk_ReportDesignerWindowsandPanes"></a> 报表设计器窗口和窗格  
- 报表设计器支持两种视图：“设计”视图，可以定义报表数据和报表布局；“预览”视图，可以显示报表的呈现视图********。 在每一种视图中都可以显示多个窗口，以帮助您设计或查看呈现的报表。  
+ 报表设计器支持两种视图：“设计”视图，可以定义报表数据和报表布局；“预览”视图，可以显示报表的呈现视图。 在每一种视图中都可以显示多个窗口，以帮助您设计或查看呈现的报表。  
   
 ###  <a name="report-data-pane"></a><a name="bkmk_ReportDataPane"></a> “报表数据”窗格  
  “报表数据”窗格显示内置字段、数据源、数据集、字段集合、报表参数和图像。  
@@ -94,7 +94,7 @@ ms.locfileid: "86916583"
   
  使用“属性”窗格，可以：  
   
--   为设计图面上的当前选定的项设置属性。 某些属性提供了值下拉列表。 您也可以直接在单元格中键入值。 某些属性包含值集合，该集合用值“(集合)”表示。 大部分属性都可以接受表达式；复杂的表达式用值 \<Expression> 表示。 单击“\<Expression>”可打开“表达式”对话框 。 有关详细信息，请参阅 [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)。  
+-   为设计图面上的当前选定的项设置属性。 某些属性提供了值下拉列表。 您也可以直接在单元格中键入值。 某些属性包含值集合，该集合用值“(集合)”表示。 大部分属性都可以接受表达式；复杂的表达式用值 \<Expression> 表示。 单击“\<Expression>”可打开“表达式”对话框 。 有关详细信息，请参阅 [Expression Dialog Box](/previous-versions/sql/)。  
   
 -   使用“属性”窗格工具栏按钮可将网格从类别视图更改为字母顺序视图。 在类别视图中，您可能需要展开类别才能看到它下面的所有属性。 若要打开某项的“属性”对话框，请单击工具栏上的“属性页”按钮，或者右键单击该项并单击“属性” 。  
   
@@ -306,7 +306,7 @@ ms.locfileid: "86916583"
   
 ## <a name="next-steps"></a>后续步骤
 
-[下载 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
+[下载 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)   
 [Reporting Services 报表](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [报表定义语言](../../reporting-services/reports/report-definition-language-ssrs.md)   

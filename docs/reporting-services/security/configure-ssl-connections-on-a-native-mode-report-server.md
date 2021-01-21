@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15f8fddb50f1cc814c88cc721fd46ceba1581faf
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 6d76229a17951c4b0bad35ee78e95a903bb590e3
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934770"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594959"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>在本机模式报表服务器上配置 TLS 连接
 
@@ -25,7 +25,7 @@ ms.locfileid: "91934770"
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式使用 HTTP SSL（安全套接字层）服务建立到报表服务器的加密连接。 传输层安全性 (TLS) 旧称为“安全套接字层 (SSL)”。 如果在报表服务器计算机的本地证书存储区中安装证书 (.cer) 文件，则可将该证书绑定到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留，以支持通过加密通道建立报表服务器连接。  
   
 > [!TIP]  
->  如果您在使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式，请参阅 SharePoint 文档了解有关的详细信息。 例如，[如何在 SharePoint 2010 Web 应用程序上启用 TLS](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)。  
+>  如果您在使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式，请参阅 SharePoint 文档了解有关的详细信息。 例如，[如何在 SharePoint 2010 Web 应用程序上启用 TLS](/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)。  
   
  由于 Internet Information Services (IIS) 也使用 HTTP SSL，因此在同一计算机上运行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，必须考虑到一些重要的互操作性问题。 请务必查看“与 IIS 的互操作性问题”部分以获取有关如何解决这些问题的指南。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "91934770"
   
  出于测试目的，可以在本地生成证书。 如果将 **MakeCert** 实用工具和示例命令用作模板，请确保在运行该命令之前将服务器名称指定为主机并删除所有换行符。 如果在 DOS 窗口中运行命令，则可能需要增加窗口的缓冲区大小以容纳整条命令。  
   
- 如果正在同一台计算机上一起运行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则可以使用 IIS 管理器控制台应用程序获取计算机上安装的证书。 IIS 管理器包含可用于创建和打包证书请求 (.crt) 文件的选项，以便可信证书颁发机构进行后续处理。 您使用的证书颁发机构将生成一个证书 (.cer) 文件，并将它发送回给您。 您可以使用 IIS 管理控制台在本地存储区中安装该证书文件。 有关详细信息，请参阅 Technet 上的 [Using SSL to Encrypt Confidential Data](https://go.microsoft.com/fwlink/?LinkId=71123) （使用 SSL 加密机密数据）。  
+ 如果正在同一台计算机上一起运行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则可以使用 IIS 管理器控制台应用程序获取计算机上安装的证书。 IIS 管理器包含可用于创建和打包证书请求 (.crt) 文件的选项，以便可信证书颁发机构进行后续处理。 您使用的证书颁发机构将生成一个证书 (.cer) 文件，并将它发送回给您。 您可以使用 IIS 管理控制台在本地存储区中安装该证书文件。 有关详细信息，请参阅 Technet 上的 [Using SSL to Encrypt Confidential Data](/previous-versions/windows/it-pro/windows-server-2003/cc738495(v=ws.10)) （使用 SSL 加密机密数据）。  
   
 ## <a name="interoperability-issues-with-iis"></a>与 IIS 的互操作性问题  
  如果同一计算机上同时有 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，则会严重影响与报表服务器的 TLS 连接：  
@@ -93,5 +93,4 @@ ms.locfileid: "91934770"
  [配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [配置报表服务器 URL（报表服务器配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
-  
   

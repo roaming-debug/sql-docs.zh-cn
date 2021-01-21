@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 479347709474b12f84cb451b197a8df323c76e22
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: f7585621cae251f639fbce4f0a219338ca01ffdc
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480519"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595094"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>性能、快照、缓存 (Reporting Services)
-  报表服务器性能受各种组合因素的影响，这些因素包括硬件、访问报表的并发用户的数量、报表中的数据量和输出格式。 若要了解影响您的安装的具体性能因素以及哪个补救办法将生成所需的结果，您将需要获得基准数据并运行测试。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容： [Reporting Services 性能优化](https://docs.microsoft.com/archive/blogs/sqlcat/reporting-services-performance-and-optimization) 和 [使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试](https://go.microsoft.com/fwlink/?LinkID=77519)。  
+  报表服务器性能受各种组合因素的影响，这些因素包括硬件、访问报表的并发用户的数量、报表中的数据量和输出格式。 若要了解影响您的安装的具体性能因素以及哪个补救办法将生成所需的结果，您将需要获得基准数据并运行测试。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容： [Reporting Services 性能优化](/archive/blogs/sqlcat/reporting-services-performance-and-optimization) 和 [使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试](/previous-versions/sql/sql-server-2005/administrator/aa964139(v=sql.90))。  
   
  下面是需要考虑的总原则：  
   
@@ -63,5 +63,4 @@ ms.locfileid: "89480519"
 ## <a name="see-also"></a>另请参阅  
  [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)   
  [验证报表运行情况](../../reporting-services/report-server/verifying-a-report-run.md)  
-  
   

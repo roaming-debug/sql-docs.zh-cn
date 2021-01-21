@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6c33eaeda2a7600039b80c49e1ba3c0fa9e36b5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 08f9271c7b42e7db3d42ffadc111e9b86dd38e68
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439362"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596192"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什么是 SQL Server Reporting Services (SSRS)？
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-要查找 Power BI 报表服务器？ 请参阅[什么是 Power BI 报表服务器？](https://docs.microsoft.com/power-bi/report-server/get-started)。
+要查找 Power BI 报表服务器？ 请参阅[什么是 Power BI 报表服务器？](/power-bi/report-server/get-started)。
 
 SQL Server Reporting Services (SSRS) 提供了一系列本地工具和服务，用于创建、部署和管理移动和分页报表。
 
@@ -49,7 +49,7 @@ SQL Server Reporting Services 提供产品的更新套件：
 这些源让你可以随时了解最新的 SQL Server Reporting Services 新增功能。
 
 * [Reporting Services 中的新增功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
-* [SQL Server Reporting Services 团队博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
+* [SQL Server Reporting Services 团队博客](/archive/blogs/sqlrsteamblog/)
 * [Guy in a Cube YouTube 通道](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
 
 ## <a name="paginated-reports"></a>分页报表
@@ -119,7 +119,7 @@ Web 门户内容按类型进行整理：
 ## <a name="next-steps"></a>后续步骤
 
 * [安装 Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
-* [下载 SQL Server Data Tools (SSDT)](https://go.microsoft.com/fwlink/?LinkID=616714)
+* [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 * [安装报表生成器](../reporting-services/install-windows/install-report-builder.md)
 
 * 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

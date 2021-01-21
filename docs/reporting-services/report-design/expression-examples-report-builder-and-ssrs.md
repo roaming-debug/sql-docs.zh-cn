@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f37521692b7b30cc8db1e56b81222c3e8bad38de
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 40a05ec1ed6b7ffa05132e0cefbd5157b7d3ce92
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681336"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596331"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>表达式示例（报表生成器和 SSRS）
 表达式通常在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中使用，以控制报表的内容和外观。 表达式以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写，可以使用内置函数、自定义代码、报表变量和组变量以及用户定义的变量。 表达式通常以等号 (=) 开头。 有关表达式编辑器和可以包括的引用类型的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)和[添加表达式（报表生成器和 SSRS）](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
@@ -70,9 +70,9 @@ ms.locfileid: "84681336"
  报表中的许多表达式都包含函数。 您可以使用这些函数来设置数据格式、应用逻辑和访问报表元数据。 可以编写使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库、<xref:System.Convert> 和 <xref:System.Math> 命名空间中的函数的表达式。 您可以从其他程序集或自定义代码中向函数添加引用。 还可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的类，其中包括 <xref:System.Text.RegularExpressions>。  
   
 ##  <a name="visual-basic-functions"></a><a name="VisualBasicFunctions"></a> Visual Basic 函数  
- 您可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函数来处理文本框中所显示的数据，或者处理参数、属性或报表其他区域中所用的数据。 本部分举例说明了其中的一些函数。 有关详细信息，请参阅 [Visual Basic Runtime Library Members](https://go.microsoft.com/fwlink/?LinkId=198941) （Visual Basic 运行时库成员）。  
+ 您可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函数来处理文本框中所显示的数据，或者处理参数、属性或报表其他区域中所用的数据。 本部分举例说明了其中的一些函数。 有关详细信息，请参阅 [Visual Basic Runtime Library Members](/dotnet/visual-basic/language-reference/runtime-library-members) （Visual Basic 运行时库成员）。  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了许多自定义格式选项，例如，特定日期格式。 有关详细信息，请参阅 MSDN 上的 [格式化类型](https://go.microsoft.com/fwlink/?LinkId=112024) 。  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了许多自定义格式选项，例如，特定日期格式。 有关详细信息，请参阅 MSDN 上的 [格式化类型](/previous-versions/) 。  
   
 ### <a name="math-functions"></a>数学函数  
   
@@ -115,7 +115,7 @@ ms.locfileid: "84681336"
     =DatePart(DateInterval.WeekOfYear, today()) 
     ```  
   
--   若要基于单个参数提供日期范围，可使用 **DateAdd** 函数。 下面的表达式提供名为 *StartDate*的参数日期之后六个月的日期。  
+-   若要基于单个参数提供日期范围，可使用 **DateAdd** 函数。 下面的表达式提供名为 *StartDate* 的参数日期之后六个月的日期。  
   
     ```  
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
@@ -268,7 +268,7 @@ ms.locfileid: "84681336"
     =CDec(500)  
     ```  
   
--   下面的表达式显示为多值参数 *MySelection*选择的值的数目。  
+-   下面的表达式显示为多值参数 *MySelection* 选择的值的数目。  
   
     ```  
     =CStr(Parameters!MySelection.Count)  
@@ -304,13 +304,13 @@ ms.locfileid: "84681336"
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   测试 `PhoneNumber` 字段的值，如果为 **null** （在**中为** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]），则返回“无值”；否则返回电话号码值。 此表达式可用于控制报表项中的文本框的值。  
+-   测试 `PhoneNumber` 字段的值，如果为 **null** （在 **中为** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]），则返回“无值”；否则返回电话号码值。 此表达式可用于控制报表项中的文本框的值。  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
     ```  
   
--   测试 `Department` 字段的值，然后返回子报表名称或 **null** （在**中为** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）。 此表达式可用于条件性钻取子报表。  
+-   测试 `Department` 字段的值，然后返回子报表名称或 **null** （在 **中为** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）。 此表达式可用于条件性钻取子报表。  
   
     ```  
     =IIF(Fields!Department.Value = "Development", "EmployeeReport", Nothing)  
@@ -505,7 +505,7 @@ ms.locfileid: "84681336"
     =Parameters!Department.Value  
     ```  
   
--   可在报表中创建参数，但需要设置为隐藏。 报表在报表服务器上运行时，该参数不会显示在工具栏中，并且报表读者无法更改默认值。 您可以将设置为默认值的隐藏参数用作自定义常量。 可以在任何表达式中使用此值，包括字段表达式。 下面的表达式标识由 *ParameterField*参数的默认参数值指定的字段：  
+-   可在报表中创建参数，但需要设置为隐藏。 报表在报表服务器上运行时，该参数不会显示在工具栏中，并且报表读者无法更改默认值。 您可以将设置为默认值的隐藏参数用作自定义常量。 可以在任何表达式中使用此值，包括字段表达式。 下面的表达式标识由 *ParameterField* 参数的默认参数值指定的字段：  
   
     ```  
     =Fields(Parameters!ParameterField.Value).Value  
@@ -515,12 +515,12 @@ ms.locfileid: "84681336"
  您可以在报表中使用自定义代码。 自定义代码嵌入在报表中，或存储在报表使用的自定义程序集中。 有关自定义代码的详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>使用组变量自定义聚合  
- 您可以初始化特定组作用域的本地组变量的值，然后在表达式中包含对该变量的引用。 可以将组变量和自定义代码一起使用的方法之一是实现自定义聚合。 有关详细信息，请参阅 [Using Group Variables in Reporting Services 2008 for Custom Aggregation](https://go.microsoft.com/fwlink/?LinkId=128714)（在 Reporting Services 2008 使用组变量自定义聚合）。  
+ 您可以初始化特定组作用域的本地组变量的值，然后在表达式中包含对该变量的引用。 可以将组变量和自定义代码一起使用的方法之一是实现自定义聚合。 有关详细信息，请参阅 [Using Group Variables in Reporting Services 2008 for Custom Aggregation](/archive/blogs/robertbruckner/)（在 Reporting Services 2008 使用组变量自定义聚合）。  
   
  有关变量的详细信息，请参阅 [报表和组变量集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)。  
   
 ## <a name="suppressing-null-or-zero-values-at-run-time"></a>取消运行时的 Null 值或零值  
- 处理报表时，表达式中某些值的计算结果可能为 Null 值或未定义。 这将创建运行时错误，从而导致在文本框中显示 **#Error** ，而不是计算后的表达式。 **IIF** 函数对此行为特别敏感，因为它不同于 If-Then-Else 语句， **IIF** 语句的每一部分在传递到测试 **true** 或 **false**的例程之前，都要进行计算（包括函数调用）。 如果 `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` 为 NOTHING，则语句 **将在所呈现的报表中生成** #Error `Fields!Sales.Value` 。  
+ 处理报表时，表达式中某些值的计算结果可能为 Null 值或未定义。 这将创建运行时错误，从而导致在文本框中显示 **#Error** ，而不是计算后的表达式。 **IIF** 函数对此行为特别敏感，因为它不同于 If-Then-Else 语句， **IIF** 语句的每一部分在传递到测试 **true** 或 **false** 的例程之前，都要进行计算（包括函数调用）。 如果 `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` 为 NOTHING，则语句 **将在所呈现的报表中生成** #Error `Fields!Sales.Value` 。  
   
  若要避免此情况，请使用以下策略之一：  
   
@@ -530,7 +530,7 @@ ms.locfileid: "84681336"
     =IIF(Field!B.Value=0, 0, Field!A.Value / IIF(Field!B.Value =0, 1, Field!B.Value))  
     ```  
   
--   使用自定义代码函数返回表达式的值。 下面的示例返回当前值和先前值之间的百分比差异。 这不但可用于计算任意两个连续值之间的差异，还可以处理第一次比较（无先前值的情况）的边界情况以及先前值与当前值中有一个为 **null** （在**中为** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）的情况。  
+-   使用自定义代码函数返回表达式的值。 下面的示例返回当前值和先前值之间的百分比差异。 这不但可用于计算任意两个连续值之间的差异，还可以处理第一次比较（无先前值的情况）的边界情况以及先前值与当前值中有一个为 **null** （在 **中为** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）的情况。  
   
     ```  
     Public Function GetDeltaPercentage(ByVal PreviousValue, ByVal CurrentValue) As Object  
@@ -558,5 +558,4 @@ ms.locfileid: "84681336"
  [在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [常用筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
-  
   

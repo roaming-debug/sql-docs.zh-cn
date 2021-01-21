@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef8729d35598b59c33a827d77e5e7c5473ead049
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 7ce362356424cb0fdaf991faa27d90f10ef36899
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547859"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597132"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件
 
@@ -57,7 +57,7 @@ ms.locfileid: "84547859"
   
 4.  在类别列表中找到 **SQL Server Reporting Services** 。  
   
-5.  单击加号 (+) 以展开 **SQL Server Reporting Services**下的子类别。  
+5.  单击加号 (+) 以展开 **SQL Server Reporting Services** 下的子类别。  
   
 6.  选择要添加到跟踪日志中的子类别。  
   
@@ -101,7 +101,7 @@ Get-SPDiagnosticConfig
 |本地模式呈现||  
 |SOAP 客户端代理||  
 |UI 页||  
-|Power View|写入 **LogClientTraceEvents** API 的日志条目。 这些条目来源于客户端应用程序，包括 Power View（SQL Server Reporting Services 加载项的功能）。<br /><br /> 来自 LogClientTraceEvents API 的所有日志条目将记录在“SQL Server Reporting Services”的“类别”和“Power View”的“区域”下********。<br /><br /> 使用“Power View”区域记录的条目内容由客户端应用程序决定。|  
+|Power View|写入 **LogClientTraceEvents** API 的日志条目。 这些条目来源于客户端应用程序，包括 Power View（SQL Server Reporting Services 加载项的功能）。<br /><br /> 来自 LogClientTraceEvents API 的所有日志条目将记录在“SQL Server Reporting Services”的“类别”和“Power View”的“区域”下。<br /><br /> 使用“Power View”区域记录的条目内容由客户端应用程序决定。|  
 |报表服务器警报运行时||  
 |报表服务器应用程序域管理器||  
 |报表服务器缓冲响应||  
@@ -139,7 +139,7 @@ Get-SPDiagnosticConfig
 |共享服务|示例条目：<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting access to content databases.<br /><br /> MediumProvisioning instances for ReportingWebServiceApplication<br /><br /> MediumProcessing service account change for ReportingWebServiceApplication<br /><br /> MediumSetting database permissions.|  
   
 ##  <a name="view-a-log-file-with-powershell"></a><a name="bkmk_powershell"></a> 使用 PowerShell 查看日志文件  
- ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")可以使用 PowerShell 从 ULS 日志文件中返回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关事件列表。 从 SharePoint 2010 Management Shell 运行以下命令以便从该文件（ULS 日志文件 UESQL11SPOINT-20110606-1530.log）中返回包含“sql server reporting services”的行的筛选后列表****：  
+ ![PowerShell 相关内容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")可以使用 PowerShell 从 ULS 日志文件中返回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关事件列表。 从 SharePoint 2010 Management Shell 运行以下命令以便从该文件（ULS 日志文件 UESQL11SPOINT-20110606-1530.log）中返回包含“sql server reporting services”的行的筛选后列表：  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
@@ -147,11 +147,11 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  具有可以下载的工具，通过这些工具可以读取 ULS 日志。 例如，GitHub 上提供的 [SharePoint 日志查看器](https://github.com/hasankhan/SharePointLogViewer)。 
   
- 有关如何使用 PowerShell 查看日志数据的详细信息，请参阅 [查看诊断日志 (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)  
+ 有关如何使用 PowerShell 查看日志数据的详细信息，请参阅 [查看诊断日志 (SharePoint Server 2010)](/SharePoint/administration/view-diagnostic-logs)  
   
 ##  <a name="trace-log-location"></a><a name="bkmk_trace"></a> 跟踪日志位置  
  跟踪日志文件通常位于文件夹 **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** 中，但您可以从 SharePoint 管理中心的 **“诊断日志记录”** 页中验证或更改此路径。  
   
- 有关在 SharePoint 2010 管理中心配置 SharePoint 服务器上的诊断日志记录的详细信息和步骤，请参阅 [配置诊断日志记录设置 (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423)。  
+ 有关在 SharePoint 2010 管理中心配置 SharePoint 服务器上的诊断日志记录的详细信息和步骤，请参阅 [配置诊断日志记录设置 (Windows SharePoint Services)](/previous-versions/office/sharepoint-2007-products-and-technologies/cc288649(v=office.12))。  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

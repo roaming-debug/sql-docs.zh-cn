@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: f68821900b2e304028bccfd79e96f988f02267e9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4df5f2e96ff8795ac592c6aa61f7c79e03145c31
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471718"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596305"
 ---
 # <a name="what-is-java-language-extension"></a>什么是 Java 语言扩展？
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -27,7 +27,7 @@ Java 语言扩展是 SQL Server 的一项功能，用于执行外部 Java 代码
 
 Java 语言扩展使用扩展性框架来执行外部 Java 代码。 代码执行与核心引擎进程隔离，但与 SQL Server 查询执行完全集成。 你可以在数据的源中执行 Java 代码，而无需通过网络提取数据。
 
-外部 Java 语言通过 [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql) 定义。 系统存储过程 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 用作执行 Java 代码的接口。
+外部 Java 语言通过 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) 定义。 系统存储过程 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 用作执行 Java 代码的接口。
 
 ## <a name="get-started-with-java-language-extension"></a>Java 语言扩展入门
 
@@ -37,8 +37,8 @@ Java 语言扩展使用扩展性框架来执行外部 Java 代码。 代码执�
 
     + 使用喜欢的 IDE 来开发 Java 代码。
     + 安装[用于 Java 的 Microsoft 扩展性 SDK](how-to/extensibility-sdk-java-sql-server.md) 以在 SQL Server 上执行 Java 代码。
-    + 使用 [Azure Data Studio](../azure-data-studio/what-is.md) 在 SQL Server 上执行外部代码。
-    + 使用系统存储过程 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 在 SQL Server 上执行 Java 代码。
+    + 使用 [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) 在 SQL Server 上执行外部代码。
+    + 使用系统存储过程 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 上执行 Java 代码。
 
 1. 编写第一个 Java 代码。
 

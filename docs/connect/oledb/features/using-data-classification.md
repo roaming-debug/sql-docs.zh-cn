@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: bazizi
 ms.author: v-beaziz
 manager: kenvh
-ms.openlocfilehash: 2a46b952815fa707b03889d3f9aa6480e6e13d32
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: a833e256272a012cfccbbe018cf4ad275f08db80
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506642"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596806"
 ---
 # <a name="using-data-classification"></a>使用数据分类
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "96506642"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 ## <a name="overview"></a>概述
-[SQL 数据发现和分类](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification)是一组高级服务，可用于发现数据库中的敏感信息并对其进行分类、标记和报告。 Microsoft OLE DB Driver for SQL Server（版本 [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850)）添加了在基础数据源支持该功能时检索分类元数据的支持。 可以通过 [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) 接口访问此信息。
+[SQL 数据发现和分类](../../../relational-databases/security/sql-data-discovery-and-classification.md)是一组高级服务，可用于发现数据库中的敏感信息并对其进行分类、标记和报告。 Microsoft OLE DB Driver for SQL Server（版本 [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850)）添加了在基础数据源支持该功能时检索分类元数据的支持。 可以通过 [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) 接口访问此信息。
 
-有关如何将分类分配到列的详细信息，请参阅 [SQL 数据发现和分类](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification)。
+有关如何将分类分配到列的详细信息，请参阅 [SQL 数据发现和分类](../../../relational-databases/security/sql-data-discovery-and-classification.md)。
 
 ## <a name="code-samples"></a>代码示例
 
@@ -231,5 +231,4 @@ void PrintSensitivityClassificationInfo(SENSITIVITYCLASSIFICATION* pSensitivityC
 
 ## <a name="see-also"></a>请参阅
  [接口 (OLE DB)](../ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
- [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)  
-
+ [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f83c1f169706af4a02d1940049d2a1814bc26ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 500ecc4e4b0dae80faa06f8d152b99423bb45251
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914083"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597175"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>使用报表设计器设计 Reporting Services 分页报表 (SSRS)
 
 使用报表设计器可创建功能齐全的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表和报表解决方案。 报表设计器提供可在其中定义数据源、数据集和查询的图形界面，用于数据区域和字段的报表布局位置，以及交互功能（例如一起使用的参数和报表集）。  
 
-报表设计器是  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的一项功能，后者是一种用于创建商业智能解决方案的 Microsoft Visual Studio 环境。 SQL Server 不提供 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 下载 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。 
+报表设计器是  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的一项功能，后者是一种用于创建商业智能解决方案的 Microsoft Visual Studio 环境。 SQL Server 不提供 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 下载 [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。 
   
 ## <a name="benefits-of-report-projects"></a>报表项目的优点  
 报表项目充当报表定义和资源的容器。 使用项目可以：  
@@ -70,7 +70,7 @@ ms.locfileid: "86914083"
   
 -   **添加现有项。** 一个现有报表定义 (.rdl) 将在报表设计器中打开。 从早期版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 打开某一报表或项目可能会将该项目自动升级到当前版本，或者将该报表升级到当前架构。 有关更多信息，请参见 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)。  
   
--   导入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 报表。 从 Access 数据库（.mdb、.accdb）或项目 (.adp) 文件中导入所有报表。 报表设计器将数据库或项目文件中的所有报表都转换为 RDL 格式，然后将其保存在报表项目中。 并非 Access 报表的所有功能都转移到报表定义 (.rdl) 文件中。 有关详细信息，请参阅[从 Microsoft Access 导入报表 (Reporting Services)](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) 和[支持的 Access 报表功能 (SSRS)](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)。  
+-   导入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 报表。 从 Access 数据库（.mdb、.accdb）或项目 (.adp) 文件中导入所有报表。 报表设计器将数据库或项目文件中的所有报表都转换为 RDL 格式，然后将其保存在报表项目中。 并非 Access 报表的所有功能都转移到报表定义 (.rdl) 文件中。 有关详细信息，请参阅[从 Microsoft Access 导入报表 (Reporting Services)](../reports/reporting-services-reports-ssrs.md) 和[支持的 Access 报表功能 (SSRS)](../reports/reporting-services-reports-ssrs.md)。  
   
     > [!NOTE]  
     >  若要使用导入功能，必须将 Access 2002 或更高版本与报表设计器安装在同一台计算机上。 在导入 Access 报表时，必须能够使用报表的数据源。  
@@ -86,7 +86,7 @@ ms.locfileid: "86914083"
      有关详细信息，请参阅[报表定义语言 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)。  
   
 ##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a> 报表部件  
- 在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”** 发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
+ 在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
  可通过使用 **TargetReportPartFolder** 和其他属性，脱离项目中的其他项而单独部署报表部件。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "86914083"
      如果使用生成报表但不部署该报表的项目配置，则将在单独的预览窗口中打开在当前配置的 **StartItem** 属性中指定的报表。  
   
     > [!NOTE]  
-    >  若要使用调试模式，必须设置开始项。 在解决方案资源管理器中右键单击报表项目，再单击 **“属性”** ，然后在 **StartItem**中选择要显示的报表的名称。  
+    >  若要使用调试模式，必须设置开始项。 在解决方案资源管理器中右键单击报表项目，再单击 **“属性”** ，然后在 **StartItem** 中选择要显示的报表的名称。  
   
      若要预览项目开始项之外的特定报表，请选择生成报表但不部署该报表的配置（例如，DebugLocal 配置），右键单击报表，再单击 **“运行”**。 必须选择不部署报表的配置；否则，报表将发布到报表服务器，而不是显示在本地预览窗口中。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "86914083"
 
 ## <a name="next-steps"></a>后续步骤
 
-[下载 Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
+[下载 Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
 [SQL Server Data Tools 中的 Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [查询设计工具](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [SQL Server Data Tools 中的部署和版本支持](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

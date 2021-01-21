@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ec946e008990e9cc4f75fc6a6eb0882756d25b8b
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477058"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596561"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>报表设计和报表部署的规划 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了几种创作和部署分页报表的方法。 了解如何计划协同工作的报表创作环境和报表服务器环境。
@@ -38,11 +38,11 @@ ms.locfileid: "97477058"
   
 -   [Microsoft SQL Server XML 架构](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [报表定义语言规范](https://go.microsoft.com/fwlink/?linkid=116865)  
+-   [报表定义语言规范](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)  
   
 -   [报表定义语言 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
- 有关 ReportViewer 控件的详细信息，请参阅 [ReportViewer 控件 (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)。  
+ 有关 ReportViewer 控件的详细信息，请参阅 [ReportViewer 控件 (Visual Studio)](/previous-versions/ms251671(v=vs.140))。  
   
 ##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> 报表服务器和 RDL 架构支持  
  可以使用以下方法将报表定义文件部署到 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 报表服务器：  
@@ -112,15 +112,14 @@ ms.locfileid: "97477058"
   
  有关详细信息，请参阅以下主题：  
   
--   [将 RDLC 文件转换为 RDL 文件](https://msdn.microsoft.com/library/ms252109.aspx)  
+-   [将 RDLC 文件转换为 RDL 文件](/previous-versions/ms252109(v=vs.140))  
   
--   [ReportViewer 控件 (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
+-   [ReportViewer 控件 (Visual Studio)](/previous-versions/ms251671(v=vs.140))  
   
--   [添加并配置 ReportViewer 控件](https://msdn.microsoft.com/library/ms252104.aspx)  
+-   [添加并配置 ReportViewer 控件](/previous-versions/ms252104(v=vs.140))  
   
 ## <a name="see-also"></a>另请参阅  
  [报表、报表部件和报表定义（报表生成器和 SSRS）](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)   
  [报表定义语言 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
-  
   

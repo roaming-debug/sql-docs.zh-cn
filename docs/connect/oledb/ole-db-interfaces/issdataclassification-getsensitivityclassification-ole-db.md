@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GetSensitivityClassification method
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: 04877e626b57022d0110501b7da6145b2c4997d2
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 94bda63675db2c73acef4c13c00feab90ae7f337
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506640"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596457"
 ---
 # <a name="issdataclassificationgetsensitivityclassification"></a>ISSDataClassification::GetSensitivityClassification
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -52,7 +52,7 @@ HRESULT GetSensitivityClassification(
 
   
 ## <a name="remarks"></a>备注  
-OLE DB Driver for SQL Server 分配内存块来保存 SENSITIVITYCLASSIFICATION 结构和此结构引用的数据。 当使用者不再需要访问分类数据时，使用者必须通过调用 [IMalloc::Free](https://docs.microsoft.com/windows/win32/api/objidl/nf-objidl-imalloc-free) 方法释放该内存。  
+OLE DB Driver for SQL Server 分配内存块来保存 SENSITIVITYCLASSIFICATION 结构和此结构引用的数据。 当使用者不再需要访问分类数据时，使用者必须通过调用 [IMalloc::Free](/windows/win32/api/objidl/nf-objidl-imalloc-free) 方法释放该内存。  
   
  SENSITIVITYCLASSIFICATION 结构的定义如下所示：
   
@@ -153,4 +153,3 @@ typedef struct tagSENSITIVITYPROPERTY
 ## <a name="see-also"></a>另请参阅  
  [ISSDataClassification](../../oledb/ole-db-interfaces/issdataclassification-ole-db.md)  
  [行集](../ole-db-rowsets/rowsets.md)  
-  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 603207390785ff684167b3b553b31c3b956842c6
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 31e92b49186e79c78cbaa2d13859d8dd3abe5c5d
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880767"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596342"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>报表设计器的表达式中的自定义代码和程序集引用 (SSRS)
   您可以添加对报表中嵌入的自定义代码的引用，或添加对生成并保存到您的计算机并且部署到报表服务器的自定义程序集的引用。 对于自定义常量、复杂的函数，或在一个报表中多次使用的函数，可使用嵌入代码。 可以使用自定义代码程序集在一个位置中维护代码，并共享该代码以便由多个报表使用。 自定义代码可包含新的自定义常量、变量、函数或子例程。 可以包含对内置集合（例如，Parameters 集合）的只读引用。 但是，无法将报表数据值集传递给自定义函数；特别要指出的是，不支持自定义聚合。  
@@ -53,12 +53,12 @@ ms.locfileid: "84880767"
   
  若要使用内置函数，请双击“项”窗格中的函数名称。 “说明”窗格中显示该函数的说明，“示例”窗格中显示函数调用的示例。 在“代码”窗格中，在左圆括号 **(** 后键入函数名称时，IntelliSense 将帮助显示函数调用的各项有效语法。 例如，若要计算表中一个名为 `Quantity` 的字段的最大值，首先将简单表达式 `=Max(` 添加到“代码”窗格，然后使用智能标记查看该函数调用的所有可能的有效语法。 若要完成本示例，请键入 `=Max(Fields!Quantity.Value)`。  
   
- 有关每个函数的详细信息，请参阅 <xref:System.Math>、 <xref:System.Convert>和 MSDN 中的 [Visual Basic 运行时库成员](https://go.microsoft.com/fwlink/?LinkId=198941) 。  
+ 有关每个函数的详细信息，请参阅 <xref:System.Math>、 <xref:System.Convert>和 MSDN 中的 [Visual Basic 运行时库成员](/dotnet/visual-basic/language-reference/runtime-library-members) 。  
   
 ##  <a name="including-references-to-less-commonly-used-functions"></a><a name="NotCommon"></a> 包括对不太常用函数的引用  
  若要包括一个对不太常用的 CLR 命名空间的引用，必须使用完全限定引用，例如 <xref:System.Text.StringBuilder>。 对于这些不太常用的函数， **“表达式”** 对话框的“代码”窗格不支持 IntelliSense。  
   
- 有关详细信息，请参阅 [Visual Basic Runtime Library Members](https://go.microsoft.com/fwlink/?LinkId=198941) （Visual Basic 运行时库成员）。  
+ 有关详细信息，请参阅 [Visual Basic Runtime Library Members](/dotnet/visual-basic/language-reference/runtime-library-members) （Visual Basic 运行时库成员）。  
   
 ##  <a name="including-references-to-external-assemblies"></a><a name="External"></a> 包括对外部程序集的引用  
  若要包括对外部程序集中的类的引用，必须标识报表处理器的程序集。 使用 **“报表属性”** 对话框的 **“引用”** 页指定要添加到报表中的程序集的完全限定名称。 在表达式中，必须使用程序集中的类的完全限定名称。 外部程序集中的类不显示在 **“表达式”** 对话框中，您必须提供正确无误的类名称。 完全限定名称包括命名空间、类名称和成员名称。  
@@ -66,7 +66,7 @@ ms.locfileid: "84880767"
 ##  <a name="including-embedded-code"></a><a name="Embedded"></a> 包括嵌入代码  
  若要将嵌入代码添加到某个报表，请使用 **“报表属性”** 对话框的“代码”选项卡。 创建的代码块可以包含多个方法。 嵌入代码中的方法必须采用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写，并且必须是基于实例的方法。 对于 System.Convert 和 System.Math namespaces 命名空间，报表处理器会自动添加引用。 使用 **“报表属性”** 对话框的 **“引用”** 页添加其他程序集引用。 有关详细信息，请参阅 [向报表添加程序集引用 (SSRS)](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)。  
   
- 嵌入代码中的方法可通过全局定义的 **Code** 成员使用。 你可以通过引用 **Code** 成员和方法名称来访问这些方法。 下面的示例调用 **ToUSD**方法，该方法将 `StandardCost` 字段中的值转换为美元值：  
+ 嵌入代码中的方法可通过全局定义的 **Code** 成员使用。 你可以通过引用 **Code** 成员和方法名称来访问这些方法。 下面的示例调用 **ToUSD** 方法，该方法将 `StandardCost` 字段中的值转换为美元值：  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
@@ -96,7 +96,7 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- 下面的示例包括 **FixSpelling**函数的代码引用和代码实现，该函数用 `"Bicycle"` 文本替换 `SubCategory` 字段中出现的所有“Bike”文本。  
+ 下面的示例包括 **FixSpelling** 函数的代码引用和代码实现，该函数用 `"Bicycle"` 文本替换 `SubCategory` 字段中出现的所有“Bike”文本。  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
@@ -120,7 +120,7 @@ End Function
   
  下表包含从自定义代码引用该内置集合 `Parameters` 的示例：  
   
- **将整个全局参数集合传递给自定义代码。** 此函数会返回特定报表参数 *MyParameter*的值。  
+ **将整个全局参数集合传递给自定义代码。** 此函数会返回特定报表参数 *MyParameter* 的值。  
   
  表达式中的引用 `=Code.DisplayAParameterValue(Parameters)`  
   
@@ -161,7 +161,7 @@ End Function
   
  有关创建自定义程序集并使其可供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]使用的信息，请参阅 [将自定义程序集用于报表](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)。  
   
- 若要在表达式中引用自定义代码，您必须调用程序集中某个类的成员。 调用方式取决于该方法是静态方法还是基于实例的方法。 自定义程序集中的静态方法可在报表内全局使用。 您可以在表达式中通过指定命名空间、类和方法名称来访问静态方法。 下面的示例调用 **ToGBP**方法，该方法将 StandardCost  的值从美元转换为英镑：  
+ 若要在表达式中引用自定义代码，您必须调用程序集中某个类的成员。 调用方式取决于该方法是静态方法还是基于实例的方法。 自定义程序集中的静态方法可在报表内全局使用。 您可以在表达式中通过指定命名空间、类和方法名称来访问静态方法。 下面的示例调用 **ToGBP** 方法，该方法将 StandardCost  的值从美元转换为英镑：  
   
 ```  
 =CurrencyConversion.DollarCurrencyConversion.ToGBP(Fields!StandardCost.Value)  
@@ -196,5 +196,4 @@ End Function
  [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [报表示例（报表生成器和 SSRS）](https://go.microsoft.com/fwlink/?LinkId=198283)  
-  
   

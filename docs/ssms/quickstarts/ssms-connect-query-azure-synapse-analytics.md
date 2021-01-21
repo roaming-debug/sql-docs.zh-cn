@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein, mikeray
 ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
-ms.openlocfilehash: 102eaff45b6cdfb89a159e3de77039c8735395e2
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: e3584fe72ada1cff1d3b35324c5c5563bf97d050
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97619048"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596853"
 ---
 # <a name="quickstart-connect-and-query-a-dedicated-sql-pool-in-azure-synapse-analytics-with-sql-server-management-studio-ssms"></a>快速入门：使用 SQL Server Management Studio (SSMS) 连接和查询 Azure Synapse Analytic 中的专用 SQL 池
 
@@ -71,9 +71,9 @@ ms.locfileid: "97619048"
 
 ## <a name="troubleshoot-connectivity-issues"></a>解决连接问题
 
-使用 Azure Synapse Analytics 时，可能会遇到连接问题。 有关排查连接问题的详细信息，请访问[排查连接问题](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-errors-issues)。
+使用 Azure Synapse Analytics 时，可能会遇到连接问题。 有关排查连接问题的详细信息，请访问[排查连接问题](/azure/azure-sql/database/troubleshoot-common-errors-issues)。
 
-你可以防止、排查、诊断和缓解在与 Azure SQL 数据库或 Azure SQL 托管实例交互时发生的连接错误和暂时性错误。 有关详细信息，请访问[排查暂时性连接错误](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-connectivity-issues)。
+你可以防止、排查、诊断和缓解在与 Azure SQL 数据库或 Azure SQL 托管实例交互时发生的连接错误和暂时性错误。 有关详细信息，请访问[排查暂时性连接错误](/azure/azure-sql/database/troubleshoot-common-connectivity-issues)。
 
 ## <a name="create-a-database"></a>创建数据库
 

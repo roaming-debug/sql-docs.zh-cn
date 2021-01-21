@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a4fa74909490cf7596faa1e38c83a83b6329bd28
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 5b5e8dbaee71c53f8f9491f8a1abcd15559e4800
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547989"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596846"
 ---
 # <a name="report-and-snapshot-size-limits"></a>报表和快照的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理员可以通过本主题提供的信息了解在将报表发布到报表服务器、运行时呈现报表以及将报表保存到文件系统时报表的大小限制。 本主题还提供了有关如何度量报表服务器数据库大小的实践指南，并介绍了快照大小对服务器性能的影响。  
@@ -33,7 +33,7 @@ ms.locfileid: "84547989"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 对发布的文件实施最大限制，以减小拒绝服务攻击对服务器的威胁。 增大上限的值会破坏此限制所提供的某些保护。 请在确信增大该值所获得的好处大于任何其他安全隐患时才这样做。  
   
- 请记住，为 **maxRequestLength** 元素设置的值必须大于要强制实施的实际大小限制。 当在 SOAP 信封中封装所有参数，以及对某些参数应用 Base64 编码之后，HTTP 请求大小会不可避免地增加，因此你需要设置较大的值以考虑这种情况。 Base64 编码会将原始数据增大约 33%。 因此，为 **maxRequestLength** 元素指定的值需要比实际可用项目大小高出约 33%。 例如，如果为 **maxRequestLength**指定 64 MB 的值，则实际上可以预计发布到报表服务器的报表文件的最大大小约为 48 MB。  
+ 请记住，为 **maxRequestLength** 元素设置的值必须大于要强制实施的实际大小限制。 当在 SOAP 信封中封装所有参数，以及对某些参数应用 Base64 编码之后，HTTP 请求大小会不可避免地增加，因此你需要设置较大的值以考虑这种情况。 Base64 编码会将原始数据增大约 33%。 因此，为 **maxRequestLength** 元素指定的值需要比实际可用项目大小高出约 33%。 例如，如果为 **maxRequestLength** 指定 64 MB 的值，则实际上可以预计发布到报表服务器的报表文件的最大大小约为 48 MB。  
   
 ## <a name="report-size-in-memory"></a>内存中的报表大小  
  运行报表时，报表大小等于报表中返回的数据量加上输出流的大小。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对呈现报表的大小无最大限制。 系统内存决定大小的上限（默认情况下，在呈现报表时，报表服务器将使用所有可用的已配置内存），但您可以指定配置设置以设置内存阈值和内存管理策略。 有关详细信息，请参阅 [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "84547989"
  仅在呈现到 Excel 格式时，才对报表大小有严格限制。 工作表不能超过 65536 行或 256 列。 其他呈现格式没有这些限制，因此大小仅受服务器上资源量的限制。  
   
 > [!NOTE]  
->  报表处理和呈现都在内存中进行。 如果您具有大型报表或大量用户，则务必进行某种容量规划，确保您执行的报表服务器部署令用户满意。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容： [Planning for Scalability and Performance with Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) （规划 Reporting Services 的扩展性和性能）和 [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519)（使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试）。  
+>  报表处理和呈现都在内存中进行。 如果您具有大型报表或大量用户，则务必进行某种容量规划，确保您执行的报表服务器部署令用户满意。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容： [Planning for Scalability and Performance with Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) （规划 Reporting Services 的扩展性和性能）和 [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](/previous-versions/sql/sql-server-2005/administrator/aa964139(v=sql.90))（使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试）。  
   
 ## <a name="measuring-snapshot-storage"></a>度量快照存储  
  任何给定快照的大小都与报表中的数据量成正比。 快照通常比报表服务器上存储的其他项大得多。 快照大小通常在几 MB 到几十 MB 之间。 如果报表非常大，则可能会看到更大的快照。 根据使用快照的频率以及配置报表历史记录的方式，报表服务器数据库所需的磁盘空间量可能会在短期内迅速增加。  
@@ -82,5 +82,4 @@ EXEC sp_spaceused
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
  [报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [处理大型报表](../../reporting-services/report-server/process-large-reports.md)  
-  
   

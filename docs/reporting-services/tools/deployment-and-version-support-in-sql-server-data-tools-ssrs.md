@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a33626c529d59d9ffa2b80e012dbb325c93b670a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c820c7a9e0cefaee2a22a401213754d0a3274152
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917956"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596175"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的部署和版本支持 (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支持以下方案：  
@@ -66,9 +66,8 @@ ms.locfileid: "86917956"
 |报表服务器项目<br /><br /> 或<br /><br /> 报表服务器向导项目|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 架构|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |报表服务器项目<br /><br /> 或<br /><br /> 报表服务器向导项目|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 架构|仅 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器|在本地将 2003 RDL 和 2005 RDL 升级到 2008 RDL 架构。|  
   
- 有关在以前版本的报表定义架构中打开报表的详细信息，请参阅 [升级报表](../../reporting-services/install-windows/upgrade-reports.md)。 有关特定报表定义架构的详细信息，请参阅 [Report Definition Language Specification](https://go.microsoft.com/fwlink/?linkid=116865)（报表定义语言规范）。  
+ 有关在以前版本的报表定义架构中打开报表的详细信息，请参阅 [升级报表](../../reporting-services/install-windows/upgrade-reports.md)。 有关特定报表定义架构的详细信息，请参阅 [Report Definition Language Specification](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)（报表定义语言规范）。  
   
 ## <a name="see-also"></a>另请参阅  
  [发布数据源和报表](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
-  
   

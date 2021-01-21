@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 053efc8ddd1f9f00c528c626aa204d612cb82369
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 75b25a7cb08a7473e6a725a841e53011c6967756
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681276"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596020"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>报表生成器函数 - RunningValue 函数
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的运行聚合。  
@@ -34,10 +34,10 @@ RunningValue(expression, function, scope)
  要对其执行聚合的表达式，例如， `[Quantity]`。  
   
  *函数*  
- (**Enum**) 要应用于表达式的聚合函数的名称，例如， **Sum**。 此函数不能为 **RunningValue**、 **RowNumber**或 **Aggregate**。  
+ (**Enum**) 要应用于表达式的聚合函数的名称，例如， **Sum**。 此函数不能为 **RunningValue**、 **RowNumber** 或 **Aggregate**。  
   
  *作用域*  
- (**String**) 一个字符串常量，表示数据集、数据区域或组的名称，也可以为 Null（在**中为** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]），它指定在其中计算聚合的上下文。 **Nothing** 指定最外层的上下文，通常为报表数据集。  
+ (**String**) 一个字符串常量，表示数据集、数据区域或组的名称，也可以为 Null（在 **中为** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]），它指定在其中计算聚合的上下文。 **Nothing** 指定最外层的上下文，通常为报表数据集。  
   
 ## <a name="return-type"></a>返回类型  
  由 *function* 参数中指定的聚合函数确定。  
@@ -47,7 +47,7 @@ RunningValue(expression, function, scope)
   
  **RunningValue** 不能在筛选器或排序表达式中使用。  
   
- 为其计算运行值的数据集必须具有相同的数据类型。 若要将具有多个数值数据类型的数据转换为同一数据类型，请使用类似 **CInt**、 **CDbl** 或 **CDec**的转换函数。 有关详细信息，请参阅 [Type Conversion Functions](https://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
+ 为其计算运行值的数据集必须具有相同的数据类型。 若要将具有多个数值数据类型的数据转换为同一数据类型，请使用类似 **CInt**、 **CDbl** 或 **CDec** 的转换函数。 有关详细信息，请参阅 [Type Conversion Functions](/dotnet/visual-basic/language-reference/functions/type-conversion-functions)（类型转换函数）。  
   
  *Scope* 不能是表达式。  
   
@@ -57,9 +57,9 @@ RunningValue(expression, function, scope)
   
 -   嵌套聚合的作用域不能为数据集的名称。  
   
--   *Expression* 不得包含 **First**、 **Last**、 **Previous**或 **RunningValue** 函数。  
+-   *Expression* 不得包含 **First**、 **Last**、 **Previous** 或 **RunningValue** 函数。  
   
--   *Expression* 不得包含用于指定 *recursive*的嵌套聚合。  
+-   *Expression* 不得包含用于指定 *recursive* 的嵌套聚合。  
   
  若要计算行数的运行值，请使用 **RowNumber**。 有关详细信息，请参阅 [RowNumber 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)。  
   
@@ -91,5 +91,4 @@ RunningValue(expression, function, scope)
  [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

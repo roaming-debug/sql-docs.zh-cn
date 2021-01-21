@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ea1413b30c4706125b711493f64210c2a875ec0f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: a27efd6cb20a90bc1b3ce72a6e4cee74f74c3b61
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642807"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595235"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 故障转移群集实例 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "97642807"
  FCI 可利用[可用性组](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)提供数据库级别的远程灾难恢复。 有关详细信息，请参阅[故障转移群集和可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
  
  > [!NOTE]  
- > Windows Server 2016 Datacenter 版引入了对存储空间直通 (S2D) 的支持。 SQL Server 故障转移群集实例支持将 S2D 用于群集存储资源。 有关详细信息，请参阅 [Windows Server 2016 中的存储空间直通](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)。
+ > Windows Server 2016 Datacenter 版引入了对存储空间直通 (S2D) 的支持。 SQL Server 故障转移群集实例支持将 S2D 用于群集存储资源。 有关详细信息，请参阅 [Windows Server 2016 中的存储空间直通](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)。
  > 
- >故障转移群集实例还支持群集共享卷 (CSV)。 有关详细信息，请参阅 [了解故障转移群集中的群集共享卷](https://technet.microsoft.com/library/dd759255.aspx)。 
+ >故障转移群集实例还支持群集共享卷 (CSV)。 有关详细信息，请参阅 [了解故障转移群集中的群集共享卷](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11))。 
    
  **本主题内容：**  
   
@@ -157,7 +157,6 @@ ms.locfileid: "97642807"
 |----------------------------|---------------|  
 |介绍如何安装新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI。|[创建新的 SQL Server 故障转移群集（安装程序）](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |介绍如何升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 故障转移群集。|[升级 SQL Server 故障转移群集实例](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|介绍 Windows 故障转移群集的概念并提供指向 Windows 故障转移群集相关任务的链接|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [故障转移群集的概述](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2： [故障转移群集的概述](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|介绍 Windows 故障转移群集的概念并提供指向 Windows 故障转移群集相关任务的链接|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [故障转移群集的概述](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730692(v=ws.10))<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2： [故障转移群集的概述](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754482(v=ws.11))|  
 |介绍 FCI 中的节点和可用性组中的副本的概念区别以及有关使用 FCI 承载可用性组的副本的注意事项。|[故障转移群集和可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
-  
   

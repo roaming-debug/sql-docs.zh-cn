@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6c7721b8b5002c104ff5076b3b0d1c9bc8219fba
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: b8eb3019b347427b2b24a8fb48083a77935f75f8
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880728"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595147"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>迷你图和数据条（报表生成器和 SSRS）
   迷你图和数据条是较小的简单图表，它们可以在很小的空间中传递很多信息，并且常常与文本并排。   
@@ -26,7 +26,7 @@ ms.locfileid: "84880728"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- 若要快速开始使用迷你图，请参阅 [教程：向报表添加迷你图（报表生成器）](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) 和视频 [如何：在表中创建迷你图](https://go.microsoft.com/fwlink/?LinkId=197092) 以及 [报表生成器中的迷你图、条形图和指示器](https://technet.microsoft.com/bi/video/ff877165) 。  
+ 若要快速开始使用迷你图，请参阅 [教程：向报表添加迷你图（报表生成器）](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) 和视频 [如何：在表中创建迷你图](/SharePoint/sharepoint-server) 以及 [报表生成器中的迷你图、条形图和指示器](/previous-versions/dn912438(v=msdn.10)) 。  
   
 > [!NOTE]  
 >  您可以将迷你图和数据条连同它们的父表、矩阵或列表作为报表部件与报表分开发布。 阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
@@ -67,10 +67,10 @@ ms.locfileid: "84880728"
  在此图像中，柱形图显示每个雇员每天的销售额。 请注意，对于雇员没有销售额数据的那些天，该图留空并对齐后面的天。 这是一个水平对齐的示例。 还要注意的是，对于某些员工，每个条都比较短，并且没有条达到单元的顶部。 这是一个垂直对齐的示例；如果没有垂直对齐，则在没有较高的条的行中，短条将扩展以便填充单元的高度。  
   
 ##  <a name="understanding-the-data-supplied-to-a-sparkline-or-data-bar"></a><a name="UnderstandScope"></a> 理解提供给迷你图或数据条的数据  
- ** 在您向表或矩阵添加迷你图或数据条时，这称作在一个数据区域内“嵌套”另一个数据区域。 嵌套意味着提供给迷你图或数据条的数据由表或矩阵所基于的数据集控制，或者由将其放置于表或矩阵中的位置控制。 有关详细信息，请参阅 [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)。  
+  在您向表或矩阵添加迷你图或数据条时，这称作在一个数据区域内“嵌套”另一个数据区域。 嵌套意味着提供给迷你图或数据条的数据由表或矩阵所基于的数据集控制，或者由将其放置于表或矩阵中的位置控制。 有关详细信息，请参阅 [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)。  
   
 ##  <a name="converting-a-sparkline-or-data-bar-to-a-full-chart"></a><a name="ConvertSparklinetoChart"></a> 将迷你图或数据条转换为完整图表  
- 因为迷你图和数据条只是一种图表，所以，在你决定想要具备整个图表功能时，可以通过右键单击图表并单击“转换为整个图表”****，将迷你图或数据条转换为整个图表。 执行此操作时，将自动添加轴线、标签、刻度线和图例。  
+ 因为迷你图和数据条只是一种图表，所以，在你决定想要具备整个图表功能时，可以通过右键单击图表并单击“转换为整个图表”，将迷你图或数据条转换为整个图表。 执行此操作时，将自动添加轴线、标签、刻度线和图例。  
   
 > [!NOTE]  
 >  通过一次单击不能将整个图表转换为迷你图或数据栏。 但是，只需通过删除不在迷你图和数据条中的所有图表元素，即可从完整图表生成迷你图或数据条。  
@@ -104,5 +104,4 @@ ms.locfileid: "84880728"
 ## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [教程：向报表添加迷你图（报表生成器）](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
-  
   

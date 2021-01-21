@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/13/2018
-ms.openlocfilehash: 9d8d86fbe427b232831fa3713b94f067e0089a4b
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 2607b029389d0a0d3f4b59e55e031b768baf4aac
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638931"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597254"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中编写对象脚本
 
@@ -226,7 +226,7 @@ ms.locfileid: "92638931"
 
 熟悉 SSMS 的最好方式是进行实践演练。 这些教程  和操作说明  文章可帮助你使用 SSMS 的各种功能。 这些文章教你如何管理 SSMS 组件，以及如何查找常用功能。
 
-* [连接到实例和查询实例](../quickstarts/connect-query-sql-server.md)
+* [连接到实例和查询实例](../quickstarts/ssms-connect-query-sql-server.md)
 * [在 SSMS 中使用模板](../template/templates-ssms.md)
 * [SSMS 配置](ssms-configuration.md)
 * [使用 SSMS 的其他提示和技巧](ssms-tricks.md)

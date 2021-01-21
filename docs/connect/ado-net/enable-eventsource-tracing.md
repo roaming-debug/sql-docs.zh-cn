@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: b45f6146f8b5e2f367281720b0fa1c3395d94256
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 1bcf11727a5ccd640846788b936ff5fefe9c63a3
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123944"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595682"
 ---
 # <a name="enable-event-tracing-in-sqlclient"></a>启用 SqlClient 中的事件跟踪
 
@@ -56,7 +56,7 @@ Microsoft.Data.SqlClient.EventSource
 
 ## <a name="event-tracing-support-in-native-sni"></a>本机 SNI 中的事件跟踪支持
 
-Microsoft.Data.SqlClient v2.1.0 扩展了 Microsoft.Data.SqlClient.SNI 和 Microsoft.Data.SqlClient.SNI.runtime 中的事件跟踪支持。 通过将 EventCommand 发送到 `SqlClientEventSource`，可以使用 [Xperf](https://docs.microsoft.com/windows-hardware/test/wpt/) 和 [PerfView](https://github.com/microsoft/perfview) 工具收集本机 SNI.dll 中的事件。 有效的 EventCommand 值如下所示：
+Microsoft.Data.SqlClient v2.1.0 扩展了 Microsoft.Data.SqlClient.SNI 和 Microsoft.Data.SqlClient.SNI.runtime 中的事件跟踪支持。 通过将 EventCommand 发送到 `SqlClientEventSource`，可以使用 [Xperf](/windows-hardware/test/wpt/) 和 [PerfView](https://github.com/microsoft/perfview) 工具收集本机 SNI.dll 中的事件。 有效的 EventCommand 值如下所示：
 
 ```cs
 // Enables trace events:

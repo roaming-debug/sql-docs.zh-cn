@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7f152bf79c030fee3ce480d455c54fbdfad4b719
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 72e29a5be172bdf00f9c57358cbbaa1e9bae5a09
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935480"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594817"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 针对验证的扩展保护
 
   扩展保护是针对最新版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统的一组增强功能。 扩展保护增强了应用程序可用来保护凭据和身份验证的方式。 此功能自身并不直接提供保护机制来防止特定攻击（如凭据转发），但它为诸如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的应用程序提供了一种基础结构来实施针对验证的扩展保护。  
   
- 作为扩展保护一部分的主要身份验证增强功能是服务绑定和渠道绑定。 渠道绑定使用渠道绑定标记 (CBT)，以验证在两个端点之间建立的渠道不会受到危害。 服务绑定使用服务器主体名称 (SPN) 来验证身份验证标记的预期目的地。 有关扩展保护的详细背景信息，请参阅 [Integrated Windows Authentication with Extended Protection（将 Windows 身份验证与扩展保护相集成）](https://go.microsoft.com/fwlink/?LinkId=179922)。  
+ 作为扩展保护一部分的主要身份验证增强功能是服务绑定和渠道绑定。 渠道绑定使用渠道绑定标记 (CBT)，以验证在两个端点之间建立的渠道不会受到危害。 服务绑定使用服务器主体名称 (SPN) 来验证身份验证标记的预期目的地。 有关扩展保护的详细背景信息，请参阅 [Integrated Windows Authentication with Extended Protection（将 Windows 身份验证与扩展保护相集成）](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))。  
   
 SQL Server Reporting Services (SSRS) 支持和实行已在操作系统中启用并在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中配置的扩展保护。 默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 接受指定 Negotiate 或 NTLM 身份验证的请求，因此，可能因操作系统中支持扩展保护以及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展保护功能而受益。  
   
 > [!IMPORTANT]  
->  默认情况下，Windows 不启用扩展保护。 有关如何在 Windows 中启用扩展保护的信息，请参阅 [身份验证的扩展保护](https://go.microsoft.com/fwlink/?LinkID=178431)。 操作系统和客户端身份验证堆栈必须同时支持扩展保护，身份验证才能成功。 对于较早的操作系统，您可能需要安装多个更新，才能获得完整的支持扩展保护功能的计算机。 有关扩展保护的最新开发动态的信息，请参阅 [updated information with Extended Protection（扩展保护的更新信息）](https://go.microsoft.com/fwlink/?LinkId=183362)。  
+>  默认情况下，Windows 不启用扩展保护。 有关如何在 Windows 中启用扩展保护的信息，请参阅 [身份验证的扩展保护](https://go.microsoft.com/fwlink/?LinkID=178431)。 操作系统和客户端身份验证堆栈必须同时支持扩展保护，身份验证才能成功。 对于较早的操作系统，您可能需要安装多个更新，才能获得完整的支持扩展保护功能的计算机。 有关扩展保护的最新开发动态的信息，请参阅 [updated information with Extended Protection（扩展保护的更新信息）](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100))。  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services 扩展保护概述
 
@@ -82,8 +82,8 @@ SSRS 支持和实行已在操作系统中启用的扩展保护功能。 如果�
 |场景|方案图|保护方式|  
 |--------------|----------------------|-------------------|  
 |HTTP 通信。 报表服务器将实行“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_Indirect](../../reporting-services/security/media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|将 **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Any**。<br /><br /> <br /><br /> \- 没有 TLS 通道，因此无法强制执行通道绑定。<br /><br /> \- 必须对报表服务器进行配置，使之识别代理服务器的名称，以确保正确实行服务绑定。|  
-|HTTP 通信。<br /><br /> 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|设置 <br />                    **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Proxy**。<br /><br /> <br /><br /> \- 可以使用到代理的 TLS 通道，因此能够强制执行到代理的通道绑定。<br /><br /> \- 还可以实行服务绑定。<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为它创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames**中配置代理名称。|  
-|与安全代理之间的间接 HTTPS 通信。 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|设置 <br />                    **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Proxy**。<br /><br /> <br /><br /> \- 可以使用到代理的 TLS 通道，因此能够强制执行到代理的通道绑定。<br /><br /> \- 还可以实行服务绑定。<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为它创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames**中配置代理名称。|  
+|HTTP 通信。<br /><br /> 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|设置 <br />                    **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Proxy**。<br /><br /> <br /><br /> \- 可以使用到代理的 TLS 通道，因此能够强制执行到代理的通道绑定。<br /><br /> \- 还可以实行服务绑定。<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为它创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames** 中配置代理名称。|  
+|与安全代理之间的间接 HTTPS 通信。 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|设置 <br />                    **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Proxy**。<br /><br /> <br /><br /> \- 可以使用到代理的 TLS 通道，因此能够强制执行到代理的通道绑定。<br /><br /> \- 还可以实行服务绑定。<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为它创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames** 中配置代理名称。|  
   
 ### <a name="gateway"></a>网关  
  此方案介绍了连接到设备或软件的客户端应用程序，设备或软件执行 TLS 并对用户进行身份验证。 接着，此设备或软件模拟用户上下文或其他用户上下文，之后对报表服务器发出请求。  
@@ -98,8 +98,8 @@ SSRS 支持和实行已在操作系统中启用的扩展保护功能。 如果�
   
 |场景|方案图|保护方式|  
 |--------------|----------------------|-------------------|  
-|从客户端间接和直接访问报表服务器服务，其中客户端没有与代理或报表服务器建立 TLS 连接。|1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理<br /><br /> 4) 客户端应用程序|将 **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Any**。<br /><br /> <br /><br /> \- 可以实行从客户端到报表服务器的服务绑定。<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为它创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames**中配置代理名称。|  
-|从客户端间接和直接访问报表服务器，其中客户端与代理或报表服务器建立 TLS 连接。|![RS_ExtendedProtection_CombinationSSL](../../reporting-services/security/media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理<br /><br /> 4) 客户端应用程序|将 **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Proxy**。<br /><br /> <br /><br /> \- 可以使用渠道绑定<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为代理创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames**中配置代理名称。|  
+|从客户端间接和直接访问报表服务器服务，其中客户端没有与代理或报表服务器建立 TLS 连接。|1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理<br /><br /> 4) 客户端应用程序|将 **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Any**。<br /><br /> <br /><br /> \- 可以实行从客户端到报表服务器的服务绑定。<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为它创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames** 中配置代理名称。|  
+|从客户端间接和直接访问报表服务器，其中客户端与代理或报表服务器建立 TLS 连接。|![RS_ExtendedProtection_CombinationSSL](../../reporting-services/security/media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理<br /><br /> 4) 客户端应用程序|将 **RSWindowsExtendedProtectionLevel** 设置为 **Allow** 或 **Require**。<br /><br /> 将 **RSWindowsExtendedProtectionScenario** 设置为 **Proxy**。<br /><br /> <br /><br /> \- 可以使用渠道绑定<br /><br /> \- 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为代理创建一个 URL 预留，或在 Windows 注册表项 **BackConnectionHostNames** 中配置代理名称。|  
   
 ## <a name="configuring-reporting-services-extended-protection"></a>配置 Reporting Services 扩展保护  
  **rsreportserver.config** 文件包含的配置值用于控制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展保护的行为。  
@@ -113,7 +113,7 @@ SSRS 支持和实行已在操作系统中启用的扩展保护功能。 如果�
   
 |设置|说明|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|指定扩展保护的实行程度。 有效值是：<br /><br /> **OFF**：默认。 指定没有渠道绑定或服务绑定验证。<br /><br /> **Allow** 支持扩展保护，但并不需要此功能。  指定：<br /><br /> \- 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。 实行保护的方式通过设置 **RsWindowsExtendedProtectionScenario**来确定<br /><br /> \- 对于在不支持扩展保护的操作系统上运行的应用程序而言，将允许进行身份验证。<br /><br /> **Require** 指定：<br /><br /> \- 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。<br /><br /> \- 对于在不支持扩展保护的操作系统上运行的应用程序而言，将 **不** 允许进行身份验证。|  
+|**RSWindowsExtendedProtectionLevel**|指定扩展保护的实行程度。 有效值是：<br /><br /> **OFF**：默认。 指定没有渠道绑定或服务绑定验证。<br /><br /> **Allow** 支持扩展保护，但并不需要此功能。  指定：<br /><br /> \- 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。 实行保护的方式通过设置 **RsWindowsExtendedProtectionScenario** 来确定<br /><br /> \- 对于在不支持扩展保护的操作系统上运行的应用程序而言，将允许进行身份验证。<br /><br /> **Require** 指定：<br /><br /> \- 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。<br /><br /> \- 对于在不支持扩展保护的操作系统上运行的应用程序而言，将 **不** 允许进行身份验证。|  
 |**RsWindowsExtendedProtectionScenario**|指定要验证哪些形式的扩展保护：渠道绑定、服务绑定，或两者。 有效值是：<br /><br /> **代理**：默认。 指定：<br /><br /> \- 当存在渠道绑定标记时，使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> \- 实行服务绑定。<br /><br /> **Any** 指定：<br /><br /> \- 不要求 Windows NTLM、Kerberos 和 Negotiate 身份验证以及渠道绑定。<br /><br /> \- 实行服务绑定。<br /><br /> **Direct** 指定：<br /><br /> \- 如果 CBT 存在、与当前服务建立了 TLS 连接，且用于 TLS 连接的 CBT 与 NTLM、Kerberos 或协商令牌的 CBT 一致，应使用 Windows NTLM、Kerberos 和协商身份验证。<br /><br /> \- 不实行服务绑定。<br /><br /> <br /><br /> 注意：如果 RsWindowsExtendedProtectionLevel 设置为 OFF，则忽略 RsWindowsExtendedProtectionScenario 设置    。|  
   
  **rsreportserver.config** 配置文件中的示例条目：  
@@ -159,8 +159,8 @@ SSRS 支持和实行已在操作系统中启用的扩展保护功能。 如果�
 ## <a name="next-steps"></a>后续步骤
 
 [使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[针对验证的扩展保护概述](https://go.microsoft.com/fwlink/?LinkID=177943)   
-[Integrated Windows Authentication with Extended Protection（将 Windows 身份验证与扩展保护相集成）](https://go.microsoft.com/fwlink/?LinkId=179922)   
+[针对验证的扩展保护概述](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+[Integrated Windows Authentication with Extended Protection（将 Windows 身份验证与扩展保护相集成）](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))   
 [Microsoft 安全公告：身份验证的扩展保护](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

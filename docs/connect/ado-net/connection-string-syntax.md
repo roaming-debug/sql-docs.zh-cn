@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 42b1f8704be721c0b52b3c42946c9abbf7efd7db
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 6daf0dc719b284f753c6f089709ed6f0f51dfe2a
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771618"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596405"
 ---
 # <a name="connection-string-syntax"></a>连接字符串语法
 
@@ -123,7 +123,7 @@ Windows 身份验证是用于连接到 SQL Server 的首选方法。 但是，�
 |是|是|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
 |是|是|是|是|始终加密，但可能使用自签名的服务器证书。|  
 
-有关详细信息，请参阅[使用加密但不验证](/sql/relational-databases/native-client/features/using-encryption-without-validation)。
+有关详细信息，请参阅[使用加密但不验证](../../relational-databases/native-client/features/using-encryption-without-validation.md)。
 
 ## <a name="see-also"></a>请参阅
 

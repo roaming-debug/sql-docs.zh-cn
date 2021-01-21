@@ -19,12 +19,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 4662b6e9bcea26bc93ab0d5bf07a767797a98d70
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: ee33e30ef69b0c4a464e91576dc33e6d15ca4890
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035935"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596976"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用模板
 
@@ -118,7 +118,7 @@ ms.locfileid: "92035935"
 
 熟悉 SSMS 的最好方式是进行实践演练。 这些教程  和操作说明  文章可帮助你使用 SSMS 的各种功能。  这些文章教你如何管理 SSMS 组件，以及如何查找常用功能。
 
-* [连接到实例和查询实例](../quickstarts/connect-query-sql-server.md)
+* [连接到实例和查询实例](../quickstarts/ssms-connect-query-sql-server.md)
 * [脚本](../tutorials/scripting-ssms.md)
 * [SSMS 配置](../tutorials/ssms-configuration.md)
 * [使用 SSMS 的其他提示和技巧](../tutorials/ssms-tricks.md)

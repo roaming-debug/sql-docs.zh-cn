@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: df0e0df9198e1d8abfeb0605a5a13cf0b22059c7
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: a2469302fa57073f2541c73c7fd60aff555ec81a
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96120912"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594956"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>卸载和删除 Master Data Services
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -30,11 +30,10 @@ ms.locfileid: "96120912"
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 程序集|卸载过程将从全局程序集缓存 (GAC) 中删除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 程序集。|  
 |数据库|卸载过程不影响 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。 数据库在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中保持不变，这样您不会丢失任何数据，包括主数据、模型对象、用户和组权限、业务规则等。<br /><br /> 如果您不需要数据库，以后不希望将它连接到其他 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 网站或应用程序，则可能想从数据库所在的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中删除它。 有关详细信息，请参阅 [删除数据库](../../relational-databases/databases/delete-a-database.md)。|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 和 Web.config|卸载过程将从文件系统删除 WebApplication 文件夹。 WebApplication 文件夹包含 Web 应用程序文件和 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]的 Web.config 文件。<br /><br /> **\*\* 重要说明： \*\*** 在卸载前，你可能要将 Web.config 文件复制到其他位置，以保留该文件中的所有自定义设置或其他信息。 卸载过程完成后，Web.config 文件将不可恢复。|  
-|Internet Information Services (IIS) 项|卸载过程不影响本地计算机上 IIS 中的任何应用程序池、网站或 Web 应用程序。 由于卸载过程删除 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]的 WebApplication 文件夹和 Web.config 文件，因此需要那些文件的所有 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序将不再提供内容。 如果用户尝试访问 Web 应用程序，将收到 HTTP 错误 500.19 - 内部服务器错误：“请求的页面无法访问，因为该页的相关配置数据无效。”<br /><br /> 如果您不再需要该网站或应用程序且应用程序池提供您的网站或应用程序，可以使用 IIS 工具来删除它们。 有关详细信息，请参阅 [TechNet 上的](https://go.microsoft.com/fwlink/?LinkId=184885) IIS 7 Operations Guide [!INCLUDE[msCoName](../../includes/msconame-md.md)] （IIS 7 操作指南）。|  
+|Internet Information Services (IIS) 项|卸载过程不影响本地计算机上 IIS 中的任何应用程序池、网站或 Web 应用程序。 由于卸载过程删除 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]的 WebApplication 文件夹和 Web.config 文件，因此需要那些文件的所有 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序将不再提供内容。 如果用户尝试访问 Web 应用程序，将收到 HTTP 错误 500.19 - 内部服务器错误：“请求的页面无法访问，因为该页的相关配置数据无效。”<br /><br /> 如果您不再需要该网站或应用程序且应用程序池提供您的网站或应用程序，可以使用 IIS 工具来删除它们。 有关详细信息，请参阅 [TechNet 上的](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732976(v=ws.10)) IIS 7 Operations Guide [!INCLUDE[msCoName](../../includes/msconame-md.md)] （IIS 7 操作指南）。|  
 |**MDS_ServiceAccounts** 组|卸载过程完成后， **MDS_ServiceAccounts** Windows 组和任何已添加到该组的服务帐户将会被保留。 如果您不再需要该组和这些帐户，可以删除它们。|  
 |注册表|卸载过程从 Windows 注册表中删除所有 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 注册表项。|  
   
 ## <a name="see-also"></a>另请参阅  
  [安装 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b263aa61d02c20f55933744449151fa7676bad1
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 022751a3ec4b47a8e7a3a5f5295306265f659512
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544509"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594986"
 ---
 # <a name="process-large-reports"></a>处理大型报表
   大型报表将给系统的处理能力带来一定的挑战。若要正确运行大型报表，需要进行特定配置。 除非将大型报表配置为支持分页，否则不应按需运行这些报表。  
@@ -32,7 +32,7 @@ ms.locfileid: "84544509"
   
  对于包含可变数据的不同报表，从一个报表运行到下一个报表时，报表大小会有很大变化。 在这种情况下，应监视数据源，以确定数据可变性对报表的影响，决定是否需要按照本主题中规定的步骤进行操作。  
   
- 有关如何诊断超时错误和内存不足错误的详细信息与提示，请参阅 blogs.msdn.microsoft.com 上的[如何在报表服务器中生成报表时诊断问题](https://go.microsoft.com/fwlink/?LinkId=85634)一文。  
+ 有关如何诊断超时错误和内存不足错误的详细信息与提示，请参阅 blogs.msdn.microsoft.com 上的[如何在报表服务器中生成报表时诊断问题](/archive/blogs/lukaszp/)一文。  
   
 ## <a name="configuration-recommendations"></a>配置建议  
  关于报表执行、报表呈现和报表访问方面的建议包括以下几点：  
@@ -72,4 +72,4 @@ ms.locfileid: "84544509"
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
  [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [预加载缓存 (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [预加载缓存 (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)

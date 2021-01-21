@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: 98211695d60592c8178c4b60e45f2105c3b86db4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2e1d3faf6d17417ea1f4a134778ddd9342441231
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102653"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596857"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -46,7 +46,7 @@ SSMS 18.8 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |----------|---------|
 | Azure Data Studio 安装集成 | 安装 SSMS 会安装 Azure Data Studio 1.25.1。 |
 | Analysis Services | 添加了对 Power BI Premium Gen2 工作区的支持。 |
-| 审核 | 添加了对 EXTERNAL_MONITOR 和“operator audit”的支持。  有关详细信息，请参阅配置[文档](https://docs.microsoft.com/azure/azure-sql/managed-instance/auditing-configure)。 |
+| 审核 | 添加了对 EXTERNAL_MONITOR 和“operator audit”的支持。  有关详细信息，请参阅配置[文档](/azure/azure-sql/managed-instance/auditing-configure)。 |
 | Integration Services | 改进了 IR 创建向导，以便在创建 SSIS IR 时可以根据需要创建 SSISDB |
 
 #### <a name="bug-fixes-in-188"></a>18.8 中的 bug 修复
@@ -142,7 +142,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 生成脚本向导 | 尝试枚举 SQL Server 2014 及更低版本上的数据库对象时，向导失败。 请参阅 [SQL Server 用户反馈](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)。 | 使用 SSMS 18.6 在 SQL 2014 和更早版本的生成脚本向导中选择对象。 |
 | Integration Services | 导入或导出 Integration Services 中的包或导出 Azure-SSIS Integration Runtime 中的包时，包含脚本任务/组件的包的脚本丢失。 | 删除文件夹“C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild”。 |
 | Integration Services | 在较新的操作系统中，由于“指定的服务未安装”，Integration Services 远程连接 可能会失败。 | 在“Computer\HKEY_CLASSES_ROOT\AppID”和“Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID”下识别与 Integration Services 相关的注册表位置，并在这些配置单元中，将名为“LocalService”的注册表项重命名为“LocalService_A”，以用于我们尝试连接的特定版本的 Integration Services |
-| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 无服务器 SQL 池](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相关的更改，因此低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 无服务器 SQL 池结合使用，需要使用 SSMS 18.7 或更高版本。 |
+| “对象资源管理器” | 由于引擎发生了与 [Azure Synapse Analytics 无服务器 SQL 池](/azure/synapse-analytics/sql/on-demand-workspace-overview)相关的更改，因此低于 18.7 的 SSMS 版本的对象资源管理器有中断性变更。 | 若要继续将 SSMS 中的对象资源管理器与 Azure Synapse Analytics 无服务器 SQL 池结合使用，需要使用 SSMS 18.7 或更高版本。 |
 
 ### <a name="187"></a>18.7
 

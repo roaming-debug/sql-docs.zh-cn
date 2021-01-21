@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 1459c50d87f2f7ccc58e20bd7e21d27ace700f66
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 7a4e10b437f60c8f6b1f80ed76017591fc22686d
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96120850"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597264"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "96120850"
  熟悉如何管理 Windows 防火墙的用户，以及对想要配置的防火墙设置有所了解的用户，可直接转而参阅更高级的文章  ：  
   
 -   [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
--   [配置 Windows 防火墙以允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
+-   [配置 Windows 防火墙以允许 Analysis Services 访问](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 ##  <a name="basic-firewall-information"></a><a name="BKMK_basic"></a> 基本防火墙信息  
@@ -118,7 +118,7 @@ ms.locfileid: "96120850"
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 端口 4022。 若要验证使用的端口，请执行下面的查询：<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]，没有默认端口，不过这是联机丛书示例中使用的常规配置。|  
 |数据库镜像|管理员选择的端口。 若要确定此端口，请执行以下查询：<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|对于数据库镜像，没有默认端口，不过联机丛书示例使用 TCP 端口 5022 或 7022。 请务必不要中断正在使用的镜像终结点，尤其是在处于带有自动故障转移功能的高安全模式下时。 防火墙配置必须避免破坏仲裁。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。|  
 |复制|与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的复制连接使用典型的常规 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 端口（供默认实例使用的 TCP 端口 1433 等）<br /><br /> 复制快照的 Web 同步和 FTP/UNC 访问要求在防火墙上打开其他端口。 为了将初始数据和架构从一个位置传输到另一个位置，复制可以使用 FTP（TCP 端口 21）或者通过 HTTP（TCP 端口 80）或文件共享进行的同步。 文件共享使用 UDP 端口 137 和 138，如果使用 NetBIOS，则还有 TCP 端口 139。 文件共享使用 TCP 端口 445。|对于通过 HTTP 进行的同步，复制使用 IIS 端点（其端口可配置，但默认情况下为端口 80），不过 IIS 进程通过标准端口（对于默认实例为 1433）连接到后端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 在使用 FTP 进行 Web 同步期间，FTP 传输是在 IIS 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器之间进行，而非在订阅服务器和 IIS 之间进行。|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器|TCP 端口 135<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)<br /><br /> 可能还需要 [IPsec](#BKMK_IPsec) 例外。|如果使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，则在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 主机计算机上，还必须将 **Devenv.exe** 添加到“例外”列表中并打开 TCP 端口 135。<br /><br /> 如果使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，则在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 主机计算机上，还必须将 **ssms.exe** 添加到“例外”列表中并打开 TCP 端口 135。 有关详细信息，请参阅 [运行 TSQL 调试器之前配置防火墙规则](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器|TCP 端口 135<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)<br /><br /> 可能还需要 [IPsec](#BKMK_IPsec) 例外。|如果使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，则在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 主机计算机上，还必须将 **Devenv.exe** 添加到“例外”列表中并打开 TCP 端口 135。<br /><br /> 如果使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，则在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 主机计算机上，还必须将 **ssms.exe** 添加到“例外”列表中并打开 TCP 端口 135。 有关详细信息，请参阅 [运行 TSQL 调试器之前配置防火墙规则](../../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。|  
   
  有关为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]配置 Windows 防火墙的分步说明，请参阅 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "96120850"
   
  如果用户通过 IIS 和 Internet 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，则必须打开 IIS 侦听的端口，并在客户端连接字符串中指定该端口。 在这种情况下，不需要打开任何端口就能直接访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 默认端口 2389 和端口 2382 应当与所有其他并非必需的端口一起受到限制。  
   
- 有关为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置 Windows 防火墙的分步说明，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)。  
+ 有关为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置 Windows 防火墙的分步说明，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)。  
   
 ###  <a name="ports-used-by-reporting-services"></a><a name="BKMK_ssrs"></a> Reporting Services 使用的端口  
 
@@ -192,11 +192,11 @@ ms.locfileid: "96120850"
 |--------------|----------|--------------|  
 |Windows Management Instrumentation<br /><br /> 有关 WMI 的详细信息，请参阅 [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)。|WMI 作为共享服务主机的一部分使用通过 DCOM 分配的端口运行。 WMI 可能使用 TCP 端口 135。<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器使用 WMI 列出和管理各个服务。 建议使用预配置规则组 **Windows 管理规范 (WMI)** 。 有关详细信息，请参阅下面的 [与其他防火墙规则的交互](#BKMK_other_rules) 部分。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC)|TCP 端口 135<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)|如果应用程序使用分布式事务处理，可能必须要将防火墙配置为允许 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 在不同的 MS DTC 实例之间以及在 MS DTC 和资源管理器（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）之间进行通信。 建议使用预配置的 **“分布式事务处理协调器”** 规则组。<br /><br /> 当在单独的资源组中为整个群集配置单个共享 MS DTC 时，应当将 sqlservr.exe 作为异常添加到防火墙。|  
-|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的浏览按钮使用 UDP 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。 有关详细信息，请参阅 [SQL Server Browser 服务（数据库引擎和 SSAS）](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。|UDP 端口 1434|UDP 是一种无连接协议。<br /><br /> 防火墙具有一个名为 [INetFwProfile 接口的 UnicastResponsesToMulticastBroadcastDisabled 属性](https://go.microsoft.com/fwlink/?LinkId=118371) 的设置，用于控制防火墙在对广播（或多播）UDP 请求的单播响应方面的行为。  它有以下两种行为：<br /><br /> 如果此设置为 TRUE，则根本不允许对广播进行任何单播响应。 枚举服务将失败。<br /><br /> 如果此设置为 FALSE（默认值），则允许单播响应 3 秒钟。 此时间长度不可配置。 在堵塞或长时间滞后的网络中，或者对于负载很重的服务器，尝试枚举 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可能会返回部分列表，这可能会误导用户。|  
+|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的浏览按钮使用 UDP 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。 有关详细信息，请参阅 [SQL Server Browser 服务（数据库引擎和 SSAS）](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。|UDP 端口 1434|UDP 是一种无连接协议。<br /><br /> 防火墙具有一个名为 [INetFwProfile 接口的 UnicastResponsesToMulticastBroadcastDisabled 属性](/windows/win32/api/netfw/nf-netfw-inetfwprofile-get_unicastresponsestomulticastbroadcastdisabled) 的设置，用于控制防火墙在对广播（或多播）UDP 请求的单播响应方面的行为。  它有以下两种行为：<br /><br /> 如果此设置为 TRUE，则根本不允许对广播进行任何单播响应。 枚举服务将失败。<br /><br /> 如果此设置为 FALSE（默认值），则允许单播响应 3 秒钟。 此时间长度不可配置。 在堵塞或长时间滞后的网络中，或者对于负载很重的服务器，尝试枚举 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可能会返回部分列表，这可能会误导用户。|  
 |<a name="BKMK_IPsec"></a> IPsec 通信|UDP 端口 500 和 UDP 端口 4500|如果域策略要求通过 IPSec 进行网络通信，还必须将 UDP 端口 4500 和 UDP 端口 500 添加到例外列表。 使用 Windows 防火墙管理单元中的“新建入站规则向导”  可以选择 IPsec。 有关详细信息，请参阅下面的 [使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc) 。|  
 |将 Windows 身份验证用于可信域|必须将防火墙配置为允许身份验证请求。|有关详细信息，请参阅 [如何为域和信任关系配置防火墙](https://support.microsoft.com/kb/179442/)。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 群集|群集需要与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不直接相关的其他端口。|有关详细信息，请参阅 [Enable a network for cluster use](https://go.microsoft.com/fwlink/?LinkId=118372)（启用网络以供群集使用）。|  
-|HTTP 服务器 API (HTTP.SYS) 中保留的 URL 命名空间|很可能为 TCP 端口 80，但可以配置为其他端口。 有关常规信息，请参阅 [配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373)。|有关使用 HttpCfg.exe 预留 HTTP.SYS 端点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定信息，请参阅[关于 URL 预留和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 群集|群集需要与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不直接相关的其他端口。|有关详细信息，请参阅 [Enable a network for cluster use](/previous-versions/windows/it-pro/windows-server-2003/cc728293(v=ws.10))（启用网络以供群集使用）。|  
+|HTTP 服务器 API (HTTP.SYS) 中保留的 URL 命名空间|很可能为 TCP 端口 80，但可以配置为其他端口。 有关常规信息，请参阅 [配置 HTTP 和 HTTPS](/dotnet/framework/wcf/feature-details/configuring-http-and-https)。|有关使用 HttpCfg.exe 预留 HTTP.SYS 端点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定信息，请参阅[关于 URL 预留和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。|  
   
 ##  <a name="special-considerations-for-port-135"></a><a name="BKMK_port_135"></a> 端口 135 的特殊注意事项  
  将 RPC 与 TCP/IP 或 UDP/IP 一起用作传输方式时，通常会根据需要为系统服务动态分配入站端口。将使用端口号大于 1024 的 TCP/IP 和 UDP/IP 端口。 这些端口通常被不正式地称为“随机 RPC 端口”。 在这些情况下，RPC 客户端依赖 RPC 端点映射程序来通知它们为服务器分配了哪些动态端口。 对于一些基于 RPC 的服务，可以配置特定端口，而非让 RPC 动态分配一个端口。 此外，还可以将 RPC 动态分配的端口范围限制为一个较小的范围，不管何种服务均可如此。 由于许多服务都使用端口 135，它经常受到恶意用户的攻击。 当打开端口 135 时，请考虑限制防火墙规则的作用范围。  
@@ -205,7 +205,7 @@ ms.locfileid: "96120850"
   
 -   [Windows Server 系统的服务概述和网络端口要求](https://support.microsoft.com/kb/832017)   
 -   [如何排除 RPC 端点映射程序错误](https://support.microsoft.com/kb/839880)  
--   [Remote procedure call (RPC)（远程过程调用 (RPC)）](https://go.microsoft.com/fwlink/?LinkId=118375)    
+-   [Remote procedure call (RPC)（远程过程调用 (RPC)）](/previous-versions/ms950395(v=msdn.10))    
 -   [如何配置与防火墙一起使用的 RPC 动态端口分配](https://support.microsoft.com/kb/154596/)  
   
 ##  <a name="interaction-with-other-firewall-rules"></a><a name="BKMK_other_rules"></a> 与其他防火墙规则的交互  
@@ -289,6 +289,5 @@ ms.locfileid: "96120850"
   
 ## <a name="see-also"></a>另请参阅  
  [Windows Server 系统的服务概述和网络端口要求](https://support.microsoft.com/kb/832017)   
- [如何：配置防火墙设置（Azure SQL 数据库）](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
-  
+ [如何：配置防火墙设置（Azure SQL 数据库）](/azure/azure-sql/database/firewall-configure)  
   

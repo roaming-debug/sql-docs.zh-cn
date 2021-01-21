@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 9db282708c8f2e9bbd4ee44d45bac0b0d25dc5b9
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: bdd8189559bc3de1659e4874f80f8862dc341b1d
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97617556"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596283"
 ---
 # <a name="install-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装 R 包
 
@@ -45,7 +45,7 @@ ms.locfileid: "97617556"
    , @script = N'print(R.version)'
   ```
 
-- 在用于连接到 SQL Server 的客户端计算机上安装 [Azure Data Studio](../../azure-data-studio/what-is.md)。 你可以使用其他数据库管理或查询工具，但本文采用 Azure Data Studio。
+- 在用于连接到 SQL Server 的客户端计算机上安装 [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md)。 你可以使用其他数据库管理或查询工具，但本文采用 Azure Data Studio。
 
 ### <a name="other-considerations"></a>其他注意事项
 

@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: c0c3b1462fe165678e3826585f5ce82d5945de56
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 8b6293359306006d7ed6402bf630919a947c6e53
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577792"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596392"
 ---
 # <a name="sqlpackage-export-parameters-and-properties"></a>SqlPackage 导出的参数和属性
 SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 导出到 BACPAC 包（.bacpac 文件）。 默认情况下，所有表的数据将包含在 .bacpac 文件中。 你可以选择仅指定要为其导出数据的表的子集。 即使针对导出指定表的子集，对导出操作的验证可确保 Azure SQL 数据库对完整目标数据库的兼容性。 
@@ -61,8 +61,8 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|LongRunningCommandTimeout=(INT32)| 指定针对 SQL Server 执行查询时的长时间运行命令超时（以秒为单位）。 使用 0 表示无限期等待。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|指定在提取过程中使用的架构模型的后备存储的类型。|
 |**/p:**|TableData=(STRING)|指示将从中提取数据的表。 请按以下格式指定表名，不一定要使用括号来括住名称部分：schema_name.table_identifier。 可以多次指定此选项。|
-|**/p:**|TempDirectoryForTableData=(STRING)|指定用于在将表数据写入包文件前缓冲表数据的临时目录。|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|指定应使用的目标引擎版本。 这会影响是否允许具有 V12 功能的 Azure SQL 数据库服务器支持的对象，如生成的 bacpac 中的内存优化表。|
+|**/p:**|TempDirectoryForTableData=(STRING)|指定用于在将表数据写入包文件前缓冲表数据的临时目录。|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|指定是否验证适用于 Microsoft Azure SQL Database v12 的受支持全文文档类型。|
 
 ## <a name="next-steps"></a>后续步骤

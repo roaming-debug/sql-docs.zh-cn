@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: f522b856e759ec9821b5cc549ce3f801951b7283
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: e966e4f2f43ebe546d6baa0b757f682f3eca205b
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011827"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596366"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 命名空间简介
 
@@ -43,7 +43,7 @@ Microsoft.Data.SqlClient v2.1 扩展了对以下平台的 Always Encrypted 支�
 
 ### <a name="azure-active-directory-device-code-flow-authentication"></a>Azure Active Directory 设备代码流身份验证
 Microsoft.Data.SqlClient v2.1 支持使用 MSAL.NET 进行“设备代码流”身份验证。
-参考文档：[OAuth2.0 设备授权授权流](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code)
+参考文档：[OAuth2.0 设备授权授权流](/azure/active-directory/develop/v2-oauth2-device-code)
 
 连接字符串示例：
 
@@ -60,7 +60,7 @@ public class ActiveDirectoryAuthenticationProvider
 ```
 
 ### <a name="azure-active-directory-managed-identity-authentication"></a>Azure Active Directory 托管标识身份验证
-Microsoft.Data.SqlClient v2.1 支持使用[托管标识](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)进行 Azure Active Directory 身份验证。
+Microsoft.Data.SqlClient v2.1 支持使用[托管标识](/azure/active-directory/managed-identities-azure-resources/overview)进行 Azure Active Directory 身份验证。
 
 支持以下身份验证模式关键字：
 - Active Directory 托管标识

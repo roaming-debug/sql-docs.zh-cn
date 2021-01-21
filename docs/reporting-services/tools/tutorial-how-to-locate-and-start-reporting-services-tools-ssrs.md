@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22f5064c4d861c3f10f88ce4ff1a5727f545fb72
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 60d621e9bb833615aaed5e6f622afb9591916037
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934961"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597065"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教程：如何查找并启动 Reporting Services 工具 (SSRS)
 
@@ -67,7 +67,7 @@ ms.locfileid: "91934961"
 
     ![Reporting Services 配置工具](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services 配置工具")
 
- **后续步骤：** [配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和[报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
+ **后续步骤：** [配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和 [报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
 
 ## <a name="web-portal-native-mode"></a>Web 门户（本机模式）
 
@@ -89,7 +89,7 @@ ms.locfileid: "91934961"
 
 ## <a name="management-studio"></a><a name="bkmk_managements_studio"></a> Management Studio
 
-报表服务器管理员可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来管理报表服务器及其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件服务器。 有关详细信息，请参阅 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio) 教程。
+报表服务器管理员可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来管理报表服务器及其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件服务器。 有关详细信息，请参阅 [SQL Server Management Studio](../../ssms/quickstarts/ssms-connect-query-sql-server.md) 教程。
 
 ### <a name="to-start-sql-server-management-studio"></a>启动 SQL Server Management Studio
 
@@ -115,7 +115,7 @@ ms.locfileid: "91934961"
 
 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Visual Studio 中可以找到报表设计器。 报表设计器的设计图面包括选项卡式窗口、向导和用于访问报表创建功能的菜单。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中选择 Report Server 项目或者 Report Server 向导模板后，即可使用此报表设计器工具。 若要了解详细信息，请参阅 [SQL Server Data Tools 中的 Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。
 
-下载 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。
+下载 [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 ### <a name="to-start-report-designer"></a>启动报表设计器
 
@@ -139,7 +139,7 @@ ms.locfileid: "91934961"
 
 [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)是一个独立的应用程序，可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部创建分页报表。 你可以自定义和更新所有的现有报表，无论这些报表是在报表设计器中还是在早期版本的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中创建的。 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户或从 Microsoft 下载中心进行安装。
 
-分页报表准备就绪时，将其发布到报表服务器或[将其保存到 Power BI 服务](https://docs.microsoft.com/power-bi/paginated-reports-save-to-power-bi-service)。
+分页报表准备就绪时，将其发布到报表服务器或[将其保存到 Power BI 服务](/power-bi/paginated-reports-save-to-power-bi-service)。
 从 Microsoft 下载中心[下载报表生成器](https://go.microsoft.com/fwlink/?LinkID=219138) 。
 
 ### <a name="to-start-ssrbnoversion"></a>启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]
@@ -181,7 +181,7 @@ ms.locfileid: "91934961"
 
 [下载 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkID=733527)  
 [下载报表生成器](https://go.microsoft.com/fwlink/?LinkID=219138)  
-[下载 Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
+[下载 Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
 [安装 Reporting Services SharePoint 模式](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 [Reporting Services 报表服务器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
 [查询设计工具](../../reporting-services/report-data/query-design-tools-ssrs.md)  

@@ -11,27 +11,27 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c26ab977839927751903eead0533256ab91fde2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d16b944072ea4c6945b0358f576a73e40b8b117
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370133"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596950"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 使用情况和诊断数据收集的本地审核
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-SQL Server Management Studio (SSMS) 包含已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SSMS 可能会收集标准计算机信息以及有关使用情况和性能的信息，并可能会将这些信息传输给 Microsoft 进行分析，以便改进 SSMS 的质量、安全性和可靠性。 我们不会收集你的姓名、地址或其他联系信息。 有关详细信息，请参阅 [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)和 [SQL Server 隐私补充](https://go.microsoft.com/fwlink/?LinkID=868444)。
+SQL Server Management Studio (SSMS) 包含已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SSMS 可能会收集标准计算机信息以及有关使用情况和性能的信息，并可能会将这些信息传输给 Microsoft 进行分析，以便改进 SSMS 的质量、安全性和可靠性。 我们不会收集你的姓名、地址或其他联系信息。 有关详细信息，请参阅 [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)和 [SQL Server 隐私补充](../sql-server/sql-server-privacy.md)。
 
 ## <a name="audit-feature-usage-and-diagnostic-data"></a>审核功能使用情况和诊断数据
 
 若要查看 SSMS 收集的功能使用情况数据，请执行以下步骤：
 
 1.  启动 SSMS。
-2.  单击“查看”****，然后单击主菜单中的“输出”**** 以显示“输出”**** 窗口。 
-3.  看到“输出”**** 窗口后，选择“显示输出来源:”**** 菜单中的“遥测”****。
+2.  单击“查看”，然后单击主菜单中的“输出”以显示“输出”窗口。 
+3.  看到“输出”窗口后，选择“显示输出来源:”菜单中的“遥测”。
 
-使用 SSMS 与数据库进行交互时，“输出”**** 窗口显示收集的数据。
+使用 SSMS 与数据库进行交互时，“输出”窗口显示收集的数据。
 
 ## <a name="enable-or-disable-usage-and-diagnostic-data-collection-in-ssms"></a>在 SSMS 中启用或禁用使用情况和诊断数据收集
 
@@ -65,4 +65,4 @@ SQL Server Management Studio (SSMS) 包含已启用 Internet 的功能，这些�
 ## <a name="see-also"></a>另请参阅
 
 - [配置 SQL Server 的使用情况和诊断数据收集](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
-- [SQL Server 使用情况和诊断数据收集的本地审核](https://msdn.microsoft.com/library/mt743085.aspx)
+- [SQL Server 使用情况和诊断数据收集的本地审核](../sql-server/usage-and-diagnostic-data-in-local-audit.md)

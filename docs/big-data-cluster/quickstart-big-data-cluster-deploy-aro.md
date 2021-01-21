@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5889a9411c54312dd52ee1a5e9f2b7917da6838
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9f2a96afd598a4a16ad4683f6ed096032f9b8091
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637402"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620283"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>使用 python 脚本在 Azure Red Hat OpenShift (ARO) 上部署 SQL Server 大数据群集
 
@@ -44,7 +44,7 @@ ms.locfileid: "97637402"
 
 该脚本使用 Azure CLI 自动创建 ARO 群集。 在运行脚本之前，必须至少使用 Azure CLI 登录 Azure 帐户一次。 从命令提示符运行以下命令。
 
-```terminal
+```azurecli
 az login
 ```
 
@@ -58,7 +58,7 @@ az login
 
 1. 使用以下内容运行脚本：
 
-```terminal
+```console
 python deploy-sql-big-data-aro.py
 ```
 
@@ -82,7 +82,7 @@ SQL Server 大数据群集现已部署在 ARO 上。 你现在可以使用 Azure
 
 运行以下 Azure CLI 命令以删除 Azure 中的大数据群集和 ARO 服务（将 `<resource group name>` 替换为你在部署脚本中指定的“Azure 资源组”）：
 
-```terminal
+```azurecli
 az group delete -n <resource group name>
 ```
 

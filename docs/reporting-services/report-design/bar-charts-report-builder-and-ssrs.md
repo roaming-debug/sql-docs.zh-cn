@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd0fa20a515850d8ab097ef8e868946d16a0439b
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 8c0f808ab1118c6d36777cd6e5766e5976a1f9ee
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255520"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596444"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>条形图（报表生成器和 SSRS）
   条形图将序列显示为若干组水平图条。 平面条形图与柱形图密切相关，柱形图将序列显示为多组垂直图条，而范围条形图将序列显示为多组具有不同起点和终点的水平图条。  
@@ -66,7 +66,6 @@ ms.locfileid: "84255520"
  [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [设置图表上图例的格式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [向图表添加凹凸效果、浮雕和纹理样式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [教程：向报表添加条形图（报表生成器）](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [教程：向报表添加条形图](https://go.microsoft.com/fwlink/?LinkId=198042)  
-  
+ [教程：向报表添加条形图（报表生成器）](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [教程：向报表添加条形图](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))  
   

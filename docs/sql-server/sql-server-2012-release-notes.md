@@ -13,18 +13,18 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: dc92ae7c943729e7c95529b948caca95404dec3a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f183c3d44525d85c26a6ba36345eb347ba1c38d3
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474528"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594843"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 本发行说明文档介绍了在安装 [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647) 或解决其相关问题之前，应该了解的一些已知问题）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  
   
-有关如何开始安装 SQL Server 2012 的信息，请参阅 SQL Server 2012 自述文件。 该自述文档在安装介质上提供，也可从 [自述文件](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) (#自述文件) 下载页获得。 您还可以在 [SQL Server 联机丛书](https://go.microsoft.com/fwlink/?LinkId=190948) 中以及 [SQL Server 论坛](https://go.microsoft.com/fwlink/?LinkId=213599)上找到更多的信息。  
+有关如何开始安装 SQL Server 2012 的信息，请参阅 SQL Server 2012 自述文件。 该自述文档在安装介质上提供，也可从 [自述文件](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) (#自述文件) 下载页获得。 您还可以在 [SQL Server 联机丛书](/previous-versions/sql/sql-server-2012/ms130214(v=sql.110)) 中以及 [SQL Server 论坛](https://go.microsoft.com/fwlink/?LinkId=213599)上找到更多的信息。  
   
 ## <a name="10-before-you-install"></a><a name="Install"></a>1.0 安装之前  
 在安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]之前，请考虑以下信息。  
@@ -92,7 +92,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 -   不能在运行 Windows Server 2008 R2 Server Core SP1 的计算机上并行安装 Microsoft SQL Server 2012 和早期版本的 SQL Server。  
   
--   不是 SQL Server 2012 的所有功能在 Server Core 操作系统上都支持。 有关支持的功能以及在 Server Core 上安装 SQL Server 2012 的详细信息，请参阅 [在 Server Core 上安装 SQL Server 2012](https://msdn.microsoft.com/library/hh231669(SQL.110).aspx)(#在-server-core-上安装-sql-server-2012)。  
+-   不是 SQL Server 2012 的所有功能在 Server Core 操作系统上都支持。 有关支持的功能以及在 Server Core 上安装 SQL Server 2012 的详细信息，请参阅 [在 Server Core 上安装 SQL Server 2012](/previous-versions/sql/sql-server-2012/hh231669(v=sql.110))(#在-server-core-上安装-sql-server-2012)。  
   
 ### <a name="16-semantic-search-requires-you-to-install-an-additional-dependency"></a>1.6 语义搜索要求您安装其他依赖项  
 **问题：** 统计语义搜索要求其他的必备组件，即语义语言统计数据库，而 SQL Server 安装程序并不安装此组件。  
@@ -162,7 +162,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         **使用部署映像服务和管理 (DISM.exe) 启用 .NET Framework 3.5 SP1：**  
   
-        您还可以使用部署映像服务和管理 (DISM.exe) 启用 .NET Framework 3.5 SP1。 有关联机启用 Windows 功能的详细信息，请参阅 [联机启用或禁用 Windows 功能](https://technet.microsoft.com/library/dd744582(WS.10).aspx)(#联机启用或禁用-windows-功能)。 下面是启用 .NET Framework 3.5 SP1 的说明：  
+        您还可以使用部署映像服务和管理 (DISM.exe) 启用 .NET Framework 3.5 SP1。 有关联机启用 Windows 功能的详细信息，请参阅 [联机启用或禁用 Windows 功能](/previous-versions/windows/it-pro/windows-7/dd744582(v=ws.10))(#联机启用或禁用-windows-功能)。 下面是启用 .NET Framework 3.5 SP1 的说明：  
   
         1.  在命令提示符下，键入以下命令以便列出在操作系统中提供的所有功能：  
   
@@ -334,7 +334,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 若要重新安装数据质量服务器，请在卸载数据质量服务器后删除 DQS 对象  
 **问题：** 如果卸载数据质量服务器，DQS 对象（DQS 数据库、DQS 登录名和 DQS 存储过程）不会从 SQL Server 实例中删除。  
   
-**解决方法：** 要在同一台计算机上和相同 SQL Server 实例中重新安装数据质量服务器，必须从 SQL Server 实例中手动删除 DQS 对象。 此外，您还必须首先从计算机上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 文件夹中删除 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA）文件，然后才能重新安装数据质量服务器。 否则，数据质量服务器安装将失败。 如果您想要保留数据，例如知识库或数据质量项目，则应移动数据库文件，而非删除它们。 有关在卸载进程完成后删除 DQS 对象的详细信息，请参阅 [删除数据质量服务器对象](https://msdn.microsoft.com/library/hh231667.aspx)(#删除数据质量服务器对象)。  
+**解决方法：** 要在同一台计算机上和相同 SQL Server 实例中重新安装数据质量服务器，必须从 SQL Server 实例中手动删除 DQS 对象。 此外，您还必须首先从计算机上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 文件夹中删除 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA）文件，然后才能重新安装数据质量服务器。 否则，数据质量服务器安装将失败。 如果您想要保留数据，例如知识库或数据质量项目，则应移动数据库文件，而非删除它们。 有关在卸载进程完成后删除 DQS 对象的详细信息，请参阅 [删除数据质量服务器对象](./install/remove-data-quality-server-objects.md)(#删除数据质量服务器对象)。  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 知识发现或交互式清理活动已终止的指示被延迟  
 **问题：** 如果管理员在“活动监视”屏幕中终止某一活动，则在正在运行知识发现、域管理或交互式清理活动的交互用户执行下一操作前，将不会收到指出其活动已终止的任何指示。  
@@ -578,10 +578,10 @@ Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300
 **解决方法：** 在连接字符串中使用“multisubnetfailover = true”。  
   
 #### <a name="576-failure-to-create-new-availability-group-listeners-because-of-active-directory-quotas"></a>5.7.6 因 Active Directory 配额未能新建可用性组侦听器  
-**问题：** 新的可用性组侦听器可能在创建时失败，因为您已经达到参与群集节点计算机帐户的 Active Directory 配额。 有关详细信息，请参阅 [如何在群集服务帐户修改计算机对象时排除其故障](https://support.microsoft.com/kb/307532) (#如何在群集服务帐户修改计算机对象时排除其故障)和 [Active Directory 配额](https://technet.microsoft.com/library/cc904295(WS.10).aspx)(#active.directory-配额)。  
+**问题：** 新的可用性组侦听器可能在创建时失败，因为您已经达到参与群集节点计算机帐户的 Active Directory 配额。 有关详细信息，请参阅 [如何在群集服务帐户修改计算机对象时排除其故障](https://support.microsoft.com/kb/307532) (#如何在群集服务帐户修改计算机对象时排除其故障)和 [Active Directory 配额](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc904295(v=ws.10))(#active.directory-配额)。  
   
 #### <a name="577-netbios-conflicts-because-availability-group-listener-names-use-an-identical-15-character-prefix"></a>5.7.7 NetBIOS 发生冲突，因为可用性组侦听器名称使用相同的 15 字符前缀  
-如果您的两个 WSFC 群集均由同一 Active Directory 控制，而您试图使用超过 15 个字符的名称（具有相同的 15 字符前缀）在这两个群集中创建可用性组侦听器，此时您将收到错误，报告无法使虚拟网络名称资源联机。 有关 DNS 名称的前缀命名规则的信息，请参阅 [分配域名](https://technet.microsoft.com/library/cc731265(WS.10).aspx)(#分配域名)。  
+如果您的两个 WSFC 群集均由同一 Active Directory 控制，而您试图使用超过 15 个字符的名称（具有相同的 15 字符前缀）在这两个群集中创建可用性组侦听器，此时您将收到错误，报告无法使虚拟网络名称资源联机。 有关 DNS 名称的前缀命名规则的信息，请参阅 [分配域名](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731265(v=ws.10))(#分配域名)。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -641,4 +641,4 @@ SQL Server 2012 包含 StreamInsight 2.1。 StreamInsight 2.1 要求 Microsoft S
   
 **解决方法**：找到 SQLUA.msi 文件（在你的 SQL Server 2012 介质的 `\1028_CHT_LP\x64\redist\Upgrade Advisor` 或 `\1028_CHT_LP\x86\redist\Upgrade Advisor` 位置，具体取决于你的操作系统体系结构）  。  
   
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")

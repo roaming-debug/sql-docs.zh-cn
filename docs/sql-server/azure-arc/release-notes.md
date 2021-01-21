@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 12/08/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4d3890a29905057eb800fac823d27f149adb2ac0
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 372f4bec9acc4d4e170ddbc1a1fa6d66be1541e7
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97559249"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596552"
 ---
 # <a name="release-notes---azure-arc-enabled-sql-server-preview"></a>发行说明 - 已启用 Azure Arc 的 SQL Server（预览）
 
@@ -27,7 +27,7 @@ ms.locfileid: "97559249"
 
 如果有现有的 SQL Server - Azure Arc 资源，请使用以下步骤将它们迁移到 Microsoft.AzureArcData 命名空间。
 
-1. 启动 [Cloud Shell](https://shell.azure.com/)。 有关详细信息，请阅读[有关 Cloud Shell 中的 PowerShell 的详细信息](https://aka.ms/pscloudshell/docs)。
+1. 启动 [Cloud Shell](https://shell.azure.com/)。 有关详细信息，请阅读[有关 Cloud Shell 中的 PowerShell 的详细信息](/azure/cloud-shell/quickstart-powershell)。
 
 2. 使用以下命令将脚本上传到 shell：
 

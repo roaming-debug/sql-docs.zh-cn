@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 46be46e47b7e5a5028b639ecb0e74cbe19c8446a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 237d056f8b42570fcab375330a9eb3172eb11758
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80217003"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596961"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>创建自定义报表项设计时组件
   自定义报表项设计时组件是一种可在 Visual Studio 报表设计器环境中使用的控件。 自定义报表项设计时组件可提供能接受拖放操作的激活的设计图面，可与 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性浏览器集成，且可提供自定义属性编辑器。  
@@ -183,7 +183,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>使用修饰  
- 此外，自定义报表项类还可实现 Microsoft.ReportDesigner.Design.Adornment 类  。 使用修饰后，自定义报表项控件可提供设计图面主矩形之外的区域。 这些区域可用来处理用户界面事件，如鼠标单击和拖放操作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Microsoft.ReportDesigner  命名空间中定义的 Adornment  类是通过传递 Windows 窗体中的 <xref:System.Windows.Forms.Design.Behavior.Adorner> 类实现的。 有关 Adorner 类的完整文档，请参阅 MSDN 库中的[行为服务概述](https://go.microsoft.com/fwlink/?LinkId=116673)  。 有关实现 Microsoft.ReportDesigner.Design.Adornment 类的示例代码，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)  （SQL Server Reporting Services 产品示例）。  
+ 此外，自定义报表项类还可实现 Microsoft.ReportDesigner.Design.Adornment 类  。 使用修饰后，自定义报表项控件可提供设计图面主矩形之外的区域。 这些区域可用来处理用户界面事件，如鼠标单击和拖放操作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Microsoft.ReportDesigner  命名空间中定义的 Adornment  类是通过传递 Windows 窗体中的 <xref:System.Windows.Forms.Design.Behavior.Adorner> 类实现的。 有关 Adorner 类的完整文档，请参阅 MSDN 库中的[行为服务概述](/previous-versions/ms171826(v=vs.140))  。 有关实现 Microsoft.ReportDesigner.Design.Adornment 类的示例代码，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)  （SQL Server Reporting Services 产品示例）。  
   
  有关在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中如何对 Windows 窗体进行编程和使用 Windows 窗体的详细信息，请参见 MSDN Library 中的以下主题：  
   
@@ -198,5 +198,4 @@ private void OnProportionalScaling(object sender, EventArgs e)
  [创建自定义报表项运行时组件](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [自定义报表项类库](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
  [如何：部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
-  
   

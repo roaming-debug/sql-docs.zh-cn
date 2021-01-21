@@ -10,12 +10,12 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 94939adb2934e16ed7d1c81c33ebab4631c4b114
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: aa8d71f36b4dbb0c8ddaaac3c47571d29c3896c0
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172509"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595471"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什么是 SQL Server 的外延安全更新程序？
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -353,7 +353,7 @@ Azure 暂不支持共享存储群集。 有关如何在 Azure 上配置高度可
 ## <a name="see-also"></a>另请参阅
 
 - [SQL Server 2008/2008 R2 生命周期页](https://support.microsoft.com/lifecycle/search?alpha=sql%20server%202008)
-- [SQL Server 2008/2008 R2 终止支持页](https://aka.ms/sqleos)
+- [SQL Server 2008/2008 R2 终止支持页](./sql-server-end-of-life-overview.md?WT.mc_id=akamseos)
 - [外延安全更新程序常见问题解答 (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft 安全响应中心 (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
 - [使用 Azure 自动化管理 Windows 更新](/azure/automation/update-management/overview)
@@ -362,4 +362,3 @@ Azure 暂不支持共享存储群集。 有关如何在 Azure 上配置高度可
 - [Azure 迁移：将当前 SQL Server 2008/2008 R2 迁移到 Azure VM 的直接迁移选项](https://azure.microsoft.com/services/azure-migrate/)
 - [用于 SQL 迁移的云采用框架](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [GitHub 上的 ESU 相关脚本](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)
-

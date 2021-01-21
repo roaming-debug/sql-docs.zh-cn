@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71c58ed673834c0226f9998b80fa4b12f14538e0
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 31ab6390286c748d8f9cb8f6b98b80c9c53818a1
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892077"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596927"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>电子邮件设置 - Reporting Services 本机模式（配置管理器）
 SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用户通过电子邮件分发报表。 根据定义电子邮件订阅的方式，传递可能由通知、链接、附件或嵌入报表组成。 电子邮件传递扩展插件可与现有的邮件服务器技术一起使用。 邮件服务器必须是 SMTP 服务器或转发器。 报表服务器通过操作系统提供的协作数据对象 (CDO) 库 (cdosys.dll) 连接到 SMTP 服务器。
@@ -27,7 +27,7 @@ SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用�
 
 ## <a name="configuration-requirements"></a>配置要求
 
-- 报表服务器电子邮件传递在协作数据对象 (CDO) 上实现，且需要本地或远程的简单邮件传输协议 (SMTP) 服务器或 SMTP 转发器。 所有 Windows 操作系统都不支持 SMTP。 如果使用的是基于 Itanium 的 Windows Server 2008 版本，则也不支持 SMTP。 有关通过 CDO 提供的配置选项的详细信息，请参阅 MSDN 上的 [Configuration CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) （配置 CoClass）。
+- 报表服务器电子邮件传递在协作数据对象 (CDO) 上实现，且需要本地或远程的简单邮件传输协议 (SMTP) 服务器或 SMTP 转发器。 所有 Windows 操作系统都不支持 SMTP。 如果使用的是基于 Itanium 的 Windows Server 2008 版本，则也不支持 SMTP。 有关通过 CDO 提供的配置选项的详细信息，请参阅 MSDN 上的 [Configuration CoClass](/previous-versions/exchange-server/exchange-10/ms526939(v=exchg.10)) （配置 CoClass）。
 
 配置的身份验证帐户必须对 SMTP 服务器拥有权限才能发送邮件。
 
@@ -56,13 +56,13 @@ SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用�
 
      您必须指定一个有权从 SMTP 服务器中发送邮件的用户帐户。 为“发件人地址”键入的值保存在 rsreportserver.config 文件中的 `<From>` 字段中  。  
 
-3.  在 **SMTP Server**中，指定要使用的 SMTP 服务器或网关。 
+3.  在 **SMTP Server** 中，指定要使用的 SMTP 服务器或网关。 
 
      此值可以是 IP 地址、企业 Intranet 上计算机的 NetBIOS 名称或者完全限定域名。 键入的 **SMTP Server** 的值保存在 rsreportserver.config 文件中的 `<SMTPServer>` 字段中。
 
 4. 使用“身份验证”下拉列表来指定如何对 SMTP 服务器进行身份验证  。 此 
 
-     - **不进行身份验证**意味着你将以匿名方式连接到指定的邮件服务器。
+     - **不进行身份验证** 意味着你将以匿名方式连接到指定的邮件服务器。
      
           选择此选项将在 rsreportserver.config 中设置 `<SendUsing>` 的值为 **2** 和 `<SMTPAuthenticate>` 的值为 **0** 。
      
@@ -169,8 +169,8 @@ SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用�
 
 报表服务器与本地 SMTP 服务器或转发器之间的连接是由下列配置设置决定的：
 
-- 将**SendUsing** 设置为 **1**。
-- 将**SMTPServerPickupDirectory** 设置为本地驱动器中的文件夹。
+- 将 **SendUsing** 设置为 **1**。
+- 将 **SMTPServerPickupDirectory** 设置为本地驱动器中的文件夹。
 
   > [!NOTE] 
   > 如果正在使用本地 SMTP 服务器，请确保不要设置 SMTPServer。
@@ -225,5 +225,4 @@ SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用�
 [报表服务器配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-  
   

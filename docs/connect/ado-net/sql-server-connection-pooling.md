@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: a878d8250a3e402cd1043dc289eb1712af45f385
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 9538368cdcc39d3a037c609fc79f65d5d3cb8e45
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771521"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596378"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 连接池 (ADO.NET)
 
@@ -73,7 +73,7 @@ ms.locfileid: "97771521"
 > [!NOTE]
 > 不要在类的 `Close` 方法中对 `Dispose`、`Connection` 或任何其他托管对象调用 `DataReader` 或 `Finalize`。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息，请参阅[垃圾回收](/dotnet/standard/garbage-collection/index)。
 
-有关与打开和关闭与连接相关联的事件的详细信息，请参阅 SQL Server 文档中的 [Audit Login 事件类](/sql/relational-databases/event-classes/audit-login-event-class)和 [Audit Logout 事件类](/sql/relational-databases/event-classes/audit-logout-event-class)。
+有关与打开和关闭与连接相关联的事件的详细信息，请参阅 SQL Server 文档中的 [Audit Login 事件类](../../relational-databases/event-classes/audit-login-event-class.md)和 [Audit Logout 事件类](../../relational-databases/event-classes/audit-logout-event-class.md)。
 
 ## <a name="remove-connections"></a>删除连接
 

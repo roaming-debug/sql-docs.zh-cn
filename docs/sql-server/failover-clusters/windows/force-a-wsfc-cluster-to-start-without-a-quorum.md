@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 908aa73d20ce939696124fee2f92eb87c9b8bec8
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: b2723cef9d005ea1f5e2db7e9e915762a7cd6a11
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642730"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241838"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在无仲裁情况下强制启动 WSFC 群集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "97642730"
   
 4.  将 `Start-ClusterNode` 和 `-FixQuorum` 结合使用以强制启动群集服务。  
   
-5.  将 `Get-ClusterNode` 和 `-Propery NodeWieght = 1` 结合使用以设置确保节点是仲裁的投票成员的值。  
+5.  将 `Get-ClusterNode` 和 `-Property NodeWieght = 1` 结合使用以设置确保节点是仲裁的投票成员的值。  
   
 6.  以可读格式输出群集节点属性。  
   

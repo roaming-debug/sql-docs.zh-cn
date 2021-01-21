@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c4bbc8f1c5b96f659936cb955c1f6f31bd0ef0da
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: b6ca1df39a5aeed8b57de5c6eff7ab66e725062d
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933437"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596530"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 连接类型 (SSRS)
   若要在报表中包含来自 XML 数据源的数据，则必须拥有一个基于 XML 类型的报表数据源的数据集。 此内置数据源类型基于 XML 数据扩展插件。 使用此数据源类型可连接到 XML 文档、Web 服务、或查询中嵌入的 XML 并从中检索数据。  
@@ -116,7 +116,7 @@ ms.locfileid: "91933437"
   
  有关查询语法的详细信息，请参阅[用于 XML 报表数据的 XML 查询语法 (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)。  
   
- 有关示例，请参阅 [Reporting Services：使用 XML 和 Web 服务数据源](https://go.microsoft.com/fwlink/?LinkId=81654)。  
+ 有关示例，请参阅 [Reporting Services：使用 XML 和 Web 服务数据源](/previous-versions/sql/sql-server-2005/administrator/aa964129(v=sql.90))。  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>检索 XML Web 服务数据的要求  
  XML 数据处理扩展插件不能检测架构。 因此，您必须通过某种方式来发现哪些 SOAP 方法将检索所需数据。 您还必须了解 Web 服务用于其数据的寻址方案或命名空间。  
@@ -135,7 +135,7 @@ ms.locfileid: "91933437"
 ##  <a name="parameters"></a><a name="Parameters"></a> Parameters  
  系统不会对查询进行分析以标识参数。  
   
- 若要添加参数，必须通过“ **数据集属性** ”对话框中的 [“参数”](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 页手动创建参数。  
+ 若要添加参数，必须通过“ **数据集属性** ”对话框中的 [“参数”](/previous-versions/sql/) 页手动创建参数。  
   
 ##  <a name="remarks"></a><a name="Remarks"></a> 注释  
  XML 数据扩展插件支持基于 XML 数据（表格格式且不分层）生成报表。 有关详细信息，请参阅[从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)。  
@@ -173,5 +173,4 @@ ms.locfileid: "91933437"
  [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b139dc1b0aaa0b2d1477d182cf128d0f93795ca3
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b307966577cfd30197963263597aee7a9d06e018
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85048325"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597331"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -107,7 +107,7 @@ ms.locfileid: "85048325"
  可以为每层使用相同或不同的空间数据源，但必须在每次添加层时指定源。 当空间数据来自地图库或 ESRI 形状文件时，空间数据源不是单独的报表项。 它不显示在“报表数据”窗格中。  
   
 ###  <a name="what-is-spatial-data"></a><a name="SpatialData"></a> 什么是空间数据？  
- 空间数据包含定义地理或几何元素的坐标。 在地图中，空间数据定义“地图元素” **：定义区域或形状的多边形、定义路线或路径的线条，以及定义标记或图钉的点。 空间数据在数据源中以二进制格式存储，并指定为坐标集。 例如，点是 X 和 Y 坐标 (X Y)，线条是两组坐标 ((X1 Y1), (X2 Y2))，多边形是四组或更多坐标，其中第一组和最后一组坐标是相同的 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
+ 空间数据包含定义地理或几何元素的坐标。 在地图中，空间数据定义“地图元素” ：定义区域或形状的多边形、定义路线或路径的线条，以及定义标记或图钉的点。 空间数据在数据源中以二进制格式存储，并指定为坐标集。 例如，点是 X 和 Y 坐标 (X Y)，线条是两组坐标 ((X1 Y1), (X2 Y2))，多边形是四组或更多坐标，其中第一组和最后一组坐标是相同的 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
   
  有关详细信息，请参阅所用空间数据类型的文档。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "85048325"
   
 -   **混合。** 显示组合起来的 **“道路”** 和 **“空中”** 视图。  
   
- 有关图块的详细信息，请参阅 [Bing 地图图块系统](https://go.microsoft.com/fwlink/?LinkId=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371)。  
+ 有关图块的详细信息，请参阅 [Bing 地图图块系统](/bingmaps/articles/bing-maps-tile-system)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
  若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅[排除报表故障：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和[计划地图报表](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
   
@@ -252,5 +252,4 @@ ms.locfileid: "85048325"
  [报表故障排除：映射报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [规划地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
-  
   

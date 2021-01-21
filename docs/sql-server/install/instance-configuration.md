@@ -16,12 +16,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: cawrites
 ms.author: chadam
 robots: noindex,nofollow
-ms.openlocfilehash: 8a136b1158f31cf6369bb29f404f4f6f58d6901c
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 08b7d5d8c1680be42902fe287c14418b2732f7f9
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172409"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595444"
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
 
@@ -119,11 +119,11 @@ ms.locfileid: "98172409"
 **指定管理员**：必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例指定至少一个服务器管理员。 你指定的用户或组成为要安装的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器管理员角色成员。 此类成员必须拥有 Windows 域用户帐户，这些帐户与要在其上安装软件的计算机处于同一域中。  
   
 > [!NOTE]  
-> 用户帐户控制 (UAC) 是一项 Windows 安全功能，它要求管理操作或应用程序必须先获得管理员专门批准，然后才能运行。 由于 UAC 默认处于启用状态，因此系统会提示你允许执行需要提升的权限的特定操作。 可以将 UAC 配置为更改默认行为，也可以为特定程序自定义 UAC。 若要详细了解 UAC 和 UAC 配置，请参阅[用户帐户控制分步指南](https://go.microsoft.com/fwlink/?linkid=196350)和[用户帐户控制 (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351)。  
+> 用户帐户控制 (UAC) 是一项 Windows 安全功能，它要求管理操作或应用程序必须先获得管理员专门批准，然后才能运行。 由于 UAC 默认处于启用状态，因此系统会提示你允许执行需要提升的权限的特定操作。 可以将 UAC 配置为更改默认行为，也可以为特定程序自定义 UAC。 若要详细了解 UAC 和 UAC 配置，请参阅[用户帐户控制分步指南](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc709691(v=ws.10))和[用户帐户控制 (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351)。  
   
 ### <a name="see-also"></a>另请参阅
   
-* [配置服务帐户 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
+* [配置服务帐户 &#40;Analysis Services&#41;](/analysis-services/instances/configure-service-accounts-analysis-services)
 * [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 ## <a name="analysis-services-configuration---data-directories-page"></a>“Analysis Services 配置 - 数据目录”页
@@ -191,7 +191,7 @@ ms.locfileid: "98172409"
 #### <a name="see-also"></a>另请参阅
 
 * 若要详细了解目录、文件位置和实例 ID 命名，请参阅 [SQL Server 默认实例和命名实例的文件位置](file-locations-for-default-and-named-instances-of-sql-server.md)  
-* [文件服务器上的共享权限和 NTFS 权限](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
+* [文件服务器上的共享权限和 NTFS 权限](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
 ## <a name="database-engine-configuration---server-configuration-page"></a><a name="serverconfig"></a>“数据库引擎配置 - 服务器配置”页
 
@@ -410,7 +410,7 @@ ms.locfileid: "98172409"
 ### <a name="see-also"></a>另请参阅
 
 * [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
-* [文件服务器上的共享权限和 NTFS 权限](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
+* [文件服务器上的共享权限和 NTFS 权限](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
 
 <!--
 The MaxDOP setting applies only to SQL Server 2019 and later.

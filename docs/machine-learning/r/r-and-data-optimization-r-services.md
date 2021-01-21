@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 995b30e9c69b14148a67f18c36e0f42d01c419eb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 71c8852efd538ef0a702c8f96435facf4882b7d2
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470818"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596659"
 ---
 # <a name="performance-tuning-and-data-optimization-for-r"></a>R 的性能优化和数据优化
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -175,4 +175,4 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + 有关可用于提高 R 代码性能的 R 函数，请参阅[使用 R 代码分析函数提高性能](using-r-code-profiling-functions.md)。
 
-+ 有关在 SQL Server 中进行性能优化的详细信息，请参阅 [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)。
++ 有关在 SQL Server 中进行性能优化的详细信息，请参阅 [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)。

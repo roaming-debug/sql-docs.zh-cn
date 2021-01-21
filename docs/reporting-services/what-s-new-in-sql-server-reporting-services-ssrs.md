@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: eaef4f651b65b2097aa4cfe0f41c97442469f193
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 67881fc6668aed8120feae0c10449652f8ea6d1c
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171439"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596580"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新增功能
 
@@ -23,7 +23,7 @@ ms.locfileid: "98171439"
 
 了解 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不同版本的新增功能。 本文包括主要功能区域，在发布新项时进行更新。
 
-有关 Power BI 报表服务器的信息，请参阅[什么是 Power BI 报表服务器？](https://docs.microsoft.com/power-bi/report-server/get-started)。
+有关 Power BI 报表服务器的信息，请参阅[什么是 Power BI 报表服务器？](/power-bi/report-server/get-started)。
 
 ::: moniker range=">=sql-server-ver15"
 
@@ -81,7 +81,7 @@ SQL Server 2019 现支持适用于企业版和标准版的 SSRS 目录数据库�
 
 ### <a name="dax-queries-in-reporting-tools"></a>在报表工具进行 DAX 查询
 
-在最新版本的报表生成器和 SQL Server Data Tools 中，可针对 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 可以在查询设计器中拖放字段。 请参阅 [Reporting Services 博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
+在最新版本的报表生成器和 SQL Server Data Tools 中，可针对 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 可以在查询设计器中拖放字段。 请参阅 [Reporting Services 博客](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools)。
 
 ### <a name="rest-api-support"></a>REST API 支持
 
@@ -91,10 +91,10 @@ SQL Server 2019 现支持适用于企业版和标准版的 SSRS 目录数据库�
 
 在报表生成器和 SQL Server Data Tools 中，现可针对支持的 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 可以使用两种工具中的查询设计器来拖放所需字段。 然后就会为你生成 DAX 查询。
 
-在 [Reporting Services 博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)上了解详细信息。
+在 [Reporting Services 博客](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools)上了解详细信息。
 
 * 下载 [SQL Server 报表生成器](https://go.microsoft.com/fwlink/?LinkId=734968)。
-* 下载 [SQL Server Data Tools - 候选发布](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)。
+* 下载 [SQL Server Data Tools - 候选发布](../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 > [!NOTE]
 > 只能在 SQL Server 2016 及更高版本中内置的 SSAS 表格数据源中使用 DAX 查询设计器。
@@ -123,7 +123,7 @@ SQL Server 2019 现支持适用于企业版和标准版的 SSRS 目录数据库�
 
 你可以通过品牌包使用组织的徽标和颜色来自定义 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 。  
 
-有关自定义品牌的详细信息，请参阅 [设置 Web 门户的品牌](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
+有关自定义品牌的详细信息，请参阅 [设置 Web 门户的品牌](./branding-the-web-portal.md)
 
 #### <a name="key-performance-indicators-kpi-in-the-ssrswebportal-non-markdown"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中的关键绩效指标 (KPI) 
 
@@ -131,7 +131,7 @@ SQL Server 2019 现支持适用于企业版和标准版的 SSRS 目录数据库�
 
 ![屏幕截图：SQL Server Reporting Services 门户中的 KPI。](../reporting-services/media/ssrs-webportal-kpi.png)
 
-有关详细信息，请参阅[使用 Web 门户中的 KPI](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
+有关详细信息，请参阅[使用 Web 门户中的 KPI](./working-with-kpis-in-reporting-services.md)
 
 ### <a name="mobile-reports"></a>移动报表
 
@@ -192,7 +192,7 @@ Reporting Services 移动报表是针对各种外形规格进行了优化的专�
 2. 选择要在其中固定项的仪表板。
 3. 选择要在仪表板中更新磁贴的频率。
 
-![说明](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注") 刷新由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅管理，固定项之后，可编辑该订阅并配置不同的刷新计划。
+![说明](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注") 刷新由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅管理，固定项之后，可编辑该订阅并配置不同的刷新计划。
 
 ![显示“固定到 Power BI 仪表板”对话框的屏幕截图。](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -227,7 +227,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
-新版 SSDT 包括用于 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 的项目模板：报表服务器项目向导和报表服务器项目。 有关如何下载 SSDT 的信息，请参阅 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)（适用于 Visual Studio 2015 的 SQL Server Data Tools）。  
+新版 SSDT 包括用于 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 的项目模板：报表服务器项目向导和报表服务器项目。 有关如何下载 SSDT 的信息，请参阅 [SQL Server Data Tools for Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md)（适用于 Visual Studio 2015 的 SQL Server Data Tools）。  
 
 ### <a name="report-builder-improvements"></a>报表生成器改进
 
@@ -245,11 +245,11 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 - [Windows 8.1 DPI 缩放增强功能](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
 
-- [高 DPI 和 Windows 8.1](https://technet.microsoft.com/library/dn528848.aspx)  
+- [高 DPI 和 Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn528848(v=win.10))  
 
 ## <a name="next-steps"></a>后续步骤
 
-[Analysis Services 中的新增功能](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
+[Analysis Services 中的新增功能](/analysis-services/what-s-new-in-sql-server-analysis-services?viewFallbackFrom=sql-server-ver15)  
 [向后兼容性](reporting-services-backward-compatibility.md)  
 [SQL Server 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 [升级和迁移 Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

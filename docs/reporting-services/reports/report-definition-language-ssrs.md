@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 04c220383ef14fe6bd05b690e5c27ae73b4289a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fd91a74fe64d055860c2382efeb16523685c2a3
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510078"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596697"
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
   报表定义语言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义的 XML 表示形式。 报表定义包含报表的数据检索和布局信息。 RDL 由 XML 元素组成，这些元素符合为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建的 XML 语法。 通过访问报表定义文件中的代码程序集，可以添加您自己的自定义函数，以便控制报表项值、样式和格式。  
@@ -37,7 +37,7 @@ ms.locfileid: "79510078"
 -   支持其他命名空间和自定义元素的可扩展开放式架构。  
   
 ##  <a name="rdl-specifications"></a><a name="bkmk_RDL_Specifications"></a> RDL 规范  
- 若要下载特定架构版本的规范，请参阅 [报表定义语言规范](https://go.microsoft.com/fwlink/?linkid=116865)。  
+ 若要下载特定架构版本的规范，请参阅 [报表定义语言规范](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)。  
   
 ##  <a name="rdl-xml-schema-definition"></a><a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 架构定义  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义语言 (RDL) 文件使用 XML 架构定义 (XSD) 文件进行验证。 架构定义 RDL 元素可在 .rdl 文件中什么位置出现的规则。 元素包括其数据类型和基数，即允许的出现次数。 元素可以是简单的，也可以是复杂的。 简单元素没有子元素或属性。 复杂元素具有子元素以及可选具有属性。  
@@ -89,5 +89,4 @@ ms.locfileid: "79510078"
  [查找报表定义架构版本 (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [将自定义程序集用于报表](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [自定义报表项](../../reporting-services/custom-report-items/custom-report-items.md)  
-  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4013c119093adda0fbb721c376eef502a7b05a38
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+ms.openlocfilehash: df09e4168790a4607de19348f50e76a4fbd0f383
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907245"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596544"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web 门户上使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 创建适用于任何屏幕大小的移动报表，并在 Power BI 移动应用中查看它们。
@@ -34,12 +34,12 @@ ms.locfileid: "92907245"
   
 * 要创建数据源和 KPI，以及发布数据集和移动报表，需要访问 [Reporting Services 本机模式报表服务器](../install-windows/install-reporting-services-native-mode-report-server.md)。  
 * 要创建共享数据集，请[安装报表生成器](../install-windows/install-report-builder.md)。  
-* 要创建移动报表，需 [安装 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkId=717766)。  
+* 要创建移动报表，需 [安装 SQL Server 移动报表发布服务器](../reporting-services-features-and-tasks-ssrs.md)。  
 * [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)（AdventureWorks 示例数据库）。  
-*  或：World Wide Importers 示例数据库，可从 [Microsoft SQL Server 示例](../../sample/microsoft-sql-server-samples.md)页面获得。
+*  或：World Wide Importers 示例数据库，可从 [Microsoft SQL Server 示例](../../samples/sql-samples-where-are.md)页面获得。
 * 查看结果： 
   *   [注册 Power BI 服务](https://go.microsoft.com/fwlink/?LinkID=513879) 并
-  *  [下载 Power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 到你的移动设备：iOS、Android 手机或 Windows 10 设备。  
+  *  [下载 Power BI 移动应用](/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 到你的移动设备：iOS、Android 手机或 Windows 10 设备。  
 
   
 ## <a name="create-a-shared-data-source"></a>创建共享数据源  
@@ -135,7 +135,7 @@ ms.locfileid: "92907245"
     
 ## <a name=""></a><a name="create-mobile-report">创建 Reporting Services 移动报表</a>  
    
-要创建 Reporting Services 移动报表，请 [安装 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkId=717766)，或从 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户启动它。 
+要创建 Reporting Services 移动报表，请 [安装 SQL Server 移动报表发布服务器](../reporting-services-features-and-tasks-ssrs.md)，或从 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户启动它。 
 
 在首次打开 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]时，你将看到一块空白画布，可以在此创建移动报表。 可以从创建视觉对象开始，也可以从数据开始。 如果首先创建视觉对象， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 会自动生成绑定到报表的模拟数据，并在更改视觉选择时进行动态更改。 请自己尝试一下。   
   
@@ -200,7 +200,7 @@ ms.locfileid: "92907245"
 
 2. 同样，从模拟数据开始。 
 
-   请注意，在“视觉对象属性”  中，默认情况下 **值越高越好** ，且“增量标签”  是 **目标百分比** 。 它具有默认的“数据区域停止点”  ，可以对其进行更改，但现在不需要。
+   请注意，在“视觉对象属性”  中，默认情况下 **值越高越好**，且“增量标签”  是 **目标百分比**。 它具有默认的“数据区域停止点”  ，可以对其进行更改，但现在不需要。
 
    ![移动报表环形图视觉对象属性“设置范围”部分的屏幕截图。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
@@ -303,8 +303,6 @@ KPI 和移动报表显示在 Reporting Services Web 门户中它们所在的相�
   
 ## <a name="see-also"></a>另请参阅  
  
--  查看 iOS 和 Android 版 [Power BI 移动应用中的本地报表服务器移动报表和 KPI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports)
+-  查看 iOS 和 Android 版 [Power BI 移动应用中的本地报表服务器移动报表和 KPI](/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports)
 -  查看[适用于 Windows 10 设备的 Power BI 移动应用中的本地报表服务器移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
-   
-
