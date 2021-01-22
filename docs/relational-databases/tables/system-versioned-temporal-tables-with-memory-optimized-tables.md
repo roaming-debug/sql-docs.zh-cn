@@ -12,12 +12,12 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93b419e4678b84684c524011ed4df4feb6fcb14
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 05ed5ec0d34d2a1a612b76c0117d0bf66675ad7a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474568"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171889"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系统版本控制临时表与内存优化表
 
@@ -70,7 +70,7 @@ ms.locfileid: "97474568"
 
 数据刷新会从内存中内部缓冲区删除早于当前运行的最早事务的所有记录，以便将这些记录移动到基于磁盘的历史记录表。
 
-可通过调用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) 并指定架构和表名来强制进行数据刷新：sys.sp_xtp_flush_temporal_history @schema_name、@object_name。 利用这个由用户执行的命令，将像在系统按内部计划调用数据刷新任务时一样调用相同的数据移动进程。
+可通过调用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) 并指定架构和表名来强制进行数据刷新：sys.sp_xtp_flush_temporal_history \@schema_name、\@object_name。 利用这个由用户执行的命令，将像在系统按内部计划调用数据刷新任务时一样调用相同的数据移动进程。
 
 ## <a name="see-also"></a>另请参阅
 

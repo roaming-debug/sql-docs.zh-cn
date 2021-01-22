@@ -1,8 +1,8 @@
 ---
-title: 教程：使用 SSMS 的具有安全 Enclave 的 Always Encrypted
-description: 本教程介绍如何使用 SQL Server Management Studio (SSMS) 创建具有安全 enclave 的 Always Encrypted 基本环境，如何就地加密数据，以及如何对加密列发出各种查询。
+title: Tutorial:在 SQL Server 中开始使用具有安全 enclave 的 Always Encrypted
+description: 本教程介绍如何使用基于虚拟化的安全性 (VBS) enclave 和用于证明的主机监护服务 (HGS) 为 SQL Server 中具有安全 enclave 的 Always Encrypted 创建基本环境。 你还将了解如何使用 SQL Server Management Studio (SSMS) 就地加密数据并就加密列发出各种机密查询。
 ms.custom: seo-lt-2019
-ms.date: 04/10/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,25 +13,27 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 99b04548244da3bda45346e7aa4a7c4d72481789
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 08e7674819e4dc52a8613e39d1f8ec82a42abc05
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463088"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534716"
 ---
-# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：使用 SSMS 的具有安全 Enclave 的 Always Encrypted
+# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-in-sql-server"></a>Tutorial:在 SQL Server 中开始使用具有安全 enclave 的 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-本教程介绍如何开始使用[具有安全 enclave 的 Always Encrypted](encryption/always-encrypted-enclaves.md)。 它将介绍：
-- 如何创建基本环境，以便测试和评估具有安全 enclave 的 Always Encrypted。
-- 如何使用 SQL Server Management Studio (SSMS) 就地加密数据并就加密列发出各种查询。
+本教程介绍如何在 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 中开始使用[具有安全 enclave 的 Always Encrypted](encryption/always-encrypted-enclaves.md)。 它将介绍：
+
+> [!div class="checklist"]
+> - 如何创建基本环境，以便测试和评估具有安全 enclave 的 Always Encrypted。
+> - 如何使用 SQL Server Management Studio (SSMS) 就地加密数据并就加密列发出各种机密查询。
 
 ## <a name="prerequisites"></a>先决条件
 
 若要开始使用具有安全 enclave 的 Always Encrypted，需要至少两台计算机（可以是虚拟机）：
 
-- SQL Server 计算机，用于承载 SQL Server 和 SSMS。
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 计算机，用于托管 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 和 SSMS。
 - HGS 计算机，用于运行 enclave 证明所需的主机保护者服务。
 
 ### <a name="sql-server-computer-requirements"></a>SQL Server 计算机要求
@@ -44,7 +46,7 @@ ms.locfileid: "97463088"
   - 如果在 VM 中运行 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]，则虚拟机监控程序和物理 CPU 必须提供嵌套虚拟化功能。 
     - 在 Hyper-V 2016 或更高版本中，[在 VM 处理器上启用嵌套虚拟化扩展](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
     - 在 Azure 中，选择支持嵌套虚拟化的 VM 大小。 这包括所有 v3 系列 VM，例如 Dv3 和 Ev3。 请参阅[创建可嵌套的 Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)。
-    - 在 VMWare vSphere 6.7 或更高版本中，为 VM 启用基于虚拟化的安全支持，如 [VMware 文档](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)中所述。
+    - 在 VMware vSphere 6.7 或更高版本中，为 VM 启用基于虚拟化的安全支持，如 [VMware 文档](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)中所述。
     - 其他虚拟机监控程序和公有云可能支持嵌套虚拟化功能，这些功能也实现具有 VBS Enclave 的 Always Encrypted。 有关兼容性和配置说明，请查看虚拟化解决方案的文档。
 - [SQL Server Management Studio (SSMS) 18.3 或更高版本](../../ssms/download-sql-server-management-studio-ssms.md)。
 
@@ -167,6 +169,9 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     1. 在“连接到服务器”对话框中，指定服务器名称，选择身份验证方法，并指定凭据。
     1. 单击“选项 >>”，并选择“Always Encrypted”选项卡。
     1. 务必取消选中“启用 Always Encrypted (列加密)”复选框。
+
+          ![连接到没有 Always Encrypted 的服务器](./encryption/media/always-encrypted-enclaves/connect-without-always-encrypted-ssms.png)
+
     1. 选择“连接”。
 
 2. 打开新查询窗口，并执行下面的语句，以将安全 enclave 类型设置为基于虚拟化的安全性 (VBS)。
@@ -191,15 +196,6 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     | ------------------------------ | ----- | -------------- |
     | 列加密 enclave 类型 | 1     | 1              |
 
-5. 若要启用对加密列的大量计算，请运行以下查询：
-
-   ```sql
-   DBCC traceon(127,-1);
-   ```
-
-    > [!NOTE]
-    > 默认情况下，[!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 中禁用了大量计算。 每次重启 SQL Server 实例之后，都需要使用上述语句启用它们。
-
 ## <a name="step-4-create-a-sample-database"></a>步骤 4：创建示例数据库
 在此步骤中，将创建包含一些示例数据的数据库，稍后将对其进行加密。
 
@@ -215,7 +211,10 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     USE [ContosoHR];
     GO
 
-    CREATE TABLE [dbo].[Employees]
+    CREATE SCHEMA [HR];
+    GO
+    
+    CREATE TABLE [HR].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
         [SSN] [char](11) NOT NULL,
@@ -231,7 +230,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     USE [ContosoHR];
     GO
 
-    INSERT INTO [dbo].[Employees]
+    INSERT INTO [HR].[Employees]
             ([SSN]
             ,[FirstName]
             ,[LastName]
@@ -242,7 +241,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
             , N'Abel'
             , $31692);
 
-    INSERT INTO [dbo].[Employees]
+    INSERT INTO [HR].[Employees]
             ([SSN]
             ,[FirstName]
             ,[LastName]
@@ -286,6 +285,9 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     1. 在“连接到服务器”对话框中，指定服务器名称，选择身份验证方法，并指定凭据。
     1. 单击“选项 >>”，并选择“Always Encrypted”选项卡。
     1. 选中“启用 Always Encrypted (列加密)”复选框，并指定 enclave 证明 URL（例如，ht<span>tp://</span>hgs.bastion.local/Attestation）。
+
+          ![使用 SSMS 连接到具有证明的服务器](./encryption/media/always-encrypted-enclaves/column-encryption-setting.png)
+
     1. 选择“连接”。
     1. 如果系统提示启用 Always Encrypted 参数化查询，请选择“启用”。
 
@@ -295,13 +297,13 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     USE [ContosoHR];
     GO
 
-    ALTER TABLE [dbo].[Employees]
+    ALTER TABLE [HR].[Employees]
     ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
     (ONLINE = ON);
 
-    ALTER TABLE [dbo].[Employees]
+    ALTER TABLE [HR].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
@@ -316,7 +318,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 1. 若要验证“SSN”和“Salary”列现在是否已加密，请使用没有为数据库连接启用 Always Encrypted 的 SSMS 实例打开新查询窗口，并执行以下语句。 查询窗口应返回“SSN”和“Salary”列中的加密值。 如果使用已启用 Always Encrypted 的 SSMS 实例执行相同查询，应该会看到已解密的数据。
 
     ```sql
-    SELECT * FROM [dbo].[Employees];
+    SELECT * FROM [HR].[Employees];
     ```
 
 ## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>步骤 7：对加密列运行丰富查询
@@ -334,19 +336,21 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     ```sql
     DECLARE @SSNPattern [char](11) = '%6818';
     DECLARE @MinSalary [money] = $1000;
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [HR].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
 
 3. 在未启用 Always Encrypted 的 SSMS 实例中重试同一查询，并记录发生的故障。
 
 ## <a name="next-steps"></a>后续步骤
+
 完成本教程之后，可以继续学习以下教程之一：
+
+- [教程：使用具有安全 enclave 的 Always Encrypted 开发 .NET 应用程序](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [教程：开发使用具有安全 enclave 的 Always Encrypted 的 .NET Framework 应用程序](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [教程：对使用随机加密的启用了 enclave 的列创建和使用索引](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
 ## <a name="see-also"></a>另请参阅
-- [配置 Always Encrypted 的 enclave 类型服务器配置选项](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
-- [预配已启用 enclave 的密钥](encryption/always-encrypted-enclaves-provision-keys.md)
-- [使用 Transact-SQL 就地配置列加密](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
-- [查询使用具有安全 enclave 的 Always Encrypted 的列](encryption/always-encrypted-enclaves-query-columns.md)
+
+- [配置和使用具有安全 enclave 的 Always Encrypted](encryption/configure-always-encrypted-enclaves.md)
+- [教程：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中具有安全 enclave 的 Always Encrypted](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

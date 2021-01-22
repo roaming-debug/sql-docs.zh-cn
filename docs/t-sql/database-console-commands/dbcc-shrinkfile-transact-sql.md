@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7d7d3c9e8fa3e67a4ee6ba5c2eb2590ee65c18b2
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 478c7c784c25b1b71bcafd2279ac93bc7545c188
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96119560"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151302"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +67,7 @@ file_id
 要收缩的文件的标识 (ID) 号。 若要获取文件 ID，请使用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) 系统函数，或查询当前数据库中的 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图。
   
 *target_size*  
-整数，文件的新大小（以 MB 为单位）。 如果未指定，DBCC SHRINKFILE 缩小到文件创建大小。
+整数，文件的新大小（以 MB 为单位）。 如果未指定或为 0，DBCC SHRINKFILE 缩小到文件创建大小。
   
 > [!NOTE]  
 >  可以使用 DBCC SHRINKFILE target_size 缩小空文件的默认大小。 例如，如果创建一个 5 MB 的文件，然后在文件仍然为空的时候将文件收缩为 3 MB，默认文件大小将设置为 3 MB。 这只适用于永远不会包含数据的空文件。  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
-ms.openlocfilehash: 148df97bf2c353e2cf12fe8f31ef2f85f6307b7d
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: a79ab99baaad3ec156fc77be77a8584e50448662
+ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443079"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125620"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Microsoft SQL Server 的最新更新
 
@@ -29,16 +29,16 @@ ms.locfileid: "96443079"
 
 |产品版本   | 最新 Service Pack |  最新 GDR | 最新累积更新 | CU 发布日期 | 通用指南  |
 |--|--|--|--|--|--|
-|SQL Server 2019|空值|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 8 [(KB 4577194)](https://support.microsoft.com/help/4577194)|2020/10/1|[SQL Server 2019 安装](./install-sql-server.md)|
-|SQL Server 2017|空值|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 22 [(KB 4577467)](https://support.microsoft.com/help/4577467)|2020/9/10|[SQL Server 2017 安装](./install-sql-server.md)|
-|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 15 [(KB 4577775)](https://support.microsoft.com/kb/4577775)|2020/9/28|[SQL Server 2016 安装](./install-sql-server.md)|
+|SQL Server 2019|空值|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 8 [(KB 4583459)](https://support.microsoft.com/help/4583459)|2021/1/12|[SQL Server 2019 安装](./install-sql-server.md)|
+|SQL Server 2017|空值|[KB 4583456](https://support.microsoft.com/help/4583456)|CU 22 [(KB 4583457)](https://support.microsoft.com/help/4583457)|2021/1/12|[SQL Server 2017 安装](./install-sql-server.md)|
+|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4583460](https://support.microsoft.com/help/4583460)|CU 15 [(KB 4583461)](https://support.microsoft.com/kb/4583461)|2021/1/12|[SQL Server 2016 安装](./install-sql-server.md)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|2019/7/9|[SQL Server 2016 安装](./install-sql-server.md)|
 |SQL Server 2016|空值|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|2017/11/22|[SQL Server 2016 安装](./install-sql-server.md)|
-|SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/kb/4022619)|[KB 4532095](https://support.microsoft.com/help/4532095)|CU 4 [(KB 4535288)](https://support.microsoft.com/kb/4535288)|2020/2/11|[SQL Server 2014 安装](https://www.microsoft.com/download/details.aspx?id=42299)|
+|SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/kb/4022619)|[KB 4583463](https://support.microsoft.com/help/4583463)|CU 4 [(KB 4583462)](https://support.microsoft.com/kb/4583462)|2021/1/12|[SQL Server 2014 安装](https://www.microsoft.com/download/details.aspx?id=42299)|
 |SQL Server 2014|SP2 [(KB 3171021)](https://support.microsoft.com/kb/3171021)|[KB 4505217](https://support.microsoft.com/help/4505217)|CU 18 [(KB 4500180)](https://support.microsoft.com/kb/4500180)|2019/7/29|[SQL Server 2014 安装](https://www.microsoft.com/download/details.aspx?id=42299)|
 |SQL Server 2014|SP1 [(KB 3058865)](https://support.microsoft.com/kb/3058865)|[KB 4032542](https://support.microsoft.com/help/4032542/description-of-the-security-update-for-sql-server-2014-service-pack-1) |CU 13 [(KB 4019099)](https://support.microsoft.com/help/4019099)|2017/8/8|[SQL Server 2014 安装](https://www.microsoft.com/download/details.aspx?id=42299)|
 |SQL Server 2014|空值|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 14 [(KB 3158271)](https://support.microsoft.com/kb/3158271)|2016/6/20|[SQL Server 2014 安装](https://www.microsoft.com/download/details.aspx?id=42299)|
-|SQL Server 2012|SP4 [(KB 4018073)](https://support.microsoft.com/help/4018073/sql-server-2012-service-pack-4-release-information)  |[KB 4532098](https://support.microsoft.com/help/4532098)|空值|空值|[SQL Server 2012 安装](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))|
+|SQL Server 2012|SP4 [(KB 4018073)](https://support.microsoft.com/help/4018073/sql-server-2012-service-pack-4-release-information)  |[KB 4583465](https://support.microsoft.com/help/4583465)|空值|空值|[SQL Server 2012 安装](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))|
 |SQL Server 2012|SP3 [(KB 3072779)](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)  |[KB 4057115](https://support.microsoft.com/help/4057115)|CU 10 [(KB 4057121)](https://support.microsoft.com/help/4057121)|2017/8/8|[SQL Server 2012 安装](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))|
 |SQL Server 2012|SP2 [(KB 2958429)](https://support.microsoft.com/kb/2958429)|[MS 16-136](/security-updates/SecurityBulletins/2016/ms16-136)|CU 16 [(KB 3205054)](https://support.microsoft.com/help/3205054/cumulative-update-16-for-sql-server-2012-sp2) |2017/1/18|[SQL Server 2012 安装](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))|
 |SQL Server 2012|SP1 [(KB 2674319)](https://support.microsoft.com/kb/2674319)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 16 [(KB 3052476)](https://support.microsoft.com/kb/3052476)|2015/5/18|[SQL Server 2012 安装](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))|

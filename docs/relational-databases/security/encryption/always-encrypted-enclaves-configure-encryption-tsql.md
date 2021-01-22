@@ -2,7 +2,7 @@
 description: 使用 Transact-SQL 配置列加密
 title: 使用 Transact-SQL 就地配置列加密 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e1e72a9e06c2012390a88243c3ef865ac222564b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ab59eec637bd5afc127227b09445417ffa1fe4eb
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477688"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534846"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>使用 Transact-SQL 配置列加密
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 本文介绍如何使用具有安全 Enclave 的 Always Encrypted 与 [ALTER TABLE ](../../../odbc/microsoft/alter-table-statement.md)/`ALTER COLUMN` 语句对列执行就地加密操作。 有关就地加密和一般先决条件的基本信息，请参阅[使用具有安全 Enclave 的 Always Encrypted 就地配置列加密](always-encrypted-enclaves-configure-encryption.md)。
 
@@ -33,19 +34,20 @@ ms.locfileid: "97477688"
 
 与使用服务器端安全 Enclave 的任何查询一样，必须在启用了 Always Encrypted 和 Enclave 计算的情况下，通过连接来发送用于触发就地加密的 `ALTER TABLE`/`ALTER COLUMN` 语句。 
 
-本文的其余部分介绍如何在 SQL Server Management Studio 中使用 `ALTER TABLE`/`ALTER COLUMN` 语句来触发就地加密。 或者，可以从应用程序发出 `ALTER TABLE`/`ALTER COLUMN`。 
+本文的其余部分介绍如何在 SQL Server Management Studio 中使用 `ALTER TABLE`/`ALTER COLUMN` 语句来触发就地加密。 或者，可以从 Azure Data Studio 和应用程序发出 `ALTER TABLE`/`ALTER COLUMN`。 
 
 > [!NOTE]
-> 目前，除 SSMS 以外的工具（包括 SqlServer PowerShell 模块中的 [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) cmdlet 和 [Sqlcmd](../../../tools/sqlcmd-utility.md)）都不支持使用 `ALTER TABLE`/`ALTER COLUMN` 进行就地加密操作。
+> 目前，SqlServer PowerShell 模块中的 [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) cmdlet 和 [Sqlcmd](../../../tools/sqlcmd-utility.md) 都不支持使用 `ALTER TABLE`/`ALTER COLUMN` 进行就地加密操作。
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>在 SSMS 中使用 Transact-SQL 执行就地加密
 ### <a name="pre-requisites"></a>先决条件
 - [使用具有安全 Enclave 的 Always Encrypted 就地配置列加密](always-encrypted-enclaves-configure-encryption.md)中已介绍了相关先决条件。
-- SQL Server Management Studio 18.3 或更高版本。
+- 如果使用的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，则为 SQL Server Management Studio 18.3 或更高版本。
+- 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]，则为 SQL Server Management Studio 18.8 或更高版本。
 
 ### <a name="steps"></a>步骤
 1. 打开一个查询窗口，并为数据库连接启用 Always Encrypted 和 enclave 计算。 有关详细信息，请参阅[为数据库连接启用和禁用 Always Encrypted](always-encrypted-query-columns-ssms.md#en-dis)。
-2. 在查询窗口中，发出 `ALTER TABLE`/`ALTER COLUMN` 语句，并在 `ENCRYPTED WITH` 子句中指定启用 enclave 的列加密密钥。 对于字符串列（例如，`char`、`varchar`、`nchar`、`nvarchar`），可能还需要将排序规则更改为 BIN2 排序规则。 
+2. 在查询窗口中，发出 `ALTER TABLE`/`ALTER COLUMN` 语句，为要加密、解密或重新加密的列指定目标加密配置。 如果要加密或重新加密列，请使用 `ENCRYPTED WITH` 子句。 对于字符串列（例如，`char`、`varchar`、`nchar`、`nvarchar`），可能还需要将排序规则更改为 BIN2 排序规则。 
     
     > [!NOTE]
     > 如果列主密钥存储在 Azure Key Vault 中，系统可能会提示你登录到 Azure。
@@ -67,7 +69,7 @@ ms.locfileid: "97477688"
 #### <a name="encrypting-a-column-in-place"></a>就地加密列
 下面的示例假定：
 - `CEK1` 是已启用 enclave 的列加密密钥。
-- `SSN` 列是纯文本列，目前使用默认的数据库排序规则，例如 Latin1，而非 BIN2 排序规则（例如，`Latin1_General_CI_AI_KS_WS`）。
+- `SSN` 列是纯文本列，目前使用默认的数据库排序规则，例如 Latin1，而非 BIN2 排序规则（例如 `Latin1_General_CI_AI_KS_WS`）。
 
 该语句使用随机加密和已启用 enclave 的列加密密钥对 `SSN` 列进行就地加密。 它还使用相应的（在相同代码页）BIN2 排序规则覆盖默认数据库排序规则。
 
@@ -125,7 +127,7 @@ GO
 - `SSN` 列使用已启用 enclave 的列加密密钥进行加密。
 - 当前在列级别设置的排序规则是 `Latin1_General_BIN2`。
 
-以下语句将解密列（并保持排序规则不变 - 或者，可以选择更改排序规则，例如，在同一语句中更改为非 BIN2 排序规则）。
+以下语句解密该列并保持排序规则不变。 也可选择更改排序规则。 例如，在同一语句中将排序规则更改为非 BIN2 排序规则。
 
 ```sql
 ALTER TABLE [dbo].[Employees]
@@ -137,11 +139,13 @@ GO
 ```
 
 ## <a name="next-steps"></a>后续步骤
-- [查询使用具有安全 enclave 的 Always Encrypted 的列](always-encrypted-enclaves-query-columns.md)
+- [使用安全 enclave 运行 Transact-SQL 语句](always-encrypted-enclaves-query-columns.md)
 - [对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引](always-encrypted-enclaves-create-use-indexes.md)
 - [使用具有安全 enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md)
 
 ## <a name="see-also"></a>另请参阅  
+- [排查具有安全 enclave 的 Always Encrypted 的常见问题](always-encrypted-enclaves-troubleshooting.md)
 - [使用具有安全 Enclave 的 Always Encrypted 就地配置列加密](always-encrypted-enclaves-configure-encryption.md)
 - [为现有加密列启用具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves-enable-for-encrypted-columns.md)
-- [教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [教程：在 SQL Server 中开始使用具有安全 enclave 的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [教程：在 Azure SQL 数据库中开始使用具有安全 enclave 的 Always Encrypted](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

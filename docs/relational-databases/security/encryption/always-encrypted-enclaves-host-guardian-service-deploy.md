@@ -2,7 +2,7 @@
 title: 部署主机保护者服务
 description: 为具有安全 enclave 的 Always Encrypted 部署主机保护者服务。
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ce744de4f70e30a10fad36eef6c1f28f4d8e8d4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 88e79166a8b44139f58192feece211bc3b3d2db3
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477678"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534786"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>为 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 部署主机保护者服务
 
@@ -23,6 +23,9 @@ ms.locfileid: "97477678"
 
 本文介绍如何将主机保护者服务 (HGS) 部署为 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 的证明服务。
 在开始之前，请务必阅读[规划主机保护者服务证明](./always-encrypted-enclaves-host-guardian-service-plan.md)一文，以获取先决条件和体系结构指南的完整列表。
+
+> [!NOTE]
+> HGS 管理员负责执行本文所述的所有步骤。 请参阅[使用 HGS 配置证明时的角色和职责](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs)。
 
 ## <a name="step-1-set-up-the-first-hgs-computer"></a>步骤 1：设置第一台 HGS 计算机
 
@@ -233,6 +236,27 @@ Set-HgsServer -TrustHostKey
     ```
 
 3. 对群集中的每台 HGS 计算机重复步骤 1 和 2。 不会在 HGS 节点之间自动复制 TLS 证书。 此外，只要使用者与 HGS 服务名称匹配，每台 HGS 计算机都可以拥有自己的唯一 TLS 证书。
+
+## <a name="step-6-determine-and-share-the-hgs-attestation-url"></a>步骤 6：确定并共享 HGS 证明 URL
+
+作为 HGS 管理员，你需要与组织中的 SQL Server 计算机管理员和应用程序管理员共享 HGS 的证明 URL。 SQL Server 计算机管理员将需要证明 URL，以验证 SQL Server 计算机能否使用 HGS 进行证明。 应用程序管理员将需要证明 URL 来配置应用如何连接到 SQL Server。
+
+若要确定证明 URL，请运行以下 cmdlet。
+
+```powershell
+Get-HGSServer
+```
+该命令的输出应如下所示：
+
+```
+Name                           Value                                                                         
+----                           -----                                                                         
+AttestationOperationMode       HostKey                                                                       
+AttestationUrl                 {http://hgs.bastion.local/Attestation}                                        
+KeyProtectionUrl               {}         
+```
+
+HGS 的证明 URL 是 AttestationUrl 属性的值。
 
 ## <a name="next-steps"></a>后续步骤
 

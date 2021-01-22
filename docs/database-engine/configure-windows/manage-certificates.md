@@ -1,11 +1,8 @@
 ---
-title: 证书管理（SQL Server 配置管理器）| Microsoft Docs
+title: 证书管理（SQL Server 配置管理器）
 description: 了解如何在各种 SQL Server 配置中安装证书。 示例包括单个实例、故障转移群集和 Always On 可用性组。
-ms.custom: ''
-ms.date: 01/16/2019
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +18,15 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 835d0b1da11ba014b14ede9637117357e84dc208
-ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/12/2021
+ms.openlocfilehash: e4f0c17e7502a0c1fa75c6459fae77683d0c3cbd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85196044"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170919"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>证书管理（SQL Server 配置管理器）
 
@@ -43,18 +43,29 @@ SSL/TLS 证书广泛用于保护对 SQL Server 的访问。 对于早期版本�
 > 通过较低版本的 SQL Server（从 SQL Server 2008 开始），可使用 SQL Server 配置管理器中的证书管理功能。
 
 ##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a> 为单一 SQL Server 实例安装证书  
-  
+
+::: moniker range=">=sql-server-ver15"
 1. 在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”。  
-  
+
 2. 右键单击“&lt;实例名称&gt; 的协议”，然后选择“属性”。  
-  
+
 3. 选择“证书”选项卡，然后选择“导入” 。  
-  
+
 4. 选择“浏览”，然后选择证书文件。  
-  
+
 5. 选择“下一步”，验证证书。 如果没有错误，请选择“下一步”，将证书导入到本地实例。  
-  
- 
+::: moniker-end
+
+::: moniker range="<= sql-server-2017"
+1. 在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”。  
+
+2. 右键单击“&lt;实例名称&gt; 的协议”，然后选择“属性”。  
+
+3. 从“证书”下拉菜单中选择一个证书，然后选择“应用” 。  
+
+4. 选择“确定”。 
+::: moniker-end
+
 ##  <a name="to-install-a-certificate-in-a-failover-cluster-instance-configuration"></a><a name="provision-failover-cluster-cert"></a> 在故障转移群集示例配置中安装证书  
   
 1. 在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”。

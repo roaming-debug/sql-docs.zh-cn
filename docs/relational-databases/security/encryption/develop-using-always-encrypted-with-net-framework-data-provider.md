@@ -2,7 +2,7 @@
 title: 配合使用 Always Encrypted 和 .NET Framework 数据提供程序
 description: 了解如何使用 SQL Server 的 Always Encrypted 功能开发 .NET 应用程序。
 ms.custom: seo-lt-2019
-ms.date: 10/31/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: security, sql-database
 ms.reviewer: vanto
@@ -12,30 +12,31 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e3bd7a6481f677de9355a892eb78b3b5aeaaa15
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 02c99d9cee2eb257c0254c15bd92a0e2812ccc54
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477578"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534766"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>对用于 SQL Server 的 .NET Framework 数据提供程序使用 Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 本文介绍了如何使用 [Always Encrypted](always-encrypted-database-engine.md) 或 [具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md) 和[用于 SQL Server 的 .NET Framework 数据提供程序](/dotnet/framework/data/adonet/sql/)来开发 .NET 应用程序。
 
-始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了始终加密的驱动程序（例如用于 SQL Server 的 .NET Framework 数据提供程序）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此目标。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅[使用 Always Encrypted 开发应用程序](always-encrypted-client-development.md)和[使用具有安全 Enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md)。
+始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了始终加密的驱动程序（例如用于 SQL Server 的 .NET Framework 数据提供程序）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此目标。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅[使用具有安全 enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md)。
 
 ## <a name="prerequisites"></a>先决条件
 
-- 在数据库中配置始终加密。 这涉及为选定数据库列预配始终加密密钥和设置加密。 如果还没有配置具有 Always Encrypted 的数据库，请按照 [Always Encrypted 入门](always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的说明操作。
+- 在数据库中配置始终加密。 这涉及为选定数据库列预配始终加密密钥和设置加密。 如果还没有配置具有 Always Encrypted 的数据库，请按照 [Always Encrypted 入门](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的说明操作。
+- 如果使用的是具有安全 enclave 的 Always Encrypted，请参阅[使用具有安全 enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md)，了解其他先决条件。
 - 确保在开发计算机上安装 .NET Framework 4.6.1 或更高版本。 有关详细信息，请参阅 [.NET Framework 4.6](/dotnet/framework/)。 还需确保将 .NET Framework 4.6 或更高版本配置为开发环境中的目标 .NET Framework 版本。 如果使用的是 Visual Studio，请参阅[如何：面向 .NET Framework 的某个版本](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。 
 
 > [!NOTE]
 > 特定 .NET Framework 版本对始终加密的支持级别有所不同。 有关详细信息，请参阅下面的“始终加密 API 参考”一节。
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>为应用程序查询启用始终加密
-若要对参数启用加密，以及对面向加密列的查询结果启用解密，最简单的方法是将“列加密设置”连接字符串关键字的值设置为“已启用”  。
+若要对参数启用加密，以及对面向加密列的查询结果启用解密，最简单的方法是将“列加密设置”连接字符串关键字的值设置为“已启用”。
 
 以下是启用始终加密的连接字符串示例：
 
@@ -64,15 +65,21 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 
 从 .NET Framework 版本 4.7.2 开始，驱动程序支持[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md)。 
 
-要在连接到 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 或更高版本时使用 enclave，需要配置应用程序和用于 SQL Server 的 .NET Framework 数据提供程序以启用 enclave 计算和 enclave 证明。 
-
 有关 enclave 计算和 enclave 证明中的客户端驱动程序角色的一般信息，请参阅[使用具有安全 Enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md)。 
 
 要配置应用程序：
 
-1. 将 [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) NuGet 包与应用程序集成。 NuGet 是一个 enclave 提供程序库，它可以实现证明协议的客户端逻辑，并在 SQL Server 中使用安全 enclave 建立一个安全通道。  
-2. 更新应用程序配置（例如，在 web.config 或 app.config 中）以定义用于配置 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 实例的 enclave 类型间的映射（请参阅[为 Always Encrypted 服务器配置选项配置 enclave 类型](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)）。 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 支持 VBS enclave 和用于证明的主机保护者服务。 因此，需要将 VBS enclave 类型映射到 NuGet 包中的 Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider 类。 
-3. 通过将连接字符串中的 Enclave 证明 URL 关键字设置为证明终结点，为从应用程序到数据库的连接启用 enclave 计算。 关键字的值应设置为在你的环境中配置的 HGS 服务器的证明终结点。 
+1. 如上一节所述，为应用程序查询启用 Always Encrypted。
+2. 将 [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) NuGet 包与应用程序集成。 NuGet 是一个 enclave 提供程序库，它可以实现证明协议的客户端逻辑，并使用安全 enclave 建立一个安全通道。  
+3. 更新应用程序配置（例如在 web.config 或 app.config 中），以定义为数据库配置的 enclave 类型与 enclave 提供程序之间的映射。 
+    1. 如果使用的是 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 和主机监护服务 (HGS)，需要将 VBS enclave 类型映射到 NuGet 包中的 Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider 类。
+    2. 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，需要将 SGX enclave 类型映射到 NuGet 包中的 Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.AzureAttestationEnclaveProvider 类。
+
+    有关如何编辑应用程序配置的详细说明，请参阅[教程：开发使用具有安全 enclave 的 Always Encrypted 的 .NET Framework 应用程序](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)。
+
+4. 将数据库连接字符串中的 `Enclave Attestation URL` 关键字设置为证明 URL（证明服务终结点）。 你需要从证明服务管理员处获取环境的证明 URL。
+   1. 如果使用的是 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 和主机监护服务 (HGS)，请参阅[确定并共享 HGS 证明 URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)。
+   2. 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)。
 
 有关分步教程，请参阅[教程：开发使用具有安全 enclave 的 Always Encrypted 的 .NET Framework 应用程序](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
@@ -462,7 +469,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 ## <a name="enabling-additional-protection-for-a-compromised-sql-server"></a>对遭到入侵的 SQL Server 启用附加保护
 
-默认情况下，用于 SQL Server 的 .NET Framework 数据提供程序  依赖于数据库系统（SQL Server 或 Azure SQL 数据库）来提供有关数据库中的哪些列进行加密以及如何加密的元数据。 加密元数据使用于 SQL Server 的 .NET Framework 数据提供程序可以加密查询参数并解密查询结果，而无需从应用程序进行任何输入，从而大大减少了应用程序中所需的更改量。 但是，如果 SQL Server 进程遭到入侵，并且攻击者篡改 SQL Server 发送给用于 SQL Server 的 .NET Framework 数据提供程序的元数据，则攻击者可能能够窃取敏感信息。 本部分介绍可帮助针对这种类型的攻击提供附加保护级别（以降低透明度为代价）的 API。 
+默认情况下，用于 SQL Server 的 .NET Framework 数据提供程序依赖于数据库系统（SQL Server 或 Azure SQL 数据库）来提供有关数据库中的哪些列进行加密以及如何加密的元数据。 加密元数据使用于 SQL Server 的 .NET Framework 数据提供程序可以加密查询参数并解密查询结果，而无需从应用程序进行任何输入，从而大大减少了应用程序中所需的更改量。 但是，如果 SQL Server 进程遭到入侵，并且攻击者篡改 SQL Server 发送给用于 SQL Server 的 .NET Framework 数据提供程序的元数据，则攻击者可能能够窃取敏感信息。 本部分介绍可帮助针对这种类型的攻击提供附加保护级别（以降低透明度为代价）的 API。 
 
 ### <a name="forcing-parameter-encryption"></a>强制实施参数加密 
 
@@ -470,7 +477,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 若要阻止这类攻击，应用程序可以将参数的 [SqlParameter.ForceColumnEncryption 属性](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption) 设置为 true。 这会导致用于 SQL Server 的 .NET Framework 数据提供程序引发异常（如果它从服务器收到的元数据指示参数不需要进行加密）。
 
-虽然使用 SqlParameter.ForceColumnEncryption 属性  有助于提高安全性，不过它同样降低了面向客户端应用程序的加密透明度。 如果更新数据库架构以更改加密列集，则可能还需要进行应用程序更改。
+虽然使用 SqlParameter.ForceColumnEncryption 属性有助于提高安全性，不过它同样降低了面向客户端应用程序的加密透明度。 如果更新数据库架构以更改加密列集，则可能还需要进行应用程序更改。
 
 下面的代码示例演示如何使用 **SqlParameter.ForceColumnEncryption 属性** 防止以纯文本形式将身份证号发送给数据库。 
 
@@ -558,7 +565,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="always-encrypted-api-reference"></a>始终加密 API 参考
 
-**命名空间:** [System.Data.SqlClient](/dotnet/api/system.data.sqlclient)
+**命名空间：** [System.Data.SqlClient](/dotnet/api/system.data.sqlclient)
 
 **程序集：** System.Data（在 System.Data.dll 中）
 
@@ -576,7 +583,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 | [SqlConnectionStringBuilder.ColumnEncryptionSetting 属性](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.columnencryptionsetting)|获取并设置连接字符串中的始终加密。|4.6|
 | [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled 属性](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled) | 启用和禁用加密查询元数据缓存。 | 4.6.2
 | [SqlConnection.ColumnEncryptionKeyCacheTtl 属性](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl) | 获取和设置列加密密钥缓存中的项的生存时间。 | 4.6.2
-|[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths 属性](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|允许你为数据库服务器设置受信任的密钥路径的列表。 如果在处理应用程序查询时，驱动程序收到不在列表上的密钥路径，则查询将失败。 此属性提供针对安全攻击的额外保护，这些攻击涉及到提供伪造密钥路径的受损 SQL Server，这可能导致泄露密钥存储凭据。|  4.6
+|[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths 属性](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|允许你为数据库服务器设置受信任的密钥路径的列表。 如果在处理应用程序查询时驱动程序接收到不位于列表中的密钥路径，则查询会失败。 此属性提供针对安全攻击的额外保护，这些攻击涉及到提供伪造密钥路径的受损 SQL Server，这可能导致泄露密钥存储凭据。|  4.6
 |[SqlConnection.RegisterColumnEncryptionKeyStoreProviders 方法](/dotnet/api/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)|允许你注册自定义密钥存储提供程序。 它是一个将密钥存储提供程序名称映射到密钥存储提供程序实现的字典。|  4.6
 |[SqlCommand 构造函数 (String, SqlConnection, SqlTransaction, SqlCommandColumnEncryptionSetting)](https://msdn.microsoft.com/library/dn956511\(v=vs.110\).aspx)|允许你控制各个查询的始终加密行为。|  4.6
 |[SqlParameter.ForceColumnEncryption 属性](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption)|强制实施参数加密。 如果 SQL Server 告知驱动程序参数不需加密，则使用该参数的查询会失败。 此属性提供针对安全攻击的额外保护，这些攻击涉及受损 SQL Server 向客户端提供不正确的加密元数据，这可能会导致数据泄漏。|4.6  

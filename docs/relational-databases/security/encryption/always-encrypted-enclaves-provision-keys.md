@@ -2,7 +2,7 @@
 description: 预配已启用 enclave 的密钥
 title: 预配已启用 enclave 的密钥 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/01/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.prod_service: database-engine, sql-database
@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 02d4b833b45393c6d830048c3e761cd7abac99e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e28b6d18b5fe466aa239164b18ebdfe5fef0895c
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477618"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534756"
 ---
 # <a name="provision-enclave-enabled-keys"></a>预配已启用 enclave 的密钥
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 本文介绍如何预配已启用 enclave 的密钥，这些密钥支持用于[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md) 的服务器端安全 enclave 中的计算。 
 
@@ -39,12 +40,17 @@ ms.locfileid: "97477618"
 以下部分提供有关如何使用 SSMS 和 PowerShell 预配已启用 enclave 的密钥的更多详细信息。
 
 ## <a name="provision-enclave-enabled-keys-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 预配已启用 enclave 的密钥
-在 SQL Server Management Studio 18.3 或更高版本中，可以预配：
+在 SQL Server Management Studio 中，可以预配：
 - 已启用 enclave 的列主密钥（使用“新建列主密钥”对话框）。
 - 已启用 enclave 的列加密密钥（使用“新建列加密密钥”对话框）。
 
 > [!NOTE]
 > [Always Encrypted 向导](always-encrypted-wizard.md)当前不支持生成已启用 enclave 的密钥。 不过，可以先使用以上对话框创建已启用 enclave 的密钥，然后在运行该向导时，为要加密的列选择现有已启用 enclave 的列加密。
+
+SSMS 最低版本要求：
+
+- 如果使用的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，则为 SSMS 18.3。
+- 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]，则为 SSMS 18.8。
 
 ### <a name="provision-enclave-enabled-column-master-keys-with-the-new-column-master-key-dialog"></a>使用“新建列主密钥”对话框预配已启用 enclave 的列主密钥
 若要预配已启用 enclave 的列主密钥，请按照[使用“新建列主密钥”对话框预配列主密钥](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)中的步骤进行操作。 确保选择“允许 enclave 计算”。 请参阅以下屏幕截图：
@@ -52,7 +58,7 @@ ms.locfileid: "97477618"
 ![允许 enclave 计算](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 > [!NOTE]
-> 仅当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例包含正确初始化的安全 enclave 时，“允许 enclave 计算”复选框才会出现。 有关详细信息，请参阅[为 Always Encrypted 配置 enclave 类型](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)。
+> 仅在为数据库配置了安全 enclave 时，才会显示“允许 enclave 计算”复选框。 如果使用的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[在 SQL Server 中配置安全 enclave](always-encrypted-enclaves-configure-enclave-type.md)。 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]，请参阅[为 Azure SQL 数据库启用 Intel SGX](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)。
 
 > [!TIP]
 > 若要检查列主密钥是否已启用 enclave，请在对象资源管理器中右键单击它，然后选择“属性”。 如果密钥已启用 enclave，则“Enclave 计算:允许”会出现在显示密钥属性的窗口中。 或者，可以使用 [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) 视图。
@@ -148,12 +154,13 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 ## <a name="next-steps"></a>后续步骤
-- [查询使用具有安全 enclave 的 Always Encrypted 的列](always-encrypted-enclaves-query-columns.md)
+- [使用安全 enclave 运行 Transact-SQL 语句](always-encrypted-enclaves-query-columns.md)
 - [使用具有安全 Enclave 的 Always Encrypted 就地配置列加密](always-encrypted-enclaves-configure-encryption.md)
 - [为现有加密列启用具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [使用具有安全 enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md) 
 
 ## <a name="see-also"></a>另请参阅  
-- [教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [教程：在 SQL Server 中开始使用具有安全 enclave 的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [教程：在 Azure SQL 数据库中开始使用具有安全 enclave 的 Always Encrypted](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [管理具有安全 enclave 的 Always Encrypted 的密钥](always-encrypted-enclaves-manage-keys.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

@@ -1,11 +1,8 @@
 ---
+title: DATEDIFF_BIG (Transact-SQL)
 description: DATEDIFF_BIG (Transact-SQL)
-title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -21,12 +18,15 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ea087da6532c43493fd10f647788297d98f35f72
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/12/2021
+ms.openlocfilehash: 8f6078aebab5456b8867aca1b7f6987d8a1eb6fd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093647"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168070"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 
@@ -90,13 +90,13 @@ enddate
 签名的 bigint  
   
 ## <a name="return-value"></a>返回值  
-返回 startdate 与 enddate 之间的 bigint 差异，以 datepart 设置的 coundary 表示。
+返回 startdate 与 enddate 之间的 bigint 差异，以 datepart 设置的边界表示  。
   
-若 bigint 的返回值超出范围（-9223372036854775808 到 9223372036854775807），`DATEDIFF_BIG` 返回错误。 与返回 int 且因此可能以分钟或更高精度溢出的 `DATEDIFF` 不同，`DATEDIFF_BIG` 仅在使用纳秒精度（其中 enddate 和 startdate 之间的差异超过 292 年 3 个月 10 天 23 小时 47 分钟 16.8547758 秒）时才会溢出。
+若 bigint 的返回值超出范围（-9223372036854775808 到 9223372036854775807），`DATEDIFF_BIG` 返回错误。 与返回 int 且因此可能以分钟或更高精度溢出的 DATEDIFF 不同，`DATEDIFF_BIG` 仅在使用纳秒精度（其中 enddate 和 startdate 之间的差异超过 292 年 3 个月 10 天 23 小时 47 分钟 16.8547758 秒）时才会溢出   。
   
-如果为 startdate 和 enddate 都只指定了时间值，并且 datepart 不是时间 datepart，则 `DATEDIFF_BIG` 返回 0     。
+如果为 startdate 和 enddate 都只指定了时间值，并且 datepart 不是时间 datepart，则 `DATEDIFF_BIG` 返回 0   。
   
-`DATEDIFF_BIG` 不使用 startdate 或 enddate 的时区偏移量部分来计算返回值。
+`DATEDIFF_BIG` 使用 startdate 或 enddate 的时区偏移量部分来计算返回值 。
   
 对于用于 startdate 或 enddates 的 malldatetime 值，由于 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 仅精确到分钟，因此 `DATEDIFF_BIG` 始终将返回值中的秒和毫秒设置为 0。
   
@@ -127,7 +127,7 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
   
 指定 `SET DATEFIRST` 对 `DATEDIFF_BIG` 没有影响。 `DATEDIFF_BIG` 始终使用星期日作为每周的第一天，确保函数以确定性方式运行。
 
-如果 enddate 和 startdate 之间的差值返回一个超出 bigint 范围的值，`DATEDIFF_BIG` 可能会溢出，且其精度为纳秒。
+如果 enddate 和 startdate 之间的差值返回一个超出 bigint 范围的值，`DATEDIFF_BIG` 可能会溢出，且其精度为纳秒 。
   
 ## <a name="examples"></a>示例 
   

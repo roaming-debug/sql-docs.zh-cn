@@ -2,7 +2,7 @@
 title: 配置 Always Encrypted 的 enclave 类型服务器配置选项 | Microsoft Docs
 description: 了解如何启用或禁用 Always Encrypted 的安全 enclave。 了解如何确认 enclave 是否已正确初始化。
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 45f6bdca2602a9a85cf9fc193269b445599c78ad
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 19e7349c3b8bb9ef104f95ef0963b6d7982a3669
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480328"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534746"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>配置 Always Encrypted 的 enclave 类型服务器配置选项
 
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-本文介绍如何为具有安全 enclave 的 Always Encrypted 启用或禁用安全 enclave。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+本文介绍如何为具有安全 enclave 的 Always Encrypted 启用或禁用安全 enclave。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 和 [在 SQL Server 中配置安全 enclave](../../relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md)。
 
 列加密 enclave 类型服务器配置选项控制用于 Always Encrypted 的安全 enclave 类型。 该选项可以设置为以下值之一：  
   

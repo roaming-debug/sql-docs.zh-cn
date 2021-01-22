@@ -2,7 +2,7 @@
 title: 通过 SQL Server Management Studio 查询使用 Always Encrypted 的列 | Microsoft Docs
 description: 了解如何通过 SQL Server Management Studio 查询使用 Always Encrypted 的列。 检索存储在加密列中的密码文本值或文本值。
 ms.custom: ''
-ms.date: 10/31/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1406b28cae6d73228d54059cf7463b8eaa578385
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 475cda1238efc6a7c4b630d4458c719dc1b9adbd
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405949"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534602"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>通过 SQL Server Management Studio 查询使用 Always Encrypted 的列
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -95,11 +95,12 @@ ms.locfileid: "97405949"
 1. 如果使用 SSMS 18 或更高版本：
     1. 选择“Always Encrypted”选项卡。
     1. 若要启用 Always Encrypted，请选择“启用 Always Encrypted (列加密)”。 若要禁用 Always Encrypted，请确保不选择“启用 Always Encrypted (列加密)”。
-    1. 如果使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，且 SQL Server 实例配置了安全 enclave，则可以指定 enclave 证明 url。 如果 SQL Server 实例未使用安全 enclave，请确保将“Enclave 证明 URL”文本框留空。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md)。
 1. 如果使用 SSMS 17 或更低版本：
     1. 选择“其他属性”。
     1. 若要启用 Always Encrypted，请键入 `Column Encryption Setting = Enabled`。 若要禁用 Always Encrypted，请指定 `Column Encryption Setting = Disabled`，或从“其他属性”选项卡中删除“列加密设置”设置（其默认值为“已禁用”）。   
  1. 单击“连接”。
+
+若要在使用[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md) 时运行利用服务器端安全 enclave 的语句，除了启用连接的 Always Encrypted 外，还需要指定 enclave 证明 URL。 有关详细信息，请参阅[在 SSMS 中运行使用 enclave 的 T-SQL 语句的先决条件](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-ssms)。
 
 > [!TIP]
 > 在为现有“查询编辑器”窗口启用和禁用 Always Encrypted 之间进行切换：   

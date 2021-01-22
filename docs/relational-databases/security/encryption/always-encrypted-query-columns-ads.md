@@ -2,7 +2,7 @@
 description: 通过 Azure Data Studio 查询使用 Always Encrypted 的列
 title: 通过 Azure Data Studio 查询使用 Always Encrypted 的列 | Microsoft Docs
 ms.custom: ''
-ms.date: 5/19/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a61514ff76bbae9e403683529d017f6fcb1c079
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 93bb5c30eeb9cdc6f10c3b71d0e4f70f3f8c6477
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101840"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534416"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>通过 Azure Data Studio 查询使用 Always Encrypted 的列
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -85,6 +85,7 @@ ms.locfileid: "98101840"
 有关详细信息，请参阅 [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
 ## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a>为数据库连接启用和禁用 Always Encrypted   
+
 在 Azure Data Studio 中连接到数据库时，可以为数据库连接启用或禁用 Always Encrypted。 默认情况下，Always Encrypted 处于禁用状态。 
 
 为数据库连接启用 Always Encrypted 将指示 [SQL Server 的 Microsoft .NET 数据提供程序](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)（由 Azure Data Studio 使用）以透明方式尝试以下操作：   
@@ -100,10 +101,11 @@ ms.locfileid: "98101840"
 若要启用（禁用）Always Encrypted，请执行以下操作：
 1. 在“连接”对话框中，单击“高级…” 。
 2. 若要为连接启用 Always Encrypted，请将“Always Encrypted”字段设置为“启用” 。 若要禁用 Always Encrypted，请将“Always Encrypted”字段的值留空或将其设置为“禁用” 。
-3. 如果使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，且 SQL Server 实例配置了安全 enclave，则可以指定 enclave 协议和 enclave 证明 url。 如果 SQL Server 实例未使用安全 enclave，请确保将“证明协议”和“Enclave 证明 URL”字段留空 。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md)。
-4. 单击“确定”以关闭“高级属性” 。
+3. 单击“确定”以关闭“高级属性” 。
 
 ![短片介绍了为连接启用 Always Encrypted 的相关步骤。](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+
+若要在使用[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md) 时运行利用服务器端安全 enclave 的语句，除了启用连接的 Always Encrypted 外，还需要指定 enclave 证明协议和 enclave 证明 URL。 有关详细信息，请参阅[在 Azure Data Studio 中运行使用 enclave 的 T-SQL 语句的先决条件](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-azure-data-studio)。
 
 > [!TIP]
 > 若要在现有查询窗口中启用和禁用 Always Encrypted，请先单击“断开连接”，再单击“连接”并完成以上步骤，以使用“Always Encrypted”字段的所需值重新连接到数据库  。 

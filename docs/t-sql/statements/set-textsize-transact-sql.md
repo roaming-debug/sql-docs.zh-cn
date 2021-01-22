@@ -25,17 +25,17 @@ ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a959ad6d9a3908d0017b40a8936ccdbe79d8cd83
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0d7800e643010a9a4064ca1b113e7c7b84e12742
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98079868"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151320"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  指定 SELECT 语句返回的 **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**text**、**ntext** 和 **image** 数据的大小。  
+  指定 SELECT 语句返回到客户端的 varchar(max)、nvarchar(max)、varbinary(max)、text、ntext 和 image 数据的大小（按字节计）     。  
   
 > [!IMPORTANT]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 **ntext**、**text** 和 **image** 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 **nvarchar(max)**、 **varchar(max)** 和 **varbinary(max)** 。  

@@ -13,12 +13,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bedf575888445fb0e14684d4e325b60eb8547a79
+ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473138"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98564458"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "97473138"
   
  例如，上图显示了一个完全适合第 1 级网格的单元 15 的八边形。 在此图中，单元 15 已进行分割，将八边形分成了九个二级单元。 此图假定每对象单元数限制为 9 或更大。 然而，如果每对象单元数限制为 8 或更小，则单元 15 将不进行分割，而只为该对象对单元 15 进行计数。  
   
- 默认情况下，每对象单元数限制为每个对象 16 个单元，这将在大多数空间索引的空间和精度之间提供一个令人满意的折中方案。 然而， [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句支持 CELLS_PER_OBJECT **=** _n_ 子句，使用该子句可以指定介于 1 和 8192（包含这两者）之间的每对象单元数限制。  
+ 默认情况下，每对象单元数限制为每个对象 16 个单元，这将在大多数空间索引的空间和精度之间提供一个令人满意的折中方案。 然而，[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句支持 CELLS_PER_OBJECT = n 子句，使用该子句可以指定介于 1 和 8192（包含这两者）之间的每对象单元数限制。  
   
 > [!NOTE]  
 >  空间索引的 **cells_per_object** 设置显示在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目录视图中。  

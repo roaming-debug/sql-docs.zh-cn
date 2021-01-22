@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52578422cc9f68c728c901cf39bf05425576133b
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 65712139819c65c2fe8804cc8e0f6768025b322a
+ms.sourcegitcommit: e3ab17fe9822629eda4df5fb4550df5d495f3134
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521091"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98207856"
 ---
 # <a name="standalone-sql-server-integration-service-ssis-devops-tools-preview"></a>独立 SQL Server Integration Services (SSIS) DevOps 工具（预览）
 
@@ -128,6 +128,13 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     ```
 
 ## <a name="release-notes"></a>发行说明
+
+### <a name="version-012-preview"></a>版本 0.1.2 预览版
+
+发行日期：2021 年 1 月 14 日
+
+- 修复了以下问题：SSIS 项目文件中的包参数元数据与 SSIS 包不匹配时，SSISBuild.exe 无法生成项目且出现 NullReference 异常。
+- 修复了以下问题：当已使用 EncryptSensitiveWithUserKey 对包含包的 SSIS 项目进行加密并且该包包含具有敏感数据的 CM 时，尽管已使用 SSISDeploy.exe 将包成功部署到 SSISDB，但包无法执行且出现以“无法解密受保护的 XML 节点”开头的错误。
 
 ### <a name="version-011-preview"></a>版本 0.1.1 预览版
 

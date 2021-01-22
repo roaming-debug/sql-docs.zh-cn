@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8e1fd0c8e43000573d030a80ce52145bd0c8669
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: ac65acde470d75c616e77d21f6e62ab8d1f5e4e4
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384876"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241837"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 设计器控制台简介
 
@@ -43,9 +43,11 @@ ms.locfileid: "94384876"
   
 ### <a name="source-oracle-database"></a>源 Oracle 数据库
   
--   Oracle 数据库 10g 发行版 2
--   Oracle 数据库 11g 发行版 1 和发行版 2
--   经典安装的 Oracle Database 12c。 （不支持多租户安装。）  
+- Oracle 数据库 10g 发行版 2
+- Oracle 数据库 11g 发行版 1 和发行版 2
+- 经典安装中的 Oracle 数据库 12c（不支持多租户安装。）  
+- 经典安装中的 Oracle 数据库 18c（不支持多租户安装。）
+- 经典安装中的 Oracle 数据库 19c（不支持多租户安装。）
 
 ### <a name="target-sql-server-database"></a>目标 SQL Server 数据库
   

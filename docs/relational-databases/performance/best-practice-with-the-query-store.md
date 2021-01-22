@@ -2,7 +2,7 @@
 title: 查询存储最佳做法 | Microsoft Docs
 description: 了解将 SQL Server 查询存储与工作负载结合使用的最佳做法，例如使用最新的 SQL Server Management Studio 和 Query Performance Insight。
 ms.custom: ''
-ms.date: 12/23/2020
+ms.date: 1/7/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.technology: performance
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cccb47e059938745aa6166902402c8b94b674722
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4054435b8341ab60d08866acb017ef85892f4faa
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099310"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170579"
 ---
 # <a name="best-practices-with-query-store"></a>查询存储最佳做法
 
@@ -73,7 +73,7 @@ ms.locfileid: "98099310"
 
 当查询存储收集查询、执行计划和统计信息时，其在数据库中的大小会一直增长，直至达到此限制。 达到此限制后，Query Store 会自动将操作模式更改为只读，并停止收集新数据，这意味着你的性能分析自此不再精确。
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认值为 100 MB。 如果工作负载会生成大量不同的查询和计划，或者想要让查询历史记录保存较长的时间，则此大小可能不足。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，默认值是 1 GB。 请跟踪当前的空间使用情况，增大“最大大小 (MB)”的值以防查询存储转换到只读模式。
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认值为 100 MB。 如果工作负载会生成大量不同的查询和计划，或者想要让查询历史记录保存较长的时间，则此大小可能不足。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，默认值是 1 GB。 请跟踪当前的空间使用情况，增大“最大大小 (MB)”的值以防查询存储转换到只读模式。
 
 > [!IMPORTANT]
 > 没有严格执行“最大大小 (MB)”限制。 仅当查询存储将数据写入磁盘时才检查存储大小。 此间隔由“数据刷新间隔（分钟）”选项设置。 如果查询存储已违反存储大小检查之间的最大大小限制，则它将转换为只读模式。 如果启用了“基于大小的清理模式”，则也会触发强制实施最大大小限制的清理机制。
@@ -133,7 +133,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 
 **查询存储捕获模式**：指定查询存储的查询捕获策略。
 
-- **全部**：捕获所有查询。 此选项在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中为默认值。
+- **全部**：捕获所有查询。 此选项在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中为默认值。
 - **AUTO**：忽略不太频繁的查询以及编译和执行持续时间不长的查询。 执行计数、编译和运行时持续时间的阈值由内部决定。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，这是默认选项。
 - **无**：查询存储停止捕获新查询。
 - **自定义**：支持额外控件和微调数据收集策略功能。 新的自定义设置定义在内部捕获策略时间阈值期间执行的操作。 这是评估配置条件的时间边界，如果所有值为 true，则查询存储可以捕获查询。
@@ -150,7 +150,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
 
 ### <a name="examples"></a>示例
 
-以下示例将 QUERY_CAPTURE_MODE 设置为 AUTO，并在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中设置其他建议选项：
+以下示例将 QUERY_CAPTURE_MODE 设置为 AUTO，并在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中设置其他建议选项：
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
@@ -225,7 +225,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|执行度量值|统计函数|
 |----------------------|----------------------|------------------------|
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU 时间、持续时间、执行计数、逻辑读取次数、逻辑写入次数、内存消耗、物理读取次数、CLR 时间、并行度 (DOP) 和行计数|平均值、最大值、最小值、标准偏差、总数|
+|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|CPU 时间、持续时间、执行计数、逻辑读取次数、逻辑写入次数、内存消耗、物理读取次数、CLR 时间、并行度 (DOP) 和行计数|平均值、最大值、最小值、标准偏差、总数|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU 时间、持续时间、执行计数、逻辑读取次数、逻辑写入次数、内存消耗、物理读取次数、CLR 时间、并行度、行计数、日志内存、TempDB 内存和等待时间|平均值、最大值、最小值、标准偏差、总数|
 
 下图显示了如何查找 Query Store 视图：
@@ -332,7 +332,7 @@ FROM sys.database_query_store_options;
 
 如果问题仍然存在，则表明磁盘上的查询存储数据已永久损坏。
 
-从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，可通过在受影响的数据库内执行 sp_query_store_consistency_check 存储过程来恢复查询存储。 必须先禁用查询存储，然后才能尝试恢复操作。 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，需要从查询存储中清除数据，如下所示。
+从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，可通过在受影响的数据库内执行 sp_query_store_consistency_check 存储过程来恢复查询存储。 必须先禁用查询存储，然后才能尝试恢复操作。 对于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]，需要从查询存储中清除数据，如下所示。
 
 如果恢复失败，可先尝试清除查询存储，然后再设置读写模式。
 
@@ -358,7 +358,7 @@ FROM sys.database_query_store_options;
 
 |Query Store 捕获模式|场景|
 |------------------------|--------------|
-|**全部**|对工作负载进行彻底地分析，分析所有查询的形状及其执行频率和其他统计信息。<br /><br /> 识别工作负荷中的新查询。<br /><br /> 检测是否使用即席查询来识别用户或自动参数化的机会。<br /><br />注意：这是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认捕获模式。|
+|**全部**|对工作负载进行彻底地分析，分析所有查询的形状及其执行频率和其他统计信息。<br /><br /> 识别工作负荷中的新查询。<br /><br /> 检测是否使用即席查询来识别用户或自动参数化的机会。<br /><br />注意：这是 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认捕获模式。|
 |**Auto**|关注相关且可操作的查询。 例如，那些定期执行的查询或资源消耗很大的查询。<br /><br />注意：从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，这是默认捕获模式。|
 |无|你已经捕获了需要在运行时监视的查询集，因此需消除其他查询可能会带来的干扰。<br /><br /> “无”适用于测试和基准测试环境。<br /><br /> “无”也适用于需要提供已配置的 Query Store 配置来监视其应用程序工作负荷的软件供应商。<br /><br /> 在使用“无”时应格外小心，因为可能无法跟踪和优化重要的新查询。 避免使用“无”，除非你的特定方案需要使用它。|
 |**自定义**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 在 `ALTER DATABASE SET QUERY_STORE` 命令下引入自定义捕获模式。 启用后，在新的“查询存储捕获策略”设置下有额外可用的查询存储配置，可用于微调特定服务器中的数据收集。<br /><br />新的自定义设置定义在内部捕获策略时间阈值期间执行的操作。 这是评估配置条件的时间边界，如果所有值为 true，则查询存储可以捕获查询。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。|
@@ -431,10 +431,20 @@ WHERE is_forced_plan = 1;
 > 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，此行为由引擎控制，跟踪标志 7752 不再有效。
 
 > [!IMPORTANT]
-> 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的实时工作负载见解使用查询存储，请尽快安装 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) 中的性能可伸缩性改进。 如果没有这些改进，则当数据库处于繁重的工作负载下时，可能会发生旋转锁争用，并且服务器性能可能会变慢。 特别是，你可能会发现 `QUERY_STORE_ASYNC_PERSIST` 旋转锁或 `SPL_QUERY_STORE_STATS_COOKIE_CACHE` 旋转锁上出现繁重的争用情况。 应用此改进后，查询存储将不再导致旋转锁争用。
+> 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中的实时工作负载见解使用查询存储，请尽快安装 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) 中的性能可伸缩性改进。 如果没有这些改进，则当数据库处于繁重的工作负载下时，可能会发生旋转锁争用，并且服务器性能可能会变慢。 特别是，你可能会发现 `QUERY_STORE_ASYNC_PERSIST` 旋转锁或 `SPL_QUERY_STORE_STATS_COOKIE_CACHE` 旋转锁上出现繁重的争用情况。 应用此改进后，查询存储将不再导致旋转锁争用。
 
 > [!IMPORTANT]
-> 如果仅对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）中的实时工作负载见解使用查询存储，请考虑尽快安装 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU8 中的性能可伸缩性改进。 如果没有此改进，则当数据库处于繁重的即席工作负载下时，查询存储可能会占用大量内存，并且服务器性能可能会变慢。 应用此改进后，查询存储会对其各个组件可使用的内存量施加内部限制，并且可以自动将操作模式更改为只读，直到有足够的内存返回到 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]。 请注意，不会记录查询存储内部内存限制，因为它们随时可能更改。  
+> 如果仅对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）中的实时工作负载见解使用查询存储，请考虑尽快安装 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU15、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU8 中的性能可伸缩性改进。 如果没有此改进，则当数据库处于繁重的即席工作负载下时，查询存储可能会占用大量内存，并且服务器性能可能会变慢。 应用此改进后，查询存储会对其各个组件可使用的内存量施加内部限制，并且可以自动将操作模式更改为只读，直到有足够的内存返回到 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]。 请注意，不会记录查询存储内部内存限制，因为它们随时可能更改。  
+
+
+## <a name="using-query-store-in-azure-sql-database-active-geo-replication"></a><a name="geosyncreplicas"></a> 在 Azure SQL 数据库活动异地复制中使用查询存储
+
+Azure SQL 数据库的辅助活动异地复制上的查询存储将是主要副本上的活动的只读副本。 
+
+避免不匹配的 Azure SQL 数据库层参与异地复制。 辅助数据库在大小方面应与主数据库相同或相近，并且应与主数据库处于同一服务层。 在 [sys.dm_db_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database) 中查找 HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO 等待类型，该类型表示由于辅助延迟而导致主副本上的事务日志速率受限。
+
+若要详细了解如何估计和配置活动异地复制的辅助 Azure SQL 数据库的大小，请参阅[配置辅助数据库](/azure/azure-sql/database/active-geo-replication-overview#configuring-secondary-database)。
+
 
 ## <a name="see-also"></a>另请参阅
 

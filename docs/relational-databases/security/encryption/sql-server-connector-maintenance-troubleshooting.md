@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 4c8a74d33e75ab19b283f3b9d1bfdaf47dc69240
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: fa78eb8ef2da01514e161c58b05146b1699c93f7
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869262"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151263"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 连接器维护与故障排除
 
@@ -139,7 +139,7 @@ ms.locfileid: "91869262"
 
 ### <a name="rolling-the-ssnoversion-service-principal"></a>滚动更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务主体
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中创建的服务主体作为凭据来访问密钥保管库。 服务主体具有客户端 ID 和身份验证密钥。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据是使用 **VaultName**、 **客户端 ID**和 **身份验证密钥**设置的。 身份验证密钥在特定的期限内有效（一年或两年）。 在该期限已过之前，必须在 Azure AD 中为服务主体生成新密钥。 然后，必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中更改凭据。 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 为当前会话中的凭据保留缓存，因此，如果凭据发生更改，应重新启动 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中创建的服务主体作为凭据来访问密钥保管库。 服务主体具有客户端 ID 和身份验证密钥。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据是使用 **VaultName**、 **客户端 ID** 和 **身份验证密钥** 设置的。 身份验证密钥在特定的期限内有效（一年或两年）。 在该期限已过之前，必须在 Azure AD 中为服务主体生成新密钥。 然后，必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中更改凭据。 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 为当前会话中的凭据保留缓存，因此，如果凭据发生更改，应重新启动 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 。  
   
 ### <a name="key-backup-and-recovery"></a>密钥备份和恢复
 
@@ -227,6 +227,7 @@ SQL Server 连接器需要哪些终结点的访问权限？
 2051 | scp_err_OutOfMemory | SQL 引擎内存不足，无法为 EKM 提供程序分配内存。
 2052 | scp_err_ConvertKeyNameToThumbprint | 无法将密钥名称转换为指纹。
 2053 | scp_err_ConvertThumbprintToKeyName|  无法将指纹转换为密钥名称。
+2058 | scp_err_FailureInRegistry|  无法在注册表中执行该操作。 SQL Server 服务帐户没有创建注册表项的权限。
 3000 | ErrorSuccess | AKV 操作已成功。
 3001 | ErrorUnknown | AKV 操作失败，并出现未知错误。
 3002 | ErrorHttpCreateHttpClientOutOfMemory | 由于内存不足，无法为 AKV 操作创建 HttpClient。

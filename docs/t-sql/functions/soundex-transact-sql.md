@@ -23,12 +23,12 @@ ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22cd09ddfcd42223f2dd675dcd7ca76e6abcad48
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e89da2e1d0acb2171f9080245d3f16ffcf9d547e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468158"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171349"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ SOUNDEX ( character_expression )
  **varchar**  
   
 ## <a name="remarks"></a>备注  
- SOUNDEX 会根据字符串的发音，将字母数字字符串转换成一个由四个字符组成的代码。 该代码的第一个字符是 character_expression 的第一个字符，已转换为大写。 代码的第二个字符到第四个字符是表示表达式中的字母的数字。 除非字母 A、E、I、O、U、H、W 和 Y 是字符串的首字母，否则将忽略这些字母。 如果需要生成一个四字符代码，将在末尾添加零。 有关 SOUNDEX 代码的详细信息，请参阅 [Soundex 索引系统](https://www.archives.gov/research/census/soundex.html)。  
+ SOUNDEX 会根据字符串的英文发音，将字母数字字符串转换成一个由四个字符组成的代码。 该代码的第一个字符是 character_expression 的第一个字符，已转换为大写。 代码的第二个字符到第四个字符是表示表达式中的字母的数字。 除非字母 A、E、I、O、U、H、W 和 Y 是字符串的首字母，否则将忽略这些字母。 如果需要生成一个四字符代码，将在末尾添加零。 有关 SOUNDEX 代码的详细信息，请参阅 [Soundex 索引系统](https://www.archives.gov/research/census/soundex.html)。  
   
  可比较不同字符串中的 SOUNDEX 代码以查看这些字符串发音的相似度。 DIFFERENCE 函数在两个字符串上执行一个 SOUNDEX，并返回一个整数，表示这些字符串的 SOUNDEX 代码的相似度。  
   

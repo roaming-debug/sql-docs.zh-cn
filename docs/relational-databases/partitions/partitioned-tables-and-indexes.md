@@ -17,19 +17,19 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcc5d8e3602261c975f5517ea859e19fc7902936
-ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
+ms.openlocfilehash: 8471695cfde49d36ba107264fa23654757d8c2ab
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97952046"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241866"
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为可以选择分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为可以选择分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在默认情况下支持多达 15,000 个分区。 在早于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，默认情况下，分区数限制为 1000 个。 在基于 x86 的系统上，可以创建具有超过 1000 个分区的表或索引，但不支持这样做。  
+> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在默认情况下支持多达 15,000 个分区。 在早于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，默认情况下，分区数限制为 1000 个。  
   
 ## <a name="benefits-of-partitioning"></a>分区的优点  
  通过对大型表或索引进行分区，可以具有以下可管理性和性能优点。  
@@ -69,10 +69,10 @@ ms.locfileid: "97952046"
  3. 定义了相同的分区边界值。  
 
 #### <a name="partitioning-clustered-indexes"></a>对聚集索引进行分区
-对聚集索引进行分区时，聚集键必须包含分区依据列。 对非唯一的聚集索引进行分区时，如果未在聚集键中明确指定分区依据列，默认情况下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在聚集索引键列表中添加分区依据列。 如果聚集索引是唯一的，则必须明确指定聚集索引键包含分区依据列。        
+对聚集索引进行分区时，聚集键必须包含分区依据列。 对非唯一的聚集索引进行分区时，如果未在聚集键中明确指定分区依据列，默认情况下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在聚集索引键列表中添加分区依据列。 如果聚集索引是唯一的，则必须明确指定聚集索引键包含分区依据列。 有关聚集索引和索引体系结构的详细信息，请参阅[聚集索引设计准则](../../relational-databases/sql-server-index-design-guide.md#Clustered)。       
 
 #### <a name="partitioning-nonclustered-indexes"></a>对非聚集索引进行分区
-对唯一的非聚集索引进行分区时，索引键必须包含分区依据列。 对非唯一的非聚集索引进行分区时，默认情况下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将分区依据列添加为索引的非键（包含性）列，以确保索引与基表对齐。 如果索引中已经存在分区依据列，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将不会向索引中添加分区依据列。 
+对唯一的非聚集索引进行分区时，索引键必须包含分区依据列。 对非唯一的非聚集索引进行分区时，默认情况下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将分区依据列添加为索引的非键（包含性）列，以确保索引与基表对齐。 如果索引中已经存在分区依据列，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将不会向索引中添加分区依据列。 有关非聚集索引和索引体系结构的详细信息，请参阅[非聚集索引设计准则](../../relational-databases/sql-server-index-design-guide.md#Nonclustered)。
 
 ### <a name="non-aligned-index"></a>非对齐索引  
 独立于其相应的表进行分区的一种索引。 也就是说，索引具有不同的分区方案或者放置于不同于基表的单独文件组中。 在下列情况下，设计非对齐的分区索引可能会很有用：  

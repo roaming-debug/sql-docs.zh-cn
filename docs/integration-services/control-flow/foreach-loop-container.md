@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3265871cc1ddf221b3fb4090936d146f555dd3b5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7ae64e777b08cdf4df6f7e8fdd05ff8c3822a06b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194286"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171519"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
 
@@ -55,7 +55,7 @@ ms.locfileid: "92194286"
   
 -   Foreach 文件枚举器，用于枚举文件夹中的文件。 该枚举器可遍历子文件夹。 例如，可读取 Windows 文件夹及其子文件夹中所有具有 *.log 文件扩展名的文件。 请注意，无法指定文件检索顺序。  
   
--   Foreach 源变量枚举器，用于枚举指定变量包含的可枚举对象。 可枚举对象可以是数组、ADO.NET **DataTable**和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 枚举器等。 例如，可以枚举包含服务器名称的数组中的值。  
+-   Foreach 源变量枚举器，用于枚举指定变量包含的可枚举对象。 可枚举对象可以是数组、ADO.NET **DataTable** 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 枚举器等。 例如，可以枚举包含服务器名称的数组中的值。  
   
 -   Foreach 项枚举器，用于枚举集合项。 例如，可以枚举执行进程任务所使用的可执行文件和工作目录的名称。  
   
@@ -461,7 +461,7 @@ ms.locfileid: "92194286"
 ####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> 枚举器 = Foreach Azure Blob 枚举器  
  “Azure Blob 枚举器”   允许 SSIS 包在指定的 blob 位置枚举 blob 文件。 枚举的 blob 文件名可以存储在变量中并用于 Foreach 循环容器内的任务。  
   
- **Azure Blob 枚举器** 是适用于 Azure for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的 SQL Server Integration Services (SSIS) 功能包的组件。 从 [此处](https://go.microsoft.com/fwlink/?LinkID=626967)下载功能包。  
+ **Azure Blob 枚举器** 是适用于 Azure for [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]的 SQL Server Integration Services (SSIS) 功能包的组件。 从 [此处](https://go.microsoft.com/fwlink/?LinkID=626967)下载功能包。  
   
  **Azure 存储连接管理器**  
  选择一个现有的 Azure 存储连接管理器或创建一个新的、引用 Azure 存储帐户的连接管理器。  
@@ -510,7 +510,7 @@ FolderPath
 **SearchRecursively**  
 指定是否在指定文件夹中以递归方式搜索。
 
-***有关服务主体权限配置的说明***
+**_有关服务主体权限配置的说明_*
 
 Data Lake Storage Gen2 由 [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 和 [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 共同决定权限。
 请注意，ACL 使用用于注册应用的服务主体对象 ID (OID) 进行配置，如[此处](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所述。
@@ -518,7 +518,7 @@ Data Lake Storage Gen2 由 [RBAC](/azure/storage/common/storage-auth-aad-rbac-po
 通过内置角色或自定义角色向安全主体授予 RBAC 数据权限时，将首先根据请求的授权来评估这些权限。
 如果请求的操作已获得安全主体的 RBAC 分配的授权，则授权会立即得到解决，且不会执行任何其他 ACL 检查。
 或者，如果安全主体没有 RBAC 分配，或请求的操作与分配的权限不匹配，则会执行 ACL 检查来确定是否已授权安全主体执行请求的操作。
-要使枚举器有效，请从根文件系统开始授予至少“执行”权限，并授予目标文件夹的“读取”权限   。
+要使枚举器有效，请从根文件系统开始授予至少“执行”权限，并授予目标文件夹的“读取”权限。
 或者，通过 RBAC 授予至少“存储 Blob 数据读取器”角色  。
 有关详细信息，请参阅[此](/azure/storage/blobs/data-lake-storage-access-control)文章。
 

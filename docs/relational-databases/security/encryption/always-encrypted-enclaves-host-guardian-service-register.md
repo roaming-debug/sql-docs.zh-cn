@@ -2,7 +2,7 @@
 title: 向主机保护者服务注册计算机
 description: 向主机保护者服务注册 SQL Server 计算机，以实现具有安全 enclave 的 Always Encrypted。
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d1b2a7209de25b1ce5c988ec9a46b77369dcf70
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5864ec2b5bda5febc27bbb15606452befe7e293f
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101819"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534776"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>向主机保护者服务注册计算机
 
@@ -23,10 +23,16 @@ ms.locfileid: "98101819"
 
 本文介绍如何注册 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机以通过主机保护者服务 (HGS) 进行证明。
 
-在开始之前，请确保已部署至少一台 HGS 计算机并已设置证明服务。
+> [!NOTE]
+> 在 HGS 中注册 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 这一过程种需要 HGS 管理员和 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员配合。 请参阅[使用 HGS 配置证明时的角色和职责](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs)。
+
+在开始之前，请确保已部署至少一台 HGS 计算机并已设置 HGS 证明服务。
 有关详细信息，请参阅[部署适用于 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 的主机保护者服务](./always-encrypted-enclaves-host-guardian-service-deploy.md)。
 
 ## <a name="step-1-install-the-attestation-client-components"></a>步骤 1：安装证明客户端组件
+
+> [!NOTE]
+> 本步骤应由 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员执行。
 
 要允许 SQL 客户端验证它是否在与可信的 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机通信，[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机必须成功地通过主机保护者服务进行证明。
 证明过程由称为 HGS 客户端的可选 Windows 组件管理。
@@ -43,6 +49,9 @@ ms.locfileid: "98101819"
 3. 重启以完成安装。
 
 ## <a name="step-2-verify-virtualization-based-security-is-running"></a>步骤 2：验证基于虚拟化的安全性组件是否正在运行
+
+> [!NOTE]
+> 本步骤应由 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员执行。
 
 安装主机保护者 Hyper-V 支持功能时，会自动配置并启用基于虚拟化的安全性组件 (VBS)。
 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted 的 enclave 受到 VBS 环境的保护并在该环境内运行。
@@ -85,7 +94,10 @@ Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name 
 
 ## <a name="step-3-configure-the-attestation-url"></a>步骤 3：配置证明 URL
 
-接下来，需要为 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机配置 HGS 证明服务的 URL。
+> [!NOTE]
+> 本步骤应由 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员执行。
+
+接下来，你将通过从 HGS 管理员处获得的 HGS 证明服务的 URL 配置 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机。
 
 在提升的 PowerShell 控制台中，更新并运行以下命令以配置证明 URL。
 
@@ -105,6 +117,14 @@ cmdlet 输出中的 `AttestationMode` 字段指示 HGS 使用的证明模式。
 继续执行[步骤 4A](#step-4a-register-a-computer-in-tpm-mode)，以在 TPM 模式下注册计算机，或执行[步骤 4B](#step-4b-register-a-computer-in-host-key-mode)，以在主机密钥模式下注册计算机。
 
 ## <a name="step-4a-register-a-computer-in-tpm-mode"></a>步骤 4A：在 TPM 模式下注册计算机
+
+> [!NOTE]
+> 本步骤应由 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员和 HGS 管理员共同执行。 有关详细信息，请参阅以下说明。
+
+### <a name="prepare"></a>准备
+
+> [!NOTE]
+> 本操作应由 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员执行。
 
 在此步骤中，你将收集有关计算机 TPM 状态的信息，并将其注册到 HGS。
 
@@ -128,10 +148,13 @@ HGS 只要求计算机证明与每种策略类别中的一个策略匹配。
 
 ### <a name="configure-a-code-integrity-policy"></a>配置代码完整性策略
 
+> [!NOTE]
+> 以下步骤应由 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员执行。
+
 HGS 要求对 TPM 模式下的每个计算机证明都应用 Windows Defender 应用程序控制 (WDAC) 策略。
 WDAC 代码完整性策略限制可在计算机上运行的软件，方法是检查尝试针对受信任的发布服务器和文件哈希列表执行代码的每个进程。
 对于 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 用例，enclave 受基于虚拟化的安全性组件保护，无法从主机 OS 进行修改，因此，WDAC 策略的严格性不会影响加密查询的安全性。
-因此，建议你将简单的审核模式策略部署到 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机以满足证明要求，同时避免对系统施加额外的限制。
+因此，建议你将审核模式策略部署到 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机以满足证明要求，同时避免对系统施加额外的限制。
 
 如果已在计算机上使用自定义 WDAC 代码完整性策略来强化 OS 配置，则可以跳到[收集 TPM 证明信息](#collect-tpm-attestation-information)。
 
@@ -153,6 +176,9 @@ WDAC 代码完整性策略限制可在计算机上运行的软件，方法是检
 
 ### <a name="collect-tpm-attestation-information"></a>收集 TPM 证明信息
 
+> [!NOTE]
+> 以下步骤应由 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员执行。
+
 对将通过 HGS 进行证明的每台 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机重复以下步骤：
 
 1. 如果计算机处于已知的良好状态，请在 PowerShell 中运行以下命令以收集 TPM 证明信息：
@@ -170,9 +196,17 @@ WDAC 代码完整性策略限制可在计算机上运行的软件，方法是检
     Copy-Item -Path "$env:SystemRoot\System32\CodeIntegrity\SIPolicy.p7b" -Destination "$path\$name-CIpolicy.bin"
     ```
 
-2. 将这三个证明文件复制到 HGS 服务器。
+2. 与 HGS 管理员共享三个证明文件。 
 
-3. 在 HGS 服务器上，在提升的 PowerShell 控制台中运行以下命令，以注册 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机：
+### <a name="register-the-sql-server-computer-with-hgs"></a>在 HGS 中注册 SQL Server 计算机
+
+> [!NOTE]
+> 以下步骤应由 HGS 计算机管理员执行。
+
+对将通过 HGS 进行证明的每台 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机重复以下步骤：
+
+1. 将从 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员处获得的证明文件复制到 HGS 服务器。 
+2. 在 HGS 服务器上，在提升的 PowerShell 控制台中运行以下命令，以注册 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机：
 
     ```powershell
     # TIP: REMEMBER TO CHANGE THE FILENAMES
@@ -212,38 +246,61 @@ Get-HgsAttestationTpmPolicy
 
 ## <a name="step-4b-register-a-computer-in-host-key-mode"></a>步骤 4B：在主机密钥模式下注册计算机
 
+> [!NOTE]
+> 本步骤应由 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员和 HGS 管理员共同执行。 有关详细信息，请参阅以下说明。
+
 此步骤将引导你完成为主机生成唯一密钥并将其注册到 HGS 的过程。
 如果将 HGS 证明服务配置为使用 TPM 模式，请改为按照[步骤 4A](#step-4a-register-a-computer-in-tpm-mode) 中的指导进行操作。
 
+### <a name="generate-a-key-for-a-ssnoversion-md-computer"></a>为 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机生成密钥
+
+> [!NOTE]
+> 本部分应由 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员协助执行。
+
 主机密钥证明的工作原理是在 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机上生成非对称密钥对，并为 HGS 提供该密钥的公共部分。
-要生成密钥对，请在提升的 PowerShell 控制台中运行以下命令：
 
-```powershell
-Set-HgsClientHostKey
-Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
-```
+对将通过 HGS 进行证明的每台 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机重复以下步骤：
 
-如果已创建主机密钥并想要生成新的密钥对，请改用以下命令：
+1. 要生成密钥对，请在提升的 PowerShell 控制台中运行以下命令：
 
-```powershell
-Remove-HgsClientHostKey
-Set-HgsClientHostKey
-Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
-```
+    ```powershell
+    Set-HgsClientHostKey
+    Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
+    ```
 
-生成主机密钥后，将证书文件复制到 HGS 服务器，并在提升的 PowerShell 控制台中运行以下命令，以注册 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机：
+    如果已创建主机密钥并想要生成新的密钥对，请改用以下命令：
 
-```powershell
-Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputername.cer"
-```
+    ```powershell
+    Remove-HgsClientHostKey
+    Set-HgsClientHostKey
+    Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
+    ```
 
-对将通过 HGS 进行证明的每台 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机重复步骤 4B。
+2. 与 HGS 管理员共享证书文件。
+
+### <a name="register-the-sql-server-computer-with-hgs"></a>在 HGS 中注册 SQL Server 计算机
+
+> [!NOTE]
+> 以下步骤应由 HGS 计算机管理员执行。
+
+对将通过 HGS 进行证明的每台 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机重复以下步骤：
+
+1. 将从 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员处获得的证书文件复制到 HGS 服务器。
+2. 在提升的 PowerShell 控制台中运行以下命令，以注册 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机：
+
+    ```powershell
+    Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputername.cer"
+   ```
 
 ## <a name="step-5-confirm-the-host-can-attest-successfully"></a>步骤 5：确认主机可成功证明
 
+> [!NOTE]
+> 本步骤应由 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员执行。
+
 向 HGS 注册 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机（对于 TPM 模式，执行[步骤 4A](#step-4a-register-a-computer-in-tpm-mode)，对于主机密钥模式，执行[步骤 4B](#step-4b-register-a-computer-in-host-key-mode)）之后，应确认它能够成功证明。
 
-可以检查 HGS 证明客户端的配置，并随时使用 [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration) 执行证明尝试。
+可以检查 HGS 证明客户端的配置，并随时使用 [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps&preserve-view=true) 执行证明尝试。
+
 该命令的输出应如下所示：
 
 ```
@@ -281,7 +338,7 @@ IsFallbackInUse                : False
 
 | AttestationSubStatus | 含义以及如何操作 |
 | -------------------- | ---------------------------- |
-| CodeIntegrityPolicy | 计算机上的代码完整性策略未向 HGS 注册，或者计算机当前未使用代码完整性策略  。 请参阅[配置代码完整性策略](#configure-a-code-integrity-policy)以获取指导。 |
+| CodeIntegrityPolicy | 计算机上的代码完整性策略未向 HGS 注册，或者计算机当前未使用代码完整性策略。 请参阅[配置代码完整性策略](#configure-a-code-integrity-policy)以获取指导。 |
 | DumpsEnabled | 计算机配置为允许故障转储，但 Hgs_DumpsEnabled 策略不允许转储。 请在此计算机禁用转储或禁用 Hgs_DumpsEnabled 策略以继续操作。 |
 | FullBoot | 计算机从睡眠状态或休眠中恢复，使得 TPM 度量改变。 请重启计算机以生成新的 TPM 度量。 |
 | HibernationEnabled | 计算机配置为允许休眠并生成未加密的休眠文件。 请在计算机上禁用休眠以解决此问题。 |
@@ -289,3 +346,7 @@ IsFallbackInUse                : False
 | Iommu | 此计算机未启用 IOMMU 设备。 如果是物理计算机，请在 UEFI 配置菜单中启用 IOMMU。 如果是虚拟机并且 IOMMU 不可用，请在 HGS 服务器上运行 `Disable-HgsAttestationPolicy Hgs_IommuEnabled`。 |
 | SecureBoot | 此计算机上未启用安全启动。 请在 UEFI 配置菜单中启用安全启动，以解决此错误。 |
 | VirtualSecureMode | 此计算机上未运行基于虚拟化的安全性组件。 请按照[步骤2：验证 VBS 是否在计算机上运行](#step-2-verify-virtualization-based-security-is-running)中的指南进行操作。 |
+
+## <a name="next-steps"></a>后续步骤
+
+- [在 SQL Server 中配置安全 enclave](always-encrypted-enclaves-configure-enclave-type.md)

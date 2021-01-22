@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79368864ef41860d725772ee9136bb1e66e82790
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2ec5532f22f50258334f815d12202eb4645b4b17
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479498"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241832"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "97479498"
 -   **磁盘**。 如果平均磁盘等待队列长度是磁盘头数量的两倍以上，则磁盘将成为瓶颈。 主要的解决方法是创建独立于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库文件和日志的全文目录。 将日志、数据库文件和全文目录分别放在不同的磁盘上。 安装运行速度更快的磁盘和使用 RAID 也能帮助改善索引性能。  
   
     > [!NOTE]  
-    >  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，全文引擎可以使用 AWE 内存，因为全文引擎是 sqlservr.exe 进程的一部分。  
+    > 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，全文引擎可以使用 AWE 内存，因为全文引擎是 sqlservr.exe 进程的一部分。 有关详细信息，请参阅[全文搜索体系结构](../../relational-databases/search/full-text-search.md#architecture)。  
 
 ### <a name="full-text-batching-issues"></a>全文批处理问题
  如果系统没有硬件瓶颈，则全文搜索的索引性能主要取决于以下因素：  
@@ -67,7 +67,7 @@ ms.locfileid: "97479498"
   
 -   使用 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 语句更新基表的统计信息。 更重要的是，更新聚集索引或全文键的统计信息以进行完全填充。 这有助于多范围填充在表上生成良好的分区。  
   
--   在大型多 CPU 计算机上执行完全填充之前，建议你通过设置 **最大服务器内存** 值来暂时限制缓冲池的大小，从而留出足够的内存供 fdhost.exe 进程及操作系统使用。 有关详细信息，请参阅本主题后面的“估计筛选器后台程序宿主进程 (fdhost.exe) 的内存需求量”。
+-   在大型多 CPU 计算机上执行完全填充之前，建议你通过设置 **最大服务器内存** 值来暂时限制缓冲池的大小，从而留出足够的内存供 fdhost.exe 进程及操作系统使用。 有关详细信息，请参阅本主题后面的[估计筛选器后台程序宿主进程 (fdhost.exe) 的内存需求量](#estimate)。
 
 -   如果使用基于时间戳列的增量填充，请对 **timestamp** 列生成辅助索引来提高增量填充的性能。  
   
@@ -89,24 +89,24 @@ ms.locfileid: "97479498"
  例如，`SQLFT0000500008.2` 是一个数据库 ID 为 5、全文目录 ID 为 8 的数据库爬网日志文件。 文件名结尾的 2 指示此数据库/目录对具有两个爬网日志文件。  
 
 ### <a name="check-physical-memory-usage"></a>检查物理内存用量  
- 在全文填充期间，fdhost.exe 或 sqlservr.exe 的内存有可能不足。
--   如果全文爬网日志显示 fdhost.exe 正在反复重新启动，或系统返回错误代码 8007008，则意味着这些进程中的某一个进程内存不足。
--   如果 fdhost.exe 在生成转储（特别是在大型多 CPU 计算机上），则该进程的内存可能不足。  
+ 在全文填充期间，`fdhost.exe` 或 `sqlservr.exe` 的内存有可能不足。
+-   如果全文爬网日志显示 `fdhost.exe` 正在反复重新启动，或系统返回错误代码 8007008，则意味着这些进程中的某一个进程内存不足。
+-   如果 `fdhost.exe` 在生成转储（特别是在大型多 CPU 计算机上），则该进程的内存可能不足。  
 -   若要获得有关全文爬网所用的内存缓冲区的信息，请参阅 [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)。  
   
  内存不足或内存耗尽的可能原因如下：  
   
 -   **内存不足**。 如果在完全填充期间可用的物理内存数量是零，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池可能正占用系统的大部分物理内存。  
   
-     sqlservr.exe 进程试图侵占缓冲池的所有可用内存（最大为配置的最大服务器内存）。 如果分配的 **最大服务器内存** 过大，fdhost.exe 进程可能会遇到内存不足的状况和无法分配共享内存的问题。  
+     `sqlservr.exe` 进程试图侵占缓冲池的所有可用内存（最大为配置的最大服务器内存）。 如果分配的 **最大服务器内存** 过大，fdhost.exe 进程可能会遇到内存不足的状况和无法分配共享内存的问题。  
   
-     可以通过正确设置 **缓冲池的** 最大服务器内存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值来解决此问题。 有关详细信息，请参阅本主题后面的“估计筛选器后台程序宿主进程 (fdhost.exe) 的内存需求量”。 减小用于全文索引的批次大小可能也会有用。  
+     可以通过正确设置 **缓冲池的** 最大服务器内存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值来解决此问题。 有关详细信息，请参阅本主题后面的[估计筛选器后台程序宿主进程 (fdhost.exe) 的内存需求量](#estimate)。 减小用于全文索引的批次大小可能也会有用。  
 
 -   **内存争用**。 在多 CPU 计算机上进行全文填充期间，fdhost.exe 或 sqlservr.exe 之间可能出现缓冲池内存争用。 由此造成的共享内存不足会导致批次重试、内存抖动并让 fdhost.exe 进程进行转储。  
 
 -   **分页问题**。 页文件大小不足也会导致 fdhost.exe 或 sqlservr.exe 的内存不足，例如在具有增长受限的较小页文件的系统上。 如果爬网日志未指示存在任何与内存相关的故障，则很可能是因为过度分页导致性能下降。  
   
-### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>估计筛选器后台程序宿主进程 (fdhost.exe) 的内存需求量  
+### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a><a name="estimate"></a> 估计筛选器后台程序宿主进程 (fdhost.exe) 的内存需求量  
  进行填充时 fdhost.exe 进程需要的内存量主要取决于它使用的全文爬网范围数、入站共享内存 (ISM) 的大小以及最大 ISM 实例数。  
   
  可以使用下面的公式粗略估算筛选器后台程序宿主占用的内存量（以字节为单位）：  
@@ -143,19 +143,19 @@ ms.locfileid: "97479498"
   
  #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>示例：估计 fdhost.exe 的内存需求量  
   
- 此示例针对具有 8GM RAM 和 4 个双核处理器的 64 位计算机。 首先计算出 fdhost.exe 所需内存的估计值 -F。 爬网范围数是 `8`。  
+ 此示例针对具有 8GB RAM 和 4 个双核处理器的 64 位计算机。 首先计算出 fdhost.exe 所需内存的估计值 -F。 爬网范围数是 `8`。  
   
- `F = 8*10*8=640`  
+ `F = 8*10*8 = 640`  
   
- 然后，计算出最大服务器内存的最佳值 -M。 该系统的可用物理内存总量（以 MB 为单位）-T- 为 `8192`。  
+ 然后，计算出最大服务器内存的最佳值  -M。 该系统的可用物理内存总量（以 MB 为单位）-T- 为 `8192`。  
   
- `M = 8192-640-500=7052`  
+ `M = 8192-640-500 = 7052`  
   
  #### <a name="example-setting-max-server-memory"></a>示例：设置最大服务器内存  
   
  此示例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将“最大服务器内存”设置为上一个示例中计算得到的 M 的值，`7052`：  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_configure 'max server memory', 7052;  
@@ -173,7 +173,7 @@ GO
   
      若要了解等待页面的时间是否太长，请运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
-    ```  
+    ```sql  
     SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
     ```  
   
@@ -217,4 +217,4 @@ GO
  [sys.dm_fts_memory_buffers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [排除全文索引故障](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
+ [全文搜索体系结构](../../relational-databases/search/full-text-search.md#architecture) 

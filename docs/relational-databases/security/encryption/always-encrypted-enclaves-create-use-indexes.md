@@ -2,7 +2,7 @@
 description: 对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引
 title: 对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/30/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -11,23 +11,24 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 95b797e271436108c3495f522eff3fd042631285
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4799cd725dce4eb8300717b8c89d601e9915f7d2
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477658"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534826"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-本文介绍如何对使用启用 enclave 的列加密密钥和[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md) 进行加密的列创建和使用索引。 
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
+
+本文介绍如何对使用启用 enclave 的列加密密钥和[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md) 进行加密的列创建和使用索引。
 
 具有安全 enclave 的 Always Encrypted 支持以下内容：
 - 使用确定性加密和启用 enclave 的密钥加密的列上的聚集索引和非聚集索引。
   - 此类索引按已加密文本排序。 此类索引无特殊注意事项。 可以按照使用确定性加密和未启用 enclave 的密钥（与 Always Encrypted 相同）进行加密的列上的索引的相同方式来管理和使用此类索引。 
 - 使用随机加密和启用 enclave 的密钥进行加密的列上的非聚集索引。
-  - 在 enclave 内处理查询很有用，可确保使用随机加密进行加密的列上的索引不会泄漏敏感数据。 索引数据结构（B 树）中的密钥值将根据其明文值进行加密和排序。 有关详细信息，请参阅[使用随机加密且已启用 enclave 的列上的索引](always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)。
+  - 索引数据结构（B 树）中的密钥值将根据其明文值进行加密和排序。 有关详细信息，请参阅[已启用 enclave 的列上的索引](always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns)。
 
 > [!NOTE]
 > 本文的其余部分介绍了使用随机加密和启用 enclave 的密钥进行加密的列上的非聚集索引。
@@ -49,11 +50,11 @@ ms.locfileid: "97477658"
 - 连接到数据库，为数据库连接同时启用 Always Encrypted 和 enclave 计算。
 - 应用程序必须有权访问保护索引列的列加密密钥的列主密钥。
 
-在 SQL Server 引擎分析应用程序查询，并确定需要更新加密列上的索引来执行查询后，它便会指示客户端驱动程序通过安全通道向 enclave 提供必需的列加密密钥。 这与用于向 enclave 提供列加密密钥以处理所有其他查询的机制完全相同。 例如，使用模式匹配和范围比较的就地加密或查询。
+在 SQL Server 引擎分析应用程序查询，并确定需要更新加密列上的索引来执行查询后，它便会指示客户端驱动程序通过安全通道向 enclave 发布必需的列加密密钥。 这与用于向 enclave 提供列加密密钥以处理所有其他不使用索引的查询的机制完全相同。 例如，使用模式匹配和范围比较的就地加密或查询。
 
-这种方法可用于确保加密列上存在的索引对以下应用程序是透明的：已连接到已启用 Always Encrypted 和 enclave 计算的数据库。 应用程序连接可以使用 enclave 处理查询。 当你在列上创建索引后，应用程序内的驱动程序便会以透明方式向 enclave 提供列加密密钥，以调用索引操作。 请注意，创建索引可能会增加需要查询数，这些查询要求应用程序必需向 enclave 发送列加密密钥。
+这种方法可用于确保加密列上存在的索引对以下应用程序是透明的：已连接到已启用 Always Encrypted 和 enclave 计算的数据库。 应用程序连接可以使用 enclave 处理查询。 当你在列上创建索引后，应用程序内的驱动程序便会以透明方式向 enclave 提供列加密密钥，以调用索引操作。 创建索引可能会增加需要查询数，这些查询要求应用程序必需向 enclave 发送列加密密钥。
 
-要使用此方法，请遵循[查询使用具有安全 enclave 的 Always Encrypted 的列](always-encrypted-enclaves-query-columns.md)中使用安全 enclave 运行查询的通用指南。
+要使用此方法，请遵循[运行使用安全 enclave 的 Transact-SQL 语句](always-encrypted-enclaves-query-columns.md)中的通用指南来运行使用安全 enclave 的 Transact-SQL 语句。
 
 有关如何使用这种方法的分步说明，请参阅[教程：在使用随机加密且已启用 enclave 的列上创建并使用索引。](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
@@ -86,7 +87,7 @@ ms.locfileid: "97477658"
 有关如何使用这种方法的分步说明，请参阅[教程：在使用随机加密且已启用 enclave 的列上创建并使用索引。](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md) 
 
 ## <a name="next-steps"></a>后续步骤
-- [查询使用具有安全 enclave 的 Always Encrypted 的列](always-encrypted-enclaves-query-columns.md)。
+- [使用安全 enclave 运行 Transact-SQL 语句](always-encrypted-enclaves-query-columns.md)
 
 ## <a name="see-also"></a>另请参阅  
 - [教程：在使用随机加密且已启用 enclave 的列上创建并使用索引。](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

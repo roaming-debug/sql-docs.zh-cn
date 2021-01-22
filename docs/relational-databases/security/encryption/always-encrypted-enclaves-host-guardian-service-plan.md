@@ -2,7 +2,7 @@
 title: 规划主机保护者服务证明
 description: 使用具有安全 enclave 的 Always Encrypted 为 SQL Server 规划主机保护者服务证明。
 ms.custom: ''
-ms.date: 10/12/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed376fd4fe0f3c38d9996157c30722c24b27e8aa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c4c80a51370de62410367b1225fd85e3ffe7f261
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477638"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534796"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>规划主机保护者服务证明
 
@@ -129,6 +129,17 @@ TPM 证明需要安全启动，以确保 UEFI 加载了由 Microsoft 签名的�
     - 在 VMware vSphere 6.7 或更高版本中，为 VM 启用基于虚拟化的安全支持，如 [VMware 文档](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)中所述。
     - 其他虚拟机监控程序和公有云可能支持嵌套虚拟化功能，这些功能也实现具有 VBS Enclave 的 Always Encrypted。 有关兼容性和配置说明，请查看虚拟化解决方案的文档。
 - 如果计划使用 TPM 证明，则需要准备好 TPM 2.0 修订版 1.16 芯片，以便在服务器中使用。 当前，HGS 证明不适用于 TPM 2.0 修订版 1.38 芯片。 此外，TPM 必须具有有效的认可密钥证书。
+
+## <a name="roles-and-responsibilities-when-configuring-attestation-with-hgs"></a>使用 HGS 配置证明时的角色和职责
+
+使用 HGS 设置证明需要配置各种类型的组件：HGS、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 实例，以及触发 enclave 证明的应用程序。 具有以下角色之一的用户配置每种类型的组件：
+
+- HGS 管理员 - 部署 HGS，在 HGS 中注册 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机，并与 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员和客户端应用程序管理员共享 HGS 证明 URL。
+- [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员 - 安装证明客户端组件，在 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机上启用 VBS，为 HGS 管理员提供在 HGS 中注册 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机所需信息，在 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机上配置证明 URL，并验证 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机是否可以成功使用 HGS 进行证明。
+- DBA - 在 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 实例中配置安全 enclave。
+- 应用程序管理员 - 使用从 HGS 管理员处获得的证明 URL 配置应用程序。
+
+在生产环境中（处理真实的敏感数据），组织在配置证明时务必遵守角色分离，在这种情况下，不同人员具有不同角色。 特别是，如果在组织中部署 Always Encrypted 的目的是确保 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机管理员和 DBA 无法访问敏感数据，从而减少攻击外围应用，则 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 管理员和 DBA 不应控制 HGS 服务器。
 
 ## <a name="devtest-environment-considerations"></a>开发/测试环境注意事项
 

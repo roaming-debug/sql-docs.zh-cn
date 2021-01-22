@@ -2,7 +2,7 @@
 description: 使用具有安全 Enclave 的 Always Encrypted 就地配置列加密
 title: 使用具有安全 Enclave 的 Always Encrypted 就地配置列加密 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -11,17 +11,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: de9860fdf161d9ed43a1ae2c63e1210dd2079e42
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 67b74e36ff5b2872e619a4b26fabdd05428e6a16
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477708"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534836"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>使用具有安全 Enclave 的 Always Encrypted 就地配置列加密 
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md)支持对数据库列执行就地加密操作 - 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的安全 enclave 内。 使用就地加密，无需将此类操作的数据移出数据库，从而使加密操作更快、更可靠。 
+[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md) 支持对数据库列执行就地加密操作 - 在 [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] 中的安全 enclave 内。 使用就地加密，无需将此类操作的数据移出数据库，从而使加密操作更快、更可靠。 
 
 > [!NOTE]
 > 虽然就地加密具有性能优势，但对大型表进行加密操作可能会花费很长时间并且消耗大量资源，从而可能会影响和降低应用程序的性能和可用性。
@@ -36,7 +36,7 @@ ms.locfileid: "97477708"
 
 请参阅[管理具有安全 Enclave 的 Always Encrypted 的密钥](always-encrypted-enclaves-manage-keys.md)，了解有关如何确保列加密密钥已启用 enclave 的信息。
 
-就地加密还需要具有正确初始化的安全 enclave 的 SQL Server 实例。 请参阅[为 Always Encrypted 服务器配置选项配置 enclave 类型](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)。
+还需要确保你的环境满足[运行使用安全 enclave 的语句的一般先决条件](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves)。
 
 触发加密操作的用户或应用程序必须有权对包含受影响的列的表进行架构更改，并有权访问操作中涉及的列主密钥以及数据库中的相关密钥元数据。
 
@@ -49,3 +49,6 @@ ms.locfileid: "97477708"
 - [使用 Transact-SQL 就地配置列加密](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [使用具有安全 Enclave 的 Always Encrypted 对列创建和使用索引](always-encrypted-enclaves-create-use-indexes.md)
 - [使用具有安全 enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md)
+
+## <a name="see-also"></a>另请参阅  
+- [排查具有安全 enclave 的 Always Encrypted 的常见问题](always-encrypted-enclaves-troubleshooting.md)
