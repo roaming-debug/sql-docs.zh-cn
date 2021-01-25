@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a70d7619f878b7091e7a49e05caf93dd814e3a0
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b0fa25f3951ab33001f84f7f44bd4617659a81ae
+ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767391"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98564424"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>将 SQL Server Reporting Services 报表查看器 Web 部件添加到 SharePoint 页
 
@@ -43,7 +43,7 @@ ms.locfileid: "83767391"
 
     ![从 office 功能区插入 Web 部件。](media/sharepoint-insert-web-part.png)
 
-4. 在“类别”下，选择 **SQL Server Reporting Services（本机模式）。 在“部件”下，选择“报表查看器”。 然后选择“添加”。
+4. 在“类别”下，选择“SQL Server Reporting Services (本机模式)”。 在“部件”下，选择“报表查看器”。 然后选择“添加”。
 
     ![添加报表查看器 Web 部件。](media/sharepoint-report-viewer-web-part.png)
 

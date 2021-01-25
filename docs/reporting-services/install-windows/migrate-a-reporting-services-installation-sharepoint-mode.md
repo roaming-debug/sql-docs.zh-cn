@@ -9,12 +9,12 @@ ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016
-ms.openlocfilehash: 894dfe8b6b3c4832a687cd10b2ed21644d1f7227
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9281c38d56b85cda96b9a5f9888ff707bc4e139a
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439342"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596208"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>迁移 Reporting Services 安装（SharePoint 模式）
 
@@ -30,17 +30,17 @@ ms.locfileid: "97439342"
 
 -   [升级到 SharePoint 2016 的过程概述](https://technet.microsoft.com/library/cc262483\(v=office.16\))。
 
--   [升级到 SharePoint 2013 的过程概述](https://go.microsoft.com/fwlink/p/?LinkId=256688)。
+-   [升级到 SharePoint 2013 的过程概述](/SharePoint/upgrade-and-update/overview-of-the-upgrade-process-from-sharepoint-2010-to-sharepoint-2013)。
   
--   [升级到 SharePoint 2013 之前的清除准备](https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [升级到 SharePoint 2013 之前的清除准备](/SharePoint/upgrade-and-update/clean-up-an-environment-before-an-upgrade-to-sharepoint-2013)。  
   
 -   [将数据库从 SharePoint 2013 升级到 SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\))。
 
--   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690)。
+-   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](/SharePoint/upgrade-and-update/upgrade-content-databases-from-sharepoint-2010-to-sharepoint-2013)。
   
 -   [在 SharePoint 2016 中移动内容数据库](https://technet.microsoft.com/library/cc262792\(v=office.16\).aspx)。
 
--   [在 SharePoint 2013 中移动内容数据库](https://technet.microsoft.com/library/cc262792.aspx)。
+-   [在 SharePoint 2013 中移动内容数据库](/SharePoint/administration/move-content-databases)。
   
 ##  <a name="migrate-from-reporting-services-sharepoint-mode-versions-prior-to-sql-server-2012"></a><a name="bkmk_prior_versions"></a> 从 SQL Server 2012 之前的 Reporting Services SharePoint 模式版本迁移  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式体系结构在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中已更改，包括服务应用程序数据库架构。 如果要从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的版本迁移到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint 模式，请先通过安装 SharePoint 和 SQL Server 2016 Reporting Services SharePoint 模式创建新的 SharePoint 环境。 有关详细信息，请参阅 [安装 Reporting Services SharePoint 模式](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
@@ -76,7 +76,7 @@ ms.locfileid: "97439342"
 |Item|对象|方法|说明|  
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥。|**Rskeymgmt.exe** 或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 请参阅 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。|指出的工具可用于备份操作；但对于还原操作，您将使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序管理页或 PowerShell。|  
-|**2**|SharePoint 内容数据库。||备份数据库和分离数据库。<br /><br /> 请参阅[确定升级方法 (SharePoint Server 2010) (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx) 中的“数据库附加升级”部分。|  
+|**2**|SharePoint 内容数据库。||备份数据库和分离数据库。<br /><br /> 请参阅[确定升级方法 (SharePoint Server 2010) (/SharePoint/upgrade-and-update/determine-strategy-for-upgrade-to-sharepoint-2013)](/SharePoint/upgrade-and-update/determine-strategy-for-upgrade-to-sharepoint-2013) 中的“数据库附加升级”部分。|  
 |**3**|作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]目录数据库的 SQL Server 数据库。|SQL Server 数据库备份和还原<br /><br /> 或<br /><br /> SQL Server 数据库分离和附加。||  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件。|简单文件复制。|如果您对文件进行了自定义，则仅需复制 rsreportserver.config。 文件默认位置的示例：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*：<br /><br /> <br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> 针对报表服务器 ASP.NET 应用程序的 Web.config。<br /><br /> 针对 ASP.NET 的 Machine.config|  
   
@@ -87,7 +87,7 @@ ms.locfileid: "97439342"
   
 |Item|对象|方法|说明|  
 |-|-------------|------------|-----------|  
-|**1**|将 SharePoint 内容数据库还原到新的场。|SharePoint“数据库附加升级”方法。|基本步骤：<br /><br /> 1) 在新的服务器上还原数据库。<br /><br /> 2) 通过指示 URL 将内容数据库附加到 Web 应用程序。<br /><br /> 3) Get-SPWebapplication 将列出所有 Web 应用程序和 URL。<br /><br /> <br /><br /> 请参阅[确定升级方法 (SharePoint Server 2010) (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx) 和[附加数据库并升级到 SharePoint Server 2010 (https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx) 中的“数据库附加升级”部分。|  
+|**1**|将 SharePoint 内容数据库还原到新的场。|SharePoint“数据库附加升级”方法。|基本步骤：<br /><br /> 1) 在新的服务器上还原数据库。<br /><br /> 2) 通过指示 URL 将内容数据库附加到 Web 应用程序。<br /><br /> 3) Get-SPWebapplication 将列出所有 Web 应用程序和 URL。<br /><br /> <br /><br /> 请参阅[确定升级方法 (SharePoint Server 2010) (/SharePoint/upgrade-and-update/determine-strategy-for-upgrade-to-sharepoint-2013)](/SharePoint/upgrade-and-update/determine-strategy-for-upgrade-to-sharepoint-2013) 和[附加数据库和升级到 SharePoint Server 2010 (/SharePoint/upgrade-and-update/upgrade-content-databases)](/SharePoint/upgrade-and-update/upgrade-content-databases) 中的“数据库附加升级”部分。|  
 |**2**|还原作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目录数据库 (ReportServer) 的 SQL Server 数据库。|SQL Database 库备份和还原。<br /><br /> **or**<br /><br /> SQL Server 数据库分离和附加。|首次使用数据库时，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将根据需要更新数据库架构，以便数据库可用于 SQL Server 2016 环境。|  
 |**3**|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|在您创建新的服务应用程序时，将其配置为使用您复制到的报表服务器数据库。<br /><br /> 有关使用 SharePoint 管理中心的详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)中的“步骤 3：创建 Reporting Services 服务应用程序”。<br /><br /> 有关使用 PowerShell 的示例，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)中的“使用 PowerShell 创建 Reporting Services 服务应用程序”一节。|  
 |**4**|还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件。|简单文件复制。|文件默认位置的示例：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting。|  
@@ -104,7 +104,7 @@ ms.locfileid: "97439342"
   
 3.  如果您具有无人参与的执行帐户 (UEA) 和 Windows 身份验证，请记下凭据，以便在还原过程使用这些凭据。  
   
-4.  有关详细信息，请参阅 [在 SharePoint 2013 中备份服务应用程序](https://technet.microsoft.com/library/ee428318.aspx)。  
+4.  有关详细信息，请参阅 [在 SharePoint 2013 中备份服务应用程序](/SharePoint/administration/back-up-a-service-application)。  
   
 ### <a name="restore-operations"></a>还原操作  
   
@@ -116,13 +116,13 @@ ms.locfileid: "97439342"
   
 3.  对服务应用程序配置 UEA 和 Windows 凭据。  
   
-4.  有关详细信息，请参阅 [在 SharePoint 2013 中还原服务应用程序](https://technet.microsoft.com/library/ee428305.aspx)。  
+4.  有关详细信息，请参阅 [在 SharePoint 2013 中还原服务应用程序](/SharePoint/administration/restore-a-service-application)。  
   
 ##  <a name="additional-resources"></a><a name="bkmk_additional_resources"></a> 其他资源  
   
--   [开始升级到 SharePoint 2013 (https://technet.microsoft.com/library/ee833948.aspx)](https://technet.microsoft.com/library/ee833948.aspx)。  
+-   [开始升级到 SharePoint 2013 (/SharePoint/upgrade-and-update/get-started-with-upgrade)](/SharePoint/upgrade-and-update/get-started-with-upgrade)。  
   
--   [升级到 SharePoint 2013 的过程概述 (https://technet.microsoft.com/library/cc262483.aspx)](https://technet.microsoft.com/library/cc262483.aspx)。  
+-   [SharePoint 2013 升级过程概述 (/SharePoint/upgrade-and-update/overview-of-the-upgrade-process)](/SharePoint/upgrade-and-update/overview-of-the-upgrade-process)。  
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -2,19 +2,19 @@
 title: 结合使用 Always Encrypted 和 JDBC 驱动程序
 description: 了解如何结合使用 Always Encrypted 和 Microsoft ODBC Driver for SQL Server 来开发 ODBC 应用程序。
 ms.custom: ''
-ms.date: 09/01/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 378403eec3b99d8f916a92fc768f1277a7b18572
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f066c8b1429a11b67cd6fc78fd93eaad1a6fc110
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727384"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534706"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -26,15 +26,17 @@ ms.locfileid: "91727384"
 
 ### <a name="introduction"></a>简介
 
-本文介绍如何使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)或[具有安全 Enclaves 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 和[适用于 SQL Server 的 ODBC 驱动程序](microsoft-odbc-driver-for-sql-server.md)。
+本文介绍如何使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)或[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 和[适用于 SQL Server 的 ODBC 驱动程序](microsoft-odbc-driver-for-sql-server.md)。
 
 始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了 Always Encrypted 的驱动程序（例如适用于 SQL Server 的 ODBC 驱动程序）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此目标。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 具有安全 enclave 的 Always Encrypted  扩展此功能，以便对敏感数据启动更丰富的功能，同时保持数据的机密性。
 
-有关详细信息，请参阅 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+有关详细信息，请参阅 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
 ### <a name="prerequisites"></a>先决条件
 
 在数据库中配置始终加密。 这涉及为选定数据库列预配始终加密密钥和设置加密。 如果还没有配置了始终加密的数据库，请按照 [始终加密入门](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的说明操作。 尤其要注意的是，数据库应包含列主密钥 (CMK)、列加密密钥 (CEK) 和包含一个或多个使用该 CEK 加密的表的元数据定义。
+
+如果使用的是具有安全 enclave 的 Always Encrypted，请参阅[使用具有安全 enclave 的 Always Encrypted 开发应用程序](../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md)，了解其他先决条件。
 
 ### <a name="enabling-always-encrypted-in-an-odbc-application"></a>在 ODBC 应用程序中启用 Always Encrypted
 
@@ -61,13 +63,33 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>启用“具有安全 Enclaves 的 Always Encrypted”
 
 > [!NOTE]
-> 在 Linux 和 macOS 上，必须有 OpenSSL 版本 1.0.1 或更高版本，才能使用具有安全 Enclave 的 Always Encrypted。
+> 在 Linux 和 macOS 上，必须有 OpenSSL 版本 1.0.1 或更高版本，才能使用具有安全 enclave 的 Always Encrypted。
 
-自版本 17.4 起，驱动程序支持具有安全 Enclave 的 Always Encrypted。 若要启用在连接到 SQL Server 2019 或更高版本时使用 enclave，请将 `ColumnEncryption` DSN、连接字符串或连接属性设置为 enclave 类型名称、证明协议和关联的证明数据（用逗号分隔）。 在版本 17.4 中，只支持[基于虚拟化的安全性](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave 类型和[主机保护者服务](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)证明协议（由 `VBS-HGS` 表示）；若要使用它，请指定认证服务器的 URL，例如：
+自版本 17.4 起，驱动程序支持具有安全 Enclave 的 Always Encrypted。 若要在连接到数据库时启用 enclave，请将 `ColumnEncryption` DSN 密钥、连接字符串关键字或连接属性设置为以下值：`<attestation protocol>\<attestation URL>`，其中：
 
-```
-Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
-```
+- `<attestation protocol>` - 指定用于 enclave 证明的协议。
+  - 如果使用的是 [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] 和主机保护者服务 (HGS)，`<attestation protocol>` 应为 `VBS-HGS`。
+  - 如果使用的是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，`<attestation protocol>` 应为 `SGX-AAS`。
+
+- `<attestation URL>` - 指定证明 URL（证明服务终结点）。 你需要从证明服务管理员处获取环境的证明 URL。
+
+  - 如果使用的是 [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] 和主机保护者服务 (HGS)，请参阅[确定并共享 HGS 证明 URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)。
+  - 如果使用的是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)。
+
+
+为数据库连接启用 enclave 计算的连接字符串示例：
+
+- [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)]:
+  
+   ```
+   Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation
+   ```
+
+- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] :
+  
+   ```
+   Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave
+   ```
 
 如果正确配置了服务器和证明服务，并为相应列的 CMK 和 CEK 启用了 enclave，则除了Always Encrypted 提供的现有功能，现在还应能够执行使用 enclave（如就地加密和丰富计算）的查询。 有关详细信息，请参阅[配置具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md)。
 
@@ -619,7 +641,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 |名称|说明|  
 |----------|-----------------|  
-|`ColumnEncryption`|接受的值为 `Enabled`/`Disabled`。<br>`Enabled` - 启用或针对连接的 Always Encrypted 功能。<br>`Disabled` - 禁用针对连接的 Always Encrypted 功能。<br>type  ,data  --（版本 17.4 及更高版本）启用具有安全 Enclave 的 Always Encrypted、证明协议类型 type  和关联的证明数据 data  。 <br><br>默认为 `Disabled`。|
+|`ColumnEncryption`|接受的值为 `Enabled`/`Disabled`。<br>`Enabled` - 启用或针对连接的 Always Encrypted 功能。<br>`Disabled` - 禁用针对连接的 Always Encrypted 功能。<br>证明协议、证明 URL --（版本 17.4 和更高版本）使用指定的证明协议和证明 URL 启用具有安全 enclave 的 Always Encrypted。 <br><br>默认为 `Disabled`。|
 |`KeyStoreAuthentication` | 有效值：`KeyVaultPassword`、`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 为 `KeyStoreAuthentication` = `KeyVaultPassword` 时，将此值设置为有效的 Azure Active Directory 用户主体名称。 <br>为 `KeyStoreAuthetication` = `KeyVaultClientSecret` 时，将此值设置为有效的 Azure Active Directory 应用程序客户端 ID |
 |`KeyStoreSecret` | 为 `KeyStoreAuthentication` = `KeyVaultPassword` 时，将此值设置为相应用户名的密码。 <br>为 `KeyStoreAuthentication` = `KeyVaultClientSecret` 时，将此值设置为 Azure Active Directory 应用程序客户端 ID 关联的应用程序机密 |
@@ -629,7 +651,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 |名称|类型|说明|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|预连接|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- 禁用 Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- 启用 Always Encrypted<br> 指向 type  ,data  字符串的指针 --（版本 17.4 及更高版本）启用使用安全 enclave|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|预连接|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- 禁用 Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- 启用 Always Encrypted<br> 指向证明协议的指针、证明 URL 字符串 -（版本 17.4 及更高版本）使用安全 enclave 启用|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|后连接|[Set] 尝试加载 CEKeystoreProvider<br>[Get] 返回 CEKeystoreProvider 名称|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|后连接|[Set] 将数据写入 CEKeystoreProvider<br>[Get] 从 CEKeystoreProvider 读取数据|
 |`SQL_COPT_SS_CEKCACHETTL`|后连接|[Set] 设置 CEK 缓存 TTL<br>[Get] 获取当前 CEK 缓存 TTL|
@@ -661,9 +683,9 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 - 加密 CEK 的 CMK 在服务器上有可访问的元数据，并能从客户端进行访问。
 
-- `ColumnEncryption` 在 DSN、连接字符串或连接属性中启用，并采用正确格式（如果使用安全 Enclave 的话）。
+- `ColumnEncryption` 在 DSN、连接字符串或连接属性中启用，并采用正确格式（如果使用安全 enclave 的话）。
 
-此外，在使用安全 Enclave 时，证明失败会根据下表确定证明过程中出现故障的步骤：
+此外，在使用安全 enclave 时，证明失败会根据下表确定证明过程中出现故障的步骤：
 
 |步骤|说明|
 |----|-----------|

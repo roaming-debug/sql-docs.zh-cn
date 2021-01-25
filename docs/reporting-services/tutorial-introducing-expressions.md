@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db1efab37a24e49dcf9eac774809ec788831b037
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 938ac8fc2e006bc74aab59955374f1b012b66b68
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043819"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620275"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
 该 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程介绍了如何使用包含常用函数和运算符的表达式创建功能强大且灵活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
@@ -148,7 +148,7 @@ ms.locfileid: "93043819"
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3.显示名字首字母和姓氏  
-在本部分，在表达式中使用 **Left** 函数和 **Concatenate** ( **&** ) 运算符（其计算结果为包括首字母和姓氏的名称）。 你可以逐步生成表达式，也可以跳过一些步骤，将表达式从教程复制/粘贴到“表达式”对话框中。   
+在本部分，在表达式中使用 **Left** 函数和 **Concatenate** (**&**) 运算符（其计算结果为包括首字母和姓氏的名称）。 你可以逐步生成表达式，也可以跳过一些步骤，将表达式从教程复制/粘贴到“表达式”对话框中。   
   
 1.  右键单击“StateProvince”列，指向“插入列”，然后单击“左”。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "93043819"
     
     ![显示如何将左侧列插入报表的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
-2.  单击新列的标题，然后键入 **Name** 。  
+2.  单击新列的标题，然后键入 **Name**。  
   
 3.  右键单击“Name”列的数据单元，然后单击“表达式”。  
 
@@ -172,7 +172,7 @@ ms.locfileid: "93043819"
   
 6.  在“类别”列表中，单击“字段(表达式)”。  
   
-7.  在“值”列表中，双击 **FirstName** 。  
+7.  在“值”列表中，双击 **FirstName**。  
   
 8.  键入 **, 1)**  
   
@@ -182,7 +182,7 @@ ms.locfileid: "93043819"
 
     这将在表达式后添加一个句点和一个空格。
   
-10. 在“值”列表中，双击 **LastName** 。  
+10. 在“值”列表中，双击 **LastName**。  
   
     完成的表达式： `=Left(Fields!FirstName.Value, 1) &". "& Fields!LastName.Value`  
     
@@ -240,7 +240,7 @@ ms.locfileid: "93043819"
   
     一个新列添加到“Name”列的左侧。  
   
-2.  单击新列的标题，然后键入 **M/F** 。  
+2.  单击新列的标题，然后键入 **M/F**。  
   
 ### <a name="to-add-a-rectangle"></a>添加矩形  
   
@@ -266,7 +266,7 @@ ms.locfileid: "93043819"
   
 5.  在“类别”列表中，单击“字段(表达式)”。  
   
-6.  在“值”列表中，双击 **Gender** 。  
+6.  在“值”列表中，双击 **Gender**。  
   
 7.  键入 **="Male",** （包括逗号）。
 
@@ -319,7 +319,7 @@ ms.locfileid: "93043819"
   
 2.  在“报表数据”窗格中，单击“新建”，然后单击“数据集”。  
   
-3.  在“数据集”属性中，单击“使用在我的报表中嵌入的数据集”。  
+3.  在“数据集属性”中，单击“使用在我的报表中嵌入的数据集”。  
   
 4.  在“数据源”列表中，选择“ExpressionsDataSource”。  
   
@@ -397,7 +397,7 @@ ms.locfileid: "93043819"
   
 5.  在“表达式”对话框中，展开“常见函数”，然后单击“日期和时间”  。  
   
-6.  在“项”列表中，双击 **DateDiff** 。  
+6.  在“项”列表中，双击 **DateDiff**。  
   
 7.  紧随 `DateDiff(`，键入 **"d",** （包括引号 "" 和逗号）。 
   
@@ -451,9 +451,9 @@ ms.locfileid: "93043819"
   
 2.  单击“值”文本框旁边的表达式“fx”按钮 。  
   
-3.  在“表达式”对话框中，展开“常见函数”，然后单击 **Math** 。  
+3.  在“表达式”对话框中，展开“常见函数”，然后单击 **Math**。  
   
-4.  在“项”列表中，双击 **Round** 。  
+4.  在“项”列表中，双击 **Round**。  
   
 5.  在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”   。  
   
@@ -475,9 +475,9 @@ ms.locfileid: "93043819"
 
     ![显示如何在“开始”文本框旁选择“fx”按钮的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
-18. 在“表达式”对话框中，展开“常见函数”，然后单击 **Math** 。  
+18. 在“表达式”对话框中，展开“常见函数”，然后单击 **Math**。  
   
-19. 在“项”列表中，双击 **Round** 。  
+19. 在“项”列表中，双击 **Round**。  
   
 20. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”   。  
   
@@ -568,7 +568,7 @@ ms.locfileid: "93043819"
 
      ![显示数据行中已选择的单元格的屏幕截图。](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
-4.  在“属性”窗格中，单击 **BackgroundColor** 。 
+4.  在“属性”窗格中，单击 **BackgroundColor**。 
 
      如果未看到“属性”窗格，则在“视图”选项卡上，选中“属性”框 。  
   
@@ -619,7 +619,7 @@ ms.locfileid: "93043819"
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
-2.  键入 **Sales Comparison Summary** ，然后选择文本。  
+2.  键入 **Sales Comparison Summary**，然后选择文本。  
   
 3.  在“开始”选项卡上的“字体”框中，进行如下设置 ：
 

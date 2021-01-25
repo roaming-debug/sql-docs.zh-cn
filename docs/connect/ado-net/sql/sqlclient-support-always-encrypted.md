@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: bb971ed9fdc24491babf1ce9fe777210778037de
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 12b25a6e8d7b9a5ac77a198ab047150c94b745df
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96123904"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534501"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>结合使用 Always Encrypted 和 Microsoft .NET Data Provider for SQL Server
 
@@ -28,6 +28,7 @@ ms.locfileid: "96123904"
 ## <a name="prerequisites"></a>先决条件
 
 - 在数据库中配置始终加密。 这涉及为选定数据库列预配始终加密密钥和设置加密。 如果还没有配置具有 Always Encrypted 的数据库，请按照 [Always Encrypted 入门](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的说明操作。
+- 如果使用的是具有安全 enclave 的 Always Encrypted，请参阅[使用具有安全 enclave 的 Always Encrypted 开发应用程序](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md)，了解其他先决条件。
 - 请确保已在开发计算机上安装相应 .NET 平台。 借助 [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md)，.NET Framework 和 .NET Core 都支持 Always Encrypted 功能。 确保将 [.NET Framework 4.6](/dotnet/framework/) 或更高版本/[.NET Core 2.1](/dotnet/core/) 或更高版本配置为开发环境中的目标 .NET 平台版本。 从 Microsoft.Data.SqlClient 版本 2.1.0 开始，Always Encrypted 功能在 [.NET Standard 2.0](/dotnet/standard/net-standard) 中也受支持。 要使用具有安全 Enclave 的 Always Encrypted，需要使用 [.NET Standard 2.1](/dotnet/standard/net-standard)。 如果使用的是 Visual Studio，请参阅[框架目标概述](/visualstudio/ide/visual-studio-multi-targeting-overview)。
 
 下表汇总了结合使用 Always Encrypted 和 Microsoft.Data.SqlClient 所需的 .NET 平台。
@@ -75,18 +76,20 @@ connection.Open();
 
 自 Microsoft.Data.SqlClient 版本 1.1.0 起，驱动程序支持[具有安全 Enclave 的 Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
-必须将应用程序配置为启用 enclave 计算和 enclave 证明，才能启用在连接到 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 或更高版本时使用 enclave。
+有关使用 enclave 开发应用程序的一般信息，请参阅[使用具有安全 enclave 的 Always Encrypted 开发应用程序](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md)。
 
-有关 enclave 计算和 enclave 证明中的客户端驱动程序角色的一般信息，请参阅[使用具有安全 Enclave 的 Always Encrypted 开发应用程序](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md)。
+若要为数据库连接启用 enclave 计算，除了启用 Always Encrypted（如前一部分所述）之外，还需要设置以下连接字符串关键字：
 
-要配置应用程序：
+- `Attestation Protocol` - 指定证明协议。 
+  - 如果使用的是 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 和主机保护者服务 (HGS)，则此关键字的值应为 `HGS`。
+  - 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，则此关键字的值应为 `AAS`。
 
-1. 请确保已为 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 实例配置 enclave 类型（请参阅[为 Always Encrypted 服务器配置选项配置 enclave 类型](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)）。 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 支持 VBS enclave 类型和用于证明的[主机保护者服务](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs)。
-2. 通过将连接字符串中的 `Enclave Attestation URL` 关键字设置为证明终结点，为从应用程序到数据库的连接启用 enclave 计算。 关键字的值应设置为，在环境中配置的 HGS 服务器的证明终结点。
-3. 通过在连接字符串中设置 `Attestation Protocol` 关键字，提供要使用的证明协议。 此关键字的值应设置为“HGS”。
+- `Enclave Attestation URL` - 指定证明 URL（证明服务终结点）。 你需要从证明服务管理员处获取环境的证明 URL。
+
+  - 如果使用的是 [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] 和主机保护者服务 (HGS)，请参阅[确定并共享 HGS 证明 URL](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)。
+  - 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)。
 
 有关分步教程，请参阅[教程：使用具有安全 enclave 的 Always Encrypted 开发 .NET 应用程序](tutorial-always-encrypted-enclaves-develop-net-apps.md)。
-
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>检索和修改加密列中的数据
 
