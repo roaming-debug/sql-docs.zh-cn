@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5936e83d902926ad1cab22c7046693aab47cd97e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b8460daf65826290942f28fe65af6e5fa9f9b416
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547439"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765774"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
@@ -51,15 +51,15 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|属性的 ID 号。|  
-|**ATTRIBUTE_NAME**|**varchar (** 60 **) **|特性名称。|  
-|**ATTRIBUTE_VALUE**|**varchar (** 255 **) **|属性的当前设置。|  
+|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|特性名称。|  
+|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|属性的当前设置。|  
   
- 下表列出了各个属性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 客户端库当前在连接时使用属性 **1**、 **2**、 **18**、 **22**和 **500** 。  
+ 下表列出了各个属性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 客户端库当前在连接时使用属性 **1**、 **2**、 **18**、 **22** 和 **500** 。  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME 说明|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x xx*|  
+|**2**|DBMS_VER|Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] *xxxx*  -  *x xx*<br/><br> 例如： `Microsoft SQL Server 2017 - 14.0.3257.3`|  
 |**10**|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|表|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
@@ -71,12 +71,12 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**18**|COLLATION_SEQ<br /><br /> 指定该服务器的字符集排序。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> 指定基础 DBMS 是否支持命名保存点。|Y|  
 |**20**|MULTI_RESULT_SETS<br /><br /> 指定基础数据库或网关本身是否支持多个结果集（通过网关可以将多个语句与返回给客户端的多个结果集一起发送）。|Y|  
-|22 |ACCESSIBLE_TABLES<br /><br /> 指定是否在 **sp_tables**中，网关仅返回当前用户可访问的表、视图等 (，即至少具有表) 的 SELECT 权限的用户。|Y|  
+|22 |ACCESSIBLE_TABLES<br /><br /> 指定是否在 **sp_tables** 中，网关仅返回当前用户可访问的表、视图等 (，即至少具有表) 的 SELECT 权限的用户。|Y|  
 |**100**|USERID_LENGTH<br /><br /> 指定用户名的最大字符数。|128|  
 |**101**|QUALIFIER_TERM<br /><br /> 指定表限定符（由三部分组成的名称的第一部分）的 DBMS 供应商术语。|database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 指定基础 DBMS 是否支持命名事务。|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> 指定能否将存储过程作为语言事件执行。|Y|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> 指定是否在 **sp_stored_procedures**中，网关仅返回由当前用户执行的存储过程。|Y|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> 指定是否在 **sp_stored_procedures** 中，网关仅返回由当前用户执行的存储过程。|Y|  
 |**105**|MAX_INDEX_COLS<br /><br /> 指定 DBMS 索引中的最大列数。|16|  
 |**106**|RENAME_TABLE<br /><br /> 指定是否可以重命名表。|Y|  
 |**107**|RENAME_COLUMN<br /><br /> 指定是否可以重命名列。|Y|  

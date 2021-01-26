@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 44a4c687d934e9bd633650be73aabe6a06e5eaf4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c3ac54a56c76cd19d231e5f89d7188b14c49d774
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094440"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766084"
 ---
 # <a name="syssystem_views-transact-sql"></a>sys.system_views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]附带的每个系统视图都在表中对应一行。 所有系统视图都包含在名为 **sys** 或 **INFORMATION_SCHEMA** 的架构中。  
+  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]附带的每个系统视图都在表中对应一行。 所有系统视图都包含在名为 **sys** 或 **INFORMATION_SCHEMA** 的架构中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
