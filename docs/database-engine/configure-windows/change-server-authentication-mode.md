@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 02/18/2020
-ms.openlocfilehash: 79dc463039be1100f265e6bb44561a6e2dc71c93
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: a4cdc32bd0514be768ac8ed1723fc88840a7e930
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200951"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783404"
 ---
 # <a name="change-server-authentication-mode"></a>更改服务器身份验证模式
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改服务器身份验证模式。 安装过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 设置为 **“Windows 身份验证模式”** 或 **“SQL Server 和 Windows 身份验证模式”** 。 安装完成后，您可以随时更改身份验证模式。
+本主题介绍如何通过使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改服务器身份验证模式。 安装过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 设置为 **“Windows 身份验证模式”** 或 **“SQL Server 和 Windows 身份验证模式”** 。 安装完成后，您可以随时更改身份验证模式。
 
 如果在安装过程中选择了“Windows 身份验证模式”，则 sa 登录名将被禁用，安装程序会分配一个密码。 如果稍后将身份验证模式更改为“SQL Server 和 Windows 身份验证模式”，则 sa 登录名仍处于禁用状态。 若要使用 sa 登录名，请使用 ALTER LOGIN 语句启用 sa 登录名并分配一个新密码。 sa 登录名只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到服务器。
 

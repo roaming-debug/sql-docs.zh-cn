@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0547d5a800533a2414a8dbf666c85a8e9f4bc4c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 00426f84d2f8b3c0ca4626ffd8bddc234f27cf4d
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785646"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783159"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>配置 scan for startup procs 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] scan for startup procs [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 使用 **scan for startup procs** 选项扫描在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时自动执行的存储过程。 如果将此选项设置为 1，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将扫描服务器上定义的所有自动运行的存储过程，并运行这些过程。 **scan for startup procs** 的默认值为 0（不扫描）。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] scan for startup procs [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 使用 **scan for startup procs** 选项扫描在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时自动执行的存储过程。 如果将此选项设置为 1，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将扫描服务器上定义的所有自动运行的存储过程，并运行这些过程。 **scan for startup procs** 的默认值为 0（不扫描）。  
   
  **本主题内容**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "85785646"
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
   
--   此选项的值可以使用 **sp_configure**进行设置；但是，如果使用 **sp_procoption**（用于标记或取消标记自动执行的存储过程），则会自动进行设置。 使用 **sp_procoption** 将第一个存储过程标记为自动执行过程后，此选项的值自动设置为 1。 使用 **sp_procoption** 将最后一个存储过程标记为自动执行过程后，此选项的值自动设置为 0。 如果使用 **sp_procoption** 标记或取消标记自动执行过程，并且始终在删除自动执行过程之前进行取消标记，则无需手动设置此选项。  
+-   此选项的值可以使用 **sp_configure** 进行设置；但是，如果使用 **sp_procoption**（用于标记或取消标记自动执行的存储过程），则会自动进行设置。 使用 **sp_procoption** 将第一个存储过程标记为自动执行过程后，此选项的值自动设置为 1。 使用 **sp_procoption** 将最后一个存储过程标记为自动执行过程后，此选项的值自动设置为 0。 如果使用 **sp_procoption** 标记或取消标记自动执行过程，并且始终在删除自动执行过程之前进行取消标记，则无需手动设置此选项。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   

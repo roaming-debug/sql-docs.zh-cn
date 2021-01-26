@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4a2ca1eea0ec4b42bba65b62525bb6d86e52c88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b178e38f6e59499ddf74e9a8aaec037bbaa4d442
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651347"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783427"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 服务 - 连接到其他计算机
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-本文介绍如何连接到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的另一台计算机。 按照第一个过程执行操作，打开 Windows 的“计算机管理” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (mmc)，连接到该计算机，然后展开“服务和应用程序”树。 遵循第二个过程，创建一个包含到远程计算机中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的链接的文件。
+本文介绍如何连接到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中的另一台计算机。 按照第一个过程执行操作，打开 Windows 的“计算机管理” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (mmc)，连接到该计算机，然后展开“服务和应用程序”树。 遵循第二个过程，创建一个包含到远程计算机中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的链接的文件。
 
 > [!NOTE]
 > 远程连接时，某些程序无法由配置管理器执行。

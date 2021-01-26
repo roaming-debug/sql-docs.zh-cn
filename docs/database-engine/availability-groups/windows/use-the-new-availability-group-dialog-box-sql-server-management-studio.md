@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: abab816f9248d1981d62bfeb313130a8b71c4256
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6f29575ba7d133ddbfb30ef470238b5991162a7d
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641751"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783333"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用“新建可用性组”对话框 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题包含有关如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“新建可用性组”对话框在为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例上创建 Always On 可用性组的信息。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
+  本主题包含有关如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“新建可用性组”对话框在为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用的 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 实例上创建 Always On 可用性组的信息。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
   
 > [!NOTE]  
 >  有关可用性组的简介，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)中通过 PowerShell 创建和配置 AlwaysOn 可用性组。  

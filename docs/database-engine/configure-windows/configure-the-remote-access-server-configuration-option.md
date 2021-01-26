@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62ed4ee20e7a17b291b09f895f7a558b91584ee9
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: afe6721bef097dfa941b5578b6d4287fc370c3f2
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670290"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783120"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>配置远程访问服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91670290"
   
  **本主题的正文从此处开始。**  
   
- 本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “远程访问” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“远程访问”** 选项从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的本地或远程服务器上控制存储过程的执行。 该选项的默认值为 1。 这将授权允许从远程服务器执行本地存储过程或从本地服务器执行远程存储过程。 若要阻止本地存储过程在远程服务器上执行或远程存储过程在本地服务器上执行，请将此选项设置为 0。  
+ 本主题说明了如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “远程访问” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“远程访问”** 选项从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的本地或远程服务器上控制存储过程的执行。 该选项的默认值为 1。 这将授权允许从远程服务器执行本地存储过程或从本地服务器执行远程存储过程。 若要阻止本地存储过程在远程服务器上执行或远程存储过程在本地服务器上执行，请将此选项设置为 0。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 改用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。

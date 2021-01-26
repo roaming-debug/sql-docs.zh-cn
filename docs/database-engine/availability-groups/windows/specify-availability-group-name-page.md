@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8f7851c153833dfc43d751976dc7b37fa34e9dfa
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f5171195bb3d275eb170330565cd9f90531dc0c6
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97640093"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783394"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 可用性组的“指定可用性组选项”页
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  此主题介绍“指定可用性组名称”页中的选项。 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]均使用此主题。  
+  此主题介绍“指定可用性组名称”页中的选项。 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]均使用此主题。  
   
 ##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a>指定可用性组选项  
  **可用性组名称**  

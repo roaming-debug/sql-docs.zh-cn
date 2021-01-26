@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3054b4136a0a8758e99b530e8cb5a2fbeed29619
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: c1459c830f3879e10b97c88b2ff9ce64ff7901c7
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641836"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783574"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 Always On 策略查看可用性组的运行状况 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中使用 Always On 策略或使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell 确定 Always On 可用性组的运行状况。 有关 AlwaysOn 基于策略管理，请参阅 [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)中的 PowerShell 确定 Always On 可用性组的运行状况。  
+  本主题说明如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中使用 Always On 策略或使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中的 PowerShell 确定 Always On 可用性组的运行状况。 有关 AlwaysOn 基于策略管理，请参阅 [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)中的 PowerShell 确定 Always On 可用性组的运行状况。  
   
 > [!IMPORTANT]  
 >  对于 Always On 策略，类别名称作为 ID 使用。 更改 AlwaysOn 类别的名称将会破坏其运行状况评价功能。 因此，任何时候都不应修改 Always On 类别的名称。  

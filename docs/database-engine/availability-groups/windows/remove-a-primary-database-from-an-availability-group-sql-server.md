@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 87b53d2fd1fb5da418a2585c762c6d7692b3b283
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 8ae256db755e6703ea8e35876e0a2e8d44fff102
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642474"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783462"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>从 Always On 可用性组中删除主数据库
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell 从 Always On 可用性组中删除主数据库和对应的辅助数据库。  
+  本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中的 PowerShell 从 Always On 可用性组中删除主数据库和对应的辅助数据库。  
   
 ##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 先决条件和限制  
   
@@ -87,7 +87,7 @@ ms.locfileid: "97642474"
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   

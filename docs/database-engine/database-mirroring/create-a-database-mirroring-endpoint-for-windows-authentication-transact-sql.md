@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4a05341397185deefcc6de5d25ded34e910d7fac
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 86646e3af14403f6d48c8af009525c6c016ef9e3
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642139"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98782972"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>创建使用 Windows 身份验证的数据库镜像端点 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍如何创建一个数据库镜像端点，该端点通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用 Windows 身份验证。 为了支持数据库镜像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个实例都需要一个数据库镜像端点。 一个服务器实例只能有一个数据库镜像端点，该端点有一个端口。 在创建端点时，数据库镜像端点可以使用本地系统上任何可用的端口。 服务器实例上的所有数据库镜像会话都侦听该端口，并且数据库镜像的所有传入连接都使用该端口。  
+  本主题介绍如何创建一个数据库镜像端点，该端点通过 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用 Windows 身份验证。 为了支持数据库镜像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个实例都需要一个数据库镜像端点。 一个服务器实例只能有一个数据库镜像端点，该端点有一个端口。 在创建端点时，数据库镜像端点可以使用本地系统上任何可用的端口。 服务器实例上的所有数据库镜像会话都侦听该端口，并且数据库镜像的所有传入连接都使用该端口。  
   
 > [!IMPORTANT]  
 >  如果数据库镜像端点已存在并处于使用状态，则我们建议您使用此端点。 删除正在使用的端点会中断现有会话。  

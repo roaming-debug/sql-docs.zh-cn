@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02b34ab8d3c0a3efd79d7d136bf26401ba92fdf4
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 7004a0a7b7322fc939b5df21d40c389dc4a3dc6a
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216726"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783635"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>配置查询调控器开销限制服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “查询调控器开销限制” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 “开销限制”选项指定运行给定查询所允许的估计开销的上限。 查询开销是一个抽象数字，由查询优化器根据估计的执行要求（如 CPU 时间、内存和磁盘 IO）确定。 它是指在特定硬件配置中完成查询所需的估计占用时间（秒）。 这个抽象数字不等于在正在运行的实例上完成查询所需的时间。 应将其视为一个相对度量值。 此选项的默认值为 0，将设置为关闭查询调控器。 将值设置为 0 将允许所有查询在没有任何时间限制下运行。 如果为该选项指定一个非零、非负的数值，则查询调控器将不允许执行估计开销超过该值的查询。   
+本主题说明了如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “查询调控器开销限制” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 “开销限制”选项指定运行给定查询所允许的估计开销的上限。 查询开销是一个抽象数字，由查询优化器根据估计的执行要求（如 CPU 时间、内存和磁盘 IO）确定。 它是指在特定硬件配置中完成查询所需的估计占用时间（秒）。 这个抽象数字不等于在正在运行的实例上完成查询所需的时间。 应将其视为一个相对度量值。 此选项的默认值为 0，将设置为关闭查询调控器。 将值设置为 0 将允许所有查询在没有任何时间限制下运行。 如果为该选项指定一个非零、非负的数值，则查询调控器将不允许执行估计开销超过该值的查询。   
   
  **本主题内容**  
   

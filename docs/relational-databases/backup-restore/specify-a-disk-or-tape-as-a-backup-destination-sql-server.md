@@ -21,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e80b1913f6ff7c40ff0c3b715e98c9df6b3e20ca
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 1d39d6fd92c8fc4eab080c8ca9556d399bf7f8b2
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125484"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766405"
 ---
 # <a name="specify-a-disk-or-tape-backup-destination-sql-server"></a>指定磁盘或磁带备份目标 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中将磁盘或磁带指定为备份目标。  
+  本主题介绍如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中将磁盘或磁带指定为备份目标。  
   
 > [!NOTE]  
 >  在 SQL Server 的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  

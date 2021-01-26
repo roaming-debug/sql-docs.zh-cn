@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 9420d44b3291ae5dbc822f47f7aac56c3dc188de
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: caeb53cdc384a02d5ccdcba35c6137c08b868e8c
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644099"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766472"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>AlwaysOn 可用性组入门
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-本主题将介绍一些步骤，包括用于配置 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的实例以便支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的步骤，以及用于创建、管理和监视可用性组的步骤。  
+本主题将介绍一些步骤，包括用于配置 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 的实例以便支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的步骤，以及用于创建、管理和监视可用性组的步骤。  
   
   
 ##  <a name="recommended-reading"></a><a name="RecommendedReading"></a> 推荐阅读的主题  
@@ -37,7 +37,7 @@ ms.locfileid: "97644099"
   
 |步骤|链接|  
 |----------|-----------|  
-|**启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。** 必须在参与某一可用性组的每个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上都启用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能。<br /><br /> **先决条件：** 主机必须是 Windows Server 故障转移群集 (WSFC) 节点。<br /><br /> 有关其他先决条件的信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|[启用和禁用 AlwaysOn 可用性组](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
+|**启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。** 必须在参与某一可用性组的每个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上都启用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 功能。<br /><br /> **先决条件：** 主机必须是 Windows Server 故障转移群集 (WSFC) 节点。<br /><br /> 有关其他先决条件的信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|[启用和禁用 AlwaysOn 可用性组](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
 |**创建数据库镜像端点（如果没有）。** 确保每个服务器实例都拥有 [数据库镜像端点](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。 服务器实例使用此端点从其他服务器实例接收 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接。|确定数据库镜像端点是否存在： <br />                    [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)<br /><br /> **对于 Windows 身份验证**。  若要创建数据库镜像端点，请使用：<br /><br /> [新建可用性组向导](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **对于证书身份验证**。 若要创建数据库镜像端点，请使用：[Transact-SQL](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ##  <a name="creating-and-configuring-a-new-availability-group"></a><a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
@@ -45,7 +45,7 @@ ms.locfileid: "97644099"
 |步骤|链接|  
 |----------|-----------|  
 |**创建可用性组。** 在承载要添加到可用性组的数据库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上创建可用性组。<br /><br /> 至少在创建可用性组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上创建初始主副本。 您可以指定一到四个辅助副本。 有关可用性组和副本属性的信息，请参阅[CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)。<br /><br /> 强烈建议您创建 [可用性组侦听器](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。<br /><br /> **先决条件：** 承载给定可用性组的可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须位于单个 WSFC 群集的单独节点上。 唯一的例外是在迁移到另一个 WSFC 群集时，此时一个可用性组可能会暂时跨两个群集。<br /><br /> 有关其他先决条件的信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|若要创建一个可用性组，您可以使用以下任何工具：<br /><br /> [新建可用性组向导](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)<br /><br /> [SQL Server PowerShell](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)|  
-|**将辅助副本联接到可用性组。** 连接到正在承载某一辅助副本的各 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例上，并且将该本地辅助副本联接到可用性组。|[将辅助副本联接到可用性组](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> 提示：如果使用“新建可用性组”向导，此步骤将自动执行。|  
+|**将辅助副本联接到可用性组。** 连接到正在承载某一辅助副本的各 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 实例上，并且将该本地辅助副本联接到可用性组。|[将辅助副本联接到可用性组](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> 提示：如果使用“新建可用性组”向导，此步骤将自动执行。|  
 |**准备辅助数据库。** 在正在承载辅助副本的每个服务器实例上，使用 RESTORE WITH NORECOVERY 还原主数据库的备份。|[手动准备辅助数据库](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> 提示：“新建可用性组”向导能够为你准备辅助数据库。 有关详细信息，请参阅[选择初始数据同步页 (Always On 可用性组向导)](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) 中的“使用完全初始数据同步的先决条件”。|  
 |**将辅助数据库联接到可用性组。** 在正在承载辅助副本的每个服务器实例上，将各本地辅助数据库联接到可用性组。 在联接可用性组后，给定辅助数据库将开始与相应的主数据库的数据同步。|[将辅助数据库联接到可用性组](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> 提示：如果每个辅助数据库均存在于各次要副本上，那么“新建可用性组”向导会执行此步骤。|  
 |**创建可用性组侦听器。**  除非在创建可用性组时已创建了可用性组侦听器，否则此步骤是必需的。|[创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  

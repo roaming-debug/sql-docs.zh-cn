@@ -14,24 +14,24 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: cawrites
 ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 306a200cadc535ea9da3d5d21dcd74fb15cf278c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: cf6d3f8e77591e9791fe2e8dc57175f1393716ff
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641505"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783253"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  本主题包含有关配置 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以便用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](AG) 的信息。 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的三种方案为用于报表数据源的数据库、报表服务器数据库和报表设计。 这三种方案支持的功能和所需的配置各不相同。  
+  本主题包含有关配置 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以便用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)](AG) 的信息。 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的三种方案为用于报表数据源的数据库、报表服务器数据库和报表设计。 这三种方案支持的功能和所需的配置各不相同。  
   
  将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据源的一个重要好处是利用可读的辅助副本作为报表数据源，同时辅助副本为主数据库提供故障转移功能。  
   
  有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的一般信息，请参阅[适用于 SQL Server 2012 的 Always On 的常见问题解答](../../../sql-server/index.yml)。  
 
 ##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性组的要求  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 报表服务器使用 .NET Framework 4.0，并支持将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性用于数据源。  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 报表服务器使用 .NET Framework 4.0，并支持将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性用于数据源。  
   
  若要结合使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本，你需要下载并安装 .Net 3.5 SP1 的修补程序。 该修补程序添加对 SQL Client for AG 功能的支持以及对连接字符串属性 **ApplicationIntent** 和 **MultiSubnetFailover** 的支持。 如果未在承载报表服务器的每台计算机上安装该修补程序，尝试预览报表的用户将看到类似以下内容的错误消息并将错误消息写入报表服务器跟踪日志：  
   

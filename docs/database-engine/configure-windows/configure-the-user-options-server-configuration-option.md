@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe7a4f5bc7fb043533656041d5f10d5be1880273
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71dcf7e52b1c58c7df868f502bc8de5da9892c6b
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659765"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783424"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>配置 user options 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **user options** 选项指定了适用于所有用户的全局默认值。 将建立一个用户工作会话期间使用的默认查询处理选项的列表。 **user options** 选项允许您更改 SET 选项的默认值（如果服务器的默认设置不合适）。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **user options** 选项指定了适用于所有用户的全局默认值。 将建立一个用户工作会话期间使用的默认查询处理选项的列表。 **user options** 选项允许您更改 SET 选项的默认值（如果服务器的默认设置不合适）。  
   
- 用户可以使用 SET 语句覆盖这些默认值。 可以为新登录名动态配置 **user options** 。 更改 **user options**的设置后，新的登录名会话将使用新的设置，当前登录名会话受不影响。  
+ 用户可以使用 SET 语句覆盖这些默认值。 可以为新登录名动态配置 **user options** 。 更改 **user options** 的设置后，新的登录名会话将使用新的设置，当前登录名会话受不影响。  
   
  **本主题内容**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "85659765"
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
--   下表列出并说明了 **user options**的配置值。 并非所有配置值都是相互兼容的。 例如，不能同时设置 ANSI_NULL_DFLT_ON 和 ANSI_NULL_DFLT_OFF。  
+-   下表列出并说明了 **user options** 的配置值。 并非所有配置值都是相互兼容的。 例如，不能同时设置 ANSI_NULL_DFLT_ON 和 ANSI_NULL_DFLT_OFF。  
   
     |值|配置|说明|  
     |-----------|-------------------|-----------------|  

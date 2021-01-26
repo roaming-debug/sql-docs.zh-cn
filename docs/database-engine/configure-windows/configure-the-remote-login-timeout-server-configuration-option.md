@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad4989bc64fa9460a97a0e4363deddb74605e9e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ffc46323f8f3fb783b4a06836f66c535e145a04e
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785695"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783114"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>配置 remote login timeout 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote login timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **remote login timeout** 选项指定从登录远程服务器失败返回前等待的秒数。 例如，如果您尝试登录到一个远程服务器而该服务器已关闭， **remote login timeout** 帮助确保您在计算机停止登录尝试前不必无限期地等待下去。 此选项的默认值为 10 秒。 如果该值为 0，则允许无限期等待。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote login timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **remote login timeout** 选项指定从登录远程服务器失败返回前等待的秒数。 例如，如果您尝试登录到一个远程服务器而该服务器已关闭， **remote login timeout** 帮助确保您在计算机停止登录尝试前不必无限期地等待下去。 此选项的默认值为 10 秒。 如果该值为 0，则允许无限期等待。  
   
 > [!NOTE]  
 >  此选项的默认值在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中为 20 秒。  

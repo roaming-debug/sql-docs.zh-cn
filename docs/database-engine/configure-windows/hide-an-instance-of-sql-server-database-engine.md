@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39999b1b705c2e32dc421af4a6a7ffc9686b2ea7
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: f3f275d1f2c5ce4142bb357a1c1b314b694ef589
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480700"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783016"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隐藏 SQL Server 数据库引擎的实例
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中隐藏 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器服务来枚举安装在计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 这使客户端应用程序可以浏览服务器，并帮助客户端区别同一台计算机上的多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 您可以使用以下过程防止 SQL Server Browser 服务向尝试通过使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] “浏览” **按钮来查找实例的客户端计算机公开** 实例。  
+  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中隐藏 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器服务来枚举安装在计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 这使客户端应用程序可以浏览服务器，并帮助客户端区别同一台计算机上的多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 您可以使用以下过程防止 SQL Server Browser 服务向尝试通过使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] “浏览” **按钮来查找实例的客户端计算机公开** 实例。  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
   

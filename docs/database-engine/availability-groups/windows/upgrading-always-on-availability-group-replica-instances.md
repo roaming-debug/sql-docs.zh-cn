@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 785c8421a1ca689e39852401165c4b0249128e8c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 1c2a6ec0dcaf1e1d9b75016fd44aa17f534854fe
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641804"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783581"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-在将托管 Always On 可用性组 (AG) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例升级到新的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务包或积累更新，或在安装到新的 Windows 服务包或积累更新时，可以通过执行滚动升级将主要副本的故障时间降低到仅需一次手动故障转移（或者如果无法故障转移回原始的主要副本，则需两次手动故障转移）。 在升级过程中，次要副本将不可用于故障转移或只读操作，并且在升级之后，次要副本可能需要花费一些时间来与主要副本节点保持同步，具体时间取决于主要副本节点上的活动量（因此需要较高的网络流量）。 另请注意，初始故障转移到运行较新版本 SQL Server 的次要副本后，可用性组中的数据库会运行升级进程，将其升级到最新版本。 在此期间这些数据库都没有可读副本。 初始故障转移之后的故障时间取决于可用性组中的数据库数量。 若计划故障回复至原始的主副本，那么在故障回复时将不会重复此步骤。
+在将托管 Always On 可用性组 (AG) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例升级到新的 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务包或积累更新，或在安装到新的 Windows 服务包或积累更新时，可以通过执行滚动升级将主要副本的故障时间降低到仅需一次手动故障转移（或者如果无法故障转移回原始的主要副本，则需两次手动故障转移）。 在升级过程中，次要副本将不可用于故障转移或只读操作，并且在升级之后，次要副本可能需要花费一些时间来与主要副本节点保持同步，具体时间取决于主要副本节点上的活动量（因此需要较高的网络流量）。 另请注意，初始故障转移到运行较新版本 SQL Server 的次要副本后，可用性组中的数据库会运行升级进程，将其升级到最新版本。 在此期间这些数据库都没有可读副本。 初始故障转移之后的故障时间取决于可用性组中的数据库数量。 若计划故障回复至原始的主副本，那么在故障回复时将不会重复此步骤。
   
 >[!NOTE]  
 >本文仅讨论 SQL Server 本身的升级。 它不涵盖升级包含 Windows Server 故障转移群集 (WSFC) 的操作系统。 Windows Server 2012 R2 之前的操作系统不支持升级承载故障转移群集的 Windows 操作系统。 若要升级在 Windows Server 2012 R2 上运行的群集节点，请参阅[群集操作系统滚动升级](/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)。  
@@ -28,13 +28,13 @@ ms.locfileid: "97641804"
 ## <a name="prerequisites"></a>先决条件  
 开始之前，请仔细阅读以下重要信息：  
   
-- [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+- [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]。  
   
 - [选择数据库引擎升级方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：要按正确顺序升级，请检查支持的版本和版本升级以及环境中安装的其他组件，并据此选择适当的升级方法和步骤。  
   
 - [计划并测试数据库引擎升级计划](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)：查看发行说明和已知升级问题、预升级清单，并制定和测试升级计划。  
   
-- [安装 SQL Server 的硬件和软件要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
+- [安装 SQL Server 的硬件和软件要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
 
 - [检查是否对任何 AG 数据库使用了更改数据捕获或复制](#special-steps-for-change-data-capture-or-replication):如果 AG 中的任何数据库已启用更改数据捕获 (CDC)，请完成这些[指令](#special-steps-for-change-data-capture-or-replication)。
 
@@ -64,7 +64,7 @@ ms.locfileid: "97641804"
   
 -   始终将 AG 故障转移到同步提交的次要副本实例。 如果故障转移到异步提交的次要副本实例，数据库易丢失数据，且数据移动会自动暂停，直到手动恢复数据移动为止。  
   
--   在升级或更新任何其他的次要副本实例之前，不要升级主要副本实例。 已升级的主要副本不再将日志传送到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例尚未升级到同一版本的任何次要副本。 在挂起到辅助副本的数据移动时，对于该副本无法进行自动故障转移，且您的可用性数据库很可能发生数据丢失。 这也适用于滚动升级过程，在此过程中将从旧的主要副本手动故障转移到新的主要副本。 因此，在升级旧的主要副本后，可能需要恢复同步。
+-   在升级或更新任何其他的次要副本实例之前，不要升级主要副本实例。 已升级的主要副本不再将日志传送到 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 实例尚未升级到同一版本的任何次要副本。 在挂起到辅助副本的数据移动时，对于该副本无法进行自动故障转移，且您的可用性数据库很可能发生数据丢失。 这也适用于滚动升级过程，在此过程中将从旧的主要副本手动故障转移到新的主要副本。 因此，在升级旧的主要副本后，可能需要恢复同步。
   
 -   在故障转移 AG 前，请验证故障转移目标的同步状态为 SYNCHRONIZED。  
 
@@ -123,7 +123,7 @@ ms.locfileid: "97641804"
   
 -   在低客户端流量期间认真选择一个维护窗口  
   
--   在主站点上升级/更新 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 时，将可用性模式改回异步提交，在准备好再次故障转移到主站点时再将其恢复为同步提交  
+-   在主站点上升级/更新 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 时，将可用性模式改回异步提交，在准备好再次故障转移到主站点时再将其恢复为同步提交  
   
 ## <a name="ag-with-failover-cluster-instance-nodes"></a>具有故障转移群集实例节点的 AG  
  如果 AG 包含故障转移群集实例 (FCI) 节点，应先升级不活动的节点，再升级活动的节点。 下图显示一个常见的 AG 方案（它包含 FCI 用于本地高可用性且用于远程灾难恢复的 FCI 之间采用异步提交模式）和升级顺序。  

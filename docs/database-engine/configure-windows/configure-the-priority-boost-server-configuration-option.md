@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2d2793ad9a8b92efd65cba0be745fc3ad77f715e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8889fd32fc0d494260bf73e790cdb3a428201d4
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785889"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783614"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>配置 priority boost 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] priority boost [!INCLUDE[tsql](../../includes/tsql-md.md)]配置选项。 使用 priority boost 选项可以指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否应当以比相同计算机上的其他进程更高的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 或 Windows 2008 R2 计划优先级运行。 如果将此选项设置为 1， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以优先级基数 13 在 Windows 2008 或 Windows Server 2008 R2 计划程序中运行。 默认值为 0，其优先级基数为 7。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] priority boost [!INCLUDE[tsql](../../includes/tsql-md.md)]配置选项。 使用 priority boost 选项可以指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否应当以比相同计算机上的其他进程更高的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 或 Windows 2008 R2 计划优先级运行。 如果将此选项设置为 1， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以优先级基数 13 在 Windows 2008 或 Windows Server 2008 R2 计划程序中运行。 默认值为 0，其优先级基数为 7。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  

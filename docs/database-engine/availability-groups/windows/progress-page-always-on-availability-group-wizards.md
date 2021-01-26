@@ -15,17 +15,17 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 040b89181744c0f9a3ab036554987dcb1e01d3de
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: a331651b92e4781a51de8e03dcfec55797d8723f
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642485"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783473"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>“结果”页（Always On 可用性组向导）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  使用此对话框可以查看您在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中运行的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]向导的进度。 进度栏指示该向导正在执行的步骤的相对进度。  
+  使用此对话框可以查看您在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中运行的 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]向导的进度。 进度栏指示该向导正在执行的步骤的相对进度。  
   
 ## <a name="ui-element-list"></a>UI 元素列表  
  **更多详细信息**  

@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 270083370770cf81e8c714c1230ec2d2e5f561ef
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 96e19ff23dc15901cc3bb0b5f19101d0bc61164a
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170959"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783331"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>SCM 服务 - 配置服务器启动选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 每次启动时使用的启动选项。 有关启动选项列表，请参阅 [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+  本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 每次启动时使用的启动选项。 有关启动选项列表，请参阅 [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   

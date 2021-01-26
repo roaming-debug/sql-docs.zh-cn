@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9b77b54ba48dc2c3820d055227411f61983b1a7c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ece89606626172d50ba656a6545237af2ec761fe
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644277"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783398"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>监视数据库镜像 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -250,7 +250,7 @@ ms.locfileid: "97644277"
     -   带自动故障转移功能的高安全(同步)  
   
 ##  <a name="additional-sources-of-information-about-a-mirrored-database"></a><a name="AdditionalSources"></a> 有关镜像数据库的其他信息源  
- 除了使用数据库镜像监视器和 dbmmonitor 存储过程监视镜像数据库并对所监视的性能变量设置警报之外， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 还提供了用于数据库镜像的目录视图、性能计数器和事件通知。  
+ 除了使用数据库镜像监视器和 dbmmonitor 存储过程监视镜像数据库并对所监视的性能变量设置警报之外， [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 还提供了用于数据库镜像的目录视图、性能计数器和事件通知。  
   
  **本节内容：**  
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec50e6ae39798add5a564dbeb8a971e879c18c27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7505c7ce47f0804f2c9cf83951a5d47847edf18b
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680713"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783015"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>查看或配置远程服务器连接选项 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中在服务器级别查看或配置远程服务器连接选项。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中在服务器级别查看或配置远程服务器连接选项。  
   
  **本主题内容**  
   

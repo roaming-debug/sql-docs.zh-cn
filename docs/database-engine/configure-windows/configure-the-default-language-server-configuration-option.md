@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f4d1e4ed2354b81847b6401fd013f5bb63c0ec7
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 05bf39e18f7efaf8c4f47ca857824189906977ca
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670601"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783237"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>配置默认语言服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “默认语言” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“默认语言”** 选项指定所有新创建的登录名的默认语言。 若要设置默认语言，请指定所需语言的 **langid** 值。 可通过查询 **sys.syslanguages** 兼容性视图来获取 **langid** 值。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “默认语言” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“默认语言”** 选项指定所有新创建的登录名的默认语言。 若要设置默认语言，请指定所需语言的 **langid** 值。 可通过查询 **sys.syslanguages** 兼容性视图来获取 **langid** 值。  
   
  **本主题内容**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "91670601"
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
--   可以使用 CREATE LOGIN 或 ALTER LOGIN 替代登录的默认语言。 会话的默认语言是该会话登录的语言，除非使用开放式数据库连接 (ODBC) 或 OLE DB API 替代每个会话的默认语言。 请注意，只能将“默认语言”选项设置为 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中定义的语言 ID (0-32)。 在使用包含数据库时，可使用 CREATE DATABASE 或 ALTER DATABASE 设置数据库的默认语言，使用 CREATE USER 或 ALTER USER 设置包含数据库用户的默认语言。 在包含数据库中设置默认语言时，接受 **sys.syslanguages** 中所列的 **langid**值、语言名称或语言别名。  
+-   可以使用 CREATE LOGIN 或 ALTER LOGIN 替代登录的默认语言。 会话的默认语言是该会话登录的语言，除非使用开放式数据库连接 (ODBC) 或 OLE DB API 替代每个会话的默认语言。 请注意，只能将“默认语言”选项设置为 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中定义的语言 ID (0-32)。 在使用包含数据库时，可使用 CREATE DATABASE 或 ALTER DATABASE 设置数据库的默认语言，使用 CREATE USER 或 ALTER USER 设置包含数据库用户的默认语言。 在包含数据库中设置默认语言时，接受 **sys.syslanguages** 中所列的 **langid** 值、语言名称或语言别名。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   

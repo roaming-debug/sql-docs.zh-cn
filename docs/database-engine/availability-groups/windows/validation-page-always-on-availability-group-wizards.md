@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 59c65191c2d69d3ebb7b144a6b254f1695fd5b5b
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 38e0471b0f21d97700aa2e9c90d630bcadf9beb3
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641708"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98782989"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>“验证”页（AlwaysOn 可用性组向导）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
-  本帮助主题介绍 **“验证”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页可以验证您的环境是否支持您在向导前面的页面中做出的所有配置选择。  
+  本帮助主题介绍 **“验证”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]。 使用此页可以验证您的环境是否支持您在向导前面的页面中做出的所有配置选择。  
   
 ##  <a name="validation-page-options"></a><a name="PageOptions"></a> “验证”页选项  
  **可用性组验证的结果。**  

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3cf135ca98a61382e12973b93eb30ab06ad6f4dd
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 663861d552b619b199e6279353f5bbdcf6658f24
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642563"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783352"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>执行 Always On 可用性组的计划手动故障转移 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-本主题说明如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行手动故障转移而不丢失数据（计划的手动故障转移）。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移类似于所有 AlwaysOn 可用性组的故障转移，将次要副本转换为主要角色。 故障转移同时会将先前的主要副本转换为次要角色。  
+本主题说明如何在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行手动故障转移而不丢失数据（计划的手动故障转移）。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移类似于所有 AlwaysOn 可用性组的故障转移，将次要副本转换为主要角色。 故障转移同时会将先前的主要副本转换为次要角色。  
   
 仅当主要副本和目标次要副本在同步提交模式下运行且当前同步时，才支持计划的手动故障转移。 计划的手动故障转移暂留辅助数据库中的所有数据，这些数据库加入目标次要副本上的可用性组。 将以前的主要副本转换为次要角色后，其数据库将成为辅助数据库。 然后它们开始与新的主数据库同步。 在将其全部转换为 SYNCHRONIZED 状态之后，新的辅助副本将变成适于充当将来计划的手动故障转移的目标。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "97642563"
 2. 使用 **Switch-SqlAvailabilityGroup** cmdlet。 
   
     > [!NOTE] 
-    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] cmdlet。 有关详细信息，请参阅[获取有关 SQL Server PowerShell 的帮助](../../../powershell/sql-server-powershell.md)。 
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅[获取有关 SQL Server PowerShell 的帮助](../../../powershell/sql-server-powershell.md)。 
   
      下面的示例将 MyAg  可用性组手动故障转移到具有指定路径的次要副本： 
   

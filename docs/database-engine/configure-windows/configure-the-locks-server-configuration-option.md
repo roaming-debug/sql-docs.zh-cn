@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 98c7ad618b3691912b183d19a9a62dea1548071e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a30c2cb2955ef82380bde00714098afec153ed95
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697137"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783680"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>配置 locks 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **locks** 选项设置可用锁的最大数目，以限制 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 为锁分配的内存量。 默认设置为 0，即允许 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 根据不断变化的系统要求动态地分配和释放锁结构。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **locks** 选项设置可用锁的最大数目，以限制 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 为锁分配的内存量。 默认设置为 0，即允许 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 根据不断变化的系统要求动态地分配和释放锁结构。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
@@ -54,9 +54,9 @@ ms.locfileid: "85697137"
   
      通常情况下，如果锁池需要的内存比 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 内存池中可用的内存多，而具有更多可用的计算机内存（尚未达到 **max server memory** 的阈值），则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将动态分配内存以满足锁的请求。 但是，如果内存分配导致操作系统级的分页（例如，如果另一个应用程序与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在同一台计算机上运行并使用该计算机的内存），则不会分配更多的锁空间。 动态锁池获取的内存不会超过分配给 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的内存的 60%。 如果锁池获取的内存达到了 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例所获取内存的 60%，或计算机上没有更多的可用内存，则再发出针对锁的请求将生成错误。  
   
-     推荐的配置是允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态地使用锁。 但是，可以通过设置 **locks** 来替代 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态分配锁资源的能力。 将 **locks** 设置为 0 以外的值后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 分配的锁的数量不能大于在 **locks**中指定的值。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显示消息说明超过了可用锁数，请增大此值。 由于每一个锁都需要消耗内存（每一个锁需 96 字节），增加此值将增加服务器对内存的需求。  
+     推荐的配置是允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态地使用锁。 但是，可以通过设置 **locks** 来替代 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态分配锁资源的能力。 将 **locks** 设置为 0 以外的值后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 分配的锁的数量不能大于在 **locks** 中指定的值。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显示消息说明超过了可用锁数，请增大此值。 由于每一个锁都需要消耗内存（每一个锁需 96 字节），增加此值将增加服务器对内存的需求。  
   
--   **locks** 选项也会影响何时进行锁升级。 如果 **locks** 设置为 0，则当前锁结构使用的内存达到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 内存池的 40% 时将进行锁升级。 如果 **locks** 未设置为 0，则当锁的数量达到 **locks**的指定值的 40% 时将进行锁升级。  
+-   **locks** 选项也会影响何时进行锁升级。 如果 **locks** 设置为 0，则当前锁结构使用的内存达到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 内存池的 40% 时将进行锁升级。 如果 **locks** 未设置为 0，则当锁的数量达到 **locks** 的指定值的 40% 时将进行锁升级。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c87703d399f9f8906c4a3c4a7ea0703d092c333
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8cb8e2b3377c4b90e61e9b65225d3d350bfa9897
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785900"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783613"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>配置 network packet size 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] network packet size [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **network packet size** 选项设置整个网络中使用的数据包大小（以字节为单位）。 数据包是具有固定大小的数据块区，用于在客户端与服务器之间传输请求和结果。 默认数据包大小为 4,096 个字节。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] network packet size [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **network packet size** 选项设置整个网络中使用的数据包大小（以字节为单位）。 数据包是具有固定大小的数据块区，用于在客户端与服务器之间传输请求和结果。 默认数据包大小为 4,096 个字节。  
   
 > [!NOTE]  
 >  除非您确信能够提高性能，否则不要更改数据包的大小。 对于大多数应用程序而言，默认数据包大小为最佳数值。  

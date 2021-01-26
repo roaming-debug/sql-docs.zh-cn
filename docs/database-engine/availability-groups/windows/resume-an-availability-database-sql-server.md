@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ae254f35d813811638723988544f841bdd01b92b
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 91bbc8029233fbcdc937d7fc873577cd4f0e2575
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641451"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783187"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>恢复可用性数据库 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中恢复已挂起的可用性数据库。 恢复挂起的数据库会将数据库置于 SYNCHRONIZING 状态。 恢复主数据库还将恢复挂起主数据库时导致挂起的任何辅助数据库。 如果任何辅助数据库是从承载辅助副本的服务器实例中本地挂起的，则该辅助数据库必须进行本地恢复。 一旦给定的辅助数据库和相应的主数据库处于 SYNCHRONIZING 状态，则在辅助数据库上将恢复数据同步。  
+  您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中恢复已挂起的可用性数据库。 恢复挂起的数据库会将数据库置于 SYNCHRONIZING 状态。 恢复主数据库还将恢复挂起主数据库时导致挂起的任何辅助数据库。 如果任何辅助数据库是从承载辅助副本的服务器实例中本地挂起的，则该辅助数据库必须进行本地恢复。 一旦给定的辅助数据库和相应的主数据库处于 SYNCHRONIZING 状态，则在辅助数据库上将恢复数据同步。  
   
 > [!NOTE]  
 >  挂起和恢复 AlwaysOn 辅助数据库并不直接影响主数据库的可用性。 但是，暂停某一辅助数据库可能会在恢复这个暂停的辅助数据库之前影响主数据库的冗余和故障转移功能。 这与数据库镜像相反，在数据库镜像中，在恢复镜像前镜像状态在镜像数据库和主数据库上都挂起。 挂起 AlwaysOn 主数据库将挂起所有相应辅助数据库上的数据移动，并且在恢复主数据库前针对该数据库的冗余和故障转移功能将停止。  

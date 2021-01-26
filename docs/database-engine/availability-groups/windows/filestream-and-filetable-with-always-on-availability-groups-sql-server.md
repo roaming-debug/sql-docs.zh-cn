@@ -15,18 +15,18 @@ ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 566c50867511e9e9d02996247c3efecf634b93aa
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 42a36a01313636c072a8ba4b104f6f366fb13e86
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644116"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766432"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>将 FILESTREAM 和 FileTable 与 AlwaysOn 可用性组一起使用
 
 [!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
-  本主题包含将 FILESTREAM 和 FileTable 功能与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]一起使用有关的信息。  
+  本主题包含将 FILESTREAM 和 FileTable 功能与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]一起使用有关的信息。  
   
  支持所有 FILESTREAM 功能。 故障转移后，FILESTREAM 数据在可读辅助副本和新的主副本上均可访问。  
   

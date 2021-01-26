@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c472b3996683512fb6ac7cd3f001d53ca1fd73ae
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3f1322f21ed7ad3f09f30a0f5a5e71e5614a8d47
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170679"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766237"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -642,7 +642,7 @@ CREATE INDEX 语句同其他查询一样优化。 为了节省 I/O 操作，查�
 
 可以使用与为表创建索引时相同的方式，为已分区表创建索引视图。 有关聚集索引的详细信息，请参阅[分区表和索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)以及 [SQL Server 索引体系结构和设计指南](../../relational-databases/sql-server-index-design-guide.md)。
 
-在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，当创建或重新生成已分区索引时，将通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成统计信息。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS` 以及 `FULLSCAN` 子句。
+在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中，当创建或重新生成已分区索引时，将通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成统计信息。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS` 以及 `FULLSCAN` 子句。
 
 ## <a name="filtered-indexes"></a>筛选索引
 筛选索引是一种经过优化的非聚集索引，适用于从表中选择少数行的查询。 筛选索引使用筛选谓词对表中的部分数据进行索引。 设计良好的筛选索引可以提高查询性能，降低存储成本和维护成本。

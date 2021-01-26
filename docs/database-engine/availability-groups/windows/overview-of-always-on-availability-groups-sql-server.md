@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8fdc782ce65464c490305291b426fe82a972cd5c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: b30a3004ccf0d5bafa94ae9c601db287a5eef288
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643505"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783314"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>什么是 Always On 可用性组？
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
- 本主题介绍用于在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中配置和管理一个或多个可用性组的核心 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]概念。 有关可用性组提供的优势的摘要和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 术语的概述，请参阅 [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
+ 本主题介绍用于在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中配置和管理一个或多个可用性组的核心 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]概念。 有关可用性组提供的优势的摘要和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 术语的概述，请参阅 [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
  可用性组支持的复制环境适用于一组离散用户数据库，称为“可用性数据库”   。 可以创建可用性组以实现高可用性 (HA) 或读取缩放。 HA 可用性组是一组共同实现故障转移的数据库。 读取缩放可用性组是一组复制到其他 SQL Server 实例以实现只读工作负荷的数据库。 一个可用性组支持一组主数据库以及一至八组对应的辅助数据库。 辅助数据库 *不是* 备份。 应继续定期备份您的数据库及其事务日志。  
   

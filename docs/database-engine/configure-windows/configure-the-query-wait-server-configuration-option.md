@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdf9a2f14547eeda95b49a3f7705823e62f8b538
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 15844802836883d80c4bf50d0df58e7ddbe633d0
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785858"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783144"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>配置查询等待值服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “查询等待值” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 当没有足够的内存来运行查询时，大量占用内存的查询（如那些涉及排序和哈希操作的查询）将排队等待。 **“查询等待值”** 选项指定一个查询在超时前等待所需资源的时间（以秒为单位，范围从 0 到 2147483647）。该选项的默认值为 -1。 这意味着超时值计算为估计的查询开销的 25 倍。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “查询等待值” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 当没有足够的内存来运行查询时，大量占用内存的查询（如那些涉及排序和哈希操作的查询）将排队等待。 **“查询等待值”** 选项指定一个查询在超时前等待所需资源的时间（以秒为单位，范围从 0 到 2147483647）。该选项的默认值为 -1。 这意味着超时值计算为估计的查询开销的 25 倍。  
   
 > [!IMPORTANT]  
 >  包含等待查询的事务在查询等待内存时可能会持有锁。 在极个别的情况下，可能会发生无法检测到的死锁。 减少查询等待时间可降低这类死锁的概率。 最终，等待的查询将被终止并且事务锁将被释放。 但是，增加最大等待时间将增大该类查询被终止的时间。 不建议改变该选项。  

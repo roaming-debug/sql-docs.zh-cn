@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fb0d7b15cf17ac1af60dbb55382dc1886fcca9a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70abda90ef4b7c047a4833baa792adeff60b8f12
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789784"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783218"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>配置服务器以侦听备用管道
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将服务器配置为侦听备用管道。 默认情况下， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的默认实例侦听命名管道 \\\\.\pipe\sql\query。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的命名实例侦听其他管道。  
+  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中将服务器配置为侦听备用管道。 默认情况下， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的默认实例侦听命名管道 \\\\.\pipe\sql\query。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的命名实例侦听其他管道。  
   
  使用客户端应用程序连接到特定的命名管道的方式有三种：  
   

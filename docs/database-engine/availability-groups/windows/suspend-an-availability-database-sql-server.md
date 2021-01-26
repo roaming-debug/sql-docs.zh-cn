@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f918daa031b25ba8f1110dc9f2aaeaebef0a9361
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4b8b491d5f5caf743ab94367eaaacfe3de4864ad
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642953"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783707"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>挂起可用性数据库 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中挂起可用性数据库。 请注意，挂起命令需要对承载要挂起或恢复的数据库的服务器实例发出。  
+  您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中挂起可用性数据库。 请注意，挂起命令需要对承载要挂起或恢复的数据库的服务器实例发出。  
   
  挂起命令的效果取决于您挂起的是辅助数据库还是主数据库，如下所示：  
   

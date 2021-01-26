@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ae6462d46760f1a5f58f01a2170470e2d4ea7fac
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: c866e80aa0a6a154f5c60b795aa2593b76d0966a
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643487"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783324"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Always On 可用性组的 PowerShell Cmdlet 概述
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell 是专门设计用于系统管理的基于任务的命令行 Shell 和脚本语言。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中提供一组 PowerShell cmdlet，支持您部署、管理和监视可用性组、可用性副本和可用性数据库。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell 是专门设计用于系统管理的基于任务的命令行 Shell 和脚本语言。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中提供一组 PowerShell cmdlet，支持您部署、管理和监视可用性组、可用性副本和可用性数据库。  
   
 > [!NOTE]  
 >  一旦成功启动某操作，PowerShell cmdlet 即告完成。 这并不表示要执行的工作（例如可用性组的故障转移）已经完成。 对一系列操作编写脚本时，您可能必须检查这些操作的状态，并等待这些操作完成。  
   
 > [!NOTE]  
->  有关描述如何使用 cmdlet 来执行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 任务的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 联机丛书中的主题列表，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)的“相关任务”一节。  
+>  有关描述如何使用 cmdlet 来执行 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 任务的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 联机丛书中的主题列表，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)的“相关任务”一节。  
   
 ##  <a name="configuring-a-server-instance-for-always-on-availability-groups"></a><a name="ConfiguringServerInstance"></a> 服务器实例配置 Alwayson 可用性组  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|
 |[**Disable-SqlAlwaysOn**](/powershell/module/sqlserver/disable-sqlalwayson)|禁用服务器实例上的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|由 **Path**、 **InputObject** 或 **Name** 参数指定的服务器实例。 （必须为支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。)|  
-|[**Enable-SqlAlwaysOn**](/powershell/module/sqlserver/enable-sqlalwayson)|在支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 有关针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的支持的信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|任何支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
+|[**Enable-SqlAlwaysOn**](/powershell/module/sqlserver/enable-sqlalwayson)|在支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 有关针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的支持的信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|任何支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
 |[**New-SqlHadrEndPoint**](/powershell/module/sqlserver/new-sqlhadrendpoint)|在服务器实例上创建新的数据库镜像端点。 在主数据库和辅数据库之间移动数据时需要此端点。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |[**Set-SqlHadrEndpoint**](/powershell/module/sqlserver/set-sqlhadrendpoint)|更改现有数据库镜像端点的属性，如名称、状态或身份验证属性。|支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 并缺少数据库镜像端点的服务器实例|  
 

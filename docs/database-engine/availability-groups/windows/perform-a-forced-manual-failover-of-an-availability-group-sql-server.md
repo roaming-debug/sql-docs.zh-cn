@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fadd4b3978466775a44ace25a12bb9cfac08a8e7
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9b029efb566fef24aed4748b51bfc15050d495c0
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642570"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783486"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>执行 Always On 可用性组的强制手动故障转移 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。 强制故障转移是一种在不可能进行 [计划的手动故障转移](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 时严格限制用于灾难恢复的手动故障转移。 如果您强制故障转移到某一未同步的辅助副本，则可能会丢失一些数据。 因此，我们强烈建议您仅在以下情况下才强制故障转移：您必须立即将服务还原到可用性组并且您愿意承担丢失数据的风险。  
+  本主题说明如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。 强制故障转移是一种在不可能进行 [计划的手动故障转移](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 时严格限制用于灾难恢复的手动故障转移。 如果您强制故障转移到某一未同步的辅助副本，则可能会丢失一些数据。 因此，我们强烈建议您仅在以下情况下才强制故障转移：您必须立即将服务还原到可用性组并且您愿意承担丢失数据的风险。  
   
  执行强制故障转移之后，可用性组故障转移到的故障转移目标将变成新的主副本。 剩余辅助副本中的辅助数据库将会挂起并且必须手动恢复。 当以前的主副本变为可用时，该副本将转换为辅助角色，这导致以前的主数据库变成辅助数据库并转换为 SUSPENDED 状态。 在恢复某一给定的辅助数据库之前，您可能能够从其还原丢失的数据。 但请注意，在其任何辅助数据库被挂起时，事务日志截断在给定的主数据库上被延迟。  
   

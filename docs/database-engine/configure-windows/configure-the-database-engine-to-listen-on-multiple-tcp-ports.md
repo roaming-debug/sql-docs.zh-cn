@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc92b34d57f2406c1b5aa59cce67840af4c21918
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28c73233d8a7b38ec2d14fa92c40f69d9ae0af05
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697758"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783274"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>将数据库引擎配置为侦听多个 TCP 端口
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置为侦听多个 TCP 端口。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启用 TCP/IP 后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将侦听连接点上是否有传入的连接（由 IP 地址和 TCP 端口号组成）。下列过程将创建一个表格格式数据流 (TDS) 端点，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听其他 TCP 端口。  
+  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中将 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 配置为侦听多个 TCP 端口。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启用 TCP/IP 后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将侦听连接点上是否有传入的连接（由 IP 地址和 TCP 端口号组成）。下列过程将创建一个表格格式数据流 (TDS) 端点，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听其他 TCP 端口。  
   
  创建第二个 TDS 端点的可能原因包括：  
   

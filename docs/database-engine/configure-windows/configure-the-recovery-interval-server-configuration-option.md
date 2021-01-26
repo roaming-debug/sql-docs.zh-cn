@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9e1311433aab88efd6e1efbbe4a260c62075a99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ac6d7f368a42e8a6c81fadbf151760b5bdfc8b53
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785820"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783136"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>配置恢复间隔服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “恢复间隔” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“恢复间隔”** 选项定义恢复某一数据库所需时间的上限。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用为该选项指定的值确定 [自动检查点](../../relational-databases/logs/database-checkpoints-sql-server.md) 对给定数据库发出的大致频率。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “恢复间隔” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“恢复间隔”** 选项定义恢复某一数据库所需时间的上限。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用为该选项指定的值确定 [自动检查点](../../relational-databases/logs/database-checkpoints-sql-server.md) 对给定数据库发出的大致频率。  
   
  默认恢复间隔值为 0，这将允许 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 自动配置恢复间隔。 通常，对于活动数据库，该默认恢复间隔将导致大约一分钟执行一次自动检查点检查，并且导致不到一分钟的恢复时间。 较高的值表示近似的最大恢复时间，以分钟为单位。 例如，将恢复间隔设置为 3 指示最大恢复时间大约为 3 分钟。  
   

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a8d61714928482cf15f00a74175606ec43ca6e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de30cb4bcf672fdf47ab926a28680baa1d9b1067
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697913"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783277"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>配置 cursor threshold 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cursor threshold [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **cursor threshold** 选项指定游标集中的行数，超过此行数，将异步生成游标键集。 当游标为结果集生成键集时，查询优化器会估算将为该结果集返回的行数。 如果查询优化器估算出的返回行数大于此阈值，则将异步生成游标，使用户能够在继续填充游标的同时从该游标中提取行。 否则，同步生成游标，查询将一直等待到返回所有行。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cursor threshold [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **cursor threshold** 选项指定游标集中的行数，超过此行数，将异步生成游标键集。 当游标为结果集生成键集时，查询优化器会估算将为该结果集返回的行数。 如果查询优化器估算出的返回行数大于此阈值，则将异步生成游标，使用户能够在继续填充游标的同时从该游标中提取行。 否则，同步生成游标，查询将一直等待到返回所有行。  
   
  **本主题内容**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "85697913"
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
   
--   如果将 **游标阙值** 设置为 -1，则所有游标键集将同步生成，这对于小游标集很有用。 如果将 **cursor threshold** 设置为 0，则所有游标键集将异步生成。 如果 **cursor threshold**为其他值，则查询优化器将比较该值与游标集中的所需行数，如果后者大于前者，则将异步生成键集。 不要将 **cursor threshold** 的值设置得过低，因为最好以同步方式创建小结果集。  
+-   如果将 **游标阙值** 设置为 -1，则所有游标键集将同步生成，这对于小游标集很有用。 如果将 **cursor threshold** 设置为 0，则所有游标键集将异步生成。 如果 **cursor threshold** 为其他值，则查询优化器将比较该值与游标集中的所需行数，如果后者大于前者，则将异步生成键集。 不要将 **cursor threshold** 的值设置得过低，因为最好以同步方式创建小结果集。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   

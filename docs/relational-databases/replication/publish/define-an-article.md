@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7703c4ebe7c05dd266866170bf499f3d370ee6c9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: b93fbfea46931eb460b842a3a34ae13853726792
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867130"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766368"
 ---
 # <a name="define-an-article"></a>定义项目
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义项目。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义项目。  
   
  **本主题内容**  
   
@@ -133,7 +133,7 @@ ms.locfileid: "91867130"
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../relational-databases/replication/codesnippet/tsql/define-an-article_1.sql)]  
   
- 本例为某个合并发布定义项目，其中 `SalesOrderHeader` 项目基于 **SalesPersonID**进行静态筛选，而 `SalesOrderDetail` 项目则基于 `SalesOrderHeader`进行联接筛选。  
+ 本例为某个合并发布定义项目，其中 `SalesOrderHeader` 项目基于 **SalesPersonID** 进行静态筛选，而 `SalesOrderDetail` 项目则基于 `SalesOrderHeader`进行联接筛选。  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-an-article_2.sql)]  
   

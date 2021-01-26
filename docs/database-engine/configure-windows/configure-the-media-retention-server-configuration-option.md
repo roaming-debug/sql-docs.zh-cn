@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7e699d9af02a8d24e01d1e7461aa9ee22c956bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f2d67ee55cf43b607aeb91d23fd42980b3438a1
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696963"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783651"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>配置 media retention 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **media retention** 选项指定保留每个备份集的时间长度。 此选项可以防止在指定的天数前覆盖备份。 配置了 **media retention** 选项后，无需在每次进行备份时都指定系统备份的保持时间。 默认值为 0 天，最大值为 365 天。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **media retention** 选项指定保留每个备份集的时间长度。 此选项可以防止在指定的天数前覆盖备份。 配置了 **media retention** 选项后，无需在每次进行备份时都指定系统备份的保持时间。 默认值为 0 天，最大值为 365 天。  
   
  **本主题内容**  
   

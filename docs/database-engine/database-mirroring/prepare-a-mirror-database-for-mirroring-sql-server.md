@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fa476693286b32cb2910526bb0ea7431faa5120
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 1996d9610067e7db52c538b20df0680fbc741548
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642142"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766380"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>为镜像准备镜像数据库 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在数据库镜像会话开始之前，数据库所有者或系统管理员必须确保已创建镜像数据库并可进行镜像。 创建新镜像数据库的最低要求是：执行主体数据库的完整备份和一个后续日志备份，并使用 WITH NORECOVERY 将这两个备份还原到镜像服务器实例上。  
   
- 本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中准备镜像数据库。  
+ 本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中准备镜像数据库。  
   
 -   **开始之前：**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "97642142"
   
 -   主体服务器和镜像服务器实例必须运行在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上。 尽管镜像服务器可以具有更高版本的 SQL Server，但仅在仔细计划的升级过程中建议此配置。 在此类配置中，会面临自动故障转移的风险，数据移动在其中会被自动挂起，因为数据不能移到更低版本的 SQL Server。 有关详细信息，请参阅 [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
   
--   主体服务器和镜像服务器实例必须运行在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中数据库镜像支持的信息，请参阅 [SQL Server 2017 的各版本和支持的功能](~/sql-server/editions-and-components-of-sql-server-2017.md)。  
+-   主体服务器和镜像服务器实例必须运行在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上。 有关 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中数据库镜像支持的信息，请参阅 [SQL Server 2017 的各版本和支持的功能](~/sql-server/editions-and-components-of-sql-server-2017.md)。  
   
 -   数据库必须使用完整恢复模式。  
   

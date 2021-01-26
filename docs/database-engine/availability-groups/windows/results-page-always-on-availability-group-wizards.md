@@ -15,17 +15,17 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 96c2ccde671737e55e4c301ab1f755a8192ed10f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 74e0a717873e4097734b842b7d3c371a167c0088
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641448"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783214"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>“结果”页（AlwaysOn 可用性组向导）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  本帮助主题介绍 **“结果”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页可查看该向导的结果。  
+  本帮助主题介绍 **“结果”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]。 使用此页可查看该向导的结果。  
   
 ##  <a name="results-page-options"></a><a name="PageOptions"></a> 结果页选项  
  **“摘要”** 网格包含以下列：  

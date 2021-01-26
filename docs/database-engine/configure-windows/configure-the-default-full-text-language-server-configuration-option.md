@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51e7b8c99fbf6c6cf7bf70a52b220ae4cd0ea3bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 45e05505444d00607cae875b8dfd8bd07bf9190e
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697727"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783234"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>配置 default full-text language 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置“默认全文语言”服务器配置选项。 **default full-text language** 选项指定全文索引的默认语言值。 语言分析将对全文索引的所有数据执行，并且取决于数据的语言。 该选项的默认值为服务器的语言。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地化版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将把 **default full-text language** 选项设置为服务器的语言（如果存在合适的匹配项）。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的非本地化版本， **或** 选项为“英语”。  
+  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置“默认全文语言”服务器配置选项。 **default full-text language** 选项指定全文索引的默认语言值。 语言分析将对全文索引的所有数据执行，并且取决于数据的语言。 该选项的默认值为服务器的语言。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地化版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将把 **default full-text language** 选项设置为服务器的语言（如果存在合适的匹配项）。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的非本地化版本， **或** 选项为“英语”。  
   
  **本主题内容**  
   

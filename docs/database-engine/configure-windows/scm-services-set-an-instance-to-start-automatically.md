@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e7747920eb3f23a011fbfb3609daa227810131
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ca1398eca69c0103d909cc6aeb35ac55848d5584
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170939"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783526"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>SCM 服务 - 将实例设置为自动启动
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例设置为自动启动。 在安装过程中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常配置为自动启动。 如果没有这样做，则可以随时更改该设置。  
+  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例设置为自动启动。 在安装过程中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常配置为自动启动。 如果没有这样做，则可以随时更改该设置。  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
   

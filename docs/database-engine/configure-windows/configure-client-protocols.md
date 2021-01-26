@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdb6f1d2db5a2a390f75a4215dce490625fcc699
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6651a3c0d5985e3fa848c3fd02cc0971cb87db0c
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669499"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783296"
 ---
 # <a name="configure-client-protocols"></a>配置客户端协议
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置管理器在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置客户端应用程序使用的客户端协议。 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持使用 TCP/IP 网络协议和 Named Pipes 协议的客户端通信。 如果客户端正在连接到同一计算机上的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可使用 Shared Memory 协议。 通常有三种选择协议的方法。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 配置管理器在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置客户端应用程序使用的客户端协议。 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持使用 TCP/IP 网络协议和 Named Pipes 协议的客户端通信。 如果客户端正在连接到同一计算机上的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可使用 Shared Memory 协议。 通常有三种选择协议的方法。  
   
 -   通过在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中设置协议顺序，将所有的客户端应用程序配置为使用相同的网络协议。  
   

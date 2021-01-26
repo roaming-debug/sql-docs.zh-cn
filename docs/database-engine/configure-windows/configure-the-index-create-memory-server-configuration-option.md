@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afe6724ebac116e091072ab74ee37142a2ab8230
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 66fa81d56ed0b3ebebd7a95ddea0b12356da5c1d
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697200"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783674"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>配置 index create memory 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 在创建索引时，**index create memory** 选项控制最初为排序操作分配的最大内存量。 此选项的默认值为 0（自动配置）。 如果随后创建索引时需要更多内存，而且有内存可供使用，服务器将使用可用的内存，从而超出此选项的设置。 如果没有内存可供使用，则继续使用已分配的内存来创建索引。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 在创建索引时，**index create memory** 选项控制最初为排序操作分配的最大内存量。 此选项的默认值为 0（自动配置）。 如果随后创建索引时需要更多内存，而且有内存可供使用，服务器将使用可用的内存，从而超出此选项的设置。 如果没有内存可供使用，则继续使用已分配的内存来创建索引。  
   
  **本主题内容**  
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 2c0615501d2cb191e5c45e33bb50f3898a412fbc
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 72b34306250bc24018c719f10700a29f4b7d6d0c
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96504881"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766483"
 ---
 # <a name="view-plan-guide-properties"></a>查看计划指南属性
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+  可以使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **本主题内容**  
   

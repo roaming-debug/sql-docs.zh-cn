@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: de6d20cbd6e1b185b9e06e057c0cbe91c590fb48
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ea85d4be41b5f7dd5c4619cd4e2f6dd315cc3a99
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641783"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783064"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性组仪表板 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  数据库管理员使用 Always On 可用性组仪表板大致了解 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的可用性组及其可用性副本和数据库的运行状况。 可用性组仪表板的一些典型用法如下：  
+  数据库管理员使用 Always On 可用性组仪表板大致了解 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中的可用性组及其可用性副本和数据库的运行状况。 可用性组仪表板的一些典型用法如下：  
   
 -   选择要手动故障转移的副本。    
 -   如果强制故障转移，则估计数据丢失。  

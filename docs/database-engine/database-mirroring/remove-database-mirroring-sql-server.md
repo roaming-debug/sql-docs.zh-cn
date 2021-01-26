@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a3cd9ef4faf8e11832288cb2cc6a0ec512f0ded
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 2d1e09227bd8f3334e2dfea5cce81dcb96857247
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641322"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783704"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中从数据库删除数据库镜像。  数据库所有者可以随时通过从数据库中删除镜像来手动停止数据库镜像会话。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中从数据库删除数据库镜像。  数据库所有者可以随时通过从数据库中删除镜像来手动停止数据库镜像会话。  
   
  **本主题内容**  
   

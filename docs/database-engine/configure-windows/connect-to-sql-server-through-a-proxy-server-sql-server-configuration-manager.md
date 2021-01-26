@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74187c8e806e6dd1cadb9ea38860b11ec0bcaba0
-ms.sourcegitcommit: f87f2f0f1edc91fe400040d8e3a5810347aa8d70
+ms.openlocfilehash: 325bdae16fdc8309d0f40134ba31041e5b47b547
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96857674"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783249"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>通过代理服务器连接到 SQL Server（SQL Server 配置管理器）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题介绍如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中通过代理服务器连接到 SQL Server。 若要通过远程 WinSock (RWS) 进行远程侦听，请定义代理服务器的本地地址表 (LAT)，以使侦听节点地址不在 LAT 条目范围内。  
+  本主题介绍如何使用 SQL Server 配置管理器在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中通过代理服务器连接到 SQL Server。 若要通过远程 WinSock (RWS) 进行远程侦听，请定义代理服务器的本地地址表 (LAT)，以使侦听节点地址不在 LAT 条目范围内。  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
   

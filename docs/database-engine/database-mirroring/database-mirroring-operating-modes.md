@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9e69236003f1c0ee2b13620b481dfddbaf9acd5a
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 1efefbb0b0a99f03d4ffa46e7d02fec05e8a8e60
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644111"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783552"
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "97644111"
  此节介绍异步数据库镜像的工作原理，何时适合使用高性能模式以及在主体服务器发生故障时如何响应。  
   
 > [!NOTE]  
->  大多数 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本仅支持同步数据库镜像（“仅支持‘完全’安全级别”）。 有关完全支持数据库镜像的版本的信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)中的“高可用性 (AlwaysOn)”。
+>  大多数 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本仅支持同步数据库镜像（“仅支持‘完全’安全级别”）。 有关完全支持数据库镜像的版本的信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)中的“高可用性 (AlwaysOn)”。
   
  将事务安全设置为 OFF 时，数据库镜像会话便会异步运行。 异步操作仅支持一种操作模式，即高性能模式。 此模式可增强性能，但要牺牲高可用性。 高性能模式仅使用主体服务器和镜像服务器。 镜像服务器上出现的问题不会影响主体服务器。 在丢失主体服务器的情况下，镜像数据库将标记为 DISCONNECTED，但仍可以作为备用数据库。  
   

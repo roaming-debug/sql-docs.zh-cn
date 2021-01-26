@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2fe841ef1b914f275878fa61ad40fe2a016a4a5
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: d3585a187d11ee97e409d196c81ddb00643bb3ac
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644055"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98782964"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "97644055"
   
  ![作为 2 个数据库的见证服务器的服务器实例](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "作为 2 个数据库的见证服务器的服务器实例")  
   
- 此外，一个服务器实例还可以既作为某些会话中的见证服务器，同时又作为其他会话中的伙伴。 但实际上，服务器实例通常是要么作为见证服务器，要么作为伙伴。 这是因为伙伴需要具有足够硬件的高级计算机来支持生产数据库，但是见证服务器可以在支持 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的任何可用 Windows 系统中运行。  
+ 此外，一个服务器实例还可以既作为某些会话中的见证服务器，同时又作为其他会话中的伙伴。 但实际上，服务器实例通常是要么作为见证服务器，要么作为伙伴。 这是因为伙伴需要具有足够硬件的高级计算机来支持生产数据库，但是见证服务器可以在支持 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的任何可用 Windows 系统中运行。  
   
 ##  <a name="software-and-hardware-recommendations"></a><a name="SwHwRecommendations"></a> 关于软件和硬件的建议  
  我们极力建议将见证服务器置于独立于伙伴的单独计算机中。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持数据库镜像伙伴。 相反， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 也支持见证服务器。 除了从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]升级期间之外，镜像会话中的服务器实例必须都运行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 镜像配置升级时支持 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 见证服务器，但是不能添加到现有或新的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或更高版本的镜像配置中。  

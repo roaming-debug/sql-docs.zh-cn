@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc99d890e179bd19a9797471f5b940d6ffb7a44f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0f65bfbfb0a68a76c9b0471bba42e4182ccff888
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697232"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783681"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>配置填充因子服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “填充因子” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 提供填充因子是为了优化索引数据存储和性能。 当创建或重新生成索引时，填充因子的值可确定每个叶级页上要填充数据的空间百分比，以便保留一些剩余空间作为以后扩展索引的可用空间。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “填充因子” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 提供填充因子是为了优化索引数据存储和性能。 当创建或重新生成索引时，填充因子的值可确定每个叶级页上要填充数据的空间百分比，以便保留一些剩余空间作为以后扩展索引的可用空间。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
  **本主题内容**  
   

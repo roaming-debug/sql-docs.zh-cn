@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b236dc0cb810a6ba8d63ef7c68367eab2252b8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c5330bad05b0949c4df32f5593aa3fe39e2ad50
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758250"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783630"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>配置 nested triggers 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nested triggers [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **nested triggers** 选项控制 AFTER 触发器是否可以级联。 即执行某项操作将启动另一个触发器，而该触发器又将启动另外一个，依此类推。 如果 **nested triggers** 设置为 0，AFTER 触发器不能级联。 如果 **嵌套触发器** 设置为 1（默认值），AFTER 触发器最多能级联 32 级。 不管此选项如何设置，INSTEAD OF 触发器都可以嵌套。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nested triggers [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **nested triggers** 选项控制 AFTER 触发器是否可以级联。 即执行某项操作将启动另一个触发器，而该触发器又将启动另外一个，依此类推。 如果 **nested triggers** 设置为 0，AFTER 触发器不能级联。 如果 **嵌套触发器** 设置为 1（默认值），AFTER 触发器最多能级联 32 级。 不管此选项如何设置，INSTEAD OF 触发器都可以嵌套。  
   
  **本主题内容**  
   

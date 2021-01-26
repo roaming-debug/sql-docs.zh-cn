@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8aa50fbd2eaa934c13704dc218084655c0f0f089
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fcc9082b2700b4818b8742c59fe12cc38879f0f1
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764035"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783096"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>配置两位数年份截止服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “两位数年份截止” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“两位数年份截止”** 选项从 1753 到 9999 之间指定一个整数来表示缩略形式的年份，以将两位数的年份解释为四位数的年份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认的时间范围是 1950-2049，表示截止年份为 2049。 这说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将两位数年份 49 解释为 2049 年，将两位数年份 50 解释为 1950 年，而将两位数年份 99 解释为 1999 年。 若要维护向后兼容性，请将设置保持为默认值。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “两位数年份截止” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“两位数年份截止”** 选项从 1753 到 9999 之间指定一个整数来表示缩略形式的年份，以将两位数的年份解释为四位数的年份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认的时间范围是 1950-2049，表示截止年份为 2049。 这说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将两位数年份 49 解释为 2049 年，将两位数年份 50 解释为 1950 年，而将两位数年份 99 解释为 1999 年。 若要维护向后兼容性，请将设置保持为默认值。  
   
  **本主题内容**  
   

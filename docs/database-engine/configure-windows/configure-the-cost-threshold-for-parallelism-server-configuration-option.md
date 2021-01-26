@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c71e7d74d7ba2844d1891b7cf926c9bbded8e115
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea4681fd02065129c4b565d0e9dbb744a321f9ae
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728664"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783295"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>配置并行的开销阈值服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “并行的开销阈值” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **cost threshold for parallelism** 选项指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建和运行并行查询计划的阈值。 仅当运行同一查询的串行计划的估计开销高于在“并行的开销阈值”中设置的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才创建和运行该查询的并行计划。 成本指的是在特定硬件配置中运行串行计划估计需要花费的成本，而不是时间单位。 **“并行的开销阈值”** 选项可设置为 0 到 32767 之间的任何值。 默认值为 5。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “并行的开销阈值” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **cost threshold for parallelism** 选项指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建和运行并行查询计划的阈值。 仅当运行同一查询的串行计划的估计开销高于在“并行的开销阈值”中设置的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才创建和运行该查询的并行计划。 成本指的是在特定硬件配置中运行串行计划估计需要花费的成本，而不是时间单位。 **“并行的开销阈值”** 选项可设置为 0 到 32767 之间的任何值。 默认值为 5。  
   
  **本主题内容**  
   

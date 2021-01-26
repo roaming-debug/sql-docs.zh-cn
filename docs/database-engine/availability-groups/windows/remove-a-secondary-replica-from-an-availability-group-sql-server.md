@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b128836eafee3d3ae0e7416927f6a3a1993698cf
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 014636ac35e9f9bf79a22e2603355dd7d904c4bb
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642466"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783433"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>从可用性组中删除辅助副本 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题说明了如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 从 AlwaysOn 可用性组中删除次要副本。  
+  本主题说明了如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]或 PowerShell 从 AlwaysOn 可用性组中删除次要副本。  
  
    
 ##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  

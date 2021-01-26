@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 83c2a77b294a70cbc6ace15c8b3a1d85a8b5bcc9
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: bfd907b77633bdecc1af1371c83da4a4d4bff9a9
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637688"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783468"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>删除可用性组 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 删除 Always On 可用性组。 如果在删除某一可用性组时承载可用性副本之一的服务器实例处于脱机状态，则在联机后，该服务器实例将删除本地可用性副本。 删除可用性组时，将删除任何关联的可用性组侦听器。  
+  本主题介绍如何在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 删除 Always On 可用性组。 如果在删除某一可用性组时承载可用性副本之一的服务器实例处于脱机状态，则在联机后，该服务器实例将删除本地可用性副本。 删除可用性组时，将删除任何关联的可用性组侦听器。  
   
  请注意，如果需要，您可以从拥有某一可用性组的正确安全凭据的任何 Windows Server 故障转移群集 (WSFC) 节点删除该可用性组。 因此，在某一可用性组未保留任何可用性副本时，您可以删除该可用性组。  
   

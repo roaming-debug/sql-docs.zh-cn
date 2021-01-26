@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ec3a84dc54dcaf373f8fd817c259602c7901410d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: e1a2fe365ff2cf40e1dd7e08e113a586e7c2b666
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642511"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783514"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "97642511"
 >  在部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]之前，强烈建议您阅读本主题的每个章节。  
     
 ##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 支持可用性组的 .NET 修补程序  
- 根据你将与 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 一起使用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 组件和功能，你可能需要安装在下表中标识的其他 .NET 修补程序。 可以按任意顺序安装这些修补程序。  
+ 根据你将与 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 一起使用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 组件和功能，你可能需要安装在下表中标识的其他 .NET 修补程序。 可以按任意顺序安装这些修补程序。  
   
 |依赖功能|修补程序|链接|  
 |-----------------------|------------|----------|  

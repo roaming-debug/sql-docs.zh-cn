@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 0ac5ab1195dcc34ebb7dcf3b30ef41a190f9a3eb
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 5a6cdaf5ef76f5777dd13cddabd469a55cd2102b
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644240"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766422"
 ---
 # <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>将辅助数据库联接到 AlwaysOn 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 将辅助数据库联接到 Always On 可用性组。 在您为辅助副本准备了辅助数据库后，需要尽快将该数据库联接到可用性组。 这将启动从相应的主数据库到辅助数据库的数据移动。  
+  本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]或 PowerShell 将辅助数据库联接到 Always On 可用性组。 在您为辅助副本准备了辅助数据库后，需要尽快将该数据库联接到可用性组。 这将启动从相应的主数据库到辅助数据库的数据移动。  
    
 > [!NOTE]  
 >  有关在辅助数据库联接到该组后所发生的情况的信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
