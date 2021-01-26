@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 27fa2389740a7b2d15cb019d86ba1d02559ce6d4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 75cb332c949dbf73a532dbc754db4fce1530a350
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172659"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597219"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,12 +49,12 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' | @msg_variable} , [ param_value 
  存储在 sys.messages 中的消息的 ID。 如果 msg_number <= 13000，或者此消息不在 sys.messages 中，则返回 NULL。  
   
  msg_string  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到[当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)）。  
   
  用单引号括起来的字符串，其中包含参数值占位符。 该错误消息最长可以有 2,047 个字符。 如果该消息包含的字符数等于或超过 2,048 个，则只能显示前 2,044 个并添加一个省略号以表示该消息已被截断。 请注意，由于内部存储行为的缘故，代替参数使用的字符数比输出所显示的字符数要多。  有关消息字符串结构及在字符串中使用参数的信息，请参阅 [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md) 中 msg_str 参数的说明。  
 
  *@msg_variable*  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到[当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)）。  
   
  一个 nvarchar 或 varchar 变量，其中包含符合上述 msg_string 条件的字符串。  
   
@@ -85,7 +85,7 @@ SELECT @var1;
   
 ### <a name="b-example-with-a-message-string"></a>B. 带有消息字符串的示例  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到[当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)）。  
   
  以下示例采用字符串作为输入。  
   
@@ -129,5 +129,3 @@ SELECT FORMATMESSAGE('Hello %-20s!', 'TEST');
  [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
  [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
-  
-  

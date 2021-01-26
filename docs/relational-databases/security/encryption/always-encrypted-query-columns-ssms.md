@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 475cda1238efc6a7c4b630d4458c719dc1b9adbd
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 4bdf43c821bd278e6080e6f9244f3bb169388653
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534602"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596254"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>通过 SQL Server Management Studio 查询使用 Always Encrypted 的列
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "98534602"
 可以在使用“连接到服务器”对话框创建新连接或更改现有连接时启用或禁用 Always Encrypted。 
 
 若要启用（禁用）Always Encrypted，请执行以下操作：
-1. 打开“连接到服务器”对话框（有关详细信息，请参阅[连接到 SQL Server 实例](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance)）。
+1. 打开“连接到服务器”对话框（有关详细信息，请参阅[连接到 SQL Server 实例](../../../ssms/quickstarts/ssms-connect-query-sql-server.md#connect-to-a-sql-server-instance)）。
 1. 单击“选项 >>”。
 1. 如果使用 SSMS 18 或更高版本：
     1. 选择“Always Encrypted”选项卡。

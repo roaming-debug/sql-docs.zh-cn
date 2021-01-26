@@ -35,16 +35,16 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d2ec2dd6935d535bcef0ebb566bf0d0f8f09d6a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68c3ff265fbf1bf56fb2d7f0ba42aa6f76dd72b2
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758986"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766247"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍了如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划向导创建单服务器或多服务器维护计划。 维护计划向导可创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
+  本主题介绍了如何在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中使用维护计划向导创建单服务器或多服务器维护计划。 维护计划向导可创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
     
  
 ##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
@@ -258,7 +258,7 @@ ms.locfileid: "85758986"
   
      选中此选项还可激活“使用低优先级”（其使用 `WAIT_AT_LOW_PRIORITY` 选项）。 联机索引重新生成操作将等待低优先级锁 `MAX_DURATION` 分钟，从而允许其他操作在联机索引生成操作正在等待的同时继续进行。  
   
-    > **注意：** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+    > **注意：** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
      “MAXDOP”复选框  
      对于 DBCC CHECKDB，替代 sp_configure 的最大并行度配置选项。 有关详细信息，请参阅 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  

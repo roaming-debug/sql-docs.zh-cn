@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 6a854486d1867e84bcd9b13cb148d3026a41d51f
-ms.sourcegitcommit: d819173fb91af6f20ca6ee59686c35c71b060fbc
+ms.openlocfilehash: c6611fcc392d37545f50e12fa8007923d8bc5846
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/28/2020
-ms.locfileid: "97797754"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596355"
 ---
 # <a name="mssqlserver_17890"></a>MSSQLSERVER_17890
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "97797754"
 
 - 在为多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例配置最大服务器内存选项和最小服务器内存选项之前，请考虑每个 SQL Server 实例的非缓冲池的内存需求。 然后，为每个 SQL Server 实例配置这些选项。
 
-理想情况下，你可以在负峰值负载期间收集此基准信息。 因此，你可以确定各个应用程序和组件的内存要求，以支持峰值负载。 内存要求因系统而异，这取决于系统上运行的活动和应用程序。 你可以查询动态管理视图 sys.dm_os_process_memory 中提供的信息，以了解系统是否遇到内存不足的情况。 有关详细信息，请参阅 [sys.dm_os_process_memory (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-process-memory-transact-sql)。
+理想情况下，你可以在负峰值负载期间收集此基准信息。 因此，你可以确定各个应用程序和组件的内存要求，以支持峰值负载。 内存要求因系统而异，这取决于系统上运行的活动和应用程序。 你可以查询动态管理视图 sys.dm_os_process_memory 中提供的信息，以了解系统是否遇到内存不足的情况。 有关详细信息，请参阅 [sys.dm_os_process_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md)。
 
 ## <a name="improvements-added-in-windows-server-2008-and-r2-version"></a>Windows Server 2008 和 R2 版本中的新增改进
 

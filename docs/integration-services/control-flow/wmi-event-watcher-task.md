@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d40281b9c233b55b41cfc8fc18040fb3e6c4d927
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 8b4e04871bf0264c9e9c723365f2a29d95265ffa
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195963"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594931"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件观察器任务
 
@@ -45,7 +45,7 @@ ms.locfileid: "92195963"
 -   [WMI 数据读取器任务](../../integration-services/control-flow/wmi-data-reader-task.md)  
   
 ## <a name="wql-queries"></a>WQL 查询  
- WQL 是 SQL 的方言，其扩展插件支持 WMI 事件通知和其他 WMI 特定功能。 有关 WQL 的详细信息，请参阅 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553)中的 Windows Management Instrumentation 文档。  
+ WQL 是 SQL 的方言，其扩展插件支持 WMI 事件通知和其他 WMI 特定功能。 有关 WQL 的详细信息，请参阅 [MSDN Library](/documentation/)中的 Windows Management Instrumentation 文档。  
   
 > [!NOTE]  
 >  WMI 类因 Windows 版本的不同而异。  
@@ -178,4 +178,4 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
  **WQLQuerySource**  
  在列表中选择变量，或单击“\<**New variable...**>创建一个新变量。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../integration-services-ssis-variables.md)

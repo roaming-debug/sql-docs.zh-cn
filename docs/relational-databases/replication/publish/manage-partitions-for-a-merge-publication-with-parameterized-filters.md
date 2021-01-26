@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4793260717225b731f6675098a8fa187884de206
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0b24e2e404dbea75d77cdfc8acdfa50189db2286
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882179"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765722"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>通过参数化筛选器为合并发布管理分区
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中通过参数化筛选器为合并发布管理分区。 参数化行筛选器可用于生成不重叠的分区。 可以限制这些分区，以便只有一个订阅接收到给定分区。 在这类情况下，大量订阅服务器将导致大量的分区，从而需要同等数量的分区快照。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中通过参数化筛选器为合并发布管理分区。 参数化行筛选器可用于生成不重叠的分区。 可以限制这些分区，以便只有一个订阅接收到给定分区。 在这类情况下，大量订阅服务器将导致大量的分区，从而需要同等数量的分区快照。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
  **本主题内容**  
   

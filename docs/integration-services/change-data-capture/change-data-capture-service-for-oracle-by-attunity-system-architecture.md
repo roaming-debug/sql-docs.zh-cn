@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d5fa150f7477449c644c554b68c7703be8e44df1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8d184639991b7e7a0d5e837fabe95535fdc08fa
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351543"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765674"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Change Data Capture Service for Oracle by Attunity 系统体系结构
 
@@ -33,7 +33,7 @@ ms.locfileid: "88351543"
   
 -   Oracle 数据库：可以是运行支持的 Oracle 数据库版本的任何计算机。 这包括运行 Windows、Linux 或所安装的 Oracle 数据库版本支持的任何其他操作系统的任何计算机。 请注意，该关系图以复数形式显示此平台，因为单个 Oracle CDC 服务可以从多个源 Oracle 数据库捕获更改。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：可以是运行目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的支持的 SKU）的任何计算机。 一个 Oracle CDC 服务支持用于存储更改表和服务配置的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 平台还可以表示 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的群集实例或使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] AlwaysOn **功能的** 的镜像实例。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：可以是运行目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的支持的 SKU）的任何计算机。 一个 Oracle CDC 服务支持用于存储更改表和服务配置的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 平台还可以表示 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的群集实例或使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] AlwaysOn **功能的** 的镜像实例。  
   
 -   Oracle CDC 设计器：可以是能够访问源 Oracle 数据库和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的任何支持的 Windows 计算机。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "88351543"
 ||Oracle 日志读取器：使用 Oracle 客户端读取 Oracle 事务日志。|  
 ||Oracle 客户端：用于与 Oracle 进行通信的 Oracle 即时客户端。 这是应从 Oracle 获取并在安装 Oracle CDC 服务之前安装的必备组件。|  
 ||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改编写器：它将对捕获的 Oracle 表的提交的更改写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更改表。 此组件还在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中维护该捕获状态。|  
-||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC 客户端：用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的 Microsoft Native Client。 这是应从 Microsoft 获取并在安装 Oracle CDC 服务之前安装的必备组件。|  
+||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC 客户端：用于 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的 Microsoft Native Client。 这是应从 Microsoft 获取并在安装 Oracle CDC 服务之前安装的必备组件。|  
 |Oracle CDC 服务配置：这是一种 Microsoft 管理控制台管理单元，它创建 Windows 服务并且设置其配置。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端：.NET framework 的版本 4 随附的 SQL ADO.NET 客户端。|  
 |Oracle 数据库：从其捕获对所选表的更改的源 Oracle 数据库。|日志挖掘器：通过其读取 Oracle 事务日志的一种 Oracle 组件。|  
 ||事务日志：联机并存档的 Oracle 重做日志，Oracle 使用这些日志来确保数据库可以回滚事务并且从失败中恢复（在该情况下，Oracle 数据库必须在存档日志模式下操作）。|  

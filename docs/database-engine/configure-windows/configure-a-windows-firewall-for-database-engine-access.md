@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c1d9b69cc55ab617eb3a4c5b4ed2ebb27726f35b
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 03f4a469465339664e56aae784c3b734f85ba9b4
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669770"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765692"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>为数据库引擎访问配置 Windows 防火墙
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
-  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为数据库引擎访问配置 Windows 防火墙。 防火墙系统有助于阻止对计算机资源进行未经授权的访问。 若要通过防火墙访问 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，必须在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上配置防火墙以允许访问。  
+  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中为数据库引擎访问配置 Windows 防火墙。 防火墙系统有助于阻止对计算机资源进行未经授权的访问。 若要通过防火墙访问 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，必须在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上配置防火墙以允许访问。  
   
  有关默认 Windows 防火墙设置的详细信息以及有关影响 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。 有很多可用的防火墙系统。 有关特定于您系统的信息，请参阅防火墙文档。  
   

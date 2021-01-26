@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 39cbbe7a884d5e8fe45d0877b7a581016e1e95c2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 1e41945d69a499908d11d8ebc8cbda7688d544a8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97640503"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766094"
 ---
 # <a name="secondary-database-is-not-joined"></a>未联接辅助数据库
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,7 @@ ms.locfileid: "97640503"
   
 ## <a name="description"></a>说明  
  此策略检查辅助数据库（也称为“辅助数据库副本”）的联接状态。 数据集副本未联接时，此策略处于不正常状态。 否则，该策略处于正常状态。  
-  
-> [!NOTE]  
->  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [未联接辅助数据库](https://go.microsoft.com/fwlink/p/?LinkId=220862) 中。  
-  
+
 ## <a name="possible-causes"></a>可能的原因  
  此辅助数据库未联接到可用性组。 此辅助数据库的配置不完整。  
   

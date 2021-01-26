@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6b5f22541039f781e49615b5e8916d138a5c375b
-ms.sourcegitcommit: bb54e4c9dd8c97365b7a96dfcd557b8b86d06978
+ms.openlocfilehash: fea1ba3712f07548d259867f931188d9e5798802
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97736885"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596415"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE [SQL Server SQL MI](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor 是一项可用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负载和系统资源使用情况的功能。 通过 Resource Governor，可以指定针对传入应用程序请求可使用的 CPU、物理 I/O 和内存的使用量的限制。  
   
 > [!NOTE]
-> 尽管 [Azure SQL 数据库利用 Resource Governor](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/)（以及其他技术）来管理资源，但不支持用户在 Azure SQL 数据库中配置自定义资源池和工作负荷组。 Azure Synapse Analytics 通过[工作负荷分类功能](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification)以不同方式实现类似的 Resource Governor 行为。
+> 尽管 [Azure SQL 数据库利用 Resource Governor](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/)（以及其他技术）来管理资源，但不支持用户在 Azure SQL 数据库中配置自定义资源池和工作负荷组。 Azure Synapse Analytics 通过[工作负荷分类功能](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification)以不同方式实现类似的 Resource Governor 行为。
 
 ## <a name="benefits-of-resource-governor"></a>资源调控器的优势  
  利用资源调控器，您可以通过指定传入请求的资源消耗限制来管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷和资源。 在资源调控器上下文中，工作负荷是一组大小相似的查询或请求，可以且应该视为单个实体。 这并不是必需的，但是工作负荷的资源使用模式越统一，通过资源调控器可能获得的益处越多。 资源限制可以实时重新配置，对正在执行的工作负荷影响非常小。  
@@ -95,5 +95,4 @@ ms.locfileid: "97736885"
   
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎实例 (SQL Server)](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
-  
   

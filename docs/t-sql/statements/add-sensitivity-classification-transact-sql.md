@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current"
-ms.openlocfilehash: a9654a26ff748afa039ac5b0d2088135eea6a796
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8aa8b00a9a24513eb925ef113db94caaea0cfe50
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466028"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688828"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "97466028"
 
 对于 SQL Server，这在 SQL Server 2019 中进行了引入。
 
-对你的数据库环境中的敏感数据进行分类可帮助实现更高的可见性和更好的保护。 可以在 [SQL 信息保护入门](https://aka.ms/sqlip)中找到更多信息
+对你的数据库环境中的敏感数据进行分类可帮助实现更高的可见性和更好的保护。 可以在 [SQL 信息保护入门](/azure/azure-sql/database/data-discovery-and-classification-overview)中找到更多信息
 
 ## <a name="syntax"></a>语法
 
@@ -129,5 +129,5 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 - [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 - [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
-- [权限（数据库引擎）](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
-- [SQL 信息保护入门](https://aka.ms/sqlip)
+- [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)
+- [SQL 信息保护入门](/azure/azure-sql/database/data-discovery-and-classification-overview)

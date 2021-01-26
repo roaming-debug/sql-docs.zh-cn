@@ -10,12 +10,12 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 7b582e5722b19db3569aaa0f154f5b78864a2838
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+ms.openlocfilehash: 06c69fb6b40fad1f6440583b693719767d6ad1d2
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328500"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597275"
 ---
 # <a name="load-data-into-a-dedicated-sql-pool-in-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 Azure Synapse Analytics 中的专用 SQL 池
 
@@ -78,7 +78,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 
 - [用于 Azure 的 Microsoft SQL Server Integration Services 功能包][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。 SQL DW 上传任务是功能包的组件。
 
-- [Azure Blob 存储](https://docs.microsoft.com/azure/storage/)帐户。 SQL DW 上传任务将数据从 Azure Blob 存储加载到 Azure Synapse Analytics 中。 可以加载 Blob 存储中的现有文件，也可以加载计算机中的文件。 如果选择计算机中的文件，则 SQL DW 上传任务会首先将它们上传到 Blob 存储进行暂存，然后再将它们加载到专用 SQL 池中。
+- [Azure Blob 存储](/azure/storage/)帐户。 SQL DW 上传任务将数据从 Azure Blob 存储加载到 Azure Synapse Analytics 中。 可以加载 Blob 存储中的现有文件，也可以加载计算机中的文件。 如果选择计算机中的文件，则 SQL DW 上传任务会首先将它们上传到 Blob 存储进行暂存，然后再将它们加载到专用 SQL 池中。
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>添加和配置 SQL DW 上传任务
 
@@ -112,9 +112,9 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 
 若要使用此选项继续执行本教程的操作，需要以下项：
 
-1. **示例数据** 。 本教程使用 AdventureWorks 示例数据库中存储在 SQL Server 中的示例数据，作为要加载到专用 SQL 池的源数据。 要获取 AdventureWorks 示例数据库，请参阅 [AdventureWorks 示例数据库][AdventureWorks 2014 Sample Databases]。
+1. **示例数据**。 本教程使用 AdventureWorks 示例数据库中存储在 SQL Server 中的示例数据，作为要加载到专用 SQL 池的源数据。 要获取 AdventureWorks 示例数据库，请参阅 [AdventureWorks 示例数据库][AdventureWorks 2014 Sample Databases]。
 
-2. **防火墙规则** 。 必须先使用本地计算机的 IP 地址在专用 SQL 池上创建防火墙规则，才可将数据上传到专用 SQL 池中。
+2. **防火墙规则**。 必须先使用本地计算机的 IP 地址在专用 SQL 池上创建防火墙规则，才可将数据上传到专用 SQL 池中。
 
 ### <a name="create-the-basic-data-flow"></a>创建基本数据流
 1. 将“数据流任务”从“工具箱”拖动到“控制流”选项卡上的设计图面。

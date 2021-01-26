@@ -2,7 +2,7 @@
 description: DROP VIEW (Transact-SQL)
 title: DROP VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2018
+ms.date: 01/19/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3eafbb102cbd58d6d9684f083e82078a8f578feb
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: eb57746700a3e5fc6b48fb4dc4032e1d92e6ddb9
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170389"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688991"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,11 +41,17 @@ ms.locfileid: "98170389"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
--- Syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics
+-- Syntax for SQL Server and Azure SQL Database
   
 DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ...,n ] [ ; ]  
 ```  
+
+```syntaxsql
+-- Syntax for Azure Synapse Analytics
   
+DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ; ]  
+```  
+
 ```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
@@ -56,7 +62,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
 
 ## <a name="arguments"></a>参数
  IF EXISTS  
- **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)[!INCLUDE[sssds](../../includes/sssds-md.md)]）。|  
+ **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到 [当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)[!INCLUDE[sssds](../../includes/sssds-md.md)]）。|  
   
  只有在视图已存在时才对其进行有条件地删除。  
   
@@ -99,5 +105,4 @@ GO
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)   
- [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
- 
+ [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)

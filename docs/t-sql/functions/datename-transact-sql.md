@@ -26,12 +26,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 021c8e18b0767fcd844a92f598b4fbcb434740a4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f9279883c9f032574e32056b2360a5947ffba022
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097251"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766208"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +135,7 @@ SELECT DATENAME(year, @t);
 + SELECT \<list>
 + WHERE
   
-在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，DATENAME 将字符串文字作为 datetime2 类型隐式转换。 也就是说，日期在作为字符串传递时，`DATENAME` 不支持 YDM 格式。 必须先将字符串显式转换为 datetime 或 smalldatetime 类型，然后才能使用 YDM 格式   。
+在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中，DATENAME 将字符串文字作为 datetime2 类型隐式转换。 也就是说，日期在作为字符串传递时，`DATENAME` 不支持 YDM 格式。 必须先将字符串显式转换为 datetime 或 smalldatetime 类型，然后才能使用 YDM 格式   。
   
 ## <a name="examples"></a>示例  
 此示例返回指定日期的日期部分。 用表中的 datepart 值替换 SELECT 语句中的 `datepart` 参数：

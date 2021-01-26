@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 645fae8fc567eff8d8e4daa62d3b19fec2c2fdc1
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: d5be1ee9057711414850e35d4226ad5c3f3346fd
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643804"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765508"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>将次要副本添加到 AlwaysOn 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题描述了如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
+  本主题描述了如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
 
   
 ##  <a name="prerequisites-and-restrictions"></a><a name="PrerequisitesRestrictions"></a> 先决条件和限制  

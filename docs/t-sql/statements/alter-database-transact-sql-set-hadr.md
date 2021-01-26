@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 93fed90647a3a6e86e3f2cfa2fe2016727b481e2
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 405ed385004aa0ad23d93ef4dbbf2dbd3c2c5726
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094729"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689166"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ALTER DATABASE database_name
   
 -   数据库必须已经添加到主副本上的可用性组中。  
   
--   主副本必须处于活动状态。 有关如何解决非活动主副本问题的信息，请参阅[解决 Always On 可用性组配置问题 (SQL Server)](https://go.microsoft.com/fwlink/?LinkId=225834)。  
+-   主副本必须处于活动状态。 有关如何解决非活动主副本问题的信息，请参阅[解决 Always On 可用性组配置问题 (SQL Server)](/previous-versions/sql/sql-server-2012/ff878308(v=sql.110))。  
   
 -   主副本必须处于联机状态，辅助副本必须连接到主副本。  
   
@@ -148,5 +148,4 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [解决 AlwaysOn 可用性组配置问题 (SQL Server)](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
-  
   

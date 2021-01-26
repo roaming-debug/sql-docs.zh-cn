@@ -18,16 +18,16 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39a4d0a6136990cdb583a432757503099f61cfb6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7a5e8f14728e5239ab4e0b1d71c78b713f2c27c2
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97403393"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765584"
 ---
 # <a name="get-information-about-dml-triggers"></a>获取有关 DML 触发器的信息
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中获取有关 DML 触发器的信息。 此信息可包含针对某个表的触发器的类型、触发器的名称、其所有者以及创建或修改日期。 如果在创建触发器时未加密，您可获取该触发器的定义。 通过该定义，可以帮助您了解该触发器如何影响对其定义该触发器的表。 此外，您可以找出特定触发器使用的对象。 通过该信息，可在数据库中影响触发器的对象发生更改或删除它们时确定这些对象。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中获取有关 DML 触发器的信息。 此信息可包含针对某个表的触发器的类型、触发器的名称、其所有者以及创建或修改日期。 如果在创建触发器时未加密，您可获取该触发器的定义。 通过该定义，可以帮助您了解该触发器如何影响对其定义该触发器的表。 此外，您可以找出特定触发器使用的对象。 通过该信息，可在数据库中影响触发器的对象发生更改或删除它们时确定这些对象。  
   
  **本主题内容**  
   

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 885a40a622f70649e004226fdfb9f317bad6bbdf
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96128618"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597092"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +94,7 @@ DBCC CHECKFILEGROUP
 >  指定 PHYSICAL_ONLY 会导致 DBCC CHECKFILEGROUP 跳过对 FILESTREAM 数据的所有检查。  
   
  MAXDOP  
- **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 到 [当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)。  
   
  对于语句，替代 sp_configure 的“max degree of parallelism”配置选项 。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则数据库引擎会使用资源调控器 MAXDOP 值（如 ALTER WORKLOAD GROUP (Transact-SQL) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
@@ -235,5 +235,4 @@ WITH ESTIMATEONLY;
 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKALLOC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)  
 [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
-  
   

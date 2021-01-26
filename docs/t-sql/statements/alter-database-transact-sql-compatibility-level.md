@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f62ced8657ee943a947e26c5a2a2ed65a9d78b9
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: d16763f2bd009b411952c20cfb1115cf1c977d85
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171909"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689186"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
@@ -142,7 +142,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > 给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的已停用功能不受兼容性级别保护 。 这指的是从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中删除的功能。
 > 例如，`FASTFIRSTROW` 提示在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中废止，并替换为 `OPTION (FAST n )` 提示。 将数据库兼容性级别设置为 110 不会恢复废止的提示。  
 >  
-> 要详细了解已停用的功能，请参阅 [SQL Server 中停用的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)和 [SQL Server 2014 中停用的数据库引擎功能](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true)。
+> 要详细了解已停用的功能，请参阅 [SQL Server 中停用的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)和 [SQL Server 2014 中停用的数据库引擎功能](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?preserve-view=true&view=sql-server-2014)。
 
 > [!IMPORTANT]
 > 给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的中断性变更可能不受兼容性级别保护 。 这指的是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本之间的行为变更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为通常受兼容级别保护。 但是，已更改或删除的系统对象 **不** 受兼容级别保护。
@@ -154,7 +154,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > - 系统对象中更改了列名。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，sys.dm_os_sys_info 中的列 single_pages_kb 已重命名为 pages_kb。 无论兼容级别如何，查询 `SELECT single_pages_kb FROM sys.dm_os_sys_info` 都会生成错误 207（列名无效）。
 > - 删除了系统对象。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，`sp_dboption` 已删除。 无论兼容级别如何，语句 `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` 都会生成错误 2812（找不到存储过程“sp_dboption”）。
 >
-> 若要详细了解重大更改，请参阅 [SQL Server 2019 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md)、[SQL Server 2017 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)和 [SQL Server 2014 中的数据库引擎功能重大更改](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014&preserve-view=true)。
+> 若要详细了解重大更改，请参阅 [SQL Server 2019 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md)、[SQL Server 2017 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)和 [SQL Server 2014 中的数据库引擎功能重大更改](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?preserve-view=true&view=sql-server-2014)。
 
 ## <a name="differences-between-compatibility-levels"></a>兼容性级别之间的差异
 对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容性级别都与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本相关联，如[此表](#supported-dbcompats)中所示。 对于新的开发工作，请始终计划在最新的数据库兼容性级别上验证应用程序。

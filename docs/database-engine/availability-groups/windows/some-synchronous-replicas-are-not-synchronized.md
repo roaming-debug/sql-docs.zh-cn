@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 34e35a5b50067cef47d353d398c4fecdc82717f2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 26d0548993776ab86203d0a9ec72dcec0e7c29a0
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97640197"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766123"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>一些同步副本不同步
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,7 @@ ms.locfileid: "97640197"
   
 ## <a name="description"></a>说明  
  此策略将汇总所有可用性副本的数据同步状态，并且检查是否存在未处于预期同步状态的任何可用性副本。 在任何异步副本未处于 SYNCHRONIZING 状态以及任何同步副本未处于 SYNCHRONIZED 状态时，该策略处于不正常状态。 否则，策略状态为正常。  
-  
-> [!NOTE]  
->  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [某些同步副本未同步](https://go.microsoft.com/fwlink/p/?LinkId=220853) 中。  
-  
+
 ## <a name="possible-causes"></a>可能的原因  
  在该可用性组中，至少一个同步副本当前未同步。 副本同步状态可以是 SYNCHRONIZING 或 NOT SYNCHRONIZING。  
   

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6b6f405786daf40e1241af48ee3e442cea998a6f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 1d77e19fba88132eb141ec05dda0f837ef51b620
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643773"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765464"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>“添加 IP 地址”对话框 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本 F1 帮助主题介绍 **“添加 IP 地址”** 对话框中的选项。 可通过 **“新的可用性组侦听器”** 对话框和  或 **的** “指定副本” [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 页的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] “侦听器” [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]选项卡访问此对话框。  
+  本 F1 帮助主题介绍 **“添加 IP 地址”** 对话框中的选项。 可通过 **“新的可用性组侦听器”** 对话框和  或 **的** “指定副本” [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 页的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] “侦听器” [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]选项卡访问此对话框。  
   
 ## <a name="prerequisites"></a>先决条件  
  开始向可用性组侦听器添加子网之前，确保了解每个子网的 IP 地址以及子网掩码（对于 IPv4 地址）。  

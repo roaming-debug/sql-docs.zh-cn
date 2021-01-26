@@ -14,12 +14,12 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41b69dfc9cc5564025fd7b28d14094389ff52450
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: cc483082fe25fbed8a8e989544e189ccdc81bb73
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171689"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596242"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -231,7 +231,7 @@ JOIN sys.database_principals AS dRole
 
 -   [创建数据库（教程）](../../../t-sql/lesson-1-creating-database-objects.md)  
   
--   [教程：SQL Server Management Studio](../../../ssms/quickstarts/connect-query-sql-server.md)  
+-   [教程：SQL Server Management Studio](../../../ssms/quickstarts/ssms-connect-query-sql-server.md)  
   
 -   [教程：编写 Transact-SQL 语句](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
@@ -242,4 +242,3 @@ JOIN sys.database_principals AS dRole
  [安全性目录视图 (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [确定有效的数据库引擎权限](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
-  

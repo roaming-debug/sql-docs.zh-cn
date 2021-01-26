@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: dcb8edfa056674bd13ca4d3cfdf5bc912ea23588
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 45b8d52881813336420f92a96b5df4e149f0b579
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639489"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765928"
 ---
 # <a name="use-contained-databases-with-always-on-availability-groups"></a>使用包含的数据库与 Always On 可用性组 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  本主题包含将包含数据库用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的相关信息。  
+  本主题包含将包含数据库用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]的相关信息。  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   

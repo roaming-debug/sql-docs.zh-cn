@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b9b1be7e6cbfead5bf0fa14bf60f294ad852d9ad
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 13c05e5b6d4d4f863bc1a4889358ec4ef13e629a
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643227"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765685"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>使用 PowerShell 为可用性组创建数据库镜像端点
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  本主题介绍如何使用 PowerShell 创建供 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 使用的数据库镜像端点。  
+  本主题介绍如何使用 PowerShell 创建供 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 使用的数据库镜像端点。  
   
 
   

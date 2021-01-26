@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 836ad79e049d7c5613755e64ca441f9ed5d73048
-ms.sourcegitcommit: d819173fb91af6f20ca6ee59686c35c71b060fbc
+ms.openlocfilehash: f48534e104139ee7cbd4eb7602fce2a8e51eeb73
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/28/2020
-ms.locfileid: "97797794"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597139"
 ---
 # <a name="mssqlserver_6522"></a>MSSQLSERVER_6522
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -205,7 +205,7 @@ CLR 例程包含以下对象，这些对象是通过使用 [!INCLUDE[ssNoVersion
 ## <a name="references"></a>参考
 
 - 有关程序集版本的详细信息，请参阅 [Visual Studio 2005 已停用的文档](https://www.microsoft.com/download/details.aspx?id=55984)。
-- 有关如何更新程序集的详细信息，请参阅 [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)。
-- 有关如何删除程序集的详细信息，请参阅 [DROP ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/drop-assembly-transact-sql)。
-- 有关如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册程序集的详细信息，请参阅 [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql)。
-- 有关 Bcp.exe 实用工具的详细信息，请参阅 [https://msdn2.microsoft.com/library/ms162802.aspx](/sql/tools/bcp-utility)。
+- 有关如何更新程序集的详细信息，请参阅 [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md)。
+- 有关如何删除程序集的详细信息，请参阅 [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)。
+- 有关如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册程序集的详细信息，请参阅 [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)。
+- 有关 Bcp.exe 实用工具的详细信息，请参阅 [https://msdn2.microsoft.com/library/ms162802.aspx](../../tools/bcp-utility.md)。

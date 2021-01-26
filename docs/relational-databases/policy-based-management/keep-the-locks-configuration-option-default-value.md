@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f214f05b-5f0b-4786-b2ad-b8b4b6e58d72
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 657700eeaf04ec49aec410fc5d183a828e514963
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab27552c473419efd942cdd1c37f7dca4b64c5b6
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490609"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597289"
 ---
 # <a name="keep-the-locks-configuration-option-default-value"></a>保留锁配置选项默认值
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,8 @@ EXEC sp_configure 'locks', 0;
   
  [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)  
   
- [Microsoft 知识库文章 271509](https://go.microsoft.com/fwlink/?linkid=117788)  
+ [Microsoft 知识库文章 271509](/troubleshoot/sql/performance/understand-resolve-blocking)  
   
 ## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来监视和强制执行最佳做法](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
-  
   

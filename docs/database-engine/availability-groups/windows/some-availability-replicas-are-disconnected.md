@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c48d324ef9437bb349922604f0149f2a468d8952
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f4641417055b4a237dbed4459f165dc66f7febc8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642110"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765887"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>断开一些可用性副本的连接
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,7 @@ ms.locfileid: "97642110"
   
 ## <a name="description"></a>说明  
  此策略将汇总所有可用性副本的连接状态，并且检查是否存在处于 DISCONENCTED 状态的任何可用性副本。 当任何可用性副本处于 DISCONNECTED 状态时，此策略处于不正常状态。 否则，该策略处于正常状态。  
-  
-> [!NOTE]  
->  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [断开一些可用性副本的连接](https://go.microsoft.com/fwlink/p/?LinkId=220855) 中。  
-  
+ 
 ## <a name="possible-causes"></a>可能的原因  
  在此可用性组中，至少一个辅助副本未连接到主副本。 连接状态为 DISCONNECTED。  
   

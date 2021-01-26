@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 414b407cc2adccf20f2f9d7dc0e01bfb171899f7
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: bb048bf64f7fddea90eb4b1e5990b716c6685cb3
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643294"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765391"
 ---
 # <a name="administration-of-an-availability-group"></a>管理可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
- 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中管理现有 AlwaysOn 可用性组涉及以下一个或多个任务：  
+ 在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中管理现有 AlwaysOn 可用性组涉及以下一个或多个任务：  
   
 -   更改现有可用性副本的属性以便更改客户端连接访问（用于配置可读的辅助副本）等，更改其故障转移模式、可用性模式或会话超时设置。    
 -   添加或删除辅助副本。    

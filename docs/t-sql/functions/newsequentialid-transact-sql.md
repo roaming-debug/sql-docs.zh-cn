@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4fe754848be676d40387d4887a5a7e519da697f7
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7bed17ea5142acb2e9e2168491046b13d5868c44
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111048"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597314"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91111048"
 > [!IMPORTANT]  
 >  如果涉及保密问题，则不要使用该函数。 因为有可能猜到下一个生成的 GUID 的值，从而访问与该 GUID 关联的数据。  
   
- NEWSEQUENTIALID 是 Windows [UuidCreateSequential](https://go.microsoft.com/fwlink/?LinkId=164027) 函数的包装器，应用了某种[字节随机排列](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)。
+ NEWSEQUENTIALID 是 Windows [UuidCreateSequential](/windows/win32/api/rpcdce/nf-rpcdce-uuidcreatesequential) 函数的包装器，应用了某种[字节随机排列](/archive/blogs/dbrowne/how-to-generate-sequential-guids-for-sql-server-in-net)。
   
 > [!WARNING]  
 >  UuidCreateSequential 函数具有硬件依赖关系。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，当数据库（如包含的数据库）移动到其他计算机时，可以开发顺序值的群集。 在使用 Always On 以及在 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 上时，如果数据库故障转移到另一台计算机，则可以开发顺序值的群集。  
@@ -77,5 +77,4 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
 ## <a name="see-also"></a>另请参阅  
  [NEWID (Transact-SQL)](../../t-sql/functions/newid-transact-sql.md)   
  [比较运算符 (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
-  
   

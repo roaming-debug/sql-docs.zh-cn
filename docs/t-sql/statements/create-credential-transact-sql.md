@@ -25,12 +25,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 88307a27daf1bd601c24e318817f41426c9035f3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b98affdc431a7e13f83ed152248e3abc1300bf76
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464128"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688789"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. 使用 SAS 令牌创建凭据
 
-**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)，以及 Azure SQL 托管实例。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)，以及 Azure SQL 托管实例。
 
 下面的示例使用 SAS 令牌创建共享访问签名凭据。 若要详细了解如何在 Azure 容器上创建存储访问策略和共享访问签名，以及使用共享访问签名创建凭据，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。
 
@@ -181,5 +181,5 @@ GO
 - [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)
 - [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
 - [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)
-- [第 2 课：使用共享访问签名创建 SQL Server 凭据](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)
-- [共享访问签名](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
+- [第 2 课：使用共享访问签名创建 SQL Server 凭据](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature)
+- [共享访问签名](/azure/storage/common/storage-sas-overview)

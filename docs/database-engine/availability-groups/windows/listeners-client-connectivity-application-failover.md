@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c0578d5522ca998e7243fd20b77daf8d3705bd85
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 145f061ff1926bc9a93244226dbd36b6ffaf9de8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878905"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765911"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>连接到 Always On 可用性组侦听器 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -121,7 +121,7 @@ Server=tcp:AGListener,1445;Database=AdventureWorks;Integrated Security=SSPI
 > [!NOTE]  
 >  对于到可用性组侦听器以及到 SQL Server 故障转移群集实例名称的单个和多子网连接，建议使用此设置。  启用此选项将添加额外的优化，即使对于单子网方案也不例外。  
   
- **MultiSubnetFailover** 连接选项仅使用 TCP 网络协议，并且仅当连接到可用性组侦听程序时且针对任何连接到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的虚拟网络名称才支持此选项。  
+ **MultiSubnetFailover** 连接选项仅使用 TCP 网络协议，并且仅当连接到可用性组侦听程序时且针对任何连接到 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]的虚拟网络名称才支持此选项。  
   
  如下所示是针对实现多子网故障转移的 ADO.NET 访问接口 (System.Data.SqlClient) 连接字符串的一个示例：  
   

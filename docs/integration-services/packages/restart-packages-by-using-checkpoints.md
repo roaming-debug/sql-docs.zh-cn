@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 5dbdccf96c35c7c7f66badb49d6566ac6009d6c0
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88425239"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596376"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
 
@@ -47,7 +47,7 @@ ms.locfileid: "88425239"
 > [!NOTE]  
 >  在同一个包中使用检查点和事务可能会导致意外的结果。 例如，当包失败并从某个检查点重新启动时，该包可能会重复已成功提交的事务。  
   
- 不为 For 循环和 Foreach 循环容器保存检查点数据。 当重新启动包时，会再次运行 For 循环和 Foreach 循环容器及其子容器。 如果循环中的子容器已成功运行，则不会将其记录在检查点文件中，而是重新运行子容器。 有关解决方法的详细信息，请参阅 [不为 For 循环和 Foreach 循环容器项采用 SSIS 检查点](https://go.microsoft.com/fwlink/?LinkId=241633)。  
+ 不为 For 循环和 Foreach 循环容器保存检查点数据。 当重新启动包时，会再次运行 For 循环和 Foreach 循环容器及其子容器。 如果循环中的子容器已成功运行，则不会将其记录在检查点文件中，而是重新运行子容器。 有关解决方法的详细信息，请参阅 [不为 For 循环和 Foreach 循环容器项采用 SSIS 检查点](/troubleshoot/sql/integration-services/ssis-checkpoints-not-honored-for-loop)。  
   
  在重新启动包时，不会重新加载包配置，包使用写入检查点文件中的配置信息。 这就确保包在重新运行时使用的是与失败时相同的配置。  
   
@@ -119,4 +119,4 @@ ms.locfileid: "88425239"
   
 -   social.technet.microsoft.com 上的技术文章： [在故障转移或失败后自动重新启动 SSIS 包](https://go.microsoft.com/fwlink/?LinkId=200407)  
   
--   support.microsoft.com 上的支持文章： [不为 For 循环和 Foreach 循环容器项采用 SSIS 检查点](https://go.microsoft.com/fwlink/?LinkId=241633)。  
+-   support.microsoft.com 上的支持文章： [不为 For 循环和 Foreach 循环容器项采用 SSIS 检查点](/troubleshoot/sql/integration-services/ssis-checkpoints-not-honored-for-loop)。

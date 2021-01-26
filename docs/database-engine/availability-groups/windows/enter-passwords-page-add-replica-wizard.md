@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 632082f11b386fde86a9e89595cf13302cd1bc25
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: c9d1cfdb0437972ef5f1115c0e9ba6e667038932
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643534"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765540"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>AlwaysOn 可用性组的“输入密码”页（添加副本向导）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本帮助主题介绍了“输入密码”  页中的选项。 本主题适用于 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+  本帮助主题介绍了“输入密码”  页中的选项。 本主题适用于 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]。  
   
  如果你在“指定副本”  页中选择的副本包含具有数据库主密钥的数据库，则会出现“输入密码”页。  
   

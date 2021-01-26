@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: f1221474d86d95400ca955d64b4a0812cffe1c0d
-ms.sourcegitcommit: f87f2f0f1edc91fe400040d8e3a5810347aa8d70
+ms.openlocfilehash: 018252ff40ebf2ea7bd52b34f03ed25ef124a8d7
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96868890"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596309"
 ---
 # <a name="mssqlserver_15581"></a>MSSQLSERVER_15581
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ go
 alter master key drop encryption by service master key
 ```
 
-服务主密钥用于对数据库主密钥使用的证书进行加密。 对使用启用了 TDE 的数据库的任何尝试都需要访问 master 数据库中的数据库主密钥。 必须使用 [OPEN MASTER KEY (Transact-SQL)](/sql/t-sql/statements/open-master-key-transact-sql) 语句，并对需要访问主密钥的每个会话使用一个密码，来打开未使用服务主密钥进行加密的主密钥。 由于此命令不能在系统会话上运行，因此不能在启用了 TDE 的数据库上完成恢复。
+服务主密钥用于对数据库主密钥使用的证书进行加密。 对使用启用了 TDE 的数据库的任何尝试都需要访问 master 数据库中的数据库主密钥。 必须使用 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) 语句，并对需要访问主密钥的每个会话使用一个密码，来打开未使用服务主密钥进行加密的主密钥。 由于此命令不能在系统会话上运行，因此不能在启用了 TDE 的数据库上完成恢复。
 
 ## <a name="user-action"></a>用户操作
 

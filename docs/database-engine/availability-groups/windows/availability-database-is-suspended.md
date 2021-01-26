@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5843b82c3be84acf24e04ab9dac4b616bed857a6
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9336a99169c0656d290898e3474254d9bb423030
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641220"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765800"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>可用性组的可用性数据库挂起
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +35,6 @@ ms.locfileid: "97641220"
   
 ## <a name="description"></a>说明  
  此策略检查辅助数据库（也称为“辅助数据库副本”）的数据移动状态。 数据移动挂起时，此策略处于不正常状态。 否则，该策略处于正常状态。  
-  
-> [!NOTE]  
->  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 [TechNet Wiki 上的可用性数据库挂起](https://go.microsoft.com/fwlink/p/?LinkId=220860) 中。  
   
 ## <a name="possible-causes"></a>可能的原因  
  由于下列原因，此可用性数据库上的数据同步可能已挂起：  

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c4203e1fa72562dbf0598a74b2c0804b92bae326
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 0fb9bcf6414b9c3fcc717cd219829f6f8fa14f7c
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643027"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765971"
 ---
 # <a name="enable-the-always-on-availability-group-feature-for-a-sql-server-instance"></a>对 SQL Server 实例启用 AlwaysOn 可用性组功能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  本主题包含的信息涉及配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例以在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中提供支持 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的要求。  
+  本主题包含的信息涉及配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例以在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中提供支持 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]的要求。  
   
 > [!IMPORTANT]  
 >  有关针对 Windows Server 故障转移群集 (WSFC) 节点的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 先决条件和限制以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例的基本信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)的要求。  

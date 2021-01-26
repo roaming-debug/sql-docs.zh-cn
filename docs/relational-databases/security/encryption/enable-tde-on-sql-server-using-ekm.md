@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 74c27195e3adbb39714a2df23ef041615262ffc2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: e455b8b27537a3f7fedd7ca0c9cad356b9d49df4
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867857"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98764898"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>使用 EKM 在 SQL Server 上启用 TDE
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本文介绍如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中启用透明数据加密 (TDE)，以便通过结合使用存储在可扩展密钥管理 (EKM) 模块中的非对称密钥和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 来保护数据库加密密钥。  
+  本文介绍如何在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中启用透明数据加密 (TDE)，以便通过结合使用存储在可扩展密钥管理 (EKM) 模块中的非对称密钥和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 来保护数据库加密密钥。  
   
  TDE 使用称为数据库加密密钥的对称密钥来加密整个数据库的存储。 还可以使用受主数据库的数据库主密钥保护的证书来保护数据库加密密钥。 有关使用数据库主密钥保护数据库加密密钥的详细信息，请参阅[透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)。 有关当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 Azure VM 上运行时配置 TDE 的信息，请参阅[使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。 有关使用 Azure 密钥保管库中的密钥配置 TDE 的信息，请参阅 [使用具有 SQL 加密功能的 SQL Server 连接器](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。 
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5a23a2b4e5af84f74010d00c0d9e24c23d02146c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 3a87c7b4dc37a7b1a70b31b9d7b9191a3570db98
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644193"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98764752"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>为 Always On 可用性组准备辅助数据库
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -180,7 +180,7 @@ ms.locfileid: "97644193"
         > [!IMPORTANT]  
         >  如果主数据库与辅助数据库的路径名称不同，则无法添加文件。 原因是在接收添加文件操作所需的日志时，承载辅助副本的服务器实例会尝试将新文件放在主数据库所用的路径中。  
   
-         例如，下面的命令可还原主数据库的备份，主数据库位于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]默认实例的数据目录 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 中。 还原数据库操作必须将该数据库移入名为 ( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Always On1 *) 的* 远程实例（托管另一个群集节点上的次要副本）的数据目录。 在该处，数据和日志文件还原到 *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* 目录。 该还原操作使用 WITH NORECOVERY 令辅助数据库保持还原状态。  
+         例如，下面的命令可还原主数据库的备份，主数据库位于 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]默认实例的数据目录 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 中。 还原数据库操作必须将该数据库移入名为 ( [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] Always On1 *) 的* 远程实例（托管另一个群集节点上的次要副本）的数据目录。 在该处，数据和日志文件还原到 *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* 目录。 该还原操作使用 WITH NORECOVERY 令辅助数据库保持还原状态。  
   
         ```  
         RESTORE DATABASE MyDB1  

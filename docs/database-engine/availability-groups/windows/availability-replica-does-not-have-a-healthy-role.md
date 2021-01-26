@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e5ef8c8a912854c48489cb5860bb3813bdc6fd10
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4b250e48ae43c2a8ed65febec86ca9c4571dce68
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643158"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766072"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>可用性副本不具有用于 Always On 可用性组的运行状况良好的角色
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +35,6 @@ ms.locfileid: "97643158"
   
 ## <a name="description"></a>说明  
  此策略检查可用性副本的角色的状态。 在可用性副本的角色既不是主副本也不是辅助副本时，该策略将处于不正常状态。 否则，该策略处于正常状态。  
-  
-> [!NOTE]  
->  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [可用性副本不具有正常角色](https://go.microsoft.com/fwlink/p/?LinkId=220856) 中。  
   
 ## <a name="possible-causes"></a>可能的原因  
  此可用性副本的角色是不正常。 副本既没有主副本角色，也没有辅助副本角色。  

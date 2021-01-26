@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: 7898cec5362efc7902623993f568600271c033d5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5321af1026b82d2ed49f077d7cf5604bce3a8e69
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171609"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689012"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -276,7 +276,7 @@ DIRECTORY_NAME = \<directory_name>
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  指定此选项后，将在位于由存储类内存（NVDIMM-N 永久性内存）支持的磁盘设备的卷上创建事务日志缓冲区 - 也称为持久性日志缓冲区。 有关详细信息，请参阅[使用存储类内存的事务提交延迟加速](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)。 适用于：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及更高版本。
+  指定此选项后，将在位于由存储类内存（NVDIMM-N 永久性内存）支持的磁盘设备的卷上创建事务日志缓冲区 - 也称为持久性日志缓冲区。 有关详细信息，请参阅[使用存储类内存的事务提交延迟加速](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)。 适用于：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及更高版本。
 
 FOR ATTACH [ WITH \< attach_database_option > ] 指定通过[附加](../../relational-databases/databases/database-detach-and-attach-sql-server.md)一组现有的操作系统文件来创建数据库。 必须有一个指定主文件的 \<filespec> 项。 至于其他 \<filespec> 项，只需要指定与第一次创建数据库或上一次附加数据库时路径不同的文件的那些项即可。 必须有一个 \<filespec> 项指定这些文件。
 
@@ -489,7 +489,7 @@ AS SNAPSHOT OF source_database_name 指定要创建的数据库为 source_databa
 
 ## <a name="viewing-database-information"></a>查看数据库信息
 
-可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。 有关详细信息，请参阅[系统视图](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。
+可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。 有关详细信息，请参阅[系统视图](../language-reference.md)。
 
 ## <a name="permissions"></a>权限
 
@@ -966,7 +966,7 @@ CREATE DATABASE database_name
 
 ## <a name="arguments"></a>参数
 
-database_name 新数据库的名称。 此名称在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上必须唯一，并且必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的标识符规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。
+database_name 新数据库的名称。 此名称在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上必须唯一，并且必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的标识符规则。 有关详细信息，请参阅[标识符](../../relational-databases/databases/database-identifiers.md)。
 
 Collation_name 指定数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果未指定，则会为数据库分配默认排序规则（即 SQL_Latin1_General_CP1_CI_AS）。
 
@@ -1015,7 +1015,7 @@ MAXSIZE 指定数据库的最大大小。 MAXSIZE 必须对指定 EDITION（服�
 |1024 GB|空值|空值|√|√|√ (D)|
 |从 1024 GB 到最大 4096 GB，增量为 256 GB* |空值|空值|空值|不适用|√|√|
 
-\* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。 P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关 DTU 模型资源限制的其他详细信息，请参阅 [DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
+\* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。 P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关 DTU 模型资源限制的其他详细信息，请参阅 [DTU 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。
 
 DTU 模型的 MAXSIZE 值（如果指定）必须为上表中所示的指定服务层的有效值。
 
@@ -1111,7 +1111,7 @@ DTU 模型的 MAXSIZE 值（如果指定）必须为上表中所示的指定服�
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |最大数据大小 (GB)|1280|1536|2048|4096|4096|
 
-如果在使用 vCore 模型时未设置 `MAXSIZE` 值，默认为 32GB。 有关 vCore 模型资源限制的其他详细信息，请参阅 [vCore 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
+如果在使用 vCore 模型时未设置 `MAXSIZE` 值，默认为 32GB。 有关 vCore 模型资源限制的其他详细信息，请参阅 [vCore 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。
 
 以下规则适用于 MAXSIZE 和 EDITION 参数：
 
@@ -1132,10 +1132,10 @@ SERVICE_OBJECTIVE
 
   - 指定计算大小（服务目标）。 服务目标的可用值包括：`HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80`。
 
-有关服务目标说明以及大小、版本和服务目标组合的详细信息，请参阅 [Azure SQL 数据库服务层](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers)。 如果 EDITION 不支持指定的 SERVICE_OBJECTIVE，你会收到一个错误。 若要将 SERVICE_OBJECTIVE 值从一层更改为另一层（例如从 S1 更改为 P1），还必须更改 EDITION 值。 有关服务目标说明以及大小、版本和服务目标组合的详细信息，请参阅 [Azure SQL 数据库服务层和性能级别](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)、[DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)和 [vCore 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。 删除了对 PRS 服务目标的支持。 如有问题，请使用此电子邮件别名：premium-rs@microsoft.com。
+有关服务目标说明以及大小、版本和服务目标组合的详细信息，请参阅 [Azure SQL 数据库服务层](/azure/sql-database/sql-database-service-tiers)。 如果 EDITION 不支持指定的 SERVICE_OBJECTIVE，你会收到一个错误。 若要将 SERVICE_OBJECTIVE 值从一层更改为另一层（例如从 S1 更改为 P1），还必须更改 EDITION 值。 有关服务目标说明以及大小、版本和服务目标组合的详细信息，请参阅 [Azure SQL 数据库服务层和性能级别](/azure/azure-sql/database/purchasing-models)、[DTU 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)和 [vCore 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。 删除了对 PRS 服务目标的支持。 如有问题，请使用此电子邮件别名：premium-rs@microsoft.com。
 
 ELASTIC_POOL (name = \<elastic_pool_name>) 适用于：仅限单一数据库和池化数据库。 不适用于超大规模服务层中的数据库。
-要在弹性数据库池中创建新数据库，请将数据库的 SERVICE_OBJECTIVE 设置为 ELASTIC_POOL，并提供池的名称。 有关详细信息，请参阅[弹性池有助于管理和缩放多个 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。
+要在弹性数据库池中创建新数据库，请将数据库的 SERVICE_OBJECTIVE 设置为 ELASTIC_POOL，并提供池的名称。 有关详细信息，请参阅[弹性池有助于管理和缩放多个 Azure SQL 数据库](/azure/azure-sql/database/elastic-pool-overview)。
 
 AS COPY OF [source_server_name.]source_database_name **适用于：** 仅限单一数据库和池化数据库。
 将数据库复制到同一台或其他 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器上。
@@ -1172,12 +1172,12 @@ source_server_name 源数据库所在的 [!INCLUDE[ssSDS](../../includes/sssds-m
 以下语法和语义规则应用于您对 `AS COPY OF` 参数的使用：
 
 - 源服务器名称与复制目标的服务器名称可能相同，也可能不同。 如果相同，此参数是可选的，默认情况下将使用当前会话的服务器上下文。
-- 必须指定源数据库名称和目标数据库名称，并且这些名称必须唯一且符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。
+- 必须指定源数据库名称和目标数据库名称，并且这些名称必须唯一且符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符规则。 有关详细信息，请参阅[标识符](../../relational-databases/databases/database-identifiers.md)。
 - 必须在将创建新数据库的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器的 master 数据库的上下文中执行 `CREATE DATABASE` 语句。
 - 在复制完成之后，必须将目标数据库作为独立的数据库进行管理。 您可以独立于源数据库，针对新数据库执行 `ALTER DATABASE` 和 `DROP DATABASE` 语句。 您还可以将新数据库复制到另一个新数据库。
 - 当正在进行数据库复制时，可以继续访问源数据库。
 
-有关详细信息，请参阅[使用 TRANSACT-SQL 创建 Azure SQL 数据库的副本](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)。
+有关详细信息，请参阅[使用 TRANSACT-SQL 创建 Azure SQL 数据库的副本](/azure/azure-sql/database/database-copy)。
 
 > [!IMPORTANT]
 > 默认使用与源数据库相同的备份存储冗余创建数据库副本。 不支持在通过 T-SQL 创建数据库副本时更改备份存储冗余。 
@@ -1328,7 +1328,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ## <a name="arguments"></a>参数
 
-database_name 新数据库的名称。 此名称在 SQL 服务器上必须唯一，并且必须符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。
+database_name 新数据库的名称。 此名称在 SQL 服务器上必须唯一，并且必须符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](../../relational-databases/databases/database-identifiers.md)。
 
 Collation_name 指定数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果未指定，则会为数据库分配默认排序规则（即 SQL_Latin1_General_CP1_CI_AS）。
 
@@ -1432,11 +1432,11 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ## <a name="arguments"></a>参数
 
-database_name 新数据库的名称。 此名称在 SQL Server 上必须是唯一的，它可托管 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 数据库和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 数据库，且符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。
+database_name 新数据库的名称。 此名称在 SQL Server 上必须是唯一的，它可托管 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 数据库和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 数据库，且符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](../../relational-databases/databases/database-identifiers.md)。
 
 collation_name 指定数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果未指定，则会为数据库分配默认排序规则（即 SQL_Latin1_General_CP1_CI_AS）。
 
-有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx)。
+有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](./collations.md)。
 
 EDITION 指定数据库的服务层。 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，使用“datawarehouse”。
 
@@ -1450,7 +1450,7 @@ MAXSIZE 默认为 245,760 GB (240 TB)。
 
 数据库中允许的最大行存储数据大小。 存储在行存储表中的数据、列存储索引的增量存储或非聚集索引（聚集在列存储索引上）都不可超过 MAXSIZE。压缩到列存储格式的数据没有大小限制，不受 MAXSIZE 约束。
 
-SERVICE_OBJECTIVE 指定计算大小（服务目标）。 有关 Azure Synapse 服务目标的详细信息，请参阅[数据仓库单位 (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)。
+SERVICE_OBJECTIVE 指定计算大小（服务目标）。 有关 Azure Synapse 服务目标的详细信息，请参阅[数据仓库单位 (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)。
 
 ## <a name="general-remarks"></a>一般备注
 
@@ -1458,7 +1458,7 @@ SERVICE_OBJECTIVE 指定计算大小（服务目标）。 有关 Azure Synapse �
 
 使用 [ALTER DATABASE - Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) 在以后更改最大大小或服务目标值。
 
-Azure Synapse 设置为 COMPATIBILITY_LEVEL 130，且不得更改。 有关详细信息，请参阅[在 Azure SQL 数据库中通过兼容性级别 130 优化查询性能](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
+Azure Synapse 设置为 COMPATIBILITY_LEVEL 130，且不得更改。 有关详细信息，请参阅[在 Azure SQL 数据库中通过兼容性级别 130 优化查询性能](./alter-database-transact-sql-compatibility-level.md)。
 
 ## <a name="permissions"></a>权限
 

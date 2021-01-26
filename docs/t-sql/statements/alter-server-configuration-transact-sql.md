@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: bab0801b0193d9f675ef69e566eef375f0930e5b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ce637e88679747faf40ec7f262ceaea3c0f01f5f
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170859"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688846"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -184,13 +184,13 @@ VERBOSE LOGGING = { 'logging_detail' | DEFAULT }
 在资源故障转移方案中，SQL Server 资源 DLL 可以在发生故障转移之前获取转储文件。 这同时适用于 FCI 和可用性组技术。 SQL Server 资源 DLL 确定 SQL Server 资源失败时，SQL Server 资源 DLL 使用 Sqldumper.exe 实用程序获取 SQL Server 进程的转储文件。 若要确保 Sqldumper.exe 实用程序在资源故障转移时成功生成转储文件，必须将以下三个属性设置为先决条件：SqlDumperDumpTimeOut、SqlDumperDumpPath、SqlDumperDumpFlags。
 
 SQLDUMPEREDUMPFLAGS  
-确定 SQL Server SQLDumper 实用工具生成的转储文件的类型。 默认设置为 0。 此设置使用十进制值而不是十六进制值。 对于小型转储使用 288，对于具有间接内存的小型转储使用 296，对于已筛选转储使用 33024。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](https://go.microsoft.com/fwlink/?LinkId=206173)。  
+确定 SQL Server SQLDumper 实用工具生成的转储文件的类型。 默认设置为 0。 此设置使用十进制值而不是十六进制值。 对于小型转储使用 288，对于具有间接内存的小型转储使用 296，对于已筛选转储使用 33024。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file)。  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
-SQLDumper 实用工具存储转储文件的位置。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](https://go.microsoft.com/fwlink/?LinkId=206173)。  
+SQLDumper 实用工具存储转储文件的位置。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file)。  
   
 SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
-SQLDumper 实用程序在发生 SQL Server 故障时生成转储的超时值（以毫秒为单位）。 默认值为 0，表示完成该转储没有时间限制。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](https://go.microsoft.com/fwlink/?LinkId=206173)。  
+SQLDumper 实用程序在发生 SQL Server 故障时生成转储的超时值（以毫秒为单位）。 默认值为 0，表示完成该转储没有时间限制。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file)。  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
  SQL Server 故障转移群集实例应在什么状况下进行故障转移或重启。 默认值是 3，表示 SQL Server 资源将在出现严重的服务器错误时进行故障转移或重启。 有关此故障条件级别和其他故障条件级别的详细信息，请参阅[配置 FailureConditionLevel 属性设置](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)。  
@@ -484,4 +484,3 @@ GO
 [sys.dm_os_memory_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
 [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
 [缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)  
-  
