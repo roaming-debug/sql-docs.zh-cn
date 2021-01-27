@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a779e16b06b00cb925f28e8da34ce3959d7dc7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d802cb37a972eb498b485d7253a82b8445f4566d
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352883"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813479"
 ---
 # <a name="identifiers-dmx"></a>标识符 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   使用保留关键字作为对象名或对象名的一部分时。  
   
-     建议您不要将保留关键字用作对象名。 从早期版本的升级的数据库 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可能包含标识符，这些标识符包含不是在早期版本的中保留的、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 但是的保留字 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 只有在使用分隔标识符引用此类对象后，才能更改对象的名称。  
+     建议您不要将保留关键字用作对象名。 从早期版本的升级的数据库 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可能包含标识符，这些标识符包含不是在早期版本的中保留的、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 但是的保留字 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 只有在使用分隔标识符引用此类对象后，才能更改对象的名称。  
   
 -   使用未被列为限定标识符的字符时。  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_operational_stats (Transact-SQL)
-title: sys.dm_db_index_operational_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_db_index_operational_stats (Transact-SQL)
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,16 +17,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
-ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 819d0388ca7b358bb9b6cf455cfb061a1a38fd9a
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2d8213f841a04342bad282d170ec76c13c120386
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172169"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813586"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -91,7 +90,7 @@ sys.dm_db_index_operational_stats (
 |object_id|**int**|表或视图的 ID。|    
 |index_id|**int**|索引或堆的 ID。<br /><br /> 0 = 堆| 
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。| 
-|**hobt_id**|**bigint**|**适用** 于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 通过 [当前版本](../../sql-server/what-s-new-in-sql-server-2016.md))  ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 跟踪列存储索引的内部数据的堆或B 树数据行集的 ID。<br /><br /> NULL-这不是内部列存储行集。<br /><br /> 有关更多详细信息，请参阅 [sys.internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 跟踪列存储索引的内部数据的堆或B 树数据行集的 ID。<br /><br /> NULL-这不是内部列存储行集。<br /><br /> 有关更多详细信息，请参阅 [sys.internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|叶级插入的累积计数。|    
 |**leaf_delete_count**|**bigint**|叶级删除的累积计数。 仅对未标记为 ghost 的已删除记录递增 leaf_delete_count。 对于首先会幻像的已删除记录，将改为递增 **leaf_ghost_count** 。|    
 |**leaf_update_count**|**bigint**|叶级更新的累积计数。|    
