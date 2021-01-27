@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1f17681ffbb922b25cffc6b21ecf2f6317d400db
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: f0a05127f4f6ddcd70fbb00cc5ae3bd2d22fe152
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753789"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813312"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)）。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](/troubleshoot/sql/general/determine-version-edition-update-level)）。  
 
 将备份设备添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中。  
   
@@ -48,7 +48,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @devtype = ] 'device_type'` 备份设备的类型。 *device_type* 是 **varchar (20) **，无默认值，并且可以是下列值之一。  
+`[ @devtype = ] 'device_type'` 备份设备的类型。 *device_type* 是 **varchar (20)**，无默认值，并且可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -57,18 +57,18 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 `[ @logicalname = ] 'logical_name'` Backup 和 RESTORE 语句中使用的备份设备的逻辑名称。 *logical_name* **sysname**，无默认值，且不能为 NULL。  
   
-`[ @physicalname = ] 'physical_name'` 备份设备的物理名称。 物理名称必须遵从操作系统文件名规则或网络设备的通用命名约定，并且必须包含完整路径。 *physical_name* 为 **nvarchar (260) **，没有默认值，且不能为 NULL。  
+`[ @physicalname = ] 'physical_name'` 备份设备的物理名称。 物理名称必须遵从操作系统文件名规则或网络设备的通用命名约定，并且必须包含完整路径。 *physical_name* 为 **nvarchar (260)**，没有默认值，且不能为 NULL。  
   
  在远程网络位置上创建备份设备时，请确保启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]时所用的名称对远程计算机有相应的写权限。  
   
- 如果添加磁带设备，则此参数必须为 Windows 分配给本地磁带设备的物理名称;例如，计算机上的第一个磁带设备的** \\ \\ .\TAPE0** 。 磁带设备必须连接到服务器计算机上，不能远程使用。 如果名称包含非字母数字的字符，请用引号将其引起来。  
+ 如果添加磁带设备，则此参数必须为 Windows 分配给本地磁带设备的物理名称;例如，计算机上的第一个磁带设备的 **\\ \\ .\TAPE0** 。 磁带设备必须连接到服务器计算机上，不能远程使用。 如果名称包含非字母数字的字符，请用引号将其引起来。  
   
 > [!NOTE]  
 >  此过程会在目录中输入指定的物理名称。 此过程不会尝试访问或创建设备。  
   
-`[ @cntrltype = ] 'controller_type'` 弃用. 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 **Sp_addumpdevice**的新用法应省略此参数。  
+`[ @cntrltype = ] 'controller_type'` 弃用. 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 **Sp_addumpdevice** 的新用法应省略此参数。  
   
-`[ @devstatus = ] 'device_status'` 弃用. 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 **Sp_addumpdevice**的新用法应省略此参数。  
+`[ @devstatus = ] 'device_status'` 弃用. 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 **Sp_addumpdevice** 的新用法应省略此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -85,7 +85,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  对于特定的磁带机，请仅使用驱动器厂商建议的推荐磁带。 如果您使用的是数字音频磁带 (DAT) 驱动器，请使用计算机级的 DAT 磁带（数字数据存储 (DDS)）。  
   
- 无法在事务中执行**sp_addumpdevice** 。  
+ 无法在事务中执行 **sp_addumpdevice** 。  
   
  若要删除设备，请使用 [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) 或[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)。  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62a4904a608ccfd5ed02cbf21c3342619ea32e8f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 07dcf9bfc42705f2ad49e3ce476ffcd8ad70f052
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810158"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813279"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91810158"
   
 ||  
 |-|  
-|**适用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 通过 [当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)) SQL Server (。|  
+|**适用** 于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 通过 [当前版本](/troubleshoot/sql/general/determine-version-edition-update-level)) SQL Server (。|  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ sp_cursor  cursor, optype, rownum, table
 |值|名称|说明|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|用于更新提取缓冲区中的一行或多行。  重新访问和更新 *rownum* 中指定的行。|  
-|0x0002|DELETE|用于删除提取缓冲区中的一行或多个行。 重新访问和删除 *rownum* 中指定的行。|  
+|0x0002|删除|用于删除提取缓冲区中的一行或多个行。 重新访问和删除 *rownum* 中指定的行。|  
 |0X0004|INSERT|插入数据而不生成 SQL **INSERT** 语句。|  
 |0X0008|REFRESH|用于从基础表中重新填充缓冲区，并且可用于刷新行（如果由于乐观并发控制导致更新或删除失败或在某个 UPDATE 之后）。|  
 |0X10|LOCK|导致在包含指定行的页上获取 SQL Server U-锁。 此锁与 S 锁兼容，但不与 X 锁或其他 U 锁兼容。 可用于实现短期锁定。|  
@@ -88,18 +88,18 @@ sp_cursor  cursor, optype, rownum, table
 >  仅适用于更新、删除、刷新或锁定 *optype* 值。  
   
  *table*  
- 当游标定义涉及联接或*值*参数返回不明确的列名时，用于标识*optype*适用的表的表名。 如果未指定特定的表，则默认为 FROM 子句中的第一个表。 *table* 是一个可选参数，它需要字符串输入值。 可以将此字符串指定为任何字符或 UNICODE 数据类型。 *表* 可以是由多个部分组成的表名。  
+ 当游标定义涉及联接或 *值* 参数返回不明确的列名时，用于标识 *optype* 适用的表的表名。 如果未指定特定的表，则默认为 FROM 子句中的第一个表。 *table* 是一个可选参数，它需要字符串输入值。 可以将此字符串指定为任何字符或 UNICODE 数据类型。 *表* 可以是由多个部分组成的表名。  
   
  *value*  
- 用于插入或更新值。 *值*string 参数仅与 UPDATE 和 INSERT *optype*值一起使用。 可以将此字符串指定为任何字符或 UNICODE 数据类型。  
+ 用于插入或更新值。 *值* string 参数仅与 UPDATE 和 INSERT *optype* 值一起使用。 可以将此字符串指定为任何字符或 UNICODE 数据类型。  
   
 > [!NOTE]  
->  *值*的参数名可以由用户分配。  
+>  *值* 的参数名可以由用户分配。  
   
 ## <a name="return-code-values"></a>返回代码值  
  当使用 RPC 时，如果已定位的删除或更新操作的缓冲区数为0，则将返回 (失败的 *行计数* 为0的已完成消息) 或 1 (获取缓冲区中每一行的成功) 。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 ## <a name="optype-parameter"></a>optype 参数  
  除了 SETPOSITION 和 UPDATE、DELETE、REFRESH 或 LOCK 的组合以外，对于 UPDATE 或 DELETE， *optype* 值是相互排斥的。  
@@ -121,12 +121,12 @@ sp_cursor  cursor, optype, rownum, table
  如果 *optype* 值为 UPDATE 或 insert 并且完整的 UPDATE 或 insert 语句作为 *值* 参数提交，则忽略为 *table* 指定的值。  
   
 > [!NOTE]  
->  与视图相关，仅可修改一个参与视图的表。 *值*参数列名称必须反映视图中的列名，但表名称可以是基础基表的名称 (在这种情况下，sp_cursor 会将视图名称替换) 。  
+>  与视图相关，仅可修改一个参与视图的表。 *值* 参数列名称必须反映视图中的列名，但表名称可以是基础基表的名称 (在这种情况下，sp_cursor 会将视图名称替换) 。  
   
 ## <a name="value-parameter"></a>value 参数  
  如前面在 "参数" 部分中所述，使用 *值* 的规则有两种替代方法：  
   
-1.  \@对于任何命名*值*参数，可以在选择列表中对列的名称使用预先挂起的名称。 此替代方法的一个优点是可能不需要进行数据转换。  
+1.  \@对于任何命名 *值* 参数，可以在选择列表中对列的名称使用预先挂起的名称。 此替代方法的一个优点是可能不需要进行数据转换。  
   
 2.  使用参数提交完整的 UPDATE 语句或 INSERT 语句，或使用多个参数提交 UPDATE 语句或 INSERT 语句的部分，SQL Server 稍后将其生成为完整的语句。 此类示例可在本主题后面的“示例”部分中找到。  
   

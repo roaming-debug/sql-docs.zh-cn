@@ -1,8 +1,8 @@
 ---
 description: sys.dm_os_wait_stats (Transact-SQL)
-title: sys.dm_os_wait_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_os_wait_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 08/19/2020
+ms.date: 01/25/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,16 +17,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
-ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1dccbed2d872b2cd2973e644f9f02149f88b11d4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: da16b2c28c55952e609b98637802c940ff5a6a54
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172749"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813066"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "98172749"
 在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ##  <a name="types-of-waits"></a><a name="WaitTypes"></a> 等待类型  
- 当某个工作线程请求访问不可用的资源（因为该资源正在由其他某个工作线程使用，或者该资源尚不可用）时，便会发生 **资源等待**。 资源等待的示例包括锁等待、闩锁等待、网络等待以及磁盘 I/O 等待。 锁等待和闩锁等待是指等待同步对象  
+ 当某个工作线程请求访问不可用的资源（因为该资源正在由其他某个工作线程使用，或者该资源尚不可用）时，便会发生 **资源等待**。 资源等待的示例包括锁、闩锁、网络和磁盘 i/o 等待。 锁等待和闩锁等待是指等待同步对象  
   
 当工作线程空闲，等待分配工作时，会发生 **队列等待**。 队列等待通常发生在系统后台任务（如监视死锁以及清除已删除的记录等任务）中。 这些任务将等待工作请求被放入工作队列。 即使没有新数据包放入队列，队列等待也可能定期处于活动状态。  
   
@@ -297,7 +296,7 @@ GO
 |HADR_AR_UNLOAD_COMPLETED |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_ARCONTROLLER_NOTIFICATIONS_SUBSCRIBER_LIST |可用性副本事件（例如，状态更改或配置更改）的发布服务器正在等待对事件订阅服务器列表的独占的读/写访问。 仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_BACKUP_BULK_LOCK |Always On 主数据库收到了来自辅助数据库的备份请求，正在等待后台线程完成获取或释放 BulkOp 锁的请求。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_BACKUP_QUEUE |Always On 主数据库的备份后台线程正在等待辅助数据库的新工作请求。 （通常情况下，这在主数据库正持有 BulkOp 日志并且正在等待辅助数据库来指示主数据库可以释放锁时发生。） <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_BACKUP_QUEUE |Always On 主数据库的备份后台线程正在等待辅助数据库的新工作请求。  (通常情况下，当主数据库保存 BulkOp 日志并且正在等待辅助数据库指示主数据库可以释放该锁) 时，会发生这种情况。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_CLUSAPI_CALL |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]线程正在等待从) 到抢先模式的非抢先模式 (切换 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (由操作系统) 计划，以便调用 Windows Server 故障转移群集 api。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_COMPRESSED_CACHE_SYNC |正在等待访问压缩后日志块的缓存，用来避免发送到多个辅助数据库的日志块的冗余压缩。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_CONNECTIVITY_INFO |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -333,7 +332,7 @@ GO
 |HADR_PARTNER_SYNC |对伙伴列表的并发控制等待。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_READ_ALL_NETWORKS |等待获取对 WSFC 网络列表的读取或写入访问。 仅限内部使用。 注意：引擎保留在动态管理视图中使用的 WSFC 网络列表， (例如 sys.dm_hadr_cluster_networks) 或验证引用 WSFC 网络信息的 Always On Transact-sql 语句。 此列表将在引擎启动、WSFC 相关通知和内部 Always On restart (进行更新，例如，丢失和重新获得 WSFC 仲裁) 。 在该列表中的更新正在进行时，任务通常会被阻止。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |正在等待辅助数据库在运行恢复之前连接到主数据库。 这是预期的等待，如果与主数据库的连接的建立速度比较慢，则此等待可能会延长。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_RECOVERY_WAIT_FOR_UNDO |数据库恢复正在等待辅助数据库完成恢复和初始化阶段以便恢复到主数据库的公共日志点。 这是故障转移后的预期的等待。可以通过 Windows 系统监视器 (perfmon.exe) 和动态管理视图来跟踪撤消进度。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_RECOVERY_WAIT_FOR_UNDO |数据库恢复正在等待辅助数据库完成恢复和初始化阶段以便恢复到主数据库的公共日志点。 这是故障转移后的预期等待。 可以通过 Windows 系统监视器 ( # A0) 和动态管理视图跟踪撤消进度。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_REPLICAINFO_SYNC |正在等待并发控制更新当前副本状态。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_SEEDING_CANCELLATION |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 及更高版本。| 
 |HADR_SEEDING_FILE_LIST |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 及更高版本。| 
@@ -494,11 +493,11 @@ GO
 |PAGEIOLATCH_SH |在任务等待 I/O 请求中缓冲区的闩锁时发生。 闩锁请求处于“共享”模式。 长时间的等待可能指示磁盘子系统出现问题。| 
 |PAGEIOLATCH_UP |在任务等待 I/O 请求中缓冲区的闩锁时发生。 闩锁请求处于“更新”模式。 长时间的等待可能指示磁盘子系统出现问题。| 
 |PAGELATCH_DT |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“破坏”模式。| 
-|PAGELATCH_EX |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“独占”模式。| 
+|PAGELATCH_EX |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“独占”模式。 </br> 导致此闩锁的常见情况是 "最后一页插入" 缓冲区闩锁争用。 若要理解和解决此问题，请使用解决 SQL Server 上的 [最后一页插入 PAGELATCH_EX 争用](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) 并 [诊断和解决最后一页插入闩锁争用](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention)问题。 另一种情况是 [具有非聚集索引的小型表的闩锁争用和随机插入 (队列表) ](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table)。| 
 |PAGELATCH_KP |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“保持”模式。| 
 |PAGELATCH_NL |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
 |PAGELATCH_SH |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“共享”模式。| 
-|PAGELATCH_UP |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“更新”模式。| 
+|PAGELATCH_UP |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“更新”模式。 通常，当系统页 (缓冲区) 例如 PFS、GAM、SGAM 锁定时，可能会观察到此等待类型。 有关常见情况的疑难解答，请参阅 [在 SQL Server tempdb 数据库中减少分配争用](/troubleshoot/sql/performance/recommendations-reduce-allocation-contention)。| 
 |PARALLEL_BACKUP_QUEUE |在序列化由 RESTORE HEADERONLY、RESTORE FILELISTONLY 或 RESTORE LABELONLY 生成的输出时出现。| 
 |PARALLEL_REDO_DRAIN_WORKER |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 及更高版本。| 
 |PARALLEL_REDO_FLOW_CONTROL |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 及更高版本。| 

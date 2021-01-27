@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 1210ec1da44d68aaf778145da8a02bf3f3092e2c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 701740849d7b1ec8a946fa8f26bcd25568f2e62e
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093833"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812924"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>返回的表  
  下表描述此函数可返回的审核文件内容。  
   
-| 列名称 | 类型 | 描述 |  
+| 列名称 | 类型 | 说明 |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 操作的 ID。 不可为 Null。 |  
 | additional_information | **nvarchar(4000)** | 仅适用于单个事件的唯一信息，以 XML 的形式返回。 有少量的可审核操作包含此类信息。<br /><br /> 对于具有与操作相关联的 TSQL 堆栈的操作，将以 XML 格式显示一个级别的 TSQL 堆栈。 该 XML 格式如下：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 指示框架的当前嵌套级别。 模块名称表示为由三部分组成的格式（database_name、schema_name 和 object_name）。  模块名称将被解析为对无效的 xml 字符（如、、、）进行转义 `'\<'` `'>'` `'/'` `'_x'` 。 它们将被转义为 `_xHHHH\_` 。 HHHH 代表该字符对应的四位十六进制 UCS-2 代码。<br /><br /> 可以为 Null。 如果事件没有报告其他信息，则返回 NULL。 |
@@ -129,8 +129,9 @@ fn_get_audit_file ( file_pattern,
 
   
 ## <a name="remarks"></a>备注  
- 如果传递到 **fn_get_audit_file** 的 *file_pattern* 参数引用的路径或文件不存在，或者该文件不是审核文件，则返回 **MSG_INVALID_AUDIT_FILE** 错误消息。  
-  
+- 如果传递到 **fn_get_audit_file** 的 *file_pattern* 参数引用的路径或文件不存在，或者该文件不是审核文件，则返回 **MSG_INVALID_AUDIT_FILE** 错误消息。  
+- 使用 **APPLICATION_LOG**、 **SECURITY_LOG** 或 **EXTERNAL_MONITOR** 选项创建审核时，不能使用 **fn_get_audit_file** 。
+
 ## <a name="permissions"></a>权限
 
 - **SQL Server**：需要 **CONTROL Server** 权限。  
