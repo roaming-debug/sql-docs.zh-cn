@@ -9,16 +9,16 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 52ad8a4e8c335eea412264b69d87453a5ce84104
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 59f9e29940947c1afcf3321fe138030a3fb0d5f1
+ms.sourcegitcommit: 76c5e10704e3624b538b653cf0352e606b6346d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520970"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98924701"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>配置 PolyBase 以访问 Azure Blob 存储中的外部数据
 
-本文介绍如何在 SQL Server 实例上使用 PolyBase 查询 Azure Blob 存储中的外部数据。
+本文介绍如何使用 SQL Server 实例上的 PolyBase 来查询 Azure Blob 存储中的外部数据。
 
 > [!NOTE]
 > AP 目前仅支持标准常规用途 v1 本地冗余 (LRS) Azure Blob 存储。
@@ -32,12 +32,12 @@ ms.locfileid: "94520970"
 
 首先，将 AP 配置为使用 Azure Blob 存储。
 
-1. 运行 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 并将 "hadoop 连接" 设置为 Azure Blob 存储提供程序。 若要查找提供程序的值，请参阅 [PolyBase 连接配置](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
+1. 运行 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)，将“hadoop 连接”设置为 Azure Blob 存储提供程序。 若要查找提供程序的值，请参阅 [PolyBase 连接配置](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
 
    ```sql  
    -- Values map to various external data sources.  
    -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
-   -- 2.1 to 2.3 on Windows Server, and Azure Blob storage  
+   -- 2.1 to 2.3 on Windows Server, and Azure Blob Storage  
    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
    GO
 
@@ -66,7 +66,7 @@ ms.locfileid: "94520970"
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. 使用 [CREATE EXTERNAL DATA source](../t-sql/statements/create-external-data-source-transact-sql.md)创建外部数据源。
+1. 使用 [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) 创建外部数据源。
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -81,7 +81,7 @@ ms.locfileid: "94520970"
 1. 使用 [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) 创建外部文件格式。
 
    ```sql
-   -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
+   -- FORMAT TYPE: Type of format in Azure Blob Storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
    -- In this example, the files are pipe (|) delimited
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
@@ -116,7 +116,7 @@ ms.locfileid: "94520970"
 
 PolyBase 适用于三个函数：  
   
-- 针对外部表的即席查询。  
+- 对外部表的即席查询。  
 - 导入数据。  
 - 导出数据。  
 
@@ -158,7 +158,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 以下查询将数据从 AP 导出到 Azure Blob 存储。 它可用于将关系数据存档到 Azure Blob 存储，同时仍然能够对其进行查询。
 
 ```sql
--- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
+-- Export data: Move old data to Azure Blob Storage while keeping it query-able via an external table.  
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] 
 WITH (  
       LOCATION='/archive/customer/2009',  

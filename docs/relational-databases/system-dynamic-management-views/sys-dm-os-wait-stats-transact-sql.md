@@ -2,7 +2,7 @@
 description: sys.dm_os_wait_stats (Transact-SQL)
 title: sys.dm_os_wait_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 01/25/2021
+ms.date: 01/27/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da16b2c28c55952e609b98637802c940ff5a6a54
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 15f49e670fad327da52fe340a1f9b7601d22ef80
+ms.sourcegitcommit: 76c5e10704e3624b538b653cf0352e606b6346d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813066"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98924740"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -487,17 +487,17 @@ GO
 |OLEDB |当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 调用 SNAC OLE DB 提供程序 (sqlncli.msi) 或用于 SQL Server (MSOLEDBSQL) 的 Microsoft OLE DB 驱动程序时出现。 该等待类型不用于同步。 而是用于指示调用 OLE DB 访问接口的持续时间。| 
 |ONDEMAND_TASK_QUEUE |在后台任务等待高优先级系统任务请求时出现。 长时间的等待指示一直没有要处理的高优先级请求，不应引起关注。| 
 |PAGEIOLATCH_DT |在任务等待 I/O 请求中缓冲区的闩锁时发生。 闩锁请求处于“破坏”模式。 长时间的等待可能指示磁盘子系统出现问题。| 
-|PAGEIOLATCH_EX |在任务等待 I/O 请求中缓冲区的闩锁时发生。 闩锁请求处于“独占”模式。 长时间的等待可能指示磁盘子系统出现问题。| 
+|PAGEIOLATCH_EX |在任务等待 I/O 请求中缓冲区的闩锁时发生。 闩锁请求处于专用模式-将缓冲区写入磁盘时使用的模式。 长时间的等待可能指示磁盘子系统出现问题。| 
 |PAGEIOLATCH_KP |在任务等待 I/O 请求中缓冲区的闩锁时发生。 闩锁请求处于“保持”模式。 长时间的等待可能指示磁盘子系统出现问题。| 
 |PAGEIOLATCH_NL |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
-|PAGEIOLATCH_SH |在任务等待 I/O 请求中缓冲区的闩锁时发生。 闩锁请求处于“共享”模式。 长时间的等待可能指示磁盘子系统出现问题。| 
+|PAGEIOLATCH_SH |在任务等待 I/O 请求中缓冲区的闩锁时发生。 闩锁请求处于共享模式-从磁盘读取缓冲区时使用的模式。 长时间的等待可能指示磁盘子系统出现问题。| 
 |PAGEIOLATCH_UP |在任务等待 I/O 请求中缓冲区的闩锁时发生。 闩锁请求处于“更新”模式。 长时间的等待可能指示磁盘子系统出现问题。| 
-|PAGELATCH_DT |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“破坏”模式。| 
-|PAGELATCH_EX |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“独占”模式。 </br> 导致此闩锁的常见情况是 "最后一页插入" 缓冲区闩锁争用。 若要理解和解决此问题，请使用解决 SQL Server 上的 [最后一页插入 PAGELATCH_EX 争用](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) 并 [诊断和解决最后一页插入闩锁争用](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention)问题。 另一种情况是 [具有非聚集索引的小型表的闩锁争用和随机插入 (队列表) ](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table)。| 
-|PAGELATCH_KP |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“保持”模式。| 
+|PAGELATCH_DT |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“破坏”模式。 删除页面的内容之前，必须先获取销毁模式。 有关详细信息，请参阅 [闩锁模式](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) 。| 
+|PAGELATCH_EX |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于独占模式，它阻止其他线程写入页或从页读取 (缓冲区) 。 </br></br> 导致此闩锁的常见情况是 "最后一页插入" 缓冲区闩锁争用。 若要理解和解决此问题，请使用解决 SQL Server 上的 [最后一页插入 PAGELATCH_EX 争用](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) 并 [诊断和解决最后一页插入闩锁争用](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention)问题。 另一种情况是 [具有非聚集索引的小型表的闩锁争用和随机插入 (队列表) ](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table)。| 
+|PAGELATCH_KP |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于 Keep-alive 模式，这会阻止其他线程销毁页。 有关详细信息，请参阅 [闩锁模式](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) 。| 
 |PAGELATCH_NL |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
-|PAGELATCH_SH |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“共享”模式。| 
-|PAGELATCH_UP |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“更新”模式。 通常，当系统页 (缓冲区) 例如 PFS、GAM、SGAM 锁定时，可能会观察到此等待类型。 有关常见情况的疑难解答，请参阅 [在 SQL Server tempdb 数据库中减少分配争用](/troubleshoot/sql/performance/recommendations-reduce-allocation-contention)。| 
+|PAGELATCH_SH |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于共享模式，这允许多个线程读取但不允许修改缓冲区 (页面) 。 有关详细信息，请参阅 [闩锁模式](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) 。| 
+|PAGELATCH_UP |在任务等待不处于 I/O 请求中的缓冲区闩锁时发生。 闩锁请求处于“更新”模式。 通常，当系统页 (缓冲区) 例如 PFS、GAM、SGAM 锁定时，可能会观察到此等待类型。 有关详细信息，请参阅 [闩锁模式](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) 。 </br></br> 有关使用此闩锁的常见方案的疑难解答，请参阅 [在 SQL Server tempdb 数据库中减少分配争用](/troubleshoot/sql/performance/recommendations-reduce-allocation-contention)。| 
 |PARALLEL_BACKUP_QUEUE |在序列化由 RESTORE HEADERONLY、RESTORE FILELISTONLY 或 RESTORE LABELONLY 生成的输出时出现。| 
 |PARALLEL_REDO_DRAIN_WORKER |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 及更高版本。| 
 |PARALLEL_REDO_FLOW_CONTROL |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 及更高版本。| 
