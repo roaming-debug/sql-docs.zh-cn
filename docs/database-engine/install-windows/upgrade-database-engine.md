@@ -15,24 +15,24 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: dd6c78880419b2330e109d4e1f1416c99f84963d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c855e1a72e1cbd0f6012e4af19701fbaf6c71e68
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460700"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765524"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-  本部分中的文章可帮助将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎从先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+  本部分中的文章可帮助将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎从先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本升级到 [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]。  
   
 1.  [选择数据库引擎升级方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。 在开始升级之前，需要了解各种升级方法。 本文讨论升级方法和每个升级方法所涉及的步骤。  
   
 2.  [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。 查看升级方法后，便可开始为你的环境制定合适的升级方法，然后在升级现有环境之前对该升级方法进行测试。 本文讨论如何制定升级方法并对其进行测试。  
   
-3.  [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)。 在数据库引擎升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 并且数据库处于联机状态后，还需要完成一些步骤，包括制作新备份、升级数据库功能以启用新功能以及重新填充全文目录。 本文讨论了这些步骤。  
+3.  [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)。 在数据库引擎升级并且数据库处于联机状态后，还需要完成一些步骤，包括制作新备份、升级数据库功能以启用新功能以及重新填充全文目录。 本文讨论了这些步骤。  
   
 4.  升级[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)（适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）。 当你的数据库在新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中处于联机状态后，要执行的一个步骤可能是，通过更改数据库兼容性级别来升级数据库功能模式以启用新功能。 这可以手动完成，也可以通过查询优化助手完成。 
 

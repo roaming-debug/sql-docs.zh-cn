@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85d9e42b9c0ac537d6f33bd884b898374119972d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 22413b2fff8a3b243e4723ecc66862980f8d8abf
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099311"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766254"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "98099311"
 Microsoft Azure 中的 SQL Server 数据文件可为作为 blob 存储的 SQL Server 数据库文件提供本机支持。 通过此功能，你可以在本地或在 Microsoft Azure 中虚拟机上运行的 SQL Server 中创建数据库，而将数据存储在 Microsoft Azure blob 存储中的专用存储位置。 此功能还简化了在计算机之间移动数据库的过程。 你可以从一台计算机中分离数据库，并将它们附加到另一台计算机。 此外，它还允许你将数据库备份文件从 Microsoft Azure 存储空间还原或还原到 Microsoft Azure 存储空间，为数据库备份文件提供了备选存储位置。 因此，它在数据虚拟化、数据移动、安全性和可用性、轻松降低成本以及维护方面都具备优势，可实现高可用性和弹性扩展，支持几种混合解决方案。
  
 > [!IMPORTANT]  
->  不推荐且不支持 Azure blob 存储中的存储系统数据库。 
+>  不推荐且不支持 Azure Blob 存储中的存储系统数据库。 
 
  本主题介绍一些概念和注意事项，这些内容对于在 Microsoft Azure 存储服务中存储 SQL Server 数据文件至关重要。  
   

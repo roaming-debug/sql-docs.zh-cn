@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e109b68dbf9b2e2b1d119f2f676896f5fe682aaf
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b542b33ee1dc4bf849131f90be0316c32b386879
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172699"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765874"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 默认实例和命名实例的文件位置
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -59,14 +59,14 @@ ms.locfileid: "98172699"
   
  此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的默认实例 ID 的示例如下：  
   
--   对于默认 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例，为 MSSQL\{nn}.MSSQLSERVER。  
+-   对于默认 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例，为 MSSQL\{nn}.MSSQLSERVER。  
   
 -   对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 的默认实例，为 MSAS\{nn}.MSSQLSERVER。  
   
--   对于名为“MyInstance”的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 命名实例，为 MSSQL\{nn}.MyInstance。  
+-   对于名为“MyInstance”的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 命名实例，为 MSSQL\{nn}.MyInstance。  
   
 
- 包括 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]命名实例（名为“MyInstance”并且按照默认目录安装）的目录结构如下所示：  
+ 包括 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]命名实例（名为“MyInstance”并且按照默认目录安装）的目录结构如下所示：  
   
 -   C:\Program Files\Microsoft SQL Server\MSSQL\{nn}.MyInstance\  
   

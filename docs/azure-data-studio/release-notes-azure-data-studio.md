@@ -8,17 +8,25 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 12/9/2020
-ms.openlocfilehash: 796499f38c9af2d7b2f6af8f860bb945d14bdac2
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.date: 1/22/2020
+ms.openlocfilehash: b0455de16e6808f4d2e67113976ae754830881ee
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596510"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711943"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](./download-azure-data-studio.md)**
+
+## <a name="december-2020-hotfix"></a>2020 年 12 月（修补程序）
+
+2020 年 1 月 22 日&nbsp; / &nbsp;版本：1.25.2
+
+| 更改 | 详细信息 |
+| ------ | ------- |
+| 修复 Bug [#13899](https://github.com/microsoft/azuredatastudio/issues/13899)| 滚动到 Notebooks 中相应的交叉引用链接 |
 
 ## <a name="december-2020"></a>2020 年 12 月
 

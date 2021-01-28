@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: 9086c0e4dcda0a98daad3e372e719bde7fc628d7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a5b5a4174a8faae5c57ed6844e96f52b8f271311
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099504"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711993"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -482,7 +482,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 |1024 GB|空值|√|√|√|√ (D)|
 |从 1024 GB 到最大 4096 GB，增量为 256 GB*|空值|空值|空值|空值|√|
 
-\* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。 P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关 DTU 模型资源限制的其他详细信息，请参阅 [DTU 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。
+\* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。 P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关 DTU 模型资源限制的更多详细信息，请参阅 [DTU 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。
 
 DTU 模型的 MAXSIZE 值（如果指定）必须为上表中所示的指定服务层的有效值。
 
@@ -578,7 +578,7 @@ DTU 模型的 MAXSIZE 值（如果指定）必须为上表中所示的指定服�
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |最大数据大小 (GB)|1280|1536|2048|4096|4096|
 
-如果使用 vCore 模型时未设置 `MAXSIZE` 值，则默认为 32 GB。 有关 vCore 模型资源限制的其他详细信息，请参阅 [vCore 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。
+如果使用 vCore 模型时未设置 `MAXSIZE` 值，则默认为 32 GB。 有关 vCore 模型资源限制的更多详细信息，请参阅 [vCore 资源限制](/azure/sql-database/sql-database-dtu-resource-limits)。
 
 以下规则适用于 MAXSIZE 和 EDITION 参数：
 
@@ -868,15 +868,33 @@ CURRENT
 
 ## <a name="remarks"></a>备注
 
-若要删除数据库，请使用 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。
-若要减小数据库的大小，请使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。
+- 若要删除数据库，请使用 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。
 
-`ALTER DATABASE` 语句必须在自动提交模式（默认事务管理模式）下运行，且不允许用于显式或隐式事务中。
+- 若要减小数据库的大小，请使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。
 
-清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
+- `ALTER DATABASE` 语句必须在自动提交模式（默认事务管理模式）下运行，且不允许用于显式或隐式事务中。
 
+- 通过设置以下选项之一来清除托管实例的计划缓存。
+    - COLLATE
+    - MODIFY FILEGROUP DEFAULT
+    - MODIFY FILEGROUP READ_ONLY
+    - MODIFY FILEGROUP READ_WRITE
+    - MODIFY NAME
+
+    清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
 针对具有默认选项的数据库执行多个查询时，也会刷新计划缓存。 然后，删除数据库。
 
+- 某些 `ALTER DATABASE` 语句需要对要执行的数据库使用排他锁。 这就是当另一个活动进程锁定数据库时，它们可能会失败的原因。 这种情况下报告的错误为 `Msg 5061, Level 16, State 1, Line 38`，并显示消息 `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later`。 这通常是暂时性故障，若要解决该问题，请在释放数据库上的所有锁后，重试失败的 ALTER DATABASE 语句。 系统视图 `sys.dm_tran_locks` 保存有关活动锁的信息。 若要检查数据库中是否存在共享或排他锁，请使用以下查询。
+  
+    ```sql
+    SELECT
+        resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
+    FROM 
+        sys.dm_tran_locks
+    WHERE
+        resource_database_id = DB_ID('testdb')
+    ```
+  
 ## <a name="viewing-database-information"></a>查看数据库信息
 
 可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。

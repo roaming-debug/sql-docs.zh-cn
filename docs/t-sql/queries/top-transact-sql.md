@@ -22,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 295e21500b51bed644807c2cbbab03515fb7e7d9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: eb6024d0ad3ef6f34d170201c0fbacc3447dab26
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483999"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783579"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +80,7 @@ WITH TIES
 -   作为 SELECT 语句的一部分，查询优化器在查询优化期间可能会考虑 TOP 或 FETCH 子句中 expression 的值。 由于在运行查询的语句外部使用 SET ROWCOUNT，不会在查询计划中考虑它的值。  
   
 ## <a name="compatibility-support"></a>兼容性支持  
-为了向后兼容，括号在 SELECT 语句中是可选的。 我们建议在 SELECT 语句中始终为 TOP 使用括号。 这样做可与要求在 INSERT、UPDATE、MERGE 和 DELETE 语句中使用它的做法保持一致。 
+为实现后向兼容性，如果表达式是整数常数，则括号在 SELECT 语句中是可选的。 我们建议在 SELECT 语句中始终为 TOP 使用括号。 这样做可与要求在 INSERT、UPDATE、MERGE 和 DELETE 语句中使用它的做法保持一致。 
   
 ## <a name="interoperability"></a>互操作性  
 TOP 表达式不影响由于触发器而可能运行的语句。 触发器中的 **inserted** 和 **deleted** 表将只返回确实受 INSERT、UPDATE、MERGE 或 DELETE 语句影响的那些行。 例如，INSERT TRIGGER 因使用 TOP 子句的 INSERT 语句而激发。  

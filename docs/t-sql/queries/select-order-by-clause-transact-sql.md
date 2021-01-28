@@ -40,12 +40,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12bb0423ad450ef94df8767ba8aae10a5c47cade
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a7903d3a208bd08c9ba22d251a0e4124e81725ea
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439075"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711983"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 
@@ -146,7 +146,7 @@ ORDER BY SchemaName + ''; -- wrong
  在 SELECT TOP (N) 语句中，请始终使用 ORDER BY 子句  。 这是以可预知的方式指明哪些行受 TOP 影响的唯一方法。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
   
 ## <a name="interoperability"></a>互操作性  
- 在与 SELECT…INTO 语句一起使用以从另一来源插入行时，ORDER BY 子句不能保证按指定的顺序插入这些行。  
+ 在与 SELECT...INTO 或 INSERT...SELECT 语句一起使用以从另一来源插入行时，ORDER BY 子句不能保证按指定的顺序插入这些行。  
   
  在视图中使用 OFFSET 和 FETCH 并不会更改该视图的 Updateability 属性。  
   

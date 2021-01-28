@@ -2,7 +2,7 @@
 description: DBCC TRACEON - 跟踪标志 (Transact-SQL)
 title: 跟踪标志 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2020
+ms.date: 01/19/2021
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0332cd817851ff1152d6dc476bd757d971e41bc2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2cc8cbcc737c1f77c11aee6826ab39bd8b1ec4f1
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170209"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597246"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -193,6 +193,7 @@ ms.locfileid: "98170209"
 |**9929**|将每个内存中检查点文件都缩减为 1 MB。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3147012)。<br /><br />**作用域**：仅全局|  
 |**9939**|在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中，允许在引用内存优化表或表变量的 DML 操作中并行计划和并行扫描内存优化表和表变量，前提是它们不是 DML 操作的目标。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4013877)。<br /><br />**注意：** 如果还显式启用了跟踪标志 4199，则不需要使用跟踪标志 9939。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|   
 |**9944**|当数据库具有大量内存优化表或内存优化表类型，并且可以观察到 PREMPTIVE_OS_FINDFILE 或 PREEMPTIVE_OS_CREATEDIRECTORY 等待类型阻塞时，为数据库恢复时间缓慢启用非默认修复。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4090789)和此 [Microsoft 支持文章](https://support.microsoft.com/kb/4052338)。<br /><br />**作用域**：仅全局|  
+|**10054**|禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器规则，该规则将 OR 谓词中的子查询解关联为外部联接。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高内部版本。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)| 
 |**10204**|在列存储索引重组期间禁用合并/重新压缩。 在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中，当重组列存储索引时，会有一个新功能将所有小型压缩行组自动合并为较大的压缩行组，并重新压缩具有大量已删除行的所有行组。<br /><br />**注意：** 跟踪标志 10204 不适用于对内存优化表创建的列存储索引。<br /><br />**作用域**：全局或会话|   
 |**10207**|允许聚合列存储索引 (CCI) 扫描跳过损坏的段或元数据，从而允许从已损坏的 CCI 中检索数据。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3067257)。<br /><br />**作用域**：全局或会话| 
 |**10316**|允许对[内部内存优化暂存时态表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)创建除默认索引之外的附加索引。 如果有特定的查询模式，其中包含未被默认索引覆盖的列，则可以考虑添加附加索引。<br /><br />**注意：** 内存优化表的经系统版本控制的时态表旨在提供较高的事务吞吐量。 请注意，创建附加索引可能会为更新或删除当前表中的行的 DML 操作带来开销。 如果使用附加索引，应力求在时态查询的性能和额外的 DML 开销之间找到适当的平衡点。<br /><br />**作用域**：全局或会话|

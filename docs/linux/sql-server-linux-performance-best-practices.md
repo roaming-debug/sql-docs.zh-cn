@@ -4,16 +4,16 @@ description: 本文提供运行 Linux 上的 SQL Server 的性能最佳做法和
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 12/11/2020
+ms.date: 01/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 89b8a7c087fb87ed911be640126ec81021b045a7
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+ms.openlocfilehash: 9a73013e7d49523f8aba418a2961336998190fc5
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97323254"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689098"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的性能最佳做法和配置指南
 
@@ -33,7 +33,7 @@ ms.locfileid: "97323254"
 
 托管数据、事务日志和其他关联文件（如内存中 OLTP 的检查点文件）的存储子系统应能够正常管理平均和峰值工作负载。 通常情况下，在本地环境中，存储供应商支持在多个磁盘之间进行条带化的适当硬件 RAID 配置，以确保适当的 IOPS、吞吐量和冗余。 不过，在不同存储供应商和具有不同体系结构的不同存储产品之间，这可能有所不同。
 
-对于在 Azure 虚拟机上部署的 Linux 上的 SQL Server，请考虑使用软件 RAID 来确保满足相应的 IOPS 和吞吐量要求。 在 Azure 虚拟机上配置 SQL Server 时，请参阅以下文章，了解类似的存储注意事项：[SQL Server VM 的存储配置](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/storage-configuration)
+对于在 Azure 虚拟机上部署的 Linux 上的 SQL Server，请考虑使用软件 RAID 来确保满足相应的 IOPS 和吞吐量要求。 在 Azure 虚拟机上配置 SQL Server 时，请参阅以下文章，了解类似的存储注意事项：[SQL Server VM 的存储配置](/azure/azure-sql/virtual-machines/windows/storage-configuration)
 
 以下示例介绍如何在 Azure 虚拟机上的 Linux 中创建软件 raid。 下面提供了一个示例，但你应该根据数据、事务日志和 tempdb IO 要求，使用适当数量的数据磁盘，为卷提供所需的吞吐量和 IOPS。 在此示例中，已向 Azure 虚拟机附加 8 个数据磁盘；4 个用于托管数据文件，2 个用于事务日志，2 个用于 tempdb 工作负载。
 
@@ -48,6 +48,31 @@ mdadm --create --verbose /dev/md1 --level=raid10 --chunk=64K --raid-devices=2 /d
 # For tempdb volume, using 2 devices in RAID 0 configuration with 64KB stripes
 mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /dev/sdi /dev/sdj
 ```
+
+#### <a name="disk-partitioning-and-configuration-recommendations"></a>磁盘分区和配置建议
+
+对于 SQL Server，建议使用 RAID 配置。 部署的文件系统条带单元 (sunit) 和条带宽度应与 RAID 几何匹配。 下面是一个针对日志卷的基于 XFS 文件系统的示例。 
+
+```bash
+# Creating a log volume, using 6 devices, in RAID 10 configuration with 64KB stripes
+mdadm --create --verbose /dev/md3 --level=raid10 --chunk=64K --raid-devices=6 /dev/sda /dev/sdb /dev/sdc /dev/sdd /dev/sde /dev/sdf
+
+mkfs.xfs /dev/sda1 -f -L log 
+meta-data=/dev/sda1              isize=512    agcount=32, agsize=18287648 blks 
+         =                       sectsz=4096  attr=2, projid32bit=1 
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0 
+         =                       reflink=1 
+data     =                       bsize=4096   blocks=585204384, imaxpct=5 
+         =                       sunit=16     swidth=48 blks 
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1 
+log      =internal log           bsize=4096   blocks=285744, version=2 
+         =                       sectsz=4096  sunit=1 blks, lazy-count=1 
+realtime =none                   extsz=4096   blocks=0, rtextents=0 
+```
+
+日志阵列是具有 64k 条带、6 个驱动器的 RAID-10。 正如你所见：
+   1. “sunit=16 blks”，16*4096 blk size= 64k，与条带大小匹配。 
+   2. “swidth = 48 blks”，swidth/sunit = 3，这是阵列中的数据驱动器数量，不包括奇偶校验驱动器。 
 
 #### <a name="file-system-configuration-recommendation"></a>文件系统配置建议
 
@@ -195,7 +220,8 @@ tuned-adm list
 
 **描述：**
 
-- **vm.swappiness**：此参数控制赋予交换出运行时内存（通过限制内核以交换出 SQL Server 处理内存页面）的相对权重。
+- **vm.swappiness**：与文件系统缓存相比，此参数控制用于换出运行时进程内存的相对权重。 此参数的默认值为 60，表示交换运行时进程内存页与删除文件系统缓存页的比率为 60:140。 将值设置为 1 表示首选将运行时进程内存保留在物理内存中，代价是牺牲文件系统缓存。 由于 SQL Server 使用缓冲池作为数据页面缓存，并且强烈倾向于绕过文件系统缓存直接写入物理硬件，从而实现可靠的恢复，因此，积极的交换配置对于实现高性能和专用 SQL Server 非常有利。
+可在 [/proc/sys/vm/ - #swappiness 的文档](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/vm.html#swappiness)中找到更多信息
 
 - **vm.dirty_\** _：不会缓存 SQL Server 文件写入访问，这样做满足其数据完整性要求。 通过分配足够大的缓存并限制刷新，这些参数可以实现 Linux 缓存写入的有效异步写入性能，并降低其存储 IO 影响。
 
@@ -245,6 +271,114 @@ tuned-adm profile mssql
 ```
 
 使用 **mssql** **_Tuned_ *_ 配置文件来配置 _* transparent_hugepage** 选项。
+
+#### <a name="network-setting-recommendations"></a>网络设置建议
+
+与存储和 CPU 建议一样，下面也列出了特定于网络的建议，以供参考。 并非下面提到的所有设置都可在不同的 NIC 上使用。 有关每个选项的指导，请参阅文档并咨询 NIC 供应商。 在开发环境中对它们进行测试和配置，然后将其应用于生产环境。 下面所述的选项使用示例说明，所用的命令特定于 NIC 类型和供应商。 
+
+1. 配置网络端口缓冲区大小：在下面的示例中，NIC 的名称为“eth0”，它是基于 Intel 的 NIC。 对于基于 Intel 的 NIC，推荐的缓冲区大小为 4KB (4096)。 验证预先设置的最大值，然后使用下面所示的示例命令进行配置：
+
+ ```bash
+         #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
+         ethtool -g eth0
+         #command to set both the rx(recieve) and tx (transmit) buffer size to 4 KB. 
+         ethtool -G eth0 rx 4096 tx 4096
+         #command to check the value is properly configured is:
+         ethtool -g eth0
+  ```
+
+2. 启用 jumbo 帧：启用 jumbo 帧之前，验证客户端和 SQL Server 之间的所有网络交换机、路由器以及网络数据包路径所需的任何其他内容是否都支持 Jumbo 帧。 只有这样，启用 jumbo 帧才可以提高性能。 启用 jumbo 帧后，连接到 SQL Server 并使用 `sp_configure` 将网络数据包大小更改为 8060，如下所示：
+
+```bash
+         #command to set jumbo frame to 9014 for a Intel NIC named eth0 is
+         ifconfig eth0 mtu 9014
+         #verify the setting using the command:
+         ip addr | grep 9014
+```
+
+```sql
+         sp_configure 'network packet size' , '8060'
+         go
+         reconfigure with override
+         go
+```
+
+3. 默认情况下，我们建议设置端口以进行自适应 RX/TX IRQ 合并，这意味着将会调整中断传递，以在数据包速率较低时降低延迟，在数据包速率较高时提高吞吐量。 请注意，此设置可能不适用于所有不同的网络基础结构，因此请查看现有的网络基础结构并确认此设置受支持。 下面的示例针对名为“eth0”的 NIC，它是基于 Intel 的 NIC：
+
+```bash
+         #command to set the port for adaptive RX/TX IRQ coalescing
+         echtool -C eth0 adaptive-rx on
+         echtool -C eth0 adaptive-tx on
+         #confirm the setting using the command:
+         ethtool -c eth0
+```
+
+> [!NOTE]
+> 为实现高性能环境（如用于基准测试的环境）的可预测行为，请禁用自适应 RX/TX IRQ 合并，然后专门设置 RX/TX 中断合并。 请参阅示例命令以禁用 RX/TX IRQ 合并，然后专门设置以下值：
+
+```bash
+         #commands to disable adaptive RX/TX IRQ coalescing
+         echtool -C eth0 adaptive-rx off
+         echtool -C eth0 adaptive-tx off
+         #confirm the setting using the command:
+         ethtool -c eth0
+         #Let us set the rx-usecs parameter which specify how many microseconds after at least 1 packet is received before generating an interrupt, and the [irq] parameters are the corresponding delays in updating the #status when the interrupt is disabled. For Intel bases NICs below are good values to start with:
+         ethtool -C eth0 rx-usecs 100 tx-frames-irq 512
+         #confirm the setting using the command:
+         ethtool -c eth0
+```
+
+4. 我们还建议启用 RSS（接收方缩放），并在默认情况下，将 RSS 队列的 rx 和 tx 端组合在一起。 在某些特定情况下，与 Microsoft 支持部门合作时，禁用 RSS 还会提高性能。 在生产环境中应用此设置之前，请先在测试环境中进行测试。 下面显示的示例命令适用于 Intel NIC。
+
+```bash
+         #command to get pre-set maximums
+         ethtool -l eth0 
+         #note the pre-set "Combined" maximum value. let's consider for this example, it is 8.
+         #command to combine the queues with the value reported in the pre-set "Combined" maximum value:
+         ethtool -L eth0 combined 8
+         #you can verify the setting using the command below
+         ethtool -l eth0
+```
+
+5. 使用 NIC 端口 IRQ 关联。 若要通过调整 IRQ 关联来实现预期的性能，请考虑几个重要参数，如 Linux 对服务器拓扑的处理、NIC 驱动程序堆栈、默认设置和 irqbalance 设置。 NIC 端口 IRQ 关联设置的优化是通过了解服务器拓扑，禁用 irqbalance，以及使用特定于 NIC 供应商的设置来实现的。 以下是特定于 Mellanox 的网络基础结构示例，用于帮助解释该配置。 请注意，这些命令将根据环境而改变。 请联系 NIC 供应商以获取进一步指导：
+
+```bash
+         #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
+         systemctl disable irqbalance.service
+         #or
+         irqbalance --oneshot
+
+         #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
+         tar -xvf mlnx_tuning_scripts.tar.gz
+         # be sure, common_irq_affinity.sh is executable. if not, 
+         # chmod +x common_irq_affinity.sh       
+
+         #display IRQ affinity for Mellanox NIC port; e.g eth0
+         ./show_irq_affinity.sh eth0
+
+         #optimize for best throughput performance
+         ./mlnx_tune -p HIGH_THROUGHPUT
+
+         #set hardware affinity to the NUMA node hosting physically the NIC and its port
+         ./set_irq_affinity_bynode.sh `\cat /sys/class/net/eth0/device/numa_node` eth0
+
+         #verify IRQ affinity
+         ./show_irq_affinity.sh eth0
+
+         #add IRQ coalescing optimizations
+         ethtool -C eth0 adaptive-rx off
+         ethtool -C eth0 adaptive-tx off
+         ethtool -C eth0  rx-usecs 750 tx-frames-irq 2048
+
+         #verify the settings
+         ethtool -c eth0
+```
+
+6. 完成上述更改后，请使用以下命令验证 NIC 的速度，以确保其符合预期：
+
+```bash
+         ethtool eth0 | grep -i Speed
+```
 
 #### <a name="additional-advanced-kernelos-configuration"></a>其他高级内核/OS 配置
 

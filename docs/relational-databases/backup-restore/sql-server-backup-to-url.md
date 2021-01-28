@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5d548262cf26f763c14b4f8ac693491ba3d58a85
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 75f74fcfca0e039b6f11bc36fd6cf694dfb756b3
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125445"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765570"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 
@@ -69,7 +69,7 @@ Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob�
   
 **容器：** 一个容器提供一组 Blob 的分组，并且可以存储无限数目的 Blob。 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入 Microsoft Azure Blob 存储服务，你必须至少创建根容器。 你可以在容器上生成共享访问签名令牌，并只授予其对特定容器上的对象的访问权限。  
   
-**Blob：** 任意类型和大小的文件。 Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份可以使用其中任一 blob 类型，具体取决于所使用的 Transact-SQL 语法。 Blob 采用以下 URL 格式寻址： https://\<storage account>.blob.core.windows.net/\<container>/\<blob>。 有关 Microsoft Azure Blob 存储服务的详细信息，请参阅 [如何通过 .NET 使用 Blob 存储](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 有关页 blob 和块 blob 的详细信息，请参阅 [了解块 Blob 和页 Blob](/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs)。  
+**Blob：** 任意类型和大小的文件。 Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份可以使用其中任一 blob 类型，具体取决于所使用的 Transact-SQL 语法。 Blob 采用以下 URL 格式寻址： https://\<storage account>.blob.core.windows.net/\<container>/\<blob>。 有关 Microsoft Azure Blob 存储服务的详细信息，请参阅[如何通过 .NET 使用 Blob 存储](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 有关页 blob 和块 blob 的详细信息，请参阅 [了解块 Blob 和页 Blob](/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs)。  
   
 ![Azure Blob 存储](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob 存储")  
   
@@ -81,7 +81,7 @@ Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob�
   
  以下是一个示例 URL 值：http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>。 HTTPS 不是必需的，但建议这样做。  
   
-**凭据：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。 在这里， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原进程使用凭据对 Microsoft Azure Blob 存储服务及其容器和 blob 对象进行身份验证。 凭据存储存储帐户名称和存储帐户 **访问密钥** 值或容器 URL 及其共享访问签名令牌。 创建凭据后，BACKUP/RESTORE 语句的语法确定 blob 的类型和所需的凭据。  
+**凭据：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。 在这里，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原进程使用凭据对 Microsoft Azure Blob 存储服务及其容器和 blob 对象进行身份验证。 凭据存储存储帐户名称和存储帐户 **访问密钥** 值或容器 URL 及其共享访问签名令牌。 创建凭据后，BACKUP/RESTORE 语句的语法确定 blob 的类型和所需的凭据。  
   
 有关如何创建共享访问签名的示例，请参阅本主题后面的[创建共享访问签名](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS)示例；有关如何创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据的示例，请参阅本主题后面的[创建凭据](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential)示例。  
   
@@ -93,7 +93,7 @@ Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob�
 
 以下是备份到 Microsoft Azure Blob 存储服务或从该服务还原时的安全注意事项和要求。  
   
-- 为 Microsoft Azure Blob 存储服务创建容器时，我们建议你将访问权限设置为“私有” 。 将访问权限设置为“私有”后，只允许可提供对 Azure 帐户进行身份验证所需的信息的用户或帐户进行访问。  
+- 为 Microsoft Azure Blob 存储服务创建容器时，我们建议你将访问权限设置为“专用”。 将访问权限设置为“私有”后，只允许可提供对 Azure 帐户进行身份验证所需的信息的用户或帐户进行访问。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求将 Azure 帐户名称和访问密钥身份验证或共享访问签名和访问令牌存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据中。 在执行备份或还原操作时，将使用此信息对 Azure 帐户进行身份验证。  
@@ -296,7 +296,7 @@ Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob�
 - [使用 STOPAT 还原到时间点](#PITR)  
   
 > [!NOTE]  
-> 有关将 Microsoft Azure Blob 存储服务和 SQL Server 2016 配合使用的教程，请参见[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+> 有关将 Microsoft Azure Blob 存储服务和 SQL Server 2016 配合使用的教程，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ### <a name="create-a-shared-access-signature"></a><a name="SAS"></a> 创建共享访问签名
 

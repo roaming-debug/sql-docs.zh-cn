@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9ac1ddf48ec23f72fcfd500988c9eb05ce0b94ab
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 8d1f8288a0e09c3382c9c31420fb1da6083292f8
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688097"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783464"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -91,7 +91,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="permissions"></a>权限  
  拥有 `ALTER ANY DATABASE AUDIT` 权限的用户可以创建数据库审核规范并将其绑定到任何审核。  
   
- 在创建数据库审核规范之后，拥有 `CONTROL SERVER`、`ALTER ANY DATABASE AUDIT` 权限的主体或 `sysadmin` 帐户可查看该规范。  
+ 在创建数据库审核规范之后，拥有 `CONTROL SERVER` 权限的用户或 `sysadmin` 帐户可查看该规范。  
   
 ## <a name="examples"></a>示例
 

@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: e99362bd36d99aeeb2b44d3947454f198d29be7c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 3afde284deb138b23392eaf4632af22f52ae9b7e
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642434"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689151"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>下载 SQL Server 扩展的功能和工具
 
@@ -28,7 +28,7 @@ ms.locfileid: "97642434"
 
 | Feature | 说明 |
 |----|-----|
-| [Analysis Services 客户端库](https://go.microsoft.com/fwlink/?LinkID=853574) |Microsoft Analysis Services 客户端库封装应用程序编程接口 (API)，以进行身份验证，并与 Microsoft SQL Server Analysis Services 2005 或更高版本、Microsoft Azure Analysis Services 和 Microsoft Power BI 交换请求和响应。<br><br> Microsoft Analysis Services 客户端库包含以下安装包： </br> Microsoft Analysis Services ADOMD.NET </br> Microsoft Analysis Services OLE DB 提供程序 (MSOLAP) </br> Microsoft 分析管理对象 (AMO) |
+| [Analysis Services 客户端库](/analysis-services/client-libraries) |Microsoft Analysis Services 客户端库封装应用程序编程接口 (API)，以进行身份验证，并与 Microsoft SQL Server Analysis Services 2005 或更高版本、Microsoft Azure Analysis Services 和 Microsoft Power BI 交换请求和响应。<br><br> Microsoft Analysis Services 客户端库包含以下安装包： </br> Microsoft Analysis Services ADOMD.NET </br> Microsoft Analysis Services OLE DB 提供程序 (MSOLAP) </br> Microsoft 分析管理对象 (AMO) |
 | [NuGetAnalysisSrvs](https://www.nuget.org/profiles/NuGetAnalysisSrvs) | 用于 Analysis Services 的 NuGet |
 |||
 
@@ -44,8 +44,8 @@ ms.locfileid: "97642434"
 | Feature | 说明 |
 |----|-----|
 | [SQL Server 的命令行实用程序](https://www.microsoft.com/download/details.aspx?id=52680) | 用户使用 SQLCMD 实用工具可以连接 SQL Server 实例，发送 Transact-SQL 批，以及从这些实例中输出行集信息。 |
-| [Drivers for PHP for SQL Server](https://aka.ms/downloadmsphpsql) | Microsoft Drivers for PHP for SQL Server 是 PHP 扩展，通过它，你可以从 PHP 脚本中读写 SQL Server 数据。 |
-| [JDBC Driver for SQL Server](https://aka.ms/downloadmssqljdbc) | 借助 Microsoft JDBC Driver for SQL Server，可以从任意 Java 应用程序、应用程序服务器或已启用 Java 的小程序访问 SQL Server。|
+| [Drivers for PHP for SQL Server](../connect/php/download-drivers-php-sql-server.md) | Microsoft Drivers for PHP for SQL Server 是 PHP 扩展，通过它，你可以从 PHP 脚本中读写 SQL Server 数据。 |
+| [JDBC Driver for SQL Server](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md) | 借助 Microsoft JDBC Driver for SQL Server，可以从任意 Java 应用程序、应用程序服务器或已启用 Java 的小程序访问 SQL Server。|
 | [SQL Server 数据层应用程序框架](https://www.microsoft.com/download/details.aspx?id=56508) | SQL Server 数据层应用程序 (DAC) 框架是基于 .NET Framework 的组件，可为数据库开发和管理提供应用程序生命周期服务。 |
 | [SQL Server 语义语言统计信息](../relational-databases/search/install-and-configure-semantic-search.md) | 语义语言统计数据库是 Microsoft SQL Server 中的统计语义搜索功能的必需组件。 |
 | [SQL Server 共享管理对象](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server 管理对象 (SMO) 是一个 .NET Framework 对象模型，软件开发人员使用该模型可以创建用于管理 SQL Server 对象和服务的客户端应用程序。 |

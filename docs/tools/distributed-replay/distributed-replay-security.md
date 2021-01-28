@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 944fc1a9b5769c797ed9fa372e45c17931814983
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41ee66ff1a5dc6abd746a1344d03e3cabacf9cd2
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681544"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813083"
 ---
 # <a name="distributed-replay-security"></a>分布式重播安全性
 
@@ -83,9 +83,9 @@ ms.locfileid: "85681544"
   
     3.  按 Enter。  
   
-2.  **配置计算机范围内的 DCOM 权限**：为下表中列出的每个帐户授予相应的计算机范围的 DCOM 权限。 有关如何设置计算机范围的权限的详细信息，请参阅[清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
+2.  **配置计算机范围内的 DCOM 权限**：为下表中列出的每个帐户授予相应的计算机范围的 DCOM 权限。 有关如何设置计算机范围的权限的详细信息，请参阅[清单：管理 DCOM 应用程序](/windows/win32/com/setting-machine-wide-security-using-dcomcnfg)。  
   
-3.  **配置应用程序特定的 DCOM 权限**：为下表中列出的每个帐户授予相应的应用程序特定的 DCOM 权限。 控制器服务的 DCOM 应用程序名称为 **DReplayController**。 有关如何设置应用程序特定的权限的详细信息，请参阅[清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
+3.  **配置应用程序特定的 DCOM 权限**：为下表中列出的每个帐户授予相应的应用程序特定的 DCOM 权限。 控制器服务的 DCOM 应用程序名称为 **DReplayController**。 有关如何设置应用程序特定的权限的详细信息，请参阅[清单：管理 DCOM 应用程序](/windows/win32/com/setting-processwide-security-using-dcomcnfg)。  
   
  下表介绍了管理工具交互式用户帐户和客户端服务帐户所需的 DCOM 权限：  
   
@@ -136,5 +136,4 @@ ms.locfileid: "85681544"
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [安装 Distributed Replay - 概述](../../tools/distributed-replay/install-distributed-replay-overview.md)  
-  
   

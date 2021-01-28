@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: d3663fb72891f31cdd710fefebaef906c5b14762
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cb266632fccaceb4639c7fdf0cfbf5368aad2c80
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471668"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711973"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入门：在 Red Hat 上安装 SQL Server 并创建数据库
 
@@ -30,7 +30,7 @@ ms.locfileid: "97471668"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-本快速入门介绍如何在 Red Hat Enterprise Linux (RHEL) 8 上安装 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询。
+本快速入门介绍如何在 Red Hat Enterprise Linux (RHEL) 7/8 上安装 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询。
 
 ::: moniker-end
 
@@ -77,18 +77,33 @@ ms.locfileid: "97471668"
 > ```
 > 有关详细信息，请参阅以下博客，了解如何安装 python2 并将其配置为默认解释器： https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
 >
-> 如果使用 RHEL 7，请将以下路径更改为 `/rhel/7` 而不是 `/rhel/8`。
 
 若要在 RHEL 上配置 SQL Server，请在终端中运行以下命令以安装 **mssql-server** 包：
 
 1. 下载 Microsoft SQL Server 2017 Red Hat 存储库配置文件：
 
+   对于 RHEL7：
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+   ```
+   
+   对于 RHEL8：
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo
    ```
 
    > [!TIP]
    > 如果想安装 SQL Server 2019，必须改为注册 SQL Server 2019 存储库。 使用以下命令安装 SQL Server 2019：
+   >
+   > 对于 RHEL7：
+   >
+   > ```bash
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   > ```
+   >
+   > 对于 RHEL8：
    >
    > ```bash
    > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
@@ -144,14 +159,22 @@ ms.locfileid: "97471668"
 > # Configure python2 as the default interpreter using this command: 
 > sudo alternatives --config python
 > ``` 
+> 
 > 有关这些步骤的详细信息，请参阅以下博客，了解如何安装 python2 并将其配置为默认解释器： https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
 > 
-> 如果使用 RHEL 7，请将以下路径更改为 `/rhel/7` 而不是 `/rhel/8`。
 
 若要在 RHEL 上配置 SQL Server，请在终端中运行以下命令以安装 **mssql-server** 包：
 
 1. 下载 Microsoft SQL Server 2019 Red Hat 存储库配置文件：
-
+   
+   对于 RHEL7：
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+   
+   对于 RHEL8：
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
    ```
@@ -194,6 +217,14 @@ ms.locfileid: "97471668"
 
 1. 下载 Microsoft Red Hat 存储库配置文件。
 
+   对于 RHEL7：
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+   ```
+   
+   对于 RHEL8：
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```

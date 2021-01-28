@@ -19,16 +19,16 @@ ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: f6f303bdee6d19af39600317c2147728c89e2b3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70ef9218bf9ed2827fdc166f9e9540e7bafbce8f
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417693"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765901"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>从以前的版本升级数据库关系图 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-如果对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 设置了数据库关系图创建功能，则对以前版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库创建的数据库关系图将自动升级。 有关设置关系图的详细步骤，请参阅[设置数据库关系图设计器](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)。  
+如果对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 设置了数据库关系图创建功能，则对以前版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]数据库创建的数据库关系图将自动升级。 有关设置关系图的详细步骤，请参阅[设置数据库关系图设计器](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)。  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>升级旧的数据库关系图  
   
@@ -36,7 +36,7 @@ ms.locfileid: "88417693"
   
 2.  在该数据库下展开“数据库关系图”节点。  
   
-3.  如果希望设置数据库关系图，请在出现提示时选择“是”****。  
+3.  如果希望设置数据库关系图，请在出现提示时选择“是”。  
   
     这将升级存储在数据库中的关系图。  
   

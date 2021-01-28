@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: 002d145328ca101fee467428e5b7c8b0ff1fdd95
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: a6fc94cf9c692753ef2dc8d93068bda2be8f1bf0
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577793"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689022"
 ---
 # <a name="sqlpackage-in-development-pipelines"></a>开发管道中的 SqlPackage
 
@@ -31,7 +31,7 @@ SqlPackage.exe 是一个命令行实用工具，可自动处理多个数据库�
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 
-通过利用 Azure 管道中的 [script](https://docs.microsoft.com/azure/devops/pipelines/yaml-schema#script) 关键字，可以向 Azure 管道添加一个步骤，以输出 SqlPackage 版本号。
+通过利用 Azure 管道中的 [script](/azure/devops/pipelines/yaml-schema#script) 关键字，可以向 Azure 管道添加一个步骤，以输出 SqlPackage 版本号。
 
 ```yaml
 - script: sqlpackage.exe /version

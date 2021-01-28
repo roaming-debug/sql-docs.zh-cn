@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 44903475ed2202ba3cc40de388ccc00511075dac
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 2d4848a8fa3661abd94ef63f3289261142998409
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088904"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766326"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密与 Linux 上 SQL Server 的连接
 
@@ -42,13 +42,16 @@ TLS 用于加密从客户端应用程序到 [!INCLUDE[ssNoVersion](../includes/s
 - **生成证书**（/CN 应与 SQL Server 主机完全限定的域名匹配）
 
 > [!NOTE]
-> 在本示例中，我们使用自签名证书，此证书不应用于生产方案。 你应该使用 CA 证书。 
+> 在本示例中，我们使用自签名证书，此证书不应用于生产方案。 你应该使用 CA 证书。<br>
+> 确保保存证书和私钥的文件夹可供 mssql 用户/组访问，并且权限设置为 700 (drwx-----)。 你可手动创建文件夹，该文件夹归 mssql 用户/组所有并且其权限设置为 700 (drwx------)，或该文件夹归其他用户所有并且其权限设置为 755(drwxr-xr-x)，但仍可供 mssql 用户组访问。 例如，可在路径“/var/opt/mssql/”下创建名为“sslcert”的文件夹，然后保存证书和私钥，并将文件的权限设置为 600，如下所示。 
 
 ```bash
 openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
 sudo chown mssql:mssql mssql.pem mssql.key 
-sudo chmod 600 mssql.pem mssql.key   
-sudo mv mssql.pem /etc/ssl/certs/ 
+sudo chmod 600 mssql.pem mssql.key 
+# in this case we are saving the certificate to the certs folder under /etc/ssl/ which has the following permission 755(drwxr-xr-x)
+sudo mv mssql.pem /etc/ssl/certs/ drwxr-xr-x 
+# in this case we are saving the private key to the private folder under /etc/ssl/ with permissions set to 755(drwxr-xr-x)
 sudo mv mssql.key /etc/ssl/private/ 
 ```
 

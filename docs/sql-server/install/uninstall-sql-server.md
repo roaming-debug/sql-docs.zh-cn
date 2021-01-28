@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4aaec761c13af9419c58d7a0baeb4ffd414ea716
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: fb0c63107430db5a1a7fa74276c6440e7212db2b
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975448"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766341"
 ---
 # <a name="uninstall-sql-server"></a>卸载 SQL Server 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  按照下面的文章操作可以完全卸载 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的现有实例，并对系统进行准备以便可以重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  按照下面的文章操作可以完全卸载 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的现有实例，并对系统进行准备以便可以重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="in-this-section"></a>本节内容  
  [卸载现有 SQL Server 实例（安装程序）](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  

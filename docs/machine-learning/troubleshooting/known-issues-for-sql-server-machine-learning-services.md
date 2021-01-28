@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperf-fy20q4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 4c4b293b13ec59421ea5827572203ba13e526212
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 51d729bcdb25900af855e7429e953ee44dc1388b
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878768"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766308"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的已知问题
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -168,7 +168,7 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 
 ### <a name="9-remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>9.远程计算上下文遭到在 Azure 虚拟机上运行的 SQL Server 实例中防火墙的阻止
 
-如果已经在 Azure 虚拟机上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，你可能无法使用需使用虚拟机工作区的计算上下文。 原因是在默认情况下，Azure 虚拟机上的防火墙包含一项规则，该规则阻止本地 R 用户帐户的网络访问。
+如果已经在 Azure 虚拟机上安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]，你可能无法使用需使用虚拟机工作区的计算上下文。 原因是在默认情况下，Azure 虚拟机上的防火墙包含一项规则，该规则阻止本地 R 用户帐户的网络访问。
 
 解决方法之一是，在 Azure 虚拟机上打开“高级安全 Windows 防火墙”，选择“出站规则”，并禁用以下规则   ：阻止 SQL Server 实例 MSSQLSERVER 中 R 本地用户帐户进行网络访问  。 你还可以使规则保持启用状态，但将安全属性更改为“如果安全则允许”  。
 
@@ -734,7 +734,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise 和 Microsoft R Open
 
-本部分列出 Revolution Analytics 提供的 R 连接、开发和性能工具特定的问题。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的早期预发布版本中提供了这些工具。
+本部分列出 Revolution Analytics 提供的 R 连接、开发和性能工具特定的问题。 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的早期预发布版本中提供了这些工具。
 
 一般情况下，我们建议卸载这些早期版本并安装最新版本的 SQL Server 或 Microsoft R Server。
 

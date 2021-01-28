@@ -1,8 +1,8 @@
 ---
-title: 对表或索引启用压缩功能 | Microsoft Docs
+title: 对表或索引启用压缩功能
 description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中对表或索引启用压缩功能。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/22/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -20,24 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - data compression wizard
 - compression [SQL Server], enable
-ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
-ms.openlocfilehash: 080d50b76d71d7a0c13104f20303fe040d214a33
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 59d15d0f056a757fea1545025832990254a7e4ae
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485499"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766353"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>对表或索引启用压缩功能
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对表或索引启用压缩功能。  
+  本文说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中对表或索引启用[数据压缩](../../relational-databases/data-compression/data-compression.md)功能。  
   
- **本主题内容**  
+ **本文内容**  
   
 -   **开始之前：**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "97485499"
   
 -   不能为系统表启用压缩功能。  
   
--   如果表是堆，ONLINE 模式的重新生成操作将在单个线程内完成。 请为多线程堆重新生成操作使用 OFFLINE 模式。 有关数据压缩的详细信息，请参阅 [数据压缩](../../relational-databases/data-compression/data-compression.md)。  
+-   如果表是堆，ONLINE 模式的重新生成操作将在单个线程内完成。 请为多线程堆重新生成操作使用 OFFLINE 模式。 除非指定了 ONLINE 选项，否则重新生成操作处于 OFFLINE 状态。 有关执行 ONLINE 重新生成的完整信息，请参阅[联机执行索引操作](../indexes/perform-index-operations-online.md)。
   
 -   如果表具有非对齐索引，则无法更改单个分区的压缩设置。  
   
@@ -76,9 +75,9 @@ ms.locfileid: "97485499"
   
 3.  右键单击要压缩的表或索引，指向“存储”并选择“管理压缩…” 。  
   
-4.  在数据压缩向导中的 **“欢迎使用数据压缩向导”** 页上，单击 **“下一步”** 。  
+4.  在数据压缩向导中的“欢迎使用数据压缩向导”页上，选择“下一步” 。  
   
-5.  在 **“选择压缩类型”** 页上，选择要应用于要压缩的表或索引中的每个分区的压缩类型。 完成后，单击 **“下一步”** 。  
+5.  在 **“选择压缩类型”** 页上，选择要应用于要压缩的表或索引中的每个分区的压缩类型。 完成后，选择“下一步”。  
   
      **“选择压缩类型”** 页上提供了以下选项：  
   
@@ -101,17 +100,17 @@ ms.locfileid: "97485499"
      显示此分区当前所占的空间 (MB)。 此列为只读。  
   
      **请求的压缩空间**  
-     单击“计算”之后，此列将显示在使用“压缩类型”列中指定的设置进行压缩后每个分区的估计大小。 此列为只读。  
+     选择“计算”之后，此列将显示在使用“压缩类型”列中指定的设置进行压缩后每个分区的估计大小 。 此列为只读。  
   
      **计算**  
-     单击此项可估算每个分区在使用“压缩类型”列中指定的设置进行压缩之后的大小。  
+     选择此项可估算每个分区在使用“压缩类型”列中指定的设置进行压缩之后的大小。  
   
 6.  在 **“选择输出选项”** 页上，指定要如何完成压缩。 选择 **“创建脚本”** 可以基于向导中的前一页创建 SQL 脚本。 选择 **“立即运行”** 可以在完成向导中的其余页后创建新的已分区表。 选择 **“计划”** 可以在将来的预定时间创建新的已分区表。  
   
      如果选择 **“创建脚本”** ， **“脚本选项”** 下的以下选项将可用：  
   
      **将脚本保存到文件**  
-     将脚本生成为 .sql 文件。 在 **“文件名”** 框中输入文件名和位置，或单击 **“浏览”** 以打开 **“脚本文件位置”** 对话框。 从 **“另存为”** 选择 **“Unicode 文本”** 或 **“ANSI 文本”** 。  
+     将脚本生成为 .sql 文件。 在“文件名”框中输入文件名和位置，或选择“浏览”以打开“脚本文件位置”对话框  。 从 **“另存为”** 选择 **“Unicode 文本”** 或 **“ANSI 文本”** 。  
   
      **将脚本保存到剪贴板**  
      将脚本保存到剪贴板。  
@@ -119,7 +118,7 @@ ms.locfileid: "97485499"
      **将脚本保存到“新建查询”窗口**  
      将脚本生成到新的查询编辑器窗口。 这是默认选项。  
   
-     如果选择 **“计划”** ，则单击 **“更改计划”** 。  
+     如果选择“计划”，则选择“更改计划” 。  
   
     1.  在“新建作业计划”对话框的“名称”框中，输入作业计划的名称 。  
   
@@ -131,7 +130,7 @@ ms.locfileid: "97485499"
   
         -   **重复执行**。 如果新的已分区表定期使用新信息更新，请选择此选项。  
   
-        -   **执行一次**。 这是默认选项。  
+        -   **执行一次**。 此选项是默认选择。  
   
     3.  选择或清除 **“已启用”** 复选框以启用或禁用计划。  
   
@@ -163,11 +162,11 @@ ms.locfileid: "97485499"
   
     6.  在 **“摘要”** 下的 **“说明”** 中，验证所有作业计划设置均正确。  
   
-    7.  单击“确定”。  
+    7.  选择“确定”。  
   
-     完成此页后，单击 **“下一步”** 。  
+     完成此页后，选择“下一步”。  
   
-7.  在 **“检查摘要”** 页的 **“检查所做选择”** 下，展开所有可用选项以确认所有压缩设置正确。 如果一切正常，请单击 **“完成”** 。  
+7.  在 **“检查摘要”** 页的 **“检查所做选择”** 下，展开所有可用选项以确认所有压缩设置正确。 如果一切正常，请选择“完成”。  
   
 8.  在 **“压缩向导进度”** 页上，监视有关创建分区向导的操作的状态信息。 根据在向导中选择的选项，“进度”页可能会包含一个操作或多个操作。 最上面的方框显示向导的总体状态和向导已接收到的状态、错误和警告消息数。  
   
@@ -200,7 +199,7 @@ ms.locfileid: "97485499"
      **“将报告作为电子邮件发送”**  
      将向导的进度报告结果复制到电子邮件。  
   
-     完成时，单击“关闭” 。  
+     完成后，选择“关闭”。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
 
@@ -212,9 +211,9 @@ ms.locfileid: "97485499"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准栏上，选择“新建查询”  。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例先执行存储过程 `sp_estimate_data_compression_savings` 以返回对象的估计大小（如果此对象使用的是 ROW 压缩设置）。 之后，此示例会对指定表中的所有分区启用 ROW 压缩。  
+3.  将以下示例复制并粘贴到查询窗口中，然后选择“执行”。 此示例先执行存储过程 `sp_estimate_data_compression_savings` 以返回对象的估计大小（如果此对象使用的是 ROW 压缩设置）。 之后，此示例会对指定表中的所有分区启用 ROW 压缩。  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -230,9 +229,9 @@ ms.locfileid: "97485499"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准栏上，选择“新建查询”  。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 之后，此示例将执行存储过程 `sp_estimate_data_compression_savings` 以返回指定索引 ID 的估计大小（如果要使用 PAGE 压缩设置）。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
+3.  将以下示例复制并粘贴到查询窗口中，然后选择“执行”。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 之后，此示例将执行存储过程 `sp_estimate_data_compression_savings` 以返回指定索引 ID 的估计大小（如果要使用 PAGE 压缩设置）。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -254,15 +253,15 @@ ms.locfileid: "97485499"
     
 ### <a name="on-azure-sql-database"></a>Azure SQL 数据库
 
-Azure SQL 数据库不支持 `sp_estimate_data_compression`。 以下脚本启用压缩，且不必估计压缩量。 
+Azure SQL 数据库不支持 `sp_estimate_data_compression_savings` 存储过程。 以下脚本启用压缩，且不必估计压缩量。 
 
 #### <a name="to-enable-compression-on-a-table"></a>对表启用压缩功能  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准栏上，选择“新建查询”  。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例会对指定表中的所有分区启用 ROW 压缩。  
+3.  将以下示例复制并粘贴到查询窗口中，然后选择“执行”。 此示例会对指定表中的所有分区启用 ROW 压缩。  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -277,9 +276,9 @@ Azure SQL 数据库不支持 `sp_estimate_data_compression`。 以下脚本启�
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准栏上，选择“新建查询”  。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
+3.  将以下示例复制并粘贴到查询窗口中，然后选择“执行”。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
   
     ```sql  
     USE AdventureWorks2012;   

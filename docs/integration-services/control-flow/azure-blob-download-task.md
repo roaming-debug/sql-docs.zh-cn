@@ -14,19 +14,19 @@ f1_keywords:
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6437172ce0336938ad17a8b49bdb81e6fc4a0177
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 21ae3810f5f52ab8d77760cc08a887b74ab65977
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130598"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783080"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 下载任务
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-Azure Blob 下载任务启用了一个 SSIS 包来从 Azure blob 存储区下载文件。
+“Azure Blob 下载任务”可让 SSIS 包从 Azure Blob 存储下载文件。
 
 若要添加 **Azure Blob 下载任务**，可将其拖放到 SSIS 设计器，然后双击或右键单击“编辑”，以查看以下“Azure Blob 下载任务编辑器”对话框。  
   

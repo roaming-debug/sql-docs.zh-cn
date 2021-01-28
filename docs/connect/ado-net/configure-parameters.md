@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 14442892bc59fc733c6a67153832b95c3f368b95
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 12dfcb26484b468bed9f9262403806ea88829385
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771446"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595776"
 ---
 # <a name="configuring-parameters"></a>配置参数
 
@@ -27,7 +27,7 @@ ms.locfileid: "97771446"
 
 通过提供类型检查和验证，命令对象可使用参数来将值传递给 SQL 语句或存储过程。 与命令文本不同，参数输入被视为文本值，而不是可执行代码。 这样可帮助抵御“SQL 注入”攻击，这种攻击的攻击者会将命令插入 SQL 语句，从而危及服务器的安全。
 
-参数化命令还可提高查询执行性能，因为它们可帮助数据库服务器将传入命令与适当的缓存查询计划进行准确匹配。 有关详细信息，请参阅[执行计划的缓存和重用](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse)和[重用参数和执行计划](/sql/relational-databases/query-processing-architecture-guide#PlanReuse)。 除具备安全和性能优势外，参数化命令还提供一种用于组织传递到数据源的值的便捷方法。
+参数化命令还可提高查询执行性能，因为它们可帮助数据库服务器将传入命令与适当的缓存查询计划进行准确匹配。 有关详细信息，请参阅[执行计划的缓存和重用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)和[重用参数和执行计划](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)。 除具备安全和性能优势外，参数化命令还提供一种用于组织传递到数据源的值的便捷方法。
 
 <xref:System.Data.Common.DbParameter> 对象可以通过使用其构造函数来创建，或者也可以通过调用 <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> 集合的 `Add` 方法以将该对象添加到 <xref:System.Data.Common.DbParameterCollection> 来创建。 `Add` 方法将构造函数实参或现有形参对象用作输入，具体取决于数据提供程序。
 
@@ -103,7 +103,7 @@ ms.locfileid: "97771446"
 在数据驱动的应用程序中，存储过程具有许多优势。 通过利用存储过程，数据库操作可以包装在单个命令中，为获取最佳性能而进行优化并通过附加的安全性得到增强。 尽管可以通过在 SQL 语句中传递后接参数自变量的存储过程名称来调用相应的存储过程，但如果使用 ADO.NET <xref:System.Data.Common.DbCommand> 对象的 <xref:System.Data.Common.DbCommand.Parameters%2A> 集合，则可以让你更为明确地定义存储过程参数，并访问输出参数和返回值。
 
 > [!NOTE]
-> 参数化语句在服务器上通过使用 `sp_executesql,` 执行，sp_executesql 允许重复使用查询计划。 `sp_executesql` 批处理命令中的本地光标或变量对于调用 `sp_executesql`的批处理命令是不可见的。 数据库上下文中的更改只持续到 `sp_executesql` 语句的结尾。 有关详细信息，请参阅 [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)。
+> 参数化语句在服务器上通过使用 `sp_executesql,` 执行，sp_executesql 允许重复使用查询计划。 `sp_executesql` 批处理命令中的本地光标或变量对于调用 `sp_executesql`的批处理命令是不可见的。 数据库上下文中的更改只持续到 `sp_executesql` 语句的结尾。 有关详细信息，请参阅 [sp_executesql (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)。
 
 对 <xref:Microsoft.Data.SqlClient.SqlCommand> 使用参数以执行 SQL Server 存储过程时，添加到 <xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> 集合中的参数的名称必须与存储过程中参数标记的名称相匹配。 Microsoft SqlClient Data Provider for SQL Server 不支持用于向 SQL 语句或存储过程传递参数的问号 (?) 占位符。 它将存储过程中的参数视为命名参数，并搜索匹配的参数标记。 例如，通过使用名为 `CustOrderHist` 的参数定义 `@CustomerID`存储过程。 您的代码在执行该存储过程时，它也必须使用名为 `@CustomerID`的参数。
 

@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 60c298991f80586ed9b830b856b84b3640ac509e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1c0322b1b00b3f5cbff775d3c248ee81916f48a9
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170789"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765130"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性组：互操作性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-本主题说明 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中其他 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能的互操作性。
+本主题说明 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能的互操作性。
 
 ## <a name="features-that-interoperate-with-always-on-availability-groups"></a><a name="Interop"></a> 可与 AlwaysOn 可用性组互操作的功能
 
-下表列出了在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中可与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 互操作的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能。  “详细信息”列中的链接表示给定功能的互操作性注意事项。
+下表列出了可与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 互操作的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  “详细信息”列中的链接表示给定功能的互操作性注意事项。
 
 |Feature|更多信息|
 |:------|:---------------|

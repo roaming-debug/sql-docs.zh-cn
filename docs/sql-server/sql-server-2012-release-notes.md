@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: f183c3d44525d85c26a6ba36345eb347ba1c38d3
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: fff3b6de7e2e83c535997194ca2622d9cd9e9595
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594843"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766178"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "98594843"
 有关如何开始安装 SQL Server 2012 的信息，请参阅 SQL Server 2012 自述文件。 该自述文档在安装介质上提供，也可从 [自述文件](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) (#自述文件) 下载页获得。 您还可以在 [SQL Server 联机丛书](/previous-versions/sql/sql-server-2012/ms130214(v=sql.110)) 中以及 [SQL Server 论坛](https://go.microsoft.com/fwlink/?LinkId=213599)上找到更多的信息。  
   
 ## <a name="10-before-you-install"></a><a name="Install"></a>1.0 安装之前  
-在安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]之前，请考虑以下信息。  
+在安装 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]之前，请考虑以下信息。  
   
 ### <a name="11-rules-documentation-for-sql-server-2012-setup"></a>1.1 针对 SQL Server 2012 安装的规则文档  
 **问题：** SQL Server 安装程序会在安装操作完成前验证你的计算机配置。 使用系统配置检查器 (SCC) 报告捕获在 SQL Server 安装操作过程中运行的不同规则。 与这些安装规则有关的文档在 MSDN 库中将不再提供。  
