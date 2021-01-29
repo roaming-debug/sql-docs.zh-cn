@@ -9,18 +9,17 @@ dev_langs:
 - XML
 helpviewer_keywords:
 - DTAXML element
-ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9dd7f40c3cfbac8739caacc10eb821fcd8b8845b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d82b1d9198946d9ef7c14e80d443d151a7154d3
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785993"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812846"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 元素 (DTA)
 
@@ -59,10 +58,10 @@ ms.locfileid: "85785993"
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|无|  
-|**子元素**|[DTAInput 元素 (DTA)](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput** 元素（有关信息，请参阅[数据库引擎优化顾问 XML 架构](https://schemas.microsoft.com/sqlserver/)）|  
+|**子元素**|[DTAInput 元素 (DTA)](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput** 元素（有关信息，请参阅 [数据库引擎优化顾问 XML 架构](https://schemas.microsoft.com/sqlserver/)）|  
   
 ## <a name="remarks"></a>备注  
- 有关 XML namespaces 的详细信息，请参阅 [MSDN Library 中的](https://go.microsoft.com/fwlink/?LinkId=7341) Namespaces in an XML Document [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+ 有关 XML 命名空间的详细信息，请查看[“XML 中的命令空间”文档](/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document)。 
   
 ## <a name="example"></a>示例  
  有关典型 **DTAXML** 元素的示例，请参阅 [XML 输入文件实例 (DTA)](../../tools/dta/xml-input-file-samples-dta.md)。  
@@ -70,5 +69,4 @@ ms.locfileid: "85785993"
 ## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
  [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
-  
   

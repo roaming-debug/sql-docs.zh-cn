@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c197dadade12e189e2914d01a19975d9d03b7de4
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: d1fcc048d51186289d13cbe8918b5328f8c604f8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861487"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766132"
 ---
 # <a name="filestream-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 中的文件流支持
 [!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
@@ -54,7 +54,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下级兼容性  
-如果你的客户端是使用 OLE DB Driver for SQL Server 编译的，并且该应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] - [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]），那么 varbinary(max) 行为将与 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 引入的行为一致。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。 
+如果你的客户端是使用 OLE DB Driver for SQL Server 编译的，并且应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 或更高版本），那么 varbinary(max) 行为将与 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 引入的行为兼容。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。 
   
 如果将数据类型兼容性设置为 80，则客户端行为将与下级客户端行为一致。  
   

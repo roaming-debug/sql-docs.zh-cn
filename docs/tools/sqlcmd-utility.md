@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 0c822321323eb5f74fda34df2d540b7c5c79c382
-ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
+ms.openlocfilehash: b499c7236391c7286c4a267c433ad991a963dab5
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98151292"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688908"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 实用工具
 
@@ -70,7 +70,7 @@ ms.locfileid: "98151292"
 
 **系统要求** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008 - 2019。
 
-此组件要求安装 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 和 [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql)。
+此组件要求安装 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 和 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md)。
  
 若要查看 SQLCMD 版本，请执行 `sqlcmd -?` 命令，并确认使用的是版本 15.0.2000.5 或更高版本。
 
@@ -180,7 +180,7 @@ sqlcmd
 
 > [!IMPORTANT]
 > `-G` 选项仅适用于 Azure SQL 数据库和 Azure 数据仓库。
-> Linux 或 macOS 目前不支持 AAD 交互式身份验证。 AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql) 版本 17.6.1 或更高版本以及正确配置的 Kerberos 环境。
+> Linux 或 macOS 目前不支持 AAD 交互式身份验证。 AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) 版本 17.6.1 或更高版本以及正确配置的 Kerberos 环境。
 
 - **Azure Active Directory 用户名和密码：** 
 
@@ -218,7 +218,7 @@ sqlcmd
 
     使用面向 Azure SQL 数据库和 Azure Synapse Analytics 的 Azure AD 交互式身份验证，可以使用支持多重身份验证的交互式方法。 有关详细信息，请参阅 [Active Directory 交互式身份验证](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
 
-   Azure AD 交互式身份验证需要 sqlcmd [版本 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 或更高版本，以及 [ODBC 版本 17.2 或更高版本](https://aka.ms/downloadmsodbcsql)。  
+   Azure AD 交互式身份验证需要 sqlcmd [版本 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 或更高版本，以及 [ODBC 版本 17.2 或更高版本](../connect/odbc/download-odbc-driver-for-sql-server.md)。  
 
    若要启用交互式身份验证，请仅为 -G 选项提供用户名 (-U)，而不提供密码。
 
@@ -417,7 +417,7 @@ sqlcmd 会话。
  如果在指定此选项的同时还指定了 **-b** ， **sqlcmd** 在遇到错误时将退出。 -b 将在本文后面部分进行介绍。  
   
  -t query_timeout  
- 指定命令（或 SQL 语句）超时的时间。此选项设置 **sqlcmd** 脚本变量 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，则命令将不会超时。querytime_out 必须是介于 1 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内， **sqlcmd** 将生成错误消息。  
+ 指定命令（或 SQL 语句）超时的时间。此选项设置 **sqlcmd** 脚本变量 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，则命令将不会超时。query time_out 必须是一个介于 1 至 65534 之间的数字 。 如果提供的值不是数值或不在此范围内， **sqlcmd** 将生成错误消息。  
   
 > [!NOTE]  
 >  实际的超时值可能会与指定的 time_out  值相差几秒。  

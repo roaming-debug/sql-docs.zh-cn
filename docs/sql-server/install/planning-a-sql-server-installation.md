@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: dbacb44550622f3c61a3cd58281619bb74652af7
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 62b5e5e18743d7425a011e00787ca374e8f90507
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96120816"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765861"
 ---
 # <a name="planning-a-sql-server-installation"></a>计划 SQL Server 安装
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "96120816"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装文档中的本节说明如何安装属于 Microsoft BI 平台一部分的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
   
  [升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
- 本节概要说明如何将以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ 本节简要说明如何对之前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行升级。  
   
  [卸载 SQL Server](../../sql-server/install/uninstall-sql-server.md)  
  参照本节可以完全卸载 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 的现有实例，并且对系统进行准备以便您可以重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 126ac3c36d7e72205c4e0268fcd4b1cedf993169
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b4f0e4ed75e992095cff1f9ae315e3036ba7ef90
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172379"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766221"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
 
@@ -122,7 +122,7 @@ ms.locfileid: "98172379"
 |每个数据库的日志文件数|1|
 |每台计算机的卷数|3|
 
-<sup>*</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具支持的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 托管实例的最大数目将会依服务器的硬件配置而定。 有关入门信息，请参阅 [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中均提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](./editions-and-components-of-sql-server-2016.md)。
+<sup>*</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具支持的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 托管实例的最大数目将会依服务器的硬件配置而定。 有关入门信息，请参阅 [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中均提供 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2019 各个版本支持的功能](./editions-and-components-of-sql-server-version-15.md)、[SQL Server 2017 各个版本支持的功能](./editions-and-components-of-sql-server-2017.md)或 [SQL Server 2016 各个版本支持的功能](./editions-and-components-of-sql-server-2016.md)。
 
 ## <a name="ssnoversion-data-tier-application-objects"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据层应用程序对象
 

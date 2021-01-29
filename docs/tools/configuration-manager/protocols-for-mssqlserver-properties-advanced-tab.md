@@ -2,22 +2,21 @@
 title: MSSQLSERVER 属性的协议（“高级”选项卡）
 description: 了解 SQL Server 数据库引擎的“针对验证的扩展保护”的优势和要求。 了解如何启用和配置它。
 ms.custom: seo-lt-2019
-ms.date: 01/24/2019
+ms.date: 01/22/2021
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: eabb3e524e052823d4ea7b04348a58ccaf24fb64
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ff312fefc29021a28df51ed4a845067d54024d6a
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478408"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813213"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 属性的协议（“高级”选项卡）
 
@@ -30,7 +29,7 @@ ms.locfileid: "97478408"
 > - [Windows 扩展保护 \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
 > - [针对验证的扩展保护概述](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
-有关如何配置其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，以及 **扩展保护** 的完整描述，请参阅 [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752)上的最新信息。
+若要详细了解如何配置其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，请查看[管理数据库引擎服务](../../database-engine/configure-windows/manage-the-database-engine-services.md)。 有关扩展保护的完整说明，请查看[使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)。
 
 从 开始的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完全支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 目前不支持将 **扩展保护** 用于其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端提供程序。
 

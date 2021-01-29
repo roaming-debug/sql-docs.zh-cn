@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 11/04/2019
-ms.openlocfilehash: a778fd92a44a229ae6806cef31a10b728f241865
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.date: 1/25/2021
+ms.openlocfilehash: 39c48fc84047deea9c2bf49751c9bc3a491023b7
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87987610"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766393"
 ---
 # <a name="sql-assessment-api"></a>SQL 评估 API
 
@@ -22,17 +22,39 @@ SQL 评估 API 提供了一种评估 SQL Server 配置以获得最佳做法的�
 
 在确保 SQL Server 配置符合建议的最佳做法时，SQL 评估 API 非常有用。 初步评估后，可以通过定期安排评估来跟踪配置稳定性。
 
-该 API 可用于评估 Azure SQL 托管实例和 SQL Server 2012 及更高版本。 支持 Linux 上的 SQL。
+API 可用于访问：
+ 
+* Azure SQL 数据库托管实例和 SQL Server 2012 及更高版本。
+
+* 基于 Linux 的系统上的 SQL。
+
+API 也用于面向 Azure Data Studio (ADS) 的 SQL Server 评估扩展。
 
 ## <a name="rules"></a>规则
 
-规则（有时称为“检查”）在 JSON 格式的文件中进行定义。 规则集格式要求指定规则集名称和版本。 因此，当使用自定义规则集时，可以很容易地知道哪些建议来自哪些规则集。
+规则有时被称为“检查”，它们是在 JSON 格式的文件中定义的。 规则集格式要求指定规则集名称和版本。 使用自定义规则集时，你可轻松知道哪些建议来自哪个规则集。
 
 GitHub 上提供了 Microsoft 附带的规则集。 可以访问[示例存储库](https://aka.ms/sql-assessment-api)了解更多详细信息。
 
-## <a name="sql-assessment-cmdlets-and-smo-extension"></a>SQL 评估 cmdlet 和 SMO 扩展
+## <a name="sql-assessment-cmdlets-and-associated-extensions"></a>SQL 评估 cmdlet 及相关扩展
 
-[SQL Server 管理对象 (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md) 2019 年 7 月发行版和更高版本以及 [SQL Server PowerShell 模块](../../powershell/download-sql-server-ps-module.md) 2019 年 7 月发行版和更高版本中均包含 SQL 评估 API。
+SQL 评估 API 属于：
+
+* [Azure Data Studio (ADS)](../../azure-data-studio/what-is-azure-data-studio.md)
+
+    截至 2020 年 6 月的发行版及更高版本。
+
+* [SQL Server 管理对象 (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md)
+
+    截至 2019 年 7 月的发行版及更高版本。
+
+* [SQL Server PowerShell 模块](../../powershell/download-sql-server-ps-module.md)
+
+    截至 2019 年 7 月的发行版及更高版本。
+
+开始使用 SQL 评估 API 之前，请确保：
+
+* [安装 ADS](https://techcommunity.microsoft.com/t5/sql-server/released-sql-server-assessment-extension-for-azure-data-studio/ba-p/1470603)
 
 * [安装 SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)
 
@@ -46,11 +68,11 @@ SqlServer 模块提供两个新的 cmdlet 来与 SQL 评估 API 搭配使用：
 
 SQL 评估 API 扩展对 SMO Framework 进行补充，该扩展提供以下方法：
 
-* GetAssessmentItems - 返回特定 SQL 对象的可用检查 (IEnumerable<…>)   
+* **GetAssessmentItems** - 返回特定 SQL 对象的可用检查 (IEnumerable<…>)
 
-* GetAssessmentResults - 对评估进行同步评估并返回结果和错误（如果有）(IEnumerable<…>)   
+* **GetAssessmentResults** - 对评估进行同步评估并返回结果和错误（如果有）(IEnumerable<…>)
 
-* GetAssessmentResultsList - 对评估进行异步评估并返回结果和错误（如果有）(Task<…>) 
+* **GetAssessmentResultsList** - 对评估进行异步评估并返回结果和错误（如果有）(Task<…>)
 
 ## <a name="get-started-using-sql-assessment-cmdlets"></a>开始使用 SQL 评估 cmdlet
 
