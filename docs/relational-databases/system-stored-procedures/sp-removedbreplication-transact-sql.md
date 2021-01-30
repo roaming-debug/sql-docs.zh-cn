@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_removedbreplication
 - sp_removedbreplication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b8b8918bf659e6965fed1f9af0342f8295947509
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 39a95fbdfa80cb76e4b73f912ea38de1bc567906
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364833"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193098"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,8 +41,8 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
     [ , [ @type = ] type ]   
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @dbname = ] 'dbname'` 数据库的名称。 *dbname* 的数据类型为 **sysname** ，默认值为 NULL。 此参数值为 NULL 时，将使用当前数据库。  
+## <a name="arguments"></a>参数  
+`[ @dbname = ] 'dbname'` 数据库的名称。 *dbname* 的数据类型为 **sysname**，默认值为 NULL。 此参数值为 NULL 时，将使用当前数据库。  
   
 `[ @type = ] type` 要为其删除数据库对象的复制的类型。 *类型* 为 **nvarchar (5)** ，可以为以下值之一。  
   

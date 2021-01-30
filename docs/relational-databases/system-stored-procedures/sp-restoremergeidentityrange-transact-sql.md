@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_restoremergeidentityrange_TSQL
 - sp_restoremergeidentityrange
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce2166f3179097c44fb8d725fb6125ae8b2b5d06
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2886b4b93331ed59f1943b5625ee673df64b537d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551247"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205110"
 ---
 # <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>备注  
  **sp_restoremergeidentityrange** 用于合并复制。  
   
- **sp_restoremergeidentityrange**从分发服务器获取最大标识范围分配信息，并更新使用自动标识范围管理的项目[MSmerge_identity_range_allocations &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md)的**max_used**列中的值。  
+ **sp_restoremergeidentityrange** 从分发服务器获取最大标识范围分配信息，并更新使用自动标识范围管理的项目 [MSmerge_identity_range_allocations &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md)的 **max_used** 列中的值。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_restoremergeidentityrange**。  

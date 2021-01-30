@@ -7,25 +7,25 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: bc9d5273-b47d-4c32-a3af-839d963e0548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10cbbdd96df97ff1100443f1363418f18d28c538
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 956b886d4121fbdcdb2ccf73bd18b68414e7d1b6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549946"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205249"
 ---
 # <a name="managed-backup-stored-procedures-transact-sql"></a>托管备份存储过程 (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   以下存储过程可用于配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
   
-## <a name="in-this-section"></a>在本节中  
+## <a name="in-this-section"></a>本节内容  
  [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)  
   
  [managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  

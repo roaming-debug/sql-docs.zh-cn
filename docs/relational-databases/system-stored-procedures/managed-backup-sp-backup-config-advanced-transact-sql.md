@@ -1,13 +1,13 @@
 ---
-description: 'managed_backup sp_backup_config_advanced (Transact-sql) '
-title: managed_backup sp_backup_config_advanced (Transact-sql) |Microsoft Docs
+description: " (transact-sql 的 managed_backup.sp_backup_config_advanced managed_backup) "
+title: managed_backup managed_backup.sp_backup_config_advanced (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_backup_config_optional
 - sp_backup_config_optional_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 877b9d2db59ba060c766a27b6b040a6b0f48dc73
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 77b56d757d685e30798c8763c948dbb72e89c2d9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529377"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203725"
 ---
-# <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup sp_backup_config_advanced (Transact-sql) 
+# <a name="managed_backupsp_backup_config_advanced-transact-sql"></a> (transact-sql 的 managed_backup.sp_backup_config_advanced managed_backup) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   为配置高级设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
@@ -51,7 +51,7 @@ EXEC managed_backup.sp_backup_config_advanced
  用于在特定数据库上启用托管备份的数据库名称。 如果为 NULL 或 *，则此托管备份适用于服务器上的所有数据库。  
   
  @encryption_algorithm  
- 备份过程中用于加密备份文件的加密算法的名称。 @encryption_algorithm为**SYSNAME**。 在首次为数据库配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 时，它是必需的参数。 如果你不希望对备份文件进行加密，请指定 **NO_ENCRYPTION** 。 更改 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置设置时，此参数是可选的-如果未指定参数，则保留现有的配置值。 此参数的允许值为：  
+ 备份过程中用于加密备份文件的加密算法的名称。 @encryption_algorithm为 **SYSNAME**。 在首次为数据库配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 时，它是必需的参数。 如果你不希望对备份文件进行加密，请指定 **NO_ENCRYPTION** 。 更改 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置设置时，此参数是可选的-如果未指定参数，则保留现有的配置值。 此参数的允许值为：  
   
 -   AES_128  
   
@@ -66,10 +66,10 @@ EXEC managed_backup.sp_backup_config_advanced
  有关加密算法的详细信息，请参阅 [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)。  
   
  @encryptor_type  
- 加密程序的类型，可以是 "证书" 或 "ASYMMETRIC_KEY"。 @encryptor_type为**nvarchar (32) **。 如果为参数指定 NO_ENCRYPTION，则此参数是可选的 @encryption_algorithm 。  
+ 加密程序的类型，可以是 "证书" 或 "ASYMMETRIC_KEY"。 @encryptor_type为 **nvarchar (32)**。 如果为参数指定 NO_ENCRYPTION，则此参数是可选的 @encryption_algorithm 。  
   
  @encryptor_name  
- 要用于加密备份的现有证书或非对称密钥的名称。 @encryptor_name为**SYSNAME**。 如果使用非对称密钥，则必须使用扩展密钥管理 (EKM) 进行配置。 如果为参数指定 NO_ENCRYPTION，则此参数是可选的 @encryption_algorithm 。  
+ 要用于加密备份的现有证书或非对称密钥的名称。 @encryptor_name为 **SYSNAME**。 如果使用非对称密钥，则必须使用扩展密钥管理 (EKM) 进行配置。 如果为参数指定 NO_ENCRYPTION，则此参数是可选的 @encryption_algorithm 。  
   
  有关详细信息，请参阅 [&#40;EKM&#41;的可扩展密钥管理 ](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
@@ -82,7 +82,7 @@ EXEC managed_backup.sp_backup_config_advanced
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 要求具有**db_backupoperator**数据库角色的成员身份，具有**ALTER ANY CREDENTIAL**权限以及对**sp_delete_backuphistory**存储过程的**EXECUTE**权限。  
+ 要求具有 **db_backupoperator** 数据库角色的成员身份，具有 **ALTER ANY CREDENTIAL** 权限以及对 **sp_delete_backuphistory** 存储过程的 **EXECUTE** 权限。  
   
 ## <a name="examples"></a>示例  
  下面的示例 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 为 SQL Server 实例设置的高级配置选项。  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [managed_backup sp_backup_config_basic (Transact-sql) ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [ (transact-sql 的 managed_backup.sp_backup_config_basic managed_backup) ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

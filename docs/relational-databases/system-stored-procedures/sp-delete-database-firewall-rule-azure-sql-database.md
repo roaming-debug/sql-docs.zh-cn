@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 08/04/2017
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_database_firewall_rule
 - sp_delete_database_firewall_rule_TSQL
@@ -19,12 +19,12 @@ ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: ae71838bd9a384e616d0f1fe50d612535f840919
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2206974640e6a2bb1d37c4b4853c8a74e37a1ceb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472688"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195498"
 ---
 # <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
@@ -39,7 +39,7 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `[@name =] [N]'name'`  
  将删除的数据库级防火墙设置的名称。 *name* 为 **nvarchar (128)** ，无默认值。 Unicode 标识符 `N` 对于是可选的 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。 
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_delete_collection_item
 - sp_syscollector_delete_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee92161ff7effa336e6e1791c7da5b7988a926c2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae900632edd8ccce0e31c87bd7814c41f02da291
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544731"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204331"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,10 +43,10 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
   
 ## <a name="arguments"></a>参数  
  [ @collection_item_id =] *collection_item_id*  
- 收集项的唯一标识符。 *collection_item_id* 的值为 **int** ，默认值为 NULL。 如果*name*为 NULL，则*collection_item_id*必须具有值。  
+ 收集项的唯一标识符。 *collection_item_id* 的值为 **int** ，默认值为 NULL。 如果 *name* 为 NULL，则 *collection_item_id* 必须具有值。  
   
  [ @name =] "*name*"  
- 收集项的名称。 *名称* 为 **sysname** ，默认值为 NULL。 如果*collection_item_id*为 NULL，则*name*必须具有值。  
+ 收集项的名称。 *名称* 为 **sysname** ，默认值为 NULL。 如果 *collection_item_id* 为 NULL，则 *name* 必须具有值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

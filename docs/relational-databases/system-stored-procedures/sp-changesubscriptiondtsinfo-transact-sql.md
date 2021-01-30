@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changesubscriptiondtsinfo
 - sp_changesubscriptiondtsinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7dfb8781e2ba00bae96efff0d2e1dea385196a38
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 63762571085653afea03470cfc1e453a85e8adad
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543639"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194415"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,16 +41,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] job_id` 推送订阅的分发代理的作业 ID。 *job_id* 为 **varbinary (16) **，无默认值。 若要查找分发作业 ID，请运行 **sp_helpsubscription** 或 **sp_helppullsubscription**。  
+`[ @job_id = ] job_id` 推送订阅的分发代理的作业 ID。 *job_id* 为 **varbinary (16)**，无默认值。 若要查找分发作业 ID，请运行 **sp_helpsubscription** 或 **sp_helppullsubscription**。  
   
-`[ @dts_package_name = ] 'dts_package_name'` 指定 DTS 包的名称。 *dts_package_name* 是 **sysname**，默认值为 NULL。 例如，若要指定名为 **DTSPub_Package**的包，请指定 `@dts_package_name = N'DTSPub_Package'` 。  
+`[ @dts_package_name = ] 'dts_package_name'` 指定 DTS 包的名称。 *dts_package_name* 是 **sysname**，默认值为 NULL。 例如，若要指定名为 **DTSPub_Package** 的包，请指定 `@dts_package_name = N'DTSPub_Package'` 。  
   
 `[ @dts_package_password = ] 'dts_package_password'` 指定包的密码。 *dts_package_password* 的默认 **值为 NULL** ，默认值为 NULL，指定密码属性保持不变。  
   
 > [!NOTE]  
 >  DTS 包必须具有密码。  
   
-`[ @dts_package_location = ] 'dts_package_location'` 指定包位置。 *dts_package_location* 为 **nvarchar (12) **，默认值为 NULL，该值指定包位置保持不变。 包的位置可以更改为 **分发服务器** 或 **订阅服务器**。  
+`[ @dts_package_location = ] 'dts_package_location'` 指定包位置。 *dts_package_location* 为 **nvarchar (12)**，默认值为 NULL，该值指定包位置保持不变。 包的位置可以更改为 **分发服务器** 或 **订阅服务器**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

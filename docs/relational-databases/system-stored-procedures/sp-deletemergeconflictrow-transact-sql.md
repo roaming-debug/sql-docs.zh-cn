@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_deletemergeconflictrow
 - sp_deletemergeconflictrow_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4b2fae5fad15490fee5c239a26e8e0b5e0a25832
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 392d64a854db224542438f28d821a3ade597bdc8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543528"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203686"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +42,15 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @conflict_table = ] 'conflict_table'` 冲突表的名称。 *conflict_table* 的默认值为 **sysname**，默认值为 **%** 。 如果将*conflict_table*指定为 NULL 或 **%** ，则认为冲突为删除冲突，并从[MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表中删除与*rowguid*和*origin_datasource*和*source_object*匹配的行。  
+`[ @conflict_table = ] 'conflict_table'` 冲突表的名称。 *conflict_table* 的默认值为 **sysname**，默认值为 **%** 。 如果将 *conflict_table* 指定为 NULL 或 **%** ，则认为冲突为删除冲突，并从 [MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表中删除与 *rowguid* 和 *origin_datasource* 和 *source_object* 匹配的行。  
   
-`[ @source_object = ] 'source_object'` 源表的名称。 *source_object* 为 **nvarchar (386) **，默认值为 NULL。  
+`[ @source_object = ] 'source_object'` 源表的名称。 *source_object* 为 **nvarchar (386)**，默认值为 NULL。  
   
 `[ @rowguid = ] 'rowguid'` 删除冲突的行标识符。 *rowguid* 是 **uniqueidentifier**，无默认值。  
   
-`[ @origin_datasource = ] 'origin_datasource'` 冲突的起源。 *origin_datasource* 是 **varchar (255) **，无默认值。  
+`[ @origin_datasource = ] 'origin_datasource'` 冲突的起源。 *origin_datasource* 是 **varchar (255)**，无默认值。  
   
-`[ @drop_table_if_empty = ] 'drop_table_if_empty'` 一个标志，指示在为空时要删除 *conflict_table* 。 *drop_table_if_empty* 是 **varchar (10) **，默认值为 FALSE。  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` 一个标志，指示在为空时要删除 *conflict_table* 。 *drop_table_if_empty* 是 **varchar (10)**，默认值为 FALSE。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

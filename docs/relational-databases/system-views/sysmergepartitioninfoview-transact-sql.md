@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmergepartitioninfoview
 - sysmergepartitioninfoview_TSQL
@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c194b2442762f2ec9373cc730cbc4835bce45983
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f9a5063691cb0d8ed77fdc19ce3bba1adebf8858
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446511"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181577"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Sysmergepartitioninfoview**视图显示表项目的分区信息。 此视图存储在发布服务器的发布数据库以及订阅服务器的订阅数据库中。  
+  **Sysmergepartitioninfoview** 视图显示表项目的分区信息。 此视图存储在发布服务器的发布数据库以及订阅服务器的订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|项目的名称。|  
-|type|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **0x0a** = Table。<br /><br /> **0x20** = 仅过程架构。<br /><br /> **0x40** = 仅查看架构或仅索引视图架构。<br /><br /> **0x80** = 仅函数架构。|  
+|type |**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **0x0a** = Table。<br /><br /> **0x20** = 仅过程架构。<br /><br /> **0x40** = 仅查看架构或仅索引视图架构。<br /><br /> **0x80** = 仅函数架构。|  
 |**objid**|**int**|已发布对象的标识符。|  
 |**sync_objid**|**int**|表示同步数据集的视图的对象 ID。|  
 |**view_type**|**tinyint**|视图类型：<br /><br /> **0** = 不是视图;使用所有基对象。<br /><br /> **1** = 永久视图。<br /><br /> **2** = 临时视图。|  
@@ -54,7 +54,7 @@ ms.locfileid: "88446511"
 |**select_proc**|**sysname**|自动生成的存储过程的名称，合并代理使用该存储过程完成锁定并查找项目的行和列。|  
 |**metadata_select_proc**|**sysname**|自动生成的存储过程的名称，该存储过程用于访问合并复制系统表中的元数据。|  
 |**delete_proc**|**sysname**|用于在同步过程中删除行的过程。|  
-|**schema_option**|**二进制 (8) **|给定项目的架构生成选项的位图。 有关支持的 *schema_option* 值的信息，请参阅 [sp_addmergearticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
+|**schema_option**|**二进制 (8)**|给定项目的架构生成选项的位图。 有关支持的 *schema_option* 值的信息，请参阅 [sp_addmergearticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 |**destination_object**|**sysname**|在订阅服务器上创建的表的名称。|  
 |**destination_owner**|**sysname**|目标对象的所有者的名称。|  
 |**resolver_clsid**|**nvarchar(50)**|自定义冲突解决程序的 ID。 对于业务逻辑处理程序，该值为 NULL。|  
@@ -66,7 +66,7 @@ ms.locfileid: "88446511"
 |**表列**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**deleted_cols**|**varbinary(128)**|用于说明从项目中删除的列的位图。|  
 |**resolver_info**|**nvarchar(255)**|存储自定义冲突解决程序所需的其他信息。|  
-|**view_sel_proc**|**nvarchar (290) **|存储过程的名称，合并代理使用该存储过程初始填充动态筛选发布中的项目，并枚举在任何筛选发布中的已更改行。|  
+|**view_sel_proc**|**nvarchar (290)**|存储过程的名称，合并代理使用该存储过程初始填充动态筛选发布中的项目，并枚举在任何筛选发布中的已更改行。|  
 |**gen_cur**|**bigint**|生成项目基表的本地更改数。|  
 |**vertical_partition**|**int**|指定是否对表项目启用列筛选。 **0** 指示没有垂直筛选并发布所有列。|  
 |**identity_support**|**int**|指定是否启用自动标识范围处理。 **1** 表示启用标识范围处理， **0** 表示没有标识范围支持。|  
@@ -101,10 +101,10 @@ ms.locfileid: "88446511"
 |**expand_proc**|**sysname**|为新插入的父行的所有子行以及已完成分区更改或已删除的父行重新评估分区 Id 的过程的名称。|  
 |**logical_record_parent_nickname**|**int**|逻辑记录中指定项目的顶级父项目的别名。|  
 |**logical_record_view**|**int**|一个视图，用于输出与各子项目 rowguid 相对应的顶级父项目 rowguid。|  
-|**logical_record_deleted_view_rule**|**sysname**|与 **logical_record_view**类似，不同之处在于，它在 update 和 delete 触发器的 "deleted" 表中显示子行。|  
+|**logical_record_deleted_view_rule**|**sysname**|与 **logical_record_view** 类似，不同之处在于，它在 update 和 delete 触发器的 "deleted" 表中显示子行。|  
 |**logical_record_level_conflict_detection**|**bit**|指示应在逻辑记录级还是行级或列级检测冲突。<br /><br /> **0** = 使用行级或列级冲突检测。<br /><br /> **1** = 使用逻辑记录冲突检测，在这种情况下，发布服务器上的行更改与订阅服务器上的同一逻辑记录在单独的行中更改时，会被视为冲突。<br /><br /> 当该值为 1 时，只能使用逻辑记录级别的冲突解决。|  
 |**logical_record_level_conflict_resolution**|**bit**|指示是否应在逻辑记录级或行级或列级解决冲突。<br /><br /> **0** = 使用行级或列级的解析。<br /><br /> **1** = 如果发生冲突，来自入选方的整个逻辑记录将覆盖失去一方的整个逻辑记录。<br /><br /> 值 1 既可用于逻辑记录级别的检测，也可用于行或列级别的检测。|  
-|**partition_options**|**tinyint**|定义项目数据的分区方式，当所有行只属于一个分区或只属于一个订阅时，这将可以实现性能优化。 *Partition_options*可以是下列值之一。<br /><br /> **0** = 项目的筛选是静态的，或者不为每个分区生成唯一的数据子集，即 "重叠" 分区。<br /><br /> **1** = 分区重叠，在订阅服务器上所做的 DML 更新不能更改行所属的分区。<br /><br /> **2** = 对项目的筛选将生成不重叠分区，但多个订阅服务器可以接收相同的分区。<br /><br /> **3** = 对项目的筛选将生成对每个订阅唯一的非重叠分区。|  
+|**partition_options**|**tinyint**|定义项目数据的分区方式，当所有行只属于一个分区或只属于一个订阅时，这将可以实现性能优化。 *Partition_options* 可以是下列值之一。<br /><br /> **0** = 项目的筛选是静态的，或者不为每个分区生成唯一的数据子集，即 "重叠" 分区。<br /><br /> **1** = 分区重叠，在订阅服务器上所做的 DML 更新不能更改行所属的分区。<br /><br /> **2** = 对项目的筛选将生成不重叠分区，但多个订阅服务器可以接收相同的分区。<br /><br /> **3** = 对项目的筛选将生成对每个订阅唯一的非重叠分区。|  
 |name|**sysname**|分区的名称。|  
   
 ## <a name="see-also"></a>另请参阅  

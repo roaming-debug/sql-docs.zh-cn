@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_category
 - sp_add_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 845801380e1047dc9c44bf597a5fbea21e9d8dc4
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: f3ddc04ec70eb08be9ca10c96b45166c0b67aa63
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753704"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194411"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @class = ] 'class'` 要添加的类别的类。 *类* 是 **varchar (8) ** ，其默认值为 JOB，可以是下列值之一。  
+`[ @class = ] 'class'` 要添加的类别的类。 *类* 是 **varchar (8)** ，其默认值为 JOB，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -54,13 +54,13 @@ sp_add_category
 |ALERT|添加警报类别。|  
 |OPERATOR|添加操作员类别。|  
   
-`[ @type = ] 'type'` 要添加的类别的类型。 *类型* 为 **varchar (12) **，默认值为 **LOCAL**，可以是下列值之一。  
+`[ @type = ] 'type'` 要添加的类别的类型。 *类型* 为 **varchar (12)**，默认值为 **LOCAL**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |LOCAL|本地作业类别。|  
 |多服务器|多服务器作业类别。|  
-|无|除作业之外的类的类别 **。**|  
+|NONE|除作业之外的类的类别 **。**|  
   
 `[ @name = ] 'name'` 要添加的类别的名称。 该名称在指定类中必须是唯一的。 *名称* 为 **sysname**，无默认值。  
   
@@ -71,10 +71,10 @@ sp_add_category
  无  
   
 ## <a name="remarks"></a>备注  
- 必须从**msdb**数据库运行**sp_add_category** 。  
+ 必须从 **msdb** 数据库运行 **sp_add_category** 。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_add_category**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_add_category** 执行。  
   
 ## <a name="examples"></a>示例  
  以下示例将创建一个名为 `AdminJobs` 的本地作业类别。  

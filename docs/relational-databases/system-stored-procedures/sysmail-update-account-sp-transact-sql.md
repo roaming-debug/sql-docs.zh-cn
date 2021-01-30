@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_account_sp
 - sysmail_update_account_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fe446ee69a7bf3f7ac6600b2cb521f4f9d89ffa1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b441dfe7aa92bd78bb87ef05b4b7f9cdd6108919
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485506"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181891"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,13 +57,13 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @account_name = ] 'account_name'` 要更新的帐户的名称。 *account_name* 的默认值为 **sysname**，默认值为 NULL。 至少必须指定 *account_id* 或 *account_name* 中的一个。 如果两个都指定，则过程将更改帐户的名称。  
   
-`[ @email_address = ] 'email_address'` 要从其发送消息的新电子邮件地址。 该地址必须是 Internet 电子邮件地址。 该地址中的服务器名称就是数据库邮件用于从该帐户发送邮件的服务器。 *email_address* 为 **nvarchar (128) **，默认值为 NULL。  
+`[ @email_address = ] 'email_address'` 要从其发送消息的新电子邮件地址。 该地址必须是 Internet 电子邮件地址。 该地址中的服务器名称就是数据库邮件用于从该帐户发送邮件的服务器。 *email_address* 为 **nvarchar (128)**，默认值为 NULL。  
   
-`[ @display_name = ] 'display_name'` 要用于来自此帐户的电子邮件的新显示名称。 *display_name* 为 **nvarchar (128) **，无默认值。  
+`[ @display_name = ] 'display_name'` 要用于来自此帐户的电子邮件的新显示名称。 *display_name* 为 **nvarchar (128)**，无默认值。  
   
-`[ @replyto_address = ] 'replyto_address'` 此帐户的电子邮件的答复标头中使用的新地址。 *replyto_address* 为 **nvarchar (128) **，无默认值。  
+`[ @replyto_address = ] 'replyto_address'` 要在此帐户的电子邮件的 Reply-To 标题中使用的新地址。 *replyto_address* 为 **nvarchar (128)**，无默认值。  
   
-`[ @description = ] 'description'` 帐户的新说明。 *描述* 为 **nvarchar (256) **，默认值为 NULL。  
+`[ @description = ] 'description'` 帐户的新说明。 *描述* 为 **nvarchar (256)**，默认值为 NULL。  
   
 `[ @mailserver_name = ] 'server_name'` 要用于此帐户的 SMTP 邮件服务器的新名称。 运行的计算机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够将 *server_name* 解析为 IP 地址。 *server_name* **sysname**，无默认值。  
   
@@ -77,7 +77,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'` 用于登录到邮件服务器的新密码。 *password* 的值为 **sysname**，无默认值。  
   
-`[ @use_default_credentials = ] use_default_credentials` 指定是否使用服务的凭据将邮件发送到 SMTP 服务器 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 **use_default_credentials** 是 bit，无默认值。 当此参数为 1 时，数据库邮件使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]的凭据。 当此参数为0时，数据库邮件使用** \@ 用户名**和** \@ 密码**在 SMTP 服务器上进行身份验证。 如果** \@ 用户名**和** \@ 密码**为空，则将使用匿名身份验证。 在指定此参数之前，请洽询您的 SMTP 管理员  
+`[ @use_default_credentials = ] use_default_credentials` 指定是否使用服务的凭据将邮件发送到 SMTP 服务器 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 **use_default_credentials** 是 bit，无默认值。 当此参数为 1 时，数据库邮件使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]的凭据。 当此参数为0时，数据库邮件使用 **\@ 用户名** 和 **\@ 密码** 在 SMTP 服务器上进行身份验证。 如果 **\@ 用户名** 和 **\@ 密码** 为空，则将使用匿名身份验证。 在指定此参数之前，请洽询您的 SMTP 管理员  
   
 `[ @enable_ssl = ] enable_ssl` 指定数据库邮件是否使用传输层安全性 (TLS) （以前称为安全套接字层 (SSL) ）对通信进行加密。 如果 SMTP 服务器需要 TLS，请使用此选项。 **enable_ssl** 是 bit，无默认值。  
   

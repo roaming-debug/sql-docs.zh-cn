@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_get_captured_columns
 - sys.sp_cdc_get_captured_columns
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f19017dd72dc51f2fd79010b85c251c3c64ed22
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 90476faf2182ad92259d85dd97cc900153ec53c4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811041"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205966"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|如果为基于数值的列，则为该列的小数位数；否则为 NULL。|  
 |datetime_precision|**smallint**|如果为基于日期时间的列，则为该列的精度；否则为 NULL。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 sys.sp_cdc_get_captured_columns 获取有关 [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 或 [cdc.fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>查询捕获实例返回的捕获列的信息。 在捕获实例的生命周期内，列名、ID 和位置保持不变。 当所跟踪表中的基础源列的数据类型发生更改时，只有列数据类型会更改。 添加到源表或从中删除的列不会影响现有捕获实例的已捕获列。  
   
  使用 [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) 获取有关应用到源表 (ddl) 语句的信息。 任何修改所跟踪源列的结构的 DDL 更改都会在结果集中返回。  

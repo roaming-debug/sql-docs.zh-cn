@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdistributor
 - sp_dropdistributor_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2477b0a95fb74b26ecf8294baf2ce48a9fd32d12
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f7a08c3f8cd035db38533f9b7fd56aaa34c39399
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543465"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205152"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,15 +57,15 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>备注  
  **sp_dropdistributor** 在所有类型的复制中使用。  
   
- 如果服务器上存在其他发布服务器或分发对象， **sp_dropdistributor**将失败，除非** \@ no_checks**设置为**1**。  
+ 如果服务器上存在其他发布服务器或分发对象， **sp_dropdistributor** 将失败，除非 **\@ no_checks** 设置为 **1**。  
   
- 在通过执行 **sp_dropdistributiondb**删除分发数据库后，必须执行此存储过程。  
+ 在通过执行 **sp_dropdistributiondb** 删除分发数据库后，必须执行此存储过程。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_dropdistributor**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_dropdistributor** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   

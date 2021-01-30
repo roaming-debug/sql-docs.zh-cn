@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_create_removable
 - sp_create_removable_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e76256ec08495383d989134c101b54e4a510370
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 7ffe2273f7bd2ca63143f77a4d0c5726709d8440
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753940"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205198"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,13 +60,13 @@ sp_create_removable
   
 `[ @syslogical = ] 'syslogical'` 包含系统目录表的文件的逻辑名称。 *syslogical* 为 **sysname**。  
   
-`[ @sysphysical = ] 'sysphysical'` 物理名称。 其中包含存放系统目录表的文件的完全限定路径。 *sysphysical* 是 **nvarchar (260) **。  
+`[ @sysphysical = ] 'sysphysical'` 物理名称。 其中包含存放系统目录表的文件的完全限定路径。 *sysphysical* 是 **nvarchar (260)**。  
   
 `[ @syssize = ] syssize` 包含系统目录表的文件的大小（以 mb 为单位）。 *syssize* 为 **int**。最小 *syssize* 为1。  
   
 `[ @loglogical = ] 'loglogical'` 包含事务日志的文件的逻辑名称。 *loglogical* 为 **sysname**。  
   
-`[ @logphysical = ] 'logphysical'` 物理名称。 其中包含存放事务日志的文件的完全限定路径。 *logphysical* 是 **nvarchar (260) **。  
+`[ @logphysical = ] 'logphysical'` 物理名称。 其中包含存放事务日志的文件的完全限定路径。 *logphysical* 是 **nvarchar (260)**。  
   
 `[ @logsize = ] logsize` 包含事务日志的文件的大小（以 mb 为单位）。 *logsize* 为 **int**。最小 *logsize* 为1。  
   
@@ -74,7 +74,7 @@ sp_create_removable
   
  必须有 1 到 16 个数据文件。 通常，如果预计数据库很大，必须分布在多个磁盘上，则创建多个数据文件。  
   
-`[ @dataphysical1 = ] 'dataphysical'` 物理名称。 其中包括包含数据表的文件的完全限定路径。 *dataphysical* 是 **nvarchar (260) **。  
+`[ @dataphysical1 = ] 'dataphysical'` 物理名称。 其中包括包含数据表的文件的完全限定路径。 *dataphysical* 是 **nvarchar (260)**。  
   
 `[ @datasize1 = ] 'datasize'` 包含数据表的文件的大小（以 mb 为单位）。 *datasize* 为 **int**。最小 *datasize* 为1。  
   

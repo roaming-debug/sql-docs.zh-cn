@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_uncontained_entities
 - dm_db_uncontained_entities_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 54b087c98071ea550fcdff630a93d8049188ea91
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4bf535b136c8de41a54a6de6c75d0e22794a3448
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099897"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204790"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "98099897"
   
 ||||  
 |-|-|-|  
-|**列名**|类型|**说明**|  
-|*class*|**int**|1 = 对象或列（包括模块、XP、视图、同义词和表）。<br /><br /> 4 = 数据库主体<br /><br /> 5 = 程序集<br /><br /> 6 = 类型<br /><br /> 7 = 索引（全文索引）<br /><br /> 12 = 数据库 DDL 触发器<br /><br /> 19 = 路由<br /><br /> 30 = 审核规范|  
+|**列名**|**Type**|**说明**|  
+|class |**int**|1 = 对象或列（包括模块、XP、视图、同义词和表）。<br /><br /> 4 = 数据库主体<br /><br /> 5 = 程序集<br /><br /> 6 = 类型<br /><br /> 7 = 索引（全文索引）<br /><br /> 12 = 数据库 DDL 触发器<br /><br /> 19 = 路由<br /><br /> 30 = 审核规范|  
 |*class_desc*|**nvarchar(120)**|对实体的类的说明。 以下项之一用于匹配类：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **件**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **路由**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|实体的 ID。<br /><br /> 如果 *类* = 1，则 object_id<br /><br /> 如果 *类* = 4，则为 database_principals. principal_id。<br /><br /> 如果 *类* = 5，则 sys.assemblies.assembly_id。<br /><br /> 如果 *类* = 6，则 sys.types.user_type_id。<br /><br /> 如果 *类* = 7，则 sys.indexes.index_id。<br /><br /> 如果 *类* = 12，则 sys.triggers.object_id。<br /><br /> 如果 *类* = 19，则 sys.routes.route_id。<br /><br /> 如果 *class* = 30，则 sys。 database_audit_specifications database_audit_specifications.database_specification_id。|  
 |*statement_line_number*|**int**|如果此类是一个模块，则返回找到非包含使用所在的行号。  否则，值为 Null。|  

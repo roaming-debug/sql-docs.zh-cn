@@ -6,7 +6,7 @@ ms.date: 09/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_os_volume_stats_TSQL
 - dm_os_volume_stats
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 32deca4f06709806d90ee7d25e25105f191ad23e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0f685d3d6782aa003d36788757ed76bc41fdb2de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098815"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193735"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**supports_sparse_files**|**tinyint**|指示卷是否支持稀疏文件。  在 Windows 上不能为 null，并且在 Linux 操作系统上返回 null。|  
 |**is_read_only**|**tinyint**|指示卷当前是否标记为只读。 不能为 null。|  
 |**is_compressed**|**tinyint**|指示此卷当前是否已压缩。 在 Windows 上不能为 null，并且在 Linux 操作系统上返回 null。|  
-|**incurs_seek_penalty**|**tinyint**|指示支持此卷的存储的类型。 可能的值为：<br /><br />0：在此卷上无搜寻惩罚，通常是在存储设备为 PMM 或 SSD 时<br /><br />1：在此卷上搜寻惩罚，通常是在存储设备是 HDD 时<br /><br />2：当卷位于 UNC 路径或装载的共享上时，无法确定存储类型<br /><br />NULL：无法在 Linux 操作系统上确定存储类型<br /><br />**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从) 开始 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|  
+|**incurs_seek_penalty**|**tinyint**|指示支持此卷的存储的类型。 可能的值有：<br /><br />0：在此卷上无搜寻惩罚，通常是在存储设备为 PMM 或 SSD 时<br /><br />1：在此卷上搜寻惩罚，通常是在存储设备是 HDD 时<br /><br />2：当卷位于 UNC 路径或装载的共享上时，无法确定存储类型<br /><br />NULL：无法在 Linux 操作系统上确定存储类型<br /><br />**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从) 开始 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|  
   
 ## <a name="security"></a>安全性  
   

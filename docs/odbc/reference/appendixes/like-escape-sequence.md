@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC escape sequences [ODBC], LIKE
 - LIKE escape sequence [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 19d20f80f9fea4df2c508ec4ec4bcc2ee6718986
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d32b0470cb2adf0960e23dac17d8cb4942f296c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429639"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184396"
 ---
 # <a name="like-escape-sequence"></a>LIKE 转义序列
 ODBC 对 LIKE 子句使用转义序列。 此转义序列的语法如下所示：  
@@ -34,7 +34,7 @@ ODBC 对 LIKE 子句使用转义序列。 此转义序列的语法如下所示�
   
  *类似 ODBC-escape* ：： =  
   
- *Odbc-esc-发起程序* 转义符 \*转义*符 ' *odbc-esc-终止符*  
+ *Odbc-esc-发起程序* 转义符 \*转义* 符 ' *odbc-esc-终止符*  
   
  *转义* 符：： = *字符*  
   

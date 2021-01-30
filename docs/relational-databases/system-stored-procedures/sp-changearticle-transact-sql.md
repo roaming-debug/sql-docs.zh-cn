@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changearticle
 - sp_changearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2eb11859c0d0e4552324b0a3d7d5e005f9bd89b7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 22d64091d206161546856e7186958ab60217bcc2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548211"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203736"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,13 +48,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 `[ @article = ] 'article'` 要更改其属性的项目的名称。 *项目* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @property = ] 'property'` 要更改的项目属性。 *属性* 为 **nvarchar (100) **。  
+`[ @property = ] 'property'` 要更改的项目属性。 *属性* 为 **nvarchar (100)**。  
   
-`[ @value = ] 'value'` 项目属性的新值。 *值* 为 **nvarchar (255) **。  
+`[ @value = ] 'value'` 项目属性的新值。 *值* 为 **nvarchar (255)**。  
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|值|说明|  
+|properties|值|说明|  
 |--------------|------------|-----------------|  
 |**creation_script**||用于创建目标表的项目架构脚本的路径和名称。 默认值为 NULL。|  
 |**del_cmd**||要执行的 DELETE 语句，否则从日志构造。|  
@@ -63,7 +63,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||新目标表。|  
 |**destination_owner**||目标对象所有者的名称。|  
 |**filter**||要用于筛选表（水平筛选）的新存储过程。 默认值为 NULL。 对于对等复制中的发布，此值不能更改。|  
-|**fire_triggers_on_snapshot**|**true**|应用初始快照时会执行已复制的用户触发器。<br /><br /> 注意：对于要复制的触发器， *schema_option* 的位掩码值必须包括值 **0x100**。|  
+|**fire_triggers_on_snapshot**|true|应用初始快照时会执行已复制的用户触发器。<br /><br /> 注意：对于要复制的触发器， *schema_option* 的位掩码值必须包括值 **0x100**。|  
 ||**false**|应用初始快照时不会执行已复制的用户触发器。|  
 |**identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
 |**ins_cmd**||要执行的 INSERT 语句，否则从日志构造。|  
@@ -73,12 +73,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**delete**|删除目标表。|  
 ||**truncate**|截断目标表。|  
 |**pub_identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
-|**schema_option**||为给定项目指定架构生成选项的位图。 *schema_option* 是 ** (8) 的二进制 **。 有关详细信息，请参阅本主题后面的 "备注" 部分。|  
+|**schema_option**||为给定项目指定架构生成选项的位图。 *schema_option* 是 **(8) 的二进制**。 有关详细信息，请参阅本主题后面的 "备注" 部分。|  
 ||**0x00**|通过快照代理禁用脚本。|  
 ||**0x01**|生成对象创建（CREATE TABLE、CREATE PROCEDURE 等）。|  
 ||**0x02**|如果已定义，则生成传播项目更改的存储过程。|  
 ||**0x04**|使用 IDENTITY 属性为标识列编写脚本。|  
-||**0x08**|复制 **时间戳** 列。 如果未设置，则 **时间戳** 列将作为 **二进制**复制。|  
+||**0x08**|复制 **时间戳** 列。 如果未设置，则 **时间戳** 列将作为 **二进制** 复制。|  
 ||**0x10**|生成对应的聚集索引。|  
 ||**0x20**|在订阅服务器中将用户定义数据类型 (UDT) 转换为基本数据类型。 如果 UDT 列是主键的一部分或者计算列引用 UDT 列，则当 UDT 列上具有 CHECK 或 DEFAULT 约束时，此选项无法使用。 Oracle 发布服务器不支持。|  
 ||**0x40**|生成相应的非聚集索引。|  
@@ -104,18 +104,18 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|复制 **xml** 列的索引。|  
 ||**0x8000000**|创建订阅服务器中尚不存在的任何架构。|  
 ||**0x10000000**|将订阅服务器上的 **xml** 列转换为 **ntext** 。|  
-||**0x20000000**|将中引入的大型对象数据类型转换 (**nvarchar (max) **、 **varchar (max) **和 **varbinary (最大 **) ) [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。|  
+||**0x20000000**|将中引入的大型对象数据类型转换 (**nvarchar (max)**、 **varchar (max)** 和 **varbinary (最大**) ) [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。|  
 ||**0x40000000**|复制权限。|  
 ||**0x80000000**|尝试删除不属于发布一部分的任何对象的依赖项。|  
-||**0x100000000**|使用此选项可以复制 FILESTREAM 属性，如果该属性在 **varbinary (max) ** 列上指定。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不管如何设置此架构选项，都不支持将包含 FILESTREAM 列的表复制到订阅服务器。<br /><br /> 请参阅相关选项 **0x800000000**。|  
-||**0x200000000**|将中引入的日期和时间数据类型转换为在的早期版本中支持的数据类型 (**日期**、 **时间**、 **datetimeoffset**和 **datetime2**) [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+||**0x100000000**|使用此选项可以复制 FILESTREAM 属性，如果该属性在 **varbinary (max)** 列上指定。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不管如何设置此架构选项，都不支持将包含 FILESTREAM 列的表复制到订阅服务器。<br /><br /> 请参阅相关选项 **0x800000000**。|  
+||**0x200000000**|将中引入的日期和时间数据类型转换为在的早期版本中支持的数据类型 (**日期**、 **时间**、 **datetimeoffset** 和 **datetime2**) [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 ||**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建对象的详细信息，请参阅 [在应用快照之前和之后执行脚本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 请参阅相关选项 **0x100000000**。|  
-||**0x1000000000**|将公共语言运行时 (CLR) 用户定义类型 (Udt) 大于8000字节到 **varbinary (最大) ** ，以便可以将 UDT 类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
-||**0x2000000000**|将 **hierarchyid** 数据类型转换为 **varbinary (max) ** ，以便可以将 **hierarchyid** 类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 有关如何在复制的表中使用 **hierarchyid** 列的详细信息，请参阅 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
+||**0x1000000000**|将公共语言运行时 (CLR) 用户定义类型 (Udt) 大于8000字节到 **varbinary (最大)** ，以便可以将 UDT 类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
+||**0x2000000000**|将 **hierarchyid** 数据类型转换为 **varbinary (max)** ，以便可以将 **hierarchyid** 类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 有关如何在复制的表中使用 **hierarchyid** 列的详细信息，请参阅 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 ||**0x4000000000**|复制表的任何筛选的索引。 有关筛选索引的详细信息，请参阅 [创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
-||**0x8000000000**|将 **geography** 和 **geometry** 数据类型转换为 **varbinary (max) ** 以便可以将这些类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
-||**0x10000000000**|复制 **地域** 和 **几何图形**类型的列上的索引。|  
+||**0x8000000000**|将 **geography** 和 **geometry** 数据类型转换为 **varbinary (max)** 以便可以将这些类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
+||**0x10000000000**|复制 **地域** 和 **几何图形** 类型的列上的索引。|  
 ||**0x20000000000**|复制列的 SPARSE 属性。 有关此属性的详细信息，请参阅 [使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。|  
 ||**0x40000000000**|允许快照代理编写脚本，以便在订阅服务器上创建内存优化表。|  
 ||**0x80000000000**|将聚集索引转换为内存优化项目的非聚集索引。|  
@@ -130,7 +130,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||用于生成同步输出文件的表或视图的名称。 默认值为 NULL。 Oracle 发布服务器不支持。|  
 |**表空间**||标识从 Oracle 数据库发布的项目的日志记录表所使用的表空间。 有关详细信息，请参阅[管理 Oracle 表空间](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
 |**threshold**||用于控制分发代理何时分配新标识范围的百分比值。 对等复制不支持此属性。|  
-|type||Oracle 发布服务器不支持。|  
+|type ||Oracle 发布服务器不支持。|  
 ||**logbased**|基于日志的项目。|  
 ||**logbased manualboth**|具有手动筛选器和手动视图并且基于日志的项目。 此选项要求同时设置 " *sync_object* " 和 " *筛选器* " 属性。 Oracle 发布服务器不支持。|  
 ||**logbased manualfilter**|具有手动筛选器并且基于日志的项目。 此选项要求同时设置 " *sync_object* " 和 " *筛选器* " 属性。 Oracle 发布服务器不支持。|  
@@ -161,7 +161,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 `[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  更改发布服务器上的项目属性时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  更改发布服务器上的项目属性时，不应使用 *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -169,9 +169,9 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="remarks"></a>备注  
  **sp_changearticle** 用于快照复制和事务复制。  
   
- 当项目属于支持对等事务复制的发布时，只能更改 **说明**、 **ins_cmd**、 **upd_cmd**和 **del_cmd** 属性。  
+ 当项目属于支持对等事务复制的发布时，只能更改 **说明**、 **ins_cmd**、 **upd_cmd** 和 **del_cmd** 属性。  
   
- 更改以下任何属性都需要生成新的快照，并且必须将*force_invalidate_snapshot*参数的值指定为**1** ：  
+ 更改以下任何属性都需要生成新的快照，并且必须将 *force_invalidate_snapshot* 参数的值指定为 **1** ：  
   
 -   **del_cmd**  
   
@@ -187,7 +187,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **upd_cmd**  
   
- 更改以下任何属性都需要重新初始化现有的订阅，并且必须将*force_reinit_subscription*参数的值指定为**1** 。  
+ 更改以下任何属性都需要重新初始化现有的订阅，并且必须将 *force_reinit_subscription* 参数的值指定为 **1** 。  
   
 -   **del_cmd**  
   
@@ -206,7 +206,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  在现有发布中，可以使用 **sp_changearticle** 更改项目，而无需删除并重新创建整个发布。  
   
 > [!NOTE]  
->  更改 *schema_option*的值时，系统不执行位更新。 这意味着，当你使用**sp_changearticle**设置*schema_option*时，可能会关闭现有的位设置。 若要保留现有设置，应在要设置的值与*schema_option*的当前值之间执行[| (按位 "或") ](../../t-sql/language-elements/bitwise-or-transact-sql.md) ，这可通过执行[sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)来确定。  
+>  更改 *schema_option* 的值时，系统不执行位更新。 这意味着，当你使用 **sp_changearticle** 设置 *schema_option* 时，可能会关闭现有的位设置。 若要保留现有设置，应在要设置的值与 *schema_option* 的当前值之间执行 [| (按位 "或")](../../t-sql/language-elements/bitwise-or-transact-sql.md) ，这可通过执行 [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)来确定。  
   
 ## <a name="valid-schema-options"></a>有效架构选项  
  下表描述了 *schema_option* 允许的值，这些值基于在顶部) 中 (显示的复制类型，并且项目类型 (在第一列) 下显示。  
@@ -220,12 +220,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**indexed view logbased manualfilter**|所有选项|所有选项，但 **0x02**|  
 |**indexed view logbased manualview**|所有选项|所有选项，但 **0x02**|  
 |**indexed view logbase manualboth**|所有选项|所有选项，但 **0x02**|  
-|**proc exec**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000**和 **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000**和 **0x80000000**|  
-|**serializable proc exec**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000**和 **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000**和 **0x80000000**|  
-|**proc schema only**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000**和 **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000**和 **0x80000000**|  
-|**view schema only**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000**和 **0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000**和 **0x80000000**|  
-|**func schema only**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000**和 **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000**和 **0x80000000**|  
-|**indexed view schema only**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000**和 **0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000**和 **0x80000000**|  
+|**proc exec**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000** 和 **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000** 和 **0x80000000**|  
+|**serializable proc exec**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000** 和 **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000** 和 **0x80000000**|  
+|**proc schema only**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000** 和 **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000** 和 **0x80000000**|  
+|**view schema only**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000** 和 **0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000** 和 **0x80000000**|  
+|**func schema only**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000** 和 **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000** 和 **0x80000000**|  
+|**indexed view schema only**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000** 和 **0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000** 和 **0x80000000**|  
   
 > [!NOTE]
 >  对于排队更新发布，必须启用 *schema_option* 值 **0x80** 。 非发布支持的 *schema_option* 值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括： **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000** 和 **0x4000**。  

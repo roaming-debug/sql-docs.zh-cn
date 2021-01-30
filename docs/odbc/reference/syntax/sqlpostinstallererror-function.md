@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLPostInstallerError
 apilocation:
@@ -20,27 +20,27 @@ helpviewer_keywords:
 ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a041069de4c8b86946f7088d6a46462468cc3656
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72f3059e53e68cce0fc40286ae7c02d0e7eb38bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487206"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204521"
 ---
 # <a name="sqlpostinstallererror-function"></a>SQLPostInstallerError 函数
 **度**  
  引入的版本： ODBC 3。0  
   
  **摘要**  
- **SQLPostInstallerError** 提供了一种机制，使驱动程序或转换器安装程序库将 **ConfigDriver**、 **ConfigDSN**和 **ConfigTranslator** 函数的错误报告给安装程序错误队列。 应用程序不使用此 API;它们使用 **SQLInstallerError** 来检索错误。  
+ **SQLPostInstallerError** 提供了一种机制，使驱动程序或转换器安装程序库将 **ConfigDriver**、 **ConfigDSN** 和 **ConfigTranslator** 函数的错误报告给安装程序错误队列。 应用程序不使用此 API;它们使用 **SQLInstallerError** 来检索错误。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
   
 RETCODE SQLPostInstallerError(  
-     DWORD    fErrorCode,  
-     LPSTR    szErrorMsg);  
+     DWORD    fErrorCode,  
+     LPSTR    szErrorMsg);  
 ```  
   
 ## <a name="arguments"></a>参数  

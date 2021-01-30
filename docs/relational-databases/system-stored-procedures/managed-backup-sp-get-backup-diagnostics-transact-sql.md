@@ -1,13 +1,13 @@
 ---
-description: 'managed_backup sp_get_backup_diagnostics (Transact-sql) '
-title: managed_backup sp_get_backup_diagnostics (Transact-sql) |Microsoft Docs
+description: " (transact-sql 的 managed_backup.sp_get_backup_diagnostics managed_backup) "
+title: managed_backup managed_backup.sp_get_backup_diagnostics (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_get_backup_diagnostics_TSQL
 - sp_get_backup_diagnostics
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: efd884b6e757ab81cf01eda00b0322ef3ec5c701
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fbda9abd944665d3f0d52c174e0b1a5c1e488fa0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543680"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205288"
 ---
-# <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup sp_get_backup_diagnostics (Transact-sql) 
+# <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a> (transact-sql 的 managed_backup.sp_get_backup_diagnostics managed_backup) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   返回由智能管理记录的扩展事件。  
@@ -45,9 +45,9 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  @xevent_channel  
- 扩展事件的类型。 默认值设置为返回之前 30 分钟内记录的所有事件。 记录的事件取决于所启用扩展事件的类型。 您可以使用此参数对存储过程进行筛选，仅显示特定类型的事件。 可以指定完整的事件名称，也可以指定一个子字符串，例如： **"admin**"、 **"分析"**、 **"操作"** 和 **"调试"**。 @event_channel是**VARCHAR (255) **。  
+ 扩展事件的类型。 默认值设置为返回之前 30 分钟内记录的所有事件。 记录的事件取决于所启用扩展事件的类型。 您可以使用此参数对存储过程进行筛选，仅显示特定类型的事件。 可以指定完整的事件名称，也可以指定一个子字符串，例如： **"admin**"、 **"分析"**、 **"操作"** 和 **"调试"**。 @event_channel是 **VARCHAR (255)**。  
   
- 若要获取当前启用的事件类型的列表，请使用 **managed_backup fn_get_current_xevent_settings** 函数。  
+ 若要获取当前启用的事件类型的列表，请使用 **managed_backup. fn_get_current_xevent_settings** 函数。  
   
  [@begin_time  
  应显示的事件对应的时间段的开始时间。 @begin_time参数为 DATETIME，默认值为 NULL。 如果不指定，则将显示过去 30 分钟的事件。  

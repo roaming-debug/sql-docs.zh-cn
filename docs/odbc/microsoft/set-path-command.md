@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36131e53d1a10d8af3e7ca226768a9c08a14ba77
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a97ac5a074116fcaad0477625ea683226abaf76e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421831"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203925"
 ---
 # <a name="set-path-command"></a>SET PATH 命令
 指定文件搜索的路径。 有关特定于驱动程序的信息，请参阅 "备注"。  
@@ -44,7 +44,7 @@ SET PATH TO [Path]
   
 -   诸如 [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) 和 [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) 之类的目录函数将忽略新路径，并继续引用 [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) 或 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)中的数据源指定的路径。  
   
--   诸如 SELECT、INSERT、UPDATE、DELETE 和 CREATE TABLE 等命令将忽略新路径，并继续引用 **SQLPrepare** 或 **SQLExecDirect**中的数据源指定的路径。  
+-   诸如 SELECT、INSERT、UPDATE、DELETE 和 CREATE TABLE 等命令将忽略新路径，并继续引用 **SQLPrepare** 或 **SQLExecDirect** 中的数据源指定的路径。  
   
  如果在存储过程中发出集路径，但随后不将路径设置回其原始状态，则数据库的其他连接将使用新路径 (因为设置路径的作用域不是) 的数据会话。  
   

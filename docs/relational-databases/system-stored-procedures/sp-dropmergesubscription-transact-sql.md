@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergesubscription_TSQL
 - sp_dropmergesubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8d1b10deb11751ba8a8d2c5ee49cda293e695d50
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 29cf6541b12f49194c1d1a6562d3fb80975a5591
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538927"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204800"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,9 +47,9 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscriber = ] 'subscriber'` 订阅服务器的名称。 *订阅服务器* 的值为 **sysname**，默认值为 NULL。  
   
-`[ @subscriber_db = ] 'subscriber_db'` 订阅数据库的名称。 *subscription_database*的默认值为 **sysname**，默认值为 NULL。  
+`[ @subscriber_db = ] 'subscriber_db'` 订阅数据库的名称。 *subscription_database* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @subscription_type = ] 'subscription_type'` 订阅的类型。 *subscription_type*为 **nvarchar (15) **，可以是下列值之一。  
+`[ @subscription_type = ] 'subscription_type'` 订阅的类型。 *subscription_type* 为 **nvarchar (15)**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -57,7 +57,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |**匿名**|匿名订阅。|  
 |**push**|推送订阅。|  
 |**请求**|请求订阅。|  
-|** (默认** 值) |推送订阅和请求订阅。|  
+|**(默认** 值) |推送订阅和请求订阅。|  
   
 `[ @ignore_distributor = ] ignore_distributor` 指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor* 为 **bit**，默认值为 **0**。 该参数可用于删除订阅，但不清除分发服务器上的任务。 在必须重新安装分发服务器的情况下，该参数也很有用。  
   
