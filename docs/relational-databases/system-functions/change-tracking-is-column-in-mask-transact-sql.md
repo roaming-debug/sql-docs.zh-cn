@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CHANGE_TRACKING_IS_COLUMN_IN_MASK_TSQL
 - CHANGE_TRACKING_IS_COLUMN_IN_MASK
@@ -20,12 +20,12 @@ ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9d5ee6c44e0b0ca9544ee4a32b7cbd455497fe6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8d6566cb13adcc131aa8e4731c85ddb63e53f202
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095007"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196171"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>返回值  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK 返回下列值。  
   
-|返回值|描述|  
+|返回值|说明|  
 |------------------|-----------------|  
 |0|指定的列不在 *change_columns* 列表中。|  
 |1|指定的列位于 *change_columns* 列表。|  

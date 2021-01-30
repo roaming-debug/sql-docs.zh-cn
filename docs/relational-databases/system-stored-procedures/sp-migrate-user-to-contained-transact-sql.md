@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_migrate_user_to_contained
 - sp_migrate_user_to_contained_TSQL
@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: edabb8a59a672c3ebfe04a799df7901b402fb5b3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 81450361252fcdc2d02a9d9e118839db3c5af64c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543179"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195484"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户转换为具有密码的包含数据库用户。 在包含的数据库中，请使用此过程删除安装了该数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的依赖项。 **sp_migrate_user_to_contained** 将用户与原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名分开，以便为包含的数据库单独管理密码和默认语言等设置。 **sp_migrate_user_to_contained**在将包含的数据库移动到的其他实例之前，可以使用 sp_migrate_user_to_contained [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，以消除当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例登录名的依赖项。  
+  将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户转换为具有密码的包含数据库用户。 在包含的数据库中，请使用此过程删除安装了该数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的依赖项。 **sp_migrate_user_to_contained** 将用户与原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名分开，以便为包含的数据库单独管理密码和默认语言等设置。 在将包含的数据库移动到的其他实例之前，可以使用 sp_migrate_user_to_contained [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，以消除当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例登录名的依赖项。  
   
 > [!NOTE]
-> 使用 **sp_migrate_user_to_contained**时要小心，因为您将无法撤消该效果。 此过程仅在包含的数据库中使用。 有关详细信息，请参阅 [Contained Databases](../../relational-databases/databases/contained-databases.md)。  
+> 使用 **sp_migrate_user_to_contained** 时要小心，因为您将无法撤消该效果。 此过程仅在包含的数据库中使用。 有关详细信息，请参阅 [Contained Databases](../../relational-databases/databases/contained-databases.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,13 +43,13 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [** @username =** ] **N '***用户***'**  
+ [**@username =** ] **N '**_用户_*_'_*  
  当前包含的数据库中的用户名称，该用户将映射到经过身份验证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 该值为 **sysname**，默认值为 **NULL**。  
   
- [** @rename =** ] **N '***copy_login_name***'**  | **N '***keep_name***'**  
+ [**@rename =** ] **N '**_copy_login_name_*_'_*  | **N '**_keep_name_*_'_*  
  如果基于登录名的数据库用户与登录名的用户名不同，请使用 *keep_name* 在迁移过程中保留数据库用户名。 使用 *copy_login_name* 创建具有登录名的新包含数据库用户，而不是用户。 如果基于登录名的数据库用户具有与登录名相同的用户名，这两个选项将创建包含数据库用户而不更改名称。  
   
- [** @disablelogin =** ] **N '***disable_login***'**  | **N '***do_not_disable_login***'**  
+ [**@disablelogin =** ] **N '**_disable_login_*_'_*  | **N '**_do_not_disable_login_*_'_*  
  *disable_login* 禁用 master 数据库中的登录名。 若要在启用登录名时进行连接，连接必须提供作为连接字符串的一部分的 **初始目录** 的包含数据库名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -68,7 +68,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   用户不能拥有包含 **EXECUTE AS OWNER** 子句的存储过程。  
   
--   不能在系统数据库中使用**sp_migrate_user_to_contained** 。  
+-   不能在系统数据库中使用 **sp_migrate_user_to_contained** 。  
   
 ## <a name="security"></a>安全性  
  在迁移用户时，切勿从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中禁用或删除所有管理员登录名。 如果删除了所有登录名，请参阅 [在系统管理员被锁定时连接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。  

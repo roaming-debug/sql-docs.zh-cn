@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_post_msx_operation
 - sp_post_msx_operation_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 304eef1c0e707ecb77fb8d13d5e2b524eb9e9e00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: be9ef622f686044800f634837819b4cba92821a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545962"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196041"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @operation = ] 'operation'` 已发布操作的操作类型。 *操作*是 **varchar (64) **，无默认值。 有效的操作取决于 *object_type*。  
+`[ @operation = ] 'operation'` 已发布操作的操作类型。 *操作* 是 **varchar (64)**，无默认值。 有效的操作取决于 *object_type*。  
   
 |对象类型|Operation|  
 |-----------------|---------------|  
@@ -54,13 +54,13 @@ sp_post_msx_operation
 |**服务**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**编制**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
-`[ @object_type = ] 'object'` 要为其发布操作的对象的类型。 有效类型为 " **作业**"、" **服务器**" 和 " **计划**"。 *对象*是**varchar (64) **，默认值**为。**  
+`[ @object_type = ] 'object'` 要为其发布操作的对象的类型。 有效类型为 " **作业**"、" **服务器**" 和 " **计划**"。 *对象* 是 **varchar (64)**，默认值 **为。**  
   
 `[ @job_id = ] job_id` 应用操作的作业的标识号。 *job_id* 是 **uniqueidentifier**，无默认值。 **0x00** 指示所有作业。 如果 *对象* 为 **SERVER**，则不需要 *job_id*。  
   
-`[ @specific_target_server = ] 'target_server'` 为其应用指定操作的目标服务器的名称。 如果指定了 *job_id* ，但未指定 *target_server* ，则将为作业的所有作业服务器发布操作。 *target_server* 为 **nvarchar (30) **，默认值为 NULL。  
+`[ @specific_target_server = ] 'target_server'` 为其应用指定操作的目标服务器的名称。 如果指定了 *job_id* ，但未指定 *target_server* ，则将为作业的所有作业服务器发布操作。 *target_server* 为 **nvarchar (30)**，默认值为 NULL。  
   
-`[ @value = ] value` 轮询间隔（以秒为单位）。 *value* 的数据类型为 **int**，默认值为 NULL。 仅在**设置**了 "轮询"*时才指定*此参数。  
+`[ @value = ] value` 轮询间隔（以秒为单位）。 *value* 的数据类型为 **int**，默认值为 NULL。 仅在 **设置** 了 "轮询"*时才指定* 此参数。  
   
 `[ @schedule_uid = ] schedule_uid` 应用操作的计划的唯一标识符。 *schedule_uid* 是 **uniqueidentifier**，无默认值。  
   
@@ -71,9 +71,9 @@ sp_post_msx_operation
  无  
   
 ## <a name="remarks"></a>备注  
- 必须从**msdb**数据库运行**sp_post_msx_operation** 。  
+ 必须从 **msdb** 数据库运行 **sp_post_msx_operation** 。  
   
- 始终可以安全地调用**sp_post_msx_operation** ，因为它首先确定当前服务器是否为多服务器 Microsoft SQL Server 代理，如果是，则*对象*是否为多服务器作业。  
+ 始终可以安全地调用 **sp_post_msx_operation** ，因为它首先确定当前服务器是否为多服务器 Microsoft SQL Server 代理，如果是，则 *对象* 是否为多服务器作业。  
   
  操作发布后，它将显示在 **sysdownloadlist** 表中。 创建并发布作业后，对该作业的后续更改也必须通知目标服务器 (TSX)。 这也是用下载列表完成的。  
   

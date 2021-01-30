@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelppublication_TSQL
 - sp_replmonitorhelppublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 964f32d4158e8159a65a79eac35415c34c35289c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 70f401f52926fc389232b82167a94f9a4ded1e0e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543109"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193750"
 ---
 # <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**worst_runspeedPerf**|**int**|合并发布的最长同步时间。|  
 |**best_runspeedPerf**|**int**|合并发布的最短同步时间。|  
 |**average_runspeedPerf**|**int**|合并发布的平均同步时间。|  
-|**retention_period_unit**|**int**|用于表示 *保持期*的单位。|  
+|**retention_period_unit**|**int**|用于表示 *保持期* 的单位。|  
 |**publisher**|**sysname**|发布内容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -7,7 +7,7 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.subservice: design
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
@@ -15,12 +15,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2e69f8446bc7a98b6aa3bae68a169d5e88759ea2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 07de301f6407caf8ab2775ed1d65dfdd290e1185
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461538"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196046"
 ---
 # <a name="sp_pdw_remove_network_credentials-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_remove_network_credentials) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -39,7 +39,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  "*target_server_name*"  
  指定目标服务器主机名或 IP 地址。 将从中删除用于访问此服务器的凭据 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 这不会更改或删除你自己的团队管理的实际目标服务器上的任何权限。  
   

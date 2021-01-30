@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_defaultdb_TSQL
 - sp_defaultdb
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7289868e32e26c6902f00d0c7e542b599b6978fd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4c644fed26ea2ce80f0f827eb7b3b0f6b000d66
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549874"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196081"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login'` 登录名。 *login* 的 **sysname**为，无默认值。 *登录名* 可以是现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，也可以是 Windows 用户或组。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不存在 Windows 用户或用户组的登录名，则会自动添加该登录名。  
+`[ @loginame = ] 'login'` 登录名。 *login* 的 **sysname** 为，无默认值。 *登录名* 可以是现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，也可以是 Windows 用户或组。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不存在 Windows 用户或用户组的登录名，则会自动添加该登录名。  
   
 `[ @defdb = ] 'database'` 新的默认数据库的名称。 *数据库* 为 **sysname**，无默认值。 *数据库* 必须已存在。  
   
@@ -53,7 +53,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ## <a name="remarks"></a>备注  
  **sp_defaultdb** 调用 ALTER LOGIN。 此语句支持附加选项。 有关更改默认数据库的信息，请参阅 [ALTER LOGIN &#40;transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
- 不能在用户定义的事务中执行**sp_defaultdb** 。  
+ 不能在用户定义的事务中执行 **sp_defaultdb** 。  
   
 ## <a name="permissions"></a>权限  
  需要 ALTER ANY LOGIN 权限。  

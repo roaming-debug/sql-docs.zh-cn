@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replcmds_TSQL
 - sp_replcmds
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec1209e23885026c4f64994d5b0605e36e6fde5d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8d61544e171e102c04f829ab7c302048c930d21
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538581"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193522"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +49,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**文章 id**|**int**|项目的 ID。|  
 |**partial_command**|**bit**|指示这是否为部分命令。|  
-|**command**|**varbinary (1024) **|命令值。|  
+|**command**|**varbinary (1024)**|命令值。|  
 |**xactid**|**binary(10)**|事务 ID。|  
 |**xact_seqno**|**varbinary(16)**|事务序列号。|  
 |**publication_id**|**int**|发布 ID。|  
@@ -72,9 +72,9 @@ sp_replcmds [ @maxtrans = ] maxtrans
 > [!NOTE]  
 >  由于源数据库内的表名是由所有者名称限定的，所以目标数据库内的表所有者必须具有相同的所有者名称。  
   
- 在第一个客户端断开连接之前，尝试在同一数据库内运行 **sp_replcmds** 的客户端将收到错误18752。 第一个客户端断开连接后，其他客户端可以 **sp_replcmds**运行，并成为新的日志读取器。  
+ 在第一个客户端断开连接之前，尝试在同一数据库内运行 **sp_replcmds** 的客户端将收到错误18752。 第一个客户端断开连接后，其他客户端可以 **sp_replcmds** 运行，并成为新的日志读取器。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果 sp_replcmds 无法复制文本命令，则会向错误日志和 Windows 应用程序日志添加警告消息编号18759， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 因为不会在同一事务中检索文本指针。 **sp_replcmds**  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果 sp_replcmds 无法复制文本命令，则会向错误日志和 Windows 应用程序日志添加警告消息编号18759， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 因为不会在同一事务中检索文本指针。   
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_replcmds**。  

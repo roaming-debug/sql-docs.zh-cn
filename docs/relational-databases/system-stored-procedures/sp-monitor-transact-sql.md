@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_monitor_TSQL
 - sp_monitor
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f214abb7b20c42ec62f1bc35d85222e0033798d1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f046c3e6fe81c7dac489fcdd88237ecb2d3747d0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544740"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195470"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sp_monitor
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过一系列函数跟踪其完成的工作量。 执行 **sp_monitor** 显示这些函数返回的当前值，并显示自上次运行该过程以来它们的更改量。  
   
- 对于每一列，统计信息将以 *数字* 形式显示 (*number*) 号 *% 或* *number* (*number*) 。 第一个 *数字* 是指在重新启动后，为 **cpu_busy**、 **io_busy**和 **空闲**)  (的秒数，或其他变量 (总数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 括号中的 *数字* 是指自上次运行 **sp_monitor** 以来的秒数或总数。 百分比是自上次运行 **sp_monitor** 以来的时间百分比。 例如，如果报表显示 **cpu_busy** 为 4250 (215) -68%，则自上次启动以来，cpu 已忙4250秒 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，自上次运行 **sp_monitor** 以来的215秒，以及自上次运行 **sp_monitor** 以来的总时间的68百分比。  
+ 对于每一列，统计信息将以 *数字* 形式显示 (*number*) 号 *% 或* *number* (*number*) 。 第一个 *数字* 是指在重新启动后，为 **cpu_busy**、 **io_busy** 和 **空闲**)  (的秒数，或其他变量 (总数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 括号中的 *数字* 是指自上次运行 **sp_monitor** 以来的秒数或总数。 百分比是自上次运行 **sp_monitor** 以来的时间百分比。 例如，如果报表显示 **cpu_busy** 为 4250 (215) -68%，则自上次启动以来，cpu 已忙4250秒 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，自上次运行 **sp_monitor** 以来的215秒，以及自上次运行 **sp_monitor** 以来的总时间的68百分比。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  

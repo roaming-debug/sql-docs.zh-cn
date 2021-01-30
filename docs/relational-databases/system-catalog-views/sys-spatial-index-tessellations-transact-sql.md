@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - spatial_index_tessellations
 - sys.spatial_index_tessellations_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ddf7b9cd75999da6cc48f6e7a83bab7a733f822b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8f4d10efa7a0f3c04ac1864086d703c8fd4a0844
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095409"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195579"
 ---
 # <a name="sysspatial_index_tessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "98095409"
 >  有关分割的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
 
-|列名称|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|定义了索引的对象的 ID。 每个 (object_id，index_id) 对在 [sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)中都有相应的条目。|  
 |index_id|**int**|定义了索引列的空间索引的 ID。|  

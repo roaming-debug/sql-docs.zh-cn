@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_can_tlog_be_applied_TSQL
 - sp_can_tlog_be_applied
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e45af0f3817bdbc036816233e468995209bec622
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9521c435d17e94a034aa1723f5cd023035cd1f87
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548202"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197683"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @backup_file_name = ] 'backup_file_name'` 备份文件的名称。 *backup_file_name* ** (128) 为 nvarchar **。  
+`[ @backup_file_name = ] 'backup_file_name'` 备份文件的名称。 *backup_file_name* **(128) 为 nvarchar**。  
   
-`[ @database_name = ] 'database_name'` 数据库的名称。 database_name 的数据类型为 sysname******。  
+`[ @database_name = ] 'database_name'` 数据库的名称。 database_name 的数据类型为 sysname。  
   
 `[ @result = ] _result_ OUTPUT` 指示事务日志是否可应用于数据库。 *结果* 为 **bit**。  
   
@@ -56,7 +56,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
  0（成功）或 1（失败）  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_can_tlog_be_applied**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_can_tlog_be_applied** 执行。  
   
 ## <a name="examples"></a>示例  
  以下示例将声明一个本地变量 `@MyBitVar`，用于存储结果。  

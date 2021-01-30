@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enumeratependingschemachanges
 - sp_enumeratependingschemachanges_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ccc1959644d5f286907abc2240245d88978b55c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7a75e22f94688d4d8819b22b1b478bd3a3a66ce1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541778"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193564"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 |**schemaversion**|**int**|挂起的架构更改的编号。|  
 |**schematype**|**sysname**|表示架构更改类型的文本值。|  
 |**schematext**|**nvarchar(max)**|说明架构更改的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。|  
-|**schemastatus**|**nvarchar (10) **|指示架构更改是否针对项目挂起，可以是下列值之一：<br /><br /> **active** = 架构更改处于挂起状态<br /><br /> **非活动** = 架构更改处于非活动状态<br /><br /> **skip** = 不复制架构更改|  
+|**schemastatus**|**nvarchar (10)**|指示架构更改是否针对项目挂起，可以是下列值之一：<br /><br /> **active** = 架构更改处于挂起状态<br /><br /> **非活动** = 架构更改处于非活动状态<br /><br /> **skip** = 不复制架构更改|  
 |**schemaguid**|**uniqueidentifier**|标识架构更改。|  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -60,7 +60,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_enumeratependingschemachanges** 用于合并复制。  
   
- 与[sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)一起使用的**sp_enumeratependingschemachanges**用于合并复制的可支持性，仅在其他纠正措施（如重新初始化）未能更正此情况时才使用。  
+ 与 [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)一起使用的 **sp_enumeratependingschemachanges** 用于合并复制的可支持性，仅在其他纠正措施（如重新初始化）未能更正此情况时才使用。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_enumeratependingschemachanges**。  

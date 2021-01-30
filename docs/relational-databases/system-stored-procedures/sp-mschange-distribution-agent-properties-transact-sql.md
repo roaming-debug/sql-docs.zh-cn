@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_MSchange_distribution_agent_properties
 - sp_MSchange_distribution_agent_properties_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 276e56e28c7455949fcf12b32f684365c20c618f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 37bb9e7af79fbc3ef99febd84cce78eb8db8a557
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547632"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195460"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,11 +56,11 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 要更改的发布属性。 *属性* 为 **sysname**，无默认值。  
   
-`[ @value = ] 'value'` 新属性值。 *值* 为 **nvarchar (524) **，默认值为 NULL。  
+`[ @value = ] 'value'` 新属性值。 *值* 为 **nvarchar (524)**，默认值为 NULL。  
   
  下表说明了可以更改的分发服务器代理作业的属性，以及对这些属性值的限制。  
   
-|属性|值|说明|  
+|properties|值|说明|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**distrib_job_password**||用来运行代理作业的 Windows 帐户的密码。|  
@@ -90,7 +90,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
  当发布服务器在或更高版本的实例上运行时 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ，您应该使用 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) 更改同步在分发服务器上运行的推送订阅的合并代理作业的属性。  
   
 ## <a name="permissions"></a>权限  
- 只有分发服务器上 **sysadmin** 固定服务器角色的成员才能 **sp_MSchange_distribution_agent_properties**执行。  
+ 只有分发服务器上 **sysadmin** 固定服务器角色的成员才能 **sp_MSchange_distribution_agent_properties** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_addpushsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   

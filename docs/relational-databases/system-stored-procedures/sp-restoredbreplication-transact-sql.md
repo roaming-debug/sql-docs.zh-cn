@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_restoredbreplication
 - sp_restoredbreplication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b64a39661fdceefade15d605ccc8e1c083ede0e6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 841a162c9619344fa297951277642f306d8539ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541537"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194376"
 ---
 # <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +60,7 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
  **sp_restoredbreplication** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 或 **dbcreator** 固定服务器角色的成员或 **dbo** 数据库架构才能 **sp_restoredbreplication**执行。  
+ 只有 **sysadmin** 或 **dbcreator** 固定服务器角色的成员或 **dbo** 数据库架构才能 **sp_restoredbreplication** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

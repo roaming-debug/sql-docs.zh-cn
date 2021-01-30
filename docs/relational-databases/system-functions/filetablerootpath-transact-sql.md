@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FileTableRootPath_TSQL
 - FileTableRootPath
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f08273adcf261ecfdafaa70793d50b31360f7e40
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b21eb896c32b2afdfb56b1318406ee96f93546df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093852"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196126"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,10 +41,10 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  *FileTable_name*  
  FileTable 的名称。 *FileTable_name* 的类型为 **nvarchar**。 这是一个可选参数。 默认值为当前数据库。 指定 *schema_name* 也是可选的。 可以将 NULL 传递给 *FileTable_name* 以使用默认参数值  
   
- *\@选项*  
+ *\@选*  
  一个整数表达式，定义路径的服务器组件应如何进行格式化。 *\@ 选项* 可以具有以下值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -66,7 +66,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
  有关详细信息，请参阅 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
-## <a name="best-practices"></a>最佳方案  
+## <a name="best-practices"></a>最佳实践  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 相反，在运行时获取文件的完整路径，方法是将 **FileTableRootPath** 和 **GetFileNamespacePath** 函数一起使用，如下面的示例中所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
 ```sql  

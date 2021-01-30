@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLRemoveDefaultDataSource
 apilocation:
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: db803266-57df-4864-a41b-901247549c1f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0010e59cc4dfad2d54b8b1c4e59e83ea72fcd3ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 326522986785d7e76bc781fa4cc912401f2c237e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487085"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192513"
 ---
 # <a name="sqlremovedefaultdatasource-function"></a>SQLRemoveDefaultDataSource 函数
 **度**  
  引入的版本： ODBC 1.0，不推荐使用  
   
  **摘要**  
- 在 ODBC 3.0 中，已使用 ODBC_REMOVE_DEFAULT_DSN 的*fRequest*参数调用[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)的**SQLRemoveDefaultDataSource**函数。 如果 ODBC 2.x 安装程序调用了此函数，则*odbc 安装程序* 将映射到以下 **SQLConfigDataSource** 调用：  
+ 在 ODBC 3.0 中，已使用 ODBC_REMOVE_DEFAULT_DSN 的 *fRequest* 参数调用 [SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)的 **SQLRemoveDefaultDataSource** 函数。 如果 ODBC 2.x 安装程序调用了此函数，则 *odbc 安装程序* 将映射到以下 **SQLConfigDataSource** 调用：  
   
 ```cpp  
 SQLConfigDataSource (NULL, ODBC_REMOVE_DEFAULT_DSN, NULL, NULL)  

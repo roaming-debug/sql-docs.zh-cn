@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmessage_TSQL
 - sp_dropmessage
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb4480908dc508fb82e591b2a9dbab448f951961
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 41971224ec830b1fbc17fdc8f754d7ae99e8731e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536411"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197638"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,12 +55,12 @@ sp_dropmessage [ @msgnum = ] message_number
  要求具有 **sysadmin** 和 **serveradmin** 固定服务器角色的成员身份。  
   
 ## <a name="remarks"></a>备注  
- 除非为*语言*指定**all** ，否则必须先删除消息的所有本地化版本，然后才能删除该消息的美国英语版本。  
+ 除非为 *语言* 指定 **all** ，否则必须先删除消息的所有本地化版本，然后才能删除该消息的美国英语版本。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. 删除用户定义的消息  
- 下面的示例 `50001` 从 **sys.databases**中删除用户定义的消息 number。  
+ 下面的示例 `50001` 从 **sys.databases** 中删除用户定义的消息 number。  
   
 ```  
 USE master;  

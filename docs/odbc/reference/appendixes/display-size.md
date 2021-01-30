@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - display size of data types [ODBC]
 - size of data types [ODBC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 747c2076c528df8c312c9b3ed45e45a165299d59
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a39a0f986164cf6bc14e8be6e221232dd936e4bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456582"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194876"
 ---
 # <a name="display-size"></a>显示大小
 列的显示大小是以字符形式显示数据所需的最大字符数。 下表定义了每个 ODBC SQL 数据类型的显示大小。  
@@ -40,7 +40,7 @@ ms.locfileid: "88456582"
 |所有二进制类型 [a]|变量类型的已定义或最大 (列的长度) 倍。 每个二进制字节 (用2位十六进制数字表示。 ) |  
 |SQL_TYPE_DATE|10以 *yyyy-mm-dd*) 格式 (日期。|  
 |SQL_TYPE_TIME|8 (格式为 *hh： mm： ss* 的时间) <br /><br /> - 或 -<br /><br /> 9 + *s* (格式为 *hh： mm： ss*[. fff ...] 的时间，其中 *s* 为秒的小数部分精度) 。|  
-|SQL_TYPE_TIMESTAMP|19 (*yyyy-mm-dd hh： mm： ss* 格式的时间戳) <br /><br /> - 或 -<br /><br /> 对于*yyyy-mm-dd hh： mm： ss*[node.js ...] 格式的时间戳，20个*以上的* (，其中*s*为秒的小数部分精度) 。|  
+|SQL_TYPE_TIMESTAMP|19 (*yyyy-mm-dd hh： mm： ss* 格式的时间戳) <br /><br /> - 或 -<br /><br /> 对于 *yyyy-mm-dd hh： mm： ss*[node.js ...] 格式的时间戳，20个 *以上的* (，其中 *s* 为秒的小数部分精度) 。|  
 |所有间隔数据类型|请参阅 [间隔数据类型长度](../../../odbc/reference/appendixes/interval-data-type-length.md)。|  
 |SQL_GUID|36 (*aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* 格式的字符数|  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_certify_removable_TSQL
 - sp_certify_removable
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c80828117bfa4219d6f7377c4ed0123dec977aa
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 69a0c6e1331144fc340ad15bb103e593d3ba8f65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753517"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197681"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>参数  
 `[ @dbname = ] 'dbname'` 指定要验证的数据库。 *dbname* 为 **sysname**。  
   
-`[ @autofix = ] 'auto'` 向系统管理员提供数据库和所有数据库对象的所有权，并删除任何用户创建的数据库用户和非默认权限。 *auto* 为 **nvarchar (4) **，默认值为 NULL。  
+`[ @autofix = ] 'auto'` 向系统管理员提供数据库和所有数据库对象的所有权，并删除任何用户创建的数据库用户和非默认权限。 *auto* 为 **nvarchar (4)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -62,7 +62,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  系统管理员必须是数据库和所有数据库对象的所有者。 系统管理员是一种已知用户，该用户存在于运行的所有服务器上 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且在以后分发和安装数据库时可能会存在。  
   
- 如果在没有**自动**值的情况下运行**sp_certify_removable** ，则将返回以下任何条件的相关信息：  
+ 如果在没有 **自动** 值的情况下运行 **sp_certify_removable** ，则将返回以下任何条件的相关信息：  
   
 -   系统管理员不是数据库所有者。  
   
@@ -76,7 +76,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和过程，然后再次运行 **sp_certify_removable** 。  
   
--   只需用**自动**值运行**sp_certify_removable** 。  
+-   只需用 **自动** 值运行 **sp_certify_removable** 。  
   
  注意，该存储过程只检查用户和用户权限。 可以向数据库添加组并且对这些组授予权限。 有关详细信息，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)的信息。  
   

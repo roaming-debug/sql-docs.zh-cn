@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_password
 - sp_password_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f0675634050234b00cadccf63c0f44295a21e56a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f154661d7cd03edfde83dd7774685e73e79aeb69
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481084"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195431"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_password [ [ @old = ] 'old_password' , ]
 ## <a name="arguments"></a>参数  
 `[ @old = ] 'old_password'` 旧密码。 *old_password* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @new = ] 'new_password'` 新密码。 *new_password* **sysname**，无默认值。 如果未使用命名参数，则必须指定*old_password* 。  
+`[ @new = ] 'new_password'` 新密码。 *new_password* **sysname**，无默认值。 如果未使用命名参数，则必须指定 *old_password* 。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
@@ -60,7 +60,7 @@ sp_password [ [ @old = ] 'old_password' , ]
 ## <a name="remarks"></a>备注  
  **sp_password** 调用 ALTER LOGIN。 此语句支持附加选项。 有关更改密码的信息，请参阅 [ALTER LOGIN &#40;transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
- 不能在用户定义的事务中执行**sp_password** 。  
+ 不能在用户定义的事务中执行 **sp_password** 。  
   
 ## <a name="permissions"></a>权限  
  需要 ALTER ANY LOGIN 权限。 还需要 CONTROL SERVER 权限才能重置密码而无需提供旧密码，或者所更改的登录名具有 CONTROL SERVER 权限。  
@@ -88,13 +88,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

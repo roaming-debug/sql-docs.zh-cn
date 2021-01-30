@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - semanticsimilaritytable
 - semanticsimilaritytable_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4866c5002fce3540014b9ad0c94ccd7b20a0e235
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 532ec509de094db343406b6cb0f9f0cca924a724
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397273"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194555"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,10 +57,10 @@ SEMANTICSIMILARITYTABLE
  column_list  
  指示由逗号分隔并括在括号中的多个列。 所有列都必须启用语义索引。  
   
- **\***  
+ **\** _  
  指示已启用语义索引的所有列都均包括在内。  
   
- **source_key**  
+ _ *source_key**  
  请求特定行的结果的行的唯一键。  
   
  只要可能，该键就会隐式转换为源表中的全文唯一键的类型。 可以将此键指定为一个常量或变量，但不能是表达式或标量子查询的结果。  
@@ -70,20 +70,20 @@ SEMANTICSIMILARITYTABLE
   
  如果从多个列请求结果，则基于每个列返回匹配的文档。  
   
-|Column_name|类型|描述|  
+|Column_name|类型|说明|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|源文档中用于查找相似文档的列的 ID。<br /><br /> 有关如何在列名称和 column_id 之间相互检索对方的详细信息，请参阅 COL_NAME 和 COLUMNPROPERTY 函数。|  
 |**matched_column_id**|**int**|从中找到相似文档的列的 ID。<br /><br /> 有关如何在列名称和 column_id 之间相互检索对方的详细信息，请参阅 COL_NAME 和 COLUMNPROPERTY 函数。|  
-|**matched_document_key**|**\***<br /><br /> 此键与源表中的唯一键的类型相匹配。|与查询中的指定文档相似的文档或行的全文和语义提取唯一键值。|  
-|**分值**|**实际上**|一个相对值，用来表示此文档与所有其他相似文档的相似程度。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示非常匹配，1.0 是最理想的得分。|  
+|**matched_document_key**|**\** _<br /><br /> 此键与源表中的唯一键的类型相匹配。|与查询中的指定文档相似的文档或行的全文和语义提取唯一键值。|  
+|_ *分数**|**REAL**|一个相对值，用来表示此文档与所有其他相似文档的相似程度。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示非常匹配，1.0 是最理想的得分。|  
   
 ## <a name="general-remarks"></a>一般备注  
  有关详细信息，请参阅 [通过语义搜索查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
- 不能跨列查询相似的文档。 **SEMANTICSIMILARITYTABLE**函数只从与源列相同的列中检索类似的文档，由**source_key**参数标识。  
+ 不能跨列查询相似的文档。 **SEMANTICSIMILARITYTABLE** 函数只从与源列相同的列中检索类似的文档，由 **source_key** 参数标识。  
   
-## <a name="metadata"></a>Metadata  
+## <a name="metadata"></a>元数据  
  有关语义相似性的提取和填充的信息和状态，请查询以下动态管理视图：  
   
 -   [sys.dm_db_fts_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  

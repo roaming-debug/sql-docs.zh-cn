@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_prepexec
 - sp_cursor_prepexec_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5df94e84c602e03d5ead3e2ce36a29d5d314791
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: df6a482aeca510fde3d89dd74ddafc0ebe713287
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535021"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196006"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +45,10 @@ sp_prepexec handle OUTPUT, params , stmt
  是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的 *句柄* 标识符。 *句柄* 是带有 **int** 返回值的必需参数。  
   
  *params*  
- 标识参数化语句。 变量的参数定义将替换为语句 *中的参数* 标记。 *params* 是调用 **ntext**、 **nchar**或 **nvarchar** 输入值的必需参数。 如果语句未参数化，则输入一个 NULL 值。  
+ 标识参数化语句。 变量的参数定义将替换为语句 *中的参数* 标记。 *params* 是调用 **ntext**、 **nchar** 或 **nvarchar** 输入值的必需参数。 如果语句未参数化，则输入一个 NULL 值。  
   
  *stmt*  
- 定义游标结果集。 *Stmt*参数是必需的，并且调用了**ntext**、 **nchar**或**nvarchar**输入值。  
+ 定义游标结果集。 *Stmt* 参数是必需的，并且调用了 **ntext**、 **nchar** 或 **nvarchar** 输入值。  
   
  *bound_param*  
  指示可选使用其他参数。 *bound_param* 调用任何数据类型的输入值来指定要使用的其他参数。  
@@ -67,7 +67,7 @@ EXEC sp_prepexec @Out output,
 EXEC sp_unprepare @Out;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_prepare &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_execute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -5,7 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: machine-learning-services
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_rxPredict
 - sp_rxPredict_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: fb1f2af32479ef295d578b3fd6f0f7581524d960
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 4c610131918f2db291aa20caa93b35e79218e43b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489525"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195828"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97489525"
 sp_rxPredict  ( @model, @input )
 ```
 
-### <a name="arguments"></a>自变量
+### <a name="arguments"></a>参数
 
 **model**
 

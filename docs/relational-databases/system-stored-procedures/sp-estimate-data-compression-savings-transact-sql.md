@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_estimate_data_compression_savings_TSQL
 - sp_estimate_data_compression_savings
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4615bc9a30d28224ee3d1ed906a704af923d046d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 938e6994f5d19f59023009cf9806ca62280dc5b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543458"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193554"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89543458"
   返回所请求对象的当前大小并估算对象在所请求的压缩状态下的大小。 可对所有表或部分表评估压缩。 这包括堆、聚集索引、非聚集索引、列存储索引、索引视图以及表和索引分区。 可以使用 row、page、列存储或列存储存档压缩来压缩这些对象。 如果表、索引或分区已经过压缩，则可使用该过程来估计在重新压缩的情况下该表、索引或分区的大小。  
   
 > [!NOTE]
-> 并非在的每个版本中都提供压缩和**sp_estimate_data_compression_savings** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 并非在的每个版本中都提供压缩和 **sp_estimate_data_compression_savings** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  若要对使用请求的压缩设置的对象进行大小估算，该存储过程将对源对象进行采样并且将此数据加载到在 tempdb 中创建的等效表和索引中。 然后，将按照所请求的设置压缩在 tempdb 中创建的表和索引，并计算出估计的压缩节省量。  
   
@@ -60,10 +60,10 @@ sp_estimate_data_compression_savings
  包含表或索引视图的数据库架构的名称。 *schema_name* **sysname**。 如果 *schema_name* 为 NULL，则使用当前用户的默认架构。  
   
  [ @object_name =] "*object_name*"  
- 索引所属的表或索引视图的名称。 object_name 为 sysname******。  
+ 索引所属的表或索引视图的名称。 object_name 为 sysname。  
   
  [ @index_id =] *index_id*  
- 索引的 ID。 *index_id* 为 **int**，可以是下列值之一：索引的 id 号、NULL 或0（如果 *object_id* 为堆）。 若要返回基表或视图的所有索引的信息，请指定 NULL。 如果指定 NULL，则还必须为 *partition_number*指定 null 值。  
+ 索引的 ID。 *index_id* 为 **int**，可以是下列值之一：索引的 id 号、NULL 或0（如果 *object_id* 为堆）。 若要返回基表或视图的所有索引的信息，请指定 NULL。 如果指定 NULL，则还必须为 *partition_number* 指定 null 值。  
   
  [ @partition_number =] *partition_number*  
  对象中的分区号。 *partition_number* 为 **int**，可以是下列值之一：索引或堆的分区号、NULL 或1（对于未分区的索引或堆）。  
@@ -110,7 +110,7 @@ sp_estimate_data_compression_savings
  在 SQL Server 2019 之前，此过程不适用于列存储索引，因此不接受数据压缩参数列存储和 COLUMNSTORE_ARCHIVE。  从 SQL Server 2019 开始，列存储索引可用作估算源对象，并可用作请求的压缩类型。
 
  > [!IMPORTANT]
- > 当在中启用了 [内存优化 TempDB 元数据](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) 时 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，不支持在临时表上创建列存储索引。 由于存在此限制，因此当启用内存优化 TempDB 元数据时，列存储 COLUMNSTORE_ARCHIVE 和数据压缩参数 sp_estimate_data_compression_savings 不受支持。
+ > 当在中启用了 [内存优化 TempDB 元数据](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) 时 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，不支持在临时表上创建列存储索引。 由于此限制，启用 Memory-Optimized TempDB 元数据时，列存储 COLUMNSTORE_ARCHIVE 和数据压缩参数 sp_estimate_data_compression_savings 不受支持。
 
 ## <a name="considerations-for-columnstore-indexes"></a>列存储索引的注意事项
  从开始 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ， `sp_estimate_compression_savings` 支持估计列存储和列存储存档压缩。 与页和行压缩不同，将列存储压缩应用于对象需要创建新的列存储索引。 出于此原因，使用此过程的列存储和 COLUMNSTORE_ARCHIVE 选项时，提供给过程的源对象的类型决定了用于压缩的大小估算的列存储索引的类型。 下表说明了在 @data_compression 将参数设置为列存储或 COLUMNSTORE_ARCHIVE 时，用于估计每个源对象类型的压缩节省量的引用对象。

@@ -1,12 +1,12 @@
 ---
 description: sys.dm_fts_index_keywords_by_property (Transact-SQL)
-title: sys. dm_fts_index_keywords_by_property (Transact-sql) |Microsoft Docs
+title: sys.dm_fts_index_keywords_by_property (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_fts_index_keywords_by_property
 - dm_fts_index_keywords_by_property_TSQL
@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: bcb2864644941786244b19f0a3aa08dc25f7dca6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9052c7d64ab78c2e6eca1388ed08903365b6e129
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447553"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196258"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在给定表的全文索引中返回与属性相关的所有内容。 其中包括属于与全文索引关联的搜索属性列表注册的任何属性的所有数据。  
   
- sys. dm_fts_index_keywords_by_property 是一种动态管理功能，可用于查看 Ifilter 在索引时发出的已注册属性，以及每个索引文档中每个属性的确切内容。  
+ sys.dm_fts_index_keywords_by_property 是一种动态管理功能，通过该功能，您可以查看 Ifilter 在索引时发出了哪些已注册的属性，以及每个索引文档中每个属性的确切内容。  
   
  **查看所有文档级内容（包括属性相关的内容）**  
   
@@ -60,7 +60,7 @@ OBJECT_ID('table_name')
   
 ## <a name="arguments"></a>参数  
  db_id ( "*database_name*" )   
- 调用 [DB_ID ( # B1 ](../../t-sql/functions/db-id-transact-sql.md) 函数。 此函数接受数据库名称并返回数据库 ID，该 ID 是 dm_fts_index_keywords_by_property 使用来查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID**。  
+ 调用 [DB_ID ( # B1 ](../../t-sql/functions/db-id-transact-sql.md) 函数。 此函数接受数据库名称并返回数据库 ID，该 ID sys.dm_fts_index_keywords_by_property 使用来查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID。  
   
  object_id ( "*table_name*" )   
  调用 [OBJECT_ID ( # B1 ](../../t-sql/functions/object-id-transact-sql.md) 函数。 此函数接受表名，并返回包含要检查的全文索引的表的表 ID。  
@@ -86,7 +86,7 @@ OBJECT_ID('table_name')
   
  如果全文键列是建议的整数数据类型，则 document_id 直接映射到基表中的全文键值。  
   
- 相反，如果全文键列使用非整数数据类型，document_id 并不表示基表中的全文键。 在这种情况下，若要标识 dm_fts_index_keywords_by_property 返回的基表中的行，需要使用 [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)返回的结果来联接此视图。 在联接它们之前，您必须将存储过程的输出存储在临时表中。 然后，可以使用此存储过程返回的 DocId 列联接 dm_fts_index_keywords_by_property 的 document_id 列。 请注意， **时间戳** 列无法在插入时接收值，因为它们是由自动生成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 因此， **timestamp** 列必须转换为 **varbinary (8) ** 列。 下面的示例说明了这些步骤。 在此示例中， *table_id* 是表的 id， *database_name* 是数据库的名称， *table_name* 是表的名称。  
+ 相反，如果全文键列使用非整数数据类型，document_id 并不表示基表中的全文键。 在这种情况下，若要标识 dm_fts_index_keywords_by_property 返回的基表中的行，需要使用 [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)返回的结果来联接此视图。 在联接它们之前，您必须将存储过程的输出存储在临时表中。 然后，可以使用此存储过程返回的 DocId 列联接 dm_fts_index_keywords_by_property 的 document_id 列。 请注意， **时间戳** 列无法在插入时接收值，因为它们是由自动生成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 因此， **timestamp** 列必须转换为 **varbinary (8)** 列。 下面的示例说明了这些步骤。 在此示例中， *table_id* 是表的 id， *database_name* 是数据库的名称， *table_name* 是表的名称。  
   
 ```  
 USE database_name;  
@@ -110,7 +110,7 @@ GO
  要求具有全文索引涵盖的列的 SELECT 权限以及 CREATE FULLTEXT CATALOG 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例从 `Author` 示例数据库的 `Production.Document` 表的全文索引中的 `AdventureWorks` 属性中返回关键字。 该示例使用 `KWBPOP` 由 sys.databases 返回的表的别名 **。 dm_fts_index_keywords_by_property**。 该示例使用内部联接来合并 [sys.databases registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 和 [fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)中的列。  
+ 以下示例从 `Author` 示例数据库的 `Production.Document` 表的全文索引中的 `AdventureWorks` 属性中返回关键字。 该示例使用 `KWBPOP` **sys.dm_fts_index_keywords_by_property** 返回的表的别名。 该示例使用内部联接来合并 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 和 [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)中的列。  
   
 ```  
 -- Once the full-text index is configured to support property searching  
@@ -133,12 +133,12 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [全文搜索](../../relational-databases/search/full-text-search.md)   
- [提高全文索引的性能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
+ [提高 Full-Text 索引的性能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [sp_fulltext_keymappings &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
- [sys. dm_fts_index_keywords_by_document &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
- [sys. dm_fts_index_keywords &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
- [sys. registered_search_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [sys. registered_search_property_lists &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_document &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
+ [sys.dm_fts_index_keywords &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

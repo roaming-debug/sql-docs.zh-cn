@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syspolicy_policies_TSQL
 - syspolicy_policies
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e56ab498d2502bcb7130ab2406a390d8bbd1055a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8547fa15c966e6835c0b100e628217bc0281991e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419801"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192984"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88419801"
 |schedule_uid|**uniqueidentifier**|如果 execution_mode 为“按计划”，则包含计划的 ID，否则为 NULL。|  
 |description|**nvarchar(max)**|策略说明。 说明列是可选的，可以为 NULL。|  
 |help_text|**nvarchar(4000)**|属于 help_link 的超链接文本。|  
-|help_link|**nvarchar (2083) **|策略创建者分配给该策略的其他帮助超链接。|  
+|help_link|**nvarchar (2083)**|策略创建者分配给该策略的其他帮助超链接。|  
 |object_set_id|**int**|该策略评估的对象集的 ID。|  
 |is_enabled|**bit**|指示当前是启用 (1) 还是禁用 (0) 了策略。|  
 |job_id|**uniqueidentifier**|如果 execution_mode 为“按计划”，则包含运行策略的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的 ID。|  

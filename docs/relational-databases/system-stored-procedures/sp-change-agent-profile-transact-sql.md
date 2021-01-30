@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_agent_profile
 - sp_change_agent_profile_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f920c8a65deb7b71ca6e780d19f06c3a1b94ce24
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dbd36aff1dcb94d796a2c491699e0c3b874b0e5a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543719"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197664"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,11 +44,11 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
 `[ @property = ] 'property'` 属性的名称。 *属性* 为 **sysname**，无默认值。  
   
-`[ @value = ] 'value'` 属性的新值。 *值* 为 **nvarchar (3000) **，无默认值。  
+`[ @value = ] 'value'` 属性的新值。 *值* 为 **nvarchar (3000)**，无默认值。  
   
  下表说明可以更改的配置文件属性。  
   
-|属性|说明|  
+|properties|说明|  
 |--------------|-----------------|  
 |description|配置文件的说明。|  
   
@@ -59,7 +59,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
  **sp_change_agent_profile** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_change_agent_profile**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_change_agent_profile** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   

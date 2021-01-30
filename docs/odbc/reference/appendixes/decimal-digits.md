@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - size of data types [ODBC]
 - decimal digits of data types [ODBC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c56d0d4cdd4c40c2174085d80618bbcc58af14e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7a4d37601891c26ce4d59a9bfd788ce1c702ce5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456614"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194911"
 ---
 # <a name="decimal-digits"></a>十进制数字
 Decimal 和 numeric 数据类型的 *小数位数* 定义为小数点右边的最大位数或数据的小数位数。 对于近似浮点数列或参数，由于小数点右侧的位数不固定，所以未定义小数位数。 对于包含秒部分的日期时间或时间间隔数据，小数位数定义为数据的秒数部分中小数点右边的位数。  
@@ -40,7 +40,7 @@ Decimal 和 numeric 数据类型的 *小数位数* 定义为小数点右边的�
 |除 SQL_TYPE_DATE 之外的所有日期时间类型以及具有秒部分的所有间隔类型|值的秒部分中小数点右边的位数 (秒) 的小数部分。 此数值不能为负数。|  
 |SQL_GUID|不适用|  
   
- [a] 对于此数据类型，将忽略**SQLBindParameter**的*DecimalDigits*参数。  
+ [a] 对于此数据类型，将忽略 **SQLBindParameter** 的 *DecimalDigits* 参数。  
   
  为十进制数字返回的值与任何一个描述符字段中的值都不对应。 值可以来自 SQL_DESC_SCALE 或 SQL_DESC_PRECISION 字段，具体取决于数据类型，如下表所示。  
   

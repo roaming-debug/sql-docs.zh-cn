@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_showrowreplicainfo_TSQL
 - sp_showrowreplicainfo
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a46fd42c9caa69e808635fc9dcc5125403697a6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f2a66e8e6123adef864ca2beadef31cd4a9cbffe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543026"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193483"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 `[ @rowguid = ] rowguid` 行的唯一标识符。 *rowguid* 是 **uniqueidentifier**，无默认值。  
   
-`[ @show = ] 'show'` 确定要在结果集中返回的信息量。 *show* 为 **nvarchar (20) ** ，默认值为 BOTH。 如果为 **row**，则仅返回行版本信息。 如果是 **列**，则只返回列版本信息。 如果 **两者同时**返回，则返回行和列信息。  
+`[ @show = ] 'show'` 确定要在结果集中返回的信息量。 *show* 为 **nvarchar (20)** ，默认值为 BOTH。 如果为 **row**，则仅返回行版本信息。 如果是 **列**，则只返回列版本信息。 如果 **两者同时** 返回，则返回行和列信息。  
   
 ## <a name="result-sets-for-row-information"></a>行信息的结果集  
   
@@ -57,8 +57,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|生成此项目的数据库的名称。|  
 |**db_nickname**|**binary(6)**|生成此项目的数据库的别名。|  
 |**version**|**int**|项的版本。|  
-|**current_state**|**nvarchar (9) **|返回有关行的当前状态的信息。<br /><br /> **y** 行数据表示行的当前状态。<br /><br /> **n** 行数据不表示行的当前状态。<br /><br /> **\<n/a>** -不适用。<br /><br /> **\<unknown>** -无法确定当前状态。|  
-|**rowversion_table**|**nchar (17) **|指示是否将行版本存储在 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) 表或 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) 表中。|  
+|**current_state**|**nvarchar (9)**|返回有关行的当前状态的信息。<br /><br /> **y** 行数据表示行的当前状态。<br /><br /> **n** 行数据不表示行的当前状态。<br /><br /> **\<n/a>** -不适用。<br /><br /> **\<unknown>** -无法确定当前状态。|  
+|**rowversion_table**|**nchar (17)**|指示是否将行版本存储在 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) 表或 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) 表中。|  
 |**comment**|**nvarchar(255)**|有关此行版本项目的附加信息。 通常，该字段为空。|  
   
 ## <a name="result-sets-for-column-information"></a>列信息的结果集  
@@ -73,7 +73,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**comment**|**nvarchar(255)**|有关此列版本项目的附加信息。 通常，该字段为空。|  
   
 ## <a name="result-set-for-both"></a>行信息和列信息的结果集  
- 如果为*show*选择了**两个**值，则返回行和列结果集。  
+ 如果为 *show* 选择了 **两个** 值，则返回行和列结果集。  
   
 ## <a name="remarks"></a>备注  
  **sp_showrowreplicainfo** 用于合并复制。  

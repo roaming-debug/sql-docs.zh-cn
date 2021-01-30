@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - database_filestream_options
 - sys.database_filestream_options_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 1b944db082e93fc75041cdd5ef7034462c06545a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 748cf35251738123552efacdc4f696f6d3105c7f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093177"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195898"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "98093177"
  有关 FileTable 的详细信息，请参阅 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
   
-|列|类型|描述|  
+|列|类型|说明|  
 |------------|----------|-----------------|  
 |database_id|**int**|数据库的 ID。 此值在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是唯一的。|  
 |**directory_name**|**nvarchar(255)**|所有 FileTable 命名空间的数据库级别目录。|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CHANGETABLE_TSQL
 - CHANGETABLE
@@ -20,12 +20,12 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ffbd16a2a62b9adcc5ff4e2f31dcee9f133538a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d3d4e72681f16689c6241c8f9d7b35119d898722
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098712"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196133"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +75,7 @@ CHANGETABLE (
  column_name  
  指定一个或多个主键列的名称。 可以按任意顺序指定多个列名。  
   
- *值*  
+ 值  
  是主键的值。 如果有多个主键列，则这些值的指定顺序必须与列在 *column_name* 列表中的显示顺序相同。  
   
  方式 *table_alias* [ (*column_alias* [,.。。*n* ] ) ]  
