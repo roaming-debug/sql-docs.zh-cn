@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.xml_schema_component_placements
 - xml_schema_component_placements_TSQL
@@ -20,12 +20,12 @@ ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: b4b971fe631671d193340fc3c68b8e4e235c178f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c59e35e27b296b49fd95614d5a8e12e0002add4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88400703"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206418"
 ---
 # <a name="sysxml_schema_component_placements-transact-sql"></a>sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88400703"
 |**is_default_fixed**|**bit**|1 = 默认值为固定值。 不能在 XML 实例中覆盖此值。<br /><br /> 0 = 可以覆盖该值。（默认）|  
 |**min_occurrences**|**int**|所放置的组件的最小出现次数。|  
 |**max_occurrences**|**int**|所放置的组件的最大出现次数。|  
-|**default_value**|**nvarchar (4000) **|如果提供值，则该值为默认值。 如果未提供默认值，则为 NULL。|  
+|**default_value**|**nvarchar (4000)**|如果提供值，则该值为默认值。 如果未提供默认值，则为 NULL。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

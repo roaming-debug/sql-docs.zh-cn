@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergepublication
 - sp_dropmergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c787c7c2503f9182b704e83a04664d7d377cef4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 35024724255eea714de42f8fb3a974188730fcef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538958"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208220"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 要删除的发布的名称。 *发布* 为 **sysname**，无默认值。 如果为 **all**，则删除所有现有合并发布以及与它们关联的快照代理作业。 如果为 *发布*指定了一个特定值，则只会删除该发布及其关联的快照代理作业。  
+`[ @publication = ] 'publication'` 要删除的发布的名称。 *发布* 为 **sysname**，无默认值。 如果为 **all**，则删除所有现有合并发布以及与它们关联的快照代理作业。 如果为 *发布* 指定了一个特定值，则只会删除该发布及其关联的快照代理作业。  
   
 `[ @ignore_distributor = ] ignore_distributor` 用于在不清除分发服务器上清理任务的情况下删除发布。 *ignore_distributor* 为 **bit**，默认值为 **0**。 重新安装分发服务器时也将使用此参数。  
   

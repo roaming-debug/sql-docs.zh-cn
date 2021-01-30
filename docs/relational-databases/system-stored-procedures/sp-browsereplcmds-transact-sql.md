@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_browsereplcmds_TSQL
 - sp_browsereplcmds
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39fafe6f0e36d0c88ebb74285e8c8206977f73bd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f798dcb9689221d9a8ef1964d4237a1fe649a4c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548220"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206623"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,9 +45,9 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` 指定要返回的最低值确切序列号。 *xact_seqno_start* 为 **nchar (22) **，默认值为0x00000000000000000000。  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` 指定要返回的最低值确切序列号。 *xact_seqno_start* 为 **nchar (22)**，默认值为0x00000000000000000000。  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` 指定要返回的最大确切序列号。 *xact_seqno_end* 为 **nchar (22) **，默认值为0xFFFFFFFFFFFFFFFFFFFF。  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` 指定要返回的最大确切序列号。 *xact_seqno_end* 为 **nchar (22)**，默认值为0xFFFFFFFFFFFFFFFFFFFF。  
   
 `[ @originator_id = ] 'originator_id'` 指定是否返回具有指定 *originator_id* 的命令。 *originator_id* 的值为 **int**，默认值为 NULL。  
   
@@ -55,11 +55,11 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 `[ @article_id = ] 'article_id'` 指定是否返回具有指定 *article_id* 的命令。 *article_id* 的值为 **int**，默认值为 NULL。  
   
-`[ @command_id = ] command_id` 命令在 MSrepl_commands &#40;要解码的 [transact-sql&#41;](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) 的位置。 *command_id* 的值为 **int**，默认值为 NULL。 如果已指定，则还必须指定所有其他参数，并且 *xact_seqno_start*必须与 *xact_seqno_end*相同。  
+`[ @command_id = ] command_id` 命令在 MSrepl_commands &#40;要解码的 [transact-sql&#41;](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) 的位置。 *command_id* 的值为 **int**，默认值为 NULL。 如果已指定，则还必须指定所有其他参数，并且 *xact_seqno_start* 必须与 *xact_seqno_end* 相同。  
   
 `[ @agent_id = ] agent_id` 指定仅返回特定复制代理的命令。 *agent_id* 的值为 **int**，默认值为 NULL。  
   
-`[ @compatibility_level = ] compatibility_level`Compatibility_level 的版本 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，其默认值*compatibility_level*为 9000000 **int**。  
+`[ @compatibility_level = ] compatibility_level`Compatibility_level 的版本 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，其默认值为 9000000 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -72,7 +72,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_srvname**|**sysname**|发起事务的服务器。|  
 |**originator_db**|**sysname**|发起事务的数据库。|  
 |**article_id**|**int**|项目的 ID。|  
-|type|**int**|命令的类型。|  
+|type |**int**|命令的类型。|  
 |**partial_command**|**bit**|指示是否为部分命令。|  
 |**hashkey**|**int**|仅限内部使用。|  
 |**originator_publication_id**|**int**|发起事务的发布的 ID。|  

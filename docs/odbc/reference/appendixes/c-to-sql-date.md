@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - date data type [ODBC]
 - converting data from c to SQL types [ODBC], date
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f9d8bed4b16ee1c63134cdb9e1ae0b8303b0deb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0724309642b8a6dc640b6159715927544d74733
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500000"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207849"
 ---
 # <a name="c-to-sql-date"></a>从 C 到 SQL：日期
 Date ODBC C 数据类型的标识符是：  
@@ -42,4 +42,4 @@ Date ODBC C 数据类型的标识符是：
   
  当日期 C 数据转换为字符 SQL 数据时，生成的字符数据的格式为 "*yyyy* - *mm* - *dd*"。  
   
- 驱动程序在从日期 C 数据类型转换数据时忽略长度/指示器值，并假定数据缓冲区的大小为日期 C 数据类型的大小。 长度/指示器值传入**SQLPutData**中的*StrLen_or_Ind*参数和在**SQLBindParameter**中通过*StrLen_or_IndPtr*参数指定的缓冲区中。 数据缓冲区是通过**SQLPutData**中的*DataPtr*参数和**SQLBindParameter**中的*ParameterValuePtr*参数指定的。
+ 驱动程序在从日期 C 数据类型转换数据时忽略长度/指示器值，并假定数据缓冲区的大小为日期 C 数据类型的大小。 长度/指示器值传入 **SQLPutData** 中的 *StrLen_or_Ind* 参数和在 **SQLBindParameter** 中通过 *StrLen_or_IndPtr* 参数指定的缓冲区中。 数据缓冲区是通过 **SQLPutData** 中的 *DataPtr* 参数和 **SQLBindParameter** 中的 *ParameterValuePtr* 参数指定的。

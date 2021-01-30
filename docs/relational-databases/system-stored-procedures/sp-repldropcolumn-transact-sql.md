@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_repldropcolumn_TSQL
 - sp_repldropcolumn
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df9b2be3d6253bd3ba225d4cc444e705678109f3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6c5fdabf724c284e8a75244269321b92c81b46ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534930"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206432"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,11 +55,11 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
  表示是否由复制代理执行该存储过程。 *from_agent* 为 int，默认值为0，其中默认值为0，在复制代理执行此存储过程时，将使用值1，而在每个其他情况下，应使用默认值0。  
   
  [ @schema_change_script =] "*schema_change_script*"  
- 指定用于修改系统生成的自定义存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本的名称和路径。 *schema_change_script* 为 nvarchar (4000) ，默认值为 NULL。 复制允许用户定义的自定义存储过程替换事务复制中使用的一个或多个默认过程。 使用 sp_repldropcolumn 对复制的表项目进行架构更改后，将执行*schema_change_script* ，并可用于执行以下操作之一：  
+ 指定用于修改系统生成的自定义存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本的名称和路径。 *schema_change_script* 为 nvarchar (4000) ，默认值为 NULL。 复制允许用户定义的自定义存储过程替换事务复制中使用的一个或多个默认过程。 使用 sp_repldropcolumn 对复制的表项目进行架构更改后，将执行 *schema_change_script* ，并可用于执行以下操作之一：  
   
 -   如果自定义存储过程是自动重新生成的，则 *schema_change_script* 可用于删除这些自定义存储过程，并使用支持新架构的用户定义的自定义存储过程替换这些存储过程。  
   
--   如果自定义存储过程不是自动重新生成的，则 *schema_change_script*可用于重新生成这些存储过程或创建用户定义的自定义存储过程。  
+-   如果自定义存储过程不是自动重新生成的，则 *schema_change_script* 可用于重新生成这些存储过程或创建用户定义的自定义存储过程。  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  启用或禁用使快照失效的功能。 *force_invalidate_snapshot* 为一个位，默认值为1。  

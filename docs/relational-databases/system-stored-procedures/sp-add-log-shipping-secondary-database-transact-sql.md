@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
 - sp_add_log_shipping_secondary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 384884e2b2b076b20cb9c679c3494a7c292f77a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d13a58428c4fefe2cc19668de22e604f721d0a96
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464651"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206707"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,9 +95,9 @@ sp_add_log_shipping_secondary_database
  无  
   
 ## <a name="remarks"></a>备注  
- 必须从辅助服务器上的**master**数据库运行**sp_add_log_shipping_secondary_database** 。 此存储过程执行以下操作：  
+ 必须从辅助服务器上的 **master** 数据库运行 **sp_add_log_shipping_secondary_database** 。 此存储过程执行以下操作：  
   
-1.  在此存储过程之前，应调用**sp_add_log_shipping_secondary_primary** ，以初始化辅助服务器上的主日志传送数据库信息。  
+1.  在此存储过程之前，应调用 **sp_add_log_shipping_secondary_primary** ，以初始化辅助服务器上的主日志传送数据库信息。  
   
 2.  使用提供的参数在 **log_shipping_secondary_databases** 中添加辅助数据库的条目。  
   

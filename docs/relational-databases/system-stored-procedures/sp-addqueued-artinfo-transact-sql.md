@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addqueued_artinfo
 - sp_addqueued_artinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16709ac2b02acf8641661831c4aee831ef95bc19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0899ff490b553471fc766413fdf0cca27955fa0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548313"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206653"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @dest_table = ] _'dest_table'` 目标表的名称。 *dest_table* **sysname**，无默认值。  
   
- [** @owner =** ] **"**_owner_**"**  
+ [**@owner =** ] **"**_owner_**"**  
  订阅的所有者。 *所有者* 为 **sysname**，无默认值。  
   
 `[ @cft_table = ] 'cft_table'` 本文的排队更新冲突表的名称。 *cft_table* **sysname**，无默认值。  

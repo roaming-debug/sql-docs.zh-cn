@@ -1,13 +1,13 @@
 ---
-description: 'managed_backup fn_backup_instance_config (Transact-sql) '
-title: managed_backup fn_backup_instance_config (Transact-sql) |Microsoft Docs
+description: " (transact-sql 的 managed_backup.fn_backup_instance_config managed_backup) "
+title: managed_backup managed_backup.fn_backup_instance_config (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_backup_instance_config
 - smart_admin.fn_backup_instance_config_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a65649b7b565475eebd69bcadf4ac28bef707d7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 534b1417536b233cafd0c7f3499e6ff801f0fa42
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419561"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207419"
 ---
-# <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup fn_backup_instance_config (Transact-sql) 
+# <a name="managed_backupfn_backup_instance_config-transact-sql"></a> (transact-sql 的 managed_backup.fn_backup_instance_config managed_backup) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   返回 1 行，其中是 SQL Server 实例的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 默认配置设置。  
@@ -62,7 +62,7 @@ managed_backup.fn_backup_db_config ()
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 要求具有**ALTER ANY CREDENTIAL**权限的**db_backupoperator**数据库角色的成员身份。 不应拒绝用户 **查看任何定义** 权限。  
+ 要求具有 **ALTER ANY CREDENTIAL** 权限的 **db_backupoperator** 数据库角色的成员身份。 不应拒绝用户 **查看任何定义** 权限。  
   
 ## <a name="examples"></a>示例  
  下例返回所在实例上的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的默认配置设置：  

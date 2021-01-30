@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLColAttribute
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 43980caf7a592284aba87d57725c30ae9fe8e949
-ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
+ms.openlocfilehash: ce0bd87f2a4e2a9306bb5fa94add7fb1ee583dfa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98151242"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208510"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函数
 **度**  
@@ -146,7 +146,7 @@ SQLRETURN SQLColAttribute (
   
  下表列出了 **SQLColAttribute** 返回的描述符类型。 *NumericAttributePtr* 值的类型为 **SQLLEN \** _。  
   
-|_FieldIdentifier *|信息<br /><br /> 返回的|描述|  
+|_FieldIdentifier *|信息<br /><br /> 返回的|说明|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0) |*NumericAttributePtr*|SQL_TRUE 列是否为自动递增列。<br /><br /> 如果列不是自动递增列或者不是数字，则 SQL_FALSE。<br /><br /> 此字段仅对数值数据类型列有效。 应用程序可以将值插入到包含自动增量列的行中，但通常不能更新列中的值。<br /><br /> 当在自动增量列中插入内容时，会在插入时将唯一值插入列。 增量未定义，但特定于数据源。 应用程序不应假定自动增量列以任何特定的点启动或按任何特定值递增。|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0) |*CharacterAttributePtr*|结果集列的基本列名称。 如果基列名称不存在 (与) 表达式的列的情况相同），则此变量包含空字符串。<br /><br /> 此信息从 IRD 的 "SQL_DESC_BASE_COLUMN_NAME 记录" 字段返回，这是一个只读字段。|  

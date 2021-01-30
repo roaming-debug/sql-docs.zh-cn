@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC SQL grammar, ALTER TABLE statement limitations
 - ALTER TABLE statement limitations [ODBC]
 ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 53f86e8d2c21fb6ea2d016610848773564d4a384
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d36e5dfb2457a9d3453dbe3bc877c5d267731ea1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449589"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205743"
 ---
 # <a name="alter-table-statement-limitations"></a>ALTER TABLE 语句限制
 使用 dBASE 或 Paradox 驱动程序时，一旦创建了一个索引并添加了新记录，ALTER TABLE 语句就不能更改该表的结构，除非删除该索引并删除该表的内容。  

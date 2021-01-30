@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addsrvrolemember
 - sp_addsrvrolemember_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec0b94d4423574729d4c92d869a73d04673edac8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a8de69bfd8e0fee825bd0e3fb914acddee0cb419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536729"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207085"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>参数  
  [ @loginame **=** ] **"**_login_**"**  
- 将添加到固定服务器角色中的登录名。 *login* 的 **sysname**为，无默认值。 *登录* 名可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 登录名。 如果还没有为 Windows 登录名授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限，则会自动授予该访问权限。  
+ 将添加到固定服务器角色中的登录名。 *login* 的 **sysname** 为，无默认值。 *登录* 名可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 登录名。 如果还没有为 Windows 登录名授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限，则会自动授予该访问权限。  
   
  [ @rolename **=** ] **"**_role_**"**  
  要添加登录名的固定服务器角色的名称。 *role* 的数据值为 **sysname**，默认值为 NULL，必须是下列值之一：  

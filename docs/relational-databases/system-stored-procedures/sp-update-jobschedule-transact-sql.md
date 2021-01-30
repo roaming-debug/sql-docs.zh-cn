@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_jobschedule_TSQL
 - sp_update_jobschedule
@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf9a58d3be772fc9fa65cdf61ee6a326410314a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d75398c9caa77430947248472f0a6c625def901f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534773"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207964"
 ---
 # <a name="sp_update_jobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改指定作业的计划设置。  
   
- 提供**sp_update_jobschedule**仅用于向后兼容性。  
+ 提供 **sp_update_jobschedule** 仅用于向后兼容性。  
   
 > [!IMPORTANT]
 >  有关 Microsoft SQL Server 早期版本中使用的语法的详细信息，请参阅 Transact-sql Referencefor Microsoft SQL Server 2000 *。*  
@@ -39,7 +39,7 @@ ms.locfileid: "89534773"
  作业计划现在可以独立于作业进行管理。 若要更新计划，请使用 **sp_update_schedule**。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

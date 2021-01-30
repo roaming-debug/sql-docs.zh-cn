@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergearticle
 - sp_dropmergearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c91fe7b1cc57630565fae398fc8cbc798df314a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58759010972cd8bed8f32f909d0b326f8b964a13
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536470"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208272"
 ---
 # <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 要从中删除项目的发布的名称。 *发布*为 **sysname**，无默认值。  
+`[ @publication = ] 'publication'` 要从中删除项目的发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @article = ] 'article'` 要从给定发布中删除的项目的名称。 *项目*是 **sysname**，无默认值。 如果为 **all**，则删除指定合并发布中的所有现有项目。 即使 *项目* 是 **全部**的，仍必须将发布与本文分开放置。  
+`[ @article = ] 'article'` 要从给定发布中删除的项目的名称。 *项目* 是 **sysname**，无默认值。 如果为 **all**，则删除指定合并发布中的所有现有项目。 即使 *项目* 是 **全部** 的，仍必须将发布与本文分开放置。  
   
 `[ @ignore_distributor = ] ignore_distributor` 指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor* 为 **bit**，默认值为 **0**。  
   
-`[ @reserved = ] reserved` 保留供将来使用。 *reserved* 为 **nvarchar (20) **，默认值为 NULL。  
+`[ @reserved = ] reserved` 保留供将来使用。 *reserved* 为 **nvarchar (20)**，默认值为 NULL。  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 启用或禁用使快照失效的功能。 *force_invalidate_snapshot* 是一 **位**，默认值为 **0**。  
   

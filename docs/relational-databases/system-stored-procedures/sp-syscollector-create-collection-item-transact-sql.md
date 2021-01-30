@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_create_collection_item
 - sp_syscollector_create_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a99c9adb21d6c9b09d4e1e29ad845253ba3c9b19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e58f8407c152be375099e9eb70e3fe63d0100e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538521"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207040"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ sp_syscollector_create_collection_item
  如果将收集组设置为非缓存模式，则忽略频率，这是因为此模式将导致数据收集和上载按为收集组指定的计划执行。 若要查看收集组的收集模式，请查询 " [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) 系统" 视图。  
   
  [ @parameters =] "*parameters*"  
- 收集器类型的输入参数。 *参数* 的值为 **xml** ，默认值为 NULL。 *参数*架构必须与收集器类型的参数架构匹配。  
+ 收集器类型的输入参数。 *参数* 的值为 **xml** ，默认值为 NULL。 *参数* 架构必须与收集器类型的参数架构匹配。  
   
  [ @collection_item_id =] *collection_item_id*  
  标识收集组项的唯一标识符。 *collection_item_id* 为 **int** ，并且具有 OUTPUT。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_procoption
 - sp_procoption_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 155600ed4a41d4ad8ee7f404426bf5eed0d77ba8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ed9d1056a751633f208a38cbb03f6a0d50057c88
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535026"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205114"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @ProcName = ] 'procedure'` 要为其设置选项的过程的名称。 *过程* 为 **nvarchar (776) **，无默认值。  
+`[ @ProcName = ] 'procedure'` 要为其设置选项的过程的名称。 *过程* 为 **nvarchar (776)**，无默认值。  
   
-`[ @OptionName = ] 'option'` 要设置的选项的名称。 *选项*的唯一值为 "**启动**"。  
+`[ @OptionName = ] 'option'` 要设置的选项的名称。 *选项* 的唯一值为 "**启动**"。  
   
-`[ @OptionValue = ] 'value'`指示是将选项设置 (**true** **还是) 还是**关闭 (**false**或 off **) 。** *值* 为 **varchar (12) **，无默认值。  
+`[ @OptionValue = ] 'value'`指示是将选项设置 (**true** **还是) 还是** 关闭 (**false** 或 off **) 。** *值* 为 **varchar (12)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或错误号（失败）  

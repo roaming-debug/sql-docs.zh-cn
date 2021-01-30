@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedynamicsnapshot_job
 - sp_changedynamicsnapshot_job_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10bc612a0dc2598c973f6a6d2e3db26b5e0d69ca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4583e692a8f0f409b12129a19f9acce723e320ce
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536685"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207987"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,9 +54,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 要更改的快照作业的名称。 *dynamic_snapshot_jobname*的值为 **sysname**，默认值为 N '% '。 如果指定 *dynamic_snapshot_jobid* ，则必须使用 *dynamic_snapshot_jobname*的默认值。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 要更改的快照作业的名称。 *dynamic_snapshot_jobname* 的值为 **sysname**，默认值为 N '% '。 如果指定 *dynamic_snapshot_jobid* ，则必须使用 *dynamic_snapshot_jobname* 的默认值。  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 要更改的快照作业的 ID。 *dynamic_snapshot_jobid* 为 **uniqueidentifier**，默认值为 NULL。 如果指定 *dynamic_snapshot_jobname*，则必须使用 *dynamic_snapshot_jobid*的默认值。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 要更改的快照作业的 ID。 *dynamic_snapshot_jobid* 为 **uniqueidentifier**，默认值为 NULL。 如果指定 *dynamic_snapshot_jobname*，则必须使用 *dynamic_snapshot_jobid* 的默认值。  
   
 `[ @frequency_type = ] frequency_type` 计划代理的频率。 *frequency_type* 为 **int**，可以是下列值之一。  
   
@@ -83,7 +83,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**5**|星期四|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|天|  
+|**8**|日期|  
 |**9**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
@@ -93,25 +93,25 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|Minute|  
 |**8**|小时|  
 |NULL（默认值）||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday* 的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 合并代理运行的日期。 如果 *frequency_type* 设置为 **32** (每月相对) ，则使用此参数。 *frequency_relative_interval* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
 |NULL（默认值）||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 NULL。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type* 使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 NULL。  
   
 `[ @active_start_date = ] active_start_date` 第一次计划合并代理的日期，格式为 YYYYMMDD。 *active_start_date* 的值为 **int**，默认值为 NULL。  
   
@@ -121,9 +121,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day` 停止计划合并代理的时间，格式为 HHMMSS。 *active_end_time_of_day* 的值为 **int**，默认值为 NULL。  
   
-`[ @job_login = ] 'job_login'` 为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 使用参数化行筛选器的订阅生成快照时，运行快照代理所用的 Windows 帐户。 *job_login* 为 **nvarchar (257) **，默认值为 NULL。  
+`[ @job_login = ] 'job_login'` 为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 使用参数化行筛选器的订阅生成快照时，运行快照代理所用的 Windows 帐户。 *job_login* 为 **nvarchar (257)**，默认值为 NULL。  
   
-`[ @job_password = ] 'job_password'` 使用参数化行筛选器为订阅生成快照时，运行快照代理的 Windows 帐户的密码。 *job_password* 为 **nvarchar (257) **，默认值为 NULL。  
+`[ @job_password = ] 'job_password'` 使用参数化行筛选器为订阅生成快照时，运行快照代理的 Windows 帐户的密码。 *job_password* 为 **nvarchar (257)**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  

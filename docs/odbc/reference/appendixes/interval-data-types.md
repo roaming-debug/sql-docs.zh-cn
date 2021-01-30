@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - second intervals [ODBC]
 - data types [ODBC], interval data types
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5b54996c2f2897e47e05088b1985d190acafaad3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41418b59d61b184717c4a3654491154221b9a791
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429669"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207141"
 ---
 # <a name="interval-data-types"></a>间隔数据类型
 间隔定义为两个日期和时间之间的差值。 间隔用两种不同的方式表示。 一个 *月* 时间间隔表示年和整数个月的时间间隔。 另一种是 *日期时间* 间隔，以天、分钟和秒为单位表达时间间隔。 这两种间隔是不同的，并且不能混合，因为月份的天数可能不同。  
@@ -42,21 +42,21 @@ ms.locfileid: "88429669"
   
  有13个间隔 SQL 数据类型和13个间隔 C 数据类型。 每个时间间隔 C 数据类型都使用相同的结构 SQL_INTERVAL_STRUCT，以包含时间间隔数据。  (有关详细信息，请参阅下一节 [C 间隔结构](../../../odbc/reference/appendixes/c-interval-structure.md)。 ) 有关 sql 数据类型的详细信息，请参阅 [sql 数据类型](../../../odbc/reference/appendixes/sql-data-types.md);有关 C 数据类型的详细信息，请参阅 [c 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
   
-|类型标识符|类|描述|  
+|类型标识符|实例|说明|  
 |---------------------|-----------|-----------------|  
-|月|年-月|两个日期之间的月数。|  
-|年|年-月|两个日期之间的年数。|  
-|YEAR_TO_MONTH|年-月|两个日期之间的年和月数。|  
-|DAY|日期/时间|两个日期之间的天数。|  
-|HOUR|日期/时间|两个日期/时间间隔的小时数。|  
-|MINUTE|日期/时间|两个日期/时间间隔的分钟数。|  
-|SECOND|日期/时间|两个日期/时间之间的秒数。|  
-|DAY_TO_HOUR|日期/时间|两个日期/时间之间的天数/小时数。|  
-|DAY_TO_MINUTE|日期/时间|两个日期/时间之间的天数/小时/分钟数。|  
-|DAY_TO_SECOND|日期/时间|两个日期/时间之间的天数/小时/分钟/秒。|  
-|HOUR_TO_MINUTE|日期/时间|两个日期/时间之间的小时数/分钟数。|  
-|HOUR_TO_SECOND|日期/时间|两个日期/时间之间的小时/分钟数/秒。|  
-|MINUTE_TO_SECOND|日期/时间|两个日期/时间之间的分钟数/秒。|  
+|MONTH|Year-Month|两个日期之间的月数。|  
+|YEAR|Year-Month|两个日期之间的年数。|  
+|YEAR_TO_MONTH|Year-Month|两个日期之间的年和月数。|  
+|DAY|Day-Time|两个日期之间的天数。|  
+|HOUR|Day-Time|两个日期/时间间隔的小时数。|  
+|MINUTE|Day-Time|两个日期/时间间隔的分钟数。|  
+|SECOND|Day-Time|两个日期/时间之间的秒数。|  
+|DAY_TO_HOUR|Day-Time|两个日期/时间之间的天数/小时数。|  
+|DAY_TO_MINUTE|Day-Time|两个日期/时间之间的天数/小时/分钟数。|  
+|DAY_TO_SECOND|Day-Time|两个日期/时间之间的天数/小时/分钟/秒。|  
+|HOUR_TO_MINUTE|Day-Time|两个日期/时间之间的小时数/分钟数。|  
+|HOUR_TO_SECOND|Day-Time|两个日期/时间之间的小时/分钟数/秒。|  
+|MINUTE_TO_SECOND|Day-Time|两个日期/时间之间的分钟数/秒。|  
   
  本部分包含以下主题。  
   

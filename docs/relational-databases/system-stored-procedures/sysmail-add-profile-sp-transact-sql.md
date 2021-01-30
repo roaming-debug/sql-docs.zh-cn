@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
 - sysmail_add_profile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 904a6898bf3791a98d64228b85939275ad5c8548
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4eeb85dee2493a07b1476a25fc90f23c5ad42aeb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547226"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207977"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
    > [!NOTE]
    > 必须调用使用 Azure SQL 托管实例 SQL 代理的配置文件名称 **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'` 新配置文件的可选说明。 *描述* 为 **nvarchar (256) **，无默认值。  
+`[ @description = ] 'description'` 新配置文件的可选说明。 *描述* 为 **nvarchar (256)**，无默认值。  
   
 `[ @profile_id = ] _new\_profile\_id OUTPUT` 返回新配置文件的 ID。 *new_profile_id* 的值为 **int**，默认值为 NULL。  
   

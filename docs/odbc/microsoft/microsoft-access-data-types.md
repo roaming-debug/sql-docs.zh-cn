@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
 - Jet-based ODBC drivers [ODBC], Access driver
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24428c436e9e60c8ca5e42288b217f2c576cbd0d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e7a55c6929d63bf036c9f1585d2eb039f6fec77
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88340763"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205712"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 数据类型
 下表显示了 Microsoft Access 数据类型、用于创建表的数据类型以及 ODBC SQL 数据类型。  

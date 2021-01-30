@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addpullsubscription_agent
 - sp_addpullsubscription_agent_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3987a0eb98c1eea64b47388bdf4dfa630f4e8c6f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 031911ae4e9f6f81e82ec9d0b4fb20c73d94a2cd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546258"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206691"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,7 +85,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]
 > 服务器名称可指定为 `<Hostname>,<PortNumber>` 。 如果在 Linux 或 Windows 上使用自定义端口部署 SQL Server，并且禁用了 browser 服务，则可能需要指定连接的端口号。
   
-`[ @publisher_db = ] 'publisher_db'_` 发布服务器数据库的名称。 *publisher_db* 的值为 **sysname**，默认值为 NULL。 Oracle 发布服务器将忽略*publisher_db* 。  
+`[ @publisher_db = ] 'publisher_db'_` 发布服务器数据库的名称。 *publisher_db* 的值为 **sysname**，默认值为 NULL。 Oracle 发布服务器将忽略 *publisher_db* 。  
   
 `[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。  
   
@@ -109,12 +109,12 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 如果为此参数指定了值，则将返回一条警告消息，但将忽略该值。  
   
-`[ @subscriber_password = ] 'subscriber_password'` 订阅服务器密码。 如果*subscriber_security_mode*设置为**0**，则*subscriber_password*是必需的。 *subscriber_password* 的默认值为 **sysname**，默认值为 NULL。 如果使用订阅服务器密码，将自动对密码进行加密。  
+`[ @subscriber_password = ] 'subscriber_password'` 订阅服务器密码。 如果 *subscriber_security_mode* 设置为 **0**，则 *subscriber_password* 是必需的。 *subscriber_password* 的默认值为 **sysname**，默认值为 NULL。 如果使用订阅服务器密码，将自动对密码进行加密。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 如果为此参数指定了值，则将返回一条警告消息，但将忽略该值。  
   
-`[ @distributor = ] 'distributor'` 分发服务器的名称。 *分发服务器* 为 **sysname**，默认值为 *发布服务器*指定的值。  
+`[ @distributor = ] 'distributor'` 分发服务器的名称。 *分发服务器* 为 **sysname**，默认值为 *发布服务器* 指定的值。  
   
 `[ @distribution_db = ] 'distribution_db'` 分发数据库的名称。 *distribution_db* 的值为 **sysname**，默认值为 NULL。  
   
@@ -123,14 +123,14 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'` 同步时连接到分发服务器时使用的分发服务器登录名。 如果*distributor_security_mode*设置为**0**，则*distributor_login*是必需的。 *distributor_login* 的默认值为 **sysname**，默认值为 NULL。  
+`[ @distributor_login = ] 'distributor_login'` 同步时连接到分发服务器时使用的分发服务器登录名。 如果 *distributor_security_mode* 设置为 **0**，则 *distributor_login* 是必需的。 *distributor_login* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @distributor_password = ] 'distributor_password'` 分发服务器密码。 如果*distributor_security_mode*设置为**0**，则*distributor_password*是必需的。 *distributor_password* 的默认值为 **sysname**，默认值为 NULL。  
+`[ @distributor_password = ] 'distributor_password'` 分发服务器密码。 如果 *distributor_security_mode* 设置为 **0**，则 *distributor_password* 是必需的。 *distributor_password* 的默认值为 **sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @optional_command_line = ] 'optional_command_line'` 是提供给分发代理的可选命令提示符。 例如， **-DefinitionFile** C:\Distdef.txt 或 **-CommitBatchSize** 10。 *optional_command_line* 为 **nvarchar (4000) **，默认值为空字符串。  
+`[ @optional_command_line = ] 'optional_command_line'` 是提供给分发代理的可选命令提示符。 例如， **-DefinitionFile** C:\Distdef.txt 或 **-CommitBatchSize** 10。 *optional_command_line* 为 **nvarchar (4000)**，默认值为空字符串。  
   
 `[ @frequency_type = ] frequency_type` 用于计划分发代理的频率。 *frequency_type* 为 **int**，可以是下列值之一。  
   
@@ -148,30 +148,30 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  指定值 **64** 将导致分发代理在连续模式下运行。 这对应于为代理设置 **-连续** 参数。 有关详细信息，请参阅 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   
-`[ @frequency_interval = ] frequency_interval` 要应用于 *frequency_type*设置的频率的值。 *frequency_interval* 的值为 **int**，默认值为1。  
+`[ @frequency_interval = ] frequency_interval` 要应用于 *frequency_type* 设置的频率的值。 *frequency_interval* 的值为 **int**，默认值为1。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 分发代理的日期。 如果 *frequency_type* 设置为 **32** (每月相对) ，则使用此参数。 *frequency_relative_interval* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**1** （默认值）|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 **1**。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type* 使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 **1**。  
   
 `[ @frequency_subday = ] frequency_subday` 在定义的时间段内重新计划的频率。 *frequency_subday* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**1** （默认值）|一次|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|Minute|  
 |**8**|小时|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 **1**。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday* 的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 **1**。  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day` 第一次计划分发代理的时间，格式为 HHMMSS。 *active_start_time_of_day* 的值为 **int**，默认值为 **0**。  
   
@@ -181,11 +181,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @active_end_date = ] active_end_date` 停止计划分发代理的日期，格式为 YYYYMMDD。 *active_end_date* 的值为 **int**，默认值为 **0**。  
   
-`[ @distribution_jobid = ] _distribution_jobidOUTPUT` 此作业的分发代理 ID。 *distribution_jobid* 是 **二进制 (16) **，默认值为 NULL，它是一个 OUTPUT 参数。  
+`[ @distribution_jobid = ] _distribution_jobidOUTPUT` 此作业的分发代理 ID。 *distribution_jobid* 是 **二进制 (16)**，默认值为 NULL，它是一个 OUTPUT 参数。  
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password` 不再支持设置 *encrypted_distributor_password* 。 尝试将此 **位** 参数设置为 **1** 将导致错误。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指示是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 同步管理器同步订阅。 *enabled_for_syncmgr* 为 **nvarchar (5) **，默认值为 FALSE。 如果 **为 false**，则不向同步管理器注册订阅。 如果 **为 true**，则会向同步管理器注册订阅，并在不启动的情况下同步订阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指示是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 同步管理器同步订阅。 *enabled_for_syncmgr* 为 **nvarchar (5)**，默认值为 FALSE。 如果 **为 false**，则不向同步管理器注册订阅。 如果 **为 true**，则会向同步管理器注册订阅，并在不启动的情况下同步订阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 `[ @ftp_address = ] 'ftp_address'` 仅用于向后兼容。  
   
@@ -195,11 +195,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @ftp_password = ] 'ftp_password'` 仅用于向后兼容。  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` 指定快照的备用文件夹的位置。 *alternate_snapshot_folder* 为 **nvarchar (255) **，默认值为 NULL。  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` 指定快照的备用文件夹的位置。 *alternate_snapshot_folder* 为 **nvarchar (255)**，默认值为 NULL。  
   
-`[ @working_directory = ] 'working_director'` 用于存储发布的数据和架构文件的工作目录的名称。 *working_directory* 为 **nvarchar (255) **，默认值为 NULL。 名称应按 UNC 格式指定。  
+`[ @working_directory = ] 'working_director'` 用于存储发布的数据和架构文件的工作目录的名称。 *working_directory* 为 **nvarchar (255)**，默认值为 NULL。 名称应按 UNC 格式指定。  
   
-`[ @use_ftp = ] 'use_ftp'` 指定使用 FTP 而不是常规协议来检索快照。 *use_ftp* 为 **nvarchar (5) **，默认值为 FALSE。  
+`[ @use_ftp = ] 'use_ftp'` 指定使用 FTP 而不是常规协议来检索快照。 *use_ftp* 为 **nvarchar (5)**，默认值为 FALSE。  
   
 `[ @publication_type = ] publication_type` 指定发布的复制类型。 *publication_type* 为 **tinyint** ，默认值为 **0**。 如果为 **0**，则发布为事务类型。 如果为 **1**，则发布为快照类型。 如果为 **2**，则发布为合并类型。  
   
@@ -210,7 +210,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  如果指定了 *dts_package_name* ，则必须指定密码。  
   
-`[ @dts_package_location = ] 'dts_package_location'` 指定包位置。 *dts_package_location* 为 **nvarchar (12) **，默认值为 **订阅服务器**。 包的位置可以是 **分发服务器** 或 **订阅服务器**。  
+`[ @dts_package_location = ] 'dts_package_location'` 指定包位置。 *dts_package_location* 为 **nvarchar (12)**，默认值为 **订阅服务器**。 包的位置可以是 **分发服务器** 或 **订阅服务器**。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -222,9 +222,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  > [!NOTE]  
 >  已不推荐使用远程代理激活，也不再支持该功能。 支持此参数只是为了让脚本能够向后兼容。 将 *remote_agent_server_name* 设置为任何非 NULL 值将生成错误。  
   
-`[ @job_name = ] 'job_name'` 现有代理作业的名称。 *job_name* 的值为 **sysname**，默认值为 NULL。 只有在使用现有作业而不是新创建的作业（此为默认设置）来同步订阅时，才需要指定此参数。 如果您不是**sysadmin**固定服务器角色的成员，则在指定*job_name*时必须指定*job_login*和*job_password* 。  
+`[ @job_name = ] 'job_name'` 现有代理作业的名称。 *job_name* 的值为 **sysname**，默认值为 NULL。 只有在使用现有作业而不是新创建的作业（此为默认设置）来同步订阅时，才需要指定此参数。 如果您不是 **sysadmin** 固定服务器角色的成员，则在指定 *job_name* 时必须指定 *job_login* 和 *job_password* 。  
   
-`[ @job_login = ] 'job_login'` 用于运行代理的 Windows 帐户的登录名。 *job_login* 为 **nvarchar (257) **，无默认值。 代理始终可以使用此 Windows 帐户连接到订阅服务器。  
+`[ @job_login = ] 'job_login'` 用于运行代理的 Windows 帐户的登录名。 *job_login* 为 **nvarchar (257)**，无默认值。 代理始终可以使用此 Windows 帐户连接到订阅服务器。  
   
 `[ @job_password = ] 'job_password'` 运行代理所用的 Windows 帐户的密码。 *job_password* **sysname**，无默认值。  
   

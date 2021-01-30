@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81db44bae57dec8bb0298e872221998ac45e0a3a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6ebfc2afdcbaa3ca5eddd5d311262ba19780e332
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542054"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205258"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>对象层次结构语法 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89542054"
  要求使用双引号 (")。 不支持用于集合的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 惊叹号 (!) 语法。  
   
  *PropertyOrMethod*  
- *TraversedObject*的属性或方法的名称。  
+ *TraversedObject* 的属性或方法的名称。  
   
  若要通过使用 sp_OAGetProperty、sp_OASetProperty 或 sp_OAMethod 参数（包括对 sp_OAMethod 输出参数的支持）指定所有索引或方法参数，请使用下面的语法：  
   

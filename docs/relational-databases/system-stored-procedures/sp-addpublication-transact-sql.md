@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addpublication_TSQL
 - sp_addpublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9aa65ff9b5b9c14441ac555d40788e92082f01c5
-ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
+ms.openlocfilehash: de6ba893e44d7bfddda4325cc15c1c4d3f875a0c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98564444"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206701"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -92,7 +92,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'` 同步模式。 *sync_method* 为 **nvarchar (13)**，可以是以下值之一。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**native**|生成所有表的本机模式大容量复制程序输出。 *对于 Oracle 发布服务器不支持*。|  
 |**character**|生成所有表的字符模式大容量复制程序输出。 _对于 Oracle 发布服务器，_ **字符**_仅对快照复制有效_。|  
@@ -104,7 +104,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@repl_freq = ] 'repl_freq'` 复制频率的类型， *repl_freq* 为 **nvarchar (10)**，可以是以下值之一。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**连续** (默认值) |发布服务器提供所有基于日志的事务的输出。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，这要求将 *sync_method* 设置为 **concurrent_c**。|  
 |**概述**|发布服务器仅生成计划的同步事件。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，这要求将 *sync_method* 设置为 " **字符**"。|  
@@ -113,7 +113,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'` 指定发布数据是否可用。 *状态* 为 **nvarchar (8)**，可以为以下值之一。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**active**|发布数据可立即用于订阅服务器。|  
 |**非活动** (默认值) |首次创建发布时，发布数据不能由订阅服务器使用（订阅服务器可以订阅，但这些订阅不被处理）。|  
@@ -136,7 +136,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'` 指定是否在发布服务器上生成用于更新订阅的同步存储过程。 *autogen_sync_procs* 为 **nvarchar (5)**，可以是以下值之一。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |true|在启用更新订阅时自动设置。|  
 |**false**|在未启动更新订阅或没有为 Oracle 发布服务器启动更新订阅时自动设置。|  
@@ -177,7 +177,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'` 指定使用排队更新订阅服务器选项时的冲突解决策略。 *conflict_policy* 为 **nvarchar (100)** ，默认值为 NULL，可以是下列值之一。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**pub wins**|发布服务器在冲突中入选。|  
 |**sub reinit**|重新初始化订阅。|  
@@ -192,7 +192,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'` 指定使用的队列类型。 *queue_type* 为 **nvarchar (10)**，默认值为 NULL，可以是下列值之一。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**sql**|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储事务。|  
 |NULL（默认值）|默认为 **sql**，它指定使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来存储事务。|  
@@ -215,7 +215,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` 指示订户是否可以从备份而非初始快照中初始化对此发布的订阅。 *allow_initialize_from_backup* 为 **nvarchar (5)**，可以是以下值之一：  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |true|启用从备份进行的初始化。|  
 |**false**|禁用从备份进行的初始化。|  

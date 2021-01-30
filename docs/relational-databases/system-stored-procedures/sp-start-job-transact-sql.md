@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_start_job
 - sp_start_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e7a86d9ea25b4d9ae412b922cc6f36ddce27c20
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 09da744c09bd822ae01166722812141a05e13ed1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545934"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207286"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_start_job
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'` 要在其上启动作业的目标服务器。 *server_name* 为 **nvarchar (128) **，默认值为 NULL。 *server_name* 必须是作业当前所针对的目标服务器之一。  
+`[ @server_name = ] 'server_name'` 要在其上启动作业的目标服务器。 *server_name* 为 **nvarchar (128)**，默认值为 NULL。 *server_name* 必须是作业当前所针对的目标服务器之一。  
   
 `[ @step_name = ] 'step_name'` 开始执行作业的步骤的名称。 只应用于本地作业。 *step_name* 的值为 **sysname**，默认值为 NULL  
   
@@ -68,7 +68,7 @@ sp_start_job
  此存储过程位于 **msdb** 数据库中。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -78,7 +78,7 @@ sp_start_job
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- **SQLAgentUserRole**和**SQLAgentReaderRole**的成员只能启动它们所拥有的作业。 **SQLAgentOperatorRole**的成员可以启动所有本地作业，包括其他用户所拥有的作业。 **Sysadmin**的成员可以启动所有本地作业和多服务器作业。  
+ **SQLAgentUserRole** 和 **SQLAgentReaderRole** 的成员只能启动它们所拥有的作业。 **SQLAgentOperatorRole** 的成员可以启动所有本地作业，包括其他用户所拥有的作业。 **Sysadmin** 的成员可以启动所有本地作业和多服务器作业。  
   
 ## <a name="examples"></a>示例  
  以下示例启动名为 `Weekly Sales Data Backup` 的作业。  

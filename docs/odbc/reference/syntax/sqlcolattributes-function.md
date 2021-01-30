@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLColAttributes
 apilocation:
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c404a4f8ef1dd9bef246e811e200eed3d431c29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 96232ef0b6269dc990df6d86838235f9a6c05a50
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448793"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208440"
 ---
 # <a name="sqlcolattributes-function"></a>SQLColAttributes 函数
 **度**  
  引入的版本： ODBC 1.0 标准符合性：已弃用  
   
  **摘要**  
- ODBC 3 中的。*x*，ODBC 2.0 函数 **SQLColAttributes** 已被 **SQLColAttribute**取代。 有关详细信息，请参阅 [SQLColAttribute 函数](../../../odbc/reference/syntax/sqlcolattribute-function.md)。  
+ ODBC 3 中的。*x*，ODBC 2.0 函数 **SQLColAttributes** 已被 **SQLColAttribute** 取代。 有关详细信息，请参阅 [SQLColAttribute 函数](../../../odbc/reference/syntax/sqlcolattribute-function.md)。  
   
 > [!NOTE]  
 >  有关在 ODBC 2 时驱动程序管理器将此函数映射到的内容的详细信息。*x* 应用程序正在使用 ODBC 3。*x* 驱动程序，有关向后兼容性，请参阅附录 G：驱动程序准则中的 [映射弃用的函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) 。  

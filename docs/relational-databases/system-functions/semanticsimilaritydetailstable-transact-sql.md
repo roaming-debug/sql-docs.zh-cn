@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - semanticsimilaritydetailstable
 - semanticsimilaritydetailstable_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fa94a6c16eaaf2548b3c0375d43848d5e03a7f12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f26754f935338d586ebe958df9f49f99c189c414
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474571"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207323"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,15 +72,15 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>返回的表  
  下表介绍此行集函数返回的关键短语的信息。  
   
-|Column_name|类型|描述|  
+|Column_name|类型|说明|  
 |------------------|----------|-----------------|  
 |**关键短语**|**NVARCHAR**|在源文档和匹配文档之间促进相似性的关键短语。|  
-|**分值**|**实际上**|一个相对值，用来表示此关键短语与两篇文档间相似的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  
+|**分值**|**REAL**|一个相对值，用来表示此关键短语与两篇文档间相似的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  
   
 ## <a name="general-remarks"></a>一般备注  
  有关详细信息，请参阅 [通过语义搜索查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
-## <a name="metadata"></a>Metadata  
+## <a name="metadata"></a>元数据  
  有关语义相似性的提取和填充的信息和状态，请查询以下动态管理视图：  
   
 -   [sys.dm_db_fts_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  

@@ -1,13 +1,13 @@
 ---
-description: 'sys. fn_hadr_backup_is_preferred_replica (Transact-sql) '
-title: sys. fn_hadr_backup_is_preferred_replica (Transact-sql) |Microsoft Docs
+description: 'sys.fn_hadr_backup_is_preferred_replica (Transact-sql) '
+title: sys.fn_hadr_backup_is_preferred_replica (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_hadr_backup_is_preferred_replica_TSQL
 - sys.fn_hadr_backup_is_preferred_replica
@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ce16f8300546c77114a27706a7b7ed32806f98ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 009e237b8d7ac7d100100969cf9f8a75bbad1195
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427809"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206041"
 ---
-# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-sql) 
+# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica (Transact-sql) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   用于确定当前副本是否为首选备份副本。  

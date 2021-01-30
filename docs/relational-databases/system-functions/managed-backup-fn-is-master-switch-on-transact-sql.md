@@ -1,13 +1,13 @@
 ---
-description: 'managed_backup fn_is_master_switch_on (Transact-sql) '
-title: managed_backup fn_is_master_switch_on (Transact-sql) |Microsoft Docs
+description: " (transact-sql 的 managed_backup.fn_is_master_switch_on managed_backup) "
+title: managed_backup managed_backup.fn_is_master_switch_on (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_is_master_switch_on
 - fn_is_master_switch_on_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b73778128e18d2937e2866ba697ab297698f6574
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32395235a4d644814c7ff090fd74abc9030b2eda
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419471"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207373"
 ---
-# <a name="managed_backupfn_is_master_switch_on-transact-sql"></a>managed_backup fn_is_master_switch_on (Transact-sql) 
+# <a name="managed_backupfn_is_master_switch_on-transact-sql"></a> (transact-sql 的 managed_backup.fn_is_master_switch_on managed_backup) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   返回 SQL Server 实例上 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 操作的状态。  
@@ -48,7 +48,7 @@ managed_backup.fn_is_master_switch_on ()
  无  
   
 ## <a name="return-type"></a>返回类型  
- **小段**  
+ **BIT**  
   
  1 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 处于活动状态，0 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 暂停。  
   

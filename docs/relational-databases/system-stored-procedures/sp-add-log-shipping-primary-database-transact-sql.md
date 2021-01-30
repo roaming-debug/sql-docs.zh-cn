@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_primary_database
 - sp_add_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c967127366c935b42ac33158982c6734114b2d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464650"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206716"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,9 +58,9 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ## <a name="arguments"></a>参数  
 `[ @database = ] 'database'` 日志传送主数据库的名称。 *数据库* 为 **sysname**，无默认值，且不能为 NULL。  
   
-`[ @backup_directory = ] 'backup_directory'` 主服务器上备份文件夹的路径。 *backup_directory* 为 **nvarchar (500) **，无默认值，且不能为 NULL。  
+`[ @backup_directory = ] 'backup_directory'` 主服务器上备份文件夹的路径。 *backup_directory* 为 **nvarchar (500)**，无默认值，且不能为 NULL。  
   
-`[ @backup_share = ] 'backup_share'` 主服务器上的备份目录的网络路径。 *backup_share* 为 **nvarchar (500) **，无默认值，且不能为 NULL。  
+`[ @backup_share = ] 'backup_share'` 主服务器上的备份目录的网络路径。 *backup_share* 为 **nvarchar (500)**，无默认值，且不能为 NULL。  
   
 `[ @backup_job_name = ] 'backup_job_name'` 将备份复制到备份文件夹中的主服务器上 SQL Server 代理作业的名称。 *backup_job_name* 为 **sysname** ，且不能为 NULL。  
   
@@ -105,7 +105,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  无  
   
 ## <a name="remarks"></a>备注  
- 必须从主服务器上的**master**数据库运行**sp_add_log_shipping_primary_database** 。 此存储过程可执行以下功能：  
+ 必须从主服务器上的 **master** 数据库运行 **sp_add_log_shipping_primary_database** 。 此存储过程可执行以下功能：  
   
 1.  使用提供的参数生成主 ID 并为表中的主数据库添加条目 **log_shipping_primary_databases** 。  
   

@@ -1,13 +1,13 @@
 ---
 description: 从 C 到 SQL：日期时间间隔
-title: 从 C 到 SQL：日期时间间隔 |Microsoft Docs
+title: C 到 SQL： Day-Time 间隔 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - day-time intervals [ODBC]
 - data conversions from C to SQL types [ODBC], day-time intervals
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aba5bb40a34f100cf33d5c07fb6e796b227904dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e207a7533a0f09360925f6123e8797bdabecc21b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499990"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207832"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>从 C 到 SQL：日期时间间隔
 日期时间间隔 ODBC C 数据类型的标识符为：  
@@ -61,7 +61,7 @@ ms.locfileid: "88499990"
   
  Interval C 类型的默认转换为相应的日期时间间隔 SQL 类型。  
   
- 驱动程序在从 interval C 数据类型转换数据时忽略长度/指示器值，并假定数据缓冲区的大小为时间间隔 C 数据类型的大小。 长度/指示器值传入**SQLPutData**中的*StrLen_or_Ind*参数和在**SQLBindParameter**中通过*StrLen_or_IndPtr*参数指定的缓冲区中。 数据缓冲区是通过**SQLPutData**中的*DataPtr*参数和**SQLBindParameter**中的*ParameterValuePtr*参数指定的。  
+ 驱动程序在从 interval C 数据类型转换数据时忽略长度/指示器值，并假定数据缓冲区的大小为时间间隔 C 数据类型的大小。 长度/指示器值传入 **SQLPutData** 中的 *StrLen_or_Ind* 参数和在 **SQLBindParameter** 中通过 *StrLen_or_IndPtr* 参数指定的缓冲区中。 数据缓冲区是通过 **SQLPutData** 中的 *DataPtr* 参数和 **SQLBindParameter** 中的 *ParameterValuePtr* 参数指定的。  
   
  下面的示例演示如何将存储在 SQL_INTERVAL_STRUCT 结构中的时间间隔 C 数据发送到数据库列中。 间隔结构包含一个 DAY_TO_SECOND 间隔;它将存储在 SQL_INTERVAL_DAY_TO_MINUTE 类型的数据库列中。  
   

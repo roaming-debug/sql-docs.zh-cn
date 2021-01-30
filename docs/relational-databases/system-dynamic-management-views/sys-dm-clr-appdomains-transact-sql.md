@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_clr_appdomains
 - sys.dm_clr_appdomains
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ae934fc3b9d8f7664e2542450ee1456298548c85
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7579a0648bbc5eee90512bb70dfd667728b56834
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097756"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208105"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,13 +59,13 @@ ms.locfileid: "98097756"
   
 ## <a name="appdomain-initialization"></a>AppDomain 初始化  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|正在创建 **AppDomain** 。|  
   
 ## <a name="appdomain-usage"></a>AppDomain 使用情况  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|运行时 **AppDomain** 已准备就绪，可供多个用户使用。|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain** 可以在 DDL 操作中使用。 此行为不同于 E_APPDOMAIN_SHARED，在后者中，共享的 AppDomain 用于 CLR 集成执行，而非 DDL 操作。 此类 AppDomain 独立于其他并发操作。|  
@@ -73,7 +73,7 @@ ms.locfileid: "98097756"
   
 ## <a name="appdomain-cleanup"></a>AppDomain 的清除  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已请求 CLR 卸载 **AppDomain**，通常是因为包含托管数据库对象的程序集已更改或删除。|  
 |E_APPDOMAIN_UNLOADED|CLR 已卸载 **AppDomain**。 这通常是由于 **ThreadAbort**、 **OutOfMemory** 或用户代码中未经处理的异常导致的升级过程的结果。|  

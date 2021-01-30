@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_generate_wrapper_function (Transact-SQL)
-title: sys. sp_cdc_generate_wrapper_function (Transact-sql) |Microsoft Docs
+title: sys.sp_cdc_generate_wrapper_function (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_generate_wrapper_function_TSQL
 - sp_cdc_generate_wrapper_function
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 069c0cb5eab377d0c2cd4bc92b68d7071f56681a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9f6dc9038b4f23b7e38e69555ceed06fab90ba92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540471"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205976"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,10 +58,10 @@ sys.sp_cdc_generate_wrapper_function
  一个标志位，指示生成的过程是否将提交时间等于高端点的更改包括在提取间隔内。 *high_end_pt_flag* 是 **bit** ，默认值为1，指示应包括端点。 值为 0 表示所有提交时间将严格小于高端点。  
   
  [ @column_list =] "*column_list*"  
- 将包括在由包装函数返回的结果集中的捕获列的列表。 *column_list* 为 **nvarchar (max) ** ，其默认值为 NULL。 指定 NULL 时，将包括所有捕获列。  
+ 将包括在由包装函数返回的结果集中的捕获列的列表。 *column_list* 为 **nvarchar (max)** ，其默认值为 NULL。 指定 NULL 时，将包括所有捕获列。  
   
  [ @update_flag_list =] "*update_flag_list*"  
- 包含的列的列表，在由包装函数返回的结果集中将为这些列包括一个更新标志。 *update_flag_list* 为 **nvarchar (max) ** ，其默认值为 NULL。 指定 NULL 时，不包括更新标志。  
+ 包含的列的列表，在由包装函数返回的结果集中将为这些列包括一个更新标志。 *update_flag_list* 为 **nvarchar (max)** ，其默认值为 NULL。 指定 NULL 时，不包括更新标志。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -70,7 +70,7 @@ sys.sp_cdc_generate_wrapper_function
   
 |列名称|列类型|说明|  
 |-----------------|-----------------|-----------------|  
-|function_name|**nvarchar (145) **|生成的函数的名称。|  
+|function_name|**nvarchar (145)**|生成的函数的名称。|  
 |**create_script**|**nvarchar(max)**|创建捕获实例包装函数的脚本。|  
   
 ## <a name="remarks"></a>备注  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_srvrolepermission_TSQL
 - sp_srvrolepermission
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fb7a553adf516002a61f54ef900fd579f9d15856
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98356145bf3333e6027cff6cef825e92a3e15afd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473705"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207316"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,12 +64,12 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|固定服务器角色的名称|  
-|**权限**|**sysname**|与**ServerRole**关联的权限|  
+|**权限**|**sysname**|与 **ServerRole** 关联的权限|  
   
 ## <a name="remarks"></a>备注  
  列出的权限包括可以执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和固定服务器角色成员可执行的其他特殊活动。 若要显示固定服务器角色的列表，请执行 **sp_helpsrvrole**。  
   
- **Sysadmin**固定服务器角色具有其他所有固定服务器角色的权限。  
+ **Sysadmin** 固定服务器角色具有其他所有固定服务器角色的权限。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
@@ -83,8 +83,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addsrvrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpsrvrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

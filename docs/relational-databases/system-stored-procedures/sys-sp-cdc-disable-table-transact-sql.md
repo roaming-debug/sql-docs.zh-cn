@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_disable_table (Transact-SQL)
-title: sys. sp_cdc_disable_table (Transact-sql) |Microsoft Docs
+title: sys.sp_cdc_disable_table (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_disable_table
 - sp_cdc_disable_table
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0819c156cdc3e836028915d89a8d9100eef17c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53984d18923cef297e267374045f0f4cb4364419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541120"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206016"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,11 +49,11 @@ sys.sp_cdc_disable_table
 ## <a name="arguments"></a>参数  
 `[ @source_schema = ] 'source\_schema'` 包含源表的架构的名称。 *source_schema* **sysname**，无默认值，且不能为 NULL。  
   
- 当前数据库中必须存在*source_schema* 。  
+ 当前数据库中必须存在 *source_schema* 。  
   
 `[ @source_name = ] 'source\_name'` 要禁用变更数据捕获的源表的名称。 *source_name* **sysname**，无默认值，且不能为 NULL。  
   
- 当前数据库中必须存在*source_name* 。  
+ 当前数据库中必须存在 *source_name* 。  
   
 `[ @capture_instance = ] 'capture\_instance' | 'all'` 要为指定的源表禁用的捕获实例的名称。 *capture_instance* 为 **sysname** ，且不能为 NULL。  
   
@@ -66,7 +66,7 @@ sys.sp_cdc_disable_table
  无  
   
 ## <a name="remarks"></a>备注  
- **sys. sp_cdc_disable_table** 删除与指定的源表和捕获实例相关联的变更数据捕获更改表和系统函数。 它从变更数据捕获系统表中删除与指定捕获实例相关联的任何行，并将[sys.databases](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)目录视图中的表条目的**is_tracked_by_cdc**列设置为0。  
+ **sys.sp_cdc_disable_table** 删除与指定的源表和捕获实例相关联的变更数据捕获更改表和系统函数。 它从变更数据捕获系统表中删除与指定捕获实例相关联的任何行，并将 [sys.databases](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)目录视图中的表条目的 **is_tracked_by_cdc** 列设置为0。  
   
 ## <a name="permissions"></a>权限  
  需要 **db_owner** 固定数据库角色的成员身份。  
@@ -84,6 +84,6 @@ EXECUTE sys.sp_cdc_disable_table
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

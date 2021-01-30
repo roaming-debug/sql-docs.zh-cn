@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergealternatepublisher
 - sp_dropmergealternatepublisher_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c808c4326736a190dace9e6dd839306ec65c7307
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d787648f197c54623ba305503ddd878a3a7061d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536467"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208281"
 ---
 # <a name="sp_dropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publisher = ] 'publisher'` 当前发布服务器的名称。 *发布服务器*的 **sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 当前发布服务器的名称。 *发布服务器* 的 **sysname**，无默认值。  
   
 `[ @publisher_db = ] 'publisher_db'` 当前发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
   

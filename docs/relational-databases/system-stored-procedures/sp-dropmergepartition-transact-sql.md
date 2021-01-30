@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergepartition_TSQL
 - sp_dropmergepartition
@@ -17,12 +17,12 @@ ms.assetid: 1be511c1-79ff-4947-9379-78d83b7b8945
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 850130a686a114d2e7a8bafaea8b0133d40215cd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c3c80582e40382d810820501515c8f11a1518f2c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472728"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205559"
 ---
 # <a name="sp_dropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ sp_dropmergepartition [ @publication = ] 'publication'
         , [ @host_name = ] 'host_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication] = 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。  
   
 `[ @suser_sname = ] 'suser_sname'` 订阅服务器上用于定义分区的 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 函数的值。 *suser_sname* **sysname**，无默认值。  

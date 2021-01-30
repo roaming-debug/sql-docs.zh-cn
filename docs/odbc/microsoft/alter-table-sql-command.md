@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c72d03abff792ff103bf009cd12b718c74bd497d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 186647c40517c5ecf77a55e6bbc08155c98ffed9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483700"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205755"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL 命令
 以编程方式修改表的结构。  
@@ -75,7 +75,7 @@ ALTER TABLE TableName1
   
  *FieldType* 是一个表示字段的 [数据类型](../../odbc/microsoft/visual-foxpro-field-data-types.md)的单字母。 某些字段数据类型要求指定 *nFieldWidth* 或 *nPrecision* ，或同时指定两者。  
   
- 对于 D、G、I、L、M、P、T 和 Y 类型，将忽略*nFieldWidth*和*nPrecision* 。 默认情况下， *nPrecision* 为零 (没有小数位数) B、F 或 N 类型不包含 *nPrecision* 。  
+ 对于 D、G、I、L、M、P、T 和 Y 类型，将忽略 *nFieldWidth* 和 *nPrecision* 。 默认情况下， *nPrecision* 为零 (没有小数位数) B、F 或 N 类型不包含 *nPrecision* 。  
   
  NULL &#124; NOT NULL  
  允许或禁止字段中出现 null 值。  
@@ -89,7 +89,7 @@ ALTER TABLE TableName1
  指定在字段验证规则生成错误时所显示的错误消息。  
   
  默认 *eExpression1*  
- 指定字段的默认值。 *EExpression1*的数据类型必须与字段的数据类型相同。  
+ 指定字段的默认值。 *EExpression1* 的数据类型必须与字段的数据类型相同。  
   
  PRIMARY KEY  
  创建主索引标记。 索引标记与该字段具有相同的名称。  
@@ -123,7 +123,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  指定要修改的现有字段的名称。  
   
  设置默认 *eExpression2*  
- 为现有字段指定新的默认值。 *EExpression2*的数据类型必须与字段的数据类型相同。  
+ 为现有字段指定新的默认值。 *EExpression2* 的数据类型必须与字段的数据类型相同。  
   
  设置 CHECK *lExpression2*  
  为现有字段指定新的验证规则。 *lExpression2* 的计算结果必须是逻辑表达式，可能是用户定义函数或存储过程。  
@@ -151,14 +151,14 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  删除检查  
  删除表的验证规则。  
   
- ADD PRIMARY KEY *eExpression3*TAG *TagName2*  
- 向表中添加主索引。 *eExpression3* 指定主索引键表达式， *TagName2* 指定主索引标记的名称。 索引标记名称最多可包含10个字符。 如果省略 TAG *TagName2* 并且 *eExpression3* 为单个字段，则主索引标记的名称与 *eExpression3*中指定的字段的名称相同。  
+ ADD PRIMARY KEY *eExpression3* TAG *TagName2*  
+ 向表中添加主索引。 *eExpression3* 指定主索引键表达式， *TagName2* 指定主索引标记的名称。 索引标记名称最多可包含10个字符。 如果省略 TAG *TagName2* 并且 *eExpression3* 为单个字段，则主索引标记的名称与 *eExpression3* 中指定的字段的名称相同。  
   
  删除主密钥  
  删除主索引及其索引标记。 因为一个表只能有一个主键，所以不需要指定主键的名称。 删除主索引时还会根据主键删除任何持久关系。  
   
  ADD UNIQUE *eExpression4*[TAG *TagName3*]  
- 将候选索引添加到表中。 *eExpression4* 指定候选索引键表达式， *TagName3* 指定候选索引标记的名称。 索引标记名称最多可包含10个字符。 如果省略标记 *TagName3* ，并且 *eExpression4* 是单个字段，则候选索引标记的名称与 *eExpression4*中指定的字段的名称相同。  
+ 将候选索引添加到表中。 *eExpression4* 指定候选索引键表达式， *TagName3* 指定候选索引标记的名称。 索引标记名称最多可包含10个字符。 如果省略标记 *TagName3* ，并且 *eExpression4* 是单个字段，则候选索引标记的名称与 *eExpression4* 中指定的字段的名称相同。  
   
  DROP UNIQUE 标记 *TagName4*  
  删除候选索引及其索引标记。 因为一个表可以有多个候选键，所以必须指定候选索引标记的名称。  
@@ -170,9 +170,9 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  指定要建立持久关系的父表。 包含标记 *TagName5* ，以便基于父表的现有索引标记建立关系。 索引标记名称最多可包含10个字符。 如果省略 TAG *TagName5*，则使用父表的主索引标记建立关系。  
   
  删除外键标记 *TagName6*[SAVE]  
- 删除其索引标记为 *TagName6*的外键。 如果省略 SAVE，则会从结构索引中删除索引标记。 包含 SAVE 禁止从结构索引删除索引标记。  
+ 删除其索引标记为 *TagName6* 的外键。 如果省略 SAVE，则会从结构索引中删除索引标记。 包含 SAVE 禁止从结构索引删除索引标记。  
   
- 将 *FIELDNAME4*列重命名为 *FieldName5*  
+ 将 *FIELDNAME4* 列重命名为 *FieldName5*  
  允许您更改表中字段的名称。 *FieldName4* 指定要重命名的字段的名称。 *FieldName5* 指定字段的新名称。  
   
 > [!CAUTION]  

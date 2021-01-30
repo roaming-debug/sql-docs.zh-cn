@@ -7,27 +7,27 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - field data types [ODBC]
 - Visual FoxPro ODBC driver [ODBC], data types
 ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 65410f16367af8764e8572c58e53831f3f7b9cda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2032ee25039364186f33486e4662b84c36c06947
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449049"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207477"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Visual FoxPro 字段数据类型
 下表列出了 ALTER TABLE 和 CREATE TABLE 中的 *FieldType* 参数的值，并指示是否需要 *nFieldWidth* 和 *nPrecision* 参数。  
   
-|*FieldType*|*NFieldWidth*|*nPrecision*|描述|  
+|*FieldType*|*NFieldWidth*|*nPrecision*|说明|  
 |-----------------|-------------------|------------------|-----------------|  
 |B|-|d|Double|  
-|C|N|-|宽度为*n*的字符字段|  
+|C|N|-|宽度为 *n* 的字符字段|  
 |D|-|-|Date|  
 |F|N|d|宽度为 *n* 且带有 *d* 个小数点的浮动数值字段|  
 |G|-|-|常规|  

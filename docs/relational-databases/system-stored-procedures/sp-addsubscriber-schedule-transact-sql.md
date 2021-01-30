@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addsubscriber_schedule_TSQL
 - sp_addsubscriber_schedule
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f62a88f7bc1bd3cf60c2d15fe71c3d1b6e571ff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e95e55157e4ab8f96fd1b715b08c2c2e377cf8e3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536772"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207065"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,34 +72,34 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**64** (默认值) |自动启动|  
 |**128**|重复执行|  
   
-`[ @frequency_interval = ] frequency_interval` 要应用于 *frequency_type*设置的频率的值。 *frequency_interval* 的值为 **int**，默认值为 **1**。  
+`[ @frequency_interval = ] frequency_interval` 要应用于 *frequency_type* 设置的频率的值。 *frequency_interval* 的值为 **int**，默认值为 **1**。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 分发代理的日期。 如果 *frequency_type* 设置为 **32** (每月相对) ，则使用此参数。 *frequency_relative_interval* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**1** （默认值）|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 **0**。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type* 使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 **0**。  
   
 `[ @frequency_subday = ] frequency_subday` 在定义的时间段内重新计划的频率。 *frequency_subday* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|Second|  
+|**2**|秒|  
 |**4** (默认值) |Minute|  
 |**8**|小时|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 **5**。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday* 的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 **5**。  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day` 第一次计划分发代理的时间，格式为 HHMMSS。 *active_start_time_of_day* 的值为 **int**，默认值为 **0**。  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` 停止计划分发代理的时间，格式为 HHMMSS。 *active_end_time_of_day*的值为 **int**，默认值为235959，表示 11:59:59 P.M.。 以24小时制计量。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 停止计划分发代理的时间，格式为 HHMMSS。 *active_end_time_of_day* 的值为 **int**，默认值为235959，表示 11:59:59 P.M.。 以24小时制计量。  
   
 `[ @active_start_date = ] active_start_date` 第一次计划分发代理的日期，格式为 YYYYMMDD。 *active_start_date* 的值为 **int**，默认值为 **0**。  
   
@@ -108,7 +108,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 `[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  不应为发布服务器指定*发布服务器* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  不应为发布服务器指定 *发布服务器* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -117,7 +117,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  **sp_addsubscriber_schedule** 用于快照复制、事务复制和合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_addsubscriber_schedule**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_addsubscriber_schedule** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_changesubscriber_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   

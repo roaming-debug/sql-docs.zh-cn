@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_jobserver
 - sp_add_jobserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a99fedcccc076fd12cbc64a4500b39ca7b6d5d3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 015e8c1cc727b14d58d49be16643f0d6324bf0dd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539161"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206752"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。  
   
-`[ @server_name = ] 'server'` 作业的目标服务器的名称。 *服务器* ** (30) 为 nvarchar **，默认值为 N ' (本地) "。 *服务器* 可以是本地服务器 ** (本地) ** ，也可以是现有目标服务器的名称。  
+`[ @server_name = ] 'server'` 作业的目标服务器的名称。 *服务器* **(30) 为 nvarchar**，默认值为 N ' (本地) "。 *服务器* 可以是本地服务器 **(本地)** ，也可以是现有目标服务器的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -57,12 +57,12 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  无  
   
 ## <a name="remarks"></a>备注  
- ** \@ automatic_post**存在于**sp_add_jobserver**中，但未在 "参数" 下列出。 ** \@ automatic_post**保留供内部使用。  
+ **\@ automatic_post** 存在于 **sp_add_jobserver** 中，但未在 "参数" 下列出。 **\@ automatic_post** 保留供内部使用。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

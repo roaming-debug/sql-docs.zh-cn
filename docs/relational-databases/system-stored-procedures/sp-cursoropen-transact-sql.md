@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursoropen
 - sp_cursoropen_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2942c06e5d63c0be25a05cd34e871447a29e7d6d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1e8e4025a31c92ec001bcb45bee4f8d26f3dc24e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543565"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206281"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 因为请求的值可能不适合于 *stmt*定义的游标，所以，此参数可同时用作输入和输出。 在此类情况下，SQL Server 分配一个适当的值。  
+ 因为请求的值可能不适合于 *stmt* 定义的游标，所以，此参数可同时用作输入和输出。 在此类情况下，SQL Server 分配一个适当的值。  
   
  *ccopt*  
  并发控制选项。 *ccopt* 是一个可选参数，它需要以下 **整数** 输入值之一。  
@@ -89,10 +89,10 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 与 *scrollopt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以覆盖请求的 *ccopt* 值。  
+ 与 *scrollopt* 一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以覆盖请求的 *ccopt* 值。  
   
  *数*  
- 要用于 AUTO_FETCH 的提取缓冲区行数。 默认值为 20 行。 指定为输入值与返回值时，*行计数*的行为不同。  
+ 要用于 AUTO_FETCH 的提取缓冲区行数。 默认值为 20 行。 指定为输入值与返回值时，*行计数* 的行为不同。  
   
 |作为输入值|作为返回值|  
 |--------------------|---------------------|  
@@ -153,7 +153,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ## <a name="stmt-parameter"></a>stmt 参数  
  如果 *stmt* 指定了存储过程的执行，则输入参数可能会定义为 *常量字符串的* 一部分，或指定为 *boundparam* 参数。 通过此方法，可以将声明的变量作为绑定参数传递。  
   
- *Stmt*参数允许的内容取决于*ccopt* ALLOW_DIRECT 返回值是由链接还是链接到*ccopt*值的其余部分，例如：  
+ *Stmt* 参数允许的内容取决于 *ccopt* ALLOW_DIRECT 返回值是由链接还是链接到 *ccopt* 值的其余部分，例如：  
   
 -   如果未指定 ALLOW_DIRECT，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] 必须使用为包含单个 SELECT 语句的存储过程调用的 SELECT 语句或执行语句。 此外，SELECT 语句必须限定为一个游标；也即，它不能包含关键字 SELECT INTO 或 FOR BROWSE。  
   

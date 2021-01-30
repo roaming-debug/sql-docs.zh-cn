@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_targetserver_TSQL
 - sp_help_targetserver
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02304ff4c41f45e90c24fb4be1a815be49c1336a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6441641d84e534c91fa0dc887c32a426af5bf669
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527364"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205131"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @server_name = ] 'server_name'` 要返回其信息的服务器的名称。 *server_name* 为 **nvarchar (30) **，默认值为 NULL。  
+`[ @server_name = ] 'server_name'` 要返回其信息的服务器的名称。 *server_name* 为 **nvarchar (30)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -60,7 +60,7 @@ sp_help_targetserver
 |**status**|**int**|指定的服务器的状态。|  
 |**unread_instructions**|**int**|指示服务器是否有未读指令。 如果已下载所有行，则此列为 **0**。|  
 |**local_time**|**datetime**|目标服务器上的本地日期和时间，基于主服务器上一次轮询时目标服务器上的本地时间。|  
-|**enlisted_by_nt_user**|**nvarchar (100) **|登记了目标服务器的 Microsoft Windows 用户。|  
+|**enlisted_by_nt_user**|**nvarchar (100)**|登记了目标服务器的 Microsoft Windows 用户。|  
 |**poll_interval**|**int**|目标服务器为下载作业和上载作业状态而对 Master SQLServerAgent 服务进行轮询的频率（秒）。|  
   
 ## <a name="permissions"></a>权限  

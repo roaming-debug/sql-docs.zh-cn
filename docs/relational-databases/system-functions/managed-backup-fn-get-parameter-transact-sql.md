@@ -1,13 +1,13 @@
 ---
-description: 'managed_backup fn_get_parameter (Transact-sql) '
-title: managed_backup fn_get_parameter (Transact-sql) |Microsoft Docs
+description: " (transact-sql 的 managed_backup.fn_get_parameter managed_backup) "
+title: managed_backup managed_backup.fn_get_parameter (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - smart_admin.fn_get_parameter_TSQL
 - smart_admin.fn_get_parameter
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: da8c646cca92a5ef25fd12322fd8a6bd222a1c9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a30e80c084768df7a40977c052a8649adeae33fc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419511"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207392"
 ---
-# <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup fn_get_parameter (Transact-sql) 
+# <a name="managed_backupfn_get_parameter-transact-sql"></a> (transact-sql 的 managed_backup.fn_get_parameter managed_backup) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   返回包含 0 行、1 行或多行参数和值对的表。  
@@ -47,7 +47,7 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  parameter_name  
- 参数的名称。 parameter_name ** (128) 为 NVARCHAR **。 如果提供 NULL 或空字符串作为函数的参数，则该函数将返回所有已配置智能管理参数的名称/值对。  
+ 参数的名称。 parameter_name **(128) 为 NVARCHAR**。 如果提供 NULL 或空字符串作为函数的参数，则该函数将返回所有已配置智能管理参数的名称/值对。  
   
 ## <a name="table-returned"></a>返回的表  
   

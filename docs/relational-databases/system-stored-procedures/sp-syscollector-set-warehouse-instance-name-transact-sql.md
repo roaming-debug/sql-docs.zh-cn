@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_set_warehouse_instance_name_TSQL
 - sp_syscollector_set_warehouse_instance_name
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c0b3ffda772bfbf0c25dbc3cb2e59a81c9c8d6f6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 28a081969b80188f508039e311e55eae1d47e0b8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541473"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207263"
 ---
 # <a name="sp_syscollector_set_warehouse_instance_name-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] "*instance_name*"  
  实例名。 *instance_name* 是 **sysname** ，如果为 NULL，则默认为本地实例。  
   
-> **注意：**_instance_name_必须是完全限定的实例名称，由计算机名称和实例名称组成，格式为*computerName* \\ *instanceName*。    
+> **注意：**_instance_name_ 必须是完全限定的实例名称，由计算机名称和实例名称组成，格式为 *computerName* \\ *instanceName*。    
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - set nullSET NULL
 ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5e98037838325a0bfe56b51cdcfec7df8539facd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a190c913b2f8cc9d7a111a0c95d0408de2c1c6c2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421841"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208603"
 ---
 # <a name="set-null-command"></a>SET NULL 命令
 确定 ALTER TABLE-SQL、CREATE TABLE SQL 和 INSERT SQL 命令如何支持 null 值。  

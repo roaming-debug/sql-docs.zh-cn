@@ -4,7 +4,7 @@ title: Azure SQL Database (sys.server_resource_stats) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - resource_stats
 - sys.resource_stats
@@ -19,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 8a913c3bf4f01828fcf75df1e3c69dca9149e2de
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: e1fe6592c4962499d5f02f1f076f49eb05402d54
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241818"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206831"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>Azure SQL Database (sys.server_resource_stats) 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "98241818"
 ## <a name="permissions"></a>权限  
  此视图可用于具有连接到 **master** 数据库的权限的所有用户角色。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **Sys.server_resource_stats** 返回的数据表示为使用的字节数或兆字节数 (中所述的总大小，) 除了 avg_cpu，这表示为运行的服务层/性能级别所允许的最大限制的百分比。  
  
 ## <a name="examples"></a>示例  

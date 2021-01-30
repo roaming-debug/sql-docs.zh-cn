@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changeqreader_agent_TSQL
 - sp_changeqreader_agent
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 08e7e0571cab57d50da670495af95709482899a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83be24af54593c4630284e07cf9464899d2b5cfd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543662"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207056"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_login = ] 'job_login'` 用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 运行代理的 Windows 帐户的登录名。 *job_login* 为 **nvarchar (257) **，默认值为 NULL。  
+`[ @job_login = ] 'job_login'` 用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 运行代理的 Windows 帐户的登录名。 *job_login* 为 **nvarchar (257)**，默认值为 NULL。  
   
 `[ @job_password = ] 'job_password'` 运行代理所用的 Windows 帐户的密码。 *job_password* 的默认值为 **sysname**，默认值为 NULL。  
   
@@ -57,7 +57,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_changeqreader_agent**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_changeqreader_agent** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

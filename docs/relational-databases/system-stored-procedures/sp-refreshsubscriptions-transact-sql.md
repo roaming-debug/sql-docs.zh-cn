@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_refreshsubscriptions
 - sp_refreshsubscriptions_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b66508f869a2ee2ab7e0a9cad80340e69c798202
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 47d3f8d8d4a5691a333251e96ccb7b74f05e387a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547424"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206043"
 ---
 # <a name="sp_refreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +49,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_refreshsubscriptions** 用于快照复制、事务复制和合并复制。  
   
- 对于即时更新发布， **sp_addarticle**调用**sp_refreshsubscriptions** 。  
+ 对于即时更新发布， **sp_addarticle** 调用 **sp_refreshsubscriptions** 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_refreshsubscriptions**。  

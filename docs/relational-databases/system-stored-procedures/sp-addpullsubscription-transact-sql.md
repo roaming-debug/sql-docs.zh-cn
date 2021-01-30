@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addpullsubscription
 - sp_addpullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e5c15e1892f6640e8fddbcc0b89898ffce4f6b2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c119173ba184ef8fe3a03c59e90965650bb9c35c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549945"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206677"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,17 +50,17 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 > [!NOTE]
 > 服务器名称可指定为 `<Hostname>,<PortNumber>` 。 如果在 Linux 或 Windows 上使用自定义端口部署 SQL Server，并且禁用了 browser 服务，则可能需要指定连接的端口号。
   
-`[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db* 的默认值为 **sysname**，默认值为 NULL。 Oracle 发布服务器将忽略*publisher_db* 。  
+`[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db* 的默认值为 **sysname**，默认值为 NULL。 Oracle 发布服务器将忽略 *publisher_db* 。  
   
 `[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @independent_agent = ] 'independent_agent'` 指定该发布是否有独立的分发代理。 *independent_agent* 为 **nvarchar (5) **，默认值为 TRUE。 如果为 **true**，则此发布有独立的分发代理。 如果为 **false**，则每个发布服务器数据库/订阅服务器数据库对都有一个分发代理。 *independent_agent* 是发布的属性，并且在此处的值必须与发布服务器上的值相同。  
+`[ @independent_agent = ] 'independent_agent'` 指定该发布是否有独立的分发代理。 *independent_agent* 为 **nvarchar (5)**，默认值为 TRUE。 如果为 **true**，则此发布有独立的分发代理。 如果为 **false**，则每个发布服务器数据库/订阅服务器数据库对都有一个分发代理。 *independent_agent* 是发布的属性，并且在此处的值必须与发布服务器上的值相同。  
   
-`[ @subscription_type = ] 'subscription_type'` 订阅的类型。 *subscription_type* 为 **nvarchar (9) **，默认值为 **anonymous**。 除非要创建订阅，而不在发布服务器上注册订阅，否则必须为*subscription_type*指定**拉取**值。 在这种情况下，必须将值指定为 **anonymous**。 如果在订阅配置期间无法建立与发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接，则匿名订阅是必需的。  
+`[ @subscription_type = ] 'subscription_type'` 订阅的类型。 *subscription_type* 为 **nvarchar (9)**，默认值为 **anonymous**。 除非要创建订阅，而不在发布服务器上注册订阅，否则必须为 *subscription_type* 指定 **拉取** 值。 在这种情况下，必须将值指定为 **anonymous**。 如果在订阅配置期间无法建立与发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接，则匿名订阅是必需的。  
   
-`[ @description = ] 'description'` 发布的说明。 *描述* 为 **nvarchar (100) **，默认值为 NULL。  
+`[ @description = ] 'description'` 发布的说明。 *描述* 为 **nvarchar (100)**，默认值为 NULL。  
   
-`[ @update_mode = ] 'update_mode'` 更新的类型。 *update_mode* 为 **nvarchar (30) **，可以为以下值之一。  
+`[ @update_mode = ] 'update_mode'` 更新的类型。 *update_mode* 为 **nvarchar (30)**，可以为以下值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -70,7 +70,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 |**故障转移**|将排队更新作为故障转移的情况下启用用于即时更新的订阅。 可以在订阅服务器上进行数据修改并立即传播到发布服务器。 如果发布服务器与订阅服务器未连接在一起，则可以将在订阅服务器上所做的数据修改存储在队列中，直到订阅服务器与发布服务器重新连接在一起。|  
 |**queued failover**|支持将订阅作为排队更新订阅，并允许更改为立即更新模式。 在订阅服务器和发布服务器之间建立连接之前，可以在订阅服务器上修改数据，并将数据修改存储在队列中。 建立起持续连接后，即可将更新模式更改为立即更新。 *对于 Oracle 发布服务器不支持*。|  
   
-`[ @immediate_sync = ] immediate_sync` 快照代理每次运行时是否创建或重新创建同步文件。 *immediate_sync*为**bit** ，默认值为1，并且必须设置为与**sp_addpublication**中*immediate_sync*相同的值。*immediate_sync*是发布的属性，并且在此处的值必须与发布服务器上的值相同。  
+`[ @immediate_sync = ] immediate_sync` 快照代理每次运行时是否创建或重新创建同步文件。 *immediate_sync* 为 **bit** ，默认值为1，并且必须设置为与 **sp_addpublication** 中 *immediate_sync* 相同的值。*immediate_sync* 是发布的属性，并且在此处的值必须与发布服务器上的值相同。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_subscription_properties_TSQL
 - sp_change_subscription_properties
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad4761fdbac615ad453741a0b01d410ca3b5d572
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ed6615b10487744ae5ac5c0775627bea97e29c66
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528638"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208301"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 要更改的属性。 *属性* 为 **sysname**。  
   
-`[ @value = ] 'value'` 属性的新值。 *值* 为 **nvarchar (1000) **，无默认值。  
+`[ @value = ] 'value'` 属性的新值。 *值* 为 **nvarchar (1000)**，无默认值。  
   
 `[ @publication_type = ] publication_type` 指定发布的复制类型。 *publication_type* 为 **int**，可以是下列值之一。  
   
@@ -64,7 +64,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|值|说明|  
+|properties|值|说明|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||指定快照的备用文件夹的位置。 如果设置为 NULL，则将从发布服务器指定的默认位置提取快照文件。|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
@@ -73,9 +73,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_password**||分发服务器密码。|  
 |**distributor_security_mode**|**1**|连接分发服务器时，使用 Windows 身份验证。|  
 ||**0**|连接分发服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
-|**** dts_package_name||指定 SQL Server 2000 Data Transformation Services (DTS) 包的名称。 仅当发布为事务发布或快照发布时才能指定该值。|  
-|**** dts_package_password||指定包上的密码。 *dts_package_password* 的默认 **值为 NULL** ，默认值为 NULL，指定密码属性保持不变。<br /><br /> 注意： DTS 包必须具有密码。<br /><br /> 仅当发布为事务发布或快照发布时才能指定该值。|  
-|**** dts_package_location||DTS 包的存储位置。 仅当发布为事务发布或快照发布时才能指定该值。|  
+|dts_package_name||指定 SQL Server 2000 Data Transformation Services (DTS) 包的名称。 仅当发布为事务发布或快照发布时才能指定该值。|  
+|dts_package_password||指定包上的密码。 *dts_package_password* 的默认 **值为 NULL** ，默认值为 NULL，指定密码属性保持不变。<br /><br /> 注意： DTS 包必须具有密码。<br /><br /> 仅当发布为事务发布或快照发布时才能指定该值。|  
+|dts_package_location||DTS 包的存储位置。 仅当发布为事务发布或快照发布时才能指定该值。|  
 |**dynamic_snapshot_location**||指定保存快照文件的文件夹的路径。 仅当发布为合并发布时才能指定该值。|  
 |**ftp_address**||仅为保持向后兼容。|  
 |**ftp_login**||仅为保持向后兼容。|  
@@ -94,9 +94,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**publisher_password**||发布者密码。 只有对合并发布的订阅才支持更改 *publisher_password* 。|  
 |**publisher_security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。 只有对合并发布的订阅才支持更改 *publisher_security_mode* 。|  
 ||**0**|连接发布服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
-|**use_ftp**|**true**|使用 FTP 代替常规协议来检索快照。|  
+|**use_ftp**|true|使用 FTP 代替常规协议来检索快照。|  
 ||**false**|使用常规协议来检索快照。|  
-|**use_web_sync**|**true**|启用 Web 同步。|  
+|**use_web_sync**|true|启用 Web 同步。|  
 ||**false**|禁用 Web 同步。|  
 |**working_directory**||使用文件传输协议 (FTP) 传输快照文件时，用于临时存储发布的数据和架构文件的工作目录的名称。|  
   

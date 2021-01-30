@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_maintenance_plan_job_TSQL
 - sp_add_maintenance_plan_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 710a151e6e965b523b26a67e82814d4b23091aba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0d4d5652c26e2d5fd2947953c7865b247b9448a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474609"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208031"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,19 +47,19 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ## <a name="arguments"></a>参数  
 `[ @plan_id = ] 'plan_id'` 指定维护计划的 ID。 *plan_id* 是 **uniqueidentifier**，并且必须是有效 id。  
   
-`[ @job_id = ] 'job_id'` 指定要与维护计划相关联的作业的 ID。 *job_id* 是 **uniqueidentifier**，并且必须是有效 id。 若要创建一个或一 sp_add_job 作业，请执行**sp_add_job**或使用 SQL Server Management Studio。  
+`[ @job_id = ] 'job_id'` 指定要与维护计划相关联的作业的 ID。 *job_id* 是 **uniqueidentifier**，并且必须是有效 id。 若要创建一个或一 sp_add_job 作业，请执行或使用 SQL Server Management Studio。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 必须从**msdb**数据库运行**sp_add_maintenance_plan_job** 。  
+ 必须从 **msdb** 数据库运行 **sp_add_maintenance_plan_job** 。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_add_maintenance_plan_job**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_add_maintenance_plan_job** 执行。  
   
 ## <a name="examples"></a>示例  
- 此示例将作业 "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" 添加到使用 **sp_add_maintenance_plan_job**创建的维护计划。  
+ 此示例将作业 "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" 添加到使用 **sp_add_maintenance_plan_job** 创建的维护计划。  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
