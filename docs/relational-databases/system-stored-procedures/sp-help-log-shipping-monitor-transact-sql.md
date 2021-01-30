@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_log_shipping_monitor_TSQL
 - sp_help_log_shipping_monitor
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fa34a789b4993b8eaf14123b2f9a4bffb477ed39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f8e1dbff1f96489895e95899d8595e8686e5c0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474207"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200048"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,11 +54,11 @@ sp_help_log_shipping_monitor
 |服务器|**sysname**|此数据库所在的主服务器或辅助服务器的名称。|  
 |**database_name**|**sysname**|数据库名称。|  
 |**time_since_last_backup**|**int**|最后一次备份日志以来的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
-|**last_backup_file**|**nvarchar (500) **|上一个成功的备份日志文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
+|**last_backup_file**|**nvarchar (500)**|上一个成功的备份日志文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**backup_threshold**|**int**|上一次备份到引发 threshold_alert 错误之间的时间，以分钟为单位。 **backup_threshold** 的值为 **int**，默认值为 **60 分钟**。<br /><br /> NULL = 信息不可用或者不相关。<br /><br /> 可以使用 [sp_add_log_shipping_primary_database &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)更改此值。|  
 |**is_backup_alert_enabled**|**bit**|指定在超出 **backup_threshold** 时是否引发警报。 一个 (**1**) 的值（默认值）表示将引发警报。<br /><br /> NULL = 信息不可用或者不相关。<br /><br /> 可以使用 [sp_add_log_shipping_primary_database &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)更改此值。|  
 |**time_since_last_copy**|**int**|上次复制日志备份以来的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
-|**last_copied_file**|**nvarchar (500) **|上一次成功复制的日志备份文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
+|**last_copied_file**|**nvarchar (500)**|上一次成功复制的日志备份文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**time_since_last_restore**|**int**|上一次还原日志备份以来的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**last_restored_file**|**nvarchar (500) 。**|上一次成功还原的日志备份文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**last_restored_latency**|**int**|上一次创建备份到还原该备份的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
@@ -66,7 +66,7 @@ sp_help_log_shipping_monitor
 |**is_restore_alert_enabled**|**bit**|指定在超出 **restore_threshold** 时是否引发警报。 一个 (**1**) 的值（默认值）表示将引发警报。<br /><br /> NULL = 信息不可用或者不相关。<br /><br /> 若要设置还原阈值，请使用 [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)。|  
   
 ## <a name="remarks"></a>备注  
- 必须从监视服务器上的**master**数据库运行**sp_help_log_shipping_monitor** 。  
+ 必须从监视服务器上的 **master** 数据库运行 **sp_help_log_shipping_monitor** 。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  

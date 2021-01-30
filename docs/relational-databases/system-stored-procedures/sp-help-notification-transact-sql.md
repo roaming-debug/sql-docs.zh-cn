@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_notification
 - sp_help_notification_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cce6fd1c7645857019399dae9934c8b730e14f77
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d37d091fdb380f0a08f3f0064f2ce408f439eee8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535916"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199989"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,17 +45,17 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @object_type = ] 'object_type'` 要返回的信息的类型。 *object_type*是 **char (9) **，无默认值。 *object_type* 可以是警报，其中列出了分配给所提供的操作员名称的警报 *，或操作员，其中* 列出了负责提供的警报名称的操作员 *。*  
+`[ @object_type = ] 'object_type'` 要返回的信息的类型。 *object_type* 是 **char (9)**，无默认值。 *object_type* 可以是警报，其中列出了分配给所提供的操作员名称的警报 *，或操作员，其中* 列出了负责提供的警报名称的操作员 *。*  
   
 `[ @name = ] 'name'` 如果 *object_type* 是运算符) ，则为运算符名称 (; 如果 *object_type* 为警报) ，则为警报名称 (。 *名称* 为 **sysname**，无默认值。  
   
-`[ @enum_type = ] 'enum_type'` 返回的 *object_type*信息。 大多数情况下， *enum_type*是实际的。 *enum_type*是 **char (10) **，无默认值，可以是下列值之一。  
+`[ @enum_type = ] 'enum_type'` 返回的 *object_type* 信息。 大多数情况下， *enum_type* 是实际的。 *enum_type* 是 **char (10)**，无默认值，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
-|ACTUAL|仅列出与*名称*关联的*object_types* 。|  
-|ALL|列出所有*object_types* 包括不与 *name*关联的。|  
-|TARGET|仅列出与所提供*target_name*匹配的*object_types* ，而不考虑与 name 关联的*名称*。|  
+|ACTUAL|仅列出与 *名称* 关联的 *object_types* 。|  
+|ALL|列出所有 *object_types* 包括不与 *name* 关联的。|  
+|TARGET|仅列出与所提供 *target_name* 匹配的 *object_types* ，而不考虑与 name 关联的 *名称*。|  
   
 `[ @notification_method = ] notification_method` 确定要返回的通知方法列的数值。 *notification_method* 为 **tinyint**，可以是下列值之一。  
   
@@ -66,7 +66,7 @@ sp_help_notification
 |**4**|NetSend：仅返回 **use_netsend** 列。|  
 |**7**|全部：返回全部列。|  
   
-`[ @target_name = ] 'target_name'` 如果 *object_type* 为警报) ，则为搜索 (的警报名称; 如果 *object_type* 是运算符) ，则为要搜索 (的操作员名称。 仅当*enum_type*为 target 时，才需要*target_name* 。 *target_name* 的默认值为 **sysname**，默认值为 NULL。  
+`[ @target_name = ] 'target_name'` 如果 *object_type* 为警报) ，则为搜索 (的警报名称; 如果 *object_type* 是运算符) ，则为要搜索 (的操作员名称。 仅当 *enum_type* 为 target 时，才需要 *target_name* 。 *target_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-valves"></a>返回代码阀  
  0（成功）或 1（失败）  

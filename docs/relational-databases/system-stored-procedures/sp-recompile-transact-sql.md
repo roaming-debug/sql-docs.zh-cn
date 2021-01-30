@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_recompile_TSQL
 - sp_recompile
@@ -19,12 +19,12 @@ ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf933bec30b2434583970992f79dfc4e898cd479
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a5ff0697d2ca09677455c700b1dfc45f16f1ef72
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439430"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200646"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97439430"
 sp_recompile [ @objname = ] 'object'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @objname =] "*object*"  
  当前数据库中存储过程、触发器、表、视图或用户定义函数的限定或未限定的名称。 *对象* 为 **nvarchar (776)**，无默认值。 如果 *对象* 是存储过程、触发器或用户定义函数的名称，则存储过程、触发器或函数将在下次运行时重新编译。 如果 *对象* 是表或视图的名称，则所有引用该表或视图的存储过程、触发器或用户定义函数将在下次运行时重新编译。  
   

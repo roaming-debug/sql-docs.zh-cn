@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SP_QUERY_STORE_REMOVE_QUERY
 - SP_QUERY_STORE_REMOVE_QUERY_TSQL
@@ -22,12 +22,12 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff371335d81f4080531c91d51a4672540fae314c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9ed4e56960c60f9c096bd87835d7cf4034dcae0c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468318"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200637"
 ---
 # <a name="sp_query_store_remove_query-transact-sql"></a>sp_query_store_remove_query (Transact-sql) 
 
@@ -44,7 +44,7 @@ ms.locfileid: "97468318"
 sp_query_store_remove_query [ @query_id = ] query_id [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @query_id = ] query_id` 要从查询存储区中删除的查询的 id。 *query_id* 是 **bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

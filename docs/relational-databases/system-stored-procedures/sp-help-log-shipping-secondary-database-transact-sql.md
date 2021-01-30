@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_log_shipping_secondary_database
 - sp_help_log_shipping_secondary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac291d5c829c1ddc4022a7d0d59f65348daa859a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5fc81b903438d874a80399563527747ada9ef43
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485990"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199627"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="result-sets"></a>结果集  
   
-|列名称|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |**secondary_id**|日志传送配置中辅助服务器的 ID。|  
 |**primary_server**|日志传送配置中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]主实例的名称。|  
@@ -88,7 +88,7 @@ sp_help_log_shipping_secondary_database
 ## <a name="remarks"></a>备注  
  如果包含 *secondary_database* 参数，则结果集将包含有关该辅助数据库的信息;如果包括 *secondary_id* 参数，则结果集将包含与该辅助 id 相关联的所有辅助数据库的相关信息。  
   
- 必须从辅助服务器上的**master**数据库运行**sp_help_log_shipping_secondary_database** 。  
+ 必须从辅助服务器上的 **master** 数据库运行 **sp_help_log_shipping_secondary_database** 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  

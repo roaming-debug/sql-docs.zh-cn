@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_query_store_reset_exec_stats_TSQL
 - sys.sp_query_store_reset_exec_stats_TSQL
@@ -22,12 +22,12 @@ ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99e1d43c60dde82762ccca13568509031c8d5225
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2af8f7f243d0f0275a6137d12323dfec377b6c8e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468308"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200608"
 ---
 # <a name="sp_query_store_reset_exec_stats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-sql) 
 
@@ -44,7 +44,7 @@ ms.locfileid: "97468308"
 sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @plan_id = ] plan_id` 要清除的查询计划的 id。 *plan_id* 是 **bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

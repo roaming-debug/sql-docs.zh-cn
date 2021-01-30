@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
 - sp_help_jobs_in_schedule
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d8a9251e807be429bfb0881afc711880520f9f7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1890fc4b8aa3757b55dfc5ad7e33070126300897
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538835"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200148"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,13 +63,13 @@ sp_help_jobs_in_schedule
 |**category**|**sysname**|作业类别。|  
 |**owner**|**sysname**|作业所有者。|  
 |**notify_level_eventlog**|**int**|位掩码，它表示在何种情况下通知事件应记录到 Microsoft Windows 应用程序日志中。 可以是下列值之一：<br /><br /> **0** = 从不<br /><br /> **1** = 作业成功时<br /><br /> **2** = 作业失败时<br /><br /> **3** = 无论作业完成与否 (，无论作业结果如何) |  
-|**notify_level_email**|**int**|位掩码，它指示当作业完成时，在什么情况下应该发送一个通知电子邮件。 可能的值与 **notify_level_eventlog**的值相同。|  
-|**notify_level_netsend**|**int**|位掩码，它表示当作业完成时，在什么情况下应该发送一个网络消息。 可能的值与 **notify_level_eventlog**的值相同。|  
-|**notify_level_page**|**int**|位掩码，它表示当作业完成时，在什么情况下应该发送一个呼叫。 可能的值与 **notify_level_eventlog**的值相同。|  
+|**notify_level_email**|**int**|位掩码，它指示当作业完成时，在什么情况下应该发送一个通知电子邮件。 可能的值与 **notify_level_eventlog** 的值相同。|  
+|**notify_level_netsend**|**int**|位掩码，它表示当作业完成时，在什么情况下应该发送一个网络消息。 可能的值与 **notify_level_eventlog** 的值相同。|  
+|**notify_level_page**|**int**|位掩码，它表示当作业完成时，在什么情况下应该发送一个呼叫。 可能的值与 **notify_level_eventlog** 的值相同。|  
 |**notify_email_operator**|**sysname**|被通知的操作员的电子邮件名称。|  
 |**notify_netsend_operator**|**sysname**|在发送网络消息时所使用的计算机或用户的名称。|  
 |**notify_page_operator**|**sysname**|在发送寻呼时所使用的计算机或用户的名称。|  
-|**delete_level**|**int**|位掩码，它表示当作业完成时，在什么情况下应该删除作业。 可能的值与 **notify_level_eventlog**的值相同。|  
+|**delete_level**|**int**|位掩码，它表示当作业完成时，在什么情况下应该删除作业。 可能的值与 **notify_level_eventlog** 的值相同。|  
 |**date_created**|**datetime**|作业的创建日期。|  
 |**date_modified**|**datetime**|上次修改作业的日期。|  
 |**version_number**|**int**|作业的版本（每次修改作业时都自动对其进行更新）。|  
@@ -85,13 +85,13 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|作业具有的作业步骤数。|  
 |**has_schedule**|**int**|作业具有的作业计划数。|  
 |**has_target**|**int**|作业具有的目标服务器数。|  
-|type|**int**|作业类型：<br /><br /> **1** = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业没有目标服务器。|  
+|type |**int**|作业类型：<br /><br /> **1** = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业没有目标服务器。|  
   
 ## <a name="remarks"></a>备注  
  此过程列出有关附加到指定计划的作业的信息。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -101,7 +101,7 @@ sp_help_jobs_in_schedule
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- **SQLAgentUserRole**的成员只能查看其所拥有的作业的状态。  
+ **SQLAgentUserRole** 的成员只能查看其所拥有的作业的状态。  
   
 ## <a name="examples"></a>示例  
  以下示例列出附加到 `NightlyJobs` 计划的作业。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_browsemergesnapshotfolder
 - sp_browsemergesnapshotfolder_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0fa33826f8a046e4d60447700c4e9d31aaa4d47f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 294b9740da1005731f42ef0b3527d1417b15b9dc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541942"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199173"
 ---
 # <a name="sp_browsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**snapshot_folder**|**nvarchar (2000) **|快照目录的完整路径。|  
+|**snapshot_folder**|**nvarchar (2000)**|快照目录的完整路径。|  
   
 ## <a name="remarks"></a>备注  
  **sp_browsemergesnapshotfolder** 用于合并复制。  

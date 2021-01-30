@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLFetchScroll
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3c725e11c889765c18c2ff14625b6bde4705051
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cfa442ab1ada0b17e06137257b4d17bf37f854c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476082"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198536"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll Function（SQLFetchScroll 函数）
 **度**  
@@ -89,11 +89,11 @@ SQLRETURN SQLFetchScroll(
 |--------------|-----------|-----------------|  
 |01000|一般警告|驱动程序特定的信息性消息。  (函数返回 SQL_SUCCESS_WITH_INFO。 ) |  
 |01004|字符串数据，右截断|为列返回的字符串或二进制数据导致截断非空白字符或非空的二进制数据。 如果它是一个字符串值，则它将被右截断。|  
-|01S01|行中的错误|提取一行或多行时出错。<br /><br />  (如果在 ODBC*3.x 应用程序* 使用 odbc*2.x 驱动程序* 时返回此 SQLSTATE，则可以将其忽略。 ) |  
+|01S01|行中的错误|提取一行或多行时出错。<br /><br />  (如果在 ODBC *3.x 应用程序* 使用 odbc *2.x 驱动程序* 时返回此 SQLSTATE，则可以将其忽略。 ) |  
 |01S06|尝试在结果集返回第一个行集之前提取|SQL_FETCH_PRIOR FetchOrientation 时，请求的行集与结果集的开头重叠，当前位置超出第一行，当前行的行号小于或等于行集大小。<br /><br /> SQL_FETCH_PRIOR FetchOrientation 时，请求的行集会与结果集的开头重叠，当前位置超出了结果集的末尾，并且行集的大小大于结果集的大小。<br /><br /> SQL_FETCH_RELATIVE 时，请求的行集会与结果集的开头重叠，FetchOffset 为负数，而 FetchOffset 的绝对值小于或等于行集大小。<br /><br /> SQL_FETCH_ABSOLUTE 时，请求的行集会与结果集的开头重叠，FetchOffset 为负数，而 FetchOffset 的绝对值大于结果集的大小，但小于或等于行集大小。<br /><br />  (函数返回 SQL_SUCCESS_WITH_INFO。 ) |  
 |01S07|小数截断|为列返回的数据被截断。 对于数值数据类型，数值的小数部分被截断。 对于包含时间部分的时间、时间戳和间隔数据类型，时间的小数部分将被截断。<br /><br />  (函数返回 SQL_SUCCESS_WITH_INFO。 ) |  
-|07006|受限制的数据类型属性冲突|结果集中列的数据值无法转换为**SQLBindCol**中*TargetType*指定的数据类型。<br /><br /> 列0与 SQL_C_BOOKMARK 的数据类型绑定，而 SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_VARIABLE。<br /><br /> 列0与 SQL_C_VARBOOKMARK 的数据类型绑定，而 SQL_ATTR_USE_BOOKMARKS 语句特性未设置为 SQL_UB_VARIABLE。|  
-|07009|描述符索引无效|驱动程序是不支持**SQLExtendedFetch**的 ODBC*2.x 驱动程序*，并且在绑定中为列指定的列号为0。<br /><br /> 已绑定列0，并且 SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_OFF。|  
+|07006|受限制的数据类型属性冲突|结果集中列的数据值无法转换为 **SQLBindCol** 中 *TargetType* 指定的数据类型。<br /><br /> 列0与 SQL_C_BOOKMARK 的数据类型绑定，而 SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_VARIABLE。<br /><br /> 列0与 SQL_C_VARBOOKMARK 的数据类型绑定，而 SQL_ATTR_USE_BOOKMARKS 语句特性未设置为 SQL_UB_VARIABLE。|  
+|07009|描述符索引无效|驱动程序是不支持 **SQLExtendedFetch** 的 ODBC *2.x 驱动程序*，并且在绑定中为列指定的列号为0。<br /><br /> 已绑定列0，并且 SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_OFF。|  
 |08S01|通信链接失败|在函数完成处理之前，驱动程序与连接到的数据源之间的通信链接失败。|  
 |22001|字符串数据，右截断|为列返回的可变长度书签已截断。|  
 |22002|需要指示器变量，但未提供|将 NULL 数据提取到 *StrLen_or_IndPtr* 由 **SQLBindCol** 设置的列中， (SQL_DESC_INDICATOR_PTR 或由 **SQLSetDescField** 或 **SQLSetDescRec**) 设置为 null 指针。|  
@@ -102,28 +102,28 @@ SQLRETURN SQLFetchScroll(
 |22012|被零除|返回了算术表达式中的值，从而导致被零除。|  
 |22015|间隔字段溢出|从精确数值或间隔 SQL 类型赋值到 interval C 类型会导致前导字段的有效位丢失。<br /><br /> 将数据提取到 interval C 类型时，interval C 类型中没有 SQL 类型的值的表示形式。|  
 |22018|转换规范的字符值无效|结果集中的字符列已绑定到字符 C 缓冲区，列包含的字符在缓冲区的字符集中没有表示形式。<br /><br /> C 类型是精确或近似数字、日期时间或间隔数据类型;列的 SQL 类型是字符数据类型;列中的值不是绑定 C 类型的有效文本。|  
-|24000|无效的游标状态|*StatementHandle*处于已执行状态，但没有与*StatementHandle*关联的结果集。|  
+|24000|无效的游标状态|*StatementHandle* 处于已执行状态，但没有与 *StatementHandle* 关联的结果集。|  
 |40001|序列化失败|执行提取的事务已终止，以防止死锁。|  
 |40003|语句完成情况未知|在执行此函数的过程中关联的连接失败，无法确定事务的状态。|  
-|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 * \* MessageText*缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 *\* MessageText* 缓冲区中的 **SQLGetDiagRec** 返回的错误消息描述了错误及其原因。|  
 |HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
-|HY008|操作已取消|已为 *StatementHandle*启用异步处理。 函数被调用，在完成执行之前，在*StatementHandle*上调用了**SQLCancel**或**SQLCancelHandle** 。 然后，在 *StatementHandle*上再次调用该函数。<br /><br /> 函数被调用，在完成执行之前，从多线程应用程序中的另一个线程调用*StatementHandle*上的**SQLCancel**或**SQLCancelHandle** 。|  
-|HY010|函数序列错误| (DM) 为与 *StatementHandle*关联的连接句柄调用了异步执行函数。 调用 **SQLFetchScroll** 函数时，此异步函数仍在执行。<br /><br />  (DM) 为*StatementHandle*调用**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，并返回 SQL_PARAM_DATA_AVAILABLE。 在检索所有流式处理参数的数据之前调用此函数。<br /><br />  (DM) 指定的 *StatementHandle* 未处于执行状态。 调用函数时，无需先调用 **SQLExecDirect**、 **SQLExecute** 或 catalog 函数。<br /><br />  (DM) 异步执行的函数 (不是为 *StatementHandle* 调用了这一) ，并且在调用此函数时仍在执行。<br /><br />  (DM) 为*StatementHandle*调用**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。<br /><br /> 调用**SQLExtendedFetch** *后，调用了 (* DM) **SQLFetch** ，并调用了 SQL_CLOSE 选项**SQLFreeStmt** 。|  
+|HY008|操作已取消|已为 *StatementHandle* 启用异步处理。 函数被调用，在完成执行之前，在 *StatementHandle* 上调用了 **SQLCancel** 或 **SQLCancelHandle** 。 然后，在 *StatementHandle* 上再次调用该函数。<br /><br /> 函数被调用，在完成执行之前，从多线程应用程序中的另一个线程调用 *StatementHandle* 上的 **SQLCancel** 或 **SQLCancelHandle** 。|  
+|HY010|函数序列错误| (DM) 为与 *StatementHandle* 关联的连接句柄调用了异步执行函数。 调用 **SQLFetchScroll** 函数时，此异步函数仍在执行。<br /><br />  (DM) 为 *StatementHandle* 调用 **SQLExecute**、 **SQLExecDirect** 或 **SQLMoreResults** ，并返回 SQL_PARAM_DATA_AVAILABLE。 在检索所有流式处理参数的数据之前调用此函数。<br /><br />  (DM) 指定的 *StatementHandle* 未处于执行状态。 调用函数时，无需先调用 **SQLExecDirect**、 **SQLExecute** 或 catalog 函数。<br /><br />  (DM) 异步执行的函数 (不是为 *StatementHandle* 调用了这一) ，并且在调用此函数时仍在执行。<br /><br />  (DM) 为 *StatementHandle* 调用 **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations** 或 **SQLSetPos** ，并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。<br /><br /> 调用 **SQLExtendedFetch** *后，调用了 (* DM) **SQLFetch** ，并调用了 SQL_CLOSE 选项 **SQLFreeStmt** 。|  
 |HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
-|HY090|字符串或缓冲区长度无效|SQL_ATTR_USE_BOOKMARK 语句特性设置为 SQL_UB_VARIABLE，列0绑定到一个缓冲区，该缓冲区的长度不等于此结果集的书签的最大长度。  (此长度在 IRD 的 SQL_DESC_OCTET_LENGTH 字段中提供，可以通过调用 **SQLDescribeCol**、 **SQLColAttribute**或 **SQLGetDescField**来获取。 ) |  
+|HY090|字符串或缓冲区长度无效|SQL_ATTR_USE_BOOKMARK 语句特性设置为 SQL_UB_VARIABLE，列0绑定到一个缓冲区，该缓冲区的长度不等于此结果集的书签的最大长度。  (此长度在 IRD 的 SQL_DESC_OCTET_LENGTH 字段中提供，可以通过调用 **SQLDescribeCol**、 **SQLColAttribute** 或 **SQLGetDescField** 来获取。 ) |  
 |HY106|提取类型超出范围|DM) 为参数 FetchOrientation 指定的值无效。<br /><br />  (DM) 参数 FetchOrientation 已 SQL_FETCH_BOOKMARK，并且 SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_OFF。<br /><br /> SQL_ATTR_CURSOR_TYPE 语句特性的值 SQL_CURSOR_FORWARD_ONLY，而参数 FetchOrientation 的值不是 SQL_FETCH_NEXT 的。<br /><br /> SQL_ATTR_CURSOR_SCROLLABLE 语句特性的值 SQL_NONSCROLLABLE，而参数 FetchOrientation 的值不是 SQL_FETCH_NEXT 的。|  
 |HY107|行值超出范围|用 SQL_ATTR_CURSOR_TYPE 语句特性指定的值已 SQL_CURSOR_KEYSET_DRIVEN，但用 SQL_ATTR_KEYSET_SIZE 语句特性指定的值大于0且小于用 SQL_ATTR_ROW_ARRAY_SIZE 语句特性指定的值。|  
 |HY111|书签值无效|参数 FetchOrientation 为 SQL_FETCH_BOOKMARK，SQL_ATTR_FETCH_BOOKMARK_PTR 语句特性中的值指向的书签无效或为 null 指针。|  
 |HY117|由于未知的事务状态，连接被挂起。 仅允许断开连接和只读函数。| (DM) 有关挂起状态的详细信息，请参阅 [SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未实现的可选功能|驱动程序或数据源不支持**SQLBindCol**中*TargetType*的组合指定的转换和相应列的 SQL 数据类型。|  
+|HYC00|未实现的可选功能|驱动程序或数据源不支持 **SQLBindCol** 中 *TargetType* 的组合指定的转换和相应列的 SQL 数据类型。|  
 |HYT00|超时时间已到|在数据源返回请求的结果集之前，查询超时期限已过期。 超时期限通过 SQLSetStmtAttr 设置，SQL_ATTR_QUERY_TIMEOUT。|  
-|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过 **SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过 **SQLSetConnectAttr** 设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驱动程序不支持此功能| (DM) 与 *StatementHandle* 关联的驱动程序不支持该函数。|  
 |IM017|在异步通知模式下禁用轮询|无论何时使用通知模型，都将禁用轮询。|  
-|IM018|尚未调用**SQLCompleteAsync**来完成此句柄上先前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING 并且启用了通知模式，则必须在句柄上调用 **SQLCompleteAsync** ，以执行后处理并完成操作。|  
+|IM018|尚未调用 **SQLCompleteAsync** 来完成此句柄上先前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING 并且启用了通知模式，则必须在句柄上调用 **SQLCompleteAsync** ，以执行后处理并完成操作。|  
   
 ## <a name="comments"></a>注释  
- **SQLFetchScroll** 从结果集中返回指定的行集。 可以按绝对或相对位置或按书签指定行集。 **SQLFetchScroll** 只能在结果集存在时调用，也就是说，在创建结果集的调用之后，在该结果集上的游标结束之前。 如果绑定了任何列，则它会返回这些列中的数据。 如果应用程序已指定一个指向行状态数组或缓冲区的指针（在其中返回提取的行数）， **SQLFetchScroll** 也将返回此信息。 对 **SQLFetchScroll** 的调用可以与对 **SQLFetch** 的调用混合，但不能与对 **SQLExtendedFetch**的调用混合。  
+ **SQLFetchScroll** 从结果集中返回指定的行集。 可以按绝对或相对位置或按书签指定行集。 **SQLFetchScroll** 只能在结果集存在时调用，也就是说，在创建结果集的调用之后，在该结果集上的游标结束之前。 如果绑定了任何列，则它会返回这些列中的数据。 如果应用程序已指定一个指向行状态数组或缓冲区的指针（在其中返回提取的行数）， **SQLFetchScroll** 也将返回此信息。 对 **SQLFetchScroll** 的调用可以与对 **SQLFetch** 的调用混合，但不能与对 **SQLExtendedFetch** 的调用混合。  
   
  有关详细信息，请参阅 [使用块游标](../../../odbc/reference/develop-app/using-block-cursors.md) 和 [使用可滚动游标](../../../odbc/reference/develop-app/using-scrollable-cursors.md)。  
   
@@ -132,19 +132,19 @@ SQLRETURN SQLFetchScroll(
   
 |FetchOrientation|含义|  
 |----------------------|-------------|  
-|SQL_FETCH_NEXT|返回下一个行集。 这等效于调用 **SQLFetch**。<br /><br /> **SQLFetchScroll** 忽略 *FetchOffset*的值。|  
-|SQL_FETCH_PRIOR|返回前面的行集。<br /><br /> **SQLFetchScroll** 忽略 *FetchOffset*的值。|  
+|SQL_FETCH_NEXT|返回下一个行集。 这等效于调用 **SQLFetch**。<br /><br /> **SQLFetchScroll** 忽略 *FetchOffset* 的值。|  
+|SQL_FETCH_PRIOR|返回前面的行集。<br /><br /> **SQLFetchScroll** 忽略 *FetchOffset* 的值。|  
 |SQL_FETCH_RELATIVE|从当前行集的开头返回行集 *FetchOffset* 。|  
-|SQL_FETCH_ABSOLUTE|返回从行 *FetchOffset*开始的行集。|  
-|SQL_FETCH_FIRST|返回结果集中的第一个行集。<br /><br /> **SQLFetchScroll** 忽略 *FetchOffset*的值。|  
-|SQL_FETCH_LAST|返回结果集中的最后一个完整行集。<br /><br /> **SQLFetchScroll** 忽略 *FetchOffset*的值。|  
+|SQL_FETCH_ABSOLUTE|返回从行 *FetchOffset* 开始的行集。|  
+|SQL_FETCH_FIRST|返回结果集中的第一个行集。<br /><br /> **SQLFetchScroll** 忽略 *FetchOffset* 的值。|  
+|SQL_FETCH_LAST|返回结果集中的最后一个完整行集。<br /><br /> **SQLFetchScroll** 忽略 *FetchOffset* 的值。|  
 |SQL_FETCH_BOOKMARK|返回 SQL_ATTR_FETCH_BOOKMARK_PTR 语句特性指定的书签中的行集 FetchOffset 行。|  
   
  驱动程序无需支持所有提取方向;应用程序使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1 或 (SQL_STATIC_CURSOR_ATTRIBUTES1 的信息类型调用 **SQLGetInfo** ，具体取决于游标的类型) 来确定驱动程序所支持的提取方向。 应用程序应查看这些信息类型中的 SQL_CA1_NEXT、SQL_CA1_RELATIVE、SQL_CA1_ABSOLUTE 和 WQL_CA1_BOOKMARK 位掩码。 此外，如果游标是只进的并且 FetchOrientation 不 SQL_FETCH_NEXT，则 **SQLFetchScroll** 将返回 SQLSTATE HY106 (提取类型超出范围) 。  
   
  SQL_ATTR_ROW_ARRAY_SIZE 语句特性指定行集中的行数。 如果 **SQLFetchScroll** 提取的行集与结果集的末尾重叠，则 **SQLFetchScroll** 将返回部分行集。 也就是说，如果 S + R-1 大于 L，其中 S 是要提取的行集的起始行，则 R 是行集的大小，L 是结果集中的最后一行，则仅行集的第一 L + 1 行是有效的。 其余行为空，状态为 SQL_ROW_NOROW。  
   
- **SQLFetchScroll**返回后，当前行是行集的第一行。  
+ **SQLFetchScroll** 返回后，当前行是行集的第一行。  
   
 ## <a name="cursor-positioning-rules"></a>游标定位规则  
  以下部分介绍 FetchOrientation 的每个值的确切规则。 这些规则使用以下表示法。  
@@ -156,7 +156,7 @@ SQLRETURN SQLFetchScroll(
 |*CurrRowsetStart*|当前行集中第一行的编号。|  
 |*LastResultRow*|结果集中的最后一行的行号。|  
 |*RowsetSize*|行集大小。|  
-|*FetchOffset*|*FetchOffset*参数的值。|  
+|*FetchOffset*|*FetchOffset* 参数的值。|  
 |*BookmarkRow*|与 SQL_ATTR_FETCH_BOOKMARK_PTR 语句特性指定的书签相对应的行。|  
   
 ## <a name="sql_fetch_next"></a>SQL_FETCH_NEXT  
@@ -165,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |条件|新行集的第一行|  
 |---------------|-----------------------------|  
 |*开始之前*|1|  
-|*CurrRowsetStart + RowsetSize*[1] * \< = LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] *\< = LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*结束后*|  
 |*结束后*|*结束后*|  
   
@@ -192,7 +192,7 @@ SQLRETURN SQLFetchScroll(
   
 |条件|新行集的第一行|  
 |---------------|-----------------------------|  
-|* (在开始和 FetchOffset 之前 > 0) 或 (结束后，FetchOffset < 0) *|*--*<sup>[1]</sup>|  
+|*(在开始和 FetchOffset 之前 > 0) 或 (结束后，FetchOffset < 0)*|*--*<sup>[1]</sup>|  
 |*BeforeStart 和 FetchOffset <= 0*|*开始之前*|  
 |*CurrRowsetStart = 1，FetchOffset < 0*|*开始之前*|  
 |*CurrRowsetStart > 1 和 CurrRowsetStart + FetchOffset < 1，&#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*开始之前*|  
@@ -201,9 +201,9 @@ SQLRETURN SQLFetchScroll(
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*结束后*|  
 |*结束和 FetchOffset 之后 >= 0*|*结束后*|  
   
- [1]   ***SQLFetchScroll*** 返回的行集与将 FetchOrientation 设置为 SQL_FETCH_ABSOLUTE 时调用的行集相同。 有关详细信息，请参阅 "SQL_FETCH_ABSOLUTE" 部分。  
+ [1] ***SQLFetchScroll** _ 返回的行集与将 FetchOrientation 设置为 SQL_FETCH_ABSOLUTE 时调用的行集相同。 有关详细信息，请参阅 "SQL_FETCH_ABSOLUTE" 部分。  
   
- [2]   **SQLFetchScroll** 返回 SQLSTATE 01S06 (尝试在结果集返回第一个行集之前提取) 并 SQL_SUCCESS_WITH_INFO。  
+ [2] _ *SQLFetchScroll** 返回 SQLSTATE 01S06 (尝试在结果集返回第一个行集之前提取) 和 SQL_SUCCESS_WITH_INFO。  
   
  [3] 如果行集大小自上次调用提取行后发生了更改，则这是新的行集大小。  
   
@@ -303,23 +303,23 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  错误行 (也就是说，状态为 SQL_ROW_ERROR) 的行不影响游标移动。 例如，如果当前行集从第11行开始，并 SQL_ROW_ERROR 第11行的状态，则调用 **SQLFetchScroll** ，将 FetchOrientation 设置 SQL_FETCH_RELATIVE 为 ""，并将 FetchOffset 设置为 "5"，则将返回第16行开始的行集，就像第11行的状态为 "已 SQL_SUCCESS 时"。  
   
 ## <a name="returning-data-in-bound-columns"></a>返回绑定列中的数据  
- **SQLFetchScroll** 以与 **SQLFetch**相同的方式返回绑定列中的数据。 有关详细信息，请参阅 [SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)中的 "返回绑定列中的数据"。  
+ **SQLFetchScroll** 以与 **SQLFetch** 相同的方式返回绑定列中的数据。 有关详细信息，请参阅 [SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)中的 "返回绑定列中的数据"。  
   
  如果未绑定列，则 **SQLFetchScroll** 不返回数据，而是将块光标移至指定位置。 是否可以使用 **SQLGetData** 从块游标的未绑定列检索数据取决于驱动程序。 如果对 **SQLGetInfo** 的调用返回 SQL_GETDATA_EXTENSIONS 信息类型的 SQL_GD_BLOCK 位，则支持此功能。  
   
 ## <a name="buffer-addresses"></a>缓冲区地址  
- **SQLFetchScroll** 使用相同的公式来确定数据和长度/指示器缓冲区为 **SQLFetch**的地址。 有关详细信息，请参阅 [SQLBindCol 函数](../../../odbc/reference/syntax/sqlbindcol-function.md)中的 "缓冲区地址"。  
+ **SQLFetchScroll** 使用相同的公式来确定数据和长度/指示器缓冲区为 **SQLFetch** 的地址。 有关详细信息，请参阅 [SQLBindCol 函数](../../../odbc/reference/syntax/sqlbindcol-function.md)中的 "缓冲区地址"。  
   
 ## <a name="row-status-array"></a>行状态数组  
  **SQLFetchScroll** 以与 SQLFetch 相同的方式设置行状态数组中的值。 有关详细信息，请参阅 [SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)中的 "行状态数组"。  
   
 ## <a name="rows-fetched-buffer"></a>提取的行缓冲区  
- **SQLFetchScroll** 以与 **SQLFetch**相同的方式返回在提取的行中提取的行数。 有关详细信息，请参阅 [SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)中的 "提取的行数"。  
+ **SQLFetchScroll** 以与 **SQLFetch** 相同的方式返回在提取的行中提取的行数。 有关详细信息，请参阅 [SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)中的 "提取的行数"。  
   
 ## <a name="error-handling"></a>错误处理  
  当应用程序在 ODBC 1.x 驱动程序中调用 **SQLFetchScroll** 时，驱动程序管理器将在驱动程序中调用 **SQLFetchScroll** 。 当应用程序在 ODBC 2.x 驱动程序中调用 **SQLFetchScroll** 时，驱动程序管理器将在驱动程序中调用 SQLExtendedFetch。 由于 **SQLFetchScroll** 和 SQLExtendedFetch 以略有不同的方式处理错误，因此当应用程序在 odbc 2.X 和 odbc 2.x 驱动程序中调用 **SQLFetchScroll** 时，会看到略微不同的错误行为。  
   
- **SQLFetchScroll** 返回错误和警告的方式与 **SQLFetch**相同;有关详细信息，请参阅 **SQLFetch**中的 "错误处理"。 **SQLExtendedFetch** 返回错误的方式与 **SQLFetch**相同，但以下情况除外：  
+ **SQLFetchScroll** 返回错误和警告的方式与 **SQLFetch** 相同;有关详细信息，请参阅 **SQLFetch** 中的 "错误处理"。 **SQLExtendedFetch** 返回错误的方式与 **SQLFetch** 相同，但以下情况除外：  
   
  当发生适用于行集中特定行的警告时，SQLExtendedFetch 会将行状态数组中的相应条目设置为 SQL_ROW_SUCCESS，而不是 SQL_ROW_SUCCESS_WITH_INFO。  
   
@@ -331,12 +331,12 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  如果游标使用乐观并发，即，SQL_ATTR_CONCURRENCY 语句特性的值为 SQL_CONCUR_VALUES 或 SQL_CONCUR_ROWVER **SQLFetchScroll** 将更新数据源用来检测行是否已更改的开放式并发值。 只要 **SQLFetchScroll** 提取新行集，就会发生这种情况，包括 refetches 当前行集。  (将其设置为 SQL_FETCH_RELATIVE 并将 FetchOffset 设置为0，则调用此方法。 )   
   
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll 和 ODBC 2.x 驱动程序  
- 当应用程序在 ODBC 2.x 驱动程序中调用 **SQLFetchScroll** 时，驱动程序管理器会将此调用映射到 **SQLExtendedFetch**。 它为 **SQLExtendedFetch**的参数传递以下值。  
+ 当应用程序在 ODBC 2.x 驱动程序中调用 **SQLFetchScroll** 时，驱动程序管理器会将此调用映射到 **SQLExtendedFetch**。 它为 **SQLExtendedFetch** 的参数传递以下值。  
   
-|SQLExtendedFetch 参数|Value|  
+|SQLExtendedFetch 参数|值|  
 |-------------------------------|-----------|  
-|StatementHandle|**SQLFetchScroll**中的 StatementHandle。|  
-|FetchOrientation|**SQLFetchScroll**中的 FetchOrientation。|  
+|StatementHandle|**SQLFetchScroll** 中的 StatementHandle。|  
+|FetchOrientation|**SQLFetchScroll** 中的 FetchOrientation。|  
 |FetchOffset|如果未 SQL_FETCH_BOOKMARK FetchOrientation，则使用 **SQLFetchScroll** 中 FetchOffset 参数的值。<br /><br /> 如果 SQL_FETCH_BOOKMARK FetchOrientation，则使用存储在由 SQL_ATTR_FETCH_BOOKMARK_PTR 语句特性指定的地址的值。|  
 |RowCountPtr|SQL_ATTR_ROWS_FETCHED_PTR 语句特性指定的地址。|  
 |RowStatusArray|SQL_ATTR_ROW_STATUS_PTR 语句特性指定的地址。|  
@@ -344,7 +344,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  有关详细信息，请参阅附录 G：驱动程序准则中的 [块游标、可滚动游标和后向兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 。  
   
 ## <a name="descriptors-and-sqlfetchscroll"></a>描述符和 SQLFetchScroll  
- **SQLFetchScroll** 与描述符的交互方式与 **SQLFetch**相同。 有关详细信息，请参阅 [SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)中的 "描述符和 SQLFetchScroll" 部分。  
+ **SQLFetchScroll** 与描述符的交互方式与 **SQLFetch** 相同。 有关详细信息，请参阅 [SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)中的 "描述符和 SQLFetchScroll" 部分。  
   
 ## <a name="code-example"></a>代码示例  
  请参阅按 [列绑定](../../../odbc/reference/develop-app/column-wise-binding.md)、按 [行绑定](../../../odbc/reference/develop-app/row-wise-binding.md)、 [定位更新和删除语句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)，并 [通过 SQLSetPos 更新行集中的行](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)。  

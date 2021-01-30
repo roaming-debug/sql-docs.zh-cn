@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_databases_TSQL
 - sp_databases
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 90fbcbf710f1779ad011163641aa61b14b33c65b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e324cb4660302517daee36072e9b835abc455baf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549884"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200328"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_databases
 |-----------------|---------------|-----------------|  
 |**DATABASE_NAME**|**sysname**|数据库的名称。 在中 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，此列表示存储在 **sys.databases** 目录视图中的数据库名称。|  
 |**DATABASE_SIZE**|**int**|数据库的大小（以 KB 计）。|  
-|**备注**|**varchar (254) **|对于[!INCLUDE[ssDE](../../includes/ssde-md.md)]，此字段始终返回 NULL。|  
+|**备注**|**varchar (254)**|对于[!INCLUDE[ssDE](../../includes/ssde-md.md)]，此字段始终返回 NULL。|  
   
 ## <a name="remarks"></a>备注  
  所返回的数据库名称可以作为 USE 语句的参数，用来更改当前数据库上下文。  

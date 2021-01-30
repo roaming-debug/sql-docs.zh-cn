@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8209463c3c316a5bd2e45a2d7b08eb65b3cb113d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e15771f52af0830f07f135453d08f4355a3fae8f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483150"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199865"
 ---
 # <a name="sql-data-types"></a>SQL 数据类型
-每个 DBMS 定义自己的 SQL 类型。 每个 ODBC 驱动程序只公开关联 DBMS 定义的 SQL 数据类型。 有关驱动程序如何将 DBMS SQL 类型映射到 ODBC 定义的 SQL 类型标识符以及驱动程序如何将 DBMS SQL 类型映射到其自己的特定于驱动程序的 SQL 类型标识符的信息是通过调用 **SQLGetTypeInfo**返回的。 当通过调用 **SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、 **SQLDescribeParam**、 **SQLProcedureColumns**和 **SQLSpecialColumns**描述列和参数的数据类型时，驱动程序还会返回 SQL 数据类型。  
+每个 DBMS 定义自己的 SQL 类型。 每个 ODBC 驱动程序只公开关联 DBMS 定义的 SQL 数据类型。 有关驱动程序如何将 DBMS SQL 类型映射到 ODBC 定义的 SQL 类型标识符以及驱动程序如何将 DBMS SQL 类型映射到其自己的特定于驱动程序的 SQL 类型标识符的信息是通过调用 **SQLGetTypeInfo** 返回的。 当通过调用 **SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、 **SQLDescribeParam**、 **SQLProcedureColumns** 和 **SQLSpecialColumns** 描述列和参数的数据类型时，驱动程序还会返回 SQL 数据类型。  
   
 > [!NOTE]  
 >  SQL 数据类型包含在实现描述符的 SQL_DESC_ CONCISE_TYPE、SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 字段中。 SQL 数据类型的特性包含在实现描述符的 SQL_DESC_PRECISION、SQL_DESC_SCALE、SQL_DESC_LENGTH 和 SQL_DESC_OCTET_LENGTH 字段中。 有关详细信息，请参阅本附录后面的 [数据类型标识符和描述符](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) 。  
@@ -37,23 +37,23 @@ ms.locfileid: "88483150"
   
 |SQL 类型标识符 [1]|典型的 SQL 数据<br /><br /> 类型 [2]|典型类型说明|  
 |------------------------------|------------------------------------|------------------------------|  
-|SQL_CHAR|CHAR (*n*) |固定字符串长度为 *n*的字符串。|  
+|SQL_CHAR|CHAR (*n*) |固定字符串长度为 *n* 的字符串。|  
 |SQL_VARCHAR|VARCHAR (*n*) |长度可变的字符串，最大字符串长度为 *n*。|  
 |SQL_LONGVARCHAR|LONG VARCHAR|变长字符数据。 最大长度取决于数据源。900|  
-|SQL_WCHAR|WCHAR (*n*) |固定字符串长度为*n*的 Unicode 字符串|  
+|SQL_WCHAR|WCHAR (*n*) |固定字符串长度为 *n* 的 Unicode 字符串|  
 |SQL_WVARCHAR|OLEDBTYPE.VARWCHAR (*n*) |Unicode 可变长度字符串，最大字符串长度为 *n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode 变长字符数据。 最大长度取决于数据源|  
 |SQL_DECIMAL|DECIMAL (*p*，*s*) |带符号的精确数字值，精确到 *p* 和小数位数 *。*  (最大精度为驱动程序定义的。 )  (1 <= *p* <= 15;*s*  <= *p*) 。4|  
-|SQL_NUMERIC|数值 (*p*，*s*) |具有精度*p*且小数位数为*s*的有符号的精确数值 (1 <= *p* <= 15;*s*  <= *p*) 。4|  
+|SQL_NUMERIC|数值 (*p*，*s*) |具有精度 *p* 且小数位数为 *s* 的有符号的精确数值 (1 <= *p* <= 15;*s*  <= *p*) 。4|  
 |SQL_SMALLINT|SMALLINT|精度为5且小数位数为0的精确数值 (带符号：-32768 <= *n* <= 32767，无符号： 0 <= *n* <= 65535) [3]。|  
 |SQL_INTEGER|INTEGER|精度为10、小数位数为0的精确数值 (已签名：-2 [31] <= *n* <= 2 [31]-1，无符号： 0 <= *n* <= 2 [32]-1) [3]。|  
-|SQL_REAL|REAL|带二进制精度 24 (零或绝对值为 10 [-38] 到 10 [38] ) 的已签名的近似值。|  
+|SQL_REAL|real|带二进制精度 24 (零或绝对值为 10 [-38] 到 10 [38] ) 的已签名的近似值。|  
 |SQL_FLOAT|FLOAT (*p*) |带符号的近似数值，其二进制精度至少为 *p*。  (最大精度为驱动程序定义的值。 ) [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|带有二进制精度 53 (零或绝对值为 10 [-308] 到 10 [308] ) 的已签名的近似值。|  
 |SQL_BIT|BIT|单比特二进制数据。8|  
 |SQL_TINYINT|TINYINT|精度为3且小数位数为0的精确数值 (带符号：-128 <= *n* <= 127，无符号： 0 <= *n* <= 255) [3]。|  
 |SQL_BIGINT|BIGINT|精确数值，精度为 19 (如果有符号的) 或 20 (，如果签名的) 和小数位数为 0 (签名：-2 [63] <= *n* <= 2 [63]-1，无符号： 0 <= *n* <= 2 [64]-1) [3]，[9]。|  
-|SQL_BINARY|二进制 (*n*) |固定长度为 *n*的二进制数据。900|  
+|SQL_BINARY|二进制 (*n*) |固定长度为 *n* 的二进制数据。900|  
 |SQL_VARBINARY|VARBINARY (*n*) |长度可变的二进制数据，最大长度为 *n*。 最大值由用户设置。900|  
 |SQL_LONGVARBINARY|长 VARBINARY|变长二进制数据。 最大长度取决于数据源。900|  
 |SQL_TYPE_DATE [6]|DATE|Year、month 和 day 字段，符合公历规则。  (参阅本附录后面的 [公历的约束](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)。 ) |  
@@ -76,9 +76,9 @@ ms.locfileid: "88483150"
 |SQL_INTERVAL_MINUTE_TO_SECOND [7]|间隔分钟 (*p*) 第二 (*q*) |两个日期/时间间隔的分钟数/秒; *p* 是时间间隔的精度，而 *q* 为间隔秒精度。|  
 |SQL_GUID|GUID|固定长度 GUID。|  
   
- [1] 这是通过调用 **SQLGetTypeInfo**在 DATA_TYPE 列中返回的值。  
+ [1] 这是通过调用 **SQLGetTypeInfo** 在 DATA_TYPE 列中返回的值。  
   
- [2] 这是在 "名称" 和 "参数" 列中通过调用 **SQLGetTypeInfo**而返回的值。 NAME 列返回指定的名称（例如 CHAR），而 CREATE PARAMS 列返回以逗号分隔的创建参数列表，如精度、小数位数和长度。  
+ [2] 这是在 "名称" 和 "参数" 列中通过调用 **SQLGetTypeInfo** 而返回的值。 NAME 列返回指定的名称（例如 CHAR），而 CREATE PARAMS 列返回以逗号分隔的创建参数列表，如精度、小数位数和长度。  
   
  [3] 应用程序使用 **SQLGetTypeInfo** 或 **SQLColAttribute** 来确定某一特定数据类型或结果集中的特定列是否无符号。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_parameter_encryption
 - sp_describe_parameter_encryption_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b06ee1588fe46b04348d2e9595eb72206f7b57d2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 41821edc34835f60cef201ae78b3448f3d3f4699
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466818"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200781"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-sql) 
 
@@ -41,7 +41,7 @@ sp_describe_parameter_encryption
 [ ;]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ \@ tsql =] ' SQL_batch '  
  一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 Transact-SQL_batch 可以为 nvarchar (n) 或 nvarchar (max) 。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: eb5d83d0705633f6a21fde67e34301fc98db8e66
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 609ac4456f494a1bb0667e275e4f9e5b6cba41d6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102917"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200878"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>服务器范围内的配置目录视图 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

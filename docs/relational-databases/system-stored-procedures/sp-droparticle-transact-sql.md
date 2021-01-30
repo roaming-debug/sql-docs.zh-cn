@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droparticle_TSQL
 - sp_droparticle
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fdd166ab6d4826df8757877b8679ef2864de37dd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 42b89405015235d5c469b2443995ea5038e3cd5f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538981"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200683"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,7 +58,7 @@ sp_droparticle [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  更改发布服务器上的项目属性时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  更改发布服务器上的项目属性时，不应使用 *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @from_drop_publication = ] from_drop_publication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -68,7 +68,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_droparticle** 用于快照复制和事务复制。  
   
- 对于水平筛选的项目， **sp_droparticle**会检查[sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)表中项目的**类型**列，以确定是否也应删除视图或筛选器。 如果视图或筛选是自动生成的，则将其与项目一起删除。 如果是手动创建的，则不将其删除。  
+ 对于水平筛选的项目， **sp_droparticle** 会检查 [sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)表中项目的 **类型** 列，以确定是否也应删除视图或筛选器。 如果视图或筛选是自动生成的，则将其与项目一起删除。 如果是手动创建的，则不将其删除。  
   
  执行 **sp_droparticle** 从发布中删除项目时，不会从发布数据库中删除该对象，也不会从订阅数据库中删除相应的对象。 如果需要，请使用 `DROP <object>` 手动删除这些对象。  
   

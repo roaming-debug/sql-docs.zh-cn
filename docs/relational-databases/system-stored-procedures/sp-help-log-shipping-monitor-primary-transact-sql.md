@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_log_shipping_monitor_primary
 - sp_help_log_shipping_monitor_primary_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 858affb649166d1cfd19f9b51030458877d8f998
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 732db5c1427526a62b8103444c0ca7063442dae6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469309"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200081"
 ---
 # <a name="sp_help_log_shipping_monitor_primary-transact-sql"></a>sp_help_log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_help_log_shipping_monitor_primary
   
 ## <a name="result-sets"></a>结果集  
   
-|列名称|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |**primary_id**|日志传送配置的主数据库 ID。|  
 |**primary_server**|日志传送配置中 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]主实例的名称。|  
@@ -65,7 +65,7 @@ sp_help_log_shipping_monitor_primary
 |**history_retention_period**|日志传送历史记录在删除前保留在给定主数据库中的时间（分钟）。|  
   
 ## <a name="remarks"></a>备注  
- 必须从监视服务器上的**master**数据库运行**sp_help_log_shipping_monitor_primary** 。  
+ 必须从监视服务器上的 **master** 数据库运行 **sp_help_log_shipping_monitor_primary** 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  

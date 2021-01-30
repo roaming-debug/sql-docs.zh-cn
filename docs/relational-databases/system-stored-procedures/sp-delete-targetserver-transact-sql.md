@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_targetserver
 - sp_delete_targetserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2d63729408641dee965fb15be81343b87f721377
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2f9e77a548e32e32c41d7ed6b45621ac5f4a2594
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548133"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199145"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @server_name = ] 'server'` 要作为可用目标服务器删除的服务器的名称。 *服务器* ** (30) 为 nvarchar **，无默认值。  
+`[ @server_name = ] 'server'` 要作为可用目标服务器删除的服务器的名称。 *服务器* **(30) 为 nvarchar**，无默认值。  
   
-`[ @clear_downloadlist = ] clear_downloadlist` 指定是否清除目标服务器的下载列表。 *clear_downloadlist* 的类型为 **bit**，默认值为 **1**。 当 *clear_downloadlist* 为 **1**时，过程将在删除服务器之前清除服务器的下载列表。 如果 *clear_downloadlist* 为 **0**，则不会清除下载列表。  
+`[ @clear_downloadlist = ] clear_downloadlist` 指定是否清除目标服务器的下载列表。 *clear_downloadlist* 的类型为 **bit**，默认值为 **1**。 当 *clear_downloadlist* 为 **1** 时，过程将在删除服务器之前清除服务器的下载列表。 如果 *clear_downloadlist* 为 **0**，则不会清除下载列表。  
   
-`[ @post_defection = ] post_defection` 指定是否将缺陷指令发布到目标服务器。 *post_defection* 的类型为 **bit**，默认值为1。 当 *post_defection* 为 **1**时，过程将在删除服务器之前向目标服务器发布缺陷指令。 当 *post_defection* 为 **0**时，该过程不会将缺陷指令发布到目标服务器。  
+`[ @post_defection = ] post_defection` 指定是否将缺陷指令发布到目标服务器。 *post_defection* 的类型为 **bit**，默认值为1。 当 *post_defection* 为 **1** 时，过程将在删除服务器之前向目标服务器发布缺陷指令。 当 *post_defection* 为 **0** 时，该过程不会将缺陷指令发布到目标服务器。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -72,7 +72,7 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_help_targetserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
  [sp_msx_defect &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

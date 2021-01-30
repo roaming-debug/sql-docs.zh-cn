@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_columns_TSQL
 - sp_columns
@@ -19,12 +19,12 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7257b24d2908ea17977c0b08f0517d65d2481979
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 32f865969933b07d2021a96b0af39f86d7f47893
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439482"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200820"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ sp_columns [ @table_name = ] object
      [ , [ @ODBCVer = ] ODBCVer ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ \@table_name = ] object` 用于返回目录信息的对象的名称。 *对象* 可以是表、视图或具有列（如表值函数）的其他对象。 *对象* 为 **nvarchar (384)**，无默认值。 支持通配符模式匹配。  
   
 `[ \@table_owner = ] owner` 用于返回目录信息的对象的所有者。 *所有者* 为 **nvarchar (384)**，默认值为 NULL。 支持通配符模式匹配。 如果未指定 *owner* ，则应用基础 DBMS 的默认对象可见性规则。  

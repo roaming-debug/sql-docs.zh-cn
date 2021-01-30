@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_configure_peerconflictdetection_TSQL
 - sp_configure_peerconflictdetection
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 80ce8df6158ca3c0f7cd37fc045c7bd5987e2e0f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58e583191ba0c18824715664162f89a7911c466a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546174"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198707"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  要配置冲突检测的发布的名称。 *发布* 为 **sysname**，无默认值。  
   
  [ @action =] "*action*"  
- 指定是否为发布启用或禁用冲突检测。 *操作* 为 **nvarchar (5) **，可以是以下值之一。  
+ 指定是否为发布启用或禁用冲突检测。 *操作* 为 **nvarchar (5)**，可以是以下值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -64,7 +64,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @continue_onconflict =] "*continue_onconflict*"]  
- 确定检测到冲突后分发代理是否继续处理更改。 *continue_onconflict* 为 **nvarchar (5) ** ，默认值为 FALSE。  
+ 确定检测到冲突后分发代理是否继续处理更改。 *continue_onconflict* 为 **nvarchar (5)** ，默认值为 FALSE。  
   
 > [!CAUTION]  
 >  建议您使用默认值 FALSE。 如果此选项设置为 TRUE，则分发代理会尝试应用来自具有最高发起方 ID 的节点的冲突行来收敛拓扑中的数据。 此方法不保证将会收敛。 您应确保检测到冲突之后拓扑保持一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)中的“处理冲突”。  

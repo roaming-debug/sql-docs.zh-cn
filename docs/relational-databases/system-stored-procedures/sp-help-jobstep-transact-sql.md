@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobstep_TSQL
 - sp_help_jobstep
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24ec19dc231ce2fedf3a3562312ddc0bf7311e39
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c6a4a59a69612c37a6b6d9208e121b11ea448a35
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535231"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200111"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 `[ @step_name = ] 'step_name'` 作业中步骤的名称。 *step_name* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @suffix = ] suffix` 指示是否在输出的 **flags** 列中追加文本说明的标志。 *后缀*为 **bit**，默认值为 **0**。 如果 *后缀* 为 **1**，则追加说明。  
+`[ @suffix = ] suffix` 指示是否在输出的 **flags** 列中追加文本说明的标志。 *后缀* 为 **bit**，默认值为 **0**。 如果 *后缀* 为 **1**，则追加说明。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -71,7 +71,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**cmdexec_success_code**|**int**|对于 **CmdExec** 步骤，这是成功命令的进程退出代码。|  
 |**on_success_action**|**tinyint**|如果步骤成功，则采取下列某个后续操作：<br /><br /> **1** = 退出报告成功的作业。<br /><br /> **2** = 退出报告失败的作业。<br /><br /> **3** = 中转到下一步。<br /><br /> **4** = 跳到步骤。|  
 |**on_success_step_id**|**int**|如果 **on_success_action** 为4，则指示要执行的下一步。|  
-|**on_fail_action**|**tinyint**|如果步骤失败了，应采取什么后续操作。 值与 **on_success_action**相同。|  
+|**on_fail_action**|**tinyint**|如果步骤失败了，应采取什么后续操作。 值与 **on_success_action** 相同。|  
 |**on_fail_step_id**|**int**|如果 **on_fail_action** 为4，则指示要执行的下一步。|  
 |服务器|**sysname**|保留。|  
 |**database_name**|**sysname**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，这是命令执行时所在的数据库。|  
@@ -79,7 +79,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|应该对命令进行重试的最大次数（如果命令没有成功）。|  
 |**retry_interval**|**int**|重试尝试的间隔（以分钟为单位）。|  
 |**os_run_priority**|**int**|保留。|  
-|**output_file_name**|**nvarchar(200)**|命令输出应写入到的文件 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 、 **CmdExec**和 **PowerShell** 步骤仅) 。|  
+|**output_file_name**|**nvarchar(200)**|命令输出应写入到的文件 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 、 **CmdExec** 和 **PowerShell** 步骤仅) 。|  
 |**last_run_outcome**|**int**|步骤上一次运行的结果：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = 重试<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|该步骤上次运行时的持续时间 (hhmmss)。|  
 |**last_run_retries**|**int**|步骤上一次运行时，重试命令的次数。|  
@@ -91,7 +91,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  **sp_help_jobstep** 在 **msdb** 数据库中。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -101,7 +101,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- **SQLAgentUserRole**的成员只能查看其所拥有作业的作业步骤。  
+ **SQLAgentUserRole** 的成员只能查看其所拥有作业的作业步骤。  
   
 ## <a name="examples"></a>示例  
   

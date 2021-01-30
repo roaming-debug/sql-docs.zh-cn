@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addtype
 - sp_addtype_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b9950580719ecc68f69d09a0fbe481741dbc4a46
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ece3c9bb2d8952738f1f66c59b9cd49563ad00a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529133"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198388"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,10 +71,10 @@ sp_addtype [ @typename = ] type,
  *s*  
  非负整数，指示小数点后面的小数数字可保留的最大十进制位数，它必须小于或等于精度值。 有关详细信息，请参阅 [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
-`[ @nulltype = ] 'null_type'` 指示别名数据类型处理空值的方式。 *null_type* 是 **varchar (** 8 **) **，默认值为 null，并且必须用单引号引起来， ( 为 "null"、"NOT null" 或 "NONULL" ) 。 如果**sp_addtype**未显式定义*null_type* ，则将其设置为当前默认的为空性。 使用 GETANSINULL 系统函数可确定当前默认的为空性。 可以使用 SET 语句或 ALTER DATABASE 对该为空性进行调整。 应显式定义为空性。 如果** \@ phystype**为**bit**，且未指定** \@ NULLTYPE** ，则默认值为 not NULL。  
+`[ @nulltype = ] 'null_type'` 指示别名数据类型处理空值的方式。 *null_type* 是 **varchar (** 8 **)**，默认值为 null，并且必须用单引号引起来， ( 为 "null"、"NOT null" 或 "NONULL" ) 。 如果 **sp_addtype** 未显式定义 *null_type* ，则将其设置为当前默认的为空性。 使用 GETANSINULL 系统函数可确定当前默认的为空性。 可以使用 SET 语句或 ALTER DATABASE 对该为空性进行调整。 应显式定义为空性。 如果 **\@ phystype** 为 **bit**，且未指定 **\@ NULLTYPE** ，则默认值为 not NULL。  
   
 > [!NOTE]  
->  *Null_type*参数仅定义此数据类型的默认为 null 性。 如果在创建表的过程中使用别名数据类型时显式地定义了为空性，那么该为空性优先于已定义的为空性。 有关详细信息，请参阅 [ALTER TABLE &#40;transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) 和 [CREATE TABLE &#40;transact-sql&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
+>  *Null_type* 参数仅定义此数据类型的默认为 null 性。 如果在创建表的过程中使用别名数据类型时显式地定义了为空性，那么该为空性优先于已定义的为空性。 有关详细信息，请参阅 [ALTER TABLE &#40;transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) 和 [CREATE TABLE &#40;transact-sql&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -85,14 +85,14 @@ sp_addtype [ @typename = ] type,
 ## <a name="remarks"></a>备注  
  别名数据类型名称在数据库中必须是唯一的，但是名称不同的别名数据类型可以有相同的定义。  
   
- 执行 **sp_addtype** 会创建一个别名数据类型，该类型在特定数据库的 **sys.databases** 目录视图中出现。 如果别名数据类型必须在所有新的用户定义的数据库中可用，请将其添加到 **模型**中。 创建了别名数据类型之后，可以在 CREATE TABLE 或 ALTER TABLE 中使用它，也可以将默认值和规则绑定到别名数据类型。 使用 **sp_addtype** 创建的所有标量别名数据类型包含在 **dbo** 架构中。  
+ 执行 **sp_addtype** 会创建一个别名数据类型，该类型在特定数据库的 **sys.databases** 目录视图中出现。 如果别名数据类型必须在所有新的用户定义的数据库中可用，请将其添加到 **模型** 中。 创建了别名数据类型之后，可以在 CREATE TABLE 或 ALTER TABLE 中使用它，也可以将默认值和规则绑定到别名数据类型。 使用 **sp_addtype** 创建的所有标量别名数据类型包含在 **dbo** 架构中。  
   
  别名数据类型继承数据库的默认排序规则。 别名类型的列和变量的排序规则在 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE、ALTER TABLE 和 DECLARE @*local_variable* 语句中定义。 对数据库默认排序规则的更改仅应用于该类型的新列和新变量；它不会更改现有列和变量的排序规则。  
   
 > [!IMPORTANT]  
->  为实现向后兼容性，会自动向 **公共** 数据库角色授予对使用 **sp_addtype**创建的别名数据类型的引用权限。 注意当使用 CREATE TYPE 语句（而不是 **sp_addtype**）创建别名数据类型时，不会发生这种自动授予。  
+>  为实现向后兼容性，会自动向 **公共** 数据库角色授予对使用 **sp_addtype** 创建的别名数据类型的引用权限。 注意当使用 CREATE TYPE 语句（而不是 **sp_addtype**）创建别名数据类型时，不会发生这种自动授予。  
   
- 不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **时间戳**、 **表**、 **xml**、 **varchar (max) **、 **nvarchar (max) ** 或 **varbinary (max) ** 数据类型定义别名数据类型。  
+ 不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **时间戳**、 **表**、 **xml**、 **varchar (max)**、 **nvarchar (max)** 或 **varbinary (max)** 数据类型定义别名数据类型。  
   
 ## <a name="permissions"></a>权限  
  需要 **db_owner** 或 **db_ddladmin** 固定数据库角色的成员身份。  

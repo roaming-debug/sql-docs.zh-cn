@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_first_result_set
 - sp_describe_first_result_set_TSQL
@@ -19,12 +19,12 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c95a79bb42cbc3ab32a5521682aacc8f4f9079d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8e9a77fb68a5642b3ba5fac7aac9ae0d9c31c899
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466908"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200804"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
     [ , [ @browse_information_mode = ] <tinyint> ] ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ \@tsql = ] 'Transact-SQL_batch'` 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *SQL_batch* 可以是 **nvarchar (** _n_ *_)_* 或 **nvarchar (max)**。  
   
 `[ \@params = ] N'parameters'`\@params 为批处理参数提供声明字符串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，这与 sp_executesql 类似。 参数可以为 **nvarchar (n)** 或 **nvarchar (max)**。  
@@ -67,7 +67,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**位非 NULL**|指示列是出于浏览信息目的而额外添加的列，该列不会实际显示在结果集中。|  
 |**column_ordinal**|**int NOT NULL**|在结果集中包含列的序号位置。 第一列的位置将指定为1。|  
-|**name**|**sysname NULL**|包含列的名称（如果可以确定名称）。 否则，它将包含 NULL。|  
+|name |**sysname NULL**|包含列的名称（如果可以确定名称）。 否则，它将包含 NULL。|  
 |**is_nullable**|**位非 NULL**|如果列允许 NULL，则包含值 1；如果列不允许 NULL，则包含 0；如果不能确定列是否允许 NULL，则为 1。|  
 |**system_type_id**|**int NOT NULL**|包含 sys.databases 中指定的列数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar (256) NULL**|包含为列数据类型指定的名称和参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  

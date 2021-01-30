@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_detach_db
 - sp_detach_db_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6829fff1f535a0e0d55b8dd849c67b0b197c4e48
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 1d4b484cd6d440b14b7639b513fba7e53f615443
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810833"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200757"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,14 +48,14 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="arguments"></a>参数  
 `[ @dbname = ] 'database_name'` 要分离的数据库的名称。 *database_name* 是 **sysname** 值，默认值为 NULL。  
   
-`[ @skipchecks = ] 'skipchecks'` 指定是否要跳过或运行更新统计信息。 *skipchecks* 是一个 **nvarchar (10) ** 值，默认值为 NULL。 若要跳过更新统计信息，请指定 **true**。 若要显式运行 UPDATE STATISTICS，请指定 **false**。  
+`[ @skipchecks = ] 'skipchecks'` 指定是否要跳过或运行更新统计信息。 *skipchecks* 是一个 **nvarchar (10)** 值，默认值为 NULL。 若要跳过更新统计信息，请指定 **true**。 若要显式运行 UPDATE STATISTICS，请指定 **false**。  
   
  默认情况下，执行 UPDATE STATISTICS 可更新有关表和索引中的数据的信息。 对于要移动到只读介质的数据库，执行 UPDATE STATISTICS 非常有用。  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 指定在数据库分离操作过程中不会删除与所分离的数据库关联的全文索引文件。 *KeepFulltextIndexFile* 是一个 **nvarchar (10) ** 值，默认值为 **true**。 如果 *KeepFulltextIndexFile* 为 **false**，则将删除与数据库关联的所有全文索引文件和全文索引的元数据，除非该数据库是只读的。 如果为 NULL 或 **true**，则保留与全文相关的元数据。  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 指定在数据库分离操作过程中不会删除与所分离的数据库关联的全文索引文件。 *KeepFulltextIndexFile* 是一个 **nvarchar (10)** 值，默认值为 **true**。 如果 *KeepFulltextIndexFile* 为 **false**，则将删除与数据库关联的所有全文索引文件和全文索引的元数据，除非该数据库是只读的。 如果为 NULL 或 **true**，则保留与全文相关的元数据。  
   
 > [!IMPORTANT]
->  未来版本的中将删除** \@ keepfulltextindexfile**参数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  
+>  未来版本的中将删除 **\@ keepfulltextindexfile** 参数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

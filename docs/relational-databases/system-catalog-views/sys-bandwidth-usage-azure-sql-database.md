@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - bandwidth_usage
 - sys.bandwidth_usage
@@ -20,12 +20,12 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: c71fdc21c634e8f473d628373ae5adfa9c1c072f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9af11212533337e575976261995161b222e73efa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473028"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198564"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -45,7 +45,7 @@ ms.locfileid: "97473028"
 |**time**|占用带宽的时间（小时）。 此视图中的各行以小时为单位。 例如，2009-09-19 02:00:00.000 表示占用带宽的时间是 2009 年 9 月 19 日的凌晨 2:00  到凌晨 3:00。|  
 |**database_name**|占用带宽的数据库的名称。|  
 |**direction**|占用带宽的类型，为以下选项之一：<br /><br /> 入口：移动到中的数据 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 出口：移出的数据 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|  
-|**class**|占用带宽的类别，为以下选项之一：<br />内部：正在 Azure 平台中移动的数据。<br />External：移出 Azure 平台的数据。<br /><br /> 仅在数据库与区域处于连续复制关系 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 时返回此类别。 如果给定数据库未参与任何连续复制关系，则不会返回 "互连" 行。 有关详细信息，请参阅本主题后面的“备注”部分。|  
+|class |占用带宽的类别，为以下选项之一：<br />内部：正在 Azure 平台中移动的数据。<br />External：移出 Azure 平台的数据。<br /><br /> 仅在数据库与区域处于连续复制关系 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 时返回此类别。 如果给定数据库未参与任何连续复制关系，则不会返回 "互连" 行。 有关详细信息，请参阅本主题后面的“备注”部分。|  
 |**time_period**|使用带宽的时段为 Peak 或 OffPeak。 The Peak time is based on the region in which the server was created. 例如，如果在“US_Northwest”地区创建了服务器，则高峰期时间定义为 PST 时间上午 10:00 点 到下午 6:00 之间。|  
 |**quantity**|占用的带宽量 (KB)。|  
   

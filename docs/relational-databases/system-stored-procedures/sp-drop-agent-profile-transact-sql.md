@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_drop_agent_profile
 - sp_drop_agent_profile_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6a3864e61e681ad6465295b1fb43011e8d9f9b19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9efca5d523d0da05896d1377c16f604ff82a98fd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549802"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200741"
 ---
 # <a name="sp_drop_agent_profile-transact-sql"></a>sp_drop_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
  给定配置文件的参数也从 **MSagent_parameters** 表中删除。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_drop_agent_profile**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_drop_agent_profile** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   

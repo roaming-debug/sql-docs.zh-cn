@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adduser
 - sp_adduser_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 05aa08ee4d2b518b804db93d5a2408f690b56bbc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c250837ad65e0b14fc5612eae69be6f93d8f23e6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464598"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198366"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,13 +59,13 @@ sp_adduser [ @loginame = ] 'login'
   
  在添加完用户之后，可以使用 GRANT、DENY 和 REVOKE 等语句来定义控制用户所执行的活动的权限。  
   
- 使用 **server_principals** 显示有效登录名的列表。  
+ 使用 **sys.server_principals** 显示有效登录名的列表。  
   
- 使用 **sp_helprole** 显示有效角色名称的列表。 当指定一个角色时，用户会自动地获得那些为该角色定义的权限。 如果未指定角色，则用户将获得授予默认 **公共** 角色的权限。 若要将用户添加到角色，必须提供 *用户名* 的值。  (*用户名* 可以与 *login_id*相同。 )   
+ 使用 **sp_helprole** 显示有效角色名称的列表。 当指定一个角色时，用户会自动地获得那些为该角色定义的权限。 如果未指定角色，则用户将获得授予默认 **公共** 角色的权限。 若要将用户添加到角色，必须提供 *用户名* 的值。  (*用户名* 可以与 *login_id* 相同。 )   
   
  每个数据库中已存在用户 **来宾** 。 如果先前禁用了此用户，则添加用户 **guest** 会启用该用户。 默认情况下，在新数据库中禁用用户 **来宾** 。  
   
- 不能在用户定义的事务内执行**sp_adduser** 。  
+ 不能在用户定义的事务内执行 **sp_adduser** 。  
   
  你无法添加 **来宾** 用户，因为在每个数据库中已经存在 **来宾** 用户。 若要启用 **来宾** 用户，请授予 **guest** CONNECT 权限，如下所示：  
   
@@ -101,13 +101,13 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sp_addrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
  [sp_dropuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

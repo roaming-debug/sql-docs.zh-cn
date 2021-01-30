@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_requestpeerresponse_TSQL
 - sp_requestpeerresponse
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d07204928403d8ba99aa49688e51239dfdf08804
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ce25686ab2b7947438d207a3acb5fc5b7f6549e2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543087"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199964"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 要验证其状态的对等拓扑中的发布名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @description = ] 'description'` 可用于标识各个状态请求的用户定义的信息。 *描述* 为 **nvarchar (4000) **，默认值为 NULL。  
+`[ @description = ] 'description'` 可用于标识各个状态请求的用户定义的信息。 *描述* 为 **nvarchar (4000)**，默认值为 NULL。  
   
 `[ @request_id = ] request_id` 返回新请求的 ID。 *request_id* 为 **int** ，并且是一个 OUTPUT 参数。 此值可在执行 [sp_helppeerresponses &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) 查看对状态请求的所有响应时使用。  
   
@@ -54,7 +54,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
   
  **sp_requestpeerresponse** 用于确保在还原在对等拓扑中发布的数据库之前所有其他节点已接收到所有的命令。 此过程还用于复制节点脱机时所做的数据定义语言 (DDL) 更改，以评估这些更改到达其他节点的时间。  
   
- 不能在用户定义的事务中执行**sp_requestpeerresponse** 。  
+ 不能在用户定义的事务中执行 **sp_requestpeerresponse** 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_requestpeerresponse**。  

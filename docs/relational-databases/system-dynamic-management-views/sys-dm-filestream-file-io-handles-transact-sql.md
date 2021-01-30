@@ -6,7 +6,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_filestream_file_io_handles
 - sys.dm_filestream_file_io_handles
@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4c92c42554123c96013b8d17721b3d0861154a35
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 869d9ffbc532e5b819a11c19a387d7b83faae56f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097658"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198415"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   显示命名空间所有者 (NSO) 已知的文件句柄。 此视图显示了使用 **OpenSqlFilestream** 获取的客户端的 Filestream 句柄。  
   
-|列|类型|描述|  
+|列|类型|说明|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|显示与客户端的句柄关联的内部 NSO 结构的地址。 可以为 Null。|  
 |**creation_request_id**|**int**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 不可为 null。|  

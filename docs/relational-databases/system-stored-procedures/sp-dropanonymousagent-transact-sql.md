@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropanonymousagent
 - sp_dropanonymousagent_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: d6e687976dab6d526a2413260d2ad2f980001086
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b75f8b4bc355fd71c469ee2c0593f56feaf9148a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474272"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200719"
 ---
 # <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 
@@ -38,7 +38,7 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @subid = ] sub_id` 匿名订阅的全局标识符。 *sub_id* 是 **uniqueidentifier**，无默认值。 可以使用 **sp_helppullsubscription**在订阅服务器上检索此标识符。 返回的结果集的 **subid** 字段中的值是此全局标识符。  
+`[ @subid = ] sub_id` 匿名订阅的全局标识符。 *sub_id* 是 **uniqueidentifier**，无默认值。 可以使用 **sp_helppullsubscription** 在订阅服务器上检索此标识符。 返回的结果集的 **subid** 字段中的值是此全局标识符。  
   
 `[ @type = ] type` 订阅的类型。 *类型* 为 **int**，无默认值。 有效值为 **1** 或 **2**。 如果使用分发代理快照复制或事务复制，请指定 **1**。 如果使用合并代理合并复制，则指定 **2**。  
   

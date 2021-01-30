@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syspolicy_conditions
 - syspolicy_conditions_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: edaf380a4a6a8f938c4b8601cb60999a0e99a330
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e51c0d002d697898f4ac5d47c32cfded8235db35
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100084"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199682"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "98100084"
 |condition_id|**int**|此条件的标识符。 每个条件表示由一个或多个条件表达式组成的集合。|  
 |name|**sysname**|条件名称。|  
 |date_created|**datetime**|条件的创建日期和时间。|  
-|说明|**nvarchar(max)**|条件说明。 说明列是可选的，可以为 NULL。|  
+|description|**nvarchar(max)**|条件说明。 说明列是可选的，可以为 NULL。|  
 |created_by|**sysname**|创建条件的登录名。|  
 |modified_by|**sysname**|最近修改条件的登录名。 如果从未进行修改，则为 NULL。|  
 |date_modified|**datetime**|条件的创建日期和时间。 如果从未进行修改，则为 NULL。|  

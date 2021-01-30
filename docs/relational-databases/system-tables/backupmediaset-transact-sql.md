@@ -6,7 +6,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - backupmediaset
 - backupmediaset_TSQL
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - backupmediaset system table
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 10b4d744e7ef4e0d11a9788580ea7f8c5a67bd1f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c886cf2fb117611d5956277656dd7aaadca9afc5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091567"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198659"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "98091567"
 |**media_set_id**|**int**|唯一介质集标识号。 标识，主键。|  
 |**media_uuid**|**uniqueidentifier**|介质集的 UUID。 所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 介质集都具有 UUID。<br /><br /> 但对于的早期版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果介质集只包含一个介质簇，则 **media_uuid** 列可能为 NULL (**media_family_count** 为 1) 。|  
 |**media_family_count**|**tinyint**|媒体集中的媒体簇数。 可以为 NULL。|  
-|name|**nvarchar(128)**|介质集的名称。 可以为 NULL。<br /><br /> 有关详细信息，请参阅 MEDIANAME and MEDIADESCRIPTION in [BACKUP &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
+|name |**nvarchar(128)**|介质集的名称。 可以为 NULL。<br /><br /> 有关详细信息，请参阅 MEDIANAME and MEDIADESCRIPTION in [BACKUP &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |description|**nvarchar(255)**|介质集的文本化说明。 可以为 NULL。<br /><br /> 有关详细信息，请参阅 MEDIANAME and MEDIADESCRIPTION in [BACKUP &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |**software_name**|**nvarchar(128)**|写入介质标签的备份软件名称。 可以为 NULL。|  
 |**software_vendor_id**|**int**|写入备份介质标签的软件供应商标识号。 可以为 NULL。<br /><br /> 的值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为十六进制0x1200。|  

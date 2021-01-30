@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_allitems_TSQL
 - sysmail_allitems
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6bc9b58549bbc20fe66caaf2adc61edd4345acd7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 25b60bb95655cea1d4e460b46a0e21faf28a3103
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096651"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199724"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "98096651"
 |**程度**|**varchar (12)**|消息的 **敏感度** 参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
 |**attachment_encoding**|**varchar (20)**|邮件附件的类型。|  
-|**query**|**varchar(max)**|邮件程序所执行的查询。|  
+|**查询**|**varchar(max)**|邮件程序所执行的查询。|  
 |**execute_query_database**|**sysname**|邮件程序在其中执行查询的数据库上下文。|  
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
 |**query_result_header**|**bit**|如果值为1，则查询结果包含列标题。 如果该值为0，则查询结果不包括列标题。|  
@@ -57,7 +57,7 @@ ms.locfileid: "98096651"
 |**send_request_date**|**datetime**|将消息放在邮件队列中的日期和时间。|  
 |**send_request_user**|**sysname**|提交消息的用户。 这是数据库邮件过程的用户上下文，不是邮件的“发件人:”字段。|  
 |**sent_account_id**|**int**|发送消息所用数据库邮件帐户的标识符。|  
-|**sent_status**|**varchar (8)**|邮件的状态。 可能的值为：<br /><br /> **已发送** -邮件已发送。<br /><br /> 未 **发送**-数据库邮件仍在尝试发送消息。<br /><br /> 正在 **重试**-数据库邮件无法发送消息，但正在尝试再次发送。<br /><br /> **失败** -数据库邮件无法发送消息。|  
+|**sent_status**|**varchar (8)**|邮件的状态。 可能的值有：<br /><br /> **已发送** -邮件已发送。<br /><br /> 未 **发送**-数据库邮件仍在尝试发送消息。<br /><br /> 正在 **重试**-数据库邮件无法发送消息，但正在尝试再次发送。<br /><br /> **失败** -数据库邮件无法发送消息。|  
 |**sent_date**|**datetime**|发送消息的日期和时间。|  
 |**last_mod_date**|**datetime**|上次修改行的日期和时间。|  
 |**last_mod_user**|**sysname**|上次修改行的用户。|  

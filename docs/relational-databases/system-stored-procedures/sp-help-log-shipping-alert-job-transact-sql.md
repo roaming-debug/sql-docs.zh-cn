@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_log_shipping_alert_job_TSQL
 - sp_help_log_shipping_alert_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 799880f18cdb5ad89d27eebeaca48ede85bd50fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0db0352d8499b9c2242bf9b7e460365a1a5cc70
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469312"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200091"
 ---
 # <a name="sp_help_log_shipping_alert_job-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_help_log_shipping_alert_job
  此存储过程返回 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送警报作业的代理作业 ID。 如果不存在任何日志传送警报作业，则将返回空结果集。  
   
 ## <a name="remarks"></a>备注  
- 必须从监视服务器上的**master**数据库运行**sp_help_log_shipping_alert_job** 。  
+ 必须从监视服务器上的 **master** 数据库运行 **sp_help_log_shipping_alert_job** 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  

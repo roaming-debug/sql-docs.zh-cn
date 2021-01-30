@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_schedule
 - sp_delete_schedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f28249e89a661fcd1906b5da73174aab3df40fe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b152260dca3ab9791124b9f7f1ac13e311f6e514
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549837"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199153"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 > **注意：** 必须指定 *schedule_id* 或 *schedule_name* ，但不能同时指定两者。  
   
-`[ @force_delete = ] force_delete` 指定在将计划附加到作业时，该过程是否应失败。 *Force_delete* 为 bit，默认值为 **0**。 当 *force_delete* 为 **0**时，如果将计划附加到作业，则存储过程将失败。 当 *force_delete* 为 **1**时，将删除计划，而不考虑是否将计划附加到作业。  
+`[ @force_delete = ] force_delete` 指定在将计划附加到作业时，该过程是否应失败。 *Force_delete* 为 bit，默认值为 **0**。 当 *force_delete* 为 **0** 时，如果将计划附加到作业，则存储过程将失败。 当 *force_delete* 为 **1** 时，将删除计划，而不考虑是否将计划附加到作业。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -58,10 +58,10 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  无  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，如果将计划附加到作业，则无法删除计划。 若要删除附加到作业的计划，请将*force_delete*的值指定为**1** 。 删除计划不会停止当前正在运行的作业。  
+ 默认情况下，如果将计划附加到作业，则无法删除计划。 若要删除附加到作业的计划，请将 *force_delete* 的值指定为 **1** 。 删除计划不会停止当前正在运行的作业。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

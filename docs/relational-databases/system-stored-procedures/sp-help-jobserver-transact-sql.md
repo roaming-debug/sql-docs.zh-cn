@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobserver
 - sp_help_jobserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e59691a44353826f47550bb67c7a7872fcc4200
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4c5e5f8a4c7ec027c72452ea725ec6def715309a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546086"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200120"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ sp_help_jobserver
 |**enlist_date**|**datetime**|将目标服务器登记到主服务器的日期。|  
 |**last_poll_date**|**datetime**|目标服务器上一次轮询主服务器的日期。|  
   
- 如果在*show_last_run_details*设置为**1**的情况下执行**sp_help_jobserver** ，则结果集将包含这些其他列。  
+ 如果在 *show_last_run_details* 设置为 **1** 的情况下执行 **sp_help_jobserver** ，则结果集将包含这些其他列。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -75,7 +75,7 @@ sp_help_jobserver
 |**last_run_outcome**|**int**|作业上一次在此服务器上运行的结果：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -85,7 +85,7 @@ sp_help_jobserver
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- **SQLAgentUserRole**的成员只能查看其所拥有的作业的信息。  
+ **SQLAgentUserRole** 的成员只能查看其所拥有的作业的信息。  
   
 ## <a name="examples"></a>示例  
  以下示例返回有关 `NightlyBackups` 作业的信息，其中包括上一次运行的信息。  

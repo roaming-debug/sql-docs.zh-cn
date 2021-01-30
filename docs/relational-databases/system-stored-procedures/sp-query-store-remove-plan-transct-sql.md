@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SYS.SP_QUERY_STORE_REMOVE_PLAN_TSQL
 - SP_QUERY_STORE_REMOVE_PLAN_TSQL
@@ -22,12 +22,12 @@ ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c21bf8fc4b5c502b566b4ad87ded9a3d064435ee
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f3ebfedbfc714445ed45fd36315b0fd12a50e033
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468328"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200661"
 ---
 # <a name="sp_query_store_remove_plan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "97468328"
 sp_query_store_remove_plan [ @plan_id = ] plan_id [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @plan_id = ] plan_id` 要删除的查询计划的 id。 *plan_id* 是 **bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

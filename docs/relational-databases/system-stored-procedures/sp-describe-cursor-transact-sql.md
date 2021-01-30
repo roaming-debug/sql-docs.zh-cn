@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_cursor
 - sp_describe_cursor_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2e24c729dce92d05827466d9931916a9002adc1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0787f088205aab72c437e22bfac265ef05ccbe19
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548092"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200791"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,24 +52,24 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  声明的用于接收游标输出的游标变量的名称。 *output_cursor_variable* 是 **游标**，无默认值，并且在调用 sp_describe_cursor 时，不能与任何游标相关联。 返回的游标是可滚动的动态只读游标。  
   
  [ @cursor_source =] {N'local ' |N'global ' |N'variable' }  
- 指定使用以下哪一名称来指定所报告的游标：本地游标、全局游标或游标变量的名称。 参数 ** (30) 为 nvarchar **。  
+ 指定使用以下哪一名称来指定所报告的游标：本地游标、全局游标或游标变量的名称。 参数 **(30) 为 nvarchar**。  
   
  [ @cursor_identity =] N '*local_cursor_name*']  
- 由具有 LOCAL 关键字或默认设置为 LOCAL 的 DECLARE CURSOR 语句创建的游标名称。 *local_cursor_name* ** (128) 为 nvarchar **。  
+ 由具有 LOCAL 关键字或默认设置为 LOCAL 的 DECLARE CURSOR 语句创建的游标名称。 *local_cursor_name* **(128) 为 nvarchar**。  
   
  [ @cursor_identity =] N '*global_cursor_name*']  
- 由具有 GLOBAL 关键字或默认设置为 GLOBAL 的 DECLARE CURSOR 语句创建的游标名称。 *global_cursor_name* ** (128) 为 nvarchar **。  
+ 由具有 GLOBAL 关键字或默认设置为 GLOBAL 的 DECLARE CURSOR 语句创建的游标名称。 *global_cursor_name* **(128) 为 nvarchar**。  
   
  *global_cursor_name* 还可以是由 ODBC 应用程序打开，然后通过调用 SQLSetCursorName 进行命名的 API 服务器游标的名称。  
   
  [ @cursor_identity =] N '*input_cursor_variable*']  
- 与打开的游标关联的游标变量的名称。 *input_cursor_variable* ** (128) 为 nvarchar **。  
+ 与打开的游标关联的游标变量的名称。 *input_cursor_variable* **(128) 为 nvarchar**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
   
 ## <a name="cursors-returned"></a>返回的游标  
- sp_describe_cursor 将其结果集封装在 [!INCLUDE[tsql](../../includes/tsql-md.md)] **游标** 输出参数中。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器即可逐行处理输出。 这也意味着无法直接从数据库 API 函数调用该过程。 **游标**输出参数必须绑定到程序变量，但是数据库 api 不支持绑定**游标**参数或变量。  
+ sp_describe_cursor 将其结果集封装在 [!INCLUDE[tsql](../../includes/tsql-md.md)] **游标** 输出参数中。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器即可逐行处理输出。 这也意味着无法直接从数据库 API 函数调用该过程。 **游标** 输出参数必须绑定到程序变量，但是数据库 api 不支持绑定 **游标** 参数或变量。  
   
  下表显示了使用 sp_describe_cursor 返回的游标的格式。 游标格式与使用 sp_cursor_list 返回的格式相同。  
   
@@ -79,14 +79,14 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |cursor_name|**sysname**|来自 DECLARE CURSOR 语句的游标的名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果是通过将游标变量设置为游标来创建游标，则 cursor_name 返回该游标变量的名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，此输出列可返回一个系统生成的名称。|  
 |cursor_scope|**tinyint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |状态|**int**|与 CURSOR_STATUS 系统函数报告的值相同的值：<br /><br /> 1 = 游标名称或游标变量引用的游标为打开状态。 如果游标是不敏感的、静态的或是键集，则至少具有一行。 如果游标是动态的，则结果集具有零行或多行。<br /><br /> 0 = 游标名称或游标变量引用的游标为打开状态，但不包含任何行。 动态游标从不返回此值。<br /><br /> -1 = 游标名称或游标变量引用的游标为关闭状态。<br /><br /> -2 = 仅适用于游标变量。 没有为该变量分配任何游标。 这可能是由于某个 OUTPUT 参数为该变量分配了游标，但存储过程在返回前关闭了游标。<br /><br /> -3 = 指定名称的游标或游标变量不存在，或没有为该游标变量分配游标。|  
-|model|**tinyint**|1 = 不敏感（或静态）<br /><br /> 2 = 键集<br /><br /> 3 = 动态<br /><br /> 4 = 快进|  
+|模型|**tinyint**|1 = 不敏感（或静态）<br /><br /> 2 = 键集<br /><br /> 3 = 动态<br /><br /> 4 = 快进|  
 |concurrency|**tinyint**|1 = 只读<br /><br /> 2 = 滚动锁<br /><br /> 3 = 乐观|  
 |scrollable|**tinyint**|0 = 只进<br /><br /> 1 = 可滚动|  
 |open_status|**tinyint**|0 = 关闭的<br /><br /> 1 = 打开的|  
-|cursor_rows|**decimal (10，0) **|结果集中合格行的数目。 有关详细信息，请参阅 [@@CURSOR_ROWS (Transact-SQL)](../../t-sql/functions/cursor-rows-transact-sql.md)。|  
+|cursor_rows|**decimal (10，0)**|结果集中合格行的数目。 有关详细信息，请参阅 [@@CURSOR_ROWS (Transact-SQL)](../../t-sql/functions/cursor-rows-transact-sql.md)。|  
 |fetch_status|**smallint**|此游标上最后一次提取的状态。 有关详细信息，请参阅 [@@FETCH_STATUS (Transact-SQL)](../../t-sql/functions/fetch-status-transact-sql.md)。<br /><br /> 0 = 提取成功。<br /><br /> -1 = 提取失败或超出游标的界限。<br /><br /> -2 = 缺少所请求的行。<br /><br /> -9 = 尚未对游标进行提取。|  
 |column_count|**smallint**|游标结果集中的列数。|  
-|row_count|**decimal (10，0) **|受游标的上次操作影响的行数。 有关详细信息，请参阅 [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)。|  
+|row_count|**decimal (10，0)**|受游标的上次操作影响的行数。 有关详细信息，请参阅 [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)。|  
 |last_operation|**tinyint**|对游标执行的最后一次操作：<br /><br /> 0 = 没有对游标执行操作。<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = 插入<br /><br /> 4 = UPDATE<br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|服务器范围内的游标唯一值。|  
   

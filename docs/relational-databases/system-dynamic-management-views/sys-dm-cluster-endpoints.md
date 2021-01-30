@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, big-data-clusters
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_cluster_endpoints
 - dm_cluster_endpoints_TSQL
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-2017'
-ms.openlocfilehash: 9f9d78015c5413c7e0ec4e827240e7465969d189
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1d5d9cc9219422fd7559d73417354435eb20d488
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095245"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200346"
 ---
 # <a name="sysdm_cluster_endpoints-transact-sql"></a>sys.dm_cluster_endpoints (Transact-sql) 
 [!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "98095245"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|`sysname`|在 SQL 大数据群集中外部公开的服务的名称。 终结点的唯一标识符。 此视图的键。 不可为 null。 |  
-|说明|`nvarchar(4000)`|服务说明。 不可为 null。 |
+|description|`nvarchar(4000)`|服务说明。 不可为 null。 |
 |endpoint|`sysname`|终结点 url 或连接属性。 不可为 null。 |
 |protocol_desc|`sysname`|终结点协议说明 |
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adjustpublisheridentityrange_TSQL
 - sp_adjustpublisheridentityrange
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdb8f12f5c5ff3c3c01f5d7cd18827b2fec0e9c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5855ffeceff68c10e0eac2089a95d2b0184cd327
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541968"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198346"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
   
  对于已启用自动标识范围的发布，分发代理或合并代理负责基于发布的阈值自动调整发布的标识范围。 但是，如果出于某种原因，分发代理或合并代理尚未运行一段时间，并且标识范围资源已过度消耗到阈值，则用户可以调用 **sp_adjustpublisheridentityrange** 为发布服务器分配新的值范围。  
   
- 执行 **sp_adjustpublisheridentityrange**时，必须指定 *发布* 或 *table_name* 。 如果同时指定了这两个参数或二者都未指定，则将返回错误。  
+ 执行 **sp_adjustpublisheridentityrange** 时，必须指定 *发布* 或 *table_name* 。 如果同时指定了这两个参数或二者都未指定，则将返回错误。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_adjustpublisheridentityrange**。  

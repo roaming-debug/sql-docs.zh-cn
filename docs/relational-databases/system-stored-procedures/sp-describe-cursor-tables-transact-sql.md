@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_cursor_tables_TSQL
 - sp_describe_cursor_tables
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec1a0d9d8e61613558e0f34b13080a67ba5335b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b5c2e609eb3a521a991848b3b795b04b2ffbd01f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538986"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200799"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,26 +49,26 @@ sp_describe_cursor_tables
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @cursor_return =] *output_cursor_variable*输出  
+ [ @cursor_return =] *output_cursor_variable* 输出  
  声明的用于接收游标输出的游标变量的名称。 *output_cursor_variable* 是 **游标**，无默认值，并且在调用 sp_describe_cursor_tables 时，不能与任何游标相关联。 返回的游标是可滚动的动态只读游标。  
   
  [ @cursor_source =] {N'local ' |N'global ' |N'variable' }  
- 指定使用以下哪一名称来指定所报告的游标：本地游标、全局游标或游标变量的名称。 参数 ** (30) 为 nvarchar **。  
+ 指定使用以下哪一名称来指定所报告的游标：本地游标、全局游标或游标变量的名称。 参数 **(30) 为 nvarchar**。  
   
  [ @cursor_identity =] N '*local_cursor_name*'  
- 由具有 LOCAL 关键字或默认设置为 LOCAL 的 DECLARE CURSOR 语句所创建的游标的名称。 *local_cursor_name* ** (128) 为 nvarchar **。  
+ 由具有 LOCAL 关键字或默认设置为 LOCAL 的 DECLARE CURSOR 语句所创建的游标的名称。 *local_cursor_name* **(128) 为 nvarchar**。  
   
  [ @cursor_identity =] N '*global_cursor_name*'  
- 由具有 GLOBAL 关键字或默认设置为 GLOBAL 的 DECLARE CURSOR 语句创建的游标的名称。 *global_cursor_name* 还可以是由 ODBC 应用程序打开，然后通过调用 SQLSetCursorName 来命名该游标的 API 服务器游标的名称。*global_cursor_name* ** (128) 为 nvarchar **。  
+ 由具有 GLOBAL 关键字或默认设置为 GLOBAL 的 DECLARE CURSOR 语句创建的游标的名称。 *global_cursor_name* 还可以是由 ODBC 应用程序打开，然后通过调用 SQLSetCursorName 来命名该游标的 API 服务器游标的名称。*global_cursor_name* **(128) 为 nvarchar**。  
   
  [ @cursor_identity =] N '*input_cursor_variable*'  
- 与打开的游标关联的游标变量的名称。 *input_cursor_variable* ** (128) 为 nvarchar **。  
+ 与打开的游标关联的游标变量的名称。 *input_cursor_variable* **(128) 为 nvarchar**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
   
 ## <a name="cursors-returned"></a>返回的游标  
- sp_describe_cursor_tables 将其报表封装为 [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor** 输出参数。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器即可逐行处理输出。 这还意味着不能直接从 API 函数调用此过程。 **Cursor**输出参数必须绑定到程序变量，但是 api 不支持绑定**游标**参数或变量。  
+ sp_describe_cursor_tables 将其报表封装为 [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor** 输出参数。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器即可逐行处理输出。 这还意味着不能直接从 API 函数调用此过程。 **Cursor** 输出参数必须绑定到程序变量，但是 api 不支持绑定 **游标** 参数或变量。  
   
  下表显示 sp_describe_cursor_tables 所返回的游标的格式。  
   

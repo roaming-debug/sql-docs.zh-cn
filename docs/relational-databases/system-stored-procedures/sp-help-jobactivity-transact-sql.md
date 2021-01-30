@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobactivity_TSQL
 - sp_help_jobactivity
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e137d556413057b409d67c8ead14530d224241e0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b399b08120b8153af01d0faab42633f5a8325142
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549675"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199646"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] job_id` 作业标识号。 *job_id*的值为 **uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 作业标识号。 *job_id* 的值为 **uniqueidentifier**，默认值为 NULL。  
   
-`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*的默认值为 **sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 作业的名称。 *job_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。  
@@ -62,7 +62,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**job_id**|**uniqueidentifier**|作业标识符。|  
 |**job_name**|**sysname**|作业的名称。|  
 |**run_requested_date**|**datetime**|请求运行作业的时间。|  
-|**run_requested_source**|**sysname**|请求运行作业的请求源。 即以下函数之一：<br /><br /> **1** = 按计划运行<br /><br /> **2** = 为响应警报而运行<br /><br /> **3** = 启动时运行<br /><br /> **4** = 按用户运行<br /><br /> **6** = 按 CPU 空闲计划运行|  
+|**run_requested_source**|**sysname**|请求运行作业的请求源。 下列其中一项：<br /><br /> **1** = 按计划运行<br /><br /> **2** = 为响应警报而运行<br /><br /> **3** = 启动时运行<br /><br /> **4** = 按用户运行<br /><br /> **6** = 按 CPU 空闲计划运行|  
 |**queued_date**|**datetime**|将请求加入队列的时间。 如果直接运行作业，则该值为 NULL。|  
 |**start_execution_date**|**datetime**|将作业分配给可运行线程的时间。|  
 |**last_executed_step_id**|**int**|最近运行的作业步骤的 ID。|  
@@ -79,7 +79,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>备注  
  此过程可提供作业的当前状态快照。 返回的结果表示处理请求时的有关信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在每次启动代理服务时都会创建一个会话 ID。 会话 id 存储在 **msdb.dbo.sys会话**的表中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在每次启动代理服务时都会创建一个会话 ID。 会话 id 存储在 **msdb.dbo.sys会话** 的表中。  
   
  如果未提供 *session_id* ，则列出有关最近会话的信息。  
   

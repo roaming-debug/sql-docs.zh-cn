@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_log_shipping_primary_database_TSQL
 - sp_help_log_shipping_primary_database
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b3dea602c3464fb4fee36281a2430f2fef39b7ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbae989332c0aa998699aacd4f8e9d16f61e0180
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493190"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200070"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_help_log_shipping_primary_database
   
 ## <a name="result-sets"></a>结果集  
   
-|列名称|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |**primary_id**|日志传送配置的主数据库 ID。|  
 |**primary_database**|日志传送配置中主数据库的名称。|  
@@ -71,7 +71,7 @@ sp_help_log_shipping_primary_database
 |**history_retention_period**|日志传送历史记录在删除前保留在给定主数据库中的时间（分钟）。|  
   
 ## <a name="remarks"></a>备注  
- 必须从主服务器上的**master**数据库运行**sp_help_log_shipping_primary_database** 。  
+ 必须从主服务器上的 **master** 数据库运行 **sp_help_log_shipping_primary_database** 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  

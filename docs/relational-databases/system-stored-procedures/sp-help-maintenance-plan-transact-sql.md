@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
 - sp_help_maintenance_plan
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 99fe08406840229ded741160f855ed60f11e977a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4d996179f089b95a3270c9045778afaaf5c13cd9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527573"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200014"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**remote_history_server**|**int**|可以写入历史报表的远程服务器的名称。|  
 |**max_remote_history_rows**|**int**|可以写入历史报表的远程服务器上系统表所分配的最大行数。|  
 |**user_defined_1**|**int**|默认值为 NULL。|  
-|**user_defined_2**|**nvarchar (100) **|默认值为 NULL。|  
+|**user_defined_2**|**nvarchar (100)**|默认值为 NULL。|  
 |**user_defined_3**|**datetime**|默认值为 NULL。|  
 |**user_defined_4**|**uniqueidentifier**|默认值为 NULL。|  
   
@@ -73,7 +73,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 |列名称|说明|  
 |-----------------|-----------------|  
-|**database_name**|所有与维护计划相关的数据库的名称。 database_name 的数据类型为 sysname******。|  
+|**database_name**|所有与维护计划相关的数据库的名称。 database_name 的数据类型为 sysname。|  
   
 ### <a name="job-table"></a>Job 表  
   
@@ -85,7 +85,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
  **sp_help_maintenance_plan** 在 **msdb** 数据库中。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_help_maintenance_plan**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_help_maintenance_plan** 执行。  
   
 ## <a name="examples"></a>示例  
  此示例提供有关维护计划 FAD6F2AB-3571-11D3-9D4A-00C04FB925FC 的说明性信息。  

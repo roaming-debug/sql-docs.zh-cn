@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syscollector_collection_items_TSQL
 - syscollector_collection_items
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 79b0c876d8c42cd23f02e91dead3fde841d84f07
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 52f7bb7471b0b8c8d38fc2f4fa1790fd5c12647a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094275"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199788"
 ---
 # <a name="syscollector_collection_items-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "98094275"
 |**collection_set_id**|**int**|标识收集组。 不可为 null。|  
 |**collection_item_id**|**int**|标识收集组中的项。 不可为 null。|  
 |**collector_type_uid**|**uniqueidentifier**|用于标识收集器类型的 GUID。 不可为 null。|  
-|name|**nvarchar(4000)**|收集组的名称。 可以为 Null。|  
+|name |**nvarchar(4000)**|收集组的名称。 可以为 Null。|  
 |**frequency**|**int**|收集项收集数据的频率。 不可为 null。|  
 |**parameters**|**xml**|介绍与相应收集项关联的收集器类型的参数化。 将使用存储在特定收集器类型的 **parameter_schema** 中的 xml 架构 (XSD) 来验证此收集项的 xml 架构。 可以为 Null。 有关详细信息，请参阅 [&#40;transact-sql&#41;syscollector_collector_types ](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)。|  
   
