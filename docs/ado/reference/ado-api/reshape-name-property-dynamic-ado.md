@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1678bcbae00c7d1022bfeffbb72a3e9b1ee63401
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 14e7b8ab97c59b566356ddeec10a6fbbd212840c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637974"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170379"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name 属性 - 动态 (ADO)
 指定 [记录集](./recordset-object-ado.md) 对象的名称。  
@@ -38,7 +38,7 @@ ms.locfileid: "97637974"
   
  当 [CursorLocation](./cursorlocation-property-ado.md)属性设置为 **AdUseClient** 时，**改变名称** 是追加到 **Recordset** 对象的 [Properties](./properties-collection-ado.md) collection 的动态属性。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ADORecordsetConstruction::PutRowset
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3341def2ce9f9f8e68f2135dc2b38cc3f947366f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1f5e99f97179323e92ff04153b5cb9fe0d67fe46
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989368"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170337"
 ---
 # <a name="rowset-property-ado"></a>Rowset 属性 (ADO)
-获取或设置**ADORecordsetConstruction**对象上/的 OLE DB**行集**对象。 使用 put_Rowset 时，行集会转换为 ADO **记录集** 对象。  
+获取或设置 **ADORecordsetConstruction** 对象上/的 OLE DB **行集** 对象。 使用 put_Rowset 时，行集会转换为 ADO **记录集** 对象。  
   
  读/写。  
   
@@ -49,5 +49,5 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
 ## <a name="return-values"></a>返回值  
  此属性方法返回标准的 HRESULT 值，包括 S_OK 和 E_FAIL。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [ADORecordsetConstruction 接口](./adorecordsetconstruction-interface.md)

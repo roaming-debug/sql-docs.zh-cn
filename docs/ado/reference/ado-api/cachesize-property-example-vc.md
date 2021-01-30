@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2fb692aa0f4b6703b20ba019832ad01cc90865b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b933428723b08bbbf4144a14591ed3e52f334398
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975678"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171533"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 属性示例 (VC++)
 此示例使用 [CacheSize](./cachesize-property-ado.md) 属性来显示用和（不含30记录缓存）执行的操作的性能差异。  

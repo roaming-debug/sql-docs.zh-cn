@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ADORecordConstruction
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e56c1ed6339c7b0baf50abfc6308a2dc2be741a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 45cf9d5bc72178e5ab56264e9f5ec3475f00eef1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976228"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171595"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 接口
-**ADORecordConstruction**接口用于从 c/c + + 应用程序中的 OLE DB**行**对象构造 ADO**记录**对象。  
+**ADORecordConstruction** 接口用于从 c/c + + 应用程序中的 OLE DB **行** 对象构造 ADO **记录** 对象。  
   
  此接口支持以下属性：  
   
@@ -32,8 +32,8 @@ ms.locfileid: "88976228"
   
 |properties|说明|  
 |-|-|  
-|[ParentRow](./parentrow-property-ado.md)|只写。<br />设置此 ADO**记录**对象上 OLE DB**行**对象的容器。|  
-|[总行](./row-property-ado.md)|读/写。<br />获取/设置此 ADO**记录**对象的 OLE DB**行**对象。|  
+|[ParentRow](./parentrow-property-ado.md)|只写。<br />设置此 ADO **记录** 对象上 OLE DB **行** 对象的容器。|  
+|[总行](./row-property-ado.md)|读/写。<br />获取/设置此 ADO **记录** 对象的 OLE DB **行** 对象。|  
   
 ## <a name="methods"></a>方法  
  无。  
@@ -51,7 +51,7 @@ ms.locfileid: "88976228"
     adoRs.CreateInstance(__uuidof(_Record));  
     ```  
   
-2.  查询**Record**对象上的**IADORecordConstruction**接口：  
+2.  查询 **Record** 对象上的 **IADORecordConstruction** 接口：  
   
     ```  
     adoRecordConstructionPtr adoRConstruct=NULL;  
@@ -59,7 +59,7 @@ ms.locfileid: "88976228"
                         (void**)&adoRConstruct);  
     ```  
   
-3.  调用**IADORecordConstruction：:p ut_Row**属性方法，在 ADO**记录**对象上设置 OLE DB**行**对象：  
+3.  调用 **IADORecordConstruction：:p ut_Row** 属性方法，在 ADO **记录** 对象上设置 OLE DB **行** 对象：  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -67,7 +67,7 @@ ms.locfileid: "88976228"
     adoRConstruct->put_Row(pUnk);  
     ```  
   
- 生成的**adoR**对象现在表示从 OLE DB**行**对象构造的 ADO**记录**对象。  
+ 生成的 **adoR** 对象现在表示从 OLE DB **行** 对象构造的 ADO **记录** 对象。  
   
  ADO **记录** 对象还可以从 OLE DB **行** 对象的容器构造。  
   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e27fc5ee9a234741beeb14e1dac7b754635bc2be
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cd54db0b75b6b4e35333ea74ea3a84683e09545a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973438"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171151"
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>执行、再次查询和清除方法示例 (JScript) 
-此示例演示从[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的**Execute**方法。 它还使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法检索 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 方法清除 [错误](../../../ado/reference/ado-api/errors-collection-ado.md) 集合的内容。  (通过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性的**连接**对象来访问**Errors**集合。 ) 将文件命名为**ExecuteJS**。  
+此示例演示从 [命令](../../../ado/reference/ado-api/command-object-ado.md)对象和 [连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的 **Execute** 方法。 它还使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法检索 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 方法清除 [错误](../../../ado/reference/ado-api/errors-collection-ado.md) 集合的内容。  (通过 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性的 **连接** 对象来访问 **Errors** 集合。 ) 将文件命名为 **ExecuteJS**。  
   
 ```  
 <!-- BeginExecuteJS -->  

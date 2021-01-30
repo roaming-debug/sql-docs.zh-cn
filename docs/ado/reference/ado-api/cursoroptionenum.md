@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CursorOptionEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a14102f57f2b328314e20e4124ca7e78258fb7e0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 00b50d99fa31e260118a93ce357c1afc4871e4ce
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974348"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171361"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 指定 [支持](./supports-method.md) 方法应对哪些功能进行测试。  
@@ -38,7 +38,7 @@ ms.locfileid: "88974348"
 |**adMovePrevious**|0x200|支持 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 和 [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法，并 [移动](./move-method-ado.md) 或 [GetRows](./getrows-method-ado.md) 方法以移动当前记录位置，而无需书签。|  
 |**adNotify**|0x40000|指示基础数据访问接口支持通知 (确定是否) 支持 **记录集** 事件。|  
 |**adResync**|0x20000|支持 "重新 [同步](./resync-method.md) " 方法，以通过在基础数据库中可见的数据来更新光标。|  
-|**adSeek**|0x200000|支持 [Seek](./seek-method.md) 方法查找 **记录集中**的行。|  
+|**adSeek**|0x200000|支持 [Seek](./seek-method.md) 方法查找 **记录集中** 的行。|  
 |**adUpdate**|0x1008000|支持 [更新](./update-method.md) 方法来修改现有数据。|  
 |**adUpdateBatch**|0x10000|支持 ([UpdateBatch](./updatebatch-method.md) 和 [CancelBatch](./cancelbatch-method-ado.md) 方法进行批量更新，) 将更改组传输到提供程序。|  
   
@@ -61,5 +61,5 @@ ms.locfileid: "88974348"
 |AdoEnums. CursorOption. UPDATE|  
 |AdoEnums. CursorOption|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [Supports 方法](./supports-method.md)

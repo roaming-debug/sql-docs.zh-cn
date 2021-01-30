@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a584d2c0c0187425cc5796fa8c7a0070f358b31
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d592835b148c6307e49583fac3e4a9cbffbfbf23
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973408"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171133"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a> (VBScript) 执行、再次查询和清除方法示例
-此示例演示从[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的**Execute**方法。 它还使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法检索 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 方法清除 [错误](../../../ado/reference/ado-api/errors-collection-ado.md) 集合的内容。 要运行此过程，需要 ExecuteCommand 和 PrintOutput 过程。  
+此示例演示从 [命令](../../../ado/reference/ado-api/command-object-ado.md)对象和 [连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的 **Execute** 方法。 它还使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法检索 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 方法清除 [错误](../../../ado/reference/ado-api/errors-collection-ado.md) 集合的内容。 要运行此过程，需要 ExecuteCommand 和 PrintOutput 过程。  
   
  在 (ASP) 的活动服务器页中使用以下示例。 若要查看此完全正常运行的示例，您必须将数据源 Advworks-srv01 与 SDK 示例) 安装 (位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 上，或编辑代码示例中的路径以反映此文件的实际位置。 这是一个 Microsoft Access 数据库文件。  
   

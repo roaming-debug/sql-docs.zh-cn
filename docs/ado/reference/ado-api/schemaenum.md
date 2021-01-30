@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - SchemaEnum
@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bcbe9bd3c3f4408be7d228c9edae4da20929f69
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 55a55d39117f2367b1b13c1a25b3785fe2d9cacc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989258"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170312"
 ---
 # <a name="schemaenum"></a>SchemaEnum
-指定[OpenSchema](./openschema-method.md)方法检索的架构**记录集**的类型。  
+指定 [OpenSchema](./openschema-method.md)方法检索的架构 **记录集** 的类型。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  有关为每个 ADO 常量返回的函数和列的其他信息，请参阅附录 B： OLE DB 程序员参考中的 [架构行集](/previous-versions/windows/desktop/ms712921(v=vs.85)) 。 下表的 "描述" 部分的括号中列出了每个主题的名称。  
   
  有关为每个 ADO MD 常量返回的函数和列的其他信息，请参阅 OLAP) 文档 (的联机分析处理 OLE DB 中的 [OLAP 对象和架构行集 OLE DB](/previous-versions/windows/desktop/ms723056(v=vs.85)) 中的相关主题。 下表的 "说明" 列中的括号内列出了每个主题的名称。  
   
  您可以通过参考 ADO [DataTypeEnum](./datatypeenum.md) 主题的 Description 列，将 OLE DB 文档中的列的数据类型转换为 ado 数据类型。 例如，OLE DB 的数据类型 **DBTYPE_WSTR** 等效于 ADO 数据类型 **adWChar**。  
   
- ADO 为常量、 **adSchemaDBInfoKeywords** 和 **adSchemaDBInfoLiterals**生成类似于架构的结果。 ADO 创建一个 **记录集**，然后使用 **IDBInfo：： GetKeywords** 和 **IDBInfo：： GetLiteralInfo** 方法分别返回的值填充每一行。 有关这些方法的其他信息可在 OLE DB 程序员参考的 [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) 部分找到。  
+ ADO 为常量、 **adSchemaDBInfoKeywords** 和 **adSchemaDBInfoLiterals** 生成类似于架构的结果。 ADO 创建一个 **记录集**，然后使用 **IDBInfo：： GetKeywords** 和 **IDBInfo：： GetLiteralInfo** 方法分别返回的值填充每一行。 有关这些方法的其他信息可在 OLE DB 程序员参考的 [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) 部分找到。  
   
 |返回的常量|Value|说明|约束列|  
 |--------------|-----------|-----------------|------------------------|  
@@ -126,5 +126,5 @@ ms.locfileid: "88989258"
 |AdoEnums|  
 |AdoEnums. VIEWTABLEUSAGE|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [OpenSchema 方法](./openschema-method.md)

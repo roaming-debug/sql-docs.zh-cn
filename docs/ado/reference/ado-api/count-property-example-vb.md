@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 772d06ca8fa854f2af77e45007944d7217dd36a7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c3b910450302c83486979f59d019405b97013c22
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974508"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171387"
 ---
 # <a name="count-property-example-vb"></a>Count 属性示例 (VB)
-此示例演示了***Employee***数据库中包含两个集合的[Count](./count-property-ado.md)属性。 属性获取每个集合中的对象数，并设置枚举这些集合的循环的上限。 枚举这些集合而不使用 **Count** 属性的另一种方法是使用 `For Each...Next` 语句。  
+此示例演示了 ***Employee** _ 数据库中包含两个集合的 [Count](./count-property-ado.md)属性。 属性获取每个集合中的对象数，并设置枚举这些集合的循环的上限。 如果不使用 _ *Count** 属性枚举这些集合，另一种方法是使用 `For Each...Next` 语句。  
   
 ```  
 'BeginCountVB  

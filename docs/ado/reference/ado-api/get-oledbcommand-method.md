@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - get_OLEDBCommand method [ADO]
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f824359fb373b2e2ac1347d10ef5ea32e9bee091
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: edd8816389088c077f43ed7b36f01ebd61010e98
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972818"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171011"
 ---
 # <a name="get_oledbcommand-method"></a>get_OLEDBCommand 方法
 返回基础 OLE DB 命令，首先将在 ADO 命令上设置的所有参数信息传播到 OLE DB 命令。  
@@ -36,5 +36,5 @@ HRESULT get_OLEDBCommand(
  *ppOLEDBCommand*  
  弄一个指针，指向将写入基础 OLE DB 命令的 IUnknown 指针的指针位置。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [IADOCommandConstruction](/previous-versions/windows/desktop/aa965677(v=vs.85))

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9647fd9fe838ff5657b04eb51fbe6adb40ce936
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 15043939f3e2f024895d5199117550022ad43117
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973058"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171053"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a> (JScript) 的 Filter 和 RecordCount 属性示例
 此示例在 Northwind 数据库的 "公司" 表上打开一个 **记录集** ，然后使用 " [筛选器](./filter-property.md) " 属性来限制对 "公司名称" 字段以字母 D 开头的记录可见的记录。剪切以下代码并将其粘贴到记事本或其他文本编辑器，并将其保存为 **FilterJS**。  

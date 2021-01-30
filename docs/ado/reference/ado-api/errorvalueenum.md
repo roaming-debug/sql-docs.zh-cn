@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ErrorValueEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48962e163804eaa779f82789082e5b8d493bc3cd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 238c8bf3d0c21625b9317690f70adbe16bd5075f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973578"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171170"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 运行时错误的类型。  
@@ -32,14 +32,14 @@ ms.locfileid: "88973578"
   
 -   负小数点-完整错误号的十进制转换。  
   
--   十六进制-完整错误号的十六进制表示形式。 Windows 设备代码采用第四位数。 ADO 错误 *号的工具代码是。* 例如 ***： 0x800 0E7B***。  
+-   完整错误号 Hexadecimal-The 十六进制表示形式。 Windows 设备代码采用第四位数。 ADO 错误 *号的工具代码是。* 例如： 0x800 ***A** _0E7B。  
   
 > [!NOTE]
->  可能会向 ADO 应用程序传递 OLE DB 错误。 通常，可以通过 Windows 设备代码 *4*来标识这些。 例如，0x800***4***。  
+>  可能会向 ADO 应用程序传递 OLE DB 错误。 通常，可以通过 Windows 设备代码4来标识这些 _*。例如，0x800 * * * 4* *_。  
   
 |返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
-|**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|无法更改将**命令**对象作为其源的**记录集**对象的**ActiveConnection**属性。|  
+|_ *adErrBoundToCommand**|3707-2146824581 0x800A0E7B|无法更改将 **命令** 对象作为其源的 **记录集** 对象的 **ActiveConnection** 属性。|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|服务器无法完成此操作。|  
 |**adErrCantChangeConnection**|3748-2146824540 0x800A0EA4|连接被拒绝。 你请求的新连接具有不同于已使用的的特征。|  
 |**adErrCantChangeProvider**|3220-2146825068 0X800A0C94|提供的提供程序与已使用的提供程序不同。|  
@@ -56,14 +56,14 @@ ms.locfileid: "88973578"
 |**adErrFieldsUpdateFailed**|3749-2146824539 0x800A0EA5|字段更新失败。 有关详细信息，请检查各个字段对象的 **Status** 属性。|  
 |**adErrIllegalOperation**|3219-2146825069 0x800A0C93|不允许在此上下文中执行操作。|  
 |**adErrIntegrityViolation**|3719-2146824569 0x800A0E87|数据值与字段的完整性约束冲突。|  
-|**adErrInTransaction**|3246-2146825042 0x800A0CAE|无法在事务中显式关闭**连接**对象。|  
+|**adErrInTransaction**|3246-2146825042 0x800A0CAE|无法在事务中显式关闭 **连接** 对象。|  
 |**adErrInvalidArgument**|3001-2146825287 0x800A0BB9|参数的类型错误，不在可接受的范围内，或者相互冲突。|  
 |**adErrInvalidConnection**|3709-2146824579 0x800A0E7D|无法使用连接来执行此操作。 它已关闭或在此上下文中无效。|  
 |**adErrInvalidParamInfo**|3708-2146824580 0x800A0E7C|**参数** 对象定义不正确。 提供了不一致或不完整的信息。|  
 |**adErrInvalidTransaction**|3714-2146824574 0x800A0E82|协调事务无效或尚未启动。|  
 |**adErrInvalidURL**|3729-2146824559 0x800A0E91|URL 包含无效字符。 请确保正确键入了 URL。|  
 |**adErrItemNotFound**|3265-2146825023 0x800A0CC1|在与请求的名称或序号相对应的集合中找不到项。|  
-|**adErrNoCurrentRecord**|3021-2146825267 0x800A0BCD|**BOF**或**EOF**为 True，或当前记录已被删除。 请求的操作需要当前记录。|  
+|**adErrNoCurrentRecord**|3021-2146825267 0x800A0BCD|**BOF** 或 **EOF** 为 True，或当前记录已被删除。 请求的操作需要当前记录。|  
 |**adErrNotExecuting**|3715-2146824573 0x800A0E83|无法执行时无法执行操作。|  
 |**adErrNotReentrant**|3710-2146824578 0x800A0E7E|处理事件时无法执行操作。|  
 |**adErrObjectClosed**|3704-2146824584 0x800A0E78|对象处于关闭状态时，不允许执行操作。|  
@@ -123,7 +123,7 @@ ms.locfileid: "88973578"
 |AdoEnums.ErrorValue.STILLEXECUTING|  
 |AdoEnums.ErrorValue.UNSAFEOPERATION|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [Number 属性 (ADO)](../../../ado/reference/ado-api/number-property-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  

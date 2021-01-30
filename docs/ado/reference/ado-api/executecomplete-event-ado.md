@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection::ExecuteComplete
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36e27f8a86fce348dbf2061a1c7be91f43be9adc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c64856ccbd3cdada037ffd77a9ac3b0e74add570
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973388"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171128"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 事件 (ADO)
 执行完命令后，将调用 **ExecuteComplete** 事件。  
@@ -39,7 +39,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  指示受命令影响的记录数的 **长整型** 值。  
   
  *pError*  
- 一个 [错误](../../../ado/reference/ado-api/error-object.md) 对象。 它描述了 **adStatus** 的值为 **adStatusErrorsOccurred**时所发生的错误;否则，不会设置。  
+ 一个 [错误](../../../ado/reference/ado-api/error-object.md) 对象。 它描述了 **adStatus** 的值为 **adStatusErrorsOccurred** 时所发生的错误;否则，不会设置。  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。 当调用此事件时，如果导致事件的操作成功，则将此参数设置为 **adStatusOK** ; 如果操作失败，则设置为 **adStatusErrorsOccurred** 。  
@@ -55,7 +55,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pConnection*  
  [连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 执行操作时所用的连接。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  由于连接的原因，可能会发生 **ExecuteComplete** 事件 **。**[执行](../../../ado/reference/ado-api/execute-method-ado-connection.md)、 **命令。**[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)、 **Recordset。**[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)， **记录集。**[Requery](../../../ado/reference/ado-api/requery-method.md)，或 **记录集。**[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 方法。  
   
 ## <a name="see-also"></a>另请参阅  

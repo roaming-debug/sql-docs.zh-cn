@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Collection::Refresh
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66324860f931a919cccc36d3de9464d2ad2e48d0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f72f41f58ed43665acd3838a5f8e2228c736fd78
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989608"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170396"
 ---
 # <a name="refresh-method-ado"></a>Refresh 方法 (ADO)
 更新集合中的对象，以反映提供程序提供的和特定于提供程序的对象。  
@@ -36,25 +36,25 @@ collection.Refresh
 ```  
   
 ## <a name="remarks"></a>备注  
- **Refresh**方法完成不同的任务，具体取决于调用该方法的集合。  
+ **Refresh** 方法完成不同的任务，具体取决于调用该方法的集合。  
   
 ### <a name="parameters"></a>参数  
- 对[command](./command-object-ado.md)对象的[Parameters](./parameters-collection-ado.md)集合使用**Refresh**方法将检索在**命令**对象中指定的存储过程或参数化查询的提供程序端参数信息。 对于不支持存储过程调用或参数化查询的访问接口，该集合将为空。  
+ 对 [command](./command-object-ado.md)对象的 [Parameters](./parameters-collection-ado.md)集合使用 **Refresh** 方法将检索在 **命令** 对象中指定的存储过程或参数化查询的提供程序端参数信息。 对于不支持存储过程调用或参数化查询的访问接口，该集合将为空。  
   
- 在调用**Refresh**方法之前，应将**命令**对象的[ActiveConnection](./activeconnection-property-ado.md)属性设置为有效的[连接](./connection-object-ado.md)对象，将[CommandText](./commandtext-property-ado.md)属性设置为有效的命令，并将[CommandType](./commandtype-property-ado.md)属性设置为**adCmdStoredProc** 。  
+ 在调用 **Refresh** 方法之前，应将 **命令** 对象的 [ActiveConnection](./activeconnection-property-ado.md)属性设置为有效的 [连接](./connection-object-ado.md)对象，将 [CommandText](./commandtext-property-ado.md)属性设置为有效的命令，并将 [CommandType](./commandtype-property-ado.md)属性设置为 **adCmdStoredProc** 。  
   
- 如果在调用**Refresh**方法之前访问**参数**集合，则 ADO 将自动调用方法并填充集合。  
+ 如果在调用 **Refresh** 方法之前访问 **参数** 集合，则 ADO 将自动调用方法并填充集合。  
   
 > [!NOTE]
 >  如果使用 **Refresh** 方法从提供程序中获取参数信息，并返回一个或多个可变长度的数据类型 [参数](./parameter-object.md) 对象，则 ADO 可能会根据其最大可能大小为参数分配内存，这将导致执行过程中出错。 在调用[Execute](./execute-method-ado-command.md)方法以防止错误之前，应显式设置这些参数的[大小](./size-property-ado-parameter.md)属性。  
   
 ### <a name="fields"></a>字段  
- 对[字段](./fields-collection-ado.md)集合使用**Refresh**方法不会产生任何效果。 若要从基础数据库结构中检索更改，必须使用 [Requery](./requery-method.md) 方法，如果 [Recordset](./recordset-object-ado.md) 对象不支持书签，则必须使用 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法。  
+ 对 [字段](./fields-collection-ado.md)集合使用 **Refresh** 方法不会产生任何效果。 若要从基础数据库结构中检索更改，必须使用 [Requery](./requery-method.md) 方法，如果 [Recordset](./recordset-object-ado.md) 对象不支持书签，则必须使用 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法。  
   
 ### <a name="properties"></a>属性  
- 对某些对象的**Properties**集合使用**Refresh**方法将使用提供程序公开的动态属性来填充集合。 这些属性提供了有关特定于提供程序的功能的信息，而不是 ADO 支持的内置属性。  
+ 对某些对象的 **Properties** 集合使用 **Refresh** 方法将使用提供程序公开的动态属性来填充集合。 这些属性提供了有关特定于提供程序的功能的信息，而不是 ADO 支持的内置属性。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataTypeEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd0e2226c0b85b10d7da9f4f14e7068aa25b1d2d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 700f7aa4053a1e99bcae5cdabe01a5fc6c440258
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974238"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171315"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 指定 [字段](../../../ado/reference/ado-api/field-object.md)、 [参数](../../../ado/reference/ado-api/parameter-object.md)或 [属性](../../../ado/reference/ado-api/property-object-ado.md)的数据类型。 下表的 "说明" 列中的括号内显示了相应的 OLE DB 类型指示器。  
@@ -115,7 +115,7 @@ ms.locfileid: "88974238"
 |AdoEnums. OLEDBTYPE.VARWCHAR|  
 |AdoEnums. WCHAR|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

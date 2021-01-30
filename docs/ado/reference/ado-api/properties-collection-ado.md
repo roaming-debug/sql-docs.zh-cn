@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _ADO::get_Properties
@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e9d13eb3c985bdc5e13a44ec59661225476942e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56e758cf68a87db330d459b638548031122498bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989988"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170550"
 ---
 # <a name="properties-collection-ado"></a>属性集合 (ADO)
 包含对象的特定实例的所有 [属性](./property-object-ado.md) 对象。  
   
-## <a name="remarks"></a>注解  
- 某些 ADO 对象具有属性**集合，其中包含****属性**对象。 每个 **属性** 对象对应于特定于提供程序的 ADO 对象的特性。  
+## <a name="remarks"></a>备注  
+ 某些 ADO 对象具有属性 **集合，其中包含****属性** 对象。 每个 **属性** 对象对应于特定于提供程序的 ADO 对象的特性。  
   
 > [!NOTE]
->  有关如何使用**属性**对象的更详细说明，请参阅[属性](./property-object-ado.md)对象主题。  
+>  有关如何使用 **属性** 对象的更详细说明，请参阅 [属性](./property-object-ado.md)对象主题。  
   
- 当**记录集**关闭时， **Recordset**对象的**动态属性**超出范围 (变得不可用) 。  
+ 当 **记录集** 关闭时， **Recordset** 对象的 **动态属性** 超出范围 (变得不可用) 。  
   
  本部分包含以下主题。  
   

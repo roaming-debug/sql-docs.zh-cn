@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlinkedserver_TSQL
 - sp_addlinkedserver
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81cc7901dd6e9bfab24e0fb3d926173353978f40
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c894bbf5bdb3e523901fc4f1200d146d0a569449
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548363"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171790"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  创建链接服务器。 链接服务器让用户可以对 OLE DB 数据源进行分布式异类查询。 使用 **sp_addlinkedserver**创建链接服务器后，可对该服务器运行分布式查询。 如果链接服务器定义为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，则可执行远程存储过程。  
+  创建链接服务器。 链接服务器让用户可以对 OLE DB 数据源进行分布式异类查询。 使用 **sp_addlinkedserver** 创建链接服务器后，可对该服务器运行分布式查询。 如果链接服务器定义为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，则可执行远程存储过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,14 +44,14 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-[ @server =] * \' 服务器 \' *          
+[ @server =] *\' 服务器 \'*          
 要创建的链接服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。  
   
-[ @srvproduct =] * \' product_name \' *          
-要添加为链接服务器的 OLE DB 数据源的产品名称。 *product_name* 为 **nvarchar (** 128 **) **，默认值为 NULL。 如果不需要指定 **SQL Server**、 *provider_name*、 *data_source*、 *位置*、 *provider_string*和 *目录* 。  
+[ @srvproduct =] *\' product_name \'*          
+要添加为链接服务器的 OLE DB 数据源的产品名称。 *product_name* 为 **nvarchar (** 128 **)**，默认值为 NULL。 如果不需要指定 **SQL Server**、 *provider_name*、 *data_source*、 *位置*、 *provider_string* 和 *目录* 。  
   
-[ @provider =] * \' provider_name \' *          
-与此数据源对应的 OLE DB 访问接口的唯一编程标识符 (PROGID)。 对于当前计算机上安装的指定 OLE DB 提供程序， *provider_name*必须是唯一的。 *provider_name* 为 **nvarchar (128) **，默认值为 NULL;但是，如果省略 *provider_name* ，则使用 sqlncli.msi。 
+[ @provider =] *\' provider_name \'*          
+与此数据源对应的 OLE DB 访问接口的唯一编程标识符 (PROGID)。 对于当前计算机上安装的指定 OLE DB 提供程序， *provider_name* 必须是唯一的。 *provider_name* 为 **nvarchar (128)**，默认值为 NULL;但是，如果省略 *provider_name* ，则使用 sqlncli.msi。 
 
 > [!NOTE]
 > 使用 SQLNCLI.MSI 将重定向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的最新版本。 OLE DB 提供程序应以指定的 PROGID 在注册表中注册。
@@ -59,21 +59,21 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > [!IMPORTANT] 
 > 以前的 Microsoft OLE DB Provider for SQL Server (SQLOLEDB) 和 SQL Server Native Client OLEDB 提供程序 (SQLNCLI) 仍然不推荐使用，不建议在新的开发工作中使用它们。 相反，请使用新的 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)，其将使用最新的服务器功能进行更新。
   
-[ @datasrc =] * \' data_source \' *          
- 由 OLE DB 访问接口解释的数据源的名称。 *data_source* (4000 **) **为**nvarchar **。 *data_source* 作为 DBPROP_INIT_DATASOURCE 属性传递以初始化 OLE DB 提供程序。  
+[ @datasrc =] *\' data_source \'*          
+ 由 OLE DB 访问接口解释的数据源的名称。 *data_source* (4000 **)** 为 **nvarchar**。 *data_source* 作为 DBPROP_INIT_DATASOURCE 属性传递以初始化 OLE DB 提供程序。  
   
-[ @location =] * \' 位置 \' *          
- 由 OLE DB 访问接口解释的数据库的位置。 *location* (4000 **) **为**NVARCHAR **，默认值为 NULL。 *location* 作为 DBPROP_INIT_LOCATION 属性传递以初始化 OLE DB 提供程序。  
+[ @location =] *\' 位置 \'*          
+ 由 OLE DB 访问接口解释的数据库的位置。 *location* (4000 **)** 为 **NVARCHAR**，默认值为 NULL。 *location* 作为 DBPROP_INIT_LOCATION 属性传递以初始化 OLE DB 提供程序。  
   
-[ @provstr =] * \' provider_string \' *          
- OLE DB 访问接口特定的连接字符串，它可标识唯一的数据源。 *provider_string* 为 **nvarchar (** 4000 **) **，默认值为 NULL。 *provstr* 传递给 IDataInitialize，或设置为 DBPROP_INIT_PROVIDERSTRING 属性以初始化 OLE DB 提供程序。  
+[ @provstr =] *\' provider_string \'*          
+ OLE DB 访问接口特定的连接字符串，它可标识唯一的数据源。 *provider_string* 为 **nvarchar (** 4000 **)**，默认值为 NULL。 *provstr* 传递给 IDataInitialize，或设置为 DBPROP_INIT_PROVIDERSTRING 属性以初始化 OLE DB 提供程序。  
   
- 当针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序创建链接服务器时，可以通过使用 server 关键字 as server =*servername* \\ *instancename*指定的特定实例来指定实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *servername* 是运行的计算机的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， *instancename* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户将连接到的特定实例的名称。  
+ 当针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序创建链接服务器时，可以通过使用 server 关键字 as server =*servername* \\ *instancename* 指定的特定实例来指定实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *servername* 是运行的计算机的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， *instancename* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户将连接到的特定实例的名称。  
   
 > [!NOTE]
-> 若要访问镜像数据库，则连接字符串必须包含数据库名称。 该名称是数据访问接口启用故障转移尝试所必需的。 可以在** \@ provstr**或** \@ catalog**参数中指定数据库。 此外，连接字符串还可以提供故障转移伙伴名称。  
+> 若要访问镜像数据库，则连接字符串必须包含数据库名称。 该名称是数据访问接口启用故障转移尝试所必需的。 可以在 **\@ provstr** 或 **\@ catalog** 参数中指定数据库。 此外，连接字符串还可以提供故障转移伙伴名称。  
   
-[ @catalog =] * \' 目录 \' *       
+[ @catalog =] *\' 目录 \'*       
  与 OLE DB 访问接口建立连接时所使用的目录。 *目录* 的值为 **sysname**，默认值为 NULL。 *目录* 作为 DBPROP_INIT_CATALOG 属性传递以初始化 OLE DB 提供程序。 在针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例定义链接服务器时，目录指向链接服务器映射到的默认数据库。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -89,14 +89,14 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> （默认值）||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序||**SQLNCLI**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的网络名称（用于默认实例）|||数据库名称（可选）|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序||**SQLNCLI**|*servername* \\特定实例的*instancename* () |||数据库名称（可选）|  
-|Oracle，版本 8 及更高版本|Oracle Provider for OLE DB|任意|**OraOLEDB.Oracle**|用于 Oracle 数据库的别名||||  
-|Access/Jet|Microsoft OLE DB Provider for Jet|任意|**Microsoft.Jet.OLEDB.4.0**|Jet 数据库文件的完整路径||||  
-|ODBC 数据源|Microsoft OLE DB Provider for ODBC|任意|**MSDASQL**|ODBC 数据源的系统 DSN||||  
-|ODBC 数据源|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|任意|**MSDASQL**|||ODBC 连接字符串||  
-|文件系统|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|任意|**MSIDXS**|索引服务目录名称||||  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 电子表格|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|任意|**Microsoft.Jet.OLEDB.4.0**|Excel 文件的完整路径||Excel 5。0||  
-|IBM DB2 数据库|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|任意|**DB2OLEDB**|||请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] DB2 文档 OLE DB 提供程序。|DB2 数据库的目录名称|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序||**SQLNCLI**|*servername* \\特定实例的 *instancename* () |||数据库名称（可选）|  
+|Oracle，版本 8 及更高版本|Oracle Provider for OLE DB|Any|**OraOLEDB.Oracle**|用于 Oracle 数据库的别名||||  
+|Access/Jet|Microsoft OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Jet 数据库文件的完整路径||||  
+|ODBC 数据源|Microsoft OLE DB Provider for ODBC|Any|**MSDASQL**|ODBC 数据源的系统 DSN||||  
+|ODBC 数据源|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|Any|**MSDASQL**|||ODBC 连接字符串||  
+|文件系统|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|Any|**MSIDXS**|索引服务目录名称||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 电子表格|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel 文件的完整路径||Excel 5。0||  
+|IBM DB2 数据库|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|Any|**DB2OLEDB**|||请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] DB2 文档 OLE DB 提供程序。|DB2 数据库的目录名称|  
   
  <sup>1</sup> 通过这种设置链接服务器的方式，可以强制链接服务器的名称与的远程实例的网络名称相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用 *data_source* 指定服务器。  
   
@@ -104,14 +104,14 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果未指定提供程序名称，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定为产品名称，则 Native Client OLE DB 提供程序是与一起使用的提供程序。 即使指定了较早版本的访问接口名称 SQLOLEDB，在保存到目录时该名称也将改为 SQLNCLI。  
   
- *Data_source*、*位置*、 *provider_string*和*目录*参数标识链接服务器指向的数据库或数据库。 如果其中任一参数为 NULL，则不设置相应的 OLE DB 初始化属性。  
+ *Data_source*、*位置*、 *provider_string* 和 *目录* 参数标识链接服务器指向的数据库或数据库。 如果其中任一参数为 NULL，则不设置相应的 OLE DB 初始化属性。  
   
  在群集环境中，当指定指向 OLE DB 数据源的文件名时，应使用通用命名规则 (UNC) 名称或共享驱动器指定位置。  
   
- 不能在用户定义的事务中执行**sp_addlinkedserver** 。  
+ 不能在用户定义的事务中执行 **sp_addlinkedserver** 。  
   
 > [!IMPORTANT]
-> 使用 **sp_addlinkedserver**创建链接服务器时，将为所有本地登录名添加默认自映射。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经过身份验证的登录名可能能够获取服务帐户下的访问接口的访问权限 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 管理员应考虑使用 `sp_droplinkedsrvlogin <linkedserver_name>, NULL` 删除全局映射。  
+> 使用 **sp_addlinkedserver** 创建链接服务器时，将为所有本地登录名添加默认自映射。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经过身份验证的登录名可能能够获取服务帐户下的访问接口的访问权限 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 管理员应考虑使用 `sp_droplinkedsrvlogin <linkedserver_name>, NULL` 删除全局映射。  
   
 ## <a name="permissions"></a>权限  
  `sp_addlinkedserver`语句需要 `ALTER ANY LINKED SERVER` 权限。  (" [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **新建链接服务器** " 对话框的实现方式是需要 `sysadmin` 固定服务器角色的成员身份。 )   

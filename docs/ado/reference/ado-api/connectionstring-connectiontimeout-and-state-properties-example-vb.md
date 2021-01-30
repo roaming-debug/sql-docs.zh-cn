@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6154dd6f741383dfbb2c86db95e766fc9903e3d5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 51f92f1bef619dca21947fd5fae030f2618e4e7c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974788"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171440"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout 和 State 属性示例 (VB) 
 此示例演示使用 [ConnectionString](./connectionstring-property-ado.md) 属性打开 [连接](./connection-object-ado.md) 对象的不同方法。 它还使用 [ConnectionTimeout](./connectiontimeout-property-ado.md) 属性设置连接超时期限，并使用 [state](./state-property-ado.md) 属性来检查连接状态。 运行此过程需要 GetState 函数。  

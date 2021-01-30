@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ParameterAttributesEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c070dcc9d10b55033152a66851db0b68f459ae7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0a6ef5494869e892abdbb70fc517a4e0186e4a51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990138"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170606"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 指定 [参数](./parameter-object.md) 对象的特性。  
@@ -41,5 +41,5 @@ ms.locfileid: "88990138"
 |AdoEnums.ParameterAttributes.NULLABLE|  
 |AdoEnums.ParameterAttributes.LONG|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [Attributes 属性 (ADO)](./attributes-property-ado.md)

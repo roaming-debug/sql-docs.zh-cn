@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::raw_CopyRecord
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0056d33f1ad07ed48002bb7638acd84a963fb566
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d2f6cd1b8bb40b4c62ad2c75fef63fd641201e9a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974578"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171404"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 方法 (ADO)
 将 [记录](./record-object-ado.md) 表示的实体复制到其他位置。  
@@ -42,24 +42,24 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  可选。 一个 **字符串** 值，该值包含指定将复制 *源* 的位置的 URL。  
   
  *UserName*  
- 可选。 一个 **字符串** 值，该值包含用户 ID，该 ID 在需要时授予访问 *目标*的权限。  
+ 可选。 一个 **字符串** 值，该值包含用户 ID，该 ID 在需要时授予访问 *目标* 的权限。  
   
  *密码*  
  可选。 一个包含密码的 **字符串** 值，如果需要，将验证 *用户名*。  
   
  *选项*  
- 可选。 默认值为**adCopyUnspecified**的[CopyRecordOptionsEnum](./copyrecordoptionsenum.md)值。 指定此方法的行为。  
+ 可选。 默认值为 **adCopyUnspecified** 的 [CopyRecordOptionsEnum](./copyrecordoptionsenum.md)值。 指定此方法的行为。  
   
  *异步*  
- 可选。 一个 **布尔** 值，如果 **为 True，则**将此操作指定为异步。  
+ 可选。 一个 **布尔** 值，如果 **为 True，则** 将此操作指定为异步。  
   
 ## <a name="return-value"></a>返回值  
- 通常返回*Destination*值的**字符串**值。 但是，返回的确切值与提供程序相关。  
+ 通常返回 *Destination* 值的 **字符串** 值。 但是，返回的确切值与提供程序相关。  
   
-## <a name="remarks"></a>注解  
- *源*和*目标*的值不得完全相同;否则，会发生运行时错误。 至少一个服务器、路径或资源名称必须不同。  
+## <a name="remarks"></a>备注  
+ *源* 和 *目标* 的值不得完全相同;否则，会发生运行时错误。 至少一个服务器、路径或资源名称必须不同。  
   
- 所有子级 (例如 *，将以* 递归方式复制子目录) ，除非指定了 **adCopyNonRecursive** 。 在递归操作中， *目标* 不能是 *源*的子目录;否则，操作将不会完成。  
+ 所有子级 (例如 *，将以* 递归方式复制子目录) ，除非指定了 **adCopyNonRecursive** 。 在递归操作中， *目标* 不能是 *源* 的子目录;否则，操作将不会完成。  
   
  如果 *Destination* 标识现有实体 (例如，) 文件或目录，则此方法将失败，除非指定了 **adCopyOverWrite** 。  
   
@@ -69,5 +69,5 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 > [!NOTE]
 >  使用 http 方案的 Url 将自动调用 [用于 Internet 发布的 Microsoft OLE DB 提供程序](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅 [绝对和相对 url](../../guide/data/absolute-and-relative-urls.md)。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [记录对象 (ADO)](./record-object-ado.md)

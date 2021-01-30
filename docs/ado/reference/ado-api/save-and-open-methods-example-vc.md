@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 547916d25655a34883072f39701f3ac9b1a5df45
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0c39faffc0626cf5cec3837368b13b3df6f5a2a3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989348"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170324"
 ---
 # <a name="save-and-open-methods-example-vc"></a>保存并打开方法示例 (VC + +) 
 这三个示例演示如何将 [Save](./save-method.md) 和 **Open** 方法一起使用。  
   
- 假设您正在出差并想要从数据库中获取表。 在开始之前，你可以访问作为 [记录集](./recordset-object-ado.md) 的数据，并将其保存为可传送的形式。 到达目标后，可将 **记录集** 作为本地、断开连接的 **记录集**访问。 对 **记录集**进行更改，然后再次保存。 最后，当您返回 home 时，您将再次连接到该数据库，并将其更新为对您的路上所做的更改。  
+ 假设您正在出差并想要从数据库中获取表。 在开始之前，你可以访问作为 [记录集](./recordset-object-ado.md) 的数据，并将其保存为可传送的形式。 到达目标后，可将 **记录集** 作为本地、断开连接的 **记录集** 访问。 对 **记录集** 进行更改，然后再次保存。 最后，当您返回 home 时，您将再次连接到该数据库，并将其更新为对您的路上所做的更改。  
   
 ```  
 // BeginSaveCpp.cpp  

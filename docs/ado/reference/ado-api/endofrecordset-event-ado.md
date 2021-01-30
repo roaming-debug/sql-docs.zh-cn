@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - EndOfRecordset
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c0bd91666040a87d104ff4a9c0036596b711a51
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9369b22c012773627c17da55a336aac116dc4e06
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973793"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171230"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset 事件 (ADO)
-尝试移到超过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)末尾的行时，将调用**EndOfRecordset**事件。  
+尝试移到超过 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)末尾的行时，将调用 **EndOfRecordset** 事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +36,7 @@ EndOfRecordset fMoreData, adStatus, pRecordset
   
 #### <a name="parameters"></a>参数  
  *fMoreData*  
- 一个 **VARIANT_BOOL** 值，如果设置为 VARIANT_TRUE，则指示已添加到 **记录集**的行数。  
+ 一个 **VARIANT_BOOL** 值，如果设置为 VARIANT_TRUE，则指示已添加到 **记录集** 的行数。  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。  
@@ -46,12 +46,12 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  在 **EndOfRecordset** 返回之前，将此参数设置为 **adStatusUnwantedEvent** ，以防止后续通知。  
   
  *pRecordset*  
- **记录集**对象。 发生此事件的 **记录集** 。  
+ **记录集** 对象。 发生此事件的 **记录集** 。  
   
-## <a name="remarks"></a>注解  
- 如果[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)操作失败，则可能发生**EndOfRecordset**事件。  
+## <a name="remarks"></a>备注  
+ 如果 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)操作失败，则可能发生 **EndOfRecordset** 事件。  
   
- 当尝试移过 **记录集** 对象的末尾时，将调用此事件处理程序，可能是由于调用 **MoveNext**。 但是，在此事件中，你可以从数据库中检索更多记录，并将它们追加到 **记录集**的末尾。 在这种情况下，将 *fMoreData* 设置为 VARIANT_TRUE，并从 **EndOfRecordset**返回。 然后再次调用 **MoveNext** 以访问新检索到的记录。  
+ 当尝试移过 **记录集** 对象的末尾时，将调用此事件处理程序，可能是由于调用 **MoveNext**。 但是，在此事件中，你可以从数据库中检索更多记录，并将它们追加到 **记录集** 的末尾。 在这种情况下，将 *fMoreData* 设置为 VARIANT_TRUE，并从 **EndOfRecordset** 返回。 然后再次调用 **MoveNext** 以访问新检索到的记录。  
   
 ## <a name="see-also"></a>另请参阅  
  [ (VC + + 的 ADO 事件模型示例) ](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

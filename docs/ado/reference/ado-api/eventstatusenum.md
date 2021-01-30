@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - EventStatusEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 853dd54afbb8753b05ce95f17b20aa600fea493c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ace9f64003241cbf16e0ed957bdce77a1187813c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973558"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171179"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 指定事件的当前执行状态。  
@@ -45,7 +45,7 @@ ms.locfileid: "88973558"
 |AdoEnums. EventStatus. OK|  
 |AdoEnums. EventStatus. UNWANTEDEVENT|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

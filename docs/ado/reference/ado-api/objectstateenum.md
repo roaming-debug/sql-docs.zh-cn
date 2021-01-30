@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ObjectStateEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f89b433ae7e44b3b90c3a7ef1f8eca4bcd62f5ec
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 85af405ef821fdcdc1b468b2c038e6de2a385946
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990378"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170732"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 指定对象是打开还是关闭，连接到数据源，执行命令，或检索数据。  
@@ -45,7 +45,7 @@ ms.locfileid: "88990378"
 |AdoEnums.ObjectState.EXECUTING|  
 |AdoEnums.ObjectState.FETCHING|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

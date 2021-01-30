@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c126e00d424e01bfa25fd74356678245ca1eac8b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d55f332fec8f497ff83ce83b57d8c776a67cac52
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990358"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170721"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open 和 Close 方法示例 (VBScript)
 此示例使用已打开的[记录集](./recordset-object-ado.md)和[连接](./connection-object-ado.md)对象上的[打开](./open-method-ado-recordset.md)和[关闭](./close-method-ado.md)方法。  

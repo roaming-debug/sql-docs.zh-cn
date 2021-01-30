@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Command::Dialect
@@ -16,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be93ceb76aa0aadba5b28673c16704b0881186f9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ed95df8ca18a60cf34108258e7b3f624cb0cb1fe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973898"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171243"
 ---
 # <a name="dialect-property"></a>Dialect 属性
 指示 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 或 [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) 属性的方言。 方言定义了提供程序用于分析字符串或流的语法和一般规则。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- **方言**属性包含表示命令文本或流的方言的有效 GUID。 此属性的默认值为 {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}，指示提供程序应选择如何解释命令文本或流。  
+ **方言** 属性包含表示命令文本或流的方言的有效 GUID。 此属性的默认值为 {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}，指示提供程序应选择如何解释命令文本或流。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  当用户读取此属性的值时，ADO 不会查询提供程序;它返回当前存储在 [Command](../../../ado/reference/ado-api/command-object-ado.md) 对象中的值的字符串表示形式。  
   
  当用户设置 **方言** 属性时，ADO 将验证 GUID，如果提供的值不是有效的 guid，则会引发错误。 请参阅提供程序的文档，以确定 **方言** 属性支持的 GUID 值。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  

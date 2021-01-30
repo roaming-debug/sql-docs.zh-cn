@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_audit_write
 - sp_audit_write_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56795d7ed3da83dff9f50d70f639300dae0da3a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0ac793b35f5e72b93a27369bf00327a969059b0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536699"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171761"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>参数  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- 用户定义并记录在审核日志的 **user_defined_event_id** 列中的参数。 * \@ user_defined_event_id*类型为**smallint**。  
+ 用户定义并记录在审核日志的 **user_defined_event_id** 列中的参数。 *\@ user_defined_event_id* 类型为 **smallint**。  
   
  `[ @succeeded = ] succeeded`  
  用户为指示事件是否成功而传递的参数。 它将出现在审核日志的成功列中。 `@succeeded` 为 **bit**。  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- 由用户定义的文本，并且该文本将记录在审核日志的新的 user_defined_event_id 列中。 `@user_defined_information` 为 **nvarchar (4000) **。  
+ 由用户定义的文本，并且该文本将记录在审核日志的新的 user_defined_event_id 列中。 `@user_defined_information` 为 **nvarchar (4000)**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eeb075e3ad722fa7d449833a6be9b1acaa481eab
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 183d57a53063a4fc72d5218a2fd061a9913ce5c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990268"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170671"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize 属性示例 (VB)
-此示例演示 [字段](./field-object.md) 对象的 "动态 **优化** " 属性。 不会为***Pubs***数据库中***作者***表的***zip***字段编制索引。 将 "***压缩***" 字段中的 "[优化](./optimize-property-dynamic-ado.md)" 属性设置为 " **True** " 可授予 ADO 生成索引，从而提高[Find](./find-method-ado.md)方法的性能。  
+此示例演示 [字段](./field-object.md) 对象的 "动态 **优化** " 属性。 **不会为 _ _Pubs_ _ 数据库中的 _ _作者_*_ 表* 的 " _zip_*_ _" 字段**编制索引。[](./optimize-property-dynamic-ado.md)*** 对于 **_Zip_* _ 字段，将 Optimize 属性设置为 _ True 会授权 ADO 生成索引，以提高 [Find](./find-method-ado.md)方法的性能。  
   
 ```  
 'BeginOptimizeVB  
@@ -49,7 +49,7 @@ Public Sub Main()
      ' open recordset client-side to enable index creation.  
     Set rstAuthors = New ADODB.Recordset  
     rstAuthors.CursorLocation = adUseClient  
-    strSQLAuthors = "SELECT * FROM Authors"  
+    strSQLAuthors = "SELECT _ FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
      ' Create the index.  
     rstAuthors!zip.Properties("Optimize") = True  

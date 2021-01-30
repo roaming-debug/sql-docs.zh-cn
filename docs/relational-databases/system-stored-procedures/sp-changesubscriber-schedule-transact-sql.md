@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changesubscriber_schedule
 - sp_changesubscriber_schedule_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6fb42a19d3c1b844fdcff1d31201d9acb0a86adb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9e93079a747c3766a47ababf3fdd866053b40968
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543660"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171766"
 ---
 # <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,15 +55,15 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
   
 `[ @frequency_type = ] frequency_type` 用于计划分发任务的频率。 *frequency_type* 的值为 **int**，默认值为 **64**。 有 10 个计划列。  
   
-`[ @frequency_interval = ] frequency_interval` 应用于 *frequency_type*设置的频率的值。 *frequency_interval* 的值为 **int**，默认值为 **1**。  
+`[ @frequency_interval = ] frequency_interval` 应用于 *frequency_type* 设置的频率的值。 *frequency_interval* 的值为 **int**，默认值为 **1**。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 分发任务的日期。 *frequency_relative_interval* 的值为 **int**，默认值为 **1**。  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 **0**。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type* 使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 **0**。  
   
 `[ @frequency_subday = ] frequency_subday` 在定义的时间段内重新计划的频率（分钟）。 *frequency_subday* 的值为 **int**，默认值为 **4**。  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 **5**。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday* 的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 **5**。  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day` 第一次安排分发任务的时间。 *active_start_time_of_day* 的值为 **int**，默认值为 **0**。  
   
@@ -76,7 +76,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 `[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  更改发布服务器上的项目属性时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  更改发布服务器上的项目属性时，不应使用 *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -85,7 +85,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  **sp_changesubscriber_schedule** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_changesubscriber_schedule**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_changesubscriber_schedule** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_addsubscriber_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   

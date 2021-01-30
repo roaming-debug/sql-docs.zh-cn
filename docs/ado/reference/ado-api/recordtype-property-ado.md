@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::get_RecordType
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 852ca0eeacfddfe7e60db20870dadf0c59962c21
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 60e7241cc7c11fe66767793478bf09d45a013e48
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989678"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170408"
 ---
 # <a name="recordtype-property-ado"></a>RecordType 属性 (ADO)
 指示 [记录](./record-object-ado.md) 对象的类型。  
@@ -31,10 +31,10 @@ ms.locfileid: "88989678"
 ## <a name="return-value"></a>返回值  
  返回 [RecordTypeEnum](./recordtypeenum.md) 值。  
   
-## <a name="remarks"></a>注解  
- **RecordType**属性是只读的。  
+## <a name="remarks"></a>备注  
+ **RecordType** 属性是只读的。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [记录对象 (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  

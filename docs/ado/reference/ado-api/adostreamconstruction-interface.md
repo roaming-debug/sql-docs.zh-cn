@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ADOStreamConstruction
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f6e32b076fa0faa43a3dff46aed66bcadaa2f1ae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1138d00d291ffdabf415177a948bf87b1c6502a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976158"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171591"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 接口
-**ADOStreamConstruction**接口用于从 c/c + + 应用程序中的 OLE DB **ISTREAM**对象构造 ADO**流**对象。  
+**ADOStreamConstruction** 接口用于从 c/c + + 应用程序中的 OLE DB **ISTREAM** 对象构造 ADO **流** 对象。  
   
 ## <a name="properties"></a>属性  
   
@@ -48,7 +48,7 @@ ms.locfileid: "88976158"
     adoStr.CreateInstance(__uuidof(Stream));  
     ```  
   
-2.  查询**Stream**对象上的**IADOStreamConstruction**接口：  
+2.  查询 **Stream** 对象上的 **IADOStreamConstruction** 接口：  
   
     ```  
     adoStreamConstructionPtr adoStrConstruct=NULL;  
@@ -56,7 +56,7 @@ ms.locfileid: "88976158"
                          (void**)&adoStrConstruct);  
     ```  
   
- 调用 `IADOStreamConstruction::get_Stream` 属性方法，设置 ADO**流**对象上的 OLE DB **IStream**对象：  
+ 调用 `IADOStreamConstruction::get_Stream` 属性方法，设置 ADO **流** 对象上的 OLE DB **IStream** 对象：  
   
 ```  
 IUnknown *pUnk=NULL;  
@@ -64,7 +64,7 @@ pRowset->QueryInterface(IID_IUnknown, (void**)&pUnk);
 adoStrConstruct->put_Stream(pUnk);  
 ```  
   
- 生成的 `adoStr` 对象现在表示从 OLE DB **IStream**对象构造的 ADO**流**对象。  
+ 生成的 `adoStr` 对象现在表示从 OLE DB **IStream** 对象构造的 ADO **流** 对象。  
   
 ## <a name="requirements"></a>要求  
  **版本：** ADO 2.0 或更高版本  

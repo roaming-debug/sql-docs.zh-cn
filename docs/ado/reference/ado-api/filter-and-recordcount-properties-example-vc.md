@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d01d2acc51b89fbe1100e535c9aada7dcb8a603
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 337d31ae8b52457df2d54ddc73a7615e78752bb0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973008"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171045"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a> (VC + +) 的 Filter 和 RecordCount 属性示例
-此示例使用[Filter](./filter-property.md)属性根据应用于现有**记录集**的指定条件来打开新的[记录集](./recordset-object-ado.md)。 它使用 [RecordCount](./recordcount-property-ado.md) 属性来显示两个 **记录集中**的记录数。 运行此过程需要 FilterField 函数。  
+此示例使用 [Filter](./filter-property.md)属性根据应用于现有 **记录集** 的指定条件来打开新的 [记录集](./recordset-object-ado.md)。 它使用 [RecordCount](./recordcount-property-ado.md) 属性来显示两个 **记录集中** 的记录数。 运行此过程需要 FilterField 函数。  
   
 ## <a name="example"></a>示例  
   

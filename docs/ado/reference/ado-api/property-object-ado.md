@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Property
@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7edc57495968cb94dbf8714e3b519acac578775f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a24503889e8bd7deab3bca6072da9114f0a0efdd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989978"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170529"
 ---
 # <a name="property-object-ado"></a>属性对象 (ADO)
 表示由提供程序定义的 ADO 对象的动态特性。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  ADO 对象具有两种类型的属性：内置和动态。  
   
- 内置属性是在 ADO 中实现并使用语法立即可用于任何新对象的属性 `MyObject.Property` 。 它们不会在对象的[Properties](./properties-collection-ado.md)集合中显示为**属性**对象，因此虽然您可以更改其值，但不能修改它们的特征。  
+ 内置属性是在 ADO 中实现并使用语法立即可用于任何新对象的属性 `MyObject.Property` 。 它们不会在对象的 [Properties](./properties-collection-ado.md)集合中显示为 **属性** 对象，因此虽然您可以更改其值，但不能修改它们的特征。  
   
- 动态属性由基础数据提供程序定义，并出现在相应 ADO 对象的 **properties** 集合中。 例如，特定于提供程序的属性可能指示 [Recordset](./recordset-object-ado.md) 对象是否支持事务或更新。 这些附加属性将显示为该**记录集**对象的**属性**集合中的**属性**对象。 只能通过集合使用或语法来引用动态属性 `MyObject.Properties(0)` `MyObject.Properties("Name")` 。  
+ 动态属性由基础数据提供程序定义，并出现在相应 ADO 对象的 **properties** 集合中。 例如，特定于提供程序的属性可能指示 [Recordset](./recordset-object-ado.md) 对象是否支持事务或更新。 这些附加属性将显示为该 **记录集** 对象的 **属性** 集合中的 **属性** 对象。 只能通过集合使用或语法来引用动态属性 `MyObject.Properties(0)` `MyObject.Properties("Name")` 。  
   
  不能删除任何一种属性。  
   

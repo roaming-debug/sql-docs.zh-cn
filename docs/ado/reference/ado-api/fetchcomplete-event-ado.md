@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset::ExecuteComplete
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ef8df9f6d4ea113d5cca9ad9ffba9c4888776d8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 261a3a39486dc73e95a7339906a49657a0d04634
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973348"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171115"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 事件 (ADO)
-当长时间异步操作中的所有记录都已检索到[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)后，将调用**FetchComplete**事件。  
+当长时间异步操作中的所有记录都已检索到 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)后，将调用 **FetchComplete** 事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +36,7 @@ FetchComplete pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>参数  
  *pError*  
- 一个 [错误](../../../ado/reference/ado-api/error-object.md) 对象。 它描述了 **adStatus** 的值为 **adStatusErrorsOccurred**时所发生的错误;否则，不会设置。  
+ 一个 [错误](../../../ado/reference/ado-api/error-object.md) 对象。 它描述了 **adStatus** 的值为 **adStatusErrorsOccurred** 时所发生的错误;否则，不会设置。  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。 当调用此事件时，如果导致事件的操作成功，则将此参数设置为 **adStatusOK** ; 如果操作失败，则设置为 **adStatusErrorsOccurred** 。  
@@ -44,9 +44,9 @@ FetchComplete pError, adStatus, pRecordset
  在此事件返回之前，将此参数设置为 **adStatusUnwantedEvent** 以防止后续通知。  
   
  *pRecordset*  
- **记录集**对象。 为其检索记录的对象。  
+ **记录集** 对象。 为其检索记录的对象。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  若要将 **FetchComplete** 与 Microsoft Visual Basic 一起使用，需要 Visual Basic 6.0 或更高版本。  
   
 ## <a name="see-also"></a>另请参阅  

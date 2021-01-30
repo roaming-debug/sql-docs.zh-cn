@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - RecordOpenOptionsEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 352622f55e82b1941439a242249e067aae090e51
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0ded43552086f814f9ea80fae65d6792e525d24b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989778"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170445"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 指定用于打开 [记录](./record-object-ado.md)的选项。 可以使用或组合这些值。  
@@ -38,5 +38,5 @@ ms.locfileid: "88989778"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  这些常量没有 ADO/WFC 等效项。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [Open 方法（ADO 记录）](./open-method-ado-record.md)
