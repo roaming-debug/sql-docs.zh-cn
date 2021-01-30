@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_denylogin_TSQL
 - sp_denylogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9133a6ee523c27837da0209c57e620a13187bdd1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7006aaa4a8c7ddf0603264d1c241d09a8e327f5f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546167"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178099"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login_ '` Windows 用户或组的名称。 *login* 的 **sysname**为，无默认值。  
+`[ @loginame = ] 'login_ '` Windows 用户或组的名称。 *login* 的 **sysname** 为，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_denylogin** 拒绝将 SQL 权限连接到映射到指定 windows 用户或 windows 组的服务器级别主体。 如果服务器主体不存在，将创建它。 新主体将 [server_principals 在 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图中可见。  
+ **sp_denylogin** 拒绝将 SQL 权限连接到映射到指定 windows 用户或 windows 组的服务器级别主体。 如果服务器主体不存在，将创建它。 新主体将在 [sys.server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图中可见。  
   
- 不能在用户定义的事务中执行**sp_denylogin** 。  
+ 不能在用户定义的事务中执行 **sp_denylogin** 。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  

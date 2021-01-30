@@ -7,22 +7,22 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLParamOptions
 - SQLParamOptions function [ODBC], mapping
 ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a2204921708f6eb2ae7a65925d5c858a0020898
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16b5678840736bf43f2a6ee817e25fd485bb1c4d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424901"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202686"
 ---
 # <a name="sqlparamoptions-mapping"></a>SQLParamOptions 映射
-当应用程序*通过 ODBC 1.x*驱动程序调用**SQLParamOptions**时，调用  
+当应用程序 *通过 ODBC 1.x* 驱动程序调用 **SQLParamOptions** 时，调用  
   
 ```  
 SQLParamOptions(hstmt, crow, piRow);  

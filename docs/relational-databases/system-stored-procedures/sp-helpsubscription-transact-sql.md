@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsubscription_TSQL
 - sp_helpsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ff06497437017fd6771a7402c18d16a5ee6f94b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 73fc43bf20a9306d0224392d984b3f2bff74ec6f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543257"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192900"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +60,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 为 **sysname**，默认值为当前服务器的名称。  
   
 > [!NOTE]  
->  不应指定*发布服务器*，除非它是 Oracle 发布服务器。  
+>  不应指定 *发布服务器*，除非它是 Oracle 发布服务器。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -80,14 +80,14 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**loopback_detection**|**bit**|环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **0** = 发送回。<br /><br /> **1** = 不发送回。<br /><br /> 与双向事务复制一起使用。 有关详细信息，请参阅 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
 |**offload_enabled**|**bit**|指定复制代理的卸载执行是否已设置为在订阅服务器上运行。<br /><br /> 如果为 **0**，则在发布服务器上运行代理。<br /><br /> 如果为 **1**，则在订阅服务器上运行代理。|  
 |**offload_server**|**sysname**|启用了远程代理激活的服务器的名称。 如果为 NULL，则使用 [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) 表中列出的当前 offload_server。|  
-|**** dts_package_name|**sysname**|指定 Data Transformation Services (DTS) 包的名称。|  
-|**** dts_package_location|**int**|为订阅分配了一个 DTS 包时，此包的位置。 如果有一个包，则值为 **0** 时，将在 **分发服务器**上指定包的位置。 如果值为 **1** ，则指定 **订阅服务器**。|  
+|dts_package_name|**sysname**|指定 Data Transformation Services (DTS) 包的名称。|  
+|dts_package_location|**int**|为订阅分配了一个 DTS 包时，此包的位置。 如果有一个包，则值为 **0** 时，将在 **分发服务器** 上指定包的位置。 如果值为 **1** ，则指定 **订阅服务器**。|  
 |**subscriber_security_mode**|**smallint**|订阅服务器上的安全模式，其中 **1** 表示 Windows 身份验证， **0** 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**subscriber_login**|**sysname**|在订阅服务器上的登录名。|  
 |**subscriber_password**||永远不会返回实际的订阅服务器密码。 结果由 "**&#42;&#42;&#42;&#42;&#42;&#42;**" 字符串屏蔽。|  
 |**job_login**|**sysname**|分发代理运行时所用的 Windows 帐户的名称。|  
 |**job_password**||从不返回实际的作业密码。 结果由 "**&#42;&#42;&#42;&#42;&#42;&#42;**" 字符串屏蔽。|  
-|**distrib_agent_name**|**nvarchar (100) **|同步订阅的代理作业的名称。|  
+|**distrib_agent_name**|**nvarchar (100)**|同步订阅的代理作业的名称。|  
 |**subscriber_type**|**tinyint**|订阅服务器的类型，可以是下列类型之一：<br /><br /> **0** = SQL Server 订阅服务器<br /><br /> **1** = ODBC 数据源服务器<br /><br /> **2** = (弃用的 Microsoft JET 数据库) <br /><br /> **3** = OLE DB 提供程序|  
 |**subscriber_provider**|**sysname**|非 SQL Server 数据源的 OLE DB 访问接口用于注册的唯一编程标识符 (PROGID)。|  
 |**subscriber_datasource**|**nvarchar(4000)**|OLE DB 访问接口识别的数据源的名称。|  

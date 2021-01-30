@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adddynamicsnapshot_job
 - sp_adddynamicsnapshot_job_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 25bbf50a6732806c37eafeb3efedddd712dcba57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9798613901be96552813ebe6f419f2e2c24229fd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447439"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182793"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,9 +59,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 要向其中添加筛选数据快照作业的发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @suser_sname = ] 'suser_sname'` 为订阅创建筛选数据快照时使用的值，该订阅按订阅服务器上 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 函数的值进行筛选。 *suser_sname* **sysname**，无默认值。 如果不使用此函数对发布进行动态筛选， *suser_sname*应为 NULL。  
+`[ @suser_sname = ] 'suser_sname'` 为订阅创建筛选数据快照时使用的值，该订阅按订阅服务器上 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 函数的值进行筛选。 *suser_sname* **sysname**，无默认值。 如果不使用此函数对发布进行动态筛选， *suser_sname* 应为 NULL。  
   
-`[ @host_name = ] 'host_name'` 为订阅创建筛选数据快照时使用的值，该订阅按订阅服务器上 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 函数的值进行筛选。 *host_name* **sysname**，无默认值。 如果不使用此函数对发布进行动态筛选， *host_name*应为 NULL。  
+`[ @host_name = ] 'host_name'` 为订阅创建筛选数据快照时使用的值，该订阅按订阅服务器上 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 函数的值进行筛选。 *host_name* **sysname**，无默认值。 如果不使用此函数对发布进行动态筛选， *host_name* 应为 NULL。  
   
 `[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 创建的筛选数据快照作业的名称。 *dynamic_snapshot_jobname* 的默认值为 **sysname**，默认值为 NULL，是一个可选的 OUTPUT 参数。 如果已指定，则 *dynamic_snapshot_jobname* 必须在分发服务器上解析为唯一作业。 如果不指定，则将自动生成并在结果集中返回一个作业名，该名称的创建方式如下：  
   
@@ -80,47 +80,47 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4** (默认值) |每日|  
+|**4** (默认值) |每天|  
 |**8**|每周|  
 |**16**|每月一次|  
 |**32**|与“每月”选项相关|  
 |**64**|自动启动|  
 |**128**|重复执行|  
   
-`[ @frequency_interval = ] frequency_interval` 执行筛选的数据快照作业)  (时间（以天计）。 *frequency_interval* 为 **int**，默认值为1，并且取决于 *frequency_type*的值。  
+`[ @frequency_interval = ] frequency_interval` 执行筛选的数据快照作业)  (时间（以天计）。 *frequency_interval* 为 **int**，默认值为1，并且取决于 *frequency_type* 的值。  
   
-|*Frequency_type*的值|对*frequency_interval*的影响|  
+|*Frequency_type* 的值|对 *frequency_interval* 的影响|  
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval* 未使用。|  
 |**4** (默认值) |每 *frequency_interval* 天，默认为每天。|  
 |**8**|*frequency_interval* 是以下 (中的一个或多个与 [&#124; &#40;按位或&#41; &#40;transact-sql&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md) 逻辑运算符组合在一起的：<br /><br /> **1** = 星期日 &#124; **2** = 星期一 &#124; **4** = 星期二 &#124; **8** = 星期三 &#124; **16** = 星期四 &#124; **32** = 星期五 &#124; **64** = 星期六|  
-|**16**|*Frequency_interval*月中的第几天。|  
+|**16**|*Frequency_interval* 月中的第几天。|  
 |**32**|*frequency_interval* 是以下项之一：<br /><br /> **1** = 星期日 &#124; **2** = 星期一 &#124; **3** = 星期二 &#124; **4** = 星期三 &#124; **5** = 星期四 &#124; **6** = 星期五 &#124; **7** = 星期六 &#124; **8** = 日 &#124; **9** = 工作日 &#124; **10** = 周末|  
 |**64**|*frequency_interval* 未使用。|  
 |**128**|*frequency_interval* 未使用。|  
   
-`[ @frequency_subday = ] frequency_subday` 指定 *frequency_subday_interval*的单位。 *frequency_subday* 为 **int**，可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday` 指定 *frequency_subday_interval* 的单位。 *frequency_subday* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|秒|  
 |**4** (默认值) |Minute|  
-|**8**|Hour|  
+|**8**|小时|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval` 作业的每次执行之间出现的 *frequency_subday* 周期数。 *frequency_subday_interval* 的值为 **int**，默认值为5。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 每月筛选的数据快照作业的发生次数。 如果 *frequency_type* 设置为 **32** (每月相对) ，则使用此参数。 *frequency_relative_interval* 为 **int**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**1** （默认值）|First|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为0。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type* 使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为0。  
   
 `[ @active_start_date = ] active_start_date` 第一次安排筛选数据快照作业的日期，格式为 YYYYMMDD。 *active_start_date* 的值为 **int**，默认值为 NULL。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getmergedeletetype
 - sp_getmergedeletetype_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d2a254a81bdd4b1a4d7718e8960ced22666b5705
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 816815f36511cb64f52ec5a48f20c04121fe67bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538904"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183157"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @source_object = ] 'source_object'` 源对象的名称。 *source_object* 为 **nvarchar (386) **，无默认值。  
+`[ @source_object = ] 'source_object'` 源对象的名称。 *source_object* 为 **nvarchar (386)**，无默认值。  
   
 `[ @rowguid = ] 'rowguid'` 删除类型的行标识符。 *rowguid* 是 **uniqueidentifier**，无默认值。  
   

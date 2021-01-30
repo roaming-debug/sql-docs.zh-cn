@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_notification_TSQL
 - sp_update_notification
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 103e697c8aad38fa19769358372b31d89d3b5978
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7e1f54c6933945c6031e48d4f97ab89f0f966779
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549502"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184316"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_update_notification
   
 `[ @operator_name = ] 'operator'` 警报发生时要通知的操作员。 *运算符* 的值为 **sysname**，无默认值。  
   
-`[ @notification_method = ] notification` 通知操作员使用的方法。 *通知*为 **tinyint**，无默认值，并且可以是这些值中的一个或多个。  
+`[ @notification_method = ] notification` 通知操作员使用的方法。 *通知* 为 **tinyint**，无默认值，并且可以是这些值中的一个或多个。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -61,9 +61,9 @@ sp_update_notification
  **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- 必须从**msdb**数据库运行**sp_update_notification** 。  
+ 必须从 **msdb** 数据库运行 **sp_update_notification** 。  
   
- 您可以使用指定的 *notification_method*为没有必需的地址信息的操作员更新通知。 如果发送电子邮件或寻呼通知时出现故障，则该故障将记录到 Microsoft SQL Server 代理程序错误日志中。  
+ 您可以使用指定的 *notification_method* 为没有必需的地址信息的操作员更新通知。 如果发送电子邮件或寻呼通知时出现故障，则该故障将记录到 Microsoft SQL Server 代理程序错误日志中。  
   
 ## <a name="permissions"></a>权限  
  若要运行此存储过程，用户必须被授予 **sysadmin** 固定服务器角色。  

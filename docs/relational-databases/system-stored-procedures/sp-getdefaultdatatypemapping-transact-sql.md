@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getdefaultdatatypemapping_TSQL
 - sp_getdefaultdatatypemapping
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d7737d0c4d8d44901da52bad6ad6867d7080554
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 64345f8471caf5d757e0c8fbdbc843b2a18680ee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543329"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183167"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  必须指定此参数。  
   
-`[ @source_version = ] 'source_version'` 源 DBMS 的版本号。 *source_version* 是 **varchar (10) **，默认值为 NULL。  
+`[ @source_version = ] 'source_version'` 源 DBMS 的版本号。 *source_version* 是 **varchar (10)**，默认值为 NULL。  
   
 `[ @source_type = ] 'source_type'` 源 DBMS 中的数据类型。 *source_type* **sysname**，无默认值。  
   
@@ -84,7 +84,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  必须指定此参数。  
   
-`[ @destination_version = ] 'destination_version'` 目标 DBMS 的产品版本。 *destination_version* 是 **varchar (10) **，默认值为 NULL。  
+`[ @destination_version = ] 'destination_version'` 目标 DBMS 的产品版本。 *destination_version* 是 **varchar (10)**，默认值为 NULL。  
   
 `[ @destination_type = ] 'destination_type' OUTPUT` 目标 DBMS 中列出的数据类型。 *destination_type* 的值为 **sysname**，默认值为 NULL。  
   
@@ -107,7 +107,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  **sp_getdefaultdatatypemapping** 返回与指定的源数据类型最匹配的默认目标数据类型。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_getdefaultdatatypemapping**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_getdefaultdatatypemapping** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_helpdatatypemap &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   

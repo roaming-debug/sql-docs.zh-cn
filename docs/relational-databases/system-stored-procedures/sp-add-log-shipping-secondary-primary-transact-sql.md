@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
 - sp_add_log_shipping_secondary_primary
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1123bfa1ce465989322c3b76a48da96c1fed7f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7675de9f5d3e322511af474fcf9495dad3e4454a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464618"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179775"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,9 +58,9 @@ sp_add_log_shipping_secondary_primary
   
 `[ @primary_database = ] 'primary_database'` 主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
   
-`[ @backup_source_directory = ] 'backup_source_directory'` 存储主服务器中的事务日志备份文件的目录。 *backup_source_directory* 为 **nvarchar (500) ** ，且不能为 NULL。  
+`[ @backup_source_directory = ] 'backup_source_directory'` 存储主服务器中的事务日志备份文件的目录。 *backup_source_directory* 为 **nvarchar (500)** ，且不能为 NULL。  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'` 辅助服务器上将备份文件复制到的目录。 *backup_destination_directory* 为 **nvarchar (500) ** ，且不能为 NULL。  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` 辅助服务器上将备份文件复制到的目录。 *backup_destination_directory* 为 **nvarchar (500)** ，且不能为 NULL。  
   
 `[ @copy_job_name = ] 'copy_job_name'` 要创建的用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将事务日志备份复制到辅助服务器的代理作业的名称。 *copy_job_name* 为 **sysname** ，且不能为 NULL。  
   
@@ -95,7 +95,7 @@ sp_add_log_shipping_secondary_primary
  无  
   
 ## <a name="remarks"></a>备注  
- 必须从辅助服务器上的**master**数据库运行**sp_add_log_shipping_secondary_primary** 。 此存储过程执行以下操作：  
+ 必须从辅助服务器上的 **master** 数据库运行 **sp_add_log_shipping_secondary_primary** 。 此存储过程执行以下操作：  
   
 1.  为指定的主服务器和主数据库生成一个辅助 ID。  
   

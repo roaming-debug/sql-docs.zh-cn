@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getqueuedrows_TSQL
 - sp_getqueuedrows
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8aae51ed8d3806fb32375ddebd6d09c1c6c37d1f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ad904065a8270266e7010ff49889d04a8625296f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548015"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183141"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 `[ @owner = ] 'owner'` 是订阅所有者。 *所有者* 为 **sysname**，默认值为 NULL。  
   
-`[ @tranid = ] 'transaction_id'` 允许按事务 ID 筛选输出。 *transaction_id* 为 **nvarchar (70) **，默认值为 NULL。 如果已指定，则显示与排队命令关联的事务 ID。 如果为 NULL，则显示队列中的所有命令。  
+`[ @tranid = ] 'transaction_id'` 允许按事务 ID 筛选输出。 *transaction_id* 为 **nvarchar (70)**，默认值为 NULL。 如果已指定，则显示与排队命令关联的事务 ID。 如果为 NULL，则显示队列中的所有命令。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -54,9 +54,9 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**操作**|**nvarchar (10) **|同步发生时采取的操作类型。<br /><br /> INS= 插入 <br /><br /> DEL = 删除<br /><br /> UPD = 更新|  
-|**Tranid**|**nvarchar (70) **|执行命令的事务 ID。|  
-|**table column1...n**||*Tablename*中指定的表的每一列的值。|  
+|**Action**|**nvarchar (10)**|同步发生时采取的操作类型。<br /><br /> INS= 插入 <br /><br /> DEL = 删除<br /><br /> UPD = 更新|  
+|**Tranid**|**nvarchar (70)**|执行命令的事务 ID。|  
+|**table column1...n**||*Tablename* 中指定的表的每一列的值。|  
 |**msrepl_tran_version**|**uniqueidentifier**|该列用于跟踪对已复制数据的更改以及在发布服务器上执行冲突检测。 该列自动添加到表中。|  
   
 ## <a name="remarks"></a>备注  
@@ -65,7 +65,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
  **sp_getqueuedrows** 在已参与排队更新的订阅数据库上查找给定表的行，但目前尚未被队列读取器代理解析。  
   
 ## <a name="permissions"></a>权限  
- **sp_getqueuedrows** 要求对 *tablename*中指定的表具有 SELECT 权限。  
+ **sp_getqueuedrows** 要求对 *tablename* 中指定的表具有 SELECT 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

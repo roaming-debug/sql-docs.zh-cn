@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_configure_sp
 - sysmail_help_configure_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53b893ffb155a8e8c1d737177f840347584b6a99
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 21ce11d37659561e172c11fb7b5a899193141166
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538399"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181964"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +40,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @parameter_name = ] 'parameter_name'` 要检索的配置设置的名称。 如果指定此参数，则将在** \@ parameter_value**输出参数中返回配置设置的值。 当未指定** \@ parameter_name**时，此存储过程将返回一个结果集，其中包含实例中的所有数据库邮件配置设置。  
+`[ @parameter_name = ] 'parameter_name'` 要检索的配置设置的名称。 如果指定此参数，则将在 **\@ parameter_value** 输出参数中返回配置设置的值。 当未指定 **\@ parameter_name** 时，此存储过程将返回一个结果集，其中包含实例中的所有数据库邮件配置设置。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
- 当未指定** \@ parameter_name**时，将返回包含以下列的结果集。  
+ 当未指定 **\@ parameter_name** 时，将返回包含以下列的结果集。  
   
 | 列名称 | 数据类型 | 说明 |
 | ----------- | --------- | ----------- |
@@ -57,7 +57,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>备注  
  存储过程 **sysmail_help_configure_sp** 列出实例的当前数据库邮件配置设置。  
   
- 如果指定了** \@ parameter_name** ，但没有为** \@ parameter_value**提供输出参数，则此存储过程不会生成任何输出。  
+ 如果指定了 **\@ parameter_name** ，但没有为 **\@ parameter_value** 提供输出参数，则此存储过程不会生成任何输出。  
   
  存储过程 **sysmail_help_configure_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来调用该过程。  
   

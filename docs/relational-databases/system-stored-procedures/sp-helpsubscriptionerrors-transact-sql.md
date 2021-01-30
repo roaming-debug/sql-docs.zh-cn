@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsubscriptionerrors_TSQL
 - sp_helpsubscriptionerrors
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c68349a6d696720874be7a72e04d8dd0f48a3472
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ccf568629cc56f3ce5187fe9e4739192caf53722
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547938"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192892"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +60,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 |**time**|**datetime**|发生错误的时间。|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|错误源类型 ID。|  
-|**source_name**|**nvarchar (100) **|错误源的名称。|  
+|**source_name**|**nvarchar (100)**|错误源的名称。|  
 |**error_code**|**sysname**|错误代码。|  
 |**error_text**|**ntext**|错误消息。|  
 |**xact_seqno**|**varbinary(16)**|失败的执行批处理的起始事务日志序列号。 仅由分发代理使用，是失败的执行批处理中第一个事务的日志序列号。|  

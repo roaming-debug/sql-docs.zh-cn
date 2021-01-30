@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_deletetracertokenhistory
 - sp_deletetracertokenhistory_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c08b5373109ab3ea6174aac190ed8fb7b04b2e0e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5bc5a6d5191f89d8b31b48939c83674bf0302e15
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543530"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178161"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
@@ -72,7 +72,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 **sp_deletetracertokenhistory** 用于事务复制。  
 
-如果同时指定 *tracer_id* 和 *cutoff_date*参数，则会出现错误。
+如果同时指定 *tracer_id* 和 *cutoff_date* 参数，则会出现错误。
 
 如果不执行 **sp_deletetracertokenhistory** 来删除跟踪令牌元数据，则在进行定期计划的历史记录清除时将删除此信息。
 
@@ -83,7 +83,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 只有以下人员才有权执行 **sp_deletetracertokenhistory**：
 
 - 分发数据库中 **replmonitor** 角色的成员
-- **Sysadmin**固定服务器角色的成员。
+- **Sysadmin** 固定服务器角色的成员。
 - 发布数据库中 **db_owner** 固定数据库角色的成员。
 - 固定数据库的 **db_owner** 。
 

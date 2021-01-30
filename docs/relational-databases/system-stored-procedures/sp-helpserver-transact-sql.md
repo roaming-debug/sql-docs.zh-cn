@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpserver
 - sp_helpserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6dace48b51c971095b136190ab1094ea8db79984
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83d212a6cfb817f3aa28c87ab0999d0488cec5e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526401"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211913"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @server = ] 'server'` 要报告其信息的服务器。 如果未指定 *服务器* ，则报告 **master.sys 服务器**中的所有服务器。 *服务器* 的默认值为 **sysname**，默认值为 NULL。  
+`[ @server = ] 'server'` 要报告其信息的服务器。 如果未指定 *服务器* ，则报告 **master.sys 服务器** 中的所有服务器。 *服务器* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @optname = ] 'option'` 描述服务器的选项。 *选项* 为 **varchar (** 35 **) **，默认值为 NULL，必须是下列值之一。  
+`[ @optname = ] 'option'` 描述服务器的选项。 *选项* 为 **varchar (** 35 **)**，默认值为 NULL，必须是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**系统**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**使用远程排序规则**|使用远程列的排序规则而不使用本地服务器的排序规则。|  
   
-`[ @show_topology = ] 'show_topology'` 指定服务器与其他服务器的关系。 *show_topology* 是 **varchar (** 1 **) **，默认值为 NULL。 如果 *show_topology* 不等于 **t** 或为 NULL，则 **sp_helpserver** 返回 "结果集" 部分中列出的列。 如果 *show_topology* 等于 **t**，则除了结果集中列出的列外， **sp_helpserver** 还返回 **topx** 和 **topy** 信息。  
+`[ @show_topology = ] 'show_topology'` 指定服务器与其他服务器的关系。 *show_topology* 是 **varchar (** 1 **)**，默认值为 NULL。 如果 *show_topology* 不等于 **t** 或为 NULL，则 **sp_helpserver** 返回 "结果集" 部分中列出的列。 如果 *show_topology* 等于 **t**，则除了结果集中列出的列外， **sp_helpserver** 还返回 **topx** 和 **topy** 信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）。  
@@ -71,8 +71,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |name|**sysname**|服务器名称。|  
 |**network_name**|**sysname**|服务器的网络名称。|  
-|**status**|**varchar (** 70 **) **|服务器状态。|  
-|**id**|**char (** 4 **) **|服务器的标识号。|  
+|**status**|**varchar (** 70 **)**|服务器状态。|  
+|**id**|**char (** 4 **)**|服务器的标识号。|  
 |**collation_name**|**sysname**|服务器的排序规则。|  
 |**connect_timeout**|**int**|连接到链接服务器的超时值。|  
 |**query_timeout**|**int**|查询链接服务器的超时值。|  

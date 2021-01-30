@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_log_shipping_primary_database
 - sp_change_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 070065ae6e621c5ea52bf4be50ac0cc99af089f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1bcd150ff810f5a4a16deb09a7ea72956ccd681
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474485"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181361"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,9 +53,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="arguments"></a>参数  
 `[ @database = ] 'database'` 主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
   
-`[ @backup_directory = ] 'backup_directory'` 主服务器上备份文件夹的路径。 *backup_directory* 为 **nvarchar (500) **，无默认值，且不能为 NULL。  
+`[ @backup_directory = ] 'backup_directory'` 主服务器上备份文件夹的路径。 *backup_directory* 为 **nvarchar (500)**，无默认值，且不能为 NULL。  
   
-`[ @backup_share = ] 'backup_share'` 主服务器上的备份目录的网络路径。 *backup_share* 为 **nvarchar (500) **，无默认值，且不能为 NULL。  
+`[ @backup_share = ] 'backup_share'` 主服务器上的备份目录的网络路径。 *backup_share* 为 **nvarchar (500)**，无默认值，且不能为 NULL。  
   
 `[ @backup_retention_period = ] 'backup_retention_period'` 在主服务器上的备份目录中保留日志备份文件的时间长度（以分钟为单位）。 *backup_retention_period* 为 **int**，没有默认值，且不能为 NULL。  
   
@@ -100,7 +100,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  无  
   
 ## <a name="remarks"></a>备注  
- 必须从主服务器上的**master**数据库运行**sp_change_log_shipping_primary_database** 。 此存储过程执行以下操作：  
+ 必须从主服务器上的 **master** 数据库运行 **sp_change_log_shipping_primary_database** 。 此存储过程执行以下操作：  
   
 1.  如有必要，更改 **log_shipping_primary_database** 记录中的设置。  
   
@@ -130,7 +130,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
   
 ## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases (Transact-SQL)](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

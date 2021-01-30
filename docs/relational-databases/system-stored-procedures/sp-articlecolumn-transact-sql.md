@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_articlecolumn
 - sp_articlecolumn_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d67cb8b9d25b97756bd1e0f86c5425542a2601d2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: da57a5aa4ae6645c7b1b2ff6377b79160fa110c6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548315"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203203"
 ---
 # <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` 要添加或删除的列的名称。 *列* 的值为 **sysname**，默认值为 NULL。 如果为 NULL，则发布所有列。  
   
-`[ @operation = ] 'operation'` 指定是否在项目中添加或删除列。 *操作* 为 **nvarchar (5) **，默认值为 add。 **添加** 标记列以进行复制。 **drop** 取消对列的标记。  
+`[ @operation = ] 'operation'` 指定是否在项目中添加或删除列。 *操作* 为 **nvarchar (5)**，默认值为 add。 **添加** 标记列以进行复制。 **drop** 取消对列的标记。  
   
 `[ @refresh_synctran_procs = ] refresh_synctran_procs` 指定是否重新生成支持立即更新订阅的存储过程以匹配复制的列数。 *refresh_synctran_procs* 为 **bit**，默认值为 **1**。 如果为 **1**，则重新生成存储过程。  
   
@@ -68,7 +68,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **1** 指定对项目所做的更改可能导致快照无效，如果存在需要新快照的现有订阅，则授予将现有快照标记为过时并生成新快照的权限。  
   
- [** @force_reinit_subscription =** ] *force_reinit_subscription*  
+ [**@force_reinit_subscription =** ] *force_reinit_subscription*  
  确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription* 为一个 **位**，默认值为 **0**。  
   
  **0** 指定对项目所做的更改不会导致重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化订阅，则会发生错误，并且不进行任何更改。 **1** 指定对项目所做的更改会导致重新初始化现有订阅，并授予重新初始化订阅的权限。  
@@ -86,7 +86,7 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_articlecolumn** 用于快照复制和事务复制。  
   
- 只能使用 **sp_articlecolumn**筛选取消订阅的项目。  
+ 只能使用 **sp_articlecolumn** 筛选取消订阅的项目。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlecolumn-transac_1.sql)]  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addapprole_TSQL
 - sp_addapprole
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fa68e8b0d965fae3a1c27f5ca2705bc003d7b616
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a48cfb80bab8e9a754cbcb8186de8cb2955f096
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481536"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182853"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,14 +61,14 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
   
 -   如果与应用程序角色同名的架构已经存在，则该过程将失败。  
   
--   **Sp_addapprole**未检查密码复杂性。 但 CREATE APPLICATION ROLE 会检查密码复杂性。  
+-   **Sp_addapprole** 未检查密码复杂性。 但 CREATE APPLICATION ROLE 会检查密码复杂性。  
   
  参数 *password* 作为单向哈希进行存储。  
   
  不能在用户定义的事务内执行 **sp_addapprole** 存储过程。  
   
 > [!IMPORTANT]  
->  **SqlClient**不支持 Microsoft ODBC**加密**选项。 如果您可以，请在运行时提示用户输入应用程序角色凭据。 不要将凭据存储在一个文件中。 如果必须使凭据持久化，请使用 CryptoAPI 函数将它们加密。  
+>  **SqlClient** 不支持 Microsoft ODBC **加密** 选项。 如果您可以，请在运行时提示用户输入应用程序角色凭据。 不要将凭据存储在一个文件中。 如果必须使凭据持久化，请使用 CryptoAPI 函数将它们加密。  
   
 ## <a name="permissions"></a>权限  
  需要对数据库具有 ALTER ANY APPLICATION ROLE 权限。 如果尚未存在具有与新角色相同名称和所有者的架构，则还需要拥有对该数据库的 CREATE SCHEMA 权限。  

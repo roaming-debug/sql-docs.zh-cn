@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adddistpublisher
 - sp_adddistpublisher_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5af634687088e305a15e41fd54110832195d0cab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ad2edff83e6600ab77e422d2d18516ecd8a2064
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447423"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182821"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @security_mode = ] security_mode` 实现的安全模式。 此参数仅供复制代理用于连接到排队更新订阅的发布服务器或非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *security_mode* 为 **int**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|分发服务器中的复制代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器。|  
 |**1** （默认值）|分发服务器中的复制代理使用 Windows 身份验证连接到发布服务器。|  
@@ -69,7 +69,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。  
   
-`[ @working_directory = ] 'working_directory'` 用于存储发布的数据和架构文件的工作目录的名称。 例如， *working_directory*为**nvarchar (255) **，默认为 ReplData 文件夹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` 。 名称应按 UNC 格式指定。  
+`[ @working_directory = ] 'working_directory'` 用于存储发布的数据和架构文件的工作目录的名称。 例如， *working_directory* 为 **nvarchar (255)**，默认为 ReplData 文件夹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` 。 名称应按 UNC 格式指定。  
 
  对于 Azure SQL 数据库，请使用 `\\<storage_account>.file.core.windows.net\<share>` 。
 
@@ -77,7 +77,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
-`[ @trusted = ] 'trusted'` 此参数已弃用，提供此参数只是为了向后兼容。 *trusted* ** (5) **，并将其设置为任何值，但 **false** 将导致错误。  
+`[ @trusted = ] 'trusted'` 此参数已弃用，提供此参数只是为了向后兼容。 *trusted* **(5)**，并将其设置为任何值，但 **false** 将导致错误。  
   
 `[ @encrypted_password = ] encrypted_password` 不再支持设置 *encrypted_password* 。 尝试将此 **位** 参数设置为 **1** 将导致错误。  
   
@@ -90,7 +90,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @publisher_type = ] 'publisher_type'` 当发布服务器不是时指定发布服务器类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *publisher_type* sysname，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> （默认值）|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。|  
 |**联手**|指定标准的 Oracle 发布服务器。|  
@@ -108,14 +108,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_adddistpublisher**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_adddistpublisher** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
+ [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [配置分发](../../relational-databases/replication/configure-distribution.md)  
   
   

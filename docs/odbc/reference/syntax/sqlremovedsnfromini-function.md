@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLRemoveDSNFromIni
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f49646881539d7c90c057633e7151b31cfe52b52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26bbcf3bf68dda172220323cb7d9b0dc39e3178d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499610"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192486"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 函数
 **度**  
@@ -39,7 +39,7 @@ ms.locfileid: "88499610"
 ```cpp  
   
 BOOL SQLRemoveDSNFromIni(  
-     LPCSTR   lpszDSN);  
+     LPCSTR   lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -50,12 +50,12 @@ BOOL SQLRemoveDSNFromIni(
  如果该函数删除数据源或数据源不在 Odbc.ini 文件中，则该函数返回 TRUE。 如果无法删除数据源，则返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLRemoveDSNFromIni**返回 FALSE 时，可以通过调用**SQLInstallerError**获取关联的* \* pfErrorCode*值。 下表列出了可由**SQLInstallerError**返回的* \* pfErrorCode*值，并说明了此函数的上下文中的每个值。  
+ 当 **SQLRemoveDSNFromIni** 返回 FALSE 时，可以通过调用 **SQLInstallerError** 获取关联的 *\* pfErrorCode* 值。 下表列出了可由 **SQLInstallerError** 返回的 *\* pfErrorCode* 值，并说明了此函数的上下文中的每个值。  
   
 |*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出现错误，但没有特定的安装程序错误。|  
-|ODBC_ERROR_INVALID_DSN|DSN 无效|*LpszDSN*参数无效。|  
+|ODBC_ERROR_INVALID_DSN|DSN 无效|*LpszDSN* 参数无效。|  
 |ODBC_ERROR_REQUEST_FAILED|申请失败。|安装程序无法从注册表中删除 DSN 信息。|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行此功能。|  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_profileaccount_sp_TSQL
 - sysmail_update_profileaccount_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ccfcd3627627dd2fca78ba02b74f89f2bea07116
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 140256e73adee3593c620b17f81ac10c163030f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473338"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181843"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
  此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
- 下面的示例在 `Admin-BackupServer` msdb 数据库的配置文件中更改帐户的序列号 `AdventureWorks Administrator` 。 **msdb** 执行此代码后，该帐户的序列号为 `3`，指示前两个帐户失败后将尝试使用此帐户。  
+ 下面的示例在 `Admin-BackupServer` msdb 数据库的配置文件中更改帐户的序列号 `AdventureWorks Administrator` 。  执行此代码后，该帐户的序列号为 `3`，指示前两个帐户失败后将尝试使用此帐户。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  
