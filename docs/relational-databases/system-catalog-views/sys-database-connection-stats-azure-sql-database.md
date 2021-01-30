@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.database_connection_stats
 - database_connection_stats
@@ -21,12 +21,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: b5d01ec490009c2c3b26dd888bd6050b0638e952
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 948a45e2f9d2dca95bca1c3afbaed419030f47df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102810"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210361"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
@@ -34,7 +34,7 @@ ms.locfileid: "98102810"
 
   包含数据库连接 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 事件的统计信息，提供数据库连接成功和失败的概述。 有关连接事件的详细信息，请参阅 [AZURE SQL 数据库&#41;sys.event_log &#40;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)中的事件类型。  
   
-|统计信息|类型|描述|  
+|统计信息|类型|说明|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|数据库的名称。|  
 |**start_time**|**datetime2**|聚合间隔开始的 UTC 日期和时间。 时间始终为 5 分钟的倍数。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_agent_profile_TSQL
 - sp_update_agent_profile
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53084511e6981afec31ee3fc3f0bafcb76d496d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d165fa80f51d1d5b018bd67eda3c4fb06eb5bc52
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547276"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209647"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
  **sp_update_agent_profile** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_update_agent_profile**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_update_agent_profile** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)   

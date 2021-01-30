@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - database_automatic_tuning_options_tsql
 - database_automatic_tuning_options
@@ -22,12 +22,12 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4da712a23dde26d12164957718c3bdfbf89eb487
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0dbedd65c5f98016e4e001fd863845079da68578
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475218"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210376"
 ---
 # <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys. 数据库 \_ 自动 \_ Tuning_options (transact-sql) 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97475218"
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|自动优化选项的名称。 请参阅 [ALTER DATABASE SET AUTOMATIC_TUNING &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 了解可用选项。|  
+|name |**nvarchar(128)**|自动优化选项的名称。 请参阅 [ALTER DATABASE SET AUTOMATIC_TUNING &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 了解可用选项。|  
 |**desired_state**|**smallint**|指示自动优化选项的所需操作模式，由用户显式设置。<br />0 = OFF<br />1 = ON|  
 |**desired_state_desc**|**nvarchar(60)**|自动优化选项所需操作模式的文本说明。<br />OFF<br />ON|  
 |**actual_state**|**smallint**|指示自动优化选项的操作模式。<br />0 = OFF<br />1 = ON|  

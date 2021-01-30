@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_configure
 - sp_configure_TSQL
@@ -19,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: bd045c01439e2913179fdf2188448772f20d9f48
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5888c4735c884721449858af55c928b30a44b1f2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97427340"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211111"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -60,7 +60,7 @@ RECONFIGURE
 [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @configname = ] 'option_name'` 配置选项的名称。 *option_name* 的数据类型为 **varchar(35)** ，默认值为 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]能够识别构成配置名称的任何唯一字符串。 如果未指定该参数，则返回选项的完整列表。  
   
  有关可用配置选项及其设置的信息，请参阅 [服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
@@ -75,7 +75,7 @@ RECONFIGURE
 ## <a name="result-sets"></a>结果集  
  在不带参数的情况下执行时， **sp_configure** 将返回包含五列的结果集，并按字母顺序升序排列选项，如下表所示。  
   
- **Config_value** 和 **run_value** 的值不是自动等效的。 使用 **sp_configure** 更新配置设置后，系统管理员必须使用 "重新配置" 或 "使用替代重新配置" 更新正在运行的配置值。 有关详细信息，请参阅“备注”部分。  
+ **Config_value** 和 **run_value** 的值不是自动等效的。 使用 **sp_configure** 更新配置设置后，系统管理员必须使用 "重新配置" 或 "使用替代重新配置" 更新正在运行的配置值。 有关详细信息，请参见“备注”部分。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

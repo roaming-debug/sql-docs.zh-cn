@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - IHextendedSubscriptionView_TSQL
 - IHextendedSubscriptionView
@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: aca2ddea9625b5b2a40fea6ef27d6f218a71cda0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75498189c413aa89a81d2c0e8086c0f5cc37e1a0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485412"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208889"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **IHextendedSubscriptionView**视图显示有关非 SQL Server 发布订阅的信息。 此视图存储在 **分发** 数据库中。  
+  **IHextendedSubscriptionView** 视图显示有关非 SQL Server 发布订阅的信息。 此视图存储在 **分发** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|项目的唯一标识符。|  
 |**dest_db**|**sysname**|目标数据库的名称。|  
 |**srvid**|**smallint**|订阅服务器的唯一标识符。|  
-|**login_name**|**sysname**|用于连接到订阅服务器的登录名。|  
+|login_name|**sysname**|用于连接到订阅服务器的登录名。|  
 |**distribution_jobid**|**binary**|标识分发代理作业。|  
 |**publisher_database_id**|**int**|标识发布数据库。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送-分发代理在订阅服务器上运行。<br /><br /> **1** = 请求-分发代理在分发服务器上运行。|  

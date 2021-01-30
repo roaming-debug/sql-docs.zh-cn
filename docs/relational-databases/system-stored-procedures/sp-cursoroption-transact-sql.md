@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursoroption_TSQL
 - sp_cursoroption
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb85ff45fcb9ebe35920ca858cc9dc6336475cb8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 787c54be4c1030f9c091dbfead90c569a63bb270
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543551"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210473"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_cursoroption cursor, code, value
   
 ## <a name="arguments"></a>参数  
  *cursor*  
- 是由*handle*生成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并由 sp_cursoropen 存储过程返回的句柄值。 *游标* 需要用于执行的 **int** 输入值。  
+ 是由生成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并由 sp_cursoropen 存储过程返回的句柄值。 *游标* 需要用于执行的 **int** 输入值。  
   
  *code*  
  用于规定游标返回值的不同因素。 *代码* 需要以下 **int** 输入值之一：  
@@ -56,13 +56,13 @@ sp_cursoroption cursor, code, value
 |0x0006|ROWCOUNT|结果集中的当前行数。<br /><br /> 注意：如果正在使用异步填充，则在 sp_cursoropen 返回的值之后，行计数可能已更改。 如果行数未知，则返回值-1。|  
   
  *value*  
- 指定由 *代码*返回的值。 *值* 是一个必需参数，它调用0x0001、0x0002 或 0x0003 *代码* 输入值。  
+ 指定由 *代码* 返回的值。 *值* 是一个必需参数，它调用0x0001、0x0002 或 0x0003 *代码* 输入值。  
   
 > [!NOTE]  
->  *代码*值2是字符串数据类型。 任何其他 *代码* 值输入或按 *值* 返回均为整数。  
+>  *代码* 值2是字符串数据类型。 任何其他 *代码* 值输入或按 *值* 返回均为整数。  
   
 ## <a name="return-code-values"></a>返回代码值  
- *Value*参数可能会返回以下*代码*值之一。  
+ *Value* 参数可能会返回以下 *代码* 值之一。  
   
 |返回值|说明|  
 |------------------|-----------------|  
@@ -70,7 +70,7 @@ sp_cursoroption cursor, code, value
 |0X0005|CCOPT|  
 |0X0006|ROWCOUNT|  
   
- *Value*参数返回以下 SCROLLOPT 值之一。  
+ *Value* 参数返回以下 SCROLLOPT 值之一。  
   
 |返回值|说明|  
 |------------------|-----------------|  
@@ -79,7 +79,7 @@ sp_cursoroption cursor, code, value
 |0x0004|FORWARD_ONLY|  
 |0x0008|STATIC|  
   
- *Value*参数返回以下 CCOPT 值之一。  
+ *Value* 参数返回以下 CCOPT 值之一。  
   
 |返回值|说明|  
 |------------------|-----------------|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropextendedproc
 - sp_dropextendedproc_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02d4287b2825401acd0eca532b3fad100fa32639
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc877761f2e86ff63883c9f84ead94955044acbf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538964"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209340"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @functname = ] 'procedure'` 要删除的扩展存储过程的名称。 *过程* 为 **nvarchar (517) **，无默认值。  
+`[ @functname = ] 'procedure'` 要删除的扩展存储过程的名称。 *过程* 为 **nvarchar (517)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -52,14 +52,14 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  无  
   
 ## <a name="remarks"></a>备注  
- 执行 **sp_dropextendedproc** 从 [sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 目录视图中删除用户定义的扩展存储过程名称，并从 [sys.databases. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) 目录视图中删除该项。 此存储过程只能在 **master** 数据库中运行。  
+ 执行 **sp_dropextendedproc** 从 [sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 目录视图中删除用户定义的扩展存储过程名称，并从 [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) 目录视图中删除该项。 此存储过程只能在 **master** 数据库中运行。  
   
 **sp_dropextendedproc** 不会删除系统扩展存储过程。 相反，系统管理员应对 **公共** 角色拒绝对扩展存储过程的 EXECUTE 权限。  
   
- 无法在事务中执行**sp_dropextendedproc** 。  
+ 无法在事务中执行 **sp_dropextendedproc** 。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_dropextendedproc**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_dropextendedproc** 执行。  
   
 ## <a name="examples"></a>示例  
  以下示例删除 `xp_hello` 扩展存储过程。  

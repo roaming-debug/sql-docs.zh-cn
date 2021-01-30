@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergesubscription_TSQL
 - sp_addmergesubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89340dfb073548378e8d4a9eb4929f836a2bbb9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d6689fed03126a8e5bc65d8d9e7e556a070ec483
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529721"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209392"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,14 +66,14 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber = ] 'subscriber'` 订阅服务器的名称。 *订阅服务器* 的值为 **sysname**，默认值为 NULL。  
   
-`[ @subscriber_db = ] 'subscriber_db'` 订阅数据库的名称。 *subscriber_db*的默认值为 **sysname**，默认值为 NULL。  
+`[ @subscriber_db = ] 'subscriber_db'` 订阅数据库的名称。 *subscriber_db* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @subscription_type = ] 'subscription_type'` 订阅的类型。 *subscription_type*为 **nvarchar (15) **，默认值为 PUSH。 如果 **推送**，则添加推送订阅，并在分发服务器上添加合并代理。 如果是 **pull**，则添加请求订阅，而不在分发服务器上添加合并代理。  
+`[ @subscription_type = ] 'subscription_type'` 订阅的类型。 *subscription_type* 为 **nvarchar (15)**，默认值为 PUSH。 如果 **推送**，则添加推送订阅，并在分发服务器上添加合并代理。 如果是 **pull**，则添加请求订阅，而不在分发服务器上添加合并代理。  
   
 > [!NOTE]  
 >  匿名订阅无需使用此存储过程。  
   
-`[ @subscriber_type = ] 'subscriber_type'` 订阅服务器的类型。 *subscriber_type*为 **nvarchar (15) **，可以为以下值之一。  
+`[ @subscriber_type = ] 'subscriber_type'` 订阅服务器的类型。 *subscriber_type* 为 **nvarchar (15)**，可以为以下值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -82,9 +82,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本中，本地订阅称为客户端订阅，全局订阅称为服务器订阅  
   
-`[ @subscription_priority = ] subscription_priority` 表示订阅的优先级的数字。 *subscription_priority*是 **真实**的，默认值为 NULL。 对于本地订阅和匿名订阅，优先级为 0.0。 对于全局订阅，优先级必须小于 100.0。  
+`[ @subscription_priority = ] subscription_priority` 表示订阅的优先级的数字。 *subscription_priority* 是 **真实** 的，默认值为 NULL。 对于本地订阅和匿名订阅，优先级为 0.0。 对于全局订阅，优先级必须小于 100.0。  
   
-`[ @sync_type = ] 'sync_type'` 订阅同步类型。 *sync_type*为 **nvarchar (15) **，默认值为 " **自动**"。 可以是 **自动** 的，也可以是 **none**。 如果为 " **自动**"，则已发布表的架构和初始数据将首先传输到订阅服务器。 如果 **没有**，则假定订阅服务器已拥有已发布表的架构和初始数据。 始终会传输系统表和数据。  
+`[ @sync_type = ] 'sync_type'` 订阅同步类型。 *sync_type* 为 **nvarchar (15)**，默认值为 " **自动**"。 可以是 **自动** 的，也可以是 **none**。 如果为 " **自动**"，则已发布表的架构和初始数据将首先传输到订阅服务器。 如果 **没有**，则假定订阅服务器已拥有已发布表的架构和初始数据。 始终会传输系统表和数据。  
   
 > [!NOTE]  
 >  建议不要将值指定为 **none**。  
@@ -112,7 +112,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**5**|星期四|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|天|  
+|**8**|日期|  
 |**9**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
@@ -122,20 +122,20 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
 |NULL（默认值）||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为 **int**，默认值为 NULL。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type* 使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 NULL。  
   
-`[ @frequency_subday = ] frequency_subday`*Frequency_subday_interval*的单位。 *frequency_subday* 为 **int**，可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday`*Frequency_subday_interval* 的单位。 *frequency_subday* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|Minute|  
 |**8**|小时|  
 |NULL（默认值）||  
@@ -150,22 +150,22 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @active_end_date = ] active_end_date` 停止计划合并代理的日期，格式为 YYYYMMDD。 *active_end_date* 的值为 **int**，默认值为 NULL。  
   
-`[ @optional_command_line = ] 'optional_command_line'` 要执行的可选命令提示符。 *optional_command_line*为 **nvarchar (4000) **，默认值为 NULL。 此参数用于添加捕获输出并将输出保存到文件的命令，或者用于指定配置文件或属性。  
+`[ @optional_command_line = ] 'optional_command_line'` 要执行的可选命令提示符。 *optional_command_line* 为 **nvarchar (4000)**，默认值为 NULL。 此参数用于添加捕获输出并将输出保存到文件的命令，或者用于指定配置文件或属性。  
   
-`[ @description = ] 'description'` 是此合并订阅的简短说明。 *描述*为 **nvarchar (255) **，默认值为 NULL。 此值由复制监视器在 " **友好名称** " 列中显示，可用于对被监视的发布的订阅进行排序。  
+`[ @description = ] 'description'` 是此合并订阅的简短说明。 *描述* 为 **nvarchar (255)**，默认值为 NULL。 此值由复制监视器在 " **友好名称** " 列中显示，可用于对被监视的发布的订阅进行排序。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步管理器同步订阅。 *enabled_for_syncmgr* 为 **nvarchar (5) **，默认值为 FALSE。 如果 **为 false**，则不向同步管理器注册订阅。 如果 **为 true**，则会向同步管理器注册订阅，并在不启动的情况下同步订阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步管理器同步订阅。 *enabled_for_syncmgr* 为 **nvarchar (5)**，默认值为 FALSE。 如果 **为 false**，则不向同步管理器注册订阅。 如果 **为 true**，则会向同步管理器注册订阅，并在不启动的情况下同步订阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 `[ @offloadagent = ] remote_agent_activation` 指定可以远程激活代理。 *remote_agent_activation* 为 **bit** ，默认值为 **0**。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它只是为了让脚本能够向后兼容。  
   
-`[ @offloadserver = ] 'remote_agent_server_name'` 指定用于远程代理激活的服务器的网络名称。 *remote_agent_server_name*的默认值为 **sysname**，默认值为 NULL。  
+`[ @offloadserver = ] 'remote_agent_server_name'` 指定用于远程代理激活的服务器的网络名称。 *remote_agent_server_name* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver'` 允许交互式解决允许交互式解决的所有项目的冲突。 *use_interactive_resolver* 为 **nvarchar (5) **，默认值为 FALSE。  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver'` 允许交互式解决允许交互式解决的所有项目的冲突。 *use_interactive_resolver* 为 **nvarchar (5)**，默认值为 FALSE。  
   
-`[ @merge_job_name = ] 'merge_job_name'`* \@ Merge_job_name*参数已弃用，无法设置。 *merge_job_name* 的默认值为 **sysname**，默认值为 NULL。  
+`[ @merge_job_name = ] 'merge_job_name'`*\@ Merge_job_name* 参数已弃用，无法设置。 *merge_job_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 `[ @hostname = ] 'hostname'` 当在参数化筛选器的 WHERE 子句中使用此函数时，将重写 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 返回的值。 *Hostname* 的值为 **sysname**，默认值为 NULL。  
   
@@ -178,7 +178,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_addmergesubscription** 用于合并复制。  
   
- 当由**sysadmin**固定服务器角色的成员执行**sp_addmergesubscription**以创建推送订阅时，合并代理作业将被隐式创建并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户下运行。 建议你执行[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) ，并为** \@ job_login**和** \@ Job_password**指定其他特定于代理的 Windows 帐户的凭据。 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+ 当由 **sysadmin** 固定服务器角色的成员执行 **sp_addmergesubscription** 以创建推送订阅时，合并代理作业将被隐式创建并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户下运行。 建议你执行 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) ，并为 **\@ job_login** 和 **\@ Job_password** 指定其他特定于代理的 Windows 帐户的凭据。 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

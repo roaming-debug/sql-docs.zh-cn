@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_change_job (Transact-SQL)
-title: sys. sp_cdc_change_job (Transact-sql) |Microsoft Docs
+title: sys.sp_cdc_change_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_change_job_TSQL
 - sys.sp_cdc_change_job
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf81cfb8cbd06602252e62b3c72bafe694c14ed8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0dcc3a8b69e6cf8e65f96b239dd7699f796246ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545852"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210760"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  修改当前数据库中变更数据捕获清除或捕获作业的配置。 若要查看作业的当前配置，请查询 [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) 表，或使用 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。  
+  修改当前数据库中变更数据捕获清除或捕获作业的配置。 若要查看作业的当前配置，请查询 [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) 表，或使用 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_type = ] 'job_type'` 要修改的作业的类型。 *job_type* 为 **nvarchar (20) ** ，默认值为 "捕获"。 有效的输入为 'capture' 和 'cleanup'。  
+`[ @job_type = ] 'job_type'` 要修改的作业的类型。 *job_type* 为 **nvarchar (20)** ，默认值为 "捕获"。 有效的输入为 'capture' 和 'cleanup'。  
   
 `[ @maxtrans ] = max_trans_` 每个扫描循环中要处理的最大事务数。 *max_trans* 的默认值为 **int** ，默认值为 NULL，指示未更改此参数。 如果指定值，则该值必须是一个正整数。  
   
@@ -64,15 +64,15 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  当 *连续* = 0 时， **sp_cdc_scan** 作业最多执行一次日志 *max_scans* 扫描，每次扫描时处理 *max_trans* 事务，然后退出。  
   
- 如果** \@ 连续**的更改从1改为0，则** \@ pollinginterval**会自动设置为0。 将忽略为** \@ pollinginterval**以外的其他值指定的值。  
+ 如果 **\@ 连续** 的更改从1改为0，则 **\@ pollinginterval** 会自动设置为0。 将忽略为 **\@ pollinginterval** 以外的其他值指定的值。  
   
- 如果省略** \@ 连续**或显式设置为 NULL，并且** \@ pollinginterval**被显式设置为大于0的值，则** \@ 连续**自动设置为1。  
+ 如果省略 **\@ 连续** 或显式设置为 NULL，并且 **\@ pollinginterval** 被显式设置为大于0的值，则 **\@ 连续** 自动设置为1。  
   
  *连续* 仅对捕获作业有效。  
   
 `[ @pollinginterval ] = polling_interval_` 日志扫描循环之间的秒数。 *polling_interval* 为 **bigint** ，默认值为 NULL，指示未更改此参数。  
   
- 如果将 "*连续*" 设置为1，则*polling_interval*仅对捕获作业有效。  
+ 如果将 "*连续*" 设置为1，则 *polling_interval* 仅对捕获作业有效。  
   
 `[ @retention ] = retention_` 更改行要在更改表中保留的分钟数。 *保留期* 为 **bigint** ，默认值为 NULL，指示未更改此参数。 最大值为 52494800（100 年）。 如果指定值，则该值必须是一个正整数。  
   
@@ -87,7 +87,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  无  
   
 ## <a name="remarks"></a>备注  
- 如果省略参数，则不会更新 [cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) 表中的关联值。 如果将参数显式设置为 NULL，则视作省略此参数。  
+ 如果省略参数，则不会更新 [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) 表中的关联值。 如果将参数显式设置为 NULL，则视作省略此参数。  
   
  如果指定的参数对相应作业类型无效，则会导致该语句失败。  
   
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. 更改清除作业  
- 下例更新 `AdventureWorks2012` 数据库中的一个清除作业。 此作业类型的所有有效参数（ ** \@ 阈值**除外）均已指定。 不会修改** \@ 阈值**的值。  
+ 下例更新 `AdventureWorks2012` 数据库中的一个清除作业。 此作业类型的所有有效参数（ **\@ 阈值** 除外）均已指定。 不会修改 **\@ 阈值** 的值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,8 +124,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys. sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

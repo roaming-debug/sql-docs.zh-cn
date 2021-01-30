@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_cleanup_change_table (Transact-SQL)
-title: sys. sp_cdc_cleanup_change_table (Transact-sql) |Microsoft Docs
+title: sys.sp_cdc_cleanup_change_table (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_cleanup_change_table
 - sp_cdc_cleanup_change_table_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d532b168dfdc17b85ada5b9ef6ac653b9903fc6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc6ca4964beff8adc8f32598948964d597076804
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541096"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210749"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,11 +52,11 @@ sys.sp_cdc_cleanup_change_table
  *capture_instance* 必须命名当前数据库中存在的捕获实例。  
   
  [ @low_water_mark =] *low_water_mark*  
- 是 (LSN) 的日志序列号，将用作 *捕获实例*的新低水印。 *low_water_mark* 是 **二进制 (10) **，无默认值。  
+ 是 (LSN) 的日志序列号，将用作 *捕获实例* 的新低水印。 *low_water_mark* 是 **二进制 (10)**，无默认值。  
   
- 如果该值为非空值，则它必须显示为 [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 表中的当前项的 start_lsn 值。 如果 cdc.lsn_time_mapping 中的其他条目共享与新的低水印所标识的条目相同的提交时间，则选择与该组条目关联的最小 LSN 作为低水印。  
+ 如果该值为非空值，则它必须显示为 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 表中当前项的 start_lsn 值。 如果 cdc.lsn_time_mapping 中的其他条目共享与新的低水印所标识的条目相同的提交时间，则选择与该组条目关联的最小 LSN 作为低水印。  
   
- 如果将值显式设置为 NULL，则*捕获实例*的当前*低水印*用于定义清理操作的上限。  
+ 如果将值显式设置为 NULL，则 *捕获实例* 的当前 *低水印* 用于定义清理操作的上限。  
   
  [ @threshold =] '*删除阈值*'  
  清除时可以使用一条语句删除的删除项的最大数量。 *delete_threshold* 为 **bigint**，默认值为5000。  
@@ -81,7 +81,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   清理代理作业报告删除失败。  
   
-     管理员可以运行此存储过程以显式重试失败的操作。 若要对给定的捕获实例重试清理，请执行 sp_cdc_cleanup_change_table，并为参数指定 NULL @low_water_mark 。  
+     管理员可以运行此存储过程以显式重试失败的操作。 若要对给定的捕获实例重试清理，请执行 sys.sp_cdc_cleanup_change_table，并为 @low_water_mark 参数指定 NULL。  
   
 -   由清理代理作业使用的基于保留期的简单策略不能满足要求。  
   
@@ -91,8 +91,8 @@ sys.sp_cdc_cleanup_change_table
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
 ## <a name="see-also"></a>另请参阅  
- [fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys. fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [&#62;  &#40;Transact-sql&#41;cdc.fn_cdc_get_all_changes_&#60;capture_instance ](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [sys.fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   
   

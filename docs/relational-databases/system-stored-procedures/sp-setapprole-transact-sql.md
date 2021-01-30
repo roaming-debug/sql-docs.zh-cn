@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setapprole
 - sp_setapprole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0513878f65513e57a6e26bb52d8101ba6c5d672c
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: f34be78bc4d3f47ff2a11d0a6ed09c22c3670dca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570954"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209273"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -44,11 +44,11 @@ sp_setapprole [ @rolename = ] 'role',
     [ , [ @cookie = ] @cookie OUTPUT ]  
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
-`[ @rolename = ] 'role'` 当前数据库中定义的应用程序角色的名称。 *role* 的值为 **sysname** ，无默认值。 *角色* 必须存在于当前数据库中。  
+`[ @rolename = ] 'role'` 当前数据库中定义的应用程序角色的名称。 *role* 的值为 **sysname**，无默认值。 *角色* 必须存在于当前数据库中。  
   
-`[ @password = ] { encrypt N'password' }` 激活应用程序角色所需的密码。 *password* 的值为 **sysname** ，无默认值。 可使用 ODBC **加密** 函数对 *密码* 进行模糊处理。 当使用 **加密** 函数时，必须通过将 **N** 置于第一个引号之前，将密码转换为 Unicode 字符串。  
+`[ @password = ] { encrypt N'password' }` 激活应用程序角色所需的密码。 *password* 的值为 **sysname**，无默认值。 可使用 ODBC **加密** 函数对 *密码* 进行模糊处理。 当使用 **加密** 函数时，必须通过将 **N** 置于第一个引号之前，将密码转换为 Unicode 字符串。  
   
  使用 **SqlClient** 的连接不支持加密选项。  
   
@@ -56,7 +56,7 @@ sp_setapprole [ @rolename = ] 'role',
 > **ODBC encryption** 函数不提供加密。 您不应当依赖该函数来保护通过网络传输的密码。 如果此信息将通过网络传输，请使用 TLS 或 IPSec。
   
  **@encrypt = "none"**  
- 指定不使用任何模糊代码。 密码以明文形式传递到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这是默认设置。  
+ 指定不使用任何模糊代码。 密码以明文形式传递到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这是默认值。  
   
  **@encrypt= "odbc"**  
  指定在将密码发送到之前，ODBC 将使用 ODBC **encrypt** 函数来模糊处理密码 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 这只能在使用 ODBC 客户端或 OLE DB Provider for SQL Server 时指定。  
@@ -72,9 +72,9 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (成功) 和 1 (失败)   
   
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
- 使用 **sp_setapprole** 激活应用程序角色后，该角色将保持活动状态，直到用户从服务器断开连接或执行 **sp_unsetapprole** 。 **sp_setapprole** 只能由直接 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在即席级别执行，而不能在另一个存储过程、触发器或用户定义的事务内执行。  
+ 使用 **sp_setapprole** 激活应用程序角色后，该角色将保持活动状态，直到用户从服务器断开连接或执行 **sp_unsetapprole**。 **sp_setapprole** 只能由直接 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在即席级别执行，而不能在另一个存储过程、触发器或用户定义的事务内执行。  
   
  有关应用程序角色的概述，请参阅 [应用程序角色](../../relational-databases/security/authentication-access/application-roles.md)。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_log_shipping_primary_database
 - sp_delete_log_shipping_primary_database_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2b7a1e58188a9b9f3a845e465139e5a24d3fad88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a42bb060044c35e4d2569e23e24eb8ba9bc46fd7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474367"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211141"
 ---
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  此存储过程删除主数据库的日志传送，包括备份作业、本地历史记录以及远程历史记录。 仅在使用 **sp_delete_log_shipping_primary_secondary**删除辅助数据库后，才使用此存储过程。  
+  此存储过程删除主数据库的日志传送，包括备份作业、本地历史记录以及远程历史记录。 仅在使用 **sp_delete_log_shipping_primary_secondary** 删除辅助数据库后，才使用此存储过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +50,13 @@ sp_delete_log_shipping_primary_database
  无。  
   
 ## <a name="remarks"></a>备注  
- 必须从主服务器上的**master**数据库运行**sp_delete_log_shipping_primary_database** 。 此存储过程执行以下操作：  
+ 必须从主服务器上的 **master** 数据库运行 **sp_delete_log_shipping_primary_database** 。 此存储过程执行以下操作：  
   
 1.  为指定的主数据库删除备份作业。  
   
 2.  删除主服务器上 **log_shipping_monitor_primary** 中的本地监视记录。  
   
-3.  删除 **log_shipping_monitor_history_detail** 和 **log_shipping_monitor_error_detail**中的相应条目。  
+3.  删除 **log_shipping_monitor_history_detail** 和 **log_shipping_monitor_error_detail** 中的相应条目。  
   
 4.  如果监视服务器不同于主服务器，则会在监视服务器 **log_shipping_monitor_primary** 上删除监视记录。  
   

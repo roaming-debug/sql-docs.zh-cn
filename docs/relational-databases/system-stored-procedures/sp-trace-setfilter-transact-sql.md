@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_trace_setfilter
 - sp_trace_setfilter_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8edccbecb7d5a44b2fc8a5eed2297498c0f94bae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b068b4659b3c3205aa52d6ebffc0daf680c3cd9d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547828"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209718"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  将筛选应用于跟踪。 **sp_trace_setfilter** 只能在已停止的现有跟踪上执行 () *状态* 为 **0** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果对不存在的或其 *状态* 不为 **0**的跟踪执行此存储过程，则将返回错误。  
+  将筛选应用于跟踪。 **sp_trace_setfilter** 只能在已停止的现有跟踪上执行 () *状态* 为 **0** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果对不存在的或其 *状态* 不为 **0** 的跟踪执行此存储过程，则将返回错误。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件。  
@@ -66,7 +66,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|不类似于|  
   
-`[ @value = ] value` 指定要对其进行筛选的值。 *值*的数据类型必须与要筛选的列的数据类型匹配。 例如，如果在属于 **int** 数据类型的对象 ID 列上设置筛选器，则 *值* 必须为 **int**。如果 *值* 为 **nvarchar** 或 **varbinary**，则其最大长度为8000。  
+`[ @value = ] value` 指定要对其进行筛选的值。 *值* 的数据类型必须与要筛选的列的数据类型匹配。 例如，如果在属于 **int** 数据类型的对象 ID 列上设置筛选器，则 *值* 必须为 **int**。如果 *值* 为 **nvarchar** 或 **varbinary**，则其最大长度为8000。  
   
  比较运算符为 LIKE 或 NOT LIKE 时，逻辑运算符可以包括“%”或其他适合 LIKE 运算的筛选器。  
   
@@ -85,7 +85,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |1|未知错误。|  
 |2|本跟踪当前正在运行。 此时更改跟踪会导致错误。|  
 |4|指定的列无效。|  
-|5|不允许筛选指定的列。 仅从 **sp_trace_setfilter**返回该值。|  
+|5|不允许筛选指定的列。 仅从 **sp_trace_setfilter** 返回该值。|  
 |6|指定的比较运算符无效。|  
 |7|指定的逻辑运算符无效。|  
 |9|指定的跟踪句柄无效。|  
@@ -95,7 +95,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="remarks"></a>备注  
  **sp_trace_setfilter** 是一种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程，它执行以前的版本中提供的扩展存储过程执行的许多操作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用 **sp_trace_setfilter** 而不是 **xp_trace_set \* 筛选** 扩展存储过程来创建、应用、删除或操作跟踪筛选器。 有关详细信息，请参阅 [筛选跟踪](../../relational-databases/sql-trace/filter-a-trace.md)。  
   
- 特定列的所有筛选器都必须在 **sp_trace_setfilter**的一次执行中同时启用。 例如，如果用户想对应用程序名称列应用两个筛选器，对用户名列应用一个筛选器，则用户必须按顺序对应用程序名称指定筛选器。 如果用户试图在一次存储过程调用中先对应用程序名称指定一个筛选器，接着对用户名指定筛选器，然后对应用程序名称指定另一个筛选器，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
+ 特定列的所有筛选器都必须在 **sp_trace_setfilter** 的一次执行中同时启用。 例如，如果用户想对应用程序名称列应用两个筛选器，对用户名列应用一个筛选器，则用户必须按顺序对应用程序名称指定筛选器。 如果用户试图在一次存储过程调用中先对应用程序名称指定一个筛选器，接着对用户名指定筛选器，然后对应用程序名称指定另一个筛选器，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   
  严格类型化)  (**sp_trace_xx** 的所有 SQL 跟踪存储过程的参数。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   

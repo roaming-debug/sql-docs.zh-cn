@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c5805fd84eb9bce1092cdfae59a9711c2d63edb8
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e01c89ef3903e78b8ba312914c97eed61bd8757e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102053"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208893"
 ---
 # <a name="system-base-tables"></a>系统基表
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98102053"
 ## <a name="system-base-tables"></a>系统基表  
  下表列出并描述了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每个系统基表。  
   
-|基表|描述|  
+|基表|说明|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|存在于每个数据库中。 每一行表示数据库中的一个对象。|  
 |**sys.sysbinobjs**|存在于每个数据库中。 数据库中的每个 Service Broker 实体都存在对应的一行。 Service Broker 实体包括以下内容：<br /><br /> 消息类型<br /><br /> 服务约定<br /><br /> 服务<br /><br /> 名称和类型使用固定的二进制排序规则。|  

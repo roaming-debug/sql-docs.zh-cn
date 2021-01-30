@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppeerrequests_TSQL
 - sp_helppeerrequests
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0ea9dce50e440c9b519032d46340b1b0a495eea0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d728d168ec84d27cbe5c4316eec1e5e0c9f61221
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535141"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210862"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 发送了状态请求的对等拓扑中的发布名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @description = ] 'description'` 可用于标识各个状态请求的值，这使你能够根据在调用 [sp_requestpeerresponse &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)时提供的用户定义的信息筛选返回的响应。 *描述* 为 **nvarchar (4000) **，默认值为 **%** 。 默认情况下，返回发布的所有状态请求。 此参数用于仅返回其说明与 *说明*中提供的值匹配的状态请求，其中使用 [类似的 &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md) 子句来匹配字符串。  
+`[ @description = ] 'description'` 可用于标识各个状态请求的值，这使你能够根据在调用 [sp_requestpeerresponse &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)时提供的用户定义的信息筛选返回的响应。 *描述* 为 **nvarchar (4000)**，默认值为 **%** 。 默认情况下，返回发布的所有状态请求。 此参数用于仅返回其说明与 *说明* 中提供的值匹配的状态请求，其中使用 [类似的 &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md) 子句来匹配字符串。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -58,7 +58,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_helppeerrequests** 用于对等事务复制。  
   
- 还原在对等拓扑中发布的数据库时，将使用**sp_helppeerrequests** 。  
+ 还原在对等拓扑中发布的数据库时，将使用 **sp_helppeerrequests** 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_helppeerrequests**。  

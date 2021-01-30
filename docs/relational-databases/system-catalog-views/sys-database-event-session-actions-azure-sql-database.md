@@ -7,17 +7,17 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6b142c7a0a6d63fb6e0c2dcc59a5f2f701c2cfd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2613739822160969f070413f2d87a661878ae3ff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102800"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210344"
 ---
 # <a name="sysdatabase_event_session_actions-azure-sql-database"></a>sys.database_event_session_actions（Azure SQL 数据库）
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "98102800"
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |event_id|**int**|事件的 ID。 此 ID 在事件会话对象中是唯一的。 不可为 null。|  
 |name|**sysname**|操作的名称。 可以为 Null。|  
-|程序包|**sysname**|包含事件的事件包的名称。 可以为 Null。|  
+|包|**sysname**|包含事件的事件包的名称。 可以为 Null。|  
 |name|**sysname**|包含事件的模块的名称。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
@@ -42,7 +42,7 @@ ms.locfileid: "98102800"
 ## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-| From | 目标 | Relationship |
+| From | 功能 | 关系 |
 | ---- | -- | ------------ |
 |sys.database_event_session_actions sys.database_event_session_actions.event_session_id|sys.sys. database_event_sessions. event_session_id|多对一|  
 |sys.database_event_session_actions sys.database_event_session_actions.event_id<br /><br /> sys.database_event_session_actions sys.database_event_session_actions.event_session_id|sys.database_event_session_events sys.database_event_session_events.event_session_id<br /><br /> sys.database_event_session_events sys.database_event_session_events.event_id|多对一|  

@@ -1,12 +1,12 @@
 ---
 description: sys.dm_fts_index_keywords (Transact-SQL)
-title: sys. dm_fts_index_keywords (Transact-sql) |Microsoft Docs
+title: sys.dm_fts_index_keywords (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_fts_index_keywords
 - sys.dm_fts_index_keywords
@@ -21,22 +21,22 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e57cb14d48f23235971b3adacb656277aa2d1626
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55bd43c5d4704d145618401230be62e59f3cd3c6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474931"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211208"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关指定表的全文索引内容的信息。  
   
- **sys. dm_fts_index_keywords** 是动态管理功能。  
+ **sys.dm_fts_index_keywords** 是动态管理功能。  
   
 > [!NOTE]  
->  若要查看较低级别的全文检索信息，请在文档级别使用 [sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) 动态管理函数。  
+>  若要查看较低级别的全文检索信息，请在文档级别使用 [sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) 动态管理函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="arguments"></a>参数  
  db_id ( "*database_name*" )   
- 调用 [DB_ID ( # B1 ](../../t-sql/functions/db-id-transact-sql.md) 函数。 此函数接受数据库名称并返回数据库 ID，该 ID 是 **dm_fts_index_keywords** 使用来查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID**。  
+ 调用 [DB_ID ( # B1 ](../../t-sql/functions/db-id-transact-sql.md) 函数。 此函数接受数据库名称并返回数据库 ID，该 ID **sys.dm_fts_index_keywords** 使用来查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID。  
   
  object_id ( "*table_name*" )   
  调用 [OBJECT_ID ( # B1 ](../../t-sql/functions/object-id-transact-sql.md) 函数。 此函数接受表名，并返回包含要检查的全文索引的表的表 ID。  
@@ -58,11 +58,11 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 |-----------------|---------------|-----------------|  
 |**keyword**|**nvarchar(4000)**|全文索引中存储的关键字的十六进制表示形式。<br /><br /> 注意： OxFF 表示特殊字符，该字符指示文件或数据集的结尾。|  
 |**display_term**|**nvarchar(4000)**|关键字的可读格式。 这种格式是从十六进制格式派生的。<br /><br /> 注意： OxFF 的 **display_term** 值为 "文件结尾"。|  
-|**column_id**|**int**|从中对当前关键字进行全文索引的列的 ID。|  
+|column_id|**int**|从中对当前关键字进行全文索引的列的 ID。|  
 |**document_count**|**int**|包含当前字词的文档或行的数目。|  
   
 ## <a name="remarks"></a>备注  
- **Sys. dm_fts_index_keywords**返回的信息对于查找以下内容很有用：  
+ **Sys.dm_fts_index_keywords** 返回的信息对于查找以下内容很有用：  
   
 -   关键字是否为全文索引的一部分。  
   
@@ -70,12 +70,12 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 -   全文索引中最常见的关键字：  
   
-    -   每个*keyword_value*的**document_count**与**document_count**总大小（0xff 的文档数）相比较。  
+    -   每个 *keyword_value* 的 **document_count** 与 **document_count** 总大小（0xff 的文档数）相比较。  
   
     -   通常，最常见的关键字可能适于声明为非索引字。  
   
 > [!NOTE]  
->  对于特定的文档， **dm_fts_index_keywords**返回的**document_count**可能不太准确，因为**dm_fts_index_keywords_by_document**或**CONTAINS**查询返回的计数。 这一可能的不精确估计小于 1%。 出现这种导致的原因是，如果 document_id 在索引片段中的多行间连续发生两次，或在同一行中多次出现，则可能会对该**document_id**计数两次。 若要为特定文档获取更准确的计数，请使用 **sys. dm_fts_index_keywords_by_document** 或 **CONTAINS** 查询。  
+>  与 **sys.dm_fts_index_keywords_by_document** 或 **CONTAINS** 查询返回的计数相比， **sys.dm_fts_index_keywords** 返回的 **document_count** 对于特定文档而言可能不太准确。 这一可能的不精确估计小于 1%。 出现这种导致的原因是，如果 document_id 在索引片段中的多行间连续发生两次，或在同一行中多次出现，则可能会对该计数两次。 若要为特定文档获取更准确的计数，请使用 **sys.dm_fts_index_keywords_by_document** 或 **CONTAINS** 查询。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  

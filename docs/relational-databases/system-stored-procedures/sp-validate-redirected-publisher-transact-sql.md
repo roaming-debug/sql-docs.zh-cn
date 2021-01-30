@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_validate_redirected_publisher
 - sp_validate_redirected_publisher_TSQL
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 42184546069fb5358fbdc8863998b7bda74f89a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd0e7a98d9f9a5886d829c5567d91795ca388b6a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534750"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211316"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  验证要发布数据库的当前主机是否有能力支持复制。 必须从分发数据库运行。 此过程由 **sp_get_redirected_publisher**调用。  
+  验证要发布数据库的当前主机是否有能力支持复制。 必须从分发数据库运行。 此过程由 **sp_get_redirected_publisher** 调用。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "89534750"
  无。  
   
 ## <a name="remarks"></a>备注  
- 如果发布服务器和发布数据库中不存在任何项， **sp_validate_redirected_publisher**将在输出参数* \@ redirected_publisher*中返回 null。 如果存在条目，则在成功和失败的情况下都会在输出参数中返回条目。  
+ 如果发布服务器和发布数据库中不存在任何项， **sp_validate_redirected_publisher** 将在输出参数 *\@ redirected_publisher* 中返回 null。 如果存在条目，则在成功和失败的情况下都会在输出参数中返回条目。  
   
  如果验证成功， **sp_validate_redirected_publisher** 将返回成功指示。  
   

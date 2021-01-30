@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_agent_parameter
 - sp_help_agent_parameter_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a52b93428666d44c3b42777566c18e0d5c8e4f7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 10bfa40c02e0ca025105179bec3d7970494c6d90
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535512"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208957"
 ---
 # <a name="sp_help_agent_parameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +55,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
  **sp_help_agent_parameter** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员或 **replmonitor** 固定数据库角色的成员才能 **sp_help_agent_parameter**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **replmonitor** 固定数据库角色的成员才能 **sp_help_agent_parameter** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用复制代理配置文件](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

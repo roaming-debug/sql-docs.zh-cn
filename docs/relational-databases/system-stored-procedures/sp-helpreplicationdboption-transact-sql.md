@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpreplicationdboption_TSQL
 - sp_helpreplicationdboption
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6733b1f473c91094bd8af177bce4b13f3cf1b03e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 17c47d247e154ed80f0daeb8bacdb4984864fa03
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526871"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210807"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +72,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
  **sp_helpreplicationdboption** 用于快照复制、事务复制和合并复制。  
   
 ## <a name="permissions"></a>权限  
- **Sysadmin**固定服务器角色的成员可以对任何数据库执行**sp_helpreplicationdboption** 。 **Db_owner**固定数据库角色的成员可以对该数据库执行**sp_helpreplicationdboption** 。  
+ **Sysadmin** 固定服务器角色的成员可以对任何数据库执行 **sp_helpreplicationdboption** 。 **Db_owner** 固定数据库角色的成员可以对该数据库执行 **sp_helpreplicationdboption** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_replicationdboption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

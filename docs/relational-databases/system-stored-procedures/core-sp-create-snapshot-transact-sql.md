@@ -1,13 +1,13 @@
 ---
 description: core.sp_create_snapshot (Transact-SQL)
-title: sp_create_snapshot (Transact-sql) |Microsoft Docs
+title: core.sp_create_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 719167961eb9c716266e1a96a17c31ea82367cbc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 737739cfa627e6668d95e6453d66ed1bad4ad637
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550118"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210506"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  收集组实例的名称。 *named_instance* 是 **sysname**，没有默认值。  
   
  [ @log_id =] *log_id*  
- 映射到收集数据的服务器上的收集组事件日志的唯一标识符。 *log_id* 为 **bigint** ，无默认值。 若要获取 *log_id*的值，请查询 msdb 数据库中的 dbo.syscollector_execution_log 视图。  
+ 映射到收集数据的服务器上的收集组事件日志的唯一标识符。 *log_id* 为 **bigint** ，无默认值。 若要获取 *log_id* 的值，请查询 msdb 数据库中的 dbo.syscollector_execution_log 视图。  
   
  [ @snapshot_id =] *snapshot_id*  
  插入到 core 快照视图中的行的唯一标识符。 *snapshot_id* 为 **int** ，并作为 OUTPUT 返回。  

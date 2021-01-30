@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_updatestats_TSQL
 - sp_updatestats
@@ -19,12 +19,12 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f976f9be51d688833a09e5faaae42b8864ecc274
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0cfaffcf1df13da39a093043d84e28f4433d3a71
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482385"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209264"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @resample = ] 'resample'` 指定 **sp_updatestats** 将使用 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 语句的 "重新采样" 选项。 如果未指定 **"重新采样"** ，则 **sp_updatestats** 使用默认采样更新统计信息。 重新 **采样** 是 **varchar (8)** ，默认值为 NO。  
   
 ## <a name="remarks"></a>备注  

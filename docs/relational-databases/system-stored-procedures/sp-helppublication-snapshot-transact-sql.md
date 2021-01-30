@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppublication_snapshot
 - sp_helppublication_snapshot_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e423df4dcda235063e496b1474055c8d7de4e28e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ae7357cd8bc8f03805c6de948095ff2dbc4d541
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543262"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210865"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,19 +44,19 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  在将项目添加到发布服务器时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  在将项目添加到发布服务器时，不应使用 *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|快照代理的 ID。|  
-|name |**nvarchar (100) **|快照代理的名称。|  
+|name |**nvarchar (100)**|快照代理的名称。|  
 |**publisher_security_mode**|**smallint**|代理在连接发布服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1** = Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接到发布服务器时使用的登录名。|  
-|**publisher_password**|**nvarchar (524) **|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
+|**publisher_password**|**nvarchar (524)**|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
-|**job_login**|**nvarchar(512)**|是运行快照代理时所用的 Windows 帐户，它以 "*域*用户名" 的格式返回 \\ *username*。|  
+|**job_login**|**nvarchar(512)**|是运行快照代理时所用的 Windows 帐户，它以 "*域* 用户名" 的格式返回 \\ 。|  
 |**job_password**|**sysname**|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
 |**schedule_name**|**sysname**|用于该代理作业的计划的名称。|  
 |**frequency_type**|**int**|代理计划运行的频率，可以为下列值之一：<br /><br /> **1** = 一次<br /><br /> **2** = 按需<br /><br /> **4** = 每天<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月相对<br /><br /> **64** = 自动启动<br /><br /> **128** = 定期|  

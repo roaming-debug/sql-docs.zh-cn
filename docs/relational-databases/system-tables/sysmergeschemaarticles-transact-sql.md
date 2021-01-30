@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmergeschemaarticles_TSQL
 - sysmergeschemaarticles
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 98dc783b78d26d040789cc3dc46f2f53aaa4dc7c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 579acde4f82556f176e5923a66db48c1faafe27f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097371"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210199"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "98097371"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|合并复制中仅限架构的项目的名称。|  
-|type|**tinyint**|指示仅限架构的项目的类型，可以是以下类型之一：<br /><br /> **0x20** = 存储过程仅限架构的项目。<br /><br /> **0x40** = 查看仅限架构的项目或索引视图仅限架构的项目。|  
+|type |**tinyint**|指示仅限架构的项目的类型，可以是以下类型之一：<br /><br /> **0x20** = 存储过程仅限架构的项目。<br /><br /> **0x40** = 查看仅限架构的项目或索引视图仅限架构的项目。|  
 |**objid**|**int**|项目基对象的对象标识符。 可以是过程、视图、索引视图或用户定义函数的对象标识符。|  
 |**artid**|**uniqueidentifier**|文章 ID。|  
 |description|**nvarchar(255)**|项目的说明。|  

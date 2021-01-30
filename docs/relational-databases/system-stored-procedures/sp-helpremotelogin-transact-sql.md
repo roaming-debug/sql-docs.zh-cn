@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpremotelogin_TSQL
 - sp_helpremotelogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4b35458a0c99eb14db60a058ef72e98df529c217
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff291542fee3d10fe94e9ccd628e05c8f9e77f7b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547967"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210817"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,10 +44,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @remoteserver **=** ] **\ "***remoteserver***"**  
+ [ @remoteserver **=** ] **\ "**_remoteserver_*_"_*  
  远程服务器，将返回其远程登录名信息。 *remoteserver* 的值为 **sysname**，默认值为 NULL。 如果未指定 *remoteserver* ，则返回在本地服务器上定义的所有远程服务器的相关信息。  
   
- [ @remotename **=** ] **'***remote_name***'**  
+ [ @remotename **=** ] **'**_remote_name_*_'_*  
  远程服务器上的特定远程登录名。 *remote_name* 的默认值为 **sysname**，默认值为 NULL。 如果未指定 *remote_name* ，则返回有关为 *remoteserver* 定义的所有远程用户的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  

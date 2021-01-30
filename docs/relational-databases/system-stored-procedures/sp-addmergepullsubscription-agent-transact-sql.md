@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergepullsubscription_agent
 - sp_addmergepullsubscription_agent_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ad9425df176a7f822b18ab793d0eada4362c551
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ecc9b2fded678671bc608235fa3080f2ed31573
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529919"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209425"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -122,12 +122,12 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 合并代理始终使用 Windows 身份验证连接到本地订阅服务器。 如果为此参数指定了值，将返回警告消息，但将忽略该值。  
   
-`[ @subscriber_login = ] 'subscriber_login'` 同步时连接到订阅服务器时要使用的订阅服务器登录名。 如果*subscriber_security_mode*设置为**0**，则*subscriber_login*是必需的。 *subscriber_login* 的默认值为 **sysname**，默认值为 NULL。  
+`[ @subscriber_login = ] 'subscriber_login'` 同步时连接到订阅服务器时要使用的订阅服务器登录名。 如果 *subscriber_security_mode* 设置为 **0**，则 *subscriber_login* 是必需的。 *subscriber_login* 的默认值为 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 如果为此参数指定了值，将返回警告消息，但将忽略该值。  
   
-`[ @subscriber_password = ] 'subscriber_password'` 身份验证的订阅服务器密码 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果*subscriber_security_mode*设置为**0**，则*subscriber_password*是必需的。 *subscriber_password* 的默认值为 **sysname**，默认值为 NULL。  
+`[ @subscriber_password = ] 'subscriber_password'` 身份验证的订阅服务器密码 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果 *subscriber_security_mode* 设置为 **0**，则 *subscriber_password* 是必需的。 *subscriber_password* 的默认值为 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 如果为此参数指定了值，将返回警告消息，但将忽略该值。  
@@ -139,9 +139,9 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'` 同步时连接到分发服务器时使用的分发服务器登录名。 如果*distributor_security_mode*设置为**0**，则*distributor_login*是必需的。 *distributor_login* 的默认值为 **sysname**，默认值为 NULL。  
+`[ @distributor_login = ] 'distributor_login'` 同步时连接到分发服务器时使用的分发服务器登录名。 如果 *distributor_security_mode* 设置为 **0**，则 *distributor_login* 是必需的。 *distributor_login* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @distributor_password = ] 'distributor_password'` 分发服务器密码。 如果*distributor_security_mode*设置为**0**，则*distributor_password*是必需的。 *distributor_password* 的默认值为 **sysname**，默认值为 NULL。  
+`[ @distributor_password = ] 'distributor_password'` 分发服务器密码。 如果 *distributor_security_mode* 设置为 **0**，则 *distributor_password* 是必需的。 *distributor_password* 的默认值为 **sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
@@ -176,7 +176,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**5**|星期四|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|天|  
+|**8**|日期|  
 |**9**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
@@ -186,25 +186,25 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |值|说明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
 |NULL（默认值）||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 NULL。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type* 使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 NULL。  
   
 `[ @frequency_subday = ] frequency_subday` 在定义的时间段内重新计划的频率。 *frequency_subday* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|Minute|  
 |**8**|小时|  
 |NULL（默认值）||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday* 的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day` 第一次计划合并代理的时间，格式为 HHMMSS。 *active_start_time_of_day* 的值为 **int**，默认值为 NULL。  
   
@@ -214,15 +214,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @active_end_date = ] active_end_date` 停止计划合并代理的日期，格式为 YYYYMMDD。 *active_end_date* 的值为 **int**，默认值为 NULL。  
   
-`[ @optional_command_line = ] 'optional_command_line'` 是提供给合并代理的可选命令提示符。 *optional_command_line* 为 **nvarchar (255) **，默认值为 ""。 可用于向合并代理提供其他参数，例如在以下示例中，将默认的查询超时值增加到 `600` 秒：  
+`[ @optional_command_line = ] 'optional_command_line'` 是提供给合并代理的可选命令提示符。 *optional_command_line* 为 **nvarchar (255)**，默认值为 ""。 可用于向合并代理提供其他参数，例如在以下示例中，将默认的查询超时值增加到 `600` 秒：  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid` 作业 ID 的输出参数。 *merge_jobid* 为 **二进制 (16) **，默认值为 NULL。  
+`[ @merge_jobid = ] merge_jobid` 作业 ID 的输出参数。 *merge_jobid* 为 **二进制 (16)**，默认值为 NULL。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr* 为 **nvarchar (5) **，默认值为 FALSE。 如果 **为 false**，则不向同步管理器注册订阅。 如果 **为 true**，则会向同步管理器注册订阅，并在不启动的情况下同步订阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr* 为 **nvarchar (5)**，默认值为 FALSE。 如果 **为 false**，则不向同步管理器注册订阅。 如果 **为 true**，则会向同步管理器注册订阅，并在不启动的情况下同步订阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 `[ @ftp_address = ] 'ftp_address'` 仅用于向后兼容。  
   
@@ -232,15 +232,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @ftp_password = ] 'ftp_password'` 仅用于向后兼容。  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` 指定从中提取快照文件的位置。 *alternate_snapshot_folder* 为 **nvarchar (255) **，默认值为 NULL。 如果为 NULL，则从发布服务器指定的默认位置拾取快照文件。  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` 指定从中提取快照文件的位置。 *alternate_snapshot_folder* 为 **nvarchar (255)**，默认值为 NULL。 如果为 NULL，则从发布服务器指定的默认位置拾取快照文件。  
   
-`[ @working_directory = ] 'working_directory'` FTP 用于传输快照文件时用于临时存储发布的数据和架构文件的工作目录的名称。 *working_directory* 为 **nvarchar (255) **，默认值为 NULL。  
+`[ @working_directory = ] 'working_directory'` FTP 用于传输快照文件时用于临时存储发布的数据和架构文件的工作目录的名称。 *working_directory* 为 **nvarchar (255)**，默认值为 NULL。  
   
-`[ @use_ftp = ] 'use_ftp'` 指定使用 FTP 而不是典型协议来检索快照。 *use_ftp* 为 **nvarchar (5) **，默认值为 FALSE。  
+`[ @use_ftp = ] 'use_ftp'` 指定使用 FTP 而不是典型协议来检索快照。 *use_ftp* 为 **nvarchar (5)**，默认值为 FALSE。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` 使用交互式冲突解决程序解决所有允许交互式解决方法的项目的冲突。 *use_interactive_resolver* 为 **nvarchar (5) **，默认值为 FALSE。  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` 使用交互式冲突解决程序解决所有允许交互式解决方法的项目的冲突。 *use_interactive_resolver* 为 **nvarchar (5)**，默认值为 FALSE。  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
@@ -250,17 +250,17 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  > [!NOTE]  
 >  已不推荐使用远程代理激活，也不再支持该功能。 支持此参数只是为了让脚本能够向后兼容。 将 *remote_agent_server_name* 设置为任何非 NULL 值将生成错误。  
   
-`[ @job_name = ] 'job_name' ]` 现有代理作业的名称。 *job_name* 的值为 **sysname**，默认值为 NULL。 只有在使用现有作业而不是新创建的作业（此为默认设置）来同步订阅时，才需要指定此参数。 如果您不是**sysadmin**固定服务器角色的成员，则在指定*job_name*时必须指定*job_login*和*job_password* 。  
+`[ @job_name = ] 'job_name' ]` 现有代理作业的名称。 *job_name* 的值为 **sysname**，默认值为 NULL。 只有在使用现有作业而不是新创建的作业（此为默认设置）来同步订阅时，才需要指定此参数。 如果您不是 **sysadmin** 固定服务器角色的成员，则在指定 *job_name* 时必须指定 *job_login* 和 *job_password* 。  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` 如果要使用筛选数据快照，则从中读取快照文件的文件夹的路径。 *dynamic_snapshot_location* 为 **nvarchar (260) **，默认值为 NULL。 有关详细信息，请参阅 [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` 如果要使用筛选数据快照，则从中读取快照文件的文件夹的路径。 *dynamic_snapshot_location* 为 **nvarchar (260)**，默认值为 NULL。 有关详细信息，请参阅 [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
 `[ @use_web_sync = ] use_web_sync` 指示已启用 Web 同步。 *use_web_sync* 为 **bit**，默认值为0。 **1** 指定请求订阅可以使用 HTTP 通过 internet 进行同步。  
   
-`[ @internet_url = ] 'internet_url'` 是用于 Web 同步的复制侦听器 ( # A0) 的位置。 *internet_url* 为 **nvarchar (260) **，默认值为 NULL。 *internet_url* 是完全限定的 url，格式为 `http://server.domain.com/directory/replisapi.dll` 。 如果将服务器配置为侦听端口 80 以外的端口，则提供的端口号的格式也必须为 `http://server.domain.com:portnumber/directory/replisapi.dll`，其中的 `portnumber` 表示端口。  
+`[ @internet_url = ] 'internet_url'` 是用于 Web 同步的复制侦听器 ( # A0) 的位置。 *internet_url* 为 **nvarchar (260)**，默认值为 NULL。 *internet_url* 是完全限定的 url，格式为 `http://server.domain.com/directory/replisapi.dll` 。 如果将服务器配置为侦听端口 80 以外的端口，则提供的端口号的格式也必须为 `http://server.domain.com:portnumber/directory/replisapi.dll`，其中的 `portnumber` 表示端口。  
   
 `[ @internet_login = ] 'internet_login'` 合并代理使用 HTTP 基本身份验证连接到承载 Web 同步的 Web 服务器时使用的登录名。 *internet_login* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @internet_password = ] 'internet_password'` 合并代理使用 HTTP 基本身份验证连接到承载 Web 同步的 Web 服务器时所使用的密码。 *internet_password* 为 **nvarchar (524) **，默认值为 NULL。  
+`[ @internet_password = ] 'internet_password'` 合并代理使用 HTTP 基本身份验证连接到承载 Web 同步的 Web 服务器时所使用的密码。 *internet_password* 为 **nvarchar (524)**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -279,7 +279,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @hostname = ] 'hostname'` 在参数化筛选器的 WHERE 子句中使用此函数时，将重写 HOST_NAME ( # A1 的值。 *hostname* 的值为 **sysname**，默认值为 NULL。  
   
-`[ @job_login = ] 'job_login'` 用于运行代理的 Windows 帐户的登录名。 *job_login* 为 **nvarchar (257) **，无默认值。 使用 Windows 集成身份验证时，该 Windows 帐户始终用于到订阅服务器的代理连接及到分发服务器和发布服务器的连接。  
+`[ @job_login = ] 'job_login'` 用于运行代理的 Windows 帐户的登录名。 *job_login* 为 **nvarchar (257)**，无默认值。 使用 Windows 集成身份验证时，该 Windows 帐户始终用于到订阅服务器的代理连接及到分发服务器和发布服务器的连接。  
   
 `[ @job_password = ] 'job_password'` 运行代理所用的 Windows 帐户的密码。 *job_password* **sysname**，无默认值。  
   
@@ -292,7 +292,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="remarks"></a>备注  
  **sp_addmergepullsubscription_agent** 用于合并复制，并使用与 [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)相似的功能。  
   
- 有关如何在执行 **sp_addmergepullsubscription_agent**时正确指定安全设置的示例，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
+ 有关如何在执行 **sp_addmergepullsubscription_agent** 时正确指定安全设置的示例，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  

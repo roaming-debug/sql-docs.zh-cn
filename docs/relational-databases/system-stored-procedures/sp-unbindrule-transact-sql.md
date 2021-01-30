@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_unbindrule_TSQL
 - sp_unbindrule
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ddf241acfb6e82e0cdd67315727017fb9965f77
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 42b652e2cc604465ac0db1d2c6f65739916c8684
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547315"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209679"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,18 +44,18 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @objname = ] 'object_name'` 要从中解除规则绑定的表和列或别名数据类型的名称。 *object_name* 为 **nvarchar (776) **，无默认值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试先将两部分标识符解析为列名，再解析为别名数据类型。 在取消别名数据类型的规则绑定时，也同时取消数据类型相同并具有相同规则的任何列的绑定。 属于该数据类型并且规则直接绑定的列将不受影响。  
+`[ @objname = ] 'object_name'` 要从中解除规则绑定的表和列或别名数据类型的名称。 *object_name* 为 **nvarchar (776)**，无默认值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试先将两部分标识符解析为列名，再解析为别名数据类型。 在取消别名数据类型的规则绑定时，也同时取消数据类型相同并具有相同规则的任何列的绑定。 属于该数据类型并且规则直接绑定的列将不受影响。  
   
 > [!NOTE]  
 >  *object_name* 可以将方括号 **[]** 包含为分隔的标识符字符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
-`[ @futureonly = ] 'futureonly_flag'` 仅在取消别名数据类型的规则绑定时使用。 *futureonly_flag* 是 **varchar (15) **，默认值为 NULL。 当 *futureonly_flag* **futureonly**时，该数据类型的现有列不会丢失指定的规则。  
+`[ @futureonly = ] 'futureonly_flag'` 仅在取消别名数据类型的规则绑定时使用。 *futureonly_flag* 是 **varchar (15)**，默认值为 NULL。 当 *futureonly_flag* **futureonly** 时，该数据类型的现有列不会丢失指定的规则。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 若要显示某条规则的文本，请以该规则的名称作为参数来执行 sp_helptext****。  
+ 若要显示某条规则的文本，请以该规则的名称作为参数来执行 sp_helptext。  
   
  未绑定规则时，如果规则绑定到某个列，则将从 **sys.databases** 表中删除有关绑定的信息，如果该规则已绑定到别名数据类型，则从 **sys.databases** 表中删除。  
   

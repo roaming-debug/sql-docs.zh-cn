@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_fts_memory_buffers
 - dm_fts_memory_buffers_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f765dd9821d6323a13ec52ad49fcaf2821d9c7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5f8310c6ed930ab5afaa7ecfde7a1fffb7c997d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484669"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211167"
 ---
 # <a name="sysdm_fts_memory_buffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "97484669"
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|已分配的内存池的 ID。<br /><br /> 0 = 小型缓冲区<br /><br /> 1 = 大型缓冲区|  
 |**memory_address**|**varbinary(8)**|已分配的内存缓冲区的地址。|  
-|**name**|**nvarchar(4000)**|执行该分配的共享内存缓冲区的名称。|  
+|name |**nvarchar(4000)**|执行该分配的共享内存缓冲区的名称。|  
 |**is_free**|**bit**|内存缓冲区的当前状态。<br /><br /> 0 = 空闲<br /><br /> 1 = 繁忙|  
 |**row_count**|**int**|该缓冲区当前正在处理的行数。|  
 |**bytes_used**|**int**|该缓冲区中正在使用的内存量（字节）。|  

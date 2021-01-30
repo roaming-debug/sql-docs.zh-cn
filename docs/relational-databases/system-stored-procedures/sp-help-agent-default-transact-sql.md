@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_agent_default
 - sp_help_agent_default_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df854b8199d265dff29277baf6ed9fe443bc46b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a5c2d74b71dfc55f4654b566e314157895f743bf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538873"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208971"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,7 +58,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
  **sp_help_agent_default** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员或 **replmonitor** 固定数据库角色的成员才能 **sp_help_agent_default**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **replmonitor** 固定数据库角色的成员才能 **sp_help_agent_default** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_log_shipping_alert_job
 - sp_delete_log_shipping_alert_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad73b718f2f8f59a4ae7dedd5f5f1cf1e4ee1504
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe4fc822ff2c16ff0aa5e27c142164db1a7020e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474377"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211153"
 ---
 # <a name="sp_delete_log_shipping_alert_job-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_delete_log_shipping_alert_job
  无。  
   
 ## <a name="remarks"></a>备注  
- 必须从监视服务器上的**master**数据库运行**sp_delete_log_shipping_alert_job** 。  
+ 必须从监视服务器上的 **master** 数据库运行 **sp_delete_log_shipping_alert_job** 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  

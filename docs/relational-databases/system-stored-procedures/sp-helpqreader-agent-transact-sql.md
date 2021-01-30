@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpqreader_agent_TSQL
 - sp_helpqreader_agent
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bdc306ed3622690e97b721f96c99dbc8efe0d1e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d4d0a96017b6bc336f73535648ed8a411b465c05
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526518"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210825"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,9 +45,9 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|代理的 ID。|  
-|name |**nvarchar (100) **|代理的名称。|  
+|name |**nvarchar (100)**|代理的名称。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
-|**job_login**|**nvarchar(512)**|用于运行分发代理的 Windows 帐户，以*域* \\ *用户名*的格式返回。|  
+|**job_login**|**nvarchar(512)**|用于运行分发代理的 Windows 帐户，以 *域* \\ *用户名* 的格式返回。|  
 |**job_password**|**sysname**|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -57,7 +57,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
  **sp_helpqreader_agent** 用于事务复制。  
   
 ## <a name="permissions"></a>权限  
- 当 *frompublisher* 的值为 **1**时，只有发布服务器上的 **sysadmin** 固定服务器角色的成员或发布数据库上 **db_owner** 固定数据库角色的成员才能执行 **sp_helpqreader_agent**。 否则，只有分发服务器上 **sysadmin** 固定服务器角色的成员或分发数据库上 **db_owner** 固定数据库角色的成员才能执行 **sp_helpqreader_agent**。  
+ 当 *frompublisher* 的值为 **1** 时，只有发布服务器上的 **sysadmin** 固定服务器角色的成员或发布数据库上 **db_owner** 固定数据库角色的成员才能执行 **sp_helpqreader_agent**。 否则，只有分发服务器上 **sysadmin** 固定服务器角色的成员或分发数据库上 **db_owner** 固定数据库角色的成员才能执行 **sp_helpqreader_agent**。  
   
 ## <a name="see-also"></a>另请参阅  
  [允许更新事务发布的订阅](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  

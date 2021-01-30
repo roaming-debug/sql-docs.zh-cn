@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droplogin
 - sp_droplogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdca4f3aa533344b7e94a6a2dea6f14c35af6fdb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d24deba121b218c7dc84dd2bdb050d71d8577e3e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548063"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209325"
 ---
 # <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login'` 要删除的登录名。 *login* 的 **sysname**为，无默认值。 *登录名* 必须已存在于中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+`[ @loginame = ] 'login'` 要删除的登录名。 *login* 的 **sysname** 为，无默认值。 *登录名* 必须已存在于中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -51,7 +51,7 @@ sp_droplogin [ @loginame = ] 'login'
 ## <a name="remarks"></a>备注  
  **sp_droplogin** 调用删除登录名。  
   
- 不能在用户定义的事务中执行**sp_droplogin** 。  
+ 不能在用户定义的事务中执行 **sp_droplogin** 。  
   
 ## <a name="permissions"></a>权限  
  要求对服务器拥有 ALTER ANY LOGIN 权限。  

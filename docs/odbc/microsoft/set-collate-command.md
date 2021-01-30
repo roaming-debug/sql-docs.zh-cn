@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ca796da60adf0c432b5bbd80065e58563664bc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6158f79c589e446c2b3c106a1d14fd58715714f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466379"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208645"
 ---
 # <a name="set-collate-command"></a>SET COLLATE 命令
 指定后续索引和排序操作中字符字段的排序规则顺序。  
@@ -34,7 +34,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  指定排序规则顺序。 下表介绍了可用的排序规则序列选项。  
   
-|选项|Language|  
+|选项|语言|  
 |-------------|--------------|  
 |荷兰语|荷兰语|  
 |GENERAL|英语、法语、德语、新式西班牙语、葡萄牙语和其他西欧语言|  
@@ -47,7 +47,7 @@ SET COLLATE TO cSequenceName
 |UNIQWT|唯一权重|  
   
 > [!NOTE]  
->  指定西班牙语选项时， *ch*是在*c*和*d*之间进行排序的单个字母，并将在*l*和*m*之间进行排序。 *ll*  
+>  指定西班牙语选项时， *ch* 是在 *c* 和 *d* 之间进行排序的单个字母，并将在 *l* 和 *m* 之间进行排序。   
   
  如果将排序规则序列选项指定为文本字符串，请确保将该选项用引号引起来：  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergepullsubscription_TSQL
 - sp_addmergepullsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13e89d2dfe90789071821f7ad6714361f1954a8d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 54975d84e497f02dd28191c59041553994dac24d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529501"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209410"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,16 +50,16 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @subscriber_type = ] 'subscriber_type'` 订阅服务器的类型。 *subscriber_type* 为 **nvarchar (15) **，可以是 **global**、 **local** 或 **anonymous**。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本中，本地订阅称为客户端订阅，全局订阅称为服务器订阅。  
+`[ @subscriber_type = ] 'subscriber_type'` 订阅服务器的类型。 *subscriber_type* 为 **nvarchar (15)**，可以是 **global**、 **local** 或 **anonymous**。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本中，本地订阅称为客户端订阅，全局订阅称为服务器订阅。  
   
-`[ @subscription_priority = ] subscription_priority` 订阅优先级。 *subscription_priority*是 **真实**的，默认值为 NULL。 对于本地订阅和匿名订阅，优先级为 **0.0**。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。 全局订阅服务器的订阅优先级必须低于 100，因为 100 是发布服务器的优先级。  
+`[ @subscription_priority = ] subscription_priority` 订阅优先级。 *subscription_priority* 是 **真实** 的，默认值为 NULL。 对于本地订阅和匿名订阅，优先级为 **0.0**。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。 全局订阅服务器的订阅优先级必须低于 100，因为 100 是发布服务器的优先级。  
   
-`[ @sync_type = ] 'sync_type'` 订阅同步类型。 *sync_type*为 **nvarchar (15) **，默认值为 " **自动**"。 可以是 **自动** 的，也可以是 **none**。 如果为 " **自动**"，则已发布表的架构和初始数据将首先传输到订阅服务器。 如果 **没有**，则假定订阅服务器已拥有已发布表的架构和初始数据。 始终会传输系统表和数据。  
+`[ @sync_type = ] 'sync_type'` 订阅同步类型。 *sync_type* 为 **nvarchar (15)**，默认值为 " **自动**"。 可以是 **自动** 的，也可以是 **none**。 如果为 " **自动**"，则已发布表的架构和初始数据将首先传输到订阅服务器。 如果 **没有**，则假定订阅服务器已拥有已发布表的架构和初始数据。 始终会传输系统表和数据。  
   
 > [!NOTE]  
 >  建议不要将值指定为 **none**。  
   
-`[ @description = ] 'description'` 是此请求订阅的简短说明。 *描述*为 **nvarchar (255) **，默认值为 NULL。 此值由复制监视器在 " **友好名称** " 列中显示，可用于对被监视的发布的订阅进行排序。  
+`[ @description = ] 'description'` 是此请求订阅的简短说明。 *描述* 为 **nvarchar (255)**，默认值为 NULL。 此值由复制监视器在 " **友好名称** " 列中显示，可用于对被监视的发布的订阅进行排序。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

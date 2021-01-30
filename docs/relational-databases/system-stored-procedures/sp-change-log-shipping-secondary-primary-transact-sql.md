@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_log_shipping_secondary_primary
 - sp_change_log_shipping_secondary_primary_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b17019380bc65d1b3d2fcdb16352fe32477c6bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8352706512e71a5cba3a0b22befe2b7416d276bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474483"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209345"
 ---
 # <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,9 +52,9 @@ sp_change_log_shipping_secondary_primary
   
 `[ @primary_database = ] 'primary_database'` 主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
   
-`[ @backup_source_directory = ] 'backup_source_directory'` 存储主服务器中的事务日志备份文件的目录。 *backup_source_directory* 为 **nvarchar (500) ** ，且不能为 NULL。  
+`[ @backup_source_directory = ] 'backup_source_directory'` 存储主服务器中的事务日志备份文件的目录。 *backup_source_directory* 为 **nvarchar (500)** ，且不能为 NULL。  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'` 辅助服务器上将备份文件复制到的目录。 *backup_destination_directory* 为 **nvarchar (500) ** ，且不能为 NULL。  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` 辅助服务器上将备份文件复制到的目录。 *backup_destination_directory* 为 **nvarchar (500)** ，且不能为 NULL。  
   
 `[ @file_retention_period = ] 'file_retention_period'` 将保留历史记录的时间长度（分钟）。 *history_retention_period* 的值为 **int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
   
@@ -75,7 +75,7 @@ sp_change_log_shipping_secondary_primary
  无  
   
 ## <a name="remarks"></a>备注  
- 必须从辅助服务器上的**master**数据库运行**sp_change_log_shipping_secondary_primary** 。 此存储过程执行以下操作：  
+ 必须从辅助服务器上的 **master** 数据库运行 **sp_change_log_shipping_secondary_primary** 。 此存储过程执行以下操作：  
   
 1.  根据需要更改 **log_shipping_secondary** 记录中的设置。  
   

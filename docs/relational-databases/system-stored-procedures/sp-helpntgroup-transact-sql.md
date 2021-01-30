@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpntgroup
 - sp_helpntgroup_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1a88caee8d332a4802f4281360f93392ae29aa2c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dc378f5c07c4aa24c37c0212fd9f84fb6ef39f41
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535158"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210873"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**NTGroupName**|**sysname**|Windows 组的名称。|  
 |**NTGroupId**|**smallint**|组标识符 (ID)。|  
-|**SID**|**varbinary(85)**|**NTGroupName**的安全标识符 (SID) 。|  
+|**SID**|**varbinary(85)**|**NTGroupName** 的安全标识符 (SID) 。|  
 |**HasDbAccess**|**int**|1 = Windows 组有权访问数据库。|  
   
 ## <a name="remarks"></a>备注  

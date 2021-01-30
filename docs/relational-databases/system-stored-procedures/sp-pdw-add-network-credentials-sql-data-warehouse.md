@@ -5,7 +5,7 @@ titleSuffix: Azure Synapse Analytics
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0aeb775ea03d022337f45463b16e7134cfb12dc8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dcc54d2d6367182ab6363ef7be2e3c9de6d615eb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97410671"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210766"
 ---
 # <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_add_network_credentials) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -36,7 +36,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'
 ```  
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  "*target_server_name*"  
  指定目标服务器主机名或 IP 地址。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将使用传递到此存储过程的用户名和密码凭据访问此服务器。  
   

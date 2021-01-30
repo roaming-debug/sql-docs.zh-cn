@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - set ANSI command [ODBC]
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4a9f9c576199905c23994af4dc6b031114f4ad72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb9dbd2b73b4ff0f7f75442c42de31dbe389211a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466399"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208663"
 ---
 # <a name="set-ansi-command"></a>SET ANSI 命令
 确定不同长度的字符串在 Visual FoxPro SQL 命令中与 = 运算符进行比较的方式。  
@@ -38,7 +38,7 @@ SET ANSI ON | OFF
 'Tommy' = 'Tom'  
 ```  
   
- 结果为 False (。) 如果设置 ANSI 为 on，则在填充时，"Tom" 将变为 "Tom"，并且字符串 "Tom" 和 "Tommy" 不匹配字符。  
+ 结果为 False (。 ) 如果设置 ANSI 为 on，则在填充后，"Tom" 将变为 "Tom"，并且字符串 "Tom" 和 "Tommy" 不匹配字符。  
   
  = = 运算符使用此方法在 Visual FoxPro SQL 命令中进行比较。  
   
@@ -49,7 +49,7 @@ SET ANSI ON | OFF
 'Tommy' = 'Tom'  
 ```  
   
- 结果为 True (。如果 SET ANSI 处于关闭状态，则 ) ，因为比较在 "Tom" 后停止。  
+ 如果设置 ANSI 为 off，则结果为 True ( ) ，因为比较在 "Tom" 后停止。  
   
 ## <a name="remarks"></a>备注  
  设置 ANSI 确定在进行 SQL 字符串比较时，是否用空白填充两个字符串中较短的一个。 SET ANSI 对 = = 运算符不起任何作用;当使用 = = 运算符时，将始终用空白填充较短的字符串进行比较。  
