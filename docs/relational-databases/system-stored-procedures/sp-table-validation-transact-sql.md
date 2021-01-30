@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_table_validation_TSQL
 - sp_table_validation
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 88ee13025153fff3018fadfa8d64becf7a534303
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 255c30ea6b3144e781007bff3ae748c8e5a960ce
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545914"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189253"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -67,14 +67,14 @@ sp_table_validation [ @table = ] 'table'
 |值|说明|  
 |-----------|-----------------|  
 |**0**|使用 COUNT(*) 进行完整计数。|  
-|**1**|从 **sysindexes**中快速计数。 在 **sysindexes** 中对行进行计数比在实际表中计算行的速度要快得多。 但是，因为 **sysindexes** 被延迟更新，所以行计数可能不准确。|  
+|**1**|从 **sysindexes** 中快速计数。 在 **sysindexes** 中对行进行计数比在实际表中计算行的速度要快得多。 但是，因为 **sysindexes** 被延迟更新，所以行计数可能不准确。|  
 |**2** （默认值）|首先尝试使用快速方法进行条件性快速计数。 如果快速方法显示出差异，则转而使用完整方法。 如果 *expected_rowcount* 为 NULL，并且存储过程用于获取该值，则始终使用 ( * ) 的完整计数。|  
   
-`[ @shutdown_agent = ] shutdown_agent` 如果分发代理 **sp_table_validation**执行，则指定分发代理是否应在完成验证后立即关闭。 *shutdown_agent* 为 **bit**，默认值为 **0**。 如果为 **0**，则复制代理不会关闭。 如果为 **1**，则会引发错误20578，并向复制代理发出信号以关闭。 当用户直接执行 **sp_table_validation** 时，将忽略此参数。  
+`[ @shutdown_agent = ] shutdown_agent` 如果分发代理 **sp_table_validation** 执行，则指定分发代理是否应在完成验证后立即关闭。 *shutdown_agent* 为 **bit**，默认值为 **0**。 如果为 **0**，则复制代理不会关闭。 如果为 **1**，则会引发错误20578，并向复制代理发出信号以关闭。 当用户直接执行 **sp_table_validation** 时，将忽略此参数。  
   
-`[ @table_name = ] table_name` 用于输出消息的视图的表名。 *table_name*的默认值为**sysname**，默认值为** \@ table**。  
+`[ @table_name = ] table_name` 用于输出消息的视图的表名。 *table_name* 的默认值为 **sysname**，默认值为 **\@ table**。  
   
-`[ @column_list = ] 'column_list'` 应该在校验和函数中使用的列的列表。 *column_list* 为 **nvarchar (4000) **，默认值为 NULL。 启用合并项目验证，以指定不包括计算列和时间戳列的列列表。  
+`[ @column_list = ] 'column_list'` 应该在校验和函数中使用的列的列表。 *column_list* 为 **nvarchar (4000)**，默认值为 NULL。 启用合并项目验证，以指定不包括计算列和时间戳列的列列表。  
   
 ## <a name="return-code-values"></a>返回代码值  
  如果执行校验和验证时所需的校验和等于表中的校验和， **sp_table_validation** 将返回一条消息，指示表已通过校验和验证。 否则，将返回一条消息，指示表可能不同步，并报告预期的行数和实际行数之间的差异。  
@@ -82,7 +82,7 @@ sp_table_validation [ @table = ] 'table'
  如果执行行计数验证并且预期的行数等于表中的数字， **sp_table_validation** 将返回表通过行计数验证的消息。 否则，将返回一条消息，指示表可能不同步，并报告预期的行数和实际行数之间的差异。  
   
 ## <a name="remarks"></a>备注  
- **sp_table_validation** 在所有类型的复制中使用。 Oracle 发布服务器不支持**sp_table_validation** 。  
+ **sp_table_validation** 在所有类型的复制中使用。 Oracle 发布服务器不支持 **sp_table_validation** 。  
   
  校验和对页上的整个行图像上计算 32 位循环冗余检查 (CRC)。 它不是有选择地检查列，并且不能对视图或表的垂直分区进行操作。 此外，校验和将跳过设计)  (的 **text** 和 **image** 列的内容。  
   

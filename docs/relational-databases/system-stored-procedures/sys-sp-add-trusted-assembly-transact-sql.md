@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_trusted_assembly_TSQL
 - sp_add_trusted_assembly
@@ -19,12 +19,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd109cbb67ced59488d6436880be495501e92034
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3ae54693fcefff29423092a08feafd12587d4c1b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462648"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190536"
 ---
 # <a name="syssp_add_trusted_assembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_add_trusted_assembly
 
 此过程将程序集添加到  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)。
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 [ @hash =] "*value*"  
 要添加到服务器的受信任程序集列表的程序集的 SHA2_512 哈希值。 即使程序集未签名或数据库未标记为可信，也可以在启用 [CLR 严格安全](../../database-engine/configure-windows/clr-strict-security.md) 时加载受信任的程序集。

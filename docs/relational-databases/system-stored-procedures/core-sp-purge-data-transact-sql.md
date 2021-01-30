@@ -1,13 +1,13 @@
 ---
 description: core.sp_purge_data (Transact-SQL)
-title: sp_purge_data (Transact-sql) |Microsoft Docs
+title: core.sp_purge_data (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_purge_data_TSQL
 - sp_purge_data
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff33927812ccab2f2665e80709bcf6074ebacc1a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4f198f3aa51d42b3dbc22d040fe9b3325f4361f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530136"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190056"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ core.sp_purge_data
  [ @instance_name =] "*instance_name*"  
  收集组实例的名称。 *instance_name* 的默认值为 **sysname**，默认值为 NULL。  
   
- *instance_name*必须是完全限定的实例名称，由计算机名称和实例名称组成，格式为*computername* \\ *instancename*。 为 NULL 时，使用本地服务器上的默认实例。  
+ *instance_name* 必须是完全限定的实例名称，由计算机名称和实例名称组成，格式为 *computername* \\ *instancename*。 为 NULL 时，使用本地服务器上的默认实例。  
   
  [ @collection_set_uid =] "*collection_set_uid*"  
  收集组的 GUID。 *collection_set_uid* 的值为 **uniqueidentifier**，默认值为 NULL。 为 NULL 时，将删除所有收集组中的限定行。 若要获取此值，请查询 syscollector_collection_sets 目录视图。  

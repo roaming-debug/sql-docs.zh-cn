@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db_TSQL
 - sp_fulltext_semantic_unregister_language_statistics_db
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6db576de824f098911229409498527e1aaf9d3ad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2d81bc4f43e93cb58b425224fb39f31a27fe7f90
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543377"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189557"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ GO
  有关详细信息，请参阅 [安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)。  
   
 ## <a name="metadata"></a>元数据  
- 有关实例上安装的语义语言统计信息数据库的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请查询目录视图 [fulltext_semantic_language_statistics_database Sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
+ 有关实例上安装的语义语言统计信息数据库的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)查询目录视图 sys.fulltext_semantic_language_statistics_database。  
   
 ## <a name="security"></a>安全性  
   
@@ -70,7 +70,7 @@ GO
  需要具有 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何通过调用 **sp_fulltext_semantic_unregister_language_statistics_db**取消注册语义语言统计信息数据库。  
+ 下面的示例演示如何通过调用 **sp_fulltext_semantic_unregister_language_statistics_db** 取消注册语义语言统计信息数据库。  
   
 ```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  

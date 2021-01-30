@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_spaceused_TSQL
 - sp_spaceused
@@ -19,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b887b79a2e768f3c73a683ae6f60b06fb8d16a2c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 480b61493dc38ea91679e590f3abe63bde3a48c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466828"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189308"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 ```  
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 
 对于 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] ， `sp_spaceused` 必须指定命名参数 (例如， `sp_spaceused (@objname= N'Table1');` 而不是依赖于参数的序号位置。 
 
@@ -101,7 +101,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**保护**|**varchar (18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar (18)**|数据使用的空间总量。|  
 |**index_size**|**varchar (18)**|索引使用的空间总量。|  
-|**unused**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|  
+|**用**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|  
   
  如果省略 *objname* 并且 *oneresultset* 的值为1，则返回以下单个结果集以提供当前数据库大小信息。  
   
@@ -113,18 +113,18 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**保护**|**varchar (18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar (18)**|数据使用的空间总量。|  
 |**index_size**|**varchar (18)**|索引使用的空间总量。|  
-|**unused**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|  
+|**用**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|  
   
  如果指定了 *objname* ，则将为指定的对象返回下面的结果集。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|请求其空间使用信息的对象的名称。<br /><br /> 不返回对象的架构名称。 如果架构名称是必需的，请使用 [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 或 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 动态管理视图来获取等效大小的信息。|  
+|name |**nvarchar(128)**|请求其空间使用信息的对象的名称。<br /><br /> 不返回对象的架构名称。 如果架构名称是必需的，请使用 [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 或 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 动态管理视图来获取等效大小的信息。|  
 |**rows**|**char (20)**|表中现有的行数。 如果指定的对象是 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列，该列将指示队列中的消息数。|  
 |**保护**|**varchar (18)**|*Objname* 的保留空间总量。|  
 |**data**|**varchar (18)**|*Objname* 中的数据所用的空间总量。|  
 |**index_size**|**varchar (18)**|*Objname* 中的索引使用的空间总量。|  
-|**unused**|**varchar (18)**|为 *objname* 保留但尚未使用的空间总量。|  
+|**用**|**varchar (18)**|为 *objname* 保留但尚未使用的空间总量。|  
  
 如果未指定任何参数，则这是默认模式。 将返回以下结果集，其中详细说明了磁盘上的数据库大小信息。 
 
@@ -141,7 +141,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**保护**|**varchar (18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar (18)**|数据使用的空间总量。|  
 |**index_size**|**varchar (18)**|索引使用的空间总量。|  
-|**unused**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|
+|**用**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|
 
 **仅当** 数据库包含至少具有一个容器的 MEMORY_OPTIMIZED_DATA 文件组时，才返回下面的结果集： 
 
@@ -161,7 +161,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**保护**|**varchar (18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar (18)**|数据使用的空间总量。|  
 |**index_size**|**varchar (18)**|索引使用的空间总量。|  
-|**unused**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|
+|**用**|**varchar (18)**|为数据库中的对象保留但尚未使用的空间总量。|
 |**xtp_precreated**|**varchar (18)**|状态为预创建的检查点文件的总大小（KB）。 这将计入整个数据库中的未分配空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 *只有在 @include_total_xtp_storage = 1 时才包括此列*。| 
 |**xtp_used**|**varchar (18)**|状态为 "构造"、"活动" 和 "合并目标" 的检查点文件的总大小（KB）。 这是内存优化表中的数据所用的磁盘空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 *只有在 @include_total_xtp_storage = 1 时才包括此列*。| 
 |**xtp_pending_truncation**|**varchar (18)**|状态 WAITING_FOR_LOG_TRUNCATION 的检查点文件的总大小（KB）。 这是在发生日志截断后用于等待清理的检查点文件的磁盘空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 只有此列包含在内 `@include_total_xtp_storage=1` 。|

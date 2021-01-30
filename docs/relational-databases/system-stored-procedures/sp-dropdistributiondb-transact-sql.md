@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdistributiondb_TSQL
 - sp_dropdistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5c1cb17767cf61b49345b93f7c5ee5ebfbc9d27
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2de544361c4bcd9befb80e5172e0b4887a984a9d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543457"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191197"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="remarks"></a>备注  
  **sp_dropdistributiondb** 在所有类型的复制中使用。  
   
- 在删除分发服务器之前，必须通过执行 **sp_dropdistributor**来执行此存储过程。  
+ 在删除分发服务器之前，必须通过执行 **sp_dropdistributor** 来执行此存储过程。  
   
  **sp_dropdistributiondb** 还会删除分发数据库的队列读取器代理作业（如果存在）。  
   
@@ -56,7 +56,7 @@ sp_dropdistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_dropdistributiondb**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_dropdistributiondb** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   

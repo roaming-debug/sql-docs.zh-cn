@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_foreignkeys_TSQL
 - sp_foreignkeys
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a87d51fff7179ece3442e2459d8d2c5a96c8029
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 377ef64c76238e2e840107dbbe6b32dc9ba4c00f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543390"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189566"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,15 +50,15 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
 `[ @pktab_name = ] 'pktab_name'` 具有主键的表的名称。 *pktab_name* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @pktab_schema = ] 'pktab_schema'` 包含主键的架构的名称。 *pktab_schema*的默认值为 **sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该名称包含所有者名称。  
+`[ @pktab_schema = ] 'pktab_schema'` 包含主键的架构的名称。 *pktab_schema* 的默认值为 **sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该名称包含所有者名称。  
   
-`[ @pktab_catalog = ] 'pktab_catalog'` 具有主键的目录的名称。 *pktab_catalog*的默认值为 **sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该名称包含数据库名称。  
+`[ @pktab_catalog = ] 'pktab_catalog'` 具有主键的目录的名称。 *pktab_catalog* 的默认值为 **sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该名称包含数据库名称。  
   
-`[ @fktab_name = ] 'fktab_name'` 带有外键的表的名称。 *fktab_name*的默认值为 **sysname**，默认值为 NULL。  
+`[ @fktab_name = ] 'fktab_name'` 带有外键的表的名称。 *fktab_name* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @fktab_schema = ] 'fktab_schema'` 包含外键的架构的名称。 *fktab_schema*的默认值为 **sysname**，默认值为 NULL。  
+`[ @fktab_schema = ] 'fktab_schema'` 包含外键的架构的名称。 *fktab_schema* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @fktab_catalog = ] 'fktab_catalog'` 包含外键的目录的名称。 *fktab_catalog*的默认值为 **sysname**，默认值为 NULL。  
+`[ @fktab_catalog = ] 'fktab_catalog'` 包含外键的目录的名称。 *fktab_catalog* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
@@ -86,7 +86,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  在结果集中，FK_NAME 和 PK_NAME 列总是返回 NULL。  
   
 ## <a name="remarks"></a>备注  
- **sp_foreignkeys**查询与*table_server*对应的 OLE DB 提供程序的**IDBSchemaRowset**接口的 FOREIGN_KEYS 行集。 将 *table_name*、 *table_schema*、 *table_catalog*和 *列* 参数传递到此接口，以限制返回的行数。  
+ **sp_foreignkeys** 查询与 *table_server* 对应的 OLE DB 提供程序的 **IDBSchemaRowset** 接口的 FOREIGN_KEYS 行集。 将 *table_name*、 *table_schema*、 *table_catalog* 和 *列* 参数传递到此接口，以限制返回的行数。  
   
 ## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  

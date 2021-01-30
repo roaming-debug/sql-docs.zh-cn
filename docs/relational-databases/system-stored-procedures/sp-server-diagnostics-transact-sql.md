@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_server_diagnostics
 - sp_server_diagnostics_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01c576dcb71aa3814f1e1c560c6e38ec35874161
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b57d7d6f9925c8cd2c4670daa68054dff9f1e871
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547407"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190813"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,9 +62,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |**create_time**|**datetime**|指示行创建的时间戳。 单个行集中的每一行都具有相同的时间戳。|  
 |**component_type**|**sysname**|指示行是否包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例级组件或 Always On 可用性组的信息：<br /><br /> instance<br /><br /> Always On： AvailabilityGroup|  
 |**component_name**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 活动<br /><br /> *\<name of the availability group>*|  
-|State|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0：未知<br /><br /> 1：清理<br /><br /> 2：警告<br /><br /> 3：错误|  
-|**data**|**varchar (max) **|指定特定于组件的数据。|  
+|**data**|**varchar (max)**|指定特定于组件的数据。|  
   
  下面是对五个组件的说明：  
   

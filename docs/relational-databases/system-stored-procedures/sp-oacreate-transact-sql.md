@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OACreate
 - sp_OACreate_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: efcdc5094183143d3f45bc5a0174c0bead5381d2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bd6d44aedf1328234cf51366c3e81bcfb2d6dc94
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541129"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191987"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  *OLEComponent* 是 ole 自动化服务器的组件名称， *Object* 是 ole 对象的名称。 指定的 OLE 对象必须有效并且必须支持 **IDispatch** 接口。  
   
- 例如，SQLDMO。SQLServer 是 sql-dmo **SQLServer** 对象的 ProgID。 SQL-DMO 的组件名称为 SQLDMO， **sqlserver** 对象有效， (类似于 **SQLServer** 对象) 支持 **IDispatch**的所有 sql-dmo 对象。  
+ 例如，SQLDMO。SQLServer 是 sql-dmo **SQLServer** 对象的 ProgID。 SQL-DMO 的组件名称为 SQLDMO， **sqlserver** 对象有效， (类似于 **SQLServer** 对象) 支持 **IDispatch** 的所有 sql-dmo 对象。  
   
  *clsid*  
  要创建的 OLE 对象的类标识符 (CLSID)。 此字符串描述了 OLE 对象的类，其格式为： **"{**_nnnnnnnn，nnnnnnnnnnnn_**}"**。 指定的 OLE 对象必须有效并且必须支持 **IDispatch** 接口。  
@@ -53,7 +53,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  例如，{00026BA1-0000-0000-C000-000000000046} 是 SQL-DMO **SQLServer** 对象的 CLSID。  
   
  _objecttoken_ **输出**  
- 返回的对象标记，必须是数据类型为 **int**的局部变量。此对象标记标识创建的 OLE 对象，并用于对其他 OLE 自动化存储过程的调用。  
+ 返回的对象标记，必须是数据类型为 **int** 的局部变量。此对象标记标识创建的 OLE 对象，并用于对其他 OLE 自动化存储过程的调用。  
   
  *上下文*  
  指定要运行新创建的 OLE 对象的执行上下文。 如果指定，则该值必须为下列值之一：  
@@ -64,11 +64,11 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  **5** = 同时允许进程内和本地 OLE 服务器  
   
- 如果未指定，则默认值为 **5**。 此值作为对**CoCreateInstance**的调用的*dwClsContext*参数进行传递。  
+ 如果未指定，则默认值为 **5**。 此值作为对 **CoCreateInstance** 的调用的 *dwClsContext* 参数进行传递。  
   
  如果允许使用进程内 OLE 服务器 (通过使用上下文值 **1** 或 **5** ，或者不指定上下文值) ，则它可以访问拥有的内存和其他资源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 进程内 OLE 服务器可能会破坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存或资源并导致不可预知的结果，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问违规。  
   
- 当你指定的上下文值为 **4**时，本地 OLE 服务器无权访问任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，并且不会损坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存或资源。  
+ 当你指定的上下文值为 **4** 时，本地 OLE 服务器无权访问任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，并且不会损坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存或资源。  
   
 > [!NOTE]  
 >  此存储过程的参数按位置指定，而不是按名称指定。  

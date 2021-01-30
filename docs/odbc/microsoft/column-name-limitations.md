@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 82cac260fc81ce5a2cfbbe3e4c3c0bdab5a47049
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46719ea0a0ff34e103252678e25242f010d9bd37
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483690"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190643"
 ---
 # <a name="column-name-limitations"></a>列名限制
 列名称可以包含任何有效的字符 (例如，空格) 。 如果列名包含除字母、数字和下划线之外的任何字符，则必须用引号将该名称括起来 (") 。  

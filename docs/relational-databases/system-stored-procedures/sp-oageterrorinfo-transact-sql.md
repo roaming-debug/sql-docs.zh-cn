@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAGetErrorInfo_TSQL
 - sp_OAGetErrorInfo
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89bb7dff2131d8463e26754148aa6e8032503fd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d55126c7feb362b910e83034a66e4d691f1be84c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545996"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191975"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ sp_OAGetErrorInfo [ objecttoken ]
  是先前使用 **sp_OACreate** 创建的 OLE 对象的对象标记，或为 NULL。 如果指定了 *objecttoken* ，则返回该对象的错误消息。 如果指定为 NULL，则返回整个批处理的错误信息。  
   
  _源_**输出**  
- 错误信息的源。 如果指定，则它必须是本地 **char**、 **nchar**、 **varchar**或 **nvarchar** 变量。 必要时将截断返回值以适合局部变量的要求。  
+ 错误信息的源。 如果指定，则它必须是本地 **char**、 **nchar**、 **varchar** 或 **nvarchar** 变量。 必要时将截断返回值以适合局部变量的要求。  
   
  _说明_**输出**  
- 错误的说明。 如果指定，则它必须是本地 **char**、 **nchar**、 **varchar**或 **nvarchar** 变量。 必要时将截断返回值以适合局部变量的要求。  
+ 错误的说明。 如果指定，则它必须是本地 **char**、 **nchar**、 **varchar** 或 **nvarchar** 变量。 必要时将截断返回值以适合局部变量的要求。  
   
- _帮助_的 **输出**  
- OLE 对象的帮助文件。 如果指定，则它必须是本地 **char**、 **nchar**、 **varchar**或 **nvarchar** 变量。 必要时将截断返回值以适合局部变量的要求。  
+ _帮助_ 的 **输出**  
+ OLE 对象的帮助文件。 如果指定，则它必须是本地 **char**、 **nchar**、 **varchar** 或 **nvarchar** 变量。 必要时将截断返回值以适合局部变量的要求。  
   
  _helpid_ **输出**  
  帮助文件的上下文 ID。 如果指定，则它必须为本地 **int** 变量。  
@@ -72,10 +72,10 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |列名|数据类型|说明|  
 |------------------|---------------|-----------------|  
-|**错误**|**二进制 (4) **|错误号的二进制表示形式。|  
-|**源**|**nvarchar (nn) **|错误的源。|  
-|**说明**|**nvarchar (nn) **|错误的说明。|  
-|**帮助**|**nvarchar (nn) **|错误源的帮助文件。|  
+|**错误**|**二进制 (4)**|错误号的二进制表示形式。|  
+|**Source**|**nvarchar (nn)**|错误的源。|  
+|**说明**|**nvarchar (nn)**|错误的说明。|  
+|**帮助**|**nvarchar (nn)**|错误源的帮助文件。|  
 |**HelpID**|**int**|错误源帮助文件中的帮助上下文 ID。|  
   
 ## <a name="remarks"></a>备注  
@@ -87,11 +87,11 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**变量类型错误 (0x80020008)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]作为方法参数传递的值的数据类型与该方法参数的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 数据类型不匹配，或者 NULL 值作为方法参数传递。|  
 |**未知名称 (0x8002006)**|找不到指定对象的指定属性名或方法名。|  
-|**类字符串无效 (0x800401f3)**|没有将指定的 ProgID 或 CLSID 没有注册为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 OLE 对象。 自定义 OLE 自动化服务器必须先进行注册，然后才能使用 **sp_OACreate**对其进行实例化。 为此，可以使用用于进程内 ( .dll) 服务器的 Regsvr32.exe 实用工具，或本地 () 服务器的 **/REGSERVER** 命令行开关。|  
+|**类字符串无效 (0x800401f3)**|没有将指定的 ProgID 或 CLSID 没有注册为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 OLE 对象。 自定义 OLE 自动化服务器必须先进行注册，然后才能使用 **sp_OACreate** 对其进行实例化。 为此，可以使用用于进程内 ( .dll) 服务器的 Regsvr32.exe 实用工具，或本地 () 服务器的 **/REGSERVER** 命令行开关。|  
 |**服务器执行失败 (0x80080005)**|指定的 OLE 对象已注册为本地 OLE 服务器（.exe 文件），但无法找到或启动该 .exe 文件。|  
 |**无法找到指定的模块 (0x8007007e)**|指定的 OLE 对象已注册为进程内 OLE 服务器（.dll 文件），但无法找到或半截该 .dll 文件。|  
 |**类型不匹配 (0x80020005)**|用于存储返回的属性值或者方法返回值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 局部变量的数据类型与属性或方法返回值的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 数据类型不匹配。 或者，要求属性或方法返回值，但该属性或方法未返回值。|  
-|**Sp_OACreate 的 "context" 参数的数据类型或值无效。 (0x8004275B) **|上下文参数值应为下列值之一：1、4 或 5。|  
+|**Sp_OACreate 的 "context" 参数的数据类型或值无效。 (0x8004275B)**|上下文参数值应为下列值之一：1、4 或 5。|  
   
  有关处理 HRESULT 返回代码的详细信息，请参阅 [OLE 自动化返回代码和错误信息](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   

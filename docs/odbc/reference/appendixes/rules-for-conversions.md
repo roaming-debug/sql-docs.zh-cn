@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - numeric data type [ODBC], literals
 - conversions with numeric literals [ODBC]
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e3d9a931a960ce1bd404b6616b4a6e4f0d37c4a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b015a60e376e47a4c3c931d4739a884db23fc98b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424949"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187131"
 ---
 # <a name="rules-for-conversions"></a>转换规则
 本部分中的规则适用于涉及数值的转换。 对于这些规则，定义了以下术语：  
   
--   *存储分配：* 将数据发送到数据库中的表列时。 在调用 **SQLExecute**、 **SQLExecDirect**和 **SQLSetPos**的过程中会出现这种情况。 在存储分配过程中，"目标" 指的是数据库列，而 "源" 指的是应用程序缓冲区中的数据。  
+-   *存储分配：* 将数据发送到数据库中的表列时。 在调用 **SQLExecute**、 **SQLExecDirect** 和 **SQLSetPos** 的过程中会出现这种情况。 在存储分配过程中，"目标" 指的是数据库列，而 "源" 指的是应用程序缓冲区中的数据。  
   
--   *检索分配：* 在将数据从数据库检索到应用程序缓冲区时。 在调用 **SQLFetch**、 **SQLGetData**、 **SQLFetchScroll**和 **SQLSetPos**的过程中会出现这种情况。 在检索分配过程中，"target" 指的是应用程序缓冲区，"source" 指的是数据库列。  
+-   *检索分配：* 在将数据从数据库检索到应用程序缓冲区时。 在调用 **SQLFetch**、 **SQLGetData**、 **SQLFetchScroll** 和 **SQLSetPos** 的过程中会出现这种情况。 在检索分配过程中，"target" 指的是应用程序缓冲区，"source" 指的是数据库列。  
   
 -   *CS：* 字符源中的值。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88424949"
   
          如果 NS 等于0，则 YP 为0。  
   
-         让 YSN 是符合精确*数字文本* 定义的最短字符串，其解释值为 NS 的绝对值。 如果 YSN 的长度小于 NS 的数据类型 (*精度* + 1) ，则允许 YP 等于 YSN。  
+         让 YSN 是符合精确 *数字文本* 定义的最短字符串，其解释值为 NS 的绝对值。 如果 YSN 的长度小于 NS 的数据类型 (*精度* + 1) ，则允许 YP 等于 YSN。  
   
          否则，YP 是符合 *近似数字文本* 的定义的最短字符串，其解释值为 NS 的绝对值，其 *尾数* 包含一个不是 "0" 的 *数字* ，后跟一个 *句点* 和一个 *无符号整数*。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_start_collection_set_TSQL
 - sp_syscollector_start_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6dbfb03388d78745e7765d48fa591ffe18b66a33
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 839b9ef5a7d20850d2f8a9658a9c7ba875757ede
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534945"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190573"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +44,9 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @collection_set_id = ] collection_set_id` 收集组的唯一本地标识符。 *collection_set_id* 为 **int** ，默认值为 NULL。 如果*name*为 NULL，则*collection_set_id*必须具有值。  
+`[ @collection_set_id = ] collection_set_id` 收集组的唯一本地标识符。 *collection_set_id* 为 **int** ，默认值为 NULL。 如果 *name* 为 NULL，则 *collection_set_id* 必须具有值。  
   
-`[ @name = ] 'name'` 收集组的名称。 *名称* 为 **sysname** ，默认值为 NULL。 如果*collection_set_id*为 NULL，则*name*必须具有值。  
+`[ @name = ] 'name'` 收集组的名称。 *名称* 为 **sysname** ，默认值为 NULL。 如果 *collection_set_id* 为 NULL，则 *name* 必须具有值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

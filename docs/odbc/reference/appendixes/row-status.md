@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC cursor library [ODBC], cache
 - cursor library [ODBC], cache
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8970e78d523ca86a50edb1e27b159ef15a1a1747
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 491e0b420e31f1fe8e66c73f9ab8d89cb1e7e1cd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424959"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187155"
 ---
 # <a name="row-status"></a>行状态
 > [!IMPORTANT]  
@@ -31,8 +31,8 @@ ms.locfileid: "88424959"
   
 -   SQL_ROW_DELETED 在该行上执行定位的 delete 语句时。  
   
--   SQL_ROW_ERROR 在使用 **SQLFetch**从数据源检索行时遇到错误。  
+-   SQL_ROW_ERROR 在使用 **SQLFetch** 从数据源检索行时遇到错误。  
   
--   SQL_ROW_SUCCESS 成功从 **SQLFetch**的数据源中提取行时。  
+-   SQL_ROW_SUCCESS 成功从 **SQLFetch** 的数据源中提取行时。  
   
 -   在行上执行定位的 update 语句时，SQL_ROW_UPDATED。

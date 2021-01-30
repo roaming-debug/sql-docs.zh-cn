@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_estimated_rowsize_reduction_for_vardecimal
 - sp_estimated_rowsize_reduction_for_vardecimal_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f4ab6fbd33edef26f9cf1d37daf6688a68d8d5eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ea1d65f193bc4d6fd42278e62e39d6fd380d88bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527799"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187313"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @table = ] 'table'` 要更改其存储格式的表的三部分名称。 *表* 为 **nvarchar (776) **。  
+`[ @table = ] 'table'` 要更改其存储格式的表的三部分名称。 *表* 为 **nvarchar (776)**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -57,8 +57,8 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**avg_rowlen_fixed_format**|**decimal (12，2) **|以固定十进制存储格式表示行的长度。|  
-|**avg_rowlen_vardecimal_format**|**decimal (12，2) **|表示使用 vardecimal 存储格式时的平均行大小。|  
+|**avg_rowlen_fixed_format**|**decimal (12，2)**|以固定十进制存储格式表示行的长度。|  
+|**avg_rowlen_vardecimal_format**|**decimal (12，2)**|表示使用 vardecimal 存储格式时的平均行大小。|  
 |**row_count**|**int**|表中的行数。|  
   
 ## <a name="remarks"></a>备注  

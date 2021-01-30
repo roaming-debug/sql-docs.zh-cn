@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_schemafilter_TSQL
 - sp_schemafilter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51edefb63c7ec075e89e9239636207625c4ba1dc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f5b05b9976525109f6361c68f7acf7ee309f8b85
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541514"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189998"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 `[ @schema = ] 'schema'` 架构的名称。 *架构* 的值为 **sysname**，默认值为 NULL。  
   
-`[ @operation = ] 'operation'` 要对此架构采取的操作。 *操作* 为 **nvarchar (4) **，可以为以下值之一。  
+`[ @operation = ] 'operation'` 要对此架构采取的操作。 *操作* 为 **nvarchar (4)**，可以为以下值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -65,7 +65,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
  **sp_schemafilter** 应仅用于异类发布服务器。  
   
 ## <a name="permissions"></a>权限  
- 只有分发服务器上 **sysadmin** 固定服务器角色的成员才能 **sp_schemafilter**执行。  
+ 只有分发服务器上 **sysadmin** 固定服务器角色的成员才能 **sp_schemafilter** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helplinkedsrvlogin_TSQL
 - sp_helplinkedsrvlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4468902fc983e94656a7f00c457b51e26a752a82
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 274d1d9a39feac333d5b7d572ec475bb89444c2b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541731"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190021"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ## <a name="arguments"></a>参数  
 `[ @rmtsrvname = ] 'rmtsrvname'` 应用登录映射的链接服务器的名称。 *rmtsrvname* 的值为 **sysname**，默认值为 NULL。 如果为 NULL，则返回针对所有链接服务器定义的所有登录映射，这些链接服务器在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地计算机中定义。  
   
-`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本地服务器上的登录名，它具有到链接服务器的映射*rmtsrvname*。 *locallogin* 的值为 **sysname**，默认值为 NULL。 NULL 指定返回 *rmtsrvname* 上定义的所有登录映射。 如果不为 NULL，则必须已经存在 *locallogin* 到 *rmtsrvname* 的映射。 *locallogin* 可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户。 对于 Windows 用户来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  
+`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本地服务器上的登录名，它具有到链接服务器的映射 *rmtsrvname*。 *locallogin* 的值为 **sysname**，默认值为 NULL。 NULL 指定返回 *rmtsrvname* 上定义的所有登录映射。 如果不为 NULL，则必须已经存在 *locallogin* 到 *rmtsrvname* 的映射。 *locallogin* 可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户。 对于 Windows 用户来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -54,8 +54,8 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |-----------------|---------------|-----------------|  
 |**链接服务器**|**sysname**|链接服务器名称。|  
 |**本地登录**|**sysname**|本地登录，映射应用于该本地登录。|  
-|**Is Self Mapping**|**smallint**|0 = 连接到**链接服务器**时，**本地登录名**映射到**远程登录**。<br /><br /> 1 = 连接到**链接服务器**时，**本地登录**名映射到相同的登录名和密码。|  
-|**Remote Login**|**sysname**|**IsSelfMapping**为0时映射到**LocalLogin**的**LinkedServer**上的登录名。 如果 **IsSelfMapping** 为1，则 **RemoteLogin** 为 NULL。|  
+|**Is Self Mapping**|**smallint**|0 = 连接到 **链接服务器** 时，**本地登录名** 映射到 **远程登录**。<br /><br /> 1 = 连接到 **链接服务器** 时，**本地登录** 名映射到相同的登录名和密码。|  
+|**Remote Login**|**sysname**|**IsSelfMapping** 为0时映射到 **LocalLogin** 的 **LinkedServer** 上的登录名。 如果 **IsSelfMapping** 为1，则 **RemoteLogin** 为 NULL。|  
   
 ## <a name="remarks"></a>备注  
  删除登录映射之前，请使用 **sp_helplinkedsrvlogin** 来确定所涉及的链接服务器。  

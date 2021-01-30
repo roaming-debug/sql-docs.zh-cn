@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_sproc_columns
 - sp_sproc_columns_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 180d57f7daacb1f7aeb6b638dba03f893340c1d2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c6d7113657e036b0116e212c17df8ed4479cc1cc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97404150"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189321"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
     [ , [@fUsePattern = ] 'fUsePattern']  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @procedure_name = ] 'name'` 用于返回目录信息的过程的名称。 *name* 为 **nvarchar (** 390 **)**，默认值为%，表示当前数据库中的所有表。 支持通配符模式匹配。  
   
 `[ @procedure_owner = ] 'owner'` 过程的所有者的名称。 *所有者* 为 **nvarchar (** 384 **)**，默认值为 NULL。 支持通配符模式匹配。 如果未指定 *owner* ，则应用基础 DBMS 的默认过程可见性规则。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - trace_categories
 - trace_categories_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3995de4afe010fd60d2176c8a6f3350ed8a94d95
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 89c22c93101d44056e9ddae366602f45a90056ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094405"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187414"
 ---
 # <a name="systrace_categories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "98094405"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**smallint**|此类别的唯一 ID。 此列也位于 " **sys.trace_events** 目录" 视图中。|  
-|name|**nvarchar(128)**|此类别的唯一名称。 此参数未本地化。|  
-|type|**tinyint**|类别类型：<br /><br /> 0 = 正常<br /><br /> 1 = 连接<br /><br /> 2 = 错误|  
+|name |**nvarchar(128)**|此类别的唯一名称。 此参数未本地化。|  
+|type |**tinyint**|类别类型：<br /><br /> 0 = 正常<br /><br /> 1 = 连接<br /><br /> 2 = 错误|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

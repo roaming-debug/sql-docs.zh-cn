@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_deletepeerrequesthistory
 - sp_deletepeerrequesthistory_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 606c3f362b5be303ce7c0ccbd3cd53f21fde8cd8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 56dad6791177093750585122eb939ba5a4ca5763
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548079"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189620"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_deletepeerrequesthistory** 用于对等事务复制拓扑。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
- 执行 **sp_deletepeerrequesthistory**时，必须指定 *request_id* 或 *cutoff_date* 。  
+ 执行 **sp_deletepeerrequesthistory** 时，必须指定 *request_id* 或 *cutoff_date* 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_deletepeerrequesthistory**。  

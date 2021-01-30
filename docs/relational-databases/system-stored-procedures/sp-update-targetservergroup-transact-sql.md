@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_targetservergroup_TSQL
 - sp_update_targetservergroup
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f48424649b3265ee810e48c08602140ce133fc98
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 631e1b316cb66c69ed220cf1e1d3ca09f8e45807
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541564"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189506"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_update_targetservergroup
  若要运行此存储过程，用户必须被授予 **sysadmin** 固定服务器角色。  
   
 ## <a name="remarks"></a>备注  
- 必须从**msdb**数据库运行**sp_update_targetservergroup** 。  
+ 必须从 **msdb** 数据库运行 **sp_update_targetservergroup** 。  
   
 ## <a name="examples"></a>示例  
  以下示例将目标服务器组 `Servers Processing Customer Orders` 的名称更改为 `Local Servers Processing Customer Orders`。  

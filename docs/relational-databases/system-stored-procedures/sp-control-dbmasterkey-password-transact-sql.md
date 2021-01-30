@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_control_dbmasterkey_password
 - sp_control_dbmasterkey_password_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 08b749ad756a47ed991acd1ad0ea1d533bbb770c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06de3460a55eecba6c1525576caec85d6baa905f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481433"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190036"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!CAUTION]  
 >  对于 sa 和其他特权级别高的服务器主体无法访问的数据库，不要为其创建主密钥凭据。 可以对数据库进行配置，以便服务主密钥无法对其密钥层次结构进行解密。 该选项可作为数据库（包含 sa 或其他特权级别高的服务器主体不可访问的加密信息）的深度防御。 为此类数据库创建主密钥凭据将会删除这种深度防御功能，从而使 sa 和其他特权级别高的服务器主体能够对数据库进行解密。  
   
- 使用 sp_control_dbmasterkey_password 创建的凭据在 [sys. master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) 目录视图中可见。 为数据库主密钥创建的凭据的名称具有如下格式：`##DBMKEY_<database_family_guid>_<random_password_guid>##`。 该密码存储为凭据机密。 对于每个添加到凭据存储区中的密码，都在 sys.credentials 中占一行。  
+ 使用 sp_control_dbmasterkey_password 创建的凭据在 [sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) 目录视图中可见。 为数据库主密钥创建的凭据的名称具有如下格式：`##DBMKEY_<database_family_guid>_<random_password_guid>##`。 该密码存储为凭据机密。 对于每个添加到凭据存储区中的密码，都在 sys.credentials 中占一行。  
   
  不能使用 sp_control_dbmasterkey_password 为下列系统数据库创建凭据：master、model、msdb 或 tempdb。  
   
@@ -83,7 +83,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. 为 AdventureWorks2012 主密钥创建凭据  
- 以下示例为 `AdventureWorks2012` 数据库主密钥创建凭据，并将主密钥密码作为机密内容存储在凭据中。 由于传递给的所有参数都 `sp_control_dbmasterkey_password` 必须为 **nvarchar**类型的数据，因此，将用强制转换运算符来转换文本字符串 `N` 。  
+ 以下示例为 `AdventureWorks2012` 数据库主密钥创建凭据，并将主密钥密码作为机密内容存储在凭据中。 由于传递给的所有参数都 `sp_control_dbmasterkey_password` 必须为 **nvarchar** 类型的数据，因此，将用强制转换运算符来转换文本字符串 `N` 。  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
@@ -102,8 +102,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)  
   

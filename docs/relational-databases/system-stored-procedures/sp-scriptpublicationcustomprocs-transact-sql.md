@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_scriptpublicationcustomprocs
 - sp_scriptpublicationcustomprocs_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae7c24167b06f659006d44f469c92383adc96d21
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 733ca066ba7c11754fde7b82b228c7ac3796a42e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538568"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189966"
 ---
 # <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,12 +44,12 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
- 返回由单个 **nvarchar (4000) ** 列组成的结果集。 该结果集构成创建自定义存储过程所需的完整 CREATE PROCEDURE 语句。  
+ 返回由单个 **nvarchar (4000)** 列组成的结果集。 该结果集构成创建自定义存储过程所需的完整 CREATE PROCEDURE 语句。  
   
 ## <a name="remarks"></a>备注  
  如果未启用自动生成自定义过程 (0x2) 架构选项，则不会为项目编写自定义过程的脚本。  
   
- **Sp_scriptpublicationcustomprocs**使用以下过程创建订阅服务器，而不应直接执行此过程：  
+ **Sp_scriptpublicationcustomprocs** 使用以下过程创建订阅服务器，而不应直接执行此过程：  
   
  **sp_script_reconciliation_delproc**  
   
@@ -76,7 +76,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **sp_scriptxupdproc**  
   
 ## <a name="permissions"></a>权限  
- 向 **public**授予 Execute 权限;在此存储过程中执行过程安全检查，以限制对 **sysadmin** 固定服务器角色成员的访问，并在当前数据库中 **db_owner** 固定数据库角色。  
+ 向 **public** 授予 Execute 权限;在此存储过程中执行过程安全检查，以限制对 **sysadmin** 固定服务器角色成员的访问，并在当前数据库中 **db_owner** 固定数据库角色。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

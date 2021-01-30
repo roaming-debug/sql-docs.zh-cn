@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droppublication_TSQL
 - sp_droppublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ae91db140ea261a6417cb08eae07cfe2eb7fb79
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fcad06d60e5770490d8f4a619d7483c8b29be2d5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538919"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187047"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +54,7 @@ sp_droppublication [ @publication= ] 'publication'
  执行删除发布的 **sp_droppublication** 不会删除发布数据库中的已发布对象，也不会删除订阅数据库中的相应对象。 \<object>如有必要，请使用 DROP 手动删除这些对象。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_droppublication**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_droppublication** 执行。  
   
 ## <a name="examples"></a>示例  
  [!code-sql[HowTo#sp_droppublication](../../relational-databases/replication/codesnippet/tsql/sp-droppublication-trans_1.sql)]  

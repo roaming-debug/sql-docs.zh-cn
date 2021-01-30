@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: machine-learning-services
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_execute_external_script_TSQL
 - sys.sp_execute_external_script
@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: cceb8ad1df56eabaf0aa9507187e71b8db15bcaa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ef90d43021349b0327ff96ebdec85b6a8483e43c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482375"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187996"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -98,7 +98,7 @@ sp_execute_external_script
 ```
 ::: moniker-end
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  **\@ language** = N "*language*"  
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
  指示脚本语言。 *语言* 为 **sysname**。 有效值为 **R**、 **Python** 以及用 [CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md) (（例如，Java) ）定义的任何语言。

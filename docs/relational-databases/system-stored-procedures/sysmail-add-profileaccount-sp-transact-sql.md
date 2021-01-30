@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_add_profileaccount_sp
 - sysmail_add_profileaccount_sp_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 209240de58b09e48c4d35f145640f1edf97f1c4a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c01a72073b36aeba37cf28b5be8175fc283a07df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538518"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188770"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  在数据库邮件配置文件中添加一个数据库邮件帐户。 使用[sysmail_add_account_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)创建数据库帐户后执行**sysmail_add_profileaccount_sp** ，并使用[Sysmail_add_profile_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md)创建数据库配置文件。  
+  在数据库邮件配置文件中添加一个数据库邮件帐户。 使用 [sysmail_add_account_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)创建数据库帐户后执行 **sysmail_add_profileaccount_sp** ，并使用 [Sysmail_add_profile_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md)创建数据库配置文件。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
   
  请注意，此存储过程不会更改已与指定的配置文件关联的帐户的序列号。 有关更新帐户的序列号的详细信息，请参阅 [&#40;transact-sql&#41;sysmail_update_profileaccount_sp ](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)。  
   
- 序列号可以确定数据库邮件使用配置文件中帐户的顺序。 对于新的电子邮件，数据库邮件将从序列号最小的帐户开始。 如果该帐户失败，数据库邮件就使用具有下一个序列号较大的帐户，依此类推，直到数据库邮件成功发送邮件，或者序列号最大的帐户也失败为止。 如果序列号最大的帐户失败，数据库邮件将暂停尝试发送邮件，暂停时间在 *sysmail_configure_sp* 的 **AccountRetryDelay**参数中配置，然后从最小序列号再次开始尝试发送邮件的过程。 使用 *sysmail_configure_sp* 的 **AccountRetryAttempts**参数可以配置外部邮件进程尝试使用指定配置文件中的每个帐户发送电子邮件的次数。  
+ 序列号可以确定数据库邮件使用配置文件中帐户的顺序。 对于新的电子邮件，数据库邮件将从序列号最小的帐户开始。 如果该帐户失败，数据库邮件就使用具有下一个序列号较大的帐户，依此类推，直到数据库邮件成功发送邮件，或者序列号最大的帐户也失败为止。 如果序列号最大的帐户失败，数据库邮件将暂停尝试发送邮件，暂停时间在 *sysmail_configure_sp* 的 **AccountRetryDelay** 参数中配置，然后从最小序列号再次开始尝试发送邮件的过程。 使用 *sysmail_configure_sp* 的 **AccountRetryAttempts** 参数可以配置外部邮件进程尝试使用指定配置文件中的每个帐户发送电子邮件的次数。  
   
  如果存在具有相同序列号的多个帐户，则数据库邮件将只使用这些帐户中的某一个来处理给定的电子邮件。 在此情况下，数据库邮件不能保证使用具有该序列号的特定帐户，也不能保证使用同一个帐户发送各个邮件。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLValidDSN
 apilocation:
@@ -20,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4919887a6e0bad4526959d0cd31205019a597a0f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62692ed4b5d0ab600ceb36e87e7f796c77120c89
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421021"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191706"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 函数
 **度**  
  引入的版本： ODBC 2。0  
   
  **摘要**  
- 在将名称添加到系统信息之前， **SQLValidDSN**将检查数据源名称的长度和有效性。  
+ 在将名称添加到系统信息之前， **SQLValidDSN** 将检查数据源名称的长度和有效性。  
   
 ## <a name="syntax"></a>语法  
   
 ```cpp  
   
 BOOL SQLValidDSN(  
-     LPCSTR    lpszDSN);  
+     LPCSTR    lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -50,7 +50,7 @@ BOOL SQLValidDSN(
  如果数据源名称有效，则函数返回 TRUE。 如果数据源名称无效或函数调用失败，则返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLValidDSN**返回 FALSE 时，可以通过调用**SQLInstallerError**获取关联的* \* pfErrorCode*值。 仅当函数调用失败时，才会返回* \* pfErrorCode* ，如果由于数据源名称无效，则返回 FALSE。 下表列出了可由**SQLInstallerError**返回的* \* pfErrorCode*值，并说明了此函数的上下文中的每个值。  
+ 当 **SQLValidDSN** 返回 FALSE 时，可以通过调用 **SQLInstallerError** 获取关联的 *\* pfErrorCode* 值。 仅当函数调用失败时，才会返回 *\* pfErrorCode* ，如果由于数据源名称无效，则返回 FALSE。 下表列出了可由 **SQLInstallerError** 返回的 *\* pfErrorCode* 值，并说明了此函数的上下文中的每个值。  
   
 |*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysdac_history_internal
 - sysdac_history_internal_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: eaea0060136a928e6fab1184c9fd0c08d88df09f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2c1770701b0373e56bac0a6c7c5bb2e9eac44ad3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094886"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187929"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Data-tier Application Tables - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98094886"
 |**dac_object_type**|**tinyint**|受操作影响的对象类型的标识符：<br /><br /> **0** = dacpac<br /><br /> **1** = 登录名<br /><br /> **2** = 数据库|  
 |**dac_object_type_name**|**varchar (8)**|受操作影响的对象类型的名称：<br /><br /> **dacpac** = DAC 实例<br /><br /> **login**<br /><br /> **database**|  
 |**action_status**|**tinyint**|标识当前操作状态的代码：<br /><br /> **0** = 挂起<br /><br /> **1** = 成功<br /><br /> **2** = 失败|  
-|**action_status_name**|**varchar (11)**|操作的当前状态：<br /><br /> **未**<br /><br /> **辉煌**<br /><br /> **失败**|  
+|**action_status_name**|**varchar (11)**|操作的当前状态：<br /><br /> **挂起**<br /><br /> **辉煌**<br /><br /> **失败**|  
 |**必需**|**bit**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]在回滚 DAC 操作时使用。|  
 |**dac_object_name_pretran**|**sysname**|在提交包含操作的事务前对象的名称。 仅用于数据库和登录名。|  
 |**dac_object_name_posttran**|**sysname**|在提交包含操作的事务后对象的名称。 仅用于数据库和登录名。|  
