@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Table::Indexes
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: daea070c8bd39d6208404f119578773382078634
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 74147f1168e9bf9789c0ab1111daa27536dfd64e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984188"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172018"
 ---
 # <a name="indexes-collection-adox"></a>索引集合 (ADOX)
 包含表的所有 [索引](./index-object-adox.md) 对象。  
   
-## <a name="remarks"></a>注解  
- **索引**集合的[APPEND](./append-method-adox-indexes.md)方法对于 ADOX 是唯一的。 可以：  
+## <a name="remarks"></a>备注  
+ **索引** 集合的 [APPEND](./append-method-adox-indexes.md)方法对于 ADOX 是唯一的。 可以执行以下操作：  
   
 -   使用 **Append** 方法向集合中添加一个新索引。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以：  
+ 其余属性和方法对于 ADO 集合是标准的。 可以执行以下操作：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的索引。  
   

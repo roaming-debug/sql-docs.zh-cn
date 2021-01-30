@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 191d5634da4e59b03ee472bf39902a894a61f73f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: db4825e9212fa321920bc14bc20229ad4ea53ce7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984818"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172187"
 ---
 # <a name="create-method-example-vc"></a>Create 方法示例 (VC++)
 下面的代码演示如何使用 [create](./create-method-adox.md) 方法创建新的 Microsoft Jet 数据库。  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Table::PutName
@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd3a9fd328ce332c409d613ad468b96f0b94d31e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 83ef51697cd3ad1ad1a01355baead5d90788813f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983908"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171996"
 ---
 # <a name="name-property-adox"></a>Name 属性 (ADOX)
 指示对象的名称。  
@@ -55,17 +55,17 @@ ms.locfileid: "88983908"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **字符串** 值。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  名称在集合中不必是唯一的。  
   
- **Name**属性对[列](./column-object-adox.md)、[组](./group-object-adox.md)、[键](./key-object-adox.md)、[索引](./index-object-adox.md)、[表](./table-object-adox.md)和[用户](./user-object-adox.md)对象是可读/写的。 " **名称** " 属性在 " [目录](./catalog-object-adox.md)"、" [过程](./procedure-object-adox.md)" 和 " [视图](./view-object-adox.md) " 对象上是只读的。  
+ **Name** 属性对 [列](./column-object-adox.md)、[组](./group-object-adox.md)、[键](./key-object-adox.md)、[索引](./index-object-adox.md)、[表](./table-object-adox.md)和 [用户](./user-object-adox.md)对象是可读/写的。 " **名称** " 属性在 " [目录](./catalog-object-adox.md)"、" [过程](./procedure-object-adox.md)" 和 " [视图](./view-object-adox.md) " 对象上是只读的。  
   
  对于读/写对象 (**列**、 **组**、 **键**、 **索引**、 **表** 和 **用户** 对象) ，默认值为空字符串 ( "" ) 。  
   
 > [!NOTE]
 >  对于键，此属性在已追加到集合的 **键** 对象上是只读的。 对于表，对于已追加到集合的 **表** 对象，此属性是只读的。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

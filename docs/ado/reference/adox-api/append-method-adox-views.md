@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Views::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 77682d479d65c7ccc0dd01fd1fd86627a580d8c5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 757778961d7b66dd147b8b013b48062dae0cbd91
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985388"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172273"
 ---
 # <a name="append-method-adox-views"></a>Append 方法（ADOX 视图）
 创建新的 [视图](./view-object-adox.md) 对象并将其追加到 [Views](./views-collection-adox.md) 集合。  
@@ -41,15 +41,15 @@ Views.Append Name, Command
  *命令*  
  一个 ADO [命令](../ado-api/command-object-ado.md) 对象，表示要创建的视图。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 **Command** 对象中指定的名称和属性在数据源中创建新视图。  
   
- 如果用户指定的命令文本表示过程而不是视图，则行为取决于提供程序。 如果提供程序不支持保留命令，则**Append**将会失败。  
+ 如果用户指定的命令文本表示过程而不是视图，则行为取决于提供程序。 如果提供程序不支持保留命令，则 **Append** 将会失败。  
   
 > [!NOTE]
->  使用 Microsoft Jet 的 OLE DB 提供程序时， **Views**集合**Append**方法将允许您在*Command*参数中指定**过程**，而不是**视图**。 该 **过程** 将添加到数据源，并将添加到 **Views** 集合。 **追加**后，如果刷新了**过程**和**视图**集合，则该**过程**将不再出现在**Views**集合中并且会出现在 "**过程**" 集合中。  
+>  使用 Microsoft Jet 的 OLE DB 提供程序时， **Views** 集合 **Append** 方法将允许您在 *Command* 参数中指定 **过程**，而不是 **视图**。 该 **过程** 将添加到数据源，并将添加到 **Views** 集合。 **追加** 后，如果刷新了 **过程** 和 **视图** 集合，则该 **过程** 将不再出现在 **Views** 集合中并且会出现在 "**过程**" 集合中。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [视图集合 (ADOX)](./views-collection-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  

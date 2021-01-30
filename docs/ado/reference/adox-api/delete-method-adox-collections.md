@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Views::Delete
@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e92cbe56bb7823b5c6cfd2485d887f3e3c56a8e5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8a7646288bfb2736671f58a2b158f6047476dbc2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984618"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172111"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 方法（ADOX 集合）
 从集合中删除对象。  
@@ -52,12 +52,12 @@ Collection.Delete Name
  *名称*  
  一个 **变量** ，指定要删除的对象 (索引) 的名称或序号位置。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果集合中不存在该 *名称* ，则会发生错误。  
   
- 对于 [表](./tables-collection-adox.md) 和 [用户](./users-collection-adox.md) 集合，如果提供程序不支持删除表或用户，则会发生错误。 对于 "过程" 和 "[视图](./views-collection-adox.md)" 集合，如果提供程序不支持保留命令，则**删除**[操作](./procedures-collection-adox.md)将失败。  
+ 对于 [表](./tables-collection-adox.md) 和 [用户](./users-collection-adox.md) 集合，如果提供程序不支持删除表或用户，则会发生错误。 对于 "过程" 和 "[视图](./views-collection-adox.md)" 集合，如果提供程序不支持保留命令，则 **删除**[操作](./procedures-collection-adox.md)将失败。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

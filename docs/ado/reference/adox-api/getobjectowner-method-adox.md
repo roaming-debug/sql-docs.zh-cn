@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Catalog::raw_GetObjectOwner
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f065e2625afa088489f08ade9f4ef00c5eb7d4d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a23921220da6cd91d2af8b8f7aac5197301c9175
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984538"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172073"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner 方法 (ADOX)
 返回 [目录](./catalog-object-adox.md)中对象的所有者。  
@@ -35,7 +35,7 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回一个**字符串**值，该值指定拥有对象的[用户](./user-object-adox.md)或[组](./group-object-adox.md)的[名称](./name-property-adox.md)。  
+ 返回一个 **字符串** 值，该值指定拥有对象的 [用户](./user-object-adox.md)或 [组](./group-object-adox.md)的 [名称](./name-property-adox.md)。  
   
 #### <a name="parameters"></a>参数  
  *ObjectName*  
@@ -47,10 +47,10 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  *ObjectTypeId*  
  可选。 一个 **变量** 值，指定 OLE DB 规范未定义的提供程序对象类型的 GUID。 如果 *ObjectType* 设置为 **adPermObjProviderSpecific**，则此参数是必需的;否则，不使用此方法。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果提供程序不支持返回对象所有者，则会发生错误。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [目录对象 (ADOX)](./catalog-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.query_store_wait_stats
 - query_store_wait_stats
@@ -20,12 +20,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3df8f87d73ac8ca25fe2e7e83d7bbc3d0da01f2
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2517cd093bd840c8cf4cea34073acb8e03a98c8a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097953"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171822"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-sql) 
 
@@ -55,7 +55,7 @@ ms.locfileid: "98097953"
   
 |整数值|等待类别|等待类型包括在类别中|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|未知 |  
+|**0**|**Unknown**|Unknown |  
 |**1**|CPU |SOS_SCHEDULER_YIELD|
 |**2**|**工作线程**|THREADPOOL|
 |**3**|**Lock**|LCK_M_%|
@@ -71,7 +71,7 @@ ms.locfileid: "98097953"
 |**13**|**Service Broker**|BROKER_% **(但不 BROKER_RECEIVE_WAITFOR)**|
 |**14**|**事务日志 IO**|数据库准备、LOGBUFFER、LOGMGR_RESERVE_APPEND、LOGMGR_FLUSH、LOGMGR_PMM_LOG、CHKPT.、WRITELOG|
 |**15**|**网络 IO**|ASYNC_NETWORK_IO、NET_WAITFOR_PACKET、PROXY_NETWORK_IO EXTERNAL_SCRIPT_NETWORK_IOF|
-|**16**|**Parallelism**|CXPACKET、EXCHANGE、HT%、BMP%、BP%|
+|**16**|**并行度**|CXPACKET、EXCHANGE、HT%、BMP%、BP%|
 |**17**|**内存**|RESOURCE_SEMAPHORE、CMEMTHREAD、CMEMPARTITIONED、EE_PMOLOCK、MEMORY_ALLOCATION_EXT、RESERVED_MEMORY_ALLOCATION_EXT、MEMORY_GRANT_UPDATE|
 |**18**|**用户等待**|WAITFOR、WAIT_FOR_RESULTS、BROKER_RECEIVE_WAITFOR|
 |**19**|**跟踪**|TRACEWRITE、SQLTRACE_LOCK、SQLTRACE_FILE_BUFFER、SQLTRACE_FILE_WRITE_IO_COMPLETION、SQLTRACE_FILE_READ_IO_COMPLETION、SQLTRACE_PENDING_BUFFER_WRITERS、SQLTRACE_SHUTDOWN、QUERY_TRACEOUT、TRACE_EVTNOTIFF|

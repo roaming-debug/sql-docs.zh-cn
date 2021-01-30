@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Keys::Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2531031808c16db4892fb0b759a8a8d819a2222d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c4690fba27f42da95eb354b5074f9eb9954902a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985478"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172298"
 ---
 # <a name="append-method-adox-keys"></a>Append 方法（ADOX 项）
 向[Keys](./keys-collection-adox.md)集合添加新的[Key](./key-object-adox.md)对象。  
@@ -35,25 +35,25 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
 ```  
   
 #### <a name="parameters"></a>参数  
- *Key*  
+ *键*  
  要追加的 **密钥** 对象或要创建和追加的密钥的名称。  
   
  *KeyType*  
- 可选。 指定键类型的 **Long** 值。 *密钥*参数对应于**密钥**对象的[Type](./type-property-key-adox.md)属性。  
+ 可选。 指定键类型的 **Long** 值。 *密钥* 参数对应于 **密钥** 对象的 [Type](./type-property-key-adox.md)属性。  
   
  *列*  
- 可选。 一个 **字符串** 值，该值指定要编制索引的列的名称。 *Columns*参数对应于[列](./column-object-adox.md)对象的[Name](./name-property-adox.md)属性的值。  
+ 可选。 一个 **字符串** 值，该值指定要编制索引的列的名称。 *Columns* 参数对应于 [列](./column-object-adox.md)对象的 [Name](./name-property-adox.md)属性的值。  
   
  *RelatedTable*  
- 可选。 一个 **字符串** 值，该值指定相关表的名称。 *RelatedTable*参数对应于[Table](./table-object-adox.md)对象的**Name**属性的值。  
+ 可选。 一个 **字符串** 值，该值指定相关表的名称。 *RelatedTable* 参数对应于 [Table](./table-object-adox.md)对象的 **Name** 属性的值。  
   
  *RelatedColumn*  
- 可选。 一个 **字符串** 值，该值指定外键的相关列的名称。 *RelatedColumn*参数对应于[列](./column-object-adox.md)对象的**Name**属性的值。  
+ 可选。 一个 **字符串** 值，该值指定外键的相关列的名称。 *RelatedColumn* 参数对应于 [列](./column-object-adox.md)对象的 **Name** 属性的值。  
   
-## <a name="remarks"></a>注解  
- *Columns*参数可以采用列的名称或列名的数组。  
+## <a name="remarks"></a>备注  
+ *Columns* 参数可以采用列的名称或列名的数组。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [项集合 (ADOX)](./keys-collection-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  
