@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field
@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4768281228e39ed8eeb6ffc003e463bf8a53450d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6042032018ea75eb7b2b13bb677ad48dca56290b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973228"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167375"
 ---
 # <a name="field-object"></a>字段对象
 表示数据类型为通用数据类型的列。  
   
-## <a name="remarks"></a>注解  
- 每个 **字段** 对象都对应于 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的一列。 使用**Field**对象的[Value](../../../ado/reference/ado-api/value-property-ado.md)属性可以设置或返回当前记录的数据。 根据提供程序公开的功能， **字段** 对象的某些集合、方法或属性可能不可用。  
+## <a name="remarks"></a>备注  
+ 每个 **字段** 对象都对应于 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的一列。 使用 **Field** 对象的 [Value](../../../ado/reference/ado-api/value-property-ado.md)属性可以设置或返回当前记录的数据。 根据提供程序公开的功能， **字段** 对象的某些集合、方法或属性可能不可用。  
   
  使用 **Field** 对象的集合、方法和属性，可以执行以下操作：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88973228"
   
 -   如果提供程序支持批更新，则在批处理更新过程中通过 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 和 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 属性解析字段值中的差异。  
   
- 在打开**字段**对象的**记录集**之前，所有元数据属性 (**名称**、**类型**、 **DefinedSize**、**精度**和**NumericScale**) 都可用。 此时设置它们对于动态构造窗体非常有用。  
+ 在打开 **字段** 对象的 **记录集** 之前，所有元数据属性 (**名称**、**类型**、 **DefinedSize**、**精度** 和 **NumericScale**) 都可用。 此时设置它们对于动态构造窗体非常有用。  
   
  本部分包含以下主题。  
   

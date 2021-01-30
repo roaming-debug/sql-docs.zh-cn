@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 822a75b3f487b72e8b35cc1589271fe89496e0e6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d0008772cf116385ca5ccedb5fb5d5bad694ce45
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722298"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168943"
 ---
 # <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 属性和 Reset 方法示例 (VBScript) 
 > [!IMPORTANT]
@@ -91,7 +91,7 @@ Filter Criterion: <SELECT NAME="cboCriterion">
               <br>  
 Filter Value: <INPUT NAME="txtFilterValue">  
 <HR WIDTH="25%">  
-<INPUT TYPE=BUTTON NAME=Clear VALUE="CLEAR ALL">    
+<INPUT TYPE=BUTTON NAME=Clear VALUE="CLEAR ALL">    
 <INPUT TYPE=BUTTON NAME=SortFilter VALUE="APPLY">  
   
 <HR>  

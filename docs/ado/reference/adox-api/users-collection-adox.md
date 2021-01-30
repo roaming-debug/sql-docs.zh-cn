@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Group::Users
@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1f511e637696e5b14905bcccba50cb13737d6e7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 84fffacf0795d60808e172185251f3135bd0d7d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983028"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169121"
 ---
 # <a name="users-collection-adox"></a>用户集合 (ADOX)
 包含[目录](./catalog-object-adox.md)或[组](./group-object-adox.md)的所有存储的[用户](./user-object-adox.md)对象。  
   
-## <a name="remarks"></a>注解  
- [目录](./catalog-object-adox.md)的**用户**集合表示所有目录的用户。 [组](./group-object-adox.md)的**用户**集合仅表示在特定组中具有成员身份的用户。  
+## <a name="remarks"></a>备注  
+ [目录](./catalog-object-adox.md)的 **用户** 集合表示所有目录的用户。 [组](./group-object-adox.md)的 **用户** 集合仅表示在特定组中具有成员身份的用户。  
   
- **用户**集合的[APPEND](./append-method-adox-users.md)方法对于 ADOX 是唯一的。 可以：  
+ **用户** 集合的 [APPEND](./append-method-adox-users.md)方法对于 ADOX 是唯一的。 可以执行以下操作：  
   
 -   使用 **Append** 方法将新用户添加到集合。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以：  
+ 其余属性和方法对于 ADO 集合是标准的。 可以执行以下操作：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的用户。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "88983028"
 -   更新集合中的对象，以反映包含 [Refresh](../ado-api/refresh-method-ado.md) 方法的当前数据库的架构。  
   
 > [!NOTE]
->  将**用户**对象追加到**组**对象**的用户**集合之前，**目录**的**用户**集合中必须已经存在与要追加的用户[对象同名的](./name-property-adox.md)**用户**对象。  
+>  将 **用户** 对象追加到 **组** 对象 **的用户** 集合之前，**目录** 的 **用户** 集合中必须已经存在与要追加的用户 [对象同名的](./name-property-adox.md)**用户** 对象。  
   
  本部分包含以下主题。  
   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5abd786b445df3afe6cbaf8ab76e132ea912b42f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9dc5925a68b977e8beda03a0cb105739e323ebb1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974488"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167649"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset 方法示例 (VB)
 您可以创建 [记录集](./recordset-object-ado.md) 对象并指定列信息。 然后，可以将数据插入 **Recordset** 对象;基础行集缓冲插入。  
   
- 下面的代码示例演示如何使用[RDSServer. DataFactory](../rds-api/datafactory-object-rdsserver.md)对象定义**记录集**。 还可以通过 RDS 执行此操作 [。DataControl](../rds-api/datacontrol-object-rds.md) 对象。  
+ 下面的代码示例演示如何使用 [RDSServer. DataFactory](../rds-api/datafactory-object-rdsserver.md)对象定义 **记录集**。 还可以通过 RDS 执行此操作 [。DataControl](../rds-api/datacontrol-object-rds.md) 对象。  
   
 ```  
 'BeginRsDefineShapeVB  

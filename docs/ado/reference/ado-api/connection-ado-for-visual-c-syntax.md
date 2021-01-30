@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3458c35012535e454fa3ccad52834faebd439131
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9418cfbac5973892c2e5051360679b500f996cf3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974948"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167751"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>连接（ADO for Visual C++ 语法）
 ## <a name="methods"></a>方法  

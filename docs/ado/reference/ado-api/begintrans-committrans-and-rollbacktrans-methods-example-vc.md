@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67cce0063dd0c41dbba173e246b4c3884fb3c8f1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fab3def044f0e8b250be717d63e9ed716db52ca0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975878"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167850"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法示例 (VC + +) 
-此示例将更改数据库的 ***Titles*** 表中所有心理学书籍的类型。 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)方法启动了一个事务，该事务隔离对***标题***表所做的所有更改时， [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)方法会保存这些更改。 可以使用 [Rollback](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法撤消使用 [Update](./update-method.md) 方法保存的更改。  
+此示例将更改数据库的 ***标题** _ 表中所有心理学书籍的书籍类型。 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)方法启动了一个事务，该事务隔离对 _*_标题_*_ 表所做的所有更改时， [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)方法会保存这些更改。 可以使用 [Rollback](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法撤消使用 [Update](./update-method.md) 方法保存的更改。  
   
 ## <a name="example"></a>示例  
   
@@ -76,7 +76,7 @@ void BeginTransX() {
    // Define ADO object pointers, initialize pointers on define.  These are in the ADODB::  namespace.  
    _RecordsetPtr rstTitles = NULL;  
    _ConnectionPtr pConnection = NULL;  
-   char * token1, * token2;  
+   char _ token1, * token2;  
   
    // Define Other Variables  
    HRESULT hr = S_OK;    

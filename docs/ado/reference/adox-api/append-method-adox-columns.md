@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Columns::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c959f6d822724ee6e7480cf00941aaa1fc8012a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 40abf0ae298b469d0814e8dd3da85a8c8865be78
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985498"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169595"
 ---
 # <a name="append-method-adox-columns"></a>Append 方法（ADOX 列）
 向[Columns](./columns-collection-adox.md)集合添加一个新的[列](./column-object-adox.md)对象。  
@@ -38,16 +38,16 @@ Columns.Append Column [,Type] [,DefinedSize]
  *列*  
  要追加的 **列** 对象或者要创建并追加的列的名称。  
   
- *类型*  
- 可选。 指定列的数据类型的 **Long** 值。 *类型*参数对应于**列**对象的[type](./type-property-column-adox.md)属性。  
+ *Type*  
+ 可选。 指定列的数据类型的 **Long** 值。 *类型* 参数对应于 **列** 对象的 [type](./type-property-column-adox.md)属性。  
   
  *DefinedSize*  
- 可选。 指定列的大小的 **Long** 值。 *DefinedSize*参数对应于**列**对象的[DefinedSize](./definedsize-property-adox.md)属性。  
+ 可选。 指定列的大小的 **Long** 值。 *DefinedSize* 参数对应于 **列** 对象的 [DefinedSize](./definedsize-property-adox.md)属性。  
   
 > [!NOTE]
->  如果**列**不存在于已追加到[Tables](./tables-collection-adox.md)集合的[表](./table-object-adox.md)中，则当向[索引](./index-object-adox.md)的**Columns**集合追加**列**时，将发生错误。  
+>  如果 **列** 不存在于已追加到 [Tables](./tables-collection-adox.md)集合的 [表](./table-object-adox.md)中，则当向 [索引](./index-object-adox.md)的 **Columns** 集合追加 **列** 时，将发生错误。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [列集合 (ADOX)](./columns-collection-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01ec70af18c70faec253aa7f1d0cbb2c6a1579b6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: eea25b680f578035ae4ca1f4c2dcdf8b1bbe6fdf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984088"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169348"
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls 属性示例 (VC++)
-此示例演示[索引](./index-object-adox.md)的[IndexNulls](./indexnulls-property-adox.md)属性。 此代码创建一个新索引，并基于用户输入设置 **IndexNulls** 的值。 然后，将**索引**追加到*Northwind* [目录](./catalog-object-adox.md)中的**Employees** [表](./table-object-adox.md)。 新**索引**将应用于基于**Employees**表的[记录集](../ado-api/recordset-object-ado.md)，并打开该**记录集**。 新记录将添加到 **Employees** 表中，并在索引字段中包含 **Null** 值。 是否显示此新记录取决于 **IndexNulls** 属性的设置。  
+此示例演示[索引](./index-object-adox.md)的[IndexNulls](./indexnulls-property-adox.md)属性。 此代码创建一个新索引，并基于用户输入设置 **IndexNulls** 的值。 然后，将 **索引** 追加到 *Northwind* [目录](./catalog-object-adox.md)中的 **Employees** [表](./table-object-adox.md)。 新 **索引** 将应用于基于 **Employees** 表的 [记录集](../ado-api/recordset-object-ado.md)，并打开该 **记录集**。 新记录将添加到 **Employees** 表中，并在索引字段中包含 **Null** 值。 是否显示此新记录取决于 **IndexNulls** 属性的设置。  
   
 ```  
 // BeignIndexNullCpp.cpp  

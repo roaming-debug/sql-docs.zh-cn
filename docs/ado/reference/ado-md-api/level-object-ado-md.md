@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Level
@@ -16,32 +16,32 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34dc7bc7eb6d80b3ec50cb1838cda0d0e419053b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ebbebb2150cbe9c03e51ac296c39c362a6670e1d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986508"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169808"
 ---
 # <a name="level-object-ado-md"></a>级别对象 (ADO MD)
 包含一组成员，其中每个成员在层次结构中具有相同的级别。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 **Level** 对象的集合和属性，可以执行以下操作：  
   
--   标识具有[Name](./name-property-ado-md.md)和[UniqueName](./uniquename-property-ado-md.md)属性的**级别**。  
+-   标识具有 [Name](./name-property-ado-md.md)和 [UniqueName](./uniquename-property-ado-md.md)属性的 **级别**。  
   
--   返回在用[Caption](./caption-property-ado-md.md)属性显示**级别**时要使用的字符串。  
+-   返回在用 [Caption](./caption-property-ado-md.md)属性显示 **级别** 时要使用的字符串。  
   
--   返回一个有意义的字符串，该字符串描述具有[Description](./description-property-ado-md.md)属性的**级别**。  
+-   返回一个有意义的字符串，该字符串描述具有 [Description](./description-property-ado-md.md)属性的 **级别**。  
   
--   返回组成[成员](./members-collection-ado-md.md)集合的**级别**的[成员](./member-object-ado-md.md)对象。  
+-   返回组成 [成员](./members-collection-ado-md.md)集合的 **级别** 的 [成员](./member-object-ado-md.md)对象。  
   
 -   从 **级别** 的根返回 [深度](./depth-property-ado-md.md) 属性的级别数。  
   
 -   使用标准 ADO [Properties](../ado-api/properties-collection-ado.md) 集合获取有关 **Level** 对象的其他信息。  
   
- **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
+ **Properties** 集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
 |名称|说明|  
 |----------|-----------------|  

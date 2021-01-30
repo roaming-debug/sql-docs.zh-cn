@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::DataMember
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 034afc971021f6bcfa4db7877d0409aeb817fc6f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 71b4f59b4315d61f1d8f6d4d3fe840cc64016e5b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974268"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167609"
 ---
 # <a name="datamember-property"></a>DataMember 属性
 指示将从[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)属性所引用的[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)检索的数据成员的名称。  
@@ -29,12 +29,12 @@ ms.locfileid: "88974268"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **字符串** 值。 该名称不区分大小写。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  此属性用于通过数据环境创建数据绑定控件。 数据环境维护数据源 (数据源的集合) 包含 (数据成员) 的命名对象，这些成员将表示为 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象。  
   
- **DataMember**和**DataSource**属性必须一起使用。  
+ **DataMember** 和 **DataSource** 属性必须一起使用。  
   
- **DataMember**属性确定由**DataSource**属性指定的哪个对象将表示为**记录集**对象。 必须先关闭 **Recordset** 对象，然后才能设置此属性。 如果在**datasource**属性之前未设置**datamember**属性，或者**数据源**属性中指定的对象无法识别**datamember**名称，则会生成错误。  
+ **DataMember** 属性确定由 **DataSource** 属性指定的哪个对象将表示为 **记录集** 对象。 必须先关闭 **Recordset** 对象，然后才能设置此属性。 如果在 **datasource** 属性之前未设置 **datamember** 属性，或者 **数据源** 属性中指定的对象无法识别 **datamember** 名称，则会生成错误。  
   
 ## <a name="usage"></a>使用情况  
   
@@ -44,7 +44,7 @@ rs.DataMember = "Command"     'Name of the rowset to bind to
 Set rs.DataSource = myDE      'Name of the object containing an IRowset  
 ```  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  

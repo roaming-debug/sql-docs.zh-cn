@@ -7,7 +7,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d201fab02450bb5972d45edaba71d413ded47c26
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 62495442c20e4205e9fad2e5c650e09a87777328
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724204"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168765"
 ---
 # <a name="sql-property-example-vbscript"></a>SQL 属性示例 (VBScript)
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
- 下面的代码演示如何设置 [RDS。](./datacontrol-object-rds.md) 在设计时 DataControl SQL 参数，并使用名为 *Pubs*的数据库将其绑定到数据感知控件，该数据库附带 Microsoft SQL Server。 若要测试该示例，请将以下代码复制到 Web 服务器上名为 **SQLDesignVBS** 的普通 ASP 文档中。  
+ 下面的代码演示如何设置 [RDS。](./datacontrol-object-rds.md) 在设计时 DataControl SQL 参数，并使用名为 *Pubs* 的数据库将其绑定到数据感知控件，该数据库附带 Microsoft SQL Server。 若要测试该示例，请将以下代码复制到 Web 服务器上名为 **SQLDesignVBS** 的普通 ASP 文档中。  
   
 ```  
 <!-- BeginSQLDesignVBS -->  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 581acace73f7186b724f78f79e768310d44c3379
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 52d22de963b204daeaba12a319c3a54d59f3789b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984578"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169421"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 属性示例 (VC++)
 此示例演示[密钥](./key-object-adox.md)对象的[DeleteRule](./deleterule-property-adox.md)属性。 该代码追加一个新 [表](./table-object-adox.md) ，然后定义新的主键，并将 **DeleteRule** 设置为 **adRICascade**。  

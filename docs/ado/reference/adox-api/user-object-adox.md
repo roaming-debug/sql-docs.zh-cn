@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - User
@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e83bd40c226f1d5b5948c6475b259c799907866
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c5ca59cb5900643202c2d541072c48b275b5b5df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983047"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169141"
 ---
 # <a name="user-object-adox"></a>用户对象 (ADOX)
 表示在受保护的数据库中具有访问权限的用户帐户。  
   
-## <a name="remarks"></a>注解  
- [目录](./catalog-object-adox.md)的[用户](./users-collection-adox.md)集合表示所有目录的用户。 [组](./group-object-adox.md)的**用户**集合仅表示特定组的用户。  
+## <a name="remarks"></a>备注  
+ [目录](./catalog-object-adox.md)的[用户](./users-collection-adox.md)集合表示所有目录的用户。 [组](./group-object-adox.md)的 **用户** 集合仅表示特定组的用户。  
   
  使用 **用户** 对象的属性、集合和方法，您可以：  
   

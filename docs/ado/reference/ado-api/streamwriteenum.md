@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - StreamWriteEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c09a15f5c5aba9d36f038304b68cc1e64112ade3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5be021aab95fb9fa2c0571deba176f30836a7f4e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988438"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170112"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 指定是否将行分隔符追加到写入 [流](./stream-object-ado.md) 对象的字符串。  
@@ -34,5 +34,5 @@ ms.locfileid: "88988438"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  这些常量没有 ADO/WFC 等效项。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [WriteText 方法](./writetext-method.md)

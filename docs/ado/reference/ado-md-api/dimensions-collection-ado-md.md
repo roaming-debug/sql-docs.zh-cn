@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Dimensions
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9d0358c5c804764273a52ad1df624ffe4f246f0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2a622c7055f646962ff67537728524151754c391
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986828"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169867"
 ---
 # <a name="dimensions-collection-ado-md"></a>维度集合 (ADO MD)
 包含构成多维数据集的 [维度](./dimension-object-ado-md.md) 对象。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **维度** 是标准 ADO 集合。 通过集合的属性和方法，你可以执行以下操作：  
   
 -   获取集合中具有 [Count](../ado-api/count-property-ado.md) 属性的对象的数目。  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Users::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14b0c573b3ccf8a03b1c2f6513cdac67303fb4bf
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e321d3cf41e8edcd5a5bd29452050542257a908b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985428"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169565"
 ---
 # <a name="append-method-adox-users"></a>Append 方法（ADOX 用户）
 向[用户](./users-collection-adox.md)集合添加新的[用户](./user-object-adox.md)对象。  
@@ -35,21 +35,21 @@ Users.Append User[,Password]
 ```  
   
 #### <a name="parameters"></a>参数  
- *用户*  
+ *User*  
  一个 **变量** 值，其中包含要追加的 **用户** 对象或要创建和追加的用户的名称。  
   
  *密码*  
- 可选。 一个包含用户密码的 **字符串** 值。 *Password*参数与**User**对象的[ChangePassword](./changepassword-method-adox.md)方法所指定的值相对应。  
+ 可选。 一个包含用户密码的 **字符串** 值。 *Password* 参数与 **User** 对象的 [ChangePassword](./changepassword-method-adox.md)方法所指定的值相对应。  
   
-## <a name="remarks"></a>注解  
- [目录](./catalog-object-adox.md)的**用户**集合表示所有目录的用户。 [组](./group-object-adox.md)的**用户**集合仅表示在特定组中具有成员身份的用户。  
+## <a name="remarks"></a>备注  
+ [目录](./catalog-object-adox.md)的 **用户** 集合表示所有目录的用户。 [组](./group-object-adox.md)的 **用户** 集合仅表示在特定组中具有成员身份的用户。  
   
  如果提供程序不支持创建用户，则会发生错误。  
   
 > [!NOTE]
->  将**用户**对象追加到**组**对象**的用户**集合之前，**目录**的**用户**集合中必须已经存在与要追加的用户[对象同名的](./name-property-adox.md)**用户**对象。  
+>  将 **用户** 对象追加到 **组** 对象 **的用户** 集合之前，**目录** 的 **用户** 集合中必须已经存在与要追加的用户 [对象同名的](./name-property-adox.md)**用户** 对象。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [用户集合 (ADOX)](./users-collection-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  

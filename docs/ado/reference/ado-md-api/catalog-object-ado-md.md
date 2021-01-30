@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Catalog
@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e62b4eedd835cff2d5bd99e054648339ffd9bc0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 834594c957c05d4e2acef78bb772afcbe83b685a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987298"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169963"
 ---
 # <a name="catalog-object-ado-md"></a>目录对象 (ADO MD)
 包含多维架构信息 (多维数据提供程序) 特定于多维数据访问接口 (MDP) 的多维数据集和基础维度、层次结构、级别和成员。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 **目录** 对象的集合和属性，可以执行以下操作：  
   
 -   通过将 [ActiveConnection](./activeconnection-property-ado-md.md) 属性设置为标准 ADO [连接](../ado-api/connection-object-ado.md) 对象或有效的连接字符串，打开目录。  
   
--   标识具有[Name](./name-property-ado-md.md)属性的**编录**。  
+-   标识具有 [Name](./name-property-ado-md.md)属性的 **编录**。  
   
 -   使用 [CubeDefs](./cubedefs-collection-ado-md.md) 集合循环访问目录中的多维数据集。  
   

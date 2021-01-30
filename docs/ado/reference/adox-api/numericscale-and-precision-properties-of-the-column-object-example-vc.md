@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b7ca5a849dafe9768a422a942f5c2c1816f77b1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 34af2be89d8253ca0a777ff509936ed896748a7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983898"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169308"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>列对象的 NumericScale 和 Precision 属性示例 (VC++)
-此示例演示[列](./column-object-adox.md)对象的[NumericScale](./numericscale-property-adox.md)和[Precision](./precision-property-adox.md)属性。 此代码显示*Northwind*数据库的 "**订单详细信息**" 表的值。  
+此示例演示[列](./column-object-adox.md)对象的[NumericScale](./numericscale-property-adox.md)和[Precision](./precision-property-adox.md)属性。 此代码显示 *Northwind* 数据库的 "**订单详细信息**" 表的值。  
   
 ```  
 // BeginNumericScalePrecCpp.cpp  

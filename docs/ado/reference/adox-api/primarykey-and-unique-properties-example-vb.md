@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d857dfca2b690b06f43b9be50520b4530645128f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ba8a151178f165a1e5efadd6a130fb54ea8337fe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983668"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169273"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和 Unique 属性示例 (VB)
-此示例演示[索引](./index-object-adox.md)的[PrimaryKey](./primarykey-property-adox.md)和[唯一](./unique-property-adox.md)属性。 此代码创建一个具有两列的新表。 **PrimaryKey**和**Unique**属性用于使一列成为不允许重复值的主键。  
+此示例演示[索引](./index-object-adox.md)的[PrimaryKey](./primarykey-property-adox.md)和[唯一](./unique-property-adox.md)属性。 此代码创建一个具有两列的新表。 **PrimaryKey** 和 **Unique** 属性用于使一列成为不允许重复值的主键。  
   
 ```  
 ' BeginPrimaryKeyVB  

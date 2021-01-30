@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a8a6eb8fb9d6be9433e11f641c6b29367680ba5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4bb438c114c80f5cd062c1be810dd85988611dbb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988638"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170161"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 属性示例 (VB)
 此示例演示了 [StayInSync](./stayinsync-property.md) 属性如何便于访问分层 [记录集中](./recordset-object-ado.md)的行。  
   
- 外部循环显示每个作者的名字和姓氏、省/市/自治区和标识。 每行的追加的**记录集**将从[Fields](./fields-collection-ado.md)集合中检索并在父**记录集**移动到新行时由**StayInSync**属性自动分配给**rstTitleAuthor** 。 内部循环显示追加的记录集中每一行的四个字段。  
+ 外部循环显示每个作者的名字和姓氏、省/市/自治区和标识。 每行的追加的 **记录集** 将从 [Fields](./fields-collection-ado.md)集合中检索并在父 **记录集** 移动到新行时由 **StayInSync** 属性自动分配给 **rstTitleAuthor** 。 内部循环显示追加的记录集中每一行的四个字段。  
   
 ```  
 'BeginStayInSyncVB  

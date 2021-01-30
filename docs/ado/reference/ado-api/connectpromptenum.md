@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ConnectPromptEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 171cc7706cc00b48c3373a0e40d5de221d4d00ce
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7563179d70968cc98fbbc1055ec32c2c3a1948f0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974678"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167693"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 指定在打开与数据源的连接时是否应显示一个对话框，以提示输入缺少的参数。  
@@ -43,5 +43,5 @@ ms.locfileid: "88974678"
 |AdoEnums.ConnectPrompt.COMPLETEREQUIRED|  
 |AdoEnums. ConnectPrompt. 从不|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [Prompt 属性 - 动态 (ADO)](./prompt-property-dynamic-ado.md)

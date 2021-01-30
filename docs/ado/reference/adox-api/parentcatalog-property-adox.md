@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _User::get_ParentCatalog
@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07e4cdabe09b2bc4af8e849ef367df65c23711ca
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 720d3f5a04d17664b7fa486d084a9d443bd5f2e4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983768"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169297"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 属性 (ADOX)
 指定表、用户或列对象的父目录，以提供对特定于访问接口的属性的访问。  
@@ -54,12 +54,12 @@ ms.locfileid: "88983768"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回 [目录](./catalog-object-adox.md) 对象。 将 **ParentCatalog** 设置为打开的 **目录** 后，便可以在将表或列追加到 **目录** 集合之前访问特定于提供程序的属性。  
   
-## <a name="remarks"></a>注解  
- 某些数据访问接口允许仅在创建时写入特定于提供程序的属性值：也就是说，将表或列追加到其 **目录** 集合中。 若要在将这些对象附加到**目录**之前访问这些属性，请先在**ParentCatalog**属性中指定**目录**。  
+## <a name="remarks"></a>备注  
+ 某些数据访问接口允许仅在创建时写入特定于提供程序的属性值：也就是说，将表或列追加到其 **目录** 集合中。 若要在将这些对象附加到 **目录** 之前访问这些属性，请先在 **ParentCatalog** 属性中指定 **目录**。  
   
- 将表或列追加到与**ParentCatalog**不同的**目录**时出错。  
+ 将表或列追加到与 **ParentCatalog** 不同的 **目录** 时出错。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

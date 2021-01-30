@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - GetSchemaObject
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4031b9dbe100df7e73c64354888ffa97cf38c30c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 047455edb47650cedeae8ffbd5965e4cc82be940
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986688"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169838"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject 方法 (ADO MD)
 通过[UniqueName](./uniquename-property-ado-md.md) ([维度](./dimension-object-ado-md.md)、[层次结构](./hierarchy-object-ado-md.md)、[级别](./level-object-ado-md.md)或[成员](./member-object-ado-md.md)) 检索 ADO MD 架构对象。  
@@ -41,10 +41,10 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
  *UniqueName*  
  一个 **字符串** ，指定要检索的对象的 **UniqueName** 属性值。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **GetSchemaObject** 使用其唯一名称（由 **UniqueName** 属性指定）检索对象。 父对象的名称无需知道，并且无需填充父集合即可检索架构对象。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [CubeDef 对象 (ADO MD)](./cubedef-object-ado-md.md)  
   
 ## <a name="see-also"></a>另请参阅  

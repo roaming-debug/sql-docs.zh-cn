@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::raw_GetChildren
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea59a94f095a438be8fc7009a58179d488af20a2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cb49de0d3613cca9d24991e67ee8787c0d863b8c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972828"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167286"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 方法 (ADO)
 返回一个 [记录集](./recordset-object-ado.md) ，其行表示集合 [记录](./record-object-ado.md)的子级。  
@@ -35,12 +35,12 @@ Set recordset = record.GetChildren
 ```  
   
 ## <a name="return-value"></a>返回值  
- 每行表示当前**记录**对象的子记录**集的记录集**对象。 例如，表示目录的 **记录** 的子级将是包含在父目录中的文件和子目录。  
+ 每行表示当前 **记录** 对象的子记录 **集的记录集** 对象。 例如，表示目录的 **记录** 的子级将是包含在父目录中的文件和子目录。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  提供程序确定哪些列存在于返回的 **记录集中**。 例如，文档源提供程序始终返回资源 **记录集**。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

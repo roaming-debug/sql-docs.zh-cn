@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - View
@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eefc7c259d12f20ada1676a6518fa357719abe63
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 700b82c39352842cc20b017c90df686c95215586
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982988"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169123"
 ---
 # <a name="view-object-adox"></a>视图对象 (ADOX)
 表示一组筛选的记录或虚拟表。 与 ADO [命令](../ado-api/command-object-ado.md) 对象结合使用时， **视图** 对象可用于添加、删除或修改视图。  
   
-## <a name="remarks"></a>注解  
- 视图是从其他数据库表或视图创建的虚拟表。 **视图**对象允许您创建一个视图，而无需知道或使用该提供程序的 "创建视图" 语法。  
+## <a name="remarks"></a>备注  
+ 视图是从其他数据库表或视图创建的虚拟表。 **视图** 对象允许您创建一个视图，而无需知道或使用该提供程序的 "创建视图" 语法。  
   
  使用 **视图** 对象的属性，可以：  
   
 -   标识具有 [Name](./name-property-adox.md) 属性的视图。  
   
--   指定可用于在[命令](./command-property-adox.md)属性中添加、删除或修改视图的 ADO**命令**对象。  
+-   指定可用于在 [命令](./command-property-adox.md)属性中添加、删除或修改视图的 ADO **命令** 对象。  
   
 -   返回具有 [DateCreated](./datecreated-property-adox.md) 和 [DateModified](./datemodified-property-adox.md) 属性的日期信息。  
   

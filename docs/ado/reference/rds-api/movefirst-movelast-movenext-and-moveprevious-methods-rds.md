@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - MoveLast method [RDS]
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0e2b53967017ca093b04b5449ebd7a47a983f29
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 80a0a2b5fae2339718089903060c512595957be3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724468"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168919"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)
 移动到指定 [记录集](../ado-api/recordset-object-ado.md) 对象中的第一条、最后一条、下一条记录或上一条记录。  
@@ -42,7 +42,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  表示 RDS 的对象变量 [。DataControl](./datacontrol-object-rds.md) 对象。  
   
 ## <a name="remarks"></a>备注  
- 可以将 **Move** 方法用于 **RDS。DataControl** 对象，用于在网页上浏览数据绑定控件中的数据记录。 例如，假设您通过绑定到 RDS 在网格中显示一个 **记录集** **。DataControl** 对象。 然后，你可以包括 "第一个"、"最后一个"、"下一个" 和 "上一个" 按钮，用户可以单击这些按钮移动到所显示的 **记录集中**的第一个、最后一个、下一个或 为此，可调用 **MoveFirst**、 **MoveLast**、 **MoveNext**和 **MovePrevious** 方法 **。** 第一个、最后一个、下一个和上一个按钮的 onClick 过程中的 DataControl 对象。 [通讯簿示例](../../guide/remote-data-service/address-book-navigation-buttons.md)显示了如何执行此操作。  
+ 可以将 **Move** 方法用于 **RDS。DataControl** 对象，用于在网页上浏览数据绑定控件中的数据记录。 例如，假设您通过绑定到 RDS 在网格中显示一个 **记录集** **。DataControl** 对象。 然后，你可以包括 "第一个"、"最后一个"、"下一个" 和 "上一个" 按钮，用户可以单击这些按钮移动到所显示的 **记录集中** 的第一个、最后一个、下一个或 为此，可调用 **MoveFirst**、 **MoveLast**、 **MoveNext** 和 **MovePrevious** 方法 **。** 第一个、最后一个、下一个和上一个按钮的 onClick 过程中的 DataControl 对象。 [通讯簿示例](../../guide/remote-data-service/address-book-navigation-buttons.md)显示了如何执行此操作。  
   
 ## <a name="applies-to"></a>应用于  
  [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  

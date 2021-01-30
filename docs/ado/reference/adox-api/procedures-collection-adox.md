@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Procedures
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3f98420fc85cabd2ccc584817ac6ca9a9203081
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c77c3eccd6cc2e61898b1619ec6255f65227384b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983568"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169245"
 ---
 # <a name="procedures-collection-adox"></a>过程集合 (ADOX)
 包含目录的所有 [过程](./procedure-object-adox.md) 对象。  
   
-## <a name="remarks"></a>注解  
- **过程**集合的[APPEND](./append-method-adox-procedures.md)方法对于 ADOX 是唯一的。 可以：  
+## <a name="remarks"></a>备注  
+ **过程** 集合的 [APPEND](./append-method-adox-procedures.md)方法对于 ADOX 是唯一的。 可以执行以下操作：  
   
 -   使用 **Append** 方法向集合中添加一个新过程。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以：  
+ 其余属性和方法对于 ADO 集合是标准的。 可以执行以下操作：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的过程。  
   

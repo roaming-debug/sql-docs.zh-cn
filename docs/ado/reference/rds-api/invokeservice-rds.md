@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d3dc0ca3744f715f080e5e34a9d4cd5e88bc8b6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4d162b0291a19a80ec0133307c785ad3af588aee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724488"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168887"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 返回一个指针，该指针指向对象的更好的版本上所请求的接口。  
@@ -45,13 +45,13 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
   
  *ppunkMoreFunctionalInterface*  
   
- 弄指针变量的地址，该变量接收在 *riid*中请求的接口指针。 成功返回后， *ppunkMoreFunctionalInterface* 参数包含指向对象的请求的接口指针。 如果对象不支持 *riid*中指定的接口，则将 *PPUNKMOREFUNCTIONALINTERFACE* 设置为 NULL。  
+ 弄指针变量的地址，该变量接收在 *riid* 中请求的接口指针。 成功返回后， *ppunkMoreFunctionalInterface* 参数包含指向对象的请求的接口指针。 如果对象不支持 *riid* 中指定的接口，则将 *PPUNKMOREFUNCTIONALINTERFACE* 设置为 NULL。  
   
 ## <a name="return-value"></a>返回值  
  一个 HRESULT 值，该值指示是否成功调用了 **InvokeService** 方法。  
   
 ## <a name="remarks"></a>备注  
- **InvokeService**的 RDS 游标引擎实现采用输入行集 (或多个结果对象) ，用输入行集填充游标引擎，然后在其自身上返回指针。  
+ **InvokeService** 的 RDS 游标引擎实现采用输入行集 (或多个结果对象) ，用输入行集填充游标引擎，然后在其自身上返回指针。  
   
 ## <a name="applies-to"></a>应用于  
  [IRDSService 接口 (RDS)](./irdsservice-interface-rds.md)  

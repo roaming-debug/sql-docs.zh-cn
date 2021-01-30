@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - RDS methods [ADO]
 - methods [ADO], RDS
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f65c669a12fce6b78572e2bacd3152cdb5793216
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c5eb9926646d247bc252232d3fab155337f03890
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724358"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168833"
 ---
 # <a name="rds-methods"></a>RDS 方法
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ ms.locfileid: "91724358"
 |[MoveFirst、MoveLast、MoveNext、MovePrevious (RDS) ](./movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|移动到指定 **记录集** 对象中的第一条、最后一条、下一条记录或上一条记录。|  
 |[查询 (RDS) ](./query-method-rds.md)|使用有效的 SQL 查询字符串返回 **记录集**。|  
 |[刷新 (RDS) ](./refresh-method-rds.md)|重新查询 **连接** 属性中指定的数据源，并更新查询结果。|  
-|[重置 (RDS) ](./reset-method-rds.md)|基于指定的排序和筛选器属性，对客户端 **记录集**执行排序或筛选。|  
+|[重置 (RDS) ](./reset-method-rds.md)|基于指定的排序和筛选器属性，对客户端 **记录集** 执行排序或筛选。|  
 |[SubmitChanges (RDS) ](./submitchanges-method-rds.md)|将本地缓存的可更新 **记录集** 的挂起的更改提交到 **连接** 属性中指定的数据源。|  
 |[Synchronize 方法 (RDS)](./synchronize-method-rds.md)|使用连接字符串指定的数据库同步给定的记录集， (用于 ADO 2.5 和更高版本的) 。|  
 |[Synchronize21 方法 (RDS)](./synchronize21-method-rds.md)|使用连接字符串指定的数据库同步给定的记录集， (用于 ADO 2.1) 。|

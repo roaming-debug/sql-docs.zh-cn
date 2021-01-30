@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2556a8a748e3ff6d3ad2b36546a27cb0a77e6d23
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 13d890279c5cbc6a24ac590be868cf66ea14b01d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721888"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168896"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout 属性示例 (VC++)
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
- 此示例演示 [InternetTimeout](./internettimeout-property-rds.md) 属性，该属性存在于 [DataControl](./datacontrol-object-rds.md) 和 " [空间](./dataspace-object-rds.md) " 对象上。 在这种情况下，将在**DataControl**对象上演示**InternetTimeout**属性，并将超时设置为20秒。  
+ 此示例演示 [InternetTimeout](./internettimeout-property-rds.md) 属性，该属性存在于 [DataControl](./datacontrol-object-rds.md) 和 " [空间](./dataspace-object-rds.md) " 对象上。 在这种情况下，将在 **DataControl** 对象上演示 **InternetTimeout** 属性，并将超时设置为20秒。  
   
 ```cpp
 // BeginInternetTimeoutCpp  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command25::State
@@ -16,27 +16,27 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d118ed6d695f8f047640f0ef16c139204ae36277
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 517ffc71b5e2a95ba5f85fcc9d3561ce82b9ec86
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988838"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170206"
 ---
 # <a name="state-property-ado"></a>State 属性 (ADO)
 指示对象的状态是打开还是关闭的所有适用对象。 如果对象正在执行异步方法，则指示对象的当前状态是 "正在连接"、"正在执行" 还是 "正在检索"。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个可以为[ObjectStateEnum](./objectstateenum.md)值的**Long**值。 默认值为 **adStateClosed**。  
+ 返回一个可以为 [ObjectStateEnum](./objectstateenum.md)值的 **Long** 值。 默认值为 **adStateClosed**。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  你可以随时使用 **State** 属性来确定给定对象的当前状态。  
   
- 对象的 **State** 属性可以包含值的组合。 例如，如果正在执行某个语句，则此属性将具有 **adStateOpen** 和 **adStateExecuting**的组合值。  
+ 对象的 **State** 属性可以包含值的组合。 例如，如果正在执行某个语句，则此属性将具有 **adStateOpen** 和 **adStateExecuting** 的组合值。  
   
- **状态**属性是只读的。  
+ **状态** 属性是只读的。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

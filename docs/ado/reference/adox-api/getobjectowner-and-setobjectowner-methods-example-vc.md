@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b838342c76c7d8757e98f98dfcf3aaf058178277
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fb68ca4eb7cd8c1591ef52b399649dac7614b308
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984548"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169405"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner 和 SetObjectOwner 方法示例 (VC++)
 此示例演示 [GetObjectOwner](./getobjectowner-method-adox.md) 和 [SetObjectOwner](./setobjectowner-method.md) 方法。 此代码假定存在组记帐 (查看 [组和用户追加，ChangePassword 方法示例 (VC + +) ](./groups-and-users-append-changepassword-methods-example-vc.md) 查看如何将此组添加到系统) 。 "类别" 表的所有者设置为 "记帐"。  

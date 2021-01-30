@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Levels
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c28c286157e9182be43a137e88828d3c162a5b9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 01c9a494376ebe2215d074bc9cd8ebac438eb677
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986448"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169787"
 ---
 # <a name="levels-collection-ado-md"></a>级别集合 (ADO MD)
 包含构成层次结构的 [级别](./level-object-ado-md.md) 对象。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **级别** 为标准 ADO 集合。 通过使用集合的属性和方法，你可以执行以下操作：  
   
 -   获取集合中具有 [Count](../ado-api/count-property-ado.md) 属性的对象的数目。  

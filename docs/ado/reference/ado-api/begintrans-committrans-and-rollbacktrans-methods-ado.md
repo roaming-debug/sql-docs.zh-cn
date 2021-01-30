@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::raw_RollbackTrans
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02c19026d519cf5c115dedfbe4c4dcdbf89cd37b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: de30ee4629d66371e41180e0caf171a91237d65c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975928"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167856"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法 (ADO)
 这些事务方法管理 [连接](./connection-object-ado.md) 对象中的事务处理，如下所示：  
@@ -54,7 +54,7 @@ object.RollbackTrans
   
 #### <a name="parameters"></a>参数  
  *object*  
- **连接**对象。  
+ **连接** 对象。  
   
 ## <a name="connection"></a>连接  
  如果要将对源数据所做的一系列更改保存为单个单元，请将这些方法与 **连接** 对象一起使用。 例如，若要在帐户之间转移资金，可以从一个金额中减去一个金额，并将相同的金额添加到另一个。 如果任一更新失败，则帐户将不再平衡。 在打开的事务中进行这些更改可以确保所有更改或不会经历任何更改。  
@@ -71,9 +71,9 @@ object.RollbackTrans
  根据 **连接** 对象的 " [属性](./attributes-property-ado.md) " 属性，调用 **CommitTrans** 或 **RollbackTrans** 方法可能会自动启动一个新事务。 如果 " **属性** " 属性设置为 **adXactCommitRetaining**，则提供程序将在 **CommitTrans** 调用后自动启动新事务。 如果 " **属性** " 属性设置为 **adXactAbortRetaining**，则提供程序将在 **RollbackTrans** 调用后自动启动新事务。  
   
 ## <a name="remote-data-service"></a>远程数据服务  
- **BeginTrans**、 **CommitTrans**和**RollbackTrans**方法在客户端**连接**对象上不可用。  
+ **BeginTrans**、 **CommitTrans** 和 **RollbackTrans** 方法在客户端 **连接** 对象上不可用。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [连接对象 (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  

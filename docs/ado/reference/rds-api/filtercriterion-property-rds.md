@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - FilterCriterion property [RDS]
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cddb12986577b52e78f14773d4275a4cf8e54086
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2bb91a09167b10a7b5b1f969e2d0775f6ced31a4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722182"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168941"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion 属性 (RDS)
 指示要在筛选器值中使用的求值运算符。  
@@ -42,9 +42,9 @@ DataControl.FilterCriterion = String
  一个 **字符串** 值，该值指定 [FilterValue](./filtervalue-property-rds.md) 对记录的求值运算符。 可以是以下任一项： <、 \<=, > 、>=、= 或 <>。  
   
 ## <a name="remarks"></a>备注  
- [SortColumn](./sortcolumn-property-rds.md)、 [SortDirection](./sortdirection-property-rds.md)、 [FilterValue](./filtervalue-property-rds.md)、 **FilterCriterion**和[FilterColumn](./filtercolumn-property-rds.md)属性提供客户端缓存上的排序和筛选功能。 排序功能按一个列中的值对记录进行排序。 筛选功能显示基于查找条件的记录子集，而完整的 [记录集](../ado-api/recordset-object-ado.md) 则保留在缓存中。 [Reset](./reset-method-rds.md)方法将执行条件，并将当前**记录集**替换为可更新的**记录集**。  
+ [SortColumn](./sortcolumn-property-rds.md)、 [SortDirection](./sortdirection-property-rds.md)、 [FilterValue](./filtervalue-property-rds.md)、 **FilterCriterion** 和 [FilterColumn](./filtercolumn-property-rds.md)属性提供客户端缓存上的排序和筛选功能。 排序功能按一个列中的值对记录进行排序。 筛选功能显示基于查找条件的记录子集，而完整的 [记录集](../ado-api/recordset-object-ado.md) 则保留在缓存中。 [Reset](./reset-method-rds.md)方法将执行条件，并将当前 **记录集** 替换为可更新的 **记录集**。  
   
- "！ =" 运算符对于 **FilterCriterion**无效;请改用 "<>"。  
+ "！ =" 运算符对于 **FilterCriterion** 无效;请改用 "<>"。  
   
  如果同时设置了筛选和排序属性，并调用 **Reset** 方法，则首先筛选行集，然后对行集进行排序。 对于升序排序，空值位于顶部;对于降序排序，空值位于底部 (升序为默认行为) 。  
   

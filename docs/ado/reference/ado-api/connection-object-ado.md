@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection
@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38a28bf434998943b07ef6463970c26510195299
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1a4cb18c49513ff5f80e5be22f5480e4f6464cb4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974898"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167738"
 ---
 # <a name="connection-object-ado"></a>连接对象 (ADO)
 表示到数据源的连接是打开的。  
   
-## <a name="remarks"></a>注解  
- **Connection**对象表示与数据源的唯一会话。 在客户端/服务器数据库系统中，它可能等效于到服务器的实际网络连接。 根据提供程序支持的功能， **连接** 对象的某些集合、方法或属性可能不可用。  
+## <a name="remarks"></a>备注  
+ **Connection** 对象表示与数据源的唯一会话。 在客户端/服务器数据库系统中，它可能等效于到服务器的实际网络连接。 根据提供程序支持的功能， **连接** 对象的某些集合、方法或属性可能不可用。  
   
  使用 **连接** 对象的集合、方法和属性，可以执行以下操作：  
   
@@ -46,7 +46,7 @@ ms.locfileid: "88974898"
 -   使用 [execute](./execute-method-ado-connection.md) 方法对连接执行命令，并使用 [CommandTimeout](./commandtimeout-property-ado.md) 属性配置执行操作。  
   
     > [!NOTE]
-    >  若要在不使用命令对象的情况下执行查询，请将查询字符串传递到**连接**对象的**execute**方法。 但是，当你想要保留命令文本并重新执行它，或使用查询参数时，需要使用 [命令](./command-object-ado.md) 对象。  
+    >  若要在不使用命令对象的情况下执行查询，请将查询字符串传递到 **连接** 对象的 **execute** 方法。 但是，当你想要保留命令文本并重新执行它，或使用查询参数时，需要使用 [命令](./command-object-ado.md) 对象。  
   
 -   通过 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)、 [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)和 [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法和 [Attributes](./attributes-property-ado.md) 属性，管理打开的连接的事务（包括嵌套事务，如果提供程序支持它们）。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88974898"
 >  不要使用此功能 (调用命名命令或存储过程，就像它是 Microsoft® .NET Framework 应用程序中 **连接** 对象) 的本机方法一样，因为该功能的基础实现与 .NET FRAMEWORK 与 COM 互操作的方式发生冲突。  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>将命令作为连接对象的本机方法执行  
- 若要执行命令，请使用 **命令** 对象 [名称](./name-property-ado.md) 属性为命令指定名称。 将**命令**对象的**ActiveConnection**属性设置为连接。 然后发出一个语句，其中使用命令名称，就像它是 **连接** 对象的方法，后跟任何参数，如果返回任何行，则使用 **记录集** 对象。 设置 **记录集** 属性以自定义生成的 **记录集**。 例如：  
+ 若要执行命令，请使用 **命令** 对象 [名称](./name-property-ado.md) 属性为命令指定名称。 将 **命令** 对象的 **ActiveConnection** 属性设置为连接。 然后发出一个语句，其中使用命令名称，就像它是 **连接** 对象的方法，后跟任何参数，如果返回任何行，则使用 **记录集** 对象。 设置 **记录集** 属性以自定义生成的 **记录集**。 例如：  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -89,7 +89,7 @@ Dim cnn As New ADODB.Connection
 cnn. "parameter"  
 ```  
   
- **连接**对象对于脚本是安全的。  
+ **连接** 对象对于脚本是安全的。  
   
  本部分包含以下主题。  
   

@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - syntax indexes [ADO]
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acb84a462e6648badb71be752342f7fb1f3ae0da
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3a1782a6ae084dc4f2384caed471e44a287df95a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976298"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167901"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 语法索引
 调用 ADO 方法和属性的语法因开发环境而异。 ADO 语言参考的其余部分使用 Microsoft Visual Basic 编程语言来演示 ADO 方法和属性语法。 但是，请参阅以下部分，了解基于你的编程语言和方法的更具体的语法示例：  

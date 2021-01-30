@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Cell
@@ -16,32 +16,32 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6fceeea4ebe6728ae4adf9bce52cb6b642a926d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c1fd0cdb2322b3cad507745a97faa6b74f245b40
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987207"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169961"
 ---
 # <a name="cell-object-ado-md"></a>单元对象 (ADO MD)
 表示单元集内包含的轴坐标相交处的数据。  
   
-## <a name="remarks"></a>注解  
- 单元[集](./cellset-object-ado-md.md)对象的[Item](./item-property-ado-md-cellset.md)属性返回**Cell**对象。  
+## <a name="remarks"></a>备注  
+ 单元 [集](./cellset-object-ado-md.md)对象的 [Item](./item-property-ado-md-cellset.md)属性返回 **Cell** 对象。  
   
  使用 **Cell** 对象的集合和属性，可以执行以下操作：  
   
--   返回具有[值](./value-property-ado-md.md)属性的**单元**中的数据。  
+-   返回具有 [值](./value-property-ado-md.md)属性的 **单元** 中的数据。  
   
--   返回一个字符串，该字符串表示带有[FormattedValue](./formattedvalue-property-ado-md.md)属性的**Value**属性的格式显示。  
+-   返回一个字符串，该字符串表示带有 [FormattedValue](./formattedvalue-property-ado-md.md)属性的 **Value** 属性的格式显示。  
   
--   返回单元**集**内具有[Ordinal](./ordinal-property-ado-md-cell.md)属性的**单元**的序号值。  
+-   返回单元 **集** 内具有 [Ordinal](./ordinal-property-ado-md-cell.md)属性的 **单元** 的序号值。  
   
--   确定[CubeDef](./cubedef-object-ado-md.md)中**单元格**在[位置](./positions-collection-ado-md.md)集合中的位置。  
+-   确定 [CubeDef](./cubedef-object-ado-md.md)中 **单元格** 在 [位置](./positions-collection-ado-md.md)集合中的位置。  
   
--   检索有关具有标准 ADO[属性](../ado-api/properties-collection-ado.md)集合的**单元**的其他信息。  
+-   检索有关具有标准 ADO [属性](../ado-api/properties-collection-ado.md)集合的 **单元** 的其他信息。  
   
- **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
+ **Properties** 集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
 |名称|说明|  
 |----------|-----------------|  
