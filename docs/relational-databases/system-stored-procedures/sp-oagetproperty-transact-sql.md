@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAGetProperty_TSQL
 - sp_OAGetProperty
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad769910b74dafd2727719980c6070d9487094da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0542ae7cf67fb5b05c63a4c8cdb9ef9fb31c62e2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545969"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174405"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_OAGetProperty objecttoken , propertyname
   
 ## <a name="arguments"></a>参数  
  *objecttoken*  
- 是先前使用 **sp_OACreate**创建的 OLE 对象的对象标记。  
+ 是先前使用 **sp_OACreate** 创建的 OLE 对象的对象标记。  
   
  propertyname  
  要返回的 OLE 对象的属性名。  
@@ -51,9 +51,9 @@ sp_OAGetProperty objecttoken , propertyname
  *propertyvalue* **输出**  
  返回的属性值。 如果指定此参数，则必须是相应数据类型的局部变量。  
   
- 如果该属性返回 OLE 对象，则 *propertyvalue* 必须是数据类型为 **int**的局部变量。对象标记存储在局部变量中，此对象标记可用于其他 OLE 自动化存储过程。  
+ 如果该属性返回 OLE 对象，则 *propertyvalue* 必须是数据类型为 **int** 的局部变量。对象标记存储在局部变量中，此对象标记可用于其他 OLE 自动化存储过程。  
   
- 如果该属性返回单个值，则为 *propertyvalue*指定一个局部变量，该局部变量返回局部变量中的属性值;或不指定 *propertyvalue*，这会将属性值作为单列单行结果集返回到客户端。  
+ 如果该属性返回单个值，则为 *propertyvalue* 指定一个局部变量，该局部变量返回局部变量中的属性值;或不指定 *propertyvalue*，这会将属性值作为单列单行结果集返回到客户端。  
   
  当属性返回数组时，如果指定了 *propertyvalue* ，则将其设置为 NULL。  
   

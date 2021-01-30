@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_defect
 - sp_msx_defect_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1b5ea1139e0cfc1b27d7b79df29e6c1b1381b4d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2ca7f1d044ddfe0730052ff811e6084d5c070b6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541532"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174452"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @forced_defection = ] forced_defection` 指定是否在主 SQLServerAgent 由于不可逆转损坏的 **msdb** 数据库而永久丢失或没有 **msdb** 数据库备份的情况下，强制脱离。 *forced_defection*为 **bit**，默认值为 **0**，指示不应发生强制脱离。 值为 **1** 时强制脱离。  
+`[ @forced_defection = ] forced_defection` 指定是否在主 SQLServerAgent 由于不可逆转损坏的 **msdb** 数据库而永久丢失或没有 **msdb** 数据库备份的情况下，强制脱离。 *forced_defection* 为 **bit**，默认值为 **0**，指示不应发生强制脱离。 值为 **1** 时强制脱离。  
   
- 通过执行 **sp_msx_defect**强制脱离后，在主 SQLServerAgent 上， **sysadmin** 固定服务器角色的成员必须运行以下命令才能完成脱离：  
+ 通过执行 **sp_msx_defect** 强制脱离后，在主 SQLServerAgent 上， **sysadmin** 固定服务器角色的成员必须运行以下命令才能完成脱离：  
   
 ```  
 EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defection =  0;  

@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - functions [ODBC], setup DLL functions
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8729cb681a7518125e218bac08874e8fd02cd7c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b41d7aca777fd2f010a75871c1a6a060336457a1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487320"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174601"
 ---
 # <a name="setup-dll-function-summary"></a>设置 DLL 函数摘要
 下表介绍了安装程序 DLL 函数。 有关每个函数的语法和语义的详细信息，请参阅 [SETUP DLL API 参考](../../../odbc/reference/syntax/setup-dll-api-reference.md)。  

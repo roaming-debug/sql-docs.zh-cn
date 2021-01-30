@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 980e1ab0dcd507067d74797d546a26fdef8ae628
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d1dd9e59a8adfd107a033cdf1606e80825bd8e74
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988008"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172416"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 和 CancelBatch 方法示例 (VC++)
 此示例演示如何将 [UpdateBatch](./updatebatch-method.md) 方法与 [CancelBatch](./cancelbatch-method-ado.md) 方法结合在一起。  

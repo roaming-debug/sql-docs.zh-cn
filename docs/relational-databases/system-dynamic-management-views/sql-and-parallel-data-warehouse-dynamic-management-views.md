@@ -6,18 +6,18 @@ ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: e1735fa9e8b8ad6a85648b21aab1ba9aa21062b2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 26a0163fc039e240405e4dafa75ba247fa85dfe8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466878"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174571"
 ---
 # <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>SQL 和并行数据仓库动态管理视图
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

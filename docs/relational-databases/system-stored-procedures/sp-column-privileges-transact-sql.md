@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_column_privileges_TSQL
 - sp_column_privileges
@@ -19,12 +19,12 @@ ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 279789c40dbc79dd3d7b2d421d757a936b0e6126
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: db99cb2e9acb8ede62a066291cce68d209e495c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482399"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174528"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
      [ , [ @column_name = ] 'column' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @table_name =] "*table_name*"  
  用来返回目录信息的表。 *table_name* **sysname**，无默认值。 不支持通配符模式匹配。  
   

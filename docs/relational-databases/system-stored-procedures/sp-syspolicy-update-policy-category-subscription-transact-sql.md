@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_update_policy_category_subscription_TSQL
 - sp_syspolicy_update_policy_category_subscription
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78f2b47d687c695c50710d045e99494ac61598b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 493da853bc06eb1c56986a99a0b2a2aac9c2e5c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492961"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174401"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_update_policy_category_subscription。  
   
- 若要获取 *policy_category_subscription_id* 和 *policy_category*的值，可以使用以下查询：  
+ 若要获取 *policy_category_subscription_id* 和 *policy_category* 的值，可以使用以下查询：  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_type, a.target_object  

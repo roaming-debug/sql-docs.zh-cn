@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Update
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb673de86d48143a8869460eeab3377f3c0ec0d2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 279d0e82bff4d71a2c3b18bbdc7ff88f0b9581a9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988098"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172428"
 ---
 # <a name="update-method"></a>Update 方法
 保存对记录[集](./recordset-object-ado.md)对象的当前行所做的任何更改，或[记录](./record-object-ado.md)对象的[字段](./fields-collection-ado.md)集合。  
@@ -35,16 +35,16 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>参数  
- *字段*  
+ *Fields*  
  可选。 表示单个名称的 **变量** ，或表示要修改的一个或多个字段的名称或序号位置的 **variant** 数组。  
   
  *值*  
  可选。 一个表示单个值的 **变量** ，或一个表示新记录中的一个或多个字段的值的 **变体** 数组。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 ## <a name="recordset"></a>记录集  
- 使用 **Update** 方法保存对 **记录集** 对象的当前记录所做的任何更改，因为调用了 [AddNew](./addnew-method-ado.md) 方法或更改了现有记录中的任何字段值。 **Recordset**对象必须支持更新。  
+ 使用 **Update** 方法保存对 **记录集** 对象的当前记录所做的任何更改，因为调用了 [AddNew](./addnew-method-ado.md) 方法或更改了现有记录中的任何字段值。 **Recordset** 对象必须支持更新。  
   
  若要设置字段值，请执行以下操作之一：  
   
@@ -62,12 +62,12 @@ record.Fields.Update
   
  在调用 **Update** 方法之后，当前记录保持为最新。  
   
-## <a name="record"></a>Record  
- **Update**方法完成对**Record**对象的[fields](./fields-collection-ado.md)集合中的字段的添加、删除和更新。  
+## <a name="record"></a>记录  
+ **Update** 方法完成对 **Record** 对象的 [fields](./fields-collection-ado.md)集合中的字段的添加、删除和更新。  
   
  例如， **删除方法删除的字段** 会立即标记为删除，但仍保留在集合中。 若要实际从提供程序的集合中删除这些字段，必须调用 **Update** 方法。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

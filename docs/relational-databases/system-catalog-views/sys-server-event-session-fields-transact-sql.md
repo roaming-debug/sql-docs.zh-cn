@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - server_event_session_fields
 - server_event_session_fields_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3f4ba8d7351e0db020a66b35ea9ad1a9048791e2
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 33520649613a538e6a829aca1e52ecf106e8b425
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094460"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172646"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "98094460"
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |object_id|**int**|此字段所关联的对象的 ID。 不可为 null。|  
 |name|**sysname**|字段的名称。 不可为 null。|  
-|值|**sql_variant**|字段的值。 不可为 null。|  
+|value|**sql_variant**|字段的值。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
@@ -46,7 +46,7 @@ ms.locfileid: "98094460"
 ## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-| From | 目标 | Relationship |
+| From | 功能 | 关系 |
 | ---- | -- | ------------ |
 |sys.server_event_session_actions.event_session_id|sys.server_event_sessions sys.server_event_sessions.event_session_id|多对一|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.object_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|多对一|  

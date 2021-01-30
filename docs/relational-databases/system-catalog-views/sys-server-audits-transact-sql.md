@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - server_audits_TSQL
 - sys.server_audits_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3bb5b8b56cb2fec01b6fe655f3f51841cc7ebb21
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6c7dba3282bf75e3c707be7d861f2051b56c6e0f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093082"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172701"
 ---
 # <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "98093082"
 |modify_date|**datetime**|上次修改审核的 UTC 日期。|  
 |principal_id|**int**|向服务器注册的审核所有者的 ID。|  
 |type|**char(2)**|审核类型：<br /><br /> SL-NT 安全事件日志<br /><br /> AL-NT 应用程序事件日志<br /><br /> 文件系统上的 FL 文件|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> 文件|  
+|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
 |**on_failure**|**tinyint**|失败时要写入的操作项：<br /><br /> 0-继续<br /><br /> 1-关闭服务器实例<br /><br /> 2-失败操作|  
 |**on_failure_desc**|**nvarchar(60)**|失败时要写入的操作项：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-已禁用<br /><br /> 1 - 启用|  

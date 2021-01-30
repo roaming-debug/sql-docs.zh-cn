@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CubeDef
@@ -16,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de22ce013d94b1830ba220c318c06bbe716423bd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bae255b0de860a1caee016d5e8867c7fb9b3ffee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987018"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174316"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 对象 (ADO MD)
 表示多维架构中的一个多维数据集，其中包含一组相关的维度。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 **CubeDef** 对象的集合和属性，可以执行以下操作：  
   
--   标识具有[Name](./name-property-ado-md.md)属性的**CubeDef** 。  
+-   标识具有 [Name](./name-property-ado-md.md)属性的 **CubeDef** 。  
   
 -   返回一个字符串，该字符串描述具有 [Description](./description-property-ado-md.md) 属性的多维数据集。  
   
 -   返回与 [维度](./dimensions-collection-ado-md.md) 集合构成多维数据集的维度。  
   
--   获取有关具有标准 ADO[属性](../ado-api/properties-collection-ado.md)集合的**CubeDef**的其他信息。  
+-   获取有关具有标准 ADO [属性](../ado-api/properties-collection-ado.md)集合的 **CubeDef** 的其他信息。  
   
- **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
+ **Properties** 集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
 |名称|说明|  
 |----------|-----------------|  
