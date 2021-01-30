@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3826a05f56539542af8c03dbb9321062a06446d9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 71fa7bbc6f79e5d58e4987e5daacb5d42cbd74d9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977088"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159259"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand 属性示例 (VB)
 此示例演示了 [ActiveCommand](./activecommand-property-ado.md) 属性。  
   
- 为子程序提供了一个 [记录集](./recordset-object-ado.md) 对象，该对象的 **ActiveCommand** 属性用于显示创建该 **记录集**的命令文本和参数。  
+ 为子程序提供了一个 [记录集](./recordset-object-ado.md) 对象，该对象的 **ActiveCommand** 属性用于显示创建该 **记录集** 的命令文本和参数。  
   
 ```  
 'BeginActiveCommandVB  
@@ -91,9 +91,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **ActiveCommandXprint**例程仅提供**recordset**对象，但它必须打印用于创建该**记录集**的命令文本和参数。 这可以是因为 **记录集** 对象的 **ActiveCommand** 属性生成关联的 [命令](./command-object-ado.md) 对象。  
+ **ActiveCommandXprint** 例程仅提供 **recordset** 对象，但它必须打印用于创建该 **记录集** 的命令文本和参数。 这可以是因为 **记录集** 对象的 **ActiveCommand** 属性生成关联的 [命令](./command-object-ado.md) 对象。  
   
- **命令**对象的[CommandText](./commandtext-property-ado.md)属性生成创建**记录集**的参数化命令。 **Command**对象的[Parameters](./parameters-collection-ado.md)集合生成的值被替换为命令的参数占位符 ( "**？**") 。  
+ **命令** 对象的 [CommandText](./commandtext-property-ado.md)属性生成创建 **记录集** 的参数化命令。 **Command** 对象的 [Parameters](./parameters-collection-ado.md)集合生成的值被替换为命令的参数占位符 ( "**？**") 。  
   
  最后，打印错误消息或作者名称和 ID。  
   

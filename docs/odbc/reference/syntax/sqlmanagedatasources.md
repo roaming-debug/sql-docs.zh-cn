@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLManageDataSources
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 81f4616cb04d5d17cca687843d28efa1027ff65f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fbb34d2daafc4a135cbf51c2b0382d3965f9dfc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460970"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160809"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **度**  
@@ -39,7 +39,7 @@ ms.locfileid: "88460970"
 ```cpp  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -47,16 +47,16 @@ BOOL SQLManageDataSources(
  送父窗口句柄。  
   
 ## <a name="returns"></a>返回  
- 如果*hwnd*不是有效的窗口句柄，则**SQLManageDataSources**返回 FALSE。 否则，返回 TRUE。  
+ 如果 *hwnd* 不是有效的窗口句柄，则 **SQLManageDataSources** 返回 FALSE。 否则，返回 TRUE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLManageDataSources**返回 FALSE 时，可以通过调用**SQLInstallerError**获取关联的* \* pfErrorCode*值。 下表列出了可由**SQLInstallerError**返回的* \* pfErrorCode*值，并说明了此函数的上下文中的每个值。  
+ 当 **SQLManageDataSources** 返回 FALSE 时，可以通过调用 **SQLInstallerError** 获取关联的 *\* pfErrorCode* 值。 下表列出了可由 **SQLInstallerError** 返回的 *\* pfErrorCode* 值，并说明了此函数的上下文中的每个值。  
   
-|*\*pfErrorCode*|错误|描述|  
+|*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出现错误，但没有特定的安装程序错误。|  
 |ODBC_ERROR_REQUEST_FAILED|*请求* 失败|对 **ConfigDSN** 的调用失败。|  
-|ODBC_ERROR_INVALID__HWND|无效的窗口句柄|*Hwnd*参数无效或为 NULL。|  
+|ODBC_ERROR_INVALID__HWND|无效的窗口句柄|*Hwnd* 参数无效或为 NULL。|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行此功能。|  
   
 ## <a name="managing-data-sources"></a>管理数据源  
@@ -102,12 +102,12 @@ BOOL SQLManageDataSources(
  有关文件数据源的详细信息，请参阅 [使用文件数据源进行连接](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)或参阅 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)。  
   
 ## <a name="managing-drivers"></a>管理驱动程序  
- 如果用户单击 " **ODBC 数据源管理器**" 对话框中的 "**驱动程序**" 选项卡， **SQLManageDataSources**将显示系统上安装的 ODBC 驱动程序的列表以及有关驱动程序的信息。 显示的日期是驱动程序的创建日期，如下图所示。  
+ 如果用户单击 " **ODBC 数据源管理器**" 对话框中的 "**驱动程序**" 选项卡， **SQLManageDataSources** 将显示系统上安装的 ODBC 驱动程序的列表以及有关驱动程序的信息。 显示的日期是驱动程序的创建日期，如下图所示。  
   
  ![“ODBC 数据源管理器驱动程序”选项卡](../../../odbc/reference/syntax/media/ch23g.gif "ch23g")  
   
 ## <a name="tracing-options"></a>跟踪选项  
- 如果用户单击 " **ODBC 数据源管理器**" 对话框中的 "**跟踪**" 选项卡， **SQLManageDataSources**将显示跟踪选项，如下图所示。  
+ 如果用户单击 " **ODBC 数据源管理器**" 对话框中的 "**跟踪**" 选项卡， **SQLManageDataSources** 将显示跟踪选项，如下图所示。  
   
  ![“ODBC 数据源管理器跟踪”选项卡](../../../odbc/reference/syntax/media/ch23h.gif "Ch23h")  
   

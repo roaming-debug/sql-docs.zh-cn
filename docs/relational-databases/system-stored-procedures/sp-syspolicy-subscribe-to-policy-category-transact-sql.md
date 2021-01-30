@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_subscribe_to_policy_category
 - sp_syspolicy_subscribe_to_policy_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: beadf9f07bb78abb750a1f94383b926e5be505ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6304985143a25c55b3639c1b137e0463a44c6af2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485564"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161304"
 ---
 # <a name="sp_syspolicy_subscribe_to_policy_category-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ## <a name="arguments"></a>参数  
 `[ @policy_category = ] 'policy_category'` 您希望数据库订阅的策略类别的名称。 *policy_category* **sysname**，并且是必需的。  
   
- 若要获取 *policy_category*的值，请在 "系统" 视图 policy_policy_categories 查询 msdb.dbo.sys。  
+ 若要获取 *policy_category* 的值，请在 "系统" 视图 policy_policy_categories 查询 msdb.dbo.sys。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

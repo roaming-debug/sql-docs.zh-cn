@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergepullsubscription
 - sp_helpmergepullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b74d9846d672a59adbde9eada760af1d60fc725e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 91266e8d825fd669979e925753804230fd62027c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543268"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160597"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="argument"></a>参数  
 `[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，默认值为 **%** 。 如果 *是* **%** ，则返回有关当前数据库中所有合并发布和订阅的信息。  
   
-`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器*的 **sysname**为，默认值为 **%** 。  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname** 为，默认值为 **%** 。  
   
-`[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db*的默认值为 **sysname**，默认值为 **%** 。  
+`[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db* 的默认值为 **sysname**，默认值为 **%** 。  
   
-`[ @subscription_type = ] 'subscription_type'` 指示是否显示请求订阅。 *subscription_type*为 **nvarchar (10) **，默认值为 **"pull"**。 有效值为 **"push"**、 **"pull"** 或 **"both"**。  
+`[ @subscription_type = ] 'subscription_type'` 指示是否显示请求订阅。 *subscription_type* 为 **nvarchar (10)**，默认值为 **"pull"**。 有效值为 **"push"**、 **"pull"** 或 **"both"**。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -62,12 +62,12 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**status**|**int**|订阅状态：<br /><br /> **0** = 非活动订阅<br /><br /> **1** = 有效订阅<br /><br /> **2** = 已删除订阅<br /><br /> **3** = 已分离订阅<br /><br /> **4** = 附加订阅<br /><br /> **5** = 已将订阅标记为重新初始化并上传<br /><br /> **6** = 附加订阅失败<br /><br /> **7** = 从备份还原的订阅|  
 |**subscriber_type**|**int**|订阅服务器的类型：<br /><br /> **1** = 全局<br /><br /> **2** = 本地<br /><br /> **3** = 匿名|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 匿名|  
-|**priority**|**float (8) **|订阅优先级。 该值必须小于 **100.00**。|  
+|**priority**|**float (8)**|订阅优先级。 该值必须小于 **100.00**。|  
 |**sync_type**|**tinyint**|订阅同步类型：<br /><br /> **1** = 自动<br /><br /> **2** = 不使用快照。|  
 |description|**nvarchar(255)**|对请求订阅的简短说明。|  
 |**merge_jobid**|**binary(16)**|合并代理的作业 ID。|  
 |**enabled_for_syncmgr**|**int**|指示是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 同步管理器同步订阅。|  
-|**last_updated**|**nvarchar (26) **|合并代理上次成功同步订阅的时间。|  
+|**last_updated**|**nvarchar (26)**|合并代理上次成功同步订阅的时间。|  
 |**publisher_login**|**sysname**|发布服务器登录名。|  
 |**publisher_password**|**sysname**|发布者密码。|  
 |**publisher_security_mode**|**int**|指定发布服务器的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1** = Windows 身份验证|  
@@ -92,11 +92,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**use_web_sync**|**bit**|指定是否可以通过 HTTPS 同步订阅，如果值为 **1** ，则表示已启用此功能。|  
 |**internet_url**|**nvarchar(260)**|表示 Web 同步的复制侦听器位置的 URL。|  
 |**internet_login**|**nvarchar(128)**|在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录名。|  
-|**internet_password**|**nvarchar (524) **|在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录密码。|  
+|**internet_password**|**nvarchar (524)**|在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录密码。|  
 |**internet_security_mode**|**int**|连接到承载 Web 同步的 Web 服务器时使用的身份验证模式。 值 **1** 表示 Windows 身份验证，值 **0** 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**internet_timeout**|**int**|Web 同步请求过期之前的时间长度（秒）。|  
 |**hostname**|**nvarchar(128)**|指定在参数化行筛选器的 WHERE 子句中使用此函数时 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 的重载值。|  
-|**job_login**|**nvarchar(512)**|是运行合并代理时所用的 Windows 帐户，它以 "*域*用户名" 的格式返回 \\ *username*。|  
+|**job_login**|**nvarchar(512)**|是运行合并代理时所用的 Windows 帐户，它以 "*域* 用户名" 的格式返回 \\ 。|  
 |**job_password**|**sysname**|出于安全原因，始终返回值 " **\*\*\*\*\*\*\*\*\*\*** "。|  
   
 ## <a name="return-code-values"></a>返回代码值  

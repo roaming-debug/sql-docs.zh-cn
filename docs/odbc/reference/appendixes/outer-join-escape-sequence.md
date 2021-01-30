@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - outer join escape sequence [ODBC]
 - escape sequences [ODBC], outer join
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 22517e676f9f8ac80622d368edcdb5a0ce1b283f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e25cde1a4da326d06efe23bc2f7c642e61589ff3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466089"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160855"
 ---
 # <a name="outer-join-escape-sequence"></a>外部联接转义序列
 ODBC 对外部联接使用转义序列。 此转义序列的语法如下所示：  
@@ -50,4 +50,4 @@ ODBC 对外部联接使用转义序列。 此转义序列的语法如下所示�
   
  *ODBC-esc-终止符* ：： =}  
   
- 若要确定支持此语句的哪些部分，应用程序需要使用 SQL_OJ_CAPABILITIES 信息类型调用 **SQLGetInfo** 。 对于外部联接， *搜索条件* 必须只包含指定 *表名称*之间的联接条件。
+ 若要确定支持此语句的哪些部分，应用程序需要使用 SQL_OJ_CAPABILITIES 信息类型调用 **SQLGetInfo** 。 对于外部联接， *搜索条件* 必须只包含指定 *表名称* 之间的联接条件。

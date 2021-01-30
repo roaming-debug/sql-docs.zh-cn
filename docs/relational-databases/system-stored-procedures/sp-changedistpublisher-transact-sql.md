@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistpublisher_TSQL
 - sp_changedistpublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca2b3369a75d2e2b80624d99d2fe11459b8ff749
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d48757f7404ba4f915e7b92609c9077ab702adb4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548254"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159036"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 要更改的给定发布服务器的属性。 *属性* 为 **sysname** ，可以是下列值之一。  
   
-`[ @value = ] 'value'` 给定属性的值。 *值* 为 **nvarchar (255) **，默认值为 NULL。  
+`[ @value = ] 'value'` 给定属性的值。 *值* 为 **nvarchar (255)**，默认值为 NULL。  
   
 `[ @storage_connection_string = ] 'storage_connection_string'` 对于 SQL 托管实例是必需的，应匹配 Azure SQL 数据库存储卷的访问密钥。 
 
@@ -54,12 +54,12 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  
  下表说明了发布服务器的属性和这些属性的值。  
   
-|属性|值|说明|  
+|properties|值|说明|  
 |--------------|------------|-----------------|  
-|**active**|**true**|激活发布服务器。|  
+|**active**|true|激活发布服务器。|  
 ||**false**|停用发布服务器|  
 |**distribution_db**||分发数据库的名称。|  
-|**id**||登录名。|  
+|**login**||登录名。|  
 |**password**||提供的登录名的强密码。|  
 |**security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。 *不能更改非* [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*发布者。*|  
 ||**0**|连接发布服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 *不能更改非* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*发布者。*|  
@@ -74,7 +74,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  **sp_changedistpublisher** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_changedistpublisher**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_changedistpublisher** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

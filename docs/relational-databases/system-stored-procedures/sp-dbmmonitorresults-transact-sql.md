@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbmmonitorresults
 - sp_dbmmonitorresults_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f623f377bf850f5c247c770f7cc38358cf4dabb2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7af393da5482f8955c8e5eea20c9742ffb269baa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543549"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160621"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,10 +104,10 @@ sp_dbmmonitorresults database_name
  **sp_dbmmonitorresults** 只能在 **msdb** 数据库的上下文中执行。  
   
 ## <a name="permissions"></a>权限  
- 要求具有**sysadmin**固定服务器角色的成员身份或**msdb**数据库中**dbm_monitor**固定数据库角色的成员身份。 **Dbm_monitor**角色使其成员可以查看数据库镜像状态，但不会对其进行更新，而不会查看或配置数据库镜像事件。  
+ 要求具有 **sysadmin** 固定服务器角色的成员身份或 **msdb** 数据库中 **dbm_monitor** 固定数据库角色的成员身份。 **Dbm_monitor** 角色使其成员可以查看数据库镜像状态，但不会对其进行更新，而不会查看或配置数据库镜像事件。  
   
 > [!NOTE]  
->  **Sp_dbmmonitorupdate**第一次执行时，它将在**msdb**数据库中创建**dbm_monitor**固定数据库角色。 **Sysadmin**固定服务器角色的成员可以将任何用户添加到**dbm_monitor**固定数据库角色。  
+>  **Sp_dbmmonitorupdate** 第一次执行时，它将在 **msdb** 数据库中创建 **dbm_monitor** 固定数据库角色。 **Sysadmin** 固定服务器角色的成员可以将任何用户添加到 **dbm_monitor** 固定数据库角色。  
   
 ## <a name="examples"></a>示例  
  以下示例返回在前面两个小时内记录的行，但不更新数据库状态。  

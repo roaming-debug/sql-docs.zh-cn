@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
 - sys.sp_cdc_help_change_data_capture_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13f78f25cd02ccf9c698518b5aa10f7fda0b7694
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 79c12ab4b1bdfb3a955c83ef3d724a026f24f1ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809817"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159775"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|用于唯一标识源表中的行的索引列的列表。|  
 |captured_column_list|**nvarchar(max)**|已捕获的源列的列表。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果 *source_schema* 和 *source_name* 都默认为 null，或者显式设置为 null，则此存储过程将返回调用方有权访问的所有数据库捕获实例的信息。 当 *source_schema* 且 *SOURCE_NAME* 为非 NULL 时，只返回有关特定命名启用表的信息。  
   
 ## <a name="permissions"></a>权限  

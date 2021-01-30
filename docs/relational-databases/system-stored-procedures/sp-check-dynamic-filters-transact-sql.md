@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dynamic_filters_TSQL
 - sp_check_TSQL
@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 323740799308f19a15dd4c8ccede8bcfe106465f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f458f3dcf629ee6f77b8237edb0a9defa516b8f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539093"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158961"
 ---
 # <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,10 +57,10 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|如果发布符合使用预计算分区的条件，则为;其中， **1** 表示可以使用预计算分区， **0** 表示不能使用。|  
 |**has_dynamic_filters**|**bit**|如果在发布中至少定义了一个参数化行筛选器，则为; 否则为。其中， **1** 表示存在一个或多个参数化行筛选器， **0** 表示不存在动态筛选器。|  
-|**dynamic_filters_function_list**|**nvarchar (500) **|用于对发布中的项目进行筛选的函数列表，各个函数由分号分隔。|  
-|**validate_subscriber_info**|**nvarchar (500) **|用于对发布中的项目进行筛选的函数列表，各个函数由加号 (+) 分隔。|  
-|**uses_host_name**|**bit**|如果在参数化行筛选器中使用 [HOST_NAME ( # B1 ](../../t-sql/functions/host-name-transact-sql.md) 函数，其中 **1** 表示此函数用于动态筛选。|  
-|**uses_suser_sname**|**bit**|如果在参数化行筛选器中使用 [SUSER_SNAME ( # B1 ](../../t-sql/functions/suser-sname-transact-sql.md) 函数，其中 **1** 表示此函数用于动态筛选。|  
+|**dynamic_filters_function_list**|**nvarchar (500)**|用于对发布中的项目进行筛选的函数列表，各个函数由分号分隔。|  
+|**validate_subscriber_info**|**nvarchar (500)**|用于对发布中的项目进行筛选的函数列表，各个函数由加号 (+) 分隔。|  
+|**uses_host_name**|**bit**|如果在参数化行筛选器中使用 [HOST_NAME ( # B1](../../t-sql/functions/host-name-transact-sql.md) 函数，其中 **1** 表示此函数用于动态筛选。|  
+|**uses_suser_sname**|**bit**|如果在参数化行筛选器中使用 [SUSER_SNAME ( # B1](../../t-sql/functions/suser-sname-transact-sql.md) 函数，其中 **1** 表示此函数用于动态筛选。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changelogreader_agent
 - sp_changelogreader_agent_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b7be6bc9fb6d52508677d75448b429726be005b8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fef379d9ae9e103904dfb0ef1b765305daa6acc6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528460"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158982"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_login = ] 'job_login'` 运行代理时所用的帐户的登录名。 *job_login* 为 **nvarchar (257) **，默认值为 NULL。 在 Azure SQL 托管实例上，使用 SQL Server 帐户。 *不能更改非* [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*发布者。*  
+`[ @job_login = ] 'job_login'` 运行代理时所用的帐户的登录名。 *job_login* 为 **nvarchar (257)**，默认值为 NULL。 在 Azure SQL 托管实例上，使用 SQL Server 帐户。 *不能更改非* [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*发布者。*  
   
 `[ @job_password = ] 'job_password'` 运行代理时所用的帐户的密码。 *job_password* 的默认值为 **sysname**，默认值为 NULL。  
   
@@ -56,7 +56,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` 连接到发布服务器时使用的登录名。 *publisher_login* 的默认值为 **sysname**，默认值为 NULL。 当*publisher_security_mode*为**0**时，必须指定*publisher_login* 。 如果 *publisher_login* 为 NULL 且 *publisher_security_mode* 为 **1**，则连接到发布服务器时将使用 *job_login* 中指定的 Windows 帐户。  
+`[ @publisher_login = ] 'publisher_login'` 连接到发布服务器时使用的登录名。 *publisher_login* 的默认值为 **sysname**，默认值为 NULL。 当 *publisher_security_mode* 为 **0** 时，必须指定 *publisher_login* 。 如果 *publisher_login* 为 NULL 且 *publisher_security_mode* 为 **1**，则连接到发布服务器时将使用 *job_login* 中指定的 Windows 帐户。  
   
 `[ @publisher_password = ] 'publisher_password'` 连接到发布服务器时使用的密码。 *publisher_password* 的默认值为 **sysname**，默认值为 NULL。  
   

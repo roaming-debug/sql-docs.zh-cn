@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changesubstatus
 - sp_changesubstatus_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faee6b09f682c5d13a3c005d95b1d513d9206026
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 89de8f8a4c5f1abb3a07551bcca6eac53e0b2e2a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539106"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158963"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -71,7 +71,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @subscriber = ] 'subscriber'` 要更改其状态的订阅服务器的名称。 *订阅服务器* 的默认值为 **sysname**，默认值为 **%** 。 如果未指定 *订阅服务器* ，则会更改指定项目的所有订阅服务器的状态。  
   
-`[ @status = ] 'status'`**Syssubscriptions**表中的订阅状态。 *状态* 为 **sysname**，无默认值，可以是下列值之一。  
+`[ @status = ] 'status'`**Syssubscriptions** 表中的订阅状态。 *状态* 为 **sysname**，无默认值，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -85,32 +85,32 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @frequency_type = ] frequency_type` 用于计划分发任务的频率。 *frequency_type* 的值为 **int**，默认值为 NULL。  
   
-`[ @frequency_interval = ] frequency_interval` 要应用于 *frequency_type*设置的频率的值。 *frequency_interval* 的值为 **int**，默认值为 NULL。  
+`[ @frequency_interval = ] frequency_interval` 要应用于 *frequency_type* 设置的频率的值。 *frequency_interval* 的值为 **int**，默认值为 NULL。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 分发任务的日期。 如果 *frequency_type* 设置为 32 (每月相对) ，则使用此参数。 *frequency_relative_interval* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
 |NULL（默认值）||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 NULL。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type* 使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 NULL。  
   
 `[ @frequency_subday = ] frequency_subday` 在定义的时间段内重新计划的频率（分钟）。 *frequency_subday* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|Minute|  
 |**8**|小时|  
 |NULL（默认值）||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday* 的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day` 第一次安排分发任务的时间，格式为 HHMMSS。 *active_start_time_of_day* 的值为 **int**，默认值为 NULL。  
   
@@ -120,9 +120,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @active_end_date = ] active_end_date` 停止安排分发任务的日期，格式为 YYYYMMDD。 *active_end_date* 的值为 **int**，默认值为 NULL。  
   
-`[ @optional_command_line = ] 'optional_command_line'` 可选的命令提示符。 *optional_command_line* 为 **nvarchar (4000) **，默认值为 NULL。  
+`[ @optional_command_line = ] 'optional_command_line'` 可选的命令提示符。 *optional_command_line* 为 **nvarchar (4000)**，默认值为 NULL。  
   
-`[ @distribution_jobid = ] distribution_jobid` 将订阅状态从非活动更改为活动时，订阅服务器上的分发代理的作业 ID。 在其他情况下，不定义该参数。 如果对此存储过程的单个调用中涉及多个分发代理，则不定义结果。 *distribution_jobid* 为 **二进制 (16) **，默认值为 NULL。  
+`[ @distribution_jobid = ] distribution_jobid` 将订阅状态从非活动更改为活动时，订阅服务器上的分发代理的作业 ID。 在其他情况下，不定义该参数。 如果对此存储过程的单个调用中涉及多个分发代理，则不定义结果。 *distribution_jobid* 为 **二进制 (16)**，默认值为 NULL。  
   
 `[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -152,7 +152,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  更改发布服务器上的项目属性时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  更改发布服务器上的项目属性时，不应使用 *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

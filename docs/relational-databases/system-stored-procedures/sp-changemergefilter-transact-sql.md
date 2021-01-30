@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergefilter_TSQL
 - sp_changemergefilter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e5a5208eeb1a47971e1960bd9c9c581d5d6517e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8081fc9a95452d68540acf3b2a5a412910f75219
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539102"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159851"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,11 +52,11 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` 要更改的属性的名称。 *属性* 为 **sysname**，无默认值。  
   
-`[ @value = ] 'value'` 指定的属性的新值。 *值*为 **nvarchar (1000) **，无默认值。  
+`[ @value = ] 'value'` 指定的属性的新值。 *值* 为 **nvarchar (1000)**，无默认值。  
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|值|说明|  
+|properties|值|说明|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|联接筛选器。<br /><br /> 若要支持 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器，此选项是必需的。|  
 ||**2**|逻辑记录关系。|  
@@ -64,7 +64,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**filtername**||筛选器名称。|  
 |**join_articlename**||联接项目名。|  
 |**join_filterclause**||筛选子句。|  
-|**join_unique_key**|**true**|联接位于唯一键上。|  
+|**join_unique_key**|true|联接位于唯一键上。|  
 ||**false**|联接没有位于唯一键上。|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot* 是一 **位**，默认值为 **0**。  
@@ -85,7 +85,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_changemergefilter** 用于合并复制。  
   
- 更改对合并项目的筛选需要重新创建快照（如果存在快照）。 这是通过将** \@ force_invalidate_snapshot**设置为**1**来执行的。 而且，如果该项目有订阅，则需要重新初始化订阅。 这是通过将** \@ force_reinit_subscription**设置为**1**来完成的。  
+ 更改对合并项目的筛选需要重新创建快照（如果存在快照）。 这是通过将 **\@ force_invalidate_snapshot** 设置为 **1** 来执行的。 而且，如果该项目有订阅，则需要重新初始化订阅。 这是通过将 **\@ force_reinit_subscription** 设置为 **1** 来完成的。  
   
  若要使用逻辑记录，发布和项目必须满足许多要求。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   

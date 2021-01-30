@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - server_audit_specification_details
 - sys.server_audit_specification_details_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 714a6804a75342b732d88bd0442997fc8be362f1
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4644b002d02ec55684201c8d9774dc12b2e15525
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097938"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159053"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "98097938"
 |server_specification_id|**int**|审核服务器规范的 ID|  
 |audit_action_id|**int**|审核操作的 ID|  
 |audit_action_name|**sysname**|组名称或审核操作名称|  
-|class|**tinyint**|保留|  
-|class_desc|**nvarchar(60)**|保留|  
-|major_id|**int**|保留|  
-|minor_id|**int**|保留|  
-|audited_principal_id|**int**|保留|  
+|class|**tinyint**|预留|  
+|class_desc|**nvarchar(60)**|预留|  
+|major_id|**int**|预留|  
+|minor_id|**int**|预留|  
+|audited_principal_id|**int**|预留|  
 |audited_result|**nvarchar(60)**|审核结果：<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|审核对象是否为组：<br /><br /> 0 - 不是组<br /><br /> 1 - 组|  
   

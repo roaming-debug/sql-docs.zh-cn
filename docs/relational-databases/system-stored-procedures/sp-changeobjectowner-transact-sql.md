@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changeobjectowner_TSQL
 - sp_changeobjectowner
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e96c93be7b21deb0966e0a48f5fde3258501ac6c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 482fcbdb2d7c1b79eb0a8b5ed88d1295785b994b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464419"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159831"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @objname = ] 'object'` 当前数据库中现有的表、视图、用户定义函数或存储过程的名称。 *对象* 是一个 **nvarchar (776) **，无默认值。 *对象*可以用现有对象的所有者限定，格式为_existing_owner_**。** 如果架构及其所有者具有相同的名称，则为_对象_。  
+`[ @objname = ] 'object'` 当前数据库中现有的表、视图、用户定义函数或存储过程的名称。 *对象* 是一个 **nvarchar (776)**，无默认值。 *对象* 可以用现有对象的所有者限定，格式为 _existing_owner_**。** 如果架构及其所有者具有相同的名称，则为 _对象_。  
   
 `[ @newowner = ] 'owner_ '` 将成为对象的新所有者的安全帐户的名称。 *所有者* 为 **sysname**，无默认值。 *所有者* 必须是有权访问当前数据库的有效数据库用户、服务器角色、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] windows 登录名或 windows 组。 如果新所有者是没有对应数据库级主体的 Windows 用户或 Windows 组，则将创建数据库用户。  
   
@@ -54,7 +54,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_changeobjectowner** 从对象中删除所有现有权限。 在运行 **sp_changeobjectowner**后，您必须重新应用想要保留的任何权限。 因此，建议您在运行 **sp_changeobjectowner**之前编写现有权限的脚本。 更改了对象的所有权之后，便可使用该脚本重新应用权限。 在运行该脚本之前必须在权限脚本中修改对象所有者。  
+ **sp_changeobjectowner** 从对象中删除所有现有权限。 在运行 **sp_changeobjectowner** 后，您必须重新应用想要保留的任何权限。 因此，建议您在运行 **sp_changeobjectowner** 之前编写现有权限的脚本。 更改了对象的所有权之后，便可使用该脚本重新应用权限。 在运行该脚本之前必须在权限脚本中修改对象所有者。  
   
  若要更改安全对象的所有者，请使用 ALTER AUTHORIZATION. 若要更改架构，请使用 ALTER SCHEMA。  
   

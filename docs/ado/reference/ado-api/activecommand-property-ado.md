@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::ActiveCommand
@@ -16,27 +16,27 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df737543e8cc09735c7da413b89406b6f2385079
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0a8d8dab4944cfa2d43bc571442e294699154f12
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977148"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159270"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 属性 (ADO)
 指示创建关联[记录集](./recordset-object-ado.md)对象的[命令](./command-object-ado.md)对象。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个包含**命令**对象的**变量**。 默认值为 null 对象引用。  
+ 返回一个包含 **命令** 对象的 **变量**。 默认值为 null 对象引用。  
   
-## <a name="remarks"></a>注解  
- **ActiveCommand**属性是只读的。  
+## <a name="remarks"></a>备注  
+ **ActiveCommand** 属性是只读的。  
   
  如果未使用 **命令** 对象创建当前 **记录集**，则返回 **Null** 对象引用。  
   
- 当只给定生成的**记录集**对象时，使用此属性可查找关联的**命令**对象。  
+ 当只给定生成的 **记录集** 对象时，使用此属性可查找关联的 **命令** 对象。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  

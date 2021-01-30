@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergesubscription_TSQL
 - sp_changemergesubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1df7bd62aa2cecb23096121630eb0d89ce21dc8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83211e61ad8b6e241f46b1af0ba32266c9f673dd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536643"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159820"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,13 +47,13 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscriber = ] 'subscriber'` 订阅服务器的名称。 *订阅服务器* 的值为 **sysname**，默认值为 NULL。  
   
-`[ @subscriber_db = ] 'subscriber_db'` 订阅数据库的名称。 *subscriber_db*的默认值为 **sysname**，默认值为 NULL。  
+`[ @subscriber_db = ] 'subscriber_db'` 订阅数据库的名称。 *subscriber_db* 的默认值为 **sysname**，默认值为 NULL。  
   
 `[ @property = ] 'property'` 给定发布的要更改的属性。 *属性* 为 **sysname**，可以是表中的值之一。  
   
-`[ @value = ] 'value'` 指定的 *属性*的新值。 *值* 为 **nvarchar (255) **，可以是表中的值之一。  
+`[ @value = ] 'value'` 指定的 *属性* 的新值。 *值* 为 **nvarchar (255)**，可以是表中的值之一。  
   
-|属性|值|说明|  
+|properties|值|说明|  
 |--------------|-----------|-----------------|  
 |description||对该合并订阅的说明。|  
 |**priority**||子订阅的优先级。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。|  
@@ -69,7 +69,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**subscriber_password**||提供的订阅服务器登录的强密码。|  
 |**sync_type**|**自动**|已发布表的架构和初始数据将首先传输到订阅服务器。|  
 ||**无**|订阅服务器已经具有已发布表的架构和初始数据；将始终传输系统表和数据。|  
-|**use_interactive_resolver**|**true**|允许交互式地解决所有允许交互式解决的项目的冲突。|  
+|**use_interactive_resolver**|true|允许交互式地解决所有允许交互式解决的项目的冲突。|  
 ||**false**|使用默认解决程序或自定义解决程序自动解决冲突。|  
 |NULL（默认值）|NULL（默认值）||  
   

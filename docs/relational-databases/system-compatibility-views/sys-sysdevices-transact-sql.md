@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysdevices
 - sysdevices_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 0d672ec8b722322ff47841530e419e09ca7e2874
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 07b3d4b93bb6351e000d64a9f7aeda0baf1ea90a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099108"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158556"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "98099108"
 |name|**sysname**|备份文件或数据库文件的逻辑名称。|  
 |**大小**|**int**|以两千字节 (KB) 页为单位的文件大小。|  
 |**低级**|**int**|维护该列只是为了向后兼容。|  
-|**high**|**int**|维护该列只是为了向后兼容。|  
+|**严重**|**int**|维护该列只是为了向后兼容。|  
 |**status**|**smallint**|指示设备类型的位图：<br /><br /> 1 = 默认磁盘<br /><br /> 2 = 物理磁盘<br /><br /> 4 = 逻辑磁盘<br /><br /> 8 = 跳过标头<br /><br /> 16 = 备份文件<br /><br /> 32 = 串行写<br /><br /> 4096 = 只读|  
 |**cntrltype**|**smallint**|控制器类型：<br /><br /> 0 = 非 CD-ROM 数据库文件<br /><br /> 2 = 磁盘备份文件<br /><br /> 3 - 4 = 软盘备份文件<br /><br /> 5 = 磁带备份文件<br /><br /> 6 = 命名管道文件|  
 |**phyname**|**nvarchar(260)**|物理文件的名称。|  

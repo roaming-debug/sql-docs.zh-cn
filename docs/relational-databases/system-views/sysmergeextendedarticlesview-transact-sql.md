@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmergeextendedarticlesview
 - sysmergeextendedarticlesview_TSQL
@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f5f400a8e08d242427ca5101461ccb9dacd58310
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fbbf21526feee6e3340ad06e51bb2b5d7010d5bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485442"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160310"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Sysmergeextendedarticlesview**视图将公开项目信息。 此视图存储在发布服务器的发布数据库以及订阅服务器的订阅数据库中。  
+  **Sysmergeextendedarticlesview** 视图将公开项目信息。 此视图存储在发布服务器的发布数据库以及订阅服务器的订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|项目的名称。|  
-|type|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 仅处理器架构。<br /><br /> **64** = 仅查看架构或仅索引视图架构。<br /><br /> **128** = 仅函数架构。<br /><br /> **160** = 仅限同义词架构。|  
+|type |**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 仅处理器架构。<br /><br /> **64** = 仅查看架构或仅索引视图架构。<br /><br /> **128** = 仅函数架构。<br /><br /> **160** = 仅限同义词架构。|  
 |**objid**|**int**|发布服务器对象的标识符。|  
 |**sync_objid**|**int**|表示同步数据集的视图标识符。|  
 |**view_type**|**tinyint**|视图类型：<br /><br /> **0** = 不是视图;使用所有基对象。<br /><br /> **1** = 永久视图。<br /><br /> **2** = 临时视图。|  
@@ -48,11 +48,11 @@ ms.locfileid: "88485442"
 |**creation_script**|**nvarchar(255)**|此项目的创建脚本。|  
 |**conflict_script**|**nvarchar(255)**|此项目的冲突脚本。|  
 |**article_resolver**|**nvarchar(255)**|此项目的自定义行级冲突解决程序。|  
-|**ins_conflict_proc**|**sysname**|用于将冲突写入 **conflict_table**的过程。|  
+|**ins_conflict_proc**|**sysname**|用于将冲突写入 **conflict_table** 的过程。|  
 |**insert_proc**|**sysname**|由默认冲突解决程序用来在同步过程中插入行的过程。|  
 |**update_proc**|**sysname**|由默认冲突解决程序用来在同步过程中更新行的过程。|  
 |**select_proc**|**sysname**|自动生成的存储过程的名称，合并代理使用该存储过程来完成锁定并查找项目的行和列。|  
-|**schema_option**|**二进制 (8) **|有关 *schema_option*的支持值，请参阅 [sp_addmergearticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
+|**schema_option**|**二进制 (8)**|有关 *schema_option* 的支持值，请参阅 [sp_addmergearticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 |**destination_object**|**sysname**|在订阅服务器上创建的表的名称。|  
 |**resolver_clsid**|**nvarchar(50)**|自定义冲突解决程序的 ID。|  
 |**subset_filterclause**|**nvarchar(1000)**|此项目的筛选子句。|  
@@ -60,7 +60,7 @@ ms.locfileid: "88485442"
 |**missing_cols**|**varbinary(128)**|缺少的列的位图。|  
 |**表列**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resolver_info**|**nvarchar(255)**|存储，了解自定义冲突解决程序所需的其他信息。|  
-|**view_sel_proc**|**nvarchar (290) **|存储过程的名称，合并代理使用此存储过程初始填充动态筛选发布中的项目，并且枚举在任何筛选发布中的更改的行。|  
+|**view_sel_proc**|**nvarchar (290)**|存储过程的名称，合并代理使用此存储过程初始填充动态筛选发布中的项目，并且枚举在任何筛选发布中的更改的行。|  
 |**gen_cur**|**int**|对项目基表所做的本地更改的生成数。|  
 |**excluded_cols**|**varbinary(128)**|当项目发送到订阅服务器时，从项目中排除的列的位图。|  
 |**excluded_col_count**|**int**|排除的列数。|  
@@ -68,7 +68,7 @@ ms.locfileid: "88485442"
 |**identity_support**|**int**|指定是否启用自动标识范围处理。 **1** 表示启用标识范围处理， **0** 表示没有标识范围支持。|  
 |**destination_owner**|**sysname**|目标对象的所有者的名称。|  
 |**before_image_objid**|**int**|跟踪表对象 ID。 如果将发布配置为启用分区更改优化，则跟踪表将包含某些键列值。|  
-|**before_view_objid**|**int**|视图表的对象 ID。 视图所在的表用于在删除或更新行之前跟踪行是否属于特定的订阅服务器。 仅当使用* \@ keep_partition_changes*true 创建发布时才适用  =  **true**。|  
+|**before_view_objid**|**int**|视图表的对象 ID。 视图所在的表用于在删除或更新行之前跟踪行是否属于特定的订阅服务器。 仅当使用 *\@ keep_partition_changes* true 创建发布时才适用  =  。|  
 |**verify_resolver_signature**|**int**|指定在合并复制中使用冲突解决程序之前是否验证数字签名：<br /><br /> **0** = 不验证签名。<br /><br /> **1** = 验证签名是否来自受信任的源。|  
 |**allow_interactive_resolver**|**bit**|指定是否对项目启用交互式冲突解决程序。 **1** 指定对项目使用交互式冲突解决程序。|  
 |**fast_multicol_updateproc**|**bit**|指定是否已启用合并代理来使用一条 UPDATE 语句在同一行的多个列中应用更改。<br /><br /> **0** = 对每个更改的列发出单独的更新。<br /><br /> **1** = 对 UPDATE 语句发出，导致在一个语句中对多个列进行更新。|  
@@ -93,7 +93,7 @@ ms.locfileid: "88485442"
  [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Transact-sql&#41;&#40;复制视图 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [sysmergearticles &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)  
   

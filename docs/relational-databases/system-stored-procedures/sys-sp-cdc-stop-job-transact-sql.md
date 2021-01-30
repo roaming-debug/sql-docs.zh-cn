@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_stop_job (Transact-SQL)
-title: sys. sp_cdc_stop_job (Transact-sql) |Microsoft Docs
+title: sys.sp_cdc_stop_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_stop_job_TSQL
 - sys.sp_cdc_stop_job
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b82d231a4633c2aa3ed7b45833009c8a2bc43a5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c2a738af88e947528f4c8d2cadf871db7cd8334a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526133"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159752"
 ---
 # <a name="syssp_cdc_stop_job-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ [ @job_type = ] 'job_type_' ]` 要添加的作业的类型。 *job_type* 为 **nvarchar (20) ** ，默认值为 **capture**。 有效的输入包括 " **捕获** " 和 " **清理**"。  
+`[ [ @job_type = ] 'job_type_' ]` 要添加的作业的类型。 *job_type* 为 **nvarchar (20)** ，默认值为 **capture**。 有效的输入包括 " **捕获** " 和 " **清理**"。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -67,7 +67,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys. sp_cdc_start_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
+ [dbo.cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_start_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
   
   

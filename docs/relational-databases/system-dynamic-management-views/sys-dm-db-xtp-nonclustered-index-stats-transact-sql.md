@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_db_xtp_nonclustered_index_stats_TSQL
 - dm_db_xtp_nonclustered_index_stats
@@ -21,12 +21,12 @@ ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c093479ffad2ea852d9af0806f0e78ac907773a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e61722861043fd34309d3dbfdf0430537b1f5230
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099865"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160115"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "98099865"
   
  有关内存优化的非聚集索引的详细信息，请参阅 page 17 [In-Memory OLTP 内部概述 SQL Server](https://t.co/T6zToWc6y6)。  
   
-|列名称|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|对象的 ID。|  
 |xtp_object_id|**bigint**|内存优化表的 ID。|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e51d82e8acd59c8b4e6f5a8385720b0bd38eba4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54632816fb7013639e1cdb761fbc8df53c461a0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449029"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158585"
 ---
 # <a name="c-to-sql-timestamp"></a>从 C 到 SQL：时间戳
 Timestamp ODBC C 数据类型的标识符是：  
@@ -41,6 +41,6 @@ Timestamp ODBC C 数据类型的标识符是：
   
  有关 SQL_C_TIMESTAMP 结构中的有效值的信息，请参阅本附录前面的 [C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
   
- 当时间戳 C 数据转换为字符 SQL 数据时，生成的字符数据在 "*yyyy* - *mm* - *dd* *hh*：*mm*：*ss*[.*f ...*] "形式.  
+ 当时间戳 C 数据转换为字符 SQL 数据时，生成的字符数据在 "*yyyy* - *mm* - *dd* *hh*：*mm*：*ss*[.*f ...*] "格式。  
   
- 驱动程序在从 timestamp C 数据类型转换数据时忽略长度/指示器值，并假定数据缓冲区的大小为时间戳 C 数据类型的大小。 长度/指示器值传入**SQLPutData**中的*StrLen_or_Ind*参数和在**SQLBindParameter**中通过*StrLen_or_IndPtr*参数指定的缓冲区中。 数据缓冲区是通过**SQLPutData**中的*DataPtr*参数和**SQLBindParameter**中的*ParameterValuePtr*参数指定的。
+ 驱动程序在从 timestamp C 数据类型转换数据时忽略长度/指示器值，并假定数据缓冲区的大小为时间戳 C 数据类型的大小。 长度/指示器值传入 **SQLPutData** 中的 *StrLen_or_Ind* 参数和在 **SQLBindParameter** 中通过 *StrLen_or_IndPtr* 参数指定的缓冲区中。 数据缓冲区是通过 **SQLPutData** 中的 *DataPtr* 参数和 **SQLBindParameter** 中的 *ParameterValuePtr* 参数指定的。

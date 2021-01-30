@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helptext
 - sp_helptext_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6d2fbb2311392ee046b4aad84705b8ccd91a48c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 04b88a881f2622b1bccfff675978b1d50a87fb51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468368"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158948"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97468368"
 sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @objname = ] 'name'` 用户定义的架构范围内对象的限定名称或非限定名称。 仅当指定限定对象时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 对象必须在当前数据库中。 *name* 为 **nvarchar (776)**，无默认值。  
   
 `[ @columnname = ] 'computed_column_name'` 要显示其定义信息的计算列的名称。 必须将包含列的表指定为 *name*。 *column_name* **sysname**，无默认值。  
@@ -52,7 +52,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**文本**|**nvarchar(255)**|对象定义|  
+|**Text**|**nvarchar(255)**|对象定义|  
   
 ## <a name="remarks"></a>备注  
  sp_helptext 显示用于在多行中创建对象的定义。 每行包含 255 个字符的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。 定义位于 " [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录" 视图中的 "**定义**" 列中。  

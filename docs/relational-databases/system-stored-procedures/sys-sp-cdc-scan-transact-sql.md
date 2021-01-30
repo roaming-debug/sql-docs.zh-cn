@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_scan (Transact-SQL)
-title: sys. sp_cdc_scan (Transact-sql) |Microsoft Docs
+title: sys.sp_cdc_scan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_scan_TSQL
 - sp_cdc_scan
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e73993a2f5d1a9d8635a55cb476a56fb6914390
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b839f65e6361c88cb842e5d18de9173db8c3727f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551140"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159767"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
   
 `[ @maxscans = ] max_scans` 为了从日志中提取所有行而要执行的扫描周期的最大数目。 *max_scans* 的 **整数为 int** ，默认值为10。  
   
-`[ @continuous = ] continuous`指示存储过程是否应在执行单个扫描循环之后结束 (0) 或连续运行，polling_interval 在将扫描周期 reexecuting (1) 之前，暂停*polling_interval*指定的时间。 *连续* 为 **tinyint** ，默认值为0。  
+`[ @continuous = ] continuous`指示存储过程是否应在执行单个扫描循环之后结束 (0) 或连续运行，polling_interval 在将扫描周期 reexecuting (1) 之前，暂停指定的时间。 *连续* 为 **tinyint** ，默认值为0。  
   
 `[ @pollinginterval = ] polling_interval` 日志扫描循环之间的秒数。 *polling_interval* 为 **bigint** ，默认值为0。  
   
@@ -66,6 +66,6 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
 ## <a name="see-also"></a>另请参阅  
- [cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [dbo.cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

@@ -6,7 +6,7 @@ ms.date: 10/20/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_exec_plan_attributes_TSQL
 - dm_exec_plan_attributes_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 7fa0b60cc1c172ea8777286fda425c7714d6b363
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: da9707021bf11d2417b48f95c07da85f6e668897
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096588"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159880"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,12 +48,12 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |attribute|**varchar(128)**|与此计划关联的属性的名称。 紧靠此的下表列出了可能的属性、数据类型及其说明。|  
-|值|**sql_variant**|与此计划关联的属性的值。|  
+|value|**sql_variant**|与此计划关联的属性的值。|  
 |is_cache_key|**bit**|指示此属性是否用作计划的缓存查找密钥的一部分。|  
 
 在上表中， **属性** 可具有以下值：
 
-|属性|数据类型|说明|  
+|Attribute|数据类型|说明|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指示编译计划所使用的选项值。|  
 |objectid|**int**|用于在缓存中查找对象的主键之一。 这是存储在数据库对象的 [sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 对象中的对象 ID (过程、视图、触发器等) 上。 对于类型为“即席”或“已准备好”的计划，它是批处理文本的内部哈希。|  
@@ -114,7 +114,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |UPON<br /><br /> 指示编译计划时数据库选项 PARAMETERIZATION 设置为 FORCED。|131072|  
 |ROWCOUNT|**适用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 自 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
-## <a name="cursors"></a>光标  
+## <a name="cursors"></a>游标  
  不活动游标缓存在编译的计划中，以便游标的并发用户可以重用存储游标所使用的内存。 例如，假设某批处理声明并使用了一个游标，但未释放该游标。 如果有两个用户执行同一个批处理，将有两个活动游标。 游标释放（可能在不同批处理中）后，用于存储该游标的内存就会缓存但不释放。 此不活动游标列表保存在编译的计划中。 下次用户执行该批处理时，缓存的游标内存将重用并相应地初始化为活动游标。  
   
 ### <a name="evaluating-cursor-options"></a>计算游标选项  

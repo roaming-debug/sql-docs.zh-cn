@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistributiondb_TSQL
 - sp_changedistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 35a090a0dc82f09ccceb1a4d56c09f8ab9d8191f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 958b76e23e52a6f36d54acf9d596cec92aadefba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536708"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159016"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|最小分发保持期。|  
 |NULL（默认值）|将打印所有可用的 *属性* 值。|  
   
-`[ @value = ] 'value'` 指定的属性的新值。 *值* 为 **nvarchar (255) **，默认值为 NULL。  
+`[ @value = ] 'value'` 指定的属性的新值。 *值* 为 **nvarchar (255)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -63,7 +63,7 @@ sp_changedistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_changedistributiondb**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_changedistributiondb** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

@@ -7,24 +7,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07adcbb100fa28a941be4fdac6efabb445ffb9ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d611fb753034a7cde370f87700aa8b8c3db2e11
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456560"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159076"
 ---
 # <a name="sql-minimum-grammar"></a>SQL 最低语法
 本部分介绍 ODBC 驱动程序必须支持的最小 SQL 语法。 本部分中描述的语法是 SQL-92 的入门级语法的子集。  
   
- 应用程序可以使用本节中的任意语法，确保任何符合 ODBC 标准的驱动程序都支持该语法。 若要确定是否支持此部分中未包含的 SQL-92 的其他功能，应用程序应调用 SQLGetInfo 信息类型 SQL_SQL_CONFORMANCE 为的**SQLGetInfo** 。 即使驱动程序不符合任何 SQL-92 一致性级别，应用程序仍可以使用本节中所述的语法。 另一方面，如果驱动程序符合 SQL-92 级别，则它支持包含在该级别中的所有语法。 这包括此部分中的语法，因为此处所述的最小语法是最低 SQL-92 一致性级别的纯子集。 应用程序了解支持的 SQL-92 级别后，可以通过使用与该功能对应的单个信息类型调用 **SQLGetInfo** ，来确定是否支持较高级别的功能)  (。  
+ 应用程序可以使用本节中的任意语法，确保任何符合 ODBC 标准的驱动程序都支持该语法。 若要确定是否支持此部分中未包含的 SQL-92 的其他功能，应用程序应调用 SQLGetInfo 信息类型 SQL_SQL_CONFORMANCE 为的 。 即使驱动程序不符合任何 SQL-92 一致性级别，应用程序仍可以使用本节中所述的语法。 另一方面，如果驱动程序符合 SQL-92 级别，则它支持包含在该级别中的所有语法。 这包括此部分中的语法，因为此处所述的最小语法是最低 SQL-92 一致性级别的纯子集。 应用程序了解支持的 SQL-92 级别后，可以通过使用与该功能对应的单个信息类型调用 **SQLGetInfo** ，来确定是否支持较高级别的功能)  (。  
   
  仅适用于只读数据源的驱动程序可能不支持本部分中包含的用于处理更改数据的语法部分。 应用程序可以通过使用 SQL_DATA_SOURCE_READ_ONLY 信息类型调用 **SQLGetInfo** 来确定数据源是否为只读。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "88456560"
   (*列标识符数据类型* [*，列标识符数据类型*] ... )   
   
 > [!IMPORTANT]  
->  作为*create table 语句*中的*数据类型*，应用程序必须使用**SQLGetTypeInfo**返回的结果集的 TYPE_NAME 列中的数据类型。  
+>  作为 *create table 语句* 中的 *数据类型*，应用程序必须使用 **SQLGetTypeInfo** 返回的结果集的 TYPE_NAME 列中的数据类型。  
   
  *delete-已搜索语句* ：： =  
   

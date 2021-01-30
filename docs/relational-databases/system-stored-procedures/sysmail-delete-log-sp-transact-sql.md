@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_log_sp_TSQL
 - sysmail_delete_log_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7cc01563da03abda4ea8eef8b639ba5704549f55
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f3921d220f367d15849eab080369db986d8f53e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538431"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160022"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ## <a name="arguments"></a>参数  
 `[ @logged_before = ] 'logged_before'` 删除 *logged_before* 参数指定的日期和时间之前的条目。 *logged_before* 为 **datetime** ，默认值为 NULL。 NULL 指示所有日期。  
   
-`[ @event_type = ] 'event_type'` 删除指定为 *event_type*的类型的日志项。 *event_type* 是 **varchar (15) ** ，无默认值。 有效条目为 " **成功**"、" **警告**"、" **错误**" 和 " **信息**"。 NULL 指示所有事件类型。  
+`[ @event_type = ] 'event_type'` 删除指定为 *event_type* 的类型的日志项。 *event_type* 是 **varchar (15)** ，无默认值。 有效条目为 " **成功**"、" **警告**"、" **错误**" 和 " **信息**"。 NULL 指示所有事件类型。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

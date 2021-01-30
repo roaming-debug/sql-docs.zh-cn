@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - positioned deletes [ODBC]
 - ODBC cursor library [ODBC], statement processing
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f11e5acd8afe46397126ddb4c1d4127eb99fc67a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2d7283524a516b81b6489b543fd3169f7f9aeb4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483200"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159539"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>处理定位更新和删除语句
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ ms.locfileid: "88483200"
   
 -   定位的 update 和 delete 语句仅在以下情况下可用：当 **SELECT** 语句生成结果集时;如果 **SELECT** 语句不包含联接、 **联合** 子句或 **GROUP by** 子句，则为;在选择列表中使用别名或表达式的任何列均未绑定到 **SQLBindCol**。  
   
--   如果应用程序准备定位的 update 或 delete 语句，则必须在调用 **SQLFetch** 或 **SQLFetchScroll**后执行此操作。 尽管游标库将该语句提交给驱动程序以准备准备，但它会关闭该语句，并在应用程序调用 **SQLExecute**时直接执行该语句。  
+-   如果应用程序准备定位的 update 或 delete 语句，则必须在调用 **SQLFetch** 或 **SQLFetchScroll** 后执行此操作。 尽管游标库将该语句提交给驱动程序以准备准备，但它会关闭该语句，并在应用程序调用 **SQLExecute** 时直接执行该语句。  
   
 -   如果驱动程序仅支持一个活动语句，则游标库将提取结果集的其余部分，然后在执行定位的 update 或 delete 语句之前从其缓存中 refetches 当前行集。 如果应用程序随后调用在结果集中返回元数据的函数 (例如， **SQLNumResultCols** 或 **SQLDescribeCol**) ，则游标库将返回错误。  
   

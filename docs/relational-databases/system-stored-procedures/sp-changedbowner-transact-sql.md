@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedbowner
 - sp_changedbowner_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc4f29dba1a922b5adae32e0fc42cf714afc292f
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: c11630e73b50eae7c1f972ac7bff1e6d809a464f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753479"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159023"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +45,10 @@ sp_changedbowner [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>参数  
  [ @loginame =] "*login*"  
- 当前数据库的新所有者的登录 ID。 *login* 的 **sysname**为，无默认值。 *登录名* 必须是现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户。 如果用户已通过数据库内现有的用户安全帐户访问了数据库，则该*登录名*不能成为当前数据库的所有者。 为了避免发生上述情况，请首先删除当前数据库内的用户。  
+ 当前数据库的新所有者的登录 ID。 *login* 的 **sysname** 为，无默认值。 *登录名* 必须是现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户。 如果用户已通过数据库内现有的用户安全帐户访问了数据库，则该 *登录名* 不能成为当前数据库的所有者。 为了避免发生上述情况，请首先删除当前数据库内的用户。  
   
  [ @map =] *remap_alias_flag*  
- *Remap_alias_flag*参数已弃用，因为已从中删除登录别名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用 *remap_alias_flag* 参数不会导致错误，但不会产生任何影响。  
+ *Remap_alias_flag* 参数已弃用，因为已从中删除登录别名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用 *remap_alias_flag* 参数不会导致错误，但不会产生任何影响。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
