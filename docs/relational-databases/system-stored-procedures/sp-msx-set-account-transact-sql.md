@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_set_account
 - sp_msx_set_account_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f9329879f37ee8508f45f4734a0968596348d5cd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 29a92920e81f65beabdc0837b85d19484d2e35f0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535057"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192009"
 ---
 # <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
  所指定的凭据必须是现有凭据。 有关创建凭据的详细信息，请参阅 [CREATE credential &#40;transact-sql&#41;](../../t-sql/statements/create-credential-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
- **Sp_msx_set_account**默认授予**sysadmin**固定服务器角色成员的权限。  
+ **Sp_msx_set_account** 默认授予 **sysadmin** 固定服务器角色成员的权限。  
   
 ## <a name="examples"></a>示例  
  以下是设置该服务器，以使用凭据 `MsxAccount` 登录到主服务器的示例。  

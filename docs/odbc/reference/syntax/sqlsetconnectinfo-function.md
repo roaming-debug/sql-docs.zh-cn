@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetConnectInfo function [ODBC]
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ee3480678d228e26b16cc99e7df8955d45ade9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1930d16605c1b2a02db08560549019afa656ca52
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499542"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192426"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo 函数
 **度**  
@@ -67,12 +67,12 @@ SQLRETURN  SQLSetConnectInfo(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 与[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)输入验证错误相同，不同之处在于，驱动程序管理器将使用的**HandleType** SQL_HANDLE_DBC_INFO_TOKEN 和*hDbcInfoToken*的**句柄**。  
+ 与 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)输入验证错误相同，不同之处在于，驱动程序管理器将使用的 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN 和 *hDbcInfoToken* 的 **句柄**。  
   
 ## <a name="remarks"></a>备注  
  每当驱动程序返回 SQL_ERROR 或 SQL_INVALID_HANDLE 时，驱动程序管理器会将错误返回到应用程序 (的 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 或 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)) 。  
   
- 每当驱动程序返回 SQL_SUCCESS_WITH_INFO 时，驱动程序管理器都将从 *hDbcInfoToken*获取诊断信息，并将 SQL_SUCCESS_WITH_INFO 返回到 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 和 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)中的应用程序。  
+ 每当驱动程序返回 SQL_SUCCESS_WITH_INFO 时，驱动程序管理器都将从 *hDbcInfoToken* 获取诊断信息，并将 SQL_SUCCESS_WITH_INFO 返回到 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 和 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)中的应用程序。  
   
  应用程序不应直接调用此函数。 支持驱动程序感知连接池的 ODBC 驱动程序必须实现此功能。  
   
