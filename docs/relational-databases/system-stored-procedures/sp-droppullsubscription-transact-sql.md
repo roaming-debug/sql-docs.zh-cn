@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droppullsubscription
 - sp_droppullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4e7e0f9292d9ed94139b9facfe496821b91fb03
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 699d23141e060ee26f96043b44864621a84217c8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543434"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158111"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员或创建请求订阅的用户才能 **sp_droppullsubscription**执行。 只有创建请求订阅的用户属于此角色时， **db_owner** 固定数据库角色才能执行 **sp_droppullsubscription** 。  
+ 只有 **sysadmin** 固定服务器角色的成员或创建请求订阅的用户才能 **sp_droppullsubscription** 执行。 只有创建请求订阅的用户属于此角色时， **db_owner** 固定数据库角色才能执行 **sp_droppullsubscription** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)   

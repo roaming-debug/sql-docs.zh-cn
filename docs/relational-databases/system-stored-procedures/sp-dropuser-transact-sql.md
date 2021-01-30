@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropuser
 - sp_dropuser_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f44b851dc2d60899f27c8419dfdb557951043683
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ba5b9eb814f48003d93bf6d7b05c2b1c37c1ea76
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536149"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157143"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,9 +55,9 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  删除数据库用户时，将同时删除该用户的所有别名。 如果此用户拥有一个与用户同名的空架构，则此架构也将被删除。 如果用户在数据库中拥有其他任何安全对象，则不会删除该用户。 必须首先将对象的所有权转让给其他主体。 有关详细信息，请参阅 [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)。 删除数据库用户时，将自动删除与该用户相关联的权限，并且将该用户从其所属的所有数据库角色中删除。  
   
- **sp_dropuser**不能用于从**master**或**tempdb**数据库中删除数据库所有者 (**dbo**) **INFORMATION_SCHEMA**用户或**来宾**用户。 在非系统数据库中， `EXEC sp_dropuser 'guest'` 将撤消用户 **来宾**的 CONNECT 权限。 但不会删除用户本身。  
+ **sp_dropuser** 不能用于从 **master** 或 **tempdb** 数据库中删除数据库所有者 (**dbo**) **INFORMATION_SCHEMA** 用户或 **来宾** 用户。 在非系统数据库中， `EXEC sp_dropuser 'guest'` 将撤消用户 **来宾** 的 CONNECT 权限。 但不会删除用户本身。  
   
- 不能在用户定义的事务中执行**sp_dropuser** 。  
+ 不能在用户定义的事务中执行 **sp_dropuser** 。  
   
 ## <a name="permissions"></a>权限  
  需要对数据库具有 ALTER ANY USER 权限。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_maintenance_plan
 - sp_delete_maintenance_plan_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79f746fd1fccb81688b42994aa1d5fe57502261e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2fdb608b7d3e6887d809388ae28203d68bc09d14
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546173"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158117"
 ---
 # <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,13 +51,13 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 必须从**msdb**数据库运行**sp_delete_maintenance_plan** 。  
+ 必须从 **msdb** 数据库运行 **sp_delete_maintenance_plan** 。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_delete_maintenance_plan**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_delete_maintenance_plan** 执行。  
   
 ## <a name="examples"></a>示例  
- 删除使用 **sp_add_maintenance_plan**创建的维护计划。  
+ 删除使用 **sp_add_maintenance_plan** 创建的维护计划。  
   
 ```  
 EXECUTE sp_delete_maintenance_plan 'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC';  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_linkedservers
 - sp_linkedservers_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a998aa0bb5deab2b29b2133de95e0b3169602bb7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a376e29a988e64242fc06d0c550814f51d8ad1f6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546015"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99102948"
 ---
 # <a name="sp_linkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,11 +47,11 @@ sp_linkedservers
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|链接服务器的名称。|  
-|**SRV_PROVIDERNAME**|**nvarchar (** 128 **) **|OLE DB 访问接口的友好名称，该提供程序管理对指定链接服务器进行的访问。|  
-|**SRV_PRODUCT**|**nvarchar (** 128 **) **|链接服务器的产品名。|  
-|**SRV_DATASOURCE**|**nvarchar (** 4000 **) **|与指定链接服务器对应的 OLE DB 数据源属性。|  
-|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **) **|与链接服务器对应的 OLE DB 访问接口字符串属性。|  
-|**SRV_LOCATION**|**nvarchar (** 4000 **) **|与指定链接服务器对应的 OLE DB 位置属性。|  
+|**SRV_PROVIDERNAME**|**nvarchar (** 128 **)**|OLE DB 访问接口的友好名称，该提供程序管理对指定链接服务器进行的访问。|  
+|**SRV_PRODUCT**|**nvarchar (** 128 **)**|链接服务器的产品名。|  
+|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|与指定链接服务器对应的 OLE DB 数据源属性。|  
+|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|与链接服务器对应的 OLE DB 访问接口字符串属性。|  
+|**SRV_LOCATION**|**nvarchar (** 4000 **)**|与指定链接服务器对应的 OLE DB 位置属性。|  
 |**SRV_CAT**|**sysname**|与指定链接服务器对应的 OLE DB 目录属性。|  
   
 ## <a name="permissions"></a>权限  

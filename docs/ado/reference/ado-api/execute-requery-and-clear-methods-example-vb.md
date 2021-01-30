@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c98f60ad44be5a0348298a29f9e09033b5c68897
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: aa5a83c79deb2d9df42e81869476ae856bac322a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973428"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167423"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>执行、再次查询和清除方法示例 (VB) 
-此示例演示从[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的**Execute**方法。 它还使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法检索 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 方法清除 [错误](../../../ado/reference/ado-api/errors-collection-ado.md) 集合的内容。  (通过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性的**连接**对象来访问**Errors**集合。 ) 运行此过程需要 ExecuteCommand 和 PrintOutput 过程。  
+此示例演示从 [命令](../../../ado/reference/ado-api/command-object-ado.md)对象和 [连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的 **Execute** 方法。 它还使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法检索 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 方法清除 [错误](../../../ado/reference/ado-api/errors-collection-ado.md) 集合的内容。  (通过 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性的 **连接** 对象来访问 **Errors** 集合。 ) 运行此过程需要 ExecuteCommand 和 PrintOutput 过程。  
   
 ```  
 'BeginExecuteVB  

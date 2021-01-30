@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enum_proxy_for_subsystem_TSQL
 - sp_enum_proxy_for_subsystem
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: f484764e05a23594c32494934a9c366154e02aeb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bac523afb9f802e3f6feb8a23c47835c82bac807
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489414"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157073"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
@@ -44,13 +44,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @proxy_id = ] proxy_id` 要列出其信息的代理的标识号。 *Proxy_id*的值为**int**，默认值为 NULL。 可以指定 *id* 或 *proxy_name* 。  
+`[ @proxy_id = ] proxy_id` 要列出其信息的代理的标识号。 *Proxy_id* 的值为 **int**，默认值为 NULL。 可以指定 *id* 或 *proxy_name* 。  
   
-`[ @proxy_name = ] 'proxy_name'` 要列出其信息的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。 可以指定 *id* 或 *proxy_name* 。  
+`[ @proxy_name = ] 'proxy_name'` 要列出其信息的代理的名称。 *Proxy_name* 的值为 **sysname**，默认值为 NULL。 可以指定 *id* 或 *proxy_name* 。  
   
-`[ @subsystem_id = ] subsystem_id` 要列出其信息的子系统的标识号。 *Subsystem_id*的值为**int**，默认值为 NULL。 可以指定 *subsystem_id* 或 *subsystem_name* 。  
+`[ @subsystem_id = ] subsystem_id` 要列出其信息的子系统的标识号。 *Subsystem_id* 的值为 **int**，默认值为 NULL。 可以指定 *subsystem_id* 或 *subsystem_name* 。  
   
-`[ @subsystem_name = ] 'subsystem_name'` 要列出其信息的子系统的名称。 *Subsystem_name*的值为**sysname**，默认值为 NULL。 可以指定 *subsystem_id* 或 *subsystem_name* 。  
+`[ @subsystem_name = ] 'subsystem_name'` 要列出其信息的子系统的名称。 *Subsystem_name* 的值为 **sysname**，默认值为 NULL。 可以指定 *subsystem_id* 或 *subsystem_name* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -72,7 +72,7 @@ sp_enum_proxy_for_subsystem
   
  当同时提供代理信息和子系统信息时，如果指定的代理有权访问指定的子系统，则结果集将返回一行。  
   
- 此存储过程位于 **msdb**中。  
+ 此存储过程位于 **msdb** 中。  
   
 ## <a name="permissions"></a>权限  
  此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  

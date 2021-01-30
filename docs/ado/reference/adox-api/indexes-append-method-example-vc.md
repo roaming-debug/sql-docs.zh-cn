@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0434184d77b8b9bb64ab3e87eafaed66b0acf424
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9b1f8c85d939681e497d9f9286ea8e90863201dc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984218"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164215"
 ---
 # <a name="indexes-append-method-example-vc"></a>索引 Append 方法示例 (VC++)
 下面的代码演示如何创建新的索引。 索引在表中的两列上。  

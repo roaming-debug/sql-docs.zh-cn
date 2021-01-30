@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - EventReasonEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b676ee2b8585f2bab467cc9f09580721d06fab0c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 53076cb3787e334955a727bf33502c80d289aac4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973568"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167433"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 指定导致事件发生的原因。  
@@ -32,11 +32,11 @@ ms.locfileid: "88973568"
 |**adRsnClose**|9|操作关闭了 **记录集**。|  
 |**adRsnDelete**|2|操作删除了记录。|  
 |**adRsnFirstChange**|11|操作对记录进行第一次更改。|  
-|**adRsnMove**|10|操作在记录 **集中**移动记录指针。|  
-|**adRsnMoveFirst**|12|操作将记录指针移动到记录 **集中**的第一条记录。|  
-|**adRsnMoveLast**|15|操作将记录指针移动到记录 **集中**的最后一条记录。|  
-|**adRsnMoveNext**|13|操作将记录指针移动到记录 **集中**的下一条记录。|  
-|**adRsnMovePrevious**|14|操作将记录指针移动到记录 **集中**的上一个记录。|  
+|**adRsnMove**|10|操作在记录 **集中** 移动记录指针。|  
+|**adRsnMoveFirst**|12|操作将记录指针移动到记录 **集中** 的第一条记录。|  
+|**adRsnMoveLast**|15|操作将记录指针移动到记录 **集中** 的最后一条记录。|  
+|**adRsnMoveNext**|13|操作将记录指针移动到记录 **集中** 的下一条记录。|  
+|**adRsnMovePrevious**|14|操作将记录指针移动到记录 **集中** 的上一个记录。|  
 |**adRsnRequery**|7|操作将重新查询 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
 |**adRsnResynch**|8|操作将 **记录集** 与数据库重新同步。|  
 |**adRsnUndoAddNew**|5|操作反转了新记录的添加。|  
@@ -65,7 +65,7 @@ ms.locfileid: "88973568"
 |AdoEnums.EventReason.UNDOUPDATE|  
 |AdoEnums. EventReason. UPDATE|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 015179970822398d1c3a08735ff9d68af138b7fa
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 722c671c25edbc3246c4433acc95cf3e3827f99e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983788"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164136"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>参数集合、Command 属性示例 (VC++)
 下面的代码演示如何将 [command](./command-property-adox.md) 属性与 [command](../ado-api/command-object-ado.md) 对象结合使用来检索过程的参数信息。  

@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fc6ae552bc4e6e8bd681aa3d47ffadeaf81fd0a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466419"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99153513"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL 命令
 检索一个或多个表中的数据。  
@@ -46,7 +46,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 ## <a name="arguments"></a>参数  
   
 > [!NOTE]  
->  在下面的参数中，引用的 *子查询*是 select 内的 select，必须用括号括起来。 在同一级别最多可以有两个不嵌套) 在 WHERE 子句中的子查询 (。  (参见参数的部分。 ) 子查询可以包含多个联接条件。  
+>  在下面的参数中，引用的 *子查询* 是 select 内的 select，必须用括号括起来。 在同一级别最多可以有两个不嵌套) 在 WHERE 子句中的子查询 (。  (参见参数的部分。 ) 子查询可以包含多个联接条件。  
   
  [ALL &#124; DISTINCT]  [*Alias*.] *Select_Item* [AS *Column_Name*] [，[*Alias*.] *Select_Item* [AS *Column_Name*] ...]  
  SELECT 子句指定查询结果中显示的字段、常量和表达式。  
@@ -102,7 +102,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *DatabaseName*！ 指定数据库的名称，而不是使用数据源指定的数据库的名称。 如果数据库未指定数据源，则必须包含该表的数据库名称。 将感叹号 (！ ) 分隔符添加到数据库名称之后、表名称之前。  
   
- *Local_Alias* 指定 *表*中名为的表的临时名称。 如果指定本地别名，则必须在整个 SELECT 语句中使用本地别名，而不是表名称。 本地别名不会影响 Visual FoxPro 环境。  
+ *Local_Alias* 指定 *表* 中名为的表的临时名称。 如果指定本地别名，则必须在整个 SELECT 语句中使用本地别名，而不是表名称。 本地别名不会影响 Visual FoxPro 环境。  
   
  WHERE *JoinCondition* [AND *JoinCondition* ...]   [AND &#124; 或 *FilterCondition* [AND &#124; or *FilterCondition* ]]  
  告诉视觉 FoxPro 仅在查询结果中包含某些记录。 从多个表中检索数据所需的位置。  
@@ -114,7 +114,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   如果在查询中包含两个表，但未指定联接条件，则只要满足筛选条件，则第一个表中的每个记录都将联接到第二个表中的每个记录。 这样的查询可能会产生冗长的结果。  
   
--   联接带有空字段的表时要格外小心，因为 Visual FoxPro 匹配空字段。 例如，如果你联接 CUSTOMER.ZIP 和 INVOICE.ZIP，并且客户包含100空邮政编码，而发票包含400空邮政编码，则查询输出包含从空字段产生的40000个额外记录。 使用 **空的 ( ) ** 函数可从查询输出中消除空记录。  
+-   联接带有空字段的表时要格外小心，因为 Visual FoxPro 匹配空字段。 例如，如果你联接 CUSTOMER.ZIP 和 INVOICE.ZIP，并且客户包含100空邮政编码，而发票包含400空邮政编码，则查询输出包含从空字段产生的40000个额外记录。 使用 **空的 ( )** 函数可从查询输出中消除空记录。  
   
 -   必须使用 AND 运算符来连接多个联接条件。 每个联接条件都具有以下形式：  
   
@@ -122,7 +122,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
      *FieldName1* 是来自一个表的字段的名称， *FieldName2* 是另一个表中的字段的名称，而 " *比较* " 是下表中所述的运算符之一。  
   
-|操作员|比较|  
+|运算符|比较|  
 |--------------|----------------|  
 |=|等于|  
 |==|完全相等|  
@@ -135,7 +135,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  将 = 运算符用于字符串时，它的行为方式不同，具体取决于 SET ANSI 的设置。 设置 ANSI 设置为 OFF 时，Visual FoxPro 以 Xbase 用户熟悉的方式处理字符串比较。 设置 ANSI 设置为 ON 时，Visual FoxPro 将遵循 ANSI 标准来比较字符串。 有关 Visual FoxPro 执行字符串比较的方式的详细信息，请参阅 [SET ANSI](../../odbc/microsoft/set-ansi-command.md) 和 [set EXACT](../../odbc/microsoft/set-exact-command.md) 。  
   
- *FilterCondition* 指定要在查询结果中包括的记录必须满足的条件。 您可以根据需要在查询中包含任意多个筛选条件，并使用 AND 或 OR 运算符将它们连接起来。 您也可以使用 NOT 运算符来反转逻辑表达式的值，也可以使用 **空的 ( ) ** 检查是否有空字段。 在以下示例中， *FilterCondition*可以采用任何形式：  
+ *FilterCondition* 指定要在查询结果中包括的记录必须满足的条件。 您可以根据需要在查询中包含任意多个筛选条件，并使用 AND 或 OR 运算符将它们连接起来。 您也可以使用 NOT 运算符来反转逻辑表达式的值，也可以使用 **空的 ( )** 检查是否有空字段。 在以下示例中， *FilterCondition* 可以采用任何形式：  
   
  **示例 1** *FieldName1 比较 FieldName2*  
   
@@ -167,7 +167,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.postalcode BETWEEN 90000 AND 99999`  
   
- 下面的示例检查是否至少有一行符合子查询中的条件。 如果筛选条件包含 EXISTS，筛选条件的计算结果为 True (。如果子查询的计算结果为空集，则 ) 。  
+ 下面的示例检查是否至少有一行符合子查询中的条件。 如果筛选条件包含 EXISTS，筛选条件的计算结果为 True ( ) ，除非子查询的计算结果为空集。  
   
  **示例 6** [NOT] (*子查询*)   
   
@@ -195,7 +195,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- 此筛选条件搜索与 *cExpression*匹配的每个字段。 可以使用百分号 (% ) 和下划线 ( _ ) 通配符作为 *cExpression*的一部分。 下划线表示字符串中的单个未知字符。  
+ 此筛选条件搜索与 *cExpression* 匹配的每个字段。 可以使用百分号 (% ) 和下划线 ( _ ) 通配符作为 *cExpression* 的一部分。 下划线表示字符串中的单个未知字符。  
   
  GROUP BY *GroupColumn* [， *GroupColumn* ...]  
  基于一个或多个列中的值对查询中的行进行分组。 *GroupColumn* 可以是下列其中一项：  
@@ -254,7 +254,7 @@ WHERE customer.cust_id NOT IN ;
   
 -   WHERE 子句查找 customer 表中不在 orders 表中的所有客户编号。 因为该命令的第一部分提供订单表中具有客户编号的所有公司，所以 customer 表中的所有公司现在都包含在查询结果中。  
   
--   由于联合中包含的表的结构必须是相同的，因此第二个 SELECT 语句中有两个占位符表示*orders。* 从第一个 select 语句中 order_id 和*emp_id。*  
+-   由于联合中包含的表的结构必须是相同的，因此第二个 SELECT 语句中有两个占位符用于表示第一个 SELECT 语句 *orders.order_id* 和 *orders.emp_id* 。  
   
     > [!NOTE]  
     >  占位符的类型必须与它们所表示的字段的类型相同。 如果该字段是日期类型，则占位符应为 {//}。 如果该字段是字符字段，则占位符应为空字符串 ( "" ) 。  
@@ -279,7 +279,7 @@ WHERE customer.cust_id NOT IN ;
 >  选择不遵守通过 SET FILTER 指定的当前筛选条件。  
   
 ## <a name="driver-remarks"></a>驱动程序备注  
- 当应用程序将 ODBC SQL 语句发送到数据源时，Visual FoxPro ODBC 驱动程序会在不进行转换的情况下将命令转换为 Visual FoxPro SELECT 命令，除非该命令包含 ODBC 转义序列。 ODBC 转义序列中包含的项将转换为 Visual FoxPro 语法。 有关使用 ODBC 转义序列的详细信息，请参阅 [时间和日期函数](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) 和 *Microsoft odbc 程序员参考*中的 [转义序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)。  
+ 当应用程序将 ODBC SQL 语句发送到数据源时，Visual FoxPro ODBC 驱动程序会在不进行转换的情况下将命令转换为 Visual FoxPro SELECT 命令，除非该命令包含 ODBC 转义序列。 ODBC 转义序列中包含的项将转换为 Visual FoxPro 语法。 有关使用 ODBC 转义序列的详细信息，请参阅 [时间和日期函数](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) 和 *Microsoft odbc 程序员参考* 中的 [转义序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   

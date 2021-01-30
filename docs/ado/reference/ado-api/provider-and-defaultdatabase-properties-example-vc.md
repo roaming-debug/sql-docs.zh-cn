@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5842bbdfc43a76797dd48aa75db133b9942a368e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 723604ab50d684b7d99536cb59880d86bf4f9d2b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989918"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166784"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider 和 DefaultDatabase 属性示例 (VC++)
 此示例通过使用不同的提供程序打开三个[连接](./connection-object-ado.md)对象来演示[提供程序](./provider-property-ado.md)的属性。 它还使用 [DefaultDatabase](./defaultdatabase-property.md) 属性设置 Microsoft ODBC 提供程序的默认数据库。  

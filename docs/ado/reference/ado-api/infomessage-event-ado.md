@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection::InfoMessage
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8695dc364a649dff204fcd689ab4722f19e125b9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: aabc5d54aed934a9bfa9c1695f2ceb8844e8962b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990798"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167215"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage 事件 (ADO)
-只要在**ConnectionEvent**操作过程中出现警告，就会调用**InfoMessage**事件。  
+只要在 **ConnectionEvent** 操作过程中出现警告，就会调用 **InfoMessage** 事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ InfoMessage pError, adStatus, pConnection
  在此事件返回之前，将此参数设置为 **adStatusUnwantedEvent** 以防止后续通知。  
   
  *pConnection*  
- [连接](./connection-object-ado.md)对象。 发生警告的连接。 例如，打开**连接**对象或对**连接**执行[命令](./command-object-ado.md)时，可能会出现警告。  
+ [连接](./connection-object-ado.md)对象。 发生警告的连接。 例如，打开 **连接** 对象或对 **连接** 执行 [命令](./command-object-ado.md)时，可能会出现警告。  
   
 ## <a name="see-also"></a>另请参阅  
  [ (VC + + 的 ADO 事件模型示例) ](./ado-events-model-example-vc.md)   
