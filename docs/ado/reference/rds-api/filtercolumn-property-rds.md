@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - FilterColumn property [ADO]
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4fa38c64a353f6250bc400bf5ed7fc6bf46b95c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 3b9b7633eef05c6060068124310d77b13b2fa86a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722224"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163777"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn 属性 (RDS)
 指示用于计算筛选条件的列。  
@@ -42,7 +42,7 @@ DataControl.FilterColumn = String
  一个 **字符串** 值，该值指定要对其计算筛选条件的列。 筛选条件是在 [FilterCriterion](./filtercriterion-property-rds.md) 属性中指定的。  
   
 ## <a name="remarks"></a>备注  
- [SortColumn](./sortcolumn-property-rds.md)、 [SortDirection](./sortdirection-property-rds.md)、 [FilterValue](./filtervalue-property-rds.md)、 [FilterCriterion](./filtercriterion-property-rds.md)和**FilterColumn**属性提供客户端缓存上的排序和筛选功能。 排序功能按一个列中的值对记录进行排序。 筛选功能显示基于查找条件的记录子集，而完整的 [记录集](../ado-api/recordset-object-ado.md) 则保留在缓存中。 [Reset](./reset-method-rds.md)方法将执行条件，并将当前**记录集**替换为可更新的**记录集**。  
+ [SortColumn](./sortcolumn-property-rds.md)、 [SortDirection](./sortdirection-property-rds.md)、 [FilterValue](./filtervalue-property-rds.md)、 [FilterCriterion](./filtercriterion-property-rds.md)和 **FilterColumn** 属性提供客户端缓存上的排序和筛选功能。 排序功能按一个列中的值对记录进行排序。 筛选功能显示基于查找条件的记录子集，而完整的 [记录集](../ado-api/recordset-object-ado.md) 则保留在缓存中。 [Reset](./reset-method-rds.md)方法将执行条件，并将当前 **记录集** 替换为可更新的 **记录集**。  
   
 ## <a name="applies-to"></a>应用于  
  [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  

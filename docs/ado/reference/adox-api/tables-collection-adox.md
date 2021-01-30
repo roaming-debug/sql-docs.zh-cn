@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Catalog::Tables
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b6d580dd6f56f78947ff1a881db1bff28c3e2b8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e30bb754332d52f02d2857dc80d572e227e819ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983258"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164008"
 ---
 # <a name="tables-collection-adox"></a>表集合 (ADOX)
 包含目录的所有 [表](./table-object-adox.md) 对象。  
   
-## <a name="remarks"></a>注解  
- **表**集合的[APPEND](./append-method-adox-tables.md)方法对于 ADOX 是唯一的。 可以：  
+## <a name="remarks"></a>备注  
+ **表** 集合的 [APPEND](./append-method-adox-tables.md)方法对于 ADOX 是唯一的。 可以执行以下操作：  
   
 -   使用 **Append** 方法向集合中添加一个新表。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以：  
+ 其余属性和方法对于 ADO 集合是标准的。 可以执行以下操作：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的表。  
   

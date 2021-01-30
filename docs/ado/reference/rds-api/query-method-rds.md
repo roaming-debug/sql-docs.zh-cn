@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d65da0531e9387e94f4d22c734821779c53b9639
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 0826d80d786f6f6e944c284422e2a891b509025c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724435"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163703"
 ---
 # <a name="query-method-rds"></a>Query 方法 (RDS)
 使用有效的 SQL 查询字符串返回 [记录集](../ado-api/recordset-object-ado.md)。  
@@ -41,14 +41,14 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *DataFactory*  
  表示 [RDSServer. DataFactory](./datafactory-object-rdsserver.md) 对象的对象变量。  
   
- *Connection*  
+ *连接*  
  一个包含服务器连接信息的 **字符串** 值。 这类似于 [连接](./connect-property-rds.md) 属性。  
   
  *查询*  
  一个包含 SQL 查询的 **字符串** 。  
   
 ## <a name="remarks"></a>备注  
- 查询应使用数据库服务器的 SQL 语言。 如果执行的查询出现错误，则返回结果状态。 **查询**方法不对**查询**字符串执行任何语法检查。  
+ 查询应使用数据库服务器的 SQL 语言。 如果执行的查询出现错误，则返回结果状态。 **查询** 方法不对 **查询** 字符串执行任何语法检查。  
   
 ## <a name="applies-to"></a>应用于  
  [DataFactory 对象 (RDSServer)](./datafactory-object-rdsserver.md)  

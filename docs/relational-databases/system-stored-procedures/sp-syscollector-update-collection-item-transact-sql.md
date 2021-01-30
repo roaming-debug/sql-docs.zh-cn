@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_update_collection_item
 - sp_syscollector_update_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2dc7d6967f4bfa7aa1c22f4cfa5c55e06127455b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f21ca6f68eed789756a7dbf57f79afe194d40dab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534851"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161917"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,10 +48,10 @@ sp_syscollector_update_collection_item
   
 ## <a name="arguments"></a>参数  
  [ @collection_item_id =] *collection_item_id*  
- 标识收集项的唯一标识符。 *collection_item_id* 为 **int** ，默认值为 NULL。 如果*name*为 NULL，则*collection_item_id*必须具有值。  
+ 标识收集项的唯一标识符。 *collection_item_id* 为 **int** ，默认值为 NULL。 如果 *name* 为 NULL，则 *collection_item_id* 必须具有值。  
   
  [ @name =] "*name*"  
- 收集项的名称。 *名称* 为 **sysname** ，默认值为 NULL。 如果*collection_item_id*为 NULL，则*name*必须具有值。  
+ 收集项的名称。 *名称* 为 **sysname** ，默认值为 NULL。 如果 *collection_item_id* 为 NULL，则 *name* 必须具有值。  
   
  [ @new_name =] "*new_name*"  
  收集项的新名称。 *new_name* 为 **sysname**，如果使用，则不能为空字符串。  
@@ -62,7 +62,7 @@ sp_syscollector_update_collection_item
  此收集项收集数据的频率（以秒为单位）。 *frequency* 的类型为 **int**，默认值为5，这是可以指定的最小值。  
   
  [ @parameters =] "*parameters*"  
- 收集项的输入参数。 *参数* 的值为 **xml** ，默认值为 NULL。 *参数*架构必须与收集器类型的参数架构匹配。  
+ 收集项的输入参数。 *参数* 的值为 **xml** ，默认值为 NULL。 *参数* 架构必须与收集器类型的参数架构匹配。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 1 (失败)   

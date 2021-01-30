@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Procedure
@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b41e83033ab86810c4e26ff3c15fa4d9d1ea97ae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2b1c3734ad88b72a2f7779b37c97c4b7c4863c12
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983628"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164094"
 ---
 # <a name="procedure-object-adox"></a>过程对象 (ADOX)
 表示存储过程。 与 ADO [命令](../ado-api/command-object-ado.md) 对象结合使用时，可以使用 **Procedure** 对象添加、删除或修改存储过程。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 **Procedure** 对象，您可以创建一个存储过程，而无需知道或使用该提供程序的 "create Procedure" 语法。  
   
  使用 **过程** 对象的属性，可以：  
   
 -   标识具有 [Name](./name-property-adox.md) 属性的过程。  
   
--   指定可用于使用[Command](./command-property-adox.md)属性创建或执行该过程的 ADO**命令**对象。  
+-   指定可用于使用 [Command](./command-property-adox.md)属性创建或执行该过程的 ADO **命令** 对象。  
   
 -   返回具有 [DateCreated](./datecreated-property-adox.md) 和 [DateModified](./datemodified-property-adox.md) 属性的日期信息。  
   

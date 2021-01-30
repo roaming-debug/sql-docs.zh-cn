@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcb81dbe0fc719b2bb31c08a0799e4bc5084519a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2e5ad157ffccc07ba0b64064122f7f0e55ccd422
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720782"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163811"
 ---
 # <a name="execute-method-rds"></a>Execute 方法 (RDS)
 执行请求并创建 ADO 记录集，以便在 ADO 2.5 和更高版本中使用。  
@@ -57,29 +57,29 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *lExecuteOptions*  
  执行选项的位掩码：  
   
- 1 =*ReadOnly* 将使用 **adLockReadOnly**打开记录集。  
+ 1 =*ReadOnly* 将使用 **adLockReadOnly** 打开记录集。  
   
- 2 =*NoBatch* 将使用 **adLockOptimistic**打开记录集。  
+ 2 =*NoBatch* 将使用 **adLockOptimistic** 打开记录集。  
   
- 4 =*AllParamInfoSupplied* 调用方保证在 *pParameters*中提供所有参数的参数信息。  
+ 4 =*AllParamInfoSupplied* 调用方保证在 *pParameters* 中提供所有参数的参数信息。  
   
- 8 = 将从 OLE DB 提供程序获取查询的*GetInfo* 参数信息，并在 *pParameters* 参数中返回该信息。 查询不会执行，并且不会返回任何记录集。  
+ 8 = 将从 OLE DB 提供程序获取查询的 *GetInfo* 参数信息，并在 *pParameters* 参数中返回该信息。 查询不会执行，并且不会返回任何记录集。  
   
  16 =*GetHiddenColumns* 将使用 **adLockBatchOptimistic** 打开记录集，任何隐藏的列都将包含在记录集中。  
   
  *ReadOnly*、 *NoBatch* 和 *GetHiddenColumns* 是互斥的选项;但是，它不会生成错误来设置其中的多个错误。 如果设置了多个选项， *GetHiddenColumns* 将优先于所有其他选项，然后使用 *ReadOnly*。 如果未指定任何选项，则默认情况下，将使用 **adLockBatchOptimistic** 打开记录集，且不会在记录集中包含隐藏的列。  
   
  *pParameters*  
- 一个包含参数定义的安全数组的 **变体** 。 如果在*lExecuteOptions*中指定了*GetInfo*选项，则此参数用于返回从 OLE DB 提供程序获取的参数定义。 否则，此参数可以为空。  
+ 一个包含参数定义的安全数组的 **变体** 。 如果在 *lExecuteOptions* 中指定了 *GetInfo* 选项，则此参数用于返回从 OLE DB 提供程序获取的参数定义。 否则，此参数可以为空。  
   
  *lcid*  
- LCID，用于生成在 *pInformation*中返回的任何错误。  
+ LCID，用于生成在 *pInformation* 中返回的任何错误。  
   
  *pInformation*  
  一个指针，指向执行返回的信息错误。 如果为 NULL，则不返回错误信息。  
   
 ## <a name="remarks"></a>备注  
- *HandlerString*参数可以为 null。 在这种情况下会发生什么情况取决于 RDS 服务器的配置方式。 "MSDFMAP" 的处理程序字符串指示应使用 Microsoft 提供的处理程序 ( # A0) 。 "MASDFMAP，sample.ini" 的处理程序字符串指示应使用 Msdfmap.dll 处理程序，并且应将参数 "sample.ini" 传递到处理程序。 MSDFMAP.dll 会将参数解释为使用 sample.ini 检查连接和查询字符串的方向。  
+ *HandlerString* 参数可以为 null。 在这种情况下会发生什么情况取决于 RDS 服务器的配置方式。 "MSDFMAP" 的处理程序字符串指示应使用 Microsoft 提供的处理程序 ( # A0) 。 "MASDFMAP，sample.ini" 的处理程序字符串指示应使用 Msdfmap.dll 处理程序，并且应将参数 "sample.ini" 传递到处理程序。 MSDFMAP.dll 会将参数解释为使用 sample.ini 检查连接和查询字符串的方向。  
   
 ## <a name="applies-to"></a>应用于  
  [DataFactory 对象 (RDSServer)](./datafactory-object-rdsserver.md)

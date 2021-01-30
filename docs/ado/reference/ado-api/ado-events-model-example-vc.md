@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5ce070edb9058f36bab18d64a06f50b867bbe55
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 15999a2d20aa8374fcd29b007bc95035bb5f6185
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976468"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161623"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型示例 (VC++)
 [Ado 事件实例化](../../guide/data/ado-event-instantiation-by-language.md)的 Visual C++ 部分通过语言提供有关如何实例化 ADO 事件模型的一般说明。 下面是在由 **#import** 指令创建的环境中实例化事件模型的特定示例。  
   
  一般说明使用 **adoint** 作为方法签名的参考。 但是，一般说明中的一些详细信息会因使用 **#import** 指令而略有不同：  
   
--   **#Import**指令可将**typedef**、方法签名数据类型和修饰符解析为其基本格式。  
+-   **#Import** 指令可将 **typedef**、方法签名数据类型和修饰符解析为其基本格式。  
   
 -   必须覆盖的纯虚方法全部以 "**raw_**" 为前缀。  
   
  一些代码只是反映编码样式。  
   
--   使用对**QueryInterface**的调用，显式获取了由**Advise**方法使用的**IUnknown**的指针。  
+-   使用对 **QueryInterface** 的调用，显式获取了由 **Advise** 方法使用的 **IUnknown** 的指针。  
   
 -   不需要在类定义中显式编写析构函数的代码。  
   
 -   你可能想要对 QueryInterface、AddRef 和 Release 的更可靠的实现进行编码。  
   
--   **__Uuidof ( # B1**指令广泛用于获取接口 id。  
+-   **__Uuidof ( # B1** 指令广泛用于获取接口 id。  
   
  最后，该示例包含一些工作代码。  
   

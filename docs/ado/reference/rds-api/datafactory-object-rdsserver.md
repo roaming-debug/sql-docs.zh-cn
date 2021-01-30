@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - DataFactory object [ADO]
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e31d39f0820a485d4954d789fe2dfb398d8490b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 75c727e8c857dcb5c5922f52e56a37e99f223293
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720978"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163838"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory 对象 (RDSServer)
 > [!IMPORTANT]
@@ -27,17 +27,17 @@ ms.locfileid: "91720978"
   
  此默认服务器端业务对象实现为客户端应用程序提供对指定数据源的读/写数据访问的方法。  
   
- **RDSServer. DataFactory**对象设计为接收客户端请求的服务器端自动化对象。 在 Internet 实现中，它驻留在 Web 服务器上，由 ADISAPI 组件实例化。 **RDSServer. DataFactory**对象提供对指定数据源的读写访问权限，但不包含任何验证或业务规则逻辑。  
+ **RDSServer. DataFactory** 对象设计为接收客户端请求的服务器端自动化对象。 在 Internet 实现中，它驻留在 Web 服务器上，由 ADISAPI 组件实例化。 **RDSServer. DataFactory** 对象提供对指定数据源的读写访问权限，但不包含任何验证或业务规则逻辑。  
   
  如果使用在 **RDSServer. DataFactory** 和 RDS 中都可用的方法。 [DataControl](./datacontrol-object-rds.md) 对象，远程数据服务使用 **RDS。** 默认情况下，DataControl 版本。 默认情况下，使用的是一个基本的编程方案，其中， **RDSServer DataFactory** 用作泛型服务器端业务对象。  
   
- 如果你希望你的 Web 应用程序处理特定于任务的服务器端处理，则可以使用自定义业务对象替换**RDSServer. DataFactory。**  
+ 如果你希望你的 Web 应用程序处理特定于任务的服务器端处理，则可以使用自定义业务对象替换 **RDSServer. DataFactory。**  
   
  你可以创建调用 **RDSServer. DataFactory** 方法的服务器端业务对象，例如 [Query](./query-method-rds.md) 和 [CreateRecordset](./createrecordset-method-rds.md)。 如果要将功能添加到业务对象，但要利用现有远程数据服务技术，这会很有帮助。  
   
  对于在客户端运行的脚本， **DataFactory** 对象是不安全的。  
   
- **DataFactory**对象的类 ID 是9381D8F5-0288-11D0-9501-00AA00B911A5。  
+ **DataFactory** 对象的类 ID 是9381D8F5-0288-11D0-9501-00AA00B911A5。  
   
  本部分包含以下主题。  
   

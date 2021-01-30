@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.systypes_TSQL
 - systypes_TSQL
@@ -22,12 +22,12 @@ ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b00fc15f26b54acf7de52684949473c0bbd6ed19
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7f00dab371048ed8a1b39cb702897ce5f481c377
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095347"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160649"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,14 +47,14 @@ ms.locfileid: "98095347"
 |**xprec**|**tinyint**|服务器使用的内部精度。 不在查询中使用。|  
 |**xscale**|**tinyint**|服务器使用的内部小数位数。 不在查询中使用。|  
 |**tdefault**|**int**|特定存储过程的 ID，此存储过程包含对该数据类型的完整性检查功能。|  
-|**域**|**int**|特定存储过程的 ID，此存储过程包含对该数据类型的完整性检查功能。|  
+|**域名**|**int**|特定存储过程的 ID，此存储过程包含对该数据类型的完整性检查功能。|  
 |**标识号**|**smallint**|所有者类型的架构 ID。<br /><br /> 对于从旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的数据库，架构 ID 等于所有者的用户 ID。<br /><br /> **\* \* 重要 \* 提示 \*** 如果使用以下任意 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL 语句，则必须使用 [sys.databases](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录视图，而不是 **sys.sys类型**。<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
 |**保护**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|如果基于字符，则 **collationid** 是当前数据库的排序规则的 id;否则为 NULL。|  
 |**usertype**|**smallint**|用户类型 ID。 如果数据类型的数字超过 32,767，则溢出或返回 NULL。|  
 |variable|**bit**|可变长度数据类型。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**allownulls**|**bit**|指示此数据类型的默认为空性。 如果使用 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)指定了可为 null 性，则会重写此默认值。|  
-|type|**tinyint**|物理存储数据类型。|  
+|type |**tinyint**|物理存储数据类型。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|此数据类型的精度级别。<br /><br /> -1 = **xml** 或大值类型。|  
 |**scale**|**tinyint**|此数据类型根据精度确定的小数位数。<br /><br /> NULL = 数据类型不是数值。|  

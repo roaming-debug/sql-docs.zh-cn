@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Key::GetUpdateRule
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3113bf5c77dbef03378d2c1359673bf32782f73
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b5704cf6295fdf0f9f1731288cb7b77d793d8447
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983038"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163989"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 属性 (ADOX)
 指示在 [更新主键时](./key-object-adox.md) 执行的操作。  
@@ -33,10 +33,10 @@ ms.locfileid: "88983038"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回一个 **Long** 值，该值可以是 [RuleEnum](./ruleenum.md) 常数之一。 默认值为 **adRINone**。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  对于已追加到集合的 [键](./key-object-adox.md) 对象，此属性是只读的。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [项对象 (ADOX)](./key-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  

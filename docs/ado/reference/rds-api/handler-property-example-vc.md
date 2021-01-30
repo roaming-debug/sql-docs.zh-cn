@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f8815ce6d607de39861f56bdcecca6c37e9dcc6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 757679e99f9f4de7b7c1c96abf367ad5df5daee1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722157"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163757"
 ---
 # <a name="handler-property-example-vc"></a>Handler 属性示例 (VC++)
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- 你的代码如下所示。 分配给 [SQL](./sql-property.md) 属性的命令将与 ***AuthorById*** 标识符匹配，并将为作者 Michael O'Leary 检索行。 尽管代码中的 [Connect](./connect-property-rds.md) 属性指定 Northwind 数据源，但该数据源将被 Msdfmap.ini *连接* 部分覆盖。 将 **DataControl** 对象 [记录集](./recordset-sourcerecordset-properties-rds.md) 属性分配给完全作为编码便利的断开连接的 [记录集](../ado-api/recordset-object-ado.md) 对象。  
+ 你的代码如下所示。 分配给 [SQL](./sql-property.md) 属性的命令将与 ***AuthorById** _ 标识符匹配，并将为作者 Michael O'Leary 检索行。 尽管代码中的 [Connect](./connect-property-rds.md) 属性指定 Northwind 数据源，但该数据源将被 Msdfmap.ini _connect * 节覆盖。 将 **DataControl** 对象 [记录集](./recordset-sourcerecordset-properties-rds.md) 属性分配给完全作为编码便利的断开连接的 [记录集](../ado-api/recordset-object-ado.md) 对象。  
   
 ```  
 // BeginHandlerCpp.cpp  

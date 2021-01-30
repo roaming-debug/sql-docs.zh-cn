@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae158d217437184be4ead71beeb2d2404248396f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5fa625a75bbcadffb37064c04adc7ebd57a48994
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722433"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163871"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 为目标业务对象创建代理并返回指向它的指针。 代理会将数据打包并封送到服务器端存根，以便与业务对象通信，以便通过 Internet 发送请求和数据。 对于进程内组件对象，不使用代理，只提供指向对象的指针。  
@@ -38,8 +38,8 @@ ms.locfileid: "91722433"
 |进程内|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>参数  
- *Object*  
- 一个对象变量，其计算结果为作为 *ProgID*中指定的类型的对象。  
+ *对象*  
+ 一个对象变量，其计算结果为作为 *ProgID* 中指定的类型的对象。  
   
  *空间*  
  表示 RDS 的对象变量 [。](./dataspace-object-rds.md) 用于创建新对象的实例的空间对象。  
@@ -51,7 +51,7 @@ ms.locfileid: "91722433"
  一个 **字符串** 值，表示一个 URL，该 URL 标识在其中创建服务器业务对象实例的 IIS) Web 服务器 (Internet Information Services。  
   
 ## <a name="remarks"></a>备注  
- *HTTP 协议*是标准 Web 协议;*HTTPS*是一种安全的 Web 协议。 在不使用 HTTP 的情况下运行局域网时使用 *DCOM 协议* 。 *进程内*协议是 (DLL) 的本地动态链接库;它不使用网络。  
+ *HTTP 协议* 是标准 Web 协议;*HTTPS* 是一种安全的 Web 协议。 在不使用 HTTP 的情况下运行局域网时使用 *DCOM 协议* 。 *进程内* 协议是 (DLL) 的本地动态链接库;它不使用网络。  
   
 ## <a name="applies-to"></a>应用于  
  [DataSpace 对象 (RDS)](./dataspace-object-rds.md)  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Column::put_Precision
@@ -20,25 +20,25 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f0126da4e68ee84d9a8f155ee1dc50a89ab4646
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4ecb674380de526f729246a249e2369f0cf90e4b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983708"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164121"
 ---
 # <a name="precision-property-adox"></a>Precision 属性 (ADOX)
 指示 [列](./column-object-adox.md)中数据值的最大精度。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置并返回一个 **Long** 值，该值为 [类型](./type-property-column-adox.md) 属性为数值类型时列中数据值的最大精度。 对于所有其他数据类型，将忽略**精度**。  
+ 设置并返回一个 **Long** 值，该值为 [类型](./type-property-column-adox.md) 属性为数值类型时列中数据值的最大精度。 对于所有其他数据类型，将忽略 **精度**。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  默认值为零 (**0**)。  
   
  对于已追加到集合的 [列](./column-object-adox.md) 对象，此属性是只读的。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [列对象 (ADOX)](./column-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  

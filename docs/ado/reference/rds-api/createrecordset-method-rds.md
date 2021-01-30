@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataControl::CreateRecordset
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad1c9b0f36922f29ce015fd459a1be3e788e07f5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4a88898c884cbaf0a9c82a882b15ef48c1e3e3a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721198"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163854"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 创建一个空的、断开连接的 [记录集](../ado-api/recordset-object-ado.md)。  
@@ -41,13 +41,13 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>参数  
- *Object*  
+ *对象*  
  一个对象变量，它表示 [RDSServer](./datafactory-object-rdsserver.md) 或 [RDS。DataControl](./datacontrol-object-rds.md) 对象。  
   
  *ColumnsInfos*  
  特性的一个 **变量** 数组，用于定义创建的 **记录集中** 的每一列。 每个列定义都包含一个包含四个必需属性和一个可选属性的数组。  
   
-|属性|说明|  
+|Attribute|说明|  
 |---------------|-----------------|  
 |名称|列标题的名称。|  
 |类型|数据类型的整数。|  
@@ -60,13 +60,13 @@ object.CreateRecordset(ColumnInfos)
 ## <a name="remarks"></a>备注  
  服务器端业务对象可以使用非 OLE DB 的数据访问接口中的数据（例如包含股票行情的操作系统文件）来填充生成的 **记录集** 。  
   
- 下表列出了**CreateRecordset**方法支持的[DataTypeEnum](../ado-api/datatypeenum.md)值。 列出的数字是用于定义字段的引用编号。  
+ 下表列出了 **CreateRecordset** 方法支持的 [DataTypeEnum](../ado-api/datatypeenum.md)值。 列出的数字是用于定义字段的引用编号。  
   
  每个数据类型均为固定长度或可变长度。 应将固定长度类型定义为-1，因为大小是预先确定的，并且仍需要大小定义。 可变长度数据类型允许从1到32767的大小。  
   
  对于某些可变数据类型，可以将类型强制转换为替换列中所述的类型。 在创建并填充 **记录集** 之前，你将看不到替换项。 如果需要，可以检查实际数据类型。  
   
-|长度|常数|Number|替换|  
+|长度|返回的常量|数字|替换|  
 |------------|--------------|------------|------------------|  
 |固定|**adTinyInt**|16||  
 |固定|**adSmallInt**|2||  

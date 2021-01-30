@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6910ac229d309360676f83f855664ab368459ce0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4b4ee803de006feaa3eadc1eae3eb635e8c598cf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983818"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164127"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog 属性示例 (VB)
 下面的代码演示了如何在将表追加到目录之前，使用 [ParentCatalog](./parentcatalog-property-adox.md) 属性访问特定于提供程序的属性。 属性为 **自动增量**，这会在 Microsoft Jet 数据库中创建自动增量字段。  

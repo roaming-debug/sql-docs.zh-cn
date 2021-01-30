@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
 - sp_syscollector_update_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd55d65173d190d1c28708bfae46b10eaa0030a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 207d5b2f02bce0a3c9a9e89cdccdb5fe80790f20
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534831"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161885"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,9 +106,9 @@ sp_syscollector_update_collection_set
   
  2 - 级别 1 日志记录和来自 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的详细事件信息。  
   
- *Logging_level*的默认值为1。  
+ *Logging_level* 的默认值为1。  
   
-`[ @description = ] 'description'` 收集组的说明。 *描述* 为 **nvarchar (4000) **。  
+`[ @description = ] 'description'` 收集组的说明。 *描述* 为 **nvarchar (4000)**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -116,7 +116,7 @@ sp_syscollector_update_collection_set
 ## <a name="remarks"></a>备注  
  sp_syscollector_update_collection_set 必须在 msdb 系统数据库的上下文中运行。  
   
- *Collection_set_id*或*name*必须具有值，两者都不能为 NULL。 若要获取这些值，请查询 syscollector_collection_sets 系统视图。  
+ *Collection_set_id* 或 *name* 必须具有值，两者都不能为 NULL。 若要获取这些值，请查询 syscollector_collection_sets 系统视图。  
   
  如果收集组正在运行，则只能更新 *schedule_uid* 和 *说明*。 若要停止收集组，请使用 [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)。  
   

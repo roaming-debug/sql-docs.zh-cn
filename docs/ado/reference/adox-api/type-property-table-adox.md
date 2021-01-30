@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Table::Type
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab60bdf9c95edeed9845ea524e710760567e3ec7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 299ef8618e1374340f69c5af9460f212fcaf076d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983098"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163975"
 ---
 # <a name="type-property-table-adox"></a>Type 属性（表）(ADOX)
 指示表的类型。  
@@ -31,10 +31,10 @@ ms.locfileid: "88983098"
 ## <a name="return-values"></a>返回值  
  返回一个 **字符串** 值，该值指定表的类型;例如，"表"、"系统表" 或 "全局临时"。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  此属性是只读的。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [表对象 (ADOX)](./table-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  

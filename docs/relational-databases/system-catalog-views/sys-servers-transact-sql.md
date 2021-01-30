@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - servers_TSQL
 - sys.servers_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 5324370d1635914fbf6436e97cfaaee7d062329b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 7261cde3df2e1aa31e7a7ab0d5ccbd5f8e8d3e54
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171659"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161394"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "98171659"
 |**server_id**|**int**|链接服务器的本地 ID。|  
 |name|**sysname**|当 **server_id** = 0 时，返回的值是服务器名称。<br /><br /> 如果 **server_id** > 0，则返回的值为链接服务器的本地名称。|  
 |**product**|**sysname**|链接服务器的产品名。 值 "SQL Server" 指示的另一个实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|**provider**|**sysname**|用于连接到链接服务器的 OLE DB 访问接口名称。<br /><br />从开始 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，值 "sqlncli.msi" 将映射到默认情况下 [SQL SERVER (MSOLEDBSQL) 的 Microsoft OLE DB 驱动程序 ](../../connect/oledb/oledb-driver-for-sql-server.md) 。 在早期版本中，值 "SQLNCLI.MSI" 映射到 [SQL Server Native Client OLE DB 提供程序 (SQLNCLI11) ](../../relational-databases/native-client/sql-server-native-client.md)。|  
+|**程序**|**sysname**|用于连接到链接服务器的 OLE DB 访问接口名称。<br /><br />从开始 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，值 "sqlncli.msi" 将映射到默认情况下 [SQL SERVER (MSOLEDBSQL) 的 Microsoft OLE DB 驱动程序 ](../../connect/oledb/oledb-driver-for-sql-server.md) 。 在早期版本中，值 "SQLNCLI.MSI" 映射到 [SQL Server Native Client OLE DB 提供程序 (SQLNCLI11) ](../../relational-databases/native-client/sql-server-native-client.md)。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 数据源连接属性。|  
 |**location**|**nvarchar(4000)**|OLE DB 位置连接属性。 如果没有，则为 NULL。|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 访问接口字符串连接属性。<br /><br /> 如果调用方具有权限，则为 NULL `ALTER ANY LINKED SERVER` 。|  
