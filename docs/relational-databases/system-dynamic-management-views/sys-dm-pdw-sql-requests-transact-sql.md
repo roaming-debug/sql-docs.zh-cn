@@ -6,19 +6,19 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 360d6c5f5535b0e0702d1c7aede8721f27f88daf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fbb924edb6bd5d6b246ee986b7f600576a179a61
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482477"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99138817"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys.dm_pdw_sql_requests (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97482477"
 |total_elapsed_time|**int**|表示查询分发已运行的时间（以毫秒为单位）。|大于或等于0。 与已完成、失败或已取消的查询分发的 start_time 和 end_time 的增量相等。<br /><br /> 如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。"<br /><br /> 最大值（以毫秒为单位）等效于24.8 天。|  
 |row_count|**bigint**|此查询分布更改或读取的行数。|对于不更改或返回数据的操作（例如 CREATE TABLE 和删除表），为-1。|  
 |spid|**int**|运行查询分发的 SQL Server 实例上的会话 id。||  
-|command|**nvarchar(4000)**|此查询分发的命令的全文。|任何有效的查询或请求字符串。|  
+|命令|**nvarchar(4000)**|此查询分发的命令的全文。|任何有效的查询或请求字符串。|  
   
  有关此视图保留的最大行的信息，请参阅 [容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 主题中的元数据部分。  
   

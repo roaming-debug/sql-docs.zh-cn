@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_xe_object_columns
 - sys.dm_xe_object_columns_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c5da079cfecbf1ddaa622f05ce71e5c04d63f4f0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 3bc82f0d9018620fc64fb12e6c8864dd15358ebf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095043"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99129432"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,14 +47,14 @@ ms.locfileid: "98095043"
 |column_value|**nvarchar(256)**|显示与对象列关联的静态值。 可以为 Null。|  
 |capabilities|**int**|一个描述列的功能的位图。 可以为 Null。|  
 |capabilities_desc|**nvarchar(256)**|此对象列的功能的说明。 此值可以为下列值之一：<br /><br /> 必需。 将父对象绑定到一个事件会话时必须设置该值。<br /><br /> 可以为 Null。|  
-|说明|**nvarchar (3072)**|此对象列的说明。 可以为 Null。|  
+|description|**nvarchar (3072)**|此对象列的说明。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  
   
-|From|目标|Relationship|  
+|From|功能|关系|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name、sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name、<br /><br /> sys.dm_xe_objects.package_guid|多对一|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|多对一|  

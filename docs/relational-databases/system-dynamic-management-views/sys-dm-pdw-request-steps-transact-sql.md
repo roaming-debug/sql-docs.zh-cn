@@ -6,19 +6,19 @@ ms.date: 08/28/2020
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 839a1d906fcd7b6a4a980a7381b4f5fcdcf10d5d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 08d39aff859ad993ec78fba73bfbad800945b461
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644033"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99139520"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97644033"
 |total_elapsed_time|**int**|查询步骤已运行的总时间（以毫秒为单位）。|介于0与 end_time 与 start_time 之间的差异。 对于排队步骤，为0。<br /><br /> 如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。"<br /><br /> 最大值（以毫秒为单位）等效于24.8 天。|  
 |row_count|**bigint**|此请求更改或返回的总行数。|受步骤影响的行数。  对于数据操作步骤，大于或等于零。  对于不处理数据的步骤，则为-1。|  
 |estimated_rows|**bigint**|查询编译期间计算的工作总行数。|步骤估计的行数。  对于数据操作步骤，大于或等于零。  对于不处理数据的步骤，则为-1。|  
-|command|**nvarchar(4000)**|保存此步骤的命令的完整文本。|步骤的任何有效请求字符串。 如果操作的类型为 MetaDataCreateOperation，则为 NULL。 如果长度超过4000个字符，则截断。|  
+|命令|**nvarchar(4000)**|保存此步骤的命令的完整文本。|步骤的任何有效请求字符串。 如果操作的类型为 MetaDataCreateOperation，则为 NULL。 如果长度超过4000个字符，则截断。|  
   
  有关此视图保留的最大行的信息，请参阅中的 "最小值和最大值" 部分中的 "系统查看值最大值" 部分 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 。  
   
