@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - index command [ODBC]
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec9ed3c0ec0e91f3c4fd3a0019c8ac463a8620c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ac225132e2d89f1edd4baab012b2383cd508588
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449519"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183397"
 ---
 # <a name="index-command"></a>INDEX 命令
 创建索引文件以按逻辑顺序显示和访问表记录。  
@@ -56,9 +56,9 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  可创建两种类型的复合索引文件：结构化和 nonstructural。  
   
- **结构化复合索引文件**可以通过排除可选的*CDXFileName*子句来创建具有标记*TagName*的结构化复合索引文件。 结构化复合索引文件始终与表具有相同的基名称，并在打开表时自动打开。  
+ **结构化复合索引文件** 可以通过排除可选的 *CDXFileName* 子句来创建具有标记 *TagName* 的结构化复合索引文件。 结构化复合索引文件始终与表具有相同的基名称，并在打开表时自动打开。  
   
- **Nonstructural 复合索引文件**可以通过在标记*TagName*后包含*CDXFileName* ，来创建 nonstructural 复合索引文件。 与结构化复合索引文件不同，nonstructural 复合索引文件必须使用索引子句显式打开。  
+ **Nonstructural 复合索引文件** 可以通过在标记 *TagName* 后包含 *CDXFileName* ，来创建 nonstructural 复合索引文件。 与结构化复合索引文件不同，nonstructural 复合索引文件必须使用索引子句显式打开。  
   
  如果已创建并打开复合索引文件，则使用标记 *TagName* 发出索引会将标记添加到复合索引文件中。  
   
@@ -84,7 +84,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  者  
  创建候选结构索引标记。 只有在创建结构索引标记时才可以包含候选关键字;否则，Visual FoxPro 会生成错误消息。  
   
- 候选索引标记可防止在索引表达式 *eExpression*中指定的字段或字段组合中出现重复值。 *候选*字词是指索引的类型;由于候选索引会阻止重复的值，因此它们可以作为 "候选项" 作为主要索引。  
+ 候选索引标记可防止在索引表达式 *eExpression* 中指定的字段或字段组合中出现重复值。 *候选* 字词是指索引的类型;由于候选索引会阻止重复的值，因此它们可以作为 "候选项" 作为主要索引。  
   
  如果为已包含重复值的字段或字段组合创建候选索引标记，Visual FoxPro 将生成错误。  
   

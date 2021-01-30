@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_category_TSQL
 - sp_delete_category
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdeb258bf7a61e5cfa4bafe796729f7c445e8cde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 69befe88ea56ea64e6d6be33a96174d5bd8bb805
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541819"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195536"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @class = ] 'class'` 类别的类。 *类* 为 **varchar (8) **，无默认值，并且必须具有以下值之一。  
+`[ @class = ] 'class'` 类别的类。 *类* 为 **varchar (8)**，无默认值，并且必须具有以下值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -58,7 +58,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
  无  
   
 ## <a name="remarks"></a>备注  
- 必须从**msdb**数据库运行**sp_delete_category** 。  
+ 必须从 **msdb** 数据库运行 **sp_delete_category** 。  
   
  如果删除某个类别，则该类别中的所有作业、警报或操作员将重新分类到类的默认类别中。  
   
@@ -78,7 +78,7 @@ EXEC dbo.sp_delete_category
 GO   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_help_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   

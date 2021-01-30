@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - CancelUpdate method [RDS]
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cb9bcb9e0bf18cc2b6ab8d654eaccdc92ff7563
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c2a845eef1d48dd8a41d1499104908db9ba10be0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722618"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169061"
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate 方法 (RDS)
 取消对 [记录集](../ado-api/recordset-object-ado.md) 对象的当前行或新行所做的任何更改。  
@@ -39,7 +39,7 @@ DataControl.CancelUpdate
  表示 RDS 的对象变量 [。DataControl](./datacontrol-object-rds.md) 对象。  
   
 ## <a name="remarks"></a>备注  
- OLE DB 的游标服务将保留原始值和更改缓存的副本。 调用 **CancelUpdate**时，更改的缓存将重置为空，并且所有绑定控件都将用原始数据进行刷新。  
+ OLE DB 的游标服务将保留原始值和更改缓存的副本。 调用 **CancelUpdate** 时，更改的缓存将重置为空，并且所有绑定控件都将用原始数据进行刷新。  
   
 ## <a name="applies-to"></a>应用于  
  [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  

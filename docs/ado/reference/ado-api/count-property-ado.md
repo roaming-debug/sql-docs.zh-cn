@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Collection::Count
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b478a9f88d33503c5eda98bda11cfe0e0fcc8d6b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9a99489ca105a3661fb17c7ea8a62ee831e899ca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974518"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167665"
 ---
 # <a name="count-property-ado"></a>Count 属性 (ADO)
 指示集合中的对象数。  
@@ -29,14 +29,14 @@ ms.locfileid: "88974518"
 ## <a name="return-value"></a>返回值  
  返回一个 **长整型** 值。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 **Count** 属性来确定给定集合中有多少个对象。  
   
  由于集合成员的编号以零开始，因此，您始终应始终从零个成员开始编写循环，并以 **Count** 属性的值减1结束。 如果使用的是 Microsoft Visual Basic 并且想要循环遍历集合的成员而不检查 **Count** 属性，请使用 **For Each .。。下一个** 命令。  
   
  如果 **Count** 属性为零，则集合中不存在任何对象。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

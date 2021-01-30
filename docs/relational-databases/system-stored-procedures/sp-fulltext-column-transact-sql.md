@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_fulltext_column_TSQL
 - sp_fulltext_column
@@ -19,12 +19,12 @@ ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aadc6c5b5548b2fccb3c37fdc9eb06a9baf69dcc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4203f4ce8d603bd8715047b8a3f0ffb93e6b1e8b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440528"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185403"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
      [ , [ @type_colname= ] 'type_column_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @tabname = ] 'qualified_table_name'` 为一个或两个部分组成的表名。 表必须在当前数据库中。 表必须具有全文索引。 *qualified_table_name* 为 **nvarchar (517)**，没有默认值。  
   
 `[ @colname = ] 'column_name'`*Qualified_table_name* 中的列的名称。 列必须是字符、 **varbinary (max)** 或 **image** 列，不能是计算列。 *column_name* **sysname**，无默认值。  

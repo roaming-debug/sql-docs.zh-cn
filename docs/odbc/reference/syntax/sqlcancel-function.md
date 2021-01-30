@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLCancel
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 040cd9034a8f754a26f577b7efd6e1307e4c90c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c1d630af340bf676deda8c18f415b85aba15403c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448869"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185806"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel 函数
 **度**  
@@ -41,7 +41,7 @@ ms.locfileid: "88448869"
 ```cpp  
   
 SQLRETURN SQLCancel(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -52,18 +52,18 @@ SQLRETURN SQLCancel(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLCancel**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由 **SQLCancel** 返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明：表示法 " (DM) " 位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
+ 当 **SQLCancel** 返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用 *HandleType* 的 SQL_HANDLE_STMT 和 *StatementHandle* 的 *句柄* 调用 **SQLGetDiagRec** 来获取关联的 SQLSTATE 值。 下表列出了通常由 **SQLCancel** 返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明：表示法 " (DM) " 位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
   
-|SQLSTATE|错误|描述|  
+|SQLSTATE|错误|说明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|驱动程序特定的信息性消息。  (函数返回 SQL_SUCCESS_WITH_INFO。 ) |  
-|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 参数* \* MessageText*缓冲区中的[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)返回的错误消息描述了错误及其原因。|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 参数 *\* MessageText* 缓冲区中的 [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)返回的错误消息描述了错误及其原因。|  
 |HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
-|HY010|函数序列错误| (DM) 为与 *StatementHandle*关联的连接句柄调用了异步执行函数。 调用 **SQLCancel** 函数时，此异步函数仍在执行。<br /><br />  (DM) 取消操作失败，因为正在对与 *StatementHandle*关联的连接句柄执行异步操作。|  
+|HY010|函数序列错误| (DM) 为与 *StatementHandle* 关联的连接句柄调用了异步执行函数。 调用 **SQLCancel** 函数时，此异步函数仍在执行。<br /><br />  (DM) 取消操作失败，因为正在对与 *StatementHandle* 关联的连接句柄执行异步操作。|  
 |HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
 |HY018|服务器拒绝取消请求|服务器拒绝了取消请求。|  
 |HY117|由于未知的事务状态，连接被挂起。 仅允许断开连接和只读函数。| (DM) 有关挂起状态的详细信息，请参阅 [SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过 **SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过 **SQLSetConnectAttr** 设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驱动程序不支持此功能| (DM) 与 *StatementHandle* 关联的驱动程序不支持该函数。|  
   
 ## <a name="comments"></a>注释  
@@ -107,7 +107,7 @@ SQLRETURN SQLCancel(
 |---------------------------|---------|  
 |将缓冲区绑定到参数|[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |执行大容量插入或更新操作|[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
-|除了 **SQLCancel**的功能外，还取消在连接句柄上异步运行的函数。|[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
+|除了 **SQLCancel** 的功能外，还取消在连接句柄上异步运行的函数。|[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
 |执行 SQL 语句|[SQLExecDirect 函数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |执行已准备的 SQL 语句|[SQLExecute 函数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |释放语句句柄|[SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  

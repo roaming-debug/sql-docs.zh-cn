@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpmergesessiondetail
 - sp_replmonitorhelpmergesessiondetail_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c09007256e5c336ecfa2ad62c45623fe2c0e5ff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ba050d49579e217fa5be5a2dedcd7aa21cf0c99d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543178"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204376"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -67,7 +67,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
  在订阅服务器上执行时， **sp_replmonitorhelpmergesessiondetail** 仅返回最近5合并代理会话的详细信息。  
   
 ## <a name="permissions"></a>权限  
- 只有分发服务器上的分发数据库或订阅服务器上的**replmonitor**固定数据库角色的**db_owner**成员才能执行**sp_replmonitorhelpmergesessiondetail**。  
+ 只有分发服务器上的分发数据库或订阅服务器上的 **replmonitor** 固定数据库角色的 **db_owner** 成员才能执行 **sp_replmonitorhelpmergesessiondetail**。  
   
 ## <a name="see-also"></a>另请参阅  
  [以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

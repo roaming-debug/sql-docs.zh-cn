@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_depends
 - sp_depends_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 64bbce5c077d6752c97fd5791d5820e9cc4a2857
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6251c556475165504075ae60a84b6d4f28766aef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539050"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206028"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89539050"
   显示有关数据库对象依赖关系的信息，例如，依赖于表或视图的视图和过程，以及视图或过程所依赖的表和视图。 不报告对当前数据库以外对象的引用。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改用 [sys.databases dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) 和 [dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改用 [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) 和 [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +56,7 @@ sp_depends [ @objname = ] '<object>'
  对象所属架构的名称。  
   
  *object_name*  
- 要检查其依赖关系的数据库对象。 该对象可以是表、视图、存储过程、用户定义函数或触发器。 o*bject_name* 为 **nvarchar (776) **，无默认值。  
+ 要检查其依赖关系的数据库对象。 该对象可以是表、视图、存储过程、用户定义函数或触发器。 o *bject_name* 为 **nvarchar (776)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -68,9 +68,9 @@ sp_depends [ @objname = ] '<object>'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**nvarchar (257** **) **|存在依赖项的项名称。|  
-|type|**nvarchar (16) **|项的类型。|  
-|**已更新**|**nvarchar (7) **|是否更新项。|  
+|name |**nvarchar (257** **)**|存在依赖项的项名称。|  
+|type |**nvarchar (16)**|项的类型。|  
+|**时更新**|**nvarchar (7)**|是否更新项。|  
 |**选择**|**nvarchar(8)**|项是否用于 SELECT 语句。|  
 |**column**|**sysname**|存在依赖项的列或参数。|  
   
@@ -78,8 +78,8 @@ sp_depends [ @objname = ] '<object>'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**nvarchar (257** **) **|存在依赖项的项名称。|  
-|type|**nvarchar (16) **|项的类型。|  
+|name |**nvarchar (257** **)**|存在依赖项的项名称。|  
+|type |**nvarchar (16)**|项的类型。|  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
@@ -107,6 +107,6 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
+ [sys.sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

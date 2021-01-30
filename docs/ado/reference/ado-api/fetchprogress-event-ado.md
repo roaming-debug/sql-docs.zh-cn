@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - FetchProgress
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b84b963f42c83191c613dbb4849288fc862df474
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 53cd3be90492bb601c06138a3829d428d3abcaeb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973328"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167401"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 事件 (ADO)
-在长时间异步操作期间会定期调用 **FetchProgress**事件，以报告当前已检索到 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的行数。  
+在长时间异步操作期间会定期调用 **FetchProgress** 事件，以报告当前已检索到 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的行数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,8 +47,8 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
  *pRecordset*  
  作为要检索其记录的对象的 **记录集** 对象。  
   
-## <a name="remarks"></a>注解  
- 对子**记录集**使用**FetchProgress**时，请注意，*进度*和*MaxProgress*参数值派生自基础[游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)行集。 返回的值表示基础行集中的记录总数，而不仅仅是当前章节中的记录数。  
+## <a name="remarks"></a>备注  
+ 对子 **记录集** 使用 **FetchProgress** 时，请注意，*进度* 和 *MaxProgress* 参数值派生自基础 [游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)行集。 返回的值表示基础行集中的记录总数，而不仅仅是当前章节中的记录数。  
   
 > [!NOTE]
 >  若要将 **FetchProgress** 与 Microsoft Visual Basic 一起使用，需要 Visual Basic 6.0 或更高版本。  

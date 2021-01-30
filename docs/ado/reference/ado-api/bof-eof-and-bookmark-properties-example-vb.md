@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd6742bea404f3ed1ec6515d3579260701dbee7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 27a98245b27d5c30f2bcc762318f86a358ef16b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975848"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167835"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF 和 Bookmark 属性示例 (VB)
 如果用户尝试移过[记录集](./recordset-object-ado.md)的第一条记录或最后一条记录，则此示例使用[BOF](./bof-eof-properties-ado.md)和[EOF](./bof-eof-properties-ado.md)属性显示消息。 它使用 [书签](./bookmark-property-ado.md) 属性允许用户标记记录 **集中** 的记录并稍后返回到该记录。  
@@ -130,7 +130,7 @@ End Sub
 'EndBOFVB  
 ```  
   
- 此示例使用 " **书签** " 和 " [筛选器](./filter-property.md) " 属性创建 **记录集**的有限视图。 仅书签数组引用的记录是可访问的。  
+ 此示例使用 " **书签** " 和 " [筛选器](./filter-property.md) " 属性创建 **记录集** 的有限视图。 仅书签数组引用的记录是可访问的。  
   
 ```  
 Attribute VB_Name = "BOF"  

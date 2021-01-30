@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_fulltext_load_thesaurus_file
 - sp_fulltext_load_thesaurus_file_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7fa28cb49c289437bc6c9dea524d1ff9e8b8ac64
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 129bc6385628ef44d5103ddbac5f8ee7f51889ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546152"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185413"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -43,14 +43,14 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>参数  
  *lcid*  
- 映射某种语言的区域设置标识符 (LCID) 的整数，您要为该语言加载同义词库 XML 定义。 若要获取服务器实例上可用语言的 Lcid，请使用 [sys. fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) 目录视图。  
+ 映射某种语言的区域设置标识符 (LCID) 的整数，您要为该语言加载同义词库 XML 定义。 若要获取服务器实例上可用语言的 Lcid，请使用 [sys.fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) 目录视图。  
   
- ** \@ loadOnlyIfNotLoaded**  =  *操作*  
+ **\@ loadOnlyIfNotLoaded**  =  *操作*  
  指定是否即使在同义词库文件已加载的情况下也将它加载到内部同义词库表中。 *操作* 是以下其中之一：  
   
 |值|定义|  
 |-----------|----------------|  
-|**0**|无论同义词库文件是否已加载都加载它。 这是 **sp_fulltext_load_thesaurus_file**的默认行为。|  
+|**0**|无论同义词库文件是否已加载都加载它。 这是 **sp_fulltext_load_thesaurus_file** 的默认行为。|  
 |1|只有在同义词库文件尚未加载的情况下才加载它。|  
   
 ## <a name="return-code-values"></a>返回代码值  

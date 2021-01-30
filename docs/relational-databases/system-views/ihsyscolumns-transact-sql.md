@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - IHsyscolumns
 - IHsyscolumns_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 264aea54b51140d7d571a7312bf9947de7589eeb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c9c0733638fd79c025b94b2e63cf9b5350dd0178
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446529"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204311"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **IHsyscolumns**视图显示从非 SQL Server 发布服务器发布的项目的列信息。 此视图存储在分发数据库中。  
+  **IHsyscolumns** 视图显示从非 SQL Server 发布服务器发布的项目的列信息。 此视图存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -52,9 +52,9 @@ ms.locfileid: "88446529"
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|此列显示在该行中的偏移量。|  
 |**collationid**|**int**|列排序规则的 ID。 对于基于非字符的列为 NULL。|  
-|language|**int**|列的语言标识符。|  
+|**language**|**int**|列的语言标识符。|  
 |**status**|**int**|用于描述列或参数的属性的位图：<br /><br /> **0x08** = 列允许 null 值。<br /><br /> **0x10** = 在添加 **varchar** 或 **varbinary** 列后，ANSI 填充已生效。 为 **varchar** 保留尾随空格，并保留 **varbinary** 列的尾随零。<br /><br /> **0x40** = 参数是输出参数。<br /><br /> **0x80** = 列是标识列。|  
-|type|**int**|[&#40;transact-sql&#41;sys.sys类型](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)的物理存储类型。|  
+|type |**int**|[&#40;transact-sql&#41;sys.sys类型](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)的物理存储类型。|  
 |**usertype**|**tinyint**|[&#40;transact-sql&#41;sys.sys类型](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)中的用户定义数据类型的 ID。|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|此列的精度级别。|  

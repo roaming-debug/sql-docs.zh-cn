@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_indexoption
 - sp_indexoption_TSQL
@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aaaf9863e6226de5aa30d553bfa4c7766588524b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8f7011bc4ce2120164683009676953ec44d58c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547883"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205529"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为用户定义的聚集索引和非聚集索引或没有聚集索引的表设置锁选项值。  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 自动从页级锁、行级锁或表级锁中进行选择。 您不必手动设置这些选项。 为知道特定类型的锁定始终合适的专家用户提供**sp_indexoption** 。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 自动从页级锁、行级锁或表级锁中进行选择。 您不必手动设置这些选项。 为知道特定类型的锁定始终合适的专家用户提供 **sp_indexoption** 。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 请改用 [ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
@@ -47,9 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @IndexNamePattern = ] 'table_or_index_name'` 用户定义的表或索引的限定或非限定名称。 *table_or_index_name* 为 **nvarchar (1035) **，无默认值。 仅当指定限定索引或表名时，才需要使用引号。 如果提供了包含数据库名称的完全限定表名，则数据库名称必须为当前数据库的名称。 如果指定表名时未使用索引，则将为该表中的所有索引和表本身设置指定的选项（前提是不存在聚集索引）。  
+`[ @IndexNamePattern = ] 'table_or_index_name'` 用户定义的表或索引的限定或非限定名称。 *table_or_index_name* 为 **nvarchar (1035)**，无默认值。 仅当指定限定索引或表名时，才需要使用引号。 如果提供了包含数据库名称的完全限定表名，则数据库名称必须为当前数据库的名称。 如果指定表名时未使用索引，则将为该表中的所有索引和表本身设置指定的选项（前提是不存在聚集索引）。  
   
-`[ @OptionName = ] 'option_name'` 是索引选项名称。 *option_name* 是 **varchar (35) **，无默认值。 *option_name* 可以具有以下值之一。  
+`[ @OptionName = ] 'option_name'` 是索引选项名称。 *option_name* 是 **varchar (35)**，无默认值。 *option_name* 可以具有以下值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -58,7 +58,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|如果为 TRUE，则不使用行锁。 如果为 FALSE，则访问索引时允许使用行锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用行锁。|  
 |**DisAllowPageLocks**|如果为 TRUE，则不使用页锁。 如果为 FALSE，则访问索引时允许使用页锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用页锁。|  
   
-`[ @OptionValue = ] 'value'` 指定是否启用 *option_name* 设置 (TRUE、ON、yes 或 1) 或 DISABLED (FALSE、OFF、no 或 0) 。 *值* 为 **varchar (12) **，无默认值。  
+`[ @OptionValue = ] 'value'` 指定是否启用 *option_name* 设置 (TRUE、ON、yes 或 1) 或 DISABLED (FALSE、OFF、no 或 0) 。 *值* 为 **varchar (12)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或大于 0（失败）  

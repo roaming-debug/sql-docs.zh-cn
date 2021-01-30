@@ -1,11 +1,11 @@
 ---
 description: sys.dm_fts_parser (Transact-SQL)
-title: sys. dm_fts_parser (Transact-sql) |Microsoft Docs
+title: sys.dm_fts_parser (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_fts_parser_TSQL
 - dm_fts_parser
@@ -20,12 +20,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 3005c1d843796bfa9206750134d7be1c4f4546fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff5dac01f1fa48db60a384b8cc8bfb2216a5bab5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454932"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184327"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
@@ -46,12 +46,12 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  要分析的查询。 *query_string* 可以是 [包含](../../t-sql/queries/contains-transact-sql.md) 语法支持的字符串链。 例如，您可以包括变形、同义词库和逻辑运算符。  
   
  *lcid*  
- 用于分析 *query_string*的断字符 (LCID) 的区域设置标识符。  
+ 用于分析 *query_string* 的断字符 (LCID) 的区域设置标识符。  
   
  *stoplist_id*  
- 由 *lcid*标识的分词器使用的非索引字表的 ID （如果有）。 *stoplist_id* 是 **int**。如果指定 "NULL"，则不使用非索引字表。 如果指定 0，则使用系统 STOPLIST。  
+ 由 *lcid* 标识的分词器使用的非索引字表的 ID （如果有）。 *stoplist_id* 是 **int**。如果指定 "NULL"，则不使用非索引字表。 如果指定 0，则使用系统 STOPLIST。  
   
- 非索引字表 ID 在数据库中是唯一的。 若要获取给定表的全文检索的非索引字表 ID，请使用 [sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) 目录视图。  
+ 非索引字表 ID 在数据库中是唯一的。 若要获取给定表的全文检索的非索引字表 ID，请使用 [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) 目录视图。  
   
  *accent_sensitivity*  
  控制全文搜索是否区分音调符号的布尔值。 *accent_sensitivity* 是 **bit**，具有以下值之一：  
@@ -68,7 +68,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|关键字 (keyword)|**varbinary(128)**|断字符返回的给定关键字的十六进制表示形式。 该表示形式用于存储全文索引的关键字。 此值不是可读的，但它可用于将给定关键字关联到其他动态管理视图返回的输出，这些视图返回全文索引的内容，如 [sys.databases. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) 和 [dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> **注意：** OxFF 表示特殊字符，该字符指示文件或数据集的结尾。|  
+|关键字 (keyword)|**varbinary(128)**|断字符返回的给定关键字的十六进制表示形式。 该表示形式用于存储全文索引的关键字。 此值不是可读的，但它可用于将给定关键字关联到其他动态管理视图返回的输出，这些视图返回全文索引的内容，例如 [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) 和 [sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> **注意：** OxFF 表示特殊字符，该字符指示文件或数据集的结尾。|  
 |group_id|**int**|包含一个整数值，用于区分从中生成给定字词的逻辑组。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 生成以下英语 group_id 值：<br /><br /> 1：服务器<br />2：数据库<br />3：数据库|  
 |phrase_id|**int**|包含一个整数值，用于区别断字符给出复合词（如 full-text）替代形式的情况。 有时，如果存在复合词（“multi-millon”），断字符将给出替代形式。 这些替代形式（短语）有时需要加以区别。<br /><br /> 例如，'`multi-million`' 生成以下英语 phrase_id 值：<br /><br /> 1对于 `multi`<br />1对于 `million`<br />2对于 `multimillion`|  
 |occurrence|**int**|指示分析结果中每个字词的顺序。 例如，对于短语“`SQL Server query processor`”，occurrence 会包含该英语短语中字词的以下 occurrence 值：<br /><br /> 1对于 `SQL`<br />2对于 `Server`<br />3对于 `query`<br />4对于 `processor`|  
@@ -78,15 +78,15 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |source_term|**nvarchar(4000)**|从中生成或分析给定字词的字词或短语。 例如，对 '"`word breakers" AND stemmers'` 的查询生成以下英语 source_term 值：<br /><br /> `word breakers` 对于 display_term`word`<br />`word breakers` 对于 display_term`breakers`<br />`stemmers` 对于 display_term`stemmers`|  
   
 ## <a name="remarks"></a>备注  
- **dm_fts_parser** 支持全文谓词（如 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)）和函数（如 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)）的语法和功能。  
+ **sys.dm_fts_parser** 支持全文谓词（如 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)）和函数（如 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)）的语法和功能。  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>使用 Unicode 分析特殊字符  
- 当分析查询字符串时， **sys.databases dm_fts_parser** 将使用您所连接的数据库的排序规则，除非您将查询字符串指定为 Unicode。 因此，对于包含特殊字符（如ü或ç）的非 Unicode 字符串，输出可能是意外的，具体取决于数据库的排序规则。 若要独立于数据库排序规则处理查询字符串，请将字符串作为前缀 `N` ，即 `N'` *query_string* `'` 。  
+ 分析查询字符串时， **sys.dm_fts_parser** 将使用您所连接的数据库的排序规则，除非您将查询字符串指定为 Unicode。 因此，对于包含特殊字符（如ü或ç）的非 Unicode 字符串，输出可能是意外的，具体取决于数据库的排序规则。 若要独立于数据库排序规则处理查询字符串，请将字符串作为前缀 `N` ，即 `N'` *query_string* `'` 。  
   
  有关详细信息，请参阅本主题后面的“C. 显示包含特殊字符的字符串的输出”。  
   
 ## <a name="when-to-use-sysdm_fts_parser"></a>何时使用 sys.dm_fts_parser  
- 对于调试而言， **dm_fts_parser**可能非常强大。 一些主要的应用场景包括：  
+ **sys.dm_fts_parser** 可以很好地用于调试目的。 一些主要的应用场景包括：  
   
 -   了解给定断字符如何处理给定输入  
   
@@ -166,8 +166,8 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
  [全文搜索和语义搜索动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [全文搜索](../../relational-databases/search/full-text-search.md)   
  [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [为全文搜索配置和管理非索引字和非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [为 Full-Text 搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)   
  [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)   
  [安全对象](../../relational-databases/security/securables.md)  

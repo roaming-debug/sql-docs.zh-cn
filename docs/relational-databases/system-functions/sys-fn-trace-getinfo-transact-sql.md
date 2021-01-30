@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_trace_getinfo
 - fn_trace_getinfo_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c7426552dd52732b6b22f9947862b8607418f482
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: dae691a749a91e00276dd74477b35f7916b76618
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093805"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205352"
 ---
 # <a name="sysfn_trace_getinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |-----------------|---------------|-----------------|  
 |traceid|**int**|跟踪的 ID。|  
 |property|**int**|跟踪的属性：<br /><br /> 1= 跟踪选项。 有关详细信息，请 @options 参阅 [&#40;transact-sql&#41;sp_trace_create ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。<br /><br /> 2 = 文件名<br /><br /> 3 = 最大大小<br /><br /> 4 = 停止时间<br /><br /> 5 = 当前跟踪状态。 0 = 停止。 1 = 正在运行。|  
-|值|**sql_variant**|有关指定跟踪的属性的信息。|  
+|value|**sql_variant**|有关指定跟踪的属性的信息。|  
   
 ## <a name="remarks"></a>备注  
  当传递特定跟踪的 ID 时，fn_trace_getinfo 将返回有关该跟踪的信息。 传递无效 ID 时，此函数将返回空行集。  

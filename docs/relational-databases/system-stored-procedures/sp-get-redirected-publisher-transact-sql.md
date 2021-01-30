@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_get_redirected_publisher_TSQL
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a71799e3d7820ce4a142d6c9ec7d55b743214fb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fa1a1b8f7cffe3f98435ebd48a404fb76df34c8a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538906"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204756"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sp_get_redirected_publisher
 |**error_message**|**nvarchar(4000)**|验证错误消息的文本。|  
   
 ## <a name="remarks"></a>备注  
- *redirected_publisher* 返回当前发布服务器的名称。 如果尚未使用 **sp_redirect_publisher**重定向发布服务器和发布数据库，则返回 null。  
+ *redirected_publisher* 返回当前发布服务器的名称。 如果尚未使用 **sp_redirect_publisher** 重定向发布服务器和发布数据库，则返回 null。  
   
  如果未请求验证，或发布服务器和发布数据库没有条目，则 *error_number* 和 *error_severity* 返回0， *error_message* 返回 null。  
   

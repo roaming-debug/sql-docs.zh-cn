@@ -7,22 +7,22 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 111fb84cd584e23b18d889634893556de86311a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 105443a2b33a1903f1f22affef1c6ca70ee2cfdf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476919"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202600"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions 映射
-当应用程序*通过 ODBC 1.x*驱动程序调用**SQLSetScrollOptions**而该驱动程序不支持**SQLSetScrollOptions**时，调用  
+当应用程序 *通过 ODBC 1.x* 驱动程序调用 **SQLSetScrollOptions** 而该驱动程序不支持 **SQLSetScrollOptions** 时，调用  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -36,7 +36,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLGetInfo(ConnectionHandle, InfoType, InfoValuePtr, BufferLength, StringLengthPtr)  
     ```  
   
-     将*InfoType*参数设置为下表中的一个值，具体取决于**SQLSetScrollOptions**中*KeysetSize*参数的值。  
+     将 *InfoType* 参数设置为下表中的一个值，具体取决于 **SQLSetScrollOptions** 中 *KeysetSize* 参数的值。  
   
     |*KeysetSize 参数*|*InfoType 参数*|  
     |---------------------------|-------------------------|  
@@ -48,7 +48,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
   
      如果上表中没有列出 *KeysetSize* 参数的值，则对 **SQLSetScrollOptions** 的调用将返回 SQLSTATE S1107 (行值超出范围) 并且不执行以下任何步骤。  
   
-     然后，驱动程序管理器将验证是否根据**SQLSetScrollOptions**中的*Concurrency*参数的值，在调用**SQLGetInfo**时返回的 **InfoValuePtr*值中设置了相应的位。  
+     然后，驱动程序管理器将验证是否根据 **SQLSetScrollOptions** 中的 *Concurrency* 参数的值，在调用 **SQLGetInfo** 时返回的 **InfoValuePtr* 值中设置了相应的位。  
   
     |*并发* 参数|*InfoType* 设置|  
     |----------------------------|------------------------|  
@@ -65,7 +65,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     根据**SQLSetScrollOptions**中*KeysetSize*参数的值，将* \* 将 valueptr*设置为下表中的值之一。  
+     根据 **SQLSetScrollOptions** 中 *KeysetSize* 参数的值，将 *\* 将 valueptr* 设置为下表中的值之一。  
   
     |*KeysetSize* 参数|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -81,15 +81,15 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     在**SQLSetScrollOptions**中， * \* 将 valueptr*设置为*Concurrency*参数。  
+     在 **SQLSetScrollOptions** 中， *\* 将 valueptr* 设置为 *Concurrency* 参数。  
   
--   如果对**SQLSetScrollOptions**的调用中的*KeysetSize*参数为正值，则调用  
+-   如果对 **SQLSetScrollOptions** 的调用中的 *KeysetSize* 参数为正值，则调用  
   
     ```  
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     将* \* 将 valueptr*设置为**SQLSetScrollOptions**中的*KeysetSize*参数。  
+     将 *\* 将 valueptr* 设置为 **SQLSetScrollOptions** 中的 *KeysetSize* 参数。  
   
 -   调用  
   
@@ -97,7 +97,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     将* \* 将 valueptr*设置为**SQLSetScrollOptions**中的*RowsetSize*参数。  
+     将 *\* 将 valueptr* 设置为 **SQLSetScrollOptions** 中的 *RowsetSize* 参数。  
   
     > [!NOTE]  
-    >  当驱动程序管理器为使用不支持**SQLSetScrollOptions***的 ODBC 1.x 驱动程序的*应用程序映射**SQLSetScrollOptions**时，驱动程序管理器会将 SQL_ROWSET_SIZE 语句选项，而不是 SQL_ATTR_ROW_ARRAY_SIZE 语句特性）设置为**SQLSetScrollOption**中的*RowsetSize*参数。 因此，在通过调用**SQLFetch**或**SQLFetchScroll**提取多行时，应用程序不能使用**SQLSetScrollOptions** 。 它只能在通过调用 **SQLExtendedFetch**提取多行时使用。
+    >  当驱动程序管理器为使用不支持 **SQLSetScrollOptions***的 ODBC 1.x 驱动程序的* 应用程序映射 **SQLSetScrollOptions** 时，驱动程序管理器会将 SQL_ROWSET_SIZE 语句选项，而不是 SQL_ATTR_ROW_ARRAY_SIZE 语句特性）设置为 **SQLSetScrollOption** 中的 *RowsetSize* 参数。 因此，在通过调用 **SQLFetch** 或 **SQLFetchScroll** 提取多行时，应用程序不能使用 **SQLSetScrollOptions** 。 它只能在通过调用 **SQLExtendedFetch** 提取多行时使用。

@@ -6,21 +6,21 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4d3d765cbeba49a5c34bbc5529d833cefc5bb1ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976488"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167904"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 动态属性索引
-数据访问接口、服务提供程序和服务组件可以将动态属性添加到未打开的[连接](./connection-object-ado.md)和[记录集](./recordset-object-ado.md)对象的**属性**集合中。 指定的提供程序还可以在打开这些对象时插入其他属性。 其中一些属性在 " [ADO 动态属性](./ado-dynamic-properties.md) " 部分列出。 [附录 A： providers](../../guide/appendixes/appendix-a-providers.md)部分的特定提供程序下列出了更多详细信息。  
+数据访问接口、服务提供程序和服务组件可以将动态属性添加到未打开的 [连接](./connection-object-ado.md)和 [记录集](./recordset-object-ado.md)对象的 **属性** 集合中。 指定的提供程序还可以在打开这些对象时插入其他属性。 其中一些属性在 " [ADO 动态属性](./ado-dynamic-properties.md) " 部分列出。 [附录 A： providers](../../guide/appendixes/appendix-a-providers.md)部分的特定提供程序下列出了更多详细信息。  
   
  下表是每个标准 OLE DB 提供程序动态属性的 ADO 和 OLE DB 名称的交叉索引。 提供程序可能会添加比此处所列更多的属性。 有关特定于提供程序的动态属性的特定信息，请参阅提供程序文档。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88976488"
 |最大行大小|DBPROP_MAXROWSIZE|  
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |选择中的最大表数|DBPROP_MAXTABLESINSELECT|  
-|“模式”|DBPROP_INIT_MODE|  
+|模式|DBPROP_INIT_MODE|  
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|  
 |多个结果|DBPROP_MULTIPLERESULTS|  
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|  
@@ -77,11 +77,11 @@ ms.locfileid: "88976488"
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|  
 |准备提交行为|DBPROP_PREPARECOMMITBEHAVIOR|  
 |过程术语|DBPROP_PROCEDURETERM|  
-|Prompt|DBPROP_INIT_PROMPT|  
+|提示|DBPROP_INIT_PROMPT|  
 |提供程序友好名称|DBPROP_PROVIDERFRIENDLYNAME|  
 |Provider Name|DBPROP_PROVIDERFILENAME|  
 |提供程序版本|DBPROP_PROVIDERVER|  
-|只读数据源|DBPROP_DATASOURCEREADONLY|  
+|Read-Only 数据源|DBPROP_DATASOURCEREADONLY|  
 |命令行集转换|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
 |架构术语|DBPROP_SCHEMATERM|  
 |架构使用情况|DBPROP_SCHEMAUSAGE|  
@@ -95,7 +95,7 @@ ms.locfileid: "88976488"
 |窗口句柄|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>记录集动态属性  
- 请注意， **recordset 对象的****动态属性**超出范围 (在**记录集**关闭时将变为不可用) 。  
+ 请注意， **recordset 对象的****动态属性** 超出范围 (在 **记录集** 关闭时将变为不可用) 。  
   
 |ADO 属性名称|OLE DB 属性名称|  
 |-----------------------|--------------------------|  
@@ -126,7 +126,7 @@ ms.locfileid: "88976488"
 |IStream|DBPROP_ISTREAM|  
 |ISupportErrorInfo|DBPROP_ISUPPORTERRORINFO|  
 |访问顺序|DBPROP_ACCESSORDER|  
-|仅限追加的行集|DBPROP_APPENDONLY|  
+|Append-Only 行集|DBPROP_APPENDONLY|  
 |异步行集处理|DBPROP_ROWSET_ASYNCH|  
 |自动重新计算|DBPROP_ADC_AUTORECALC|  
 |后台提取大小|DBPROP_ASYNCHFETCHSIZE|  

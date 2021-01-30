@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Catalog::Views
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26d61c1d2835d9dcabba82beb2a120330f8f2ead
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 51a32bb1952e5c8100ed1d13cb7ba72b99e8994d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982868"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169097"
 ---
 # <a name="views-collection-adox"></a>视图集合 (ADOX)
 包含目录的所有 [视图](./view-object-adox.md) 对象。  
   
-## <a name="remarks"></a>注解  
- **Views**集合的[APPEND](./append-method-adox-views.md)方法对于 ADOX 是唯一的。 可以：  
+## <a name="remarks"></a>备注  
+ **Views** 集合的 [APPEND](./append-method-adox-views.md)方法对于 ADOX 是唯一的。 可以执行以下操作：  
   
 -   使用 **Append** 方法将新视图添加到集合。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以：  
+ 其余属性和方法对于 ADO 集合是标准的。 可以执行以下操作：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的视图。  
   

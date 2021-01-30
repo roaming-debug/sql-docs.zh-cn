@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56227da17b5c302a6682db905fe3f397c5e9e3fd
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d4d97d9aae8117ac7d10362da0ab5f666fc329f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722147"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168930"
 ---
 # <a name="handler-property-example-vb"></a>Handler 属性示例 (VB)
 > [!IMPORTANT]
@@ -31,14 +31,14 @@ ms.locfileid: "91722147"
  假设参数文件 Msdfmap.ini 中的以下部分位于服务器上：  
   
 ```  
-[connect AuthorDataBase]  
+[connect AuthorDataBase]  
 Access=ReadWrite  
 Connect="DSN=Pubs"  
-[sql AuthorById]  
-SQL="SELECT * FROM Authors WHERE au_id = ?"  
+[sql AuthorById]  
+SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- 你的代码如下所示。 分配给 [SQL](./sql-property.md) 属性的命令将与 ***AuthorById*** 标识符匹配，并将为作者 Michael O'Leary 检索行。 将 **DataControl** 对象 **记录集** 属性分配给完全作为编码便利的断开连接的 [记录集](../ado-api/recordset-object-ado.md) 对象。  
+ 你的代码如下所示。 分配给 [SQL](./sql-property.md) 属性的命令将与 ***AuthorById** _ 标识符匹配，并将为作者 Michael O'Leary 检索行。 _ *DataControl** 对象 **记录集** 属性被分配给完全作为编码便利的断开连接的 [记录集](../ado-api/recordset-object-ado.md) 对象。  
   
 ```  
 'BeginHandlerVB  

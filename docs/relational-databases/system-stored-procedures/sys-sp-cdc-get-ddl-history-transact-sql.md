@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_get_ddl_history (Transact-SQL)
-title: sys. sp_cdc_get_ddl_history (Transact-sql) |Microsoft Docs
+title: sys.sp_cdc_get_ddl_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_get_ddl_history
 - sp_cdc_get_ddl_history_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b00c56c4324c4e25e9a19dd71d342dfcaafcc76d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b83e018c8e8e7c5e2f4daa704e5b7a13e7789f0b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547277"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205956"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_time|**datetime**|与 DDL 更改关联的时间。|  
   
 ## <a name="remarks"></a>备注  
- 对更改源表列结构的源表（如添加或删除列，或更改现有列的数据类型）进行的 DDL 修改会在 [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 表中进行维护。 您可使用此存储过程报告以上更改。 当捕获进程读取日志中的 DDL 事务时，将向 cdc.ddl_history 中添加项。  
+ 对更改源表列结构的源表（如添加或删除列，或更改现有列的数据类型）进行 DDL 修改会在 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 表中进行维护。 您可使用此存储过程报告以上更改。 当捕获进程读取日志中的 DDL 事务时，将向 cdc.ddl_history 中添加项。  
   
 ## <a name="permissions"></a>权限  
  要求拥有 db_owner 固定数据库角色的成员身份以返回针对数据库中所有捕获实例的行。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。  
@@ -86,6 +86,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

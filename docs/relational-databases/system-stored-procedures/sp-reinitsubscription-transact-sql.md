@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_reinitsubscription
 - sp_reinitsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 68761baaf874d4900a7914753a37e1f465ff757e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d8c12b3ca1b27f7560aeff466e51b7f43a9a42e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538669"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185663"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，默认值为 all。  
   
-`[ @article = ] 'article'` 项目的名称。 *项目* 的值为 **sysname**，默认值为 all。 对于即时更新发布， *项目* 必须 **全部**为;否则，存储过程将跳过发布，并报告错误。  
+`[ @article = ] 'article'` 项目的名称。 *项目* 的值为 **sysname**，默认值为 all。 对于即时更新发布， *项目* 必须 **全部** 为;否则，存储过程将跳过发布，并报告错误。  
   
 `[ @subscriber = ] 'subscriber'` 订阅服务器的名称。 *订阅服务器* 的 **sysname**，无默认值。  
   
@@ -70,15 +70,15 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>备注  
  **sp_reinitsubscription** 用于事务复制。  
   
- 对等事务复制不支持**sp_reinitsubscription** 。  
+ 对等事务复制不支持 **sp_reinitsubscription** 。  
   
  对于自动应用初始快照和发布不允许可更新订阅的订阅，执行此存储过程之后必须运行快照代理，以便准备架构和大容量复制程序文件，并使分发代理随后能够重新同步订阅。  
   
- 对于自动应用初始快照和发布允许可更新订阅的订阅，分发代理使用先前由快照代理创建的最新架构和大容量复制程序文件重新同步订阅。 如果分发代理不忙，则分发代理在用户执行 **sp_reinitsubscription**后立即重新同步订阅;否则，可能会在 (分发代理命令提示符参数指定的消息间隔后发生同步) ： **MessageInterval** 。  
+ 对于自动应用初始快照和发布允许可更新订阅的订阅，分发代理使用先前由快照代理创建的最新架构和大容量复制程序文件重新同步订阅。 如果分发代理不忙，则分发代理在用户执行 **sp_reinitsubscription** 后立即重新同步订阅;否则，可能会在 (分发代理命令提示符参数指定的消息间隔后发生同步) ： **MessageInterval** 。  
   
  **sp_reinitsubscription** 对手动应用初始快照的订阅不起作用。  
   
- 若要重新同步对发布的匿名订阅，请将 **所有** 或 NULL 作为 *订阅服务器*传递。  
+ 若要重新同步对发布的匿名订阅，请将 **所有** 或 NULL 作为 *订阅服务器* 传递。  
   
  事务复制支持项目级的订阅重新初始化。 当项目被标记为要重新初始化后，在下一个同步过程中将在订阅服务器上重新应用项目快照。 但是，如果有相关的项目也由同一个订阅服务器订阅，那么在项目上重新应用快照可能会失败，除非发布中的相关项目在某些情况下也自动重新初始化：  
   

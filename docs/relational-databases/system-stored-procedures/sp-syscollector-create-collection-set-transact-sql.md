@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
 - sp_syscollector_create_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c2f62ec06ebda9c7c22ec381f4b9b5a3011cc4f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: de9ee3331621df81739a9f808bbd63ab42c52491
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547346"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205075"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ sp_syscollector_create_collection_set
   
  *名称* 必须是唯一的。 有关当前收集组名称的列表，请查询 syscollector_collection_sets 系统视图。  
   
-`[ @target = ] 'target'` 保留供将来使用。 *名称* 为 **nvarchar (128) ** ，默认值为 NULL。  
+`[ @target = ] 'target'` 保留供将来使用。 *名称* 为 **nvarchar (128)** ，默认值为 NULL。  
   
 `[ @collection_mode = ] collection_mode` 指定收集和存储数据的方式。 *collection_mode* 为 **smallint** ，可以具有以下值之一：  
   
@@ -68,7 +68,7 @@ sp_syscollector_create_collection_set
   
  1 - 非缓存模式。 数据的收集和上载位于同一个计划中。 为临时收集或快照收集指定非缓存模式。  
   
- *Collection_mode*的默认值为0。 如果 *collection_mode* 为0，则必须指定 *schedule_uid* 或 *schedule_name* 。  
+ *Collection_mode* 的默认值为0。 如果 *collection_mode* 为0，则必须指定 *schedule_uid* 或 *schedule_name* 。  
   
 `[ @days_until_expiration = ] days_until_expiration` 收集的数据保存在管理数据仓库中的天数。 *days_until_expiration* 为 **smallint** ，默认值为 730 (两年) 。 *days_until_expiration* 必须是0或正整数。  
   
@@ -102,9 +102,9 @@ sp_syscollector_create_collection_set
   
  2 - 级别 1 日志记录和来自 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的详细事件信息  
   
- *Logging_level*的默认值为1。  
+ *Logging_level* 的默认值为1。  
   
-`[ @description = ] 'description'` 收集组的说明。 *说明* 为 **nvarchar (4000) ** ，默认值为 NULL。  
+`[ @description = ] 'description'` 收集组的说明。 *说明* 为 **nvarchar (4000)** ，默认值为 NULL。  
   
 `[ @collection_set_id = ] collection_set_id` 收集组的唯一本地标识符。 *collection_set_id* 是包含 OUTPUT 的 **int** ，并且是必需的。  
   

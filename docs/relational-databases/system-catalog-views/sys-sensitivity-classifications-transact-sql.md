@@ -5,7 +5,7 @@ ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 ms.custom: ''
 ms.author: mibar
 author: barmichal
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest'
-ms.openlocfilehash: 908151d19df364171063bffcd280786a354c2654
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 69e0d1958bdce992626d823f7da8ce1871cc4632
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472948"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182479"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97472948"
 
 |列名称|数据类型|说明|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|标识存在分类的项的类。 将始终具有值 1 (表示列) |  
+|class |**int**|标识存在分类的项的类。 将始终具有值 1 (表示列) |  
 |**class_desc**|**varchar (16)**|存在分类的项的类的说明。 始终具有值 *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|表示包含已分类列的表的 ID，与 sys. _objects. object_id 相对应。|  
 |**minor_id**|**int**|表示存在分类的列的 ID，与 sys. _columns. column_id 相对应。|   

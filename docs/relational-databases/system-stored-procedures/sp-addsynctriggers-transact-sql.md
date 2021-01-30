@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addsynctriggers_TSQL
 - sp_addsynctriggers
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38c0e33c780e13f11266d8cafde93fbdca2ebc11
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 00782a900c02976c06f2cfcdf6c9184d90e8059d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539189"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211944"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,9 +82,9 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @ts_col = ] 'timestamp_col'` 发布服务器上 **timestamp** 列的名称。 *timestamp_col* 的默认值为 **sysname**，默认值为 NULL。  
   
-`[ @filter_clause = ] 'filter_clause'` 用于定义水平筛选器的) 子句 (的限制。 当输入限制子句时，将省略关键字 WHERE。 *filter_clause*为 **nvarchar (4000) **，默认值为 NULL。  
+`[ @filter_clause = ] 'filter_clause'` 用于定义水平筛选器的) 子句 (的限制。 当输入限制子句时，将省略关键字 WHERE。 *filter_clause* 为 **nvarchar (4000)**，默认值为 NULL。  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'` 表中主键列的位图。 *primary_key_bitmap* 为 **varbinary (4000) **，无默认值。  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` 表中主键列的位图。 *primary_key_bitmap* 为 **varbinary (4000)**，无默认值。  
   
 `[ @identity_support = ] identity_support` 使用排队更新时启用和禁用自动标识范围处理。 *identity_support* 为一个 **位**，默认值为 **0**。 **0** 表示没有标识范围支持， **1** 启用自动标识范围处理。  
   
@@ -92,7 +92,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @distributor = ] 'distributor'` 分发服务器的名称。 *分发服务器* 的 **sysname**，无默认值。  
   
-`[ @pubversion = ] pubversion` 指示发布服务器的版本。 *pubversion* 的值为 **int**，默认值为1。 **1** 表示发布服务器的版本为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 或更早版本; **2** 表示发布服务器为 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service PACK 3 (SP3) 或更高版本。 *pubversion*当发布服务器版本为 SP3 或更高版本时，pubversion 必须显式设置为**2** [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。  
+`[ @pubversion = ] pubversion` 指示发布服务器的版本。 *pubversion* 的值为 **int**，默认值为1。 **1** 表示发布服务器的版本为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 或更早版本; **2** 表示发布服务器为 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service PACK 3 (SP3) 或更高版本。 当发布服务器版本为 SP3 或更高版本时，pubversion 必须显式设置为 **2** [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

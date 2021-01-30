@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_tuning_recommendations
 - dm_db_tuning_recommendations
@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cad75b88b14fd9bc64acbbd8b167619d3dbcc2e3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b9037aaefe27cd50deb9b61af423a8074ab86f65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472878"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204811"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>sys.dm \_ db \_ 优化 \_ 建议 (transact-sql) 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "97472878"
   
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 为了避免公开此信息，每个包含不属于所连接的租户的数据的行都将被筛选掉。
 
-| **列名** | **Data type** | **说明** |
+| **列名** | **数据类型** | **说明** |
 | --- | --- | --- |
-| **name** | **nvarchar(4000)** | 建议的唯一名称。 |
-| **type** | **nvarchar(4000)** | 生成建议的自动优化选项的名称，例如 `FORCE_LAST_GOOD_PLAN` |
+| name  | **nvarchar(4000)** | 建议的唯一名称。 |
+| type  | **nvarchar(4000)** | 生成建议的自动优化选项的名称，例如 `FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar(4000)** | 提供此建议的原因。 |
 | **有效 \_ 时间** | **datetime2** | 第一次生成此建议时。 |
 | **上次 \_ 刷新时间** | **datetime2** | 上次生成此建议的时间。 |

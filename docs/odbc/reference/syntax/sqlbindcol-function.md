@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLBindCol
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e6eaebf18b37df69ebe922aa4b42671378fc659
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: d057b3e7b5842cafba2be18afa21f2d528175ffd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97617516"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181089"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函数
 **度**  
@@ -48,7 +48,7 @@ SQLRETURN SQLBindCol(
       SQLLEN *       StrLen_or_IndPtr);  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *StatementHandle*  
  送语句句柄。  
   

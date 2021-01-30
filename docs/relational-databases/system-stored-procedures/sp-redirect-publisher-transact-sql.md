@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_redirect_publisher_TSQL
 - sp_redirect_publisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6c58ec557fd2d41a0fbbe7fc6ac728df56935542
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d7fef5e51b8a41e6e21d570a398775810dd23155
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543160"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185747"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_redirect_publisher
 ## <a name="remarks"></a>备注  
  **sp_redirect_publisher** 用于通过将发布服务器/数据库对与可用性组的侦听器相关联，使复制发布服务器重定向到 Always On 可用性组的当前主副本。 为包含已发布数据库的可用性组配置 AG 侦听器后，执行 **sp_redirect_publisher** 。  
   
- 如果在主副本上从可用性组中删除原始发布服务器上的发布数据库，请在不指定* \@ redirected_publisher*参数的值的情况下执行**sp_redirect_publisher** ，以删除发布服务器/数据库对的重定向。 有关在时重定向发布服务器的详细信息，请参阅 [维护 AlwaysOn 发布数据库 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)。  
+ 如果在主副本上从可用性组中删除原始发布服务器上的发布数据库，请在不指定 *\@ redirected_publisher* 参数的值的情况下执行 **sp_redirect_publisher** ，以删除发布服务器/数据库对的重定向。 有关在时重定向发布服务器的详细信息，请参阅 [维护 AlwaysOn 发布数据库 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)。  
   
 ## <a name="permissions"></a>权限  
  调用方必须是 **sysadmin** 固定服务器角色的成员、分发数据库 **db_owner** 固定数据库角色的成员，或者是与发布服务器数据库相关联的已定义发布的发布访问列表的成员。  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataControl
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81f7d1a3ca15eaf2ebc2bb6dbaff20ba7762d89c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5c65d8f639ec1747e7085f8d88c266ed6b6299d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721098"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169011"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 对象 (RDS)
 将数据查询 [记录集](../ado-api/recordset-object-ado.md) 绑定到一个或多个控件 (例如，文本框、网格控件或组合框) ，用于在网页上显示 **记录集** 数据。  
@@ -47,7 +47,7 @@ ms.locfileid: "91721098"
 > [!NOTE]
 >  如果收到 [RDS。空间](./dataspace-object-rds.md) 或 **RDS。DataControl** 对象不会加载，请确保使用的是正确的类 ID。 这些对象的类 Id 已从版本1.0 和1.1 更改。 另外，请注意，在使用 **RDS DataControl** 对象时，必须设置甚至可以为 null 的列。  
   
- 对于基本方案，只需设置 RDS 的 **SQL**、 **Connect**和 **Server** 属性 **。DataControl** 对象，它将自动调用默认业务对象 [RDSServer. DataFactory](./datafactory-object-rdsserver.md)。  
+ 对于基本方案，只需设置 RDS 的 **SQL**、 **Connect** 和 **Server** 属性 **。DataControl** 对象，它将自动调用默认业务对象 [RDSServer. DataFactory](./datafactory-object-rdsserver.md)。  
   
  RDS 中的所有属性 **。DataControl** 是可选的，因为自定义业务对象可以替换其功能。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "91721098"
  使用 Internet Explorer 4.0 或更高版本时，仅当 HTML 控件和 ActiveX®控件标记为单元模型控件时，才能使用这些控件绑定到数据。  
   
 > [!NOTE]
->  **Microsoft Visual Basic 用户****RDS。DataControl**对于脚本是安全的，仅在基于 Web 的应用程序中使用。 Visual Basic 客户端应用程序不需要此应用程序。  
+>  **Microsoft Visual Basic 用户****RDS。DataControl** 对于脚本是安全的，仅在基于 Web 的应用程序中使用。 Visual Basic 客户端应用程序不需要此应用程序。  
   
  本部分包含以下主题。  
   

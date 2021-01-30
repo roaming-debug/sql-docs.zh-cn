@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - escape sequences [ODBC], procedure call
 - procedure call escape sequence [ODBC]
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba88f3d78edeaa1ce4f4884977656cd8a4a16062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a3177c134009ed6f8979637980e96f39ab9badd2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483220"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205330"
 ---
 # <a name="procedure-call-escape-sequence"></a>过程调用转义序列
 ODBC 对过程调用使用转义序列。 此转义序列的语法如下所示：  
   
- **{**[？ =]**call** *procedure-name*[** (**[*参数*] [，[*parameter*]] .。。**) **]**}**  
+ **{**[？ =]**call** *procedure-name*[**(**[*参数*] [，[*parameter*]] .。。**)**]**}**  
   
  在 BNF 表示法中，语法如下：  
   
@@ -57,7 +57,7 @@ ODBC 对过程调用使用转义序列。 此转义序列的语法如下所示�
   
  *过程参数-list* ：： = *procedure-参数*  
   
- &#124;*过程*参数（*过程参数列表*）  
+ &#124;*过程* 参数（*过程参数列表*）  
   
  *过程参数* ：： = *动态参数* &#124; *文本* &#124; *为空字符串*  
   

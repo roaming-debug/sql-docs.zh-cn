@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cdc3f2109d1938d7388454dcd1054deba341ed44
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ce3cc80262b44ed824b61ddcd56631d15c5cfc65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724328"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168817"
 ---
 # <a name="readystate-property-rds"></a>ReadyState 属性 (RDS)
 指示 [DataControl](./datacontrol-object-rds.md) 对象在其 [Recordset](../ado-api/recordset-object-ado.md) 对象中检索数据时的进度。  
@@ -32,7 +32,7 @@ ms.locfileid: "91724328"
   
 |值|说明|  
 |-----------|-----------------|  
-|**adcReadyStateLoaded**|当前查询仍在执行，未提取行。 **DataControl**对象的**记录集**不可用。|  
+|**adcReadyStateLoaded**|当前查询仍在执行，未提取行。 **DataControl** 对象的 **记录集** 不可用。|  
 |**adcReadyStateInteractive**|当前查询检索到的初始行集已存储在 **DataControl** 对象的 **记录集中** ，可供使用。 仍在提取剩余行。|  
 |**adcReadyStateComplete**|当前查询检索到的所有行都存储在 **DataControl** 对象的 **记录集中** ，可供使用。<br /><br /> 如果操作由于错误而中止，或者 **记录集** 对象未初始化，则也会存在此状态。|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "91724328"
 ## <a name="remarks"></a>备注  
  在异步查询操作期间，使用 [onReadyStateChange](./onreadystatechange-event-rds.md) 事件监视 **ReadyState** 属性中的更改。 这比定期检查属性值更有效。  
   
- 如果在异步操作过程中发生错误，则**ReadyState**属性更改为**adcReadyStateComplete**，[状态](../ado-api/state-property-ado.md)属性从**adStateExecuting**更改为**adStateClosed**，而**Recordset**对象的[值](../ado-api/value-property-ado.md)属性则不*会。*  
+ 如果在异步操作过程中发生错误，则 **ReadyState** 属性更改为 **adcReadyStateComplete**，[状态](../ado-api/state-property-ado.md)属性从 **adStateExecuting** 更改为 **adStateClosed**，而 **Recordset** 对象的 [值](../ado-api/value-property-ado.md)属性则不 *会。*  
   
 ## <a name="applies-to"></a>应用于  
  [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  

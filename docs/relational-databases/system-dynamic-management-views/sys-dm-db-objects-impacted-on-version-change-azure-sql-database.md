@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_objects_impacted_on_version_change_TSQL
 - dm_db_objects_impacted_on_version_change
@@ -21,12 +21,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f7830e874026b9d5af250fde294c8c72294d013d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6e04a46841fe9e1df60133c9f3ff9495e4375abc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097697"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206270"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "98097697"
 |class_desc|**nvarchar (60)** NOT NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** NOT NULL|约束的对象 ID，或包含索引或堆的表的对象 ID。|  
 |minor_id|**int** 无效|对于约束为 **NULL**<br /><br /> 索引和堆的 Index_id|  
-|dependency|**nvarchar (60)** NOT NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **space**（用于内部）<br /><br /> **geometry**（用于系统 UDT）<br /><br /> **geography::Parse**（用于系统 UDT 方法）|  
+|dependency|**nvarchar (60)** NOT NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例:<br /><br /> **space**（用于内部）<br /><br /> **geometry**（用于系统 UDT）<br /><br /> **geography::Parse**（用于系统 UDT 方法）|  
   
 ## <a name="permissions"></a>权限  
  需要拥有 VIEW DATABASE STATE 权限。  

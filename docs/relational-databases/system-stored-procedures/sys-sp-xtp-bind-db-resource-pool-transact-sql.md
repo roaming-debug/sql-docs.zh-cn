@@ -1,13 +1,13 @@
 ---
 description: sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
-title: sys. sp_xtp_bind_db_resource_pool (Transact-sql) |Microsoft Docs
+title: sys.sp_xtp_bind_db_resource_pool (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_xtp_bind_db_resource_pool_TSQL
 - sp_xtp_bind_db_resource_pool
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 436d04ea81df4b25646b4b56d8ac59ffc9fa3b91
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 73312fdb49f223f8a275ade2a13bf2d988649404
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540389"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205083"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -93,7 +93,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **数据库已绑定至其他资源池**  
- 在任何时候，数据库都只能绑定至一个资源池。 必须显式删除与资源池的数据库绑定，才能将数据库绑定至其他池。 请参阅 [sys.databases &#40;transact-sql&#41;sp_xtp_unbind_db_resource_pool ](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
+ 在任何时候，数据库都只能绑定至一个资源池。 必须显式删除与资源池的数据库绑定，才能将数据库绑定至其他池。 请参阅 [&#40;transact-sql&#41;sys.sp_xtp_unbind_db_resource_pool ](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
 *数据库% s 已绑定到资源池% s。 必须先取消绑定，然后才能创建新绑定。*  
   
 ```  

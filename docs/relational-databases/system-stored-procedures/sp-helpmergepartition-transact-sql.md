@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergepartition
 - sp_helpmergepartition_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79e4d1ea4ea226706aa34db3121b2a4469a330b9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 06994bb4f0e606f0d67e797603e6f4a23899076b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546047"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185733"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**依据**|**int**|标识订阅服务器分区。|  
+|**partition**|**int**|标识订阅服务器分区。|  
 |**host_name**|**sysname**|为订阅创建分区时使用的值，该订阅按订阅服务器上 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 函数的值进行筛选。|  
 |**suser_sname**|**sysname**|为订阅创建分区时使用的值，该订阅按订阅服务器上 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 函数的值进行筛选。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|订阅服务器分区的已筛选数据快照的位置。|  

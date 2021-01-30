@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_defaultlanguage
 - sp_defaultlanguage_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5eb94ea64b22f233d1c7c1e5d508fc0704f931ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9c382a442e6b87220f2650e65adc03089f2014b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549848"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195560"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +44,9 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login'` 登录名。 *login* 的 **sysname**为，无默认值。 *登录名* 可以是现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，也可以是 Windows 用户或组。  
+`[ @loginame = ] 'login'` 登录名。 *login* 的 **sysname** 为，无默认值。 *登录名* 可以是现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，也可以是 Windows 用户或组。  
   
-`[ @language = ] 'language'` 登录名的默认语言。 *language* 的值为 **sysname**，默认值为 NULL。 *语言* 必须是服务器上的有效语言。 如果未指定 *语言* ，则 *语言* 设置为服务器默认语言;默认语言由 **sp_configure** 配置变量 **默认语言**定义。 更改服务器默认语言不会更改现有登录的默认语言。  
+`[ @language = ] 'language'` 登录名的默认语言。 *language* 的值为 **sysname**，默认值为 NULL。 *语言* 必须是服务器上的有效语言。 如果未指定 *语言* ，则 *语言* 设置为服务器默认语言;默认语言由 **sp_configure** 配置变量 **默认语言** 定义。 更改服务器默认语言不会更改现有登录的默认语言。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -56,9 +56,9 @@ sp_defaultlanguage [ @loginame = ] 'login'
   
  使用 SET LANGUAGE 语句更改当前会话的语言。 使用 @ @LANGUAGE 函数显示当前语言设置。  
   
- 如果从服务器中删除登录的默认语言，则登录将获取服务器的默认语言。 不能在用户定义的事务中执行**sp_defaultlanguage** 。  
+ 如果从服务器中删除登录的默认语言，则登录将获取服务器的默认语言。 不能在用户定义的事务中执行 **sp_defaultlanguage** 。  
   
- **sys.sys语言**目录视图中显示了服务器上安装的语言的相关信息。  
+ **sys.sys语言** 目录视图中显示了服务器上安装的语言的相关信息。  
   
 ## <a name="permissions"></a>权限  
  需要 ALTER ANY LOGIN 权限。  

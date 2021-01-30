@@ -6,7 +6,7 @@ ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_os_memory_cache_entries
 - sys.dm_os_memory_cache_entries
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: bbab29fa5ed1080b52c149919e1d364969f962ef
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4a274e7bc724cd838373b465029a3a02c4dfc645
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101484"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184835"
 ---
 # <a name="sysdm_os_memory_cache_entries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "98101484"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|缓存的地址。 不可为 null。|  
-|name|**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|type|**varchar(60)**|缓存类型。 不可为 null。|  
+|name |**nvarchar(256)**|缓存的名称。 不可为 null。|  
+|type |**varchar(60)**|缓存类型。 不可为 null。|  
 |**entry_address**|**varbinary(8)**|缓存条目的描述符地址。 不可为 null。|  
 |**entry_data_address**|**varbinary(8)**|缓存条目中用户数据的地址。<br /><br /> 0x00000000 = 条目数据地址不可用。<br /><br /> 不可为 null。|  
 |**in_use_count**|**int**|同时使用此缓存条目的用户数。 不可为 null。|  

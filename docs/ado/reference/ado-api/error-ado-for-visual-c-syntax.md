@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc77b15187701e94469660e3cc8ef29c9a060139
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: de6e7fbdeb7fccdf766f1d80a31782a9a8ea6061
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973759"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167476"
 ---
 # <a name="error-ado-for-visual-c-syntax"></a>错误（ADO for Visual C++ 语法）
 ## <a name="properties"></a>属性  

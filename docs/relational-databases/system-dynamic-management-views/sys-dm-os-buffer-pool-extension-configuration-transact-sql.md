@@ -6,7 +6,7 @@ ms.date: 09/09/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_os_buffer_pool_extension_configuration
 - sys.dm_os_buffer_pool_extension_configuration_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 5477a9da1810c64b6c6c359694f3db9254948efa
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 60e65c3dc79cccb0c3b01d7369e68cd6ff8efa53
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101519"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184951"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "98101519"
   
 
   
-| 列名称 | 数据类型 | 描述 |
+| 列名称 | 数据类型 | 说明 |
 | :---------- | :-------- | :---------- |
 |path|**nvarchar** (256) |缓冲池扩展缓存的路径和文件名。 可以为 NULL。|  
 |file_id|**int**|缓冲池扩展文件的 ID。 不可为 null。|  

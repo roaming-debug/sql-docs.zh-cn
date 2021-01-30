@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergefilter
 - sp_addmergefilter_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 662fc45f9d2d4377bdb9a02ce69047a469d5bfe7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 836f493a3ae4ca6d3f17928af0d5faa367bdd1b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546269"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192333"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,13 +50,13 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 要添加合并筛选器的项目的名称。 *项目* 是 **sysname**，无默认值。  
   
-`[ @filtername = ] 'filtername'` 筛选器的名称。 *filtername* 是必需的参数。 *filtername*的值为 **sysname**，无默认值。  
+`[ @filtername = ] 'filtername'` 筛选器的名称。 *filtername* 是必需的参数。 *filtername* 的值为 **sysname**，无默认值。  
   
-`[ @join_articlename = ] 'join_articlename'`*项目*所指定的子项目必须使用*join_filterclause*指定的联接子句进行联接，以确定子项目中满足合并筛选器条件的行的父项目。 *join_articlename* **sysname**，无默认值。 项目必须位于 *发布*所指定的发布中。  
+`[ @join_articlename = ] 'join_articlename'`*项目* 所指定的子项目必须使用 *join_filterclause* 指定的联接子句进行联接，以确定子项目中满足合并筛选器条件的行的父项目。 *join_articlename* **sysname**，无默认值。 项目必须位于 *发布* 所指定的发布中。  
   
-`[ @join_filterclause = ] join_filterclause`必须用于联接由*join_article*指定的*项目*和父项目指定的子项目的 join 子句，以便确定符合合并筛选器的行。 *join_filterclause* ** (1000) 为 nvarchar **。  
+`[ @join_filterclause = ] join_filterclause`必须用于联接由 *join_article* 指定的 *项目* 和父项目指定的子项目的 join 子句，以便确定符合合并筛选器的行。 *join_filterclause* **(1000) 为 nvarchar**。  
   
-`[ @join_unique_key = ] join_unique_key` 指定子 *项目和父项目* *join_article*之间的联接是一对多、一对一、多对一还是多对多的联接）。 *join_unique_key* 的值为 **int**，默认值为0。 **0** 指示多对一或多对多联接。 " **1** " 指示一对一或一对多联接。 如果联接列在*join_article*中形成唯一键，或者*join_filterclause*在*项目*的外键与*join_article*的主键之间，则此值为**1** 。  
+`[ @join_unique_key = ] join_unique_key` 指定子 *项目和父项目* *join_article* 之间的联接是一对多、一对一、多对一还是多对多的联接）。 *join_unique_key* 的值为 **int**，默认值为0。 **0** 指示多对一或多对多联接。 " **1** " 指示一对一或一对多联接。 如果联接列在 *join_article* 中形成唯一键，或者 *join_filterclause* 在 *项目* 的外键与 *join_article* 的主键之间，则此值为 **1** 。  
   
 > [!CAUTION]  
 >  仅当对父项目的基础表中的联接列具有保证唯一性的约束时，才将此参数设置为 **1** 。 如果不正确地将 *join_unique_key* 设置为 **1** ，则可能会导致数据无法收敛。  

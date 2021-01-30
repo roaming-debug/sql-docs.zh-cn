@@ -1,13 +1,13 @@
 ---
-description: 'managed_backup sp_backup_on_demand (Transact-sql) '
-title: managed_backup sp_backup_on_demand (Transact-sql) |Microsoft Docs
+description: " (transact-sql 的 managed_backup.sp_backup_on_demand managed_backup) "
+title: managed_backup managed_backup.sp_backup_on_demand (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - smart_admin.sp_backup_on_demand
 - smart_admin.sp_backup_on_demand_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79188e36e5a876fb61ddda3af94f37372963a08c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 480338a6194b07f15d8c139a6675649e5c4f8e7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548401"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205301"
 ---
-# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup sp_backup_on_demand (Transact-sql) 
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a> (transact-sql 的 managed_backup.sp_backup_on_demand managed_backup) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   请求 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 执行对指定数据库的备份。  
@@ -51,10 +51,10 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  @database_name  
- 要对其执行备份的数据库的名称。 @database_name为**SYSNAME**。  
+ 要对其执行备份的数据库的名称。 @database_name为 **SYSNAME**。  
   
  @type  
- 要执行的备份类型：数据库或日志。 @type参数** (32) 为 NVARCHAR **。  
+ 要执行的备份类型：数据库或日志。 @type参数 **(32) 为 NVARCHAR**。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -62,7 +62,7 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 要求具有**db_backupoperator**数据库角色的成员身份，具有**ALTER ANY CREDENTIAL**权限以及对**sp_delete_backuphistory**存储过程的**EXECUTE**权限。  
+ 要求具有 **db_backupoperator** 数据库角色的成员身份，具有 **ALTER ANY CREDENTIAL** 权限以及对 **sp_delete_backuphistory** 存储过程的 **EXECUTE** 权限。  
   
 ## <a name="examples"></a>示例  
  下面的示例为数据库 "TestDB" 创建数据库备份请求。 此数据库启用了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  

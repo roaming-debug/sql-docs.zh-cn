@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fe38de33ea0b5f0784af27f031d2a93759d15aa
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 148e889a4b9ac406732a5665d02dd9d52727b6ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722353"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168956"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 属性 (RDS)
 指示是否启用异步执行。  
@@ -43,7 +43,7 @@ ms.locfileid: "91722353"
   
  如果尝试调用 [Reset](./reset-method-rds.md)、 [Refresh](./refresh-method-rds.md)、 [SubmitChanges](./submitchanges-method-rds.md)、 [CancelUpdate](../ado-api/cancelupdate-method-ado.md)或 [Recordset](./recordset-sourcerecordset-properties-rds.md) ，而另一个可能更改 RDS 的异步操作 [。DataControl](./datacontrol-object-rds.md) 对象的 **记录集** 正在执行，发生错误。  
   
- 如果在异步操作过程中发生错误，则将使用**RDS。DataControl**对象的[ReadyState](./readystate-property-rds.md)值从**adcReadyStateLoaded**更改为**adcReadyStateComplete**， **Recordset**属性值不会更改 *。*  
+ 如果在异步操作过程中发生错误，则将使用 **RDS。DataControl** 对象的 [ReadyState](./readystate-property-rds.md)值从 **adcReadyStateLoaded** 更改为 **adcReadyStateComplete**， **Recordset** 属性值不会更改 *。*  
   
 ## <a name="applies-to"></a>应用于  
  [DataControl 对象 (RDS)](./datacontrol-object-rds.md)  

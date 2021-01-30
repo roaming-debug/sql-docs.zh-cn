@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9b35f89911c0b016c52eed00f8165b767968180
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2bfcf230d897274c45621dd404c9ed2816946812
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973248"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167391"
 ---
 # <a name="field-ado---wfc-syntax"></a>字段（ADO - WFC 语法）
 ## <a name="package-commswfcdata"></a>包 .com. 数据  
@@ -67,9 +67,9 @@ public AdoProperties getProperties()
 ### <a name="field-accessor-methods"></a>字段访问器方法  
  [Field](../../../ado/reference/ado-api/field-object.md)对象的[Value](../../../ado/reference/ado-api/value-property-ado.md)属性可获取或设置该对象的内容。 内容表示为一种变量，一种可以为其分配值和多个数据类型的对象的类型。  
   
- ADO/WFC 使用**getValue**方法实现**Value**属性，该方法返回变量对象;和**setValue**方法，该方法采用变量作为参数。 变体在某些语言（如 Microsoft Visual Basic）中效率高。  
+ ADO/WFC 使用 **getValue** 方法实现 **Value** 属性，该方法返回变量对象;和 **setValue** 方法，该方法采用变量作为参数。 变体在某些语言（如 Microsoft Visual Basic）中效率高。  
   
- 除了**Value**属性，ADO/WFC 还提供使用 Java 数据类型获取和设置**字段**对象内容的*访问器*方法。 这些方法中的大多数都具有格式为 **获取**_数据_ 类型或 **设置**_数据类型_的名称。  
+ 除了 **Value** 属性，ADO/WFC 还提供使用 Java 数据类型获取和设置 **字段** 对象内容的 *访问器* 方法。 这些方法中的大多数都具有格式为 **获取**_数据_ 类型或 **设置**_数据类型_ 的名称。  
   
  有两个值得注意的异常：其中一个 **getObject** 方法返回强制转换为指定类的对象。 没有 **getNull** 属性;相反，有一个 **isNull** 属性，它返回一个布尔值，指示该字段是否为 null。  
   

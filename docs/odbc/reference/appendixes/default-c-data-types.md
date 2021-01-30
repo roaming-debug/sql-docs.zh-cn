@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], pseudo-type identifiers
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7d0ed42971405ca23d5f69f47cbb6ac02e8e5675
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd7f50e58fd84cec5938aacc598d12e6d733fcdc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456603"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194897"
 ---
 # <a name="default-c-data-types"></a>默认 C 数据类型
-如果应用程序在 **SQLBindCol**、 **SQLGetData**或 **SQLBindParameter**中指定 SQL_C_DEFAULT，则驱动程序会假定输出或输入缓冲区的 C 数据类型对应于缓冲区绑定到的列或参数的 SQL 数据类型。  
+如果应用程序在 **SQLBindCol**、 **SQLGetData** 或 **SQLBindParameter** 中指定 SQL_C_DEFAULT，则驱动程序会假定输出或输入缓冲区的 C 数据类型对应于缓冲区绑定到的列或参数的 SQL 数据类型。  
   
 > [!IMPORTANT]  
 >  互操作应用程序不应使用 SQL_C_DEFAULT。 相反，它们应始终指定它们所使用的缓冲区的 C 类型。 这是因为，由于以下原因，驱动程序无法始终正确确定默认 C 类型：  

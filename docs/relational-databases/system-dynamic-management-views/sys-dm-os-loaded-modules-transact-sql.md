@@ -6,7 +6,7 @@ ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_os_loaded_modules
 - dm_os_loaded_modules
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 77f4e2e69e73be88bd4cb70dcad7d7069eb8539d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5d807593527ea08586aaaefdbf46c0fa9ee874ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094022"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184870"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "98094022"
 |**language**|**int**|模块的版本信息语言。|  
 |**上市公司**|**nvarchar(256)**|创建模块的公司的名称。|  
 |description|**nvarchar(256)**|模块的说明。|  
-|name|**nvarchar(255)**|模块的名称。 包括模块的完整路径。|  
+|name |**nvarchar(255)**|模块的名称。 包括模块的完整路径。|  
 |pdw_node_id|**int**|适用于：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  

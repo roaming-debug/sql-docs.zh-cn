@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_manage_jobs_by_login
 - sp_manage_jobs_by_login_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e16bce5905a993082ca480996fae9639dd053eeb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5f367f869092bde5458c732fda3e79bc06e43cb8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547616"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185356"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @action = ] 'action'` 要对指定的登录名执行的操作。 *操作* 是 **varchar (10) **，无默认值。 删除*操作*时**DELETE**， **sp_manage_jobs_by_login**会删除*current_owner_login_name*拥有的所有作业。 **重新分配***操作*时，会将所有作业分配给*new_owner_login_name*。  
+`[ @action = ] 'action'` 要对指定的登录名执行的操作。 *操作* 是 **varchar (10)**，无默认值。 删除 *操作* 时， **sp_manage_jobs_by_login** 会删除 *current_owner_login_name* 拥有的所有作业。 **重新分配***操作* 时，会将所有作业分配给 *new_owner_login_name*。  
   
 `[ @current_owner_login_name = ] 'current_owner_login_name'` 当前作业所有者的登录名。 *current_owner_login_name* **sysname**，无默认值。  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'` 新作业所有者的登录名。 仅在*操作***重新分配**时使用此参数。 *new_owner_login_name* 的默认值为 **sysname**，默认值为 NULL。  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` 新作业所有者的登录名。 仅在 *操作***重新分配** 时使用此参数。 *new_owner_login_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
