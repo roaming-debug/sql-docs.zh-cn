@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpconstraint
 - sp_helpconstraint_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7199b56a0bf0c0eb397a061ca366534bdbf9c6ee
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dddf290bd1b22f0ec25f9ea03dd2e9766e184308
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97404139"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176456"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ sp_helpconstraint [ @objname = ] 'table'
      [ , [ @nomsg = ] 'no_message' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @objname = ] 'table'` 是有关返回哪些约束信息的表。 对于当前数据库而言，指定的表必须位于本地。 *table* 为 **nvarchar (776)**，无默认值。  
   
 `[ @nomsg = ] 'no_message'` 是用于打印表名称的可选参数。 *no_message* 是 **varchar (5)**，默认值为 **msg**。 **nomsg 表示** 禁止打印。  

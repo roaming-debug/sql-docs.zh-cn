@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_job
 - sp_delete_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d4ded9ec986afc467534c3053e17831147bc404
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ef2fdfc32a0b8b076037b3d75d2c88df9a5883aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541835"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186347"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,11 +52,11 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 `[ @originating_server = ] 'server'` 供内部使用。  
   
-`[ @delete_history = ] delete_history` 指定是否删除作业的历史记录。 *delete_history* 为 **bit**，默认值为 **1**。 当 *delete_history* 为 **1**时，将删除该作业的作业历史记录。 当 *delete_history* 为 **0**时，不会删除作业历史记录。  
+`[ @delete_history = ] delete_history` 指定是否删除作业的历史记录。 *delete_history* 为 **bit**，默认值为 **1**。 当 *delete_history* 为 **1** 时，将删除该作业的作业历史记录。 当 *delete_history* 为 **0** 时，不会删除作业历史记录。  
   
- 请注意，在删除作业并且未删除历史记录时，作业的历史信息将不会显示在 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理图形用户界面作业历史记录" 中，但该信息仍将驻留在**msdb**数据库的**sysjobhistory**表中。  
+ 请注意，在删除作业并且未删除历史记录时，作业的历史信息将不会显示在 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理图形用户界面作业历史记录" 中，但该信息仍将驻留在 **msdb** 数据库的 **sysjobhistory** 表中。  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` 指定是否删除附加到该作业的计划（如果它们未附加到任何其他作业）。 *delete_unused_schedule* 为 **bit**，默认值为 **1**。 当 *delete_unused_schedule* 为 **1**时，如果没有其他作业引用该计划，则将删除附加到此作业的计划。 如果 *delete_unused_schedule* 为 **0**，则不会删除计划。  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 指定是否删除附加到该作业的计划（如果它们未附加到任何其他作业）。 *delete_unused_schedule* 为 **bit**，默认值为 **1**。 当 *delete_unused_schedule* 为 **1** 时，如果没有其他作业引用该计划，则将删除附加到此作业的计划。 如果 *delete_unused_schedule* 为 **0**，则不会删除计划。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -65,16 +65,16 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  无  
   
 ## <a name="remarks"></a>备注  
- ** \@ Originating_server**参数保留供内部使用。  
+ **\@ Originating_server** 参数保留供内部使用。  
   
- ** \@ Delete_unused_schedule**参数通过自动删除未附加到任何作业的计划，提供与以前版本的 SQL Server 的向后兼容性。 请注意，此参数默认为向后兼容行为。 若要保留未附加到作业的计划，则必须提供值**0**作为** \@ delete_unused_schedule**参数。  
+ **\@ Delete_unused_schedule** 参数通过自动删除未附加到任何作业的计划，提供与以前版本的 SQL Server 的向后兼容性。 请注意，此参数默认为向后兼容行为。 若要保留未附加到作业的计划，则必须提供值 **0** 作为 **\@ delete_unused_schedule** 参数。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
  此存储过程不能删除维护计划，也不能删除维护计划中包含的作业。 请改用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来删除维护计划。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

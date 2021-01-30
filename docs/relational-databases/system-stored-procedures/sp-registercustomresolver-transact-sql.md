@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_registercustomresolver
 - sp_registercustomresolver_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd973ace7e8edbd7a5ec561fd53a19f8a7a05a92
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4a4c08e8643aedaecd415177ef87f9fadc69563f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543155"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185697"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +42,15 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @article_resolver = ] 'article_resolver'` 指定正在注册的自定义业务逻辑的友好名称。 *article_resolver* 为 **nvarchar (255) **，无默认值。  
+`[ @article_resolver = ] 'article_resolver'` 指定正在注册的自定义业务逻辑的友好名称。 *article_resolver* 为 **nvarchar (255)**，无默认值。  
   
-`[ @resolver_clsid = ] 'resolver_clsid'` 指定正在注册的 COM 对象的 CLSID 值。 自定义业务逻辑 *resolver_clsid* 为 **nvarchar (50) **，默认值为 NULL。 在注册业务逻辑处理程序程序集时，必须将该参数设置为有效的 CLSID，或将其设置为 NULL。  
+`[ @resolver_clsid = ] 'resolver_clsid'` 指定正在注册的 COM 对象的 CLSID 值。 自定义业务逻辑 *resolver_clsid* 为 **nvarchar (50)**，默认值为 NULL。 在注册业务逻辑处理程序程序集时，必须将该参数设置为有效的 CLSID，或将其设置为 NULL。  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` 指定正在注册的自定义业务逻辑的类型。 *is_dotnet_assembly* 为 **nvarchar (50) **，默认值为 FALSE。 **true** 指示正在注册的自定义业务逻辑是一个业务逻辑处理程序程序集; **false** 指示它是一个 COM 组件。  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` 指定正在注册的自定义业务逻辑的类型。 *is_dotnet_assembly* 为 **nvarchar (50)**，默认值为 FALSE。 **true** 指示正在注册的自定义业务逻辑是一个业务逻辑处理程序程序集; **false** 指示它是一个 COM 组件。  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` 实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name* 为 **nvarchar (255) **，默认值为 NULL。 如果该程序集未部署到与合并代理可执行文件相同的目录中、与同步启动合并代理的应用程序相同的目录中或全局程序集缓存 (GAC) 中，则必须指定该程序集的完整路径。  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` 实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name* 为 **nvarchar (255)**，默认值为 NULL。 如果该程序集未部署到与合并代理可执行文件相同的目录中、与同步启动合并代理的应用程序相同的目录中或全局程序集缓存 (GAC) 中，则必须指定该程序集的完整路径。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'` 是重写 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 以实现业务逻辑处理程序的类的名称。 名称应以 **命名空间. Classname**格式指定。 *dotnet_class_name* 为 **nvarchar (255) **，默认值为 NULL。  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` 是重写 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 以实现业务逻辑处理程序的类的名称。 名称应以 **命名空间. Classname** 格式指定。 *dotnet_class_name* 为 **nvarchar (255)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - crypt_properties
 - crypt_properties_TSQL
@@ -21,12 +21,12 @@ ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09372a367d3469ffa0d2de6a4ea97bb1bbe10c34
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9b1d32be9df04d9fd4e7b487120e31b771f7e569
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473038"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182559"
 ---
 # <a name="syscrypt_properties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "97473038"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|标识属性所在项的类。<br /><br /> 1 = 对象或列<br /> 5 = 程序集|  
+|class |**tinyint**|标识属性所在项的类。<br /><br /> 1 = 对象或列<br /> 5 = 程序集|  
 |**class_desc**|**nvarchar(60)**|对于属性所在项的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|属性所在项的 ID，根据类解释。|  
-|**thumbprint**|**varbinary(32)**|所用证书或非对称密钥的 SHA-1 哈希。|  
+|**指纹**|**varbinary(32)**|所用证书或非对称密钥的 SHA-1 哈希。|  
 |**crypt_type**|**char (4)**|加密类型。<br /><br /> SPVC = 通过证书私钥签名<br /><br /> SPVA = 使用非对称私钥签名<br /><br /> CPVC = 使用证书私钥加密的计数器签名<br /><br /> CPVA = 使用非对称密钥加密的计数器签名|  
 |**crypt_type_desc**|**nvarchar(60)**|对加密类型的说明。<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
 |**crypt_property**|**varbinary(max)**|标记位或加密位。 对于已签名的模块，这些是模块的签名位。|  

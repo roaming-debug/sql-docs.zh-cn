@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], data types
 - data types [ODBC], desktop database drivers
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4853846f21aa0ad763295bbdc4233c472ac53864
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9081f52e7cf79613b9021ce7b883a1720da468c6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412783"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176530"
 ---
 # <a name="data-type-limitations"></a>数据类型限制
 Microsoft ODBC 桌面数据库驱动程序对数据类型有以下限制：  
@@ -31,8 +31,8 @@ Microsoft ODBC 桌面数据库驱动程序对数据类型有以下限制：
 |BINARY|创建长度为零的二进制列实际上返回255字节的二进制列。|  
 |DATE|DATE 数据类型无法转换为另一种数据类型 (或其自身) CONVERT 函数。|  
 |小数 (精确数值) |不支持。|  
-|浮点数据类型|浮点数中的小数位数可能受 Windows "控制面板" 的 "国际" 部分中设置的数字格式的限制。|  
+|Floating-Point 数据类型|浮点数中的小数位数可能受 Windows "控制面板" 的 "国际" 部分中设置的数字格式的限制。|  
 |NUMERIC|支持最大精度和28的小数位数。|  
 |TIMESTAMP|TIMESTAMP 数据类型不能通过 CONVERT 函数转换为自身。|  
 |TINYINT|TINYINT 值始终是无符号值。|  
-|长度为零的字符串|使用 dBASE、Microsoft Excel、Paradox 或 Textdriver 时，将长度为零的字符串插入列实际上是插入 NULL。|
+|Zero-Length 字符串|使用 dBASE、Microsoft Excel、Paradox 或 Textdriver 时，将长度为零的字符串插入列实际上是插入 NULL。|

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.trace_columns
 - trace_columns
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 740f553e4809a5eb971bb7bfe7e97b5b628dfebd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 3785176cea0d4a498f1eda8ea04d983a1fee72b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094380"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182859"
 ---
 # <a name="systrace_columns-transact-sql"></a>sys.trace_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98094380"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|该列的唯一 ID。|  
-|name|**nvarchar(128)**|该列的唯一名称。 此参数未本地化。|  
+|name |**nvarchar(128)**|该列的唯一名称。 此参数未本地化。|  
 |type_name|**nvarchar(128)**|该列的数据类型名称。|  
 |**max_size**|**int**|该列数据的最大大小，以字节表示。|  
 |**is_filterable**|**bit**|指示是否可在筛选器说明中使用该列。<br /><br /> 0 = false<br /><br /> 1 = true|  

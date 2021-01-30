@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setsubscriptionxactseqno
 - sp_setsubscriptionxactseqno_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7908e6cc064a5ad5c973236be759bdea313c5f6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3ec2589b3cacb2e4426793b6adb7814c03e19fce
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547872"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176406"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，无默认值。 如果分发代理由多个发布共享，则必须为 " *发布*" 指定一个值。  
   
-`[ @xact_seqno = ] xact_seqno` 是要应用于订阅服务器的分发服务器上的下一个事务的 LSN。 *xact_seqno* 为 **varbinary (16) **，无默认值。  
+`[ @xact_seqno = ] xact_seqno` 是要应用于订阅服务器的分发服务器上的下一个事务的 LSN。 *xact_seqno* 为 **varbinary (16)**，无默认值。  
   
 ## <a name="result-set"></a>结果集  
   
@@ -66,13 +66,13 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>备注  
  **sp_setsubscriptionxactseqno** 用于事务复制。  
   
- 不能在对等事务复制拓扑中使用**sp_setsubscriptionxactseqno** 。  
+ 不能在对等事务复制拓扑中使用 **sp_setsubscriptionxactseqno** 。  
   
- 当应用于订阅服务器时， **sp_setsubscriptionxactseqno**可以用于跳过导致错误的特定事务。 如果出现故障，在分发代理停止后，请在分发服务器上调用 [sp_helpsubscriptionerrors &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) 以检索失败事务的 xact_seqno 值，然后调用 **sp_setsubscriptionxactseqno**，同时为 *xact_seqno*传递此值。 这将确保只处理此 LSN 之后的命令。  
+ 当应用于订阅服务器时， **sp_setsubscriptionxactseqno** 可以用于跳过导致错误的特定事务。 如果出现故障，在分发代理停止后，请在分发服务器上调用 [sp_helpsubscriptionerrors &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) 以检索失败事务的 xact_seqno 值，然后调用 **sp_setsubscriptionxactseqno**，同时为 *xact_seqno* 传递此值。 这将确保只处理此 LSN 之后的命令。  
   
- 将*xact_seqno*的值指定为**0** ，将分发数据库中的所有挂起的命令传递到订阅服务器。  
+ 将 *xact_seqno* 的值指定为 **0** ，将分发数据库中的所有挂起的命令传递到订阅服务器。  
   
- 如果分发代理使用多订阅流， **sp_setsubscriptionxactseqno**可能会失败。  
+ 如果分发代理使用多订阅流， **sp_setsubscriptionxactseqno** 可能会失败。  
   
  如果出现此错误，必须运行使用单个订阅流的分发代理。 有关详细信息，请参阅 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help
 - sp_help_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe0b4f610b0656a0b82ad80adebde1480f14c6f3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e97e2118c90521881dbf55d686910cff01ef79e7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478908"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176572"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "97478908"
 sp_help [ [ @objname = ] 'name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @objname = ] 'name'`**Sysobjects** 或 **systypes** 表中任何用户定义的数据类型的任何对象的名称。 *name* 为 **nvarchar (** 776 **)**，默认值为 NULL。 不能接受数据库名称。  两个或三个部分的名称必须进行分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
    
   
@@ -67,7 +67,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Storage_type**|**nvarchar (** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型名称。|  
     |**时长**|**smallint**|数据类型的物理长度（以字节为单位）。|  
     |**Prec**|**int**|精度（数字总位数）。|  
-    |**可伸缩**|**int**|小数点右边的位数。|  
+    |**缩放**|**int**|小数点右边的位数。|  
     |**可以为 Null**|**varchar (** 35 **)**|指示是否允许 NULL 值：“是”或“否”。|  
     |**Default_name**|**nvarchar (** 128 **)**|绑定到此类型的默认值的名称。<br /><br /> NULL = 未绑定默认值。|  
     |**Rule_name**|**nvarchar (** 128 **)**|绑定到此类型的规则的名称。<br /><br /> NULL = 未绑定默认值。|  
@@ -79,7 +79,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**名称**|**nvarchar (** 128 **)**|表名|  
     |**所有者**|**nvarchar (** 128 **)**|表所有者|  
-    |**类型**|**nvarchar (** 31 **)**|表类型|  
+    |**Type**|**nvarchar (** 31 **)**|表类型|  
     |**Created_datetime**|**datetime**|表的创建日期|  
   
      **Sp_help** 返回其他结果集，具体取决于指定的数据库对象。  
@@ -91,11 +91,11 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar (** 128 **)**|列名称。|  
-        |**类型**|**nvarchar (** 128 **)**|列数据类型。|  
+        |**Type**|**nvarchar (** 128 **)**|列数据类型。|  
         |**得出**|**varchar (** 35 **)**|指示是否计算列中的值：“是”或“否”。|  
         |**时长**|**int**|以字节为单位的列长度。<br /><br /> 注意：如果列数据类型为大值类型 (**varchar (max)**、 **nvarchar (max**) 、 **varbinary (max)** 或 **xml**) ，则该值将显示为-1。|  
         |**Prec**|**char (** 5 **)**|列精度。|  
-        |**可伸缩**|**char (** 5 **)**|列小数位数。|  
+        |**缩放**|**char (** 5 **)**|列小数位数。|  
         |**可以为 Null**|**varchar (** 35 **)**|指示是否允许列中包含 NULL 值：“是”或“否”。|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|剪裁尾随空格。 返回 Yes 或 No。|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|仅为保持向后兼容。|  
@@ -106,7 +106,7 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**标识**|**nvarchar (** 128 **)**|其数据类型被声明为标识的列名。|  
-        |**种子**|**numeric**|标识列的起始值。|  
+        |**Seed**|**numeric**|标识列的起始值。|  
         |**增量**|**numeric**|用于此列中的值的增量。|  
         |**不用于复制**|**int**|当复制登录名（如 **sqlrepl**）将数据插入到表中时，不会强制使用 IDENTITY 属性：<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -153,10 +153,10 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|存储过程参数名。|  
-        |**类型**|**nvarchar (** 128 **)**|存储过程参数的数据类型。|  
+        |**Type**|**nvarchar (** 128 **)**|存储过程参数的数据类型。|  
         |**时长**|**smallint**|最大物理存储长度（以字节为单位）。|  
         |**Prec**|**int**|精度，即数字总位数。|  
-        |**可伸缩**|**int**|小数点右边的数字位数。|  
+        |**缩放**|**int**|小数点右边的数字位数。|  
         |**Param_order**|**smallint**|参数的顺序。|  
   
 ## <a name="remarks"></a>备注  

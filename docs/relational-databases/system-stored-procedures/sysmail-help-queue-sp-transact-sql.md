@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_queue_sp
 - sysmail_help_queue_sp_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 18e7e8d96a766f628f15dfc747fc3154bc95ea57
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6aece593fd32d5ee563c7b1fe37dc039aa3eec5c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547230"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181929"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  数据库邮件中具有两个队列：邮件队列和状态队列。 邮件队列存储正在等待发送的邮件项。 状态队列存储已发送项的状态。 此存储过程允许查看邮件队列的状态或状态队列的状态。 如果未指定参数** \@ queue_type** ，则存储过程将为每个队列返回一行。  
+  数据库邮件中具有两个队列：邮件队列和状态队列。 邮件队列存储正在等待发送的邮件项。 状态队列存储已发送项的状态。 此存储过程允许查看邮件队列的状态或状态队列的状态。 如果未指定参数 **\@ queue_type** ，则存储过程将为每个队列返回一行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @queue_type = ] 'queue_type'` 可选参数删除指定为 *queue_type*的类型的电子邮件。 *queue_type* 的 ** (6) 为 nvarchar ** ，无默认值。 有效条目为 " **邮件** " 和 " **状态**"。  
+`[ @queue_type = ] 'queue_type'` 可选参数删除指定为 *queue_type* 的类型的电子邮件。 *queue_type* 的 **(6) 为 nvarchar** ，无默认值。 有效条目为 " **邮件** " 和 " **状态**"。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -49,9 +49,9 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar (6) **|队列的类型。 可能的值为 " **邮件** " 和 " **状态**"。|  
+|**queue_type**|**nvarchar (6)**|队列的类型。 可能的值为 " **邮件** " 和 " **状态**"。|  
 |**length**|**int**|指定队列中邮件项的数量。|  
-|State|**nvarchar (64) **|监视器的状态。 可能的值为 **非活动状态** (队列处于非活动状态) ， **通知** (队列收到) 接收 **，RECEIVES_OCCURRING () ** 队列。|  
+|**state**|**nvarchar (64)**|监视器的状态。 可能的值为 **非活动状态** (队列处于非活动状态) ， **通知** (队列收到) 接收 **，RECEIVES_OCCURRING ()** 队列。|  
 |**last_empty_rowset_time**|**型**|上次队列为空的日期和时间。 采用军用时间格式和 GMT 时区。|  
 |**last_activated_time**|**型**|上次激活队列的日期和时间。 采用军用时间格式和 GMT 时区。|  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval literals [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dd065091127645a45b836781fc6edf6c701e6685
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1e100fcc54f9ca6cc165eece7637b7fae45f65b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425029"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184412"
 ---
 # <a name="interval-literals"></a>间隔文本
 ODBC 要求所有驱动程序都支持将 SQL_CHAR 或 SQL_VARCHAR 数据类型转换为所有 C interval 数据类型。 但是，如果基础数据源不支持时间间隔数据类型，则驱动程序需要知道 SQL_CHAR 字段中的值的正确格式，以便支持这些转换。 同样，ODBC 要求任何 ODBC C 类型都可转换为 SQL_CHAR 或 SQL_VARCHAR，因此驱动程序需要知道字符字段中存储的间隔格式应该是什么格式。 本部分介绍了间隔文本的语法，驱动程序编写器在转换为或从 C 间隔数据类型转换的过程中，需要使用该语法来验证 SQL_CHAR 字段。  
@@ -44,7 +44,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
 -   当间隔由前导字段和尾随字段组成时，前导字段为一个非秒字段，该字段可能伴随括号中的间隔前导字段精度。 尾随字段可以是不是第二个字段，也可以是在括号内带有时间间隔分数秒精度的第二个字段。  
   
- *值*中的时间间隔字符串用单引号引起来。 它可以是年月文本或日期时间文本。 *值*中的字符串格式由以下规则确定：  
+ *值* 中的时间间隔字符串用单引号引起来。 它可以是年月文本或日期时间文本。 *值* 中的字符串格式由以下规则确定：  
   
 -   字符串包含隐含的每个字段的十进制值 \<*interval* *qualifier*> 。  
   

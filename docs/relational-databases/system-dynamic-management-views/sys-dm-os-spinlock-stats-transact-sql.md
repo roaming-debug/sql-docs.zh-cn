@@ -9,7 +9,7 @@ ms.service: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_os_spinlock_stats_TSQL
 - dm_os_spinlock_stats_TSQL
@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: 396c52a6d687c554b277e6f26c290978f035ae01
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fad0a1121d9d7d9e8cc37970022f1c5bbf028e10
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099758"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184776"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -72,7 +72,7 @@ GO
    
  下表包含一些最常见的旋转锁类型的简要说明。  
   
-|旋转锁类型|描述|  
+|旋转锁类型|说明|  
 |-----------------|-----------------|  
 |ABR|仅限内部使用。|
 |ADB_CACHE|仅限内部使用。|

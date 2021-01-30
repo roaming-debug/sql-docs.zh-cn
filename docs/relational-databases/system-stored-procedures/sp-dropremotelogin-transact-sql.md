@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropremotelogin
 - sp_dropremotelogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 6ccb8f6c4bbf5795784c8ad3712c5fe8163ff0e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b468ff83bffdd581695b9553c636b06fbe6c784
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474212"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187038"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
@@ -47,7 +47,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="arguments"></a>参数  
 `[ @remoteserver = ] 'remoteserver'` 远程服务器的名称，该远程服务器映射到要删除的远程登录名。 *remoteserver* 的值为 **sysname**，无默认值。 *remoteserver* 必须已存在。  
   
-`[ @loginame = ] 'login'` 与远程服务器相关联的本地服务器上的可选登录名。 login 的数据类型为 sysname，默认值为 NULL。 如果指定，则必须已经存在*登录名*。  
+`[ @loginame = ] 'login'` 与远程服务器相关联的本地服务器上的可选登录名。 login 的数据类型为 sysname，默认值为 NULL。 如果指定，则必须已经存在 *登录名*。  
   
 `[ @remotename = ] 'remote_name'` 在从远程服务器登录时映射到 *登录名* 的远程登录名的可选名称。 *remote_name* 的默认值为 **sysname**，默认值为 NULL。  
   
@@ -61,7 +61,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
  仅当使用早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时才需要远程登录。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 及更高版本改用链接服务器登录。 使用 **sp_addlinkedsrvlogin** 和 **sp_droplinkedsrvlogin** 添加和删除链接服务器登录名。  
   
- 不能在用户定义的事务中执行**sp_dropremotelogin** 。  
+ 不能在用户定义的事务中执行 **sp_dropremotelogin** 。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 或 **securityadmin** 固定服务器角色的成员身份。  
@@ -90,13 +90,13 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
- [sp_droplogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_droplogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

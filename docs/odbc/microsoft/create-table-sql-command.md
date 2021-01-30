@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ea84b28e12194ffb1a1b181089622cd169c91b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fb1e91c03f7a1a1fee98ce887be991370450999
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471629"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183207"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 命令
 创建具有指定字段的表。  
@@ -58,12 +58,12 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  FREE  
  指定不将表添加到打开的数据库。 如果数据库未打开，则不需要使用 "免费"。  
   
- * (FieldName1 FieldType* [ ( *NFieldWidth* [， *nPrecision*] ) ]  
+ *(FieldName1 FieldType* [ ( *NFieldWidth* [， *nPrecision*] ) ]  
  分别指定字段名称、字段类型、字段宽度和字段精度 (小数点位数) 。  
   
  *FieldType* 是指示字段的 [数据类型](../../odbc/microsoft/visual-foxpro-field-data-types.md)的单字母。 某些字段数据类型要求指定 *nFieldWidth* 或 *nPrecision* ，或同时指定两者。  
   
- 对于 D、G、I、L、M、P、T 和 Y 类型，将忽略*nFieldWidth*和*nPrecision* 。 *nPrecision* 默认为零 (没有任何小数位) 如果 B、F 或 N 类型不包含 *nPrecision* 。  
+ 对于 D、G、I、L、M、P、T 和 Y 类型，将忽略 *nFieldWidth* 和 *nPrecision* 。 *nPrecision* 默认为零 (没有任何小数位) 如果 B、F 或 N 类型不包含 *nPrecision* 。  
   
  Null  
  允许在字段中为 null 值。  
@@ -80,7 +80,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  指定当字段规则生成错误时视觉 FoxPro 显示的错误消息。 仅当在 "浏览" 窗口或 "编辑" 窗口中更改数据时，才显示该消息。  
   
  默认 *eExpression1*  
- 指定字段的默认值。 *EExpression1*的数据类型必须与字段的数据类型相同。  
+ 指定字段的默认值。 *EExpression1* 的数据类型必须与字段的数据类型相同。  
   
  PRIMARY KEY  
  为字段创建主索引。 主索引标记的名称与字段相同。  
@@ -115,12 +115,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  因为一个表只能有一个主索引，所以如果您已经为字段创建了主索引，则不能包含此子句。 如果在 CREATE TABLE 中包含多个 PRIMARY KEY 子句，则 Visual FoxPro 会生成错误。  
   
- UNIQUE *eExpression3*标记 *TagName3*  
+ UNIQUE *eExpression3* 标记 *TagName3*  
  创建候选索引。 *eExpression3* 指定表中的任何字段或字段的组合。 但是，如果已使用其中一个主键选项创建了主索引，则不能包含为主索引指定的字段。 标记 *TagName3* 指定创建的候选索引标记的标记名称。 索引标记名称最多可包含10个字符。  
   
  一个表可以有多个候选索引。  
   
- 外键 *eExpression4*标记 *TagName4*[NODUP]  
+ 外键 *eExpression4* 标记 *TagName4*[NODUP]  
  创建外 (非键) 索引，并建立与父表之间的关系。 *eExpression4* 指定外部索引键表达式， *TagName4* 指定创建的外部索引键标记的名称。 索引标记名称最多可包含10个字符。 包含 NODUP 以创建候选外部索引。  
   
  您可以为表创建多个外部索引，但外部索引表达式必须指定表中的不同字段。  
@@ -155,7 +155,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  使用驱动程序创建表时，驱动程序会在创建后立即关闭该表，以允许其他用户访问表。 这不同于 Visual FoxPro，后者使表在创建时独占打开。 但是，如果包含 CREATE TABLE 语句的数据源上的存储过程执行，则该表将保持打开状态。  
   
- 如果数据源是数据库 ( dbc 文件) ，则 Visual FoxPro ODBC 驱动程序会创建一个名为 *LongTableName* 的表，其名称与 *基表名称*相同。  
+ 如果数据源是数据库 ( dbc 文件) ，则 Visual FoxPro ODBC 驱动程序会创建一个名为 *LongTableName* 的表，其名称与 *基表名称* 相同。  
   
 ### <a name="using-data-definition-language-ddl"></a>使用数据定义语言 (DDL)   
  不能在以下位置包含 DDL：  

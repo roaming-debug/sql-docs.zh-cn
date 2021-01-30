@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_mergemetadataretentioncleanup
 - sp_mergemetadataretentioncleanup_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6f18a4f9357e3af6d9b120195dd13e187de95fd3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3dc35044aedd9a4bd541e93a412fd1e5f5cb0fc5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535098"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178089"
 ---
 # <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
->  如果数据库中有多个发布，并且其中任何一个发布使用无限发布保持期，则运行 **sp_mergemetadataretentioncleanup** 不会清理数据库的合并复制更改跟踪元数据。 因此，要谨慎使用无限发布保持。 若要确定发布是否具有无限**期的保留**期，请在发布服务器上执行[sp_helpmergepublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) ，并记下结果集中值为**0**的任何发布。  
+>  如果数据库中有多个发布，并且其中任何一个发布使用无限发布保持期，则运行 **sp_mergemetadataretentioncleanup** 不会清理数据库的合并复制更改跟踪元数据。 因此，要谨慎使用无限发布保持。 若要确定发布是否具有无限 **期的保留** 期，请在发布服务器上执行 [sp_helpmergepublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) ，并记下结果集中值为 **0** 的任何发布。  
   
 ## <a name="permissions"></a>权限  
  只有 **db_owner** 固定数据库角色的成员或已发布数据库的发布访问列表中的用户才能执行 **sp_mergemetadataretentioncleanup**。  

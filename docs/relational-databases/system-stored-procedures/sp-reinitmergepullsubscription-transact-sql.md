@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_reinitmergepullsubscription
 - sp_reinitmergepullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 06b65044129dd302d516eabe3b9c13f6352d3035
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 2fb9aaa1ccc6cbd8e89b42a2e82c8a663e61cc91
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364799"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185683"
 ---
 # <a name="sp_reinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +40,14 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
     [ , [ @upload_first = ] 'upload_first'  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname** ，默认值为 ALL。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 ALL。  
   
-`[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db* 的值为 **sysname** ，默认值为 ALL。  
+`[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db* 的值为 **sysname**，默认值为 ALL。  
   
-`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname** ，默认值为 ALL。  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，默认值为 ALL。  
   
-`[ @upload_first = ] 'upload_first'` 在重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first* 为 **nvarchar (5)** ，默认值为 FALSE。 如果 **为 true** ，则在重新初始化订阅之前上载更改。 如果 **为 false** ，则不上载更改。  
+`[ @upload_first = ] 'upload_first'` 在重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first* 为 **nvarchar (5)**，默认值为 FALSE。 如果 **为 true**，则在重新初始化订阅之前上载更改。 如果 **为 false**，则不上载更改。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -68,7 +68,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_reinitmergepullsubscription** 。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_reinitmergepullsubscription**。  
   
 ## <a name="see-also"></a>另请参阅  
  [重新初始化订阅](../../relational-databases/replication/reinitialize-a-subscription.md)   

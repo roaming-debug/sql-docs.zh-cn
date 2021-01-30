@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_primary_secondary_TSQL
 - sp_add_log_shipping_primary_secondary
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68e63391d03d97aee8474a7aac95ebdfc09b04b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46c33fa71e9f0c3b49a693896b7349d3f5bdf7bf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464667"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186030"
 ---
 # <a name="sp_add_log_shipping_primary_secondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_add_log_shipping_primary_secondary
  无  
   
 ## <a name="remarks"></a>备注  
- 必须从主服务器上的**master**数据库运行**sp_add_log_shipping_primary_secondary** 。  
+ 必须从主服务器上的 **master** 数据库运行 **sp_add_log_shipping_primary_secondary** 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdbfixedrole
 - sp_helpdbfixedrole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0b72a64d8d895956273a7c76e21dbb88152b546
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 817947901ca7f35ba2972004d23ed8d7f85215ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538772"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176429"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定数据库角色的名称。|  
-|**说明**|**nvarchar (70) **|DbFixedRole 的说明 **。**|  
+|**说明**|**nvarchar (70)**|DbFixedRole 的说明 **。**|  
   
 ## <a name="remarks"></a>备注  
  固定数据库角色（如下表所示）在数据库级上定义，具有执行特定数据库级的管理活动的权限。 无法添加或删除固定数据库角色。 无法更改授予固定数据库角色的权限。  

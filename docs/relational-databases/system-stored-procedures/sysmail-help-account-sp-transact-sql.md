@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_account_sp_TSQL
 - sysmail_help_account_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 711b0d317b600b455fc4d3d0d80e17e1a9ddf7c3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1931cbc58177686c1b7f09b069bc9ba061447e76
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541034"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181977"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 | 列名称 | 数据类型 | 说明 |
 | ----------- | --------- | ----------- |
 |**account_id**|**int**|帐户 ID。|  
-|name|**sysname**|帐户名称。|  
+|name|**sysname**|帐户的名称。|  
 |description|**nvarchar(256)**|对帐户的说明。|  
 |**email_address**|**nvarchar(128)**|发送消息的电子邮件地址。|  
 |**display_name**|**nvarchar(128)**|帐户的显示名称。|  
@@ -62,7 +62,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**服务器**|**sysname**|用于此帐户的电子邮件服务器的名称。|  
 |**port**|**int**|电子邮件服务器使用的端口号。|  
 |**username**|**nvarchar(128)**|登录电子邮件服务器所用的用户名（如果电子邮件服务器使用身份验证）。 当 **username** 为 NULL 时，数据库邮件不对此帐户使用身份验证。|  
-|**use_default_credentials**|**bit**|指定是否使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials** 是 bit，无默认值。 当此参数为 1 时，数据库邮件使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务的凭据。 当此参数为0时，数据库邮件使用** \@ 用户名**和** \@ 密码**在 SMTP 服务器上进行身份验证。 如果** \@ 用户名**和** \@ 密码**为空，则数据库邮件使用匿名身份验证。 在指定此参数之前，请咨询您的 SMTP 管理员。|  
+|**use_default_credentials**|**bit**|指定是否使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials** 是 bit，无默认值。 当此参数为 1 时，数据库邮件使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务的凭据。 当此参数为0时，数据库邮件使用 **\@ 用户名** 和 **\@ 密码** 在 SMTP 服务器上进行身份验证。 如果 **\@ 用户名** 和 **\@ 密码** 为空，则数据库邮件使用匿名身份验证。 在指定此参数之前，请咨询您的 SMTP 管理员。|  
 |**enable_ssl**|**bit**|指定数据库邮件是否使用传输层安全性 (TLS) （以前称为安全套接字层 (SSL) ）对通信进行加密。 如果 SMTP 服务器需要 TLS，请使用此选项。 **enable_ssl** 是 bit，无默认值。 1指示数据库邮件使用 TLS 加密通信。 0指示数据库邮件发送没有 TLS 加密的邮件。|  
   
 ## <a name="remarks"></a>备注  

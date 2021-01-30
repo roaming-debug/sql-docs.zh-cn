@@ -6,19 +6,19 @@ ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
 ms.custom: seo-dt-2019
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: c64f087631b6104af14fc793c06946515220a51a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e4c29b811f6a208b0e6bdfc42a28b83ca6f0d852
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475158"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186581"
 ---
 # <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "97475158"
 |column_id|**int**|列存储列的 ID。|  
 |**dictionary_id**|**int**|字典的 ID。|  
 |**version**|**int**|字典格式的版本。|  
-|**type**|**int**|字典类型：<br /><br /> 1-包含 **int** 值的哈希字典<br /><br /> 2-未使用<br /><br /> 3-包含字符串值的哈希字典<br /><br /> 包含 **浮点** 值的4哈希字典|  
+|type |**int**|字典类型：<br /><br /> 1-包含 **int** 值的哈希字典<br /><br /> 2-未使用<br /><br /> 3-包含字符串值的哈希字典<br /><br /> 包含 **浮点** 值的4哈希字典|  
 |**last_id**|**int**|字典中的最后一个数据 ID。|  
 |**entry_count**|**bigint**|字典中的条目数。|  
 |**on_disc_size**|**bigint**|字典大小（以字节为单位）。|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getapplock_TSQL
 - sp_getapplock
@@ -20,12 +20,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16a51a2578718db33e27a5c0c027f607eb4d37fc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 82c0c343d76c3fb8fe6275c2450b62d50fd11b34
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474638"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185764"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @Resource =] "*resource_name*"  
  指定标识锁资源的名称的字符串。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name* 为 **nvarchar (255)** ，无默认值。 如果资源字符串的长度超过 **nvarchar (255)**，则它将被截断为 **nvarchar (255)**。  
   

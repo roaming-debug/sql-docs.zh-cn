@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_reinitpullsubscription_TSQL
 - sp_reinitpullsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b584cb652e6abd79818c733cb4e4fb2742d1527b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c77a8e055da1e37712bda31c5d40d51201a40839
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549546"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185704"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,11 +52,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>备注  
  **sp_reinitpullsubscription** 用于事务复制。  
   
- 对等事务复制不支持**sp_reinitpullsubscription** 。  
+ 对等事务复制不支持 **sp_reinitpullsubscription** 。  
   
- 在下一次运行分发代理期间，可从订阅服务器调用**sp_reinitpullsubscription**以重新初始化订阅。  
+ 在下一次运行分发代理期间，可从订阅服务器调用 **sp_reinitpullsubscription** 以重新初始化订阅。  
   
- 不能从订阅服务器重新初始化使用值为**false**的** \@ immediate_sync**创建的发布的订阅。  
+ 不能从订阅服务器重新初始化使用值为 **false** 的 **\@ immediate_sync** 创建的发布的订阅。  
   
  您可以通过在订阅服务器上执行 **sp_reinitpullsubscription** 或在发布服务器上执行 **sp_reinitsubscription** 来重新初始化请求订阅。  
   

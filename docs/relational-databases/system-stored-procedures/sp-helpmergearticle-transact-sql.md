@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergearticle
 - sp_helpmergearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04e67d82b6c567a5c94de8009635c31e41864b92
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 43365f58dbfe76c89a5e7e41a0c65c65188edfdf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535202"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179291"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 要检索其信息的发布的名称。 *发布*为 **sysname**，默认值为 **%** ，它返回当前数据库的所有发布中包含的所有合并项目的相关信息。  
+`[ @publication = ] 'publication'` 要检索其信息的发布的名称。 *发布* 为 **sysname**，默认值为 **%** ，它返回当前数据库的所有发布中包含的所有合并项目的相关信息。  
   
-`[ @article = ] 'article'` 要返回其信息的项目的名称。 *项目*是 **sysname**，默认值为 **%** ，它返回给定发布中所有合并项目的相关信息。  
+`[ @article = ] 'article'` 要返回其信息的项目的名称。 *项目* 是 **sysname**，默认值为 **%** ，它返回给定发布中所有合并项目的相关信息。  
   
 ## <a name="result-set"></a>结果集  
   
@@ -56,12 +56,12 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |description|**nvarchar(255)**|对项目的说明。|  
 |**status**|**tinyint**|项目的状态，可以为以下值之一：<br /><br /> **1** = 非活动<br /><br /> **2** = 活动<br /><br /> **5** = 数据定义语言 (DDL) 操作挂起<br /><br /> **6** = 使用新生成的快照的 DDL 操作<br /><br /> 注意：在重新初始化项目时，值 **5** 和 **6** 将更改为 **2**。|  
 |**creation_script**|**nvarchar(255)**|用于在订阅数据库中创建项目的可选项目架构脚本的路径和名称。|  
-|**conflict_table**|**nvarchar (270) **|存储插入或更新冲突的表的名称。|  
+|**conflict_table**|**nvarchar (270)**|存储插入或更新冲突的表的名称。|  
 |**article_resolver**|**nvarchar(255)**|项目的自定义冲突解决程序。|  
 |**subset_filterclause**|**nvarchar(1000)**|用于指定水平筛选的 WHERE 子句。|  
 |**pre_creation_command**|**tinyint**|预创建方法，可以为以下值之一：<br /><br /> **0** = 无<br /><br /> **1** = 删除<br /><br /> **2** = 删除<br /><br /> **3** = 截断|  
-|**schema_option**|**二进制 (8) **|项目的架构生成选项位图。 有关此位图选项的信息，请参阅 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 或 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。|  
-|type|**smallint**|项目类型，可以为以下值之一：<br /><br /> **10** = 表<br /><br /> **32** = 存储过程<br /><br /> **64** = 视图或索引视图<br /><br /> **128** = 用户定义函数<br /><br /> **160** = 仅限同义词架构|  
+|**schema_option**|**二进制 (8)**|项目的架构生成选项位图。 有关此位图选项的信息，请参阅 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 或 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。|  
+|type |**smallint**|项目类型，可以为以下值之一：<br /><br /> **10** = 表<br /><br /> **32** = 存储过程<br /><br /> **64** = 视图或索引视图<br /><br /> **128** = 用户定义函数<br /><br /> **160** = 仅限同义词架构|  
 |**column_tracking**|**int**|列级跟踪的设置;其中， **1** 表示列级跟踪处于开启状态， **0** 表示列级跟踪处于关闭状态。|  
 |**resolver_info**|**nvarchar(255)**|项目冲突解决程序名。|  
 |**vertical_partition**|**bit**|如果项目已垂直分区，则为;其中， **1** 表示项目已垂直分区， **0** 表示不表示项目。|  

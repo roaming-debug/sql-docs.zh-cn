@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
 - sysmail_help_profileaccount_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6894b44d7a09fa8f49ffa1d76a8613f930db7d18
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45b542047875527a26d9c4854b223e626efda5ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541046"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181935"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sysmail_help_profileaccount_sp
 |**profile_id**|**int**|配置文件的配置文件 ID。|  
 |**profile_name**|**sysname**|配置文件的名称。|  
 |**account_id**|**int**|帐户的帐户 ID。|  
-|**account_name**|**sysname**|帐户名称。|  
+|**account_name**|**sysname**|帐户的名称。|  
 |**sequence_number**|**int**|配置文件中的帐户的序号。|  
   
 ## <a name="remarks"></a>备注  

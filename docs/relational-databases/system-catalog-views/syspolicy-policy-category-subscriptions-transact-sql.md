@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syspolicy_policy_category_subscriptions_TSQL
 - syspolicy_policy_category_subscriptions
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 99f95e323b88f6932a1f3af0ed3cf72d9bed964c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e4b4b82b4b306da1902781fe5b7d15fdf7f1c36
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460499"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180776"
 ---
 # <a name="syspolicy_policy_category_subscriptions-transact-sql"></a>syspolicy_policy_category_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

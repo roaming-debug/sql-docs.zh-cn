@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - backward compatibility [ODBC], loading by ordinal
 - compatibility [ODBC], loading by ordinal
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb8929962e97e7560f50117218f621cd21846fc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ffb2516a79144a5ae79b21e6621882056b1f69ff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429629"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184377"
 ---
 # <a name="loading-by-ordinal"></a>按序号加载
-在 ODBC *2.x 中，* 可以执行按序号进行加载以提高连接过程的性能。 *ODBC 2.x*驱动程序使用序号 199; 导出虚函数。当驱动程序管理器检测到它时，它将按序号而不是按名称解析 ODBC 函数的地址。 ODBC 2.x 驱动程序仍支持此功能，*但 odbc 1.x* *驱动程序不*支持此功能。
+在 ODBC *2.x 中，* 可以执行按序号进行加载以提高连接过程的性能。 *ODBC 2.x* 驱动程序使用序号 199; 导出虚函数。当驱动程序管理器检测到它时，它将按序号而不是按名称解析 ODBC 函数的地址。 ODBC 2.x 驱动程序仍支持此功能，*但 odbc 1.x* *驱动程序不* 支持此功能。

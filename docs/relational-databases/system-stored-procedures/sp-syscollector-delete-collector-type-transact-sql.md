@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
 - sp_syscollector_delete_collector_type_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cc4cdc682ec2230b7d0f3136feb683789b38c06b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: aa80b1d9574d707d714781716290f3b62e3fd229
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547324"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183063"
 ---
 # <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
  **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- *Collector_type_uid*或*name*必须具有值，两者都不能为 NULL。  
+ *Collector_type_uid* 或 *name* 必须具有值，两者都不能为 NULL。  
   
  如果存在这种收集类型的收集项，此过程将引发错误。  
   

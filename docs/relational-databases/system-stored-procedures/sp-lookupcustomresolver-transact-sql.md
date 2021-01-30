@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_lookupcustomresolver_TSQL
 - sp_lookupcustomresolver
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54e2f1f4237e169637c7d73085dc29cbffe3e720
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bdafb84d97bad1672780008ae845287ce105bb14
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541701"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185363"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @article_resolver = ] 'article_resolver'` 指定正在注销的自定义业务逻辑的名称。 *article_resolver* 为 **nvarchar (255) **，无默认值。 如果被删除的业务逻辑是 COM 组件，则此参数是该组件的友好名称。 如果业务逻辑是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集，则此参数是该程序集的名称。  
+`[ @article_resolver = ] 'article_resolver'` 指定正在注销的自定义业务逻辑的名称。 *article_resolver* 为 **nvarchar (255)**，无默认值。 如果被删除的业务逻辑是 COM 组件，则此参数是该组件的友好名称。 如果业务逻辑是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集，则此参数是该程序集的名称。  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 与 *article_resolver* 参数中指定的自定义业务逻辑的名称关联的 COM 对象的 CLSID 值。 *resolver_clsid* 为 **nvarchar (50) **，默认值为 NULL。  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 与 *article_resolver* 参数中指定的自定义业务逻辑的名称关联的 COM 对象的 CLSID 值。 *resolver_clsid* 为 **nvarchar (50)**，默认值为 NULL。  
   
 `[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` 指定正在注册的自定义业务逻辑的类型。 *is_dotnet_assembly* 为 **bit**，默认值为0。 **1** 指示正在注册的自定义业务逻辑是一个业务逻辑处理程序程序集; **0** 指示它是一个 COM 组件。  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` 实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name* 为 **nvarchar (255) **，默认值为 NULL。  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` 实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name* 为 **nvarchar (255)**，默认值为 NULL。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` 是重写 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 以实现业务逻辑处理程序的类的名称。 *dotnet_class_name* 为 **nvarchar (255) **，默认值为 NULL。  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` 是重写 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 以实现业务逻辑处理程序的类的名称。 *dotnet_class_name* 为 **nvarchar (255)**，默认值为 NULL。  
   
 `[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 NULL。 未从发布服务器调用该存储过程时使用此参数。 如果未指定，则假定本地服务器是发布服务器。  
   
@@ -61,7 +61,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="remarks"></a>备注  
  **sp_lookupcustomresolver** 用于合并复制。  
   
- 当组件未在分发时注册时， **sp_lookupcustomresolver**返回*resolver_clsid*的 NULL 值，当注册属于注册为业务逻辑处理程序的 .NET Framework 程序集时，返回值 "00000000-0000-0000-0000-000000000000"。  
+ 当组件未在分发时注册时， **sp_lookupcustomresolver** 返回 *resolver_clsid* 的 NULL 值，当注册属于注册为业务逻辑处理程序的 .NET Framework 程序集时，返回值 "00000000-0000-0000-0000-000000000000"。  
   
  **sp_lookupcustomresolver** 由 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 调用以验证指定的 *article_resolver*。  
   

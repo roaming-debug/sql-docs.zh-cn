@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_principalprofile_sp_TSQL
 - sysmail_delete_principalprofile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e5cfe34ff4bebc2e21517e6515b5ea2ebee3a37f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a80485aca8c7f0adb6a539f57540952ccd758a31
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538460"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182020"
 ---
 # <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
  此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何删除**msdb**数据库中的配置文件**AdventureWorks 管理员**和登录名**ApplicationUser**之间的关联。  
+ 下面的示例演示如何删除 **msdb** 数据库中的配置文件 **AdventureWorks 管理员** 和登录名 **ApplicationUser** 之间的关联。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp  

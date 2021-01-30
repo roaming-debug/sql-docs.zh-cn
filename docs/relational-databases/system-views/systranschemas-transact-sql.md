@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - systranschemas
 - systranschemas_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0f034b802eca4a3349b69067d10280b886ffb22a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 78242bbe5df333aa23dfd2b8c22688ef5e2e6284
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446510"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181539"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Systranschemas**表用于跟踪事务发布和快照发布中发布的项目中的架构更改。 此表存储在发布数据库和订阅数据库中。  
+  **Systranschemas** 表用于跟踪事务发布和快照发布中发布的项目中的架构更改。 此表存储在发布数据库和订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

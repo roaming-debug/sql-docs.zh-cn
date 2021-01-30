@@ -6,7 +6,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_filestream_file_io_requests
 - dm_filestream_file_io_requests
@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 69b34fd2a8ec5adf393994399011cf1b2df6ea03
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e4ee0854a59ae465f8eff35dadb90ac33a499651
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097648"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186089"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   显示命名空间所有者 (NSO) 在给定时刻正处理的 I/O 请求的列表。  
   
-|列|类型|描述|  
+|列|类型|说明|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|显示包含来自驱动程序的 I/O 请求的 NSO 内存块的内部地址。 不可为 null。|  
 |**current_spid**|**smallint**|显示当前 SQL Server 连接 (SPID) 的系统进程 id。 不可为 null。|  

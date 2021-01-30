@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdistributiondb_TSQL
 - sp_helpdistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c79c1ed5bbbbf53be84432e4d542affece0b16a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9740605d1f3eca456ba506a692b5fc827273e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543304"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179297"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,7 +65,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
  **sp_helpdistributiondb** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 分发数据库中 **db_owner** 固定数据库角色的成员或 **replmonitor** 角色的成员，以及使用分发数据库的发布的发布访问列表中的用户可以执行 **sp_helpdistributiondb** 以返回与文件相关的信息。 **公共**角色的成员可以执行**sp_helpdistributiondb** ，以返回其具有访问权限的分发数据库的非文件相关信息。  
+ 分发数据库中 **db_owner** 固定数据库角色的成员或 **replmonitor** 角色的成员，以及使用分发数据库的发布的发布访问列表中的用户可以执行 **sp_helpdistributiondb** 以返回与文件相关的信息。 **公共** 角色的成员可以执行 **sp_helpdistributiondb** ，以返回其具有访问权限的分发数据库的非文件相关信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

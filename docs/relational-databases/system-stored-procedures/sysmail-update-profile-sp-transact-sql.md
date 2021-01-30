@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_profile_sp
 - sysmail_update_profile_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78a123514e990499f191cbc6742870647adebc5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf631b1acd099d8d7821a49163b80d643331ec28
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454734"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181880"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
 `[ @profile_name = ] 'profile_name'` 要更新的配置文件的名称或配置文件的新名称。 *profile_name* 的默认值为 **sysname**，默认值为 NULL。 至少必须指定 *profile_id* 或 *profile_name* 中的一个。 如果同时指定二者，则过程将更改配置文件的名称。  
   
-`[ @description = ] 'description'` 配置文件的新说明。 *描述* 为 **nvarchar (256) **，默认值为 NULL。  
+`[ @description = ] 'description'` 配置文件的新说明。 *描述* 为 **nvarchar (256)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

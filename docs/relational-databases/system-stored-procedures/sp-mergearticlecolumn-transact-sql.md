@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_mergearticlecolumn
 - sp_mergearticlecolumn_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4be1d2544225a5317ea6af60598a57c958ce14a7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b5d8d2f63afd421081058dd1b53ec8084f4b5e13
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541625"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185314"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,14 +48,14 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 发布中项目的名称。 *项目* 是 **sysname**，无默认值。  
   
-`[ @column = ] 'column'` 标识要在其中创建垂直分区的列。 *列* 的值为 **sysname**，默认值为 NULL。 如果为 NULL 和 `@operation = N'add'`，默认情况下，源表中的所有列将添加到项目。 将*操作*设置为**drop**时，*列*不能为 NULL。 若要从项目中排除列，请执行**sp_mergearticlecolumn** ，并指定*column* `@operation = N'drop'` 要从指定*项目*中删除的列以及每个列。  
+`[ @column = ] 'column'` 标识要在其中创建垂直分区的列。 *列* 的值为 **sysname**，默认值为 NULL。 如果为 NULL 和 `@operation = N'add'`，默认情况下，源表中的所有列将添加到项目。 将 *操作* 设置为 **drop** 时，*列* 不能为 NULL。 若要从项目中排除列，请执行 **sp_mergearticlecolumn** ，并指定 `@operation = N'drop'` 要从指定 *项目* 中删除的列以及每个列。  
   
-`[ @operation = ] 'operation'` 是复制状态。 *操作* 为 **nvarchar (4) **，默认值为 ADD。 **添加** 标记列以进行复制。 **drop** 清除列。  
+`[ @operation = ] 'operation'` 是复制状态。 *操作* 为 **nvarchar (4)**，默认值为 ADD。 **添加** 标记列以进行复制。 **drop** 清除列。  
   
-`[ @schema_replication = ] 'schema_replication'` 指定在合并代理运行时将传播架构更改。 *schema_replication* 为 **nvarchar (5) **，默认值为 FALSE。  
+`[ @schema_replication = ] 'schema_replication'` 指定在合并代理运行时将传播架构更改。 *schema_replication* 为 **nvarchar (5)**，默认值为 FALSE。  
   
 > [!NOTE]  
->  *Schema_replication*仅支持**FALSE** 。  
+>  *Schema_replication* 仅支持 **FALSE** 。  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 启用或禁用使快照失效的功能。 *force_invalidate_snapshot* 为一个 **位**，默认值为 **0**。  
   

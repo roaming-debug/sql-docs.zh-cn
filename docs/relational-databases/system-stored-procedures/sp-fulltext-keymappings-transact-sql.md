@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_fulltext_keymappings_TSQL
 - sp_fulltext_keymappings
@@ -21,12 +21,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d51d0f1f2e15bcf6db3be6d7afee6010e9454a4e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d9520a47fb519988e252e251e7e4449f7a425079
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97427283"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185427"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "97427283"
 sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  table_id  
  全文索引表的对象 ID。 如果指定的 *table_id* 无效，则会返回错误。 有关获取表的对象 ID 的信息，请参阅 [&#40;transact-sql&#41;OBJECT_ID ](../../t-sql/functions/object-id-transact-sql.md)。  
   
@@ -63,7 +63,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|与键值相对应的内部文档标识符 (DocId) 列。|  
-|密钥|*|指定表中的全文键值。<br /><br /> 如果在映射表中不存在任何全文键，则返回一个空的行集。|  
+|键|*|指定表中的全文键值。<br /><br /> 如果在映射表中不存在任何全文键，则返回一个空的行集。|  
   
  <sup>*</sup> Key 的数据类型与基表中全文键列的数据类型相同。  
   

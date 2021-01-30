@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_jobstep
 - sp_delete_jobstep_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c98055d6b5aba79d1d7b62966e5e20c656d17a22
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9b795b6526941518e476390dba158f56e18040da
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541803"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186338"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] job_id` 将从中删除步骤的作业的标识号。 *job_id*的值为 **uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 将从中删除步骤的作业的标识号。 *job_id* 的值为 **uniqueidentifier**，默认值为 NULL。  
   
-`[ @job_name = ] 'job_name'` 将从中删除步骤的作业的名称。 *job_name*的默认值为 **sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 将从中删除步骤的作业的名称。 *job_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 > **注意：** 必须指定 *job_id* 或 *job_name* ;不能同时指定两者。  
   
-`[ @step_id = ] step_id` 要删除的步骤的标识号。 *step_id*为 **int**，没有默认值。  
+`[ @step_id = ] step_id` 要删除的步骤的标识号。 *step_id* 为 **int**，没有默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -61,12 +61,12 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  有关与特定作业关联的步骤的详细信息，请运行 **sp_help_jobstep**。  
   
-> **注意：** 使用*step_id*值为零的**sp_delete_jobstep**将删除作业的所有作业步骤。  
+> **注意：** 使用 *step_id* 值为零的 **sp_delete_jobstep** 将删除作业的所有作业步骤。  
   
  Microsoft SQL Server Management Studio 提供易于使用的图形方法来管理作业，建议使用该方法创建和管理作业基础结构。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin** 固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

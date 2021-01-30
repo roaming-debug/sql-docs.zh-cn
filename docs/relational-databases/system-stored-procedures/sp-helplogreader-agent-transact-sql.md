@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helplogreader_agent
 - sp_helplogreader_agent_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 888a6f8266d53e0297ffe3fe42dbfba11a4929f9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 24ec79125cbbae4764eb2a88000969a4100c4917
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541730"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183112"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,12 +45,12 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|代理的 ID。|  
-|name |**nvarchar (100) **|代理的名称。|  
+|name |**nvarchar (100)**|代理的名称。|  
 |**publisher_security_mode**|**smallint**|代理在连接发布服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1** = Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接到发布服务器时使用的登录名。|  
-|**publisher_password**|**nvarchar (524) **|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
+|**publisher_password**|**nvarchar (524)**|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
-|**job_login**|**nvarchar(512)**|是日志读取器代理运行时所用的 Windows 帐户，它以 "*域*用户名" 的格式返回 \\ *username*。|  
+|**job_login**|**nvarchar(512)**|是日志读取器代理运行时所用的 Windows 帐户，它以 "*域* 用户名" 的格式返回 \\ 。|  
 |**job_password**|**sysname**|出于安全原因， **\*\*\*\*\*\*\*\*\*\*** 始终返回值。|  
   
 ## <a name="return-code-values"></a>返回代码值  

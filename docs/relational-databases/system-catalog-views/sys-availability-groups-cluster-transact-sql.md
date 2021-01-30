@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.availability_groups_cluster
 - availability_groups_cluster
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d0f4683f-cdf0-4227-8b68-720ffe58f158
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: e6318cc58ce51cafd380dd1f5eb8a71aa0e0b479
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e483e88fad533c05e741bf6bcff0d5b6e6b0dcba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101811"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186168"
 ---
 # <a name="sysavailability_groups_cluster-transact-sql"></a>sys.availability_groups_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

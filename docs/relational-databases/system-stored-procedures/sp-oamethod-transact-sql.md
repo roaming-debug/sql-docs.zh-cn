@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAMethod
 - sp_OAMethod_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7442e3af4bf0233e51f32d7c8e6f034d69598046
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: da84a59353baffa92ac0fa30e55bfa4b248379f7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526624"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182409"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="arguments"></a>参数  
  *objecttoken*  
- 是先前使用 **sp_OACreate**创建的 OLE 对象的对象标记。  
+ 是先前使用 **sp_OACreate** 创建的 OLE 对象的对象标记。  
   
  *名称*  
  要调用的 OLE 对象的方法名。  
@@ -51,15 +51,15 @@ sp_OAMethod objecttoken , methodname
  _returnvalue_  **输出**  
  OLE 对象的方法的返回值。 如果指定此参数，则必须是相应数据类型的局部变量。  
   
- 如果该方法返回单个值，请为 *returnvalue*指定一个局部变量，该局部变量返回局部变量中的方法返回值，或不指定 *returnvalue*，这会将方法返回值作为单列单行结果集返回给客户端。  
+ 如果该方法返回单个值，请为 *returnvalue* 指定一个局部变量，该局部变量返回局部变量中的方法返回值，或不指定 *returnvalue*，这会将方法返回值作为单列单行结果集返回给客户端。  
   
- 如果方法返回值是 OLE 对象，则 *returnvalue* 必须是数据类型为 **int**的局部变量。对象标记存储在局部变量中，此对象标记可用于其他 OLE 自动化存储过程。  
+ 如果方法返回值是 OLE 对象，则 *returnvalue* 必须是数据类型为 **int** 的局部变量。对象标记存储在局部变量中，此对象标记可用于其他 OLE 自动化存储过程。  
   
  当方法返回值为数组时，如果指定了 *returnvalue* ，则将其设置为 NULL。  
   
  如果出现下列任意一种情况，则产生错误：  
   
--   已指定*returnvalue* ，但该方法不返回值。  
+-   已指定 *returnvalue* ，但该方法不返回值。  
   
 -   方法返回二维以上的数组。  
   
@@ -69,13 +69,13 @@ sp_OAMethod objecttoken , methodname
   
  若要获取 output 参数的返回值， *参数* 必须是相应数据类型的局部变量，并且必须指定 **output** 。 如果指定了常量参数，或未指定 **output** ，则将忽略输出参数的任何返回值。  
   
- 如果指定，则 *parametername* 必须是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 命名参数的名称。 请注意， **@** _parametername_is 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 局部变量。 删除 at 符号 (**@**) ，并将 *parametername*作为参数名传递给 OLE 对象。 指定了所有位置参数后，才能指定命名参数。  
+ 如果指定，则 *parametername* 必须是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 命名参数的名称。 请注意， **@** _parametername_is 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 局部变量。 删除 at 符号 (**@**) ，并将 *parametername* 作为参数名传递给 OLE 对象。 指定了所有位置参数后，才能指定命名参数。  
   
  *n*  
  指示可以指定多个参数的占位符。  
   
 > [!NOTE]
->  * \@ parametername*可以是命名参数，因为它是指定方法的一部分并且传递给对象。 此存储过程的其他参数是按位置（而不是名称）指定的。  
+>  *\@ parametername* 可以是命名参数，因为它是指定方法的一部分并且传递给对象。 此存储过程的其他参数是按位置（而不是名称）指定的。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败），是由 OLE 自动化对象返回的 HRESULT 整数值。  

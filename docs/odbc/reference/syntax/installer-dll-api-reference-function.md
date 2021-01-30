@@ -7,21 +7,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - installer DLL [ODBC]
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5b2c49e5a49d371677b0fc16a77fb332bb95a9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88b1d85e731108984b1eb9f001363bd26401f91d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461239"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174676"
 ---
 # <a name="installer-dll-api-reference-function"></a>安装程序 DLL API 参考函数
-本部分介绍了安装程序 DLL API 中函数的语法。 安装程序 DLL API 包含20个函数。 其中三个函数 **SQLGetTranslator**、 **SQLRemoveDSNFromIni**和 **SQLWriteDSNToIni**只能由安装程序 dll 调用。 其他函数由 "安装" 和 "管理" 程序调用。  
+本部分介绍了安装程序 DLL API 中函数的语法。 安装程序 DLL API 包含20个函数。 其中三个函数 **SQLGetTranslator**、 **SQLRemoveDSNFromIni** 和 **SQLWriteDSNToIni** 只能由安装程序 dll 调用。 其他函数由 "安装" 和 "管理" 程序调用。  
   
  每个函数都带有引入该函数的 ODBC 版本进行标记。  
   

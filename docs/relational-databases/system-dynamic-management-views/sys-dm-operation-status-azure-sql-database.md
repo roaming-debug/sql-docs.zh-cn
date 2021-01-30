@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_operation_status_TSQL
 - dm_operation_status
@@ -20,12 +20,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: 21028fd5cdabf435d7672074907b20ebeaaad3c4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 10f8d0523f81c68317a87f960d7ae3e72bf00c3e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101533"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184984"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 

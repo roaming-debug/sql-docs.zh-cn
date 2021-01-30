@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropsubscriber_TSQL
 - sp_dropsubscriber
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7849603dc288bf4e40e5b4067f9098b6c5ebc0ca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 96ba954cf4674c370b33e783c8f71dd4da69277b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538892"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187007"
 ---
 # <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,7 +58,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
  此存储过程将删除服务器 **子项** 选项，并删除系统管理员的远程登录映射，以 **repl_subscriber**。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_dropsubscriber**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_dropsubscriber** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLGetPrivateProfileString
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2223d46d507df2a9cf82e7feb800caf5b8f82cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ec5dfa03f04b004f704ad707fb7916d40e69716
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421231"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186195"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString 函数
 **度**  
@@ -70,7 +70,7 @@ int SQLGetPrivateProfileString(
  **SQLGetPrivateProfileString** 返回一个整数值，该值指示读取的字符数。  
   
 ## <a name="diagnostics"></a>诊断  
- 调用**SQLGetPrivateProfileString**失败时，可以通过调用**SQLInstallerError**获取关联的* \* pfErrorCode*值。 下表列出了可由**SQLInstallerError**返回的* \* pfErrorCode*值，并说明了此函数的上下文中的每个值。  
+ 调用 **SQLGetPrivateProfileString** 失败时，可以通过调用 **SQLInstallerError** 获取关联的 *\* pfErrorCode* 值。 下表列出了可由 **SQLInstallerError** 返回的 *\* pfErrorCode* 值，并说明了此函数的上下文中的每个值。  
   
 |*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  
@@ -78,7 +78,7 @@ int SQLGetPrivateProfileString(
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行此功能。|  
   
 ## <a name="comments"></a>注释  
- **SQLGetPrivateProfileString** 是一种简单的方法，可将来自 Microsoft® Windows®的驱动程序和驱动程序安装 dll 移植到 MICROSOFT windows NT®/Windows 2000。 对于从 Odbc.ini 文件检索配置文件字符串的 **调用，应** 将调用替换为对 **SQLGetPrivateProfileString**的调用。 **SQLGetPrivateProfileString** 调用 WIN32® API 中的函数来检索所请求的值或数据的名称，这些名称与系统信息的 Odbc.ini 子项的值相对应。  
+ **SQLGetPrivateProfileString** 是一种简单的方法，可将来自 Microsoft® Windows®的驱动程序和驱动程序安装 dll 移植到 MICROSOFT windows NT®/Windows 2000。 对于从 Odbc.ini 文件检索配置文件字符串的 **调用，应** 将调用替换为对 **SQLGetPrivateProfileString** 的调用。 **SQLGetPrivateProfileString** 调用 WIN32® API 中的函数来检索所请求的值或数据的名称，这些名称与系统信息的 Odbc.ini 子项的值相对应。  
   
  **SQLSetConfigMode**) 设置的配置模式 (指示列出 DSN 值的 Odbc.ini 条目在系统信息中的位置。 如果 DSN 是用户 DSN (配置模式 USERDSN_ONLY) ，则该函数从 HKEY_CURRENT_USER 中的 Odbc.ini 项进行读取。 如果 DSN 是系统 DSN (SYSTEMDSN_ONLY) ，则该函数将从 HKEY_LOCAL_MACHINE 中的 Odbc.ini 条目读取。 如果配置模式为 BOTHDSN，则尝试 HKEY_CURRENT_USER，如果失败，则使用 HKEY_LOCAL_MACHINE。  
   

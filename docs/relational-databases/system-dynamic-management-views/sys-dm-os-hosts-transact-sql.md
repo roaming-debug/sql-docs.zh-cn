@@ -6,7 +6,7 @@ ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_os_hosts_TSQL
 - dm_os_hosts
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: a0220ed88a3852188c5ee2f7952df7f067e410ad
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7d52a5cf6a949656df60fd76ed678c2505566735
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098887"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184891"
 ---
 # <a name="sysdm_os_hosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "98098887"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary(8)**|主机对象的内部内存地址。|  
-|type|**nvarchar(60)**|宿主组件的类型。 例如，应用于对象的<br /><br /> SOSHOST_CLIENTID_SERVERSNI = SQL Server 本机接口<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB 访问接口<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft 数据访问运行时|  
-|name|**nvarchar(32)**|主机名称。|  
+|type |**nvarchar(60)**|宿主组件的类型。 例如，<br /><br /> SOSHOST_CLIENTID_SERVERSNI = SQL Server 本机接口<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB 访问接口<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft 数据访问运行时|  
+|name |**nvarchar(32)**|主机名称。|  
 |**enqueued_tasks_count**|**int**|该主机放置到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的队列上的任务总数。|  
 |**active_tasks_count**|**int**|该主机放在队列中的、正在运行的任务数。|  
 |**completed_ios_count**|**int**|通过该主机发出和完成的 I/O 总数。|  
@@ -57,7 +57,7 @@ ms.locfileid: "98098887"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|目标|Relationship|  
+|From|功能|关系|  
 |----------|--------|------------------|  
 |sys.dm_os_hosts. default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|一对一|  
 |sys.dm_os_hosts. host_address|sys.dm_os_memory_clerks. host_address|一对一|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geometry_index_xml_TSQL
 - sp_help_spatial_geometry_index_xml
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee3abb8e5a06d972b63140007cb8002e32837df2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: f0630c37d00e6f9d8496d1fd0b0786987c46e96f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810891"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185389"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,11 +54,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>权限  
  用户必须是 **公共** 角色的成员。 需要服务器和对象的 READ ACCESS 权限。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  包含 NULL 值的属性未包含在 XML 返回集中。  
   
-## <a name="example"></a>示例：  
- 下面的示例使用 `sp_help_spatial_geometry_index_xml` 来调查** \@ qs**中给定查询示例的表**geometry_col**上定义的空间索引**SIndx_SpatialTable_geometry_col2** 。 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
+## <a name="example"></a>示例  
+ 下面的示例使用 `sp_help_spatial_geometry_index_xml` 来调查 **\@ qs** 中给定查询示例的表 **geometry_col** 上定义的空间索引 **SIndx_SpatialTable_geometry_col2** 。 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
   
  然后，对结果集运行 [XQuery](../../xquery/xquery-basics.md) ，返回特定属性。  
   

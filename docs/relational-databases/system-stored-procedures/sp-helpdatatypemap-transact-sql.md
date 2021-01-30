@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdatatypemap
 - sp_helpdatatypemap_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7fb7ee524e2b9849c9c8a348cd6c8a9de7fb74e2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 46750f82e08a9a3dcb936320614390bc6f359c4e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538758"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176445"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**MSSQLSERVER**|源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**联手**|源为 Oracle 数据库。|  
   
-`[ @source_version = ] 'source_version'` 源 DBMS 的产品版本。 *source_version*的数据类型为 **varchar (10) **，并且如果未指定，则返回源 DBMS 的所有版本的数据类型映射。 启用结果集按 DBMS 源版本进行筛选。  
+`[ @source_version = ] 'source_version'` 源 DBMS 的产品版本。 *source_version* 的数据类型为 **varchar (10)**，并且如果未指定，则返回源 DBMS 的所有版本的数据类型映射。 启用结果集按 DBMS 源版本进行筛选。  
   
 `[ @source_type = ] 'source_type'` 源 DBMS 中列出的数据类型。 *source_type* 为 **sysname**，如果未指定，则返回源 DBMS 中所有数据类型的映射。 启用结果集按源 DBMS 中的数据类型进行筛选。  
   
@@ -64,9 +64,9 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**DB2**|目标为 IBM DB2 数据库。|  
 |**SYBASE**|目标为 Sybase 数据库。|  
   
-`[ @destination_version = ] 'destination_version'` 目标 DBMS 的产品版本。 *destination_version*是 **varchar (10) **，如果未指定，则返回目标 DBMS 的所有版本的映射。 启用结果集按 DBMS 的目标版本进行筛选。  
+`[ @destination_version = ] 'destination_version'` 目标 DBMS 的产品版本。 *destination_version* 是 **varchar (10)**，如果未指定，则返回目标 DBMS 的所有版本的映射。 启用结果集按 DBMS 的目标版本进行筛选。  
   
-`[ @destination_type = ] 'destination_type'` 目标 DBMS 中列出的数据类型。 *destination_type*为 **sysname**，如果未指定，则返回目标 DBMS 中所有数据类型的映射。 启用结果集按目标 DBMS 中的数据类型进行筛选。  
+`[ @destination_type = ] 'destination_type'` 目标 DBMS 中列出的数据类型。 *destination_type* 为 **sysname**，如果未指定，则返回目标 DBMS 中所有数据类型的映射。 启用结果集按目标 DBMS 中的数据类型进行筛选。  
   
 `[ @defaults_only = ] defaults_only` 如果只返回默认数据类型映射，则为。 *defaults_only* 为 **bit**，默认值为 **0**。 **1** 表示只返回默认数据类型映射。 **0** 表示返回默认值和任何用户定义的数据类型映射。  
   

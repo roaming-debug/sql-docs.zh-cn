@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CREATE TABLE statement limitations [ODBC]
 - ODBC SQL grammar, CREATE TABLE statement limitations
 ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a903484663eed886f87d983aa027e4cf5b568408
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94b72930fc33c3abbf3920d1290811d0379413c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471619"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183193"
 ---
 # <a name="create-table-statement-limitations"></a>CREATE TABLE 语句限制
 使用 Microsoft Access、Microsoft Excel 或 Paradoxdriver 时，如果未指定 text 或 binary 列 (或指定为 0) ，则列长度将设置为255。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_os_memory_cache_hash_tables_TSQL
 - sys.dm_os_memory_cache_hash_tables
@@ -21,12 +21,12 @@ ms.assetid: 68b94f35-8f80-4d2b-bcde-7a21934219af
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d40340647e316a42ab7ad047502982da9fe90234
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 17727fb156c842b6e0e2b4686a5318dbaab7491a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096548"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184852"
 ---
 # <a name="sysdm_os_memory_cache_hash_tables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "98096548"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|缓存条目的地址（主键）。 不可为 null。|  
-|name|**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|type|**nvarchar(60)**|缓存类型。 不可为 null。|  
+|name |**nvarchar(256)**|缓存的名称。 不可为 null。|  
+|type |**nvarchar(60)**|缓存类型。 不可为 null。|  
 |**table_level**|**int**|哈希表编号。 某个特定缓存可能有多个对应于不同哈希函数的哈希表。 不可为 null。|  
 |**buckets_count**|**int**|哈希表中的存储桶数。 不可为 null。|  
 |**buckets_in_use_count**|**int**|当前使用的存储桶数。 不可为 null。|  

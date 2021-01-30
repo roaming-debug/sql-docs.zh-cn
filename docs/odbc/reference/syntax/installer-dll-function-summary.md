@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - functions [ODBC], installer DLL functions
 - installer DLL [ODBC]
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3666808659abb29a1f5a1eb1e8be62e8cf0507f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f5cce294142a716180b66544ebe12638e83f792e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461229"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174667"
 ---
 # <a name="installer-dll-function-summary"></a>安装程序 DLL 函数摘要
 下表介绍了安装程序 DLL 中的函数。 有关每个函数的语法和语义的详细信息，请参阅 [安装程序 DLL API 参考](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)。  

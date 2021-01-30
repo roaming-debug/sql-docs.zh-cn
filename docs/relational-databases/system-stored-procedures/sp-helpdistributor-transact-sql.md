@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdistributor_TSQL
 - sp_helpdistributor
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2c7f0778ced979765e046634d0bb39adc01578d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c23613a7b79ea7bfa418425a32b6d2ee9bf62699
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549637"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186981"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,9 +54,9 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @distribdb = ] 'distribdb' OUTPUT` 分发数据库的名称。 *distribdb* 的类型为 **sysname**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
-`[ @directory = ] 'directory' OUTPUT` 工作目录。 *目录* 为 **nvarchar (255) **，默认 **%** 值为，该值是返回结果集的唯一值。  
+`[ @directory = ] 'directory' OUTPUT` 工作目录。 *目录* 为 **nvarchar (255)**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
-`[ @account = ] 'account' OUTPUT` 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户。 *帐户*为 **nvarchar (255) **，默认 **%** 值为，该值是返回结果集的唯一值。  
+`[ @account = ] 'account' OUTPUT` 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户。 *帐户* 为 **nvarchar (255)**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
 `[ @min_distretention = ] _min_distretentionOUTPUT` 最小分发保持期（以小时为单位）。 *min_distretention* 的值为 **int**，默认值为 **-1**。  
   
@@ -64,13 +64,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @history_retention = ] _history_retentionOUTPUT` 历史记录保持期（以小时为单位）。 *history_retention* 的值为 **int**，默认值为 **-1**。  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` 历史记录清除代理的名称。 *history_cleanupagent* 为 **nvarchar (100) **，默认 **%** 值为，该值是返回结果集的唯一值。  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` 历史记录清除代理的名称。 *history_cleanupagent* 为 **nvarchar (100)**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` 分发清除代理的名称。 *distrib_cleanupagent* 为 **nvarchar (100) **，默认 **%** 值为，该值是返回结果集的唯一值。  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` 分发清除代理的名称。 *distrib_cleanupagent* 为 **nvarchar (100)**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
 `[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
-`[ @local = ] 'local'` 是否 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应获得本地服务器值。 *local* 为 **nvarchar (5) **，默认值为 NULL。  
+`[ @local = ] 'local'` 是否 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应获得本地服务器值。 *local* 为 **nvarchar (5)**，默认值为 NULL。  
   
 `[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` 发出远程过程调用的服务器的名称。 *rpcsrvname* 的类型为 **sysname**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
@@ -87,8 +87,8 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**min distrib retention**|**int**|最小分发保持期。|  
 |**max distrib retention**|**int**|最大分发保持期。|  
 |**history retention**|**int**|历史记录保持期。|  
-|**history cleanup agent**|**nvarchar (100) **|历史记录清除代理的名称。|  
-|**distribution cleanup agent**|**nvarchar (100) **|分发清除代理的名称。|  
+|**history cleanup agent**|**nvarchar (100)**|历史记录清除代理的名称。|  
+|**distribution cleanup agent**|**nvarchar (100)**|分发清除代理的名称。|  
 |**rpc server name**|**sysname**|远程分发服务器或本地分发服务器的名称。|  
 |**rpc login name**|**sysname**|用于对远程分发服务器的远程过程调用的登录名。|  
 |**发布服务器类型**|**sysname**|发布服务器的类型；可以为下列值之一：<br /><br /> **MSSQLSERVER**<br /><br /> **联手**<br /><br /> **ORACLE GATEWAY**|  
@@ -99,7 +99,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ## <a name="remarks"></a>备注  
  **sp_helpdistributor** 在所有类型的复制中使用。  
   
- 如果在执行 **sp_helpdistributor**时指定了一个或多个输出参数，则在退出时将为设置为 NULL 的所有输出参数赋值，并且不返回任何结果集。 如果未指定输出参数，则返回结果集。  
+ 如果在执行 **sp_helpdistributor** 时指定了一个或多个输出参数，则在退出时将为设置为 NULL 的所有输出参数赋值，并且不返回任何结果集。 如果未指定输出参数，则返回结果集。  
   
 ## <a name="permissions"></a>权限  
  以下结果集列或输出参数将返回给发布服务器上 **sysadmin** 固定服务器角色的成员和发布数据库上的 **db_owner** 固定数据库角色：  

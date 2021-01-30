@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_add_job (Transact-SQL)
-title: sys. sp_cdc_add_job (Transact-sql) |Microsoft Docs
+title: sys.sp_cdc_add_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_add_job_TSQL
 - sys.sp_cdc_add_job
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8a1285df9bf4d7e17e074e3c22f0ff37241c400
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1c48413f1f588ea4a70c4f8a1190e819758c76b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545834"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186696"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_type = ] 'job\_type'` 要添加的作业的类型。 *job_type* 为 **nvarchar (20) ** ，且不能为 NULL。 有效的输入为 **"捕获"** 和 **"清理"**。  
+`[ @job_type = ] 'job\_type'` 要添加的作业的类型。 *job_type* 为 **nvarchar (20)** ，且不能为 NULL。 有效的输入为 **"捕获"** 和 **"清理"**。  
   
 `[ @start_job = ] start_job` 指示是否应在添加作业后立即启动该作业的标志。 *start_job* 为 **bit** ，默认值为1。  
   
@@ -71,7 +71,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 `[ @pollinginterval ] = polling\_interval_` 日志扫描循环之间的秒数。 *polling_interval* 的值为 **bigint** ，默认值为5。  
   
- 如果将 "*连续*" 设置为1，则*polling_interval*仅对捕获作业有效。 如果指定此值，则该值必须大于或等于0且小于24小时 (Max：86399秒) 。 如果指定的值为 0，则不会在两次日志扫描之间等待。  
+ 如果将 "*连续*" 设置为1，则 *polling_interval* 仅对捕获作业有效。 如果指定此值，则该值必须大于或等于0且小于24小时 (Max：86399秒) 。 如果指定的值为 0，则不会在两次日志扫描之间等待。  
   
 `[ @retention ] = retention_` 更改数据行要在更改表中保留的分钟数。 *保留期* 为 **bigint** ，默认值为 4320 (72 小时) 。 最大值为 52494800（100 年）。 如果指定值，则该值必须是一个正整数。  
   
@@ -90,7 +90,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  因为清理和捕获作业是默认创建的，所以仅当显式删除某个作业并且必须重新创建它时才需要使用此存储过程。  
   
- 作业的名称为**cdc。** _\<database\_name\>_** \_ 清除**或**cdc。** _\<database\_name\>_** \_ 捕获**，其中 *<database_name>* 是当前数据库的名称。 如果已存在具有相同名称的作业，则会在该名称后追加一个句点 (**。**) 后跟一个唯一标识符，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
+ 作业的名称为 **cdc。** _\<database\_name\>_**\_ 清除** 或 **cdc。** _\<database\_name\>_**\_ 捕获**，其中 *<database_name>* 是当前数据库的名称。 如果已存在具有相同名称的作业，则会在该名称后追加一个句点 (**。**) 后跟一个唯一标识符，例如： **cdc.AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
   
  若要查看清理或捕获作业的当前配置，请使用 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。 若要更改作业的配置，请使用 [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)。  
   
@@ -122,8 +122,8 @@ EXEC sys.sp_cdc_add_job
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys. sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

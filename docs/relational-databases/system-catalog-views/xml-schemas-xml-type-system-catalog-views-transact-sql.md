@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3fd51f109ba7125493667c43c5cda857a7a5e36f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 84aa05fe25ab375d458f8062d05b54a7c4310d3e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101689"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180745"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML 架构（XML 类型系统）目录视图 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
