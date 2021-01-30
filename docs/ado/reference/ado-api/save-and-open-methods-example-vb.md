@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14668aba6cbc6817b951820bbdee4d5c69a51bc5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c76d26032d9986cba52442d62bb7ef8c10db5419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989358"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166606"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save 和 Open 方法示例 (VB)
 这三个示例演示如何将 [Save](./save-method.md) 和 [Open](./open-method-ado-recordset.md) 方法一起使用。  
   
- 假设您正在出差，并希望从数据库中获取表。 在开始之前，你可以访问作为 [记录集](./recordset-object-ado.md) 的数据，并将其保存为可传送的形式。 到达目标后，可将 **记录集** 作为本地、断开连接的 **记录集**访问。 对 **记录集**进行更改，然后再次保存。 最后，当您返回 home 时，您将再次连接到该数据库，并将其更新为对您的路上所做的更改。  
+ 假设您正在出差，并希望从数据库中获取表。 在开始之前，你可以访问作为 [记录集](./recordset-object-ado.md) 的数据，并将其保存为可传送的形式。 到达目标后，可将 **记录集** 作为本地、断开连接的 **记录集** 访问。 对 **记录集** 进行更改，然后再次保存。 最后，当您返回 home 时，您将再次连接到该数据库，并将其更新为对您的路上所做的更改。  
   
- 首先，访问并保存 ***Authors*** 表。  
+ 首先，访问并保存 **_作者_* _ 表。  
   
 ```  
 'BeginSaveVB  
@@ -85,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- 此时，您已到达目标位置。 您将作为本地、断开连接的**记录集**访问***作者***表。 你必须在用于访问保存的文件的计算机上具有 **MSPersist** 提供程序，a:\Pubs.xml。  
+ 此时，您已到达目标位置。 你将以本地、断开连接的 _ * Recordset * * 访问 _*_作者_*_ 表。 你必须在用于访问保存的文件的计算机上具有 **MSPersist** 提供程序，a:\Pubs.xml。  
   
 ```  
 Attribute VB_Name = "Save"  

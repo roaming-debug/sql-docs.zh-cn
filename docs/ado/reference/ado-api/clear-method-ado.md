@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Errors::raw_Clear
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d78980c1baee5aed1280f69c0d5224622a217ea0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1f79e81947a549057db5dbff7f6715492d08923a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975468"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164718"
 ---
 # <a name="clear-method-ado"></a>Clear 方法 (ADO)
 从[错误](./errors-collection-ado.md)集合中移除所有[错误](./error-object.md)对象。  
@@ -35,11 +35,11 @@ Errors.Clear
 ```  
   
 ## <a name="remarks"></a>备注  
- 对[Errors](./errors-collection-ado.md)集合使用**Clear**方法可从集合中删除所有现有的[错误](./error-object.md)对象。 出现错误时，ADO 会自动清除 **错误** 集合，并根据新错误将 **错误** 对象填充到其中。  
+ 对 [Errors](./errors-collection-ado.md)集合使用 **Clear** 方法可从集合中删除所有现有的 [错误](./error-object.md)对象。 出现错误时，ADO 会自动清除 **错误** 集合，并根据新错误将 **错误** 对象填充到其中。  
   
- 某些属性和方法会返回**错误**集合中显示为**错误**对象的警告，但不会停止执行程序。 在对[Recordset](./recordset-object-ado.md)对象调用[Resync](./resync-method.md)、 [UpdateBatch](./updatebatch-method.md)或[CancelBatch](./cancelbatch-method-ado.md)方法之前，[连接](./connection-object-ado.md)对象上的[Open](./open-method-ado-connection.md)方法;或在**记录集**对象上设置[Filter](./filter-property.md)属性，对**Errors**集合调用**Clear**方法。 通过这种方式，您可以读取**Errors**集合的[Count](./count-property-ado.md)属性来测试返回的警告。  
+ 某些属性和方法会返回 **错误** 集合中显示为 **错误** 对象的警告，但不会停止执行程序。 在对 [Recordset](./recordset-object-ado.md)对象调用 [Resync](./resync-method.md)、 [UpdateBatch](./updatebatch-method.md)或 [CancelBatch](./cancelbatch-method-ado.md)方法之前，[连接](./connection-object-ado.md)对象上的 [Open](./open-method-ado-connection.md)方法;或在 **记录集** 对象上设置 [Filter](./filter-property.md)属性，对 **Errors** 集合调用 **Clear** 方法。 通过这种方式，您可以读取 **Errors** 集合的 [Count](./count-property-ado.md)属性来测试返回的警告。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [错误集合 (ADO)](./errors-collection-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  

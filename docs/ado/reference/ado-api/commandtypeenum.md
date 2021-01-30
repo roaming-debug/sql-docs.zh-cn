@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CommandTypeEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c23647edbe916daeb3f9356e06de75d11458a59c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9cea565eed8ae7fa9800284c19b03cdbc704b5e2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975058"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164659"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 指定如何解释命令参数。  
@@ -34,9 +34,9 @@ ms.locfileid: "88975058"
 |**adCmdText**|1|将 [CommandText](./commandtext-property-ado.md) 计算为命令或存储过程调用的文本定义。|  
 |**adCmdTable**|2|将 **CommandText** 计算为表名称，其列全部由内部生成的 SQL 查询返回。|  
 |**adCmdStoredProc**|4|将 **CommandText** 计算为存储过程名称。|  
-|**adCmdUnknown**|8|默认。 指示 **CommandText** 属性中的命令类型未知。<br /><br /> 当命令类型未知时，ADO 将多次尝试解释 **CommandText**。<br /><br /> -   **CommandText** 被解释为命令或存储过程调用的文本定义。 这与 **adCmdText**的行为相同。<br />-   **CommandText** 是存储过程的名称。 这与 **adCmdStoredProc**的行为相同。<br />-   **CommandText** 被解释为表的名称。 所有列都由内部生成的 SQL 查询返回。 这与 **adCmdTable**的行为相同。|  
-|**adCmdFile**|256|将 **CommandText** 计算为持久存储的 [记录集](./recordset-object-ado.md)的文件名。 与 Recordset 一起使用 **。** 仅[打开](./open-method-ado-recordset.md)或重新[查询](./requery-method.md)。|  
-|**adCmdTableDirect**|512|将 **CommandText** 计算为其列全部返回的表名。 与 Recordset 一起使用。仅 **打开** 或重新 **查询** 。 若要使用[Seek](./seek-method.md)方法，必须使用**AdCmdTableDirect**打开**记录集**。<br /><br /> 此值不能与 [ExecuteOptionEnum](./executeoptionenum.md) 值 **adAsyncExecute**组合。|  
+|**adCmdUnknown**|8|默认。 指示 **CommandText** 属性中的命令类型未知。<br /><br /> 当命令类型未知时，ADO 将多次尝试解释 **CommandText**。<br /><br /> -   **CommandText** 被解释为命令或存储过程调用的文本定义。 这与 **adCmdText** 的行为相同。<br />-   **CommandText** 是存储过程的名称。 这与 **adCmdStoredProc** 的行为相同。<br />-   **CommandText** 被解释为表的名称。 所有列都由内部生成的 SQL 查询返回。 这与 **adCmdTable** 的行为相同。|  
+|**adCmdFile**|256|将 **CommandText** 计算为持久存储的 [记录集](./recordset-object-ado.md)的文件名。 与 Recordset 一起使用 **。** 仅 [打开](./open-method-ado-recordset.md)或重新 [查询](./requery-method.md)。|  
+|**adCmdTableDirect**|512|将 **CommandText** 计算为其列全部返回的表名。 与 Recordset 一起使用。仅 **打开** 或重新 **查询** 。 若要使用 [Seek](./seek-method.md)方法，必须使用 **AdCmdTableDirect** 打开 **记录集**。<br /><br /> 此值不能与 [ExecuteOptionEnum](./executeoptionenum.md) 值 **adAsyncExecute** 组合。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
@@ -51,7 +51,7 @@ ms.locfileid: "88975058"
 |AdoEnums. CommandType. 文件|  
 |AdoEnums. CommandType. TABLEDIRECT|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

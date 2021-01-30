@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Position
@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ba534b2de1ed6f85412010e441f0b1afb5daf72
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6364517c41ff08417a86bcdc6fd5b3f7d0dd3c2b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986148"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164441"
 ---
 # <a name="position-object-ado-md"></a>位置对象 (ADO MD)
 表示一个或多个不同维度的成员的集合，这些成员定义沿轴的点。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  对于 **Position** 对象的属性和集合，可以执行以下操作：  
   
--   使用**ordinal**属性可以返回沿[轴](./axis-object-ado-md.md)的**位置**的序号位置。  
+-   使用 **ordinal** 属性可以返回沿 [轴](./axis-object-ado-md.md)的 **位置** 的序号位置。  
   
--   使用 [members](./members-collection-ado-md.md) 集合可以返回构成 **轴**上的位置的成员。  
+-   使用 [members](./members-collection-ado-md.md) 集合可以返回构成 **轴** 上的位置的成员。  
   
  本部分包含以下主题。  
   

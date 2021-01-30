@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Hierarchy
@@ -16,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60d779ec3ed3393417725c9f574a798e5efc0efd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a1370f83c4214047038eadf4b84813f0b48c3b72
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986648"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164546"
 ---
 # <a name="hierarchy-object-ado-md"></a>层次结构对象 (ADO MD)
 表示一个 [维度](./dimension-object-ado-md.md) 成员可以聚合或 "汇总" 的方式。 可以在一个或多个层次结构上聚合维度。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 **层次结构** 对象的集合和属性，可以执行以下操作：  
   
--   标识具有[Name](./name-property-ado-md.md)和[UniqueName](./uniquename-property-ado-md.md)属性的**层次结构**。  
+-   标识具有 [Name](./name-property-ado-md.md)和 [UniqueName](./uniquename-property-ado-md.md)属性的 **层次结构**。  
   
--   返回一个有意义的字符串，该字符串描述具有[Description](./description-property-ado-md.md)属性的**层次结构**。  
+-   返回一个有意义的字符串，该字符串描述具有 [Description](./description-property-ado-md.md)属性的 **层次结构**。  
   
--   返回与[Level](./level-object-ado-md.md) [集合构成](./levels-collection-ado-md.md)**层次结构**的级别对象。  
+-   返回与 [Level](./level-object-ado-md.md) [集合构成](./levels-collection-ado-md.md)**层次结构** 的级别对象。  
   
 -   使用标准 ADO [Properties](../ado-api/properties-collection-ado.md) 集合获取有关 **层次结构** 对象的其他信息。  
   
- **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
+ **Properties** 集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
 |名称|说明|  
 |----------|-----------------|  

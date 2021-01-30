@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbca744c17ffd3dfa9b84b679e9efeaf0d27ad9a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cd954184f8ea2227427a5668968714e9c61dfe23
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990388"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167027"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 和 Precision 属性示例 (VC++)
-此示例使用[NumericScale](./numericscale-property-ado.md)和[Precision](./precision-property-ado.md)属性显示***Pubs***数据库的***折扣***表中的字段的小数位数和精度。  
+此示例使用 " [NumericScale](./numericscale-property-ado.md) " 和 "[精度](./precision-property-ado.md)" 属性来显示 _ *_Pubs_** 数据库的 * "**折扣** _" 表中的字段的小数位数和精度。  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  

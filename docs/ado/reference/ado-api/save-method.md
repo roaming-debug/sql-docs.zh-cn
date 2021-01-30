@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Recordset::Save
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a32419db6e4dd04cc57b31b1d9267e80a30db41d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 54e75b3ed86a1522c7334f6948b2a5a105971c9f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638127"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166595"
 ---
 # <a name="save-method"></a>Save 方法
 将 [记录集](./recordset-object-ado.md) 保存到文件或 [流](./stream-object-ado.md) 对象中。  
@@ -88,7 +88,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
   
  使用 UTF-8 格式保存以 XML 格式保存的 **记录集** 。 将此类文件加载到 ADO 流时，除非将流的字符集属性设置为适用于 UTF-8 格式的适当值，否则 Stream 对象将不会尝试从流中打开 **记录集** 。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

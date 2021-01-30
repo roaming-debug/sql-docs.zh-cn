@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec19a5f4968613bbf85137485f9256937499a354
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9d99778b2fd53fd75d38e8476022a4744192d251
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987888"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166289"
 ---
 # <a name="version-property-example-vc"></a>Version 属性示例 (VC++)
 此示例使用[连接](./connection-object-ado.md)对象的[Version](./version-property-ado.md)属性显示当前 ADO 版本。 它还使用几个动态属性来显示：  

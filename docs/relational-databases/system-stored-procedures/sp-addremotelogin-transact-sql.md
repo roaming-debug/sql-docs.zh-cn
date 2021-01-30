@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addremotelogin_TSQL
 - sp_addremotelogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de4f54972fb4a749e6466a81fef88ae8630be698
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13b935d91772d70d58b38f9f995341d81e04388f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464609"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165191"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,13 +46,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="arguments"></a>参数  
  [ @remoteserver **=** ] **\ "**_remoteserver_**"**  
- 远程登录名所适用的远程服务器的名称。 *remoteserver* 的值为 **sysname**，无默认值。 如果仅指定了 *remoteserver* ，则 *remoteserver* 上的所有用户将映射到本地服务器上具有相同名称的现有登录名。 对于本地服务器而言，远程服务器必须是已知的。 可以使用 sp_addserver 来添加。 当 *remoteserver* 上的用户连接到运行的本地服务器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以执行远程存储过程时，它们将作为本地登录名，该登录名与其在 *remoteserver*上的登录名匹配。 *remoteserver* 是启动远程过程调用的服务器。  
+ 远程登录名所适用的远程服务器的名称。 *remoteserver* 的值为 **sysname**，无默认值。 如果仅指定了 *remoteserver* ，则 *remoteserver* 上的所有用户将映射到本地服务器上具有相同名称的现有登录名。 对于本地服务器而言，远程服务器必须是已知的。 可以使用 sp_addserver 来添加。 当 *remoteserver* 上的用户连接到运行的本地服务器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以执行远程存储过程时，它们将作为本地登录名，该登录名与其在 *remoteserver* 上的登录名匹配。 *remoteserver* 是启动远程过程调用的服务器。  
   
  [ @loginame **=** ] **"**_login_**"**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地实例上的用户的登录 ID。 login 的数据类型为 sysname，默认值为 NULL。 *登录名*必须在本地实例上已经存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果指定 *login* ，则 *remoteserver* 上的所有用户将映射到该特定本地登录名。 当 *remoteserver* 上的用户连接到的本地实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以执行远程存储过程时，它们将作为 *登录名*进行连接。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地实例上的用户的登录 ID。 login 的数据类型为 sysname，默认值为 NULL。 *登录名* 必须在本地实例上已经存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果指定 *login* ，则 *remoteserver* 上的所有用户将映射到该特定本地登录名。 当 *remoteserver* 上的用户连接到的本地实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以执行远程存储过程时，它们将作为 *登录名* 进行连接。  
   
  [ @remotename **=** ] **'**_remote_name_**'**  
- 远程服务器上的用户的登录 ID。 *remote_name* 的默认值为 **sysname**，默认值为 NULL。 *remoteserver*上必须存在*remote_name* 。 如果指定 *remote_name* ，则特定用户 *remote_name* 会映射到本地服务器上的 *登录名* 。 当*remoteserver*上的*remote_name*连接到的本地实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以执行远程存储过程时，它将作为*登录名*进行连接。 *Remote_name*的登录 id 可以不同于远程服务器上的登录 id*登录名*。  
+ 远程服务器上的用户的登录 ID。 *remote_name* 的默认值为 **sysname**，默认值为 NULL。 *remoteserver* 上必须存在 *remote_name* 。 如果指定 *remote_name* ，则特定用户 *remote_name* 会映射到本地服务器上的 *登录名* 。 当 *remoteserver* 上的 *remote_name* 连接到的本地实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以执行远程存储过程时，它将作为 *登录名* 进行连接。 *Remote_name* 的登录 id 可以不同于远程服务器上的登录 id *登录名*。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -93,11 +93,11 @@ EXEC sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
  [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
- [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

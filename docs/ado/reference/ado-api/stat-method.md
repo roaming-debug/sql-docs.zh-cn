@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::Stat
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db386d8e39c57883c7e456962d57e884383d62ff
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 18571c88e604b21856195c9675e10b2c86dad35e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988848"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166491"
 ---
 # <a name="stat-method"></a>Stat 方法
 检索有关 [流](./stream-object-ado.md) 对象的信息。  
@@ -48,7 +48,7 @@ Long stream.Stat(StatStg, StatFlag)
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  为 ADO 流对象实现的 Stat 方法版本将填充 STATSTG 结构的以下字段：  
   
  *pwcsName*  
@@ -70,5 +70,5 @@ Long stream.Stat(StatStg, StatFlag)
   
  如果未在 StatFlag 参数中指定 STATFLAG_NONAME，并且没有可用于当前流的名称，则将 E_NOTIMPL 此值。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [流对象 (ADO)](./stream-object-ado.md)

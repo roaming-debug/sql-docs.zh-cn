@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 631afc8911c02dd58f819ffab0f162f952fddeec
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9b5b045800bd6998eea46ac3fb75ff7999f0b431
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990368"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167006"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Open 和 Close 方法示例 (VB)
-此示例使用已打开的[记录集](./recordset-object-ado.md)和[连接](./connection-object-ado.md)对象上的**打开**和[关闭](./close-method-ado.md)方法。  
+此示例使用已打开的 [记录集](./recordset-object-ado.md)和 [连接](./connection-object-ado.md)对象上的 **打开** 和 [关闭](./close-method-ado.md)方法。  
   
 ```  
 'BeginOpenVB  

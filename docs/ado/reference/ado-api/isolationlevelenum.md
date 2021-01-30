@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - IsolationLevelEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d56051369218f8700ef516526c3f1baf07c7469b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 780e61f5aabea993f3af4d36b9547cca75377d99
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990758"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167201"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 指定 [连接](./connection-object-ado.md) 对象的事务隔离级别。  
@@ -31,12 +31,12 @@ ms.locfileid: "88990758"
 |**adXactUnspecified**|-1|指示提供程序使用的隔离级别与指定的隔离级别不同，但是无法确定该级别。|  
 |**adXactChaos**|16|指示无法覆盖来自更高隔离事务的挂起的更改。|  
 |**adXactBrowse**|256|指示从一个事务可以查看其他事务中的未提交更改。|  
-|**adXactReadUncommitted**|256|与 **adXactBrowse**相同。|  
+|**adXactReadUncommitted**|256|与 **adXactBrowse** 相同。|  
 |**adXactCursorStability**|4096|指示在一个事务中，只可以在提交其他事务后查看这些更改。|  
-|**adXactReadCommitted**|4096|与 **adXactCursorStability**相同。|  
+|**adXactReadCommitted**|4096|与 **adXactCursorStability** 相同。|  
 |**adXactRepeatableRead**|65536|指示从一个事务中无法看到在其他事务中所做的更改，但该重新查询可以检索新的 **记录集** 对象。|  
 |**adXactIsolated**|1048576|指示在隔离其他事务时执行事务。|  
-|**adXactSerializable**|1048576|与 **adXactIsolated**相同。|  
+|**adXactSerializable**|1048576|与 **adXactIsolated** 相同。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
@@ -53,5 +53,5 @@ ms.locfileid: "88990758"
 |AdoEnums. IsolationLevel|  
 |AdoEnums. IsolationLevel|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [IsolationLevel 属性](./isolationlevel-property.md)

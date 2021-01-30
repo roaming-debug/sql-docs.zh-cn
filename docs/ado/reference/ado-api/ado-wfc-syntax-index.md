@@ -7,7 +7,7 @@ ms.date: 02/15/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2090b86a725056ecc6ab9ac9c5eab32a700adb0d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 594c0c3602036daabd4b6231345d19bf8425ef26
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976288"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164876"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 语法索引
 ADO 语言参考使用 Microsoft Visual Basic 编程语言来演示 ADO 方法和属性语法。 此索引是对 ADO 语言参考主题的交叉引用，基于用于 Windows 基础类 (ado/WFC) 的 ADO。 当语法中存在差异时，请使用此索引中的函数签名，而不是语言参考主题中的语法列表。  

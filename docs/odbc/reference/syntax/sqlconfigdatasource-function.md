@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLConfigDataSource
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8849ce5528380e4164a420227395bce5aa436eaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddcfac8f1f211884aa3f46db3f56a2762778ed92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448740"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165334"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource Function
 **度**  
@@ -34,7 +34,7 @@ ms.locfileid: "88448740"
  **摘要**  
  **SQLConfigDataSource** 添加、修改或删除数据源。  
   
- 还可以[ODBCCONF.EXE](../../../odbc/odbcconf-exe.md)访问**SQLConfigDataSource**功能。  
+ 还可以 [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md)访问 **SQLConfigDataSource** 功能。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ BOOL SQLConfigDataSource(
  送父窗口句柄。 如果句柄为 null，则该函数将不会显示任何对话框。  
   
  *fRequest*  
- 送请求的类型。 *FRequest*参数必须包含以下值之一：  
+ 送请求的类型。 *FRequest* 参数必须包含以下值之一：  
   
  ODBC_ADD_DSN：添加新用户数据源。  
   
@@ -78,15 +78,15 @@ BOOL SQLConfigDataSource(
  如果此函数成功，则返回 TRUE，否则返回 FALSE。 如果调用此函数时，系统信息中不存在任何条目，则该函数将返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLConfigDataSource**返回 FALSE 时，可以通过调用**SQLInstallerError**获取关联的* \* pfErrorCode*值。 下表列出了可由**SQLInstallerError**返回的* \* pfErrorCode*值，并说明了此函数的上下文中的每个值。  
+ 当 **SQLConfigDataSource** 返回 FALSE 时，可以通过调用 **SQLInstallerError** 获取关联的 *\* pfErrorCode* 值。 下表列出了可由 **SQLInstallerError** 返回的 *\* pfErrorCode* 值，并说明了此函数的上下文中的每个值。  
   
 |*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出现错误，但没有特定的安装程序错误。|  
-|ODBC_ERROR_INVALID_HWND|无效的窗口句柄|*HwndParent*参数无效或为 NULL。|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|请求的类型无效|*FRequest*参数不是以下项之一：<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN ODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSN ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSN|  
-|ODBC_ERROR_INVALID_NAME|无效的驱动程序或转换器名称|*LpszDriver*参数无效。 在注册表中找不到它。|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|关键字-值对无效|*LpszAttributes*参数包含语法错误。|  
+|ODBC_ERROR_INVALID_HWND|无效的窗口句柄|*HwndParent* 参数无效或为 NULL。|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|请求的类型无效|*FRequest* 参数不是以下项之一：<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN ODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSN ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSN|  
+|ODBC_ERROR_INVALID_NAME|无效的驱动程序或转换器名称|*LpszDriver* 参数无效。 在注册表中找不到它。|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|关键字-值对无效|*LpszAttributes* 参数包含语法错误。|  
 |ODBC_ERROR_REQUEST_FAILED|*请求* 失败|安装程序无法执行 *fRequest* 参数请求的操作。 对 **ConfigDSN** 的调用失败。|  
 |ODBC_ERROR_LOAD_LIBRARY_FAILED|无法加载驱动程序或转换器安装程序库|无法加载驱动程序安装库。|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行此功能。|  
@@ -94,9 +94,9 @@ BOOL SQLConfigDataSource(
 ## <a name="comments"></a>注释  
  **SQLConfigDataSource** 使用 *lpszDriver* 的值从系统信息读取驱动程序的安装程序 DLL 的完整路径。 它将加载 DLL 并调用 **ConfigDSN** ，并将其与传递给它的参数相同。  
   
- 如果**SQLConfigDataSource**找不到或无法加载安装程序 DLL，或如果用户取消了对话框，则返回 FALSE。 否则，它将返回从 **ConfigDSN**接收的状态。  
+ 如果 **SQLConfigDataSource** 找不到或无法加载安装程序 DLL，或如果用户取消了对话框，则返回 FALSE。 否则，它将返回从 **ConfigDSN** 接收的状态。  
   
- **SQLConfigDataSource** 将系统 dsn *FRequest*映射到用户 dsn *fRequest* (ODBC_ADD_SYS_DSN ODBC_ADD_DSN，ODBC_CONFIG_SYS_DSN 为 ODBC_CONFIG_DSN，ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DSN) 。 为了区分用户和系统 Dsn， **SQLConfigDataSource** 根据下表设置安装程序配置模式。 在返回之前， **SQLConfigDataSource** 会将配置模式重置为 BOTHDSN。 **ConfigDSN** (由驱动程序实现) 应调用 **SQLWriteDSNToIni** 和 **SQLWritePrivateProfileString** 以支持系统 DSN。 有关详细信息，请参阅 [ConfigDSN 函数](../../../odbc/reference/syntax/configdsn-function.md)。  
+ **SQLConfigDataSource** 将系统 dsn *FRequest* 映射到用户 dsn *fRequest* (ODBC_ADD_SYS_DSN ODBC_ADD_DSN，ODBC_CONFIG_SYS_DSN 为 ODBC_CONFIG_DSN，ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DSN) 。 为了区分用户和系统 Dsn， **SQLConfigDataSource** 根据下表设置安装程序配置模式。 在返回之前， **SQLConfigDataSource** 会将配置模式重置为 BOTHDSN。 **ConfigDSN** (由驱动程序实现) 应调用 **SQLWriteDSNToIni** 和 **SQLWritePrivateProfileString** 以支持系统 DSN。 有关详细信息，请参阅 [ConfigDSN 函数](../../../odbc/reference/syntax/configdsn-function.md)。  
   
 |*fRequest*|配置模式|  
 |----------------|------------------------|  

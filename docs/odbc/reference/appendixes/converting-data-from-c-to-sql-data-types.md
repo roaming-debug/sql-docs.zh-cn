@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], about converting
 - converting data from c to SQL types [ODBC]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56af1e376edffa0268a2e27c840f035e5cda9763
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a326f91f0a10e8731153817cd8c2eed7ff0656e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429709"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165392"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>将数据从 C 转换为 SQL 数据类型
-当应用程序调用 **SQLExecute** 或 **SQLExecDirect**时，驱动程序将从应用程序中的存储位置检索与 **SQLBindParameter** 绑定的任何参数的数据。 当应用程序调用 **SQLSetPos**时，驱动程序将从与 **SQLBindCol**绑定的列中检索更新或添加操作的数据。 对于执行时数据参数，应用程序将参数数据与 **SQLPutData**一起发送。 必要时，驱动程序将数据从**SQLBindParameter**中的*ValueType*参数指定的数据类型转换为**SQLBindParameter**中*ParameterType*参数指定的数据类型，然后将数据发送到数据源。  
+当应用程序调用 **SQLExecute** 或 **SQLExecDirect** 时，驱动程序将从应用程序中的存储位置检索与 **SQLBindParameter** 绑定的任何参数的数据。 当应用程序调用 **SQLSetPos** 时，驱动程序将从与 **SQLBindCol** 绑定的列中检索更新或添加操作的数据。 对于执行时数据参数，应用程序将参数数据与 **SQLPutData** 一起发送。 必要时，驱动程序将数据从 **SQLBindParameter** 中的 *ValueType* 参数指定的数据类型转换为 **SQLBindParameter** 中 *ParameterType* 参数指定的数据类型，然后将数据发送到数据源。  
   
  下表显示了从 ODBC C 数据类型到 ODBC SQL 数据类型的支持转换。 实心圆圈表示 SQL 数据类型的默认转换 (C 数据类型，在将 *ValueType* 值或 SQL_DESC_CONCISE_TYPE 描述符字段 SQL_C_DEFAULT) 时，数据将转换为数据类型。 空心圆表示支持的转换。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "88429709"
   
  ![支持的转换：从 ODBC C 到 SQL 数据类型](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
   
- 以下各节中的表描述了驱动程序或数据源如何转换发送到数据源的数据;驱动程序需要支持从所有 ODBC C 数据类型到它们支持的 ODBC SQL 数据类型的转换。 对于给定的 ODBC C 数据类型，表的第一列列出了**SQLBindParameter**中*ParameterType*参数的合法输入值。 第二列列出驱动程序执行的测试结果，以确定是否可以转换数据。 第三列列出了 **SQLExecDirect**、 **SQLExecute**、 **SQLBulkOperations**、 **SQLSetPos**或 **SQLPutData**为每个结果返回的 SQLSTATE。 仅当返回 SQL_SUCCESS 时才将数据发送到数据源。  
+ 以下各节中的表描述了驱动程序或数据源如何转换发送到数据源的数据;驱动程序需要支持从所有 ODBC C 数据类型到它们支持的 ODBC SQL 数据类型的转换。 对于给定的 ODBC C 数据类型，表的第一列列出了 **SQLBindParameter** 中 *ParameterType* 参数的合法输入值。 第二列列出驱动程序执行的测试结果，以确定是否可以转换数据。 第三列列出了 **SQLExecDirect**、 **SQLExecute**、 **SQLBulkOperations**、 **SQLSetPos** 或 **SQLPutData** 为每个结果返回的 SQLSTATE。 仅当返回 SQL_SUCCESS 时才将数据发送到数据源。  
   
- 如果**SQLBindParameter**中的*ParameterType*参数包含的 ODBC SQL 数据类型的标识符不显示在给定 C 数据类型的表中，则**SQLBindParameter**将返回 SQLSTATE 07006 (受限制的数据类型属性冲突) 。 如果 *ParameterType* 参数包含驱动程序特定的标识符，并且该驱动程序不支持从特定 ODBC C 数据类型到该驱动程序特定的 SQL 数据类型的转换，则 **SQLBINDPARAMETER** 将返回 SQLSTATE HYC00 (未实现) 的可选功能。  
+ 如果 **SQLBindParameter** 中的 *ParameterType* 参数包含的 ODBC SQL 数据类型的标识符不显示在给定 C 数据类型的表中，则 **SQLBindParameter** 将返回 SQLSTATE 07006 (受限制的数据类型属性冲突) 。 如果 *ParameterType* 参数包含驱动程序特定的标识符，并且该驱动程序不支持从特定 ODBC C 数据类型到该驱动程序特定的 SQL 数据类型的转换，则 **SQLBINDPARAMETER** 将返回 SQLSTATE HYC00 (未实现) 的可选功能。  
   
- 如果在**SQLBindParameter**中指定的*ParameterValuePtr*和*StrLen_or_IndPtr*参数均为 null 指针，则该函数将返回 SQLSTATE HY009 (使用 null 指针) 无效。 尽管表中没有显示，但应用程序会将**SQLBindParameter**参数*StrLen_or_IndPtr*的长度/指示器*StrLen_or_IndPtr*缓冲区的值或**SQLPutData**的参数值设置为 SQL_NULL_DATA，以指定 NULL SQL 数据值。  (*StrLen_or_IndPtr*参数对应于 APD 的 SQL_DESC_OCTET_LENGTH_PTR 字段。 ) 应用程序将这些值设置为 SQL_NTS 以指定 SQLPutData (的 \* **SQLBindParameter**或 DataPtr 的*ParameterValuePtr*中的值 SQL_DESC_DATA_PTR 为 \* *DataPtr*以 null 值结束的字符串。 **SQLPutData**  
+ 如果在 **SQLBindParameter** 中指定的 *ParameterValuePtr* 和 *StrLen_or_IndPtr* 参数均为 null 指针，则该函数将返回 SQLSTATE HY009 (使用 null 指针) 无效。 尽管表中没有显示，但应用程序会将 **SQLBindParameter** 参数 *StrLen_or_IndPtr* 的长度/指示器 *StrLen_or_IndPtr* 缓冲区的值或 **SQLPutData** 的参数值设置为 SQL_NULL_DATA，以指定 NULL SQL 数据值。  (*StrLen_or_IndPtr* 参数对应于 APD 的 SQL_DESC_OCTET_LENGTH_PTR 字段。 ) 应用程序将这些值设置为 SQL_NTS 以指定 SQLPutData (的 \* **SQLBindParameter** 或 DataPtr 的 *ParameterValuePtr* 中的值 SQL_DESC_DATA_PTR 为 \* 以 null 值结束的字符串。   
   
  表中使用了以下术语：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "88429709"
 -   **位数** -用于表示数字的字符数，包括减号、小数点和指数 (如有需要) 。  
   
 -   **字词**   
-     ***斜体***  -SQL 语法的元素。 有关语法元素的语法，请参阅 " [附录 C： SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)"。  
+     **_斜体_**  -SQL 语法的元素。 有关语法元素的语法，请参阅 " [附录 C： SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)"。  
   
  本部分包含以下主题。  
   

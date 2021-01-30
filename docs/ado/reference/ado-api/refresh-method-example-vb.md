@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 998af4a3b5264dafc4fd790cfbbea838cb1a708e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c95d36c758b81daa1a60419d6214d75781131c9e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989598"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166663"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh 方法示例 (VB)
 此示例演示如何使用[refresh](./refresh-method-ado.md)方法刷新存储过程[命令](./command-object-ado.md)对象的[参数](./parameters-collection-ado.md)集合。  

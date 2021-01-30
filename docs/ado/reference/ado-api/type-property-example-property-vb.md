@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e826903c37ca436f73bd82abc93afdd0568fc9e6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e01df93f4f7f5db2b534c0c3458482ccd06c2b1f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988238"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166356"
 ---
 # <a name="type-property-example-property-vb"></a>Type 属性示例（属性）(VB)
 此示例演示了 [Type](./type-property-ado.md) 属性。 它是一种用于列出集合名称和类型的实用工具的模型，如 [属性](./properties-collection-ado.md)、 [字段](./fields-collection-ado.md)等。  

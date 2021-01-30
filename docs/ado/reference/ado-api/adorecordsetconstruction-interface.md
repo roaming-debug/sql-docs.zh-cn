@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ADORecordsetConstruction
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ecf8f8e12f8d12a3382e7b67b13e8bb12fb69ac9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d9be4f47033616f56177027bc83c4621cef57847
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976218"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164863"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 接口
-**ADORecordsetConstruction**接口用于从 c/c + + 应用程序中的 OLE DB**行**集对象构造 ADO**记录集**对象。  
+**ADORecordsetConstruction** 接口用于从 c/c + + 应用程序中的 OLE DB **行** 集对象构造 ADO **记录集** 对象。  
   
  此接口支持以下属性：  
   
@@ -32,9 +32,9 @@ ms.locfileid: "88976218"
   
 |properties|说明|  
 |-|-|  
-|[章节](./chapter-property-ado.md)|读/写。<br />获取/设置此 ADO**记录集**对象的 OLE DB**章节**对象。|  
-|[RowPosition](./rowposition-property-ado.md)|读/写。<br />获取/设置此 ADO**记录集**对象的 OLE DB **RowPosition**对象。|  
-|[行集](./rowset-property-ado.md)|读/写。<br />获取/设置此 ADO**记录集**对象的 OLE DB**行集**对象。|  
+|[章节](./chapter-property-ado.md)|读/写。<br />获取/设置此 ADO **记录集** 对象的 OLE DB **章节** 对象。|  
+|[RowPosition](./rowposition-property-ado.md)|读/写。<br />获取/设置此 ADO **记录集** 对象的 OLE DB **RowPosition** 对象。|  
+|[行集](./rowset-property-ado.md)|读/写。<br />获取/设置此 ADO **记录集** 对象的 OLE DB **行集** 对象。|  
   
 ## <a name="methods"></a>方法  
  无。  
@@ -52,7 +52,7 @@ ms.locfileid: "88976218"
     adoRs.CreateInstance(__uuidof(Recordset));  
     ```  
   
-2.  查询**Recordset**对象上的**IADORecordsetConstruction**接口：  
+2.  查询 **Recordset** 对象上的 **IADORecordsetConstruction** 接口：  
   
     ```  
     adoRecordsetConstructionPtr adoRsConstruct=NULL;  
@@ -68,9 +68,9 @@ ms.locfileid: "88976218"
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- 生成的 `adoRs` 对象现在表示从 OLE DB**行集**对象构造的 ADO**记录集**对象。  
+ 生成的 `adoRs` 对象现在表示从 OLE DB **行集** 对象构造的 ADO **记录集** 对象。  
   
- 还可以从 OLE DB**章节**或**ROWPOSITION**对象构造 ADO**记录集**对象。  
+ 还可以从 OLE DB **章节** 或 **ROWPOSITION** 对象构造 ADO **记录集** 对象。  
   
 ## <a name="requirements"></a>要求  
  **版本：** ADO 2.0 及更高版本  

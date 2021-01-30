@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
 - sp_filestream_force_garbage_collection_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 627793d900903a28ce4e4b7ee6a3272b4c63ee32
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 0c234c5c03b00b25babbec0a4fbc197f235c966d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753832"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165244"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_filestream_force_garbage_collection
  指示要运行垃圾回收器的数据库的名称。  
   
 > [!NOTE]  
->  的数据类型为 sysname`@dbname`****。 如果未指定，则假定为当前数据库。  
+>  的数据类型为 sysname`@dbname`。 如果未指定，则假定为当前数据库。  
   
  `[ @filename = ] 'logical_file_name'`  
  指定要运行垃圾回收器的 FILESTREAM 容器的逻辑名称。 `@filename` 是可选项。 如果未指定逻辑文件名，垃圾回收器将清除指定数据库中的所有 FILESTREAM 容器。  

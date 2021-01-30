@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d7d1c5cf75df09caeb78e8e643c538e19310e97
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3406eec9b98c8b339f3b0edea21479897a219bc7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988668"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166450"
 ---
 # <a name="status-property-example-vc"></a>Status 属性示例 (VC++)
 此示例使用 [Status](./status-property-ado-recordset.md) 属性来显示批处理操作中修改了哪些记录，然后才能进行批处理更新。  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Parameter::Precision
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7a166077bd0237ff822193297d57dc364d17bef
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4e8eba98d2489dab9bd41019ddc1f32da3711ad1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990048"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166852"
 ---
 # <a name="precision-property-ado"></a>Precision 属性 (ADO)
 指示 [参数](./parameter-object.md) 对象或数值 [字段](./field-object.md) 对象中数值的精度度。  
@@ -30,21 +30,21 @@ ms.locfileid: "88990048"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **字节** 值，该值指示用于表示值的最大位数。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 " **精度** " 属性可确定用于表示数值 **参数** 或 **字段** 对象的值的最大位数。  
   
  值在 **参数** 对象上是可读/写的。  
   
- 对于 **字段**对象， **精度** 通常为只读。 但是，对于已附加到[记录](./record-object-ado.md)的[字段](./fields-collection-ado.md)集合的新**字段**对象，**精度**仅在指定了**字段**的[值](./value-property-ado.md)属性并且数据提供程序已通过调用**Fields**集合的[Update](./update-method.md)方法成功添加了新**字段**之后才是只读的。  
+ 对于 **字段** 对象， **精度** 通常为只读。 但是，对于已附加到 [记录](./record-object-ado.md)的 [字段](./fields-collection-ado.md)集合的新 **字段** 对象，**精度** 仅在指定了 **字段** 的 [值](./value-property-ado.md)属性并且数据提供程序已通过调用 **Fields** 集合的 [Update](./update-method.md)方法成功添加了新 **字段** 之后才是只读的。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::
         [字段对象](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter 对象](./parameter-object.md)  
+        [参数对象](./parameter-object.md)  
     :::column-end:::
 :::row-end:::
 
