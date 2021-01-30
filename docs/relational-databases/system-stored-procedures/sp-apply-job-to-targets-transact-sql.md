@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_apply_job_to_targets
 - sp_apply_job_to_targets_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a164569a5a62e24dabe0d47839eaa084b32e2efa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9fdc4cffdbe21d1c6c502aa813db55e0444d696
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528827"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203237"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,11 +50,11 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。  
   
-`[ @target_server_groups = ] 'target_server_groups'` 以逗号分隔的目标服务器组列表，指定的作业将应用于这些组。 *target_server_groups* 为 **nvarchar (2048) **，默认值为 NULL。  
+`[ @target_server_groups = ] 'target_server_groups'` 以逗号分隔的目标服务器组列表，指定的作业将应用于这些组。 *target_server_groups* 为 **nvarchar (2048)**，默认值为 NULL。  
   
-`[ @target_servers = ] 'target_servers'` 以逗号分隔的目标服务器列表，指定的作业将应用于这些服务器。 *target_servers*为 **nvarchar (2048) **，默认值为 NULL。  
+`[ @target_servers = ] 'target_servers'` 以逗号分隔的目标服务器列表，指定的作业将应用于这些服务器。 *target_servers* 为 **nvarchar (2048)**，默认值为 NULL。  
   
-`[ @operation = ] 'operation'` 指定的作业是否应该应用于指定的目标服务器或目标服务器组。 *操作*是 **varchar (7) **，默认值为 APPLY。 有效操作是 " **应用** " 和 " **删除**"。  
+`[ @operation = ] 'operation'` 指定的作业是否应该应用于指定的目标服务器或目标服务器组。 *操作* 是 **varchar (7)**，默认值为 APPLY。 有效操作是 " **应用** " 和 " **删除**"。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

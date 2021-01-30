@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geography_histogram_TSQL
 - sp_help_spatial_geography_histogram
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c7368b8991fe442cab30b724532e8899502e18f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 3554c8b385a14f588c4f7f8dd6248ba36ad7b16d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809378"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212067"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,22 +57,22 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|表示每个单元的唯一 ID，起始计数为1。|  
-|**芯**|**地理**|是表示每个单元的矩形多边形。 该单元形状与用于空间索引的单元形状相同。|  
+|**芯**|**geography**|是表示每个单元的矩形多边形。 该单元形状与用于空间索引的单元形状相同。|  
 |**row_count**|**bigint**|指示接触或包含单元的空间对象数 。|  
   
 ## <a name="permissions"></a>权限  
  用户必须是 **公共** 角色的成员。 需要服务器和对象的 READ ACCESS 权限。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  SSMS 空间选项卡显示结果的图形表示形式。 您可以针对空间窗口查询结果，以获取近似的结果项数。  
   
 > [!NOTE]  
 >  表中的对象可能涵盖多个单元，因此表中单元之和可能大于实际对象数。  
   
- **Geography**类型的边界框是整个地球。  
+ **Geography** 类型的边界框是整个地球。  
   
 ## <a name="examples"></a>示例  
- 下面的示例对**sp_help_spatial_geography_histogram** `Person.Address` 数据库中的表调用 sp_help_spatial_geography_histogram [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 。  
+ 下面的示例对 `Person.Address` 数据库中的表调用 sp_help_spatial_geography_histogram [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 。  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

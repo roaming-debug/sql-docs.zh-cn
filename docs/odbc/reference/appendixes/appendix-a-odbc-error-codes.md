@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - error codes [ODBC]
 - SQLSTATE [ODBC]
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a587578ba74cd2ed36a919953000190a6274b62d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37c846230cd60e067cf7ff2c8e7a72c74d1e540
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411543"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212575"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>附录 A：ODBC 错误代码
 本主题讨论 ODBC 3 的 SQLSTATE 值。*x*。 有关 ODBC 3 的详细信息。*x* SQLSTATE 值，请参阅 [SQLSTATE 映射](../../../odbc/reference/develop-app/sqlstate-mappings.md)。  
   
- **SQLGetDiagRec** 或 **SQLGetDiagField** 按 *结构化查询语言 (SQL) ，版本 2* (1995 3 月) 的数据管理值返回 SQLSTATE 值。 SQLSTATE 值是包含五个字符的字符串。 下表列出了驱动程序可以为 **SQLGetDiagRec**返回的 SQLSTATE 值。  
+ **SQLGetDiagRec** 或 **SQLGetDiagField** 按 *结构化查询语言 (SQL) ，版本 2* (1995 3 月) 的数据管理值返回 SQLSTATE 值。 SQLSTATE 值是包含五个字符的字符串。 下表列出了驱动程序可以为 **SQLGetDiagRec** 返回的 SQLSTATE 值。  
   
  为 SQLSTATE 返回的字符串值由两个字符组成，后跟一个三字符子类值。 类值 "01" 表示警告，并伴随返回代码 SQL_SUCCESS_WITH_INFO。 "01" 之外的类值（类 "IM" 除外）表示错误，并伴随返回值 SQL_ERROR。 类 "IM" 特定于派生自 ODBC 本身实现的警告和错误。 任何类中的子类值 "000" 表示该 SQLSTATE 没有子类。 类和子类值的分配由 SQL-92 定义。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlogreader_agent
 - sp_addlogreader_agent_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8a2706b6369e7ea8d482e9f5a9cc52b60bded6a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a511c4f47f84a8f083dbab86bf1d851762142d90
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474512"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202365"
 ---
 # <a name="sp_addlogreader_agent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_login = ] 'job_login'` 用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 运行代理的 Windows 帐户的登录名。 *job_login* 为 **nvarchar (257) **，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
+`[ @job_login = ] 'job_login'` 用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 运行代理的 Windows 帐户的登录名。 *job_login* 为 **nvarchar (257)**，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
   
 > [!NOTE]
 >  对于非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，此登录名必须与[&#40;transact-sql&#41;sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)中指定的相同。  
@@ -61,7 +61,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
   
 `[ @publisher_security_mode = ] publisher_security_mode` 连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode* 为 **smallint**，默认值为 **1**。 **0** 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证， **1** 指定 Windows 身份验证。 对于非发布服务器，必须指定 **0** 值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-`[ @publisher_login = ] 'publisher_login'` 连接到发布服务器时使用的登录名。 *publisher_login* 的默认值为 **sysname**，默认值为 NULL。 当*publisher_security_mode*为**0**时，必须指定*publisher_login* 。 如果 *publisher_login* 为 NULL 且 *publisher_security_mode* 为 **1**，则在连接到发布服务器时将使用 *job_login* 中指定的 Windows 帐户。  
+`[ @publisher_login = ] 'publisher_login'` 连接到发布服务器时使用的登录名。 *publisher_login* 的默认值为 **sysname**，默认值为 NULL。 当 *publisher_security_mode* 为 **0** 时，必须指定 *publisher_login* 。 如果 *publisher_login* 为 NULL 且 *publisher_security_mode* 为 **1**，则在连接到发布服务器时将使用 *job_login* 中指定的 Windows 帐户。  
   
 `[ @publisher_password = ] 'publisher_password'` 连接到发布服务器时使用的密码。 *publisher_password* 的默认值为 **sysname**，默认值为 NULL。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergealternatepublisher_TSQL
 - sp_addmergealternatepublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0589b82f3126819e1638d90c8e67dea7556aafe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7c0caf60fb3b1323c24924f177ca4d8cdf1105ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548348"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202356"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +60,7 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
   
 `[ @alternate_distributor = ] 'alternate_distributor'` 备用同步伙伴的分发服务器的名称。 *alternate_distributor* **sysname**，无默认值。  
   
-`[ @friendly_name = ] 'friendly_name'` 是一个显示名称，通过该名称可以标识构成备用同步伙伴的发布服务器、发布和分发服务器之间的关联。 *friendly_name* 为 **nvarchar (255) **，默认值为 NULL。  
+`[ @friendly_name = ] 'friendly_name'` 是一个显示名称，通过该名称可以标识构成备用同步伙伴的发布服务器、发布和分发服务器之间的关联。 *friendly_name* 为 **nvarchar (255)**，默认值为 NULL。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

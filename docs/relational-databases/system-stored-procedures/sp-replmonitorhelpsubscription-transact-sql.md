@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpsubscription_TSQL
 - sp_replmonitorhelpsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dab0e5d4f8f655b0e3140878279a8abca090d262
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 898104516115207bd0cee45bf05f187922c13f6e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543093"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204365"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -90,7 +90,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**publisher_db**|**sysname**|发布数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**publication_type**|**int**|发布的类型，可以是下列值之一：<br /><br /> **0** = 事务发布<br /><br /> **1** = 快照发布<br /><br /> **2** = 合并发布|  
-|**subtype**|**int**|订阅类型，可以是下列值之一：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 匿名|  
+|**类型**|**int**|订阅类型，可以是下列值之一：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 匿名|  
 |**延迟**|**int**|在事务发布中，由日志读取器代理或分发代理传播的数据更改的最长滞后时间（以秒为单位）。|  
 |**latencythreshold**|**int**|事务发布的最长滞后时间，高于此时间即产生警告。|  
 |**agentnotrunning**|**int**|代理未运行的时间长度，以小时为单位。|  
@@ -120,7 +120,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>备注  
  **sp_replmonitorhelpsubscription** 用于所有类型的复制。  
   
- **sp_replmonitorhelpsubscription** 根据订阅状态的严重性（由 *monitorranking*的值确定）对结果集进行排序。 例如，处于错误状态的所有订阅的各行排在处于警告状态的订阅的各行之上。  
+ **sp_replmonitorhelpsubscription** 根据订阅状态的严重性（由 *monitorranking* 的值确定）对结果集进行排序。 例如，处于错误状态的所有订阅的各行排在处于警告状态的订阅的各行之上。  
   
 ## <a name="permissions"></a>权限  
  只有分发数据库上的 **db_owner** 或 **replmonitor** 固定数据库角色的成员才能执行 **sp_replmonitorhelpsubscription**。  

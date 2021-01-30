@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replflush
 - sp_replflush_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb5d459f1a9b89836a412450eb4215182b914ba8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45a015f0b7b2448c0cf19c147247e1dd09b565b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541174"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211898"
 ---
 # <a name="sp_replflush-transact-sql"></a>sp_replflush (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,9 +46,9 @@ sp_replflush
 ## <a name="remarks"></a>备注  
  **sp_replflush** 用于事务复制。  
   
- 为提高效率，项目定义存储在缓存中。 当修改或删除项目定义时，其他复制存储过程将使用**sp_replflush** 。  
+ 为提高效率，项目定义存储在缓存中。 当修改或删除项目定义时，其他复制存储过程将使用 **sp_replflush** 。  
   
- 只有一个客户端连接有权访问给定数据库的日志读取器。 如果客户端有权访问数据库的日志读取器，则执行 **sp_replflush** 将导致客户端释放其访问权限。 然后，其他客户端可以使用 **sp_replcmds** 或 **sp_replshowcmds**来扫描事务日志。  
+ 只有一个客户端连接有权访问给定数据库的日志读取器。 如果客户端有权访问数据库的日志读取器，则执行 **sp_replflush** 将导致客户端释放其访问权限。 然后，其他客户端可以使用 **sp_replcmds** 或 **sp_replshowcmds** 来扫描事务日志。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_replflush**。  

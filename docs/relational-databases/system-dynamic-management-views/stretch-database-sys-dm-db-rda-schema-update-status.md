@@ -1,12 +1,12 @@
 ---
-title: sys. dm_db_rda_schema_update_status （Transact-sql） |Microsoft Docs
-description: 了解数据库中每个已启用 Stretch 的表的远程数据存档的每个架构更新任务的 sys.databases dm_db_rda_schema_update_status。
+title: sys.dm_db_rda_schema_update_status (Transact-sql) |Microsoft Docs
+description: 了解对于数据库中每个已启用延伸的表的远程数据存档，每个架构更新任务 sys.dm_db_rda_schema_update_status 如何包含一行。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_rda_schema_update_status
 - sys.dm_db_rda_schema_update_status_TSQL
@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 313eb868a49507b96e31bcd1966165175bf96f0a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 955f06ba0a7ad991ffe979fc927dfabe6e5a8dd0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243784"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202413"
 ---
-# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
+# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys.dm_db_rda_schema_update_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   当前数据库中每个已启用延伸的表的远程数据存档的每个架构更新任务在表中占一行。 任务由其任务 id 标识。  
   
- **dm_db_rda_schema_update_status**的作用域限定为当前数据库上下文。 请确保在已启用延伸的表的数据库上下文中，要查看其架构更新状态。  
+ **dm_db_rda_schema_update_status** 的作用域限定为当前数据库上下文。 请确保在已启用延伸的表的数据库上下文中，要查看其架构更新状态。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|table_id****|**int**|正在更新其远程数据存档架构的本地 Stretch 已启用表的 ID。|  
-|**database_id**|**int**|包含启用了延伸的本地表的数据库的 ID。|  
+|table_id|**int**|正在更新其远程数据存档架构的本地 Stretch 已启用表的 ID。|  
+|database_id|**int**|包含启用了延伸的本地表的数据库的 ID。|  
 |**task_id**|**bigint**|远程数据存档架构更新任务的 ID。|  
 |**task_type**|**int**|远程数据存档架构更新任务的类型。|  
 |**task_type_desc**|**nvarchar**|远程数据存档架构更新任务的类型说明。|  

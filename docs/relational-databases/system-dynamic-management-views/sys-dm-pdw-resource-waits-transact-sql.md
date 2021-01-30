@@ -6,19 +6,19 @@ ms.date: 11/26/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 95e974c7a62722ea63510504d057b2e67370925b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f6685853de3fed6397886d654135bb6ce499e7da
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440722"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203397"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "97440722"
 |wait_id|**bigint**|请求在等待列表中的位置。|从0开始的序号。 所有等待条目都不是唯一的。|  
 |session_id|**nvarchar(32)**|发生等待状态的会话的 ID。|请参阅 [sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
 |type|**nvarchar(255)**|此项表示的等待类型。|可能的值：<br /><br /> 连接<br /><br /> 并发查询并发<br /><br /> 分布式查询并发<br /><br /> DMS 并发<br /><br /> 备份并发|  
-|object_type|**nvarchar(255)**|受等待影响的对象的类型。|可能的值：<br /><br /> **对象**<br /><br /> **DATABASE**<br /><br /> **主板**<br /><br /> **SCHEMA**<br /><br /> **程序**|  
+|object_type|**nvarchar(255)**|受等待影响的对象的类型。|可能的值：<br /><br /> **对象**<br /><br /> **数据**<br /><br /> **主板**<br /><br /> **SCHEMA**<br /><br /> **程序**|  
 |object_name|**nvarchar (386)**|受等待影响的指定对象的名称或 GUID。|表和视图显示有由三部分组成的名称。<br /><br /> 索引和统计信息显示为由四部分组成的名称。<br /><br /> "名称"、"主体" 和 "数据库" 是字符串名称。|  
 |request_id|**nvarchar(32)**|发生等待状态的请求的 ID。|请求的 QID 标识符。<br /><br /> 加载请求的 GUID 标识符。|  
 |request_time|**datetime**|请求锁或资源的时间。||  

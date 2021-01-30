@@ -7,26 +7,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetConnectAttr function [ODBC], Cursor Library
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b809ad81e9edaca7fbe7d40952673a1698f113e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02f702991a4e03816f3e4a30a233d098198bfefe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424889"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202672"
 ---
 # <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr（游标库）
 > [!IMPORTANT]  
 >  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 本主题讨论如何在游标库中使用 **SQLSetConnectAttr** 函数。 有关 **SQLSetConnectAttr**的常规信息，请参阅 [SQLSetConnectAttr 函数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
+ 本主题讨论如何在游标库中使用 **SQLSetConnectAttr** 函数。 有关 **SQLSetConnectAttr** 的常规信息，请参阅 [SQLSetConnectAttr 函数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
   
- 应用程序调用带有 SQL_ATTR_ODBC_CURSORS 特性的 **SQLSetConnectAttr** ，以指定是否始终使用游标库，如果驱动程序不支持可滚动的游标，则使用此函数，或者从未使用过。 游标库假设当驱动程序返回 **SQLGetInfo**中 SQL_STATIC_CURSOR_ATTRIBUTES1 信息类型 SQL_CA1_RELATIVE 时，该驱动程序支持可滚动的游标。  
+ 应用程序调用带有 SQL_ATTR_ODBC_CURSORS 特性的 **SQLSetConnectAttr** ，以指定是否始终使用游标库，如果驱动程序不支持可滚动的游标，则使用此函数，或者从未使用过。 游标库假设当驱动程序返回 **SQLGetInfo** 中 SQL_STATIC_CURSOR_ATTRIBUTES1 信息类型 SQL_CA1_RELATIVE 时，该驱动程序支持可滚动的游标。  
   
  应用程序必须调用 **SQLSetConnectAttr** 来指定游标库的使用情况，然后再 **调用具有 SQL_HANDLE_DBC** 的 *HandleType* ，以分配连接并连接到数据源。 如果在连接仍处于活动状态时，应用程序使用 SQL_ATTR_ODBC_CURSORS 特性调用 **SQLSetConnectAttr** ，则游标库将返回错误。  
   

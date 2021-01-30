@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysjobservers
 - sysjobservers_TSQL
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7ac1d8facbabb42be31a9d45e091e1106c25e0c9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2aafe81cf4c28c560cf99e34e5bd721f36668a54
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097408"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202330"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 存储特定作业与一个或多个目标服务器的关联或关系。 该表存储在 msdb 数据库中。
   
-|列名称|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|作业标识号。|  
 |server_id|**int**|服务器标识号。|  

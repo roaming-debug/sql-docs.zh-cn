@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changearticlecolumndatatype
 - sp_changearticlecolumndatatype_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e222ac8a81f42717ffba16a959e7e8cb6479286a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 34f3f1878fcae59601a6ac94ff8536f3d22d6ea5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541899"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203704"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,9 +68,9 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ## <a name="remarks"></a>备注  
  **Sp_changearticlecolumndatatype** 用于重写受支持的发布服务器类型 (Oracle 和) 之间的默认数据类型映射 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 若要查看这些默认的数据类型映射，请执行 [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)。  
   
- 仅 Oracle 发布服务器支持**sp_changearticlecolumndatatype** 。 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布执行此存储过程将导致错误。  
+ 仅 Oracle 发布服务器支持 **sp_changearticlecolumndatatype** 。 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布执行此存储过程将导致错误。  
   
- 必须为必须更改的每个项目列映射执行**sp_changearticlecolumndatatype** 。  
+ 必须为必须更改的每个项目列映射执行 **sp_changearticlecolumndatatype** 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_changearticlecolumndatatype**。  

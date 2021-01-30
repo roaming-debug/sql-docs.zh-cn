@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_revoke_publication_access_TSQL
 - sp_revoke_publication_access
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0be8037325faba0cecb0988903677c14260b8a47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 287f696d9e68cbef8bbe180f287952206ef755bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446771"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211851"
 ---
 # <a name="sp_revoke_publication_access-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 要访问的发布的名称。 *发布* 为 **sysname**，无默认值。  
   
-`[ @login = ] 'login'` 登录 ID。 *login* 的 **sysname**为，无默认值。  
+`[ @login = ] 'login'` 登录 ID。 *login* 的 **sysname** 为，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -48,7 +48,7 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ## <a name="remarks"></a>备注  
  **sp_revoke_publication_access** 用于快照复制、事务复制和合并复制。  
   
- 可以重复调用**sp_revoke_publication_access** 。  
+ 可以重复调用 **sp_revoke_publication_access** 。  
   
 ## <a name="permissions"></a>权限  
  只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_revoke_publication_access**。  

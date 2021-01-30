@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_tableoption_TSQL
 - sp_tableoption
@@ -19,12 +19,12 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05de24f511f5d72bc4eba1947d1731491e3c1a37
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d2846b289c31777adec6d548addba11a9c7e463d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472678"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204341"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
      ,[ @OptionValue =] 'value'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @TableNamePattern =] "*表*"  
  用户定义数据库表的限定名称或非限定名称。 如果提供了包含数据库名称的完全限定表名，则数据库名称必须为当前数据库的名称。 不能同时设置多个表的表选项。 *table* 为 **nvarchar (776)**，无默认值。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - character data type [ODBC]
 - data conversions from C to SQL types [ODBC], character
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ab8f1c0471c6e079f792aa40119f13cb31ca9ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c387c2063bea8f16c7ec5ec90aa0271830f3e5f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500020"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212353"
 ---
 # <a name="c-to-sql-character"></a>从 C 到 SQL：字符
 字符 ODBC C 数据类型的标识符为：  
@@ -44,7 +44,7 @@ ms.locfileid: "88500020"
 |SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|数据)  (字节长度 <= 列字节长度<br /><br /> 数据)  (字节长度 > 列字节长度<br /><br /> 数据值不是一个十六进制值|不适用<br /><br /> 22001<br /><br /> 22018|  
 |SQL_TYPE_DATE|数据值是有效的 *ODBC 日期文本*<br /><br /> 数据值是有效的 *ODBC 时间戳文本*;时间部分为零<br /><br /> 数据值是有效的 *ODBC 时间戳文本*;时间部分为非零 [a]<br /><br /> 数据值不是有效的 *ODBC 日期文本* 或 *odbc 时间戳文本*|不适用<br /><br /> 不适用<br /><br /> 22008<br /><br /> 22018|  
 |SQL_TYPE_TIME|数据值是有效的 *ODBC 时文本*<br /><br /> 数据值是有效的 *ODBC 时间戳文本*;秒的小数部分为零 [b]<br /><br /> 数据值是有效的 *ODBC 时间戳文本*;秒的小数部分为非零 [b]<br /><br /> 数据值不是有效的 *odbc 时文本* 或 *odbc 时间戳文本*|不适用<br /><br /> 不适用<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIMESTAMP|数据值是有效的 *ODBC 时间戳文本*;秒小数部分未截断<br /><br /> 数据值是有效的 *ODBC 时间戳文本*;秒的小数部分被截断<br /><br /> 数据值是有效的 *ODBC 日期文本*[c]<br /><br /> 数据值是有效的 *ODBC 时文本*[d]<br /><br /> 数据值不是有效的 *odbc 日期文本*、 *odbc 时*文本或 *odbc 时间戳文本*|不适用<br /><br /> 22008<br /><br /> 不适用<br /><br /> 不适用<br /><br /> 22018|  
+|SQL_TYPE_TIMESTAMP|数据值是有效的 *ODBC 时间戳文本*;秒小数部分未截断<br /><br /> 数据值是有效的 *ODBC 时间戳文本*;秒的小数部分被截断<br /><br /> 数据值是有效的 *ODBC 日期文本*[c]<br /><br /> 数据值是有效的 *ODBC 时文本*[d]<br /><br /> 数据值不是有效的 *odbc 日期文本*、 *odbc 时* 文本或 *odbc 时间戳文本*|不适用<br /><br /> 22008<br /><br /> 不适用<br /><br /> 不适用<br /><br /> 22018|  
 |所有 SQL 时间间隔类型|数据值是有效的 *间隔值*;不发生截断<br /><br /> 数据值是有效的 *间隔值*;其中一个字段的值被截断<br /><br /> 数据值不是有效的间隔文本|不适用<br /><br /> 22015<br /><br /> 22018|  
   
  [a] 时间戳的时间部分被截断。  

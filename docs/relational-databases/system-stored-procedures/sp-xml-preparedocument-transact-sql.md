@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_xml_preparedocument_TSQL
 - sp_xml_preparedocument
@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 45aac298eea19f37fafdca1feb86a0b7f032c0e0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8fc47f280e0c6f32e41cd7a0f7db34ff22ac98f1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542985"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201785"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   读取作为输入提供的 XML 文本，然后使用 MSXML 分析器 (Msxmlsql.dll) 对其进行分析，并提供分析后的文档供使用。 分析后的文档对 XML 文档中的各节点（元素、属性、文本和注释等）的树状表示形式。  
   
- **sp_xml_preparedocument** 返回一个句柄，该句柄可用于访问新创建的 xml 文档的内部表示形式。 此句柄在会话的持续时间内有效，或在通过执行 **sp_xml_removedocument**来使句柄失效之前。  
+ **sp_xml_preparedocument** 返回一个句柄，该句柄可用于访问新创建的 xml 文档的内部表示形式。 此句柄在会话的持续时间内有效，或在通过执行 **sp_xml_removedocument** 来使句柄失效之前。  
   
 > [!NOTE]  
 >  分析后的文档存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部缓存中。 MSXML 分析器占用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用总内存的八分之一。 若要避免内存不足，请运行 **sp_xml_removedocument** 以释放内存。  
@@ -39,7 +39,7 @@ ms.locfileid: "89542985"
 >  为实现向后兼容性， **sp_xml_preparedocument** 会将 CR (char (13) # A3 和 LF (char (个字符，即使实体化这些字符也是如此。  
   
 > [!NOTE]  
->  **Sp_xml_preparedocument**调用的 XML 分析器可以分析内部 dtd 和实体声明。 由于恶意构造的 Dtd 和实体声明可用于执行拒绝服务攻击，因此强烈建议用户不要直接将来自不受信任的源的 XML 文档传递到 **sp_xml_preparedocument**。  
+>  **Sp_xml_preparedocument** 调用的 XML 分析器可以分析内部 dtd 和实体声明。 由于恶意构造的 Dtd 和实体声明可用于执行拒绝服务攻击，因此强烈建议用户不要直接将来自不受信任的源的 XML 文档传递到 **sp_xml_preparedocument**。  
 >   
 >  若要减轻递归实体展开攻击， **sp_xml_preparedocument** 限制为10000，这是可在文档顶层的单个实体下扩展的实体数量。 该限制不适用于字符或数字实体。 通过该限制，可以存储带有多个实体引用的文档，同时可以禁止在长于 10,000 个扩展的链中递归扩展任意实体。  
   
@@ -72,7 +72,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  指定在 OPENXML 的行和列 XPath 表达式中使用的命名空间声明。 *xpath_namespaces* 是一个文本参数： **char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext** 或 **xml**。  
   
- 默认值为 **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">** 。 *xpath_namespaces* 通过格式正确的 XML 文档为在 OPENXML 中的 xpath 表达式中使用的前缀提供命名空间 uri。 *xpath_namespaces* 声明必须用于引用命名空间 **urn：架构的前缀-microsoft-xml-metaprop**;这将提供有关已分析的 XML 元素的元数据。 虽然可以使用这项技术来为元属性命名空间重新定义命名空间前缀，但该命名空间不会丢失。 即使*xpath_namespaces*不包含这样的声明，前缀**mp**对于**urn：架构 xml-metaprop**仍有效。  
+ 默认值为 **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">** 。 *xpath_namespaces* 通过格式正确的 XML 文档为在 OPENXML 中的 xpath 表达式中使用的前缀提供命名空间 uri。 *xpath_namespaces* 声明必须用于引用命名空间 **urn：架构的前缀-microsoft-xml-metaprop**;这将提供有关已分析的 XML 元素的元数据。 虽然可以使用这项技术来为元属性命名空间重新定义命名空间前缀，但该命名空间不会丢失。 即使 *xpath_namespaces* 不包含这样的声明，前缀 **mp** 对于 **urn：架构 xml-metaprop** 仍有效。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0 (成功) 或 >0 (故障)   
@@ -157,7 +157,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
  <br>[XML 存储过程 (Transact-sql) ](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[ (Transact-sql) 系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML (Transact-sql) ](../../t-sql/functions/openxml-transact-sql.md)
- <br>[sys. dm_exec_xml_handles (Transact-sql) ](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-sql) ](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
   
   

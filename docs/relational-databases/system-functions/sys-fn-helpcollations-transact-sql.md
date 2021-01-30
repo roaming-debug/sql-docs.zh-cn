@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_helpcollations
 - fn_helpcollations_TSQL
@@ -21,12 +21,12 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8185f4977f784a0b2590d6a5fdf4a210dd2cd328
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5d5f1e211c9ec7f562839c92c9666bceb0e65bef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101394"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201998"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -49,7 +49,7 @@ fn_helpcollations ()
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |名称|**sysname**|标准排序规则名称|  
-|描述|**nvarchar(1000)**|排序规则说明|  
+|说明|**nvarchar(1000)**|排序规则说明|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 排序规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受支持的 Windows 排序规则之前开发的 ( # B0 80) 称为排序规则的排序规则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则仍支持向后兼容，但不能用于新的开发工作。 有关 Windows 排序规则的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。 有关排序规则的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sql13.TSQLSysNoExpandPortal.f1
 - sql13.TSQLSysNoExpandPortal.f1_TSQL
@@ -23,22 +23,22 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60d30105f0c56224748a3c676ba4d76b73aa989b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 603a16d94c185783b3b90566d71b90e195949254
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462668"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203651"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系统存储过程 (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，可以使用系统存储过程来执行许多管理和信息活动。 系统存储过程可划分为下表所示的类别。  
+  在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中，可以使用系统存储过程来执行许多管理和信息活动。 系统存储过程可划分为下表所示的类别。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|Category|说明|  
+|类别|说明|  
 |--------------|-----------------|  
 |[活动 Geo-Replication 存储过程]()|用于管理以管理 Azure SQL 数据库中的 Active Geo-Replication 配置|  
 |[目录存储过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|用于实现 ODBC 数据字典功能，并隔离 ODBC 应用程序以使其不受基础系统表更改的影响。|  

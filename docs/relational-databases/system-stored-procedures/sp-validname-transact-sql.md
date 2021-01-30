@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_validname
 - sp_validname_TSQL
@@ -19,12 +19,12 @@ ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73d8f6345be199c44278cb15aa43c6ada7f91c0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9bb57f55751cbf29f7bef5c704da3aae363976db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466788"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201860"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ sp_validname [@name =] 'name'
      [, [@raise_error =] raise_error]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @name = ] 'name'` 要检查其有效性的 [标识符](../../relational-databases/databases/database-identifiers.md) 的名称。 *名称* 为 **sysname**，无默认值。 *名称* 不能为 NULL，不能为空字符串，并且不能包含二进制零字符。  
   
 `[ @raise_error = ] raise_error` 指定是否引发错误。 *raise_error* 为 **bit**，默认值为1。 这表示将显示错误。 0 表示不会显示错误消息。  

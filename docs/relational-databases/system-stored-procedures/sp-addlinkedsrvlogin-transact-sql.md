@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlinkedsrvlogin_TSQL
 - sp_addlinkedsrvlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4658625065876f35e3eb892381be67226795584f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bcefbe0acef90deb488a1d95f162a4d94f60aa95
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548391"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202376"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,18 +47,18 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  应用登录映射的链接服务器的名称。 *rmtsrvname* 的值为 **sysname**，无默认值。  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
- 确定是通过模拟本地登录名连接到 *rmtsrvname* ，还是显式提交登录名和密码。 数据类型为 **varchar (** 8 **) **，默认值为 TRUE。  
+ 确定是通过模拟本地登录名连接到 *rmtsrvname* ，还是显式提交登录名和密码。 数据类型为 **varchar (** 8 **)**，默认值为 TRUE。  
   
- 如果值为 TRUE，则指定登录名使用其自己的凭据连接到 *rmtsrvname*，并忽略 *rmtuser* 和 *rmtpassword* 参数。 FALSE 指定*rmtuser*和*rmtpassword*参数用于连接到指定*locallogin*的*rmtsrvname* 。 如果将 *rmtuser* 和 *RMTPASSWORD* 设置为 NULL，则不会使用登录名或密码连接到链接服务器。  
+ 如果值为 TRUE，则指定登录名使用其自己的凭据连接到 *rmtsrvname*，并忽略 *rmtuser* 和 *rmtpassword* 参数。 FALSE 指定 *rmtuser* 和 *rmtpassword* 参数用于连接到指定 *locallogin* 的 *rmtsrvname* 。 如果将 *rmtuser* 和 *RMTPASSWORD* 设置为 NULL，则不会使用登录名或密码连接到链接服务器。  
   
  `[ @locallogin = ] 'locallogin'`  
- 本地服务器上的登录。 *locallogin* 的值为 **sysname**，默认值为 NULL。 NULL 指定此条目适用于连接到 *rmtsrvname*的所有本地登录名。 如果不为 NULL，则 *locallogin* 可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 登录名。 对于 Windows 登录来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  
+ 本地服务器上的登录。 *locallogin* 的值为 **sysname**，默认值为 NULL。 NULL 指定此条目适用于连接到 *rmtsrvname* 的所有本地登录名。 如果不为 NULL，则 *locallogin* 可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 登录名。 对于 Windows 登录来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  
   
  `[ @rmtuser = ] 'rmtuser'`  
  当为 FALSE 时，用于连接到 *rmtsrvname* 的远程登录名 @useself 。 当远程服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不使用 Windows 身份验证的实例时， *rmtuser* 是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 *rmtuser* 的值为 **sysname**，默认值为 NULL。  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
- 与 *rmtuser*关联的密码。 *rmtpassword* 的值为 **sysname**，默认值为 NULL。  
+ 与 *rmtuser* 关联的密码。 *rmtpassword* 的值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

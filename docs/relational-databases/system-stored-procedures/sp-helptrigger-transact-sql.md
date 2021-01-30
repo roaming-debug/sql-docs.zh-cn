@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helptrigger
 - sp_helptrigger_TSQL
@@ -19,12 +19,12 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b03afedd01095ddfc233eca9722e9eecde8f840
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8de5ac41fcd22dc721df5c5fc9c56455910157f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468358"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204421"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ sp_helptrigger [ @tabname = ] 'table'
      [ , [ @triggertype = ] 'type' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @tabname = ] 'table'` 当前数据库中要为其返回触发器信息的表的名称。 *table* 为 **nvarchar (776)**，无默认值。  
   
 `[ @triggertype = ] 'type'` 要返回其相关信息的 DML 触发器的类型。 *类型* 为 **char (6)**，默认值为 NULL，可以是下列值之一。  

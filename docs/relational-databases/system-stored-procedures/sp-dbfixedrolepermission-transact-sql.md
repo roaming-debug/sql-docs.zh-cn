@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbfixedrolepermission
 - sp_dbfixedrolepermission_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a7abd42379d62d9a2c34adb50b7610494493b6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 78f1381d05c5841ce48e395f8cc1cd477b820e01
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536602"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201273"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定数据库角色的名称|  
-|**权限**|**nvarchar (70) **|与**DbFixedRole**关联的权限|  
+|**权限**|**nvarchar (70)**|与 **DbFixedRole** 关联的权限|  
   
 ## <a name="remarks"></a>备注  
  若要显示固定数据库角色的列表，请执行 **sp_helpdbfixedrole**。 下表显示了固定数据库角色。  
@@ -70,7 +70,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**db_denydatareader**|数据库拒绝数据读取者|  
 |**db_denydatawriter**|数据库拒绝数据写入者|  
   
- **Db_owner**固定数据库角色的成员拥有所有其他固定数据库角色的权限。 若要显示固定服务器角色的权限，请执行 **sp_srvrolepermission**。  
+ **Db_owner** 固定数据库角色的成员拥有所有其他固定数据库角色的权限。 若要显示固定服务器角色的权限，请执行 **sp_srvrolepermission**。  
   
  结果集包括可执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和该数据库角色的成员可执行的其他特殊操作。  
   

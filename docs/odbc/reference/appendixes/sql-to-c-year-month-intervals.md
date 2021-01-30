@@ -1,13 +1,13 @@
 ---
 description: 从 SQL 到 C：年月间隔
-title: SQL 到 C：年-月间隔 |Microsoft Docs
+title: SQL 到 C： Year-Month 间隔 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - data conversions from SQL to C types [ODBC], year-month intervals
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 66134ca1dcd82fec5213f01ef33a1b5f050e8a8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d83ca61aa30ce1abbeb38759557f4b75a6e0b9a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429529"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202988"
 ---
 # <a name="sql-to-c-year-month-intervals"></a>从 SQL 到 C：年月间隔
 

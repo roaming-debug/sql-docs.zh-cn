@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_article_validation_TSQL
 - sp_article_validation
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 111b11b9563373f972ba6d30338e67075f992bed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1b2dda5e359b062716c9c0fead89b4ad2628488a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536716"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203230"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ sp_article_validation [ @publication = ] 'publication'
 |**值**|**说明**|  
 |---------------|---------------------|  
 |**0**|用 COUNT(*) 执行完整计数。|  
-|**1**|从 **sysindexes**执行快速计数。 计算 **sysindexes** 中的行数比计算实际表中的行的速度更快。 但是， **sysindexes** 会延迟更新，行计数可能不准确。|  
+|**1**|从 **sysindexes** 执行快速计数。 计算 **sysindexes** 中的行数比计算实际表中的行的速度更快。 但是， **sysindexes** 会延迟更新，行计数可能不准确。|  
 |**2** （默认值）|首先尝试使用快速方法执行条件性快速计数。 如果快速方法显示出差异，则转而使用完整方法。 如果 *expected_rowcount* 为 NULL，并且存储过程用于获取该值，则始终使用 ( * ) 的完整计数。|  
   
 `[ @shutdown_agent = ] shutdown_agent` 指定分发代理是否应在完成验证后立即关闭。 *shutdown_agent* 为 **bit**，默认值为 **0**。 如果为 **0**，则分发代理不会关闭。 如果为 **1**，则分发代理在验证项目后关闭。  
@@ -74,7 +74,7 @@ sp_article_validation [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  在发布服务器上请求验证时，不应使用*发布服务器* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  在发布服务器上请求验证时，不应使用 *发布服务器* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

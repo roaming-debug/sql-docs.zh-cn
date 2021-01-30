@@ -1,12 +1,12 @@
 ---
-description: 全文搜索和语义搜索动态管理视图-函数
-title: 全文搜索和语义搜索动态管理视图-函数 |Microsoft Docs
+description: Full-Text 和语义搜索动态管理视图-函数
+title: Full-Text 和语义搜索动态管理视图-函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3f2d7a48bfbccf174b26a08ec3a887f44247a457
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cd9e072fa2c4aafceaad2d4aad57eb9dcc4bb38b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834294"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201361"
 ---
-# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>全文搜索和语义搜索动态管理视图-函数
+# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Full-Text 和语义搜索动态管理视图-函数
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本节包含以下与全文搜索和语义搜索相关的动态管理视图和函数。  

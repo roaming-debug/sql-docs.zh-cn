@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_xp_cmdshell_proxy_account
 - sp_xp_cmdshell_proxy_account_TSQL
@@ -20,12 +20,12 @@ ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dab49c59b04c09dc550e9fa922ec6f40dbb3fd6d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8414aa0c44c4f7d39b6be251bc47a9d23b4d783b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466778"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201771"
 ---
 # <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "97466778"
 sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  Null  
  指定应删除的代理凭据。  
   

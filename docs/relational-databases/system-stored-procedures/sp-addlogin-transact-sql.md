@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlogin
 - sp_addlogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 585461904b68f26d3ea71e255b24e9ed6d38786a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85da6cb0e9f0d2a490c802e4d67f8096999f217
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474551"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202401"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_addlogin [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>参数  
  [ @loginame =] "*login*"  
- 登录的名称。 *login* 的 **sysname**为，无默认值。  
+ 登录的名称。 *login* 的 **sysname** 为，无默认值。  
   
  [ @passwd =] '*password*'  
  登录的密码。 *password* 的值为 **sysname**，默认值为 NULL。  
@@ -68,10 +68,10 @@ sp_addlogin [ @loginame = ] 'login'
  登录的默认语言。 *language* 的值为 **sysname**，默认值为 NULL。 如果未指定 *语言* ，则新登录名的默认 *语言* 将设置为服务器的当前默认语言。  
   
  [ @sid =] "*sid*"  
- 安全标识号 (SID)。 *sid* 为 **varbinary (16) **，默认值为 NULL。 如果 *sid* 为 NULL，则系统将为新登录生成 sid。 尽管使用 **varbinary** 数据类型，但 NULL 以外的值的长度必须正好是16个字节，并且不能已经存在。 指定 *sid* 很有用，例如，在编写脚本或将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名从一台服务器移动到另一台服务器，并希望登录名在不同服务器上具有相同的 sid。  
+ 安全标识号 (SID)。 *sid* 为 **varbinary (16)**，默认值为 NULL。 如果 *sid* 为 NULL，则系统将为新登录生成 sid。 尽管使用 **varbinary** 数据类型，但 NULL 以外的值的长度必须正好是16个字节，并且不能已经存在。 指定 *sid* 很有用，例如，在编写脚本或将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名从一台服务器移动到另一台服务器，并希望登录名在不同服务器上具有相同的 sid。  
   
  [ @encryptopt =] "*encryption_option*"  
- 指定是以明文形式，还是以明文密码的哈希运算结果来传递密码。 注意，不进行加密。 在本讨论中使用“加密”一词是为了向后兼容。 如果传入明文密码，将对它进行哈希运算。 哈希值将存储起来。 *encryption_option* 是 **varchar (20) **，可以是以下值之一。  
+ 指定是以明文形式，还是以明文密码的哈希运算结果来传递密码。 注意，不进行加密。 在本讨论中使用“加密”一词是为了向后兼容。 如果传入明文密码，将对它进行哈希运算。 哈希值将存储起来。 *encryption_option* 是 **varchar (20)**，可以是以下值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -141,9 +141,9 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_droplogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_droplogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [xp_logininfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_get_query_template
 - sp_get_query_template_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 97a6b25d2a0a4d927f060fe8d693cb478b7b2977
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 89e30950c072cbfe5737a65934155276bbf6a27d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543354"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204775"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,18 +44,18 @@ sp_get_query_template
   
 ## <a name="arguments"></a>参数  
  "*query_text*"  
- 要生成参数化版本的查询。 "*query_text*" 必须用单引号引起来，并以 N Unicode 说明符开头。 N "*query_text*" 是分配给参数的值 @querytext 。 这种类型的类型为 **nvarchar (max) **。  
+ 要生成参数化版本的查询。 "*query_text*" 必须用单引号引起来，并以 N Unicode 说明符开头。 N "*query_text*" 是分配给参数的值 @querytext 。 这种类型的类型为 **nvarchar (max)**。  
   
  @templatetext  
- 类型为 **nvarchar (max) **的输出参数，以字符串文字形式接收 *query_text* 的参数化形式。  
+ 类型为 **nvarchar (max)** 的输出参数，以字符串文字形式接收 *query_text* 的参数化形式。  
   
  @parameters  
- 是 nvarchar 类型的输出参数 ** (max) **，按指示提供，用于接收参数名称和已参数化的数据类型的字符串文字 @templatetext 。  
+ 是 nvarchar 类型的输出参数 **(max)**，按指示提供，用于接收参数名称和已参数化的数据类型的字符串文字 @templatetext 。  
   
 ## <a name="remarks"></a>备注  
  如果出现下列情况，sp_get_query_template 会返回错误。  
   
--   它不会在 *query_text*中参数化任何常量文本值。  
+-   它不会在 *query_text* 中参数化任何常量文本值。  
   
 -   *query_text* 为 NULL，而不是 Unicode 字符串、语法无效或无法编译。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbmmonitorupdate
 - sp_dbmmonitorupdate_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e8d150c2b45cd3556b47bef9cb2b2f882156f355
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7a18e87dd51da9869afa2b180a5fd55ef62c304e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536585"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203142"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sp_dbmmonitorupdate [ database_name ]
   
  如果状态表的某一列不适用于伙伴的角色，则该值在此伙伴上为 NULL。 如果列中的相关信息不可用（例如，在故障转移或服务器重新启动期间），该列也会有 NULL 值。  
   
- **Sp_dbmmonitorupdate**在**msdb**数据库中创建**dbm_monitor**固定数据库角色之后， **sysadmin**固定服务器角色的成员可以将任何用户添加到**dbm_monitor**固定数据库角色。 **Dbm_monitor**角色使其成员可以查看数据库镜像状态，但不会对其进行更新，而不会查看或配置数据库镜像事件。  
+ **Sp_dbmmonitorupdate** 在 **msdb** 数据库中创建 **dbm_monitor** 固定数据库角色之后， **sysadmin** 固定服务器角色的成员可以将任何用户添加到 **dbm_monitor** 固定数据库角色。 **Dbm_monitor** 角色使其成员可以查看数据库镜像状态，但不会对其进行更新，而不会查看或配置数据库镜像事件。  
   
  当更新数据库的镜像状态时， **sp_dbmmonitorupdate** 会检查指定了警告阈值的任何镜像性能指标的最新值。 如果该值超过阈值，则该过程会向事件日志中添加信息性事件。 所有汇率都是自最后一次更新以来的平均值。 有关详细信息，请参阅 [使用镜像性能度量的警告阈值和警报 (SQL Server)](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   

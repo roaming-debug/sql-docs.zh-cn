@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.resource_governor
 - sys.resource_governor_TSQL
@@ -21,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 32082b09a5e583e68f2f06794d80d1d3f21b4e76
-ms.sourcegitcommit: 11ca2305a8d7e420daf772eb97861706c9e08e31
+ms.openlocfilehash: 998777c9a6cbe8a4194997210f1938b09f98df3f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97928436"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203284"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) 
 
@@ -37,7 +37,7 @@ ms.locfileid: "97928436"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|资源池的 ID。 不可为 null。
-|name|sysname|资源池的名称。 不可为 null。|
+|name |sysname|资源池的名称。 不可为 null。|
 |**snapshot_time**|datetime2|拍摄的资源池统计信息快照的日期时间|
 |**duration_ms**|int|当前快照与前一个快照之间的持续时间|
 |**statistics_start_time**|datetime2|为该池重置统计信息的时间。 不可为 null。|

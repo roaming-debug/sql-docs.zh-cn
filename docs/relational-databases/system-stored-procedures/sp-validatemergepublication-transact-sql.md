@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_validatemergepublication
 - sp_validatemergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff7a9cb80717ee6b8015c5ed1b597eb5eae7a6c3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0cf0b85db695458be4b9a48b74bfdc598f76f544
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534497"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201828"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [** \@ 发布 =**] **"***发布***"**  
+ [**\@ 发布 =**] **"**_发布_*_"_*  
  发布的名称。 *发布* 为 **sysname**，无默认值。  
   
 `[ @level = ] level` 要执行的验证的类型。 *级别* 为 **tinyint**，无默认值。 级别可以为下列值之一：  
@@ -57,7 +57,7 @@ sp_validatemergepublication [@publication=] 'publication'
  **sp_validatemergepublication** 用于合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_validatemergepublication**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_validatemergepublication** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

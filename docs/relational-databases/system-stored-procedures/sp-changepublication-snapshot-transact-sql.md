@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changepublication_snapshot_TSQL
 - sp_changepublication_snapshot
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 437a923a6b4ad536f7702e547bb299bcf1ff47d1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e7dadc4e406c11ba93a5428a6dfc958ed96a36a5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541877"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211933"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,26 +85,26 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**5**|星期四|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|天|  
+|**8**|日期|  
 |**9**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
   
-`[ @frequency_subday = ] frequency_subday`*Freq_subday_interval*的单位。 *frequency_subday* 为 **int**，可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday`*Freq_subday_interval* 的单位。 *frequency_subday* 为 **int**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|Minute|  
 |**8**|小时|  
 |NULL（默认值）||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday* 的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 NULL。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 快照代理运行的日期。 *frequency_relative_interval* 的值为 **int**，默认值为 NULL。  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 NULL。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type* 使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 NULL。  
   
 `[ @active_start_date = ] active_start_date` 第一次计划快照代理的日期，格式为 YYYYMMDD。 *active_start_date* 的值为 **int**，默认值为 NULL。  
   
@@ -114,21 +114,21 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day` 停止计划快照代理的时间，格式为 HHMMSS。 *active_end_time_of_day* 的值为 **int**，默认值为 NULL。  
   
-`[ @snapshot_job_name = ] 'snapshot_agent_name'` 如果正在使用现有作业，则为现有快照代理作业名称。 *snapshot_agent_name* 为 **nvarchar (100) ** ，默认值为 NULL。  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` 如果正在使用现有作业，则为现有快照代理作业名称。 *snapshot_agent_name* 为 **nvarchar (100)** ，默认值为 NULL。  
   
 `[ @publisher_security_mode = ] publisher_security_mode` 连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode* 为 **smallint**，默认值为 NULL。 **0** 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证， **1** 指定 Windows 身份验证。 对于非发布服务器，必须指定 **0** 值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` 连接到发布服务器时使用的登录名。 *publisher_login* 的默认值为 **sysname**，默认值为 NULL。 当*publisher_security_mode*为**0**时，必须指定*publisher_login* 。 如果 *publisher_login* 为 NULL 且 *publisher_security_mode* 为 **1**，则连接到发布服务器时将使用 *job_login* 中指定的 Windows 帐户。  
+`[ @publisher_login = ] 'publisher_login'` 连接到发布服务器时使用的登录名。 *publisher_login* 的默认值为 **sysname**，默认值为 NULL。 当 *publisher_security_mode* 为 **0** 时，必须指定 *publisher_login* 。 如果 *publisher_login* 为 NULL 且 *publisher_security_mode* 为 **1**，则连接到发布服务器时将使用 *job_login* 中指定的 Windows 帐户。  
   
 `[ @publisher_password = ] 'publisher_password'` 连接到发布服务器时使用的密码。 *publisher_password* 的默认值为 **sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @job_login = ] 'job_login'` 用于运行代理的 Windows 帐户的登录名。 *job_login* 为 **nvarchar (257) **，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。 创建新的快照代理作业时，必须提供此参数。 对于非发布服务器，不能更改此项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+`[ @job_login = ] 'job_login'` 用于运行代理的 Windows 帐户的登录名。 *job_login* 为 **nvarchar (257)**，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。 创建新的快照代理作业时，必须提供此参数。 对于非发布服务器，不能更改此项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @job_password = ] 'job_password'` 运行代理所用的 Windows 帐户的密码。 *job_password* 的默认值为 **sysname**，默认值为 NULL。 创建新的快照代理作业时，必须提供此参数。  
   
@@ -138,7 +138,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  在发布服务器上创建快照代理时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  在发布服务器上创建快照代理时，不应使用 *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

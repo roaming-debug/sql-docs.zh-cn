@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cycle_errorlog_TSQL
 - sp_cycle_errorlog
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 433accd75ac9bf5c5f2e390aa1bcbf0a1c5e0a6e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b75b9e0c056a86a8ad67d1a739214a46f88533f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549895"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203164"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_cycle_errorlog
  每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时，当前错误日志都会重命名为 **错误日志。 1**; **错误日志** 将变成 **错误日志。 2**， **错误日志 2** 变成 **错误日志。 3**，依此类推。 **sp_cycle_errorlog** 使你能够在不停止和启动服务器的情况下循环错误日志文件。  
   
 ## <a name="permissions"></a>权限  
- **Sp_cycle_errorlog**的执行权限仅限于**sysadmin**固定服务器角色的成员。  
+ **Sp_cycle_errorlog** 的执行权限仅限于 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  以下示例将循环 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。  

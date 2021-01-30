@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2a23c3fffb8bfffa1cd9343d36dfd4c12bf5f1f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fbc14748b9799b78e8e92a983f8b0f5eb409f1ad
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094962"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201887"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 
@@ -44,7 +44,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  要作为句柄的查询在查询存储中的文本。 *query_sql_text* 为 **nvarchar (max)**，无默认值。  
   
  *query_param_type*  
- 查询的参数类型。 *query_param_type* 是 **tinyint**。 可能的值为：  
+ 查询的参数类型。 *query_param_type* 是 **tinyint**。 可能的值有：  
   
 -   NULL-默认值为0  
   
@@ -59,7 +59,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>返回的列  
  下表列出了 sys.fn_stmt_sql_handle_from_sql_stmt 返回的列。  
   
-|列名称|类型|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|SQL 句柄。|  
 |**query_sql_text**|**nvarchar(max)**|语句的文本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  

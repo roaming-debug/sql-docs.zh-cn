@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_unbindefault_TSQL
 - sp_unbindefault
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b8a0ee77c73c6edcee17d6baad363c6c02eb52c3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ecc8a6c7a012a36da4deeacf8b4e66e6096c8227
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542973"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202347"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,14 +44,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @objname = ] 'object_name'` 要取消其默认值绑定的表和列或别名数据类型的名称。 *object_name* 为 **nvarchar (776) **，无默认值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试先将两部分标识符解析为列名，再解析为别名数据类型。  
+`[ @objname = ] 'object_name'` 要取消其默认值绑定的表和列或别名数据类型的名称。 *object_name* 为 **nvarchar (776)**，无默认值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试先将两部分标识符解析为列名，再解析为别名数据类型。  
   
  解除别名数据类型的默认值绑定时，也同时解除数据类型相同且具有相同默认值的任何列的默认值绑定。 属于该数据类型并且直接绑定默认值的类将不受影响。  
   
 > [!NOTE]  
 >  *object_name* 可以将方括号 **[]** 包含为分隔的标识符字符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
-`[ @futureonly = ] 'futureonly_flag'` 仅在解除别名数据类型的默认值绑定时使用。 *futureonly_flag* 是 **varchar (15) **，默认值为 NULL。 *Futureonly_flag* **futureonly**时，数据类型的现有列不会丢失指定的默认值。  
+`[ @futureonly = ] 'futureonly_flag'` 仅在解除别名数据类型的默认值绑定时使用。 *futureonly_flag* 是 **varchar (15)**，默认值为 NULL。 *Futureonly_flag* **futureonly** 时，数据类型的现有列不会丢失指定的默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

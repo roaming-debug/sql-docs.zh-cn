@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 840668495c620ca3cb7a403d3775238b12a52ec8
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: f9faf0901643b07420f8627d6afda4b9713d034a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809723"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201762"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空间索引存储过程-参数和属性
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,22 +60,22 @@ ms.locfileid: "91809723"
 `[ @xml_output = ] 'xml_output'` 一个输出参数，它在 XML 片段中返回结果集。 *xml_output* 为 **xml** ，无默认值。  
   
 ## <a name="properties"></a>属性  
- 设置** \@ verboseoutput** = 0 以返回核心属性，如下表所示;** \@ verboseoutput** > 0 返回空间索引的所有属性。  
+ 设置 **\@ verboseoutput** = 0 以返回核心属性，如下表所示;**\@ verboseoutput** > 0 返回空间索引的所有属性。  
   
  **Base_Table_Rows**  
  基表中的行数 值为 **bigint**。  
   
  **Bounding_Box_xmin**  
- **几何图形**类型的空间索引的 X 最小边界框属性。 对于 **geography**类型，此属性值为 NULL。 值为 **float**。  
+ **几何图形** 类型的空间索引的 X 最小边界框属性。 对于 **geography** 类型，此属性值为 NULL。 值为 **float**。  
   
  **Bounding_Box_ymin**  
- **几何图形**类型的空间索引的 Y 最小范围框属性。 对于 **geography** 类型，此属性值为 NULL。 值为 **float**。  
+ **几何图形** 类型的空间索引的 Y 最小范围框属性。 对于 **geography** 类型，此属性值为 NULL。 值为 **float**。  
   
  **Bounding_Box_xmax**  
- **几何图形**类型的空间索引的 X 最大边界框属性。 对于 **geography** 类型，此属性值为 NULL。 值为 **float**。  
+ **几何图形** 类型的空间索引的 X 最大边界框属性。 对于 **geography** 类型，此属性值为 NULL。 值为 **float**。  
   
  **Bounding_Box_ymax**  
- **几何图形**类型的空间索引的 Y 最大边界框属性。 对于 **geography** 类型，此属性值为 NULL。 值为 **float**。  
+ **几何图形** 类型的空间索引的 Y 最大边界框属性。 对于 **geography** 类型，此属性值为 NULL。 值为 **float**。  
   
  **Grid_Size_Level_1**  
  空间索引的第1级网格密度：  
@@ -208,7 +208,7 @@ ms.locfileid: "91809723"
  值为 **float**。  
   
  **Intersecting_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- 与 **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**相同，不同之处在于它们是部分覆盖的单元格。 值为 **float**。  
+ 与 **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** 相同，不同之处在于它们是部分覆盖的单元格。 值为 **float**。  
   
  **Border_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  与 **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** 相同，不同之处在于它们是边框单元。 值为 **float**。  
@@ -301,7 +301,7 @@ ms.locfileid: "91809723"
 ## <a name="permissions"></a>权限  
  用户必须是 **公共** 角色的成员。 需要服务器和对象的 READ ACCESS 权限。 这适用于所有空间索引存储过程。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  包含 NULL 值的属性未包含在返回集中。  
   
 ## <a name="examples"></a>示例  

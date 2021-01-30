@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_update_collector_type_TSQL
 - sp_syscollector_update_collector_type
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 175e3299c37afe307de8b5f809e44646d0a26047
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ad2fefb206f417c4759f3e85d34a63f320e34d6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534839"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201865"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,9 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
   
 `[ @parameter_schema = ] 'parameter_schema'` 此收集器类型的 XML 架构。 *parameter_schema* 是 **xml** ，可能是某些收集器类型所必需的。 如果它不是必需的，此参数可为 NULL。  
   
-`[ @collection_package_id = ] collection_package_id` 是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集组使用的收集包的本地唯一标识符。 *collection_package_id* **uniqueidentifer** ，并且是必需的。 若要获取 *collection_package_id*的值，请查询 msdb 数据库中的 dbo.syscollector_collector_types 系统视图。  
+`[ @collection_package_id = ] collection_package_id` 是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集组使用的收集包的本地唯一标识符。 *collection_package_id* **uniqueidentifer** ，并且是必需的。 若要获取 *collection_package_id* 的值，请查询 msdb 数据库中的 dbo.syscollector_collector_types 系统视图。  
   
-`[ @upload_package_id = ] upload_package_id` 是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集组使用的上载包的本地唯一标识符。 *upload_package_id* 是 **uniqueidentifier** ，且是必需的。 若要获取 *upload_package_id*的值，请查询 msdb 数据库中的 dbo.syscollector_collector_types 系统视图。  
+`[ @upload_package_id = ] upload_package_id` 是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集组使用的上载包的本地唯一标识符。 *upload_package_id* 是 **uniqueidentifier** ，且是必需的。 若要获取 *upload_package_id* 的值，请查询 msdb 数据库中的 dbo.syscollector_collector_types 系统视图。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   

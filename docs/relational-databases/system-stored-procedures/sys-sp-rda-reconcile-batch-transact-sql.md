@@ -1,12 +1,12 @@
 ---
-title: sys. sp_rda_reconcile_batch (Transact-sql) |Microsoft Docs
-description: 了解如何使用 sys. sp_rda_reconcile_batch 将启用 Stretch 的 SQL Server 表中的批 ID 与存储在远程 Azure 表中的批 ID 进行协调。
+title: sys.sp_rda_reconcile_batch (Transact-sql) |Microsoft Docs
+description: 了解如何使用 sys.sp_rda_reconcile_batch 将启用 Stretch 的 SQL Server 表中的批 ID 与存储在远程 Azure 表中的批 ID 进行协调。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_rda_reconcile_batch
 - sys.sp_rda_reconcile_batch_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 744d863e22bad3dc84ed1fd46350926228b01607
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 858da83b7529198da29cc5665219e9b83dfe3a41
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541022"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211787"
 ---
-# <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys. sp_rda_reconcile_batch (Transact-sql) 
+# <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   将已启用 Stretch 的 SQL Server 表中存储的批 ID 与存储在远程 Azure 表中的批 ID 进行协调。  
@@ -44,7 +44,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>参数  
- \@objname = '* \@ objname*'  
+ \@objname = '*\@ objname*'  
  已启用延伸的 SQL Server 表的名称。  
   
 ## <a name="permissions"></a>权限  

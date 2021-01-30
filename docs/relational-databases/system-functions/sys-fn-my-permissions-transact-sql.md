@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_my_permissions_TSQL
 - fn_my_permissions_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 5e67f2be709f91ee3214f490cfbcc2b932ad7dc5
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 65596436cf44b2c09f344defa1d5e03768db794d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101315"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201921"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>返回的列  
  下表列出了 **fn_my_permissions** 返回的列。 返回的每一行说明了当前安全上下文拥有的对安全对象的一种权限。 如果查询失败，则返回 NULL。  
   
-|列名称|类型|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|对其有效授予所列权限的安全对象的名称。|  
 |subentity_name|**sysname**|如果安全对象具有列，则为列名；否则为 NULL。|  
