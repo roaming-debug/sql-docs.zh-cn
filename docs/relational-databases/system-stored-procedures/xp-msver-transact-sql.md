@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_msver_TSQL
 - xp_msver
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a736447de4215d7f9c630036ae13872ff9d58bff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8a23619f5a1bf12ddcde718fc95db484f6d3cf6e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544691"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99123843"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  返回有关的版本信息 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **xp_msver** 还会返回有关服务器的实际内部版本号和服务器环境的信息。 **Xp_msver**返回的信息可用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、批处理、存储过程等，从而增强了与平台无关的代码的逻辑。  
+  返回有关的版本信息 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **xp_msver** 还会返回有关服务器的实际内部版本号和服务器环境的信息。 **Xp_msver** 返回的信息可用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、批处理、存储过程等，从而增强了与平台无关的代码的逻辑。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ xp_msver [ optname ]
   
 |选项/列名|说明|  
 |-------------------------|-----------------|  
-|**ProductName**|产品名称;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|ProductName|产品名称;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ProductVersion**|产品版本。|  
 |**语言**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的语言版本。|  
 |**平台**|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的操作系统名称、制造商名称以及芯片系列名称。|  
@@ -70,7 +70,7 @@ xp_msver [ optname ]
  1 (成功)   
   
 ## <a name="result-sets"></a>结果集  
- **xp_msver**没有任何参数的情况下，将返回一个由四列组成的结果集，其中列出了所有选项值。 **xp_msver**（对于任何参数），将返回四列结果集，其中包含该选项的值。  
+ **xp_msver** 没有任何参数的情况下，将返回一个由四列组成的结果集，其中列出了所有选项值。 **xp_msver**（对于任何参数），将返回四列结果集，其中包含该选项的值。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
