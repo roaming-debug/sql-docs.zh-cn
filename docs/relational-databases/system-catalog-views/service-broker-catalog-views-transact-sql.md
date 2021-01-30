@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: e68fee7bf39caf0e2732170ef401a5f53fac1711
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9e4a4fc8f96375971d0e1edf30ed1be1758e094b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102189"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181336"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker 目录视图 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

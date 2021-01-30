@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Command collection [ADO], ADO/WFC syntax
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9a79d343458969fcfdc72979f1b413f9b2a8742
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b1846915fad045029e27a6fb2f5ebbb32f5beec4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975238"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164667"
 ---
 # <a name="command-ado---wfc-syntax"></a>命令（ADO - WFC 语法）
 ## <a name="package-commswfcdata"></a>包 .com. 数据  
@@ -45,7 +45,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- **ExecuteUpdate**方法是一种特殊的 case 方法，该方法使用某些参数调用基础 ADO **execute**方法。 **ExecuteUpdate**方法不支持返回**Recordset**对象，因此，**执行**方法的*options*参数使用**AdoEnums.ExecuteOptions**进行修改。 **Execute**方法完成后，其更新的*RecordsAffected*参数会传递回**executeUpdate**方法，该方法最终返回为**int**。  
+ **ExecuteUpdate** 方法是一种特殊的 case 方法，该方法使用某些参数调用基础 ADO **execute** 方法。 **ExecuteUpdate** 方法不支持返回 **Recordset** 对象，因此，**执行** 方法的 *options* 参数使用 **AdoEnums.ExecuteOptions** 进行修改。 **Execute** 方法完成后，其更新的 *RecordsAffected* 参数会传递回 **executeUpdate** 方法，该方法最终返回为 **int**。  
   
 ### <a name="properties"></a>属性  
   

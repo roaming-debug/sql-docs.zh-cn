@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - MSmerge_agents
 - MSmerge_agents_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 9380cd5c5e04293e0296c098ee7455eb803e3972
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1be54b9324dd32de683d442d65472360cf247e71
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096203"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212286"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "98096203"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|合并代理的 ID。|  
-|name|**nvarchar (100)**|合并代理的名称。|  
+|name |**nvarchar (100)**|合并代理的名称。|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  

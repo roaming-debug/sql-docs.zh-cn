@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQL-92 functions [ODBC]
 - scalar functions [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4a814de22df4a97e3c3b3abd0ddc30266fe02a30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94ad0914477de0e2dfd25667755757bbc36a8b29
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411433"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212537"
 ---
 # <a name="appendix-e-scalar-functions"></a>附录 E：标量函数
 ODBC 指定以下类型的标量函数，其中包含有关此附录的相应部分中提供的每个函数类型的详细信息。 函数说明包括相关的语法。  
@@ -46,4 +46,4 @@ ODBC 指定以下类型的标量函数，其中包含有关此附录的相应部
   
  ODBC 和 SQL-92 以不同的方式对其标量函数进行分类。 ODBC 按参数类型对标量函数进行分类;SQL-92 按返回值对它们进行分类。 例如，提取函数被 ODBC 归类为 timedate.cpl 函数，因为提取字段参数是 datetime 关键字，提取-source 参数是 datetime 或 interval 表达式。 另一方面，SQL-92 将提取为数值标量函数，因为返回值为数值。  
   
- 应用程序可以通过调用 **SQLGetInfo**来确定驱动程序支持的标量函数。 同时为 ODBC 和 SQL-92 分类的标量函数提供信息类型。 由于这些分类是不同的，因此，对某些标量函数的支持可能会在不对应于 ODBC 和 SQL-92 的信息类型中指示。 例如，在 ODBC 中对提取的支持由 SQL_TIMEDATE_FUNCTIONS 信息类型指示;另一方面，对在 SQL-92 中提取的支持由 SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 信息类型指示。
+ 应用程序可以通过调用 **SQLGetInfo** 来确定驱动程序支持的标量函数。 同时为 ODBC 和 SQL-92 分类的标量函数提供信息类型。 由于这些分类是不同的，因此，对某些标量函数的支持可能会在不对应于 ODBC 和 SQL-92 的信息类型中指示。 例如，在 ODBC 中对提取的支持由 SQL_TIMEDATE_FUNCTIONS 信息类型指示;另一方面，对在 SQL-92 中提取的支持由 SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 信息类型指示。

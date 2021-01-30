@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC cursor library [ODBC], about cursor library
 - ODBC cursor library [ODBC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 325c7cdc5d2fb185ef3dbd2500a20230d90193bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44fcba1e4c4b2b7f82c99c82399884d7c9bdad85
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411423"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212528"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>附录 F：ODBC 游标库
 > [!IMPORTANT]  
@@ -31,11 +31,11 @@ ms.locfileid: "88411423"
   
  游标库是位于驱动程序管理器和驱动程序之间 (DLL) 的动态链接库。 当应用程序调用函数时，驱动程序管理器将调用游标库中的函数，该函数执行该函数或在指定的驱动程序中调用它。 对于给定的连接，应用程序指定是否始终使用游标库，如果驱动程序不支持可滚动的游标，则使用它，或者从未使用过。  
   
- 游标库显示为驱动程序管理器的驱动程序。 如果游标库位于驱动程序管理器和 ODBC 2.x*驱动程序*之间，则游标库将显示为 odbc *2.x 驱动程序*。 如果游标库位于驱动程序管理器和 ODBC 2.x*驱动程序之间*，则游标库将显示为 odbc 1.x*驱动程序。* 游标库表现的行为取决于它所使用的驱动程序的版本，但绑定偏移量除外，这是对 ODBC *2.x 和 odbc* *2.x 驱动程序* 都支持的。  
+ 游标库显示为驱动程序管理器的驱动程序。 如果游标库位于驱动程序管理器和 ODBC 2.x *驱动程序* 之间，则游标库将显示为 odbc *2.x 驱动程序*。 如果游标库位于驱动程序管理器和 ODBC 2.x *驱动程序之间*，则游标库将显示为 odbc 1.x *驱动程序。* 游标库表现的行为取决于它所使用的驱动程序的版本，但绑定偏移量除外，这是对 ODBC *2.x 和 odbc* *2.x 驱动程序* 都支持的。  
   
- 若要实现 **SQLFetch** 和 **SQLFetchScroll**中的块游标，游标库将重复调用驱动程序中的 **SQLFetch** 。 若要实现滚动，它会将检索到的数据缓存在内存和磁盘文件中。 当应用程序请求新行集时，游标库根据需要从驱动程序或缓存中检索它。  
+ 若要实现 **SQLFetch** 和 **SQLFetchScroll** 中的块游标，游标库将重复调用驱动程序中的 **SQLFetch** 。 若要实现滚动，它会将检索到的数据缓存在内存和磁盘文件中。 当应用程序请求新行集时，游标库根据需要从驱动程序或缓存中检索它。  
   
- 为了实现定位的 update 和 delete 语句，游标库使用**WHERE**子句构造一个**update**或**delete**语句，该语句指定行中每个绑定列的缓存值。 当执行定位的 update 语句时，游标库将从行集缓冲区中的值更新其缓存。  
+ 为了实现定位的 update 和 delete 语句，游标库使用 **WHERE** 子句构造一个 **update** 或 **delete** 语句，该语句指定行中每个绑定列的缓存值。 当执行定位的 update 语句时，游标库将从行集缓冲区中的值更新其缓存。  
   
  有关 ODBC 游标库的详细信息，请参阅本附录中的以下部分：  
   

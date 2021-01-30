@@ -1,13 +1,13 @@
 ---
 description: sys.sp_xtp_control_query_exec_stats (Transact-SQL)
-title: sys. sp_xtp_control_query_exec_stats (Transact-sql) |Microsoft Docs
+title: sys.sp_xtp_control_query_exec_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_xtp_control_query_exec_stats_TSQL
 - sys.sp_xtp_control_query_exec_stats
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e92f12d7003df9a4e0a23ac451d016b84fd5bc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a1047918fd6d337d863dbf43d7058d1e3571e1cb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525343"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180215"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89525343"
   
  启用统计信息收集时性能下降。 如果只需要对一个或几个本机编译存储过程进行故障排除，则可仅对这些本机编译存储过程启用统计信息收集。  
   
- 若要对所有本机编译的存储过程在过程级别启用统计信息收集，请参阅 [transact-sql&#41;&#40;sp_xtp_control_proc_exec_stats ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)。  
+ 若要对所有本机编译的存储过程在过程级别启用统计信息收集，请参阅 [&#40;transact-sql&#41;sys.sp_xtp_control_proc_exec_stats ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @new_collection_value 当启动时，设置为零 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  @database_id = = *database_id*， @xtp_object_id = *procedure_id*  
- 本机编译存储过程的数据库 ID 和对象 ID。 如果为实例启用了统计信息收集 ([sp_xtp_control_proc_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)) ，则收集本机编译的存储过程的统计信息。 对实例关闭统计信息收集不会关闭对个别本机编译存储过程的统计信息收集。  
+ 本机编译存储过程的数据库 ID 和对象 ID。 如果为实例启用了统计信息收集 ([sys.sp_xtp_control_proc_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)) ，则会收集本机编译的存储过程的统计信息。 对实例关闭统计信息收集不会关闭对个别本机编译存储过程的统计信息收集。  
   
  使用 [sys. database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)， [sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)， [DB_ID &#40;transact-sql&#41;](../../t-sql/functions/db-id-transact-sql.md)，或 OBJECT_ID &#40;[transact-sql&#41;](../../t-sql/functions/object-id-transact-sql.md) 获取数据库和存储过程的 id。  
   

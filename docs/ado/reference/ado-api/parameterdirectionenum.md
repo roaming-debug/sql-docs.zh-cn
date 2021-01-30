@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ParameterDirectionEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7422bf0037adc8d756c20c82404a7f3b06ae9e3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 960164c8f881c3094493f3bbc828ef7982e75280
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990128"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166886"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 指定 [参数](./parameter-object.md) 是否表示输入参数、输出参数、输入参数和输出参数，或存储过程的返回值。  
@@ -45,7 +45,7 @@ ms.locfileid: "88990128"
 |AdoEnums.ParameterDirection.RETURNVALUE|  
 |AdoEnums.ParameterDirection.UNKNOWN|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

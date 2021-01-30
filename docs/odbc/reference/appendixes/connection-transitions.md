@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - transitioning states [ODBC], connection
 - connection transitions [ODBC]
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5f7fecf0ad25311e9d96f4db8554c1cdbf24e91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60a26505af6d53265111bd24b08990e61b992902
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88339443"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165416"
 ---
 # <a name="connection-transitions"></a>连接转换
 ODBC 连接具有以下状态。  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
 |C0|未分配环境，未分配的连接|  
 |C1|已分配环境，未分配连接|  
@@ -54,7 +54,7 @@ ODBC 连接具有以下状态。
   
  [4] 此行显示 *HandleType* SQL_HANDLE_DESC 时的转换。  
   
- [5] 调用 **SQLAllocHandle** 时，如果 *OutputHandlePtr* 指向有效的句柄，则会覆盖该句柄，而不考虑以前的内容 ofthat 句柄，并可能会导致 ODBC 驱动程序出现问题。 这是不正确的 ODBC 应用程序编程，用为* \* OutputHandlePtr*定义的同一个应用程序变量来调用**SQLAllocHandle**两次，而不调用**SQLFreeHandle**来释放该句柄，然后再重新分配它。 以这种方式覆盖 ODBC 句柄可能会导致 ODBC 驱动程序部分出现不一致的行为或错误。  
+ [5] 调用 **SQLAllocHandle** 时，如果 *OutputHandlePtr* 指向有效的句柄，则会覆盖该句柄，而不考虑以前的内容 ofthat 句柄，并可能会导致 ODBC 驱动程序出现问题。 这是不正确的 ODBC 应用程序编程，用为 *\* OutputHandlePtr* 定义的同一个应用程序变量来调用 **SQLAllocHandle** 两次，而不调用 **SQLFreeHandle** 来释放该句柄，然后再重新分配它。 以这种方式覆盖 ODBC 句柄可能会导致 ODBC 驱动程序部分出现不一致的行为或错误。  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   
@@ -145,9 +145,9 @@ ODBC 连接具有以下状态。
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 | (IH) | (IH) | (IH) | (IH) | (IH) |--[1] C6 [2] C6 [3]|--|  
   
- [1] 连接处于自动提交模式，而执行的语句不是*游标**规范* (例如 SELECT 语句) ;或者连接处于手动提交模式，而执行的语句未开始事务。  
+ [1] 连接处于自动提交模式，而执行的语句不是 *游标**规范* (例如 SELECT 语句) ;或者连接处于手动提交模式，而执行的语句未开始事务。  
   
- [2] 连接处于自动提交模式，而执行的语句是*游标**规范* (例如 SELECT 语句) 。  
+ [2] 连接处于自动提交模式，而执行的语句是 *游标**规范* (例如 SELECT 语句) 。  
   
  [3] 连接处于手动提交模式，并且数据源开始了一个事务。  
   

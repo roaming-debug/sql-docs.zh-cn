@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setnetname
 - sp_setnetname_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 71584754f3b175201623a222feae6722f39809ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f84120579d3eae3b2755eaab89eff137af6190db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543063"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193500"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,10 +42,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>参数  
- ** @server = "** *server* **"**  
- 在用户编码的远程存储过程调用语法中引用的远程服务器名。 **Sys.** server 中必须已有一行才能使用此*服务器*。 *server* 的数据类型为 **sysname**，无默认值。  
+ **@server = "** *server* **"**  
+ 在用户编码的远程存储过程调用语法中引用的远程服务器名。 **Sys.** server 中必须已有一行才能使用此 *服务器*。 *server* 的数据类型为 **sysname**，无默认值。  
   
- ** @netname = '** *network_name* **'**  
+ **@netname = '** *network_name* **'**  
  对其执行远程存储过程调用的计算机网络名。 *network_name* **sysname**，无默认值。  
   
  该名称必须与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 计算机名相匹配，并且该名称可以包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符中不允许使用的字符。  

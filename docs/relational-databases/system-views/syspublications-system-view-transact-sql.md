@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syspublications
 - syspublications_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 051a57d3cce26d7367cff1ce3afc720534e920bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a17f9371d82ca50a1a27ef0acb0e7281a26fb92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488661"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181561"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications（系统视图）(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Syspublications**视图显示发布信息。 此视图存储在分发数据库中。  
+  **Syspublications** 视图显示发布信息。 此视图存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -50,16 +50,16 @@ ms.locfileid: "88488661"
 |**autogen_sync_procs**|**bit**|指定是否在发布服务器中为立即更新订阅生成同步存储过程。 **1** 表示在发布服务器上生成它。|  
 |**保留**|**int**|对发布的更改在分发数据库中保留的时间（小时）。|  
 |**allow_queued_tran**|**bit**|指定是否启用在订阅服务器上对更改进行排队，直到更改可以在发布服务器上应用为止。 如果为 **1**，则订阅服务器上的更改将排队。|  
-|**snapshot_in_defaultfolder**|**bit**|指定是否在默认文件夹中存储快照文件。 如果为 **0**，则将快照文件存储在 *alternate_snapshot_folder*指定的备用位置中。 如果为 1，则可以在默认文件夹中找到快照文件。|  
-|**alt_snapshot_folder**|**nvarchar (510) **|指定快照的备用文件夹的位置。|  
-|**pre_snapshot_script**|**nvarchar (510) **|指定指向 **.sql** 文件位置的指针。 在订阅服务器上应用快照时，分发代理将在运行任何复制的对象脚本之前运行快照前脚本。|  
-|**post_snapshot_script**|**nvarchar (510) **|指定指向 **.sql** 文件位置的指针。 在初始同步过程中，分发代理将在应用所有其他复制的对象脚本和数据之后运行快照后脚本。|  
+|**snapshot_in_defaultfolder**|**bit**|指定是否在默认文件夹中存储快照文件。 如果为 **0**，则将快照文件存储在 *alternate_snapshot_folder* 指定的备用位置中。 如果为 1，则可以在默认文件夹中找到快照文件。|  
+|**alt_snapshot_folder**|**nvarchar (510)**|指定快照的备用文件夹的位置。|  
+|**pre_snapshot_script**|**nvarchar (510)**|指定指向 **.sql** 文件位置的指针。 在订阅服务器上应用快照时，分发代理将在运行任何复制的对象脚本之前运行快照前脚本。|  
+|**post_snapshot_script**|**nvarchar (510)**|指定指向 **.sql** 文件位置的指针。 在初始同步过程中，分发代理将在应用所有其他复制的对象脚本和数据之后运行快照后脚本。|  
 |**compress_snapshot**|**bit**|指定写入 *alt_snapshot_folder* 位置的快照将压缩为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 **1** 表示将压缩快照。|  
 |**ftp_address**|**sysname**|分发服务器的 FTP 服务的网络地址。 指定发布快照文件所在的位置以供分发代理拾取。|  
 |**ftp_port**|**int**|分发服务器的 FTP 服务的端口号。 指定供分发代理拾取的发布快照文件所在的位置。|  
-|**ftp_subdirectory**|**nvarchar (510) **|指定如果发布支持使用 FTP 传播快照，分发代理应从何处拾取快照文件。|  
+|**ftp_subdirectory**|**nvarchar (510)**|指定如果发布支持使用 FTP 传播快照，分发代理应从何处拾取快照文件。|  
 |**ftp_login**|**nvarchar(256)**|用于连接到 FTP 服务的用户名。|  
-|**ftp_password**|**nvarchar (1048) **|用于连接到 FTP 服务的用户密码。|  
+|**ftp_password**|**nvarchar (1048)**|用于连接到 FTP 服务的用户密码。|  
 |**allow_dts**|**bit**|指定发布是否允许 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Data Transformation Services (DTS) 转换。 **1** 指定允许 DTS 转换。|  
 |**allow_subscription_copy**|**bit**|指定是否已启用复制订阅该发布的订阅数据库的功能。 **1** 表示允许复制。|  
 |**centralized_conflicts**|**bit**|指定冲突记录是否存储在发布服务器上：<br /><br /> **0** = 在导致冲突的发布服务器和订阅服务器上存储冲突记录。<br /><br /> **1** = 冲突记录存储在发布服务器上。|  
@@ -69,16 +69,16 @@ ms.locfileid: "88488661"
 |**ad_guidname**|**sysname**|指定是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 有效的全局唯一标识符 (GUID) 指定在 Active Directory 中发布该发布，并且 GUID 是相应的 Active Directory 发布对象 objectGUID。 如果为 NULL，则将不在 Active Directory 中发布该发布。<br /><br /> 注意：不再支持发布到 Active Directory。|  
 |**backward_comp_level**|**int**|数据库兼容性级别，可以是以下值之一：<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。|  
 |**allow_initialize_from_backup**|**bit**|指示订户是否可以从备份而非初始快照中初始化对此发布的订阅。 **1** 表示可以从备份中初始化订阅， **0** 表示不能。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。|  
-|**min_autonosync_lsn**|**二进制 (1) **|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**min_autonosync_lsn**|**二进制 (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|指示发布是否支持架构复制。<br /><br /> **1** = 复制在发布服务器上执行的 DDL 语句。<br /><br /> **0** = 指示不复制 DDL 语句。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。|  
 |**options**|**int**|指定其他发布选项的位图，其中的位选项值如下所示：<br /><br /> **0x1** -已启用对等复制。<br /><br /> **0x2** -仅发布对等复制的本地更改。<br /><br /> **0x4** -为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用。<br /><br /> **0x8** -启用对等冲突检测。|  
 |**originator_id**|**smallint**|为进行冲突检测标识对等复制拓扑中的每个节点。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [复制存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

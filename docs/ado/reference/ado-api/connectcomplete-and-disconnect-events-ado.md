@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Disconnect
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9fbea6991ca030f0f83e31dfdc26b3ac72a8697f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4b451f72d33baf52642f00926e644892f5b955ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974988"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164618"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 和 Disconnect 事件 (ADO)
 连接启动后，调用 **ConnectComplete** 事件。 连接结束后，将调用 " **断开** 连接" 事件。  
@@ -40,12 +40,12 @@ Disconnect adStatus, pConnection
   
 #### <a name="parameters"></a>参数  
  *pError*  
- 一个 [错误](./error-object.md) 对象。 它描述了 *adStatus* 的值为 **adStatusErrorsOccurred**时所发生的错误;否则，不会设置。  
+ 一个 [错误](./error-object.md) 对象。 它描述了 *adStatus* 的值为 **adStatusErrorsOccurred** 时所发生的错误;否则，不会设置。  
   
  *adStatus*  
- 始终返回**adStatusOK**的[EventStatusEnum](./eventstatusenum.md)值。  
+ 始终返回 **adStatusOK** 的 [EventStatusEnum](./eventstatusenum.md)值。  
   
- 调用**ConnectComplete**时，如果**WillConnect**事件已请求取消挂起的连接，此参数将设置为**adStatusCancel** 。  
+ 调用 **ConnectComplete** 时，如果 **WillConnect** 事件已请求取消挂起的连接，此参数将设置为 **adStatusCancel** 。  
   
  在任一事件返回之前，将此参数设置为 **adStatusUnwantedEvent** 以防止后续通知。 但是，关闭并重新打开 [连接](./connection-object-ado.md) 会导致这些事件再次出现。  
   

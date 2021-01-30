@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: 07/28/2016
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: f4597a05c6f1376a39d98894d6e510b7928a450d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bd4507821972afb818d2a68ee4c4e48efcd79891
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474658"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165226"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a> (Azure SQL 数据库的防火墙规则存储过程) 
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]

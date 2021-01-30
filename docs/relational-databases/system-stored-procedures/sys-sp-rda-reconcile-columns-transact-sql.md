@@ -1,12 +1,12 @@
 ---
-title: sys. sp_rda_reconcile_columns (Transact-sql) |Microsoft Docs
-description: 了解 sys.databases. sp_rda_reconcile_columns。 使用此存储过程来协调远程 Azure 表和启用 Stretch SQL Server 表中的列。
+title: sys.sp_rda_reconcile_columns (Transact-sql) |Microsoft Docs
+description: 了解 sys.sp_rda_reconcile_columns。 使用此存储过程来协调远程 Azure 表和启用 Stretch SQL Server 表中的列。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_rda_reconcile_columns
 - sys.sp_rda_reconcile_columns_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1788e373c8bab330182df9338e447946cda87bd3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8eb33cbb1fd2975d96a727f6a7fde457c9827cc8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538438"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211780"
 ---
-# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-sql) 
+# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   将远程 Azure 表中的列与启用 Stretch SQL Server 表中的列协调。  
@@ -45,7 +45,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>参数  
- \@objname = '* \@ objname*'  
+ \@objname = '*\@ objname*'  
  已启用延伸的 SQL Server 表的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  

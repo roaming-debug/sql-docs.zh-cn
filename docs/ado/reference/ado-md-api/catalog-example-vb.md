@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 018b4d96995e11f98fc06ad382033c2059d3ef25
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a78cd5e1d1415353e2186570abda78e16b7316b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987308"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166162"
 ---
 # <a name="catalog-example-vb"></a>目录示例 (VB)
 此 Visual Basic 项目使用 MDX 创建新的多维数据集。 然后，它记录了 Microsoft Word 文档中多维数据集的结构。  

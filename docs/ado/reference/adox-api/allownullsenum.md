@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - AllowNullsEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2d21b4a7e4de67e45210f11598a7cf3a2a99b9e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 872d3dfd6658a7190e3f18fcc23a1b7fb34da1f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985538"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164313"
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 指定是否为具有 null 值的记录编制索引。  
@@ -33,5 +33,5 @@ ms.locfileid: "88985538"
 |**adIndexNullsIgnore**|2|此索引不插入包含空键的项。 如果在键列中输入 null 值，则该条目将被忽略且不发生错误。|  
 |**adIndexNullsIgnoreAny**|4|此索引不会插入某些键列的值为 null 的项。 对于包含多列键的索引，如果在某个列中输入 null 值，则该条目将被忽略且不发生错误。|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [IndexNulls 属性 (ADOX)](./indexnulls-property-adox.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - RecordStatusEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4d2ad74187ef6be146be04f63e634bbdf3de9f5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 695c0496f81afcb3d03991360fb9480d956740f2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989668"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166688"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 指定有关批更新和其他批量操作的记录的 [状态](./status-property-ado-recordset.md) 。  
@@ -73,5 +73,5 @@ ms.locfileid: "88989668"
 |AdoEnums.RecordStatus.SCHEMAVIOLATION|  
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [Status 属性（ADO 记录集）](./status-property-ado-recordset.md)

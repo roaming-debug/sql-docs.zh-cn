@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_kill_filestream_non_transacted_handles_TSQL
 - sp_kill_filestream_non_transacted_handles
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba045dc68e5e032478d26caaa7790ed357f4e087
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd3ba3d653b8f1626f89c7bb979580c666dd830a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550005"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165238"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +40,14 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  *table_name*  
  要关闭其中的非事务性句柄的表的名称。  
   
- 可以不*handle_id*传递*Table_name*来关闭 FileTable 的所有打开的非事务性句柄。  
+ 可以不 *handle_id* 传递 *Table_name* 来关闭 FileTable 的所有打开的非事务性句柄。  
   
  您可以为 *table_name* 的值传递 NULL，以关闭当前数据库中所有 filetable 的所有打开的非事务性句柄。 NULL 是默认值。  
   
  *handle_id*  
- 要关闭的各个句柄的可选 ID。 你可以从[dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)动态管理视图获取*handle_id* 。 每个 ID 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中都是唯一的。 如果指定 *handle_id*，则还必须为 *table_name*提供一个值。  
+ 要关闭的各个句柄的可选 ID。 可以从 [sys.dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)动态管理视图中获取 *handle_id* 。 每个 ID 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中都是唯一的。 如果指定 *handle_id*，则还必须为 *table_name* 提供一个值。  
   
- 可以为 *handle_id* 的值传递 NULL，以关闭 *Table_name*指定的 FileTable 的所有打开的非事务性句柄。 NULL 是默认值。  
+ 可以为 *handle_id* 的值传递 NULL，以关闭 *Table_name* 指定的 FileTable 的所有打开的非事务性句柄。 NULL 是默认值。  
   
 ## <a name="return-code-value"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -56,17 +56,17 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  无。  
   
 ## <a name="general-remarks"></a>一般备注  
- **Sp_kill_filestream_non_transacted_handles**所需的*handle_id*与其他**kill**命令中使用的 session_id 或工作单元无关。  
+ **Sp_kill_filestream_non_transacted_handles** 所需的 *handle_id* 与其他 **kill** 命令中使用的 session_id 或工作单元无关。  
   
  有关详细信息，请参阅 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
 ## <a name="metadata"></a>元数据  
- 有关开放式非事务性文件句柄的信息，请查询动态管理视图 [sys.databases dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。  
+ 有关开放式非事务性文件句柄的信息，请查询动态管理视图 [sys.dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。  
   
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 您必须具有 " **查看数据库状态** " 权限才能从 **sys. dm_FILESTREAM_non_transacted_handles** 动态管理视图获取文件句柄并运行 **sp_kill_filestream_non_transacted_handles**。  
+ 您必须具有 " **查看数据库状态** " 权限才能从 **sys.dm_FILESTREAM_non_transacted_handles** 动态管理视图获取文件句柄并运行 **sp_kill_filestream_non_transacted_handles**。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何调用 **sp_kill_filestream_non_transacted_handles** 关闭 FileTable 数据的非事务性文件句柄。  

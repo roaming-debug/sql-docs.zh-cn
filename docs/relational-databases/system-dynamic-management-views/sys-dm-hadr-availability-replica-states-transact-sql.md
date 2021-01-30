@@ -6,7 +6,7 @@ ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_hadr_availability_replica_states
 - sys.dm_hadr_availability_replica_states_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 549c37fdcc04d16eb2163fc7cca7e2ffddf9ce3e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ab171b0adfe6497520ba55d94ec6a1435cc6678a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092777"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179314"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "98092777"
   
  正在 **解析：** 如果可用性副本处于解析角色中，则可能的操作状态如下表中所示。  
   
-|操作状态|描述|  
+|操作状态|说明|  
 |-----------------------|-----------------|  
 |PENDING_FAILOVER|正在为可用性组处理故障转移命令。|  
 |OFFLINE|可用性副本的所有配置数据都已在 WSFC 群集上更新，并且也在本地元数据中更新，但可用性组目前缺少主副本。|  
@@ -76,7 +76,7 @@ ms.locfileid: "98092777"
   
  **辅助：** 当某个可用性副本正在执行辅助角色时，该副本当前为辅助副本。 可能的操作状态如下表中所示。  
   
-|操作状态|描述|  
+|操作状态|说明|  
 |-----------------------|-----------------|  
 |ONLINE|本地辅助副本连接到主副本。|  
 |FAILED|本地辅助副本无法从 WSFC 群集读取和/或写入。|  

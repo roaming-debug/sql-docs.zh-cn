@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e23f0dedfafb47a5c97bb11f35c02b5527448e8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fdab5e24244bc3b4f3bcf90a8401fb34a31f95bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976518"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164939"
 ---
 # <a name="ado-collections"></a>ADO 集合
 这些集合和 ADO 对象之间的关系在 [Ado 对象模型](./ado-object-model.md)中表示。  
@@ -29,8 +29,8 @@ ms.locfileid: "88976518"
 |集合|说明|  
 |-|-|  
 |[错误](./errors-collection-ado.md)|包含为响应单个提供程序相关的失败而创建的所有 **错误** 对象。|  
-|[字段](./fields-collection-ado.md)|包含**Recordset**对象的所有**字段**对象。|  
-|[参数](./parameters-collection-ado.md)|包含**Command**对象的所有**参数**对象。|  
+|[Fields](./fields-collection-ado.md)|包含 **Recordset** 对象的所有 **字段** 对象。|  
+|[参数](./parameters-collection-ado.md)|包含 **Command** 对象的所有 **参数** 对象。|  
 |[属性](./properties-collection-ado.md)|包含对象的特定实例的所有 **属性** 对象。|  
   
 ## <a name="see-also"></a>另请参阅  

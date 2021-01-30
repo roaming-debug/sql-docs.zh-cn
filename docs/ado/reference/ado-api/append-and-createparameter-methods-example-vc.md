@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18807c13606404718180421177f0175ffef6d822
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d07db05ed457f52616fa78e6c354c944719aff0f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976098"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164847"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>附加和 CreateParameter 方法示例 (VC + +) 
 此示例使用 [Append](./append-method-ado.md) 和 [CreateParameter](./createparameter-method-ado.md) 方法执行具有输入参数的存储过程。  

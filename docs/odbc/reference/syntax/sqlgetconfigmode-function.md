@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLGetConfigMode
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 75093ddb5b33427ac2dc86c3d31fa635a2899118
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ccd703f6fd8c7b80dec575d85e44f2c955ea669
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491242"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203472"
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode 函数
 **度**  
@@ -39,12 +39,12 @@ ms.locfileid: "88491242"
 ```cpp  
   
 BOOL SQLGetConfigMode(  
-     UWORD *   pwConfigMode);  
+     UWORD *   pwConfigMode);  
 ```  
   
 ## <a name="arguments"></a>参数  
  *pwConfigMode*  
- 输出指向包含配置模式的缓冲区的指针。  (参阅 "注释"。) * \* PwConfigMode*中的值可以是：  
+ 输出指向包含配置模式的缓冲区的指针。  (参阅 "注释"。) *\* PwConfigMode* 中的值可以是：  
   
  ODBC_USER_DSN  
   
@@ -56,16 +56,16 @@ BOOL SQLGetConfigMode(
  如果此函数成功，则返回 TRUE，否则返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLGetConfigMode**返回 FALSE 时，可以通过调用**SQLInstallerError**获取关联的* \* pfErrorCode*值。 下表列出了可由**SQLInstallerError**返回的* \* pfErrorCode*值，并说明了此函数的上下文中的每个值。  
+ 当 **SQLGetConfigMode** 返回 FALSE 时，可以通过调用 **SQLInstallerError** 获取关联的 *\* pfErrorCode* 值。 下表列出了可由 **SQLInstallerError** 返回的 *\* pfErrorCode* 值，并说明了此函数的上下文中的每个值。  
   
 |*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行此功能。|  
   
 ## <a name="comments"></a>注释  
- 此函数用于确定列出 DSN 值的 Odbc.ini 条目在系统信息中所处的位置。 如果 ODBC_USER_DSN * \* pwConfigMode* ，则 DSN 是用户 dsn，而函数从 HKEY_CURRENT_USER 中的 Odbc.ini 条目读取。 如果 ODBC_SYSTEM_DSN，则 DSN 是系统 DSN，而函数从 HKEY_LOCAL_MACHINE 中的 Odbc.ini 条目读取。 如果 ODBC_BOTH_DSN，则会尝试 HKEY_CURRENT_USER，如果失败，则使用 HKEY_LOCAL_MACHINE。  
+ 此函数用于确定列出 DSN 值的 Odbc.ini 条目在系统信息中所处的位置。 如果 ODBC_USER_DSN *\* pwConfigMode* ，则 DSN 是用户 dsn，而函数从 HKEY_CURRENT_USER 中的 Odbc.ini 条目读取。 如果 ODBC_SYSTEM_DSN，则 DSN 是系统 DSN，而函数从 HKEY_LOCAL_MACHINE 中的 Odbc.ini 条目读取。 如果 ODBC_BOTH_DSN，则会尝试 HKEY_CURRENT_USER，如果失败，则使用 HKEY_LOCAL_MACHINE。  
   
- 默认情况下， **SQLGetConfigMode** 返回 ODBC_BOTH_DSN。 如果用户 DSN 或系统 DSN 是通过调用 **SQLConfigDataSource**创建的，则该函数会将配置模式设置为 ODBC_USER_DSN 或 ODBC_SYSTEM_DSN，以区分用户和系统 dsn，同时修改 DSN。 在返回之前， **SQLConfigDataSource** 会将配置模式重置为 ODBC_BOTH_DSN。  
+ 默认情况下， **SQLGetConfigMode** 返回 ODBC_BOTH_DSN。 如果用户 DSN 或系统 DSN 是通过调用 **SQLConfigDataSource** 创建的，则该函数会将配置模式设置为 ODBC_USER_DSN 或 ODBC_SYSTEM_DSN，以区分用户和系统 dsn，同时修改 DSN。 在返回之前， **SQLConfigDataSource** 会将配置模式重置为 ODBC_BOTH_DSN。  
   
 ## <a name="related-functions"></a>相关函数  
   

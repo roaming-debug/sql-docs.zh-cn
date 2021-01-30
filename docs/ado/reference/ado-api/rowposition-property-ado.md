@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ADORecordConstruction::put_RowPosition
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5072555e07a9fafb70b90a1bc19fa06f12c17d45
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a836ca9dd23e6bb43d6bcf3a2707c4b523d530f4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989378"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166616"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 属性 (ADO)
-获取或设置**ADORecordsetConstruction**对象上/的 OLE DB **RowPosition**对象。 使用 **put_RowPosition** 设置 **RowPosition** 对象时，生成的 **Recordset** 对象将使用 **RowPosition** 对象来确定当前行。  
+获取或设置 **ADORecordsetConstruction** 对象上/的 OLE DB **RowPosition** 对象。 使用 **put_RowPosition** 设置 **RowPosition** 对象时，生成的 **Recordset** 对象将使用 **RowPosition** 对象来确定当前行。  
   
  读/写。  
   
@@ -49,8 +49,8 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ## <a name="return-values"></a>返回值  
  此属性方法返回标准的 HRESULT 值，包括 S_OK 和 E_FAIL。  
   
-## <a name="remarks"></a>注解  
- 设置此属性时，如果**RowPosition**对象上的**行集**对象与**Recordset**对象上的**行**集对象不同，则前者会重写后者。 同样的行为也适用于**RowPosition**的当前**章节**。  
+## <a name="remarks"></a>备注  
+ 设置此属性时，如果 **RowPosition** 对象上的 **行集** 对象与 **Recordset** 对象上的 **行** 集对象不同，则前者会重写后者。 同样的行为也适用于 **RowPosition** 的当前 **章节**。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [ADORecordsetConstruction 接口](./adorecordsetconstruction-interface.md)

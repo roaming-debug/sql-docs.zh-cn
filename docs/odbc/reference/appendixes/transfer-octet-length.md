@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - transfer octet length of data types [ODBC]
 - size of data types [ODBC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c89a9cb1423693e7d92114233f967d6fb5dcee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b910f544be952a18ae2961e9939960820e3805bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386343"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202483"
 ---
 # <a name="transfer-octet-length"></a>传输八位字节长度
 在将数据传输到默认 C 数据类型时，列的传输的字节数是指返回给应用程序的最大字节数。 对于字符数据，传输八位字节长度不包括 null 终止字符的空间。 列的传输八位字节长度可能不同于在数据源中存储数据所需的字节数。  

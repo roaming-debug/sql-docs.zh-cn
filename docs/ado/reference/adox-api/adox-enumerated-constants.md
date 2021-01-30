@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4a6ab82630c058db9bbb0b05ca9ee5713a4c8ab
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6f9734a802ca1b653a912a0fe829b24e14e6953f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641177"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164346"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 枚举常量
 为了协助调试，ADOX 枚举常量会列出每个常量的值。 不过，此值是纯粹的建议，可能会因 ADOX 的一个版本而发生变化。 你的代码只应依赖于枚举常量的名称，而不是实际值。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_db_objects_disabled_on_compatibility_level_change
 - dm_db_objects_disabled_on_compatibility_level_change_TSQL
@@ -21,12 +21,12 @@ ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e5092468b8a6beebb9d5149d215b39f47db0818
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c7fef254ef7403e56c497453a36705110fe64e66
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100017"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202559"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空间数据-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**class**|**int**|1 = 约束<br /><br /> 7 = 索引和堆|  
+|class |**int**|1 = 约束<br /><br /> 7 = 索引和堆|  
 |**class_desc**|**nvarchar(60)**|约束的 OBJECT 或 COLUMN<br /><br /> 索引和堆的 INDEX|  
 |**major_id**|**int**|约束的 OBJECT ID<br /><br /> 包含索引和堆的表的 OBJECT ID|  
 |**minor_id**|**int**|对于约束为 NULL<br /><br /> 索引和堆的 Index_id|  

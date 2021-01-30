@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replqueuemonitor
 - sp_replqueuemonitor_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db91c3bef035398fa98d8eeb88f68bbd1c5cf09a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8fa6635b4f31692e5f45e848043e44496e2d702f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534913"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211663"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,9 +46,9 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
   
 `[ @publisherdb = ] 'publisher_db' ]` 发布数据库的名称。 *publisher_db* 的默认值为 **sysname**，默认值为 NULL。 NULL 表示所有发布数据库。  
   
-`[ @publication = ] 'publication' ]` 发布的名称。 *发布*为 **sysname**，默认值为 NULL。 NULL 表示所有发布。   
+`[ @publication = ] 'publication' ]` 发布的名称。 *发布* 为 **sysname**，默认值为 NULL。 NULL 表示所有发布。   
   
-`[ @tranid = ] 'tranid' ]` 事务 ID。 *tranid*的值为 **sysname**，默认值为 NULL。 NULL 表示所有事务。  
+`[ @tranid = ] 'tranid' ]` 事务 ID。 *tranid* 的值为 **sysname**，默认值为 NULL。 NULL 表示所有事务。  
   
 `[ @queuetype = ] 'queuetype' ]` 存储事务的队列类型。 *queuetype* 的数据值为 **tinyint** ，默认值为 **0**，可以是下列值之一。  
   

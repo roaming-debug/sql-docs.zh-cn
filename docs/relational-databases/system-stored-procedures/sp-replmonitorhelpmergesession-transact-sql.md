@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpmergesession_TSQL
 - sp_replmonitorhelpmergesession
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9544a1d11efbd3d956821784257619bb45b7a5cc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d81a500eccbc8d969e9e0ef957ae4db09616d768
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525961"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211884"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @agent_name = ] 'agent_name'` 代理的名称。 *agent_name* 为 **nvarchar (100) ** ，无默认值。  
+`[ @agent_name = ] 'agent_name'` 代理的名称。 *agent_name* 为 **nvarchar (100)** ，无默认值。  
   
 `[ @hours = ] hours` 返回历史代理会话信息的时间范围（以小时为单位）。 *小时数* 为 **int**，可以是下列范围之一。  
   
@@ -71,7 +71,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|代理作业会话的 ID。|  
-|**状态**|**int**|代理运行状态：<br /><br /> **1** = 启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 重试<br /><br /> **6** = 失败|  
+|**Status**|**int**|代理运行状态：<br /><br /> **1** = 启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 重试<br /><br /> **6** = 失败|  
 |**StartTime**|**datetime**|时间代理作业会话开始。|  
 |**EndTime**|**datetime**|时间代理作业会话已完成。|  
 |**持续时间**|**int**|此作业会话的累计时间（以秒为单位）。|  
@@ -82,7 +82,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**PercentageDone**|**decimal**|已经在活动会话中传递的全部更改的估计百分比。|  
 |**TimeRemaining**|**int**|估计的活动会话所剩秒数。|  
 |**CurrentPhase**|**int**|活动会话的当前阶段，可以是以下内容之一。<br /><br /> **1** = 上载<br /><br /> **2** = 下载|  
-|**LastMessage**|**nvarchar (500) **|合并代理在会话过程中记录的最后一个消息。|  
+|**LastMessage**|**nvarchar (500)**|合并代理在会话过程中记录的最后一个消息。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -93,7 +93,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  在订阅服务器上执行时， **sp_replmonitorhelpmergesession** 仅返回最近5合并代理会话的信息。  
   
 ## <a name="permissions"></a>权限  
- 只有分发服务器上的分发数据库或订阅服务器上的**replmonitor**固定数据库角色的**db_owner**成员才能执行**sp_replmonitorhelpmergesession**。  
+ 只有分发服务器上的分发数据库或订阅服务器上的 **replmonitor** 固定数据库角色的 **db_owner** 成员才能执行 **sp_replmonitorhelpmergesession**。  
   
 ## <a name="see-also"></a>另请参阅  
  [以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

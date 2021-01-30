@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addsubscriber
 - sp_addsubscriber_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e48362fd0c671f3b7f9427c6a1ad291c175fa71
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9839d1daa3316fa8cb47af0ed2e362eba194f414
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546227"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212012"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +77,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
-`[ @password = ] 'password'` 用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码。 *密码* 为 **nvarchar (524) **，默认值为 NULL。  
+`[ @password = ] 'password'` 用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码。 *密码* 为 **nvarchar (524)**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。  
@@ -116,7 +116,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
-`[ @frequency_interval = ] frequency_interval` 应用于 *frequency_type*设置的频率的值。 *frequency_interval* 的值为 **int**，默认值为1。  
+`[ @frequency_interval = ] frequency_interval` 应用于 *frequency_type* 设置的频率的值。 *frequency_interval* 的值为 **int**，默认值为1。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
@@ -126,15 +126,15 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |值|说明|  
 |-----------|-----------------|  
 |**1** （默认值）|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 **0**。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type* 使用的重复因子。 *frequency_recurrence_factor* 的值为 **int**，默认值为 **0**。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
@@ -144,14 +144,14 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|Second|  
+|**2**|秒|  
 |**4** (默认值) |Minute|  
 |**8**|小时|  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 **5**。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday* 的间隔。 *frequency_subday_interval* 的值为 **int**，默认值为 **5**。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
@@ -161,7 +161,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` 停止安排复制代理的时间，格式为 HHMMSS。 *active_end_time_of_day*的值为 **int**，默认值为235959，表示 11:59:59 P.M.。 以24小时制计量。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 停止安排复制代理的时间，格式为 HHMMSS。 *active_end_time_of_day* 的值为 **int**，默认值为235959，表示 11:59:59 P.M.。 以24小时制计量。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
@@ -176,7 +176,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
-`[ @description = ] 'description'` 订阅服务器的文本说明。 *描述* 为 **nvarchar (255) **，默认值为 NULL。  
+`[ @description = ] 'description'` 订阅服务器的文本说明。 *描述* 为 **nvarchar (255)**，默认值为 NULL。  
   
 `[ @security_mode = ] security_mode` 实现的安全模式。 *security_mode* 的值为 **int**，默认值为1。 **0** 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 **1** 指定 Windows 身份验证。  
   
@@ -188,7 +188,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 `[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  在从发布服务器进行发布时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  在从发布服务器进行发布时，不应使用 *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
@@ -196,12 +196,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="remarks"></a>备注  
  **sp_addsubscriber** 用于快照复制、事务复制和合并复制。  
   
- 如果订阅服务器将仅具有合并发布的匿名订阅，则不需要**sp_addsubscriber** 。  
+ 如果订阅服务器将仅具有合并发布的匿名订阅，则不需要 **sp_addsubscriber** 。  
   
- **sp_addsubscriber**写入**分发**数据库中的[MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md)表。  
+ **sp_addsubscriber** 写入 **分发** 数据库中的 [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md)表。  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员才能 **sp_addsubscriber**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_addsubscriber** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   

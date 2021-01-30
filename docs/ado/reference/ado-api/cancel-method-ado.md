@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::Cancel
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75829400fbb1beb838b9254acf7db129980046c3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: adc282492b4c6d9a21683693154e43f1177bdca0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975648"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164746"
 ---
 # <a name="cancel-method-ado"></a>Cancel 方法 (ADO)
 取消执行挂起的异步方法调用。  
@@ -38,19 +38,19 @@ object.Cancel
 ```  
   
 ## <a name="remarks"></a>备注  
- 使用 **Cancel** 方法可终止异步方法调用的执行：即，使用 **adAsyncConnect**、 **adAsyncExecute**或 **adAsyncFetch** 选项调用的方法。  
+ 使用 **Cancel** 方法可终止异步方法调用的执行：即，使用 **adAsyncConnect**、 **adAsyncExecute** 或 **adAsyncFetch** 选项调用的方法。  
   
  下表显示了在特定类型的对象上使用 **Cancel** 方法时终止的任务。  
   
 |如果 *对象* 为|对此方法的最后一次异步调用被终止|  
 |----------------------|-------------------------------------------------------------|  
 |[命令](./command-object-ado.md)|[执行](./execute-method-ado-command.md)|  
-|[Connection](./connection-object-ado.md)|[Execute](./execute-method-ado-connection.md) 或 [Open](./open-method-ado-connection.md)|  
+|[连接](./connection-object-ado.md)|[Execute](./execute-method-ado-connection.md) 或 [Open](./open-method-ado-connection.md)|  
 |[记录](./record-object-ado.md)|[CopyRecord](./copyrecord-method-ado.md)、 [DeleteRecord](./deleterecord-method-ado.md)、 [MoveRecord](./moverecord-method-ado.md)或 [Open](./open-method-ado-record.md)|  
 |[Recordset](./recordset-object-ado.md)|[打开](./open-method-ado-recordset.md)|  
 |[流](./stream-object-ado.md)|[打开](./open-method-ado-stream.md)|  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
 
 :::row:::
     :::column:::

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_articlefilter_TSQL
 - sp_articlefilter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1adb46ae5954c0cbb2b401625869e4e1cb431484
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6e39f67440e57c2c4a725db45e6e8d8deda3c8b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548287"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203251"
 ---
 # <a name="sp_articlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ sp_articlefilter [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 项目的名称。 *项目* 是 **sysname**，无默认值。  
   
-`[ @filter_name = ] 'filter_name'` 要从 *filter_name*创建的筛选存储过程的名称。 *filter_name* 为 **nvarchar (386) **，默认值为 NULL。 您必须为项目筛选指定唯一的名称。  
+`[ @filter_name = ] 'filter_name'` 要从 *filter_name* 创建的筛选存储过程的名称。 *filter_name* 为 **nvarchar (386)**，默认值为 NULL。 您必须为项目筛选指定唯一的名称。  
   
 `[ @filter_clause = ] 'filter_clause'` 用于定义水平筛选器的) 子句 (的限制。 当输入限制子句时，将省略关键字 WHERE。 *filter_clause* 为 **ntext**，默认值为 NULL。  
   
@@ -77,9 +77,9 @@ sp_articlefilter [ @publication = ] 'publication'
   
  为包含现有订阅的项目执行 **sp_articlefilter** 需要重新初始化这些订阅。  
   
- **sp_articlefilter**创建筛选器，将筛选存储过程的 ID 插入到[sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)表的 "**筛选器**" 列中，然后在 " **filter_clause** " 列中插入限制子句的文本。  
+ **sp_articlefilter** 创建筛选器，将筛选存储过程的 ID 插入到 [sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)表的 "**筛选器**" 列中，然后在 " **filter_clause** " 列中插入限制子句的文本。  
   
- 若要创建包含水平筛选器的项目，请执行不带*filter*参数[&#40;transact-sql&#41;sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 。 执行 **sp_articlefilter**，提供包括 *filter_clause*在内的所有参数，然后 [&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)中执行 sp_articleview，同时提供包括相同 *filter_clause*的所有参数。 如果筛选器已经存在，并且**sysarticles**中的**类型**为**1** (基于日志的项目) ，则将删除上一个筛选器并创建新的筛选器。  
+ 若要创建包含水平筛选器的项目，请执行不带 *filter* 参数 [&#40;transact-sql&#41;sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 。 执行 **sp_articlefilter**，提供包括 *filter_clause* 在内的所有参数，然后 [&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)中执行 sp_articleview，同时提供包括相同 *filter_clause* 的所有参数。 如果筛选器已经存在，并且 **sysarticles** 中的 **类型** 为 **1** (基于日志的项目) ，则将删除上一个筛选器并创建新的筛选器。  
   
  如果未提供 *filter_name* 和 *filter_clause* ，则删除上一个筛选器，并将筛选器 ID 设置为 **0**。  
   

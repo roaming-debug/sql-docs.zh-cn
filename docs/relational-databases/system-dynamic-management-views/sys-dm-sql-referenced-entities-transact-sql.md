@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_sql_referenced_entities_TSQL
 - dm_sql_referenced_entities
@@ -21,12 +21,12 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5b90048297d0573749f4751a3730beb87d56ddb
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1ed4aebeaf422b47dd94531c5d0a8a491cf9490e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093983"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203337"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
@@ -123,7 +123,7 @@ sys.dm_sql_referenced_entities (
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
-|视图|是|是|  
+|查看|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
 |CLR 存储过程|否|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  

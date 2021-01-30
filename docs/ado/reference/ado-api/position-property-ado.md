@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::Position
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55ae275db06b8b0c73598977e78954bac0fd22be
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9b2da711df951fc79db5034eeb447a71ade21fee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990058"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166854"
 ---
 # <a name="position-property-ado"></a>Position 属性 (ADO)
 指示 [流](./stream-object-ado.md) 对象内的当前位置。  
@@ -29,19 +29,19 @@ ms.locfileid: "88990058"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个 **长整型** 值，该值指定相对于流开头的当前位置的偏移量（以字节为单位）。 默认值为0，表示流中的第一个字节。  
   
-## <a name="remarks"></a>注解  
- 当前位置可移至流末尾之后的某个点。 如果指定超出流末尾的当前位置，则会相应地增加**流**对象的[大小](./size-property-ado-stream.md)。 以这种方式添加的任何新字节都将为 null。  
+## <a name="remarks"></a>备注  
+ 当前位置可移至流末尾之后的某个点。 如果指定超出流末尾的当前位置，则会相应地增加 **流** 对象的 [大小](./size-property-ado-stream.md)。 以这种方式添加的任何新字节都将为 null。  
   
 > [!NOTE]
 >  **Position** 始终度量字节。 对于使用多字节字符集的文本流，请将位置乘以字符大小以确定字符数。 例如，对于双字节字符集，第一个字符的位置为0，第二个字符的位置是2，第三个字符的位置是4，依此类推。  
   
 > [!NOTE]
->  负值不能用于更改 **流**中的当前位置。 只有正数才能用于 **位置**。  
+>  负值不能用于更改 **流** 中的当前位置。 只有正数才能用于 **位置**。  
   
 > [!NOTE]
->  对于只读**流**对象，如果**将 "位置**" 设置为大于**流****大小**的值，ADO 将不会返回错误。 这不会更改 **流**的大小，也不会以任何方式更改 **流** 内容。 但是，应避免这样做，因为它会导致不确切的 **位置**值。  
+>  对于只读 **流** 对象，如果 **将 "位置**" 设置为大于 **流****大小** 的值，ADO 将不会返回错误。 这不会更改 **流** 的大小，也不会以任何方式更改 **流** 内容。 但是，应避免这样做，因为它会导致不确切的 **位置** 值。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [流对象 (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  

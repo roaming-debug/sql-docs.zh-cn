@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_backup_config_basic_TSQL
 - sp_backup_config_basic
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 0ef304af8088ee35aeb19022f5d7f6cf539f554d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753721"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193600"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -48,7 +48,7 @@ EXEC managed_backup.sp_backup_config_basic
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  @enable_backup  
- 启用或禁用指定数据库的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 @enable_backup为**BIT**。 为的第一个实例配置时所需 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的参数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果要更改现有 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置，则此参数是可选的。 在这种情况下，未指定的任何配置值都将保留其现有值。  
+ 启用或禁用指定数据库的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 @enable_backup为 **BIT**。 为的第一个实例配置时所需 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的参数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果要更改现有 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置，则此参数是可选的。 在这种情况下，未指定的任何配置值都将保留其现有值。  
   
  @database_name  
  用于在特定数据库上启用托管备份的数据库名称。  
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_config_basic
  用于对 Azure 存储帐户进行身份验证的 SQL 凭据的名称。 @credentail_name 为 **SYSNAME**。 指定时，备份将存储到页 blob。 如果此参数为 NULL，则备份将存储为块 blob。 备份到页 blob 已弃用，因此最好使用新的块 blob 备份功能。 当用于更改[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置时，此参数是可选参数。 如果未指定，则保留现有的配置值。  
   
 > [!WARNING]
->  此时不支持** \@ credential_name**参数。 仅支持备份到块 blob，这需要此参数为 NULL。  
+>  此时不支持 **\@ credential_name** 参数。 仅支持备份到块 blob，这需要此参数为 NULL。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -74,7 +74,7 @@ EXEC managed_backup.sp_backup_config_basic
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 要求具有**db_backupoperator**数据库角色的成员身份，具有**ALTER ANY CREDENTIAL**权限以及对**sp_delete_backuphistory**存储过程的**EXECUTE**权限。  
+ 要求具有 **db_backupoperator** 数据库角色的成员身份，具有 **ALTER ANY CREDENTIAL** 权限以及对 **sp_delete_backuphistory** 存储过程的 **EXECUTE** 权限。  
   
 ## <a name="examples"></a>示例  
  可以使用最新的 Azure PowerShell 命令创建存储帐户容器和 SAS URL。 以下示例在 mystorageaccount 存储帐户中创建一个新容器 mycontainer，然后获取具有完全权限的 SAS URL。  

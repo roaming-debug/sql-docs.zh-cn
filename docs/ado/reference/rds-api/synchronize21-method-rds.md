@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46d0d13fa6e735b7763a35186beff59f293cc278
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: fb782b8c61f3ae80c3e37d5ff28b040651eb5669
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724695"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166090"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 方法 (RDS)
 将给定的记录集与连接字符串指定的数据库同步，以便与 ADO 2.1 一起使用。  
@@ -44,7 +44,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *lSynchronizeOptions*  
  同步选项的位掩码。  
   
- 1 = 对数据库的*UpdateTransact* 更新包装在事务中。 如果有任何更新失败，则事务将中止。  
+ 1 = 对数据库的 *UpdateTransact* 更新包装在事务中。 如果有任何更新失败，则事务将中止。  
   
  2 =*RefreshWithUpdate* 导致在不设置 *刷新* 和 *RefreshConflicts* 时返回行状态。  
   
@@ -59,10 +59,10 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  一个变体，用于返回受同步影响的行的行状态安全数组。 如果未设置以下任何同步选项，则不设置： *RefreshWithUpdate*、 *Refresh* 和 *RefreshConflicts*。  
   
 ## <a name="remarks"></a>备注  
- *HandlerString*参数可以为 null。 在这种情况下会发生什么情况取决于 RDS 服务器的配置方式。 "MSDFMAP" 的处理程序字符串指示应使用 Microsoft 提供的处理程序 ( # A0) 。 "MASDFMAP，sample.ini" 的处理程序字符串指示应使用 Msdfmap.dll 处理程序，并且应将参数 "sample.ini" 传递到处理程序。 然后 Msdfmap.dll 会将参数解释为一个方向，以使用 sample.ini 检查连接和查询字符串。  
+ *HandlerString* 参数可以为 null。 在这种情况下会发生什么情况取决于 RDS 服务器的配置方式。 "MSDFMAP" 的处理程序字符串指示应使用 Microsoft 提供的处理程序 ( # A0) 。 "MASDFMAP，sample.ini" 的处理程序字符串指示应使用 Msdfmap.dll 处理程序，并且应将参数 "sample.ini" 传递到处理程序。 然后 Msdfmap.dll 会将参数解释为一个方向，以使用 sample.ini 检查连接和查询字符串。  
   
 > [!NOTE]
->  **Synchronize21**方法只是[ (RDS) 的 Synchronize 方法](./synchronize-method-rds.md)的版本。 如果需要使用 **Synchronize** 方法与 ADO 2.1 通信，则可以改为调用 **Synchronize21** 方法。 ADO 2.5 和更高版本中 **Synchronize** 方法的功能是为 ADO 2.1 中的同一方法提供的功能的超集。  
+>  **Synchronize21** 方法只是 [ (RDS) 的 Synchronize 方法](./synchronize-method-rds.md)的版本。 如果需要使用 **Synchronize** 方法与 ADO 2.1 通信，则可以改为调用 **Synchronize21** 方法。 ADO 2.5 和更高版本中 **Synchronize** 方法的功能是为 ADO 2.1 中的同一方法提供的功能的超集。  
   
 ## <a name="applies-to"></a>应用于  
  [DataFactory 对象 (RDSServer)](./datafactory-object-rdsserver.md)

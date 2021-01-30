@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command15::CommandText
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0e7f2e9e346a5379051b101236df186b815aa85
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a387746928ac92dfa6c31fbe33dab66abba05eeb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975188"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164649"
 ---
 # <a name="commandtext-property-ado"></a>CommandText 属性 (ADO)
 指示要对提供程序发出的命令的文本。  
@@ -29,10 +29,10 @@ ms.locfileid: "88975188"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  获取或设置一个 **字符串** 值，该值包含提供程序命令，如 SQL 语句、表名、相对 URL 或存储过程调用。 默认为空字符串 ("")。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  使用 **CommandText** 属性可以设置或返回 [命令](./command-object-ado.md) 对象表示的命令的文本。 通常，这将是一条 SQL 语句，但也可以是提供程序所识别的任何其他类型的命令语句，如存储过程调用。 SQL 语句必须是提供程序的查询处理器支持的特定方言或版本。  
   
- 如果在设置**CommandText**属性时，**命令**对象的 "已[准备](./prepared-property-ado.md)" 属性设置为 " **True** "，并且**命令**对象绑定到打开的连接，则 ADO 将准备该查询 (即，当调用[Execute](./execute-method-ado-command.md)或[open](./open-method-ado-connection.md)方法时，由提供程序存储的编译形式的查询) 。  
+ 如果在设置 **CommandText** 属性时，**命令** 对象的 "已 [准备](./prepared-property-ado.md)" 属性设置为 " **True** "，并且 **命令** 对象绑定到打开的连接，则 ADO 将准备该查询 (即，当调用 [Execute](./execute-method-ado-command.md)或 [open](./open-method-ado-connection.md)方法时，由提供程序存储的编译形式的查询) 。  
   
  根据 [CommandType](./commandtype-property-ado.md) 属性设置，ADO 可能会改变 **CommandText** 属性。 您可以随时读取 **CommandText** 属性，以查看 ADO 在执行过程中将使用的实际命令文本。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "88975188"
 > [!NOTE]
 >  使用 http 方案的 Url 将自动调用 [用于 Internet 发布的 Microsoft OLE DB 提供程序](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅 [绝对和相对 url](../../guide/data/absolute-and-relative-urls.md)。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [命令对象 (ADO)](./command-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  

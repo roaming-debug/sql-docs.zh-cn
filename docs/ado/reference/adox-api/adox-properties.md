@@ -7,29 +7,29 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbc72515c3ba8bcee52bff213ba11bd0b4bc2140
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 85f6cb74b25d7664bdf7b87c4290edd19a49dcd3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641146"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164324"
 ---
 # <a name="adox-properties"></a>ADOX 属性
 
-|Property|说明|  
+|properties|说明|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-adox.md)|指示目录所属的 ADO **连接** 对象。|  
-|[特性](./attributes-property-adox.md)|介绍列特性。|  
+|[属性](./attributes-property-adox.md)|介绍列特性。|  
 |[群集](./clustered-property-adox.md)|指示索引是否为聚集索引。|  
 |[命令](./command-property-adox.md)|指定可用于创建或执行该过程的 ADO **命令** 对象。|  
-|[Count](../ado-api/count-property-ado.md)|指示集合中的对象数。|  
+|“计数”|指示集合中的对象数。|  
 |[DateCreated](./datecreated-property-adox.md)|指示对象的创建日期。|  
 |[DateModified](./datemodified-property-adox.md)|指示上次修改对象的日期。|  
 |[DefinedSize](./definedsize-property-adox.md)|指示列的指定最大大小。|  

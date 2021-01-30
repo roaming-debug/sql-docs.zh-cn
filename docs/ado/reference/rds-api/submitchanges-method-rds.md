@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - SubmitChanges method [ADO]
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69a76648c676af5c6420cffde930ac76c096276d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 052c131cb430d911d37f6782565c00a1d3cc53d0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724171"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166103"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 将本地缓存的可更新 [记录集](../ado-api/recordset-object-ado.md) 的挂起的更改提交到 [Connect](./connect-property-rds.md) 属性或 [URL](./url-property-rds.md) 属性中指定的数据源。  
@@ -41,7 +41,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataFactory*  
  表示 [RDSServer. DataFactory](./datafactory-object-rdsserver.md) 对象的对象变量。  
   
- *Connection*  
+ *连接*  
  一个 **字符串** 值，该值表示使用 RDS 创建的连接 **。DataControl** 对象的 [连接](./connect-property-rds.md) 属性。  
   
  *Recordset*  
@@ -50,7 +50,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
 ## <a name="remarks"></a>备注  
  必须先设置 [Connect](./connect-property-rds.md)、 [Server](./server-property-rds.md)和 [SQL](./sql-property.md) 属性，然后才能将 **SubmitChanges** 方法与 RDS 一起使用 **。DataControl** 对象。  
   
- 如果在为同一**Recordset**对象调用**SubmitChanges**后调用[CancelUpdate](./cancelupdate-method-rds.md)方法，则**CancelUpdate**调用失败，因为这些更改已提交。  
+ 如果在为同一 **Recordset** 对象调用 **SubmitChanges** 后调用 [CancelUpdate](./cancelupdate-method-rds.md)方法，则 **CancelUpdate** 调用失败，因为这些更改已提交。  
   
  仅发送已更改的记录进行修改，所有更改都成功，否则所有更改将一起失败。  
   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - StreamOpenOptionsEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f3865a3b0e550e7e3fe4887fb948bca72eadf1b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5da222318b827eae05d07d7cad4a121a568d6540
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988498"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166421"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 指定用于打开 [流](./stream-object-ado.md) 对象的选项。 值可以与或运算结合使用。  
@@ -35,5 +35,5 @@ ms.locfileid: "88988498"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  这些常量没有 ADO/WFC 等效项。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>应用于  
  [Open 方法（ADO 流）](./open-method-ado-stream.md)

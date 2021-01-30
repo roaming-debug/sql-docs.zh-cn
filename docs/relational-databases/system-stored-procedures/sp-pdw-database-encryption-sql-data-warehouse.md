@@ -5,19 +5,19 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 73d1eb9fe27fa060a8bfcd13341a3908545aeed3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0c1d6af9bb11e4078314f27d9fd69346568204d5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468338"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211866"
 ---
 # <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_database_encryption) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
 `[ @enabled = ] enabled` 确定是否已启用透明数据加密。 *enabled* 为 **int**，可以为以下值之一：  
   
 -   0 - 禁用  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_articleview
 - sp_articleview_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e2d0efe52bb7f187ebfc981008610be81bc9528e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 014ccf37727534d16fa5b16bc280da5b76dfb76e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528636"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203200"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ sp_articleview [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 项目的名称。 *项目* 是 **sysname**，无默认值。  
   
-`[ @view_name = ] 'view_name'` 用于定义已发布项目的视图的名称。 *view_name* 为 **nvarchar (386) **，默认值为 NULL。  
+`[ @view_name = ] 'view_name'` 用于定义已发布项目的视图的名称。 *view_name* 为 **nvarchar (386)**，默认值为 NULL。  
   
 `[ @filter_clause = ] 'filter_clause'` 用于定义水平筛选器的) 子句 (的限制。 当输入限制子句时，将省略 WHERE 关键字。 *filter_clause* 为 **ntext**，默认值为 NULL。  
   
@@ -72,7 +72,7 @@ sp_articleview [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'` 指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器* 的 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  在从发布服务器进行发布时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  在从发布服务器进行发布时，不应使用 *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @refreshsynctranprocs = ] refreshsynctranprocs` 是否自动重新创建用于同步复制的存储过程。 *refreshsynctranprocs* 的值为 **bit**，默认值为1。  
   
@@ -86,17 +86,17 @@ sp_articleview [ @publication = ] 'publication'
  **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_articleview**创建用于定义已发布项目的视图，并将此视图的 ID 插入到[sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)表的**sync_objid**列中，并在**filter_clause**列中插入限制子句的文本。 如果复制所有列且没有**filter_clause**，则[sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)表中的**sync_objid**将设置为基表的 ID，而不需要使用**sp_articleview** 。  
+ **sp_articleview** 创建用于定义已发布项目的视图，并将此视图的 ID 插入到 [sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)表的 **sync_objid** 列中，并在 **filter_clause** 列中插入限制子句的文本。 如果复制所有列且没有 **filter_clause**，则 [sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)表中的 **sync_objid** 将设置为基表的 ID，而不需要使用 **sp_articleview** 。  
   
  若要发布垂直筛选的表 (即，若要在) 第一次运行 **sp_addarticle** 但不 *sync_object* 参数的情况下筛选列，请对每个要复制的列运行 [sp_articlecolumn &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 一次 (定义垂直筛选器) ，然后运行 **sp_articleview** 来创建用于定义已发布项目的视图。  
   
- 若要发布水平筛选的表 (也就是说，若要筛选) 的行，请在不带*筛选器*参数的情况下运行[sp_addarticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 。 运行 [sp_articlefilter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)，同时提供包括 *filter_clause*在内的所有参数。 然后，运行 **sp_articleview**，同时提供所有参数，包括相同的 *filter_clause*。  
+ 若要发布水平筛选的表 (也就是说，若要筛选) 的行，请在不带 *筛选器* 参数的情况下运行 [sp_addarticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 。 运行 [sp_articlefilter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)，同时提供包括 *filter_clause* 在内的所有参数。 然后，运行 **sp_articleview**，同时提供所有参数，包括相同的 *filter_clause*。  
   
- 若要发布垂直和水平筛选的表，请运行不带*sync_object*或*Filter*参数[&#40;transact-sql&#41;sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 。 为每个要复制的列运行 [sp_articlecolumn &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 一次，然后在 [&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 和 **sp_articleview**中运行 sp_articlefilter。  
+ 若要发布垂直和水平筛选的表，请运行不带 *sync_object* 或 *Filter* 参数 [&#40;transact-sql&#41;sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 。 为每个要复制的列运行 [sp_articlecolumn &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 一次，然后在 [&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 和 **sp_articleview** 中运行 sp_articlefilter。  
   
  如果项目已具有定义已发布项目的视图， **sp_articleview** 会删除现有视图，并自动创建一个新视图。 如果手动创建了视图 (**键入** sysarticles 中 [&#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) 为 **5**) ，则不删除现有视图。  
   
- 如果创建自定义筛选器存储过程和一个手动定义已发布项目的视图，则不要运行 **sp_articleview**。 相反，请将它们作为 *筛选器* 和 *sync_object* 参数提供给 [&#40;transact-sql&#41;sp_addarticle ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)，以及适当的 *类型* 值。  
+ 如果创建自定义筛选器存储过程和一个手动定义已发布项目的视图，则不要运行 **sp_articleview**。 相反，请将它们作为 *筛选器* 和 *sync_object* 参数提供给 [&#40;transact-sql&#41;sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)，以及适当的 *类型* 值。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  

@@ -7,7 +7,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - RDS::IBindMgr21::Server
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad10cbb434c1fda57f684438499bf6e4b885cf9b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 373b43f3540d0dcb99349ca34d0a424bc6235f73
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724235"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166127"
 ---
 # <a name="server-property-rds"></a>Server 属性 (RDS)
 指示 IIS) 名称和通信协议 (Internet Information Services。  
   
- 您可以在设计时在 RDS 的对象标记中设置 **服务器** 属性[。DataControl](./datacontrol-object-rds.md) 对象，或在运行时在脚本代码中运行。  
+ 您可以在设计时在 RDS 的对象标记中设置 **服务器** 属性 [。DataControl](./datacontrol-object-rds.md) 对象，或在运行时在脚本代码中运行。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
@@ -108,7 +108,7 @@ DataControl.Server=""
 ```  
   
 ## <a name="parameters"></a>参数  
- *awebsrvr*或 *computername*  
+ *awebsrvr* 或 *computername*  
  如果服务器位于远程计算机上，则为包含 Internet 或 intranet 路径或计算机名称的 **字符串** 值;或者，如果服务器在本地计算机上，则为空字符串。  
   
  *port*  

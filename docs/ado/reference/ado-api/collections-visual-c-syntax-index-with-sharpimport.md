@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cba9fa93b2f23388b11dc764a95b78d94df4874c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1e29b092ea7c11dc9729986c342c96b2022fbf58
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975258"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164675"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>集合 (Visual C++ 语法索引与 #import 的) 
 了解集合继承某些常用方法和属性很有用。  
   
- 所有集合都继承 **Count** 属性和 **Refresh** 方法，所有集合都添加了 **Item** 属性。 **Errors**集合添加**Clear**方法。 **Parameters**集合继承了**append**和**delete**方法，而**字段**集合添加了**append**、 **delete**和**Update**方法。  
+ 所有集合都继承 **Count** 属性和 **Refresh** 方法，所有集合都添加了 **Item** 属性。 **Errors** 集合添加 **Clear** 方法。 **Parameters** 集合继承了 **append** 和 **delete** 方法，而 **字段** 集合添加了 **append**、 **delete** 和 **Update** 方法。  
   
 ## <a name="properties-collection"></a>Properties 集合  
   

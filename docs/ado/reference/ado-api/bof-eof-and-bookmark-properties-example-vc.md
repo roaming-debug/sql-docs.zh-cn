@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6be40e03723a3335578112c6038ce53789242876
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7cfc7d8ffa447beccf4597beb63f54d5ba958f29
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975838"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164781"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF 和 Bookmark 属性示例 (VC + +) 
 如果用户尝试移过[记录集](./recordset-object-ado.md)的第一个或最后一个记录，则此示例中的第一个函数使用[BOF](./bof-eof-properties-ado.md)和[EOF](./bof-eof-properties-ado.md)属性来显示消息。 它使用 [书签](./bookmark-property-ado.md) 属性允许用户标记记录 **集中** 的记录并稍后返回到该记录。  
   
- 第二个函数使用 Bookmark 属性将**记录集中**的每个其他记录的**书签**置于数组中，然后使用数组筛选记录集。  
+ 第二个函数使用 Bookmark 属性将 **记录集中** 的每个其他记录的 **书签** 置于数组中，然后使用数组筛选记录集。  
   
 ## <a name="example"></a>示例  
   

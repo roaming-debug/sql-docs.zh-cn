@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergefilter
 - sp_helpmergefilter_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faa3b2922f8d73875b5213603b980560d69465ff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 862f23713da4bcd611310149b509e34658766006
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526771"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179235"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |**join_filterid**|**int**|联接筛选器的 ID。|  
 |**filtername**|**sysname**|筛选器名称。|  
 |**join article name**|**sysname**|联接项目名。|  
-|**join_filterclause**|**nvarchar (2000) **|用于限定联接的筛选子句。|  
+|**join_filterclause**|**nvarchar (2000)**|用于限定联接的筛选子句。|  
 |**join_unique_key**|**int**|表示是否在唯一键上联接。|  
 |**base table owner**|**sysname**|基表所有者的名称。|  
 |**base table name**|**sysname**|基表的名称。|  

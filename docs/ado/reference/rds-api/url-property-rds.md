@@ -7,24 +7,24 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - URL property [ADO]
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d693aab0c01e1a65715597c6f8905569aebbcae
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1a780d7790568950833cb177f6ba87bd18ebd409
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724669"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166070"
 ---
 # <a name="url-property-rds"></a>URL 属性 (RDS)
 指示一个字符串，该字符串包含相对或绝对 URL。  
   
- 可以在设计时在[DataControl](./datacontrol-object-rds.md)对象的对象标记中设置 URL 属性，也可以在运行时在脚本代码中设置**URL**属性。  
+ 可以在设计时在 [DataControl](./datacontrol-object-rds.md)对象的对象标记中设置 URL 属性，也可以在运行时在脚本代码中设置 **URL** 属性。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
@@ -38,7 +38,7 @@ Run time: DataControl.URL="Server"
 ```  
   
 #### <a name="parameters"></a>参数  
- *Server*  
+ *服务器*  
  一个 **字符串** 值，该值包含有效的 URL。  
   
  *DataControl*  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helptracertokenhistory_TSQL
 - sp_helptracertokenhistory
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4874af1c1defd949f4744a98f9f959995bf1d231
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f701a1681281bfb63cf6c39ba42869ac83df204e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547924"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192876"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有 **sysadmin** 固定服务器角色的成员、发布数据库中 **db_owner** 固定数据库角色的成员或分发数据库中的 **db_owner** 固定数据库角色或 **replmonitor** 角色才能 **sp_helptracertokenhistory**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员、发布数据库中 **db_owner** 固定数据库角色的成员或分发数据库中的 **db_owner** 固定数据库角色或 **replmonitor** 角色才能 **sp_helptracertokenhistory** 执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [为事务复制测量滞后时间并验证连接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
