@@ -21,17 +21,17 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6749867b40c0673c63b8a6c4279bc31b6fb0682
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ce3894ac989047dc8274c6770e881066023ccabd
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184971"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250366"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池中当前所有数据页的信息。 可以使用该视图的输出，根据数据库、对象或类型来确定缓冲池内数据库页的分布。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，此动态管理视图还返回有关缓冲池扩展文件中的数据页的信息。 有关详细信息，请参阅 [缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)。  
+  返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池中当前所有数据页的信息。 可以使用该视图的输出，根据数据库、对象或类型来确定缓冲池内数据库页的分布。 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中，此动态管理视图还返回有关缓冲池扩展文件中的数据页的信息。 有关详细信息，请参阅 [缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)。  
   
  当从磁盘读取数据页时，该数据页被复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池并被缓存以供重复使用。 每个缓存的数据页都有一个缓冲描述符。 缓冲描述符唯一地标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中当前缓存的每个数据页。 sys.dm_os_buffer_descriptors 返回所有用户数据库和系统数据库的缓存页。 这包括与 Resource 数据库相关联的页。  
   

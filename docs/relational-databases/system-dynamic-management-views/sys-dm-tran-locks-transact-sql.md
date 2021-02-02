@@ -21,17 +21,17 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a39e58fb6ca60a30a73531988eeffac89e7b46e1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ec5ad1373336d3cc3873e0a0b81c2ad6c27291fa
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99133963"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250401"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中有关当前活动的锁管理器资源的信息。 向锁管理器发出的已授予锁或正等待授予锁的每个当前活动请求分别对应一行。  
+  返回 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中有关当前活动的锁管理器资源的信息。 向锁管理器发出的已授予锁或正等待授予锁的每个当前活动请求分别对应一行。  
   
  结果集中的列大体分为两组：资源组和请求组。 资源组说明正在进行锁请求的资源，请求组说明锁请求。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "99133963"
   
  下表提供每个资源类型的 **resource_description** 列的格式。  
   
-|资源|格式|说明|  
+|资源|格式|描述|  
 |--------------|------------|-----------------|  
 |DATABASE|不适用|**resource_database_id** 列中已提供数据库 ID。|  
 |FILE|<file_id>|此资源所表示的文件 ID。|  

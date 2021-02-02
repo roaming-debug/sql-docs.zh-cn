@@ -26,34 +26,34 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59cc4c80781f899701f872bd1e8cdd1eea823358
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: bed0d2f1b133d3d155c3afd59a86652f010316ea
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384720"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250610"
 ---
 # <a name="mapping-clr-parameter-data"></a>映射 CLR 参数数据
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  下表列出了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SqlTypes 命名空间中的数据类型、它们在公共语言运行时中的等效项 (CLR) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及它们在 .NET Framework 中的本机 clr 等效项 **System.Data.SqlTypes** [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+  下表列出了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SqlTypes 命名空间中的数据类型、它们在公共语言运行时中的等效项 (CLR) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及它们在 .NET Framework 中的本机 clr 等效项 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 ||||  
 |-|-|-|  
 |**SQL Server 数据类型**|类型（在 System.Data.SqlTypes 或 Microsoft.SqlServer.Types 中）|**CLR 数据类型 (.NET Framework)**|  
 |**bigint**|**SqlInt64**|**Int64，可以为 Null\<Int64>**|  
-|**binary**|**SqlBytes、SqlBinary**|**Byte[]**|  
+|**binary**|**SqlBytes、SqlBinary**|**Byte []**|  
 |**bit**|**SqlBoolean**|**布尔值，可以为 Null\<Boolean>**|  
 |**char**|无|无|  
 |**cursor**|无|无|  
 |**date**|**SqlDateTime**|**DateTime，可以为 Null\<DateTime>**|  
 |**datetime**|**SqlDateTime**|**DateTime，可以为 Null\<DateTime>**|  
 |**datetime2**|无|**DateTime，可以为 Null\<DateTime>**|  
-|DATETIMEOFFSET|**无**|**DateTimeOffset，可以为 Null\<DateTimeOffset>**|  
+|DATETIMEOFFSET|无|**DateTimeOffset，可以为 Null\<DateTimeOffset>**|  
 |**decimal**|**SqlDecimal**|**十进制，可以为 Null\<Decimal>**|  
 |**float**|**SqlDouble**|**Double，可以为 Null\<Double>**|  
-|**地理**|**SqlGeography**<br /><br /> 在 Microsoft.SqlServer.Types.dll 中定义 **SqlGeography** ，它与 SQL Server 一起安装，并且可以从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [功能包](https://www.microsoft.com/download/details.aspx?id=100430)下载。|无|  
-|**geometry**|**SqlGeometry**<br /><br /> 在 Microsoft.SqlServer.Types.dll 中定义 **SqlGeometry** ，它与 SQL Server 一起安装，并且可以从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [功能包](https://www.microsoft.com/download/details.aspx?id=100430)下载。|无|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> 在 Microsoft.SqlServer.Types.dll 中定义 **SqlHierarchyId** ，它与 SQL Server 一起安装，并且可以从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [功能包](https://www.microsoft.com/download/details.aspx?id=100430)下载。|无|  
+|**geography**|**SqlGeography**<br /><br /> 在 Microsoft.SqlServer.Types.dll 中定义 **SqlGeography** ，它与 SQL Server 一起安装，并且可以从 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [功能包](https://www.microsoft.com/download/details.aspx?id=100430)下载。|无|  
+|**geometry**|**SqlGeometry**<br /><br /> 在 Microsoft.SqlServer.Types.dll 中定义 **SqlGeometry** ，它与 SQL Server 一起安装，并且可以从 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [功能包](https://www.microsoft.com/download/details.aspx?id=100430)下载。|无|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> 在 Microsoft.SqlServer.Types.dll 中定义 **SqlHierarchyId** ，它与 SQL Server 一起安装，并且可以从 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [功能包](https://www.microsoft.com/download/details.aspx?id=100430)下载。|无|  
 |**图像**|无|无|  
 |**int**|**SqlInt32**|**Int32，可以为 Null\<Int32>**|  
 |**money**|**SqlMoney**|**十进制，可以为 Null\<Decimal>**|  
@@ -62,8 +62,8 @@ ms.locfileid: "94384720"
 |**numeric**|**SqlDecimal**|**十进制，可以为 Null\<Decimal>**|  
 |**nvarchar**|**SqlChars、SqlString**<br /><br /> **SQLChars** 是用于数据传输和访问的更好的匹配项， **SQLString** 是用于执行字符串操作的更好的匹配项。|**String, Char[]**|  
 |**nvarchar (1) ，nchar (1)**|**SqlChars、SqlString**|**Char、String、Char []，可以为 Null\<char>**|  
-|**real**|**SqlSingle** ( **SqlSingle** 的范围，但大于 **实** ) |**单个，可以为 Null\<Single>**|  
-|**rowversion**|无|**Byte[]**|  
+|**real**|**SqlSingle** (**SqlSingle** 的范围，但大于 **实**) |**单个，可以为 Null\<Single>**|  
+|**rowversion**|无|**Byte []**|  
 |**smallint**|**SqlInt16**|**Int16，可为 Null\<Int16>**|  
 |**smallmoney**|**SqlMoney**|**十进制，可以为 Null\<Decimal>**|  
 |**sql_variant**|无|**对象**|  
@@ -74,7 +74,7 @@ ms.locfileid: "94384720"
 |**tinyint**|**SqlByte**|**字节，可以为 Null\<Byte>**|  
 |**uniqueidentifier**|**SqlGuid**|**Guid，可以为 Null\<Guid>**|  
 |**(UDT 的用户定义类型)**|无|绑定到相同程序集或依赖程序集中的用户定义类型的相同类。|  
-|**varbinary**|**SqlBytes、SqlBinary**|**Byte[]**|  
+|**varbinary**|**SqlBytes、SqlBinary**|**Byte []**|  
 |**varbinary (1) ，binary (1)**|**SqlBytes、SqlBinary**|**byte、Byte []、可以为 Null\<byte>**|  
 |**varchar**|无|无|  
 |**xml**|**SqlXml**|无|  
@@ -111,9 +111,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 数据类型 (SQL Server)**|**SQL Server 数据类型**|  
-|**小数**|smallmoney|  
+|十进制 |smallmoney|  
 |**SqlMoney**|smallmoney|  
-|**小数**|money|  
+|十进制 |money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   
@@ -121,7 +121,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |更新的内容|  
 |---------------------|  
-|向映射表中添加了 **SqlGeography** 、 **SqlGeometry** 和 **SqlHierarchyId** 类型。|  
+|向映射表中添加了 **SqlGeography**、 **SqlGeometry** 和 **SqlHierarchyId** 类型。|  
   
 ## <a name="see-also"></a>另请参阅  
  [.NET Framework 中的 SQL Server 数据类型](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
