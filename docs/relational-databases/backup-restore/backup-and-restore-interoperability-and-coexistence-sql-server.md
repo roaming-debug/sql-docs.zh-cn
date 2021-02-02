@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 106773df7a5e9f88c123b614688ca19722613d7f
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: b8de8452d7f39b1450df8c280ed27a9ac12603db
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130533"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077065"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>备份和还原：互操作性和共存 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中若干功能的备份和还原注意事项。 这些功能包括：文件还原和数据库启动、联机还原和禁用的索引、数据库镜像以及段落还原和全文索引。  
+  本主题描述 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中若干功能的备份和还原注意事项。 这些功能包括：文件还原和数据库启动、联机还原和禁用的索引、数据库镜像以及段落还原和全文索引。  
   
  **本主题内容：**  
   

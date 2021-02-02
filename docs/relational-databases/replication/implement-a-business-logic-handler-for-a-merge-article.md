@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ea4a56fdd17978bffa633bf1c466f493969074a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 45ed99072fb5abad47b9f63a22f879c0f4e438eb
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716802"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076825"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>实现合并项目的业务逻辑处理程序
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用复制编程方式或复制管理对象 (RMO) 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中实现合并项目的业务逻辑处理程序。  
+  本主题说明如何使用复制编程方式或复制管理对象 (RMO) 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中实现合并项目的业务逻辑处理程序。  
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空间实现了一个可编写复杂业务逻辑以处理合并复制同步期间发生的事件的接口。 复制进程可以针对同步期间复制的每个已更改行调用业务逻辑处理程序中的方法。  
   

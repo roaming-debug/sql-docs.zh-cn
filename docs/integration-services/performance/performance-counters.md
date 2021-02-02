@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 481f534c719d188d108ee1d9edd0776ee8b2bc9d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7ae8429bb51ec2a58a167784b701b7ae0532bb92
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192440"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076925"
 ---
 # <a name="performance-counters"></a>性能计数器
 
@@ -78,7 +78,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   msdn.microsoft.com 上的视频 [测量和了解 SSIS 包在企业中的性能（SQL Server 视频）](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100))。  
   
--   support.microsoft.com 上的支持文章 [升级到 Windows Server 2008 后性能监视器中不再提供 SSIS 性能计数器](https://go.microsoft.com/fwlink/?LinkId=235319)。  
+-   support.microsoft.com 上的支持文章 [升级到 Windows Server 2008 后性能监视器中不再提供 SSIS 性能计数器](https://web.archive.org/web/20111112202346/http://support.microsoft.com:80/kb/955632)。  
 
 ## <a name="add-a-log-for-data-flow-performance-counters"></a>添加数据流性能计数器的日志
   本过程介绍如何为数据流引擎提供的性能计数器添加日志。  
