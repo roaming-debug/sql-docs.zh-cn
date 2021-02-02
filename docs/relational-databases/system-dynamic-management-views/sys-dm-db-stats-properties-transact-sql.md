@@ -21,12 +21,12 @@ ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e3149b73a7926e8c8a953fd685778431ec445b3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7786afaa6ae9b50f8df1e2c0d9ec73e35dcc249d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210257"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236035"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,8 +57,8 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|用于统计信息计算的抽样总行数。|  
 |steps|**int**|直方图中的梯级数。 有关详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。|  
 |unfiltered_rows|**bigint**|应用筛选表达式（用于筛选的统计信息）之前表中的总行数。 如果未筛选统计信息，则 unfiltered_rows 等于行列中返回的值。|  
-|modification_counter|**bigint**|自上次更新统计信息以来前导统计信息列（构建直方图的列）的总修改次数。<br /><br /> 内存优化表：开始 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 此列中包含：自上次更新统计信息或重新启动数据库后，对表进行的修改总数。|  
-|persisted_sample_percent|**float**|持久样本百分比用于未显式指定采样百分比的统计信息更新。 如果值为零，则不为此统计信息设置持久样本百分比。<br /><br /> **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4|  
+|modification_counter|**bigint**|自上次更新统计信息以来前导统计信息列（构建直方图的列）的总修改次数。<br /><br /> 内存优化表：开始 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 此列中包含：自上次更新统计信息或重新启动数据库后，对表进行的修改总数。|  
+|persisted_sample_percent|**float**|持久样本百分比用于未显式指定采样百分比的统计信息更新。 如果值为零，则不为此统计信息设置持久样本百分比。<br /><br /> **适用于：** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> 注释  
  **sys.dm_db_stats_properties** 在以下任何条件下返回空行集：  

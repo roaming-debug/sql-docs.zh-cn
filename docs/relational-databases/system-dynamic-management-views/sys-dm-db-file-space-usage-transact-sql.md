@@ -21,12 +21,12 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c50652dee0c0930d528249c340bf905a94763f0e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d5b078e8c93918cc15d547e01d45ab0a3f97adae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99180679"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236846"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "99180679"
 |user_object_reserved_page_count|**bigint**|从统一区为数据库中的用户对象分配的总页数。 计数中包括已分配区中未使用的页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 您可以使用 [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) 目录视图中的 total_pages 列来返回用户对象中每个分配单元的保留页计数。 但请注意，total_pages 列包括 IAM 页。|  
 |internal_object_reserved_page_count|**bigint**|从统一区为文件中的内部对象分配的总页数。 计数中包括已分配区中未使用的页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 不存在可返回每个内部对象的页计数的目录视图或动态管理对象。|  
 |mixed_extent_page_count|**bigint**|文件的已分配混合区中的已分配和未分配总页数。 混合区包含分配给不同对象的页。 此计数包含文件中的所有 IAM 页。|
-|modified_extent_page_count|**bigint**|**适用对象**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和更高版本。<br /><br />自上次完整数据库备份以来，在文件分配的范围内修改的总页数。 修改后的页计数可用于跟踪自上次完整备份以来数据库的差异变化量，以确定是否需要进行差异备份。|
+|modified_extent_page_count|**bigint**|**适用对象**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和更高版本。<br /><br />自上次完整数据库备份以来，在文件分配的范围内修改的总页数。 修改后的页计数可用于跟踪自上次完整备份以来数据库的差异变化量，以确定是否需要进行差异备份。|
 |pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
 |distribution_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 与分布关联的唯一数字 id。|  
   

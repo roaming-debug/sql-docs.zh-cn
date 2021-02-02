@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6b0a49e257760e44398da7426933f6a9050a62f2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8cf9c34360cfabff16dd4823738168b9611a90ba
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99160671"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235880"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "99160671"
 |stmt_start|**int**|为指定 sql_handle 运行当前 SQL 语句的起始偏移量。|  
 |stmt_end|**int**|所指定 sql_handle 的当前 SQL 语句的结束偏移量。<br /><br /> -1 指出当前语句为指定的 sql_handle 运行到 fn_get_sql 函数返回结果的结尾。|  
 |request_id|**int**|请求 ID。 用于标识在特定会话中运行的请求。|
-|page_resource |**二进制 (8)** |适用于：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 如果列包含页，则为页资源的8字节的十六进制表示形式 `waitresource` 。 |  
+|page_resource |**二进制 (8)** |适用于：[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br /><br /> 如果列包含页，则为页资源的8字节的十六进制表示形式 `waitresource` 。 |  
   
 ## <a name="remarks"></a>备注  
  如果用户对服务器具有 VIEW SERVER STATE 权限，则该用户可查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有正在执行的会话；否则，该用户只能查看当前会话。  

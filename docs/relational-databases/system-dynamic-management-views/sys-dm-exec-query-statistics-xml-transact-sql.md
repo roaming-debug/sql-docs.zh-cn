@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9bfce6f56bdf39597def73884f12ca06f6eb56b7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a74539209e56e1e2da9053cfffccd7d528684a30
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170269"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235841"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-sql) 
 
@@ -57,7 +57,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|包含与 *plan_handle* 包含部分统计信息的查询执行计划的运行时显示计划表示形式。 显示计划的格式为 XML。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。 可以为 NULL。|
 
 ## <a name="remarks"></a>备注
-从 SP1 开始，此系统函数可用 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 。 请参阅 KB [3190871](https://support.microsoft.com/help/3190871)
+从 SP1 开始，此系统函数可用 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 。 请参阅 KB [3190871](https://support.microsoft.com/help/3190871)
 
 此系统函数适用于 **标准** 和 **轻型** 查询执行统计分析基础结构。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。  
 

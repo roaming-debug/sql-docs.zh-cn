@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6374bdcc748ab528c4cb70c2db6387d3b55f6cb6
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b5290d2e9650acc8ee540e572109b51b377e5235
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171529"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236574"
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>概述：导入表中数据 (Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "98171529"
      你使用临时存储过程或 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 来加载数据。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]中，已停止提供对 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的支持。  
+>  在 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]中，已停止提供对 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的支持。  
   
 ## <a name="deactivating-and-deleting-members-mds"></a>停用和删除成员 (MDS)  
  停用意味着可以重新激活成员。 如果您重新激活某成员，可还原成员的属性以及成员在层次结构和集合中的成员身份。 以前的所有事务都将保持不变。 管理员可以在主数据管理器的“版本管理”  功能区域中查看停用事务。  

@@ -21,12 +21,12 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7a59efc8b1e6795082d4d7f4e4973522cf371ce
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f61f84416e76e6a03c12efe7336a7d978585736c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198559"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235918"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,10 +65,10 @@ ms.locfileid: "99198559"
 |**is_small**|**tinyint**|如果设置为 1，则指示此授予使用小型资源信号量。 如果设置为 0，则指示使用常规信号量。|  
 |**ideal_memory_kb**|**bigint**|将所有内容存放在物理内存中所需的内存授予的大小（以 KB 为单位）。 这基于基数估计。|  
 |pdw_node_id|**int**|此分发所在的节点的标识符。<br /><br /> **适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
-|**reserved_worker_count**|**bigint**|保留的 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
-|**used_worker_count**|**bigint**|目前使用的 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**max_used_worker_count**|**bigint**|当前使用的最大 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**reserved_node_bitmap**|**bigint**|保留 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 的 NUMA 节点的位图。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**reserved_worker_count**|**bigint**|保留的 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|**used_worker_count**|**bigint**|目前使用的 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**max_used_worker_count**|**bigint**|当前使用的最大 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 数。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**reserved_node_bitmap**|**bigint**|保留 [工作线程](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 的 NUMA 节点的位图。<br /><br />**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
   
 ## <a name="permissions"></a>权限  
 

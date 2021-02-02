@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e731d14967d808aa57f3fa0e001e5e593238ffd
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 7c5a436e6958d89f26ec0836b82850bd914d6c41
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170429"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237143"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 中的新增功能
 
@@ -30,7 +30,7 @@ ms.locfileid: "98170429"
   
  **下载**  
   
--   若要下载 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 。  
+-   若要下载 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 。  
   
 -   已经拥有 Azure 帐户？  然后转到 **[此处](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** 启动装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "98170429"
   
  在此版本的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，我们通过引入以下新权限来提供等级更高的权限：“读取”、“创建”、“更新”和“删除”。 例如，只拥有“更新”权限的用户现在无需创建或删除数据，即可更新主数据。 当你向用户分配“创建”、“更新”或“删除”权限时，系统会自动为该用户分配“读取”权限。 你还可以组合“读取”、“创建”、“更新”和“删除”权限。  
   
- 升级到 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，旧权限将转换为下表中所示的新权限。  
+ 升级到 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，旧权限将转换为下表中所示的新权限。  
   
 |以前版本中的权限|新权限|  
 |------------------------------------|--------------------|  
@@ -113,7 +113,7 @@ ms.locfileid: "98170429"
   
 ## <a name="improved-troubleshooting"></a>提高了故障排除方便性  
   
- [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中增加了更多的功能来改进调试，并使问题排查更简便。 有关详细信息，请参阅[跟踪 (Master Data Services)](../master-data-services/tracing-master-data-services.md)。  
+ [!INCLUDE[sssql15-md](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中增加了更多的功能来改进调试，并使问题排查更简便。 有关详细信息，请参阅[跟踪 (Master Data Services)](../master-data-services/tracing-master-data-services.md)。  
   
 ## <a name="improved-manageability"></a>提高了可管理性  
   

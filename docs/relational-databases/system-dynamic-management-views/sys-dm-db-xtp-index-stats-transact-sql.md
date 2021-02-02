@@ -21,12 +21,12 @@ ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9fdfede86fd67c4911a8ec7bb0cdd75df012283
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 94af612964f33f9f463701593f9cddc4b3b992bb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99160144"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235978"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "99160144"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|该索引所属对象的 ID。|  
-|xtp_object_id|**bigint**|与对象的当前版本对应的内部 ID。<br /><br /> 注意：适用于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 。|  
+|xtp_object_id|**bigint**|与对象的当前版本对应的内部 ID。<br /><br /> 注意：适用于 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 。|  
 |index_id|**bigint**|索引的 ID。 该 index_id 只在该对象中是唯一的。|  
 |scans_started|**bigint**|执行的内存中 OLTP 索引扫描的次数。 每次进行选择、插入、更新或删除时都需要进行索引扫描。|  
 |scans_retries|**bigint**|需要重试的索引扫描次数，|  

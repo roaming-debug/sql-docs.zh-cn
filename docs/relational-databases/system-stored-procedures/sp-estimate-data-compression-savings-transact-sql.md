@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 938e6994f5d19f59023009cf9806ca62280dc5b9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 93d169d364369e87f1c363297c2a5c73c58e442b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193554"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237848"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -110,10 +110,10 @@ sp_estimate_data_compression_savings
  在 SQL Server 2019 之前，此过程不适用于列存储索引，因此不接受数据压缩参数列存储和 COLUMNSTORE_ARCHIVE。  从 SQL Server 2019 开始，列存储索引可用作估算源对象，并可用作请求的压缩类型。
 
  > [!IMPORTANT]
- > 当在中启用了 [内存优化 TempDB 元数据](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) 时 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，不支持在临时表上创建列存储索引。 由于此限制，启用 Memory-Optimized TempDB 元数据时，列存储 COLUMNSTORE_ARCHIVE 和数据压缩参数 sp_estimate_data_compression_savings 不受支持。
+ > 当在中启用了 [内存优化 TempDB 元数据](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) 时 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] ，不支持在临时表上创建列存储索引。 由于此限制，启用 Memory-Optimized TempDB 元数据时，列存储 COLUMNSTORE_ARCHIVE 和数据压缩参数 sp_estimate_data_compression_savings 不受支持。
 
 ## <a name="considerations-for-columnstore-indexes"></a>列存储索引的注意事项
- 从开始 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ， `sp_estimate_compression_savings` 支持估计列存储和列存储存档压缩。 与页和行压缩不同，将列存储压缩应用于对象需要创建新的列存储索引。 出于此原因，使用此过程的列存储和 COLUMNSTORE_ARCHIVE 选项时，提供给过程的源对象的类型决定了用于压缩的大小估算的列存储索引的类型。 下表说明了在 @data_compression 将参数设置为列存储或 COLUMNSTORE_ARCHIVE 时，用于估计每个源对象类型的压缩节省量的引用对象。
+ 从开始 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] ， `sp_estimate_compression_savings` 支持估计列存储和列存储存档压缩。 与页和行压缩不同，将列存储压缩应用于对象需要创建新的列存储索引。 出于此原因，使用此过程的列存储和 COLUMNSTORE_ARCHIVE 选项时，提供给过程的源对象的类型决定了用于压缩的大小估算的列存储索引的类型。 下表说明了在 @data_compression 将参数设置为列存储或 COLUMNSTORE_ARCHIVE 时，用于估计每个源对象类型的压缩节省量的引用对象。
 
  |源对象|Reference 对象|
  |-----------------|---------------|

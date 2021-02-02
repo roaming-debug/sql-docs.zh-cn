@@ -21,12 +21,12 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96bf6756f26e0bc8b82c6f7f008203fcb206c22f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fe236fc66e4155e64006ede1c6eace01982470e8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184345"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236900"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "99184345"
 |encryptor_thumbprint|**varbinary(20)**|显示加密程序的指纹。|  
 |encryptor_type|**nvarchar(32)**|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [当前版本](/troubleshoot/sql/general/determine-version-edition-update-level)）。<br /><br /> 描述加密程序。|  
 |percent_complete|**real**|数据库加密状态更改的完成百分比。 如果未发生状态更改，则为 0。|
-|encryption_state_desc|**nvarchar(32)**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。<br><br> 指示数据库是否已加密或未加密的字符串。<br><br>NONE<br><br>未加密<br><br>过<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。<br><br>指示加密扫描的当前状态。 <br><br>0 = 未启动任何扫描，TDE 未启用<br><br>1 = 正在进行扫描。<br><br>2 = 正在进行扫描，但已挂起，用户可以继续。<br><br>3 = 由于某种原因中止扫描，需要手动干预。 请联系 Microsoft 支持部门以获得更多帮助。<br><br>4 = 扫描已成功完成，TDE 已启用并且加密已完成。|
-|encryption_scan_state_desc|**nvarchar(32)**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。<br><br>指示加密扫描当前状态的字符串。<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>完成|
-|encryption_scan_modify_date|**datetime**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。<br><br> 显示上次修改加密扫描状态) UTC 格式的日期 (。|
+|encryption_state_desc|**nvarchar(32)**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 及更高版本。<br><br> 指示数据库是否已加密或未加密的字符串。<br><br>NONE<br><br>未加密<br><br>过<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 及更高版本。<br><br>指示加密扫描的当前状态。 <br><br>0 = 未启动任何扫描，TDE 未启用<br><br>1 = 正在进行扫描。<br><br>2 = 正在进行扫描，但已挂起，用户可以继续。<br><br>3 = 由于某种原因中止扫描，需要手动干预。 请联系 Microsoft 支持部门以获得更多帮助。<br><br>4 = 扫描已成功完成，TDE 已启用并且加密已完成。|
+|encryption_scan_state_desc|**nvarchar(32)**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 及更高版本。<br><br>指示加密扫描当前状态的字符串。<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>完成|
+|encryption_scan_modify_date|**datetime**|**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 及更高版本。<br><br> 显示上次修改加密扫描状态) UTC 格式的日期 (。|
   
 ## <a name="permissions"></a>权限
 

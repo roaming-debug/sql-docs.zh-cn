@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a08b50c897735183d2b3ac39a11cba09b11102e7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fc0253df9c1f9c593ef2169f03cb3ff98382cdad
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202462"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236839"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys.dm_db_rda_migration_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "99202462"
   
  **sys.dm_db_rda_migration_status** 的作用域限定为当前数据库上下文。 请确保在要查看其迁移状态的 Stretch enable 表的数据库上下文中输入。  
   
- 在中 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] ， **sys.dm_db_rda_migration_status** 的输出限制为200行。  
+ 在中 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] ， **sys.dm_db_rda_migration_status** 的输出限制为200行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

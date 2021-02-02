@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a0e183d97b17936d5d7e1b414c2d492910a8a8b3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d6d44a187862903181cb19ee2eabafc1fd26ec91
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207078"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237216"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  下表说明了可以更改的发布属性以及对这些属性值的限制。  
   
-|properties|值|说明|  
+|属性|值|说明|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|true|可以为给定发布创建匿名订阅，还必须为 **true** *immediate_sync* 。 对于对等发布，无法更改此属性。|  
 ||**false**|不能为给定发布创建匿名订阅。 对于对等发布，无法更改此属性。|  
@@ -112,7 +112,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**发出**|在快照生成期间生成所有表的本机模式大容量复制程序输出，但不锁定表。 对快照复制无效。|  
 ||**concurrent_c**|在快照生成期间生成所有表的字符模式大容量复制程序输出，但不锁定表。 对快照复制无效。|  
 |**taskid**||不推荐使用该属性，也不再支持该属性。|  
-|**allow_drop**|true|`DROP TABLE`为属于事务复制的项目启用 DLL 支持。 支持的最低版本： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service pack 2 或更高版本以及 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] service pack 1 或更高版本。 附加参考： [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|true|`DROP TABLE`为属于事务复制的项目启用 DLL 支持。 支持的最低版本： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service pack 2 或更高版本以及 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] service pack 1 或更高版本。 附加参考： [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|`DROP TABLE`对于属于事务复制的项目，禁用 DLL 支持。 这是此属性的 **默认** 值。|
 |**NULL** (默认值) ||返回 *属性* 的支持值的列表。|  
   

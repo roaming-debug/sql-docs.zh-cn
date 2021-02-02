@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: fd00b91eb2ba5018a7ae9865f323ac2f3faeb39d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7b37fc021c8d324076e81c8f864099ddd9fdad14
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99134587"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235944"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "99134587"
 |filename|**nvarchar(256)**|服务可执行文件的路径和文件名。 不能为 null。|  
 |is_clustered|**nvarchar (1)**|指示服务是否作为群集服务器的资源安装。 不能为 null。|  
 |cluster_nodename|**nvarchar(256)**|安装此服务的群集节点的名称。 可以为 Null。|
-|instant_file_initialization_enabled|**nvarchar (1)**|指定是否为服务启用即时文件初始化 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。<br /><br />Y = 为服务启用即时文件初始化。<br /><br />N = 为服务禁用即时文件初始化。<br /><br /> 可以为 Null。<br /><br /> **注意：** 不适用于其他服务，例如 SQL Server 代理。<br /><br /> **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从 SP4 和 [!INCLUDE[sssql11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 及更高) 版本开始 (。|  
+|instant_file_initialization_enabled|**nvarchar (1)**|指定是否为服务启用即时文件初始化 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。<br /><br />Y = 为服务启用即时文件初始化。<br /><br />N = 为服务禁用即时文件初始化。<br /><br /> 可以为 Null。<br /><br /> **注意：** 不适用于其他服务，例如 SQL Server 代理。<br /><br /> **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从 SP4 和 [!INCLUDE[sssql11](../../includes/sssql11-md.md)] [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 及更高) 版本开始 (。|  
 
 ## <a name="security"></a>安全性  
   

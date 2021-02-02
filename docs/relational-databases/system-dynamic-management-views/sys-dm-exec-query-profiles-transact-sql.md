@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b1f8aa494a01a8fc99fc48efc79a66b80458524
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4777dea76c24aaeab7f64a761c4d13b49c644af0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161368"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235868"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "99161368"
   
 -   如果存在并行扫描，则此 DMV 将报告处理扫描的每个并行线程的计数器。
  
-从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 开始， *标准查询执行统计信息分析基础结构* 与 *轻型查询执行统计分析基础结构* 并存。 `SET STATISTICS XML ON` 和 `SET STATISTICS PROFILE ON` 始终使用 *标准查询执行统计分析基础结构*。 `sys.dm_exec_query_profiles`若要填充，必须启用查询分析基础结构之一。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。    
+从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 开始， *标准查询执行统计信息分析基础结构* 与 *轻型查询执行统计分析基础结构* 并存。 `SET STATISTICS XML ON` 和 `SET STATISTICS PROFILE ON` 始终使用 *标准查询执行统计分析基础结构*。 `sys.dm_exec_query_profiles`若要填充，必须启用查询分析基础结构之一。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。    
 
 >[!NOTE]
 > 正在调查的查询必须在启用了查询分析基础结构 **后** 开始，在查询开始后启用它将不会在中生成结果 `sys.dm_exec_query_profiles` 。 有关如何启用查询分析基础结构的详细信息，请参阅 [查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。

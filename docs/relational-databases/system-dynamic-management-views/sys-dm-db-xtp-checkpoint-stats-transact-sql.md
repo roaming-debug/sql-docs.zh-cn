@@ -21,12 +21,12 @@ ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6211155c51a2751e3f4625a4c838bec29695905
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b99081c2e62aa45789cdb7bc890f6b7fbd51cd67
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210898"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236058"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,8 +42,8 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 与更新的版本有很大差异，在 [SQL Server 2014](#bkmk_2014)的主题中对此进行了深入讨论。**
   
-## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本  
- 下表对中的列进行了说明 `sys.dm_db_xtp_checkpoint_stats` ，从开始 **[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]** 。  
+## <a name="sssql16-md-and-later"></a>[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本  
+ 下表对中的列进行了说明 `sys.dm_db_xtp_checkpoint_stats` ，从开始 **[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]** 。  
   
 |列名称|类型|说明|  
 |-----------------|----------|-----------------|  

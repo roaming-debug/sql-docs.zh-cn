@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: ca05529c9b4ce1d9ec603989af81f0d2aeebf76b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129425"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236401"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -130,11 +130,11 @@ ms.locfileid: "96129425"
   
 3.  在 " **数据库服务器** " 页上，指定 SQL Server 实例。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 添加对 SQL Server 托管实例的支持。 将 **SQL Server 实例** 的值设置为托管实例的主机。 例如，`xxxxxx.xxxxxx.database.windows.net`。
+    >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] 添加对 SQL Server 托管实例的支持。 将 **SQL Server 实例** 的值设置为托管实例的主机。 例如，`xxxxxx.xxxxxx.database.windows.net`。
 
 4. 选择 **身份验证类型** ，然后单击 " **测试连接** " 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”。
 
-    >对于 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] ，若要连接到托管实例，请使用以下身份验证类型之一：
+    >对于 [!INCLUDE[sqlv15](../includes/sssql19-md.md)] ，若要连接到托管实例，请使用以下身份验证类型之一：
     >
     >- Azure Active Directory 集成身份验证： **当前用户– Active Directory 集成**
     >- SQL Server 身份验证： **SQL Server 帐户**。
@@ -207,7 +207,7 @@ ms.locfileid: "96129425"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. 单击“应用”  。 显示“配置完成”消息框。 在消息框中单击“确定”，启动 Web 应用程序。 网站地址为 "https://*server 名称* / *web 应用程序*/"。 
+15. 单击“应用”。 显示“配置完成”消息框。 在消息框中单击“确定”，启动 Web 应用程序。 网站地址为 "https://*server 名称* / *web 应用程序*/"。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 

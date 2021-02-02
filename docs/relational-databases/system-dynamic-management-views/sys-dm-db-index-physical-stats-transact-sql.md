@@ -22,12 +22,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 208ea5a903e8a5e3517f5cf663a52a521c6cf9a7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b8957c55955ba24131f6cc5692e17b86cd2154a4
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190596"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236163"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ sys.dm_db_index_physical_stats (
  *object_id* \| NULL \| 0 \| 默认值  
  索引所在的表或视图的对象 ID。 *object_id* 是 **int**。  
   
- 有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中，有效输入还包括 service broker 队列名称或队列内部表名称。 如果应用默认参数 (即所有对象、所有索引等) ，则所有队列的碎片信息都将包含在结果集中。  
+ 有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 在 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 中，有效输入还包括 service broker 队列名称或队列内部表名称。 如果应用默认参数 (即所有对象、所有索引等) ，则所有队列的碎片信息都将包含在结果集中。  
   
  指定 NULL 可返回指定数据库中的所有表和视图的信息。 如果为 *object_id* 指定 null，则还必须为 *index_id* 和 *partition_number* 指定 null。  
   
@@ -417,7 +417,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**适用范围**： [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
   
  下面的示例演示如何查询服务器代理队列的碎片。  
   

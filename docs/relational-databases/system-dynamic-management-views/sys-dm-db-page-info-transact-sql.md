@@ -21,12 +21,12 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 429f8049ef0b92168be5e3e0fc90c91e3d37224e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 10756b0297cdc731468ea8983c5378d5b380fef9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472808"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236021"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "97472808"
 返回有关数据库中的页的信息。  函数返回一行，其中包含页中的标头信息，包括 `object_id` 、 `index_id` 和 `partition_id` 。  在大多数情况下，此函数取代了使用 `DBCC PAGE` 的需要。
 
 > [!NOTE]
-> `sys.dm_db_page_info` 当前仅在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更高版本中受支持。
+> `sys.dm_db_page_info` 当前仅在 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 和更高版本中受支持。
 
 
 ## <a name="syntax"></a>语法   
@@ -43,7 +43,7 @@ ms.locfileid: "97472808"
 sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )  
 ``` 
 
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 *DatabaseId* |NULL |缺省值     
 数据库的 ID。 *DatabaseId* 为 **smallint**。 有效输入是数据库的 ID 号。 默认值为 NULL，但对于此参数发送 NULL 值将导致错误。
  

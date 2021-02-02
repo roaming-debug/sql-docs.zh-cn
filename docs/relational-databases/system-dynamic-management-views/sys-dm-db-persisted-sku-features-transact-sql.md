@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: a723e1278c0319e4dd80bc6bb69aa58d9a9a8d9a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ac96eec67c1421e55bc4533c995a85aa6c404a4e
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204849"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236083"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "99204849"
 -   **TransparentDataEncryption。** 指示使用透明数据加密对数据库进行加密。 若要删除透明数据加密，请使用 ALTER DATABASE 语句。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
 
 > [!NOTE]
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Service Pack 1 开始，这些功能除外， **TransparentDataEncryption 除外。** 跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本提供，并不限于 Enterprise edition 或 Developer edition。
+> 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 开始，这些功能除外， **TransparentDataEncryption 除外。** 跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本提供，并不限于 Enterprise edition 或 Developer edition。
 
  若要确定数据库是否使用仅限于特定版本的任何功能，请对数据库执行下面的语句：  
   
