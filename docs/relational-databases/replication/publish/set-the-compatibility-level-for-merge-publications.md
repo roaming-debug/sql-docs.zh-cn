@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 90d7522219e39f7ab31b19380a1bcfe6f084b6ab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dd5765ed93648b0bdd1e6c7108f8c77a47c3143
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882501"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076625"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>设置合并发布的兼容级别
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中设置合并发布的兼容级别。 合并复制使用发布兼容级别来确定给定数据库中的发布可以使用哪些功能。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中设置合并发布的兼容级别。 合并复制使用发布兼容级别来确定给定数据库中的发布可以使用哪些功能。  
   
  **本主题内容**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "85882501"
   
 #### <a name="to-increase-the-publication-compatibility-level"></a>提高发布兼容级别  
   
--   在“发布属性 - \<Publication>”对话框的“常规”页上，选择**兼容性级别**。  
+-   在“发布属性 - \<Publication>”对话框的“常规”页上，选择 **兼容性级别**。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以在创建发布时以编程方式设置合并发布的兼容级别，或者以后以编程方式进行修改。 可使用复制存储过程来设置或更改此发布属性。  

@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 9029051054c1fcec0e082da2e4e5883e0ff72375
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127314"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048778"
 ---
 # <a name="cdc-splitter"></a>CDC 拆分器
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  CDC 拆分器将更改行的单个流从 CDC 源数据流拆分到多个不同的数据流中以便用于插入、更新和删除操作。 基于必需的列 `__$operation` 及其在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中的标准值来拆分数据流。  
+  CDC 拆分器将更改行的单个流从 CDC 源数据流拆分到多个不同的数据流中以便用于插入、更新和删除操作。 基于必需的列 `__$operation` 及其在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 更改表中的标准值来拆分数据流。  
   
 |操作的值|输出|说明|  
 |------------------------|------------|-----------------|  

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3af62a68c6aeb36f6527afc66744ad8c2f66947f
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 1dbe4520d621c85edafe4150cd60cc3571ceb9be
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88494162"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049274"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>“重新组织索引”任务（维护计划）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用“‘重新组织索引’任务”对话框可以移动索引页，以提高搜索效率。 此任务将使用 `ALTER INDEX REORGANIZE` 语句和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。  
+  使用“‘重新组织索引’任务”对话框可以移动索引页，以提高搜索效率。 此任务将使用 `ALTER INDEX REORGANIZE` 语句和 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]数据库。  
   
 ## <a name="options"></a>选项  
  **Connection**  

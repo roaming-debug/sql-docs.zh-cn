@@ -17,17 +17,17 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbad843d482945a29cb03fde9545b1c19fb354f9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: cd8b60ec5b302183fdb1a0713e71568821dae2fe
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098387"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813100"
 ---
 # <a name="contained-databases"></a>包含的数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  “包含数据库”  是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的一种数据库。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以 4 种方法帮助用户使其数据库独立于实例。  
+  “包含数据库”  是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的一种数据库。  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 以 4 种方法帮助用户使其数据库独立于实例。  
   
 -   很多用于描述数据库的元数据都在该数据库中维护。 （除此之外或代替在 master 数据库中维护元数据。）  
   
@@ -37,7 +37,7 @@ ms.locfileid: "98098387"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境（DMV、XEvent 等）报告并可以执行包含信息。  
   
- 部分包含的数据库的某些功能（例如将元数据存储在数据库中）适用于所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库。 部分包含的数据库的某些优点（例如数据库级别身份验证和目录排序规则）必须在可用后才能实现。 使用 **CREATE DATABASE** 和 **ALTER DATABASE** 语句或者通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]可启用部分包含。 有关如何启用部分数据库包含的详细信息，请参阅 [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)。  
+ 部分包含的数据库的某些功能（例如将元数据存储在数据库中）适用于所有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 数据库。 部分包含的数据库的某些优点（例如数据库级别身份验证和目录排序规则）必须在可用后才能实现。 使用 **CREATE DATABASE** 和 **ALTER DATABASE** 语句或者通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]可启用部分包含。 有关如何启用部分数据库包含的详细信息，请参阅 [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)。  
   
 ##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a> 部分包含的数据库概念  
  完全包含的数据库包括定义数据库所需的所有数据库设置和元数据，它与安装数据库的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例没有配置依赖关系。 在以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，将一个数据库与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例隔离开来可能会很耗时，并且要求该数据库与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间的关系的详细知识。 通过部分包含的数据库，可以轻松地将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库与其他数据库隔离开来。  

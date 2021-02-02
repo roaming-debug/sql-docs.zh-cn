@@ -11,18 +11,18 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 87f1521927518446b355fea828e50901d6e35bc1
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: a1787dd26f51b6b712c253270bfbc14641d19b21
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975523"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813211"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>升级到 SQL Server 的其他版本（安装程序）
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持在各种版本的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 间进行版本升级。 有关支持的版本升级路径的信息，请参阅 [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。 在开始对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例执行版本升级前，请查看以下文章：  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持在各种版本的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 间进行版本升级。 有关支持的版本升级路径的信息，请参阅 [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。 在开始对 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例执行版本升级前，请查看以下文章：  
 
   [SQL Server 2019 各个版本及其支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)
 - [版本和 SQL Server 2017 支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)  

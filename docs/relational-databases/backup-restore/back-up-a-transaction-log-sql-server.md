@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 57c864996d15886eb69ef7caf0f000349b238b9c
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: e66f271830e686af36b450e27db2b5c98ad41244
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130579"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075939"
 ---
 # <a name="back-up-a-transaction-log"></a>备份事务日志
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份事务日志。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份事务日志。  
 
 ## <a name="before-you-begin"></a>开始之前
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  

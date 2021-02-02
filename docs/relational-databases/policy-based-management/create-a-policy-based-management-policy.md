@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8a27cb717d8a54de804469d210e0eaaf3b622dd9
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: ccc76880687d509b59e3171f1b6dfaa9029ad6f5
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127920"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048785"
 ---
 # <a name="create-a-policy-based-management-policy"></a>创建基于策略的管理策略
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建基于策略的管理策略。  
+  本主题介绍如何通过使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建基于策略的管理策略。  
   
  **本主题内容**  
   

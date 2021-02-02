@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5362d3ddde85b21c5450a162fff0fdc5f23cda7f
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 5a59b05df4805b580aade70a9d2bf11cc3399f04
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130465"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076119"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>创建差异数据库备份 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建差异数据库备份。  
+  使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建差异数据库备份。  
   
  **本主题的内容**  
   

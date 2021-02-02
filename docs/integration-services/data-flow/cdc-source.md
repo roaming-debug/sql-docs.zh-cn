@@ -16,19 +16,19 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7bd7f2478a08b00d1eb970b80ca3e5fb9f168d21
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 9c10e3f1aa1460f63f3fcd3e95bb95bef8e63065
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196461"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049204"
 ---
 # <a name="cdc-source"></a>CDC 源
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  CDC 源从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中读取某一范围的更改数据并且将更改向下传递给其他 SSIS 组件。  
+  CDC 源从 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 更改表中读取某一范围的更改数据并且将更改向下传递给其他 SSIS 组件。  
   
  由 CDC 源读取的更改数据的范围称作 CDC 处理范围并且由在当前数据流开始前执行的 CDC 控制任务确定。 该 CDC 处理范围是从维护一组表的 CDC 处理状态的包变量的值派生的。  
   
@@ -126,7 +126,7 @@ use <cdc-enabled-database-name>
 -   [使用 CDC 源提取更改数据](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
 ## <a name="cdc-source-editor-connection-manager-page"></a>CDC 源编辑器（“连接管理器”页）
-  可以使用“CDC 源编辑器”对话框的“连接管理器”页，为 CDC 源从其中读取更改行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库（CDC 数据库）选择 ADO.NET 连接管理器。 一旦选择了 CDC 数据库，则需要选择该数据库中的一个捕获表。  
+  可以使用“CDC 源编辑器”对话框的“连接管理器”页，为 CDC 源从其中读取更改行的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 数据库（CDC 数据库）选择 ADO.NET 连接管理器。 一旦选择了 CDC 数据库，则需要选择该数据库中的一个捕获表。  
   
  有关 CDC 源的详细信息，请参阅 [CDC Source](../../integration-services/data-flow/cdc-source.md)。  
   
@@ -174,7 +174,7 @@ use <cdc-enabled-database-name>
  选择为当前 CDC 上下文维护 CDC 状态的 SSIS 字符串包变量。 有关 CDC 状态变量的详细信息，请参阅 [定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
   
  **包括重新处理指示器列**  
- 选中此复选框可以创建称作 **__$reprocessing**的特殊输出列。  
+ 选中此复选框可以创建称作 **__$reprocessing** 的特殊输出列。  
   
  在 CDC 处理范围与初始处理范围（与初始加载期间相对应的 LSN 的范围）重叠时，或者在之前的运行存在错误后重新处理某一 CDC 处理范围时，该列具有值 **true** 。 通过此指示器列，SSIS 开发人员可以在重新处理更改时以不同方式处理错误（例如，可忽略删除不存在的行和插入在重复键上失败之类的操作）。  
   

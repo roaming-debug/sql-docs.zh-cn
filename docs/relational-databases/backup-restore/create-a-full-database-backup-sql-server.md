@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e0c103fba0dae4f6e31d976c151b7c01c487f658
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 3eb0b33f2891c8f48d63b4446d31c1918fcb7aab
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129287"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076109"
 ---
 # <a name="create-a-full-database-backup"></a>完整数据库备份
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建完整数据库备份。
+本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建完整数据库备份。
 
 若要了解如何将 SQL Server 备份到 Azure Blob 存储服务，请参阅[使用 Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)和 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。
 

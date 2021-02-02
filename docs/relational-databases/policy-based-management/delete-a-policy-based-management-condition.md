@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3265e970fbad572e09527dedcb35397d811daefa
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb34d9ab423008e8b3fe2c8e926f0f397c14b5cb
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127895"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049174"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>删除基于策略的管理条件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中删除基于策略的管理条件。  
+  本主题介绍如何通过使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中删除基于策略的管理条件。  
   
  **本主题内容**  
   

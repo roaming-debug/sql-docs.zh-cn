@@ -15,17 +15,17 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86b92afa3e9b2eb47ba3ca20ffa1fc88c27b0458
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e22b6ae7e10347933b55ad643f6c69c6370340cf
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468068"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813009"
 ---
 # <a name="rename-a-database"></a>重命名数据库
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 Azure SQL 数据库中重命名用户定义的数据库。 数据库名称可以包含任何符合标识符规则的字符。  
+  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 Azure SQL 数据库中重命名用户定义的数据库。 数据库名称可以包含任何符合标识符规则的字符。  
   
 ## <a name="in-this-topic"></a>本主题内容
   

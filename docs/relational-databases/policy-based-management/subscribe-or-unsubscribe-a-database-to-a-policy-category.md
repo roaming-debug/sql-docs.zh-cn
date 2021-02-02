@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c8b658fc2589ad0c39173ac206036b8274acc858
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: deb83a831430dd6ad57bf50eca26b9e30c49f22c
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774129"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076209"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将数据库设置为订阅或取消订阅某个策略类别。  
+  本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中将数据库设置为订阅或取消订阅某个策略类别。  
   
  **本主题内容**  
   

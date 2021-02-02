@@ -25,17 +25,17 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d06bb8ed9286c22a2381f31a36814ea305642365
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 97718ff757e09cd33116c47f31155f6ae0edb08b
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481168"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048890"
 ---
 # <a name="disable-indexes-and-constraints"></a>禁用索引和约束
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中禁用索引或约束。 禁用索引可以防止用户访问索引，而对于聚集索引，则可以防止用户访问基础表数据。 索引定义保留在元数据中，非聚集索引的索引统计信息仍保留。 对视图禁用非聚集索引或聚集索引会以物理方式删除索引数据。 禁用表的聚集索引可以防止对数据的访问，数据仍保留在表中，但在删除或重新生成索引之前，无法对这些数据执行数据操作语言 (DML) 操作。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中禁用索引或约束。 禁用索引可以防止用户访问索引，而对于聚集索引，则可以防止用户访问基础表数据。 索引定义保留在元数据中，非聚集索引的索引统计信息仍保留。 对视图禁用非聚集索引或聚集索引会以物理方式删除索引数据。 禁用表的聚集索引可以防止对数据的访问，数据仍保留在表中，但在删除或重新生成索引之前，无法对这些数据执行数据操作语言 (DML) 操作。  
   
  **本主题内容**  
   

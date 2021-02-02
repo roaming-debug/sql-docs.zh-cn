@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e97723d6ea047aa86641c9074ff235c682519e7a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6eb1586c38283d695e96d4640d37c261314a339f
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245187"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048911"
 ---
 # <a name="maintenance-plans"></a>维护计划
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "87245187"
 ## <a name="benefits-of-maintenance-plans"></a>维护计划的优点  
  在 [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]中，维护计划将创建由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 代理作业运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 可以按预订的时间间隔手动或自动运行维护计划。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 维护计划可提供以下功能：  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 维护计划可提供以下功能：  
   
 -   使用各种典型维护任务创建工作流的功能。 此外，还可以创建自己的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。  
   

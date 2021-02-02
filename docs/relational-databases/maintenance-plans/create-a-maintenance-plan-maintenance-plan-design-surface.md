@@ -13,16 +13,16 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 46d577d8488a4b696ef5736a1bb94127e24bc53a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 931aa85fbb37d8dba1c9bb3e06e00760d3f16caf
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667710"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049146"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划设计图面创建单个服务器或多服务器维护计划。 尽管 **“维护计划向导”** 是创建基本维护计划的最佳方法，但使用设计图面创建计划允许您使用增强的工作流。  
+  本主题说明如何在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中使用维护计划设计图面创建单个服务器或多服务器维护计划。 尽管 **“维护计划向导”** 是创建基本维护计划的最佳方法，但使用设计图面创建计划允许您使用增强的工作流。  
   
  **本主题内容**  
   

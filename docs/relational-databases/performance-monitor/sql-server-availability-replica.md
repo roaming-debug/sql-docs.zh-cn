@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: eb320ec65adf1a08df69954f133571c50de3eef8
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 5e31767cec60df160d371efb342ecc411f1b5cc4
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505888"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049235"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server，可用性副本
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  在 **中，** SQLServer:Availability Replica [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]性能对象包含的性能计数器报告有关 AlwaysOn 可用性组中可用性副本的信息。 所有可用性副本性能计数器都适用于主副本和辅助副本，并且具有反映本地副本的发送/接收计数器。 大多数情况下，主副本发送大部分数据，而辅助副本将接收这些数据。 但是，辅助副本会将 ACK 和其他一些后台流量发送到主副本。 请注意，在某个给定可用性副本上，某些计数器将显示零值，具体取决于该本地副本的当前角色，即是主副本还是辅助副本。  
+  在 **中，** SQLServer:Availability Replica [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]性能对象包含的性能计数器报告有关 AlwaysOn 可用性组中可用性副本的信息。 所有可用性副本性能计数器都适用于主副本和辅助副本，并且具有反映本地副本的发送/接收计数器。 大多数情况下，主副本发送大部分数据，而辅助副本将接收这些数据。 但是，辅助副本会将 ACK 和其他一些后台流量发送到主副本。 请注意，在某个给定可用性副本上，某些计数器将显示零值，具体取决于该本地副本的当前角色，即是主副本还是辅助副本。  
   
 |计数器名称|说明|  
 |------------------|-----------------|  

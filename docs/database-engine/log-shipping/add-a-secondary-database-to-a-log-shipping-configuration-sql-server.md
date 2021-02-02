@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3864af84ee12056b29c5e3b4c27a2693b1424120
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 7b5a1a3bde0e2dbccb7e74670826fb29905016e1
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642595"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813193"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>向日志传送配置添加辅助数据库 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  此主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向现有的日志传送配置添加辅助数据库。  
+  此主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向现有的日志传送配置添加辅助数据库。  
   
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  

@@ -15,17 +15,17 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016
-ms.openlocfilehash: d80ece2cf3b8974f203bf03601dd9c41bfc9bf79
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e1e0a2b406d6817c43a5a4a51bea90b556c5cea6
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478138"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048770"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>为索引指定填充因子
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本主题说明什么是填充因子以及如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定索引的填充因子值。  
+  本主题说明什么是填充因子以及如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定索引的填充因子值。  
   
  提供填充因子选项是为了优化索引数据存储和性能。 当创建或重新生成索引时，填充因子的值可确定每个叶级页上要填充数据的空间百分比，以便在每一页上保留一些剩余空间作为以后扩展索引的可用空间。 例如，指定填充因子的值为 80 表示每个叶级页上将有 20% 的空间保留为空，以便随着向基础表中添加数据而为扩展索引提供空间。 在索引行之间保留可用空间，而不是在索引的末尾保留。  
   

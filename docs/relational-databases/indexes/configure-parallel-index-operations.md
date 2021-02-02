@@ -18,17 +18,17 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17e25922d8d4e12a407960c384a695084b032873
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 41f1cb29f7bd1671166c7eaa0504a7c22c796a30
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480078"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048959"
 ---
 # <a name="configure-parallel-index-operations"></a>配置并行索引操作
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-本主题通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定义最大并行度 (max degree of parallelism) 并说明如何修改此设置。 
+本主题通过使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定义最大并行度 (max degree of parallelism) 并说明如何修改此设置。 
 
 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 或更高版本的多处理器系统上，索引语句可能会像其他查询那样，使用多个处理器 (CPU) 来执行与索引语句关联的扫描、排序和索引操作。 用于运行单个索引语句的 CPU 数由[最大并行度](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)服务器配置选项、当前工作负荷以及索引统计信息决定。 max degree of parallelism 选项决定了执行并行计划时使用的最大处理器数。 如果 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 检测到系统忙，索引操作的并行度将自动降低，然后再开始执行语句。 如果非分区索引的第一个键列包含有限数量的非重复值，或者每个非重复值的出现频率变化较大， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 也可能会降低并行度。 有关详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。 
   

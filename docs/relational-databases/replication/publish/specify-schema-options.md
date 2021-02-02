@@ -17,16 +17,16 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 91de6a53c6caf9e0bfd0339ea3c1354ce8984f4b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 53c7c3b803a16fd7ee95f35f33ee2439deb86199
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468898"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076615"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>为 SQL Server 复制指定架构选项
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定架构选项。 在发布表或视图时，可以控制为发布的对象复制的对象创建选项。 创建项目时可以设置这些选项，还可以在以后更改它们。 如果没有为某项目显式指定这些选项，将定义默认的选项集。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定架构选项。 在发布表或视图时，可以控制为发布的对象复制的对象创建选项。 创建项目时可以设置这些选项，还可以在以后更改它们。 如果没有为某项目显式指定这些选项，将定义默认的选项集。  
   
 > [!NOTE]  
 >  使用复制存储过程时的默认架构选项可能与使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]添加项目时的默认选项不同。  

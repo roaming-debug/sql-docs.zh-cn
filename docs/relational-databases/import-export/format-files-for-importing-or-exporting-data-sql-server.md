@@ -16,19 +16,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8584c274304757724d0eceb88a91257112ef694a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 82314d905d6336ae35d564096db00aa4e426436c
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473998"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049055"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>格式化文件以导入或导出数据 (SQL Server)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 当向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中大容量导入数据或从该表中大容量导出数据时，可以使用格式化文件  存储大容量导入数据或大容量导出数据所需的所有格式信息。 这包括数据文件中相对于该表的各字段的格式信息。
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持两种格式化文件类型：XML 格式和非 XML 格式化文件。 XML 格式化文件和非 XML 格式化文件在一个数据文件中包含每个字段的说明，并且 XML 格式化文件还包含相应表列的说明。 通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持两种格式化文件类型：XML 格式和非 XML 格式化文件。 XML 格式化文件和非 XML 格式化文件在一个数据文件中包含每个字段的说明，并且 XML 格式化文件还包含相应表列的说明。 通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。
 
 ## <a name="benefits-of-format-files"></a><a name="Benefits"></a> 格式化文件的优点
 

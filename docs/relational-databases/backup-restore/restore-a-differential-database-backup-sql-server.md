@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6015242cd42a2e3b932a88cff827968cfb514c39
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 028e5b2d1f26da698edae325b003fb402f721ee1
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129184"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075839"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>还原差异数据库备份 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中还原差异数据库备份。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中还原差异数据库备份。  
   
  **本主题内容**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "96129184"
   
 -   无法在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中还原较新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建的备份。  
   
--   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以从使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本创建的数据库备份来还原用户数据库。  
+-   在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中，可以从使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本创建的数据库备份来还原用户数据库。  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   

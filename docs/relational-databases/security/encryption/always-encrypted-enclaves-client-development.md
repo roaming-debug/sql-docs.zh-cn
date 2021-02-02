@@ -13,12 +13,12 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18a841153ba4b9f99c1b1d083950ca106f4ce765
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 64c628172ba95ff9de546c018ea00a9ba63943c9
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534626"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075599"
 ---
 # <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>使用具有安全 enclave 的 Always Encrypted 开发应用程序
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "98534626"
 - 你需要从证明服务管理员处获取环境的证明 URL。
 
   - 如果使用的是 [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] 和主机监护服务 (HGS)，请参阅[确定并共享 HGS 证明 URL](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)。
-  - 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)。
+  - 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation)。
 
 - 应用程序必须使用支持安全 enclave 的 SQL 客户端驱动程序版本。 有关详细信息，请参阅以下部分。
 

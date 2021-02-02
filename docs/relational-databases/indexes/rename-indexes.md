@@ -16,17 +16,17 @@ ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f073002a08f9f3d07a4d0d6d8af3976c0bfb6dae
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6e58f48dcaf91c4bc0621d064c7d5c6f44004e3d
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97407086"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048838"
 ---
 # <a name="rename-indexes"></a>重命名索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名索引。 重命名索引将用提供的新名称替换当前的索引名称。 指定的名称在表或视图中必须是唯一的。 例如，两个表可以有一个名为 **XPK_1** 的索引，但同一表中不能有两个名为 **XPK_1** 的索引。 无法创建与现有禁用索引同名的索引。 重命名索引不会导致重新生成索引。  
+  本主题将说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名索引。 重命名索引将用提供的新名称替换当前的索引名称。 指定的名称在表或视图中必须是唯一的。 例如，两个表可以有一个名为 **XPK_1** 的索引，但同一表中不能有两个名为 **XPK_1** 的索引。 无法创建与现有禁用索引同名的索引。 重命名索引不会导致重新生成索引。  
   
  **本主题内容**  
   

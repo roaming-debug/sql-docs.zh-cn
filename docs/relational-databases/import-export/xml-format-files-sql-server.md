@@ -16,16 +16,16 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d5f90439c622e9740ffe5d58789ce3d950be0279
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465518"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049290"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式化文件 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了一个 XML 架构，该架构定义了编写“XML 格式化文件”（用于将数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中）的语法。 XML 格式化文件必须符合用 XML 架构定义语言 (XSDL) 定义的这种架构。 只有当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  
+  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 提供了一个 XML 架构，该架构定义了编写“XML 格式化文件”（用于将数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中）的语法。 XML 格式化文件必须符合用 XML 架构定义语言 (XSDL) 定义的这种架构。 只有当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  
   
  可以结合使用 XML 格式化文件和 **bcp** 命令、BULK INSERT 语句或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 语句。 使用 **bcp** 命令，你可以自动生成表的 XML 格式化文件；有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
   

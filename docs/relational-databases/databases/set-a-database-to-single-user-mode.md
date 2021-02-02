@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 591a2d22a603c51f44bdfa16d4072e6b9ad36c73
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 68d806e83c389c256737da8054a788697f0bd773
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88471128"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812990"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>将数据库设置为单用户模式
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中将用户定义数据库设置为单用户模式。 单用户模式指定一次只有一个用户可访问数据库，该模式通常用于维护操作。  
+  本主题说明了如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中将用户定义数据库设置为单用户模式。 单用户模式指定一次只有一个用户可访问数据库，该模式通常用于维护操作。  
   
  **本主题内容**  
   

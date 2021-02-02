@@ -12,12 +12,12 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02c99d9cee2eb257c0254c15bd92a0e2812ccc54
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 26b598865668ce5fb10e34eb9558fe018a7c60a8
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534766"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075889"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>对用于 SQL Server 的 .NET Framework 数据提供程序使用 Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 
 4. 将数据库连接字符串中的 `Enclave Attestation URL` 关键字设置为证明 URL（证明服务终结点）。 你需要从证明服务管理员处获取环境的证明 URL。
    1. 如果使用的是 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 和主机监护服务 (HGS)，请参阅[确定并共享 HGS 证明 URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)。
-   2. 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)。
+   2. 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation)。
 
 有关分步教程，请参阅[教程：开发使用具有安全 enclave 的 Always Encrypted 的 .NET Framework 应用程序](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 

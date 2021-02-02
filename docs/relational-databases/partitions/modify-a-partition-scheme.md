@@ -11,16 +11,16 @@ ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb261e69d3491f717be8b34bb2b0f699a4d37840
-ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
+ms.openlocfilehash: 1cba23d0d043004f1f5a71d8e4af4844470ff163
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97952027"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049100"
 ---
 # <a name="modify-a-partition-scheme"></a>修改分区方案
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定用于保存添加到已分区表的下一个分区的文件组，可以修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的分区方案。 可通过将 NEXT USED 属性分配给文件组来执行此操作。 您可以将 NEXT USED 属性分配给空文件组或已存有分区的文件组。 也就是说，一个文件组可以保存多个分区。  
+  通过使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定用于保存添加到已分区表的下一个分区的文件组，可以修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的分区方案。 可通过将 NEXT USED 属性分配给文件组来执行此操作。 您可以将 NEXT USED 属性分配给空文件组或已存有分区的文件组。 也就是说，一个文件组可以保存多个分区。  
   
  **本主题内容**  
   

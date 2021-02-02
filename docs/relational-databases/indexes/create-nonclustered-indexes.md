@@ -18,17 +18,17 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c1831a5b16577b608629a09beb3c8d6e12c3634
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9200edd16f0a33a52b12493660b18cfe45ae6086
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481178"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048928"
 ---
 # <a name="create-nonclustered-indexes"></a>创建非聚集索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建非聚集索引。 非聚集索引是一种与存储在表中的数据相分离的索引结构，可对一个或多个选定列重新排序。 非聚集索引通常可帮助您通过比搜索基础表更快的速度查找数据；有时可以完全由非聚集索引中的数据回答查询，或非聚集索引可将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指向基础表中的行。 一般来说，创建非聚集索引是为了提高聚集索引不涵盖的频繁使用的查询的性能，或在没有聚集索引的表（称为堆）中查找行。 可以对表或索引视图创建多个非聚集索引。  
+  您可以使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建非聚集索引。 非聚集索引是一种与存储在表中的数据相分离的索引结构，可对一个或多个选定列重新排序。 非聚集索引通常可帮助您通过比搜索基础表更快的速度查找数据；有时可以完全由非聚集索引中的数据回答查询，或非聚集索引可将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指向基础表中的行。 一般来说，创建非聚集索引是为了提高聚集索引不涵盖的频繁使用的查询的性能，或在没有聚集索引的表（称为堆）中查找行。 可以对表或索引视图创建多个非聚集索引。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   

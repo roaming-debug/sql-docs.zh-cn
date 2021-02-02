@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 77837f50ba3bf9d3e89ecddd0e7deb7df891a54e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cef58a5cd2587c4845fe2f4a0c090abb8970877a
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725189"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049068"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>修改资源运行状况策略定义（SQL Server 实用工具）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中修改资源使用情况策略定义。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中修改资源使用情况策略之前，必须先创建一个实用工具控制点 (UCP)。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
+  本主题介绍了如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中修改资源使用情况策略定义。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中修改资源使用情况策略之前，必须先创建一个实用工具控制点 (UCP)。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以为数据层应用程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例配置实用工具资源使用情况策略。 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中为所有数据层应用程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例全局定义资源使用情况策略；也可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中为每个数据层应用程序和每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管实例单独定义资源使用情况策略。 您还可以实现全局策略，并且用它们自己的策略定义配置单独的数据层应用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例。  
   

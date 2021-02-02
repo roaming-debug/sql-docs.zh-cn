@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3f275d1f2c5ce4142bb357a1c1b314b694ef589
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: f0e4c13745057b1276f06f3bc77ace266921a43d
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783016"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076269"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隐藏 SQL Server 数据库引擎的实例
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "98783016"
   
 ## <a name="see-also"></a>另请参阅  
  [服务器网络配置](../../database-engine/configure-windows/server-network-configuration.md)   
- [SQL 虚拟服务器客户端连接的说明](https://support.microsoft.com/kb/273673)   
+ [SQL 虚拟服务器客户端连接的说明](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/273673)   
  [如何将静态端口分配到 SQL Server 命名实例并避免常见缺陷](https://deep.data.blog/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall/)  
   
   

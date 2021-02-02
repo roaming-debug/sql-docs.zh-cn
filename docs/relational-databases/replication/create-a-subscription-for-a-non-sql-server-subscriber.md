@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36c15a9d7de2c613b3a25b16827bfcc037393524
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773898"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076219"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>为非 SQL Server 订阅服务器创建订阅
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为非 SQL Server 订阅服务器创建订阅。 事务复制和快照复制支持向非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器发布数据。 有关支持的订阅服务器平台的信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)中为非 SQL Server 订阅服务器创建订阅。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为非 SQL Server 订阅服务器创建订阅。 事务复制和快照复制支持向非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器发布数据。 有关支持的订阅服务器平台的信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)中为非 SQL Server 订阅服务器创建订阅。  
   
  **本主题内容**  
   
@@ -65,10 +65,10 @@ ms.locfileid: "85773898"
   
 3.  右键单击发布，再单击 **“属性”** 。  
   
-4.  在 **“订阅选项”** 页上，为选项 **“允许非 SQL Server 订阅服务器”** 选择 **True**值。 选择此选项可更改多个属性，从而可以使发布与非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器兼容。  
+4.  在 **“订阅选项”** 页上，为选项 **“允许非 SQL Server 订阅服务器”** 选择 **True** 值。 选择此选项可更改多个属性，从而可以使发布与非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器兼容。  
   
     > [!NOTE]  
-    >  选择 **True** 会将 **pre_creation_cmd** 项目属性的值设置为“drop”。 此设置指定，如果复制与项目中某个表的名称相匹配，则复制应删除订阅服务器上对应的表。 如果要保留订阅服务器上的现有表，则可以对每个项目使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 存储过程，并为 **pre_creation_cmd**指定值“none”： `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
+    >  选择 **True** 会将 **pre_creation_cmd** 项目属性的值设置为“drop”。 此设置指定，如果复制与项目中某个表的名称相匹配，则复制应删除订阅服务器上对应的表。 如果要保留订阅服务器上的现有表，则可以对每个项目使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 存储过程，并为 **pre_creation_cmd** 指定值“none”： `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 系统将会提示为发布创建新快照。 如果不想在此时创建快照，可以在以后使用下一个“如何”过程中介绍的步骤创建快照。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "85773898"
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>在订阅服务器上保留表  
   
--   默认情况下，为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布会将 **pre_creation_cmd** 项目属性的值设置为“drop”。 此设置指定，如果复制与项目中某个表的名称相匹配，则复制应删除订阅服务器上对应的表。 如果要保留订阅服务器上的现有表，则可以对每个项目使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 存储过程，并为 **pre_creation_cmd**指定值“none”。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'` 列中的一个值匹配。  
+-   默认情况下，为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布会将 **pre_creation_cmd** 项目属性的值设置为“drop”。 此设置指定，如果复制与项目中某个表的名称相匹配，则复制应删除订阅服务器上对应的表。 如果要保留订阅服务器上的现有表，则可以对每个项目使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 存储过程，并为 **pre_creation_cmd** 指定值“none”。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'` 列中的一个值匹配。  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>为发布生成快照  
   
@@ -160,7 +160,7 @@ ms.locfileid: "85773898"
     -   如果 **enabled_for_het_sub** 的值为 0，则执行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，并将 `@property` 指定为 enabled_for_het_sub，将 `@value` 指定为 true。  
   
         > [!NOTE]  
-        >  在将 **enabled_for_het_sub** 更改为 **true**之前，必须删除发布的任何现有订阅。 当发布还支持更新订阅时，无法将 **enabled_for_het_sub** 设置为 **true** 。 更改 **enabled_for_het_sub** 将影响其他发布属性。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
+        >  在将 **enabled_for_het_sub** 更改为 **true** 之前，必须删除发布的任何现有订阅。 当发布还支持更新订阅时，无法将 **enabled_for_het_sub** 设置为 **true** 。 更改 **enabled_for_het_sub** 将影响其他发布属性。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 `@publication`、`@subscriber`、指定 `@destination_db` 的 `(default destination)` 值、`@subscription_type` 的推送值、并将 `@subscriber_type` 的值指定为 3 （指定 OLE DB 提供程序）。  
   

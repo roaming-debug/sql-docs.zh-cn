@@ -19,17 +19,17 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46b70b81745047bc85f2d7bbc677321dde618c81
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e2c41e97ad36387fe1f3644e5039eb5cd2b6a61d
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480058"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048912"
 ---
 # <a name="create-unique-indexes"></a>创建唯一索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建表的唯一索引。 唯一索引能够保证索引键中不包含重复的值，从而使表中的每一行从某种方式上具有唯一性。 创建 UNIQUE 约束和创建与约束无关的唯一索引并没有明显的区别。 进行数据验证的方式相同，而且对于唯一索引是由约束创建的还是手动创建的，查询优化器并不加以区分。 但是，创建列的 UNIQUE 约束会使索引目标更清晰。 有关 UNIQUE 约束的详细信息，请参阅 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建表的唯一索引。 唯一索引能够保证索引键中不包含重复的值，从而使表中的每一行从某种方式上具有唯一性。 创建 UNIQUE 约束和创建与约束无关的唯一索引并没有明显的区别。 进行数据验证的方式相同，而且对于唯一索引是由约束创建的还是手动创建的，查询优化器并不加以区分。 但是，创建列的 UNIQUE 约束会使索引目标更清晰。 有关 UNIQUE 约束的详细信息，请参阅 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
  在创建唯一索引时，可以设置一个忽略重复键的选项。 如果此选项已设置为“是”，当你试图通过添加影响多行的数据来创建重复键（使用 INSERT 语句）时，则不会添加包含重复项的行。 如果此选项设置为 **“否”**，则整个插入操作将失败，并且将回滚所有数据。  
   

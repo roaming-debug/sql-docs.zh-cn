@@ -15,12 +15,12 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5159591eeafc76ca16fde95f8a7b9789acc084e1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 48d4d4b9602049c0c09e9e60ac8991c5c9a74154
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485309"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049230"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97485309"
     > [!IMPORTANT]  
     >  数据库的性能取决于多种因素，不是所有这些因素都能被事务性能收集器发现和度量。 因此，事务性能分析报告不保证实际性能收益会符合其预测（如果作出任何预测）。  
   
- 安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时选择“管理工具 - 基本”或“管理工具 - 高级”，或[下载 SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 时，事物性能分析报表和迁移顾问会作为 SQL Server Management Studio (SSMS) 的部分安装 。    
+ 安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 时选择“管理工具 - 基本”或“管理工具 - 高级”，或[下载 SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 时，事物性能分析报表和迁移顾问会作为 SQL Server Management Studio (SSMS) 的部分安装 。    
   
 ## <a name="transaction-performance-analysis-reports"></a>事务性能分析报表  
  通过右键单击数据库，然后依次选择“报表”、“标准报表”、“事务性能分析概述”，可以在“对象资源管理器”中生成事务性能分析报表。 数据库需要有活动的工作负载或最近运行的工作负载，才能生成有意义的分析报表。  

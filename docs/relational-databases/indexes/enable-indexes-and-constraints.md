@@ -19,17 +19,17 @@ ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9df5eb968e329f67fd9a98f7ddb1d4eff027a35
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0d309a308e71057f71fd20b0d0652d14a6011ce5
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460360"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048900"
 ---
 # <a name="enable-indexes-and-constraints"></a>启用索引和约束
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中启用已禁用的索引。 索引被禁用后一直保持禁用状态，直到它重新生成或删除。  
+  本主题介绍了如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中启用已禁用的索引。 索引被禁用后一直保持禁用状态，直到它重新生成或删除。  
   
  **本主题内容**  
   

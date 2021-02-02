@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 05f3dd9658ca51e1208476f8d11b387a79eb0234
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 4038ba678af8635f3ac2bd12f68c818a61e2c87f
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96125564"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075628"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>将 SQL Server 数据库还原到某个时点（完整恢复模式）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将数据库还原到 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的某个时间点。 本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库有关。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将数据库还原到 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的某个时间点。 本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库有关。  
   
 > [!IMPORTANT]  
 >  在大容量日志恢复模式下，如果日志备份包含大容量更改，则不能使用时点恢复方式恢复到该备份内的某个点。 必须将数据库恢复到事务日志备份的结尾。  

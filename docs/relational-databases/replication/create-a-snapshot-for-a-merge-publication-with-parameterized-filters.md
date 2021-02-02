@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0229c5fb1166d49c8e4db2e80fbed03c0ea95a9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 89a470964db8b0475a6c5d4f20a5007337645cb1
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868305"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076149"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>为包含参数化筛选器的合并发布创建快照
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中通过参数化筛选器为合并发布创建快照。  
+本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中通过参数化筛选器为合并发布创建快照。  
 
 在合并发布中使用参数化行筛选器时，复制将使用由两部分构成的快照初始化各个订阅。 首先，创建一个架构快照，该快照包含复制所需的所有对象和已发布对象的架构，但不包含数据。 然后，使用快照初始化每个订阅，该快照包含架构快照中的对象和架构以及属于订阅分区的数据。 如果多个订阅接收某个给定分区（即这些订阅接收相同的架构和数据），则该分区的快照只创建一次；多个订阅通过使用相同的快照来初始化。 有关参数化行筛选器的详细信息，请参阅 [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "91868305"
  若要为包含参数化筛选器的发布创建快照，请参阅 [为包含参数化筛选器的合并发布创建快照](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>快照代理的安全设置  
- 快照代理为每个分区创建快照。 对于预生成的快照和订阅服务器请求的快照，代理使用在创建发布的快照代理作业时（该作业通过新建发布向导或 **sp_addpublication_snapshot**创建）指定的凭据运行和进行连接。 若要更改凭据，请使用 **sp_changedynamicsnapshot_job**。 有关详细信息，请参阅 [sp_changedynamicsnapshot_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)。  
+ 快照代理为每个分区创建快照。 对于预生成的快照和订阅服务器请求的快照，代理使用在创建发布的快照代理作业时（该作业通过新建发布向导或 **sp_addpublication_snapshot** 创建）指定的凭据运行和进行连接。 若要更改凭据，请使用 **sp_changedynamicsnapshot_job**。 有关详细信息，请参阅 [sp_changedynamicsnapshot_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)。  
 
   
 ##  <a name="recommendations"></a><a name="Recommendations"></a> 建议  

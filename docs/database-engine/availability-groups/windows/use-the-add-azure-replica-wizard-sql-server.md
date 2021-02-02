@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7fb9c44c90dbedbdc0a123f4b8c09088f7392d50
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 91f906b996c44cd9798d9754ca0345ca8892db10
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641791"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076359"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>将 Azure VM 配置为可用性组中的次要副本
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "97641791"
   
 1.  首先，为你的 Azure 订阅下载管理证书。 单击“下载”打开登录页面。  
   
-2.  使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](/previous-versions/jj592903(v=msdn.10)) 和 [组织帐户登录问题的疑难解答](https://support.microsoft.com/kb/2756852)。  
+2.  使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](/previous-versions/jj592903(v=msdn.10)) 和 [组织帐户登录问题的疑难解答](http://web.archive.org/web/20121016005434/http://support.microsoft.com:80/kb/2756852)。  
   
 3.  然后单击 **“连接”** 连接到您的订阅。 连接后，下拉列表用 Azure 参数进行填充，例如“虚拟网络”和“虚拟网络子网”。  
   

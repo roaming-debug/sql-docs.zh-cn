@@ -17,19 +17,19 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8471695cfde49d36ba107264fa23654757d8c2ab
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 8a8f1575cab349c6c501f6aa98509e8595efeb77
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241866"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049117"
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为可以选择分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在默认情况下支持多达 15,000 个分区。 在早于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，默认情况下，分区数限制为 1000 个。  
+> [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 在默认情况下支持多达 15,000 个分区。 在早于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，默认情况下，分区数限制为 1000 个。  
   
 ## <a name="benefits-of-partitioning"></a>分区的优点  
  通过对大型表或索引进行分区，可以具有以下可管理性和性能优点。  

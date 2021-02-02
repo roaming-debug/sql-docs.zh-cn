@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ac65acde470d75c616e77d21f6e62ab8d1f5e4e4
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 8b18603ce1dce86a304a1da06fcdd8b7b1414519
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241837"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813132"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 设计器控制台简介
 
@@ -51,7 +51,7 @@ ms.locfileid: "98241837"
 
 ### <a name="target-sql-server-database"></a>目标 SQL Server 数据库
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本  
+-   [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本  
   
 ## <a name="software-prerequisites"></a>必备软件  
  你必须根据所安装的 Oracle CDC 设计器控制台的版本，使用 Oracle 客户端软件的 32 位或 64 位版本。  

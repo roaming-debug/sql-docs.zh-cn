@@ -16,16 +16,16 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 4f782c5b58c2110eb2181b4ede639a62f9544b39
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 796953a657cbdafce8e4b2a62aa90ea69a5cec8c
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479928"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076329"
 ---
 # <a name="initialize-a-subscription-manually"></a>手动初始化订阅
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中手动初始化订阅。 虽然初始快照通常用于初始化订阅，但如果架构和初始数据已经在订阅服务器上存在，则可以在不使用快照的情况下初始化对发布的订阅。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中手动初始化订阅。 虽然初始快照通常用于初始化订阅，但如果架构和初始数据已经在订阅服务器上存在，则可以在不使用快照的情况下初始化对发布的订阅。  
   
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  

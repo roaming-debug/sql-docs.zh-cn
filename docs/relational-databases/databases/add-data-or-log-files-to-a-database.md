@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 563a075ec3cba0cc25980e59a228a5c319075caa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0e411e82a6492fda48cc8d3541dbd272075f994
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727578"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813134"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>向数据库中添加数据文件或日志文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向数据库添加数据文件或日志文件。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向数据库添加数据文件或日志文件。  
   
  **本主题内容**  
   
