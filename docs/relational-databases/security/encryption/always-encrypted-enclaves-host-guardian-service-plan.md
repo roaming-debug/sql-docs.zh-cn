@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4c80a51370de62410367b1225fd85e3ffe7f261
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: d156b2c02d67c947041de268962579d6417202e2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534796"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235746"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>规划主机保护者服务证明
 
@@ -118,7 +118,7 @@ TPM 证明需要安全启动，以确保 UEFI 加载了由 Microsoft 签名的�
 
 这些要求包括：
 
-- [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 或更高版本
+- [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] 或更高版本
 - Windows 10 企业版 1809 或更高版本；或是 Windows Server 2019 Datacenter 版本。 其他版本的 Windows 10 和 Windows Server 不支持通过 HGS 进行证明。
 - 针对虚拟化技术的 CPU 支持：
   - 具有扩展页表的 Intel VT-x。

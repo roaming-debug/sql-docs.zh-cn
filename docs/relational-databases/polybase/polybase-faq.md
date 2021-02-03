@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 57d59e774c1042bf7989bcd2df4a652ed4498f0d
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: 70ffec480513c7a002a8691f2624a604bc82ead0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563133"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235807"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 
@@ -36,7 +36,7 @@ ms.locfileid: "96563133"
 
 ## <a name="whats-new-in-polybase-2019"></a>PolyBase 2019 中的新增功能 
 
-[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]中的 PolyBase 现可从更多种数据源读取数据。 这些外部数据源中的数据可作为外部表存储在 SQL Server 上。 PolyBase 还支持对这些外部数据源进行下推计算（不包括 ODBC 泛型类型）。
+[!INCLUDE[sssql19](../../includes/sssql19-md.md)]中的 PolyBase 现可从更多种数据源读取数据。 这些外部数据源中的数据可作为外部表存储在 SQL Server 上。 PolyBase 还支持对这些外部数据源进行下推计算（不包括 ODBC 泛型类型）。
 
 ### <a name="compatible-data-sources"></a>兼容的数据源
 
@@ -51,7 +51,7 @@ ms.locfileid: "96563133"
 
 ## <a name="polybase-in-big-data-clusters-vs-polybase-in-stand-alone-instances"></a>大数据群集中的 PolyBase 与独立实例中的 PolyBase
 
-下表主要说明了 [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]独立安装和 [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]大数据群集提供的 PolyBase 功能：
+下表主要说明了 [!INCLUDE[sssql19](../../includes/sssql19-md.md)]独立安装和 [!INCLUDE[sssql19](../../includes/sssql19-md.md)]大数据群集提供的 PolyBase 功能：
 
 |Feature |大数据群集|独立实例|
 |--------------------------|--------------------------|---------|   
@@ -64,4 +64,4 @@ ms.locfileid: "96563133"
 |执行横向扩展查询 | X| X（仅限 Windows） |
 
 > [!NOTE]
->此表未说明最新的 [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP 提供的功能。 有关可用功能的信息，请参阅发行说明。 有关使用 ODBC 泛型连接器进行连接的详细信息，请访问我们的[配置 ODBC 泛型类型的操作指南](polybase-configure-odbc-generic.md)。
+>此表未说明最新的 [!INCLUDE[sssql19](../../includes/sssql19-md.md)] CTP 提供的功能。 有关可用功能的信息，请参阅发行说明。 有关使用 ODBC 泛型连接器进行连接的详细信息，请访问我们的[配置 ODBC 泛型类型的操作指南](polybase-configure-odbc-generic.md)。

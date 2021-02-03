@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ef3d409ae656776b870119ccd14cb211cc16b32c
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 72bf9910a86d66ac36cbebbb0be66f8a8df832e5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125561"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235769"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "96125561"
   
  * *\** _ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Enterprise Edition 中可用  
   
- _ *\*\** * 对于所需条件，请参阅本主题后面的[简单恢复模式下的还原限制](#RMsimpleScenarios)。  
+ _ *\*\** * 对于所需条件，请参阅本主题后面的 [简单恢复模式下的还原限制](#RMsimpleScenarios)。  
   
 > [!IMPORTANT]  
 > 无论数据库的恢复模式如何，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份都无法还原到早于创建该备份的版本的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本。  
@@ -179,9 +179,9 @@ ms.locfileid: "96125561"
 -   [恢复顾问：使用 SSMS 创建/还原拆分备份](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> 加速数据库恢复
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中提供了[加速数据库恢复](/azure/sql-database/sql-database-accelerated-database-recovery/) 通过重新设计 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [恢复过程](#TlogAndRecovery)，加速数据库恢复极大地提高了数据库可用性，尤其是存在长时间运行的事务时。 启用了加速数据库恢复的数据库在故障转移或其他非干净关闭后完成恢复过程的速度显著加快。 启用加速数据库恢复后，回滚取消长时间运行的事务的速度也显著加快。
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中提供了[加速数据库恢复](/azure/sql-database/sql-database-accelerated-database-recovery/) 通过重新设计 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [恢复过程](#TlogAndRecovery)，加速数据库恢复极大地提高了数据库可用性，尤其是存在长时间运行的事务时。 启用了加速数据库恢复的数据库在故障转移或其他非干净关闭后完成恢复过程的速度显著加快。 启用加速数据库恢复后，回滚取消长时间运行的事务的速度也显著加快。
 
-可使用以下语法对 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 按数据库启用加速数据库恢复：
+可使用以下语法对 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 按数据库启用加速数据库恢复：
 
 ```sql
 ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
