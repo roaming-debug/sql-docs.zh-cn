@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -22,35 +22,35 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 39542dd45b9d3aaec1eca6e0fd507f73fe7326a9
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0ab00bacdceaeed33748c9076a859ba81d6a9644
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116949"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187819"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>精度、小数位数和长度 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 精度指数字的位数。 小数位数指小数点后的数字位数。 例如，数 123.45 的精度是 5，小数位数是 2。
   
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，numeric 和 decimal 数据类型的默认最大精度为 38********。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中，默认最大精度为 28。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，numeric 和 decimal 数据类型的默认最大精度为 38。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中，默认最大精度为 28。
   
-数字数据类型的长度是存储此数所占用的字节数。 对于 varchar 和 char，字符串的长度是指字节数。 对于 nvarchar 和 nchar，字符串的长度是指字节对数。 binary、varbinary 和 image 数据类型的长度是字节数************。 例如，int 数据类型可以有 10 位数，用 4 个字节存储，不接受小数点****。 int 数据类型的精度是 10，长度是 4，小数位数是 0****。
+数字数据类型的长度是存储此数所占用的字节数。 对于 varchar 和 char，字符串的长度是指字节数。 对于 nvarchar 和 nchar，字符串的长度是指字节对数。 binary、varbinary 和 image 数据类型的长度是字节数。 例如，int 数据类型可以有 10 位数，用 4 个字节存储，不接受小数点。 int 数据类型的精度是 10，长度是 4，小数位数是 0。
   
-如果 char、varchar、binary 和 varbinary 表达式中的两种相串联，所生成表达式的长度是两个源表达式长度之和（不超过 8,000 个字节）****************。
+如果 char、varchar、binary 和 varbinary 表达式中的两种相串联，所生成表达式的长度是两个源表达式长度之和（不超过 8,000 个字节）。
   
-如果两个 nchar 或 nvarchar 表达式相串联，所生成表达式的长度是两个源表达式长度之和（不超过 4,000 个字节对）********。
+如果两个 nchar 或 nvarchar 表达式相串联，所生成表达式的长度是两个源表达式长度之和（不超过 4,000 个字节对）。
   
 使用 UNION、EXCEPT 或 INTERSECT 对数据类型相同但长度不同的两个表达式进行比较时，得到的长度为两个表达式中较大的长度。
   
-除了 decimal 类型之外，数字数据类型的精度和小数位数都是固定的****。 如果算术运算符有两个相同类型的表达式，结果就为该数据类型，并且具有对此类型定义的精度和小数位数。 如果运算符有两个不同数字数据类型的表达式，则由数据类型优先级决定结果的数据类型。 结果具有为该数据类型定义的精度和小数位数。
+除了 decimal 类型之外，数字数据类型的精度和小数位数都是固定的。 如果算术运算符有两个相同类型的表达式，结果就为该数据类型，并且具有对此类型定义的精度和小数位数。 如果运算符有两个不同数字数据类型的表达式，则由数据类型优先级决定结果的数据类型。 结果具有为该数据类型定义的精度和小数位数。
   
-下表定义了当运算结果是 decimal 类型时，如何计算结果的精度和小数位数****。 出现以下任一情况时，结果为 decimal 类型****：
--   两个表达式都是 decimal 类型****。  
--   一个表达式是 decimal 类型，而另一个是比 decimal 优先级低的数据类型********。  
+下表定义了当运算结果是 decimal 类型时，如何计算结果的精度和小数位数。 出现以下任一情况时，结果为 decimal 类型：
+-   两个表达式都是 decimal 类型。  
+-   一个表达式是 decimal 类型，而另一个是比 decimal 优先级低的数据类型。  
   
-操作数表达式由表达式 e1（精度为 p1，小数位数为 s1）和表达式 e2（精度为 p2，小数位数为 s2）来表示。 非 decimal 类型的任何表达式的精度和小数位数，是对此表达式数据类型定义的精度和小数位数****。 函数 max(a,b) 的涵义如下：取 "a" 和 "b" 中较大的值。 同样，min(a,b) 表示取 "a" 和 "b" 中较小的值。
+操作数表达式由表达式 e1（精度为 p1，小数位数为 s1）和表达式 e2（精度为 p2，小数位数为 s2）来表示。 非 decimal 类型的任何表达式的精度和小数位数，是对此表达式数据类型定义的精度和小数位数。 函数 max(a,b) 的涵义如下：取 "a" 和 "b" 中较大的值。 同样，min(a,b) 表示取 "a" 和 "b" 中较小的值。
   
 |操作|结果精度|结果小数位数 *|  
 |---|---|---|

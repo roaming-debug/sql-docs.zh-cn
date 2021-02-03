@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caf0fcb2a9b00c8f391280395629348f055d4039
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0cf40a6b16c1a2750180a5646e17ad317fe3c1bf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100945"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194285"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -184,7 +184,7 @@ SET **@** _cursor_variable_ 的语法规则不包含 LOCAL 和 GLOBAL 关键字�
   
 可将复合赋值运算符用于存在赋值（在运算符的右侧有一个表达式，包括变量）的任何地方以及 UPDATE、SELECT 和 RECEIVE 语句的 SET 中。  
   
-不要在 SELECT 语句中使用变量来连接值（即，计算聚合值）。 可能发生了意外查询结果。 因为，SELECT 列表中的所有表达式（包括赋值）不一定对于每个输出行仅执行一次。 有关详细信息，请参阅[此知识库文章](https://support.microsoft.com/kb/287515)。  
+不要在 SELECT 语句中使用变量来连接值（即，计算聚合值）。 可能发生了意外查询结果。 因为，SELECT 列表中的所有表达式（包括赋值）不一定对于每个输出行仅执行一次。 有关详细信息，请参阅[此知识库文章](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/287515)。  
   
 ## <a name="permissions"></a>权限  
 要求具有 public 角色的成员身份。 所有用户都可以使用 SET @local_variable。  

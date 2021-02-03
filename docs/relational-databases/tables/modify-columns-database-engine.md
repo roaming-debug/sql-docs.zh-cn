@@ -16,17 +16,17 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3ac033c53e57093e87619616e23112400115421
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 099e0d09eff857f0480ec61ae4966490cfc61bc1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462578"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195785"
 ---
 # <a name="modify-columns-database-engine"></a>修改列（数据库引擎）
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改列的数据类型。  
+  您可以通过使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改列的数据类型。  
   
 > [!WARNING]  
 >  如果修改已包含数据的列的数据类型，则在将现有数据转换为新类型时可能会导致永久丢失数据。 此外，依赖于所修改列的代码和应用程序可能会失败。 这些代码和应用程序包括查询、视图、存储过程、用户定义函数和客户端应用程序等。 注意，这些错误会级联发生。 例如，如果一个存储过程调用一个依赖于所修改列的用户定义函数，则该存储过程可能会失败。 请在需要对列进行任何更改之前慎重考虑。  

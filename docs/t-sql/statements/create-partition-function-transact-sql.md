@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE PARTITION FUNCTION
 - PARTITION
@@ -28,17 +28,17 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d1bb72ca6736a49874050043b84a961928aed370
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7e1c2b7c6c3b6e12ae3865a5c35ad8f9904cba4f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093477"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188571"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  在当前数据库中创建一个函数，该函数可根据指定列的值将表或索引的各行映射到分区。 使用 CREATE PARTITION FUNCTION 是创建已分区表或索引的第一步。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，一张表或一个索引最多可以有 15,000 个分区。  
+  在当前数据库中创建一个函数，该函数可根据指定列的值将表或索引的各行映射到分区。 使用 CREATE PARTITION FUNCTION 是创建已分区表或索引的第一步。 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中，一张表或一个索引最多可以有 15,000 个分区。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER COLUMN ENCRYPTION
 - ALTER_COLUMN_ENCRYPTION_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: a90e0e787abdaedb4cde1a3461349fcd521c6cf9
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: b9aaf24adad7cc1451b32173bedefc30fbff60eb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646387"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191051"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 
@@ -51,13 +51,13 @@ ALTER COLUMN ENCRYPTION KEY key_name
  key_name  
  要更改的列加密密钥。  
   
- column_master_key_name**  
+ column_master_key_name  
  指定用于对列加密密钥 (CEK) 进行加密的列主密钥 (CMK) 的名称。  
   
- algorithm_name**  
- 用于对值进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP****。 删除列加密密钥值时，此参数无效。  
+ algorithm_name  
+ 用于对值进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP。 删除列加密密钥值时，此参数无效。  
   
- varbinary_literal**  
+ varbinary_literal  
  使用指定的主加密密钥加密的 CEK BLOB。 删除列加密密钥值时，此参数无效。  
   
 > [!WARNING]  
@@ -78,7 +78,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 可使用 [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 查看有关列加密密钥的相关信息。  
   
 ## <a name="permissions"></a>权限  
- 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限****。  
+ 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限。  
   
 ## <a name="examples"></a>示例  
   

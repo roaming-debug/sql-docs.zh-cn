@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CERTPROPERTY
 - CERTPROPERTY_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bbba412b97f88d52afa9a304c3cbbb101f74772b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3b345594914d4fcb4439def47251cb63c22d07b1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88367273"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193437"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 Cert_ID  
 int 数据类型的证书 ID 值。
   
-Expiry_Date**  
+Expiry_Date  
 证书过期日期。
   
 Start_Date  
@@ -68,16 +68,16 @@ Cert_Serial_Number
  *SID*  
 证书 SID。 这也是映射到该证书的所有登录或用户的 SID。
   
-String_SID**  
+String_SID  
 字符串形式的证书的 SID。 这也是映射到该证书的所有登录或用户的 SID。
   
 ## <a name="return-types"></a>返回类型
 必须以单引号括起属性规范。
   
-返回类型取决于在函数调用中指定的属性。 返回类型 sql_variant 包装所有返回值****。
--   Expiry_Date 和 Start_Date 返回 datetime********。  
--   Cert_Serial_Number、Issuer_Name、String_SID 和 Subject 全部都返回 nvarchar************。  
--   SID 返回 varbinary******。  
+返回类型取决于在函数调用中指定的属性。 返回类型 sql_variant 包装所有返回值。
+-   Expiry_Date 和 Start_Date 返回 datetime。  
+-   Cert_Serial_Number、Issuer_Name、String_SID 和 Subject 全部都返回 nvarchar。  
+-   SID 返回 varbinary。  
   
 ## <a name="remarks"></a>注解  
 请参阅 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目录视图中的证书信息。

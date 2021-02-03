@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER_APPLICATION_ROLE_TSQL
 - ALTER APPLICATION ROLE
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c20b880e586572cb7f4ac3687663e6f7c2ba012e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f697afc214f830ad853e5e82597f749d66e82ecd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488064"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194696"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 
@@ -53,17 +53,17 @@ ALTER APPLICATION ROLE application_role_name
 
 ## <a name="arguments"></a>参数
 
- application_role_name**  
+ application_role_name  
  要修改的应用程序角色的名称。  
   
- NAME =new_application_role_name**  
+ NAME =new_application_role_name  
  指定应用程序角色的新名称。 该名称一定不能被用于引用数据库中任何主体。  
   
  PASSWORD ='password'  
  指定应用程序角色的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 应始终使用强密码。  
   
  DEFAULT_SCHEMA =schema_name  
- 指定服务器在解析对象名时将搜索的第一个架构。 schema_name 可以是数据库中不存在的架构**。  
+ 指定服务器在解析对象名时将搜索的第一个架构。 schema_name 可以是数据库中不存在的架构。  
   
 ## <a name="remarks"></a>备注
 
