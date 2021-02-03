@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE_COLUMN_ENCRYPTION_KEY_TSQL
 - SQL13.SWB.NEWCOLUMNENCRYPTIONKEY.GENERAL.F1
@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 62e2338159e845f206d4dbc119414a6bc35b7e1b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: ad44213480ea1a48e49c685952474b436491c65b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645022"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204923"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 
@@ -66,10 +66,10 @@ WITH VALUES
 key\_name  
 列加密密钥在数据库中所使用的名称。  
   
-column\_master\_key\_name__ 指定用于加密列加密密钥的自定义 CMK 的名称。  
+column\_master\_key\_name 指定用于加密列加密密钥的自定义 CMK 的名称。  
   
 algorithm\_name  
-用于对列加密密钥进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP****。  
+用于对列加密密钥进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP。  
   
 varbinary\_literal  
 已加密的列加密密钥值 BLOB。  
@@ -92,7 +92,7 @@ Always Encrypted 支持的加密算法要求纯文本值具有 256 位。
 可使用 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 查看列加密密钥的相关信息。  
   
 ## <a name="permissions"></a>权限  
-需要 ALTER ANY COLUMN ENCRYPTION KEY 权限****。  
+需要 ALTER ANY COLUMN ENCRYPTION KEY 权限。  
   
 ## <a name="examples"></a>示例  
   

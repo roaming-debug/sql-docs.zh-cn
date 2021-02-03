@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 3f65a2f5-a6c6-4be5-8ca4-6057078fe10e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59f2fa47cad4fc082b3227e30fedb114dab4281b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 945d89ba3d9ab32af6f5d46cc2a9ad9f83850bf0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095644"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205400"
 ---
 # <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
  *external_data_source_name*  
  要删除的外部数据源的名称。  
   
-## <a name="metadata"></a>Metadata  
+## <a name="metadata"></a>元数据  
  若要查看外部数据源的列表，请使用 sys.external_data_sources 系统视图。  
   
 ```sql  

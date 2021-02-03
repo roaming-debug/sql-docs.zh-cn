@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - Lat
 - Lat_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e6aff42dafc123d19fd8a2ea9a2ffa637cc54ee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 229a6b37896cc30cb070ae8e23c2289a4ecb8347
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422361"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208724"
 ---
 # <a name="lat-geography-data-type"></a>Lat（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  geography 实例的纬度属性****。  
+  geography 实例的纬度属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "88422361"
  CLR 类型：**SqlDouble**  
   
 ## <a name="remarks"></a>备注  
- 在 OpenGIS 模型中，仅对由一个点组成的 geography 实例定义 Lat****。 如果 geography 实例包含多个点，则此属性返回 NULL****。 此属性是精确属性，且是只读的。  
+ 在 OpenGIS 模型中，仅对由一个点组成的 geography 实例定义 Lat。 如果 geography 实例包含多个点，则此属性返回 NULL。 此属性是精确属性，且是只读的。  
   
 ## <a name="examples"></a>示例  
  此示例创建一个点并返回该点的纬度。  

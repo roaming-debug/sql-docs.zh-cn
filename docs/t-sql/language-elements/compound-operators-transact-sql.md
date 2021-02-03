@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 2666168b9123d5656c2e9822cb8c5bfc328e9a0f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9fe8dedde26a421d58930c9df4861c9ce64d8973
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092184"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208206"
 ---
 # <a name="compound-operators-transact-sql"></a>复合运算符 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "98092184"
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 提供了以下复合运算符：  
   
-|运算符|详细信息链接|操作|  
+|操作员|详细信息链接|操作|  
 |--------------|------------------------------|------------|  
 |+=|[+=（加法赋值）(Transact-SQL)](../../t-sql/language-elements/add-equals-transact-sql.md)|将原始值加上一定的量，并将原始值设置为结果。|  
 |-=|[-=（减法赋值）(Transact-SQL)](../../t-sql/language-elements/subtract-equals-transact-sql.md)|将原始值减去一定的量，并将原始值设置为结果。|  

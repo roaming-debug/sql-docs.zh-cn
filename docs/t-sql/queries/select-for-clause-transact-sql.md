@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FOR
 - FOR CLAUSE
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a3f8fb497c95bd7f1df6f1ea8a51be938bc1a555
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99b47c3d47e7403e04cfff4b62ff5c1d78bb6071
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479449"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207551"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 子句 (Transact-SQL)
 
@@ -265,7 +265,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
  PATH  
  通过指定   
-            FOR JSON PATH 获取对 JSON 输出格式的完全控制。 借助**PATH** 模式，你可以创建包装器对象，并嵌套复杂属性。 有关详细信息和示例，请参阅[在 PATH 模式下设置嵌套的 JSON 输出格式 (SQL Server)](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)。  
+            FOR JSON PATH 获取对 JSON 输出格式的完全控制。 借助 **PATH** 模式，你可以创建包装器对象，并嵌套复杂属性。 有关详细信息和示例，请参阅[在 PATH 模式下设置嵌套的 JSON 输出格式 (SQL Server)](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)。  
   
  INCLUDE_NULL_VALUES  
  通过使用 FOR JSON 子句指定 INCLUDE_NULL_VALUES 选项，在 JSON 输出中包括 NULL 值 。 如果没有指定此选项，输出不会在查询结果中包括 NULL 值的 JSON 属性。 有关详细信息和示例，请参阅[使用 INCLUDE_NULL_VALUES 选项将 NULL 值包含在 JSON 输出中 &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md)。  

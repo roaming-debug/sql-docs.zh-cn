@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - STRING_ESCAPE
 - STRING_ESCAPE_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017
-ms.openlocfilehash: de472b06f2d6747ced93a36f3563188e3d537d36
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fb23ecedcaa224d66a6d23a113e696dd05caae05
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461218"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207927"
 ---
 # <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
@@ -46,7 +46,7 @@ STRING_ESCAPE( text , type )
  *text*  
  表示应转义对象的 nvarchar [表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- *type*  
+ type   
  对将要应用的规则进行转义。 目前支持的值是 `'json'`。  
   
 ## <a name="return-types"></a>返回类型

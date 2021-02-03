@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1
 - SQL13.SWB.COLUMNMASTERKEYDEF.GENERAL.F1
@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 081941d580e51188f63c54953caa30004c83c6d0
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 6e18a1e0721428dcbfdb649be46ca83fd0d42972
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300400"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204936"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -62,7 +62,7 @@ CREATE COLUMN MASTER KEY key_name
 key_name  
 数据库中的列主密钥的名称。  
   
-key_store_provider_name   
+key_store_provider_name  
 指定密钥存储提供程序的名称。 密钥存储提供程序是一个客户端软件组件，用于保存包含列主密钥的密钥存储。 
 
 启用了 Always Encrypted 的客户端驱动程序：
@@ -94,16 +94,16 @@ key_store_provider_name
 key_path  
 列主密钥存储中的密钥路径。 密钥路径必须对于预期要加密或解密数据的每个客户端应用程序都有效。 数据存储在受到引用列主密钥（间接）保护的列中。 客户端应用程序必须具有密钥访问权限。 密钥路径的格式特定于密钥存储提供程序。 以下列表描述了特定的 Microsoft 系统密钥存储提供程序的密钥路径的格式。  
   
--   提供程序名称：MSSQL_CERTIFICATE_STORE   
+-   提供程序名称：MSSQL_CERTIFICATE_STORE  
   
-    密钥路径格式：CertificateStoreName/CertificateStoreLocation/CertificateThumbprint    
+    密钥路径格式：CertificateStoreName/CertificateStoreLocation/CertificateThumbprint   
   
      其中：  
   
     CertificateStoreLocation  
     证书存储位置，必须为当前用户或本地计算机。 有关详细信息，请参阅 [Local Machine and Current User Certificate Stores](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores)（本地计算机和当前用户证书存储）。  
   
-    CertificateStore   
+    CertificateStore  
     证书存储名称，例如 My。  
   
     CertificateThumbprint  
@@ -117,9 +117,9 @@ key_path
     N'LocalMachine/My/CA5BFA8878FB94BBF037EC4A133ADCA89FFAEC16'  
     ```  
   
--   提供程序名称：MSSQL_CSP_PROVIDER   
+-   提供程序名称：MSSQL_CSP_PROVIDER  
   
-    密钥路径格式：ProviderName/KeyIdentifier    
+    密钥路径格式：ProviderName/KeyIdentifier   
   
     其中：  
   
@@ -135,9 +135,9 @@ key_path
     N'My HSM CSP Provider/AlwaysEncryptedKey1'  
     ```  
   
--   提供程序名称：MSSQL_CNG_STORE   
+-   提供程序名称：MSSQL_CNG_STORE  
   
-    密钥路径格式：ProviderName/KeyIdentifier    
+    密钥路径格式：ProviderName/KeyIdentifier   
   
     其中：  
   
@@ -153,13 +153,13 @@ key_path
     N'My HSM CNG Provider/AlwaysEncryptedKey1'  
     ```  
 
--   提供程序名称：AZURE_KEY_STORE   
+-   提供程序名称：AZURE_KEY_STORE  
   
-    密钥路径格式：KeyUrl    
+    密钥路径格式：KeyUrl   
   
     其中：  
   
-    KeyUrl   
+    KeyUrl  
     Azure Key Vault 中密钥的 URL
 
 ENCLAVE_COMPUTATIONS  
@@ -176,7 +176,7 @@ ENCLAVE_COMPUTATIONS
 
   
 ## <a name="permissions"></a>权限  
-需要 ALTER ANY COLUMN MASTER KEY 权限  。  
+需要 ALTER ANY COLUMN MASTER KEY 权限。  
   
 ## <a name="examples"></a>示例  
   

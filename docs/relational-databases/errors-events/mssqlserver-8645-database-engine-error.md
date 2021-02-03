@@ -6,18 +6,18 @@ ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 8645 (Database Engine error)
 ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c332f76355942fea982677608b1785674dce019a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f1772c8c73fb18173916b91ea14adf3cf997f4d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88331393"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205677"
 ---
 # <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88331393"
   
     -   **min memory per query**  
   
-    注意不正常的设置。 根据需要更正它们。 满足 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的更高内存要求。 SQL Server 联机丛书的“设置服务器配置选项”中列出了默认设置。  
+    注意不正常的设置。 根据需要更正它们。 满足 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的更高内存要求。 SQL Server 联机丛书的“设置服务器配置选项”中列出了默认设置。  
   
 4.  在您看到这些错误消息时，观察 DBCC MEMORYSTATUS 输出及其变化情况。  
   
