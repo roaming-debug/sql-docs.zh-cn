@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - Filter
 - Filter_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 11092f892c9e6e756849f368a44db3ec7f3d0a61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e52b7593ee0d47039681d4b87dea273fb369d34f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88359253"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187232"
 ---
 # <a name="filter-geometry-data-type"></a>Filter（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88359253"
   
 如果一个 **geometry** 实例与另一个 **geometry** 实例存在相交的可能，则返回 1。 该方法可能产生假正返回，并且确切结果可能依赖于计划。 如果 **geometry** 实例之间不存在相交，则返回精确的 0 值（真负返回）。
   
-在无可用索引或未使用索引的情况下，该方法返回的值将与使用相同参数调用 STIntersects() 返回的值相同****。
+在无可用索引或未使用索引的情况下，该方法返回的值将与使用相同参数调用 STIntersects() 返回的值相同。
   
 ## <a name="syntax"></a>语法  
   
@@ -46,12 +46,12 @@ ms.locfileid: "88359253"
 
 ## <a name="arguments"></a>参数
  *other_geometry*  
- 将与调用 Filter() 的实例进行比较的另一个 geometry 实例****。  
+ 将与调用 Filter() 的实例进行比较的另一个 geometry 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型：SqlBoolean****  
+ CLR 返回类型：SqlBoolean  
   
 ## <a name="remarks"></a>注解  
  此方法是不具有确定性的方法，而且不精确。  

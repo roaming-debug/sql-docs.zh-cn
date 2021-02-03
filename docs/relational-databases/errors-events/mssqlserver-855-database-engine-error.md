@@ -6,18 +6,18 @@ ms.date: 08/20/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 855 (Database Engine error)
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: c65a48247359437c6680141b60c5e54463b03991
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 6e68601a2690149b61fcea661d26843f16079a03
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418702"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180981"
 ---
 # <a name="mssqlserver_855"></a>MSSQLSERVER_855
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92418702"
 
 ## <a name="explanation"></a>说明
 
-此消息指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在缓冲池外部的缓存对象中检测到错误内存页面。 在支持从内存错误中恢复的系统上会出现此消息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法在出现这些情况时恢复，而且无法记录此消息。
+此消息指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在缓冲池外部的缓存对象中检测到错误的内存页面。 在支持从内存错误中恢复的系统上会出现此消息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法在出现这些情况时恢复，而且无法记录此消息。
 
 ## <a name="user-action"></a>用户操作
 
@@ -58,7 +58,7 @@ ms.locfileid: "92418702"
 
 如果相应缓冲池或数据页面当前未更改或未处理 I/O，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可放弃并取消提交数据页页面。 然后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会记录以下消息：
 
-> SQL Server 检测到数据库“%ls”中的硬件内存损坏（文件 ID 为 %u、页面 ID为 %u、内存地址为0x%I64x)，并且已成功恢复页面。
+> SQL Server 检测到数据库“%ls”中的硬件内存损坏（文件 ID 为 %u、页面 ID为 %u、内存地址为0x%I64x），并且已成功恢复页面。
 
 当查询再次需要相应数据页面时，缓冲池可从磁盘读回数据页面，并将内容恢复到缓冲池。 页面的磁盘版本也可能会处于已损坏状态。 在这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会记录其他错误，例如错误 824。
 

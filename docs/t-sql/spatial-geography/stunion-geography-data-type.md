@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - STUnion (geography Data Type)
 - STUnion_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ba22383c52908e44ed69efa0d54464290ace86ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1990e524b3816c20c374dca2f01e604411530303
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488248"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186441"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88488248"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- other_geography**  
+ other_geography  
  与调用 STUnion() 的实例形成并集的另一个 **geography** 实例。  
   
 ## <a name="return-types"></a>返回类型  
@@ -49,12 +49,12 @@ ms.locfileid: "88488248"
  CLR 返回类型：SqlGeography  
   
 ## <a name="exceptions"></a>例外  
- 如果实例包含对拓边缘，此方法将引发 ArgumentException****。  
+ 如果实例包含对拓边缘，此方法将引发 ArgumentException。  
   
 ## <a name="remarks"></a>备注  
- 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null****。  
+ 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例****。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例。  
   
  只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   
