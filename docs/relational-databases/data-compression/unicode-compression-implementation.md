@@ -15,12 +15,12 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0a63694f22f825604e5a3b2d453e58ea73766c4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f78e0bbe469861251c95a0d7fc382be4ed333dd0
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485469"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251099"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 压缩的实现
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "97485469"
 >  **nvarchar(max)** 不支持 Unicode 压缩，即使数据存储于行内。 但是，此数据类型仍可以从页压缩中受益。  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>从 SQL Server 的早期版本升级  
- 在某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，将不会对任何数据库对象（无论是压缩的还是未压缩的）进行与 Unicode 压缩相关的更改。 在数据库升级后，对象会受到影响，如下所示：  
+ 在某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库升级到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 时，将不会对任何数据库对象（无论是压缩的还是未压缩的）进行与 Unicode 压缩相关的更改。 在数据库升级后，对象会受到影响，如下所示：  
   
 -   如果该对象未压缩，则不会进行更改，并且对象继续像以前一样工作。  
   

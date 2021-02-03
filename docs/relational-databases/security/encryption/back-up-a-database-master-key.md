@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 922b921649892673f51876c6e2336e05244a1e17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92e8753033e37561b23f2e1d15cb06cef4b662d7
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892436"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250678"
 ---
 # <a name="back-up-a-database-master-key"></a>备份数据库主密钥
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中备份数据库主密钥。 数据库主密钥用于加密数据库里面的其他密钥和证书。 如果主密钥被删除或损坏，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能无法解密数据库里面的其他密钥，并且使用这些密钥加密的数据就如同丢失一样。 出于这个原因，您应备份数据库主密钥，并将备份存储在另外一个安全的位置。  
+  本主题介绍如何使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中备份数据库主密钥。 数据库主密钥用于加密数据库里面的其他密钥和证书。 如果主密钥被删除或损坏，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能无法解密数据库里面的其他密钥，并且使用这些密钥加密的数据就如同丢失一样。 出于这个原因，您应备份数据库主密钥，并将备份存储在另外一个安全的位置。  
   
 ## <a name="before-you-begin"></a>开始之前  
   

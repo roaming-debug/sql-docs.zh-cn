@@ -16,28 +16,28 @@ ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 245a50951896f923165e011fc51c09abd00f96e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b230cc2a880b16b62934c3a89af475dd5cecf96
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421241"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251089"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>检查使用数据库邮件发送的电子邮件的状态
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  本主题说明在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]检查通过数据库邮件发送的电子邮件的状态。  
+  本主题说明在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]检查通过数据库邮件发送的电子邮件的状态。  
   
 -   **开始之前：**  
   
 -   **若要查看通过数据库邮件发送的电子邮件的状态，使用：**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
- 数据库邮件保留发送的电子邮件的副本，并在 **msdb**数据库的 **sysmail_allitems**、 **sysmail_sentitems**、 **sysmail_unsentitems** 、 **sysmail_faileditems** 视图中显示它们。 数据库邮件外部程序记录活动，并通过 Windows 应用程序事件日志以及 **msdb** 数据库的 **sysmail_event_log** 视图显示日志。 若要检查电子邮件的状态，请对此视图运行查询。 电子邮件可以处于下列四种可能的状态之一： **sent**、 **unsent**、 **retrying**和 **failed**。  
+ 数据库邮件保留发送的电子邮件的副本，并在 **msdb** 数据库的 **sysmail_allitems**、 **sysmail_sentitems**、 **sysmail_unsentitems** 、 **sysmail_faileditems** 视图中显示它们。 数据库邮件外部程序记录活动，并通过 Windows 应用程序事件日志以及 **msdb** 数据库的 **sysmail_event_log** 视图显示日志。 若要检查电子邮件的状态，请对此视图运行查询。 电子邮件可以处于下列四种可能的状态之一： **sent**、 **unsent**、 **retrying** 和 **failed**。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看通过数据库邮件发送的电子邮件的状态**  
   
-1.  从 **sysmail_allitems** 表中选择，按 **mailitem_id** 或 **sent_status**指定要检查的邮件。  
+1.  从 **sysmail_allitems** 表中选择，按 **mailitem_id** 或 **sent_status** 指定要检查的邮件。  
   
 2.  若要检查外部程序返回的电子邮件的状态，请将 **sysmail_allitems** 联接到 **sysmail_event_log** 视图中的 **mailitem_id** 列，如下所示。  
   

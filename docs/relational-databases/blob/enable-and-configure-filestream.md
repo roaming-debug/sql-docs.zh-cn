@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e9e0fca818c4988acacfbfa89af718eda8d8ac5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ea678a62f4453232fe8442cf2053c3b951e361ef
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246575"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250656"
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
 
@@ -28,7 +28,7 @@ ms.locfileid: "87246575"
   
 #### <a name="to-enable-and-change-filestream-settings"></a>启用和更改 FILESTREAM 设置  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
 2.  在服务列表中，右键单击“SQL Server 服务”  ，然后单击“打开”  。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "87246575"
 ###  <a name="physical-database-design"></a><a name="database"></a>物理数据库设计  
  设计 FILESTREAM 数据库时，应考虑下列准则：  
   
--   FILESTREAM 列必须附带相应的 **uniqueidentifier**ROWGUID 列。 这些类型的表还必须附带唯一索引。 此索引通常不是聚集索引。 如果数据库业务逻辑需要聚集索引，则必须确保该索引中存储的值不是随机的。 随机值将导致每次向表中添加行或从表中删除行时，索引都会重新排序。  
+-   FILESTREAM 列必须附带相应的 **uniqueidentifier** ROWGUID 列。 这些类型的表还必须附带唯一索引。 此索引通常不是聚集索引。 如果数据库业务逻辑需要聚集索引，则必须确保该索引中存储的值不是随机的。 随机值将导致每次向表中添加行或从表中删除行时，索引都会重新排序。  
   
 -   出于性能方面的考虑，FILESTREAM 文件组和容器应驻留在操作系统、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志、tempdb 或分页文件以外的卷上。  
   

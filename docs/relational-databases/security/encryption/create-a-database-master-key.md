@@ -14,17 +14,17 @@ ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a5c3a93771a24a2cf3d1f5debb77b7026bef963
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f97dbd4425b990cd2ec433afa817081683b38f45
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463118"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251412"
 ---
 # <a name="create-a-database-master-key"></a>创建数据库主密钥
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建数据库主密钥。
+本主题说明如何使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建数据库主密钥。
 
 ## <a name="security"></a>安全性
 

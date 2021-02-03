@@ -14,18 +14,18 @@ ms.assetid: bda1e452-397b-4757-82a4-181217361589
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
-ms.openlocfilehash: 1a5de33ab7ee67f6c74ddff58219d779092cdcec
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 994c22db58c0d06b5a763769688d911cd739b367
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485519"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250704"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>对表或索引禁用压缩功能
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对表或索引禁用压缩功能。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对表或索引禁用压缩功能。  
   
  **本主题内容**  
   

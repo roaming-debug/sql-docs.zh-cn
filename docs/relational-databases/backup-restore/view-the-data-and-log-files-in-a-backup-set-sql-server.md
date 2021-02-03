@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 77cbe9eebacbf1656dc018f6811805636aded45f
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: b96e066b275ebd406fcecd81c185a65ac65abc22
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125299"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250351"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>查看备份集中的数据和日志文件 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看备份集中的数据文件和日志文件。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看备份集中的数据文件和日志文件。  
   
  **本主题内容**  
   

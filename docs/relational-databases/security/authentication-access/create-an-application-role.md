@@ -16,16 +16,16 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df42c1651d460b0be7b0e2900338982168ebd597
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b9d77743864b3b5425379ec7b5c570629b470e04
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468558"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250737"
 ---
 # <a name="create-an-application-role"></a>创建应用程序角色
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建应用程序角色。 应用程序角色可限制用户通过除特定应用程序之外的其他方式访问数据库。 应用程序角色不包含任何用户，因此，在选择 **“应用程序角色”** 时不会显示 **“角色成员”** 列表。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建应用程序角色。 应用程序角色可限制用户通过除特定应用程序之外的其他方式访问数据库。 应用程序角色不包含任何用户，因此，在选择 **“应用程序角色”** 时不会显示 **“角色成员”** 列表。  
   
 > [!IMPORTANT]  
 >  当设置应用程序角色密码时，将检查密码复杂性。 调用应用程序角色的应用程序必须存储其密码。 而且应当始终以加密的形式存储应用程序角色密码。  

@@ -18,16 +18,16 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 4eb7b7530c498a6ce590584aa83b3f38684960a7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1d7779f3e400345efcd183db16bf0d5780365f69
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170769"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250617"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>查看和修改复制安全设置
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中查看和修改复制安全设置。 例如，您可能需要将日志读取器代理到发布服务器的连接从 SQL Server 身份验证更改为 Windows 集成身份验证，或者您可能需要在 Window 帐户密码更改后更改用于运行代理作业的凭据。 有关每个代理所需权限的信息，请参阅 [R复制代理安全模式](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中查看和修改复制安全设置。 例如，您可能需要将日志读取器代理到发布服务器的连接从 SQL Server 身份验证更改为 Windows 集成身份验证，或者您可能需要在 Window 帐户密码更改后更改用于运行代理作业的凭据。 有关每个代理所需权限的信息，请参阅 [R复制代理安全模式](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
  **本主题内容**  
   

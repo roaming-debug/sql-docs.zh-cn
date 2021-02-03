@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 562769cc1f9ce3e895b59811a61026747c0a3724
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193047"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251085"
 ---
 # <a name="data-tier-applications"></a>数据层应用程序
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,16 +48,16 @@ ms.locfileid: "92193047"
   
     -   SQL Server 2008 R2 中引入了 DAC 操作。 除了 SQL Server 2008 R2 数据库以外，这些工具还支持从 SQL Server 2008、SQL Server 2005 和 SQL Server 2000 数据库生成 DACPAC 文件。  
   
-    -   除了 SQL Server 2016 数据库以外，SQL Server 2016 附带的这些工具可读取由 SQL Server 2008 R2 或 SQL Server 2012 附带的 DAC 工具生成的 DACPAC 文件。 这包括 SQL Server 2014、2012、2008 R2、2008 和 2005 中的数据库，但**不**包括 SQL Server 2000 中的数据库。  
+    -   除了 SQL Server 2016 数据库以外，SQL Server 2016 附带的这些工具可读取由 SQL Server 2008 R2 或 SQL Server 2012 附带的 DAC 工具生成的 DACPAC 文件。 这包括 SQL Server 2014、2012、2008 R2、2008 和 2005 中的数据库，但 **不** 包括 SQL Server 2000 中的数据库。  
   
-    -   SQL Server 2008 R2 中的 DAC 工具无法读取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的工具生成的 DACPAC 文件。  
+    -   SQL Server 2008 R2 中的 DAC 工具无法读取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中的工具生成的 DACPAC 文件。  
   
 -   DACPAC 是一个扩展名为 .dacpac 的 Windows 文件。 该文件支持由表示 DACPAC 源的详细信息的多个 XML 部分、数据库中的对象和其他特征构成的开放格式。 高级用户可使用产品附带的 DacUnpack.exe 实用工具来解压缩该文件，以便更仔细地检查每个部分。  
   
 -   用户必须是 dbmanager 角色的成员或分配了 CREATE DATABASE 权限才能创建数据库，包括通过部署 DAC 包来创建数据库   。 用户必须是 dbmanager 角色的成员或分配了 DROP DATABASE 权限才能删除数据库   。  
   
 ## <a name="dac-tools"></a>DAC 工具  
- 可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]附带的多个工具中无缝使用 DACPAC。 这些工具可满足将 DACPAC 用作互操作性单元的各个用户角色的需求。  
+ 可以在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]附带的多个工具中无缝使用 DACPAC。 这些工具可满足将 DACPAC 用作互操作性单元的各个用户角色的需求。  
   
 -   应用程序开发人员：  
   

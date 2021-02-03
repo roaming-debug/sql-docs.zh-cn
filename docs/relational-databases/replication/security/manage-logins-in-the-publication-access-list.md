@@ -18,16 +18,16 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 041a305f31bc1a50065135c97f5cbcd7495ff5e5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 526d46149bbafccf8592a20b8a592012e3d6b6aa
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468848"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250634"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>管理发布访问列表中的登录名
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中管理发布访问列表中的登录名。 对发布的访问是由发布访问列表 (PAL) 控制的。 可以在 PAL 中添加和删除登录名和组。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中管理发布访问列表中的登录名。 对发布的访问是由发布访问列表 (PAL) 控制的。 可以在 PAL 中添加和删除登录名和组。  
   
  **本主题内容**  
   

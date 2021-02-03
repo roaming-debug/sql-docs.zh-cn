@@ -24,17 +24,17 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5c6647b06d058b1b97188810c4a23644d05c4f7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bc69ec8ee89cf994c61450804887b8c60388291f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468588"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250915"
 ---
 # <a name="create-a-login"></a>创建一个登录名
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建登录名。 登录名是连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的个人或进程的标识。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建登录名。 登录名是连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的个人或进程的标识。  
   
 ##  <a name="background"></a><a name="Background"></a> 背景  
  登录名是一个可由安全系统进行身份验证的安全主体或实体。 用户需要使用登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 您可基于 Windows 主体（例如，域用户或 Windows 域组）创建登录名，或者也可创建一个并非基于 Windows 主体的登录名（例如， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名）。  

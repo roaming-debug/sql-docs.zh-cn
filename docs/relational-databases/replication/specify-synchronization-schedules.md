@@ -17,16 +17,16 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 23011d3e0cbe952253c6f3601384d374b12daa3c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a0dac3922e006d34bf1f93c617ae70d79aff27f6
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479718"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250590"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步计划
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定同步计划。 在创建订阅时，可以定义同步计划以控制何时运行订阅的复制代理。 如果没有指定计划参数，则订阅将使用默认计划。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定同步计划。 在创建订阅时，可以定义同步计划以控制何时运行订阅的复制代理。 如果没有指定计划参数，则订阅将使用默认计划。  
   
  订阅由分发代理（对于快照复制和事务复制）或合并代理（对于合并复制）进行同步。 代理可以连续运行、按需运行或按计划运行。  
   

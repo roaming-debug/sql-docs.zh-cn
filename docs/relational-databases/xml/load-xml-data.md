@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 01790e4eacf793926725770f980c8194013a155a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19a0518477c37b9f45f22cdf6b5ded1464cf145e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738407"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250666"
 ---
 # <a name="load-xml-data"></a>加载 XML 数据
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  您可以采用多种方式将 XML 数据传输到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中。 例如：  
+  您可以采用多种方式将 XML 数据传输到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中。 例如：  
   
 -   如果您的数据位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 [n]text 或 image 列中，则可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]导入表。 使用 ALTER TABLE 语句将列类型更改为 XML。  
   

@@ -16,16 +16,16 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016
-ms.openlocfilehash: 0cfff92b4bec90a7689928b95bfc91acdc8f814f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 03d97ad323c5e83e7cd0a5de0b09da6bad6b1a22
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468868"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250724"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化订阅
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新初始化订阅。 可以将各个订阅标记为重新初始化，以便在下次同步期间应用新快照。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新初始化订阅。 可以将各个订阅标记为重新初始化，以便在下次同步期间应用新快照。  
   
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 

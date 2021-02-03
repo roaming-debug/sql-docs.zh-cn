@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: c73439c6fd7015bcd6bbae61d4164348331deb17
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ac91abe799eb914d2a544d6f9fad598545a920c4
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866599"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251131"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和数据库加密密钥（数据库引擎）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "91866599"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密密钥包括一组用来保护敏感数据的公钥、私钥和对称密钥。 当第一次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时，将在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初始化过程中创建对称密钥。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用此密钥来加密存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的敏感数据。 公钥和私钥由操作系统创建，用于保护对称密钥。 对于在数据库中存储敏感数据的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，都要创建一个公钥私钥对。  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>SQL Server 和数据库密钥的应用  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在密钥中的应用主要有两个方面：作为某 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上为该实例生成的*服务主密钥* (SMK) 和作为用于数据库的*数据库主密钥* (DMK)。
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在密钥中的应用主要有两个方面：作为某 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上为该实例生成的 *服务主密钥* (SMK) 和作为用于数据库的 *数据库主密钥* (DMK)。
 
 ### <a name="service-master-key"></a>服务主密钥
   
@@ -34,7 +34,7 @@ ms.locfileid: "91866599"
 
 只有创建服务主密钥的 Windows 服务帐户或有权访问服务帐户名称和密码的主体能够打开服务主密钥。
 
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 使用 AES-256 加密算法来保护服务主密钥 (SMK) 和数据库主密钥 (DMK)。 AES 是一种比早期版本中使用的 3DES 更新的加密算法。 在将 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 后，应重新生成 SMK 和 DMK 以便将主密钥升级到 AES。 有关重新生成 SMK 的详细信息，请参阅 [ALTER SERVICE MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-service-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-master-key-transact-sql.md)。
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 使用 AES-256 加密算法来保护服务主密钥 (SMK) 和数据库主密钥 (DMK)。 AES 是一种比早期版本中使用的 3DES 更新的加密算法。 在将 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 实例升级到 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 后，应重新生成 SMK 和 DMK 以便将主密钥升级到 AES。 有关重新生成 SMK 的详细信息，请参阅 [ALTER SERVICE MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-service-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-master-key-transact-sql.md)。
 
 ### <a name="database-master-key"></a>数据库主密钥
   

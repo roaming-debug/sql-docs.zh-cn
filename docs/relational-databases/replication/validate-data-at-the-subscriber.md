@@ -18,16 +18,16 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016
-ms.openlocfilehash: bd2d4604e35c42b4b9689934b9fb41dd3e4fb6fb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1b5109c2bf93a49370f005e94a824fd5bfb70921
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460150"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250582"
 ---
 # <a name="validate-replicated-data"></a>验证已复制的数据
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中验证订阅服务器上的数据。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中验证订阅服务器上的数据。  
   
 通过事务复制和合并复制，您可以验证订阅服务器中的数据与发布服务器中的数据是否匹配。 可以对特定订阅或某一发布的所有订阅执行验证。 指定下列验证类型之一，分发代理或合并代理便会在下次运行时验证数据：  
   

@@ -17,16 +17,16 @@ ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46d97f8d8e8313bc3fe63a83c4d2187704be802b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 88d884d92685b943649006caa894d78a152c7667
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460003"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250733"
 ---
 # <a name="join-a-role"></a>加入角色
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中向登录名和数据库用户分配角色。 可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的角色高效地管理权限。 将权限分配给角色，然后在角色中添加和删除用户以及登录名。 通过使用角色，不必针对各个用户单独维护权限。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中向登录名和数据库用户分配角色。 可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的角色高效地管理权限。 将权限分配给角色，然后在角色中添加和删除用户以及登录名。 通过使用角色，不必针对各个用户单独维护权限。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持四种类型的角色。  
   
