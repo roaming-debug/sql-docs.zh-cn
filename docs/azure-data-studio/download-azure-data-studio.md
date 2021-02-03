@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 1/22/2020
-ms.openlocfilehash: 65daa495933d0dc974b6ae4d1c14ff9e59bd6249
-ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
+ms.openlocfilehash: 1a8de5f990d9f3a8a974705d090dad8dccc1bae6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98711963"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235733"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
@@ -174,7 +174,7 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行，并在以下平台�
 
 ## <a name="supported-sql-offerings"></a>支持的 SQL 产品/服务
 
-- 此版本的 Azure Data Studio 适用于所有[受支持的 SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-MD.md)] 版本](https://support.microsoft.com/lifecycle?C2=1044)，并且支持与 Azure SQL 数据库和 Azure Synapse Analytics 中的最新云功能配合使用。 Azure Data Studio 还提供对 Azure SQL 托管实例的预览支持。
+- 此版本的 Azure Data Studio 适用于所有[受支持版本的 [!INCLUDE [sssql14-md](../includes/sssql14-md.md)] - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，并且支持与 Azure SQL 数据库和 Azure Synapse Analytics 中的最新云功能配合使用。 Azure Data Studio 还提供对 Azure SQL 托管实例的预览支持。
 
 ## <a name="move-user-settings"></a>移动用户设置
 
