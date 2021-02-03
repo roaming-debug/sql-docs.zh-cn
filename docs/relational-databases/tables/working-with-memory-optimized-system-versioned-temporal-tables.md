@@ -12,12 +12,12 @@ ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67d1c661f7157081f2693555667c439d589292e4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: acfdadf0216bd243f61339982615c4bf83796dfa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472558"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177980"
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>使用带有系统版本的内存优化临时表
 
@@ -28,7 +28,7 @@ ms.locfileid: "97472558"
 本主题介绍了使用带有系统版本的内存优化临时表与使用带有系统版本的基于磁盘的临时表有何不同。
 
 > [!NOTE]
-> 内存优化临时表仅适用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，而不适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+> 内存优化临时表仅适用于 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ，而不适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
 ## <a name="discovering-metadata"></a>发现元数据
 

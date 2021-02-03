@@ -17,17 +17,17 @@ ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 148c3fc7d46972fcd6d4769471edd16954cc449d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7b137ba8f3fc98b5892f0154f9dd54d3bd8b3791
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480858"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179747"
 ---
 # <a name="disable-check-constraints-for-replication"></a>对复制禁用 CHECK 约束
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 禁用 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的 CHECK 约束。 也可以对复制显式禁用检查约束，这在从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中发布数据时会非常有用。  
+  您可以使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 禁用 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的 CHECK 约束。 也可以对复制显式禁用检查约束，这在从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中发布数据时会非常有用。  
   
 > [!NOTE]  
 >  如果表是使用复制发布的，则对于复制代理执行的操作将自动禁用检查约束。 当复制代理在订阅服务器上执行插入、更新或删除操作时，将不检查约束；如果用户执行插入、更新或删除操作，则检查约束。 由于最初插入、更新或删除数据时已经在发布服务器上检查过约束，所以对于复制代理将禁用该约束。 有关详细信息，请参阅 [指定架构选项](../../relational-databases/replication/publish/specify-schema-options.md)。  

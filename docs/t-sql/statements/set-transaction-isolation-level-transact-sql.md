@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - LEVEL
 - LEVEL_TSQL
@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0310498564525293dba5dde525c24d4ffd620aad
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7fd0098e9b4e213619e65973c2367a03f0197852
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98080113"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161097"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -164,12 +164,12 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 |隔离级别|Transact SQL 访问|文件系统访问|  
 |---------------------|-------------------------|------------------------|  
-|未提交读|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|不支持|  
-|已提交读|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|可重复读|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|不支持|  
-|可序列化|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|不支持|  
-|读提交的快照|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|快照|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|未提交读|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|不支持|  
+|已提交读|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|可重复读|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|不支持|  
+|可序列化|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|不支持|  
+|读提交的快照|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|快照|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="examples"></a>示例  
  以下示例为会话设置了 `TRANSACTION ISOLATION LEVEL`。 对于每个后续 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将所有共享锁一直保持到事务结束为止。  
