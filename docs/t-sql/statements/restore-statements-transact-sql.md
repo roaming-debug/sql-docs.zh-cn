@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - RESTORE DATABASE
 - RESTORE_TSQL
@@ -41,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016'
-ms.openlocfilehash: b3a8b853913581092424101c24b951cd0584c3b7
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 8555358ccb7e8f84c3b652b1847fad8831ae3c1c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688865"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209934"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 
@@ -329,14 +329,14 @@ RESTORE LOG 可以包括一个文件列表，从而允许在前滚过程中创�
   恢复数据库要求要还原的整个数据集（“前滚集”）必须与数据库一致。 如果前滚集尚未前滚到与数据库保持一致的地步，并且指定了 RECOVERY，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将发出错误。 有关恢复过程的详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ## <a name="compatibility-support"></a>兼容性支持
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 无法还原使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本创建的 master、model 和 msdb 备份  。
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 无法还原使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本创建的 master、model 和 msdb 备份  。
 
 > [!NOTE]
 > 无法将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份还原到比创建该备份的版本还早的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本使用的默认路径与早期版本不同。 因此，若要还原在早期版本备份的默认位置创建的数据库，必须使用 MOVE 选项。 有关新的默认路径的信息，请参阅 [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
 
-在您将早期版本数据库还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，将自动升级该数据库。 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于 **upgrade_option** 服务器属性的设置。 如果将升级选项设置为“导入”(**upgrade_option** = 2) 或“重新生成”(**upgrade_option** = 0)，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，如果将升级选项设置为“导入”，并且全文目录不可用，则会重新生成关联的全文索引。 若要更改 **upgrade_option** 服务器属性的设置，请使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。
+在您将早期版本数据库还原到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]后，将自动升级该数据库。 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于 **upgrade_option** 服务器属性的设置。 如果将升级选项设置为“导入”(**upgrade_option** = 2) 或“重新生成”(**upgrade_option** = 0)，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，如果将升级选项设置为“导入”，并且全文目录不可用，则会重新生成关联的全文索引。 若要更改 **upgrade_option** 服务器属性的设置，请使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。
 
 当数据库第一次附加或还原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，数据库主密钥（由服务主密钥加密）的副本尚未存储在服务器中。 必须使用 **OPEN MASTER KEY** 语句解密数据库主密钥 (DMK)。 一旦 DMK 解密后，通过使用 **ALTER MASTER KEY REGENERATE** 语句向服务器提供 DMK（使用服务主密钥 (SMK) 加密）的副本，即可拥有将来启用自动解密的选项。 当数据库已从较早版本升级后，应重新生成 DMK 以使用更新的 AES 算法。 有关重新生成 DMK 的详细信息，请参阅 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新生成 DMK 密钥以升级到 AES 所需的时间取决于 DMK 保护的对象数。 重新生成 DMK 密钥以升级到 AES 只在必需时执行一次，不影响将来作为密钥循环策略的一部分而重新生成的过程。
 

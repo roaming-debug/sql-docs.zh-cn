@@ -16,12 +16,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2b2d569c3f37370bd132485e843da005b1769b17
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482339"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211536"
 ---
 # <a name="use-sparse-columns"></a>使用稀疏列
 
@@ -39,7 +39,7 @@ ms.locfileid: "97482339"
   
      因为稀疏列有许多 Null 值行，所以尤其适用于筛选索引。 稀疏列的筛选索引可以仅仅对已填充值的行编制索引。 这会创建一个更小、更有效的索引。 有关详细信息，请参阅 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
- 稀疏列和筛选索引使应用程序（如 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]）可以通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]有效地存储和访问大量的用户定义属性。  
+ 稀疏列和筛选索引使应用程序（如 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]）可以通过 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]有效地存储和访问大量的用户定义属性。  
   
 ## <a name="properties-of-sparse-columns"></a>稀疏列的属性  
  稀疏列具有以下特征：  

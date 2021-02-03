@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP COLUMN ENCRYPTION
 - DROP COLUMN ENCRYPTION KEY
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 7c8f4ffe7bc861fece68c37ae734a0d659bebb56
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 92a5d93aab0eee8cdff82725adecc5754b33194d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380152"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210420"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 
@@ -50,7 +50,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  如果列加密密钥用于对数据库中的任何列进行加密，则无法将其删除。 必须首先删除所有使用列加密密钥的列。  
   
 ## <a name="permissions"></a>权限  
- 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限****。  
+ 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限。  
   
 ## <a name="examples"></a>示例  
   

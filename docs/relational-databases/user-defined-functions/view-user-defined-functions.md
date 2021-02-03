@@ -20,16 +20,16 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e14a690cb844c17fb0851a88307cacf612cf489d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ae8eb805b886edbe9c470ee3b10d01679b2f2362
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461518"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210721"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]可以获取有关用户定义函数的定义或属性的信息。 您可能需要查看函数的定义，以理解其数据从源表中派生的方式或查看函数所定义的数据。  
+  在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中，通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]可以获取有关用户定义函数的定义或属性的信息。 您可能需要查看函数的定义，以理解其数据从源表中派生的方式或查看函数所定义的数据。  
   
 > [!IMPORTANT]  
 >  如果您更改函数所引用的对象的名称，则必须修改函数，使其文本反映新名称。 因此，在重命名对象前，首先显示该对象的依赖关系，以确定所建议的更改是否影响任何函数。  

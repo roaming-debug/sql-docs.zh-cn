@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SIGNBYASYMKEY_TSQL
 - SIGNBYASYMKEY
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b90807f116b115e3e4756791d821ea9bad85f14e
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 786c196f985a8e9328af23fba6ba3857a1fb27bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91378839"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212180"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,13 +48,13 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
 
 ## <a name="arguments"></a>参数
  Asym_Key_ID  
- 当前数据库中非对称密钥的 ID。 Asym_Key_ID 的数据类型为 int******。  
+ 当前数据库中非对称密钥的 ID。 Asym_Key_ID 的数据类型为 int。  
   
  **\@plaintext**  
- 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含将使用非对称密钥进行签名的数据****************。  
+ 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含将使用非对称密钥进行签名的数据。  
   
  *password*  
- 用于保护私钥的密码。 password 的数据类型为 nvarchar(128)******。  
+ 用于保护私钥的密码。 password 的数据类型为 nvarchar(128)。  
   
 ## <a name="return-types"></a>返回类型  
  varbinary（最大大小为 8000 个字节）。  

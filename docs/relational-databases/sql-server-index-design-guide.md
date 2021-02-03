@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8e1c8af9fbd147c7a20ae773dc1797026240293
-ms.sourcegitcommit: 0576ce6d7c9c5514306a90e27fa621ef25825186
+ms.openlocfilehash: 57eb0bac3a794aaf3b7f84fc8cfb14d0207da1ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98575730"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233252"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -750,7 +750,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 > 小行组过多会降低列存储索引的质量。 重新组织操作将遵循一个内部阈值策略（确定如何移除已删除行并合并已压缩行组）来合并较小的行组。 合并后，索引质量应有所提高。 
 
 > [!NOTE]
-> 从 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 开始，tuple-mover 通过后台合并任务获得帮助，该任务会自动压缩较小的已存在一段时间（由内部阈值确定）的 OPEN 增量行组，或者合并已从中删除大量行的 COMPRESSED 行组。      
+> 从 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 开始，tuple-mover 通过后台合并任务获得帮助，该任务会自动压缩较小的已存在一段时间（由内部阈值确定）的 OPEN 增量行组，或者合并已从中删除大量行的 COMPRESSED 行组。      
 
 每个列在每个行组中都有自身的一些值。 这些值称为“列段”。 每个行组包含表中每个列的一个列段。 每个列在每个行组中有一个列段。
 
@@ -799,15 +799,15 @@ WHERE b = CONVERT(Varbinary(4), 1);
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>可以在同一个表中组合列存储索引和行存储索引
 非聚集索引包含基础表中部分或全部行与列的副本。 索引将定义为表的一个或多个列，并具有一个用于筛选行的可选条件。 
 
-从 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 开始，可以对行存储表创建可更新的非聚集列存储索引。 列存储索引将存储数据的副本，因此你需要提供额外的存储。 但是，列存储索引中的数据压缩成的大小比行存储表所需的大小更小。  如果采取这种做法，你可以同时对列存储索引以及行存储索引上的事务运行分析。 当行存储表中的数据更改时，列存储将会更新，因此这两个索引适用于相同的数据。  
+从 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 开始，可以对行存储表创建可更新的非聚集列存储索引。 列存储索引将存储数据的副本，因此你需要提供额外的存储。 但是，列存储索引中的数据压缩成的大小比行存储表所需的大小更小。  如果采取这种做法，你可以同时对列存储索引以及行存储索引上的事务运行分析。 当行存储表中的数据更改时，列存储将会更新，因此这两个索引适用于相同的数据。  
   
-从 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 开始，可以对一个列存储索引使用一个或多个非聚集行存储索引。 这样，便可以针对基础列存储上执行有效的表查找。 其他选项也可供使用。 例如，可以通过在行存储表中使用 UNIQUE 约束来强制主键约束。 由于不唯一的值无法插入行存储表，SQL Server 无法将值插入列存储。  
+从 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 开始，可以对一个列存储索引使用一个或多个非聚集行存储索引。 这样，便可以针对基础列存储上执行有效的表查找。 其他选项也可供使用。 例如，可以通过在行存储表中使用 UNIQUE 约束来强制主键约束。 由于不唯一的值无法插入行存储表，SQL Server 无法将值插入列存储。  
  
 ### <a name="performance-considerations"></a>性能注意事项 
 
 -   非聚集列存储索引定义支持使用筛选的条件。 若要尽量减少在 OLTP 表中添加列存储索引的性能影响，请使用筛选条件，以便创建仅关于运行工作负荷冷数据的非聚集列存储索引。 
   
--   一个内存中表可以有一个列存储索引。 你可以在创建表时创建它，也可以稍后使用 [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md) 来添加。 在低于 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 的版本中，仅基于磁盘的表可以有列存储索引。 
+-   一个内存中表可以有一个列存储索引。 你可以在创建表时创建它，也可以稍后使用 [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md) 来添加。 在低于 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 的版本中，仅基于磁盘的表可以有列存储索引。 
 
 有关详细信息，请参阅[列存储索引 - 查询性能](../relational-databases/indexes/columnstore-indexes-query-performance.md)。
 

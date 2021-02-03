@@ -17,16 +17,16 @@ ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12ee798bcbc2b3fb6c56981b17fb1a94b198c8f6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7ee87077178a9d52d7af83f891a3f9d81f949c20
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97426719"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212298"
 ---
 # <a name="delete-views"></a>删除视图
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中删除视图 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+  可以使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中删除视图 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **本主题内容**  
   

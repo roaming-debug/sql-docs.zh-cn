@@ -6,19 +6,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - 'TM: Promote Tran Completed event class'
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecee5a571114b5421630655f015354e1c3abeead
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a5c90225a528380198011fddbe4c7529555c77ac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483519"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210521"
 ---
 # <a name="tm-promote-tran-completed-event-class"></a>TM：Promote Tran Completed 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "97483519"
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  
-|Success|**int**|1 = 成功。 0 = 失败（例如，1 表示权限检查成功，0 表示该检查失败）。|23|是|  
+|成功|**int**|1 = 成功。 0 = 失败（例如，1 表示权限检查成功，而 0 表示权限检查失败）。|23|是|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|是|  
 |XactSequence|**bigint**|用于说明当前事务的标记。|50|是|  
   

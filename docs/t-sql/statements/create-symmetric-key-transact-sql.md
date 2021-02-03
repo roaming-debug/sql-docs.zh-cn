@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE SYMMETRIC KEY
 - SYMMETRIC KEP
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 581f49677f56c0d0c1360d5282c07205f18ee35a
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b7f007d4ae9ca1c742061ce5b11297ccace11ffb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170819"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99232906"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -117,7 +117,7 @@ CREATE SYMMETRIC KEY key_name
  \<algorithm>  
 指定加密算法。   
 > [!WARNING]  
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]开始，除 AES_128、AES_192 和 AES_256 以外的所有算法都已过时。 若要使用旧算法（不推荐），必须将数据库的数据库兼容级别设置为 120 或更低。  
+> 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]开始，除 AES_128、AES_192 和 AES_256 以外的所有算法都已过时。 若要使用旧算法（不推荐），必须将数据库的数据库兼容级别设置为 120 或更低。  
   
 ## <a name="remarks"></a>备注  
  创建对称密钥时，必须至少使用以下项之一来对该对称密钥进行加密：证书、密码、对称密钥、非对称密钥或 PROVIDER。 可使用上述每种类型中的多项对密钥进行加密。 换言之，可以同时使用多个证书、密码、对称密钥以及非对称密钥对单个对称密钥进行加密。  
@@ -151,7 +151,7 @@ CREATE SYMMETRIC KEY key_name
  对不同数据块重复使用相同的 RC4 或 RC4_128 KEY_GUID 会产生相同的 RC4 密钥，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会自动提供 salt。 重复使用相同的 RC4 密钥是已知错误，将导致加密非常不可靠。 因此，不推荐使用 RC4 和 RC4_128 关键字。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
->  RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，可以通过任何兼容级别对使用 RC4 或 RC4_128 加密的材料进行解密。  
+>  RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中，可以通过任何兼容级别对使用 RC4 或 RC4_128 加密的材料进行解密。  
   
 ## <a name="permissions"></a>权限  
  要求对数据库具有 ALTER ANY SYMMETRIC KEY 权限。 如果指定了 AUTHORIZATION，则要求对数据库用户具有 IMPERSONATE 权限，或者对应用程序角色具有 ALTER 权限。 如果使用证书或非对称密钥进行加密，则要求对证书或非对称密钥具有 VIEW DEFINITION 权限。 只有 Windows 登录名、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和应用程序角色才能拥有对称密钥。 其他组和角色不能拥有对称密钥。  

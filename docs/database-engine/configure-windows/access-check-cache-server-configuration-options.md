@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 893400411c6f3d2faf6313923aa0f6127a3f2cf0
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dc1ff18d464c03d1eb5e96834f4d753bfead5559
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171069"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233974"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>“访问检查缓存”服务器配置选项
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "98171069"
 
 “访问检查缓存配额”选项控制访问检查结果缓存中存储的条目数。 如果达到最大条目数，则从访问检查结果缓存中删除最早的条目。
   
-默认值 0 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在管理这些选项。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，默认值将转换为以下内部配置：
+默认值 0 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在管理这些选项。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，默认值将转换为以下内部配置：
 -   对于访问检查缓存桶计数，值 0 将设置为默认值（即 256 个桶）。
 -   对于访问检查缓存配额，值 0 将设置为默认值（即 1,024 个条目）。
 
