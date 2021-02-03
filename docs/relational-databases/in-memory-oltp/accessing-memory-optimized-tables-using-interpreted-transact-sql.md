@@ -11,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c88fd07e9af86a3c12561935364514b23bc2ea91
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3bce064f00aa3f16a9fc4710fc9dd7dcd53e1534
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172279"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236873"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解释型 Transact-SQL 访问内存优化表
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "98172279"
   
 解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或是非本机编译的存储过程的存储过程。 对内存优化表的解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问称为互操作访问。  
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]开始，经解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的查询能够以并行模式而不只是串行模式扫描内存优化表。
+从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]开始，经解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的查询能够以并行模式而不只是串行模式扫描内存优化表。
 
 内存优化表还可使用本机编译的存储过程访问。 建议将本机编译的存储过程用于对性能至关重要的 OLTP 操作。  
   

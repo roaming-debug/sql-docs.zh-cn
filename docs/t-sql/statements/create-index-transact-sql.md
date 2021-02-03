@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE INDEX
 - INDEX
@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f1322f21ed7ad3f09f30a0f5a5e71e5614a8d47
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 8591620ce92aca8a6c272539721f20a8a64fd9ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766237"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237103"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -90,7 +90,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 
 **主要方案：**
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 开始，针对列存储索引使用非聚集索引以提高数据仓库查询性能。 有关详细信息，请参阅[列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)。
+从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 开始，针对列存储索引使用非聚集索引以提高数据仓库查询性能。 有关详细信息，请参阅[列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)。
 
 有关其他类型的索引，请参阅：
 
@@ -250,7 +250,7 @@ index_name
 column      
  索引所基于的一列或多列。 指定两个或多个列名，可为指定列的组合值创建组合索引。 在 table_or_view_name 后的括号中，按排序优先级列出组合索引中要包括的列。
 
-一个组合索引键中最多可组合 32 列。 组合索引键中的所有列必须在同一个表或视图中。 对于聚集索引，组合索引值允许的最大大小为 900 字节，对于非聚集索引则为 1,700 字节。 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以前的版本，此限制为 16 列和 900 字节。
+一个组合索引键中最多可组合 32 列。 组合索引键中的所有列必须在同一个表或视图中。 对于聚集索引，组合索引值允许的最大大小为 900 字节，对于非聚集索引则为 1,700 字节。 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以前的版本，此限制为 16 列和 900 字节。
 
 无法将 ntext、text、varchar(max)、nvarchar(max)、varbinary(max)、xml 或 image 大型对象 (LOB) 数据类型的列指定为索引的键列      。 另外，即使 CREATE INDEX 语句中并未引用 ntext、text 或 image 列，视图定义中也不能包含这些列  。
 
@@ -351,7 +351,7 @@ table_or_view_name
 
 必须使用 SCHEMABINDING 定义视图，才能为视图创建索引。 必须先为视图创建唯一的聚集索引，才能为该视图创建非聚集索引。 有关索引视图的详细信息，请参阅“备注”部分。
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，该对象可以是聚集列存储索引存储的表。
+从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，该对象可以是聚集列存储索引存储的表。
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支持由三部分组成的名称格式 _database_name_.[_schema_name_]._object_name_，其中 *database_name* 为当前数据库，或 _database_name_ 为 `tempdb`，_object_name_ 以 # 开头。
 
@@ -498,7 +498,7 @@ OFF
 
 RESUMABLE **=** { ON | **OFF**}      
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
  指定联机索引操作是否可恢复。
 
@@ -510,7 +510,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* [**MINUTES**]，与 **RESUMABLE = ON** 一起使用（要求 **ONLINE = ON**）   
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指示可恢复联机索引操作在暂停之前执行的时间（以分钟为单位指定的整数值）。
 
@@ -543,7 +543,7 @@ OFF
 不使用页锁。
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }      
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定是否针对最后一页插入争用进行优化。 默认为 OFF。 有关详细信息，请参阅[顺序键](#sequential-keys)部分。
 
@@ -621,7 +621,7 @@ CREATE INDEX 语句同其他查询一样优化。 为了节省 I/O 操作，查�
 对表（堆）创建聚集索引或删除和重新创建现有聚集索引时，要求数据库具有额外的可用工作区来容纳数据排序结果和原始表或现有聚集索引数据的临时副本。 有关聚集索引的详细信息，请参阅[创建聚集索引](../../relational-databases/indexes/create-clustered-indexes.md)和 [SQL Server 索引体系结构和设计指南](../../relational-databases/sql-server-index-design-guide.md)。
 
 ## <a name="nonclustered-indexes"></a>非聚集索引
-从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以为作为聚集列存储索引进行存储的表创建非聚集索引。 如果首先为作为堆或聚集索引进行存储的表创建非聚集索引，当后期将该表转换为聚集列存储索引时，该索引将会保留。 重新生成聚集列存储索引也不需要删除非聚集索引。
+从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以为作为聚集列存储索引进行存储的表创建非聚集索引。 如果首先为作为堆或聚集索引进行存储的表创建非聚集索引，当后期将该表转换为聚集列存储索引时，该索引将会保留。 重新生成聚集列存储索引也不需要删除非聚集索引。
 
 限制和局限：
 
@@ -682,7 +682,7 @@ CREATE INDEX 语句同其他查询一样优化。 为了节省 I/O 操作，查�
 有关 XML 索引的信息，请参阅 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md) 和 [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)。
 
 ## <a name="index-key-size"></a>索引键大小
-对于聚集索引，索引键的最大大小为 900 字节，对于非聚集索引为 1700 字节。 （对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 之前的版本，此限制始终为 900 字节。）如果创建索引时，varchar 列中的现有数据未超过限制，则可以对这些列创建超过字节限制的索引；但是，以后在这些列上执行会导致总大小超过该限制的插入或更新操作时将失败。 聚集索引的索引键不能包含在 ROW_OVERFLOW_DATA 分配单元中具有现有数据的 **varcharr** 列。 如果对 **varchar** 列创建了聚集索引，并且 IN_ROW_DATA 分配单元中存在现有数据，则对该列执行的将数据推送到行外的后续插入或更新操作将会失败。
+对于聚集索引，索引键的最大大小为 900 字节，对于非聚集索引为 1700 字节。 （对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 之前的版本，此限制始终为 900 字节。）如果创建索引时，varchar 列中的现有数据未超过限制，则可以对这些列创建超过字节限制的索引；但是，以后在这些列上执行会导致总大小超过该限制的插入或更新操作时将失败。 聚集索引的索引键不能包含在 ROW_OVERFLOW_DATA 分配单元中具有现有数据的 **varcharr** 列。 如果对 **varchar** 列创建了聚集索引，并且 IN_ROW_DATA 分配单元中存在现有数据，则对该列执行的将数据推送到行外的后续插入或更新操作将会失败。
 
 非聚集索引可以在索引的叶级别包含非键列。 计算索引键大小时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]不考虑这些列。 有关详细信息，请参阅[创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)和 [SQL Server 索引体系结构和设计指南](../../relational-databases/sql-server-index-design-guide.md)。
 
@@ -754,7 +754,7 @@ INSERT INTO t1 VALUES (1, 0);
 有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。
 
 ### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> 可恢复索引操作
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 下列指南适用于可恢复索引操作：
 
@@ -797,7 +797,7 @@ INSERT INTO t1 VALUES (1, 0);
 如果 `ALLOW_ROW_LOCKS = OFF` 且 `ALLOW_PAGE_LOCK = OFF`，在访问索引时仅允许使用表级别锁定。
 
 ## <a name="sequential-keys"></a>顺序键
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 最后一页插入争用是在以下情况下发生的常见性能问题：当大量并发线程尝试将行插入包含顺序键的索引时。 如果前导键列包含始终增加（或减少）的值（如标识列），或包含默认为当前日期/时间的日期，索引就会被视为顺序索引。 由于键是按顺序插入，因此所有新行都会插入到索引结构的末尾处，即位于同一页面上。 这会导致内存中出现页面争用，可观察到多个线程在 PAGELATCH_EX 上等待相关页面。
 
@@ -1104,7 +1104,7 @@ GO
 ```
 
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. 创建、恢复、暂停和中止可恢复索引操作
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1133,7 +1133,7 @@ ALTER INDEX test_idx2 ON test_table ABORT;
 ### <a name="n-basic-syntax"></a>N. 基本语法
 创建、恢复、暂停和中止可恢复索引操作       
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

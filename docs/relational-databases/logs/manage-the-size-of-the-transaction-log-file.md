@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e0d5c070d961e71711189b9b32ad12508812b277
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 699052eedf2a32faac9f3bf849f5f4aaa4c43b4c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171539"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237694"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "98171539"
   
       |版本|默认值|  
       |-------------|--------------------|  
-      |自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起|数据 64 MB。 日志文件 64 MB。|  
+      |自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 起|数据 64 MB。 日志文件 64 MB。|  
       |自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 起|数据 1 MB。 日志文件 10%。|  
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|数据 10%。 日志文件 10%。|  
 

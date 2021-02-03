@@ -28,12 +28,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c98d84c8e3bc08bfae13c149cfc0487c57e40008
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 259e58dcf9ef713a9bb8787a63ac8cbf3a349c88
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171569"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237726"
 ---
 # <a name="database-checkpoints-sql-server"></a>数据库检查点 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -107,11 +107,11 @@ ms.locfileid: "98171569"
 然而，为间接检查点配置的数据库上的联机事务工作负荷会导致性能下降。 这是因为间接检查点使用的后台写入线程有时增加了服务器实例的总写入负荷。  
  
 > [!IMPORTANT]
-> 间接检查点是在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中创建的新数据库的默认行为，包括模型和 TempDB 数据库。          
+> 间接检查点是在 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 中创建的新数据库的默认行为，包括模型和 TempDB 数据库。          
 > 就地升级或从以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原的数据库，除非显式更改为使用间接检查点，否则将使用以前的自动检查点行为。       
 
 ### <a name="improved-indirect-checkpoint-scalability"></a><a name="ctp23"></a> 改进了间接检查点可伸缩性
-在低于 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 的版本中，如果存在生成大量脏页的数据库（例如 `tempdb`），你可能会遇到计划程序无法完成错误。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 为间接检查点引入了改进的可伸缩性，这应该有助于避免具有大量 `UPDATE`/`INSERT` 工作负载的数据库中出现这些错误。
+在低于 [!INCLUDE[ssNoVersion](../../includes/sssql19-md.md)] 的版本中，如果存在生成大量脏页的数据库（例如 `tempdb`），你可能会遇到计划程序无法完成错误。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 为间接检查点引入了改进的可伸缩性，这应该有助于避免具有大量 `UPDATE`/`INSERT` 工作负载的数据库中出现这些错误。
   
 ##  <a name="internal-checkpoints"></a><a name="EventsCausingChkpt"></a> 内部检查点  
 内部检查点由各种服务器组件生成，以确保磁盘映像与日志的当前状态匹配。 生成内部检查点以响应下列事件：  

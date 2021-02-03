@@ -12,18 +12,18 @@ ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 54eb732e45515176f7fd1e8b258310e7de2b535c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bec92d2f03d646d57a02b07cfb7fd97e039d5674
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471508"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235929"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>配置 Linux 上的 SQL Server 复制
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 介绍 Linux 上的 SQL Server 实例的 SQL Server 复制。
+[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 介绍 Linux 上的 SQL Server 实例的 SQL Server 复制。
 
 有关复制的详细信息，请参阅 [SQL Server 复制文档](../relational-databases/replication/sql-server-replication.md)。
 

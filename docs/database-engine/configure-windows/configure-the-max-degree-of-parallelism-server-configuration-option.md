@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperf-fy20q4
-ms.openlocfilehash: 7b0e4b8abf21d918e7d4d627c7ed82d5507394ec
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 4006ad1707d30d0a9147056ddfff8b71ae7643e1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171059"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236967"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>配置 max degree of parallelism 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "98171059"
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 SQL Server 中配置最大并行度 (MAXDOP) 服务器配置选项。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在具有多个微处理器或 CPU 的计算机上运行时，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会检测是否可以使用并行。 并行度为每次并行计划的执行设置运行单个语句时要使用的处理器数。 您可以使用 **max degree of parallelism** 选项来限制并行计划执行时所用的处理器数。 有关最大并行度 (MAXDOP) 所设置的限制的详细信息，请参阅此页中的[注意事项](#Considerations)部分。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 考虑为查询、索引数据定义语言 (DDL) 操作、并行插入、联机更改列、并行统计信息集合以及静态的和由键集驱动的游标填充实施并行执行计划。
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 介绍有关在安装过程中如何基于可用处理器数量设置 MAXDOP 服务器配置的自动建议。 安装程序用户界面允许接受建议的设置或输入自己的值。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../../sql-server/install/instance-configuration.md#maxdop)。
+> [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] 介绍有关在安装过程中如何基于可用处理器数量设置 MAXDOP 服务器配置的自动建议。 安装程序用户界面允许接受建议的设置或输入自己的值。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../../sql-server/install/instance-configuration.md#maxdop)。
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
@@ -55,9 +55,9 @@ ms.locfileid: "98171059"
 -   除了查询和索引操作之外，此选项还控制 DBCC CHECKTABLE、DBCC CHECKDB 和 DBCC CHECKFILEGROUP 的并行。 使用跟踪标志 2528，可以禁用为这些语句所做的并行执行计划。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 ###  <a name="recommendations"></a><a name="Recommendations"></a> <a name="Guidelines"></a> 建议  
-从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，在服务启动期间，如果 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在启动时检测到每个 NUMA 节点或插槽内的物理内核数目超过 8 个，在默认情况下就会自动创建 soft-NUMA 节点。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 将相同物理内核中的逻辑处理器放入不同的 soft-NUMA 节点中。 下表中的建议旨在将并行查询的所有工作线程保持在相同 soft-NUMA 节点中。 这将提高跨工作负荷 NUMA 节点查询和分布工作线程的性能。 有关详细信息，请参阅 [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)。
+从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，在服务启动期间，如果 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在启动时检测到每个 NUMA 节点或插槽内的物理内核数目超过 8 个，在默认情况下就会自动创建 soft-NUMA 节点。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 将相同物理内核中的逻辑处理器放入不同的 soft-NUMA 节点中。 下表中的建议旨在将并行查询的所有工作线程保持在相同 soft-NUMA 节点中。 这将提高跨工作负荷 NUMA 节点查询和分布工作线程的性能。 有关详细信息，请参阅 [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)。
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，请使用以下准则配置“最大并行度”服务器配置值：
+从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，请使用以下准则配置“最大并行度”服务器配置值：
 
 |服务器配置|处理器数目|指南|
 |----------------|-----------------|-----------------|
@@ -67,7 +67,7 @@ ms.locfileid: "98171059"
 |具有多个 NUMA 节点的服务器|每个 NUMA 节点大于 16 个逻辑处理器|将 MAXDOP 保持为每个 NUMA 节点逻辑处理器数量的一半，最大值为 16|
   
 > [!NOTE]
-> 上表中的 NUMA 节点是指，由 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本自动创建的 soft-NUMA 节点，或基于硬件的 NUMA 节点（如果 soft-NUMA 已遭禁用的话）。   
+> 上表中的 NUMA 节点是指，由 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本自动创建的 soft-NUMA 节点，或基于硬件的 NUMA 节点（如果 soft-NUMA 已遭禁用的话）。   
 >  为 Resource Governor 工作负荷组设置“最大并行度”选项时，请使用这些相同的准则。 有关详细信息，请参阅 [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)。
   
 从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，请使用以下准则配置“最大并行度”服务器配置值：

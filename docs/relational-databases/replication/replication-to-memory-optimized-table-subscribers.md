@@ -12,17 +12,17 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 71a245f6263b938cef7a3841b3570a3a9137a1db
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a2dd5e112230540c519fad2b4926d70f374bbcfc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172199"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236332"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  用作快照和事务复制订阅服务器（不包括对等事务复制）的表可以配置为内存优化表。 其他复制配置与内存优化表不兼容。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]及更高版本支持此功能。  
+  用作快照和事务复制订阅服务器（不包括对等事务复制）的表可以配置为内存优化表。 其他复制配置与内存优化表不兼容。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]及更高版本支持此功能。  
   
 ## <a name="two-configurations-are-required"></a>需要进行两项配置  
   

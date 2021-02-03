@@ -41,7 +41,7 @@ IMPORTANCE 对资源池而言是局部性的；同一资源池内重要性不同
 REQUEST_MAX_MEMORY_GRANT_PERCENT = value </br>
 指定单个请求可以从池中获取的最大内存量。 value 是相对于 MAX_MEMORY_PERCENT 指定的资源池大小的百分比  。
 
-在 Azure SQL 托管实例中，value 包含一个不超过 [!INCLUDE[ssSQL17](sssql17-md.md)] 的整数和一个以 [!INCLUDE[sql-server-2019](sssqlv15-md.md)] 开头的浮点数。 默认值为 25。 value 的允许范围是 1 到 100  。
+在 Azure SQL 托管实例中，value 包含一个不超过 [!INCLUDE[ssSQL17](sssql17-md.md)] 的整数和一个以 [!INCLUDE[sql-server-2019](sssql19-md.md)] 开头的浮点数。 默认值为 25。 value 的允许范围是 1 到 100  。
 
 > [!IMPORTANT]  
 > 指定的量指的只是查询执行授予内存。
@@ -64,7 +64,7 @@ REQUEST_MAX_CPU_TIME_SEC = value </br>
 > [!NOTE]
 > 默认情况下，如果超过最长时间，Resource Governor 并不会阻止继续发出请求。 但会生成一个事件。 有关详细信息，请参阅 [CPU Threshold Exceeded 事件类](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。
 > [!IMPORTANT]
-> 从 [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 开始以及使用[跟踪标志 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 时，Resource Governor 将在超出最大时间时终止请求。
+> 从 [!INCLUDE[sssql16-md](sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 开始以及使用[跟踪标志 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 时，Resource Governor 将在超出最大时间时终止请求。
 
 REQUEST_MEMORY_GRANT_TIMEOUT_SEC = value </br>
 指定查询等待内存授予（工作缓冲区内存）变为可用状态的最长时间（以秒为单位）。 value 必须为 0 或一个正整数  。 value 的默认设置为 0，表示使用基于查询开销的内部计算来确定最长时间  。
@@ -97,7 +97,7 @@ USING { pool_name | "default" }  </br>
 > 预定义工作负荷组和资源池都使用小写名称，例如“default”。 对于使用区分大小写排序规则的服务器，应当注意这一点。 使用不区分大小写排序规则的服务器（例如 SQL_Latin1_General_CP1_CI_AS）会将“default”和“Default”视为相同。
 
 EXTERNAL external_pool_name | “default“</br>
-适用范围：[!INCLUDE[ssNoVersion](ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](sssql16-md.md)] 开始）  。
+适用范围：[!INCLUDE[ssNoVersion](ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](sssql16-md.md)] 开始）  。
 
 工作负荷组可以指定一个外部资源池。 可定义一个工作负荷组并关联两个池：
 
@@ -106,7 +106,7 @@ EXTERNAL external_pool_name | “default“</br>
 
 ## <a name="remarks"></a>备注
 
-使用 `REQUEST_MEMORY_GRANT_PERCENT` 时，允许索引创建操作使用比最初授予的工作区内存更多的工作区内存以提高性能。 [!INCLUDE[ssCurrent](sscurrent-md.md)] 中的资源调控器支持这种特殊的处理方法。 然而，最初授予及任何其他内存授予都受资源池和工作负荷组设置的限制。
+使用 `REQUEST_MEMORY_GRANT_PERCENT` 时，允许索引创建操作使用比最初授予的工作区内存更多的工作区内存以提高性能。 [!INCLUDE[ssCurrent](ssnoversion-md.md)] 中的资源调控器支持这种特殊的处理方法。 然而，最初授予及任何其他内存授予都受资源池和工作负荷组设置的限制。
 
 将按[任务](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)设置 `MAX_DOP` 限制。 它不是按[请求](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)限制或按查询限制。 这意味着，在并行查询期间，单个请求可以生成多个任务，然后将它们分配给[计划程序](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 有关详细信息，请参阅[线程和任务体系结构指南](../relational-databases/thread-and-task-architecture-guide.md)。
 

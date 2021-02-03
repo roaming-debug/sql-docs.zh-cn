@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 481493a50fdefc22f6eb4d77feb13cfc4848388d
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 73a1c9f3a39ce51ce6ecc347af2e2eb0fb173fb6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534646"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237300"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>配置和使用具有安全 enclave 的 Always Encrypted 
 
@@ -33,7 +33,7 @@ ms.locfileid: "98534646"
 
 需要配置环境以确保该安全 enclave 可用于数据库，然后才能使用具有安全 enclave 的 Always Encrypted。 还需要设置 [enclave 证明](always-encrypted-enclaves.md#secure-enclave-attestation)。 
 
-设置环境的过程取决于你使用的是 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 还是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]。
+设置环境的过程取决于你使用的是 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 还是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]。
 
 ### <a name="set-up-the-secure-enclave-and-attestation-in-ssnoversion-md"></a>在 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 中设置安全 enclave 和证明
 
@@ -46,9 +46,9 @@ ms.locfileid: "98534646"
 ### <a name="set-up-the-secure-enclave-and-attestation-in-sssdsfull"></a>在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中设置安全 enclave 和证明
 
 有关详细信息，请参阅以下文章：
-- [在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中规划 Intel SGX enclave 和证明](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-plan)
-- [为 Azure SQL 数据库启用 Intel SGX](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-enable-sgx)
-- [为 Azure SQL 数据库逻辑服务器配置 Azure 证明](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-configure-attestation)
+- [在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中规划 Intel SGX enclave 和证明](/azure/azure-sql/database/always-encrypted-enclaves-plan)
+- [为 Azure SQL 数据库启用 Intel SGX](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)
+- [为 Azure SQL 数据库逻辑服务器配置 Azure 证明](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation)
 
 ## <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>管理具有安全 enclave 的 Always Encrypted 的密钥
 有关详细信息，请参阅以下文章：

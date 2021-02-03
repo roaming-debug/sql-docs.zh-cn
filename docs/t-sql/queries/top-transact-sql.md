@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - TOP_TSQL
 - TOP
@@ -22,17 +22,17 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb6024d0ad3ef6f34d170201c0fbacc3447dab26
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: d007bd92518d4ce5f898c400bad53f09d2e93642
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783579"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237793"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-将在查询结果集中返回的行数限制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的指定行数或行的百分比。 将 TOP 用于 ORDER BY 子句时，结果集被限制为前 *N* 个已排序的行。 否则，TOP 将以未定义的顺序返回前 *N* 行。 使用此子句来指定从 SELECT 语句返回的行数。 或者，使用 TOP 来指定受 INSERT、UPDATE、MERGE 或 DELETE 语句影响的行。  
+将在查询结果集中返回的行数限制到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中的指定行数或行的百分比。 将 TOP 用于 ORDER BY 子句时，结果集被限制为前 *N* 个已排序的行。 否则，TOP 将以未定义的顺序返回前 *N* 行。 使用此子句来指定从 SELECT 语句返回的行数。 或者，使用 TOP 来指定受 INSERT、UPDATE、MERGE 或 DELETE 语句影响的行。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

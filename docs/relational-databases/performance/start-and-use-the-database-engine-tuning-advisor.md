@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 5b83b5781d8c40c0acc6ee79ab0730c249def7c5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: da72d129bac65b1b9210e49d33782b257ea9e182
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172519"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236428"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中启动和使用数据库引擎优化顾问。 有关如何查看和使用数据库优化结果，请参阅 [查看和使用数据库引擎优化顾问的输出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)。  
+  本主题介绍如何在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中启动和使用数据库引擎优化顾问。 有关如何查看和使用数据库优化结果，请参阅 [查看和使用数据库引擎优化顾问的输出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)。  
   
 ##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> 初始化数据库引擎优化顾问  
  第一次使用时，作为 **sysadmin** 固定服务器角色成员的用户必须初始化数据库引擎优化顾问。 这是因为必须在 **msdb** 数据库中创建多个系统表才能支持优化操作。 如果用户是 **db_owner** 固定数据库角色的成员，初始化还可以使他们能够优化数据库（他们拥有的数据库）中的表的工作负荷。  
   
  具有系统管理员权限的用户必须执行下列操作之一：  
   
--   使用数据库引擎优化顾问图形用户界面连接到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例。 有关详细信息，请参阅本主题后面的 [启动数据库引擎优化顾问](#Start) 。  
+-   使用数据库引擎优化顾问图形用户界面连接到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]实例。 有关详细信息，请参阅本主题后面的 [启动数据库引擎优化顾问](#Start) 。  
   
 -   使用 **dta** 实用工具优化第一个工作负荷。 有关详细信息，请参阅本主题后面的 [使用 dta 实用工具](#dta) 。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "98172519"
 
       ||  
       |-|  
-      |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
+      |**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
 
   
 -   将计划缓存用作工作负荷。 这样，可以避免手动创建工作负荷。 有关详细信息，请参阅本主题后面的 [优化数据库](#Tune) 。  

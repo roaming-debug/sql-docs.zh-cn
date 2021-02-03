@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a33a9bfe6409c08eba3d3f212c95619634699a55
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 038cb4e80af0423a5581ef2b7b51c1bbc54bb5cc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480538"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237630"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 和 nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ sysname 是系统提供的用户定义数据类型，除了不可为 Null 外，
   
 SET ANSI_PADDING 对于 nchar 和 nvarchar 始终为 ON。 SET ANSI_PADDING OFF 不适用于 nchar 或 nvarchar 数据类型。
   
-在 Unicode 字符字符串常量的前面加上字母 N 作为前缀来表示 UCS-2 或 UTF-16 输入，具体取决于是否使用了 SC 排序规则。 如果没有 N 前缀，则字符串被转换为数据库的默认代码页，而该数据库可能无法识别某些字符。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，若使用启用了 UTF-8 的排序规则，则默认代码页能够存储 UNICODE UTF-8 字符集。 
+在 Unicode 字符字符串常量的前面加上字母 N 作为前缀来表示 UCS-2 或 UTF-16 输入，具体取决于是否使用了 SC 排序规则。 如果没有 N 前缀，则字符串被转换为数据库的默认代码页，而该数据库可能无法识别某些字符。 从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始，若使用启用了 UTF-8 的排序规则，则默认代码页能够存储 UNICODE UTF-8 字符集。 
  
 > [!NOTE]  
 > 在字符串常量前面添加字母 N 作为前缀时，如果要转换的常量不超过 nvarchar 字符串数据类型的最大长度 (4,000)，则隐式转换将生成 UCS-2 或 UTF-16 字符串。 否则，隐式转换将生成大值 nvarchar(max)。

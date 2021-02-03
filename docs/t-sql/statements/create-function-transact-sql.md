@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FUNCTION
 - CREATE FUNCTION
@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 717ffe936bef35c9794e160e56c7ea7b0658058f
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: bf80bb7b33dc28941791cd4fa6f09f384ee858f1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170699"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237304"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
@@ -271,12 +271,12 @@ RETURNS return_data_type
 ## <a name="arguments"></a>参数
 
 OR ALTER
- 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]SP1 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]SP1 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 只有在函数已存在时才对其进行有条件地更改。
 
 > [!NOTE]
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU1 开始，可以使用 CLR 的可选 [OR ALTER] 语法。
+> 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU1 开始，可以使用 CLR 的可选 [OR ALTER] 语法。
 
 schema_name 是用户定义函数所属的架构的名称。
 

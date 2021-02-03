@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
 - ALTER_AVAILABILITY_TSQL
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 23cd700fd8b25778118b2141bf0205dcbd87c92e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dc5c1829eaa8be1116c07ae8f4cc3e6d80501f60
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170459"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237867"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -228,10 +228,10 @@ ALTER AVAILABILITY GROUP group_name
  有关此设置的详细信息，请参阅[数据库级别运行状况检测选项](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
 
 DTC_SUPPORT  **=** { PER_DB | NONE }  
-指定是否已对此可用性组启用分布式事务。 分布式事务仅适用于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及以上版本中的可用性组数据库，而跨数据库事务仅适用于 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 及以上版本。 `PER_DB` 将创建支持这些事务的可用性组，并且将自动把涉及可用性组中的数据库的跨数据库事务提升为分布式事务。 `NONE` 可阻止将跨数据库事务自动提升为分布式事务，并且不向 DTC 中的稳定 RMID 注册该数据库。 使用 `NONE` 设置时不会阻止分布式事务，但数据库故障转移和自动恢复在某些情况下可能失败。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。 
+指定是否已对此可用性组启用分布式事务。 分布式事务仅适用于 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及以上版本中的可用性组数据库，而跨数据库事务仅适用于 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 及以上版本。 `PER_DB` 将创建支持这些事务的可用性组，并且将自动把涉及可用性组中的数据库的跨数据库事务提升为分布式事务。 `NONE` 可阻止将跨数据库事务自动提升为分布式事务，并且不向 DTC 中的稳定 RMID 注册该数据库。 使用 `NONE` 设置时不会阻止分布式事务，但数据库故障转移和自动恢复在某些情况下可能失败。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。 
  
 > [!NOTE]
-> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Service Pack 2 中引入了对更改可用性组的 DTC_SUPPORT 设置的支持。 此选项无法用于早期版本。 若要在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的早期版本中更改此设置，必须对可用性组再次执行 DROP 和 CREATE 操作。
+> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 中引入了对更改可用性组的 DTC_SUPPORT 设置的支持。 此选项无法用于早期版本。 若要在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的早期版本中更改此设置，必须对可用性组再次执行 DROP 和 CREATE 操作。
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  在 SQL Server 2017 中引入。 用于设置需要在主要副本提交事务之前提交的最小数量的同步次要副本。 保证 SQL Server 事务等待至事务日志在最小数量的次要副本上更新为止。 默认值为 0，可提供与 SQL Server 2016 相同的行为。 最小值为 0。 最大值为副本数量减 1。 此选项与同步提交模式中的副本相关。 当副本处于同步提交模式时，对主要副本的写入操作会等待至将次要同步副本上的写入提交到副本数据库事务日志为止。 如果托管次要同步副本的 SQL Server 停止响应，则托管主要副本的 SQL Server 将此次要副本标记为 NOT SYNCHRONIZED（未同步）并继续执行操作。 当无响应的数据库恢复联机状态时，它将处于“未同步”状态，副本将标记为不正常，直到主要副本可再次对其执行同步。 此设置可确保主要副本会等待至最少数量的副本已提交每个事务。 如果最少数量的副本不可用，则主要副本上的提交会失败。 对于群集类型 `EXTERNAL`，可用性组添加到群集资源时，设置会更改。 请参阅[可用性组配置的高可用性和数据保护](../../linux/sql-server-linux-availability-group-ha.md)。
@@ -406,7 +406,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  使用以逗号分隔的列表指定可能承载可读辅助副本的所有服务器实例。 只读路由将遵循在列表中指定服务器实例的顺序。 如果在副本的只读路由列表中包含副本的宿主服务器实例，通常将此服务器实例放在列表末尾比较好，这样在一个辅助副本可用时读意向连接将访问它。  
   
- 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，可在可读次要副本间实现读意向请求的负载均衡。 可通过将副本放入只读路由列表中的一组嵌套括号中来指定。 有关详细信息和示例，请参阅[在只读副本间配置负载均衡](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。  
+ 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，可在可读次要副本间实现读意向请求的负载均衡。 可通过将副本放入只读路由列表中的一组嵌套括号中来指定。 有关详细信息和示例，请参阅[在只读副本间配置负载均衡](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。  
   
  无  
  指定此可用性副本为主副本时将不支持只读路由。 此选项为默认行为。 与 MODIFY REPLICA ON 一起使用时，此值将禁用现有列表（如果有）。  

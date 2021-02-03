@@ -23,12 +23,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02ddc1ad96f45ba67ed613ee7446d8a1c12e1e5b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3eb9fd5897029fedb0e53378ecbe5f6c12f635ef
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171399"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237654"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "98171399"
 > -  辅助进程 2 执行不足 1 毫秒的短时间运行任务，因此需要在其完整量程用尽之前暂停。     
 >
 > 在这种情况下，直到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，辅助进程 1 都可以通过拥有更多的总量程时间来独占计划程序。   
-> 从 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 开始，协作式计划包括大缺口优先 (LDF) 计划。 使用 LDF 计划时，会监视量程使用模式，不会让一个工作线程独占计划程序。 在同样的情况下，在为辅助进程 1 分配更多量程之前，允许辅助进程 2 使用重复的量程，从而阻止辅助进程 1 以不友好的模式独占计划程序。
+> 从 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 开始，协作式计划包括大缺口优先 (LDF) 计划。 使用 LDF 计划时，会监视量程使用模式，不会让一个工作线程独占计划程序。 在同样的情况下，在为辅助进程 1 分配更多量程之前，允许辅助进程 2 使用重复的量程，从而阻止辅助进程 1 以不友好的模式独占计划程序。
 
 ### <a name="scheduling-parallel-tasks"></a>计划并行任务
 假设使用 MaxDOP 8 配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，并且跨 NUMA 节点 0 和 1 为 24 个 CPU（计划程序）配置了 CPU 关联。 计划程序 0 到 11 属于 NUMA 节点 0，计划程序 12 到 23 属于 NUMA 节点 1。 应用程序向 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 发送以下查询（请求）：

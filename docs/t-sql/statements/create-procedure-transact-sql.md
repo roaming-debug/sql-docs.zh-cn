@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - PROC
 - PROCEDURE
@@ -47,12 +47,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a23a11bf4968179baad9d3cc88e5a64acae68b76
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c1c781ab64e5ec0a3dde6a298b320a3520667fd3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170159"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237830"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -148,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 
 OR ALTER
 
-**适用对象**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 开始）。
+**适用对象**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 开始）。
 
 如果过程已存在，则更改该过程。
 
@@ -220,7 +220,7 @@ ENCRYPTION
 
 EXECUTE AS 子句指定在其中执行过程的安全上下文。
 
-对于本机编译存储过程（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中），EXECUTE AS 子句没有任何限制。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，对于本机编译的存储过程，支持 SELF、OWNER 和“user_name”子句。
+对于本机编译存储过程（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中），EXECUTE AS 子句没有任何限制。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，对于本机编译的存储过程，支持 SELF、OWNER 和“user_name”子句。
 
 有关详细信息，请参阅 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。
 

@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: ed6a0a041cba407b06b26e8b1d800da1f47b2bbb
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: e84635c1f32396e033841c546dafc1796624d5ab
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534666"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237093"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-通过启用就地加密和更丰富的机密查询，具有安全 enclave 的 Always Encrypted 扩展了 [Always Encrypted](always-encrypted-database-engine.md) 的机密计算功能。 具有安全 enclave 的 Always Encrypted 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]中可用（预览版）。
+通过启用就地加密和更丰富的机密查询，具有安全 enclave 的 Always Encrypted 扩展了 [Always Encrypted](always-encrypted-database-engine.md) 的机密计算功能。 具有安全 enclave 的 Always Encrypted 在 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]中可用（预览版）。
 
 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]（2015 年）和 [!INCLUDE[sssql16](../../../includes/sssql16-md.md)] 中引入的 Always Encrypted 可保护敏感数据的机密性免受恶意软件以及具有高度特权但未经授权的用户的攻击：DBA、计算机管理员、云管理员，或可以合法访问服务器实例、硬件等但不应有权访问部分或全部实际数据的任何其他用户。  
 
@@ -44,7 +44,7 @@ Always Encrypted 使用安全 enclave，如下图中所示：
 
 ## <a name="supported-enclave-technologies"></a>受支持的 enclave 技术
 
-在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)][ 中，具有安全 enclave 的 Always Encrypted 使用](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)基于虚拟化的安全 (VBS) 保护 Windows 中的内存 enclave（也称为虚拟安全模式或 VSM enclave）。
+在 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)][ 中，具有安全 enclave 的 Always Encrypted 使用](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)基于虚拟化的安全 (VBS) 保护 Windows 中的内存 enclave（也称为虚拟安全模式或 VSM enclave）。
 
 在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中，具有安全 enclave 的 Always Encrypted 使用 [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) enclave。 Intel SGX 是使用 [DC 系列](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)硬件配置的数据库中支持的一种基于硬件的受信任执行环境技术。
 
@@ -54,12 +54,12 @@ Always Encrypted 使用安全 enclave，如下图中所示：
 
 验证 enclave 的过程称为“enclave 证明”，同时涉及应用程序内的客户端驱动程序和用于联系外部证明服务的 [!INCLUDE[ssde-md](../../../includes/ssde-md.md)]。 证明过程的细节取决于 enclave 类型（VBS 或 SGX）和证明服务。
 
-[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中的 VBS 安全 enclave 的证明过程是 [Windows Defender System Guard 运行时证明](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)，该证明要求将主机保护者服务 (HGS) 用作证明服务。 
+[!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 中的 VBS 安全 enclave 的证明过程是 [Windows Defender System Guard 运行时证明](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)，该证明要求将主机保护者服务 (HGS) 用作证明服务。 
 
 在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中证明 Intel SGX enclave 需要 [Microsoft Azure 证明](https://docs.microsoft.com/azure/attestation/overview)。
 
 > [!NOTE]
-> [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 不支持 Microsoft Azure 证明。 主机保护者服务是 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中 VBS enclave 唯一支持的证明解决方案。
+> [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 不支持 Microsoft Azure 证明。 主机保护者服务是 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 中 VBS enclave 唯一支持的证明解决方案。
 
 ## <a name="supported-client-drivers"></a>受支持的客户端驱动程序
 
@@ -104,7 +104,7 @@ Always Encrypted 使用安全 enclave，如下图中所示：
 
 安全 enclave 内支持的操作包括：
 
-| Operation| [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] |
+| Operation| [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] |
 |:---|:---|:---|
 | [比较运算符](../../../mdx/comparison-operators.md) | 支持 | 支持 |
 | [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md) | 支持 | 支持 |
@@ -122,7 +122,7 @@ Always Encrypted 使用安全 enclave，如下图中所示：
 > - [SELECT - GROUP BY](../../../t-sql/queries/select-group-by-transact-sql.md)
 > - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
 >
-> 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，对字符串列（`char``nchar`）使用 enclave 的机密查询要求列使用 binary2 排序顺序 (BIN2) 排序规则。 在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中，对字符串的机密查询要求 BIN2 排序规则或 UTF-8 排序规则。 
+> 在 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 中，对字符串列（`char``nchar`）使用 enclave 的机密查询要求列使用 binary2 排序顺序 (BIN2) 排序规则。 在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中，对字符串的机密查询要求 BIN2 排序规则或 UTF-8 排序规则。 
 
 ### <a name="indexes-on-enclave-enabled-columns"></a>已启用 enclave 的列上的索引
 
@@ -141,7 +141,7 @@ Always Encrypted 使用安全 enclave，如下图中所示：
 如果 SQL Server 实例出现故障，它的数据库可能处于以下状态：数据文件可能包含来自未完成事务的一些修改。 启动后，此实例运行[数据库恢复](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started)过程，其中涉及回滚在事务日志中找到的所有未完成事务，以确保维护数据库完整性。 如果未完成事务对索引进行了任何更改，也需要撤消这些更改。 例如，可能需要删除或重新插入索引中的一些键值。
 
 > [!IMPORTANT]
-> Microsoft 强烈建议，先为数据库启用[加速数据库恢复 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)，再在使用随机加密进行加密且已启用 enclave 的列上创建首个索引。 默认情况下，[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中启用了 ADR，但 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中未启用。
+> Microsoft 强烈建议，先为数据库启用[加速数据库恢复 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)，再在使用随机加密进行加密且已启用 enclave 的列上创建首个索引。 默认情况下，[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中启用了 ADR，但 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 中未启用。
 
 如果使用遵循 [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) 恢复模式的[传统数据库恢复过程](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process)，SQL Server 必须等到应用程序向 enclave 提供列的列加密密钥，才能撤消对索引的更改，而这可能需要很长时间才能完成。 加速的数据库恢复 (ADR) 大大减少了因无法从 enclave 内的缓存获取列加密密钥而必须延迟的撤消操作数。 因此，它通过最大限度地降低新事务受阻的可能性，极大地提高了数据库可用性。 启用 ADR 后，SQL Server 可能仍需要使用列加密密钥来完成旧数据版本清理，但是作为不影响数据库可用性或用户事务的后台任务来完成。 不过，错误日志中可能会显示错误消息，指明清理操作因缺少列加密密钥而失败。
 
@@ -181,7 +181,7 @@ Always Encrypted 使用安全 enclave，如下图中所示：
 
 - 无法在使用随机加密且已启用 enclave 的列上创建聚集索引。
 - 使用随机加密且已启用 enclave 的列无法作为主键列，并且无法被外键约束或唯一键约束引用。
-- 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中（此限制不适用于 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]），仅在使用随机加密且已启用 enclave 的列上才支持嵌套循环联接（在可用时使用索引）。 有关不同产品间的其他差异的信息，请参阅[机密查询](#confidential-queries)。
+- 在 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 中（此限制不适用于 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]），仅在使用随机加密且已启用 enclave 的列上才支持嵌套循环联接（在可用时使用索引）。 有关不同产品间的其他差异的信息，请参阅[机密查询](#confidential-queries)。
 - 就地加密操作无法与列元数据的其他任何更改合并，更改同一代码页内的排序规则以及更改为 Null 性除外。 例如，不能在单个 `ALTER TABLE`/`ALTER COLUMN` Transact-SQL 语句中加密、重新加密或解密列并更改列的数据类型。 请单独使用两个语句。
 - 不支持将已启用 enclave 的密钥用于内存中表内的列。
 - 定义计算列的表达式无法对使用随机加密且已启用 enclave 的列执行任何计算（即使这些计算属于[机密查询](#confidential-queries)中列出的受支持操作）。

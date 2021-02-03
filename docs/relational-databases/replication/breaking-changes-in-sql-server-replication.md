@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e46f34d32b857145131108e32dd762538964f00a
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 8eea754a9a19c64287778aeef55504ebe5b76b0f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170109"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237652"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server 复制中的重大更改
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。  
   
-## <a name="breaking-changes-made-in-sssql15"></a>[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 不支持面向或源自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssEW](../../includes/ssew-md.md)]的复制。  
+## <a name="breaking-changes-made-in-sssql16-md"></a>[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 不支持面向或源自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssEW](../../includes/ssew-md.md)]的复制。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制的向后兼容性](../../relational-databases/replication/replication-backward-compatibility.md)  

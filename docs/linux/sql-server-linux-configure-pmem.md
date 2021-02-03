@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15'
-ms.openlocfilehash: 4630a96f1abf961174ece179aabfd160a5784ad9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5b99f12aebc27d04b384ff0b8d51b5359ca76d19
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471608"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236922"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 配置持久性内存 (PMEM)
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-本文介绍如何为 Linux 上的 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 配置永久内存 (PMEM)。
+本文介绍如何为 Linux 上的 [!INCLUDE[sqlv15](../includes/sssql19-md.md)] 配置永久内存 (PMEM)。
 
 ## <a name="overview"></a>概述
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 具有大量使用永久内存的内存中功能。 本文档介绍为 Linux 上的 SQL Server 配置永久内存所需的步骤。
+[!INCLUDE[sqlv15](../includes/sssql19-md.md)] 具有大量使用永久内存的内存中功能。 本文档介绍为 Linux 上的 SQL Server 配置永久内存所需的步骤。
 
 > [!NOTE]
 > 引入了“启发”一词，旨在传达使用永久内存感知文件系统的概念  。 通过使用内存映射 (`mmap()`)，可以从用户空间应用程序直接访问文件系统。 在创建文件的内存映射时，应用程序可能会完全绕过 I/O 堆栈发出加载/存储指令。 从主机扩展应用程序的角度来看，这是一种“启发式”文件访问方法，它是允许 SQLPAL 与 Windows 或 Linux OS 交互的黑盒代码。

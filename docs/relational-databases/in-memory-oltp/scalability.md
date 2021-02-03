@@ -12,25 +12,25 @@ ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e72e67bf033ecef94b318d69b31f33604572cf8
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2b3f4141afeb26c7be406a3c810f2403978f016f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172059"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236128"
 ---
 # <a name="scalability"></a>可伸缩性
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 包含内存优化表磁盘存储的可伸缩性增强功能。 
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 包含内存优化表磁盘存储的可伸缩性增强功能。 
 
 ## <a name="multiple-threads-to-persist-memory-optimized-tables"></a>要保留内存优化表的多个线程  
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中曾经存在单个脱机检查点线程以扫描内存优化表更改的事务日志并将其保存在检查点文件（如数据和差异文件）中。 在具有较大内核数的计算机中，单个脱机检查点线程可能落后。  
   
-从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，有多个并发线程负责保存内存优化表的更改。  
+从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，有多个并发线程负责保存内存优化表的更改。  
   
 ## <a name="multi-threaded-recovery"></a>多线程恢复
-在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，日志应用属于恢复操作的一部分，是单个线程。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，日志应用是多线程。  
+在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，日志应用属于恢复操作的一部分，是单个线程。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，日志应用是多线程。  
   
 ## <a name="merge-operation"></a>合并操作  
 合并操作现在是多线程。  

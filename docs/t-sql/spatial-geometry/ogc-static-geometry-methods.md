@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0879e797bacc0c0040cef55d8a30a3e40214473e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e17aa5f18ca303d27084859f4497fd8e090ee967
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467401"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237862"
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC 静态几何图形方法
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持开放地理空间联盟 (OGC) 的静态几何图形方法。  
+  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]支持开放地理空间联盟 (OGC) 的静态几何图形方法。  
   
  有关开放地理空间联盟 (OGC) 规范的详细信息，请参阅以下开放地理空间联盟规范：  
   

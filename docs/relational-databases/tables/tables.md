@@ -15,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40416d9ccd36e8de4ac1e4196a769607af3b5545
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4e8b8a82580fbe6f1a60a82d54e90c5ee106280f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482365"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236793"
 ---
 # <a name="tables"></a>表
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97482365"
 
 ### <a name="partitioned-tables"></a>已分区表
 
-已分区表是将数据水平划分为多个单元的表，这些单元可以分布到数据库中的多个文件组中。 在维护整个集合的完整性时，使用分区可以快速而有效地访问或管理数据子集，从而使大型表或索引更易于管理。 默认情况下， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持多达 15,000 个分区。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。
+已分区表是将数据水平划分为多个单元的表，这些单元可以分布到数据库中的多个文件组中。 在维护整个集合的完整性时，使用分区可以快速而有效地访问或管理数据子集，从而使大型表或索引更易于管理。 默认情况下， [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持多达 15,000 个分区。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。
 
 ### <a name="temporary-tables"></a>临时表
 
@@ -47,7 +47,7 @@ ms.locfileid: "97482365"
 
 #### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> 跨多个作用域使用临时表减少了对工作负荷的重新编译
 
-在所有数据库兼容性级别下，[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] 跨多个作用域使用临时表减少了对工作负载的重新编译。 Azure SQL 数据库也在数据库兼容性级别 150 下针对所有部署模型启用了此功能。  在推出此功能之前，当引用带有数据操作语言 DML 语句（`SELECT`、`INSERT`、`UPDATE`、`DELETE`）的临时表时，如果此临时表由外部作用域批处理创建，则会导致每次执行时都会重新编译 DML 语句。 借助此改进，SQL Server 可执行其他轻量级检查来避免不必要的重新编译：
+在所有数据库兼容性级别下，[!INCLUDE[ss2019](../../includes/sssql19-md.md)] 跨多个作用域使用临时表减少了对工作负载的重新编译。 Azure SQL 数据库也在数据库兼容性级别 150 下针对所有部署模型启用了此功能。  在推出此功能之前，当引用带有数据操作语言 DML 语句（`SELECT`、`INSERT`、`UPDATE`、`DELETE`）的临时表时，如果此临时表由外部作用域批处理创建，则会导致每次执行时都会重新编译 DML 语句。 借助此改进，SQL Server 可执行其他轻量级检查来避免不必要的重新编译：
 
 - 检查在编译时用于创建临时表的外部作用域模块是否与用于连续执行的外部作用域模块相同。 
 - 跟踪在初始编译时所做的任何数据定义语言 (DDL) 更改，并将它们与连续执行的 DDL 操作进行比较。

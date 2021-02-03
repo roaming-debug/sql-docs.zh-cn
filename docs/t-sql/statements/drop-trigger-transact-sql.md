@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP TRIGGER
 - DROP_TRIGGER_TSQL
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6ef0daca8b2c593c5d451c25471cef73cf8034fa
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 0be25328507c6afa210cd4d51817551395f94770
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688938"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237757"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ ON ALL SERVER
 
 ## <a name="arguments"></a>参数
  IF EXISTS  
- **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到 [当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)、[!INCLUDE[sssds](../../includes/sssds-md.md)]）。  
+ **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 到 [当前版本](/troubleshoot/sql/general/determine-version-edition-update-level)、[!INCLUDE[sssds](../../includes/sssds-md.md)]）。  
   
  有条件地删除触发器（仅当其已存在时）。  
   
@@ -107,7 +107,7 @@ ON ALL SERVER
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. 删除 DML 触发器  
- 以下示例将删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `employee_insupd` 触发器。 （从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，可使用 DROP TRIGGER IF EXISTS 语句。）  
+ 以下示例将删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `employee_insupd` 触发器。 （从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，可使用 DROP TRIGGER IF EXISTS 语句。）  
   
 ```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

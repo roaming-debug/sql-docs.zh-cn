@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 88f965eadf0defbd75c859fa2308dd255f5c1486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6625022360c93da5cbc43224572908738f6d430c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470416"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236447"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>内存中数据库系统和技术
 
@@ -39,13 +39,13 @@ ms.locfileid: "88470416"
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[混合缓冲池](../database-engine/configure-windows/hybrid-buffer-pool.md)通过 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 为驻留在适用于 Windows 和 Linux 平台的可字节寻址的永久内存存储设备上的数据库文件扩展缓冲池。
+[混合缓冲池](../database-engine/configure-windows/hybrid-buffer-pool.md)通过 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 为驻留在适用于 Windows 和 Linux 平台的可字节寻址的永久内存存储设备上的数据库文件扩展缓冲池。
 
 ## <a name="memory-optimized-tempdb-metadata"></a>内存优化 `tempdb` 元数据
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了一个新功能，即[内存优化 tempdb 元数据](./databases/tempdb-database.md#memory-optimized-tempdb-metadata)，它有效地消除了某些争用瓶颈，并为 tempdb 繁重的工作负载解锁了新级别的可伸缩性。
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 引入了一个新功能，即[内存优化 tempdb 元数据](./databases/tempdb-database.md#memory-optimized-tempdb-metadata)，它有效地消除了某些争用瓶颈，并为 tempdb 繁重的工作负载解锁了新级别的可伸缩性。
 
 ## <a name="in-memory-oltp"></a>内存中 OLTP
 
@@ -57,7 +57,7 @@ ms.locfileid: "88470416"
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 介绍了如何使用 `ndctl` 实用工具[永久内存](../linux/sql-server-linux-configure-pmem.md)配置永久内存 (PMEM)。
+[!INCLUDE[sqlv15](../includes/sssql19-md.md)] 介绍了如何使用 `ndctl` 实用工具[永久内存](../linux/sql-server-linux-configure-pmem.md)配置永久内存 (PMEM)。
 
 ## <a name="persisted-log-buffer"></a>永久日志缓冲区
 

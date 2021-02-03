@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 910db0887a50e12163ddeda927159f5e6c97b74b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 87ea13391e0495c695ccc057e842e2f6ef0c6e19
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169275"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237950"
 ---
 # <a name="tempdb-database"></a>TempDB 数据库
 
@@ -213,7 +213,7 @@ GO
 将 `tempdb` 数据库放置在用户数据库使用的磁盘以外的磁盘中。
 
 ## <a name="performance-improvements-in-tempdb-for-sql-server"></a>SQL Server 中 tempdb 的性能提高
-从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，已通过以下方式进一步优化 `tempdb` 性能：  
+从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，已通过以下方式进一步优化 `tempdb` 性能：  
   
 - 已缓存的临时表和表变量。 缓存允许删除和创建临时对象的操作非常快速地运行。 缓存还可以减少页分配和元数据争用问题。  
 - 改进了分配页闩锁协议，减少了所用 `UP`（更新）闩锁的数量。  
@@ -226,9 +226,9 @@ GO
 有关 `tempdb` 中性能改进的详细信息，请参阅博客文章 [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my)（TEMPDB - 文件和跟踪标志以及更新，天哪！）。
 
 ## <a name="memory-optimized-tempdb-metadata"></a>内存优化 tempdb 元数据
-对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上运行的许多工作负载，`tempdb` 元数据争用历来是可伸缩性的瓶颈。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了一项新功能，它属于[内存数据库](../in-memory-database.md)功能系列：内存优化 tempdb 元数据。 
+对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上运行的许多工作负载，`tempdb` 元数据争用历来是可伸缩性的瓶颈。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 引入了一项新功能，它属于[内存数据库](../in-memory-database.md)功能系列：内存优化 tempdb 元数据。 
 
-此功能有效地消除了这种瓶颈，并为 tempdb 繁重的工作负荷提供了新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。
+此功能有效地消除了这种瓶颈，并为 tempdb 繁重的工作负荷提供了新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。
 
 本视频时长 7 分钟，请观看它来大致了解如何及何时使用经过内存优化的 tempdb 元数据：
 

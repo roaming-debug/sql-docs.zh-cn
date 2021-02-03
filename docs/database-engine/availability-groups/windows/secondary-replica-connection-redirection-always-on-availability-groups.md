@@ -18,24 +18,24 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 8fb07363cd52de514c646cff3d482b38f76493b3
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ac4900e284d1e83ef0945e1d0082279c06414b0b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643303"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236683"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要副本到主要副本读/写连接重定向（Always On 可用性组）
 
 [!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 引入了 Always On 可用性组的次要副本到主要副本读/写连接重定向。 读/写连接重定向适用于任何操作系统平台。 它允许客户端应用程序连接定向到主要副本，而不考虑在连接字符串中指定的目标服务器。 
+[!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] CTP 2.0 引入了 Always On 可用性组的次要副本到主要副本读/写连接重定向。 读/写连接重定向适用于任何操作系统平台。 它允许客户端应用程序连接定向到主要副本，而不考虑在连接字符串中指定的目标服务器。 
 
 例如，连接字符串可以针对次要副本。 根据可用性组 (AG) 副本的配置和连接字符串中的设置，连接可以自动重定向到主要副本。 
 
 ## <a name="use-cases"></a>用例
 
-在 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 之前，AG 侦听器和相应的群集资源将用户流量重定向到主要副本，以确保在故障转移后重新连接。 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 继续支持 AG 侦听器功能，并为不能包含侦听器的方案添加副本连接重定向。 例如：
+在 [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] 之前，AG 侦听器和相应的群集资源将用户流量重定向到主要副本，以确保在故障转移后重新连接。 [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] 继续支持 AG 侦听器功能，并为不能包含侦听器的方案添加副本连接重定向。 例如：
 
 * SQL Server 可用性组集成的群集技术不提供类似于侦听器的功能 
 * 多子网配置，如在云中或具有 Pacemaker 的多子网浮动 IP，其中配置变得复杂，容易出错，并且由于涉及多个组件而难以排除故障
@@ -52,7 +52,7 @@ ms.locfileid: "97643303"
 
 若要配置读/写连接重定向，请在创建 AG 时为主要副本设置 `READ_WRITE_ROUTING_URL`。 
 
-在 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 中，`READ_WRITE_ROUTING_URL` 已添加到 `<add_replica_option>` 规范。 请参阅下列主题： 
+在 [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] 中，`READ_WRITE_ROUTING_URL` 已添加到 `<add_replica_option>` 规范。 请参阅下列主题： 
 
 * [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
@@ -67,7 +67,7 @@ ms.locfileid: "97643303"
 |`ApplicationIntent=ReadWrite`<br/> 默认|连接失败|连接失败|连接成功<br/>读取成功<br/>写入失败|
 |`ApplicationIntent=ReadOnly`|连接失败|连接成功|连接成功
 
-上表显示默认行为，与 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 之前的 SQL Server 版本相同。 
+上表显示默认行为，与 [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] 之前的 SQL Server 版本相同。 
 
 ### <a name="primary_roleread_write_routing_url-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) 集 
 

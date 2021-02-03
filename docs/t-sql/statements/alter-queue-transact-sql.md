@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER_QUEUE_TSQL
 - ALTER QUEUE
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 09303d17e8cb284251d9c8e585eeadb5a1a1e898
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: e1a858efef550632d3d5c8913222ab86a22a9543
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170839"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237766"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -107,12 +107,12 @@ WITH
  指定队列是否激活存储过程。 当 STATUS = ON 时，如果当前运行的过程数小于 MAX_QUEUE_READERS，并且消息抵达队列的速度比存储过程接收消息的速度快，则队列启动用 PROCEDURE_NAME 指定的存储过程。 当 STATUS = OFF 时，队列不激活存储过程。  
   
  REBUILD [ WITH \<queue_rebuild_options> ]  
- **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。  
   
  在队列内部表上重新生成所有索引。 遇到由于高负载而产生的碎片问题时请使用此功能。 MAXDOP 是唯一受支持的队列重新生成选项。 REBUILD 始终为脱机操作。  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
- **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。  
   
  在队列内部表上重新组织所有索引。   
 由于在队列上已显式禁用页面级锁定，因此不同于在用户表上的 REORGANIZE，在队列上的 REORGANIZE 始终作为脱机操作执行。  
@@ -121,7 +121,7 @@ WITH
 >  有关索引碎片的常规指南，当碎片在 5% 和 30% 之间时，重新组织索引。 当碎片超过 30% 时，请重新生成索引。 但这些数字仅适用于作为环境起始点的常规指南。 要确定索引碎片的数量，请使用 [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) - 有关示例，请参阅该文章中的示例 G。  
   
  MOVE TO { file_group | "default" }  
- **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。  
+ **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。  
   
  将队列内部表（及其索引）移动到用户指定的文件组中。  新文件组不得为只读。  
   
@@ -226,7 +226,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 ### <a name="g-rebuilding-queue-indexes"></a>G. 重新生成队列索引  
   
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。  
   
  以下示例将重新生成队列索引'  
   
@@ -236,7 +236,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
 ### <a name="h-reorganizing-queue-indexes"></a>H. 重组队列索引  
   
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。  
   
  以下示例重组队列索引  
   
@@ -246,7 +246,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 ### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I：将队列内部表移动到另一个文件组  
   
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。  
+**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。  
   
 ```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   

@@ -25,12 +25,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5088cb94c4c4387cd77835bbe02502764d3c2384
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ce4d006d0df8f17b487a515e3179d43fefd501d5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171699"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236440"
 ---
 # <a name="create-a-database-user"></a>创建数据库用户
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "98171699"
   
  如果对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不熟悉，可能很难决定要创建哪种类型的用户。 首先问问自己，需要访问数据库的用户或组是否有登录名？ 管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用户和需要访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的多个或者全部数据库的用户通常拥有主数据库中的登录名。 在这种情况下，你需要创建一个“带登录名的 SQL 用户” 。 数据库用户是连接到数据库时的登录名的标识。 数据库用户可以使用与登录名相同的名称，但这不是必需的。 本主题假设 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已存在登录名。 有关如何创建登录名的信息，请参阅 [创建登录名](../../../relational-databases/security/authentication-access/create-a-login.md)  
   
- 如果需要访问数据库的用户和组没有登录名，并且他们只需要访问一个或少数几个数据库，则创建 **Windows 用户** 或者 **带密码的 SQL 用户**。 也称为包含的数据库用户，它与主数据库的登录名不相关。 当你想在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例间轻松地移动数据库时，这是一个理想的选择。 若要对 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)]使用此选项，管理员必须首先对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]启用包含的数据库，然后对包含启用数据库。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+ 如果需要访问数据库的用户和组没有登录名，并且他们只需要访问一个或少数几个数据库，则创建 **Windows 用户** 或者 **带密码的 SQL 用户**。 也称为包含的数据库用户，它与主数据库的登录名不相关。 当你想在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例间轻松地移动数据库时，这是一个理想的选择。 若要对 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)]使用此选项，管理员必须首先对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]启用包含的数据库，然后对包含启用数据库。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 > **重要说明！** 作为包含的数据库用户进行连接时，必须在连接字符串中提供数据库的名称。 若要在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中指定数据库，在“连接到”  对话框中单击“选项” ，然后单击“连接属性”  选项卡。  
   

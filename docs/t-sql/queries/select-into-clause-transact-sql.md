@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - INTO_TSQL
 - INSERT_INTO_TSQL
@@ -30,12 +30,12 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7afde8d9db8beedc46ea597dc47e31877d170942
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3ce1740def1f7d2ebd70ad611f3b7b489ca04f99
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172719"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235854"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结
  filegroup    
  指定要在其中创建新表的文件组的名称。 指定的文件组应存在于数据库中，否则 SQL Server 引擎会引发错误。   
  
- **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和更高版本。
+ **适用于：** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和更高版本。
   
 ## <a name="data-types"></a>数据类型  
  FILESTREAM 属性不转移到新表。 FILESTREAM BLOB 作为 varbinary(max) BLOB 复制并存储在新表中。 如果没有 FILESTREAM 属性，则 varbinary(max) 数据类型具有 2 GB 的限制。 如果某个 FILESTREAM BLOB 超过该值，则会引发 7119 错误并停止该语句。  
@@ -219,7 +219,7 @@ GO
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. 从使用 PolyBase 创建的外部表导入  
  从 Hadoop 或 Azure 存储空间将数据导入到 SQL Server 进行永久存储。 使用 `SELECT INTO` 导入外部表引用的数据，以便永久存储在 SQL Server 中。 动态创建关系表，然后在第二步中创建基于该表的列存储索引。  
   
- 适用对象：[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ 适用对象：[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]。  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
@@ -236,7 +236,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-copying-the-data-from-one-table-to-another-and-create-the-new-table-on-a-specified-filegroup"></a>F. 将数据从一个表复制到另一个表，并在指定的文件组上创建新表
 以下示例演示如何创建一个新表作为另一个表的副本，并将其加载到用户默认文件组之外的指定文件组。
 
- **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和更高版本。
+ **适用于：** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和更高版本。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

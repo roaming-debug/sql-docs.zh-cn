@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8aecf4b22cf02ae91d259f45daff1d2cd8414f97
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: bc92b0af972236b588369869afc5b023735ae699
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534686"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237124"
 ---
 # <a name="run-transact-sql-statements-using-secure-enclaves"></a>使用安全 enclave 运行 Transact-SQL 语句
 
@@ -45,15 +45,15 @@ ms.locfileid: "98534686"
   - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md)
   - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md)
   - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
-  - [联接](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]仅支持嵌套循环联接。 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 支持嵌套循环、哈希和合并联接
-  - [SELECT - ORDER BY 子句 (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md)。 在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中受支持。 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]中不受支持
-  - [SELECT - GROUP BY 子句 (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md)。 在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中受支持。 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]中不受支持
+  - [联接](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]仅支持嵌套循环联接。 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 支持嵌套循环、哈希和合并联接
+  - [SELECT - ORDER BY 子句 (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md)。 在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中受支持。 在 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]中不受支持
+  - [SELECT - GROUP BY 子句 (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md)。 在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中受支持。 在 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]中不受支持
 - 可插入、更新或删除行的查询，而这些查询会触发向/从已启用 enclave 的列的索引插入和/或删除索引键。 有关详细信息，请参阅[对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引](always-encrypted-enclaves-create-use-indexes.md)。
 
 > [!NOTE]
 > 只有使用随机加密且已启用 enclave 的列支持对索引的操作和使用 enclave 的机密 DML 查询。 确定性加密不受支持。
 >
-> 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，对字符串列（`char``nchar`）上使用 enclave 的机密查询需要使用为列配置的 binary2 排序顺序 (BIN2) 排序规则。 在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中，需要使用 BIN2 或 UTF-8 排序规则。
+> 在 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 中，对字符串列（`char``nchar`）上使用 enclave 的机密查询需要使用为列配置的 binary2 排序顺序 (BIN2) 排序规则。 在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中，需要使用 BIN2 或 UTF-8 排序规则。
 
 ### <a name="dbcc-commands-using-secure-enclaves"></a>使用安全 enclave 的 DBCC 命令
 
@@ -67,7 +67,7 @@ ms.locfileid: "98534686"
 - 你需要从证明服务管理员处获取环境的证明 URL。
 
   - 如果使用的是 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 和主机监护服务 (HGS)，请参阅[确定并共享 HGS 证明 URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)。
-  - 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)。
+  - 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation)。
 
 - 如果使用应用程序连接到数据库，则该应用程序使用的客户端驱动程序必须支持具有安全 enclave 的 Always Encrypted。 应用程序必须连接到已为数据库连接启用 Always Encrypted 且已正确配置证明协议和证明 URL 的数据库。 有关详细信息，请参阅[使用具有安全 enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md)。
 - 如果使用的是 SQL Server Management Studio (SSMS) 或 Azure SQL Data Studio，则需在连接到数据库时启用 Always Encrypted 并配置证明协议和证明 URL。 有关详细信息，请参阅以下部分。
@@ -104,7 +104,7 @@ SQL Server Management Studio 的最低版本要求：
 1. 在“连接”对话框中，单击“高级…” 。
 2. 若要为连接启用 Always Encrypted，请将“Always Encrypted”字段设置为“启用” 。
 3. 指定证明协议和证明 URL。
-    - 如果使用的是 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，请将“证明协议”设置为“主机监护服务”，然后在“Enclave 证明 URL”字段中输入主机监护服务证明 URL  。
+    - 如果使用的是 [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)]，请将“证明协议”设置为“主机监护服务”，然后在“Enclave 证明 URL”字段中输入主机监护服务证明 URL  。
     - 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]，请将“证明协议”设置为“Azure 证明”，然后在“Enclave 证明 URL”字段中输入引用了 Microsoft Azure 证明中策略的证明 URL  。
 
     ![使用 Azure Data Studio 连接到具有证明的服务器](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
@@ -191,7 +191,7 @@ GO
 
 以下查询基于加密的 `Salary` 列对员工记录进行排序，检索薪水前十的员工。
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 支持对加密的列进行排序，但 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 不支持。
+> [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 支持对加密的列进行排序，但 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 不支持。
 
 ```sql
 SELECT TOP(10) * FROM [HR].[Employees]

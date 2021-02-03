@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 593a966baf3565ef2ed6d30eba92901dc8cbcca2
-ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
+ms.openlocfilehash: 504dd2ca2e8d1e2527a95830106fc152aec4ec77
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97515346"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237637"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
@@ -66,7 +66,7 @@ SQL Server 2017 在所有支持的平台（包括 Linux）上具有相同的基�
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 在所有支持的平台（包括 Linux）上具有相同的基础数据库引擎。 因此，在 Linux 上，许多现有功能运行方式相同。 文档的这一部分从 Linux 的角度展示了其中部分功能。 它还展示了 Linux 上有独特要求的部分。
+[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 在所有支持的平台（包括 Linux）上具有相同的基础数据库引擎。 因此，在 Linux 上，许多现有功能运行方式相同。 文档的这一部分从 Linux 的角度展示了其中部分功能。 它还展示了 Linux 上有独特要求的部分。
 
 如果你已熟悉 Linux 上的 SQL Server，请查看[发行说明](sql-server-linux-release-notes-2019.md)，了解此版本的常规指南和已知问题。 然后查看 [Linux 上的 SQL Server 2019 的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
 
@@ -75,7 +75,7 @@ SQL Server 2017 在所有支持的平台（包括 Linux）上具有相同的基�
 
 ### <a name="all-versions-of-sql-server"></a>所有版本的 SQL Server
 
-SQL Server 2017 和 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 在所有支持的平台（包括 Linux）上都具有相同的基础数据库引擎。 因此，在 Linux 上，许多现有功能运行方式相同。 文档的这一部分从 Linux 的角度展示了其中部分功能。 它还展示了 Linux 上有独特要求的部分。
+SQL Server 2017 和 [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 在所有支持的平台（包括 Linux）上都具有相同的基础数据库引擎。 因此，在 Linux 上，许多现有功能运行方式相同。 文档的这一部分从 Linux 的角度展示了其中部分功能。 它还展示了 Linux 上有独特要求的部分。
 
 如果你已熟悉 Linux 上的 SQL Server，请查看发行说明：
 

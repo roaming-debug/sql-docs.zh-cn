@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER SERVER CONFIGURATION
 - ALTER_SERVER_CONFIGURATION_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ce637e88679747faf40ec7f262ceaea3c0f01f5f
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 7a61ed11e141376c0b0c769f961fad4e9520c271
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688846"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237044"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -245,7 +245,7 @@ OFF
   
 **\<soft_numa>**  
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）。  
   
 ON  
 启用自动分区，将大型 NUMA 硬件节点拆分为较小的 NUMA 节点。 更改当前使用的值需要重新启动数据库引擎。  
@@ -264,7 +264,7 @@ OFF
 
 \<memory_optimized> ::=
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）。
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）。
 
 ON <br>
 启用属于[内存数据库](../../relational-databases/in-memory-database.md)功能的所有实例级功能。 当前这些功能包括[内存优化的 tempdb 元数据](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)和[混合缓冲池](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 需要重启才能生效。
@@ -447,7 +447,7 @@ GO
 
 ### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> 设置内存数据库选项
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）。
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）。
 
 #### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. 使用默认选项启用所有内存数据库功能
 

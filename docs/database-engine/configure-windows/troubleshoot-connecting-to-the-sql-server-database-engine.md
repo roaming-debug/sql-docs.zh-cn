@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: sqlfreshmay19
 ms.date: 11/25/2019
-ms.openlocfilehash: 2ef49ed5d3d46e4f5c5602972ea87347b686d9bb
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: cd4dae49fb19532e9aee082e4046c4d79dbf0a82
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97617566"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237997"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时的问题
 
@@ -108,7 +108,7 @@ SQL Server 的默认实例不需要 SQL Server Browser 服务。
    > [!NOTE]
    > 某些传递到客户端的错误消息故意不提供足够的信息来排查问题。 这是一项安全功能，目的是避免为攻击者提供有关 SQL Server 的信息。 若要查看有关错误的完整信息，请查找 SQL Server 错误日志。 那里提供了详细信息。 
 
-4. 如果看到错误 `18456 Login failed for user`，请参阅联机丛书主题 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md)，其中包含错误代码的其他信息。 Aaron Bertrand 的博客[故障排除错误 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456) 中提供了详细的错误代码列表。 你可以在对象资源管理器的“管理”部分中使用 SSMS（如果可以连接）查看错误日志。 否则，可以使用 Windows 记事本程序查看错误日志。 默认位置因版本而异，且可以在安装过程中更改。 [!INCLUDE[ssSQL15_md](../../includes/sssqlv15-md.md)] 的默认位置是 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`。 
+4. 如果看到错误 `18456 Login failed for user`，请参阅联机丛书主题 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md)，其中包含错误代码的其他信息。 Aaron Bertrand 的博客[故障排除错误 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456) 中提供了详细的错误代码列表。 你可以在对象资源管理器的“管理”部分中使用 SSMS（如果可以连接）查看错误日志。 否则，可以使用 Windows 记事本程序查看错误日志。 默认位置因版本而异，且可以在安装过程中更改。 [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] 的默认位置是 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`。 
 
 5. 如果可以使用共享内存进行连接，请使用 TCP 测试连接。 可以通过在名称前指定 `tcp:` 来强制建立 TCP 连接。 例如：
 

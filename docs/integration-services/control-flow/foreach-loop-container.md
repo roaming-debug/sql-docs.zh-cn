@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ae64e777b08cdf4df6f7e8fdd05ff8c3822a06b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3f1e5c31fdd51a7db14540bfeea3229c170dd2fa
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171519"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236658"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
 
@@ -461,7 +461,7 @@ ms.locfileid: "98171519"
 ####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> 枚举器 = Foreach Azure Blob 枚举器  
  “Azure Blob 枚举器”   允许 SSIS 包在指定的 blob 位置枚举 blob 文件。 枚举的 blob 文件名可以存储在变量中并用于 Foreach 循环容器内的任务。  
   
- **Azure Blob 枚举器** 是适用于 Azure for [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]的 SQL Server Integration Services (SSIS) 功能包的组件。 从 [此处](https://go.microsoft.com/fwlink/?LinkID=626967)下载功能包。  
+ **Azure Blob 枚举器** 是适用于 Azure for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]的 SQL Server Integration Services (SSIS) 功能包的组件。 从 [此处](https://go.microsoft.com/fwlink/?LinkID=626967)下载功能包。  
   
  **Azure 存储连接管理器**  
  选择一个现有的 Azure 存储连接管理器或创建一个新的、引用 Azure 存储帐户的连接管理器。  

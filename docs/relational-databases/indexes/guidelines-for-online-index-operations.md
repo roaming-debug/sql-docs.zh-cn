@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17c91b53c786934d292692493fa886698128b34d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9612070531dc13d9646d439501925f59f62c8da7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465298"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236905"
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
 
@@ -119,7 +119,7 @@ ms.locfileid: "97465298"
 ## <a name="online-default-options"></a>联机默认选项
 
 > [!IMPORTANT]
-> 这些选项对于 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 处于公共预览状态。
+> 这些选项对于 [!INCLUDE[ssNoVersion](../../includes/sssql19-md.md)] 处于公共预览状态。
 
 通过设置 ELEVATE_ONLINE 或 ELEVATE_RESUMABLE 数据库范围的配置选项，可以在数据库级别设置默认的“联机”或“可恢复”选项。 使用这些默认选项，可避免意外执行使数据库表脱机的操作。 这两个选项都会导致引擎自动将特定操作提升为联机或可恢复执行。  
 可使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 命令将任一选项设为 FAIL_UNSUPPORTED、WHEN_SUPPORTED 或 OFF。 可为“联机”和“可恢复”设置不同的值。
@@ -129,7 +129,7 @@ ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 均仅适用于分别支持联机和可恢�
 > [!NOTE]
 > ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 不适用于 XML 索引操作。
 
-## <a name="related-content"></a>相关内容
+## <a name="related-content"></a>相关的内容
 
 - [联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)  

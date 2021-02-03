@@ -12,12 +12,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c40cb726e20f015a46cd808200ebbe67d9c1dc10
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: d5372743bc76fc30c3fb023e38e5ec14630b7011
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98168291"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237214"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "98168291"
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>估计内存需求量的基本指南
 
-尽管表确实需要与内存大小相适应，但从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]开始，内存优化表的大小已没有限制。  在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，SCHEMA_AND_DATA 表支持的数据大小为 256GB。
+尽管表确实需要与内存大小相适应，但从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]开始，内存优化表的大小已没有限制。  在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，SCHEMA_AND_DATA 表支持的数据大小为 256GB。
 
 内存优化表的大小与数据大小加上一些行标题的开销大小之和相对应。 当将基于磁盘的表迁移到内存优化表时，内存优化表的大小将大致与原始基于磁盘的表的聚集索引或堆的大小相对应。
 

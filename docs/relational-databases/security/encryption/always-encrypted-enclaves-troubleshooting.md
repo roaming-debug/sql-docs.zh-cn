@@ -11,12 +11,12 @@ ms.topic: how-to
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c7bffa36b256b959048953a5438fec6a336c3acc
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: dc6bcbecdb29cdf0cf1fca8c41e971463bb0d6b9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534861"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236362"
 ---
 # <a name="troubleshoot-common-issues-for-always-encrypted-with-secure-enclaves"></a>排查具有安全 enclave 的 Always Encrypted 的常见问题
 
@@ -29,7 +29,7 @@ ms.locfileid: "98534861"
 若要使用安全 enclave 运行语句，你需要启用 Always Encrypted 并为数据库连接指定证明 URL，如[运行使用安全 enclave 的语句的先决条件](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves)所述。 但是，如果指定证明 URL，但 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 或目标 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 实例中的数据库不支持安全 enclave 或配置错误，则连接将失败。
 
 - 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]，请检查数据库是否使用 [DC 系列](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)硬件配置。 有关详细信息，请参阅[为 Azure SQL 数据库启用 Intel SGX](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)。
-- 如果使用的是 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]，请检查是否为实例正确配置了安全 enclave。 有关详细信息，请参阅[在 SQL Server 中配置安全 enclave](always-encrypted-enclaves-configure-enclave-type.md)。
+- 如果使用的是 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]，请检查是否为实例正确配置了安全 enclave。 有关详细信息，请参阅[在 SQL Server 中配置安全 enclave](always-encrypted-enclaves-configure-enclave-type.md)。
 
 ## <a name="attestation-errors-when-using-microsoft-azure-attestation"></a>使用 Microsoft Azure 证明时发生证明错误
 
@@ -61,7 +61,7 @@ ms.locfileid: "98534861"
 ## <a name="attestation-errors-when-using-host-guardian-service"></a>使用主机监护服务时发生证明错误
 
 > [!NOTE]
-> 本部分仅适用于 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]。
+> 本部分仅适用于 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]。
 
 在客户端驱动程序向 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 提交 T-SQL 语句以供执行之前，驱动程序会使用主机监护服务 (HGS) 触发以下 enclave 证明工作流。
 

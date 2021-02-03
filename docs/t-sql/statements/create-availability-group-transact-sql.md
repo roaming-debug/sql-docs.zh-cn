@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - AVAILABILITY GROUP
 - CREATE_AVAILABILITY_TSQL
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fde4d33f9de2bd3103d1c48ad1a80fe211c8e1a3
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1ba1a89e21c7eb57c2f3dd603e35472d56ab62d7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170339"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236286"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -180,13 +180,13 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   有关此设置的详细信息，请参阅[数据库级别运行状况检测选项](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
   
  DTC_SUPPORT  **=** { PER_DB | NONE }  
- 指定是否通过分布式事务处理协调器 (DTC) 支持跨数据库事务。 仅从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始支持跨数据库事务。 PER_DB 创建支持这些事务的可用性组。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
+ 指定是否通过分布式事务处理协调器 (DTC) 支持跨数据库事务。 仅从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始支持跨数据库事务。 PER_DB 创建支持这些事务的可用性组。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
  BASIC  
- 用于创建基本可用性组。 基本可用性组限于一个数据库和两个副本：主要副本和次要副本。 此选项替换 SQL Server Standard Edition 上弃用的数据库镜像功能。 有关详细信息，请参阅[基本可用性组（Always On 可用性组）](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始支持基本可用性组。  
+ 用于创建基本可用性组。 基本可用性组限于一个数据库和两个副本：主要副本和次要副本。 此选项替换 SQL Server Standard Edition 上弃用的数据库镜像功能。 有关详细信息，请参阅[基本可用性组（Always On 可用性组）](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始支持基本可用性组。  
 
  DISTRIBUTED  
- 用于创建分布式可用性组。 此选项与 AVAILABILITY GROUP ON 参数一起使用，可连接不同 Windows Server 故障转移群集中的两个可用性组。  有关详细信息，请参阅[分布式可用性组&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，支持分布式可用性组。 
+ 用于创建分布式可用性组。 此选项与 AVAILABILITY GROUP ON 参数一起使用，可连接不同 Windows Server 故障转移群集中的两个可用性组。  有关详细信息，请参阅[分布式可用性组&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，支持分布式可用性组。 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  在 SQL Server 2017 中引入。 用于设置需要在主要副本提交事务之前提交的最小数量的同步次要副本。 保证 SQL Server 事务等待至事务日志在最小数量的次要副本上更新为止。 默认值为 0，可提供与 SQL Server 2016 相同的行为。 最小值为 0。 最大值为副本数量减 1。 此选项与同步提交模式中的副本相关。 当副本处于同步提交模式时，对主要副本的写入操作会等待至将次要同步副本上的写入提交到副本数据库事务日志为止。 如果托管次要同步副本的 SQL Server 停止响应，则托管主要副本的 SQL Server 将此次要副本标记为 NOT SYNCHRONIZED（未同步）并继续执行操作。 当无响应的数据库恢复联机状态时，它处于“未同步”状态，副本标记为不正常，直到主要副本可再次对其执行同步。 此设置可确保主要副本等待至最少数量的副本已提交每个事务。 如果最少数量的副本不可用，则主要副本上的提交会失败。 对于群集类型 `EXTERNAL`，可用性组添加到群集资源时，设置会更改。 请参阅[可用性组配置的高可用性和数据保护](../../linux/sql-server-linux-availability-group-ha.md)。
@@ -356,7 +356,7 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
   
  使用以逗号分隔的列表指定可能托管可读次要副本的所有服务器实例。 只读路由遵循在列表中指定服务器实例的顺序。 如果在副本的只读路由列表中包含副本的宿主服务器实例，通常将此服务器实例放在列表末尾比较好，这样在一个辅助副本可用时读意向连接将访问它。  
   
- 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，可在可读次要副本间实现读意向请求的负载均衡。 可通过将副本放入只读路由列表中的一组嵌套括号中来指定。 有关详细信息和示例，请参阅[在只读副本间配置负载均衡](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。  
+ 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，可在可读次要副本间实现读意向请求的负载均衡。 可通过将副本放入只读路由列表中的一组嵌套括号中来指定。 有关详细信息和示例，请参阅[在只读副本间配置负载均衡](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。  
   
  无  
  指定此可用性副本为主要副本时不支持只读路由。 此选项为默认行为。  

@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06288dc0bc6e16ab8928322005254f5fac1ddc61
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: adc1affe33d1172b3e648c510b2dbc1d00326849
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171479"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237976"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
 
@@ -227,7 +227,7 @@ GO
 
 要在数据库上启用 TDE，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必须执行加密扫描。 扫描将数据文件中的每个页面读入缓冲池，然后将加密页面写入磁盘。
 
-为了让你对加密扫描有更多的控制权，[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 引入了 TDE 扫描，其中包含暂停和恢复语法。 你可以在系统工作量大时或在业务关键时段暂停扫描，然后稍后再恢复扫描。
+为了让你对加密扫描有更多的控制权，[!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 引入了 TDE 扫描，其中包含暂停和恢复语法。 你可以在系统工作量大时或在业务关键时段暂停扫描，然后稍后再恢复扫描。
 
 使用以下语法暂停 TDE 加密扫描：
 
@@ -314,7 +314,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 
 ## <a name="tde-and-in-memory-oltp"></a>TED 和内存中 OLTP
 
-可在拥有内存中 OLTP 对象的数据库上启用 TDE。 在 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]中，如果启用 TDE，将对内存中 OLTP 日志记录和数据加密。 在 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 中，如果启用 TDE，将对内存中 OLTP 日志记录加密，但不对 MEMORY_OPTIMIZED_DATA 文件组中的文件加密。
+可在拥有内存中 OLTP 对象的数据库上启用 TDE。 在 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]中，如果启用 TDE，将对内存中 OLTP 日志记录和数据加密。 在 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 中，如果启用 TDE，将对内存中 OLTP 日志记录加密，但不对 MEMORY_OPTIMIZED_DATA 文件组中的文件加密。
 
 ## <a name="related-tasks"></a>相关任务
 

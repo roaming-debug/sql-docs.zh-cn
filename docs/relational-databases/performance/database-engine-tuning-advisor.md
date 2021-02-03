@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f3b5176bb0b9ac123090f032e0908d57155ff592
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b7e9a6c6aed8af08b565bfc5af46448c81e54ed2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172179"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236647"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "98172179"
  数据库引擎优化顾问的命令提示符版本。 通过 **dta** 实用工具，您可以在应用程序和脚本中使用数据库引擎优化顾问功能。  
   
  **工作负载**  
- Transact-SQL 脚本文件、跟踪文件或跟踪表，包含要优化的数据库的代表性工作负荷。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，您可以指定计划缓存作为工作负荷。  从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，可以[将 Query Store 指定为工作负荷](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。 
+ Transact-SQL 脚本文件、跟踪文件或跟踪表，包含要优化的数据库的代表性工作负荷。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，您可以指定计划缓存作为工作负荷。  从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，可以[将 Query Store 指定为工作负荷](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。 
   
  **XML 输入文件**  
  数据库引擎优化顾问可用于优化工作负载的 XML 格式文件。 XML 输入文件支持在 GUI 或 **dta** 实用工具中不可用的高级优化选项。  

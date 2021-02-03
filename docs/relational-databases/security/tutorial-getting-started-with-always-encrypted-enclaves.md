@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 08e7674819e4dc52a8613e39d1f8ec82a42abc05
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 2334a132c8d2b56f0eaf0909b9f83544cb6e0af5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534716"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236508"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-in-sql-server"></a>Tutorial:在 SQL Server 中开始使用具有安全 enclave 的 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "98534716"
 
 ### <a name="sql-server-computer-requirements"></a>SQL Server 计算机要求
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 或更高版本。
+- [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] 或更高版本。
 - Windows 10 企业版 1809 或更高版本；或是 Windows Server 2019 Datacenter 版本。 其他版本的 Windows 10 和 Windows Server 不支持通过 HGS 进行证明。
 - 针对虚拟化技术的 CPU 支持：
   - 具有扩展页表的 Intel VT-x。

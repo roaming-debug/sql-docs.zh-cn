@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0dac2b5d344969f96016a86622ee4e07ab8c23d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2e37f8234a1b8ee2ab72c76a423ea72ac9d3f14a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98167972"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235828"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理由系统控制版本的临时表中历史数据的保留期
 
@@ -51,9 +51,9 @@ ms.locfileid: "98167972"
 ## <a name="using-stretch-database-approach"></a>使用 Stretch Database 方法
 
 > [!NOTE]
-> Stretch Database 方法仅适用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 而不适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+> Stretch Database 方法仅适用于 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 而不适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以透明方式将历史数据迁移到 Azure。 为了提高安全性，你可以使用 SQL Server 的 [始终加密](../security/encryption/always-encrypted-database-engine.md) 功能来加密动态数据。 此外，你可以使用 [行级别安全性](../../relational-databases/security/row-level-security.md) 和其他高级 SQL Server 安全功能以及 Temporal 和 Stretch Database 来保护数据。
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 以透明方式将历史数据迁移到 Azure。 为了提高安全性，你可以使用 SQL Server 的 [始终加密](../security/encryption/always-encrypted-database-engine.md) 功能来加密动态数据。 此外，你可以使用 [行级别安全性](../../relational-databases/security/row-level-security.md) 和其他高级 SQL Server 安全功能以及 Temporal 和 Stretch Database 来保护数据。
 
 使用 Stretch Database 方法，可以将部分或所有临时历史记录表延伸到 Azure，而 SQL Server 以无提示方式将历史数据移到 Azure。 对历史记录表启用延伸不会更改你在修改数据和执行临时查询时与临时表的交互方式。
 
@@ -70,7 +70,7 @@ ms.locfileid: "98167972"
 
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>使用延伸向导延伸整个历史记录表
 
-适用于初学者的最简单方法是使用延伸向导为整个数据库启用延伸，然后在延伸向导中选择临时历史记录表（本示例假设你已将 Department 表配置为其他空数据库中的版本由系统控制的临时表）。 在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]中，你无法右键单击临时历史记录表本身和单击“延伸”。
+适用于初学者的最简单方法是使用延伸向导为整个数据库启用延伸，然后在延伸向导中选择临时历史记录表（本示例假设你已将 Department 表配置为其他空数据库中的版本由系统控制的临时表）。 在 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]中，你无法右键单击临时历史记录表本身和单击“延伸”。
 
 1. 右键单击数据库，指向“任务”  ，指向“延伸”  ，然后单击“启用”  以启动向导。
 2. 在“选择表”  窗口中，选择临时历史记录表的复选框，然后单击“下一步”。

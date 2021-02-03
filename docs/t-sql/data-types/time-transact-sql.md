@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - time_TSQL
 - time
@@ -23,12 +23,12 @@ ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f86da3e041d4edea7c6fcb71869414ba75544752
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7425622f808eccb983b73670b57ec3295de15fb3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472158"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237344"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 
@@ -108,7 +108,7 @@ ms.locfileid: "97472158"
   
  转换到 time(n) 时，会复制小时、分钟和秒数。 当目标精度小于源精度时，将对秒的小数部分进行向上舍入，以适合目标精度。 下面的示例显示了将 `time(4)` 值转换为 `time(3)` 值的结果。  
   
-```  
+```sql
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
 DECLARE @timeTo time(3) = @timeFrom;  
   
@@ -126,7 +126,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
   
  转换到 datetime 时，会复制小时、分钟和秒数，且日期部分设为“1900-01-01”。 当 time(n) 值的秒的小数部分精度大于三位时，datetime 结果将被截断。 下面的代码显示将 `time(4)` 值转换为 `datetime` 值的结果。  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetime datetime= @time;  
 SELECT @time AS '@time', @datetime AS '@datetime';  
@@ -142,7 +142,7 @@ SELECT @time AS '@time', @datetime AS '@datetime';
   
  转换到 smalldatetime 时，日期设置为“1900-01-01”，小时和分钟值向上舍入。 秒和秒的小数部分设置为 0。 下面的代码显示将 `time(4)` 值转换为 `smalldatetime` 值的结果。  
   
-```  
+```sql
 -- Shows rounding up of the minute value.  
 DECLARE @time time(4) = '12:15:59.9999';   
 DECLARE @smalldatetime smalldatetime= @time;    
@@ -169,7 +169,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
  如果转换到 datetimeoffset(n)，则日期设置为“1900-01-01”，且复制时间。 时区偏移量设置为 +00:00。 当 time(n) 值秒的小数部分精度大于 datetimeoffset(n) 值的精度时，将对值进行向上舍入以适合精度。 下面的示例显示将 `time(4)` 值转换为 `datetimeoffset(3)` 类型的结果。  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetimeoffset datetimeoffset(3) = @time;  
   
@@ -186,7 +186,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
  转换到 datetime2(n) 时，日期设置为“1900-01-01”，复制时间部分，时区偏移量设置为 00:00。 当 datetime2(n) 值秒的小数部分精度大于 time(n) 值时，将对值进行向上舍入以适合精度。  下面的示例显示了将 `time(4)` 值转换为 `datetime2(2)` 值的结果。  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetime2 datetime2(3) = @time;  
   
@@ -221,7 +221,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 ### <a name="a-comparing-date-and-time-data-types"></a>A. 比较日期和时间数据类型  
  下例比较了将一个字符串分别转换为各种 date 和 time 数据类型时所产生的结果 。  
   
-```  
+```sql
 SELECT   
      CAST('2007-05-08 12:35:29. 1234567 +12:15' AS time(7)) AS 'time'   
     ,CAST('2007-05-08 12:35:29. 1234567 +12:15' AS date) AS 'date'   

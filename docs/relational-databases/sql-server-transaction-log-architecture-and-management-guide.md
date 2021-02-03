@@ -22,12 +22,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a445552a69033bec7564e05d7fc86d7416a5ff47
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ed532d22800cd10530ecc7db8595fcf75e3737da
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461828"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237939"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -239,7 +239,7 @@ LSN 148 是事务日志中的最后一条记录。 在处理 LSN 147 处记录�
 * 如果系统在事务执行了许多未提交的修改后关闭，以后重新启动时，恢复阶段所用的时间将比“恢复间隔”  选项指定的时间长得多。
 * 因为不能截断 MinLSN 之后的日志部分，日志可能变得很大。 即使数据库使用的是简单恢复模式，这种情况也有可能出现，在简单恢复模式下，每次执行自动检查点操作时通常都会截断事务日志。
 
-从 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 开始，可以使用[加速数据库恢复](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)来避免恢复长时间运行的事务和上述问题。  
+从 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 开始，可以使用[加速数据库恢复](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)来避免恢复长时间运行的事务和上述问题。  
 
 ### <a name="replication-transactions"></a>复制事务
 日志读取器代理监视已为事务复制配置的每个数据库的事务日志，并将已设复制标记的事务从事务日志复制到分发数据库中。 活动日志必须包含标记为要复制但尚未传递给分发数据库的所有事务。 如果不及时复制这些事务，它们可能会阻止截断日志。 有关详细信息，请参阅 [事务复制](../relational-databases/replication/transactional/transactional-replication.md)。

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLUMNPROPERTY
 - COLUMNPROPERTY_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4bd06800692eb8f27494055dfa391169ced45803
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 320b9c78fadcef3ba70585def88f744bf16e7767
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171359"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237426"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ COLUMNPROPERTY ( id , column , property )
 |**AllowsNull**|允许空值。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**ColumnId**|对应于 sys.columns.column_id 的列 ID 值。|列 ID<br /><br /> 请注意：查询多列时，列 ID 值的序列中可能出现间隔。|  
 |**FullTextTypeColumn**|表中的 TYPE COLUMN，其中包含 column 的文档类型信息。|列名称表达式的全文 TYPE COLUMN 的 ID，作为此函数的第二个参数传递。|  
-|**GeneratedAlwaysType**|系统生成的列值。 对应于 sys.columns.generated_always_type|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。<br /><br /> 0：有时生成<br /><br /> 1：始终在行首生成<br /><br /> 2：始终在行末生成|  
+|**GeneratedAlwaysType**|系统生成的列值。 对应于 sys.columns.generated_always_type|**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。<br /><br /> 0：有时生成<br /><br /> 1：始终在行首生成<br /><br /> 2：始终在行末生成|  
 |**IsColumnSet**|列为列集。 有关详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**IsComputed**|列是计算列。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**IsCursorType**|过程参数类型为 CURSOR。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  

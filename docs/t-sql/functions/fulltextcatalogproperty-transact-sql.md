@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FULLTEXTCATALOGPROPERTY_TSQL
 - FULLTEXTCATALOGPROPERTY
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 57e53c26b7f1797daf6a1ccc53f7578eabda734a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d49757197a66a0af05a0115cf4b16d6d589acc13
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98087228"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237501"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-返回有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的全文目录属性的信息。  
+返回有关 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中的全文目录属性的信息。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,7 +71,7 @@ _property_
 ## <a name="exceptions"></a>例外  
 出现错误时或调用方没有查看对象的权限时将返回 NULL。  
   
-在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，用户只能查看安全对象的元数据。 这些安全对象为该用户所有，或已授予该用户对这些安全对象的权限。 因此，如果用户对该对象没有任何权限，则发出元数据的内置函数（如 FULLTEXTCATALOGPROPERTY）可能会返回 NULL。 有关详细信息，请参阅 [sp_help_fulltext_catalogs (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)。  
+在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中，用户只能查看安全对象的元数据。 这些安全对象为该用户所有，或已授予该用户对这些安全对象的权限。 因此，如果用户对该对象没有任何权限，则发出元数据的内置函数（如 FULLTEXTCATALOGPROPERTY）可能会返回 NULL。 有关详细信息，请参阅 [sp_help_fulltext_catalogs (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)。  
   
 ## <a name="remarks"></a>备注  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') 只查看状态为 4 或 6 的片段，如 [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md) 中所示。 这些片段是逻辑索引的一部分。 因此，**IndexSize** 属性仅返回逻辑索引大小。 

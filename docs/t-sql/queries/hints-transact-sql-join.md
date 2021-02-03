@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - Join Hint
 - Join_Hint_TSQL
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37f988a345bcc4280f6e76f039049ca56a4f6a81
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3d95b42433c45305aae60888dabe827a900f42c7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116310"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235938"
 ---
 # <a name="hints-transact-sql---join"></a>提示 (Transact-SQL) - 联接
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  联接提示用于指定查询优化器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的两个表之间强制执行联接策略。 有关联接和联接语法的一般信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
+  联接提示用于指定查询优化器在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的两个表之间强制执行联接策略。 有关联接和联接语法的一般信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   
 > [!CAUTION]  
 >  由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器通常会为查询选择最佳执行计划，因此我们建议仅在最后迫不得已的情况下才可由资深的开发人员和数据库管理员使用提示。

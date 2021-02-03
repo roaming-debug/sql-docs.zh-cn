@@ -19,17 +19,17 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: c80562f844c096bd836d9db8f57ae408c6602d3d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 63425d2a96cffb585a5b36c0614ee06b1586bbf8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196201"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237991"
 ---
 # <a name="add-persisted-log-buffer-to-a-database"></a>向数据库添加永久日志缓冲区
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-本主题介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 将永久日志缓冲区添加到 [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] 中的数据库。  
+本主题介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 将永久日志缓冲区添加到 [!INCLUDE[sqlv15](../../includes/sssql19-md.md)] 中的数据库。  
   
 ## <a name="permissions"></a>权限
 

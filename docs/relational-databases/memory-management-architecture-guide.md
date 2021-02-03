@@ -27,12 +27,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6af1077d46fa6378e0853eb570ba560d49e6eaec
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 52cfa79cfa88646fea2bdd2d58168cbfdd60e57d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171339"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236594"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 
@@ -97,7 +97,7 @@ ms.locfileid: "98171339"
 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，单页分配、多页分配和 CLR 分配全部合并到“任意大小”页分配器中，受到由“最大服务器内存(MB)”和“最小服务器内存(MB)”配置选项控制的内存限制 。 此更改使通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存管理器的所有内存要求能更准确地调整大小。 
 
 > [!IMPORTANT]
-> 升级到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 后，请仔细检查当前的“max server memory (MB)”和“min server memory (MB)”配置 。 这是因为从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，与早期版本相比，这些配置现在包括并用于更多内存分配。 这些更改适用于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 的 32 位和 64 位版本，以及 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 64 位版本。
+> 升级到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 后，请仔细检查当前的“max server memory (MB)”和“min server memory (MB)”配置 。 这是因为从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，与早期版本相比，这些配置现在包括并用于更多内存分配。 这些更改适用于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 的 32 位和 64 位版本，以及 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 64 位版本。
 
 下表指示特定类型的内存分配是否受“max server memory (MB)和“min server memory (MB)”配置选项控制 ：
 
@@ -341,9 +341,9 @@ min memory per query 配置选项设定将为执行查询分配的最小内存�
 但是，如果很多线程以高度并发的方式从同一内存对象进行分配，则使用互斥体可能会导致争用。 因此，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 具有分区内存对象 (PMO) 的概念，每个分区由单个 CMemThread 对象表示。 内存对象的分区是静态定义的，创建后不可更改。 由于内存分配模式因硬件和内存使用情况等方面迥然相异，因此不可能提前设定出完美的分区模式。 在绝大多数情况下，使用单个分区就足够了，但在某些情况下，这可能会导致争用，只能通过高度分区的内存对象阻止这种争用。 对每个内存对象进行分区是不理想的，因为分区增多可能导致其他方面的效率低下并增加内存碎片。
 
 > [!NOTE]
-> 在 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]之前，可以使用跟踪标志 8048 将基于节点的 PMO 强制变为基于 CPU 的 PMO。 从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 开始，此行为是动态的，由引擎控制。
+> 在 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]之前，可以使用跟踪标志 8048 将基于节点的 PMO 强制变为基于 CPU 的 PMO。 从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 开始，此行为是动态的，由引擎控制。
 
-从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 开始，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可以动态检测特定 CMemThread 对象上的争用，并将对象提升为基于每个节点或每个 CPU 的实现。  升级后，PMO 会保持升级状态，直到重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程。 [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV 中 CMEMTHREAD 等待数过多可指示 CMemThread 争用，可通过观察以下 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 列来发现它：*contention_factor* *partition_type* *exclusive_allocations_count* 和 *waiting_tasks_count*。
+从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 开始，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可以动态检测特定 CMemThread 对象上的争用，并将对象提升为基于每个节点或每个 CPU 的实现。  升级后，PMO 会保持升级状态，直到重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程。 [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV 中 CMEMTHREAD 等待数过多可指示 CMemThread 争用，可通过观察以下 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 列来发现它：*contention_factor* *partition_type* *exclusive_allocations_count* 和 *waiting_tasks_count*。
 
 ## <a name="see-also"></a>另请参阅
 [“服务器内存”服务器配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

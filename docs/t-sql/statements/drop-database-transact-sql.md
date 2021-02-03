@@ -1,13 +1,13 @@
 ---
 description: DROP DATABASE (Transact-SQL)
-title: DROP DATABASE (Transact-SQL) | Microsoft Docs
+title: DROP DATABASE (Transact-SQL)
 ms.custom: ''
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP DATABASE
 - DROP_DATABASE_TSQL
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - databases [SQL Server], dropping
 - DROP DATABASE statement
 - database removal [SQL Server], DROP DATABASE statement
-ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa18ed40692767751703f72f9e48e91180bf797f
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: ffdf0615671d2f3e019bccde83159bdb75eddcdd
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688827"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236279"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -57,8 +56,8 @@ DROP DATABASE database_name [;]
 
 ## <a name="arguments"></a>参数
 
-IF EXISTS
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到[当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)）。
+ IF EXISTS  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 到[当前版本](/troubleshoot/sql/general/determine-version-edition-update-level)）。
 
 只有在数据库已存在时才对其进行有条件地删除。
 
@@ -80,7 +79,7 @@ database_snapshot_name
 执行数据库删除操作会从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除数据库，并删除该数据库使用的物理磁盘文件。 执行删除操作时，如果数据库或它的任意一个文件处于脱机状态，则不会删除磁盘文件。 可使用 Windows 资源管理器手动删除这些文件。 若要从当前服务器删除数据库，但不从文件系统删除文件，请使用 [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。
 
 > [!WARNING]
-> 删除具有与其关联的 FILE_SNAPSHOT 备份的数据库将成功，但不会删除具有关联快照的数据库文件，以免使引用这些数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 适用于：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到 [当前版本](../../sql-server/what-s-new-in-sql-server-2016.md)。
+> 删除具有与其关联的 FILE_SNAPSHOT 备份的数据库将成功，但不会删除具有关联快照的数据库文件，以免使引用这些数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 适用于：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 到 [当前版本](/troubleshoot/sql/general/determine-version-edition-update-level)。
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

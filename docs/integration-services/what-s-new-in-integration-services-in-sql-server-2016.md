@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 838b01e2fd4f09b787b11f146143fc6c327504b7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: aa2736f06ad57ec6fca8ff0af8a07625265e296a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172209"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237257"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
 
@@ -368,7 +368,7 @@ Azure 功能包的最新版本包括 Azure SQL DW 上传任务，用于为 Azure
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> XML 任务中丰富的 XML 验证输出  
  通过启用 XML 任务的 **ValidationDetails** 属性，验证 XML 文档并获取丰富的错误输出。 在可以使用 **ValidationDetails** 属性之前，XML 任务的 XML 验证仅返回 true 或 false 结果，而不包含关于错误或其位置的详细信息。 现在，当你将 **ValidationDetails** 设置为 true 时，输出文件将包含关于每个错误的详细信息，包括行号和位置。 此信息可用于了解、查找和修复 XML 文档中的错误。 有关详细信息，请参阅 [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md)。  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] 在 **Service Pack 2 中引入了** ValidationDetails [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 属性。 此时尚未公布或记录这一新属性。 **和** 中也提供 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ValidationDetails [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]属性。   
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] 在 **Service Pack 2 中引入了** ValidationDetails [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 属性。 此时尚未公布或记录这一新属性。 **和** 中也提供 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ValidationDetails [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]属性。   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

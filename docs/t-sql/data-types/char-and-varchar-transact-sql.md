@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - varchar
 - varchar_TSQL
@@ -25,18 +25,18 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f78cfecbfcf99ec3ae855b41bb802a0c6b12864
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a54d7e0abbbb15379f83a13fc0e604b6d087326d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462548"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236392"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-字符数据类型 char（大小固定）或 varchar（大小可变）   。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，使用启用了 UTF-8 的排序规则时，这些数据类型会存储 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字符数据的整个范围，并使用 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 字符编码。 若指定了非 UTF-8 排序规则，则这些数据类型仅会存储该排序规则的相应代码页支持的字符子集。
+字符数据类型 char（大小固定）或 varchar（大小可变）   。 从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 起，使用启用了 UTF-8 的排序规则时，这些数据类型会存储 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字符数据的整个范围，并使用 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 字符编码。 若指定了非 UTF-8 排序规则，则这些数据类型仅会存储该排序规则的相应代码页支持的字符子集。
 
 ## <a name="arguments"></a>参数
 
@@ -56,11 +56,11 @@ varchar [ ( n | max ) ] 可变大小字符串数据    。 使用 n  定义字�
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的多字节编码包括：
 
 - 使用代码页 936 及 950（中文）、932（日文）或 949（韩文）的某些东亚语言的双字节字符集 (DBCS)。
-- 使用代码页 65001 的 UTF-8。 **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+- 使用代码页 65001 的 UTF-8。 **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）
 
 若你拥有支持多种语言的站点：
 
-- 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，考虑使用已启用 UTF-8 的排序规则，以支持 Unicode 并最大程度地减少字符转换问题。
+- 从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始，考虑使用已启用 UTF-8 的排序规则，以支持 Unicode 并最大程度地减少字符转换问题。
 - 若使用较低版本的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，请考虑使用 Unicode nchar 或 nvarchar 数据类型，以最大程度地减少字符转换问题   。
 
 若使用 char  或 varchar  ，则建议：

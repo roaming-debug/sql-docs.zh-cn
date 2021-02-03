@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ff53ca4e4118b105eabac256663a8b052e218fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5e968978dd641f78dfb17d515ab07e3b7e27485
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429049"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250131"
 ---
 # <a name="data-collector-security"></a>数据收集器的安全性
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88429049"
  以下各部分对数据收集安全性作了一般性介绍，还介绍了为使用户能够配置和使用数据收集器并执行与管理数据仓库关联的任务而必须授予他们的角色。  
   
 ## <a name="general-security"></a>一般安全性  
- 数据收集器的安装应依照指定用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的明文标准进行。  
+ 数据收集器的安装应依照指定用于 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的明文标准进行。  
   
 ### <a name="network-security"></a>网络安全  
  可以在目标实例、与配置服务器关联的关系实例、正在运行的收集组以及承载管理数据仓库的服务器之间传递敏感信息。  
@@ -72,7 +72,7 @@ ms.locfileid: "88429049"
     > [!NOTE]  
     >  为数据收集器创建的代理必须授予对 **dc_admin** 的访问权限，才能在需要代理的任何作业步骤中创建和使用这些代理。  
   
--   **dc_operator**。 **dc_admin** 的成员继承授予 **dc_operator**的权限。  
+-   **dc_operator**。 **dc_admin** 的成员继承授予 **dc_operator** 的权限。  
   
 ### <a name="dc_operator-role"></a>dc_operator 角色  
  **dc_operator** 角色的成员拥有读取和更新访问权限。 此角色支持与运行和配置收集组相关的操作任务。 此角色的成员可执行以下操作：  

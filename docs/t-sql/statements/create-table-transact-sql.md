@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FILESTREAM_TSQL
 - TABLE
@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 64992e05c67f9fc3f401b1a8074295dad589a74e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: cbbf7efce0a0aeac175bc98063323b5f4b7a325a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170359"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237333"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -464,7 +464,7 @@ increment 是向加载的前一行的标识值中添加的增量值。
 
 NOT FOR REPLICATION 在 `CREATE TABLE` 语句中，可以为 IDENTITY 属性、FOREIGN KEY 约束和 CHECK 约束指定 `NOT FOR REPLICATION` 子句。 如果为 `IDENTITY` 属性指定了此子句，复制代理执行插入时，标识列中的值将不会增加。 如果为约束指定了此子句，则当复制代理执行插入、更新或删除操作时，将不会强制执行此约束。
 
-GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定系统将使用指定的 `datetime2` 列来记录记录有效的开始时间或记录有效的结束时间。 此列必须定义为 `NOT NULL`。 如果尝试将此列定义为 `NULL`，系统将引发错误。 如果不为期间列显式指定 NOT NULL，系统则会将此列默认定义为 `NOT NULL`。 将此参数与 `PERIOD FOR SYSTEM_TIME` 和 `WITH SYSTEM_VERSIONING = ON` 参数结合使用来对表启用系统版本控制。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
@@ -534,7 +534,7 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } 确定性加密对任何给定�
 
 列必须是符合条件的数据类型。
 
-ALGORITHM 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）。
+ALGORITHM 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）。
 
 须是“AEAD_AES_256_CBC_HMAC_SHA_256”。
 
@@ -542,7 +542,7 @@ ALGORITHM 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 SPARSE 指示列为稀疏列。 稀疏列已针对 NULL 值进行了存储优化。 不能将稀疏列指定为 NOT NULL。 有关稀疏列的其他限制和详细信息，请参阅[使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。
 
-ADD MASKED WITH ( FUNCTION = ' mask_function ') 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）。
+ADD MASKED WITH ( FUNCTION = ' mask_function ') 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）。
 
 指定动态数据掩码。 mask_function 是具有相应参数的掩码函数的名称。 有四个函数可供选择：
 
@@ -651,11 +651,11 @@ WITH FILLFACTOR =fillfactor 指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]存
 
 column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS 列集的名称。 列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列合并为一种结构化的输出。 有关列集的详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。
 
-PERIOD FOR SYSTEM_TIME ( system_start_time_column_name , system_end_time_column_name ) 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。
+PERIOD FOR SYSTEM_TIME ( system_start_time_column_name , system_end_time_column_name ) 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。
 
 指定系统用于记录有效记录时间段的列的名称。 将此参数与 GENERATED ALWAYS AS ROW { START | END } 参数和 WITH SYSTEM_VERSIONING = ON 参数结合使用，启用表的系统版本控制。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
-COMPRESSION_DELAY 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+COMPRESSION_DELAY 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 为内存优化，延迟指定行须在其能够压缩到列存储索引之前在表中保持不变的最小分钟数。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据行的最近更新时间选择要进行压缩的特定行。 例如，如果行在两个小时内频繁更改，则可以设置 `COMPRESSION_DELAY = 120 Minutes` 以确保在 SQL Server 压缩此行之前完成更新。
 
@@ -677,11 +677,11 @@ PAGE 使用页压缩来压缩表或指定的分区。
 
 COLUMNSTORE
 
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE 指定使用性能最高的列存储压缩进行压缩。 这是典型选择。
 
-COLUMNSTORE_ARCHIVE 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+COLUMNSTORE_ARCHIVE 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE_ARCHIVE 会进一步将表或分区压缩得更小。 这可用于存档，或者用于要求更小存储大小并且可以付出更多时间来进行存储和检索的其他情形。
 
@@ -732,7 +732,7 @@ ALLOW_ROW_LOCKS = { ON | OFF } 如果为 ON，则访问索引时允许使用行�
 
 ALLOW_PAGE_LOCKS = { ON | OFF } 如果为 ON，则访问索引时允许使用页锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用页锁。 如果为 OFF，则不使用页锁。 默认值为 ON。
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF } **适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。 <BR>
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF } **适用于**：[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 及更高版本。 <BR>
 指定是否针对最后一页插入争用进行优化。 默认为 OFF。 有关详细信息，请参阅“CREATE INDEX”页的[顺序键](./create-index-transact-sql.md#sequential-keys)部分。
 
 FILETABLE_DIRECTORY = directory_name
@@ -766,12 +766,12 @@ FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = constraint_name
 
 指定要对自动为 FileTable 中的 parent_path_locator 和 name 列创建的唯一约束使用的名称 。 如果未指定此值，则系统将为该约束生成一个名称。
 
-SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name .history_table_name [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）    。
+SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name .history_table_name [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）    。
 
 如果数据类型、为 Null 性约束和主键约束需要都满足了，则可启动系统版本控制。 如果未使用 `HISTORY_TABLE` 参数，系统将在与当前表相同的文件组中生成一个符合当前表架构的新历史记录表，从而在两个表之间创建链接，使系统能在历史记录表中记录当前表中每行的历史记录。 此历史记录表的名称为 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 默认情况下，历史记录表是经过 **PAGE** 压缩的。 如果 `HISTORY_TABLE` 参数用于创建指向现有历史记录表的链接并使用此表，则会在当前表和指定表之间创建链接。 如果当前表已分区，则历史记录表在默认文件组上创建，因为不会自动将分区配置从当前表复制到历史记录表。 如果历史记录表的名称在历史记录表创建期间指定，则必须指定架构和表的名称。 创建现有历史记录表的链接时，可以选择执行数据一致性检查。 数据一致性检查可确保现有记录不重叠。 系统默认执行数据一致性检查。 将此参数与 `PERIOD FOR SYSTEM_TIME` 和 `GENERATED ALWAYS AS ROW { START | END }` 参数结合使用来对表启用系统版本控制。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
 REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
-**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）。
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）。
 
 创建已启用或禁用 Stretch Database 的新表。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。
 
@@ -783,7 +783,7 @@ REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATI
 
 **权限**。 为数据库或表启用 Stretch 需要 db_owner 权限。 为表启用 Stretch 还需具有表的 ALTER 权限。
 
-[ FILTER_PREDICATE = { null | predicate } ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）。
+[ FILTER_PREDICATE = { null | predicate } ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）。
 
 根据需要，指定一个筛选器谓词，从包含历史数据和最新数据的表中选择要迁移的行。 该谓词必须调用确定性的内联表值函数。 有关详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)和[使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。
 
@@ -794,7 +794,7 @@ REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATI
 
 指定筛选器谓词时，还须同时指定 MIGRATION_STATE。
 
-MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 - 指定 `OUTBOUND` 以将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 - 指定 `INBOUND` 以将表的远程数据从 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 复制回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后为此表禁用 Stretch Database。 有关详细信息，请参阅 [禁用 Stretch Database 并恢复远程数据](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。
@@ -855,7 +855,7 @@ HASH 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（
 
 有关获批准的表、列、约束和索引数目的信息，请参阅 [SQL Server 的最大容量规范](../../sql-server/maximum-capacity-specifications-for-sql-server.md)。
 
-通常情况下，为表和索引分配空间时，每次以一个区为增量单位。 将 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 选项设置为 TRUE 或设置为始终先于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 时，在创建表或索引后，将从混合盘区为此表或索引分配页面，直到其拥有足够的页面以形成统一盘区为止。 当足够的页填满统一区后，每当当前分配的区填满时，将再为其分配另一个区。 若要获得关于由表分配和使用的空间量的报表，请执行 `sp_spaceused`。
+通常情况下，为表和索引分配空间时，每次以一个区为增量单位。 将 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 选项设置为 TRUE 或设置为始终先于 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 时，在创建表或索引后，将从混合盘区为此表或索引分配页面，直到其拥有足够的页面以形成统一盘区为止。 当足够的页填满统一区后，每当当前分配的区填满时，将再为其分配另一个区。 若要获得关于由表分配和使用的空间量的报表，请执行 `sp_spaceused`。
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]在列定义中并不强制以特定的顺序指定 DEFAULT、IDENTITY、ROWGUIDCOL 或列约束。
 
@@ -1340,7 +1340,7 @@ CREATE TABLE T1
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>P. 创建由系统版本控制的、基于磁盘的临时表
 
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 下列示例显示如何创建链接到新历史记录表的临时表，以及如何创建链接到现有历史记录表的临时表。 请注意，临时表须有主键，定义为为表启用和为系统版本控制启用。 有关显示如何在现有表中添加或删除系统版本控制的示例，请参阅[示例](../../t-sql/statements/alter-table-transact-sql.md#Example_Top)中的系统版本控制。 有关使用情况，请参阅[临时表](../../relational-databases/tables/temporal-tables.md)。
 
@@ -1390,7 +1390,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSI
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>Q. 创建系统版本控制的内存优化临时表
 
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 下列示例显示如何创建链接到基于磁盘的新历史记录表的新系统版本控制的内存优化临时表。
 

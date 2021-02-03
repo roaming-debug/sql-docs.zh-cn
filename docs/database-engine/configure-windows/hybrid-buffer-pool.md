@@ -12,17 +12,17 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ccf508d0415bc6baabc9c054a95ec26cf7989880
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772429"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236518"
 ---
 # <a name="hybrid-buffer-pool"></a>混合缓冲池
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-混合缓冲池使缓冲池对象能够引用驻留在持久性内存 (PMEM) 设备上的数据库文件中的数据页，而不是缓存在易失 DRAM 中的数据页的副本。 [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] 中引入了此功能。
+混合缓冲池使缓冲池对象能够引用驻留在持久性内存 (PMEM) 设备上的数据库文件中的数据页，而不是缓存在易失 DRAM 中的数据页的副本。 [!INCLUDE[sqlv15](../../includes/sssql19-md.md)] 中引入了此功能。
 
 ![混合缓冲池](./media/hybrid-buffer-pool.png)
 
@@ -42,7 +42,7 @@ ms.locfileid: "85772429"
 
 ## <a name="enable-hybrid-buffer-pool"></a>启用混合缓冲池
 
-[!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] 引入了动态数据语言 (DDL) 来控制混合缓冲池。
+[!INCLUDE[sqlv15](../../includes/sssql19-md.md)] 引入了动态数据语言 (DDL) 来控制混合缓冲池。
 
 以下示例为 SQL Server 实例启用混合缓冲池：
 

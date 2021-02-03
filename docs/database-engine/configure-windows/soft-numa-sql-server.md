@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df2d323f8978ea5ce9cdaf23c2acf177517ff1ff
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c9a4b3f45a626d8ad3c809cc5e8f73fa9db0f15f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170929"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99238011"
 ---
 # <a name="soft-numa-sql-server"></a>软件 NUMA (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-新式处理器在每个插槽上都有多个内核。 通常每个插槽表示为单个 NUMA 节点。 SQL Server 数据库引擎在每个 NUMA 节点上划分多个不同内部结构和分区服务线程。  借助每个插槽包含 10 个或更多内核的处理器，使用软件 NUMA 拆分硬件 NUMA 节点通常可以提高可伸缩性和性能。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 之前，基于软件的 NUMA (soft-NUMA) 需要编辑注册表才能添加节点配置关联掩码，并且是针对主机级别而不是每个实例进行配置。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务启动时会在数据库实例级别自动配置 soft-NUMA。  
+新式处理器在每个插槽上都有多个内核。 通常每个插槽表示为单个 NUMA 节点。 SQL Server 数据库引擎在每个 NUMA 节点上划分多个不同内部结构和分区服务线程。  借助每个插槽包含 10 个或更多内核的处理器，使用软件 NUMA 拆分硬件 NUMA 节点通常可以提高可伸缩性和性能。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 之前，基于软件的 NUMA (soft-NUMA) 需要编辑注册表才能添加节点配置关联掩码，并且是针对主机级别而不是每个实例进行配置。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务启动时会在数据库实例级别自动配置 soft-NUMA。  
   
 > [!NOTE]  
 > 软件 NUMA 不支持热添加处理器。  
   
 ## <a name="automatic-soft-numa"></a>自动软件 NUMA  
-使用 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]，只要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在启动时检测到每个 NUMA 或插槽内的物理内核数目超过 8 个，在默认情况下就会自动创建 soft-NUMA 节点。 计算节点中的物理内核时，不区分超线程处理器内核。  如果检测到每个插槽内的物理内核数目多于 8 个，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会创建 soft-NUMA 节点，在理想情况下包含 8 个内核，但也可少至每节点 5 个逻辑内核，或多达 9 个。 可以通过 CPU 关联掩码限制硬件节点的大小。 NUMA 节点数永远不会超过支持的 NUMA 节点的最大数目。  
+使用 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]，只要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在启动时检测到每个 NUMA 或插槽内的物理内核数目超过 8 个，在默认情况下就会自动创建 soft-NUMA 节点。 计算节点中的物理内核时，不区分超线程处理器内核。  如果检测到每个插槽内的物理内核数目多于 8 个，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会创建 soft-NUMA 节点，在理想情况下包含 8 个内核，但也可少至每节点 5 个逻辑内核，或多达 9 个。 可以通过 CPU 关联掩码限制硬件节点的大小。 NUMA 节点数永远不会超过支持的 NUMA 节点的最大数目。  
   
 可以使用带有 `SET SOFTNUMA` 参数的 [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md) 语句来禁用或重新启用 soft-NUMA。 更改此设置的值后，需要重新启动数据库引擎才会生效。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "98170929"
 ```   
 
 > [!NOTE]
-> 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，使用跟踪标志 8079 以使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能够使用自动 Soft-NUMA。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，此行为由引擎控制，跟踪标志 8079 不再有效。 有关详细信息，请参阅 [DBCC TRACEON - 跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+> 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，使用跟踪标志 8079 以使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能够使用自动 Soft-NUMA。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，此行为由引擎控制，跟踪标志 8079 不再有效。 有关详细信息，请参阅 [DBCC TRACEON - 跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 ## <a name="manual-soft-numa"></a>手动软件 NUMA  
 通过禁用自动 soft_NUMA 并编辑注册表，可手动配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来使用 soft-NUMA，以添加节点配置关联掩码。 借助这种方法，软件 NUMA 掩码可以表示为二进制、DWORD（十六进制或十进制）或 QWORD（十六进制或十进制）注册表项。 若要配置前 32 个 CPU 以后的 CPU，请使用 QWORD 或 BINARY 注册表值（在低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，不能使用 QWORD 值）。 修改注册表后，必须重启 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，soft-NUMA 配置才会生效。  
@@ -101,7 +101,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
  在以下示例中，假定你有 DL580 G9 服务器，每个插槽（共 4 个插槽）具有 18 个内核并且每个插槽都位于其自己的 K 组中。 可能创建如下所示的 soft-NUMA 配置：每个节点六个内核，每个组三个节点，总共有四个组。  
   
-|具有多个 K 组的 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 服务器示例|类型|值名称|值数据|  
+|具有多个 K 组的 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 服务器示例|类型|值名称|值数据|  
 |-----------------------------------------------------------------------------------------------------------------|----------|----------------|----------------|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|组|0|  

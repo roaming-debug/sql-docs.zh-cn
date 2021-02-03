@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f2aa24e3ebd335251ad2721444e9f9d8645ef221
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: e6e6dfd3092f4602f652af81e547b63fc1ddc3df
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534867"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236091"
 ---
 # <a name="configure-the-secure-enclave-in-sql-server"></a>在 SQL Server 中配置安全 enclave
 
@@ -27,7 +27,7 @@ ms.locfileid: "98534867"
 > [!NOTE]
 > 负责配置安全 enclave 的角色是 DBA。 请参阅[使用 HGS 配置证明时的角色和职责](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs)。
 
-[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 支持的 enclave 类型是基于虚拟化的安全性 (VBS)。 在配置 VBS enclave 类型之前，建议使用主机保护者服务 (HGS) 为托管实例的计算机设置证明。 若要开始使用 HGS，请参阅[规划主机保护者服务证明](always-encrypted-enclaves-host-guardian-service-plan.md)。 设置证明还会启用基于虚拟化的安全性，这是 VBS enclave 正确初始化所必需的。 有关详细信息，请参阅[验证基于虚拟化的安全性组件是否正在运行](always-encrypted-enclaves-host-guardian-service-register.md#step-2-verify-virtualization-based-security-is-running)。
+[!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 支持的 enclave 类型是基于虚拟化的安全性 (VBS)。 在配置 VBS enclave 类型之前，建议使用主机保护者服务 (HGS) 为托管实例的计算机设置证明。 若要开始使用 HGS，请参阅[规划主机保护者服务证明](always-encrypted-enclaves-host-guardian-service-plan.md)。 设置证明还会启用基于虚拟化的安全性，这是 VBS enclave 正确初始化所必需的。 有关详细信息，请参阅[验证基于虚拟化的安全性组件是否正在运行](always-encrypted-enclaves-host-guardian-service-register.md#step-2-verify-virtualization-based-security-is-running)。
 
 有关如何配置 enclave 类型的详细说明，请参阅[为 Always Encrypted 服务器配置选项配置 enclave 类型](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)。
 

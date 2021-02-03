@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd4827f08c9e21ccd45f128bcc64ab9e03c1474b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 3dd72fbcc8f46f505e086043800ec68068a3cb5e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193417"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250095"
 ---
 # <a name="data-collection"></a>数据收集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  数据收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一个组件，用于收集不同的数据集。 数据收集连续运行或按照用户定义的计划运行。 数据收集器将收集的数据存储在称为管理数据仓库的关系数据库中。  
+  数据收集器是 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的一个组件，用于收集不同的数据集。 数据收集连续运行或按照用户定义的计划运行。 数据收集器将收集的数据存储在称为管理数据仓库的关系数据库中。  
   
 ## <a name="what-is-data-collector"></a>什么是数据收集器？ 
- 数据收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据收集平台的核心组件，是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所提供的工具。 数据收集器为在数据库服务器和应用程序范围内的数据收集提供了一个中心点。 与 SQL 跟踪不同，此收集点可获取来自多种来源的数据而不仅限于性能数据。  
+ 数据收集器是 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 数据收集平台的核心组件，是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所提供的工具。 数据收集器为在数据库服务器和应用程序范围内的数据收集提供了一个中心点。 与 SQL 跟踪不同，此收集点可获取来自多种来源的数据而不仅限于性能数据。  
   
  您可以使用数据收集器根据自己的测试和生产环境调整数据收集的范围。 数据收集器还使用数据仓库，数据仓库是一个关系数据库，借助此数据库，您可以通过为数据设置不同的保持期来管理收集的数据。  
   
  数据收集器支持对数据收集进行动态优化并可通过其 API 进行扩展。 有关详细信息，请参阅 [Data Collector Programming](../system-functions/data-collector-functions-transact-sql.md)。  
   
- 下图显示数据收集器如何配合 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据收集和数据管理的总体策略。  
+ 下图显示数据收集器如何配合 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]数据收集和数据管理的总体策略。  
   
  ![数据收集器在数据管理中的角色](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "数据收集器在数据管理中的角色")  
   

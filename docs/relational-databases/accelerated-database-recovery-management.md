@@ -13,12 +13,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 3d4896fe862a20d94204d3b620c1255ea5b96a4c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cfd5a901f38dacf9e17baff4d65363796ab3cd73
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483619"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236107"
 ---
 # <a name="manage-accelerated-database-recovery"></a>管理加速数据库恢复
 
@@ -26,7 +26,7 @@ ms.locfileid: "97483619"
 
 ## <a name="enabling-and-controlling-adr"></a>启用和控制 ADR
 
-ADR 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中默认处于禁用状态，并且可使用 DDL 语法进行控制：
+ADR 在 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 中默认处于禁用状态，并且可使用 DDL 语法进行控制：
 ```sql
 ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 [(PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name }) ];

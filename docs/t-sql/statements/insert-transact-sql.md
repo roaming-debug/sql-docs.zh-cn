@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - INSERT_TSQL
 - INSERT
@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 206aefdd3cd58b94124a0840cef7e788c5a29390
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b5a6fd7131b63741a82c120e1e0b222405865a9d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171269"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237177"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -319,7 +319,7 @@ OUTPUT 子句
   
 与持有较少限制性大容量更新 (BU) 锁的 `BULK INSERT` 语句不同，具有 `TABLOCK` 提示的 `INSERT INTO … SELECT` 语句持有一个针对表的排他 (X) 锁。 也就是说不能使用同时执行的多个插入操作插入行。 
 
-但是，从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和数据库兼容性级别 130 开始，在插入堆或聚集列存储索引 (CCI) 时，可以并行执行单个 `INSERT INTO … SELECT` 语句。 使用 `TABLOCK` 提示时，可能会出现并行插入。  
+但是，从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 和数据库兼容性级别 130 开始，在插入堆或聚集列存储索引 (CCI) 时，可以并行执行单个 `INSERT INTO … SELECT` 语句。 使用 `TABLOCK` 提示时，可能会出现并行插入。  
 
 以上语句的并行度具有以下要求，这类似于针对最小日志记录的要求：  
 -   目标表是空或非空堆。  
@@ -785,7 +785,7 @@ GO
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. 插入到使用 PolyBase 创建的外部表中  
  将数据从 SQL Server 导出到 Hadoop 或 Azure 存储空间。 首先，创建一个指向目标文件或目录的外部表。 然后，使用 INSERT INTO 将数据从本地 SQL Server 表导出到外部数据源。 INSERT INTO 语句将创建目标文件或目录（如果不存在），而 SELECT 语句的结果将以指定文件格式导出到指定位置。  有关详细信息，请参阅 [PolyBase 入门](../../relational-databases/polybase/polybase-guide.md)。  
   
-**适用于**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用于**： [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]。  
   
 ```sql
 -- Create an external table.   

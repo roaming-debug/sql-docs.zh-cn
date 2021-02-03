@@ -14,16 +14,16 @@ ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eadf600a52984e9d1ba0e11c80f415ec01fd306
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 12e070cba8d55d9ae7835122b33bb99c17c3e945
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479148"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250279"
 ---
 # <a name="delete-statistics"></a>删除统计信息
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  你可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，删除 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中表和视图中的统计信息，或 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+  你可以通过使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ，删除 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中表和视图中的统计信息，或 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **本主题内容**  
   

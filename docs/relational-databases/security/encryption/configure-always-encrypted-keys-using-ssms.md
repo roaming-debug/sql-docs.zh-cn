@@ -16,12 +16,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f31a17d3f8bf2285bc41c7462deec4e53008efd1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405490"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237076"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 预配 Always Encrypted 密钥
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "97405490"
    
     有关上述密钥存储的详细信息，请参阅[创建并存储 Always Encrypted 的列主密钥](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
-5. 如果使用的是 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，并且 SQL Server 实例配置有安全 enclave，则可以选中“允许 enclave 计算”复选框以启用主密钥 enclave。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md)。 
+5. 如果使用的是 [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)]，并且 SQL Server 实例配置有安全 enclave，则可以选中“允许 enclave 计算”复选框以启用主密钥 enclave。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md)。 
 
     > [!NOTE]
     > 如果 SQL Server 实例未正确配置有安全 enclave，则不会显示“允许 enclave 计算”复选框。

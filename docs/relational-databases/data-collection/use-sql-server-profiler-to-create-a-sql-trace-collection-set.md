@@ -12,16 +12,16 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 4b2f20965b3bdff081368c2e1fcaa2bc255aca47
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96128835"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250082"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>使用 SQL Server Profiler 创建 SQL 跟踪收集组
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的服务器端跟踪功能导出跟踪定义，可使用跟踪定义创建一个使用一般 SQL 跟踪收集器类型的收集组。 此过程分为两个部分：  
+  在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中，可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的服务器端跟踪功能导出跟踪定义，可使用跟踪定义创建一个使用一般 SQL 跟踪收集器类型的收集组。 此过程分为两个部分：  
   
 1.  创建并导出 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪。  
   

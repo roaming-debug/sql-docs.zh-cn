@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f7e96df4eba36bbcb3da18a1423b5162aef557a7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5f31e0e3a961736bb514c31bfabf670893dc78e8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170799"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236314"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>为 Always On 可用性组配置只读路由
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   若要配置 AlwaysOn 可用性组以便在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中支持只读路由，你可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell。 *只读路由* 指的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将符合条件的只读连接请求路由到可用的 AlwaysOn [可读次要副本](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) （即，配置为在辅助角色下运行时允许只读工作负荷的副本）的能力。 为支持只读路由，可用性组必须具备 [可用性组侦听器](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。 只读客户端必须将其连接请求定向到此侦听器，并且客户端的连接字符串必须将应用程序意向指定为“只读”。 也就是说，它们必须是 *读意向连接请求*。  
 
-只读路由在 [!INCLUDE[sssql15](../../../includes/sssql16-md.md)] 及更高版本中可用。
+只读路由在 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] 及更高版本中可用。
 
 > [!NOTE]  
 >  有关如何配置可读次要副本的信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
@@ -104,7 +104,7 @@ ms.locfileid: "98170799"
         >  您必须先设置只读路由 URL，然后才能配置只读路由列表。  
   
 ###  <a name="configure-load-balancing-across-read-only-replicas"></a><a name="loadbalancing"></a> 在只读副本间配置负载平衡  
- 从 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)]开始，可以在一组只读副本间配置负载平衡。 以前，只读路由始终都将流量定向到路由列表中第一个可用的副本。 若要利用此功能，请使用一个级别的嵌套括号将 **CREATE AVAILABILITY GROUP** 或 **ALTER AVAILABILITY GROUP** 命令中的 **READ_ONLY_ROUTING_LIST** 服务器实例括起来。  
+ 从 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)]开始，可以在一组只读副本间配置负载平衡。 以前，只读路由始终都将流量定向到路由列表中第一个可用的副本。 若要利用此功能，请使用一个级别的嵌套括号将 **CREATE AVAILABILITY GROUP** 或 **ALTER AVAILABILITY GROUP** 命令中的 **READ_ONLY_ROUTING_LIST** 服务器实例括起来。  
   
  例如，以下路由列表在两个只读副本 `Server1` 和 `Server2`之间的读意向连接请求实现负载平衡。 括住这些服务器的嵌套圆括号可以标识已实现负载平衡的组。 如果该组中没有副本，则它将继续尝试按顺序连接到只读路由列表中的其他副本： `Server3` 和 `Server4`。  
   

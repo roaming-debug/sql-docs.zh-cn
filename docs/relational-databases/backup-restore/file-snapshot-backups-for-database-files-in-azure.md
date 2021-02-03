@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 63e2f722305c2af448be7d49868eef72d1a9fb8d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1b484ea7b300fe53983dd26c5f7644abbebd2ca2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172689"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236815"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中数据库文件的文件快照备份
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "98172689"
   
  **下载**  
   
--   若要下载 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 。  
+-   若要下载 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 。  
   
--   已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 启动装有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的虚拟机。  
+-   已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 启动装有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的虚拟机。  
   
 ## <a name="using-azure-snapshots-to-back-up-database-files-stored-in-azure"></a>使用 Azure 快照备份 Azure 中存储的数据库文件  
   

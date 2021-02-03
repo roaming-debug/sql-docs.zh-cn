@@ -46,7 +46,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  REQUEST_MAX_MEMORY_GRANT_PERCENT = value      
  指定单个请求可以从池中获取的最大内存量。 value 是相对于 MAX_MEMORY_PERCENT 指定的资源池大小的百分比  。  
 
-value 是一个最大为 [!INCLUDE[ssSQL17](sssql17-md.md)] 的整数，以及一个以 [!INCLUDE[sql-server-2019](sssqlv15-md.md)] 开头的浮点数  。 默认值为 25。 value 的允许范围是 1 到 100  。
+value 是一个最大为 [!INCLUDE[ssSQL17](sssql17-md.md)] 的整数，以及一个以 [!INCLUDE[sql-server-2019](sssql19-md.md)] 开头的浮点数  。 默认值为 25。 value 的允许范围是 1 到 100  。
   
 > [!NOTE]  
 > 指定的量指的只是查询执行授予内存。  
@@ -72,7 +72,7 @@ value 是一个最大为 [!INCLUDE[ssSQL17](sssql17-md.md)] 的整数，以及�
 > 默认情况下，如果超过最长时间，Resource Governor 并不会阻止继续发出请求。 但会生成一个事件。 有关详细信息，请参阅 [CPU Threshold Exceeded 事件类](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。 
 
 > [!IMPORTANT]
-> 从 [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 开始以及使用[跟踪标志 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 时，Resource Governor 将在超出最大时间时终止请求。
+> 从 [!INCLUDE[sssql16-md](sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 开始以及使用[跟踪标志 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 时，Resource Governor 将在超出最大时间时终止请求。
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =value   
  指定查询等待内存授予（工作缓冲区内存）变为可用的最长时间（以秒为单位）。  

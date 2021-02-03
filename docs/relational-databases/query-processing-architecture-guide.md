@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 303b560a40d5c87e49a8d5d2693aa0f814d03f45
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 05f33d170224ee079b4d23598e88e1802bebfbbb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170509"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237682"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -695,7 +695,7 @@ sql_handle
 * 一个经常被引用的执行计划，该计划的开销从未等于零。 除非遇到内存不足和当前开销为零的情况，否则该计划保留在计划缓存中，不会被删除。
 * 插入的一个即席执行计划，并且在内存不足情况出现之前没有再次引用该计划。 由于即席计划在初始化后当前开销为零，因此在[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]检查执行计划时，会发现当前开销为零，于是从计划缓存中删除该计划。 如果不存在内存不足的情况，当前开销为零的即席执行计划将保留在计划缓存中。
 
-若要从缓存中手动删除单个计划或所有计划，请使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。 [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) 也可用于清除任何缓存，包括计划缓存。 从 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 开始，使用 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 清除范围内数据库的过程（计划）缓存。 通过 [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) 和 [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) 对某些配置设置进行的更改也会导致从计划缓存中删除计划。 可在 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks) 一文的“备注”部分中找到这些配置设置的列表。 此类配置更改将在错误日志中记录以下信息性消息：
+若要从缓存中手动删除单个计划或所有计划，请使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。 [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) 也可用于清除任何缓存，包括计划缓存。 从 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 开始，使用 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 清除范围内数据库的过程（计划）缓存。 通过 [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) 和 [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) 对某些配置设置进行的更改也会导致从计划缓存中删除计划。 可在 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks) 一文的“备注”部分中找到这些配置设置的列表。 此类配置更改将在错误日志中记录以下信息性消息：
 
 > `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
 
@@ -1023,7 +1023,7 @@ WHERE ProductID = 63;
 
 禁止并行度的构造包括：
 -   **标量 UDF**        
-    有关标量用户定义函数的详细信息，请参阅[创建用户定义函数](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)。 从 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 开始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 能够内联这些函数，并在查询处理期间解锁并行度的使用。 有关标量 UDF 内联的详细信息，请参阅 [SQL 数据库中的智能查询处理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。
+    有关标量用户定义函数的详细信息，请参阅[创建用户定义函数](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)。 从 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 开始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 能够内联这些函数，并在查询处理期间解锁并行度的使用。 有关标量 UDF 内联的详细信息，请参阅 [SQL 数据库中的智能查询处理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。
     
 -   **远程查询**        
     有关远程查询的详细信息，请参阅 [Showplan 逻辑运算符和物理运算符参考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。
@@ -1098,7 +1098,7 @@ WHERE ProductID = 63;
 
 从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和数据库兼容性级别 110 开始，可以并行执行 `SELECT … INTO` 语句。 其他形式的 insert 运算符的工作方式与 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的方式相同。
 
-从 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 和数据库兼容性级别 130 开始，在插入堆或聚集列存储索引 (CCI)，以及使用 TABLOCK 提示时，可以并行执行 `INSERT … SELECT` 语句。 还可以使用 TABLOCK 提示为并行启用到本地临时表（由 # 前缀标识）和全局临时表（由 ## 前缀标识）的插入。 有关详细信息，请参阅 [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)。
+从 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 和数据库兼容性级别 130 开始，在插入堆或聚集列存储索引 (CCI)，以及使用 TABLOCK 提示时，可以并行执行 `INSERT … SELECT` 语句。 还可以使用 TABLOCK 提示为并行启用到本地临时表（由 # 前缀标识）和全局临时表（由 ## 前缀标识）的插入。 有关详细信息，请参阅 [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)。
 
 并行执行计划可以填充静态和由键集驱动的游标。 然而，只有串行执行可以提供动态游标行为。 查询优化器始终为查询生成串行执行计划，这是动态游标的一部分。
 
@@ -1108,7 +1108,7 @@ WHERE ProductID = 63;
 1.  服务器级别，使用最大并行度 (MAXDOP) [服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。</br> **适用于：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
     > [!NOTE]
-    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] 介绍有关在安装过程中如何设置 MAXDOP 服务器配置的自动建议。 安装程序用户界面允许接受建议的设置或输入自己的值。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../sql-server/install/instance-configuration.md#maxdop)。
+    > [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] 介绍有关在安装过程中如何设置 MAXDOP 服务器配置的自动建议。 安装程序用户界面允许接受建议的设置或输入自己的值。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../sql-server/install/instance-configuration.md#maxdop)。
 
 2.  工作负载级别，请使用 MAX_DOP [Resource Governor 工作负载组配置选项](../t-sql/statements/create-workload-group-transact-sql.md)。</br> **适用于：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
@@ -1273,7 +1273,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种方
 
 > [!NOTE]
 > 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 之前，只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition、Developer Edition 和 Evaluation Edition 支持已分区表和已分区索引。   
-> 从 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition 也支持已分区表和已分区索引。 
+> 从 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition 也支持已分区表和已分区索引。 
 
 ### <a name="new-partition-aware-seek-operation"></a>新增的可识别分区的查找操作
 
