@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - MinDbCompatibilityLevel
 - MinDbCompatibilityLevel_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: cfce4111cfcfb296689754e18aeea37878636543
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 74a243b34ee430ae8328eaec067a64a5f103aee4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038080"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198433"
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回识别 geography 数据类型的最基本的数据库兼容级别****。  
+  返回识别 geography 数据类型的最基本的数据库兼容级别。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,12 +40,12 @@ ms.locfileid: "92038080"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int****  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
   
- CLR 返回类型：int****  
+ CLR 返回类型：int  
   
 ## <a name="remarks"></a>备注  
- 在更改数据库的兼容级别之前应使用 `MinDbCompatibilityLevel()` 测试空间对象的兼容性。 无效的 geography 类型返回 110****。  
+ 在更改数据库的兼容级别之前应使用 `MinDbCompatibilityLevel()` 测试空间对象的兼容性。 无效的 geography 类型返回 110。  
   
 ## <a name="examples"></a>示例  
   

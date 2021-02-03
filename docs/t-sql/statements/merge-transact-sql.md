@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - MERGE
 - MERGE_TSQL
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 664ef8a40e341f52bda0658d532849a278ae49b9
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: cbc1286bbbced3a546c1057433dba5bbc4289281
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679086"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199383"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -215,10 +215,10 @@ DELETE
 \<merge_not_matched>  
 指定要插入到目标表中的值。  
   
-( *column_list* )  
+(*column_list*)  
 要在其中插入数据的目标表中一个或多个列的列表。 必须使用单一部分名称格式来指定这些列，否则 MERGE 语句将失败。 必须用括号将 column_list 括起来，并且用逗号进行分隔。  
   
-VALUES ( *values_list* )  
+VALUES ( *values_list*)  
 返回要插入到目标表中的值的常量、变量或表达式的逗号分隔列表。 表达式不得包含 EXECUTE 语句。  
   
 DEFAULT VALUES  

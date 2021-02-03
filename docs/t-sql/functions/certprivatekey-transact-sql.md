@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CERTPRIVATEKEY
 - CERTPRIVATEKEY_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8dc94ac93a79ceabef40b9972293c086bfdc3eac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f32b206053cdfbf3f8fce4f8ecc5da69417fc571
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88367243"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202181"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,22 +50,22 @@ CERTPRIVATEKEY
 
 ## <a name="arguments"></a>参数
 certificate_ID  
-证书的 certificate_id****。 通过 sys.certificates 或通过 [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 函数获得此值。 cert_id 为 int 数据类型******。
+证书的 certificate_id。 通过 sys.certificates 或通过 [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 函数获得此值。 cert_id 为 int 数据类型。
   
-encryption_password**  
+encryption_password  
 用于对返回的二进制值进行加密的密码。
   
-decryption_password**  
+decryption_password  
 用于对返回的二进制值进行解密的密码。
   
 ## <a name="return-types"></a>返回类型
 **varbinary**
   
 ## <a name="remarks"></a>备注  
-同时使用 CERTENCODED 和 CERTPRIVATEKEY 以二进制格式返回证书的其他部分********。
+同时使用 CERTENCODED 和 CERTPRIVATEKEY 以二进制格式返回证书的其他部分。
   
 ## <a name="permissions"></a>权限  
-CERTPRIVATEKEY 向用户开放使用****。
+CERTPRIVATEKEY 向用户开放使用。
   
 ## <a name="examples"></a>示例  
   
@@ -82,7 +82,7 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-请参阅 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B，查看有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的更为复杂的示例********。
+请参阅 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B，查看有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的更为复杂的示例。
   
 ## <a name="see-also"></a>另请参阅
 [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)  

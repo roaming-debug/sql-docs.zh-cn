@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP COLUMN MASTER KEY
 - DROP_COLUMN_MASTER_KEY_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 1e2b72e3b398f5b79f1467530b589853f7f67781
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: fb03c400ade4beecd77592e49d65980cdf599d38
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380132"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198228"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
 
@@ -49,7 +49,7 @@ DROP COLUMN MASTER KEY key_name;
  只有在没有任何使用列主密钥加密的列加密密钥值的情况下，才能删除列主密钥。 若要删除列加密密钥值，请使用 [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 语句。  
   
 ## <a name="permissions"></a>权限  
- 需要对数据库具有 ALTER ANY COLUMN MASTER KEY 权限****。  
+ 需要对数据库具有 ALTER ANY COLUMN MASTER KEY 权限。  
   
 ## <a name="examples"></a>示例  
   

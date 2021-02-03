@@ -6,19 +6,19 @@ ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccb035e127b6476ca18b5745dbaf58b66c8c929e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 14a917d6a6faec85cbc712f612e593fdfe19bc06
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476248"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197859"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 事件类
 
@@ -52,11 +52,11 @@ ms.locfileid: "97476248"
 |OwnerName|**nvarchar**|消息目标的 Broker 实例标识符。|37|否|  
 |RoleName|**nvarchar**|会话句柄的角色。 下列其中一项：<br /><br /> -Initiator。 此 Broker 发起了该会话。<br /><br /> -Target。 此 Broker 是会话的目标。|38|否|  
 |ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|严重性|**int**|事件中文本的严重级别号。|29|否|  
+|Severity|**int**|事件中文本的严重级别号。|29|否|  
 |SPID|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |StartTime|**datetime**|事件（如果有）的开始时间。|14|是|  
 |状态|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
-|Success|**int**|消息处于活动状态的时间长度。 如果此值大于或等于生存时间，则删除该消息。|23|否|  
+|成功|**int**|消息处于活动状态的时间长度。 如果此值大于或等于生存时间，则删除该消息。|23|否|  
 |TargetLoginName|**nvarchar**|消息本应已转发到的网络地址。|42|否|  
 |TargetUserName|**nvarchar**|启动消息的服务的名称。|39|否|  
 |TextData|**ntext**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 删除消息的原因说明。|1|是|  

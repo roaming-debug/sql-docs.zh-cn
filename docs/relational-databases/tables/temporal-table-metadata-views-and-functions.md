@@ -12,12 +12,12 @@ ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a552f940165a2bf45810dd4f6abbbd4f71513299
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a8c13f9bcbbe501e369e2dd536c90d180bd88f6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477178"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201154"
 ---
 # <a name="temporal-table-metadata-views-and-functions"></a>临时表元数据视图和函数
 
@@ -25,7 +25,7 @@ ms.locfileid: "97477178"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 包括多个元数据库视图和函数，可以让管理员检索有关临时表的信息。
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 包括多个元数据库视图和函数，可以让管理员检索有关临时表的信息。
 
 以下元数据视图公开了有关临时表的信息：
 
