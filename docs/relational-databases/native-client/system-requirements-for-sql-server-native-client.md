@@ -15,12 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3eb77e6ed1dec97736c856c6b9c3c827470e31ce
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 27e6a98231e66a24a66233092e3e7e245a4e3d74
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463298"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536390"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系统要求
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "97463298"
   
 -   服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 要求使用 Windows Installer 3.0。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统上已经安装了 Windows Installer 3.0。 您需要将其显式安装到所有其他平台上。 有关详细信息，请参阅 [Windows Installer 3.0 可再发行组件](https://www.microsoft.com/download/details.aspx?id=16821)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 需要 3.1 Windows Installer。 Windows Installer 3.1 已安装在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统上。 您需要将其显式安装到所有其他平台上。 有关详细信息，请参阅 [Windows Installer 3.1 可再发行组件 (v2) ](https://www.microsoft.com/download/details.aspx?id=25)。  
   
 > [!NOTE]  
 >  确保以管理员权限进行登录，然后再安装此软件。  
