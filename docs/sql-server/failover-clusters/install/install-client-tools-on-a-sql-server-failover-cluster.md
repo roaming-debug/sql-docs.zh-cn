@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a596212e17e6fb273b9a6c4f5a2548aff1bc1e7f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 12703b6b6103646cafdcf42a12837041c3b20567
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642830"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251369"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集上安装客户端工具
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97642830"
   
 3.  系统配置检查器将验证计算机的系统状态，然后安装程序继续运行。  
   
-4.  在“安装类型”页上，单击“执行全新安装” **[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** 。  
+4.  在“安装类型”页上，单击“执行全新安装” **[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]** 。  
   
 5.  在 **“功能选择”** 页上，选择需要安装的工具，然后按照安装过程的剩余步骤操作。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "97642830"
 3.  若要安装完整的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理工具，请运行以下命令：Setup.exe/q/Action=Install /Features=ADV_SSMS。 有关功能的参数值的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ### <a name="uninstalling-ssnoversion-client-tools"></a>卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
- 它们在“控制面板”的“添加或删除程序”中显示为 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** ，可从此处将其删除。 当使用“删除节点”从故障转移群集中卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，并不同时卸载这些客户端组件。  
+ 它们在“控制面板”的“添加或删除程序”中显示为 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]** ，可从此处将其删除。 当使用“删除节点”从故障转移群集中卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，并不同时卸载这些客户端组件。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2dd1bd53b5ce3304b48fe8ed022e538d4d705154
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 31e4daeab0019aaf2ea9eb4a26af3f47c564c680
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081436"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495635"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-将 SQLSRV 驱动程序用于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 时，可以通过在连接字符串中或在语句级别指定以下选项，以字符串的形式检索日期和时间类型（smalldatetime****、datetime****、date****、time****、datetime2**** 和 datetimeoffset****）：
+将 SQLSRV 驱动程序用于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 时，可以通过在连接字符串中或在语句级别指定以下选项，以字符串的形式检索日期和时间类型（smalldatetime、datetime、date、time、datetime2 和 datetimeoffset）：
 
 ```
 'ReturnDatesAsStrings'=>true
 ```
 
-默认值是 false****，这意味着 smalldatetime****、datetime****、date****、time****、datetime2**** 和 datetimeoffset**** 类型将返回为 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象。 如果在语句级别设置此选项，则它将替代连接级别设置。
+默认值是 false，这意味着 smalldatetime、datetime、date、time、datetime2 和 datetimeoffset 类型将返回为 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象。 如果在语句级别设置此选项，则它将替代连接级别设置。
 
 默认情况下，PDO_SQLSRV 驱动程序以字符串的形式返回日期和时间类型。 若要以 PHP DateTime 对象形式进行检索，请参阅[如何：使用 PDO_SQLSRV 以 PHP Datetime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
@@ -39,7 +39,7 @@ ms.locfileid: "92081436"
 ```php
 <?php
 $serverName = "MyServer";
-$connectionInfo = array("Database"=>"AdventureWorks", 'ReturnDatesAsStrings '=> true);
+$connectionInfo = array("Database"=>"AdventureWorks", 'ReturnDatesAsStrings'=> true);
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 if ($conn === false) {
    echo "Could not connect.\n";
