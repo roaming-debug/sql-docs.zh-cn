@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerStatement.executeUpdate (java.lang.String[])
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 037521938c5a28c6d40159a19151f8b84438a8e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70adee8fbc97e487c2731a92e1c80fa6a4bff1be
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437639"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163422"
 ---
 # <a name="executeupdate-method-javalangstring-javalangstring"></a>executeUpdate 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,14 +39,14 @@ public final int executeUpdate(java.lang.String sql,
 #### <a name="parameters"></a>参数  
  *sql*  
   
- 包含 SQL 语句的 String****。  
+ 包含 SQL 语句的 String。  
   
- columnNames**  
+ columnNames  
   
- 一个 String **** 类型的数组，指示哪些自动生成的键的列名应可用。  
+ 一个 String 类型的数组，指示哪些自动生成的键的列名应可用。  
   
 ## <a name="return-value"></a>返回值  
- 指示受影响行数的 int****，如果使用 DDL 语句，则此值为 0。  
+ 指示受影响行数的 int，如果使用 DDL 语句，则此值为 0。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

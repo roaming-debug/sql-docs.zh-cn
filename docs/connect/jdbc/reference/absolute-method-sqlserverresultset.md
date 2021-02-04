@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.absolute
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 260849163934c32cf1d671af024856f81cad7db3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1eae674d751cf688a8fc3ae4feb04a3867b3ee04
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438309"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163600"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>absolute 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public boolean absolute(int row)
 #### <a name="parameters"></a>参数  
  row  
   
- 指示要移到的行号的 int**** 值。 它可以为正数、负数或 0。  
+ 指示要移到的行号的 int 值。 它可以为正数、负数或 0。  
   
 ## <a name="return-value"></a>返回值  
- 如果游标移到给定位置，则值为 true****。 如果游标位于第一行之前或最后一行之后，则值为 false****。  
+ 如果游标移到给定位置，则值为 true。 如果游标位于第一行之前或最后一行之后，则值为 false。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

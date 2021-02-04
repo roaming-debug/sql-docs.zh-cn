@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.getShort (java.lang.String)
 apilocation:
@@ -16,17 +16,17 @@ apitype: Assembly
 ms.assetid: cd39ed03-b3e8-443d-9c7a-e8cf2581e581
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dae7ef1fcf670b509f329a752fe8869d24a4da12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dfc31438a23bd37df9936bb529affc13203b3e17
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434529"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162316"
 ---
 # <a name="getshort-method-javalangstring"></a>getShort 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的 short****。  
+  在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的 short。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,12 +36,12 @@ public short getShort(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>参数  
- sCol**  
+ sCol  
   
- 包含参数名称的字符串****。  
+ 包含参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
- short**** 值。  
+ short 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

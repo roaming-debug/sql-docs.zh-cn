@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.getBigDecimal Method (int)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: f74030d8-3789-463b-b414-2eb01cef8a30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 163445b2adc2f7ddce94a8e2d198e6c0d938301e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f357b75524a76fc67817ea8681960311ad56bd2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437309"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165761"
 ---
 # <a name="getbigdecimal-method-int"></a>getBigDecimal 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public java.math.BigDecimal getBigDecimal(int index)
 #### <a name="parameters"></a>参数  
  *index*  
   
- 指示参数索引的 int****。  
+ 指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
  BigDecimal 对象。  

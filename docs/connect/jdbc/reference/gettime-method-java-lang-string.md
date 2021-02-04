@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.getTime (java.lang.String)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4b4bdcc5eeab3edf282619aac90d6b8bd50fbd81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fbaf986b61066809edb89647eb0ca7ba43c1e981
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434179"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162131"
 ---
 # <a name="gettime-method-javalangstring"></a>getTime 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,9 +36,9 @@ public java.sql.Time getTime(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>参数  
- sCol**  
+ sCol  
   
- 包含参数名称的字符串****。  
+ 包含参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
  Time 对象。  

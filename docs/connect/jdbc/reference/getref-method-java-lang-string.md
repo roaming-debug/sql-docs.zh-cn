@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.getRef (java.lang.String)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: a8ff2dd5-923b-4a2f-ab33-665574b2dfda
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b9be7e4b23306f3e4e99bd292b8a3bb945fe58f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9389bd47d7880b5ec90dd1679ff563d02aa53225
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434859"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162455"
 ---
 # <a name="getref-method-javalangstring"></a>getRef 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,9 +36,9 @@ public java.sql.Ref getRef(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>参数  
- sCol**  
+ sCol  
   
- 包含参数名称的字符串****。  
+ 包含参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
  Ref 对象。  

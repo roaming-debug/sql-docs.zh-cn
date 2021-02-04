@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.getNumericFunctions
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8d1c3848-bdb7-452a-862f-6421e1a7ce8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac2bbbf8714057ad12d31c27a8b1c929797a6801
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11044d1bbd72f0beb8c07ab12c7fcc84dde54e56
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88435129"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162570"
 ---
 # <a name="getnumericfunctions-method-sqlserverdatabasemetadata"></a>getNumericFunctions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.lang.String getNumericFunctions()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含可用数学函数的 String****。  
+ 包含可用数学函数的 String。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

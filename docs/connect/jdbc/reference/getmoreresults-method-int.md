@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerStatement.getMoreResults (int)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 73d18f6319d0ddfbe362a21742e99c27e3637691
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e29acc97b946253c30455ac4877e50de51449acd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88435399"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162731"
 ---
 # <a name="getmoreresults-method-int"></a>getMoreResults 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public final boolean getMoreResults(int mode)
 #### <a name="parameters"></a>参数  
  *mode*  
   
- 指示如何处理当前打开的结果集对象的 int****。 必须是下列常量之一：  
+ 指示如何处理当前打开的结果集对象的 int。 必须是下列常量之一：  
   
  CLOSE_CURRENT_RESULT  
   
@@ -47,7 +47,7 @@ public final boolean getMoreResults(int mode)
  CLOSE_ALL_RESULTS  
   
 ## <a name="return-value"></a>返回值  
- 如果返回的结果为一个结果集，则为 true****。 否则为 **false**。  
+ 如果返回的结果为一个结果集，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -55,7 +55,7 @@ public final boolean getMoreResults(int mode)
 ## <a name="remarks"></a>备注  
  此 getMoreResults 方法是由 java.sql.Statement 接口中的 getMoreResults 方法指定的。  
   
- 如果在检索结果前调用 getMoreResults 方法，则该方法就会采用 mode** 参数指定的行为方式并移动到下一个结果。  
+ 如果在检索结果前调用 getMoreResults 方法，则该方法就会采用 mode 参数指定的行为方式并移动到下一个结果。  
   
 > [!NOTE]  
 >  JDBC 驱动程序不支持使用 KEEP_CURRENT_RESULT 常量。 如果使用该常量，将引发异常。  

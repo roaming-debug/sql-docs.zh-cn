@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerXAResource.commit
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1d0f8612-fb4a-4eca-bc37-8342e1419fd4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a4f5be3a81b4640155d143a664b5e79cfcec0aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8aefdc3ce3f5814249ad51259f52b924df60497
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438019"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163471"
 ---
 # <a name="commit-method-sqlserverxaresource"></a>commit 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public void commit(javax.transaction.xa.Xid xid,
   
  Xid 对象。  
   
- onePhase**  
+ onePhase  
   
  一个布尔值。  
   

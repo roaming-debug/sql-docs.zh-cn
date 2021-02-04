@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDriver.connect
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a5f962e64f2e20d49a8941e365d12794ce5d89e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d41a7158f354a730cebe496c7adb1caa6e31f36f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437989"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166022"
 ---
 # <a name="connect-method-sqlserverdriver"></a>connect 方法 (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,9 +39,9 @@ public java.sql.Connection connect(java.lang.String Url,
 #### <a name="parameters"></a>参数  
  *Url*  
   
- 一个**** String 值，包含用于连接到数据库的 URL。  
+ 一个 String 值，包含用于连接到数据库的 URL。  
   
- suppliedProperties**  
+ suppliedProperties  
   
  一组作为连接参数的字符串值对。  
   

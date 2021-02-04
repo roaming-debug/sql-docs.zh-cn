@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_fetch_object
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 6b173c2676f25b4866e1981611c1375e4cd1bf6b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92080666"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99154471"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,9 +39,9 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 #### <a name="parameters"></a>参数  
 *$stmt*：对应于已执行语句的语句资源。  
   
-$className [可选]：指定要实例化的类名称的字符串**。 如果不指定 *$className* 参数的值，将实例化 PHP **stdClass** 的实例。  
+$className [可选]：指定要实例化的类名称的字符串。 如果不指定 *$className* 参数的值，将实例化 PHP **stdClass** 的实例。  
   
-$ctorParams [可选]：含有传递到通过 $className 参数指定的类构造函数的值的阵列****。 如果指定类的构造函数接受参数值，在调用 *$ctorParams* object **sqlsrv_fetch_object**参数。  
+$ctorParams [可选]：含有传递到通过 $className 参数指定的类构造函数的值的阵列。 如果指定类的构造函数接受参数值，在调用 *$ctorParams* object **sqlsrv_fetch_object** 参数。  
   
 *row* [可选]：以下值之一，用于指定要在使用可滚动游标的结果集中访问的行。 （如果指定了 row，则必须显式指定 $className 和 $ctorParams，即使必须将 $className 和 $ctorParams 指定为 null    。）  
   
@@ -86,7 +86,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-如果通过 **sqlsrv_fetch_object**检索由此查询返回的结果，将丢弃 `SELECT SCOPE_IDENTITY()` 所返回的值并发出一条警告。 若要避免出现上述情形，可以在 Transact-SQL 语句中为返回的字段指定一个名称。 以下方法可用于在 Transact-SQL 中指定一个列名：  
+如果通过 **sqlsrv_fetch_object** 检索由此查询返回的结果，将丢弃 `SELECT SCOPE_IDENTITY()` 所返回的值并发出一条警告。 若要避免出现上述情形，可以在 Transact-SQL 语句中为返回的字段指定一个名称。 以下方法可用于在 Transact-SQL 中指定一个列名：  
   
 ```sql
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="class-example"></a>类示例  
-以下示例将每一行结果集检索为在脚本中定义的 *Product* 类的实例。 该示例将从产品（具有指定到期日期 DueDate 且库存量 StockQty 小于指定值）的 AdventureWorks 数据库的 Purchasing.PurchaseOrderDetail 和 Production.Product 表中检索产品信息   。 该示例重点介绍在对 **sqlsrv_fetch_object**的调用中指定某个类时所应用的某些规则：  
+以下示例将每一行结果集检索为在脚本中定义的 *Product* 类的实例。 该示例将从产品（具有指定到期日期 DueDate 且库存量 StockQty 小于指定值）的 AdventureWorks 数据库的 Purchasing.PurchaseOrderDetail 和 Production.Product 表中检索产品信息   。 该示例重点介绍在对 **sqlsrv_fetch_object** 的调用中指定某个类时所应用的某些规则：  
   
 -   *$product* 变量是 *Product* 类的实例，为存在使用 *$className* 参数和 *Product* 类指定的“Product”。  
   
@@ -234,7 +234,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-sqlsrv_fetch_object 函数将始终根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)返回数据****。 有关如何指定 PHP 数据类型的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
+sqlsrv_fetch_object 函数将始终根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)返回数据。 有关如何指定 PHP 数据类型的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
   
 如果返回不含名称的字段， **sqlsrv_fetch_object** 会丢弃该字段值并发出一条警告。 例如，考虑可将某个值插入数据库表并检索服务器生成的主键的 Transact-SQL 语句：  
   
@@ -243,7 +243,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-如果通过 **sqlsrv_fetch_object**检索由此查询返回的结果，将丢弃 `SELECT SCOPE_IDENTITY()` 所返回的值并发出一条警告。 若要避免出现上述情形，可以在 Transact-SQL 语句中为返回的字段指定一个名称。 以下方法可用于在 Transact-SQL 中指定一个列名：  
+如果通过 **sqlsrv_fetch_object** 检索由此查询返回的结果，将丢弃 `SELECT SCOPE_IDENTITY()` 所返回的值并发出一条警告。 若要避免出现上述情形，可以在 Transact-SQL 语句中为返回的字段指定一个名称。 以下方法可用于在 Transact-SQL 中指定一个列名：  
   
 ```sql
 SELECT SCOPE_IDENTITY() AS PictureID

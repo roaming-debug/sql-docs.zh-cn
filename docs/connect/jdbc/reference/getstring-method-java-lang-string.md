@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.getString (java.lang.String)
 apilocation:
@@ -16,17 +16,17 @@ apitype: Assembly
 ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c632a6991000ff13d6f3955318a3a9008c66f187
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad5a411e77b52130e9e1e4d43ebd38daff5844ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434439"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162213"
 ---
 # <a name="getstring-method-javalangstring"></a>getString 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的字符串****。  
+  在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的字符串。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,12 +36,12 @@ public java.lang.String getString(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>参数  
- sCol**  
+ sCol  
   
- 包含参数名称的字符串****。  
+ 包含参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
- 一个字符串值****。  
+ 一个字符串值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

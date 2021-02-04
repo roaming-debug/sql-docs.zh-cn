@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.getBigDecimal (java.lang.String, int)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6967ba55-9c9a-4f6f-a4d2-8ee9c9a82c14
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a911ec886cfc27d2c65b3530f14aab0bb6df52c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd64f1f4856264e76ef17b717834a709a04dbcdb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437289"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165743"
 ---
 # <a name="getbigdecimal-method-javalangstring-int"></a>getBigDecimal 方法 (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +40,13 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>参数  
- sCol**  
+ sCol  
   
- 包含参数名称的字符串****。  
+ 包含参数名称的字符串。  
   
  *scale*  
   
- 指示小数点右边的位数的 int****。  
+ 指示小数点右边的位数的 int。  
   
 ## <a name="return-value"></a>返回值  
  BigDecimal 对象。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerStatement.execute (javal.lang.String.int[])
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 95c18d95e6014afc78fc53b8a37f3cd4d3509fd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90b0873827a0dd615bf5d886c11e3c9550687468
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437769"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163411"
 ---
 # <a name="execute-method-javalangstring-int"></a>execute 方法 (java.lang.String, int[])
 
@@ -38,14 +38,14 @@ public final boolean execute(
 #### <a name="parameters"></a>参数
 *sql*
 
-包含 SQL 语句的 String****。
+包含 SQL 语句的 String。
 
-columnIndexes**
+columnIndexes
 
-一组 int 数组，指示应该可用的自动生成的键的列索引****。
+一组 int 数组，指示应该可用的自动生成的键的列索引。
 
 ## <a name="return-value"></a>返回值
-如果第一个结果为一个结果集，则为“true”****。 否则为 **false**。
+如果第一个结果为一个结果集，则为“true”。 否则为 **false**。
   
 ## <a name="exceptions"></a>例外
 [SQLServerException](./sqlserverexception-class.md)

@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 103082e3-de98-4dff-8dc7-eaa5c64b1597
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f107489d0c1cb4737aa2b371f48c0eecfe9c756c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a88bf7d886c5cd8f0e467abe6fd270c7401f29c6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88435299"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162673"
 ---
 # <a name="getnclob-method-int-sqlserverresultset"></a>getNClob 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public java.sql.NClob getNClob(int columnIndex)
 ## <a name="remarks"></a>备注  
  此 getNClob 方法是由 java.sql.ResultSet 接口中的 getNClob 方法指定的。  
   
- 只有 nvarchar(max)****、ntext**** 和 xml**** 列支持此方法。 在任何其他数据类型上使用此方法会引发异常。  
+ 只有 nvarchar(max)、ntext 和 xml 列支持此方法。 在任何其他数据类型上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [getNClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)   

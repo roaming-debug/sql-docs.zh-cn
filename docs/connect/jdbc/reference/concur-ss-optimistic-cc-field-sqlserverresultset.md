@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.CONCUR_SS_OPTIMISTIC_CC
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4d5cecb8-b29b-49c0-a4b1-9472b8709ddf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21f278843fd846b630b852494ded97810ea19ce6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21067ebbd8f6100b35b48113c9a4a3cca041d971
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438059"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166043"
 ---
 # <a name="concur_ss_optimistic_cc-field-sqlserverresultset"></a>CONCUR_SS_OPTIMISTIC_CC 字段 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public static final int CONCUR_SS_OPTIMISTIC_CC
 ```  
   
 ## <a name="field-value"></a>字段值  
- 一个 int**** 值：1008。  
+ 一个 int 值：1008。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

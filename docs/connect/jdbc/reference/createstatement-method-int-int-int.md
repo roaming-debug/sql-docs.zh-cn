@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerConnection.createStatement (int, int, int)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2e4fa385-8f61-4394-8f75-3e839930a57d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 53395cc630c161c15e50559fd1cc78b8faf5c044
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62505633804ceea3e8f5e4e65143a8ff6ee61990
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437939"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166001"
 ---
 # <a name="createstatement-method-int-int-int"></a>createStatement 方法 (int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,17 +38,17 @@ public java.sql.Statement createStatement(int nType,
 ```  
   
 #### <a name="parameters"></a>参数  
- resultSetType**  
+ resultSetType  
   
- 表示结果集类型的 int**** 值。  
+ 表示结果集类型的 int 值。  
   
- nConcur**  
+ nConcur  
   
- 表示结果集并发类型的 int**** 值。  
+ 表示结果集并发类型的 int 值。  
   
- nHold**  
+ nHold  
   
- 表示可保持性的 int**** 值。  
+ 表示可保持性的 int 值。  
   
 ## <a name="return-value"></a>返回值  
  Statement 对象。  

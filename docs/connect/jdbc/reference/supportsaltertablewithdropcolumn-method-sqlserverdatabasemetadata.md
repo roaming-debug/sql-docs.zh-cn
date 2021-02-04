@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.supportsAlterTableWithDropColumn
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 55a182c1-28e5-4d32-aeb1-166a8ac76758
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c9d4e7b6a7a0781d6cb2f6422bb908ba89922768
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d171e5129666967fcb96e292bf66116eca50e855
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88354343"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165452"
 ---
 # <a name="supportsaltertablewithdropcolumn-method-sqlserverdatabasemetadata"></a>supportsAlterTableWithDropColumn 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean supportsAlterTableWithDropColumn()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true****。 否则为 **false**。  
+ 如果支持，则值为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
