@@ -16,21 +16,21 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9561a0245184916bed8f0080798c4d233fd0d1a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49e8ca491c8c25ac79436afc4fbf6e2f7028fe5f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370363"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250418"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>断开与已注册服务器的连接 (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中随时断开对象资源管理器与服务器的连接。 断开对象资源管理器不会断开其他 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 组件（如 SQL 编辑器）。  
+本主题介绍如何在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中随时断开对象资源管理器与服务器的连接。 断开对象资源管理器不会断开其他 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 组件（如 SQL 编辑器）。  
 
 ## <a name="SSMSProcedure"></a>
 
 ### <a name="to-disconnect-from-a-registered-server"></a>断开与已注册服务器的连接
 
-- 在对象资源管理器中，右键单击服务器，然后单击****“断开连接”，或者在对象资源管理器工具栏上单击****“断开连接”图标。
+- 在对象资源管理器中，右键单击服务器，然后单击“断开连接”，或者在对象资源管理器工具栏上单击“断开连接”图标。

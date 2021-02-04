@@ -9,18 +9,18 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ced001726b7a8306f2064c1436ddb41cf65a6eb0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: cda3b252ddfb602cca02d8dc09322769339e33e9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091803"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235742"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-从 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 开始，借助 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可部署在 Kubernetes 上运行的 SQL Server、Spark 和 HDFS 容器的可缩放群集。 这些组件并行运行以确保可读取、写入和处理 Transact-SQL 或 Spark 中的大数据，这样你就可以借助大量大数据轻松合并并分析高价值关系数据。
+从 [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 开始，借助 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可部署在 Kubernetes 上运行的 SQL Server、Spark 和 HDFS 容器的可缩放群集。 这些组件并行运行以确保可读取、写入和处理 Transact-SQL 或 Spark 中的大数据，这样你就可以借助大量大数据轻松合并并分析高价值关系数据。
 
 使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可以：
 
@@ -43,7 +43,7 @@ ms.locfileid: "98091803"
 
 ### <a name="data-virtualization"></a>数据虚拟化
 
-通过利用 [PolyBase](../relational-databases/polybase/polybase-guide.md)，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可以查询外部数据源，而无需移动或复制数据。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 引入了数据源的新连接器。
+通过利用 [PolyBase](../relational-databases/polybase/polybase-guide.md)，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可以查询外部数据源，而无需移动或复制数据。 [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 引入了数据源的新连接器。
 
 ![数据虚拟化](media/big-data-cluster-overview/data-virtualization.png)
 

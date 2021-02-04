@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fcdd0f1d34ed4107cbe3c90708abe286efbf0837
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6aa2a07da107a5283a4dacc8323dc5d6a928702a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642647"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251176"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "97642647"
 1.  **确定故障的范围。** 确定哪些可用性组或 SQL Server 实例是不响应的，哪些群集节点处于联机状态且可在灾后使用，并检查 Windows 事件日志和 SQL Server 系统日志。  在可行的情况下，您应保留取证数据和系统日志以供未来分析使用。  
   
     > [!TIP]  
-    >  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的响应实例上，可以通过查询 [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) 动态管理视图 (DMV)，获取有关在本地服务器实例上拥有可用性副本的可用性组的运行状况信息。  
+    >  在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]的响应实例上，可以通过查询 [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) 动态管理视图 (DMV)，获取有关在本地服务器实例上拥有可用性副本的可用性组的运行状况信息。  
   
 2.  **在单一节点上使用强制仲裁来启动 WSFC 群集。** 确定组件故障数最少的一个节点（已关闭 WSFC 群集服务的节点除外）。  确认此节点能够与其他大多数节点进行通信。  
   

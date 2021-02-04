@@ -14,37 +14,37 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 35a255bb4df3779897ec40da29da9cc15f62ba1f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: cbaf09a88e5856bfd5c8f36826d8894b947e3c0d
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037619"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250496"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>选项（SQL Server 对象资源管理器 -“脚本”页）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
- 使用此页可设置脚本选项，以应用于对象资源管理器中对象上下文菜单上的以下命令****：  
+ 使用此页可设置脚本选项，以应用于对象资源管理器中对象上下文菜单上的以下命令：  
   
--   用于用户表和视图的“编辑”**** 命令。  
+-   用于用户表和视图的“编辑”命令。  
   
--   用于用户创建对象的“生成 <object> 脚本”**** 命令。  
+-   用于用户创建对象的“生成 <object> 脚本”命令。  
   
--   用于用户创建对象的“修改”**** 命令。  
+-   用于用户创建对象的“修改”命令。  
   
--   本页也可用于设置“生成 SQL Server 脚本向导”**** 的脚本选项默认值。  
+-   本页也可用于设置“生成 SQL Server 脚本向导”的脚本选项默认值。  
   
 ## <a name="remarks"></a>注解  
-“编辑”**** 和“修改”**** 命令产生的结果可能与相同选项设置的“生成 <object> 脚本”**** 命令产生的结果不同。 “编辑”**** 和“修改”**** 命令用于在查询编辑器会话期间修改当前数据库中的对象。 “生成 <object> 脚本”**** 命令用于生成一个脚本，这样以后便可使用此脚本创建对象。  
+“编辑”和“修改”命令产生的结果可能与相同选项设置的“生成 <object> 脚本”命令产生的结果不同。 “编辑”和“修改”命令用于在查询编辑器会话期间修改当前数据库中的对象。 “生成 <object> 脚本”命令用于生成一个脚本，这样以后便可使用此脚本创建对象。  
   
 ## <a name="options"></a>选项  
 通过从每个选项右侧列表中的可用设置中进行选择，可以指定脚本选项。
 
 > [!NOTE]
-> 列出的默认设置仅适用于“编写整个数据库及所有数据库对象的脚本”选项，并且在使用“选择特定数据库对象”选项时，此设置可能会有变化********。
+> 列出的默认设置仅适用于“编写整个数据库及所有数据库对象的脚本”选项，并且在使用“选择特定数据库对象”选项时，此设置可能会有变化。
   
 ### <a name="general-scripting-options"></a>常规脚本选项  
 **分隔各条语句**  
-使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要更改**查询编辑器**，选择“工具”****/“选项”****/“查询执行”****/“SQL Server”****/“常规”****/“批处理分隔符”****。 默认值为 False。 有关详细信息，请参阅 [GO (Transact-SQL)](../../t-sql/language-elements/sql-server-utilities-statements-go.md)。  
+使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要更改 **查询编辑器**，选择“工具”/“选项”/“查询执行”/“SQL Server”/“常规”/“批处理分隔符”。 默认值为 False。 有关详细信息，请参阅 [GO (Transact-SQL)](../../t-sql/language-elements/sql-server-utilities-statements-go.md)。  
   
 **包含说明性标头**  
 通过将每个对象的脚本分隔为多个部分以向脚本添加说明性注释。 默认值为 True。 有关详细信息，请参阅 [/ *...* / (Comment) (Transact-SQL)](../../t-sql/language-elements/slash-star-comment-transact-sql.md)。  
@@ -146,12 +146,12 @@ ms.locfileid: "92037619"
 
 **将脚本设置与源进行匹配** 如果启用，则将生成的脚本的目标版本、引擎版本和引擎类型设置为要脚本化的对象的服务器的值。 这将禁用（并忽略）其他版本选项。 
 
-**数据库引擎版本的脚本** 生成的脚本将面向指定的[引擎版本](/dotnet/api/microsoft.sqlserver.management.smo.edition)。
+**数据库引擎版本的脚本** 生成的脚本将面向指定的 [引擎版本](/dotnet/api/microsoft.sqlserver.management.smo.edition)。
 
-**数据库引擎类型的脚本** 生成的脚本将面向指定的[数据库引擎类型](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120))。
+**数据库引擎类型的脚本** 生成的脚本将面向指定的 [数据库引擎类型](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120))。
 
 **为服务器版本编写脚本**  
-生成的脚本将面向指定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 无法为早期版本编写 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 新增功能的脚本。 某些为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 创建的脚本无法在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本的服务器或具有早期 [数据库兼容级别设置](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的数据库中运行。  
+生成的脚本将面向指定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 无法为早期版本编写 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 新增功能的脚本。 某些为 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 创建的脚本无法在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本的服务器或具有早期 [数据库兼容级别设置](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的数据库中运行。  
 
 ## <a name="see-also"></a>另请参阅  
 [生成脚本 (SQL Server Management Studio)](../scripting/generate-scripts-sql-server-management-studio.md)  

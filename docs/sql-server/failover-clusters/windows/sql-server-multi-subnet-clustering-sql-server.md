@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4c230a793b81960b29e66813ba392eeb6395d5ee
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 40c1f3b925612611d1fe925f87bd2d4dd9d926c4
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642722"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251220"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多子网群集 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "97642722"
   
    
 ##  <a name="sql-server-multi-subnet-failover-cluster-two-nodes-two-subnets"></a><a name="VisualElement"></a> SQL Server 多子网故障转移群集（两个节点，两个子网）  
- 下图表示 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的一个两节点、两子网的故障转移群集实例 (FCI)。  
+ 下图表示 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中的一个两节点、两子网的故障转移群集实例 (FCI)。  
   
  ![包含 MultiSubnetFailover 的多子网体系结构](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "包含 MultiSubnetFailover 的多子网体系结构")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "97642722"
 ##  <a name="client-recovery-latency-during-failover"></a><a name="DNS"></a> 故障转移期间的客户端恢复延迟  
  默认情况下，多子网 FCI 会针对其网络名称启用 RegisterAllProvidersIP 群集资源。 在多子网配置中，将在 DNS 服务器上注册网络名称的联机和脱机 IP 地址。 之后，客户端应用程序会从 DNS 服务器检索所有已注册的 IP 地址，并尝试按顺序或并行连接到这些地址。 这意味着，多子网故障转移中的客户端恢复时间不再依赖 DNS 更新延迟。 默认情况下，客户端会按顺序尝试 IP 地址。 当客户端在其连接字符串中使用新的可选 **MultiSubnetFailover=True** 参数时，它将改为同时尝试 IP 地址并连接到第一台响应的服务器。 这有助于在发生故障转移时最大程度地减少客户端恢复延迟。 有关详细信息，请参阅 [AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) 和 [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- 对于旧版客户端库或第三方数据访问接口，您不能在连接字符串中使用 **MultiSubnetFailover** 参数。 为了帮助确保您的客户端应用程序在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中以最佳方式使用多子网 FCI，请尝试按照 21 秒的间隔为其他每个 IP 地址调整客户端连接字符串中的连接超时。 这将确保客户端的重新连接尝试在它能够循环访问多子网 FCI 中的所有 IP 地址之前不会超时。  
+ 对于旧版客户端库或第三方数据访问接口，您不能在连接字符串中使用 **MultiSubnetFailover** 参数。 为了帮助确保您的客户端应用程序在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中以最佳方式使用多子网 FCI，请尝试按照 21 秒的间隔为其他每个 IP 地址调整客户端连接字符串中的连接超时。 这将确保客户端的重新连接尝试在它能够循环访问多子网 FCI 中的所有 IP 地址之前不会超时。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 和 **sqlcmd** 的默认客户端连接超时期限为 15 秒。  
  

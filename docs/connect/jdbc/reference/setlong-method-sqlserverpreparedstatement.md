@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerPreparedStatement.setLong
 apilocation:
@@ -16,17 +16,17 @@ apitype: Assembly
 ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb3bff2cb201a8a6db22341c01d53037a8aebb77
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f4c6c4c1d98ae1636b2bdf244eb40bc7bf424d57
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431699"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178873"
 ---
 # <a name="setlong-method-sqlserverpreparedstatement"></a>setLong 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定参数设置为给定的 long **** 值。  
+  将指定参数设置为给定的 long 值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,11 +39,11 @@ public final void setLong(int n,
 #### <a name="parameters"></a>参数  
  *n*  
   
- 指示参数编号的 int****。  
+ 指示参数编号的 int。  
   
  *x*  
   
- long**** 值。  
+ long 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

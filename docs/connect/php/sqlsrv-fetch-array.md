@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_fetch_array
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 6e0df700729db03d2d0dd52ac5d0a251827db7d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92080637"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195654"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,7 +64,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 ## <a name="return-value"></a>返回值  
 如果检索数据行，将返回 **array** 。 如果没有更多要检索的行，将返回 **NULL** 。 如果出现错误，将返回 **False** 。  
   
-根据 *$fetchType* 参数的值，返回的 **阵列** 可以是数字索引的 **阵列**、关联 **阵列**或这两者。 默认情况下，将返回带有数值键和关联键的 **array** 。 返回阵列中值的数据类型将是默认 PHP 数据类型。 有关默认 PHP 数据类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
+根据 *$fetchType* 参数的值，返回的 **阵列** 可以是数字索引的 **阵列**、关联 **阵列** 或这两者。 默认情况下，将返回带有数值键和关联键的 **array** 。 返回阵列中值的数据类型将是默认 PHP 数据类型。 有关默认 PHP 数据类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
   
 ## <a name="remarks"></a>备注  
 如果返回没有名称的列，阵列元素的关联键将为空字符串 ("")。 例如，考虑可将某个值插入数据库表并检索服务器生成的主键的 Transact-SQL 语句：  

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 91e18137748b34012c73860071fa0be93af0277f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 45b917246037b9c333ba07bece6f6630e0ae2464
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642732"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251219"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>从故障转移群集实例故障中恢复
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题说明在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中发生故障转移后如何使用故障转移群集管理器管理单元从群集故障中恢复。 故障转移群集管理器管理单元是用于 Windows Server 故障转移群集 (WSFC) 服务的群集管理应用程序。  
+  本主题说明在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中发生故障转移后如何使用故障转移群集管理器管理单元从群集故障中恢复。 故障转移群集管理器管理单元是用于 Windows Server 故障转移群集 (WSFC) 服务的群集管理应用程序。  
   
 -   [从无法修复的故障中恢复](#Scenario1)  
   

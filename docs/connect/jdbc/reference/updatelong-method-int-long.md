@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.updateLong (int, long)
 apilocation:
@@ -16,17 +16,17 @@ apitype: Assembly
 ms.assetid: f6363288-1415-4b25-8bb3-c34d6211c6d7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3192996be9b61f0fb8a8e5d47cc453f36e403c73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51611788539feeaf42d115278995fff1b36a905d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353353"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188998"
 ---
 # <a name="updatelong-method-int-long"></a>updateLong 方法 (int, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的列索引使用 long **** 值更新指定的列。  
+  根据给定的列索引使用 long 值更新指定的列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ public void updateLong(int index,
   
  *x*  
   
- long**** 值。  
+ long 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -17,18 +17,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 1c976735ddc6ce9e602969e06abc13b076a74144
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: a71bebde2525a18e062832aba064a4b9aecf7f3a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037573"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250447"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>导出已注册服务器信息 (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-本主题说明如何保存和导出 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的已注册服务器信息并将其分发到其他雇员或服务器。 您可以使用此导出功能在多台计算机上显示一致的用户界面。  
+本主题说明如何保存和导出 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中的已注册服务器信息并将其分发到其他雇员或服务器。 您可以使用此导出功能在多台计算机上显示一致的用户界面。  
   
  通过导出再导入已注册服务器的相关文件，可以便捷地为多台计算机配置与“已注册的服务器”中相同服务器之间的连接。 当从不同位置的计算机管理大量服务器，或希望为不熟练的用户配置基本的连接设置时，这非常有用。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "92037573"
   
 #### <a name="to-export-registered-server-information"></a>导出已注册服务器信息  
   
-1.  在已注册的服务器上，右键单击服务器组，再单击“导出”****。  
+1.  在已注册的服务器上，右键单击服务器组，再单击“导出”。  
   
     > [!NOTE]  
     >  您可以导出单个服务器、所有已注册服务器树或已注册服务器树的子集。  

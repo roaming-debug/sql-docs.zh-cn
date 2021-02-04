@@ -18,18 +18,18 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 00caef8ecdd73814d60ce2c98c65ba0fc4083379
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: c180d44cf3ea9a0c878168eba4257e880c1ba965
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037593"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250932"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>创建或编辑服务器组 (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-本主题说明如何通过创建服务器组并将服务器放入服务器组中，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中整理已注册服务器中的服务器。 可以随时在已注册的服务器中创建服务器组，也可以在注册服务器时创建服务器组。  
+本主题说明如何通过创建服务器组并将服务器放入服务器组中，在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中整理已注册服务器中的服务器。 可以随时在已注册的服务器中创建服务器组，也可以在注册服务器时创建服务器组。  
 
 ## <a name="SSMSProcedure"></a>
 
@@ -37,7 +37,7 @@ ms.locfileid: "92037593"
 
 1. 在已注册的服务器中，单击“已注册的服务器”工具栏上的服务器类型。 如果“已注册的服务器”不可见，请在 **“视图”** 菜单上，单击 **“已注册的服务器”** 。  
 
-2. 右键单击某服务器或服务器组，指向“新建”****，然后单击“服务器组”****。  
+2. 右键单击某服务器或服务器组，指向“新建”，然后单击“服务器组”。  
 
 3. 在 **“新建服务器组”** 对话框的 **“组名”** 列表框中，键入服务器组的唯一名称。 在“已注册的服务器”树中的当前位置，服务器组名必须唯一。
 

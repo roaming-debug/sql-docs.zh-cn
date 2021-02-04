@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 854446b0a505dd2f8a2dc44c4f3eca70158e20be
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: db2a2d3fdeffcf61621bda5af572271d5f918b70
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726798"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187579"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>参数  
-$name：允许指定序列名称的可选字符串**。 
+$name：允许指定序列名称的可选字符串。 
   
 ## <a name="return-value"></a>返回值  
 如果未提供序列名称，则为最近添加的行的标识符的字符串。

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.supportsResultSetConcurrency
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f420aff2681495a8890a1c86841e124c73a98184
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: d095f38c47011f48758ddb561eb01b3a3730226d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243710"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186802"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>supportsResultSetConcurrency 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -76,7 +76,7 @@ public boolean supportsResultSetConcurrency(int type,
  CONCUR_SS_OPTIMISTIC_VAL  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true。 否则为 **false** 。  
+ 如果支持，则值为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

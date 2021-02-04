@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.updateInt (int, int)
 apilocation:
@@ -16,17 +16,17 @@ apitype: Assembly
 ms.assetid: f4f651b0-a822-4bd4-b391-cc2355154a2a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c183cf7916352d6be6e03758422d94a41f7b6ddf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 153ff01755ed73c70a3a4392a3670deb854b1bff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431339"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189051"
 ---
 # <a name="updateint-method-int-int"></a>updateInt 方法 (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定列索引，使用 int**** 值更新指定列。  
+  根据给定列索引，使用 int 值更新指定列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ public void updateInt(int index,
   
  *x*  
   
- int**** 值。  
+ int 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

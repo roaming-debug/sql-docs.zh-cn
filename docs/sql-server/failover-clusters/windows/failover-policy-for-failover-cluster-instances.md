@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fa75cc2e8a120510edc711aafc37d268fec4dba7
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9101f2cf26e797cc63a909a85c3eefa3fb083b4f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642709"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251184"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 中，在给定的时间只有一个节点可以拥有 Windows Server 故障转移群集 (WSFC) 群集资源组。 客户端请求通过 FCI 中的此节点进行处理。 在发生故障和重新启动失败时，组的所有权将转移给 FCI 中的另一个 WSFC 节点。 此过程称为故障转移。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高了故障检测的可靠性，并提供灵活的故障转移策略。  
+  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 中，在给定的时间只有一个节点可以拥有 Windows Server 故障转移群集 (WSFC) 群集资源组。 客户端请求通过 FCI 中的此节点进行处理。 在发生故障和重新启动失败时，组的所有权将转移给 FCI 中的另一个 WSFC 节点。 此过程称为故障转移。 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 提高了故障检测的可靠性，并提供灵活的故障转移策略。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 依赖于基础 WSFC 服务进行故障转移检测。 因此，两个机制决定了 FCI 的故障转移行为：一个是本机 WSFC 功能，一个是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序带来的功能。  
   

@@ -1,5 +1,5 @@
 ---
-description: " 的版本和受支持的功能[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]"
+description: " 的版本和受支持的功能[!INCLUDE[sssql19-md](../includes/sssql19-md.md)]"
 title: SQL Server 2019 的各个版本和支持的功能 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -34,18 +34,18 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e0a8f226602ab41422715368fb12c13809fa6b40
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9987384899eeb9087a938d8fd8e8b156ff8e1962
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477148"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236272"
 ---
-# <a name="editions-and-supported-features-of-sssqlv15-md"></a> 的版本和受支持的功能[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+# <a name="editions-and-supported-features-of-sssql19-md"></a> 的版本和受支持的功能[!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/sqlserver.md)]
 
-本主题详细介绍了 [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] 的不同版本支持的功能。
+本主题详细介绍了 [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] 的不同版本支持的功能。
 
 有关以前版本的信息，请参阅：
 
@@ -58,10 +58,10 @@ ms.locfileid: "97477148"
 
 有关最新的发布说明和新增功能的信息，请参阅以下内容：
 
-* [[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] 发行说明](../sql-server/sql-server-version-15-release-notes.md)
+* [[!INCLUDE[sssql19-md](../includes/sssql19-md.md)] 发行说明](../sql-server/sql-server-version-15-release-notes.md)
 * [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019 中的新变化](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-**试用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]！[从评估中心下载 [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
+**试用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]！[从评估中心下载 [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
 
 ## <a name="ssnoversion-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 版本
 
@@ -103,8 +103,8 @@ ms.locfileid: "97477148"
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括用于创建、管理和部署表格报表、矩阵报表、图形报表以及自由格式报表的服务器和客户端组件。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 还是一个可用于开发报表应用程序的可扩展平台。|
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是一组图形工具和可编程对象，用于移动、复制和转换数据。 它还包括 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)](DQS) 组件。|
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 是针对主数据管理的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 解决方案。 可以配置 MDS 来管理任何领域（产品、客户、帐户）；MDS 中可包括层次结构、各种级别的安全性、事务、数据版本控制和业务规则，以及可用于管理数据的 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 。|
-|机器学习服务（数据库内）|机器学习服务（数据库内）支持使用企业数据源的分布式、可缩放的机器学习解决方案。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 中，支持 R 语言。 [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] 支持 R 和 Python。|
-|机器学习服务器（独立）|机器学习服务器（独立）支持在多个平台上部署分布式、可缩放机器学习解决方案，并可使用多个企业数据源，包括 Linux 和 Hadoop。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 中，支持 R 语言。 [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] 支持 R 和 Python。|
+|机器学习服务（数据库内）|机器学习服务（数据库内）支持使用企业数据源的分布式、可缩放的机器学习解决方案。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 中，支持 R 语言。 [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] 支持 R 和 Python。|
+|机器学习服务器（独立）|机器学习服务器（独立）支持在多个平台上部署分布式、可缩放机器学习解决方案，并可使用多个企业数据源，包括 Linux 和 Hadoop。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 中，支持 R 语言。 [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] 支持 R 和 Python。|
 
 |管理工具|说明|
 |----------------------|-----------------|
@@ -133,7 +133,7 @@ Developer Edition 继续只支持一个客户端用于 [[!INCLUDE[ssNoVersion](.
 |每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的缓冲池的最大内存|操作系统支持的最大值|128 <nobr/>GB|64 <nobr/>GB|1410 <nobr/>MB|1410<nobr/> MB|
 |每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的列存储段缓存的最大内存|不受限制的内存| 32 <nobr/>GB| 16 <nobr/>GB| 352 <nobr/>MB| 352 <nobr/>MB|
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中每个数据库的最大内存优化数据大小|不受限制的内存| 32 <nobr/>GB| 16 <nobr/>GB| 352 <nobr/>MB| 352 <nobr/>MB|
-|每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例利用的最大内存|操作系统支持的最大值|16 <nobr/>GB<sup>2</sup><br /><br /> 64 <nobr/>GB<sup>3</sup>|不适用|空值|不适用|
+|每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例利用的最大内存|操作系统支持的最大值|16 <nobr/>GB<sup>2</sup><br /><br /> 64 <nobr/>GB<sup>3</sup>|不适用|不适用|不适用|
 |每个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]实例利用的最大内存|操作系统支持的最大值|64 <nobr/>GB|64 <nobr/>GB|4 <nobr/>GB|不适用|
 |最大关系数据库大小|524 <nobr/> PB|524 <nobr/> PB|524 <nobr/> PB|10 <nobr/>GB|10 <nobr/>GB|
 
@@ -188,7 +188,7 @@ Developer Edition 继续只支持一个客户端用于 [[!INCLUDE[ssNoVersion](.
 
 ## <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a>RDBMS 可伸缩性和性能
 
-|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|快速|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------:|:--------:|:------:|:-:|:-------------------------------:|:------:|
 |列存储<sup>1</sup> <sup>2</sup>|是|是|是|是|是|
 |聚集列存储索引中的大型对象二进制文件|是|是|是|是|是|
@@ -246,7 +246,7 @@ Developer Edition 继续只支持一个客户端用于 [[!INCLUDE[ssNoVersion](.
 
 ## <a name="replication"></a><a name="Replication"></a> Replication
 
-|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|快速|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:---------:|:-------:|:--:|:--------------------------------:|:------:|
 |异类订阅服务器|是|是|否|否|否|
 |合并复制|是|是|是<sup>1</sup>|是<sup>1</sup>|是<sup>1</sup>|
@@ -287,7 +287,7 @@ Developer Edition 继续只支持一个客户端用于 [[!INCLUDE[ssNoVersion](.
 
 ## <a name="rdbms-manageability"></a><a name="RDBMSM"></a>RDBMS 可管理性
 
-|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|快速|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |用户实例|否|否|否|是|是|
 |LocalDB|否|否|否|是|否|
@@ -320,7 +320,7 @@ Developer Edition 继续只支持一个客户端用于 [[!INCLUDE[ssNoVersion](.
 
 ## <a name="development-tools"></a><a name="DevTools"></a>开发工具
 
-|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|快速|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |Microsoft Visual Studio 集成|是|是|是|是|是|
 |Intellisense（Transact-SQL 和 MDX）|是|是|是|是|是|
@@ -408,14 +408,14 @@ Developer Edition 继续只支持一个客户端用于 [[!INCLUDE[ssNoVersion](.
 
 ## <a name="additional-database-services"></a><a name="ADS"></a>其他数据库服务
 
-|功能名称|Enterprise|Standard|Web|Express with<br/>Advanced Services|快速|
+|功能名称|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移助手|是|是|是|是|是|
 |数据库邮件|是|是|是|否|否|
 
 ## <a name="other-components"></a><a name="Other"></a>其他组件
 
-|功能名称|Enterprise|Standard|Web|Express with<br/>Advanced Services|快速|
+|功能名称|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|否|否|
 |StreamInsight HA|StreamInsight Premium Edition|否|否|否|否|

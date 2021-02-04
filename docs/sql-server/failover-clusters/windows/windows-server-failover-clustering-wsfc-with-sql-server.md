@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 56cfc62709e24fc48704ed44b86a866b07a0b0ef
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 11e424ef4f32b91a7c4d65faf796335a3f7faf26
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642660"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251212"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server 故障转移群集与 SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Windows Server 故障转移群集 (WSFC) 是一组独立的服务器，它们共同协作以提高应用程序和服务的可用性  。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 利用 WSFC 服务和功能支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例。  
+  Windows Server 故障转移群集 (WSFC) 是一组独立的服务器，它们共同协作以提高应用程序和服务的可用性  。 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 利用 WSFC 服务和功能支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例。  
   
    
 ##  <a name="terms-and-definitions"></a><a name="TermsAndDefs"></a> 术语和定义  
@@ -76,7 +76,7 @@ ms.locfileid: "97642660"
  有关详细信息，请参阅： [故障转移群集概述 - Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> SQL Server AlwaysOn 技术和 WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Always On  是一个充分利用 WSFC 的高可用性和灾难恢复解决方案。 Always On 功能提供一个灵活的集成解决方案，用于提高应用程序可用性，提供更好的硬件投资回报，并简化高可用性部署和管理。  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] Always On  是一个充分利用 WSFC 的高可用性和灾难恢复解决方案。 Always On 功能提供一个灵活的集成解决方案，用于提高应用程序可用性，提供更好的硬件投资回报，并简化高可用性部署和管理。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例将 WSFC 用作一种平台技术，将组件注册为 WSFC 群集资源。   相关的资源合并为一个“角色”，这些资源可能依赖于其他 WSFC 群集资源。 这样，WSFC 就可以感测并标明是否需要重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，或自动将其故障转移到 WSFC 中的不同服务器节点上。  
   

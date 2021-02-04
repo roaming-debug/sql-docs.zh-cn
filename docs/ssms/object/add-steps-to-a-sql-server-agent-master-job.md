@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1f3dcbb4e1f8cc39cb67ee78ba81a06d8596eab
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 92fe948e73a7d8439ca107fe9ed086f5b7fcbff5
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037660"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250510"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>向 SQL Server 代理主作业添加步骤
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向 SQL Server 代理主作业添加步骤。  
+本主题介绍如何通过使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向 SQL Server 代理主作业添加步骤。  
   
 **本主题内容**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "92037660"
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要向其添加步骤的作业，然后选择“属性”****。  
+4.  右键单击要向其添加步骤的作业，然后选择“属性”。  
   
 5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“步骤”  。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“步骤”页）](../../ssms/agent/job-properties-new-job-steps-page.md)。  
  

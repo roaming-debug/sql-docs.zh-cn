@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.getReference
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8916c339a4a1d6c8373e3fbaf5a130dcc168155e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d44e8f10c1e4160504d20de7d5a9b3e36b31b950
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434879"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175204"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>getReference 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public javax.naming.Reference getReference()
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 之前，如果对 SQLServerDataSource 对象调用 SQLServerDataSource.setTrustStorePassword，密码将会出现在 SQLServerDataSource.getReference 所返回的对象中，从而能够使用此对象建立其他的连接。 在 JDBC Driver 3.0 中，您在使用 SQLServerDataSource.getReference 返回的对象建立连接前，将需要设置该对象的密码。  
   
- 而且，如果您在绑定数据源属性前设置 SQLServerDataSource.setTrustStorePassword，在获取连接前必须调用 SQLServerDataSource.setTrustStorePassword。 例如，  
+ 而且，如果您在绑定数据源属性前设置 SQLServerDataSource.setTrustStorePassword，在获取连接前必须调用 SQLServerDataSource.setTrustStorePassword。 例如，应用于对象的  
   
 ```  
 ctx = new InitialContext(System.getProperties());  

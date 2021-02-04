@@ -4,24 +4,23 @@ titleSuffix: SQL Server Profiler
 description: 探索 SQL Server Profiler 的功能。 获取帮助以排查问题，方法是使用此工具创建跟踪并分析和重播跟踪结果。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 3169f8fbbc86fc95a62631c0cc93d77b6a46b0a4
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 3066ac1b16a1a294955825dc35b40f422bd79df3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643384"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203535"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
- [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一个界面，用于创建和管理跟踪并分析和重播跟踪结果。 这些事件保存在一个跟踪文件中，稍后诊断问题时，可以对该文件进行分析或用它来重播一系列特定的步骤。
 
@@ -46,7 +45,7 @@ ms.locfileid: "97643384"
 
 ## <a name="capture-and-replay-trace-data"></a>捕获和重播跟踪数据
 
-下表显示我们在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中推荐使用的用于捕获和重播跟踪数据的功能。
+下表显示我们在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中推荐使用的用于捕获和重播跟踪数据的功能。
 
 ||||
 |-|-|-|

@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016
-ms.openlocfilehash: 58d9f3921500e2fd7fd1fa02046d4f89d67ccbeb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cc8adae5672f14e25e9094befd455ac6ee599850
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478788"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250970"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
 
@@ -29,7 +29,7 @@ ms.locfileid: "97478788"
 > [!IMPORTANT]  
 > [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance)目前支持大多数（但不是所有）SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 托管实例与 SQL Server 的 T-SQL 区别](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中执行计划的管理任务，即“作业”。  
 
 ## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>SQL Server 代理的好处 
 
@@ -38,7 +38,7 @@ ms.locfileid: "97478788"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以按照计划运行作业，也可以在响应特定事件时运行作业，还可以根据需要运行作业。 例如，如果希望在每个工作日下班后备份公司的所有服务器，就可以使该任务自动执行。 将备份安排在星期一到星期五的 22:00 之后运行，如果备份出现问题，SQL Server 代理可记录该事件并通知您。  
   
 > [!NOTE]  
-> 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装后 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 代理服务处于禁用状态，除非用户明确选择自动启动该服务。  
+> 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装后 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 代理服务处于禁用状态，除非用户明确选择自动启动该服务。  
   
 ## <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server Agent Components  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用下列组件来定义要执行的任务、执行任务的时间以及报告任务成功或失败的方式。  

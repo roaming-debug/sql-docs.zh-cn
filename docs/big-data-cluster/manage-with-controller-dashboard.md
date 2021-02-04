@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 64352409e567c5854d348dce8e6545317b41bc01
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 414b91a39f82b7d3de5822bc64bf829d8aee4c2f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725818"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235702"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>管理 SQL Server 控制器仪表板的大数据群集
 
@@ -28,7 +28,7 @@ ms.locfileid: "91725818"
 若要启动笔记本，需要满足以下必备条件：
 
 * [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) 的最新版本
-* [已在 Azure Data Studio 中安装 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 扩展](../azure-data-studio/data-virtualization-extension.md)
+* [已在 Azure Data Studio 中安装 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 扩展](../azure-data-studio/data-virtualization-extension.md)
 
 除上述内容外，SQL Server 2019 大数据群集还需要：
 
@@ -61,7 +61,7 @@ ms.locfileid: "91725818"
 
     - **工具栏**，位于顶部，其中包含仪表板的操作。
     - **导航窗格**，位于左侧，可在仪表板上更改为不同视图。
-    - **视图**覆盖大部分页面。
+    - **视图** 覆盖大部分页面。
 
 2. 在“大数据群集概述”页上，可以看到  ：
 
