@@ -12,16 +12,16 @@ ms.assetid: 07ca5ac6-a68a-4e85-bc6f-fa7ccf9f1c10
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: dd90fd648e68f878fed736e94e11fe40daf1bfe7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a6e98afaa7b86c03fc1702b2c07ca0e8714eef7c
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465748"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076595"
 ---
 # <a name="sql-server-properties-filestream-tab"></a>SQL Server 属性（FILESTREAM 选项卡）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装启用 FILESTREAM。  
+  使用此页可针对此 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]安装启用 FILESTREAM。  
   
 ## <a name="ui-element-list"></a>UI 元素列表  
  **针对 Transact-SQL 访问启用 FILESTREAM**  

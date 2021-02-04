@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 29c96381f9781df7cb1cbedb351cce1524f440fd
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4909975e83ea4438d969685ed9b76ae9f02a5631
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642610"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077075"
 ---
 # <a name="install-distributed-replay"></a>安装 Distributed Replay
 
@@ -31,7 +31,7 @@ ms.locfileid: "97642610"
 -   [使用配置文件安装 Distributed Replay](#bkmk_configuration_file)  
   
 ##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> 从安装向导安装 Distributed Replay  
- 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 功能。 在计划安装这些功能的位置时，请考虑以下方面：  
+ 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Distributed Replay 功能。 在计划安装这些功能的位置时，请考虑以下方面：  
   
 -   您可以将管理工具与 Distributed Replay 控制器安装在同一台计算机上，也可以安装在不同的计算机上。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "97642610"
 -   在安装后，控制器服务（即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器）必须首先运行，然后才能在客户端启动 Distributed Replay 客户端服务。  
   
 > [!NOTE]  
->  若要删除或更改 Distributed Replay 功能，请使用 **“控制面板”** 中的 Windows **“程序和功能”** 窗口。 在“卸载或更改程序” [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 窗口中选择  ，然后单击 **“删除”** 以便打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。 在 **“选择功能”** 页上，选中要删除的 Distributed Replay 功能。  
+>  若要删除或更改 Distributed Replay 功能，请使用 **“控制面板”** 中的 Windows **“程序和功能”** 窗口。 在“卸载或更改程序” [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 窗口中选择  ，然后单击 **“删除”** 以便打开 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装向导。 在 **“选择功能”** 页上，选中要删除的 Distributed Replay 功能。  
   
  **先决条件：**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "97642610"
   
 #### <a name="to-install-distributed-replay-features"></a>安装 Distributed Replay 功能  
   
-1.  若要开始安装任何 Distributed Replay 功能，请启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。  
+1.  若要开始安装任何 Distributed Replay 功能，请启动 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装向导。  
   
 2.  **“安装程序支持规则”** 页将标识在安装 SQL Server 安装程序支持文件时可能发生的问题。 在继续安装之前，您必须纠正任何安装程序支持问题。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "97642610"
   
 4.  在 **“许可条款”** 页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   
-5.  在 **“安装程序支持文件”** 页，单击 **“安装”** 以便安装或更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的安装程序支持文件。  
+5.  在 **“安装程序支持文件”** 页，单击 **“安装”** 以便安装或更新 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的安装程序支持文件。  
   
 6.  在 **“设置角色”** 页上，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安装”** ，然后单击 **“下一步”** 以继续进入 **“功能选择”** 页。  
   

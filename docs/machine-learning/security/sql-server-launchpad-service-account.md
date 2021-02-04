@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: fe74893641ae7aa69b7e388631a418a1ab973cd3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0aff998d79d79c2ac2ef06c37ffba4b01eb73973
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470718"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076855"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad 服务配置
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "97470718"
 
 你必须是运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上的管理员才能对此文件进行更改。 如果你要编辑该文件，我们建议你在保存更改之前创建备份副本。
 
-下表列出了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的高级设置以及允许的值。
+下表列出了 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的高级设置以及允许的值。
 
 |**设置名称**|类型 |**说明**|
 |----|----|----|
