@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0ff8cd92d090424bbf7a17315dc09dfb7b8a06f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 7a58a11e71c471bf02ca68ddaf4a416c3d9c554b
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934781"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075699"
 ---
 # <a name="configure-a-url--report-server-configuration-manager"></a>配置 URL（报表服务器配置管理器）
   必须为每个应用程序配置至少一个 URL 才能使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL  。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。  
@@ -79,7 +79,7 @@ ms.locfileid: "91934781"
   
          `netstat -anp tcp`  
   
-    -   查阅 Microsoft 支持文章 [关于 TCP/IP 端口分配的信息](https://support.microsoft.com/kb/174904)，了解 TCP 端口分配以及已知端口（0 到 1023）、注册端口（1024 到 49151）和动态或专用端口（49152 到 65535）之间的区别。  
+    -   查阅 Microsoft 支持文章 [关于 TCP/IP 端口分配的信息](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/174904)，了解 TCP 端口分配以及已知端口（0 到 1023）、注册端口（1024 到 49151）和动态或专用端口（49152 到 65535）之间的区别。  
   
     -   如果您正在使用 Windows 防火墙，则必须打开该端口。 有关说明，请参阅 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   

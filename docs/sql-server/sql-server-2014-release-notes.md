@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: adfd91c6771626aa0979da622d95766a2e4e5613
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ad4cdfc2ba27051b5186a4934b2afceb42245b49
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97409623"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076019"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ SQL Server 2014 SP2 包含针对 SQL Server 2014 SP1 CU7 发布的修补程序�
 SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提供的修补程序，以及以前 SQL Server 2012 SP2 中附带的修补程序汇总。
 
 > [!NOTE]
-> 如果 SQL Server 实例已启用 SSISDB 目录，并且在升级到 SP1 时遇到安装错误，请按照有关此问题的说明[安装 SQL Server 2014 SP1 时，出现错误 912 或 3417](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/) 进行操作。
+> 如果 SQL Server 实例已启用 SSISDB 目录，并且在升级到 SP1 时遇到安装错误，请按照有关此问题的说明[安装 SQL Server 2014 SP1 时，出现错误 912 或 3417](https://support.microsoft.com/topic/kb3018269-error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050-0-7f34525c-d517-6399-a31b-e7033db13706) 进行操作。
 
 ### <a name="download-pages-and-more-information-for-sp1"></a>下载页和 SP1 详细信息
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6d76229a17951c4b0bad35ee78e95a903bb590e3
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 0532c42a5bd080b7f686c1663c6f88d8066bc9ff
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594959"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076259"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>在本机模式报表服务器上配置 TLS 连接
 
@@ -86,7 +86,7 @@ ms.locfileid: "98594959"
   
  TLS 绑定是 Microsoft Windows 中的共享资源。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器或诸如 IIS 管理器之类的其他工具所做的更改可能会影响同一计算机上的其他应用程序。 编辑绑定所用的工具最好与创建绑定所用的工具相同。  例如，如果使用配置管理器创建了 TLS 绑定，建议使用配置管理器来管理绑定的生命周期。 如果使用 IIS 管理器来创建绑定，建议使用 IIS 管理器来管理绑定的生命周期。 如果在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装前在计算机上安装了 IIS，最好在配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 前审阅 IIS 中的 TLS 配置。  
   
- 如果使用报表服务器配置管理器删除了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 TLS 绑定，则 TLS 可能对正在运行 Internet Information Services (IIS) 的服务器或其他 HTTP.SYS 服务器上的网站不再有效。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器删除以下注册表项：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443  如果此注册表项被删除，IIS 的 TLS 绑定也会随之删除。 如果没有此绑定，将不为 HTTPS 协议提供 TLS。 若要诊断此问题，请使用 IIS 管理器或 HTTPCFG.exe 命令行实用工具。 若要解决此问题，请使用 IIS 管理器还原网站的 TLS 绑定。 为了防止将来出现此问题，请先使用 IIS 管理器来删除 TLS 绑定，再使用 IIS 管理器来还原相应网站的绑定。 有关详细信息，请参阅知识库文章 [删除 SSL 绑定后 SSL 将不再工作 (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n)。  
+ 如果使用报表服务器配置管理器删除了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 TLS 绑定，则 TLS 可能对正在运行 Internet Information Services (IIS) 的服务器或其他 HTTP.SYS 服务器上的网站不再有效。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器删除以下注册表项：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443  如果此注册表项被删除，IIS 的 TLS 绑定也会随之删除。 如果没有此绑定，将不为 HTTPS 协议提供 TLS。 若要诊断此问题，请使用 IIS 管理器或 HTTPCFG.exe 命令行实用工具。 若要解决此问题，请使用 IIS 管理器还原网站的 TLS 绑定。 为了防止将来出现此问题，请先使用 IIS 管理器来删除 TLS 绑定，再使用 IIS 管理器来还原相应网站的绑定。 有关详细信息，请参阅知识库文章 [删除 SSL 绑定后 SSL 将不再工作 (https://support.microsoft.com/kb/956209/n)](https://web.archive.org/web/20150215042139/http://support.microsoft.com:80/kb/956209)。  
   
 ## <a name="see-also"></a>另请参阅  
  [针对报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)   

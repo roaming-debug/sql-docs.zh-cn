@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: fff3b6de7e2e83c535997194ca2622d9cd9e9595
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 06294cb2dbf588ed5f7588d05ee5aa1c5af971bc
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766178"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076069"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -192,7 +192,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
     -   如果您在使用 Windows 7 SP1 或 Windows Server 2008 R2 SP1 操作系统的计算机上安装 SQL Server 2012，则此更新已安装在该计算机上。  
   
--   Windows PowerShell 2.0 是用于安装 SQL Server 2012 数据库引擎组件和 SQL Server Management Studio 的必备组件，但 Windows PowerShell 不再由 SQL Server 安装程序安装。 如果你的计算机上没有 PowerShell 2.0，则可以按照 [Windows Management Framework](https://support.microsoft.com/kb/968929) (#windows-management-framework) 页上的说明启用它。 您获取 Windows PowerShell 2.0 的方式取决于您正在运行的操作系统：  
+-   Windows PowerShell 2.0 是用于安装 SQL Server 2012 数据库引擎组件和 SQL Server Management Studio 的必备组件，但 Windows PowerShell 不再由 SQL Server 安装程序安装。 如果你的计算机上没有 PowerShell 2.0，则可以按照 [Windows Management Framework](https://mskb.pkisolutions.com/kb/968929) (#windows-management-framework) 页上的说明启用它。 您获取 Windows PowerShell 2.0 的方式取决于您正在运行的操作系统：  
   
     -   Windows Server 2008 – Windows PowerShell 1.0 是一个功能并且可以添加。 下载并安装 Windows PowerShell 2.0 版本（作为操作系统修补程序生效）。  
   

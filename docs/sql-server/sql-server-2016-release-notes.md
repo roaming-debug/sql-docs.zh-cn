@@ -14,12 +14,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: 720da25fe19f064c6a6eb3b363832b76113e2c5b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dad7665ffa825a80aa6bcb3050b04a96060c3f65
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97409693"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076039"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -60,7 +60,7 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 |对可用性组中数据库的完整 DTC 支持   |   SQL Server 2016 目前不支持可用性组中数据库的跨数据库事务。 我们在 SQL Server 2016 SP2 中引入了对可用性组数据库的分布式事务的完整支持。   |      |
 |更新到 sys.databases is_encrypted 列，准确反映 TempDB 的加密状态   |   对于 TempDB，sys.databases 中 is_encryptedcolumn 列的值为 1，即使是在关闭所有用户数据库的加密并重新启动 SQL Server 后也一样。 由于 TempDB 在这种情况下不再处于加密状态，因此该列中的值本该为 0。 从 SQL Server 2016 SP2 开始，sys.databases.is_encrypted 现可准确反映 TempDB 的加密状态。   |      |
 |用于生成已验证克隆和备份的新 DBCC CLONEDATABASE 选项   |   借助 SQL Server 2016 SP2，DBCC CLONEDATABASE 允许两个新选项：生成已验证克隆，或生成备份克隆。 使用 WITH VERIFY_CLONEDB 选项创建克隆数据库时，将创建并验证一致的数据库克隆，Microsoft 会为此提供支持，以便生产使用。 引进了新的属性来验证克隆是否已通过验证 SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’)。 使用 BACKUP_CLONEDB 选项创建克隆时，会在数据文件所在的同一文件夹中生成备份，以便客户将克隆移至不同的服务器或将其发送至 Microsoft 客户支持部门 (CSS) 进行故障排除。   |      |
-|DBCC CLONEDATABASE 的 Service Broker (SSB) 支持   |   已增强 DBCC CLONEDATABASE 命令，允许 SSB 对象的脚本编写。   |   [KB4092075](https://support.microsoft.com/help/4092075)   |
+|DBCC CLONEDATABASE 的 Service Broker (SSB) 支持   |   已增强 DBCC CLONEDATABASE 命令，允许 SSB 对象的脚本编写。   |      |
 |用于监视 TempDB 版本存储空间使用情况的新 DMV   |   SQL Server 2016 SP2 中引入了新的 sys.dm_tran_version_store_space_usage DMV，用于监视 TempDB 的版本存储使用情况。 DBA 现可根据每个数据库的版本存储使用情况要求主动地规划 TempDB 大小，且在生产服务器上运行时无需任何性能开销。   |      |
 |对复制代理的完全转储支持 | 现在，如果复制代理遇到未经处理的异常，则会默认创建异常现象的微型转储。 这使得难以对未经处理的异常问题进行故障排除。 通过此更改，我们引入了新的注册表项，这将允许为复制代理创建完全转储。   |      |
 |针对可用性组的读取路由故障的扩展事件增强   |   在之前，如果存在路由列表但是其中没有可用于连接的服务器，则会激发 read_only_rout_fail xEvent。 SQL Server 2016 SP2 包含有助于故障排除的其他信息，并且还扩展了激发此 xEvent 的码位。   |      |
