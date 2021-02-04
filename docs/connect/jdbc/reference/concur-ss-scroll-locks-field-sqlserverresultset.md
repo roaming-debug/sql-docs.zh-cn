@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.CONCUR_SS_SCROLL_LOCKS
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0fd5d34a-c323-4e9c-a1ef-6288c4a0b4ca
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c753366e9576e9bda697429274fd6a94877f370
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9bbae951f73ad55745663e61095cd6309c01daaa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438009"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168620"
 ---
 # <a name="concur_ss_scroll_locks-field-sqlserverresultset"></a>CONCUR_SS_SCROLL_LOCKS 字段 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public static final int CONCUR_SS_SCROLL_LOCKS
 ```  
   
 ## <a name="field-value"></a>字段值  
- 一个 int**** 值：1009。  
+ 一个 int 值：1009。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

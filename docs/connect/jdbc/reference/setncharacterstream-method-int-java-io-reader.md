@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 74bcb32d53554b72f97c39ef17b480c428d8be92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 460e9b843d60e492eb435493a2c3abaeebac4b98
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431649"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99173343"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>setNCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,9 +32,9 @@ public final void setNCharacterStream(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>参数  
- parameterIndex**  
+ parameterIndex  
   
- 指示参数索引的 int****。  
+ 指示参数索引的 int。  
   
  *value*  
   
@@ -46,7 +46,7 @@ public final void setNCharacterStream(int parameterIndex,
 ## <a name="remarks"></a>备注  
  此 setNCharacterStream 方法是由 java.sql.PreparedStatement 接口中的 setNCharacterStream 方法指定的。  
   
- 此方法应用于 NCHAR****、NVARCHAR****、NTEXT**** 和 XML**** 数据类型。  
+ 此方法应用于 NCHAR、NVARCHAR、NTEXT 和 XML 数据类型。  
   
 ## <a name="see-also"></a>另请参阅  
  [setNCharacterStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   

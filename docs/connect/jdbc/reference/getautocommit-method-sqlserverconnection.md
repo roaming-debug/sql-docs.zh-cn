@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerConnection.getAutoCommit
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: af1f67f4-f568-4e58-abcc-5c809a89b547
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 887e60b7bc390d323f890e6cb9552489ff15cfab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3b8cbb3825cf25f2b7d088274bb6b7341c001f51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437349"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168312"
 ---
 # <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean getAutoCommit()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果自动提交模式已启用，值为 true****；否则，值为 false****。  
+ 如果自动提交模式已启用，值为 true；否则，值为 false。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

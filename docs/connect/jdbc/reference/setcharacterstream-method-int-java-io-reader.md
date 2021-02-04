@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b8d4e1f7-14fc-4590-af98-1eda30d2ca6d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cd2b09810329bc79f74616fc964eb18c2efd803
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 550a8792f1baea96aa6fd8b4ff8c59d7a75ce2c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88432319"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99173755"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>setCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,9 +35,9 @@ public final void setCharacterStream(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>参数  
- parameterIndex**  
+ parameterIndex  
   
- 指示参数编号的 int****。  
+ 指示参数编号的 int。  
   
  reader  
   

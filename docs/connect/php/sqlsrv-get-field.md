@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_get_field
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6b5fa8e85d6dc1af26c543c9c31cafa621b10bcd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fd330fdfc43ae11f4958418afc1504a0e44502f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426249"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99154055"
 ---
 # <a name="sqlsrv_get_field"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,13 +41,13 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*：要检索的字段索引。 索引从零开始。  
   
-$getAsType [可选]：一个 SQLSRV 常量 (SQLSRV_PHPTYPE_*)，可确定返回数据的 PHP 数据类型**********。 若要了解受支持的数据类型，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 如果没有指定返回类型，将返回默认 PHP 类型。 有关默认 PHP 类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 有关指定默认 PHP 数据类型的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
+$getAsType [可选]：一个 SQLSRV 常量 (SQLSRV_PHPTYPE_*)，可确定返回数据的 PHP 数据类型。 若要了解受支持的数据类型，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 如果没有指定返回类型，将返回默认 PHP 类型。 有关默认 PHP 类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 有关指定默认 PHP 数据类型的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
 ## <a name="return-value"></a>返回值  
 字段数据。 使用 *$getAsType* 参数可以指定返回数据的 PHP 数据类型。 如果没有指定返回数据类型，将返回默认 PHP 数据类型。 有关默认 PHP 类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 有关指定默认 PHP 数据类型的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
 ## <a name="remarks"></a>注解  
-sqlsrv_fetch 和 sqlsrv_get_field 的组合提供了对数据的只进访问权限********。  
+sqlsrv_fetch 和 sqlsrv_get_field 的组合提供了对数据的只进访问权限。  
   
 sqlsrv_fetch/sqlsrv_get_field 的组合仅将结果集行的一个字段加载到脚本内存中，并允许 PHP 返回类型规范 。 （有关如何指定 PHP 返回类型的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。）此函数组合还允许流式检索数据。 （若要了解流式检索数据的相关信息，请参阅[使用 SQLSRV 驱动程序流式检索数据](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)。）  
   

@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b5025d8a7387777de1d95861fa6b2d09f436b68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74ae525bdd1c05eb01f9bce98cba9ef987087a30
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458269"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167998"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -74,21 +74,21 @@ ms.locfileid: "88458269"
 |[setBigDecimal](../../../connect/jdbc/reference/setbigdecimal-method-sqlserverpreparedstatement.md)|将指定参数编号设置为给定 BigDecimal 对象。|  
 |[setBinaryStream](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的输入流。|  
 |[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Blob 对象。|  
-|[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Boolean**** 值。|  
-|[setByte](../../../connect/jdbc/reference/setbyte-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的字节**** 值。|  
+|[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Boolean 值。|  
+|[setByte](../../../connect/jdbc/reference/setbyte-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的字节值。|  
 |[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的字节数组。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Reader 对象。|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|将指定参数设置为给定 Clob 对象。|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）将 SQL 游标名称设置为指定字符串，以供后续执行方法使用。|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的日期值。|  
 |[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|将指定列的值设置为 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
-|[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Double **** 值。|  
+|[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Double 值。|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）设置转义处理模式。|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）为 JDBC 驱动程序提供提示以指明处理结果集行时应采用的方向。|  
 |[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）为 JDBC 驱动程序提供提示以指明在需要更多行时应从数据库中提取的行数。|  
-|[setFloat](../../../connect/jdbc/reference/setfloat-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 float**** 值。|  
-|[setInt](../../../connect/jdbc/reference/setint-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 int**** 值。|  
-|[setLong](../../../connect/jdbc/reference/setlong-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 long**** 值。|  
+|[setFloat](../../../connect/jdbc/reference/setfloat-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 float 值。|  
+|[setInt](../../../connect/jdbc/reference/setint-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 int 值。|  
+|[setLong](../../../connect/jdbc/reference/setlong-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 long 值。|  
 |[setMaxFieldSize](../../../connect/jdbc/reference/setmaxfieldsize-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）将存储字符或二进制值的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 列中的最大字节数限制设置为给定的字节数。|  
 |[setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）将任何 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象可包含的最大行数限制设置为给定的数目。|  
 |[setNCharacterStream](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Reader 对象。|  
@@ -100,9 +100,9 @@ ms.locfileid: "88458269"
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）将驱动程序等待 Statement 对象运行的秒数设置为指定的秒数。|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Ref 对象。|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）将此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的响应缓冲模式设置为不区分大小写的“String full”或“adaptive”。|  
-|[setShort](../../../connect/jdbc/reference/setshort-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Short**** 值。|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 String **** 值。|  
-|[setSQLXML](../../../connect/jdbc/reference/setsqlxml-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 SQLXML**** 对象。|  
+|[setShort](../../../connect/jdbc/reference/setshort-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Short 值。|  
+|[setString](../../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 String 值。|  
+|[setSQLXML](../../../connect/jdbc/reference/setsqlxml-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 SQLXML 对象。|  
 |[setTime](../../../connect/jdbc/reference/settime-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 time 值。|  
 |[setTimestamp](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 timestamp 值。|  
 |[setUnicodeStream](../../../connect/jdbc/reference/setunicodestream-method-sqlserverpreparedstatement.md)|将指定参数编号设置为指定的输入流，而指定输入流将含有指定字节数。|  

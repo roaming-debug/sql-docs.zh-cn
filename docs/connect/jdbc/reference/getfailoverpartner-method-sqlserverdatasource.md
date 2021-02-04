@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.getFailoverPartner
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 885f927f-9c48-42e0-a7fb-fd936d2b8130
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 607f14bab8795ba3dfebd33e2c179f85897f210a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5084e93cbe03ef79e5858757bf8b627991d9902
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436059"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163054"
 ---
 # <a name="getfailoverpartner-method-sqlserverdatasource"></a>getFailoverPartner 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public string getFailoverPartner()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含故障转移伙伴名称的字符串****，如果未设置值，则为 Null。  
+ 包含故障转移伙伴名称的字符串，如果未设置值，则为 Null。  
   
 ## <a name="remarks"></a>注解  
  此方法返回的值将反映使用 [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) 方法设置的故障转移伙伴名称。  

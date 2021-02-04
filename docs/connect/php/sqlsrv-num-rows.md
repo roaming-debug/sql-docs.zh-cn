@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - API Reference, sqlsrv_num_rows
 - sqlsrv_num_rows
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52366287eb25cb9932e8e80c97abc1c97ddbbcae
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: fe5599045702f2fec458df608d5fb25124732cff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435133"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99153591"
 ---
 # <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,10 +37,10 @@ sqlsrv_num_rows( resource $stmt )
 *$stmt*：要计算其行数的结果集。  
   
 ## <a name="return-value"></a>返回值  
-如果在计算行数时出错，则返回**false** 。 否则，返回结果集中的行数。  
+如果在计算行数时出错，则返回 **false** 。 否则，返回结果集中的行数。  
   
 ## <a name="remarks"></a>注解  
-sqlsrv_num_rows 需要客户端、静态或键集游标，并且将返回 false（如果你使用向前游标或动态游标）****。 （向前游标是默认值。）有关游标的详细信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 和[游标类型（SQLSRV 驱动程序）](../../connect/php/cursor-types-sqlsrv-driver.md)。  
+sqlsrv_num_rows 需要客户端、静态或键集游标，并且将返回 false（如果你使用向前游标或动态游标）。 （向前游标是默认值。）有关游标的详细信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 和[游标类型（SQLSRV 驱动程序）](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
   

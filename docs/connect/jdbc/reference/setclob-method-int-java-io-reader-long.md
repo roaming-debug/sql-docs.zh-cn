@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5967971a6e7c5c9de773a93695b60ffcbc3d240
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c79f80f59732089c44ba5555a93709f8cb40363a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88432169"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99173590"
 ---
 # <a name="setclob-method-int-javaioreader-long"></a>setClob 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,9 +33,9 @@ public final void setClob(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>参数  
- parameterIndex**  
+ parameterIndex  
   
- 指示参数索引的 int****。  
+ 指示参数索引的 int。  
   
  reader  
   
@@ -43,7 +43,7 @@ public final void setClob(int parameterIndex,
   
  *length*  
   
- 指示参数值中字符数的 long****。  
+ 指示参数值中字符数的 long。  
   
 ## <a name="remarks"></a>注解  
  此 setClob 方法是由 java.sql.PreparedStatement 接口中的 setClob 方法指定的。  
