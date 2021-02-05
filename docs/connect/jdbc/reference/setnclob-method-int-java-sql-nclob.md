@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 48c8aa2a-4185-4837-b592-830e60f8ca0b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 866c1ce436dfa271219caab2d8ed71a60bff16ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f5d12ded747cca6202fdabdca9a206c40bba18b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431559"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178827"
 ---
 # <a name="setnclob-method-int-javasqlnclob"></a>setNClob 方法 (int, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,9 +32,9 @@ public final void setNClob(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>参数  
- parameterIndex**  
+ parameterIndex  
   
- 指示参数索引的 int****。  
+ 指示参数索引的 int。  
   
  *value*  
   

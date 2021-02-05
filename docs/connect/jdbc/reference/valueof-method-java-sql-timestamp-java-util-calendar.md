@@ -7,21 +7,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6046069a5e2e93cf2d14d0ec999670054348765a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 232eeb75b783d463df17d7a836ab95b9b1b0ac8f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88396113"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181135"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>valueOf 方法 (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  创建一个 DateTimeOffset**** 对象，表示按照距 GMT（给定 java.sql.Timestamp 值以及指示偏移量的 java.util.Calendar 值）的特定偏移量的时间点。  
+  创建一个 DateTimeOffset 对象，表示按照距 GMT（给定 java.sql.Timestamp 值以及指示偏移量的 java.util.Calendar 值）的特定偏移量的时间点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
  calendar  
   
- 偏移值。  将根据 timestamp** 值设置 calendar** 的日期和时间组件。  
+ 偏移值。  将根据 timestamp 值设置 calendar 的日期和时间组件。  
   
 ## <a name="return-value"></a>返回值  
  返回一个 DateTimeOffset 对象，该对象表示在给定 java.util.Calendar 对象的时区由 java.sql.Timestamp 对象给定的时间点。  

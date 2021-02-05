@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.setFailoverPartner
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5310b7c2-9d10-474f-ad3a-218fe5da694b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c90a6cd4850ad746bafde4646cd459fbcff3e825
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c47da87d002d67f98cf80f4cd5db19510c744a03
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431879"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178973"
 ---
 # <a name="setfailoverpartner-method-sqlserverdatasource"></a>setFailoverPartner 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setFailoverPartner(java.lang.String serverName)
 #### <a name="parameters"></a>参数  
  *serverName*  
   
- 包含故障转移服务器名称的 String****。  
+ 包含故障转移服务器名称的 String。  
   
 ## <a name="remarks"></a>注解  
  如果在与主服务器进行初始连接时失败，则使用由此方法设置的值；建立初始连接后，将忽略此值。 此外，还应将此方法与 [setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md) 方法结合使用，否则将引发异常。  

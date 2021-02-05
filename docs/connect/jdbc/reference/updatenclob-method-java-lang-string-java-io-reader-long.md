@@ -7,21 +7,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ad5c8d9b-f8c8-4ddf-85c8-23420bba54ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6bd151c08cff98bba419d425d24ac0160ffc42d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a29fd79e7383fbd0897b50bd6ca3da6f992e8189
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431259"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194583"
 ---
 # <a name="updatenclob-method-javalangstring-javaioreader-long"></a>updateNClob 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用具有指定字符数长度的指定 Reader**** 对象更新指定列。  
+  使用具有指定字符数长度的指定 Reader 对象更新指定列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,9 +33,9 @@ public void updateNClob(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>参数  
- columnLabel**  
+ columnLabel  
   
- 指示列标签的字符串****。  
+ 指示列标签的字符串。  
   
  reader  
   
@@ -51,7 +51,7 @@ public void updateNClob(java.lang.String columnLabel,
 ## <a name="remarks"></a>备注  
  此 updateNClob 方法是由 java.sql.ResultSet 接口中的 updateNClob 方法指定的。  
   
- 只有 nvarchar(max)****、ntext**** 和 xml**** 列支持此方法。 在任何其他数据类型上使用此方法会引发异常。  
+ 只有 nvarchar(max)、ntext 和 xml 列支持此方法。 在任何其他数据类型上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateNClob 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

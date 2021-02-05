@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.supportsIntegrityEnhancementFacility
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: edee084b-9a8c-4167-9e13-66fc3ed1ecaa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c3826871bd68bc7ba99dd2230d545ecdfcf4975
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c7eab951eb1c4587f81ab8ed728954171f828d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450374"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185551"
 ---
 # <a name="supportsintegrityenhancementfacility-method-sqlserverdatabasemetadata"></a>supportsIntegrityEnhancementFacility 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean supportsIntegrityEnhancementFacility()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true****。 否则为 **false**。  
+ 如果支持，则值为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

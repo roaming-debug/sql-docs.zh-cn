@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 851452d2fa7df6cab7771da294e01fea926b7af3
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: ba25e0792271ccb1ffb77e32ff1673b72cef4c60
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081846"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195247"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,8 +51,8 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 还会影响 PDO::exec 的行为；有关详细�
 |Style|说明|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, num|在指定列中查询数据。 表中的第一列为列 0.|  
-|PDO::FETCH_CLASS, 'classname', array( arglist )****|创建一个类的实例并给类中的属性分配列名称。 如果类构造函数采用一个或多个参数，你还可以传递 *arglist*。|  
-|PDO::FETCH_CLASS, 'classname**'|给现有类中的属性分配列名称。|  
+|PDO::FETCH_CLASS, 'classname', array( arglist )|创建一个类的实例并给类中的属性分配列名称。 如果类构造函数采用一个或多个参数，你还可以传递 *arglist*。|  
+|PDO::FETCH_CLASS, 'classname'|给现有类中的属性分配列名称。|  
   
 在再次调用 PDO::query 之前，请调用 PDOStatement::closeCursor 以释放与 PDOStatement 对象相关联的数据库资源。  
   

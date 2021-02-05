@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - setEncrypt Method (SQLServerDataSource)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e7da98aa70be2066c370b75e2bc213c25ba16e03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a041a866e825cef59441cbfd42ca408d1d3cfd0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431969"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179022"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>setEncrypt 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public void setEncypt(boolean encrypt)
  如果在客户端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之间启用传输层安全性 (TLS)（以前称为安全套接字层 (SSL)）加密，则为 true  。 否则为 **false**。  
   
 ## <a name="remarks"></a>备注  
- 如果 encrypt 属性设置为 true，则在服务器已安装有证书的情况下，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对在客户端与服务器之间发送的所有数据使用 TLS 加密  。 默认值是 **false**秒。  
+ 如果 encrypt 属性设置为 true，则在服务器已安装有证书的情况下，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对在客户端与服务器之间发送的所有数据使用 TLS 加密  。 默认值是 **false** 秒。  
   
  JDBC 驱动程序在尝试建立 TLS 握手时，会检测运行它的 Java 虚拟机 (JVM)。  
   

@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dd331cec7252fb0fd0b3099800837cf667fce336
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf8e9b71b638a3836ebefb71e3d574183372267e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458209"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180110"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -64,32 +64,32 @@ ms.locfileid: "88458209"
 |[getBigDecimal](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 java.math.BigDecimal。|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为未解释字节的二进制流。|  
 |[getBlob](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 Blob 对象。|  
-|[getBoolean](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 boolean****。|  
-|[getByte](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 byte****。|  
-|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的字节数组****。|  
+|[getBoolean](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 boolean。|  
+|[getByte](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 byte。|  
+|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的字节数组。|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 java.io.Reader 对象。|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 Clob 对象。|  
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的并发模式。|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象使用的 SQL 游标的名称。|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 java.sql.Date 对象。|  
 |[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|将指定列的值作为 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)对象进行检索。|  
-|[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 double****。|  
+|[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 double。|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的提取方向。|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的提取大小。|  
-|[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 float****。|  
+|[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 float。|  
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的可保持性。|  
-|[getInt](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 int****。|  
-|[getLong](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 long****。|  
+|[getInt](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 int。|  
+|[getLong](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 long。|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的列数、列的类型和属性。|  
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)|检索 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Reader 对象。|  
-|[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)|检索 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 NClob 对象****。|  
+|[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)|检索 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 NClob 对象。|  
 |[getNString](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)|检索 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的字符串。|  
 |[getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)|获取此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的一个对象。|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 Ref 对象。|  
 |[getRow](../../../connect/jdbc/reference/getrow-method-sqlserverresultset.md)|检索当前行号。|  
-|[getShort](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 short****。|  
+|[getShort](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 short。|  
 |[getStatement](../../../connect/jdbc/reference/getstatement-method-sqlserverresultset.md)|检索 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象，此对象生成了此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。|  
-|[getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的字符串****。|  
+|[getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的字符串。|  
 |[getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)|检索 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 SQLXML 对象。|  
 |[getTime](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 java.sql.Time 对象。|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列的值作为 Java 编程语言中的 java.sql.Timestamp 对象。|  
@@ -120,27 +120,27 @@ ms.locfileid: "88458209"
 |[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|使用 BigDecimal 对象更新指定列。|  
 |[updateBinaryStream](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)|使用二进制流值更新指定列。|  
 |[updateBlob](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)|使用 java.sql.Blob 值更新指定列。|  
-|[updateBoolean](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)|使用布尔值更新指定列****。|  
-|[updateByte](../../../connect/jdbc/reference/updatebyte-method-sqlserverresultset.md)|使用字节值更新指定列****。|  
-|[updateBytes](../../../connect/jdbc/reference/updatebytes-method-sqlserverresultset.md)|使用字节值构成的数组更新指定列****。|  
+|[updateBoolean](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)|使用布尔值更新指定列。|  
+|[updateByte](../../../connect/jdbc/reference/updatebyte-method-sqlserverresultset.md)|使用字节值更新指定列。|  
+|[updateBytes](../../../connect/jdbc/reference/updatebytes-method-sqlserverresultset.md)|使用字节值构成的数组更新指定列。|  
 |[updateCharacterStream](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)|使用字符流值更新指定列。|  
 |[updateClob](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)|使用 java.sql.Clob 值更新指定列。|  
 |[updateDate](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)|使用日期值更新指定列。|  
 |[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|更新 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)列。|  
-|[updateDouble](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)|使用 double 值更新指定列****。|  
-|[updateFloat](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)|使用 float 值更新指定列****。|  
-|[updateInt](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)|使用 int 值更新指定列****。|  
-|[updateLong](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)|使用 long 值更新指定列****。|  
+|[updateDouble](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)|使用 double 值更新指定列。|  
+|[updateFloat](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)|使用 float 值更新指定列。|  
+|[updateInt](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)|使用 int 值更新指定列。|  
+|[updateLong](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)|使用 long 值更新指定列。|  
 |[updateNCharacterStream](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)|使用字符流值更新指定列。|  
 |[updateNClob](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)|使用指定对象值更新指定列。|  
-|[updateNString](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)|使用字符串值更新指定列****。|  
+|[updateNString](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)|使用字符串值更新指定列。|  
 |[updateNull](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)|使用 Null 值更新指定列。|  
 |[updateObject](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)|使用 Object 值更新指定列。|  
 |[updateRef](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)|使用 java.sql.Ref 值更新指定列。|  
 |[updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)|使用此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象当前行的新内容更新基础数据库。|  
-|[updateShort](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)|使用 short 值更新指定列****。|  
-|[updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)|使用字符串值更新指定列****。|  
-|[updateSQLXML](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)|使用 SQLXML 值更新指定列****。|  
+|[updateShort](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)|使用 short 值更新指定列。|  
+|[updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)|使用字符串值更新指定列。|  
+|[updateSQLXML](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)|使用 SQLXML 值更新指定列。|  
 |[updateTime](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)|使用时间值更新指定列。|  
 |[updateTimestamp](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)|使用时间戳的值更新指定列。|  
 |[wasNull](../../../connect/jdbc/reference/wasnull-method-sqlserverresultset.md)|验证所读取的最后一个值是否为 Null 值。|  

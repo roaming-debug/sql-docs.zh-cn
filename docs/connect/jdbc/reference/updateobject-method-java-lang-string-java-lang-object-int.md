@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.updateObject (java.lang.String, java.lang.Object, int)
 apilocation:
@@ -16,17 +16,17 @@ apitype: Assembly
 ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbc070f71830113875add1d4711671832ae4de12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f71c25a64fd01e659eca08c07ca65609ac6491f8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478291"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181598"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>updateObject 方法 (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的列名称和小数位数使用 Object**** 值更新指定的列。  
+  根据给定的列名称和小数位数使用 Object 值更新指定的列。  
   
 ## <a name="syntax"></a>语法  
   

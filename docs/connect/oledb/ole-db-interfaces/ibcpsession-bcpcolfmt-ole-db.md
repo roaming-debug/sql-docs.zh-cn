@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPColFmt method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bfff1da26e499043206fc3f777e1bd9ba5902e44
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 4806671e534faf347837333b0c667c396751aeef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081856"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186289"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +68,7 @@ HRESULT BCPColFmt(
 > [!IMPORTANT]
 > <b id="terminator_note">[1]:</b>在不支持将数据文件代码页设置为 UTF-8 的场景中使用终止符序列。 在此类场景中，必须将 pbUserDataTerm 设置为 `nullptr`，将 cbUserDataTerm 设置为 `0` 。
 
- 对 BCPColFmt 的每次调用将指定一个用户文件字段的格式。 例如，要在具有 5 个字段的用户数据文件中更改 3 个字段的默认设置，请先调用 `BCPColumns(5)`，再调用 BCPColFmt 五次，其中三次调用设置自定义格式****。 对于剩余的两次调用，请将 eUserDataType** 设置为 BCP_TYPE_DEFAULT，并将 cbIndicator**、cbUserData** 和 cbUserDataTerm** 分别设置为 0、BCP_VARIABLE_LENGTH 和 0。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
+ 对 BCPColFmt 的每次调用将指定一个用户文件字段的格式。 例如，要在具有 5 个字段的用户数据文件中更改 3 个字段的默认设置，请先调用 `BCPColumns(5)`，再调用 BCPColFmt 五次，其中三次调用设置自定义格式。 对于剩余的两次调用，请将 eUserDataType 设置为 BCP_TYPE_DEFAULT，并将 cbIndicator、cbUserData 和 cbUserDataTerm 分别设置为 0、BCP_VARIABLE_LENGTH 和 0。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
   
 > [!NOTE]  
 >  在对 BCPColFmt 进行任何调用之前，必须先调用 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 方法。 必须对用户文件中的每个列调用一次 BCPColFmt。 对任何用户文件列多次调用 BCPColFmt 将导致错误。  
@@ -96,11 +96,11 @@ HRESULT BCPColFmt(
   
  如果将 cbUserData 设置为 BCP_LENGTH_NULL，则指示数据文件字段中的所有值已经或应当设置为 NULL。 如果将 cbUserData 设置为 BCP_LENGTH_VARIABLE，则指示系统应当确定每个字段的数据的长度。 对于某些字段，这可能意味着将生成长度/Null 指示器，并将该指示器放在从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制的数据的前面，或者应当将该指示器放在复制到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据中。  
   
- 对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 字符和二进制数据类型，cbUserData可以是 BCP_LENGTH_VARIABLE、BCP_LENGTH_NULL、0 或某个正值。 如果 cbUserData 是 BCP_LENGTH_VARIABLE，则系统使用长度指示器（如果有）或终止符序列来确定数据的长度****。 如果长度指示符和终止符序列均提供，则大容量复制将采用导致数据复制量最少的方法。 如果 cbUserData 是 BCP_LENGTH_VARIABLE，而且数据类型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 字符或二进制类型，并且长度指示器和终止符序列均未指定，则系统返回错误消息****。  
+ 对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 字符和二进制数据类型，cbUserData可以是 BCP_LENGTH_VARIABLE、BCP_LENGTH_NULL、0 或某个正值。 如果 cbUserData 是 BCP_LENGTH_VARIABLE，则系统使用长度指示器（如果有）或终止符序列来确定数据的长度。 如果长度指示符和终止符序列均提供，则大容量复制将采用导致数据复制量最少的方法。 如果 cbUserData 是 BCP_LENGTH_VARIABLE，而且数据类型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 字符或二进制类型，并且长度指示器和终止符序列均未指定，则系统返回错误消息。  
   
- 如果 cbUserData 为 0 或正值，则系统使用 cbUserData 作为最大数据长度 。 但是，如果除了正的 cbUserData 以外，还提供了长度指示器或终止符序列，则系统使用导致数据复制量最少的方法来确定数据长度****。  
+ 如果 cbUserData 为 0 或正值，则系统使用 cbUserData 作为最大数据长度 。 但是，如果除了正的 cbUserData 以外，还提供了长度指示器或终止符序列，则系统使用导致数据复制量最少的方法来确定数据长度。  
   
- cbUserData 值表示数据的字节计数。 如果字符数据由 Unicode 宽字符表示，则正的 cbUserData 参数值表示字符数乘以每个字符大小（字节）****。  
+ cbUserData 值表示数据的字节计数。 如果字符数据由 Unicode 宽字符表示，则正的 cbUserData 参数值表示字符数乘以每个字符大小（字节）。  
   
  pbUserDataTerm[size_is][in]  
  用于字段的终止符序列。 此参数主要用于字符数据类型，因为所有其他类型均属于固定长度，或者在二进制数据的情况下，要求长度指示器以精确记录提供的字节数目。  

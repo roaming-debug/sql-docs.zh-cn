@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 225b29beb82bf8ee010dc96fff92da2b82bcc28a
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 40b696cf3cd8cc0c475a052d78966ee45b5f7b72
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081406"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195203"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,11 +31,11 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### <a name="parameters"></a>参数  
-$parameter：（混合）参数标识符**。 对于使用命名占位符的语句，使用参数名 (:name)。 对于使用问号语法的已准备的语句，为基于 1 的参数索引。
+$parameter：（混合）参数标识符。 对于使用命名占位符的语句，使用参数名 (:name)。 对于使用问号语法的已准备的语句，为基于 1 的参数索引。
   
-$value：要绑定到参数的（混合）值**。  
+$value：要绑定到参数的（混合）值。  
   
-$data_type：由 PDO::PARAM_* 常量表示的可选（整数）数据类型**。 默认值为 PDO::PARAM_STR。  
+$data_type：由 PDO::PARAM_* 常量表示的可选（整数）数据类型。 默认值为 PDO::PARAM_STR。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 TRUE；否则为 FALSE。  

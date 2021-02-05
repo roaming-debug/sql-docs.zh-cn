@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e48b55729e1c459126567fab4bcc35740201e295
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb2a664b47e4487b7e123c275a78f8cefeaf6220
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462373"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190736"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>unwrap 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public <T> T unwrap(Class<T> iface)
 ```  
   
 #### <a name="parameters"></a>参数  
- iface**  
+ iface  
   
  定义接口的类型为 T 的类。  
   

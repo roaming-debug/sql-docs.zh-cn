@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 11071f8f-0e9b-45f0-b600-aaef7e2815d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8c2a96bd9d2d114ce148e51f0728e9409cb4915
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6923ec8ef943b65acb69e703a784d25de7a7b597
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431609"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178835"
 ---
 # <a name="setnclob-method-int-javaioreader-long"></a>setNClob 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,9 +33,9 @@ public final void setNClob(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>参数  
- parameterIndex**  
+ parameterIndex  
   
- 指示参数索引的 int****。  
+ 指示参数索引的 int。  
   
  reader  
   
@@ -43,7 +43,7 @@ public final void setNClob(int parameterIndex,
   
  *length*  
   
- 指示参数值中字符数的 long****。  
+ 指示参数值中字符数的 long。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

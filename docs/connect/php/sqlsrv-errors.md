@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_errors
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c0922e0ec7f3072b15b61f76908116bb86f4fe04
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: a74b89b93f924401d18372a04ab65180f2cbde8e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435190"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194217"
 ---
 # <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ sqlsrv_configure("WarningsReturnAsErrors", 0);
 sqlsrv_configure("WarningsReturnAsErrors", 1);  
 ```  
   
-无论设置如何，警告只能通过使用 SQLSRV_ERR_ALL 或 SQLSRV_ERR_WARNINGS 参数值调用 sqlsrv_errors 来进行检索（有关详细信息，请参阅下面的“参数”部分）************。  
+无论设置如何，警告只能通过使用 SQLSRV_ERR_ALL 或 SQLSRV_ERR_WARNINGS 参数值调用 sqlsrv_errors 来进行检索（有关详细信息，请参阅下面的“参数”部分）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +67,7 @@ $errorsAndOrWarnings[可选]：预定义常量。 此参数可以采用下表中
 如果未提供任何参数值，则将返回上次调用 **sqlsrv** 函数时生成的错误和警告。  
   
 ## <a name="return-value"></a>返回值  
-数组的 **array** 或 **null**。 返回的 array 中的每个 array 都包含三个键值对********。 下表列出了每个键及其描述：  
+数组的 **array** 或 **null**。 返回的 array 中的每个 array 都包含三个键值对。 下表列出了每个键及其描述：  
   
 |键|说明|  
 |-------|---------------|  

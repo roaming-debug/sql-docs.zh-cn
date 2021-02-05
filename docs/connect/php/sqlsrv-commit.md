@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_commit
 apitype: NA
@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0d42500c2764815ade1a2bf2292320f4b8745e88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73d68b6f16c655147ef79144658dadfa0e0198fa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88413963"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190681"
 ---
 # <a name="sqlsrv_commit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-在指定连接上提交当前事务，并将该连接返回至自动提交模式。 当前事务包括指定连接上的所有语句，这些语句在调用 [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) 之后和调用 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 或 **sqlsrv_commit**之前执行。  
+在指定连接上提交当前事务，并将该连接返回至自动提交模式。 当前事务包括指定连接上的所有语句，这些语句在调用 [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) 之后和调用 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 或 **sqlsrv_commit** 之前执行。  
   
 > [!NOTE]  
-> 默认情况下，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 处于自动提交模式。 这意味着，除非使用 **sqlsrv_begin_transaction**开始事务。  
+> 默认情况下，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 处于自动提交模式。 这意味着，除非使用 **sqlsrv_begin_transaction** 开始事务。  
   
 > [!NOTE]  
 > 如果在不属于活动事务且已使用 **sqlsrv_commit** transaction **sqlsrv_begin_transaction**，该调用将返回 **false** ，并向错误集合中添加一个 *未在事务中* 错误。  
