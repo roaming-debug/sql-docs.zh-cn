@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cbfc332339e3cd5e17890ef3a7ef9341474a8189
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 418be7388780b9cee251dd5b1e6b11910c8b531a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645079"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206321"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>参数  
-**$column_number：一个可选整数，指示从零开始的列号。 默认值为 0（该行的第一列）。  
+$column_number：一个可选整数，指示从零开始的列号。 默认值为 0（该行的第一列）。  
   
 ## <a name="return-value"></a>返回值  
 一列或 false（如果没有更多的行）。  

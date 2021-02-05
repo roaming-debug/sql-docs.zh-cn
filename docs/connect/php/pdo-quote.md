@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31756cbc2f0ede497ea34077f1bdd760412c716c
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 9b9e74b05b48c4e3c225ec37a07408d2ca5c889b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081836"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206373"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ string PDO::quote( $string[, $parameter_type ] )
 #### <a name="parameters"></a>参数  
 $*string*：要用引号括起来的字符串。  
   
-$parameter_type：指示数据类型的可选（整数）符号**。  默认值为 PDO::PARAM_STR。  
+$parameter_type：指示数据类型的可选（整数）符号。  默认值为 PDO::PARAM_STR。  
 
 PHP 7.2 中引入了新的 PDO 常量，以添加对[绑定 Unicode 和非 Unicode 字符串](https://wiki.php.net/rfc/extended-string-types-for-pdo)的支持。 Unicode 字符串可以括在引号中，并使用 N 作为前缀（即 N'string' 而不是 'string'）。
 

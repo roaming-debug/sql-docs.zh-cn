@@ -10,23 +10,23 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15
-ms.openlocfilehash: 9762de193eae8ad4e67e77ae54c9778e92357c45
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bcd105fac1dcb534d6c287c0daa8b0fa0e692db2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97402590"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237837"
 ---
-# <a name="sql-server-2019-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 发行说明
+# <a name="sql-server-2019-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 发行说明
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本文介绍了 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的限制和已知问题。 如需相关信息，请参阅：
+本文介绍了 [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 的限制和已知问题。 如需相关信息，请参阅：
 
-> [[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)
+> [[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
+## [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 是 [!INCLUDE[SQL Server 2019](../includes/ssnoversion-md.md)] 最新的公开版本。
+[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 是 [!INCLUDE[SQL Server 2019](../includes/ssnoversion-md.md)] 最新的公开版本。
 
 有关授权的完整详细信息位于安装介质的 `License Terms` 文件夹中。
 
@@ -42,16 +42,16 @@ SQL Server 2019 的 RTM 生成号为 `15.0.2000.5`。
 
 ## <a name="sql-server-installation-may-fail-if-ssms-18x-is-installed"></a>如果已安装 SSMS 18.x，SQL Server 安装可能会失败
 
-- **问题及其对客户的影响**：如果按以下顺序进行以下安装，[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 安装将失败：
+- **问题及其对客户的影响**：如果按以下顺序进行以下安装，[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 安装将失败：
   1. 在服务器上安装了 SQL Server Management Studio (SSMS) 版本 18.0、18.1、18.2 或 18.3。
-  1. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 安装是从可移动介质尝试进行的。 例如，安装介质是 DVD。
+  1. [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 安装是从可移动介质尝试进行的。 例如，安装介质是 DVD。
 
 - **解决方法**：
   1. 卸载早于 SSMS 18.3.1 的任何 SSMS 版本。
   1. 安装更新版本的 SSMS（18.3.1 或更高版本）。 对于最新版本，请参阅[下载 SSMS](../ssms/download-sql-server-management-studio-ssms.md)。
-  1. 正常安装 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]。
+  1. 正常安装 [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]。
 
-- 适用于  ：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
+- 适用于  ：[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]
 
 ## <a name="utf-8-collations"></a>UTF-8 排序规则
 
@@ -65,7 +65,7 @@ SQL Server 2019 的 RTM 生成号为 `15.0.2000.5`。
   > [!NOTE]
   > 目前没有 UI 支持在 Azure Data Studio 或 SQL Server Data Tools (SSDT) 中选择支持 UTF-8 的排序规则。 最新的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SSMS 版本 18 支持在 UI 中选择支持 UTF-8 的排序规则。
 
-- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] RTM
 
 ## <a name="master-data-service-notification-email-contains-broken-link"></a>Master Data Service 通知电子邮件包含断开的链接
 
@@ -75,7 +75,7 @@ SQL Server 2019 的 RTM 生成号为 `15.0.2000.5`。
 
 - **解决方法**：打开 MDS 门户，并手动转到资源。
 
-- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] RTM
 
 ## <a name="see-also"></a>另请参阅
 

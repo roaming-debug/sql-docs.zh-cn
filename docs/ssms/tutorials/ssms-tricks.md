@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 9d480496cad6dafddc428c6049601521ebba88b8
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 2b292ededa319d6e28e8447bd464c30af73f5787
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596451"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250066"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的提示和技巧
 
@@ -42,7 +42,7 @@ ms.locfileid: "98596451"
 若要测试本文提供的步骤，必须有 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、对 SQL Server 的访问权限，以及 AdventureWorks 数据库。 
 
 * 安装 [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)。
-* 安装 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+* 安装 [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 * 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 有关在 SSMS 中还原数据库的说明，请参阅[还原数据库](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>注释/取消注释 T-SQL 代码

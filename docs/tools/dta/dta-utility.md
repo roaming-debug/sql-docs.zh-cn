@@ -21,12 +21,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
-ms.openlocfilehash: a80c3fc49962ad4a67430163f81d00b37c05329b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 68efd346dad72b36e98f5ce0f0c659eed81c5966
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169215"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236719"
 ---
 # <a name="dta-utility"></a>dta 实用工具
 
@@ -184,7 +184,7 @@ dta -d AdventureWorks2012 ...
 [数据引擎优化顾问 (DTA) 中的列存储索引建议](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)。
  ||  
 |-|  
-|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
+|**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
 
   
  **-fk** _keep_existing_option_  
@@ -222,7 +222,7 @@ dta -d AdventureWorks2012 ...
  指定查询存储可用作工作负载。 对于显式选择的数据库，将分析查询存储中的前 1,000 个事件。 可使用 -n  选项更改此值。  有关详细信息，请参阅[查询存储](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查询存储中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
  ||  
 |-|  
-|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
+|**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
      
  **-if** _workload_file_  
  指定用作优化输入的工作负荷文件的路径和文件名。 该文件必须采用下列格式之一：.trc（SQL Server Profiler 跟踪文件）、.sql（SQL 文件）或 .log（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 跟踪文件）。 必须指定一个工作负荷文件或一个工作负荷表。  
@@ -281,7 +281,7 @@ dta -iq -I 48
 在此示例中，DTA 将查询存储用作工作负载源，只考虑在过去 48 小时内执行的查询。  
   ||  
 |-|  
-|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
+|**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
 
 
   

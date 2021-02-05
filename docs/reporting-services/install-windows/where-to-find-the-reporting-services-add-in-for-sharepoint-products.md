@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: c088a6cf0779c5c37c92d7ecd2ff93b2cda4ae46
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 6f0795c8a0404aa5096e357478209fbb259d8e13
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172149"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236199"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>在何处查找用于 SharePoint 产品的 Reporting Services 外接程序
 
@@ -26,12 +26,12 @@ ms.locfileid: "98172149"
 > [!IMPORTANT]  
 >  有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序、报表服务器和 SharePoint 的支持组合列表，请参阅[支持的 SharePoint、Reporting Services 服务器和外接程序的组合 (SQL Server 2016)](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)。  
   
-##  <a name="sssql15-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SharePoint 产品的 Reporting Services 加载项  
+##  <a name="sssql16-md-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SharePoint 产品的 Reporting Services 加载项  
  若要下载并安装该外接程序，请访问 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心：  
   
 -   [用于 Microsoft SharePoint 的 Microsoft® SQL Server 2016 Reporting Services 加载项](https://www.microsoft.com/download/details.aspx?id=52682)  
   
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 安装向导中还提供了该外接程序的 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 版本：  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 安装向导中还提供了该外接程序的 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 版本：  
   
 -   在安装向导的 **“功能选择”** 页上，选择 **“用于 SharePoint 产品的 Reporting Services 外接程序”** 。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "98172149"
 ## <a name="next-steps"></a>后续步骤
 
 [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[当卸载 Reporting Services 外接程序之后，您无法在非默认区域中浏览 SharePoint 页](https://support.microsoft.com/kb/2009212)  
+[当卸载 Reporting Services 外接程序之后，您无法在非默认区域中浏览 SharePoint 页](https://web.archive.org/web/20131006010947/http://support.microsoft.com:80/kb/2009212)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

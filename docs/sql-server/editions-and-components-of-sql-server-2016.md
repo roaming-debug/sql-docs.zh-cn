@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 80b93a4a55b6d12ee5177230b78447c21fc0cae8
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 49d32254b0faaf9dea2ae4c31f7e3548179e75a7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172529"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236604"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的各版本和支持的功能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -136,13 +136,13 @@ ms.locfileid: "98172529"
 |每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的缓冲池的最大内存|操作系统支持的最大值|128 GB|64 GB|1410 MB|1410 MB|
 |每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的列存储段缓存的最大内存|不受限制的内存| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中每个数据库的最大内存优化数据大小|不受限制的内存| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
-|每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例利用的最大内存|操作系统支持的最大值|表格：16 GB<br /><br /> MOLAP：64 GB|不适用|不可用|不适用|  
+|每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例利用的最大内存|操作系统支持的最大值|表格：16 GB<br /><br /> MOLAP：64 GB|不适用|不适用|不适用|  
 |每个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]实例利用的最大内存|操作系统支持的最大值|64 GB|64 GB|4 GB|不适用|
 |最大关系数据库大小|524 PB|524 PB|524 PB|10 GB|10GB|  
   
 <sup>1</sup> 对于 Enterprise Edition 配合基于服务器 + 客户端访问许可证 (CAL) 的许可（对新协议不可用），每个 SQL Server 实例的内核数上限为 20。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
-<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1。 
+<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1。 
 
 ##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -195,7 +195,7 @@ ms.locfileid: "98172529"
 
 <sup>1</sup> 内存中 OLTP 数据大小和列存储段缓存限制为“规模限制”部分中的版本所指定的内存量。 最大并行度是有限的。 对于 Standard Edition，索引生成的进程并行度 (DOP) 限制为 2 DOP，对于 Web 和 Express Edition，索引生成的进程并行度 (DOP) 限制为 1 DOP。 这是指在基于磁盘的表和内存优化表上创建的列存储索引。
 
-<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1。 聚合下推、字符串谓词下推和 SIMD 优化是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition 可伸缩性增强功能。 如需了解更多详情，请参阅[列存储索引 - 新变化](../relational-databases/indexes/columnstore-indexes-what-s-new.md)。 
+<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1。 聚合下推、字符串谓词下推和 SIMD 优化是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition 可伸缩性增强功能。 如需了解更多详情，请参阅[列存储索引 - 新变化](../relational-databases/indexes/columnstore-indexes-what-s-new.md)。 
 
 <sup>3</sup> LocalDB 安装选项中不包括此功能。
 
@@ -215,7 +215,7 @@ ms.locfileid: "98172529"
 |包含的数据库|是|是|是|是|是| 
 |备份加密|是|是|否|否|否|  
 
-<sup>1</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1。      
+<sup>1</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1。      
 
 ##  <a name="replication"></a><a name="Replication"></a> Replication  
   
@@ -276,7 +276,7 @@ ms.locfileid: "98172529"
   
  <sup>1</sup> 有关详细信息，请参阅 [使用 SysPrep 安装 SQL Server 的注意事项](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
  
-<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1。      
+<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1。      
   
 ##  <a name="development-tools"></a><a name="DevTools"></a> Development Tools  
   
@@ -314,7 +314,7 @@ ms.locfileid: "98172529"
 
 <sup>1</sup> 具有多个计算节点的 Scale out 需要一个头节点。
 
-<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1。     
+<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1。     
   
 ## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
@@ -336,7 +336,7 @@ ms.locfileid: "98172529"
 |针对已分区表和索引的并行查询处理|是|否|否|否|否|   
 |全局批处理集成|是|否|否|否|否| 
 
-<sup>1</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1。     
+<sup>1</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1。     
 
 ##  <a name="analysis-services"></a><a name="SSAS"></a> Analysis Services  
   

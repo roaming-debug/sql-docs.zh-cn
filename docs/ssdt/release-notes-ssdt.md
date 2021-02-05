@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
-ms.openlocfilehash: a380eabba4a20a65fd291b938d270a440f66d754
-ms.sourcegitcommit: 44eebb659f9b226c08aea6c31a909b22ad4fec60
+ms.openlocfilehash: 8a13f35c56ab73e3bb984bbdc2c2e27c2d769356
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97860599"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236797"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
 
@@ -320,7 +320,7 @@ SSDT for Visual Studio 2017。
 
 **SSIS：**
 
-1. 添加对 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支持。
+1. 添加对 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 的支持。
 2. 删除对 SQL Server 2012 的支持。
 
 ### <a name="known-issues"></a>已知问题：

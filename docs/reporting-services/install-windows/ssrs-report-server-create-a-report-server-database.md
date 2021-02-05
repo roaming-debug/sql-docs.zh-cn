@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: 1b7eb1e521e1c987cb956d054c4c17beba819462
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 430e4fe05afff6f0c024bd8947dad625710913b6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172359"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236768"
 ---
 # <a name="create-a-report-server-database-report-server-configuration-manager"></a>创建报表服务器数据库（报表服务器配置管理器）  
 
@@ -79,7 +79,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePo
 - SQL Server 2017  
 ::: moniker-end
 
-- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
+- [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  
   
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
