@@ -17,24 +17,24 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: d433b5816919642b0d7b25b580f4314a949cf0c2
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: ba1ed37292b3b92ead4af84cb3f00d4b51e3372d
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036904"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250844"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>移动已注册的服务器或已注册的服务器组
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-本主题说明如何通过在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中移动已注册服务器或服务器组来整理服务器。 服务器组可以包括注册服务器，也可以包含其他服务器组。 服务器和服务器组都可以从一个服务器组移动到另一个服务器组。  
+本主题说明如何通过在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中移动已注册服务器或服务器组来整理服务器。 服务器组可以包括注册服务器，也可以包含其他服务器组。 服务器和服务器组都可以从一个服务器组移动到另一个服务器组。  
 
 ## <a name="SSMSProcedure"></a>  
 
 ### <a name="to-move-a-registered-server-or-server-group"></a>移动注册服务器或服务器组  
 
-1. 在注册服务器中，右键单击某服务器或服务器组，再单击****“移动到”。  
+1. 在注册服务器中，右键单击某服务器或服务器组，再单击“移动到”。  
   
 2. 在 **“移动服务器注册”** 对话框中，展开服务器组列表，单击您要显示的服务器或服务器组的节点，再单击 **“确定”**。  
 

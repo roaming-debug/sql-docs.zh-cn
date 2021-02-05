@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a27efd6cb20a90bc1b3ce72a6e4cee74f74c3b61
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 722371558fe5d6f1a9a8a363322a28e7f89243f2
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595235"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250377"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 故障转移群集实例 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -156,7 +156,7 @@ ms.locfileid: "98595235"
 |**主题说明**|**主题**|  
 |----------------------------|---------------|  
 |介绍如何安装新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI。|[创建新的 SQL Server 故障转移群集（安装程序）](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|介绍如何升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 故障转移群集。|[升级 SQL Server 故障转移群集实例](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
+|介绍如何升级到 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 故障转移群集。|[升级 SQL Server 故障转移群集实例](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
 |介绍 Windows 故障转移群集的概念并提供指向 Windows 故障转移群集相关任务的链接|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [故障转移群集的概述](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730692(v=ws.10))<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2： [故障转移群集的概述](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754482(v=ws.11))|  
 |介绍 FCI 中的节点和可用性组中的副本的概念区别以及有关使用 FCI 承载可用性组的副本的注意事项。|[故障转移群集和可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   

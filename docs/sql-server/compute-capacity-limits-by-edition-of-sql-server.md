@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f169f8a88c13cc6b12b060405285c963dd9524e3
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: fd76f7fb9da663c5768ec9d60679a14b797655fc
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988047"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250369"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>按 SQL Server 版本划分的计算能力限制
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  本文讨论不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的计算能力限制，以及在具有超线程处理器的物理和虚拟化环境中计算能力限制有何不同。  
+  本文讨论不同 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] 版本的计算能力限制，以及在具有超线程处理器的物理和虚拟化环境中计算能力限制有何不同。  
   
  ![映射到计算能力限制](../sql-server/media/compute-capacity-limits.gif "映射到计算能力限制")  
   
@@ -76,7 +76,7 @@ ms.locfileid: "91988047"
   
 这些限制适用于单个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例。 它们代表单个实例将使用的最大计算能力。 它们不会限制可能部署该实例的服务器。 实际上，在同一物理服务器上部署多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例可以有效使用物理服务器的计算能力，因为插槽和/或内核超出了容量限制允许的数量。  
   
-下表指定每个版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的单个实例的计算能力限制：  
+下表指定每个版本的 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]的单个实例的计算能力限制：  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|单个实例的最大计算能力 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|单个实例的最大计算能力（AS、RS）|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: afd34354290134d0973c1105a902b96c4bbdd706
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0537e602d5c6773c4978c7fff0f5bf0f927985c6
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97469998"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536338"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教程：面向 R 数据科学家的 SQL 开发
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "97469998"
 
 此示例可以扩展到各类现实问题，例如预测客户对销售活动的反应，或预测各个活动的消费或出席率。 因为该模型可以从存储过程进行调用，所以可以轻松地将它嵌入到应用程序中。
 
-本演练旨在向 R 开发人员介绍 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，因此会尽可能使用 R。 但这并不意味着 R 一定是每个任务的最佳工具。 在许多情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会提供更好的性能，特别是对于诸如数据聚合和特征工程这类任务。  这类任务可以特别受益于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的新功能，如内存优化的列存储索引。 我们会尽量在此过程中指出可能的优化。
+本演练旨在向 R 开发人员介绍 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，因此会尽可能使用 R。 但这并不意味着 R 一定是每个任务的最佳工具。 在许多情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会提供更好的性能，特别是对于诸如数据聚合和特征工程这类任务。  这类任务可以特别受益于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的新功能，如内存优化的列存储索引。 我们会尽量在此过程中指出可能的优化。
 
 ## <a name="prerequisites"></a>先决条件
 

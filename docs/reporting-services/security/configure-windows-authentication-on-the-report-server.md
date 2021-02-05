@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 53e005fcd5c4a11270a5bc2f7c307f521311c548
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 22a9134ed3caf220dbe895d7e4de8b9d52290e08
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596653"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536328"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>在报表服务器上配置 Windows 身份验证
   默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 接受指定 Negotiate 或 NTLM 身份验证的请求。 如果部署中包括使用这些安全提供程序的客户端应用程序和浏览器，则可以使用这些默认值，而无需附加配置。 如果要使用不同的安全提供程序来获取 Windows 集成安全性（例如，如果要直接使用 Kerberos）或者修改了默认值并且要还原原始设置，则可以使用本主题中的信息来指定报表服务器上的身份验证设置。  
@@ -197,7 +197,7 @@ ms.locfileid: "98596653"
   
 ## <a name="external-resources"></a>外部资源  
   
--   有关 Kerberos 和报表服务器的更多信息，请参阅 [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](https://go.microsoft.com/fwlink/?LinkID=177751)（通过 Kerberos 部署使用 SharePoint、Reporting Services 和 PerformancePoint Monitoring Server 的商业智能解决方案）。  
+-   有关 Kerberos 和报表服务器的更多信息，请参阅 [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](https://www.kasperonbi.com/deploying-a-business-intelligence-solution-using-sharepoint-reporting-services-and-performancepoint-monitoring-server-with-kerberos/)（通过 Kerberos 部署使用 SharePoint、Reporting Services 和 PerformancePoint Monitoring Server 的商业智能解决方案）。  
   
 ## <a name="see-also"></a>另请参阅  
  [针对报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)   

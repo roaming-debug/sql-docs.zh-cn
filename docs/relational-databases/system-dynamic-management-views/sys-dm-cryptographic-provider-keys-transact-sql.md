@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9fcfeed749aea4fa18ac74ba4e78cc9dfa368828
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 508240f27248cb4cc618441948c40b72c9311398
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99196301"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552612"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,10 @@ ms.locfileid: "99196301"
   返回有关可扩展密钥管理 (EKM) 提供程序提供的密钥的信息。  
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+
+> [!IMPORTANT]
+> SQL Server EKM 连接器目前不支持此动态管理视图。 SQL Server 产品团队意识到此问题，以后会解决此问题。
+
 ## <a name="syntax"></a>语法  
   
 ```  
@@ -40,7 +43,7 @@ ms.locfileid: "99196301"
 dm_cryptographic_provider_keys ( provider_id )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *provider_id*  
  EKM 提供程序的标识号，没有默认值。  
   

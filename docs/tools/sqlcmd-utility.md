@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: b499c7236391c7286c4a267c433ad991a963dab5
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 3a33f274b18e36859e697dd4c0a6bdb5c171930e
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688908"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536389"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 实用工具
 
@@ -57,7 +57,7 @@ ms.locfileid: "98688908"
 [![下载 sqlcmd for x64](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)
 <br>[![下载 sqlcmd for x86](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)
 
-命令行工具为公开发行版 (GA)，但与 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的安装程序包一起发布。
+命令行工具为公开发行版 (GA)，但与 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 的安装程序包一起发布。
 
 **版本信息**
 
@@ -70,7 +70,7 @@ ms.locfileid: "98688908"
 
 **系统要求** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008 - 2019。
 
-此组件要求安装 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 和 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md)。
+此组件要求安装 [Windows Installer 4.5](https://windows-installer.soft32.com/) 和 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md)。
  
 若要查看 SQLCMD 版本，请执行 `sqlcmd -?` 命令，并确认使用的是版本 15.0.2000.5 或更高版本。
 

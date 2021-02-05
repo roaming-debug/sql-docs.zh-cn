@@ -17,21 +17,21 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: eafa770651260fb99931556308ccce58f1bf681c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: acf4033e4f4a7faed1fc771612fd038916da52ec
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037556"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250703"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>导入已注册服务器信息 (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-本主题说明如何导入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中保存的已注册服务器信息。 通过导出再导入已注册服务器的相关文件，可以便捷地为多台计算机配置与“已注册的服务器”中相同服务器之间的连接。 当从不同位置的计算机管理大量服务器，或希望为不熟练的用户配置基本的连接设置时，这非常有用。  
+本主题说明如何导入 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中保存的已注册服务器信息。 通过导出再导入已注册服务器的相关文件，可以便捷地为多台计算机配置与“已注册的服务器”中相同服务器之间的连接。 当从不同位置的计算机管理大量服务器，或希望为不熟练的用户配置基本的连接设置时，这非常有用。  
   
 > [!NOTE]  
->  您不能从早期版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将已注册服务器信息导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+>  您不能从早期版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中将已注册服务器信息导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -39,7 +39,7 @@ ms.locfileid: "92037556"
   
 1.  在已注册的服务器中，单击“已注册的服务器”工具栏上的服务器类型。 服务器类型必须与已注册的服务器的导出文件类型一样。 例如，如果您已经导出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已注册服务器信息，则必须在“已注册的服务器”工具栏上单击 **“SQL Server”** 。  
   
-2.  右键单击服务器组，再选择“导入”****。  
+2.  右键单击服务器组，再选择“导入”。  
   
 3.  在 **“导入已注册的服务器”** 对话框中，选择要导入的已注册的服务器文件，再单击 **“确定”**。  
   

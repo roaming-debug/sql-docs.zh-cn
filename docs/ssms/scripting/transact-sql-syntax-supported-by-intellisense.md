@@ -16,19 +16,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbc08b695d0909ed0656a8bb2dd416f17a2c79e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 05e99b82272241221ba43e65a881bf0bdc4a29bf
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480598"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250434"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 支持的 Transact-SQL 语法
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  本主题介绍了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 IntelliSense 支持的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]语句和语法元素。  
+  本主题介绍了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 IntelliSense 支持的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]语句和语法元素。  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense 支持的语句  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，IntelliSense 只支持最常用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有些通用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器条件可能妨碍 IntelliSense 正常运行。 有关详细信息，请参阅 [IntelliSense 故障排除 (SQL Server Management Studio)](./troubleshooting-intellisense.md)。  
+ 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中，IntelliSense 只支持最常用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有些通用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器条件可能妨碍 IntelliSense 正常运行。 有关详细信息，请参阅 [IntelliSense 故障排除 (SQL Server Management Studio)](./troubleshooting-intellisense.md)。  
   
 > [!NOTE]  
 >  IntelliSense 不能用于加密的数据库对象，例如加密的存储过程或用户定义函数。 参数帮助和快速信息不能用于扩展存储过程和 CLR 集成用户定义类型的参数。  

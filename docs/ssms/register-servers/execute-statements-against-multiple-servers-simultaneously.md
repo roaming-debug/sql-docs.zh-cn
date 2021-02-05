@@ -15,18 +15,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
-ms.openlocfilehash: 91a18087a9bf3f844988dec16e84a1cdbbfb1948
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1c5de69d2a4167d03dcc5ea5c34ed6f0262c4678
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037570"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250407"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>同时对多个服务器执行语句
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，通过以下方法同时查询多个服务器：创建一个本地服务器组，或者创建一个中央管理服务器以及一个或多个服务器组，在这些组中创建一个或多个已注册的服务器，然后查询整个组。 
+本主题说明如何在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中，通过以下方法同时查询多个服务器：创建一个本地服务器组，或者创建一个中央管理服务器以及一个或多个服务器组，在这些组中创建一个或多个已注册的服务器，然后查询整个组。 
 
 可以将查询返回的结果合并到单个结果窗格中，也可以在单独结果窗格中返回这些结果。 结果集可能包含额外的列，即每个服务器上的查询所使用的服务器名和登录名。 只能使用 Windows 身份验证来注册中央管理服务器和从属服务器。 可以使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证来注册本地服务器组中的服务器。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "92037570"
   
  ## <a name="execute-statements-against-multiple-configuration-targets-simultaneously"></a>同时对多个配置目标执行语句  
 
-1.  在 SQL Server Management Studio 中的“视图”**** 菜单上，单击****“已注册的服务器”。  
+1.  在 SQL Server Management Studio 中的“视图”菜单上，单击“已注册的服务器”。  
   
-2.  展开一个中央管理服务器，右键单击某个服务器组，指向“连接”****，然后单击“新建查询”****。  
+2.  展开一个中央管理服务器，右键单击某个服务器组，指向“连接”，然后单击“新建查询”。  
   
 3.  在查询编辑器中，键入并执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，例如：  
   
