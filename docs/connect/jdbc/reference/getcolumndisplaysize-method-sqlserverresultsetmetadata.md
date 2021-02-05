@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSetMetaData.getColumnDisplaySize
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1d6a933f2e5d0fe87ac4b224905dba9683586bd5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f38f061e0789b745786f92820ab00d05e6f0b2b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436649"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168100"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>getColumnDisplaySize 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public int getColumnDisplaySize(int column)
  指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个 int 值，此值指示最大宽度****。 如果宽度未知，则返回 0。  
+ 一个 int 值，此值指示最大宽度。 如果宽度未知，则返回 0。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

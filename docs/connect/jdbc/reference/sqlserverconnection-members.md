@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 75a3670a0f7e958f1976e387acdaa02a8449d202
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed9783e0b91dd79fe7b52c80b05fa7693213759c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458279"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172840"
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "88458279"
 |[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|立即释放此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的数据库和 JDBC 资源，而非等待它们自动释放。|  
 |[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|强制对任何未完成且已放弃的准备的语句执行取消准备请求。| 
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)|让自上次提交或回滚后的所有更改都成为永久性更改，并释放当前由此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象保留的任何数据库锁。|  
-|[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|创建不含任何数据的 java.sql.Blob**** 对象。|  
-|[createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md)|创建不含任何数据的 java.sql.Clob**** 对象。|  
-|[createNClob](../../../connect/jdbc/reference/createnclob-method-sqlserverconnection.md)|创建不含任何数据的 java.sql.NClob**** 对象。|  
+|[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|创建不含任何数据的 java.sql.Blob 对象。|  
+|[createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md)|创建不含任何数据的 java.sql.Clob 对象。|  
+|[createNClob](../../../connect/jdbc/reference/createnclob-method-sqlserverconnection.md)|创建不含任何数据的 java.sql.NClob 对象。|  
 |[createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)|创建用于将 SQL 语句发送到数据库的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象。|  
-|[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|创建不含任何数据的 java.sql.SQLXML**** 对象。|  
+|[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|创建不含任何数据的 java.sql.SQLXML 对象。|  
 |[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|检索此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的当前自动提交模式。|  
 |[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|检索此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的当前目录名称。|  
 |[getClientConnectionID 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|无论最新连接尝试成功还是失败，都获取该尝试的连接 ID。|  

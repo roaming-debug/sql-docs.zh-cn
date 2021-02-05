@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.getMaxStatements
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 71d58431-b671-49c5-939a-f581d1fef7cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 65b697414aadc3ded169cd70f19f8f923886c699
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ca07db52c71e12a1ffa3866b6b3cd05f55fceda
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88435489"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175503"
 ---
 # <a name="getmaxstatements-method-sqlserverdatabasemetadata"></a>getMaxStatements 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public int getMaxStatements()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示允许的最大活动语句数的 int****。  
+ 指示允许的最大活动语句数的 int。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

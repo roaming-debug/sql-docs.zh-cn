@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.setDate (java.lang.String, java.sql.Date)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4762e2bd-5e94-4562-97d5-f023ecffc08c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7026d1594a8c5d1dde27cedf926787231b0889e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99cb3dac5b787b08b13016a59f1a6e48ead2862f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88432019"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99173528"
 ---
 # <a name="setdate-method-javalangstring-javasqldate"></a>setDate 方法 (java.lang.String, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,9 +37,9 @@ public void setDate(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>参数  
- sCol**  
+ sCol  
   
- 包含参数名称的字符串****。  
+ 包含参数名称的字符串。  
   
  *d*  
   

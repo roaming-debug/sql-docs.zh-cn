@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0530af64efd7d43391df2efec3eaac63294ecea1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fe11f6a3377d0a26941138b8a581f642a6b0755
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467099"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172791"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88467099"
 |[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|检索给定架构和目录中可用的用户定义类型的给定类型的给定属性的说明。|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|检索表中唯一标识一行的最佳列集的说明。|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|检索在连接的服务器中可用的目录名称。|  
-|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|检索此数据库用作目录和表名之间的分隔符的字符串****。|  
+|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|检索此数据库用作目录和表名之间的分隔符的字符串。|  
 |[getCatalogTerm](../../../connect/jdbc/reference/getcatalogterm-method-sqlserverdatabasemetadata.md)|检索数据库供应商有关“目录”的首选术语。|  
 |[getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md)|检索驱动程序支持的客户端信息属性的列表。|  
 |[getColumnPrivileges](../../../connect/jdbc/reference/getcolumnprivileges-method-sqlserverdatabasemetadata.md)|检索关于表中各列的访问权限的说明。|  
@@ -69,7 +69,7 @@ ms.locfileid: "88467099"
 |[getExtraNameCharacters](../../../connect/jdbc/reference/getextranamecharacters-method-sqlserverdatabasemetadata.md)|检索可以用于未加引号的标识符名称的所有其他字符，例如在 a-z、A-Z、0-9 和 _ 之外的字符。|  
 |[getFunctions](../../../connect/jdbc/reference/getfunctions-method-sqlserverdatabasemetadata.md)|检索系统函数和用户函数的说明。|  
 |[getFunctionColumns](../../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)|检索关于指定目录的系统函数或用户函数参数和返回类型的说明。|  
-|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|检索用于为 SQL 标识符加引号的字符串****。|  
+|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|检索用于为 SQL 标识符加引号的字符串。|  
 |[getImportedKeys](../../../connect/jdbc/reference/getimportedkeys-method-sqlserverdatabasemetadata.md)|检索由表的外键列引用的主键列的说明。|  
 |[getIndexInfo](../../../connect/jdbc/reference/getindexinfo-method-sqlserverdatabasemetadata.md)|检索给定表的索引和统计信息的说明。|  
 |[getJDBCMajorVersion](../../../connect/jdbc/reference/getjdbcmajorversion-method-sqlserverdatabasemetadata.md)|检索此驱动程序的 JDBC 主版本号。|  
@@ -103,10 +103,10 @@ ms.locfileid: "88467099"
 |[getRowIdLifetime](../../../connect/jdbc/reference/getrowidlifetime-method-sqlserverdatabasemetadata.md)|返回一种状态，该状态指示 SQL RowId 数据类型是否受支持。 如果受支持，则返回 RowId 对象保持有效的生存期。|  
 |[getSchemas](../../../connect/jdbc/reference/getschemas-method.md)|检索当前数据库中可用的架构名称。|  
 |[getSchemaTerm](../../../connect/jdbc/reference/getschematerm-method-sqlserverdatabasemetadata.md)|检索与此数据库中的“架构”对应的首选术语。|  
-|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|检索可用于转义通配符的 String**** 值。|  
+|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|检索可用于转义通配符的 String 值。|  
 |[getSQLKeywords](../../../connect/jdbc/reference/getsqlkeywords-method-sqlserverdatabasemetadata.md)|检索此数据库的所有 SQL 关键字（但并非 SQL92 关键字）的以逗号分隔的列表。|  
 |[getSQLStateType](../../../connect/jdbc/reference/getsqlstatetype-method-sqlserverdatabasemetadata.md)|指示 SQLException.getSQLState 方法返回的 SQLSTATE 是否为 X/Open（现称为 Open Group）、SQL CLI、SQL99 (JDBC 3.0) 或 SQL:2003 (JDBC 4.0)。|  
-|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|检索可用于此数据库的 String**** 函数以逗号分隔的列表。|  
+|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|检索可用于此数据库的 String 函数以逗号分隔的列表。|  
 |[getSuperTables](../../../connect/jdbc/reference/getsupertables-method-sqlserverdatabasemetadata.md)|检索在此数据库的特定架构中定义的表层次结构的说明。|  
 |[getSuperTypes](../../../connect/jdbc/reference/getsupertypes-method-sqlserverdatabasemetadata.md)|检索此数据库的特定架构中由用户定义的类型层次结构的说明。|  
 |[getSystemFunctions](../../../connect/jdbc/reference/getsystemfunctions-method-sqlserverdatabasemetadata.md)|检索可用于此数据库的系统函数的以逗号分隔的列表。|  

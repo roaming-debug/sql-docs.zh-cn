@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.getString (java.lang.String)
 apilocation:
@@ -16,17 +16,17 @@ apitype: Assembly
 ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2abe464ba8c800dff256ebe2dfcec0d6e787c5dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3abe4f260c8e2fffb8fa32460d9e233ea65cdfbf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434349"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174933"
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>getString 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名称作为 Java 编程语言中的字符串**** 的值。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名称作为 Java 编程语言中的字符串的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ public java.lang.String getString(java.lang.String columnName)
  一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- 一个字符串值****。  
+ 一个字符串值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -53,7 +53,7 @@ public java.lang.String getString(java.lang.String columnName)
   
  位置敏感类型（如 money、smallmoney, datetime、smalldatetime、float、real、decimal 和 numeric）将返回基本类型值的规范 toString() 格式。  
   
- 用户定义类型将作为十六进制字符串值返回****。  
+ 用户定义类型将作为十六进制字符串值返回。  
   
 ## <a name="see-also"></a>另请参阅  
  [getString 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)   

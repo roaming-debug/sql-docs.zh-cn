@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.setPortNumber
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 59c5fa23-bc1a-4142-af17-70e275f0b833
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbf1cccfab3cef60193cc9b45921c203821cbfca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d7df7d07feb1fc5250e6fdf6076cad237271380
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458479"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99173189"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>setPortNumber 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setPortNumber(int portNumber)
 #### <a name="parameters"></a>参数  
  *portNumber*  
   
- 一个 int 值，此值包含端口号****。  
+ 一个 int 值，此值包含端口号。  
   
 ## <a name="remarks"></a>注解  
  此端口号是打开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的套接字连接时使用的 TCP/IP 端口号。 如果未设置 portNumber 属性，[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) 方法将返回默认值 1433。  

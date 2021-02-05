@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.othersDeletesAreVisible
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: c4692a8c-e6b7-4edc-9dad-7af816988de5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6bd0907c3d6992725ce9f9b43f8d00adab5b571a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7dbb14fee93cb882b95b3a5024dab20a12490c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433119"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174258"
 ---
 # <a name="othersdeletesarevisible-method-sqlserverdatabasemetadata"></a>othersDeletesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public boolean othersDeletesAreVisible(int type)
 #### <a name="parameters"></a>参数  
  type  
   
- 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一****：  
+ 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
  TYPE_FORWARD_ONLY  
@@ -59,7 +59,7 @@ public boolean othersDeletesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- 如果删除操作可见，则为 true****。 否则为 **false**。  
+ 如果删除操作可见，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

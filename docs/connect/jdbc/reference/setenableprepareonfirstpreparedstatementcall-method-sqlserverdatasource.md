@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 838696d89354d857c86aae0f6191d1dd08fba820
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fddc34fcdabad8fb34a81194b0bb502d41cd75a0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431909"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99173466"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource"></a>setEnablePrepareOnFirstPreparedStatementCall 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOn
 #### <a name="parameters"></a>参数  
  *enablePrepareOnFirstPreparedStatementCall*  
   
- enablePrepareOnFirstPreparedStatementCall**** 连接属性的新值。  
+ enablePrepareOnFirstPreparedStatementCall 连接属性的新值。  
 
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

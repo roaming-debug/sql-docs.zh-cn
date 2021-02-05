@@ -2,19 +2,19 @@
 title: 驱动程序功能支持矩阵
 description: 了解 SQL Server 的驱动程序支持的常用功能，以及可找到有关这些功能的信息的位置。
 ms.custom: ''
-ms.date: 12/03/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 4fff9c04098bd0796f714d160864e4edb93613ac
-ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
+ms.openlocfilehash: e93307a7f29f31aa078a7d705a904812e6aa3847
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96595228"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166061"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Microsoft SQL Server 的驱动程序功能支持矩阵
 
@@ -62,9 +62,9 @@ ms.locfileid: "96595228"
 | [Azure Active Directory 访问令牌身份验证](/azure/active-directory/develop/access-tokens) | [是](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [是](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [是](jdbc/connecting-using-azure-active-directory-authentication.md#connecting-using-access-token) | [是](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 密码身份验证](/azure/sql-database/sql-database-aad-authentication) |  [是](odbc/using-azure-active-directory.md) | [是](odbc/using-azure-active-directory.md) | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 集成身份验证](/azure/sql-database/sql-database-aad-authentication) | [是](odbc/using-azure-active-directory.md) | [是](odbc/using-azure-active-directory.md) | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
-| [Azure Active Directory 交互式 (MFA) 身份验证](/azure/sql-database/sql-database-aad-authentication) | [是](odbc/using-azure-active-directory.md) | | | [是](oledb/features/using-azure-active-directory.md) |
+| [Azure Active Directory 交互式 (MFA) 身份验证](/azure/sql-database/sql-database-aad-authentication) | [是](odbc/using-azure-active-directory.md) | | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 托管标识身份验证](/azure/active-directory/managed-identities-azure-resources/overview) | [是](odbc/using-azure-active-directory.md) | [是](odbc/using-azure-active-directory.md) | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
-| [Azure Active Directory 服务主体身份验证](/azure/active-directory/develop/app-objects-and-service-principals) | | | | [是](oledb/features/using-azure-active-directory.md) |
+| [Azure Active Directory 服务主体身份验证](/azure/active-directory/develop/app-objects-and-service-principals) | [是](odbc/using-azure-active-directory.md) | [是](odbc/using-azure-active-directory.md) | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
 | [Windows 集成身份验证](/windows-server/security/windows-authentication/windows-authentication-overview) | 是 | [是](odbc/linux-mac/using-integrated-authentication.md) | [是](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | 是 |
 | [大容量复制](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [是](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [是](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [是](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [是](oledb/features/performing-bulk-copy-operations.md) |
 | [数据发现和分类元数据](../relational-databases/security/sql-data-discovery-and-classification.md) | [是](odbc/data-classification.md) | [是](odbc/data-classification.md) | [是](jdbc/data-discovery-classification-sample.md) | |

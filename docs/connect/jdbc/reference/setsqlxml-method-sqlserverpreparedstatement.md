@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 70bbdde0-75f7-4169-88c5-dbbe2c4bcd03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 352f46f4cbe8387aaffbf0eb0f13d6046c1db5b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fc6011dc256692694e3a3987c8f2e9eb10c7d5d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458289"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99173075"
 ---
 # <a name="setsqlxml-method-sqlserverpreparedstatement"></a>setSQLXML 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,11 +32,11 @@ public final void setSQLXML(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>参数  
- parameterIndex**  
+ parameterIndex  
   
- 指示参数索引的 int****。  
+ 指示参数索引的 int。  
   
- xmlObject**  
+ xmlObject  
   
  包含参数值的 SQLXML 对象。  
   

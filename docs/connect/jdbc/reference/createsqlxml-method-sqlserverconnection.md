@@ -7,21 +7,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: cf5bfcdd-bc03-4c5b-b554-d8a8a4067e93
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 365e7f0496c8222312f56657c569833285e5ad3f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 073efbdd8a504746781d19100006ea2776f37089
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437969"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168569"
 ---
 # <a name="createsqlxml-method-sqlserverconnection"></a>createSQLXML 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  创建不含任何数据的 SQLXML**** 对象。  
+  创建不含任何数据的 SQLXML 对象。  
   
 ## <a name="syntax"></a>语法  
   

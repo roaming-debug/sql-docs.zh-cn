@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ab9c7b10-026f-4a51-8d60-e6871d1abd02
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec01af89ce9afbf9b38d65a1e76ac7d27ea937e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07eea350ed9eb598705037f8b28a36e6a08f97b8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434459"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174986"
 ---
 # <a name="getsqlxml-method-javalangstring-sqlserverresultset"></a>getSQLXML 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ public final java.sql.SQLXML getSQLXML(java.lang.String columnLabel)
 #### <a name="parameters"></a>参数  
  *columnName*  
   
- 指示列标签的字符串****。  
+ 指示列标签的字符串。  
   
 ## <a name="return-value"></a>返回值  
  ASQLXMLobject。  

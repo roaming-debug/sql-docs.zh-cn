@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.getTimestamp (int, java.util.Calendar)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cfc800130418505067f50eb0de5dc3679a57a137
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fee2b35c221d32bd1c99cc172e8c6629c8ef61e8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434149"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174831"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>getTimestamp 方法 (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public java.sql.Timestamp getTimestamp(int index,
 #### <a name="parameters"></a>参数  
  *index*  
   
- 指示参数索引的 int****。  
+ 指示参数索引的 int。  
   
  cal   
   
