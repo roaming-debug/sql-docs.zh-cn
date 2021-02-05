@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872d40262da465bac6e336472e8beca402482b5f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0cc0d86dbdce6e3618957551a1059c0178a23d61
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484369"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236299"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
 
@@ -39,8 +39,9 @@ ms.locfileid: "97484369"
 1. 验证是否视图中将引用的所有现有表的 SET 选项都正确。
 2. 在创建任意表和视图之前，验证会话的 SET 选项设置是否正确。
 3. 验证视图定义是否为确定性的。
-4. 使用 `WITH SCHEMABINDING` 选项创建视图。
-5. 为视图创建唯一的聚集索引。
+4. 验证基表与视图是否具有相同的所有者。
+5. 使用 `WITH SCHEMABINDING` 选项创建视图。
+6. 为视图创建唯一的聚集索引。
 
 > [!IMPORTANT]
 > 如果表被大量索引视图引用（或引用它的索引视图数量较少，但非常复杂），那么在该表上执行 DML<sup>1</sup> 时，必须更新这些引用的索引视图。 因此，DML 查询性能会显着降低，或者在某些情况下，甚至无法生成查询计划。
@@ -156,7 +157,10 @@ ms.locfileid: "97484369"
 
 #### <a name="permissions"></a><a name="Permissions"></a> 权限
 
-要求在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限 。
+要求在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限 。 如果基表位于不同的架构中，则至少需要针对表的 REFERENCES 权限。
+
+    > [!NOTE]  
+    > For the creation of the index on top of the view, the base table must have the same owner as the view. This is also called ownership-chain. This is usually the case when table and view reside within the same schema, but it is possible that individual objects have different owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 

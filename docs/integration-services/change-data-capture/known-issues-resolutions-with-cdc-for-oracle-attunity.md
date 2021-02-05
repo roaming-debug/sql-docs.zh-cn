@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: e89a3638dc304bdda8bc11c55897975fb006e3ca
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94384724"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076835"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Attunity Oracle 更改数据捕获的已知错误和解决方法
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "94384724"
 - 部分更改会丢失，并且不会复制到 SQL Server 数据库中。 当一个表包含多个字符的大型二进制对象 (CLOB) 并且其中一个 CLOB 的值较大时，会发生此问题。 
     - 已在 _SQL Server 2014 SP1 累积更新 1_ 和 _SQL Server 2014 RTM 累积更新 8_ 中修复，如知识库文章 [3029096](https://support.microsoft.com/kb/3029096) 中所述。 
 - 当 Oracle 表具有数据类型为 Long 的列时，Attunity Oracle 更改数据捕获将停止工作。
-    - 已在 _SQL Server 2014 SP1 的累积更新 5_ 和 _SQL 2014 RTM 的累积更新 12_ 中修复，如知识库文章 [3145983](https://support.microsoft.com/kb/3145983) 中所述。
+    - 已在 SQL Server 2014 SP1 的累积更新 5 和 SQL 2014 RTM 的累积更新 12 中修复，如知识库文章 [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d) 中所述 。
 
 ### <a name="sql-server-2012"></a>SQL Server 2012
 
@@ -89,7 +89,7 @@ ms.locfileid: "94384724"
 - Oracle 表 cdc.table_name 的元数据验证失败。 列 column_name 索引超出范围。 已在 _SQL Server 2012 SP1 累积更新 7_ 中修复，如知识库文章 [2883524](https://support.microsoft.com/kb/2883524) 中所述。
 - 在 SQL Server 2012 中使用 Attunity Oracle CDC 时，Oracle CDC 服务显示中止状态。 已在 _SQL Server 2012 SP1 累积更新 8_ 中修复，如知识库文章 [2923839](https://support.microsoft.com/kb/2923839)中所述。  
 - 部分更改会丢失，并且不会复制到 SQL Server 数据库中。 当一个表包含多个字符的大型二进制对象 (CLOB) 并且其中一个 CLOB 的值较大时，会发生此问题。 已在 _SQL Server 2012 SP1 累积更新 8_ 中修复，如知识库文章 [2923839](https://support.microsoft.com/kb/2923839)中所述。   
-- 当 Oracle 表具有数据类型为 Long 的列时，Attunity Oracle 更改数据捕获将停止工作。 已在 _SQL Server 2012 SP3 累积更新 2_ 和 _SQL 2012 SP2 累积更新 11_ 中修复，如知识库文章 [3145983](https://support.microsoft.com/kb/3145983) 中所述。 
+- 当 Oracle 表具有数据类型为 Long 的列时，Attunity Oracle 更改数据捕获将停止工作。 已在 SQL Server 2012 SP3 累积更新 2 和 SQL 2012 SP2 累积更新 11 中修复，如知识库文章 [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d) 中所述 。 
 
 ## <a name="collect-detailed-logs"></a>收集详细日志 
 

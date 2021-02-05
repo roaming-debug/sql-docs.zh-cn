@@ -12,12 +12,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 03041d41745e51d858f56bfcd21407ad58530dd9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2f034ac2223b15a3b66883a3ce3dbc434bcf07db
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460690"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813251"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升级 Power Pivot for SharePoint
 
@@ -57,7 +57,7 @@ ms.locfileid: "97460690"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具是 SQL Server 共享功能之一，所有共享功能同时升级。 如果在升级过程中选择需要共享功能升级的其他 SQL Server 实例或功能，则将一同升级 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 如果该 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具已升级，但你的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 实例未升级，可能会导致问题。 有关 SQL Server 共享功能的详细信息，请参阅[使用安装向导（安装程序）升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
--   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerPivot.msi**) 与先前版本并行安装。 例如， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 外接程序安装到文件夹 `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`。  
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerPivot.msi**) 与先前版本并行安装。 例如，该外接程序安装到文件夹 `c:\Program Files\Microsoft SQL Server\nnn\Tools\PowerPivotTools`。 有关 SQL Server 安装文件的信息，请参阅[文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-)。
   
 ##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
  **权限**  

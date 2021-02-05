@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e15751fb064d2843770d72f26db94b29de28f199
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 1f9b85e3d2f14eb534956c218d38f98b634dc89c
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867597"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813287"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91867597"
   
 ##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a> 创建由透明数据加密保护的数据库  
 
-以下过程演示了必须使用 SQL Server Management Studio 和 Transact-SQL 创建由 TDE 保护的数据库。
+以下过程演示了如何使用 SQL Server Management Studio 和 Transact-SQL 创建由 TDE 保护的数据库。
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> 使用 SQL Server Management Studio  
   
@@ -138,7 +138,7 @@ ms.locfileid: "91867597"
   
 ##  <a name="to-move-a-database-protected-by-transparent-data-encryption"></a><a name="TsqlProcedure"></a> 移动由透明数据加密保护的数据库 
 
-以下过程演示了必须使用 SQL Server Management Studio 和 Transact-SQL 移动由 TDE 保护的数据库。
+以下过程演示了如何使用 SQL Server Management Studio 和 Transact-SQL 移动由 TDE 保护的数据库。
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> 使用 SQL Server Management Studio  
   

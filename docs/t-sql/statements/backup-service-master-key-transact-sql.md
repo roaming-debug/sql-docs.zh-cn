@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - BACKUP SERVICE MASTER KEY
 - DUMP_SERVICE_MASTER_KEY_TSQL
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bc800323e28e603b5a66d9f18d2516c9e5121e89
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 578919b8583090494b762400b7ad49541d824320
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688532"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199371"
 ---
 # <a name="backup-service-master-key-transact-sql"></a>BACKUP SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,10 +49,10 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- FILE ='path_to_file'  
+ FILE **='** _path_to_file_*_'_*  
  指定要将服务主密钥导出到的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。  
   
- PASSWORD ='password'  
+ PASSWORD **='** _password_*_'_*  
  用于对备份文件中的服务主密钥进行加密的密码。 此密码应通过复杂性检查。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
 ## <a name="remarks"></a>注解  

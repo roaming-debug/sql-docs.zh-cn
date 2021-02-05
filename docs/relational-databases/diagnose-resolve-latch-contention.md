@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75f999052eecd750d548cb6d383eafe5375ed130
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: af2caf850d3f7facb61a7484c5af44e4ba785fa3
+ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440142"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860910"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>诊断和解决 SQL Server 上的闩锁争用问题
 
@@ -58,7 +58,7 @@ SQL Server 中一个页的大小为 8 KB，可以存储多行。 为了提高并
 
 * **KP** - 保留闩锁，确保无法破坏被引用的结构。 当线程要查看缓冲区结构时使用。 因为 KP 闩锁与除破坏 (DT) 闩锁以外的所有闩锁兼容，所以 KP 闩锁被认为是“轻量级”的，这意味着使用 KP 闩锁对性能的影响最小。 由于 KP 闩锁与 DT 闩锁不兼容，因此它会阻止任何其他线程破坏被引用的结构。 例如，KP 闩锁会阻止惰性写入器进程破坏其引用的结构。 有关如何将惰性写入器进程与 SQL Server 缓冲区页管理配合使用的详细信息，请参阅[写入页](./writing-pages.md)。
 
-* **SH** - 共享闩锁，用于读取页结构。 
+* SH - 读取引用的结构（例如读取数据页）所需的共享闩锁。 多个线程可同时访问共享闩锁下的一个资源以进行读取。
 * **UP** - 更新闩锁，与 SH（共享闩锁）和 KP 兼容，但与其他闩锁不兼容，因此它不允许 EX 闩锁写入被引用的结构。 
 * **EX** - 独占闩锁，阻止其他线程写入或读取被引用的结构。 例如，可使用它修改页内容，以保护残缺页。 
 * **DT** - 破坏闩锁，必须在破坏被引用结构的内容前获取。 例如，在将干净页添加到可供其他线程使用的空闲缓冲区列表之前，惰性写入器进程必须获取 DT 闩锁来释放该页。

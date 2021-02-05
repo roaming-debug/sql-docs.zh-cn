@@ -12,12 +12,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ba8729558f6e3e1736db9c380a268cd606444f1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c39e0d3bc84bd469d599ada0ecd5884e37193a08
+ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482350"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860920"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>临时表注意事项和限制
 
@@ -53,7 +53,7 @@ ms.locfileid: "97482350"
 - 复制技术的使用受到限制：
 
   - **Always On：** 完全支持
-  - **变更数据捕获和数据跟踪** 仅当前表支持
+  - 变更数据捕获和更改跟踪：仅当前表支持
   - **快照和事务复制**：仅支持未启用临时的单个发布服务器和启用了临时的一个订阅服务器。 在这种情况下，发布服务器用于 OLTP 工作负载，而订阅服务器用于卸载报表（包括“AS OF”查询）。 启动后，分发代理打开在其停止前一直保持打开状态的事务。 由于有此行为，SysStartTime 和 SysEndTime 填充到分发代理启动的第一个事务的开始时间。 因此，如果对你的应用程序或组织而言，必须向 SysStartTime 和 SysEndTime 填充一个接近于当前系统时间的时间，那么按计划运行分发代理可能比连续运行默认行为更可取。 不支持使用多个订阅服务器，因为这可能会由于依赖本地系统时钟而导致临时数据不一致。
   - **合并复制：** 不支持时态表
 

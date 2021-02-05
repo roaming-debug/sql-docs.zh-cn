@@ -1,27 +1,26 @@
 ---
 description: RESTORE 语句 - 参数 (Transact-SQL)
-title: RESTORE 参数 (Transact-SQL) | Microsoft Docs
+title: RESTORE 参数 (Transact-SQL)
 ms.custom: ''
 ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
-ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 19c71e5beb3b192615f57e620870dec66b2d645f
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: c07e6ba84a511d81e1fb17718552a0ca2738271a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688810"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236242"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 语句 - 参数 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -255,7 +254,7 @@ CREDENTIAL
  仅当从 Windows Azure Blob 存储服务还原备份时使用。  
   
 > [!NOTE]  
->  对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]，从 URL 还原时只能从单个设备进行还原。 从 URL 还原时，若要从多个设备进行还原，必须使用 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到 [当前版本](../../sql-server/what-s-new-in-sql-server-2016.md) 以及共享访问签名 (SAS) 令牌。 有关详细信息，请参阅[对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)和 [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell（使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程）](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)。  
+>  对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]，从 URL 还原时只能从单个设备进行还原。 从 URL 还原时，若要从多个设备进行还原，必须使用 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 或更高版本以及共享访问签名 (SAS) 令牌。 有关详细信息，请参阅[对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)和 [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell（使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程）](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)。  
   
  REPLACE  
  支持的语句：[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

@@ -9,12 +9,12 @@ ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b929bd76f77f021fbc1821811beb7e86be8edd2e
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 20953eb151912f6eddf1e3ea0e13d34f3835e7d6
+ms.sourcegitcommit: 3e2421ae45a8e9fa57fb590a5d1a5566721ea74a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235664"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98921404"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例 - iSCSI - Linux 上的 SQL Server
 
@@ -58,7 +58,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
 
     请参阅以下示例：
 
-    ![文件完全填写好的文件屏幕截图。][2]
+    ![值完全填写好的文件屏幕截图。][2]
 
 3.  查找 iSCSI 目标。
 

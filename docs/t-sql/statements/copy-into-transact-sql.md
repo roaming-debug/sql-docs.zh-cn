@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 43a5cc755eb07fe80a0d33d6b5b892e2a65ab21e
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: fb52e9e869c0210e8e320c11dfec21aa8f7d585e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638723"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076805"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -402,7 +402,7 @@ WITH (
 ## <a name="faq"></a>常见问题解答
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>与 PolyBase 相比，COPY 命令的性能如何？
-COPY 命令将具有更好的性能，具体取决于工作负载。 为了获得最佳加载性能，请考虑在加载 CSV 时将你的输入拆分为多个文件。
+COPY 命令将具有更好的性能，具体取决于工作负载。 为了获得最佳加载性能，请考虑在加载 CSV 时将你的输入拆分为多个文件。 本指南也适用于 gzip 压缩文件。
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>加载 CSV 文件时，COPY 命令的文件拆分指导是什么？
 下表概述了文件数量指导。 一旦达到推荐的文件数量，便能获得更大的文件，性能也就越高。 对于简单的文件拆分体验，请参阅以下[文档](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474)。 

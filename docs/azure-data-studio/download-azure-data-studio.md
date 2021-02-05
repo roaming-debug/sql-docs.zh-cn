@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2020
-ms.openlocfilehash: 1a8de5f990d9f3a8a974705d090dad8dccc1bae6
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.date: 1/22/2021
+ms.openlocfilehash: 5e7759c3dbf450f944504ea0ac67bb24cda7b263
+ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99235733"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99510338"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
@@ -26,9 +26,9 @@ Azure Data Studio 利用 IntelliSense、代码片段、源代码管理集成和�
 
 | 平台 | 下载 | 发布日期 | 版本 |
 |----------|----------|--------------|---------|
-| Windows | [用户安装程序（推荐）](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[系统安装程序](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2151312) | 2020 年 1 月 22 日 | 1.25.2 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2151311) | 2020 年 1 月 22 日 | 1.25.2 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | 2020 年 1 月 22 日 | 1.25.2 |
+| Windows | [用户安装程序（推荐）](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[系统安装程序](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2151312) | 2021 年 1 月 22 日 | 1.25.2 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2151311) | 2021 年 1 月 22 日 | 1.25.2 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | 2021 年 1 月 22 日 | 1.25.2 |
 
 有关最新版本的详细信息，请参阅[发行说明](./release-notes-azure-data-studio.md)。
 

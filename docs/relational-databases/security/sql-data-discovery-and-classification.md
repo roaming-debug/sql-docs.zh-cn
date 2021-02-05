@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: eab3c943f1191c2d52f6d476c1e0a83b74b6f0df
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 57ddcd78bd05cda262c9e4d041562dc5c2dfc4b7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638013"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236548"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "97638013"
 数据发现和分类引入了全新工具，并将其内置于 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)，以便发现数据库中的敏感数据并对其进行分类、标记和报告   。
 发现最敏感的数据（如商业、金融、医疗等）并对其进行分类在组织的信息保护中可起到关键作用。 它可以充当基础结构，用于：
 * 帮助满足数据隐私标准。
-* 控制对包含高度敏感数据的数据库/列的访问，并加强其安全性。
+* 监视对包含高度敏感数据的数据库/列的访问。
 
 > [!NOTE]
 > SQL Server 2012 及更高版本支持数据发现和分类，这些功能可用于 [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 或更高版本。 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](/azure/sql-database/sql-database-data-discovery-and-classification/)。
 
 ## <a name="overview"></a><a id="subheading-1"></a>概述
-数据发现和分类引入了一套高级服务，形成了一种旨在保护各种数据（而不只是数据库）的全新 SQL 信息保护范例：
+数据发现和分类引入了一套服务，形成了一种旨在保护各种数据（而不只是数据库）的全新 SQL 信息保护范例：
 
 * 发现和建议 - 分类引擎扫描数据库，并标识包含潜在敏感数据的列。 利用它可以轻松查看和应用相应的分类建议，也可以手动对列进行分类。
 * 标记 - 可以在列上永久地标记敏感度分类标签。
