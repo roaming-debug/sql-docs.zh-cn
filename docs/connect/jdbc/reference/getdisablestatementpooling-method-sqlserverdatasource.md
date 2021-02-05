@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 902cceb335ea1f4f5a5858ae3bc80354002ba77b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77bcc26fd02a63af1d002fcbe959af68e3f2e634
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436219"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175881"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverdatasource"></a>getDisableStatementPooling 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public boolean getDisableStatementPooling();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含 disableStatementPooling**** 连接属性的布尔**** 值。
+ 包含 disableStatementPooling 连接属性的布尔值。
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

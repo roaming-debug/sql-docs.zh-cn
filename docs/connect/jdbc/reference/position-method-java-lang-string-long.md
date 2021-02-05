@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerClob.position (java.lang.String, long)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6529acba826fb4e76c3c6f6612eacccc63ee7a30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2017c991eb080a6684b2cb24dc7d90f9b585c52
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433039"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176911"
 ---
 # <a name="position-method-javalangstring-long"></a>position 方法 (java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public long position(java.lang.String searchstr,
 ```  
   
 #### <a name="parameters"></a>参数  
- searchstr**  
+ searchstr  
   
  要搜索的子字符串。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.getLong (int)
 apilocation:
@@ -16,17 +16,17 @@ apitype: Assembly
 ms.assetid: b7078ca7-fd2a-4474-ab29-989ae28c77e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: babe880124ae58fb6dd820619864af3b400bac6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7b157c7c59564003cd5fb785a884ed6a5fa37c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88435799"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175681"
 ---
 # <a name="getlong-method-int"></a>getLong 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在给定参数索引的情况下，检索指定参数的值作为 Java 编程语言中的 long****。  
+  在给定参数索引的情况下，检索指定参数的值作为 Java 编程语言中的 long。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ public long getLong(int index)
 #### <a name="parameters"></a>参数  
  *index*  
   
- 指示参数索引的 int****。  
+ 指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- long**** 值。  
+ long 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

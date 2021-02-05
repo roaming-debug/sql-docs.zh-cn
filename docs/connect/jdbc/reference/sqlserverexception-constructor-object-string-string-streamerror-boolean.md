@@ -7,24 +7,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a0ee96aa32378e69f01fb8865cd773c30287416
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2d6594123eb26ce92357e93cebdb8fdb261605d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450472"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178204"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException 构造函数 (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  当 object****、string**** 对象、string**** 对象、StreamError**** 对象和 boolean**** 给定时，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类的新实例。
+  当 object、string 对象、string 对象、StreamError 对象和 boolean 给定时，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类的新实例。
 
 ## <a name="syntax"></a>语法  
   
@@ -52,11 +52,11 @@ public SQLServerException(java.lang.Object obj,
   
  包含 SQL 状态的枚举对象。
  
- streamError**  
+ streamError  
   
  包含错误详细信息的 StreamError 对象。
  
- bStack**  
+ bStack  
   
  指明是否应生成堆栈跟踪的 boolean。
   

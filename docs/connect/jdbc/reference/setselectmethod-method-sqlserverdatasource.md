@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.setSelectMethod
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7934276d-5ac9-4cbc-a2a0-2c65c93733ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c2b9c0fb4fb5f2a410abc790bf2f40d2bd2a64e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f31db4197a0d2b714bb1e1889648d24ca5a4fc3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458360"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178651"
 ---
 # <a name="setselectmethod-method-sqlserverdatasource"></a>setSelectMethod 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setSelectMethod(java.lang.String selectMethod)
 #### <a name="parameters"></a>参数  
  *selectMethod*  
   
- 一个包含默认游标类型的 String **** 值。  
+ 一个包含默认游标类型的 String 值。  
   
 ## <a name="remarks"></a>注解  
  selectMethod 是用于结果集的默认游标类型。 当处理大型结果集且不想在客户端的内存中存储整个结果集时，此属性很有用。 通过将属性设置为“cursor”，可以创建可一次提取更小数据块区的服务器端游标。 如果未设置 selectMethod 属性，[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md) 将返回默认值“direct”。  

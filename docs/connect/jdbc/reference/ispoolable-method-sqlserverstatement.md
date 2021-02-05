@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b8a12ac5-57cb-4288-9973-c7d5cebd197c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b1b8b3e817ddaf2983d1cfec64099c220e012e16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8073906038621c3aac2af359e977a3d3bfdc6ae0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433479"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177295"
 ---
 # <a name="ispoolable-method-sqlserverstatement"></a>isPoolable 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public boolean isPoolable() throws SQLException
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果可以将该语句添加到用户提供的语句池，则为 true****；否则为 false****。  
+ 如果可以将该语句添加到用户提供的语句池，则为 true；否则为 false。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

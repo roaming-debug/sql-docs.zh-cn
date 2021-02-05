@@ -7,21 +7,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e810a05d5c289babe665a398f27a670349c2b304
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f5c68006e3d097eb0ee2d572b0930872cbd7b37
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433009"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176875"
 ---
 # <a name="position-method-javasqlnclob-long"></a>position 方法 (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索指定的 NClob**** 对象 searchstr** 在此 NClob**** 对象中出现的字符位置。  
+  检索指定的 NClob 对象 searchstr 在此 NClob 对象中出现的字符位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,7 +32,7 @@ long position(java.sql.NClob searchstr,
 ```  
   
 #### <a name="parameters"></a>参数  
- searchstr**  
+ searchstr  
   
  要搜索的 NClob 对象。  
   

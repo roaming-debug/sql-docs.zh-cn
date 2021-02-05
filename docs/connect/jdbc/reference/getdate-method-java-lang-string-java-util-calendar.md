@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.getDate (java.util.Calendar)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6d0deaf2-6f12-4a6e-b537-a51fa3478059
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91dec8348bc51894674074c58a7aa5b0c756b8d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2be9ea1fc68f7771b5983032dbbe29de47899915
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436359"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175959"
 ---
 # <a name="getdate-method-javalangstring-javautilcalendar"></a>getDate 方法 (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,9 +37,9 @@ public java.sql.Date getDate(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>参数  
- sCol**  
+ sCol  
   
- 包含参数名称的字符串****。  
+ 包含参数名称的字符串。  
   
  cal   
   

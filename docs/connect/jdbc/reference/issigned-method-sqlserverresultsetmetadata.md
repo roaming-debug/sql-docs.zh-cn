@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSetMetaData.isSigned
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1d16672f-1515-4255-8b20-e7911c999f60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9639b4511a65d563a1ba7168aadbe80ee363b8b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dec35f445c17c1689b09e792f050aa5ab96c4ffc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433379"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177214"
 ---
 # <a name="issigned-method-sqlserverresultsetmetadata"></a>isSigned 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean isSigned(int column)
  指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 如果列包含带符号的数字，则为 true****。 否则为 **false**。  
+ 如果列包含带符号的数字，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

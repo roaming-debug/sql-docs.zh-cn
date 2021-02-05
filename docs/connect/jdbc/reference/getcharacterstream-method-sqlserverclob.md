@@ -7,21 +7,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a935192df4449d5092898ee342872592cd4a6fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 30bee563bca4bd1f1a47beb22ff0cd062ef42c7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436759"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176114"
 ---
 # <a name="getcharacterstream-method-sqlserverclob"></a>getCharacterStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索由 java.sql.Clob 对象指定的 Clob**** 值作为 java.io.Reader 对象。  
+  检索由 java.sql.Clob 对象指定的 Clob 值作为 java.io.Reader 对象。  
   
 ## <a name="overload-list"></a>重载列表  
   

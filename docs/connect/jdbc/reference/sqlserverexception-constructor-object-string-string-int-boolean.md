@@ -7,24 +7,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f66bd8759733c2574438ba12ce9f12b00cf88842
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 738f5c040a06fb5b11fc6cf69cf76624304a9ef9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450475"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176624"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException 构造函数 (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  当 object**** 对象、string**** 对象、string**** 对象、int**** 和 boolean**** 给定时，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类的新实例。
+  当 object 对象、string 对象、string 对象、int 和 boolean 给定时，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类的新实例。
 
 ## <a name="syntax"></a>语法  
   
@@ -52,11 +52,11 @@ public SQLServerException(java.lang.Object obj,
   
  包含 SQL 状态的枚举对象。
  
- errNum**  
+ errNum  
   
  包含异常的错误代码的 int。
  
- bStack**  
+ bStack  
   
  指明是否应生成堆栈跟踪的 boolean。
   

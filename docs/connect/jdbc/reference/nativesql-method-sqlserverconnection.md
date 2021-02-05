@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerConnection.nativeSQL
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2188a6e1-792f-47bd-b207-1d01741231b2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0aeaf5519924c96254b7c24526fec86b8363e457
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c03b9aa5b5818d8ff40ffbee7017fa0b4b9cbc61
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433219"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177017"
 ---
 # <a name="nativesql-method-sqlserverconnection"></a>nativeSQL 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public java.lang.String nativeSQL(java.lang.String sql)
 #### <a name="parameters"></a>参数  
  *sql*  
   
- 包含 SQL 语句的 String****。  
+ 包含 SQL 语句的 String。  
   
 ## <a name="return-value"></a>返回值  
- 包含转换的 SQL 语句的 String****。  
+ 包含转换的 SQL 语句的 String。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

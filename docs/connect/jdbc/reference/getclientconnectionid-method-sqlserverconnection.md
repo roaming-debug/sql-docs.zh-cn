@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18bd2254052364c746ad88e972a57bdfc7bfbf5f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d216f6a4a5cbe24b2b73f7669d54b38faf639053
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725438"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176140"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +57,7 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- 无论连接到什么版本的服务器，getClientConnectionID 都有效，但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 及更早版本中将不会提供扩展事件日志和连接环形缓冲区上的条目****。  
+ 无论连接到什么版本的服务器，getClientConnectionID 都有效，但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 及更早版本中将不会提供扩展事件日志和连接环形缓冲区上的条目。  
   
  如果启用记录连接 ID 的扩展事件，您可以在扩展事件日志中查找连接 ID，以查看失败是否源自服务器。 还可以针对某些连接错误在连接环形缓冲区（[在 SQL Server 2008 中使用连接环形缓冲区解决连接问题](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)）中查找连接 ID。 如果在连接环形缓冲区中找不到连接 ID，可以认为是网络错误。  
   

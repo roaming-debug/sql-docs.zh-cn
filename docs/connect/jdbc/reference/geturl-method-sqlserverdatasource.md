@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.getURL
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: dd0d5d2c-91fe-4b0f-a162-69d898ba176e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b15ef1dae8182994f179a2284b85b4838730516c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7a8e5a67d4c99bc525b887df550f70cbd0d8f96
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433819"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177645"
 ---
 # <a name="geturl-method-sqlserverdatasource"></a>getURL 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.lang.String getURL()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个包含 URL 的字符串****。  
+ 一个包含 URL 的字符串。  
   
 ## <a name="remarks"></a>注解  
  出于安全原因，请不要在提供给 [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 方法的 URL 中包括密码。 这是因为：第三方 Java 应用程序服务器经常会在其数据源配置用户界面中显示为 URL 属性设置的值。 请改用 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) 方法设置密码值。 Java 应用程序服务器不会在配置用户界面中显示在其数据源中设置的密码。  

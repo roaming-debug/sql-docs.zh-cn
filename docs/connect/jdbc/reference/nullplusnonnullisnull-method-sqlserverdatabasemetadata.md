@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.nullPlusNonNullIsNull
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: c594736f-3a9b-463f-bbd8-eaf9221230ea
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92ee7fe72d95984a65eb666f9685f1512a9ad3c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b361cb65dcea24eea4e3f705f7c2e230b416c1e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433169"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177001"
 ---
 # <a name="nullplusnonnullisnull-method-sqlserverdatabasemetadata"></a>nullPlusNonNullIsNull 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean nullPlusNonNullIsNull()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持串联，则为 **** true。 否则为 **false**。  
+ 如果支持串联，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

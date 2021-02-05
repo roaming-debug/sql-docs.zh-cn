@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.registerOutParameter (java.lang.String, int, int)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8bddc557-4526-4843-9804-05dc83c8832d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 575573dfc043cbb5c4dba115860abedcf2981aaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a6db3c986aa771c4d54b393d71d173f7c6fe3e6a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88432789"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176688"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-int"></a>registerOutParameter 方法 (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public void registerOutParameter(java.lang.String s,
 #### <a name="parameters"></a>参数  
  *s*  
   
- 包含参数名称的字符串****。  
+ 包含参数名称的字符串。  
   
  *sqlType*  
   
@@ -48,7 +48,7 @@ public void registerOutParameter(java.lang.String s,
   
  *scale*  
   
- 一个 int 值，此值指示要放在小数点右边的位数****。  
+ 一个 int 值，此值指示要放在小数点右边的位数。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

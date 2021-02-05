@@ -7,21 +7,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d4673597255819521bc5becf48a92908ea1330a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02e36e2e64a6a628fd088fab448b30ea0c238450
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437999"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176237"
 ---
 # <a name="compareto-method-datetimeoffset"></a>compareTo 方法 (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将此 DateTimeOffset**** 对象与另一个基于 GMT 时间的 DateTimeOffset**** 对象进行比较。  
+  将此 DateTimeOffset 对象与另一个基于 GMT 时间的 DateTimeOffset 对象进行比较。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,12 +38,12 @@ public int compareTo(DateTimeOffset other)
   
 |返回值|说明|  
 |------------------|-----------------|  
-|0|两个 DateTimeOffset**** 对象都表示相同的时间点。|  
-|负数|此 DateTimeOffset**** 对象表示在 other** 之前的时间点。|  
-|正数|此 DateTimeOffset**** 对象表示在 other** 之后的时间点。|  
+|0|两个 DateTimeOffset 对象都表示相同的时间点。|  
+|负数|此 DateTimeOffset 对象表示在 other 之前的时间点。|  
+|正数|此 DateTimeOffset 对象表示在 other 之后的时间点。|  
   
 ## <a name="remarks"></a>注解  
- 当两个 DateTimeOffset**** 对象具有相同的 GMT 时间时，没有基于偏移量的对象的附加排序。  
+ 当两个 DateTimeOffset 对象具有相同的 GMT 时间时，没有基于偏移量的对象的附加排序。  
   
 ## <a name="see-also"></a>另请参阅  
  [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)   

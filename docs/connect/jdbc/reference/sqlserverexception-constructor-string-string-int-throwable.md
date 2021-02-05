@@ -7,24 +7,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fb84d0c1216047f28ed980806129ff1e21c08bb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a3957f20f6f3f6b13afcf40f64402d2d51bcd55
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450430"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178199"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException 构造函数 (java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在给定 string**** 对象、string**** 对象、int**** 和throwable**** 时初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类的新实例。
+  在给定 string 对象、string 对象、int 和throwable 时初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类的新实例。
 
 ## <a name="syntax"></a>语法  
   
@@ -41,11 +41,11 @@ public SQLServerException(java.lang.String errText,
   
  包含错误文本的字符串。
   
- errState**  
+ errState  
   
  包含错误状态的字符串。
  
- errNum**  
+ errNum  
   
  一个包含异常的错误代码的 int。
  

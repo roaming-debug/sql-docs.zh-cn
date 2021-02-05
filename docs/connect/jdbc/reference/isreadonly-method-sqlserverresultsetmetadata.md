@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSetMetaData.isReadOnly
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: aba234d9-04ec-46a5-ba9e-7903f48b4ecc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1d726ca9184b391861ff395e9a1a281682ba8c50
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5021aa9222f18056f4ac2e12c228f5433ba3358
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433419"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177254"
 ---
 # <a name="isreadonly-method-sqlserverresultsetmetadata"></a>isReadOnly 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean isReadOnly(int column)
  指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 如果列为只读，则为 true****。 否则为 **false**。  
+ 如果列为只读，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

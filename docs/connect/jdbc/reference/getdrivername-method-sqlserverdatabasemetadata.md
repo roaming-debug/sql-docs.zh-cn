@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.getDriverName
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2ccec113-ae1b-45b8-a334-13eae04941f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5913c39aff0de5372e6d96fb53dbf3f4ae60b37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: acf73e527d3e43ce958c765d233c6932df758b7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436119"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175811"
 ---
 # <a name="getdrivername-method-sqlserverdatabasemetadata"></a>getDriverName 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.lang.String getDriverName()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含 JDBC 驱动程序名称的 String****。  
+ 包含 JDBC 驱动程序名称的 String。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

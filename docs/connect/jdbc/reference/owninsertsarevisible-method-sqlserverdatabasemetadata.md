@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.ownInsertsAreVisible
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 33857f57f9a0d02d45720011623a73eac981e4ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca2762c5f1d4471c3e085c9fc44f762564eb24c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433079"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176945"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>ownInsertsAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public boolean ownInsertsAreVisible(int type)
 #### <a name="parameters"></a>参数  
  type  
   
- 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一****：  
+ 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
  TYPE_FORWARD_ONLY  
@@ -59,7 +59,7 @@ public boolean ownInsertsAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- 如果插入操作可见，则为 true****。 否则为 **false**。  
+ 如果插入操作可见，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

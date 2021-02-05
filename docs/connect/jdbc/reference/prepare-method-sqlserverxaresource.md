@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerXAResource.prepare
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: f800c966-3fae-41b3-963a-464988f80da3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5df7e43a944180be9cf73bda5b65343022fd51c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c29c19fc0e9ca082a0baabb29412ea77dd8e3ff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88432979"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176835"
 ---
 # <a name="prepare-method-sqlserverxaresource"></a>prepare 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public int prepare(javax.transaction.xa.Xid xid)
  Xid 对象。  
   
 ## <a name="return-value"></a>返回值  
- int**** 值。  
+ int 值。  
   
 ## <a name="exceptions"></a>例外  
  javax.transaction.xa.XAException  

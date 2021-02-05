@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.supportsExpressionsInOrderBy
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 858f3c02-4531-4775-97e9-a03b316bdaba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6532e0d286c84e02cb45ec4340088e651052a75f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0571180b706f815780d447f3100e77477c70bcf8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478539"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178115"
 ---
 # <a name="supportsexpressionsinorderby-method-sqlserverdatabasemetadata"></a>supportsExpressionsInOrderBy 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean supportsExpressionsInOrderBy()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持，则值为 true****。 否则为 **false**。  
+ 如果支持，则值为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
