@@ -8,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: ab9af4d073cbec00736bab6a24817502d353ffd8
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+ms.openlocfilehash: b7d5336bd6f4ad37fba6cf44865d49721b3cbb80
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175929"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978806"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>使用服务 SID 授予对 SQL Server 中的服务的访问权限
 
@@ -105,7 +105,7 @@ GO
   > [!NOTE]
   > 删除服务 SID 登录名或将其从 sysadmin 服务器角色中删除可能会导致连接到 SQL Server 数据库引擎的各种 SQL Server 组件出现问题。 一些问题如下：
   > - SQL Server 代理无法启动或连接到 SQL Server 服务
-  > - SQL Server 安装程序遇到以下 Microsoft 知识库文章中所述的问题： https://support.microsoft.com/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re
+  > - SQL Server 安装程序遇到以下 Microsoft 知识库文章中所述的问题： https://mskb.pkisolutions.com/kb/955813
   >
   > 对于 SQL Server 的默认实例，可以通过使用以下 Transact-SQL 命令添加服务 SID 来纠正这种情况：
   >

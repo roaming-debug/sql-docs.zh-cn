@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 146a75e907131d5faae03da46419b3b4137c01ca
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 4ae905d868554c20948af3eb0191937382eff56f
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194869"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536369"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
 
@@ -111,7 +111,7 @@ ms.locfileid: "92194869"
 >  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY（属性）(Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   
 ## <a name="external-resources"></a>外部资源  
- sqlcat.com 上的技术文章 [快速将数据加载到 Azure SQL 数据库中](https://go.microsoft.com/fwlink/?LinkId=244333)  
+ sqlcat.com 上的技术文章 [快速将数据加载到 Azure SQL 数据库中](https://techcommunity.microsoft.com/t5/datacat/loading-data-to-sql-azure-the-fast-way/ba-p/305066)  
   
 ## <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 目标编辑器（“映射”页）
   可以使用 **“ADO NET 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  

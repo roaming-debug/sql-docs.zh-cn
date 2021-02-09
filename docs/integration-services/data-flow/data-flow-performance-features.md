@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 600ab1bce27f4fa53c2e25ae7562a870f2ccf6a6
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196431"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536348"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
 
@@ -134,7 +134,7 @@ ms.locfileid: "92196431"
  使用本节中的建议可以改善聚合、模糊查找、模糊分组、查找、合并联接和渐变维度转换的性能。  
   
 #### <a name="aggregate-transformation"></a>聚合转换  
- 聚合转换包括 **Keys**、 **KeysScale**、 **CountDistinctKeys**和 **CountDistinctScale** 属性。 通过使用这些属性，使转换能够为转换缓存的数据预先分配转换所需的内存量，从而提高了性能。 如果知道要从 **“分组依据”** 操作产生的准确或近似组数，则可分别设置 **Keys** 和 **KeysScale** 属性。 如果知道要从 **“非重复计数”** 操作产生的非重复值的准确或近似数量，则可分别设置 **CountDistinctKeys** 和 **CountDistinctScale** 属性。  
+ 聚合转换包括 **Keys**、 **KeysScale**、 **CountDistinctKeys** 和 **CountDistinctScale** 属性。 通过使用这些属性，使转换能够为转换缓存的数据预先分配转换所需的内存量，从而提高了性能。 如果知道要从 **“分组依据”** 操作产生的准确或近似组数，则可分别设置 **Keys** 和 **KeysScale** 属性。 如果知道要从 **“非重复计数”** 操作产生的非重复值的准确或近似数量，则可分别设置 **CountDistinctKeys** 和 **CountDistinctScale** 属性。  
   
  如果需要在数据流中创建多个聚合，应考虑使用一个聚合转换而不是创建多个转换来创建多个聚合。 如果聚合是其他聚合的子集，这种方法能够提高性能，因为转换可以优化内部存储，并且只需扫描传入的数据一次。 例如，如果聚合使用 GROUP BY 子句和 AVG 聚合，将它们组合成一个转换可以提高性能。 但是，在一个聚合转换内执行多个聚合会序列化聚合操作，因此，当必须独立计算多个聚合时，这种方法可能不会改善性能。  
   
@@ -185,9 +185,9 @@ ms.locfileid: "92196431"
   
 -   msdn.microsoft.com 上的技术文章 [我们使用 SSIS 加载 1TB 数据仅用了 30 分钟，因此您也行](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100))。  
   
--   sqlcat.com 上的技术文章 [前 10 个 SQL Server Integration Services 最佳实践](https://go.microsoft.com/fwlink/?LinkId=220818)。  
+-   sqlcat.com 上的技术文章 [前 10 个 SQL Server Integration Services 最佳实践](https://techcommunity.microsoft.com/t5/datacat/top-10-sql-server-integration-services-best-practices/ba-p/305163)。  
   
--   sqlcat.com 上的技术文章和示例 [针对 SSIS 的“平衡的数据分发服务器”](https://go.microsoft.com/fwlink/?LinkId=220822)。  
+-   sqlcat.com 上的技术文章和示例 [针对 SSIS 的“平衡的数据分发服务器”](https://www.sqlshack.com/ssis-balanced-data-distributor-overview/)。  
   
 -   blogs.msdn.com 上的博客文章 [解决 SSIS 包性能问题](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553)。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "92196431"
   
 -   channel9.msdn.com 上的视频 [Microsoft SQL Server Integration Services 性能设计模式](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)。  
   
--   sqlcat.com 上的演示文稿 [Microsoft IT 如何利用 SQL Server 2008 SSIS 数据流引擎的增强功能](https://go.microsoft.com/fwlink/?LinkId=217660)。  
+-   sqlcat.com 上的演示文稿 [Microsoft IT 如何利用 SQL Server 2008 SSIS 数据流引擎的增强功能](https://channel9.msdn.com/Shows/TechNet+Radio/TechNet-Radio-How-Microsoft-IT-Leverages-SQL-Server-2008-SSIS-Dataflow-Engine-Enhancements)。  
   
 -   technet.microsoft.com 上的视频 [平衡的数据分发服务器](/previous-versions/dn912438(v=msdn.10))。  
   

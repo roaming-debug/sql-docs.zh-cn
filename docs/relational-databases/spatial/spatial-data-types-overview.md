@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 87ed2882d8276b3a92add3349b73bf38fe821dc9
+ms.sourcegitcommit: 10ae200635b9e8554e6bc6f658125e1a80d4d5ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462958"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589282"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
 
@@ -84,7 +84,7 @@ geometry 和 geography 类型的子类型分为简单类型和集合类型。  �
 
 椭圆系统中的多边形的内部是由“左手定则”定义的：如果你想象自己沿着一个地理多边形的环行走，按照点的排列顺序，左边的区域被视为多边形的内部，右边的区域被视为多边形的外部。
 
-在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中当兼容级别为 100 或更低时， **geography** 数据类型具有以下限制：
+在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中当兼容级别为 100 或更低时， **geography** 数据类型具有以下限制：
 
 - 每个 **geography** 实例必须能够容纳在单个半球的内部。 任何大于半球的对象都无法存储。
 
@@ -92,7 +92,7 @@ geometry 和 geography 类型的子类型分为简单类型和集合类型。  �
 
 - 如果方法的结果不能容纳于单个半球内部，则需要输入两个 **geography** 实例的 **geography** 数据类型方法（如 STIntersection()、STUnion()、STDifference() 和 STSymDifference()）将会返回 Null。 如果输出超过单个半球，STBuffer() 也将返回 Null。  
 
-在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， **FullGlobe** 是一种特殊类型的多边形，涵盖了整个球体。 它有面积，但是没有边框或顶点。  
+在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中， **FullGlobe** 是一种特殊类型的多边形，涵盖了整个球体。 它有面积，但是没有边框或顶点。  
 
 ### <a name="outer-and-inner-rings-in-geography-data-type"></a>`geography` 数据类型中的外环和内环
 

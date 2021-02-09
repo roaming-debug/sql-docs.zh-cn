@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1a2371508c40e60ebacbe60d656d4d9ffa3f70ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83ccc09b8a38340939340f214c3ca62fddca6d47
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422031"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835148"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions（SSISDB 数据库）
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中对象的版本。 在此版本中，此视图只支持项目的版本。  
   

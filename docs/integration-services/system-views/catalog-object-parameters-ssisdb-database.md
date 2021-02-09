@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 856676c6ad5330e6039711d7a391bdd264a2b062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 423f96cba79018230b7121bf25f93337a48a2fd6
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422041"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835172"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters（SSISDB 数据库）
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中所有包和项目的参数。  
   
@@ -43,8 +40,8 @@ ms.locfileid: "88422041"
 |value_type|**char(1)**|指示参数值的类型。 当 parameter_value 为文本值时，此字段显示 `V`；当该值通过引用环境对象来分配时，此字段显示 `R`。|  
 |value_set|**bit**|如果值为 `1`，则已分配参数值。 如果值为 `0`，则尚未分配参数值。|  
 |referenced_variable_name|**nvarchar(128)**|分配给参数值的环境变量的名称。 默认值为 NULL。|  
-|validation_status|**char(1)**|标识为仅供参考。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
-|last_validation_time|**datetimeoffset(7)**|标识为仅供参考。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
+|validation_status|**char(1)**|标识为仅供参考。 [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 中不使用。|  
+|last_validation_time|**datetimeoffset(7)**|标识为仅供参考。 [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 中不使用。|  
   
 ## <a name="permissions"></a>权限  
  若要查看此视图中的行，您必须具有以下权限之一：  

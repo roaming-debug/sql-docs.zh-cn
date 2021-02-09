@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 229735b49a8b12411fcace1273d5035d95c631a2
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 9c0ed977deed5b4eb031406368f3d010062da7df
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99077035"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536352"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>使用 SMB 文件共享存储安装 SQL Server
 
@@ -87,7 +87,7 @@ ms.locfileid: "99077035"
 |操作系统|SMB2 协议版本|优势 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|与以前的 SMB 版本相比改进的性能。<br /><br /> 持续性，帮助从临时网络问题恢复。|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1，包含 Server Core|2.1|支持大型 MTU，这有利于大型数据传输，例如 SQL 备份和还原。 此功能必须由用户启用。 有关如何启用此功能的详细信息，请参阅 [SMB 中的新增功能](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625695(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkID=237319) 。<br /><br /> 针对 SQL OLTP 样式工作负荷的显著的性能改进。 这些性能改进要求应用修补程序。 有关控件的详细信息，请参阅[此处](https://go.microsoft.com/fwlink/?LinkId=237320) (https://mskb.pkisolutions.com/kb/2536493) 。|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1，包含 Server Core|2.1|支持大型 MTU，这有利于大型数据传输，例如 SQL 备份和还原。 此功能必须由用户启用。 有关如何启用此功能的详细信息，请参阅 [SMB 中的新增功能](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625695(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkID=237319) 。<br /><br /> 针对 SQL OLTP 样式工作负荷的显著的性能改进。 这些性能改进要求应用修补程序。 有关控件的详细信息，请参阅[此处](https://mskb.pkisolutions.com/kb/2536493) (https://mskb.pkisolutions.com/kb/2536493) 。|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，包含 Server Core|3.0|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且可承受网络接口故障。<br /><br /> 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=253174) 。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2，包含 Server Core|3.2|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且使用 SMB 多通道可承受网络接口故障。<br /><br /> 使用 SMB Direct 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=253174) 。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。<br /><br /> 针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP 所共有的小型随机读/写 I/O 进行优化。<br /><br /> 默认情况下启用最大传输单位 (MTU)，这可以显著增强大型连续传输（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据仓库和数据库备份或还原）的性能。|  
   

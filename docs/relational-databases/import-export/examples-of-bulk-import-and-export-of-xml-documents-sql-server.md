@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5e2a52bcfa2e95aa364bbdf3079e2f8666f0e1e0
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646049"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978783"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>批量导入和导出 XML 文档的示例 (SQL Server)
 
@@ -46,7 +46,7 @@ ms.locfileid: "88646049"
 有关详细信息，请参阅以下主题。
 - [使用 bcp 实用工具导入和导出大容量数据 (SQL Server)。](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 - [使用 BULK INSERT 或 OPENROWSET(BULK...) 导入大容量数据 (SQL Server)。](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-- [如何使用 XML 大容量加载组件将 XML 导入 SQL Server。](https://support.microsoft.com/kb/316005)
+- [如何使用 XML 大容量加载组件将 XML 导入 SQL Server。](https://mskb.pkisolutions.com/kb/316005)
 - [XML 架构集合 (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>示例  
