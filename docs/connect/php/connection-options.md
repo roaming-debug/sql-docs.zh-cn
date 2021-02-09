@@ -2,7 +2,7 @@
 title: 连接选项
 description: 本主题列出了SQLSRV 驱动程序中 sqlsrv_connect 的关联阵列中允许的选项，或 PDO_SQLSRV 驱动程序的数据源名称中允许的关键字。
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98f6899c1bfc7652c4a2facee95cf5fd62e4e521
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a8718cc04972e74ffc39b1528ed73eb00664eda8
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632957"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076249"
 ---
 # <a name="connection-options"></a>连接选项
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "81632957"
 |APP|字符串|指定跟踪中所使用的应用程序名称。|未设置。|  
 |ApplicationIntent|字符串|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite   。<br /><br />若要详细了解 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 对 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 的支持，请参阅[高可用性和灾难恢复支持](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|ReadWrite|
 |AttachDBFileName|字符串|指定服务器应附加的数据库文件。|未设置。|
-|身份验证|以下字符串之一：<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**|指定身份验证模式。<br /><br />有关详细信息，请参阅[使用 Azure Active Directory 身份验证进行连接](azure-active-directory.md)。|未设置。|
+|身份验证|以下字符串之一：<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**<br /><br />**ActiveDirectoryServicePrincipal**|指定身份验证模式。<br /><br />有关详细信息，请参阅[使用 Azure Active Directory 身份验证进行连接](azure-active-directory.md)。|未设置。|
 |CharacterSet<br /><br />（在 PDO_SQLSRV 驱动程序中不受支持）|字符串|指定用于将数据发送到服务器的字符集。<br /><br />可能的值为 SQLSRV_ENC_CHAR 和 UTF-8。 有关详细信息，请参阅[操作说明：使用内置 UTF-8 支持发送和检索 UTF-8 数据](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|以下字符串之一：<br /><br />**已启用**<br /><br />**已禁用**<br /><br />用于标识证明协议和 URL 来证明 enclave 的字符串|指定 Always Encrypted 功能是否已启用。 如果证明协议和 URL 已指定，表明具有安全 Enclave 的 Always Encrypted 已启用，前提是满足[此处](always-encrypted-secure-enclaves.md)所述的其他要求。|已禁用|  
 |ConnectionPooling|1 或 **true** ，表示启用连接池。<br /><br />0 或 **false** ，表示禁用连接池。|指定是否从连接池分配连接（1 或 true 表示是，0 或 false 表示否）   <sup>1</sup>。| true (1)|  

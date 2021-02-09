@@ -2,7 +2,7 @@
 title: JDBC Driver 发行说明
 description: 本文列出了 Microsoft JDBC Driver for SQL Server 的各个发行版。 对于每个发行版本，将对所做的更改进行命名和说明。
 ms.custom: ''
-ms.date: 08/27/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,71 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 0ffc7d8e4090673f3fc8feb96aa3650d35361281
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005666"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234860"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 发行说明
 
 本文列出了 Microsoft JDBC Driver for SQL Server  的版本。 对于每个发行版本，将对所做的更改进行命名和说明。
+
+## <a name="92"></a><a id="92"></a> 9.2
+
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 9.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2153622)  
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 9.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2153521)  
+
+版本号：9.2.0 发布时间：2021 年 1 月 29 日
+
+如果你需要下载非所检测到的语言的驱动程序，则可使用以下直接链接。  
+对于 zip 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
+对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
+
+### <a name="compliance"></a>合规性
+
+| 符合性更改 | 详细信息 |
+| :---------------- | :------ |
+| 下载 JDBC Driver 9.2 的最新更新。 | &bull; &nbsp; [GitHub，9.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 9.2 包中的 jar。<br/><br/>例如，9.2 包中的 mssql-jdbc-9.2.0.jre15.jar 文件应与 Java 15 配合使用。 |
+| 与 Java 开发工具包 (JDK) 版本 15.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 9.2 for SQL Server 现在还与 Java 开发工具包 (JDK) 版本 15.0 兼容。 |
+| &nbsp; | &nbsp; |
+
+### <a name="releases"></a>版本
+
+版本号：9.2.0 发布时间：2021 年 1 月 29 日
+
+### <a name="support-for-jdk-15"></a>支持 JDK 15
+
+除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 9.2 for SQL Server 现在还与 Java 开发工具包 (JDK) 版本 15.0 兼容。
+
+### <a name="added-support-for-azure-active-directory-interactive-authentication"></a>添加了对 Azure Active Directory 交互式身份验证的支持
+| 添加身份验证类型 | 详细信息 |
+| :---------- | :------ |
+| Microsoft JDBC Driver 9.2 for SQL Server 现支持通过交互式身份验证向 Azure Key Vault 进行身份验证。 | 请参阅[使用 Azure Active Directory 身份验证进行连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-azure-active-directory-service-principal-authentication"></a>添加了对 Azure Active Directory 服务主体身份验证的支持
+| 添加身份验证类型 | 详细信息 |
+| :---------- | :------ |
+| Microsoft JDBC Driver 9.2 for SQL Server 现在支持使用服务主体标识的客户端 ID 和密码来向 Azure Key Vault 进行身份验证。 | 请参阅[使用 Azure Active Directory 身份验证进行连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="updated-azure-key-vault-library-to-use-modern-azure-key-vault-library"></a>更新 Azure Key Vault 库以使用新式 Azure Key Vault 库
+| Azure Key Vault 的库更改 | 详细信息 |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 9.2 从上一代的 Azure Key Vault 库和 ADAL 库迁移到了更新式的 Azure Key Vault 和 Azure Identity 等效项。 | DEPENDENCY CHANGE 如果利用 Azure Active Directory 身份验证或 Azure Key Vault，请确保更新应用程序依赖项。 [使用 Azure Key Vault 提供程序](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-the-azure-key-vault-provider)或 [Azure Active Directory 身份验证](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-azure-active-directory-authentication)时，请参阅依赖项要求 |
+| &nbsp; | &nbsp; |
+
+### <a name="enabled-usebulkcopyforbatchinsert-for-non-azure-synapse-analytics-servers"></a>为非 Azure Synapse Analytics 服务器启用了 useBulkCopyForBatchInsert
+| 非 Azure Synapse Analytics 服务器的 useBulkCopyForBatchInsert 更改 | 详细信息 |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 9.2 现在允许大容量复制 API 针对 Azure Synapse Analytics 服务器进行批量插入操作。 | 请参阅[将大容量复制 API 用于批量插入操作](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)。 |
+| &nbsp; | &nbsp; |
+
+
+## <a name="previous-releases"></a>以前的版本
 
 ## <a name="84"></a><a id="84"></a> 8.4
 
@@ -93,8 +148,6 @@ ms.locfileid: "92005666"
 | 客户端证书身份验证 | 详细信息 |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 8.4 for SQL Server 为环回方案添加了称为“客户端证书身份验证”的新身份验证方法。 | 请参阅[环回方案的客户端证书身份验证](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)。 |
-
-## <a name="previous-releases"></a>以前的版本
 
 ## <a name="82"></a><a id="82"></a> 8.2
 

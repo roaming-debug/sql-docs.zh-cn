@@ -1,7 +1,7 @@
 ---
 title: Azure Active Directory
 description: 了解如何将 Azure Active Directory 身份验证用于 Microsoft Drivers for PHP for SQL Server。
-ms.date: 02/25/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f7abb90d32f93975c9a984670ca450dc791a46ae
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: ae3e734dee5f8ac46de2646cca9c37a7ed7748df
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004557"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076955"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,6 +33,7 @@ ms.locfileid: "92004557"
 ||`SqlPassword`|使用用户名和密码直接对 SQL Server 实例（可能是 Azure 实例）进行身份验证。 必须使用“UID”  和“PWD”  关键字将用户名和密码传递到连接字符串。 |
 ||`ActiveDirectoryPassword`|使用用户名和密码对 Azure Active Directory 标识进行身份验证。 必须使用“UID”  和“PWD”  关键字将用户名和密码传递到连接字符串。 |
 ||`ActiveDirectoryMsi`|使用系统分配的托管标识或用户分配的托管标识进行身份验证（需要 ODBC Driver 版本 17.3.1.1 或更高版本）。 有关概述和教程，请参阅 [什么是 Azure 资源的托管标识？](/azure/active-directory/managed-identities-azure-resources/overview)。|
+||`ActiveDirectoryServicePrincipal`|使用服务主体对象进行身份验证（需要 ODBC 驱动程序版本 17.7 或更高版本）。 有关详细信息和更多示例，请参阅 [Azure Active Directory 中的应用程序对象和服务主体对象](/azure/active-directory/develop/app-objects-and-service-principals)。|
 
 “Authentication”  关键字影响连接安全设置。 如果在连接字符串中设置了此关键字，则默认情况下“Encrypt”  关键字设置为 true，这意味着客户端将请求加密。 而且，除非 TrustServerCertificate  设置为 true（默认情况下为 false  ），否则将验证服务器证书，而不考虑加密设置。 此功能有别于旧的、不安全的登录方法，在此方法中，仅当在连接字符串中明确请求加密时，才会验证服务器证书。
 
@@ -233,6 +234,63 @@ try {
 }
 ?>
 ```
+
+## <a name="example---connect-using-service-principal-objects-in-azure-active-directory"></a>示例 - 使用 Azure Active Directory 中的服务主体对象进行连接
+
+若要使用服务主体对象进行身份验证，将需要相应的[应用程序客户端 ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) 和[客户端密码](/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret)。
+
+
+### <a name="sqlsrv-driver"></a>SQLSRV 驱动程序
+
+```php
+<?php
+
+$adServer = 'myazureserver.database.windows.net';
+$adDatabase = 'myazuredatabase';
+$adSPClientId = 'myAppClientId';
+$adSPClientSecret = 'myClientSecret';
+
+$conn = false;
+$connectionInfo = array("Database"=>$adDatabase, 
+                        "Authentication"=>"ActiveDirectoryServicePrincipal",
+                        "UID"=>$adSPClientId,
+                        "PWD"=>$adSPClientSecret);
+
+$conn = sqlsrv_connect($adServer, $connectionInfo);
+if ($conn === false) {
+    echo "Could not connect using Azure AD Service Principal." . PHP_EOL;
+    print_r(sqlsrv_errors());
+}
+
+sqlsrv_close($conn);
+
+?>
+```
+
+### <a name="pdo_sqlsrv-driver"></a>PDO_SQLSRV 驱动程序
+
+```php
+<?php
+
+$adServer = 'myazureserver.database.windows.net';
+$adDatabase = 'myazuredatabase';
+$adSPClientId = 'myAppClientId';
+$adSPClientSecret = 'myClientSecret';
+
+$conn = false;
+try {
+    $connectionInfo = "Database = $adDatabase; Authentication = ActiveDirectoryServicePrincipal;";
+    $conn = new PDO("sqlsrv:server = $adServer; $connectionInfo", $adSPClientId, $adSPClientSecret);
+} catch (PDOException $e) {
+    echo "Could not connect using Azure AD Service Principal.\n";
+    print_r($e->getMessage());
+    echo PHP_EOL;
+}
+
+unset($conn);
+?>
+```
+
 
 ## <a name="see-also"></a>另请参阅
 [结合使用 Azure Active Directory 和 ODBC 驱动程序](../odbc/using-azure-active-directory.md)

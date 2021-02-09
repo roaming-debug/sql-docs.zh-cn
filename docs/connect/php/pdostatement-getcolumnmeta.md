@@ -2,21 +2,21 @@
 title: PDOStatement::getColumnMeta
 description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中 PDOStatement::getColumnMeta 函数的 API 参考。
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b76e7c6201226c13ae057e8ac182b7ab0a9c6b13
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: c5793f486b43fe4c2d12ec9be004dbb2b3346020
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92082016"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179929"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>参数  
-**$conn：（整数）要检索其元数据的列的从零开始的数。  
+$conn：（整数）要检索其元数据的列的从零开始的数。  
   
 ## <a name="return-value"></a>返回值  
 包含列的元数据的关联阵列（键和值）。 有关数组中的字段的说明，请参阅“备注”部分。  
@@ -131,7 +131,64 @@ for ($i = 0; $i < $numCol; $i++) {
 {"flags":0,"sqlsrv:decl_type":"date","native_type":"string","table":"","pdo_type":2,"name":"BirthDate","len":10,"precision":0}
 ```
 
-      
+## <a name="sensitivity-rank-using-a-predefined-set-of-values"></a>使用一组预定义值的敏感度级别
+
+从 5.9.0 开始，PHP 驱动程序在使用 ODBC 驱动程序 17.4.2 或更高版本时添加了分类级别检索。 使用 [ADD SENSITIVITY CLASSIFICATION](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) 对任何数据列进行分类时，用户可以定义级别。 
+
+例如，如果用户分别将 `NONE` 和 `LOW` 分配给 BirthDate 和 SSN，则 JSON 表示形式如下所示：
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":0},"rank":0}
+{"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
+```
+
+如[敏感度分类](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql)中所示，级别的数值为：
+
+```
+0 for NONE
+10 for LOW
+20 for MEDIUM
+30 for HIGH
+40 for CRITICAL
+```
+
+因此，如果用户在对 BirthDate 列进行分类时定义了 `RANK=CRITICAL` 而不是 `RANK=NONE`，则分类元数据将为：
+
+```
+array(1) {
+  ["Data Classification"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["Label"]=>
+      array(2) {
+        ["name"]=>
+        string(26) "Confidential Personal Data"
+        ["id"]=>
+        string(0) ""
+      }
+      ["Information Type"]=>
+      array(2) {
+        ["name"]=>
+        string(9) "Birthdays"
+        ["id"]=>
+        string(0) ""
+      }
+      ["rank"]=>
+      int(40)
+    }
+    ["rank"]=>
+    int(40)
+  }
+}
+```
+
+更新后的 JSON 表示形式如下所示：
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":40},"rank":40}
+```
+
 ## <a name="see-also"></a>另请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 

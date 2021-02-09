@@ -1,7 +1,7 @@
 ---
 title: 在 Linux 和 macOS 上安装 Drivers for PHP
 description: 这些说明介绍了如何在 Linux 或 macOS 上安装 Microsoft Drivers for PHP for SQL Server。
-ms.date: 11/06/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 41b5eaec44c61e03db609bcd81b3e732a2119e7f
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: dfb8494912ae2f11590ec8a8b679f0f23064f930
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384216"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076449"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安装教程
-以下说明假定环境是干净的，展示了如何在 Ubuntu 16.04、18.04 和 20.04、RedHat 7 和 8、Debian 8、9 和 10、Suse 12 和 15、Alpine 3.11 以及 macOS 10.13、10.14 和 10.15 上安装 PHP 7.x、Microsoft ODBC 驱动程序、Apache Web 服务器和 Microsoft Drivers for PHP for SQL Server。 这些说明建议使用 PECL 安装驱动程序，但也可以从 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 项目页下载预生成的二进制文件，并按照[下载 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的说明安装它们。 有关扩展加载以及为什么不将扩展添加到 php.ini 的说明，请参阅[加载驱动程序](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)部分。
+以下说明假定环境是干净的，展示了如何在 Ubuntu 16.04、18.04 和 20.04、RedHat 7 和 8、Debian 9 和 10、Suse 12 和 15、Alpine 3.11 和 3.12 以及 macOS 10.14、10.15 和 11.0 上安装 PHP 8.0、Microsoft ODBC 驱动程序、Apache Web 服务器和 Microsoft Drivers for PHP for SQL Server。 这些说明建议使用 PECL 安装驱动程序，但也可以从 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 项目页下载预生成的二进制文件，并按照[下载 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的说明安装它们。 有关扩展加载以及为什么不将扩展添加到 php.ini 的说明，请参阅[加载驱动程序](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)部分。
 
-这些说明默认使用 `pecl install` 安装 PHP 7.4。 你可能需要先运行 `pecl channel-update pecl.php.net`。 一些受支持的 Linux 发行版默认为 PHP 7.1 或更早版本，而 SQL Server 的 PHP 驱动程序的最新版本不支持这些版本。 请参阅每一节开头的说明，以便安装 PHP 7.2 或 7.3。
+如果 PHP 8.0 包可用，以下说明默认情况下使用 `pecl install` 安装 PHP 8.0。 你可能需要先运行 `pecl channel-update pecl.php.net`。 一些受支持的 Linux 发行版默认为 PHP 7.1 或更早版本，而 SQL Server 的 PHP 驱动程序的最新版本不支持这些版本。 请参阅每一节开头的说明，以便安装 PHP 7.4 或 7.3。
 
 还包括有关在 Ubuntu 上安装 PHP FastCGI 进程管理器 (PHP-FPM) 的说明。 如果使用的是 nginx Web 服务器而不是 Apache，则需要此服务。
 
@@ -31,35 +31,35 @@ ms.locfileid: "94384216"
 - [在 Ubuntu 16.04、18.04 和 20.04 上安装驱动程序](#installing-the-drivers-on-ubuntu-1604-1804-and-2004)
 - [在 Ubuntu 上安装带有 PHP-FPM 的驱动程序](#installing-the-drivers-with-php-fpm-on-ubuntu)
 - [在 Red Hat 7 和 8 上安装驱动程序](#installing-the-drivers-on-red-hat-7-and-8)
-- [在 Debian 8、9 和 10 上安装驱动程序](#installing-the-drivers-on-debian-8-9-and-10)
+- [在 Debian 9 和 10 上安装驱动程序](#installing-the-drivers-on-debian-9-and-10)
 - [在 Suse 12 和 15 上安装驱动程序](#installing-the-drivers-on-suse-12-and-15)
-- [在 Alpine 3.11 上安装驱动程序](#installing-the-drivers-on-alpine-311)
-- [在 macOS High Sierra、Mojave 和 Catalina 上安装驱动程序](#installing-the-drivers-on-macos-high-sierra-mojave-and-catalina)
+- [在 Alpine 3.11 和 3.12 上安装驱动程序](#installing-the-drivers-on-alpine-311-and-312)
+- [在 macOS Mojave、Catalina 和 Big Sur 上安装驱动程序](#installing-the-drivers-on-macos-mojave-catalina-and-big-sur)
 
 ## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-2004"></a>在 Ubuntu 16.04、18.04 和 20.04 上安装驱动程序
 
 > [!NOTE]
-> 若要安装 PHP 7.2 或 7.3，请使用以下命令将 7.4 替换为 7.2 或 7.3。
+> 若要安装 PHP 7.4 或 7.3，请在以下命令中将 8.0 替换为 7.4 或 7.3。
 
 ### <a name="step-1-install-php"></a>步骤 1。 安装 PHP
 ```bash
 sudo su
 add-apt-repository ppa:ondrej/php -y
 apt-get update
-apt-get install php7.4 php7.4-dev php7.4-xml -y --allow-unauthenticated
+apt-get install php8.0 php8.0-dev php8.0-xml -y --allow-unauthenticated
 ```
 ### <a name="step-2-install-prerequisites"></a>步骤 2. 安装先决条件
-按照[“Linux 安装”一文](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中的说明安装适用于 Ubuntu 的 ODBC 驱动程序。
+按照[安装 Microsoft ODBC Driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 上的说明安装适用于 Ubuntu 的 ODBC 驱动程序。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装适用于 Microsoft SQL Server 的 PHP 驱动程序
 ```bash
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.4/mods-available/sqlsrv.ini
-printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/8.0/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/8.0/mods-available/pdo_sqlsrv.ini
 exit
-sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv
+sudo phpenmod -v 8.0 sqlsrv pdo_sqlsrv
 ```
 
 如果系统中只有一个 PHP 版本，则可以将最后一个步骤简化为 `phpenmod sqlsrv pdo_sqlsrv`。
@@ -67,10 +67,10 @@ sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步骤 4. 安装 Apache 并配置驱动程序加载
 ```bash
 sudo su
-apt-get install libapache2-mod-php7.4 apache2
+apt-get install libapache2-mod-php8.0 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
-a2enmod php7.4
+a2enmod php8.0
 exit
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步骤 5。 重启 Apache 并测试示例脚本
@@ -82,42 +82,42 @@ sudo service apache2 restart
 ## <a name="installing-the-drivers-with-php-fpm-on-ubuntu"></a>在 Ubuntu 上安装带有 PHP-FPM 的驱动程序
 
 > [!NOTE]
-> 若要安装 PHP 7.2 或 7.3，请使用以下命令将 7.4 替换为 7.2 或 7.3。
+> 若要安装 PHP 7.4 或 7.3，请在以下命令中将 8.0 替换为 7.4 或 7.3。
 
 ### <a name="step-1-install-php"></a>步骤 1。 安装 PHP
 ```bash
 sudo su
 add-apt-repository ppa:ondrej/php -y
 apt-get update
-apt-get install php7.4 php7.4-dev php7.4-xml php7.4-fpm -y --allow-unauthenticated
+apt-get install php8.0 php8.0-dev php8.0-fpm php8.0-xml -y --allow-unauthenticated
 ```
 通过运行验证 PHP-FPM 服务的状态
 ```bash
-systemctl status php7.4-fpm
+systemctl status php8.0-fpm
 ```
 ### <a name="step-2-install-prerequisites"></a>步骤 2. 安装先决条件
-按照[“Linux 安装”一文](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中的说明安装适用于 Ubuntu 的 ODBC 驱动程序。
+按照[安装 Microsoft ODBC Driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 上的说明安装适用于 Ubuntu 的 ODBC 驱动程序。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装适用于 Microsoft SQL Server 的 PHP 驱动程序
 ```bash
-sudo pecl config-set php_ini /etc/php/7.4/fpm/php.ini
+sudo pecl config-set php_ini /etc/php/8.0/fpm/php.ini
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.4/mods-available/sqlsrv.ini
-printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/8.0/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/8.0/mods-available/pdo_sqlsrv.ini
 exit
-sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv
+sudo phpenmod -v 8.0 sqlsrv pdo_sqlsrv
 ```
 如果系统中只有一个 PHP 版本，则可以将最后一个步骤简化为 `phpenmod sqlsrv pdo_sqlsrv`。
 
-验证 `sqlsrv.ini` 和 `pdo_sqlsrv.ini` 是否位于 `/etc/php/7.4/fpm/conf.d/`：
+验证 `sqlsrv.ini` 和 `pdo_sqlsrv.ini` 是否位于 `/etc/php/8.0/fpm/conf.d/`：
 ```bash
-ls /etc/php/7.4/fpm/conf.d/*sqlsrv.ini
+ls /etc/php/8.0/fpm/conf.d/*sqlsrv.ini
 ```
 重新启动 PHP-FPM 服务：
 ```bash
-sudo systemctl restart php7.4-fpm
+sudo systemctl restart php8.0-fpm
 ```
 
 ### <a name="step-4-install-and-configure-nginx"></a>步骤 4. 安装并配置 nginx
@@ -131,13 +131,13 @@ sudo systemctl status nginx
 # Add index.php to the list if you are using PHP
 index index.html index.htm index.nginx-debian.html index.php;
 ```
-接下来，修改以下 `# pass PHP scripts to FastCGI server` 部分，如下所示：
+接下来，取消注释并修改以下 `# pass PHP scripts to FastCGI server` 部分，如下所示：
 ```
 # pass PHP scripts to FastCGI server
 #
 location ~ \.php$ {
         include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+        fastcgi_pass unix:/run/php/php8.0-fpm.sock;
 }
 ```
 ### <a name="step-5-restart-nginx-and-test-the-sample-script"></a>步骤 5。 重启 nginx 并测试示例脚本
@@ -152,14 +152,14 @@ sudo systemctl restart nginx.service
 
 若要在 Red Hat 7 上安装 PHP，请运行以下命令：
 > [!NOTE]
-> 若要安装 PHP 7.2 或 7.3，请在以下命令中分别用 remi- php72 或 remi-php73 替换 remi-php74。
+> 若要安装 PHP 7.4 或 7.3，请在以下命令中分别用 remi- php74 或 remi-php73 替换 remi-php80。
 ```bash
 sudo su
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 subscription-manager repos --enable=rhel-7-server-optional-rpms
 yum install yum-utils
-yum-config-manager --enable remi-php74
+yum-config-manager --enable remi-php80
 yum update
 # Note: The php-pdo package is required only for the PDO_SQLSRV driver
 yum install php php-pdo php-xml php-pear php-devel re2c gcc-c++ gcc
@@ -167,14 +167,14 @@ yum install php php-pdo php-xml php-pear php-devel re2c gcc-c++ gcc
 
 若要在 Red Hat 8 上安装 PHP，请运行以下命令：
 > [!NOTE]
-> 若要安装 PHP 7.2 或7.3，请在以下命令中分别用 remi-7.2 或 remi-7.3 替换 remi-7.4。
+> 若要安装 PHP 7.4 或7.3，请在以下命令中分别用 remi-7.4 或 remi-7.3 替换 remi-8.0。
 ```bash
 sudo su
 dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
 dnf install yum-utils
 dnf module reset php
-dnf module install php:remi-7.4
+dnf module install php:remi-8.0
 subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms
 dnf update
 # Note: The php-pdo package is required only for the PDO_SQLSRV driver
@@ -182,7 +182,7 @@ dnf install php-pdo php-pear php-devel
 ```
 
 ### <a name="step-2-install-prerequisites"></a>步骤 2. 安装先决条件
-按照[“Linux 安装”一文](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中的说明安装适用于 Red Hat 7 或 8 的 ODBC 驱动程序。
+按照[安装 Microsoft ODBC Driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 上的说明安装适用于 Red Hat 7 或 8 的 ODBC 驱动程序。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装适用于 Microsoft SQL Server 的 PHP 驱动程序
 ```bash
@@ -212,10 +212,10 @@ sudo apachectl restart
 ```
 若要测试安装，请参阅本文档末尾的[测试安装](#testing-your-installation)。
 
-## <a name="installing-the-drivers-on-debian-8-9-and-10"></a>在 Debian 8、9 和 10 上安装驱动程序
+## <a name="installing-the-drivers-on-debian-9-and-10"></a>在 Debian 9 和 10 上安装驱动程序
 
 > [!NOTE]
-> 若要安装 PHP 7.2 或 7.3，请使用以下命令将 7.4 替换为 7.2 或 7.3。
+> 若要安装 PHP 7.4 或 7.3，请在以下命令中将 8.0 替换为 7.4 或 7.3。
 
 ### <a name="step-1-install-php"></a>步骤 1。 安装 PHP
 ```bash
@@ -224,10 +224,10 @@ apt-get install curl apt-transport-https
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
 apt-get update
-apt-get install -y php7.4 php7.4-dev php7.4-xml php7.4-intl
+apt-get install -y php8.0 php8.0-dev php8.0-xml php8.0-intl
 ```
 ### <a name="step-2-install-prerequisites"></a>步骤 2. 安装先决条件
-按照[“Linux 安装”一文](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中的说明安装适用于 Debian 的 ODBC 驱动程序。 
+按照[安装 Microsoft ODBC Driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 上的说明安装适用于 Debian 的 ODBC 驱动程序。 
 
 可能还需要生成正确的区域设置，以使 PHP 输出在浏览器中正确显示。 例如，对于 en_US UTF-8 区域设置，运行以下命令：
 ```bash
@@ -242,10 +242,10 @@ locale-gen
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.4/mods-available/sqlsrv.ini
-printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/8.0/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/8.0/mods-available/pdo_sqlsrv.ini
 exit
-sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv
+sudo phpenmod -v 8.0 sqlsrv pdo_sqlsrv
 ```
 
 如果系统中只有一个 PHP 版本，则可以将最后一个步骤简化为 `phpenmod sqlsrv pdo_sqlsrv`。 与 `locale-gen` 一样，`phpenmod` 位于 `/usr/sbin` 中，因此可能需要将此目录添加到 `$PATH`。
@@ -253,10 +253,10 @@ sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步骤 4. 安装 Apache 并配置驱动程序加载
 ```bash
 sudo su
-apt-get install libapache2-mod-php7.4 apache2
+apt-get install libapache2-mod-php8.0 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
-a2enmod php7.4
+a2enmod php8.0
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步骤 5。 重启 Apache 并测试示例脚本
 ```bash
@@ -267,10 +267,10 @@ sudo service apache2 restart
 ## <a name="installing-the-drivers-on-suse-12-and-15"></a>在 Suse 12 和 15 上安装驱动程序
 
 > [!NOTE]
-> 在下面的说明中，将 `<SuseVersion>` 替换为 Suse 版本，如果使用的是 Suse Enterprise Linux 15，它将是 SLE_15 或 SLE_15_SP1。 对于 Suse 12，请使用 SLE_12_SP4（或更高版本，如果适用）。 并不是所有版本的 PHP 都适用于所有版本的 Suse Linux。 请参阅 `http://download.opensuse.org/repositories/devel:/languages:/php` 以查看哪些版本的 Suse 具有可用的默认版本 PHP，或者参阅 `http://download.opensuse.org/repositories/devel:/languages:/php:/` 查看哪些其他版本的 PHP 可用于哪些版本的 Suse。
+> 在以下说明中，请将 `<SuseVersion>` 替换为你的 Suse 版本。 如果使用的是 Suse Enterprise Linux 15，则将为 SLE_15_SP1 或 SLE_15_SP2。 对于 Suse 12，请使用 SLE_12_SP4（或更高版本，如果适用）。 并不是所有版本的 PHP 都适用于所有版本的 Suse Linux。 请参阅 `http://download.opensuse.org/repositories/devel:/languages:/php` 以查看哪些版本的 Suse 具有可用的默认版本 PHP，或者参阅 `http://download.opensuse.org/repositories/devel:/languages:/php:/` 查看哪些其他版本的 PHP 可用于哪些版本的 Suse。
 
 > [!NOTE]
-> PHP 7.4 的包不可用于 Suse 12。 若要安装 PHP 7.2，用以下 URL 替换下面的存储库 URL：`https://download.opensuse.org/repositories/devel:/languages:/php:/php72/<SuseVersion>/devel:languages:php:php72.repo`。
+> 适用于 PHP 7.4 或更高版本的包不适用于 Suse 12，适用于 PHP 8.0 的包尚不适用于 Suse 15。
 > 若要安装 PHP 7.3，用以下 URL 替换下面的存储库 URL：`https://download.opensuse.org/repositories/devel:/languages:/php:/php73/<SuseVersion>/devel:languages:php:php73.repo`。
 
 ### <a name="step-1-install-php"></a>步骤 1。 安装 PHP
@@ -281,7 +281,7 @@ zypper --gpg-auto-import-keys refresh
 zypper -n install php7 php7-devel php7-openssl
 ```
 ### <a name="step-2-install-prerequisites"></a>步骤 2. 安装先决条件
-按照[“Linux 安装”一文](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中的说明安装适用于 Suse 的 ODBC 驱动程序。
+按照[安装 Microsoft ODBC Driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 上的说明安装适用于 Suse 的 ODBC 驱动程序。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装适用于 Microsoft SQL Server 的 PHP 驱动程序
 > [!NOTE]
@@ -310,14 +310,14 @@ sudo systemctl restart apache2
 ```
 若要测试安装，请参阅本文档末尾的[测试安装](#testing-your-installation)。
 
-## <a name="installing-the-drivers-on-alpine-311"></a>在 Alpine 3.11 上安装驱动程序
+## <a name="installing-the-drivers-on-alpine-311-and-312"></a>在 Alpine 3.11 和 3.12 上安装驱动程序
 
 > [!NOTE]
-> PHP 的默认版本为 7.3。 可以从 Alpine 3.11 的其他存储库中获取 PHP 的备用版本。 可以改为从源编译 PHP。
+> PHP 的默认版本为 7.3。 可从 Alpine 的测试或边缘存储库中获取 PHP 7.4 或更高版本。 可以改为从源编译 PHP。
 
 ### <a name="step-1-install-php"></a>步骤 1。 安装 PHP
-可以在 `edge/community` 存储库中找到用于 Alpine 的 PHP 包。 请查看 Wiki 页上的[启用社区存储库](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository)。 将以下行添加到 `/etc/apt/repositories`，并将 `<mirror>` 替换为 Alpine 存储库镜像的 URL：
-```
+可以在 `edge/community` 存储库中找到用于 Alpine 的 PHP 包。 请查看 Wiki 页上的[启用社区存储库](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository)。 将以下行添加到 `/etc/apk/repositories`，并将 `<mirror>` 替换为 Alpine 存储库镜像的 URL：
+```bash
 http://<mirror>/alpine/edge/community
 ```
 然后运行：
@@ -328,7 +328,7 @@ apk update
 apk add php7 php7-dev php7-pear php7-pdo php7-openssl autoconf make g++
 ```
 ### <a name="step-2-install-prerequisites"></a>步骤 2. 安装先决条件
-按照[“Linux 安装”一文](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中的说明安装适用于 Alpine 的 ODBC 驱动程序。 
+按照[安装 Microsoft ODBC Driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 上的说明安装适用于 Alpine 的 ODBC 驱动程序。 
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步骤 3. 安装适用于 Microsoft SQL Server 的 PHP 驱动程序
 ```bash
@@ -350,7 +350,7 @@ sudo rc-service apache2 restart
 若要测试安装，请参阅本文档末尾的[测试安装](#testing-your-installation)。
 
 
-## <a name="installing-the-drivers-on-macos-high-sierra-mojave-and-catalina"></a>在 macOS High Sierra、Mojave 和 Catalina 上安装驱动程序
+## <a name="installing-the-drivers-on-macos-mojave-catalina-and-big-sur"></a>在 macOS Mojave、Catalina 和 Big Sur 上安装驱动程序
 
 如果还没有安装 brew，请按照以下步骤安装：
 ```bash
@@ -358,22 +358,22 @@ sudo rc-service apache2 restart
 ```
 
 > [!NOTE]
-> 若要安装 PHP 7.2 或 7.3，请在以下命令中分别用 php@7.2 或 php@7.3 替换 php@7.4。
+> 若要安装 PHP 7.4 或 7.3，请在以下命令中分别用 php@7.4 或 php@7.3 替换 php@8.0。
 
 ### <a name="step-1-install-php"></a>步骤 1。 安装 PHP
 
 ```bash
 brew tap
 brew tap homebrew/core
-brew install php@7.4
+brew install php@8.0
 ```
 PHP 现应已在路径中。 请运行 `php -v` 以验证当前正在运行正确版本的 PHP。 如果 PHP 不在路径中或版本不正确，则运行以下命令：
 ```bash
-brew link --force --overwrite php@7.4
+brew link --force --overwrite php@8.0
 ```
 
 ### <a name="step-2-install-prerequisites"></a>步骤 2. 安装先决条件
-按照[“Linux 安装”一文](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)中的说明安装适用于 macOS 的 ODBC 驱动程序。 
+按照[安装 Microsoft ODBC Driver for SQL Server (macOS)](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) 上的说明安装适用于 macOS 的 ODBC 驱动程序。 
 
 此外，可能需要安装 GNU make 工具：
 ```bash
@@ -395,7 +395,7 @@ brew install apache2
 ``` 
 以下命令将所需的配置追加到 `httpd.conf`。 请确保用上一个命令返回的路径替换 `/usr/local/etc/httpd/httpd.conf`：
 ```bash
-echo "LoadModule php7_module /usr/local/opt/php@7.4/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
+echo "LoadModule php7_module /usr/local/opt/php@8.0/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
 (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步骤 5。 重启 Apache 并测试示例脚本
@@ -407,6 +407,8 @@ sudo apachectl restart
 ## <a name="testing-your-installation"></a>测试安装
 
 若要测试此示例脚本，请在系统的文档根目录中创建名为“testsql.php”的文件。 这在 Ubuntu、Debian 和 Redhat 上为 `/var/www/html/`，在 SUSE 上为 `/srv/www/htdocs`，在 macOS 上为 `/var/www/localhost/htdocs`，在 macOS 上为 `/usr/local/var/www`。 将以下脚本复制到其中，酌情替换服务器、数据库、用户名和密码。
+
+### <a name="sqlsrv-example"></a>SQLSRV 示例
 
 ```php
 <?php
@@ -465,6 +467,50 @@ function formatErrors($errors)
         echo "Message: ". $error['message'] . "<br/>";
     }
 }
+?>
+```
+
+### <a name="pdo_sqlsrv-example"></a>PDO_SQLSRV 示例
+
+```php
+<?php
+try {
+    $serverName = "yourServername";
+    $databaseName = "yourDatabase";
+    $uid = "yourUsername";
+    $pwd = "yourPassword";
+    
+    $conn = new PDO("sqlsrv:server = $serverName; Database = $databaseName;", $uid, $pwd);
+
+    // Select Query
+    $tsql = "SELECT @@Version AS SQL_VERSION";
+
+    // Executes the query
+    $stmt = $conn->query($tsql);
+} catch (PDOException $exception1) {
+    echo "<h1>Caught PDO exception:</h1>";
+    echo $exception1->getMessage() . PHP_EOL;
+    echo "<h1>PHP Info for troubleshooting</h1>";
+    phpinfo();
+}
+
+?>
+
+<h1> Success Results : </h1>
+
+<?php
+try {
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        echo $row['SQL_VERSION'] . PHP_EOL;
+    }
+} catch (PDOException $exception2) {
+    // Display errors
+    echo "<h1>Caught PDO exception:</h1>";
+    echo $exception2->getMessage() . PHP_EOL;
+}
+
+unset($stmt);
+unset($conn);
 ?>
 ```
 

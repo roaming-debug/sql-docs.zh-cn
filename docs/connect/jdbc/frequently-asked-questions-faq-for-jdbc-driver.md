@@ -2,7 +2,7 @@
 title: JDBC 驱动程序常见问题解答 (FAQ)
 description: 本页是关于 Microsoft JDBC Driver for SQL Server 的常见问题解答。
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1fe92ec4216998d36826c518a5dce40c26253c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 634bbd66e2ad00ccda3b60f6f2fccfea976d09b0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725458"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163622"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驱动程序常见问题解答 (FAQ)
 
@@ -36,6 +36,15 @@ JDBC 驱动程序属于开放源代码，可以在 [GitHub](https://github.com/m
 Microsoft JDBC Driver 的 GitHub 存储库提供的 JDBC 驱动程序文件是 JDBC 驱动程序的核心，并获得存储库中列出的开放源代码许可证的许可。 [Microsoft 下载页](download-microsoft-jdbc-driver-for-sql-server.md)中的驱动程序包包括用于进行 Windows 集成身份验证和通过 JDBC 驱动程序启用 XA 事务的其他库。 这些其他库获得可下载包随附的许可证的许可。
 
 **升级驱动程序时，我应该知道什么？**  
+Microsoft JDBC Driver 9.2 支持 JDBC 4.2 和 4.3（部分）规范，并且安装包中包含以下三个 JAR 类库：
+
+| JAR                        | JDBC 规范            | 添加版本 |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-9.2.0.jre15.jar | JDBC 4.3（部分）和 4.2 | JDK 15.0    |
+| mssql-jdbc-9.2.0.jre11.jar | JDBC 4.3（部分）和 4.2 | JDK 11.0    |
+| mssql-jdbc-9.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 Microsoft JDBC Driver 8.4 支持 JDBC 4.2 和 4.3（部分）规范，并且安装包中包含以下三个 JAR 类库：
 
 | JAR                        | JDBC 规范            | 添加版本 |

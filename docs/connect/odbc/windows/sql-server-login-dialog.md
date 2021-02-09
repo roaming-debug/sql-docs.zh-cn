@@ -2,7 +2,7 @@
 title: “SQL Server 登录”对话框 (ODBC)
 description: 当应用程序在没有指定连接数据库所需的足够信息的情况下建立 ODBC 连接时，可能会出现 SQL Server 登录对话框。
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,22 +11,22 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: 7c0a2be5961e4fab07941d999da1a2b2fe5f9dbe
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 9a2ba6a75457b2c4742603368d153f5636d3b541
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898803"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158216"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>“SQL Server 登录”对话框 (ODBC)
 
-当调用一个 ODBC 连接而不为驱动程序指定足够的信息来连接到 SQL Server 时，ODBC 驱动程序将显示“SQL Server 登录”**** 对话框。
+当调用一个 ODBC 连接而不为驱动程序指定足够的信息来连接到 SQL Server 时，ODBC 驱动程序将显示“SQL Server 登录”对话框。
 
 ## <a name="options"></a>选项
 
 ### <a name="server"></a>服务器
 
-网络上的 SQL Server 实例的名称。 从列表中选择一个服务器\实例名，或在“服务器”**** 框中键入服务器\实例名。 或者，可以在客户端计算机上使用“SQL Server 配置管理器”**** 创建服务器别名，并在“服务器”**** 框中键入该名称。
+网络上的 SQL Server 实例的名称。 从列表中选择一个服务器\实例名，或在“服务器”  框中键入服务器\实例名。 或者，可以在客户端计算机上使用“SQL Server 配置管理器”  创建服务器别名，并在“服务器”  框中键入该名称。
 
 当使用与 SQL Server 相同的计算机时可以输入“(local)”。 即使正在运行非联网版的 SQL Server，也可以连接到 SQL Server 的本地实例。
 
@@ -35,12 +35,13 @@ ms.locfileid: "87898803"
 ### <a name="authentication-mode"></a>身份验证模式
 
 请选择以下身份验证模式之一：
-- 使用登录 ID 和密码的 SQL Server****
-- 使用当前登录用户帐户的 Windows 集成**** 身份验证
-- 使用登录 ID 和密码的 Active Directory 密码****
-- 使用当前登录用户帐户的 Active Directory 集成**** 身份验证
-- Active Directory 交互式身份验证与登录 ID****
+- 使用登录 ID 和密码的 SQL Server
+- 使用当前登录用户帐户的 Windows 集成身份验证
+- 使用登录 ID 和密码的 Active Directory 密码
+- 使用当前登录用户帐户的 Active Directory 集成身份验证
+- Active Directory 交互式身份验证与登录 ID
 - 使用托管标识的托管服务标识身份验证
+- 使用 Azure Active Directory 服务主体的 Active Directory 服务主体身份验证
 
 有关身份验证模式的详细信息，请参阅[数据源向导屏幕 2](../../../connect/odbc/windows/dsn-wizard-2.md)。
 
@@ -50,19 +51,19 @@ ms.locfileid: "87898803"
 
 ### <a name="login-id"></a>登录 ID
 
-如果“身份验证模式”设置为“SQL Server”或“Active Directory 密码”、“Active Directory 交互式”或“托管服务标识”，则指定用于连接的 SQL Server 或 Azure Active Directory 登录 ID。 否则，将禁用“登录 ID”**** 框。
+如果“身份验证模式”设置为“SQL Server”、“Active Directory 密码”、“Active Directory 交互”或“托管服务标识”或“Active Directory 服务主体”，则指定用于连接的 SQL Server 或 Azure Active Directory 登录 ID     。 否则，将禁用“登录 ID”框。
 
 ### <a name="password"></a>密码
 
-如果“身份验证模式”**** 设置为“SQL Server”**** 或“Active Directory 密码”****，则指定用于连接的 SQL Server 或 Azure Active Directory 登录 ID 的密码。 否则，将禁用“密码”**** 框。
+如果“身份验证模式”设置为“SQL Server”或“Active Directory 密码”，则指定用于连接的 SQL Server 或 Azure Active Directory 登录 ID 的密码。 否则，将禁用“密码”框。
 
 ### <a name="options"></a>选项
 
-显示或隐藏“选项”**** 组。 如果“服务器”具有值，则启用“选项”******** 按钮。
+显示或隐藏“选项”  组。 如果“服务器”具有值，则启用“选项”   按钮。
 
 ### <a name="change-password"></a>更改密码
 
-选中此框后，将显示“新密码”和“确认新密码”框********。
+选中此框后，将显示“新密码”和“确认新密码”框。
 
 ### <a name="new-password"></a>新密码
 
@@ -90,11 +91,11 @@ ms.locfileid: "87898803"
 
 ### <a name="application-name"></a>应用程序名称
 
-（可选）指定将要存储在 sys.sysprocesses**** 中该连接所在行的 program_name**** 列的应用程序名称。
+（可选）指定将要存储在 sys.sysprocesses 中该连接所在行的 program_name 列的应用程序名称。
 
 ### <a name="workstation-id"></a>工作站 ID
 
-（可选）指定将要存储在 sys.sysprocesses**** 中该连接所在行的 hostname**** 列的工作站 ID。
+（可选）指定将要存储在 sys.sysprocesses 中该连接所在行的 hostname 列的工作站 ID。
 
 ### <a name="use-strong-encryption-for-data"></a>对数据使用强加密
 
@@ -102,7 +103,7 @@ ms.locfileid: "87898803"
 
 ### <a name="trust-server-certificate"></a>信任服务器证书
 
-仅当启用“对数据使用强加密”**** 时，此选项才适用。 选中后，将不会验证服务器的证书是否有服务器的正确主机名，以及是否由受信任的证书颁发机构颁发。
+仅当启用“对数据使用强加密”时，此选项才适用。 选中后，将不会验证服务器的证书是否有服务器的正确主机名，以及是否由受信任的证书颁发机构颁发。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -2,7 +2,7 @@
 title: 系统要求（SQL Server ODBC 驱动程序）
 description: 本文列出了 Linux 和 macOS 操作系统上的 SQL Server ODBC 驱动程序的系统要求。
 ms.custom: ''
-ms.date: 08/06/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 74b7bf1680dd956dfca85917939ad24a3559d7de
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f78fdfcb8fe19856483403c4675f973c4f5c97b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934456"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198377"
 ---
 # <a name="system-requirements-linux-and-macos"></a>系统要求（Linux 和 macOS）
 
@@ -36,28 +36,32 @@ Linux 和 macOS 驱动程序 SQL 版本兼容性与 [Windows 驱动程序 SQL �
 
 以下操作系统的 x64 体系结构支持 Linux 和 macOS 驱动程序的版本 17、13.1 和 13：
 
-|驱动程序版本&nbsp;&#8594;<br />&#8595; 操作系统     |17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
-|-------------------------------|----|----|----|----|----|----|----|----|---|
-|Apple OS X 10.11 (El Capitan)  |    |    |是 |是 |是 |是 |是 |是 |是|
-|Apple macOS 10.12 (Sierra)     |    |    |是 |是 |是 |是 |是 |是 |是|
-|Apple macOS 10.13 (High Sierra)|是 |是 |是 |是 |是 |是 |是 |是 |是|
-|Apple macOS 10.14 (Mojave)     |是 |是 |是 |是 |    |    |    |    |   |
-|Apple macOS 10.15 (Catalina)   |是 |是 |    |    |    |    |    |    |   |
-|Alpine Linux 3.11              |是 |是 |    |    |    |    |    |    |   |
-|Debian Linux 8                 |是 |是 |是 |是 |是 |是 |是 |是 |是|
-|Debian Linux 9                 |是 |是 |是 |是 |是 |是 |是 |是 |是|
-|Debian Linux 10                |是 |是 |是 |    |    |    |    |    |   |
-|Oracle Linux 8                 |是 |是 |    |    |    |    |    |    |   |
-|RedHat Enterprise Linux 6      |是 |是 |是 |是 |是 |是 |是 |是 |是|
-|RedHat Enterprise Linux 7      |是 |是 |是 |是 |是 |是 |是 |是 |是|
-|RedHat Enterprise Linux 8      |是 |是 |是 |    |    |    |    |    |   |
-|SUSE Linux Enterprise Server 11<sup>1</sup>|是 |是 |是 |是 |是 |是 |是 |是 |是|
-|SUSE Linux Enterprise Server 12|是 |是 |是 |是 |是 |是 |是 |是 |是|
-|SUSE Linux Enterprise Server 15|是 |是 |是 |是 |    |    |    |    |   |
-|Ubuntu Linux 14.04             |    |    |是 |是 |是 |是 |是 |是 |是|
-|Ubuntu Linux 16.04             |是 |是 |是 |是 |是 |是 |是 |是 |是|
-|Ubuntu Linux 18.04             |是 |是 |是 |是 |是 |    |    |    |   |
-|Ubuntu Linux 20.04             |是 |    |    |    |    |    |    |    |   |
+|驱动程序版本&nbsp;&#8594;<br />&#8595; 操作系统     |17.7|17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
+|-------------------------------|----|----|----|----|----|----|----|----|----|---|
+|Apple OS X 10.11 (El Capitan)  |    |    |    |是 |是 |是 |是 |是 |是 |是|
+|Apple macOS 10.12 (Sierra)     |    |    |    |是 |是 |是 |是 |是 |是 |是|
+|Apple macOS 10.13 (High Sierra)|    |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|Apple macOS 10.14 (Mojave)     |是 |是 |是 |是 |是 |    |    |    |    |   |
+|Apple macOS 10.15 (Catalina)   |是 |是 |是 |    |    |    |    |    |    |   |
+|Apple macOS 11.0 (Big Sur)     |是 |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.11              |是 |是 |是 |    |    |    |    |    |    |   |
+|Alpine Linux 3.12              |是 |    |    |    |    |    |    |    |    |   |
+|Debian Linux 8                 |    |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|Debian Linux 9                 |是 |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|Debian Linux 10                |是 |是 |是 |是 |    |    |    |    |    |   |
+|Oracle Linux 7                 |是 |    |    |    |    |    |    |    |    |   |
+|Oracle Linux 8                 |是 |是 |是 |    |    |    |    |    |    |   |
+|RedHat Enterprise Linux 6      |是 |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|RedHat Enterprise Linux 7      |是 |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|RedHat Enterprise Linux 8      |是 |是 |是 |是 |    |    |    |    |    |   |
+|SUSE Linux Enterprise Server 11<sup>1</sup>|是 |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|SUSE Linux Enterprise Server 12|是 |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|SUSE Linux Enterprise Server 15|是 |是 |是 |是 |是 |    |    |    |    |   |
+|Ubuntu Linux 14.04             |    |    |    |是 |是 |是 |是 |是 |是 |是|
+|Ubuntu Linux 16.04             |是 |是 |是 |是 |是 |是 |是 |是 |是 |是|
+|Ubuntu Linux 18.04             |是 |是 |是 |是 |是 |是 |    |    |    |   |
+|Ubuntu Linux 20.04             |是 |是 |    |    |    |    |    |    |    |   |
+|Ubuntu Linux 20.10             |是 |    |    |    |    |    |    |    |    |   |
 
 <sup>1</sup> ODBC Driver 17 仅支持 SUSE Linux Enterprise Server 11 SP4
 
@@ -67,7 +71,7 @@ Linux 和 macOS 驱动程序 SQL 版本兼容性与 [Windows 驱动程序 SQL �
   
 * 针对 64 位 SQLLEN/SQLULEN 生成的 64 位 UnixODBC 2.3.0 驱动程序管理器。 Linux 上的 ODBC 驱动程序不支持更高版本的 64 位 UnixODBC 驱动程序管理器。 有关详细信息，请参阅 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) 。  
   
-* 用于 Red Hat Enterprise Linux 5（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)****  
+* 用于 Red Hat Enterprise Linux 5（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -75,7 +79,7 @@ Linux 和 macOS 驱动程序 SQL 版本兼容性与 [Windows 驱动程序 SQL �
   * `krb5-libs`  
   * `openssl`  
   
-* 用于 Red Hat Enterprise Linux 6（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)****  
+* 用于 Red Hat Enterprise Linux 6（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -83,7 +87,7 @@ Linux 和 macOS 驱动程序 SQL 版本兼容性与 [Windows 驱动程序 SQL �
   * `krb5-libs`  
   * `openssl`  
   
-* 用于 SUSE Linux Enterprise 11 Service Pack 2（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11（预览版）for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)****  
+* 用于 SUSE Linux Enterprise 11 Service Pack 2（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11（预览版）for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
   * `glibc`  
   * `libstdc++46`  
   * `libgcc46`  

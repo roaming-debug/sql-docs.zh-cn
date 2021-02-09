@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+ms.openlocfilehash: d933f9bdff4279b841522f8a0e09f66e01364630
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900870"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495748"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>创建 Azure Data Studio 面板扩展
 
@@ -37,7 +37,7 @@ Azure Data Studio 建立在与 Visual Studio Code 相同的框架上，因此 Az
 - 已在 `$PATH` 中安装 [Node.js](https://nodejs.org) 且可用。 Node.js 包含 [npm](https://www.npmjs.com/)，它是用于安装扩展生成器的 Node.js 包管理器。
 - 已有 [Visual Studio Code](https://code.visualstudio.com)，用于调试扩展。
 - 有 Azure Data Studio [调试扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)（可选）。 借助调试扩展，无需将扩展打包并安装到 Azure Data Studio 中也可测试扩展。
-- 确保 `azuredatastudio` 位于你的路径中。 对于 Windows，请确保选择 setup.exe 中的“添加到路径”选项。 对于 Mac 或 Linux，运行“在 PATH 中安装“azuredatastudio”命令”选项。
+- 确保 `azuredatastudio` 位于你的路径中。 对于 Windows，请确保选择 setup.exe 中的“添加到路径”选项。 对于 Mac 或 Linux，请从 Azure Data Studio 的命令面板运行“在 PATH 中安装 'azuredatastudio' 命令”。
 
 ## <a name="install-the-extension-generator"></a>安装扩展生成器
 

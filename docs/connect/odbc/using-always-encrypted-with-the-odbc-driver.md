@@ -2,19 +2,19 @@
 title: 结合使用 Always Encrypted 和 JDBC 驱动程序
 description: 了解如何结合使用 Always Encrypted 和 Microsoft ODBC Driver for SQL Server 来开发 ODBC 应用程序。
 ms.custom: ''
-ms.date: 01/15/2021
+ms.date: 01/29/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: f066c8b1429a11b67cd6fc78fd93eaad1a6fc110
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: ab1b5b73ad1bd6ba02baa5ee31bb4be4b42bb63f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534706"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199003"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -74,7 +74,7 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer
 - `<attestation URL>` - 指定证明 URL（证明服务终结点）。 你需要从证明服务管理员处获取环境的证明 URL。
 
   - 如果使用的是 [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] 和主机保护者服务 (HGS)，请参阅[确定并共享 HGS 证明 URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)。
-  - 如果使用的是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)。
+  - 如果使用的是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation)。
 
 
 为数据库连接启用 enclave 计算的连接字符串示例：
@@ -279,6 +279,50 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 }
 ```
 
+#### <a name="moneysmallmoney-encryption"></a>Money/SmallMoney 加密
+
+从驱动程序版本 17.7 开始，可以将 Always Encrypted 与 MONEY 和 SMALLMONEY 一起使用。 不过，还需要执行一些附加步骤。
+插入到已加密的 MONEY 或 SMALLMONEY 列时，请使用以下 C 类型之一：
+```
+SQL_C_CHAR
+SQL_C_WCHAR
+SQL_C_SHORT
+SQL_C_LONG
+SQL_C_FLOAT
+SQL_C_DOUBLE
+SQL_C_BIT
+SQL_C_TINYINT
+SQL_C_SBIGINT
+SQL_C_NUMERIC
+```
+
+以及 `SQL_NUMERIC` 或 `SQL_DOUBLE` 的 SQL 类型（使用此类型时可能会丢失精度）。
+
+##### <a name="binding-the-variable"></a>绑定变量
+
+在已加密列中绑定 MONEY/SMALLMONEY 变量时，必须设置以下描述符字段：
+
+```
+// n is the descriptor record of the MONEY/SMALLMONEY parameter
+// the type is assumed to be SMALLMONEY if isSmallMoney is true and MONEY otherwise
+
+SQLHANDLE ipd = 0;
+SQLGetStmtAttr(hStmt, SQL_ATTR_IMP_PARAM_DESC, (SQLPOINTER)&ipd, SQL_IS_POINTER, NULL);
+SQLSetDescField(ipd, n, SQL_CA_SS_SERVER_TYPE, isSmallMoney ? (SQLPOINTER)SQL_SS_TYPE_SMALLMONEY :
+                                                              (SQLPOINTER)SQL_SS_TYPE_MONEY, SQL_IS_INTEGER);
+                                                              
+                                                              
+// If the variable is bound as SQL_NUMERIC, additional descriptor fields have to be set
+// var is SQL_NUMERIC_STRUCT containing the value to be inserted
+
+SQLHDESC   hdesc = NULL;
+SQLGetStmtAttr(hStmt, SQL_ATTR_APP_PARAM_DESC, &hdesc, 0, NULL);
+SQLSetDescField(hdesc, n, SQL_DESC_PRECISION, (SQLPOINTER)(var.precision), 0);
+SQLSetDescField(hdesc, n, SQL_DESC_SCALE, (SQLPOINTER)(var.scale), 0);
+SQLSetDescField(hdesc, n, SQL_DESC_DATA_PTR, &var, 0);
+```
+
+
 #### <a name="avoiding-common-problems-when-querying-encrypted-columns"></a>避免查询加密列时的常见问题
 
 本节介绍从 ODBC 应用程序查询加密列时的常见错误类别，以及有关如何避免这些错误的若干指导。
@@ -419,6 +463,8 @@ Azure Key Vault (AKV) 便于存储和管理用于 Always Encrypted 的列主密�
 
 - 托管标识 (17.5.2+) - 系统或用户分配；有关详细信息，请参阅 [Azure 资源的托管标识](/azure/active-directory/managed-identities-azure-resources/)。
 
+- Azure Key Vault 交互（17.7+ Windows 驱动程序）- 使用此方法时，将使用登录 ID 通过 Azure Active Directory 对凭据进行身份验证。
+
 若要允许驱动程序将 AKV 存储的 CMK 用于列加密，请使用下列仅连接字符串关键字：
 
 |凭据类型|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
@@ -426,6 +472,7 @@ Azure Key Vault (AKV) 便于存储和管理用于 Always Encrypted 的列主密�
 |用户名/密码| `KeyVaultPassword`|用户主体名称|密码|
 |客户端 ID/机密| `KeyVaultClientSecret`|客户端 ID|机密|
 |托管标识|`KeyVaultManagedIdentity`|对象 ID（可选，仅用于用户分配）|（未指定）|
+|AKV 交互|`KeyVaultInteractive`|(未设置)|(未设置)|
 
 #### <a name="example-connection-strings"></a>连接字符串示例
 
@@ -455,10 +502,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
 ```
 
+**AKV 交互**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultInteractive;UID=<userID>;PWD=<password>
+```
+
 将 AKV 用于 CMK 存储无需其他 ODBC 应用程序更改。
 
 > [!NOTE]
-> 驱动程序包含它信任的 AKV 终结点的列表。 自驱动程序版本 17.5.2 起，此列表是可配置的：可以将驱动程序或 DSN 的 ODBCINST.INI 或 ODBC.INI 注册表项 (Windows) 或 `odbcinst.ini`/`odbc.ini` 文件部分 (Linux/macOS) 中的 `AKVTrustedEndpoints` 属性设置为分号分隔列表。 在 DSN 中进行设置的优先级高于在驱动程序中设置。 如果该值以分号开头，则它将扩展默认列表；否则，它将替换默认列表。 默认列表（自 17.5 起）为 `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`。
+> 驱动程序包含它信任的 AKV 终结点的列表。 自驱动程序版本 17.5.2 起，此列表是可配置的：可以将驱动程序或 DSN 的 ODBCINST.INI 或 ODBC.INI 注册表项 (Windows) 或 `odbcinst.ini`/`odbc.ini` 文件部分 (Linux/macOS) 中的 `AKVTrustedEndpoints` 属性设置为分号分隔列表。 在 DSN 中进行设置的优先级高于在驱动程序中设置。 如果该值以分号开头，则它将扩展默认列表；否则，它将替换默认列表。 默认列表（自 17.5 起）为 `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`。 从 17.7 开始，列表还包括 `managedhsm.azure.net;managedhsm.azure.cn;managedhsm.usgovcloudapi.net;managedhsm.microsoftazure.de`。
 
 
 ### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
@@ -642,7 +695,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |名称|说明|  
 |----------|-----------------|  
 |`ColumnEncryption`|接受的值为 `Enabled`/`Disabled`。<br>`Enabled` - 启用或针对连接的 Always Encrypted 功能。<br>`Disabled` - 禁用针对连接的 Always Encrypted 功能。<br>证明协议、证明 URL --（版本 17.4 和更高版本）使用指定的证明协议和证明 URL 启用具有安全 enclave 的 Always Encrypted。 <br><br>默认为 `Disabled`。|
-|`KeyStoreAuthentication` | 有效值：`KeyVaultPassword`、`KeyVaultClientSecret` |
+|`KeyStoreAuthentication` | 有效值：`KeyVaultPassword`、`KeyVaultClientSecret`、`KeyVaultInteractive` |
 |`KeyStorePrincipalId` | 为 `KeyStoreAuthentication` = `KeyVaultPassword` 时，将此值设置为有效的 Azure Active Directory 用户主体名称。 <br>为 `KeyStoreAuthetication` = `KeyVaultClientSecret` 时，将此值设置为有效的 Azure Active Directory 应用程序客户端 ID |
 |`KeyStoreSecret` | 为 `KeyStoreAuthentication` = `KeyVaultPassword` 时，将此值设置为相应用户名的密码。 <br>为 `KeyStoreAuthentication` = `KeyVaultClientSecret` 时，将此值设置为 Azure Active Directory 应用程序客户端 ID 关联的应用程序机密 |
 

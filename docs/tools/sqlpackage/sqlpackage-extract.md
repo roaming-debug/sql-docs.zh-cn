@@ -10,15 +10,15 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: abefb39814213426d863fa3839c4095eadc82249
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: c4a9947520ef3914a2ccb34aba5ffaacc1bc6bb2
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577791"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983640"
 ---
 # <a name="sqlpackage-extract-parameters-and-properties"></a>SqlPackage 提取的参数和属性
-SqlPackage.exe 提取操作可创建从 SQL Server 或 Azure SQL 数据库到 DACPAC 包（.dacpac 文件）的实时数据库架构。 默认情况下，.dacpac 文件中不包含数据。 若要包含数据，请使用[导出操作](sqlpackage-export.md)。 
+SqlPackage.exe 的 Extract 操作会在 DACPAC 文件 (.dacpac) 中创建连接的数据库的架构。 默认情况下，.dacpac 文件中不包含数据。 若要包括数据，请使用[导出操作](sqlpackage-export.md)或使用 Extract 属性 ExtractAllTableData/TableData 。 
 
 ## <a name="command-line-syntax"></a>命令行语法
 

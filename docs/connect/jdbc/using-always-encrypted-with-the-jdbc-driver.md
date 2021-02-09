@@ -2,7 +2,7 @@
 title: 对 JDBC 驱动程序使用 Always Encrypted
 description: 了解如何在 Java 应用程序中结合使用 Always Encrypted 和 JDBC Driver for SQL Server 来加密服务器上的敏感数据。
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52fc716acb62ea82a6a29c1cceaa73a30cc93c44
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a89deba9ed124587899bc915fa86ef74074ed761
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727502"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195273"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 
@@ -126,9 +126,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 >  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure-activedirectory-library-for-java 库](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [microsoft-authentication-library-for-java libraries](https://github.com/AzureAD/microsoft-authentication-library-for-java)
 >
-> 有关如何在 Maven 项目中包含这些依赖项的示例，请参阅[通过 Apache Maven 下载 ADAL4J 和 AKV 依赖项](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
+> 有关如何在 Maven 项目中包含这些依赖项的示例，请参阅[通过 Apache Maven 下载 MSAL4J 和 AKV 依赖项](https://github.com/microsoft/mssql-jdbc/wiki/Download-MSAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-azure-key-vault-authentication-with-managed-identities"></a>将 Azure Key Vault 身份验证与托管标识配合使用
 

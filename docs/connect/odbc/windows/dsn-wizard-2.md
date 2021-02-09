@@ -2,7 +2,7 @@
 description: 数据源向导屏幕 2 (ODBC Driver for SQL Server)
 title: 数据源向导屏幕 2 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: d1e18939ab9d3f2e86452dd3f1847971157ca92c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 749ba8963234955e4893a2c5197bcfd4c26f2584
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462206"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159557"
 ---
 # <a name="data-source-wizard-screen-2"></a>数据源向导屏幕 2
 
@@ -50,15 +50,20 @@ ms.locfileid: "88462206"
 
 指定驱动程序使用托管标识向 SQL Server 进行身份验证。
 
+### <a name="with-active-directory-service-principal-authentication"></a>使用 Active Directory 服务主体身份验证
+
+指定驱动程序使用 Azure Active Directory 服务主体向 SQL Server 进行身份验证。
+
+
 ### <a name="login-id"></a>登录 ID
 
-如果选择“使用用户输入的登录 ID 和密码进行 SQL Server 身份验证”**** 或“使用输入用户的登录 ID 和密码进行 Active Directory 密码身份验证”**** 或“使用用户输入的登录 ID 进行 Active Directory 交互身份验证”****，则指定驱动程序连接到 SQL Server 时使用的登录 ID。 如果选择“使用托管标识身份验证”，请指定托管标识的对象 ID 或保留为空以使用默认标识。 此字段仅适用于为确定服务器默认设置建立的连接；除非使用托管身份验证，否则它不适用于创建数据源之后使用该数据源建立的后续连接。
+如果选择“使用用户输入的登录 ID 和密码进行 SQL Server 身份验证”或“使用输入用户的登录 ID 和密码进行 Active Directory 密码身份验证”或“使用用户输入的登录 ID 进行 Active Directory 交互身份验证”，则指定驱动程序连接到 SQL Server 时使用的登录 ID。 如果选择“使用托管标识身份验证”，请指定托管标识的对象 ID 或保留为空以使用默认标识。 此字段仅适用于为确定服务器默认设置建立的连接；除非使用托管身份验证，否则它不适用于创建数据源之后使用该数据源建立的后续连接。
 
 ### <a name="password"></a>密码
 
-如果选择“使用用户输入的登录 ID 和密码进行 SQL Server 身份验证”**** 或“使用输入用户的登录 ID 和密码进行 Active Directory 密码身份验证”****，则指定驱动程序连接到 SQL Server 时使用的密码。 此字段仅适用于为确定服务器默认设置建立的连接；不适用于使用新数据源建立的后续连接。
+如果选择“使用用户输入的登录 ID 和密码进行 SQL Server 身份验证”或“使用输入用户的登录 ID 和密码进行 Active Directory 密码身份验证”，则指定驱动程序连接到 SQL Server 时使用的密码。 此字段仅适用于为确定服务器默认设置建立的连接；不适用于使用新数据源建立的后续连接。
 
-如果选择“使用集成 Windows 身份验证”**** 或“使用 Active Directory 集成身份验证”****，则禁用“登录 ID”**** 和“密码”****。
+如果选择“使用集成 Windows 身份验证”或“使用 Active Directory 集成身份验证”，则禁用“登录 ID”和“密码”。
 
 ### <a name="next"></a>下一步
 

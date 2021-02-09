@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 06/25/2020
-ms.openlocfilehash: 4320873affdab74a31d1e666a84bc744b1c00385
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06021fc598165982156093c12c26434f06cbc422
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123070"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495705"
 ---
 # <a name="build-and-publish-a-project"></a>生成和发布项目
 
-通过 Azure Data Studio 的 SQL 数据库项目扩展中的生成过程，可在 Windows、macOS 和 Linux 环境中创建 dacpac。 可以通过发布过程将项目部署到本地或云环境。
+通过 Azure Data Studio 的 SQL 数据库项目扩展（预览版）中的生成过程，可在 Windows、macOS 和 Linux 环境中创建 dacpac。 可以通过发布过程将项目部署到本地或云环境。
 
 ## <a name="prerequisites"></a>先决条件
 

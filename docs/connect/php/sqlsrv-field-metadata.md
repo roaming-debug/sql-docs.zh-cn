@@ -2,12 +2,12 @@
 description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_field_metadata
 apitype: NA
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6f2e0f7eefdfe78d1058d839c3e5a4fa9404e77
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 5cbcb5cf689d544730661fd9dd700537309d8a23
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92080566"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99154236"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-检索已准备语句的字段的元数据。 有关准备语句的信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。 请注意，无论在执行前还是执行后，都可以在任何已准备的语句上调用 sqlsrv_field_metadata****。  
+检索已准备语句的字段的元数据。 有关准备语句的信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。 请注意，无论在执行前还是执行后，都可以在任何已准备的语句上调用 sqlsrv_field_metadata。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,44 +47,44 @@ sqlsrv_field_metadata( resource $stmt)
 |名称|字段对应的列的名称。|  
 |类型|对应于 SQL 类型的数值。|  
 |大小|字符类型（char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML）的字段的字符数。 二进制类型（binary(n)、varbinary(n)、UDT）的字段的字节数。 **NULL** 用于其他 SQL Server 数据类型。|  
-|Precision|变量精度类型（real、numeric、decimal、datetime2、datetimeoffset 和 time）的精度。 **NULL** 用于其他 SQL Server 数据类型。|  
+|精准率|变量精度类型（real、numeric、decimal、datetime2、datetimeoffset 和 time）的精度。 **NULL** 用于其他 SQL Server 数据类型。|  
 |缩放|变量小数位数类型（numeric、decimal、datetime2、datetimeoffset 和 time）的小数位数。 **NULL** 用于其他 SQL Server 数据类型。|  
-|Nullable|指示列可以为 null (SQLSRV_NULLABLE_YES)、不可为 null (SQLSRV_NULLABLE_NO) 还是未知列是否可以为 null (SQLSRV_NULLABLE_UNKNOWN) 的枚举值************。|  
+|Nullable|指示列可以为 null (SQLSRV_NULLABLE_YES)、不可为 null (SQLSRV_NULLABLE_NO) 还是未知列是否可以为 null (SQLSRV_NULLABLE_UNKNOWN) 的枚举值。|  
   
 下表提供有关每个子数组的键的详细信息（有关这些类型的详细信息，请参阅 SQL Server 文档）：  
   
 |SQL Server 2008 数据类型|类型|最小/最大精度|最小/最大小数位数|大小|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |bigint|SQL_BIGINT (-5)|||8|  
-|binary|SQL_BINARY (-2)|||** 0 < n < 8000 <sup>1</sup>|  
+|binary|SQL_BINARY (-2)|||0 < n < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
-|char|SQL_CHAR (1)|||** 0 < n < 8000 <sup>1</sup>|  
+|char|SQL_CHAR (1)|||0 < n < 8000 <sup>1</sup>|  
 |date|SQL_TYPE_DATE (91)|10/10|0/0||  
 |datetime|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
 |Decimal|SQL_DECIMAL (3)|1/38|0/精度值||  
-|FLOAT|SQL_FLOAT (6)|4/8|||  
+|float|SQL_FLOAT (6)|4/8|||  
 |image|SQL_LONGVARBINARY (-4)|||2 GB|  
 |int|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
-|nchar|SQL_WCHAR (-8)|||** 0 < n < 4000 <sup>1</sup>|  
+|nchar|SQL_WCHAR (-8)|||0 < n < 4000 <sup>1</sup>|  
 |ntext|SQL_WLONGVARCHAR (-10)|||1 GB|  
 |numeric|SQL_NUMERIC (2)|1/38|0/精度值||  
-|nvarchar|SQL_WVARCHAR (-9)|||** 0 < n < 4000 <sup>1</sup>|  
+|nvarchar|SQL_WVARCHAR (-9)|||0 < n < 4000 <sup>1</sup>|  
 |real|SQL_REAL (7)|4/4|||  
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
 |smallint|SQL_SMALLINT (5)|||2 个字节|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
-|sql_variant|SQL_SS_VARIANT (-150)|||变量|  
+|sql_variant|SQL_SS_VARIANT (-150)|||可变|  
 |文本|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
-|timestamp|SQL_BINARY (-2)|||8 字节|  
+|timestamp|SQL_BINARY (-2)|||8 个字节|  
 |tinyint|SQL_TINYINT (-6)|||1 个字节|  
-|udt|SQL_SS_UDT (-151)|||变量|  
+|udt|SQL_SS_UDT (-151)|||可变|  
 |uniqueidentifier|SQL_GUID (-11)|||16|  
-|varbinary|SQL_VARBINARY (-3)|||** 0 < n < 8000 <sup>1</sup>|  
-|varchar|SQL_VARCHAR (12)|||** 0 < n < 8000 <sup>1</sup>|  
+|varbinary|SQL_VARBINARY (-3)|||0 < n < 8000 <sup>1</sup>|  
+|varchar|SQL_VARCHAR (12)|||0 < n < 8000 <sup>1</sup>|  
 |xml|SQL_SS_XML (-152)|||0|  
   
 (1) 零 (0) 指示允许最大大小。  
@@ -236,6 +236,76 @@ foreach ($fieldmeta as $f) {
 {"Name":"FirstName","Type":-9,"Size":50,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[]}
 {"Name":"LastName","Type":-9,"Size":50,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[]}
 {"Name":"BirthDate","Type":91,"Size":null,"Precision":10,"Scale":0,"Nullable":1,"Data Classification":[{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""}}]}
+```
+
+## <a name="sensitivity-rank-using-a-predefined-set-of-values"></a>使用一组预定义值的敏感度级别
+
+从 5.9.0 开始，PHP 驱动程序在使用 ODBC 驱动程序 17.4.2 或更高版本时添加了分类级别检索。 使用 [ADD SENSITIVITY CLASSIFICATION](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) 对任何数据列进行分类时，用户可以定义级别。 
+
+例如，如果用户分别将 `NONE` 和 `LOW` 分配给 BirthDate 和 SSN，则 JSON 表示形式如下所示：
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":0},"rank":0}
+{"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
+```
+
+如[敏感度分类](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql)中所示，级别的数值为：
+
+```
+0 for NONE
+10 for LOW
+20 for MEDIUM
+30 for HIGH
+40 for CRITICAL
+```
+
+因此，如果用户在对 BirthDate 列进行分类时定义了 `RANK=CRITICAL` 而不是 `RANK=NONE`，则分类元数据将为：
+
+```
+  array(7) {
+    ["Name"]=>
+    string(9) "BirthDate"
+    ["Type"]=>
+    int(91)
+    ["Size"]=>
+    NULL
+    ["Precision"]=>
+    int(10)
+    ["Scale"]=>
+    int(0)
+    ["Nullable"]=>
+    int(1)
+    ["Data Classification"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["Label"]=>
+        array(2) {
+          ["name"]=>
+          string(26) "Confidential Personal Data"
+          ["id"]=>
+          string(0) ""
+        }
+        ["Information Type"]=>
+        array(2) {
+          ["name"]=>
+          string(9) "Birthdays"
+          ["id"]=>
+          string(0) ""
+        }
+        ["rank"]=>
+        int(40)
+      }
+      ["rank"]=>
+      int(40)
+    }
+  }
+```
+
+更新后的 JSON 表示形式如下所示：
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":40},"rank":40}
 ```
 
 ## <a name="see-also"></a>另请参阅  

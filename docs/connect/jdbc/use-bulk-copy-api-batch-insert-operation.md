@@ -1,8 +1,8 @@
 ---
 title: 用于在 JDBC 中执行批量插入的大容量复制 API
-description: Microsoft JDBC Driver for SQL Server 支持使用大容量复制对 Azure 数据仓库执行批量插入操作，以便更快地将数据加载到数据库中。
+description: Microsoft JDBC Driver for SQL Server 支持使用大容量复制进行批量插入，以便更快地将数据加载到数据库中。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,26 +11,25 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 14074b0136baf800b038e4b113325e81d65dc3e7
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 4a769d73f799b8ca0b4b806a3e656517377e23ad
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442601"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161564"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>将大容量复制 API 用于批量插入操作
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver 7.0 for SQL Server 支持使用大容量复制 API 对 Azure 数据仓库执行批量插入操作。 使用此功能，用户可以将驱动程序启用为，在执行批量插入操作时，在底层执行大容量复制操作。 驱动程序旨在实现性能提升，同时插入驱动程序通过常规批量插入操作插入的相同数据。 驱动程序分析用户的 SQL 查询，同时利用大容量复制 API 代替常规批量插入操作。 下面介绍了为大容量复制 API 启用批量插入功能的各种方法，并列出了此功能的限制。 此页还包含一个展示使用情况和性能提升的小型示例代码。
+Microsoft JDBC Driver for SQL Server 版本 9.2 及更高版本支持使用大容量复制 API 执行批量插入操作。 使用此功能，用户可以将驱动程序启用为在执行批量插入操作时，在底层执行大容量复制操作。 驱动程序旨在实现性能提升，同时插入驱动程序通过常规批量插入操作插入的相同数据。 驱动程序使用大容量复制 API（而不是常规批量插入操作）分析用户的 SQL 查询。 下面介绍了启用大容量复制 API 来执行批量插入功能的各种方法，并列出了此功能的限制。 此页还包含一个展示使用情况和性能提升的小型示例代码。
 
 此功能仅适用于 PreparedStatement 和 CallableStatement 的 `executeBatch()` 和 `executeLargeBatch()` API。
 
 ## <a name="prerequisites"></a>先决条件
 
-为大容量复制 API 启用批量插入功能有两个先决条件。
+启用大容量复制 API 来执行批量插入功能的先决条件。
 
-* 服务器必须是 Azure 数据仓库。
 * 查询必须是插入查询（查询可以包含注释，但要使此功能生效，查询必须以 INSERT 关键字开头）。
 
 ## <a name="enabling-bulk-copy-api-for-batch-insert"></a>为大容量复制 API 启用批量插入功能
@@ -51,7 +50,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 
 SQLServerConnection.getUseBulkCopyForBatchInsert()  用于检索 useBulkCopyForBatchInsert  连接属性的当前值。
 
-对于每个 PreparedStatement，useBulkCopyForBatchInsert  值在其初始化时保持不变。 对 SQLServerConnection.setUseBulkCopyForBatchInsert()  的任何后续调用都不会影响已创建的 PreparedStatement 的值。
+对于每个 PreparedStatement，useBulkCopyForBatchInsert  值在其初始化时保持不变。 对 SQLServerConnection.setUseBulkCopyForBatchInsert() 的任何后续调用都不会影响已创建的 PreparedStatement 值。
 
 ### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3.从 SQLServerDataSource 对象使用 setUseBulkCopyForBatchInsert() 方法启用
 
@@ -71,7 +70,7 @@ SQLServerConnection.getUseBulkCopyForBatchInsert()  用于检索 useBulkCopyForB
 
 ## <a name="example"></a>示例
 
-下面的示例代码展示了在两种方案（常规与大容量复制 API）中对包含一千行的 Azure Synapse Analytics 执行批量插入操作的用例。
+此示例展示了在常规和大容量复制 API 方案中，执行上千行的批量插入操作的用例。
 
 ```java
     public static void main(String[] args) throws Exception
@@ -79,9 +78,9 @@ SQLServerConnection.getUseBulkCopyForBatchInsert()  用于检索 useBulkCopyForB
         String tableName = "batchTest";
         String tableNameBulkCopyAPI = "batchTestBulk";
 
-        String azureDWconnectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
 
-        try (Connection con = DriverManager.getConnection(azureDWconnectionUrl); // connects to an Azure Data Warehouse.
+        try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement();
                 PreparedStatement pstmt = con.prepareStatement("insert into " + tableName + " values (?, ?)");) {
 
@@ -105,7 +104,7 @@ SQLServerConnection.getUseBulkCopyForBatchInsert()  用于检索 useBulkCopyForB
             System.out.println("Finished. Time taken : " + (end - start) + " milliseconds.");
         }
 
-        try (Connection con = DriverManager.getConnection(azureDWconnectionUrl + ";useBulkCopyForBatchInsert=true"); // connects to an Azure Data Warehouse, with useBulkCopyForBatchInsert connection property set to true.
+        try (Connection con = DriverManager.getConnection(connectionUrl + ";useBulkCopyForBatchInsert=true");
                 Statement stmt = con.createStatement();
                 PreparedStatement pstmt = con.prepareStatement("insert into " + tableNameBulkCopyAPI + " values (?, ?)");) {
 

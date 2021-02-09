@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 5b86d0a8ee13a4190d45d8a82cc08dea949acf26
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61d04579d3eab5a373ea00814bf708d5bb3267ba
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732004"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075989"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>教程：Database Engine Tuning Advisor
 
@@ -44,7 +44,7 @@ ms.locfileid: "85732004"
 ## <a name="requirements"></a>要求  
 本教程面向符合以下条件的数据库管理员：不熟悉数据库引擎优化顾问 GUI 或 **dta** 命令提示实用工具，但对于数据库概念和结构（如索引和索引视图）经验丰富。  
   
-必须使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 示例数据库安装 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] （或更高版本）。 为了增强安全性，默认情况下不会安装示例数据库。 若要安装示例数据库，请参阅 [安装 SQL Server 示例和示例数据库](https://sqlserversamples.codeplex.com)。  
+必须使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]。 为了增强安全性，默认情况下不会安装示例数据库。 若要安装示例数据库，请参阅 [安装 SQL Server 示例和示例数据库](https://sqlserversamples.codeplex.com)。  
   
 ## <a name="after-you-finish-this-tutorial"></a>学完本教程后  
 学完本教程中的课程后，请参考以下主题来了解有关数据库引擎优化顾问的详细信息：  

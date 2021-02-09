@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2020
-ms.openlocfilehash: b0455de16e6808f4d2e67113976ae754830881ee
-ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
+ms.date: 1/22/2021
+ms.openlocfilehash: e85b2edca08cbb2f30fa4a2ce865ebe77ee7cb24
+ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98711943"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99510318"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
@@ -22,7 +22,7 @@ ms.locfileid: "98711943"
 
 ## <a name="december-2020-hotfix"></a>2020 年 12 月（修补程序）
 
-2020 年 1 月 22 日&nbsp; / &nbsp;版本：1.25.2
+2021 年 1 月 22 日&nbsp; / &nbsp;版本：1.25.2
 
 | 更改 | 详细信息 |
 | ------ | ------- |

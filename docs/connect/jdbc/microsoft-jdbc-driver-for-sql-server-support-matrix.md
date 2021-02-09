@@ -2,7 +2,7 @@
 title: Microsoft JDBC Driver for SQL Server 支持矩阵
 description: 本页介绍了 Microsoft JDBC Driver for SQL Server 的支持矩阵和支持生命周期策略。
 ms.custom: ''
-ms.date: 08/27/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 341b021bbc582b2273f7601bfb993b4db40a4590
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 21b977b950babad552246925d78878c08cd36af3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725448"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163612"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支持矩阵
 
@@ -26,7 +26,7 @@ ms.locfileid: "91725448"
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Microsoft JDBC Driver 支持生命周期矩阵和策略  
 
-Microsoft 支持生命周期 (MSL) 策略提供了与 Microsoft 产品的支持生命周期有关的可预测透明信息。 自驱动程序发布之日起，JDBC Driver 3.0 版、4.x 版、6.x 版、7.x 版和 8.x 版就具有五年的主流支持。 主流支持在 Microsoft 支持生命周期网站上定义。  
+Microsoft 支持生命周期 (MSL) 策略提供了与 Microsoft 产品的支持生命周期有关的可预测透明信息。 从驱动程序发布之日起，JDBC 驱动程序版本 4.x、6.x、7.x、8.x 和 9.x 就具有五年的主流支持。 主流支持在 Microsoft 支持生命周期网站上定义。  
   
 Microsoft JDBC 驱动程序不提供扩展和自定义支持选项。  
 
@@ -34,6 +34,7 @@ Microsoft JDBC 驱动程序不提供扩展和自定义支持选项。
   
 |驱动程序名称|驱动程序包版本|适用的 JAR|主要支持结束日期|
 |-|-|-|-|  
+|Microsoft JDBC Driver 9.2 for SQL Server|9.2|mssql-jdbc-9.2.0.jre15.jar<br> mssql-jdbc-9.2.0.jre11.jar<br> mssql-jdbc-9.2.0.jre8.jar|2026 年 1 月 29 日|
 |Microsoft JDBC Driver 8.4 for SQL Server|8.4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|2025 年 7 月 31 日|
 |Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|2025 年 1 月 31 日|
 |Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2024 年 7 月 31 日|
@@ -42,12 +43,12 @@ Microsoft JDBC 驱动程序不提供扩展和自定义支持选项。
 |Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 年 2 月 27 日|
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022 年 6 月 30 日|
 |Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 年 7 月 14 日|
-|Microsoft SQL Server JDBC 驱动程序 4.2|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020 年 8 月 24 日|
   
  以下 Microsoft JDBC 驱动程序不再受到支持。  
 
 |驱动程序名称|驱动程序包版本|主要支持结束日期|  
 |-|-|-|
+|Microsoft SQL Server JDBC 驱动程序 4.2|4.2|2020 年 8 月 24 日|
 |Microsoft SQL Server JDBC 驱动程序 4.1|4.1|2019 年 12 月 12 日|  
 |Microsoft JDBC Driver 4.0 for SQL Server|4.0|2017 年 3 月 6 日|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|2015 年 4 月 23 日|  
@@ -61,6 +62,7 @@ Microsoft JDBC 驱动程序不提供扩展和自定义支持选项。
   
 |数据库版本&nbsp;&#8594;<br />&#8595; 驱动程序版本|Azure SQL Database|Azure Synapse Analytics|Azure SQL 托管实例|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
 |---|---|---|---|---|---|---|---|---|---|---|---|
+|9.2|是|是|是|是|是|是|是|是|   |   |   |
 |8.4|是|是|是|是|是|是|是|是|是|   |   |
 |8.2|是|是|是|是|是|是|是|是|是|   |   |
 |7.4|是|是|是|是|是|是|是|是|是|   |   |
@@ -91,6 +93,7 @@ Microsoft JDBC 驱动程序不提供扩展和自定义支持选项。
   
 |JDBC 驱动程序版本|JRE 版本|JDBC API 版本|
 |-|-|-|
+|[9.2](release-notes-for-the-jdbc-driver.md#92)|1.8、11、15|4.2、4.3（部分）|
 |[8.4](release-notes-for-the-jdbc-driver.md#84)|1.8、11、14|4.2、4.3（部分）|
 |[8.2](release-notes-for-the-jdbc-driver.md#82)|1.8、11、13|4.2、4.3（部分）|
 |[7.4](release-notes-for-the-jdbc-driver.md#74)|1.8、11、12|4.2、4.3（部分）|
@@ -100,7 +103,7 @@ Microsoft JDBC 驱动程序不提供扩展和自定义支持选项。
 |[6.2](release-notes-for-the-jdbc-driver.md#62)|1.7、1.8|4.1、4.2|
 |[6.1](release-notes-for-the-jdbc-driver.md#61)|1.7、1.8|4.1、4.2|
 |[6.0](release-notes-for-the-jdbc-driver.md#60)|1.7、1.8|4.1、4.2|
-|[4.2](release-notes-for-the-jdbc-driver.md#42)|1.7、1.8|4.1、4.2|
+|4.2|1.7、1.8|4.1、4.2|
 |4.1|1.7|4.0|
 |4.0|1.5、1.6、1.7|3.0、4.0|
 |3.0|1.5、1.6、|3.0、4.0|

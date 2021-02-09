@@ -2,7 +2,7 @@
 title: 使用基本 JDBC 数据类型
 description: Microsoft JDBC Driver for SQL Server 使用基本 JDBC 数据类型，将 SQL Server 数据类型转换为 Java 可以理解的格式。
 ms.custom: ''
-ms.date: 08/24/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c26c3c065ddf415d966c8fd3613e284c3c7a2b6
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1c6f764fffca3408380da9c96227eb9d7bb4457c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807001"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195265"
 ---
 # <a name="using-basic-data-types"></a>使用基本数据类型
 
@@ -63,7 +63,7 @@ ms.locfileid: "88807001"
 | varchar            | VARCHAR                                            | 字符串                       |
 | varchar(max)       | VARCHAR                                            | 字符串                       |
 | xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | 字符串<br /><br /> SQLXML    |
-| sqlvariant         | SQLVARIANT                                         | 对象                       |
+| sqlvariant         | microsoft.sql.Types.SQL_VARIANT                    | 对象                       |
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   

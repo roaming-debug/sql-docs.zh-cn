@@ -2,7 +2,7 @@
 title: 已修复的 bug 列表
 description: 此页列出了自 Microsoft ODBC Driver 17 for SQL Server 起每个发行版中修复的缺陷。
 ms.custom: ''
-ms.date: 04/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,25 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: fb686e3c70723cf847853ad558f47cf37da23972
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: dcb4ec36406c44f51984ee5a8fc3afc2f0019a6e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544300"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076349"
 ---
 # <a name="list-of-bugs-fixed"></a>已修复的 bug 列表
 
 此页列出了自 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 起每个发行版中修复的缺陷。
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-177-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 bug 修复
+
+- 修复 BCP NATIVE 模式下 VARIANT 列的字符编码
+- 修复特定条件下的 SQL_ATTR_PARAMS_PROCESSED_PTR 设置
+- 修复包含注释的语句的 FMTONLY 模式下的 SQLDescribeParam
+- 解决使用 Okta 时的联合身份验证问题
+- 修复多处理器系统上过多的内存使用量
+- 修复 Azure SQL DB 的某些变体的 Azure AD 身份验证
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-176-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 bug 修复
 

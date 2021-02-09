@@ -2,7 +2,7 @@
 title: 使用 Azure Active Directory 身份验证进行连接
 description: 了解如何开发结合使用 Azure Active Directory 身份验证功能与 Microsoft JDBC Driver for SQL Server 的 Java 应用程序。
 ms.custom: ''
-ms.date: 01/04/2020
+ms.date: 01/29/2021
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68d8b2a131fa6ab1c9e287f70cb584db3aeedacc
-ms.sourcegitcommit: 6154ee7f20bccce9d458ac7f3b0a21b9613d1131
+ms.openlocfilehash: cbcf01d51ef4abe344b66529d72476a7d1385bbc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97902635"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168731"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 
@@ -29,11 +29,17 @@ ms.locfileid: "97902635"
 Microsoft JDBC Driver for SQL Server 中支持 Azure Active Directory 身份验证的连接属性包括：
 *   **authentication**：使用此属性，可以指明要对连接使用哪种 SQL 身份验证方法。 可能的值包括： 
     * **ActiveDirectoryMSI**
-        * 自驱动程序版本 v7.2  起受支持，`authentication=ActiveDirectoryMSI` 可用于从已启用“标识”支持的 Azure 资源内部连接到 Azure SQL 数据库/数据仓库。 （可选）还可以在 Connection/DataSource 属性中指定 msiClientId（与此身份验证模式一起），其中必须包含用于获取建立连接所需的 accessToken 的托管标识的客户端 ID。
+        * 自驱动程序版本 v7.2 起受支持，`authentication=ActiveDirectoryMSI` 可用于从已启用“标识”支持的 Azure 资源内部连接到 Azure SQL 数据库/Synapse Analytics。 （可选）还可以在 Connection/DataSource 属性中指定 msiClientId（与此身份验证模式一起），其中必须包含用于获取建立连接所需的 accessToken 的托管标识的客户端 ID。
     * **ActiveDirectoryIntegrated**
-        * 自驱动程序版本 v6.0  起受支持，`authentication=ActiveDirectoryIntegrated` 可用于使用集成身份验证连接到 Azure SQL 数据库/数据仓库。 必须将本地 Active Directory 联合身份验证服务 (ADFS) 与云中的 Azure Active Directory 联合，才能使用此身份验证模式。 设置后，连接方法有两种，一种是将本机库“mssql-jdbc_auth-\<version>-\<arch>.dll”添加到 Windows OS 上的应用程序类路径，另一种是设置用于提供跨平台身份验证支持的 Kerberos 票证。 登录域加入计算机后，可以访问 Azure SQL 数据库/Azure Synapse Analytics，而不会看到系统提示输入凭据。
+        * 自驱动程序版本 v6.0 起受支持，`authentication=ActiveDirectoryIntegrated` 可用于使用集成身份验证连接到 Azure SQL 数据库/Synapse Analytics。 必须将本地 Active Directory 联合身份验证服务 (ADFS) 与云中的 Azure Active Directory 联合，才能使用此身份验证模式。 设置后，连接方法有两种，一种是将本机库“mssql-jdbc_auth-\<version>-\<arch>.dll”添加到 Windows OS 上的应用程序类路径，另一种是设置用于提供跨平台身份验证支持的 Kerberos 票证。 登录域加入计算机后，可以访问 Azure SQL 数据库/Azure Synapse Analytics，而不会看到系统提示输入凭据。
+
     * **ActiveDirectoryPassword**
-        * 自驱动程序版本 v6.0 起受支持，`authentication=ActiveDirectoryPassword` 可用于使用 Azure AD 用户名和密码连接到 Azure SQL 数据库/Data Warehouse。
+        * 自驱动程序版本 v6.0 起受支持，`authentication=ActiveDirectoryPassword` 可用于使用 Azure AD 用户名和密码连接到 Azure SQL 数据库/Synapse Analytics。
+    * **ActiveDirectoryInteractive**
+        * 自驱动程序版本 v9.2 起受支持，`authentication=ActiveDirectoryInteractive` 可用于使用交互式身份验证流（多重身份验证）连接到 Azure SQL 数据库/Synapse Analytics。
+    * **ActiveDirectoryServicePrincipal**
+        * 自驱动程序版本 v9.2 起受支持，`authentication=ActiveDirectoryServicePrincipal` 可用于使用服务主体标识的客户端 ID 和机密连接到 Azure SQL 数据库/Synapse Analytics。
+
     * **SqlPassword**
         * 借助 `authentication=SqlPassword`，可以使用 userName/user 和 password 属性连接到 SQL Server。
     * **NotSpecified**
@@ -54,9 +60,12 @@ Microsoft JDBC Driver for SQL Server 中支持 Azure Active Directory 身份验�
 对于其他身份验证模式，必须在客户端计算机上安装以下组件：
 * Java 7 或更高版本
 * Microsoft JDBC Driver 6.0（或更高版本）for SQL Server
-* 如果使用的是基于访问令牌的身份验证模式，必须有 [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 及其依赖项，才能运行本文中的示例。 有关详细信息，请参阅 **使用访问令牌进行连接** 部分。
-* 如果使用的是 ActiveDirectoryPassword  身份验证模式，必须有 [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 及其依赖项。 有关详细信息，请参阅 **使用 ActiveDirectoryPassword 身份验证模式进行连接** 部分。
-* 如果使用的是 ActiveDirectoryIntegrated  模式，必须有 azure-activedirectory-library-for-java 及其依赖项。 有关详细信息，请参阅 **使用 ActiveDirectoryIntegrated 身份验证模式进行连接** 部分。
+* 如果使用的是基于访问令牌的身份验证模式，必须有 [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) 及其依赖项，才能运行本文中的示例。 有关详细信息，请参阅[使用访问令牌进行连接](#connecting-using-access-token)部分。
+* 如果使用的是 ActiveDirectoryPassword 身份验证模式，必须有 [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) 及其依赖项。 有关详细信息，请参阅[使用 ActiveDirectoryPassword 身份验证模式进行连接](#connecting-using-activedirectorypassword-authentication-mode)部分。
+* 如果使用的是 ActiveDirectoryIntegrated 模式，必须有 [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) 及其依赖项。 有关详细信息，请参阅[使用 ActiveDirectoryIntegrated 身份验证模式进行连接](#connecting-using-activedirectoryintegrated-authentication-mode)部分。
+* 如果使用的是 ActiveDirectoryInteractive 模式，必须有 [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) 及其依赖项。 有关详细信息，请参阅[使用 ActiveDirectoryInteractive 身份验证模式进行连接](#connecting-using-activedirectoryinteractive-authentication-mode)部分。
+* 如果使用的是 ActiveDirectoryServicePrincipal 模式，必须有 [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) 及其依赖项。 有关详细信息，请参阅[使用 ActiveDirectoryServicePrincipal 身份验证模式进行连接]()#connecting-using-activedirectoryserviceprincipal-authentication-mode 部分。
+
 
 ## <a name="connecting-using-activedirectorymsi-authentication-mode"></a>使用 ActiveDirectoryMSI 身份验证模式进行连接
 下面的示例展示了如何使用 `authentication=ActiveDirectoryMSI` 模式。 从 Azure 资源（例如 Azure 虚拟机、应用服务或与 Azure Active Directory 联合的函数应用）内部运行此示例。
@@ -266,13 +275,131 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > 必须有包含的用户数据库，且数据库中必须有包含的数据库用户，此用户表示指定 Azure AD 用户或其所属的一个组，且必须拥有 CONNECT 权限。（Azure Active Directory 服务器管理员或组除外）
 
+## <a name="connecting-using-activedirectoryinteractive-authentication-mode"></a>使用 ActiveDirectoryInteractive 身份验证模式进行连接 
+下面的示例展示了如何使用 `authentication=ActiveDirectoryInteractive` 模式。
+
+在生成并运行此示例前：
+1.  在运行此示例的客户端计算机上下载 [azure-activedirectory-library-for-java 库](https://github.com/AzureAD/azure-activedirectory-library-for-java)及其依赖项，并将它们添加到 Java 生成路径中
+2.  找到以下代码行，并将服务器/数据库名称替换为你的服务器/数据库名称。
+    ```java
+    ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+    ds.setDatabaseName("demo"); // replace with your database name
+    ```
+3.  找到以下代码行，并将用户名替换为要以其身份连接的 Azure AD 用户的用户名。
+    ```java
+    ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+    ```
+
+使用 ActiveDirectoryInteractive 身份验证模式的示例：
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AADInteractive {
+    public static void main(String[] args) throws Exception{
+        
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database
+    ds.setAuthentication("ActiveDirectoryInteractive");
+      
+    // Optional
+        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+运行程序时，将显示一个浏览器来对用户进行身份验证。 用户看到的确切内容取决于其 Azure AD 的配置方式。 例如，对于用户名、密码、PIN 或通过电话进行的第二设备身份验证等方式，它可能包含也可能不包含多重身份验证提示。 在同一程序中执行了多个交互式身份验证请求时，如果身份验证库可以重复使用以前缓存的身份验证令牌，则后续请求甚至可能不会提示用户。
+
+有关如何将 Azure AD 配置为要求多重身份验证的信息，请参阅[云中的 Azure AD 多重身份验证入门](/azure/active-directory/authentication/howto-mfa-getstarted)。
+
+有关这些对话框的屏幕截图，请参阅[为 SQL Server Management Studio 和 Azure AD 配置多重身份验证](/azure/azure-sql/database/authentication-mfa-ssms-configure)。
+
+如果用户身份验证成功完成，则应在浏览器中看到以下消息：
+```
+Authentication complete. You can close the browser and return to the application.
+```
+请注意，这只表明用户身份验证成功，但不一定成功连接到了服务器。 返回到应用程序时，如果与服务器的连接已建立，应该会看到以下消息输出：
+```
+You have successfully logged on as: <your user name>
+```
+
+> [!NOTE]  
+> 必须有包含的用户数据库，且数据库中必须有包含的数据库用户，此用户表示指定 Azure AD 用户或其所属的一个组，且必须拥有 CONNECT 权限。（Azure Active Directory 服务器管理员或组除外）
+
+## <a name="connecting-using-activedirectoryserviceprincipal-authentication-mode"></a>使用 ActiveDirectoryServicePrincipal 身份验证模式进行连接
+下面的示例展示了如何使用 `authentication=ActiveDirectoryServicePrincipal` 模式。
+
+在生成并运行此示例前：
+1.  在运行此示例的客户端计算机上下载 [azure-activedirectory-library-for-java 库](https://github.com/AzureAD/azure-activedirectory-library-for-java)及其依赖项，并将它们添加到 Java 生成路径中
+2.  找到以下代码行，并将服务器/数据库名称替换为你的服务器/数据库名称。
+    ```java
+    ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+    ds.setDatabaseName("demo"); // replace with your database name
+    ```
+3.  找到以下代码行，并将用户名替换为要以其身份连接的 Azure AD 用户的用户名。
+    ```java
+    ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+    ```
+
+使用 ActiveDirectoryInteractive 身份验证模式的示例：
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AADServicePrincipal {
+    public static void main(String[] args) throws Exception{
+        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD secure principal ID.
+        String principalSecret = "..."; // Replace with your AAD principal secret.
+
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database
+    ds.setAuthentication("ActiveDirectoryServicePrincipal");
+    ds.setAADSecurePrincipalId(principalId);
+    ds.setAADSecurePrincipalSecret(principalSecret);
+      
+    // Optional
+        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+如果连接已建立，应该会看到以下消息输出：
+```
+You have successfully logged on as: <your user name>
+```
+
+> [!NOTE]  
+> 必须有包含的用户数据库，且数据库中必须有包含的数据库用户，此用户表示指定 Azure AD 用户或其所属的一个组，且必须拥有 CONNECT 权限。（Azure Active Directory 服务器管理员或组除外）
+
 ## <a name="connecting-using-access-token"></a>使用访问令牌进行连接
-应用程序/服务可以从 Azure Active Directory 检索访问令牌，并使用它连接到 Azure SQL 数据库/数据仓库。
+应用程序/服务可以从 Azure Active Directory 检索访问令牌，并使用它连接到 Azure SQL 数据库/Synapse Analytics。
 
 > [!NOTE] 
 > accessToken  只能使用 DriverManager 类中 getConnection() 方法的 Properties 参数进行设置。 不能在连接字符串中使用此属性。
 
-下面的示例展示了简单的 Java 应用程序，它使用基于访问令牌的身份验证连接到 Azure SQL 数据库/数据仓库。 在生成并运行此示例前，请先按照以下步骤操作：
+下面的示例展示了简单的 Java 应用程序，它使用基于访问令牌的身份验证连接到 Azure SQL 数据库/Synapse Analytics。 在生成并运行此示例前，请先按照以下步骤操作：
 1.  在 Azure Active Directory 中为服务创建应用程序帐户。
     1. 登录到 Azure 门户。
     2. 在左侧导航栏中，单击“Azure Active Directory”。
@@ -293,7 +420,7 @@ You have successfully logged on as: <your user name>
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
     ```
 
-3.  在运行此示例的客户端计算机上下载 [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 库及其依赖项，并将它们添加到 Java 生成路径中。 请注意，只需要 azure-activedirectory-library-for-java 即可运行此特定示例。 此示例使用这个库中的 API 从 Azure AD 检索访问令牌。 如果已有访问令牌，可以跳过这一步。 请注意，还需要删除此示例中检索访问令牌的部分。
+3.  在运行此示例的客户端计算机上下载 [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) 库及其依赖项，并将它们添加到 Java 生成路径中。 请注意，只需要 microsoft-authentication-library-for-java 即可运行此特定示例。 此示例使用这个库中的 API 从 Azure AD 检索访问令牌。 如果已有访问令牌，可以跳过这一步。 请注意，还需要删除此示例中检索访问令牌的部分。
 
 在下面的示例中，将 STS URL、客户端 ID、客户端密码、服务器和数据库名称替换为你的值。
 
@@ -306,9 +433,11 @@ import java.util.concurrent.Future;
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 // The azure-activedirectory-library-for-java is needed to retrieve the access token from the AD.
-import com.microsoft.aad.adal4j.AuthenticationContext;
-import com.microsoft.aad.adal4j.AuthenticationResult;
-import com.microsoft.aad.adal4j.ClientCredential;
+import com.microsoft.aad.msal4j.ClientCredentialFactory;
+import com.microsoft.aad.msal4j.ClientCredentialParameters;
+import com.microsoft.aad.msal4j.ConfidentialClientApplication;
+import com.microsoft.aad.msal4j.IAuthenticationResult;
+import com.microsoft.aad.msal4j.IClientCredential;
 
 public class AADTokenBased {
 
@@ -320,11 +449,19 @@ public class AADTokenBased {
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
-        AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));
-        ClientCredential cred = new ClientCredential(clientId, clientSecret);
-
-        Future<AuthenticationResult> future = context.acquireToken(spn, cred, null);
-        String accessToken = future.get().getAccessToken();
+    String scope = spn +  "/.default";
+    Set<String> scopes = new HashSet<>();
+        scopes.add(scope);
+    
+    ExecutorService executorService = Executors.newSingleThreadExecutor();
+    IClientCredential credential = ClientCredentialFactory.createFromSecret(clientSecret);
+    ConfidentialClientApplication clientApplication = ConfidentialClientApplication
+            .builder(clientId, credential).executorService(executorService).authority(stsurl).build();
+    CompletableFuture<IAuthenticationResult> future = clientApplication
+            .acquireToken(ClientCredentialParameters.builder(scopes).build());
+            
+    IAuthenticationResult authenticationResult = future.get();
+    String accessToken = authenticationResult.accessToken();
 
         System.out.println("Access Token: " + accessToken);
 

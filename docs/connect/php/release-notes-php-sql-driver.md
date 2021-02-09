@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP 发行说明
 description: 本页介绍了每个版本 Microsoft Drivers for PHP for SQL Server 的变更内容。
 ms.custom: ''
-ms.date: 09/11/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be2317f95adc1a94ee85805aecfaed37d05e875a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 2d62068af3e6ec4a8f2711a5c11ab1f01388be8e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005727"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076299"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 发行说明
 
@@ -39,6 +39,36 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## <a name="59"></a>5.9
+
+![下载](../../ssms/media/download-icon.png) [下载 Windows 包](https://go.microsoft.com/fwlink/?linkid=?????)
+[GitHub 版本标记（Linux 和 macOS 包均在此处提供）](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
+
+### <a name="version-information"></a>版本信息
+
+- 版本号：5.9.0<sup>1</sup>
+- 发布日期：2021 年 1 月 29 日
+
+### <a name="whats-new-in-59"></a>5\.9 中的新增功能
+
+| 新建项 | 详细信息 |
+| :------- | :------ |
+| 添加了对 PHP 8.0 的支持。 | &nbsp; |
+| 放弃了对 PHP 7.2 的支持。 | &nbsp; |
+| 添加了对所有平台上 Microsoft ODBC 驱动程序 17.7 的支持。 | &nbsp; |
+| 添加了对 macOS Big Sur、Ubuntu 20.04、Ubuntu 20.10 和 Alpine 3.12 的支持。 | 有些需要 ODBC 驱动程序 17.5 或更高版本。 |
+| 删除了对 macOS High Sierra、Debian 8 和 Ubuntu 19.10 的支持。 | &nbsp; |
+| 支持 GB18030 区域设置。 | &nbsp; |
+| 扩展了 PDO errorinfo，以包括其他 odbc 消息（如果有）。 | &nbsp; |
+| 对具有级别信息的数据分类的支持。 | 需要 SQL Server 2019 和 ODBC 驱动程序 17.4.2 或更高版本。 |
+| 添加了 Azure Active Directory 服务主体身份验证支持。 | 需要 ODBC 驱动程序 17.7 或更高版本。 |
+| 改善了将十进制数字作为输入或输出处理时的性能，并消除了数字值的不必要转换。 | &nbsp; |
+| 改善了使用客户端缓冲区提取数字时的性能。 | &nbsp; |
+| 设置查询超时而不使用 LOCK TIMEOUT，这样可以节省到服务器的额外往返。 | &nbsp; |
+| &nbsp; | &nbsp; |
+
+<sup>1</sup> 此版本需要 ODBC Driver 17.4.2 或更高版本。 否则，将出现有关未能设置属性的警告。 使用较旧的 ODBC 驱动程序时，可能不会显示此警告。 如果使用 SQLSRV，请查看[如何：使用 SQLSRV 驱动程序配置错误和警告处理](https://docs.microsoft.com/sql/connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver)。 如果使用 PDO_SQLSRV，则默认情况下将禁止显示警告，但可以对其进行记录。 请查看[日志记录活动](https://docs.microsoft.com/sql/connect/php/logging-activity)了解详细信息。
 
 ## <a name="581"></a>5.8.1
 

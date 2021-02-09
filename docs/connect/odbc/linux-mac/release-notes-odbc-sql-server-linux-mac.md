@@ -2,7 +2,7 @@
 title: Linux 和 macOS 上的 ODBC Driver for SQL Server 的发行说明
 description: 了解 Microsoft ODBC Driver for SQL Server 的发布版本中的新增功能和已更新内容。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 79c86e34a759e65f858621932fea5772e51756e2
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 43f6be9103f000150d8069888b6129b36ccf29e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899530"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194605"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
 
@@ -37,6 +37,15 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## <a name="177-january-2021"></a>17.7，2021 年 1 月
+
+| 新建项 | 详细信息 |
+| :------- | :------ |
+| 支持新分发。 | Ubuntu 20.10、macOS Big Sur (11.0)、Oracle Linux 7 |
+| 服务主体身份验证 | 请参阅 [DSN 和连接字符串属性及关键字](../dsn-connection-string-attribute.md)。 |
+| 能够插入已加密的 money 和 smallmoney 列 | 请参阅[使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| bug 修复。 | [bug 修复](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="176-july-2020"></a>17.6，2020 年 7 月
 

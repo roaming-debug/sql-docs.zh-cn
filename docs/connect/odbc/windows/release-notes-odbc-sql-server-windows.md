@@ -2,7 +2,7 @@
 title: Windows 上的 ODBC Driver for SQL Server 发行说明
 description: 本发行说明文章介绍了 Windows 上每个发行版 Microsoft ODBC Driver for SQL Server 的变更内容。
 ms.custom: ''
-ms.date: 10/29/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: e587d8938cd5c63172f9e27622b680de62cb7cea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043806"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168006"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver for SQL Server 发行说明
 
@@ -43,6 +43,28 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="177"></a>17.7
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2153471)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2153469)  
+
+版本号：17.7.1.1  
+发布日期：2021 年 1 月 29 日
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x40a)
+
+| 新增功能 | 详细信息 |
+| :------- | :------ |
+| Azure Key Vault 交互式身份验证 | 请参阅[使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| 服务主体身份验证 | 请参阅 [DSN 和连接字符串属性及关键字](../dsn-connection-string-attribute.md)。 |
+| 能够插入已加密的 money 和 smallmoney 列 | 请参阅[使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| bug 修复。 | [bug 修复](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>以前的版本
+
 ## <a name="176"></a>17.6
 
 ![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2137027)  
@@ -61,8 +83,6 @@ GeneMi (and CraigG).  2019/03/30.
 | SQL_COPT_SS_AUTOBEGINTXN 连接属性用于控制自动 BEGIN TRANSACTION 是在 ROLLBACK 后还是 COMMIT 之后发生 | 请参阅 [DSN 和连接字符串属性及关键字](../dsn-connection-string-attribute.md)。 |
 | bug 修复。 | [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>以前的版本
 
 ## <a name="1752"></a>17.5.2
 

@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: 8555a183dc1f888e6ae80b78999b5fc234b431cf
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: ef49071f97d255d98f8086b9ff329c77d7b4afad
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594410"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983660"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -23,13 +23,13 @@ SqlPackage.exe 是一个命令行实用工具，可自动处理以下数据库�
   
 - [版本](#version)：返回 SqlPackage 应用程序的生成号。  在版本 18.6 中添加。
 
-- [提取](sqlpackage-extract.md)：从活动的 SQL Server 或 Azure SQL 数据库创建数据库快照 (.dacpac) 文件。  
+- [提取](sqlpackage-extract.md)：创建数据层应用程序 (.dacpac) 文件，该文件包含连接的 SQL 数据库中的架构数据或是架构和用户数据。  
   
 - [发布](sqlpackage-publish.md)：增量更新数据库架构以便匹配源 .dacpac 文件的架构。 如果该数据库在服务器上不存在，则发布操作将创建它。 否则，将更新现有数据库。  
   
-- [导出](sqlpackage-export.md)：将活动数据库（包括数据库架构和用户数据）从 SQL Server 或 Azure SQL 数据库导出到 BACPAC 包（.bacpac 文件）。  
+- [导出](sqlpackage-export.md)：将连接的 SQL 数据库（包括数据库架构和用户数据）导出到 BACPAC 文件 (.bacpac)。  
   
-- [导入](sqlpackage-import.md)：将架构和表数据从 BACPAC 包导入到 SQL Server 或 Azure SQL 数据库的实例中的新用户数据库中。  
+- [导入](sqlpackage-import.md)：将架构和表数据从 BACPAC 文件导入到新的用户数据库中。  
   
 - [DeployReport](sqlpackage-deploy-drift-report.md)：创建将由发布操作完成的更改的 XML 报表。  
   

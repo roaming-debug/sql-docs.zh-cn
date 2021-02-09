@@ -2,7 +2,7 @@
 description: JDBC 驱动程序的系统要求
 title: JDBC 驱动程序的系统要求 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 73dee4f98ff33c03789826b51361c88738dda603
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 2052f4db6b90851a09b0aa7f56a2f4a9220be506
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042458"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187668"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驱动程序的系统要求
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,6 +27,8 @@ ms.locfileid: "89042458"
 - Java Runtime Environment
 
 ## <a name="java-runtime-environment-requirements"></a>Java Runtime Environment 要求  
+
+ 自 Microsoft JDBC Driver 9.2 for SQL Server 起，支持 Java 开发工具包 (JDK) 15.0 和 Java Runtime Environment (JRE) 15.0。
 
  自 Microsoft JDBC Driver 8.4 for SQL Server 起，支持 Java 开发工具包 (JDK) 14.0 和 Java Runtime Environment (JRE) 14.0。
 
@@ -40,13 +42,38 @@ ms.locfileid: "89042458"
 
  自 Microsoft JDBC Driver 6.4 for SQL Server 起，支持 Java 开发工具包 (JDK) 9.0 和 Java 运行时环境 (JRE) 9.0。
 
- 自 Microsoft JDBC Driver 4.2 for SQL Server 起，支持 Java 开发工具包 (JDK) 8.0 和 Java 运行时环境 (JRE) 8.0。 对 Java Database Connectivity (JDBC) 规范 API 的支持已扩展为包含 JDBC 4.1 和 4.2 API。
+ 自 Microsoft JDBC Driver 4.2 for SQL Server 起，支持 Java 开发工具包 (JDK) 8.0 和 Java 运行时环境 (JRE) 8.0。 对 JDBC 规范 API 的支持已扩展为包含 JDBC 4.1 和 4.2 API。
   
  自 Microsoft JDBC Driver 4.1 for SQL Server 起，支持 Java 开发工具包 (JDK) 7.0 和 Java 运行时环境 (JRE) 7.0。
   
- 从 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 开始，Java 数据库连接 (JDBC) 规范 API 的JDBC 驱动程序支持扩展为包括 JDBC 4.0 API。 已在 Java 开发工具包 (JDK) 6.0 和 Java 运行时环境 (JRE) 6.0 中引入了 JDBC 4.0 API。 JDBC 4.0 是 JDBC 3.0 API 的超集。
+ 从 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 开始，JDBC 规范 API 的JDBC 驱动程序支持扩展为包含 JDBC 4.0 API。 已在 Java 开发工具包 (JDK) 6.0 和 Java 运行时环境 (JRE) 6.0 中引入了 JDBC 4.0 API。 JDBC 4.0 是 JDBC 3.0 API 的超集。
   
  当你在 Windows 和 UNIX 操作系统上部署 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 时，你必须分别使用安装包 sqljdbc_\<version>_enu.exe 和 sqljdbc_\<version>_enu.tar.gz。 若要详细了解如何部署 JDBC 驱动程序，请参阅[部署 JDBC 驱动程序](../../connect/jdbc/deploying-the-jdbc-driver.md)主题。  
+
+Microsoft JDBC Driver 9.2 for SQL Server：  
+
+  JDBC Driver 9.2 在每个安装包中包含三个 JAR 类库：mssql-jdbc-9.2.0.jre8.jar、mssql-jdbc-9.2.0.jre11.jar 和 mssql-jdbc-9.2.0.jre15.jar  。
+
+  JDBC Driver 9.2 适用于各种主要 Java 虚拟机，且受到这些虚拟机的支持，但仅在 OpenJDK 1.8、OpenJDK 11.0、OpenJDK 15.0、Azul Zulu JRE 1.8、Azul Zulu JRE 11.0 和 Azul Zulu JRE 15.0 上经过测试。
+  
+  下表汇总了 Microsoft JDBC Driver 9.2 for SQL Server 随附的两个 JAR 文件所提供的支持：  
+  
+  |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|说明|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-9.2.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 1.8。 使用 JRE 1.7 或更低版本会引发异常。<br /><br /> 9\.2 中的新功能包括：JDK 15 支持、Azure Active Directory 交互式身份验证支持、Azure Active Directory 服务主体身份验证支持以及适用于非 Azure Synapse Analytics 服务器的 useBulkCopyForBatchInsert 支持。 |
+|mssql-jdbc-9.2.0.jre11.jar|4.3|11|需要 Java 运行时环境 (JRE) 11.0. 使用 JRE 10.0 或更低版本会引发异常。<br /><br /> 9\.2 中的新功能包括：JDK 15 支持、Azure Active Directory 交互式身份验证支持、Azure Active Directory 服务主体身份验证支持以及适用于非 Azure Synapse Analytics 服务器的 useBulkCopyForBatchInsert 支持。 |
+|mssql-jdbc-9.2.0.jre15.jar|4.3|15|需要 Java Runtime Environment (JRE) 15.0。 使用 JRE 14.0 或更低版本会引发异常。<br /><br /> 9\.2 中的新功能包括：JDK 15 支持、Azure Active Directory 交互式身份验证支持、Azure Active Directory 服务主体身份验证支持以及适用于非 Azure Synapse Analytics 服务器的 useBulkCopyForBatchInsert 支持。 |
+
+
+  JDBC Driver 9.2 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目：  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>9.2.0.jre11</version>
+</dependency>
+```
 
 Microsoft JDBC Driver 8.4 for SQL Server：  
 
@@ -100,7 +127,7 @@ Microsoft JDBC Driver 8.4 for SQL Server：
 
 **Microsoft JDBC Driver 7.4 for SQL Server：**  
 
-  JDBC Driver 7.4 在每个安装包中包含三个 JAR 类库：mssql-jdbc-7.4.1.jre8.jar****、mssql-jdbc-7.4.1.jre11.jar**** 和 mssql-jdbc-7.4.1.jre12.jar****。
+  JDBC Driver 7.4 在每个安装包中包含三个 JAR 类库：mssql-jdbc-7.4.1.jre8.jar、mssql-jdbc-7.4.1.jre11.jar 和 mssql-jdbc-7.4.1.jre12.jar。
 
   JDBC Driver 7.4 适用于各种主要 Java 虚拟机，且受到这些虚拟机的支持，但仅在 OpenJDK 1.8、OpenJDK 11.0、OpenJDK 12.0、Azul Zulu JRE 1.8、Azul Zulu JRE 11.0 和 Azul Zulu JRE 12.0 上经过测试。
   
@@ -125,7 +152,7 @@ Microsoft JDBC Driver 8.4 for SQL Server：
 
 **Microsoft JDBC Driver 7.2 for SQL Server：**  
 
-  JDBC Driver 7.2 在每个安装包内有两个 JAR 类库：mssql-jdbc-7.2.2.jre8.jar**** 和 mssql-jdbc-7.2.2.jre11.jar****。
+  JDBC Driver 7.2 在每个安装包内有两个 JAR 类库：mssql-jdbc-7.2.2.jre8.jar 和 mssql-jdbc-7.2.2.jre11.jar。
 
   JDBC Driver 7.2 适用于各种主要 Java 虚拟机，且受到这些虚拟机的支持，但仅在 OpenJDK 8.0、OpenJDK 11.0、Azul Zulu JRE 8.0 和 Azul Zulu JRE 11.0 上经过测试。
   
@@ -149,7 +176,7 @@ Microsoft JDBC Driver 8.4 for SQL Server：
  
 **Microsoft JDBC Driver 7.0 for SQL Server：**  
 
-  JDBC Driver 7.0 在每个安装包中包含两个 JAR 类库：mssql-jdbc-7.0.0.jre8.jar**** 和 mssql-jdbc-7.0.0.jre10.jar****。
+  JDBC Driver 7.0 在每个安装包中包含两个 JAR 类库：mssql-jdbc-7.0.0.jre8.jar 和 mssql-jdbc-7.0.0.jre10.jar。
 
   JDBC Driver 7.0 专门适用于各种主要 Java 虚拟机且受到这些虚拟机的支持，但仅在 OpenJDK 8.0 和 10.0 上经过测试。
   
@@ -173,7 +200,7 @@ Microsoft JDBC Driver 8.4 for SQL Server：
   
 **Microsoft JDBC Driver 6.4 for SQL Server：**  
 
-  JDBC Driver 6.4 在每个安装包中包含三个 JAR 类库：mssql-jdbc-6.4.0.jre7.jar****、mssql-jdbc-6.4.0.jre8.jar**** 和 mssql-jdbc-6.4.0.jre9.jar****。
+  JDBC Driver 6.4 在每个安装包中包含三个 JAR 类库：mssql-jdbc-6.4.0.jre7.jar、mssql-jdbc-6.4.0.jre8.jar 和 mssql-jdbc-6.4.0.jre9.jar。
 
   JDBC Driver 6.4 专门适用于各种主要 Java 虚拟机且受到这些虚拟机的支持，但仅在 OpenJDK 7.0、8.0 和 9.0 上经过测试。
   
@@ -181,9 +208,9 @@ Microsoft JDBC Driver 8.4 for SQL Server：
   
   |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|说明|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|需要 Java Runtime Environment (JRE) 9.0。 使用 JRE 8.0 或更低版本会引发异常。<br /><br /> 6.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |
+|mssql-jdbc-6.4.0.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
+|mssql-jdbc-6.4.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|需要 Java Runtime Environment (JRE) 9.0。 使用 JRE 8.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |
 
 JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目 
 
@@ -197,7 +224,7 @@ JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 PO
 
 **Microsoft JDBC Driver 6.2 for SQL Server：**  
   
-  JDBC Driver 6.2 在每个安装包中包含两个 JAR 类库：mssql-jdbc-6.2.2.jre7.jar**** 和 mssql-jdbc-6.2.2.jre8.jar****。 
+  JDBC Driver 6.2 在每个安装包中包含两个 JAR 类库：mssql-jdbc-6.2.2.jre7.jar 和 mssql-jdbc-6.2.2.jre8.jar。 
   
  JDBC Driver 6.2 专门适用于各种主要 Java 虚拟机且受到这些虚拟机的支持，但仅在 Sun JRE 5.0、6.0、7.0 和 8.0 上经过测试。
   
@@ -205,8 +232,8 @@ JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 PO
   
 |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|说明|  
 |---------|-----------------------------|----------------------|-----------------|
-|mssql-jdbc-6.2.2.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6.2 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
-|mssql-jdbc-6.2.3.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6.2 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用|    
+|mssql-jdbc-6.2.2.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6\.2 中的新功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
+|mssql-jdbc-6.2.3.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6\.2 中的新功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用|    
 
   JDBC Driver 6.2 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目 
   
@@ -220,7 +247,7 @@ JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 PO
 
  **Microsoft JDBC Driver 6.0 and 4.2 for SQL Server：**  
   
-  JDBC Drivers 6.0 和 4.2 的每个安装包中都有两个 JAR 类库：sqljdbc41.jar**** 和 sqljdbc42.jar****。 
+  JDBC Drivers 6.0 和 4.2 的每个安装包中都有两个 JAR 类库：sqljdbc41.jar 和 sqljdbc42.jar。 
   
  DBC Drivers 6.0 和 4.2 专门适用于各种主要 Java 虚拟机且受到这些虚拟机的支持，但仅在 Sun JRE 5.0、6.0、7.0 和 8.0 上经过测试。
   
@@ -233,11 +260,11 @@ JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 PO
   
  **Microsoft JDBC Driver 4.1 for SQL Server：**  
   
- JDBC Driver 4.1 的每个安装包中都有一个 JAR 类库：sqljdbc41.jar****。  
+ JDBC Driver 4.1 的每个安装包中都有一个 JAR 类库：sqljdbc41.jar。  
     
 |JAR|说明|  
 |---------|-----------------|  
-|sqljdbc41.jar|sqljdbc41.jar 类库提供对 JDBC 4.0 API 的支持****。 它包含 JDBC 4.0 驱动程序的所有功能以及 JDBC 4.0 API 方法。 JDBC 4.1 不受支持（引发异常“SQLFeatureNotSupportedException”）。<br /><br /> sqljdbc41.jar 类库要求使用 Java Runtime Environment (JRE) 7.0。**** 使用 JRE 6.0 和 5.0 上的 sqljdbc41.jar**** 引发异常。<br /><br /> 
+|sqljdbc41.jar|sqljdbc41.jar 类库提供对 JDBC 4.0 API 的支持。 它包含 JDBC 4.0 驱动程序的所有功能以及 JDBC 4.0 API 方法。 JDBC 4.1 不受支持（引发异常“SQLFeatureNotSupportedException”）。<br /><br /> sqljdbc41.jar 类库要求使用 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 和 5.0 上的 sqljdbc41.jar 引发异常。<br /><br /> 
   
  JDBC 驱动程序专门适用于各种主要 Java 虚拟机且受到这些虚拟机的支持，但是在 Sun JRE 5.0、6.0 和 7.0 上测试的。
   

@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 2be72374a13dbedb444b2661cf0e53a0d555d98c
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 9c732f7be3a25752c16e8e09e483097c8b9cac18
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688953"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536403"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 
@@ -56,7 +56,7 @@ ms.locfileid: "98688953"
 [![下载 bcp for x64](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2142258)
 <br>[![下载 bcp for x86](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2142257)
 
-命令行工具为公开发行版 (GA)，但与 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的安装程序包一起发布。
+命令行工具为公开发行版 (GA)，但与 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 的安装程序包一起发布。
 
 ### <a name="version-information"></a>版本信息
 
@@ -71,7 +71,7 @@ ms.locfileid: "98688953"
 
 Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016、Windows Server 2019
 
-此组件要求安装 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 和 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md)。
+此组件要求安装 [Windows Installer 4.5](https://windows-installer.soft32.com/) 和 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md)。
 
 若要查看 BCP 版本，请执行 `bcp /v` 命令，并确认使用的是 15.0.2000.5 或更高版本。
 
@@ -174,7 +174,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|客户端使用的默认代码页。 未指定 **-C** 时使用的默认代码页。|  
 |RAW|不进行代码页间的转换。 因为不进行转换，所以这是最快的选项。|  
-|*code_page*|特定的代码页编号，例如 850。<br /><br /> 低于 13 ([!INCLUDE[ssSQL15](../includes/sssql16-md.md)]) 的版本不支持代码页 65001（UTF-8 编码）。 版本 13 和后续版本可将 UTF-8 编码导入以前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。|  
+|*code_page*|特定的代码页编号，例如 850。<br /><br /> 低于 13 ([!INCLUDE[sssql15-md](../includes/sssql16-md.md)]) 的版本不支持代码页 65001（UTF-8 编码）。 版本 13 和后续版本可将 UTF-8 编码导入以前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。|  
 |||
   
  **-d** _**database\_name**_<a name="d"></a>   
@@ -429,7 +429,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **120** = [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]  
+ **130** = [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]  
   
  例如，若要为 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]不支持、但是在较高版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中引入的类型生成数据，请使用 -V80 选项。  
   
@@ -445,7 +445,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 ## <a name="remarks"></a>备注<a name="remarks"></a>
 
-- 使用 **bcp** 工具时，将安装 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 客户端。 如果同时安装了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和早期版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的工具，你所使用的可能是早期版本的 **bcp** 客户端，而不是 **bcp** 13.0 客户端，具体情况取决于 PATH 环境变量的值。 此环境变量定义 Windows 用于搜索可执行文件的目录集。 若要确定当前所使用的版本，请在 Windows 命令提示符下运行 bcp /v 或 bcp -v 命令 。 有关如何在 PATH 环境变量中设置命令路径的信息，请参阅[环境变量](/windows/win32/shell/user-environment-variables)或在 Windows 帮助中搜索环境变量。
+- 安装 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[sssql19-md.md](../includes/sssql19-md.md)] 工具时，将安装 bcp 13.0 客户端。 如果为多个版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装了工具，则你使用的可能是早期版本的 bcp 客户端，而不是 bcp 13.0 客户端，具体取决于 PATH 环境变量的值的顺序 。 此环境变量定义 Windows 用于搜索可执行文件的目录集。 若要确定当前所使用的版本，请在 Windows 命令提示符下运行 bcp /v 或 bcp -v 命令 。 有关如何在 PATH 环境变量中设置命令路径的信息，请参阅[环境变量](/windows/win32/shell/user-environment-variables)或在 Windows 帮助中搜索环境变量。
 
     为确保运行的是最新版本的 bcp 实用工具，需要删除所有旧版本的 bcp 实用工具。
 
@@ -471,7 +471,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 ## <a name="native-data-file-support"></a>本机数据文件支持
 
- 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， **bcp** 实用工具支持与 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]兼容的本机数据文件。  
+ 在 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] 中，bcp 实用工具支持与 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] 及更高版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本兼容的本机数据文件。
 
 ## <a name="computed-columns-and-timestamp-columns"></a>计算列和 timestamp 列
 

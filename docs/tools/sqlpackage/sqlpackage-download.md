@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 10/02/2020
-ms.openlocfilehash: c86dde50390bdf14719da96f7fc3d0cc35a9c440
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 45aad0892dbc187e50368f7abcf6c0b02cbc7cca
+ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577817"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99510288"
 ---
 # <a name="download-and-install-sqlpackage"></a>下载并安装 sqlpackage
 
@@ -31,6 +31,9 @@ sqlpackage 在 Windows、macOS 和 Linux 上运行。
 |[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2143496)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
 
 有关最新版本的详细信息，请参阅[发行说明](release-notes-sqlpackage.md)。 若要下载其他语言，请参阅[可用语言](#available-languages)部分。
+
+
+提供一个长期有效链接 ([https://aka.ms/sqlpackage-linux](https://aka.ms/sqlpackage-linux))，该链接指向适用于 [Linux .NET Core](#get-sqlpackage-net-core-for-linux) 的 sqlpackage 的当前版本（可以在具有最新版 sqlpackage 的自动化环境中使用）。
 
 ## <a name="dacfx"></a>DacFx
 SqlPackage 是 DacFx 框架的命令行接口，公开了一些公共 DacFx API。 DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) 是一种用于将数据库部署集成到应用程序管道的相关机制。  DacServices API 可通过 NuGet 在包 [Microsoft.SqlServer.DACFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DACFx) 中获得。  当前 DacFx 版本为 150.4897.1。
@@ -90,7 +93,7 @@ dotnet add package Microsoft.SqlServer.DACFx
 
 ## <a name="get-sqlpackage-net-core-for-linux"></a>获取适用于 Linux 的 sqlpackage .NET Core
 
-1. 通过使用安装程序之一或 tar.gz 存档来下载[适用于 Linux 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2143497)：
+1. 通过使用安装程序之一或 tar.gz 存档来下载[适用于 Linux 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2143497)。
 2. 若要提取文件并启动 sqlpackage，请打开一个新的终端窗口并键入以下命令：
 
    ```bash
