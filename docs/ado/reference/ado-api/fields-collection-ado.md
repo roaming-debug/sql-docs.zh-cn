@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e16bf602bd0c54b425587fcf1a50d2cc60b2aa7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7466a56d3b9ae5e9a35968f34bb13f9e748c934d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167358"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034047"
 ---
 # <a name="fields-collection-ado"></a>字段集合 (ADO)
 包含[Recordset](./recordset-object-ado.md)或[Record](./record-object-ado.md)对象的所有[字段](./field-object.md)对象。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53cd3be90492bb601c06138a3829d428d3abcaeb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fa10ddcef5adfd340d2cbd690ff54d8ab62f35ff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167401"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034067"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 事件 (ADO)
 在长时间异步操作期间会定期调用 **FetchProgress** 事件，以报告当前已检索到 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的行数。  

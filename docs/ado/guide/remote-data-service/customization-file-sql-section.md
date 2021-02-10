@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d17fa12aa0b07b265fb8f26b6ac1b6c584015d1e
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: bc9b9415628f27cd68cecbf02de2c52165c8d509
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724758"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031989"
 ---
 # <a name="customization-file-sql-section"></a>自定义文件 SQL 部分
-**Sql**部分可以包含替换客户端命令字符串的新 sql 字符串。 如果部分中没有 SQL 字符串，则将忽略该部分。  
+**Sql** 部分可以包含替换客户端命令字符串的新 sql 字符串。 如果部分中没有 SQL 字符串，则将忽略该部分。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
@@ -46,7 +46,7 @@ SQL = " "
  **SQL =**   
  ***sqlString***  
   
-|组成部分|说明|  
+|部分|说明|  
 |----------|-----------------|  
 |**SQL**|指示这是一个 SQL 节条目的文字字符串。|  
 |***sqlString***|替换客户端字符串的 SQL 字符串。|  

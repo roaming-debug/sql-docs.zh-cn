@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eadbd94d0dca864b3d6e9c0a172e60845e7c584e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6bbe519e468921bc014439af148eab6899546771
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167339"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033937"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter 和 RecordCount 属性示例 (VB)
 此示例将打开 ***Pubs** _ 数据库的发布服务器表中的 [记录集](./recordset-object-ado.md)。 然后，它使用 [筛选器](./filter-property.md) 属性将可见记录的数目限制为特定国家/地区的发布者。 _ *RecordCount** 属性用于显示已筛选和未筛选的记录集之间的差异。  

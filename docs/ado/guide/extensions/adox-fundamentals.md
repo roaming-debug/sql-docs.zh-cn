@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e0c1e163aa83eac05d22b551e94135341a37716
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6b03c71180a3d32ca3a592c063d5a267f187964c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638076"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032169"
 ---
 # <a name="adox-fundamentals"></a>ADOX 基础知识
 Microsoft® ActiveX®数据定义语言和安全 (ADOX) 是 ADO 对象和编程模型的扩展。 ADOX 包含用于创建和修改架构以及安全性的对象。 由于它是一种基于对象的架构处理方法，因此你可以编写代码来处理各种数据源，而不考虑它们的本机语法差异。  

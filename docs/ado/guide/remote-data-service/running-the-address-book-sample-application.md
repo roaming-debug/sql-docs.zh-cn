@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85d9dbf43107af7504241af825b5b21c38139e3b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b4e77339de5ec7ebddbdb1314228abf6eef8c15d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723050"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031809"
 ---
 # <a name="running-the-address-book-sample-application"></a>运行通讯簿示例应用程序
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "91723050"
   
 2.  在 Microsoft Internet Explorer 4.0 或更高版本中，键入以下地址：  
   
-     **https://** *web*服务器 **/RDS/AddressBook/AddrBook.asp**  
+     **https://** *web* 服务器 **/RDS/AddressBook/AddrBook.asp**  
   
      其中 *，web 服务器* 是安装 RDS server 组件的 Web 服务器的名称。  
   

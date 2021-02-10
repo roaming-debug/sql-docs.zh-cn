@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9238fa208a5ce415986fee05045dc7ea34e0d67
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ccccbbc0d634b1044569c4787b8e7bb60c2c3275
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722998"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031719"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>步骤 2：调用服务器程序（RDS 教程）
-当您在客户端 *代理*上调用方法时，服务器上的实际程序将执行方法。 在此步骤中，您将在服务器上执行查询。  
+当您在客户端 *代理* 上调用方法时，服务器上的实际程序将执行方法。 在此步骤中，您将在服务器上执行查询。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
   
- **部分 A** 如果在本教程中没有使用 [RDSServer](../../reference/rds-api/datafactory-object-rdsserver.md) ，则执行此步骤的最简便方法是使用 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 对象。 **RDS。DataControl**结合了之前创建代理的步骤，并在此步骤中发出查询。  
+ **部分 A** 如果在本教程中没有使用 [RDSServer](../../reference/rds-api/datafactory-object-rdsserver.md) ，则执行此步骤的最简便方法是使用 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 对象。 **RDS。DataControl** 结合了之前创建代理的步骤，并在此步骤中发出查询。  
   
  设置 **RDS。DataControl** 对象 [服务器](../../reference/rds-api/server-property-rds.md) 属性来标识应实例化服务器程序的位置; [连接](../../reference/rds-api/connect-property-rds.md) 属性以指定访问数据源的连接字符串;和 [SQL](../../reference/rds-api/sql-property.md) 属性来指定查询命令文本。 然后发出 [Refresh](../../reference/rds-api/refresh-method-rds.md) 方法，使服务器程序连接到数据源，检索查询指定的行，并将 **记录集** 对象返回到客户端。  
   

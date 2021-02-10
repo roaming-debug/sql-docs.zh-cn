@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ad7fcb2bb63d77bd50c89f11e9b818439b0d1d0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 693f5858a80d5bc986dc16f993aa5c5a78c54d7c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721398"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031869"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 教程 (VBScript)
 这是在 Microsoft Visual Basic Scripting Edition 中编写的 RDS 教程。 有关本教程用途的说明，请参阅 [RDS 教程](./rds-tutorial.md)。  

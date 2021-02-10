@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6681a0b40890db9c344a91adc26694f3e122710d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1866d72f438e263ec6cdb1f66cccb247d460a270
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721499"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031919"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>将业务对象标记为“可安全编写脚本”
 > [!IMPORTANT]
@@ -44,4 +44,4 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  在最后一个步骤中，应用程序安装向导将创建一个 .htm 和一个 .cab 文件。 然后，你可以将这两个文件复制到目标计算机，然后双击 .htm 文件以加载页面并正确注册服务器。  
   
- 因为默认情况下会在 Windows\System32\Occache 目录中安装业务对象，请将其移动到 Windows\System32 目录，并更改**HKEY_CLASSES_ROOT \clsid \\ ** \<*MyActiveXGUID*> \\ **InprocServer32**注册表项以匹配正确的路径。
+ 因为默认情况下会在 Windows\System32\Occache 目录中安装业务对象，请将其移动到 Windows\System32 目录，并更改 **HKEY_CLASSES_ROOT\CLSID\\** \<*MyActiveXGUID*> \\ **InprocServer32** 注册表项以匹配正确的路径。

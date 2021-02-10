@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17d4094959c72389bf1cef71e6547394e676f78f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d6844590043e0f806381f35c3f74123c24a6dc30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978578"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032159"
 ---
 # <a name="using-ado-with-ado-md"></a>使用 ADO 与 ADO MD
 ADO 和 ADO MD 与不同的对象模型相关。 ADO 提供用于连接到数据源、执行命令、以表格格式检索表格数据和架构元数据以及查看提供程序错误信息的对象。 ADO MD 提供用于检索多维数据和查看多维架构元数据的对象。  
   
  当使用 MDP 时，可以选择将 ADO 和/或 ADO MD 用于应用程序。 通过在你的项目中引用这两个库，你将对 MDP 提供的功能具有完全访问权限。  
   
- 通常，使用者可以获取多维数据集的平展表格视图。 可以通过使用 ADO [记录集](../../reference/ado-api/recordset-object-ado.md) 对象来执行此操作。 指定[单元](../../reference/ado-md-api/cellset-object-ado-md.md)集的源作为**记录集**的[Open](../../reference/ado-api/open-method-ado-recordset.md)方法的***源***参数，而不是作为 ADO MD**单元集**的源。  
+ 通常，使用者可以获取多维数据集的平展表格视图。 可以通过使用 ADO [记录集](../../reference/ado-api/recordset-object-ado.md) 对象来执行此操作。 将 [单元](../../reference/ado-md-api/cellset-object-ado-md.md)集的源指定为 _ * Recordset * * 的 [Open](../../reference/ado-api/open-method-ado-recordset.md)方法的 ***source** _ 参数，而不是作为 ADO MD **单元** 集的源。  
   
- 在表格视图中查看架构元数据（而不是对象的层次结构）可能也很有用。 使用[Connection](../../reference/ado-api/connection-object-ado.md)对象上的 ADO [OpenSchema](../../reference/ado-api/openschema-method.md)方法，用户可以打开包含架构信息的**记录集**。 **OpenSchema**方法的***QueryType***参数具有几个特定于 MDPs 的[SchemaEnum](../../reference/ado-api/schemaenum.md)值。 其值如下所示：  
+ 在表格视图中查看架构元数据（而不是对象的层次结构）可能也很有用。 使用 [Connection](../../reference/ado-api/connection-object-ado.md)对象上的 ADO [OpenSchema](../../reference/ado-api/openschema-method.md)方法，用户可以打开包含架构信息的 **记录集**。 _ OpenSchema 方法的 **_QueryType_*_ 参数*** 具有几个特定于 MDPs 的 [SchemaEnum](../../reference/ado-api/schemaenum.md)值。 其值如下所示：  
   
 -   **adSchemaCubes**  
   

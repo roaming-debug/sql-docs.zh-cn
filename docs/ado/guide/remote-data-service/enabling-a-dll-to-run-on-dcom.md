@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 220f4a8abfe37a12a7f0699b9aec8a634691cabe
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 31aa1fde6ddce21bc314bf14aea3ea563567d4a6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723218"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031969"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>允许 DCOM 在 DLL 上运行
 > [!IMPORTANT]
@@ -34,12 +34,12 @@ ms.locfileid: "91723218"
   
 2.  将业务对象安装到包中。  
   
-     \- 或 -  
+     或  
   
      将 [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 对象导入到包中。  
   
-3.  **在创建者的进程中**将包的激活特性设置 (库应用程序) 。  
+3.  **在创建者的进程中** 将包的激活特性设置 (库应用程序) 。  
   
-     若要使 .dll 可通过 DCOM 和 IIS 在同一台计算机上访问，必须在 "组件服务" MMC 管理单元中设置组件的 "激活" 属性。 **在创建者的进程中**将属性设置为之后，你会注意到注册表中的**Inproc**服务器键已添加到 "组件服务" 代理项。  
+     若要使 .dll 可通过 DCOM 和 IIS 在同一台计算机上访问，必须在 "组件服务" MMC 管理单元中设置组件的 "激活" 属性。 **在创建者的进程中** 将属性设置为之后，你会注意到注册表中的 **Inproc** 服务器键已添加到 "组件服务" 代理项。  
   
  有关组件服务 (或 Microsoft Transaction Service 的详细信息，如果使用的是 Windows NT) 以及如何执行这些步骤，请访问 Microsoft Transaction Server 网站。

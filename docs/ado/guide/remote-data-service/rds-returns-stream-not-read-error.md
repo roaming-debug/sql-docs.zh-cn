@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6acb603594acdd23f8ad8764c9b9a692acabdb9b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2aba423ab0861b8e97a298b88e6016db1c759b19
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724898"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031879"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 返回 " &quot; 未读取流" &quot; 错误
 "无法读取流对象，因为它是空的，或当前位置位于流的末尾。 对于非空流，请将当前位置设置为 Position 属性。 若要确定流是否为空，请检查 "大小" 属性。  

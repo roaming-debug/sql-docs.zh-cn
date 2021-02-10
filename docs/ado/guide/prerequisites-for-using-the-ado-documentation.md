@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e392b099f66b0ef0ca1c38fe5f3d4982d9018df
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3b518e67ed9e2f8da20c9e518fb27ca92fea9de9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978548"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032129"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>使用 ADO 文档的先决条件
 若要使用本文档，你应该至少拥有一些使用 Microsoft Visual Basic 开发应用程序的经验，因为本指南中的大多数示例都使用这种语言编写。 此外，Microsoft Visual C++、Java、Visual Basic Scripting Edition (VBScript) 和 Microsoft JScript 中编写了一些示例。  

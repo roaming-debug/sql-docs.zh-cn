@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f581b2c4b4861c852a9e5a24aec5a219ee098f4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8335b09bbb7fa044492d1a080b34084be7860a5a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167314"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033909"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 在 [记录集中](./recordset-object-ado.md) 搜索满足指定条件的行。 或者，可以指定搜索方向、起始行和起始行的偏移量。 如果满足条件，则在找到的记录上设置当前行位置;否则，将位置设置为 **记录集** 的 (或开始) 。  

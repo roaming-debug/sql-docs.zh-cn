@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 431ff25d49c4a45055d796aba98f229564872a4e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2dcd54dfb8ba5797588c615f987830dcb8aa5736
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978638"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032179"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多维架构和数据的概述
 ## <a name="understanding-multidimensional-schemas"></a>了解多维架构  
  ADO MD 中的中央元数据对象是 *多维数据集*，它由一组结构化的相关维度、层次结构、级别和成员组成。  
   
- *维度*是多维数据库中独立的数据类别，派生自业务实体。 维度通常包含要用作数据库度量值的查询条件的项。  
+ *维度* 是多维数据库中独立的数据类别，派生自业务实体。 维度通常包含要用作数据库度量值的查询条件的项。  
   
- *层次结构*是维度的聚合路径。 一个维度可能具有多个级别的粒度，它们具有父子关系。 层次结构定义这些级别如何相关。  
+ *层次结构* 是维度的聚合路径。 一个维度可能具有多个级别的粒度，它们具有父子关系。 层次结构定义这些级别如何相关。  
   
- *级别*是层次结构中的聚合步骤。 对于包含多个信息层的维度，每个层都是一个级别。  
+ *级别* 是层次结构中的聚合步骤。 对于包含多个信息层的维度，每个层都是一个级别。  
   
- *成员*是维度中的数据项。 通常，使用成员创建标题或描述数据库的度量值。  
+ *成员* 是维度中的数据项。 通常，使用成员创建标题或描述数据库的度量值。  
   
  多维数据集由 ADO MD 中的 [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) 对象表示。 维度、层次结构、级别和成员还由其对应的 ADO MD 对象表示： [维度](../../reference/ado-md-api/dimension-object-ado-md.md)、 [层次结构](../../reference/ado-md-api/hierarchy-object-ado-md.md)、 [级别](../../reference/ado-md-api/level-object-ado-md.md)和 [成员](../../reference/ado-md-api/member-object-ado-md.md)。  
   
@@ -82,7 +82,7 @@ Hamburg, Munich, Stuttgart}
   
  成员可以按维度在一个或多个层次结构中进行合并。 请考虑一个时间维度，其中有两种方法可从 "天" 级别汇总到 "年" 级别：  
   
- 此示例还说明了另一种特征： "年-周" 层次结构的 "周" 级别的某些成员未出现在 "今年季度" 层次结构中的任何级别。 因此，层次结构不需要包含维度的所有成员。  
+ 此示例还说明了另一种特征： Year-Week 层次结构中 Week 级别的某些成员未出现在 Year-Quarter 层次结构的任何级别。 因此，层次结构不需要包含维度的所有成员。  
   
 ## <a name="see-also"></a>另请参阅  
  [ADO MD 对象模型](../../reference/ado-md-api/ado-md-object-model.md)   

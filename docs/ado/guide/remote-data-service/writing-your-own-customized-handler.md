@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d761b781e7de4225f51fb3600ac467015a0c274
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f2c62c8b12435ec70166b66416f343fa835f6158
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722718"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032601"
 ---
 # <a name="writing-your-own-customized-handler"></a>编写自己的自定义处理程序
 如果您是需要默认 RDS 支持的 IIS 服务器管理员，但对用户请求和访问权限有更多控制，则您可能需要编写自己的处理程序。  
@@ -35,7 +35,7 @@ ms.locfileid: "91722718"
  这两个方法均采用 "**Handler =**" 关键字中第一个逗号后出现的参数。 例如， `"Handler=progid,arg1,arg2;"` 将传递的参数字符串 `"arg1,arg2"` ，并 `"Handler=progid"` 将传递 null 参数。  
   
 ## <a name="getrecordset-method"></a>Dl.getrecordset 方法  
- 此方法查询数据源，并使用提供的参数创建新的 [记录集](../../reference/ado-api/recordset-object-ado.md) 对象。 **记录集**必须用**adLockBatchOptimistic**打开，并且不能异步打开。  
+ 此方法查询数据源，并使用提供的参数创建新的 [记录集](../../reference/ado-api/recordset-object-ado.md) 对象。 **记录集** 必须用 **adLockBatchOptimistic** 打开，并且不能异步打开。  
   
 ### <a name="arguments"></a>参数  
  ***conn***  连接字符串。  
@@ -44,7 +44,7 @@ ms.locfileid: "91722718"
   
  ***查询***  用于进行查询的命令文本。  
   
- ***ppRS***  应在其中返回 **记录集** 的指针。  
+ ***ppRS** _ 应返回 _ *Recordset** 的指针。  
   
 ## <a name="reconnect-method"></a>重新连接方法  
  此方法更新数据源。 它将创建一个新的 [连接](../../reference/ado-api/connection-object-ado.md) 对象并附加给定的 **记录集**。  
@@ -54,10 +54,10 @@ ms.locfileid: "91722718"
   
  ***args***  处理程序的参数。  
   
- ***pr*** **记录集** 对象。  
+ ***pr** _ A *记录集** 对象。  
   
 ## <a name="msdfhdlidl"></a>msdfhdl .idl  
- 这是出现在**msdfhdl**文件中的**IDataFactoryHandler**的接口定义。  
+ 这是出现在 **msdfhdl** 文件中的 **IDataFactoryHandler** 的接口定义。  
   
 ```cpp
 [  

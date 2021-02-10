@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 774ff9b0728d362822c72047b573ab9def944d18
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7affce9c8596b9155f691ccf2ef61f9f0eca35d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979029"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032269"
 ---
 # <a name="using-ado-for-internet-publishing"></a>使用 ADO 进行 Internet 发布
 [用于 Internet 发布的 OLE DB 提供程序](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) 演示了使用 ADO 访问异类数据的特定示例。 虽然本部分中的示例将特定于使用 Internet 发布提供程序，但在将 ADO 用于其他提供程序的异类数据（如提供程序到电子邮件存储）时，演示的原则应类似。  
@@ -32,12 +32,12 @@ ms.locfileid: "88979029"
  有关如何使用 Url 的详细信息，请参阅 [绝对和相对 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
 ## <a name="record-fields"></a>记录字段  
- 异类数据和同类数据之间的区别在于：对于前者，每行数据或 **记录**可以具有一组不同的列或 **字段**。 对于同类数据，每行都具有相同的列集。 有关特定于 Internet 发布提供程序的字段的详细信息，请参阅 [记录和提供程序提供的额外字段](../../../ado/guide/data/records-and-provider-supplied-fields.md)。  
+ 异类数据和同类数据之间的区别在于：对于前者，每行数据或 **记录** 可以具有一组不同的列或 **字段**。 对于同类数据，每行都具有相同的列集。 有关特定于 Internet 发布提供程序的字段的详细信息，请参阅 [记录和 Provider-Supplied 额外字段](../../../ado/guide/data/records-and-provider-supplied-fields.md)。  
   
 ### <a name="appending-new-fields"></a>追加新字段  
  已增强几个 ADO 对象，使其与 **Record** 和 **Stream** 对象一起工作。  
   
--   [字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合[Append](../../../ado/reference/ado-api/append-method-ado.md)方法用于创建[字段](../../../ado/reference/ado-api/field-object.md)对象并将其添加到集合，还可以指定**字段**的值。  
+-   [字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合 [Append](../../../ado/reference/ado-api/append-method-ado.md)方法用于创建 [字段](../../../ado/reference/ado-api/field-object.md)对象并将其添加到集合，还可以指定 **字段** 的值。  
   
 -   [Update](../../../ado/reference/ado-api/update-method.md)方法完成了向集合中添加或删除字段的操作。  
   

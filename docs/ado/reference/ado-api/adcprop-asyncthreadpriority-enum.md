@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0e9a8fff8888268587b1a2d88fa64ee5a66dba6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ff25342a8ba7976b883ecdca8e55f8695bf45099
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161776"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031469"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 对于 RDS [记录集](./recordset-object-ado.md) 对象，指定检索数据的异步线程的执行优先级。  

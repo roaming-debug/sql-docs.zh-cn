@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2614461407689ecd785dc905c6d95594cac4433a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8bcb99529b123dc81d43a49e189b29fe667389ef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978948"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032289"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Visual Basic 数据整理示例
 ```  
@@ -95,7 +95,7 @@ End Function
   
 1.  创建 Visual Basic 标准 EXE 应用程序项目  
   
-2.  在 Visual Studio 的 "**项目**" 菜单中选择**组件**  
+2.  在 Visual Studio 的 "**项目**" 菜单中选择 **组件**  
   
 3.  从 " **组件** " 弹出窗口中选择 "Microsoft 层次结构 FlexGrid Control 6.0 (OLEDB) "，然后单击 " **保存**"。  
   

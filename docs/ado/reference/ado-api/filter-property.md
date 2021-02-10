@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7366ba67d36049f1c5df701bc633d76f56bb9af5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7ee0d5e133edbd9c5d8471176e07bce02d19c930
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167331"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033949"
 ---
 # <a name="filter-property"></a>Filter 属性
 指示 [记录集中](./recordset-object-ado.md)数据的筛选器。  
@@ -57,7 +57,7 @@ ms.locfileid: "99167331"
 -   而是将此筛选器构造为  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   在 **LIKE** 子句中，可以在模式的开头和结尾使用通配符。 例如，你可以使用 `LastName Like '*mit*'`。 或者使用 **LIKE** ，只能在模式的末尾使用通配符。 例如，`LastName Like 'Smit*'`。  
+-   在 **LIKE** 子句中，可以在模式的开头和结尾使用通配符。 例如，你可以使用 `LastName Like '*mit*'`。 或者使用 **LIKE** ，只能在模式的末尾使用通配符。 例如，`LastName Like 'Smit*'` 。  
   
  例如，使用筛选器常量可以在批处理更新模式下更轻松地解决单个记录冲突，只允许查看在上一次 [UpdateBatch 方法](./updatebatch-method.md) 方法调用期间受影响的记录。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 657250e54c9ea3564e826f2113a94625027fc4a1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1664f953533b46a356f2bab7a601c82662807abe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724888"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031859"
 ---
 # <a name="rds-usage-and-security"></a>RDS 使用情况和安全性
 使用此部分中的信息来设置服务器并快速使用 RDS。 本部分包括在实现 RDS 时可能需要执行的特定配置步骤，描述了 RDS 与其他技术之间的一些主要关系，并帮助确定在设置 RDS 解决方案时可能遇到的问题的解决方案。  

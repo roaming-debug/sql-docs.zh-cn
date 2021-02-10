@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a262ef7b71b6618bdfc4ae50cec2eec3fca4a41
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 596e11a51a093be30fab7d9d3b273d6605b48b75
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978478"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032069"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>在 Visual C++ 应用程序中引用 ADO 库
 若要在 Visual C++ 应用程序中使用最新版本的 ADO，请使用以下 `#import` 指令：  
