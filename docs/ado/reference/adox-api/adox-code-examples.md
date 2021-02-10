@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e11e9954a8370b14a163cd45af99a5d71b26741
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bdbe605934d065565d4f912284ea1d0301e651a6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164371"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050648"
 ---
 # <a name="adox-code-examples"></a>ADOX 代码示例
 使用以下代码示例来了解如何使用 ADOX 对象、方法、属性和事件。  

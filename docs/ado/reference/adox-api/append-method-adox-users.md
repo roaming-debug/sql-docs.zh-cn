@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e321d3cf41e8edcd5a5bd29452050542257a908b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6df2a76aa32ceec8e77bf27424345fc6bae52233
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169565"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050468"
 ---
 # <a name="append-method-adox-users"></a>Append 方法（ADOX 用户）
 向[用户](./users-collection-adox.md)集合添加新的[用户](./user-object-adox.md)对象。  
@@ -35,7 +35,7 @@ Users.Append User[,Password]
 ```  
   
 #### <a name="parameters"></a>参数  
- *User*  
+ *用户*  
  一个 **变量** 值，其中包含要追加的 **用户** 对象或要创建和追加的用户的名称。  
   
  *密码*  

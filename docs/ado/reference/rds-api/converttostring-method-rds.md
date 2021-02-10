@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4edcebbfdee8a9a1411189786593c129ee32771c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ce472fa758c479a02a43ce8ddd640219e1f7919e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169034"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049507"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 方法 (RDS)
 将 [记录集](../ado-api/recordset-object-ado.md) 转换为表示记录集数据的 MIME 字符串。  

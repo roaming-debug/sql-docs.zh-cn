@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba9f3402822936726125bf10f6b8bbb14d77815d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 368a673eff64e98c934b99e6531714637db6c4fe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169657"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050758"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 代码示例：NumericScale 和 Precision 属性示例 (VB)
 此示例演示[列](./column-object-adox.md)对象的[NumericScale](./numericscale-property-adox.md)和[Precision](./precision-property-adox.md)属性。 此代码显示 *Northwind* 数据库的 "**订单详细信息**" 表的值。  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84fffacf0795d60808e172185251f3135bd0d7d4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 781f9eb90c621cf8daf4afb0cdf8dc4f1f7b47b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169121"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049667"
 ---
 # <a name="users-collection-adox"></a>用户集合 (ADOX)
 包含[目录](./catalog-object-adox.md)或[组](./group-object-adox.md)的所有存储的[用户](./user-object-adox.md)对象。  
@@ -31,11 +31,11 @@ ms.locfileid: "99169121"
 ## <a name="remarks"></a>备注  
  [目录](./catalog-object-adox.md)的 **用户** 集合表示所有目录的用户。 [组](./group-object-adox.md)的 **用户** 集合仅表示在特定组中具有成员身份的用户。  
   
- **用户** 集合的 [APPEND](./append-method-adox-users.md)方法对于 ADOX 是唯一的。 可以执行以下操作：  
+ **用户** 集合的 [APPEND](./append-method-adox-users.md)方法对于 ADOX 是唯一的。 方法：  
   
 -   使用 **Append** 方法将新用户添加到集合。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以执行以下操作：  
+ 其余属性和方法对于 ADO 集合是标准的。 方法：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的用户。  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 639df02036554d9c0276a8040a4bdbde183ced53
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c21daefed73bd93bf0c0adc15e24b7648979ea09
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169453"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050237"
 ---
 # <a name="command-property-adox"></a>Command 属性 (ADOX)
 指定可用于创建或执行该过程的 ADO [命令](../ado-api/command-object-ado.md) 对象。  

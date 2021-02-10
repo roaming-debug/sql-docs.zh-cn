@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9536ad522be7a323113e23466de5abb82cbb5824
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2dfc8f93b2c185b530a142dde8206c77799818c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172272"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050378"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes 属性示例 (VB)
 此示例演示[列](./column-object-adox.md)的 "[特性](./attributes-property-adox.md)" 属性。 如果将其设置为 **adColNullable** ，则允许用户将 [记录集](../ado-api/recordset-object-ado.md)[字段](../ado-api/field-object.md)的值设置为空字符串。 在这种情况下，用户可以区分数据未知的记录和不应用数据的记录。  

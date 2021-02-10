@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d442d0ce32c7cdb7aa249c21172a6c8db8966f05
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 70368dba6eb121219ef871f1c87034e1764f0e94
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172051"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050057"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>组和用户 Append、ChangePassword 方法示例 (VC++)
 此示例演示了[组](./groups-collection-adox.md)的[追加](./append-method-adox-groups.md)方法，以及[用户](./users-collection-adox.md)通过向系统添加新[组](./group-object-adox.md)和新[用户](./user-object-adox.md)的[附加](./append-method-adox-users.md)方法。 新 **组** 将追加到新 **用户** 的 "**组**" 集合中。 因此，新 **用户** 将添加到 **该组** 中。 此外， [ChangePassword](./changepassword-method-adox.md) 方法用于指定 **用户** 密码。  

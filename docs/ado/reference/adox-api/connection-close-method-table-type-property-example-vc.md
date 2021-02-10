@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13e0f9831b89e69498868f02db32ed4a73c25159
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dcd747c83fc665a6974e1101596b1ab039f9c631
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169446"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050217"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>连接的 Close 方法、表 Type 属性示例 (VC++)
 如果将 [ActiveConnection](./activeconnection-property-adox.md) 属性设置为 " **无** "，则应 "关闭" 目录。 关联的集合将为空。 从目录中的架构对象创建的任何对象都将是孤立对象。 那些已缓存的对象上的所有属性仍将可用，但尝试读取需要调用提供程序的属性会失败。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4690fba27f42da95eb354b5074f9eb9954902a6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 573bfb24f68896f647f4c0d9ff5867ee1d38e5fb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172298"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050508"
 ---
 # <a name="append-method-adox-keys"></a>Append 方法（ADOX 项）
 向[Keys](./keys-collection-adox.md)集合添加新的[Key](./key-object-adox.md)对象。  
@@ -35,7 +35,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
 ```  
   
 #### <a name="parameters"></a>参数  
- *键*  
+ *Key*  
  要追加的 **密钥** 对象或要创建和追加的密钥的名称。  
   
  *KeyType*  

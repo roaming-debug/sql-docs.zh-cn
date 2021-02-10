@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c5db51dc0af4f8e86fbaa68b20dbd82a327c038
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 84c7e3fd8ff31a83e27f4e66036ad8e90d2031f3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164033"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049747"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
 指定 [组](./group-object-adox.md) 或 [用户](./user-object-adox.md) 对对象的权限。  
@@ -43,7 +43,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *ObjectType*  
  一个 **长整型** 值，可以是 [ObjectTypeEnum](./objecttypeenum.md) 常量之一，它指定要获取其权限的对象的类型。  
   
- *Action*  
+ *操作*  
  一个 **长整型** 值，可以是 [ActionEnum](./actionenum.md) 常量之一，用于指定设置权限时要执行的操作的类型。  
   
  权限  

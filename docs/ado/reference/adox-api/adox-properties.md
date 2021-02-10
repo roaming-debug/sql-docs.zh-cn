@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85f6cb74b25d7664bdf7b87c4290edd19a49dcd3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ab663c6a6a0cad3b6093c8bc6eefb5bb98d7ed16
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164324"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050578"
 ---
 # <a name="adox-properties"></a>ADOX 属性
 
-|properties|说明|  
+|属性|说明|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-adox.md)|指示目录所属的 ADO **连接** 对象。|  
-|[属性](./attributes-property-adox.md)|介绍列特性。|  
+|[特性](./attributes-property-adox.md)|介绍列特性。|  
 |[群集](./clustered-property-adox.md)|指示索引是否为聚集索引。|  
 |[命令](./command-property-adox.md)|指定可用于创建或执行该过程的 ADO **命令** 对象。|  
 |“计数”|指示集合中的对象数。|  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67461118fb6c9d336902418cf95ae3cd97b6a90b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9ed172a8e295c828f89892d63b657ed04a6237f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164359"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050748"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic 中的 ADOX 代码示例
 这些主题提供了可帮助你了解如何使用 ADOX 的示例代码。 使用 Microsoft Visual Basic 编写所有代码示例。  

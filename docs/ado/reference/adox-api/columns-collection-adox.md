@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65b84850b8da3d85e8b4a013371119d4109eb6cf
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 81a7e0c521b96b737c44e3c88f2b14be42176a31
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169482"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050267"
 ---
 # <a name="columns-collection-adox"></a>列集合 (ADOX)
 包含表、索引或键的所有 [列](./column-object-adox.md) 对象。  
   
 ## <a name="remarks"></a>备注  
- **列** 集合的 [APPEND](./append-method-adox-columns.md)方法对于 ADOX 是唯一的。 可以执行以下操作：  
+ **列** 集合的 [APPEND](./append-method-adox-columns.md)方法对于 ADOX 是唯一的。 方法：  
   
 -   使用 **Append** 方法向集合中添加一个新列。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以执行以下操作：  
+ 其余属性和方法对于 ADO 集合是标准的。 方法：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的列。  
   

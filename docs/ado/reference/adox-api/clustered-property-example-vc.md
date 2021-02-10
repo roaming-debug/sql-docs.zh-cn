@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c7526163303d8e9c420de4c6b9ff1b451510710
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f0a28393a5a2bbe84088c774c45e58abd7cfc14d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169504"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050297"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered 属性示例 (VC++)
 此示例演示[索引](./index-object-adox.md)的[聚集](./clustered-property-adox.md)属性。 请注意，Microsoft Jet 数据库不支持聚集索引，因此，此示例将为 *Northwind* 数据库中的所有索引的 **聚集** 属性返回 **False** 。  

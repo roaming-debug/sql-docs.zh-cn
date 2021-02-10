@@ -9,18 +9,18 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 18bec3d694985e15b1ae2d813fddf2f378c9d78a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243471"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049103"
 ---
 # <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>将 PolyBase 配置为并行数据仓库以访问 Hadoop 中的外部数据
 
 本文介绍如何在 AP 设备上使用 PolyBase 查询 Hadoop 中的外部数据。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。 Hadoop 遵循其新版本的“Major.Minor.Version”模式，且主要和次要版本中支持的所有版本均受支持。 支持以下 Hadoop 提供程序：
  - Linux/Windows Server 上的 Hortonworks HDP 1.3  
@@ -47,7 +47,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
    GO
    ```  
 
-2. 使用[设备 Configuration Manager](launch-the-configuration-manager.md)上的 "服务状态" 页重新启动 ap 区域。
+2. 使用 [设备 Configuration Manager](launch-the-configuration-manager.md)上的 "服务状态" 页重新启动 ap 区域。
   
 ## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> 启用下推计算  
 
@@ -55,7 +55,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
   
 1. 打开与 PDW 控制节点的远程桌面连接。
 
-2. 在控制节点上查找**yarn-site.xml**的文件。 通常情况下，该路径为：  
+2. 在控制节点上查找 **yarn-site.xml** 的文件。 通常情况下，该路径为：  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -63,7 +63,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 
 3. 对于 Hadoop 计算机，在 Hadoop 配置目录中查找类似文件。 在文件中，查找并复制配置密钥 yarn.application.classpath 的值。  
   
-4. 在 "控制" 节点上的**yarn.site.xml 文件中，** 找到 " **yarn** " 属性。 将 Hadoop 计算机的值粘贴到值元素中。  
+4. 在 "控制" 节点上的 **yarn.site.xml 文件中，** 找到 " **yarn** " 属性。 将 Hadoop 计算机的值粘贴到值元素中。  
   
 5. 对于所有 CDH 5.X 版本，你都需要将 mapreduce.application.classpath 配置参数添加到 yarn.site.xml 文件的末尾或添加到 mapred-site.xml 文件中。 HortonWorks 在 yarn.application.classpath 配置中包括了这些配置。 有关示例，请参阅 [PolyBase 配置](../relational-databases/polybase/polybase-configuration.md)。
 
@@ -278,7 +278,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 
 PolyBase 适用于三个函数：  
   
-- 针对外部表的即席查询。  
+- 对外部表的即席查询。  
 - 导入数据。  
 - 导出数据。  
 
@@ -286,7 +286,7 @@ PolyBase 适用于三个函数：
 
 ### <a name="ad-hoc-queries"></a>即席查询  
 
-以下即席查询联接与 Hadoop 数据的关系。 它选择 mph 于35的客户，并将存储在 AP 中的结构化客户数据与 Hadoop 中存储的车载传感器数据联接在一起。  
+下面的即席查询联接与 Hadoop 数据的关系。 它选择 mph 于35的客户，并将存储在 AP 中的结构化客户数据与 Hadoop 中存储的车载传感器数据联接在一起。  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -336,12 +336,12 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>查看 SSDT 中的 PolyBase 对象  
 
-在 SQL Server Data Tools 中，外部表在单独的文件夹**外部表**中显示。 外部数据源和外部文件格式位于“外部资源” **** 下的子文件夹中。  
+在 SQL Server Data Tools 中，外部表在单独的文件夹 **外部表** 中显示。 外部数据源和外部文件格式位于“外部资源” 下的子文件夹中。  
   
 ![SSDT 中的 PolyBase 对象](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 Hadoop 安全设置，请参阅[配置 hadoop 安全性](polybase-configure-hadoop-security.md)。<br>
+有关 Hadoop 安全设置，请参阅 [配置 hadoop 安全性](polybase-configure-hadoop-security.md)。<br>
 有关 PolyBase 的详细信息，请参阅[什么是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
  

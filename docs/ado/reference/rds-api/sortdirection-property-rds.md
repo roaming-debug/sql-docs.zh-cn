@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8bfd6b6c504077bd20ced3d302206c129ab781ae
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b736b616578eb3d0a8efa91c7b2b76515f33b96a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166113"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049124"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection 属性 (RDS)
 指示排序顺序是升序还是降序。  
@@ -38,7 +38,7 @@ DataControl.SortDirection = value
  *DataControl*  
  表示 RDS 的对象变量 [。DataControl](./datacontrol-object-rds.md) 对象。  
   
- 值  
+ *值*  
  一个 **布尔** 值，如果设置为 **True**，则指示排序方向为升序。 **False** 指示降序。  
   
 ## <a name="remarks"></a>备注  

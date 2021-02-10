@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce2a7fa6980f6b76c44b6934812c9736b5bf3bc8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b986f3afce40bf5b114a06cc152c1dd026857859
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168874"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049287"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange 事件 (RDS)
 每当 [ReadyState](./readystate-property-rds.md)属性的值发生更改时，就会调用 **onReadyStateChange** 事件。  

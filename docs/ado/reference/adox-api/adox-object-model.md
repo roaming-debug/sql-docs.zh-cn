@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bdf4f36eb4f88a6cfd87b94a8722c3a1214cd0c0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 38ce372d01ea94008ea6ef2439b39059bbdc53f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164335"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050618"
 ---
 # <a name="adox-object-model"></a>ADOX 对象模型
 下图说明了如何在 ADOX 中表示和相关对象。 有关特定对象或集合的详细信息，请参阅特定的参考主题或 [Adox 对象](./adox-objects.md) 和 [adox 集合](./adox-collections.md)。  
