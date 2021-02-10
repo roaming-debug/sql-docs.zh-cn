@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1138d00d291ffdabf415177a948bf87b1c6502a8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a13cf110fe4b7bd13ad5ce69da23794f5e6d76f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171591"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035637"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 接口
 **ADOStreamConstruction** 接口用于从 c/c + + 应用程序中的 OLE DB **ISTREAM** 对象构造 ADO **流** 对象。  
   
 ## <a name="properties"></a>属性  
   
-|properties|说明|  
+|属性|说明|  
 |-|-|  
-|[流](./stream-property.md)|读/写。 获取/设置 OLE DB **流** 对象。|  
+|[Stream](./stream-property.md)|读/写。 获取/设置 OLE DB **流** 对象。|  
   
 ## <a name="methods"></a>方法  
  无。  

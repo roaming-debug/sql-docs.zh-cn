@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d3d765cbeba49a5c34bbc5529d833cefc5bb1ab
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0a074ca1e5f50e9d9b634fd67cfceeae353c436e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167904"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035747"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 动态属性索引
 数据访问接口、服务提供程序和服务组件可以将动态属性添加到未打开的 [连接](./connection-object-ado.md)和 [记录集](./recordset-object-ado.md)对象的 **属性** 集合中。 指定的提供程序还可以在打开这些对象时插入其他属性。 其中一些属性在 " [ADO 动态属性](./ado-dynamic-properties.md) " 部分列出。 [附录 A： providers](../../guide/appendixes/appendix-a-providers.md)部分的特定提供程序下列出了更多详细信息。  
@@ -57,7 +57,7 @@ ms.locfileid: "99167904"
 |最大行大小|DBPROP_MAXROWSIZE|  
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |选择中的最大表数|DBPROP_MAXTABLESINSELECT|  
-|模式|DBPROP_INIT_MODE|  
+|模型|DBPROP_INIT_MODE|  
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|  
 |多个结果|DBPROP_MULTIPLERESULTS|  
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|  

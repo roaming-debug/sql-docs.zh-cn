@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ab7be112f27f16d25d613b21f9ecbe5b14fcbbd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7cc954c19428cf4f2c646408e668a3882fbe357c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167866"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035587"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>特性和名称属性示例 (VC + +) 
 此示例显示[连接](./connection-object-ado.md)、[字段](./field-object.md)和[属性](./property-object-ado.md)对象的 "[属性](./attributes-property-ado.md)" 属性的值。 它使用 [name](./name-property-ado.md) 属性来显示每个 **字段** 和 **属性** 对象的名称。  

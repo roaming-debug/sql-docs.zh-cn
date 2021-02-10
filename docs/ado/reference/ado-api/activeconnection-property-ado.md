@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efcb376c9ad27dff5a0c85d73f70ae4000385e3d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 318bb7478bdbc6f3b4007f788045438cdb91dfe3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159242"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035917"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 属性 (ADO)
 指示指定的[命令](./command-object-ado.md)、[记录集](./recordset-object-ado.md)或[记录](./record-object-ado.md)对象当前属于哪个[连接](./connection-object-ado.md)对象。  
@@ -34,14 +34,14 @@ ms.locfileid: "99159242"
 ## <a name="remarks"></a>备注  
  使用 **ActiveConnection** 属性可确定要对其执行指定 **命令** 对象的 **连接** 对象，或者将打开指定的 **记录集**。  
   
-## <a name="command"></a>Command  
+## <a name="command"></a>命令  
  对于 **Command** 对象， **ActiveConnection** 属性是可读/写的。  
   
  如果尝试在将此属性设置为打开的 **连接** 对象或有效连接字符串之前对 **命令** 对象调用 [Execute](./execute-method-ado-command.md)方法，则会发生错误。  
   
  如果将 **连接** 对象分配给 **ActiveConnection** 属性，则必须打开该对象。 分配关闭的连接对象会导致错误。  
   
-### <a name="note"></a>备注  
+### <a name="note"></a>注意  
  **Microsoft Visual Basic** 将 **ActiveConnection** 属性设置为 " *无* " 将 **命令** 对象与当前 **连接** 取消关联，并使提供程序释放数据源上的任何关联资源。 然后，可以将 **命令** 对象与相同或其他 **连接** 对象关联。 某些提供程序允许您将属性设置从一个连接更改为另一个 **连接** ，而无需先将该属性设置为 *Nothing*。  
   
  如果 **Command** 对象的 [parameters](./parameters-collection-ado.md)集合包含提供程序提供的参数，则如果将 **ActiveConnection** 属性设置为 *Nothing* 或其他 **连接** 对象，则会清除该集合。 如果手动创建 [参数](./parameter-object.md)对象，并使用它们来填充 **Command** 对象的 **Parameters** 集合，则将 **ActiveConnection** 属性设置为 *Nothing* 或另一个 **连接** 对象会使 **参数** 集合保持不变。  

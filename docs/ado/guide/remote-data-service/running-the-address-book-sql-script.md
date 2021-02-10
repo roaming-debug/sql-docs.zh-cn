@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0550e12f67538e9872797031146a34c83a0ec87f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8e36c60e0c3e56ab0c159c362e98c2280e6c5426
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721358"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036387"
 ---
 # <a name="running-the-address-book-sql-script"></a>运行通讯簿 SQL 脚本
 > [!IMPORTANT]
@@ -67,7 +67,7 @@ ms.locfileid: "91721358"
   
 6.  单击工具栏上的绿色箭头 (" **执行查询** " 按钮) 或按 **F5**。  
   
-7.  执行后，关闭 **查询**、 **查询分析器**和 **企业管理器** 窗口。  
+7.  执行后，关闭 **查询**、 **查询分析器** 和 **企业管理器** 窗口。  
   
 ## <a name="see-also"></a>另请参阅  
  [运行通讯簿示例应用程序](./running-the-address-book-sample-application.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d07db05ed457f52616fa78e6c354c944719aff0f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 390f53742ea486d6d1cfe159c3c1e897f51a4766
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164847"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035627"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>附加和 CreateParameter 方法示例 (VC + +) 
 此示例使用 [Append](./append-method-ado.md) 和 [CreateParameter](./createparameter-method-ado.md) 方法执行具有输入参数的存储过程。  

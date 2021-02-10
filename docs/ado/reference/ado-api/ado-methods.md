@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd98478cad7c13b2f4e6950586c1317c1d5d37dd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1dd1fa22a1d767bd869807233013979c0be4401a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164903"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035727"
 ---
 # <a name="ado-methods"></a>ADO 方法
 
@@ -76,7 +76,7 @@ ms.locfileid: "99164903"
 |[SkipLine](./skipline-method.md)|读取文本流时，跳过整行。|  
 |[Stat](./stat-method.md)|获取有关打开的流的统计信息。|  
 |[支持](./supports-method.md)|确定指定的 **记录集** 对象是否支持特定类型的功能。|  
-|[更新](./update-method.md)|保存对记录 **集** 对象的当前行所做的任何更改，或 **记录** 对象的 **字段** 集合。|  
+|[Update](./update-method.md)|保存对记录 **集** 对象的当前行所做的任何更改，或 **记录** 对象的 **字段** 集合。|  
 |[UpdateBatch](./updatebatch-method.md)|将所有挂起的批更新写入磁盘。|  
 |[写入](./write-method.md)|向 **Stream** 对象写入二进制数据。|  
 |[WriteText](./writetext-method.md)|向 **Stream** 对象写入指定的文本字符串。|  

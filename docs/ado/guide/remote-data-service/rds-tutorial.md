@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70f91e85010abb784291c3c9eca52b9a74ed6286
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b2b9294b3024a3d4a7dbfd51baadb2474b7715ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721388"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036407"
 ---
 # <a name="rds-tutorial"></a>RDS 教程
 本教程说明如何使用 RDS 编程模型来查询和更新数据源。 首先，它描述了完成此任务所需的步骤。 然后，Microsoft®中将重复教程，Visual Basic Scripting Edition (采用 ADO for Windows Foundation 类 (ADO/WFC) # A3。  

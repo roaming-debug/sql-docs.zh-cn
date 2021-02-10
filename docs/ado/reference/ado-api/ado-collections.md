@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fdab5e24244bc3b4f3bcf90a8401fb34a31f95bc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a3eb7878ff0875b916606732ad11dc67a961e269
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164939"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035767"
 ---
 # <a name="ado-collections"></a>ADO 集合
 这些集合和 ADO 对象之间的关系在 [Ado 对象模型](./ado-object-model.md)中表示。  
@@ -30,7 +30,7 @@ ms.locfileid: "99164939"
 |-|-|  
 |[错误](./errors-collection-ado.md)|包含为响应单个提供程序相关的失败而创建的所有 **错误** 对象。|  
 |[Fields](./fields-collection-ado.md)|包含 **Recordset** 对象的所有 **字段** 对象。|  
-|[参数](./parameters-collection-ado.md)|包含 **Command** 对象的所有 **参数** 对象。|  
+|[Parameters](./parameters-collection-ado.md)|包含 **Command** 对象的所有 **参数** 对象。|  
 |[属性](./properties-collection-ado.md)|包含对象的特定实例的所有 **属性** 对象。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc5e30aef0162ecc2ffe9016e14fdfa36644aca5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 76f3311a622abbd249aa942e1ebdbda33ad06966
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724878"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036417"
 ---
 # <a name="registering-a-custom-business-object"></a>注册自定义业务对象
 若要成功地通过 Web 服务器启动自定义业务对象 () ，必须在注册表中输入业务对象的 ProgID，如本过程中所述。 此 RDS 功能通过仅运行批准可执行文件来保护 Web 服务器的安全性。  
@@ -37,7 +37,7 @@ ms.locfileid: "91724878"
   
 2.  键入 **RegEdit** ，然后单击 **"确定"**。  
   
-3.  在注册表编辑器中，导航到 **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\w3svc\parameters\adclaunch** "注册表项。  
+3.  在注册表编辑器中，导航到 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch** 注册表项。  
   
 4.  选择 **ADCLaunch** 项，然后在 " **编辑**" 菜单中，指向 " **新建** "，然后单击 " **项**"。  
   

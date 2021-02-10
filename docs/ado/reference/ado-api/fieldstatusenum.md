@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 968a4205a12e9f6ff36c3bff512cf41ae60ca469
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: eab778d35ac9d5f1b5cefa4fdd7001a4772dc56d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167343"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035067"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定[字段对象](./field-object.md)的[状态](./status-property-ado-field.md)。  
   
- **AdFieldPending \** _ 值指示导致状态设置的操作，并且可以与其他状态值组合。  
+ **AdFieldPending \*** 值指示导致状态设置的操作，并且可以与其他状态值组合。  
   
 |返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
-|_ *adFieldAlreadyExists**|26|指示指定字段已存在。|  
+|**adFieldAlreadyExists**|26|指示指定字段已存在。|  
 |**adFieldBadStatus**|12|指示从 ADO 发送到 OLE DB 提供程序的状态值无效。 可能的原因包括 OLE DB 1.0 或1.1 提供程序，或者 [值](./value-property-ado.md) 和 [状态](./status-property-ado-field.md)的组合不正确。|  
 |**adFieldCannotComplete**|20|指示由 [源](./source-property-ado-record.md) 指定的 URL 的服务器无法完成操作。|  
 |**adFieldCannotDeleteSource**|23|指示在移动操作过程中，树或子树已移动到新位置，但无法删除该源。|  

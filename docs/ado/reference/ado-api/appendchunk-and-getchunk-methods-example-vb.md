@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e43133695928fecf3860805dcf620ddeabfed1d5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2e7883597e0a2872b16d37ae60881af6de3c2159
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171569"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035607"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk 和 GetChunk 方法示例 (VB) 
 此示例使用 [AppendChunk](./appendchunk-method-ado.md) 和 [GetChunk](./getchunk-method-ado.md) 方法来填充包含另一记录中的数据的图像字段。  

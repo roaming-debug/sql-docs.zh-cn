@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7abcebce9f587260d7147745ab99c2b4cecc78a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 937f70d50abb1422f069d555695744c26639dccf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167873"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035597"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
 将数据追加到大文本或二进制数据 [字段](./field-object.md)，或追加到 [参数](./parameter-object.md) 对象。  
@@ -38,7 +38,7 @@ object.AppendChunk Data
  *object*  
  一个 **字段** 或 **参数** 对象。  
   
- *数据*  
+ 数据  
  一个包含要追加到对象的数据的 **变量** 。  
   
 ## <a name="remarks"></a>备注  

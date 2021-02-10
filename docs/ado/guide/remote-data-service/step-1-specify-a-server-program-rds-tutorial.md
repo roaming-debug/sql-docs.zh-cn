@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2872340341c6b576a11d52a0b867fdbcd04389b4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d0e59c52ee311c5172b3cdc15f58c5e9448f7110
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723009"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036396"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>步骤 1：指定服务器程序（RDS 教程）
-在最常见的情况下，使用 [RDS。空间](../../reference/rds-api/dataspace-object-rds.md) 对象 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 方法，用于指定默认服务器程序、 [RDSServer](../../reference/rds-api/datafactory-object-rdsserver.md)或您自己的自定义服务器程序 (业务对象) 。 服务器程序在服务器上实例化，并返回对服务器程序或 *代理*的引用。  
+在最常见的情况下，使用 [RDS。空间](../../reference/rds-api/dataspace-object-rds.md) 对象 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 方法，用于指定默认服务器程序、 [RDSServer](../../reference/rds-api/datafactory-object-rdsserver.md)或您自己的自定义服务器程序 (业务对象) 。 服务器程序在服务器上实例化，并返回对服务器程序或 *代理* 的引用。  
   
  本教程使用默认服务器程序：  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1019f063f54605f2d3b5ce4acf61cf95f4cb110f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8021ea8cfbad143f228c940fa6ee4a7266ecbd1a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171573"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035647"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>追加和 CreateParameter 方法示例 (JScript) 
 此示例使用 [Append](./append-method-ado.md) 和 [CreateParameter](./createparameter-method-ado.md) 方法执行具有输入参数的存储过程。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **AppendJS**。  

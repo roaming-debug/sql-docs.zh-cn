@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4e707145ce3724706a813afc886b3438a51e3e9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a677295d6ff070d27cfbaef445314d4dbad3074a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161616"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035737"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>用于 COM 的 ADO for Visual C++ 语法索引‎
 此索引是基于 Microsoft Visual C++ 的 ADO 语言参考的交叉引用。  

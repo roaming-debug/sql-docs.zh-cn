@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2c8121e37df7517964ecf4444da763986ff1d94
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d031c1af5719b711c5555af0db1bc1e420e2fc8d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722968"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036097"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步骤 3：服务器获取记录集（RDS 教程）
 服务器程序使用连接字符串和命令文本在数据源中查询所需的行。 ADO 通常用于检索此 **记录集**，但也可以使用其他 Microsoft 数据访问接口（如 OLE DB）。  

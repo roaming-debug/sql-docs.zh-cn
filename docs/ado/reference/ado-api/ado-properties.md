@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bdacd558161c09d1d43f590f9f355e14da262b14
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f29b56b54c2800a77ac76134f0c946f09e34a621
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164887"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035717"
 ---
 # <a name="ado-properties"></a>ADO 属性
 
-|properties|说明|  
+|属性|说明|  
 |-|-|  
 |[AbsolutePage](./absolutepage-property-ado.md)|指示当前记录所在的页。|  
 |[AbsolutePosition](./absoluteposition-property-ado.md)|指示 **记录集** 对象的当前记录的序号位置。|  
 |[ActiveCommand](./activecommand-property-ado.md)|指示创建关联 **记录集** 对象的 **命令** 对象。|  
 |[ActiveConnection](./activeconnection-property-ado.md)|指示指定的 **命令**、**记录集** 或 **记录** 对象当前属于哪个 **连接** 对象。|  
 |[ActualSize](./actualsize-property-ado.md)|指示字段值的实际长度。|  
-|[属性](./attributes-property-ado.md)|指示对象的一个或多个特征。|  
+|[特性](./attributes-property-ado.md)|指示对象的一个或多个特征。|  
 |[BOF 和 EOF](./bof-eof-properties-ado.md)|**BOF** 指示当前记录位置位于记录集对象中的第一条记录之前。<br /><br /> **EOF** 指示当前记录位置在 Recordset 对象的最后一条记录之后。|  
 |书签 |指示一个书签，该书签唯一标识 **recordset** 对象中的当前记录，或将 **记录集** 对象中的当前记录设置为有效书签标识的记录。|  
 |[CacheSize](./cachesize-property-ado.md)|指示 **记录集中** 缓存到内存中的记录集的记录数。|  
@@ -79,22 +79,22 @@ ms.locfileid: "99164887"
 |[提供程序](./provider-property-ado.md)|指示 **连接** 对象的访问接口的名称。|  
 |[RecordCount](./recordcount-property-ado.md)|指示 **记录集** 对象中的记录数。|  
 |[RecordType](./recordtype-property-ado.md)|指示 **记录** 对象的类型。|  
-|[总行](./row-property-ado.md)|获取或设置 **ADORecordConstruction** 对象上/的 OLE DB **行** 对象。|  
+|[行](./row-property-ado.md)|获取或设置 **ADORecordConstruction** 对象上/的 OLE DB **行** 对象。|  
 |[RowPosition](./rowposition-property-ado.md)|获取或设置 **ADORecordsetConstruction** 对象上/的 OLE DB **RowPosition** 对象。|  
 |[行集](./rowset-property-ado.md)|获取或设置 **ADORecordsetConstruction** 对象上/的 OLE DB **行集** 对象。|  
 |[ (ADO 错误的源) ](./source-property-ado-error.md)|指示最初生成错误的对象或应用程序的名称。|  
 |[源代码 (ADO 记录) ](./source-property-ado-record.md)|指示 **Record** 对象表示的实体。|  
 |[ADO 记录集 (源) ](./source-property-ado-recordset.md)|指示 **记录集** 对象中数据的源|  
 |[SQLState](./sqlstate-property.md)|指示特定 **错误** 对象的 SQL 状态。|  
-|[状态](./state-property-ado.md)|指示对象的状态是打开还是关闭的所有适用对象。 对于执行异步方法的所有适用对象，指示对象的当前状态是正在连接、正在执行还是正在检索|  
+|[State](./state-property-ado.md)|指示对象的状态是打开还是关闭的所有适用对象。 对于执行异步方法的所有适用对象，指示对象的当前状态是正在连接、正在执行还是正在检索|  
 |[ADO 字段 (状态) ](./status-property-ado-field.md)|指示 **Field** 对象的状态。|  
 |[ADO 记录集 (状态) ](./status-property-ado-recordset.md)|指示当前记录的有关批更新或其他大容量操作的状态。|  
 |[StayInSync](./stayinsync-property.md)|指示在分层 **记录集** 对象中，对基础子记录的引用 (即，该 *章节*) 父行位置发生更改时所做的更改。|  
 |[Stream 属性](./stream-property.md)|获取或设置 **ADOStreamConstruction** 对象上/的 OLE DB **流** 对象。|  
-|[Type](./type-property-ado.md)|指示 **参数**、 **字段** 或 **属性** 对象的操作类型或数据类型。|  
+|类型|指示 **参数**、 **字段** 或 **属性** 对象的操作类型或数据类型。|  
 |[键入 (ADO Stream) ](./type-property-ado-stream.md)|指示 **流** 中包含的数据的类型 (二进制或文本) 。|  
 |[UnderlyingValue](./underlyingvalue-property.md)|指示数据库中 **字段** 对象的当前值。|  
-|值|指示赋给 **字段**、 **参数** 或 **属性** 对象的值。|  
+|[值](./value-property-ado.md)|指示赋给 **字段**、 **参数** 或 **属性** 对象的值。|  
 |[版本](./version-property-ado.md)|指示 ADO 版本号。|  
   
 ## <a name="see-also"></a>另请参阅  
