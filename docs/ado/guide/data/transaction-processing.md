@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bde1338e56f4685359f8d1260b36c39a24455083
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f534d38ea52e942a00e2e95f837b096ed6fef0f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979328"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032379"
 ---
 # <a name="transaction-processing"></a>事务处理
 用于分隔跨连接执行的一系列数据访问操作的开始和结束的 *事务* 。 根据数据源的事务功能， **连接** 对象还允许您创建和管理事务。 例如，使用 Microsoft OLE DB 提供程序 SQL Server 访问 Microsoft SQL Server 上的数据库时，可以为执行的命令创建多个嵌套事务。  
@@ -30,7 +30,7 @@ ms.locfileid: "88979328"
   
  如果取消该事务，或如果其中一个操作失败，则结果将与事务中的所有操作都不发生相同。 数据源将保留在事务开始之前。  
   
- ADO 提供以下方法来控制事务： **BeginTrans**、 **CommitTrans**和 **RollbackTrans**。 如果要将对源数据所做的一系列更改保存为单个单元，请将这些方法与 **连接** 对象一起使用。 例如，若要在帐户之间转移资金，可以从一个金额中减去一个金额，并将相同的金额添加到另一个。 如果任一更新失败，则帐户将不再平衡。 在打开的事务中进行这些更改可以确保所有更改或不会经历任何更改。  
+ ADO 提供以下方法来控制事务： **BeginTrans**、 **CommitTrans** 和 **RollbackTrans**。 如果要将对源数据所做的一系列更改保存为单个单元，请将这些方法与 **连接** 对象一起使用。 例如，若要在帐户之间转移资金，可以从一个金额中减去一个金额，并将相同的金额添加到另一个。 如果任一更新失败，则帐户将不再平衡。 在打开的事务中进行这些更改可以确保所有更改或不会经历任何更改。  
   
 > [!NOTE]
 >  并非所有提供程序都支持事务。 验证提供程序定义的属性 "**事务 DDL**" 是否出现在 **连接** 对象的 [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 集合中，指示提供程序支持事务。 如果提供程序不支持事务，则调用这些方法之一将返回错误。  

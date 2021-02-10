@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b833bc78a75d09c8f58ae12532f446ec94a097e0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b39a0920d9816837b6d737df00e6bb4560358356
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991748"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033397"
 ---
 # <a name="adding-records-to-a-recordset"></a>将记录添加到记录集
-使用 **AddNew** 方法可在现有 **记录集中**创建和初始化新记录。 您可以使用 **支持** 的 **CursorOptionEnum** 值为 **adAddNew** 的方法，验证是否可以将记录添加到当前 **记录集** 对象。
+使用 **AddNew** 方法可在现有 **记录集中** 创建和初始化新记录。 您可以使用 **支持** 的 **CursorOptionEnum** 值为 **adAddNew** 的方法，验证是否可以将记录添加到当前 **记录集** 对象。
 
  调用 **AddNew** 方法之后，新记录将成为当前记录，并在调用 **Update** 方法后保持最新。 如果 **记录集** 对象不支持书签，则在移动到另一记录后，您可能无法访问新记录。 因此，根据游标类型，您可能需要调用 **Requery** 方法以使新记录可访问。
 

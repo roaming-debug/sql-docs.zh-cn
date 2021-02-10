@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff3dc581bffd20bd5192306dd50b0afce6369c66
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3136609c4b5300808c4561b7bc71d076ee6d6849
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171023"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024583"
 ---
 # <a name="find-method-example-jscript"></a>Find 方法示例 (JScript)
 此示例使用 [Recordset](./recordset-object-ado.md) 对象的 [Find](./find-method-ado.md) 方法查找并显示 ***Northwind** _ 数据库中其名称以字母 G 开头的公司，并将以下代码粘贴到记事本或其他文本编辑器中，并将其另存为 _ * FindJS * *。  

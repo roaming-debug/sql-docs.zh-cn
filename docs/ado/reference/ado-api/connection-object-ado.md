@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a4cb18c49513ff5f80e5be22f5480e4f6464cb4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b09ba2f8f026b6c08d64acab6701a0d3da4013f5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167738"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034767"
 ---
 # <a name="connection-object-ado"></a>连接对象 (ADO)
 表示到数据源的连接是打开的。  

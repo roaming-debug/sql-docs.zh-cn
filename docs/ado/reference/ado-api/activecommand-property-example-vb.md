@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71fa7bbc6f79e5d58e4987e5daacb5d42cbd74d9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0ad18d73acedbbee77157337606ca58bc7569f97
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159259"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031620"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand 属性示例 (VB)
 此示例演示了 [ActiveCommand](./activecommand-property-ado.md) 属性。  

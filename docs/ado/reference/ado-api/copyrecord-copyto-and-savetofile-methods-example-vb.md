@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9082a8f6f32db01913437607dc12bb8758f7b93f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a720fe06f661eb8a978ac2caedc1049b4cef7b62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167675"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035217"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、CopyTo 和 SaveToFile 方法示例 (VB) 
 此示例演示如何使用 [Stream](./stream-object-ado.md) 或 [Record](./record-object-ado.md) 对象创建文件的副本。 一个副本用于 Internet 发布的 Web 文件夹。 显示的其他属性和方法包括 [流类型](./type-property-ado-stream.md)、 **打开**、 [LoadFromFile](./loadfromfile-method-ado.md)和 [打开的记录](./open-method-ado-record.md)。  

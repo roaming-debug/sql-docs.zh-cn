@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: fad0a1121d9d7d9e8cc37970022f1c5bbf028e10
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 636a16d8656572e6fe2505f58bafc9eca9f6ce18
+ms.sourcegitcommit: 78b3096c2be89bcda92244f78663d8b38811bec5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184776"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100009285"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -131,7 +131,7 @@ GO
 |DIGEST_CACHE|仅限内部使用。|
 |DINPBUF|仅限内部使用。|
 |DIRECTLOGCONSUMER|仅限内部使用。|
-|DP_LIST|控制对打开了间接检查点的数据库的脏页列表的访问。 请参阅[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)，了解详细信息。|
+|DP_LIST|控制对打开了间接检查点的数据库的脏页列表的访问。 应用 [文章 4497928](https://support.microsoft.com/kb/4497928)、 [文章 4040276](https://support.microsoft.com/kb/4040276) 中的修补程序或使用 [跟踪标志 3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 请参阅[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)，了解详细信息。|
 |DROP|仅限内部使用。|
 |DROP_TEMPO|仅限内部使用。|
 |DROPPED_ALLOC_UNIT|仅限内部使用。|

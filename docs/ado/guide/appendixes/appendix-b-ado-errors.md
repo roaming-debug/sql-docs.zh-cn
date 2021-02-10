@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c1a25927263ccd2f9aace3509f270bd87a9c0cbf
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 449571d029aefdf2b5691072dc6dbaae3dd13823
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991158"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029471"
 ---
 # <a name="appendix-b-ado-error-codes"></a>附录 B： ADO 错误代码
 有关特定错误消息的详细信息，请参阅下列主题：

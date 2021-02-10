@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9a83e384f35a64dcadea3df8023d159a13ed304
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4640f5152ff433ad68b3f019d7fc4932443aacb8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171280"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025497"
 ---
 # <a name="delete-method-example-vc"></a>Delete 方法示例 (VC++)
 此示例使用 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 方法从 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)删除指定的记录。  

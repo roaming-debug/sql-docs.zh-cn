@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec4115d32920b3392196e9dc74d9dadf9cc2959d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 942d96e4547654eb08d0a21b2c886bae77d046ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170936"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020577"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 和 Mode Properties (VB) 
 此示例使用 [Mode](./mode-property-ado.md) 属性打开独占连接，使用 [IsolationLevel](./isolationlevel-property.md) 属性打开在其他事务隔离中执行的事务。  

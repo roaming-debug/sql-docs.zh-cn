@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7556d3857142a4762fd411f5175a38c2e4d58cf3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9282bdc81d71ecd938f3d115678769915f8e3367
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979358"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032399"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>用于 Internet 发布的 OLE DB 提供程序
-ADO [记录](../../../ado/reference/ado-api/record-object-ado.md) 和 [流](../../../ado/reference/ado-api/stream-object-ado.md) 对象可与 microsoft OLE DB 提供商一起使用，以便 Internet 发布 (internet 发布提供程序) 访问和操作资源，如 Microsoft FrontPage 提供的 Web 文件夹或文件。 使用 ADO，你可以将 **记录**、 **流**或 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 的源指定为 URL。 然后，可以上传、下载、移动、复制和删除资源，或直接操作资源属性。  
+ADO [记录](../../../ado/reference/ado-api/record-object-ado.md) 和 [流](../../../ado/reference/ado-api/stream-object-ado.md) 对象可与 microsoft OLE DB 提供商一起使用，以便 Internet 发布 (internet 发布提供程序) 访问和操作资源，如 Microsoft FrontPage 提供的 Web 文件夹或文件。 使用 ADO，你可以将 **记录**、 **流** 或 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 的源指定为 URL。 然后，可以上传、下载、移动、复制和删除资源，或直接操作资源属性。  
   
  有关将 **记录** 和 **流** 与 internet 发布提供程序一起使用的示例代码，请参阅 [internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)。  
   

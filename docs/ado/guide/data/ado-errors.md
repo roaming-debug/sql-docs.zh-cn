@@ -1,5 +1,5 @@
 ---
-description: ADO 运行时错误
+description: ADO Run-Time 错误
 title: ADO 错误 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b1da9cd8e7afd2b56921fa6b413b5d349d7027f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bed9958455af424c4f18cb0f6051eb30e2efaa3b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991728"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033387"
 ---
-# <a name="ado-run-time-errors"></a>ADO 运行时错误
-ADO 错误作为运行时错误报告给你的程序。 您可以使用编程语言的错误捕获机制来捕获和处理它们。 例如，在 Visual Basic 中，使用 **On Error** 语句。 在 Visual C++ 中，它取决于用于访问 ADO 库的方法。 使用 #import 时，请使用 **try-catch** 块。 否则，c + + 程序员需要通过调用 **GetErrorInfo**显式检索 error 对象。 以下 Visual Basic sub 过程演示捕获 ADO 错误：
+# <a name="ado-run-time-errors"></a>ADO Run-Time 错误
+ADO 错误作为运行时错误报告给你的程序。 您可以使用编程语言的错误捕获机制来捕获和处理它们。 例如，在 Visual Basic 中，使用 **On Error** 语句。 在 Visual C++ 中，它取决于用于访问 ADO 库的方法。 使用 #import 时，请使用 **try-catch** 块。 否则，c + + 程序员需要通过调用 **GetErrorInfo** 显式检索 error 对象。 以下 Visual Basic sub 过程演示捕获 ADO 错误：
 
 ```
 ' BeginErrorHandlingVB01
@@ -90,7 +90,7 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
  此错误消息包含 Visual Basic **Err** 对象提供的每条信息，但 **LastDLLError** 值除外，此处不适用。 错误号告诉你发生了哪个错误。 如果你不想自行处理错误，则说明非常有用。 您可以直接将它传递给用户。 尽管通常需要使用为应用程序自定义的消息，但不能预见每个错误;说明提供了一些有关错误的提示。 在示例代码中，此错误是由 **连接** 对象报告的。 你将在此处看到对象的类型或编程 ID-不是变量名。
 
 > [!NOTE]
->  Visual Basic **Err** 对象只包含有关最新错误的信息。 对于最新的 ADO 操作引发的每个错误，**连接**对象的 ADO **Errors**集合都包含一个**error**对象。 使用 **errors** 集合而不是 **Err** 对象处理多个错误。 有关 **错误** 集合的详细信息，请参阅 [提供程序错误](./provider-errors.md)。 但是，如果没有有效的 **连接** 对象，则 **Err** 对象是有关 ADO 错误的唯一信息来源。
+>  Visual Basic **Err** 对象只包含有关最新错误的信息。 对于最新的 ADO 操作引发的每个错误，**连接** 对象的 ADO **Errors** 集合都包含一个 **error** 对象。 使用 **errors** 集合而不是 **Err** 对象处理多个错误。 有关 **错误** 集合的详细信息，请参阅 [提供程序错误](./provider-errors.md)。 但是，如果没有有效的 **连接** 对象，则 **Err** 对象是有关 ADO 错误的唯一信息来源。
 
  哪些类型的操作可能会导致 ADO 错误？ 常见 ADO 错误可以涉及打开对象（如 **连接** 或 **记录集**、尝试更新数据或调用提供程序不支持的方法或属性）。
 

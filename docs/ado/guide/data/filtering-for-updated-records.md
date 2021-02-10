@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd97232b83b355948f449fefb57aa748bbc2db40
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c96f0519ac3dc421fe3717bd19c00735223e3375
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991248"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033108"
 ---
 # <a name="filtering-for-updated-records"></a>筛选更新的记录
 在调用 UpdateBatch 之前，您可以使用 "记录集筛选器" 属性来仅查看自打开记录集以来或上次调用 UpdateBatch 后发生更改的记录。 为此，请将筛选器设置为等于 adFilterPendingRecords 以确定将更新多少条记录，如下面的代码示例中所示。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  此示例通过在调用 UpdateBatch 之前筛选记录集来扩展以前的 UpdateBatch 示例，显示用户将更改哪些记录，并允许用户使用) 的 CancelBatch 方法取消更新 (。  
   
 ```  

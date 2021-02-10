@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24941f8fbf2aedb5fb61cea176ef26d3172012cc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 836c1e0091166485f68c04226c632e9999038469
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991278"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033104"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>构造分层记录集
-下面的示例演示如何使用数据定形语法来定义父、子和孙 **记录集**的列，以创建不包含基础数据源的分层记录集。  
+下面的示例演示如何使用数据定形语法来定义父、子和孙 **记录集** 的列，以创建不包含基础数据源的分层记录集。  
   
- 若要创建某个分层**记录集**，您必须[为 OLE DB (ADO 服务提供程序)  (MSDataShape) 指定 Microsoft 数据定形服务](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，并且您可以在该[连接](../../reference/ado-api/connection-object-ado.md)对象的[Open](../../reference/ado-api/open-method-ado-connection.md)方法的连接字符串参数中指定 "NONE" 的数据提供程序值。 有关详细信息，请参阅 [数据定形所需的提供程序](./required-providers-for-data-shaping.md)。  
+ 若要创建某个分层 **记录集**，您必须 [为 OLE DB (ADO 服务提供程序)  (MSDataShape) 指定 Microsoft 数据定形服务](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，并且您可以在该 [连接](../../reference/ado-api/connection-object-ado.md)对象的 [Open](../../reference/ado-api/open-method-ado-connection.md)方法的连接字符串参数中指定 "NONE" 的数据提供程序值。 有关详细信息，请参阅 [数据定形所需的提供程序](./required-providers-for-data-shaping.md)。  
   
 ```  
 Dim cn As New ADODB.Connection  

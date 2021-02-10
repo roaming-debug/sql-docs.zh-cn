@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e0abc6c184911e91cbdc01e1825f7808208a74a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: add660176cd65db7c5859c2372017b1eb142aed7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159298"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031666"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、PageCount 和 PageSize 属性示例 (VC + +) 
-此示例使用 " [AbsolutePage](./absolutepage-property-ado.md)"、" [PageCount](./pagecount-property-ado.md)" 和 " [PageSize](./pagesize-property-ado.md) " 属性显示 ***Employee** _ 表中的名称和雇用日期，每次显示5个记录。  
+此示例使用 [AbsolutePage](./absolutepage-property-ado.md)、 [PageCount](./pagecount-property-ado.md)和 [PageSize](./pagesize-property-ado.md) 属性显示 ***Employee*** 表中的名称和雇用日期，每次显示5个记录。  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
@@ -82,7 +82,7 @@ void AbsolutePageX() {
    _RecordsetPtr pRstEmployees = NULL;  
   
    // Define Other Variables.    Interface Pointer declared.(VC++ Extensions)  
-   IADORecordBinding _picRs = NULL;  
+   IADORecordBinding *picRs = NULL;  
    CEmployeeRs emprs;   // C++ class object   
    HRESULT hr = S_OK;  
    _bstr_t strMessage;  

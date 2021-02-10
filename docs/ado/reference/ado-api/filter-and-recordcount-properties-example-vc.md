@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 337d31ae8b52457df2d54ddc73a7615e78752bb0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3771ecab9a598c0cd3e40f316ce00ba95cbce2f6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171045"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024603"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a> (VC + +) 的 Filter 和 RecordCount 属性示例
 此示例使用 [Filter](./filter-property.md)属性根据应用于现有 **记录集** 的指定条件来打开新的 [记录集](./recordset-object-ado.md)。 它使用 [RecordCount](./recordcount-property-ado.md) 属性来显示两个 **记录集中** 的记录数。 运行此过程需要 FilterField 函数。  

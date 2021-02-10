@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fee0e541cbf63bc204a7a8aae2ac17dd0e65128
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0acbdc3a9a24c00ac83ae4a28bf9abcd85ca7cfe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159969"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031679"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、PageCount 和 PageSize 属性示例 (JScript) 
 此示例演示了 AbsolutePage、PageCount 和 PageSize 属性。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **AbsolutePageJS**。  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9418cfbac5973892c2e5051360679b500f996cf3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: aaffd8563a7135837ccd0760fdab5f529fe065a4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167751"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034777"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>连接（ADO for Visual C++ 语法）
 ## <a name="methods"></a>方法  

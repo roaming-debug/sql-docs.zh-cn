@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 355f3047a31e82d034cfe23b2d1c069d07a7bbab
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ee683a07b0a581788657af2233944dccf5ab05b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170951"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020784"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile 属性
 指示与 [错误](./error-object.md) 对象关联的帮助文件和主题。  

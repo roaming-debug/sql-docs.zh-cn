@@ -1,6 +1,6 @@
 ---
 description: 只进游标
-title: 只进游标 |Microsoft Docs
+title: Forward-Only 游标 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ccf9d679d158b6f89ef6842b427c315078b99f6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0ac51891368a5551c29190de959f8a9559d03b4e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991238"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033137"
 ---
 # <a name="forward-only-cursors"></a>只进游标
 典型的默认游标类型称为只进 (或不可滚动的) 游标，只能通过结果集向前移动。 只进游标不支持滚动 (在结果集中向前和向后移动) ;它仅支持从结果集的开始处提取行。 使用某些只进游标 (例如，使用 SQL Server 游标库) ，当前用户所做的所有 insert、update 和 delete 语句 (，或由其他) 用户提交，则在提取行时将会看到影响结果集中的行的所有 insert、update 和 delete 语句。 由于游标无法向后滚动，但是，在提取行后对数据库中的行进行的更改通过游标均不可见。  

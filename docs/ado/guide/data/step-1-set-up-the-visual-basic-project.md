@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c0c8208fa8e5352a720ef057bb54d2d0b51b923
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b80f44160e3542147158f0bece7c87adb3ba7e4f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979538"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032439"
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>步骤 1：设置 Visual Basic 项目
 在此方案中，假定你已在系统上安装了 Microsoft Visual Basic 6.0、ADO 2.5 或更高版本，以及用于 Internet 发布的 Microsoft OLE DB 提供程序。 您将首先创建一个新项目，然后将某些控件添加到项目中的默认窗体。  

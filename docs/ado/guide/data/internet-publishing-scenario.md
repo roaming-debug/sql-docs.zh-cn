@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40a74a489a39d0bbb4c11c27e16225aec8779606
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2e31ee8fb294dc66b52630d79a585961b1f360d7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980448"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032749"
 ---
 # <a name="internet-publishing-scenario"></a>Internet 发布方案
-此代码示例演示如何将 ADO 用于 Internet 发布的 Microsoft OLE DB 提供程序。 在此方案中，你将创建一个 Visual Basic 应用程序，该应用程序使用 **记录集**、 **记录**和 **流** 对象来显示与 Internet 发布提供程序一起发布的资源的内容。  
+此代码示例演示如何将 ADO 用于 Internet 发布的 Microsoft OLE DB 提供程序。 在此方案中，你将创建一个 Visual Basic 应用程序，该应用程序使用 **记录集**、 **记录** 和 **流** 对象来显示与 Internet 发布提供程序一起发布的资源的内容。  
   
  若要创建此方案，需要执行以下步骤：  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7563179d70968cc98fbbc1055ec32c2c3a1948f0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 98a4e0d65ffb0596825557813cf12266b9fe79ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167693"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034617"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 指定在打开与数据源的连接时是否应显示一个对话框，以提示输入缺少的参数。  

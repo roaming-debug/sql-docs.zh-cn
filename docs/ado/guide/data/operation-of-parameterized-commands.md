@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91fe315304cc2be0ccfb8c638665ce699c75e248
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 55eaf3798ee8d14a776da14010b4b6617d0e2723
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980168"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032649"
 ---
 # <a name="operation-of-parameterized-commands"></a>参数化命令的操作
-如果使用的是大型子 **记录集**（特别是与父 **记录集**的大小相比），但只需访问几个子章节，则可以发现使用参数化命令更有效。  
+如果使用的是大型子 **记录集**（特别是与父 **记录集** 的大小相比），但只需访问几个子章节，则可以发现使用参数化命令更有效。  
   
- *非参数化命令*将检索整个父记录集和子**记录集**，并向父记录集追加章节列，然后为每个父行分配对相关子章节的引用。  
+ *非参数化命令* 将检索整个父记录集和子 **记录集**，并向父记录集追加章节列，然后为每个父行分配对相关子章节的引用。  
   
- *参数化命令*将检索整个父**记录集**，但在访问章节列时，仅检索章节**记录集**。 检索策略的这种差异可能会显著提高性能。  
+ *参数化命令* 将检索整个父 **记录集**，但在访问章节列时，仅检索章节 **记录集**。 检索策略的这种差异可能会显著提高性能。  
   
  例如，你可以指定以下内容：  
   
@@ -36,7 +36,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- 父表和子表的列名称相同， *cust_id*。 *子命令*有一个 "？" 占位符，其中关系子句引用的是 "..." (参数 0 ") 。  
+ 父表和子表的列名称相同， *cust_id*。 *子命令* 有一个 "？" 占位符，其中关系子句引用的是 "..." (参数 0 ") 。  
   
 > [!NOTE]
 >  PARAMETER 子句仅适用于 shape 命令语法。 它不与 ADO [参数](../../reference/ado-api/parameter-object.md) 对象或 [参数](../../reference/ado-api/parameters-collection-ado.md) 集合关联。  
@@ -47,11 +47,11 @@ SHAPE {SELECT * FROM customer}
   
 2.  章节列将追加到父 **记录集**。  
   
-3.  访问父行的章节列时，将使用 cust_id 的值作为参数的值来执行 *子命令* 。  
+3.  访问父行的章节列时，将使用 customer.cust_id 的值作为参数的值来执行 *子命令* 。  
   
-4.  在步骤3中创建的数据提供程序行集中的所有行都用于填充子 **记录集**。 在此示例中，这是 Orders 表中的所有行，其中 cust_id 等于 customer cust_id 的值。 默认情况下，将在客户端上缓存子 **记录集**，直到释放对父 **记录集** 的所有引用。 若要更改此行为，请将**记录集**[动态属性](../../reference/ado-api/ado-dynamic-property-index.md)**缓存子行**设置为**False**。  
+4.  在步骤3中创建的数据提供程序行集中的所有行都用于填充子 **记录集**。 在此示例中，这是 Orders 表中的所有行，其中 cust_id 等于 customer.cust_id 的值。 默认情况下，将在客户端上缓存子 **记录集**，直到释放对父 **记录集** 的所有引用。 若要更改此行为，请将 **记录集**[动态属性](../../reference/ado-api/ado-dynamic-property-index.md)**缓存子行** 设置为 **False**。  
   
-5.  对检索到的子行的引用 (也就是说，子 **记录集**) 的章节位于父 **记录集**的当前行的章节列中。  
+5.  对检索到的子行的引用 (也就是说，子 **记录集**) 的章节位于父 **记录集** 的当前行的章节列中。  
   
 6.  访问另一行的章节列时，将重复执行步骤3-5。  
   

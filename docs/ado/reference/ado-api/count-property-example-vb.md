@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3b910450302c83486979f59d019405b97013c22
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 15d8a58584a70be849050d32733a73149e865f69
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171387"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026024"
 ---
 # <a name="count-property-example-vb"></a>Count 属性示例 (VB)
 此示例演示了 ***Employee** _ 数据库中包含两个集合的 [Count](./count-property-ado.md)属性。 属性获取每个集合中的对象数，并设置枚举这些集合的循环的上限。 如果不使用 _ *Count** 属性枚举这些集合，另一种方法是使用 `For Each...Next` 语句。  

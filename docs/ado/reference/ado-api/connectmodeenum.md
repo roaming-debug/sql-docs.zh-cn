@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec16f4d1db295e2160c587246cb9e77a921cfa72
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5232779e4756e8130ad5b7b5a4058e2bed96be1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167706"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034627"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 指定可用于修改 [连接](./connection-object-ado.md)中的数据、打开 [记录](./record-object-ado.md)或为 **Record** 和 [Stream](./stream-object-ado.md)对象的 [Mode](./mode-property-ado.md)属性指定值的可用权限。  

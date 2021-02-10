@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e322ca4da2f4f93278c1fb8337ea2677731ca99
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9c47ee5cdcdfd881bde802ba9b96e74be6757016
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167461"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034197"
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>Visual C++ 语法索引 (#import) 错误
 ## <a name="properties"></a>属性  

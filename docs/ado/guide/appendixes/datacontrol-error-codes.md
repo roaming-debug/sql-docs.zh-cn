@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3554898451228afee73914a82907f6348ad1cff0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dbcf0b6aef651e90c90df1cb49af2dbe6a29c674
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991128"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029431"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 对象错误代码
 下表列出了 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 对象错误代码。 低2字节的正十进制转换、完整错误代码的负小数转换以及十六进制值。

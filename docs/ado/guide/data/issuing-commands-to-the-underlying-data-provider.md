@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4f1db51d54b69bf42fe185d30b78df57b89df39
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c01178c70a0e6a9e049f9fcfbc0a584fa5fa7ef0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980428"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032739"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>向基础数据提供程序发出命令
 不以 SHAPE 开头的任何命令都将传递给数据访问接口。 这等效于使用 "SHAPE {provider command}" 形式发出形状命令。 这些命令 *无* 需生成 **记录集**。 例如，如果数据访问接口支持 DROP TABLE，则 "SHAPE {DROP TABLE MyTable} 是一个完全有效的形状" 命令。  

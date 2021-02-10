@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d52e6926-5c22-43dc-9f32-7b32c1a071e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 659ae835cb14a71018de651db83d5d7b934b43ae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b17e1b7bdac37e6f170833fda83233017643526b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979128"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032309"
 ---
 # <a name="updating-joined-results-unique-table"></a>更新已加入结果：唯一表
 使用 ADO，你可以在记录集中控制对某个记录集中的特定基表所做的修改，该记录集是使用唯一表动态属性在多个基表上进行的。 有关使用唯一表的详细信息，请参阅针对唯一表的 ADO 程序员参考主题和更新再次同步动态属性。  

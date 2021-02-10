@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00bb06c8ea24b622278bb3202f2e0500c4594627
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e918ba6744075052934e9715c50c190f5efd7896
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167498"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034227"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>LineSeparator 属性和 SkipLine 方法示例 (VB) 
 此示例演示如何一次对一行的文本流进行操作。 会显示将线条分隔符从默认回车符/换行符 (**adCRLF**) 更改为简单 (**adLF**) 或回车符 (**adCR**) 的效果。  

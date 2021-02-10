@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d592835b148c6307e49583fac3e4a9cbffbfbf23
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c0708e50451d58dc6732ed9ffa2714716fb0c55e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171133"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034127"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a> (VBScript) 执行、再次查询和清除方法示例
 此示例演示从 [命令](../../../ado/reference/ado-api/command-object-ado.md)对象和 [连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的 **Execute** 方法。 它还使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法检索 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 方法清除 [错误](../../../ado/reference/ado-api/errors-collection-ado.md) 集合的内容。 要运行此过程，需要 ExecuteCommand 和 PrintOutput 过程。  

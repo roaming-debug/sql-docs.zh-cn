@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07c5a4bc4db5fc05cb24ee51ac7a9ec989dd1e29
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 09cb9764b113d01d8742d3fe951c55991dc3c8cf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171397"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026015"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
 根据 [流](./stream-object-ado.md)中的 [类型](./type-property-ado-stream.md)) 将指定数量的字符或字节 (复制到另一个 **流** 对象。  

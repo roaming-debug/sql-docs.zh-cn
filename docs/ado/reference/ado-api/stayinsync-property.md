@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7546889953e748d730a3b47ebc4cee5fcae3e10
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8e30e9f8157be0ab7644eedb51a2956b232baa56
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170147"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020386"
 ---
 # <a name="stayinsync-property"></a>StayInSync 属性
 指示在分层 [记录集](./recordset-object-ado.md) 对象中，对基础子记录的引用 (即，该 *章节*) 父行位置发生更改时所做的更改。  

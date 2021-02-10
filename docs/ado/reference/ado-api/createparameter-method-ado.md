@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61793ca158cee6d4143128eae7fdecf3722ae61e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c5156f48f17d2d389646f4f752033cf88faf83f8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171382"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025961"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
 创建具有指定属性的新 [参数](./parameter-object.md) 对象。  
@@ -41,7 +41,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *名称*  
  可选。 一个包含 **参数** 对象名称的 **字符串** 值。  
   
- *Type*  
+ 类型  
  可选。 指定 **参数** 对象的数据类型的 [DataTypeEnum](./datatypeenum.md)值。  
   
  *方向*  
@@ -50,7 +50,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *大小*  
  可选。 一个 **长整型** 值，指定参数值的最大长度（以字符或字节为单位）。  
   
- 值  
+ *值*  
  可选。 一个 **变量** ，指定 **参数** 对象的值。  
   
 ## <a name="remarks"></a>备注  

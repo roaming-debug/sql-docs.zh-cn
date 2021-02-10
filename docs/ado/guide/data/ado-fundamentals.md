@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dedb841f9889d71da89107766ff26e3f870d1193
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fdf7580f3a04a15fd75fb6d2c7712a694dfd2175
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991658"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033757"
 ---
 # <a name="ado-fundamentals"></a>ADO 基础知识
 ADO 为开发人员提供了一个功能强大的逻辑对象模型，可通过 OLE DB 系统接口以编程方式访问、编辑和更新各种数据源中的数据。 ADO 最常见的用法是查询关系数据库中的一个或多个表，检索并显示应用程序中的结果，并可能让用户进行更改并保存对数据所做的更改。 其他任务包括：  
@@ -39,7 +39,7 @@ ADO 为开发人员提供了一个功能强大的逻辑对象模型，可通过 
   
 -   执行存储过程。  
   
--   动态创建一个名为 **记录集**的灵活结构，用于保存、导航和处理数据。  
+-   动态创建一个名为 **记录集** 的灵活结构，用于保存、导航和处理数据。  
   
 -   执行事务性数据库操作。  
   

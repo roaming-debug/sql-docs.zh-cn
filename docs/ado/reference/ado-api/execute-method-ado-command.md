@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bc27de85c9c8e1e47ec3fb89ec8fadce07713c3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 74e86bfb03ca77d103594009b7ddbbddb6b5b894
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171154"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034157"
 ---
 # <a name="execute-method-ado-command"></a>Execute 方法（ADO 命令）
 执行[命令对象](../../../ado/reference/ado-api/command-object-ado.md)的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性中指定的查询、SQL 语句或存储过程。  
@@ -41,7 +41,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *RecordsAffected*  
  可选。 一个 **长整型** 变量，提供程序返回操作影响的记录数。 *RecordsAffected* 参数仅适用于操作查询或存储过程。 *RecordsAffected* 不返回结果返回的查询或存储过程返回的记录数。 若要获取此信息，请使用 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 属性。 在与 **adAsyncExecute** 一起使用时， **Execute** 方法不会返回正确的信息，只是因为异步执行命令时，在该方法返回时，受影响的记录数可能尚未已知。  
   
- *参数*  
+ *Parameters*  
  可选。 与在 **CommandText** 或 **CommandStream** 中指定的输入字符串或流结合 **使用的参数值数组。** 当传入此参数时， (输出参数不会返回正确的值。 )   
   
  *选项*  

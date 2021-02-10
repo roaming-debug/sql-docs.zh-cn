@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31512fd9843ae5ff15fc2f7c6981fccdc926dbb5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6f29f624fe9f55287dcd8944fd04da0426d9552c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980058"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032619"
 ---
 # <a name="persisting-records-in-xml-format"></a>以 XML 格式保留记录
-与 ADTG 格式一样，XML 格式的 **记录集** 持久性是通过 Microsoft OLE DB 永久性提供程序实现的。 此提供程序从保存的 XML 文件或包含 ADO 生成的架构信息的流中生成只进只读行集。 同样，它可以采用 ADO **记录集**，生成 XML，并将其保存到文件或实现 COM **IStream** 接口的任何对象。  (事实上，文件只是支持 **IStream**的对象的另一个示例。 ) 对于版本2.5 及更高版本，ADO 依赖 Microsoft XML PARSER (MSXML) 将 XML 加载到 **记录集中**;因此 msxml.dll 是必需的。  
+与 ADTG 格式一样，XML 格式的 **记录集** 持久性是通过 Microsoft OLE DB 永久性提供程序实现的。 此提供程序从保存的 XML 文件或包含 ADO 生成的架构信息的流中生成只进只读行集。 同样，它可以采用 ADO **记录集**，生成 XML，并将其保存到文件或实现 COM **IStream** 接口的任何对象。  (事实上，文件只是支持 **IStream** 的对象的另一个示例。 ) 对于版本2.5 及更高版本，ADO 依赖 Microsoft XML PARSER (MSXML) 将 XML 加载到 **记录集中**;因此 msxml.dll 是必需的。  
   
 > [!NOTE]
 >  将分层 **记录集** 保存 () 为 XML 格式的数据形状时，有一些限制。 如果分层 **记录集** 包含挂起的更新，则无法保存到 XML，并且无法保存参数化分层 **记录集**。 有关详细信息，请参阅 [持久化筛选的和分层记录集](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)。  
@@ -60,7 +60,7 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO 始终保留整个 **记录集** 对象。 如果要保存 **Recordset** 对象的一部分行，请使用 **筛选器** 方法缩小行或更改选择子句。 但是，必须使用客户端光标打开**记录集**对象 (**CursorLocation**  =  **adUseClient**) ，才能使用**筛选器**方法保存行的子集。 例如，若要检索以字母 "b" 开头的标题，可以将筛选器应用于打开的 **Recordset** 对象：  
+ ADO 始终保留整个 **记录集** 对象。 如果要保存 **Recordset** 对象的一部分行，请使用 **筛选器** 方法缩小行或更改选择子句。 但是，必须使用客户端光标打开 **记录集** 对象 (**CursorLocation**  =  **adUseClient**) ，才能使用 **筛选器** 方法保存行的子集。 例如，若要检索以字母 "b" 开头的标题，可以将筛选器应用于打开的 **Recordset** 对象：  
   
 ```  
 rs.Filter "title_id like 'B*'"  

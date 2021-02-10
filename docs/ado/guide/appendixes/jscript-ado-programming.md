@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ceeb7c32a821d42d36b4f2f749069e42fa7b320
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 15a58e69810e3df5221d4c869e14b20112a181c9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991098"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029411"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 编程
 ## <a name="creating-an-ado-project"></a>创建 ADO 项目  
@@ -51,7 +51,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
  下面的代码是 Active Server 页面中 JScript 服务器端编程的一般示例， (ASP) 文件，用于打开 **Recordset** 对象：  
   
 ```javascript
-<%  @LANGUAGE="JScript" %>  
+<%  @LANGUAGE="JScript" %>  
 <!--#include File="adojavas.inc"-->  
 <HTML>  
 <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
