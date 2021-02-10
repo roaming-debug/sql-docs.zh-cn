@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 003bbddc0942e7fe40ca24f80fb94d1252d40bc0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: aa23c12ba0a4e2497f0c4e1fb025372c7547b5eb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991508"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037678"
 ---
 # <a name="controlling-transactions-ado"></a>控制事务 (ADO)
-ADO 支持连接中的事务处理，并提供**连接**对象的**BeginTrans**、 **CommitTrans**和**RollbackTrans**方法的帮助。 以下简单的代码片段演示了如何在 ADO 中实现事务处理。  
+ADO 支持连接中的事务处理，并提供 **连接** 对象的 **BeginTrans**、 **CommitTrans** 和 **RollbackTrans** 方法的帮助。 以下简单的代码片段演示了如何在 ADO 中实现事务处理。  
   
 ```  
 Const DS = "MySqlServer"  

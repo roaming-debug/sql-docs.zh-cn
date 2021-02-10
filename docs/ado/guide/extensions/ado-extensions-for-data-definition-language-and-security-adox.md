@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca81e09f25b8483c9c9a95d100f57512f9259784
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f4357bdf84bf66b164e762663e496c8355e000f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978748"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036697"
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>数据定义语言和安全性的 ADO 扩展 (ADOX)
 本部分包含以下主题。  

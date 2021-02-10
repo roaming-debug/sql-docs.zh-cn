@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1f294e9c0258f1cc9d108d1eb9a47087b456ca8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 346957b2b060bf990cf77bfe7784f67b13a37c37
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979718"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037007"
 ---
 # <a name="schema-section"></a>架构部分
 架构部分是必需的。 如前面的示例所示，ADO 写出了有关每个列的详细元数据，以尽可能多地保留数据值的语义。 但是，若要在 XML 中加载，ADO 只需要列的名称及其所属的行集。 下面是最小架构的示例：  
@@ -99,7 +99,7 @@ ms.locfileid: "88979718"
  同样，由于 `CompanyName` 在前面的示例中没有为定义的别名，因此 `CompanyName` 必须在整个文档中一致地使用。  
   
 ## <a name="data-types"></a>数据类型  
- 您可以向具有 dt： type 属性的列应用数据类型。 有关允许的 XML 类型的权威性指南，请参阅 [W3C xml-data 规范](http://www.w3.org/TR/1998/NOTE-XML-data/)的 "数据类型" 部分。 可以通过两种方式指定数据类型：直接在列定义本身上指定 dt： type 特性，或使用 s:datatype 构造作为列定义的嵌套元素。 例如，应用于对象的  
+ 您可以向具有 dt： type 属性的列应用数据类型。 有关允许的 XML 类型的权威性指南，请参阅 [W3C XML-Data 规范](http://www.w3.org/TR/1998/NOTE-XML-data/)的 "数据类型" 部分。 可以通过两种方式指定数据类型：直接在列定义本身上指定 dt： type 特性，或使用 s:datatype 构造作为列定义的嵌套元素。 例如，  
   
 ```  
 <s:AttributeType name="Phone" >  

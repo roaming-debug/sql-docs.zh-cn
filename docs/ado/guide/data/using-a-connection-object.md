@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 41652f73868380d4902c7c6815a7ee53868c0969
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 36344c8b8c03677ac3b0ae25db097917d8d10d2a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724858"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036797"
 ---
 # <a name="using-a-connection-object"></a>使用连接对象
-在打开 **连接** 对象之前，必须定义有关数据源和连接类型的某些信息。 此信息中的大部分信息由**connection**对象上[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)的*connectionstring*参数或**连接**对象的[connectionstring 属性](../../../ado/reference/ado-api/connectionstring-property-ado.md)保存。 连接字符串包含由分号分隔的参数/值对列表，其值括在单引号内。 例如：  
+在打开 **连接** 对象之前，必须定义有关数据源和连接类型的某些信息。 此信息中的大部分信息由 **connection** 对象上 [Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)的 *connectionstring* 参数或 **连接** 对象的 [connectionstring 属性](../../../ado/reference/ado-api/connectionstring-property-ado.md)保存。 连接字符串包含由分号分隔的参数/值对列表，其值括在单引号内。 例如：  
   
 ```  
 Dim sConn As String  
@@ -58,7 +58,7 @@ Set oConn = Nothing
   
 ```  
   
- 此处 **or** 采用 **连接** 对象 (*OConn*) 变量作为其 *ActiveConnection* 参数的值。 此外， **CursorLocation** 属性采用 **adUseServer**的默认值。 与上一节中的 [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 示例相反。 以下指令将导致运行时错误。  
+ 此处 **or** 采用 **连接** 对象 (*OConn*) 变量作为其 *ActiveConnection* 参数的值。 此外， **CursorLocation** 属性采用 **adUseServer** 的默认值。 与上一节中的 [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 示例相反。 以下指令将导致运行时错误。  
   
 ```  
 oRs.MarshalOptions = adMarshalModifiedOnly  

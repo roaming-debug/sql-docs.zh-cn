@@ -1,6 +1,6 @@
 ---
 description: 记录和提供程序提供的字段
-title: 记录和提供程序提供的字段 |Microsoft Docs
+title: 记录和 Provider-Supplied 字段 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,47 +14,47 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cc7b8c4fb0116f96a2470a7161f9fbd30c7efb9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a64168a8a1fec81d47c337978ea75664fec0a10c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979948"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037107"
 ---
 # <a name="records-and-provider-supplied-fields"></a>记录和提供程序提供的字段
 打开 [记录](../../../ado/reference/ado-api/record-object-ado.md) 对象时，它的源可以是打开的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的当前行、绝对 url 或与打开的 [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象关联的相对 url。  
   
- 如果从记录**集中**打开**记录**，则 "**记录**对象[字段](../../../ado/reference/ado-api/fields-collection-ado.md)" 集合将包含**记录集中**的所有字段，以及由基础提供程序添加的任何字段。  
+ 如果从记录 **集中** 打开 **记录**，则 "**记录** 对象 [字段](../../../ado/reference/ado-api/fields-collection-ado.md)" 集合将包含 **记录集中** 的所有字段，以及由基础提供程序添加的任何字段。  
   
- 提供程序可以插入作为 **记录**的补充特性的其他字段。 因此，**记录**中可能包含不在**记录集中**的唯一字段，也可能是从**记录集**的其他行派生的任何**记录**。  
+ 提供程序可以插入作为 **记录** 的补充特性的其他字段。 因此，**记录** 中可能包含不在 **记录集中** 的唯一字段，也可能是从 **记录集** 的其他行派生的任何 **记录**。  
   
- 例如，从电子邮件数据源派生的 **记录集** 的所有行都可能包含列，如 From、To 和 Subject。 从该**记录集**派生的**记录**将具有相同的字段。 不过， **记录** 还可能具有该 **记录**所表示的特定消息的其他字段，例如附件和抄送 (抄送) 。  
+ 例如，从电子邮件数据源派生的 **记录集** 的所有行都可能包含列，如 From、To 和 Subject。 从该 **记录集** 派生的 **记录** 将具有相同的字段。 不过， **记录** 还可能具有该 **记录** 所表示的特定消息的其他字段，例如附件和抄送 (抄送) 。  
   
- 尽管记录**集**的**记录**对象和当前行具有相同的字段，但它们是不同的，因为**记录**和**记录集**对象具有不同的方法和属性。  
+ 尽管记录 **集** 的 **记录** 对象和当前行具有相同的字段，但它们是不同的，因为 **记录** 和 **记录集** 对象具有不同的方法和属性。  
   
- **记录**和**记录集**共同保存的字段可以在任一对象上进行修改。 但是，该字段不能在 **Record** 对象上删除，不过，基础提供程序可能支持将字段设置为 null。  
+ **记录** 和 **记录集** 共同保存的字段可以在任一对象上进行修改。 但是，该字段不能在 **Record** 对象上删除，不过，基础提供程序可能支持将字段设置为 null。  
   
- 打开 **记录** 后，可以通过编程方式添加字段。 您还可以删除已添加的字段，但是不能从原始 **记录集中**删除字段。  
+ 打开 **记录** 后，可以通过编程方式添加字段。 您还可以删除已添加的字段，但是不能从原始 **记录集中** 删除字段。  
   
- 您还可以从 URL 直接打开 **记录** 对象。 在这种情况下，添加到 **记录** 的字段取决于基础提供程序。 目前，大多数提供程序会添加一组字段来描述由 **记录**表示的实体。 如果实体包含字节流（如简单文件），通常可以从**记录**打开一个[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
+ 您还可以从 URL 直接打开 **记录** 对象。 在这种情况下，添加到 **记录** 的字段取决于基础提供程序。 目前，大多数提供程序会添加一组字段来描述由 **记录** 表示的实体。 如果实体包含字节流（如简单文件），通常可以从 **记录** 打开一个 [流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
   
 ## <a name="special-fields-for-document-source-providers"></a>文档源提供程序的特殊字段  
- 称为 *文档源提供程序*的一种特殊类提供程序管理文件夹和文档。 当 **Record** 对象表示文档或 **记录集** 对象表示文档的文件夹时，文档源提供程序将使用一组唯一的字段（描述文档的特征，而不是实际的文档本身）来填充这些对象。 通常，一个字段包含对表示文档的 **流** 的引用。  
+ 称为 *文档源提供程序* 的一种特殊类提供程序管理文件夹和文档。 当 **Record** 对象表示文档或 **记录集** 对象表示文档的文件夹时，文档源提供程序将使用一组唯一的字段（描述文档的特征，而不是实际的文档本身）来填充这些对象。 通常，一个字段包含对表示文档的 **流** 的引用。  
   
  这些字段构成了资源 **记录** 或 **记录集** ，并为在 [附录 a：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)中支持这些字段的特定提供程序列出。  
   
- 两个常量为资源**记录**或**记录集**的**字段**集合编制索引，以检索一对常用字段。 " **字段** 对象 [值](../../../ado/reference/ado-api/value-property-ado.md) " 属性返回所需的内容。  
+ 两个常量为资源 **记录** 或 **记录集** 的 **字段** 集合编制索引，以检索一对常用字段。 " **字段** 对象 [值](../../../ado/reference/ado-api/value-property-ado.md) " 属性返回所需的内容。  
   
 -   使用 **adDefaultStream** 常量访问的字段包含与 **Record** 或 **Recordset** 对象关联的默认流。 提供程序将默认流分配给对象。  
   
 -   通过 **adRecordURL** 常量访问的字段包含标识该文档的绝对 URL。  
   
- 文档源提供程序不支持**记录**和**字段**对象的[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合。 此类对象的 **Properties** 集合的内容为 null。  
+ 文档源提供程序不支持 **记录** 和 **字段** 对象的 [Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合。 此类对象的 **Properties** 集合的内容为 null。  
   
  文档源提供程序可以添加特定于提供程序的属性（如 **Datasource 类型** ），以确定它是否为文档源提供程序。 有关如何确定提供程序类型的详细信息，请参阅提供程序文档。  
   
 ## <a name="resource-recordset-columns"></a>资源记录集列  
- *资源记录集*由以下列组成。  
+ *资源记录集* 由以下列组成。  
   
 |列名称|类型|说明|  
 |-----------------|----------|-----------------|  

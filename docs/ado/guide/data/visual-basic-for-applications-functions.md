@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 960e0f8cf42a2ef1f0b2b30f73a784d208777dae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1c7b1b8493e6e8dd066ad2208e35d374cc0fadff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978928"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036737"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函数
 以下 Visual Basic for Applications 函数可用于数据定形 CALC 表达式：  
@@ -51,14 +51,14 @@ ms.locfileid: "88978928"
     :::column:::
         CVDate  
         CVErr  
-        Date  
+        日期  
         Date$  
         DateAdd  
         DateDiff  
         DatePart  
         DateSerial  
         DateValue  
-        天  
+        日期  
         DDB  
         错误  
         Error$  
@@ -71,7 +71,7 @@ ms.locfileid: "88978928"
     :::column-end:::
     :::column:::
         Hex$  
-        小时  
+        Hour  
         IIF  
         InStr  
         int  
@@ -85,7 +85,7 @@ ms.locfileid: "88978928"
         IsObject  
         LCase  
         LCase$  
-        Left  
+        左  
         Leftb 将  
         Left$  
         Leftb 将 $  
@@ -99,7 +99,7 @@ ms.locfileid: "88978928"
         Mid$  
         Minute  
         MIRR  
-        Month  
+        月份  
         Now  
         NPer  
         NPV  
@@ -113,16 +113,16 @@ ms.locfileid: "88978928"
     :::column-end:::
     :::column:::
         RGB  
-        Right  
+        权限  
         Rightb 将  
         Right$  
         Rightb 将 $  
         Rnd  
         RTrim  
         RTrim $  
-        Second  
+        秒  
         Sgn  
-        正弦  
+        Sin  
         SLN  
         Space  
         Space$  
@@ -142,7 +142,7 @@ ms.locfileid: "88978928"
         计时器  
         TimeSerial  
         TimeValue  
-        Trim  
+        裁剪  
         Trim$  
         TypeName  
         UCase  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b89d247f5bc91ca0b3494c15d3781116b8c9614
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 31e6c98d12c6c6f472053634d8b3aea314ccbab2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990918"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037867"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 编程
 ## <a name="creating-an-ado-project"></a>创建 ADO 项目  
@@ -40,7 +40,7 @@ ms.locfileid: "88990918"
 ```  
   
 ## <a name="creating-ado-objects-in-vbscript"></a>在 VBScript 中创建 ADO 对象  
- 不能使用 **Dim** 语句将对象分配到 VBScript 中的特定类型。 另外，VBScript 不支持 Visual Basic for Applications 中**Dim**语句使用的**新**语法。 您必须改用 **CreateObject** 函数调用：  
+ 不能使用 **Dim** 语句将对象分配到 VBScript 中的特定类型。 另外，VBScript 不支持 Visual Basic for Applications 中 **Dim** 语句使用的 **新** 语法。 您必须改用 **CreateObject** 函数调用：  
   
 ```vb
 Dim Rs1  
@@ -51,8 +51,8 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
  下面的代码是 (ASP) 文件的 Active Server 页面中 VBScript 服务器端编程的一般示例：  
   
 ```vb
-<%  @LANGUAGE="VBSCRIPT" %>  
-<%  Option Explicit %>  
+<%  @LANGUAGE="VBSCRIPT" %>  
+<%  Option Explicit %>  
 <!--#include File="adovbs.inc"-->  
 <HTML>  
     <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
@@ -82,6 +82,6 @@ Response.Write("Success!")
   
 -   VBScript 仅支持 Variant 数据类型，该类型可以保存不同类型的数据。 您可以在变量数据类型中存储所需的数据，数据将正常运行，因为 VBScript 执行了强制转换。 它识别 ADO 所需的类型，并相应地转换变量中的值。  
   
--   不能在 VBScript 中**的 \<label> 错误 goto 上**使用。  
+-   不能在 VBScript 中 **的 \<label> 错误 goto 上** 使用。  
   
--   VBScript 支持某些内置 Visual Basic 函数，例如 **Msgbox**、 **Date**和 **IsNumeric**。 但是，由于 VBScript 是 Visual Basic 的子集，因此并非所有内置函数都受支持。 例如，VBScript 不支持 **Format** 函数和文件 i/o 函数。
+-   VBScript 支持某些内置 Visual Basic 函数，例如 **Msgbox**、 **Date** 和 **IsNumeric**。 但是，由于 VBScript 是 Visual Basic 的子集，因此并非所有内置函数都受支持。 例如，VBScript 不支持 **Format** 函数和文件 i/o 函数。

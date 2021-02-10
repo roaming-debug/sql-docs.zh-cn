@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7abcc738c4fd89a64e2d57f9ecf5e068abfaf7e3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2a41fa68719fa1ec28b5f8d7a51b3707407cec9d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980218"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037227"
 ---
 # <a name="navigating-through-data"></a>浏览数据
 **记录集** 支持各种方法和属性在结果数据集内导航。 我们使用示例 **记录集** 对象通过几个方案来检查此功能。  

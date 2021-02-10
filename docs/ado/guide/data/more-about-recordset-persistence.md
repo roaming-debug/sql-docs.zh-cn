@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1dca646b07c441a4fccd617723aba98536f1a7e1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ce3b22ecd5913db0045f82e72aa20b0833a5109b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980328"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037257"
 ---
 # <a name="more-about-recordset-persistence"></a>更多有关记录集暂留的信息
-ADO 记录集对象支持使用其[Save](../../reference/ado-api/save-method.md)方法在文件中存储**记录集**对象的内容。 持久存储的文件可能位于本地驱动器、服务器或网站上的 URL。 稍后，可以通过**Recordset**对象的[Open](../../reference/ado-api/open-method-ado-recordset.md)方法或[连接](../../reference/ado-api/connection-object-ado.md)对象的[Execute](../../reference/ado-api/execute-method-ado-connection.md)方法来还原文件。  
+ADO 记录集对象支持使用其 [Save](../../reference/ado-api/save-method.md)方法在文件中存储 **记录集** 对象的内容。 持久存储的文件可能位于本地驱动器、服务器或网站上的 URL。 稍后，可以通过 **Recordset** 对象的 [Open](../../reference/ado-api/open-method-ado-recordset.md)方法或 [连接](../../reference/ado-api/connection-object-ado.md)对象的 [Execute](../../reference/ado-api/execute-method-ado-connection.md)方法来还原文件。  
   
  此外， [GetString](../../reference/ado-api/getstring-method-ado.md) 方法将 **记录集** 对象转换为一个窗体，其中的列和行用指定的字符分隔。  
   

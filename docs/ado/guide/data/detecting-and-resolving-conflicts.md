@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a28fa775c834725504075907f09dc00e95bce1ee
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4c92b847b95aacd5cf642c9646f4618dc5986abf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991388"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037627"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>检测和解决冲突
 如果在即时模式下处理记录集，则可能会有很少的并发问题发生。 另一方面，如果应用程序使用批处理模式更新，则可能会有很好的机会，让一个用户在另一个用户编辑相同记录所做的更改保存之前更改记录。 在这种情况下，你将希望应用程序妥善处理冲突。 你可能希望最后一位用户将更新发送到服务器 "wins"。 或者，您可能想让最近的用户通过在两个冲突值之间进行选择来决定哪个更新的优先级。  
   
  无论何种情况，ADO 都提供 Field 对象的 UnderlyingValue 和 OriginalValue 属性来处理这些类型的冲突。 将这些属性与记录集的 Resync 方法和 Filter 属性结合使用。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  当 ADO 在批更新过程中遇到冲突时，将在错误集合中添加一条警告。 因此，在调用 BatchUpdate 之后，应始终立即检查是否存在错误，如果找到这些错误，则开始测试假设您遇到了冲突。 第一步是将记录集的 "筛选器" 属性设置为等于 "adFilterConflictingRecords"。 这会将记录集上的视图限制为仅存在发生冲突的记录。 如果在执行此步骤后，RecordCount 属性等于零，则表明该错误是由冲突以外的内容引发的。  
   
  调用 BatchUpdate 时，ADO 和提供程序正在生成 SQL 语句，以便对数据源执行更新。 请记住，某些数据源对于 WHERE 子句中可以使用哪些类型的列有限制。  

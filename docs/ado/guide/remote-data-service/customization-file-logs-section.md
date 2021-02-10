@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc65c6d9ad0b97f6d7f98a26fec173fc0fd630c3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 34485c91a20b8c5df668e5eddd11e442418844a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724768"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036527"
 ---
 # <a name="customization-file-logs-section"></a>自定义文件 Logs 部分
-" **日志** " 部分包含一个日志文件条目，该条目指定在 **DataFactory**操作过程中记录错误的文件的名称。  
+" **日志** " 部分包含一个日志文件条目，该条目指定在 **DataFactory** 操作过程中记录错误的文件的名称。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](/dotnet/framework/wcf/)。  
@@ -39,7 +39,7 @@ FileName
   
 ## <a name="remarks"></a>备注  
   
-|组成部分|说明|  
+|部分|说明|  
 |----------|-----------------|  
 |**err**|指示这是一个日志文件项的文字字符串。|  
 |*FileName*|完整的路径和文件名。 典型文件名为 **c:\msdfmap.log**。|  

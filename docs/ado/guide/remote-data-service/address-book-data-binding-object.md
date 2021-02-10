@@ -1,6 +1,6 @@
 ---
 description: 通讯簿数据绑定对象
-title: 通讯簿数据绑定对象 |Microsoft Docs
+title: 通讯簿 Data-Binding 对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f5c98370ebb1a1b16e09e900455888d0c201905
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 91489445aef2034ed273a6d13cc5d6ae02b7f519
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721568"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036587"
 ---
 # <a name="address-book-data-binding-object"></a>通讯簿数据绑定对象
 通讯簿应用程序使用 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 对象，用于将 SQL Server 数据库中的数据绑定到可视对象 (在这种情况下，将在应用程序的客户端 HTML 页中) 一个 DHTML 表。 事件驱动的 VBScript 程序逻辑使用 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) ：  
@@ -53,7 +53,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |参数|说明|  
 |---------------|-----------------|  
-|***CLASSID***|唯一的128位数字，用于标识嵌入到系统的嵌入对象的类型。 此标识符保存在本地计算机的系统注册表中。 RDS 的类 Id (**。DataControl** 对象，请参阅 [RDS。DataControl 对象](../../reference/rds-api/datacontrol-object-rds.md)。 ) |  
+|***CLASSID** _|唯一的128位数字，用于标识嵌入到系统的嵌入对象的类型。 此标识符保存在本地计算机的系统注册表中。 用于 _ RDS 的类 Id 的 (*。DataControl** 对象，请参阅 [RDS。DataControl 对象](../../reference/rds-api/datacontrol-object-rds.md)。 ) |  
 |***ID***|定义用于在代码中标识的嵌入对象的文档范围标识符。|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS.DataControl 标记参数  

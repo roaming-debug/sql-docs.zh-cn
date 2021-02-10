@@ -1,6 +1,6 @@
 ---
 description: 字段相关错误信息
-title: 与字段相关的错误信息 |Microsoft Docs
+title: Field-Related 错误信息 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af7aee82f8568cafcc35ac0e78d13386822888fb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cce74cf105aa7b38c2a3d7b157ef0fa17a1e8c1f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991258"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037467"
 ---
 # <a name="field-related-error-information"></a>字段相关错误信息
-如果错误与字段直接相关（例如，如果缺少数据或字段对于字段是错误的类型），则可以通过检查 **字段** 对象的 **Status** 属性来检索有关问题原因的详细信息。 此属性已得到增强，可提供有关此问题的具体信息。 例如，当调用**UpdateBatch**失败时，可以通过检查每个受影响记录中的**字段**的 "**状态**" 属性来确定问题的原因。 属性将包含 **FieldStatusEnum** 常量中的值之一。 下表包括在发生错误时特别感兴趣的那些值。  
+如果错误与字段直接相关（例如，如果缺少数据或字段对于字段是错误的类型），则可以通过检查 **字段** 对象的 **Status** 属性来检索有关问题原因的详细信息。 此属性已得到增强，可提供有关此问题的具体信息。 例如，当调用 **UpdateBatch** 失败时，可以通过检查每个受影响记录中的 **字段** 的 "**状态**" 属性来确定问题的原因。 属性将包含 **FieldStatusEnum** 常量中的值之一。 下表包括在发生错误时特别感兴趣的那些值。  
   
 |返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  

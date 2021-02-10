@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec44c25bba9c792415c462e3028bbf20d8d3f84e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: baea4d79057a46ec26c6ccd82f834f5fa3481091
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979738"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037067"
 ---
 # <a name="sample-recordset-for-examining-data"></a>用于检查数据的示例记录集
 首先，让我们看一下使用以下 SQL 查询返回的 **Recordset** 对象，该查询针对 Microsoft SQL Server 中的 Northwind 示例数据库执行。  

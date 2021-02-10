@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c52989f83608b33756ae90778485bfddab08173
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: caa8fe846651f65e4316c81f29f2f18078628658
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724798"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036567"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>在 Windows 2000 上配置 RDS
 如果在升级到 Windows 2000 后，如果遇到使 RDS 正常运行的问题，请按照以下步骤解决此问题：  
@@ -27,11 +27,11 @@ ms.locfileid: "91724798"
   
 2.  在 "开始" 菜单中，选择 "运行"。 键入 msdfmap.ini 然后单击 "确定" 以在记事本中打开 msdfmap.ini 文件。 选中 [连接默认值] 部分，如果访问参数设置为 NOACCESS，请将其更改为 READONLY。  
   
-3.  使用 RegEdit 实用工具，导航到 "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\DataFactory\HandlerInfo" 并确保 **HandlerRequired** 设置为0， **DefaultHandler** 为 "" (Null 字符串) 。  
+3.  使用 RegEdit 实用工具导航到 "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo"，并确保 **HandlerRequired** 设置为0， **DefaultHandler** 为 "" (Null 字符串) 。  
   
      **注意** 如果对注册表的此部分进行了任何更改，则必须通过在命令提示符处输入以下命令来停止并重新启动 World Wide Web 发布服务： "NET STOP W3SVC" 和 "NET START W3SVC"。  
   
-4.  使用 RegEdit 实用工具，在注册表中导航到 "HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch" 并验证是否存在名为 **RDSServer. Datafactory**的项。 如果没有，则创建它。  
+4.  使用 RegEdit 实用工具，在注册表中导航到 "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch"，并验证是否存在名为 **RDSServer. Datafactory** 的键。 如果没有，则创建它。  
   
 5.  使用 Internet 服务管理器，找到默认网站并查看 MSADC 虚拟根的属性。 检查目录安全/IP 地址和域名限制。 如果选中 "拒绝访问"，则选择 "已授予"。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff36542abb462ffc63e8704a5c6c3cdd6670d280
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e3bcc0d4d436afcc10b4d079938adf2bad237d88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980698"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037407"
 ---
 # <a name="handling-ado-events"></a>处理 ADO 事件
-ADO 事件模型支持某些同步和异步 ADO 操作，这些操作会在操作开始之前或完成之后发出 *事件*或通知。 事件实际上是对在应用程序中定义的事件处理程序例程的调用。  
+ADO 事件模型支持某些同步和异步 ADO 操作，这些操作会在操作开始之前或完成之后发出 *事件* 或通知。 事件实际上是对在应用程序中定义的事件处理程序例程的调用。  
   
  如果为操作开始之前发生的一组事件提供处理程序函数或过程，则可以检查或修改传递给操作的参数。 由于尚未执行此操作，因此可以取消该操作或使其完成。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35c2376031e96a19c4a761a9826e47be2306518e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 031d819e2c8eed63b9b8ff42aa58fb8e998a4273
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991328"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037497"
 ---
 # <a name="editing-existing-records"></a>编辑现有记录
 若要编辑现有记录，请转到要编辑的行，然后更改要更改的字段的 **值** 属性。 有关 **字段** 对象的 **Value** 属性的详细信息，请参阅 [检查数据](./examining-data.md)。 根据游标类型，您将使用 **Update** 或 **UpdateBatch** 将更改发送回数据源。 有关详细信息，请参阅 [更新和保留数据](./updating-and-persisting-data.md)。  

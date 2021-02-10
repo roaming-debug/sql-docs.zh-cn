@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec6a8c14eebc363021d90501d14f031701cd59b6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4790a9c4363e7677a3b5d3461d293356502b6254
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978448"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036597"
 ---
 # <a name="referencing-the-ado-libraries"></a>引用 ADO 库
-最新版本的 ADO 打包为 *msado15.dll*。 最新版本的 ADO MD 和 ADOX 分别打包为 *msadom.dll* 和 *msadox.dll*。 默认情况下，将在 *$installDir*中安装这些库，其中 *$installDir* 表示计算机上安装了 ADO 库的目录的路径。 若要在应用程序中使用 ADO 库，必须在应用程序项目中显式引用它们。  
+最新版本的 ADO 打包为 *msado15.dll*。 最新版本的 ADO MD 和 ADOX 分别打包为 *msadom.dll* 和 *msadox.dll*。 默认情况下，将在 *$installDir* 中安装这些库，其中 *$installDir* 表示计算机上安装了 ADO 库的目录的路径。 若要在应用程序中使用 ADO 库，必须在应用程序项目中显式引用它们。  
   
  以下是可以用来引用 ADO 库的步骤：  
   

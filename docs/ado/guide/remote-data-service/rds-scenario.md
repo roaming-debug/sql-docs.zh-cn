@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c9b7563b940cd4340b7f07238fe50af56cf66e6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a61fc0351c7d7b7008ef34d048e66a39908562e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721408"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037577"
 ---
 # <a name="rds-scenario"></a>RDS 方案
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ ms.locfileid: "91721408"
   
  此方案假设你知道如何使用基本 HTML 布局标记，如何使用 DHTML 数据绑定技术，以及如何使用 ActiveX 控件编程。  
   
- 如果已安装 SDK，则可以在 SDK 目录的 samples\dataaccess\rds\AddressBook\AddressBook.asp. 中找到通讯簿示例应用程序的完整源代码。 若要查看通讯簿方案，请在 Internet Explorer 4.0 或更高版本中，键入 " **https://*web*服务器/RDS/AddressBook/AddressBook.asp** "，其中， *WEB* 服务器是为 Windows NT 4.0 或 windows 2000 Web 服务器计算机提供的名称，该名称是 (IIS) 和 asp 运行 Internet Information Services。  
+ 如果已安装 SDK，则可以在 SDK 目录的 samples\dataaccess\rds\AddressBook\AddressBook.asp. 中找到通讯簿示例应用程序的完整源代码。 若要查看通讯簿方案，请在 Internet Explorer 4.0 或更高版本中，键入 " **https://*web* 服务器/RDS/AddressBook/AddressBook.asp** "，其中， *WEB* 服务器是为 Windows NT 4.0 或 windows 2000 Web 服务器计算机提供的名称，该名称是 (IIS) 和 asp 运行 Internet Information Services。  
   
 ## <a name="introduction-to-address-book"></a>通讯簿简介  
  通讯簿示例应用程序提供了一个简单的联机通讯簿，可用于通过 intranet 发布可搜索的目录。 通讯簿的设计使用户可以在一个或多个字段中输入搜索字符串来请求有关员工的信息。 为了向您展示远程数据服务的基本功能，示例应用程序有意保存为小，并具有最小数量的对象和搜索字段。  
