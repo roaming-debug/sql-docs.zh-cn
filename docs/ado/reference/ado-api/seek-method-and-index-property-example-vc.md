@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dd3d70fcb53d74ec9a364c8fe1b240c25d56112
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d59878f855be7593eeffaaec3fee9f6236b1b2ff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166563"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051468"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek 方法和 Index 属性示例 (VC++)
-此示例将 [记录集](./recordset-object-ado.md) 对象的 [Seek](./seek-method.md) 方法和 [Index](./index-property.md) 属性与给定的 ***雇员 ID** _ 结合使用，以便在 Nwind 数据库的 _*_Employees_*_ 表中查找雇员的姓名。  
+此示例将 [记录集](./recordset-object-ado.md) 对象的 [Seek](./seek-method.md) 方法和 [Index](./index-property.md) 属性与给定的 ***雇员 ID** _ 一起使用，以便在 Nwind 数据库的 _ *_Employees_** 表中查找雇员的姓名。  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -69,7 +69,7 @@ void SeekX();
 void PrintProviderError(_ConnectionPtr pConnection);  
 void PrintComError(_com_error &e);  
   
-inline char_ mygets(char* strDest, int n) {      
+inline char* mygets(char* strDest, int n) {      
    char strExBuff[10];  
    char* pstrRet = fgets(strDest, n, stdin);  
   

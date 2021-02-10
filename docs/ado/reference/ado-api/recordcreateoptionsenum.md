@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 99c13920d8a786b4d9eae0d22a794b9ed34ddbb0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 942f11dfa25a92f6914c868ffcdeb65c434e490c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166723"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051848"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 指定是打开现有 **记录** 还是为 [记录](./record-object-ado.md)对象 [Open](./open-method-ado-record.md)方法创建新 **记录**。 值可以与 AND 运算符组合。  

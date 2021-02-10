@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9cfb5a0f09e7f990fe5dd1f4ce21478c6d34446
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1e63e6a1b45c9f64c2dc06518cd325e05a53cc41
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166526"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051418"
 ---
 # <a name="sort-property-example-vc"></a>Sort 属性示例 (VC++)
 此示例使用 [Recordset](./recordset-object-ado.md)对象的 [Sort](./sort-property.md)属性对从 _ Pubs 数据库的 **_作者_*_ 表*** 中派生的 **记录集** 的行重新排序。 辅助实用程序例程打印每行。  

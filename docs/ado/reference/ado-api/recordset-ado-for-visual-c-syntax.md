@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d675e8349b652c3e0d9e248a34260cc06d5612c1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ed161654a2a2c0e112281294b41c826c299e9344
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166721"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051798"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>记录集（ADO for Visual C++ 语法）
 ## <a name="methods"></a>方法  

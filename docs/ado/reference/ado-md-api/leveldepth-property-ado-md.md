@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e987d2cab7f20930bbdefbd4bcf959717a28ba7e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 79cacc9b336164a80bee36a4afa5ece0f3b60d72
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169795"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051128"
 ---
 # <a name="leveldepth-property-ado-md"></a>LevelDepth 属性 (ADO MD)
 指示层次结构的根和 [成员](./member-object-ado-md.md)之间的级别数。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54e75b3ed86a1522c7334f6948b2a5a105971c9f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a15cb79b3dc6a00e8096cec5289a5c8ce5304938
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166595"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051509"
 ---
 # <a name="save-method"></a>Save 方法
 将 [记录集](./recordset-object-ado.md) 保存到文件或 [流](./stream-object-ado.md) 对象中。  

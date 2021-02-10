@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14e7b8ab97c59b566356ddeec10a6fbbd212840c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3af587c222e093a7918f7e390d66e64380801016
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170379"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051598"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name 属性 - 动态 (ADO)
 指定 [记录集](./recordset-object-ado.md) 对象的名称。  

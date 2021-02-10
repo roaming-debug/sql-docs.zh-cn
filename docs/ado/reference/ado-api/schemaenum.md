@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55a55d39117f2367b1b13c1a25b3785fe2d9cacc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5a58781196393471255f2cb00eddd153373e0cd0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170312"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051488"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定 [OpenSchema](./openschema-method.md)方法检索的架构 **记录集** 的类型。  

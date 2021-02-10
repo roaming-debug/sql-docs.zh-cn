@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c95d36c758b81daa1a60419d6214d75781131c9e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 281a58f7e8dfc5a7f157a7f331ebc1378389ae39
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166663"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051658"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh 方法示例 (VB)
 此示例演示如何使用[refresh](./refresh-method-ado.md)方法刷新存储过程[命令](./command-object-ado.md)对象的[参数](./parameters-collection-ado.md)集合。  

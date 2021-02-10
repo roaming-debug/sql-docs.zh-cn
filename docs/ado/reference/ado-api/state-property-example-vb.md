@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05c746f3e9419fe4b6e674991376a02af1c00563
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f0805eb346bb34f1cf1d8d7336ea28f11df704de
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166475"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051248"
 ---
 # <a name="state-property-example-vb"></a>State 属性示例 (VB)
 此示例使用 [State](./state-property-ado.md) 属性来显示异步连接正在打开的消息和正在执行的异步命令。  

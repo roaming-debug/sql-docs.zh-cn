@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bdc76a5a0e1cfacdbd816c535a587ed483591cfb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 651df465687b25ed3e9bdb6eff781703c5888ecc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169702"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050868"
 ---
 # <a name="source-property-ado-md"></a>Source 属性（ADO MD）
 指示 [单元](./cellset-object-ado-md.md)集中的数据的源。  

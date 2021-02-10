@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ebacade44d53ddf142f22f9e30bce140e375592
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0f6d10db3da5ea8c1b6d5daba3062e53d2f35244
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170215"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051338"
 ---
 # <a name="sqlstate-property"></a>SQLState 属性
 指示给定 [错误](./error-object.md) 对象的 SQL 状态。  

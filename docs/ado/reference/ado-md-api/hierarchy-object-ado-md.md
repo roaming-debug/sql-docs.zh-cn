@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1370f83c4214047038eadf4b84813f0b48c3b72
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4f84fe2157e9da38ad55a56334436a5d54128823
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164546"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051148"
 ---
 # <a name="hierarchy-object-ado-md"></a>层次结构对象 (ADO MD)
 表示一个 [维度](./dimension-object-ado-md.md) 成员可以聚合或 "汇总" 的方式。 可以在一个或多个层次结构上聚合维度。  
