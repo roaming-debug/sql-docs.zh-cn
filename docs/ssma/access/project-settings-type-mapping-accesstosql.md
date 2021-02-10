@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8c39bc03cb6a1da09c7be6aac41c18b9d3bbd871
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2fc9bbd8092c98d21263d3972ab04d90888fcbae
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987523"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066382"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a> (类型映射的项目设置)  (AccessToSQL) 
 "类型映射项目设置" 允许您为 SSMA 项目设置默认的类型映射。 还可以为单个数据库对象指定类型映射。 有关详细信息，请参阅 [映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)。  
@@ -57,7 +57,7 @@ ms.locfileid: "91987523"
 |**longbinary**|**varbinary(max)**|  
 |**"**|**nvarchar(max)**|  
 |**备注** -Access 97|**varchar(max)**|  
-|single|**real**|  
+|**single**|**real**|  
 |**文本 [ \* ... \* ]**|**nvarchar [ \* ]**|  
 |**text [ \* ... \* ]** -Access 97|**varchar [ \* ]**|  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9942d2ee78932c3bb8bed2baac0885b68e40049d
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 489a026fe610b298803db088e7f8c9953215a7c4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869536"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060578"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>将 DB2 架构映射到 SQL Server 架构 (DB2ToSQL) 
 在 DB2 中，每个数据库都有一个或多个架构。 默认情况下，SSMA 将 DB2 架构中的所有对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名为的数据库的架构。 但是，你可以自定义 DB2 架构和数据库之间的映射 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

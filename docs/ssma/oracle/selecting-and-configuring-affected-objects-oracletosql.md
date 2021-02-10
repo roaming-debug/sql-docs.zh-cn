@@ -14,12 +14,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 5cd9ca7c8789133fdbccc3367f3bda121d2499ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8256909a2ebc460da2dd2db826e809dd6dfb50c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418343"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067622"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>选择并配置受影响的对象 (OracleToSQL)
 在此页上，您可以选择表和外键，在 SSMA 验证在上一步中选择的对象的执行结果时应比较的更改。 此外，还可以自定义验证参数。  
@@ -44,7 +44,7 @@ ms.locfileid: "88418343"
   
 -   默认  
   
--   标识  
+-   身份  
   
 -   Nullable  
   
@@ -54,7 +54,7 @@ SQL 选项卡包含所选表的 "创建表" SQL。
 ## <a name="data"></a>数据  
 "数据" 选项卡显示所选表中的数据。  
   
-## <a name="properties"></a>“属性”  
+## <a name="properties"></a>属性  
 "属性" 选项卡显示所选表的属性。 "属性" 选项卡下提供以下字段：  
   
 -   已创建或上次修改  
@@ -76,11 +76,11 @@ SQL 选项卡包含所选表的 "创建表" SQL。
   
 -   如果选择 " **True**"，则在比较小数位数之前，将根据 **比较比例** 值对数值进行舍入。  
   
--   如果选择**False**，则数字比较将是精确的。  
+-   如果选择 **False**，则数字比较将是精确的。  
   
 ### <a name="comparing-scale"></a>比较刻度  
   
--   仅当 " **使用自定义缩放** " 选项设置为 **True**时可用。 这是数值比较的精度。  
+-   仅当 " **使用自定义缩放** " 选项设置为 **True** 时可用。 这是数值比较的精度。  
   
 ### <a name="date-time-comparing"></a>比较日期时间  
 定义日期/时间值的比较方式。  

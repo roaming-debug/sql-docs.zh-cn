@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cc1cdb31969eb94c29a6c58f974aef92c5cdfc62
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: a86ae9cff414e052865cf0efd1ec5c7889877d0f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988649"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066742"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>将 Access 数据迁移到 SQL Server-Azure SQL 数据库 (AccessToSQL) 
 成功将数据库对象创建到后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以将数据从访问迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。  

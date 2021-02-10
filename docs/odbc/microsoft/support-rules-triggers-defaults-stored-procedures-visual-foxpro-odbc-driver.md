@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56b1a2e50f26da8ce5ef581f8eda7c6a96afd741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea801de44e1fce175ac549402e17b9fcc2e9f020
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449109"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061122"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>支持规则、触发器、默认值和存储过程（Visual FoxPro ODBC 驱动程序）
 不能使用 Visual FoxPro ODBC 驱动程序创建视觉 FoxPro 规则、触发器、默认值或存储过程。 但是，当应用程序插入、更新或删除存储在数据库中的 Visual FoxPro 数据时，您的应用程序可能与现有规则、触发器、默认值或存储过程交互。  
@@ -44,7 +44,7 @@ ms.locfileid: "88449109"
  如果您的应用程序与其规则、触发器、默认值或存储过程调用任何其他 Visual FoxPro 命令或函数的数据交互，则驱动程序将生成错误。 有关驱动程序不支持的命令和函数的列表，请参阅 [不受支持的 Visual FoxPro 命令和函数](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) 。  
   
 > [!TIP]  
->  如果要在规则、触发器或存储过程中插入条件代码，以确定驱动程序调用时要执行的命令，则可以使用 **) 函数 ( 版本 ** 。 当驱动程序调用时， **版本 ( ) ** 函数返回 "VISUAL FoxPro ODBC 驱动程序 *\<version>* "。  
+>  如果要在规则、触发器或存储过程中插入条件代码，以确定驱动程序调用时要执行的命令，则可以使用 **) 函数 ( 版本** 。 当驱动程序调用时， **版本 ( )** 函数返回 "VISUAL FoxPro ODBC 驱动程序 *\<version>* "。  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>规则、触发器、默认值和存储过程中支持的 Visual FoxPro 命令和函数  
 

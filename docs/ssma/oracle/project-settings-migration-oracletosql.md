@@ -11,12 +11,12 @@ ms.assetid: fcd6b988-633b-4b2b-9f36-6368b5e86b60
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 02a6df1dd535b6f2549b71680735b070d4f86645
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ee27caa615f26b20a953478095b252e127bcf9c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463233"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067882"
 ---
 # <a name="project-settings-migration-oracletosql"></a>项目设置（迁移）(OracleToSQL)
 " **项目设置** " 对话框的 "迁移" 页包含用于自定义 SSMA 将数据从 Oracle 迁移到的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -36,7 +36,7 @@ ms.locfileid: "88463233"
 > [!IMPORTANT]  
 > 当 " **迁移引擎** " 选项设置为 " **服务器端数据迁移引擎**" 时，将显示一个新的项目设置选项 " **使用32位服务器端数据迁移引擎** "。 它指定是否使用32位或64位大容量复制程序 (BCP) 实用工具来迁移数据。  
   
-## <a name="miscellaneous-options"></a>其他选项  
+## <a name="miscellaneous-options"></a>“杂项”选项  
   
 |术语|定义|  
 |--------|--------------|  

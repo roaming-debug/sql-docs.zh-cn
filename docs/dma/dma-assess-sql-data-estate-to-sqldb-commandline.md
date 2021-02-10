@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: 8688fa61a1ccaede3bd370e1d19ccd66531f5739
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496808"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060932"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD：评估迁移到 Azure SQL 的 SQL Server 数据空间的准备情况 
 
@@ -35,7 +35,7 @@ ms.locfileid: "92496808"
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
-## <a name="prerequisites"></a>先决条件 
+## <a name="prerequisites"></a>必备条件 
 
 若要使用 DMACMD 执行评估并将结果上传到 Azure Migrate 中心，需要以下各项： 
 
@@ -92,7 +92,7 @@ C:\Program Files\Microsoft Data Migration Assistant\DmaCmd.exe /Action=Assess /A
 |**XML 元素** |**定义**  |
 |---------|---------|
 |`AssessmentName`|评估的名称|
-|`AssessmentSourcePlatform`|源 SQL Server 平台。 默认值是 `SqlOnPrem`。|
+|`AssessmentSourcePlatform`|源 SQL Server 平台。 默认值为 `SqlOnPrem`。|
 |`AssessmentTargetPlatform`|目标 SQL Server 平台。  </br> `AzureSqlDatabase` 适用于 Azure SQL 数据库目标。 </br> `ManagedSqlServer` 适用于 Azure SQL 托管实例目标。 </br></br>示例 **AzureSQLMI** 评估 SQL 托管实例目标。|
 |`AssessmentDatabases`|如果需要评估实例中的所有数据库，请仅指定实例名称，或者在每行中列出特定的数据库。 </br></br>示例 **AzureSQLMI** 评估实例中的所有数据库 `Servername\SQL2017` 和实例中的两个特定数据库 `Servername\SQL2016` 。  |
 |`AssessmentResultDma` </br> `AssessmentResultJson` </br> `AssessmentResultCsv` | 指定结果文件的格式。 `.DMA`分别是、 `.JSON` 和 `.CSV` 。 双击 `.DMA` 以在 DMA UI 中打开。 <br> `AssessmentResultDma` 需要将评估结果上载到 Azure Migrate 中心。  |
@@ -103,7 +103,7 @@ C:\Program Files\Microsoft Data Migration Assistant\DmaCmd.exe /Action=Assess /A
 |`AzureMigrateProjectName`|要将评估结果上载到 Azure Migrate 项目名称。|
 |`ResourceGroupName`|Azure Migrate 资源组名称。|
 |`AzureAuthenticationInteractiveAuthentication`|设置为 `true` 以弹出身份验证窗口。|
-|`AzureAuthenticationTenantId`|Azure Active Directory 租户 ID。 </br></br>从[Azure 门户](https://portal.azure.com)中 Azure Active Directory 的 "**概述**" 边栏选项卡获取此项。 |
+|`AzureAuthenticationTenantId`|Azure Active Directory 租户 ID。 </br></br>从 [Azure 门户](https://portal.azure.com)中 Azure Active Directory 的 "**概述**" 边栏选项卡获取此项。 |
 |`EnableAssessmentUploadToAzureMigrate`| 将设置为，将 `true` 评估结果上载并发布到 Azure Migrate 中心。|
 |   |   |
 

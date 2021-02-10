@@ -11,17 +11,17 @@ ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: db1b6f9c7dc71bec58dd101f2fa7cb9f30f7f7ce
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: a57da78a0d73d0b5e2bcd7ccd3e514ce37789f3a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037380"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058882"
 ---
 # <a name="appendix---1-oracletosql"></a>附录 - 1 (OracleToSQL)
 SSMA 控制台命令行选项的快速视图：  
   
-|Sl. 否。|开关|必需？|开关参数|允许的值|  
+|Sl. 否。|交换机|必需？|开关参数|允许的值|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/脚本|是|scriptfile|有效的 XML 文件名。<br /><br />控制台脚本定义文件。|  
 |2|-v/variable|否|variablevaluefile|有效的 XML 文件名。<br /><br />如果脚本文件中使用了变量，则必须指定此文件。|  

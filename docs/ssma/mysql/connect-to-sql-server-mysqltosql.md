@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: de3254b236dc03d7474aefe465aae91bef518f09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 908aee9ddde0bb5ee2d2850ce5f164310953c0b8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372823"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068985"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>连接到 SQL Server (MySQLToSQL)
 使用 " **连接到 SQL Server** " 对话框连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要迁移到的实例。 若要访问 " **连接到 SQL Server** " 对话框，请在 " **文件** " 菜单上，单击 " **连接到 SQL Server**"。  
@@ -28,7 +28,7 @@ ms.locfileid: "88372823"
   
 -   如果要连接到另一台计算机上的默认实例，请输入计算机的名称。  
   
--   如果要连接到另一台计算机上的命名实例，请输入计算机名称、反斜杠和实例名称，例如*MyServer* \\ *MyInstance*。  
+-   如果要连接到另一台计算机上的命名实例，请输入计算机名称、反斜杠和实例名称，例如 *MyServer* \\ *MyInstance*。  
   
 **服务器端口**  
 如果的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未配置为接受默认端口 (1433) 上的连接，请输入端口号。 否则，请将此值留空。  

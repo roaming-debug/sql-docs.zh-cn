@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a1a73e1dbc1c494080427ae5dfd686dd3c18abc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0276efc988eca1674410c31a2f83379ee1e875b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497627"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064972"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>处理 SSMA 项目 (SybaseToSQL)
 若要将 Sybase 自适应服务器企业 (ASE) 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，请先创建一个 SSMA 项目。 项目是一个文件，其中包含有关要迁移到或 SQL Azure 的 ASE 数据库的元数据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或将接收迁移对象和数据的 SQL Azure 的元数据， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或者 SQL Azure 连接信息和项目设置。  
@@ -55,7 +55,7 @@ SSMA 包含多个选项，用于转换和加载数据库对象、迁移数据，
   
 **创建项目**  
   
-1.  在“文件”菜单中，选择“新建项目”。********  
+1.  在“文件”菜单中，选择“新建项目”。  
   
     将显示“新建项目”对话框。  
   
@@ -75,7 +75,7 @@ SSMA 包含多个选项，用于转换和加载数据库对象、迁移数据，
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL Database  
+    -   Azure SQL 数据库  
   
 然后单击 **"确定"**。  
   

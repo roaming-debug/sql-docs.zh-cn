@@ -11,12 +11,12 @@ ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: c0a49116d5f48d2f832cb4c647934951373efaea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af929a4ceeccd69ea8ab19d85089a78641164fef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463200"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063282"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>使用 SSMA for Oracle 控制台 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 现在，可通过命令行通过控制台应用程序访问迁移助手 (SSMA) 版本。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
@@ -25,7 +25,7 @@ ms.locfileid: "88463200"
   
 本部分中涵盖的主题包括：  
   
-|主题|描述|  
+|主题|说明|  
 |-|-|  
 |[SSMA for Oracle Console &#40;OracleToSQL&#41;入门 ](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|说明执行控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项 &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  

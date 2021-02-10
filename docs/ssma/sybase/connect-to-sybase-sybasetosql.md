@@ -1,6 +1,6 @@
 ---
-title: 连接到 Sybase （SybaseToSQL） |Microsoft Docs
-description: 连接到 SAP ASE 实例，开始使用 SSMA for Sybase （SAP ASE）进行迁移。 使用 "连接到 Sybase" 对话框。
+title: 连接到 Sybase (SybaseToSQL) |Microsoft Docs
+description: 连接到 SAP ASE 实例，开始使用 SSMA for Sybase (SAP ASE) 进行迁移。 使用 "连接到 Sybase" 对话框。
 author: nahk-ivanov
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,18 +10,18 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 ms.author: alexiva
-ms.openlocfilehash: 72c6797bfc8d673069cab41002a4a93596d7e5d9
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 8d43e6a48746fbb1587327b430b67c6959731013
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779409"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064092"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>连接到 Sybase (SybaseToSQL)
 
-使用 "**连接到 sybase** " 对话框连接到要迁移的 Sybase 自适应服务器企业（ASE）实例。
+使用 " **连接到 sybase** " 对话框连接到要迁移的 Sybase 自适应服务器企业 (ASE) 实例。
 
-若要访问此对话框，请在 "**文件**" 菜单上选择 "**连接到 Sybase**"。 如果以前已连接，则该命令将**重新连接到 Sybase**。
+若要访问此对话框，请在 " **文件** " 菜单上选择 " **连接到 Sybase**"。 如果以前已连接，则该命令将 **重新连接到 Sybase**。
 
 ## <a name="options"></a>选项
 
@@ -50,12 +50,12 @@ ms.locfileid: "84779409"
 
 **各种提供程序的连接参数如下所示：**
 
-1. **OLE DB 提供程序**的连接参数
+1. **OLE DB 提供程序** 的连接参数
 
    |设置|Sybase 12.5 参数|Sybase 15 参数|
    |-----------|-------------------------|-----------------------|
    |服务器名称|服务器名称|服务器|
-   |端口|服务器端口地址|端口|
+   |Port|服务器端口地址|Port|
    |用户名|用户 ID|用户 ID|
    |密码|密码|密码|
    |提供程序|提供程序|提供程序|
@@ -68,7 +68,7 @@ ms.locfileid: "84779409"
 
    `Server=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=ASEOLEDB;Port=5000;`
 
-2. **ODBC 提供程序**的连接参数
+2. **ODBC 提供程序** 的连接参数
 
    |设置|Sybase 12.5/15 参数|
    |-----------|-----------------------------|
@@ -76,20 +76,20 @@ ms.locfileid: "84779409"
    |服务器名称|服务器|
    |用户名|标识号|
    |密码|Pwd|
-   |端口号|端口|
+   |端口号|Port|
 
    对于 Sybase ASE 12.5 或15，连接字符串的示例如下所示：
 
    `driver=Adaptive Server Enterprise;Server=sybserver;uid=MyUserID;pwd=MyP@$$word;Port=5000;`
 
-3. **ADO.NET 提供程序**的连接参数
+3. **ADO.NET 提供程序** 的连接参数
 
    |设置|Sybase 12.5/15 参数|
    |-----------|-----------------------------|
    |服务器名称|服务器|
    |用户名|标识号|
    |密码|Pwd|
-   |端口号|端口|
+   |端口号|Port|
 
    ADO.NET 提供程序的连接字符串的示例如下所示：
 
@@ -101,4 +101,4 @@ ms.locfileid: "84779409"
 
 ## <a name="next-steps"></a>后续步骤
 
-迁移过程的下一步是[连接到 SQL Server](connect-to-sql-server-sybasetosql.md)。
+迁移过程的下一步是 [连接到 SQL Server](connect-to-sql-server-sybasetosql.md)。

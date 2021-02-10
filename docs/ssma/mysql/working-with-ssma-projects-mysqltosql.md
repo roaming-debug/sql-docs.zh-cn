@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3da213467ad6513d4c25e6888bd095e80746cba7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 92fb1bec694ca29ffe0591eb03012e1ed2ab3f2f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038270"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064362"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>处理 SSMA 项目 (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，必须先创建 SSMA 项目。 项目是包含以下信息的文件：  
@@ -68,7 +68,7 @@ SSMA 包含一些设置，用于转换和加载数据库、迁移数据以及将
   
 ##### <a name="to-create-a-new-project"></a>创建新项目的步骤  
   
-1.  从 "**文件**" 菜单中选择 "**新建项目**"。 将显示“新建项目”对话框。 在“文件”菜单中，选择“新建项目”。******** 将显示“新建项目”对话框。  
+1.  从 "**文件**" 菜单中选择 "**新建项目**"。 将显示“新建项目”对话框。 在“文件”菜单中，选择“新建项目”。 将显示“新建项目”对话框。  
   
 2.  在 " **名称** " 框中，输入项目的名称。  
   
@@ -84,7 +84,7 @@ SSMA 包含一些设置，用于转换和加载数据库、迁移数据以及将
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   Azure SQL Database  
+    -   Azure SQL 数据库  
   
 然后单击 **"确定"**  
   
@@ -106,7 +106,7 @@ SSMA 创建项目文件。
   
 1.  对于显示 " **缺少元数据**" 状态的每个数据库，请选中数据库名称旁边的复选框。 保存元数据可能需要几分钟时间。 如果此时不想保存元数据，请不要选中任何复选框。  
   
-2.  单击“保存”  。  
+2.  单击“ **保存**”。  
   
 SSMA 将分析 MySQL 架构，并将元数据保存到项目文件。  
   

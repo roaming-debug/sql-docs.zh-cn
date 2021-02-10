@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fba0cb8e85556411085a0502364d9b2cd3008ce6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68d2d5369cbed507792b13613ef4f6ca04f8a92d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320233"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065010"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>用户界面参考 (SybaseToSQL)
 本部分包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手用于 Sybase (SSMA) 的帮助主题。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |---------|---------------|  
 |[&#40;SybaseToSQL&#41;的高级对象选择 ](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|使用 " **高级对象选择** " 对话框可以通过使用筛选条件查找数据库对象，然后选择或清除这些对象。|  
 |[评估报表 &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|使用 "评估" 报告查看 Sybase 自适应服务器 Enterprise (ASE) 对象转换为语法的转换结果 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，并估计迁移到或 SQL Azure 的时间和复杂性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 5b59930023da1279e2db18d9e9fce4186c677f8d
-ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
+ms.openlocfilehash: ffb47ee457a03315821fee863816d725f9691ac3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "99978579"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062582"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>确定本地数据库的正确的 Azure SQL 数据库/托管实例 SKU
 
@@ -38,7 +38,7 @@ ms.locfileid: "99978579"
 
 以下说明可帮助你在 Azure 中使用 DMA 来确定 SKU 建议并设置相应的单个数据库 () 或 () 。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 下载并安装最新版本的 [DMA](https://aka.ms/get-dma)。 如果你已经具有该工具的早期版本，请将其打开，系统会提示你升级 DMA。
 - 确保你的计算机具有 [PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 或更高版本，以便运行所有脚本。 有关如何找出计算机上安装的 PowerShell 版本的信息，请参阅 [下载并安装 Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)一文。

@@ -11,12 +11,12 @@ ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 66bb67e64f3b95b78cdcf78d84145df25a02d4b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ecf7edd43af59f2d388f83b118ad8b6a1583b0be
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320173"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067642"
 ---
 # <a name="refresh-from-database-oracletosql"></a>从数据库刷新 (OracleToSQL)
 **通过 "从数据库刷新**" 对话框，您可以从 Oracle 数据库中选择要刷新的对象。 对话框中的行是根据元数据的状态进行颜色编码的：  
@@ -34,19 +34,19 @@ ms.locfileid: "88320173"
 若要访问 **从数据库刷新** 对话框，请在 Oracle 元数据资源管理器中右键单击对象，然后单击 " **从数据库刷新**"。  
   
 ## <a name="options"></a>选项  
-**折叠 (-) **  
+**折叠 (-)**  
 折叠所有对象组以隐藏单个对象。  
   
-**展开 (+) **  
+**展开 (+)**  
 展开 "所有对象组" 以显示单个对象。  
   
 **隐藏/显示相等对象**  
 如果在 Oracle 数据库和 SSMA 中，对象元数据相同，则隐藏列表中的对象。  
   
-**从数据库刷新 (箭头按钮) **  
+**从数据库刷新 (箭头按钮)**  
 使用箭头按钮指定应在 SSMA 中更新所选对象的元数据。  
   
-**不从数据库刷新 (X 按钮) **  
+**不从数据库刷新 (X 按钮)**  
 使用 X 按钮指定不应在 SSMA 中更新所选对象的元数据。  
   
 **图例**  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cc9a5328095f2ef839eb0c9617798299e46371fd
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 154eaa42bf08f622f3e08359f025284752134bc5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987678"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066312"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a> (AccessToSQL) 设置转换和迁移选项
 对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项指定如何转换对象、迁移数据的方式以及源数据类型映射到目标数据类型的方式。 在将对象转换为或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 或将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，请验证配置选项是否适用于项目。  
@@ -60,7 +60,7 @@ SSMA 有四组配置设置和四种配置这些设置的模式：默认、乐观
   
     -   若要指定自定义模式，请在 "**模式**" 框中选择 "**自定义**"，在左窗格中选择一个选项，单击右窗格中的 "设置" 或 "值"，然后选择或输入新的设置或值。  
   
-3.  单击“确定”保存设置。****  
+3.  单击“确定”保存设置。  
   
 你还可以自定义当前项目的设置。 这些设置保存到当前项目文件中。  
   
@@ -74,7 +74,7 @@ SSMA 有四组配置设置和四种配置这些设置的模式：默认、乐观
   
     -   若要指定自定义模式，请在 "**模式**" 框中选择 "**自定义**"，在左窗格中选择一个选项，单击右窗格中的 "设置" 或 "值"，然后选择或输入新的设置或值。  
   
-3.  单击“确定”保存设置。****  
+3.  单击“确定”保存设置。  
   
 ## <a name="next-steps"></a>后续步骤  
 迁移的下一步取决于你的项目需求：  

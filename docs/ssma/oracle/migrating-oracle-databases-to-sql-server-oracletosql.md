@@ -11,12 +11,12 @@ ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 98070662e3e097aea0edc6c0879a8c63e4bb5850
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: df5bd55fb9c5490b8063712dbebe5328917e08b6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005868"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063342"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>将 Oracle 数据库迁移到 SQL Server (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 迁移助手 (SSMA) 是一个全面的环境，可帮助你快速将 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE SQL Database 或 Azure Synapse Analytics。 通过使用 SSMA for Oracle，你可以查看数据库对象和数据、评估要迁移的数据库、将数据库对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、AZURE SQL 数据库或 Azure Synapse analytics，然后将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure sql Database 或 Azure Synapse 分析。 请注意，不能迁移系统和 Oracle 架构。

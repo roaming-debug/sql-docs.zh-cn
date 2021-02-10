@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 39a099eb243d767d18402bcd6baeb6280dbeaad4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b532fddbc5eda07ab38aedcb806347846cc0ac59
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418273"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068762"
 ---
 # <a name="project-settings-azure-sql-database--sybasetosql"></a> (Azure SQL 数据库的项目设置 )  (SybaseToSQL) 
 利用 Azure SQL 数据库项目设置，你可以配置要添加到连接对话框中的 Azure SQL 数据库数据库后缀，还允许在 Azure SQL 数据库连接中实施检测信号机制。  

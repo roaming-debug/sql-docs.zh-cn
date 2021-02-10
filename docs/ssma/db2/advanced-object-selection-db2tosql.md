@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1ba26b622fcb566bd49a72b8823b363859d76181
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1db117e63b4f9a5a31f0dbc9bbc67adc89b158ac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463509"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065983"
 ---
 # <a name="advanced-object-selection-db2tosql"></a> (DB2ToSQL) 的高级对象选择
 通过 " **高级对象部分** " 对话框，您可以使用对象名称中的字符串和子字符串筛选数据库对象，然后选择或取消选择这些对象。 SSMA 对所选对象执行转换和迁移操作。  
@@ -42,7 +42,7 @@ ms.locfileid: "88463509"
 **仅显示已加载项**  
 切换类别或项的显示。 选择此按钮后，SSMA 将显示与筛选条件匹配的所有项以及之前加载的项。 如果未选择此按钮，SSMA 会显示类别文件夹。  
   
-**筛选器**  
+**Filter**  
 输入要用于筛选项的字符串。 例如，若要查找项目名称中包含字符串 "ID" 的所有可用项，请在 " **筛选器** " 框中输入字符串 "id"。  
   
 如果项与筛选条件匹配，则键入字符串时将显示类别或项。 若要查看匹配项，我们建议您单击 " **仅显示已加载项** " 按钮。  

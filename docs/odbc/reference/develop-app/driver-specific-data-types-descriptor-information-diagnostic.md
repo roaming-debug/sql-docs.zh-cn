@@ -1,6 +1,6 @@
 ---
 description: 特定于驱动程序的数据类型、描述符类型、信息类型、诊断类型和属性
-title: 特定于驱动程序的类型-数据、描述符、信息、诊断 |Microsoft Docs
+title: Driver-Specific 类型-数据、描述符、信息、诊断 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a0ac3fd67e07f23f14420ee46ccda5cd409f87a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03cd6b0ed9a424a161f88f4bd525941895d3d201
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483000"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062562"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>特定于驱动程序的数据类型、描述符类型、信息类型、诊断类型和属性
 驱动程序可以为以下各项分配特定于驱动程序的值：  
   
--   **SQL 数据类型指示器**在**SQLBindParameter**中的*ParameterType*和**SQLGetTypeInfo**中的*数据类型*中使用这些方法， **SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、 **SQLGetTypeInfo**、 **SQLDescribeParam**、 **SQLProcedureColumns**和**SQLSpecialColumns**返回这些数据。  
+-   **SQL 数据类型指示器** 在 **SQLBindParameter** 中的 *ParameterType* 和 **SQLGetTypeInfo** 中的 *数据类型* 中使用这些方法， **SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、 **SQLGetTypeInfo**、 **SQLDescribeParam**、 **SQLProcedureColumns** 和 **SQLSpecialColumns** 返回这些数据。  
   
--   **描述符字段**这些在**SQLColAttribute**、 **SQLGetDescField**和**SQLSetDescField**的*FieldIdentifier*中使用。  
+-   **描述符字段** 这些在 **SQLColAttribute**、 **SQLGetDescField** 和 **SQLSetDescField** 的 *FieldIdentifier* 中使用。  
   
--   **诊断字段**这些在**SQLGetDiagField**和**SQLGetDiagRec**的*DiagIdentifier*中使用。  
+-   **诊断字段** 这些在 **SQLGetDiagField** 和 **SQLGetDiagRec** 的 *DiagIdentifier* 中使用。  
   
--   **信息类型**在**SQLGetInfo**的*InfoType*中使用这些。  
+-   **信息类型** 在 **SQLGetInfo** 的 *InfoType* 中使用这些。  
   
--   **连接和语句属性**它们用于**SQLGetConnectAttr**、 **SQLGetStmtAttr**、 **SQLSetConnectAttr**和**SQLSetStmtAttr**的*特性*中。  
+-   **连接和语句属性** 它们用于 **SQLGetConnectAttr**、 **SQLGetStmtAttr**、 **SQLSetConnectAttr** 和 **SQLSetStmtAttr** 的 *特性* 中。  
   
  对于上述每个项，有两组值：保留供 ODBC 使用的值，以及保留供驱动程序使用的值。 在实现驱动程序特定的值之前，驱动程序编写器必须为打开的组中的每个特定于驱动程序的类型、字段或属性请求一个值。 对于新的驱动程序开发，请使用下表中所述的范围。 如果使用的值不在下面所述的范围内，ODBC 3.8 驱动程序管理器将不会生成错误。 但是，如果收到的未知值不在范围内，驱动程序管理器的更高版本可能会生成错误。  
   

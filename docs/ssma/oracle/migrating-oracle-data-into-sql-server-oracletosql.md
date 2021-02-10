@@ -14,12 +14,12 @@ ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 5b22dfee8112beb7419408dfc8a3dcadf53c631d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: a63fcd49d37e47485ed82c3b75514b5c1b7d48cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035160"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063300"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>将 Oracle 数据迁移到 SQL Server (OracleToSQL)
 使用成功同步转换后的对象后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以将数据从 Oracle 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -32,7 +32,7 @@ ms.locfileid: "92035160"
   
 -   使用此对话框，您可以设置迁移批大小、表锁定、约束检查、null 值处理和标识值处理等选项。 有关项目迁移设置的详细信息，请参阅 [ (迁移的项目设置)  (OracleToSQL) ](./project-settings-migration-oracletosql.md)。  
   
--   使用 "**项目设置**" 对话框中的**迁移引擎**，用户可以使用两种类型的数据迁移引擎来执行迁移过程：  
+-   使用 "**项目设置**" 对话框中的 **迁移引擎**，用户可以使用两种类型的数据迁移引擎来执行迁移过程：  
   
     1.  客户端数据迁移引擎  
   
@@ -42,10 +42,10 @@ ms.locfileid: "92035160"
   
 -   若要在客户端启动数据迁移，请在 "**项目设置**" 对话框中选择 "**客户端数据迁移引擎**" 选项。  
   
--   在 **项目设置**中，设置了 **客户端数据迁移引擎** 选项。  
+-   在 **项目设置** 中，设置了 **客户端数据迁移引擎** 选项。  
   
     > [!NOTE]  
-    > **客户端数据迁移引擎**驻留在 SSMA 应用程序中，因此不依赖于扩展包的可用性。  
+    > **客户端数据迁移引擎** 驻留在 SSMA 应用程序中，因此不依赖于扩展包的可用性。  
   
 **服务器端数据迁移：**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "92035160"
   
     **客户端数据迁移：**  
   
-    -   若要执行**客户端数据迁移**，请在 "**项目设置**" 对话框中选择 "**客户端数据迁移引擎**" 选项。  
+    -   若要执行 **客户端数据迁移**，请在 "**项目设置**" 对话框中选择 "**客户端数据迁移引擎**" 选项。  
   
     **服务器端数据迁移：**  
   
@@ -86,7 +86,7 @@ ms.locfileid: "92035160"
   
         2.  SQL Server 代理服务正在 SQL Server 的实例上运行。  
   
-    -   对于执行**服务器端数据迁移**，请在 "**项目设置**" 对话框中选择 "**服务器端数据迁移引擎**" 选项。  
+    -   对于执行 **服务器端数据迁移**，请在 "**项目设置**" 对话框中选择 "**服务器端数据迁移引擎**" 选项。  
   
 4.  在 Oracle 元数据资源管理器中右键单击 " **架构** "，然后单击 " **迁移数据**"。 您还可以迁移各个对象或对象类别的数据：右键单击对象或其父文件夹;选择 " **迁移数据** " 选项。  
   

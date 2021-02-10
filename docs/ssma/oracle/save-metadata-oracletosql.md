@@ -11,12 +11,12 @@ ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ceac171c2eed43e1ee0c1feff2db9a3b4f21e7e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51226304bfd8201a841a38a2c95b1c4973225ffb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492320"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067632"
 ---
 # <a name="save-metadata--oracletosql"></a>保存元数据 (OracleToSQL)
 保存 **元数据** 对话框会提示您在保存之前将元数据加载到 SSMA 项目中。 这样，你就可以拥有一个完整的项目文件，你可以脱机使用该文件并将其发送给其他人，例如技术支持人员。  
@@ -35,7 +35,7 @@ SSMA 根据需要将元数据加载到项目中。 浏览元数据和转换架�
 **全选**  
 选择所有列出的数据库。  
   
-**Clear**  
+**清除**  
 清除缺少元数据的所有数据库的复选框。 如果已加载元数据，则不能清除此复选框。  
   
 **保存**  

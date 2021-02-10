@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5bf7a2ac886165fa4228f78394065124a05bb67a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f5193218e5bd8d1725c6d887284c6473e15eef5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372383"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063162"
 ---
 # <a name="assessment-report-sybasetosql"></a>评估报表 (SybaseToSQL)
 "评估报告" 窗口显示了将数据库对象转换为语法的结果 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，还可以帮助您估算迁移项目的复杂性和成本。  

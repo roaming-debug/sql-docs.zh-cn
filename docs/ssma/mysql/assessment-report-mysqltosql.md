@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6db16aab94dccd4d347325af36c9957f19168059
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3b132af2d42f22ebcda82eae8e3649fd45026595
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320613"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069132"
 ---
 # <a name="assessment-report-mysqltosql"></a>评估报表 (MySQLToSQL)
 "评估报告" 窗口显示了将数据库对象转换为语法的结果 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，还可以帮助您估算迁移项目的复杂性和成本。  
@@ -26,7 +26,7 @@ ms.locfileid: "88320613"
   
 |||  
 |-|-|  
-|**术语**|**定义**|  
+|**条款**|**定义**|  
 |**转换统计信息**|按语句类型显示转换统计信息。 如果在左窗格中选择了组对象（如架构）或没有代码的对象，则将显示此窗格。|  
 |**按类别分类的对象**|按类别显示对象的数量。 此窗格仅在左窗格中选择了组对象（如架构）或没有代码的对象时可见。|  
 |**统计信息**|显示所选对象的转换统计信息。 仅当在左窗格中选择了具有代码的单个对象时，才会显示此窗格。 你可能需要展开 " **统计信息**" （位于 **源** 窗格的紧上方）才能查看此窗格。|  

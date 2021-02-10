@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e13eba0-e3cf-4205-974f-c00f982061de
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bea3b1c684457bc794d1b35d3a7985b79da41bef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 56e4d034fde766784fb218429e1cf5a5a5e01b73
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418513"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065922"
 ---
 # <a name="assessment-report-db2tosql"></a>评估报表 (DB2ToSQL) 
 "评估报告" 窗口显示了将数据库对象转换为语法的结果 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，还可以帮助您估算迁移项目的复杂性和成本。  

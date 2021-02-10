@@ -11,12 +11,12 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 9d44b04aba4d1ea1fa437bbd3b957178b361a4db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc811575dd845be43aef7a9398d8b4fb3458db1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418433"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067712"
 ---
 # <a name="running-test-cases-oracletosql"></a>运行测试用例 (OracleToSQL)
 当 SSMA 测试人员运行测试用例时，它将执行选择用于测试的对象，并创建有关验证结果的报表。 如果两个平台上的结果相同，则测试已成功。 Oracle 和之间对象的对应关系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据当前 SSMA 项目的架构映射设置来确定。  
@@ -26,7 +26,7 @@ ms.locfileid: "88418433"
 ## <a name="run-test-case"></a>运行测试用例  
 运行准备的测试用例：  
   
-1.  单击“运行”**** 按钮。  
+1.  单击“运行”按钮。  
   
 2.  在 " **连接到 Oracle** " 对话框中，输入连接信息，然后单击 " **连接**"。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "88418433"
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
 SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如果未满足某些条件，则会显示错误消息。  
   
 ### <a name="initialization"></a>初始化  
@@ -42,32 +42,32 @@ SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如�
   
 假定验证的表名为 USER_TABLE。 对于此类表，将在 Oracle 中创建以下辅助对象。  
   
-|名称|类型|描述|  
+|名称|类型|说明|  
 |-|-|-|  
 |USER_TABLE $ .Trg|触发器|触发审核已验证表中的更改。|  
 |USER_TABLE $ AUD|表|其中保存已删除和覆盖的行的表。|  
 |USER_TABLE $ AUDID|表|其中保存新行和更改行的表。|  
-|USER_TABLE|查看|简化表修改的表示形式。|  
-|USER_TABLE $ NEW|查看|简化的插入和覆盖的行的表示形式。|  
-|USER_TABLE $ NEW_ID|查看|已插入和已更改行的标识。|  
-|USER_TABLE $ OLD|查看|简化的已删除和覆盖的行的表示形式。|  
+|USER_TABLE|view|简化表修改的表示形式。|  
+|USER_TABLE $ NEW|view|简化的插入和覆盖的行的表示形式。|  
+|USER_TABLE $ NEW_ID|view|已插入和已更改行的标识。|  
+|USER_TABLE $ OLD|view|简化的已删除和覆盖的行的表示形式。|  
   
 以下对象是在的已验证表的架构中创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-|名称|类型|描述|  
+|名称|类型|说明|  
 |-|-|-|  
 |USER_TABLE $ .Trg|触发器|触发审核已验证表中的更改。|  
   
 在 ssmatesterdb 数据库的中创建了以下对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-|名称|类型|描述|  
+|名称|类型|说明|  
 |-|-|-|  
 |USER_TABLE $ Aud|表|其中保存已删除和覆盖的行的表。|  
 |USER_TABLE $ AudID|表|其中保存新行和更改行的表。|  
-|USER_TABLE|查看|简化表修改的表示形式。|  
-|USER_TABLE $ new|查看|简化的插入和覆盖的行的表示形式。|  
-|USER_TABLE $ new_id|查看|已插入和已更改行的标识。|  
-|USER_TABLE $ old|查看|简化的已删除和覆盖的行的表示形式。|  
+|USER_TABLE|view|简化表修改的表示形式。|  
+|USER_TABLE $ new|view|简化的插入和覆盖的行的表示形式。|  
+|USER_TABLE $ new_id|view|已插入和已更改行的标识。|  
+|USER_TABLE $ old|view|简化的已删除和覆盖的行的表示形式。|  
   
 ### <a name="test-object-calls"></a>测试对象调用  
 在此步骤中，SSMA 测试人员调用为测试选择的每个对象，比较结果，并显示报表。  

@@ -11,12 +11,12 @@ ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1d97fd4a9aa4c92fe1e6376b4b472519b89e4bc7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db938314a0c0700c72ac23580d36a5fc0f0c6633
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492404"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059340"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>连接到 SQL Server (OracleToSQL)
 使用 " **连接到 SQL Server** " 对话框连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要迁移到的实例。 若要访问 " **连接到 SQL Server** " 对话框，请在 " **文件** " 菜单上，单击 " **连接到 SQL Server**"。  
@@ -29,7 +29,7 @@ ms.locfileid: "88492404"
   
 -   如果要连接到另一台计算机上的默认实例，请输入计算机的名称。  
   
--   如果要连接到另一台计算机上的命名实例，请输入计算机名称、反斜杠和实例名称，例如*MyServer* \\ *MyInstance*。  
+-   如果要连接到另一台计算机上的命名实例，请输入计算机名称、反斜杠和实例名称，例如 *MyServer* \\ *MyInstance*。  
   
 **服务器端口**  
 如果的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未配置为接受默认端口 (1433) 上的连接，请输入端口号。 否则，请将此值留空。  

@@ -11,12 +11,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 2bab82a2fe9cc10b100cc49a4f18c1aa0bfaacff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb02391afdcb082e69d4848c47d5f4caabd8e8cf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492500"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065994"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>使用 SSMA 访问控制台 (AccessToSQL) 
 现在可通过命令行通过控制台应用程序访问 Microsoft SQL Server 迁移助手 (SSMA) 。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9266aa52fe59439ea91f071f134bbe5680aa5e8b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 970fd2ff22c73363c2450952725777a94fb72741
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988459"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069352"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>使用 SSMA for Oracle Console (DB2ToSQL) 
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 现在，可以通过命令行中的控制台应用程序访问 DB2 的迁移助手 (SSMA) 版本。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  

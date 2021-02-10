@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b157d1764889b287cd2150468af943bbe11e610b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51b60367cd773ecddf75d2c24676eefe835180e8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454209"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060442"
 ---
 # <a name="global-settings-dialogs-db2tosql"></a>全局设置 (对话框)  (DB2ToSQL) 
 使用 " **全局设置** " 对话框的 "对话框" 页可以指定 SSMA 的默认用户操作和警告设置。  

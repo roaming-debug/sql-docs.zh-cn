@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: c7443ed363a4968415b651e460bbc4f69cb7415b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0e52cf31a94f2fd63f92305b80f7f7ae049c2809
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951102"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066442"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示符下运行数据库实验助手
 
@@ -28,7 +28,7 @@ ms.locfileid: "87951102"
    >
    > `Deacmd.exe -o <operation> --help`
    >
-   > 需要操作名称;有效的操作为**分析**、 **StartCapture**和**StopCapture**。
+   > 需要操作名称;有效的操作为 **分析**、 **StartCapture** 和 **StopCapture**。
 
 ## <a name="start-a-new-workload-capture-by-using-the-dea-command"></a>使用 DEA 命令启动新的工作负荷捕获
 
@@ -44,7 +44,7 @@ ms.locfileid: "87951102"
 
 使用命令启动新的工作负荷捕获时 `Deacmd.exe` ，可以使用以下附加选项：
 
-| 选项| 描述 |  
+| 选项| 说明 |  
 | --- | --- |
 | -n, --name | 请求跟踪文件名 |
 | -x，--format | 请求trace 的格式 (Trace = 0，XEvents = 1)  |
@@ -115,7 +115,7 @@ ms.locfileid: "87951102"
 
 使用 DEA 命令分析跟踪时，可以使用以下附加选项：
 
-| 选项| 描述 |  
+| 选项| 说明 |  
 | --- | --- |
 | -a，--traceA | 请求实例的事件文件的文件路径。 示例 C:\traces\Sql2008trace.trc。  如果有一批文件，请选择第一个文件，DEA 将自动检查滚动更新文件。 如果文件在 blob 中，则提供要在其中存储事件文件的文件夹路径。  示例 C:\traces\ |
 | -b，--traceB | 请求B 实例的事件文件的文件路径。 示例 C:\traces\Sql2014trace.trc。 如果有一批文件，请选择第一个文件，DEA 将自动检查滚动更新文件。 如果文件在 blob 中，则提供要在其中存储事件文件的文件夹路径。  示例 C:\traces\ |
@@ -132,6 +132,6 @@ ms.locfileid: "87951102"
 | --阿尔 | 使用 SAS 密钥的实例的 Blob URL |
 | --bbu | 带有 SAS 密钥的 B 实例的 Blob URL |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- 有关使用 DEA 的详细信息，请参阅[数据库实验助手概述](database-experimentation-assistant-overview.md)。
+- 有关使用 DEA 的详细信息，请参阅 [数据库实验助手概述](database-experimentation-assistant-overview.md)。

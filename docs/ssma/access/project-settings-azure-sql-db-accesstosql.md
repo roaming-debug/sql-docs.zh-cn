@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9954fe012158526e87bd30512b13eca0314bc00e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6fa8b7f9940327d3a45c3b4f349892ae253f4738
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418543"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066452"
 ---
 # <a name="project-settings-azure-sql-database-accesstosql"></a> (Azure SQL 数据库的项目设置)  (AccessToSQL) 
 通过 SQL Azure 项目设置，你可以配置要添加到连接对话框中的 Azure SQL 数据库后缀，还允许在 SQL Azure 连接中实现检测信号机制。  

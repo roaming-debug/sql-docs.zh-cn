@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 34e0a493140a31099dc4b9ed9f6234743bf0c8c1
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 19fca27ba0606a8e56c1594df852edbc439e7a92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235364"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064962"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>入门用于 Sybase 控制台的 SSMA (SybaseToSQL) 
 本部分介绍了启动和启动用于 Sybase 控制台应用程序的 SSMA 的过程。 本文还列出了在典型的 SSMA 控制台输出窗口中使用的约定。  
@@ -57,11 +57,11 @@ ms.locfileid: "93235364"
   
 下表显示了控制台输出的颜色解释：  
   
-|颜色|说明|  
+|Color|说明|  
 |---------|---------------|  
 |红色|执行过程中出现错误|  
 |灰色|日期和时间戳，向用户发送消息|  
-|白色|脚本文件命令，消息类型|  
+|White|脚本文件命令，消息类型|  
 |Yellow|警告|  
 |绿色|提示输入用户-输入|  
 |蓝|操作的开始时间、完成时间和结果|  

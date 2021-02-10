@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9b1d9148572823e8cd274fe2812e46b2a84320a3
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 751e0b7b55c9d6fa6a5f0a9d0d1d93a222e59ed4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988153"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065962"
 ---
 # <a name="appendix---1-db2tosql"></a>附录 1 (DB2ToSQL) 
 SSMA 控制台命令行选项的快速视图：  
   
-|Sl. 错误。|开关|必需？|开关参数|允许的值|  
+|Sl. 否。|交换机|必需？|开关参数|允许的值|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/脚本|是|scriptfile|有效的 XML 文件名。<br /><br />控制台脚本定义文件。|  
 |2|-v/variable|否|variablevaluefile|有效的 XML 文件名。<br /><br />如果脚本文件中使用了变量，则必须指定此文件。|  

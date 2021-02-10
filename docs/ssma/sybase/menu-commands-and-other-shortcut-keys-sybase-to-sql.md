@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 774c1260d3ffcd6797c1e0a1a6d3a88103ae3f5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0b27d3ffcab6f13f41bcf354cf966302425906e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480358"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067472"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>菜单命令和其他快捷键 (Sybase SQL)
 以下各节介绍访问菜单命令的键盘快捷方式，以及用于 Sybase 应用程序的 SSMA 的各种对话框中使用的其他快捷键。  

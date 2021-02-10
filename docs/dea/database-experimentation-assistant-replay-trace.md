@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: b91385f587668b17bd9cde9f173cebacce48dc91
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 105f471afc10e03c8d6371aa22cce1f6e74ca8c1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489541"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065912"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>在数据库实验助手中重播跟踪
 
@@ -163,6 +163,6 @@ UNC 路径与 Distributed Replay 不兼容。 Distributed Replay 路径必须是
   
 此问题已在 2017 SQL Server 的最新累积更新1中解决。 下载 [SQL Server 2017 的累积更新 1](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)的最新版本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - 若要创建分析报表来帮助获取有关建议更改的信息，请参阅 [创建报表](database-experimentation-assistant-create-report.md)。

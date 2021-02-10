@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d609900151e7ced05be4cc92e65c06270b6ef8a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9c19e60d2b4b30724dc750f3a99a604334a2155
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426919"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069232"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用示例控制台脚本文件 (DB2ToSQL) 
 提供了一些示例文件，其中包含有关用户参考和使用情况的产品。 本部分介绍了如何轻松地自定义这些脚本以满足最终用户需求。  
@@ -37,7 +37,7 @@ ms.locfileid: "88426919"
   
     -   此示例为源数据库和目标数据库提供了不同的连接模式，用户可以根据需要选择任何模式。 此示例包含服务器定义。  
   
-    -   用户只需将值更改为所需的源和目标服务器定义，就可以连接到所需的数据库。 在本示例中，提供了所有值作为可在 **VariableValueFileSample.xml**中使用的变量值。  可以从用户的工作服务器连接文件中删除所有其他连接参数。  
+    -   用户只需将值更改为所需的源和目标服务器定义，就可以连接到所需的数据库。 在本示例中，提供了所有值作为可在 **VariableValueFileSample.xml** 中使用的变量值。  可以从用户的工作服务器连接文件中删除所有其他连接参数。  
   
     -   有关连接到源服务器和目标服务器的详细信息，请参阅 [创建服务器连接文件 &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md) 。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "88426919"
   
     有关生成报表的详细信息，请参阅 [&#40;DB2ToSQL&#41;中生成报表 ](../../ssma/db2/generating-reports-db2tosql.md)。  
   
-    **注意：**  
+    注意：  
   
     确保将变量值 "文件" 命令行参数传递到控制台应用程序，并以用户指定的值更新 VariableValueFileSample.xml。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "88426919"
   
 5.  **ConversionAndDataMigrationSample.xml：** 使用此示例，用户可以执行端到端迁移，从转换到数据迁移。 下面列出了需要更改的必需属性值的列表：  
   
-    |命令名：|描述|Attribute|  
+    |命令名：|说明|属性|  
     |----------------|---------------|-------------|  
     |`map-schema`|将源数据库映射到目标架构的架构。|`source-schema:` 指定需要转换的源数据库。<br /><br />`sql-server-schema`：指定要迁移到的目标数据库|  
     |`convert-schema`|执行从源到目标架构的架构转换。<br /><br />如果用户必须评估多个对象/数据库，他可以指定多个 `metabase-object` 节点，如 `convert-schema` 示例控制台脚本文件的命令示例4中所示。|`object-name`：指定需要转换的源数据库/对象名称。 确保 `object-type` 根据在中指定的对象类型更改相应的 `object-name`|  

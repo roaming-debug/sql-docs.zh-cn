@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 63952d4e46b1c25e49e7f29f8da1e23543232cb7
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: a7390c30cd245a3f8a46784ec12e97752173a629
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988503"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066472"
 ---
 # <a name="project-settings-conversion-accesstosql"></a> (转换的项目设置)  (AccessToSQL) 
 转换项目设置使你可以配置如何将对象从 Access 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库对象。  
@@ -84,7 +84,7 @@ ms.locfileid: "91988503"
   
 -   **完整模式**：错误  
   
-**当复杂查询使用通配符 (#42 时发出警告 \& ) **  
+**当复杂查询使用通配符 (#42 时发出警告 \& )**  
 在 "输出" 窗格中显示一条警告，并在 SELECT 语句中的列名为通配符 ( * ) 时错误列表。  
   
 -   **默认模式**： True  

@@ -14,12 +14,12 @@ ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a403f515c057349c9717422f99b6de15aede566f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd87502c1eda3dc8d4caf4c654804b164f24f36f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463244"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068032"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>SSMA for Oracle 控制台入门 (OracleToSQL)
 本部分介绍了启动和开始 Oracle 控制台应用程序的过程。 本文还列出了在典型的 SSMA 控制台输出窗口中使用的约定。  
@@ -29,7 +29,7 @@ ms.locfileid: "88463244"
   
 1.  中转到 " **开始** "，然后指向 " **所有程序**"。  
   
-2.  单击 " ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于 Oracle 命令提示符的迁移助手**快捷方式" 快捷方式。  
+2.  单击 " **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于 Oracle 命令提示符的迁移助手** 快捷方式" 快捷方式。  
   
     它显示 "SSMA 控制台使用情况" 菜单和 `(/? Help)` ，以帮助你开始使用控制台应用程序。  
   

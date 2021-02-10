@@ -11,12 +11,12 @@ ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0facd2ecca0ff6cc0a4bc28fe709a7adfc0c5acf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbb47d74535af0dea97842bdf46680a4376c2ba7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320443"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067726"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>项目设置（类型映射）(OracleToSQL)
 " **项目设置** " 对话框的 "类型映射" 页包含用于自定义 SSMA 将 Oracle 数据类型转换为数据类型的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -77,7 +77,7 @@ ms.locfileid: "88320443"
 |双精度|float [53]|  
 |FLOAT|float [53]|  
 |int|int|  
-|integer|int|  
+|整型|int|  
 |long|varchar(max)|  
 |长整型|varbinary(max)|  
 |长整型 [ \* 。8000]<sup>*</sup>|varbinary [*]|  
@@ -98,7 +98,7 @@ ms.locfileid: "88320443"
 |rowid|uniqueidentifier|  
 |signtype|smallint|  
 |smallint|smallint|  
-|string|varchar(max)|  
+|字符串|varchar(max)|  
 |timestamp|datetime2|  
 |带有本地时区的时间戳|datetimeoffset|  
 |带时区的时间戳|datetimeoffset|  
@@ -139,7 +139,7 @@ ms.locfileid: "88320443"
 |float [*。53]|float [*]|  
 |float [54 ...]|float [53]|  
 |int|int|  
-|integer|int|  
+|整型|int|  
 |long|varchar(max)|  
 |长整型|varbinary(max)|  
 |long raw [* .。。8000]|varbinary [*]|  
@@ -235,7 +235,7 @@ ms.locfileid: "88320443"
 |nchar 不同 [*。4000]|nvarchar [*]|  
 |nchar 不同 [4001 ...]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|Number|float [53]|  
+|数字|float [53]|  
 |number [* ... \* ]|数值 [*]|  
 |number [* ... \* ][\*..\*]|数值 [*] [ \* ]|  
 |Numeric|数值 [38] [0]|  

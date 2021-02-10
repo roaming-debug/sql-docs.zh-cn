@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f03b7457d79c573806ffbda2b601f56d0f942a54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2d119ac2c58d0bea25a6f21ba4bf97cb47a8421
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488198"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066362"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>项目设置 (加载对象)  (AccessToSQL) 
 通过 "加载对象" 项目设置，你可以配置如何将 Access 数据库对象与 SQL Server 数据库对象进行同步。  
@@ -32,7 +32,7 @@ ms.locfileid: "88488198"
   
 ##### <a name="misc"></a>杂项  
   
-##### <a name="attempts"></a>多次  
+##### <a name="attempts"></a>尝试次数  
 提供要加载到 SQL Server 中的传递对象数的相关信息。 将对象加载到 SQL Server 通常是在多个阶段中执行的。 在第一次传递中无法加载的对象（如外键）可能会在下一步中成功加载。  
   
 默认情况下，值为2。  

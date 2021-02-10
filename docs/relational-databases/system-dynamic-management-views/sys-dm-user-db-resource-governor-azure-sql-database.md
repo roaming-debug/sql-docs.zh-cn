@@ -21,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 8580ae3857b4c8c7f54599e70134879a076e89ca
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1044577add08fe1c9d6337f67244a185d98db8e4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99131370"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065554"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-sql) 
 
@@ -75,8 +75,8 @@ ms.locfileid: "99131370"
 |**primary_max_log_rate**|bigint|用户工作负荷组级别的最大对数速率（字节/秒）。 资源调控不允许高于此值的日志速率。|
 |**primary_group_min_io**|int|用户工作负荷组的最小 IOPS。 资源调控不会尝试降低低于此值的 IOPS。|
 |**primary_group_max_io**|int|用户工作负荷组的最大 IOPS。 资源调控不允许高于此值的 IOPS。|
-|**primary_group_min_cpu**|float|用户工作负荷组级别的最小 CPU 百分比。 资源调控不会尝试降低低于此值的 CPU 利用率。|
-|**primary_group_max_cpu**|float|用户工作负荷组级别的最大 CPU 百分比。 资源调控不会允许 CPU 利用率高于此值。|
+|**primary_group_min_cpu**|FLOAT|用户工作负荷组级别的最小 CPU 百分比。 资源调控不会尝试降低低于此值的 CPU 利用率。|
+|**primary_group_max_cpu**|FLOAT|用户工作负荷组级别的最大 CPU 百分比。 资源调控不会允许 CPU 利用率高于此值。|
 |**primary_log_commit_fee**|int|用户工作负荷组的日志费率调控提交费用（以字节为单位）。 提交费用会按固定值增加每个日志 IO 的大小，以仅用于日志速率记帐。 不会增加实际的日志 IO 到存储。|
 |**primary_pool_max_workers**|int|用户工作负荷资源池的工作线程限制。|
 |**pool_max_io**|int|用户工作负荷资源池的最大 IOPS 限制。|

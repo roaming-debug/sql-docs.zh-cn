@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a1a3c415e8c13bf0ed1eaf4c75baf0230544964c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c1f34f19034042d542cba2d81a55bf32288058e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492218"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067515"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>完成测试用例准备 (SybaseToSQL)
 向导的最后一页显示测试用例说明以及有关测试中涉及的对象的信息。 此外，在此页上，您可以设置测试执行选项。  
   
-**测试用例信息**部分显示了测试用例的名称和说明。  
+**测试用例信息** 部分显示了测试用例的名称和说明。  
   
 " **测试对象** " 部分包含按对象类型分组的已测试对象的命名列表。  
   

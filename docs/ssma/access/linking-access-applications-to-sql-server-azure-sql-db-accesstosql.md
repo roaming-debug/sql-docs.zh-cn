@@ -24,12 +24,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 53fbbd5a865594f46eacb75c9799b9c956efb2da
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938387"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059018"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>将访问应用程序链接到 SQL Server-Azure SQL 数据库 (AccessToSQL) 
 如果要将现有的 Access 应用程序用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以将原始访问表链接到已迁移 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的表。 链接会修改你的 Access 数据库，以便你的查询、窗体、报表和数据访问页使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库中的数据，而非 access 数据库中的数据。  
@@ -47,9 +47,9 @@ ms.locfileid: "87938387"
   
 1.  在 "Access 元数据资源管理器" 中，选择要链接的表。  
   
-2.  右键单击 "**表**"，然后选择 "**链接**"。  
+2.  右键单击 " **表**"，然后选择 " **链接**"。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手 (SSMA) 的访问权限备份原始访问表并创建链接表。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手 (SSMA) 的访问权限备份原始访问表并创建链接表。  
   
 链接表后，SSMA 中的表将显示一个小链接图标。 在 Access 中，表以 "链接的" 图标显示，它是一个指向它的箭头。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "87938387"
   
 > [!IMPORTANT]  
 > 若要将 access 表链接到 Azure 数据库，需要 SQL Server Native Client (SNAC) 版本10.5 或更高版本。   
-> 你可以从[Microsoft® SQL Server® 2008 R2 功能包](https://www.microsoft.com/download/details.aspx?id=44272)中获取 SNAC 的最新版本。  
+> 你可以从 [Microsoft® SQL Server® 2008 R2 功能包](https://www.microsoft.com/download/details.aspx?id=44272)中获取 SNAC 的最新版本。  
   
 ## <a name="unlinking-access-tables"></a>取消链接访问表  
 在从或 SQL Azure 表中取消链接访问表时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，SSMA 将还原原始访问表及其数据。  
@@ -66,7 +66,7 @@ ms.locfileid: "87938387"
   
 1.  在 "Access 元数据资源管理器" 中，选择要取消链接的表。  
   
-2.  右键单击 "**表**"，然后选择 "**取消链接**"。  
+2.  右键单击 " **表**"，然后选择 " **取消链接**"。  
   
 ## <a name="linking-tables-to-a-different-server"></a>将表链接到不同的服务器  
 如果已将 Access 表链接到一个 SQL Server 实例，并且稍后要更改到另一个实例的链接，则必须重新链接这些表。  
@@ -75,15 +75,15 @@ ms.locfileid: "87938387"
   
 1.  在 "Access 元数据资源管理器" 中，选择要取消链接的表。  
   
-2.  右键单击 "**表**"，然后选择 "**取消链接**"。  
+2.  右键单击 " **表** "，然后选择 " **取消链接**"。  
   
-3.  单击 "**重新连接到 SQL Server** " 按钮。  
+3.  单击 " **重新连接到 SQL Server** " 按钮。  
   
 4.  连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要将访问表链接到的实例或 SQL Azure。  
   
 5.  在 "Access 元数据资源管理器" 中，选择要链接的表。  
   
-6.  右键单击 "**表**"，然后选择 "**链接**"。  
+6.  右键单击 " **表**"，然后选择 " **链接**"。  
   
 ## <a name="updating-linked-tables"></a>更新链接表  
 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 表定义发生更改，则可以使用本主题前面所述的过程取消链接，然后重新链接 SSMA 中的表。 还可以通过使用 Access 来更新表。  
@@ -92,9 +92,9 @@ ms.locfileid: "87938387"
   
 1.  打开 Access 数据库。  
   
-2.  在 "**对象**" 列表中，单击 "**表**"。  
+2.  在 " **对象** " 列表中，单击 " **表**"。  
   
-3.  右键单击链接表，然后选择 "**链接表管理器**"。  
+3.  右键单击链接表，然后选择 " **链接表管理器**"。  
   
 4.  选中要更新的每个链接表旁边的复选框，然后单击 **"确定"**。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "87938387"
   
 **解决方法：** 将运行速度慢的查询转换为传递查询、存储过程或视图。 转换为传递查询具有以下问题：  
   
--   不能修改传递查询。 修改查询结果或添加新记录必须以另一种方式完成，例如通过在窗体上使用显式的 "**修改**" 或 "**添加**" 按钮来绑定到查询。  
+-   不能修改传递查询。 修改查询结果或添加新记录必须以另一种方式完成，例如通过在窗体上使用显式的 " **修改** " 或 " **添加** " 按钮来绑定到查询。  
   
 -   某些查询需要用户输入，但传递查询不支持用户输入。 用户输入可通过 Visual Basic for Applications 提示输入参数 (VBA) 代码，或通过用作输入控件的窗体来获取。 在这两种情况下，VBA 代码都会向服务器提交带有用户输入的查询。  
   
@@ -145,7 +145,7 @@ Recordset.LastModified
 **解决方法：** 使用修改表架构 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，然后在 "访问" 中更新链接。  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>在迁移数据后，超链接功能丢失  
-**原因：** 迁移数据后，列中的超链接会丢失其功能，并成为简单的**nvarchar (最大) **列。  
+**原因：** 迁移数据后，列中的超链接会丢失其功能，并成为简单的 **nvarchar (最大)** 列。  
   
 **解决方法：** 无。  
   
@@ -154,6 +154,6 @@ Recordset.LastModified
   
 **解决方法：** 您可以定义只返回那些具有受支持数据类型的行的访问查询。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

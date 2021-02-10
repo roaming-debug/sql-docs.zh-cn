@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7516b8abce9e5a3d147796ec0acb101a92fc18f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fd80f6dda35ffbdbb28bbe783047bd787bc81ac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480519"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065972"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>评估用于转换 (DB2ToSQL) 的 DB2 架构
 在加载对象并将数据迁移到之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您应该确定迁移的复杂程度以及迁移所需的时间。 SSMA 可以创建一个评估报表，显示将成功转换的对象的百分比。 SSMA 还使你能够查看导致转换失败的特定问题。  

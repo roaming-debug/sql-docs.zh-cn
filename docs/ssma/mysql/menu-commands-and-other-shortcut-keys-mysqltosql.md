@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fc847eecec3f84cda54e2820a444036a016ec9a8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d8f2dff81302c644a244a451f314026d29119cbd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935266"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062812"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>菜单命令和其他快捷键 (MySQLToSQL)
 以下部分介绍了访问菜单命令的键盘快捷方式，以及 SSMA for MySQL 应用程序的各种对话框中使用的其他快捷键。  

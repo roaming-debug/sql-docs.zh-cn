@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3163da352fa925a821287fc1447fd8b6b5e89cdb
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e1771bebb7619cbbc752485fb649331dab62d0dc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988493"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066407"
 ---
 # <a name="project-settings-migration-accesstosql"></a> (迁移的项目设置)  (AccessToSQL) 
 通过迁移项目设置，你可以配置如何将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。  

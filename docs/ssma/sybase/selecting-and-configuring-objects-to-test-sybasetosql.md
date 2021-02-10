@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c6bcddffdbb524e10a0686e6e9a82f4abcd30db8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a43c4d8b1448949725820d69c6489aff26770d98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492135"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060562"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>选择并配置要测试的对象 (SybaseToSQL)
 在此步骤中，您将选择要测试的对象，并配置用于比较过程的输出参数和函数的返回值的设置。  
@@ -28,7 +28,7 @@ ms.locfileid: "88492135"
   
 如果 SSMA 测试人员不支持选择进行测试的任何对象，则会看到标记为 **某些选定对象** 在对象树下包含错误的链接。 单击此链接可查看无法测试这些对象的原因，以及清除错误对象的选择。  
   
-在右侧，可以查看多个页面， **SQL** 页面显示当前对象的定义。 在 SQL 和**Post**后的**sql**页中，可以指定在调用测试对象开始之前和之后运行的脚本。 当对象需要其他对象（如临时表或游标）时，这可能很有用。 如果对象是存储过程或函数，则 " **参数** " 页将列出这些参数。 " **属性** " 页显示对象的其他特征。 请参阅下面的 **参数 Comparsions** 和 **调用值** 页的说明。  
+在右侧，可以查看多个页面， **SQL** 页面显示当前对象的定义。 在 SQL 和 **Post** 后的 **sql** 页中，可以指定在调用测试对象开始之前和之后运行的脚本。 当对象需要其他对象（如临时表或游标）时，这可能很有用。 如果对象是存储过程或函数，则 " **参数** " 页将列出这些参数。 " **属性** " 页显示对象的其他特征。 请参阅下面的 **参数 Comparsions** 和 **调用值** 页的说明。  
   
 ## <a name="parameter-comparison-settings"></a>参数比较设置  
 在 " **参数比较** " 页中为输出参数和返回值建立比较规则。 可以进行以下设置。  
@@ -45,10 +45,10 @@ ms.locfileid: "88492135"
   
 -   如果选择 " **True**"，则在比较小数位数之前，将根据 **比较比例** 值对数值进行舍入。  
   
--   如果选择**False**，则数字比较将是精确的。  
+-   如果选择 **False**，则数字比较将是精确的。  
   
 ### <a name="comparing-scale"></a>比较刻度  
-仅当 " **使用自定义缩放** " 选项设置为 **True**时可用。 这是数值比较的精度。  
+仅当 " **使用自定义缩放** " 选项设置为 **True** 时可用。 这是数值比较的精度。  
   
 ### <a name="date-time-comparing"></a>比较日期时间  
 定义日期/时间值的比较方式。  

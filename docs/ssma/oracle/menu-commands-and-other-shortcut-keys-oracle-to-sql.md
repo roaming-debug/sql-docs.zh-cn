@@ -11,12 +11,12 @@ ms.assetid: fc00e683-189e-4765-b280-84927d635126
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 76f088100ecdf0172cfb7403bffa4a1546113b6b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9767d7c198bf9a256fcb6d206617d1a641c1334d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933268"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068722"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>菜单命令和其他快捷键 (Oracle To SQL)
 以下部分介绍了访问菜单命令的键盘快捷方式，以及在 SSMA for Oracle 应用程序的各种对话框中使用的其他快捷键。  
@@ -199,5 +199,5 @@ ms.locfileid: "87933268"
 |中转到声明。|F12|  
   
 ## <a name="see-also"></a>另请参阅  
-[&#40;Oracle 到 SQL&#41;的快捷键](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
+[&#40;Oracle 到 SQL&#41;的快捷键 ](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
   

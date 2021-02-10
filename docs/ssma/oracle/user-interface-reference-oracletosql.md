@@ -11,12 +11,12 @@ ms.assetid: 160d4784-d108-4705-932d-763558912804
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 2d234e907cc8839219b942cc841aed02f45e3fbe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 80c19bb82c53d4346a86465c9aaffbe307fb257b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418413"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068872"
 ---
 # <a name="user-interface-reference-oracletosql"></a>用户界面参考 (OracleToSQL)
 本节包括适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 迁移助手 (SSMA) 的帮助主题。  
@@ -24,7 +24,7 @@ ms.locfileid: "88418413"
 ## <a name="in-this-section"></a>本节内容  
 下表列出了 "SSMA" 对话框：  
   
-|主题|描述|  
+|主题|说明|  
 |-|-|  
 |[&#40;OracleToSQL&#41;的高级对象选择 ](../../ssma/oracle/advanced-object-selection-oracletosql.md)|使用 " **高级对象选择** " 对话框可以通过使用筛选条件查找数据库对象，然后选择或清除这些对象。|  
 |[评估报表 &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|使用 "评估" 报告查看将 Oracle 对象转换为语法的结果 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，并估计迁移到的时间和复杂性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  

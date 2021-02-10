@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: af91274d4e48ce99894316c730a58d68fd633242
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985084"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062862"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>转换 DB2 架构 (DB2ToSQL) 
 连接到 DB2、连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并设置项目和数据映射选项后，可以将 DB2 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象。  
@@ -44,7 +44,7 @@ ms.locfileid: "91985084"
 |SELECT 语句|**SSMA 映射选择但具有以下例外：**<br /><br />数据更改表引用子句-部分映射，但不支持最终表<br /><br />表引用子句-部分映射但仅限表引用、外部表引用 analyze_table 表达式、集合派生表、xmltable 表达式未映射到 SQL server 语义<br /><br />Period-规范子句-未映射。<br /><br />Continue-处理程序子句-未映射。<br /><br />未映射类型化的相关子句。<br /><br />并发访问解析子句-未映射。|  
 |VALUES 语句|已映射。|  
 |INSERT 语句|已映射。|  
-|UPDATE 语句|S**SMA MAPS 更新，但存在以下例外：**<br /><br />表引用子句的唯一表引用未映射到 SQL server 语义<br /><br />Period 子句-未映射。|  
+|UPDATE 语句|S **SMA MAPS 更新，但存在以下例外：**<br /><br />表引用子句的唯一表引用未映射到 SQL server 语义<br /><br />Period 子句-未映射。|  
 |MERGE 语句|**SSMA 映射与以下例外合并：**<br /><br />每个子句的单个和多个匹配项-映射为每个子句的有限出现次数的 SQL server 语义<br /><br />信子句-不映射到 SQL Server 语义<br /><br />混合更新和删除子句-不映射到 SQL Server 语义<br /><br />Period-子句-不映射到 SQL Server 语义|  
 |DELETE 语句|**SSMA 映射删除但出现以下异常：**<br /><br />表引用子句的唯一表引用未映射到 SQL server 语义<br /><br />Period 子句-不映射到 SQL Server 语义|  
 |隔离级别和锁定类型|已映射。|  

@@ -11,12 +11,12 @@ ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 789d2cbb22e03053ab8f03e0bdd50b6383ea788e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b8a5871ae12f9408700153afa4f429a4865514
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320393"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067934"
 ---
 # <a name="global-settings-tester-oracletosql"></a>全局设置（测试程序）(OracleToSQL)
 使用 " **全局设置** " 对话框的 "测试器" 页可以指定 SSMA 测试器的设置。  

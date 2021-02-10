@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4c76026dcd24572b4d52c6b82246e5293c22e713
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 7f3aa43750cebfbbac77e3807845f1ed154af1ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596695"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067212"
 ---
 # <a name="sp_data_source_objects-transact-sql"></a>sp_data_source_objects (Transact-sql) 
 
@@ -47,7 +47,7 @@ sp_data_source_objects
 ## <a name="arguments"></a>参数  
 
 `[ @data_source = ] 'data_source'`   
-要从中获取元数据的外部数据源的名称。 `@data_source` 为 `sysname`。  
+要从中获取元数据的外部数据源的名称。 `@data_source` 上声明的默认值为 `sysname`。  
 
 `[ @object_root_name = ] 'object_root_name'`   
 此参数是要搜索)  (的对象的名称的根。 `@object_root_name` 的 `nvarchar(max)` 值为，默认值为 `NULL` 。

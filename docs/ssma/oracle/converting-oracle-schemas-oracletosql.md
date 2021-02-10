@@ -13,12 +13,12 @@ ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 907c04d8acd0859b71d1b31d2839c23d5e4b85e8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8e2ee101ec916a920d4b72d924456a52850e8bc7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935056"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058752"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>转换 Oracle 架构 (OracleToSQL)
 连接到 Oracle、连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并设置项目和数据映射选项后，可以将 Oracle 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象。  
@@ -29,7 +29,7 @@ ms.locfileid: "87935056"
 在转换过程中，SSMA 会将输出消息打印到 "输出" 窗格，并将错误消息打印到 "错误列表" 窗格。 使用输出和错误信息来确定是否必须修改 Oracle 数据库或转换过程以获取所需的转换结果。  
   
 ## <a name="setting-conversion-options"></a>设置转换选项  
-转换对象之前，请在 "**项目设置**" 对话框中查看项目转换选项。 使用此对话框，可以设置 SSMA 如何转换函数和全局变量。 有关详细信息，请参阅[OracleToSQL&#41;&#40;转换&#41; &#40;项目设置](../../ssma/oracle/project-settings-conversion-oracletosql.md)。  
+转换对象之前，请在 " **项目设置** " 对话框中查看项目转换选项。 使用此对话框，可以设置 SSMA 如何转换函数和全局变量。 有关详细信息，请参阅 [OracleToSQL&#41;&#40;转换&#41; &#40;项目设置 ](../../ssma/oracle/project-settings-conversion-oracletosql.md)。  
   
 ## <a name="conversion-results"></a>转换结果  
 下表显示了转换哪些 Oracle 对象以及生成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象：  
@@ -48,15 +48,15 @@ ms.locfileid: "87935056"
 |用户定义的类型|**SSMA 不支持转换用户定义的类型。用户定义的类型（包括其在 PL/SQL 程序中的用法）标记有以下规则所述的特殊转换错误：**<br /><br />用户定义类型的表列转换为 VARCHAR (8000) 。<br /><br />存储过程或函数的用户定义类型的参数转换为 VARCHAR (8000) 。<br /><br />PL/SQL 块中用户定义类型的变量转换为 VARCHAR (8000) 。<br /><br />对象表转换为标准表。<br /><br />对象视图转换为标准视图。|  
   
 ## <a name="converting-oracle-database-objects"></a>转换 Oracle Database 对象  
-若要转换 Oracle 数据库对象，请首先选择要转换的对象，然后让 SSMA 执行转换。 若要在转换过程中查看输出消息，请在 "**视图**" 菜单上选择 "**输出**"。  
+若要转换 Oracle 数据库对象，请首先选择要转换的对象，然后让 SSMA 执行转换。 若要在转换过程中查看输出消息，请在 " **视图** " 菜单上选择 " **输出**"。  
   
 **将 Oracle 对象转换为 SQL Server 语法**  
   
-1.  在 Oracle 元数据资源管理器中，展开 Oracle 服务器，然后展开 "**架构**"。  
+1.  在 Oracle 元数据资源管理器中，展开 Oracle 服务器，然后展开 " **架构**"。  
   
 2.  选择要转换的对象：  
   
-    -   若要转换所有架构，请选中 "**架构**" 旁边的复选框。  
+    -   若要转换所有架构，请选中 " **架构**" 旁边的复选框。  
   
     -   若要转换或省略数据库，请选中该架构名称旁边的复选框。  
   
@@ -64,18 +64,18 @@ ms.locfileid: "87935056"
   
     -   若要转换或省略单个对象，请展开 category 文件夹，然后选中或清除该对象旁边的复选框。  
   
-3.  若要转换所有选定的对象，请右键单击 "**架构**"，然后选择 "**转换架构**"。  
+3.  若要转换所有选定的对象，请右键单击 " **架构** "，然后选择 " **转换架构**"。  
   
-    您还可以通过右键单击对象或其父文件夹，然后选择 "**转换架构**"，来转换各个对象或对象类别。  
+    您还可以通过右键单击对象或其父文件夹，然后选择 " **转换架构**"，来转换各个对象或对象类别。  
   
 ## <a name="viewing-conversion-problems"></a>查看转换问题  
 某些 Oracle 对象可能不会转换。 您可以通过查看摘要转换报告来确定转换成功率。  
   
 **查看摘要报表**  
   
-1.  在 Oracle 元数据资源管理器中，选择 "**架构**"。  
+1.  在 Oracle 元数据资源管理器中，选择 " **架构**"。  
   
-2.  在右侧窗格中，选择 "**报表**" 选项卡。  
+2.  在右侧窗格中，选择 " **报表** " 选项卡。  
   
     此报表显示已评估或转换的所有数据库对象的摘要评估报告。 您还可以查看单个对象的摘要报表：  
   
@@ -87,7 +87,7 @@ ms.locfileid: "87935056"
   
 **查看各个转换问题**  
   
-1.  在 Oracle 元数据资源管理器中，展开 "**架构**"。  
+1.  在 Oracle 元数据资源管理器中，展开 " **架构**"。  
   
 2.  展开显示红色错误图标的架构。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "87935056"
   
 4.  选择包含红色错误图标的对象。  
   
-5.  在右侧窗格中，单击 "**报表**" 选项卡。  
+5.  在右侧窗格中，单击 " **报表** " 选项卡。  
   
-6.  在 "**报表**" 选项卡的顶部是一个下拉列表。 如果列表显示 "**统计信息**"，请将所选内容更改为 "**源**"。  
+6.  在 " **报表** " 选项卡的顶部是一个下拉列表。 如果列表显示 " **统计信息**"，请将所选内容更改为 " **源**"。  
   
     SSMA 将显示源代码，并将多个按钮直接显示在代码上方。  
   
-7.  单击 "**下一问题**" 按钮。 这是一个红色的错误图标，其中有一个指向右侧的箭头。  
+7.  单击 " **下一问题** " 按钮。 这是一个红色的错误图标，其中有一个指向右侧的箭头。  
   
     SSMA 将突出显示在当前对象中找到的第一个有问题的源代码。  
   
@@ -109,12 +109,12 @@ ms.locfileid: "87935056"
   
 -   您可以在 " **SQL** " 选项卡上修改过程的源代码。  
   
--   您可以修改 Oracle 数据库中的对象，以删除或修改有问题的代码。 若要将更新的代码加载到 SSMA 中，必须更新元数据。 有关详细信息，请参阅[连接到 Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
+-   您可以修改 Oracle 数据库中的对象，以删除或修改有问题的代码。 若要将更新的代码加载到 SSMA 中，必须更新元数据。 有关详细信息，请参阅 [连接到 Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
   
 -   可以从迁移中排除对象。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "元数据资源管理器" 和 "Oracle 元数据资源管理器" 中，清除项旁的复选框，然后将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 并从 Oracle 迁移数据。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程的下一步是将已[转换的对象加载到 SQL Server 中](loading-converted-database-objects-into-sql-server-oracletosql.md)。  
+迁移过程的下一步是将已 [转换的对象加载到 SQL Server 中](loading-converted-database-objects-into-sql-server-oracletosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [将 Oracle 数据库迁移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

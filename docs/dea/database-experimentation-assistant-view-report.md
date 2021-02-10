@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 017b7a1e06fca4a1f682050b99f8c8412b44aaf4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d1666d4ba2279623065dd3c0d8faf5e0653de82e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951122"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065942"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>在数据库实验助手中查看分析报表
 
@@ -25,11 +25,11 @@ ms.locfileid: "87951122"
 
 ## <a name="open-an-existing-analysis-report"></a>打开现有分析报表
 
-1. 在 DEA 中，选择 "列表" 图标，指定服务器名称和身份验证类型，根据具体情况选择或取消选择 "**加密连接**" 和 "**信任服务器证书**" 复选框，然后选择 "**连接**"。
+1. 在 DEA 中，选择 "列表" 图标，指定服务器名称和身份验证类型，根据具体情况选择或取消选择 " **加密连接** " 和 " **信任服务器证书** " 复选框，然后选择 " **连接**"。
 
    ![通过报表连接到服务器](./media/database-experimentation-assistant-view-report/dea-connect-to-server-with-report-files.png)
 
-2. 在 "**分析报表**" 屏幕的左侧，选择要查看的报表的条目。
+2. 在 " **分析报表** " 屏幕的左侧，选择要查看的报表的条目。
 
    ![打开现有报表文件](./media/database-experimentation-assistant-view-report/dea-select-report-to-view.png)
 
@@ -39,7 +39,7 @@ ms.locfileid: "87951122"
 
 在报表的第一页上，将显示有关运行实验的目标服务器的版本和生成信息的信息。 阈值允许调整 A/B 测试分析的灵敏度或容差。 默认情况下，阈值设置为 5%;任何 >= 5% 的性能改进都分类为 "改进的"。  下拉列表允许您评估具有不同性能阈值的报表。
 
-您可以将报表中的数据导出到 CSV 文件中，选择 "**导出**" 按钮。  在分析报表的任何页上，你可以选择 "**打印**" 来打印当前屏幕上显示的内容。
+您可以将报表中的数据导出到 CSV 文件中，选择 " **导出** " 按钮。  在分析报表的任何页上，你可以选择 " **打印** " 来打印当前屏幕上显示的内容。
 
 ### <a name="query-distribution"></a>查询分发
 
@@ -62,9 +62,9 @@ ms.locfileid: "87951122"
   - **现有错误**：在目标1和目标2上存在的错误。
   - **新错误**：目标2上新的错误。
   - **已解决的错误**：目标1上存在但在目标2上已解决的错误。
-  - **升级**阻止程序：阻止升级到目标服务器的错误。
+  - **升级** 阻止程序：阻止升级到目标服务器的错误。
 
-  单击图表中的任意条形或饼图部分会向下钻取到类别，并显示性能指标，即使对于 "**无法评估**" 类别也是如此。
+  单击图表中的任意条形或饼图部分会向下钻取到类别，并显示性能指标，即使对于 " **无法评估** " 类别也是如此。
 
   此外，仪表板还显示了前5个改进和降级的查询，以提供快速的性能概述。
 
@@ -78,11 +78,11 @@ ms.locfileid: "87951122"
 
    ![比较摘要](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-   您可以找到该查询的摘要统计信息，如执行次数、平均持续时间、平均 CPU、平均读/写和错误计数。  如果查询是错误查询，则 "**错误信息**" 选项卡将显示有关错误的更多详细信息。  在 "**查询计划信息**" 选项卡上，可以找到有关目标1和目标2上的查询所使用的查询计划的信息。
+   您可以找到该查询的摘要统计信息，如执行次数、平均持续时间、平均 CPU、平均读/写和错误计数。  如果查询是错误查询，则 " **错误信息** " 选项卡将显示有关错误的更多详细信息。  在 " **查询计划信息** " 选项卡上，可以找到有关目标1和目标2上的查询所使用的查询计划的信息。
 
    > [!NOTE]
    > 如果要分析扩展事件 (。.XEL) 文件，则不会收集查询计划信息，以限制用户计算机上的内存压力。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- 若要了解如何在命令提示符下生成分析报告，请参阅[在命令提示符下运行](database-experimentation-assistant-run-command-prompt.md)。
+- 若要了解如何在命令提示符下生成分析报告，请参阅 [在命令提示符下运行](database-experimentation-assistant-run-command-prompt.md)。

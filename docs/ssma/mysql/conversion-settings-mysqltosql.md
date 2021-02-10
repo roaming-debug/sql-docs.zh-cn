@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1652913173dcd7427515db8c74d15afc75077820
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 42f7d0f36f0e0adfcf067ad0bbe55c5e2c169e9e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988633"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068853"
 ---
 # <a name="conversion-settings-mysqltosql"></a>转换设置 (MySQLToSQL)
 **"设置"** 选项卡允许用户设置节点级别设置。 选项卡将在以下元数据库节点上提供：  
@@ -30,7 +30,7 @@ ms.locfileid: "91988633"
   
 -   表节点  
   
-## <a name="specifications"></a>规格  
+## <a name="specifications"></a>规格：  
 " **设置** " 选项卡有两个用户设置，即。：  
   
 1.  函数转换  

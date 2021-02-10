@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 471b1b3891d017858c0f0d035f8207bc8a1d2539
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df61abefdab6642c098cbf456cd6147417cb2dd7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497772"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066302"
 ---
 # <a name="refresh-from-database-accesstosql"></a>从数据库刷新 (AccessToSQL) 
 使用 " **从数据库刷新** " 对话框，您可以选择要在 Access 数据库中刷新的对象。 对话框中的行是根据元数据的状态进行颜色编码的：  

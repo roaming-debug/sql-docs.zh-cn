@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67c14205590ccdf9d20a30f44c13aa2da5abbe8d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9bb65299be2778897b72303cccb99043a3b01406
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99212566"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061102"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>附录 B：ODBC 状态转换表
 本附录中的表说明 ODBC 函数如何导致环境、连接、语句和描述符状态的转换。 环境、连接、语句或描述符的状态通常指示何时，使用相应的句柄类型的函数 (环境、连接、语句或描述符) 可以调用。 环境、连接、语句和描述符状态大致重叠，如下图所示。 例如，连接状态 C5、C6 和语句状态 S1 到 S12 的精确重叠与数据源相关，因为事务在不同数据源的不同时间开始，并且描述符状态 D1i (隐式分配的描述符) 取决于与说明符关联的语句的状态，而状态 D1e (显式分配的描述符) 与任何语句的状态无关。 有关每种状态的说明，请参阅本附录后面的 [环境转换](../../../odbc/reference/appendixes/environment-transitions.md)、 [连接转换](../../../odbc/reference/appendixes/connection-transitions.md)、 [语句转换](../../../odbc/reference/appendixes/statement-transitions.md)和 [描述符转换](../../../odbc/reference/appendixes/descriptor-transitions.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "99212566"
 |b|前后。 游标位于结果集的开头之前或结果集结束之后。|  
 |c|当前函数。 当前函数以异步方式执行。|  
 |d|需要数据。 函数返回 SQL_NEED_DATA。|  
-|e|错误。 函数返回 SQL_ERROR。|  
+|E|错误。 函数返回 SQL_ERROR。|  
 |i|行无效。 游标定位在结果集中的某一行上，并且该行已被删除或在某一操作中发生了错误。 如果行状态数组存在，则该行的行状态数组中的值是 SQL_ROW_DELETED 或 SQL_ROW_ERROR。  (SQL_ATTR_ROW_STATUS_PTR 语句特性指向行状态数组。 ) |  
 |nf|未找到。 函数返回 SQL_NO_DATA。 当 **SQLExecDirect**、 **SQLExecute** 或 **SQLParamData** 在执行搜索的 update 或 delete 语句之后 SQL_NO_DATA 返回时，此功能不适用。|  
 |np|未准备好。 未准备语句。|  

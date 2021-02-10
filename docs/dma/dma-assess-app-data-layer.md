@@ -14,16 +14,16 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 13b0775dd7a20d37e80eaddb39f649f65c43b129
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f56976c9140cb4ac18c048d7d57d6949fc4ae74d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886174"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065156"
 ---
 # <a name="assess-an-apps-data-access-layer-with-data-migration-assistant"></a>使用数据迁移助手评估应用的数据访问层
 
-通常，应用程序将数据连接并保存到数据库。 应用程序的数据访问层可以简化对此数据的访问。 数据迁移助手（DMA）已使用户能够评估其数据库和相关对象。 最新的 DMA （v 5.0）版本引入了对在应用程序代码中分析数据库连接和嵌入式 SQL 查询的支持。
+通常，应用程序将数据连接并保存到数据库。 应用程序的数据访问层可以简化对此数据的访问。 数据迁移助手 (DMA) 使用户能够评估其数据库和相关对象。 最新版本的 DMA (v 5.0) 在应用程序代码中引入了对分析数据库连接和嵌入式 SQL 查询的支持。
 
 请考虑以下 c # 代码段：
 
@@ -37,10 +37,10 @@ ms.locfileid: "82886174"
 
 ## <a name="assess-an-app-with-data-access-migration-toolkit"></a>使用数据访问迁移工具包评估应用
 
-为实现此评估，我们最近引入了数据访问迁移工具包（DAMT），这是一个 Visual Studio Code 扩展。 此扩展的最新版本（v 0.2）增加了对 .Net 应用程序和 T-sql 方言的支持。
+为实现此评估，我们最近引入了数据访问迁移工具包 (DAMT) ，Visual Studio Code 扩展。 此扩展的最新版本 (v 0.2) 增加了对 .Net 应用程序和 T-sql 方言的支持。
 
-1. 从[此处](https://code.visualstudio.com/download)下载并安装 VS Code。
-2. 从 Extensions Marketplace 启用[数据访问迁移工具包扩展](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit)。
+1. 从 [此处](https://code.visualstudio.com/download)下载并安装 VS Code。
+2. 从 Extensions Marketplace 启用 [数据访问迁移工具包扩展](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit) 。
 
    ![数据访问迁移工具包扩展页](../dma/media/dma-assess-app-data-layer/dma-damt-extension-page.png)
 
@@ -48,7 +48,7 @@ ms.locfileid: "82886174"
 
    ![Visual Studio Code 中的应用程序项目](../dma/media/dma-assess-app-data-layer/dma-app-project-in-vscode.png)
 
-4. 启动扩展控制台（Shft-P），然后运行**数据访问：分析工作区**命令。
+4. 启动扩展控制台 (Shft-P) ，然后运行 **数据访问：分析工作区** 命令。
 
    ![Visual Studio Code 中的扩展控制台](../dma/media/dma-assess-app-data-layer/dma-vscode-extension-console.png)
 

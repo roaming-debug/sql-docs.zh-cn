@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 399946496bbb649f84c9d539a9fe80f3f7919b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33017262982effedd9fa85ea26818fdb7b2ae8ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372693"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068950"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 使用 " **连接到 mysql** " 对话框连接到要迁移的 MySQL 数据库。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3e31f1422415a14c4e1fb497ff56806feeb9439e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38ececbe6ded0d2482f6ad93bf7be84b022e3bcd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463529"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064352"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>编辑类型映射 (DB2ToSQL) 
 利用 " **编辑类型映射** " 对话框，您可以指定如何在源数据库对象和目标数据库对象之间映射类型。  
@@ -35,10 +35,10 @@ ms.locfileid: "88463529"
 如果数据类型的长度可变，以下字段将显示在 " **源类型**" 下：  
   
 **From**  
-指定此映射的最小长度。 例如，对于 **nchar** 数据类型，可以输入10来指定此映射适用于从 **nchar (10) **开始的范围。  
+指定此映射的最小长度。 例如，对于 **nchar** 数据类型，可以输入10来指定此映射适用于从 **nchar (10)** 开始的范围。  
   
-**收件人**  
-指定此映射的最大长度。 例如，对于 **nchar** 数据类型，可以输入20来指定此映射适用于以 **nchar (20) **结束的范围。  
+**To**  
+指定此映射的最大长度。 例如，对于 **nchar** 数据类型，可以输入20来指定此映射适用于以 **nchar (20)** 结束的范围。  
   
 **目标类型**  
 选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源数据类型要映射到的数据类型。 当 SSMA 在中创建表或存储过程时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，源数据类型将更改为此数据类型。  
@@ -46,5 +46,5 @@ ms.locfileid: "88463529"
 如果数据类型的长度可变，以下字段将显示在 " **目标类型**" 下：  
   
 **Replace with**  
-指定此映射的目标长度。 例如，对于 **nvarchar** 数据类型，可以输入20来指定应将指定的源数据类型映射到 **nvarchar (20) **。  
+指定此映射的目标长度。 例如，对于 **nvarchar** 数据类型，可以输入20来指定应将指定的源数据类型映射到 **nvarchar (20)**。  
   
