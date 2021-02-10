@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bb91a09167b10a7b5b1f969e2d0775f6ced31a4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 09f5306f6df62792f8be42ed06081596682ca0bd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168941"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053148"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion 属性 (RDS)
 指示要在筛选器值中使用的求值运算符。  

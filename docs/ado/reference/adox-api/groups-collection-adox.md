@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0cbcc0941c3c2c7158d15bc73f07e4b835db4f3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 52d997496e03fccc7807c09e392568c3b4a3f4b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164231"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054142"
 ---
 # <a name="groups-collection-adox"></a>组集合 (ADOX)
 包含目录或用户的所有存储的 [组](./group-object-adox.md) 对象。  
@@ -31,11 +31,11 @@ ms.locfileid: "99164231"
 ## <a name="remarks"></a>备注  
  [目录](./catalog-object-adox.md)的 **Groups** 集合表示所有目录的组帐户。 [用户](./user-object-adox.md)的 **Groups** 集合仅表示该用户所属的组。  
   
- **组** 集合的 [APPEND](./append-method-adox-groups.md)方法对于 ADOX 是唯一的。 可以执行以下操作：  
+ **组** 集合的 [APPEND](./append-method-adox-groups.md)方法对于 ADOX 是唯一的。 方法：  
   
 -   使用 **Append** 方法将新的安全组添加到集合。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以执行以下操作：  
+ 其余属性和方法对于 ADO 集合是标准的。 方法：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的组。  
   

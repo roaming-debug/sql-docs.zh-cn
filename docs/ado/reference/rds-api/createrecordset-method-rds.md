@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a88898c884cbaf0a9c82a882b15ef48c1e3e3a8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6349438e415f3f3d4b2f28820a23bbb1a70720cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163854"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053258"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 创建一个空的、断开连接的 [记录集](../ado-api/recordset-object-ado.md)。  
@@ -47,7 +47,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  特性的一个 **变量** 数组，用于定义创建的 **记录集中** 的每一列。 每个列定义都包含一个包含四个必需属性和一个可选属性的数组。  
   
-|Attribute|说明|  
+|特性|说明|  
 |---------------|-----------------|  
 |名称|列标题的名称。|  
 |类型|数据类型的整数。|  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b602ab38b284ba90a038b7893c9e26b3f38020f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8dbf66f202a051740e7d3237f7b52a1fda03b77a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171991"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053982"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale 属性 (ADOX)
 指示列中数值的小数位数。  

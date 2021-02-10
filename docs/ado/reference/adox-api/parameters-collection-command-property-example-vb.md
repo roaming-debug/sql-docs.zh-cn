@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b54af4688c81f524d0c2cd785225b76b8b5cc535
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2ec79579b0474db9baa6d128333842a03235388a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171982"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053962"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>参数集合、Command 属性示例 (VB)
 下面的代码演示如何将 [command](./command-property-adox.md) 属性与 [command](../ado-api/command-object-ado.md) 对象结合使用来检索过程的参数信息。  

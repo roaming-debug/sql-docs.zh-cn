@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51c694c39004330dd780a2deea632eee186ad9c3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b0e2cdd3dcb1d6d0772e1b7508bee8063089a4e3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169342"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054072"
 ---
 # <a name="key-object-adox"></a>项对象 (ADOX)
 表示数据库表中的主键或唯一键字段。  

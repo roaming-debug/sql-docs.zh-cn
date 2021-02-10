@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74147f1168e9bf9789c0ab1111daa27536dfd64e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8b8873cf8815fc6ffac1afbd9f6e003ee792d61f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172018"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054102"
 ---
 # <a name="indexes-collection-adox"></a>索引集合 (ADOX)
 包含表的所有 [索引](./index-object-adox.md) 对象。  
   
 ## <a name="remarks"></a>备注  
- **索引** 集合的 [APPEND](./append-method-adox-indexes.md)方法对于 ADOX 是唯一的。 可以执行以下操作：  
+ **索引** 集合的 [APPEND](./append-method-adox-indexes.md)方法对于 ADOX 是唯一的。 方法：  
   
 -   使用 **Append** 方法向集合中添加一个新索引。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以执行以下操作：  
+ 其余属性和方法对于 ADO 集合是标准的。 方法：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的索引。  
   

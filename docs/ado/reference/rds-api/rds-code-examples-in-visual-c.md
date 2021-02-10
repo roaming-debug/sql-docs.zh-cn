@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57205b70ac90ac1004ddbec0a2e67dee2328f961
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9d55fd3b80a6b2324c89ad2fdb7c125be7323dcf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163685"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053018"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Visual C++ 中的 RDS 代码示例
 使用以下代码示例来了解如何在 Microsoft Visual C++ 中写入时使用 RDS 属性。  

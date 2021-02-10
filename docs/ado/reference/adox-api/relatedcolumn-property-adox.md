@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6192efed41f24ff9d80ab027d20c29968fa2a452
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6f9d63ef7f7d6a919d76e4e6b6220f423352ff10
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169225"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054852"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn 属性 (ADOX)
 指示相关列对象的名称 [ (ADOX) ](./column-object-adox.md) 在相关表中 (键列仅) 。  

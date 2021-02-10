@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e3369e181577214a9e4b430dded19110744eb0d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 08bb9e7bb82484080f969bce5e817a1d21724809
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169317"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054032"
 ---
 # <a name="keys-collection-adox"></a>项集合 (ADOX)
 包含[表](./table-object-adox.md)的所有[关键](./key-object-adox.md)对象。  
   
 ## <a name="remarks"></a>备注  
- [键集合]()的[APPEND](./append-method-adox-keys.md)方法对于 ADOX 是唯一的。 可以执行以下操作：  
+ [键集合]()的[APPEND](./append-method-adox-keys.md)方法对于 ADOX 是唯一的。 方法：  
   
 -   使用 [Append](./append-method-adox-keys.md) 方法向集合中添加一个新项。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以执行以下操作：  
+ 其余属性和方法对于 ADO 集合是标准的。 方法：  
   
 -   使用 [Item](../ado-api/item-property-ado.md) 属性访问集合中的键。  
   

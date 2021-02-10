@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e42da0195d1e95bbeac1939d69b23f9955ad4677
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7840578ef9ba40df97103bf22e2de2efafdb7067
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169271"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053882"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey 属性 (ADOX)
 指示索引是否表示表的主键。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6687c8f857e069090605870af7e4a10e77b18b9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ccd5b24de408591a22e10cf837d11e15fea437ac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172031"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054112"
 ---
 # <a name="indexes-append-method-example-vb"></a>索引 Append 方法示例 (VB)
 下面的代码演示如何创建新的索引。 索引在表中的两列上。  
