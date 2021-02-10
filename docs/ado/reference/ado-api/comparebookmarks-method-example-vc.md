@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f84bc8a6ce834cecbdbe64b485cf52430d399e6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 657f89014ba808d67e593f04a02c91694927a86c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99155506"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026555"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks 方法示例 (VC++)
 此示例演示了 [CompareBookmarks](./comparebookmarks-method-ado.md) 方法。 除非特定书签是特殊的，否则不需要书签的相对值。  
   
- 将从 ***作者** _ 表派生的 [记录集](./recordset-object-ado.md)的随机行指定为搜索的目标。 然后显示相对于该目标的每行的位置。  
+ 将从 ***作者*** 表派生的 [记录集](./recordset-object-ado.md)的随机行指定为搜索的目标。 然后显示相对于该目标的每行的位置。  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -66,7 +66,7 @@ void CompareBookMarksX() {
    try {      
       TESTHR(pRstAuthors.CreateInstance(__uuidof(Recordset)));  
   
-      pRstAuthors->Open("SELECT _ FROM authors ORDER BY au_id", strCnn, adOpenStatic, adLockReadOnly, adCmdText);  
+      pRstAuthors->Open("SELECT * FROM authors ORDER BY au_id", strCnn, adOpenStatic, adLockReadOnly, adCmdText);  
   
       long count = pRstAuthors->RecordCount;  
       printf("Rows in the Recordset = %d\n", count);  

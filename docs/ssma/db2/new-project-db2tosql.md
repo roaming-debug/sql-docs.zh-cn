@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cab3c278ff1c011758a61ef88f1aef38fc9560b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 63241b8be283f71d0a79740228a5be58f5f69041
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454166"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017613"
 ---
 # <a name="new-project-db2tosql"></a>新项目 (DB2ToSQL) 
 使用 " **新建项目** " 对话框创建新的 SSMA 项目。 若要访问 " **新建项目** " 对话框，请在 " **文件** " 菜单上单击 " **新建项目**"。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02b1296a81bed339071995d66bc9c1454ae86aa8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c95c60e0d10b1dfd361af1c93ba5810ae35eb95c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164795"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027577"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法示例 (VB) 
 此示例将更改数据库的 ***标题** _ 表中所有心理学书籍的书籍类型。 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)方法启动了一个隔离 *_对 _ title_** 表所做的所有更改的事务后， [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)方法会保存这些更改。 您可以使用 [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法来撤消使用 [Update](./update-method.md) 方法保存的更改。  

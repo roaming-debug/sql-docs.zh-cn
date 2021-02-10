@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03e454407c1b01b34ea918f81a404d579f8a3809
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 099cce7da61fbfa9f3a70904a6c8593b9be4d304
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167890"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027853"
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 将对象追加到集合。 如果集合是 [字段](./fields-collection-ado.md)，则可在将新字段对象追加到集合之前创建新的 [字段](./field-object.md) 对象。  
@@ -47,7 +47,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *名称*  
  一个包含新 **字段** 对象名称的 **字符串** 值，不能与 *字段* 中的任何其他对象同名。  
   
- *Type*  
+ 类型  
  一个 [DataTypeEnum](./datatypeenum.md) 值，其默认值为 **adEmpty**，指定新字段的数据类型。 ADO 不支持以下数据类型，不应在将新字段追加到 [记录集对象 (ado)](./recordset-object-ado.md)： **adIDispatch**、 **adIUnknown**、 **adVariant** 时使用。  
   
  *DefinedSize*  

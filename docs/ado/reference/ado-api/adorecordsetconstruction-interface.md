@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9be4f47033616f56177027bc83c4621cef57847
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8f0ed083766464cccd504da7ad9270600fe0050c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164863"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027924"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 接口
 **ADORecordsetConstruction** 接口用于从 c/c + + 应用程序中的 OLE DB **行** 集对象构造 ADO **记录集** 对象。  
@@ -30,7 +30,7 @@ ms.locfileid: "99164863"
   
 ## <a name="properties"></a>属性  
   
-|properties|说明|  
+|属性|说明|  
 |-|-|  
 |[章节](./chapter-property-ado.md)|读/写。<br />获取/设置此 ADO **记录集** 对象的 OLE DB **章节** 对象。|  
 |[RowPosition](./rowposition-property-ado.md)|读/写。<br />获取/设置此 ADO **记录集** 对象的 OLE DB **RowPosition** 对象。|  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91d55e44f9c9bd1a6bef3e5fc2689eb1899ae025
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2ee99725aeb4eadab7df8323bb1ffcd0ce901551
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171016"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024181"
 ---
 # <a name="find-method-example-vc"></a>Find 方法示例 (VC++)
 此示例使用 [Recordset](./recordset-object-ado.md) 对象的 [Find](./find-method-ado.md) 方法来查找和计算 **Pubs** 数据库中业务标题的数目。 该示例假定基础提供程序不支持类似的功能。  

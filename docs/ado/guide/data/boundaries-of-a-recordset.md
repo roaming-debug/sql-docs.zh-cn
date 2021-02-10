@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c0df560a7a70dd46c4a846e3271b5b5ea10584e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f737ad11af65045a1d923f427c7487e4b751aaa8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991588"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028012"
 ---
 # <a name="boundaries-of-a-recordset"></a>记录集的边界
-**Recordset** 支持 **BOF** 和 **EOF** 属性，分别描绘数据集的开头和结尾。 可以将 **BOF** 和 **EOF** 视为位于 **记录集**开头和结尾的 "虚拟" 记录。 计算 **BOF** 和 **EOF**后，示例 **记录集** 现在如下所示：  
+**Recordset** 支持 **BOF** 和 **EOF** 属性，分别描绘数据集的开头和结尾。 可以将 **BOF** 和 **EOF** 视为位于 **记录集** 开头和结尾的 "虚拟" 记录。 计算 **BOF** 和 **EOF** 后，示例 **记录集** 现在如下所示：  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
@@ -55,7 +55,7 @@ while (objRecordset.BOF != true)
 }  
 ```  
   
- 如果 **BOF** 和 **EOF** 都为 **True**，则 **Recordset** 对象为空。 对于新打开的非空**Recordset**对象，这两个属性都将为**False** 。 可以结合使用 **BOF** 和 **EOF** 属性来确定 **Recordset** 对象是否为空，如以下 JScript 代码段中所示。  
+ 如果 **BOF** 和 **EOF** 都为 **True**，则 **Recordset** 对象为空。 对于新打开的非空 **Recordset** 对象，这两个属性都将为 **False** 。 可以结合使用 **BOF** 和 **EOF** 属性来确定 **Recordset** 对象是否为空，如以下 JScript 代码段中所示。  
   
 ```  
 if (objRecordset.EOF == true && objRecordset.BOF == true)  

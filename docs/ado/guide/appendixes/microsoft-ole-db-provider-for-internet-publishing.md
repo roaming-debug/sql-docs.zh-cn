@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f924e1bec97ed399f4d6d3351c8d18b1d8dad5b1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e769310609ebae9c7df8cfe0d518acce058d32e7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991058"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029281"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>用于 Internet 发布的 Microsoft OLE DB 提供程序概述
 用于 Internet 发布的 Microsoft OLE DB 提供程序允许 ADO 访问 Microsoft FrontPage 或 Microsoft Internet Information Server 所提供的资源。 资源包括 web 源文件（如 HTML 文件）或 Windows 2000 web 文件夹。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
- 若要连接到该提供程序，请将[ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)属性的*provider*参数设置为：
+ 若要连接到该提供程序，请将 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)属性的 *provider* 参数设置为：
 
 ```vb
 MSDAIPP.DSO
@@ -41,7 +41,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- - 或 -
+ 或
 
 ```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"

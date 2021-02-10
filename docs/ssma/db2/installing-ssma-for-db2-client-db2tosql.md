@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a223f5dbf6e100ac776e2f3aebad51c9bb885abf
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: dd9c4116acd482fa12b74556b9d1ad1fe9b06cdd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869585"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014727"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>安装 SSMA for DB2 client (DB2ToSQL) 
 
@@ -29,7 +29,7 @@ SSMA 客户端由执行以下任务的程序文件组成：
 
 本主题提供安装 SSMA 的安装先决条件和说明。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 SSMA 设计用于在 z/OS 版本9.0 和10.0 上使用 db2，在 LUW 版本9.8 和10.1 或更高版本上使用 db2，适用于版本7.1 或更高版本和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 或更高版本的 db2。
 

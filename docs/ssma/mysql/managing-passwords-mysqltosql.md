@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50238d3cbcd65077ad724d41c907221d5d8be998
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e5986144465beac5b9358869bbbd5f7510d70fbe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988523"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017474"
 ---
 # <a name="managing-passwords-mysqltosql"></a>管理密码 (MySQLToSQL)
 本文介绍如何保护数据库密码，以及如何在服务器之间导入或导出数据库密码。
@@ -70,7 +70,7 @@ SSMA 允许保护数据库的密码。
   
         在 `SSMAforMySQLConsole.exe` `-securepassword` `-remove` 命令行传递服务器 id 的情况下执行，并从本地计算机上的受保护存储文件中删除加密的密码。  
   
-        示例：  
+        例如：  
 
         ```console
         C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove all
@@ -81,7 +81,7 @@ SSMA 允许保护数据库的密码。
   
         在 `SSMAforMySQLConsole.exe` `-securepassword` 命令行中使用和开关执行， `-list` 以列出其密码已加密的所有服务器 id。  
   
-        示例：  
+        例如：  
         
         ```console
         C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -list  

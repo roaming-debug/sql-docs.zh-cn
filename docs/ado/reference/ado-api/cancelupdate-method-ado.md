@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12ec3d30de9fc938d51ea342c468b522674b0086
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 02d173995501e6c8bf2ae987ba88727f4e06aad9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167801"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027142"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate 方法 (ADO)
 在调用[Update](./update-method.md)方法之前，取消对[Recordset](./recordset-object-ado.md)对象的当前行或新行所做的任何更改，或[记录](./record-object-ado.md)对象的[字段](./fields-collection-ado.md)集合。  

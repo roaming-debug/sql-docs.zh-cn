@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbce7f960e4339bce3a8b3afa53e215987d2909
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 57bf5f2a4e9134ffdd497133c44741af8a84f2ac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167775"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027105"
 ---
 # <a name="clone-method-ado"></a>Clone 方法 (ADO)
 从现有 **记录集** 对象创建重复的 [记录集](./recordset-object-ado.md)对象。 还可以指定克隆为只读。  

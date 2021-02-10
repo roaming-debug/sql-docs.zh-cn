@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe50ef2d018f01e0811c5d950f73ae6cb3d3c5f3
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4ed23adb7922a18f53245f21b087414403ae61d8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638056"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029361"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 永久性提供程序概述
 利用 Microsoft OLE DB 持久性提供程序，您可以将 [记录集](../../reference/ado-api/recordset-object-ado.md) 对象保存到文件中，然后从文件还原该 **记录集** 对象。 将保留架构信息、数据和挂起的更改。

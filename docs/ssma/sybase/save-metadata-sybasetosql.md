@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8b43cbdcac7a983047d8c454e5bfc9e3a31ce102
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 885e2cc097e676e1b27ebfeae1423d9c0f124775
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468718"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030655"
 ---
 # <a name="save-metadata--sybasetosql"></a>保存元数据 (SybaseToSQL)
 保存 **元数据** 对话框会提示您在保存之前将元数据加载到 SSMA 项目中。 这样，你就可以拥有一个完整的项目文件，你可以脱机使用该文件并将其发送给其他人，例如技术支持人员。  
@@ -34,7 +34,7 @@ SSMA 根据需要将元数据加载到项目中。 浏览元数据和转换架�
 **全选**  
 选择所有列出的数据库。  
   
-**Clear**  
+**清除**  
 清除缺少元数据的所有数据库的复选框。 如果已加载元数据，则不能清除此复选框。  
   
 **保存**  

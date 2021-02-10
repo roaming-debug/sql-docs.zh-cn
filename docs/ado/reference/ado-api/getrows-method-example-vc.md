@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7116806c9c308257328cca001571b1a397a11c5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e0fd04633e9922368c77f0caae50f6d2b5fd292b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167253"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020861"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 方法示例 (VC++)
 此示例使用 [GetRows](./getrows-method-ado.md) 方法从 [记录集中](./recordset-object-ado.md) 检索指定数目的行，并使用生成的数据来填充数组。 在以下两种情况下， **GetRows** 方法将返回小于所需的行数：如果已达到 [EOF](./bof-eof-properties-ado.md) ，或者 **getrows** 试图检索其他用户删除的记录，则为。 仅当发生第二种情况时，函数才返回 **False** 。 运行此过程需要 GetRowsOK 函数。  

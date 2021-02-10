@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 02a6d49202ad2607d862246eee232e599788244a
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 9f427c7d706e3665cc5cbca092bfbc99a333a1ea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885854"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030625"
 ---
 # <a name="save-and-load-assessments-with-data-migration-assistant"></a>数据迁移助手中保存和加载评估
 
@@ -30,34 +30,34 @@ ms.locfileid: "82885854"
 
 ## <a name="saving-an-assessment-to-a-file"></a>将评估保存到文件
 
-1. 使用数据迁移助手运行评估后，请选择 "**保存评估**"。
+1. 使用数据迁移助手运行评估后，请选择 " **保存评估**"。
 
    ![打开 "保存评估" 对话框](../dma/media/dma-save-load-assessments/dma-open-save-dialog.png)
 
-   标准**保存 ...** 对话框。
+   标准 **保存 ...** 对话框。
 
    > [!NOTE]
-   > 有关如何在数据迁移助手中运行评估的详细信息，请参阅文章[使用数据迁移助手执行 SQL Server 迁移评估](../dma/dma-assesssqlonprem.md)。
+   > 有关如何在数据迁移助手中运行评估的详细信息，请参阅文章 [使用数据迁移助手执行 SQL Server 迁移评估](../dma/dma-assesssqlonprem.md)。
 
-2. 指定文件的名称，然后选择 "**保存**"。
+2. 指定文件的名称，然后选择 " **保存**"。
 
    ![命名和保存评估文件](../dma/media/dma-save-load-assessments/dma-name-save-assessment.png)
 
 ## <a name="loading-an-assessment-saved-to-a-file"></a>加载保存到文件的评估
 
-1. 若要加载以前保存到文件的评估，请从数据迁移助手开始，然后在 "**所有评估**" 选项卡上，选择 "**负载评估**"。
+1. 若要加载以前保存到文件的评估，请从数据迁移助手开始，然后在 " **所有评估** " 选项卡上，选择 " **负载评估**"。
 
    ![打开 "负载评估" 对话框](../dma/media/dma-save-load-assessments/dma-open-load-dialog.png)
 
-2. 导航到要加载的已保存评估文件，选择该文件，然后选择 "**打开**"。
+2. 导航到要加载的已保存评估文件，选择该文件，然后选择 " **打开**"。
 
    ![打开评估文件](../dma/media/dma-save-load-assessments/dma-open-assessment.png)
 
-   "**所有评估**" 选项卡上会显示已加载评估的条目。
+   " **所有评估** " 选项卡上会显示已加载评估的条目。
 
    ![显示评估条目](../dma/media/dma-save-load-assessments/dma-display-assessment-entry.png)
 
-3. 选择 "评估" 条目，然后选择 "**打开评估**"。
+3. 选择 "评估" 条目，然后选择 " **打开评估**"。
 
    ![打开评估详细信息](../dma/media/dma-save-load-assessments/dma-open-assessment-detail.png)
 

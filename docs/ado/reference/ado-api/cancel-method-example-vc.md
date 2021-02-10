@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32f67f8b6208dd6cb45fdc51434520c66f44bf32
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 21e9a928bbb839f7e0a788c0bfb939c35c471c7b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167803"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027162"
 ---
 # <a name="cancel-method-example-vc"></a>Cancel 方法示例 (VC++)
 此示例使用 [cancel](./cancel-method-ado.md) 方法来取消对 [连接](./connection-object-ado.md) 对象执行的命令（如果连接繁忙）。  

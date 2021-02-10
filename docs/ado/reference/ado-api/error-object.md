@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eba5b63bc766161556779dd261393b0dfe06822d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: aa7a9f478398c1e6348513076ac9e9f3d8b815a5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171196"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025054"
 ---
 # <a name="error-object"></a>错误对象
 包含有关与涉及提供程序的单个操作相关的数据访问错误的详细信息。  

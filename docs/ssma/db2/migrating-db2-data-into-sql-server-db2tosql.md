@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2f3ca5b9f222e52b7913d5688b6e8c6adfbd526d
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: cd55ac5432784cb3af727fb923397fa9717dab40
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869675"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017787"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>将 DB2 数据迁移到 SQL Server (DB2ToSQL) 
 使用成功同步转换后的对象后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以将数据从 DB2 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

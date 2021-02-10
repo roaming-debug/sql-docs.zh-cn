@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: adc282492b4c6d9a21683693154e43f1177bdca0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c33cedffcdd4eb9b738b952afaa060af9d99ff6a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164746"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027483"
 ---
 # <a name="cancel-method-ado"></a>Cancel 方法 (ADO)
 取消执行挂起的异步方法调用。  
@@ -48,7 +48,7 @@ object.Cancel
 |[连接](./connection-object-ado.md)|[Execute](./execute-method-ado-connection.md) 或 [Open](./open-method-ado-connection.md)|  
 |[记录](./record-object-ado.md)|[CopyRecord](./copyrecord-method-ado.md)、 [DeleteRecord](./deleterecord-method-ado.md)、 [MoveRecord](./moverecord-method-ado.md)或 [Open](./open-method-ado-record.md)|  
 |[Recordset](./recordset-object-ado.md)|[打开](./open-method-ado-recordset.md)|  
-|[流](./stream-object-ado.md)|[打开](./open-method-ado-stream.md)|  
+|[Stream](./stream-object-ado.md)|[打开](./open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>应用于  
 

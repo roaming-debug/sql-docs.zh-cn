@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cfc7d8ffa447beccf4597beb63f54d5ba958f29
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ae45fb2eea6c971fe72d152d0ee6058dbfc81db5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164781"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027557"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF 和 Bookmark 属性示例 (VC + +) 
 如果用户尝试移过[记录集](./recordset-object-ado.md)的第一个或最后一个记录，则此示例中的第一个函数使用[BOF](./bof-eof-properties-ado.md)和[EOF](./bof-eof-properties-ado.md)属性来显示消息。 它使用 [书签](./bookmark-property-ado.md) 属性允许用户标记记录 **集中** 的记录并稍后返回到该记录。  

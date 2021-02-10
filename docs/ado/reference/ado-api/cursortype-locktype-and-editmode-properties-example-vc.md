@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 964410feadaac3ff321af122ff7118a6c6327552
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6e47c46dbdd6cfa44e7e818289bee840b349f387
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171351"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025890"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、LockType 和 EditMode 属性示例 (VC + +) 
 此示例演示如何在打开[记录集](./recordset-object-ado.md)之前设置[CursorType](./cursortype-property-ado.md)和[LockType](./locktype-property-ado.md)属性。 它还在各种条件下显示 [EditMode](./editmode-property.md) 属性的值。 运行此过程需要 EditModeOutput 函数。  

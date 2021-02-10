@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68ccc1f5cc173f4ebd80ed093e88968c137c954f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fd479847766b8682025b2e4c6f047a5f4549d077
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991648"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028042"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 事件实例化：Visual C++
 下面是有关如何在 Microsoft® Visual C++®中实例化 ADO 事件的示意图说明。 有关完整说明，请参阅 [ADO 事件模型示例 (VC + +) ](../../reference/ado-api/ado-events-model-example-vc.md) 。  
@@ -50,7 +50,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- 在这两个类中实现每个事件处理程序方法。 每个方法都只返回 S_OK 的 HRESULT。 但是，当你认为你的事件处理程序可用时，它们会在默认情况下连续调用。 相反，你可能希望在第一次通过将 **adStatus** 设置为 **adStatusUnwantedEvent**时不请求进一步的通知。  
+ 在这两个类中实现每个事件处理程序方法。 每个方法都只返回 S_OK 的 HRESULT。 但是，当你认为你的事件处理程序可用时，它们会在默认情况下连续调用。 相反，你可能希望在第一次通过将 **adStatus** 设置为 **adStatusUnwantedEvent** 时不请求进一步的通知。  
   
 ```  
 // BeginEventExampleVC02  
@@ -66,11 +66,11 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- 事件类从 **IUnknown**继承，因此还必须实现 **QueryInterface**、 **AddRef**和 **Release** 方法。 还实现类构造函数和析构函数。 选择最适合简化此部分任务的 Visual C++ 工具。  
+ 事件类从 **IUnknown** 继承，因此还必须实现 **QueryInterface**、 **AddRef** 和 **Release** 方法。 还实现类构造函数和析构函数。 选择最适合简化此部分任务的 Visual C++ 工具。  
   
- 在**IConnectionPointContainer**和**IConnectionPoint**接口的[记录集](../../reference/ado-api/recordset-object-ado.md)和[连接](../../reference/ado-api/connection-object-ado.md)对象上发出**QueryInterface** ，使其了解你的事件处理程序可用。 然后对每个类发出 **IConnectionPoint：： Advise** 。  
+ 在 **IConnectionPointContainer** 和 **IConnectionPoint** 接口的 [记录集](../../reference/ado-api/recordset-object-ado.md)和 [连接](../../reference/ado-api/connection-object-ado.md)对象上发出 **QueryInterface** ，使其了解你的事件处理程序可用。 然后对每个类发出 **IConnectionPoint：： Advise** 。  
   
- 例如，假设您正在使用一个布尔函数，如果该函数成功通知**记录集**对象具有可用的事件处理程序，则该函数返回**True** 。  
+ 例如，假设您正在使用一个布尔函数，如果该函数成功通知 **记录集** 对象具有可用的事件处理程序，则该函数返回 **True** 。  
   
 ```  
 // BeginEventExampleVC03  

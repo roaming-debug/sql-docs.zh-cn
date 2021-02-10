@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 17ba3712f1b644a0d80d890c405e8ead8267236c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92c6e91ca49046561c24d7716dd5a3e152e686f5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372643"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017367"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>项目设置（迁移）(MySQLToSQL)
 " **项目设置** " 对话框的 "迁移" 页包含用于自定义 SSMA 将数据从 MySQL 迁移到 SQL Server 的方式的设置。  

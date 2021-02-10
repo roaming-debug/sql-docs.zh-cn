@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c694a5051729a6ce9b925014ae93b5dbde11f5d9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 64dc0e750a999fa1a333a3ec94576583850e511e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164897"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027936"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 对象和接口
 这些对象之间的关系在 [ADO 对象模型](./ado-object-model.md)中表示。  
@@ -41,7 +41,7 @@ ms.locfileid: "99164897"
 |[属性](./property-object-ado.md)|表示由提供程序定义的 ADO 对象的动态特性。|  
 |[记录](./record-object-ado.md)|表示 **记录集** 的一行或文件系统中的目录或文件。 **记录** 对象对于脚本是安全的。|  
 |[Recordset](./recordset-object-ado.md)|表示基表中的记录集或执行的命令的结果。 **记录集** 对象随时仅指集内的单个记录作为当前记录。<br /><br /> 对于脚本编写， **Recordset** 对象是安全的。|  
-|[流](./stream-object-ado.md)|表示数据的二进制流。<br /><br /> **流式** 处理对象是安全的。|  
+|[Stream](./stream-object-ado.md)|表示数据的二进制流。<br /><br /> **流式** 处理对象是安全的。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ADO API 参考](./ado-api-reference.md)   

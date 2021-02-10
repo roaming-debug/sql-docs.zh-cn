@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 331a004ac1daba1b1d456acab86037b97f15cad5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bcb8cc343007e79890c82d5ca80e9ce8b7ec6f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492490"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014637"
 ---
 # <a name="legal-notice-db2tosql"></a>法律公告 (DB2toSQL) 
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  

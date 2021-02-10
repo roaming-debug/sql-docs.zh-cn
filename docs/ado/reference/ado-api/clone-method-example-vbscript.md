@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c8c51d2aa6c648530d3aa218d21e9a8ed6cc5d5d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f13ee1086b1b8ead1ca66ea537ee4f4942f46fde
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99155731"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027095"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone 方法示例 (VBScript)
 此示例使用 [Clone](./clone-method-ado.md) 方法创建 [记录集](./recordset-object-ado.md) 的副本，然后让用户单独定位每个副本的记录指针。  

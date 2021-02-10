@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c661e8e99ae9651a4b89f8facad238d5f83564e9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4b72ed3beafd211439890946da9c41f39af8eb90
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991768"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028622"
 ---
 # <a name="adding-multiple-fields-and-values"></a>添加多个字段和值
 有时，将字段及其相应值传入到 **AddNew** 方法可能更高效，而不是为每个新字段多次设置 **值** 。 如果 *FieldList* 是一个数组，则 *值* 也必须是具有相同成员数的数组;否则，将发生错误。 字段名称的顺序必须与每个数组中的字段值顺序相匹配。 下面的代码将字段数组和值数组传递到 **AddNew** 方法。
