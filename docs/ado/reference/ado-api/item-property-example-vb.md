@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e666705f64897baa769dd453cbbb962c883fe0b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 936c3b481d782c806346f5bb80e039066ddb92f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167192"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041887"
 ---
 # <a name="item-property-example-vb"></a>Item 属性示例 (VB)
-此示例演示 [Item](./item-property-ado.md) 属性如何访问集合的成员。 此示例使用参数化命令打开 _*_Pubs_*_ 数据库的 ***作者** _ 表。  
+此示例演示 [Item](./item-property-ado.md) 属性如何访问集合的成员。 此示例使用参数化命令打开 _ *_Pubs_** 数据库的 ***作者** _ 表。  
   
  对于数据库发出的命令中的参数，可通过索引和名称从 [命令](./command-object-ado.md) 对象的 [参数](./parameters-collection-ado.md) 集合进行访问。 然后，将根据索引和名称从该对象的[字段](./fields-collection-ado.md)集合访问返回的[记录集](./recordset-object-ado.md)的字段。  
   
@@ -63,7 +63,7 @@ Public Sub Main()
     Column(7) = "zip"  
     Column(8) = "contract"  
   
-    cmd.CommandText = "SELECT _ FROM Authors WHERE state = ?"  
+    cmd.CommandText = "SELECT * FROM Authors WHERE state = ?"  
     Set prm = cmd.CreateParameter("ItemXparm", adChar, adParamInput, 2, "CA")  
     cmd.Parameters.Append prm  
      ' set connection  

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: e335170c97f18039767fab8bf0b8400ce9f9b45d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9bc1dafd5242dc4be8a9a2947465ed48a01fcb8d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643757"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042417"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>在数据库实验助手中捕获跟踪
 
@@ -125,7 +125,7 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 
 **问：我是否可以收集 XEvents 而不是跟踪，能否重播 XEvents？**
 
-是。 DEA 支持 XEvents。 下载最新版本的 DEA 并试用。
+是的。 DEA 支持 XEvents。 下载最新版本的 DEA 并试用。
 
 ## <a name="troubleshoot-trace-captures"></a>跟踪捕获疑难解答
 

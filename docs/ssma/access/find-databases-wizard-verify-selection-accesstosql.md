@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c72a996ac72c8c595e58818bd8901707a3cb8adc
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: b4e1dad1b2c2265dcb83e18309d5716864c0d63f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984963"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044557"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>查找数据库向导 (验证所选内容)  (AccessToSQL) 
 "查找数据库" 向导的 "验证选择" 页列出了要添加到 SSMA 中的文件。 如果文件列表不正确，请单击 " **上一步** " 修改列表。 否则，单击 " **完成** " 以添加文件。  

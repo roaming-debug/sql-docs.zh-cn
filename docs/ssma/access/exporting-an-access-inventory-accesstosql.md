@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 112452e9e6c31810dbf26d9aa1e7b36959c192d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bff5f86bec26994c143195fcbb97aa30ba709e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488330"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044737"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a> (AccessToSQL) 导出访问清单
 如果你有多个访问数据库，但不确定要将哪些数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以在项目中导出所有 Access 数据库的清单。 然后，可以查看和查询清单元数据，以确定要迁移的数据库中的数据库和对象。 此清单使你可以快速找到问题的答案，例如：  
@@ -56,7 +56,7 @@ SSMA 导出有关访问数据库、表、列、索引、外键、查询、报表
   
 1.  打开 SSMA 以进行访问。  
   
-2.  在“文件”菜单中，选择“新建项目”。********  
+2.  在“文件”菜单中，选择“新建项目”。  
   
     将显示“新建项目”对话框。  
   

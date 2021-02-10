@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1babfbf6364371cbd1f96b310f29416b84f2b031
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9ab968b72ccffacb776985c8aa43b4210e98324a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984943"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044588"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>查找数据库向导 (选择位置)  (AccessToSQL) 
 在 "查找数据库" 向导的 "选择位置" 页上，输入用于查找 Access 数据库的搜索参数。  
@@ -37,7 +37,7 @@ ms.locfileid: "91984943"
 **添加**  
 将 "路径" 文本框中的位置添加到位置列表。  
   
-**替换**  
+**将**  
 如果选择了 "位置" 列表中的项，则 "路径" 文本框中的项将替换所选的项。  
   
 **删除**  
@@ -56,7 +56,7 @@ ms.locfileid: "91984943"
 若要查找与大小条件匹配的数据库，请在第一个框中选择一个比较字符，为大小输入一个数字，然后从第三个框中选择 "字节"、"千字节" 或 "兆字节"。  
   
 **所有者**  
-输入所有者的完整 Windows 用户名。 这可能会被格式化为*域* \\ *用户*。  
+输入所有者的完整 Windows 用户名。 这可能会被格式化为 *域* \\ *用户*。  
   
 ## <a name="see-also"></a>另请参阅  
 [添加和删除 Access 数据库文件](adding-and-removing-access-database-files-accesstosql.md)  

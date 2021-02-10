@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12c51ce9a3b4bdd83a1d1c4c7295f2ff438bc707
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d8443eaceb150bd0cf2c936e44cb29fc2292f89c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987713"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042001"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>在 AccessToSQL) 中添加和删除 Access 数据库文件 (
 若要将访问数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，必须将一个或多个 access 数据库添加到 SSMA 项目。 这些数据库必须是 Access 97 或更高版本。 如果你的数据库来自早期版本的 Access，则必须将数据库转换为较新的版本。 为此，请在 Access 97 或更高版本中打开并保存数据库，然后将它们添加到 SSMA。  
@@ -85,7 +85,7 @@ ms.locfileid: "91987713"
   
     您可以使用列表顶部的 " **全选** " 和 " **全部清除** " 按钮来选择或清除所有数据库。 您可以按住 CTRL 键来选择多个数据库，或按住 SHIFT 键以选择数据库的范围。  
   
-7.  单击“下一步”。  
+7.  单击 **“下一步”** 。  
   
 8.  在 "验证" 页上，单击 " **完成**"。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "91987713"
   
 3.  展开 " **表** "，然后选择一个表。  
   
-    请注意，将显示以下四个选项卡： **表**、 **类型映射**、 **属性**和 **数据**。  
+    请注意，将显示以下四个选项卡： **表**、 **类型映射**、 **属性** 和 **数据**。  
   
 4.  展开一个表，展开 " **键**"，然后选择一个键。  
   

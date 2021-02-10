@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 20c47935963473b7b6aced7d6b3eed4a53afbeac
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9d956167cd6a4cea41d9381996a0418b2cd5f4c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987513"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044937"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a> (AccessToSQL 创建服务器连接文件) 
 可以在脚本文件的 "服务器" 部分中指定服务器信息。 还可以在单独的服务器连接文件中指定服务器信息。 服务器连接文件的命令行参数为 `-c <serverconnectionfile>` 。 如果脚本和服务器连接文件中同时存在相同的服务器 id，则考虑脚本文件中的服务器定义。  

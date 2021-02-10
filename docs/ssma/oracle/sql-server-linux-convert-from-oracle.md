@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 1d28458896d4ae4806db1b0f705c5e33badddfb7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fb21fdc7da82d6dae2390ddcf0884ea1e8ac8a58
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932748"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044387"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>使用 SQL Server 迁移助手将 Oracle 架构迁移到 Linux 上的 SQL Server 2017
 
-本教程使用适用于 Windows 上的 Oracle SQL Server 迁移助手 (SSMA) 将 Oracle 示例**HR**架构转换为[Linux 上的 SQL Server 2017](../../linux/sql-server-linux-overview.md)。
+本教程使用适用于 Windows 上的 Oracle SQL Server 迁移助手 (SSMA) 将 Oracle 示例 **HR** 架构转换为 [Linux 上的 SQL Server 2017](../../linux/sql-server-linux-overview.md)。
 
 > [!div class="checklist"]
 > * 在 Windows 上下载并安装 SSMA
@@ -28,20 +28,20 @@ ms.locfileid: "87932748"
 > * 转换示例 HR 架构
 > * 迁移数据
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-- 安装了**HR**架构的 Oracle 12c (12.2.0.1.0) 的实例
+- 安装了 **HR** 架构的 Oracle 12c (12.2.0.1.0) 的实例
 - Linux 上的 SQL Server 的工作实例
 
 > [!NOTE]
-> 相同的步骤可用于在 Windows 上执行 SQL Server，但你必须在 "**迁移到**项目" 设置中选择 "Windows"。
+> 相同的步骤可用于在 Windows 上执行 SQL Server，但你必须在 " **迁移到** 项目" 设置中选择 "Windows"。
 
 ## <a name="download-and-install-ssma-for-oracle"></a>下载并安装 SSMA for Oracle
 
-有几个版本的 SQL Server 迁移助手可用，具体取决于你的源数据库。  下载最新版本的[Oracle SQL Server 迁移助手](https://aka.ms/ssmafororacle)，并使用下载页面上的说明进行安装。
+有几个版本的 SQL Server 迁移助手可用，具体取决于你的源数据库。  下载最新版本的 [Oracle SQL Server 迁移助手](https://aka.ms/ssmafororacle) ，并使用下载页面上的说明进行安装。
 
 > [!NOTE]
-> 目前，Linux 不支持**SSMA For Oracle 扩展包**，但本教程不需要这样做。
+> 目前，Linux 不支持 **SSMA For Oracle 扩展包** ，但本教程不需要这样做。
 
 ## <a name="create-and-set-up-project"></a>创建和设置项目
 
@@ -51,13 +51,13 @@ ms.locfileid: "87932748"
 
 1. 为项目指定名称。
 
-1. 在 "**迁移到**" 字段中选择 "SQL Server 2017 (Linux) -预览"。
+1. 在 " **迁移到** " 字段中选择 "SQL Server 2017 (Linux) -预览"。
 
 默认情况下，SSMA for Oracle 不使用 Oracle 示例架构。 若要启用 HR 架构，请执行以下步骤：
 
-1. 在 SSMA 中，选择 "**工具**" 菜单。
+1. 在 SSMA 中，选择 " **工具** " 菜单。
 
-1. 选择 "**默认项目设置**"，然后选择 "**加载系统对象**"。
+1. 选择 " **默认项目设置**"，然后选择 " **加载系统对象**"。
 
 1. 请确保已选中 " **HR** "，然后选择 **"确定"**。
 
@@ -65,7 +65,7 @@ ms.locfileid: "87932748"
 
 接下来，将 SSMA 连接到 Oracle。
 
-1. 在工具栏上，单击 "**连接到 Oracle**"。
+1. 在工具栏上，单击 " **连接到 Oracle**"。
 
 1. 输入服务器名称、端口、Oracle SID、用户名和密码。
 
@@ -77,9 +77,9 @@ ms.locfileid: "87932748"
 
 使用以下步骤生成迁移报告。
 
-1. 在**Oracle 元数据资源管理器**中，展开服务器的节点。
+1. 在 **Oracle 元数据资源管理器** 中，展开服务器的节点。
 
-1. 展开 "**架构**"，右键单击 " **HR**"，然后选择 "**创建报表**"。
+1. 展开 " **架构**"，右键单击 " **HR**"，然后选择 " **创建报表**"。
 
    ![Oracle 元数据资源管理器创建报表](./media/sql-server-linux-convert-from-oracle/CreateReport.png)
 
@@ -92,13 +92,13 @@ ms.locfileid: "87932748"
 
 ## <a name="connect-to-sql-server"></a>连接到 SQL Server
 
-接下来，选择 "**连接到 SQL Server** "，然后输入相应的连接信息。  如果你使用的数据库名称尚不存在，则 SSMA for Oracle 将为你创建该数据库名称。
+接下来，选择 " **连接到 SQL Server** "，然后输入相应的连接信息。  如果你使用的数据库名称尚不存在，则 SSMA for Oracle 将为你创建该数据库名称。
 
 ![连接到 SQL Server](./media/sql-server-linux-convert-from-oracle/ConnectToSQLServer.png)
 
 ## <a name="convert-schema"></a>转换架构
 
-在**Oracle 元数据资源管理器**中右键单击**HR** ，然后选择 "转换架构"。
+在 **Oracle 元数据资源管理器** 中右键单击 **HR** ，然后选择 "转换架构"。
 
 ![转换架构](./media/sql-server-linux-convert-from-oracle/ConvertSchema.png)
 
@@ -106,9 +106,9 @@ ms.locfileid: "87932748"
 
 接下来，同步您的数据库。
 
-1. 转换完成后，请使用**SQL Server 元数据资源管理器**来前往你在上一步中创建的数据库。
+1. 转换完成后，请使用 **SQL Server 元数据资源管理器** 来前往你在上一步中创建的数据库。
 
-1. 右键单击数据库，选择 "**与数据库同步**"，然后单击 "确定"。
+1. 右键单击数据库，选择 " **与数据库同步**"，然后单击 "确定"。
 
    ![与数据库同步](./media/sql-server-linux-convert-from-oracle/SynchronizeWithDatabase.png)
 
@@ -116,7 +116,7 @@ ms.locfileid: "87932748"
 
 最后一步是迁移数据。
 
-1. 在**Oracle 元数据资源管理器**中，右键单击**HR**，然后选择 "**迁移数据**"。
+1. 在 **Oracle 元数据资源管理器** 中，右键单击 **HR**，然后选择 " **迁移数据**"。
 
 1. 数据迁移步骤要求您重新输入 Oracle 和 SQL Server 凭据。
 

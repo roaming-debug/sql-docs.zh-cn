@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80215c133895804264ad7be586faeaf7cfcc4180
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fdbecc77e8a86f2135c6b12fd9fbf6a4727c31cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170903"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041857"
 ---
 # <a name="item-property-example-vc"></a>Item 属性示例 (VC++)
-此示例演示 [Item](./item-property-ado.md) 属性如何访问集合的成员。 此示例使用参数化命令打开 _*_Pubs_*_ 数据库的 ***作者** _ 表。  
+此示例演示 [Item](./item-property-ado.md) 属性如何访问集合的成员。 此示例使用参数化命令打开 _ *_Pubs_** 数据库的 ***作者** _ 表。  
   
  对于数据库发出的命令中的参数，可通过索引和名称从 [命令](./command-object-ado.md) 对象的 [参数](./parameters-collection-ado.md) 集合进行访问。 然后，返回的 [记录集](./recordset-object-ado.md) 的字段通过索引和名称从该对象的 [字段](./fields-collection-ado.md) 集合进行访问。  
   
@@ -82,7 +82,7 @@ void ItemX() {
       Column[7] = "zip";  
       Column[8] = "contract";  
   
-      _bstr_t strText("SELECT _ FROM authors WHERE state = ?");  
+      _bstr_t strText("SELECT * FROM authors WHERE state = ?");  
       pCmd->CommandText = strText;  
   
       pPrm = pCmd->CreateParameter("ItemXparm", adChar, adParamInput, 2, "CA");  

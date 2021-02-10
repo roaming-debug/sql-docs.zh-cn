@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 655b6f64391ebf8c7fd28d179000753ed4f95faa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf369ee1104f4b686dc0e7b6ab4bbde7bab458de
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492510"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044697"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>执行 SSMA 控制台 (AccessToSQL) 
 Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来执行和控制 SSMA 活动。 后续部分将详细介绍相同的内容。  

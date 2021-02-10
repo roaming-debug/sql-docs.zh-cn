@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b04dc407bd79f53aed59ccd70464b33ef319ecb5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8f74ae0e10c13dd4cd972284139623ad865c6dee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170845"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100043957"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 属性示例 (VC++)
-此示例使用 [MaxRecords](./maxrecords-property-ado.md) 属性来打开一个 [记录集，该记录集](./recordset-object-ado.md) 包含 ***titles** _ 表中的10个最昂贵的标题。  
+此示例使用 [MaxRecords](./maxrecords-property-ado.md) 属性打开一个 [记录集](./recordset-object-ado.md) ，其中包含 ***标题*** 表中的10个最昂贵的标题。  
   
 ## <a name="example"></a>示例  
   
@@ -78,7 +78,7 @@ void  MaxRecordsX() {
    _RecordsetPtr pRstTemp = NULL;  
   
    // Define Other Variables  
-   IADORecordBinding _picRs = NULL;   // Interface Pointer Declared    
+   IADORecordBinding *picRs = NULL;   // Interface Pointer Declared    
    CTitleRs titlers;   // C++ Class Object  
   
    try {  
