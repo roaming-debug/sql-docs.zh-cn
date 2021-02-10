@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 59a0075dfcee23c5e005853b0befd4b3eb0f39c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f9fa74533d7887f968d45dde715b191ac00be88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463448"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015168"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>执行 SSMA 控制台 (MySQLToSQL)
 Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSMA 活动。  

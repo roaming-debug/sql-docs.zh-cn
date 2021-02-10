@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e2076732536c8d9862ebc022f7a78b197ff428c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 229662bd5db68039202f1f39d7309c12ff6354a4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990968"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028856"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>使用 ADO 与 Microsoft Visual Basic 和 Visual Basic for Applications
 无论你使用 Visual Basic 还是 Visual Basic for Applications，设置 ADO 项目和编写 ADO 代码都是类似的。 本主题介绍如何将 ADO 与 Visual Basic 和 Visual Basic for Applications 结合使用，并注意所有差异。
@@ -81,7 +81,7 @@ Set conn = New ADODB.Connection
 ```
 
 > [!NOTE]
->  `ADODB`假设您已在项目中正确引用 ADO 库，则不需要使用**Dim**语句显式使用 progid。 但是，使用它可以确保不会与其他库发生命名冲突。
+>  `ADODB`假设您已在项目中正确引用 ADO 库，则不需要使用 **Dim** 语句显式使用 progid。 但是，使用它可以确保不会与其他库发生命名冲突。
 
 > [!NOTE]
 >  例如，如果在同一个项目中同时包含对 ADO 和 DAO 的引用，则应包括一个限定符，以指定实例化 **记录集** 对象时要使用的对象模型，如以下代码所示：

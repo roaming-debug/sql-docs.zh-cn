@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a307a0de76ce1e74e3e1773a414fce93957572b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1b6a62e8946415cc9c1e869a173de43b98ba14f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990998"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029251"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>适用于 SQL Server 的 Microsoft OLE DB 提供程序概述
 适用于 SQL Server 的 Microsoft OLE DB 提供程序，SQLOLEDB 允许 ADO 访问 Microsoft SQL Server。
@@ -59,12 +59,12 @@ User ID=MyUserID;Password=MyPassword;"
 > [!NOTE]
 >  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定 **Trusted_Connection = yes** 或 **集成安全性 = SSPI** 而不是用户 ID 和密码信息。
 
-## <a name="provider-specific-connection-parameters"></a>特定于提供程序的连接参数
- 提供程序除 ADO 定义的连接参数外，还支持多个特定于提供程序的连接参数。 与 ADO 连接属性一样，这些特定于提供程序的属性可以通过[连接](../../reference/ado-api/connection-object-ado.md)的[properties](../../reference/ado-api/properties-collection-ado.md)集合进行设置，也可以设置为**ConnectionString**的一部分。
+## <a name="provider-specific-connection-parameters"></a>Provider-Specific 连接参数
+ 提供程序除 ADO 定义的连接参数外，还支持多个特定于提供程序的连接参数。 与 ADO 连接属性一样，这些特定于提供程序的属性可以通过 [连接](../../reference/ado-api/connection-object-ado.md)的 [properties](../../reference/ado-api/properties-collection-ado.md)集合进行设置，也可以设置为 **ConnectionString** 的一部分。
 
 |参数|说明|
 |---------------|-----------------|
-|Trusted_Connection|指示用户身份验证模式。 这可以设置为 **"是" 或 "** **否**"。 默认值为 " **否**"。 如果将此属性设置为 **"是"**，则 SQLOLEDB 将使用 MICROSOFT Windows NT 身份验证模式来授权用户访问由 **Location** 和 [Datasource](../../reference/ado-api/datasource-property-ado.md) 属性值指定的 SQL Server 数据库。 如果将此属性设置为 " **否**"，则 SQLOLEDB 将使用混合模式来授予用户对 SQL Server 数据库的访问权限。 SQL Server 登录名和密码在 " **用户 Id** " 和 " **密码** " 属性中指定。|
+|Trusted_Connection|指示用户身份验证模式。 这可以设置为 **"是" 或 "** **否**"。 默认值为“否”。 如果将此属性设置为 **"是"**，则 SQLOLEDB 将使用 MICROSOFT Windows NT 身份验证模式来授权用户访问由 **Location** 和 [Datasource](../../reference/ado-api/datasource-property-ado.md) 属性值指定的 SQL Server 数据库。 如果将此属性设置为 " **否**"，则 SQLOLEDB 将使用混合模式来授予用户对 SQL Server 数据库的访问权限。 SQL Server 登录名和密码在 " **用户 Id** " 和 " **密码** " 属性中指定。|
 |当前语言|指示 SQL Server 语言名称。 标识用于系统消息选择和格式化的语言。 必须在 SQL Server 上安装该语言，否则打开该连接将失败。|
 |网络地址|指示 **Location** 属性指定的 SQL Server 的网络地址。|
 |Network Library|指示用于与 SQL Server 通信的网络库 (DLL) 的名称。 该名称不应当包含路径或 .dll 文件扩展名。 默认值由 SQL Server 客户端配置提供。|
@@ -112,17 +112,17 @@ EXECUTE SalesByCategory 'Produce', '1995'
  使用 SQL Server，ADO 可以使用 XML 作为 **命令** 输入，并以 xml 流格式而不是在 **Recordset** 对象中检索结果。 有关详细信息，请参阅将 [流用于命令输入](../data/command-streams.md) 和 [检索流中的结果](../data/retrieving-resultsets-into-streams.md)集。
 
 ### <a name="accessing-sql_variant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>使用 MDAC 2.7、MDAC 2.8 或 Windows DAC 6.0 访问 sql_variant 数据
- Microsoft SQL Server 具有一个名为 **sql_variant**的数据类型。 与 OLE DB **DBTYPE_VARIANT**类似， **sql_variant** 数据类型可以存储多种不同类型的数据。 但 **DBTYPE_VARIANT** 和 **sql_variant**之间存在一些重要差异。 ADO 还会以不同于处理其他数据类型的方式处理存储为 **sql_variant** 值的数据。 以下列表描述了访问 **sql_variant**类型的列中存储的 SQL Server 数据时要考虑的问题。
+ Microsoft SQL Server 具有一个名为 **sql_variant** 的数据类型。 与 OLE DB **DBTYPE_VARIANT** 类似， **sql_variant** 数据类型可以存储多种不同类型的数据。 但 **DBTYPE_VARIANT** 和 **sql_variant** 之间存在一些重要差异。 ADO 还会以不同于处理其他数据类型的方式处理存储为 **sql_variant** 值的数据。 以下列表描述了访问 **sql_variant** 类型的列中存储的 SQL Server 数据时要考虑的问题。
 
 -   在 MDAC 2.7、MDAC 2.8 和 Windows 数据访问组件 (Windows DAC) 6.0，SQL Server 的 OLE DB 提供程序支持 **sql_variant** 类型。 ODBC 的 OLE DB 提供程序不是。
 
--   **Sql_variant**类型与**DBTYPE_VARIANT**数据类型不完全匹配。  **Sql_variant**类型支持 DBTYPE_VARIANT 不支持的几个新子类型 **，** 包括**GUID**、 **ANSI** (非 UNICODE) 字符串和**BIGINT**。 使用前面列出的子类型之外的子类型将能正常工作。
+-   **Sql_variant** 类型与 **DBTYPE_VARIANT** 数据类型不完全匹配。  **Sql_variant** 类型支持 DBTYPE_VARIANT 不支持的几个新子类型 **，** 包括 **GUID**、 **ANSI** (非 UNICODE) 字符串和 **BIGINT**。 使用前面列出的子类型之外的子类型将能正常工作。
 
--   **Sql_variant**子类型**数值**与大小**DBTYPE_DECIMAL**不匹配。
+-   **Sql_variant** 子类型 **数值** 与大小 **DBTYPE_DECIMAL** 不匹配。
 
--   多个数据类型强制将导致类型不匹配。 例如，将具有**GUID**子类型的**sql_variant**强制为**DBTYPE_VARIANT**将**导致 (字节**的子类型) 。 将此类型转换回 **sql_variant** 将导致 **数组**)  (字节的新子类型。
+-   多个数据类型强制将导致类型不匹配。 例如，将具有 **GUID** 子类型的 **sql_variant** 强制为 **DBTYPE_VARIANT** 将 **导致 (字节** 的子类型) 。 将此类型转换回 **sql_variant** 将导致 **数组**)  (字节的新子类型。
 
--   只有在**sql_variant**包含特定子类型时，才能 (封送) 或持久保存包含**Sql_variant**数据的**记录集**字段。 尝试使用以下不受支持的子类型来远程或保留数据将导致运行时错误， (Microsoft 永久性提供程序中不支持的转换)  (MSPersist) ： **VT_VARIANT**、 **VT_RECORD**、 **VT_ILLEGAL**、 **VT_UNKNOWN**、 **VT_BSTR**和 **VT_DISPATCH。**
+-   只有在 **sql_variant** 包含特定子类型时，才能 (封送) 或持久保存包含 **Sql_variant** 数据的 **记录集** 字段。 尝试使用以下不受支持的子类型来远程或保留数据将导致运行时错误， (Microsoft 永久性提供程序中不支持的转换)  (MSPersist) ： **VT_VARIANT**、 **VT_RECORD**、 **VT_ILLEGAL**、 **VT_UNKNOWN**、 **VT_BSTR** 和 **VT_DISPATCH。**
 
 -   MDAC 2.7、MDAC 2.8 和 Windows DAC 6.0 中 SQL Server 的 OLE DB 提供程序有一个名为 " **允许本机变** 体" 的动态属性，如名称所示，允许开发人员访问其本机格式的 **sql_variant** ，而不是 **DBTYPE_VARIANT**。 如果设置此属性，并且使用客户端游标引擎打开 **记录集** (**AdUseClient**) ，则 **记录集。打开** 调用将失败。 如果已设置此属性，并且使用服务器游标打开 **记录集** (**AdUseServer**) ，则 **记录集** 将成功，但访问 **sql_variant** 类型的列将产生错误。
 
@@ -134,12 +134,12 @@ EXECUTE SalesByCategory 'Produce', '1995'
  SQL Server 游标支持可滚动的 SQLOLEDB 记录集。 SQL Server 对对数据库的其他用户所做更改敏感的游标施加限制。 具体而言，某些游标中的行无法排序，尝试使用包含 SQL ORDER BY 子句的命令创建记录集可能会失败。
 
 ## <a name="dynamic-properties"></a>动态属性
- 用于 SQL Server 的 Microsoft OLE DB 提供程序将多个动态属性插入未打开的[连接](../../reference/ado-api/connection-object-ado.md)、[记录集](../../reference/ado-api/recordset-object-ado.md)和[命令](../../reference/ado-api/command-object-ado.md)对象的**properties**集合。
+ 用于 SQL Server 的 Microsoft OLE DB 提供程序将多个动态属性插入未打开的 [连接](../../reference/ado-api/connection-object-ado.md)、[记录集](../../reference/ado-api/recordset-object-ado.md)和 [命令](../../reference/ado-api/command-object-ado.md)对象的 **properties** 集合。
 
  下表是每个动态属性的 ADO 和 OLE DB 名称的交叉索引。 OLE DB 程序员参考是指 ADO 属性名称，术语为 "Description"。 可以在 OLE DB 程序员参考中找到有关这些属性的详细信息。 在索引中搜索 OLE DB 属性名称，或者参阅 [附录 C： OLE DB 属性](/previous-versions/windows/desktop/ms723130(v=vs.85))。
 
 ## <a name="connection-dynamic-properties"></a>连接动态属性
- 将以下属性添加到**连接**对象的**properties**集合。
+ 将以下属性添加到 **连接** 对象的 **properties** 集合。
 
 |ADO 属性名称|OLE DB 属性名称|
 |-----------------------|--------------------------|
@@ -187,11 +187,11 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|
 |准备提交行为|DBPROP_PREPARECOMMITBEHAVIOR|
 |过程术语|DBPROP_PROCEDURETERM|
-|Prompt|DBPROP_INIT_PROMPT|
+|提示|DBPROP_INIT_PROMPT|
 |提供程序友好名称|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |提供程序版本|DBPROP_PROVIDERVER|
-|只读数据源|DBPROP_DATASOURCEREADONLY|
+|Read-Only 数据源|DBPROP_DATASOURCEREADONLY|
 |命令行集转换|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |架构术语|DBPROP_SCHEMATERM|
 |架构使用情况|DBPROP_SCHEMAUSAGE|
@@ -205,7 +205,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |窗口句柄|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>记录集动态属性
- 将以下属性添加到**Recordset**对象的**properties**集合。
+ 将以下属性添加到 **Recordset** 对象的 **properties** 集合。
 
 |ADO 属性名称|OLE DB 属性名称|
 |-----------------------|--------------------------|
@@ -277,7 +277,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |使用书签|DBPROP_BOOKMARKS|
 
 ## <a name="command-dynamic-properties"></a>命令动态属性
- 将以下属性添加到**命令**对象的**properties**集合。
+ 将以下属性添加到 **命令** 对象的 **properties** 集合。
 
 |ADO 属性名称|OLE DB 属性名称|
 |-----------------------|--------------------------|

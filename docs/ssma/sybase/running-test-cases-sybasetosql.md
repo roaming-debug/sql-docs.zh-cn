@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ea2b250f59a29a16bc77ad23e28b0823461a8ace
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8cb7521c0f58526c6dbc9e0f5fa7bfae848f6d38
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468750"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017608"
 ---
 # <a name="running-test-cases-sybasetosql"></a>运行测试用例 (SybaseToSQL)
 当 SSMA 测试人员运行测试用例时，它将执行选择用于测试的对象，并创建有关验证结果的报表。 如果两个平台上的结果相同，则测试已成功。 Sybase 和之间对象的对应关系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据当前 SSMA 项目的架构映射设置来确定。  
@@ -27,7 +27,7 @@ ms.locfileid: "88468750"
 ## <a name="run-test-case"></a>运行测试用例  
 运行准备的测试用例：  
   
-1.  单击“运行”**** 按钮。  
+1.  单击“运行”按钮。  
   
 2.  在 " **连接到 Sybase** " 对话框中，输入连接信息，然后单击 " **连接**"。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88468750"
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
 SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如果未满足某些条件，则会显示错误消息。  
   
 ### <a name="initialization"></a>初始化  
@@ -45,7 +45,7 @@ SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如�
   
 以下对象在 SSMATESTER2005db 或 SSMATESTER2008db 数据库中的 Sybase 处创建，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssmatesterdb_syb 数据库中创建。  
   
-|名称|类型|描述|  
+|名称|类型|说明|  
 |--------|--------|---------------|  
 |USER_TABLE $ .Trg|触发器|触发审核已验证表中的更改。|  
 |USER_TABLE $ Aud|表|其中保存已删除和覆盖的行的表。|  
@@ -57,7 +57,7 @@ SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如�
   
 以下对象在 Sybase 和的已验证表的数据库中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-|名称|类型|描述|  
+|名称|类型|说明|  
 |--------|--------|---------------|  
 |USER_TABLE $ .Trg|触发器|触发审核已验证表中的更改。|  
   

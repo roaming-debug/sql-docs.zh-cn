@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 238c8bf3d0c21625b9317690f70adbe16bd5075f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 519b505c0fcb985e6f0ca9cfd04f890114b3fdb2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171170"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025064"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 运行时错误的类型。  
@@ -32,14 +32,14 @@ ms.locfileid: "99171170"
   
 -   负小数点-完整错误号的十进制转换。  
   
--   完整错误号 Hexadecimal-The 十六进制表示形式。 Windows 设备代码采用第四位数。 ADO 错误 *号的工具代码是。* 例如： 0x800 ***A** _0E7B。  
+-   完整错误号 Hexadecimal-The 十六进制表示形式。 Windows 设备代码采用第四位数。 ADO 错误 *号的工具代码是。* 例如 ***： 0x800 0E7B***。  
   
 > [!NOTE]
->  可能会向 ADO 应用程序传递 OLE DB 错误。 通常，可以通过 Windows 设备代码4来标识这些 _*。例如，0x800 * * * 4* *_。  
+>  可能会向 ADO 应用程序传递 OLE DB 错误。 通常，可以通过 Windows 设备代码 *4* 来标识这些。 例如，0x800 ***4***。  
   
 |返回的常量|Value|说明|  
 |--------------|-----------|-----------------|  
-|_ *adErrBoundToCommand**|3707-2146824581 0x800A0E7B|无法更改将 **命令** 对象作为其源的 **记录集** 对象的 **ActiveConnection** 属性。|  
+|**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|无法更改将 **命令** 对象作为其源的 **记录集** 对象的 **ActiveConnection** 属性。|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|服务器无法完成此操作。|  
 |**adErrCantChangeConnection**|3748-2146824540 0x800A0EA4|连接被拒绝。 你请求的新连接具有不同于已使用的的特征。|  
 |**adErrCantChangeProvider**|3220-2146825068 0X800A0C94|提供的提供程序与已使用的提供程序不同。|  

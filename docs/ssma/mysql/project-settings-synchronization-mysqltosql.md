@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3ea89bcdf9b10fb50e74228a26bfcd5cead83aca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f778b2bd361fab5ac1210005076692c813bb4b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492379"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017307"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>项目设置（同步）(MySQLToSQL)
 同步 **项目设置** 使你可以配置 MySQL 数据库对象与 SQL Server 数据库对象的同步方式。  
@@ -32,7 +32,7 @@ ms.locfileid: "88492379"
   
 ##### <a name="misc"></a>杂项  
   
-##### <a name="attempts"></a>多次  
+##### <a name="attempts"></a>尝试次数  
 提供要加载到 SQL Server 中的传递对象数的相关信息。 将对象加载到 SQL Server 通常是在多个阶段中执行的。 在第一次传递中无法加载的对象（如外键）可能会在下一步中成功加载。  
   
 默认情况下，值为2。  

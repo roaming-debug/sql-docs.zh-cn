@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d1586800288d0a2d2984cf08e770f776c5ee3c6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 837ecdb45ead79e9e957a6d2381ccfaf1de6fb2c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991808"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028662"
 ---
 # <a name="visual-c-extensions-for-ado"></a>ADO 的 Visual C++ 扩展
-Visual C++ 使用 **#import** 指令编程 ado 的首选方法，如 [Microsoft Visual C++ ADO 编程](./visual-c-ado-programming.md)中所述。 但是，早期版本的 ADO 附带了使用 Visual C++ 进行编程的替代方法： Visual C++ 扩展。 本部分记录了此功能，适用于必须保留 Visual C++ 扩展代码的用户，但应使用 #**import**编写新的 ADO 代码。
+Visual C++ 使用 **#import** 指令编程 ado 的首选方法，如 [Microsoft Visual C++ ADO 编程](./visual-c-ado-programming.md)中所述。 但是，早期版本的 ADO 附带了使用 Visual C++ 进行编程的替代方法： Visual C++ 扩展。 本部分记录了此功能，适用于必须保留 Visual C++ 扩展代码的用户，但应使用 #**import** 编写新的 ADO 代码。
 
  使用 ADO 检索数据时，Visual C++ 程序员面临的一项最枯燥的工作是将返回的数据类型转换为 c + + 数据类型，然后将转换后的数据存储在类或结构中。 除了非常繁琐的情况外，通过 VARIANT 数据类型检索 c + + 数据会降低性能。
 
@@ -41,4 +41,4 @@ Visual C++ 使用 **#import** 指令编程 ado 的首选方法，如 [Microsoft 
 -   [带有 Visual C++ 扩展的 ADO 示例](./visual-c-extensions-example.md)
 
 ## <a name="see-also"></a>另请参阅
- [用于 COM Visual C++ 扩展的 Visual C++ 语法索引的 ADO](../../reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual C++ Extensions Example](./visual-c-extensions-example.md) [Visual C++ 扩展](./using-visual-c-extensions.md) [Visual C++ 扩展标头](./visual-c-extensions-header.md)
+ [用于 COM Visual C++ 扩展的 Visual C++ 语法索引的 ADO](../../reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [](./visual-c-extensions-example.md) [Visual C++ 扩展](./using-visual-c-extensions.md) [Visual C++ 扩展标头](./visual-c-extensions-header.md)

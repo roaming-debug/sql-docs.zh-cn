@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: db0c65c8def8c2a755fe6ca9a224c936e9085f8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0084551b2e1ab6de4c3731f33525ccd3a8a48d5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320193"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017517"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>将 Sybase ASE 架构映射到 SQL Server 架构 (SybaseToSQL)
 在 Sybase 自适应服务器企业 (ASE) 中，每个数据库都有一个或多个架构。 默认情况下，SSMA 将数据库和架构中的所有对象迁移到或 SQL Azure 中的相同数据库和架构 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 但是，你可以自定义 ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库之间的映射。  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>ASE、SQL Server 或 SQL Azure 架构  
-ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 都通过使用两部分表示法作为 *数据库*来指定数据库及其架构。 例如，在 ASE **演示** 数据库中，可能有一个 **dbo** 架构。 该数据库和架构对指定为 **demo. dbo**。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 具有相同的数据库和架构，则该对也指定为 **demo. dbo**。  
+ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 都通过使用两部分表示法作为 *数据库* 来指定数据库及其架构。 例如，在 ASE **演示** 数据库中，可能有一个 **dbo** 架构。 该数据库和架构对指定为 **demo. dbo**。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 具有相同的数据库和架构，则该对也指定为 **demo. dbo**。  
   
 ## <a name="modifying-the-target-database-and-schema"></a>修改目标数据库和架构  
 在 SSMA 中，可以将 ASE 架构映射到任何可用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 架构。  

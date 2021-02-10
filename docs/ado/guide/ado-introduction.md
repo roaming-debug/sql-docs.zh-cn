@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: def7cd0b826dd5efb378afbf0605ed82f894368c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5f52e5d1de1af48753c4c322403cdb480473669c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980778"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030524"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 概述和优势
 ActiveX 数据对象 (ADO) 是用于 OLE DB 的高级、易于使用的界面。 OLE DB 是对各种数据存储的低级别、高性能的接口。 ADO 和 OLE DB 都可以使用关系 (表格) 和非关系 (层次结构或流) 数据。

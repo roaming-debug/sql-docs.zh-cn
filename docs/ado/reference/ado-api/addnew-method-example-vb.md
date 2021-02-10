@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 270f25ff83aa299844e6ba0c7d8c861e9dd8ab30
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 96f6484e48426f69d0dd38547f3c9206ce7a99e3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161713"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031436"
 ---
 # <a name="addnew-method-example-vb"></a>AddNew 方法示例 (VB)
 此示例使用 [AddNew](./addnew-method-ado.md) 方法创建具有指定名称的新记录。  

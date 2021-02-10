@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5a6cfdda6072f8ed51d55569ed68b113a4148642
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991018"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029261"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>适用于 ODBC 的 Microsoft OLE DB 提供程序概述
 对于 ADO 或 RDS 程序员，理想情况下，每个数据源都公开一个 OLE DB 接口，以便 ADO 可以直接调用到数据源。 尽管数据库供应商越来越多地实现 OLE DB 接口，但某些数据源尚未以这种方式公开。 但是，目前使用的大多数 DBMS 系统都可通过 ODBC 访问。
@@ -33,7 +33,7 @@ ms.locfileid: "88991018"
  这是 ADO 的默认提供程序，并且支持所有与提供程序相关的 ADO 属性和方法。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
- 若要连接到该提供程序，请将[ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)属性的**provider =** 参数设置为：
+ 若要连接到该提供程序，请将 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)属性的 **provider =** 参数设置为：
 
 ```
 MSDASQL
@@ -81,19 +81,19 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
  如果使用 **DSN** 或 **FileDSN**，则必须通过 Windows 控制面板中的 "ODBC 数据源管理器" 进行定义。 在 Microsoft Windows 2000 中，ODBC 管理员位于 "管理工具" 下。 在早期版本的 Windows 中，ODBC 管理员图标名为 **32 位 ODBC** 或只是 **odbc**。
 
- 除了设置 **DSN**外，还可以指定 ODBC 驱动程序 (**driver =**) ，例如 "SQL Server;" 服务器名称 (**server =**) ;数据库名称 (**database =**) 。
+ 除了设置 **DSN** 外，还可以指定 ODBC 驱动程序 (**driver =**) ，例如 "SQL Server;" 服务器名称 (**server =**) ;数据库名称 (**database =**) 。
 
  你还可以指定用户帐户名称 (**UID =**) ，以及用户帐户的密码 (**PWD) =** 在特定于 ODBC 的参数中或在标准 ADO 定义的 *user* 和 *password* 参数中。
 
- 尽管**dsn**定义已经指定了数据库，但你也可以指定*一个**数据库*参数，以及用于连接到其他数据库的**dsn** 。 使用**DSN**时，最好*始终包含* *database*参数。 这将确保你连接到正确的数据库（如果自上次检查 **DSN** 定义后另一个用户更改了默认数据库参数）。
+ 尽管 **dsn** 定义已经指定了数据库，但你也可以指定 *一个**数据库* 参数，以及用于连接到其他数据库的 **dsn** 。 使用 **DSN** 时，最好 *始终包含* *database* 参数。 这将确保你连接到正确的数据库（如果自上次检查 **DSN** 定义后另一个用户更改了默认数据库参数）。
 
-## <a name="provider-specific-connection-properties"></a>特定于提供程序的连接属性
- ODBC 的 OLE DB 提供程序将多个属性添加到**连接**对象的[properties](../../reference/ado-api/properties-collection-ado.md)集合。 下表列出了这些属性，并在括号中列出了相应的 OLE DB 属性名称。
+## <a name="provider-specific-connection-properties"></a>Provider-Specific 连接属性
+ ODBC 的 OLE DB 提供程序将多个属性添加到 **连接** 对象的 [properties](../../reference/ado-api/properties-collection-ado.md)集合。 下表列出了这些属性，并在括号中列出了相应的 OLE DB 属性名称。
 
-|属性名|说明|
+|属性名称|说明|
 |-------------------|-----------------|
 |可访问过程 (KAGPROP_ACCESSIBLEPROCEDURES) |指示用户是否有权访问存储过程。|
 |可访问的表 (KAGPROP_ACCESSIBLETABLES) |指示用户是否有权对数据库表执行 SELECT 语句。|
@@ -117,24 +117,24 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |时间/日期函数 (KAGPROP_TIMEDATEFUNCTIONS) |指示 ODBC 驱动程序支持的时间和日期函数。 有关此位掩码中使用的函数名称和关联值的列表，请参阅 ODBC 文档中的 [附录 E：标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。|
 |SQL 语法支持 (KAGPROP_ODBCSQLCONFORMANCE) |指示 ODBC 驱动程序支持的 SQL 语法。|
 
-## <a name="provider-specific-recordset-and-command-properties"></a>特定于提供程序的记录集和命令属性
- ODBC 的 OLE DB 提供程序将多个属性添加到**Recordset**和**Command**对象的**properties**集合。 下表列出了这些属性，并在括号中列出了相应的 OLE DB 属性名称。
+## <a name="provider-specific-recordset-and-command-properties"></a>Provider-Specific 记录集和命令属性
+ ODBC 的 OLE DB 提供程序将多个属性添加到 **Recordset** 和 **Command** 对象的 **properties** 集合。 下表列出了这些属性，并在括号中列出了相应的 OLE DB 属性名称。
 
-|属性名|说明|
+|属性名称|说明|
 |-------------------|-----------------|
 |基于查询的更新/删除/插入 (KAGPROP_QUERYBASEDUPDATES) |指示是否可以使用 SQL 查询执行更新、删除和插入操作。|
 |ODBC 并发类型 (KAGPROP_CONCURRENCY) |指示用于减少两个用户尝试同时访问数据源中的相同数据而导致的潜在问题的方法。|
-|在只进游标 (KAGPROP_BLOBSONFOCURSOR) 上的 BLOB 可访问性|指示在使用只进游标时是否可以访问 BLOB **字段** 。|
+| (KAGPROP_BLOBSONFOCURSOR Forward-Only 游标的 BLOB 可访问性) |指示在使用只进游标时是否可以访问 BLOB **字段** 。|
 |在 QBU 中包括 SQL_FLOAT、SQL_DOUBLE 和 SQL_REAL，WHERE 子句 (KAGPROP_INCLUDENONEXACT) |指示 SQL_FLOAT、SQL_DOUBLE 和 SQL_REAL 值是否可以包含在 QBU WHERE 子句中。|
 |Insert (KAGPROP_POSITIONONNEWROW 后的最后一行上的位置) |指示在表中插入新记录后，表中的最后一行将为当前行。|
 |IRowsetChangeExtInfo (KAGPROP_IROWSETCHANGEEXTINFO) |指示 **IRowsetChange** 接口是否提供扩展信息支持。|
-|ODBC 游标类型 (KAGPROP_CURSOR) |指示 **记录集**使用的游标类型。|
+|ODBC 游标类型 (KAGPROP_CURSOR) |指示 **记录集** 使用的游标类型。|
 |生成可 (KAGPROP_MARSHALLABLE 封送的行集) |指示 ODBC 驱动程序生成可封送的记录集|
 
 ## <a name="command-text"></a>命令文本
  使用 [Command](../../reference/ado-api/command-object-ado.md) 对象的方式很大程度取决于数据源以及它将接受何种类型的查询或命令语句。
 
- ODBC 提供了一个特定的语法来调用存储过程。 对于**Command**对象的[Commandtext](../../reference/ado-api/commandtext-property-ado.md)属性，[连接](../../reference/ado-api/connection-object-ado.md)对象上的**Execute**方法的*commandtext*参数，或者[记录集](../../reference/ado-api/recordset-object-ado.md)对象上**Open**方法的*Source*参数，将传入具有以下语法的字符串：
+ ODBC 提供了一个特定的语法来调用存储过程。 对于 **Command** 对象的 [Commandtext](../../reference/ado-api/commandtext-property-ado.md)属性，[连接](../../reference/ado-api/connection-object-ado.md)对象上的 **Execute** 方法的 *commandtext* 参数，或者 [记录集](../../reference/ado-api/recordset-object-ado.md)对象上 **Open** 方法的 *Source* 参数，将传入具有以下语法的字符串：
 
 ```
 "{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
@@ -169,22 +169,22 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="recordset-behavior"></a>记录集行为
  下表列出了使用此提供程序打开的 **记录集** 对象上可用的标准 ADO 方法和属性。
 
- 有关提供程序配置的**记录集**行为的详细信息，请运行[支持](../../reference/ado-api/supports-method.md)方法，并枚举**记录集**的**Properties**集合，以确定是否存在特定于提供程序的动态属性。
+ 有关提供程序配置的 **记录集** 行为的详细信息，请运行 [支持](../../reference/ado-api/supports-method.md)方法，并枚举 **记录集** 的 **Properties** 集合，以确定是否存在特定于提供程序的动态属性。
 
  标准 ADO **记录集** 属性的可用性：
 
-|properties|ForwardOnly|动态|Keyset|静态|
+|属性|ForwardOnly|动态|Keyset|Static|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md)|不可用|不可用|读/写|读/写|
 |[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|读/写|读/写|
 |[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|读/写|读/写|读/写|读/写|
 |[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|只读|只读|只读|只读|
-|[加入书签](../../reference/ado-api/bookmark-property-ado.md)|不可用|不可用|读/写|读/写|
+|书签 |不可用|不可用|读/写|读/写|
 |[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|读/写|读/写|读/写|读/写|
 |[CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)|读/写|读/写|读/写|读/写|
 |[CursorType](../../reference/ado-api/cursortype-property-ado.md)|读/写|读/写|读/写|读/写|
 |[EditMode](../../reference/ado-api/editmode-property.md)|只读|只读|只读|只读|
-|[筛选器](../../reference/ado-api/filter-property.md)|读/写|读/写|读/写|读/写|
+|[Filter](../../reference/ado-api/filter-property.md)|读/写|读/写|读/写|读/写|
 |[LockType](../../reference/ado-api/locktype-property-ado.md)|读/写|读/写|读/写|读/写|
 |[MarshalOptions](../../reference/ado-api/marshaloptions-property-ado.md)|读/写|读/写|读/写|读/写|
 |[MaxRecords](../../reference/ado-api/maxrecords-property-ado.md)|读/写|读/写|读/写|读/写|
@@ -199,7 +199,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  标准 ADO **记录集** 方法的可用性：
 
-|方法|ForwardOnly|动态|Keyset|静态|
+|方法|ForwardOnly|动态|Keyset|Static|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../reference/ado-api/addnew-method-ado.md)|是|是|是|是|
 |[取消](../../reference/ado-api/cancel-method-ado.md)|是|是|是|是|
@@ -219,13 +219,13 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[重新](../../reference/ado-api/requery-method.md)|是|是|是|是|
 |[重新同步](../../reference/ado-api/resync-method.md)|否|否|是|是|
 |[支持](../../reference/ado-api/supports-method.md)|是|是|是|是|
-|[更新](../../reference/ado-api/update-method.md)|是|是|是|是|
+|[Update](../../reference/ado-api/update-method.md)|是|是|是|是|
 |[UpdateBatch](../../reference/ado-api/updatebatch-method.md)|是|是|是|是|
 
  * 不支持 Microsoft Access 数据库。
 
 ## <a name="dynamic-properties"></a>动态属性
- 适用于 ODBC 的 Microsoft OLE DB 提供程序将多个动态属性插入未打开的[连接](../../reference/ado-api/connection-object-ado.md)、[记录集](../../reference/ado-api/recordset-object-ado.md)和[命令](../../reference/ado-api/command-object-ado.md)对象的**properties**集合。
+ 适用于 ODBC 的 Microsoft OLE DB 提供程序将多个动态属性插入未打开的 [连接](../../reference/ado-api/connection-object-ado.md)、[记录集](../../reference/ado-api/recordset-object-ado.md)和 [命令](../../reference/ado-api/command-object-ado.md)对象的 **properties** 集合。
 
  下表是每个动态属性的 ADO 和 OLE DB 名称的交叉索引。 OLE DB 程序员引用通过术语 "Description" 引用 ADO 属性名称。 可以在 OLE DB 程序员参考中找到有关这些属性的详细信息。 在索引中搜索 OLE DB 属性名称，或者参阅 [附录 C： OLE DB 属性](/previous-versions/windows/desktop/ms723130(v=vs.85))。
 
@@ -261,7 +261,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |最大行大小|DBPROP_MAXROWSIZE|
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |选择中的最大表数|DBPROP_MAXTABLESINSELECT|
-|“模式”|DBPROP_INIT_MODE|
+|模型|DBPROP_INIT_MODE|
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|
 |多个结果|DBPROP_MULTIPLERESULTS|
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -281,11 +281,11 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|
 |准备提交行为|DBPROP_PREPARECOMMITBEHAVIOR|
 |过程术语|DBPROP_PROCEDURETERM|
-|Prompt|DBPROP_INIT_PROMPT|
+|提示|DBPROP_INIT_PROMPT|
 |提供程序友好名称|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |提供程序版本|DBPROP_PROVIDERVER|
-|只读数据源|DBPROP_DATASOURCEREADONLY|
+|Read-Only 数据源|DBPROP_DATASOURCEREADONLY|
 |命令行集转换|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |架构术语|DBPROP_SCHEMATERM|
 |架构使用情况|DBPROP_SCHEMAUSAGE|
@@ -432,4 +432,4 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  有关适用于 ODBC 的 Microsoft OLE DB 提供程序的特定实现和功能信息的详细信息，请参阅 MSDN 上的 [OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643(v=vs.85)) 或访问数据访问和存储开发人员中心网站。
 
 ## <a name="see-also"></a>另请参阅
- [命令对象 (ado) ](../../reference/ado-api/command-object-ado.md) [COMMANDTEXT 属性 (Ado) ](../../reference/ado-api/commandtext-property-ado.md) [连接对象 (](../../reference/ado-api/connection-object-ado.md) ado) [ConnectionString 属性 (ado) ](../../reference/ado-api/connectionstring-property-ado.md) [Execute 方法](../../reference/ado-api/execute-method-ado-command.md) (Ado 命令) ado 记录 (ado 记录) ado 记录[集 (](../../reference/ado-api/provider-property-ado.md) [Recordset Object (ADO) ](../../reference/ado-api/recordset-object-ado.md) [Supports Method](../../reference/ado-api/supports-method.md) ado[记录](../../reference/ado-api/open-method-ado-recordset.md)[集)  (](../../reference/ado-api/parameters-collection-ado.md) [ado) ](../../reference/ado-api/properties-collection-ado.md)
+ [命令对象 (ado) ](../../reference/ado-api/command-object-ado.md) [COMMANDTEXT 属性 (Ado) ](../../reference/ado-api/commandtext-property-ado.md) [连接对象 (](../../reference/ado-api/connection-object-ado.md) ado) [ConnectionString 属性 (ado) ](../../reference/ado-api/connectionstring-property-ado.md) [Execute 方法](../../reference/ado-api/execute-method-ado-command.md) (Ado 命令) ado 记录 (ado 记录) ado 记录[集 (](../../reference/ado-api/provider-property-ado.md) [](../../reference/ado-api/recordset-object-ado.md) [](../../reference/ado-api/supports-method.md) ado[记录](../../reference/ado-api/open-method-ado-recordset.md)[集)  (](../../reference/ado-api/parameters-collection-ado.md) [ado) ](../../reference/ado-api/properties-collection-ado.md)

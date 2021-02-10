@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cd2f1da937b663b1cc32939c0fb0de17dad8fb7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d067e7bb1adbbb19d08cb87c9ccf4f69004bff55
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991208"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030505"
 ---
 # <a name="products-and-technologies-table"></a>产品和技术表
 下表列出了 ADO 程序员指南中讨论的 Microsoft 产品、工具和技术。 它尽可能提供链接到指南中相关主题的链接。
@@ -31,7 +31,7 @@ ms.locfileid: "88991208"
 |FrontPage|[用于 Internet 发布的 Microsoft OLE DB 提供程序](./appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
 |索引服务|[Microsoft OLE DB Provider for Microsoft Indexing Service](./appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
 |Internet Explorer|[Internet Explorer 错误代码](./appendixes/internet-explorer-error-codes.md)|
-|Internet 信息服务 (IIS)|[记录和流](./data/records-and-streams.md)<br /><br /> [流和暂留](./data/streams-and-persistence.md)<br /><br /> [命令流](./data/command-streams.md)<br /><br /> [使用 ADO 进行 Internet 发布](./data/using-ado-for-internet-publishing.md)<br /><br /> [远程数据访问的解决方案](./remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [RDS 方案](./remote-data-service/rds-scenario.md)<br /><br /> [在 IIS 上配置虚拟服务器](./remote-data-service/configuring-virtual-servers-on-iis.md)<br /><br /> [保证 RDS 应用程序的安全](./remote-data-service/securing-rds-applications.md)<br /><br /> ["Internet 服务器错误：访问被拒绝"](./remote-data-service/internet-server-error-access-denied.md)<br /><br /> [用于 Internet 发布的 Microsoft OLE DB 提供程序](./appendixes/microsoft-ole-db-provider-for-internet-publishing.md)<br /><br /> [Internet Information Services 错误代码](./appendixes/internet-information-services-error-codes.md)|
+|Internet Information Services (IIS)|[记录和流](./data/records-and-streams.md)<br /><br /> [流和暂留](./data/streams-and-persistence.md)<br /><br /> [命令流](./data/command-streams.md)<br /><br /> [使用 ADO 进行 Internet 发布](./data/using-ado-for-internet-publishing.md)<br /><br /> [远程数据访问的解决方案](./remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [RDS 方案](./remote-data-service/rds-scenario.md)<br /><br /> [在 IIS 上配置虚拟服务器](./remote-data-service/configuring-virtual-servers-on-iis.md)<br /><br /> [保证 RDS 应用程序的安全](./remote-data-service/securing-rds-applications.md)<br /><br /> ["Internet 服务器错误：访问被拒绝"](./remote-data-service/internet-server-error-access-denied.md)<br /><br /> [用于 Internet 发布的 Microsoft OLE DB 提供程序](./appendixes/microsoft-ole-db-provider-for-internet-publishing.md)<br /><br /> [Internet Information Services 错误代码](./appendixes/internet-information-services-error-codes.md)|
 |JScript|[处理其他语言错误](./data/handling-errors-in-other-languages.md)<br /><br /> [JScript ADO 编程](./appendixes/jscript-ado-programming.md)<br /><br /> [Microsoft JScript 中的 ADO 代码示例](../reference/ado-api/ado-code-examples-in-microsoft-jscript.md)|
 |ODBC|[使用 RDS 与 ODBC 连接池](./remote-data-service/using-rds-with-odbc-connection-pooling.md)<br /><br /> [Microsoft OLE DB Provider for ODBC](./appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |OLE DB|[OLE DB 提供程序](./data/ole-db-providers-ado.md)<br /><br /> [附录 A：提供程序](./appendixes/appendix-a-providers.md)<br /><br /> [提供程序错误](./data/provider-errors.md)|

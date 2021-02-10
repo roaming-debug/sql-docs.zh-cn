@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b75865809a93f3c0f7cc0e10cde576ed403af5c0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4a547f70b536f09def16a1c8edeaa231735ec535
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164917"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031259"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO for Visual C++ 语法索引与 #import
 此索引是基于 Microsoft Visual C++ 和 **#import** 指令的 ADO 语言参考的交叉引用。  

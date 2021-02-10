@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a6f4bc99caceeb7011c932c86e636304941c459c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2f3e077a93d90afccf05023e41f8e5f2ea6fabc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418483"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017317"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>项目设置（类型映射）(MySQLToSQL)
 "类型映射项目设置" 允许您为 SSMA 项目设置默认的类型映射。  
@@ -90,7 +90,7 @@ ms.locfileid: "88418483"
 |decimal|decimal|  
 |decimal [*。65]|decimal [*] [0]|  
 |decimal [*。65] [ \* .。为期|decimal [*] [ \* ]|  
-|Double|float [53]|  
+|double|float [53]|  
 |双精度|float [53]|  
 |双精度 [*。255] [ \* .。为期|数值 [*] [ \* ]|  
 |double [*。255] [ \* .。为期|数值 [*] [ \* ]|  
@@ -101,7 +101,7 @@ ms.locfileid: "88418483"
 |float [*。53]|float [53]|  
 |int|int|  
 |int [*。255]|int|  
-|integer|int|  
+|整型|int|  
 |integer [*。255]|int|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  

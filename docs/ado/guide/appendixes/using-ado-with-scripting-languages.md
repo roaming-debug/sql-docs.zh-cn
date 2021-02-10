@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 868731f7f7c88a2f6a26b5fab1670de8de96b1b3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1f1919f3524f05035a4376f30cf2e36ae731bdea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990948"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028847"
 ---
 # <a name="using-ado-with-scripting-languages"></a>配合使用 ADO 与脚本语言
 在脚本环境中，ADO 允许通过服务器端脚本来公开数据。 在此方案中，ADO、它使用的基础 OLE DB 提供程序以及引用给定数据存储所需的任何其他组件均安装在运行 Internet Information Services (IIS) 的服务器上。 使用 Active Server Pages (ASP) ，ADO 是在可生成 HTML 的脚本中引用的组件，例如。 可以通过 HTTP 将此 HTML 内容传递到客户端 Web 浏览器。 通过使用脚本，网页可以将操作发送回服务器端脚本，从而使您可以更新、遍历或查看特定数据。  
@@ -28,26 +28,26 @@ ms.locfileid: "88990948"
   
 |对象|脚本安全？|  
 |------------|-------------------------|  
-|ADO 连接|适合|  
+|ADO 连接|是|  
 |ADO 命令|否|  
 |ADO 参数|否|  
-|ADO 记录集|适合|  
-|ADO 记录|适合|  
-|ADO 流|适合|  
+|ADO 记录集|是|  
+|ADO 记录|是|  
+|ADO 流|是|  
 |ADO 错误|否|  
 |ADOX 目录|否|  
 |ADOX 单元集|否|  
-|RDS DataControl|适合|  
-|RDS 空间|适合|  
+|RDS DataControl|是|  
+|RDS 空间|是|  
 |RDS DataFactory|否|  
   
  下表列出了 Windows DAC/MDAC 中包含的提供程序，并指示它们是否对脚本是安全的。  
   
 |提供程序|脚本安全？|  
 |--------------|-------------------------|  
-|形状|适合|  
-|保留|适合|  
-|Remote|适合|  
+|形状|是|  
+|保留|是|  
+|Remote|是|  
 |SQL Server (SQLOLEDB 的 OLE DB 提供程序) |否|  
 |ODBC (MSDASQL 提供程序 OLE DB) |否|  
   

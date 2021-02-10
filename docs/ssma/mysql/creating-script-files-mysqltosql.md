@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bc77109e51cff1169105f39c1898dfd1fc32588c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 310bcd0f3cd8db8a0c46f278d2b18bdcef2c42a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472454"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016657"
 ---
 # <a name="creating-script-files-mysqltosql"></a>创建脚本文件 (MySQLToSQL)
 启动 SSMA 控制台应用程序之前的第一个步骤是创建脚本文件，并在需要时创建变量值文件和服务器连接文件。  

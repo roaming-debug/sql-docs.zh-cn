@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4eb4635aafa67d2b6c96f88580811c204ff73423
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a07224d352f059b8aad3709c6d4f9605c16696b5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990978"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029231"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 简单提供程序概述
 Microsoft OLE DB 简单提供程序 (OSP) 允许 ADO 访问使用 [OLE DB 简单提供程序 (OSP) 工具包](/previous-versions/windows/desktop/ms715822(v=vs.85))编写的提供程序的任何数据。 简单提供程序用于访问只需要基本 OLE DB 支持的数据源，例如内存中数组或 XML 文档。
@@ -51,7 +51,7 @@ MSDAOSP
 |**数据源**|指定服务器的名称。|
 
 ## <a name="xml-document-example"></a>XML 文档示例
- MDAC 2.7 或更高版本中的 OLE DB 简单提供程序 (OSP) ，并增强了 windows DAC) 的 Windows 数据访问 (组件，以支持通过任意 XML 文件打开分层 ADO **记录集** 。 这些 XML 文件可能包含 ADO XML 持久性架构，但不是必需的。 这已经通过将 OSP 连接到 **MSXML2.DLL**来实现;因此需要 **MSXML2.DLL** 或更高版本。
+ MDAC 2.7 或更高版本中的 OLE DB 简单提供程序 (OSP) ，并增强了 windows DAC) 的 Windows 数据访问 (组件，以支持通过任意 XML 文件打开分层 ADO **记录集** 。 这些 XML 文件可能包含 ADO XML 持久性架构，但不是必需的。 这已经通过将 OSP 连接到 **MSXML2.DLL** 来实现;因此需要 **MSXML2.DLL** 或更高版本。
 
  下面的示例中使用的 **portfolio.xml** 文件包含以下树：
 
@@ -66,7 +66,7 @@ Portfolio
          WebSite
 ```
 
- XML DSO 使用内置试探法将 XML 树中的节点转换为分层 **记录集中**的章节。
+ XML DSO 使用内置试探法将 XML 树中的节点转换为分层 **记录集中** 的章节。
 
  使用这些内置试探法，XML 树将转换为以下形式的两级分层 **记录集** ：
 
@@ -77,7 +77,7 @@ Shares, Symbol, Price, $Text
       Company Name, WebSite, $Text
 ```
 
- 请注意，"项目组合" 和 "信息" 标记不在分层 **记录集中**表示。 有关 XML DSO 如何将 XML 树转换为分层 **记录集**的说明，请参阅以下规则。 下一节将讨论 $Text 列。
+ 请注意，"项目组合" 和 "信息" 标记不在分层 **记录集中** 表示。 有关 XML DSO 如何将 XML 树转换为分层 **记录集** 的说明，请参阅以下规则。 下一节将讨论 $Text 列。
 
 ## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>将 XML 元素和属性分配给列和行的规则
  XML DSO 遵循在数据绑定应用程序中将元素和属性分配给列和行的过程。 XML 作为树建模，其中一个标记包含整个层次结构。 例如，书籍的 XML 说明可以包含章节标记、图标记和节标记。 最高级别为书籍标记，其中包含子元素章节、图和节。 当 XML DSO 将 XML 元素映射到行和列时，将转换子元素，而不是顶级元素。
@@ -88,13 +88,13 @@ Shares, Symbol, Price, $Text
 
 -   列的名称与子元素或属性的名称相同，除非父元素具有具有相同名称的属性和子元素，在这种情况下，子元素的列名前面会出现 "！"。
 
--   每个列都是一个*简单*列，其中包含标量值 (通常为字符串) 或包含子**记录集**的**记录集**列。
+-   每个列都是一个 *简单* 列，其中包含标量值 (通常为字符串) 或包含子 **记录集** 的 **记录集** 列。
 
 -   与属性相对应的列总是简单的。
 
 -   如果子元素具有其自己的子元素或属性 (或两者均) ，或子元素的父项具有子元素的多个实例，则与子元素对应的列是 **记录集** 列。 否则列很简单。
 
--   如果有多个子元素的实例 (在不同的父) 下，则如果有*任何*实例表示**记录集**列，则其列是**记录集**列;仅当*所有实例都*指简单列时，其列才简单。
+-   如果有多个子元素的实例 (在不同的父) 下，则如果有 *任何* 实例表示 **记录集** 列，则其列是 **记录集** 列;仅当 *所有实例都* 指简单列时，其列才简单。
 
 -   所有 **记录集** 都有一个名为 $Text 的附加列。
 
@@ -127,13 +127,13 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
  一旦打开该 **记录集** ，就可以使用常用的 ADO **记录集** 导航命令。
 
- OSP 生成的**记录集**有一些限制：
+ OSP 生成的 **记录集** 有一些限制：
 
 -   不支持 (**adUseClient**) 的客户端游标。
 
 -   无法使用 Recordset 保存通过任意 XML 创建的分层 **记录集** **。保存**。
 
--   用 OSP 创建的**记录集**是只读的。
+-   用 OSP 创建的 **记录集** 是只读的。
 
 -   XMLDSO 向层次结构中的每个 **记录集** 添加一个额外的数据列 ($Text) 。
 
@@ -185,7 +185,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 </portfolio>
 ```
 
- 下面是两个 Visual Basic sub 过程。 第一个创建该**记录集**并将其传递给*WalkHier* sub 过程，该过程将以递归方式遍历层次结构，将每个记录**集中**每个记录的每个**字段**写入调试窗口。
+ 下面是两个 Visual Basic sub 过程。 第一个创建该 **记录集** 并将其传递给 *WalkHier* sub 过程，该过程将以递归方式遍历层次结构，将每个记录 **集中** 每个记录的每个 **字段** 写入调试窗口。
 
 ```vb
 Private Sub BrowseHierRecordset()

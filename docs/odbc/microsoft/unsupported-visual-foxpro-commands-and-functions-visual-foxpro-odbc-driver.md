@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd7b34f35ac0fcc747cb30fb35537a33cc5cd4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4ac7f25709cf91e03f9ad8b15f9fb0026ee5e98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471418"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015387"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>不支持的 Visual FoxPro 命令和函数（Visual FoxPro ODBC 驱动程序）
 下表列出了 Visual FoxPro ODBC 驱动程序不支持的 FoxPro 命令和函数，但受 Microsoft® Visual FoxPro®支持。  
@@ -33,29 +33,29 @@ ms.locfileid: "88471418"
 
 :::row:::
     :::column:::
-        !命令 (参阅 RUN &#124;！命令)   
-        #<a name="defineundef"></a>定义 ... #UNDEF  
-        #<a name="ifendifpreprocessordirective"></a>IF ... #ENDIF 预处理器指令  
-        #<a name="ifdef124ifndef"></a>IFDEF &#124; #IFNDEF  
-        #<a name="includepreprocessordirective"></a>包括预处理器指令  
+        ! 命令 (参阅 RUN &#124;！ 命令)   
+        #<a name="define--undef"></a>定义 ... #UNDEF  
+        #<a name="if--endif-preprocessor-directive"></a>IF ... #ENDIF 预处理器指令  
+        #<a name="ifdef-124-ifndef"></a>IFDEF &#124; #IFNDEF  
+        #<a name="include-preprocessor-directive"></a>包括预处理器指令  
         ：：作用域解析运算符  
-        ?&#124;？Command  
+        ? &#124;？ 命令  
     :::column-end:::
     :::column:::
-        ???Command  
-        @ ...BOX 命令  
-        @ ...CLASS 命令  
-        @ ...清除命令  
-        @ ...编辑-编辑框命令  
-        @ ...FILL 命令  
-        @ ...获取  
+        ??? 命令  
+        @ ...BOX 命令  
+        @ ...CLASS 命令  
+        @ ...清除命令  
+        @ ...编辑-编辑框命令  
+        @ ...FILL 命令  
+        @ ...获取  
     :::column-end:::
     :::column:::
-        @ ...菜单命令  
-        @ ...PROMPT 命令  
-        @ ...说命令  
-        @ ...SCROLL 命令  
-        @ ...TO 命令  
+        @ ...菜单命令  
+        @ ...PROMPT 命令  
+        @ ...说命令  
+        @ ...SCROLL 命令  
+        @ ...TO 命令  
         \ &#124; \\ \ 命令  
     :::column-end:::
 :::row-end:::
@@ -461,7 +461,7 @@ NUMLOCK ( ) 函数
         _PPITCH 系统内存变量  
         _PQUALITY 系统内存变量  
         _PRETEXT 系统内存变量  
-        PRINTJOB ...ENDPRINTJOB 命令  
+        PRINTJOB ...ENDPRINTJOB 命令  
     :::column-end:::
     :::column:::
         PRINTSTATUS ( ) 函数  
@@ -527,7 +527,7 @@ NUMLOCK ( ) 函数
         _RMARGIN 系统内存变量  
         RMDIR 命令  
         行 ( ) 函数  
-        运行 &#124;！Command  
+        运行 &#124;！ 命令  
         RUNSCRIPT 命令  
     :::column-end:::
 :::row-end:::

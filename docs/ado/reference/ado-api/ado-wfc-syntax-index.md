@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 594c0c3602036daabd4b6231345d19bf8425ef26
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 55c13427aee72dacdcd2b1ce6039c2ed7f2cb667
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164876"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031154"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 语法索引
 ADO 语言参考使用 Microsoft Visual Basic 编程语言来演示 ADO 方法和属性语法。 此索引是对 ADO 语言参考主题的交叉引用，基于用于 Windows 基础类 (ado/WFC) 的 ADO。 当语法中存在差异时，请使用此索引中的函数签名，而不是语言参考主题中的语法列表。  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d485dbb17075033add5e3ee93dbcf9b6bf44e65
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c992b58b6b84f79efa62c63353e3b8f1efcc333d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991218"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030495"
 ---
 # <a name="ado-security-design-features"></a>ADO 安全设计功能
 以下部分介绍 ActiveX 数据对象 (ADO) 2.8 及更高版本中的安全设计功能。 在 ADO 2.8 中进行了这些更改，以提高安全性。 Windows Vista 中的 Windows DAC 6.0 随附的 ADO 6.0 在功能上等同于 ADO 2.8，后者包含在 Windows XP 和 Windows Server 2003 的 MDAC 2.8 中。 本主题提供有关如何在 ADO 2.8 或更高版本中最大程度地保护应用程序的信息。
@@ -57,7 +57,7 @@ Website, click OK, otherwise click Cancel.
 
 -   对于 ADO **流** 对象，如果使用 [LoadFromFile](../reference/ado-api/loadfromfile-method-ado.md) 或 [SaveToFile](../reference/ado-api/savetofile-method.md) 方法，则为。
 
--   对于 ADO **记录集** 对象，如果使用 [Save](../reference/ado-api/save-method.md) 方法或 [Open](../reference/ado-api/open-method-ado-recordset.md) 方法（如设置了 **AdCmdFile** 选项）或使用 [Microsoft OLE DB 永久性提供程序 (MSPersist) ](./appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) ，则为。
+-   对于 ADO **记录集** 对象，如果使用 [Save](../reference/ado-api/save-method.md) 方法或 [Open](../reference/ado-api/open-method-ado-recordset.md) 方法（如设置了 **AdCmdFile** 选项）或使用 [Microsoft OLE DB 永久性提供程序 (MSPersist)](./appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) ，则为。
 
  对于这些有限的可能磁盘可访问函数集，如果使用这些方法的任何代码都在 Internet Explorer 中运行，则 ADO 2.8 和更高版本会出现以下行为：
 
@@ -69,7 +69,7 @@ Website, click OK, otherwise click Cancel.
     >  在 ADO 2.8 和更高版本中，不会向用户发出警报或建议将站点添加到受信任的站点区域列表。 因此，受信任的站点列表的管理是指部署或支持需要访问本地文件系统的基于网站的应用程序的用户。
 
 ### <a name="access-blocked-to-the-activecommand-property-on-recordset-objects"></a>对记录集对象的 ActiveCommand 属性的访问被阻止
- 在 Internet Explorer 中运行时，ADO 2.8 现在会阻止对活动**记录集**对象的[ActiveCommand](../reference/ado-api/activecommand-property-ado.md)属性的访问，并返回一个错误。 不管页面是否来自 "受信任的站点" 列表中注册的网站，都将发生此错误。
+ 在 Internet Explorer 中运行时，ADO 2.8 现在会阻止对活动 **记录集** 对象的 [ActiveCommand](../reference/ado-api/activecommand-property-ado.md)属性的访问，并返回一个错误。 不管页面是否来自 "受信任的站点" 列表中注册的网站，都将发生此错误。
 
 ### <a name="changes-in-handling-for-ole-db-providers-and-integrated-security"></a>OLE DB 提供程序和集成安全性的处理更改
  在查看 ADO 2.7 及更早版本时，可能会出现以下情况：
@@ -97,7 +97,7 @@ This Website is using your identity to access a data source. If you trust this W
 >  对于不受信任的站点 (即 "受信任的站点区域列表" 中未列出的站点) ，如果提供程序也不受信任 (如本部分前面) 部分所述），则用户可能会在一行中看到两个安全警告，有关安全提供程序的警告以及有关尝试使用其标识的第二条警告。 如果用户在第一个警告中单击 "确定"，则会执行上表中所述的 Internet Explorer 设置和响应行为代码。
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>控制是否在 ADO 连接字符串中返回密码文本
- 尝试获取 ADO**连接**对象的[ConnectionString](../reference/ado-api/connectionstring-property-ado.md)属性值时，将发生以下事件：
+ 尝试获取 ADO **连接** 对象的 [ConnectionString](../reference/ado-api/connectionstring-property-ado.md)属性值时，将发生以下事件：
 
 1.  如果连接处于打开状态，则对基础 OLE DB 提供程序进行初始化调用以获取连接字符串。
 

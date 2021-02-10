@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e591fae2984714fcc0bcb2f70eab614f27e397b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed113379b43b9a543eabe554b39aad6ef1e21d7e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492470"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016747"
 ---
 # <a name="data-migration-report--mysqltosql"></a>数据迁移报表 (MySQLToSQL)
 在将数据迁移到之后，将显示 " **数据迁移报表** " 对话框 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -27,7 +27,7 @@ ms.locfileid: "88492470"
 **From**  
 源表。  
   
-**收件人**  
+**To**  
 目标表。  
   
 **总行数**  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3e479ca023efb704bf496c9ffaeaca2f1b6ba15
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7d2204a2d91e862616713dbfee6eec3d6d3e8ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991038"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029301"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Microsoft 索引服务提供商概述
 Microsoft OLE DB Provider for Microsoft 索引服务提供对 Microsoft 索引服务编制索引的文件系统和 Web 数据的只读访问。 ADO 应用程序可以发出 SQL 查询来检索内容和文件属性信息。
@@ -63,11 +63,11 @@ MSIDXS
 ## <a name="recordset-behavior"></a>记录集行为
  下表列出了通过此提供程序打开的 **记录集** 对象的可用功能。 只有静态游标类型 (**adOpenStatic**) 可用。
 
- 有关提供程序配置的**记录集**行为的详细信息，请运行[支持](../../reference/ado-api/supports-method.md)方法，并枚举**记录集**的[Properties](../../reference/ado-api/properties-collection-ado.md)集合，以确定是否存在特定于提供程序的动态属性。
+ 有关提供程序配置的 **记录集** 行为的详细信息，请运行 [支持](../../reference/ado-api/supports-method.md)方法，并枚举 **记录集** 的 [Properties](../../reference/ado-api/properties-collection-ado.md)集合，以确定是否存在特定于提供程序的动态属性。
 
  **标准 ADO 记录集属性的可用性：**
 
-|properties|可用性|
+|属性|可用性|
 |--------------|------------------|
 |[AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md)|读/写|
 |[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|读/写|
@@ -79,7 +79,7 @@ MSIDXS
 |[CursorType](../../reference/ado-api/cursortype-property-ado.md)|始终 **adOpenStatic**|
 |[EditMode](../../reference/ado-api/editmode-property.md)|始终 **adEditNone**|
 |[EOF](../../reference/ado-api/bof-eof-properties-ado.md)|只读|
-|[筛选器](../../reference/ado-api/filter-property.md)|读/写|
+|[Filter](../../reference/ado-api/filter-property.md)|读/写|
 |[LockType](../../reference/ado-api/locktype-property-ado.md)|读/写|
 |[MarshalOptions](../../reference/ado-api/marshaloptions-property-ado.md)|不可用|
 |[MaxRecords](../../reference/ado-api/maxrecords-property-ado.md)|读/写|
@@ -97,21 +97,21 @@ MSIDXS
 |方法|是否可用？|
 |------------|----------------|
 |[AddNew](../../reference/ado-api/addnew-method-ado.md)|否|
-|[取消](../../reference/ado-api/cancel-method-ado.md)|适合|
+|[取消](../../reference/ado-api/cancel-method-ado.md)|是|
 |[CancelBatch](../../reference/ado-api/cancelbatch-method-ado.md)|否|
 |[CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md)|否|
-|[克隆](../../reference/ado-api/clone-method-ado.md)|适合|
-|[关闭](../../reference/ado-api/close-method-ado.md)|适合|
+|[克隆](../../reference/ado-api/clone-method-ado.md)|是|
+|[关闭](../../reference/ado-api/close-method-ado.md)|是|
 |[删除](../../reference/ado-api/delete-method-ado-recordset.md)|否|
-|[GetRows](../../reference/ado-api/getrows-method-ado.md)|适合|
-|[移动](../../reference/ado-api/move-method-ado.md)|适合|
-|[MoveFirst](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|适合|
-|[NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)|适合|
-|[打开](../../reference/ado-api/open-method-ado-recordset.md)|适合|
-|[重新](../../reference/ado-api/requery-method.md)|适合|
-|[重新同步](../../reference/ado-api/resync-method.md)|适合|
-|[支持](../../reference/ado-api/supports-method.md)|适合|
-|[更新](../../reference/ado-api/update-method.md)|否|
+|[GetRows](../../reference/ado-api/getrows-method-ado.md)|是|
+|[移动](../../reference/ado-api/move-method-ado.md)|是|
+|[MoveFirst](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|
+|[NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)|是|
+|[打开](../../reference/ado-api/open-method-ado-recordset.md)|是|
+|[重新](../../reference/ado-api/requery-method.md)|是|
+|[重新同步](../../reference/ado-api/resync-method.md)|是|
+|[支持](../../reference/ado-api/supports-method.md)|是|
+|[Update](../../reference/ado-api/update-method.md)|否|
 |[UpdateBatch](../../reference/ado-api/updatebatch-method.md)|否|
 
  有关 microsoft OLE DB 提供商 for Microsoft 索引服务的具体实现详细信息和功能信息，请参阅 [OLE DB 程序员指南](/previous-versions/windows/desktop/ms713643(v=vs.85))，或访问 Windows NT Server 网站的 "Web 服务" 页。

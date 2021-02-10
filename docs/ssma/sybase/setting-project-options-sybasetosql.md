@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: df912a5a58bdcfb2777177bddef80899f31f38c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa8e45af93faa4ef175d129487a1d655a6d02ead
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468709"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030755"
 ---
 # <a name="setting-project-options-sybasetosql"></a>设置项目选项 (SybaseToSQL)
 对于每个 SSMA 项目，可以设置项目级别选项。 这些选项指定对象转换、对象加载、SQL azure、用户界面和数据迁移设置。 在将对象转换为或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 或将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，请验证配置选项是否适用于项目。  
@@ -45,7 +45,7 @@ SSMA 有五组项目设置：
   
 3.  完全  
   
-4.  “自定义”  
+4.  自定义  
   
 对于大多数用户，建议使用默认模式。 乐观模式使当前 Sybase 自适应服务器企业 (ASE) 语法更为简单，并且更易于阅读。 但是，保持当前语法可能不准确。 如果 ASE 语法必须转换为等效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 语法，则完整模式将执行完整转换，但生成的代码可能更难以读取。 在 "自定义" 模式下，设置选项。  
   
@@ -78,7 +78,7 @@ SSMA 有五组项目设置：
   
     -   若要指定自定义设置，只需选择或输入新的设置或值。  
   
-3.  单击“确定”保存设置。****  
+3.  单击“确定”保存设置。  
   
 你还可以自定义当前项目的设置。 这些设置保存到当前项目文件中。  
   
@@ -92,7 +92,7 @@ SSMA 有五组项目设置：
   
     -   若要指定自定义模式，请在 " **模式** " 下拉框中选择 " **自定义**"，选择左窗格中的选项，在右窗格中单击 "设置" 或 "值"，然后选择或输入新的设置或值。  
   
-3.  单击“确定”保存设置。****  
+3.  单击“确定”保存设置。  
   
 ## <a name="next-steps"></a>后续步骤  
 迁移的下一步取决于你的项目需求：  

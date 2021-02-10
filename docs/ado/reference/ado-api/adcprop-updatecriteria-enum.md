@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32f58d13583ecdb92e805f0400f88ed1b9110563
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2cf53dbf2f1e49bf61420fa99d015932535def3d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161756"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031459"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
 指定哪些字段可用于在使用 [记录集](./recordset-object-ado.md) 对象的数据源的行的开放式更新过程中检测冲突。  

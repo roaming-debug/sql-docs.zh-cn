@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 261a3a39486dc73e95a7339906a49657a0d04634
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a6fa6f1f5bb4a0289807c2d3ffd62c63d85013cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171115"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024751"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 事件 (ADO)
 当长时间异步操作中的所有记录都已检索到 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)后，将调用 **FetchComplete** 事件。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de089513781167b3ee744fb3f217532ae71e6ef5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ff09ffadd567e8aa8fcbe76856179099d3bce456
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161690"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031425"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript 中的 ADO 代码示例
 使用以下代码示例来了解如何在使用 JScript 编写时使用 ADO 方法、属性和事件。  

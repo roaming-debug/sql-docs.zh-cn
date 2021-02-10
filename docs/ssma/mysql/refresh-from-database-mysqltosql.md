@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 027aa6557036c54c4b7e143cd94149fa5e8fe4f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60a23edbcbad344ab3bf42286944f7c72acb8f92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492356"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015169"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>从数据库刷新 (MySQLToSQL)
 **通过 "从数据库刷新**" 对话框，您可以从 MySQL 数据库中选择要刷新的对象。 对话框中的行是根据元数据的状态进行颜色编码的：  
@@ -36,11 +36,11 @@ ms.locfileid: "88492356"
   
 |||  
 |-|-|  
-|**术语**|**定义**|  
-|**折叠 (-) **|折叠所有对象组以隐藏单个对象。|  
-|**展开 (+) **|展开 "所有对象组" 以显示单个对象。|  
+|**条款**|**定义**|  
+|**折叠 (-)**|折叠所有对象组以隐藏单个对象。|  
+|**展开 (+)**|展开 "所有对象组" 以显示单个对象。|  
 |**隐藏/显示相等对象**|如果对象元数据在 MySQL 数据库和 SSMA 中是相同的，则隐藏列表中的对象。|  
-|**从数据库刷新 (箭头按钮) **|使用箭头按钮指定应在 SSMA 中更新所选对象的元数据。|  
-|**不从数据库刷新 (X 按钮) **|使用 X 按钮指定不应在 SSMA 中更新所选对象的元数据。|  
+|**从数据库刷新 (箭头按钮)**|使用箭头按钮指定应在 SSMA 中更新所选对象的元数据。|  
+|**不从数据库刷新 (X 按钮)**|使用 X 按钮指定不应在 SSMA 中更新所选对象的元数据。|  
 |**图例**|显示 " **图例** " 对话框。 图例包含行颜色和元数据状态之间的映射。<br /><br />若要使 " **图例** " 对话框位于 " **从数据库刷新** " 对话框的顶部，请选中 " **顶部显示** " 复选框。|  
   

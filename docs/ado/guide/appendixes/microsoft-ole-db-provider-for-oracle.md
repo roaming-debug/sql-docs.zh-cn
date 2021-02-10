@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8da5e3d5de1ac0ee3f3dfa1b0f989679af3cd1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 04865a03bdb352d36e1ac3b445c7c0b4eb7c3da2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991008"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029291"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Oracle 的 Microsoft OLE DB 提供程序概述
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ ms.locfileid: "88991008"
  Oracle 的 Microsoft OLE DB 提供程序允许 ADO 访问 Oracle 数据库。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
- 若要连接到该提供程序，请将[ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)属性的*provider*参数设置为：
+ 若要连接到该提供程序，请将 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)属性的 *provider* 参数设置为：
 
 ```vb
 MSDAORA
@@ -58,8 +58,8 @@ MSDAORA
 > [!NOTE]
 >  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定 **Trusted_Connection = yes** 或 **集成安全性 = SSPI** 而不是用户 ID 和密码信息。
 
-## <a name="provider-specific-connection-parameters"></a>特定于提供程序的连接参数
- 提供程序除 ADO 定义的连接参数外，还支持多个特定于提供程序的连接参数。 与 ADO 连接属性一样，这些特定于提供程序的属性可通过[连接](../../reference/ado-api/connection-object-ado.md)的[Properties](../../reference/ado-api/properties-collection-ado.md)集合或**ConnectionString**的一部分进行设置。
+## <a name="provider-specific-connection-parameters"></a>Provider-Specific 连接参数
+ 提供程序除 ADO 定义的连接参数外，还支持多个特定于提供程序的连接参数。 与 ADO 连接属性一样，这些特定于提供程序的属性可通过 [连接](../../reference/ado-api/connection-object-ado.md)的 [Properties](../../reference/ado-api/properties-collection-ado.md)集合或 **ConnectionString** 的一部分进行设置。
 
  这些参数在 [OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643(v=vs.85))中进行了充分介绍。 [ADO 动态属性索引](../../reference/ado-api/ado-dynamic-property-index.md)在这些参数名称和相应的 OLE DB 属性之间提供交叉引用。
 
