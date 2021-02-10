@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e136118be65296cf2a4c97b68afecda1cc6de30
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3d88c2ccdc74a9bb833ad831ea6a0b31cf02397b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167017"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041477"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy（ADO - WFC 语法）
 **ObjectProxy** 对象表示服务器，由 "[空间](../rds-api/dataspace-object-rds.md)" 对象的 **createObject** 方法返回。 ObjectProxy 类具有一个方法， **调用**，它可以在服务器上调用方法，并返回由该调用导致的对象。  

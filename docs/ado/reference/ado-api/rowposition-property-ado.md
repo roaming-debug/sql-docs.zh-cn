@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a836ca9dd23e6bb43d6bcf3a2707c4b523d530f4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 725f900e5de8bde82b2ee2e954783536d3100e5a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166616"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040727"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 属性 (ADO)
 获取或设置 **ADORecordsetConstruction** 对象上/的 OLE DB **RowPosition** 对象。 使用 **put_RowPosition** 设置 **RowPosition** 对象时，生成的 **Recordset** 对象将使用 **RowPosition** 对象来确定当前行。  

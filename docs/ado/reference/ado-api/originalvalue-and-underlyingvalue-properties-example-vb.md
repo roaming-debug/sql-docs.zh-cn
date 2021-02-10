@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d77e8e0856830d76e9d431ffeb3ae9687a1f1e8d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8192aa501deb4ed5fd8d2a44282bddbd644bf1b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170655"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041257"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 和 UnderlyingValue 属性示例 (VB) 
 此示例演示 [OriginalValue](./originalvalue-property-ado.md) 和 [UnderlyingValue](./underlyingvalue-property.md) 属性，如果记录的基础数据在 [记录集](./recordset-object-ado.md) 批处理更新期间发生了更改，则显示一条消息。  

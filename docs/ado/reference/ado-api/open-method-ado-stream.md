@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9151af754b245acc04dae70c120f01e37ac587cf
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ba1b13e92b4c26be0c117693b807371e66e651ce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166980"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041357"
 ---
 # <a name="open-method-ado-stream"></a>Open 方法（ADO 流）
 打开一个 [流](./stream-object-ado.md) 对象以处理二进制或文本数据的流。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a9ed4d31ca839dfeeaa313921230c2847171b4b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5d2b376f4d53733feb6b636a97c896902f7e6321
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166841"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040987"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared 属性示例 (VB)
 此示例通过打开两个[命令](./command-object-ado.md)对象（一项已准备，一个未准备）来演示已[准备](./prepared-property-ado.md)的属性。  

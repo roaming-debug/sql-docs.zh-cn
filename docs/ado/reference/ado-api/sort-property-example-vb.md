@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17ea6f0a278a9df688a27db338f566c4e5be6b1d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 577ceb894804987ef6ad8b949b9c7d0e8b603180
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170253"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040577"
 ---
 # <a name="sort-property-example-vb"></a>Sort 属性示例 (VB)
-此示例使用 [Recordset](./recordset-object-ado.md)对象的 [Sort](./sort-property.md)属性对从 _*_Pubs_*_ 数据库的 **_作者_* _ 表中派生的 **记录集** 的行重新排序。 辅助实用程序例程打印每行。  
+此示例使用 [Recordset](./recordset-object-ado.md)对象的 [Sort](./sort-property.md)属性对从 _ Pubs 数据库的 **_作者_*_ 表*** 中派生的 **记录集** 的行重新排序。 辅助实用程序例程打印每行。  
   
 ```  
 'BeginSortVB  
@@ -52,7 +52,7 @@ Public Sub Main()
     ' open client-side recordset to enable sort method  
     Set rstAuthors = New ADODB.Recordset  
     rstAuthors.CursorLocation = adUseClient  
-    strSQLAuthors = "SELECT _ FROM Authors"  
+    strSQLAuthors = "SELECT * FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
   
      ' sort the recordset last name ascending  

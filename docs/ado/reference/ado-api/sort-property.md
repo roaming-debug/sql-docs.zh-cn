@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57f46248dc23d92752a6354a557285daeaf0a0f8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ffd17de7783ff6d27b8b14d70e41fa6839e211dc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170249"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040597"
 ---
 # <a name="sort-property"></a>Sort 属性
 指示 [记录记录集](./recordset-object-ado.md) 的一个或多个字段名称，以及是否按升序或降序对每个字段进行排序。  

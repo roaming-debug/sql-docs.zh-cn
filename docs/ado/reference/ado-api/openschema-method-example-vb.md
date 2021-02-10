@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8ac6ec9cb5b32a7c0494a1955b4115d72f959d0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 185a0df6347748d71ec621940250e682e4c0eca6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170691"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041347"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema 方法示例 (VB)
-此示例使用 [OpenSchema](./openschema-method.md) 方法显示 ***Pubs** _ 数据库中每个表的名称和类型。  
+此示例使用 [OpenSchema](./openschema-method.md) 方法来显示 ***Pubs*** 数据库中每个表的名称和类型。  
   
 ```  
 'BeginOpenSchemaVB  
@@ -79,7 +79,7 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- 此示例在 _*OpenSchema** method **_条件_*_ 参数中指定 TABLE_TYPE 查询约束。 因此，只返回 _ *_Pubs_** 数据库中指定的视图的架构信息。 然后，该示例显示 () 的名称，并键入每个表 () 的)  (s。  
+ 此示例在 **OpenSchema** 方法 **_Criteria_ _ 参数中指定 TABLE_TYPE 查询约束 *。因此，只返回 _ Pubs 数据库中指定的视图的架构信息*** 。 然后，该示例显示 () 的名称，并键入每个表 () 的)  (s。  
   
 ```  
 Attribute VB_Name = "OpenSchema"  

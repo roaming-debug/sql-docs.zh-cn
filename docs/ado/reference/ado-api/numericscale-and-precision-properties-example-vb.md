@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e8e0d8013df4ec6d58aeeb059baa655e1980005
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 897fa99e44e6d5c9f31250be0157bacaa92c211a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170752"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041518"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 和 Precision 属性示例 (VB)
 此示例使用 " [NumericScale](./numericscale-property-ado.md) " 和 "[精度](./precision-property-ado.md)" 属性来显示 _ *_Pubs_** 数据库的 * "**折扣** _" 表中的字段的小数位数和精度。  

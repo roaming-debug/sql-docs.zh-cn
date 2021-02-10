@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c0f227b7c66928d04980a454828e8d7a80f064f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a267298dd652a307d6e3365cb48e30f9fc667ed6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167097"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041727"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (ADO) 
 移动到指定 [记录集](./recordset-object-ado.md) 对象中的第一条、最后一条、下一条记录或上一条记录，并使该记录成为当前记录。  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07eb8ef6a51b67b70b1a0bd4b8fecba116df58a4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 828a0f9d872ab1040700941d85980e0b5deecf98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166931"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041227"
 ---
 # <a name="pagecount-property-ado"></a>PageCount 属性 (ADO)
 指示 [Recordset](./recordset-object-ado.md) 对象包含多少页数据。  

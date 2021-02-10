@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bb438c114c80f5cd062c1be810dd85988611dbb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dd523383e69d27b3a9c57b4ce99e4be3bc6a1d13
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170161"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040387"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 属性示例 (VB)
 此示例演示了 [StayInSync](./stayinsync-property.md) 属性如何便于访问分层 [记录集中](./recordset-object-ado.md)的行。  

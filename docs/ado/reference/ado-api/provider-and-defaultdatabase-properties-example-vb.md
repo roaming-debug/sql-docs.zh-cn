@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fbc27246c6d79a7e9750e063ada29b775f45f00
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 12a89ea2c19b7e1734800edfcc62c1734bf7f296
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170522"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040847"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase Properties (VB) 
 此示例通过使用不同的提供程序打开三个[连接](./connection-object-ado.md)对象来演示[提供程序](./provider-property-ado.md)的属性。 它还使用 [DefaultDatabase](./defaultdatabase-property.md) 属性设置 Microsoft ODBC 提供程序的默认数据库。  

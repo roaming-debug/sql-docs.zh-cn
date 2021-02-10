@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cf90fe1219103713797dfd04b1475d7fc77c80a0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e59240d9cb6419153e6f717521748ad6beca8e2a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170347"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040737"
 ---
 # <a name="row-property-ado"></a>Row 属性 (ADO)
 获取或设置 [ADORecordConstruction 接口](./adorecordconstruction-interface.md)对象上或的 OLE DB **行** 对象。 使用 **put_Row** 设置 **行** 对象时，会将行转换为 ADO **记录** 对象。  

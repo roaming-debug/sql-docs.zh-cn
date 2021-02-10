@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 957e84b3a98f0248e41a83301ef2c9a9c1943b11
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0d3b03d203873a9d14aeecb7e44c7184dea274f3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166579"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040647"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 指定记录 [集](./recordset-object-ado.md)内的记录搜索的方向。  

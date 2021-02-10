@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3922289548cbc3cb2e694399ac9f09e13d73985
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6e9d4f0770cdc15ac44882fa808f60f1a85f071c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170616"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041147"
 ---
 # <a name="parameter-object"></a>Parameter 对象
 表示基于参数化查询或存储过程与 [命令](./command-object-ado.md) 对象关联的参数或参数。  

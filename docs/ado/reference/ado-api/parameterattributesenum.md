@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a6ef5494869e892abdbb70fc517a4e0186e4a51
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c5b8ff0e7fe431217b155c6adfe919542856fe9f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170606"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041127"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 指定 [参数](./parameter-object.md) 对象的特性。  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 115689c06ce4bdb387b126ecc6087e63c705dcdc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1dbe6152997431b95cfde76d8d45391c8465394e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170590"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041067"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 属性 (ADO)
 设置 **ADORecordConstruction** 对象上 OLE DB **行** 对象的容器，使该行的父对象变为 ADO **记录** 对象。  
