@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36ca4b14058b2728e60856f3c848452ad922107d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1c4d4b0a07042fd06a4fc2300c03f43d0e131f5e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166235"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056012"
 ---
 # <a name="ado-glossary"></a>ADO 术语表
 本主题定义与 ADO 相关的术语。  
@@ -187,7 +187,7 @@ ms.locfileid: "99166235"
  ISAPI (Internet 服务器应用程序编程接口)   
  一组适用于 Internet 服务器的函数，例如运行 Microsoft® Internet Information Services (IIS) 的 Windows NT® Server/Windows 2000 服务器。  
   
- 键  
+ 密钥  
  表中唯一标识行的一列或多列;通常用于为表编制索引。  
   
 ## <a name="m"></a>M  

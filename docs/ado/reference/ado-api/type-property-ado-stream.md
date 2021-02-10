@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61e170cd368771fc75c2c6e552d4465dfe51866c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f68e21972be70369d231ede6788be5d4b200b69d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166377"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056442"
 ---
 # <a name="type-property-ado-stream"></a>Type 属性（ADO 流）
 指示 [流](./stream-object-ado.md) 中包含的数据的类型 (二进制或文本) 。  

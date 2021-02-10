@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ccef581984ca18aaac60fa7d867ccb0d09e9b3d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ae18a3f56af436bf4c0530bdfadd6b9bdf91cd8e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166336"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056332"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update 和 CancelUpdate 方法示例 (VB)
 此示例将 [更新](./update-method.md) 方法与 [CancelUpdate](./cancelupdate-method-ado.md) 方法结合在一起。  

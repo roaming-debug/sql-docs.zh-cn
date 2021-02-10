@@ -13,12 +13,12 @@ ms.assetid: 9d273ee3-2438-45cc-b4d1-8d3b549904b4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b12bec088690f5f83d8e2c40cdeb9fc6e003a88d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a34231fb991f495566ab89360012029a245b118f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418373"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058472"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>自定义调用顺序 (OracleToSQL)
 在此步骤中，您将选择要调用的对象的排序顺序。  

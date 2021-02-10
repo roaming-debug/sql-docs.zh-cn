@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3717cce895ca602a550d47ea5c569af4c80963a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93d1901cd5701cbdea537b947aa93de64fe59661
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492310"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056712"
 ---
 # <a name="connect-to-azure-sql-database--sybasetosql"></a>连接到 Azure SQL 数据库 (SybaseToSQL) 
 使用 "连接到 Azure SQL 数据库" 对话框连接到要迁移的 Azure SQL 数据库数据库。  
@@ -55,7 +55,7 @@ SSMA 建议对 Azure SQL 数据库进行加密连接。
   
 2.  如果没有数据库，将显示以下两个菜单项。  
   
-    1.  ** (找不到任何数据库) 该数据库 ** 处于禁用状态并始终灰显  
+    1.  **(找不到任何数据库) 该数据库** 处于禁用状态并始终灰显  
   
     2.  **创建新的数据库** ，仅当 Azure SQL 数据库帐户上没有数据库时才启用此功能。 单击此菜单项时，将显示 "创建 Azure 数据库" 对话框，其中包含数据库名称和大小。  
   

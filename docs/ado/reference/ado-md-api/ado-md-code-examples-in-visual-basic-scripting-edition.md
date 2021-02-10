@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40cf6bff015e0be9caf6c49b16cba2a21901d43e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dc86aa6f9a8f7e6e79845a0969c52a3fe8a90b40
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166232"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055992"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Visual Basic Scripting Edition 中的 ADO MD 代码示例
 以下示例需要 microsoft Active Server Pages (ASP) 用于 Microsoft Internet Information Server 4.0。  

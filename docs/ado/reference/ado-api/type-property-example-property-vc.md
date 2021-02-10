@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 647eca0b17066d46ff8ae3f9a39e22c87d4c07fa
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 39941627af5bdbcbcacac123ee3543f8963eb6d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170060"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056402"
 ---
 # <a name="type-property-example-property-vc"></a>Type 属性示例（属性）(VC++)
 此示例演示了 [Type](./type-property-ado.md) 属性。 它是一种用于列出集合名称和类型的实用工具的模型，如 [属性](./properties-collection-ado.md)、 [字段](./fields-collection-ado.md)等。  

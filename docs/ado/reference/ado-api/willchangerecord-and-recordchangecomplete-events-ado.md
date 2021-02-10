@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a713c39746db1d6a5317a4884ac0a2c5cbb23fc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 93eabc24b65a00b44db15dcef5bdd7d1a6f3c17d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166279"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056122"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
 **WillChangeRecord** 事件将在 [记录集](./recordset-object-ado.md))  (行中的一个或多个记录发生更改之前调用。 在一个或多个记录发生更改后调用 **RecordChangeComplete** 事件。  

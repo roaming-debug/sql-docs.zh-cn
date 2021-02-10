@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f88b7b5357a61708910846f78c09f80e7c783957
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 9407f646eeded6a24fcaf166492abe4792b9b609
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870411"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100057062"
 ---
 # <a name="connecting-to-azure-sql-database-sybasetosql"></a>连接到 Azure SQL 数据库 (SybaseToSQL) 
 
@@ -61,7 +61,7 @@ ms.locfileid: "94870411"
 
 6. SSMA 建议将加密连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 。
 
-7. 单击“连接”。
+7. 单击“连接”  。
 
 ## <a name="synchronizing-azure-sql-database-metadata"></a>同步 Azure SQL 数据库元数据
 

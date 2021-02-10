@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0f5205dccc0d5c13f4c9308d32d981a7be506656
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b3f417752ef7de6ab5c4fef077eb9771d7454996
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463159"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100057192"
 ---
 # <a name="creating-script-files-sybasetosql"></a>创建脚本文件 (SybaseToSQL)
 启动 SSMA 控制台应用程序之前的第一个步骤是创建脚本文件，并在需要时创建变量值文件和服务器连接文件。  

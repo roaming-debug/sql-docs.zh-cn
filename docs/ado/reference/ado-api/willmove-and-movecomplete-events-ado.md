@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46c28cd74fcf7a580d6695e21cd1e5e2750f0519
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a2476447e5da8baa89a2df326eba3d41225c698e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166257"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056052"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove 和 MoveComplete 事件 (ADO)
 在挂起的操作更改 [记录集中](./recordset-object-ado.md)的当前位置之前，调用 **WillMove** 事件。 在 **记录集** 的当前位置发生更改后，将调用 **MoveComplete** 事件。  

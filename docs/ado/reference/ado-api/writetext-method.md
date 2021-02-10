@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4c05ab892ce442db5eefefddf3eb0796af5dec9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8d310e2beaf69968721e2edc5c65c57cb88cf492
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166248"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056032"
 ---
 # <a name="writetext-method"></a>WriteText 方法
 向 [Stream](./stream-object-ado.md) 对象写入指定的文本字符串。  
@@ -35,7 +35,7 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>参数  
- *数据*  
+ 数据  
  一个 **字符串** 值，该值包含要写入的字符中的文本。  
   
  *选项*  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2988f57c5d0e3162c9b6dc54d8a7371efcf5da05
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 5637ee7524758dc8d527946c69a2edc9af948d8d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870401"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056902"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>连接到 SQL Server (SybaseToSQL)
 
@@ -71,7 +71,7 @@ ms.locfileid: "94870401"
 
 6. 对于安全连接，将添加两个控件，即 " **加密连接** " 和 " **TrustServerCertificate** " 复选框。 只有在选中 " **加密连接** " 时，" **TrustServerCertificate** " 复选框才可见。 选中 " **加密连接** " (true) 并取消选中 " **TrustServerCertificate** " (false) ，它将验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 证书。 验证服务器证书是 SSL 握手过程的一部分，这可确保服务器是要连接到的正确服务器。 为了确保这一点，证书必须安装在客户端和服务器端。
 
-7. 单击“连接”。
+7. 单击“连接”  。
 
 > [!IMPORTANT]
 > 虽然你可以连接到的更高版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但与创建迁移项目时选择的版本相比，数据库对象的转换由项目的目标版本而不是你连接到的的版本确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。

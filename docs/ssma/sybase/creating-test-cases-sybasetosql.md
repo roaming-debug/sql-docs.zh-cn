@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fb3fe4816faeb050a1c4321def0e7dd4e6937bdb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 460ea84af51b872841eb82cd405cc29ebfe59e65
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463149"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056682"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>创建测试用例 (SybaseToSQL)
 使用测试用例向导创建测试。 通过此向导，您可以通过选择已测试和已验证的对象并指定测试参数来创建测试用例。  
   
 ## <a name="starting-the-test-case-wizard"></a>启动测试用例向导  
-若要启动测试用例向导，请单击 **"测试器" 菜单上**的 "**新建测试用例 ...** "。  
+若要启动测试用例向导，请单击 **"测试器" 菜单上** 的 "**新建测试用例 ...** "。  
   
 启动后，向导将根据源 Sybase 服务器上) 的项目类型查找数据库 ssmatester2005db 或 ssmatester2008db (。 它是用于存储辅助对象的测试人员扩展架构。 如果测试用例向导找不到 ssmatester2005db 或 ssmatester2008db，则会显示建议创建测试人员扩展数据库的对话框窗口。  (在首次运行 SSMA 测试器期间通常会发生此情况。 )   
   

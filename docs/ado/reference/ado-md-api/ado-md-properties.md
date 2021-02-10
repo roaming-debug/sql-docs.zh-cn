@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed3add4b0920c493e7f83ccad14032a1ff227166
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bed4948faafc02def05964eca19653d5373560dd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170004"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055842"
 ---
 # <a name="ado-md-properties"></a>ADO MD 属性
 
-|properties|说明|  
+|属性|说明|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-ado-md.md)|指示当前单元集或目录当前属于哪个 ADO **连接** 对象。|  
 |[标题](./caption-property-ado-md.md)|指示在显示 **级别** 或 **成员** 对象时要使用的文本标题。|  
@@ -46,10 +46,10 @@ ms.locfileid: "99170004"
 |[父级](./parent-property-ado-md.md)|指示作为层次结构中当前成员的父成员的成员。|  
 |[ParentSameAsPrev](./parentsameasprev-property-ado-md.md)|指示此位置成员的父级是否与紧前面的成员的父级相同。|  
 |[Source](./source-property-ado-md.md)|指示单元集中的数据的源。|  
-|[状态](./state-property-ado-md.md)|指示单元集的当前状态。|  
-|[Type](./type-property-ado-md.md)|指示当前成员的类型。|  
+|[State](./state-property-ado-md.md)|指示单元集的当前状态。|  
+|类型|指示当前成员的类型。|  
 |[UniqueName](./uniquename-property-ado-md.md)|指示当前对象的明确名称。|  
-|值|指示当前单元格的值。|  
+|[值](./value-property-ado-md.md)|指示当前单元格的值。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ADO MD API 参考](./ado-md-object-model.md)   

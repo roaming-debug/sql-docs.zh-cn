@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ec7345f10d78ecbbdcc55567e1abe08da885adc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc8372a6c3f2c2202d6cd7db0ef67ec9e09752ce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492248"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056632"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>自定义调用顺序 (SybaseToSQL)
 在此步骤中，您将选择要调用的对象的排序顺序。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 228d78a90510bbc060143f6d7686f4c76680d3f7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3e857bc2ea97203131abb7368605e737374087c0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166303"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056202"
 ---
 # <a name="value-property-example-vb"></a>Value 属性示例 (VB)
 此示例通过显示 " ***Employees*** " 表的字段和属性值，来演示包含 [字段](./field-object.md)和 [属性](./property-object-ado.md)对象的 [Value](./value-property-ado.md)属性。  

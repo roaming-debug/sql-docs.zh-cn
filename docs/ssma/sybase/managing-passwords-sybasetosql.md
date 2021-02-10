@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5a43526e9dd4b0d1e5057c9854a827b084a7e17b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: ef87698106dfd3bec7fd0c53434a115dda73efe6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036497"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058432"
 ---
 # <a name="managing-passwords-sybasetosql"></a>管理密码 (SybaseToSQL)
 本部分介绍如何保护数据库密码，以及如何在服务器之间导入或导出数据库密码。
@@ -71,7 +71,7 @@ SSMA 允许保护数据库的密码。
   
         在 `SSMAforSybaseConsole.exe` `-securepassword` `-remove` 命令行传递服务器 id 的情况下执行，并从本地计算机上的受保护存储文件中删除加密的密码。  
   
-        示例：  
+        例如：  
         
         ```console
             C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -remove all
@@ -82,7 +82,7 @@ SSMA 允许保护数据库的密码。
   
         在 `SSMAforSybaseConsole.exe` `-securepassword` 命令行中使用和开关执行， `-list` 以列出其密码已加密的所有服务器 id。  
   
-        示例：  
+        例如：  
 
         ```console
             C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -list  

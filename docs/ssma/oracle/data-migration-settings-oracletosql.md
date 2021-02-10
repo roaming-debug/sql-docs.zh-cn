@@ -11,12 +11,12 @@ ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a46cdca0d713dc9d33cc919e312a500d867fbfbd
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 4bd91336e15f7d9404632aafd0b9cbc29e0dc2e0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038050"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058462"
 ---
 # <a name="data-migration-settings-oracletosql"></a>数据迁移设置 (OracleToSQL)
   
@@ -41,7 +41,7 @@ ms.locfileid: "92038050"
     -   如果未选中此文本框，则迁移的数据将添加到目标数据库中的现有数据。  
   
 2.  **使用自定义选择：**  
-     此选项允许用户修改 (**select**语句中提供的**select**语句，使用户能够选择要在目标数据库) 显示的数据。  
+     此选项允许用户修改 (**select** 语句中提供的 **select** 语句，使用户能够选择要在目标数据库) 显示的数据。  
   
     1.  默认情况下，此 textbox 处于未选中状态。  
   
