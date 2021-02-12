@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 536c32f8332fd3d3d2e2db505275b6cb773d24a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d10a1ce6bab71b99f11be697843ce32ed03c678
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418473"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077078"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>执行 SSMA 控制台 (DB2ToSQL) 
 Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSMA 活动。 后续部分将详细介绍相同的内容。 控制台应用程序使用本部分中所列举的某些标准脚本文件命令。  

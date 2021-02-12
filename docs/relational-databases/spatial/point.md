@@ -1,7 +1,7 @@
 ---
 description: 点
 title: Point | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 02/02/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e17822f4eb88a1103ab5a214249ec5db7146c74
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bcbdda427a587e06bf1ad678939b8164178112dd
+ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475328"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478572"
 ---
 # <a name="point"></a>点
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "97475328"
   
 ## <a name="examples"></a>示例  
 ### <a name="example-a"></a>示例 A。
-下面的示例创建一个表示点 (3, 4) 的 `geometry Point`实例，该实例的 SRID 为 0。  
+下面的示例创建一个表示点 (3, 4) 的几何点实例，它的 SRID 为 0。  
   
 ```sql  
 DECLARE @g geometry;  
@@ -41,7 +41,7 @@ SET @g = geometry::STGeomFromText('POINT (3 4)', 0);
 ```  
   
 ### <a name="example-b"></a>示例 B。
-下面的示例创建一个表示点 (3, 4) 的 `geometry``Point` 实例，该实例的 Z（仰角）值为 7，M（度量）值为 2.5，默认 SRID 为 0。  
+下面的示例创建一个表示点 (3, 4) 的几何点实例，它的 Z（高程）值为 7、M（度量）值为 2.5 且默认 SRID 为 0。  
   
 ```  
 DECLARE @g geometry;  
@@ -49,7 +49,7 @@ SET @g = geometry::Parse('POINT(3 4 7 2.5)');
 ```  
   
 ### <a name="example-c"></a>示例 C.
-下面的示例返回 `geometry``Point` 实例的 X、Y、Z 和 M 值。  
+下面的示例返回几何点实例的 X、Y、Z 和 M 值。  
   
 ```  
 SELECT @g.STX;  

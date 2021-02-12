@@ -9,18 +9,18 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 1/22/2021
-ms.openlocfilehash: e85b2edca08cbb2f30fa4a2ce865ebe77ee7cb24
-ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
+ms.openlocfilehash: 2325f5744c58ee047cde096b3bf4c96174a3d92c
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99510318"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570401"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](./download-azure-data-studio.md)**
 
-## <a name="december-2020-hotfix"></a>2020 年 12 月（修补程序）
+## <a name="january-2021-hotfix"></a>2021 年 1 月（修补程序）
 
 2021 年 1 月 22 日&nbsp; / &nbsp;版本：1.25.2
 

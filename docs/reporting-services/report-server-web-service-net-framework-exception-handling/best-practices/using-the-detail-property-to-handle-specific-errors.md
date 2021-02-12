@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4392633d-b46b-41e6-bc12-efb64e166704
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22628ac610fc8de3febba7e820e79be018f8a8d9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d22bfdf0659b17e7730c25aef7369d4fa323bce6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216373"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100023453"
 ---
 # <a name="using-the-detail-property-to-handle-specific-errors"></a>使用 Detail 属性处理特定错误
   为了进一步对异常进行分类，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 在 SOAP 异常的 Detail 属性的子元素的 InnerText 属性中返回附加错误信息   。 因为该 Detail 属性是 XmlNode 对象，所以，可以使用以下代码访问 Message 子元素的内部文本    。  

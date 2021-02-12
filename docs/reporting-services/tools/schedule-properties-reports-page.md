@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad2720898bc340d71644356b0ced7a4b8d647a5a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 132aa67a1542e0a175fb08aed4c9a9a798c779d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988119"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077328"
 ---
 # <a name="schedule-properties-reports-page"></a>计划属性（“报表”页）
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 计划属性页以查看使用特定共享计划的所有报表的列表。 计划可用于刷新报表快照、生成报表历史记录、触发订阅或使报表的缓存副本过期。 若要了解如何使用计划，请查看报表的属性和订阅信息。  

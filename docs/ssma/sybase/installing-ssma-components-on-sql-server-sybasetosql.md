@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 33b5663e7693de8c031f2b39c0436a771920be56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82f5d7eef228326f0dba9b194b87bffce4bb5eff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372363"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078228"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server 上安装 SSMA 组件 (SybaseToSQL) 
 
@@ -23,11 +23,11 @@ ms.locfileid: "88372363"
 
 ## <a name="ssma-for-sybase-extension-pack"></a>用于 Sybase 扩展包的 SSMA
 
-SSMA 扩展包将数据库、 **sysdb** 和 **ssmatesterdb_syb**添加到指定的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **Sysdb**数据库包含迁移数据所需的表和存储过程。 **Ssmatester_syb**数据库包含架构**ssma_sybase_utilities**，在这种情况下，将在其中创建 ssma 测试器组件使用的对象 (表、触发器和视图) 。
+SSMA 扩展包将数据库、 **sysdb** 和 **ssmatesterdb_syb** 添加到指定的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **Sysdb** 数据库包含迁移数据所需的表和存储过程。 **Ssmatester_syb** 数据库包含架构 **ssma_sybase_utilities**，在这种情况下，将在其中创建 ssma 测试器组件使用的对象 (表、触发器和视图) 。
 
 此外，在将数据迁移到时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在服务器端数据迁移引擎用于迁移数据时创建代理作业。
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必备条件
 
 在上安装用于 Sybase server 组件的 SSMA 之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请确保系统满足以下要求：
 
@@ -49,13 +49,13 @@ SSMA 扩展包将数据库、 **sysdb** 和 **ssmatesterdb_syb**添加到指定�
 
 安装扩展包：
 
-1. 将 **SSMAforSybaseExtensionPack_*n*.msi**（其中 *n* 是内部版本号）复制到运行的计算机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
-2. 双击 SSMAforSybaseExtensionPack_ " **。*n***
+1. 将 **SSMAforSybaseExtensionPack_ *n*.msi**（其中 *n* 是内部版本号）复制到运行的计算机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
+2. 双击 SSMAforSybaseExtensionPack_ " **。**
 3. 在“欢迎”页面上，单击“下一步”。 
 4. 在 " **最终用户许可协议** " 页上，阅读许可协议。 如果同意，请选择 " **我接受协议"** 选项，然后单击 " **下一步**"。
 5. 在 " **选择安装类型** " 页上，单击 " **典型**"。
 6. 在 " **准备安装** " 页上，单击 " **安装**"。
-7. 在 " **完成第一步安装** " 页上，单击 " **下一**步"。
+7. 在 " **完成第一步安装** " 页上，单击 " **下一** 步"。
 
    此时将显示一个新对话框，您可以在其中选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于安装扩展包的实例。
 
@@ -71,7 +71,7 @@ SSMA 扩展包将数据库、 **sysdb** 和 **ssmatesterdb_syb**添加到指定�
 
 11. 在下一页上，选择 " **安装实用程序数据库 *n* " 并安装扩展包库**，其中 *n* 是版本号。 如果计划使用测试人员功能，请选择 " **安装测试人员数据库** " 复选框，然后选择 " **下一步**"。
 
-    **Sysdb**数据库是使用 (在此数据库中创建的，这些表和存储过程是使用) 在此数据库中创建的。
+    **Sysdb** 数据库是使用 (在此数据库中创建的，这些表和存储过程是使用) 在此数据库中创建的。
 
     如果选中了 " **安装测试器数据库** " 选项，则将创建 **ssmatesterdb_syb** 数据库。
 
@@ -79,7 +79,7 @@ SSMA 扩展包将数据库、 **sysdb** 和 **ssmatesterdb_syb**添加到指定�
 
 ### <a name="sql-server-database-objects"></a>SQL Server 数据库对象
 
-安装扩展包后，将在**sysdb**数据库中看到一个**ssma_syb bcp_migration_packages**表。 你还将看到以下存储过程：
+安装扩展包后，你将看到 **sysdb** 数据库中的 **ssma_syb _migration_packages** 表。 你还将看到以下存储过程：
 
 - `bcp_clean_migration_data`
 - `bcp_ensure_message_table`

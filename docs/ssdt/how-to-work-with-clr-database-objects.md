@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4427101e26905c21e093eca61a5579026522991b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 02f5aa47948ee5cdbf2cc7f95d749a5f56e47328
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988680"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017947"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>如何：使用 CLR 数据库对象
 
@@ -97,7 +97,7 @@ CLR 属性页和 CLR 生成属性页包含很多关于在项目中使用 CLR 数
   
 3.  右键单击 Suppliers 表并选择“查看数据”。  
   
-4.  为 ID 输入 5，为“名称”输入 Contoso，保留“地址”为空，并且为“电话”输入 425 3122 1222。 按下 Tab 键离开“电话”**** 字段，并且注意到将弹出一个消息，指示 `INSERT` 语句与你的现有 CHECK 约束冲突，该约束将使用预定义的电话模式检查“电话”**** 字段的输入。  
+4.  为 ID 输入 5，为“名称”输入 Contoso，保留“地址”为空，并且为“电话”输入 425 3122 1222。 按下 Tab 键离开“电话”字段，并且注意到将弹出一个消息，指示 `INSERT` 语句与你的现有 CHECK 约束冲突，该约束将使用预定义的电话模式检查“电话”字段的输入。  
   
 5.  将你的输入更改为 425 312 1222 并按 Tab 键离开该字段。 请注意，这次将接受该输入。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6c747f50c9216626e710318175cf5e53a0624d7a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 7c7e8b8e282a59144628f70e0b2efc06a1f4b59f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987653"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076388"
 ---
 # <a name="assessment-report-accesstosql"></a>评估报表 (AccessToSQL) 
 "评估报告" 窗口显示了将数据库对象转换为语法的结果 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，还可以帮助您估算迁移项目的复杂性和成本。  
@@ -29,7 +29,7 @@ ms.locfileid: "91987653"
 **“资源管理器”窗格**  
 包含评估报表中对象的层次结构。 展开文件夹以查看各个对象和子组件。 单击类别或对象时，该类别或对象的转换统计信息将显示在 "详细信息" 窗格中。  
   
-**详细信息窗格**  
+**细节窗格**  
 显示所选对象的转换统计信息或错误和警告消息。 例如，如果选择了 "表" 文件夹，则详细信息窗格将显示已转换的外键、索引、主键和表的数目。  
   
 **消息窗格 (Messages pane)**  

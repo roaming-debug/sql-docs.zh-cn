@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d57148134c727b03a30d75af415d1e2476dca32d
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 1be851dfaf8423ec830ad0a134a6e8610789eec5
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88345993"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835349"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>并行安装 Integration Services 版本
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  你可以安装   
-      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS)，与早期版本的 SSIS 并行使用。 本主题介绍并行安装的一些限制。  
+  可以将 [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] Integration Services (SSIS) 与旧版 SSIS 并行安装。 本主题介绍并行安装的一些限制。  
   
 ## <a name="designing-and-maintaining-packages"></a>设计和维护包  
  若要设计和维护面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包，请使用 SQL Server Data Tools (SSDT) for Visual Studio 2015。 要获取 SSDT，请参阅 [下载最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  
@@ -44,6 +43,6 @@ ms.locfileid: "88345993"
  当将现有包添加到现有项目时，包将转换为项目所面向的格式。  
   
 ## <a name="running-packages"></a>运行包  
- 你可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 **dtexec** 实用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行早期版本的开发工具所创建的 Integration Services 包。 当这些 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 工具加载早期版本的开发工具开发的包时，该工具暂时将内存中的包转换为 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 使用的包格式。 如果包存在问题导致无法转换成功，则在这些问题解决之前， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 工具将无法运行该包。 有关详细信息，请参阅 [升级 Integration Services 包](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
+ 你可以使用 [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 版的 **dtexec** 实用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行早期版本的开发工具所创建的 Integration Services 包。 当这些 [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 工具加载早期版本的开发工具开发的包时，该工具暂时将内存中的包转换为 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 使用的包格式。 如果包存在问题导致无法转换成功，则在这些问题解决之前， [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 工具将无法运行该包。 有关详细信息，请参阅 [升级 Integration Services 包](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
   
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18a131ba868bdac376aa816327fb032fe29f0900
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: bb653797aa0c89b16daeff71974a26781770a9ff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987343"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100019798"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>使用我的订阅（本机模式报表服务器）
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户中包含一个“我的订阅”  页，通过它可以将所有订阅组织在一个位置中。 可以使用“我的订阅”  来查看、修改、启用、禁用和删除现有订阅。 不过，您不能使用该页来创建订阅。  “我的订阅”仅显示您创建的订阅。 它不会列出其他用户拥有的订阅（即使您已添加为这些订阅的订阅者），也不会显示数据驱动订阅。

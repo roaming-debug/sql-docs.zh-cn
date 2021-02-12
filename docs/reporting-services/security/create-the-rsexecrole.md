@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3735f53eac6101d2cc02568d1ea6fa789df50512
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: fc9beaae557b81ae65e4fd63a22f5696b4f78052
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935387"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015307"
 ---
 # <a name="create-the-rsexecrole"></a>创建 RSExecRole
 
@@ -33,7 +33,7 @@ ms.locfileid: "91935387"
   
 ## <a name="before-you-start"></a>开始之前  
   
--   备份加密密钥，以便可以在数据库移动之后对其进行还原。 这是不会直接影响您创建和设置 **RSExecRole**的能力的步骤，不过您必须有密钥备份才能验证您的工作。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
+-   备份加密密钥，以便可以在数据库移动之后对其进行还原。 这是不会直接影响您创建和设置 **RSExecRole** 的能力的步骤，不过您必须有密钥备份才能验证您的工作。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
 -   验证你是以具有 **实例上的** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限的用户帐户身份登录的。  
   
@@ -60,13 +60,13 @@ ms.locfileid: "91935387"
   
 6.  打开 **“角色”**。  
   
-7.  右键单击“数据库角色”，然后选择“新建数据库角色”********。 此时将显示“数据库角色 - 新建”**** 页。  
+7.  右键单击“数据库角色”，然后选择“新建数据库角色”。 此时将显示“数据库角色 - 新建”页。  
   
 8.  在 **“角色名称”** 中，键入 **RSExecRole**。  
   
-9. 在“所有者”**** 中，键入“dbo”****。  
+9. 在“所有者”中，键入“dbo”。  
   
-10. 选择“安全对象”**** 页。  
+10. 选择“安全对象”页。  
   
 11. 单击 **“搜索”** 。 此时，将显示 **“添加对象”** 对话框。 **“指定对象”** 选项默认情况下处于选中状态。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "91935387"
   
 18. 单击 **“确定”**，然后再次单击 **“确定”** 。  
   
-19. 在“执行”**** 行的“授予”**** 列中，选中复选框。  
+19. 在“执行”行的“授予”列中，选中复选框。  
   
-20. 对于其余的每个存储过程，重复此操作。 必须向**RSExecRole** 授予全部三个存储过程的执行权限。  
+20. 对于其余的每个存储过程，重复此操作。 必须向 **RSExecRole** 授予全部三个存储过程的执行权限。  
 
 21. 选择“确定”，以完成操作。  
   
@@ -111,13 +111,13 @@ ms.locfileid: "91935387"
   
 4.  打开 **“角色”**。  
   
-5.  右键单击“数据库角色”，然后选择“新建数据库角色”********。 将显示“常规”页。  
+5.  右键单击“数据库角色”，然后选择“新建数据库角色”。 将显示“常规”页。  
   
 6.  在“角色名称”中，键入 **RSExecRole**。  
   
 7.  在“所有者”中，键入“dbo”。  
   
-8.  选择“安全对象”**** 页。  
+8.  选择“安全对象”页。  
   
 9.  单击 **“搜索”** 。 此时，将显示 **“添加对象”** 对话框。 **“指定对象”** 选项默认情况下处于选中状态。  
   
@@ -157,11 +157,11 @@ ms.locfileid: "91935387"
   
 17. 选择第一个存储过程：sp_add_category。  
   
-18. 在“执行”**** 行的“授予”**** 列中，单击选中复选框。  
+18. 在“执行”行的“授予”列中，单击选中复选框。  
   
 19. 对于其余的每个存储过程，重复此操作。 必须向 RSExecRole 授予全部十个存储过程的执行权限。  
   
-20. 继续在“安全对象”**** 页上，再次单击“搜索”****。 此时，将显示 **“添加对象”** 对话框。 **“指定对象”** 选项默认情况下处于选中状态。  
+20. 继续在“安全对象”页上，再次单击“搜索”。 此时，将显示 **“添加对象”** 对话框。 **“指定对象”** 选项默认情况下处于选中状态。  
   
 21. 单击“确定”。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "91935387"
   
 28. 选择第一个表：syscategories。  
   
-29. 在“选择”**** 行的“授予”**** 列中，单击选中复选框。  
+29. 在“选择”行的“授予”列中，单击选中复选框。  
   
 30. 对于 sysjobs 表重复此操作。 必须向 RSExecRole 授予这两个表的选择权限。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "91935387"
   
 6.  单击 **“测试连接”** 。 应该会看到一个对话框，其中显示“测试连接成功”。
   
-7.  选择“确定”**** 以关闭该对话框，然后选择“下一步”****。  
+7.  选择“确定”以关闭该对话框，然后选择“下一步”。  
   
 8.  在“数据库”上，选择报表服务器数据库。  
   

@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 593c36c193b95d1484f3d478018992ea130d5417
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bddb9d2329c20203aca602e7aec37f235c4b6850
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418633"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077666"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>访问清单架构 (AccessToSQL) 
 以下各节描述了在将访问架构导出到时由 SSMA 创建的表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -55,7 +55,7 @@ ms.locfileid: "88418633"
 |**数据库 ID**|**uniqueidentifier**|唯一标识每个数据库的 GUID。 此列也是表的主键。|  
 |**DatabaseName**|**nvarchar(4000)**|访问数据库的名称。|  
 |**ExportTime**|**datetime**|此元数据由 SSMA 创建的日期和时间。|  
-|**FilePath**|**nvarchar(4000)**|Access 数据库的完整路径和文件名。|  
+|**文件路径**|**nvarchar(4000)**|Access 数据库的完整路径和文件名。|  
 |**FileSize**|**bigint**|Access 数据库的大小（KB）。|  
 |**FileOwner**|**nvarchar(4000)**|指定为访问数据库的所有者的 Windows 帐户。|  
 |**DateCreated**|**datetime**|创建 Access 数据库的日期和时间。|  

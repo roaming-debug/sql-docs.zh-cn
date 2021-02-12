@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 828218dcebe5f2e5ab6c0759083f497876dae6b2
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 739501f78f313f8fbff20d71cc63376a8da27343
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813523"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552671"
 ---
 # <a name="row-level-security"></a>行级安全性
 
@@ -302,7 +302,7 @@ DROP SCHEMA Security;
 ### <a name="prerequisites"></a>先决条件
 
 1. 必须具有专用 SQL 池。 请参阅[创建专用 SQL 池](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. 托管专用 SQL 池的服务器必须向 AAD 注册，并且你应具有一个包含存储博客参与者权限的 Azure 存储帐户。 按照[此处](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps)的步骤操作。
+1. 托管专用 SQL 池的服务器必须向 AAD 注册，你必须拥有 Azure 存储帐户，并具有“存储 Blob 数据参与者”权限。 按照[此处](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps)的步骤操作。
 1. 为 Azure 存储帐户创建一个文件系统。 使用存储资源管理器查看存储帐户。 右键单击容器，然后选择“创建文件系统”。  
 
 满足先决条件后，创建三个用户帐户来演示不同的访问功能。

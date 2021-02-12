@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c11cfc1213e70bf362185a63883b8e84282696ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b52b2f8285175c082c83b01fc9b59332ec2fb5d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216363"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100023497"
 ---
 # <a name="preventing-invalid-requests"></a>防止无效请求
   您可以通过分析应用程序流程并确保要发送到报表服务器的请求有效，防止引发某些类型的异常。 例如，在使用户能够添加或更新报表名称、数据源或其他报表服务器项的应用程序中，您应该对用户可能输入的文本进行验证。 您应该始终在将请求发送到报表服务器之前检查是否使用了保留字符。 在代码中使用条件 if  语句或其他逻辑构造可以向用户发出警报，提醒用户尚未满足将请求发送到报表服务器所需的条件。  

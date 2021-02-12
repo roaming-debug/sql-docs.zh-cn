@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 04f6f0adb61a0bb7ccf33e3705a4a32b9ed9d69e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 38385657de137e9e13bf03f7a4209be1303452d3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988223"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076072"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>将 Access 数据库对象转换 (AccessToSQL) 
 添加访问数据库并连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 后，SSMA 将显示 Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL 数据库对象的元数据。 你现在可以选择 "访问数据库对象"，然后将架构转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 架构。  
@@ -56,7 +56,7 @@ ms.locfileid: "91988223"
   
 |Access 对象|产生 SQL Server 对象|  
 |-----------------|-------------------------------|  
-|餐桌|餐桌|  
+|表|表|  
 |列|列|  
 |索引|索引|  
 |外键 (foreign key)|外键 (foreign key)|  
@@ -111,7 +111,7 @@ ms.locfileid: "91988223"
   
     将光标移出已更改的属性单元。 可以通过单击另一行或按 Tab 键来执行此操作。  
   
-3.  单击“应用”  。  
+3.  单击“应用”。  
   
 你现在可以在 " **SQL** " 选项卡上查看代码中的更改。  
   

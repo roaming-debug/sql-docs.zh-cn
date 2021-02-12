@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a58a11e71c471bf02ca68ddaf4a416c3d9c554b
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: bd4d8deaa9be114ffb2ce806f67be3b96babb8b6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99075699"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015277"
 ---
 # <a name="configure-a-url--report-server-configuration-manager"></a>配置 URL（报表服务器配置管理器）
   必须为每个应用程序配置至少一个 URL 才能使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL  。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。  

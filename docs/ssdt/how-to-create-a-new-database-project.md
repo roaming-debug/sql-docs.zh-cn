@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f4e89dcf95cc02f3eea7cf681e9cdfc48d906367
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 6039138eda38f67aae2a1f4770ebc93380087607
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518987"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018367"
 ---
 # <a name="how-to-create-a-new-database-project"></a>如何：创建新的数据库项目
 
@@ -37,7 +37,7 @@ ms.locfileid: "85518987"
   
 1.  右键单击“SQL Server 对象资源管理器”中的“TradeDev”节点，然后选择“创建新项目”。  
   
-2.  在“导入数据库”**** 对话框中，请注意，“源数据库连接”**** 设置已由你在“SQL Server 对象资源管理器”**** 中所选的数据库预定义。 在“目标项目”设置中，将项目名称更改为“TradeDev”。  
+2.  在“导入数据库”对话框中，请注意，“源数据库连接”设置已由你在“SQL Server 对象资源管理器”中所选的数据库预定义。 在“目标项目”设置中，将项目名称更改为“TradeDev”。  
   
 3.  在“导入设置”部分，请注意用于导入特定对象和设置的选项，以及每个架构和/或对象类型的创建文件夹。 对于你的所有数据库对象的组织层次结构，接受所有默认设置，然后单击“启动”。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "85518987"
   
 5.  检查“解决方案资源管理器”中的层次结构。 展开“dbo”文件夹，你将看到单独的“函数”、“表”和“视图”文件夹。 请注意，表和函数将按其架构文件夹分组。  
   
-6.  双击“表”下的“Products.sql”。 将打开“表设计器”****，显示列网格中的表的可视化解释，以及脚本窗格中的表的脚本定义。 这与我们在[连接的数据库开发](../ssdt/connected-database-development.md)部分中看到的内容完全相同。  
+6.  双击“表”下的“Products.sql”。 将打开“表设计器”，显示列网格中的表的可视化解释，以及脚本窗格中的表的脚本定义。 这与我们在[连接的数据库开发](../ssdt/connected-database-development.md)部分中看到的内容完全相同。  
   
 7.  为“CustomerId”列取消选中“允许 Null 值”框。 按 Ctrl+S 保存该文件。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "85518987"
   
 6.  检查“解决方案资源管理器”中的层次结构。 展开“dbo”文件夹，你将看到单独的“函数”、“表”和“视图”文件夹。 请注意，表和函数将按其架构文件夹分组。  
   
-7.  双击“表”下的“Products.sql”。 将打开“表设计器”****，显示列网格中的表的可视化解释，以及脚本窗格中的表的脚本定义。 这与我们在[连接的数据库开发](../ssdt/connected-database-development.md)部分中看到的内容完全相同。  
+7.  双击“表”下的“Products.sql”。 将打开“表设计器”，显示列网格中的表的可视化解释，以及脚本窗格中的表的脚本定义。 这与我们在[连接的数据库开发](../ssdt/connected-database-development.md)部分中看到的内容完全相同。  
   
 8.  为“CustomerId”列取消选中“允许 Null 值”框。 按 Ctrl+S 保存该文件。  
   

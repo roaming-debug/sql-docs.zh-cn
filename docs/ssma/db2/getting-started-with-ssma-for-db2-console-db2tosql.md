@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 57cf454c5d13bf4a40325024e51bd19c4d56c446
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 59caa0bd32c0fe0838b4d2d8528a83b084d6cd81
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985095"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100073521"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>SSMA for DB2 Console (DB2ToSQL) 入门
 本部分介绍启动和启动 DB2 控制台应用程序的过程。 本文还列出了在典型的 SSMA 控制台输出窗口中使用的约定。  
@@ -25,7 +25,7 @@ ms.locfileid: "91985095"
   
 1.  中转到 " **开始** "，然后指向 " **所有程序**"。  
   
-2.  单击 " ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于 DB2 命令提示符的迁移助手**" 快捷方式。  
+2.  单击 " **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于 DB2 命令提示符的迁移助手**" 快捷方式。  
   
     它显示 "SSMA 控制台使用情况" 菜单和 `(/? Help)` ，以帮助你开始使用控制台应用程序。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "91985095"
   
 下表中的控制台输出的颜色解释：  
   
-|颜色|说明|  
+|Color|说明|  
 |---------|---------------|  
 |红色|执行过程中出现错误|  
 |灰色|日期和时间戳，向用户发送消息|  
-|白色|脚本文件命令，消息类型|  
+|White|脚本文件命令，消息类型|  
 |Yellow|警告|  
 |绿色|提示输入用户-输入|  
 |蓝|操作的开始、完成和结果|  

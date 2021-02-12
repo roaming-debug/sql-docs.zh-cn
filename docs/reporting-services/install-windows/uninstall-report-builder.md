@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e92f5eafad039858022a915fd0006ea3130a2c75
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f473c53a8e0a04603a391300fb2fc26dbd8210e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446040"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077478"
 ---
 # <a name="uninstall-report-builder"></a>卸载报表生成器
 
@@ -29,7 +29,7 @@ ms.locfileid: "88446040"
   
 2.  在“控制面板”中，单击 **“程序和功能”**。  
   
-3.  在“名称”列表中找到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 报表生成器并单击它****。  
+3.  在“名称”列表中找到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 报表生成器并单击它。  
   
 4.  单击“卸载”  。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "88446040"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
-2.  在“打开” **** 文本框中，输入 **cmd.**  
+2.  在“打开”  文本框中，输入 **cmd.**  
   
 3.  在命令提示符窗口中，导航到包含 ReportBuilder3_x86.msi 的文件夹。  
   

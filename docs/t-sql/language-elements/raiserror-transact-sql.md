@@ -30,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccb8c1e7f26102aa960ab720283debaceff2dd2c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e9892fe80ff3f29dca2ac46c99249fa603ab5528
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203617"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570481"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -132,7 +132,7 @@ RAISERROR ( { msg_str | @local_variable }
  是一个可以为任何有效字符数据类型的变量，其中包含的字符串的格式化方式与 msg_str 相同  。 \@local_variable 必须为 char 或 varchar，或者能够隐式转换为这些数据类型。     
   
  severity   
- 用户定义的与该消息关联的严重级别。 使用 msg_id 引发使用 sp_addmessage 创建的用户定义消息时，RAISERROR 上指定的严重性会替代 sp_addmessage 中指定的严重性。   
+ 是与此消息关联的用户定义的[严重性级别](../../relational-databases/errors-events/database-engine-error-severities.md)。 使用 msg_id 引发使用 sp_addmessage 创建的用户定义消息时，RAISERROR 上指定的严重性会替代 sp_addmessage 中指定的严重性。   
   
  任何用户都可以指定 0 到 18 之间的严重级别。 只有 sysadmin 固定服务器角色成员或具有 ALTER TRACE 权限的用户才能指定 19 到 25 之间的严重级别。 若要使用 19 到 25 之间的严重级别，必须选择 WITH LOG 选项。 将小于 0 的严重级别解释为 0。 将大于 25 的严重级别解释为 25。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42f53d1b31f2e5b8805c5173bd45fcbd27f2d4a4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: d5b0c6cc93ea6b934be718e88873cf736f31d679
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529561"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061672"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>为数据处理扩展插件实现 Connection 类
   Connection 对象表示数据库连接或类似的资源，它是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件的用户的起点。 它表示与数据库服务器的连接，尽管可以将任何具有类似行为的实体公开为 Connection。  
@@ -38,9 +38,9 @@ ms.locfileid: "84529561"
   
  <xref:Microsoft.ReportingServices.Interfaces.IExtension> 还使 Connection 对象能够检索和处理存储在 RSReportServer.config 文件中的自定义配置数据。 有关处理自定义配置数据的详细信息，请参阅 <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A> 方法。  
   
- 对于实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 的类，当卸载其他数据处理扩展插件类时，不会从内存中卸载该类。 因此，可以使用 Extension 类存储跨连接状态信息或存储内存中可能缓存的数据****。 只要报表服务器正在运行，Extension 类就保持在内存中。  
+ 对于实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 的类，当卸载其他数据处理扩展插件类时，不会从内存中卸载该类。 因此，可以使用 Extension 类存储跨连接状态信息或存储内存中可能缓存的数据。 只要报表服务器正在运行，Extension 类就保持在内存中。  
   
- 可以通过实现 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 来扩展 Connection 类，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中包含对于凭据的支持。 当实现 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 接口的 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity%2A>、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName%2A> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password%2A> 属性时，就在报表设计器的“数据源”对话框中启用了“集成安全性”复选框以及“用户名”和“密码”文本框****************。 这使报表设计器能够针对支持身份验证的数据源存储和检索凭据。 将以安全的方式存储凭据，当以预览模式呈现报表时将使用这些凭据。  
+ 可以通过实现 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 来扩展 Connection 类，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中包含对于凭据的支持。 当实现 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 接口的 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity%2A>、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName%2A> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password%2A> 属性时，就在报表设计器的“数据源”对话框中启用了“集成安全性”复选框以及“用户名”和“密码”文本框。 这使报表设计器能够针对支持身份验证的数据源存储和检索凭据。 将以安全的方式存储凭据，当以预览模式呈现报表时将使用这些凭据。  
   
 > [!NOTE]  
 >  隐式实现 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 要求您实现 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 和 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 接口的成员。  

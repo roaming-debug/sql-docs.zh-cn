@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 37d6552c328daff4793ea65d9670752378e1ab3b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d40d77660fd722e668fc5d1d080b52b37bd30822
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509758"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075151"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
   借助 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，可以通过熟悉的编程构造（如方法、基元类型和用户定义的复杂类型）使用 Web 服务。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 包含可用来创建 Web 服务客户端的基础结构和工具，这些客户端可以调用任何符合万维网联盟 (W3C) 标准的 Web 服务。  

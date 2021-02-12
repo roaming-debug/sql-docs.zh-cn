@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae577ca756b4f575dd1bdf7c8e6c59e379d82098
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: ee0f4c58af897bacf929f0447141256a30682990
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529602"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065393"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>向报表设计器部署数据处理扩展插件
   报表设计器在您设计报表时使用数据处理扩展插件检索和处理数据。 您应将数据处理扩展插件程序集作为专用程序集部署到报表设计器。 还需要在报表设计器配置文件 RSReportDesigner.config 中生成一个条目。  
@@ -44,7 +44,7 @@ ms.locfileid: "84529602"
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     Name 的值是数据处理扩展插件的唯一名称。 Type 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）****。 默认情况下，数据处理扩展插件是可见的。 若要从用户界面（如报表设计器）中隐藏扩展插件，请将 Visible 属性添加到 Extension 元素，并将其设置为 false************。  
+     Name 的值是数据处理扩展插件的唯一名称。 Type 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，数据处理扩展插件是可见的。 若要从用户界面（如报表设计器）中隐藏扩展插件，请将 Visible 属性添加到 Extension 元素，并将其设置为 false。  
   
 5.  最后，为自定义程序集添加一个代码组，以便为扩展插件授予 FullTrust 权限。 要完成该操作，将该代码组添加到 rspreviewpolicy.config 文件中即可，该文件在默认情况下位于 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies 中。 代码组可能如下所示：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "84529602"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>为自定义扩展插件启用通用查询设计器  
   
--   将以下条目添加到 Designer 元素下的 RSReportDesigner.config 文件中，用在之前条目中提供的名称替换 Name 属性********。  
+-   将以下条目添加到 Designer 元素下的 RSReportDesigner.config 文件中，用在之前条目中提供的名称替换 Name 属性。  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

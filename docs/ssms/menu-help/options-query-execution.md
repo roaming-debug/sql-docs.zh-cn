@@ -12,12 +12,12 @@ dev_langs:
 author: markingmyname
 ms.author: maghan
 ms.date: 01/13/2021
-ms.openlocfilehash: 29ee1a365031eedae80abcffdb1147053d56f069
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 860011bf1ad6ad28a8dac5a1b5f86dd8a01e711a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241768"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069852"
 ---
 # <a name="options-query-execution---general"></a>选项（查询执行 - 常规）
 

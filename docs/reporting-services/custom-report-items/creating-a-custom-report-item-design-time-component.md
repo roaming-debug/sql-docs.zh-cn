@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 237d056f8b42570fcab375330a9eb3172eb11758
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 1b5ccf62185045dc8d3efaccfe00e26a01f01a9d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596961"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015657"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>创建自定义报表项设计时组件
   自定义报表项设计时组件是一种可在 Visual Studio 报表设计器环境中使用的控件。 自定义报表项设计时组件可提供能接受拖放操作的激活的设计图面，可与 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性浏览器集成，且可提供自定义属性编辑器。  

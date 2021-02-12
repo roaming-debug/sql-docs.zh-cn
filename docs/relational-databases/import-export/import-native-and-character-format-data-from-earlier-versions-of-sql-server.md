@@ -17,18 +17,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e89b0fb2445901ec981a5bdfa238cbd31704a039
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fbc7cfeb79b71c08d94e22245b8a63c4466e4bc9
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473948"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552650"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以通过将 **bcp** 与 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-V [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开关一起使用，从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 **或** 中导入本机和字符格式数据。 **-V** 开关将使 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本中的数据类型，并且数据文件格式与早期版本中的格式相同。  
+
+在 [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] 及更高版本中，可以使用 bcp 通过 -V 开关来导入 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的本机和字符格式数据。 **-V** 开关将使 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 使用指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本中的数据类型，并且数据文件格式与早期版本中的格式相同。  
   
- 若要为数据文件指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本，可将 **-V** 开关与以下的任一限定符一起使用：  
+若要为数据文件指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本，可将 **-V** 开关与以下的任一限定符一起使用：  
   
 |SQL Server 版本|Qualifier|  
 |------------------------|---------------|  

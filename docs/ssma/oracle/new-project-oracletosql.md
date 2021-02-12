@@ -11,12 +11,12 @@ ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d16a3aee923d7b57e7195799ed26a72571f4d92d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1328fe2737a461ceafd7bb1c9cd816eec0d4a9fd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320533"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078258"
 ---
 # <a name="new-project-oracletosql"></a>新建项目 (OracleToSQL)
 使用 " **新建项目** " 对话框创建新的 SSMA 项目。 若要访问 " **新建项目** " 对话框，请在 " **文件** " 菜单上单击 " **新建项目**"。  

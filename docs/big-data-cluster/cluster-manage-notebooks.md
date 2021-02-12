@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e549a8005144e85a20cf613ff6695d11f7ff030f
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 34592d9a6cb3db8bde5a2a25098314fd9ace1208
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378347"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039477"
 ---
 # <a name="manage-big-data-clusters-bdc-the-cluster-with-notebooks"></a>使用笔记本管理大数据群集 (BDC)
 

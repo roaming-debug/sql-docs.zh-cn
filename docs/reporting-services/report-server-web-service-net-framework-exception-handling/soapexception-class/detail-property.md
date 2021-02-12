@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 929c597fda9b97c5ffdb24a0aed236f68727a3fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05b4c4f6715e35923c8517983886c5468f34d6ef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215616"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100021699"
 ---
 # <a name="detail-property"></a>Detail 属性
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]“SoapException”  类的“Detail”  属性具有以下 XML 结构：  

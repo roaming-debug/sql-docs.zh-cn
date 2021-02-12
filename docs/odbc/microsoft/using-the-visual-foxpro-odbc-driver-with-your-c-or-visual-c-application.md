@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d8e7dcbc0d14dfddb4aa8a2318d424dc6c7222e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0aa73fdf7cf224dc1c7bff6ad162c5bb18e1d6b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471289"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070382"
 ---
 # <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>将 Visual FoxPro ODBC 驱动程序与 C 或 Visual C++ 应用程序一起使用
 C 或 c + + 应用程序通过将 [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) 或 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 语句发送到 Visual FoxPro 来与 visual foxpro 数据通信。 此语句可以包含以下内容：  

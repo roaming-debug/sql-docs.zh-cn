@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7cb317fc73f32a8795fe5ce4e5be9af776edf938
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1829101a62a3f2602e32b6e4d3535292a90a140d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454255"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069502"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>SSMA for DB2 (DB2ToSQL) 的入门
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 的迁移助手 (SSMA) 使你可以快速将 DB2 数据库架构转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架构，将生成的架构上载到中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并将数据从 DB2 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -25,7 +25,7 @@ ms.locfileid: "88454255"
 ## <a name="installing-ssma"></a>安装 SSMA  
 若要使用 SSMA，首先必须在可以访问源 DB2 数据库和目标实例的计算机上安装 SSMA 客户端程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 运行的计算机上的 DB2 OLEDB 提供程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 这些组件支持数据迁移和 DB2 系统功能的仿真。 有关安装说明，请参阅 [安装 SSMA FOR DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-db2tosql.md)。  
   
-若要启动 SSMA，请单击 "**开始**"，指向 "**所有程序**"，指向 " ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db2 迁移助手**"，然后单击 " ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手**"。  
+若要启动 SSMA，请单击 "**开始**"，指向 "**所有程序**"，指向 " **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db2 迁移助手**"，然后单击 " **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手**"。  
   
 ## <a name="ssma-for-db2-user-interface"></a>DB2 用户界面的 SSMA  
 安装 SSMA 后，可以使用 SSMA 将 DB2 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在开始之前，它有助于熟悉 SSMA 用户界面。 下图显示了 SSMA 的用户界面，包括元数据资源管理器、元数据、工具栏、输出窗格和 "错误列表" 窗格：  
@@ -59,8 +59,8 @@ DB2 元数据资源管理器显示有关 DB2 架构的信息。 通过使用 DB2
   
 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "元数据资源管理器" 选择转换后的 DB2 数据库对象，然后将这些对象与的实例同步 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-### <a name="metadata"></a>Metadata  
-每个元数据资源管理器右侧的选项卡都是描述所选对象的选项卡。 例如，如果您在 DB2 元数据资源管理器中选择一个表，将出现六个选项卡： **表**、 **SQL**、 **类型映射、报表**、 **属性**和 **数据**。 仅在创建包含所选对象的报表后，" **报表** " 选项卡才包含信息。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据资源管理器中选择表，将显示三个选项卡： **表**、 **SQL**和 **数据**。  
+### <a name="metadata"></a>元数据  
+每个元数据资源管理器右侧的选项卡都是描述所选对象的选项卡。 例如，如果您在 DB2 元数据资源管理器中选择一个表，将出现六个选项卡： **表**、 **SQL**、 **类型映射、报表**、 **属性** 和 **数据**。 仅在创建包含所选对象的报表后，" **报表** " 选项卡才包含信息。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据资源管理器中选择表，将显示三个选项卡： **表**、 **SQL** 和 **数据**。  
   
 大多数元数据设置为只读。 但是，您可以更改以下元数据：  
   
@@ -79,7 +79,7 @@ SSMA 有两个工具栏：项目工具栏和迁移工具栏。
 #### <a name="migration-toolbar"></a>迁移工具栏  
 下表显示了迁移工具栏命令：  
   
-|Button|函数|  
+|按钮|函数|  
 |------|--------|  
 |**创建报表**|将所选 DB2 对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语法，然后创建显示转换成功的报表。<br /><br />除非在 DB2 元数据资源管理器中选择了对象，否则将禁用此命令。|  
 |**转换架构**|将所选 DB2 对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象。<br /><br />除非在 DB2 元数据资源管理器中选择了对象，否则将禁用此命令。|  
@@ -93,7 +93,7 @@ SSMA 有两个工具栏：项目工具栏和迁移工具栏。
 |----|-----------|  
 |**File**|包含用于处理项目、连接到 DB2 以及连接到的命令 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**编辑**|包含用于查找和处理详细信息页中的文本（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 从 SQL 详细信息窗格复制）的命令。 还包含 " **管理书签** " 选项，您可以在其中查看现有书签的列表。 您可以使用对话框右侧的按钮来管理书签。|  
-|**视图**|包含 **同步元数据** 资源管理器命令。 同步 DB2 元数据资源管理器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据资源管理器之间的对象。 还包含用于显示和隐藏 " **输出** " 和 " **错误列表** " 窗格以及用于管理布局的选项 **布局** 的命令。|  
+|**查看**|包含 **同步元数据** 资源管理器命令。 同步 DB2 元数据资源管理器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据资源管理器之间的对象。 还包含用于显示和隐藏 " **输出** " 和 " **错误列表** " 窗格以及用于管理布局的选项 **布局** 的命令。|  
 |**工具**|包含用于创建报表以及迁移对象和数据的命令。 还提供对 " **全局设置** " 和 " **项目设置** " 对话框的访问。|  
 |**帮助**|提供对 SSMA 帮助和的 " **关于** " 对话框的访问。|  
   

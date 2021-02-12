@@ -12,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 12e392d083b9b47e3330d8a95b6c2d199a146cea
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: d5e02aa025d65fd7f3db6d1f5bd8f43e44566ac9
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809907"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552657"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>启用 FileTable 的先决条件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,14 +68,14 @@ GO
  非事务性访问的可用级别为 FULL、READ_ONLY 和 OFF。  
   
  **使用 Transact-SQL 指定非事务性访问的级别**  
- - **创建新数据库**时，调用带 **NON_TRANSACTED_ACCESS** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 语句。
+ - **创建新数据库** 时，调用带 **NON_TRANSACTED_ACCESS** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 语句。
 
    ```sql
    CREATE DATABASE database_name  
      WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
    ```
 
-- **更改现有数据库**时，调用带 **NON_TRANSACTED_ACCESS** FILESTREAM 选项的 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) 语句。
+- **更改现有数据库** 时，调用带 **NON_TRANSACTED_ACCESS** FILESTREAM 选项的 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) 语句。
 
    ```sql
    ALTER DATABASE database_name  
@@ -94,7 +94,7 @@ GO
  您指定的名称必须在跨数据库级目录的实例中是唯一的。  
   
 **使用 Transact-SQL 指定 FileTable 的目录**  
-- **创建新数据库**时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 语句。
+- **创建新数据库** 时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 语句。
 
    ```sql
    CREATE DATABASE database_name  
@@ -102,7 +102,7 @@ GO
    GO  
    ```
 
--   **更改现有数据库**时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) 语句。 使用这些选项更改目录名称时，数据库必须以独占方式锁定，没有打开的文件句柄。  
+-   **更改现有数据库** 时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) 语句。 使用这些选项更改目录名称时，数据库必须以独占方式锁定，没有打开的文件句柄。  
   
     ```sql  
     ALTER DATABASE database_name  
@@ -110,7 +110,7 @@ GO
     GO  
     ```  
   
--   **附加数据库**时，调用带 **FOR ATTACH** 选项和 **DIRECTORY_NAME** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 语句。  
+-   **附加数据库** 时，调用带 **FOR ATTACH** 选项和 **DIRECTORY_NAME** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 语句。  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -118,7 +118,7 @@ GO
     GO  
     ```  
   
--   **还原数据库**时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) 语句。  
+-   **还原数据库** 时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) 语句。  
   
     ```sql  
     RESTORE DATABASE database_name  
@@ -140,15 +140,15 @@ GO
   
 ###  <a name="requirements-and-restrictions-for-the-database-level-directory"></a><a name="ReqDirectory"></a> 数据库级别目录的要求和限制  
   
--   在调用 **CREATE DATABASE** 或 **ALTER DATABASE** 时，设置 **DIRECTORY_NAME**是可选的。 如果未指定 **DIRECTORY_NAME**的值，则目录名称仍是 Null。 但不能在数据库中创建 FileTable，直到在数据库级别指定了 **DIRECTORY_NAME** 的值。  
+-   在调用 **CREATE DATABASE** 或 **ALTER DATABASE** 时，设置 **DIRECTORY_NAME** 是可选的。 如果未指定 **DIRECTORY_NAME** 的值，则目录名称仍是 Null。 但不能在数据库中创建 FileTable，直到在数据库级别指定了 **DIRECTORY_NAME** 的值。  
   
 -   您提供的目录名称必须符合文件系统对有效目录名称的要求。  
   
 -   当数据库包含 FileTable 时，不能将 **DIRECTORY_NAME** 设置回为 Null 值。  
   
--   附加或还原数据库时，如果新数据库的 **DIRECTORY_NAME** 值在目标实例中已存在，则该操作失败。 调用 **CREATE DATABASE FOR ATTACH** 或 **RESTORE DATABASE** 时，指定 **DIRECTORY_NAME**的唯一值。  
+-   附加或还原数据库时，如果新数据库的 **DIRECTORY_NAME** 值在目标实例中已存在，则该操作失败。 调用 **CREATE DATABASE FOR ATTACH** 或 **RESTORE DATABASE** 时，指定 **DIRECTORY_NAME** 的唯一值。  
   
--   当将现有数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时， **DIRECTORY_NAME** 的值为 Null。  
+-   当你升级现有数据库时，DIRECTORY_NAME 的值为 null。  
   
 -   在数据库级别启用或禁用非事务性访问时，该操作不检查是否已指定目录名称或该名称是否唯一。  
   

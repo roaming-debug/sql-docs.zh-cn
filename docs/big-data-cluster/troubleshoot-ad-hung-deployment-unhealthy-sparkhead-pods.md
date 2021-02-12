@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ded5030adeff1b9ccccf3f6683d5dfb04e7b8a07
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8631595ad8d33e69b300b42b873e65ce39385cc6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091670"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044264"
 ---
 # <a name="ad-mode-deployment-hangs---unhealthy-sparkhead-pods"></a>AD 模式部署挂起 - `sparkhead` Pod 运行不正常
 

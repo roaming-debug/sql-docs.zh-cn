@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05ee90e9ccbf781e0145665b8f1dd06ca2fb8d45
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6631325809a468aed4e7c7fd00cf71aedecc7ba0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396076"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042037"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>监视 Reporting Services 订阅
   你可以从用户界面、Windows PowerShell 或日志文件监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 可用于监视的选项取决于你正在运行的报表服务器的模式。  

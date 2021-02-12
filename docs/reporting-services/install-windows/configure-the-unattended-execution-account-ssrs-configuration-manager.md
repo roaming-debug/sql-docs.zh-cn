@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 549a1659bcbcf954a4039a152c5b372a758d0c74
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933550"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014827"
 ---
 # <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>配置无人参与的执行帐户（报表服务器配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。 可以通过下列方式使用该帐户：  
@@ -48,7 +48,7 @@ ms.locfileid: "91933550"
 3.  键入帐户和密码，再次键入密码，然后单击 **“应用”** 。  
   
 ### <a name="using-rsconfig-utility"></a>使用 RSCONFIG 实用工具  
- 设置帐户的另一种方法是使用 **rsconfig** 实用工具。 若要指定帐户，请使用 **rsconfig** 的 **-e**参数。 为 **rsconfig** 指定 **-e** 参数可强制该实用工具将帐户信息写入到配置文件中。 您无需指定 RSreportserver.config 的路径。请按照以下步骤来配置该帐户。  
+ 设置帐户的另一种方法是使用 **rsconfig** 实用工具。 若要指定帐户，请使用 **rsconfig** 的 **-e** 参数。 为 **rsconfig** 指定 **-e** 参数可强制该实用工具将帐户信息写入到配置文件中。 您无需指定 RSreportserver.config 的路径。请按照以下步骤来配置该帐户。  
   
 1.  创建或选择一个有权访问为报表服务器提供数据或服务的计算机和服务器的域帐户。 您应使用权限受到限制（如只读权限）的帐户。  
   

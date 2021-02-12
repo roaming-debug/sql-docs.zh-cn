@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 534d7238316fe2037ea0ce43e2b4aeeb11e6eea2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 523cd4e58ad340dfaa8751868eccb5e593c67a74
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171329"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536370"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,14 +31,14 @@ ms.locfileid: "98171329"
   
  Always Encrypted 功能旨在保护 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储的敏感数据，如信用卡号或身份证号（例如美国社会安全号码）。 始终加密允许客户端对客户端应用程序内的敏感数据进行加密，并且永远不向 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] （[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）显示加密密钥。 因此，Always Encrypted 分隔了拥有数据且有权查看它的人员与管理数据但没有访问权限的人员。 Always Encrypted 确保本地数据库管理员、云数据库操作员或其他高特权但未经授权的用户无法访问加密的数据，使客户能够放心地将敏感数据存储在不受其直接控制的区域。 这样，组织便可以将数据存储在 Azure 中，并将本地数据库的管理权限委托给第三方，或者降低其自身 DBA 员工的安全核查要求。
 
- Always Encrypted 通过启用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 来提供机密计算功能，可处理针对加密数据的某些查询，同时保持数据的机密性，并提供上述安全优势。 在 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)]、[!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]中，Always Encrypted 通过确定性加密支持相等比较。 请参阅[选择确定性加密或随机加密](#selecting--deterministic-or-randomized-encryption)。 
+ Always Encrypted 通过启用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 来提供机密计算功能，可处理针对加密数据的某些查询，同时保持数据的机密性，并提供上述安全优势。 在 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)]、[!INCLUDE[sssSQLv14](../../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]中，Always Encrypted 通过确定性加密支持相等比较。 请参阅[选择确定性加密或随机加密](#selecting--deterministic-or-randomized-encryption)。 
 
   > [!NOTE] 
-  > 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，安全 Enclave 通过模式匹配、其他比较运算符和就地加密，大幅提升了 Always Encrypted 的机密计算能力。 请参阅[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md)。
+  > 在 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 中，安全 Enclave 通过模式匹配、其他比较运算符和就地加密，大幅提升了 Always Encrypted 的机密计算能力。 请参阅[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md)。
 
  始终加密使向加密对应用程序透明。 安装在客户端计算机上的启用始终加密的驱动程序通过在客户端应用程序中对敏感数据进行加密和解密来实现此目标。 该驱动程序先对敏感列中的数据进行加密，然后再将该数据传递到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，并且自动重写查询以便保留应用程序的语义。 同样，该驱动程序透明地解密存储在查询结果中包含的加密数据库列中的数据。  
   
- 从 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] 开始的所有 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 版本和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的所有服务层均提供 Always Encrypted。 （[!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1 之前，仅 Enterprise Edition 具有始终加密功能。）有关包含始终加密的第 9 频道演示内容，请参阅 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)（使用始终加密来保护敏感数据）。  
+ 从 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] 开始的所有 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 版本和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的所有服务层均提供 Always Encrypted。 （[!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1 之前，仅 Enterprise Edition 具有始终加密功能。）有关包含始终加密的第 9 频道演示内容，请参阅 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)（使用始终加密来保护敏感数据）。  
 
   
 ## <a name="typical-scenarios"></a>典型方案  
@@ -70,9 +70,12 @@ ms.locfileid: "98171329"
 
 ## <a name="remarks"></a>备注
 
-通过客户端驱动程序进行加密和解密。 这意味着使用“Always Encrypted”时，仅在服务器端发生的某些操作将不起作用。 示例包括通过 UPDATE、BULK INSERT(T-SQL)、SELECT INTO、INSERT..SELECT 将数据从一列复制到另一列。 
+通过客户端驱动程序进行加密和解密。 这意味着使用“Always Encrypted”时，仅在服务器端发生的某些操作将不起作用。 这些操作包括但不限于： 
+- 通过 UPDATE、BULK INSERT(T-SQL)、SELECT INTO、INSERT..SELECT 将数据从一列复制到另一列。 
+- 触发器、时态表、稀疏列、全文、内存中 OLTP 和变更数据捕获 (CDC)。 
 
-以下 UPDATE 示例尝试将数据从加密列移动到未加密列，而不将结果集返回客户端： 
+
+下面是一个 UPDATE 示例，它尝试将数据从加密列移动到非加密列，而不向客户端返回结果集： 
 
 ```sql
 update dbo.Patients set testssn = SSN
@@ -115,7 +118,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 |对选定的数据库列中的现有数据进行加密|是|是|否|
 
 > [!NOTE]
-> [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中引入的[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md) 支持使用 Transact-SQL 加密现有数据。 这样也无需将数据移动到数据源之外来进行加密操作。
+> [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 中引入的[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md) 支持使用 Transact-SQL 加密现有数据。 这样也无需将数据移动到数据源之外来进行加密操作。
 
 > [!NOTE]
 > 请确保在安全环境中，在非托管数据库的计算机上运行密钥预配或数据加密工具。 否则，敏感数据或密钥可能会泄漏给服务器环境，这将减少使用“始终加密”功能的好处。  
@@ -148,7 +151,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
   
 -   对使用随机加密进行加密的列执行查询无法对上述任何列执行操作。 不支持对使用随机加密进行加密的列编制索引。  
  > [!NOTE] 
- > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中引入的[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md)，通过启用模式匹配、比较运算符和对使用随机加密的列编制索引来解决上述限制。
+ > [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 中引入的[具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md)，通过启用模式匹配、比较运算符和对使用随机加密的列编制索引来解决上述限制。
 
 -   列加密密钥最多可以包含两个不同的加密值，每个值是使用不同的列主密钥加密的。 这样便于轮换列主密钥。  
   

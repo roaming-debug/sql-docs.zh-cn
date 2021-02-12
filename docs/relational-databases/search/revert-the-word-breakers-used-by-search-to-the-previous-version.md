@@ -12,26 +12,28 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4a2624566444f5cc3b9531d5b6767937dabb2da6
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f99e5892f697b06bcafcfc35f9672d8ee474bc40
+ms.sourcegitcommit: 10ae200635b9e8554e6bc6f658125e1a80d4d5ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643980"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589283"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>将搜索功能所使用的断字符还原到以前的版本（SQL Server 搜索）
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 对于全文搜索支持的所有语言（朝鲜语除外），安装并启用一个版本的断字符和词干分析器。 本文说明如何在这些组件的此版本和以前的版本间切换。  
+
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 对于全文搜索支持的所有语言（朝鲜语除外），安装并启用一个版本的断字符和词干分析器。 本文说明如何在这些组件的此版本和以前的版本间切换。  
   
  本文不讨论以下语言：  
   
--   **英语**。 若要恢复或还原英语组件，请参阅 [更改用于美国英语和英国英语的断字符](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
+- **英语**。 若要恢复或还原英语组件，请参阅 [更改用于美国英语和英国英语的断字符](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
   
--   **丹麦语、波兰语和土耳其语**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的先前版本附带的丹麦语、波兰语和土耳其语的第三方断字符已替换为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 组件。  
+- **丹麦语、波兰语和土耳其语**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的先前版本附带的丹麦语、波兰语和土耳其语的第三方断字符已替换为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 组件。  
   
--   **捷克语和希腊语**。 捷克语和希腊语已有了新的断字符。 先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索不包括对这两种语言的支持。  
+- **捷克语和希腊语**。 捷克语和希腊语已有了新的断字符。 先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索不包括对这两种语言的支持。  
   
--   **朝鲜语**。 在此版本中不升级朝鲜语的断字符和词干分析器。  
+- **朝鲜语**。 在此版本中不升级朝鲜语的断字符和词干分析器。  
   
  有关断字符和词干分析器的一般信息，请参阅 [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
@@ -42,7 +44,7 @@ ms.locfileid: "97643980"
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
 |NaturalLanguage6.dll|NaturalLanguage6.dll|34|获取并安装早期版本的 NaturalLanguage6.dll，覆盖当前版本的文件。|无需采取措施。<br /><br /> 对于此版本，注册表项和值未更改。|  
 |（其他文件名）|NaturalLanguage6.dll|5|获取并安装早期版本的 NaturalLanguage6.dll，覆盖当前版本的文件。|更改一组注册表项以便指定组件的以前版本。|  
-|（其他文件名）|（其他文件名）|6|无需采取措施。<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序将组件的当前版本和以前版本都复制到 Binn 文件夹。|更改一组注册表项以便指定组件的以前版本。|  
+|（其他文件名）|（其他文件名）|6|无需采取措施。<br /><br /> [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装程序将组件的当前版本和以前版本都复制到 Binn 文件夹。|更改一组注册表项以便指定组件的以前版本。|  
   
 > [!WARNING]  
 >  如果您使用其他版本替换文件 NaturalLanguage6.dll 的当前版本，则使用此文件的所有语言的行为都将受到影响。  
@@ -61,40 +63,40 @@ ms.locfileid: "97643980"
   
 |语言|缩写<br />用于<br />注册表|LCID|  
 |--------------|---------------------------------------|----------|  
-|孟加拉语|ben|1093|  
-|保加利亚语|bgr|1026|  
-|加泰罗尼亚语|cat|1027|  
-|西班牙语|esn|3082|  
-|法语|fra|1036|  
-|古吉拉特语|guj|1095|  
-|希伯来语|heb|1037|  
-|Hindi|hin|1081|  
-|克罗地亚语|hrv|1050|  
-|印度尼西亚语|ind|1057|  
-|冰岛语|isl|1039|  
-|意大利语|ita|1040|  
-|卡纳达语|kan|1099|  
-|立陶宛语|lth|1063|  
-|拉脱维亚语|lvi|1062|  
-|马拉雅拉姆语|mal|1100|  
-|马拉地语|mar|1102|  
-|马来语|msl|1086|  
-|中立|中立|0000|  
-|挪威语（博克马尔）|nor|1044|  
-|旁遮普语|平底锅|1094|  
-|葡萄牙语（巴西）|ptb|1046|  
-|葡萄牙语|ptg|2070|  
-|罗马尼亚语|rom|1048|  
-|斯洛伐克语|sky|1051|  
-|斯洛文尼亚语|slv|1060|  
-|塞尔维亚语 - 西里尔|srb|3098|  
-|塞尔维亚语 - 拉丁|srl|2074|  
-|瑞典语|sve|1053|  
-|泰米尔语|tam|1097|  
-|泰卢固语|tel|1098|  
-|乌克兰语|ukr|1058|  
-|乌尔都语|urd|1056|  
-|越南语|vit|1066|  
+|孟加拉语|`ben`|1093|  
+|保加利亚语|`bgr`|1026|  
+|加泰罗尼亚语|`cat`|1027|  
+|西班牙语|`esn`|3082|  
+|法语|`fra`|1036|  
+|古吉拉特语|`guj`|1095|  
+|希伯来语|`heb`|1037|  
+|Hindi|`hin`|1081|  
+|克罗地亚语|`hrv`|1050|  
+|印度尼西亚语|`ind`|1057|  
+|冰岛语|`isl`|1039|  
+|意大利语|`ita`|1040|  
+|卡纳达语|`kan`|1099|  
+|立陶宛语|`lth`|1063|  
+|拉脱维亚语|`lvi`|1062|  
+|马拉雅拉姆语|`mal`|1100|  
+|马拉地语|`mar`|1102|  
+|马来语|`msl`|1086|  
+|中立|`Neutral`|0000|  
+|挪威语（博克马尔）|`nor`|1044|  
+|旁遮普语|`pan`|1094|  
+|葡萄牙语（巴西）|`ptb`|1046|  
+|葡萄牙语|`ptg`|2070|  
+|罗马尼亚语|`rom`|1048|  
+|斯洛伐克语|`sky`|1051|  
+|斯洛文尼亚语|`slv`|1060|  
+|塞尔维亚语 - 西里尔|`srb`|3098|  
+|塞尔维亚语 - 拉丁|`srl`|2074|  
+|瑞典语|`sve`|1053|  
+|泰米尔语|`tam`|1097|  
+|泰卢固语|`tel`|1098|  
+|乌克兰语|`ukr`|1058|  
+|乌尔都语|`urd`|1056|  
+|越南语|`vit`|1066|  
   
  前面的表在缩写列上按字母顺序排序。  
   
@@ -102,9 +104,9 @@ ms.locfileid: "97643980"
   
 1.  导航到上述 Binn 文件夹。  
   
-2.  将 NaturalLanguage6.dll 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本备份到其他位置。  
+2.  将 NaturalLanguage6.dll 的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本备份到其他位置。  
   
-3.  将以前版本的 NaturalLanguage6.dll 从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例的 Binn 文件夹复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例的 Binn 文件夹中。  
+3.  将以前版本的 NaturalLanguage6.dll 从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例的 Binn 文件夹复制到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例的 Binn 文件夹中。  
   
     > [!WARNING]  
     >  此更改影响在当前版本和以前版本中均使用 NaturalLanguage6.dll 的所有语言。  
@@ -113,9 +115,9 @@ ms.locfileid: "97643980"
 
 ###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> 还原当前组件  
   
-1.  导航到备份了 NaturalLanguage6.dll 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的位置。  
+1.  导航到备份了 NaturalLanguage6.dll 的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本的位置。  
   
-2.  将 NaturalLanguage6.dll 的当前版本从该备份位置复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例的 Binn 文件夹中。  
+2.  将 NaturalLanguage6.dll 的当前版本从该备份位置复制到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例的 Binn 文件夹中。  
   
     > [!WARNING]  
     >  此更改影响在当前版本和以前版本中均使用 NaturalLanguage6.dll 的所有语言。  
@@ -148,9 +150,9 @@ ms.locfileid: "97643980"
   
 2.  不要从 Binn 文件夹中删除组件的当前版本的文件。  
   
-3.  将 NaturalLanguage6.dll 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本备份到其他位置。  
+3.  将 NaturalLanguage6.dll 的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本备份到其他位置。  
   
-4.  将以前版本的 NaturalLanguage6.dll 从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例的 Binn 文件夹复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例的 Binn 文件夹中。  
+4.  将旧版 NaturalLanguage6.dll 从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例的 Binn 文件夹复制到新的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例的 Binn 文件夹中。  
   
     > [!WARNING]  
     >  此更改影响在当前版本和以前版本中均使用 NaturalLanguage6.dll 的所有语言。  
@@ -177,9 +179,9 @@ ms.locfileid: "97643980"
   
 ###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> 还原当前组件  
   
-1.  导航到备份了 NaturalLanguage6.dll 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的位置。  
+1.  导航到备份了 NaturalLanguage6.dll 的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本的位置。  
   
-2.  将 NaturalLanguage6.dll 的当前版本从该备份位置复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例的 Binn 文件夹中。  
+2.  将 NaturalLanguage6.dll 的当前版本从该备份位置复制到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例的 Binn 文件夹中。  
   
     > [!WARNING]  
     >  此更改影响在当前版本和以前版本中均使用 NaturalLanguage6.dll 的所有语言。  
@@ -255,7 +257,7 @@ ms.locfileid: "97643980"
 |当前文件名|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> 当前和以前的文件名均不是 NaturalLanguage6.dll 的语言  
- 对于下表中的语言，以前的断字符和词干分析器的文件名不同于新版本的文件名。 当前和以前的文件名均不是 NaturalLanguage6.dll。 您不必替换任何文件，因为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序将组件的当前版本和以前版本都复制到 Binn 文件夹。 但是，您必须更改一组注册表项以便指定组件的以前或当前版本。  
+ 对于下表中的语言，以前的断字符和词干分析器的文件名不同于新版本的文件名。 当前和以前的文件名均不是 NaturalLanguage6.dll。 您不必替换任何文件，因为 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装程序将组件的当前版本和以前版本都复制到 Binn 文件夹。 但是，您必须更改一组注册表项以便指定组件的以前或当前版本。  
   
  **受影响的语言的列表**  
   

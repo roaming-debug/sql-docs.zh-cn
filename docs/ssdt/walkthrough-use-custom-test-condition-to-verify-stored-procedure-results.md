@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 738ff14a43dd473abeab0c02ef206417675a7fb9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d434df88cae0a5fb28add27cc9785e659f059ced
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987691"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042487"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>演练：使用自定义测试条件来验证存储过程的结果
 
@@ -349,7 +349,7 @@ namespace ColumnCountCondition
   
 接下来，您要将程序集信息复制到 Extensions 目录中。 在 Visual Studio 启动后，它会标识 %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions 目录和子目录中的任何扩展，并且使它们可供使用：  
   
-将 ColumnCountCondition.dll**** 程序集文件从输出目录复制到 %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions 目录中。  
+将 ColumnCountCondition.dll 程序集文件从输出目录复制到 %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions 目录中。  
   
 默认情况下，已编译的 .dll 文件的路径为 YourSolutionPath\\YourProjectPath\bin\Debug 或 YourSolutionPath\\YourProjectPath\bin\Release。  
   

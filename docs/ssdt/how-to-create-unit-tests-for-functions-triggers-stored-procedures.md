@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 035ab41a162ca31542f87ba545af35e3bf49f007
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2f99946dfb56e3fc1e3e67f42ca93ff5daa11cab
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518707"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018267"
 ---
 # <a name="how-to-create-sql-server-unit-tests-for-functions-triggers-and-stored-procedures"></a>如何：为函数、触发器和存储过程创建 SQL Server 单元测试
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a3f301fa5e9395c86a3a771a959584acd181938
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74796900"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016967"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>使用 URL 访问集成 Reporting Services - Windows 应用程序
   尽管可以针对 Web 环境优化对报表服务器的 URL 访问，但也可以使用 URL 访问将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表嵌入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序中。 不过，涉及 Windows 窗体的 URL 访问仍然要求您使用 Web 浏览器技术。 您可以将以下集成方案用于 URL 访问和 Windows 窗体：  

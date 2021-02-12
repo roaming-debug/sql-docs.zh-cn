@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 41a1613a879579e809c8fd6a85d5c9b58c7b2b9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fb81a05cebfaa1a2c59f7e2b90d8289412e140a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472571"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071113"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>将转换后的数据库对象加载到 SQL Server (AccessToSQL) 
 将 Access 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 后，可以将生成的数据库对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中。 您可以使用 SSMA 创建这些对象，也可以编写对象脚本并自己运行脚本。 此外，SSMA 允许你用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库的实际内容更新目标元数据。  
@@ -46,7 +46,7 @@ ms.locfileid: "88472571"
 如果要修改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用于创建对象的，或者如果想要对对象创建进行更多的控制，请使用 SSMA 创建脚本。 然后，你可以修改这些脚本，单独创建每个对象，甚至使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来计划创建这些对象。  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>使用 SSMA 将对象与 SQL Server 同步  
-若要使用 SSMA 创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库对象，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器 "中选择对象，然后将对象与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 同步，如以下过程中所示。 默认情况下，如果对象已存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中，并且 SSMA 元数据具有对这些对象的定义的一些本地更改或更新，则 SSMA 将更改或 SQL Azure 中的对象定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以通过编辑 **项目设置**来更改默认行为。  
+若要使用 SSMA 创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库对象，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器 "中选择对象，然后将对象与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 同步，如以下过程中所示。 默认情况下，如果对象已存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中，并且 SSMA 元数据具有对这些对象的定义的一些本地更改或更新，则 SSMA 将更改或 SQL Azure 中的对象定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以通过编辑 **项目设置** 来更改默认行为。  
   
 > [!NOTE]  
 > 你可以选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不是从 Access 数据库转换的现有或 AZURE SQL 数据库对象。 但是，SSMA 不会重新创建或更改这些对象。  
@@ -107,7 +107,7 @@ ms.locfileid: "88472571"
   
 **修改脚本**  
   
-1.  在“文件”[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **** 菜单中，指向“打开”****，再单击“文件”****。  
+1.  在“文件”[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 菜单中，指向“打开”，再单击“文件”。  
   
 2.  在 " **打开** " 对话框中，找到并选择脚本文件，然后单击 **"确定"**。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "88472571"
   
 有关如何使用查询编辑器来运行脚本的详细信息，请参阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 联机丛书中的 "查询" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-还可以通过使用 **sqlcmd** 实用程序和代理从命令行运行脚本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关 **sqlcmd**的详细信息，请参阅联机丛书中的 "sqlcmd 实用工具" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关代理的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅联机丛书中的 " ( 代理) 自动执行管理任务 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+还可以通过使用 **sqlcmd** 实用程序和代理从命令行运行脚本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关 **sqlcmd** 的详细信息，请参阅联机丛书中的 "sqlcmd 实用工具" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关代理的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅联机丛书中的 " ( 代理) 自动执行管理任务 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="securing-objects-in-sql-server"></a>在 SQL Server 中保护对象  
 将转换后的数据库对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中后，您可以对这些对象授予和拒绝权限。 在将数据迁移到之前，最好先执行此操作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关如何帮助保护中的对象的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅联机丛书中的 "数据库和数据库应用程序的安全注意事项" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

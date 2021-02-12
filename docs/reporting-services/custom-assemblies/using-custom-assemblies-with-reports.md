@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 526f80fe202c14773aeafce6b5889116b975e3c2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 19977f4a90ecfb8db81c53aebf7b7ee3e4be68ca
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80217046"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064492"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>将自定义程序集用于报表
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，您可以为报表项值、样式和格式设置编写自定义代码。 例如，您可以使用自定义代码基于区域性设置货币的格式，使用特殊格式设置标记某些值，或者为您的公司应用其他实行中的业务规则。 在报表中添加此代码的一种方法是，使用可以从报表定义文件引用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 创建自定义代码程序集。 报表运行时，服务器将调用自定义程序集中的函数。 自定义程序集可用于检索您计划在报表中使用的指定函数。  

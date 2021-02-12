@@ -13,12 +13,12 @@ ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5146c258c099c487643ca343ecd06402fc623c84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5521919a31e84a9ade57bddc6a0716f00d1fc98b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468959"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031629"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>暂停和恢复数据迁移（Stretch Database）
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88468959"
   
 1.  在 SQL Server Management Studio 的对象资源管理器中，选择要对其暂停数据迁移的已启用延伸的表。  
   
-2.  右键单击并选择“延伸”****，然后选择“暂停”****。  
+2.  右键单击并选择“延伸”，然后选择“暂停”。  
   
 ### <a name="use-transact-sql-to-pause-data-migration"></a>使用 TRANSACT-SQL 暂停数据迁移  
  运行以下命令。  
@@ -53,7 +53,7 @@ GO
   
 1.  在 SQL Server Management Studio 的对象资源管理器中，选择要对其恢复数据迁移的已启用延伸的表。  
   
-2.  右键单击并选择“延伸”****，然后选择“继续”****。  
+2.  右键单击并选择“延伸”，然后选择“继续”。  
   
 ### <a name="use-transact-sql-to-resume-data-migration"></a>使用 TRANSACT-SQL 恢复数据迁移  
  运行以下命令。  
@@ -69,7 +69,7 @@ ALTER TABLE <Stretch-enabled table name>
 ## <a name="check-whether-migration-is-active-or-paused"></a>检查迁移处于活动状态还是暂停状态
 
 ### <a name="use-sql-server-management-studio-to-check-whether-migration-is-active-or-paused"></a>使用 SQL Server Management Studio 检查迁移处于活动状态还是暂停状态
-在 SQL Server Management Studio 中，打开“Stretch Database 监视器”**** 并检查“迁移状态”**** 列的值。 有关详细信息，请参阅 [数据迁移的监视与故障排除](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。
+在 SQL Server Management Studio 中，打开“Stretch Database 监视器”并检查“迁移状态”列的值。 有关详细信息，请参阅 [数据迁移的监视与故障排除](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。
 
 ### <a name="use-transact-sql-to-check-whether-migration-is-active-or-paused"></a>使用 Transact-SQL 检查迁移处于活动状态还是暂停状态
 查询目录视图 **sys.remote_data_archive_tables** 并检查 **is_migration_paused** 列的值。 有关详细信息，请参阅 [sys.remote_data_archive_tables](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md)。

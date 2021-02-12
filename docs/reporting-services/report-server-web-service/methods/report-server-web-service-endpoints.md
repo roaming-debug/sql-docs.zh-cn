@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a546ba4143b7f0cc63281ce9e7a95a4eb6910366
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d9a0bfe8aa4a469899a558c1cbe1d3b38b337b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509748"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063742"
 ---
 # <a name="report-server-web-service-endpoints"></a>报表服务器 Web 服务端点
   报表服务器 Web 服务提供了几个端点，用于管理报表服务器以及执行和导航报表。  

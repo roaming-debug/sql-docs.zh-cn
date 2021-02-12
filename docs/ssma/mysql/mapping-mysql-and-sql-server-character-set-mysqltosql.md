@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7782a8853e1b17ecba0950e647d1335758b998af
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 13b2accd6b4dc2ba2bbd8c9c1e6db312650d2d62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935276"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077618"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>映射 MySQL 和 SQL Server 字符集 (MySQLToSQL)
 字符集) 可以为 MySQL 字符数据类型、表达式和文本指定 (字符集。  
@@ -27,19 +27,19 @@ ms.locfileid: "87935276"
   
 -    (CHAR/VARCHAR) 的常规 SQL Server 字符类型  
   
-1.  **国家**目标数据库字符数据类型为：  
+1.  **国家** 目标数据库字符数据类型为：  
   
     1.  **nchar**  
   
     2.  **nvarchar**  
   
-2.  **常规**目标数据库字符数据类型为：  
+2.  **常规** 目标数据库字符数据类型为：  
   
     1.  **char**  
   
     2.  **varchar**  
   
-3.  类型映射仅允许映射到**国家**字符数据类型。 根据类型映射转换 MySQL 字符数据类型后，将应用字符集映射。  
+3.  类型映射仅允许映射到 **国家** 字符数据类型。 根据类型映射转换 MySQL 字符数据类型后，将应用字符集映射。  
   
 > [!NOTE]  
 > 可以在元数据对象资源管理器的每个节点级别上定义字符集映射，并表示从 MySQL 读取的所有字符集。  
@@ -60,13 +60,13 @@ ms.locfileid: "87935276"
 > 2.  **取消：** 取消用户所做的更改。 编辑了字符集映射但未保存时，会启用该按钮。  
 > 3.  **重置为默认值：** 将所有映射重置为默认值。  
   
-1.  **在根元数据节点级别上：** 字符集映射网格包含字符集网格，每个字符集对应一个单独的列。 网格的列包括：  
+1.  **在根元数据节点级别上：**  字符集映射网格包含字符集网格，每个字符集对应一个单独的列。 网格的列包括：  
   
-    1.  名为**字符集名称**的网格的第一列包含字符集名称。  
+    1.  名为 **字符集名称** 的网格的第一列包含字符集名称。  
   
-    2.  第二个名为**字符集的说明**包含字符集说明。  
+    2.  第二个名为 **字符集的说明** 包含字符集说明。  
   
-    3.  第三列标题为**Target 字符集类型**，其中包含特定字符集的映射设置。 此列的值为：  
+    3.  第三列标题为 **Target 字符集类型** ，其中包含特定字符集的映射设置。 此列的值为：  
   
         -   CHAR/VARCHAR  
   
@@ -103,7 +103,7 @@ ms.locfileid: "87935276"
     |utf8|UTF-8 Unicode|NCHAR/NVARCHAR (默认值) |  
     |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (默认值) |  
     |cp866|DOS 俄语|CHAR/VARCHAR (默认值) |  
-    |keybcs2|DOS Kamenicky 捷克语-斯洛伐克语|CHAR/VARCHAR (默认值) |  
+    |keybcs2|DOS Kamenicky Czech-Slovak|CHAR/VARCHAR (默认值) |  
     |macce|Mac 中欧|CHAR/VARCHAR (默认值) |  
     |macroman|Mac 西欧|CHAR/VARCHAR (默认值) |  
     |cp852|DOS 中欧|CHAR/VARCHAR (默认值) |  
@@ -118,11 +118,11 @@ ms.locfileid: "87935276"
   
 2.  **在数据库、类别或对象节点级别上：** 在 "数据库"、"类别" 或 "对象节点" 级别上，"字符集映射" 网格包含的行与根元数据节点级别上的相同，即。：  
   
-    1.  标题为的网格的第一列**包含字符集名称。**  
+    1.  标题为的网格的第一列 **包含字符集名称。**  
   
-    2.  第二列标题为 "**字符集说明**"，其中包含字符集说明。  
+    2.  第二列标题为 " **字符集说明** "，其中包含字符集说明。  
   
-    3.  唯一的区别是网格第三列中的值。 第三列标题为 "**目标数据类型**"，其中包含特定字符集的映射设置。 列的值为：  
+    3.  唯一的区别是网格第三列中的值。 第三列标题为 " **目标数据类型** "，其中包含特定字符集的映射设置。 列的值为：  
   
         -   继承 (CHAR/VARCHAR 或 NCHAR/NVARCHAR)   
   
@@ -131,6 +131,6 @@ ms.locfileid: "87935276"
         -   NCHAR/NVARCHAR  
   
 > [!IMPORTANT]  
-> -   在 "数据库"、"类别" 和 "对象" 节点级别上 MySQL 数据库和目标数据库之间的字符集映射中，列**目标数据类型**的根以外的每个级别上的特定字符集的默认值应为 "继承"。  
-> -   在网格中，**继承**的值以 " (CHAR/VARCHAR) " 或 " (NCHAR/NVARCHAR) " 为后缀，具体取决于该特定字符集从此父字符集继承的值。  
+> -   在 "数据库"、"类别" 和 "对象" 节点级别上 MySQL 数据库和目标数据库之间的字符集映射中，列 **目标数据类型** 的根以外的每个级别上的特定字符集的默认值应为 "继承"。  
+> -   在网格中， **继承** 的值以 " (CHAR/VARCHAR) " 或 " (NCHAR/NVARCHAR) " 为后缀，具体取决于该特定字符集从此父字符集继承的值。  
   

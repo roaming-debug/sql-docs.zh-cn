@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0646fc033f73134a4dfcba62e574ba08e378b9cc
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 17121feedda919034ed8c2ee40fec8b06321d131
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984873"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078245"
 ---
 # <a name="data-migration-settings-db2tosql"></a>数据迁移设置 (DB2ToSQL) 
   
@@ -40,7 +40,7 @@ ms.locfileid: "91984873"
     -   如果未选中此文本框，则迁移的数据将添加到目标数据库中的现有数据。  
   
 2.  **使用自定义选择：**  
-     此选项允许用户修改 (**select**语句中提供的**select**语句，使用户能够选择要在目标数据库) 显示的数据。  
+     此选项允许用户修改 (**select** 语句中提供的 **select** 语句，使用户能够选择要在目标数据库) 显示的数据。  
   
     1.  默认情况下，此 textbox 处于未选中状态。  
   

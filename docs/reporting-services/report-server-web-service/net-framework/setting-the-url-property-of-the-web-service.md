@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 982b1c80e9c9cd71b67e0f5a2fb227a9dc8d999f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f38f6c0fabdf95328cc90a1375dbaf0ad8c42c7f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198504"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068049"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>设置 Web 服务的 Url 属性
   在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序中，随时可以修改应用程序当前指向的报表服务器 Web 服务的基 URL。 为此，只需设置服务对象的“Url”  属性。 例如：  

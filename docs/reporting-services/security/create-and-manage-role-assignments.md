@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b7b88e9342c818645e0a9e1430cc5fe5c9400c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1be919afaea2693329ae6fe957fb6fc5ff3357f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468986"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015197"
 ---
 # <a name="create-and-manage-role-assignments"></a>创建和管理角色分配
 
-角色分配** 是确定用户或组权限的安全策略。 权限决定用户或组是否可以访问或修改特定报表服务器项，或执行任务。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。
+角色分配是确定用户或组权限的安全策略。 权限决定用户或组是否可以访问或修改特定报表服务器项，或执行任务。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。
 
-角色分配的作用域为“ ** 项级”或“ ** 系统级”。
+角色分配的作用域为“  项级”或“ 系统级”。
 
 - 项级角色分配会创建，用于报表服务器文件夹层次结构中的特定项或分支。 您需要导航到具体的文件夹或项，才能为其创建角色分配。
 
@@ -44,7 +44,7 @@ ms.locfileid: "88468986"
 
 若要扩大访问范围，应在文件夹层次结构的上级选择项（如根文件夹“主文件夹”）。 然后，可以创建角色分配来锁定文件夹层次结构的特定区域。
 
-您必须是报表服务器计算机上的本地管理员组的成员，才能创建角色分配。 您可以通过将其他用户分配给 **** 内容管理员角色来委托该责任。
+您必须是报表服务器计算机上的本地管理员组的成员，才能创建角色分配。 您可以通过将其他用户分配给  内容管理员角色来委托该责任。
 
 若要创建或管理角色分配，或了解详细信息，请参阅[授予用户对报表服务器的访问权限](../../reporting-services/security/grant-user-access-to-a-report-server.md)
   

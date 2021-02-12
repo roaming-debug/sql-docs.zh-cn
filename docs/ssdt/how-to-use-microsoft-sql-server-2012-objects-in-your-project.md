@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ee09f89463151f0dcf5c1fcd2c1f82a72ba8f350
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9e27db8dbb247c65664006784d44966d0914d8bc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988183"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018037"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>如何：在项目中使用 Microsoft SQL Server 2012 对象
 
@@ -44,7 +44,7 @@ Microsoft SQL Server 2012 中引入了序列。 序列是一种用户定义的�
     CACHE 10  
     ```  
   
-4.  如果项目的目标平台未设置为 Microsoft SQL Server 2012，则“错误列表”将显示 `CREATE SEQUENCE` 语句的语法错误****。 若要更正此问题，请按照[如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述相应地更改目标平台。  
+4.  如果项目的目标平台未设置为 Microsoft SQL Server 2012，则“错误列表”将显示 `CREATE SEQUENCE` 语句的语法错误。 若要更正此问题，请按照[如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述相应地更改目标平台。  
   
 5.  请按照[如何：更改目标平台和发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述，将项目发布到已连接的 Microsoft SQL Server 2012 服务器中的数据库。  
   

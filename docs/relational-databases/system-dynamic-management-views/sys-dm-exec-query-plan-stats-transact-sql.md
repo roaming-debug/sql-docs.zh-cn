@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_exec_query_plan_stats (Transact-sql) '
-title: sys. dm_exec_query_plan_stats (Transact-sql) |Microsoft Docs
+description: 'sys.dm_exec_query_plan_stats (Transact-sql) '
+title: sys.dm_exec_query_plan_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -18,14 +18,14 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0ab11e74205f47d50e927680081e8e13dfee37fb
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: c1f833351fd342629b858b19c113015e81ec3db1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042471"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072021"
 ---
-# <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-sql) 
+# <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-sql) 
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 返回以前缓存的查询计划的上一个已知实际执行计划的等效值。
@@ -36,9 +36,9 @@ ms.locfileid: "89042471"
 sys.dm_exec_query_plan_stats(plan_handle)  
 ``` 
 
-## <a name="arguments"></a>自变量 
+## <a name="arguments"></a>参数 
 *plan_handle*  
-是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle* 为 **varbinary (64) **。   
+是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle* 为 **varbinary (64)**。   
 
 可以从以下动态管理对象中获取 *plan_handle* ：  
   
@@ -48,9 +48,9 @@ sys.dm_exec_query_plan_stats(plan_handle)
   
 -   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
 
 ## <a name="table-returned"></a>返回的表
 
@@ -60,9 +60,9 @@ sys.dm_exec_query_plan_stats(plan_handle)
 |**objectid**|**int**|此查询计划的对象（如存储过程或用户定义函数）的 ID。 对于即席批处理和已准备好的批处理，此列为 **null**。<br /><br /> 此列可为空值。|  
 |**数字**|**smallint**|为存储过程编号的整数。 例如，用于 **orders** 应用程序的一组过程可命名为 **orderproc;1**、**orderproc;2** 等等。 对于即席批处理和已准备好的批处理，此列为 **null**。<br /><br /> 此列可为空值。|  
 |**过**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
-|**query_plan**|**xml**|包含与 *plan_handle*一起指定的实际查询执行计划的上一个已知运行时显示计划表示形式。 显示计划的格式为 XML。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。| 
+|**query_plan**|**xml**|包含与 *plan_handle* 一起指定的实际查询执行计划的上一个已知运行时显示计划表示形式。 显示计划的格式为 XML。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。| 
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 这是一项可以选择使用的功能。 若要在服务器级别启用，请使用 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 若要在数据库级别启用，请使用 [ALTER DATABASE 作用域配置 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)中的 LAST_QUERY_PLAN_STATS 选项。
 
 此系统函数在 **轻型** 查询执行统计信息分析基础结构下工作。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。  
@@ -73,13 +73,13 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 在以下条件下，与 **实际执行计划等效** 的显示计划输出将在返回的表的 **query_plan** 列中返回 `sys.dm_exec_query_plan_stats` ：  
 
--   可在 [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)中找到该计划。     
+-   可在 [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)中找到该计划。     
     **AND**    
 -   正在执行的查询是复杂的或消耗资源的查询。
 
-在以下情况下，在返回的表的**query_plan**列中返回**简化的<sup>1</sup> **显示计划输出 `sys.dm_exec_query_plan_stats` ：  
+在以下情况下，在返回的表的 **query_plan** 列中返回 **简化的 <sup>1</sup>** 显示计划输出 `sys.dm_exec_query_plan_stats` ：  
 
--   可在 [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)中找到该计划。     
+-   可在 [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)中找到该计划。     
     **AND**    
 -   查询非常简单，通常归类为 OLTP 工作负载的一部分。
 
@@ -100,14 +100,14 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="examples"></a>示例  
   
 ### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. 查看特定缓存计划的上一个已知实际查询执行计划  
- 下面的示例查询 **dm_exec_cached_plans sys.databases** 以查找有趣的计划，并 `plan_handle` 从输出复制其。  
+ 下面的示例查询 **sys.dm_exec_cached_plans** 以查找有趣的计划，并 `plan_handle` 从输出复制其。  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
 GO  
 ```  
   
-然后，若要获取最后一个已知的实际查询执行计划，请使用复制的 `plan_handle` 与系统函数 **sys.databases dm_exec_query_plan_stats**。  
+然后，若要获取最后一个已知的实际查询执行计划，请使用复制的 `plan_handle` with system 函数 **sys.dm_exec_query_plan_stats**。  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  

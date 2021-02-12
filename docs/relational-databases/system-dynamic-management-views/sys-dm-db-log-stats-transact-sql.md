@@ -20,12 +20,12 @@ ms.assetid: ''
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88ac57a5ba41afacafe8565225ed9ce7bca55991
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d9220bbd52a63f571287a76ccbfc7c88a064abd8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99191192"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071651"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "99191192"
 
 *database_id* |NULL | **默认值**
 
-数据库的 ID。 `database_id` 为 `int`。 有效的输入包括数据库的 ID 号、 `NULL` 或 `DEFAULT` 。 默认值为 `NULL`。 `NULL` 和在 `DEFAULT` 当前数据库的上下文中是等效值。  
+数据库的 ID。 `database_id` 上声明的默认值为 `int`。 有效的输入包括数据库的 ID 号、 `NULL` 或 `DEFAULT` 。 默认为 `NULL`。 `NULL` 和在 `DEFAULT` 当前数据库的上下文中是等效值。  
 可以指定内置函数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。 如果在 `DB_ID` 不指定数据库名称的情况下使用，则当前数据库的兼容级别必须为90或更高。
 
   

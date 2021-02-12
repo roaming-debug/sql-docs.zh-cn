@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5cbcb5cf689d544730661fd9dd700537309d8a23
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 45b617e91f2f296aa9749f7f8f2f25b640ddf546
+ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99154236"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99623767"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -129,7 +129,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>敏感度数据分类元数据
 
-版本 5.8.0 中引入了新选项 `DataClassification`，用户可以使用该选项通过 `sqlsrv_field_metadata`（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的[敏感度数据分类元数据](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql#subheading-4)。
+版本 5.8.0 中引入了新选项 `DataClassification`，用户可以使用该选项通过 `sqlsrv_field_metadata`（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的[敏感度数据分类元数据](../../relational-databases/security/sql-data-discovery-and-classification.md)。 
 
 默认情况下，选项 `DataClassification` 为 `false`，但设置为 `true` 后，将使用敏感度数据分类元数据（如果存在）填充 `sqlsrv_field_metadata` 返回的数组。 
 

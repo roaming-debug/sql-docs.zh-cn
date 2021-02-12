@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 7c8321f4f1264b8bf0352f459bde02a07e439dd3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ebe23b534590bfb45c4a0bffce78d2139ef8912c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895792"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017987"
 ---
 # <a name="how-to-view-and-edit-data-in-a-table"></a>如何：查看和编辑表中的数据
 
@@ -35,7 +35,7 @@ ms.locfileid: "85895792"
   
 3.  右键单击“SQL Server 对象资源管理器”中的“Fruits”表，然后选择“查看数据”。  
   
-4.  在数据编辑器中，为 **** Id 键入 **** 1，为 **** Perishable 键入 **** True，然后按 ENTER 键或 TAB 键，将焦点从新行移出以便将其提交到数据库。  
+4.  在数据编辑器中，为 Id 键入 1，为 Perishable 键入 True，然后按 ENTER 键或 TAB 键，将焦点从新行移出以便将其提交到数据库。  
   
 5.  重复上述步骤以便向表中输入 2、False 和 3、False。  
   

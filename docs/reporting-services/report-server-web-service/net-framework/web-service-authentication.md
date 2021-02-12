@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 34873835231c122f3d086c3490be2bab7a684925
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3dfb2b1f3806d9e00e309b45ebf90182c83cab5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198529"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100021736"
 ---
 # <a name="web-service-authentication"></a>Web 服务身份验证
   可以使用 Windows 身份验证或基本身份验证对针对报表服务器 Web 服务进行的调用进行身份验证。 对报表服务器发出 SOAP 请求的任何客户端都必须实现其中一种支持的身份验证协议的客户端部分。 如果使用的是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，则可以使用托管代码 HTTP 类来实现身份验证。 通过使用这些 API，可以轻松地随 SOAP 请求一起发送身份验证信息。  
