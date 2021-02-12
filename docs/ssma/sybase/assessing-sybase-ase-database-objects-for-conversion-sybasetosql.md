@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6e8bd25b8529f09896cbec2ec31578375a015f2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0926c350d02bf2cdbb5ae7fe4fdefbda3ef6863
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372624"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077218"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>评估用于转换 (SybaseToSQL) 的 SAP ASE 数据库对象
 在加载对象并将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 之前，你应该确定迁移的复杂性以及所需的时间。 SSMA 可以创建一个评估报表，显示将成功转换为的对象和过程的百分比 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 SSMA 还允许您查看可能导致转换失败的特定问题。  

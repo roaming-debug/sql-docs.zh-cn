@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07ec83ccab43890bccbf5e12582628fdb98d29c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bf121725c30f5f01ef4314c21f1dffbf34fcce8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500050"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070392"
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>配合使用 VFP FoxPro ODBC 驱动程序和 Visual Basic 应用程序
 Microsoft® Visual Basic®应用程序可以通过创建连接到 Visual FoxPro 数据源的数据控件与 Visual FoxPro 数据通信。  

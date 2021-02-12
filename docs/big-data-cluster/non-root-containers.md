@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 52a24c1dbe2a239450b440c07de1a7852f9c627a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257117"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046037"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>非根大数据群集容器
 
@@ -31,7 +31,7 @@ SQL Server 2019 CU5 引入了对非根容器的支持。 默认情况下，通�
 > 建议以默认的非根设置运行群集。 如果要还原回 CU5 之前的行为，并以 `root` 用户身份运行 BDC 内的容器，则可以使用新功能开关 `allowRunAsRoot` 关闭默认行为。 只能在部署时设置此设置。 若要设置此设置，请指定 `control.json` 部署配置文件中 `security` 部分下的设置：
 
 ```json
- "security": {
+ "security": {
   …
     "allowRunAsRoot": true,
   …

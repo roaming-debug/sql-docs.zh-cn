@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 8a5a9cec35620f408182af3df75702eb85ce4e27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987213"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018457"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何：更改目标平台并发布数据库项目
 
@@ -41,7 +41,7 @@ SSDT 还通过识别您的目标平台并且自动检测出您的代码中的任
   
 2.  将 `ON [PRIMARY]` 追加到 `CREATE TABLE` 语句的末尾。  
   
-3.  请注意，以下错误将出现在“错误列表”**** 窗格中：SQL70015: 在 SQL Azure 中不支持“文件组引用和分区方案”。  
+3.  请注意，以下错误将出现在“错误列表”窗格中：SQL70015: 在 SQL Azure 中不支持“文件组引用和分区方案”。  
   
     SSDT 将基于目标平台自动验证您的脚本。 在这种情况下，因为 SQL Azure 不支持文件组，所以 SSDT 将返回错误。 有关 SQL Azure 中不支持的 Transact\-SQL 语句，请参阅[部分支持的 Transact-SQL 语句（Microsoft Azure SQL 数据库）](/previous-versions/azure/ee336267(v=azure.100))。  
   
@@ -55,9 +55,9 @@ SSDT 还通过识别您的目标平台并且自动检测出您的代码中的任
   
 3.  在 **“发布数据库”** 对话框中，单击 **“编辑”** 以编辑目标数据库连接。  
   
-4.  在“连接属性”对话框中，输入你的 SQL Server 实例名称和用于身份验证的凭据。 在 **“连接到数据库”** 中，输入 **NewTrade**。 这将尝试将您的数据库项目发布到新数据库。 您也可以选择要发布到的现有数据库。 例如，如果选择现有的 TradeDev**** 数据库，然后在脱机 TradeDev**** 项目中对这些对象已在进行的所有更改（作为脚本）将传播到实时 TradeDev**** 数据库中。  
+4.  在“连接属性”对话框中，输入你的 SQL Server 实例名称和用于身份验证的凭据。 在 **“连接到数据库”** 中，输入 **NewTrade**。 这将尝试将您的数据库项目发布到新数据库。 您也可以选择要发布到的现有数据库。 例如，如果选择现有的 TradeDev 数据库，然后在脱机 TradeDev 项目中对这些对象已在进行的所有更改（作为脚本）将传播到实时 TradeDev 数据库中。  
   
-    如果您有权对想要发布到的数据库进行任何更改，则按下 **“发布”** 按钮。 但是，如果对生产数据库没有写访问权限，则可以单击“生成脚本”**** 按钮以便生成一个 Transact\-SQL 发布脚本，然后可以将该脚本交给某一 DBA。 然后，该 DBA 可以运行该脚本以更新生产服务器，以便其架构与数据库项目同步。  
+    如果您有权对想要发布到的数据库进行任何更改，则按下 **“发布”** 按钮。 但是，如果对生产数据库没有写访问权限，则可以单击“生成脚本”按钮以便生成一个 Transact\-SQL 发布脚本，然后可以将该脚本交给某一 DBA。 然后，该 DBA 可以运行该脚本以更新生产服务器，以便其架构与数据库项目同步。  
   
 5.  “数据工具操作”   窗口将显示发布操作的进度，并在出现任何错误时通知你。 在此新窗口中，您还可以根据需要选择查看部署预览、生成的脚本或完整发布结果。  
   
@@ -65,6 +65,6 @@ SSDT 还通过识别您的目标平台并且自动检测出您的代码中的任
   
 7.  请注意 **“数据工具操作”** 窗口中的消息。 单击“创建发布预览…”右侧的“查看预览”链接右侧的“视图预览”链接。这将打开部署预览报表。 如果项目的目标平台并不是项目所发布到的数据库服务器，则 SSDT 将在报表中发出警告。  例如，如果项目的目标平台是 Microsoft SQL Server 2012 并且正在尝试将该项目发布到某一 SQL Server 2008 R2 服务器实例，则你将会在“输出”窗口中看到以下警告：  
   
-将 Microsoft SQL Server 2012 指定为目标平台的项目可能会遇到与 SQL Server 2008 的兼容性问题****    如果此类项目包含 Microsoft SQL Server 2012 中引入的实体（例如，一个 Sequence 对象），则发布操作将失败。  
+将 Microsoft SQL Server 2012 指定为目标平台的项目可能会遇到与 SQL Server 2008 的兼容性问题    如果此类项目包含 Microsoft SQL Server 2012 中引入的实体（例如，一个 Sequence 对象），则发布操作将失败。  
   
 如果对象谓词对新创建的全文索引使用 CONTAINS 或 FREETEXT，并且使用了事务脚本，则部署将失败 。 如果在部署期间启用包含事务脚本的选项，则当在部署脚本结尾在事务外定义全文索引时在事务内定义过程和视图。 由于脚本中的这一顺序，使用 CONTAINS 或 FREETEXT 的过程或视图将不会针对全文索引进行解析，从而导致部署错误。  

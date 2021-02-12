@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 06/01/2020
-ms.openlocfilehash: 8137ca8f37254bab94dfaae6d9c8072c293a81ff
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 6b8632f9ff5c07cb23a296b98a5933639abee4d1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243386"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048137"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教程：将 *五个最慢查询* 示例小组件添加到数据库仪表板
 
@@ -38,7 +38,7 @@ Azure Data Studio 包含几个现成的见解小组件。 本教程介绍如何�
 
 ## <a name="turn-on-query-store-for-your-database"></a>为数据库启用查询存储
 
-本示例中的小组件需要启用 *查询存储* 。
+本示例中的小组件需要启用 *查询存储*。
 
 1. 右键单击“TutorialDB”数据库（在“服务器”侧栏中），然后选择“新建查询”  。
 
@@ -100,7 +100,7 @@ Azure Data Studio 包含几个现成的见解小组件。 本教程介绍如何�
 
 5. 按“Ctrl+S”保存修改后的“用户设置” 。
 
-6. 通过导航到“服务器”侧栏中的“TutorialDB”打开 *数据库仪表板* ，右键单击并选择“管理”  。
+6. 通过导航到“服务器”侧栏中的“TutorialDB”打开 *数据库仪表板*，右键单击并选择“管理”  。
 
    ![打开仪表板](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 

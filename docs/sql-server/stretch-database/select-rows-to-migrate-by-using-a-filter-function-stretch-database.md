@@ -14,12 +14,12 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72162b4ed6339bcf7939e1903886170e3df36e63
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492599"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030890"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用筛选器函数选择要迁移的行 (Stretch Database)
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -200,7 +200,7 @@ ALTER TABLE SensorTelemetry
   
 ## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>运行向导后添加筛选器函数  
   
-如果想要使用无法在“启用数据库延伸”向导中创建的函数****，请退出向导，然后运行 **ALTER TABLE** 语句以指定函数。 但是，在应用函数之前，必须停止已在进行的数据迁移并取回已迁移的数据。 （有关其必要性的原因的详细信息，请参阅 [替换现有的筛选器函数](#replacePredicate)。）
+如果想要使用无法在“启用数据库延伸”向导中创建的函数，请退出向导，然后运行 **ALTER TABLE** 语句以指定函数。 但是，在应用函数之前，必须停止已在进行的数据迁移并取回已迁移的数据。 （有关其必要性的原因的详细信息，请参阅 [替换现有的筛选器函数](#replacePredicate)。）
   
 1. 反向迁移和取回已迁移的数据。 启动此操作后将无法取消此操作。 由于出站数据传输（流出），所以也会在 Azure 上产生成本。 有关详细信息，请参阅 [Azure 定价方式](https://azure.microsoft.com/pricing/details/data-transfers/)。  
   
@@ -226,7 +226,7 @@ ALTER TABLE SensorTelemetry
     ```  
   
 ## <a name="filter-rows-by-date"></a>按日期筛选行  
- 下面的示例将迁移**日期**列中包含值早于 2016 年 1 月 1 日的行。  
+ 下面的示例将迁移 **日期** 列中包含值早于 2016 年 1 月 1 日的行。  
   
 ```sql  
 -- Filter by date  
@@ -241,7 +241,7 @@ GO
 ```  
   
 ## <a name="filter-rows-by-the-value-in-a-status-column"></a>按状态列中的值筛选行  
- 下面的示例将迁移**状态**列中包含指定值之一的行。  
+ 下面的示例将迁移 **状态** 列中包含指定值之一的行。  
   
 ```sql  
 -- Filter by status column  
@@ -295,7 +295,7 @@ SET (
   
 2.  通过调用 **ALTER TABLE** 以前的筛选器函数替换为新的筛选器函数，如下面的示例中所示。  
   
-3.  （可选）通过调用 **DROP FUNCTION**删除你不再使用的前一个筛选器函数。 （示例中未显示此步骤。）  
+3.  （可选）通过调用 **DROP FUNCTION** 删除你不再使用的前一个筛选器函数。 （示例中未显示此步骤。）  
   
 ```sql  
 BEGIN TRAN  

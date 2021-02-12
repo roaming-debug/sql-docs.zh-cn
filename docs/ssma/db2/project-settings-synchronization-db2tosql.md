@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d6b4aef228ca1631bb550437ff0f66ff20555cb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4d96e3e3caeb1c40a9f4529f8d2c0ea7e0b1f717
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321063"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072121"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a> (同步的项目设置)  (DB2ToSQL) 
 " **项目设置** " 对话框的 "同步" 页包含用于自定义 SSMA 将数据库对象（如表和存储过程）加载和刷新到的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -28,8 +28,8 @@ ms.locfileid: "88321063"
   
 -   若要指定当前项目的设置，请在 " **工具** " 菜单上单击 " **项目设置**"，然后单击左窗格底部的 " **同步** "。  
   
-## <a name="miscellaneous-options"></a>其他选项  
-**多次**  
+## <a name="miscellaneous-options"></a>“杂项”选项  
+**尝试次数**  
 指定在将对象加载到时 SSMA 应执行的尝试次数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 当前尝试中未加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的对象将重试，直到 SSMA 达到当前同步过程中的最大尝试次数。 默认值设置为 **2**  
   
 ## <a name="synchronization-for-db2-options"></a>DB2 选项同步  

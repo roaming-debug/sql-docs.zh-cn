@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: c6f2a0989cb13253ef4a6a26e013a6b8c7a84ded
-ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
+ms.openlocfilehash: 2fb25ca30a3b55bfcedb470addad8680f4914e2f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93294378"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063289"
 ---
 # <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>在启用了 Azure Arc 的 SQL Server 实例上配置 SQL 评估
 

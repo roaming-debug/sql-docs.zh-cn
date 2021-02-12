@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 307c726811d4071754ff118ebd56d7d43abd05f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72e4fadcd1422ea0afacc0af5e8766ebff9e6386
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321013"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071931"
 ---
 # <a name="setting-project-options-db2tosql"></a> (DB2ToSQL) 设置项目选项
 对于每个 SSMA 项目，可以设置项目级别选项。 这些选项指定对象转换、对象加载、用户界面和数据迁移设置。 在将对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或将数据迁移到之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请验证配置选项是否适用于项目。  
@@ -43,7 +43,7 @@ SSMA 有五组项目设置：
   
 -   完全  
   
--   “自定义”  
+-   自定义  
   
 对于大多数用户，建议使用默认模式。 乐观模式会保留更多当前 DB2 语法，并且更易于阅读。 但是，保持当前语法可能不准确。 如果必须将 DB2 语法转换为等效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语法，则完整模式将执行最完整的转换，但生成的代码可能更难以读取。 在 "自定义" 模式下，设置选项。  
   
@@ -74,7 +74,7 @@ SSMA 有五组项目设置：
   
     -   若要指定自定义设置，请选择或输入新的设置或值。  
   
-3.  单击“确定”保存设置。****  
+3.  单击“确定”保存设置。  
   
 你还可以自定义当前项目的设置。 这些设置保存到当前项目文件中。  
   
@@ -88,7 +88,7 @@ SSMA 有五组项目设置：
   
     -   若要指定自定义模式，请在 " **模式** " 框中选择 " **自定义**"，然后选择相应的项目设置。  
   
-3.  单击“确定”保存设置。****  
+3.  单击“确定”保存设置。  
   
 ## <a name="next-steps"></a>后续步骤  
 迁移的下一步取决于你的项目需求：  

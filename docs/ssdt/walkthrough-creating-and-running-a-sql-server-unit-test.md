@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6b0eaf98f4d10c08548e898c261a489ad71f0ff4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987933"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016727"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>演练：创建和运行 SQL Server 单元测试
 
@@ -274,7 +274,7 @@ ms.locfileid: "91987933"
   
 2.  右键单击存储过程之一，然后单击“创建单元测试”以便显示“创建单元测试”对话框。  
   
-3.  选中所有五个存储过程对应的复选框：“Sales.uspCancelOrder” ****、“Sales.uspFillOrder” ****、“Sales.uspNewCustomer” ****、“Sales.uspPlaceNewOrder” **** 和“Sales.uspShowOrderDetails” ****。  
+3.  选中所有五个存储过程对应的复选框：“Sales.uspCancelOrder” 、“Sales.uspFillOrder” 、“Sales.uspNewCustomer” 、“Sales.uspPlaceNewOrder” 和“Sales.uspShowOrderDetails” 。  
   
 4.  在“项目”下拉列表中，选择“创建新的 Visual C# 测试项目”。  
   
@@ -328,7 +328,7 @@ ms.locfileid: "91987933"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspnewcustomer"></a>为 uspNewCustomer 编写 SQL Server 单元测试  
   
-1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspNewCustomerTest****，并确保在相邻列表中突出显示“测试”****。  
+1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspNewCustomerTest，并确保在相邻列表中突出显示“测试”。  
   
     在执行上一步后，可以为单元测试中的测试操作创建测试脚本。  
   
@@ -358,7 +358,7 @@ ms.locfileid: "91987933"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspplaceneworder"></a>为 uspPlaceNewOrder 编写 SQL Server 单元测试  
   
-1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspPlaceNewOrderTest****，并确保在相邻列表中突出显示“测试”****。  
+1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspPlaceNewOrderTest，并确保在相邻列表中突出显示“测试”。  
   
     在执行此步骤后，可以为单元测试中的测试操作创建测试脚本。  
   
@@ -394,7 +394,7 @@ ms.locfileid: "91987933"
   
 5.  在 **“属性”** 窗口中，将 **“所需的值”** 属性设置为 100。  
   
-6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspPlaceNewOrderTest****，并确保在相邻列表中突出显示“预先测试”****。  
+6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspPlaceNewOrderTest，并确保在相邻列表中突出显示“预先测试”。  
   
     在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
   
@@ -434,7 +434,7 @@ ms.locfileid: "91987933"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspfillorder"></a>为 uspFillOrder 编写 SQL Server 单元测试  
   
-1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspFillOrderTest****，并确保在相邻列表中突出显示“测试”****。  
+1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspFillOrderTest，并确保在相邻列表中突出显示“测试”。  
   
     在执行此步骤后，可以为单元测试中的测试操作创建测试脚本。  
   
@@ -473,7 +473,7 @@ ms.locfileid: "91987933"
   
 5.  在 **“属性”** 窗口中，将 **“所需的值”** 属性设置为 100。  
   
-6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspFillOrderTest****，并确保在相邻列表中突出显示“预先测试”****。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
+6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspFillOrderTest，并确保在相邻列表中突出显示“预先测试”。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
   
 7.  单击“单击此处以创建”以创建预先测试脚本。  
   
@@ -524,7 +524,7 @@ ms.locfileid: "91987933"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspshoworderdetails"></a>为 uspShowOrderDetails 编写 SQL Server 单元测试  
   
-1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspShowOrderDetailsTest****，并确保在相邻列表中突出显示“测试”****。  
+1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspShowOrderDetailsTest，并确保在相邻列表中突出显示“测试”。  
   
     在执行此步骤后，可以为单元测试中的测试操作创建测试脚本。  
   
@@ -568,7 +568,7 @@ ms.locfileid: "91987933"
   
     所需的架构与测试条件存储在一起。  
   
-9. 在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspShowOrderDetailsTest****，并确保在相邻列表中突出显示“预先测试”****。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
+9. 在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspShowOrderDetailsTest，并确保在相邻列表中突出显示“预先测试”。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
   
 10. 单击“单击此处以创建”以创建预先测试脚本。  
   
@@ -707,11 +707,11 @@ ms.locfileid: "91987933"
   
 2.  在“测试视图”窗口 (Visual Studio 2010) 中，单击工具栏上的“刷新”以更新测试列表。 若要在“测试资源管理器”(Visual Studio 2012) 中查看测试列表，请生成解决方案。  
   
-    “测试视图”**** 或“测试资源管理器”**** 窗口中列出了在本演练前面创建的、并在其中添加了 Transact\-SQL 语句和测试条件的测试。 名为 TestMethod1 的测试是空的，在本演练中将不使用它。  
+    “测试视图”或“测试资源管理器”窗口中列出了在本演练前面创建的、并在其中添加了 Transact\-SQL 语句和测试条件的测试。 名为 TestMethod1 的测试是空的，在本演练中将不使用它。  
   
 3.  右键单击“Sales_uspNewCustomerTest”，然后单击“运行选定内容”。  
   
-    Visual Studio 使用指定的特权上下文连接到数据库并应用数据生成计划。 Visual Studio 先切换到执行上下文，再在测试中运行 Transact\-SQL 脚本。 最后，Visual Studio 将针对在测试条件中指定的内容评估 Transact\-SQL 脚本的结果，并在“测试结果”**** 窗口中显示结果（通过或失败）。  
+    Visual Studio 使用指定的特权上下文连接到数据库并应用数据生成计划。 Visual Studio 先切换到执行上下文，再在测试中运行 Transact\-SQL 脚本。 最后，Visual Studio 将针对在测试条件中指定的内容评估 Transact\-SQL 脚本的结果，并在“测试结果”窗口中显示结果（通过或失败）。  
   
 4.  在 **“测试结果”** 窗口中查看结果。  
   
@@ -729,7 +729,7 @@ ms.locfileid: "91987933"
   
 #### <a name="to-correct-the-error-in-salesuspfillorder"></a>更正 Sales.uspFillOrder 中的错误  
   
-1.  在数据库的“SQL Server 对象资源管理器”**** 项目节点中，双击 uspFillOrder**** 存储过程以在 Transact\-SQL 编辑器中打开其定义。  
+1.  在数据库的“SQL Server 对象资源管理器”项目节点中，双击 uspFillOrder 存储过程以在 Transact\-SQL 编辑器中打开其定义。  
   
 2.  在定义中，找到以下 Transact\-SQL 语句：  
   
@@ -770,7 +770,7 @@ ms.locfileid: "91987933"
   
 #### <a name="to-update-the-stored-procedure"></a>更新存储过程  
   
-1.  在 SimpleUnitTestDB 数据库的“SQL Server 对象资源管理器”**** 项目节点中，展开“可编程性”节点，再展开“存储过程”节点，然后双击 uspCancelOrder。  
+1.  在 SimpleUnitTestDB 数据库的“SQL Server 对象资源管理器”项目节点中，展开“可编程性”节点，再展开“存储过程”节点，然后双击 uspCancelOrder。  
   
 2.  在 Transact\-SQL 编辑器中，更新过程定义，使其与以下代码相匹配：  
   
@@ -851,7 +851,7 @@ ms.locfileid: "91987933"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspcancelorder"></a>为 uspCancelOrder 编写 SQL Server 单元测试  
   
-1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspCancelOrderTest****，并确保在相邻列表中突出显示“测试”****。  
+1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspCancelOrderTest，并确保在相邻列表中突出显示“测试”。  
   
     在执行此步骤后，可以为单元测试中的测试操作创建测试脚本。  
   
@@ -887,7 +887,7 @@ ms.locfileid: "91987933"
   
 5.  在“属性”  窗口中，将“预期值”  属性设为 0。  
   
-6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspCancelOrderTest****，并确保在相邻列表中突出显示“预先测试”****。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
+6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspCancelOrderTest，并确保在相邻列表中突出显示“预先测试”。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
   
 7.  单击“单击此处以创建”以创建预先测试脚本。  
   

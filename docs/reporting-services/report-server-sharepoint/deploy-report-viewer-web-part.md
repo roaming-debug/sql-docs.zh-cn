@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 4b8638e0c9a958e8f5dd6b6039540e8492555b03
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933565"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074818"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 网站上部署 SQL Server Reporting Services 报表查看器 Web 部件
 
@@ -105,7 +105,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 ## <a name="remove-the-solution"></a>删除解决方案
 
-尽管 SharePoint 管理中心提供了解决方案收回，但除非是在系统地解决安装问题或修补部署问题，否则便无需收回 ReportViewerWebPart.wsp 文件****。
+尽管 SharePoint 管理中心提供了解决方案收回，但除非是在系统地解决安装问题或修补部署问题，否则便无需收回 ReportViewerWebPart.wsp 文件。
 
 1. 在 SharePoint 管理中心的“系统设置”中，选择“管理场解决方案” 。
 

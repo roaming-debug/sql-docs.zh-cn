@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: c93cd3ea16b87a23dac96c1f21f3720d169e8c19
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 2b8f54b66852df0ce0300e950ba712a803a7a012
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364010"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040167"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>使用 Azure Data Studio 中的见解小组件管理服务器和数据库
 
@@ -38,8 +38,8 @@ ms.locfileid: "91364010"
 Azure Data Studio 试图避免引入另一种语言或繁杂的用户界面，因此它尽可能多地使用 JSON 配置最少的 T-SQL。 通过使用 T-SQL 配置见解小组件，可以利用无数个现有的有用 T-SQL 查询源，这些查询可转化为富有见解力的小组件。
 
 见解小组件由一个或两个 T-SQL 查询组成：
-* *见解小组件查询*是必需的，并且是返回小组件中所示数据的查询。
-* 仅当创建见解详细信息页面时，才需要*见解详细信息查询*。
+* *见解小组件查询* 是必需的，并且是返回小组件中所示数据的查询。
+* 仅当创建见解详细信息页面时，才需要 *见解详细信息查询*。
 
 见解小组件查询定义用于呈现计数、图表或图形的数据集。 见解详细信息查询用于在见解详细信息面板中以表格格式列出相关见解详细信息。 
 

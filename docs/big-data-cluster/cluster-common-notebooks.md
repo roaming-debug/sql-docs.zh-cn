@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 99e62be597e4ce08d38db199116f1bd4d5ab33f6
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 8cbf034873b690262ff6acb395ed8eca5d09ae79
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378354"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039507"
 ---
 # <a name="common-notebooks-for-sql-server-big-data-clusters"></a>适用于 SQL Server 大数据群集的常见笔记本
 

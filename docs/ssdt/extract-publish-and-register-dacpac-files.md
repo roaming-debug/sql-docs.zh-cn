@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: db4981480d5c14a658c49e29068f7eebfa53bb6b
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: f7d63d6b26d8f5f07b6a4344e84f3d490012c91f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518957"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077050"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>提取、发布和注册 .dacpac 文件
 
@@ -44,9 +44,9 @@ ms.locfileid: "85518957"
   
 指定指向数据库服务器的连接字符串，然后指定数据库名称（如果数据库名称不在连接字符串中）。  
   
-“发布”和“生成脚本”按钮现在已启用。 如果您生成一个脚本，它将在文档窗口中打开并且可以根据需要进行保存。 如果你选择直接发布到数据库，则可以从“数据工具操作”**** 窗口查看更新以及所使用的实际脚本的汇总。  
+“发布”和“生成脚本”按钮现在已启用。 如果您生成一个脚本，它将在文档窗口中打开并且可以根据需要进行保存。 如果你选择直接发布到数据库，则可以从“数据工具操作”窗口查看更新以及所使用的实际脚本的汇总。  
   
-选中后，“作为数据层应用程序注册”**** 复选框将导致最终生成的数据库在服务器元数据中作为数据层应用程序注册。 如果注册您发布到的数据库，则在数据库架构不同于其当前注册的 dacpac 的情况下，可能会导致发布失败。  
+选中后，“作为数据层应用程序注册”复选框将导致最终生成的数据库在服务器元数据中作为数据层应用程序注册。 如果注册您发布到的数据库，则在数据库架构不同于其当前注册的 dacpac 的情况下，可能会导致发布失败。  
   
 在“高级发布设置”对话框中提供其他发布配置，可以通过单击“高级”按钮访问该对话框。  
   

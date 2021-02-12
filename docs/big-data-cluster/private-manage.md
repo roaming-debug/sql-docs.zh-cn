@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 442f5def7e1378b750460cfc6860e780b1dcfd80
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: 768818a9e034961aa0460515e3db84ce3a4a8092
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89202196"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100043867"
 ---
 # <a name="manage-big-data-cluster-in-aks-private-cluster"></a>在 AKS 专用群集中管理大数据群集
 

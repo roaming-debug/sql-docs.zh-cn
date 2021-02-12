@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 7e6f907b7565b9934231355464fdd91c3222e13e
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 1ed1dd62f1ea8acb70315e340a8a4defa3350f48
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878798"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042927"
 ---
 # <a name="download-microsoft-sqlclient-data-provider-for-sql-server"></a>下载 SQL Server 的 Microsoft SqlClient 数据提供程序
 

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 54ea252e2fbe828200339fdbfb4d25ef83451cb3
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d389d9f71b08914385cdf3bedef5bf613e6700d1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987543"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016667"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>演练：扩展数据库项目部署以分析部署计划
 
@@ -64,7 +64,7 @@ ms.locfileid: "91987543"
   
 4.  在“框架”选项卡上，选择“System.ComponentModel.Composition”。  
   
-5.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”。 单击“浏览”，并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin 文件夹。 选择“Microsoft.SqlServer.Dac.dll”****、“Microsoft.SqlServer.Dac.Extensions.dll”**** 和“Microsoft.Data.Tools.Schema.Sql.dll”**** 条目，单击“添加”****，然后单击“确定”****。  
+5.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”。 单击“浏览”，并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin 文件夹。 选择“Microsoft.SqlServer.Dac.dll”、“Microsoft.SqlServer.Dac.Extensions.dll”和“Microsoft.Data.Tools.Schema.Sql.dll”条目，单击“添加”，然后单击“确定”。  
   
     接下来，开始向类中添加代码。  
   

@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f83c3d1e1a5bf0c9b74d058f144c4d07025c8c05
-ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
+ms.openlocfilehash: d9197e936f3df8f0a98db672f69ac05fce07ebd8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98620267"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100043877"
 ---
 # <a name="deploy-bdc-in-azure-kubernetes-service-aks-private-cluster"></a>在 Azure Kubernetes 服务 (AKS) 专用群集中部署 BDC
 

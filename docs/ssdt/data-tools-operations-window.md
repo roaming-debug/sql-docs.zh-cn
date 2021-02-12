@@ -12,19 +12,19 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f1eae246680e35f52d10a5c5338e866b58843ec3
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: f6f3e0512a0189bde68a2dde0b39c5df7f28acde
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518717"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077068"
 ---
 # <a name="data-tools-operations-window"></a>“数据工具操作”窗口
 
 “数据工具操作”窗口会显示本主题中讨论的某些操作的进度，并告知你任何错误。  
   
 > [!WARNING]  
-> 某些操作（例如，发布）将自动打开该窗口。 对于其他一些操作，您需要确保该窗口处于打开状态。 可以通过取消选中位于“工具”>“选项”>“SQL Server 工具”>“常规”下的“为高优先级操作显示‘数据工具操作'”**** 来禁用此选项。  
+> 某些操作（例如，发布）将自动打开该窗口。 对于其他一些操作，您需要确保该窗口处于打开状态。 可以通过取消选中位于“工具”>“选项”>“SQL Server 工具”>“常规”下的“为高优先级操作显示‘数据工具操作'”来禁用此选项。  
   
 若要查看“数据工具操作”窗口，请依次选择“视图”菜单、“其他窗口”和“数据工具操作”。  
   

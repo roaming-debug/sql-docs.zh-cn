@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 244a8ce680704b0b25f9d0499e1a7802661d56cd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 21099123d8065fad63e1526a3377f1904aed87b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471688"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016519"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>适用于 SQL Server 的 Extensibility Framework API
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -389,13 +389,13 @@ SQLRETURN GetResults(
     SQLUSMALLINT    TaskId,
     SQLULEN*        RowsNumber,
     SQLPOINTER**    Data,
-    SQLINTEGER**_   StrLen_or_Ind
+    SQLINTEGER***   StrLen_or_Ind
 );
 ```
 
 ### <a name="arguments"></a>自变量
 
-SessionId  
+*SessionId*  
 \[输入\] 唯一标识此脚本会话的 GUID。
 
 *TaskId*  
