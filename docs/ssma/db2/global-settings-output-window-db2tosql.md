@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f21f80f4-9a2a-448d-9fe8-b6926595389e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d30c40e3085c7a34343e96ec0a9eaf10bddcdd5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e25b4e800bc2b85f374f0fa010be28fbd6893a29
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463497"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069812"
 ---
 # <a name="global-settings-output-window-db2tosql"></a>全局设置 (输出窗口)  (DB2ToSQL) 
 使用 " **全局设置** " 对话框指定 SSMA 的设置。  

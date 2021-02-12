@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 0a9c522bf292147852203fb9ac740e7103195b35
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194566"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835986"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
 
@@ -30,7 +30,7 @@ ms.locfileid: "92194566"
 ## <a name="prerequisites"></a>必备条件  
  若要执行本演练，必须先在计算机上安装以下软件。  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的更高版本。  
+1.  包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的 [!INCLUDE[ssNoVersion ](../../includes/ssnoversion-md.md)]。  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "92194566"
   
 5.  将 **源组件** 从工具箱拖到“数据流设计器”，然后并将它配置为从数据源提取数据。  
   
-    1.  为了进行演练，请创建一个包含表 **Employee** 的测试数据库 **TestDB**。 创建包含三列： **ID**、 **FirstName** 和 **LastName**的表。  
+    1.  为了进行演练，请创建一个包含表 **Employee** 的测试数据库 **TestDB**。 创建包含三列： **ID**、 **FirstName** 和 **LastName** 的表。  
   
     2.  将 **ID** 设为主键。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "92194566"
 ## <a name="step-4-verify-the-ssis-package-execution"></a>步骤 4：验证 SSIS 包执行  
  在此步骤中，你将验证是否已执行 SSIS 包。  
   
-1.  在 SQL Server Management Studio 中，依次展开“Integration Services 目录”  、“SSISDB”  、包含 SSIS 项目的**文件夹**、“项目”  、项目节点、“包”  。  
+1.  在 SQL Server Management Studio 中，依次展开“Integration Services 目录”  、“SSISDB”  、包含 SSIS 项目的 **文件夹**、“项目”  、项目节点、“包”  。  
   
 2.  右键单击 SSIS 包，指向“报告”  ，指向“标准报告”  ，然后单击“所有执行”  。  
   

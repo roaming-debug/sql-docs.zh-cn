@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6961dd76f35316dbd3923bb24849011a20f184c0
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: 6996e2b9b7705511fc13d479e39e9436a5e054f3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793734"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044097"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>使用 Spark 运行示例笔记本
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e92646e27dcabed21aa387a8cf22caf95770ff6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ca10d79178887fa4ed2f9f59c6da7e8c75057f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914974"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077928"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
   rs.exe 实用工具处理您在输入文件中提供的脚本。 使用此实用工具，可以实现报表服务器部署与管理任务的自动化。  
@@ -82,16 +82,16 @@ rs {-?}
  （可选）指定与服务器的连接超时之前等待的时间，以秒为单位。默认值为 60 秒。 如果未指定超时值，则使用默认值。 **0** 值指定连接从不超时。  
   
  **-b**  
- （可选）指定脚本文件中的命令以批处理方式运行。 如有任何命令失败，则回滚批处理。 某些命令无法以批处理方式运行，这些命令将按常规方式运行。 仅当脚本中产生异常并且未在脚本中得到处理时，才会导致回滚。 如果脚本处理了异常，并从 **Main**正常返回，则将提交批处理。 如果省略此参数，则命令将不以批处理方式运行。 有关详细信息，请参阅 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
+ （可选）指定脚本文件中的命令以批处理方式运行。 如有任何命令失败，则回滚批处理。 某些命令无法以批处理方式运行，这些命令将按常规方式运行。 仅当脚本中产生异常并且未在脚本中得到处理时，才会导致回滚。 如果脚本处理了异常，并从 **Main** 正常返回，则将提交批处理。 如果省略此参数，则命令将不以批处理方式运行。 有关详细信息，请参阅 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
   
  **-v** globalvar  
  （可选）指定脚本中使用的全局变量。 如果脚本使用全局变量，则必须指定此参数。 指定的值必须对 .rss 文件中定义的全局变量有效。 必须为每个 –v 参数指定一个全局变量。  
   
- **-v** 参数在命令行上指定，可用来为运行时在脚本中定义的全局变量设置值。 例如，如果脚本中包含一个名为 *parentFolder*的变量，则可以在命令行上为该文件夹指定一个名称：  
+ **-v** 参数在命令行上指定，可用来为运行时在脚本中定义的全局变量设置值。 例如，如果脚本中包含一个名为 *parentFolder* 的变量，则可以在命令行上为该文件夹指定一个名称：  
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 全局变量以给定的名称命名，并设置为提供的值。 例如， **-v a=**"**1**" **-v b=**"**2**" 将生成一个名为 **a** 且值为 "**1**" 的变量，以及一个值为 " **2** " 的变量**b**。  
+ 全局变量以给定的名称命名，并设置为提供的值。 例如， **-v a=**"**1**" **-v b=**"**2**" 将生成一个名为 **a** 且值为 "**1**" 的变量，以及一个值为 " **2** " 的变量 **b**。  
   
  全局变量可用于脚本中的所有函数。 反斜杠与英文引号连用 ( **\\"** ) 将解释为一个英文双引号。 仅当字符串中包含空格时才需要使用英文引号。 变量名必须对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]有效；变量名必须以字母字符或下划线字符开头，且必须包含字母字符、数字或下划线字符。 不能将保留字用作变量名。 有关使用全局变量的详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   

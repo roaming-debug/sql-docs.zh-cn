@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d445092d609be13cca75c06e49f3ae76b51851b
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: dfa373b98dfda2af0c8d18b1cc58fc7f0df5a1cb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935503"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030959"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 连接类型 (SSRS)
 
@@ -30,7 +30,7 @@ ms.locfileid: "91935503"
  使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
 ##  <a name="connection-string"></a><a name="Connection"></a> 连接字符串  
- 连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]时，也会连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具中的数据库对象。 可在查询设计器中指定要使用的数据库对象。 如果未在连接字符串中指定数据库，则将连接到管理员为您分配的默认数据库。 请联系数据库管理员，获取连接信息以及用于连接到数据源的凭据。 下面的连接字符串示例指定 **工具中的**CustomerSales [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 示例数据库：  
+ 连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]时，也会连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具中的数据库对象。 可在查询设计器中指定要使用的数据库对象。 如果未在连接字符串中指定数据库，则将连接到管理员为您分配的默认数据库。 请联系数据库管理员，获取连接信息以及用于连接到数据源的凭据。 下面的连接字符串示例指定 **工具中的** CustomerSales [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 示例数据库：  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  
@@ -109,7 +109,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
 ##  <a name="parameters"></a><a name="Parameters"></a> Parameters  
  如果查询文本包含查询变量或具有输入参数的存储过程，则将自动生成数据集的对应查询参数和报表的报表参数。 查询文本不得包含针对每个查询变量的 DECLARE 语句。  
   
- 例如，下面的 SQL 查询将创建一个名为 **EmpID**的报表参数：  
+ 例如，下面的 SQL 查询将创建一个名为 **EmpID** 的报表参数：  
   
 ```  
 SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2268615b8a8ed25883d7d9dce92d8e775f228a4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 0406997ade10e6ddfc9b13c76240973662255f78
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034974"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076028"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>将 Sybase ASE 数据迁移到 SQL Server-Azure SQL 数据库 (SybaseToSQL) 
 成功将 Sybase 自适应服务器企业 (ASE) 数据库对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE Sql 数据库后，可以将数据从 ASE 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure sql 数据库。  
@@ -31,9 +31,9 @@ ms.locfileid: "92034974"
   
 -   使用此对话框，您可以设置迁移批大小、表锁定、约束检查、null 值处理和标识值处理等选项。 有关项目迁移设置的详细信息，请参阅 [ (Sybase) 的项目设置 (迁移) ](./project-settings-migration-sybasetosql.md)。  
   
-    有关 **扩展数据迁移设置**的详细信息，请参阅 [数据迁移设置](data-migration-settings-sybasetosql.md)  
+    有关 **扩展数据迁移设置** 的详细信息，请参阅 [数据迁移设置](data-migration-settings-sybasetosql.md)  
   
--   使用 "**项目设置**" 对话框中的**迁移引擎**，用户可以使用两种类型的数据迁移引擎（即）执行迁移过程：  
+-   使用 "**项目设置**" 对话框中的 **迁移引擎**，用户可以使用两种类型的数据迁移引擎（即）执行迁移过程：  
   
     1.  客户端数据迁移引擎  
   
@@ -80,7 +80,7 @@ ms.locfileid: "92034974"
   
     **客户端数据迁移：**  
   
-    若要执行**客户端数据迁移**，请在 "**项目设置**" 对话框中选择 "**客户端数据迁移引擎**" 选项。  
+    若要执行 **客户端数据迁移**，请在 "**项目设置**" 对话框中选择 "**客户端数据迁移引擎**" 选项。  
   
     **服务器端数据迁移：**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "92034974"
   
         2.  SQL Server 代理服务在实例上运行 SQL Server  
   
-    -   对于执行**服务器端数据迁移**，请在 "**项目设置**" 对话框中选择 "**服务器端数据迁移引擎**" 选项。  
+    -   对于执行 **服务器端数据迁移**，请在 "**项目设置**" 对话框中选择 "**服务器端数据迁移引擎**" 选项。  
   
 4.  右键单击 "Sybase 元数据资源管理器" 中的 " **架构** "，然后单击 " **迁移数据**"。 您还可以迁移各个对象或对象类别的数据：右键单击对象或其父文件夹，然后选择 " **迁移数据** " 选项。  
   

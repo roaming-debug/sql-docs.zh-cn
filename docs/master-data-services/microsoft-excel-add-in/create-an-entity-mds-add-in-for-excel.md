@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 73161344ae6722e2b7e3ece9d1b8725779c82780
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6a150ba658ff65991f0c6d73cbb557268075474
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257684"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272408"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>创建实体（用于 Excel 的 MDS 外接程序）
 
@@ -63,7 +63,7 @@ ms.locfileid: "92257684"
   
 7.  从 **“模型”** 列表中，选择某一模型。  
   
-8.  **** 从“版本”列表中，选择某一版本。  
+8.   从“版本”列表中，选择某一版本。  
   
 9. 在 **“新的实体名称”** 框中，键入实体的名称。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "92257684"
   
 11. 可选。 从 **“名称”** 列表中，选择包含每个成员的名称的列。  
   
-12. 单击“确定”。 在已成功创建该实体后，将显示一个新的标题行，单元将突出显示，并且工作表名称将更新以匹配该实体名称。  
+12. 单击“确定”。  在已成功创建该实体后，将显示一个新的标题行，单元将突出显示，并且工作表名称将更新以匹配该实体名称。  
   
 ## <a name="next-steps"></a>后续步骤  
   

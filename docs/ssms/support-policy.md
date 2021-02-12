@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 035ea616a92f1760252087bc6a8e27bec3fe2d24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ccfd415c57506b753ab8e0072943814a5289a027
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497265"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063982"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>SQL Server Management Studio (SSMS) 支持策略
 
@@ -36,7 +36,7 @@ Microsoft 计划每年发布数次 SQL Server Management Studio (SSMS) 的更新
 
 为获得最佳体验，建议客户通过 https://aka.ms/ssms 安装最新版本  
 
-“全面支持”服务阶段：如果运行的是 SQL Server Management Studio 的最新当前分支版本，会收到所有更新 - 安全更新、关键更新、新功能等****。
+“全面支持”服务阶段：如果运行的是 SQL Server Management Studio 的最新当前分支版本，会收到所有更新 - 安全更新、关键更新、新功能等。
 
 
 
@@ -44,4 +44,4 @@ Microsoft 计划每年发布数次 SQL Server Management Studio (SSMS) 的更新
 
 
 > [!NOTE]
-> 最新当前分支版本始终处于“全面支持”服务阶段****。 此支持声明意味着如果遇到需要关键更新的代码缺陷，则必须安装最新 Current Branch 版本才会接收修补程序。
+> 最新当前分支版本始终处于“全面支持”服务阶段。 此支持声明意味着如果遇到需要关键更新的代码缺陷，则必须安装最新 Current Branch 版本才会接收修补程序。

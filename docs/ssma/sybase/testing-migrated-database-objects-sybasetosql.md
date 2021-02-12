@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cfe57d436eac38052542eb2ed6c2133aab7ca07b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f889538e5232eedaf3bab8006c54d56e1649ea4c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480382"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014783"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>测试迁移的数据库对象 (SybaseToSQL)
 Microsoft SQL Server 迁移助手用于 Sybase 测试人员 (SSMA 测试器) 会自动测试数据库对象转换和 SSMA 进行的数据迁移。 完成所有 SSMA 迁移步骤后，使用 SSMA 测试人员验证转换后的对象是否以相同方式工作，并确保所有数据都已正确传输。  

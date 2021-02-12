@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fc7abeb4eec6d25e183db5ffcf1923185016b913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b562e886bcb09eae4c02607f17eb7419b313a759
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492540"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072029"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a> (类型映射的项目设置)  (DB2ToSQL) 
 " **项目设置** " 对话框的 "类型映射" 页包含用于自定义 SSMA 将 DB2 数据类型转换为数据类型的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -76,7 +76,7 @@ ms.locfileid: "88492540"
 |双精度|float [53]|  
 |FLOAT|float [53]|  
 |int|int|  
-|integer|int|  
+|整型|int|  
 |long|varchar(max)|  
 |长整型|varbinary(max)|  
 |长整型 [ \* 。8000]<sup>\*</sup>|varbinary [ \* ]|  
@@ -97,7 +97,7 @@ ms.locfileid: "88492540"
 |rowid|uniqueidentifier|  
 |signtype|smallint|  
 |smallint|smallint|  
-|string|varchar(max)|  
+|字符串|varchar(max)|  
 |timestamp|datetime2|  
 |带有本地时区的时间戳|datetimeoffset|  
 |带时区的时间戳|datetimeoffset|  
@@ -138,7 +138,7 @@ ms.locfileid: "88492540"
 |float [ \* .。53]|float [ \* ]|  
 |float [54 ... \* ]|float [53]|  
 |int|int|  
-|integer|int|  
+|整型|int|  
 |long|varchar(max)|  
 |长整型|varbinary(max)|  
 |长整型 [ \* 。8000]|varbinary [ \* ]|  
@@ -234,7 +234,7 @@ ms.locfileid: "88492540"
 |nchar 不同 [ \* 。4000]|nvarchar [ \* ]|  
 |nchar 不同 [4001 ... \* ]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|Number|float [53]|  
+|数字|float [53]|  
 |number [ \* ... \* ]|数值 [ \* ]|  
 |number [ \* ... \* ][\*..\*]|numeric [ \* ] [ \* ]|  
 |Numeric|数值 [38] [0]|  

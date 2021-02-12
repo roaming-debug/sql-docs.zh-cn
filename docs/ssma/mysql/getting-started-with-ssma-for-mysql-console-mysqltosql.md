@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 59df65daf56708a2b30b1e0a75e554750e95cb47
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 4c4a7e894052ec9799039d45ff5bb9e2aa29a23b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235184"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078208"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>SSMA for MySQL 控制台入门 (MySQLToSQL)
 本部分介绍了启动和入门 MySQL 控制台应用程序的过程。 本文还列出了在典型的 SSMA 控制台输出窗口中使用的约定。  
@@ -26,7 +26,7 @@ ms.locfileid: "93235184"
 ## <a name="launching-ssma-console"></a>启动 SSMA 控制台  
 使用以下步骤启动 SSMA 控制台应用程序：  
   
-1.  中转到 " **开始** "，然后指向 " **所有程序** "。  
+1.  中转到 " **开始** "，然后指向 " **所有程序**"。  
   
 2.  单击 " **SQL Server 迁移助手获取 MySQL 命令提示符** " 快捷方式。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "93235184"
   
 下表中的控制台输出的颜色解释：  
   
-|颜色|说明|  
+|Color|说明|  
 |---------|---------------|  
 |红色|执行过程中出现错误|  
 |灰色|日期和时间戳，向用户发送消息|  
-|白色|脚本文件命令，消息类型|  
+|White|脚本文件命令，消息类型|  
 |Yellow|警告|  
 |绿色|提示输入用户-输入|  
 |蓝|操作的开始、完成和结果|  

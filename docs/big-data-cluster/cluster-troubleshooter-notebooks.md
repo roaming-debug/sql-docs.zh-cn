@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 51286acc7f963b8d680bd81121cc22bab1c1a0a6
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 550c56a7ceb82b1215e6e921adb68a1438e87464
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364379"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048237"
 ---
 # <a name="troubleshooting-big-data-clusters-bdc-with-notebooks"></a>使用笔记本对大数据群集 (BDC) 进行故障排除
 

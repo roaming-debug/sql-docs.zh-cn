@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7935ed0f792293eab2f3f9afa3ac71a1ecf0faf9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d9f271797e0a6750f858fb0da5996a25de1746db
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988579"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077998"
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
 
@@ -55,7 +55,7 @@ ms.locfileid: "91988579"
  选择 **True** 可在发布报表时使用项目中的数据源覆盖服务器上的数据源。 选择 **False** 可保留服务器上的现有数据源。  
   
  **TargetServerVersion**  
- 选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的适当版本，或者选择“检测版本”**** 以自动确定安装在由 **TargetServer URL** 属性标识的服务器上的版本。 默认值为 SQL Server 2017。  
+ 选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的适当版本，或者选择“检测版本”以自动确定安装在由 **TargetServer URL** 属性标识的服务器上的版本。 默认值为 SQL Server 2017。  
   
  **TargetDataSourceFolder**  
  要在其中存储已发布共享数据源的文件夹的名称。 如果您没有指定文件夹，那么数据源将发布到与报表所在文件夹相同的文件夹。 如果报表服务器上没有该文件夹，则报表设计器将在发布报表时创建该文件夹。  

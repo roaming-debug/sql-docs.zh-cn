@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8fe596a34298d9864454a544bfb6d98a6601a46
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 072a2f88ce87c5330614961dc1aed842aae2e058
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529338"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065272"
 ---
 # <a name="understanding-security-policies"></a>了解安全策略
   由报表服务器执行的任何代码必须是特定的代码访问安全策略的一部分。 这些安全策略包含多个将证据映射到一组命名权限集的代码组。 通常，代码组与在该组中为代码指定可允许权限的命名权限集关联。 运行时使用受信任主机或加载程序所提供的证据来确定代码所属的代码组，从而确定要授予代码的权限。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 遵循由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 定义的安全策略体系结构。 下面几节介绍了 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的各种代码类型以及与它们相关联的策略规则。  
   
 ## <a name="report-server-assemblies"></a>报表服务器程序集  
- 报表服务器程序集是指那些包含作为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 产品的一部分的代码的程序集。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 是用托管代码程序集编写的；所有这些程序集都采用了强命名模式（即数字签名模式）。 这些程序集的代码组是使用 StrongNameMembershipCondition 定义的，StrongNameMembershipCondition 为程序集的强名称提供基于公钥信息的证据****。 代码组被授予 FullTrust 权限集。  
+ 报表服务器程序集是指那些包含作为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 产品的一部分的代码的程序集。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 是用托管代码程序集编写的；所有这些程序集都采用了强命名模式（即数字签名模式）。 这些程序集的代码组是使用 StrongNameMembershipCondition 定义的，StrongNameMembershipCondition 为程序集的强名称提供基于公钥信息的证据。 代码组被授予 FullTrust 权限集。  
   
 ## <a name="report-server-extensions-rendering-data-delivery-and-security"></a>报表服务器扩展插件（呈现扩展插件、数据扩展插件、传递扩展插件和安全扩展插件）  
  报表服务器扩展插件是您或第三方为了扩展 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的功能而创建的自定义数据扩展插件、传递扩展插件、呈现扩展插件和安全扩展插件。 在与要扩展的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 组件相关联的策略配置文件中，必须向这些扩展插件或程序集代码授予 FullTrust。 随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的扩展插件是用报表服务器公钥签名的，它们将接收 FullTrust 权限集。  

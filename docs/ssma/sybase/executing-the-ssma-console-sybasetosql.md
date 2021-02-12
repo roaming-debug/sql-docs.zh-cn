@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fee973fdcb79105d5fe7c412c10bdda2cd1bbec5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7eed4ea61ada5979dbecdb106e5954620ae9c81
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372233"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079368"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>执行 SSMA 控制台 (SybaseToSQL)
 Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSMA 活动。 后续部分将详细介绍相同的内容。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6720191a37230042f3b1fa85ec3018d0508b0fba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1e64ae6bb0ee7d31d871cbb4d843831b19cf6139
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461831"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272578"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>创建版本标志 (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "88461831"
   
 3.  在 **“管理版本标志”** 页上，从 **“模型”** 字段中，选择要为其创建标志的模型。  
   
-4.  单击“添加”。  
+4.  单击 **添加**。  
   
 5.  在 **“名称”** 框中，键入名称。  
   

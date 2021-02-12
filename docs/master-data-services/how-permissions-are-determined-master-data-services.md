@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 81463077bc370b4cae8ae1838da14a27cdd20f2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 17f9c8a9bc6a871e00df31a2171244984c3d49fb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471931"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272508"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>如何确定权限 (Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "88471931"
   
 -   级别较高的所有对象都会被授予“推断读取”权限。 有关“推断读取”的详细信息，请参阅[导航访问权限 (Master Data Services)](../master-data-services/navigational-access-master-data-services.md)。  
   
- 在此示例中，某实体分配到了“读取” **** 权限，此权限由该实体的属性（在模型结构中的级别较低）继承。 模型为该实体及其属性提供“推断读取”权限。 模型中的另一实体未分配显式权限，并且未继承任何权限，所以被隐式拒绝。  
+ 在此示例中，某实体分配到了“读取”  权限，此权限由该实体的属性（在模型结构中的级别较低）继承。 模型为该实体及其属性提供“推断读取”权限。 模型中的另一实体未分配显式权限，并且未继承任何权限，所以被隐式拒绝。  
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
@@ -65,7 +65,7 @@ ms.locfileid: "88471931"
   
 -   较高级别上未分配权限的所有节点都被隐式拒绝。  
   
- 在此示例中，层次结构中的一个节点分配到了“读取” **** 权限，此权限由层次结构中级别较低的某个节点继承。 没有向根分配权限，所以根被隐式拒绝。 层次结构中的另一节点未分配显式权限，并且未继承任何权限，所以被隐式拒绝。  
+ 在此示例中，层次结构中的一个节点分配到了“读取”  权限，此权限由层次结构中级别较低的某个节点继承。 没有向根分配权限，所以根被隐式拒绝。 层次结构中的另一节点未分配显式权限，并且未继承任何权限，所以被隐式拒绝。  
   
  ![mds_conc_inheritance_hierarchy](../master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   

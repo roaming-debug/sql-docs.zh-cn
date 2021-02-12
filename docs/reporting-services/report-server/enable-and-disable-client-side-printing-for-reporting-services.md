@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a2f61a8700c24a2cc41192103f57a51befbbd15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8cf4544579f4a3258d4bc785c98ada5935653dff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390652"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075772"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>启用和禁用 Reporting Services 的客户端打印
 
@@ -63,7 +63,7 @@ ms.locfileid: "87390652"
   
     4.  单击“高级”。  
   
-    5.  选择 **EnableClientPrinting**中禁用了报表服务器的客户端打印功能。  
+    5.  选择 **EnableClientPrinting** 中禁用了报表服务器的客户端打印功能。  
   
     6.  设置为“True”或“False”，然后单击“确定” 。  
   

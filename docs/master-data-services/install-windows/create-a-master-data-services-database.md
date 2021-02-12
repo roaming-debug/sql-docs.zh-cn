@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af13d59ddb5c8837959feb83b31fc17dbcd7aa29
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 464bfd4714e7cc7680b2a2800d1c2ae1711feeb1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883867"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272478"
 ---
 # <a name="create-a-master-data-services-database"></a>创建 Master Data Services 数据库
 
@@ -32,7 +32,7 @@ ms.locfileid: "85883867"
   
 1.  打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  在左窗格中单击 **“数据库配置”**。  
+2.  在左窗格中单击 **“数据库配置”** 。  
   
 3.  在 **“数据库配置”** 页上，单击 **“创建数据库”**。  
   

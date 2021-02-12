@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 55456185a6503ee11465a1e65cb9cd91de3ba6e2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 0ec2ab7fa84dc3f4b4155a093794d5a4e49b56ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92199558"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046807"
 ---
 # <a name="sql-server-big-data-clusters-transparent-data-encryption-tde-at-rest-usage-guide"></a>SQL Server 大数据群集静态透明数据加密 (TDE) 使用指南
 
@@ -40,7 +40,7 @@ ms.locfileid: "92199558"
 
 1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”。
+1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”  。
 
    ![SQL Server 主实例查询](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 

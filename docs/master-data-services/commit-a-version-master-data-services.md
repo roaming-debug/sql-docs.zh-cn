@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 27564141f1f0f4c90a08449cbd9cffd7cea9dae0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9ce54f5dee22833b2b53f5c66414f6d5be4c5c0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430069"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272798"
 ---
 # <a name="commit-a-version-master-data-services"></a>提交版本 (Master Data Services)
 
@@ -48,7 +48,7 @@ ms.locfileid: "88430069"
   
 3.  在 **“验证版本”** 页上，选择要提交的模型和版本。  
   
-4.  单击“提交”。****  
+4.  单击“提交”。  
   
 5.  在确认对话框中，单击 **“确定”**。  
   

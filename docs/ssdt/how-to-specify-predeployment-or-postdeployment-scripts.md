@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: dbf8067047edf1c3b9b6a837ed12d49cb5d95df1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4565e9b6ab4efc133aef84ff9d4d6dbbd6c501a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901128"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018107"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>如何：指定预先部署或后期部署脚本
 

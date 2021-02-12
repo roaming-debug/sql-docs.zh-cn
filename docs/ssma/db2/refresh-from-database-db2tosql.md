@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 973f3aae444b27be93b675d16c9b9a73d8fac518
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c33ccf20e2b90fd967b5b15b491710d31ea83b0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463474"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071933"
 ---
 # <a name="refresh-from-database-db2tosql"></a>从数据库刷新 (DB2ToSQL) 
 " **从数据库刷新** " 对话框允许您从 DB2 数据库中选择要刷新的对象。 对话框中的行是根据元数据的状态进行颜色编码的：  
@@ -33,19 +33,19 @@ ms.locfileid: "88463474"
 若要访问 " **从数据库刷新** " 对话框，请在 DB2 元数据资源管理器中右键单击对象，然后单击 " **从数据库刷新**"。  
   
 ## <a name="options"></a>选项  
-**折叠 (-) **  
+**折叠 (-)**  
 折叠所有对象组以隐藏单个对象。  
   
-**展开 (+) **  
+**展开 (+)**  
 展开 "所有对象组" 以显示单个对象。  
   
 **隐藏/显示相等对象**  
 如果对象元数据在 DB2 数据库中和 SSMA 中是相同的，则隐藏列表中的对象。  
   
-**从数据库刷新 (箭头按钮) **  
+**从数据库刷新 (箭头按钮)**  
 使用箭头按钮指定应在 SSMA 中更新所选对象的元数据。  
   
-**不从数据库刷新 (X 按钮) **  
+**不从数据库刷新 (X 按钮)**  
 使用 X 按钮指定不应在 SSMA 中更新所选对象的元数据。  
   
 **图例**  

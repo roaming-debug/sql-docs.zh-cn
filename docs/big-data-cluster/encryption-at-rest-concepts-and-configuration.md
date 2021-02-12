@@ -10,12 +10,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: de0bc20d7551e8d42c5dc1463fada6ffcbb6a0fd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: df878f94c2ed6338ae28cbff156460ffdef87826
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257147"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046657"
 ---
 # <a name="encryption-at-rest-concepts-and-configuration-guide"></a>静态加密概念和配置指南
 

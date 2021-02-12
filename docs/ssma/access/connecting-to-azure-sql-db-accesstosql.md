@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f910e9c07bf4318419714b97e4f4db742c913753
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 4f31b2e46312e89830d977ca0ce61ad07572c875
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869435"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076268"
 ---
 # <a name="connecting-to-azure-sql-database-accesstosql"></a>连接到 Azure SQL 数据库 (AccessToSQL) 
 
@@ -68,7 +68,7 @@ ms.locfileid: "94869435"
 
 6. SSMA 建议将加密连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 。
 
-7. 单击“连接”。
+7. 单击“连接”  。
   
 如果中没有数据库 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ，可以使用单击 "**浏览**" 按钮上显示的 "**创建 Azure 数据库**" 选项来创建第一个数据库。
 

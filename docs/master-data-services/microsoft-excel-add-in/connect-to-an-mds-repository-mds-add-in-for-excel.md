@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc8148f2e24c7007c75309da407a188ec6c908ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6ebbfc619b94fcdb36acb4ac1fe7b9d3b0c33bf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "92257691"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272438"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>连接 MDS 存储库（用于 Excel 的 MDS 外接程序）
 
@@ -27,7 +27,7 @@ ms.locfileid: "92257691"
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   **** 您必须有权访问“资源管理器”功能区域。  
+-    您必须有权访问“资源管理器”功能区域。  
   
 ### <a name="to-connect-to-an-mds-repository"></a>连接 MDS 存储库  
   
@@ -39,16 +39,16 @@ ms.locfileid: "92257691"
   
 4.  在 **“添加新连接”** 对话框的 **“描述”** 字段中，键入您的连接说明。 在您单击工具栏上的 **“连接”** 按钮后将显示此连接。  
   
-5.  在“MDS 服务器地址”框中，键入 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的 URL，例如 `https://contoso/mds`****。  
+5.  在“MDS 服务器地址”框中，键入 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的 URL，例如 `https://contoso/mds`。  
   
     > [!NOTE]  
     >  确保使用计算机名称；而不要使用“localhost”。  
   
-6.  单击“确定”。 名称将显示在 **“现有连接”** 部分中。  
+6.  单击“确定”。  名称将显示在 **“现有连接”** 部分中。  
   
 7.  还可以单击 **“测试”** 对连接进行测试。 将显示一个确认或错误对话框。 单击 **“确定”** 将其关闭。  
   
-8.  单击“连接”。 随即显示 **Master Data Services** 窗格。  
+8.  单击“连接”  。 随即显示 **Master Data Services** 窗格。  
   
 ## <a name="next-steps"></a>后续步骤  
   

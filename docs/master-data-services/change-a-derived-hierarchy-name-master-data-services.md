@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3b0a7f9a8243f5294f43adb8d2e9703d54bc1101
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 611949bc759e7f11a8b409ab145fc545eca1f6b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500708"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272898"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>更改派生层次结构名称 (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "88500708"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  从菜单栏中，指向“管理”****，然后单击“派生层次结构”****。  
+2.  从菜单栏中，指向“管理”，然后单击“派生层次结构”。  
   
 3.  在 **“派生层次结构维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "88500708"
   
 5.  单击 **“编辑”** 。  
   
-6.  在“编辑派生层次结构” **** 页上，单击派生层次结构名称旁边的铅笔图标。  
+6.  在“编辑派生层次结构”  页上，单击派生层次结构名称旁边的铅笔图标。  
   
 7.  在 **“派生层次结构名称”** 框中，键入层次结构的更新的名称。  
   

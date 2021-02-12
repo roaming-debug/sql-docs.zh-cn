@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: df2a29b2d411c2502573ede95feefe9c1e061c5b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 75c4f6ca899135141aa68ec147889fcce8cfa549
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987893"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074508"
 ---
 # <a name="setting-project-options-mysqltosql"></a>设置项目选项 (MySQLToSQL)
 对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项指定如何转换对象、迁移数据的方式以及源数据类型映射到目标数据类型的方式。  在将对象转换为 SQL Server 或 SQL Azure 或将数据迁移到 SQL Server 或 SQL Azure 之前，请验证配置选项是否适用于该项目。  
@@ -43,7 +43,7 @@ SSMA 有五组项目设置：
   
 -   乐观  
   
--   完整  
+-   完全  
   
 -   自定义  
   
@@ -78,7 +78,7 @@ SSMA 有五组项目设置：
   
     3.  若要指定自定义设置，请选择或输入新的设置或值。  
   
-3.  单击“确定”保存设置。****  
+3.  单击“确定”保存设置。  
   
 你还可以自定义当前项目的设置。 设置将保存到当前项目文件中。  
   
@@ -92,7 +92,7 @@ SSMA 有五组项目设置：
   
     2.  若要指定自定义模式，请从 "**模式**" 下拉框中选择 "**自定义**"。 然后选择适当的项目设置。  
   
-3.  单击“确定”保存设置。****  
+3.  单击“确定”保存设置。  
   
 ## <a name="next-step"></a>下一步  
 迁移的下一步取决于你的项目需求：  

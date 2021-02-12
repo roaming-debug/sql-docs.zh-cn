@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 410b2674f407018b895ed84781bedf5fa8766feb
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: a055bd1f8de41686e1c3477e3e4810e78d6b5025
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364389"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018307"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用表设计器创建数据库对象
 

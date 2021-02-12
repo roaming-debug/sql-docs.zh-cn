@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 99ab880b69d2c06d462ed42ca0a2529ba6bf7bc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e9086feb8adcb64ba1a24191e91028fc870d488
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372113"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069900"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>项目设置（类型映射）(SybaseToSQL)
 " **项目设置** " 对话框的 "类型映射" 页包含用于自定义 SSMA 将 Sybase 自适应服务器企业 (ASE) 数据类型转换为数据类型的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -63,7 +63,7 @@ ms.locfileid: "88372113"
 |**char 改变 [8001 \* ]**|**varchar(max)**|  
 |**char [ \* .。8000]**|**char [ \* ]**|  
 |**char [8001 \* ]**|**varchar(max)**|  
-|**字符**|**char**|  
+|**character**|**char**|  
 |**字符变化**|**varchar**|  
 |**字符变化 [ \* 。8000]**|**varchar [ \* ]**|  
 |**字符变化 [8001 \* ]**|**varchar(max)**|  

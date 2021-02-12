@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 88a6e8527a4b0e00ed72d6abbf6dcc8ffba574d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9fed60a454158c909588d6a9061a9607cfed9bf5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257714"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272448"
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>合并数据（用于 Excel 的 MDS 外接程序）
 

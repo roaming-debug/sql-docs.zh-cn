@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cb0f25ce5063a22fb89d0afa8619b90d34a96f16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79f359fa2a45db75fd48a6f9bbcbb774044c942a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426959"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072241"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a> ()  (DB2ToSQL 加载系统对象的项目设置) 
 您可以在 " **项目设置** " 对话框的 "加载系统对象" 页中指定 SSMA 转换和加载到哪些 DB2 系统对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

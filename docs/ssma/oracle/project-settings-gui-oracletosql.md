@@ -11,12 +11,12 @@ ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b3382c63479fa719b79cce2f582cb5f85e716ba1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 077e9f169e48aa2b48b76e8eb861f509a9b82b92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480439"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077588"
 ---
 # <a name="project-settings-gui-oracletosql"></a>项目设置 (GUI) (OracleToSQL)
 GUI 项目设置允许您配置数据在 " **数据** " 选项卡上的显示方式，以及是否在转换后显示评估报告。  
