@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: e1a70d9b69306e4394bc726fd58a48923bb2a937
-ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
+ms.openlocfilehash: 942d0c84e697654e67d48ce708792eb8bcf770aa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98983670"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081478"
 ---
 # <a name="sqlpackage-export-parameters-and-properties"></a>SqlPackage 导出的参数和属性
 SqlPackage.exe 的 Export 操作将连接的数据库导出到 BACPAC 文件 (.bacpac)。 默认情况下，所有表的数据将包含在 .bacpac 文件中。 你可以选择仅指定要为其导出数据的表的子集。 即使针对导出指定表的子集，对导出操作的验证可确保 Azure SQL 数据库对完整目标数据库的兼容性。 

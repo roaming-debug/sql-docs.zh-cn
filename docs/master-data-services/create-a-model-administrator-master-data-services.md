@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9049dc6e40cb7bba60b68e8185e887fe27f4a5ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11aada5002d7f35a66d64040016e9cf6e614fdf0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88390083"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272648"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>创建模型管理员 (Master Data Services)
 
@@ -52,7 +52,7 @@ ms.locfileid: "88390083"
   
 7.  单击要授予对其权限的模型。  
   
-8.  从菜单中选择“管理员”。 ****  
+8.  从菜单中选择“管理员”。   
   
 9. 对希望组或用户成为其管理员的每个模型，完成步骤 7 和 8。  
   

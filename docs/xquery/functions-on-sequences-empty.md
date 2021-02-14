@@ -1,6 +1,6 @@
 ---
-title: 空函数（XQuery） |Microsoft Docs
-description: 了解 XQuery 函数 empty （），它返回一个值，该值指示指定的项序列是否为空。
+title: )  (XQuery 的空函数 |Microsoft Docs
+description: 了解 XQuery 函数 empty () ，该函数返回一个值，该值指示指定的项序列是否为空。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c522e0756ca846558acbf6ac1b96c7d4abeef57e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f9a09225562cbabe7ced75d80f26e37ee53d3e3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753566"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335833"
 ---
 # <a name="functions-on-sequences---empty"></a>基于序列的函数 - empty
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  如果 *$arg*的值是空序列，则返回 True。 否则，该函数返回 False。  
+  如果 *$arg* 的值是空序列，则返回 True。 否则，该函数返回 False。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +35,18 @@ ms.locfileid: "85753566"
 fn:empty($arg as item()*) as xs:boolean  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *$arg*  
  项序列。 如果该序列为空，则此函数返回 True。 否则，该函数返回 False。  
   
 ## <a name="remarks"></a>备注  
- 不支持**fn： exists （）** 函数。 作为替代方法，可以使用**not （）** 函数。  
+ **Fn： exists ()** 函数不受支持。 作为替代方法，可以使用 **not ()** 函数。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种 **xml** 类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. 使用 empty() XQuery 函数来确定属性是否存在  
- 在产品型号7的生产过程中，此查询将返回没有**MachineHours**属性的所有工作中心位置。  
+ 在产品型号7的生产过程中，此查询将返回没有 **MachineHours** 属性的所有工作中心位置。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -75,7 +75,7 @@ ProductModelID      Result
                <Location LocationID="60" LaborHrs="4"/>  
 ```  
   
- 以下内容经过略微修改后，如果未提供**MachineHour**属性，查询将返回 "NotFound"：  
+ 以下内容经过略微修改后，如果未提供 **MachineHour** 属性，查询将返回 "NotFound"：  
   
 ```  
 SELECT ProductModelID, Instructions.query('  

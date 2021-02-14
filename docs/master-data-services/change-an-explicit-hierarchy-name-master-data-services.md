@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af898be32f3c3713bbf73a34bec2d9a4f67368be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fedaf10a0dd9aa2392181c988965c1faf95c868
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88390253"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272838"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>更改显式层次结构名称 (Master Data Services)
 
@@ -39,13 +39,13 @@ ms.locfileid: "88390253"
   
 2.  在 " **管理模型** " 页上，从网格中选择一个模型，然后单击 " **实体**"。  
   
-3.  在“管理实体” **** 页上，从网格中选择包含要编辑的显式层次结构的实体所在的行。  
+3.  在“管理实体”  页上，从网格中选择包含要编辑的显式层次结构的实体所在的行。  
   
-4.  单击“显式层次结构” ****。  
+4.  单击“显式层次结构” 。  
   
-5.  在“管理显式层次结构” **** 页上，选择要重命名的显式层次结构，然后单击“编辑” ****。  
+5.  在“管理显式层次结构”  页上，选择要重命名的显式层次结构，然后单击“编辑” 。  
   
-6.  在“名称” **** 框中，键入更新后的层次结构名称。  
+6.  在“名称”  框中，键入更新后的层次结构名称。  
   
 7.  单击“ **保存**”。  
   

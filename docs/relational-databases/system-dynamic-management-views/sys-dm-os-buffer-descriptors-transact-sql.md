@@ -21,12 +21,12 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce3894ac989047dc8274c6770e881066023ccabd
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 83162825d5c4598c8c9f5fecae10feed03364abd
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99250366"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100344321"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,12 +56,12 @@ ms.locfileid: "99250366"
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
    
 ## <a name="remarks"></a>备注  
  sys.dm_os_buffer_descriptors 返回资源数据库正在使用的页。 sys.dm_os_buffer_descriptors 不会返回有关免费或被盗页面的信息，也不会返回有关在读取时出错的页的信息。  
   
-|From|功能|启用|关系|  
+|从|功能|开|关系|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|多对一|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|多对一|  

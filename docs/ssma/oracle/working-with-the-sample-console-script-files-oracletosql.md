@@ -15,12 +15,12 @@ ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: f7b9fa46fcd5b24b5427c4ba7a359ac37565f724
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8f26a02082dad9533044617771c1525fffd467e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463179"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080698"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>使用示例控制台脚本文件 (OracleToSQL)
 提供了一些示例文件，其中包含有关用户参考和使用情况的产品。 本部分介绍了如何轻松地自定义这些脚本以满足最终用户需求。  
@@ -42,7 +42,7 @@ ms.locfileid: "88463179"
   
     -   此示例为源数据库和目标数据库提供了不同的连接模式，用户可以根据需要选择任何模式。 此示例包含服务器定义。  
   
-    -   用户只需将值更改为所需的源和目标服务器定义，就可以连接到所需的数据库。 在本示例中，提供了所有值作为可在 **VariableValueFileSample.xml**中使用的变量值。  可以从用户的工作服务器连接文件中删除所有其他连接参数。  
+    -   用户只需将值更改为所需的源和目标服务器定义，就可以连接到所需的数据库。 在本示例中，提供了所有值作为可在 **VariableValueFileSample.xml** 中使用的变量值。  可以从用户的工作服务器连接文件中删除所有其他连接参数。  
   
     -   有关连接到源服务器和目标服务器的详细信息，请参阅 [创建服务器连接文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) 。  
   

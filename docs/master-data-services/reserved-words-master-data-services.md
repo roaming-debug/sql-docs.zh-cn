@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5eff7f5f2db1d1b155b94818083ddad11f23890e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f87125b2c72ac5c8242965dcb3d0407a4a15614c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456705"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340220"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "88456705"
 > [!NOTE]  
 >  您还应限制使用特殊字符（符号、连字符等）。  
   
--   Models  
+-   [模型](../master-data-services/reserved-words-master-data-services.md#models)  
   
 -   [实体](../master-data-services/reserved-words-master-data-services.md#entities)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "88456705"
 -   [成员](../master-data-services/reserved-words-master-data-services.md#members)  
   
 ##  <a name="models"></a><a name="models"></a> 机型  
- 如果你创建名称设置为 **Name** 或 **Code**的模型，则不要选择“使用与模型相同的名称创建实体”，因为 **Name** 或 **Code** 不能用于实体名称。 ****  
+ 如果你创建名称设置为 **Name** 或 **Code** 的模型，则不要选择“使用与模型相同的名称创建实体”，因为 **Name** 或 **Code** 不能用于实体名称。   
   
 ##  <a name="entities"></a><a name="entities"></a> 条目  
  对于实体名称，不能使用 **Name** 或 **Code**。  
@@ -78,7 +78,7 @@ ms.locfileid: "88456705"
 -   **Version_ID**  
   
 ##  <a name="members"></a><a name="members"></a> 组员  
- 对于成员，不能对 **Code**属性值使用 **MDMMemberStatus**、 **MDMUnused** 或 **ROOT** 。  
+ 对于成员，不能对 **Code** 属性值使用 **MDMMemberStatus**、 **MDMUnused** 或 **ROOT** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  

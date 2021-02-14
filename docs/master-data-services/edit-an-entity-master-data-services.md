@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a95b2515fd8840f3a5dc04b4276bfb0316535619
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55cc510ecfb781d1d4366d9df928223139116fde
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389543"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341741"
 ---
 # <a name="edit-an-entity-master-data-services"></a>编辑实体 (Master Data Services)
 
@@ -37,30 +37,30 @@ ms.locfileid: "88389543"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  在“管理模型” **** 页上，从网格中选择一个模型，然后单击“实体” ****。  
+2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体” 。  
   
-3.  在“管理实体” **** 页上，从“网格”中选择要更改的实体所在的行，然后单击“编辑” ****。  
+3.  在“管理实体”  页上，从“网格”中选择要更改的实体所在的行，然后单击“编辑” 。  
   
-4.  在“名称” **** 框中，键入属性的新名称。  
+4.  在“名称”  框中，键入属性的新名称。  
   
-5.  在“说明” **** 字段中，键入实体的新说明。  
+5.  在“说明”  字段中，键入实体的新说明。  
   
-6.  在“临时表的名称” **** 字段中，键入临时表的新名称。  
+6.  在“临时表的名称”  字段中，键入临时表的新名称。  
   
-7.  对于“事务日志类型”**** 字段，请在下拉列表中选择更新的事务日志类型。  
+7.  对于“事务日志类型”字段，请在下拉列表中选择更新的事务日志类型。  
   
      有关详细信息，请参阅[更改实体事务日志类型 (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
-8.  选中或取消选中“自动创建代码值” **** 复选框。  
+8.  选中或取消选中“自动创建代码值”  复选框。  
   
      有关详细信息，请参阅[自动创建代码 (Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)  
   
-9. 选中或取消选中“启用数据压缩” **** 复选框。 默认情况下，系统将打开行压缩。  
+9. 选中或取消选中“启用数据压缩”  复选框。 默认情况下，系统将打开行压缩。  
   
      有关详细信息，请参阅 [数据压缩](../relational-databases/data-compression/data-compression.md)  
   
 ## <a name="status"></a>状态  
- 在网格的状态列中显示实体上所执行操作的状态。 单击“保存实体” **** 时，将显示下图，指示实体正在更新。  
+ 在网格的状态列中显示实体上所执行操作的状态。 单击“保存实体” 时，将显示下图，指示实体正在更新。  
   
  ![用于更新状态的图标](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")  
   

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c27ed4fad982831288f1e115f6da94bc70114c61
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: c6ae0aedd4971d6345811e6ee0bfff5afa395c15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037422"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344983"
 ---
 # <a name="functions-on-sequences---id"></a>基于序列的函数 - id
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  返回具有 xs： ID 值的元素节点序列，该序列与 *$arg*中提供的一个或多个 XS： IDREF 值的值相匹配。  
+  返回具有 xs： ID 值的元素节点序列，该序列与 *$arg* 中提供的一个或多个 XS： IDREF 值的值相匹配。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ fn:id($arg as xs:IDREF*) as element()*
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. 基于 IDREF 属性值检索元素  
  下面的示例使用 fn： id `employee` 基于 IDREF manager 属性检索 <> 元素。 在此示例中，manager 属性是一个 IDREF 类型的属性，eid 属性是一个 ID 类型的属性。  
   
- 对于特定的管理器属性值， **id ( # B1 ** 函数将查找 `employee` id 类型属性值与输入 IDREF 值匹配的 <> 元素。 换言之，对于特定的员工， **id ( # B1 ** 函数返回 employee 经理。  
+ 对于特定的管理器属性值， **id ()** 函数将查找 `employee` 其 id 类型属性值与输入 IDREF 值匹配的 <> 元素。 换言之，对于特定的员工， **id ()** 函数返回 employee 经理。  
   
  在该示例中执行下列操作：  
   
@@ -101,7 +101,7 @@ Go
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. 基于 OrderList IDREFS 属性值检索元素  
  在下面的示例中，<> 元素的 OrderList 属性 `Customer` 是一个 IDREFS 类型属性。 它列出特定客户的订单 ID。 对于每个订单 id， `Order` <`Customer`> 提供订单值 <> 元素子级。  
   
- 查询表达式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 检索第一个客户的 IDRES 列表中的第一个值。 然后，将此值传递给 **id ( # B1 ** 函数。 然后，该函数查找其 "订单 id" `Order` 属性值与 **id ( # B1 ** 函数的输入匹配的 <> 元素。  
+ 查询表达式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 检索第一个客户的 IDRES 列表中的第一个值。 然后，将此值传递给 **()** 函数的 id。 然后，该函数查找 `Order` 其 "订单 id" 属性值与 **id ()** 函数的输入匹配的 <> 元素。  
   
 ```  
 drop xml schema collection SC  
@@ -177,9 +177,9 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持 **id ( **的双参数版本。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持 **id ()** 的双参数版本。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 要求使用 id 参数类型 ** ( # B1 ** 是 XS： IDREF * 的子类型。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 要求 id 的参数类型 **()** 是 XS： IDREF * 的子类型。  
   
 ## <a name="see-also"></a>另请参阅  
  [序列上的函数](./xquery-functions-against-the-xml-data-type.md)  

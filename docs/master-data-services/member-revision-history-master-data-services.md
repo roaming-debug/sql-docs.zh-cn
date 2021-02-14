@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 16928202fa2007ecdd2566f7ef215b2ffc09ff4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 148d2d815680ef0e8c03cf2dc4d68f43864872f4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88388683"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341410"
 ---
 # <a name="member-revision-history-master-data-services"></a>成员修订历史记录 (Master Data Services)
 
@@ -39,31 +39,31 @@ ms.locfileid: "88388683"
   
  **查看和管理修订历史记录**  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，选择模型和版本，然后单击“资源管理器” ****。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，选择模型和版本，然后单击“资源管理器” 。  
   
-2.  从“实体” **** 菜单中选择实体。  
+2.  从“实体”  菜单中选择实体。  
   
-3.  单击“查看历史记录” **** 来查看实体的所有历史数据。  
+3.  单击“查看历史记录”  来查看实体的所有历史数据。  
   
-4.  单击“筛选器” **** 来筛选数据。  
+4.  单击“筛选器”  来筛选数据。  
   
 5.  单击列标题对数据进行排序。  
   
-6.  如果具有更新权限，请单击“还原成员” **** 回退到所选版本。  
+6.  如果具有更新权限，请单击“还原成员”  回退到所选版本。  
   
 ## <a name="view-and-manage-revision-history-by-member"></a>由成员查看和管理修订历史记录  
  如果具有成员的读取权限，就可以在资源管理器功能区中查看成员的修订版本。 如果具有更新权限，就可以将成员回退到之前的修订版本或为修订版本添加注释。  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，选择模型和版本，然后单击“资源管理器” ****。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，选择模型和版本，然后单击“资源管理器” 。  
   
-2.  从“实体” **** 菜单中选择实体。  
+2.  从“实体”  菜单中选择实体。  
   
 3.  选择成员。  
   
-4.  在右窗格中，单击“查看历史记录” **** 。  
+4.  在右窗格中，单击“查看历史记录”  。  
   
 ## <a name="log-retention-setting"></a>日志保留设置  
- 可以通过设置 **数据库的系统设置中的“日志保留天数”**[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 属性配置历史记录数据保留期，也可以通过在创建或编辑模型时设置“日志保留天数” **** 来配置。  
+ 可以通过设置 **数据库的系统设置中的“日志保留天数”**[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 属性配置历史记录数据保留期，也可以通过在创建或编辑模型时设置“日志保留天数”  来配置。  
   
 ## <a name="related-task"></a>相关任务  
   

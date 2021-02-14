@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f4300079ea99bfcfe5b80dc623497d5fb603f162
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aba0e7a327d50e2a502270c590e200c690890c98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883884"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272488"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>将 Master Data Services 数据库与 Web 应用程序关联
 
@@ -36,7 +36,7 @@ ms.locfileid: "85883884"
   
 1.  打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  在左窗格中单击 **“Web 配置”**。  
+2.  在左窗格中单击 **“Web 配置”** 。  
   
 3.  在 **“Web 配置”** 页的 **“Web 应用程序”** 下，从 **“网站”** 列表中选择包含 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的网站。  
   

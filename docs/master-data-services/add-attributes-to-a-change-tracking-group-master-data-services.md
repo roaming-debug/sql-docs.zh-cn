@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 154dc5a555e97d4de56f3a40981aad71e64fe22c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72bf0900fc46c566ae766f4ab7705ccc0bca47de
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491486"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272918"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>向更改跟踪组添加属性 (Master Data Services)
 
@@ -44,21 +44,21 @@ ms.locfileid: "88491486"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  在“管理模型” **** 页上，从网格中选择一个模型，然后单击“实体” ****。  
+2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体” 。  
   
-3.  在“管理实体” **** 页上，选择要为其创建属性的实体所在的行。  
+3.  在“管理实体”  页上，选择要为其创建属性的实体所在的行。  
   
 4.  单击 **“属性”**。  
   
-5.  在“管理属性” **** 页上，执行下列操作之一。  
+5.  在“管理属性”  页上，执行下列操作之一。  
   
-    -   如果是叶成员的属性，请从“成员类型” **** 列表框中选择“叶” **** 。  
+    -   如果是叶成员的属性，请从“成员类型”  列表框中选择“叶”  。  
   
-    -   如果属性是针对合并成员，则从“成员类型” **** 列表框中选择“合并” **** 。  
+    -   如果属性是针对合并成员，则从“成员类型”  列表框中选择“合并”  。  
   
-    -   如果属性是针对集合，则从“成员类型” **** 列表框中选择“集合” **** 。  
+    -   如果属性是针对集合，则从“成员类型”  列表框中选择“集合”  。  
   
-6.  选择要编辑的属性所在的行，然后单击“编辑” ****。  
+6.  选择要编辑的属性所在的行，然后单击“编辑” 。  
   
 7.  选中 **“启用更改跟踪”** 复选框。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88491486"
   
 9. 单击 **“保存属性”**。  
   
-     对于已编辑的属性，网格中的“启用更改跟踪组”**** 列会变成“是(组: 输入的组号)”****。  
+     对于已编辑的属性，网格中的“启用更改跟踪组”列会变成“是(组: 输入的组号)”。  
   
 10. 对于您要在组中包括的所有属性重复此过程。 对于该组中的每个属性，使用相同的更改跟踪组编号。  
   

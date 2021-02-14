@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 490841c151fc4636e2a5ed8a252de0fb3385c042
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a23a3827cafd22b23144fa8d0862e25f2afe48b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88342793"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340235"
 ---
 # <a name="purge-version-members-master-data-services"></a>清除版本成员 (Master Data Services)
 
@@ -35,11 +35,11 @@ ms.locfileid: "88342793"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
   
-2.  在“管理版本” **** 页上，选择与要清除的版本对应的模型。 随后显示模型版本的列表。  
+2.  在“管理版本”  页上，选择与要清除的版本对应的模型。 随后显示模型版本的列表。  
   
 3.  选择与要清除的版本对应的行。  
   
-4.  单击“清除成员” ****。  
+4.  单击“清除成员” 。  
   
 5.  在确认提示中单击“确定”。  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e9fe89ec7abff9a3440b72bb00d4aaee86837ca4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0661048822933b8b49274d7addc40cec130e289
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257774"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343191"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>刷新数据（用于 Excel 的 MDS 外接程序）
 
@@ -44,7 +44,7 @@ ms.locfileid: "92257774"
 > -   刷新时，将删除 MDS 管理的单元上的注释。  
   
 ## <a name="how-to-refresh-mds-managed-data"></a>如何刷新 MDS 管理的数据  
- 在功能区上的 **“连接并加载”** 组中， **“刷新”** 按钮提供两个选项： **“全部刷新”** 和 **“刷新所选内容”**。 功能区按钮的默认操作是 **“全部刷新”**。 若要使用服务器的值刷新整个工作表，请单击 **“刷新”** 按钮或选择 **“全部刷新”** 选项。 若要仅刷新工作表中的部分单元格，请选择这些单元格（必须是一个连续选择的单元格区域），然后选择“刷新所选内容”选项****。  
+ 在功能区上的 **“连接并加载”** 组中， **“刷新”** 按钮提供两个选项： **“全部刷新”** 和 **“刷新所选内容”**。 功能区按钮的默认操作是 **“全部刷新”**。 若要使用服务器的值刷新整个工作表，请单击 **“刷新”** 按钮或选择 **“全部刷新”** 选项。 若要仅刷新工作表中的部分单元格，请选择这些单元格（必须是一个连续选择的单元格区域），然后选择“刷新所选内容”选项。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

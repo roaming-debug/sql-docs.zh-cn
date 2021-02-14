@@ -1,6 +1,6 @@
 ---
-title: 大写字母函数（XQuery） |Microsoft Docs
-description: 了解如何使用 XQuery 函数大写（），该函数将字符转换为其大写等效项。
+title: )  (XQuery 的大写函数 |Microsoft Docs
+description: 了解如何使用 XQuery 函数大写 () 将字符转换为其大写等效项。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e48fb5448284cc90a87aff88a9cf7a0304c661d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 62a59ec49dfccfba7c710baf9a80eae2c301a94b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87107219"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344959"
 ---
 # <a name="functions-on-string-values---upper-case"></a>基于字符串值的函数 - upper-case
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  此函数将 *$arg*中的每个字符转换为其大写等效项。 Unicode 码位的 Microsoft Windows 二进制大小写转换指定如何将字符转换为大写。 这一标准与 Unicode 标准码位标准的映射不相同。  
+  此函数将 *$arg* 中的每个字符转换为其大写等效项。 Unicode 码位的 Microsoft Windows 二进制大小写转换指定如何将字符转换为大写。 这一标准与 Unicode 标准码位标准的映射不相同。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,14 +35,14 @@ ms.locfileid: "87107219"
 fn:upper-case($arg as xs:string?) as xs:string  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
   
 |术语|定义|  
 |-|-|
 |*$arg*|要转换为大写的字符串值。|  
   
 ## <a name="remarks"></a>备注  
- 如果 *$arg*的值为空，则返回零长度字符串。  
+ 如果 *$arg* 的值为空，则返回零长度字符串。  
   
 ## <a name="examples"></a>示例  
   

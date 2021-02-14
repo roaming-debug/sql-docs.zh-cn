@@ -1,6 +1,6 @@
 ---
-title: last 函数（XQuery） |Microsoft Docs
-description: 了解 XQuery last （）函数，它返回序列中最后一项的整数索引。
+title: last 函数 (XQuery) |Microsoft Docs
+description: 了解 XQuery 最后 () 函数，该函数返回序列中最后一项的整数索引。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3713f0fadfe186c31a26f2f19adea88da2f28384
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3fdc8ce4bf35bb630d0ed0b40892312f89a5285c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729519"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340523"
 ---
 # <a name="context-functions---last-xquery"></a>上下文函数 - last (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -36,13 +36,13 @@ fn:last() as xs:integer
 ```  
   
 ## <a name="remarks"></a>备注  
- 在 SQL Server 中， **fn： last （）** 只能用于上下文相关的谓词的上下文中。 特别要指出的是，它只能在方括号 (`[ ]`) 内使用。  
+ 在 SQL Server 中， **fn： last ()** 仅可用于上下文相关的谓词的上下文中。 特别要指出的是，它只能在方括号 (`[ ]`) 内使用。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种 **xml** 类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. 使用 last() XQuery 函数检索最后两个生产步骤  
- 下面的查询检索某个特定生产模型的最后两个生产步骤。 在此查询中使用由**last （）** 函数返回的值、生产步骤数来检索最后两个生产步骤。  
+ 下面的查询检索某个特定生产模型的最后两个生产步骤。 在此查询中，将使用 **最后一个 ()** 函数返回的值、制造步骤数来检索最后两个生产步骤。  
   
 ```  
 SELECT ProductModelID, Instructions.query('   
@@ -60,7 +60,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 在前面的查询中，中的**last （）** 函数/ `/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` 返回制造步骤的数目。 此值用于检索生产车间的最后一个生产步骤。  
+ 在前面的查询中， **最后一个 ()** 函数在/中 `/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` 返回制造步骤的数目。 此值用于检索生产车间的最后一个生产步骤。  
   
  结果如下：  
   

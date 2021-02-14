@@ -1,6 +1,6 @@
 ---
 title: " (XQuery) 为 false 函数 |Microsoft Docs"
-description: '了解返回布尔值 False 的 false ( # A1 函数。'
+description: 了解返回布尔值 False 的 false () 函数。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb10d97bbfa727d75aaf032fa2031211e1bb95ea
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 76fc9e5210a4fb6e3075e16b92252ac9f9bab090
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037034"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340469"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>布尔构造函数 - false (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

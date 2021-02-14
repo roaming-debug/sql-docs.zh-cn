@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a50723727690307492d3d16cb3671e762dec401f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1924b33891b36d68a7b79c9046e0375b92f1d940
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461736"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338212"
 ---
 # <a name="leaf-permissions-master-data-services"></a>叶权限（主数据服务）
 
@@ -62,7 +62,7 @@ ms.locfileid: "88461736"
 ### <a name="example"></a>示例  
  对于 Product 实体，将 **“更新”** 权限分配给 Subcategory 属性。 向所有其他属性分配“拒绝”权限。  
   
-|名称|代码|Subcategory（更新）|  
+|name|代码|Subcategory（更新）|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} 山地自行车|  
 |Mountain-100|BK-M201|{5} 山地自行车|  

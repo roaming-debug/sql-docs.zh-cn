@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1e1fb93c02edc21cceae90470c35a99d17748c6c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a7b08744e0b1ed8a80859cf81e02079f0e454ac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500578"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338969"
 ---
 # <a name="delete-a-version-master-data-services"></a>删除版本 (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "88500578"
     EXEC [mdm].[udpVersionDelete] @Version_ID='version_ID'  
     ```  
   
-6.  运行查询。  
+6.  运行该查询。  
   
     > [!NOTE]  
     >  您可能必须等待几分钟，然后 Web 应用程序才能反映此更改。  

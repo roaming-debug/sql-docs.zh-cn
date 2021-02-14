@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f1dda8e8683ab06cddc3c30b79d0bbb370f4f230
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f9258c1019909cecd67573fad575a37b6e9d1d8f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88388443"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347761"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>基于属性值更改启动操作 (Master Data Services)
 
@@ -74,7 +74,7 @@ ms.locfileid: "88388443"
   
 18. 单击 **“上一步”**。  
   
-19. 或者，在“业务规则维护”**** 页上，对于包含业务规则的行，双击“名称”****、“说明”**** 或“通知”**** 列中的单元以便更新值。  
+19. 或者，在“业务规则维护”页上，对于包含业务规则的行，双击“名称”、“说明”或“通知”列中的单元以便更新值。  
   
     > [!NOTE]  
     >  仅针对包括验证操作的规则发送通知。  

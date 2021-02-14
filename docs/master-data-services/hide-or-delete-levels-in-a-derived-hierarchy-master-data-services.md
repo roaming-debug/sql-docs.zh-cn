@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21d638e7a4600dfc818d1213c9cd72db588aaded
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1c63de9accf8b3de74793753f40ee2e01d0546b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471932"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344774"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>隐藏或删除派生层次结构中的级别 (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "88471932"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  从菜单栏中，指向“管理”****，然后单击“派生层次结构”****。  
+2.  从菜单栏中，指向“管理”，然后单击“派生层次结构”。  
   
 3.  在 **“派生层次结构维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   

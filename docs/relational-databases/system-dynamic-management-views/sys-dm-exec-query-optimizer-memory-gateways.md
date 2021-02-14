@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ff3adb52a968957faead5453e266ec733df38f4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 66e5d3e4509b8593a41a53348e466054ee01b4f4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198530"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342908"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-sql) 
 
@@ -33,7 +33,7 @@ ms.locfileid: "99198530"
 
 返回用于限制并发查询优化的资源信号量的当前状态。
 
-|列|类型|说明|  
+|列|类型|描述|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Resource Governor 下的资源池 ID|  
 |name|**sysname**| (小型网关、中型网关、大网关) 编译入口名称|

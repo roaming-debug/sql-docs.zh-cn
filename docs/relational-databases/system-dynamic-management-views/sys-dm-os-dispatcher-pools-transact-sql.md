@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 5b5b16a27d17b2dd75d9b398f613e098b10345b4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dcd6c612f406e3c4ae10c7ab0aacfeb3a71fd9c9
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184914"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100338876"
 ---
 # <a name="sysdm_os_dispatcher_pools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99184914"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |dispatcher_pool_address|**varbinary(8)**|调度程序池的地址。 dispatcher_pool_address 是唯一的。 不可为 null。|  
-|type|**nvarchar(256)**|调度程序池的类型。 不可为 null。 有两种类型的调度程序池：<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> 查询 DMV 以获取完整列表|  
+|类型|**nvarchar(256)**|调度程序池的类型。 不可为 null。 有两种类型的调度程序池：<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> 查询 DMV 以获取完整列表|  
 |name|**nvarchar(256)**|调度程序池的名称。 不可为 null。|  
 |dispatcher_count|**int**|处于活动状态的调度程序线程数。 不可为 null。|  
 |dispatcher_ideal_count|**int**|调度程序池通过增大可使用的调度程序线程数。 不可为 null。|  
@@ -50,7 +50,7 @@ ms.locfileid: "99184914"
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="see-also"></a>另请参阅  
   
