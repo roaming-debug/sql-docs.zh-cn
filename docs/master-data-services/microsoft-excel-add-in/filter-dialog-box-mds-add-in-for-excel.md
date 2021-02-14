@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 58e9bf0ee719e650d8e7a5b8270fbe9f638b559d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e650bd924e893b21cbc6b154887d9cd6e66565b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257924"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352772"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>“筛选器”对话框（用于 Excel 的 MDS 外接程序）
 
@@ -27,7 +27,7 @@ ms.locfileid: "92257924"
  此对话框包含三个部分： **“列”**、 **“行”** 和 **“摘要”**。  
   
 ## <a name="columns"></a>列  
- 使用“列” **** 部分可以确定要在 Excel 中显示的属性（列）。  
+ 使用“列”  部分可以确定要在 Excel 中显示的属性（列）。  
   
 |控件名称|说明|  
 |------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "92257924"
 |向上箭头/向下箭头|单击此选项可在列表中上下移动所选的属性。 从上到下的顺序对应于列在工作表中从左到右的显示顺序。|  
   
 ## <a name="rows"></a>“行”  
- 使用“行” **** 部分可以确定要在 Excel 中显示的成员（行）。 通过定义要显示的行的筛选条件可以确定要显示的行。  
+ 使用“行”  部分可以确定要在 Excel 中显示的成员（行）。 通过定义要显示的行的筛选条件可以确定要显示的行。  
   
 |控件名称|说明|  
 |------------------|-----------------|  
@@ -57,7 +57,7 @@ ms.locfileid: "92257924"
 |控件名称|说明|  
 |------------------|-----------------|  
 |建模|模型的名称。|  
-|版本|版本的名称。|  
+|Version|版本的名称。|  
 |实体|实体的名称。|  
 |“行”|基于在 **“行”** 部分中应用的筛选器要加载到 Excel 中的行数。|  
 |列|基于在 **“列”** 部分中所选的属性要加载到 Excel 中的列数。|  

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1cc9bde70e716ba19f17f8d146719ccb191580b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eb725a491eb87a0116413a786c514a0ede98361f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883449"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066942"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server 单元测试中的脚本
 
@@ -54,7 +54,7 @@ ms.locfileid: "85883449"
 ## <a name="initialization-and-cleanup-scripts"></a>初始化和清理脚本  
 在 SQL Server 单元测试设计器中，TestInitialize 和 TestCleanup 脚本被称为公用脚本。 前面的示例假定两个单元测试是同一测试类的一部分。 因此，它们共享相同的 TestInitialize 和 TestCleanup 脚本。 对于单个测试类中的所有单元测试，始终是这种情况。 不过，如果测试运行包含来自不同测试类的单元测试，则相关测试类的公用脚本将在单元测试运行之前和之后运行。  
   
-如果仅使用 SQL Server 单元测试设计器编写单元测试，则可能不熟悉测试类的概念。 每次通过打开“测试”**** 菜单并单击“新建测试”**** 来创建单元测试时，SQL Server Data Tools 都会生成测试类。 测试类显示在“解决方案资源管理器”中，并使用你指定的测试名称后跟 .cs 或 .vb 扩展名。 在每个测试类中，各个单元测试存储为测试方法。 不过，不管测试方法（即单元测试）的数量是多少，每个测试类可以具有零个或一个 TestInitialize 和 TestCleanup 脚本。  
+如果仅使用 SQL Server 单元测试设计器编写单元测试，则可能不熟悉测试类的概念。 每次通过打开“测试”菜单并单击“新建测试”来创建单元测试时，SQL Server Data Tools 都会生成测试类。 测试类显示在“解决方案资源管理器”中，并使用你指定的测试名称后跟 .cs 或 .vb 扩展名。 在每个测试类中，各个单元测试存储为测试方法。 不过，不管测试方法（即单元测试）的数量是多少，每个测试类可以具有零个或一个 TestInitialize 和 TestCleanup 脚本。  
   
 您可以使用 TestInitialize 脚本来准备测试数据库，并可以使用 TestCleanup 脚本使测试数据库返回到已知状态。 例如，您可以在测试脚本中使用 TestInitialize 来创建稍后运行的帮助器存储过程以测试不同的存储过程。  
   
