@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 48ddbf53a44bf0d34abe725595bba255e6fa4fae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48dce30f380d7d9cea43122254c38d83d4e54028
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92258075"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350218"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>删除用户或组 (Master Data Services)
 
@@ -46,7 +46,7 @@ ms.locfileid: "92258075"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
   
-2.  若要删除某一用户，请保持在 **“用户”** 页上。 若要删除某一组，请从菜单栏中单击“管理组”****。  
+2.  若要删除某一用户，请保持在 **“用户”** 页上。 若要删除某一组，请从菜单栏中单击“管理组”。  
   
 3.  在网格中，选择你要删除的用户或组所对应的行。  
   

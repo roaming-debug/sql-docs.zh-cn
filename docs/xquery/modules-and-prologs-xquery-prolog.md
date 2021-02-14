@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8098ddebb61a33c017f22598bec16041f112097a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2b460f6da448e45d688ebcc08f418a9acbae85b8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918451"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341838"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>模块和 Prolog - XQuery Prolog
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 查询由一个 prolog 和一个主体组成。 XQuery prolog 是一系列声明和定义，它们共同创建所需的查询处理环境。 在 SQL Server 中，XQuery prolog 可以包含命名空间声明。 XQuery 主体由指定预期查询结果的一些表达式组成。  
   
- 例如，对**xml**类型的说明列指定了以下 XQuery，该指令将生产说明存储为 xml。 该查询将检索生产车间 `10` 的生产说明。 `query()` **Xml**数据类型的方法用于指定 XQuery。  
+ 例如，对 **xml** 类型的说明列指定了以下 XQuery，该指令将生产说明存储为 xml。 该查询将检索生产车间 `10` 的生产说明。 `query()` **Xml** 数据类型的方法用于指定 XQuery。  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -42,14 +42,14 @@ WHERE ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   XQuery 序言包含命名空间前缀（AWMI）声明 `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";` 。  
+-   XQuery 序言 (AWMI) 声明中包含命名空间前缀 `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";` 。  
   
 -   `declare namespace` 关键字定义查询主体随后使用的命名空间前缀。  
   
 -   `/AWMI:root/AWMI:Location[@LocationID="10"]` 是查询主体。  
   
 ## <a name="namespace-declarations"></a>命名空间声明  
- 命名空间声明定义前缀并将其与命名空间 URI 相关联，如下面的查询所示。 在查询中， `CatalogDescription` 是一个**xml**类型列。  
+ 命名空间声明定义前缀并将其与命名空间 URI 相关联，如下面的查询所示。 在查询中， `CatalogDescription` 是一个 **xml** 类型列。  
   
  对此列指定 XQuery 时，查询 prolog 将指定 `declare namespace` 声明以便将前缀 `PD`（即产品说明）与命名空间 URI 相关联。 查询主体中随后将使用此前缀代替命名空间 URI。 产生的 XML 中的节点属于与命名空间 URI 相关联的命名空间。  
   
@@ -74,7 +74,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 有关详细信息，请参阅通过[WITH XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
+ 有关详细信息，请参阅通过 [WITH XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
   
 ### <a name="default-namespace-declaration"></a>默认命名空间声明  
  如果不使用 `declare namespace` 声明来声明一个命名空间前缀，您可以使用 `declare default element namespace` 声明为元素名称绑定一个默认命名空间。 在这种情况下，并不需要指定任何前缀。  

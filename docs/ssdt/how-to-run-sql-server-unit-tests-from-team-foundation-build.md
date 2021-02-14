@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ed4241fb1aeac7faaceadc250f0c2e61f10179fc
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2b87720ba7a4cbdb531cd19fe23be7d48d9a07ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987533"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018127"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：通过 Team Foundation Build 运行 SQL Server 单元测试
 
@@ -278,7 +278,7 @@ ms.locfileid: "91987533"
   
 2.  如果需要，在“生成定义”中单击新生成定义。  
   
-3.  确认“生成定义”****、“生成代理”**** 和“该生成的放置文件夹”**** 字段中的值全部正确，然后单击“排队”****。  
+3.  确认“生成定义”、“生成代理”和“该生成的放置文件夹”字段中的值全部正确，然后单击“排队”。  
   
     此时将显示“生成资源管理器”的“排队”选项卡。 有关详细信息，请参阅[管理和查看已完成的生成 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100))或[在生成资源管理器中管理你的生成 (Visual Studio 2012)](/previous-versions/ms181732(v=vs.140))。  
   

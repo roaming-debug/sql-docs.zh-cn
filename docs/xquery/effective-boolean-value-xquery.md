@@ -1,5 +1,5 @@
 ---
-title: 有效的布尔值（XQuery） |Microsoft Docs
+title: )  (XQuery 的有效布尔值 |Microsoft Docs
 description: 了解 XQuery 中的有效布尔值。
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 748042147b2e776c096296a98ce27dbc645e2d49
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c9e390546feb848f965df2bfd60a2cc68c8fb3ac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753656"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341548"
 ---
 # <a name="effective-boolean-value-xquery"></a>有效的布尔值 (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85753656"
   
 -   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
- 下面是有效的布尔值示例。 当处理**if**表达式时，将确定条件的有效布尔值。 由于 `/a[1]` 返回空序列，因此有效的布尔值为 False。 结果以包含一个文本节点 (False) 的 XML 返回。  
+ 下面是有效的布尔值示例。 当处理 **if** 表达式时，将确定条件的有效布尔值。 由于 `/a[1]` 返回空序列，因此有效的布尔值为 False。 结果以包含一个文本节点 (False) 的 XML 返回。  
   
 ```  
 value is false  
@@ -65,11 +65,11 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- 查询类型化的**xml**列或变量时，可以具有布尔类型的节点。 此情况下的**数据（）** 将返回一个布尔值。 如果查询表达式返回布尔值 True，则有效的布尔值为 True，如下例所示。 本例中对下列各项也进行了说明：  
+ 查询类型化的 **xml** 列或变量时，可以具有布尔类型的节点。 在这种情况下， **数据 ()** 将返回一个布尔值。 如果查询表达式返回布尔值 True，则有效的布尔值为 True，如下例所示。 本例中对下列各项也进行了说明：  
   
 -   创建一个 XML 架构集合。 \<b>集合中的元素的类型为 Boolean。  
   
--   创建并查询类型化的**xml**变量。  
+-   创建并查询类型化的 **xml** 变量。  
   
 -   表达式 `data(/b[1])` 返回布尔值 True。 因此，这种情况下，有效的布尔值为 True。  
   

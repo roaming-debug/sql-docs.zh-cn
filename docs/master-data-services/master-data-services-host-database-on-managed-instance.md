@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: ef24acb23a346b59b747d876d60d9a58374188bd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0ae7d5ad7bdb7874e4f6a99a1a99ea08c228fced
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97469968"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339479"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>在托管实例上托管 MDS 数据库
 
@@ -110,9 +110,9 @@ ms.locfileid: "97469968"
 
 1. 打开 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，然后在左窗格中选择 " **数据库配置** "。
 
-1. 选择 " **创建数据库** " 以打开 " **创建数据库向导**"。 选择“下一步”  。
+1. 选择 " **创建数据库** " 以打开 " **创建数据库向导**"。 选择“下一步”。
 
-1. 在 " **数据库服务器** " 页上，完成 " **SQL Server 实例** " 字段，然后选择 " **身份验证类型**"。 选择 " **测试连接** " 以确认你可以通过所选的身份验证类型使用凭据连接到数据库。 选择“下一步”  。
+1. 在 " **数据库服务器** " 页上，完成 " **SQL Server 实例** " 字段，然后选择 " **身份验证类型**"。 选择 " **测试连接** " 以确认你可以通过所选的身份验证类型使用凭据连接到数据库。 选择“下一步”。
 
    > [!NOTE]
    > - SQL Server 实例如下所示 `xxxxxxx.xxxxxxx.database.windows.net` 。
@@ -123,7 +123,7 @@ ms.locfileid: "97469968"
 
    !["创建数据库" 向导的 "数据库服务器" 页的屏幕截图。](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-MI_CreateDBConnect")  
 
-1. 在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除 " **SQL Server 默认排序规则** " 复选框，然后选择一个或多个可用选项。 例如， **区分大小写**。 选择“下一步”  。
+1. 在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除 " **SQL Server 默认排序规则** " 复选框，然后选择一个或多个可用选项。 例如， **区分大小写**。 选择“下一步”。
 
    !["创建数据库" 向导的 "数据库" 页的屏幕截图。](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "mds-SQLServer2019-MI_CreatedDBName")
 
@@ -163,13 +163,13 @@ ms.locfileid: "97469968"
 
 1. 在 "web **配置**" 窗格的 "web **应用程序**" 窗口中，选择您创建的应用程序，然后在 "**将应用程序与数据库关联**" 部分中选择 "**选择**"。
 
-1. 选择 " **连接** "，然后选择 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 要与 web 应用程序关联的数据库。 选择“确定”。
+1. 选择 " **连接** "，然后选择 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 要与 web 应用程序关联的数据库。 选择“确定”  。
 
    已完成网站设置。 " **Web 配置** " 页现在会显示所选网站、所创建的 Web 应用程序以及 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 与该应用程序关联的数据库。
 
    ![Web 配置部分的屏幕截图。](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "mds-SQLServer2019-MI_WebConfigSelectDB")
 
-1. 选择“应用”。 你将看到 " **配置完成** " 消息。 在消息框中选择 **"确定"** 以启动 web 应用程序。 网站地址为 `http://server name/web application/` 。
+1. 选择“应用”。 你将看到 " **配置完成** " 消息。 在消息框中选择 **"确定"** 以启动 web 应用程序。 网站地址是 `http://server name/web application/`。
 
 ## <a name="configure-authentication"></a>配置身份验证
 

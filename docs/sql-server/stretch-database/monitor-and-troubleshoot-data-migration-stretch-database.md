@@ -12,21 +12,21 @@ ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7e4ca3f7b7a857e5c8592844c9523753b68a3728
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f4d46ccfca9642a1be2f9e60d7f3382b4c49e90d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492660"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079898"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>数据迁移的监视与故障排除 (Stretch Database)
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
-  在 SQL Server Management Studio 中选择数据库的“任务 | Stretch | 监视”**** 以监视 Stretch Database 监视器中的数据迁移。  
+  在 SQL Server Management Studio 中选择数据库的“任务 | Stretch | 监视”以监视 Stretch Database 监视器中的数据迁移。  
   
 ## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>在延伸数据库监视器中检查数据迁移状态  
- 在 SQL Server Management Studio 中选择数据库的“任务 | Stretch | 监视”**** 以打开 Stretch Database 监视器并监视数据迁移。  
+ 在 SQL Server Management Studio 中选择数据库的“任务 | Stretch | 监视”以打开 Stretch Database 监视器并监视数据迁移。  
   
 -   此监视器的上半部分显示有关已启用拉伸的 SQL Server 数据库和远程 Azure 数据库的常规信息。  
   

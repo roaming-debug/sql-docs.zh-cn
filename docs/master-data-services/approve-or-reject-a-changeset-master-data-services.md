@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 42b3b6ae849313a00111ceda1fb19eda334c0278
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47ea1da154b6e27be84888361867e370945e7438
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456805"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339562"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>批准或拒绝变更集 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88456805"
   
 ## <a name="prerequisites"></a>先决条件  
   
--   **** 您必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-    您必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
 -   你必须具有实体的管理员权限。  
   
@@ -40,15 +40,15 @@ ms.locfileid: "88456805"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，选择模型和版本，然后单击 " **资源管理器**"。  
   
-2.  单击“实体”菜单中的某个实体 **** 。  
+2.  单击“实体”菜单中的某个实体  。  
   
-3.  在右窗格中，选择“变更集” **** ，然后双击你想要批准或拒绝的变更集。  
+3.  在右窗格中，选择“变更集”  ，然后双击你想要批准或拒绝的变更集。  
   
-4.  单击“应用” **** 以应用变更集并查看挂起的更改。  
+4.  单击“应用”  以应用变更集并查看挂起的更改。  
   
-5.  单击“拒绝” **** 以拒绝变更集并将其发送回所有者。  
+5.  单击“拒绝”  以拒绝变更集并将其发送回所有者。  
   
-6.  单击“批准” **** 以批准变更集。 变更集自动提交。  
+6.  单击“批准”  以批准变更集。 变更集自动提交。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建变更集 &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   

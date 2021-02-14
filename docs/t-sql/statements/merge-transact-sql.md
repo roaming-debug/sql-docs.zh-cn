@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: cbc1286bbbced3a546c1057433dba5bbc4289281
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6b6610293bb78ef34ae5ca8b88f762c9ab4948e9
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199383"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978859"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -236,14 +236,14 @@ DEFAULT VALUES
 >[!NOTE]
 > 在 Azure Synapse Analytics 中，MERGE 命令（预览）与 SQL Server 和 Azure SQL 数据库相比具有以下差异。  
 > - MERGE 更新操作实现为删除和插入对。 MERGE 更新的受影响的行计数包括删除的行和插入的行。 
-> - 在预览期间，MERGE 命令不适用于具有 UNIQUE 约束的表。  这不久将在之后的版本中得到修复。
+> - 在预览期间，包含 IDENTITY 列的表不支持 MERGE…WHEN NOT MATCHED INSERT。  
 > - 此表描述了对具有不同分发类型的表的支持：
 
 >|Azure Synapse Analytics 中的 MERGE CLAUSE|支持的 TARGE 分发表| 支持的 SOURCE 分发表|评论|  
 >|-----------------|---------------|-----------------|-----------|  
->|**WHEN MATCHED**| HASH、ROUND_ROBIN、REPLICATE |所有分发类型||  
+>|**WHEN MATCHED**| 所有分发类型 |所有分发类型||  
 >|**NOT MATCHED BY TARGET**|HASH |所有分发类型|使用 UPDATE/DELETE FROM…JOIN 来同步两个表。 |
->|**NOT MATCHED BY SOURCE**|所有分发类型|所有分发类型|使用 UPDATE/DELETE FROM…JOIN 来同步两个表。||  
+>|**NOT MATCHED BY SOURCE**|所有分发类型|所有分发类型|||  
 
 必须指定三个 MATCHED 子句中的至少一个子句，但可以按任何顺序指定。 无法在同一个 MATCHED 子句中多次更新一个变量。  
   

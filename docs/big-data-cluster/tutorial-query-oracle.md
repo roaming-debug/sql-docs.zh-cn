@@ -9,12 +9,12 @@ ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48d7fb0f41446fa54f1376a9a84f7dbff7017960
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 670ab5046c1904fee16f6c0271c49e2a4ecd72fe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196081"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045627"
 ---
 # <a name="tutorial-query-oracle-from-sql-server-big-data-cluster"></a>教程：从 SQL Server 大数据群集查询 Oracle
 
@@ -67,7 +67,7 @@ ms.locfileid: "92196081"
 
 1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”。
+1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”  。
 
    ![SQL Server 主实例查询](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 

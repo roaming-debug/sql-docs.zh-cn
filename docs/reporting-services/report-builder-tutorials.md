@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 096823a659f8b0e1e75cbde0635a4715068f8392
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 127fd6bbfc78589a1858534f11f140fe705b08f0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242937"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031019"
 ---
 # <a name="report-builder-tutorials"></a>报表生成器教程
 
@@ -34,7 +34,7 @@ ms.locfileid: "87242937"
 按照本教程中的步骤来学习如何创建第一个报表。 本教程将向您演示如何使用报表生成器来创建数据源连接、定义简单查询、生成包含数据的布局、设置报表的格式以及添加分组和总计。  
   
 [教程：生成矩阵报表（报表生成器）](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
-按照本教程中的步骤学习如何添加和配置矩阵。 使用表或矩阵向导创建报表数据源、数据集和布局，然后在报表生成器的“设计”**** 视图内增强矩阵的效果。  
+按照本教程中的步骤学习如何添加和配置矩阵。 使用表或矩阵向导创建报表数据源、数据集和布局，然后在报表生成器的“设计”视图内增强矩阵的效果。  
   
 [教程：生成自由格式报表（报表生成器）](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
 按照本教程中的步骤学习如何从头创建自由格式的报表。 此报表在外观上与新闻稿类似。  

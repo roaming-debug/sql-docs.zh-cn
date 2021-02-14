@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: e4236987a3bebca61aafb04e43ee79be1fa04597
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3d7a4efb9a629938b6cfc7d48c990351bc2a5cbc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190005"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100271774"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_database_encryption_regenerate_system_keys) 
 

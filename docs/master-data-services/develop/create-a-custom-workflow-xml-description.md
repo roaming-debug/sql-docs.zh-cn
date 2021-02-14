@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c12348fc830a187a8d88841c15e25ba726bef968
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 416670f703ba40a54650a2dfc28b2f508c202439
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389783"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350146"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>创建自定义工作流 - XML 说明
 
@@ -68,10 +68,10 @@ ms.locfileid: "88389783"
   
 |标记|描述|  
 |---------|-----------------|  
-|\<Type>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的“工作流类型”文本框中输入的文本，用于标识要加载的自定义工作流程序集****。|  
-|\<SendData>|由 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“消息中包括成员数据”复选框控制的一个布尔值****。 如果值为1，则表示 \<MemberData> 发送部分; 否则， \<MemberData> 不会发送部分。|  
-|<Server_URL>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“工作流站点”文本框中输入的文本****。|  
-|<Action_ID>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“工作流名称”文本框中输入的文本****。|  
+|\<Type>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的“工作流类型”文本框中输入的文本，用于标识要加载的自定义工作流程序集。|  
+|\<SendData>|由 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“消息中包括成员数据”复选框控制的一个布尔值。 如果值为1，则表示 \<MemberData> 发送部分; 否则， \<MemberData> 不会发送部分。|  
+|<Server_URL>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“工作流站点”文本框中输入的文本。|  
+|<Action_ID>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“工作流名称”文本框中输入的文本。|  
 |\<MemberData>|包含触发工作流操作的成员的数据。 仅当的值为1时才包括 \<SendData> 。|  
 |\<Enter*xxx*>|这组标记包含有关创建成员的元数据，例如，何时创建该成员或该成员的创建者。|  
 |\<LastChg*xxx*>|这组标记包含有关对成员所作最后更改的元数据，例如，所作更改及更改者。|  

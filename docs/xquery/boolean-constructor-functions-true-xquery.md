@@ -1,6 +1,6 @@
 ---
 title: " (XQuery) 为 true 函数 |Microsoft Docs"
-description: '了解 XQuery 函数 true ( # A1，返回布尔值 True。'
+description: 了解返回布尔值 True () XQuery 函数 true。
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dc3582cb34c80f488005f5a2eaf1c6022c5e1be
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 779e3fa093d851e99e2869053f155fb70570f67c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035790"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340500"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>布尔构造函数 - true (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ fn:true() as xs:boolean
  本主题提供了对存储在 AdventureWorks 数据库的各种 **xml** 类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. 使用 XQuery 布尔函数 true()  
- 下面的示例将查询一个非类型化的 **xml** 变量。 如果 "aaa" 是属性值，则 **值 ( # B1 ** 方法 ** ( # ** B1 方法返回布尔值 true。 **Xml**数据类型** ( # B1**方法的值将布尔值转换为位并将其返回。  
+ 下面的示例将查询一个非类型化的 **xml** 变量。 如果 "aaa" 是属性值，则 **值 ()** 方法中的表达式将返回布尔值 **true ()** 。 **Xml** 数据类型的 **值 ()** 方法将布尔值转换为位并将其返回。  
   
 ```  
 DECLARE @x XML  

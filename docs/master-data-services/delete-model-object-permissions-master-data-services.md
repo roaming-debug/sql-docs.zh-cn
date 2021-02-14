@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: abe02163deac7a26e0301e5e7b9a34abadecf3cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 71a4735fc0637f81e147abfbf07c06f11130c70b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344773"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350232"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>删除模型对象权限 (Master Data Services)
 
@@ -49,11 +49,11 @@ ms.locfileid: "88344773"
   
 6.  单击 **“编辑”** 。  
   
-7.  在“模型权限摘要”区域中，选择与要删除的权限相对应的行。 ****  
+7.  在“模型权限摘要”区域中，选择与要删除的权限相对应的行。   
   
      已找到并突出显示权限的树节点。  
   
-8.  单击树节点，然后在上下文菜单中单击“清除访问”。 ****  
+8.  单击树节点，然后在上下文菜单中单击“清除访问”。   
   
 9. 单击“ **保存**”。  
   

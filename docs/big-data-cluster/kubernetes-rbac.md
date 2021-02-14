@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 315752ffc775aa1db1970e3fef5c807e0f8e1708
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: a379b2bd1bb0e1992d70e1c86ae93163f6c02201
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257128"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046437"
 ---
 # <a name="kubernetes-rbac-model--impact-on-users-and-service-accounts-managing-bdc"></a>Kubernetes RBAC 模型及对用户和服务帐户管理 BDC 的影响
 
@@ -33,7 +33,7 @@ BDC 使用服务帐户（例如 `sa-mssql-controller` 或 `master`）来协调�
 4. 创建对命名空间或项目具有完全权限但不是群集级别权限的 `<namespaced>-admin` 角色。
 5. 为角色创建该服务帐户的角色分配。
 
-完成这些步骤后，预配控制平面 Pod，并且服务帐户将部署大数据群集的其余部分。  
+完成这些步骤后，预配控制平面 Pod，并且服务帐户将部署大数据群集的其余部分。  
 
 因此，进行部署的用户必须具有执行以下操作的权限：
 
@@ -93,11 +93,11 @@ BDC 使用服务帐户（例如 `sa-mssql-controller` 或 `master`）来协调�
 可以在 `control.json` 部署配置文件的安全性部分中自定义这些设置：
 
 ```json
-  "security": {
-    …
-    "allowNodeMetricsCollection": false,
-    "allowPodMetricsCollection": false
-  }
+  "security": {
+    …
+    "allowNodeMetricsCollection": false,
+    "allowPodMetricsCollection": false
+  }
 ```
 
 如果这些设置设为 `false`，则 BDC 部署工作流不会尝试为 Telegraf 创建服务帐户、群集角色和绑定。

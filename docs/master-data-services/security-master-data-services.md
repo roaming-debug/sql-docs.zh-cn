@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9501014be6fdd311c37fd8f446ae01f0f2939f90
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 97209bd6d906a73f6199f06a09e14e1ab4d0ac22
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "92257824"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352995"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
 
@@ -28,14 +28,14 @@ ms.locfileid: "92257824"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安全设置基于本地或 Active Directory 域用户和组。 MDS 安全设置允许您在确定用户可以访问的数据时使用不同的详细粒度级别。 由于存在这种粒度，安全设置很容易复杂化，因此在使用重叠的用户和组时应慎用。 有关详细信息，请参阅 [重叠的用户和组权限 (Master Data Services)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)。  
   
- **** 可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的“用户和组权限”功能区域中分配安全访问权限或使用 Web 服务进行分配。  
+  可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的“用户和组权限”功能区域中分配安全访问权限或使用 Web 服务进行分配。  
   
 ## <a name="types-of-users"></a>用户类型  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中有两种类型的用户：  
   
--   **** 在“资源管理器”功能区域中访问数据的用户。  
+-    在“资源管理器”功能区域中访问数据的用户。  
   
--   **** 可以在“资源管理器”之外的区域中执行管理任务的用户。 这些用户称为 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   可以在“资源管理器”之外的区域中执行管理任务的用户。 这些用户称为 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="how-to-set-security"></a>如何设置安全性  
  要在 MDS 中授予用户或组访问数据或功能的权限，您必须分配：  

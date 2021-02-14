@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6201fa319ef3f0ae35f1fecd0643954ab814b085
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eba91bdad75f15bc3482f3752c7fe04b90afec71
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456773"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339498"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>分配层次结构成员权限 (Master Data Services)
 
@@ -48,7 +48,7 @@ ms.locfileid: "88456773"
   
 5.  从 **“模型”** 列表中，选择某一模型。  
   
-6.  **** 从“版本”列表中，选择某一版本。  
+6.   从“版本”列表中，选择某一版本。  
   
 7.  从 **“层次结构”** 列表中，选择某一层次结构。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "88456773"
   
 9. 展开树，单击要向其分配权限的层次结构节点。  
   
-10. 从菜单中，选择“创建”、“读取”、“更新”和“删除”权限的组合，或选择“拒绝”权限。****************  
+10. 从菜单中，选择“创建”、“读取”、“更新”和“删除”权限的组合，或选择“拒绝”权限。  
   
-11. 单击“ **保存**”。  
+11. 单击“保存”。  
   
     > [!NOTE]  
     >  层次结构成员权限不立即生效。 有关详细信息，请参阅[立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)。  

@@ -12,18 +12,18 @@ ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 10f267dc42c7626ad89b576b00e2b80a07dae427
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 29d4e1d6e2de7c575b9549f13dc325add4f5ca88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454373"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081032"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
-  若要为 Stretch Database 配置表，请在 SQL Server Management Studio 中为表选择“Stretch | 启用”****，以打开“为 Stretch 启用表”**** 向导。 还可以使用 Transact-SQL 在现有表上启用 Stretch Database，或创建已启用 Stretch Database 的新表。  
+  若要为 Stretch Database 配置表，请在 SQL Server Management Studio 中为表选择“Stretch | 启用”，以打开“为 Stretch 启用表”向导。 还可以使用 Transact-SQL 在现有表上启用 Stretch Database，或创建已启用 Stretch Database 的新表。  
   
 -   如果在单独的某个表中存储了冷数据，可以迁移整个表。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "88454373"
  **启动向导**  
  1.  在 SQL Server Management Studio 的对象资源管理器中，选择要在其上启用 Stretch 的表。  
   
-2.  右键单击并选择“Stretch”****，然后选择“启用”****，以启动向导。  
+2.  右键单击并选择“Stretch”，然后选择“启用”，以启动向导。  
   
  **介绍**  
  查看向导和必备组件的用途。  
@@ -57,7 +57,7 @@ ms.locfileid: "88454373"
  ALTER TABLE 语法将在本文的后面进行介绍。  
   
  **摘要**  
- 查看你输入的值和你在该向导中选择的选项。 然后选择“完成” **** 以启用 Stretch。  
+ 查看你输入的值和你在该向导中选择的选项。 然后选择“完成”  以启用 Stretch。  
   
  **结果**  
  查看结果。  

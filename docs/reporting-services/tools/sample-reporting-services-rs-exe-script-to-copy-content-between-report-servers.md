@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4f7bd6f5bb5e0adafd46ca887733195ae9960203
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6857459a67d8441d42035080f31896c75c996905
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988609"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077519"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2008r2-and-later](../../includes/ssrs-appliesto-2008r2-and-later.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
-本文收录并介绍了一个示例 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本，它使用 RS.exe**** 实用工具，将一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器中的内容项和设置复制到另一个报表服务器中。 本机模式和 SharePoint 模式下，RS.exe 都随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装。 脚本将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 项（例如，报表和订阅）从一个服务器复制到另一个服务器。 该脚本支持 SharePoint 模式和本机模式报表服务器。  
+本文收录并介绍了一个示例 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本，它使用 RS.exe 实用工具，将一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器中的内容项和设置复制到另一个报表服务器中。 本机模式和 SharePoint 模式下，RS.exe 都随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装。 脚本将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 项（例如，报表和订阅）从一个服务器复制到另一个服务器。 该脚本支持 SharePoint 模式和本机模式报表服务器。  
 
 ##  <a name="to-download-the-ssrs_migrationrss-script"></a><a name="bkmk_download_script"></a> 下载 ssrs_migration.rss 脚本  
  从 GitHub 站点 [Reporting Services RS.exe 迁移脚本](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/reporting-services/ssrs-migration-rss)，将脚本下载到本地文件夹。 有关详细信息，请参阅本文中的[如何使用脚本](#bkmk_how_to_use_the_script)部分。  
@@ -50,11 +50,11 @@ ms.locfileid: "91988609"
 |Item|是否迁移|SharePoint|说明|  
 |----------|--------------|----------------|-----------------|  
 |密码|**是**|**是**|**不** 迁移密码。 在迁移内容项后，在目标服务器上更新凭据信息。 例如，具有已存储凭据的数据源。|  
-|我的报表|**是**|**是**|本机模式“我的报表”功能基于单个用户登录名，因此，对于使用 -u 参数以外的参数运行 rss 脚本的用户，脚本服务无权访问其“我的报表”文件夹中的内容****。 此外，“我的报表”不是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式下的功能，并且这些文件夹中的项不能复制到 SharePoint 环境。 因此，此脚本不复制源本机模式报表服务器上“我的报表”文件夹中的报表项<br /><br /> 若要使用该脚本迁移“我的报表”文件夹中的内容，请完成以下步骤：<br /><br /> 1.在 Web 门户中创建新文件夹。 或者，可为每个用户创建文件夹或子文件夹。<br />2.以具有“我的报表”内容的用户身份登录。<br />3.在 Web 门户中，选择“我的报表”文件夹。<br />4.选择该文件夹的“详细信息”视图。<br />5.选择要复制的每个报表。<br />6.在 Web 门户工具栏中选择“移动”。<br />7.选择所需的目标文件夹。<br />8.为每个用户重复步骤 2-7。<br />9.运行该脚本。|  
+|我的报表|**是**|**是**|本机模式“我的报表”功能基于单个用户登录名，因此，对于使用 -u 参数以外的参数运行 rss 脚本的用户，脚本服务无权访问其“我的报表”文件夹中的内容。 此外，“我的报表”不是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式下的功能，并且这些文件夹中的项不能复制到 SharePoint 环境。 因此，此脚本不复制源本机模式报表服务器上“我的报表”文件夹中的报表项<br /><br /> 若要使用该脚本迁移“我的报表”文件夹中的内容，请完成以下步骤：<br /><br /> 1.在 Web 门户中创建新文件夹。 或者，可为每个用户创建文件夹或子文件夹。<br />2.以具有“我的报表”内容的用户身份登录。<br />3.在 Web 门户中，选择“我的报表”文件夹。<br />4.选择该文件夹的“详细信息”视图。<br />5.选择要复制的每个报表。<br />6.在 Web 门户工具栏中选择“移动”。<br />7.选择所需的目标文件夹。<br />8.为每个用户重复步骤 2-7。<br />9.运行该脚本。|  
 |历史记录|**是**|**是**||  
 |历史记录设置|是|是|将迁移历史记录设置，但不迁移历史记录详细信息。|  
 |计划|是|是|若要迁移计划，在目标服务器上需运行 SQL Server 代理。 如果在目标服务器上未运行 SQL Server 代理，将会显示如下错误消息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
-|角色和系统策略|是|是|默认情况下，该脚本不会在服务器之间复制自定义权限架构。 默认行为是项将复制到目标服务器，并且“从父项继承权限”标志设置为 TRUE。 如果您希望该脚本复制单独项的权限，请使用 SECURITY 开关。<br /><br /> 如果源服务器和目标服务器“未处于相同报表服务器模式下”，例如从本机模式到 SharePoint 模式，并且使用 SECURITY 开关，则该脚本将尝试基于比较（请参阅本文 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)）映射默认角色和组****。 自定义角色和组不会复制到目标服务器。<br /><br /> 在 **处于相同模式下**的服务器之间复制脚本并且使用 SECURITY 开关时，该脚本将在目标服务器上创建新角色（本机模式）或组（SharePoint 模式）。<br /><br /> 如果某一角色已在目标服务器上存在，该脚本将创建如下“失败”消息，并且继续迁移其他项。 在该脚本运行完毕之后，请验证目标服务器上的角色已配置为满足你的需要。 迁移角色:找到 8 项。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 有关详细信息，请参阅[授予用户报表服务器的访问权限](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> **注意：** 如果某一用户在源服务器上存在，但在目标服务器上不存在，则该脚本无法在目标服务器上应用角色分配，即使使用了 SECURITY 开关，该脚本也无法应用角色分配。|  
+|角色和系统策略|是|是|默认情况下，该脚本不会在服务器之间复制自定义权限架构。 默认行为是项将复制到目标服务器，并且“从父项继承权限”标志设置为 TRUE。 如果您希望该脚本复制单独项的权限，请使用 SECURITY 开关。<br /><br /> 如果源服务器和目标服务器“未处于相同报表服务器模式下”，例如从本机模式到 SharePoint 模式，并且使用 SECURITY 开关，则该脚本将尝试基于比较（请参阅本文 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)）映射默认角色和组。 自定义角色和组不会复制到目标服务器。<br /><br /> 在 **处于相同模式下** 的服务器之间复制脚本并且使用 SECURITY 开关时，该脚本将在目标服务器上创建新角色（本机模式）或组（SharePoint 模式）。<br /><br /> 如果某一角色已在目标服务器上存在，该脚本将创建如下“失败”消息，并且继续迁移其他项。 在该脚本运行完毕之后，请验证目标服务器上的角色已配置为满足你的需要。 迁移角色:找到 8 项。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 有关详细信息，请参阅[授予用户报表服务器的访问权限](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> **注意：** 如果某一用户在源服务器上存在，但在目标服务器上不存在，则该脚本无法在目标服务器上应用角色分配，即使使用了 SECURITY 开关，该脚本也无法应用角色分配。|  
 |共享数据源|是|是|该脚本将不会覆盖目标服务器上的现有项。 如果目标服务器上已存在同名的项，将显示如下错误消息：<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 凭据 **不** 作为数据源的一部分被复制。 在迁移内容项后，在目标服务器上更新凭据信息。|  
 |共享数据集|是|是|| 
 |文件夹|是|是|该脚本将不会覆盖目标服务器上的现有项。 如果目标服务器上已存在同名的项，将显示如下错误消息：<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
@@ -95,7 +95,7 @@ ms.locfileid: "91988609"
   
 1.  将该脚本文件下载到一个本地文件夹中，例如 **c:\rss\ssrs_migration.rss**。  
   
-2.  **使用管理权限**打开命令提示符。  
+2.  **使用管理权限** 打开命令提示符。  
   
 3.  导航到包含 ssrs_migration.rss 文件的文件夹。  
   
