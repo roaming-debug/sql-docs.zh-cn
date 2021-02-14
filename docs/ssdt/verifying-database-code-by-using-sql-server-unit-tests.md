@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ac5f8d848e2bc6591b0065e21c7588e4977c0d73
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 4c05b9e3a3330b395ee3cd8c2cb3da5aa7d50508
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987733"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066695"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>使用 SQL Server 单元测试验证数据库代码
 
@@ -46,11 +46,11 @@ SQL Server 单元测试功能（在 SQL Server Data Tools 的 2012 年 12 月更
 |----------------|----------------------|  
 |**进行动手实践：** 可以按照介绍性演练来熟悉如何创建和运行简单的 SQL Server 单元测试。 此演练包括一个负面 SQL Server 单元测试示例。|[演练：创建和运行 SQL Server 单元测试](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)|  
 |**定义 SQL Server 单元测试：** 必须在单元测试的项目中创建 SQL Server 单元测试。 可以为该项目配置设置并为每个测试定义一个或多个测试条件。|[创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)<br /><br />[在 SQL Server 单元测试中使用测试条件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)|  
-|**** 运行 SQL Server 单元测试：在定义一个或多个单元测试后，可以运行这些测试、调试所有问题以及检查测试结果。|[运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)|  
+|运行 SQL Server 单元测试：在定义一个或多个单元测试后，可以运行这些测试、调试所有问题以及检查测试结果。|[运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)|  
 |**管理测试组 (Visual Studio 2010)：** 如果要同时运行多个测试，可以将它们划分到多个组中。 测试列表仍受支持，但对于新测试组，您应该考虑使用测试类别。 例如，你可以为针对触发器或特定架构中的所有对象的测试创建测试类别。|[定义测试类别以对测试进行分组](/previous-versions/visualstudio/visual-studio-2010/dd286595(v=vs.100))<br /><br />[定义测试列表以对测试进行分组](/previous-versions/visualstudio/visual-studio-2010/dd286584(v=vs.100))|  
-|**** 将测试项目和测试签入版本控制中：在运行测试并验证它们是否正常运行之后，应将测试项目和所有关联文件签入版本控制中，以便你的所有团队成员都可以运行这些测试。 通过将测试项目与 SQL Server 数据库项目一起签入版本控制，你可以轻松还原数据库和数据库测试的兼容版本。|[将文件添加到版本控制](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100))<br /><br />[使用“签入”和“挂起的更改”窗口](/previous-versions/visualstudio/visual-studio-2010/ms245462(v=vs.100))|  
-|**** 定义自定义测试条件：如果必须测试默认测试条件组没有包括的行为，则可以创建自定义测试条件。 您必须将这些条件分发给要运行使用新条件的测试的所有团队成员。|[场景：定义 SQL Server 单元测试的自定义测试条件](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))|  
-|**** 更新现有单元测试：如果你有一些在以前版本的 Visual Studio 中创建的数据库单元测试，则必须升级这些测试，然后它们才能在此版本中成功生成和运行。<br /><br />**** 注意：如果打开的解决方案同时包含以前版本的 Visual Studio 中的数据库项目和数据库单元测试项目，则系统会提示你升级数据库项目。 系统不会提示您升级数据库单元测试项目，它必须手动升级。|[升级包含数据库单元测试的较旧的测试项目](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md)|  
+|将测试项目和测试签入版本控制中：在运行测试并验证它们是否正常运行之后，应将测试项目和所有关联文件签入版本控制中，以便你的所有团队成员都可以运行这些测试。 通过将测试项目与 SQL Server 数据库项目一起签入版本控制，你可以轻松还原数据库和数据库测试的兼容版本。|[将文件添加到版本控制](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100))<br /><br />[使用“签入”和“挂起的更改”窗口](/previous-versions/visualstudio/visual-studio-2010/ms245462(v=vs.100))|  
+|定义自定义测试条件：如果必须测试默认测试条件组没有包括的行为，则可以创建自定义测试条件。 您必须将这些条件分发给要运行使用新条件的测试的所有团队成员。|[场景：定义 SQL Server 单元测试的自定义测试条件](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))|  
+|更新现有单元测试：如果你有一些在以前版本的 Visual Studio 中创建的数据库单元测试，则必须升级这些测试，然后它们才能在此版本中成功生成和运行。<br /><br />注意：如果打开的解决方案同时包含以前版本的 Visual Studio 中的数据库项目和数据库单元测试项目，则系统会提示你升级数据库项目。 系统不会提示您升级数据库单元测试项目，它必须手动升级。|[升级包含数据库单元测试的较旧的测试项目](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md)|  
 |**可扩展性：** 可以通过创建功能扩展来扩展 SQL Server Data Tools。|[SQL Server 单元测试的自定义测试条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)|  
 |**解决问题：** 可以了解有关如何解决 SQL Server 单元测试常见问题的详细信息。|[解决 SQL Server 数据库单元测试问题](../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md)|  
   

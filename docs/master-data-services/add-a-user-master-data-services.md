@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2be9caff295a41dbb79c1062d2a3f132ea93141c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b3e42d4e173dddf2042a16fa1b32decb0cb3013a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812824"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347770"
 ---
 # <a name="add-a-user-master-data-services"></a>添加用户 (Master Data Services)
 
@@ -38,11 +38,11 @@ ms.locfileid: "85812824"
   
 2.  在 **“用户”** 页上，单击 **“添加用户”**。  
   
-3.  键入用户的名称，该名称前面 Active Directory 域名或服务器计算机的名称，如*domain* \\ *user_name*或*computer \ user_name*中所示。  
+3.  键入用户的名称，该名称前面 Active Directory 域名或服务器计算机的名称，如 *domain* \\ *user_name* 或 *computer \ user_name* 中所示。  
   
 4.  或者单击 **“检查名称”**。  
   
-5.  单击 **“确定”** 。  
+5.  单击“确定”。   
   
 ## <a name="next-steps"></a>后续步骤  
   

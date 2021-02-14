@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 74901a5360e4b9badcc7569211bfaea90d2b94a3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b0dd541ce4be57dd9b065b93413ea567c7f121b7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725218"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052218"
 ---
 # <a name="deploy-azure-sql-edge-with-azure-data-studio-preview"></a>通过 Azure Data Studio 部署 Azure SQL Edge（预览版）
 

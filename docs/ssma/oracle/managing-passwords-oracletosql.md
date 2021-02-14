@@ -14,12 +14,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 212d6792704ed2b52af91be3ea810a916a486bc8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: d203442868c4ab9f899dfda5a02a0fea1f1f9874
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038020"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080728"
 ---
 # <a name="managing-passwords-oracletosql"></a>管理密码 (OracleToSQL)
 本部分介绍如何保护数据库密码，以及如何在服务器之间导入或导出数据库密码。
@@ -71,7 +71,7 @@ SSMA 允许保护数据库的密码。
   
         在 `SSMAforOracleConsole.exe` `-securepassword` `-remove` 命令行传递服务器 id 的情况下执行，并从本地计算机上的受保护存储文件中删除加密的密码。  
         
-        示例：  
+        例如：  
 
         ```console
         C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove all
@@ -82,7 +82,7 @@ SSMA 允许保护数据库的密码。
   
         在 `SSMAforOracleConsole.exe` `-securepassword` 命令行中使用和开关执行， `-list` 以列出其密码已加密的所有服务器 id。  
   
-        示例：  
+        例如：  
 
         ```console
         C:\SSMA\SSMAforOracleConsole.EXE -securepassword -list  

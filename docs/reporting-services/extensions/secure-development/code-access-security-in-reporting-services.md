@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b17b8c6e3506d31e7576c2e0f5f155a9da597c7d
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: dccf6bacfaf431cb69ba4ec8dc031f4e817f4650
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529393"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065282"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services 中的代码访问安全性
   代码访问安全性以下面几个核心概念为中心：证据、代码组和命名权限集。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，报表管理器、报表设计器和报表服务器组件均有一个策略文件，该文件用来为自定义程序集配置代码访问安全性，还用来配置数据扩展插件、传递扩展插件、呈现扩展插件和安全扩展插件。 下面几节提供了代码访问安全性的概述。 有关本节中所涵盖主题的更详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文档中的“安全策略模型”。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用代码访问安全性的原因在于，尽管报表服务器基于 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 技术而构建，但是典型的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序和报表服务器之间有着显著的区别。 典型的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序不执行用户代码。 相比之下，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用开放式可扩展体系结构，该体系结构允许用户使用报表定义语言的 Code 元素来针对报表定义文件编程，并在自定义程序集内进行专用功能开发，以供报表使用****。 此外，开发人员可以设计和部署功能强大的扩展插件来增强报表服务器的功能。 由于具有这种强大的功能和灵活性，因此将需要提供尽可能多的保护和安全性。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用代码访问安全性的原因在于，尽管报表服务器基于 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 技术而构建，但是典型的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序和报表服务器之间有着显著的区别。 典型的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序不执行用户代码。 相比之下，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用开放式可扩展体系结构，该体系结构允许用户使用报表定义语言的 Code 元素来针对报表定义文件编程，并在自定义程序集内进行专用功能开发，以供报表使用。 此外，开发人员可以设计和部署功能强大的扩展插件来增强报表服务器的功能。 由于具有这种强大的功能和灵活性，因此将需要提供尽可能多的保护和安全性。  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 开发人员可以使用其报表中的任何 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集并在本机调用部署到全局程序集缓存中的所有程序集功能。 报表服务器唯一能够控制的内容就是向报表表达式和已加载的自定义程序集授予的权限。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，自定义程序集在默认情况下接收仅 Execute 权限。  
   

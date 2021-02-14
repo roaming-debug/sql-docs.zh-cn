@@ -10,18 +10,18 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: adc2e7d74f8479384bd9f34b5442e796e4b74d66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f844299a392f9521afe3af7d72bc72272304d3a5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718549"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354045"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>宽世界导入 Microsoft SQL 示例数据库
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 这是虚构的公司广泛的导入程序以及在 SQL Server 和 Azure SQL 数据库的 WideWorldImporters 示例数据库中解决的工作流的概述。  
 
-广域世界导入器（WWI）是一种批发新奇货物导入器和分销商操作。
+广泛的导入 (WWI) 是一种大规模的新奇商品导入程序和分销商操作。
 
 作为 wholesaler，WWI 的客户主要是转售个人的公司。 WWI 在美国中销售零售客户，包括专业商店、supermarkets、计算商店、旅游引力店和某些个人。 WWI 还通过代表 WWI 促销产品的代理网络销售到其他批发商。 尽管 WWI 的所有客户当前都基于美国，公司仍打算将扩展推送到其他国家/地区。
 
@@ -53,7 +53,7 @@ SQL Server Analysis Services 用于根据维度数据模型中的数据创建分
 
 这些都是附加工作流。
 - 当客户出于某种原因或货物出现故障时，WWI 会发出信用备注。 它们被视为负发票。
-- WWI 定期计算库存物品的现有数量，以确保在其系统中显示为可用库存数量准确无误。 （执行此操作的过程称为 stocktake）。
+- WWI 定期计算库存物品的现有数量，以确保在其系统中显示为可用库存数量准确无误。  (的过程称为 stocktake) 。
 - 冷房间温度。 Perishable 货物存储在 refrigerated 房间中。 这些会议室中的传感器数据引入到数据库中，以便进行监视和分析。
 - 车辆位置跟踪。 传输 WWI 货物的车辆包含跟踪位置的传感器。 此位置将再次引入到数据库中，以便进行监视和进一步分析。
 
@@ -65,4 +65,4 @@ SQL Server Analysis Services 用于根据维度数据模型中的数据创建分
 
 此处描述了示例数据库和示例代码的许可证： [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-示例数据库包含已从 data.gov 和天然 EarthData 加载的公共数据。 使用条款如下：[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)
+示例数据库包含已从 data.gov 和天然 EarthData 加载的公共数据。 使用条款如下： [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

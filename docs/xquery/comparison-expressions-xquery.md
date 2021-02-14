@@ -1,5 +1,5 @@
 ---
-title: 比较表达式（XQuery） |Microsoft Docs
+title: )  (XQuery 的比较表达式 |Microsoft Docs
 description: 了解如何使用包含常规、值、节点和节点顺序比较运算符的 XQuery 比较表达式。
 ms.custom: ''
 ms.date: 08/09/2016
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0b96fbd075ed2b2f79ca8b92d09e2d2782d77dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4824cd52001305a05c00e197e8c4140598267d4f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922317"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349347"
 ---
 # <a name="comparison-expressions-xquery"></a>比较表达式 (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -47,12 +47,12 @@ ms.locfileid: "86922317"
   
 |运算符|说明|  
 |--------------|-----------------|  
-|=|Equal|  
+|=|等于|  
 |!=|不等于|  
 |\<|小于|  
 |>|大于|  
 |\<=|小于或等于|  
-|>=|大于等于|  
+|>=|大于或等于|  
   
  使用常规比较运算符比较两个序列时，如果第二个序列中存在某个值与第一个序列中的某个值比较结果为 True，则整个结果为 True。 否则为 False。 例如，(1, 2, 3) = (3, 4) 为 True，因为值 3 同时出现在两个序列中。  
   
@@ -140,14 +140,14 @@ WHERE ContactID=1
   
  下表中定义了值比较运算符。  
   
-|运算符|说明|  
+|运算符|描述|  
 |--------------|-----------------|  
 |eq|等于|  
 |ne|不等于|  
 |lt|小于|  
 |gt|大于|  
 |le|小于或等于|  
-|ge|大于等于|  
+|ge|大于或等于|  
   
  如果根据所选的运算符两个值的比较结果相同，则表达式将返回 True。 否则将返回 False。 如果其中任何一个值是空序列，则表达式的结果为 False。  
   
@@ -172,7 +172,7 @@ WHERE ProductModelID=19
   
 -   \<Size>元素值与指定的原子值 "small" 进行比较。  
   
--   请注意，由于值运算符仅适用于原子值，因此将隐式使用**data （）** 函数检索节点值。 也就是说，`data($P/PD:Size) eq "small"` 生成相同的结果。  
+-   请注意，由于值运算符仅适用于原子值，因此 **数据 ()** 函数将隐式用于检索节点值。 也就是说，`data($P/PD:Size) eq "small"` 生成相同的结果。  
   
  结果如下：  
   
@@ -188,7 +188,7 @@ WHERE ProductModelID=19
  注意，用于值比较的类型提升规则与用于常规比较的类型提升规则相同。 另外，在值比较过程中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对非类型化值使用的转换规则与它在常规比较过程中使用的转换规则相同。 而 XQuery 规范中的规则是，在值比较过程中总是将非类型化值转换为 xs:string。  
   
 ## <a name="node-comparison-operator"></a>节点比较运算符  
- 节点比较运算符**为**，仅适用于节点类型。 它返回的结果表明作为操作数传入的两个节点是否表示源文档中的同一节点。 如果两个操作数是同一节点，则此运算符返回 True。 否则，返回 False。  
+ 节点比较运算符 **为**，仅适用于节点类型。 它返回的结果表明作为操作数传入的两个节点是否表示源文档中的同一节点。 如果两个操作数是同一节点，则此运算符返回 True。 否则，返回 False。  
   
  下面的查询检查在某个特定产品型号的生产过程中生产车间 10 是否排在第一位。  
   
@@ -221,9 +221,9 @@ ProductModelID       Result
   
  下面是根据文档顺序所做的比较：  
   
--   `<<`：按文档顺序执行**操作数 1**前面的**操作数 2** 。  
+-   `<<` ：按文档顺序执行 **操作数 1** 前面的 **操作数 2** 。  
   
--   `>>`：按文档顺序执行操作数**1**后跟**操作数 2** 。  
+-   `>>` ：按文档顺序执行操作数 **1** 后跟 **操作数 2** 。  
   
  如果产品目录说明 \<Warranty> 中的元素出现 \<Maintenance> 在特定产品文档顺序中的元素之前，则以下查询将返回 True。  
   
@@ -241,9 +241,9 @@ where ProductModelID=19
   
  请注意上述查询的以下方面：  
   
--   在查询中使用**xml**数据类型的**value （）** 方法。  
+-   在查询中使用 **xml** 数据类型 **() 的值**。  
   
--   查询的布尔结果将转换为**nvarchar （10）** 并返回。  
+-   查询的布尔结果将转换为 **nvarchar (10)** 并返回。  
   
 -   该查询返回 True。  
   

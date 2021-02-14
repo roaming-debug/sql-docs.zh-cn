@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e92148b5a85ced147599eafe09156cf41c47021
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 82f3eae7098b3ac5e86355aed1e13bdd5c137015
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037010"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352810"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>针对 xml 数据类型的 XQuery 函数
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "92037010"
   
  XQuery 函数属于 http://www.w3.org/2004/07/xpath-functions 命名空间。 W3C 规范使用“fn:”命名空间前缀来说明这些函数。 使用这些函数时，不必显式指定“fn:”命名空间前缀。 由于这个原因，也为了提高可读性，此文档中通常不使用命名空间前缀。  
   
- 下表列出了支持 **xml**数据类型的 XQuery 函数。  
+ 下表列出了支持 **xml** 数据类型的 XQuery 函数。  
   
-|Category|函数名称|  
+|类别|函数名称|  
 |--------------|-------------------|  
 |[数值上的函数]()|[顶角](../xquery/numeric-values-functions-ceiling.md)|  
 ||[floor](../xquery/numeric-values-functions-floor.md)|  
@@ -66,7 +66,7 @@ ms.locfileid: "92037010"
 |[与 QNames &#40;XQuery 相关的函数&#41;](./functions-related-to-qnames-expanded-qname.md)|[expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
 ||[local-name-from-QName (XQuery)](../xquery/functions-related-to-qnames-local-name-from-qname.md)|  
 ||[namespace-uri-from-QName (XQuery)](../xquery/functions-related-to-qnames-namespace-uri-from-qname.md)|  
-|[SQL Server XQuery 扩展函数](./xquery-extension-functions-sql-column.md)|[sql： column ( # A1 函数 (XQuery) ](../xquery/xquery-extension-functions-sql-column.md)|  
+|[SQL Server XQuery 扩展函数](./xquery-extension-functions-sql-column.md)|[sql： column () 函数 (XQuery) ](../xquery/xquery-extension-functions-sql-column.md)|  
 ||[sql:variable() 函数 (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
 ## <a name="see-also"></a>另请参阅  

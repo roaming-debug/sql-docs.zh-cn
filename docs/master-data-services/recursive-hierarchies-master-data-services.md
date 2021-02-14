@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 69f65e0ab8a84d51552f50e1cee3f66933de9da4
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e5aaae9f766832d64c3ca9e59940b933fbcda1b5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812337"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353711"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>递归层次结构 (Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "85812337"
   
 -   派生层次结构不能包含多个递归关系。 但是，它可以具有其他派生关系（例如，包含“经理到雇员”递归关系的派生层次结构还可以具有“国家/地区到经理”关系和“雇员到商店”关系）。  
   
--   不能将成员权限（在“层次结构成员”**** 选项卡上）分配给递归层次结构中的成员。  
+-   不能将成员权限（在“层次结构成员”选项卡上）分配给递归层次结构中的成员。  
   
 -   递归层次结构不能包括循环关系。 例如，如果 Sandeep 是 Katherine 的经理，则 Katherine 不能是 Sandeep 的经理。 此外，Katherine 不能管理她自己。  
   

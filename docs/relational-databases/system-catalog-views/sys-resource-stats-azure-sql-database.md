@@ -20,12 +20,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 14785888953906f42b2196dc2cb06ca35cfc3a8b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 54732718d3c31c8dc646c9f61b3afcfa23cb07d2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210030"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343147"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "99210030"
 |start_time|**datetime**|指示5分钟报告间隔的开始时间的 UTC 时间。|  
 |end_time|**datetime**|指示五分钟报告间隔结束时间的 UTC 时间。|  
 |database_name|**nvarchar(128)**|用户数据库的名称。|  
-|sku|**nvarchar(128)**|数据库的服务层。 下面是可能的值：<br /><br /> 基本<br /><br /> 标准<br /><br /> Premium<br /><br />常规用途<br /><br />业务关键|  
+|sku|**nvarchar(128)**|数据库的服务层。 下面是可能的值：<br /><br /> 基本<br /><br /> Standard<br /><br /> 高级<br /><br />常规用途<br /><br />业务关键|  
 |storage_in_megabytes|**float**|时间段的最大存储大小（以 mb 为单位），包括数据库数据、索引、存储过程和元数据。|  
 |avg_cpu_percent|**decimal (5，2)**|平均计算使用率（以服务层限制的百分比表示）。|  
 |avg_data_io_percent|**decimal (5，2)**|平均 I/O 使用率（以基于服务层限制的百分比表示）。 对于超大规模数据库，请参阅 [资源利用率统计信息中的数据 IO](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  

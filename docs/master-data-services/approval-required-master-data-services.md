@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f93514c1efd561aa989c03373f91edc2d552eba9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25de1b29a2d19457d6c74a02ec1937bcd654c023
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456815"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339579"
 ---
 # <a name="approval-required-master-data-services"></a>需要审批 (Master Data Services)
 
@@ -46,9 +46,9 @@ ms.locfileid: "88456815"
   
 2.  在 " **管理模型** " 页上，从网格中选择一个模型，然后单击 " **实体**"。  
   
-3.  在“管理实体” **** 页上，从网格中选择要为其启用“需要审批”  **** 的实体所在的行。  
+3.  在“管理实体”  页上，从网格中选择要为其启用“需要审批”   的实体所在的行。  
   
-4.  单击“编辑” ****，选择“需要审批” ****，然后单击“保存” ****。  
+4.  单击“编辑” ，选择“需要审批” ，然后单击“保存” 。  
   
 ## <a name="see-also"></a>另请参阅  
  [变更集 (Master Data Services)](../master-data-services/changesets-master-data-services.md)  

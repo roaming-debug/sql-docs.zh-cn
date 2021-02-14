@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fc60da27d0176057fb7340b4db743786efe27017
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 6c34db253855127451f375045e51418850bc824a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518867"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018237"
 ---
 # <a name="how-to-debug-stored-procedures"></a>如何：调试存储过程
 
@@ -55,7 +55,7 @@ ms.locfileid: "85518867"
   
 6.  单击左窗口边距以便向 `EXEC` 语句添加断点。  
   
-7.  按下 Transact\-SQL 编辑器工具栏中的绿色箭头按钮上的下拉箭头，然后选择“使用调试器执行”****，以便使用调试执行查询。  
+7.  按下 Transact\-SQL 编辑器工具栏中的绿色箭头按钮上的下拉箭头，然后选择“使用调试器执行”，以便使用调试执行查询。  
   
 8.  或者，你可以从 SQL Server 对象资源管理器开始调试。 右键单击 AddProduct 存储过程（位于 “本地” -> “TradeDev”数据库 -> “可编程性” -> “存储过程”下）。 选择“调试过程...”。如果对象需要参数，则会出现“调试过程”对话框，显示一个包含各个参数行的表。 表中的每一行都包含参数名称列和参数值列。 输入各个参数的值，再单击“确定”。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "85518867"
   
 12. 按 F10 键逐行执行其余代码。  
   
-13. 在 SQL Server 对象资源管理器中，刷新 **** TradeDev 数据库节点以查看 **** Product 表的数据视图中的新内容。  
+13. 在 SQL Server 对象资源管理器中，刷新 TradeDev 数据库节点以查看 Product 表的数据视图中的新内容。  
   
 14. 在 SQL Server 对象资源管理器中，在“本地”节点下，找到 TradeDev 数据库的 Product 表。  
   

@@ -21,12 +21,12 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c23c8d624a9670cdb309d43f645831b5e09fab5a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fbf92690e35a065afc9aab936e5a8e37ef59f6f6
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99212099"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100352689"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "99212099"
   
  **Version** 属性指示服务器上的 .NET Framework 和宿主 CLR 的版本。  
   
- **Sys.dm_clr_properties** 动态托管视图可为 **state** 属性返回六个不同的值，这反映了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管 clr 的状态。 它们是：  
+ **Sys.dm_clr_properties** 动态托管视图可为 **state** 属性返回六个不同的值，这反映了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管 clr 的状态。 它们分别是：  
   
 -   Mscoree 未加载。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "99212099"
 ## <a name="permissions"></a>权限  
   
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="examples"></a>示例  
  以下示例检索有关宿主 CLR 的信息：  

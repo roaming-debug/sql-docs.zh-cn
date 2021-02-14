@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 8036caae71fb58956bd8a4b50d6908fa644ef40c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6bc6887ad63b56330eab09d20f0b6fa86de4d3d5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207506"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341387"
 ---
 # <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "99207506"
 |**network_subnet_ip**|**nvarchar (48)**|指定 IP 地址所属子网的网络子网 IP 地址。|  
 |**network_subnet_prefix_length**|**int**|IP 地址所属子网的网络子网前缀长度。|  
 |**network_subnet_ipv4_mask**|**nvarchar (45)**|IP 地址所属子网的网络子网掩码。 **network_subnet_ipv4_mask** 在 [CREATE Availability GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)或 [ALTER AVAILABILITY group](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的 WITH DHCP 子句中指定 DHCP <network_subnet_option> 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br /><br /> NULL = IPv6 子网|  
-|**state**|**tinyint**|WSFC 群集中 IP 资源的“联机”/“脱机”状态，可为下列值之一：<br /><br /> 1 = 联机。 IP 资源处于联机状态。<br /><br /> 0 = 脱机。 IP 资源处于脱机状态。<br /><br /> 2 = 联机挂起。 IP 资源处于脱机状态，但正在联机。<br /><br /> 3 = 失败。 IP 资源尝试重新联机，但失败。|  
+|State |**tinyint**|WSFC 群集中 IP 资源的“联机”/“脱机”状态，可为下列值之一：<br /><br /> 1 = 联机。 IP 资源处于联机状态。<br /><br /> 0 = 脱机。 IP 资源处于脱机状态。<br /><br /> 2 = 联机挂起。 IP 资源处于脱机状态，但正在联机。<br /><br /> 3 = 失败。 IP 资源尝试重新联机，但失败。|  
 |**state_desc**|**nvarchar(60)**|**状态** 说明，其中之一：<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   
 ## <a name="security"></a>安全性  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1171740ae04b4fc03609659fa27a711bf36fa6f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d877c75223c42a8dff3a9a4c4615975a136cd6b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775455"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352329"
 ---
 # <a name="xqueries-involving-order"></a>涉及顺序的 XQuery
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -60,13 +60,13 @@ WHERE ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   大括号中的表达式替换为其计算结果。 有关详细信息，请参阅[XML 构造 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)。  
+-   大括号中的表达式替换为其计算结果。 有关详细信息，请参阅 [XML 构造 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)。  
   
 -   **@\*** 检索第二个工作中心位置的所有属性。  
   
--   FLWOR 迭代（适用于 .。。返回）检索 `step` 第二个工作中心位置的所有 <> 子元素。  
+-   FLWOR 迭代 (用于 .。。返回) 检索 `step` 第二个工作中心位置的所有 <> 子元素。  
   
--   [Sql： column （）函数（XQuery）](../xquery/xquery-extension-functions-sql-column.md)包括正在构造的 XML 中的关系值。  
+-   [Sql： column () 函数 (XQuery) ](../xquery/xquery-extension-functions-sql-column.md)包括正在构造的 XML 中的关系值。  
   
  结果如下：  
   
@@ -82,7 +82,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 上述查询只检索文本节点。 如果要改为返回整个 <`step`> 元素，请从查询中删除**string （）** 函数：  
+ 上述查询只检索文本节点。 如果要改为返回整个 <`step`> 元素，请从查询中删除 **字符串 ()** 函数：  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 查找产品生产过程中在第二个生产车间使用的所有材料和工具  
  以下查询针对某个特定产品型号，检索生产过程中一系列生产车间中第二个生产车间使用的工具和材料。  
@@ -160,7 +160,7 @@ where ProductModelID=19
   
  查询主体构造包含 `ProductModel` ProductModelID 和 ProductModelName 属性的 <> 元素的 XML。  
   
--   查询使用 FOR .。。返回循环来检索产品型号功能说明。 **Position （）** 函数用于检索前两个功能。  
+-   查询使用 FOR .。。返回循环来检索产品型号功能说明。 **() 函数位置** 用于检索前两个功能。  
   
  结果如下：  
   
@@ -182,7 +182,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. 查找产品生产过程中在第一个生产车间使用的前两个工具  
- 此查询针对某个产品型号，返回生产过程中一系列生产车间中第一个生产车间使用的前两个工具。 查询是针对**ProductModel**表的**说明**列中存储的生产说明指定的。  
+ 此查询针对某个产品型号，返回生产过程中一系列生产车间中第一个生产车间使用的前两个工具。 查询是针对 **ProductModel** 表的 **说明** 列中存储的生产说明指定的。  
   
 ```sql
 SELECT Instructions.query('  
@@ -218,7 +218,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. 查找某个特定产品生产过程中在第一个生产车间中的最后两个生产步骤  
- 查询使用**last （）** 函数检索最后两个生产步骤。  
+ 查询使用 **最后一个 ()** 函数检索最后两个生产步骤。  
   
 ```sql
 SELECT Instructions.query('   
@@ -247,8 +247,8 @@ where ProductModelID=7
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [XQuery 语言参考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
+ [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
+ [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)   
  [XML 构造 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

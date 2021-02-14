@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 37cf62c1a0a64e8e9ab09c216f053a4eef98e084
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 214534b5afa47dbaa55661de4bf4c379540f6c32
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257646"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339871"
 ---
 # <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>导出前筛选数据 (MDS Add-in for Excel)
 
@@ -27,7 +27,7 @@ ms.locfileid: "92257646"
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   **** 您必须有权访问“资源管理器”功能区域。  
+-    您必须有权访问“资源管理器”功能区域。  
   
 ### <a name="to-filter-data-before-exporting"></a>导出前筛选数据  
   

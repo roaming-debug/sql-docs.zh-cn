@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b8270babb8fe592c050a9352a7fd687660b178e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 959d5498011984fc1f400567517d3b5b07727fcc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920093"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339936"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>路径表达式 - 使用缩写语法
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +36,11 @@ child::ProductDescription[attribute::ProductModelID=19]
   
  XQuery 支持在路径表达式中使用下列缩写：  
   
--   **子**轴为默认轴。 因此，可以在表达式中的步骤中省略**child：：** 轴。 例如，`/child::ProductDescription/child::Summary` 可以写为 `/ProductDescription/Summary`。  
+-   **子** 轴为默认轴。 因此，可以在表达式中的步骤中省略 **child：：** 轴。 例如，`/child::ProductDescription/child::Summary` 可以写为 `/ProductDescription/Summary`。  
   
--   **特性**轴可以缩写为 @ 。 例如，`/child::ProductDescription[attribute::ProductModelID=10]` 可以写为 `/ProudctDescription[@ProductModelID=10]`。  
+-   **特性** 轴可以缩写为 @ 。 例如，`/child::ProductDescription[attribute::ProductModelID=10]` 可以写为 `/ProudctDescription[@ProductModelID=10]`。  
   
--   **/Descendant-or-self：： node （）/** 可以缩写为//。 例如，`/descendant-or-self::node()/child::act:telephoneNumber` 可以写为 `//act:telephoneNumber`。  
+-   **/Descendant-or-self：： node () /** 可以缩写为//。 例如，`/descendant-or-self::node()/child::act:telephoneNumber` 可以写为 `//act:telephoneNumber`。  
   
      上一个查询检索了存储在 Contact 表的 AdditionalContactInfo 列中的所有电话号码。 AdditionalContactInfo 的架构的定义方式是 \<telephoneNumber> 元素可以出现在文档中的任何位置。 因此，若要检索所有电话号码，必须搜索文档中的每一个节点。 从文档的根节点开始搜索，接下来搜索所有后代节点。  
   
@@ -59,7 +59,7 @@ child::ProductDescription[attribute::ProductModelID=19]
   
      如果将路径表达式替换为缩写语法 `//act:telephoneNumber`，会收到相同的结果。  
   
--   步骤中的**self：： node （）** 可以缩写为单点（.）。 但是，点不是等效的，也不能与**self：： node （）** 互换。  
+-   步骤中的 **self：： node ()** 可以缩写为单点 ( ) 。 但是，点与 **self：： node ()** 不是等效的，也不能互换。  
   
      例如，在以下查询中，使用点表示的是一个值而不是节点：  
   
@@ -67,6 +67,6 @@ child::ProductDescription[attribute::ProductModelID=19]
     ("abc", "cde")[. > "b"]  
     ```  
   
--   步骤中的**parent：： node （）** 可以缩写为双点（...）。  
+-   步骤中的 **parent：： node ()** 可以缩写为双点 (。) 。  
   
   

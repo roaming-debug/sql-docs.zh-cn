@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 86170829ee1ae3f5116497f8435bf207edb3d5a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cce8c342c17881a4d1c52af468b6e2c4d4f0b7d3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344453"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350202"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用向导部署模型部署包
 
@@ -49,15 +49,15 @@ ms.locfileid: "88344453"
   
 4.  单击“浏览”。  
   
-5.  找到部署包（.pkg 文件），然后单击“打开”。****  
+5.  找到部署包（.pkg 文件），然后单击“打开”。  
   
-6.  单击 **“下一步”** 。  
+6.  单击“下一步”  。  
   
 7.  在加载包后，单击 **“下一步”**。  
   
 8.  如果该模型已存在，则可以通过选择 **“更新现有模型”** 更新该模型。 若要创建新模型，请选择 **“创建新模型”** ，并且在单击 **“下一步”** 后，可为该新模型键入名称。  
   
-9. 单击“完成”**** 以退出向导。  
+9. 单击“完成”以退出向导。  
   
  **注意：**  
   

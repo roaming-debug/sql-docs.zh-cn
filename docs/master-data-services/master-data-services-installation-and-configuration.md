@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ca05529c9b4ce1d9ec603989af81f0d2aeebf76b
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 630ee8396c3f4f64e7eee5335484299f5bebfd42
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236401"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350698"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -132,7 +132,7 @@ ms.locfileid: "99236401"
 
     >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] 添加对 SQL Server 托管实例的支持。 将 **SQL Server 实例** 的值设置为托管实例的主机。 例如，`xxxxxx.xxxxxx.database.windows.net`。
 
-4. 选择 **身份验证类型** ，然后单击 " **测试连接** " 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”。
+4. 选择 **身份验证类型** ，然后单击 " **测试连接** " 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”  。
 
     >对于 [!INCLUDE[sqlv15](../includes/sssql19-md.md)] ，若要连接到托管实例，请使用以下身份验证类型之一：
     >
@@ -146,7 +146,7 @@ ms.locfileid: "99236401"
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”。 单击“下一步”。
+4.  在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”。 单击“下一步”  。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   

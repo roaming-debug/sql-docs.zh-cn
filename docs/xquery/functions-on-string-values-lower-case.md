@@ -1,6 +1,6 @@
 ---
-title: 小写函数（XQuery） |Microsoft Docs
-description: 了解将指定字符串中的每个字符转换为其小写等效项的 XQuery 函数小写（）。
+title: )  (XQuery 的小写函数 |Microsoft Docs
+description: 了解将指定字符串中的每个字符转换为其小写等效项的 XQuery 函数小写 () 。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd33b2c0496289e3a94e2a1b9ab9644dd178762e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b832484a1edd7177617cdd9ad6de05b15b603ba2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87106997"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341897"
 ---
 # <a name="functions-on-string-values---lower-case"></a>基于字符串值的函数 - lower-case
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  小写函数将 *$arg*中的每个字符转换为它的小写等效项。 Unicode 码位的 Microsoft Windows 二进制大小写转换指定如何将字符转换为小写。 这一标准与 Unicode 码位标准的映射不相同。  
+  小写函数将 *$arg* 中的每个字符转换为它的小写等效项。 Unicode 码位的 Microsoft Windows 二进制大小写转换指定如何将字符转换为小写。 这一标准与 Unicode 码位标准的映射不相同。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,14 +35,14 @@ ms.locfileid: "87106997"
 fn:lower-case($arg as xs:string?) as xs:string  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
   
 |术语|定义|  
 |-|-|
 |*$arg*|要转换为小写的字符串值。|  
   
 ## <a name="remarks"></a>备注  
- 如果 *$arg*的值为空，则返回零长度字符串。  
+ 如果 *$arg* 的值为空，则返回零长度字符串。  
   
 ## <a name="examples"></a>示例  
   

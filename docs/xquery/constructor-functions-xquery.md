@@ -1,5 +1,5 @@
 ---
-title: 构造函数（XQuery） |Microsoft Docs
+title: 构造函数 (XQuery) |Microsoft Docs
 description: 了解 XQuery 中的构造函数，它们允许您创建 XSD 内置或用户定义的原子类型的实例。
 ms.custom: ''
 ms.date: 03/09/2017
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56dd5919565d1cbb7d0b95ae4476aef9140cecd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cc1fe3f4f36191a04973c759474f55a8356abda
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773710"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349336"
 ---
 # <a name="constructor-functions-xquery"></a>构造函数 (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *$strval*  
  将被转换的字符串。  
   
@@ -45,7 +45,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  任意内置 XSD 类型。  
   
 ## <a name="remarks"></a>备注  
- 支持用于基本和派生原子 XSD 类型的构造函数。 但是，不支持**xs： duration**的子类型，**包括 xdt： yearMonthDuration 和 xdt： dayTimeDuration**，以及**xs： QName**、 **xs： NMTOKEN**和**xs： NOTATION** 。 倘若它们是直接或间接从以下类型中派生的，则相关联的架构集合中提供的用户定义原子类型也可用。  
+ 支持用于基本和派生原子 XSD 类型的构造函数。 但是，不支持 **xs： duration** 的子类型， **包括 xdt： yearMonthDuration 和 xdt： dayTimeDuration**，以及 **xs： QName**、 **xs： NMTOKEN** 和 **xs： NOTATION** 。 倘若它们是直接或间接从以下类型中派生的，则相关联的架构集合中提供的用户定义原子类型也可用。  
   
 #### <a name="supported-base-types"></a>支持的基类型  
  以下是所支持的基类型：  
@@ -136,12 +136,12 @@ TYP($atomicvalue as xdt:anyAtomicType?
 -   如果参数为其他类型的文字，将在编译期间计算表达式。 当该值不满足类型约束时，将返回空序列。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种 **xml** 类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. 使用 dateTime() XQuery 函数检索以前的产品说明  
- 在此示例中，首先将示例 XML 文档分配给**xml**类型的变量。 本文档包含三个示例 <`ProductDescription`> 元素，其中每个元素都包含一个 <`DateCreated`> 子元素。  
+ 在此示例中，首先将示例 XML 文档分配给 **xml** 类型的变量。 本文档包含三个示例 <`ProductDescription`> 元素，其中每个元素都包含一个 <`DateCreated`> 子元素。  
   
- 然后，查询该变量以便仅检索在特定日期之前创建的那些产品说明。 为了进行比较，该查询使用**xs： dateTime （）** 构造函数来键入日期。  
+ 然后，查询该变量以便仅检索在特定日期之前创建的那些产品说明。 为了进行比较，该查询使用 **xs： dateTime ()** 构造函数来键入日期。  
   
 ```  
 declare @x xml  
@@ -176,7 +176,7 @@ select @x.query('
   
 -   用于 .。。WHERE 循环结构用于检索 \<ProductDescription> 满足 WHERE 子句中指定的条件的元素。  
   
--   **Datetime （）** 构造函数用于构造**datetime**类型的值，以便可以对它们进行相应的比较。  
+-   **Datetime ()** 构造函数用于构造 **datetime** 类型的值，以便可以对它们进行相应的比较。  
   
 -   然后，该查询将构造得到的 XML。 由于构造一系列属性，因此在 XML 构造中要使用逗号和括号。  
   

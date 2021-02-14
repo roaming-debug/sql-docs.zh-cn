@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: 0e9acab737de04b002debf9d8c1b230a5cb01b14
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: cecc6de89a9e8f82a64942acb08af7ddee48c5be
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577790"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081458"
 ---
 # <a name="sqlpackage-import-parameters-and-properties"></a>SqlPackage 导入参数和属性
 SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件）导入 SQL Server 或 Azure SQL 数据库中的新数据库或空白数据库。 对现有数据库执行导入操作时，目标数据库无法包含任何用户定义的架构对象。  

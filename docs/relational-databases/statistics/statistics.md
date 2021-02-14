@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89ebfbb70c7c50729ebbfb5de6a8551e00927bc6
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 521904030d97213770d4a2310b51eaadc37d4e5d
+ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99233242"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478582"
 ---
 # <a name="statistics"></a>统计信息
 
@@ -44,12 +44,12 @@ ms.locfileid: "99233242"
  每个统计信息对象都在包含一个或对个表列的列表上创建，并且包括将值的分布显示在第一列的直方图。 在多列上的统计信息对象也存储与各列中的值的相关性有关的统计信息。 这些相关性统计信息（或 *密度*）根据列值的不同行的数目派生。 
 
 #### <a name="histogram"></a><a name="histogram"></a>直方图  
-直方图度量数据集中每个非重复值的出现频率。 查询优化器根据统计信息对象第一个键列中的列值来计算直方图，它选择列值的方法是以统计方式对行进行抽样或对表或视图中的所有行执行完全扫描。 如果直方图是根据一组抽样行创建的，存储的总行数和非重复值总数则为估计值，且不必为整数。
+直方图度量数据集中每个非重复值的出现频率。 查询优化器根据统计信息对象第一个键列中的列值来计算直方图，它选择列值的方法是对行进行统计抽样，或对表或视图中的所有行执行完整扫描。 如果直方图是根据一组抽样行创建的，存储的总行数和非重复值总数则为估计值，且不必为整数。
 
 > [!NOTE]
 > <a name="frequency"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的直方图仅为单个列生成 - 统计信息对象键列集的第一列。
   
-若要创建直方图，查询优化器将对列值进行排序，计算与每个非重复列值匹配的值数，然后将列值聚合到最多 200 个连续直方图梯级中。 每个直方图梯级都包含一个列值范围，后跟上限列值。 该范围包括介于两个边界值之间的所有可能列值，但不包括边界值自身。 最小排序列值是第一个直方图梯级的上限值。
+为了创建直方图，查询优化器对列值进行排序，计算与每个非重复列值匹配的值的数量，然后将列值聚合到最多 200 个连续的直方图梯级中。 每个直方图梯级都包含一个列值范围，后跟上限列值。 该范围包括介于两个边界值之间的所有可能列值，但不包括边界值自身。 最小排序列值是第一个直方图梯级的上限值。
 
 有关详细信息，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过以下三个步骤从已排序的列值集创建直方图：
 
@@ -69,10 +69,10 @@ ms.locfileid: "99233242"
   
 -   range_high_key 左侧的纯色区域表示列值范围和每个列值的平均出现次数 (average_range_rows)。 第一个直方图梯级的 average_range_rows 始终是 0。  
   
--   点线表示用于估计范围中的非重复值总数 (distinct_range_rows) 和范围中的总指数 (range_rows)。 查询优化器使用 range_rows 和 distinct_range_rows 计算 average_range_rows，且不存储抽样值。   
+-   点线表示用于估计范围中的非重复值总数 (distinct_range_rows) 和范围中的总指数 (range_rows)。 查询优化器使用 range_rows 和 distinct_range_rows 计算 average_range_rows，并且不存储抽样值。   
   
 #### <a name="density-vector"></a><a name="density"></a>密度向量  
-密度 是有关给定列或列组合中重复项数目的信息，其计算公式为 1/（非重复值数目）。 查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度与值的选择性成反比，密度越小，值的选择性越大。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 因为 VIN 的密度比制造商低，所以 VIN 索引比制造商索引更具选择性。 
+密度 是有关给定列或列组合中重复项数目的信息，其计算公式为 1/（非重复值数目）。 查询优化器使用密度来增强从同一个表或索引视图返回多个列的查询的基数估计。 密度与值的选择性成反比，密度越小，值的选择性越大。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 因为 VIN 的密度比制造商低，所以 VIN 索引比制造商索引更具选择性。 
 
 > [!NOTE]
 > 频率是有关统计信息对象第一个键列中每个非重复值出现次数的信息，其计算公式为行计数 * 密度。 最大频率 1 出现在具有唯一值的列中。
@@ -108,22 +108,38 @@ ORDER BY s.name;
 ```  
   
 #### <a name="auto_update_statistics-option"></a>AUTO_UPDATE_STATISTICS 选项  
- 在自动更新统计信息选项 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 为 ON 时，查询优化器将确定统计信息何时可能过期，然后在查询使用这些统计信息时更新它们。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。  
+ 在自动更新统计信息选项 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 为 ON 时，查询优化器将确定统计信息何时可能过期，然后在查询使用这些统计信息时更新它们。 此操作亦称为“统计信息重新编译”。 当插入、更新、删除或合并操作的修改更改了表或索引视图中的数据分布后，统计信息就会过时。 查询优化器通过计算自上次统计信息更新以来的行修改次数，并将行修改次数与阈值进行比较，来确定统计信息何时过时。 阈值基于表基数，表基数可以定义为表或索引视图中的行数。  
   
-* 直到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于更改行的百分比使用阈值。 这与表中的行数无关。 阈值是：
-    * 如果在评估时间统计信息时表基数为 500 或更低，则每达到 500 次修改时更新一次。
-    * 如果在评估时间统计信息时表基数大于 500，则每达到 500 + 修改次数的百分之二十时更新一次。
+- 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 之前，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 使用基于计算统计信息时表或索引视图中的行数的重新编译阈值。 无论表是临时的还是永久的，阈值是不同的。
 
-* 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)为 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。 它的计算方式为 1000 与当前的表基数乘积的平方根。 例如，如果表中包含 200 万行，则计算为 sqrt(1000 * 2000000) = 44721.359。 进行此更改后，将会更频繁地更新大型表的统计信息。 但是，如果数据库的兼容性级别低于 130，则 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值适用。 
+  |表类型|表基数 (n)|重新编译阈值（# 次修改）|
+  |-----------|-----------|-----------|
+  |临时|n < 6|6|
+  |临时|6 <= n <= 500|500|
+  |永久性|n <= 500|500|
+  |临时或永久|n > 500|500 + (0.20 * n)|
+  
+  例如，如果你的表包含 2 万行，则计算为 `500 + (0.2 * 20,000) = 4,500`，统计信息将每 4500 次修改更新一次。
+
+- 自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 起，在[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 下，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 还使用递减的动态统计信息重新编译阈值，此阈值根据计算统计信息时的表基数进行调整。 进行此更改后，将会更频繁地更新大型表的统计信息。 不过，如果数据库兼容性级别低于 130，则应用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值。
+
+  |表类型|表基数 (n)|重新编译阈值（# 次修改）|
+  |-----------|-----------|-----------|
+  |临时|n < 6|6|
+  |临时|6 <= n <= 500|500|
+  |永久性|n <= 500|500|
+  |临时或永久|500 <= n <= 25,000|500 + (0.20 * n)|
+  |临时或永久|n > 25,000|SQRT(1,000 * n)|
+
+  例如，如果你的表包含 200 万行，则计算为 `SQRT(1,000 * 2,000,000) = 44,721`，并且统计信息将每 44,721 次修改更新一次。
 
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或者在[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 和更低级别下的 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 和更高版本中，启用[跟踪标志 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用降低的动态统计信息更新阈值。
 
-可以使用以下指导在预 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 环境中启用跟踪标志 2371：
+虽然建议对所有方案都启用跟踪标志，但启用跟踪标志是可选的。 不过，可以遵循以下指导，在预 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 环境中启用跟踪标志 2371：
 
- - 如果你没有看到因统计信息过期而导致的性能问题，则无需启用此跟踪标志。
- - 如果你在 SAP 系统上，请启用此跟踪标志。  请参阅此[博客](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371)获取其他信息。
- - 如果因为当前的自动更新触发频率不足而必须依赖于夜间作业来更新统计信息，请考虑启用跟踪标志 2371 以降低阈值。
+ - 如果你使用的是 SAP 系统，请启用此跟踪标志。 请参阅此[博客](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371)获取其他信息。
+ - 如果由于当前自动更新的触发次数不够频繁而必须依赖夜间作业来更新统计信息，请考虑启用跟踪标志 2371 来将阈值调整为表基数。
   
 查询优化器在编译查询和执行缓存查询计划前，检查是否存在过期的统计信息。 在编译某一查询前，查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。  
   
@@ -131,9 +147,6 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
  
 可以使用 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 准确地跟踪表中更改的行数，并决定是否要手动更新统计信息。
 
-
-
-  
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
 异步统计信息更新选项 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 默认情况下，异步统计信息更新选项为 OFF 状态，并且查询优化器以同步方式更新统计信息。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建的统计信息。  
  
@@ -144,7 +157,7 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
 
 * 对于同步统计信息更新，查询将始终用最新的统计信息编译和执行。 如果统计信息过期，查询优化器会等待更新的统计信息，然后再编译和执行查询。 
 
-* 对于异步统计信息更新，即使现有统计信息已过期，查询也会用现有的统计信息编译。 如果查询编译时统计信息过期，查询优化器可选择次优的查询计划。 通常，很快就会更新统计信息。 同样地，使用更新的统计信息将有利于在统计信息更新完成之后编译的查询。   
+* 对于异步统计信息更新，即使现有统计信息已过期，查询也会用现有的统计信息编译。 如果查询编译时统计信息过期，查询优化器可选择次优的查询计划。 通常，很快就会更新统计信息。 在统计信息更新完成后进行编译的查询将受益于使用更新后的统计信息。   
 
 执行更改数据分布的操作（例如截断表或对很大百分比的行执行大容量更新）时，考虑使用同步统计信息。 如果你在完成该操作后未手动更新统计信息，那么使用同步统计信息将确保对更改的数据执行查询前统计信息是最新的。  
   
@@ -157,12 +170,12 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
 > [!NOTE]
 > 不管 AUTO_UPDATE_STATISTICS_ASYNC 选项如何，本地临时表上的统计信息都始终同步更新。 而全局临时表上的统计信息会同步或异步更新，具体取决于为用户数据库设置的 AUTO_UPDATE_STATISTICS_ASYNC 选项。
 
-异步统计信息更新由后台请求执行。 当请求准备好将更新后的统计信息写入数据库时，它将尝试获取统计信息元数据对象上的架构修改锁。 如果其他会话已经锁定了同一对象，则将阻止异步统计信息更新，直到可以获取架构修改锁。 类似地，需要获取统计信息元数据对象上架构稳定性锁以编译查询的会话可能被已经持有或正在等待获取架构修改锁的异步统计信息更新后台会话阻止。 因此，对于具有非常频繁的查询编译和频繁统计信息更新的工作负载，使用异步统计信息可能会增加由于锁定阻止而导致并发问题的可能性。
+异步统计信息更新由后台请求执行。 当请求准备好将更新后的统计信息写入数据库时，它将尝试获取统计信息元数据对象上的架构修改锁。 如果其他会话已经锁定了同一对象，则将阻止异步统计信息更新，直到可以获取架构修改锁。 同样，需要在统计信息元数据对象上获取架构稳定性 (Sch-S) 锁来编译查询的会话可能会被异步统计信息更新后台会话阻止，此会话已经持有或等待获取架构修改锁。 因此，对于具有非常频繁的查询编译和频繁统计信息更新的工作负载，使用异步统计信息可能会增加由于锁定阻止而导致并发问题的可能性。
 
-在 Azure SQL 数据库和 Azure SQL 托管实例中，如果启用 ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，可使用异步统计信息更新来避免潜在并发问题。 启用此配置后，后台请求会在单独的低优先级队列中等待获取架构修改 (Sch-M) 锁，从而允许其他请求继续使用现有统计信息编译查询。 当没有其他会话锁定统计信息元数据对象时，后台请求将获取其架构修改锁和更新统计信息。 如果后台请求在几分钟的超时期限内无法获取锁定（不太可能发生这种情况），将中止异步统计信息更新。在这种情况下，在触发另一次自动统计信息更新或者[手动更新](update-statistics.md)统计信息之前，不会更新统计信息。
+在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]中，如果启用 ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [数据库范围内配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，可以使用异步统计信息更新来避免潜在的并发问题。 启用此配置后，后台请求将等待获取架构修改 (Sch-M) 锁，并将更新后的统计信息暂留到单独的低优先级队列中，从而允许其他请求继续使用现有的统计信息来编译查询。 当没有其他会话锁定统计信息元数据对象时，后台请求将获取其架构修改锁和更新统计信息。 如果后台请求在几分钟的超时期限内无法获取锁定（不太可能发生这种情况），将中止异步统计信息更新。在这种情况下，在触发另一次自动统计信息更新或者[手动更新](update-statistics.md)统计信息之前，不会更新统计信息。
 
 > [!Note]
-> ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY 数据库范围的配置选项现可在 Azure SQL 数据库和 Azure SQL 托管实例中使用，它根据计划会包含在 SQL Server vNext 中。 
+> ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY 数据库范围内配置选项在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 中可用，并计划在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中包含。 
 
 #### <a name="incremental"></a>INCREMENTAL  
  CREATE STATISTICS 的 INCREMENTAL 选项为 ON 时，创建的统计信息为每个分区的统计信息。 为 OFF 时，会删除统计信息树，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会重新计算统计信息。 默认为 OFF。 此设置覆盖数据库级别 INCREMENTAL 属性。 要深入了解如何创建增量统计信息，请参阅 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。 要深入了解如何自动创建每个分区的统计信息，请参阅[数据库属性（“选项”页）](../../relational-databases/databases/database-properties-options-page.md#automatic)和 [ALTER DATABASE SET 选项 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 

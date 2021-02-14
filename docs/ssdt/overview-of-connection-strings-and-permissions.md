@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 292901b39a4c4f6732290ba7425f26f0bc1e6c48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 70387a9e18888a47522613b7a76a2483aec0d287
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901107"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080808"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>连接字符串和权限概述
 
-若要运行 SQL Server 单元测试，必须通过使用一个或两个特定连接字符串来连接数据库服务器。 每个连接字符串均表示一个具有特定权限的帐户，您必须具有相关权限才能在特定脚本中执行作为测试的一部分的某个任务/某一组任务。 可以在“SQL Server 测试配置”**** 对话框中指定这些字符串，或者通过手动编辑测试项目的 app.config 文件来指定这些字符串。  
+若要运行 SQL Server 单元测试，必须通过使用一个或两个特定连接字符串来连接数据库服务器。 每个连接字符串均表示一个具有特定权限的帐户，您必须具有相关权限才能在特定脚本中执行作为测试的一部分的某个任务/某一组任务。 可以在“SQL Server 测试配置”对话框中指定这些字符串，或者通过手动编辑测试项目的 app.config 文件来指定这些字符串。  
   
 ## <a name="connection-strings"></a>连接字符串  
 在“SQL Server 测试配置”对话框中，可以为下列每个帐户指定连接字符串。  

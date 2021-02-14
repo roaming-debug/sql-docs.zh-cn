@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 85339e8fb742bfa6e8545e72ac1ff70dc5bde6c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90302e701b8975d300e77cc7ca028c76825a79f6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461946"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339548"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>自动生成 Code 之外的属性值 (Master Data Services)
 
@@ -54,17 +54,17 @@ ms.locfileid: "88461946"
   
 9. 在 **“组件”** 窗格中，展开 **“操作”** 节点。  
   
-10. 在“默认值”节点中，单击“默认为生成的值”并将其拖到“THEN”窗格的“操作”标签************。  
+10. 在“默认值”节点中，单击“默认为生成的值”并将其拖到“THEN”窗格的“操作”标签。  
   
 11. 在 **“属性”** 窗格中，单击要生成其值的属性并将其拖到 **“编辑操作”** 窗格的 **“选择属性”** 标签。  
   
-12. 在 **“起始”** 和 **“增量”** 框中键入值。 如果成员已存在，则将基于最大的现有值设置值。 例如，如果最大的现有值为 299 并且将“增量”设置为“1”，则下一个成员的值将设置为 300********。  
+12. 在 **“起始”** 和 **“增量”** 框中键入值。 如果成员已存在，则将基于最大的现有值设置值。 例如，如果最大的现有值为 299 并且将“增量”设置为“1”，则下一个成员的值将设置为 300。  
   
 13. 在 **“编辑操作”** 窗格中，单击 **“保存项”**。  
   
 14. 单击 **“上一步”**。  
   
-15. 或者，在“业务规则维护”**** 页上，对于包含业务规则的行，双击“名称”****、“说明”**** 或“通知”**** 列中的单元以便更新值。  
+15. 或者，在“业务规则维护”页上，对于包含业务规则的行，双击“名称”、“说明”或“通知”列中的单元以便更新值。  
   
 16. 单击 **“发布业务规则”**。  
   

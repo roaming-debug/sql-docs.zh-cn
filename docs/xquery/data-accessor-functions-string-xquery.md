@@ -1,6 +1,6 @@
 ---
-title: string 函数（XQuery） |Microsoft Docs
-description: 了解 XQuery 函数 string （），它返回以字符串表示的参数值。
+title: )  (XQuery 的字符串函数 |Microsoft Docs
+description: 了解 XQuery 函数字符串 () ，该字符串返回以字符串表示的参数值。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4c0dee40eb08aac425f93570c98fc88d32bcc60
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c334f2f78ae79b9a1af3a268728d6fcc5454f05
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730967"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351085"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>数据取值函数 - string (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  返回表示为字符串的 *$arg*的值。  
+  返回表示为字符串的 *$arg* 的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,24 +36,24 @@ fn:string() as xs:string
 fn:string($arg as item()?) as xs:string  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *$arg*  
  一个节点或原子值。  
   
 ## <a name="remarks"></a>备注  
   
--   如果 *$arg*是空序列，则返回长度为零的字符串。  
+-   如果 *$arg* 是空序列，则返回长度为零的字符串。  
   
--   如果 *$arg*是节点，则该函数将返回使用字符串值访问器获取的节点的字符串值。 W3C XQuery 1.0 和 XPath 2.0 数据模型规范中对此进行了定义。  
+-   如果 *$arg* 是节点，则该函数将返回使用字符串值访问器获取的节点的字符串值。 W3C XQuery 1.0 和 XPath 2.0 数据模型规范中对此进行了定义。  
   
--   如果 *$arg*是原子值，则该函数返回由表达式 cast 作为**xs： string**、 *$arg*返回的同一字符串，但在其他情况下除外。  
+-   如果 *$arg* 是原子值，则该函数返回由表达式 cast 作为 **xs： string**、 *$arg* 返回的同一字符串，但在其他情况下除外。  
   
--   如果 *$arg*的类型为**xs： ANYURI**，则 URI 将转换为字符串，而不会转义特殊字符。  
+-   如果 *$arg* 的类型为 **xs： ANYURI**，则 URI 将转换为字符串，而不会转义特殊字符。  
   
--   此实现，不带参数的**fn： string （）** 只能用于上下文相关的谓词的上下文中。 特别要指出的是，它只能在方括号 ([ ]) 内使用。  
+-   此实现、无参数的 **fn： string ()** 只能在上下文相关的谓词的上下文中使用。 特别要指出的是，它只能在方括号 ([ ]) 内使用。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种 **xml** 类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-string-function"></a>A. 使用 string 函数  
  下面的查询检索 `Features` <> 元素的 <> 子元素节点 `ProductDescription` 。  
@@ -80,7 +80,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- 如果指定**string （）** 函数，将接收指定节点的字符串值。  
+ 如果指定 **字符串 ()** 函数，则会收到指定节点的字符串值。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -99,7 +99,7 @@ These are the product highlights.
 ```  
   
 ### <a name="b-using-the-string-function-on-various-nodes"></a>B. 对各种节点使用 string 函数  
- 在下面的示例中，一个 XML 实例被分配给一个 xml 类型变量。 指定查询以说明将**string （）** 应用于各种节点的结果。  
+ 在下面的示例中，一个 XML 实例被分配给一个 xml 类型变量。 指定查询以说明将 **字符串 ()** 应用到各个节点的结果。  
   
 ```  
 declare @x xml  

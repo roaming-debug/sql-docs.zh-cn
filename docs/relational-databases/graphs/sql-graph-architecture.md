@@ -15,15 +15,15 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f167741a2064020cfbc7fdc43e881a74609e4ac6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ab08692b1e221e589cc6283e2800a695044f79b7
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480158"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351411"
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 体系结构  
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 了解如何构建 SQL Graph。 了解基础知识会使其他 SQL Graph 文章更易于理解。
  
@@ -44,7 +44,7 @@ ms.locfileid: "97480158"
 ## <a name="edge-table"></a>边缘表
 边缘表表示关系图中的关系。 边缘始终定向并连接两个节点。 使用边缘表，用户可以为图形中的多对多关系建模。 边缘表中不能有任何用户定义的属性。 每次创建边缘表时，还会在边缘表中创建三个隐式列：
 
-|列名称    |说明  |
+|列名称    |描述  |
 |---   |---  |
 |`$edge_id`   |唯一标识数据库中的给定边缘。 它是生成的列，并且值是边缘表 object_id 和内部生成的 bigint 值的组合。 但是，在 `$edge_id` 选择该列时，将显示 JSON 字符串形式的计算值。 `$edge_id` 是一个伪列，它映射到其中包含十六进制字符串的内部名称。 `$edge_id`从表中选择时，列名称将显示为 `$edge_id_\<hex_string>` 。 使用查询中的伪列名时，建议的方法是查询内部 `$edge_id` 列，并使用包含十六进制字符串的内部名称。 |
 |`$from_id`   |存储 `$node_id` 从中产生边缘的节点的。  |
@@ -62,7 +62,7 @@ ms.locfileid: "97480158"
 
 
 
-## <a name="metadata"></a>元数据
+## <a name="metadata"></a>Metadata
 使用这些元数据视图可以查看节点或边缘表的属性。
  
 ### <a name="systables"></a>sys.tables
@@ -83,7 +83,7 @@ ms.locfileid: "97480158"
  
 下表列出了列的有效值 `graph_type`
 
-|列值  |说明  |
+|列值  |描述  |
 |---   |---   |
 |1  |GRAPH_ID  |
 |2  |GRAPH_ID_COMPUTED  |
@@ -99,14 +99,14 @@ ms.locfileid: "97480158"
 
 节点表中的隐式列
 
-|列名    |数据类型  |is_hidden  |评论  |
+|列名    |数据类型  |is_hidden  |注释  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |BIGINT |1  |内部 `graph_id` 列  |
 |$node _id_\<hex_string> |NVARCHAR   |0  |外部节点 `node_id` 列  |
 
 边缘表中的隐式列
 
-|列名    |数据类型  |is_hidden  |评论  |
+|列名    |数据类型  |is_hidden  |注释  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |BIGINT |1  |内部 `graph_id` 列  |
 |$edge _id_\<hex_string> |NVARCHAR   |0  |外部 `edge_id` 列  |
@@ -120,7 +120,7 @@ ms.locfileid: "97480158"
 ### <a name="system-functions"></a>系统函数
 添加了下列内置函数。 这将帮助用户从生成的列中提取信息。 请注意，这些方法不会验证用户的输入。 如果用户指定了无效 `sys.node_id` 的方法，将提取相应的部分并将其返回。 例如，OBJECT_ID_FROM_NODE_ID 将采用 `$node_id` 作为输入，并将返回表的 object_id，此节点属于。 
  
-|内置   |说明  |
+|内置   |描述  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |从中提取 object_id `node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |从中提取 graph_id `node_id`  |
