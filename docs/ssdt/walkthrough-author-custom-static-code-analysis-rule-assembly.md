@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c734a2907ec4ad2d312385976013f8c1c39effcc
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 3cae3183bef3d6bd40a9d30805f3923df8d70679
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987723"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100082338"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>有关创建适用于 SQL Server 的自定义静态代码分析规则程序集的演练
 
@@ -532,7 +532,7 @@ ms.locfileid: "91987723"
   
 2. 单击“文件” > “新建” > “项目”。    
   
-3. 在“新建项目”**** 对话框内的“已安装模板”**** 列表中，展开“SQL Server”**** 节点，然后再单击“SQL Server 数据库项目”****。  
+3. 在“新建项目”对话框内的“已安装模板”列表中，展开“SQL Server”节点，然后再单击“SQL Server 数据库项目”。  
   
 4. 在“名称”文本框中，键入 SampleRulesDB，然后单击“确定”。  
   

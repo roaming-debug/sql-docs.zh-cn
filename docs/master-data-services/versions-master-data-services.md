@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 985714657ef87050b6273599013f0dbc5db83196
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 54c250aa3b6a6e803f90522218b1eef854af7903
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811700"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348846"
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "85811700"
   
 1.  创建模型并使用公司的主数据填充 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库时，自动创建初始版本。 用户基于权限在需要时可以更改此版本。  
   
-2.  当您要提交模型的一个版本时，锁定该版本，以便只有模型管理员可以更新数据。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。 如果配置了通知，则每次版本的状态发生更改时，电子邮件通知都会发送给模型管理员。 有关详细信息，请参阅[配置电子邮件通知 (Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)。  
+2.  当您要提交模型的一个版本时，锁定该版本，以便只有模型管理员可以更新数据。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。 如果配置了通知，则每次版本的状态发生更改时，电子邮件通知都会发送给模型管理员。 有关详细信息，请参阅[配置电子邮件通知 (Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)。  
   
 3.  将业务规则应用于锁定的版本的数据并查看任何验证问题。 如有必要，可以填写缺少的信息或恢复导致问题的事务。 还可以解锁该版本，以便用户进行更改。  
   

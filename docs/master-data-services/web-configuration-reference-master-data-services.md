@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7f4baf9f3ef626f5e2dcdc62092afaf1e586df33
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: f277ecb0d3f0cc3a2e4cc62d3feff954e7c22327
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196091"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348882"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 配置参考 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "92196091"
 ## <a name="webconfig-elements"></a>Web.Config 元素  
  Web.config 文件 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **\<masterDataServices>** 除了包含标准 IIS、.NET Framework、ASP.NET 和 WINDOWS COMMUNICATION FOUNDATION (WCF) 配置元素外，还包含一个自定义元素。 下表描述了 Web.config 文件中包括的元素。  
   
-|配置元素|说明|  
+|配置元素|描述|  
 |---------------------------|-----------------|  
 |**masterDataServices**|自定义元素。 将 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务连接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。|  
 |**connectionStrings**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [connectionStrings 元素（ASP.NET 设置架构）](/previous-versions/dotnet/netframework-4.0/bf7sd233(v=vs.100)) 。|  
@@ -56,13 +56,13 @@ ms.locfileid: "92196091"
   
 ### <a name="elements-and-attributes"></a>元素和属性  
   
-|项目|说明|  
+|项|描述|  
 |----------|-----------------|  
 |**实例**|子元素。 包含指定 Web 服务和数据库连接字符串信息的属性。|  
-|**virtualPath**|属性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的虚拟路径。 这对应于**path** **\<application>** **\<site>** IIS ApplicationHost.config 文件中元素下的元素的 path 属性。|  
-|**名**|属性。 指定承载 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的站点的名称。 这对应于**name** **\<site>** **\<sites>** IIS ApplicationHost.config 文件中下元素的 name 属性。|  
-|**connectionName**|属性。 指定要使用的连接的名称。 这与**name** **\<add>** **\<connectionStrings>** Web.config 中元素下的元素的 name 属性相对应。|  
-|**serviceName**|属性。 指定 Web 服务的名称。 这与**name** **\<service>** **\<services>** Web.config 中元素下的元素的 name 属性相对应。|  
+|**virtualPath**|属性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的虚拟路径。 这对应于 **\<application>** **\<site>** IIS ApplicationHost.config 文件中元素下的元素的 path 属性。|  
+|**名**|属性。 指定承载 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的站点的名称。 这对应于 **\<site>** **\<sites>** IIS ApplicationHost.config 文件中下元素的 name 属性。|  
+|**connectionName**|属性。 指定要使用的连接的名称。 这与 **\<add>** **\<connectionStrings>** Web.config 中元素下的元素的 name 属性相对应。|  
+|**serviceName**|属性。 指定 Web 服务的名称。 这与 **\<service>** **\<services>** Web.config 中元素下的元素的 name 属性相对应。|  
   
 ### <a name="example"></a>示例  
  下面的示例演示了 Contoso 站点上一个名为 MDS1 的服务和使用由 MDSDB 指定的连接字符串的 /MDS 路径。  

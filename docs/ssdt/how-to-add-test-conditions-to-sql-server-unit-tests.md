@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e78a045c3dd7127df8c692120ff140892594fb0c
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 9920430615d8391ef069078272ed8abbfcef6a00
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518927"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063592"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>如何：向 SQL Server 单元测试添加测试条件
 
@@ -41,7 +41,7 @@ ms.locfileid: "85518927"
     测试条件将添加到单元测试方法中。  
   
     > [!NOTE]  
-    > 通过单击测试条件，然后单击“测试条件”**** 窗格中的向上和向下箭头，可以对测试方法中的测试条件重新排序。  
+    > 通过单击测试条件，然后单击“测试条件”窗格中的向上和向下箭头，可以对测试方法中的测试条件重新排序。  
   
 5.  选择刚添加的测试条件并查看“属性”窗口。  
   

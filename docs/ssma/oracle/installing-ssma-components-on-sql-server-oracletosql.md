@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 64850d1a701491f0dc5817576a568fdc3ebc2483
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 81d3f542e64030dbf6a0bf70067307222bef5a8b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870092"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344209"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server 上安装 SSMA 组件 (OracleToSQL) 
 
@@ -53,7 +53,7 @@ SSMA 扩展包将部署扩展存储过程，并将 **sysdb** 和 **ssmatesterdb*
 安装扩展包：
 
 1. 将 **SSMAforOracleExtensionPack_ *n*.msi** (，其中 *n* 是) 到运行的计算机的生成号 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
-2. 双击 SSMAforOracleExtensionPack_ " **。*n***
+2. 双击 SSMAforOracleExtensionPack_ " **。**
 3. 在“欢迎”页面上，单击“下一步”。 
 4. 在 " **最终用户许可协议** " 页上，阅读许可协议。 如果同意，请选择 **"我接受协议"** 选项，然后单击 " **下一步**"。
 5. 在 " **选择安装类型** " 页上，选择 " **典型**"。
@@ -110,7 +110,7 @@ SSMA 扩展包将部署扩展存储过程，并将 **sysdb** 和 **ssmatesterdb*
 - `xp_ora2ms_exec2_ex`
 - `xp_ora2ms_versioninfo2`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [为 Oracle 客户端安装 SSMA](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)
 - [将 Oracle 数据库迁移到 SQL Server](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

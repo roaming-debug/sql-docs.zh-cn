@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9868b414d627c7ea98504120432c0c3a662d463b
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 588597398c11b9b374bdecd272162fe82053cd8f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956548"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354080"
 ---
 # <a name="installation-and-configuration"></a>安装和配置
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -48,11 +48,11 @@ Wide World 导入 OLTP 数据库安装和配置说明。
 1. 打开 SQL Server Management Studio，然后连接到目标 SQL Server 实例。
 2. 右键单击 " **数据库** " 节点，然后选择 " **还原数据库**"。
 3. 选择 " **设备** "，并单击按钮 **...**
-4. 在对话框中 **选择 "备份设备**"，单击 " **添加**"，导航到服务器文件系统中的数据库备份，并选择备份。 单击“确定”。
+4. 在对话框中 **选择 "备份设备**"，单击 " **添加**"，导航到服务器文件系统中的数据库备份，并选择备份。 单击“确定”。 
 5. 如果需要，在 " **文件** " 窗格中更改数据文件和日志文件的目标位置。 请注意，最佳做法是将数据和日志文件放在不同的驱动器上。
-6. 单击“确定”。 这将启动数据库还原。 完成后，会在 SQL Server 实例上安装数据库 WideWorldImporters。
+6. 单击“确定”。  这将启动数据库还原。 完成后，会在 SQL Server 实例上安装数据库 WideWorldImporters。
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Azure SQL 数据库
 
 若要将 bacpac 导入新的 SQL 数据库，可以使用 Management Studio。
 
@@ -64,7 +64,7 @@ Wide World 导入 OLTP 数据库安装和配置说明。
 5. 在 " **数据库设置** " 下，将 "数据库名称" 更改为 *WideWorldImporters* ，并选择要使用的目标版本和服务目标。
 6. 单击 " **下一步** "，然后单击 " **完成** " 开始部署。 在 P1 上完成几分钟的时间。 如果需要较低的定价层，建议导入到新的 P1 数据库，然后将定价层更改为所需的级别。
 
-## <a name="configuration"></a>配置
+## <a name="configuration"></a>Configuration
 
 ### <a name="full-text-indexing"></a>全文索引
 

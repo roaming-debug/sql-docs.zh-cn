@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed19a835b6df605a6ec735a8063a192ea32148fd
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 4a9734dd4efd2f4dcedd539218a0a7d989211749
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034830"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353286"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>基于节点的函数 - namespace-uri
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   如果省略该参数，则默认值为上下文节点。  
   
--   在 SQL Server 中，无参数的 **fn： namespace ( # B1 ** 只能在上下文相关的谓词的上下文中使用。 特别要指出的是，它只能在方括号 ([ ]) 内使用。  
+-   在 SQL Server 中，无参数的 **fn： namespace ()** 只能在上下文相关的谓词的上下文中使用。 特别要指出的是，它只能在方括号 ([ ]) 内使用。  
   
 -   如果 *$arg* 是空序列，则返回长度为零的字符串。  
   
@@ -79,7 +79,7 @@ https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManu
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. 在谓词中使用没有参数的 namespace-uri()  
- 对类型为 xml 的 CatalogDescription 列指定了以下查询。 表达式将返回其命名空间 URI 为 `https://www.adventure-works.com/schemas/OtherFeatures` 的所有元素节点。 指定的命名空间**uri ( # B1 ** 函数没有参数，并使用上下文节点。  
+ 对类型为 xml 的 CatalogDescription 列指定了以下查询。 表达式将返回其命名空间 URI 为 `https://www.adventure-works.com/schemas/OtherFeatures` 的所有元素节点。 指定的命名空间 **uri ()** 函数没有参数，并使用上下文节点。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -104,7 +104,7 @@ WHERE ProductModelID=19
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   **命名空间 uri ( # B1**函数返回类型为 xs： string 而不是 Xs： anyURI 的实例。  
+-   **命名空间 uri ()** 函数返回类型为 xs： string 而不是 Xs： anyURI 的实例。  
   
 ## <a name="see-also"></a>另请参阅  
  [节点上的函数](./xquery-functions-against-the-xml-data-type.md)   

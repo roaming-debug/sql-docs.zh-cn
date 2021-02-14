@@ -1,5 +1,5 @@
 ---
-title: 条件表达式（XQuery） |Microsoft Docs
+title: )  (XQuery 的条件表达式 |Microsoft Docs
 description: 了解 XQuery 支持的条件表达式。
 ms.custom: ''
 ms.date: 08/09/2016
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81fe55de0119fc2b9327d623155ed610de4ef06b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5fdc8703482f570d0ecb749b471af170b62770ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916271"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349372"
 ---
 # <a name="conditional-expressions-xquery"></a>条件表达式 (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-  XQuery 支持以下条件**if-else**语句：  
+  XQuery 支持以下条件 **if-else** 语句：  
   
 ```  
 if (<expression1>)  
@@ -54,9 +54,9 @@ else
   
 -   测试表达式必须用括号括起来。  
   
--   **Else**表达式是必需的。 如果不需要该表达式，可以返回“( )”，如本主题中的示例所示。  
+-   **Else** 表达式是必需的。 如果不需要该表达式，可以返回“( )”，如本主题中的示例所示。  
   
- 例如，下面的查询是针对**xml**类型变量指定的。 **If**条件 @v 使用[sql： variable （）函数](../xquery/xquery-extension-functions-sql-variable.md)扩展函数测试 XQuery 表达式内的 sql 变量（）的值。 如果变量值为 "FirstName"，它将返回 <`FirstName`> 元素。 否则，它将返回 <`LastName`> 元素。  
+ 例如，下面的查询是针对 **xml** 类型变量指定的。 **If** 条件 @v 使用 [sql： variable () 函数](../xquery/xquery-extension-functions-sql-variable.md)扩展函数测试 XQuery 表达式内 () 的 sql 变量的值。 如果变量值为 "FirstName"，它将返回 <`FirstName`> 元素。 否则，它将返回 <`LastName`> 元素。  
   
 ```  
 declare @x xml  
@@ -105,7 +105,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 在前面的查询中， **if**表达式中的条件将检查 <> 中是否存在两个以上的子元素 `Features` 。 如果有，则在结果中返回 `\<there-is-more/>` 元素。  
+ 在前面的查询中， **if** 表达式中的条件将检查 <> 中是否存在两个以上的子元素 `Features` 。 如果有，则在结果中返回 `\<there-is-more/>` 元素。  
   
  结果如下：  
   
@@ -150,7 +150,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- 此查询可以不带**if**子句编写，如以下示例中所示：  
+ 此查询可以不带 **if** 子句编写，如以下示例中所示：  
   
 ```  
 SELECT Instructions.query('  

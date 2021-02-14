@@ -1,5 +1,5 @@
 ---
-title: FLWOR 语句和迭代（XQuery） |Microsoft Docs
+title: FLWOR 语句和迭代 (XQuery) |Microsoft Docs
 description: 了解在 XQuery 中构成 FLOWR 迭代语法的 for、let、where、order by 和 return 子句。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f47068324f13fe3cd03f0fc798090378a5f5ad6e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: daca777a2994813a6df131d1fa756edf4f753f6e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753621"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353316"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 语句和迭代 (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -103,7 +103,7 @@ where ProductModelID=7
   
 -   `return`表达式返回 <> 元素的字符串值 `step` 。  
   
- [字符串函数（XQuery）](../xquery/data-accessor-functions-string-xquery.md)用于检索 <> 节点的字符串值 `step` 。  
+ [字符串函数 (XQuery) ](../xquery/data-accessor-functions-string-xquery.md)用于检索 <> 节点的字符串值 `step` 。  
   
  下面是部分结果：  
   
@@ -142,9 +142,9 @@ SELECT @x.query('
   
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，不允许使用异类序列。 尤其不允许使用由原子值和节点混合组成的序列。  
   
- 迭代经常与[Xml 构造](../xquery/xml-construction-xquery.md)语法一起用于转换 xml 格式，如以下查询中所示。  
+ 迭代经常与 [Xml 构造](../xquery/xml-construction-xquery.md) 语法一起用于转换 xml 格式，如以下查询中所示。  
   
- 在 AdventureWorks 示例数据库中， **ProductModel**表的 "**说明**" 列中存储的生产说明具有以下形式：  
+ 在 AdventureWorks 示例数据库中， **ProductModel** 表的 "**说明**" 列中存储的生产说明具有以下形式：  
   
 ```xml
 <Location LocationID="10" LaborHours="1.2"   
@@ -190,7 +190,7 @@ where ProductModelID=7
   
 -   FLWOR 语句检索 `Location` 特定产品的 <> 元素的序列。  
   
--   [数据函数（XQuery）](../xquery/data-accessor-functions-data-xquery.md)用于提取每个属性的值，以便将它们作为文本节点（而不是属性）添加到生成的 XML 中。  
+-   [数据函数 (XQuery) ](../xquery/data-accessor-functions-data-xquery.md)用于提取每个属性的值，因此它们将作为文本节点（而不是属性）添加到生成的 XML 中。  
   
 -   RETURN 子句中的表达式将构造所需的 XML。  
   
@@ -247,7 +247,7 @@ where ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   `where`关键字使用**count （）** 函数来计算 `step` 每个工作中心位置中> 子元素的 <数量。  
+-   `where`关键字使用 **count ()** 函数对 `step` 每个工作中心位置中的 <> 子元素进行计数。  
   
 -   `return` 表达式将构造您希望从迭代结果生成的 XML。  
   
@@ -309,7 +309,7 @@ Manu step 1 at Loc 1
 Manu step 1 at Loc 2  
 ```  
   
- 下面的查询是类似的，但它是针对**ProductModel**表的指令列的类型化**xml**列指定的。 [Xml 构造（XQuery）](../xquery/xml-construction-xquery.md)用于生成所需的 xml。  
+ 下面的查询是类似的，但它是针对 **ProductModel** 表的指令列的类型化 **xml** 列指定的。 [Xml 构造 (XQuery) ](../xquery/xml-construction-xquery.md) 用于生成所需的 xml。  
   
 ```sql
 SELECT Instructions.query('  
@@ -329,9 +329,9 @@ WHERE ProductModelID=7
   
 -   `for` 子句定义了两个变量：`$WC` 和 `$S`。 在生产某个自行车产品型号时，与 `$WC` 相关联的表达式将生成一系列生产车间。 分配给 `$S` 变量的路径表达式将为 `$WC` 中的每个生产车间序列生成一个相应的步骤序列。  
   
--   Return 语句构造了 `Step` 包含 <> 元素的 XML，该元素包含生产步骤和**LocationID**作为其属性。  
+-   Return 语句构造了 `Step` 包含 <> 元素的 XML，该元素包含生产步骤和 **LocationID** 作为其属性。  
   
--   **Declare 默认元素命名空间**在 XQuery 序言中使用，因此生成的 XML 中的所有命名空间声明都显示在顶级元素上。 这使结果的可读性更强。 有关默认命名空间的详细信息，请参阅[在 XQuery 中处理命名空间](../xquery/handling-namespaces-in-xquery.md)。  
+-   **Declare 默认元素命名空间** 在 XQuery 序言中使用，因此生成的 XML 中的所有命名空间声明都显示在顶级元素上。 这使结果的可读性更强。 有关默认命名空间的详细信息，请参阅 [在 XQuery 中处理命名空间](../xquery/handling-namespaces-in-xquery.md)。  
   
  下面是部分结果：  
   
@@ -353,7 +353,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>使用 order by 子句  
- 通过使用 FLWOR 表达式中的 `order by` 子句可在 XQuery 中进行排序。 传递给子句的排序表达式 `order by` 必须返回其类型对**gt**运算符有效的值。 每个排序表达式必须针对每一项生成一个单独的序列。 默认情况下，按升序进行排序。 您也可以选择为每个排序表达式指定升序或降序顺序。  
+ 通过使用 FLWOR 表达式中的 `order by` 子句可在 XQuery 中进行排序。 传递给子句的排序表达式 `order by` 必须返回其类型对 **gt** 运算符有效的值。 每个排序表达式必须针对每一项生成一个单独的序列。 默认情况下，按升序进行排序。 您也可以选择为每个排序表达式指定升序或降序顺序。  
   
 > [!NOTE]  
 >  通过在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中实现 XQuery 进行的字符串值的排序比较始终是使用二进制 Unicode 码位排序规则来执行的。  
@@ -374,7 +374,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- 请注意，[原子化（XQuery）](../xquery/atomization-xquery.md)进程先检索 <> 元素的原子值， `number` 然后再将其传递给 `order by` 。 您可以通过使用**data （）** 函数来编写表达式，但这不是必需的。  
+ 请注意，在将其传递到之前， [原子化 (XQuery) ](../xquery/atomization-xquery.md) 进程检索 <> 元素的原子值 `number` `order by` 。 您可以使用 **数据 ()** 函数编写表达式，但这不是必需的。  
   
 ```  
 order by data($a/act:number[1]) descending  

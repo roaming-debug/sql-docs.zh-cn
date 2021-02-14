@@ -19,15 +19,16 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current
-ms.openlocfilehash: c916466f6a105a2b10508e23f1739bba0d192970
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9e5a6f6506e4ce40b3b89f32dd58329eb4667760
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480178"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351398"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql) 
-[!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
+
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
   指定关系图的搜索条件，该搜索条件是以递归方式或重复方式搜索的。 可以在 SELECT 语句中与 graph 节点和边缘表匹配中使用 SHORTEST_PATH。 
   
@@ -53,9 +54,9 @@ SHORTEST_PATH 函数允许你查找：
 * **{1,n}** ：重复模式 1到“n”次。 找到最短的时立即终止。
 
 ## <a name="last_node"></a>LAST_NODE
-LAST_NODE ( # A1 函数允许链接两个任意长度的遍历模式。 它可用于以下情况：    
+LAST_NODE () 函数允许链接两个任意长度的遍历模式。 它可用于以下情况：    
 * 一个查询中使用了多个最短路径模式，一个模式从上一模式的最后一个节点开始。
-* 将两个最短路径模式合并到同一个 LAST_NODE ( # A1。
+* 两个最短路径模式合并到同一个 LAST_NODE () 。
 
 ## <a name="graph-path-order"></a>图形路径顺序
 Graph 路径顺序指的是输出路径中数据的顺序。 输出路径顺序始终从模式的非递归部分开始，后面是在递归部分中显示的节点/边缘。 在查询优化/执行期间遍历关系图的顺序与输出中打印的顺序无关。 同样，递归模式中箭头的方向也不会影响关系图路径顺序。 

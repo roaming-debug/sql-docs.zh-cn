@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4756d86070e933f4c281922d54d80974832e9f5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62fa5c7bba9133c9a8b0098142d97fdd422c47ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775504"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341908"
 ---
 # <a name="general-xquery-use-cases"></a>XQuery 常规使用情况
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -55,11 +55,11 @@ WHERE CatalogDescription is not null
   
  请注意上述查询的以下方面：  
   
--   XQuery prolog 中的**namespace**关键字用于定义在查询主体中使用的命名空间前缀。  
+-   XQuery prolog 中的 **namespace** 关键字用于定义在查询主体中使用的命名空间前缀。  
   
 -   查询主体用于构造所需的 XML。  
   
--   在 WHERE 子句中，**存在（）** 方法用于仅查找包含产品目录说明的行。 也就是说，包含 <`ProductDescription`> 元素的 XML。  
+-   在 WHERE 子句中， **存在 ()** 方法用于仅查找包含产品目录说明的行。 也就是说，包含 <`ProductDescription`> 元素的 XML。  
   
  结果如下：  
   
@@ -72,7 +72,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- 下面的查询检索的信息相同，但仅适用于目录说明中包含权重、<`Weight`> 元素 <> 元素的产品型号 `Specifications` 。 此示例使用 WITH XMLNAMESPACES 来声明 pd 前缀与其命名空间的绑定。 通过这种方式，在**query （）** 方法和**存在（）** 方法中不描述绑定。  
+ 下面的查询检索的信息相同，但仅适用于目录说明中包含权重、<`Weight`> 元素 <> 元素的产品型号 `Specifications` 。 此示例使用 WITH XMLNAMESPACES 来声明 pd 前缀与其命名空间的绑定。 这样，就不会在 **query ()** 方法和 **()** 方法中描述绑定。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -87,7 +87,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- 在前面的查询中，WHERE 子句中的**xml**数据类型的**存在（）** 方法将检查是否存在 `Weight` <> 元素中的 <> 元素 `Specifications` 。  
+ 在前面的查询中，WHERE 子句中的 **xml** 数据类型 **() 方法存在**，以查看 `Weight` <> 元素中是否存在 <> 元素 `Specifications` 。  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. 为其目录说明包含前角和小幅图片的产品型号查找产品型号 ID  
  XML 产品目录说明包含产品图片 <`Picture`> 元素。 每个图片都具有若干属性。 其中包括图片角度、<`Angle`> 元素以及大小 <`Size`> 元素。  
@@ -118,9 +118,9 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
  请注意上述查询的以下方面：  
   
--   在 WHERE 子句中，**存在（）** 方法用于仅检索具有产品目录说明的行，这些行包含带有 <> 元素的产品目录说明 `Picture` 。  
+-   在 WHERE 子句中， **存在 ()** 方法用于仅检索具有 <> 元素的产品目录说明的行 `Picture` 。  
   
--   WHERE 子句两次使用**value （）** 方法来比较 <`Size`> 和 <`Angle`> 元素的值。  
+-   WHERE 子句使用 () 方法的 **值** 两次，比较 <`Size`> 和 <`Angle`> 元素的值。  
   
  下面是部分结果：  
   
@@ -137,7 +137,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ```  
   
 ### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 创建产品型号名称和功能对的简单列表，每个对都包含在元素中 \<Features>  
- 在产品型号目录说明中，XML 包含若干种产品功能。 所有这些功能都包含在 <`Features`> 元素中。 查询使用[XML 构造（XQuery）](../xquery/xml-construction-xquery.md)构造所需的 XML。 大括号中的表达式将替换为结果。  
+ 在产品型号目录说明中，XML 包含若干种产品功能。 所有这些功能都包含在 <`Features`> 元素中。 查询使用 [XML 构造 (XQuery) ](../xquery/xml-construction-xquery.md) 来构造所需的 XML。 大括号中的表达式将替换为结果。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -156,11 +156,11 @@ WHERE ProductModelID=19
   
  请注意上述查询的以下方面：  
   
--   $pd/p1： Features/* 仅返回 <> 的元素节点子级 `Features` ，但 $pd/p1： features/node （）返回所有节点。 其中包括元素节点、文本节点、处理指令和注释。  
+-   $pd/p1： Features/* 仅返回 <> 的元素节点子级 `Features` ，但 $pd/p1：功能/节点 () 返回所有节点。 其中包括元素节点、文本节点、处理指令和注释。  
   
 -   两个 FOR 循环将生成笛卡儿积，将从该积返回产品名称和单个功能。  
   
--   **ProductName**是一个属性。 此查询中的 XML 构造将其作为一个元素返回。  
+-   **ProductName** 是一个属性。 此查询中的 XML 构造将其作为一个元素返回。  
   
  下面是部分结果：  
   
@@ -224,7 +224,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. 检索产品型号功能说明  
- 下面的查询构造包含一个 <`Product`> 元素的 XML，该元素具有**ProducModelID**、 **ProductModelName**特性和前两个产品功能。 具体而言，前两个产品功能是 <> 元素的前两个子元素 `Features` 。 如果有更多的功能，它将返回空的 <`There-is-more/`> 元素。  
+ 下面的查询构造包含一个 <`Product`> 元素的 XML，该元素具有 **ProducModelID**、 **ProductModelName** 特性和前两个产品功能。 具体而言，前两个产品功能是 <> 元素的前两个子元素 `Features` 。 如果有更多的功能，它将返回空的 <`There-is-more/`> 元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -250,7 +250,7 @@ WHERE CatalogDescription is not NULL
   
  请注意上述查询的以下方面：  
   
--   用于 .。。返回循环结构检索前两个产品功能。 **Position （）** 函数用于查找元素在序列中的位置。  
+-   用于 .。。返回循环结构检索前两个产品功能。 **() 函数位置** 用于查找元素在序列中的位置。  
   
 ### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>F. 从产品目录说明中查找以“ons”结尾的元素名称  
  下面的查询将搜索目录说明并返回 <`ProductDescription`> 元素中名称以 "ons" 结尾的所有元素。  
@@ -296,15 +296,15 @@ WHERE CatalogDescription.value('
      contains( string( (/pd:ProductDescription/pd:Summary)[1] ),"Aerodynamic")','bit') = 1  
 ```  
   
- 请注意，SELECT 查询指定了**xml**数据类型的**query （）** 和**value （）** 方法。 因此，该查询中使用了前缀 pd，并且只使用 WITH XMLNAMESPACES 定义了一次该前缀 pd，而不是在两个不同的查询 prolog 中两次重复声明命名空间。  
+ 请注意，SELECT 查询将指定 **query ()** 和 **value ()** **xml** 数据类型的方法。 因此，该查询中使用了前缀 pd，并且只使用 WITH XMLNAMESPACES 定义了一次该前缀 pd，而不是在两个不同的查询 prolog 中两次重复声明命名空间。  
   
  请注意上述查询的以下方面：  
   
 -   WHERE 子句用于仅检索目录说明在 <> 元素中包含单词 "Aerodynamic" 的行 `Summary` 。  
   
--   **Contains （）** 函数用于查看文本中是否包含单词。  
+-   **Contains ()** 函数用于查看文本中是否包含单词。  
   
--   **Xml**数据类型的**value （）** 方法将**contains （）** 返回的值与1进行比较。  
+-   **Xml** 数据类型的 **值 ()** 方法将 **包含 ()** 返回的值与1进行比较。  
   
  结果如下：  
   
@@ -335,7 +335,7 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
   
  请注意上述查询的以下方面：  
   
--   如果 WHERE 子句中的**存在（）** 方法返回 False （0），则返回产品型号 ID。 否则，将不返回。  
+-   如果在 WHERE 子句中 **存在 ()** 方法返回 False (0) ，则返回产品型号 ID。 否则，将不返回。  
   
 -   由于所有产品说明都包含一个 <`Picture`> 元素，因此在这种情况下，结果集为空。  
   
@@ -345,8 +345,8 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
  [Xquery 处理关系数据](../xquery/xqueries-handling-relational-data.md)   
  [XQuery 中的字符串搜索](../xquery/string-search-in-xquery.md)   
  [在 XQuery 中处理命名空间](../xquery/handling-namespaces-in-xquery.md)   
- [用 WITH XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [使用 WITH XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
+ [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

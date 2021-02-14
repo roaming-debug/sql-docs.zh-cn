@@ -1,6 +1,6 @@
 ---
 title: " (XQuery) 的本地名称函数 |Microsoft Docs"
-description: '了解如何使用 XQuery 函数本地名称 ( # A1 返回节点的本地名称部分。'
+description: 了解如何使用 XQuery 函数本地名称 () 返回节点的本地名称部分。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc7c25d1b953b98c81691843a4de6dc924bca651
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 9d336db0ac3a6f9c490e3b25a9bee98e1228594f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038066"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353297"
 ---
 # <a name="functions-on-nodes---local-name"></a>基于节点的函数 - local-name
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ fn:local-name($arg as node()?) as xs:string
   
 ## <a name="remarks"></a>备注  
   
--   在 SQL Server 中，fn：不带参数的 **本地名称 ( # B1 ** 只能用于上下文相关的谓词的上下文中。 特别要指出的是，它只能在方括号 (`[ ]`) 内使用。  
+-   在 SQL Server 中，不带参数的 **fn： local name ()** 仅可用于上下文相关的谓词的上下文中。 特别要指出的是，它只能在方括号 (`[ ]`) 内使用。  
   
 -   如果提供了参数而参数是空序列，则该函数返回长度为零的字符串。  
   
@@ -72,7 +72,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. 在谓词中使用不带参数的本地名称  
- 下面的查询是针对 ProductModel 表的说明列类型化 **xml** 列指定的。 表达式将返回 `root` QName 的本地名称部分为 "Location" <> 元素的所有元素子级。 局部变量中指定了 **本地名称 ( # B1 ** 函数，但该函数未使用上下文节点。  
+ 下面的查询是针对 ProductModel 表的说明列类型化 **xml** 列指定的。 表达式将返回 `root` QName 的本地名称部分为 "Location" <> 元素的所有元素子级。 局部变量中指定了 **本地名称 ()** 函数，但该函数未使用上下文节点。  
   
 ```  
 SELECT Instructions.query('  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf7bbaddbe4379c7d56ce7209b6b93eb1b4f6254
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: f057daa09caf7ba3d690fb0dc0586a5e28afc81e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529155"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065398"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>准备实现数据处理扩展插件
-  在实现 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件之前，应定义要实现的接口。 你可能要提供整个接口组的特定于扩展插件的实现，或者只是要针对某一子集（例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 接口）提供实现，客户端在其中主要与作为 DataReader 对象的结果集交互，并且使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件作为结果集和数据源之间的桥梁****。  
+  在实现 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件之前，应定义要实现的接口。 你可能要提供整个接口组的特定于扩展插件的实现，或者只是要针对某一子集（例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 接口）提供实现，客户端在其中主要与作为 DataReader 对象的结果集交互，并且使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件作为结果集和数据源之间的桥梁。  
   
  然后，您可以通过以下两种方式之一实现数据处理扩展插件：  
   

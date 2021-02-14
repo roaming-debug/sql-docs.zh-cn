@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ab171b0adfe6497520ba55d94ec6a1435cc6678a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2c725e1758b1ff0197d6b4498cef6f5f54809d89
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99179314"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354142"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "99179314"
   
  正在 **解析：** 如果可用性副本处于解析角色中，则可能的操作状态如下表中所示。  
   
-|操作状态|说明|  
+|操作状态|描述|  
 |-----------------------|-----------------|  
 |PENDING_FAILOVER|正在为可用性组处理故障转移命令。|  
 |OFFLINE|可用性副本的所有配置数据都已在 WSFC 群集上更新，并且也在本地元数据中更新，但可用性组目前缺少主副本。|  
@@ -76,7 +76,7 @@ ms.locfileid: "99179314"
   
  **辅助：** 当某个可用性副本正在执行辅助角色时，该副本当前为辅助副本。 可能的操作状态如下表中所示。  
   
-|操作状态|说明|  
+|操作状态|描述|  
 |-----------------------|-----------------|  
 |ONLINE|本地辅助副本连接到主副本。|  
 |FAILED|本地辅助副本无法从 WSFC 群集读取和/或写入。|  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: af9f50c3314386fbac22ea35abc26d4ab9be6d75
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0e0666e622f23ce83aab57d48f5d5f63a1e4ac4e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203314"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342761"
 ---
 # <a name="sysdm_tcp_listener_states-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "99203314"
 |**port**|**int**|侦听器正在侦听的端口号。 不可为 null。|  
 |type |**tinyint**|侦听器类型，可为下列值之一：<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = 数据库镜像<br /><br /> 不可为 null。|  
 |**type_desc**|**nvarchar (20)**|类型的说明， **类型** 为：<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> 不可为 null。|  
-|**state**|**tinyint**|可用性组侦听器的状态，可为下列值之一：<br /><br /> 1 = 联机。 侦听器正在侦听并处理请求。<br /><br /> 2 = 等待重新启动。 侦听器处于脱机状态，等待重新启动。<br /><br /> 如果可用性组侦听器正在侦听服务器实例所侦听的端口，这两个侦听器始终具有相同状态。<br /><br /> 不可为 null。<br /><br /> 注意：此列中的值来自 TSD_listener 对象。 该列不支持脱机状态，因为当 TDS_listener 脱机时，无法查询其状态。|  
+|State |**tinyint**|可用性组侦听器的状态，可为下列值之一：<br /><br /> 1 = 联机。 侦听器正在侦听并处理请求。<br /><br /> 2 = 等待重新启动。 侦听器处于脱机状态，等待重新启动。<br /><br /> 如果可用性组侦听器正在侦听服务器实例所侦听的端口，这两个侦听器始终具有相同状态。<br /><br /> 不可为 null。<br /><br /> 注意：此列中的值来自 TSD_listener 对象。 该列不支持脱机状态，因为当 TDS_listener 脱机时，无法查询其状态。|  
 |**state_desc**|**nvarchar (16)**|**状态** 说明，其中之一：<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> 不可为 null。|  
 |**start_time**|**datetime**|指示启动侦听器时的时间戳。 不可为 null。|  
   

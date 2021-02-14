@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c14237adcb3cd45e62db0915004f51ed547c9f30
-ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
+ms.openlocfilehash: b3d3dc5fac6915faafb48b045b70c5b57f6e6ad8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96788292"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071114"
 ---
 # <a name="rendering-extensions-overview"></a>呈现扩展插件概述
   呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  

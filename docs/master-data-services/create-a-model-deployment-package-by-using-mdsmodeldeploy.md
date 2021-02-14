@@ -1,5 +1,5 @@
 ---
-title: 创建模型部署包（MDSModelDeploy）
+title: " (MDSModelDeploy 创建模型部署包) "
 description: 使用 MDSModelDeploy 在 Master Data Services 中创建部署包。 包可以只包含模型对象，也可以包含模型对象和数据。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4db2e08ebda6b4f3b34eaceb79eb29fe1b94601e
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ef35b92932cd4e55b47e2f75a16825f14202a815
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813077"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272638"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包
 
@@ -59,7 +59,7 @@ ms.locfileid: "85813077"
   
  模型对于您要创建的包必须存在。 有关详细信息，请参阅[创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)。  
   
- 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+ 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包  
   
@@ -75,7 +75,7 @@ ms.locfileid: "85813077"
   
     -   若要显示所有可用选项，请键入 `MDSModelDeploy` ，然后按 Enter 键。  
   
-    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName** 是该选项的名称：`MDSModelDeploy help OptionName`。  
+    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName 是该选项的名称：`MDSModelDeploy help OptionName`。  
   
 4.  可选。 如果您有多个 Web 应用程序，通过键入下面的命令并按 Enter 键，确定您要部署到的服务的名称：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "85813077"
   
      随即返回一个值列表，例如 `MDS1, Default Web Site, MDS`。 需要此列表中的第一个值（在此例中为 `MDS1`）来部署模型。  
   
-5.  若要创建包含模型对象和数据的包，请键入以下命令，其中 *ModelName*、 *VersionName*、 *ServiceName*和 *PackageName* 分别是模型名称、版本名称、服务名称以及 .pkg 输出文件的名称：  
+5.  若要创建包含模型对象和数据的包，请键入以下命令，其中 *ModelName*、 *VersionName*、 *ServiceName* 和 *PackageName* 分别是模型名称、版本名称、服务名称以及 .pkg 输出文件的名称：  
   
     ```  
     MDSModelDeploy createpackage -model ModelName -version VersionName -service ServiceName -package PackageName -includedata  

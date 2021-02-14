@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7de4ccd0a7bba950767d9d9028e4635a10ee25d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cd4a68b21ae23b60c2bea5618308c0d13300cab
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759459"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353275"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的类型转换规则
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85759459"
   
  本主题介绍了使用下列方法之一从一种类型转换到另一种类型时所应用的类型转换规则：  
   
--   使用**cast 作为**或类型构造函数（例如，）进行的显式强制转换 `xs:integer("5")` 。  
+-   使用 **cast 作为** 或类型构造函数函数执行的显式转换 (例如 `xs:integer("5")`) 。  
   
 -   类型升级过程中发生的隐式转换  
   
@@ -47,23 +47,23 @@ ms.locfileid: "85759459"
   
 -   内置基元类型可以根据表中的规则转换为其他内置基元类型。  
   
--   基元类型可以转换为该基元类型所派生的任何类型。 例如，可以从**xs： decimal**转换为**xs： integer**，或从**xs： decimal**转换为**xs： long**。  
+-   基元类型可以转换为该基元类型所派生的任何类型。 例如，可以从 **xs： decimal** 转换为 **xs： integer**，或从 **xs： decimal** 转换为 **xs： long**。  
   
--   派生类型可以转换为在类型层次结构中作为其祖先的任何类型，最高可转换为其内置基元基类型。 例如，可以将**xs： token**转换为**xs： normalizedString**或**xs： string**。  
+-   派生类型可以转换为在类型层次结构中作为其祖先的任何类型，最高可转换为其内置基元基类型。 例如，可以将 **xs： token** 转换为 **xs： normalizedString** 或 **xs： string**。  
   
--   如果派生类型的基元祖先可以转换为目标类型，则该派生类型可以转换为基元类型。 例如，可以将**xs： integer**（派生类型）强制转换为**xs： string**，基元类型，因为**xs： decimal**、 **xs： integer**的基元祖先可以转换为**xs： string**。  
+-   如果派生类型的基元祖先可以转换为目标类型，则该派生类型可以转换为基元类型。 例如，可以将 **xs： integer**（派生类型）强制转换为 **xs： string**，基元类型，因为 **xs： decimal**、 **xs： integer** 的基元祖先可以转换为 **xs： string**。  
   
--   如果源类型的基元祖先可以转换为目标类型的基元祖先，则派生类型可以转换为其他派生类型。 例如，可以将**xs： integer**强制转换为**xs： token**，因为可以从**xs： decimal**转换为**xs： string**。  
+-   如果源类型的基元祖先可以转换为目标类型的基元祖先，则派生类型可以转换为其他派生类型。 例如，可以将 **xs： integer** 强制转换为 **xs： token**，因为可以从 **xs： decimal** 转换为 **xs： string**。  
   
--   将用户定义类型转换为内置类型的规则与转换内置类型的规则相同。 例如，可以定义派生自**xs： integer**类型的**myInteger**类型。 然后， **myInteger**可以转换为**xs： token**，因为**xs： decimal**可以转换为**xs： string**。  
+-   将用户定义类型转换为内置类型的规则与转换内置类型的规则相同。 例如，可以定义派生自 **xs： integer** 类型的 **myInteger** 类型。 然后， **myInteger** 可以转换为 **xs： token**，因为 **xs： decimal** 可以转换为 **xs： string**。  
   
  不支持下列类型的转换：  
   
--   不允许转换为列表类型或者由列表类型进行转换。 这包括用户定义的列表类型和内置列表类型，如**xs： IDREFS**、 **xs： ENTITIES**和**xs： NMTOKENS**。  
+-   不允许转换为列表类型或者由列表类型进行转换。 这包括用户定义的列表类型和内置列表类型，如 **xs： IDREFS**、 **xs： ENTITIES** 和 **xs： NMTOKENS**。  
   
--   不支持从**xs： QName**强制转换为或。  
+-   不支持从 **xs： QName** 强制转换为或。  
   
--   不支持**xs： NOTATION**和 duration， **xdt： yearMonthDuration**和**xdt： dayTimeDuration**的完全顺序子类型。 因此，不支持转换为这些类型或由这些类型转换。  
+-   不支持 **xs： NOTATION** 和 duration， **xdt： yearMonthDuration** 和 **xdt： dayTimeDuration** 的完全顺序子类型。 因此，不支持转换为这些类型或由这些类型转换。  
   
  以下示例说明了显式类型转换。  
   
@@ -135,23 +135,23 @@ go
 ```  
   
 ## <a name="implicit-casting"></a>隐式强制转换  
- 只允许对数值类型和 untypedAtomic 类型进行隐式转换。 例如，以下**min （）** 函数返回两个值中的最小值：  
+ 只允许对数值类型和 untypedAtomic 类型进行隐式转换。 例如，以下 **min ()** 函数将返回两个值中的最小值：  
   
 ```  
 min(xs:integer("1"), xs:double("1.1"))  
 ```  
   
- 在此示例中，传递给 XQuery **min （）** 函数的两个值属于不同的类型。 因此，在将**整数**类型提升为**double**并且比较两个**双精度**值时，将执行隐式转换。  
+ 在此示例中，传递给 XQuery **min ()** 函数的两个值属于不同的类型。 因此，在将 **整数** 类型提升为 **double** 并且比较两个 **双精度** 值时，将执行隐式转换。  
   
  此示例中介绍的类型升级遵循下列规则：  
   
--   内置派生的数值类型可以升级为其基类型。 例如，可以将**整数**提升为**decimal**。  
+-   内置派生的数值类型可以升级为其基类型。 例如，可以将 **整数** 提升为 **decimal**。  
   
--   **Decimal**可以提升为**float，** **float**可以提升为**double**。  
+-   **Decimal** 可以提升为 **float，** **float** 可以提升为 **double**。  
   
  因为只允许对数值类型进行隐式转换，所以不允许以下转换：  
   
--   不允许字符串类型的隐式转换。 例如，如果需要两个**字符串**类型，并且传入**字符串**和**标记**，则不会发生隐式强制转换并且返回错误。  
+-   不允许字符串类型的隐式转换。 例如，如果需要两个 **字符串** 类型，并且传入 **字符串** 和 **标记**，则不会发生隐式强制转换并且返回错误。  
   
 -   不允许从数值类型隐式转换为字符串类型。 例如，如果将整数类型值传递到需要字符串类型参数的函数，则不发生隐式转换并返回错误。  
   
@@ -198,7 +198,7 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   不支持浮点值 NaN。  
   
--   可转换的值受到目标类型实现限制条件的限制。 例如，不能将具有负年份的日期字符串转换为**xs： date**。 如果在运行时提供此值，则这种转换将导致出现空序列（而不是引发运行时错误）。  
+-   可转换的值受到目标类型实现限制条件的限制。 例如，不能将具有负年份的日期字符串转换为 **xs： date**。 如果在运行时提供此值，则这种转换将导致出现空序列（而不是引发运行时错误）。  
   
 ## <a name="see-also"></a>另请参阅  
  [定义 XML 数据的序列化](../relational-databases/xml/define-the-serialization-of-xml-data.md)  
