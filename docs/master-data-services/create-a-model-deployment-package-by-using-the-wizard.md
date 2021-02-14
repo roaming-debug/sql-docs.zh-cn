@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7c776d67ebf49e39ae3593d9ac570fe251abb728
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d0c122440543cc511d78b2c38b688fde672ec6ef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477069"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272628"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用向导创建模型部署包
 
@@ -47,7 +47,7 @@ ms.locfileid: "88477069"
   
 4.  在 **“创建包”** 页上，从 **“模型”** 列表中选择一个模型。  
   
-5.  单击 **“下一步”** 。  
+5.  单击“下一步”  。  
   
 6.  单击“下载”  。  
   

@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 99516dc132f9c086c96bb3b886424927d68bab1b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 0dbc28cfac7a6d24bdb239964375ac19ab73ab20
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034956"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080688"
 ---
 # <a name="generating-reports-sybasetosql"></a>生成报告 (SybaseToSQL)
 使用命令执行的某些活动的报告在对象树级别的 SSMA 控制台中生成。  
   
 使用以下过程来生成报表：  
   
-1.  指定 **写入摘要-报表-报表-到** 参数。 如果在指定的) 或文件夹中指定，相关报表将存储为文件名 (。 文件名按下表中所述进行系统预定义，其中， ** &lt; n &gt; **是在每次执行同一命令时以数字递增的唯一文件号。  
+1.  指定 **写入摘要-报表-报表-到** 参数。 如果在指定的) 或文件夹中指定，相关报表将存储为文件名 (。 文件名按下表中所述进行系统预定义，其中， **&lt; n &gt;** 是在每次执行同一命令时以数字递增的唯一文件号。  
   
     报告 vis-vis 命令包括：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "92034956"
 ```  
   
 ### <a name="synchronize-target"></a>同步-目标：  
-命令 **同步-目标** 具有 " **报告错误-** 目标" 参数，该参数指定同步操作的错误报告的位置。 然后，按名称**TargetSynchronizationReport &lt; n &gt; 。XML**是在指定的位置创建的，其中** &lt; n &gt; **是在每次执行同一命令时以数字递增的唯一文件号。  
+命令 **同步-目标** 具有 " **报告错误-** 目标" 参数，该参数指定同步操作的错误报告的位置。 然后，按名称 **TargetSynchronizationReport &lt; n &gt; 。XML** 是在指定的位置创建的，其中 **&lt; n &gt;** 是在每次执行同一命令时以数字递增的唯一文件号。  
   
 **注意：** 如果提供了文件夹路径，则 "报告错误到" 参数将成为命令 "同步目标" 的可选属性。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "92034956"
 -   fail-脚本  
   
 ### <a name="refresh-from-database"></a>从数据库刷新：  
-**从数据库刷新**的命令具有**报表错误-目标**参数，该参数指定刷新操作的错误报告的位置。 然后，按名称**SourceDBRefreshReport &lt; n &gt; 。XML**是在指定的位置创建的，其中** &lt; n &gt; **是在每次执行同一命令时以数字递增的唯一文件号。  
+**从数据库刷新** 的命令具有 **报表错误-目标** 参数，该参数指定刷新操作的错误报告的位置。 然后，按名称 **SourceDBRefreshReport &lt; n &gt; 。XML** 是在指定的位置创建的，其中 **&lt; n &gt;** 是在每次执行同一命令时以数字递增的唯一文件号。  
   
 **注意：** 如果提供了文件夹路径，则 "报告错误到" 参数将成为命令 "同步目标" 的可选属性。  
   

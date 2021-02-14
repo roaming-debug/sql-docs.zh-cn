@@ -1,5 +1,5 @@
 ---
-title: 序列表达式（XQuery） |Microsoft Docs
+title: 序列表达式 (XQuery) |Microsoft Docs
 description: 了解用于构造、筛选和组合项序列的 XQuery 序列表达式。
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e7ae12dd658b6b5affde321666d84b010771699
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ea654a45894791fa22ecfa843c44cdd6214a5181
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916117"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351063"
 ---
 # <a name="sequence-expressions-xquery"></a>序列表达式 (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +89,7 @@ select @x.query('for $i in ((1,2),10,(),(4, 5, 6))
 go  
 ```  
   
- 您可以使用**fn： count （）** 函数对序列中的项进行计数。  
+ 可以使用 **fn： count ()** 函数对序列中的项进行计数。  
   
 ```  
 declare @x xml  
@@ -100,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>示例 C  
- 下面的查询是针对 Contact 表中**xml**类型的 AdditionalContactInfo 列指定的。 此列存储附加联系信息，如一个或多个附加电话号码、寻呼机号码和地址。 \<telephoneNumber>、 \<pager> 和其他节点可以出现在文档中的任何位置。 查询将构造一个序列，该序列包含 \<telephoneNumber> 上下文节点的所有子级，后跟 \<pager> 子元素。 注意返回表达式 (`($a//act:telephoneNumber, $a//act:pager)`) 中逗号序列运算符的使用。  
+ 下面的查询是针对 Contact 表中 **xml** 类型的 AdditionalContactInfo 列指定的。 此列存储附加联系信息，如一个或多个附加电话号码、寻呼机号码和地址。 \<telephoneNumber>、 \<pager> 和其他节点可以出现在文档中的任何位置。 查询将构造一个序列，该序列包含 \<telephoneNumber> 上下文节点的所有子级，后跟 \<pager> 子元素。 注意返回表达式 (`($a//act:telephoneNumber, $a//act:pager)`) 中逗号序列运算符的使用。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -132,7 +132,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>筛选序列  
- 可以通过向表达式中添加谓词来筛选表达式返回的序列。 有关详细信息，请参阅[路径表达式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。 例如，下面的查询将返回一个由三个 <`a`> 元素节点组成的序列：  
+ 可以通过向表达式中添加谓词来筛选表达式返回的序列。 有关详细信息，请参阅 [路径表达式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。 例如，下面的查询将返回一个由三个 <`a`> 元素节点组成的序列：  
   
 ```  
 declare @x xml  
@@ -170,7 +170,7 @@ SELECT @x.query('/root/a[@attrA]')
 <a attrA="1">111</a>  
 ```  
   
- 有关如何在路径表达式中指定谓词的详细信息，请参阅[在路径表达式步骤中指定谓词](../xquery/path-expressions-specifying-predicates.md)。  
+ 有关如何在路径表达式中指定谓词的详细信息，请参阅 [在路径表达式步骤中指定谓词](../xquery/path-expressions-specifying-predicates.md)。  
   
  下面的示例生成子树的序列表达式并对该序列应用筛选器。  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 650c85f68003bda41e19e6f765898a23290480b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33fd27e1c2a60d3e895ed7068224e30866d95779
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92255177"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344746"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>匹配相似数据（用于 Excel 的 MDS 外接程序）
 
@@ -38,9 +38,9 @@ ms.locfileid: "92255177"
   
 ### <a name="to-find-similarities-by-using-the-default-knowledge-base"></a>使用默认知识库查找相似性  
   
-1.  从包含 MDS 管理的数据的工作表中，在“数据质量”组中单击“匹配数据”。********  
+1.  从包含 MDS 管理的数据的工作表中，在“数据质量”组中单击“匹配数据”。  
   
-2.  在“匹配数据”对话框中，从“DQS 知识库”列表中选择“DQS 数据(默认)”。************  
+2.  在“匹配数据”对话框中，从“DQS 知识库”列表中选择“DQS 数据(默认)”。  
   
 3.  对于包含要匹配的数据的每个列，在该对话框中添加一行。 有关此对话框中字段的详细信息，请参阅 [How to Set Matching Rule Parameters](../../data-quality-services/create-a-matching-policy.md#MatchingRules)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "92255177"
   
 ### <a name="to-find-similarities-by-using-a-custom-knowledge-base"></a>使用自定义知识库查找相似性  
   
-1.  从包含 MDS 管理的数据的工作表中，在“数据质量”组中单击“匹配数据”。********  
+1.  从包含 MDS 管理的数据的工作表中，在“数据质量”组中单击“匹配数据”。  
   
 2.  从 **“DQS 知识库”** 列表中，选择您的自定义知识库的名称。  
   

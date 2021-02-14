@@ -1,7 +1,7 @@
 ---
 description: 管理加速数据库恢复
 title: 管理加速数据库恢复 | Microsoft Docs
-ms.date: 08/12/2019
+ms.date: 02/02/2021
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -13,12 +13,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: cfd5a901f38dacf9e17baff4d65363796ab3cd73
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: ca11bbae7f1bcc86c0891cc22d8a7a02b26fd46e
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236107"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495775"
 ---
 # <a name="manage-accelerated-database-recovery"></a>管理加速数据库恢复
 
@@ -118,7 +118,30 @@ GO
 
    活动事务会阻止清理 PVS 的操作。
 
-1. 如果数据库属于可用性组，请检查 `secondary_low_water_mark`。 这与 `sys.dm_hadr_database_replica_states` 报告的 `low_water_mark_for_ghosts` 相同。 查询 `sys.dm_hadr_database_replica_states`，以查看其中一个副本是否包含此值，因为这也会阻止 PVS 清理操作。
-1. 检查 `min_transaction_timestamp`（如果联机 PVS 被阻止，则为 `online_index_min_transaction_timestamp`），并根据对 `transaction_sequence_num` 列执行的 `sys.dm_tran_active_snapshot_database_transactions` 检查来查找包含阻止 PVS 清理的旧快照事务的会话。
-1. 如果以上均不适用，则表示清理操作被中止事务控制。 检查 `aborted_version_cleaner_last_start_time` 和 `aborted_version_cleaner_last_end_time` 上次时间，查看中止的事务清理是否已完成。 中止事务清理完成后，`oldest_aborted_transaction_id` 应会移到更高的位置。
-1. 如果中止事务最近未成功完成，请检查错误日志中是否存在报告 `VersionCleaner` 问题的消息。
+2. 如果数据库属于可用性组，请检查 `secondary_low_water_mark`。 这与 `sys.dm_hadr_database_replica_states` 报告的 `low_water_mark_for_ghosts` 相同。 查询 `sys.dm_hadr_database_replica_states`，以查看其中一个副本是否包含此值，因为这也会阻止 PVS 清理操作。
+3. 检查 `min_transaction_timestamp`（如果联机 PVS 被阻止，则为 `online_index_min_transaction_timestamp`），并根据对 `transaction_sequence_num` 列执行的 `sys.dm_tran_active_snapshot_database_transactions` 检查来查找包含阻止 PVS 清理的旧快照事务的会话。
+4. 如果以上均不适用，则表示清理操作被中止事务控制。 检查 `aborted_version_cleaner_last_start_time` 和 `aborted_version_cleaner_last_end_time` 上次时间，查看中止的事务清理是否已完成。 中止事务清理完成后，`oldest_aborted_transaction_id` 应会移到更高的位置。
+5. 如果中止事务最近未成功完成，请检查错误日志中是否存在报告 `VersionCleaner` 问题的消息。
+
+使用下面的示例查询作为故障排除帮助：
+
+```sql
+SELECT pvss.persistent_version_store_size_kb / 1024. / 1024 AS persistent_version_store_size_gb,
+       pvss.online_index_version_store_size_kb / 1024. / 1024 AS online_index_version_store_size_gb,
+       pvss.current_aborted_transaction_count,
+       pvss.aborted_version_cleaner_start_time,
+       pvss.aborted_version_cleaner_end_time,
+       dt.database_transaction_begin_time AS oldest_transaction_begin_time,
+       asdt.session_id AS active_transaction_session_id,
+       asdt.elapsed_time_seconds AS active_transaction_elapsed_time_seconds
+FROM sys.dm_tran_persistent_version_store_stats AS pvss
+LEFT JOIN sys.dm_tran_database_transactions AS dt
+ON pvss.oldest_active_transaction_id = dt.transaction_id
+   AND
+   pvss.database_id = dt.database_id
+LEFT JOIN sys.dm_tran_active_snapshot_database_transactions AS asdt
+ON pvss.min_transaction_timestamp = asdt.transaction_sequence_num
+   OR
+   pvss.online_index_min_transaction_timestamp = asdt.transaction_sequence_num
+WHERE pvss.database_id = DB_ID();
+```

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c590a76696f2729bf5d1c6c5d4ca5b0242a63df6
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 24ffef4775339baf182b01062f2a06136a04abf1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596729"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081568"
 ---
 # <a name="connect-to-db2-db2tosql"></a>连接到 DB2 (DB2ToSQL) 
 使用 " **连接到 db2** " 对话框连接到要迁移的 DB2 数据库。  

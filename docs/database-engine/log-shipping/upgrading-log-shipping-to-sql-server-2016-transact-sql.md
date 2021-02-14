@@ -12,19 +12,21 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 0b3e98cc2f5ce76093f3710f6f49e1b186219c04
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9f384313f14f19a80aef0bd8ee60e37386b3d6b2
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643837"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552601"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>将日志传送升级至 SQL Server 2016 (Transact-SQL)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送配置升级至新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务包或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 累积更新时，以适当顺序升级日志传送服务器可保留日志传送灾难恢复解决方案。  
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+若要保留日志传送灾难恢复解决方案，请升级或按适当的顺序应用服务更新。 服务更新包括服务包或累积更新。  
   
 > [!NOTE]  
->  [中引入了](../../relational-databases/backup-restore/backup-compression-sql-server.md) 备份压缩 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]。 升级后的日志传送配置使用“备份压缩默认值”  服务器级配置选项控制是否对事务日志备份文件使用备份压缩。 可以为每个日志传送配置指定日志备份的备份压缩行为。 有关详细信息，请参阅[配置日志传送 (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)。  
+> [中引入了](../../relational-databases/backup-restore/backup-compression-sql-server.md) 备份压缩 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]。 升级后的日志传送配置使用“备份压缩默认值”服务器级配置选项控制是否对事务日志备份文件使用备份压缩。 可以为每个日志传送配置指定日志备份的备份压缩行为。 有关详细信息，请参阅[配置日志传送 (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)。  
   
  **本主题内容：**  
   
@@ -41,13 +43,13 @@ ms.locfileid: "97643837"
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  开始之前，请仔细阅读以下重要信息：  
   
--   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+-   [支持的版本和版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]。  
   
--   [选择数据库引擎升级方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)： 选择合适的升级方法和步骤检查还根据升级中的组件在环境中安装其他组件和受支持版本和版本升级正确的顺序。  
+-   [选择数据库引擎升级方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：检查支持的版本和版本升级以及环境中安装的其他组件，并据此选择适当的升级方法和步骤，按正确顺序升级组件。  
   
 -   [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)：查看发行说明和已知升级问题、预升级清单，并制定和测试升级计划。  
   
--   [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
+-   [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
   
 ##  <a name="protect-your-data-before-the-upgrade"></a><a name="ProtectData"></a> 在升级前保护好您的数据  
  建议您最好在日志传送升级之前保护好您的数据。  
@@ -69,14 +71,15 @@ ms.locfileid: "97643837"
  升级监视服务器时，日志传送配置仍将有效，但其状态不会记录在监视器上的表中。 监视服务器正在升级期间，已配置的任何警报都不会触发。 升级完毕后，可以通过执行 [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md) 系统存储过程来更新监视器表中的信息。   有关监视服务器的详细信息，请参阅[关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
 ##  <a name="upgrading-the-secondary-server-instances"></a><a name="UpgradeSecondaries"></a> 升级辅助服务器实例  
- 升级主服务器实例之前的升级过程包括将辅助服务器实例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 始终首先升级辅助 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 由于升级后的辅助服务器实例继续还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主服务器实例的日志备份，因此日志传送在整个升级过程中都不间断。 由于在较新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的备份无法在较旧版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中还原，因此如果主服务器实例先于辅助服务器实例升级，将导致日志传送失败。 你可以同时或按顺序升级辅助实例，但必须在升级主实例前升级所有辅助实例，以避免日志传送失败。  
+
+升级过程包括在升级主服务器实例之前升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 辅助服务器实例。 始终首先升级辅助 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 日志传送将在整个升级过程中继续进行，因为升级后的辅助服务器实例将继续从主服务器实例还原日志备份。 由于在较新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的备份无法在较旧版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中还原，因此如果主服务器实例先于辅助服务器实例升级，将导致日志传送失败。 你可以同时或按顺序升级辅助实例，但必须在升级主实例前升级所有辅助实例，以避免日志传送失败。  
   
- 辅助服务器实例正在升级期间，日志传送复制和还原作业不运行。 这意味着未还原的事务日志备份将在主服务器上累积，因此需确保空间充足以便保存这些未还原的备份。 累积的数量取决于主服务器实例上进行计划备份的频率，以及升级辅助实例的序列。 此外，如果还配置了单独的监视服务器，则若未执行还原的时间超过了所配置的时间间隔，就会引发警报。  
+辅助服务器实例正在升级期间，日志传送复制和还原作业不运行。 这意味着未还原的事务日志备份将在主服务器上累积，因此需确保空间充足以便保存这些未还原的备份。 累积的数量取决于主服务器实例上进行计划备份的频率，以及升级辅助实例的序列。 此外，如果还配置了单独的监视服务器，则若未执行还原的时间超过了所配置的时间间隔，就会引发警报。  
   
  辅助服务器实例升级完毕后，日志传送代理作业即开始继续将日志备份从主服务器实例复制并还原到辅助服务器实例。 辅助服务器实例使辅助数据库达到最新所需的时间会有所不同，具体情况取决于升级辅助服务器实例占用的时间和主服务器上进行备份的频率。  
   
 > [!NOTE]  
->  服务器升级期间，辅助数据库自身不会升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库。 仅当启动日志传送数据库的故障转移使得辅助数据库联机时，它才将进行升级。 从理论上讲，这种情况可能会无限期地继续下去。 启动故障转移时用于升级数据库元数据的时间量很小。  
+> 在服务器升级过程中，辅助数据库本身不会升级到新版本。 仅当启动日志传送数据库的故障转移使得辅助数据库联机时，它才将进行升级。 从理论上讲，这种情况可能会无限期地继续下去。 启动故障转移时用于升级数据库元数据的时间量很小。  
   
 > [!IMPORTANT]  
 >  对于要求升级的数据库，不支持 RESTORE WITH STANDBY 选项。 如果已使用 RESTORE WITH STANDBY 配置了升级的辅助数据库，则在升级后可能不再能够还原事务日志。 要对该辅助数据库恢复日志传送，您需要再次对该备用服务器设置日志传送。 有关 STANDBY 选项的详细信息，请参阅[还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)。  

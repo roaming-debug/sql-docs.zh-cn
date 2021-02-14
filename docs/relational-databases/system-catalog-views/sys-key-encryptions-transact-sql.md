@@ -21,12 +21,12 @@ ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6ae4cc3ce18b6ca0ac94766441a5e17d8ae1fa2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dbae691f00f687aecfa4683fab38f8a683f4f6c9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99191385"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100347662"
 ---
 # <a name="syskey_encryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "99191385"
   为使用 CREATE SYMMETRIC KEY 语句的 ENCRYPTION BY 子句指定的每个对称密钥加密返回一行。  
 
   
-|列名|数据类型|说明|  
+|列名|数据类型|描述|  
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|已加密密钥的 ID。|  
 |**指纹**|**varbinary(32)**|用来对密钥证书的 SHA-1 哈希进行加密，或用来对密钥的对称密钥的 GUID 进行加密。|  
 |**crypt_type**|**char (4)**|加密类型：<br /><br /> ESKS = 使用对称密钥进行加密<br /><br /> ESKP、ESP2 或 ESP3 = 通过密码加密<br /><br /> EPUC = 使用证书进行加密<br /><br /> EPUA = 使用非对称密钥进行加密<br /><br /> ESKM = 使用主密钥进行加密|  
-|**crypt_type_desc**|**nvarchar(60)**|加密类型说明：<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br /> (从开始 [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)] ，包含 CSS 使用的版本号 ) <br /><br /> ENCRYPTION BY CERTIFICATE <br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> 注意： Windows DPAPI 用于保护服务主密钥。|  
+|**crypt_type_desc**|**nvarchar(60)**|加密类型说明：<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br /> (从开始 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] ，包含 CSS 使用的版本号 ) <br /><br /> ENCRYPTION BY CERTIFICATE <br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> 注意： Windows DPAPI 用于保护服务主密钥。|  
 |**crypt_property**|**varbinary(max)**|标记位或加密位。|  
   
 ## <a name="permissions"></a>权限  

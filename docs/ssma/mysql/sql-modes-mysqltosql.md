@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8d0631b35d2631e04cfad5c509d6084ba0a30aaf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e09a38ce70b4f144f6da324525a7fee925d586a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497714"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074468"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 模式 (MySQLToSQL)
 MySQL 的 SSMA 可以在不同的 SQL 模式下运行，并且可以针对不同的客户端以不同的方式应用这些模式。  
@@ -24,11 +24,11 @@ MySQL 的 SSMA 可以在不同的 SQL 模式下运行，并且可以针对不同
   
 ## <a name="sql-modes-grid"></a>SQL 模式网格：  
   
--   根级别的 SQL 模式网格包含以下列： **Sql 模式名称**、已 **加载的 Sql 模式**和 **有效的 sql 模式**。  
+-   根级别的 SQL 模式网格包含以下列： **Sql 模式名称**、已 **加载的 Sql 模式** 和 **有效的 sql 模式**。  
   
--   "数据库"、"数据库"、"表"、"语句" 类别、"视图" 类别、"表"、"视图"、"函数"、"过程"、"UDF" 和 "事件对象" 级别的 SQL 模式网格包含以下列： **SQL 模式名称**、**继承的 Sql 模式**和**有效的 sql**  
+-   "数据库"、"数据库"、"表"、"语句" 类别、"视图" 类别、"表"、"视图"、"函数"、"过程"、"UDF" 和 "事件对象" 级别的 SQL 模式网格包含以下列： **SQL 模式名称**、**继承的 Sql 模式** 和 **有效的 sql**  
   
--   存储过程、存储函数和触发器级别的 SQL 模式网格包含以下列： **Sql 模式名称**、  **原始 Sql 模式**和 **有效的 sql 模式**。  
+-   存储过程、存储函数和触发器级别的 SQL 模式网格包含以下列： **Sql 模式名称**、  **原始 Sql 模式** 和 **有效的 sql 模式**。  
   
 > [!NOTE]  
 > 组模式将在 "SQL 模式名称" 列下以粗体显示。  

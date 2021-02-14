@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7774014827d27b27913bd54079f13ecb3c5bdd7c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9df096d687fbd0ea2730c328ee3a4d25b062967f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812875"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340259"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重叠的用户和组权限（主数据服务）
 
@@ -34,25 +34,25 @@ ms.locfileid: "85812875"
   
  如果用户是多个组的成员，并且这些组有权访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，则适用以下规则：  
   
--   **“拒绝”** 覆盖所有其他权限。 如果对象权限在一个组中是“拒绝” **** ，则有效权限是拒绝。  
+-   **“拒绝”** 覆盖所有其他权限。 如果对象权限在一个组中是“拒绝”  ，则有效权限是拒绝。  
   
--   访问权限是一个组中所有有效权限的联合。 如果对象权限在一个组中是“创建” **** ，在其他组中是“更新” **** ，则有效权限是“创建” **** 和“更新” ****。  
+-   访问权限是一个组中所有有效权限的联合。 如果对象权限在一个组中是“创建”  ，在其他组中是“更新”  ，则有效权限是“创建”  和“更新” 。  
   
  这些规则应用到 **“模型”** 和 **“层次结构成员”** 选项卡。 先为每个选项卡确定权限，再将权限进行组合。 有关详细信息，请参阅 [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)。  
   
 > [!NOTE]  
->  可以在用户界面中查看用户和组的重叠权限的解决方法。 “模型”**** 和“层次结构成员”**** 选项卡都具有下拉列表，可以从中选择“有效”****，查看有效权限。  
+>  可以在用户界面中查看用户和组的重叠权限的解决方法。 “模型”和“层次结构成员”选项卡都具有下拉列表，可以从中选择“有效”，查看有效权限。  
   
 ## <a name="example-1"></a>示例 1  
  ![mds_conc_user_group_ex_1](../master-data-services/media/mds-conc-user-group-ex-1.gif "mds_conc_user_group_ex_1")  
   
  用户同时属于组 1 和组 2。  
   
- 用户对 Product 实体具有“读取” **** 权限。  
+ 用户对 Product 实体具有“读取”  权限。  
   
  组 1 对 Product 实体具有 **“更新”** 权限。  
   
- 组 2 对 Product 实体具有“读取” **** 权限。  
+ 组 2 对 Product 实体具有“读取”  权限。  
   
  结果：用户对 Product 实体的有效权限是 **“更新”** 。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "85812875"
   
  用户同时属于组 1 和组 2。  
   
- 用户对 Product 实体具有“读取” **** 权限。  
+ 用户对 Product 实体具有“读取”  权限。  
   
  组 1 对 Product 实体具有 **“更新”** 权限。  
   
@@ -76,9 +76,9 @@ ms.locfileid: "85812875"
   
  用户对层次结构节点中的一组成员具有 **“更新”** 权限。  
   
- 组 1 对层次结构节点中的一组成员具有“读取” **** 权限。  
+ 组 1 对层次结构节点中的一组成员具有“读取”  权限。  
   
- 组 2 对层次结构节点中的一组成员具有“读取” **** 权限。  
+ 组 2 对层次结构节点中的一组成员具有“读取”  权限。  
   
  结果：用户对这些成员的有效权限是 **“更新”** 。  
   

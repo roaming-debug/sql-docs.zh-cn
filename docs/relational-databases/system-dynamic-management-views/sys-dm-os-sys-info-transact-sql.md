@@ -23,12 +23,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c5b67536717c25dd4f6098f812bc75f53a1edfe
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a4f43c899f066713d3a2b4277e3c000c7d5bcb35
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184781"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100344338"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,20 +71,20 @@ ms.locfileid: "99184781"
 |**time_source_desc**|**nvarchar(60)**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 介绍 **time_source** 列。 不可为 Null。<br /><br /> QUERY_PERFORMANCE_COUNTER = [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) API 检索时钟时间。<br /><br /> MULTIMEDIA_TIMER = 用于检索时钟时间的 [多媒体计时器](/previous-versions//ms713418(v=vs.85)) API。|  
 |**virtual_machine_type**|**int**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否正在虚拟环境下运行。  不可为 Null。<br /><br /> 0 = NONE<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
 |**virtual_machine_type_desc**|**nvarchar(60)**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 介绍 **virtual_machine_type** 列。 不可为 Null。<br /><br /> 无 = 未 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在虚拟机中运行。<br /><br /> 虚拟机监控程序 = 正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 由运行虚拟机监控程序的 OS 托管的虚拟机内运行 (使用硬件辅助虚拟化) 的主机操作系统。<br /><br /> OTHER = 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 由不使用硬件助理（如 Microsoft VIRTUAL PC）的操作系统托管的虚拟机中运行。|  
-|**softnuma_configuration**|**int**|适用于：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。<br /><br /> 指定 NUMA 节点的配置方式。 不可为 Null。<br /><br /> 0 = OFF 表示硬件默认值<br /><br /> 1 = 自动软件 NUMA<br /><br /> 2 = 通过注册表手动进行软件 NUMA|  
-|**softnuma_configuration_desc**|**nvarchar(60)**|适用于：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。<br /><br /> OFF = 软 NUMA 功能已关闭<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动确定适用于软件 numa 的 numa 节点大小<br /><br /> 手动 = 手动配置的软件 NUMA|
+|**softnuma_configuration**|**int**|适用于：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。<br /><br /> 指定 NUMA 节点的配置方式。 不可为 Null。<br /><br /> 0 = OFF 表示硬件默认值<br /><br /> 1 = 自动软件 NUMA<br /><br /> 2 = 通过注册表手动进行软件 NUMA|  
+|**softnuma_configuration_desc**|**nvarchar(60)**|适用于：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。<br /><br /> OFF = 软 NUMA 功能已关闭<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动确定适用于软件 numa 的 numa 节点大小<br /><br /> 手动 = 手动配置的软件 NUMA|
 |**process_physical_affinity**|**nvarchar (3072)** |**适用于：** 从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 。<br /><br />信息有待提供。 |
-|**sql_memory_model**|**int**|**适用于：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 及更高版本。<br /><br />指定用于分配内存的内存模型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不可为 Null。<br /><br />1 = 常规内存模型<br />2 = 锁定内存页<br /> 3 = 内存中的大型页面|
-|**sql_memory_model_desc**|**nvarchar(120)**|**适用于：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 及更高版本。<br /><br />指定用于分配内存的内存模型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不可为 Null。<br /><br />  =  传统 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的是常规内存模型来分配内存。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户在启动过程中没有锁定页面的内存特权，则这是默认的 sql 内存模型。<br />  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用锁定内存页来分配内存。 这是默认的 sql 内存管理器，在 SQL Server 启动期间 SQL Server 服务帐户拥有 "锁定内存页" 特权。<br />   =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用内存中的大型页分配内存。 SQL Server 使用大型页面分配器仅 SQL Server 在服务器启动期间和跟踪标志834打开时，将内存分配给 Enterprise edition。|
+|**sql_memory_model**|**int**|**适用于：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 及更高版本。<br /><br />指定用于分配内存的内存模型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不可为 Null。<br /><br />1 = 常规内存模型<br />2 = 锁定内存页<br /> 3 = 内存中的大型页面|
+|**sql_memory_model_desc**|**nvarchar(120)**|**适用于：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 及更高版本。<br /><br />指定用于分配内存的内存模型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不可为 Null。<br /><br />  =  传统 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的是常规内存模型来分配内存。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户在启动过程中没有锁定页面的内存特权，则这是默认的 sql 内存模型。<br />  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用锁定内存页来分配内存。 这是默认的 sql 内存管理器，在 SQL Server 启动期间 SQL Server 服务帐户拥有 "锁定内存页" 特权。<br />   =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用内存中的大型页分配内存。 SQL Server 使用大型页面分配器仅 SQL Server 在服务器启动期间和跟踪标志834打开时，将内存分配给 Enterprise edition。|
 |pdw_node_id|**int**|**适用于：** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
-|**socket_count** |**int** | **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和更高版本。<br /><br />指定系统上可用的处理器插槽数。 |  
-|**cores_per_socket** |**int** | **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和更高版本。<br /><br />指定系统上每个套接字可用的处理器数。 |  
-|**numa_node_count** |**int** | **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和更高版本。<br /><br />指定系统上可用的 numa 节点数。 此列包括物理 numa 节点以及软 numa 节点。 |  
+|**socket_count** |**int** | **适用于：** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和更高版本。<br /><br />指定系统上可用的处理器插槽数。 |  
+|**cores_per_socket** |**int** | **适用于：** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和更高版本。<br /><br />指定系统上每个套接字可用的处理器数。 |  
+|**numa_node_count** |**int** | **适用于：** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和更高版本。<br /><br />指定系统上可用的 numa 节点数。 此列包括物理 numa 节点以及软 numa 节点。 |  
   
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

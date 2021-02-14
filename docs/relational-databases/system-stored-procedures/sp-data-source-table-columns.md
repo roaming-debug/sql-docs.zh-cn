@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: ''
 ms.date: 11/10/2020
-ms.openlocfilehash: 30205befcdd9da78f4f9a3f002ddd398f49abc55
-ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
+ms.openlocfilehash: 31b0dedb8544cc6752eac8a9934aa92d74d424ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98005380"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081868"
 ---
 # <a name="sp_data_source_table_columns-transact-sql"></a>sp_data_source_table_columns (Transact-sql) 
 
@@ -71,7 +71,7 @@ sp_data_source_table_columns
 
 需要 ALTER ANY EXTERNAL DATA SOURCE 权限。
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 
 SQL Server 实例必须安装  [PolyBase](../../relational-databases/polybase/polybase-guide.md) 功能。
 

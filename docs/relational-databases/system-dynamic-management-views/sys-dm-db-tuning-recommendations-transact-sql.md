@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9037aaefe27cd50deb9b61af423a8074ab86f65
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 332e035a12de891bde8324a55f08a2baf59a9edc
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204811"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343041"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>sys.dm \_ db \_ 优化 \_ 建议 (transact-sql) 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "99204811"
 | **reason** | **nvarchar(4000)** | 提供此建议的原因。 |
 | **有效 \_ 时间** | **datetime2** | 第一次生成此建议时。 |
 | **上次 \_ 刷新时间** | **datetime2** | 上次生成此建议的时间。 |
-| **state** | **nvarchar(4000)** | 描述建议状态的 JSON 文档。 可用字段如下：<br />-   `currentValue` -建议的当前状态。<br />-   `reason` -常量，用于描述建议处于当前状态的原因。|
+| State  | **nvarchar(4000)** | 描述建议状态的 JSON 文档。 可用字段如下：<br />-   `currentValue` -建议的当前状态。<br />-   `reason` -常量，用于描述建议处于当前状态的原因。|
 | **是 \_ 可执行 \_ 操作** | **bit** | 1 = 可通过脚本对数据库执行建议 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 。<br />0 = 无法对数据库执行建议 (例如：仅信息或已还原的建议)  |
 | **是 \_ revertable \_ 操作** | **bit** | 1 = 数据库引擎可以自动监视和还原建议。<br />0 = 不能自动监视和还原建议。 大多数 &quot; 可执行 &quot; 的操作将为 &quot; revertable &quot; 。 |
 | **执行 \_ 操作 \_ 开始 \_ 时间** | **datetime2** | 应用建议的日期。 |
@@ -62,7 +62,7 @@ ms.locfileid: "99204811"
 
  `currentValue` 列中的字段 `state` 可能包含以下值：
  
- | 状态 | 说明 |
+ | 状态 | 描述 |
  |--------|-------------|
  | `Active` | 建议处于活动状态且尚未应用。 用户可以采用建议脚本并手动执行它。 |
  | `Verifying` | 已应用建议 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] ，并且内部验证过程会将强制计划的性能与回归计划进行比较。 |
@@ -85,6 +85,8 @@ ms.locfileid: "99204811"
 | `VerificationForcedQueryRecompile`| 由于没有显著的性能改进，因此重新编译查询。 |
 | `PlanForcedByUser`| 用户使用 [sp_query_store_force_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) 过程手动强制计划。 如果用户显式决定强制实施某个计划，则数据库引擎将不应用建议。 |
 | `PlanUnforcedByUser` | 用户使用 [sp_query_store_unforce_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) 过程手动 unforced 计划。 由于用户显式还原了推荐的计划，数据库引擎将继续使用当前计划并生成新的建议（如果将来出现某种计划回归）。 |
+| `UserForcedDifferentPlan` | 用户使用 [sp_query_store_force_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) 过程手动强制执行不同的计划。 如果用户显式决定强制实施某个计划，则数据库引擎将不应用建议。 |
+| `TempTableChanged` | 在计划中使用的临时表已更改。 |
 
  "详细信息" 列中的统计信息不显示运行时计划统计信息 (例如，当前 CPU 时间) 。 建议的详细信息是在回归检测时进行的，并描述为何 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 发现性能回归。 使用 `regressedPlanId` 和 `recommendedPlanId` 查询 [查询存储目录视图](../../relational-databases/performance/how-query-store-collects-data.md) 以查找确切的运行时计划统计信息。
 

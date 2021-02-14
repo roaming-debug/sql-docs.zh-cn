@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 30869fbd4c9a57c068b56d638495cce76ac23789
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 510d669d780a7f7b6f71f5a84eab87e9b70bf4b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988691"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018317"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>如何：创建空的 SQL Server 单元测试
 
@@ -75,7 +75,7 @@ ms.locfileid: "91988691"
   
     -   在 SQL Server 对象资源管理器中，选择“创建单元测试”。  
   
-    当你在“解决方案资源管理器”中选择此文件时，默认情况下，它将显示在 SQL Server 单元测试设计器中。 若要查看代码或自定义此代码以便将更多功能添加到你的单元测试中，请选择此文件，右键单击并选择“查看代码”****。  
+    当你在“解决方案资源管理器”中选择此文件时，默认情况下，它将显示在 SQL Server 单元测试设计器中。 若要查看代码或自定义此代码以便将更多功能添加到你的单元测试中，请选择此文件，右键单击并选择“查看代码”。  
   
 ### <a name="to-create-a-sql-server-unit-test-inside-an-existing-test-class"></a>要在现有测试类中创建新的 SQL Server 单元测试，请执行以下操作  
   

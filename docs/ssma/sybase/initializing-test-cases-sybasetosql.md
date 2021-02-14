@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6ac2be2735d8adb5b5790edc9e3aa10818428f06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28e15085aa0f2ed43bbe9e480abc7dc5777f7cc2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468762"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078668"
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>初始化测试用例 (SybaseToSQL)
 在此步骤中，您将为新的测试用例指定初始信息。  

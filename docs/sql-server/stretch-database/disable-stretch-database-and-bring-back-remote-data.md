@@ -12,18 +12,18 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed34730c85a8d492bb40e3013ea5a9a05fc01d90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 315cfed40b1ccdadf349d9b371d6baac5928d3af
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454365"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081020"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>禁用 Stretch Database 和移回远程数据
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
-  若要禁用表的 Stretch Database，请在 SQL Server Management Studio 中为表选择“拉伸” **** 。 然后选择以下选项之一：  
+  若要禁用表的 Stretch Database，请在 SQL Server Management Studio 中为表选择“拉伸”  。 然后选择以下选项之一：  
   
 -   **禁用 | 从 Azure 返回数据**。 将表的远程数据从 Azure 复制回到 SQL Server，然后为该表禁用 Stretch Database。 此操作会产生数据传输费用，并且不可取消。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "88454365"
   
 1.  在 SQL Server Management Studio 的对象资源管理器中，选择希望对其禁用 Stretch Database 的表。  
   
-2.  右键单击并选择“拉伸”****，然后选择下列选项之一。  
+2.  右键单击并选择“拉伸”，然后选择下列选项之一。  
   
     -   **禁用 | 从 Azure 返回数据**。 将表的远程数据从 Azure 复制回到 SQL Server，然后为该表禁用 Stretch Database。 此命令不能取消。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "88454365"
   
 1.  在 SQL Server Management Studio 的对象资源管理器中，选择要对其禁用 Stretch Database 的数据库。  
   
-2.  右键单击并选择“任务”，选择“延伸”，然后选择“禁用”************。  
+2.  右键单击并选择“任务”，选择“延伸”，然后选择“禁用”。  
   
 > [!NOTE]
 > 禁用数据库的 Stretch Database 不会删除远程数据库。 若要删除远程数据库，必须使用 Azure 管理门户。 远程数据库会继续产生 Azure 成本，直到被删除。 有关详细信息，请参阅 [SQL Server Stretch Database 定价](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)。  

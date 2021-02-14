@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a387822ac4619fbb00963da245f574b6cad50708
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b7bbf98bd65399a6eb2235a0acb73c28af277f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430019"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272768"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>配置业务规则以发送通知 (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "88430019"
   
 -   使用验证操作的业务规则必须已经存在。 有关详细信息，请参阅[创建和发布业务规则 (Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)。  
   
--   接收通知的用户或组对未能通过验证的属性必须至少具有“只读”权限。**** 显式或隐式拒绝对属性的权限的用户或组将接收电子邮件，但将无法访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中的属性。  
+-   接收通知的用户或组对未能通过验证的属性必须至少具有“只读”权限。 显式或隐式拒绝对属性的权限的用户或组将接收电子邮件，但将无法访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中的属性。  
   
 -   如果将邮件发送到组，则组中只有已访问了 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的成员才会获得电子邮件。  
   
@@ -47,21 +47,21 @@ ms.locfileid: "88430019"
   
 2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
   
-3.  在“业务规则” **** 页上，从“模型” **** 列表中选择一个模型。  
+3.  在“业务规则”  页上，从“模型”  列表中选择一个模型。  
   
-4.  从 **** “实体”下拉列表中选择一个实体。  
+4.  从  “实体”下拉列表中选择一个实体。  
   
-5.  从“成员类型”**** 列表中选择一个成员类型。  
+5.  从“成员类型”列表中选择一个成员类型。  
   
-6.  在网格中，选择要编辑的业务规则所对应的行并单击“编辑” ****。  
+6.  在网格中，选择要编辑的业务规则所对应的行并单击“编辑” 。  
   
-7.  选中“发送通知”复选框，并从下拉列表中选择要向其发送电子邮件通知的用户或组。****  
+7.  选中“发送通知”复选框，并从下拉列表中选择要向其发送电子邮件通知的用户或组。  
   
-8.  单击“ **保存**”。  
+8.  单击“保存”。  
   
-9. 单击“全部发布” ****。  
+9. 单击“全部发布” 。  
   
-10. 在确认对话框中，单击 **“确定”**。 “业务规则状态” **** 列中的值更改为“活动” **** ，且“通知” **** 列显示想要向其发送通知的选中用户或组。  
+10. 在确认对话框中，单击 **“确定”**。 “业务规则状态”  列中的值更改为“活动”  ，且“通知”  列显示想要向其发送通知的选中用户或组。  
   
 ## <a name="next-steps"></a>后续步骤  
   

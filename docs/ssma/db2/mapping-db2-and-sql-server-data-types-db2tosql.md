@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0579a5c477b9933b9937c1f003d3c7bbc056eae6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32cf19b192fe67802ae44eaf9ce6e4ca891d02ae
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497770"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072361"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>映射 DB2 和 SQL Server 数据类型 (DB2ToSQL) 
 DB2 数据库类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库类型不同。 将 DB2 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象时，必须指定如何将数据类型从 db2 映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 你可以接受默认的数据类型映射，也可以自定义映射，如以下部分所示。  
@@ -49,7 +49,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
 2.  若要添加新映射，请执行以下操作：  
   
-    1.  单击“添加”。  
+    1.  单击 **添加**。  
   
     2.  在 " **源类型**" 下，选择要映射的 DB2 数据类型。  
   

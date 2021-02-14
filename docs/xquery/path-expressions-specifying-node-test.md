@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aaad5923695e6cb8e98e2c7f40fa2bb9a044a7ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 578d10bc078edf886eb7980c3b7a099c99ef59a5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915533"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338538"
 ---
 # <a name="path-expressions---specifying-node-test"></a>路径表达式 - 指定节点测试
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "86915533"
   
 -   [零或更多步骤限定符（可选）](../xquery/path-expressions-specifying-predicates.md)  
   
- 有关详细信息，请参阅[路径表达式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。  
+ 有关详细信息，请参阅 [路径表达式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。  
   
  节点测试是一个条件，并且是路径表达式中的轴步骤的第二个组件。 在步骤中选定的所有节点都必须满足此条件。 对于路径表达式 `/child::ProductDescription`，节点测试为 `ProductDescription`。 此步骤将仅检索那些名为 ProductDescription 的元素节点子级。  
   
@@ -70,9 +70,9 @@ child::ProductDescription
   
  路径表达式 `/child::PD:ProductDescription/child::PD:Features/descendant::*,` 包含三个步骤。 这些步骤将指定 child 轴和 descendant 轴。 在每个步骤中，都指定节点名来作为节点测试。 第三个步骤中的通配符 (`*`) 指明了属于 descendant 轴的主要节点类型的所有节点。 该轴的主要节点类型确定了选定节点的类型以及这些节点所选择的节点名筛选器。  
   
- 因此，在对**ProductModel**表中的产品目录 XML 文档执行此表达式时，它将检索元素的元素节点子级的所有元素节点子级 \<Features> \<ProductDescription> 。  
+ 因此，在对 **ProductModel** 表中的产品目录 XML 文档执行此表达式时，它将检索元素的元素节点子级的所有元素节点子级 \<Features> \<ProductDescription> 。  
   
- 路径表达式由 `/child::PD:ProductDescription/attribute::ProductModelID` 两个步骤组成。 这两个步骤都指定节点名作为节点测试。 此外，第二个步骤将使用 attribute 轴。 因此，每个步骤都将选择属于其轴的主要节点类型的、具有指定名称的节点来作为节点测试。 因此，该表达式将返回元素节点的**ProductModelID**属性节点 \<ProductDescription> 。  
+ 路径表达式由 `/child::PD:ProductDescription/attribute::ProductModelID` 两个步骤组成。 这两个步骤都指定节点名作为节点测试。 此外，第二个步骤将使用 attribute 轴。 因此，每个步骤都将选择属于其轴的主要节点类型的、具有指定名称的节点来作为节点测试。 因此，该表达式将返回元素节点的 **ProductModelID** 属性节点 \<ProductDescription> 。  
   
  指定节点名作为节点测试时，还可以使用通配符 (*) 来指定节点的本地名称或作为其命名空间前缀，如以下示例所示：  
   
@@ -112,7 +112,7 @@ child::comment()
  下列示例将比较节点名和节点类型。  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. 指定节点名和节点类型作为路径表达式中的节点测试的结果  
- 在下面的示例中，将向**xml**类型变量分配一个简单的 xml 文档。 可使用不同的路径表达式来查询该文档。 然后比较结果。  
+ 在下面的示例中，将向 **xml** 类型变量分配一个简单的 xml 文档。 可使用不同的路径表达式来查询该文档。 然后比较结果。  
   
 ```  
 declare @x xml  
@@ -216,7 +216,7 @@ WHERE ProductModelID=19
   
  请注意上述查询的以下方面：  
   
--   XQuery prolog 中的 `namespace` 关键字定义了查询主体所使用的前缀。 有关 XQuery 序言的详细信息，请参阅[Xquery prolog](../xquery/modules-and-prologs-xquery-prolog.md) 。  
+-   XQuery prolog 中的 `namespace` 关键字定义了查询主体所使用的前缀。 有关 XQuery 序言的详细信息，请参阅 [Xquery prolog](../xquery/modules-and-prologs-xquery-prolog.md) 。  
   
 -   路径表达式中的全部三个步骤都指定 child 轴和节点名来作为节点测试。  
   

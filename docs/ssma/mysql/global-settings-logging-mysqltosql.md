@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4a830bf0a4a5dc3ec0a0d3e2a724b0c02517f995
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f75e2602e7a4e39e71b234866e9b202675106b04
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463423"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070212"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>全局设置（日志记录）(MySQLToSQL)
 使用 " **全局设置** " 对话框指定 SSMA 的日志记录设置。 通常，只能在使用产品支持时更改这些设置。  
@@ -24,12 +24,12 @@ ms.locfileid: "88463423"
   
 ## <a name="options"></a>选项  
 **消息级别**  
-" **消息" 级别**下面有以下选项：  
+" **消息" 级别** 下面有以下选项：  
   
-|选项|描述|  
+|选项|说明|  
 |----------|---------------|  
 |**[所有类别]**|用于设置以下所有选项的日志记录级别。|  
-|**收集器**|收集有关源架构的元数据并将其保存到项目中。|  
+|**Plane**|收集有关源架构的元数据并将其保存到项目中。|  
 |**Converter**|将源数据库对象（如表和存储过程）的结构转换为相应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 结构。|  
 |**数据迁移**|将源数据库中的数据迁移到中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**格式化程序**|为架构生成脚本的转换器的子组件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  

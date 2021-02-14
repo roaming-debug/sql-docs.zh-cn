@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a2028a0cc9911308bfe8462be4b826e53e328103
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82d501f5d7c5a4a5b79e55571a7351225833680b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461936"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341489"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>自动生成 Code 属性值 (Master Data Services)
 
@@ -37,9 +37,9 @@ ms.locfileid: "88461936"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  在“管理模型” **** 页上，选择包含要编辑的实体的模型行，然后单击“实体” ****。  
+2.  在“管理模型”  页上，选择包含要编辑的实体的模型行，然后单击“实体” 。  
   
-3.  在“管理实体” **** 页上，选择要为其生成代码的实体行，然后单击“编辑” ****。  
+3.  在“管理实体”  页上，选择要为其生成代码的实体行，然后单击“编辑” 。  
   
 4.  选中 **“自动创建代码值”** 复选框。  
   

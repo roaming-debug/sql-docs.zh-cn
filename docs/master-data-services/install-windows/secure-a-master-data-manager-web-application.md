@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6740c3491ff9a10f611f3b1fe26cd5b3acc1788c
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 5e941ce4f06961f19e0d5f4a0dc96aff31039647
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279373"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344748"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保护主数据管理器 Web 应用程序
 
@@ -43,24 +43,24 @@ ms.locfileid: "86279373"
   
 2.  在 **“连接”** 窗格中的 **“站点”** 的下面，单击承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的站点。  
   
-3.  在“操作”**** 窗格中，单击“绑定”****。  
+3.  在“操作”窗格中，单击“绑定”。  
   
-4.  单击“添加”。  
+4.  单击 **添加**。  
   
 5.  从列表中选择 **https**。  
   
 6.  选择 TLS/SSL 证书。  
   
-7.  单击“确定”。  
+7.  单击“确定”。   
   
-8.  可选。 若要删除 HTTP 以便用户只能使用 HTTPS 访问站点，请单击含有 **http**的行。 单击 **“删除”** ，然后在确认对话框上单击 **“是”**。  
+8.  可选。 若要删除 HTTP 以便用户只能使用 HTTPS 访问站点，请单击含有 **http** 的行。 单击 **“删除”** ，然后在确认对话框上单击 **“是”**。  
   
     > [!IMPORTANT]  
     >  您必须在删除 HTTP 后更改 basicHttp 和 wsHttpBinding 配置。  
   
 9. 若要关闭 **“站点绑定”** 对话框，请单击 **“关闭”**。  
   
-10. 现在，从驱动器**：\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication 打开 web.config 文件。  
+10. 现在，从驱动器：\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication 打开 web.config 文件。  
   
 11. 找到字符串 `<security mode="Message">` ，然后将其更改为 `<security mode="Transport">`。  
 

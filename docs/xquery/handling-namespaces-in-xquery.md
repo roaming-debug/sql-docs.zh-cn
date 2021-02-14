@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a6f5a6dbe1db85dc5f25e9d68fa94dcd245e5a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: acb1595ca2e7032d0363df3a1dd81740b7bcbf2d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772926"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341886"
 ---
 # <a name="handling-namespaces-in-xquery"></a>处理 XQuery 中的命名空间
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ WHERE ProductModelID=7
 ...  
 ```  
   
- 请注意， **namespace**关键字用于定义新的命名空间前缀 "AWMI："。 随后必须在查询中对该命名空间范围内的所有元素使用此前缀。  
+ 请注意， **namespace** 关键字用于定义新的命名空间前缀 "AWMI："。 随后必须在查询中对该命名空间范围内的所有元素使用此前缀。  
   
 ### <a name="b-declaring-a-default-namespace"></a>B. 声明默认的命名空间  
  在上面的查询中，定义了一个新的命名空间前缀。 随后必须在查询中使用该前缀来选择所需的 XML 结构。 或者，也可以将命名空间声明为默认命名空间，如以下修改后的查询所示：  
@@ -147,8 +147,8 @@ where ProductModelID=19
  请注意，通过覆盖元素的默认命名空间（空命名空间），XML 构造中的所有本地命名元素随后将被绑定到覆盖的默认命名空间。 因此，如果在构造 XML 时需要灵活利用空命名空间，则不要覆盖元素的默认命名空间。  
   
 ## <a name="see-also"></a>另请参阅  
- [用 WITH XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [使用 WITH XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
+ [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

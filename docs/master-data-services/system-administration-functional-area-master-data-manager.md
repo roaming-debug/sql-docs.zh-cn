@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7a9061ad704647aeb94282ab18e0fcb18377a4cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ac57ad0afca89d47140269d448d2afd85c1b979
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456714"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336238"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系统管理功能区域（主数据管理器）
 
@@ -24,7 +24,7 @@ ms.locfileid: "88456714"
 
   在“系统管理”功能区域中，管理员可以创建模型及其所有对象。 他们还可以创建业务规则以及创建和部署模型包。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-## <a name="model"></a>“模型”  
+## <a name="model"></a>建模  
  [模型 (Master Data Services)](../master-data-services/models-master-data-services.md)  
   
  [创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)  

@@ -15,12 +15,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 7353d02985194024c24319df5c6eca1100607d29
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 35b7d58a37e5f343380af6ef26e1f8e9bdb11102
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195865"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835851"
 ---
 # <a name="upgrade-integration-services-packages"></a>升级 Integration Services 包
 
@@ -48,7 +48,7 @@ ms.locfileid: "92195865"
 ## <a name="custom-applications-and-custom-components"></a>自定义应用程序和自定义组件  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 自定义组件将不与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本一起使用。  
   
- 可以使用当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工具运行和管理包含 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] 自定义组件的包。 我们已向下列文件添加了四个绑定重定向规则以帮助将版本 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、版本 11.0.0.0 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或版本 12.0.0.0 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 中的运行时程序集重定向到版本 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+ 可以使用当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工具运行和管理包含 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] 自定义组件的包。 我们向以下文件添加了四个绑定重定向规则，以帮助将运行时程序集从版本 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、版本 11.0.0.0 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或版本 12.0.0.0 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 重定向到版本 15.0.0.0 ([!INCLUDE[ssSQL19](../../includes/sssql19-md.md)])。  
   
 -   DTExec.exe.config  
   
@@ -62,10 +62,10 @@ ms.locfileid: "92195865"
   
  若要使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 设计包含 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 自定义组件的包，需要修改位于 \<drive>:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE 的 devenv.exe.config 文件。  
   
- 若要将这些包用于使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的运行时生成的客户应用程序，则在可执行文件的 *.exe.config 文件的配置部分中包含重定向规则。 这些规则会将运行时程序集重定向到版本 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 有关程序集版本重定向的详细信息，请参阅 [\<runtime> 的 \<assemblyBinding> 元素](/dotnet/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime)。  
+ 若要将这些包用于使用 [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]的运行时生成的客户应用程序，则在可执行文件的 *.exe.config 文件的配置部分中包含重定向规则。 这些规则将运行时程序集重定向到版本 15.0.0.0 ([!INCLUDE[ssSQL19](../../includes/sssql19-md.md)])。 有关程序集版本重定向的详细信息，请参阅 [\<runtime> 的 \<assemblyBinding> 元素](/dotnet/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime)。  
   
 ### <a name="locating-the-assemblies"></a>定位程序集  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 \<drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
+ 在 [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 \<drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
   
  与之前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一样，核心 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 扩展性 .dll 文件也位于 \<drive>:\Program Files\Microsoft SQL Server\130\SDK\Assemblies 中。  
   

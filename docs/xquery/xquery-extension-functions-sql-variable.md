@@ -1,6 +1,6 @@
 ---
-title: 'sql：变量 ( # A1 函数 (XQuery) |Microsoft Docs'
-description: '了解如何使用 XQuery 扩展函数 sql： variable ( # A1 公开 XQuery 表达式内包含 SQL 关系值的变量。'
+title: sql：变量 () 函数 (XQuery) |Microsoft Docs
+description: 了解如何使用 XQuery 扩展函数 sql： variable () 公开 XQuery 表达式内包含 SQL 关系值的变量。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ed7dd109906b4cace6ed185b1842f9e9e7dedde
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: d879088a98bfa7e826c53e4b90822bc65caff57a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037020"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350378"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery 扩展函数 - sql:variable()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
 ## <a name="remarks"></a>备注  
  如主题在 [Xml 内部绑定关系数据](../t-sql/xml/binding-relational-data-inside-xml-data.md)中所述，当使用 [xml 数据类型方法](../t-sql/xml/xml-data-type-methods.md) 在 XQuery 内公开关系值时，可以使用此函数。  
   
- 例如， [查询 ( # A1 方法](../t-sql/xml/query-method-xml-data-type.md) 用于针对 **xml 数据类型** 变量或列中存储的 xml 实例指定查询。 有时，您可能还希望查询使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 变量或参数中的值同时引入关系数据和 XML 数据。 为此，请使用 **sql： variable** 函数。  
+ 例如， [query () 方法](../t-sql/xml/query-method-xml-data-type.md) 用于针对 xml 数据类型变量或列中存储 **的 xml 实例** 指定查询。 有时，您可能还希望查询使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 变量或参数中的值同时引入关系数据和 XML 数据。 为此，请使用 **sql： variable** 函数。  
   
  SQL 值将映射到相应的 XQuery 值，并且其类型将是与对应的 SQL 类型等效的 XQuery 基类型。  
   
@@ -49,13 +49,13 @@ sql:variable("variableName") as xdt:anyAtomicType?
 ### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>A. 使用 sql:variable() 函数将 Transact-SQL 变量值放到 XML 中  
  以下示例构造由下列值组成的 XML 实例：  
   
--   非 XML 列中的值 (`ProductID`)。 [Sql： column ( # A1 函数](../xquery/xquery-extension-functions-sql-column.md)用于在 XML 中绑定此值。  
+-   非 XML 列中的值 (`ProductID`)。 [Sql： column () 函数](../xquery/xquery-extension-functions-sql-column.md)用于在 XML 中绑定此值。  
   
 -   另一个表中非 XML 列中的值 (`ListPrice`)。 同样，`sql:column()` 用于在 XML 中绑定此值。  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)] 变量中的值 (`DiscountPrice`)。 `sql:variable()` 方法用于将此值绑定到 XML。  
   
--   `ProductModelName`从**xml**类型列 () 的值，以使查询更加有趣。  
+-   `ProductModelName`从 **xml** 类型列 () 的值，以使查询更加有趣。  
   
  以下是查询语句：  
   

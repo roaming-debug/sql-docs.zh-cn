@@ -21,12 +21,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 948a45e2f9d2dca95bca1c3afbaed419030f47df
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9aaca2dee46593d637b11cde9b4e9e2a55664f6b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210361"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350893"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
@@ -34,7 +34,7 @@ ms.locfileid: "99210361"
 
   包含数据库连接 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 事件的统计信息，提供数据库连接成功和失败的概述。 有关连接事件的详细信息，请参阅 [AZURE SQL 数据库&#41;sys.event_log &#40;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)中的事件类型。  
   
-|统计信息|类型|说明|  
+|统计信息|类型|描述|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|数据库的名称。|  
 |**start_time**|**datetime2**|聚合间隔开始的 UTC 日期和时间。 时间始终为 5 分钟的倍数。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  

@@ -21,12 +21,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f12c668e875eb61721790d8fb6767f70a50482c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: de35914f80e73cd193460476a3c9fc9c1c7330e6
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99192997"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342907"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -80,42 +80,42 @@ ms.locfileid: "99192997"
 |**max_rows**|**bigint**|一次执行期间查询返回的最大行数。 不能为 null。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0。|  
 |**statement_sql_handle**|**varbinary(64)**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 仅当打开查询存储并为该特定查询收集统计信息时，才填充非 NULL 值。|  
 |**statement_context_id**|**bigint**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 仅当打开查询存储并为该特定查询收集统计信息时，才填充非 NULL 值。|  
-|**total_dop**|**bigint**|此计划自编译后使用的并行度的总和。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**last_dop**|**bigint**|上一次执行此计划时的并行度。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**min_dop**|**bigint**|此计划在一次执行期间所用的最小并行度。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**max_dop**|**bigint**|此计划在一次执行期间所用的最大并行度。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**total_grant_kb**|**bigint**|此计划自编译后收到的总保留内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**last_grant_kb**|**bigint**|上次执行此计划时的保留内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**min_grant_kb**|**bigint**|在一次执行过程中，此计划以前收到的保留内存授予的最小数量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**max_grant_kb**|**bigint**|在一次执行过程中，此计划以前收到的保留内存授予的最大数量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**total_used_grant_kb**|**bigint**|此计划自编译以来使用的保留内存授予总数（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**last_used_grant_kb**|**bigint**|上一次执行此计划时使用的内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**min_used_grant_kb**|**bigint**|在一次执行期间，此计划使用的最小内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**max_used_grant_kb**|**bigint**|在一次执行期间，此计划使用的最大内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**total_ideal_grant_kb**|**bigint**|此计划自编译后估计的理想内存授予总量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**last_ideal_grant_kb**|**bigint**|上次执行此计划时的理想内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**min_ideal_grant_kb**|**bigint**|此计划在一次执行期间估计的最小理想内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**max_ideal_grant_kb**|**bigint**|此计划在一次执行期间估计的最大理想内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**total_reserved_threads**|**bigint**|此计划自编译以来曾使用过的保留并行线程的总数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**last_reserved_threads**|**bigint**|上次执行此计划时保留的并行线程的数目。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**min_reserved_threads**|**bigint**|此计划在一次执行期间所用的保留并行线程的最小数目。  查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**max_reserved_threads**|**bigint**|此计划在一次执行过程中使用的保留并行线程的最大数目。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**total_used_threads**|**bigint**|此计划自编译以来曾使用过的已用并行线程的总数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**last_used_threads**|**bigint**|上次执行此计划时使用的并行线程数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**min_used_threads**|**bigint**|此计划在一次执行期间使用的最小并行线程数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**max_used_threads**|**bigint**|此计划在一次执行过程中使用的最大并行线程数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本。|  
-|**total_columnstore_segment_reads**|**bigint**|查询读取的列存储段的总数。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**last_columnstore_segment_reads**|**bigint**|上次执行查询所读取的列存储段的数目。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**min_columnstore_segment_reads**|**bigint**|查询在一次执行期间读取的列存储段的最小数目。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**max_columnstore_segment_reads**|**bigint**|查询在一次执行过程中读取的最大列存储段数。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**total_columnstore_segment_skips**|**bigint**|查询跳过的列存储段的总数。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**last_columnstore_segment_skips**|**bigint**|上次执行查询时跳过的列存储段数。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**min_columnstore_segment_skips**|**bigint**|查询在一次执行过程中跳过的列存储段的最小数目。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**max_columnstore_segment_skips**|**bigint**|查询在一次执行过程中跳过的列存储段的最大数目。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|
-|**total_spills**|**bigint**|自编译以来执行此查询所溢出的总页数。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**last_spills**|**bigint**|上次执行查询时溢出的页数。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**min_spills**|**bigint**|此查询在一次执行期间溢出的最小页数。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**max_spills**|**bigint**|此查询在一次执行期间溢出的最大页数。<br /><br /> **适用** 于：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**total_dop**|**bigint**|此计划自编译后使用的并行度的总和。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**last_dop**|**bigint**|上一次执行此计划时的并行度。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**min_dop**|**bigint**|此计划在一次执行期间所用的最小并行度。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**max_dop**|**bigint**|此计划在一次执行期间所用的最大并行度。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**total_grant_kb**|**bigint**|此计划自编译后收到的总保留内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**last_grant_kb**|**bigint**|上次执行此计划时的保留内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**min_grant_kb**|**bigint**|在一次执行过程中，此计划以前收到的保留内存授予的最小数量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**max_grant_kb**|**bigint**|在一次执行过程中，此计划以前收到的保留内存授予的最大数量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**total_used_grant_kb**|**bigint**|此计划自编译以来使用的保留内存授予总数（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**last_used_grant_kb**|**bigint**|上一次执行此计划时使用的内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**min_used_grant_kb**|**bigint**|在一次执行期间，此计划使用的最小内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**max_used_grant_kb**|**bigint**|在一次执行期间，此计划使用的最大内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**total_ideal_grant_kb**|**bigint**|此计划自编译后估计的理想内存授予总量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**last_ideal_grant_kb**|**bigint**|上次执行此计划时的理想内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**min_ideal_grant_kb**|**bigint**|此计划在一次执行期间估计的最小理想内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**max_ideal_grant_kb**|**bigint**|此计划在一次执行期间估计的最大理想内存授予量（KB）。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**total_reserved_threads**|**bigint**|此计划自编译以来曾使用过的保留并行线程的总数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**last_reserved_threads**|**bigint**|上次执行此计划时保留的并行线程的数目。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**min_reserved_threads**|**bigint**|此计划在一次执行期间所用的保留并行线程的最小数目。  查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**max_reserved_threads**|**bigint**|此计划在一次执行过程中使用的保留并行线程的最大数目。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**total_used_threads**|**bigint**|此计划自编译以来曾使用过的已用并行线程的总数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**last_used_threads**|**bigint**|上次执行此计划时使用的并行线程数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**min_used_threads**|**bigint**|此计划在一次执行期间使用的最小并行线程数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**max_used_threads**|**bigint**|此计划在一次执行过程中使用的最大并行线程数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本。|  
+|**total_columnstore_segment_reads**|**bigint**|查询读取的列存储段的总数。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**last_columnstore_segment_reads**|**bigint**|上次执行查询所读取的列存储段的数目。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**min_columnstore_segment_reads**|**bigint**|查询在一次执行期间读取的列存储段的最小数目。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**max_columnstore_segment_reads**|**bigint**|查询在一次执行过程中读取的最大列存储段数。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**total_columnstore_segment_skips**|**bigint**|查询跳过的列存储段的总数。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**last_columnstore_segment_skips**|**bigint**|上次执行查询时跳过的列存储段数。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**min_columnstore_segment_skips**|**bigint**|查询在一次执行过程中跳过的列存储段的最小数目。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**max_columnstore_segment_skips**|**bigint**|查询在一次执行过程中跳过的列存储段的最大数目。 不能为 null。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|
+|**total_spills**|**bigint**|自编译以来执行此查询所溢出的总页数。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**last_spills**|**bigint**|上次执行查询时溢出的页数。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**min_spills**|**bigint**|此查询在一次执行期间溢出的最小页数。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**max_spills**|**bigint**|此查询在一次执行期间溢出的最大页数。<br /><br /> **适用** 于：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |pdw_node_id|**int**|此分发所在的节点的标识符。<br /><br /> **适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|此计划自编译以来执行的远程页面服务器读取的总次数。<br /><br /> **适用于：** Azure SQL Database 超大规模 |  
 |**last_page_server_reads**|**bigint**|上次执行计划时所执行的远程页面服务器读取次数。<br /><br /> **适用于：** Azure SQL Database 超大规模 |  
@@ -127,7 +127,7 @@ ms.locfileid: "99192997"
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
    
 ## <a name="remarks"></a>备注  
  查询完成后，将更新该视图中的统计信息。  
