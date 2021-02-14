@@ -13,12 +13,12 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1e8b211dc0a73ac6fd84515ce0153faa5ed7ae73
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 32a35ace86beea46d79f8eff1ea9a3ba094903fb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038871"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100073411"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>处理 SSMA 项目 (OracleToSQL)
 若要将 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请先创建一个 SSMA 项目。 项目是包含以下信息的文件：  
@@ -63,7 +63,7 @@ SSMA 包含一些设置，用于转换和加载数据库对象、迁移数据以
   
 **创建项目**  
   
-1.  在“文件”菜单上，单击“新建项目”。********  
+1.  在“文件”菜单上，单击“新建项目”。  
   
     将显示“新建项目”对话框。  
   
@@ -81,7 +81,7 @@ SSMA 包含一些设置，用于转换和加载数据库对象、迁移数据以
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL Database  
+    -   Azure SQL 数据库  
   
 ## <a name="customizing-project-settings"></a>自定义项目设置  
 除了定义适用于所有新 SSMA 项目的默认项目设置，你还可以自定义每个项目的设置。 有关详细信息，请参阅 [设置项目选项 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7a4d60cddc94f5bd2e74616b5a1fe20bc8735433
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b42a41d597b727358f4567a29d8dc28c1db179fe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426949"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072201"
 ---
 # <a name="project-settings-migration-db2tosql"></a> (迁移的项目设置)  (DB2ToSQL) 
 " **项目设置** " 对话框的 "迁移" 页包含用于自定义 SSMA 将数据从 DB2 迁移到的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -35,7 +35,7 @@ ms.locfileid: "88426949"
 > [!IMPORTANT]  
 > 当 " **迁移引擎** " 选项设置为 " **服务器端数据迁移引擎**" 时，将显示一个新的项目设置选项 " **使用32位服务器端数据迁移引擎** "。 它指定是否使用32位或64位大容量复制程序 (BCP) 实用工具来迁移数据。  
   
-## <a name="miscellaneous-options"></a>其他选项  
+## <a name="miscellaneous-options"></a>“杂项”选项  
   
 |术语|定义|  
 |--------|--------------|  

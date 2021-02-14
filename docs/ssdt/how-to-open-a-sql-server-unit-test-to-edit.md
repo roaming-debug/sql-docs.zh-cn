@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 8ed1f08f02b22aabc85a18068b5bbbe02b5a7ee9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 0cd06acbd8817c62e728ee054024f570682450fc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987946"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018167"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>如何：打开 SQL Server 单元测试以进行编辑
 
@@ -24,7 +24,7 @@ ms.locfileid: "91987946"
 如果您对您的测试满意，则可以按原样运行它。 如果您想要为此单元测试添加更多功能，则可以编辑其代码。 此代码位于测试项目的 .cs 或 .vb 文件中。 有关详细信息，请参阅 [SQL Server 单元测试文件](../ssdt/sql-server-unit-test-files.md)。 也可以通过创建新的测试条件来自定义您的测试。 有关详细信息，请参阅[操作说明：为数据库单元测试设计器创建测试条件 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/aa833409(v=vs.100))。  
   
 > [!NOTE]  
-> 如果你通过编辑 .cs 或 .vb 文件来删除某个测试方法，则该测试方法仍将出现在“SQL Server 单元测试设计器”**** 中。 出现这种情况的原因是，测试类的 InitializeComponent 方法仍包含用于此测试的成员变量。 尽管此测试会出现在设计器中，但因为其代码已不存在，所以您无法运行此测试。 若要重新生成此测试的测试方法，请在编辑器中编辑 Transact\-SQL，然后保存 .cs 或 .vb 测试文件，或者也可以重新生成此测试项目。  
+> 如果你通过编辑 .cs 或 .vb 文件来删除某个测试方法，则该测试方法仍将出现在“SQL Server 单元测试设计器”中。 出现这种情况的原因是，测试类的 InitializeComponent 方法仍包含用于此测试的成员变量。 尽管此测试会出现在设计器中，但因为其代码已不存在，所以您无法运行此测试。 若要重新生成此测试的测试方法，请在编辑器中编辑 Transact\-SQL，然后保存 .cs 或 .vb 测试文件，或者也可以重新生成此测试项目。  
   
 ### <a name="to-open-the-source-code-file-of-a-sql-server-unit-test-from-solution-explorer"></a>从解决方案资源管理器中打开 SQL Server 单元测试的源代码文件  
   

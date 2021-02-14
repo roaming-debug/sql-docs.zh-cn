@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1a649c1d04d1d52fee2864991bbe051b04814ee6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ee06e775af629c36a291073e5f5be95a0b1c1b6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461742"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339018"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>删除业务规则 (Master Data Services)
 
@@ -45,17 +45,17 @@ ms.locfileid: "88461742"
   
 3.  在 " **业务规则** " 页上，从 " **模型** " 下拉列表中选择一个模型。  
   
-4.  从 **** “实体”下拉列表中选择一个实体。  
+4.  从  “实体”下拉列表中选择一个实体。  
   
-5.  从“成员类型” **** 下拉列表中，选择要应用业务规则的成员类型。  
+5.  从“成员类型”  下拉列表中，选择要应用业务规则的成员类型。  
   
 6.  在网格中，单击要删除的业务规则所对应的行。  
   
 7.  单击 **“删除”** 。  
   
-8.  在确认对话框中，单击 **“确定”**。 “业务规则状态” **** 列中的值为“待删除” ****。  
+8.  在确认对话框中，单击 **“确定”**。 “业务规则状态”  列中的值为“待删除” 。  
   
-9. 单击“全部发布” ****。  
+9. 单击“全部发布” 。  
   
 10. 在确认对话框中，单击 **“确定”**。 已删除的业务规则不会再显示在网格中。  
   

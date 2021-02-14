@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ea6b6f0da9dc2660b91cd6432331256854a1d80c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7aa771612709a47f5dce24038af6307dc41d95e7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495035"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272728"
 ---
 # <a name="create-a-changeset-master-data-services"></a>创建变更集 (Master Data Services)
 
@@ -32,29 +32,29 @@ ms.locfileid: "88495035"
   
 ## <a name="to-create-a-local-changeset"></a>创建本地变更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器” ****。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器” 。  
   
-2.  单击“实体”菜单中的某个实体 **** 。  
+2.  单击“实体”菜单中的某个实体  。  
   
-3.  在右窗格中，选择“变更集” **** ，然后单击“创建” ****。  
+3.  在右窗格中，选择“变更集”  ，然后单击“创建” 。  
   
-4.  输入变更集的名称，然后单击“保存” ****。  
+4.  输入变更集的名称，然后单击“保存” 。  
   
      变更集的名称在模型中必须是唯一的。  
   
 ## <a name="to-create-a-changeset-for-approval"></a>创建供审批的变更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器” ****。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器” 。  
   
-2.  单击“实体”菜单中的某个实体 **** 。  
+2.  单击“实体”菜单中的某个实体  。  
   
-3.  对实体进行更改，然后单击“确定”****。  
+3.  对实体进行更改，然后单击“确定”。  
   
-4.  将显示“选择 A 变更集”**** 对话框。  
+4.  将显示“选择 A 变更集”对话框。  
   
-5.  单击“新建” ****，输入变更集的名称，然后单击“保存” ****。 变更集名称在模型中必须是唯一的。  
+5.  单击“新建” ，输入变更集的名称，然后单击“保存” 。 变更集名称在模型中必须是唯一的。  
   
-6.  若要使用现有变更集，请单击“现有” **** 并从列表中选择变更集。 只有处于打开或已拒绝状态的变更集才可用。  
+6.  若要使用现有变更集，请单击“现有”  并从列表中选择变更集。 只有处于打开或已拒绝状态的变更集才可用。  
   
 ## <a name="next-steps"></a>后续步骤  
  [应用并更新变更集 (Master Data Services)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1bd54d3fdf90447dbbf8b35a96c6b454ca6c4e56
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 59583057641bb167aae197dd9fae3bf6e5833302
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869537"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076178"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>连接到 SQL Server (AccessToSQL) 
 
@@ -78,7 +78,7 @@ ms.locfileid: "94869537"
 
 6. 对于安全连接，将添加两个控件： " **加密连接** " 复选框和 " **TrustServerCertificate** " 复选框。 仅当 " **加密连接** " 复选框处于选中状态时 **TrustServerCertificate** 复选框可见。 选中 " **加密连接** " (true) 并取消选中 " **TrustServerCertificate** " (false) ，将验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 证书。 验证服务器证书是 SSL 握手过程的一部分，这可确保服务器是要连接到的正确服务器。 为了确保这一点，证书必须安装在客户端和服务器端。
 
-7. 单击“连接”。
+7. 单击“连接”  。
 
 > [!IMPORTANT]
 > 虽然你可以连接到的更高版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但与创建迁移项目时选择的版本相比，数据库对象的转换由项目的目标版本而不是你连接到的的版本确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。

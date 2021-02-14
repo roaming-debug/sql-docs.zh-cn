@@ -23,18 +23,18 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1313699a3d82e0dbced8469f251a0a105f296246
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 3e34f70a41816dcf9a6009f8b38feb016f409a3a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985183"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078918"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安装 SQL Server 迁移助手以便访问 (AccessToSQL) 
 
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用基于 Windows Installer 的向导安装迁移助手 (SSMA) 进行访问。 本主题提供了有关安装先决条件的信息、SSMA 的最新版本的链接，以及安装、授权、卸载和升级 SSMA 的说明。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 安装 SSMA 之前，请确保你的系统满足以下要求：
 
@@ -54,14 +54,14 @@ SSMA 是一款可以从 Web 下载的工具。 若要下载最新版本，请参
 
 若要安装 SSMA：
   
-1. 双击 SSMAforAccess_ " ***n***"，其中*n*是生成号。
+1. 双击 SSMAforAccess_ " ***n***"，其中 *n* 是生成号。
 2. 在欢迎页上，单击 " **下一步**"。
 
    如果未安装必备组件，则会出现一条消息，指示必须首先安装所需的组件。 请确保已安装所有必备组件，然后再次运行安装程序。
 
 3. 阅读 End-User 许可协议;如果同意，请选择 " **我接受协议**"，然后单击 " **下一步**"。
 4. 在 " **选择安装类型** " 页上，单击 " **典型**"。
-5. 在 " **准备安装** " 页上，可以启用或禁用每次启动该工具时的遥测和自动更新检查。 单击“安装”**** 以开始安装。
+5. 在 " **准备安装** " 页上，可以启用或禁用每次启动该工具时的遥测和自动更新检查。 单击“安装”以开始安装。
   
 默认安装位置为 `C:\Program Files\Microsoft SQL Server Migration Assistant for Access`。
 
@@ -71,7 +71,7 @@ SSMA 是一款可以从 Web 下载的工具。 若要下载最新版本，请参
 
 卸载 SSMA：
 
-1. 依次单击“开始”****、“控制面板”****，然后单击“添加或删除程序”****。
+1. 依次单击“开始”、“控制面板”，然后单击“添加或删除程序”。
 2. 选择 " **Microsoft SQL Server 迁移助手进行访问**"，然后单击 " **删除**"。
 
 ## <a name="upgrading-to-a-later-version"></a>升级到更高版本

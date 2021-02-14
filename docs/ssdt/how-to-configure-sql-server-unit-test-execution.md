@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b2d0b76423ab5a391351783970a6c9a057896bf7
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 569262aece2d8b1212704c0b2ba443c6c63f2b07
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987963"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018407"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>如何：配置 SQL Server 单元测试执行
 
@@ -44,7 +44,7 @@ ms.locfileid: "91987963"
   
     -   单击要针对其执行单元测试的数据库连接。  
   
-    -   如果要针对不同的数据库连接验证测试执行，则选中“使用辅助数据连接验证单元测试”**** 复选框，然后单击列表中的数据库连接。  
+    -   如果要针对不同的数据库连接验证测试执行，则选中“使用辅助数据连接验证单元测试”复选框，然后单击列表中的数据库连接。  
   
     -   单击“新建连接”以向列表中添加一个连接。 还可单击“编辑连接”以修改现有连接的设置。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "91987963"
   
 4.  在“部署”下，可执行下列操作：  
   
-    -   选中“运行测试前自动部署数据库项目”**** 复选框以确保在运行测试前提交已对数据库项目进行的任何架构更改。  
+    -   选中“运行测试前自动部署数据库项目”复选框以确保在运行测试前提交已对数据库项目进行的任何架构更改。  
   
     -   在“数据库项目”下，单击要部署的数据库项目，或单击省略号以通过浏览查找其他项目。 数据库项目文件的扩展名为 .dbproj。  
   

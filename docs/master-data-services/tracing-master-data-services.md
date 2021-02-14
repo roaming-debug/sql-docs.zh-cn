@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 8deacb8250d640e33140203d4d6d2c8eeb5d6acb
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 79a9e663214538252a6421d22baa068cf773b51e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236854"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341401"
 ---
 # <a name="tracing-master-data-services"></a>跟踪 (Master Data Services)
 
@@ -65,9 +65,9 @@ ms.locfileid: "99236854"
     |-------------|-----------------|  
     |时间|跟踪条目出现的时间。|  
     |CorrelationID|每个请求都分配有一个相关 ID。 此请求触发的所有跟踪都使用同一个相关 ID。<br /><br /> 当 UI 出错时，错误消息中会显示相关 ID。|  
-    |Operation|请求操作名称。 如果是 Web UI 请求，则操作名称为 URL。 如果是 API 请求，则操作名称为服务名称。|  
+    |操作|请求操作名称。 如果是 Web UI 请求，则操作名称为 URL。 如果是 API 请求，则操作名称为服务名称。|  
     |级别|此跟踪条目的级别。|  
-    |消息|跟踪的消息正文|  
+    |Message|跟踪的消息正文|  
   
 ## <a name="external-resources"></a>外部资源  
  msdn.com 上的博文 [Troubleshooting Logging Improvement（日志记录故障排除改进）](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f1f5436cf2d553209a80ae5f9bb9f32b3df1c7d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ffffd1fa28597a41ba1b8f7631e52f6264bb8203
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257814"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272668"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>创建叶成员 (Master Data Services)
 
@@ -33,15 +33,15 @@ ms.locfileid: "92257814"
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   **** 您必须有权访问“资源管理器”功能区域。  
+-    您必须有权访问“资源管理器”功能区域。  
   
--   对于要向其中添加成员的实体，你必须至少具有对叶模型对象的“创建” **** 或“更新” **** 权限。 拥有“创建”权限后，你可以创建成员，并仅编辑 Code 属性。 拥有“更新”权限后，你可以更新其他属性。  
+-   对于要向其中添加成员的实体，你必须至少具有对叶模型对象的“创建”  或“更新”  权限。 拥有“创建”权限后，你可以创建成员，并仅编辑 Code 属性。 拥有“更新”权限后，你可以更新其他属性。  
   
      有关详细信息，请参阅[安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   
 ### <a name="to-create-a-leaf-member"></a>创建叶成员  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 **** 主页上，从“模型”列表中，选择模型。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在  主页上，从“模型”列表中，选择模型。  
   
 2.  如果您是用户，则从 **“版本”** 列表中选择某一打开的版本。 如果您是管理员，则从 **“版本”** 列表中选择某一状态为打开或已锁定的版本。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "92257814"
   
      若要详细了解筛选器父属性和基于域的属性，请参阅[创建基于域的属性 (Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)。  
   
-7.  可选。 **** 在“批注”框中，键入有关添加成员原因的注释。 有权访问成员的所有用户都可以查看批注。  
+7.  可选。  在“批注”框中，键入有关添加成员原因的注释。 有权访问成员的所有用户都可以查看批注。  
   
-8.  单击“确定”。  
+8.  单击“确定”。   
   
 ## <a name="see-also"></a>另请参阅  
  [Master Data Services 创建合并成员 &#40;&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   

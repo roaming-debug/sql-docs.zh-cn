@@ -1,5 +1,5 @@
 ---
-title: 逻辑表达式（XQuery） |Microsoft Docs
+title: 逻辑表达式 (XQuery) |Microsoft Docs
 description: 了解 XQuery 中支持的逻辑表达式。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 140a1631cfd4b7068e4729004f7aa41d9535a904
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 44f05374320dc2d5c329ad234e62dd0c420bf22c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717183"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341850"
 ---
 # <a name="logical-expressions-xquery"></a>逻辑表达式 (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  XQuery 支持逻辑**and**和**or**运算符。  
+  XQuery 支持逻辑 **and** 和 **or** 运算符。  
   
 ```  
 expression1 and expression2  
@@ -46,7 +46,7 @@ expression1 or expression2
   
 -   否则，将引发静态错误。  
   
- 然后，将逻辑**and**和**or**运算符应用于带有标准逻辑语义的表达式的结果布尔值。  
+ 然后，将逻辑 **and** 和 **or** 运算符应用于带有标准逻辑语义的表达式的结果布尔值。  
   
  下面的查询从产品目录中检索特定产品型号的前一小图片（<`Picture`> 元素）。 请注意，对于每一个产品说明文档，目录都可以存储具有不同属性（如大小和角度）的一个或多个产品图片。  
   

@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: fa6dab95ec14a40c553f3f47dcde1dee480eb1cc
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: bd23d6a1e586a317503374f15e7ecc90381b1563
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642332"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978429"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商业智能 (BI) 工具进行分析和报告
 
@@ -36,7 +36,7 @@ ms.locfileid: "97642332"
 |执行自助式预测分析||||||[Excel 数据挖掘外接程序](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&preserve-view=true) |  
 |可视化和浏览数据||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [三维地图](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
 |使用自然语言查询提问|||||[问答](/power-bi/consumer/end-user-q-and-a)|
-|使用移动设备访问报告||||[HTML 5（支持查看 10 MB 以内的文件）](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5（支持查看 250 MB 以内的文件）](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 设备上的 Power BI 移动应用](/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 设备上的 Power BI 移动应用](/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [适用于 Windows 10 的 Power BI 移动应用](/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
+|使用移动设备访问报告||||[HTML 5（支持查看 10 MB 以内的文件）](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5（支持查看 250 MB 以内的文件）](https://www.microsoft.com/en-us/microsoft-365/blog/2013/07/08/what-powers-power-bi-in-office-365/)<br /><br /> [iOS 设备上的 Power BI 移动应用](/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 设备上的 Power BI 移动应用](/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [适用于 Windows 10 的 Power BI 移动应用](/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
 |协作和共享|||[SharePoint 网站](/sharepoint/getting-started)|[SharePoint 团队网站](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI 网站](/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**公司 BI**|IT 专家||||||  
 |创建多维/表格公司模型||||||[Analysis Services](/analysis-services/analysis-services-overview)|  

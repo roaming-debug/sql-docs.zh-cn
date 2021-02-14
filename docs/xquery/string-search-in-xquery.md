@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ae897a8a945c477ce201b4037f3b05dbb13160e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2064840d8e5418466c976b3c3d4b2613f1be0708
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765560"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335883"
 ---
 # <a name="string-search-in-xquery"></a>XQuery 中的字符串搜索
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 在前面的查询中， `where` FLOWR 表达式中的筛选表达式的结果 `for` ，并只返回满足**contains （）** 条件的元素。  
+ 在前面的查询中， `where` FLOWR 表达式中的筛选表达式的结果， `for` 并只返回满足 **contains ()** 条件的元素。  
   
  结果如下：  
   
@@ -59,7 +59,7 @@ WHERE ProductModelID=19
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

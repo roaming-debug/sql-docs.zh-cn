@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 68b88f98626f2645d2ca69311f4302e0d51fe51c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9789966bd50c937d7365ed11bc72c30623a4508
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389463"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341733"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>编辑和删除实体同步关系 (Master Data Services)
 
@@ -61,29 +61,29 @@ ms.locfileid: "88389463"
   
  **编辑实体同步关系**  
   
-1.  在主数据管理器中，单击“系统管理” ****。  
+1.  在主数据管理器中，单击“系统管理” 。  
   
-2.  在“模型视图” **** 页上，从菜单栏中指向“管理” **** ，然后单击“实体同步” ****。  
+2.  在“模型视图”  页上，从菜单栏中指向“管理”  ，然后单击“实体同步” 。  
   
-3.  在“实体同步维护” **** 页上，选择网格中的同步关系。  
+3.  在“实体同步维护”  页上，选择网格中的同步关系。  
   
 4.  单击 **“编辑”** 。 右侧将显示一个面板。  
   
-5.  请更改 ****“频率”。 选择“按需同步” ****，或选择“自动同步” **** 并设置频率。  
+5.  请更改 “频率”。 选择“按需同步” ，或选择“自动同步”  并设置频率。  
   
-6.  单击“ **保存**”。  
+6.  单击“保存”。  
   
  **删除实体同步关系**  
   
-1.  在主数据管理器中，单击“系统管理” ****。  
+1.  在主数据管理器中，单击“系统管理” 。  
   
-2.  在“模型视图” **** 页上，从菜单栏中指向“管理” **** ，然后单击“实体同步” ****。  
+2.  在“模型视图”  页上，从菜单栏中指向“管理”  ，然后单击“实体同步” 。  
   
-3.  在“实体同步维护” **** 页上，选择网格中的同步关系。  
+3.  在“实体同步维护”  页上，选择网格中的同步关系。  
   
 4.  单击 **“删除”** 。  
   
-5.  在确认对话框中，单击“确定” ****。  
+5.  在确认对话框中，单击“确定” 。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Master Data Services 创建和执行实体同步关系&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   

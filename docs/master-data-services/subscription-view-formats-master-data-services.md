@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac58c9c1edfce6b02f48c31e220d37d842b18527
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b94496efb521fce2099a59d7e0e99b90438de361
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456727"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336250"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>订阅视图格式 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88456727"
   
 ## <a name="subscription-view-formats"></a>订阅视图格式  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |**叶成员**|包含叶成员及其关联的属性值。|  
 |**叶成员历史记录**|包含叶成员历史数据及关联的属性值。 视图格式是缓慢更改维度类型 4 样式。|  

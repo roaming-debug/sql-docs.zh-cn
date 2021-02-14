@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 90ca7f628206e54a284866eaae4a18c3dfe54094
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd253b38cf35a9a8a63ee3f918c24f93c8a831be
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456845"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339646"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>为事务添加批注 (Master Data Services)
 
@@ -37,9 +37,9 @@ ms.locfileid: "88456845"
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>为资源管理器中为事务添加批注  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 **** 主页上，从“模型”列表中，选择模型。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在  主页上，从“模型”列表中，选择模型。  
   
-2.  **** 从“版本”列表中，选择某一版本。  
+2.   从“版本”列表中，选择某一版本。  
   
 3.  单击 **“资源管理器”**。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "88456845"
   
 4.  在 **“事务批注”** 窗格的 **“批注”** 框中，键入您的批注。  
   
-5.  单击“确定”。  
+5.  单击“确定”。   
   
 ## <a name="see-also"></a>另请参阅  
  [批注 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   

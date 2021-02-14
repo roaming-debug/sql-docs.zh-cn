@@ -9,12 +9,12 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8cef37be62e91b608852a4b5867d5917e72e8742
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 18c4d602edea0f414863e3fc54bfa58d1e6ca2cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492595"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079788"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>还原已启用延伸的数据库 (Stretch Database)
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "88492595"
 1. 登录到 [Azure 门户][]。
 2. 在屏幕左侧选择“**浏览**”，并选择“**SQL 数据库**”。
 3. 导航到数据库，然后选择它。
-4. 在数据库边栏选项卡的顶部，单击“还原”****。
-5. 指定新的**数据库名称**，选择一个**还原点**，并单击“**创建**”。
+4. 在数据库边栏选项卡的顶部，单击“还原”。
+5. 指定新的 **数据库名称**，选择一个 **还原点**，并单击“**创建**”。
 6. 数据库还原过程将随即开始，并且可以使用“**通知**”监视还原进度。
 
 ### <a name="recover-a-deleted-azure-database"></a>恢复已删除的 Azure 数据库
@@ -56,7 +56,7 @@ Azure 上的 SQL Server Stretch Database 服务在删除数据库之前会创建
 3. 导航到服务器，然后选择它。
 4. 在服务器的边栏选项卡上向下滚动到“操作”，并单击“**删除的数据库**”磁贴。
 5. 选择要使用的数据库。
-5. 指定新的**数据库名称**，并单击“**创建**”。
+5. 指定新的 **数据库名称**，并单击“**创建**”。
 6. 数据库还原过程将随即开始，并且可以使用“**通知**”监视还原进度。
 
 ## <a name="restore-the-connection-between-the-sql-server-database-and-the-remote-azure-database"></a><a name="reconnect"></a>还原 SQL Server 数据库和远程 Azure 数据库之间的连接
@@ -65,7 +65,7 @@ Azure 上的 SQL Server Stretch Database 服务在删除数据库之前会创建
   
 2.  运行 [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 存储过程，将已启用延伸的本地数据库重新连接到 Azure 数据库。  
   
-    -   以 sysname 或 varchar(128) 值的形式提供现有数据库范围凭据。 （不要使用 varchar(max)。）可以在视图 **sys.database_scoped_credentials**中查找凭据名称。  
+    -   以 sysname 或 varchar(128) 值的形式提供现有数据库范围凭据。 （不要使用 varchar(max)。）可以在视图 **sys.database_scoped_credentials** 中查找凭据名称。  
   
     -   指定是否复制远程数据的副本并连接到副本（推荐）。  
   

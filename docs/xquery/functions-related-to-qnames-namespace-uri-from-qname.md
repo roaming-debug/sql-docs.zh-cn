@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 035b92b719431b5a9b74f951f20d51911a41d59c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 91fc5595dadad3a3cf4c8d95c4db1da5406a968f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035767"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335853"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>与 QName 相关的函数 - namespace-uri-from-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  返回表示 *$arg*指定的 QName 的命名空间 uri 的字符串。 如果 *$arg* 是空序列，则结果为空序列。  
+  返回表示 *$arg* 指定的 QName 的命名空间 uri 的字符串。 如果 *$arg* 是空序列，则结果为空序列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   **命名空间 uri-QName ( # B1**函数返回 xs： string 而不是 Xs： anyURI 的实例。  
+-   **命名空间 uri-QName ()** 函数返回 xs： string 的实例，而不是 Xs： anyURI。  
   
 ## <a name="see-also"></a>另请参阅  
  [与 QNames &#40;XQuery 相关的函数&#41;](./functions-related-to-qnames-expanded-qname.md)  

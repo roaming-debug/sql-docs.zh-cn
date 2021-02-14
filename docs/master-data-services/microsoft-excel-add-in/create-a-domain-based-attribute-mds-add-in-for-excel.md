@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 963d07399e91b89e18ac355b9d205ef57d2c26e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c54f2a787fa14afe89d593faca7fc0072525ef7f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257687"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272418"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>创建基于域的属性（用于 Excel 的 MDS 外接程序）
 
@@ -46,7 +46,7 @@ ms.locfileid: "92257687"
   
 3.  在 **“生成模型”** 组中，单击 **“特性属性”**。  
   
-4.  在“特性属性”**** 对话框的“属性类型”**** 列表中，选择“约束列表(基于域)”****。  
+4.  在“特性属性”对话框的“属性类型”列表中，选择“约束列表(基于域)”。  
   
 5.  在 **“使用以下位置的值填充属性”** 列表中：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "92257687"
   
 6.  如果您在前一步骤中选择 **“所选列”** ，则在 **“新实体名称”** 框中键入新实体的名称。 该名称可与列（属性）名称相同。  
   
-7.  单击“确定”。 列中的每个单元现在都有一个可供用户从中选择的值列表。  
+7.  单击“确定”。  列中的每个单元现在都有一个可供用户从中选择的值列表。  
   
 ## <a name="next-steps"></a>后续步骤  
   

@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4804032b47059ccfbd376cbe10f2433736893ef0
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: feb7df193ea54f4c7184066bb38cc5cc700f9bf9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358845"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079658"
 ---
 # <a name="add-database-reference-dialog-box"></a>“添加数据库引用”对话框
 
@@ -56,7 +56,7 @@ ms.locfileid: "92358845"
   
 - 在不同服务器上的其他数据库（不是引用数据库）中。  
   
-请指定数据库名称。 如果选择“系统数据库”，则不应修改系统数据库文字。 如果选择“当前解决方案中的数据库项目”****，则数据库默认名称会基于该项目中数据库的名称。  
+请指定数据库名称。 如果选择“系统数据库”，则不应修改系统数据库文字。 如果选择“当前解决方案中的数据库项目”，则数据库默认名称会基于该项目中数据库的名称。  
   
 如果选择了“不同数据库，不同服务器”，请指定服务器名称。  
   

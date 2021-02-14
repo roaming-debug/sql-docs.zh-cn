@@ -12,12 +12,12 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 0c1d6af9bb11e4078314f27d9fd69346568204d5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dbdb1784d84dea15ac8fb9f6ff605b6c618d68b8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99211866"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100271784"
 ---
 # <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a> (Azure Synapse Analytics sp_pdw_database_encryption) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
 `[ @enabled = ] enabled` 确定是否已启用透明数据加密。 *enabled* 为 **int**，可以为以下值之一：  
   
 -   0 - 禁用  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4ada9791d75d273bd28c516019be8cf9e7ce1088
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3b69064a3adb5b9e13bd37e9d46bf6a41f6df992
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461879"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272698"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>创建派生层次结构 (Master Data Services)
 
@@ -41,11 +41,11 @@ ms.locfileid: "88461879"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  从菜单栏中，指向“管理”****，然后单击“派生层次结构”****。  
+2.  从菜单栏中，指向“管理”，然后单击“派生层次结构”。  
   
 3.  在 **“派生层次结构维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
-4.  单击“添加”。  
+4.  单击 **添加**。  
   
 5.  在 **“添加派生层次结构”** 页上的 **“派生层次结构名称”** 框中，键入层次结构的名称。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "88461879"
   
 6.  单击 **“保存派生层次结构”**。  
   
-7.  在“编辑派生层次结构”页上的“可用实体和层次结构”窗格中，单击某一实体或层次结构并将其拖到“当前级别”窗格的“在此处放置父级”中。****************  
+7.  在“编辑派生层次结构”页上的“可用实体和层次结构”窗格中，单击某一实体或层次结构并将其拖到“当前级别”窗格的“在此处放置父级”中。  
   
 8.  继续拖动实体或层次结构，直到完成您的层次结构。  
   

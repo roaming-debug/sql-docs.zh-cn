@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 15882852544113881b52f3641e0c85ec684add22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57fadc47d241658b96f2d9a7087bcb174d72dcce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418563"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076308"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>连接到 Azure SQL 数据库 (AccessToSQL) 
 使用 "连接到 SQL Azure" 对话框连接到要迁移的 Azure SQL 数据库中的数据库。  
@@ -54,9 +54,9 @@ SSMA 建议将加密连接 SQL Azure。
   
 2.  如果没有数据库，则显示两个菜单项  
   
-    1.  ** (找不到任何数据库) 该数据库 ** 处于禁用状态并始终灰显  
+    1.  **(找不到任何数据库) 该数据库** 处于禁用状态并始终灰显  
   
-    2.  创建始终启用的**新数据库**，使用户能够创建新数据库。 单击此菜单项时，将显示 "创建数据库" 对话框，其中包含数据库名称和大小。  
+    2.  创建始终启用的 **新数据库**，使用户能够创建新数据库。 单击此菜单项时，将显示 "创建数据库" 对话框，其中包含数据库名称和大小。  
   
 3.  创建数据库时，会将这两个参数指定为输入。  
   

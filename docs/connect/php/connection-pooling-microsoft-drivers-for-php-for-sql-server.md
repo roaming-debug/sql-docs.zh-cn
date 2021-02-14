@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 147e744a69850a5c76b9706c03a96fa67d2efb5f
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 7aa190aca90d72a2d99c260acba85056c850e334
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435263"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100038487"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>连接池 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "87435263"
   
 ## <a name="enablingdisabling-connection-pooling"></a>启用/禁用连接池
 ### <a name="windows"></a>Windows
-可以将连接字符串中的 ConnectionPooling** 属性值设置为 false**** 或 0，强制驱动程序新建连接，而不是在连接池中查找等效连接。  
+可以将连接字符串中的 ConnectionPooling 属性值设置为 false 或 0，强制驱动程序新建连接，而不是在连接池中查找等效连接。  
   
-如果在连接字符串中省略了 ConnectionPooling** 属性，或将此属性值设置为 true**** 或 1，那么仅当连接池中没有等效连接时，驱动程序才会新建连接。  
+如果在连接字符串中省略了 ConnectionPooling 属性，或将此属性值设置为 true 或 1，那么仅当连接池中没有等效连接时，驱动程序才会新建连接。  
 
 > [!NOTE]  
 > 多重活动结果集 (MARS) 默认启用。 当同时使用 MARS 和池时，为了让 MARS 正常工作，驱动程序需要更长的时间来重置第一个查询上的连接，从而忽略指定的任何查询超时。 不过，查询超时设置将在后续查询中生效。
@@ -47,7 +47,7 @@ ms.locfileid: "87435263"
 如有必要，请查看[操作指南：禁用多重活动结果集 (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)。 有关其他连接属性的信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。  
 
 ### <a name="linux-and-macos"></a>Linux 和 macOS
-不能使用 ConnectionPooling** 属性来启用/禁用连接池。 
+不能使用 ConnectionPooling 属性来启用/禁用连接池。 
 
 可以通过编辑 odbcinst.ini 配置文件来启用/禁用连接池。 应重新加载驱动程序，使更改生效。
 

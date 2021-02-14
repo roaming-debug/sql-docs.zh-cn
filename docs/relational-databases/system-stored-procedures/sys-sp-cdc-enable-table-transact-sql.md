@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe8e347cb82fa1b89ad03ebb152a8d0257f0985b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f499a26e4884518e002b5d33d9f9cb25b7c1457e
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99205991"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100339395"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -99,7 +99,12 @@ sys.sp_cdc_enable_table
   
 > [!IMPORTANT]  
 >  SWITCH PARTITION 为元数据操作，但能导致数据更改。 与此操作相关联的数据更改不会在变更数据捕获的更改表中捕获。 请考虑一个有三个分区的表，并对此表进行更改。 捕获进程将跟踪用户对该表执行的插入、更新和删除操作。 但是，如果分区切出到另一个表（例如，为了执行大容量删除操作），作为此操作的一部分移动的行不会被捕获为更改表中的已删除行。 同样，如果将已预填充行的新分区添加到该表，这些行将不会反映在更改表中。 当更改被应用程序使用并应用于目标时，这可能会导致数据不一致。  
-  
+ 
+> [!NOTE] 
+> 在对启用 CDC 的表执行拆分或合并操作之前，请确保该分区没有任何挂起的复制命令，并且在拆分或合并操作期间不执行任何 DML 操作。 未处理的事务或 DML 操作可能会导致 `Error 608: No catalog entry found for partitionID` 日志读取器代理或 CDC 捕获作业处理错误。 可能需要对表禁用 CDC 才能继续执行拆分或合并操作。 
+
+
+
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或 **1** (失败)   
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9b79a9428df0dc528190281070ea33b3a2c21b25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff78828f0ab43d8b6121a93835f42ff7568653c2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456736"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339542"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>分配模型对象权限 (Master Data Services)
 
@@ -55,7 +55,7 @@ ms.locfileid: "88456736"
   
 8.  在菜单中选择读取、创建、更新和删除或拒绝的组合操作。  
   
-9. 在顶层模型级别中，选择“管理员”（如果需要将用户设置为模型管理员）。 ****  
+9. 在顶层模型级别中，选择“管理员”（如果需要将用户设置为模型管理员）。   
   
 10. 单击“ **保存**”。  
   

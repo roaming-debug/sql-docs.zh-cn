@@ -10,12 +10,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 516b1bb461e5927ff52f0cee79e48d9945e6da21
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: bc370b42f247c4b8e57c5628feaae7385ba1502d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378383"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039370"
 ---
 # <a name="monitoring-cluster-with-notebooks"></a>使用笔记本监视群集
 

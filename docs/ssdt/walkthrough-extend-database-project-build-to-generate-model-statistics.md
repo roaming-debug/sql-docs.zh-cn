@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 59c98e39bccbb6d4f74ddb5e9494e7fc4bced3eb
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 5e3905a3ded61ac6ef99f9ada4e94ffaab77a36c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985073"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016677"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>演练：扩展数据库项目生成以生成模型统计信息
 
@@ -525,7 +525,7 @@ ms.locfileid: "91985073"
   
 1.  在 Visual Studio 中，右键单击项目并选择“重新生成”。 这将重新生成项目，您应该看到生成的模型统计信息，其中输出将包含在生成输出中并保存到 ModelStatistics.xml。 请注意，可能需要在解决方案资源管理器中选择“显示所有文件”才能看到 xml 文件。  
   
-2.  打开 Visual Studio 命令提示符：在“开始”**** 菜单上，依次单击“所有程序”****、“Microsoft Visual Studio <Visual Studio Version>”****、“Visual Studio Tools”**** 和“Visual Studio 命令提示符(<Visual Studio Version>)”****。  
+2.  打开 Visual Studio 命令提示符：在“开始”菜单上，依次单击“所有程序”、“Microsoft Visual Studio <Visual Studio Version>”、“Visual Studio Tools”和“Visual Studio 命令提示符(<Visual Studio Version>)”。  
   
 3.  在命令提示符处，导航到包含 SQL 项目的文件夹。  
   

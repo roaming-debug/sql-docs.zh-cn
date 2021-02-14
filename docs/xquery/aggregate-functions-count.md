@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6691ca005de2ceec1de0408e358544292c58704d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb3fa2943ead0cb4b4000dbaa534f9b4b232dd3d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467179"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341975"
 ---
 # <a name="aggregate-functions---count"></a>聚合函数 - count
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  返回 *$arg*指定的序列中包含的项数。  
+  返回 *$arg* 指定的序列中包含的项数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,11 +63,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)中的**namespace**关键字定义命名空间前缀。 该前缀随后将用于 XQuery 主体。  
+-   [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)中的 **namespace** 关键字定义命名空间前缀。 该前缀随后将用于 XQuery 主体。  
   
 -   查询构造包含 <> 元素的 XML `NoOfWorkStations` 。  
   
--   XQuery 主体中 ** ( # B1 函数计数 ** <`Location`> 元素的数目。  
+-   XQuery 体中的 **count ()** 函数对 <> 元素数进行计数 `Location` 。  
   
  结果如下：  
   
@@ -99,7 +99,7 @@ WHERE Production.ProductModel.ProductModelID= 7
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- 可以将这些值作为非 xml 类型（而不是 xml 类型）返回，如以下查询所示。 查询使用 [ ( # A1 方法 (xml 数据类型) 的值 ](../t-sql/xml/value-method-xml-data-type.md) 来检索工作中心位置计数。  
+ 可以将这些值作为非 xml 类型（而不是 xml 类型）返回，如以下查询所示。 查询使用 [ (xml 数据类型) 的值 () 方法 ](../t-sql/xml/value-method-xml-data-type.md) 来检索工作中心位置计数。  
   
 ```  
 SELECT  ProductModelID,   

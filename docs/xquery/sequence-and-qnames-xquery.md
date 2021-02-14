@@ -1,5 +1,5 @@
 ---
-title: Sequence 和 QNames （XQuery） |Microsoft Docs
+title: " (XQuery) 顺序和 QNames |Microsoft Docs"
 description: 在 XQuery 中了解序列和 QNames 的基本概念。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbf165b1121b35ccc1b68578841108866832bb80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10caff2486f8dae470a4778c6da649b7bba5ddba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765601"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339921"
 ---
 # <a name="sequence-and-qnames-xquery"></a>序列和 QName (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -102,7 +102,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  XQuery 中的每个标识符都是一个 QName。 QName 由一个命名空间前缀和一个本地名称组成。 在这样的实现中，XQuery 中的变量名是 QNames，它们不能带有前缀。  
   
- 请考虑以下示例，其中针对非类型化的**xml**变量指定了查询：  
+ 请考虑以下示例，其中针对非类型化的 **xml** 变量指定了查询：  
   
 ```  
 DECLARE @x xml;  
@@ -112,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  在表达式 (`/Root/a`) 中，`Root` 和 `a` 是 QNames。  
   
- 在下面的示例中，对类型化的**xml**列指定了一个查询。 查询将循环访问 \<step> 第一个 workcenter 位置的所有元素。  
+ 在下面的示例中，对类型化的 **xml** 列指定了一个查询。 查询将循环访问 \<step> 第一个 workcenter 位置的所有元素。  
   
 ```  
 SELECT Instructions.query('  
@@ -144,7 +144,7 @@ WHERE ProductModelID=7;
 |xml|`http://www.w3.org/XML/1998/namespace`|  
 |（无前缀）|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- 你创建的每个数据库都有**sys** XML 架构集合。 它包含着这些架构，以便可以从任何用户创建的 XML 架构集合中访问这些架构。  
+ 你创建的每个数据库都有 **sys** XML 架构集合。 它包含着这些架构，以便可以从任何用户创建的 XML 架构集合中访问这些架构。  
   
 > [!NOTE]  
 >  此实现不支持前缀， `local` 如的 XQuery 规范中所述 http://www.w3.org/2004/07/xquery-local-functions 。  

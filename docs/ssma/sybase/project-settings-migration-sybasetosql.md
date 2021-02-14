@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b05bfa4cf77043ae172f23940d1b8f0244a1e30c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 96b5550449e11cd314e736a36e3845ba92f542c7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418283"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069915"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>项目设置（迁移）(SybaseToSQL)
 " **项目设置** " 对话框的 "迁移" 页包含的设置可用于自定义 SSMA 将数据从 Sybase 自适应服务器企业 (ASE) 迁移到的方式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -41,7 +41,7 @@ ms.locfileid: "88418283"
 > [!IMPORTANT]  
 > 当 " **迁移引擎** " 选项设置为 " **服务器端数据迁移引擎**" 时，将显示一个新的项目设置选项 " **使用32位服务器端数据迁移引擎** "。 它指定是否使用32位或64位大容量复制程序 (BCP) 实用工具来迁移数据。  
   
-## <a name="miscellaneous-options"></a>其他选项  
+## <a name="miscellaneous-options"></a>“杂项”选项  
   
 |术语|定义|  
 |--------|--------------|  

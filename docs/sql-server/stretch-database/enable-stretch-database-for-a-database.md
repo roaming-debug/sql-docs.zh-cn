@@ -12,20 +12,20 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 86ef68956fd948e485b221514dad588af40f4aac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b93f34e5a5b716c649f0902dabefe651253c9ff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454378"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079978"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
-  若要为现有数据库配置 Stretch Database，请在 SQL Server Management Studio 中为数据库选择“任务 | Stretch | 启用”****，以打开“为数据库启用 Stretch”**** 向导。 你也可以使用 Transact-SQL 来为数据库启用 Stretch Database。  
+  若要为现有数据库配置 Stretch Database，请在 SQL Server Management Studio 中为数据库选择“任务 | Stretch | 启用”，以打开“为数据库启用 Stretch”向导。 你也可以使用 Transact-SQL 来为数据库启用 Stretch Database。  
   
- 如果你为单个表选择“任务 | Stretch | 启用”****，且尚未为数据库启用 Stretch Database，向导将会为数据库配置 Stretch Database，并在此过程中让你配置表。 请执行本主题中的步骤，而非[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)中的步骤。  
+ 如果你为单个表选择“任务 | Stretch | 启用”，且尚未为数据库启用 Stretch Database，向导将会为数据库配置 Stretch Database，并在此过程中让你配置表。 请执行本主题中的步骤，而非[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)中的步骤。  
   
  在数据库或表上启用 Stretch Database 需要 db_owner 权限。 对数据库启用 Stretch Database 还需要有 CONTROL DATABASE 权限。  
 
@@ -45,7 +45,7 @@ ms.locfileid: "88454378"
 ##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> 先决条件：在服务器上启用 Stretch Database  
  必须先在本地服务器上启用 Stretch Database，然后才能在数据库或表上启用它。 此操作需要 sysadmin 或 serveradmin 权限。  
   
--   如果你拥有必要的管理权限，“为数据库启用 Stretch”**** 向导将会为服务器配置 Stretch。  
+-   如果你拥有必要的管理权限，“为数据库启用 Stretch”向导将会为服务器配置 Stretch。  
   
 -   如果你没有必要的权限，在你运行向导之前，管理员必须通过运行 **sp_configure** 来手动启用该选项，否则便需由管理员运行该向导。  
   
@@ -94,7 +94,7 @@ GO
   
         -   如果通过运行向导启用 Stretch Database，则可以在那时创建凭据。  
   
-        -   如果计划通过运行 **ALTER DATABASE**启用 Stretch Database，则必须在运行 **ALTER DATABASE** 以启用 Stretch Database 之前手动创建凭据。 
+        -   如果计划通过运行 **ALTER DATABASE** 启用 Stretch Database，则必须在运行 **ALTER DATABASE** 以启用 Stretch Database 之前手动创建凭据。 
         
         下面是创建一个新凭据的示例。
   

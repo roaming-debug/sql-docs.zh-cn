@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 46b1d3bd60a3a2603cb0a317e0d2bbc3a206c3ea
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 63088f95aa36ca183a282615a25e6f9a8b29a0dd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038841"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075065"
 ---
 # <a name="appendix---1-sybasetosql"></a>附录 - 1 (SybaseToSQL)
 SSMA 控制台命令行选项的快速视图：  
   
-|Sl. 否。|开关|必需？|开关参数|允许的值|  
+|Sl. 否。|交换机|必需？|开关参数|允许的值|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/脚本|是|scriptfile|有效的 XML 文件名。<br /><br />控制台脚本定义文件。|  
 |2|-v/variable|否|variablevaluefile|有效的 XML 文件名。<br /><br />如果脚本文件中使用了变量，则必须指定此文件。|  
