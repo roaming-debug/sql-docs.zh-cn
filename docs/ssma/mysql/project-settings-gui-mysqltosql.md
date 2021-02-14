@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: aa798c425733282b50b4baeb3140173719fc0bb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10dcad71db5829465f0b8d76314c2bad20be2653
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320563"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079478"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>项目设置 (GUI) (MySQLToSQL)
 GUI 项目设置允许您配置数据在 " **数据** " 选项卡上的显示方式，以及是否包括具有评估报告的数据报告。  

@@ -1,5 +1,5 @@
 ---
-title: 主表达式（XQuery） |Microsoft Docs
+title: )  (XQuery 的主表达式 |Microsoft Docs
 description: 了解 XQuery 主表达式，这些表达式包括文本、变量引用、上下文项表达式、构造函数和函数调用。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c1186623b334d3eea465c632bc23ec58ba231ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f474aae3e764224bec01830b42766216a27bc9d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765617"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339950"
 ---
 # <a name="primary-expressions-xquery"></a>主表达式 (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 主表达式包含文字、变量引用、上下文项表达式、构造函数和函数调用。  
   
-## <a name="literals"></a>文字  
+## <a name="literals"></a>文本  
  XQuery 文字可以是数字或字符串。 字符串可包括预定义的实体引用，实体引用就是字符序列。 这种序列以“and”符为开头，此符号表示单个字符，如果不加此符号则可能具有语法意义。 以下是 XQuery 中的预定义的实体引用。  
   
 |实体引用|表示|  
@@ -94,7 +94,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 内置布尔函数**true （）** 和**false （）** 可用于表示布尔值，如下面的示例中所示。  
+ 内置布尔函数、 **true ()** 和 **false ()** 可用于表示布尔值，如下面的示例中所示。  
   
 ```  
 DECLARE @var XML  
@@ -131,7 +131,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- 您可以使用 sql： variable （）扩展函数引用 SQL 变量，如下面的查询所示。  
+ 您可以使用 sql： variable () extension 函数引用 SQL 变量，如下面的查询所示。  
   
 ```  
 DECLARE @price money  
@@ -152,10 +152,10 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   不支持模块导入。  
   
--   不支持外部变量声明。 此操作的一种方法是使用[sql： variable （）函数](../xquery/xquery-extension-functions-sql-variable.md)。  
+-   不支持外部变量声明。 此操作的一种方法是使用 [sql： variable () 函数](../xquery/xquery-extension-functions-sql-variable.md)。  
   
 ## <a name="context-item-expressions"></a>上下文项表达式  
- 上下文项是路径表达式的上下文中当前正在处理的项。 该项在带有文档节点的非空 XML 数据类型实例中进行初始化。 它也可以在 XPath 表达式或 [] 谓词的上下文中通过节点（）方法进行更改。  
+ 上下文项是路径表达式的上下文中当前正在处理的项。 该项在带有文档节点的非空 XML 数据类型实例中进行初始化。 也可以在 XPath 表达式或 [] 谓词的上下文中 () 方法更改节点。  
   
  上下文项由包含点 (.) 的表达式返回。 例如，下面的查询将评估每个元素 <`a`> 是否存在属性 `attr` 。 如果存在此属性，则返回该元素。 请注意，谓词中的条件指定使用单个句点指定上下文节点。  
   
@@ -173,7 +173,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>函数调用  
- 可以调用内置 XQuery 函数和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql： variable （）和 sql： column （）函数。 有关已实现函数的列表，请参阅[针对 Xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)。  
+ 可以调用内置 XQuery 函数和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql： variable () 和 sql： column () 函数。 有关已实现函数的列表，请参阅 [针对 Xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)。  
   
 #### <a name="implementation-limitations"></a>实现限制  
  实现限制如下：  

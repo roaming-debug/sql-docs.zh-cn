@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86bc7c0352e7bf2447628a143a5c1732b132a412
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: c6b42238a081adbd40f9756fb3d2fb8871e1d7cc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891367"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100023332"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>打开或关闭 Reporting Services 功能
   您可以关闭不用作锁定策略一部分的报表服务器功能，以减小生产报表服务器的攻击面。 在大多数情况下，需要同时运行各种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能才能使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中提供的所有功能。 但是根据所用的部署模型，您可以禁用不需要的功能。 例如，如果所有报表处理均已配置为预定操作，则可以只启用后台处理。 同样，如果只需要交互式的按需报表，可以只运行报表服务器 Web 服务。  
   
- 本文中的过程展示了如何禁用本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 可以不同的方式配置这些功能，如直接编辑 `RsReportServer.config` 文件或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中基于策略的管理的“Reporting Services 的外围应用配置”**** 方面。 使用以下链接可以找到说明如何打开或关闭相应功能的步骤：  
+ 本文中的过程展示了如何禁用本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 可以不同的方式配置这些功能，如直接编辑 `RsReportServer.config` 文件或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中基于策略的管理的“Reporting Services 的外围应用配置”方面。 使用以下链接可以找到说明如何打开或关闭相应功能的步骤：  
   
 -   [报表服务器 Web 服务](#RSWebSvc)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "91891367"
   
 1.  在文本编辑器中打开 RsReportServer.config 文件。 有关详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
-2.  若要打开预定的报表处理和传递，请将 **IsSchedulingService**、 **IsNotificationService**和 **IsEventService** 设置为 **true**：  
+2.  若要打开预定的报表处理和传递，请将 **IsSchedulingService**、 **IsNotificationService** 和 **IsEventService** 设置为 **true**：  
   
     ```  
     <IsSchedulingService>true</IsSchedulingService>  
@@ -82,7 +82,7 @@ ms.locfileid: "91891367"
     <IsEventService>true</IsEventService>  
     ```  
   
-3.  若要关闭预定的报表处理和传递，请将 **IsSchedulingService**、 **IsNotificationService**和 **IsEventService** 设置为 **false**：  
+3.  若要关闭预定的报表处理和传递，请将 **IsSchedulingService**、 **IsNotificationService** 和 **IsEventService** 设置为 **false**：  
   
     ```  
     <IsSchedulingService>false</IsSchedulingService>  

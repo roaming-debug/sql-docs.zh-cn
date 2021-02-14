@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2e28243c1cb41a8c7a85ddbe381302a18d161f2e
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 830ff0bf030ad81f02f915ff50078baef9d57600
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529123"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060962"
 ---
 # <a name="debugging-delivery-extension-code"></a>调试传递扩展插件代码
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一些调试工具，有助于分析传递扩展插件代码并定位其中的错误。 哪个工具效果最佳取决于您试图完成的任务。 此示例使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  

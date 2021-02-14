@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e246374476c3dff300aaf6c53ee3c6e8a1896db5
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 73dcdd57b018f980291eceefa1be37d1b51df13a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987973"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018437"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>如何：比较和同步两个数据库的数据
 
@@ -28,7 +28,7 @@ ms.locfileid: "91987973"
 > [!NOTE]  
 > 数据库项目 和 .dacpac 或 .bacpac 包不能作为数据比较中的源或目标。  
   
-在比较数据时，将生成一个数据操作语言** (DML) 脚本，你可以使用该脚本通过更新目标数据库中的部分或所有数据来同步不一致的数据库。 完成数据比较后，其结果将显示在 Visual Studio 的“数据比较”窗口中。  
+在比较数据时，将生成一个数据操作语言 (DML) 脚本，你可以使用该脚本通过更新目标数据库中的部分或所有数据来同步不一致的数据库。 完成数据比较后，其结果将显示在 Visual Studio 的“数据比较”窗口中。  
   
 完成比较后，您可以执行其他步骤：  
   
@@ -51,23 +51,23 @@ ms.locfileid: "91987973"
   
 2.  标识源数据库和目标数据库。  
   
-    如果“源数据库”列表或“目标数据库”列表为空，则请单击“新建连接”。 在“连接属性”**** 对话框中，标识数据库所在的服务器以及在连接到数据库时将使用的身份验证的类型。 然后，单击“确定”关闭“连接属性”对话框并返回到该数据比较向导。  
+    如果“源数据库”列表或“目标数据库”列表为空，则请单击“新建连接”。 在“连接属性”对话框中，标识数据库所在的服务器以及在连接到数据库时将使用的身份验证的类型。 然后，单击“确定”关闭“连接属性”对话框并返回到该数据比较向导。  
   
-    在该数据比较向导的第一页上，确认每个数据库的信息均正确，再指定要包含在结果中的记录，然后单击“下一步”****。 该数据比较向导的第二页随即出现，该页显示了数据库中的表和视图的层次列表。  
+    在该数据比较向导的第一页上，确认每个数据库的信息均正确，再指定要包含在结果中的记录，然后单击“下一步”。 该数据比较向导的第二页随即出现，该页显示了数据库中的表和视图的层次列表。  
   
 3.  选中要比较的表和视图所对应的复选框。 （可选）展开数据库对象的节点，然后选中这些对象中要比较的列所对应的复选框。  
   
     > [!NOTE]  
     > 表和视图必须满足两个条件才能出现在列表中。 第一个条件是，源数据库中对象的架构和目标数据库中对象的架构必须匹配。 第二个条件是，该列表中仅显示具有主键、唯一键、唯一索引或唯一约束的表和视图。 如果任何表或视图均未满足这两个条件，则该列表将为空。  
   
-4.  如果存在多个键，可以使用“比较键”**** 列指定要作为数据比较依据的键。 例如，可以指定是基于主键列还是其他（唯一可标识）键列进行比较。  
+4.  如果存在多个键，可以使用“比较键”列指定要作为数据比较依据的键。 例如，可以指定是基于主键列还是其他（唯一可标识）键列进行比较。  
   
 5.  单击“完成”。  
   
     比较开始。  
   
     > [!NOTE]  
-    > 可通过打开“SQL”**** 菜单，再单击“数据比较”****，然后单击“停止数据比较”**** 来停止正在进行的数据比较操作。  
+    > 可通过打开“SQL”菜单，再单击“数据比较”，然后单击“停止数据比较”来停止正在进行的数据比较操作。  
   
     完成比较后，可以查看两个数据库之间的数据差异。 还可以更新目标数据库中的部分或所有数据以与源数据库中的数据匹配。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "91987973"
     Sql.NewDataComparison /SrcServerName sServerName /SrcDatabaseName sDatabaseName /SrcUserName sUserName /SrcPassword sPassword /SrcDisplayName sDisplayName /TargetServerName tServerName /TargetDatabaseName tDatabaseName /TargeUserName tUserName /TargetPassword tPassword /TargetDisplayName tDisplayName  
     ```  
   
-    将占位符（sServerName**、sDatabaseName**、sUserName**、sPassword**、sDisplayName**、tServerName**、tDatabaseName**、tUserName**、tPassword** 和 tDisplayName**）替换为源和目标数据库的值。  
+    将占位符（sServerName、sDatabaseName、sUserName、sPassword、sDisplayName、tServerName、tDatabaseName、tUserName、tPassword 和 tDisplayName）替换为源和目标数据库的值。  
   
     如果未指定源和目标，则将显示“新建数据比较”对话框。 有关 Sql.NewDataComparison 命令的参数的详细信息，请参阅 [Visual Studio Team System 的数据库功能的自动化命令参考](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100))。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "91987973"
     将使用源中对应记录的数据更新目标中选定记录的数据。  
   
     > [!NOTE]  
-    > 如果选择更新索引视图，则“更新目标”**** 操作可能会失败（如果此操作导致在同一个表中插入重复的键）。  
+    > 如果选择更新索引视图，则“更新目标”操作可能会失败（如果此操作导致在同一个表中插入重复的键）。  
   
 #### <a name="to-update-target-data-by-using-a-transact-sql-script"></a>使用 Transact\-SQL 脚本更新目标数据  
   

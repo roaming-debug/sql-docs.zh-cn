@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 058012d828dd9f6f327354809be4dfe67021744b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 48edd5e76a87a866a2090329f144c5a7dc0934a2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257187"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046857"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -119,7 +119,7 @@ ms.locfileid: "92257187"
 
 编辑以下字段：
 
-   controllerUpgradeTimeoutInMinutes**** 指定等待控制器或控制器 db 完成升级所需的分钟数。 默认值为 5。 至少更新为 20。
+   controllerUpgradeTimeoutInMinutes 指定等待控制器或控制器 db 完成升级所需的分钟数。 默认值为 5。 至少更新为 20。
    **totalUpgradeTimeoutInMinutes**：指定控制器和控制器 db 完成升级所需的总时间（控制器 + 控制器 db 升级）。默认值为 10。 至少更新为 40。
    **componentUpgradeTimeoutInMinutes**：指定升级的每个后续阶段必须完成的时间量。 默认值为 30。 更新为 45。
 

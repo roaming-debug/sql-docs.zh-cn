@@ -8,15 +8,15 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 06/10/2020
+ms.date: 02/05/2021
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 57ddcd78bd05cda262c9e4d041562dc5c2dfc4b7
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 3b24c9accfd205057086a477a586b33218e532b6
+ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236548"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99623790"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "99236548"
 > [!NOTE]
 > SQL Server 2012 及更高版本支持数据发现和分类，这些功能可用于 [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 或更高版本。 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](/azure/sql-database/sql-database-data-discovery-and-classification/)。
 
-## <a name="overview"></a><a id="subheading-1"></a>概述
+## <a name="overview"></a><a id="Overview"></a>概述
 数据发现和分类引入了一套服务，形成了一种旨在保护各种数据（而不只是数据库）的全新 SQL 信息保护范例：
 
 * 发现和建议 - 分类引擎扫描数据库，并标识包含潜在敏感数据的列。 利用它可以轻松查看和应用相应的分类建议，也可以手动对列进行分类。
 * 标记 - 可以在列上永久地标记敏感度分类标签。
 * 可见性 - 可以在详细报表中查看数据库分类状态，如在符合性和审核等事项中对其有需求，则可以直接打印/导出该报表。
 
-## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>发现、分类和标记敏感列
+## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="Discovering-classifying-labeling-sensitive-columns"></a>发现、分类和标记敏感列
 以下部分介绍如何在数据库中发现包含敏感数据的列并对其进行分类和标记、如何查看数据库的当前分类状态，以及如何导出报表。
 
 分类包含两种元数据属性：
@@ -91,7 +91,7 @@ ms.locfileid: "99236548"
 
     ![显示 SQL 数据分类报表的屏幕截图。][10]
 
-## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>使用 SSMS 管理信息保护策略
+## <a name="manage-information-protection-policy-with-ssms"></a><a id="Manage-information-protection-policy-with-SSMS"></a>使用 SSMS 管理信息保护策略
 
 你可以使用 [SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) 或更高版本来管理信息保护策略：
 
@@ -111,12 +111,9 @@ ms.locfileid: "99236548"
 > 信息保护策略文件不存储在 SQL Server 中。
 > SSMS 使用默认的信息保护策略。 如果自定义的信息保护策略失败，SSMS 将无法使用默认策略。 数据分类失败。 要解决此问题，请单击“重置信息保护策略”以使用默认策略并重新启用数据分类。
 
-## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>访问分类元数据
+## <a name="accessing-the-classification-metadata"></a><a id="sAccessing-the-classification-metadata"></a>访问分类元数据
 
-SQL Server 2019 引入了 [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 系统目录视图。 此视图返回信息类型和敏感度标签。 
-
-> [!NOTE]
-> 此视图需要 VIEW ANY SENSITIVITY CLASSIFICATION 权限。 有关详细信息，请参阅 [Metadata Visibility Configuration](./metadata-visibility-configuration.md)。
+SQL Server 2019 引入了 [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 系统目录视图。 此视图返回信息类型和敏感度标签。
 
 在 SQL Server 2019 实例上，查询 `sys.sensitivity_classifications` 以查看所有具有相应分类的已分类列。 例如： 
 
@@ -140,8 +137,6 @@ FROM sys.sensitivity_classifications sc
 
 * `sys_information_type_name`
 * `sys_sensitivity_label_name`
-
-可以使用扩展属性目录视图 [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md) 访问元数据。
 
 对于 SQL Server 2017 及之前的实例，以下示例返回具有相应分类的所有已分类列：
 
@@ -185,6 +180,14 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
+## <a name="permissions"></a><a id="Permissions"></a>权限
+
+在 SQL Server 2019 实例上，查看分类需要 VIEW ANY SENSITIVITY CLASSIFICATION 权限。 有关详细信息，请参阅 [Metadata Visibility Configuration](./metadata-visibility-configuration.md)。
+
+在 SQL Server 2019 之前，元数据可以通过使用扩展属性目录视图 [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md) 来访问。
+
+管理分类需要 ALTER ANY SENSITIVITY CLASSIFICATION 权限。 “ALTER ANY SENSITIVITY CLASSIFICATION”由数据库权限“ALTER”或服务器权限“CONTROL SERVER”表示。
+
 ## <a name="manage-classifications"></a><a id="subheading-5"></a>管理分类
 
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
@@ -201,7 +204,7 @@ FROM
 - [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification)
 - [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification)
 
-## <a name="next-steps"></a><a id="subheading-6"></a>后续步骤
+## <a name="next-steps"></a><a id="Next-steps"></a>后续步骤
 
 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](/azure/azure-sql/database/data-discovery-and-classification-overview)。
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d2163610d1ea537301ec61e1a34c8b6e727d6e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11c0eb693468b980db88995713dc6af99180c373
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759455"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352822"
 ---
 # <a name="type-system---sequence-type-matching"></a>类型系统 - 序列类型匹配
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "85759455"
   
 -   您可能希望知道表达式返回的是 XML 元素还是特定名称和类型的属性节点。  
   
- 您可以在序列类型匹配时使用 `instance of` 布尔运算符。 有关表达式的详细信息 `instance of` ，请参阅[SequenceType Expression &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)。  
+ 您可以在序列类型匹配时使用 `instance of` 布尔运算符。 有关表达式的详细信息 `instance of` ，请参阅 [SequenceType Expression &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)。  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>比较表达式返回的原子值类型  
  如果表达式返回的是原子值序列，则您可能必须弄清序列中值的类型。 下列示例说明如何使用序列类型语法来估计表达式返回的原子值类型。  
   
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>示例：确定序列是否为空  
- 可以在序列类型表达式中使用**empty （）** 序列类型来确定指定表达式返回的序列是否为空序列。  
+ **空的 ()** 序列类型可以在序列类型表达式中使用，以确定指定表达式返回的序列是否为空序列。  
   
  在下面的示例中，XML 架构允许 `root` 空> 元素的 <：  
   
@@ -161,7 +161,7 @@ GO
  如果两种情况都匹配，`instance of` 表达式将返回 True。  
   
 ### <a name="example-querying-against-an-xml-type-column"></a>示例：对 xml 类型列进行查询  
- 在下面的示例中，针对数据库中**xml**类型的指令列指定了查询 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 。 因为它具有关联的架构，因此是类型化 XML 列。 XML 架构定义整数类型的 `LocationID` 属性。 因此，在序列表达式中， `instance of xs:integer?` 返回 True。  
+ 在下面的示例中，针对数据库中 **xml** 类型的指令列指定了查询 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 。 因为它具有关联的架构，因此是类型化 XML 列。 XML 架构定义整数类型的 `LocationID` 属性。 因此，在序列表达式中， `instance of xs:integer?` 返回 True。  
   
 ```  
 SELECT Instructions.query('   
@@ -174,15 +174,15 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>比较表达式返回的节点类型  
  如果表达式返回节点序列，则您可能必须弄清此序列中节点的类型。 下列示例说明如何使用序列类型语法估计表达式返回的节点类型。 您可以使用下列序列类型：  
   
--   **item （）** -与序列中的任何项匹配。  
+-   **项 ()** -与序列中的任何项匹配。  
   
--   **node （）** -确定序列是否为节点。  
+-   **节点 ()** -确定序列是否为节点。  
   
--   **处理指令（）** -确定表达式是否返回处理指令。  
+-   **处理指令 ()** -确定表达式是否返回处理指令。  
   
--   **comment （）** -确定表达式是否返回注释。  
+-   **comment ()** -确定表达式是否返回注释。  
   
--   **文档节点（）** -确定表达式是否返回文档节点。  
+-   **文档节点 ()** -确定表达式是否返回文档节点。  
   
  以下示例说明这些序列类型。  
   
@@ -229,9 +229,9 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>实现限制  
  具体的限制如下：  
   
--   不支持具有内容类型语法的**文档节点（）** 。  
+-   不支持具有内容类型语法的 **文档节点 ()** 。  
   
--   不支持**处理指令（name）** 语法。  
+-   不支持 **处理指令 (名称)** 语法。  
   
 ## <a name="element-tests"></a>元素测试  
  元素测试用于将表达式返回的元素节点与具有特定名称和类型的元素节点相匹配。 您可以使用下列元素测试：  
@@ -307,7 +307,7 @@ GO
     ```  
   
 ### <a name="example-b"></a>示例 B  
- 下列示例说明如何确定表达式返回的节点是否为具有特定名称的元素节点。 它使用**元素（）** 测试。  
+ 下列示例说明如何确定表达式返回的节点是否为具有特定名称的元素节点。 它使用 () 测试的 **元素** 。  
   
  在下面的示例中，正在查询的 XML 实例中的两个 <`Customer`> 元素是两种不同的类型： `CustomerType` 和 `SpecialCustomerType` 。 假设您想知道 `Customer` 表达式返回的 <> 元素的类型。 以下 XML 架构集合定义 `CustomerType` 和 `SpecialCustomerType` 类型。  
   
@@ -336,7 +336,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 此 XML 架构集合用于创建类型化的**xml**变量。 分配给此变量的 XML 实例具有两个 <`customer`> 两个不同类型的元素。 第一个元素属于 `CustomerType` 类型，第二个元素属于 `SpecialCustomerType` 类型。  
+ 此 XML 架构集合用于创建类型化的 **xml** 变量。 分配给此变量的 XML 实例具有两个 <`customer`> 两个不同类型的元素。 第一个元素属于 `CustomerType` 类型，第二个元素属于 `SpecialCustomerType` 类型。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -359,7 +359,7 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- 如果更改上一个查询的表达式并检索第二个 <`customer`> 元素（ `/x:customer)[2]` ），则 `instance of` 将返回 True。  
+ 如果更改上一个查询的表达式并检索第二个 <`customer`> 元素 (`/x:customer)[2]`) ，则 `instance of` 将返回 True。  
   
 ### <a name="example-c"></a>示例 C  
  此示例使用属性测试。 下列 XML 架构定义了带有 CustomerID 属性和 Age 属性的 CustomerType 复杂类型。 Age 属性是可选的。 对于特定的 XML 实例，您可能需要确定 <> 元素中是否存在 Age 属性 `customer` 。  
@@ -383,7 +383,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 由于正在查询的 XML 实例中具有名称为 `Age` 的属性节点，因此，以下查询返回 True。 此表达式中使用了 `attribute(Age)` 属性测试。 由于属性是无序的，查询使用 FLWOR 表达式检索所有属性，然后使用 `instance of` 表达式测试每个属性。 该示例首先创建一个 XML 架构集合，用于创建类型化的**XML**变量。  
+ 由于正在查询的 XML 实例中具有名称为 `Age` 的属性节点，因此，以下查询返回 True。 此表达式中使用了 `attribute(Age)` 属性测试。 由于属性是无序的，查询使用 FLWOR 表达式检索所有属性，然后使用 `instance of` 表达式测试每个属性。 该示例首先创建一个 XML 架构集合，用于创建类型化的 **XML** 变量。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -421,17 +421,17 @@ RETURN
 ### <a name="implementation-limitations"></a>实现限制  
  具体的限制如下：  
   
--   在元素测试中，类型名称后面必须跟有指示符（**？**）。  
+-   在元素测试中，类型名称后面必须跟有指示器 (**？**) 。  
   
--   不支持**element （ElementName，TypeName）** 。  
+-   **元素 (ElementName，TypeName)** 不受支持。  
   
--   不支持**元素（ \* ，TypeName）** 。  
+-   不支持 **元素 (\* ，TypeName)** 。  
   
--   不支持**架构元素（）** 。  
+-   不支持 **架构元素 ()** 。  
   
--   不支持**架构属性（AttributeName）** 。  
+-   不支持 **架构 (AttributeName) 的属性**。  
   
--   不支持显式查询**xsi： type**或**xsi： nil** 。  
+-   不支持显式查询 **xsi： type** 或 **xsi： nil** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [键入 System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  

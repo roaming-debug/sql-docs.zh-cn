@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cdd631bd3a37722a6f87709931b2f45046c81e24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e7465c52f6141e0eb78cc01c74d338c688d1c7c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500591"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338993"
 ---
 # <a name="delete-a-model-master-data-services"></a>删除模型 (Master Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "88500591"
   
 2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“模型”**。  
   
-3.  在“管理模型”页上，从网格中选择要删除的模型所在的行。 ****  
+3.  在“管理模型”页上，从网格中选择要删除的模型所在的行。   
   
 4.  单击 **“删除”** 。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "88500591"
   
 6.  在附加确认对话框中，单击 **“确定”**。  
   
- 网格的“状态”列中显示了对模型所执行操作的状态。 **** 单击 " **保存模型** " 按钮后，将显示 " ![更新](../master-data-services/media/mds-model-status-updating.png "更新") " 图像，指示模型正在更新。 如果在创建或编辑模型时出现错误，则会显示 ![错误](../master-data-services/media/mds-model-status-error.png "错误") 映像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "OK") 图像。  
+ 网格的“状态”列中显示了对模型所执行操作的状态。  单击 " **保存模型** " 按钮后，将显示 " ![更新](../master-data-services/media/mds-model-status-updating.png "更新") " 图像，指示模型正在更新。 如果在创建或编辑模型时出现错误，则会显示 ![错误](../master-data-services/media/mds-model-status-error.png "错误") 映像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "确定") 图像。  
   
 ## <a name="see-also"></a>另请参阅  
  [Master Data Services &#40;模型&#41;](../master-data-services/models-master-data-services.md)   

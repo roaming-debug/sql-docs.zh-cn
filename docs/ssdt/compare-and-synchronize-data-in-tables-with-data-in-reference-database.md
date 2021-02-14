@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/27/2020
-ms.openlocfilehash: eb0ca79c68227bbc52b69da71eba191ec795ca2f
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 40d09ff78845707729a94359c30d07c73df1bb77
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519077"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079618"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>将一个或多个表中的数据与引用数据库中的数据进行比较和同步
 

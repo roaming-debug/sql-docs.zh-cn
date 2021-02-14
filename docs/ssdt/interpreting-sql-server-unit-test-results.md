@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 028f92e064b41d68e8c168f22faa479f1c29f559
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 88fc08dcc00e64c4b107a99608b891a43f236d66
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988173"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017907"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>解释 SQL Server 单元测试结果
 
@@ -23,7 +23,7 @@ ms.locfileid: "91988173"
   
 若要查看有关某个测试结果的详细信息，请在“测试结果”窗口中双击该测试结果以显示“测试结果详细信息”页。 有关测试结果的详细信息，请双击测试结果。  
   
-有关如何更改“测试结果”**** 窗口的显示的详细信息，请参阅[如何：在测试窗口中添加或移除列 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182508(v=vs.100))或[如何：在测试窗口中添加或移除列 (Visual Studio 2012)](/previous-versions/visualstudio/visual-studio-2012/ms182508(v=vs.110))。  
+有关如何更改“测试结果”窗口的显示的详细信息，请参阅[如何：在测试窗口中添加或移除列 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182508(v=vs.100))或[如何：在测试窗口中添加或移除列 (Visual Studio 2012)](/previous-versions/visualstudio/visual-studio-2012/ms182508(v=vs.110))。  
   
 ## <a name="storing-test-results"></a>存储测试结果  
 单元测试的结果将会自动存储在硬盘上文件扩展名为 .trx 的文件中。 .trx 文件是包含测试运行的详细信息的 XML 文件。 您可加载之前的测试运行的 .trx 文件以查看这些测试运行的结果或重新运行之前的测试。 有关详细信息，请参阅[操作说明：重新运行测试 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182472(v=vs.100))。  

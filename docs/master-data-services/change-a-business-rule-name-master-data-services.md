@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c575f408d0682554eb3ead69e3915d226d4975b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cada2e43ffb4d987c54a0e8b5079b32879a47bf2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500696"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351949"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>更改业务规则名称 (Master Data Services)
 
@@ -43,19 +43,19 @@ ms.locfileid: "88500696"
   
 3.  在 " **业务规则** " 页上，从 " **模型** " 下拉列表中选择一个模型。  
   
-4.  从 **** “实体”下拉列表中选择一个实体。  
+4.  从  “实体”下拉列表中选择一个实体。  
   
-5.  从“成员类型”**** 列表中选择一个成员类型。  
+5.  从“成员类型”列表中选择一个成员类型。  
   
-6.  在网格中，选择要更改名称的业务规则所对应的行并单击“编辑” ****。  
+6.  在网格中，选择要更改名称的业务规则所对应的行并单击“编辑” 。  
   
 7.  为业务规则键入新名称。  
   
-8.  单击“ **保存**”。  
+8.  单击“保存”。  
   
-9. 单击“全部发布” ****。  
+9. 单击“全部发布” 。  
   
-10. 在确认对话框中，单击 **“确定”**。 “业务规则状态” **** 列中的值为“有效” ****。  
+10. 在确认对话框中，单击 **“确定”**。 “业务规则状态” 列中的值为“有效” 。  
   
 ## <a name="see-also"></a>另请参阅  
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  

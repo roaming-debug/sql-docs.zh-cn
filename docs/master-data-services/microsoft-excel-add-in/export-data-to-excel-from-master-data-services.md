@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af0b2a73189a52aa9725fef8672adb29993f1c2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8b7ab33b2d10ab09a8ab3fcf76532dd571936df
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257616"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100337102"
 ---
 # <a name="export-data-to-excel-from-master-data-services"></a>将数据从 Master Data Services 导出到 Excel
 
@@ -29,7 +29,7 @@ ms.locfileid: "92257616"
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   **** 您必须有权访问“资源管理器”功能区域。  
+-    您必须有权访问“资源管理器”功能区域。  
   
 ### <a name="to-export-data-from-mds-into-excel"></a>将数据从 MDS 导出到 Excel  
   
@@ -41,7 +41,7 @@ ms.locfileid: "92257616"
   
     -   如果 **“主数据资源管理器”** 窗格被禁用，则是因为现有工作表中已包含 MDS 管理的数据。 若要启用该窗格，请打开一个新工作表。  
   
-3.  在“主数据资源管理器”**** 窗格的实体列表中，双击要加载的实体。  
+3.  在“主数据资源管理器”窗格的实体列表中，双击要加载的实体。  
   
     > [!NOTE]  
     >  -   只有前一百万个成员才能加载到 Excel 中。 若要在加载前对列表进行筛选，请在 **“连接并加载”** 组中，单击 **“筛选器”**。  
@@ -50,7 +50,7 @@ ms.locfileid: "92257616"
     >      如果基于域的属性的值数超过 MaximumDbEntitySize 属性设置，则不会加载值列表。  
   
     > [!NOTE]  
-    >  使用用于 32 位 Excel 的 Microsoft Excel 外接程序加载文本分隔数据时，如果“要加载的单元计数”**** 和“要发布的单元计数”**** 属性均设置为最大值 1000，则将出现内存不足错误。 必须使用 64 位 Excel，才能使用“要加载的单元计数”**** 和“要发布的单元计数”**** 的最大值设置。  
+    >  使用用于 32 位 Excel 的 Microsoft Excel 外接程序加载文本分隔数据时，如果“要加载的单元计数”和“要发布的单元计数”属性均设置为最大值 1000，则将出现内存不足错误。 必须使用 64 位 Excel，才能使用“要加载的单元计数”和“要发布的单元计数”的最大值设置。  
   
 ## <a name="next-steps"></a>后续步骤  
  [将数据从 Excel 导入 Master Data Services（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  

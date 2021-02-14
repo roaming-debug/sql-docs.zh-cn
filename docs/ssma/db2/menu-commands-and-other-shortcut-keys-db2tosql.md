@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b24fb152402386ba3b22cad8be196cd2c042699e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94254ea88b59dfbac45c753ea41fedf995c91fed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320783"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078748"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>菜单命令和其他快捷键 (DB2ToSQL) 
 以下部分介绍了访问菜单命令的键盘快捷方式，以及在 SSMA for DB2 应用程序的各种对话框中使用的其他快捷键。  

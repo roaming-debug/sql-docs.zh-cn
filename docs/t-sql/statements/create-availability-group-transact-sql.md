@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1ba1a89e21c7eb57c2f3dd603e35472d56ab62d7
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: daff2ddf321fa785dc8a304ee0af590682efc63a
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236286"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552630"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -260,7 +260,8 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
 - 可以在任何版本的 SQL Server 上承载，包括 Express Edition。
 - 要求 CONFIGURATION_ONLY 副本的数据镜像终结点为 `WITNESS` 类型。
 - 无法更改。
-- 当 `CLUSTER_TYPE = WSFC` 时无效。 
+- 当 `CLUSTER_TYPE = WSFC` 时无效。
+- 如果副本的 `availability_mode` 设置为 `configuration_only`，则不支持 `failover_mode` 和 `seeding_mode` 选项。 有关示例，请单击[此处](../../linux/sql-server-linux-availability-group-configure-ha.md)。
 
    有关详细信息，请参阅[仅配置副本](../../linux/sql-server-linux-availability-group-ha.md)。
   
@@ -467,13 +468,13 @@ AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
  *ip4_address*  
- 指定可用性组侦听器的由四部分组成的 IPv4 地址。 例如，`10.120.19.155`。  
+ 指定可用性组侦听器的由四部分组成的 IPv4 地址。 例如，`10.120.19.155` 。  
   
  *ipv4_mask*  
- 指定可用性组侦听器的由四部分组成的 IPv4 掩码。 例如，`255.255.254.0`。  
+ 指定可用性组侦听器的由四部分组成的 IPv4 掩码。 例如，`255.255.254.0` 。  
   
  ipv6_address  
- 指定可用性组侦听器的 IPv6 地址。 例如，`2001::4898:23:1002:20f:1fff:feff:b3a3`。  
+ 指定可用性组侦听器的 IPv6 地址。 例如，`2001::4898:23:1002:20f:1fff:feff:b3a3` 。  
   
  PORT = listener_port  
  指定端口号 listener_port，以供由 WITH IP 子句指定的可用组侦听器使用。 PORT 是可选的。  

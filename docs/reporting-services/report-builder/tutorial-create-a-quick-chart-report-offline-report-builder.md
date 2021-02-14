@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f7fb9781583a56a2765f066462e62717c1d32d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290744"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070546"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机生成快速图表报表（报表生成器）
 

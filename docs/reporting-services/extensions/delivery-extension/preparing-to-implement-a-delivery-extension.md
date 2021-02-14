@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa186787f22c6ba3dbabe6f3e219165cbf96a9b7
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: f3c344307281fee1a49d251a9d4cf61c147efba3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529493"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065052"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>准备实现传递扩展插件
   在实现 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件之前，应定义要实现的接口。 首先需要确定使用传递扩展插件的方式、传递扩展插件需要哪些设置以及为传递报表通知而需要实现的特定功能。  

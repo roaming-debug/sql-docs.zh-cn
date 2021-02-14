@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 433208ab105244e319de091f07553e70dfe1645a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aff4e2f70faf333daf9c977d2a7fdfed2d15a169
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344673"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350240"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>删除层次结构成员权限 (Master Data Services)
 
@@ -47,13 +47,13 @@ ms.locfileid: "88344673"
   
 5.  从 **“模型”** 列表中，选择某一模型。  
   
-6.  **** 从“版本”列表中，选择某一版本。  
+6.   从“版本”列表中，选择某一版本。  
   
 7.  单击 **“编辑”** 。  
   
-8.  在“层次结构成员权限”面板中查找具有该权限的树节点。 ****  
+8.  在“层次结构成员权限”面板中查找具有该权限的树节点。   
   
-9. 单击该树节点，然后在上下文菜单中单击“无”。 ****  
+9. 单击该树节点，然后在上下文菜单中单击“无”。   
   
     > [!NOTE]  
     >  如果权限继承自一个组，则不能从用户删除该权限。 而是必须从该组删除该权限。  

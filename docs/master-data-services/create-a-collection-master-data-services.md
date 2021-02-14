@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7a5566592be79b54d4beda1c814500aa166c2404
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d33d856cae301c8c30efe6a6edda12f676b90bb7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495031"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272708"
 ---
 # <a name="create-a-collection-master-data-services"></a>创建集合 (Master Data Services)
 
@@ -30,19 +30,19 @@ ms.locfileid: "88495031"
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   **** 您必须有权访问“资源管理器”功能区域。  
+-    您必须有权访问“资源管理器”功能区域。  
   
 -   对于实体的集合模型对象，您必须至少具有 **“更新”** 权限。  
   
 ### <a name="to-create-a-collection"></a>创建集合  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 **** 主页上，从“模型”列表中，选择模型。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在  主页上，从“模型”列表中，选择模型。  
   
-2.  **** 从“版本”列表中，选择某一版本。  
+2.   从“版本”列表中，选择某一版本。  
   
 3.  单击 **“资源管理器”**。  
   
-4.  从菜单栏中，指向“集合”****，然后单击“entity_name”**。  
+4.  从菜单栏中，指向“集合”，然后单击“entity_name”。  
   
 5.  单击 **“添加集合”**。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88495031"
   
 8.  还可以在 **“说明”** 框中键入对集合的说明。  
   
-9. 单击“确定”。  
+9. 单击“确定”。   
   
 ## <a name="next-steps"></a>后续步骤  
   

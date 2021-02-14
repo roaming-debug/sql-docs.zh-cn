@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: ebbce2708647e15b68ec497cfadd0af2c7c5b154
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548049"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074688"
 ---
 # <a name="configure-the-web-portal"></a>配置 Web 门户
 
-Web 门户是一种用于查看报表、管理报表服务器内容以及向用户授予本机模式报表服务器访问权限的 Web 前端应用程序。 如果在安装程序中选择“以默认的本机模式配置安装”选项，则可以将 Web 门户与报表服务器 Web 服务一起安装在同一个报表服务器实例中，并可以选择地进行配置****。 还可以在安装完成后配置 Web 门户。 本主题提供有关以下 Web 门户配置方案的信息：
+Web 门户是一种用于查看报表、管理报表服务器内容以及向用户授予本机模式报表服务器访问权限的 Web 前端应用程序。 如果在安装程序中选择“以默认的本机模式配置安装”选项，则可以将 Web 门户与报表服务器 Web 服务一起安装在同一个报表服务器实例中，并可以选择地进行配置。 还可以在安装完成后配置 Web 门户。 本主题提供有关以下 Web 门户配置方案的信息：
 
 ## <a name="prerequisites"></a>先决条件
 

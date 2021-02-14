@@ -21,12 +21,12 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cfe105e765fbdafc1c4e61e0c340b3db44ed095
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 59258c52e24e5b9d85f9096d6eb2d24fa3d48df3
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99191355"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489451"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99191355"
 |database_id|**int**|应用此文件的数据库的 ID。 Masterdatabase_id 始终为1。|  
 |file_id|**int**|数据库内文件的 ID。 主 file_id 始终为 1。|  
 |file_guid|**uniqueidentifier**|文件的唯一标识符。<br /><br /> NULL = 数据库已从 (的早期版本升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 SQL Server 2005 及更低版本的) 。|  
-|type|**tinyint**|文件类型：<br /><br /> 0 = 行。<br /><br /> 1 = 日志<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录；升级到的或在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中创建的全文目录将报告文件类型 0。）|  
+|类型|**tinyint**|文件类型：<br /><br /> 0 = 行。<br /><br /> 1 = 日志<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录；升级到的或在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中创建的全文目录将报告文件类型 0。）|  
 |type_desc|**nvarchar(60)**|文件类型的说明：<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录。）|  
 |data_space_id|**int**|此文件所属数据空间的 ID。 数据空间是一个文件组。<br /><br /> 0 = 日志文件|  
 |name|**sysname**|数据库中文件的逻辑名称。|  
@@ -69,6 +69,9 @@ ms.locfileid: "99191355"
   
 > [!NOTE]  
 >  在删除或重新生成大型索引时，或者在删除或截断大型表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将延迟实际页释放及其关联锁，直至事务提交完毕为止。 延迟的删除操作不会立即释放已分配的空间。 因此，sys.master_files 返回的值在删除或截断了大型对象后，可能无法立即反映出磁盘的实际可用空间。  
+
+> [!NOTE]  
+>  对于 tempdb，视图 sys.master_files 显示初始 tempdb 大小。 在 SQL Server 启动时，这些值用作创建 tempdb 的模板。 因此，当 tempdb 增大时，它不会在视图中反映出来。 若要获取 tempdb 文件的当前大小，请查询 `tempdb.sys.database_files` 。
   
 ## <a name="permissions"></a>权限  
  查看相应行所必需的最低权限是 CREATE DATABASE、ALTER ANY DATABASE 或 VIEW ANY DEFINITION。  

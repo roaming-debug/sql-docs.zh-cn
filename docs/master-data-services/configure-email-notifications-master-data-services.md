@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e4368235b528b1537ebb8b4302c58769509cfebb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06ca29b0a912a1a2a59c8f6b901edacce742cd6f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430009"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272758"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>配置电子邮件通知 (Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "88430009"
   
 3.  填写所有必填字段。 有关详细信息，请参阅[“创建数据库邮件配置文件和帐户”对话框（Master Data Services 配置管理器）](../master-data-services/create-database-mail-profile-and-account-dialog-box.md)。  
   
-4.  单击“确定”。  
+4.  单击“确定”。   
   
     > [!NOTE]  
     >  在配置通知之后，您无法使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 进行更改。 必须直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中直接进行更改。 有关详细信息，请参阅 [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md)。  

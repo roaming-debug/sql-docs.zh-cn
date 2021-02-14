@@ -1,8 +1,8 @@
 ---
 description: sys.dm_os_spinlock_stats (Transact-SQL)
-title: sys.dm_os_spinlock_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_os_spinlock_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 02/10/2021
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: 636a16d8656572e6fe2505f58bafc9eca9f6ce18
-ms.sourcegitcommit: 78b3096c2be89bcda92244f78663d8b38811bec5
+ms.openlocfilehash: 66b8a24e8b2b48aa43dd00cb37e8fc4c60fa0cd4
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100009285"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342830"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "100009285"
 
 ## <a name="permissions"></a>权限  
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标以及弹性池中的数据库上， `Server admin` `Azure Active Directory admin` 需要或帐户。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。    
+在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。    
   
 ## <a name="remarks"></a>备注  
  
@@ -69,10 +69,13 @@ GO
   
 ## <a name="spinlocks"></a>自旋锁  
  旋转锁是一种轻型同步对象，用于序列化对通常长时间保存的数据结构的访问。 当某个线程尝试访问由另一个线程所持有的旋转锁保护的资源时，该线程将执行循环或 "自旋"，尝试再次访问该资源，而不是像闩锁或其他资源等待那样立即生成计划程序。 线程将继续旋转，直到资源可用或循环完成，此时线程将生成计划程序并返回到可运行队列。 这种做法有助于减少过度线程上下文切换，但当旋转锁的争用较高时，可能会发现大量的 CPU 利用率。
-   
+
+> [!NOTE]  
+>  如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Intel Skylake 处理器上安装了，请查看 [本文](https://support.microsoft.com/topic/kb4538688-fix-severe-spinlock-contention-occurs-in-sql-server-2019-43faea65-fdcb-6835-f7fe-93abdb235837) 以应用所需的更新并启用跟踪标志8101。
+
  下表包含一些最常见的旋转锁类型的简要说明。  
   
-|旋转锁类型|说明|  
+|旋转锁类型|描述|  
 |-----------------|-----------------|  
 |ABR|仅限内部使用。|
 |ADB_CACHE|仅限内部使用。|
@@ -230,6 +233,7 @@ GO
 |MEM_MGR|仅限内部使用。|
 |MGR_CACHE|仅限内部使用。|
 |MIGRATION_BUF_LIST|仅限内部使用。|
+|终端|保护与安全令牌和访问检查相关的缓存条目。 用于以下版本 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。 如果 TokenAndPermUserStore 缓存存储中的条目持续增长，你可能会注意到此旋转锁的较大旋转。 评估使用 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 和4618来限制条目。 其他参考资料： [博客](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)、 [文章](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) 和 [文档](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)。|
 |NETCONN_ADDRESS|仅限内部使用。|
 |ONDEMAND_TASK|仅限内部使用。|
 |ONE_PROC_SIM_NODE_CONTEXT|仅限内部使用。|
@@ -290,7 +294,7 @@ GO
 |SBS_TRANSPORT|仅限内部使用。|
 |SBS_UCS_DISPATCH|仅限内部使用。|
 |安全性|仅限内部使用。|
-|SECURITY_CACHE|仅限内部使用。|
+|SECURITY_CACHE|保护与安全令牌和访问检查相关的缓存条目。 用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更高版本。 如果 TokenAndPermUserStore 缓存存储中的条目持续增长，你可能会注意到此旋转锁的较大旋转。 评估使用 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 和4618来限制条目。 其他参考资料： [博客](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)、 [文章](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) 和 [文档](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)。 请注意，在对 [sql 2017 和 sql 2016 应用更新](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5)后，旋转锁名称发生了更改。|
 |SECURITY_FEDAUTH_AAD_BECWSCONNS|仅限内部使用。|
 |SEMANTIC_TICACHE|仅限内部使用。|
 |SEQUENCED_OBJECT|仅限内部使用。|
@@ -416,5 +420,4 @@ GO
  [诊断和解决 SQL Server 上的旋转锁争用](../diagnose-resolve-spinlock-contention.md)
   
   
-
 

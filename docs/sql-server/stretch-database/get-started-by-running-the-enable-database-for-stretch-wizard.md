@@ -22,12 +22,12 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b9356ae3c4783df003233c4db7ab4bbaf9501a2d
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 74435746bc2ef72741cf25a610cb37d4ac1893b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523947"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080988"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>通过运行“启用数据库延伸向导”开始
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "92523947"
 |**Name**|指定数据库中表的名称。|  
 |（无标题）|此列中的符号可能代表一条警告，不会阻止你为 Stretch 启用所选表。 还有可能代表一个阻止问题，将阻止你为 Stretch 启用所选表 - 例如因为该表使用了不支持的数据类型。 将鼠标悬停于符号上可在工具提示中显示更多信息。 有关详细信息，请参阅 [Stretch Database 限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。|  
 |**已拉伸**|指示该表是否已为 Stretch 启用。|  
-|**迁移**|你可以迁移整个表（ **整个表** ），或在表中现有的列上指定一个筛选器。 若想要使用不同的筛选器函数来选择要迁移的行，请运行 ALTER TABLE 语句以在退出向导后指定筛选器函数。 有关筛选器函数的详细信息，请参阅[通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 有关如何应用函数的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 或 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)。|  
+|**迁移**|你可以迁移整个表（**整个表**），或在表中现有的列上指定一个筛选器。 若想要使用不同的筛选器函数来选择要迁移的行，请运行 ALTER TABLE 语句以在退出向导后指定筛选器函数。 有关筛选器函数的详细信息，请参阅[通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 有关如何应用函数的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 或 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)。|  
 |**行**|指定表中的行数。|  
 |**大小(KB)**|指定表的大小（以 KB 为单位）。|  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: add695750bb5caae36f5c5e6cf0d605709976730
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afae8607f55b437071c4b04789c595d9c096f722
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456786"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339508"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>向版本分配标志 (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "88456786"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
   
-2.  在“管理版本”**** 页上，在与你要分配标志的版本相对应的行中，双击“标志”**** 列中的单元格。  
+2.  在“管理版本”页上，在与你要分配标志的版本相对应的行中，双击“标志”列中的单元格。  
   
 3.  从列表中，选择要分配的标志。  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b878dcc17cf5ea23b1c5eccca58cdab39cfb7524
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27e6cc619206c108e17aa62c907cdea083526b48
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257884"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352961"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>验证数据（用于 Excel 的 MDS 外接程序）
 
@@ -40,7 +40,7 @@ ms.locfileid: "92257884"
   
  有关其他状态的信息，请参阅[验证状态 (Master Data Services)](../../master-data-services/validation-statuses-master-data-services.md)  
   
-|状态|说明|  
+|状态|描述|  
 |------------|-----------------|  
 |验证失败|行中的一个或多个值未通过针对 MDS 管理员定义的业务规则的验证。|  
 |验证成功|行中的所有值都已根据业务规则通过了验证。|  
