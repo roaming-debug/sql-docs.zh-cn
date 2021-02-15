@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: 2e2e76c436c02f2cbc5878228f1be2d57248816c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3cc965ffd169d53e59706ca4ba68f2bcdddb5aa9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123090"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052117"
 ---
 # <a name="extend-the-functionality-of-azure-data-studio"></a>扩展 Azure Data Studio 的功能
 
@@ -58,7 +58,7 @@ Azure Data Studio 中的扩展提供向基本 Azure Data Studio 安装添加更�
 
 ### <a name="enable-an-extension"></a>添加扩展
 
-如果扩展已禁用，它将位于扩展列表的“禁用”部分，并标记为“已禁用”。 可以使用下拉菜单中的“启用”或“启用(工作区)”命令来重新启用它 。 通过命令面板，还可使用命令“扩展 **：启用所有扩展”和“扩展** **：启用所有扩展(工作区)”来启用所有扩展**。
+如果扩展已禁用，它将位于扩展列表的“已禁用”部分，并标记为“已禁用” ***。可以使用下拉菜单中的“启用”或“启用(工作区)”命令来重新启用它*** 。 通过命令面板，还可使用命令“扩展 **：启用所有扩展”和“扩展** **：启用所有扩展(工作区)”来启用所有扩展**。
 
 ![启用扩展](media/add-extensions/extensions-enable.png)
 

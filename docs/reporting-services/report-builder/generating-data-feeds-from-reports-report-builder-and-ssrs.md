@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 93eecfd3ffb66be1a1758f3265bf91a5842a4abc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e0b1b313671b93fd62fb61d6a244590cf6a62086
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342807"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014837"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>基于报表生成数据馈送（报表生成器和 SSRS）
 
@@ -77,13 +77,13 @@ ms.locfileid: "80342807"
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>数据部分  
- 数据馈送的数据部分为 Atom 呈现扩展插件生成的平展行集中的每一行都包含一个 \<entry> 元素  。  
+ 数据馈送的数据部分为 Atom 呈现扩展插件生成的平展行集中的每一行都包含了一个 \<**entry**> 元素。  
   
  下图显示了使用组和总计的报表。  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 下面的 XML 在数据馈送中显示了来自该报表的 \<entry> 元素  。 请注意，\<entry> 元素包含该组的销售和订单的总计以及所有组的销售和订单的总计  。 \<entry> 元素包含报表中的所有值  。  
+ 下面的 XML 在数据馈送中显示了来自该报表的 \<**entry**> 元素。 请注意，\<**entry**> 元素包含该组的销售和订单的总计以及所有组的销售和订单的总计。 \<**entry**> 元素包含报表中的所有值。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -116,7 +116,7 @@ ms.locfileid: "80342807"
   
  报表项名称默认为报表项的报表定义语言 (RDL) 元素名称，这些名称经常较为直观或容易记忆。 例如，放入报表的第一个矩阵的默认名称为 Tablix 1。 数据馈送使用这些名称。  
   
- 若要令数据馈送易于使用，可以使用数据区域的 DataElementName 属性来提供友好名称。 如果为 DataElementName 提供值，数据馈送子元素 \<d> 将使用该值，而不是使用默认的数据区域名称  。 例如，如果数据区域的默认名称为 Tablix1，而 DataElementName 设置为 SalesByTerritoryYear，则数据馈送中的 \<d> 将使用 SalesByTerritoryYear  。 如果数据区域具有两个数据馈送（类似上述矩阵报表），则数据馈送中使用的名称为 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
+ 若要令数据馈送易于使用，可以使用数据区域的 DataElementName 属性来提供友好名称。 如果你为 DataElementName 提供值，数据馈送子元素 \<**d**> 将使用该值，而不是使用默认的数据区域名称。 例如，如果数据区域的默认名称为 Tablix1，而 DataElementName 设置为 SalesByTerritoryYear，则数据馈送中的 \<**d**> 将使用 SalesByTerritoryYear。 如果数据区域具有两个数据馈送（类似上述矩阵报表），则数据馈送中使用的名称为 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
   
  如果对报表显示的数据和数据馈送中的数据进行比较，则可能发现一些差异。 报表经常显示格式化的数值和时间/日期数据，但数据馈送包含非格式化的数据。  
   

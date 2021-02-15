@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 165302d4bb324dfb79f43e37b8a47e5e11973ce5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fcb5dd895f6997ed72c91e9c66d9bd7be1c5aa4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509908"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018634"
 ---
 # <a name="accessing-the-soap-api"></a>访问 SOAP API
   报表服务器 Web 服务使用通过 HTTP 的简单对象访问协议 (SOAP)，并充当客户端程序和报表服务器之间的通信接口。 该 Web 服务提供两个端点（一个用于报表执行，一个用于报表管理），并且由您可用于访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的完整功能的方法和一组复杂类型对象构成。 若要调用该服务，必须引用 Reporting Services Web 服务描述语言 (WSDL)。  
@@ -54,7 +54,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
 |-----------------|-----------------|  
 |服务器 |报表服务器部署到的服务器的名称。|  
 |reportserver |包含 XML Web 服务的文件夹的名称。 此名称在设置期间配置。|  
-|\<终结点名称>.asmx |Web 服务端点的名称。|  
+|\<endpoint name>.asmx|Web 服务端点的名称。|  
   
  有关 WSDL 格式的详细信息，请参阅万维网联合会 (W3C) WSDL 规范，网址为 http://www.w3.org/TR/wsdl 。  
   

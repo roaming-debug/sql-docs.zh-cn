@@ -9,12 +9,12 @@ ms.date: 01/13/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e10beb2ef41881312e4871021bb2595e52731262
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 75b3b483a9e7744bb35b50ff30649b3257e14285
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596602"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046176"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 大数据群集发行说明
 
@@ -200,6 +200,30 @@ SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>已知问题
+
+### <a name="partial-loss-of-logs-collected-in-elasticsearch-upon-rollback"></a>回滚时在 ElasticSearch 中收集的日志发生了部分丢失
+
+- **受影响的版本**：现有群集（当未能升级到 CU9 导致回滚，或用户发出降级到较旧版本的命令时）。
+
+- **问题及其对客户的影响**：用于弹性搜索的软件版本是使用 CU9 升级的，新版本无法与以前的日志格式/元数据向后兼容。 如果 ElasticSearch 组件成功升级，但随后触发了回滚，则在 ElasticSearch 升级和回滚之间收集的日志将永久丢失。 如果你发出了降级到较旧版本的 BDC 的命令（不推荐），则存储在 Elasticsearch 中的日志将丢失。 请注意，如果用户将升级回 CU9，则将还原数据。
+
+- **解决方法**：如果需要，可以使用通过 `azdata bdc debug copy-logs` 命令收集的日志进行故障排除。
+
+### <a name="missing-pods-and-container-metrics"></a>缺少 pod 和容器指标
+
+- **受影响的版本**：升级到 CU9 时的现有群集和新群集
+
+- **问题及其对客户的影响**：由于在 CU9 中升级了用于 BDC 监视组件的 Telegraf 版本，在将群集升级到 CU9 版本时，你会注意到 pod 和容器指标不会被收集。 这是因为，由于软件升级，用于 Telegraf 的群集角色定义中需要额外的资源。 如果部署群集或执行升级的用户没有足够的权限，部署/升级将在出现警告的情况下继续进行并成功完成，但不会收集 pod 和节点指标。
+
+- **解决方法**：你可以要求管理员创建或更新角色和相应的服务帐户（在部署/升级之前或之后），BDC 将使用它们。 [本文](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)介绍了如何创建所需的项目。
+
+### <a name="issuing-azdata-bdc-copy-logs-does-not-result-in-logs-being-copied"></a>发出 `azdata bdc copy-logs` 命令无法使日志被复制
+
+- **受影响的版本**：[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 版本 20.0.0
+
+- **问题及其对客户的影响**：copy-logs 命令的实现假定 `kubectl` 客户端工具版本 1.15 或更高版本安装在发出该命令的客户端计算机上。 如果使用了 `kubectl` 版本 1.14，则 azdata bdc debug copy-logs 命令将会完成，且不会出现失败信息，但不会复制日志。 当使用 --debug 标志运行时，可以在输出中看到此错误：源“.”无效。
+
+- **解决方法**：在同一台客户端计算机上安装 `kubectl` 工具版本 1.15 或更高版本，然后重新发出 `azdata bdc copy-logs` 命令。 请参阅[此处](deploy-big-data-tools.md)的说明，了解如何安装 `kubectl`。
 
 ### <a name="msdtc-capabilities-can-not-be-enabled-for-sql-server-master-instance-running-within-bdc"></a>无法为在 BDC 中运行的 SQL Server 主实例启用 MSDTC 功能
 

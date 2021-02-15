@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/4/2020
-ms.openlocfilehash: cffeb28f69fe93bb69cfdafd0afa98ef663e6ef8
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: ffd92afe2a5e57b4c039ead2dd5fee6e2a23be0a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577788"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060922"
 ---
 # <a name="sqlpackage-script-parameters-and-properties"></a>SqlPackage 脚本的参数和属性
 SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本可更新目标数据库的架构以匹配源数据库的架构。 
@@ -77,7 +77,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|指定是否尝试操作，而不管存在的不兼容 SQL Server 平台。
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|如果此属性设置为 true，则不阻止具有行级别安全性的表上的数据运动。 默认值为 false。
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|在部署任何更改之前，备份数据库。
-|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')|指定在 publish.operation 可能导致数据丢失的情况下，应终止发布集。
+|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| 指定在产生的架构更改可能会导致数据丢失（包括由于数据精度降低，或由于需要强制转换操作的数据类型更改）的情况下，将在架构验证步骤期间终止操作。 默认值 (`True`) 会导致操作终止，而无论目标数据库是否包含数据。  如果目标中存在无法转换为新列类型的数据，则将 `False` 设为 BlockOnPossibleDataLoss 的值来执行操作仍可能会在执行部署计划期间失败。 |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|指定是否阻止更新其架构与其注册不再匹配或已取消注册的数据库。
 |**/p:**|CommandTimeout=(INT32 '60')|指定针对 SQL Server 执行查询时的命令超时（以秒为单位）。
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|指定是否应在生成的发布脚本中注释掉 SETVAR 变量的声明。 如果您打算在发布时使用 SQLCMD.EXE 等工具指定命令行上的值，则可以选择这样做。

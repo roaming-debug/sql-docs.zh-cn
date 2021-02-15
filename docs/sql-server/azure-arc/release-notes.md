@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 12/08/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 372f4bec9acc4d4e170ddbc1a1fa6d66be1541e7
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: f53731685f5ba1723ebdd8d20064342808205566
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596552"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070302"
 ---
 # <a name="release-notes---azure-arc-enabled-sql-server-preview"></a>发行说明 - 已启用 Azure Arc 的 SQL Server（预览）
 
@@ -42,7 +42,7 @@ ms.locfileid: "98596552"
 
 > [!NOTE]
 > - 若要将命令粘贴到 shell，请使用 Windows 上的 `Ctrl-Shift-V` 或 MacOS 上的 `Cmd-v`。
-> - 该脚本将直接上传到与 Cloud Shell 会话关联的主文件夹。
+> - `curl` 命令会将该脚本直接复制到与 Cloud Shell 会话关联的主文件夹。
 > - 该脚本将提示资源组名称，并在迁移完成后输出消息。
 
 ### <a name="other-changes"></a>其他更改
