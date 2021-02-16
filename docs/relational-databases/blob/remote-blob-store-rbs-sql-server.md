@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfd234025664e7508d7d9cf942ff81a216b447a2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 89a79b07977d8fec2e2dd6f2a8b9acd9cea0ba5e
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171749"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100343166"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>远程 Blob 存储区 (RBS) (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "98171749"
 
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 | RBS 下载位置 |
 |:---|:---|
-| [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 功能包](https://www.microsoft.com/download/details.aspx?id=56833) |
+| [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 功能包](https://www.microsoft.com/download/details.aspx?id=56833) |
 | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 功能包](https://www.microsoft.com/download/details.aspx?id=55992) |
-| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] RBS 下载页面](https://go.microsoft.com/fwlink/?linkid=2109005) |
+| [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] RBS 下载页面](https://go.microsoft.com/fwlink/?linkid=2109005) |
 | &nbsp; | &nbsp; |
   
  
@@ -72,7 +72,7 @@ ms.locfileid: "98171749"
 ### <a name="credential-store-symmetric-key"></a>凭据存储对称密钥  
  如果提供程序需要设置和使用凭据存储中存储的密码，RBS 将使用对称密钥加密提供程序密码，客户端可能会使用该密码获取对提供程序 blob 存储的授权。  
   
--   RBS 2016 使用 **AES_128** 对称密钥。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 不允许创建新的 **TRIPLE_DES** 密钥，但为实现向后兼容的情况除外。 有关详细信息，请参阅 [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md)。  
+-   RBS 2016 使用 **AES_128** 对称密钥。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 不允许创建新的 **TRIPLE_DES** 密钥，但为实现向后兼容的情况除外。 有关详细信息，请参阅 [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md)。  
   
 -   RBS 2014 及以前的版本使用凭据存储，其中包含使用已过时的 **TRIPLE_DES** 对称密钥算法加密的密码。 如果当前正在使用 **TRIPLE_DES**，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议你遵循本主题中的步骤将密钥轮换为更强的加密方法，以增强安全性。  
   

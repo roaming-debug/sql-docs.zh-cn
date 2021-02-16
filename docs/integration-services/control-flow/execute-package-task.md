@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8251f2ff30fafff584b4f56fe93a9b7423ea412b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725920"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352078"
 ---
 # <a name="execute-package-task"></a>执行包任务
 

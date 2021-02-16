@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
 - COLUMNSTORE INDEX
@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57665811cd12b4c31effb82a91a722780a774874
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 47759238673fa5e88c02421e27d0e12177072605
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170449"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347040"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98170449"
 将行存储表转换为聚集列存储索引，或创建非聚集列存储索引。 使用列存储索引可对 OLTP 工作负载有效地运行实时运营分析，或提高数据仓库工作负载的数据压缩和查询性能。  
   
 > [!NOTE]
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，可以将表创建为聚集列存储索引。   再也不需要先创建行存储表，然后将其转换为聚集列存储索引。  
+> 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，可以将表创建为聚集列存储索引。   再也不需要先创建行存储表，然后将其转换为聚集列存储索引。  
 
 > [!TIP]
 > 有关索引设计指南的信息，请参阅 [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)。
@@ -120,10 +120,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 |选项| CLUSTERED | NONCLUSTERED |
 |---|---|---|
-| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
-| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | 
-| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
-| WHERE 子句 | 空值 | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
+| COMPRESSION_DELAY | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] |
+| DATA_COMPRESSION | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | 
+| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] |
+| WHERE 子句 | 空值 | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] |
 
 所有选项在 Azure SQL 数据库中均可用。
 
@@ -355,13 +355,13 @@ filegroup_name
 -   tinyint  
 -   bit  
 -   nvarchar [ ( n ) ] 
--   nvarchar(max) （适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和高级层、标准层（S3 及更高），以及所有 VCore 产品/服务层，仅限聚集列存储索引）   
+-   nvarchar(max) （适用于 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 和高级层、标准层（S3 及更高），以及所有 VCore 产品/服务层，仅限聚集列存储索引）   
 -   nchar [ ( n ) ]  
 -   varchar [ ( n ) ]  
--   varchar(max) （适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和高级层、标准层（S3 及更高），以及所有 VCore 产品/服务层，仅限聚集列存储索引）
+-   varchar(max) （适用于 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 和高级层、标准层（S3 及更高），以及所有 VCore 产品/服务层，仅限聚集列存储索引）
 -   char [ ( n ) ]  
 -   varbinary [ ( n ) ] 
--   varbinary(max) （适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和高级层、标准层（S3 及更高）的 Azure SQL 数据库，以及所有 VCore 产品/服务层，仅限聚集列存储索引）
+-   varbinary(max) （适用于 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 和高级层、标准层（S3 及更高）的 Azure SQL 数据库，以及所有 VCore 产品/服务层，仅限聚集列存储索引）
 -   binary [ ( n ) ]  
 -   uniqueidentifier（适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）
   
@@ -369,7 +369,7 @@ filegroup_name
   
 **使用以下任何数据类型的列都不能包括在列存储索引中：**
 -   ntext、text 和 image  
--   nvarchar(max)、varchar(max) 和 varbinary(max)（适用于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 和早期版本，以及非聚集列存储索引） 
+-   nvarchar(max)、varchar(max) 和 varbinary(max)（适用于 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 和早期版本，以及非聚集列存储索引） 
 -   rowversion（和 timestamp）  
 -   sql_variant  
 -   CLR 类型（hierarchyid 和空间类型）  
@@ -383,11 +383,11 @@ filegroup_name
 -   不能使用 **ALTER INDEX** 语句进行更改。 若要更改非聚集索引，必须先删除该列存储索引，然后重新创建它。 可以使用 **ALTER INDEX** 禁用并重新生成列存储索引。  
 -   不能使用 **INCLUDE** 关键字创建。  
 -   不能包括用来对索引排序的 **ASC** 或 **DESC** 关键字。 根据压缩算法对列存储索引排序。 排序将抵销许多性能优势。  
--   不能在非聚集列存储索引中包含 nvarchar(max)、varchar(max) 和 varbinary(max) 类型的大型对象 (LOB) 列。 仅从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 版本开始以及在高级层、标准层（S3 及更高）以及所有 VCore 产品/服务层配置的 Azure SQL 数据库中，聚集列存储索引才支持 LOB 类型。 请注意，以前的版本不管是在聚集列存储索引还是非聚集列存储索引中都不支持 LOB 类型。
+-   不能在非聚集列存储索引中包含 nvarchar(max)、varchar(max) 和 varbinary(max) 类型的大型对象 (LOB) 列。 仅从 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 版本开始以及在高级层、标准层（S3 及更高）以及所有 VCore 产品/服务层配置的 Azure SQL 数据库中，聚集列存储索引才支持 LOB 类型。 请注意，以前的版本不管是在聚集列存储索引还是非聚集列存储索引中都不支持 LOB 类型。
 
 
 > [!NOTE]  
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，可以在索引视图上创建非聚集列存储索引。  
+> 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，可以在索引视图上创建非聚集列存储索引。  
 
 
  **列存储索引不能与以下功能结合使用：**  
@@ -453,7 +453,7 @@ GO
 ```  
   
 ### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. 将行存储表转换为列存储索引时处理非聚集索引。  
- 此示例展示如何在将行存储表转换为列存储索引时处理非聚集索引。 实际上，从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，无需执行特别的操作；[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在新的聚集列存储索引上自动定义并重新生成非聚集索引。  
+ 此示例展示如何在将行存储表转换为列存储索引时处理非聚集索引。 实际上，从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，无需执行特别的操作；[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在新的聚集列存储索引上自动定义并重新生成非聚集索引。  
   
  如果要删除非聚集索引，请在创建列存储索引之前使用 DROP INDEX 语句。 DROP EXISTING 选项仅删除正在转换的聚集索引。 它不会删除非聚集索引。  
   
@@ -582,7 +582,7 @@ ON MyFactTable;
  有两种方法可以重新生成完整的聚集列存储索引。 可以使用 CREATE CLUSTERED COLUMNSTORE INDEX，或使用 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) 和 REBUILD 选项。 这两种方法可以得到相同的结果。  
   
 > [!NOTE]  
-> 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起，改用 `ALTER INDEX...REORGANIZE`，而不使用此示例中所述的方法来重新生成。  
+> 自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 起，改用 `ALTER INDEX...REORGANIZE`，而不使用此示例中所述的方法来重新生成。  
   
 ```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  

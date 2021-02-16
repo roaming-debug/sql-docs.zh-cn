@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 369c52eeb66a3d8ca5042f54d71ea9001d30b194
-ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
+ms.openlocfilehash: fe088ed697e4150b2272f3a390b4002714ab4dc4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98193024"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338280"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的发行说明
 
@@ -22,7 +22,7 @@ ms.locfileid: "98193024"
 以下发行说明适用于 Linux 上运行的 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]。 本文按各版本分为不同的部分。 GA 版本提供了详细的支持，并列出了已知的问题。 每个累积更新 (CU) 或常规分发版本 (GDR) 都有指向介绍 CU 更改的支持文章的链接，还有指向 Linux 包下载的链接。
 
 > [!TIP]
-> 这些发行说明专门用于 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 版本。 有关新 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的详细信息，请参阅 [Linux 上的 SQL Server 2019 预览版的发行说明](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true)。
+> 这些发行说明专门用于 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 版本。 有关新 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 的详细信息，请参阅 [Linux 上的 SQL Server 2019 预览版的发行说明](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true)。
 
 ## <a name="supported-platforms"></a>支持的平台
 
@@ -604,7 +604,7 @@ sudo systemctl start mssql-server
          sudo systemctl restart mssql-server
          ```
 
-- Windows 上使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库无法在 Linux 上的 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 上进行还原。 要还原使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库，请首先将数据库升级到 Windows 上的 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 或 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]，然后再通过备份/还原或分离/附加将数据库移至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
+- Windows 上使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库无法在 Linux 上的 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 上进行还原。 要还原使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库，请首先将数据库升级到 Windows 上的 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 或 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]，然后再通过备份/还原或分离/附加将数据库移至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
 - 目前 Linux 不支持用户权限 ADMINISTER BULK OPERATIONS。
 

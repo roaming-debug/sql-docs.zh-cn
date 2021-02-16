@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 7a73a233a84d532f55dc61797f44e5d39013722f
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: f603b138773ea76fe73ea3d6929ece535779e23c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067320"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351996"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教程：在 Azure 中部署和运行 SQL Server Integration Services (SSIS) 包
 
@@ -52,17 +52,17 @@ ms.locfileid: "93067320"
 
 1. 打开 SQL Server Management Studio。
 
-2. **连接到该服务器** 。 在“连接到服务器”对话框中，输入以下信息： 
+2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息： 
 
    | 设置       | 建议的值 | 说明 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
-   | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式： **mysqldbserver.database.windows.net** 。 如果需要服务器名称，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。 |
+   | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 如果需要服务器名称，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。 |
    | **身份验证** | SQL Server 身份验证 | 无法通过 Windows 身份验证连接到 Azure SQL 数据库。 |
    | **登录** | 服务器管理员帐户 | 在创建服务器时指定的帐户。 |
    | **密码** | 服务器管理员帐户的密码 | 创建服务器时指定的密码。 |
 
-3. **连接到 SSISDB 数据库** 。 选择“选项”  展开“连接到服务器”  对话框。 在展开的“连接到服务器”  对话框中，选择“连接属性”  选项卡。在“连接到数据库”  字段中，选择或输入 `SSISDB`。
+3. **连接到 SSISDB 数据库**。 选择“选项”  展开“连接到服务器”  对话框。 在展开的“连接到服务器”  对话框中，选择“连接属性”  选项卡。在“连接到数据库”  字段中，选择或输入 `SSISDB`。
 
 4. 然后选择“连接”  。 对象资源管理器窗口在 SSMS 中打开。 
 

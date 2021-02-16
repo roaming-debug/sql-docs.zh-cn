@@ -17,20 +17,20 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
-ms.openlocfilehash: 5d9f07f96f83767a84f7ee0128d674f4ab955eed
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: e14f354812c99b9ed3e8be86734e3cb8e07db751
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170849"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489471"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中弃用的数据库引擎功能
 
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
-  本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
+  本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
-如果功能标记为已弃用，表示：\
+如果功能标记为已弃用，表示：
 
 - 该功能仅处于维护模式。 无法进行新的更改，包括与新功能的互操作性有关的更改。
 - 我们努力不从将来的版本中删除已弃用的功能，使升级更简单。 但是，在极少数情况下，如果该功能限制了将来的创新，我们可能选择从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中将其永久删除。
@@ -46,7 +46,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
 > [!NOTE]
-> 此列表与 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 列表相同。 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 未宣布弃用或停止使用任何新的数据库引擎功能。
+> 此列表与 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 列表相同。 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] 未宣布弃用或停止使用任何新的数据库引擎功能。
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server 的下一版本中弃用的功能
 

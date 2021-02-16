@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 89f048ea2caf80412d3b8d607582016d8a88f8b7
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: d10b498569bac6a166ded3eaf9bd03f23ea6b718
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115630"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345629"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 PowerShell 管理 Linux 上的 SQL Server
 
@@ -65,7 +65,7 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 在 PowerShell 提示符下复制并粘贴以下命令。 运行这些命令时，PowerShell 将：
 - 显示提示输入实例的主机名或 IP 地址的对话框
-- 显示提示输入凭据的 Windows PowerShell 凭据请求对话框  。 可以使用 *SQL 用户名*和 *SQL 密码*连接到 Linux 上的 SQL Server 实例
+- 显示提示输入凭据的 Windows PowerShell 凭据请求对话框  。 可以使用 *SQL 用户名* 和 *SQL 密码* 连接到 Linux 上的 SQL Server 实例
 - 使用 Get-SqlInstance cmdlet 连接到服务器，并显示一些属性  
 
 也可选择仅将 `$serverInstance` 变量替换为 SQL Server 实例的 IP 地址或主机名。
@@ -136,8 +136,8 @@ AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 
 在 PowerShell 提示符下复制并粘贴以下命令。 它们可能会运行几分钟。 这些命令执行以下操作：
 - 显示提示输入实例的主机名或 IP 地址的对话框
-- 显示提示输入凭据的 Windows PowerShell 凭据请求对话框  。 可以使用 *SQL 用户名*和 *SQL 密码*连接到 Linux 上的 SQL Server 实例
-- 使用 **Get-SqlErrorLog** cmdlet 连接到 Linux 上的 SQL Server 实例，并检索自**昨天**起的错误日志
+- 显示提示输入凭据的 Windows PowerShell 凭据请求对话框  。 可以使用 *SQL 用户名* 和 *SQL 密码* 连接到 Linux 上的 SQL Server 实例
+- 使用 **Get-SqlErrorLog** cmdlet 连接到 Linux 上的 SQL Server 实例，并检索自 **昨天** 起的错误日志
 - 将输出传送到 Out-GridView cmdlet 
 
 也可以选择将 `$serverInstance` 变量替换为 SQL Server 实例的 IP 地址或主机名。

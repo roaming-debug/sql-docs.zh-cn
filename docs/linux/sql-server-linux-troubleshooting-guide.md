@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 56961a0dd9f57085ebe2d937668fe32c7e28dc73
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115793"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346222"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
@@ -27,7 +27,7 @@ ms.locfileid: "92115793"
 ## <a name="troubleshoot-connection-failures"></a><a id="connection"></a> 解决连接失败问题
 如果在连接到 Linux SQL Server 时存在问题，可以检查以下几点。
 
-- 如果无法使用 localhost 进行本地连接，请尝试改用 IP 地址 127.0.0.1****。 Localhost 可能未正确映射到此地址****。
+- 如果无法使用 localhost 进行本地连接，请尝试改用 IP 地址 127.0.0.1。 Localhost 可能未正确映射到此地址。
 
 - 验证是否可从客户端计算机访问服务器名称或 IP 地址。
 
@@ -50,7 +50,7 @@ ms.locfileid: "92115793"
 
 - 验证用户名和密码是否存在任何拼写错误、多余空格或错误大小写。
 
-- 尝试以显式方式设置协议和端口号，确保服务器名称如下所示：tcp:servername,1433****。
+- 尝试以显式方式设置协议和端口号，确保服务器名称如下所示：tcp:servername,1433。
 
 - 网络连接问题也可能导致连接错误和超时。 验证连接信息和网络连接后，请再次尝试连接。
 
@@ -76,7 +76,7 @@ ms.locfileid: "92115793"
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>管理 mssql Docker 容器的执行
 
-通过运行以下命令，可以获得最新创建的 SQL Server Docker 容器的状态和容器 ID（ID 位于“CONTAINER ID”列下）****：
+通过运行以下命令，可以获得最新创建的 SQL Server Docker 容器的状态和容器 ID（ID 位于“CONTAINER ID”列下）：
 
    ```bash
    sudo docker ps -l
@@ -160,7 +160,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
 作为最后手段，可以选择将 master 和模型数据库重新生成为默认版本。
 
 > [!WARNING]
-> 这些步骤将删除已配置的所有 SQL Server 系统数据****！ 这包括有关用户数据库的信息（但不包括用户数据库本身）。 它还将删除存储在系统数据库中的其他信息，包括以下各项：主密钥信息、在 master 中加载的任何证书、SA 登录密码、msdb 中的作业相关信息、msdb 中的 DB 邮件信息以及 sp_configure 选项。 只有在了解其含义后才能使用！
+> 这些步骤将删除已配置的所有 SQL Server 系统数据！ 这包括有关用户数据库的信息（但不包括用户数据库本身）。 它还将删除存储在系统数据库中的其他信息，包括以下各项：主密钥信息、在 master 中加载的任何证书、SA 登录密码、msdb 中的作业相关信息、msdb 中的 DB 邮件信息以及 sp_configure 选项。 只有在了解其含义后才能使用！
 
 1. 停止 SQL Server。
 
@@ -168,14 +168,14 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    sudo systemctl stop mssql-server
    ```
 
-1. 使用“force-setup”参数运行 sqlservr********。 
+1. 使用“force-setup”参数运行 sqlservr。 
 
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
    ```
    
    > [!WARNING]
-   > 请参阅上一个警告！ 此外，还必须以“mssql”用户身份运行，如下所示****。
+   > 请参阅上一个警告！ 此外，还必须以“mssql”用户身份运行，如下所示。
 
 1. 看到消息“恢复已完成”后，请按 Ctrl+C。 这将关闭 SQL Server
 

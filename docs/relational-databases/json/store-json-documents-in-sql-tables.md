@@ -9,12 +9,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1809ea2c3f99528eb15518808e13387c519878da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30d51162b36d787e8976b2c6aa48e533fd476f8e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760759"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015057"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>在 SQL Server 或 SQL 数据库中存储 JSON 文档
 SQL Server 和 Azure SQL 数据库包含可使用标准 SQL 语言分析 JSON 文档的本机 JSON 函数。 可以将 JSON 文档存储在 SQL Server 或 SQL 数据库中，并像在 NoSQL 数据库中一样查询 JSON 数据。 本文介绍在 SQL Server 或 SQL 数据库中存储 JSON 文档的相关选项。

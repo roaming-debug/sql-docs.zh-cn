@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: c32a526c35d4a4cf236794e1ada6dc66cfac6ba6
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 87a4fd9edf52c3590fb19781fc5bf76c9bb0168b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784722"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346264"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 SLES 共享磁盘群集
 
@@ -107,7 +107,7 @@ ms.locfileid: "91784722"
 
 在配置客户端 NFS 以装载 SQL Server 数据库文件路径，从而指向共享存储位置前，请确保将数据库文件保存到临时位置，以便稍后能够在共享上复制它们：
 
-1. **仅在主节点上**将数据库文件保存到临时位置。 以下脚本会创建新的临时目录、将数据库文件复制到新目录并删除旧的数据库文件。 SQL Server 以本地用户 mssql 的身份运行时，需要确保在将数据传输到已装载的共享后，本地用户对共享具有读写访问权限。 
+1. **仅在主节点上** 将数据库文件保存到临时位置。 以下脚本会创建新的临时目录、将数据库文件复制到新目录并删除旧的数据库文件。 SQL Server 以本地用户 mssql 的身份运行时，需要确保在将数据传输到已装载的共享后，本地用户对共享具有读写访问权限。 
 
     ```bash
     su mssql

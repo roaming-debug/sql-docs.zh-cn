@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1b5726aad103012b0ed7619749c1f6f669baa234
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 87ac1c0759264b00567d5edc2cd9f22727fdd0fa
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241828"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353866"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
 
@@ -40,7 +40,7 @@ ms.locfileid: "98241828"
  必须为服务器计算机预配证书。 在服务器计算机上预配证书，即[将其导入 Windows](#single-server)。 必须将客户端计算机设置为[信任证书的根颁发机构](#about)。  
   
 > [!IMPORTANT]
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，安全套接字层 (SSL) 已停止使用。 请改用传输层安全性 (TLS)。
+> 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，安全套接字层 (SSL) 已停止使用。 请改用传输层安全性 (TLS)。
 
 ## <a name="transport-layer-security-tls"></a>传输层安全 (TLS) (Transport Layer Security) (TLS)
 
@@ -100,9 +100,9 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 
 ## <a name="install-on-single-server"></a><a name="single-server"></a>在单一服务器上安装
 
-在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，证书管理已集成到 SQL Server 配置管理器。 适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的 SQL Server 配置管理器可用于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上添加证书时，请参阅[证书管理（SQL Server 配置管理器）](../../database-engine/configure-windows/manage-certificates.md)。
+在 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 中，证书管理已集成到 SQL Server 配置管理器。 适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 的 SQL Server 配置管理器可用于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上添加证书时，请参阅[证书管理（SQL Server 配置管理器）](../../database-engine/configure-windows/manage-certificates.md)。
 
-如果使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，但适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的 SQL Server 配置管理器不可用，请执行以下步骤：
+如果使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，但适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 的 SQL Server 配置管理器不可用，请执行以下步骤：
 
 1. 在“开始”  菜单上，单击“运行” ，并在“打开”  框中键入 **MMC** ，然后单击“确定” 。  
   
@@ -130,9 +130,9 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
   
 ## <a name="install-across-multiple-servers"></a>跨多个服务器安装
 
-在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，证书管理已集成到 SQL Server 配置管理器。 适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的 SQL Server 配置管理器可用于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在故障转移群集配置中或在可用性组配置中添加证书时，请参阅[证书管理（SQL Server 配置管理器）](../../database-engine/configure-windows/manage-certificates.md)。
+在 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 中，证书管理已集成到 SQL Server 配置管理器。 适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 的 SQL Server 配置管理器可用于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在故障转移群集配置中或在可用性组配置中添加证书时，请参阅[证书管理（SQL Server 配置管理器）](../../database-engine/configure-windows/manage-certificates.md)。
 
-如果使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，但适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的 SQL Server 配置管理器不可用，请对每个服务器执行[在单个服务器中预配（安装）证书](#single-server)一节中的步骤。
+如果使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，但适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 的 SQL Server 配置管理器不可用，请对每个服务器执行[在单个服务器中预配（安装）证书](#single-server)一节中的步骤。
 
 ## <a name="export-server-certificate"></a>导出服务器证书  
   

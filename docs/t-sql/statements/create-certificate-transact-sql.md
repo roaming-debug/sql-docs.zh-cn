@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CERTIFICATE
 - CREATE_CERTIFICATE_TSQL
@@ -28,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 238fcde63bf0af459ab741f54a411fefb317bfe9
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 4774ca76959e70514d93c31b9a8ccb81650dc97d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170349"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344040"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-pdw](../../includes/applies-to-version/sql-asdb-pdw.md)]
@@ -168,7 +168,7 @@ CREATE CERTIFICATE certificate_name
 ## <a name="remarks"></a>备注  
  证书是一个数据库级的安全对象，它遵循 X.509 标准并支持 X.509 V1 字段。 `CREATE CERTIFICATE`可以从文件、二进制常量或程序集中加载证书。 该语句也可生成密钥对并创建自我签名的证书。  
   
- 私钥必须 \<= 2500 个字节，并且为加密格式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的私钥长度在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及以前版本中是 1024 位，从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始是 2048 位。 从外部源导入的私钥的最小长度为 384 位，最大长度为 4,096 位。 导入的私钥的长度必须是 64 位的整数倍。 用于 TDE 的证书限于专用密钥大小 3456 比特。  
+ 私钥必须 \<= 2500 个字节，并且为加密格式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的私钥长度在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及以前版本中是 1024 位，从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始是 2048 位。 从外部源导入的私钥的最小长度为 384 位，最大长度为 4,096 位。 导入的私钥的长度必须是 64 位的整数倍。 用于 TDE 的证书限于专用密钥大小 3456 比特。  
   
  存储证书的整个序列号，但只有前 16 个字节出现在 sys.certificates 目录视图中。  
   
@@ -187,7 +187,7 @@ CREATE CERTIFICATE certificate_name
   
  可以使用 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 和 [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md) 函数创建证书的二进制说明。 有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的示例，请参阅文章 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B。  
 
-已在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中弃用 MD2、MD4、MD5、SHA 和 SHA1 算法。 在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 之前，需使用 SHA1 创建自签名证书。 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，可使用 SHA2_256 创建自签名证书。
+已在 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 中弃用 MD2、MD4、MD5、SHA 和 SHA1 算法。 在 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 之前，需使用 SHA1 创建自签名证书。 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，可使用 SHA2_256 创建自签名证书。
 
 ## <a name="permissions"></a>权限  
  需要对数据库拥有 `CREATE CERTIFICATE` 权限。 只有 Windows 登录名、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和应用程序角色才能拥有证书。 其他组和角色不能拥有证书。  

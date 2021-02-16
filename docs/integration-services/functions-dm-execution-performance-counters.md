@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 19111422e69b2ce77f53e13bb6d1a450b4ef7692
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: f1fee927b37a29f575e2b20c09de5a8f465e4ab4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243662"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347812"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>函数 - dm_execution_performance_counters
 
@@ -35,7 +35,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
  [ @execution_id = ] execution_id   
  包含一个或多个包的执行的唯一标识符。 通过“执行包”任务执行的包在同一个执行中作为父包运行。  
   
- 如果未指定执行 ID，则返回多个执行的性能统计信息。 如果你是 **ssis_admin** 数据库角色的成员，将返回所有正在运行的执行的性能统计信息。  如果你不是 **ssis_admin** 数据库角色的成员，则返回你对其具有读权限的正在运行的执行的性能统计信息。 *execution_id* 为 **BigInt** 。  
+ 如果未指定执行 ID，则返回多个执行的性能统计信息。 如果你是 **ssis_admin** 数据库角色的成员，将返回所有正在运行的执行的性能统计信息。  如果你不是 **ssis_admin** 数据库角色的成员，则返回你对其具有读权限的正在运行的执行的性能统计信息。 *execution_id* 为 **BigInt**。  
   
 ## <a name="remarks"></a>备注  
  下表列出了由 dm_execution_performance_counter 函数返回的计数器名称值。  

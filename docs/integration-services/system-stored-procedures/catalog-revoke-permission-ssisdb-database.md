@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5386c10a85d548a59e68b33009d5ed46e95d85d0
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 0f2a25972d62f519f7a2c465df78b4101640944c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243634"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355328"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission（SSISDB 数据库）
 
@@ -41,16 +41,16 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>参数  
  [ @object_type = ] *object_type*  
- 安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`) 和操作 (`4`)。 *object_type* 为 **smallint** _。_  
+ 安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`) 和操作 (`4`)。*object_type* 为 **smallint** _。_  
   
  [ @object_id = ] *object_id*  
- 安全对象的唯一标识符 (ID)。 *object_id* 为 **bigint** 。  
+ 安全对象的唯一标识符 (ID)。 *object_id* 为 **bigint**。  
   
  [ @principal_id = ] *principal_id*  
- 被撤消权限的主体的 ID。 *principal_id* 为 **int** 。  
+ 被撤消权限的主体的 ID。 *principal_id* 为 **int**。  
   
  [ @permission_type = ] *permission_type*  
- 权限的类型。 *permission_type* 为 **smallint** 。  
+ 权限的类型。 *permission_type* 为 **smallint**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）  

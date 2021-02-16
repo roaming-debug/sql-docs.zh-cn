@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b6335c43c179dfcdb94ecae98b829f3ff8bb50aa
-ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
+ms.openlocfilehash: 94eec1c8490a1827b27953adef2e79c45ff5efd8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97697103"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342445"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>配置 Always On 分布式可用性组  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -15,18 +15,18 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: d2c5f2fc245c981cf0c6d045333528aeff32536c
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 8bb4b3b0e70850702c34ff1c69b9c2fcd5f3c85b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170189"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342327"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-本文介绍如何使用安装向导安装 SQL Server。 它适用于 [!INCLUDE[SQLServer2016](../../includes/sssql16-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。
+本文介绍如何使用安装向导安装 SQL Server。 它适用于 [!INCLUDE[SQLServer2016](../../includes/sssql16-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssql17-md.md)]。
 
 本文介绍了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装向导来安装新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的分步过程。 此安装向导提供了一个用于安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树，这样你就不必逐个安装这些组件了。 若要逐个安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，请参阅[安装 SQL Server](../../database-engine/install-windows/install-sql-server.md#individual-component-installation)。  
 
@@ -55,7 +55,7 @@ ms.locfileid: "98170189"
 
 Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装的 Microsoft Visual C++ 2013 运行时二进制文件存在问题。 现在有可用的更新来修复该问题。 如果 Visual C++ 运行时二进制文件的此更新未安装，SQL Server 可能会在某些情况下出现稳定性问题。 安装 SQL Server 前，请先按照 [SQL Server 发行说明](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)中的说明操作，以确定计算机是否需要 Visual C++ 运行时二进制文件的修补程序。 
 
-这不适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]。
+这不适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]。
 
 ## <a name="to-install-sql-server-2016-and-2017"></a>安装 SQL Server 2016 和 2017  
 
@@ -131,7 +131,7 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起，选中“向 SQL Server 数据库引擎服务授予执行卷维护任务权限”复选框，可以让 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务帐户使用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
+    > 自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 起，选中“向 SQL Server 数据库引擎服务授予执行卷维护任务权限”复选框，可以让 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务帐户使用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
   
 1. 使用“服务器配置 - 排序规则”页为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非默认排序规则。    
 
@@ -286,9 +286,9 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
   
      安装程序的其余工作流视你已为安装指定的功能而定。 你可能不会看到所有页，具体视你的选择而定。 
 
-1. 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，PolyBase 不再要求在安装此功能前预先在计算机上安装 Oracle JRE 7 Update 51（最低版本）。 选择安装 Polybase 功能会将“Java 安装位置”页添加到 SQL Server 安装程序，并显示在“实例配置”页之后 。 在“Java 安装位置”页上，可以选择安装 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 安装随附的 Azul Zulu Open JRE，也可以提供已在计算机上安装的另一个 JRE 或 JDK 的位置。
+1. 自 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 起，PolyBase 不再要求在安装此功能前预先在计算机上安装 Oracle JRE 7 Update 51（最低版本）。 选择安装 Polybase 功能会将“Java 安装位置”页添加到 SQL Server 安装程序，并显示在“实例配置”页之后 。 在“Java 安装位置”页上，可以选择安装 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 安装随附的 Azul Zulu Open JRE，也可以提供已在计算机上安装的另一个 JRE 或 JDK 的位置。
 
-1. 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，Java 已经添加了语言扩展。 选择安装 Java 功能会将“Java 安装位置”页添加到 SQL Server 安装程序对话框窗口，并显示在“实例配置”页之后 。 在“Java 安装位置”页上，可以选择安装 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 安装随附的 Zulu Open JRE，也可以提供已在计算机上安装的另一个 JRE 或 JDK 的位置。
+1. 自 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 起，Java 已经添加了语言扩展。 选择安装 Java 功能会将“Java 安装位置”页添加到 SQL Server 安装程序对话框窗口，并显示在“实例配置”页之后 。 在“Java 安装位置”页上，可以选择安装 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 安装随附的 Zulu Open JRE，也可以提供已在计算机上安装的另一个 JRE 或 JDK 的位置。
 
 1. 使用“服务器配置 - 服务帐户”页指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的登录帐户。 你在此页中配置的实际服务取决于你已选择安装的功能。 若要详细了解配置设置，请参阅[安装向导帮助](../../sql-server/install/instance-configuration.md#serverconfig)。
   
@@ -300,7 +300,7 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起，选中“向 SQL Server 数据库引擎服务授予执行卷维护任务权限”复选框，可以让 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务帐户使用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
+    > 自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 起，选中“向 SQL Server 数据库引擎服务授予执行卷维护任务权限”复选框，可以让 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务帐户使用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
   
      使用“服务器配置 - 排序规则”页指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的非默认排序规则。 有关详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
@@ -324,14 +324,14 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
      使用“[!INCLUDE[ssDE](../../includes/ssde-md.md)]配置 - MaxDOP”页指定最大并行度。 此设置决定了一个语句可以在执行期间使用多少个处理器。 系统自动在安装期间计算建议值。 
      
     > [!NOTE]  
-    > 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 
+    > 仅自 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 起，才能在“设置”中使用此页。 
     
     有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop)。 
 
      使用“数据库引擎配置 - 内存”页，指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在启动后使用的“最小服务器内存和“最大服务器内存”值。 可以使用默认值、计算出的建议值，也可以在选择“推荐”选项后手动指定你自己的值。
      
     > [!NOTE]  
-    > 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 
+    > 仅自 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 起，才能在“设置”中使用此页。 
     
     有关详细信息，请参阅[“数据库引擎配置 - 内存”页](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory)。 
 
