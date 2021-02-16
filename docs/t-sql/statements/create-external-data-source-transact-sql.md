@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74a6b4985ab31d69813e305c92ee80ae8bca75d2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 807994f4a6e1f3c7b426c3a7c47ecdf7c152ea3b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171639"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100070668"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ ms.locfileid: "98171639"
 - 使用 [PolyBase][intro_pb] 执行数据虚拟化和数据加载
 - 使用 `BULK INSERT` 或 `OPENROWSET` 大容量加载操作
 
-**适用对象**：自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起
+**适用对象**：自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 起
 
 ## <a name="syntax"></a>语法
 
@@ -91,13 +91,13 @@ WITH
 
 | 外部数据源    | 位置前缀 | 位置路径                                         | 产品/服务支持的位置 |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
-| Cloudera 或 Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起                       |
-| Azure 存储帐户 (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | 自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起          不支持分层命名空间 |
-| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起                       |
-| Oracle                  | `oracle`        | `<server_name>[:port]`                                | 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起                       |
-| Teradata                | `teradata`      | `<server_name>[:port]`                                | 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起                       |
-| MongoDB 或 CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起                       |
-| ODBC                    | `odbc`          | `<server_name>[:port]`                                | 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起 - 仅限 Windows        |
+| Cloudera 或 Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | 自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 起                       |
+| Azure 存储帐户 (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | 自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 起          不支持分层命名空间 |
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | 自 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 起                       |
+| Oracle                  | `oracle`        | `<server_name>[:port]`                                | 自 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 起                       |
+| Teradata                | `teradata`      | `<server_name>[:port]`                                | 自 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 起                       |
+| MongoDB 或 CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | 自 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 起                       |
+| ODBC                    | `odbc`          | `<server_name>[:port]`                                | 自 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 起 - 仅限 Windows        |
 | 批量操作         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起                        |
 | Edge 中心         | `edgehub`         | 不适用 | EdgeHub 始终位于 [Azure SQL Edge](/azure/azure-sql-edge/overview/) 实例的本地。 因此，无需指定路径或端口值。 仅在 Azure SQL Edge 中可用。                      |
 | Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | 仅在 Azure SQL Edge 中可用。                      |
@@ -115,7 +115,7 @@ WITH
 
 - 创建对象时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 不会验证外部数据源是否存在。 要进行验证，请使用外部数据源创建外部表。
 - 查询 Hadoop 时，所有表使用相同的外部数据源，以确保查询语义一致。
-- 可使用 `sqlserver` 位置前缀将 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 连接到另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 或 Azure Synapse Analytics。
+- 可使用 `sqlserver` 位置前缀将 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 连接到另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 或 Azure Synapse Analytics。
 - 通过 `ODBC` 连接时，请指定 `Driver={<Name of Driver>}`。
 - `wasbs` 是可选的，但建议用于访问 Azure 存储帐户，因为将使用安全的 TLS/SSL 连接发送数据。
 - 访问 Azure 存储帐户时，不支持 `abfs` 或 `abfss` API。
@@ -160,7 +160,7 @@ WITH
 指定要配置的外部数据源的类型。 此参数并非总是必需的。
 
 - 如果外部数据源为 Cloudera、Hortonworks 或 Azure 存储帐户，请使用 HADOOP。
-- 在使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 从 Azure 存储帐户对 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 执行批量操作时，可使用 BLOB_STORAGE。
+- 在使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 从 Azure 存储帐户对 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 执行批量操作时，可使用 BLOB_STORAGE。
 
 > [!IMPORTANT]
 > 如果使用任何其他外部数据源，请勿设置 `TYPE`。
@@ -212,7 +212,7 @@ PolyBase 支持大多数外部数据源的基于代理的身份验证。 创建�
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples-starting-with-sssql15"></a>示例（自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起）
+## <a name="examples-starting-with-sssql16-md"></a>示例（自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 起）
 
 > [!IMPORTANT]
 > 有关如何安装和启用 PolyBase 的信息，请参阅[在 Windows 上安装 PolyBase](../../relational-databases/polybase/polybase-installation.md)
@@ -314,7 +314,7 @@ WITH
   ) ;
 ```
 
-### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. 创建外部数据源以通过 PolyBase 连接引用 SQL Server 命名实例 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. 创建外部数据源以通过 PolyBase 连接引用 SQL Server 命名实例 ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 要创建引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例的外部数据源，可以使用 CONNECTION_OPTIONS 指定实例名称。 在下面的示例中，`WINSQL2019` 是主机名，而 `SQL2019` 是实例名。
 
@@ -368,7 +368,7 @@ go
 
 ### <a name="i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>I. 创建外部数据源以用于从 Azure 存储检索数据的批量操作
 
-适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
+适用对象：[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]。
 对使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的批量操作使用以下数据源。 凭据必须设置 `SHARED ACCESS SIGNATURE` 作为标识、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)][sas_token]。
 
 ```sql

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: d02a4199775c519602e88573c7fbca72c1e8f9a9
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 37ea2f4896d68f4ae5a47b14025d54a344febdc0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170479"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016289"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -327,9 +327,9 @@ CURRENT
 运行当前数据库中的操作。 并不是所有上下文中的所有选项都支持 `CURRENT`。 如果 `CURRENT` 失败，则提供数据库名称。
 
 \<accelerated_database_recovery> ::=     
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）
 
-按数据库启用[加速数据库恢复](../../relational-databases/accelerated-database-recovery-management.md) (ADR)。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中的 ADR 设置为 OFF。 通过使用此语法，可选择为永久版本存储 (PVS) 数据指定特定的文件组。 如果未指定文件组，则 PVS 将存储在 PRIMARY 文件组中。 有关示例和详细信息，请参阅[加速数据库恢复](../../relational-databases/accelerated-database-recovery-management.md)。
+按数据库启用[加速数据库恢复](../../relational-databases/accelerated-database-recovery-management.md) (ADR)。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 中的 ADR 设置为 OFF。 通过使用此语法，可选择为永久版本存储 (PVS) 数据指定特定的文件组。 如果未指定文件组，则 PVS 将存储在 PRIMARY 文件组中。 有关示例和详细信息，请参阅[加速数据库恢复](../../relational-databases/accelerated-database-recovery-management.md)。
 
 \<auto_option> ::=     
 控制自动选项。
@@ -432,7 +432,7 @@ OFF
 有关描述何时使用同步统计信息更新或异步统计信息更新的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md#statistics-options)中的“统计信息选项”部分。
 
 <a name="auto_tuning"></a> \<automatic_tuning_option> ::=     
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 开始）
 
 启用或禁用 `FORCE_LAST_GOOD_PLAN` [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)选项。
 
@@ -557,12 +557,12 @@ OFF
 将数据库设置为不加密。
 
 SUSPEND     
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）     
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）     
 
 可用于在启用或禁用透明数据加密后或更改了加密密钥后暂停和恢复加密扫描。
 
 RESUME     
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）
 
 可用于恢复先前暂停的加密扫描。
 
@@ -738,7 +738,7 @@ DIRECTORY_NAME = \<directory_name>
 请参阅 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)。
 
 \<mixed_page_allocation_option> ::=     
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）
 
 控制数据库能否使用混合区为表或索引的前 8 页创建初始页面。
 
@@ -764,7 +764,7 @@ FORCED
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_parameterization_forced column` 确定此选项的当前设置。
 
 <a name="query-store"></a> \<query_store_options> ::=     
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）
 
 ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 控制查询存储是否在此数据库中启用，同时控制是否删除查询存储的内容。 有关详细信息，请参阅 [查询存储使用方案](../../relational-databases/performance/query-store-usage-scenarios.md)。
@@ -773,7 +773,7 @@ ON
 启用查询存储。
 
 OFF [ ( FORCED ) ]      
-禁用查询存储。 OFF 是默认值。 FORCED 是可选项。 FORCED 会中止所有正在运行的查询存储后台任务，并在查询存储关闭时跳过同步刷新。 使查询存储尽快关闭。 FORCED 适用于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU14、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 和更高内部版本。
+禁用查询存储。 OFF 是默认值。 FORCED 是可选项。 FORCED 会中止所有正在运行的查询存储后台任务，并在查询存储关闭时跳过同步刷新。 使查询存储尽快关闭。 FORCED 适用于 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU14、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21、[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6 和更高内部版本。
 
 > [!NOTE]  
 > 无法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的单一数据库和弹性池中禁用查询存储。 执行 `ALTER DATABASE [database] SET QUERY_STORE = OFF` 将返回警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`。 
@@ -797,7 +797,7 @@ DATA_FLUSH_INTERVAL_SECONDS
 确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 通过使用 DATA_FLUSH_INTERVAL_SECONDS 参数，配置此异步传输发生的频率。 DATA_FLUSH_INTERVAL_SECONDS 的类型为 **bigint**。 默认值为 900（15 分钟）。
 
 MAX_STORAGE_SIZE_MB     
-确定分配给查询存储的空间。 MAX_STORAGE_SIZE_MB 的类型为 **bigint**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）的默认值为 100 MB。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，默认值为 1 GB。
+确定分配给查询存储的空间。 MAX_STORAGE_SIZE_MB 的类型为 **bigint**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）的默认值为 100 MB。 从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始，默认值为 1 GB。
 
 > [!NOTE]
 > 没有严格执行 `MAX_STORAGE_SIZE_MB` 限制。 仅当查询存储将数据写入磁盘时才检查存储大小。 此间隔由 `DATA_FLUSH_INTERVAL_SECONDS` 选项或 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查询存储对话框选项“数据刷新时间间隔”设置。 间隔时间默认值为 900 秒（或 15 分钟）。
@@ -806,7 +806,7 @@ MAX_STORAGE_SIZE_MB
 
 > [!IMPORTANT]
 > 如果你认为工作负载捕获将需要 10 GB 以上的磁盘空间，则可能应重新考虑和优化工作负载以重用查询计划（例如，使用[强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)），或调整查询存储配置。    
-> 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以将 `QUERY_CAPTURE_MODE` 设置为“CUSTOM”，以进一步控制查询捕获策略。
+> 从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以将 `QUERY_CAPTURE_MODE` 设置为“CUSTOM”，以进一步控制查询捕获策略。
 
 INTERVAL_LENGTH_MINUTES     
 确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口使用 INTERVAL_LENGTH_MINUTES 参数进行配置。 INTERVAL_LENGTH_MINUTES 的类型为 bigint。 默认值是 **60** 秒。
@@ -829,16 +829,16 @@ QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }
 > 当查询捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询。
 
 ALL     
-捕获所有查询。 ALL 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 至 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）的默认配置值。
+捕获所有查询。 ALL 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 至 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）的默认配置值。
 
 AUTO     
-根据执行计数和资源消耗捕获相关查询。 这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（以 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开头）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的默认配置值。
+根据执行计数和资源消耗捕获相关查询。 这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（以 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开头）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的默认配置值。
 
 无     
 停止捕获新查询。 查询存储将继续为已经捕获的查询收集编译和运行时统计信息。 请谨慎使用此配置，因为你可能会错过捕获重要的查询。
 
 CUSTOM     
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）
 
 可控制 QUERY_CAPTURE_POLICY 选项。
 
@@ -859,7 +859,7 @@ OFF
 不捕获每个查询的等待统计信息。
 
 \<query_capture_policy_option_list> :: =     
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）
 
 控制查询存储捕获策略选项。 除 STALE_CAPTURE_POLICY_THRESHOLD 外，这些选项定义 OR 条件，需要满足这些条件，才能在定义的“过时捕获策略阈值”中捕获查询。
 
@@ -945,7 +945,7 @@ TORN_PAGE_DETECTION
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `page_verify_option` 列或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsTornPageDetectionEnabled` 属性，确定此选项的当前设置。
 
 \<remote_data_archive_option> ::=     
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）
 
 为数据库启用或禁用 Stretch Database。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。
 
@@ -1206,7 +1206,7 @@ OFF
 \<target_recovery_time_option> ::=     
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）
 
-指定每个数据库上间接检查点的频率。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，新数据库的默认值为 1 分钟，表示数据库使用间接检查点。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于服务器实例的恢复间隔设置。 对于大多数系统，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议设置为 1 分钟。
+指定每个数据库上间接检查点的频率。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，新数据库的默认值为 1 分钟，表示数据库使用间接检查点。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于服务器实例的恢复间隔设置。 对于大多数系统，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议设置为 1 分钟。
 
 TARGET_RECOVERY_TIME **=** *target_recovery_time* { SECONDS | MINUTES }     
 *target_recovery_time*     
@@ -1400,7 +1400,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. 启用查询存储
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）
 
 下面的示例启用查询存储并配置其参数。
 
@@ -1440,7 +1440,7 @@ SET QUERY_STORE = ON
 
 ### <a name="g-enabling-the-query-store-with-custom-capture-policy-options"></a>G. 使用自定义捕获策略选项启用查询存储
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）
 
 下面的示例启用查询存储并配置其参数。
 
@@ -1738,7 +1738,7 @@ OFF
 有关描述何时使用同步统计信息更新或异步统计信息更新的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md#statistics-options)中的“统计信息选项”部分。
 
 <a name="auto_tuning"></a> \<automatic_tuning_option> ::=     
-适用于：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+适用于：[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 控制[自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)的自动选项。
 
@@ -1926,7 +1926,7 @@ MAX_STORAGE_SIZE_MB
 
 > [!IMPORTANT]
 > 如果你认为工作负载捕获将需要 10 GB 以上的磁盘空间，则可能应重新考虑和优化工作负载以重用查询计划（例如，使用[强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)），或调整查询存储配置。    
-> 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以将 `QUERY_CAPTURE_MODE` 设置为“CUSTOM”，以进一步控制查询捕获策略。
+> 从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以将 `QUERY_CAPTURE_MODE` 设置为“CUSTOM”，以进一步控制查询捕获策略。
 
 INTERVAL_LENGTH_MINUTES     
 确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口使用 INTERVAL_LENGTH_MINUTES 参数进行配置。 INTERVAL_LENGTH_MINUTES 的类型为 bigint。 默认值是 **60** 秒。
@@ -2178,7 +2178,7 @@ OFF
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_recursive_triggers_on` 列或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsRecursiveTriggersEnabled` 属性来确定此选项的状态。
 
 \<target_recovery_time_option> ::=     
-指定每个数据库上间接检查点的频率。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，新数据库的默认值为 1 分钟，表示数据库使用间接检查点。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于服务器实例的恢复间隔设置。 对于大多数系统，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议设置为 1 分钟。
+指定每个数据库上间接检查点的频率。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，新数据库的默认值为 1 分钟，表示数据库使用间接检查点。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于服务器实例的恢复间隔设置。 对于大多数系统，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议设置为 1 分钟。
 
 TARGET_RECOVERY_TIME = target_recovery_time { SECONDS | MINUTES }     
 *target_recovery_time*     
@@ -2609,7 +2609,7 @@ OFF
 有关描述何时使用同步统计信息更新或异步统计信息更新的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)中的“使用数据库范围的统计信息选项”部分。
 
 <a name="auto_tuning"></a> \<automatic_tuning_option> ::=     
-适用于：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+适用于：[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 启用或禁用 `FORCE_LAST_GOOD_PLAN` [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)选项。
 
@@ -2748,7 +2748,7 @@ MAX_STORAGE_SIZE_MB
 
 > [!IMPORTANT]
 > 如果你认为工作负载捕获将需要 10 GB 以上的磁盘空间，则可能应重新考虑和优化工作负载以重用查询计划（例如，使用[强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)），或调整查询存储配置。    
-> 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以将 `QUERY_CAPTURE_MODE` 设置为“CUSTOM”，以进一步控制查询捕获策略。
+> 从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以将 `QUERY_CAPTURE_MODE` 设置为“CUSTOM”，以进一步控制查询捕获策略。
 
 INTERVAL_LENGTH_MINUTES     
 确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口使用 INTERVAL_LENGTH_MINUTES 参数进行配置。 INTERVAL_LENGTH_MINUTES 的类型为 bigint。 默认值是 **60** 秒。
@@ -2999,7 +2999,7 @@ OFF
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_recursive_triggers_on` 列或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsRecursiveTriggersEnabled` 属性来确定此选项的状态。
 
 \<target_recovery_time_option> ::=     
-指定每个数据库上间接检查点的频率。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，新数据库的默认值为 1 分钟，表示数据库使用间接检查点。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于服务器实例的恢复间隔设置。 对于大多数系统，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议设置为 1 分钟。
+指定每个数据库上间接检查点的频率。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，新数据库的默认值为 1 分钟，表示数据库使用间接检查点。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于服务器实例的恢复间隔设置。 对于大多数系统，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议设置为 1 分钟。
 
 TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }     
 *target_recovery_time*     

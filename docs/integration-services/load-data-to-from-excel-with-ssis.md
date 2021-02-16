@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 48a599580206e17131c28ecad757f11669851751
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e497e0f2781aedc2adccc4263cc3b37e756a86da
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991858"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345706"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
 

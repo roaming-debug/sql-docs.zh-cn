@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f04986f085653957bd685ae0db72a14a109e8079
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2ec8737d01b52db828dbe95cd1252d8913128c90
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170749"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339316"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -293,7 +293,7 @@ LOB_COMPACTION = OFF
 -   无需 REORGANIZE 即可将关闭的增量行组移动到压缩行组中。 后台 tuple-mover (TM) 进程会定期唤醒以压缩关闭的增量行组。 建议在 tuple-mover 落后时使用 REORGANIZE。 REORGANIZE 可以更主动地压缩行组。  
 -   若要压缩所有 OPEN 和 CLOSED 行组，请参阅本部分中的 `REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS)` 选项。  
   
-对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中的列存储索引，REORGANIZE 联机执行以下额外的碎片整理优化：  
+对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 起）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中的列存储索引，REORGANIZE 联机执行以下额外的碎片整理优化：  
   
 -   在逻辑删除了 10% 或更多行时从行组中物理移除行。 删除的字节会在物理媒体上进行回收。 例如，如果具有 100 万行的压缩行组删除了 10 万行，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会移除已删除的行，并使用 90 万行重新压缩行组。 它通过移除已删除的行来节省存储。  
   
@@ -304,7 +304,7 @@ LOB_COMPACTION = OFF
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  适用于列存储索引。 
 
- **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 COMPRESS_ALL_ROW_GROUPS 提供将打开或关闭的增量行组强制到列存储中的方式。 使用此选项时，无需重新生成列存储索引即可清空增量行组。  此操作与其他移除和合并碎片整理功能相结合，使得在大多数情况下不再需要重新生成索引。    
 
@@ -410,7 +410,7 @@ STATISTICS_INCREMENTAL = { ON | OFF }
  对于 XML 索引或空间索引，仅支持 `ONLINE = OFF`；如果 ONLINE 设置为 ON，便会引发错误。  
   
 > [!IMPORTANT]
-> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
+> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  ON  
  在索引操作期间不持有长期表锁。 在索引操作的主要阶段，源表上只使用意向共享 (IS) 锁。 这样，即可继续对基础表和索引进行查询或更新。 操作开始时，将对源对象保持极短时间的共享 (S) 锁。 操作结束时，如果创建非聚集索引，将对源持有极短时间的 S 锁；当联机创建或删除聚集索引时，或者重新生成聚集或非聚集索引时，将获取 SCH-M（架构修改）锁。 对本地临时表创建索引时，ONLINE 不能设置为 ON。  
@@ -481,7 +481,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定是否针对最后一页插入争用进行优化。 默认为 OFF。 有关详细信息，请参阅“CREATE INDEX”页的[顺序键](./create-index-transact-sql.md#sequential-keys)部分。
 
@@ -512,7 +512,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
   
 COMPRESSION_DELAY = { 0 |duration [Minutes] }   
 
-**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）  
+**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）  
   
  对于基于磁盘的表，延迟指定增量行组中处于关闭状态的增量行组在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以将它压缩为压缩行组之前必须保持为增量行组的最小分钟数。 由于基于磁盘的表不对单个行跟踪插入和更新时间，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将此延迟应用于处于关闭状态的增量行组。  
   
@@ -835,7 +835,7 @@ CREATE TABLE cci_target (
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
- 使用 TABLOCK 选项并行插入行。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，INSERT INTO 操作可以在使用 TABLOCK 时并行运行。  
+ 使用 TABLOCK 选项并行插入行。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，INSERT INTO 操作可以在使用 TABLOCK 时并行运行。  
   
 ```sql  
 INSERT INTO cci_target WITH (TABLOCK) 
@@ -875,7 +875,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. 将所有打开和关闭的增量行组压缩到列存储中  
- **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+ **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  命令 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) 将每个打开和关闭的增量行组作为压缩行组压缩到列存储中。 这会清空增量存储，并强制所有行压缩到列存储中。 这在执行许多插入操作之后特别有用，因为这些操作将行存储在一个或多个增量行组中。  
   
@@ -893,10 +893,10 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="d-defragment-a-columnstore-index-online"></a>D. 对列存储索引进行联机碎片整理  
  不适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。  
   
- 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，REORGANIZE 不仅仅会将增量行组压缩到列存储中。 它还执行联机碎片整理。 首先，它会在删除了行组中 10% 或更多行时物理移除已删除的行，从而减少列存储的大小。  然后，它将行组合并在一起以形成更大行组，每个行组最多包含 1,024,576 行。  更改的所有行组都会重新压缩。  
+ 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，REORGANIZE 不仅仅会将增量行组压缩到列存储中。 它还执行联机碎片整理。 首先，它会在删除了行组中 10% 或更多行时物理移除已删除的行，从而减少列存储的大小。  然后，它将行组合并在一起以形成更大行组，每个行组最多包含 1,024,576 行。  更改的所有行组都会重新压缩。  
   
 > [!NOTE]
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，在多数情况下不再需要重新生成列存储索引，因为 REORGANIZE 会物理移除已删除的行并合并行组。 COMPRESS_ALL_ROW_GROUPS 选项将所有打开或关闭的增量行组强制到列存储中，这以前只能通过重新生成来进行。 REORGANIZE 联机执行，并在后台进行，因此在进行该操作时可以继续进行查询。  
+> 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，在多数情况下不再需要重新生成列存储索引，因为 REORGANIZE 会物理移除已删除的行并合并行组。 COMPRESS_ALL_ROW_GROUPS 选项将所有打开或关闭的增量行组强制到列存储中，这以前只能通过重新生成来进行。 REORGANIZE 联机执行，并在后台进行，因此在进行该操作时可以继续进行查询。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -908,7 +908,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）   
   
 > [!TIP]
-> 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始并且在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，建议使用 ALTER INDEX REORGANIZE 而不是 ALTER INDEX REBUILD。  
+> 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始并且在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，建议使用 ALTER INDEX REORGANIZE 而不是 ALTER INDEX REBUILD。  
   
 > [!NOTE]
 > 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，REORGANIZE 仅用于将关闭的行组压缩到列存储中。 执行碎片整理操作以及将所有增量行组都强制到列存储中的唯一方法是重新生成索引。  
@@ -946,7 +946,7 @@ SELECT * FROM sys.column_store_row_groups;
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. 脱机重新生成聚集列存储索引的分区  
  **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）  
  
- 若要重新生成大型聚集列存储索引的分区，请使用带有分区选项的 ALTER INDEX REBUILD。 此示例重新生成分区 12。 从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始，建议将 REBUILD 替换为 REORGANIZE。  
+ 若要重新生成大型聚集列存储索引的分区，请使用带有分区选项的 ALTER INDEX REBUILD。 此示例重新生成分区 12。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，建议将 REBUILD 替换为 REORGANIZE。  
   
 ```sql  
 ALTER INDEX cci_fact3   

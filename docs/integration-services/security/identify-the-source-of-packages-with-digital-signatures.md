@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0405dabd99568e09bc07502544db5a181bf357a5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: f4607ffe77d7fe93aff86d8dc707bb86e515d67d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192417"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340791"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
 
@@ -53,13 +53,13 @@ ms.locfileid: "92192417"
   
  本主题中的此过程将介绍如何将可选的 **BlockedSignatureStates** DWORD 值添加到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS 注册表项中。 **BlockedSignatureStates** 中的数据值决定当包具有不可信签名、具有无效签名或未签名时是否阻止该包。 对于用来进行包签名的签名的状态， **BlockedSignatureStates** 注册表值使用下列定义：  
   
--   “有效签名” ** 是一个可以成功读取的签名。  
+-   “有效签名”  是一个可以成功读取的签名。  
   
--   “无效签名”** 是一个解密的校验和（由私钥加密的包代码的单向哈希）与在加载 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的过程中计算的解密校验和不相符的签名。  
+-   “无效签名”是一个解密的校验和（由私钥加密的包代码的单向哈希）与在加载 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的过程中计算的解密校验和不相符的签名。  
   
--   “可信签名” ** 是一个使用由受信任的根证书颁发机构签名的数字证书创建的签名。 该设置不要求签名者出现在可信发布服务器的用户列表中。  
+-   “可信签名”  是一个使用由受信任的根证书颁发机构签名的数字证书创建的签名。 该设置不要求签名者出现在可信发布服务器的用户列表中。  
   
--   “不可信签名 ** ”是一个不能验证为由受信任的根证书颁发机构颁发的签名，或不是最新版本的签名。  
+-   “不可信签名  ”是一个不能验证为由受信任的根证书颁发机构颁发的签名，或不是最新版本的签名。  
   
  下表列出了 DWORD 数据的有效值及其相关策略。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "92192417"
   
 3.  找到注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS。  
   
-4.  右键单击“MSDTS”****，指向“新建”****，然后单击“DWORD 值”****。  
+4.  右键单击“MSDTS”，指向“新建”，然后单击“DWORD 值”。  
   
 5.  将新值的名称更新为 **BlockedSignatureStates**。  
   
-6.  右键单击“BlockedSignatureStates”****，再单击“修改”****。  
+6.  右键单击“BlockedSignatureStates”，再单击“修改”。  
   
 7.  在 **“编辑 DWORD 值”** 对话框中，键入值 0、1、2 或 3。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "92192417"
   
 5.  在 **“选择证书”** 对话框中，选择一个证书。  
   
-6.  也可单击“查看证书”**** 来查看证书信息。  
+6.  也可单击“查看证书”来查看证书信息。  
   
 7.  单击 **“确定”** 关闭 **“选项证书”** 对话框。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "92192417"
   
 ### <a name="options"></a>选项  
  **签名**  
- 单击此项将打开“选择证书”**** 对话框，在其中可选择要使用的证书。  
+ 单击此项将打开“选择证书”对话框，在其中可选择要使用的证书。  
   
  **删除**  
  单击此项将删除数字签名。  

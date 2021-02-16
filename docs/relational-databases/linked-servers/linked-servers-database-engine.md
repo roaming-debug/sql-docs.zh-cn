@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 09738de0caf9b7da5fcf3bec7c413d53d5d46981
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869418"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351192"
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
 
@@ -57,7 +57,7 @@ ms.locfileid: "91869418"
   
 “OLE DB 访问接口”  是管理特定数据源并与其交互的 DLL。 “OLE DB 数据源”  标识可通过 OLE DB 访问的特定数据库。 虽然通过链接服务器定义查询的数据源通常是数据库，但 OLE DB 访问接口对各种文件和文件格式仍可用。 这些文件和文件格式包括文本文件、电子表格数据和全文内容搜索的结果。  
   
-从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，[Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID:MSOLEDBSQL) 是默认的 OLE DB 提供程序。 在早期版本中，[SQL Server Native Client OLE DB 提供程序 (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID:SQLNCLI11) 是默认的 OLE DB 提供程序。
+从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始，[Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID:MSOLEDBSQL) 是默认的 OLE DB 提供程序。 在早期版本中，[SQL Server Native Client OLE DB 提供程序 (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID:SQLNCLI11) 是默认的 OLE DB 提供程序。
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式查询旨在与任何实现所需 OLE DB 接口的 OLE DB 访问接口一起使用。 但是，已针对默认 OLE DB 提供程序测试了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -86,11 +86,11 @@ ms.locfileid: "91869418"
   
 可以使用存储过程和目录视图来管理链接服务器定义：  
   
--   通过运行 **sp_addlinkedserver**创建链接服务器定义。  
+-   通过运行 **sp_addlinkedserver** 创建链接服务器定义。  
   
 -   通过对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sys.servers **系统目录视图执行查询，查看有关在** 的特定实例中定义的链接服务器的信息。  
   
--   通过运行 **sp_dropserver**删除链接服务器定义。 还可以使用此存储过程删除远程服务器。  
+-   通过运行 **sp_dropserver** 删除链接服务器定义。 还可以使用此存储过程删除远程服务器。  
   
 还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”，选择“新建”，再选择“链接服务器”。 通过右键单击链接服务器名称并选择“删除”，可以删除链接服务器定义。  
   

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd1ad3437f02b0c0df834d3a16365140d9638798
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8801c1a4f7387f1ff5bc815b45897d5a4f68fdb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487722"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340780"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色（SSIS 服务）
 
@@ -45,7 +45,7 @@ ms.locfileid: "88487722"
      视图的列表包括：[catalog].[projects]、[catalog].[packages]、[catalog].[operations]、[catalog].[extended_operation_info]、[catalog].[operation_messages]、[catalog].[event_messages]、[catalog].[execution_data_statistics]、[catalog].[execution_component_phases]、[catalog].[execution_data_taps]、[catalog].[event_message_context]、[catalog].[executions]、[catalog].[executables]、[catalog].[executable_statistics]、[catalog].[validations]、[catalog].[execution_parameter_values] 和 [catalog].[execution_property_override_values]。  
   
 ## <a name="roles-in-the-msdb-database"></a>msdb 数据库中的角色  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括三个固定数据库级角色（db_ssisadmin、db_ssisltduser 和 db_ssisoperator），用于控制对保存到 msdb 数据库的包的访问****************。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将角色分配给包。 角色分配保存到 **msdb** 数据库中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括三个固定数据库级角色（db_ssisadmin、db_ssisltduser 和 db_ssisoperator），用于控制对保存到 msdb 数据库的包的访问。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将角色分配给包。 角色分配保存到 **msdb** 数据库中。  
   
 ### <a name="read-and-write-actions"></a>读取和写入操作  
  下表介绍了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中 Windows 和固定数据库级角色的读写操作。  
@@ -69,10 +69,10 @@ ms.locfileid: "88487722"
 -   **ownersid** 列包含创建包的用户的唯一安全标识符。 此列定义包的所有者。  
   
 ### <a name="permissions"></a>权限  
- 默认情况下， **db_ssisadmin** 和 **db_ssisoperator** 固定数据库级角色的权限以及创建包的用户的唯一安全标识符适用于包的读取者角色，而 **db_ssisadmin** 角色的权限以及创建包的用户的唯一安全标识符适用于写入者角色。 用户必须是 **db_ssisadmin**、 **db_ssisltduser**或 **db_ssisoperator** 角色的成员，才能拥有对包的读访问权限。 用户必须是 **db_ssisadmin** 角色的成员，才能拥有写访问权限。  
+ 默认情况下， **db_ssisadmin** 和 **db_ssisoperator** 固定数据库级角色的权限以及创建包的用户的唯一安全标识符适用于包的读取者角色，而 **db_ssisadmin** 角色的权限以及创建包的用户的唯一安全标识符适用于写入者角色。 用户必须是 **db_ssisadmin**、 **db_ssisltduser** 或 **db_ssisoperator** 角色的成员，才能拥有对包的读访问权限。 用户必须是 **db_ssisadmin** 角色的成员，才能拥有写访问权限。  
   
 ### <a name="access-to-packages"></a>对包的访问  
- 固定数据库级角色可以与用户定义的角色结合使用。 用户定义的角色就是你在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建的、随后用来为包分配权限的角色。 若要访问包，用户必须是用户定义的角色和相关的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 固定数据库级角色的成员。 例如，如果用户是分配给包的 **AuditUsers** 用户定义角色的成员，他们必须也是 **db_ssisadmin**、 **db_ssisltduser**或 **db_ssisoperator** 角色的成员，才能拥有对包的读访问权限。  
+ 固定数据库级角色可以与用户定义的角色结合使用。 用户定义的角色就是你在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建的、随后用来为包分配权限的角色。 若要访问包，用户必须是用户定义的角色和相关的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 固定数据库级角色的成员。 例如，如果用户是分配给包的 **AuditUsers** 用户定义角色的成员，他们必须也是 **db_ssisadmin**、 **db_ssisltduser** 或 **db_ssisoperator** 角色的成员，才能拥有对包的读访问权限。  
   
  如果不为包分配用户定义角色，则对包的访问权限由固定数据库级角色确定。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "88487722"
   
 6.  展开“数据库”、“系统数据库”、“msdb”、“安全性”和“角色”。  
   
-7.  在“角色”节点中，右键单击“数据库角色”，再单击“新建数据库角色”****。  
+7.  在“角色”节点中，右键单击“数据库角色”，再单击“新建数据库角色”。  
   
 8.  在“常规”页上，提供一个名称，还可以指定一个所有者、拥有的架构以及添加角色成员。  
   
@@ -136,9 +136,9 @@ ms.locfileid: "88487722"
 11. 单击“确定”。 
 
 ## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a>“包角色”对话框 UI 参考
-  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“包角色”**** 对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于  msdb 数据库中存储的包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ****。  
+  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“包角色”对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于  msdb 数据库中存储的包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- 该对话框中列出的角色是 **msdb** 系统数据库的当前数据库角色。 如果未选择任何角色，将应用默认的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色。 默认情况下，读取者角色包括 **db_ssisadmin**、 **db_ssisoperator**以及创建包的用户。 作为以上任一角色的成员的用户或创建该包的用户，可以枚举、查看、导出和运行包。 默认情况下，写入者角色包括 **db_ssisadmin** 和创建包的用户。 作为此角色的成员的用户和创建该包的用户，可以导入、删除和更改包。  
+ 该对话框中列出的角色是 **msdb** 系统数据库的当前数据库角色。 如果未选择任何角色，将应用默认的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色。 默认情况下，读取者角色包括 **db_ssisadmin**、 **db_ssisoperator** 以及创建包的用户。 作为以上任一角色的成员的用户或创建该包的用户，可以枚举、查看、导出和运行包。 默认情况下，写入者角色包括 **db_ssisadmin** 和创建包的用户。 作为此角色的成员的用户和创建该包的用户，可以导入、删除和更改包。  
   
  **sysssispackages** 表中的 **ownersid** 列列出了创建包的用户的唯一安全标识符。  
   

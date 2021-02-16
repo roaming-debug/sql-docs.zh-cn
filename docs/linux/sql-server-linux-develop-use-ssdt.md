@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: dd4de5567d2bafd21b321dc388068b6ee6c24ed5
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: a7add65dbc62679a6a1183c7a3f6998de7a18cb6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523912"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100273088"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 为 Linux 上的 SQL Server 创建数据库
 

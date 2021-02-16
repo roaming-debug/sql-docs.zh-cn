@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2193c93ff55ed38ff5c629072109036306bb72c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ef719fc0fe41120fe42d324beb563b06bb81060
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430769"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343215"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Microsoft Connector for Oracle 数据类型支持
 
@@ -41,13 +41,13 @@ ms.locfileid: "88430769"
 |CLOB|DT_TEXT|仅在数组模式（而不是快速加载模式）下支持 CLOB、NCLOB 和 BLOB 数据类型。|
 |NCLOB|DT_NTEXT||
 |BLOB|DT_IMAGE||
-|UROWID|不受支持||
-|REF|不受支持||
-|BFILE|不受支持||
-|LONG|不受支持||
-|LONG RAW|不受支持||
-|ROWID|不受支持||
-|用户定义类型（对象类型、VARRAY、嵌套表）|不受支持||
+|UROWID|不支持||
+|REF|不支持||
+|BFILE|不支持||
+|LONG|不支持||
+|LONG RAW|不支持||
+|ROWID|不支持||
+|用户定义类型（对象类型、VARRAY、嵌套表）|不支持||
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -8,12 +8,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0266318c73c9bb912da4251f2988f00e1c588a62
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da546bddb3b7b45753b224539a546f96663704c5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898039"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348196"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>使用 ssis-conf 在 Linux 上配置 SQL Server Integration Services
 
@@ -116,7 +116,7 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 
 以下 `/var/opt/ssis/ssis.conf` 文件提供了每个设置的示例。
 
-对于 SQL Server，可以通过更改 `mssql.conf` 文件中的值来更改系统设置。 对于 SSIS，*不能*通过更改 `ssis.conf` 文件中的值来更改系统设置。 `ssis.conf` 文件仅显示设置的结果。 若要更改 SSIS 的设置，可以删除 `ssis.conf` 文件并再次运行 `setup` 命令。
+对于 SQL Server，可以通过更改 `mssql.conf` 文件中的值来更改系统设置。 对于 SSIS，*不能* 通过更改 `ssis.conf` 文件中的值来更改系统设置。 `ssis.conf` 文件仅显示设置的结果。 若要更改 SSIS 的设置，可以删除 `ssis.conf` 文件并再次运行 `setup` 命令。
 
 下面是一个示例 `ssis.conf` 文件。 每个字段对应于一个设置步骤的结果。
 

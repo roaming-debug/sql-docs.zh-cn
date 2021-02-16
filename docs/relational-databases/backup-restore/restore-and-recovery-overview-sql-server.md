@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 72bf9910a86d66ac36cbebbb0be66f8a8df832e5
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: edc2a92b260e85c2de1ff5b4fc1758748643d174
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99235769"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346766"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "99235769"
 |还原方案|在简单恢复模式下|在完整/大容量日志恢复模式下|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |数据库完整还原|这是基本的还原策略。 数据库完整还原可能涉及完整数据库备份的简单还原和恢复。 另外，完整的数据库还原还可能涉及还原完整数据库备份，以及还原和恢复差异备份。<br /><br /> 有关详细信息，请参阅[完整数据库还原（简单恢复模式）](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)。|这是基本的还原策略。 数据库完整还原涉及还原完整数据库备份或差异备份（如果有），以及还原所有后续日志备份（按顺序）。 通过恢复并还原上一次日志备份 (RESTORE WITH RECOVERY) 完成数据库完整还原。<br /><br /> 有关详细信息，请参阅[完整数据库还原（完整恢复模式）](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)。|  
-|文件还原 * *\** _|还原损坏的只读文件，但不还原整个数据库。 仅在数据库至少有一个只读文件组时才可以进行文件还原。|还原一个或多个文件，而不还原整个数据库。 可以在数据库处于脱机状态时执行文件还原，对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的某些版本，也可以在数据库仍处于联机状态时执行。 在文件还原过程中，包含正在还原的文件的文件组一直处于脱机状态。|  
+|文件还原 **\***|还原损坏的只读文件，但不还原整个数据库。 仅在数据库至少有一个只读文件组时才可以进行文件还原。|还原一个或多个文件，而不还原整个数据库。 可以在数据库处于脱机状态时执行文件还原，对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的某些版本，也可以在数据库仍处于联机状态时执行。 在文件还原过程中，包含正在还原的文件的文件组一直处于脱机状态。|  
 |页面还原|不适用|还原损坏的页面。 可以在数据库处于脱机状态时执行页面还原，对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的某些版本，也可以在数据库仍处于联机状态时执行。 在页面还原过程中，正在还原的页面一直处于脱机状态。<br /><br /> 必须具有完整的日志备份链（包含当前日志文件），并且必须应用所有这些日志备份以使页面与当前日志文件保持一致。<br /><br /> 有关详细信息，请参阅[还原页 (SQL Server)](../../relational-databases/backup-restore/restore-pages-sql-server.md)。|  
-|段落还原 _*\**_|按文件组级别并从主文件组和所有读写辅助文件组开始，分阶段还原和恢复数据库。|按文件组级别并从主文件组开始，分阶段还原和恢复数据库。<br /><br /> 有关详细信息，请参阅[段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。|  
+|段落还原 **\***|按文件组级别并从主文件组和所有读写辅助文件组开始，分阶段还原和恢复数据库。|按文件组级别并从主文件组开始，分阶段还原和恢复数据库。<br /><br /> 有关详细信息，请参阅[段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。|  
   
- _*\**_ 仅在 Enterprise Edition 中支持联机还原。  
+ **\*** 仅在 Enterprise Edition 中支持联机还原。  
 
 ### <a name="steps-to-restore-a-database"></a>还原数据库的步骤
 若要执行文件还原，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 执行两个步骤： 
@@ -87,7 +87,7 @@ ms.locfileid: "99235769"
 -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，还原文件或页面的操作可能会允许数据库中的其他数据在还原操作期间仍保持联机状态。  
 
 ## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> 恢复和事务日志
-对于大多数还原方案，需要应用事务日志备份并允许 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 运行恢复过程才能使数据库联机。 恢复是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于让每个数据库以事务一致状态或干净状态启动的进程。
+对于大多数还原方案，需要应用事务日志备份并允许 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 运行恢复过程  才能使数据库联机。 恢复是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于让每个数据库以事务一致状态或干净状态启动的进程。
 
 如果故障转移或其他非干净关闭，数据库可能处于这样的状态：某些修改从未从缓冲区缓存写入数据文件，且在数据文件内可能有未完成事务所做的某些修改。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例启动时，将根据最后一个[数据库检查点](../../relational-databases/logs/database-checkpoints-sql-server.md)运行每个数据库的恢复，其中包含三个阶段：
 
@@ -117,9 +117,9 @@ ms.locfileid: "99235769"
 |页面还原 * *\** _|完全支持。|不完全支持。_ *\*\** *|无。|  
 |段落（文件组级）还原 * *\** _|完全支持。|不完全支持。_ *\*\** *|仅对只读辅助文件可用。|  
   
- * *\** _ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Enterprise Edition 中可用  
+ **\*** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- _ *\*\** * 对于所需条件，请参阅本主题后面的 [简单恢复模式下的还原限制](#RMsimpleScenarios)。  
+ **\*\*** 对于所需条件，请参阅本主题后面的 [简单恢复模式下的还原限制](#RMsimpleScenarios)。  
   
 > [!IMPORTANT]  
 > 无论数据库的恢复模式如何，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份都无法还原到早于创建该备份的版本的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34ac1e35b83158aec9aa2bae6cdd9754078212bb
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f70696592cae8f486e7ff7b52e417bb67edfa8d8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642915"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100337923"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>排除故障：可用性组超过了 RPO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

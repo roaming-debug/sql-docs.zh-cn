@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 9bffa8f183e511cdc4885635c4d23c940a82e4f9
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 36508869b30688e7a87035b50a7a06ca1e2a083a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088736"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346342"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
@@ -34,7 +34,7 @@ ms.locfileid: "88088736"
 - [macOS](#macos)
 - [Docker](#docker)
 
-本文介绍如何安装命令行工具。 如果正在寻找有关如何使用 **sqlcmd** 或 **bcp** 的示例，请参阅本主题末尾的[链接](#next-steps)。
+本文介绍如何安装命令行工具。 如果正在寻找有关如何使用 **sqlcmd** 或 **bcp** 的示例，请参阅本主题末尾的 [链接](#next-steps)。
 
 ## <a name="a-idrhelinstall-tools-on-rhel-8"></a><a id="RHEL"><a/>在 RHEL 8 上安装工具
 
@@ -266,4 +266,4 @@ brew install mssql-tools
 - [在 Ubuntu 上安装](quickstart-install-connect-ubuntu.md)
 - [在 Docker 上运行](quickstart-install-connect-ubuntu.md)
 
-有关如何使用 **bcp** 批量导入和导出数据的示例，请参阅[将数据批量复制到 Linux 上的 SQL Server](sql-server-linux-migrate-bcp.md)。
+有关如何使用 **bcp** 批量导入和导出数据的示例，请参阅 [将数据批量复制到 Linux 上的 SQL Server](sql-server-linux-migrate-bcp.md)。

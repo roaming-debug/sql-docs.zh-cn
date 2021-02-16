@@ -19,18 +19,18 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 942e69f127b37fa6caf4ba83605fabdf4a31da38
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8872cf6e593279a282c34868a2f019ac82e5bf01
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97407994"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100339488"
 ---
 # <a name="write-international-transact-sql-statements"></a>编写国际化 Transact-SQL 语句
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   如果遵循以下指导原则，则使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的数据库和数据库应用程序将变得更易于在语言之间移植，或者将支持多种语言：  
 
--   从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，使用以下任一选项：
+-   从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，使用以下任一选项：
     -   具有已启用 [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 的排序规则的 char、varchar 和 varchar(max) 数据类型，并使用 UTF-8 对数据进行编码。
     -   具有已启用[附属字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则的 nchar、nvarchar 和 nvarchar(max) 数据类型，并使用 UTF-16 对数据进行编码。 使用非 SC 排序规则会导致使用 UCS-2 对数据进行编码。      
 

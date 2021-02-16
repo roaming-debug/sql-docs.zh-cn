@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 03c9c90f1c9382c85141853ff19cc5d76b40f093
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 7313fbc789b37cf326d55566c1f087f80b4929df
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115926"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351941"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性
 
@@ -178,8 +178,8 @@ ms.locfileid: "92115926"
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
       ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
@@ -211,7 +211,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->创建 AG 后，必须配置与 Pacemaker 等群集技术的集成，以实现高可用性。 对于使用 AG 的读取缩放配置，从 [!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)] 开始，不再需要设置群集。
+>创建 AG 后，必须配置与 Pacemaker 等群集技术的集成，以实现高可用性。 对于使用 AG 的读取缩放配置，从 [!INCLUDE [SQL Server version](../includes/sssql17-md.md)] 开始，不再需要设置群集。
 
 如果执行本文档中的步骤，会得到尚未群集化的 AG。 下一步是添加群集。 此配置对于读取缩放/负载均衡方案有效，但对于高可用性而言并不完整。 为实现高可用性，需要将 AG 添加为群集资源。 有关说明，请参阅[后续步骤](#next-steps)。 
 

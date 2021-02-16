@@ -9,12 +9,12 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: d900786f27280eb66ded8801843e9c657f2ceb5f
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: ed8611e945a6af654a0f1304ddee64b24af2efbb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96504901"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015397"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>使用 DMV 来确定视图的使用情况统计信息和性能
 本文介绍了一些方法和脚本，用于获取使用视图的查询的性能相关信息  。 这些脚本的目的是提供在数据库中发现的各种视图的使用指标和性能指标。 

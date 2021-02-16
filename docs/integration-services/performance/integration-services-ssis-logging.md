@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cee8ccf62e9ec8a6497d3515e85b7aeff8f0b479
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ac0f913188b23b85548f87a4f458d1c2b754d15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457120"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347450"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
 

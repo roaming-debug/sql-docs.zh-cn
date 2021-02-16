@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 639e88a96ac639d20a6190bffeed75d46495aa51
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 272bc33012e37c58f6a3f8ea0ed51f1c216d716f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785076"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346276"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>为 SQL Server 运行 RHEL 故障转移群集实例 (FCI)
 
@@ -41,10 +41,10 @@ ms.locfileid: "91785076"
 
 ## <a name="failover-cluster-manually"></a><a name = "failManual"></a>手动故障转移群集
 
-`resource move` 命令创建一个约束，用于强制资源在目标节点上启动。  执行 `move` 命令后，执行资源 `clear` 将删除该约束，因此可以再次移动资源或自动故障转移资源。 
+`resource move` 命令创建一个约束，用于强制资源在目标节点上启动。    执行 `move` 命令后，执行资源 `clear` 将删除该约束，因此可以再次移动资源或自动故障转移资源。 
 
 ```bash
-sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
@@ -60,7 +60,7 @@ sudo pcs resource clear mssqlha
 查看当前群集状态：
 
 ```bash
-sudo pcs status  
+sudo pcs status  
 ```
 
 查看群集和资源的实时状态：
@@ -183,7 +183,7 @@ sudo crm_mon
     下面的示例将名为 vm3 的节点添加到群集  。
 
     ```bash
-    sudo pcs    cluster auth  
+    sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
@@ -192,7 +192,7 @@ sudo crm_mon
 若要从群集中删除节点，请运行以下命令：
 
 ```bash
-sudo pcs    cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>更改 sqlservr 资源监视间隔的频率
@@ -226,7 +226,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 ```
 Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
 Stack: corosync 
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
 3 nodes and 1 resource configured 

@@ -12,12 +12,12 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be7a5c94f5de63f343a8c529f8a824e13177923c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 234f6233e2f6b024e6ad74a82f403e3df7db9a05
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467298"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340181"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 密钥管理概述
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "97467298"
 
 讨论“始终加密”密钥和密钥管理时，了解实际的加密密钥之间的区别和用于描述这些密钥的元数据对象很重要。 我们使用术语 **列加密密钥** 和 **列主密钥** 来指代实际的加密密钥，以及使用 **列加密密钥元数据** 和 **列主密钥元数据** 来指代数据库中的“始终加密”密钥说明。
 
-- ***列加密密钥** _ 是用于加密数据的内容加密密钥。 正如其名称所暗示的，列加密密钥用于加密数据库列中的数据。 可以使用相同的列加密密钥对一个或多个列进行加密，或者可以根据应用程序的要求使用多个列加密密钥。 列加密密钥本身也被加密，只有列加密密钥的加密的值存储在数据库中（作为列加密密钥元数据的一部分）。 列加密密钥元数据存储在 [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 目录视图中。 使用 AES-256 算法的列加密密钥的长度为 256 位。
+- ***列加密密钥*** 是用于加密数据的内容加密密钥。 正如其名称所暗示的，列加密密钥用于加密数据库列中的数据。 可以使用相同的列加密密钥对一个或多个列进行加密，或者可以根据应用程序的要求使用多个列加密密钥。 列加密密钥本身也被加密，只有列加密密钥的加密的值存储在数据库中（作为列加密密钥元数据的一部分）。 列加密密钥元数据存储在 [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 目录视图中。 使用 AES-256 算法的列加密密钥的长度为 256 位。
 
 
-- _*_列主密钥_*_ 是用于加密列加密密钥的保护密钥的密钥。 列主密钥必须存储在受信任的密钥存储，例如 Windows 证书存储、Azure 密钥保管库或硬件安全模块。 数据库仅包含有关列主密钥的元数据（密钥存储的类型和位置）。 列主密钥元数据存储在 [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) 目录视图中。  
+- ***列主密钥*** 是用于加密列加密密钥的保护密钥的密钥。 列主密钥必须存储在受信任的密钥存储，例如 Windows 证书存储、Azure 密钥保管库或硬件安全模块。 数据库仅包含有关列主密钥的元数据（密钥存储的类型和位置）。 列主密钥元数据存储在 [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) 目录视图中。  
 
 需要注意的是，数据库系统中的密钥元数据不包含纯文本列主密钥或纯文本列加密密钥。 数据库仅包含有关列主密钥的类型和位置，以及列加密密钥的加密值的信息。 这意味着始终不会向数据库系统暴露纯文本密钥，这样可以确保即使数据库系统遭到入侵，使用“始终加密”功能保护的数据也是安全的。 若要确保数据库系统无法访问纯文本密钥，请务必在除托管数据库的计算机以外的其他计算机上运行密钥管理工具 - 请查看下面的 [密钥管理的安全注意事项](#security-considerations-for-key-management) 一节了解详细信息。
 
@@ -42,7 +42,7 @@ ms.locfileid: "97467298"
 
 管理密钥的过程可以分为以下几个高级任务：
 
-- _ *密钥预配** - 在受信任的密钥存储（例如，在 Windows 证书存储、Azure Key Vault 或硬件安全模块）中创建物理密钥、使用列主密钥加密列加密密钥，以及在数据库中为两种类型的密钥创建元数据。
+- **密钥预配** - 在受信任的密钥存储（例如，在 Windows 证书存储、Azure 密钥保管库或硬件安全模块）中创建物理密钥、使用列主密钥加密列加密密钥，以及在数据库中为两种类型的密钥创建元数据。
 
 - **密钥轮换** - 定期使用新密钥替换现有密钥。 如果密钥已泄漏，或者为了遵守强制规定必须轮换加密密钥的组织的策略或遵从性规则，则可能需要轮换密钥。 
 

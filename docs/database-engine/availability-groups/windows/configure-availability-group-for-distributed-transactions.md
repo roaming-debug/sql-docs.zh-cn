@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5587622f0f61b7b7063b246d0599d46cc8c16f0c
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c05da95541e728d981745d43f4da864c2e8b07a8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170779"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343551"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>为 Always On 可用性组配置分布式事务
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 支持所有分布式事务，包括可用性组中的数据库。 本文介绍如何为分布式事务配置可用性组  
+[!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] 支持所有分布式事务，包括可用性组中的数据库。 本文介绍如何为分布式事务配置可用性组  
 
 为确保分布式事务的一致性，必须配置可用性组，使其将数据库注册为分布式事务资源管理器。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 在服务包 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)]!INCLUDE[SQL2016] 版本中，不支持涉及可用性组中的数据库的跨数据库分布式事务（即，使用同一 SQL Server 实例上的数据库的事务）。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 没有此限制。 
+>[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 在服务包 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)]!INCLUDE[SQL2016] 版本中，不支持涉及可用性组中的数据库的跨数据库分布式事务（即，使用同一 SQL Server 实例上的数据库的事务）。 [!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] 没有此限制。 
 >
->[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 中的配置步骤相同。
+>[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] 中的配置步骤相同。
 
 在分布式事务中，客户端应用程序和 Microsoft 分布式事务处理协调器（MS DTC 或 DTC）共同配合来确保多个数据源之间的事务一致性。 DTC 是在基于 Windows Server 的受支持操作系统上提供的服务。 DTC 充当分布式事务的“事务处理协调器”  。 SQL Server 实例通常充当“资源管理器”  。 当数据库位于可用性组中时，每个数据库需为其自身的资源管理器。 
 
@@ -81,7 +81,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ## <a name="alter-an-availability-group-for-distributed-transactions"></a>更改分布式事务的可用性组
 
-可在 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 或更高版本上更改分布式事务的可用性组。 若要更改分布式事务的可用性组，请在 `ALTER AVAILABILITY GROUP` 脚本中包含 `DTC_SUPPORT = PER_DB`。 示例脚本将更改可用性组以支持分布式事务。 
+可在 [!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] 或更高版本上更改分布式事务的可用性组。 若要更改分布式事务的可用性组，请在 `ALTER AVAILABILITY GROUP` 脚本中包含 `DTC_SUPPORT = PER_DB`。 示例脚本将更改可用性组以支持分布式事务。 
 
 ```sql
 ALTER AVAILABILITY GROUP MyaAG
@@ -106,7 +106,7 @@ ALTER AVAILABILITY GROUP MyaAG
 
 分布式事务可跨两个或多个数据库。 作为事务管理器，DTC 可协调 SQL Server 实例之间和其他数据源之间的事务。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 数据库引擎的每个实例都可以充当资源管理器。 如果使用 `DTC_SUPPORT = PER_DB` 配置可用性组，数据库也可以充当资源管理器。 有关详细信息，请参阅 MS DTC 文档。
 
-在数据库引擎的单个实例中具有两个或多个数据库的事务实际上是分布式事务。 该实例对分布式事务进行内部管理；对于用户而言，其操作就像本地事务一样。 当数据库位于使用 `DTC_SUPPORT = PER_DB` 配置的可用性组中（甚至是在 SQL Server 的单个实例内）时，[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 会将所有跨数据库的事务提升到 DTC。 
+在数据库引擎的单个实例中具有两个或多个数据库的事务实际上是分布式事务。 该实例对分布式事务进行内部管理；对于用户而言，其操作就像本地事务一样。 当数据库位于使用 `DTC_SUPPORT = PER_DB` 配置的可用性组中（甚至是在 SQL Server 的单个实例内）时，[!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] 会将所有跨数据库的事务提升到 DTC。 
 
 对于应用程序而言，管理分布式事务很像管理本地事务。 当事务结束时，应用程序会请求提交或回滚事务。 不同的是，分布式提交必须由事务管理器管理，以尽量避免出现因网络故障而导致事务由某些资源管理器成功提交，但由另一些资源管理器回滚的情况。 通过分两个阶段（准备阶段和提交阶段）管理提交进程可避免这种情况，这称为两阶段提交。
 
