@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bd9e1cacb36ce4906e30c2b8030b5e6b0b09787
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 99f91a0a5f3f018b10a4ac0ff18c4ecf75b9c790
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170909"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100349217"
 ---
 # <a name="sql-writer-service"></a>SQL 编写器服务
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "98170909"
  VSS 可捕获和复制正在运行的系统（尤其是服务器）的稳定映像以进行备份，而且不会过度降低它们所提供服务的性能和稳定性。 有关 VSS 的详细信息，请参阅 Windows 文档。  
 
 > [!NOTE]
-> 若要使用 VSS 来备份托管基本可用性组的虚拟机，且虚拟机当前托管的数据库处于次要状态，那么自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 起，这些数据库 *不会* 与虚拟机一起备份。  这是因为，基本可用性组不支持在次要副本上备份数据库。  如果低于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这些版本，不仅无法备份，还会看到错误消息。
+> 若要使用 VSS 来备份托管基本可用性组的虚拟机，且虚拟机当前托管的数据库处于次要状态，那么自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 起，这些数据库 *不会* 与虚拟机一起备份。  这是因为，基本可用性组不支持在次要副本上备份数据库。  如果低于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这些版本，不仅无法备份，还会看到错误消息。
   
 ## <a name="virtual-backup-device-interface-vdi"></a>虚拟备份设备接口 (VDI)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供称为虚拟备份设备接口 (VDI) 的 API，使独立软件供应商能够将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集成到他们的产品中来支持备份和还原操作。 这些 API 能够提供非常高的可靠性和极佳的性能，并支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有备份与还原功能，包括所有的热备份和快照备份功能。 如果第三方供应商应用程序请求快照 (VSS) 备份，则 SQL 编写器服务将调用 VDI API 函数以执行实际备份。 请注意，VDI API 独立于 VSS，并经常用于不使用 VSS API 的软件解决方案中。
@@ -78,5 +78,5 @@ ms.locfileid: "98170909"
 -   页面还原  
   
 ## <a name="remarks"></a>备注
-SQL 编写器服务是独立于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎的服务，由不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和同一台服务器上的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例共同使用。  SQL 编写器服务文件随附在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装包中，并标有与所随附 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎相同的版本号。  如果服务器上安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例或现有实例已升级，且安装或升级的实例的版本号高于服务器上现有 SQL 编写器服务的版本号，这个文件就会替换安装包中的现有文件。  请注意，如果 SQL 编写器服务已通过 Service Pack 或累积更新进行更新，且安装的是 RTM 版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，便可将新版 SQL 编写器服务替换为旧版服务，前提是安装文件的主版本号更高。  例如，SQL 编写器服务在 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU2 中进行了更新。  如果此实例升级到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM，那么已更新的 SQL 编写器服务就会替换为旧版服务。  在此示例中，必须将最新 CU 应用于新实例，才能获取新版 SQL 编写器服务。
+SQL 编写器服务是独立于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎的服务，由不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和同一台服务器上的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例共同使用。  SQL 编写器服务文件随附在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装包中，并标有与所随附 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎相同的版本号。  如果服务器上安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例或现有实例已升级，且安装或升级的实例的版本号高于服务器上现有 SQL 编写器服务的版本号，这个文件就会替换安装包中的现有文件。  请注意，如果 SQL 编写器服务已通过 Service Pack 或累积更新进行更新，且安装的是 RTM 版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，便可将新版 SQL 编写器服务替换为旧版服务，前提是安装文件的主版本号更高。  例如，SQL 编写器服务在 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU2 中进行了更新。  如果此实例升级到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM，那么已更新的 SQL 编写器服务就会替换为旧版服务。  在此示例中，必须将最新 CU 应用于新实例，才能获取新版 SQL 编写器服务。
 

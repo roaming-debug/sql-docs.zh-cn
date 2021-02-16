@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1caba28e45e1eea3217f41e0dc37789f4e3054e
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 3b78f603517e6f754039d66572c88ea77b81098a
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99250734"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525221"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ from sys.objects
 ### <a name="partition-by"></a>PARTITION BY  
  将查询结果集分为多个分区。 开窗函数分别应用于每个分区，并为每个分区重新启动计算。  
 
-```sqlsyntax
+```syntaxsql
 PARTITION BY *value_expression* 
 ```
  
@@ -168,7 +168,7 @@ from sys.objects
   
 ### <a name="order-by"></a>ORDER BY  
 
-```sqlsyntax
+```syntaxsql
 ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]  
 ```
 
@@ -257,7 +257,7 @@ order by object_id asc
 #### <a name="between-and"></a>BETWEEN AND  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
-```sqlsyntax
+```syntaxsql
 BETWEEN <window frame bound > AND <window frame bound >  
 ```
  与 ROWS 或 RANGE 一起使用，以便指定窗口的下（开始）边界和上（结束）边界点。 \<window frame bound> 定义边界起点，\<window frame bound> 定义边界终点。 上限不能小于下限。  

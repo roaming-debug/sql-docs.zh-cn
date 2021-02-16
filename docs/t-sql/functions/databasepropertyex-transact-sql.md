@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DATABASEPROPERTYEX
 - DATABASEPROPERTYEX_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 096d215aa0962b3a580cdd43a337075aab638964
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ec28104c0d178c50bc468a9e9012e71c89cc21db
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171139"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100346608"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,9 +86,9 @@ DATABASEPROPERTYEX ( database , property )
 |IsSubscribed|数据库已订阅发布。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int|  
 |IsSyncWithBackup|数据库为发布数据库或分发数据库，并且支持在不中断事务复制的情况下还原。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int|  
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]检测到因电力故障或其他系统故障造成的不完全 I/O 操作。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int| 
-|IsVerifiedClone|数据库是使用 DBCC CLONEDATABASE 的 WITH VERIFY_CLONEDB 选项创建的用户数据库的仅限架构和仅限统计信息副本。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/3177838)。|**适用对象**：从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 开始。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int| 
-|IsXTPSupported|指示数据库是否支持内存中 OLTP，即创建和使用内存优化表和本机编译模块。<br /><br /> 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 与任何 MEMORY_OPTIMIZED_DATA 文件组的存在与否无关，创建内存中 OLTP 对象则需要该文件组。|**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本），以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效，出现错误或不适用<br /><br /> 基本数据类型：int|  
-|LastGoodCheckDbTime|在指定数据库上运行的上一成功 DBCC CHECKDB 的日期和时间。<sup>1</sup> 如果 DBCC CHECKDB 未在数据库上运行，则返回 1900-01-01 00:00:00.000。|适用于：从 SP2 开始的 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]。</br>从 CU9 开始的 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]。</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 或更高版本。</br>Azure SQL 数据库。<br/><br/>日期时间值。<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：datetime| 
+|IsVerifiedClone|数据库是使用 DBCC CLONEDATABASE 的 WITH VERIFY_CLONEDB 选项创建的用户数据库的仅限架构和仅限统计信息副本。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/3177838)。|**适用对象**：从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 开始。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：int| 
+|IsXTPSupported|指示数据库是否支持内存中 OLTP，即创建和使用内存优化表和本机编译模块。<br /><br /> 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 与任何 MEMORY_OPTIMIZED_DATA 文件组的存在与否无关，创建内存中 OLTP 对象则需要该文件组。|**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本），以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效，出现错误或不适用<br /><br /> 基本数据类型：int|  
+|LastGoodCheckDbTime|在指定数据库上运行的上一成功 DBCC CHECKDB 的日期和时间。<sup>1</sup> 如果 DBCC CHECKDB 未在数据库上运行，则返回 1900-01-01 00:00:00.000。|适用于：从 SP2 开始的 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]。</br>从 CU9 开始的 [!INCLUDE[sssql17](../../includes/sssql17-md.md)]。</br>[!INCLUDE[sssql19](../../includes/sssql19-md.md)] 或更高版本。</br>Azure SQL 数据库。<br/><br/>日期时间值。<br /><br /> NULL：无效输入<br /><br /> 基本数据类型：datetime| 
 |LCID|排序规则的 Windows 区域设置标识符 (LCID)。|LCID 值（十进制格式）。<br /><br /> 基本数据类型：int|  
 |MaxSizeInBytes|最大数据库大小（以字节为单位）。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br />[Azure SQL 数据库和 Azure Synapse Analytics](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) - 除非已购买额外的存储空间，否则值基于 SLO。<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) - 值以 1 GB 为增量递增，直到达到最大大小。<br /><br />NULL：数据库未启动<br /><br /> 基本数据类型：bigint|  
 |恢复|数据库恢复模式|FULL：完整恢复模式<br /><br /> BULK_LOGGED：大容量日志模型<br /><br /> SIMPLE：简单恢复模式<br /><br /> 基本数据类型：nvarchar(128)|  

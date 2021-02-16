@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a9897a33c986a78061d18b06ba76db7685e5fb3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45612ea0bfdbda2b27e6cac8b4deb1e302eb9298
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487687"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346551"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>由 Integration Services 服务记录的事件
 
@@ -62,7 +62,7 @@ ms.locfileid: "88487687"
 ## <a name="view-events"></a>查看事件
   可以使用以下两个工具来查看 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的事件：  
   
--   **中的** “日志文件查看器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 **“日志文件查看器”** 对话框包括导出、筛选和搜索日志的选项。 有关“日志文件查看器”**** 中选项的详细信息，请参阅[日志文件查看器 F1 帮助](../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+-   **中的** “日志文件查看器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 **“日志文件查看器”** 对话框包括导出、筛选和搜索日志的选项。 有关“日志文件查看器”中选项的详细信息，请参阅[日志文件查看器 F1 帮助](../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
 -   Windows 事件查看器。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88487687"
   
 3.  在 **“连接到服务器”** 对话框中，选择 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器类型，选择或找到要连接到的服务器，然后单击 **“连接”**。  
   
-4.  在对象资源管理器中，右键单击 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，再单击“查看日志”****。  
+4.  在对象资源管理器中，右键单击 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，再单击“查看日志”。  
   
 5.  若要查看 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 事件，请选择 **SQL Server Integration Services**。 如果选择或清除 **SQL Server Integration Services** 选项，则会同时选择或清除 **“NT 事件”** 选项。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "88487687"
   
 3.  在 **“事件查看器”** 对话框中，单击 **“应用程序”**。  
   
-4.  在“应用程序”**** 管理单元中，找到“源”**** 列中具有值 **SQLISService** 的项，右键单击该项，再单击“属性”****。  
+4.  在“应用程序”管理单元中，找到“源”列中具有值 **SQLISService** 的项，右键单击该项，再单击“属性”。  
   
 5.  可以选择单击向上键或向下键来显示上一个事件或下一个事件。  
   

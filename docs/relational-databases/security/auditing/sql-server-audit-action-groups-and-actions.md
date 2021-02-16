@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: e435d8c94dfdfc8f989875d48440554e04405376
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 0ab7abaaa4473bdc1d4a309ce3ccf0103a33a54a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172489"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100344422"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 审核操作组和操作
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "98172489"
  服务器级别的操作不允许对数据库级别的操作进行详细筛选。 实现详细操作筛选需要数据库级别的审核，例如，对 Employee 组中登录名的 Customers 表执行的 SELECT 操作进行的审核。 在用户数据库审核规范中不要包括服务器范围的对象，例如系统视图。  
 
  > [!NOTE]
- > 由于启用事务级别审核所需的开销，从 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 开始，除非已启用通用标准符合性，否则将默认禁用事务级别审核。  如果已禁用通用标准符合性，仍能够通过 TRANSACTION_GROUP 将操作添加到审核规范，但实际上不会收集任何事务操作。  如果想要通过 TRANSACTION_GROUP 配置任何审核操作，从 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 及更高版本开始，请确保通过启用通用标准符合性，来启用事务级别审核基础结构。  请注意，从 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] SP1 CU2 开始，事务级别审核也可使用跟踪标志 3427 禁用。
+ > 由于启用事务级别审核所需的开销，从 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 开始，除非已启用通用标准符合性，否则将默认禁用事务级别审核。  如果已禁用通用标准符合性，仍能够通过 TRANSACTION_GROUP 将操作添加到审核规范，但实际上不会收集任何事务操作。  如果想要通过 TRANSACTION_GROUP 配置任何审核操作，从 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 及更高版本开始，请确保通过启用通用标准符合性，来启用事务级别审核基础结构。  请注意，从 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] SP1 CU2 开始，事务级别审核也可使用跟踪标志 3427 禁用。
   
 ## <a name="database-level-audit-action-groups"></a>数据库级别审核操作组  
  数据库级别审核操作组是类似于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全审核事件类的操作。 有关事件类的详细信息，请参阅 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)。  

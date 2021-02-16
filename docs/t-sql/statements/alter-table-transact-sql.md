@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
 - ABORT_AFTER_WAIT
@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d604298ca4956ef699ab763255cb2534be30679
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 14c663264dc05f403f12e9cad390cd0ef52f17c1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170629"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100348501"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -565,7 +565,7 @@ SPARSE
 指示列为稀疏列。 稀疏列已针对 NULL 值进行了存储优化。 无法将稀疏列设置为 NOT NULL。 无论是将列从稀疏列转换为非稀疏列，还是从非稀疏列转换为稀疏列，都会导致表在命令执行期间被锁定。 您可能需要使用 REBUILD 子句来回收任何节约的空间。 有关稀疏列的其他限制和详细信息，请参阅[使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。
 
 ADD MASKED WITH ( FUNCTION = ' mask_function ')  
-**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定动态数据掩码。 mask_function 是具有相应参数的掩码函数的名称。 有三个函数可供选择：
 
@@ -577,7 +577,7 @@ ADD MASKED WITH ( FUNCTION = ' mask_function ')
 要删除掩码，请使用 `DROP MASKED`。 有关函数参数的信息，请参阅[动态数据掩码](../../relational-databases/security/dynamic-data-masking.md)。
 
 WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
-**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 允许执行多个更改列操作，同时保持表可用。 默认为 OFF。 可以联机对列执行与数据类型、列长度或精度、为 Null 性、稀疏性和排序规则相关的列更改。
 
@@ -668,7 +668,7 @@ COLUMN column_name
 > 删除列并不回收列所占的磁盘空间。 当表的行大小接近或超过其限额时，必须回收已删除的列占用的磁盘空间。 通过创建表的聚集索引或使用 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 重新生成现有的聚集索引，可以回收空间。 有关删除 LOB 数据类型的影响的信息，请参阅此 [CSS 博客文章](/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower)。
 
 PERIOD FOR SYSTEM_TIME  
-**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 删除系统将用于系统版本控制的列的规范。
 
@@ -792,7 +792,7 @@ filestream_filegroup_name 指定 FILESTREAM 文件组的名称。 文件组必�
 "NULL"  指定删除对表的 FILESTREAM 文件组的所有引用。 首先必须删除所有 FILESTREAM 列。 使用 SET FILESTREAM_ON="NULL" 删除与表关联的所有 FILESTREAM 数据。
 
 SET ( SYSTEM_VERSIONING = { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ] } )  
- **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+ **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 禁用或启用表的系统版本控制。 若要启用表的系统版本控制，系统将验证是否满足系统版本控制的数据类型、为 Null 性约束和主键约束要求。 如果你未使用 HISTORY_TABLE 参数，系统生成符合现有表的架构的新历史记录表，在两个表之间建立关联，让系统能够在历史记录表中记录当前表中每个记录的历史记录。 此历史记录表的名称为 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 如果你使用 HISTORY_TABLE 参数关联到现有历史记录表并使用此表，系统关联当前表和指定表。 关联到现有历史记录表时，可以选择执行数据一致性检查。 数据一致性检查可确保现有记录不重叠。 系统默认运行数据一致性检查。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
@@ -1000,7 +1000,7 @@ BLOCKERS
 要求具有 ALTER ANY CONNECTION 权限。
 
 IF EXISTS  
-**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 有条件地删除列或约束（仅当存在时）。
 
@@ -1092,7 +1092,7 @@ ONLINE = ON 具有下列限制：
 
 ## <a name="compatibility-support"></a>兼容性支持
 
-ALTER TABLE 语句只支持包含两部分 (schema.object) 的表名称。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，使用以下格式指定表名称时，在编译时会出现错误 117。
+ALTER TABLE 语句只支持包含两部分 (schema.object) 的表名称。 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中，使用以下格式指定表名称时，在编译时会出现错误 117。
 
 - server.database.schema.table
 - .database.schema.table
@@ -1737,7 +1737,7 @@ REBUILD WITH
 
 下面的示例展示了如何使用 ONLINE 选项运行更改列操作。
 
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 ```sql
 CREATE TABLE dbo.doc_exy (column_a INT) ;
@@ -1756,7 +1756,7 @@ GO
 
 以下四个示例将帮助你熟悉使用系统版本控制的语法。 如需其他帮助，请参阅[系统版本控制时态表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)。
 
-**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 #### <a name="a-add-system-versioning-to-existing-tables"></a>A. 向现有表添加系统版本控制
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5dbdccf96c35c7c7f66badb49d6566ac6009d6c0
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 8279636861b3d4048951d46e725c8d89c4e23fb0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596376"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346868"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
 

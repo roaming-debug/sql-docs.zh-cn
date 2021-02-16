@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15
-ms.openlocfilehash: 8d116fbf036540337bef9d0b21bb66f79017bfd2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5e2dd566b0c5842636619c8331bfc88378dc4f84
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464498"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350866"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-本文介绍了标量 UDF 内联，这是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一项功能。 此功能提高了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 开始）中调用标量 UDF 的查询性能。
+本文介绍了标量 UDF 内联，这是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一项功能。 此功能提高了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql19](../../includes/sssql19-md.md)] 开始）中调用标量 UDF 的查询性能。
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 标量用户定义函数
 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中实现并返回单个数据值的用户定义函数 (UDF) 称为 T-SQL 标量用户定义函数。 T-SQL UDF 是一种跨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询实现代码重用和模块化的巧妙方法。 某些计算（如复杂的业务规则）在命令性 UDF 窗体中更易表示。 UDF 有助于构建复杂的逻辑，而无需编写复杂 SQL 查询的专业知识。 有关 UDF 的详细信息，请参阅[创建用户定义的函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。
@@ -174,13 +174,13 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 
 <sup>3</sup> 结果取决于当前系统时间的内部函数与时间相关。 举例来说，可以更新某些内部全局状态的内部函数就是具有副作用的函数。 每次调用此类函数都会根据内部状态返回不同的结果。
 
-<sup>4</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 中添加的限制
+<sup>4</sup>[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2 中添加的限制
 
-<sup>5</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4 中添加的限制
+<sup>5</sup>[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU4 中添加的限制
 
-<sup>6</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 中添加的限制
+<sup>6</sup>[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5 中添加的限制
 
-<sup>7</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 中添加的限制
+<sup>7</sup>[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6 中添加的限制
 
 > [!NOTE]
 > 有关针对内联资格方案的最新 T-SQL 标量 UDF 内联修复和更改，请参阅知识库文章：[修复：SQL Server 2019 中的标量 UDF 内联问题](https://support.microsoft.com/help/4538581)。
@@ -283,7 +283,7 @@ END
 1. 查询级别联接提示可能不再有效，因为内联可能会引入新联接。 必须改为使用本地联接提示。
 1. 无法索引引用内联标量UDF的视图。 如果需要在此类视图上创建索引，请禁用对引用的 UDF 的内联。
 1. [动态数据屏蔽](../security/dynamic-data-masking.md)与 UDF 内联的行为可能存在一些差异。 在某些情况下（取决于 UDF 中的逻辑），内联可能是更保守的 w.r.t 屏蔽输出列。 如果 UDF 中引用的列不是输出列，则它们不会被屏蔽。 
-1. 如果 UDF 引用内置函数（如 `SCOPE_IDENTITY()`、`@@ROWCOUNT` 或 `@@ERROR`），内置函数返回的值将随内联而变化。 这种行为上的更改是因为内联更改了 UDF 中语句的范围。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 开始，如果 UDF 引用某些内部函数（例如 `@@ROWCOUNT`），则将阻止内联。
+1. 如果 UDF 引用内置函数（如 `SCOPE_IDENTITY()`、`@@ROWCOUNT` 或 `@@ERROR`），内置函数返回的值将随内联而变化。 这种行为上的更改是因为内联更改了 UDF 中语句的范围。 从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2 开始，如果 UDF 引用某些内部函数（例如 `@@ROWCOUNT`），则将阻止内联。
 
 ## <a name="see-also"></a>另请参阅
 [创建用户定义的函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

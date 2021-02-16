@@ -12,12 +12,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 514c5f035094b2a74a32ac54183136210801b5ce
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a41ac84e7e34e0df190c725d9dbadf84f15cac47
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169807"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353630"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "98169807"
 |----------|----------|----------------|  
 |Feature|ON|内存优化的表不能放置在文件组或分区方案上。 从 **CREATE TABLE** 语句删除 ON 子句。<br /><br /> 所有的内存优化表都映射到内存优化文件组。|  
 |数据类型|数据类型名称|不支持所示的数据类型。 使用支持的数据类型之一替换该类型。 有关详细信息，请参阅 [内存中 OLTP 支持的数据类型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。|  
-|Feature|计算列|适用对象：[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]<br/>内存优化的表不支持计算列。 从 **CREATE TABLE** 语句删除计算列。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始的 SQL Server 支持内存优化表和索引中的计算列。|  
+|Feature|计算列|适用对象：[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]<br/>内存优化的表不支持计算列。 从 **CREATE TABLE** 语句删除计算列。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 开始的 SQL Server 支持内存优化表和索引中的计算列。|  
 |Feature|复制|内存优化表不支持复制。|  
 |Feature|FILESTREAM|内存优化的表列不支持 FILESTREAM 存储。 从列定义中删除 **FILESTREAM** 关键字。|  
 |Feature|SPARSE|内存优化的表列不能定义为 SPARSE。 从列定义中删除 **SPARSE** 关键字。|  
@@ -68,7 +68,7 @@ ms.locfileid: "98169807"
 |Operation|更新主键列|无法更新内存优化的表和表类型中的主键列。 如果需要更新主键，请删除旧的行并插入包含更新的主键的新行。|  
 |Operation|CREATE INDEX|必须使用 **CREATE TABLE** 语句或 **ALTER TABLE** 语句以内联方式指定内存优化表的索引。|  
 |Operation|CREATE FULLTEXT INDEX|内存优化的表不支持全文检索。|  
-|Operation|架构更改|内存优化表和本机编译存储过程不支持某些架构更改：<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server：支持 ALTER TABLE、ALTER PROCEDURE 和 sp_rename 操作。 不支持其他架构更改，如添加扩展属性。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]：支持 ALTER TABLE 和 ALTER PROCEDURE 操作。 不支持其他架构更改，包括 sp_rename。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]：不支持架构更改。 若要更改内存优化表或本机编译存储过程的定义，首先删除该对象，然后用所需定义重新创建。| 
+|Operation|架构更改|内存优化表和本机编译存储过程不支持某些架构更改：<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 开始的 SQL Server：支持 ALTER TABLE、ALTER PROCEDURE 和 sp_rename 操作。 不支持其他架构更改，如添加扩展属性。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]：支持 ALTER TABLE 和 ALTER PROCEDURE 操作。 不支持其他架构更改，包括 sp_rename。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]：不支持架构更改。 若要更改内存优化表或本机编译存储过程的定义，首先删除该对象，然后用所需定义重新创建。| 
 |Operation|TRUNCATE TABLE|内存优化的表不支持 TRUNCATE 操作。 若要从表中删除所有行，请使用 **DELETE FROM** table 删除所有行，或删除并重新创建该表。|  
 |Operation|ALTER AUTHORIZATION|不支持更改现有内存优化的表或本机编译的存储过程的所有者。 请删除并重新创建该表或过程来更改所有权。|  
 |Operation|ALTER SCHEMA|不支持将现有表或本机编译存储过程传输到另一个架构。 删除并重新创建要在架构之间传输的对象。|  
@@ -111,7 +111,7 @@ ms.locfileid: "98169807"
 |Feature|SELECT INTO|**INTO** 语句不支持 **SELECT** 子句。 将查询重写为 INSERT INTO Table SELECT 。|  
 |Feature|不完整的插入列列表|一般情况下，在 INSERT 语句中，必须为表中的所有列指定值。<br /><br /> 但是，我们支持内存优化表上的 DEFAULT 约束和 IDENTITY(1,1) 列。 可以将这些列（如果为 IDENTITY 列，则必须）从 INSERT 列列表中忽略。|  
 |Feature|*Function*|本机编译存储过程中不支持某些内置函数。 从存储过程中删除被拒绝的函数。 有关支持的内置函数的详细信息，请参阅<br />[本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[本机编译的存储过程](./a-guide-to-query-processing-for-memory-optimized-tables.md)。|  
-|Feature|CASE|适用对象：[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和自 [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)] 开始的 SQL Server<br/>本机编译存储过程中的查询不支持 CASE 表达式。 创建每个情况的查询。 有关详细信息，请参阅 [在本机编译的存储过程中实现 CASE 表达式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server 不支持 CASE 表达式。|  
+|Feature|CASE|适用对象：[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和自 [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)] 开始的 SQL Server<br/>本机编译存储过程中的查询不支持 CASE 表达式。 创建每个情况的查询。 有关详细信息，请参阅 [在本机编译的存储过程中实现 CASE 表达式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 开始的 SQL Server 不支持 CASE 表达式。|  
 |Feature|INSERT EXECUTE|删除引用。|  
 |Feature|EXECUTE|仅支持执行本机编译存储过程和用户定义函数。|  
 |Feature|用户定义聚合|不能在本机编译的存储过程中使用用户定义的聚合函数。 从过程中删除对该函数的引用。|  
@@ -139,7 +139,7 @@ ms.locfileid: "98169807"
 |操作员|OFFSET|不支持此运算符。 从本机编译的存储过程中删除 **OFFSET** 。|  
 |操作员|INTERSECT|不支持此运算符。 从本机编译的存储过程中删除 **INTERSECT** 。 在某些情况下，可以使用 INNER JOIN 获得相同的结果。|  
 |操作员|EXCEPT|不支持此运算符。 从本机编译的存储过程中删除 **EXCEPT** 。|  
-|操作员|APPLY|适用对象：[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和自 [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)] 开始的 SQL Server<br/>不支持此运算符。 从本机编译的存储过程中删除 **APPLY** 。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server 不支持本机编译模块中的 APPLY 运算符。|  
+|操作员|APPLY|适用对象：[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和自 [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)] 开始的 SQL Server<br/>不支持此运算符。 从本机编译的存储过程中删除 **APPLY** 。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 开始的 SQL Server 不支持本机编译模块中的 APPLY 运算符。|  
 |操作员|PIVOT|不支持此运算符。 从本机编译的存储过程中删除 **PIVOT** 。|  
 |操作员|UNPIVOT|不支持此运算符。 从本机编译的存储过程中删除 **UNPIVOT** 。|  
 |操作员|CONTAINS|不支持此运算符。 从本机编译的存储过程中删除 **CONTAINS** 。|  
@@ -157,7 +157,7 @@ ms.locfileid: "98169807"
 |联接提示|HASH、MERGE|本机编译的存储过程仅支持嵌套的循环联接。 不支持哈希和合并联接。 删除联接提示。|  
 |查询提示|*查询提示*|此查询提示不位于本机编译的存储过程内。 有关支持的查询提示，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。|  
 |选项|PERCENT|**TOP** 子句不支持此选项。 从本机编译的存储过程中的查询删除 **PERCENT** 。|  
-|选项|WITH TIES|适用对象：[!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]<br/>**TOP** 子句不支持此选项。 从本机编译的存储过程中的查询删除 **WITH TIES** 。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server 不支持 TOP WITH TIES。|  
+|选项|WITH TIES|适用对象：[!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]<br/>**TOP** 子句不支持此选项。 从本机编译的存储过程中的查询删除 **WITH TIES** 。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 开始的 SQL Server 不支持 TOP WITH TIES。|  
 |聚合函数|*聚合函数*|并非支持所有聚合函数。 有关本机编译 T-SQL 模块中支持的聚合函数的详细信息，请参阅[本机编译 T-SQL 模块中支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。|  
 |排名函数|*排名函数*|本机编译的存储过程中不支持排名函数。 从过程定义中删除它们。|  
 |函数|*Function*|不支持此函数。 有关本机编译 T-SQL 模块中受支持的函数的详细信息，请参阅[本机编译 T-SQL 模块的受支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。|  

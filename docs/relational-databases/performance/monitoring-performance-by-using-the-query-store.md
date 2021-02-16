@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: e61f723ddbc3010cc705c076675b731482fdee6b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c8a836f1a8daf2b4b6a9d5b76156191799013484
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171839"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341711"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 
@@ -31,7 +31,7 @@ ms.locfileid: "98171839"
 有关在 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中运行查询存储的信息，请参阅[在 Azure SQL 数据库中运行查询存储](best-practice-with-the-query-store.md#Insight)。
 
 > [!IMPORTANT]
-> 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 中正在运行的工作负载见解使用查询存储，请尽快安装 [KB 4340759](https://support.microsoft.com/help/4340759) 中的性能可伸缩性修补程序。
+> 如果仅对 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 中正在运行的工作负载见解使用查询存储，请尽快安装 [KB 4340759](https://support.microsoft.com/help/4340759) 中的性能可伸缩性修补程序。
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> 启用查询存储
 
@@ -645,7 +645,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 #### <a name="a-namectp23-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> 计划强制支持快进和静态游标
 
-从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 Azure SQL 数据库（所有部署模型）开始，查询数据存储支持为快进和静态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及 API 游标强制执行查询执行计划。 支持通过 `sp_query_store_force_plan` 或通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询存储报表进行强制执行。
+从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 和 Azure SQL 数据库（所有部署模型）开始，查询数据存储支持为快进和静态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及 API 游标强制执行查询执行计划。 支持通过 `sp_query_store_force_plan` 或通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询存储报表进行强制执行。
 
 ### <a name="remove-plan-forcing-for-a-query"></a>删除为查询强制执行的计划
 

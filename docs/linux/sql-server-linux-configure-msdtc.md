@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: f4f323e1649e022487ca9505ac5a6a949087b00f
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: a2013fb1e32d14bed4b92aa0cc2394ad3a5c9174
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115510"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349123"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)
 
@@ -52,23 +52,23 @@ MSDTC 为 mssql-conf 实用程序引入了两个配置参数：
 
 配置 MSDTC 通信和功能需要执行三个步骤。 如果不执行必要的配置步骤，SQL Server 不会启用 MSDTC 功能。
 
-- 使用 mssql-conf 配置“network.rpcport”和“distributedtransaction.servertcpport”********。
-- 配置防火墙以允许在“distributedtransaction.servertcpport”和端口 135 上进行通信****。
-- 配置 Linux 服务器路由，以便将端口 135 上的 RPC 通信重定向到 SQL Server 的“network.rpcport”****。
+- 使用 mssql-conf 配置“network.rpcport”和“distributedtransaction.servertcpport”。
+- 配置防火墙以允许在“distributedtransaction.servertcpport”和端口 135 上进行通信。
+- 配置 Linux 服务器路由，以便将端口 135 上的 RPC 通信重定向到 SQL Server 的“network.rpcport”。
 
 以下部分提供了每个步骤的详细说明。
 
 ## <a name="configure-rpc-and-msdtc-ports"></a>配置 RPC 和 MSDTC 端口
 
-首先，使用 mssql-conf 配置“network.rpcport”和“distributedtransaction.servertcpport”********。 此步骤特定于 SQL Server，并且在所有支持的分发中是通用的。
+首先，使用 mssql-conf 配置“network.rpcport”和“distributedtransaction.servertcpport”。 此步骤特定于 SQL Server，并且在所有支持的分发中是通用的。
 
-1. 使用 mssql-conf 设置“network.rpcport”的值****。 以下示例将其设置为 13500。
+1. 使用 mssql-conf 设置“network.rpcport”的值。 以下示例将其设置为 13500。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.rpcport 13500
    ```
 
-2. 设置“distributedtransaction.servertcpport”的值****。 以下示例将其设置为 51999。
+2. 设置“distributedtransaction.servertcpport”的值。 以下示例将其设置为 51999。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport 51999
@@ -82,7 +82,7 @@ MSDTC 为 mssql-conf 实用程序引入了两个配置参数：
 
 ## <a name="configure-the-firewall"></a>配置防火墙
 
-第二步是配置防火墙以允许在“servertcpport”和端口 135 上进行通信。****。  这使 RPC 终结点映射进程和 MSDTC 进程能够与外部的其他事务管理器和协调器进行通信。 实际步骤因 Linux 分发和防火墙而异。 
+第二步是配置防火墙以允许在“servertcpport”和端口 135 上进行通信。。  这使 RPC 终结点映射进程和 MSDTC 进程能够与外部的其他事务管理器和协调器进行通信。 实际步骤因 Linux 分发和防火墙而异。 
 
 以下示例演示如何在“Ubuntu”上创建这些规则。
 
@@ -103,11 +103,11 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing"></a>配置端口路由
 
-配置 Linux 服务器路由表，以便将端口 135 上的 RPC 通信重定向到 SQL Server 的“network.rpcport”****。 不同分发上端口转发的配置机制可能不同。 以下部分提供适用于 Ubuntu、SUS Enterprise Linux (SLES) 和 Red Hat Enterprise Linux (RHEL) 的相关指导。
+配置 Linux 服务器路由表，以便将端口 135 上的 RPC 通信重定向到 SQL Server 的“network.rpcport”。 不同分发上端口转发的配置机制可能不同。 以下部分提供适用于 Ubuntu、SUS Enterprise Linux (SLES) 和 Red Hat Enterprise Linux (RHEL) 的相关指导。
 
 ### <a name="port-routing-in-ubuntu-and-sles"></a>Ubuntu 和 SLES 中的端口路由
 
-Ubuntu 和 SLES 不使用“firewalld”服务，因此 iptable 规则就是实现端口路由的有效机制********。 在重新启动期间，“iptable”规则可能不会永久发挥作用，因此以下命令还提供了在重新启动后恢复规则作用的说明****。
+Ubuntu 和 SLES 不使用“firewalld”服务，因此 iptable 规则就是实现端口路由的有效机制。 在重新启动期间，“iptable”规则可能不会永久发挥作用，因此以下命令还提供了在重新启动后恢复规则作用的说明。
 
 1. 为端口 135 创建路由规则。 在以下示例中，端口 135 定向到上一节中定义的 RPC 端口 13500。 将 `<ipaddress>` 替换为服务器的 IP 地址。
 
@@ -139,9 +139,9 @@ Ubuntu 和 SLES 不使用“firewalld”服务，因此 iptable 规则就是实�
    ```
 
    > [!NOTE]
-   > 需要具有超级用户 (sudo) 权限才能编辑“rc.local”或“after.local”文件********。
+   > 需要具有超级用户 (sudo) 权限才能编辑“rc.local”或“after.local”文件。
 
-“iptables-save”和“iptables-restore”命令以及 `rc.local`/`after.local` 启动配置提供了保存和恢复 iptables 条目的基本机制 。 可能有更高级或更自动化的选项，具体取决于 Linux 分发。 例如，Ubuntu 替代方案是 iptables-persistent 包，用于使条目持久****。
+“iptables-save”和“iptables-restore”命令以及 `rc.local`/`after.local` 启动配置提供了保存和恢复 iptables 条目的基本机制 。 可能有更高级或更自动化的选项，具体取决于 Linux 分发。 例如，Ubuntu 替代方案是 iptables-persistent 包，用于使条目持久。
 
 > [!IMPORTANT]
 > 前面的步骤假设为固定的 IP 地址。 如果 SQL Server 实例的 IP 地址发生更改（由于手动干预或 DHCP），则需要删除并重新创建路由规则（如果它们是使用 iptables 创建的）。 如果需要重新创建或删除现有路由规则，可以使用以下命令删除旧 `RpcEndPointMapper` 规则：
@@ -152,7 +152,7 @@ Ubuntu 和 SLES 不使用“firewalld”服务，因此 iptable 规则就是实�
 
 ### <a name="port-routing-in-rhel"></a>RHEL 中的端口路由
 
-在使用“firewalld”服务的分发（例如 Red Hat Enterprise Linux）上，可以使用同一服务来打开服务器上的端口和实现内部端口转发****。 例如，在 Red Hat Enterprise Linux 上，应使用“firewalld”服务（通过带有 `-add-forward-port` 或类似选项的“firewall-cmd”配置实用程序）来创建和管理永久性端口转发规则，而非使用 iptables********。
+在使用“firewalld”服务的分发（例如 Red Hat Enterprise Linux）上，可以使用同一服务来打开服务器上的端口和实现内部端口转发。 例如，在 Red Hat Enterprise Linux 上，应使用“firewalld”服务（通过带有 `-add-forward-port` 或类似选项的“firewall-cmd”配置实用程序）来创建和管理永久性端口转发规则，而非使用 iptables。
 
 ```bash
 sudo firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
@@ -161,7 +161,7 @@ sudo firewall-cmd --reload
 
 ## <a name="verify"></a>Verify
 
-此时，SQL Server 应已能够参与分布式事务。 若要验证 SQL Server 是否正在侦听，请运行“netstat”命令（如果使用的是 RHEL，则可能需要先安装“net-tools”包）********：
+此时，SQL Server 应已能够参与分布式事务。 若要验证 SQL Server 是否正在侦听，请运行“netstat”命令（如果使用的是 RHEL，则可能需要先安装“net-tools”包）：
 
 ```bash
 sudo netstat -tulpn | grep sqlservr
@@ -180,11 +180,11 @@ tcp6 0 0 :::13500 :::* LISTEN 13911/sqlservr
 tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 ```
 
-但是，重新启动后，SQL Server 在第一个分布式事务之前不会开始侦听“servertcpport”****。 在本例中，第一个分布式事务发生之前，SQL Server 不会侦听端口 51999。
+但是，重新启动后，SQL Server 在第一个分布式事务之前不会开始侦听“servertcpport”。 在本例中，第一个分布式事务发生之前，SQL Server 不会侦听端口 51999。
 
 ## <a name="configure-authentication-on-rpc-communication-for-msdtc"></a>为 MSDTC 配置 RPC 通信身份验证
 
-默认情况下，Linux 上 SQL Server 的 MSDTC 不对 RPC 通信使用身份验证。 但是，当主机加入 Active Directory (AD) 域时，可使用以下“mssql-conf”设置将 MSDTC 配置为使用经过身份验证的 RPC 通信****：
+默认情况下，Linux 上 SQL Server 的 MSDTC 不对 RPC 通信使用身份验证。 但是，当主机加入 Active Directory (AD) 域时，可使用以下“mssql-conf”设置将 MSDTC 配置为使用经过身份验证的 RPC 通信：
 
 | 设置 | 描述 |
 |---|---|

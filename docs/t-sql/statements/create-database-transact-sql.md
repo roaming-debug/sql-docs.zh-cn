@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DATABASE_TSQL
 - DATABASE
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: 5321af1026b82d2ed49f077d7cf5604bce3a8e69
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 509e4fc7445371c57d0fed7208d556e53aa18fe8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98689012"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063032"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -371,7 +371,7 @@ SIZE size 指定文件的大小。
 
 size 文件的初始大小。
 
-如果没有为主文件提供 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用 model 数据库中主文件的大小。 model 数据库中主文件的默认大小为 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）或 1 MB（对于较早版本）。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始）或 1 MB（对于较早版本）作为该文件的大小。 为主文件指定的大小至少应与 model 数据库的主文件大小相同。
+如果没有为主文件提供 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用 model 数据库中主文件的大小。 model 数据库中主文件的默认大小为 8 MB（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）或 1 MB（对于较早版本）。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 8 MB（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始）或 1 MB（对于较早版本）作为该文件的大小。 为主文件指定的大小至少应与 model 数据库的主文件大小相同。
 
 可以使用千字节 (KB)、兆字节 (MB)、千兆字节 (GB) 或兆兆字节 (TB) 后缀。 默认值为 MB。 指定一个整数，不包含小数位。 *Size* 是一个整数值。 对于大于 2147483647 的值，使用更大的单位。
 
@@ -396,7 +396,7 @@ growth_increment 每次需要新空间时为文件添加的空间量。
 
 |版本|默认值|
 |-------------|--------------------|
-|从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 开始|数据 64 MB。 日志文件 64 MB。|
+|从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始|数据 64 MB。 日志文件 64 MB。|
 |从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始|数据 1 MB。 日志文件 10%。|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|数据 10%。 日志文件 10%。|
 

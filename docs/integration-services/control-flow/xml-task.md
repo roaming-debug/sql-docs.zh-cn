@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 663f3fa3642a538e7be00a525a33fbc857aeff03
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: f3b2b309d07e14347aa2d89038c897b3db804c9b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194919"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354400"
 ---
 # <a name="xml-task"></a>XML 任务
 
@@ -152,12 +152,12 @@ ms.locfileid: "92194919"
   
 |值|说明|  
 |-----------|-----------------|  
-|**验证**|根据文档类型定义 (DTD) 或 XML 架构定义 (XSD) 架构验证 XML 文档。 选择此选项将在 **Validate**部分中显示动态选项。|  
-|**XSLT**|对 XML 文档执行 XSL 转换。 选择此选项将在 **XSLT**部分中显示动态选项。|  
-|**XPATH**|执行 XPath 查询和计算。 选择此选项将在 **XPATH**部分中显示动态选项。|  
-|**合并**|合并两个 XML 文档。 选择此选项将在 **Merge**部分中显示动态选项。|  
-|**差异**|比较两个 XML 文档。 选择此选项将在 **Diff**部分中显示动态选项。|  
-|**Patch**|应用 Diff 运算的输出以创建新文档。 选择此选项将在 **Patch**部分中显示动态选项。|  
+|**验证**|根据文档类型定义 (DTD) 或 XML 架构定义 (XSD) 架构验证 XML 文档。 选择此选项将在 **Validate** 部分中显示动态选项。|  
+|**XSLT**|对 XML 文档执行 XSL 转换。 选择此选项将在 **XSLT** 部分中显示动态选项。|  
+|**XPATH**|执行 XPath 查询和计算。 选择此选项将在 **XPATH** 部分中显示动态选项。|  
+|**合并**|合并两个 XML 文档。 选择此选项将在 **Merge** 部分中显示动态选项。|  
+|**差异**|比较两个 XML 文档。 选择此选项将在 **Diff** 部分中显示动态选项。|  
+|**Patch**|应用 Diff 运算的输出以创建新文档。 选择此选项将在 **Patch** 部分中显示动态选项。|  
   
  **SourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项。  
@@ -209,7 +209,7 @@ ms.locfileid: "92194919"
 |值|说明|  
 |-----------|-----------------|  
 |**DTD**|使用文档类型定义 (DTD)。|  
-|**XSD**|使用 XML 架构定义 (XSD) 架构。 选择此选项将在 **ValidationType**部分中显示动态选项。|  
+|**XSD**|使用 XML 架构定义 (XSD) 架构。 选择此选项将在 **ValidationType** 部分中显示动态选项。|  
   
  **FailOnValidationFail**  
  指定在文档验证失败时操作是否失败。  

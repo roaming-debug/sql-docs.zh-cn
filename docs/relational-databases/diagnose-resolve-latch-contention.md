@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af2caf850d3f7facb61a7484c5af44e4ba785fa3
-ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
+ms.openlocfilehash: 67f6fe5f8c1577142ac2356a070a954f94b856f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98860910"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075011"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>诊断和解决 SQL Server 上的闩锁争用问题
 
@@ -89,16 +89,16 @@ SQL Server 中一个页的大小为 8 KB，可以存储多行。 为了提高并
 
 累积等待信息由 SQL Server 跟踪，可使用动态管理视图 (DMW) sys.dm_os_wait_stats 进行访问。 SQL Server 使用由 sys.dm_os_wait_stats  DMV 中的相应“wait_type”定义的三种闩锁等待类型：
 
-* **缓冲区 (BUF) 闩锁：** 用于保证用户对象的索引页和数据页的一致性。 还可以使用它们来保护对 SQL Server 用于系统对象的数据页的访问。 例如，管理分配的页受缓冲区闩锁保护。 其中包括页可用空间 (PFS) 页、全局分配映射 (GAM) 页、共享全局分配映射 (SGAM) 页和索引分配映射 (IAM) 页。 缓冲区闩锁在 sys.dm_os_wait_stats 中报告，wait_type 为 *PAGELATCH\_\*_。
+* **缓冲区 (BUF) 闩锁：** 用于保证用户对象的索引页和数据页的一致性。 还可以使用它们来保护对 SQL Server 用于系统对象的数据页的访问。 例如，管理分配的页受缓冲区闩锁保护。 其中包括页可用空间 (PFS) 页、全局分配映射 (GAM) 页、共享全局分配映射 (SGAM) 页和索引分配映射 (IAM) 页。 缓冲区闩锁在 sys.dm_os_wait_stats 中报告，wait_type 为 PAGELATCH\_\*。
 
-_ **非缓冲区 (Non-BUF) 闩锁：** 用于保证除缓冲池页以外的任何内存中结构的一致性。 非缓冲区闩锁的任何等待事件都将以 wait_type 为 *LATCH\_\*_ 的形式报告。
+* **非缓冲区 (Non-BUF) 闩锁：** 用于保证除缓冲池页以外的任何内存中结构的一致性。 非缓冲区闩锁的任何等待事件都将以 wait_type 为 LATCH\_\* 的形式报告。
 
-_ **IO 闩锁：** 缓冲区闩锁的一个子集。当受缓冲区闩锁保护的相同结构需要通过 I/O 操作加载到缓冲池时，IO 闩锁可以保证这些结构的一致性。 IO 闩锁可防止另一个线程使用不兼容的闩锁将同一页加载到缓冲池中。 与 wait_type *PAGEIOLATCH\_\*_ 关联。
+* **IO 闩锁：** 缓冲区闩锁的一个子集。当受缓冲区闩锁保护的相同结构需要通过 I/O 操作加载到缓冲池时，IO 闩锁可以保证这些结构的一致性。 IO 闩锁可防止另一个线程使用不兼容的闩锁将同一页加载到缓冲池中。 与 wait_type PAGEIOLATCH\_\* 关联。
 
    > [!NOTE]
    > 如果看到大量的 PAGEIOLATCH 等待，则表明 SQL Server 正在等待 I/O 子系统。 尽管一定数量的 PAGEIOLATCH 等待是正常现象，但如果 PAGEIOLATCH 平均等待时间始终超过10 毫秒 (ms)，则应调查 I/O 子系统承受压力的原因。
 
-如果在检查 _sys.dm_os_wait_stats* DMV 时遇到非缓冲区闩锁，则必须检查 sys.dm_os_latch_waits，以获取非缓冲区闩锁的累积等待信息的详细分类。 所有缓冲区闩锁等待都归类为 BUFFER 闩锁类，其余类用于对非缓冲区闩锁进行分类。
+如果在检查 sys.dm_os_wait_stats DMV 时遇到非缓冲区闩锁，则必须检查 sys.dm_os_latch_waits，以获取非缓冲区闩锁的累积等待信息的详细分类。 所有缓冲区闩锁等待都归类为 BUFFER 闩锁类，其余类用于对非缓冲区闩锁进行分类。
 
 ## <a name="symptoms-and-causes-of-sql-server-latch-contention"></a>SQL Server 闩锁争用的症状和原因
 

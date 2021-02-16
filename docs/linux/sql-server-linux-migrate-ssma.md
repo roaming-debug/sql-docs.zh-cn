@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: 661fbd184750fbb912ef44d28c7d6cdf2d68c917
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 7a134cda88301451272644e53cb45c1fb7d3aee0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115820"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339108"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant-ssma"></a>使用 SQL Server 迁移助手 (SSMA) 自动将数据库迁移到 Linux
 
@@ -33,7 +33,7 @@ SSMA 支持将多种源数据库（包括 Oracle、MySQL、Sybase、DB2 和 Micr
 开始前，需从下面的列表中下载源数据库对应的 SQL Server 迁移助手 (SSMA)：
 - [适用于 Access 的 SSMA](https://aka.ms/ssmaforaccess)
 - [适用于 DB2 的 SSMA](https://aka.ms/ssmafordb2)
-- [适用于 MySql 的 SSMA](https://aka.ms/ssmaformysql) 
+- [适用于 MySql 的 SSMA](https://aka.ms/ssmaformysql) 
 - [适用于 Oracle 的 SSMA](https://aka.ms/ssmafororacle)
 - [适用于 Sybase ASE 的 SSMA](https://aka.ms/ssmaforsybase) 
 

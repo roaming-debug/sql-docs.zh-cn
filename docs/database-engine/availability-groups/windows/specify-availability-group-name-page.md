@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f5171195bb3d275eb170330565cd9f90531dc0c6
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: 82671e390d67faf6a7059a0d4c267dd744b5a936
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783394"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100352576"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 可用性组的“指定可用性组选项”页
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "98783394"
 
    * EXTERNAL
       
-      当可用性组托管在由外部群集技术（例如 Linux 上的 Pacemaker）管理的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例上时使用，以实现高可用性和灾难恢复。 适用于 [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] 及更高版本。
+      当可用性组托管在由外部群集技术（例如 Linux 上的 Pacemaker）管理的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例上时使用，以实现高可用性和灾难恢复。 适用于 [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] 及更高版本。
 
    * **NONE**
       
-      当可用性组托管在不由群集技术管理的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例上时使用，以实现读取缩放和负载均衡。 适用于 [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] 及更高版本。 
+      当可用性组托管在不由群集技术管理的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例上时使用，以实现读取缩放和负载均衡。 适用于 [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] 及更高版本。 
  
    数据库级别运行状况检测 勾选此框，为可用性组启用数据库级别运行状况检测 (DB_FAILOVER)。 数据库运行状况检测会说明数据库何时不再处于联机状态、何时出错以及何时触发可用性组的自动故障转移。 请参阅 [SQL Server AlwaysOn 数据库运行状况检测故障转移选项](sql-server-always-on-database-health-detection-failover-option.md)。
 
