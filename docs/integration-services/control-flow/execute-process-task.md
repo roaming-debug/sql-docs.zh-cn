@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b19a591448da6e14c6275462ba6cb5ae595092a0
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 98409c2a75cc76589a705579ff02f1be34c9c7b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197207"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352116"
 ---
 # <a name="execute-process-task"></a>执行进程任务
 
@@ -128,7 +128,7 @@ ms.locfileid: "92197207"
  选择捕获处理器的错误输出的变量，或单击 \<**New variable...**> 创建新的变量。  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
- 指示在进程退出代码与 **SuccessValue**中指定的值不同时任务是否失败。  
+ 指示在进程退出代码与 **SuccessValue** 中指定的值不同时任务是否失败。  
   
  **SuccessValue**  
  指定可执行文件返回的用来指示进程成功的值。 默认情况下，此值设置为 **0**。  
@@ -137,7 +137,7 @@ ms.locfileid: "92197207"
  指定进程可以运行的秒数。 如果值为 **0** ，则表示不使用超时值，进程一直运行到处理完毕或出错为止。  
   
  **TerminateProcessAfterTimeOut**  
- 指示在 **TimeOut** 选项指定的超时期限过后是否强制结束进程。 只有在 **TimeOut** 不为 **0**时，此选项才可用。  
+ 指示在 **TimeOut** 选项指定的超时期限过后是否强制结束进程。 只有在 **TimeOut** 不为 **0** 时，此选项才可用。  
   
  **WindowStyle**  
  指定用于运行进程的窗口样式。  

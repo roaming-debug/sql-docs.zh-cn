@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e6b0c8547718c1a7580108427314a4a58f4ba0b5
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: acf2d400610afdaf695f696ae8f63edfc6fd0a24
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641803"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344510"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用“对象资源管理器详细信息”来监视可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

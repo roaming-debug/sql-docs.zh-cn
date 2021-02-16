@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - STATISTICS
 - STATISTICS_TSQL
@@ -27,12 +27,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0e799f28d327204707298dc63a4fb1a8470fa2f
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 7a86a2cfbe236aad6e37e0f8895f2be29ec1c5ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170519"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100344019"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -171,7 +171,7 @@ CREATE STATISTICS statistics_name
  > [!NOTE]
  > 如果该表被截断，则截断的 HoBT 上生成的所有统计信息将恢复为使用默认采样百分比。
 
- **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4 开始）及更高版本（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 开始）。    
+ **适用于**：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4 开始）及更高版本（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 开始）。    
   
  STATS_STREAM stats_stream **=**   
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -202,7 +202,7 @@ CREATE STATISTICS statistics_name
 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
 MAXDOP = max_degree_of_parallelism  
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
   
  在统计信息操作期间替代最大并行度配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   

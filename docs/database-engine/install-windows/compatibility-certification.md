@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 0231dbe4d6be585892dc3d97b911e4206f182ef4
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: c9a4b07a3e6db3da84845f4689ecd373b30e7306
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236688"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353840"
 ---
 # <a name="compatibility-certification"></a>兼容性认证
 

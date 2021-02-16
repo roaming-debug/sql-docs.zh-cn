@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - OPENROWSET_TSQL
 - OPENROWSET
@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 43f3bbae327731f6522b71c0fdaafbc9441fe9ca
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a2c7af1aaa1840b3c3468a00541f96325d8a5c52
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169746"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100352406"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -159,8 +159,8 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DATA;
 ```
 
-**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
-自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 起，data_file 可位于 Azure Blob 存储中。 例如，请参阅[批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
+**适用于：** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]CTP 1.1。
+自 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1 起，data_file 可位于 Azure Blob 存储中。 例如，请参阅[批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
 
 > [!IMPORTANT]
 > Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
@@ -171,12 +171,12 @@ SELECT * FROM OPENROWSET(
 `ERRORFILE` ='file_name' 指定用于收集格式有误且不能转换为 OLE DB 行集的行的文件  。 这些行将按原样从数据文件复制到此错误文件中。
 
 错误文件在开始执行命令时创建。 如果该文件已存在，将引发一个错误。 此外，还创建了一个扩展名为 .ERROR.txt 的控制文件。 此文件引用错误文件中的每一行并提供错误诊断。 纠正错误后即可加载数据。
-**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
-从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，`error_file_path` 可位于 Azure Blob 存储中。
+**适用于：** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]CTP 1.1。
+从 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 开始，`error_file_path` 可位于 Azure Blob 存储中。
 
 ##### <a name="errorfile_data_source_name"></a>ERRORFILE_DATA_SOURCE_NAME
-**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
-是命名的外部数据源，指向错误文件的 Azure Blob 存储位置，该错误文件包含导入过程中发现的错误。 外部数据源必须使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中添加的 `TYPE = BLOB_STORAGE` 选项创建。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
+**适用于：** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]CTP 1.1。
+是命名的外部数据源，指向错误文件的 Azure Blob 存储位置，该错误文件包含导入过程中发现的错误。 外部数据源必须使用 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1 中添加的 `TYPE = BLOB_STORAGE` 选项创建。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
 ##### <a name="maxerrors"></a>MAXERRORS
 `MAXERRORS` =maximum_errors 指定在 OPENROWSET 引发异常之前允许发生的最多语法错误数或格式有误的行数（如格式化文件中所述）  。 在达到 MAXERRORS 之前，OPENROWSET 会忽略每个错误行，不加载它，并将其计为一个错误。
@@ -249,10 +249,10 @@ SELECT *
 |ACP|将数据类型为 char、varchar 或 text 的列由 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页    。|
 |OEM（默认值）|将数据类型为 char、varchar 或 text 的列由系统 OEM 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页    。|
 |RAW|不执行从一个代码页到另一个代码页的转换。 这是执行最快的选项。|
-|*code_page*|指示数据文件中字符数据已编码的源代码页，例如 850。<br /><br /> **重要提示**：低于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|
+|*code_page*|指示数据文件中字符数据已编码的源代码页，例如 850。<br /><br /> **重要提示**：低于 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|
 
 ##### <a name="format"></a>FORMAT
-`FORMAT` = 'CSV' 适用范围：   [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
+`FORMAT` = 'CSV' 适用范围：   [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]CTP 1.1。
 指定符合 [RFC 4180](https://tools.ietf.org/html/rfc4180) 标准的逗号分隔值文件。
 
 ```sql
@@ -270,11 +270,11 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 
 有关格式化文件的信息，请参阅[使用格式化文件批量导入数据 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。
 
-**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
-从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，format_file_path 可位于 Azure Blob 存储中。 例如，请参阅[批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
+**适用于：** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]CTP 1.1。
+从 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1 开始，format_file_path 可位于 Azure Blob 存储中。 例如，请参阅[批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
 
 ##### <a name="fieldquote"></a>FIELDQUOTE
-`FIELDQUOTE`= 'field_quote' 适用范围   ：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
+`FIELDQUOTE`= 'field_quote' 适用范围   ：[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]CTP 1.1。
 指定将用作 CSV 文件引号字符的字符。 如果未指定，根据 [RFC 4180](https://tools.ietf.org/html/rfc4180) 标准中的定义，引号字符 (") 将用作引号字符。
 
 ## <a name="remarks"></a>备注
@@ -447,7 +447,7 @@ OPENROWSET (BULK N'D:\data.csv', FORMATFILE =
 
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. 访问有格式化文件的 CSV 文件的数据
 
-**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
+**适用于：** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]CTP 1.1。
 
 ```sql
 SELECT *
@@ -484,7 +484,7 @@ FROM OPENROWSET
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. 访问 Azure Blob 存储上存储的文件的数据
 
-**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
+**适用于：** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]CTP 1.1。
 下例使用外部数据源，该外部数据源指向 Azure 存储帐户中的容器和为共享访问签名创建的数据库范围的凭据。
 
 ```sql

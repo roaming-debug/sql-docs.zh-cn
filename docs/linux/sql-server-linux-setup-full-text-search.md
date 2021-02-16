@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 054de1a7f4213a7a8c23ff44bab021d2b64c9f35
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 406c1a5eb384db2d03514193e0e252ca89c94bd4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088775"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346375"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安装 SQL Server 全文搜索
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-下列步骤介绍在 Linux 上安装[SQL Server 全文搜索](../relational-databases/search/full-text-search.md) (mssql-server-fts)****。 全文搜索提供了对 SQL Server 表中基于字符的数据运行全文查询的功能。 对于此版本的已知问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
+下列步骤介绍在 Linux 上安装[SQL Server 全文搜索](../relational-databases/search/full-text-search.md) (mssql-server-fts)。 全文搜索提供了对 SQL Server 表中基于字符的数据运行全文查询的功能。 对于此版本的已知问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
 > [!NOTE]
-> 在安装 SQL Server 全文搜索前，首先请[安装 SQL Server](sql-server-linux-setup.md#platforms)。 这将配置安装 mssql-server-fts 包时要用到的密钥和存储库****。
+> 在安装 SQL Server 全文搜索前，首先请[安装 SQL Server](sql-server-linux-setup.md#platforms)。 这将配置安装 mssql-server-fts 包时要用到的密钥和存储库。
 
 为以下平台安装 SQL Server 全文搜索：
 
@@ -32,13 +32,13 @@ ms.locfileid: "88088775"
 
 ## <a name=""></a><a name="RHEL">在 RHEL 上安装</a>
 
-通过下列命令在 Red Hat Enterprise Linux 上安装 mssql-server-fts****。 
+通过下列命令在 Red Hat Enterprise Linux 上安装 mssql-server-fts。 
 
 ```bash
 sudo yum install -y mssql-server-fts
 ```
 
-如果已安装 mssql-server-fts，可使用下列命令将其更新至最新版本****：
+如果已安装 mssql-server-fts，可使用下列命令将其更新至最新版本：
 
 ```bash
 sudo yum check-update
@@ -49,14 +49,14 @@ sudo yum update mssql-server-fts
 
 ## <a name=""></a><a name="ubuntu">在 Ubuntu 上安装</a>
 
-通过下列命令在 Ubuntu 上安装 mssql-server-fts****。 
+通过下列命令在 Ubuntu 上安装 mssql-server-fts。 
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts
 ```
 
-如果已安装 mssql-server-fts，可使用下列命令将其更新至最新版本****：
+如果已安装 mssql-server-fts，可使用下列命令将其更新至最新版本：
 
 ```bash
 sudo apt-get update 
@@ -67,13 +67,13 @@ sudo apt-get install -y mssql-server-fts
 
 ## <a name=""></a><a name="SLES">在 SLES 上安装</a>
 
-通过下列命令在 SUSE Linux Enterprise Server 上安装 mssql-server-fts****。 
+通过下列命令在 SUSE Linux Enterprise Server 上安装 mssql-server-fts。 
 
 ```bash
 sudo zypper install mssql-server-fts
 ```
 
-如果已安装 mssql-server-fts，可使用下列命令将其更新至最新版本****：
+如果已安装 mssql-server-fts，可使用下列命令将其更新至最新版本：
 
 ```bash
 sudo zypper refresh
@@ -84,7 +84,7 @@ sudo zypper update mssql-server-fts
 
 ## <a name="supported-languages"></a>支持的语言
 
-全文搜索使用[分词系统](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)来确定如何标识基于语言的单个单词。 可通过查询 sys.fulltext_languages 目录视图获取注册的分词系统列表****。 SQL Server 已安装以下语言的分词系统：
+全文搜索使用[分词系统](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)来确定如何标识基于语言的单个单词。 可通过查询 sys.fulltext_languages 目录视图获取注册的分词系统列表。 SQL Server 已安装以下语言的分词系统：
 
 | Language | 语言 ID |
 |---|---|
@@ -146,7 +146,7 @@ sudo zypper update mssql-server-fts
 
 全文搜索还适用于二进制文件中存储的文本。 但在这种情况下，需要安装一个筛选器来处理文件。 有关筛选器的详细信息，请参阅[配置和管理搜索筛选器](../relational-databases/search/configure-and-manage-filters-for-search.md)
 
-可调用 sp_help_fulltext_system_components 'filter' 来查看已安装的筛选器列表****。 对于 SQL Server，已安装的筛选器包括：
+可调用 sp_help_fulltext_system_components 'filter' 来查看已安装的筛选器列表。 对于 SQL Server，已安装的筛选器包括：
 
 | 组件名称 | 类 ID | 版本 |
 |---|---|---|
@@ -256,7 +256,7 @@ sudo zypper update mssql-server-fts
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>语义搜索
-[语义搜索](../relational-databases/search/semantic-search-sql-server.md)建立在全文搜索功能的基础上，用于提取和索引与统计相关的关键短语**。 这使你能查询数据库中文档内的含义。 它还有助于标识其他类似的文档。
+[语义搜索](../relational-databases/search/semantic-search-sql-server.md)建立在全文搜索功能的基础上，用于提取和索引与统计相关的关键短语。 这使你能查询数据库中文档内的含义。 它还有助于标识其他类似的文档。
 
 要使用语义搜索，必须先将语义语言统计信息数据库还原到你的计算机。
 

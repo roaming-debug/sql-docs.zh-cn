@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 4a9137ad71947d222d246df046c6ab573fb4500d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f4201aa6c07d4ae96d44d8aa443b23e275e1f9f2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115810"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346415"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 的安全功能演练
 
@@ -82,12 +82,12 @@ ALTER ROLE db_datareader ADD MEMBER Jerry;
 
 例如，以下语句创建名为 `Sales` 的数据库角色，为 `Sales` 组授予从 `Orders` 表查看、更新和删除行的权限，并将用户 `Jerry` 添加到 `Sales` 角色。   
    
-```   
-CREATE ROLE Sales;   
-GRANT SELECT ON Object::Sales TO Orders;   
-GRANT UPDATE ON Object::Sales TO Orders;   
-GRANT DELETE ON Object::Sales TO Orders;   
-ALTER ROLE Sales ADD MEMBER Jerry;   
+```   
+CREATE ROLE Sales;   
+GRANT SELECT ON Object::Sales TO Orders;   
+GRANT UPDATE ON Object::Sales TO Orders;   
+GRANT DELETE ON Object::Sales TO Orders;   
+ALTER ROLE Sales ADD MEMBER Jerry;   
 ```
 
 有关权限系统的详细信息，请参阅[数据库引擎权限入门](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
@@ -99,27 +99,27 @@ ALTER ROLE Sales ADD MEMBER Jerry;  
 
 以下步骤将逐步介绍如何设置两个对 `Sales.SalesOrderHeader` 表具有不同的行级别访问权限的用户。 
 
-创建两个用户帐户以测试行级别安全性：    
+创建两个用户帐户以测试行级别安全性：    
    
-```   
-USE AdventureWorks2014;   
-GO   
+```   
+USE AdventureWorks2014;   
+GO   
    
-CREATE USER Manager WITHOUT LOGIN;     
+CREATE USER Manager WITHOUT LOGIN;     
    
-CREATE USER SalesPerson280 WITHOUT LOGIN;    
+CREATE USER SalesPerson280 WITHOUT LOGIN;    
 ```
 
-向两个用户授予对 `Sales.SalesOrderHeader` 表的读取访问权限：    
+向两个用户授予对 `Sales.SalesOrderHeader` 表的读取访问权限：    
    
-```   
-GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
+```   
+GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
 GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;
 ```
    
 创建一个新架构和一个内联表值函数。 当 `SalesPersonID` 列中的行与 `SalesPerson` 登录名的 ID 匹配，或者执行查询的用户是 Manager 用户时，函数返回 1。   
    
-```     
+```     
 CREATE SCHEMA Security;   
 GO   
    
@@ -129,7 +129,7 @@ WITH SCHEMABINDING
 AS     
    RETURN SELECT 1 AS fn_securitypredicate_result    
 WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())     
-    OR (USER_NAME() = 'Manager');    
+    OR (USER_NAME() = 'Manager');    
 ```
 
 创建一个安全策略，将此函数同时作为筛选器谓词和阻止谓词添加到表上：  
@@ -172,7 +172,7 @@ WITH (STATE = OFF);
 ```
 USE AdventureWorks2014;
 GO
-ALTER TABLE Person.EmailAddress    
+ALTER TABLE Person.EmailAddress    
 ALTER COLUMN EmailAddress    
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
@@ -231,7 +231,7 @@ GO
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-USE AdventureWorks2014;  
+USE AdventureWorks2014;  
 GO
   
 CREATE DATABASE ENCRYPTION KEY  
@@ -254,7 +254,7 @@ SET ENCRYPTION ON;
 
 
 ## <a name="configure-backup-encryption"></a>配置备份加密
-SQL Server 能够在创建备份时加密数据。 通过在创建备份时指定加密算法和加密程序（证书或非对称密钥），可创建加密的备份文件。    
+SQL Server 能够在创建备份时加密数据。 通过在创建备份时指定加密算法和加密程序（证书或非对称密钥），可创建加密的备份文件。    
   
 > [!WARNING]
 > 备份证书或非对称密钥很重要，并且最好备份到与用于加密的备份文件不同的位置。 没有证书或非对称密钥，你将无法还原备份，从而使备份文件无法使用。 
@@ -263,12 +263,12 @@ SQL Server 能够在创建备份时加密数据。 通过在创建备份时指�
 以下示例创建证书，然后创建受该证书保护的备份。
 
 ```
-USE master;  
-GO  
-CREATE CERTIFICATE BackupEncryptCert   
-   WITH SUBJECT = 'Database backups';  
+USE master;  
+GO  
+CREATE CERTIFICATE BackupEncryptCert   
+   WITH SUBJECT = 'Database backups';  
 GO 
-BACKUP DATABASE [AdventureWorks2014]  
+BACKUP DATABASE [AdventureWorks2014]  
 TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 WITH  
   COMPRESSION,  

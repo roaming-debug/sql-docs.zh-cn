@@ -10,12 +10,12 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: c8f697e2bd68a7cbfe7053a4a2f3054d6ed14b85
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 4bdd992e4cea1f2c869f3669905709f91727c874
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943121"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074179"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 SQL Server 或 Azure SQL 数据库中
 
@@ -61,7 +61,7 @@ ms.locfileid: "86943121"
    - SQL Server 实例  。 SQL Server 可在本地或 Azure 虚拟机上运行。 若要下载 SQL Server 的免费评估版或开发人员版，请参阅 [SQL Server 下载](https://www.microsoft.com/sql-server/sql-server-downloads)。
 
 5. **示例数据**。 本教程使用 AdventureWorks 示例数据库中存储在 SQL Server 中的示例数据，作为源数据。 要获取 AdventureWorks 示例数据库，请参阅 [AdventureWorks 示例数据库][AdventureWorks 2014 Sample Databases]。
-6. 要将数据加载到 SQL 数据库中，请参阅**防火墙规则**。 必须先使用本地计算机的 IP 地址在 SQL 数据库上创建防火墙规则，才可将数据上传到 SQL 数据库。
+6. 要将数据加载到 SQL 数据库中，请参阅 **防火墙规则**。 必须先使用本地计算机的 IP 地址在 SQL 数据库上创建防火墙规则，才可将数据上传到 SQL 数据库。
 
 ## <a name="create-a-new-integration-services-project"></a>创建新的 Integration Services 项目
 1. 启动 Visual Studio。

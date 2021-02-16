@@ -12,12 +12,12 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 monikerRange: =sql-server-2016
-ms.openlocfilehash: 95f920fc8648ed646f1056c9d334ee831651f5e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a5038368e66524324fb0189b2f1b06e0b374e41a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465368"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353695"
 ---
 # <a name="migrating-computed-columns"></a>迁移计算列
 
@@ -25,7 +25,7 @@ ms.locfileid: "97465368"
 
 内存优化的表中不支持计算列。 但是，可模拟计算列。
 
-从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，内存优化表和索引中支持计算列。
+从 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 开始，内存优化表和索引中支持计算列。
 
 将基于磁盘的表迁移到内存优化的表时，应考虑是否需要使计算列持久化。 内存优化的表和本机编译的存储过程的性能特征不同，因此可能不需要持久化。  
   

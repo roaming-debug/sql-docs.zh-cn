@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e89cac604654a1793a65bdd43dcd38cf77484b06
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2fa047e5ef018109352972f3ae139c6eff2c1b93
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099369"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100349951"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 排序规则名称 (Transact-SQL)
 
@@ -75,12 +75,12 @@ WidthSensitivity
 省略此选项指定不区分全半角，WS 指定区分全半角。
 
 VariationSelectorSensitivity  
-- **适用对象**：自 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 起 
+- **适用对象**：自 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 起 
 
 - 省略此选项指定区分不区分选择器，VSS 指定区分区分选择器。
 
 **UTF8**  
-- **适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起   
+- **适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 起   
 
 - 指定用于符合条件的数据类型的 UTF-8 编码。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
 
@@ -134,7 +134,7 @@ SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
 SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
-下表列出了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中支持的所有 Windows 排序规则。
+下表列出了 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中支持的所有 Windows 排序规则。
 
 |Windows 区域设置|排序规则版本 100|排序规则版本 90|
 |--------------------|---------------------------|--------------------------|

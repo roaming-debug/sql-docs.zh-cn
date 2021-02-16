@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50c651fac37223ad157ea4ee04c9842a0ee7083c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2716b85dde5aaa7a7e2df15e87004c838b8137ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457099"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353020"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>监视运行包和其他操作
 

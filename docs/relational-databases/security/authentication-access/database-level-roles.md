@@ -39,18 +39,18 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 268aafa5b95bed4c9e2687fef430aa4a972ea2c7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 86560767d969ef5ee7da97c989da7558421f0302
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463158"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344415"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  为便于管理数据库中的权限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了若干“角色”  ，这些角色是用于对其他主体进行分组的安全主体。 它们类似于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 操作系统中的组。 数据库级角色的权限作用域为数据库范围。  
+  为便于管理数据库中的权限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了若干“角色”  ，这些角色是用于对其他主体进行分组的安全主体。 它们类似于 ***Windows 操作系统中的*** 组 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 数据库级角色的权限作用域为数据库范围。  
 
 若要向数据库角色添加和删除成员，请使用 `ADD MEMBER` ALTER ROLE `DROP MEMBER` 语句的 [和](../../../t-sql/statements/alter-role-transact-sql.md) 选项。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 和 Azure Synapse 不支持这样使用 `ALTER ROLE`。 改为使用较早版本的 [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) 过程。
   

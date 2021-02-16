@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d95d8f774d2b9daba6bd2a0e7a179dd901ef0ac
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c5291b502ec70be8b86c6806e14404664d0b0831
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171039"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100347000"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>配置 max worker threads 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "98171039"
   
 -   下表显示了根据 CPU、计算机体系结构和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的各种组合自动配置的最大工作线程数（当值设置为 0 时），计算公式如下：默认最大工作器数 + ((逻辑 CPU 数* - 4) * 每 CPU 工作器数)** 。  
   
-    |CPU 数|32 位计算机（不高于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）|64 位计算机（不高于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1）|64 位计算机（自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起）|   
+    |CPU 数|32 位计算机（不高于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）|64 位计算机（不高于 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1）|64 位计算机（自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起）|   
     |------------|------------|------------|------------|  
     |\<= 4|256|512|512|   
     |8|288|576|576|   
@@ -79,14 +79,14 @@ ms.locfileid: "98171039"
     |128|1248|2496|4480|   
     |256|2272|4544|8576|   
     
-    在不高于 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 的版本中，“每 CPU 工作器数”只取决于体系结构（32 位还是 64 位）：
+    在不高于 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 的版本中，“每 CPU 工作器数”只取决于体系结构（32 位还是 64 位）：
     
     |CPU 数|32 位计算机<sup>1</sup>|64 位计算机|   
     |------------|------------|------------|   
     |\<= 4|256|512|   
     |\> 4|256 +（（逻辑 CPU 位数 - 4）* 8）|512<sup>2</sup> + ((逻辑 CPU 数 - 4) * 16)|   
     
-    自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，“每 CPU 工作器数”取决于体系结构和处理器数（介于 4 和 64 之间还是大于 64）：
+    自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，“每 CPU 工作器数”取决于体系结构和处理器数（介于 4 和 64 之间还是大于 64）：
     
     |CPU 数|32 位计算机<sup>1</sup>|64 位计算机|   
     |------------|------------|------------|   
@@ -94,7 +94,7 @@ ms.locfileid: "98171039"
     |\> 4 和 \<= 64|256 +（（逻辑 CPU 位数 - 4）* 8）|512<sup>2</sup> + ((逻辑 CPU 数 - 4) * 16)|   
     |\> 64|256 + ((逻辑 CPU 位数 - 4) * 32)|512<sup>2</sup> + ((逻辑 CPU 数 - 4) * 32)|   
   
-    <sup>1</sup>自 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 起，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能再安装在 32 位操作系统上。 为了帮助运行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更低版本的客户，我们列出了 32 位计算机值。 建议对 32 位计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用最大工作线程数 1,024。
+    <sup>1</sup>自 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 起，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能再安装在 32 位操作系统上。 为了帮助运行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更低版本的客户，我们列出了 32 位计算机值。 建议对 32 位计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用最大工作线程数 1,024。
     
     <sup>2</sup>自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，对于内存小于 2GB 的计算机，“默认最大工作器数”值除以 2。
   

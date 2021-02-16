@@ -12,12 +12,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42d638afd9fc98fb68eb024c0a712bea5f278a26
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 011a7d3fa710699f75afd4ca835ba1f082a956b5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170219"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353609"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "98170219"
 支持以下查询构造：  
 
 CASE 表达式：CASE 可用于允许使用有效表达式的任意语句或子句。
-   - 适用对象：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
-    从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始，本机编译 T-SQL 模块已支持 CASE 语句。
+   - 适用对象：[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]。  
+    从 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 开始，本机编译 T-SQL 模块已支持 CASE 语句。
 
 SELECT 子句：  
 
@@ -176,8 +176,8 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   按位运算符 ~、&、| 和 ^  
 
 -   APPLY 运算符
-    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
-      从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，本机编译模块支持 APPLY 运算符。
+    - 适用对象：[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]。  
+      从 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 开始，本机编译模块支持 APPLY 运算符。
 
 ##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> 本机编译模块中的内置函数  
  内存优化表的约束中以及本机编译的 T-SQL 模块中支持以下函数。  
@@ -187,8 +187,8 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   日期函数：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
 
 -   字符串函数：LEN、LTRIM、RTRIM 和 SUBSTRING。  
-    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
-      从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，还支持下列内置函数：TRIM、TRANSLATE 和 CONCAT_WS。  
+    - 适用对象：[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]。  
+      从 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 开始，还支持下列内置函数：TRIM、TRANSLATE 和 CONCAT_WS。  
 
 -   标识函数：SCOPE_IDENTITY  
 
@@ -197,8 +197,8 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Uniqueidentifier 函数：NEWID 和 NEWSEQUENTIALID  
 
 -   JSON 函数  
-    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
-      从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，本机编译模块支持 JSON 函数。
+    - 适用对象：[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]。  
+      从 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 开始，本机编译模块支持 JSON 函数。
 
 -   错误函数：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
 
