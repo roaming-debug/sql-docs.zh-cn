@@ -1,8 +1,8 @@
 ---
 description: sys.dm_db_missing_index_group_stats (Transact-SQL)
-title: sys.dm_db_missing_index_group_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_db_missing_index_group_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 02/09/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
-ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cb6680d80df5b54c5ea4d74b07256442ccf3e28
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 52ad665528cf331c2244c7c0fadbfebc3b78c285
+ms.sourcegitcommit: c6cc0b669b175ae290cf5b08952010661ebd03c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209417"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100530824"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "99209417"
     
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**group_handle**|**int**|标识缺失索引组。 此标识符在服务器中是唯一的。<br /><br /> 其他列提供有关组中的索引被视为缺失的所有查询的信息。<br /><br /> 一个索引组仅包含一个索引。|  
+|**group_handle**|**int**|标识缺失索引组。 此标识符在服务器中是唯一的。<br /><br /> 其他列提供有关组中的索引被视为缺失的所有查询的信息。<br /><br /> 一个索引组仅包含一个索引。<BR><BR>可以联接到 [sys.dm_db_missing_index_groups](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)中的 **index_group_handle** 。|  
 |**unique_compiles**|**bigint**|将从该缺失索引组受益的编译和重新编译数。 许多不同查询的编译和重新编译可影响该列值。|  
 |**user_seeks**|**bigint**|由可能使用了组中建议索引的用户查询所导致的查找次数。|  
 |**user_scans**|**bigint**|由可能使用了组中建议索引的用户查询所导致的扫描次数。|  
@@ -58,6 +57,8 @@ ms.locfileid: "99209417"
 
   >[!NOTE]
   >此 DMV 的结果集限制为600行。 每一行都包含一个缺失索引。 如果缺少超过600个索引，则应该解决现有的缺失索引，以便可以查看更新的索引。
+
+ 缺少索引组可能有多个查询需要同一索引。 有关需要此 DMV 中特定索引的单个查询的详细信息，请参阅 [sys.dm_db_missing_index_group_stats_query](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)。
   
 ## <a name="permissions"></a>权限  
  若要查询此动态管理视图，必须授予用户 VIEW SERVER STATE 权限或隐含 VIEW SERVER STATE 权限的任何权限。  
@@ -68,7 +69,7 @@ ms.locfileid: "99209417"
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. A. 查找十个具有最高用户查询预期提高的缺失索引  
  下面的查询确定了将生成最高预期累计提高的十个缺失索引，按降序排列。  
   
-```  
+```sql
 SELECT TOP 10 *  
 FROM sys.dm_db_missing_index_group_stats  
 ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;  
@@ -77,7 +78,7 @@ ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;
 ### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>B. 查找特定缺失索引组的单个缺失索引及其列详细信息  
  下面的查询确定哪些缺失索引构成特定缺失索引组，并显示其列详细信息。 针对此示例，缺失索引组句柄为 24。  
   
-```  
+```sql
 SELECT migs.group_handle, mid.*  
 FROM sys.dm_db_missing_index_group_stats AS migs  
 INNER JOIN sys.dm_db_missing_index_groups AS mig  
@@ -93,6 +94,7 @@ WHERE migs.group_handle = 24;
  [sys.dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats_query &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
   
   
