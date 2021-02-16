@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: e0e6692a24371b91b57ad2269ec48c43db1e1a8c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 013586570ce43b8270ae2613c05ced8bc9bdc48b
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99206081"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525211"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -44,7 +44,7 @@ fn_get_audit_file ( file_pattern,
     { default | audit_record_offset | NULL } )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *file_pattern*  
  指定要读取的审核文件集的目录（或路径）和文件名。 类型为 **nvarchar (260)**。 
  
@@ -52,11 +52,11 @@ fn_get_audit_file ( file_pattern,
     
     此参数必须包括路径（驱动器盘符或网络共享）和文件名，可以包含通配符。 单个星号 ( * ) 可用于从审核文件集中收集多个文件。 例如：  
   
-    -   **\<path>\\\** _-收集指定位置中的所有审核文件。  
+    -   **\<path>\\\*** -收集指定位置中的所有审核文件。  
   
-    -   _* \<path> \LoginsAudit_{GUID} * * _-收集具有指定名称和 GUID 对的所有审核文件。  
+    -   **\<path> \ LOGINSAUDIT_ {GUID}***-收集具有指定名称和 GUID 对的所有审核文件。  
   
-    -   _* \<path> \LoginsAudit_{GUID} _00_29384. .sqlaudit * *-收集特定的审核文件。  
+    -   **\<path> \ LOGINSAUDIT_ {GUID} _00_29384. .Sqlaudit** -收集特定的审核文件。  
   
  - **AZURE SQL 数据库**：
  
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>返回的表  
  下表描述此函数可返回的审核文件内容。  
   
-| 列名称 | 类型 | 说明 |  
+| 列名称 | 类型 | 描述 |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 操作的 ID。 不可为 Null。 |  
 | additional_information | **nvarchar(4000)** | 仅适用于单个事件的唯一信息，以 XML 的形式返回。 有少量的可审核操作包含此类信息。<br /><br /> 对于具有与操作相关联的 TSQL 堆栈的操作，将以 XML 格式显示一个级别的 TSQL 堆栈。 该 XML 格式如下：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 指示框架的当前嵌套级别。 模块名称表示为由三部分组成的格式（database_name、schema_name 和 object_name）。  模块名称将被解析为对无效的 xml 字符（如、、、）进行转义 `'\<'` `'>'` `'/'` `'_x'` 。 它们将被转义为 `_xHHHH\_` 。 HHHH 代表该字符对应的四位十六进制 UCS-2 代码。<br /><br /> 可以为 Null。 如果事件没有报告其他信息，则返回 NULL。 |
@@ -115,7 +115,7 @@ fn_get_audit_file ( file_pattern,
 | server_principal_name | **sysname** | 当前登录名。 可以为 Null。 |  
 | server_principal_sid | **varbinary** | 当前登录名 SID。 可以为 Null。 |  
 | session_id | **smallint** | 发生该事件的会话的 ID。 不可为 null。 |  
-| session_server_principal_name | **sysname** | 会话的服务器主体。 可以为 Null。 |  
+| session_server_principal_name | **sysname** | 会话的服务器主体。 可以为 Null。 如果存在显式或隐式上下文切换，则返回连接到 SQL Server 实例的原始登录名的标识。|  
 | statement | **nvarchar(4000)** | TSQL 语句（如果存在）。 可以为 Null。 如果不适用，则返回 NULL。 |  
 | 成功 | **bit** | 指示触发事件的操作是否成功。 不可为 null。 对于除登录事件之外的所有事件，它仅报告权限检查（而不是操作）成功或失败。<br /> 1 = success<br /> 0 = 失败 |
 | target_database_principal_id | **int** | 执行 GRANT/DENY/REVOKE 操作的数据库主体。 不可为 null。 如果不适用，则返回 0。 |  
