@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8b319b69e76d63b275a61c7136b18344491d988b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 658680481c8f77bf528e5db98ae0d9bd317b8eaf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786050"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354496"
 ---
 # <a name="prepare-the-input-trace-data"></a>准备输入跟踪数据
 
@@ -48,15 +48,15 @@ ms.locfileid: "85786050"
   
     1.  打开 Windows 命令提示符实用工具 (**CMD.exe**)，然后导航到 Distributed Replay 管理工具 (**DReplay.exe**) 的安装位置。  
   
-    2.  （可选）如果控制器服务不是在运行管理工具的计算机上运行，则使用 *controller* 参数 **-m**指定控制器。  
+    2.  （可选）如果控制器服务不是在运行管理工具的计算机上运行，则使用 *controller* 参数 **-m** 指定控制器。  
   
-    3.  使用 *input_trace_file* 参数 **-i**指定输入跟踪文件的位置和名称。  
+    3.  使用 *input_trace_file* 参数 **-i** 指定输入跟踪文件的位置和名称。  
   
-    4.  使用 *controller_working_directory* 参数 **-d**指定中间文件应保存在控制器上的位置。  
+    4.  使用 *controller_working_directory* 参数 **-d** 指定中间文件应保存在控制器上的位置。  
   
-    5.  （可选）使用 *config_file* 参数 **-c**指定预处理配置文件的位置。 如果您修改了默认预处理配置文件的副本，则使用此参数来指向新的配置文件。  
+    5.  （可选）使用 *config_file* 参数 **-c** 指定预处理配置文件的位置。 如果您修改了默认预处理配置文件的副本，则使用此参数来指向新的配置文件。  
   
-    6.  （可选）使用 *status_interval* 参数 **-f**指定是否希望管理工具以 30 秒之外的其他频率显示状态消息。  
+    6.  （可选）使用 *status_interval* 参数 **-f** 指定是否希望管理工具以 30 秒之外的其他频率显示状态消息。  
   
      例如，在与控制器服务相同的计算机上为位于 `c:\trace1.trc`中的跟踪文件、位于 `c:\WorkingDir` 中的控制器工作目录以及在默认 30 秒时显示的状态消息启动预处理阶段时，需要使用以下语法： `dreplay preprocess -i c:\trace1.trc -d c:\WorkingDir`  
   

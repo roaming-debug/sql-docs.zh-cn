@@ -1,9 +1,9 @@
 ---
-title: 弃用的数据库引擎功能 | Microsoft Docs
+title: 弃用的数据库引擎功能
 titleSuffix: SQL Server 2016
 description: 了解弃用的数据库引擎功能，这些功能在 SQL Server 2016 (13.x) 中仍然可用，但不可在新的应用程序中使用。
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 02/11/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,20 +13,19 @@ helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
-ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e46ade314bf0218344b682c7b75762de3f10396
-ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
+ms.openlocfilehash: 518b29507e7992b267922e09c97bf98b1657205d
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99552638"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525151"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的数据库引擎功能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
-本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
+本主题介绍 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
 如果功能标记为已弃用，表示：
 -  该功能仅处于维护模式。 无法进行新的更改，包括与新功能的互操作性有关的更改。
@@ -67,6 +66,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |兼容级别|sp_dbcmptlevel|ALTER DATABASE ...SET COMPATIBILITY_LEVEL。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|sp_dbcmptlevel|80|  
 |兼容级别|数据库兼容性级别 110 和 120。|计划为未来版本升级数据库和应用程序。 但是，我们将继续支持在任何支持的数据库兼容性级别上认证的应用程序尽可能长的时间，使升级更简单。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|数据库兼容性级别 110<br /><br /> 数据库兼容性级别 120||  
 |XML|内联 XDR 架构生成|不推荐使用 FOR XML 选项的 XMLDATA 指令。 如果是 RAW 和 AUTO 模式，请使用 XSD 生成。 在 EXPLICT 模式下，没有可以代替 XMLDATA 指令的项。|XMLDATA|181|  
+|XML|sys.sp_db_selective_xml_index|ALTER INDEX … DISABLE<BR><BR>有关详细信息，请参阅 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)。|[sys.sp_db_selective_xml_index](../relational-databases/system-stored-procedures/sp-db-selective-xml-index-transact-sql.md)|
 |备份和还原|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE 或 LOG TO TAPE|235|  
 |备份和还原|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
 |备份和还原|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
@@ -175,4 +175,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中废止的数据库引擎功能](./discontinued-database-engine-functionality-in-sql-server.md)     
- [SQL Server 2017 中弃用的数据库引擎功能](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)
+ [SQL Server 2017 中弃用的数据库引擎功能](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)  

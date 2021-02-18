@@ -11,16 +11,17 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6a64388940661139a52a10cd781fa13033e6fb70
-ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.openlocfilehash: d5762a71ab0bd2425abb0ee59c997f1f30fb10b4
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99049160"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489361"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>更改数据库的目标恢复时间 (SQL Server)
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中设置或更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的目标恢复时间。 默认情况下，目标恢复时间是 60 秒，而且数据库使用间接检查点。 目标恢复时间为此数据库建立恢复时间上限。  
+  本主题介绍如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中设置或更改数据库的目标恢复时间。 默认情况下，目标恢复时间是 60 秒，而且数据库使用间接检查点。 目标恢复时间为此数据库建立恢复时间上限。  
   
 > [!NOTE]  
 >  如果长时间运行的事务导致过多 UNDO 时间，则可能超过给定数据库的目标恢复时间设置为该数据库指定的上限。  

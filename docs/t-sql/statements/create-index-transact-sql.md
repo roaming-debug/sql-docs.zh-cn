@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8591620ce92aca8a6c272539721f20a8a64fd9ae
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: e02d3676b1b303ef6dbbae4a509ed0db0c608071
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237103"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525224"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -823,7 +823,7 @@ INSERT INTO t1 VALUES (1, 0);
 若要评估更改压缩状态将对表、索引或分区有何影响，请使用 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 存储过程。
 
 ## <a name="permissions"></a>权限
-要求具有对表或视图的 `ALTER` 权限。 用户必须是 `sysadmin` 固定服务器角色的成员，或者是 `db_ddladmin` 或 `db_owner` 固定数据库角色的成员。
+要求对表或视图具有 `ALTER` 权限，或者拥有 `db_ddladmin` 固定数据库角色的成员身份。
 
 ## <a name="limitations-and-restrictions"></a>限制和局限
 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中不能执行以下创建：

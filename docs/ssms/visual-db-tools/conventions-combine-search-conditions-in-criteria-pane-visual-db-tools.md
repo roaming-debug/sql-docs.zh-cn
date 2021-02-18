@@ -20,12 +20,12 @@ ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ae92bc88f3b18dcd195d857c1ccc975d116880f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe9c75b0b173bf2f72437233d2c06305b5041132
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491710"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355201"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -124,9 +124,9 @@ WHERE
   
 一般情况下，以下规则将决定 AND 和 OR 子句在“条件”窗格中的显示方式：  
   
--   所有用 AND 链接的条件都显示在“筛选器”**** 网格列中或同一个“或...”**** 列中。  
+-   所有用 AND 链接的条件都显示在“筛选器”网格列中或同一个“或...”列中。  
   
--   所有用 OR 链接的条件都显示在不同的“或...”**** 列中。  
+-   所有用 OR 链接的条件都显示在不同的“或...”列中。  
   
 -   如果 AND 和 OR 子句组合的逻辑结果是将 AND 分布到多个 OR 子句中，则“条件”窗格将根据需要重复 AND 子句以明确地表示结果。  
   

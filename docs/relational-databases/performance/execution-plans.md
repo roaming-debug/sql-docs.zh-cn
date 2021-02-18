@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: fee5c2f4f1d8a286830f4e1fdefdb1043964a726
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 9007a29a613f1fea6891af33b66e69d98f2058b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505221"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355259"
 ---
 # <a name="execution-plans"></a>执行计划
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "96505221"
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有三个选项可用于显示执行计划：        
 > -  [估计的执行计划](../../relational-databases/performance/display-the-estimated-execution-plan.md)，该计划是已编译的计划，由查询优化器根据估计得出。 这是存储在计划缓存中存储的查询计划。        
-> -  [实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)，该计划是已编译的计划加上其 [执行上下文](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) _*_ _*_ 。 它在查询执行完成后可用。 这包括实际运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。         
-> -  [实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)，它是已编译的计划加上其执行上下文 ***。它可用于正在进行的查询执行，每一秒更新一次***。 这包括运行时信息，如通过[运算符](../../relational-databases/showplan-logical-and-physical-operators-reference.md)的实际行数、运行时间和估计的查询进度。
+> -  * **[实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)** _，该计划是已编译的计划加上其[执行上下文](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)。 它在查询执行完成后可用。 这包括实际运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。         
+> -  * **[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)** _，它是已编译的计划加上其执行上下文。 它可用于正在进行的查询执行，每一秒更新一次_***。 这包括运行时信息，如通过[运算符](../../relational-databases/showplan-logical-and-physical-operators-reference.md)的实际行数、运行时间和估计的查询进度。
 
 > [!TIP]
 > 有关查询处理和查询执行计划的更多信息，请参阅“查询处理体系结构指南”的[优化 SELECT 语句](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)和[执行计划缓存和重用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)部分。

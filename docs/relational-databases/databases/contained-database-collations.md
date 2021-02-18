@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 09edac79bf52c2826436ecdfdf25b0db342f4aeb
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a1da6b96aea93feaacdb5384716ef6cd0ab82a06
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363554"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489401"
 ---
 # <a name="contained-database-collations"></a>包含数据库的排序规则
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- 这看起来比较简单，但会引发几个问题。 由于列的排序规则取决于创建表的数据库，因此如果使用存储在 **tempdb**中的临时表，就会出现问题。 **tempdb** 的排序规则通常与实例的排序规则匹配，而不必与数据库的排序规则匹配。  
+ 这看起来比较简单，但会引发几个问题。 由于列的排序规则取决于创建表的数据库，因此如果使用存储在 **tempdb** 中的临时表，就会出现问题。 **tempdb** 的排序规则通常与实例的排序规则匹配，而不必与数据库的排序规则匹配。  
   
 ### <a name="example-2"></a>示例 2  
  假设在排序规则为 **Latin1_General** 的实例上使用上述（中文）数据库：  
@@ -122,7 +122,7 @@ END;
   
  数据库排序规则将得到保留，但只能用作用户数据的默认排序规则。 默认情况下，数据库排序规则等同于 model 数据库排序规则，但在非包含数据库中，用户可通过 **CREATE** 或 **ALTER DATABASE** 命令更改数据库排序规则。  
   
- 新关键字 **CATALOG_DEFAULT**适用于 **COLLATE** 子句。 此关键字用作包含数据库和非包含数据库中当前元数据排序规则的快捷方式。 换言之，在非包含数据库中， **CATALOG_DEFAULT** 将返回当前的数据库排序规则，因为元数据是按数据库排序规则排列的。 在包含数据库中，这两个值可能是不同的，因为用户可以更改数据库排序规则，以使其不同于目录排序规则。  
+ 新关键字 **CATALOG_DEFAULT** 适用于 **COLLATE** 子句。 此关键字用作包含数据库和非包含数据库中当前元数据排序规则的快捷方式。 换言之，在非包含数据库中， **CATALOG_DEFAULT** 将返回当前的数据库排序规则，因为元数据是按数据库排序规则排列的。 在包含数据库中，这两个值可能是不同的，因为用户可以更改数据库排序规则，以使其不同于目录排序规则。  
   
  下表总结了非包含数据库和包含数据库中各个对象的行为：  
   
@@ -136,7 +136,7 @@ END;
 |Goto 标签|实例排序规则|CATALOG_DEFAULT|  
 |游标名称|实例排序规则|CATALOG_DEFAULT|  
   
- 通过上述临时表示例可以看出，此排序规则行为使大多数临时表不再需要使用显式 **COLLATE** 子句。 在包含数据库中，即使数据库和实例采用不同的排序规则，此代码现在也可以正常运行：  
+ 通过上述临时表示例可以看出，此排序规则行为使大多数临时表不再需要使用显式 COLLATE 子句。 在包含数据库中，即使数据库和实例采用不同的排序规则，此代码现在也可以正常运行：  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  

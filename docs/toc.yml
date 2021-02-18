@@ -443,6 +443,8 @@ items:
                 href: big-data-cluster/spark-hive-tools-vscode.md
               - name: 使用扩展的 Spark History Server
                 href: big-data-cluster/spark-history-server.md
+              - name: 管理库
+                href: big-data-cluster/spark-install-packages.md
           - name: 疑难解答
             items:
               - name: Kubernetes 疑难解答
@@ -477,7 +479,7 @@ items:
             items:
               - name: 部署配置文件
                 href: big-data-cluster/reference-deployment-config.md
-          - name: Configuration
+          - name: 配置
             items:
               - name: 概述
                 href: big-data-cluster/reference-config-bdc-overview.md
@@ -521,6 +523,8 @@ items:
                     href: azdata/reference/reference-azdata-bdc-endpoint.md
                   - name: bdc 网关
                     href: azdata/reference/reference-azdata-bdc-gateway.md
+                  - name: bdc 网关设置
+                    href: azdata/reference/reference-azdata-bdc-gateway-settings.md
                   - name: bdc 网关状态
                     href: azdata/reference/reference-azdata-bdc-gateway-status.md
                   - name: bdc hdfs
@@ -531,6 +535,8 @@ items:
                     href: azdata/reference/reference-azdata-bdc-hdfs-key.md
                   - name: bdc hdfs 装载
                     href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
+                  - name: bdc hdfs 设置
+                    href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
                   - name: bdc hdfs 状态
                     href: azdata/reference/reference-azdata-bdc-hdfs-status.md
                   - name: bdc 设置
@@ -541,12 +547,16 @@ items:
                     href: azdata/reference/reference-azdata-bdc-spark-batch.md
                   - name: bdc spark 会话
                     href: azdata/reference/reference-azdata-bdc-spark-session.md
+                  - name: bdc spark 设置
+                    href: azdata/reference/reference-azdata-bdc-spark-settings.md
                   - name: bdc spark 语句
                     href: azdata/reference/reference-azdata-bdc-spark-statement.md
                   - name: bdc spark 状态
                     href: azdata/reference/reference-azdata-bdc-spark-status.md
                   - name: bdc sql
                     href: azdata/reference/reference-azdata-bdc-sql.md
+                  - name: bdc sql 设置
+                    href: azdata/reference/reference-azdata-bdc-sql-settings.md
                   - name: bdc 状态
                     href: azdata/reference/reference-azdata-bdc-status.md
   - name: 业务连续性
@@ -12528,6 +12538,8 @@ items:
                 href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md
               - name: sys.dm_db_missing_index_group_stats
                 href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md
+              - name: sys.dm_db_missing_index_group_stats_query
+                href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md
           - name: I/O
             href: relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md
             items:

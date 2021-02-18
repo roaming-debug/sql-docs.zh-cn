@@ -25,12 +25,13 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 6b6610293bb78ef34ae5ca8b88f762c9ab4948e9
-ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest
+ms.openlocfilehash: 6bb1014c22353826b6e4429726d4d28549cc274a
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "99978859"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489331"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -100,7 +101,8 @@ MERGE
   
 <clause_search_condition> ::=  
     <search_condition> 
-```  
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ```syntaxsql
@@ -117,9 +119,9 @@ MERGE
     [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]
     [ OPTION ( <query_hint> [ ,...n ] ) ]
-;  -- The semi-colon is required, or the query will return syntax  error. 
+;  -- The semi-colon is required, or the query will return a syntax error. 
 ```
- 
+
 ## <a name="arguments"></a>参数
 
 WITH \<common_table_expression>  
@@ -236,7 +238,9 @@ DEFAULT VALUES
 >[!NOTE]
 > 在 Azure Synapse Analytics 中，MERGE 命令（预览）与 SQL Server 和 Azure SQL 数据库相比具有以下差异。  
 > - MERGE 更新操作实现为删除和插入对。 MERGE 更新的受影响的行计数包括删除的行和插入的行。 
+
 > - 在预览期间，包含 IDENTITY 列的表不支持 MERGE…WHEN NOT MATCHED INSERT。  
+
 > - 此表描述了对具有不同分发类型的表的支持：
 
 >|Azure Synapse Analytics 中的 MERGE CLAUSE|支持的 TARGE 分发表| 支持的 SOURCE 分发表|评论|  
@@ -256,7 +260,6 @@ MERGE 语句需要一个分号 (;) 作为语句终止符。 如果运行没有�
 在数据库兼容级别设置为 100 或更高时，MERGE 为完全保留的关键字。 MERGE 语句可用于设置为 90 和 100 的数据库兼容性级别；不过，当数据库兼容性级别设置为 90 时，关键字不是完全保留。  
   
 使用已排入队列的更新复制时，请勿使用 MERGE 语句。 MERGE 和已排入队列的更新触发器不兼容。 使用 insert 或 update 语句替换 **MERGE** 语句。  
-
 
 ## <a name="trigger-implementation"></a>触发器的实现
 
@@ -285,7 +288,7 @@ MERGE 语句需要一个分号 (;) 作为语句终止符。 如果运行没有�
 
 这些索引确保联接键唯一并且表中的数据经过排序。 因为查询优化器不需要执行额外验证处理即可定位和更新重复的行，也不需要执行其他排序操作，所以查询性能得到了提高。
 
-### <a name="join-best-practices"></a>与 JOIN 有关的最佳做法
+### <a name="join-best-practices"></a>有关 JOIN 的最佳做法
 
 若要提高 MERGE 语句的性能并确保获得正确的结果，我们建议您遵循以下联接准则：
 
@@ -312,7 +315,7 @@ MERGE 语句中联接操作的优化方式与 SELECT 语句中联接操作的优
 - 如果无法参数化语句，请创建 `TEMPLATE` 类型的计划指南，并在计划指南中指定 `PARAMETERIZATION FORCED` 查询提示。
 - 如果频繁对数据库执行 MERGE 语句，请考虑将数据库的 PARAMETERIZATION 选项设置为 FORCED。 设置此选项时请谨慎从事。 `PARAMETERIZATION` 选项是数据库级别设置，它影响如何对数据库处理所有查询。
 
-### <a name="top-clause-best-practices"></a>与 TOP 子句有关的最佳做法
+### <a name="top-clause-best-practices"></a>有关 TOP 子句的最佳做法
 
 在 MERGE 语句中，TOP 子句指定在对源表和目标表进行联接之后（或在删除不符合执行插入、更新或删除操作条件的行之后）受影响的行的数量或百分比。 TOP 子句将联接行的数量进一步减少为指定值，并且以一种无序方式对其余联接行应用插入、更新或删除操作。 也就是说，在 WHEN 子句中定义的操作中，这些行是无序分布的。 例如，如果指定 TOP (10)，将会影响 10 行；在这些行中，可能会更新 7 行而插入 3 行，或者可能删除 1 行、更新 5 行并且插入 4 行，等等。
 
