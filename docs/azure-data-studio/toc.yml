@@ -122,6 +122,8 @@
           href: notebooks/notebooks-kusto-kernel.md
         - name: 使用 Kqlmagic
           href: notebooks/notebooks-kqlmagic.md
+        - name: 使用参数化
+          href: notebooks/notebooks-parameterization.md
     - name: 部署
       items:
         - name: 部署 Azure SQL 数据库
