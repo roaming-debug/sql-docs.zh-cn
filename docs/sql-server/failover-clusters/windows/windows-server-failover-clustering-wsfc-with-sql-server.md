@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 11e424ef4f32b91a7c4d65faf796335a3f7faf26
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 8e0e2e47cbcfaf9aa6719b60bbd894d103596c18
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99251212"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341629"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server 故障转移群集与 SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Windows Server 故障转移群集 (WSFC) 是一组独立的服务器，它们共同协作以提高应用程序和服务的可用性  。 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 利用 WSFC 服务和功能支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例。  
+  Windows Server 故障转移群集 (WSFC) 是一组独立的服务器，它们共同协作以提高应用程序和服务的可用性。 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 利用 WSFC 服务和功能支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例。  
   
    
 ##  <a name="terms-and-definitions"></a><a name="TermsAndDefs"></a> 术语和定义  
@@ -61,7 +61,7 @@ ms.locfileid: "99251212"
   
 
 ##  <a name="overview-of-windows-server-failover-clustering"></a><a name="Overview"></a> Windows Server 故障转移群集概述  
- Windows Server 故障转移群集提供了各种基础结构功能来支持所承载的服务器应用程序（如 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 Microsoft Exchange）的高可用性和灾难恢复方案。  如果一个群集节点或服务失败，则该节点上承载的服务可在一个称为“故障转移”的过程中自动或手动转移到另一个可用节点。  
+ Windows Server 故障转移群集提供了各种基础结构功能来支持所承载的服务器应用程序（如 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 Microsoft Exchange）的高可用性和灾难恢复方案。 如果一个群集节点或服务失败，则该节点上承载的服务可在一个称为“故障转移”的过程中自动或手动转移到另一个可用节点。  
   
  WSFC 中的节点协同工作，共同提供以下类型的功能：  
   
@@ -69,23 +69,23 @@ ms.locfileid: "99251212"
   
 -   **资源管理。** WSFC 中的各节点可能提供物理资源，如直接连接存储、网络接口和对共享磁盘存储的访问。 承载的应用程序将其本身注册为群集资源，并可配置启动和运行状况对于其他资源的依赖关系。  
   
--   运行状况监视。  节点间和主节点运行状况检测是通过结合使用信号样式的网络通信和资源监视来实现的。 WSFC 的总体运行状况是由 WSFC 中节点仲裁的投票决定。  
+-   运行状况监视。 节点间和主节点运行状况检测是通过结合使用信号样式的网络通信和资源监视来实现的。 WSFC 的总体运行状况是由 WSFC 中节点仲裁的投票决定。  
   
 -   **故障转移协调。** 每个资源都配置为由主节点承载，并且每个资源均可自动或手动转移到一个或多个辅助节点。 基于运行状况的故障转移策略控制节点之间资源所有权的自动转移。 在发生故障转移时通知节点和承载的应用程序，以便其做出适当的响应。  
   
  有关详细信息，请参阅： [故障转移群集概述 - Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> SQL Server AlwaysOn 技术和 WSFC  
- [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] Always On  是一个充分利用 WSFC 的高可用性和灾难恢复解决方案。 Always On 功能提供一个灵活的集成解决方案，用于提高应用程序可用性，提供更好的硬件投资回报，并简化高可用性部署和管理。  
+  Always On[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]  是一个充分利用 WSFC 的高可用性和灾难恢复解决方案。 Always On 功能提供一个灵活的集成解决方案，用于提高应用程序可用性，提供更好的硬件投资回报，并简化高可用性部署和管理。  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例将 WSFC 用作一种平台技术，将组件注册为 WSFC 群集资源。   相关的资源合并为一个“角色”，这些资源可能依赖于其他 WSFC 群集资源。 这样，WSFC 就可以感测并标明是否需要重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，或自动将其故障转移到 WSFC 中的不同服务器节点上。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例将 WSFC 用作一种平台技术，将组件注册为 WSFC 群集资源。  相关的资源合并为一个“角色”，这些资源可能依赖于其他 WSFC 群集资源。 这样，WSFC 就可以感测并标明是否需要重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，或自动将其故障转移到 WSFC 中的不同服务器节点上。  
   
 > **重要说明!!** 若要充分利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 技术，应该应用多个与 WSFC 相关的先决条件。  
 >   
 >  有关详细信息，请参阅：[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>实例级高可用性以及 AlwaysOn 故障转移群集实例  
- Always On 故障转移群集实例  (FCI) 是安装在 WSFC 中的节点上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 这种类型的实例依赖于存储和虚拟网络名称资源。 存储可以使用光纤通道、iSCSI、FCoE 或 SAS 进行共享磁盘存储，也可以将本地附加存储与[存储空间直通 (S2D)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview) 配合使用。 虚拟网络名称资源依赖于一个或多个虚拟 IP 地址（每个地址位于不同子网中）。 SQL Server 服务和 SQL Server 代理服务也是资源，且都依赖于存储和虚拟网络名称资源。  
+ Always On 故障转移群集实例 (FCI) 是安装在 WSFC 中的节点上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 这种类型的实例依赖于存储和虚拟网络名称资源。 存储可以使用光纤通道、iSCSI、FCoE 或 SAS 进行共享磁盘存储，也可以将本地附加存储与[存储空间直通 (S2D)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview) 配合使用。 虚拟网络名称资源依赖于一个或多个虚拟 IP 地址（每个地址位于不同子网中）。 SQL Server 服务和 SQL Server 代理服务也是资源，且都依赖于存储和虚拟网络名称资源。  
   
  发生故障转移时，WSFC 服务将实例的资源所有权转移到指定的故障转移节点。 然后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例在故障转移节点上重新启动，数据库恢复如常。 在任何给定时刻，群集中只有一个节点可以承载 FCI 和基础资源。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "99251212"
  有关详细信息，请参阅：[AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
 ### <a name="database-level-high-availability-with-sshadr"></a>数据库级高可用性与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
-  Always On“可用性组”(AG) 是一个或多个一同故障转移的用户数据库。 一个可用性组包含一个主“可用性副本”  和一至四个次要副本，这些副本通过基于 SQL Server 日志的数据移动来实现数据保护以进行维护，无需共享存储。 每个副本均由 WSFC 的不同节点上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载。 可用性组和相应的虚拟网络名称注册为 WSFC 群集中的资源。  
+ Always On“可用性组”(AG) 是一个或多个一同故障转移的用户数据库。 一个可用性组包含一个主“可用性副本”和一至四个次要副本，这些副本通过基于 SQL Server 日志的数据移动来实现数据保护以进行维护，无需共享存储。 每个副本均由 WSFC 的不同节点上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载。 可用性组和相应的虚拟网络名称注册为 WSFC 群集中的资源。  
   
   主副本节点上的“可用性组侦听器” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 响应要求连接到虚拟网络名称的传入客户端请求，侦听器基于连接字符串中的属性将每个请求重定向到相应的  实例。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "99251212"
  AlwaysOn 解决方案的高可用性是通过积极主动地监视物理和逻辑 WSFC 群集资源的运行状况，以及自动故障转移到冗余硬件和重新配置冗余硬件来实现的。   系统管理员还可以对可用性组或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例启动从一个节点到另一个节点的“手动故障转移”。  
   
 ### <a name="failover-policies-for-nodes-failover-cluster-instances-and-availability-groups"></a>节点、故障转移群集实例和可用性组的故障转移策略  
- “故障转移策略”  是在 WSFC 节点、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障群集实例 (FCI) 以及可用性组级别配置的。   这些策略基于非正常运行的群集资源状态和节点响应的严重性、持续时间和频率，它们可以触发服务重新启动或将群集资源从一个节点“自动故障转移” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 到另一个节点，或者可以触发将可用性组主副本从一个  实例移到另一个此类实例。  
+ “故障转移策略”是在 WSFC 节点、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障群集实例 (FCI) 以及可用性组级别配置的。   这些策略基于非正常运行的群集资源状态和节点响应的严重性、持续时间和频率，它们可以触发服务重新启动或将群集资源从一个节点“自动故障转移” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 到另一个节点，或者可以触发将可用性组主副本从一个  实例移到另一个此类实例。  
   
  可用性组副本的故障转移不影响基础 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  FCI 的故障转移将随实例一起移动所承载的可用性组副本。  
   
@@ -126,9 +126,9 @@ ms.locfileid: "99251212"
 ### <a name="wsfc-inter-node-health-detection-and-quorum-voting"></a>WSFC 节点间运行状况检测和仲裁投票  
  WSFC 中的每个节点都参与周期性信号通信，以便与其他节点共享该节点的运行状况。 未响应的节点被认为是处于故障状态。  
   
-  “仲裁”是通过确保 WSFC 中有足够的资源处于联机状态，来帮助确保 WSFC 启动和运行的一种机制。 如果 WSFC 的投票足够，则它很正常并且能够提供节点级别的容错。  
+ “仲裁”是通过确保 WSFC 中有足够的资源处于联机状态，来帮助确保 WSFC 启动和运行的一种机制。 如果 WSFC 的投票足够，则它很正常并且能够提供节点级别的容错。  
   
-  “仲裁模式”在 WSFC 中配置，用于指示用于仲裁投票的方法以及执行自动故障转移或使群集脱机的时间。 
+ “仲裁模式”在 WSFC 中配置，用于指示用于仲裁投票的方法以及执行自动故障转移或使群集脱机的时间。 
   
 > **提示！！** WSFC 中最好始终有奇数数目的仲裁投票。  为进行仲裁投票，不必在群集的所有节点上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 其他服务器可以充当仲裁成员，或者可以将 WSFC 仲裁模式配置为将远程文件共享用作补救措施。  
 >   
@@ -137,7 +137,7 @@ ms.locfileid: "99251212"
 ### <a name="disaster-recovery-through-forcing-quorum"></a>通过强制仲裁进行灾难恢复  
  根据操作实践和 WSFC 配置，可以引发自动故障转移和手动故障转移，同时仍保持可靠、容错的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 解决方案。 但是，如果 WSFC 中合格投票节点的仲裁彼此之间无法通信，或者 WSFC 群集无法执行运行状况验证，则 WSFC 可能会脱机。  
   
- 如果 WSFC 由于计划外灾难或由于持续的硬件或通信故障而导致脱机，则需要管理员手动干预才能“强制仲裁”  ，并在非容错配置中将仍有效的群集节点变为联机状态。  
+ 如果 WSFC 由于计划外灾难或由于持续的硬件或通信故障而导致脱机，则需要管理员手动干预才能“强制仲裁”，并在非容错配置中将仍有效的群集节点变为联机状态。  
   
  之后，还必须执行一系列步骤来重新配置 WSFC，恢复受影响的数据库副本，并重新建立一个新仲裁。  
   
