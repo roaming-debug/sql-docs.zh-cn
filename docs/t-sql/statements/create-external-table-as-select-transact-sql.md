@@ -21,12 +21,12 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 9c97ee3e1f268553a828e035498b203c8fa1e747
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 14a7dce61b50ced328c103ec88973e9bf7b18c7d
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438942"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100345242"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -160,6 +160,8 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  外部表上不支持数据操作语言 (DML) 操作。 例如，不能使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 更新、插入或删除 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来修改外部数据。
 
  CREATE TABLE、DROP TABLE、CREATE STATISTICS、DROP STATISTICS、CREATE VIEW 和 DROP VIEW 是外部表中允许的唯一数据定义语言 (DDL) 操作。
+
+ 无法在当前包含数据的位置创建无服务器 SQL 池的外部表。 若要重用已用于存储数据的位置，则必须在 ADLS 上手动删除该位置。
 
  运行 32 个并发 PolyBase 查询时，每个文件夹中 PolyBase 最多可使用 33,000 个文件。 此最大数量包括每个 HDFS 文件夹中的文件和子文件夹。 如果并发度小于 32，用户可以针对 HDFS 中包含超过 33,000 个文件的文件夹运行 PolyBase 查询。 我们建议 Hadoop 和 PolyBase 的用户保持文件路径简短，并且每个 HDFS 文件夹不超过 30,000 个文件。 当引用太多文件时，会发生 JVM 内存不足异常。
 

@@ -8,12 +8,12 @@ ms.date: 01/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9a73013e7d49523f8aba418a2961336998190fc5
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 652db6f752f8bf46ad2b7d4779063c79359e3a33
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98689098"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350943"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的性能最佳做法和配置指南
 
@@ -102,13 +102,13 @@ mkfs.xfs /dev/md2 -f -L tempdb
 
 对用于存储 SQL Server 数据和日志文件的任何文件系统，强烈建议使用 noatime 属性。 有关如何设置此属性的说明，请参阅 Linux 文档。 以下示例介绍如何为 Azure 虚拟机中装载的卷启用 noatime 选项。
 
-**_/etc/fstab_* _ 中的装入点条目
+***/etc/fstab*** 中的装入点条目
 
 ```bash
 UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /data1 xfs,rw,attr2,noatime 0 0
 ```
 
-在上面的示例中，UUID 表示可使用 _*_blkid_*_ 命令找到的设备。
+在上面的示例中，UUID 表示可使用 ***blkid*** 命令找到的设备。
 
 #### <a name="sql-server-and-forced-unit-access-fua-io-subsystem-capability"></a>SQL Server 和强制单元访问 (FUA) I/O 子系统功能
 
@@ -125,7 +125,7 @@ SUSE Linux Enterprise Server 12 SP5 和 Red Hat Enterprise Linux 8.0 以上的�
 推荐配置：
 
 1. 启用跟踪标志 3979 作为启动参数
-2. 使用 *mssql-conf** 配置 `control.writethrough = 1` 和 `control.alternatewritethrough = 0`
+2. 使用 **mssql-conf** 配置 `control.writethrough = 1` 和 `control.alternatewritethrough = 0`
 
 对于不符合上述条件的几乎所有其他配置，建议的配置如下所示：
 
@@ -134,13 +134,13 @@ SUSE Linux Enterprise Server 12 SP5 和 Red Hat Enterprise Linux 8.0 以上的�
 
 ### <a name="kernel-and-cpu-settings-for-high-performance"></a>高性能内核和 CPU 设置
 
-下一部分介绍是与 SQL Server 安装的高性能和吞吐量相关的推荐 Linux OS 设置。 请参阅 Linux OS 文档，以了解如何配置这些设置。 根据说明，使用 [**_Tuned_* _](https://tuned-project.org) 帮助配置下述的许多 CPU 和内核配置。
+下一部分介绍是与 SQL Server 安装的高性能和吞吐量相关的推荐 Linux OS 设置。 请参阅 Linux OS 文档，以了解如何配置这些设置。 根据说明，使用 [***Tuned***](https://tuned-project.org) 帮助配置下述的许多 CPU 和内核配置。
 
-#### <a name="using-__tuned__-to-configure-kernel-settings"></a>使用 _*_Tuned_*_ 来配置内核设置
+#### <a name="using-tuned-to-configure-kernel-settings"></a>使用 ***Tuned*** 来配置内核设置
 
-对于 Red Hat Enterprise Linux (RHEL) 用户，[优化的](https://tuned-project.org)吞吐量-性能配置文件将自动配置某些内核和 CPU 设置（C 状态除外）。 自 RHEL 8.0 起，与 Red Hat 共同开发了名为 _ *mssql** 的 _*_Tuned_*_ 配置文件，它可为 SQL Server 工作负载提供更精细的 Linux 性能相关优化。 此配置文件包含 RHEL 吞吐量-性能配置文件，我们在下面提供了它的定义，供你查看其他 Linux 发行版和不带此配置文件的 RHEL 版本。
+对于 Red Hat Enterprise Linux (RHEL) 用户，[优化的](https://tuned-project.org)吞吐量-性能配置文件将自动配置某些内核和 CPU 设置（C 状态除外）。 自 RHEL 8.0 起，与 Red Hat 共同开发了名为 _ *mssql** 的 ***Tuned** _ 配置文件，它可为 SQL Server 工作负载提供更精细的 Linux 性能相关优化。 此配置文件包含 RHEL 吞吐量-性能配置文件，我们在下面提供了它的定义，供你查看其他 Linux 发行版和不带此配置文件的 RHEL 版本。
 
-对于 SUSE Linux Enterprise Server 12 SP5、Ubuntu 18.04 和 Red Hat Enterprise Linux 7.x，可以手动安装 **_Tuned_ *_ 包。可以用它创建和配置 _* mssql** 配置文件，如下所述。
+对于 SUSE Linux Enterprise Server 12 SP5、Ubuntu 18.04 和 Red Hat Enterprise Linux 7.x，可以手动安装 ***Tuned** _ 包。 它可用于创建和配置 _ *mssql** 配置文件，如下所述。
 
 ##### <a name="proposed-linux-settings-using-a-tuned-mssql-profile"></a>使用优化的 mssql 配置文件的建议 Linux 设置
 
@@ -207,7 +207,7 @@ tuned-adm list
 | min_perf_pct | 100 | 查看有关 intel p 状态的文档 |
 | C 状态 | 仅限 C1 | 请参阅 Linux 或系统文档，了解如何确保将 C 状态设置为仅限 C1 |
 
-如上文所述，使用 **_Tuned_ *_ 将自动配置 CPU 频率调控器、ENERGY_PERF_BIAS 和 min_perf_pct 设置，因为使用吞吐量-性能配置文件作为 _* mssql** 配置文件的基础。 必须根据 Linux 或系统分销商提供的文档手动配置 C 状态参数。
+如上文所述，使用 ***Tuned** _ 将自动配置 CPU 频率调控器、ENERGY_PERF_BIAS 和 min_perf_pct 设置，因为使用吞吐量-性能配置文件作为 _ *mssql** 配置文件的基础。 必须根据 Linux 或系统分销商提供的文档手动配置 C 状态参数。
 
 #### <a name="disk-settings-recommendations"></a>磁盘设置建议
 
@@ -223,15 +223,15 @@ tuned-adm list
 - **vm.swappiness**：与文件系统缓存相比，此参数控制用于换出运行时进程内存的相对权重。 此参数的默认值为 60，表示交换运行时进程内存页与删除文件系统缓存页的比率为 60:140。 将值设置为 1 表示首选将运行时进程内存保留在物理内存中，代价是牺牲文件系统缓存。 由于 SQL Server 使用缓冲池作为数据页面缓存，并且强烈倾向于绕过文件系统缓存直接写入物理硬件，从而实现可靠的恢复，因此，积极的交换配置对于实现高性能和专用 SQL Server 非常有利。
 可在 [/proc/sys/vm/ - #swappiness 的文档](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/vm.html#swappiness)中找到更多信息
 
-- **vm.dirty_\** _：不会缓存 SQL Server 文件写入访问，这样做满足其数据完整性要求。 通过分配足够大的缓存并限制刷新，这些参数可以实现 Linux 缓存写入的有效异步写入性能，并降低其存储 IO 影响。
+- **vm.dirty_\*** ：不会缓存 SQL Server 文件写入访问，这样做满足其数据完整性要求。 通过分配足够大的缓存并限制刷新，这些参数可以实现 Linux 缓存写入的有效异步写入性能，并降低其存储 IO 影响。
 
-- _*kernel.sched_\**_：这些参数值代表着最新建议，用于在 Linux 内核中调整完全公平计划 (CFS) 算法，以便在线程的进程内抢占和恢复方面提高网络和存储 IO 调用的吞吐量。
+- **kernel.sched_\*** ：这些参数值代表着最新建议，用于在 Linux 内核中调整完全公平计划 (CFS) 算法，以便在线程的进程内抢占和恢复方面提高网络和存储 IO 调用的吞吐量。
 
-使用 _*mssql** **_Tuned_*_ 配置文件来配置 _*vm.swappiness**, **vm.dirty_\* *_ 和 _* kernel.sched_\**_ 设置。 使用 `blockdev` 命令的磁盘 `readahead` 配置以单个设备为基础，必须手动执行。
+使用 **mssql** **_Tuned_ *_ 配置文件来配置 _* vm.swappiness** **vm.dirty_\* *_ 和 _* kernel.sched_\*** 设置。 使用 `blockdev` 命令的磁盘 `readahead` 配置以单个设备为基础，必须手动执行。
 
 #### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>多节点 NUMA 系统的内核设置自动 numa 平衡
 
-如果在多节点 _ *NUMA** 系统上安装 SQL Server，则默认会启用以下 kernel.numa_balancing 内核设置。 若要使 SQL Server 在 NUMA  系统上以最高效率运行，请在多节点 NUMA 系统上禁用自动 NUMA 平衡：
+如果在多节点 NUMA 系统上安装 SQL Server，则默认会启用以下 kernel.numa_balancing 内核设置。  若要使 SQL Server 在 NUMA  系统上以最高效率运行，请在多节点 NUMA 系统上禁用自动 NUMA 平衡：
 
 ```bash
 sysctl -w kernel.numa_balancing=0
@@ -257,13 +257,13 @@ sysctl -w vm.max_map_count=1600000
 echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 
-或使用以下行修改 **mssql** **_Tuned_* _ 配置文件：
+或使用以下行修改 mssql Tuned 配置文件： 
 
 ```bash
 vm.transparent_hugepages=madvise
 ```
 
-并在修改后使 _ *mssql** 配置文件处于活动状态：
+并在修改后使 mssql 配置文件处于活动状态：
 
 ```bash
 tuned-adm off

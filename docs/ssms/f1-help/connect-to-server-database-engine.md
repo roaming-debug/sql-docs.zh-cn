@@ -19,17 +19,17 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 83ff5d5ffae698c49655ef65e8e5d5171eae31ac
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 9f0eca39db873b277d0c698407c5c02afa520b35
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300665"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342662"
 ---
 # <a name="connect-to-server-database-engine"></a>连接到服务器（数据库引擎）
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 时，可以使用此对话框查看或指定选项。 大多数情况下，可以通过在“服务器名称”  框中输入数据库服务器的计算机名称并单击“连接”  来进行连接。 如果连接到命名实例，请使用计算机名称后跟反斜杠，然后是实例名。 例如，`mycomputer\myinstance` 。 如果要连接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，请使用后面跟有 **\sqlexpress**的计算机名称。
+连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 时，可以使用此对话框查看或指定选项。 大多数情况下，可以通过在“服务器名称”  框中输入数据库服务器的计算机名称并单击“连接”  来进行连接。 如果连接到命名实例，请使用计算机名称后跟反斜杠，然后是实例名。 例如，`mycomputer\myinstance` 。 如果要连接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，请使用后面跟有 **\sqlexpress** 的计算机名称。
   
 许多因素都会对您能否连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]产生影响。 有关详细信息，请参阅以下资源：
 

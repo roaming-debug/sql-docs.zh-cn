@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9e7fb311c95568bbbaf1b752791441754b61056a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c772a91b39917acd3e009009c44123fc31510eca
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732117"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342016"
 ---
 # <a name="database-element-for-workload-dta"></a>工作负荷的数据库元素 (DTA)
 
@@ -44,7 +44,7 @@ ms.locfileid: "85732117"
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
-|**出现次数**|如果未指定其他类型的工作负荷，则必须使用一次。 必须为父元素 **EventString**指定子元素 **File**、 **Database** 或 **Workload** ，但只能使用一种类型。 例如，如果使用 **Database** 元素指定了工作负荷，则不可以在同一 XML 输入文件中使用 **File** 元素指定工作负荷。|  
+|**出现次数**|如果未指定其他类型的工作负荷，则必须使用一次。 必须为父元素 **EventString** 指定子元素 **File**、 **Database** 或 **Workload** ，但只能使用一种类型。 例如，如果使用 **Database** 元素指定了工作负荷，则不可以在同一 XML 输入文件中使用 **File** 元素指定工作负荷。|  
   
 ## <a name="element-relationships"></a>元素关系  
   

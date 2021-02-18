@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8824963894b70412ff4525f25b40de7ed53ccd3b
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 56055b7d3537413398980579342884ab6a58c142
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901058"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345078"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 属性（“IP 地址”选项卡）
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "88901058"
   
  数据库引擎可以侦听同一 IP 地址的多个端口，端口以逗号分隔的格式列出：1433,1500,1501。 此字段最多允许 2047 个字符。  
   
- 若要配置单个 IP 地址以侦听多个端口，还必须将“TCP/IP 属性”对话框的“协议”选项卡上的“全部侦听”参数设置为“否”****************。 有关详细信息，请参阅 SQL Server 联机丛书中的“如何：将数据库引擎配置为侦听多个 TCP 端口”。  
+ 若要配置单个 IP 地址以侦听多个端口，还必须将“TCP/IP 属性”对话框的“协议”选项卡上的“全部侦听”参数设置为“否”。 有关详细信息，请参阅 SQL Server 联机丛书中的“如何：将数据库引擎配置为侦听多个 TCP 端口”。  
   
 ## <a name="adding-or-removing-ip-addresses"></a>添加或删除 IP 地址  
  SQL Server 配置管理器显示安装 SQL Server 时可用的 IP 地址。 如果发生以下情况，可用的 IP 地址也会随之改变：添加或删除网卡、动态分配的 IP 地址过期、重新配置网络结构或计算机的物理位置发生改变（例如便携式计算机在另一座大楼连接到网络）。 若要更改 IP 地址，可以编辑“IP 地址”框，然后重新启动 SQL Server。  
   
 ## <a name="additional-topics-in-books-online"></a>联机丛书中的其他主题  
- 在 MSDN 中搜索 **配置服务器以侦听特定 TCP 端口（SQL Server 配置管理器）** 和 **将数据库引擎配置为侦听多个 TCP 端口**之类的主题。  
+ 在 MSDN 中搜索 **配置服务器以侦听特定 TCP 端口（SQL Server 配置管理器）** 和 **将数据库引擎配置为侦听多个 TCP 端口** 之类的主题。  
   
 ## <a name="see-also"></a>另请参阅  
  [选择网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   

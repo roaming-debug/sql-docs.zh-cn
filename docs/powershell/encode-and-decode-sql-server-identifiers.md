@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: a3f2ab659d77e1b06cb69905971d3954e2eb76da
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: e0aa284247d778706b739eae0c6bab18061b73dc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005469"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340818"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>对 SQL Server 标识符进行编码和解码
 
@@ -31,7 +31,7 @@ SQL Server 分隔标识符有时候包含 Windows PowerShell 路径中不支持�
 
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
-Encode-Sqlname 和 Decode-Sqlname cmdlet 仅对 SQL Server 分隔标识符中允许但在 PowerShell 路径中不受支持的字符进行编码和解码********。 下面是通过 Encode-SqlName 编码并可通过 Decode-SqlName 解码的字符 ：
+Encode-Sqlname 和 Decode-Sqlname cmdlet 仅对 SQL Server 分隔标识符中允许但在 PowerShell 路径中不受支持的字符进行编码和解码。 下面是通过 Encode-SqlName 编码并可通过 Decode-SqlName 解码的字符 ：
 
 |||||||||||||
 |-|-|-|-|-|-|-|-|-|-|-|-|

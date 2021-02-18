@@ -11,12 +11,12 @@ ms.reviewer: garye, davidph
 ms.date: 05/26/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 12441de331661e5edbf40ca678963b80a70764a2
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5376d2b7876914c28d656574a57f5fc80294c63c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101844"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348041"
 ---
 # <a name="tutorial-develop-a-predictive-model-in-r-with-sql-machine-learning"></a>教程：通过 SQL 机器学习在 R 中开发预测模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "98101844"
 ::: moniker range="=azuresqldb-mi-current"
 1. 下载文件 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak)。
 
-1. 使用以下详细信息，按 SQL Server Management Studio 中的说明[将数据库还原到托管实例](/azure/sql-database/sql-database-managed-instance-get-started-restore)：
+1. 按照 SQL Server Management Studio 中的[将数据库还原到托管实例](/azure/sql-database/sql-database-managed-instance-get-started-restore)中的说明，使用以下详细信息：
 
    * 从下载的 **TutorialDB.bak** 文件中导入
    * 将目标数据库命名为“TutorialDB”

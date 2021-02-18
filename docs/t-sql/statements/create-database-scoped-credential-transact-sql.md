@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b9a9c27b80d702706d0b6bf1d7e7b3cb7d1d09b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2bb17115cb016e13f0ef20f8bd4ace4edf5c214a
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99192729"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100270484"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -56,7 +56,7 @@ credential_name 指定正在创建的数据库范围凭据的名称。 credentia
 IDENTITY ='identityname' 指定从服务器外部进行连接时要使用的帐户名称 _\__ 。 要使用共享密钥从 Azure Blob 存储导入文件，标识名称必须是 `SHARED ACCESS SIGNATURE`。 若要将数据加载到 Azure Synapse Analytics，可以将任何有效的值用于标识。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1)。 使用 Kerberos（Windows Active Directory 或 MIT KDC）时，请勿在 IDENTITY 参数中使用域名。 它应只是帐户名称。
 
 > [!IMPORTANT]
-> 用于 PolyBase 的 SQL、Oracle、Teradata 和 MongoDB ODBC 连接器仅支持基本身份验证，不支持 Kerberos 身份验证。
+> 支持 Kerberos 身份验证的唯一 PolyBase 外部数据源是 Hadoop。 所有其他外部数据源（SQL Server、Oracle、Teradata、MongoDB、通用 ODBC）仅支持基本身份验证。
 
 > [!NOTE]
 > 如果为 Azure Blob 存储中的容器启用了匿名访问，则不需要 WITH IDENTITY。 有关查询 Azure Blob 存储的示例，请参阅[从 Azure Blob 存储上存储的文件导入表](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)。

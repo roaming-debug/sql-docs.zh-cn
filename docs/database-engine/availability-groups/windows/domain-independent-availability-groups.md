@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6c809abd5c333013b197dd48ca2fb4832bf6b615
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 060e9e635aa7be4dd3c00e11b0f3a36073cdaa54
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643603"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100349285"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>创建域独立可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,10 +150,10 @@ Windows Server 2016 引入了一种基于与 Active Directory 分离的群集的
          )
    ```
 
-13. 向在步骤 9 中在该实例上创建的每个用户分配权限，使其能够连接到终结点。 
+13. 向在步骤 8 中在该实例上创建的每个登录名分配权限，使其能够连接到终结点。 
 
    ```sql
-   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_Login];
    GO
    ```
 

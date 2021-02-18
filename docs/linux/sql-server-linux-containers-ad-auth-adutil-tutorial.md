@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 318fb046adc25cc2ff485b14974bb756e586162b
-ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
+ms.openlocfilehash: 61f03a3d1175e5d38952c3e9e578a025c474188a
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97103279"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100273108"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux--containers"></a>教程：为 Linux 上的 SQL Server 容器配置 Active Directory 身份验证
 
@@ -86,9 +86,10 @@ ms.locfileid: "97103279"
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. 注册 Microsoft Ubuntu 存储库。
+1. 导入公共存储库 GPG 密钥，然后注册 Microsoft Ubuntu 存储库。
 
     ```bash
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
     ```
 
@@ -101,6 +102,7 @@ ms.locfileid: "97103279"
 1. 运行以下命令以安装 adutil-preview。 `ACCEPT_EULA=Y` 接受 adutil 的预览版 EULA。 EULA 位于路径 `/usr/share/adutil/` 中。
 
     ```bash
+    sudo apt-get update
     sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
     ```
 

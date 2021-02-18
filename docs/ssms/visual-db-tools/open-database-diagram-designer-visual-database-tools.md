@@ -16,12 +16,12 @@ ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b25c138d9943120c8c375d6ed55bb0c034d93cec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 63e1561aa85afe7d439554db051e0c7a7c07e8a7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479973"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339812"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>打开数据库关系图设计器 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,22 +33,22 @@ ms.locfileid: "88479973"
   
 1.  在对象资源管理器中，右键单击相应数据库的“数据库关系图”节点。  
   
-2.  从下拉菜单上，单击“新建数据库关系图”****。  
+2.  从下拉菜单上，单击“新建数据库关系图”。  
   
-3.  在“添加表”**** 对话框中，选择要在关系图中使用的表。  
+3.  在“添加表”对话框中，选择要在关系图中使用的表。  
   
     > [!NOTE]  
-    > 如果选择“关闭”**** 而不添加表，则可以返回而在以后添加表。  
+    > 如果选择“关闭”而不添加表，则可以返回而在以后添加表。  
   
-4.  “数据库关系图”**** 菜单将添加到主菜单，设计器窗格也会打开。  
+4.  “数据库关系图”菜单将添加到主菜单，设计器窗格也会打开。  
   
 ### <a name="open-an-existing-database-diagram"></a>打开现有的数据库关系图  
   
 1.  在对象资源管理器中，右键单击“数据库关系图”节点下的相应关系图。  
   
-2.  在下拉菜单上，单击“设计数据库关系图”****。  
+2.  在下拉菜单上，单击“设计数据库关系图”。  
   
-3.  “数据库关系图”**** 菜单将添加到主菜单，该关系图也会在设计器窗格中打开。  
+3.  “数据库关系图”菜单将添加到主菜单，该关系图也会在设计器窗格中打开。  
   
 ## <a name="see-also"></a>另请参阅  
 [设计数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  

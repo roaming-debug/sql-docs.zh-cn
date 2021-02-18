@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521904030d97213770d4a2310b51eaadc37d4e5d
-ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
+ms.openlocfilehash: 996ae78401e57e538ef2835ec107a2cc5400741a
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478582"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100352472"
 ---
 # <a name="statistics"></a>统计信息
 
@@ -128,10 +128,9 @@ ORDER BY s.name;
   |临时|n < 6|6|
   |临时|6 <= n <= 500|500|
   |永久性|n <= 500|500|
-  |临时或永久|500 <= n <= 25,000|500 + (0.20 * n)|
-  |临时或永久|n > 25,000|SQRT(1,000 * n)|
+  |临时或永久|*n* >= 500|MIN ( 500 + (0.20 * *n*), SQRT(1,000 * *n*) ) |
 
-  例如，如果你的表包含 200 万行，则计算为 `SQRT(1,000 * 2,000,000) = 44,721`，并且统计信息将每 44,721 次修改更新一次。
+  例如，如果表中包含 200 万行，则计算为 `500 + (0.20 * 2,000,000) = 400,500` 和 `SQRT(1,000 * 2,000,000) = 44,721` 中较小的一个。 这意味着每 44,721 次修改后更新一次统计信息。
 
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或者在[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 和更低级别下的 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 和更高版本中，启用[跟踪标志 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用降低的动态统计信息更新阈值。

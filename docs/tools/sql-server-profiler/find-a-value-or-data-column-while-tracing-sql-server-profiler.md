@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 697674390fe11ff569451dcb0153482f7b8aefd8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: edc3ed219b019a81f3093db88a19526e5e9dee0a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789978"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340563"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>在跟踪时查找值或数据列 (SQL Server Profiler)
 

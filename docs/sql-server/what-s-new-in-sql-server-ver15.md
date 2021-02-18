@@ -9,26 +9,26 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 749e13242c81e5a566ae13dfd66385194639db37
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: aadb59645e474557a92e3e87a0cd9c0c50df0b46
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596221"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100271744"
 ---
-# <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
+# <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 的新增功能
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本的基础上构建，旨在将 SQL Server 发展成一个平台，以提供开发语言、数据类型、本地或云环境以及操作系统选项。
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 在早期版本的基础上构建，旨在将 SQL Server 发展成一个平台，以提供开发语言、数据类型、本地或云环境以及操作系统选项。
 
-本文总结了 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和增强功能。
+本文总结了 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 的新功能和增强功能。
 
-有关详细信息和已知问题，请参阅 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 发行说明](sql-server-version-15-release-notes.md)。
+有关详细信息和已知问题，请参阅 [[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 发行说明](sql-server-version-15-release-notes.md)。
 
-要获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验，请使用[最新工具](../azure-data-studio/download-azure-data-studio.md)。
+要获得 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 的最佳体验，请使用[最新工具](../azure-data-studio/download-azure-data-studio.md)。
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 为 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 引入了 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]。 它还为 SQL Server 数据库引擎、SQL Server Analysis Services、SQL Server 机器学习服务、Linux 上的 SQL Server 和 SQL Server Master Data Services 提供了附加功能和改进。
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 为 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 引入了 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]。 它还为 SQL Server 数据库引擎、SQL Server Analysis Services、SQL Server 机器学习服务、Linux 上的 SQL Server 和 SQL Server Master Data Services 提供了附加功能和改进。
 
 下面的一个 13 分钟的视频提供了对 SQL Server 2019 的介绍：
 
@@ -50,7 +50,7 @@ ms.locfileid: "98596221"
 有关详细信息，请参阅[什么是 SQL Server [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]](../big-data-cluster/big-data-cluster-overview.md)。
 
 ## <a name="intelligent-database"></a>智能数据库
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本中的创新的基础上构建，旨在提供开箱即用的业界领先性能。 从[智能查询处理](../relational-databases/performance/intelligent-query-processing.md)到对永久性内存设备的支持，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 智能数据库功能提高了所有数据库工作负荷的性能和可伸缩性，而无需更改应用程序或数据库设计。
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 在早期版本中的创新的基础上构建，旨在提供开箱即用的业界领先性能。 从[智能查询处理](../relational-databases/performance/intelligent-query-processing.md)到对永久性内存设备的支持，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 智能数据库功能提高了所有数据库工作负荷的性能和可伸缩性，而无需更改应用程序或数据库设计。
 
 ### <a name="intelligent-query-processing"></a>智能查询处理
 通过[智能查询处理](../relational-databases/performance/intelligent-query-processing.md)，可以发现关键的并行工作负荷在大规模运行时，其性能得到了改进。 同时，它们仍可适应不断变化的数据世界。 默认情况下，最新的[数据库兼容性级别](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150)设置上支持智能查询处理，这会产生广泛影响，可通过最少的实现工作量改进现有工作负荷的性能。
@@ -58,7 +58,7 @@ ms.locfileid: "98596221"
 |新增功能或更新 | 详细信息 |
 |:---|:---|
 |行模式内存授予反馈 |通过调整批处理模式和行模式运算符的内存授予大小，扩展了批处理模式内存授予反馈功能。 此调整可以自动纠正过度授予，过度授予会导致内存浪费和并发减少。 此调整还可纠正内存授予不足（会导致到磁盘的昂贵溢出）。 请参阅[行模式内存授予反馈](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)。 |
-|行存储上的批处理模式 | 支持批处理模式执行，而无需使用列存储索引。 批处理模式执行在分析工作负荷期间更高效地使用 CPU，但低于 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的版本中，只有当查询包含具有列存储索引的运算时才使用它。 然而，有些应用程序可能会使用列存储索引不支持的功能，因此无法利用批处理模式。 自 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 起，批处理模式在符合条件的分析工作负载上启用，这些工作负载的查询包含具有任何类型索引（行存储或列存储）的运算。 请参阅[行存储上的批处理模式](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)。 |
+|行存储上的批处理模式 | 支持批处理模式执行，而无需使用列存储索引。 批处理模式执行在分析工作负荷期间更高效地使用 CPU，但低于 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 的版本中，只有当查询包含具有列存储索引的运算时才使用它。 然而，有些应用程序可能会使用列存储索引不支持的功能，因此无法利用批处理模式。 自 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 起，批处理模式在符合条件的分析工作负载上启用，这些工作负载的查询包含具有任何类型索引（行存储或列存储）的运算。 请参阅[行存储上的批处理模式](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)。 |
 |标量 UDF 内联|自动将标量 UDF 转换为关系表达式，并将它们嵌入调用 SQL 查询。 此转换提升了利用标量 UDF 的工作负载的性能。 请参阅[标量 UDF 内联](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。|
 |表变量延迟编译|提升了引用表变量的查询的计划质量和整体性能。 在优化和初始编译期间，此功能传播基于实际表变量行计数的基数估计。 这种准确的行计数信息可优化下游计划操作。 请参阅[表变量延迟编译](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)。 |
 |使用 `APPROX_COUNT_DISTINCT` 进行近似查询处理 |对于绝对精度不重要、但响应速度很关键的情况，`APPROX_COUNT_DISTINCT` 使用比 `COUNT(DISTINCT())` 更少的资源的同时跨大型数据集进行聚合，以实现高级并发。 请参阅[近似查询处理](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)。|
@@ -66,17 +66,17 @@ ms.locfileid: "98596221"
 
 
 ### <a name="in-memory-database"></a>内存数据库
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [内存数据库](../relational-databases/in-memory-database.md)技术利用现代硬件创新提供无与伦比的性能和规模。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在此领域早期创新的基础上构建（例如内存中联机事务处理 (OLTP)），旨在为所有数据库工作负荷实现新的可伸缩性级别。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [内存数据库](../relational-databases/in-memory-database.md)技术利用现代硬件创新提供无与伦比的性能和规模。 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 在此领域早期创新的基础上构建（例如内存中联机事务处理 (OLTP)），旨在为所有数据库工作负荷实现新的可伸缩性级别。  
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
 |混合缓冲池| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的新功能，可以在需要时直接访问位于永久性内存 (PMEM) 设备上数据库文件中的数据库页。 请参阅[混合缓冲池](../database-engine/configure-windows/hybrid-buffer-pool.md)。|
-|内存优化 TempDB 元数据| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了一个新功能，该功能属于[内存数据库](../relational-databases/in-memory-database.md)功能系列内存优化 TempDB 元数据，它可有效消除此瓶颈，并为 TempDB 繁重的工作负荷解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。 请参阅[内存优化 TempDB 元数据](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
-| 内存中 OLTP 对数据库快照的支持 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了对创建包含内存优化文件组的数据库的[数据库快照](../relational-databases/databases/database-snapshots-sql-server.md)的支持。 |
+|内存优化 TempDB 元数据| [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 引入了一个新功能，该功能属于[内存数据库](../relational-databases/in-memory-database.md)功能系列内存优化 TempDB 元数据，它可有效消除此瓶颈，并为 TempDB 繁重的工作负荷解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。 请参阅[内存优化 TempDB 元数据](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
+| 内存中 OLTP 对数据库快照的支持 | [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 引入了对创建包含内存优化文件组的数据库的[数据库快照](../relational-databases/databases/database-snapshots-sql-server.md)的支持。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="intelligent-performance"></a>智能性能
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本的智能数据库创新的基础上构建，旨在确保[提高运行速度](/archive/blogs/bobsql/)。 这些改进有助于克服已知的资源瓶颈，并提供配置数据库服务器的选项，以在所有工作负荷中提供可预测性能。
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 在早期版本的智能数据库创新的基础上构建，旨在确保[提高运行速度](/archive/blogs/bobsql/)。 这些改进有助于克服已知的资源瓶颈，并提供配置数据库服务器的选项，以在所有工作负荷中提供可预测性能。
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
@@ -85,7 +85,7 @@ ms.locfileid: "98596221"
 |资源调控| `REQUEST_MAX_MEMORY_GRANT_PERCENT` 和 `ALTER WORKLOAD GROUP` 的 `CREATE WORKLOAD GROUP` 选项的可配置值已从整数更改为浮点数数据类型，以允许更精细地控制内存限制。 请参阅[修改工作负载组](../t-sql/statements/alter-workload-group-transact-sql.md)和[创建工作负载组](../t-sql/statements/create-workload-group-transact-sql.md)。|
 |减少了对工作负荷的重新编译| 通过减少不必要的重新编译，改进了跨多个作用域使用临时表的性能。 请参阅[减少了对工作负荷的重新编译](../relational-databases/tables/tables.md#ctp23)。 |
 |间接检查点可伸缩性 |请参阅[改进了间接检查点可伸缩性](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)。|
-|并发 PFS 更新|[页可用空间 (PFS) 页](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)是数据库文件中的特殊页面，SQL Server 用来在为对象分配空间时帮助定位可用空间。 PFS 页上的页闩锁争用通常与 [TempDB](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) 关联，但当有许多并发对象分配线程时，也可能会在用户数据库上发生。 此改进改变了使用 PFS 更新来管理并发的方式，这样就能在共享闩锁（而不是排他闩锁）下更新它们。 自 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 起，此行为在所有数据库（包括 TempDB）中默认处于启用状态。|
+|并发 PFS 更新|[页可用空间 (PFS) 页](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)是数据库文件中的特殊页面，SQL Server 用来在为对象分配空间时帮助定位可用空间。 PFS 页上的页闩锁争用通常与 [TempDB](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) 关联，但当有许多并发对象分配线程时，也可能会在用户数据库上发生。 此改进改变了使用 PFS 更新来管理并发的方式，这样就能在共享闩锁（而不是排他闩锁）下更新它们。 自 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 起，此行为在所有数据库（包括 TempDB）中默认处于启用状态。|
 |计划程序辅助角色迁移 |通过辅助角色迁移，空闲的计划程序可将辅助角色从同一 NUMA 节点上其他计划程序的可运行队列中迁移，并立即恢复已迁移的辅助角色的任务。 在将长时间运行的任务恰好分配给同一计划程序的情况下，此增强功能可提供更均衡的 CPU 使用率。 有关详细信息，请参阅 [SQL Server 2019 智能性能 - 辅助角色迁移](https://techcommunity.microsoft.com/t5/SQL-Server/SQL-Server-2019-Intelligent-Performance-Worker-Migration/ba-p/939610)。 |
 | &nbsp; | &nbsp; |
 
@@ -105,7 +105,7 @@ ms.locfileid: "98596221"
 | &nbsp; | &nbsp; |
 
 ## <a name="developer-experience"></a>开发人员体验
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 继续提供一流的开发人员体验，并增强了图形和空间数据类型、UTF-8 支持以及新扩展性框架，该框架使开发人员可以使用他们选择的语言来获取其所有数据的见解。
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 继续提供一流的开发人员体验，并增强了图形和空间数据类型、UTF-8 支持以及新扩展性框架，该框架使开发人员可以使用他们选择的语言来获取其所有数据的见解。
 
 ### <a name="graph"></a>图形
 
@@ -145,7 +145,7 @@ ms.locfileid: "98596221"
 | &nbsp; | &nbsp; |
 
 ### <a name="error-messages"></a>错误消息
-当提取、转换和加载 (ETL) 进程由于源和目标没有匹配的数据类型和/或长度而失败时，故障排除会很耗时，尤其是在大型数据集中。 通过 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 可更快速地深入了解数据截断错误。
+当提取、转换和加载 (ETL) 进程由于源和目标没有匹配的数据类型和/或长度而失败时，故障排除会很耗时，尤其是在大型数据集中。 通过 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 可更快速地深入了解数据截断错误。
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
@@ -153,7 +153,7 @@ ms.locfileid: "98596221"
 | &nbsp; | &nbsp; |
 
 ## <a name="mission-critical-security"></a>任务关键安全性
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供安全的体系结构，旨在使数据库管理员和开发人员能够创建安全的数据库应用程序并应对威胁。 每个版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 都在早期版本基础上进行了改进，并引入了新的特性和功能，[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在此基础上继续进行构建。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供安全的体系结构，旨在使数据库管理员和开发人员能够创建安全的数据库应用程序并应对威胁。 每个版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 都在早期版本基础上进行了改进，并引入了新的特性和功能，[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 在此基础上继续进行构建。
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
@@ -164,13 +164,13 @@ ms.locfileid: "98596221"
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>高可用性
-每位用户在部署 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时都需执行一项常见任务，即确保所有任务关键型 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例以及其中的数据库在企业和最终用户需要时随时可用。 可用性是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 平台的关键支柱，并且 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了许多新功能和增强功能，使企业能够确保其数据库环境高度可用。
+每位用户在部署 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时都需执行一项常见任务，即确保所有任务关键型 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例以及其中的数据库在企业和最终用户需要时随时可用。 可用性是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 平台的关键支柱，并且 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 引入了许多新功能和增强功能，使企业能够确保其数据库环境高度可用。
 
 ### <a name="availability-groups"></a>可用性组
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
-|最多五个同步副本|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 将同步副本的最大数目从 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中的 3 增加到了 5。 可以配置此组的 5 个副本在该组中进行自动故障转移。 有 1 个主要副本以及 4 个同步的次要副本。|
+|最多五个同步副本|[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 将同步副本的最大数目从 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中的 3 增加到了 5。 可以配置此组的 5 个副本在该组中进行自动故障转移。 有 1 个主要副本以及 4 个同步的次要副本。|
 |次要副本到主要副本连接重定向| 允许客户端应用程序连接定向到主要副本，而不考虑在连接字符串中指定的目标服务器。 有关详细信息，请参阅[次要副本到主要副本读/写连接重定向（AlwaysOn 可用性组）](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md)。|
 |HADR 权益| SQL Server 的每位软件保障客户都将能够对 Microsoft 仍支持的任何 SQL Server 版本使用三项增强权益。 有关详细信息，请参阅[此处的公告](https://cloudblogs.microsoft.com/sqlserver/2019/10/30/new-high-availability-and-disaster-recovery-benefits-for-sql-server/)。
 | &nbsp; | &nbsp; |
@@ -192,7 +192,7 @@ ms.locfileid: "98596221"
 | &nbsp; | &nbsp; |
 
 ## <a name="platform-choice"></a>平台选择
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中已引入的创新的基础上构建，旨在使你能够在所选平台上运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，并获得比以往更多的功能和更高的安全性。
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 在 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中已引入的创新的基础上构建，旨在使你能够在所选平台上运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，并获得比以往更多的功能和更高的安全性。
 
 ### <a name="linux"></a><a id="sql-server-on-linux"></a>Linux
 
@@ -204,18 +204,18 @@ ms.locfileid: "98596221"
 |Linux 上的机器学习服务 | 请参阅[在 Linux 上安装 SQL Server 机器学习服务（Python 和 R）](../linux/sql-server-linux-setup-machine-learning.md)。 |
 |TempDB 改进 | 默认情况下，Linux 上的 SQL Server 新安装会根据逻辑核心数创建多个 TempDB 数据文件（最多 8 个数据文件）。 这不适用于就地次要版本或主版本升级。 每个 TempDB 文件的大小为 8 MB，且自动增长大小为 64 MB。 此行为类似于 Windows 上的默认 SQL Server 安装。 |
 |Linux 上的 PolyBase | 请参阅在 Linux 上为非 Hadoop 连接器[安装 PolyBase](../relational-databases/polybase/polybase-linux-setup.md)。<br/><br/>请参阅 [PolyBase 类型映射](../relational-databases/polybase/polybase-type-mapping.md)。 |
-| 变更数据捕获 (CDC) 支持 | Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 现在支持变更数据捕获 (CDC)。 |
+| 变更数据捕获 (CDC) 支持 | Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 现在支持变更数据捕获 (CDC)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="containers"></a>容器
-开始使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的最简单方法是使用容器。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本中引入的创新的基础上构建，旨在使你能够以更安全的方式在新平台上部署 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容器，并获得更多功能。
+开始使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的最简单方法是使用容器。 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 在早期版本中引入的创新的基础上构建，旨在使你能够以更安全的方式在新平台上部署 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容器，并获得更多功能。
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
-| Microsoft 容器注册表 | [Microsoft 容器注册表](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)现在将 Docker Hub 替换为新的官方 Microsoft 容器映像，其中包括 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。 |
-| 非根容器 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了通过在默认情况下以非根用户身份启动 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 进程来创建更安全容器的功能。 请参阅[以非根用户的身份构建并运行 SQL Server 容器](../linux/sql-server-linux-docker-container-deployment.md)。 |
-| Red Hat 认证的容器映像 | 从 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 开始，可以在 Red Hat Enterprise Linux 上运行 SQL Server 容器。 |
-| PolyBase 和机器学习支持| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了使用 SQL Server 容器的新方法，例如机器学习服务和 PolyBase。 查看[容器 GitHub 存储库中的 SQL Server](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples) 中的一些示例。 |
+| Microsoft 容器注册表 | [Microsoft 容器注册表](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)现在将 Docker Hub 替换为新的官方 Microsoft 容器映像，其中包括 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]。 |
+| 非根容器 | [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 引入了通过在默认情况下以非根用户身份启动 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 进程来创建更安全容器的功能。 请参阅[以非根用户的身份构建并运行 SQL Server 容器](../linux/sql-server-linux-docker-container-deployment.md)。 |
+| Red Hat 认证的容器映像 | 从 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 开始，可以在 Red Hat Enterprise Linux 上运行 SQL Server 容器。 |
+| PolyBase 和机器学习支持| [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 引入了使用 SQL Server 容器的新方法，例如机器学习服务和 PolyBase。 查看[容器 GitHub 存储库中的 SQL Server](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples) 中的一些示例。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="setup-options"></a>安装选项
@@ -278,7 +278,7 @@ ms.locfileid: "98596221"
 ## <a name="next-steps"></a>后续步骤
 
 - [SQL Server 研讨会](https://aka.ms/sqlworkshops)
-- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 发行说明](sql-server-version-15-release-notes.md)
-- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]：技术白皮书](https://aka.ms/sql2019whitepaper)
+- [[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 发行说明](sql-server-version-15-release-notes.md)
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]：技术白皮书](https://aka.ms/sql2019whitepaper)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

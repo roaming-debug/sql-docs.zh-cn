@@ -3,16 +3,16 @@ title: Linux 上的 SQL Server 2019 的发行说明
 description: 本文包含 Linux 上运行的 SQL Server 2019 的发行说明和支持功能。 发行说明适用于最新版本和几个以前的版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/01/2020
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 56ac6b94c281cd97c53e290b5bc387131518bbcd
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 1a17ddc3f94f23203ec0a7d56edd63fe2cff4fa1
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99235906"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100338259"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 的发行说明
 
@@ -35,6 +35,7 @@ ms.locfileid: "99235906"
 
 | 发布                   | 版本       | 发布日期 |
 |---------------------------|---------------|--------------|
+| [CU9](#cu9)               | 15.0.4102.2   | 2021-02-10   |
 | [CU8-GDR](#cu8-GDR)               | 15.0.4083.2  | 2021-01-12   |
 | [CU8](#cu8)               | 15.0.4073.23  | 2020-10-07   |
 | [CU7（已删除）](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 2020-09-02   |
@@ -59,6 +60,25 @@ ms.locfileid: "99235906"
 - [在 Linux 上安装 SQL Server 2019 机器学习服务 R 和 Python 支持](sql-server-linux-setup-machine-learning.md)
 - [安装 PolyBase 包](../relational-databases/polybase/polybase-linux-setup.md)
 - [启用 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu9-february-2021"></a><a id="cu9"></a> CU9（2021 年 2 月）
+
+这是 SQL Server 2019 (15.x) 的累积更新 9 (CU9) 版本。 此次发布的 SQL Server 数据库引擎版本是 15.0.4102.2。 若要了解修补程序和改进，请参阅 <https://support.microsoft.com/help/5000642>。
+
+### <a name="package-details"></a>包详细信息
+
+对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+
+> [!NOTE]
+> 从 CU1 开始，Red Hat 的脱机包安装链接指向 RHEL 8 包。 如需 RHEL 7 包，请参阅下载路径 <https://packages.microsoft.com/rhel/7/mssql-server-2019/>。
+>
+> 自 CU3 起，SQL Server 2019 现已支持 Ubuntu 18.04。 Ubuntu 的脱机包安装链接指向 Ubuntu 18.04 包。 如需 Ubuntu 16.04 包，请参阅下载路径 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/>
+
+| 程序包 | 包版本 | 下载 |
+|-----|-----|-----|
+| Red Hat RPM 包 | 15.0.4102.2-4 | [引擎 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4102.2-4.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4102.2-4.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4102.2-4.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4102.2-4.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4102.2-4.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4102.2-4.x86_64.rpm)|
+| SLES RPM 包 | 15.0.4102.2-4 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4102.2-4.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4102.2-4.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4102.2-4.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4102.2-4.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4102.2-4.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4102.2-4.x86_64.rpm)|
+| Ubuntu 18.04 Debian 包 | 15.0.4102.2-4 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4102.2-4_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4102.2-4_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4102.2-4_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4102.2-4_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4102.2-4_amd64.deb)</br>[PolyBase RPM 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4102.2-4_amd64.deb)|
 
 ## <a name="cu8-gdr-january-2021"></a><a id="cu8-GDR"></a> CU8-GDR（2021 年 1 月）
 

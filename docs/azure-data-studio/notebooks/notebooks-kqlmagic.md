@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: 7f21215f0f241373db532feeac00143e03753bf7
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: e78a8b6bd70724b8dda3d542e9c088e706cbe5ee
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100042647"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343526"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio 中的 Kqlmagic
 
@@ -35,20 +35,22 @@ Kqlmagic 是一种命令，可在 [Azure Data Studio 笔记本](./notebooks-guid
 
    ![新建笔记本](media/notebooks-kqlmagic/install-new-notebook.png)
 
-2. 系统询问时，选择“是”以升级 Python 包。
+2. 当包需要更新时，系统可能会提示你升级 Python 包。
 
    ![是](media/notebooks-kqlmagic/install-python-yes.png)
 
 3. 安装 Kqlmagic：
 
    ```python
-   !pip install Kqlmagic --no-cache-dir --upgrade
+   import sys
+   !{sys.executable} -m pip install Kqlmagic --no-cache-dir --upgrade
    ```
 
    验证它是否已安装：
 
    ```python
-   !pip list
+   import sys
+   !{sys.executable} -m pip list
    ```
 
    ![列出](media/notebooks-kqlmagic/install-list.png)

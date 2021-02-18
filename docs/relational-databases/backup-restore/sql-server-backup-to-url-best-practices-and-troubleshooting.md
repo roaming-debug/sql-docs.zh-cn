@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: dc7532aaead7b2257755f2db689c2cbbbd05d3c3
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6620e688dcd8094bbc5b27bfbb540a2e7d3b1585
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639046"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100348836"
 ---
 # <a name="sql-server-back-up-to-url-best-practices-and-troubleshooting"></a>从 SQL Server 备份到 URL 的最佳做法和故障排除
 
@@ -44,6 +44,8 @@ ms.locfileid: "97639046"
 -   在备份期间使用 `WITH COMPRESSION` 选项可以最大程度降低存储成本和存储事务成本。 它也会减少完成备份过程所需的时间。  
 
 - 按照[从 SQL Server 备份到 URL](./sql-server-backup-to-url.md) 中的建议，设置 `MAXTRANSFERSIZE` 和 `BLOCKSIZE` 参数。
+
+- SQL Server 对于使用的存储冗余类型不可知。 每种存储冗余（LRS、ZRS、GRS、RA-GRS、RA-GZRS 等）都支持备份到页 blob 和块 blob。
   
 ## <a name="handling-large-files"></a>处理大型文件  
   
@@ -155,15 +157,27 @@ CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'
 , SECRET = '<storage access key>' ;  
 ```  
   
-凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 db_backupoperator 且拥有“更改任意凭据”权限的登录帐户。  
+凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 db_backupoperator 且拥有“更改任意凭据”权限的登录帐户 。  
   
 验证存储帐户名称和密钥值。 在凭据中存储的信息必须与你在备份和还原操作中使用的 Azure 存储帐户的属性值匹配。  
   
-  
+
+400（错误的请求）错误
+
+使用 SQL Server 2012，执行类似于如下的备份时可能会遇到错误：
+
+```
+Backup to URL received an exception from the remote endpoint. Exception Message: 
+The remote server returned an error: (400) Bad Request..
+```
+
+这是由 Azure 存储帐户支持的 TLS 版本引起的。 更改支持的 TLS 版本或使用 [KB4017023](https://support.microsoft.com/en-us/topic/kb4017023-sql-server-2012-2014-or-2016-backup-to-microsoft-azure-blob-storage-service-url-isn-t-compatible-for-tls-1-2-e9ef6124-fc05-8128-86bc-f4f4f5ff2b78) 中列出的解决方法。
+
+
 ## <a name="proxy-errors"></a>代理错误  
  如果您使用代理服务器访问 Internet，可能会发现以下问题：  
   
- _代理服务器连接限制*  
+ 代理服务器连接限制  
   
  代理服务器可能具有限制每分钟连接次数的设置。 “备份到 URL”进程是一个多线程进程，因此可能超过此限制。 如果出现此情况，代理服务器将终止连接。 若要解决此问题，请更改代理设置，使 SQL Server 不使用该代理。 下面是一些您可能在错误日志中看到的类型或错误消息的示例：  
   

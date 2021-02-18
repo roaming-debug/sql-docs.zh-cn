@@ -20,12 +20,12 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 3bd61a8a290f8863d13c2052d0a50835461c5aae
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 51c90ad84344c98ff0e144bd611ab243715e1787
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038386"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341062"
 ---
 # <a name="register-servers"></a>注册服务器
 
@@ -52,7 +52,7 @@ ms.locfileid: "92038386"
   
 -   创建服务器组。  
   
--   通过在“已注册的服务器名称”**** 框中提供与“服务器名称”**** 列表中不同的值，为已注册的服务器提供用户友好名称。  
+-   通过在“已注册的服务器名称”框中提供与“服务器名称”列表中不同的值，为已注册的服务器提供用户友好名称。  
   
 -   提供已注册服务器的详细说明。  
   

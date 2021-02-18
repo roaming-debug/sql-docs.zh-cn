@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57eb0bac3a794aaf3b7f84fc8cfb14d0207da1ae
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: d7a1f83563e3ae103fa683bbe604926f40982d06
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99233252"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100352715"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "99233252"
 -   哈希
 -   内存优化非聚集索引
 
-有关 XML 索引的信息，请参阅 [XML 索引概述](../relational-databases/xml/xml-indexes-sql-server.md)。
+有关 XML 索引的信息，请参阅 [XML 索引概述](../relational-databases/xml/xml-indexes-sql-server.md)和[选择性 XML 索引 (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md)。
 
 有关空间索引的信息，请参阅[空间索引概述](../relational-databases/spatial/spatial-indexes-overview.md)。
 

@@ -8,25 +8,26 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2021
-ms.openlocfilehash: d249e36c9b15cabe9556701c8aafc3cb5ab66fac
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 2/10/2021
+ms.openlocfilehash: 17cc8ef3252ad39c344de7a7c51a9af80c1f6030
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100040007"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343403"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](./download-azure-data-studio.md)**
 
-## <a name="january-2021-hotfix"></a>2021 年 1 月（修补程序）
+## <a name="december-2020-hotfix"></a>2020 年 12 月（修补程序）
 
-2021 年 1 月 22 日&nbsp; / &nbsp;版本：1.25.2
+2021 年 2 月 10 日&nbsp; / &nbsp;版本：1.25.3
 
 | 更改 | 详细信息 |
 | ------ | ------- |
-| 修复 Bug [#13899](https://github.com/microsoft/azuredatastudio/issues/13899)| 滚动到 Notebooks 中相应的交叉引用链接 |
+| 修复 Bug [#13899](https://github.com/microsoft/azuredatastudio/issues/13899) | 滚动到 Notebooks 中相应的交叉引用链接 |
+| 升级 Electron 以合并重要的 bug 修复| 不适用 |
 
 ## <a name="december-2020"></a>2020 年 12 月
 

@@ -5,16 +5,16 @@ description: 本文介绍 SQL Server 大数据群集如何将 RBAC 与 Kubernete
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a379b2bd1bb0e1992d70e1c86ae93163f6c02201
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: f8759714fe2846a86f53a4974960b511f4b4c3dd
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100046437"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343888"
 ---
 # <a name="kubernetes-rbac-model--impact-on-users-and-service-accounts-managing-bdc"></a>Kubernetes RBAC 模型及对用户和服务帐户管理 BDC 的影响
 
@@ -62,6 +62,7 @@ BDC 使用服务帐户（例如 `sa-mssql-controller` 或 `master`）来协调�
      resources:
      - pods
      - nodes/stats
+     - nodes/proxy
      verbs:
      - get
    ---

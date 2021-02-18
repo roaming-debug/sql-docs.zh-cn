@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a6a51b6949d3b387c1284bdd5cbaa9a64b3cfa37
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ab40ea190dab072d7415ded1f399cfa4a4b78568
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917059"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335940"
 ---
 # <a name="profiler-utility"></a>Profiler 实用工具
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ profiler
  用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的用户登录 ID。 登录 ID 区分大小写。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)] 列中的一个值匹配。  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
  **/P** *password*  
  指定用户指定的用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的密码。  
@@ -83,14 +83,14 @@ profiler
  指定要在事件探查器启动时加载的跟踪表。 必须指定数据库、用户或架构以及表。  
   
  **/T"** *template_name* **"**  
- 指定要加载以便配置跟踪的模板。 模板名称必须括在引号中。 模板名称必须位于系统模板目录或用户模板目录下。 如果这两个目录中同时存在同名的两个模板，则将加载系统目录下的模板。 如果不存在具有指定名称的模板，则将加载标准模板。 请注意，模板的文件扩展名 (.tdf) 不能指定为 *template_name*的一部分。 例如：  
+ 指定要加载以便配置跟踪的模板。 模板名称必须括在引号中。 模板名称必须位于系统模板目录或用户模板目录下。 如果这两个目录中同时存在同名的两个模板，则将加载系统目录下的模板。 如果不存在具有指定名称的模板，则将加载标准模板。 请注意，模板的文件扩展名 (.tdf) 不能指定为 *template_name* 的一部分。 例如：  
   
 ```  
 /T "standard"  
 ```  
   
  **/F"** *filename* **"**  
- 指定要在事件探查器启动时加载的跟踪文件的路径和文件名。 整个路径和文件名必须置于引号中。 此选项不能与 **/O**一起使用。  
+ 指定要在事件探查器启动时加载的跟踪文件的路径和文件名。 整个路径和文件名必须置于引号中。 此选项不能与 **/O** 一起使用。  
   
  **/O "** *filename*  **"**  
  指定应在其中写入跟踪结果的文件的路径和文件名。 整个路径和文件名必须置于引号中。 此选项不能与 **/F.** 一起使用。  

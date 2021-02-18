@@ -1,19 +1,19 @@
 ---
 description: 最新的累积更新和服务包的列表，其中包含 Microsoft SQL Server 的生成号。
 title: SQL Server 的最新更新
-ms.date: 11/30/2020
+ms.date: 02/11/2021
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: tmichael-ms
-ms.author: tmichael
+author: SrinivasSQLMS
+ms.author: skandi
 ms.reviewer: hristins
-ms.openlocfilehash: a79ab99baaad3ec156fc77be77a8584e50448662
-ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
+ms.openlocfilehash: f5b522ae47687b2b960b23812f859b3a97238f5e
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98125620"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100353078"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Microsoft SQL Server 的最新更新
 
@@ -29,9 +29,9 @@ ms.locfileid: "98125620"
 
 |产品版本   | 最新 Service Pack |  最新 GDR | 最新累积更新 | CU 发布日期 | 通用指南  |
 |--|--|--|--|--|--|
-|SQL Server 2019|空值|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 8 [(KB 4583459)](https://support.microsoft.com/help/4583459)|2021/1/12|[SQL Server 2019 安装](./install-sql-server.md)|
+|SQL Server 2019|空值|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 9 [(KB 5000642)](https://support.microsoft.com/help/5000642)|2021/2/11|[SQL Server 2019 安装](./install-sql-server.md)|
 |SQL Server 2017|空值|[KB 4583456](https://support.microsoft.com/help/4583456)|CU 22 [(KB 4583457)](https://support.microsoft.com/help/4583457)|2021/1/12|[SQL Server 2017 安装](./install-sql-server.md)|
-|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4583460](https://support.microsoft.com/help/4583460)|CU 15 [(KB 4583461)](https://support.microsoft.com/kb/4583461)|2021/1/12|[SQL Server 2016 安装](./install-sql-server.md)|
+|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4583460](https://support.microsoft.com/help/4583460)|CU 16 [(KB 5000645)](https://support.microsoft.com/kb/5000645)|2021/2/11|[SQL Server 2016 安装](./install-sql-server.md)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|2019/7/9|[SQL Server 2016 安装](./install-sql-server.md)|
 |SQL Server 2016|空值|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|2017/11/22|[SQL Server 2016 安装](./install-sql-server.md)|
 |SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/kb/4022619)|[KB 4583463](https://support.microsoft.com/help/4583463)|CU 4 [(KB 4583462)](https://support.microsoft.com/kb/4583462)|2021/1/12|[SQL Server 2014 安装](https://www.microsoft.com/download/details.aspx?id=42299)|

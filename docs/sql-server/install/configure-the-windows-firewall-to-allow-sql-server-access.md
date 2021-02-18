@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7a4e10b437f60c8f6b1f80ed76017591fc22686d
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 7a00c8196a3a20d17f07c215b8d0d0f1c3ffd84e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98597264"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352455"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -204,7 +204,7 @@ ms.locfileid: "98597264"
  有关端口 135 的详细信息，请参阅以下参考内容：  
   
 -   [Windows Server 系统的服务概述和网络端口要求](https://support.microsoft.com/kb/832017)   
--   [如何排除 RPC 端点映射程序错误](https://support.microsoft.com/kb/839880)  
+-   [如何排除 RPC 端点映射程序错误](https://mskb.pkisolutions.com/kb/839880)  
 -   [Remote procedure call (RPC)（远程过程调用 (RPC)）](/previous-versions/ms950395(v=msdn.10))    
 -   [如何配置与防火墙一起使用的 RPC 动态端口分配](https://support.microsoft.com/kb/154596/)  
   

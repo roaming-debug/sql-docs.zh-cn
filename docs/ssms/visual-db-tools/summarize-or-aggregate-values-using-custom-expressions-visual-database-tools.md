@@ -14,12 +14,12 @@ ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e71f0ffc06314678becda493f6e45c98060d3a32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b50489a7a063f81e68de788ed829a0ff728c6e3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88312543"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350411"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>使用自定义表达式汇总或聚合值 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "88312543"
   
 1.  为查询指定组。 有关详细信息，请参阅[对查询结果中的行进行分组 (Visual Database Tools)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)。  
   
-2.  移动到“条件”窗格中的空白行，然后在“列”**** 列中键入表达式。  
+2.  移动到“条件”窗格中的空白行，然后在“列”列中键入表达式。  
   
     [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)将自动为表达式分配列别名，以在查询输出中创建有用的列标题。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
-3.  在表达式的“分组依据”**** 列中，选择“表达式”****。  
+3.  在表达式的“分组依据”列中，选择“表达式”。  
   
 4.  运行该查询。  
   

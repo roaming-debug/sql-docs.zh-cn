@@ -11,12 +11,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af720d627c0af05060b4d6f4915762cd80782714
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 34f8655a24a84d50c5f677d819330537fa030cc6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97469498"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075038"
 ---
 # <a name="import-json-documents-into-sql-server"></a>将 JSON 文档导入 SQL Server
 
@@ -91,6 +91,9 @@ SELECT BulkColumn
 ## <a name="import-json-documents-from-azure-blob-storage"></a>从 Azure Blob 存储导入 JSON 文档
 
 可以使用 T-SQL BULK INSERT 命令或 OPENROWSET 函数，将文件从 Azure Blob 存储直接载入 Azure SQL 数据库。
+
+> [!NOTE]
+> 此功能已添加到 [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 和 Azure SQL 中。
 
 首先，按下面的示例所示创建外部数据源。
 

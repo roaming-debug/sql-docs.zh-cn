@@ -13,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0b758a04f81dffc31844af91933a544960f6ba2d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 5dd6604f4fb82a502402d74cb15c0a0744f82e0e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037516"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350463"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在关系图中创建表间的关系（可视化数据库工具）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "92037516"
   
 2.  将所选列拖动到相关的表中。  
   
-3.  显示两个对话框：“外键关系”**** 对话框和前景中显示的“表和列”**** 对话框。  
+3.  显示两个对话框：“外键关系”对话框和前景中显示的“表和列”对话框。  
   
-4.  “关系名”使用系统提供的名称，其格式为 FK_localtable_\_foreigntabl********。 您可以更改此值。  
+4.  “关系名”使用系统提供的名称，其格式为 FK_localtable_\_foreigntabl。 您可以更改此值。  
   
-5.  验证“主键表”**** 是否指定了正确的表。  
+5.  验证“主键表”是否指定了正确的表。  
   
 6.  网格列出了本地列及与其匹配的外部列。 您可以添加或删除表列或者更改映射。  
   
 7.  选择 **“确定”** 。  
   
-    此时将出现“外键关系”**** 对话框。 “选定的关系”**** 中显示了已创建的关系。  
+    此时将出现“外键关系”对话框。 “选定的关系”中显示了已创建的关系。  
   
 8.  在网格中更改关系的属性。  
   

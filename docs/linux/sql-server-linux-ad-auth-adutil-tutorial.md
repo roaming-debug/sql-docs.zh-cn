@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 6b68cb2b2ff3712502ef4e0862fe71ad78705d7c
-ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
+ms.openlocfilehash: e1e14db6e55ca4af4f76220c0e3f377c38e41165
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99623757"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351870"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux-using-adutil"></a>教程：使用 adutil 为 Linux 上的 SQL Server 配置 Active Directory 身份验证
 
@@ -70,9 +70,10 @@ ms.locfileid: "99623757"
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. 注册 Microsoft Ubuntu 存储库。
+1. 导入公共存储库 GPG 密钥，然后注册 Microsoft Ubuntu 存储库。
 
     ```bash
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
     ```
 

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 54580e6c1dc218caab00460774d4b04cd87f79d5
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: a62af6dfa7f48b0d3baa30100176177657bad2a3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006119"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347330"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>导航 SQL ServerPowerShell 路径
 
@@ -124,7 +124,7 @@ Get-ChildItem -force
   
 1.  使用 **New-PSDrive** 可以定义自定义驱动器。 使用 **Root** 参数可以指定自定义驱动器名称表示的路径。  
   
-2.  在 **Set-Location**之类的路径导航 cmdlet 中引用自定义驱动器名称。  
+2.  在 **Set-Location** 之类的路径导航 cmdlet 中引用自定义驱动器名称。  
   
 ### <a name="custom-drive-example-powershell"></a>自定义驱动器示例 (PowerShell)  
  此示例创建一个名为 AWDB 的虚拟驱动器，该驱动器映射到 AdventureWorks2012 示例数据库的已部署副本的节点。 然后，使用该虚拟驱动器导航到数据库中的表。  

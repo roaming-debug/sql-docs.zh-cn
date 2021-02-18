@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: d15d859239aa9ea36f0885218d3469489f28a9b2
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: cca82925c95b360bff522bc813798485628d4382
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006086"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339043"
 ---
 # <a name="manage-tab-completion-with-sql-server-powershell"></a>使用 SQL Server PowerShell 管理 Tab 自动补全
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元引入了三个变量 (**$SqlServerMaximumTabCompletion**、 **$SqlServerMaximumChildItems**和 **$SqlServerIncludeSystemObjects**) 来控制 Windows PowerShell Tab 补全。 Tab 填写功能通过返回名称以您正在键入的字符串开头的项目的表，而减少了必须键入的内容量。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元引入了三个变量 (**$SqlServerMaximumTabCompletion**、 **$SqlServerMaximumChildItems** 和 **$SqlServerIncludeSystemObjects**) 来控制 Windows PowerShell Tab 补全。 Tab 填写功能通过返回名称以您正在键入的字符串开头的项目的表，而减少了必须键入的内容量。  
 
 [!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
@@ -29,19 +29,19 @@ ms.locfileid: "92006086"
 
 如果正在处理的数据库中包含大量对象，则 Tab 自动补全列表可能会变得非常大。 某些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象类型（如视图）也具有大量系统对象。  
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理单元引入了三个可用来控制由 Tab 补全和 **Get-ChildItem**所提供的信息量的系统变量。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理单元引入了三个可用来控制由 Tab 补全和 **Get-ChildItem** 所提供的信息量的系统变量。
 
 ## <a name="sqlservermaximumtabcompletion--n"></a>$SqlServerMaximumTabCompletion =** *n*
 
-指定要包括在 Tab 填写列表中的对象的最大数量。 如果你在具有多于 *n* 个对象的路径节点处选择 Tab，则 Tab 补全列表会在 *n*处被截断。 *n* 为整数。 默认设置为 0，表示对所列出对象的数量没有限制。  
+指定要包括在 Tab 填写列表中的对象的最大数量。 如果你在具有多于 *n* 个对象的路径节点处选择 Tab，则 Tab 补全列表会在 *n* 处被截断。 *n* 为整数。 默认设置为 0，表示对所列出对象的数量没有限制。  
 
 ## <a name="sqlservermaximumchilditems--n"></a>$SqlServerMaximumChildItems =** *n*
 
-指定由 **Get-ChildItem**显示的对象的最大数量。 如果在具有多于 **n** 个对象的路径节点处运行 *Get-ChildItem* ，则该列表会在 *n*处被截断。 *n* 为整数。 默认设置为 0，表示对所列出对象的数量没有限制。  
+指定由 **Get-ChildItem** 显示的对象的最大数量。 如果在具有多于 **n** 个对象的路径节点处运行 *Get-ChildItem* ，则该列表会在 *n* 处被截断。 *n* 为整数。 默认设置为 0，表示对所列出对象的数量没有限制。  
 
 ## <a name="sqlserverincludesystemobjects---true--false-"></a>$SqlServerIncludeSystemObjects =** { **$True** | **$False** }
 
-如果为 **$True**，则 Tab 补全和 **Get-ChildItem**将显示系统对象。 如果为 **$False**，则将不显示系统对象。 默认设置为 **$False**。  
+如果为 **$True**，则 Tab 补全和 **Get-ChildItem** 将显示系统对象。 如果为 **$False**，则将不显示系统对象。 默认设置为 **$False**。  
 
 ## <a name="set-the-sql-server-tab-completion-variables"></a>设置 SQL Server 的 Tab 填写变量
 

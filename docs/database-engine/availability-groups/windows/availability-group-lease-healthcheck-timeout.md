@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a616e9b8fb1ebce6edd15c6af101765963d862f8
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 787a683eb0fc666eff8f3c72519bbba149dafe96
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97640313"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100340812"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的租用、群集和运行状况检测超时的机制和指南 
 
@@ -98,7 +98,7 @@ WSFC 配置中有四个值负责确定群集超时值
 要列出当前所有群集值，请在目标群集的任何节点上打开提升的 PowerShell 终端。 运行以下命令：
 
 ```PowerShell
- Get-Cluster | fl \
+ Get-Cluster | fl *
 ``` 
 
 要更新其中任意值，请在提升的 PowerShell 终端中运行以下命令：
@@ -125,6 +125,8 @@ WSFC 配置中有四个值负责确定群集超时值
 
    根据 AG 的配置，可能会为侦听器、共享磁盘、文件共享等提供额外资源，这些资源不需要任何其他配置。 
 
+> [!NOTE]  
+>  属性“LeaseTimeout”的新值将在资源脱机并再次联机时生效。
    
 ### <a name="health-check-values"></a>运行状况检查值 
 

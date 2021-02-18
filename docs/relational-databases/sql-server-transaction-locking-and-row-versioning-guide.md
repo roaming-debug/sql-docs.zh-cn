@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 815ad066f97a80d250dcd1c3b1a961e4a86b05a6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 47545adc6e3e620cd74585d477bdd028f1e8625f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97416694"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352496"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>事务锁定和行版本控制指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -912,7 +912,7 @@ GO
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> 死锁扩展事件
 自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起，应使用 `xml_deadlock_report` 扩展事件 (xEvent)，而不使用 SQL 跟踪或 SQL 探查器中的死锁图事件类。
 
-此外，自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起，当发生死锁时，system\_health*_ 会话已捕获所有包含死锁图的 `xml_deadlock_report` xEvent。 由于 _system\_health* 会话默认情况下处于启用状态，因此不需要将单独的 xEvent 会话配置为捕获死锁信息。 
+此外，自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起，当发生死锁时，systemhealth* **\_** _ 会话已捕获所有包含死锁图的 `xml_deadlock_report` xEvent。 由于 _system\_health* 会话默认情况下处于启用状态，因此不需要将单独的 xEvent 会话配置为捕获死锁信息。 
 
 捕获的死锁图通常具有三个不同的节点：
 -   **牺牲品列表**。 死锁牺牲品进程标识符。

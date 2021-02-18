@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e1a2fe365ff2cf40e1dd7e08e113a586e7c2b666
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: 571cf683c8d905cfb499624cbd05dc40efe94b86
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783514"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100344646"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -263,7 +263,7 @@ ms.locfileid: "98783514"
   
 -   **唯一的可用性组名称：** 每个可用性组名称在 WSFC 上必须唯一。 可用性组名称的最大长度为 128 个字符。  
   
--   **可用性副本：** 每个可用性组都支持一个主副本和最多八个辅助副本。 所有副本都可在异步提交模式下运行，或最多三个副本可在同步提交模式下运行（具有两个同步辅助副本的一个主副本）。  
+-   **可用性副本：** 每个可用性组都支持一个主副本和最多八个辅助副本。 所有副本都可在异步提交模式下运行，或最多 5 个副本可在同步提交模式下运行（具有两个同步辅助副本的一个主副本）。  
   
 -   每台计算机的可用性组和可用性数据库的最大数目：可以在计算机（VM 或物理机）上放置的数据库和可用性组的实际数目取决于硬件和工作负荷，但是没有强制限制。 Microsoft 已测试每台物理计算机多达 10 个 AG 和 100 个数据库，但这不是绑定限制。 根据服务器上的硬件规范和工作负载，可以在 SQL Server 的实例上放置更多数据库和可用性组。 系统过载的信号可能包括但不限于工作线程用尽、可用性组系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
   

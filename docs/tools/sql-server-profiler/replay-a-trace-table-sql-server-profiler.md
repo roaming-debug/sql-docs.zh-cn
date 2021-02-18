@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 85add6ac34c090c55ccd5207854131dfc2b23fc0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1e56ef7a889826c2a3d6f51e06b403b88ecc8cda
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774738"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353438"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>重播跟踪表 (SQL Server Profiler)
 
