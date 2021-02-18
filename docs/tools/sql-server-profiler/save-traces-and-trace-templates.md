@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 084471f17aac4d9f731facaad71c2e265a2c275d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c75f865ed31e43f2fbdec96cfc65fcbd9619c1d1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726908"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345775"
 ---
 # <a name="save-traces-and-trace-templates"></a>保存跟踪和跟踪模板
 
@@ -37,7 +37,7 @@ ms.locfileid: "85726908"
 > [!NOTE]  
 >  将跟踪数据捕获到表比将跟踪数据捕获到文件慢。 因此可以将跟踪数据捕获到文件，打开该跟踪文件，然后将跟踪另存为跟踪表。  
   
- 如果你使用跟踪文件， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 会将捕获的事件数据（而非跟踪定义）保存到 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪文件 (\*.trc) 中。 保存跟踪文件时自动在文件名的末尾加上该扩展名，不管是否指定任何其他扩展名。 例如，如果指定一个名为 **Trace.dat**的跟踪文件，则创建的文件名为 **Trace.dat.trc**。  
+ 如果你使用跟踪文件， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 会将捕获的事件数据（而非跟踪定义）保存到 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪文件 (\*.trc) 中。 保存跟踪文件时自动在文件名的末尾加上该扩展名，不管是否指定任何其他扩展名。 例如，如果指定一个名为 **Trace.dat** 的跟踪文件，则创建的文件名为 **Trace.dat.trc**。  
   
 > [!IMPORTANT]  
 >  拥有 SHOWPLAN、ALTER TRACE 或 VIEW SERVER STATE 权限的用户可以对显示计划输出中捕获的查询进行查看。 这些查询可能包含敏感信息，例如密码。 因此，建议仅将这些权限授予有权查看敏感信息的一类用户，例如 **db_owner** 固定数据库角色的成员或 **sysadmin** 固定服务器角色的成员。 此外，建议您最好将包含显示计划相关事件的显示计划文件或跟踪文件保存到使用 NTFS 文件系统的某个位置，并且只允许有权查看敏感信息的用户对之进行访问。  

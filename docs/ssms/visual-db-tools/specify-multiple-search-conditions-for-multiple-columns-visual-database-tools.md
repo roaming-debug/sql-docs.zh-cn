@@ -17,16 +17,16 @@ ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 5a5f5d4e3396e3ccbff7280fbae14036015ba5eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4831d45d1e258855a70e8171a0d07c46a8a56d41
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445973"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350433"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>为多个列指定多个搜索条件 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-通过在搜索条件中包括多个数据列，可以扩大或缩小查询范围。 例如，您可能希望：  
+通过在搜索条件中包括多个数据列，可以扩大或缩小查询范围。 例如，你可能希望：  
   
 -   搜索在公司工作五年以上或出任某些职位的雇员。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "88445973"
   
 1.  在 [“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的列。  
   
-2.  在要搜索的第一个列的“筛选器”**** 列中，指定第一个条件。  
+2.  在要搜索的第一个列的“筛选器”列中，指定第一个条件。  
   
-3.  在要搜索的第二个数据列的 **Or...** 列中，指定第二个条件，将“筛选器”**** 列保留为空白。  
+3.  在要搜索的第二个数据列的 **Or...** 列中，指定第二个条件，将“筛选器”列保留为空白。  
   
     查询和视图设计器将创建包含 OR 条件的 WHERE 子句，如下所示：  
   
@@ -57,15 +57,15 @@ ms.locfileid: "88445973"
 4.  对每个要添加的其他条件重复第 2 和第 3 步。 对每个新条件使用不同的 **Or...** 列。  
   
 ## <a name="specifying-an-and-condition"></a>指定 AND 条件  
-若要使用由 AND 链接的条件搜索不同的数据列，请将所有条件都放在网格的“筛选器”**** 列中。  
+若要使用由 AND 链接的条件搜索不同的数据列，请将所有条件都放在网格的“筛选器”列中。  
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>为两个不同的列指定 AND 条件  
   
 1.  在 [“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的列。  
   
-2.  在要搜索的第一个数据列的“筛选器”**** 列中，指定第一个条件。  
+2.  在要搜索的第一个数据列的“筛选器”列中，指定第一个条件。  
   
-3.  在第二个数据列的“筛选器”**** 列中，指定第二个条件。  
+3.  在第二个数据列的“筛选器”列中，指定第二个条件。  
   
     查询和视图设计器将创建包含 AND 条件的 WHERE 子句，如下所示：  
   

@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1f642b375e4e3331bbac0e49fb878ceecd02cf5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4035d5faf74365939e2696dd83a13b1b512e84b0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786031"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349535"
 ---
 # <a name="replay-trace-data"></a>重播跟踪数据
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,19 +48,19 @@ ms.locfileid: "85786031"
   
     1.  打开 Windows 命令提示符实用工具 (**CMD.exe**)，然后导航到 Distributed Replay 管理工具 (**DReplay.exe**) 的安装位置。  
   
-    2.  （可选）如果控制器服务不是在运行管理工具的计算机上运行，则使用 *controller* 参数 **-m**指定控制器。  
+    2.  （可选）如果控制器服务不是在运行管理工具的计算机上运行，则使用 *controller* 参数 **-m** 指定控制器。  
   
-    3.  使用 *controller_working_directory* 参数 **-d**指定在预处理阶段，中间文件在控制器上的保存位置。  
+    3.  使用 *controller_working_directory* 参数 **-d** 指定在预处理阶段，中间文件在控制器上的保存位置。  
   
     4.  （可选）使用 **-o** 参数捕获每个客户端上结果跟踪文件中的重播活动。  
   
-    5.  （可选）使用 *target_server* 参数 **-s**指定分布式重播客户端应在其中重播跟踪工作负荷的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果使用 `<Server>` 元素指定重播配置文件的 `<ReplayOptions>` 元素中的目标服务器，则此参数不是必需的。  
+    5.  （可选）使用 *target_server* 参数 **-s** 指定分布式重播客户端应在其中重播跟踪工作负荷的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果使用 `<Server>` 元素指定重播配置文件的 `<ReplayOptions>` 元素中的目标服务器，则此参数不是必需的。  
   
-    6.  使用 *clients* 参数 **-w**指定应参与重播的分布式重播客户端。 列出客户端计算机名称，由逗号分隔。 注意：不允许使用 IP 地址。  
+    6.  使用 *clients* 参数 **-w** 指定应参与重播的分布式重播客户端。 列出客户端计算机名称，由逗号分隔。 注意：不允许使用 IP 地址。  
   
-    7.  （可选）使用 *config_file* 参数 **-c**指定重播配置文件的位置。 如果您修改了默认重播配置文件的副本，则使用此参数来指向新的配置文件。  
+    7.  （可选）使用 *config_file* 参数 **-c** 指定重播配置文件的位置。 如果您修改了默认重播配置文件的副本，则使用此参数来指向新的配置文件。  
   
-    8.  （可选）使用 *status_interval* 参数 **-f**指定是否希望管理工具以 30 秒之外的其他频率显示状态消息。  
+    8.  （可选）使用 *status_interval* 参数 **-f** 指定是否希望管理工具以 30 秒之外的其他频率显示状态消息。  
   
      例如，下面的语法在控制器服务所在的同一计算机上启动重播阶段，使用位于 `c:\WorkingDir`的控制器工作目录，捕获每个参与客户端上的重播活动，使用客户端 `client1` 和 `client2` 执行重播，并从位于 `c:\modifiedreplay.config`的经过修改的重播配置文件中获得其余的重播配置设置：  
   

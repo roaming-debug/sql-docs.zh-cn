@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: 10fc6d48bc8187e49cac7d2dcfffb806419b1799
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9279078aee9a27b647a9f350756e317ae06cbda5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774895"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349411"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>将跟踪与 Windows 性能日志数据关联
 
@@ -25,7 +25,7 @@ ms.locfileid: "85774895"
 
 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以打开 Microsoft Windows 性能日志、选择要与跟踪关联的计数器，并在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 图形用户界面中将所选性能计数器与跟踪一起显示。 选择跟踪窗口中的事件时， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的系统监视器数据窗口窗格中的红色竖线用于指示与所选跟踪事件关联的性能日志数据。  
   
- 若要将跟踪与性能计数器关联，请打开包含 StartTime**** 和 EndTime**** 数据列的跟踪文件或表，然后在  的“文件”[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **** 菜单上，单击“导入性能数据”****。 然后您就可以打开性能日志，选择要与跟踪关联的系统监视器对象和计数器。  
+ 若要将跟踪与性能计数器关联，请打开包含 StartTime 和 EndTime 数据列的跟踪文件或表，然后在  的“文件”[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 菜单上，单击“导入性能数据”。 然后您就可以打开性能日志，选择要与跟踪关联的系统监视器对象和计数器。  
   
 ### <a name="to-correlate-a-trace-with-performance-log-data"></a>将跟踪与性能日志数据关联  
   
@@ -51,7 +51,7 @@ ms.locfileid: "85774895"
   
 4.  在 **“常规”** 选项卡中，单击 **“添加计数器”** 。  
   
-5.  在 **“性能对象”** 列表中，选择要监视的性能对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能对象名称以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开头，命名实例以 MSSQL$*instanceName*开头。  
+5.  在 **“性能对象”** 列表中，选择要监视的性能对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能对象名称以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开头，命名实例以 MSSQL$*instanceName* 开头。  
   
 6.  添加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所需的所有计数器和其他重要值（例如处理器时间和磁盘时间）。  
   

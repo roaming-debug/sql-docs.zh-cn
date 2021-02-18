@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 11ca3aaf1a05e2f0a00065751ced9cd563a964ae
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 379c6cc1d865b2820026948b352abb07b27eda52
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470778"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100273018"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>使用 ODBC 保存和加载 SQL Server 中的 R 对象
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +29,7 @@ SQL Server R Services 可将序列化的 R 对象存储在表中，然后根据�
 
 若要直接从 R 环境中将 R 对象保存到 SQL Server，必须执行以下操作：
 
-+ 使用 RxOdbcData 数据源建立与 SQL Server 的连接  。
++ 使用 RxOdbcData 数据源建立与 SQL Server 的连接。
 + 通过 ODBC 连接调用新函数
 + 或者，可以指定不对对象进行序列化。 然后，选择要使用的新压缩算法，而不是默认的压缩算法。
 

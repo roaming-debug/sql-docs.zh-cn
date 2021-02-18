@@ -11,12 +11,12 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80cc5f0c7500d5308388f440ede0e6171e9fd840
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: e73777ee342d5a6997d30e6bd58baf0291bf114c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98597358"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100271754"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>安装 SQL Server 商业智能功能
 

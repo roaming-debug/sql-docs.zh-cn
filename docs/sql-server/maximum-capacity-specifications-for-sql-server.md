@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: b4f0e4ed75e992095cff1f9ae315e3036ba7ef90
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: c0d0da7b2f74eb9dacdef390ede2cdd34d0356fa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766221"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336029"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
 
@@ -56,7 +56,7 @@ ms.locfileid: "98766221"
 |每个外键的字节数|900||
 |每个主键的字节数|900||
 |每行的字节数|8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持行溢出存储，行溢出存储使长度可变的列可以被推送到行外。 对于被推送到行外的长度可变的列，主记录中仅存储 24 个字节根。 此功能允许的限制实际上比以前的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本更高。 有关更多信息，请参阅[大型行支持](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support)。|
-|内存优化表中的每行字节数|8,060|启动 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 内存优化表支持行外存储。 如果表中的所有列的最大大小超过 8060 个字节，则长度可变的列被推送到行外；此操作是编译时的决定。 存储于行外的列仅有 8 字节的引用存储于行内。 有关详细信息，请参阅 [内存优化表中的表和行大小](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)。|
+|内存优化表中的每行字节数|8,060|启动 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 内存优化表支持行外存储。 如果表中的所有列的最大大小超过 8060 个字节，则长度可变的列被推送到行外；此操作是编译时的决定。 存储于行外的列仅有 8 字节的引用存储于行内。 有关详细信息，请参阅 [内存优化表中的表和行大小](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)。|
 |存储过程源文本中的字节数|批处理大小中的较小者或 250 MB||
 |每个 `varchar(max) `、`varbinary(max)`、`xml`、`text` 或 `image` 列的字节数|2^31-1||
 |每个 `ntext` 或 `nvarchar(max)` 列的字符数|2^30-1||
@@ -83,7 +83,7 @@ ms.locfileid: "98766221"
 |每个表的外键表引用数|传出 = 253。 传入 = 10,000。|有关限制，请参阅 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)。|
 |标识符长度（以字符计）|128||
 |每台计算机的实例数|独立服务器上为 50 个实例。<br /><br />使用共享群集磁盘作为存储时，有 25 个故障转移群集实例。<br/><br/>使用 SMB 文件共享作为存储选项时，有 50 个故障转移群集实例。||
-|每个内存优化表的索引个数|自 [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] 起以及在 [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)] 中为 999<br/>[!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] 和 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 中为 8||
+|每个内存优化表的索引个数|自 [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] 起以及在 [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)] 中为 999<br/>[!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] 和 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 中为 8||
 |包含 SQL 语句的字符串的长度（批大小）|65,536（网络数据包大小）|网络数据包大小指的是用于在应用程序和关系[!INCLUDE[ssDE](../includes/ssde-md.md)]之间进行通信的表格格式数据流 (TDS) 数据包的大小。 默认的数据包大小为 4 KB，由“网络数据包大小”配置选项控制。|
 |每个连接的锁数|每个服务器的最大锁数||
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|仅受内存限制|此值针对静态锁分配。 动态锁仅受内存限制。|

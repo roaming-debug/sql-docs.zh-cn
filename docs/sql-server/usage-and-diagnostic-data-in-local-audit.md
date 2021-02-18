@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: f927e003673cb4397250fe532d57452ddb4e6445
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6333f571ea271420b4044f7e3cf562d2f1edcc15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474558"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353544"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用情况和诊断数据收集的本地审核 (CEIP)
 
@@ -63,7 +63,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 若要获取 SQL Server CEIP 服务登录帐户，请按以下步骤操作
  
-1. 启动“服务”控制台  。 若要执行此操作，请选择键盘上的“Windows 徽标键+R”以打开“运行”对话框   。 然后在文本字段中键入 services.msc 并选择“确定”，以启动“服务”控制台    。  
+1. 启动“服务”控制台  。 若要执行此操作，请选择键盘上的“Windows 徽标键+R”以打开“运行”对话框。 然后在文本字段中键入 services.msc 并选择“确定”，以启动“服务”控制台。  
 
 2. 导航到相应的服务。 例如，对于数据库引擎，找到 SQL Server CEIP 服务 (Your-Instance-Name)   。 对于 Analysis Services，找到 SQL Server Analysis Services CEIP (Your-Instance-Name)   。 对于 Integration Services，找到 SQL Server Integration Services CEIP 服务  。
 
@@ -108,23 +108,23 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 1. 导航到相应的 CPE 路径：
 
-   | 版本 | 数据库引擎 - 注册表项* |
+   | 版本 | 数据库引擎 - 注册表项 |
    | :------ | :----------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL_ *13**.* Your-Instance-Name*\\CPE |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL13.Your-Instance-Name\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.Your-Instance-Name\\CPE |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL15.Your-Instance-Name\\CPE |
    | &nbsp; | &nbsp; |
 
    | 版本 | Analysis Services - 注册表项 |
    | :------ | :------------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS_ *13**.* Your-Instance-Name*\\CPE |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS13.Your-Instance-Name\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.Your-Instance-Name\\CPE |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS15.Your-Instance-Name\\CPE |  
    | &nbsp; | &nbsp; |
 
    | 版本 | Integration Services - 注册表项 |
    | :------ | :---------------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\_ *130** |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\130 |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\140 |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\150 |
    | &nbsp; | &nbsp; |

@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: d0f2bb38923f52edd8f1dae3410d29c7d4babc95
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4b5e676b5c5cd885395cad869ddff1e6db03fb6a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923053"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343579"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 开发合作伙伴
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -21,7 +21,7 @@ ms.locfileid: "86923053"
 
 ## <a name="our-development-partners"></a>我们的开发合作伙伴
 
-| Partner | 说明 | 链接 |
+| 合作伙伴 | 说明 | 链接 |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>快速 SQL 是一种智能 SQL 集成开发环境，允许数据库开发人员和数据库管理员从一个界面在所有主要数据库平台（包括 SQL Server）上创建高性能 SQL 代码。<br><br>[系统要求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[网站][idera_website]<br>[Twitter][idera_twitter]<br>[视频][idera_youtube] |
 |![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. 让开发者社区能够使用合适的工具集灵活选择编程语言、框架和服务。 使用 Click2Cloud 的工具包，开发人员可以创建“SQL on Linux”容器，并将其附加到应用程序中，同时还可实现安全的多租户体系结构。 该容器可以独立部署于任何基于云的容器平台上。|[市场][click2cloud_marketplace]<br>[网站][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[视频][click2cloud_youtube] |

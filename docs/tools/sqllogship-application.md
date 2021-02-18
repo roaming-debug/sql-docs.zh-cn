@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af98af52bfe6416c489be821fa2d8b27092fac27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 349b8f5bd757e623b79b043d14ce9de91c34e942
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918351"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341986"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -38,24 +38,24 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  指定将在其上运行操作的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 要指定的服务器实例取决于所指定的日志传送操作。 对于 **-backup**， *instance_name* 必须为日志传送配置中主服务器的名称。 对于 **-copy** 或 **-restore**， *instance_name* 必须为日志传送配置中辅助服务器的名称。  
   
  **-backup** _primary_id_  
- 执行主数据库的备份操作，此数据库的主 ID 由 *primary_id*指定。 可以通过从 [log_shipping_primary_databases](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md) 系统表选择此 ID 或通过使用 [sp_help_log_shipping_primary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md) 存储过程来获取此 ID。  
+ 执行主数据库的备份操作，此数据库的主 ID 由 *primary_id* 指定。 可以通过从 [log_shipping_primary_databases](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md) 系统表选择此 ID 或通过使用 [sp_help_log_shipping_primary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md) 存储过程来获取此 ID。  
   
  备份操作将在备份目录中创建日志备份。 然后， **sqllogship** 应用程序会根据文件保持期清除任何旧备份文件。 接着，此应用程序记录在主服务器和监视服务器上执行备份操作的历史记录。 最后，此应用程序会运行 [sp_cleanup_log_shipping_history](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)，根据保持期清除旧的历史记录信息。  
   
  **-copy** _secondary_id_  
- 执行复制操作，以便复制指定辅助服务器上一个或多个辅助数据库的备份，辅助数据库的辅助 ID 由 *secondary_id*指定。 可以通过从 [log_shipping_secondary](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md) 系统表选择此 ID 或通过使用 [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) 存储过程来获取此 ID。  
+ 执行复制操作，以便复制指定辅助服务器上一个或多个辅助数据库的备份，辅助数据库的辅助 ID 由 *secondary_id* 指定。 可以通过从 [log_shipping_secondary](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md) 系统表选择此 ID 或通过使用 [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) 存储过程来获取此 ID。  
   
  此操作将备份文件从备份目录复制到目标目录。 然后， **sqllogship** 应用程序会记录在辅助服务器和监视服务器上执行复制操作的历史记录。  
   
  **-restore** _secondary_id_  
- 在指定辅助服务器上对一个或多个辅助数据库执行还原操作，辅助数据库的辅助 ID 由 *secondary_id*指定。 可以通过使用 **sp_help_log_shipping_secondary_database** 存储过程获取此 ID。  
+ 在指定辅助服务器上对一个或多个辅助数据库执行还原操作，辅助数据库的辅助 ID 由 *secondary_id* 指定。 可以通过使用 **sp_help_log_shipping_secondary_database** 存储过程获取此 ID。  
   
  目标目录中在最近还原点之后创建的所有备份文件都将还原到一个或多个辅助数据库中。 然后， **sqllogship** 应用程序会根据文件保持期清除任何旧备份文件。 接着，此应用程序记录在辅助服务器和监视服务器上执行还原操作的历史记录。 最后，此应用程序会运行 **sp_cleanup_log_shipping_history**，根据保持期清除旧的历史记录信息。  
   
  **-verboselevel** _level_  
  指定要添加到日志传送历史记录的消息的级别。 *level* 是以下整数之一：  
   
-|级别|说明|  
+|级别|描述|  
 |-----------|-----------------|  
 |0|不输出跟踪消息和调试消息。|  
 |1|输出错误处理消息。|  
@@ -77,7 +77,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **sqllogship** 应用程序 SqlLogShip.exe 安装在 x:\Program Files\Microsoft SQL Server\130\Tools\Binn 目录中。  
   
 ## <a name="permissions"></a>权限  
- **sqllogship** 使用 Windows 身份验证。 运行此命令所使用的 Windows 身份验证帐户需要 Windows 目录访问权限和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。 要求取决于 **sqllogship** 命令是指定 **-backup**、 **-copy**还是 **-restore** 选项。  
+ **sqllogship** 使用 Windows 身份验证。 运行此命令所使用的 Windows 身份验证帐户需要 Windows 目录访问权限和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。 要求取决于 **sqllogship** 命令是指定 **-backup**、 **-copy** 还是 **-restore** 选项。  
   
 |选项|目录访问权限|权限|  
 |------------|----------------------|-----------------|  
@@ -86,7 +86,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**-restore**|需要对复制目录的读/写访问权限。|需要与 RESTORE 语句相同的权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md)备份。|  
   
 > [!NOTE]  
->  若要找出备份和复制目录的路径，可以运行 **sp_help_log_shipping_secondary_database** 存储过程或查看 **msdb** 中的 **log_shipping_secondary**表。 备份目录和目标目录的路径分别位于 **backup_source_directory** 和 **backup_destination_directory** 列。  
+>  若要找出备份和复制目录的路径，可以运行 **sp_help_log_shipping_secondary_database** 存储过程或查看 **msdb** 中的 **log_shipping_secondary** 表。 备份目录和目标目录的路径分别位于 **backup_source_directory** 和 **backup_destination_directory** 列。  
   
 ## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../database-engine/log-shipping/about-log-shipping-sql-server.md)   

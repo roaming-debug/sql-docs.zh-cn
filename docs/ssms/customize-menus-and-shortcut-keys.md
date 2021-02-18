@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 242dc262053aefe5a95e6e65d99ae98965491e55
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 9e8e6bc470b522ad27ff6e61d5383bbf6a87bd61
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034909"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344189"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自定义菜单和快捷键
 

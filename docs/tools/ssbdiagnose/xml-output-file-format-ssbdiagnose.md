@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: bef30df17ccc1bcabe471135b835450e811d2ddb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7798bc201bdb94a18f4c429e5ca74a04aeceea8a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729532"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335889"
 ---
 # <a name="xml-output-file-format-ssbdiagnose"></a>XML 输出文件格式 (ssbdiagnose)
 
@@ -31,7 +31,7 @@ ms.locfileid: "85729532"
   
 -   带有标头信息的 Banner 元素。  
   
--   **ssbdiagnose**报告的每个问题对应的 Issue 元素。  
+-   **ssbdiagnose** 报告的每个问题对应的 Issue 元素。  
   
 ## <a name="diagnosticinformation-root-element"></a>DiagnosticInformation 根元素  
   

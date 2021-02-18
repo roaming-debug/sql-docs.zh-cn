@@ -9,12 +9,12 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: e7480b4d31685be402c98892557ddfb5f7db0ab5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e3dd91e29d88fc2ab6f7216f0bac38632caa7b25
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470978"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352516"
 ---
 # <a name="tips-for-using-r-packages"></a>使用 R 包的提示
 
@@ -64,7 +64,7 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 在 SQL Server 中运行 R 解决方案时，此方法无效，因为 R 包必须安装到与实例相关联的特定默认库中。 如果包在默认库中不可用，则在尝试调用该包时，可能会收到此错误：
 
-library(xxx) 出错：没有名为“package-name”的包 
+library(xxx) 出错：没有名为“package-name”的包
 
 有关如何在 SQL Server 中安装 R 包的信息，请参阅[在 SQL Server 机器学习服务或 SQL Server R Services 上安装新的 R 包](install-additional-r-packages-on-sql-server.md)。
 
@@ -88,7 +88,7 @@ library(xxx) 出错：没有名为“package-name”的包
 
 + 了解与实例相关联的包库。 有关详细信息，请参阅[获取 R 包信息](../package-management/r-package-information.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 ::: moniker range="<=sql-server-2017"
 + [使用 R 工具安装包](install-r-packages-standard-tools.md)

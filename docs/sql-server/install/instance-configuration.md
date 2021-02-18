@@ -16,12 +16,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: cawrites
 ms.author: chadam
 robots: noindex,nofollow
-ms.openlocfilehash: 08b7d5d8c1680be42902fe287c14418b2732f7f9
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 7b678ac25174b75db198739e0e9bc191d29f18d9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595444"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336164"
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
 
@@ -365,11 +365,11 @@ ms.locfileid: "98595444"
   
 * “文件数” 是 **tempdb** 的数据文件总数。 默认值是 8 和安装程序检测到的逻辑内核数中的较小值。 作为一般准则，如果逻辑处理器数小于或等于 8，则使用与逻辑处理器数相同的数据文件数。 如果逻辑处理器数大于 8，请指定 8 个数据文件。 如果存在争用，请以 4（逻辑处理器数上限）为倍数增加数据文件数，直到争用减少到可接受的水平，或请更改工作负荷或代码。
   
-* **初始大小(MB)** ：每个 tempdb 数据文件的初始大小（以 MB 为单位）。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql16-md.md)] 的初始文件大小上限为 1024MB。 所有 **tempdb** 数据文件初始大小相同。 由于 tempdb 在 SQL Server 每次启动或进行故障转移时都会重新创建，因此请指定与工作负荷正常运行所需大小接近的大小。 若要在启动过程中进一步优化 tempdb 创建，请启用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
+* **初始大小(MB)** ：每个 tempdb 数据文件的初始大小（以 MB 为单位）。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 的初始文件大小上限为 1024MB。 所有 **tempdb** 数据文件初始大小相同。 由于 tempdb 在 SQL Server 每次启动或进行故障转移时都会重新创建，因此请指定与工作负荷正常运行所需大小接近的大小。 若要在启动过程中进一步优化 tempdb 创建，请启用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
   
 * **总初始大小(MB)** ：所有 tempdb 数据文件的累积大小。  
   
-* **自动增长(MB)** ：每个 tempdb 数据文件在空间不足时自动增长的空间量（以 MB 为单位）。 在 [!INCLUDE[sssql15](../../includes/sssql16-md.md)] 及更高版本中，所有数据文件都按此设置中指定的量同时增长。  
+* **自动增长(MB)** ：每个 tempdb 数据文件在空间不足时自动增长的空间量（以 MB 为单位）。 在 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 及更高版本中，所有数据文件都按此设置中指定的量同时增长。  
   
 * **总自动增长 (MB)** 是每个自动增长事件的累积大小。  
 * **数据目录**：显示保留 tempdb 数据文件的所有目录。 当存在多个目录时，以循环方式将数据文件放置在目录中。 例如，如果你创建 3 个目录，并指定 8 个数据文件，那么数据文件 1、4 和 7 在第一个目录中创建。 数据文件 2、5 和 8 在第二个目录中创建。 数据文件 3 和 6 在第三个目录中创建。  
@@ -380,7 +380,7 @@ ms.locfileid: "98595444"
   
 “tempdb 日志文件”是日志文件名。 此文件是自动创建的。 下列设置仅适用于 **tempdb** 日志文件：  
   
-* **初始大小 (MB)** 是 **tempdb** 日志文件的初始大小。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql16-md.md)] 的初始文件大小上限为 1024MB。 由于 tempdb 在 SQL Server 每次启动或进行故障转移时都会重新创建，因此请指定与工作负荷正常运行所需大小接近的大小。 若要在启动过程中进一步优化 tempdb 创建，请启用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
+* **初始大小 (MB)** 是 **tempdb** 日志文件的初始大小。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 的初始文件大小上限为 1024MB。 由于 tempdb 在 SQL Server 每次启动或进行故障转移时都会重新创建，因此请指定与工作负荷正常运行所需大小接近的大小。 若要在启动过程中进一步优化 tempdb 创建，请启用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
   
   > [!NOTE]
   > tempdb 使用最小日志记录。 无法备份 tempdb 日志文件。 它在 SQL Server 每次启动或群集实例进行故障转移时重新创建。
@@ -420,7 +420,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ## <a name="a-namemaxdop-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/>“数据库引擎配置 - MaxDOP”页
 
-“最大并行度(MaxDOP)”决定了一个语句最多可以使用多少个处理器。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了在安装过程中配置此选项的功能。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 还可以根据内核数自动为服务器检测建议的 MaxDOP 设置。  
+“最大并行度(MaxDOP)”决定了一个语句最多可以使用多少个处理器。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 引入了在安装过程中配置此选项的功能。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 还可以根据内核数自动为服务器检测建议的 MaxDOP 设置。  
 
 如果在安装过程中跳过此页，默认 MaxDOP 值就是此页中显示的建议值，而不是旧版本 (0) 的默认 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 值。 你还可以在此页上手动配置这一设置，并在安装后修改这一设置。 
 

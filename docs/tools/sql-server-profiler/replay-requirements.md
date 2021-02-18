@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d5fa4964a2ffb0d62777c25aa0d0c6ef205ee94b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9105e4d7c28b003c191d5a9794717496d07eb0f5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789933"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353362"
 ---
 # <a name="replay-requirements"></a>重播要求
 
@@ -116,7 +116,7 @@ ms.locfileid: "85789933"
   
 -   目标上的数据库 ID 最好与源上的数据库 ID 相同。 但是，如果它们不相同，当跟踪中出现 **DatabaseName** 时，将根据它进行匹配。  
   
--   必须将跟踪内包含的每个登录名的默认数据库在目标上设置成登录名各自的目标数据库。 例如，在源上，要重播的跟踪包含数据库 **Fred_Db**内登录名 **Fred** 的活动。 因此在目标上，必须将登录名 **Fred**的默认数据库设置成与 **Fred_Db** 相匹配的数据库（即使数据库名称不同）。 若要设置登录名的默认数据库，请使用 **sp_defaultdb** 系统存储过程。  
+-   必须将跟踪内包含的每个登录名的默认数据库在目标上设置成登录名各自的目标数据库。 例如，在源上，要重播的跟踪包含数据库 **Fred_Db** 内登录名 **Fred** 的活动。 因此在目标上，必须将登录名 **Fred** 的默认数据库设置成与 **Fred_Db** 相匹配的数据库（即使数据库名称不同）。 若要设置登录名的默认数据库，请使用 **sp_defaultdb** 系统存储过程。  
   
  重播与不存在的或不正确的登录名相关的事件会导致重播错误，但重播操作会继续。  
   

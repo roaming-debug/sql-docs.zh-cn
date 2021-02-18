@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 557501bb02cdb3a0b29c1f9654b5414bff6134b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb7d075fba09db4de518018f29190cb0c351bf27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785975"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335968"
 ---
 # <a name="file-element-dta"></a>文件元素 (DTA)
 
@@ -45,7 +45,7 @@ ms.locfileid: "85785975"
 |--------------------|-----------------|  
 |**数据类型和长度**|使用 **string** 数据类型，以指定工作负荷文件的目录路径。 例如：<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> 请注意，长度限制由服务器强制执行。|  
 |**默认值**|无。|  
-|**出现次数**|如果未指定其他类型的工作负荷，则必须使用一次。 必须为父元素 **EventString**指定子元素 **File**、 **Database** 或 **Workload** ，但只能使用一种类型。 例如，如果用 **文件** 元素指定工作负荷，则不能在同一 XML 输入文件中又用 **数据库** 元素指定工作负荷。|  
+|**出现次数**|如果未指定其他类型的工作负荷，则必须使用一次。 必须为父元素 **EventString** 指定子元素 **File**、 **Database** 或 **Workload** ，但只能使用一种类型。 例如，如果用 **文件** 元素指定工作负荷，则不能在同一 XML 输入文件中又用 **数据库** 元素指定工作负荷。|  
   
 ## <a name="element-relationships"></a>元素关系  
   

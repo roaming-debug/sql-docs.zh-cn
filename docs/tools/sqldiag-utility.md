@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 122aa921cb742d05c46e2d32430c857f4a723dee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1c9f3528ac4f377e379afd26e6583df3fe63fb2b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920893"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353334"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 实用工具
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -93,7 +93,7 @@ sqldiag
  将 **SQLdiag** 输出重定向到指定文件夹。 如果未指定 **/O** 选项，则 **SQLdiag** 输出结果将会写入 **SQLdiag** 启动文件夹下名为 SQLDIAG 的子文件夹中。 如果 SQLDIAG 文件夹不存在，则 **SQLdiag** 将会尝试创建该文件夹。  
   
 > [!NOTE]  
->  输出文件夹位置相对于可使用 **/P**指定的支持文件夹的位置。 若要为输出文件夹设置一个完全不同的位置，请为 **/O**指定完整的目录路径。  
+>  输出文件夹位置相对于可使用 **/P** 指定的支持文件夹的位置。 若要为输出文件夹设置一个完全不同的位置，请为 **/O** 指定完整的目录路径。  
   
  **/P** _support_folder_path_  
  设置支持文件夹路径。 默认情况下，将 **/P** 设置为存放 **SQLdiag** 可执行文件的文件夹。 支持文件夹包含 **SQLdiag** 支持文件，如 XML 配置文件、Transact-SQL 脚本以及该实用工具在收集诊断信息过程中所使用的其他文件。 如果使用该选项指定一个备用的支持文件路径，则 **SQLdiag** 会自动将其所需的支持文件复制到指定的文件夹（如果这些文件尚未存在）。  
@@ -134,7 +134,7 @@ sqldiag
   
  使用 **+** 并且不带日期（只使用 HH:MM:SS），以指定与当前日期和时间相对的时间。 例如，如果指定 **/B +02:00:00**，则 **SQLdiag** 将会在 2 小时后开始收集信息。  
   
- 不要在 **+** 和指定的 *start_time*之间插入空格。  
+ 不要在 **+** 和指定的 *start_time* 之间插入空格。  
   
  如果指定的开始时间是过去的某一时间，则 **SQLdiag** 将会强行更改开始日期，以使开始日期和时间为将来的日期和时间。 例如，如果指定时间为 **/B 01:00:00** ，而当前时间为 08:00:00，则 **SQLdiag** 将会强行将开始日期更改为下一天。  
   
@@ -147,16 +147,16 @@ sqldiag
   
  时间使用二十四小时制指定。 例如，下午 2:00 应指定为 **14:00:00**。  
   
- 使用 **+** 并且不带日期（只使用 HH:MM:SS），以指定与当前日期和时间相对的时间。 例如，如果使用 **/B +02:00:00 /E +03:00:00**指定开始时间和结束时间，则 **SQLdiag** 将会在 2 小时后开始收集信息，经过 3 小时的信息收集后便停止收集并退出。 如果不指定 **/B** ，则 **SQLdiag** 将会立即开始收集诊断信息，并按 **/E**指定的日期和时间结束收集操作。  
+ 使用 **+** 并且不带日期（只使用 HH:MM:SS），以指定与当前日期和时间相对的时间。 例如，如果使用 **/B +02:00:00 /E +03:00:00** 指定开始时间和结束时间，则 **SQLdiag** 将会在 2 小时后开始收集信息，经过 3 小时的信息收集后便停止收集并退出。 如果不指定 **/B** ，则 **SQLdiag** 将会立即开始收集诊断信息，并按 **/E** 指定的日期和时间结束收集操作。  
   
- 不要在 **+** 和指定的 *start_time* 或 *end_time*之间插入空格。  
+ 不要在 **+** 和指定的 *start_time* 或 *end_time* 之间插入空格。  
   
  请注意， **SQLdiag** 使用运行实用工具的计算机上的本地时间。  
   
  **/A**  _SQLdiag_application_name_  
  使你可针对同一个 **实例运行多个** SQLdiag [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的实例。  
   
- 每个 *SQLdiag_application_name* 标识不同的 **SQLdiag**的实例。 *SQLdiag_application_name* 实例和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例名称之间没有任何关系。  
+ 每个 *SQLdiag_application_name* 标识不同的 **SQLdiag** 的实例。 *SQLdiag_application_name* 实例和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例名称之间没有任何关系。  
   
  *SQLdiag_application_name* 可用于启动或停止特定的 **SQLdiag** 服务实例。  
   
@@ -169,7 +169,7 @@ sqldiag
  **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
->  **SQLdiag** 会自动在为 *SQLdiag_application_name*指定的实例名称之前添加前缀 DIAG$。 如果你将 **SQLdiag** 注册为服务，则上述操作会提供有意义的服务名称。  
+>  **SQLdiag** 会自动在为 *SQLdiag_application_name* 指定的实例名称之前添加前缀 DIAG$。 如果你将 **SQLdiag** 注册为服务，则上述操作会提供有意义的服务名称。  
   
  /T { tcp [ ,*port* ] | np | lpc }  
  使用指定协议连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。  
@@ -213,7 +213,7 @@ sqldiag
  如果还分别使用 **/B** 或 **/E** 参数指定了开始时间或结束时间，则以连续模式运行 **SQLdiag** 。 在诊断信息收集工作因预定关闭而停止后，**SQLdiag** 会自动重新启动。 例如，使用 **/E** 或 **/X** 参数。  
   
 > [!NOTE]  
->  如果未使用**SQLdiag** 和 **/L** 命令行参数指定开始时间或结束时间，则 **SQLdiag** 将忽略 **/L** comm将忽略 line arguments.  
+>  如果未使用 **SQLdiag** 和 **/L** 命令行参数指定开始时间或结束时间，则 **SQLdiag** 将忽略 **/L** comm将忽略 line arguments.  
   
  使用 **/L** 并不表示是服务模式。 若要在 **SQLdiag** 作为服务运行时使用 **/L** ，请在注册该服务时的命令行中指定它。  
   
@@ -227,7 +227,7 @@ sqldiag
   
  **SQLDIAG START**  
   
- 只有指定 **SQLdiag** 命名实例的 **/A**参数才可以与 **START**、 **STOP**或 **STOP_ABORT** 一起使用，以控制特定的 **SQLdiag** 服务实例。 例如：  
+ 只有指定 **SQLdiag** 命名实例的 **/A** 参数才可以与 **START**、 **STOP** 或 **STOP_ABORT** 一起使用，以控制特定的 **SQLdiag** 服务实例。 例如：  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
@@ -288,7 +288,7 @@ SQLDIAG STOP /A Instance1
 ```  
   
 > [!NOTE]  
->  **/A** 是唯一可以与 **START**、 **STOP**或 **STOP_ABORT**一起使用的命令行参数。 如果需要使用服务控制谓词之一指定 **SQLdiag** 命名实例，则在命令行中控制谓词的后面指定 **/A** ，如上述语法示例中所示。 使用控制谓词时，它们必须为命令行中的第一个参数。  
+>  **/A** 是唯一可以与 **START**、 **STOP** 或 **STOP_ABORT** 一起使用的命令行参数。 如果需要使用服务控制谓词之一指定 **SQLdiag** 命名实例，则在命令行中控制谓词的后面指定 **/A** ，如上述语法示例中所示。 使用控制谓词时，它们必须为命令行中的第一个参数。  
   
  若要尽快停止服务，请在实用工具启动文件夹中运行 **SQLDIAG STOP_ABORT** 。 该命令会在不等待当前正在执行的任何诊断信息收集完成的情况下将其中止。  
   
@@ -302,7 +302,7 @@ SQLDIAG STOP /A Instance1
 sqldiag /B +01:00:00 /E +03:00:00  
 ```  
   
- 如果指定了相对的 *start_time* ，则 **SQLdiag** 将会在与当前日期和时间相对的某个时间启动。 如果指定了相对的 *end_time* ，则 **SQLdiag** 将会在与指定的 *start_time*相对的某个时间结束。 如果指定的开始或结束日期和时间均为过去的时间，则 **SQLdiag** 将会强行更改开始日期，以使开始日期和时间为将来的时间。  
+ 如果指定了相对的 *start_time* ，则 **SQLdiag** 将会在与当前日期和时间相对的某个时间启动。 如果指定了相对的 *end_time* ，则 **SQLdiag** 将会在与指定的 *start_time* 相对的某个时间结束。 如果指定的开始或结束日期和时间均为过去的时间，则 **SQLdiag** 将会强行更改开始日期，以使开始日期和时间为将来的时间。  
   
  这对所选的开始和结束日期具有重要的意义。 请考虑以下示例：  
   
@@ -313,7 +313,7 @@ sqldiag /B +01:00:00 /E 08:30:00
  如果当前时间为 08:00，则在诊断收集操作实际开始之前，结束时间已经过去。 因为当开始和结束日期为过去的时间时， **SQLDiag** 会自动将开始和结束日期调整为下一天，所以，该示例中的诊断收集将在当天的 09:00（已使用 **+** 指定的一个相对开始时间）开始，一直到第二天早上的 08:30 才结束。  
   
 ### <a name="stopping-and-restarting-sqldiag-to-collect-daily-diagnostics"></a>停止并重新启动 SQLdiag 以收集每天的诊断信息  
- 若要 **SQLdiag**每天收集一组指定的诊断信息而无需手动启动和停止，可使用 **/L** 参数。 **/L** 参数可以使 **SQLdiag** 在预定时间关闭后自动重新启动，从而实现连续运行。 指定了 **/L** 之后，如果 **SQLdiag** 因到达 **/E** 参数指定的结束时间而停止，或者因使用 **/X** 参数在快照模式下运行而停止，则 **SQLdiag** 将会重新启动，而不是退出。  
+ 若要 **SQLdiag** 每天收集一组指定的诊断信息而无需手动启动和停止，可使用 **/L** 参数。 **/L** 参数可以使 **SQLdiag** 在预定时间关闭后自动重新启动，从而实现连续运行。 指定了 **/L** 之后，如果 **SQLdiag** 因到达 **/E** 参数指定的结束时间而停止，或者因使用 **/X** 参数在快照模式下运行而停止，则 **SQLdiag** 将会重新启动，而不是退出。  
   
  在以下示例中，指定了 **SQLdiag** 以连续模式运行，在 03:00:00 和 05:00:00 之间收集诊断数据后自动重新启动。  
   
@@ -352,7 +352,7 @@ SQLDIAG START /A Instance1
   
  也可使用 **net start** 命令启动 SQLDIAG 服务。  
   
- 重新启动 **SQLdiag**后，它将覆盖当前输出文件夹中的内容。 若要避免出现这种情况，请在命令行中指定 **/N 2** ，以在实用工具启动时重命名输出文件夹。  
+ 重新启动 **SQLdiag** 后，它将覆盖当前输出文件夹中的内容。 若要避免出现这种情况，请在命令行中指定 **/N 2** ，以在实用工具启动时重命名输出文件夹。  
   
  不支持暂停 **SQLdiag** 服务。  
   

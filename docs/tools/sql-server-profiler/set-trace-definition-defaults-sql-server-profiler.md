@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 48728a7557edc0d2ddfa5d3e1dbf3e9acb868aa7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 27dd9d883f7bd728e0bba751798257afb138cb81
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726847"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342047"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>设置跟踪定义默认设置 (SQL Server Profiler)
 

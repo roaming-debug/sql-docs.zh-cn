@@ -20,12 +20,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 71becc4645aa71a3e6d60a00766b913546ff7c22
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9054ebafe95fdfc1ab07e868f1d8e9233aee1795
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463708"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335923"
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -167,7 +167,7 @@ tablediff
   
 ## <a name="return-value"></a>返回值  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|Success|  
 |**1**|严重错误|  
