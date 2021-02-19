@@ -8889,6 +8889,8 @@ items:
                 href: ssms/configure-login-auditing-sql-server-management-studio.md
               - name: 启用从“查找和替换”窗口复制
                 href: ssms/troubleshoot/enable-copying-find-replace-window.md
+              - name: 启用按 tab 键移动
+                href: ssms/troubleshoot/workaround-move-tabs.md
               - name: 疑难解答
                 items:
                   - name: 获取完整内存转储
