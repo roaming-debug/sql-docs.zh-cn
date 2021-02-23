@@ -8,12 +8,12 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: d0726366cab5728038c5b1fd2bbe6681115337d4
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: fdb3d5e695824117def89347da883a0a7a5d7a9c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714105"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340538"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>使用 Visual Studio Code 创建并运行 Transact SQL 脚本
 
@@ -36,9 +36,9 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
 
 [适用于 Visual Studio Code 的 mssql 扩展](https://aka.ms/mssql-marketplace)允许你连接到 SQL Server，使用 Transact-SQL (T-SQL) 进行查询，并查看结果。
 
-1. 在 Visual Studio Code 中，选择“查看” > “命令面板”，或按“Ctrl”+“Shift”+“P”，或按“F1”打开“命令面板”。
+1. 在 Visual Studio Code 中，选择“查看” > “命令面板”，或按“Ctrl”+“Shift”+“P”，或按“F1”打开“命令面板”      。
 
-2. 在命令面板中，从下拉列表中选择“扩展：安装扩展”。
+2. 在“命令面板”中，从下拉列表中选择“扩展: 安装扩展” 。
 
 3. 在“扩展”窗格中，键入“mssql”。
 
@@ -52,7 +52,7 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
 
 当语言模式设置为“SQL”时，mssql 扩展将在代码编辑器中启用 mssql 命令和 T-SQL IntelliSense。
 
-1. 选择“文件” > “新建文件”或按“Ctrl”+“N”。 默认情况下，Visual Studio Code 将打开一个新的“纯文本”文件。 
+1. 选择“文件” > “新建文件”或按“Ctrl”+“N”   。 默认情况下，Visual Studio Code 将打开一个新的“纯文本”文件。 
 
 2. 在下方状态栏上选择“纯文本”，或按“Ctrl”+“K” > “M”，然后从“语言”下拉列表中选择“SQL”。 
 
@@ -67,16 +67,16 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
 
 请按照以下步骤创建连接配置文件并连接到 SQL Server。
 
-1. 按“Ctrl”+“Shift”+“P”或“F1”打开“命令面板”。 
+1. 按“Ctrl”+“Shift”+“P”或“F1”打开“命令面板”    。 
 
-2. 键入 sql 以显示 mssql 命令，或键入 sqlcon，然后从下拉列表中选择“MS SQL：连接”。
+2. 键入 sql 可显示 mssql 命令，或键入 sqlcon，然后从下拉列表中选择“MS SQL: 连接” 。
 
    ![mssql 命令](./media/sql-server-develop-use-vscode/vscode-commands.png)
 
    >[!NOTE]
    >代码编辑器中的焦点须位于 SQL 文件（例如创建的空 SQL 文件），才能执行 mssql 命令。
 
-3. 选择“MS SQL：管理连接配置文件”命令。
+3. 选择“MS SQL: 管理连接配置文件”命令。
 
 4. 然后选择“创建”为 SQL Server 创建新的连接配置文件。
 
@@ -101,7 +101,7 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
 
    ![连接状态](./media/sql-server-develop-use-vscode/vscode-connection-status.png)
 
-作为前面步骤的替代方法，还可以在“用户设置”文件 (settings.json) 中创建和编辑连接配置文件。 若要打开设置文件，请选择“文件” > “首选项” > “设置”。 有关详细信息，请参阅[管理连接配置文件](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles)。
+作为前面步骤的替代方法，还可以在“用户设置”文件 (settings.json) 中创建和编辑连接配置文件。 若要打开设置文件，请选择“文件” > “首选项” > “设置”  。 有关详细信息，请参阅[管理连接配置文件](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles)。
 
 ## <a name="create-a-sql-database"></a>创建 SQL 数据库
 
@@ -127,7 +127,7 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
    GO
    ```
 
-4. 按“Ctrl”+“Shift”+“E”执行 Transact - SQL 命令。 在查询窗口中查看结果。
+4. 按“Ctrl”+“Shift”+“E”执行 Transact - SQL 命令  。 在查询窗口中查看结果。
 
     ![创建数据库消息](./media/sql-server-develop-use-vscode/vscode-create-database-messages.png)
 
@@ -138,9 +138,9 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
 
 1. 删除代码编辑器窗口中的内容。
 
-2. 按“Ctrl”+“Shift”+“P”或“F1”打开“命令面板”。
+2. 按“Ctrl”+“Shift”+“P”或“F1”打开“命令面板”    。
 
-3. 键入 sql 以显示 mssql 命令，或键入 sqluse，然后选择“MS SQL：使用数据库”命令。
+3. 键入 sql 可显示 mssql 命令，或键入 sqluse，然后选择“MS SQL: 使用数据库”命令 。
 
 4. 选择新的“TutorialDB”数据库。
 
@@ -160,7 +160,7 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
    Location [NVARCHAR](50)  NOT NULL
    ```
 
-9. 按“Ctrl”+“Shift”+“E”可创建表。
+9. 按“Ctrl”+“Shift”+“E”可创建表  。
 
 ## <a name="insert-and-query"></a>插入和查询
 
@@ -191,13 +191,13 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
    > [!TIP]
    > mssql 扩展还包含可帮助创建 INSERT 和 SELECT 语句的命令。 前面的示例中未使用这些命令。
 
-2. 按“Ctrl”+“Shift”+“E”执行命令。 将在“结果”窗口中显示两个结果集。
+2. 按“Ctrl”+“Shift”+“E”执行命令  。 将在“结果”窗口中显示两个结果集。
 
    ![结果](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
 
 ## <a name="view-and-save-the-result"></a>查看并保存结果
 
-1. 选择“视图” > “编辑器布局” > “翻转布局”以切换为垂直拆分或水平拆分的布局。
+1. 选择“视图” > “编辑器布局” > “翻转布局”以切换为垂直拆分或水平拆分的布局  。
 
 2. 选择“结果”和“消息”面板标头来折叠和展开面板。
 
@@ -231,7 +231,7 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
 
 ## <a name="next-steps"></a>后续步骤
 
-如果不熟悉 T-SQL，请参阅[教程：编写 Transact-SQL 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)和 [Transact-SQL 参考（数据库引擎）](../../t-sql/language-reference.md)。
+如果不熟悉 T-SQL，请参阅[教程：编写 Transact-SQL 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)和 [Transact-SQL 引用（数据库引擎）](../../t-sql/language-reference.md)。
 
 有关使用 mssql 扩展或贡献相关内容的详细信息，请参阅 [mssql 扩展项目 Wiki](https://github.com/Microsoft/vscode-mssql/wiki)。
 

@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: 2e1d3faf6d17417ea1f4a134778ddd9342441231
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 050447d6f1f9f13f04b01dec82e1b50ca6efbc69
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596857"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354810"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -722,7 +722,7 @@ SSMS 18.7 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |数据分类|向 SMO 添加了新功能“数据分类”。 列对象公开新属性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId 和 IsClassified（只读）。 有关详细信息，请参阅 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)|
 |数据分类|向“数据分类”浮出控件添加了新的“分类报表”菜单项。|
 |数据分类| 更新了建议。|
-|数据库兼容性级别升级|在“数据库名称”>“任务”>“数据库升级”下添加了一个新选项 ***。此选项将启动新的查询优化助手 (QTA)，引导用户完成以下过程***：在升级数据库兼容性级别之前，收集性能基线。 升级到所需数据库兼容性级别。  对同一工作负荷收集第二轮性能数据。 检测工作负荷回归并提供测试建议，以提高工作负荷性能。  这类似于在[查询存储使用方案](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)中记录的数据库升级过程，最后一步（QTA 不依赖之前已知的良好状态来生成建议）除外。|
+|数据库兼容性级别升级|在“数据库名称”>“任务” > “数据库升级”下添加新选项 。 此选项将启动新的查询优化助手 (QTA)，引导用户完成以下过程：在升级数据库兼容性级别之前，收集性能基线。 升级到所需数据库兼容性级别。  对同一工作负荷收集第二轮性能数据。 检测工作负荷回归并提供测试建议，以提高工作负荷性能。  这类似于在[查询存储使用方案](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)中记录的数据库升级过程，最后一步（QTA 不依赖之前已知的良好状态来生成建议）除外。|
 |数据层应用程序向导|添加了对使用图形表导入/导出数据层应用程序的支持。|
 |平面文件导入向导|添加了用于通知用户导入可能已导致列重命名的逻辑。|
 |Integration Services (SSIS)|添加了支持，使客户能够在 Azure 政府云中的 Azure-SSIS IR 上安排 SSIS 包。|

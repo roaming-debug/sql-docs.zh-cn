@@ -5,20 +5,22 @@ description: SQL Server 主实例配置属性的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: rahul.ajmera
-ms.date: 08/04/2020
+ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f251357c818577b0ecd761c4a5ca2f030eeca58
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2d986013374e7f69111288d2d0f50b09130a2d68
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100043967"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343515"
 ---
-# <a name="sql-server-master-instance-configuration-properties"></a>SQL Server 主实例配置属性
+# <a name="sql-server-master-instance-configuration-properties----pre-cu9-release"></a>SQL Server 主实例配置属性 - CU9 之前的版本
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+> [!NOTE]
+> 以下信息仅适用于未启用配置且需要 mssql-conf 来配置 SQL Server 主实例的 CU9 之前版本群集。 CU9 和更高版本的群集利用配置管理功能，不再需要 mssql-conf 文件。 可在[此处](reference-config-bdc-overview.md)找到 SQL Server 主实例和其他 BDC 组件的可用配置。
 
 ## <a name="properties"></a>属性
 

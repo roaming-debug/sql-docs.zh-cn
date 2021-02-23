@@ -1,7 +1,7 @@
 ---
 description: 在报表服务器上配置基本身份验证
 title: 在报表服务器上配置基本身份验证 | Microsoft Docs
-ms.date: 08/26/2016
+ms.date: 02/10/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b2b130f85b556d6fdeb2e3c0c3c4a32644a80d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3b875eafb10e4234df2cde35bb61bbecfebad94
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492637"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489321"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
   默认情况下，Reporting Services 接受指定 Negotiate 和 NTLM 身份验证的请求。 如果部署中包括使用基本身份验证的客户端应用程序或浏览器，则必须将基本身份验证添加到支持的类型列表中。 此外，若要使用报表生成器，必须启用对报表生成器文件的匿名访问。  
@@ -35,15 +35,17 @@ ms.locfileid: "88492637"
   
 ### <a name="to-configure-a-report-server-to-use-basic-authentication"></a>将报表服务器配置为使用基本身份验证  
   
-1.  在文本编辑器中打开 RSReportServer.config。  
+1. 在文本编辑器中打开 RSReportServer.config。  
   
-     该文件位于 \<drive>:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer。  
+     若要查找配置文件，请参阅“RsReportServer.config 配置文件”一文中的[文件位置](../report-server/rsreportserver-config-configuration-file.md#bkmk_file_location)部分。
   
-2.  查找 \<**Authentication**>。  
+2. 查找 \<**Authentication**>。  
   
-3.  复制以下最能满足您需要的一个 XML 结构。 第一个 XML 结构提供了用于指定所有元素的占位符，将在下一部分对这些元素进行介绍：  
-  
-    ```  
+3. 复制以下最能满足您需要的一个 XML 结构。 第一个 XML 结构提供了用于指定所有元素的占位符，将在下一部分对这些元素进行介绍：  
+
+    [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
+    ```xml
     <Authentication>  
           <AuthenticationTypes>  
                  <RSWindowsBasic>  
@@ -56,27 +58,40 @@ ms.locfileid: "88492637"
     </Authentication>  
     ```  
   
-     如果使用的是默认值，则可复制最小元素结构：  
+    如果使用的是默认值，则可复制最小元素结构：  
   
-    ```  
+    ```xml
           <AuthenticationTypes>  
                  <RSWindowsBasic/>  
           </AuthenticationTypes>  
     ```  
+
+    [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
+
+    ```xml
+      <Authentication>
+          <AuthenticationTypes>
+                      <RSWindowsBasic/>
+          </AuthenticationTypes>
+          <EnableAuthPersistence>true</EnableAuthPersistence>
+      <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>
+      <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>
+      </Authentication>
+    ```
+
+4. 将其粘贴在 \<**Authentication**> 的现有条目上。  
   
-4.  将其粘贴在 \<**Authentication**> 的现有条目上。  
-  
-     如果使用的是多个身份验证类型，则只能添加 **RSWindowsBasic** 元素，而不能删除 **RSWindowsNegotiate**、 **RSWindowsNTLM**或 **RSWindowsKerberos**的条目。  
+     如果使用的是多个身份验证类型，则只能添加 **RSWindowsBasic** 元素，而不能删除 **RSWindowsNegotiate**、 **RSWindowsNTLM** 或 **RSWindowsKerberos** 的条目。  
   
      请注意，不能将 **Custom** 与其他身份验证类型一起使用。  
   
-5.  使用对环境有效的值替换 \<**Realm**> 或 \<**DefaultDomain**> 的空值。  
+5. 使用对环境有效的值替换 \<**Realm**> 或 \<**DefaultDomain**> 的空值。  
   
-6.  保存文件。  
+6. 保存文件。  
   
-7.  如果配置了扩展部署，请对该部署中的其他报表服务器重复这些步骤。  
+7. 如果配置了扩展部署，请对该部署中的其他报表服务器重复这些步骤。  
   
-8.  重新启动报表服务器以清除当前打开的任何会话。  
+8. 重新启动报表服务器以清除当前打开的任何会话。  
   
 ## <a name="rswindowsbasic-reference"></a>RSWindowsBasic 引用  
  配置基本身份验证时，可以指定以下元素。  

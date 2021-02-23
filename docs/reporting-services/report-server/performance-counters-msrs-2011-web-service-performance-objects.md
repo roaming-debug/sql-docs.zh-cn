@@ -1,7 +1,7 @@
 ---
-title: MSRS 2011 Web Service 性能对象的性能计数器 | Microsoft Docs
-description: 了解 MSRS 2011 Web Service 和 MSRS 2011 Windows Service 性能对象的性能计数器。
-ms.date: 06/26/2019
+title: MSRS 2016 本机模式性能对象的性能计数器 | Microsoft Docs
+description: 了解 MSRS 2016 Web Service 和 MSRS 2016 Windows Service 性能对象的性能计数器。
+ms.date: 02/17/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -17,35 +17,35 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: 655c0a2fdcd36c7b93b87d3d8979751fcd757e8b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1a6704706a152073cdfa1367aed5c0d194834bec
+ms.sourcegitcommit: 6c93282cce1216dac327cb28848a3ab4d51b776e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97424721"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100646329"
 ---
-# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>MSRS 2011 Web Service 性能对象的性能计数器
-  本主题介绍 **MSRS 2011 Web Service** 和 **MSRS 2011 Windows Service** 性能对象的性能计数器。 这些对象是 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 本机模式部署的组成部分。  
+# <a name="performance-counters-msrs-2016-native-mode-performance-objects"></a>MSRS 2016 本机模式性能对象的性能计数器
+  本主题介绍 MSRS 2016 Web Service 和 MSRS 2016 Windows Service 性能对象的性能计数器 。 这些对象是 SQL Server 2016 Reporting Services 本机模式部署的一部分。  
   
 > [!NOTE]  
 >  这些性能对象监视本地报表服务器上的事件。 如果是在扩展部署中运行报表服务器，则只对当前服务器（而不是扩展部署）进行计数。  
   
  Windows 性能监视器 (**Perfmon.exe**) 中提供了性能对象。 有关详细信息，请参阅 Windows 文档，[运行时分析](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
- 有关 SharePoint 模式性能计数器的信息，请参阅 [MSRS 2011 Web Service SharePoint Mode 性能对象和 MSRS 2011 Windows Service SharePoint Mode 性能对象的性能计数器（SharePoint 模式）](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
+ 有关 SharePoint 模式性能计数器的信息，请参阅 [MSRS 2016 Web Service SharePoint Mode 性能对象和 MSRS 2016 Windows Service SharePoint Mode 性能对象的性能计数器（SharePoint 模式）](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
   
  本主题内容：  
   
--   [MSRS 2011 Web Service 性能计数器](#bkmk_webservice)  
+-   [MSRS 2016 Web Service 性能计数器](#bkmk_webservice)  
   
--   [MSRS 2011 Windows Service 性能计数器](#bkmk_windowsservice)  
+-   [MSRS 2016 Windows Service 性能计数器](#bkmk_windowsservice)  
   
 -   [使用 PowerShell Cmdlet 返回列表](#bkmk_powershell)  
   
-##  <a name="msrs-2011-web-service-performance-counters"></a><a name="bkmk_webservice"></a> MSRS 2011 Web Service 性能计数器  
- **MSRS 2011 Web Service** 性能对象监视报表服务器性能。 此性能对象包括一系列用于跟踪报表服务器处理的计数器，这些处理通常通过交互式报表查看操作启动。 在设置计数器时，可将此计数器应用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的全部实例，也可以选择特定实例。 只要 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，这些计数器就会重置。  
+##  <a name="msrs-2016-web-service-performance-counters"></a><a name="bkmk_webservice"></a> MSRS 2016 Web Service 性能计数器  
+ MSRS 2016 Web Service 性能对象监视报表服务器性能。 此性能对象包括一系列用于跟踪报表服务器处理的计数器，这些处理通常通过交互式报表查看操作启动。 在设置计数器时，可将此计数器应用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的全部实例，也可以选择特定实例。 只要 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，这些计数器就会重置。  
   
- 下表列出了 **MSRS 2011 Web Service** 性能对象中包含的计数器。  
+ 下表列出了 MSRS 2016 Web Service 性能对象中包含的计数器。  
   
 |计数器|说明|  
 |-------------|-----------------|  
@@ -72,10 +72,10 @@ ms.locfileid: "97424721"
 |**总执行的报表数**|服务启动后成功运行的报表的总数。 只要 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，此计数器就会重置。|  
 |**请求总数**|服务启动后对报表服务器发出的全部请求的总数。 只要 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，此计数器就会重置。|  
   
-##  <a name="msrs-2011-windows-service-performance-counters"></a><a name="bkmk_windowsservice"></a> MSRS 2011 Windows Service 性能计数器  
- **MSRS 2011 Windows Service** 性能对象监视报表服务器 Windows 服务。 此性能对象包括一系列用于跟踪报表处理的计数器，这些处理通过计划操作启动。 计划操作可以包括订阅和传递、报表执行快照和报表历史记录。 在设置计数器时，可将此计数器应用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的全部实例，也可以选择特定实例。  
+##  <a name="msrs-2016-windows-service-performance-counters"></a><a name="bkmk_windowsservice"></a> MSRS 2016 Windows Service 性能计数器  
+ MSRS 2016 Windows Service 性能对象监视报表服务器 Windows 服务。 此性能对象包括一系列用于跟踪报表处理的计数器，这些处理通过计划操作启动。 计划操作可以包括订阅和传递、报表执行快照和报表历史记录。 在设置计数器时，可将此计数器应用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的全部实例，也可以选择特定实例。  
   
- 下表列出了 **MSRS 2011 Windows Service** 性能对象中包含的计数器。  
+ 下表列出了 MSRS 2016 Windows Service 性能对象中包含的计数器。  
   
 |计数器|说明|  
 |-------------|-----------------|  
@@ -121,11 +121,11 @@ get-counter -listset msr*
  下面的 Windows PowerShell 脚本将返回 CounterSetName 的性能计数器列表。  
   
 ```  
-(get-counter -listset "MSRS 2011 Windows Service").paths  
+(get-counter -listset "MSRS 2016 Windows Service").paths  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
  [监视报表服务器性能](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [MSRS 2011 Web Service SharePoint Mode 性能对象和 MSRS 2011 Windows Service SharePoint Mode 性能对象的性能计数器（SharePoint 模式）](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [MSRS 2016 Web Service SharePoint Mode 性能对象和 MSRS 2016 Windows Service SharePoint Mode 性能对象的性能计数器（SharePoint 模式）](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   

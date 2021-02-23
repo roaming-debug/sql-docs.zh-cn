@@ -4,21 +4,23 @@ titleSuffix: SQL Server big data clusters
 description: 了解如何使用 azdata 管理工具中内置的配置文件自定义大数据群集部署。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: rajmera3
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d983b4d0d7cfb02a587675984fdc42c54bf9f0ec
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ffb41a559c6f262fe6d25a50c51b6e6553a2a7b8
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100047187"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343920"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>为群集资源和服务配置部署设置
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+> [!Note]
+> 大数据群集版本 CU9 和更高版本支持配置管理功能。 此功能启用部署后配置，并可提高群集的可见性和可配置性。 版本 CU8 和更低版本没有此功能，且配置只能在部署时执行。
 
 通过内置于 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 管理工具的一组预定义配置文件，你可以轻松地修改默认设置，以便更好地满足 BDC 工作负载要求。 借助配置文件的结构，可以精细地为资源的每项服务更新设置。
 
@@ -28,6 +30,9 @@ ms.locfileid: "100047187"
 
 > [!TIP]
 > 请参考有关如何为任务关键组件（如 [SQL Server 主实例](deployment-high-availability.md)或 [HDFS 名称节点](deployment-high-availability-hdfs-spark.md)）配置高可用性的文章，以获取有关如何部署高可用性服务的详细信息  。
+
+> [!TIP]
+> 请参阅 [SQL Server 大数据群集配置属性](reference-config-bdc-overview.md)一文，查看可配置的设置。 对于版本 CU8 或更低版本，请参阅 [SQL Server 主实例配置属性 - CU9 之前的版本](reference-config-master-instance.md)，了解 SQL Server 主实例可用的配置，并参阅 [Apache Spark 和 Apache Hadoop (HDFS) 配置属性](reference-config-spark-hadoop.md)，了解 Apache Spark 和 Hadoop 属性。
 
 还可以设置资源级别配置或更新资源中所有服务的配置。 以下是 `bdc.json` 的结构摘要：
 

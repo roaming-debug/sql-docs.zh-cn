@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 87294a8d20bf1c297c1629509a85cde7493b6ef5
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 2c40647cad7568789a2909adf79d8cb12508532d
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99076605"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100341156"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +40,19 @@ ms.locfileid: "99076605"
   
 ##  <a name="best-practices"></a><a name="BestPractices"></a> 最佳实践  
   
--   查看 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [发行说明](/previous-versions/sql/sql-server-15/dn169381(v=sql.15))  
+-   查看[[!INCLUDE[SQL Server 2019](../../../includes/sssql19-md.md)]发行说明](../../sql-server-version-15-release-notes.md)。
   
--   安装必备软件。 在运行安装程序以安装或升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]之前，请首先安装下列必备软件以缩短安装时间。 可以在每个故障转移群集节点上安装必备软件，然后在运行安装程序之前将这些节点重新启动一次。  
+-   安装必备软件。 在运行安装程序以安装或升级之前，请首先安装下列必备软件以缩短安装时间。 可以在每个故障转移群集节点上安装必备软件，然后在运行安装程序之前将这些节点重新启动一次。  
   
-    -   Windows PowerShell 不再由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序安装。 Windows PowerShell 是安装 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] 组件和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 如果你的计算机上没有 Windows PowerShell，你可以按照 [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview) （Windows 管理框架）页上的说明启用它。  
+    -   Windows PowerShell 不再由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序安装。 Windows PowerShell 是安装 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] 组件和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 如果你的计算机上没有 Windows PowerShell，你可以按照 [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview) （Windows 管理框架）页上的说明启用它。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][发行说明](/previous-versions/sql/sql-server-15/dn169381(v=sql.15))。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [SQL Server 2019：硬件和软件要求](../../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重启计算机，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重启计算机，[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
   
     -   .NET Framework 4：安装程序在群集化的操作系统上安装 .NET Framework 4。 为了缩短安装时间，您可以考虑在您运行安装程序之前安装 .NET Framework 4。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序支持文件。 您可以通过运行位于您的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装介质上的 SqlSupport.msi 来安装这些文件。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序支持文件。 可以通过运行位于安装介质上的 SqlSupport.msi 来安装这些文件。  
   
 -   确认 WSFC 群集上未安装防病毒软件。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 知识库文章 [Antivirus software may cause problems with cluster services（防病毒软件可能会导致群集服务出现问题）](/troubleshoot/windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue)。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "99076605"
   
 -   若要创建故障转移群集，您必须是本地管理员，有权作为服务登录并有权在故障转移群集实例的所有节点上作为操作系统的一部分工作。  
   
--   在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]上，会自动生成用于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 服务的服务 SID。 对于从以前版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 升级得到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集实例，将保留现有的域组和 ACL 配置。  
+-   在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]上，会自动生成用于 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 服务的服务 SID。 对于从以前版本的 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 升级得到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集实例，将保留现有的域组和 ACL 配置。  
   
 -   域组必须与计算机帐户位于同一域中。 例如，如果将安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的计算机在 SQLSVR 域（MYDOMAIN 的子域）中，则必须在 SQLSVR 域中指定一个组。 SQLSVR 域可能包含来自 MYDOMAIN 的用户帐户。  
   
@@ -187,18 +187,19 @@ ms.locfileid: "99076605"
 ##  <a name="verify-your-operating-system"></a><a name="OS_Support"></a> 确认您的操作系统  
  确保您的操作系统已正确安装并且支持故障转移群集。 下表列出了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本和支持这些版本的操作系统。  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本|Windows Server 2019 Datacenter|Windows Server 2019 Standard|Windows Server 2016 Datacenter|Windows Server 2016 标准版 |  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（64 位）x64*|是|是|是**|是**|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（64 位）x64*|是|是|是|是|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（32 位）|是|是|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（64 位）|是|是|是**|是**|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（32 位）|是|是|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（64 位）|是|是|是|是|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（32 位）|是|是|||  
-  
+|[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] Enterprise |是|是|是|是|
+|[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] Standard |是|是|是|是|
+|[!INCLUDE[sssql17-md](../../../includes/sssql17-md.md)] Enterprise |是|是|是|是|
+|[!INCLUDE[sssql17-md](../../../includes/sssql17-md.md)] Standard |是|是|是|是|
+|[!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] Enterprise |是|是|是|是|
+|[!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] Standard |是|是|是|是|
+
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集。 这包括从最初安装在 WOW 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的早期版本进行升级。 对于这种情况，只能选择通过并行安装新版本并迁移进行升级。  
-  
- **支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集。  
+
   
 ##  <a name="additional-considerations-for-multi-subnet-configurations"></a><a name="MultiSubnet"></a> 针对多子网配置的其他注意事项  
  下面的部分描述了在安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集时要记住的要求。 多子网配置涉及跨多个子网的群集，因此，涉及使用多个 IP 地址以及对 IP 地址资源依赖关系的更改。  
@@ -234,7 +235,7 @@ ms.locfileid: "99076605"
   
 -   WSFC 必须能够使用 IsAlive 检查来验证故障转移群集实例是否正在运行。 这需要使用可信连接来连接到服务器。 默认情况下，在群集的节点上未将运行群集服务的帐户配置为管理员，并且 BUILTIN\Administrators 组没有登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的权限。 只有更改对群集节点的权限时，这些设置才会改变。  
   
--   配置域名服务 (DNS) 或 Windows Internet 名称服务 (WINS)。 必须在要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的环境中运行 DNS 服务器或 WINS 服务器。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP 接口虚拟引用注册动态域名服务。 DNS 服务器配置应允许群集节点动态注册映射到网络名称的联机 IP 地址。 如果无法完成动态注册，安装程序将失败，安装将回滚。 有关详细信息，请参阅 [这篇知识库文章](https://support.microsoft.com/kb/947048)。  
+-   配置域名服务 (DNS) 或 Windows Internet 名称服务 (WINS)。 必须在要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的环境中运行 DNS 服务器或 WINS 服务器。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP 接口虚拟引用注册动态域名服务。 DNS 服务器配置应允许群集节点动态注册映射到网络名称的联机 IP 地址。 如果无法完成动态注册，安装程序将失败，安装将回滚。 有关详细信息，请参阅 [这篇知识库文章](https://mskb.pkisolutions.com/kb/947048)。  
   
 ##  <a name="install-msconame-distributed-transaction-coordinator"></a><a name="MSDTC"></a> 安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器  
  在故障转移群集上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前，请确定是否必须创建 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器 (MSDTC) 群集资源。 如果只安装 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，则 MSDTC 群集资源不是必需的。 如果要安装 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 SSIS、工作站组件或者要使用分布式事务处理，则必须安装 MSDTC。 请注意，MSDTC 对于仅 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例不是必需的。  

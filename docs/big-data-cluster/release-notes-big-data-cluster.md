@@ -5,16 +5,16 @@ description: 本文介绍 SQL Server 大数据群集的最新更新和已知问�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/13/2021
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 75b3b483a9e7744bb35b50ff30649b3257e14285
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1f3e1e0ed29121f0fb0ffcac54885ca80de3e63c
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100046176"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489301"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 大数据群集发行说明
 
@@ -64,6 +64,7 @@ ms.locfileid: "100046176"
 
 | 版本 <sup>1</sup> | BDC 版本 | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 版本 <sup>2</sup> | 发布日期 |
 |--|--|--|--|
+| [CU9](#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
 | [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
 | [CU8](#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
 | [CU6](#cu6)     | 15.0.4053.23 | 20.0.1    | 2020-08-04 |
@@ -81,6 +82,25 @@ ms.locfileid: "100046176"
 ## <a name="how-to-install-updates"></a>如何安装更新
 
 若要安装更新，请参阅[如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
+
+## <a name="cu9-february-2021"></a><a id="cu9"></a> CU9（2021 年 2 月）
+
+SQL Server 2019 累积更新 9 (CU9) 版本。
+
+|包版本 | 映像标记 |
+|-----|-----|
+|15.0.4102.2|[2019-CU9-ubuntu-16.04]|
+
+适用于 SQL Server 大数据群集的 SQL Server 2019 CU9，其中包含重要功能：
+
+- 支持配置 BDC 后期部署，并提供更高的系统设置可见性。
+
+   使用 `mssql-conf` 进行 SQL Server 主实例配置的群集在升级到 CU9 之后需要用户执行额外的步骤。 按照[此处](bdc-upgrade-configuration.md)的说明进行操作。
+
+- 改进了 [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] 静态加密体验。
+- 能够使用虚拟环境动态安装 Python Spark 包。
+- 升级了大多数 OSS 组件（Grafana、Kibana、FluentBit 等）的软件版本，可确保 BDC 映像具有最新的增强功能和修补程序。 请参阅[开源软件参考](reference-open-source-software.md)。
+- 其他各种改进和 bug 修复。
 
 ## <a name="cu8-gdrjanuary-2021"></a><a id="cu8-gdr"></a> CU8-GDR（2021 年 1 月）
 
@@ -233,7 +253,7 @@ SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters
 
 ### <a name="ha-sql-server-database-encryption-key-encryptor-rotation"></a>HA SQL Server 数据库加密密钥加密程序轮换
 
-- **受影响的版本**：所有大数据群集 HA 部署（无论是何种版本）。
+- **受影响的版本**：CU8 及所有更低版本。 CU9 已解决。
 
 - **问题及其对客户的影响**：在使用 HA 部署 SQL Server 时，无法对加密数据库执行证书轮换。 如果对主池执行以下命令，就会出现错误消息：
     ```
@@ -242,7 +262,13 @@ SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters
     CERTIFICATE <NewCertificateName>
     ```
     这没有影响，虽然此命令失败，但目标数据库加密是使用旧证书进行保留的。
-    
+
+### <a name="enabling-hdfs-encryption-zones-support-on-cu8"></a>CU8 上启用了 HDFS 加密区域支持
+
+- **受影响的版本**：专门从 CU6 或早期版本升级到 CU8 版本时，会出现这种情况。 执行 CU8+ 的新部署或直接升级到 CU9 时，不会出现这种情况。
+
+- **问题和对客户的影响**：在这种情况下，默认未启用 HDFS 加密区域支持，用户需要使用[配置指南](encryption-at-rest-concepts-and-configuration.md)中提供的步骤进行配置。
+
 ### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>应用累积更新前清空 Livy 作业
 
 - **受影响的版本**：CU6 及所有更低版本。 已为 CU8 解决。

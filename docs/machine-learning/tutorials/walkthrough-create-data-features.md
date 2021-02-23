@@ -1,5 +1,5 @@
 ---
-title: R 教程：特性工程
+title: R 教程：特征工程
 description: 本教程演示如何使用 SQL Server 函数创建数据特征用于数据库内分析。
 ms.prod: sql
 ms.technology: machine-learning-services
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 38920a0d7dda05b2dbd853035c4ce0c17ffd74f2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 502600980a3cb1f80eaeca64284f0a189cfcb405
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470028"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272978"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server 函数创建数据特征（演练）
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "97470028"
 
 切换到 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 或其他查询编辑器，以运行 T-SQL 脚本。
 
-1. 使用名为 *fnCalculateDistance* 的 SQL 函数。 该函数应该已经存在于 NYCTaxi_Sample 数据库中。 在对象资源管理器中，通过导航到以下路径来验证该函数是否存在：“数据库”>“NYCTaxi_Sample”>“可编程性”>“函数”>“标量值函数”>“dbo.fnCalculateDistance”。
+1. 使用名为 *fnCalculateDistance* 的 SQL 函数。 该函数应该已经存在于 NYCTaxi_Sample 数据库中。 在对象资源管理器中，通过导航以下路径来验证该函数是否存在：“数据库”>“NYCTaxi_Sample”>“可编程性”>“函数”>“标量值函数”>“dbo.fnCalculateDistance”。
 
     如果该函数不存在，请使用 SQL Server Management Studio 在 NYCTaxi_Sample 数据库中生成该函数。
 
@@ -192,7 +192,7 @@ ms.locfileid: "97470028"
     > [!TIP]
     > 此查询经过修改，可获取更小的数据样本，从而让本演练的速度变快。 如果想要获取所有数据，可以删除 TABLESAMPLE 子句；但是，根据环境，可能无法将完整的数据集加载到 R 中，从而会导致错误。
   
-5. 使用下面的代码行来从 R 环境中调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，并将其应用于 featureEngineeringQuery  中定义的数据。
+5. 使用下面的代码行来从 R 环境中调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，并将其应用于 featureEngineeringQuery 中定义的数据。
   
     ```R
     featureDataSource = RxSqlServerData(sqlQuery = featureEngineeringQuery,
@@ -227,7 +227,7 @@ ms.locfileid: "97470028"
     ```
 
     > [!NOTE]
-    > 在某些情况下，可能会遇到类似以下的错误：*The EXECUTE permission was denied on the object 'fnCalculateDistance'* （EXECUTE 权限在对象“fnCalculateDistance”上被拒绝）。如果遇到这种情况，请确保所使用的登录名具有在数据库上运行脚本和创建对象的权限，而不仅仅是在实例上具有类似权限。
+    > 在某些情况下，可能会遇到以下错误：The EXECUTE permission was denied on the object 'fnCalculateDistance'（EXECUTE 权限在对象“fnCalculateDistance”上被拒绝）。如果遇到这种情况，请确保所使用的登录名具有在数据库上运行脚本和创建对象的权限，而不仅仅是在实例上具有类似权限。
     > 检查 fnCalculateDistance 对象的架构。 如果对象由数据库所有者创建，并且登录名属于 db_datareader 角色，则需要授予登录名显式权限才能运行脚本。
 
 ## <a name="comparing-r-functions-and-sql-functions"></a>比较 R 函数和 SQL 函数

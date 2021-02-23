@@ -10,12 +10,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: df878f94c2ed6338ae28cbff156460ffdef87826
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 69749c0da2a5f7ef672a4673b5bc857898e9964f
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100046657"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489181"
 ---
 # <a name="encryption-at-rest-concepts-and-configuration-guide"></a>静态加密概念和配置指南
 
@@ -29,9 +29,9 @@ SQL Server 大数据群集将数据存储在以下两个位置：
 有两种方法可用来以透明方式对 SQL Server 大数据群集中的数据进行加密：
 
 * 卷加密。 这种方法受 Kubernetes 平台支持，应作为大数据群集部署的最佳做法。 本指南并不涉及卷加密。 有关如何正确地对用于 SQL Server 大数据群集的卷进行加密的指南，请参阅 Kubernetes 平台或设备文档。
-* 应用程序级别加密。 这种体系结构是指，在数据写入磁盘之前由处理数据的应用程序进行的数据加密。 在卷是公开的情况下，攻击者无法在其他地方还原数据项目，除非目标系统也配置了相同的加密密钥。 
+* 应用程序级别加密。 这种体系结构是指，在数据写入磁盘之前由处理数据的应用程序进行的数据加密。 在卷是公开的情况下，攻击者无法在其他地方还原数据项目，除非目标系统也配置了相同的加密密钥。
 
-SQL Server 大数据群集的静态加密功能集支持 SQL Server 和 HDFS 组件的应用程序级别加密的核心方案。
+SQL Server 大数据群集的静态加密功能集支持 SQL Server 和 HDFS 组件应用程序级别加密的核心方案   。
 
 提供了以下功能：
 
@@ -48,9 +48,6 @@ SQL Server 大数据群集的静态加密功能集支持 SQL Server 和 HDFS 组
 * Hadoop KMS 兼容性。 它作为 BDC 上 HDFS 组件的密钥管理服务。
 * SQL Server TDE 证书管理。
 
-暂不支持以下功能：
-* 密钥版本控制支持。 
-
 在本文档的其余部分中，我们将此服务称为“BDC KMS”。 “BDC”一词也用来指 SQL Server 大数据群集计算平台。
 
 ### <a name="system-managed-keys-and-certificates"></a>系统管理的密钥和证书
@@ -65,9 +62,9 @@ BDC KMS 服务会管理 SQL Server 和 HDFS 的所有密钥和证书。
 
 与 BDC KMS 兼容的外部密钥解决方案，用于外部委派。 暂不支持此功能。
 
-## <a name="encryption-at-rest-on-sql-server-big-data-clusters-cu8"></a>SQL Server 大数据群集 CU8 的静态加密
+## <a name="encryption-at-rest-on-sql-server-big-data-clusters"></a>SQL Server 大数据群集的静态加密
 
-SQL Server 大数据群集 CU8 是静态加密功能集的初始版本。 请仔细阅读本文档，以全面评估你的方案。
+请仔细阅读本文档，以全面评估你的方案。
 
 此功能集引入了 BDC KMS 控制器服务，为 SQL Server 和 HDFS 上的静态数据加密提供了系统管理的密钥和证书。 这些密钥和证书是由服务管理的，本文档提供了关于如何与服务交互的操作指南。
 
@@ -80,7 +77,7 @@ SQL Server 大数据群集 CU8 是静态加密功能集的初始版本。 请仔
 * 主实例 BDC 预配数据库和用户数据库不会自动加密。 DBA 可以使用已安装的证书对任何数据库进行加密。
 * 计算池和存储池使用系统生成的证书进行自动加密。
 * 尽管技术上可以使用 T-SQL `EXECUTE AT` 命令进行数据池加密，但目前不鼓励也不支持这样做。 使用这种技术对数据池数据库进行加密可能不是有效的，可能无法实现所需状态的加密。 它还创建了升级到后续版本的不兼容升级路径。
-* 暂时没有证书轮换。 如果不是在 HA 部署上，则支持使用 T-SQL 命令来解密，然后使用新证书进行加密。
+* SQL Server 密钥轮换是使用标准 T-SQL 管理命令实现的。 请阅读 [SQL Server 大数据群集静态透明数据加密 (TDE) 使用指南](encryption-at-rest-sql-server-tde.md)，了解完整说明。
 * 加密监视是通过适用于 TDE 的现有标准 SQL Server DMV 进行的。
 * 支持将启用了 TDE 的数据库备份和还原到群集中。
 * 支持 HA。 如果 SQL Server 的主实例上的数据库已加密，则此数据库的所有次要副本也会被加密。
@@ -91,12 +88,20 @@ SQL Server 大数据群集 CU8 是静态加密功能集的初始版本。 请仔
 * 系统生成的密钥会在 Hadoop KMS 中进行预配。 密钥名称为 `securelakekey`。 在 CU8 上，默认密钥为 256 位，我们支持 256 位 AES 加密。
 * 将使用以上系统生成的密钥在名为 `/securelake` 的路径上对默认加密区域进行预配。
 * 用户可以按照本指南中提供的特定说明操作，创建其他密钥和加密区域。 用户可以创建密钥期间选择 128、192 或 256 作为密钥大小。
-* 在 CU8 中，无法使用 HDFS 的就地密钥轮换。 作为一种替代方法，可以使用 DistCp 将数据从一个加密区域移动到另一个加密区域。
+* HDFS 加密区域密钥轮换是使用 azdata 实现的。 请阅读 [SQL Server 大数据群集 HDFS 加密区域使用指南](encryption-at-rest-hdfs-encryption-zones.md)，了解完整说明。
 * 不支持在加密区域的顶层执行 HDFS 分层装载。
 
-## <a name="configuration-guide"></a>配置指南
+## <a name="encryption-at-rest-administration"></a>静态加密管理
 
-SQL Server 大数据群集静态加密是一种服务管理的功能，可能需要执行额外步骤，具体视你的部署路径而定。
+以下列表包含静态加密管理功能
+
+* 使用标准 T-SQL 命令，可进行 [SQL Server TDE](encryption-at-rest-sql-server-tde.md) 管理。
+* 使用 azdata 命令，可进行 [HDFS 加密区域](encryption-at-rest-hdfs-encryption-zones.md)和 HDFS 密钥管理。
+* 使用[操作笔记本](cluster-manage-notebooks.md)可执行以下管理功能：
+    - HDFS 密钥备份和恢复
+    - HDFS 密钥删除
+
+## <a name="configuration-guide"></a>配置指南
 
 在 SQL Server 大数据群集的新部署期间，自 CU8 起，静态加密将默认启用和配置。 也就是说：
 
@@ -106,14 +111,11 @@ SQL Server 大数据群集静态加密是一种服务管理的功能，可能需
 
 上一部分中所述的要求和默认行为都适用。
 
-若要将群集升级到 CU8，请仔细阅读下一部分。
+如果是执行 SQL Server BDC CU8+ 的新部署或直接升级到 CU9，则无需执行其他步骤。
 
-### <a name="upgrading-to-cu8"></a>升级到 CU8
+### <a name="upgrade-scenarios"></a>升级方案
 
-   > [!CAUTION]
-   > 在升级到 SQL Server 大数据群集 CU8 之前，请对数据执行完整备份。
-
-在现有群集上，升级过程不会对用户数据进行强制加密，也不会配置 HDFS 加密区域。 此行为是专门设计的，每个组件需要考虑以下注意事项：
+在现有群集上，升级过程不会强制对未加密的用户数据进行新的加密，也不会对其重新加密。 此行为是专门设计的，每个组件需要考虑以下注意事项：
 
 * __SQL Server__
 
@@ -124,17 +126,31 @@ SQL Server 大数据群集静态加密是一种服务管理的功能，可能需
 * __HDFS__
 
     1. HDFS。 升级过程不会触及加密区域以外的 HDFS 文件和文件夹。
-    1. 不会配置加密区域。 不会将 Hadoop KMS 组件配置为使用 BDC KMS。 若要在升级后配置和启用 HDFS 加密区域功能，请按照下一部分中的步骤操作。
 
-### <a name="enable-hdfs-encryption-zones-after-upgrade"></a>升级后启用 HDFS 加密区域
+### <a name="upgrading-to-cu9-from-cu8-or-earlier"></a>从 CU8 或更早版本升级到 CU9
 
-如果你已将群集升级到 CU8 (`azdata upgrade`)，并且想要启用 HDFS 加密区域，请执行以下操作。
+无需执行其他步骤。
+
+### <a name="upgrading-to-cu8-from-cu6-or-earlier"></a>从 CU6 或更早版本升级到 CU8
+
+   > [!CAUTION]
+   > 在升级到 SQL Server 大数据群集 CU8 之前，请对数据执行完整备份。
+
+
+不会配置加密区域。 不会将 Hadoop KMS 组件配置为使用 BDC KMS。 若要在升级后配置和启用 HDFS 加密区域功能，请按照下一部分中的说明操作。
+
+#### <a name="enable-hdfs-encryption-zones-after-upgrade-to-cu8"></a>升级到 CU8 后启用 HDFS 加密区域
+
+如果已将群集升级到 CU8 (`azdata upgrade`)，并且想要启用 HDFS 加密区域，可使用以下两种选项：
+
+* 执行名为 [SOP0128 - 在大数据群集中启用 HDFS 加密区域](cluster-manage-notebooks.md)的 Azure Data Studio 操作笔记本，以执行配置。
+* 按如下所述执行脚本。
 
 要求：
 
 - [Active Directory](active-directory-prerequisites.md) 集成群集。
 
-- 在 AD 模式下配置并记录到群集中的 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。
+- 在 AD 模式下配置并记录到群集中的 [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)]。
 
 若要重新配置具有加密区域支持的群集，请遵循以下过程。
 

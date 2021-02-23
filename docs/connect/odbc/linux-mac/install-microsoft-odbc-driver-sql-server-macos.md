@@ -1,7 +1,7 @@
 ---
 title: 安装 Microsoft ODBC Driver for SQL Server (macOS)
 description: 了解如何在 macOS 客户端上安装 Microsoft ODBC Driver for SQL Server 来启用数据库连接。
-ms.date: 09/08/2020
+ms.date: 02/12/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a07f2760503e5df9897f4a4ef065621bd5852523
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2f07e613a6bd5ce8416c4b2c015749a1e631ea3f
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100042917"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525141"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>安装 Microsoft ODBC Driver for SQL Server (macOS)
 
@@ -23,12 +23,15 @@ ms.locfileid: "100042917"
 
 本文提供了用于从 bash shell 安装 ODBC 驱动程序的命令。 如果要直接下载包，请参阅[下载 ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md)。
 
+> [!Note]
+> macOS 上的适用于 SQL Server 的 Microsoft ODBC 驱动程序仅在 x64 体系结构上受支持。 不支持 Apple M1。
+
 ## <a name="microsoft-odbc-17"></a>Microsoft ODBC 17
 
 若要在 macOS 上安装 Microsoft ODBC Driver 17 for SQL Server，请运行以下命令：
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
@@ -46,7 +49,7 @@ HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 使用以下命令在 OS X 10.11 (El Capitan) 和 macOS 10.12 (Sierra) 上安装 Microsoft ODBC Driver 13.1 for SQL Server：
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0

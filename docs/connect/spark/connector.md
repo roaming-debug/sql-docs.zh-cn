@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 15a4bdb66ea87f85337540adfec4b5e175b1c55b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2cc921b7aa1acaf99da8a632dc8e3996d648682c
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100058122"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636696"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Apache Spark 连接器：SQL Server 和 Azure SQL
 
@@ -25,7 +25,14 @@ ms.locfileid: "100058122"
 
 [Apache Spark](https://spark.apache.org/) 是用于大规模数据处理的统一分析引擎。
 
-可以从 [Maven](https://search.maven.org/search?q=spark-mssql-connector) 获取连接器。 若要导入连接器，请使用坐标 `com.microsoft.azure:spark-mssql-connector:<latest version>`。 也可以从源构建连接器，或从 GitHub 的“发布”部分下载 jar。 有关连接器的最新信息，请参阅 [SQL Spark 连接器 GitHub 存储库](https://github.com/microsoft/sql-spark-connector)。
+可以通过 Maven 提供以下两个连接器版本：2.4.5 兼容版本和 3.0.0 兼容版本。 可在[此处](https://search.maven.org/search?q=spark-mssql-connector)找到这两个版本，并可以使用下面的坐标导入：
+
+| 连接器 | Maven 坐标 |
+| --------- | ------------------ |
+| Spark 2.4.5 兼容连接器 | `com.microsoft.azure:spark-mssql-connector:1.0.1` |
+| Spark 3.0.0 兼容连接器 | `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha` |
+
+也可以从源构建连接器，或从 GitHub 的“发布”部分下载 jar。 有关连接器的最新信息，请参阅 [SQL Spark 连接器 GitHub 存储库](https://github.com/microsoft/sql-spark-connector)。
 
 ## <a name="supported-features"></a>支持的功能
 
@@ -37,8 +44,8 @@ ms.locfileid: "100058122"
 
 | 组件                            | 支持的版本              |
 |--------------------------------------|---------------------------------|
-| Apache Spark                         | 2.4.5（不支持 Spark 3.0） |
-| Scala                                | 2.11                            |
+| Apache Spark                         | 2.4.5、3.0.0 |
+| Scala                                | 2.11、2.12                            |
 | Microsoft JDBC Driver for SQL Server | 8.2                             |
 | Microsoft SQL Server                 | SQL Server 2008 或更高版本        |
 | Azure SQL 数据库                  | 支持                       |

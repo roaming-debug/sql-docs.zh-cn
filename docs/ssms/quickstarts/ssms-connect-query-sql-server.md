@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein, mikeray
 ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
-ms.openlocfilehash: 519b60f63da38192e2196014e0ea7820dafd5491
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: 92160da1da48fc107be98354250e4c580cb51155
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97619000"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350593"
 ---
 # <a name="quickstart-connect-and-query-a-sql-server-instance-using-sql-server-management-studio-ssms"></a>快速入门：使用 SQL Server Management Studio (SSMS) 连接和查询 SQL Server 实例
 
@@ -49,7 +49,7 @@ ms.locfileid: "97619000"
     |--------------|-----------------------|-----------------|
     | **服务器类型** | 数据库引擎 | 对于“服务器类型”，选择“数据库引擎”（通常的默认选项）。 |
     | **服务器名称** | 完全限定的服务器名称 | 对于“服务器名称”，请输入 SQL Server 的名称（如果是本地连接，则也可以使用 localhost 作为服务器名称）。 如果不使用默认实例 (MSSQLSERVER)，则必须输入服务器名称和实例名称。 </br> </br> 如果不知道如何确定 SQL Server 实例的名称，请参阅[使用 SSMS 的其他提示和技巧](../tutorials/ssms-tricks.md#find-sql-server-instance-name)。 |
-    | 身份验证 | Windows 身份验证 </br> </br> SQL Server 身份验证 | Windows 身份验证设置为默认值。 </br> </br> 还可以使用 SQL Server 身份验证进行连接。 但是，如果选择 SQL Server 身份验证，则需要用户名和密码。 </br> </br> 有关身份验证类型的详细信息，请参阅[连接到服务器（数据库引擎）](../f1-help/connect-to-server-database-engine.md)。 |
+    | **身份验证** | Windows 身份验证 </br> </br> SQL Server 身份验证 | Windows 身份验证设置为默认值。 </br> </br> 还可以使用 SQL Server 身份验证进行连接。 但是，如果选择 SQL Server 身份验证，则需要用户名和密码。 </br> </br> 有关身份验证类型的详细信息，请参阅[连接到服务器（数据库引擎）](../f1-help/connect-to-server-database-engine.md)。 |
     | **登录名** | 服务器帐户用户 ID | 用于登录到服务器的服务器帐户的用户 ID。 使用 SQL Server 身份验证时需要登录名。 |
     | **密码** | 服务器帐户密码 | 用于登录到服务器的服务器帐户的密码。 使用 SQL Server 身份验证时需要密码。 |
 

@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 9/2/2020
-ms.openlocfilehash: 70a92bf37285e9af58dcef2e7a69abfb88b37178
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 02/16/2021
+ms.openlocfilehash: 927fafb66a9551332a0d5fcbff868ad79efa5eef
+ms.sourcegitcommit: 129c084add904fd3f7e9ab35a800c3fd8b1a8927
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100067082"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100564105"
 ---
 # <a name="create-a-report-server-database-report-server-configuration-manager"></a>创建报表服务器数据库（报表服务器配置管理器）  
 
@@ -84,6 +84,9 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePo
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+
+> [!NOTE] 
+> SQL on Linux 不是托管 SQL Server Reporting Services 数据库的受支持环境。
 
 若要在远程计算机上创建报表服务器数据库，请将连接配置为使用域用户帐户或具有网络访问权限的服务帐户。 如果使用远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请考虑报表服务器应使用哪些凭据来连接实例。 有关详细信息，请参阅[配置报表服务器数据库连接（报表服务器配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   

@@ -5,16 +5,16 @@ description: 了解如何在 Active Directory 域中升级 SQL Server 大数据�
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 09/30/2020
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2a79c82f2c3fd443d7237fc3b0a1f7c51102bceb
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 799afc246b106c4b49d6aba44f8d26a761d6c2cc
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048012"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343958"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>在 Active Directory 模式下部署 SQL Server 大数据群集
 
@@ -54,8 +54,10 @@ AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命�
 
 - `security.activeDirectory.realm` 可选参数：大多数情况下，领域等同于域名。 对于领域不同于域名的情况，请使用此参数定义领域名称（例如 `CONTOSO.LOCAL`）。 为此参数提供的值应为完全限定的值。
 
-  > [!IMPORTANT]
-  > 此时，BDC 不支持 Active Directory 域名与 Active Directory 域的 NETBIOS 名称不同的配置。
+- `security.activeDirectory.netbiosDomainName` **可选参数**：这是 AD 域的 NETBIOS 名称。 在大多数情况下，这将是 AD 域名的第一个标签。 对于不同的情况，请使用此参数来定义 NETBIOS 域名。 此值不应包含任何点。 通常，此名称用于限定域中的用户帐户。 例如 CONTOSO\user，其中 CONTOSO 是 NETBIOS 域名。
+
+  > [!NOTE]
+  > 对配置（其中，Active Directory 域名不同于使用 security.activeDirectory.netbiosDomainName 的 Active Directory 域名的 NETBIOS 名称）的支持从 SQL Server 2019 CU9 开始启用。
 
 - `security.activeDirectory.domainDnsName`：将用于群集的 DNS 域的名称（例如 `contoso.local`）。
 

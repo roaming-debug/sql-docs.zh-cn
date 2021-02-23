@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34592d9a6cb3db8bde5a2a25098314fd9ace1208
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3af391b2fe6a2c104a4854afdb57b4dc5eb95029
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100039477"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489171"
 ---
 # <a name="manage-big-data-clusters-bdc-the-cluster-with-notebooks"></a>使用笔记本管理大数据群集 (BDC)
 
@@ -31,7 +31,7 @@ ms.locfileid: "100039477"
 此部分包含一组笔记本，用于安装和卸载管理 SQL Server 大数据群集所需的命令行工具和包。
 
 |名称 |说明 |
-|---|---|---|---|
+|---|---|
 |SOP010 - 升级大数据群集|使用此笔记本来通过 azdata 升级大数据群集。 |
 |SOP012 - 安装适用于 Mac 的 unixodbc|如果在使用 brew 安装适用于 SQL Server 的 odbc 时出错，则使用此笔记本。|
 |SOP036 - 安装 kubectl 命令行接口|使用此笔记本来安装 kubectl 命令行接口，而不用考虑你的 OS。|
@@ -49,13 +49,24 @@ ms.locfileid: "100039477"
 |SOP064 - 卸载 azdata CLI（使用包管理器）|使用此笔记本来卸载 azdata CLI（使用包管理器）。|
 |SOP069 - 安装 ODBC for SQL Server|使用此笔记本来安装 ODBC 驱动程序，因为 azdata 中的某些子命令需要 SQL Server ODBC 驱动程序。|
 
+## <a name="encryption-at-rest-utilities-on-big-data-cluster-bdc"></a>大数据群集上的静态加密实用程序 (BDC)
+
+本部分包含一组笔记本，可用于管理 BDC 上的静态加密功能。
+
+|名称 |描述 |
+|---|---|
+|SOP0124 - 列出静态加密密钥|使用此笔记本列出所有 HDFS 密钥。|
+|SOP0128 - 在大数据群集中启用 HDFS 加密区域|从 CU6 或更早版本升级到 CU8 时，请使用此笔记本启用 HDFS 加密区域。 新部署 CU8 和更高版本或升级到 CU9 时不需要。|
+|SOP0125 - 删除静态加密密钥|使用此笔记本删除 HDFS 加密区域密钥。 __警告！__|
+|SOP0126 - 备份静态加密密钥|使用此笔记本备份 HDFS 加密区域密钥。|
+|SOP0127 - 还原静态加密密钥|使用此笔记本还原 HDFS 加密区域密钥。|
 
 ## <a name="managing-certificates-on-big-data-clusters-bdc"></a>管理大数据群集 (BDC) 上的证书
 
 一组笔记本，用于运行笔记本来管理大数据群集上的证书。
 
 |名称 |说明 |
-|---|---|---|---|
+|---|---|
 |CER001 - 生成根 CA 证书|生成根 CA 证书。 考虑在每个环境中对所有非生产群集使用一个根 CA 证书，因为这种技术减少了需要上传到连接到这些群集的客户端的根 CA 证书的数量。 |
 |CER002 - 下载现有根 CA 证书|使用此笔记本从群集下载已生成的根 CA 证书。|
 |CER003 - 上传现有根 CA 证书|CER003 - 上传现有根 CA 证书。|

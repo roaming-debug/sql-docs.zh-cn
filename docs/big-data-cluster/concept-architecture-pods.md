@@ -5,16 +5,16 @@ description: 通常部署在 SQL Server 大数据群集中的 Pod 的说明。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 03/30/2020
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1df5bfe16ca1d64e3d748923796d521c95aacc78
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 20f31d6cbf4bcdbbdc666b50dea626f79e298db1
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100039557"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343937"
 ---
 # <a name="resources-deployed-with-big-data-cluster"></a>使用大数据群集部署的资源
 
@@ -181,18 +181,7 @@ kubectl get pods -n <namespace>
 
 ## <a name="open-source-container-references"></a>开放源代码容器引用
 
-有些容器是由开放源代码项目开发的。 有关所使用开放源代码容器的信息，请参阅：
-
-- [Elasticsearch](https://www.elastic.co/)
-- [Kibana](https://www.elastic.co/kibana)
-- [InfluxDB](https://www.influxdata.com)
-- [Grafana](https://grafana.com/)
-- [Fluent Bit](https://docs.fluentbit.io/manual/about/what-is-fluent-bit)
-- [HDFS DataNode](concept-storage-pool.md)
-- [HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) 
-- [Spark](configure-spark-hdfs.md)
-- [ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) 
-
+有关特定开源项目和版本，请参阅[开源软件参考](reference-open-source-software.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
