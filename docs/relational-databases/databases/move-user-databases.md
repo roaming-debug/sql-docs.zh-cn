@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: feb85bc9b14169c862447c8465ce47c4637b5c32
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 64b8416375cdc61c43e8799b33891096858a79f7
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195009"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636708"
 ---
 # <a name="move-user-databases"></a>移动用户数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,19 +48,19 @@ ms.locfileid: "92195009"
 ## <a name="planned-relocation-procedure"></a>计划的重定位过程  
  若要将移动数据或日志文件作为计划的重定位的一部分，请执行下列步骤：  
   
-1.  运行以下语句。  
+1.  对于要移动的每个文件，请运行以下语句。  
+  
+    ```  
+    ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name, FILENAME = 'new_path\os_file_name' );  
+    ```  
+  
+2.  运行以下语句。  
   
     ```  
     ALTER DATABASE database_name SET OFFLINE;  
     ```  
   
-2.  将文件移动到新位置。  
-  
-3.  对于已移动的每个文件，请运行以下语句。  
-  
-    ```  
-    ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name, FILENAME = 'new_path\os_file_name' );  
-    ```  
+3.  将文件移动到新位置。  
   
 4.  运行以下语句。  
   

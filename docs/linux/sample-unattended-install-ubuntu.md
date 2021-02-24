@@ -8,12 +8,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 573eadb498351662a965e973e7ea38d4226c6cc8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 99453173189495b4630ebdd9d7dc0c6ff76a2280
+ms.sourcegitcommit: 6c93282cce1216dac327cb28848a3ab4d51b776e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100339136"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100646382"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>示例：Ubuntu 的无人参与 SQL Server 安装脚本
 
@@ -218,7 +218,6 @@ export MSSQL_PID='evaluation'
 export SQL_INSTALL_AGENT='y'
 export SQL_INSTALL_USER='<Username>'
 export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
-export SQL_INSTALL_AGENT='y'
 ```
 
 然后运行 Bash 脚本，如下所示：
