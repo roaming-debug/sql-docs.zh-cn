@@ -15,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a87a9842ac5fdf05de192d1fc562fe241441c75
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5ed027db3b2749997a12674cb657c448a26b9732
+ms.sourcegitcommit: 6c93282cce1216dac327cb28848a3ab4d51b776e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100340046"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100646379"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教程：将 Azure Blob 存储服务用于 SQL Server 2016
 
@@ -42,6 +42,9 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
 - 安装 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
 - 下载 [AdventureWorks2016 示例数据库](../samples/adventureworks-install-configure.md)。
 - 将用户帐户分配到 [db_backupoperator](./security/authentication-access/database-level-roles.md) 角色，并授予[更改任意凭据](../t-sql/statements/alter-credential-transact-sql.md)权限。 
+
+> [!IMPORTANT]
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持 [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction)，请确保本教程中使用的存储帐户上未启用[分层命名空间](/azure/storage/blobs/data-lake-storage-namespace)。
 
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 创建存储访问策略和共享访问存储
 

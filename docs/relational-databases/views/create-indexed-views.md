@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 148f93b43f704686b3083954cb3d7353f33a16e0
-ms.sourcegitcommit: c6cc0b669b175ae290cf5b08952010661ebd03c3
+ms.openlocfilehash: 5c074add532e55209c8fc304a98da686cec60aab
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100530848"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636717"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
 
@@ -159,8 +159,8 @@ ms.locfileid: "100530848"
 
 若要创建视图，用户需要在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限 。 如果基表位于不同的架构中，则至少需要针对表的 REFERENCES 权限。 如果创建索引的用户与创建视图的用户不同，则仅在创建索引时需要对视图的 ALTER 权限（包含在对架构的 ALTER 权限中）。
 
-    > [!NOTE]  
-    > Indexes can only be created on views which have the same owner as the referenced table or tables. This is also called an intact **ownership-chain** between the view and the table(s). Typically, when table and view reside within the same schema, the same schema-owner applies to all objects within the schema. But it is possible that individual objects have different explicit owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
+> [!NOTE]  
+> 只能在与被引用的一个或多个表的所有者相同的视图上创建索引。 这也称为视图和表之间的原样“所有权-链”。 通常，当表和视图位于同一架构中时，其“架构-所有者”适用于架构中的所有对象。 因此可以存在创建视图却不是视图所有者的情况。 反过来也是可能的，即架构中的各个对象具有不同的显式所有者。 如果所有者不同于“架构-所有者”，则 sys.tables 中的列 principal_id 会包含一个值。
 
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL

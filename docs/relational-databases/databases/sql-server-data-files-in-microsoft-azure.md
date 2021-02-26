@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8e9138ff27909f9236a608fd0c66f9dca8d5addf
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b59fc811c5bdfa122b306e9522bae97faa37e451
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351450"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636707"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -112,6 +112,8 @@ ON
   
 ###  <a name="limitations"></a><a name="bkmk_Limitations"></a> 限制  
   
+- 由于 SQL Server 工作负载的性能特征，SQL Server 数据文件实现为 Azure Blob 存储中的页 blob。 不支持其他类型的 blob 存储，如块 blob 或 [Azure Data Lake Storage](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)。
+
 - 在此功能的最新版本中，不支持在 Azure 存储中存储 **FileStream** 数据。 可以在数据库中存储 **FileStream** 文件，该数据库还包含存储在 Azure 存储中的数据文件，但所有 FileStream 数据文件都必须存储在本地存储中。  由于 FileStream 数据必须驻留在本地存储中，不能使用 Azure 存储在计算机之间移动它，我们建议继续使用[传统技术](../../relational-databases/blob/move-a-filestream-enabled-database.md)在不同的计算机之间移动与 FileStream 关联的数据。  
   
 - 目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且包含一个活动数据库文件，ServerB 意外启动并且也包含一个指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，并显示错误代码 5120，指示无法打开物理文件“%.ls”\* **。操作系统错误 %d：“%ls”** 。  
