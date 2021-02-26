@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9e82f5820f418e65e8638ee27898a130ae6e564d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4306910b10fe1ac014226b9013af41b235b5e628
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774817"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345835"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>基于事件结束时间筛选事件 (SQL Server Profiler)
 

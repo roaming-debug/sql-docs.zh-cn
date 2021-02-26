@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 839bef5d4b3aba3a9d95664c549556d6c05206e5
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: ea6bb90e43c66160463cdfa0229826b3a7013762
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081896"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "100338240"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查询表达式和统一资源名称
 
@@ -105,7 +105,7 @@ contains(\@StringPropertyName, 'PatternString')
  枚举指定属性的值为 NULL 的所有对象。  
   
  not(\<*PropertyExpression*>)  
- 对 *PropertyExpression*的计算值求反，枚举与 *PropertyExpression*中指定的条件不匹配的所有对象。 例如，not(contains(\@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
+ 对 *PropertyExpression* 的计算值求反，枚举与 *PropertyExpression* 中指定的条件不匹配的所有对象。 例如，not(contains(\@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
   
 ## <a name="remarks"></a>备注  
 
@@ -126,7 +126,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 ## <a name="examples"></a>示例  
   
 ### <a name="a-enumerating-objects-using-false"></a>A. 使用 false() 枚举对象  
- 此查询表达式枚举 **MyComputer** 上默认实例中 **AutoClose**属性设置为 False 的所有数据库。  
+ 此查询表达式枚举 **MyComputer** 上默认实例中 **AutoClose** 属性设置为 False 的所有数据库。  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
@@ -169,5 +169,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
   
 ## <a name="see-also"></a>另请参阅
 
-- [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)
+- [Invoke-PolicyEvaluation cmdlet](/powershell/module/sqlserver/Invoke-PolicyEvaluation)
 - [SQL Server Audit（数据库引擎）](../relational-databases/security/auditing/sql-server-audit-database-engine.md)

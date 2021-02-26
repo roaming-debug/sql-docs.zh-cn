@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: aaf4e27a88bdb3e23937521f230e62dae4115129
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 358006fa8eb00cdfc52a6d5a630f559ff86553f7
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642733"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100350035"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>升级故障转移群集实例 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,16 +50,16 @@ ms.locfileid: "97642733"
 ## <a name="prerequisites"></a>先决条件  
  开始之前，请仔细阅读以下重要信息：  
   
--   [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 例如，不能直接从 SQL Server 2005 故障转移群集实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或不能升级在 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] 上运行的故障转移群集实例。  
+-   [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从 Windows 操作系统版本和版本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升级到理想版本 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]。 例如，不能直接从 SQL Server 2005 故障转移群集实例升级到 [!INCLUDE [sssql14-md](../../../includes/sssql14-md.md)] 或不能升级在 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] 上运行的故障转移群集实例。  
   
 -   [选择数据库引擎升级方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：检查支持的版本和版本升级以及环境中安装的其他组件，并据此选择适当的升级方法和步骤，按正确顺序升级组件。  
   
 -   [计划并测试数据库引擎升级计划](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)：查看发行说明和已知升级问题、预升级清单，并制定和测试升级计划。  
   
--   [安装 SQL Server 的硬件和软件要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
+-   [安装 SQL Server 的硬件和软件要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>执行滚动升级或更新  
- 若要将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，请使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序，从被动节点开始逐个升级加入故障转移群集实例的每个节点。 升级每个节点时，节点被放在故障转移群集实例的可能所有者之外。 如果发生意外故障转移，已升级的节点将不参与故障转移，直到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将 Windows Server 故障转移群集角色的所有权转移给已升级的节点。  
+ 若要升级 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例，请使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序，从被动节点开始逐个升级加入故障转移群集实例的每个节点。 升级每个节点时，节点被放在故障转移群集实例的可能所有者之外。 如果发生意外故障转移，已升级的节点将不参与故障转移，直到安装程序将 Windows Server 故障转移群集角色的所有权转移给已升级的节点。  
   
  默认情况下， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序自动确定何时将故障转移到已升级的节点。 这取决于故障转移群集实例中节点的总数和已经升级的节点数。 如果有一半或更多节点已经升级，则当你在下一个节点上执行升级时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序会导致故障转移到已升级的节点。 在故障转移到已升级的节点后，群集组将移至已升级的节点。 所有已升级的节点都放在可能的所有者列表中，所有尚未升级的节点都将从可能的所有者列表中删除。 升级剩余的每个节点时，节点被添加到故障转移群集实例的可能所有者那里。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "97642733"
   
 6.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击 **“下一步”** 继续。 若要结束安装程序，请单击 **“取消”** 。  
   
-7.  在“选择实例”页上指定要升级到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]实例。 单击 **“下一步”** 继续。  
+7.  在“选择实例”页上指定要升级的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 单击 **“下一步”** 继续。  
   
 8.  在“功能选择”页上会预先选择要升级的功能。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 请注意，您不能更改要升级的功能，并且不能在升级操作过程中添加功能。 若要在升级操作完成后向 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 的已升级实例中添加功能，请参阅 [向 SQL Server 2016 的实例添加功能（安装程序）](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)。  
   
@@ -127,14 +127,14 @@ ms.locfileid: "97642733"
   
 ### <a name="to-upgrade-a-multi-subnet-failover-cluster-instance-currently-using-stretch-vlan-to-use-multi-subnet"></a>将当前使用 Stretch VLAN 的多子网故障转移群集实例升级为使用多子网。  
   
-1.  按照上述步骤将群集升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+1.  按照上述步骤升级群集。  
   
 2.  更改网络设置以将远程节点移到不同的子网。  
   
 3.  使用故障转移群集管理器或 PowerShell 添加新子网的新 IP 地址，将 IP 地址资源依赖关系设置为 OR。  
   
 ## <a name="next-steps"></a>后续步骤  
- 升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]后，请完成下列任务：  
+ 在升级之后，请完成以下任务：  
   
 -   [完成数据库引擎升级](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   

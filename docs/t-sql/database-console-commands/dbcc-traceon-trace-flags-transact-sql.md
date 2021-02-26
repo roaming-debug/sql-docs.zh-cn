@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 269ab12772cacfdb7ead24c612eb3408e6c6067b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 4d3d5cb280f20deb3d683d962be986d7df38ed61
+ms.sourcegitcommit: 8bdb5a51f87a6ff3b94360555973ca0cd0b6223f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100066172"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100549373"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -166,6 +166,8 @@ ms.locfileid: "100066172"
 |**8048**|将 NUMA 分区内存对象转换为 CPU 分区内存对象。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2809338)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，此行为是动态的，由引擎控制。<br /><br />**作用域**：仅全局|  
 |**8075**|在 64 位 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 上收到内存页分配错误时，减少 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-2012-11x-gm) 片段。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3074434)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，此行为由引擎控制，跟踪标志 8075 不再有效。<br /><br />**作用域**：仅全局|
 |**8079**|允许 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 询问硬件布局，并在报告每个 NUMA 节点 8 个或更多 CPU 的系统上自动配置 Soft-NUMA。 自动 Soft-NUMA 行为可识别超线程（HT/逻辑处理器）。 通过提高侦听器数、缩放和网络与加密功能，其他节点的分区和创建会缩放后台处理。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2。 从 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 开始，此行为由引擎控制，跟踪标志 8079 不再有效。<br /><br />**作用域**：仅全局| 
+|**8089**| 在 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU16 中，可以启用位图筛选来减小筛选后的内存转储的大小。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配一个位图，用于跟踪要从筛选的转储中排除的内存页。 Sqldumper.exe 读取位图并筛选出页面，且无需读取其他任何内存管理程序元数据。  <br /><br />**注意：** 此跟踪标志仅适用于 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU16 到 CU19。 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU20 开始，将默认启用位图筛选。 跟踪标志 8089 将不再适用，如果启用会将其忽略。 可以通过跟踪标志 8095 禁用位图筛选。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/topic/kb4488943-improvement-new-trace-flag-8089-is-available-for-faster-filtered-dump-in-sql-server-2017-c49c5e57-3d38-1d49-bf63-e61075303d90)。<br /><br />**作用域**：仅全局| 
+|**8095**| 禁止对经过筛选的内存转储进行位图筛选。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配一个位图，用于跟踪要从筛选的转储中排除的内存页。 Sqldumper.exe 读取位图并筛选出页面，且无需读取其他任何内存管理程序元数据。  <br /><br />**注意：** 此跟踪标志适用于默认启用了位图筛选的内部版本：[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] CU13 及更高版本、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU20 及更高版本，以及 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]。 <br /><br />**作用域**：仅全局| 
 |**8099**|为运行 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 的高端系统（为许多并发用户提供服务）启用旋转锁争用修补。<br /><br />**注意：** 此跟踪标志仅用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2 和 CU3。 从 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU4 开始，默认情况下便会启用此行为。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4538688)。<br /><br />**作用域**：仅全局| 
 |**8207**|允许事务复制和 CDC 的 singleton 更新。 对订阅服务器的更新可以作为 DELETE 和 INSERT 对复制。 这可能不符合业务规则的要求，如激发 UPDATE 触发器。 使用跟踪标志 8207 时，对只影响一行的唯一列的更新（单一实例更新）将作为 UPDATE 而非作为 DELETE 或 INSERT 对进行复制。 如果该更新影响具有唯一约束的列或影响多个行，则仍将该更新作为 DELETE 或 INSERT 对进行复制。 有关详细信息，请参阅此 [Microsoft 支持文章](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/302341)。<br /><br />**作用域**：仅全局|
 |**8721**|在执行自动更新统计信息时向错误日志提交报告。 有关详细信息，请参阅此 [Microsoft 支持文章](https://mskb.pkisolutions.com/kb/195565)。<br /><br />**注意：** 此跟踪标志需要启用跟踪标志 [3605](#3605)。<br /><br />**作用域**：仅全局|
@@ -202,7 +204,10 @@ ms.locfileid: "100066172"
 |**11024**|当任何分区的修改计数超过本地[阈值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)时，允许触发统计信息的自动更新。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4041811)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：仅全局| 
 |**11047**|将由 `query wait (s)` 或 Resource Governor `REQUEST_MEMORY_GRANT_TIMEOUT_SEC` 配置设置的默认超时应用于列存储索引生成操作。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4480641)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 及更高内部版本。<br /><br />**作用域**：仅全局| 
 |**11064**|通过优化 `SELECT` 和 `INSERT` 语句之间的内存分布，提高了将数据加载到列存储索引的操作的可伸缩性。 有关将数据加载到列存储索引中的详细信息，请参阅[列存储索引 - 数据加载指南](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 及更高内部版本。<br /><br />**作用域**：仅全局| 
-|**11068**|使用针对列存储索引插入操作配置了最大并行度 (MAXDOP) 值的服务器、数据库或资源池。 有关替代并行度的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism)。<br /><br />**重要提示：** 只有同时启用跟踪标志 11064，此跟踪标志才有效。<br /><br />**重要提示：** 优先选择更快的数据加载而不是维护 [列存储段](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment)的质量时，请使用此跟踪标志。 例如，如果在并行模式下执行插入操作，则在将 1,048,577 个行加载到列存储时，使用此跟踪标志可能会导致多个压缩行组。 如果不使用此跟踪标志，插入操作会生成一个压缩行组。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 及更高内部版本。<br /><br />**作用域**：仅全局| 
+|**11068**|使用针对列存储索引插入操作配置了最大并行度 (MAXDOP) 值的服务器、数据库或资源池。 有关替代并行度的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism)。<br /><br />**重要提示：** 只有同时启用跟踪标志 11064，此跟踪标志才有效。<br /><br />**重要提示：** 优先选择更快的数据加载而不是维护 [列存储段](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment)的质量时，请使用此跟踪标志。 例如，如果在并行模式下执行插入操作，则在将 1,048,577 个行加载到列存储时，使用此跟踪标志可能会导致多个压缩行组。 如果不使用此跟踪标志，插入操作会生成一个压缩行组。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 及更高内部版本。<br /><br />**作用域**：仅全局|
+|**11631**| “ALTER INDEX ...REORGANIZE”仅当已从某个列存储索引行组中删除某个阈值的行数时，才会清理该行组中已删除的行。 默认阈值为最大行数限值的 10%（1 百万行），即 100,000 行。 此跟踪标志将阈值更改为列存储行组中当前行总数的 10%。 例如，如果行组包含 20,000 行，则阈值是 2,000 行删除的行，达到该阈值时，REORGANIZE 才会对此行组执行清理操作。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/help/5000895)<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 及更高内部版本。<br /><br />**作用域**：仅全局|
+|**11634**| “ALTER INDEX ...REORGANIZE”仅当已从某个列存储索引行组中删除某个阈值的行数时，才会清理该行组中已删除的行。 默认阈值为最大行数限值的 10%（1 百万行），即 100,000 行。 此跟踪标志将阈值更改为列存储行组中行数的 1%。 如果与跟踪标志 11631 一起启用，则阈值为行组中当前行数的 1%，而不是 1 百万行的 1%。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/help/5000895)<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 及更高内部版本。<br /><br />**作用域**：仅全局|
+
   
 ## <a name="examples"></a>示例  
  以下示例使用 DBCC TRACEON 针对服务器级别的所有会话将跟踪标志 3205 设置为开。  
