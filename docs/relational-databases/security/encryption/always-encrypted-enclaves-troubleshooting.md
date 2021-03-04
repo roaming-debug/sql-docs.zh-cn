@@ -11,12 +11,12 @@ ms.topic: how-to
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee15152be634c08cb04ec6a01716604fae720471
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: dc50006d17228bf3b5ec03c2a672ed113260bf3b
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100069702"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839254"
 ---
 # <a name="troubleshoot-common-issues-for-always-encrypted-with-secure-enclaves"></a>排查具有安全 enclave 的 Always Encrypted 的常见问题
 
@@ -28,7 +28,7 @@ ms.locfileid: "100069702"
 
 若要使用安全 enclave 运行语句，你需要启用 Always Encrypted 并为数据库连接指定证明 URL，如[运行使用安全 enclave 的语句的先决条件](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves)所述。 但是，如果指定证明 URL，但 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 或目标 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 实例中的数据库不支持安全 enclave 或配置错误，则连接将失败。
 
-- 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]，请检查数据库是否使用 [DC 系列](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)硬件配置。 有关详细信息，请参阅[为 Azure SQL 数据库启用 Intel SGX](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)。
+- 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]，请检查数据库是否使用 [DC 系列](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)硬件配置。 有关详细信息，请参阅[为 Azure SQL 数据库启用 Intel SGX](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)。
 - 如果使用的是 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]，请检查是否为实例正确配置了安全 enclave。 有关详细信息，请参阅[在 SQL Server 中配置安全 enclave](always-encrypted-enclaves-configure-enclave-type.md)。
 
 ## <a name="attestation-errors-when-using-microsoft-azure-attestation"></a>使用 Microsoft Azure 证明时发生证明错误
@@ -56,7 +56,7 @@ ms.locfileid: "100069702"
   - 证明策略错误可能是根本原因。 确保使用的是 Microsoft 推荐的策略。 有关详细信息，请参阅[创建并配置证明提供程序](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation#create-and-configure-an-attestation-provider)。
   - 由于安全漏洞损害服务器端 enclave，因此策略验证也可能失败。
 - 客户端应用程序无法连接到证明提供程序且无法检索公共签名密钥（步骤 5 中）。 可能的原因包括：
-  - 应用程序与证明提供程序之间的防火墙配置可能会阻止连接。 若要对受阻的连接进行故障排除，请验证是否可以连接到证明提供程序的 OpenId 终结点。 例如，在托管应用程序的计算机上通过 Web 浏览器查看是否可以连接到 OpenID 终结点。 有关详细信息，请参阅[元数据配置 - Get](https://docs.microsoft.com/rest/api/attestation/metadataconfiguration/get)。
+  - 应用程序与证明提供程序之间的防火墙配置可能会阻止连接。 若要对受阻的连接进行故障排除，请验证是否可以连接到证明提供程序的 OpenId 终结点。 例如，在托管应用程序的计算机上通过 Web 浏览器查看是否可以连接到 OpenID 终结点。 有关详细信息，请参阅[元数据配置 - Get](/rest/api/attestation/metadataconfiguration/get)。
 
 ## <a name="attestation-errors-when-using-host-guardian-service"></a>使用主机监护服务时发生证明错误
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6f49fad9ab19da7e6017e2d6fe5c63bebfa3a242
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: d1a8d34673b28e1da4fb15b0f469740aab378391
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100342861"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839174"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "100342861"
   
 ## <a name="permissions"></a>权限  
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
   
 ## <a name="remarks"></a>备注  
  通过检查不同闩锁类的相对等待数和等待时间，sys.dm_os_latch_stats 可以用来标识闩锁争用源。 在某些情况中，可能能够解决或减少闩锁争用。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
@@ -73,7 +73,7 @@ GO
   
  下表包含对各种闩锁类的简短说明。  
   
-|闩锁类|描述|  
+|闩锁类|说明|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部使用，用于初始化对分配环形缓冲区创建过程的同步。|  
 |ALLOC_CREATE_FREESPACE_CACHE|用来初始化对堆的内部可用空间缓存的同步。|  
@@ -197,4 +197,4 @@ GO
 ## <a name="see-also"></a>另请参阅  
 [DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
 [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
-[SQL Server Latches 对象](../../relational-databases/performance-monitor/sql-server-latches-object.md)      
+[SQL Server Latches 对象](../../relational-databases/performance-monitor/sql-server-latches-object.md)

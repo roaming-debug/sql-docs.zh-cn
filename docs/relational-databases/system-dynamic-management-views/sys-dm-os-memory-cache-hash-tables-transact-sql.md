@@ -21,12 +21,12 @@ ms.assetid: 68b94f35-8f80-4d2b-bcde-7a21934219af
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4f668e587bf11c5fb8451a2b433b6f9314a96c3
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: abd71436278bc5580f9242cdc54f3f68719bd91a
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100338855"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839157"
 ---
 # <a name="sysdm_os_memory_cache_hash_tables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "100338855"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|缓存条目的地址（主键）。 不可为 null。|  
-|name |**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|type |**nvarchar(60)**|缓存类型。 不可为 null。|  
+|name|**nvarchar(256)**|缓存的名称。 不可为 null。|  
+|type|**nvarchar(60)**|缓存类型。 不可为 null。|  
 |**table_level**|**int**|哈希表编号。 某个特定缓存可能有多个对应于不同哈希函数的哈希表。 不可为 null。|  
 |**buckets_count**|**int**|哈希表中的存储桶数。 不可为 null。|  
 |**buckets_in_use_count**|**int**|当前使用的存储桶数。 不可为 null。|  
@@ -57,12 +57,9 @@ ms.locfileid: "100338855"
 ## <a name="permissions"></a>权限 
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="see-also"></a>另请参阅  
  
   [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
-  
-
-

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6d12296ea1ce831a9f1299b150d3e2a81a39de3d
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 7566f26bde72b0b4503d9a3f6499bd967208c68e
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100342826"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839459"
 ---
 # <a name="sysdm_os_memory_cache_entries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "100342826"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|缓存的地址。 不可为 null。|  
-|name |**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|type |**varchar(60)**|缓存类型。 不可为 null。|  
+|name|**nvarchar(256)**|缓存的名称。 不可为 null。|  
+|type|**varchar(60)**|缓存类型。 不可为 null。|  
 |**entry_address**|**varbinary(8)**|缓存条目的描述符地址。 不可为 null。|  
 |**entry_data_address**|**varbinary(8)**|缓存条目中用户数据的地址。<br /><br /> 0x00000000 = 条目数据地址不可用。<br /><br /> 不可为 null。|  
 |**in_use_count**|**int**|同时使用此缓存条目的用户数。 不可为 null。|  
@@ -57,12 +57,9 @@ ms.locfileid: "100342826"
 ## <a name="permissions"></a>权限 
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="see-also"></a>另请参阅  
  
   [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
-  
-
-

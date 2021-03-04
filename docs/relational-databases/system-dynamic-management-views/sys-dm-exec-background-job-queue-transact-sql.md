@@ -21,12 +21,12 @@ ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e693db496ff6d5d1657fbc929da10833946cbdfe
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 6c7fbf4e7d6ed7b9f541d12215b10f311a14ee2c
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343032"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839302"
 ---
 # <a name="sysdm_exec_background_job_queue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "100343032"
 |**time_queued**|**datetime**|作业添加到队列中的时间。|  
 |**job_id**|**int**|作业标识符。|  
 |database_id|**int**|执行作业所在的数据库。|  
-|**object_id1**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
-|**object_id2**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
-|**object_id3**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
-|**object_id4**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
+|**object_id1**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
+|**object_id2**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
+|**object_id3**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
+|**object_id4**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
 |**error_code**|**int**|如果因失败而重新插入作业，则为错误代码。 如果作业已挂起、未被选取或已完成，则为 NULL。|  
 |**request_type**|**smallint**|作业请求的类型。|  
 |**retry_count**|**smallint**|从队列中选取作业又因缺少资源或其他原因而将其重新插入队列的次数。|  
@@ -54,7 +54,7 @@ ms.locfileid: "100343032"
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
   
 ## <a name="remarks"></a>备注  
  该视图只返回有关异步更新统计作业的信息。 有关异步更新统计信息的详细信息，请参阅 [统计](../../relational-databases/statistics/statistics.md)信息。  
@@ -82,7 +82,3 @@ GO
  [统计信息](../../relational-databases/statistics/statistics.md)   
  [KILL STATS JOB (Transact-SQL)](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
   
-  
-
-
-

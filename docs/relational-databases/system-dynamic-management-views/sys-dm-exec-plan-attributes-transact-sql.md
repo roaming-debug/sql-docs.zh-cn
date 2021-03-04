@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 0bbf64478b1ce114419df3e65c26ff453b3cfc5e
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: fad7df36aabbebf6ad41752c741069465adafac4
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100342973"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839277"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 在上表中， **属性** 可具有以下值：
 
-|特性|数据类型|说明|  
+|属性|数据类型|说明|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指示编译计划所使用的选项值。|  
 |objectid|**int**|用于在缓存中查找对象的主键之一。 这是存储在数据库对象的 [sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 对象中的对象 ID (过程、视图、触发器等) 上。 对于类型为“即席”或“已准备好”的计划，它是批处理文本的内部哈希。|  
@@ -82,7 +82,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="remarks"></a>备注  
   
@@ -174,5 +174,3 @@ GO
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
-  
-

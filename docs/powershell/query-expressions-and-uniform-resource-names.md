@@ -1,5 +1,5 @@
 ---
-title: 查询表达式和统一资源名称 | Microsoft Docs
+title: 查询表达式和统一资源名称
 description: 了解用于枚举对象模型层次结构中一个或多个对象的查询表达式，以及用于唯一地标识单个对象的统一资源名称 (URN)。
 ms.prod: sql
 ms.technology: sql-server-powershell
@@ -8,22 +8,21 @@ helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
-ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: ea6bb90e43c66160463cdfa0229826b3a7013762
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e1955201f60f58c6513928c7185dbbdad16cf445
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "100338240"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839458"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查询表达式和统一资源名称
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 模型和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元使用与 XPath 表达式相似的两种类型的表达式。 查询表达式是指定一组条件的字符串，用于枚举对象模型层次结构中的一个或多个对象。 统一资源名称 (URN) 是一种特定类型的查询表达式字符串，用于唯一标识单个对象。  
 
