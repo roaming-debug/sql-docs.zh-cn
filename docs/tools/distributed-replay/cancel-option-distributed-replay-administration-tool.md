@@ -2,22 +2,21 @@
 title: Cancel 选项管理工具
 titleSuffix: SQL Server Distributed Replay
 description: 本文介绍 SQL Server Distributed Replay 管理工具的 Cancel 命令行选项和语法。
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa67b10652f381091f8415311480ee005f4cdc02
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 21d1d74439b41a6e36287fef957c6c2df24aa1c1
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345936"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836917"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Cancel 选项（分布式重播管理工具）
 
@@ -36,7 +35,7 @@ ms.locfileid: "100345936"
 dreplay cancel [-m controller] [-q]   
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>参数
  -m controller  
  控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   

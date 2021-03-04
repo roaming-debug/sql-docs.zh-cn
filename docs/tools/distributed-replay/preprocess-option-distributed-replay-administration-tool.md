@@ -4,20 +4,19 @@ titleSuffix: SQL Server Distributed Replay
 description: Microsoft SQL Server Distributed Replay 工具 DReplay.exe 是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 88ce51a2a665bc127331d2c145a1a41f641881eb
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 34c4b1432fa9373e4952bb6b11264f5cec6e452a
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100349513"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836846"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>preprocess 选项（分布式重播管理工具）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
