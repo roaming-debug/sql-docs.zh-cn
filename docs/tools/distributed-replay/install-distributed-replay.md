@@ -3,20 +3,19 @@ title: 安装 Distributed Replay
 titleSuffix: SQL Server Distributed Replay
 description: 本文介绍如何安装 Distributed Replay：使用安装向导、命令提示符窗口或配置文件。
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: fc4c971d62ac4a54a786b426ea8f7855882fa0c2
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1dfe3a196af914c8cbba177256b41b9da454025b
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345918"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838074"
 ---
 # <a name="install-distributed-replay"></a>安装 Distributed Replay
 
@@ -24,35 +23,36 @@ ms.locfileid: "100345918"
 
 可以采用以下三种方法之一安装 Distributed Replay：  
   
--   [从安装向导安装 Distributed Replay](#bkmk_wizard)  
+- [从安装向导安装 Distributed Replay](#bkmk_wizard)  
   
--   [从命令提示符安装 Distributed Replay](#bkmk_command_prompt)  
+- [从命令提示符安装 Distributed Replay](#bkmk_command_prompt)  
   
--   [使用配置文件安装 Distributed Replay](#bkmk_configuration_file)  
+- [使用配置文件安装 Distributed Replay](#bkmk_configuration_file)  
   
 ##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> 从安装向导安装 Distributed Replay  
- 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Distributed Replay 功能。 在计划安装这些功能的位置时，请考虑以下方面：  
+
+使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Distributed Replay 功能。 在计划安装这些功能的位置时，请考虑以下方面：  
   
--   您可以将管理工具与 Distributed Replay 控制器安装在同一台计算机上，也可以安装在不同的计算机上。  
+- 您可以将管理工具与 Distributed Replay 控制器安装在同一台计算机上，也可以安装在不同的计算机上。  
   
--   在每个 Distributed Replay 环境中只能有一个控制器。  
+- 在每个 Distributed Replay 环境中只能有一个控制器。  
   
--   您可以将客户端服务最多安装在 16 个（物理或虚拟）计算机上。  
+- 您可以将客户端服务最多安装在 16 个（物理或虚拟）计算机上。  
   
--   只能有客户端服务的一个实例安装在 Distributed Replay 控制器计算机上。 如果您的 Distributed Replay 环境将具有多个客户端，我们建议不要将客户端服务与该控制器安装在同一台计算机上。 这样做可能会降低 Distributed Replay 的整体速度。  
+- 只能有客户端服务的一个实例安装在 Distributed Replay 控制器计算机上。 如果您的 Distributed Replay 环境将具有多个客户端，我们建议不要将客户端服务与该控制器安装在同一台计算机上。 这样做可能会降低 Distributed Replay 的整体速度。  
   
--   对于性能测试方案，我们建议不要将管理工具、分布式重播实用工具控制器服务或客户端服务安装在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目标实例上。 在目标服务器上安装所有这些功能应限于应用程序兼容性功能测试。  
+- 对于性能测试方案，我们建议不要将管理工具、分布式重播实用工具控制器服务或客户端服务安装在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目标实例上。 在目标服务器上安装所有这些功能应限于应用程序兼容性功能测试。  
   
--   在安装后，控制器服务（即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器）必须首先运行，然后才能在客户端启动 Distributed Replay 客户端服务。  
+- 在安装后，控制器服务（即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器）必须首先运行，然后才能在客户端启动 Distributed Replay 客户端服务。  
   
 > [!NOTE]  
 >  若要删除或更改 Distributed Replay 功能，请使用 **“控制面板”** 中的 Windows **“程序和功能”** 窗口。 在“卸载或更改程序” [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 窗口中选择  ，然后单击 **“删除”** 以便打开 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装向导。 在 **“选择功能”** 页上，选中要删除的 Distributed Replay 功能。  
   
  **先决条件：**  
   
--   请确保您要使用的计算机满足在 [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)主题中介绍的要求。  
+- 请确保您要使用的计算机满足在 [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)主题中介绍的要求。  
   
--   在开始此过程之前，请创建运行控制器和客户端服务所基于的域用户帐户。 我们建议这些帐户不是 Windows Administrators 组的成员。 有关详细信息，请参阅 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md) 主题中的“用户和服务帐户”部分。  
+- 在开始此过程之前，请创建运行控制器和客户端服务所基于的域用户帐户。 我们建议这些帐户不是 Windows Administrators 组的成员。 有关详细信息，请参阅 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md) 主题中的“用户和服务帐户”部分。  
   
     > [!NOTE]  
     >  如果您在同一台计算机上运行管理工具、控制器服务和客户端服务，则可以使用本地用户帐户。  
@@ -61,7 +61,7 @@ ms.locfileid: "100345918"
   
  假定您在使用默认文件位置和标准安装，则基目录位于 C:\Program Files\Microsoft SQL Server。 其中，下面是二进制文件和程序集将安装到的位置：  
   
--   在 32 位系统上：  
+- 在 32 位系统上：  
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]工具  
   
@@ -69,7 +69,7 @@ ms.locfileid: "100345918"
   
      \<Share Feature Directory>\Tools\\（用户提供的替代共享功能目录）  
   
--   在 64 位系统上：  
+- 在 64 位系统上：  
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
@@ -93,23 +93,23 @@ ms.locfileid: "100345918"
   
 7.  在 **“功能选择”** 页上，配置要安装的功能。  
   
-    -   若要安装管理工具，请选择“管理工具 - 基本”  。  
+    - 若要安装管理工具，请选择“管理工具 - 基本”  。  
   
-    -   若要安装控制器服务，请选择 **“Distributed Replay 控制器”** 。  
+    - 若要安装控制器服务，请选择 **“Distributed Replay 控制器”** 。  
   
-    -   若要安装客户端服务，请选择 **“Distributed Replay 客户端”** 。  
+    - 若要安装客户端服务，请选择 **“Distributed Replay 客户端”** 。  
   
      **重要说明**：在你配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
   
-    -   域用户帐户  
+    - 域用户帐户  
   
-    -   用户创建的本地用户帐户  
+    - 用户创建的本地用户帐户  
   
-    -   管理员  
+    - 管理员  
   
-    -   虚拟帐户和 MSA（托管服务帐户）  
+    - 虚拟帐户和 MSA（托管服务帐户）  
   
-    -   Network Services、Local Services 和 System  
+    - Network Services、Local Services 和 System  
   
      不接受组帐户（本地或域）和其他内置帐户（如 Everyone）。  
   
@@ -188,9 +188,9 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
  安装程序仅支持通过命令行使用配置文件。 下面列出了在使用配置文件时参数的处理顺序：  
   
--   配置文件覆盖包中的默认值  
+- 配置文件覆盖包中的默认值  
   
--   命令行的值覆盖配置文件中的值  
+- 命令行的值覆盖配置文件中的值  
   
  有关如何使用配置文件的详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。  
   
@@ -205,7 +205,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 #### <a name="to-install-distributed-replay-using-the-configuration-file"></a>使用配置文件安装 Distributed Replay  
   
--   通过命令提示符运行安装并使用 ConfigurationFile 参数提供 ConfigurationFile.ini。  
+- 通过命令提示符运行安装并使用 ConfigurationFile 参数提供 ConfigurationFile.ini。  
   
  **示例语法**  
   

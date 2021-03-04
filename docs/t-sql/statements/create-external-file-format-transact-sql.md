@@ -1,8 +1,8 @@
 ---
 description: CREATE EXTERNAL FILE FORMAT (Transact-SQL)
-title: CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 ms.custom: ''
-ms.date: 05/08/2020
+ms.date: 02/23/2021
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -17,19 +17,18 @@ helpviewer_keywords:
 - External
 - External, file format
 - PolyBase, external file format
-ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f8297477ee7c5671ea78f5de5776bcee89a2fb7
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 458641983730dbec51055c7f610b7775acd09ac8
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100350851"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837717"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
 创建用于定义存储在 Hadoop、Azure Blob 存储或 Azure Data Lake Store 的外部数据或用于与外部流相关的输入和输出流的外部文件格式对象。 创建外部文件格式是创建外部表的先决条件。 通过创建外部文件格式，可指定外部表引用的数据的实际布局。  
   
@@ -44,7 +43,6 @@ ms.locfileid: "100350851"
 - Parquet
 
 - JSON - 仅适用于 Azure SQL Edge。
-
 
 若要创建外部表，请参阅 [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)。
   

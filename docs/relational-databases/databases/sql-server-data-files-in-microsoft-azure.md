@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b59fc811c5bdfa122b306e9522bae97faa37e451
-ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
+ms.openlocfilehash: 952e8d393733c62f60c5b6792b422d22417ddede
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100636707"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837929"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -112,7 +112,7 @@ ON
   
 ###  <a name="limitations"></a><a name="bkmk_Limitations"></a> 限制  
   
-- 由于 SQL Server 工作负载的性能特征，SQL Server 数据文件实现为 Azure Blob 存储中的页 blob。 不支持其他类型的 blob 存储，如块 blob 或 [Azure Data Lake Storage](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)。
+- 由于 SQL Server 工作负载的性能特征，SQL Server 数据文件实现为 Azure Blob 存储中的页 blob。 不支持其他类型的 blob 存储，如块 blob 或 [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction)。
 
 - 在此功能的最新版本中，不支持在 Azure 存储中存储 **FileStream** 数据。 可以在数据库中存储 **FileStream** 文件，该数据库还包含存储在 Azure 存储中的数据文件，但所有 FileStream 数据文件都必须存储在本地存储中。  由于 FileStream 数据必须驻留在本地存储中，不能使用 Azure 存储在计算机之间移动它，我们建议继续使用[传统技术](../../relational-databases/blob/move-a-filestream-enabled-database.md)在不同的计算机之间移动与 FileStream 关联的数据。  
   

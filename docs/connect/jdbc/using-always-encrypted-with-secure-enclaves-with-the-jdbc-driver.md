@@ -5,18 +5,18 @@ ms.custom: ''
 ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
-ms.openlocfilehash: 3970374537cc3491a0d8d624c3eccd31db0134e7
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 46e812a4234098e49a272be503e52f34d4c78733
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99076965"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837534"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver"></a>将具有安全 Enclave 的 Always Encrypted 与 JDBC 驱动程序结合使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "99076965"
 
 - enclaveAttestationUrl - 指定证明 URL（证明服务终结点）。 你需要从证明服务管理员处获取环境的证明 URL。
   - 如果使用的是 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 和主机保护者服务 (HGS)，请参阅[确定并共享 HGS 证明 URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)。
-  - 如果使用的是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation)。
+  - 如果使用的是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](../../relational-databases/security/encryption/always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation)。
 
 用户必须启用 columnEncryptionSetting 并正确设置上述两个连接字符串属性，才能从 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 中启用具有安全 Enclave 的 Always Encrypted。
 
@@ -91,4 +91,4 @@ try (Connection c = DriverManager.getConnection(URL);Statement s = c.createState
 此功能需要 RSASSA-PSA 签名算法。 此算法是在 JDK 11 中添加的，但不会反向移植到 JDK 8。 如果用户想要将此功能与 JDK 8 版本的 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 一起使用，则必须加载自己的提供程序，该提供程序需支持 RSASSA-PSA 签名算法，或包含 BouncyCastleProvider 可选的依赖项。 如果 JDK 8 向后移植签名算法，或者 JDK 8 的支持生命周期结束，则将在以后删除依赖项。
 
 ## <a name="see-also"></a>另请参阅
-[通过 JDBC 驱动程序使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
+[通过 JDBC 驱动程序使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)

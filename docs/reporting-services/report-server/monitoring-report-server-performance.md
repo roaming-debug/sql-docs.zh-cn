@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: deae632ce9305b58b72e24e1a57507f9f4c5ee89
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: f24b3bb19150271532561d691a1ed1f4c89dfbc5
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489431"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838080"
 ---
 # <a name="monitoring-report-server-performance"></a>监视报表服务器性能
 
@@ -68,13 +68,13 @@ SQL Server 2016 Reporting Services 包括以下性能对象：
   
 -   **Reportserver: Service** 和 **ReportServerSharePoint:Service** 用于监视与 HTTP 相关的事件和内存管理。 这些计数器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 专用，用于为报表服务器跟踪与 HTTP 相关的事件，如请求、连接和登录尝试。 此性能对象还包括与内存管理相关的计数器。  
   
- 如果单台计算机上有多个报表服务器实例，则可以同时监视多个实例或分别监视各个实例。 选择要在添加计数器时包括的实例。 如需详细了解如何使用性能监视器 (perfmon.msc) 和添加计数器，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Windows 性能监视器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11))产品文档。  
+ 如果单台计算机上有多个报表服务器实例，则可以同时监视多个实例或分别监视各个实例。 选择要在添加计数器时包括的实例。 如需详细了解如何使用性能监视器 (perfmon.msc) 和添加计数器，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Windows 性能监视器](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11))产品文档。  
   
 ## <a name="other-performance-counters"></a>其他性能计数器  
  只为上面列出的 Reporting Services 性能对象提供自定义 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 性能计数器。 下列 .NET Framework 性能对象为报表服务器提供附加的性能监视数据。
  
  > [!NOTE]
- > Power BI 报表服务器和 SQL Server Reporting Services 2017 及更高版本不包含 Reporting Services 性能对象。 有一些 [.NET Framework 性能计数器](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/performance-counters)提供报表服务器性能监视功能。 
+ > Power BI 报表服务器和 SQL Server Reporting Services 2017 及更高版本不包含 Reporting Services 性能对象。 有一些 [.NET Framework 性能计数器](/dotnet/framework/debug-trace-profile/performance-counters)提供报表服务器性能监视功能。 
  
 |性能对象|说明|  
 |------------------------|-----------|  
@@ -98,4 +98,3 @@ SQL Server 2016 Reporting Services 包括以下性能对象：
  [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)  
-  

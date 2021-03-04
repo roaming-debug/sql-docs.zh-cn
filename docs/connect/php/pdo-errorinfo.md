@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 46b57275d92f4eb6acb64c276e3b34ea67efb429
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 62ad5c26342ce03d3098d5a835776d193df4b88c
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202030"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837228"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -130,14 +130,14 @@ pdo_sqlsrv.report_additional_errors = 0
 
 ## <a name="warnings-and-errors"></a>警告和错误
 
-从 5.9.0 开始，ODBC 警告将不再记录为错误。 也就是说，前缀为“01”的[错误代码](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)将记录为警告。 换句话说，如果用户只想记录错误，请按如下所示更新 php.ini：
+从 5.9.0 开始，ODBC 警告将不再记录为错误。 也就是说，前缀为“01”的[错误代码](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)将记录为警告。 换句话说，如果用户只想记录错误，请按如下所示更新 php.ini：
 
 ```
 [pdo_sqlsrv]  
 pdo_sqlsrv.log_severity = 1
 ```
 
-在这种情况下，日志文件将不会包含任何警告消息。 请检查 pdo_sqlsrv 用户[日志记录](https://docs.microsoft.com/sql/connect/php/logging-activity#logging-activity-using-the-pdo_sqlsrv-driver)的工作方式。
+在这种情况下，日志文件将不会包含任何警告消息。 请检查 pdo_sqlsrv 用户[日志记录](./logging-activity.md#logging-activity-using-the-pdo_sqlsrv-driver)的工作方式。
 
 ## <a name="see-also"></a>另请参阅  
 [PDO 类](../../connect/php/pdo-class.md)

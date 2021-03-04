@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e84635c1f32396e033841c546dafc1796624d5ab
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: cbec7eb15ed8acad746e3fcb2013ee8100bcdd26
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237093"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837690"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 
@@ -46,7 +46,7 @@ Always Encrypted 使用安全 enclave，如下图中所示：
 
 在 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)][ 中，具有安全 enclave 的 Always Encrypted 使用](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)基于虚拟化的安全 (VBS) 保护 Windows 中的内存 enclave（也称为虚拟安全模式或 VSM enclave）。
 
-在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中，具有安全 enclave 的 Always Encrypted 使用 [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) enclave。 Intel SGX 是使用 [DC 系列](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)硬件配置的数据库中支持的一种基于硬件的受信任执行环境技术。
+在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中，具有安全 enclave 的 Always Encrypted 使用 [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) enclave。 Intel SGX 是使用 [DC 系列](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)硬件配置的数据库中支持的一种基于硬件的受信任执行环境技术。
 
 ## <a name="secure-enclave-attestation"></a>安全 enclave 证明
 
@@ -56,7 +56,7 @@ Always Encrypted 使用安全 enclave，如下图中所示：
 
 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 中的 VBS 安全 enclave 的证明过程是 [Windows Defender System Guard 运行时证明](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)，该证明要求将主机保护者服务 (HGS) 用作证明服务。 
 
-在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中证明 Intel SGX enclave 需要 [Microsoft Azure 证明](https://docs.microsoft.com/azure/attestation/overview)。
+在 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中证明 Intel SGX enclave 需要 [Microsoft Azure 证明](/azure/attestation/overview)。
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 不支持 Microsoft Azure 证明。 主机保护者服务是 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] 中 VBS enclave 唯一支持的证明解决方案。
@@ -167,7 +167,7 @@ Always Encrypted 使用安全 enclave，如下图中所示：
   - 如果数据库包含使用随机加密且已启用 enclave 的列上的索引，请确保先在数据库中启用[加速数据库恢复 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)，再创建数据库备份。 ADR 可确保数据库（包括索引）在你还原数据库后立即可用。 有关详细信息，请参阅[数据库恢复](#database-recovery)。
   
 - **Azure SQL 数据库**
-  - 在配置[活动异地复制](https://docs.microsoft.com/azure/azure-sql/database/active-geo-replication-overview)时，如果主数据库支持安全 enclave，请确保辅助数据库也支持。
+  - 在配置[活动异地复制](/azure/azure-sql/database/active-geo-replication-overview)时，如果主数据库支持安全 enclave，请确保辅助数据库也支持。
 
 在 SQL Server 和 Azure SQL 数据库中，使用 bacpac 文件迁移数据库时，必须确保先删除使用随机加密且已启用 enclave 的列上的所有索引，再创建 bacpac 文件。
 

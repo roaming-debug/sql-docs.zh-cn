@@ -13,12 +13,12 @@ ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 444691b0ec7196c2dcb09426b7e7cb3063445826
-ms.sourcegitcommit: 0bee2b4392d50151c3839a937371588cc2ce2d3e
+ms.openlocfilehash: ce49303d14dc92811b383349c7fa8d74202ab8ea
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98667738"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836934"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>“表和列”对话框 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,5 +47,4 @@ ms.locfileid: "98667738"
 > 选作外键的列必须与其对应的主键列具有相同的数据类型。 每个键中列的数目必须相等。 例如，如果关系主键方的表的主键由两列组成，您将需要将这两列中的每一列与关系外键方的表中的列匹配。  
   
 ## <a name="see-also"></a>另请参阅  
-[如何：在表之间创建关系](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
-  
+[如何：在表之间创建关系](../../relational-databases/tables/create-foreign-key-relationships.md)  

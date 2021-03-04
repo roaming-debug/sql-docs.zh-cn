@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bc92b0af972236b588369869afc5b023735ae699
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 130d2a9f2d92a77ab2d2e033f8e5f4fb9f88ef9f
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237124"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837653"
 ---
 # <a name="run-transact-sql-statements-using-secure-enclaves"></a>使用安全 enclave 运行 Transact-SQL 语句
 
@@ -67,7 +67,7 @@ ms.locfileid: "99237124"
 - 你需要从证明服务管理员处获取环境的证明 URL。
 
   - 如果使用的是 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 和主机监护服务 (HGS)，请参阅[确定并共享 HGS 证明 URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)。
-  - 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation)。
+  - 如果使用的是 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 和 Microsoft Azure 证明，请参阅[确定证明策略的证明 URL](./always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation)。
 
 - 如果使用应用程序连接到数据库，则该应用程序使用的客户端驱动程序必须支持具有安全 enclave 的 Always Encrypted。 应用程序必须连接到已为数据库连接启用 Always Encrypted 且已正确配置证明协议和证明 URL 的数据库。 有关详细信息，请参阅[使用具有安全 enclave 的 Always Encrypted 开发应用程序](always-encrypted-enclaves-client-development.md)。
 - 如果使用的是 SQL Server Management Studio (SSMS) 或 Azure SQL Data Studio，则需在连接到数据库时启用 Always Encrypted 并配置证明协议和证明 URL。 有关详细信息，请参阅以下部分。

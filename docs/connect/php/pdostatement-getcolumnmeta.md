@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8767da09f84be9c557238643e16c925756e0bede
-ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
+ms.openlocfilehash: bbfddcbf39dbbba3b63c6853ea7700e6a27a4614
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99623777"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837215"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -133,7 +133,7 @@ for ($i = 0; $i < $numCol; $i++) {
 
 ## <a name="sensitivity-rank-using-a-predefined-set-of-values"></a>使用一组预定义值的敏感度级别
 
-从 5.9.0 开始，PHP 驱动程序在使用 ODBC 驱动程序 17.4.2 或更高版本时添加了分类级别检索。 使用 [ADD SENSITIVITY CLASSIFICATION](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) 对任何数据列进行分类时，用户可以定义级别。 
+从 5.9.0 开始，PHP 驱动程序在使用 ODBC 驱动程序 17.4.2 或更高版本时添加了分类级别检索。 使用 [ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md) 对任何数据列进行分类时，用户可以定义级别。 
 
 例如，如果用户分别将 `NONE` 和 `LOW` 分配给 BirthDate 和 SSN，则 JSON 表示形式如下所示：
 
@@ -142,7 +142,7 @@ for ($i = 0; $i < $numCol; $i++) {
 {"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
 ```
 
-如[敏感度分类](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql)中所示，级别的数值为：
+如[敏感度分类](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)中所示，级别的数值为：
 
 ```
 0 for NONE
@@ -192,4 +192,4 @@ array(1) {
 ## <a name="see-also"></a>另请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
-[PDO](https://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)

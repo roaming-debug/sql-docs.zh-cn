@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d53811bef7cb4c570d2aa60638474f815548a17
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 0df2acfa00507f42d3ee03a0a65ff2ae25aafbd1
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100058332"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837181"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 发行说明
 
@@ -68,7 +68,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | 设置查询超时而不使用 LOCK TIMEOUT，这样可以节省到服务器的额外往返。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
-<sup>1</sup> 此版本需要 ODBC Driver 17.4.2 或更高版本。 否则，将出现有关未能设置属性的警告。 使用较旧的 ODBC 驱动程序时，可能不会显示此警告。 如果使用 SQLSRV，请查看[如何：使用 SQLSRV 驱动程序配置错误和警告处理](https://docs.microsoft.com/sql/connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver)。 如果使用 PDO_SQLSRV，则默认情况下将禁止显示警告，但可以对其进行记录。 请查看[日志记录活动](https://docs.microsoft.com/sql/connect/php/logging-activity)了解详细信息。
+<sup>1</sup> 此版本需要 ODBC Driver 17.4.2 或更高版本。 否则，将出现有关未能设置属性的警告。 使用较旧的 ODBC 驱动程序时，可能不会显示此警告。 如果使用 SQLSRV，请查看[如何：使用 SQLSRV 驱动程序配置错误和警告处理](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)。 如果使用 PDO_SQLSRV，则默认情况下将禁止显示警告，但可以对其进行记录。 请查看[日志记录活动](./logging-activity.md)了解详细信息。
 
 ## <a name="581"></a>5.8.1
 

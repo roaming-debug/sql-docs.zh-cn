@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83985f8cb34b9efa8485f9827dd9692a38f91a65
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: c8379a2e1c18ea5da82abda5ad25dee47679a742
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100344791"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837765"
 ---
 # <a name="best-practices-with-query-store"></a>查询存储最佳做法
 
@@ -441,7 +441,7 @@ WHERE is_forced_plan = 1;
 
 Azure SQL 数据库的辅助活动异地复制上的查询存储将是主要副本上的活动的只读副本。 
 
-避免不匹配的 Azure SQL 数据库层参与异地复制。 辅助数据库在大小方面应与主数据库相同或相近，并且应与主数据库处于同一服务层。 在 [sys.dm_db_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database) 中查找 HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO 等待类型，该类型表示由于辅助延迟而导致主副本上的事务日志速率受限。
+避免不匹配的 Azure SQL 数据库层参与异地复制。 辅助数据库在大小方面应与主数据库相同或相近，并且应与主数据库处于同一服务层。 在 [sys.dm_db_wait_stats](../system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md) 中查找 HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO 等待类型，该类型表示由于辅助延迟而导致主副本上的事务日志速率受限。
 
 若要详细了解如何估计和配置活动异地复制的辅助 Azure SQL 数据库的大小，请参阅[配置辅助数据库](/azure/azure-sql/database/active-geo-replication-overview#configuring-secondary-database)。
 
