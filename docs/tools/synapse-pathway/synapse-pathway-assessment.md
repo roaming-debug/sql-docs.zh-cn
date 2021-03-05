@@ -4,24 +4,24 @@ description: 使用 Azure Synapse Pathway 执行数据仓库代码转换
 author: anshul82-ms
 ms.author: anrampal
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 ms.topic: tutorial
 ms.date: 03/02/2021
 monikerRange: =azure-sqldw-latest
 ms.custom: template-tutorial
-ms.openlocfilehash: b76fecf9a8a7eafc84a1b9eebd746287dddf3af9
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 74f98ad652a58f70cd75ef60556bf0464fd5d7c7
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101873060"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186330"
 ---
 # <a name="tutorial-to-perform-your-first-code-translation-with-azure-synapse-pathway-preview"></a>使用 Azure Synapse Pathway 预览版执行首次代码转换的教程
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 Azure Synapse Pathway 预览版引入了对将 Netezza、Snowflake 和 Microsoft SQL Server 中的架构、表、视图、函数等转换为 T-SQL 兼容代码的支持，这些代码可自动执行向 Azure Synapse Analytics 的迁移  。
 
-有关详细信息，请参阅 [Azure Synapse Pathway 预览版概述](azure-synapse-pathway-overview)。
+有关详细信息，请参阅 [Azure Synapse Pathway 预览版概述](azure-synapse-pathway-overview.md)。
 
 在本教程中，你将了解如何执行以下操作：
 
@@ -45,17 +45,17 @@ Azure Synapse Pathway 预览版引入了对将 Netezza、Snowflake 和 Microsoft
     > 只有扩展名为 .sql 的文件才能作为输入源提供。 如果用户提供 .txt 文件形式的 DDL 和 DML 脚本，则工具将不执行任何转换。
 
 1. 将 Netezza 代码转换到 Azure Synapse Analytics 时，请在“转换类型”下拉菜单中选择“IBM Netezza”。
-  ![Azure Synapse 评估输入。](./media/perform-assessment/assessment-input.png)
+  ![Azure Synapse 评估输入。](./media/synapse-pathway-assessment/assessment-input.png)
 
 1. 若要选择输出目录，请选择“浏览”，指定要生成输出的位置。
- ![Azure Synapse 输出目录。](./media/perform-assessment/output-directory.png)
+ ![Azure Synapse 输出目录。](./media/synapse-pathway-assessment/output-directory.png)
 
 1. 选择“转换”，开始转换
 
 ## <a name="view-results"></a>查看结果
 
 1. 评估的持续时间取决于添加的数据库数和每个数据库的架构大小。 每个数据库的结果一旦生成，便会立即显示。
- ![Azure Synapse 评估报表。](./media/perform-assessment/assessment-report.png)
+ ![Azure Synapse 评估报表。](./media/synapse-pathway-assessment/assessment-report-rendering.png)
 
 1. 若选择“查看结果”，你将转到上一步中指定的输出目录，并且将看到基于输入目录结构的转换后的脚本文件。
 

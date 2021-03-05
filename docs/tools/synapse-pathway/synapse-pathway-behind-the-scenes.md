@@ -2,19 +2,19 @@
 title: 幕后的 Azure Synapse Pathway 预览版。
 description: 深入了解 Azure Synapse 通道如何转换代码。
 author: anshul82-ms
-ms.author: anrampal.
+ms.author: anrampal
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 ms.topic: conceptual
 ms.date: 03/02/2021
 monikerRange: =azure-sqldw-latest
 ms.custom: template-concept
-ms.openlocfilehash: dbd362e53b5bfcd916c53e90d6f66c8fb44f0374
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 9f23aa23ef40ee7df5ad601b73ad526df7bcf0da
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101873045"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186295"
 ---
 # <a name="azure-synapse-pathway-preview-behind-the-scenes"></a>幕后的 Azure Synapse Pathway 预览版
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -23,7 +23,7 @@ Azure Synapse Pathway 的目标是在针对 Synapse SQL 进行优化的同时，
 
 每一个阶段都保留并增加了源的知识（包括特定于源的元数据），以确保最高质量的转换。
 
- ![Azure Synapse Pathway。](./media/technical-deep-dive/behind-the-scene.png)
+ ![Azure Synapse Pathway。](./media/synapse-pathway-behind-the-scenes/behind-the-scene.png)
 
 ## <a name="stage-1--lexing-and-parsing"></a>阶段 1 - 词法和句法分析
 
@@ -49,7 +49,7 @@ Azure Synapse SQL 将绝对函数定义为：
 ABS ( numeric_expression )  
 ```
 
-在此简单示例中，Synapse Pathway 理解 Synapse SQL 中从浮点到数值的转换是隐式的[转换](../../t-sql/functions/cast-and-convert-transact-sql?view=azure-sqldw-latest#implicit-conversions)，不需要进一步的类型强制转换。 简单、简洁且有效的代码转换。
+在此简单示例中，Synapse Pathway 理解 Synapse SQL 中从浮点到数值的转换是隐式的[转换](../../t-sql/functions/cast-and-convert-transact-sql.md?view=azure-sqldw-latest&preserve-view=true#implicit-conversions)，不需要进一步的类型强制转换。 简单、简洁且有效的代码转换。
 
 保留关于源语句和片段的元数据信息有助于区分平台之间的结构差异 - 例如，WHERE 子句中搜索条件谓词的选择退出逻辑中的转换。
 

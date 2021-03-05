@@ -6,17 +6,17 @@ ms.author: anrampal
 ms.topic: overview
 ms.date: 03/02/2021
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 monikerRange: =azure-sqldw-latest
 ms.custom: template-overview
-ms.openlocfilehash: 345346d2161800810ba3d07667b831107f70b215
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 8352fb6a70c54ede61d544a147f970237404c9f5
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101873026"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186314"
 ---
-# <a name="azure-synapse-pathway-preview"></a>Azure Synapse Pathway 预览版
+# <a name="azure-synapse-pathway-preview-faq"></a>Azure Synapse Pathway 预览版常见问题解答
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 本指南解答有关 Azure Synapse Pathway 预览版的最常见问题。
@@ -58,7 +58,9 @@ A. 由于你可在本地环境中运行 Synapse Pathway，因此它不会捕获�
 
 A. Azure Synapse Pathway 当前提供预览版。   通过 Microsoft 支持渠道提供对 Synapse Pathway 的支持。 可在 Azure 门户或标准（通常是本地支持）门户中提交票证。
 
-> [!NOTE] 与任何其他 Azure 服务一样，所有预览版服务都有资格获得支持，而无需实施 SLA。
+
+> [!NOTE] 
+> 与任何其他 Azure 服务一样，所有预览版服务都有资格获得支持，而无需实施 SLA。
 
 <!-- ### Troubleshooting and optimization
 
