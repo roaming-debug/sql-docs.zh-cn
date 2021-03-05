@@ -1,5 +1,6 @@
 ---
 title: 'sys.pdw_permanent_table_mappings (Transact-sql) '
+description: 通过 **object_id** 将永久用户表与内部对象名称进行绑定。
 ms.custom: ''
 ms.date: 07/24/2020
 ms.prod: sql
@@ -11,17 +12,17 @@ dev_langs:
 author: mstehrani
 ms.author: emtehran
 monikerRange: = azure-sqldw-latest
-ms.openlocfilehash: 1258a6131ccd0ad2280066faef6ac966bb0fb4d5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ab6ec23c35f9766a82e9a0c07f31433b2cbbc2ce
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99212060"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186582"
 ---
 # <a name="syspdw_permanent_table_mappings-transact-sql"></a>sys.pdw_permanent_table_mappings (Transact-sql) 
 [!INCLUDE [applies-to-version/asa](../../includes/applies-to-version/asa.md)]
 
-  通过 **object_id** 将永久用户表与内部对象名称进行绑定。  
+通过 **object_id** 将永久用户表与内部对象名称进行绑定。  
   
 > [!NOTE]
 > **sys.pdw_permanent_table_mappings** 保存到永久性表的映射，并且不包含临时表或外部表映射。

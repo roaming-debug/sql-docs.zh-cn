@@ -1,5 +1,6 @@
 ---
-title: sp_rxPredict |Microsoft Docs
+title: sp_rxPredict
+description: sp_rxPredict 为给定输入生成预测值，该输入包含以二进制格式存储在 SQL Server 数据库中的机器学习模型。
 ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 3bca21ddf2674fd8eccbe9ca2df635623e56201e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 6f4d7ee0ea6f9630942dc12baf5b8ed68cbee4d5
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100063635"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186016"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]

@@ -10,16 +10,24 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: a047a1528bafe0f04fca72661d4e32cc8b15fc89
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: a12bb61546ed042a98a3cae521572ef55723cfdf
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100069292"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186504"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>DB2 (DB2ToSQL 的 SSMA 中的新增功能) 
 
 本文列出了每个版本中的 DB2 更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v817"></a>SSMA v 8.17
+
+用于 DB2 的 SSMA 的8.17 版本包含以下更改：
+
+* 改善转换函数的转换
+* 修复包含计算列的表的数据迁移
+* 更新 HTML 评估报表以使用新式编辑器显示 SQL 文本
 
 ## <a name="ssma-v816"></a>SSMA v 8.16
 

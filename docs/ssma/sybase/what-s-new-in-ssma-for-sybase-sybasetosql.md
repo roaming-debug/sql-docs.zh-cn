@@ -10,16 +10,23 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: e63eea932696ca0304443722b40518017ae43485
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 4bae03f2283dae9256c89f2e89ae190e30bee0fb
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100065039"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186424"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL 的 SSMA 中的新增功能) 
 
 本文列出了适用于 SAP ASE 的 SQL Server 迁移助手 (SSMA) ， (以前的 SSMA 用于 Sybase) 每个版本中的更改。
+
+## <a name="ssma-v817"></a>SSMA v 8.17
+
+适用于 SAP ASE 的 SSMA 的8.17 版本包含以下更改：
+
+* 添加对计算列的支持
+* 更新 HTML 评估报表以使用新式编辑器显示 SQL 文本
 
 ## <a name="ssma-v816"></a>SSMA v 8.16
 

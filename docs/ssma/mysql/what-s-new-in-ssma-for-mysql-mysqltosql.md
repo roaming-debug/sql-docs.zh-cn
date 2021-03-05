@@ -10,16 +10,22 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 5f2de303081b21e1b29ce99059e15bc3634b32d8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 138cb90558bfb73d0b9e0cd3ba75a7a41fc84229
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100064302"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186453"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新增功能 (MySQLToSql)
 
 本文列出了每个版本中的 MySQL 更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v817"></a>SSMA v 8.17
+
+SSMA for MySQL 的8.17 版本包含以下更改：
+
+* 更新 HTML 评估报表以使用新式编辑器显示 SQL 文本
 
 ## <a name="ssma-v816"></a>SSMA v 8.16
 

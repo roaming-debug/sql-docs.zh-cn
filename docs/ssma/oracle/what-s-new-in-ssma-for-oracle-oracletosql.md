@@ -10,16 +10,24 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 4dc76c57f7194c1ee96bd091d674b793dad29faa
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ef5f8fd634958c75cc67002615e3c4a72dcf3a51
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100081874"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186558"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle (OracleToSQL 的 SSMA 中的新增功能) 
 
 本文列出了每个版本的 Oracle 更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v817"></a>SSMA v 8.17
+
+用于 Oracle 的 SSMA 的8.17 版本包含以下更改：
+
+* 添加对计算列的支持
+* 解决在表达式中使用区域性特定运算符字符时的分析器问题
+* 更新 HTML 评估报表以使用新式编辑器显示 SQL 文本
 
 ## <a name="ssma-v816"></a>SSMA v 8.16
 

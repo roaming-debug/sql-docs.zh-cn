@@ -10,16 +10,22 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: f077eb235b38a6eba9f70d2653796d088fb0f074
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b6d660d00b036c1bbc5008411a9f8e9a0bc77ea0
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100066112"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102185844"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) 的新增功能
 
 本文列出了每个版本中的访问更改 SQL Server 迁移助手 (SSMA) 。
+
+## <a name="ssma-v817"></a>SSMA v 8.17
+
+用于访问的 SSMA 的8.17 版本包含以下更改：
+
+* 更新 HTML 评估报表以使用新式编辑器显示 SQL 文本
 
 ## <a name="ssma-v816"></a>SSMA v 8.16
 
