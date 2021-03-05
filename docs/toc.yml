@@ -6176,6 +6176,22 @@ items:
                 href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
       - name: SQL Server 迁移助手 (SSMA)
         href: ssma/toc.yml
+      - name: Azure Synapse Pathway
+        items:
+          - name: 概述
+            href: tools/synapse-pathway/azure-synapse-pathway-overview.md
+          - name: Azure Synapse Pathway FAQ
+            href: tools/synapse-pathway/pathway-faq.md
+          - name: “幕后”揭秘
+            href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
+          - name: 安装
+            href: tools/synapse-pathway/synapse-pathway-download.md
+          - name: 教程 - 运行 Azure Synapse Pathway
+            href: tools/synapse-pathway/synapse-pathway-assessment.md
+          - name: 教程 - 保存和加载
+            href: tools/synapse-pathway/tutorial-save-load-assessment.md
+          - name: 生成报告
+            href: tools/synapse-pathway/report-generation.md
   - name: 管理、监视和优化
     items:
       - name: 管理
@@ -7200,6 +7216,8 @@ items:
                     href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
                   - name: PolyBase 常见问题
                     href: relational-databases/polybase/polybase-faq.md
+                  - name: PolyBase 错误和可行解决方案
+                    href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
           - name: 参考
             items:
               - name: T-SQL 参考
