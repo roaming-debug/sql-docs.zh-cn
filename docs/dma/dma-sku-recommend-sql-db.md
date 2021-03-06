@@ -1,6 +1,6 @@
 ---
 title: 为本地数据库 (数据迁移助手) 标识正确的 Azure SQL 数据库 SKU |Microsoft Docs
-description: 了解如何使用数据迁移助手为本地数据库标识正确的 Azure SQL 数据库 SKU
+description: 了解如何使用数据迁移助手来识别适用于你的本地数据库的正确的 Azure SQL 数据库或 Azure SQL 托管实例 SKU
 ms.custom: ''
 ms.date: 05/06/2019
 ms.prod: sql
@@ -14,37 +14,31 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: ffb47ee457a03315821fee863816d725f9691ac3
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b29815876d804f387ce31754c960e80f9db99434
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100062582"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247175"
 ---
-# <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>确定本地数据库的正确的 Azure SQL 数据库/托管实例 SKU
+# <a name="identify-the-right-azure-sql-database-or-sql-managed-instance-sku-for-your-on-premises-database"></a>为本地数据库确定正确的 Azure SQL 数据库或 SQL 托管实例 SKU
 
-将数据库迁移到云可能会很复杂，尤其是在尝试为数据库选择最佳的 Azure 数据库目标和 SKU 时。 数据库迁移助手的目标 (DMA) 旨在帮助解决这些问题，通过在用户友好的输出中提供这些 SKU 建议，使你的数据库迁移体验更简单。
+将数据库迁移到云可能会很复杂，尤其是在尝试为数据库选择最佳的 Azure SQL 数据库或 SQL 托管实例目标和 SKU 时。 数据库迁移助手的目标 (DMA) 旨在帮助解决这些问题，通过在用户友好的输出中提供这些 SKU 建议，使你的数据库迁移体验更简单。
 
-本文重点介绍 DMA 的 Azure SQL 数据库 SKU 建议功能。 Azure SQL 数据库和 Azure SQL 托管实例有多个部署选项，其中包括：
 
-- 单一数据库
-- 弹性池
-- 托管实例
-
-使用 SKU 建议功能，可以根据从计算机上收集的性能计数器（ (s) 托管数据库），确定最低建议的 Azure SQL 数据库单一数据库或 Azure SQL 托管实例 SKU。 此功能提供与定价层、计算级别和最大数据大小相关的建议，以及每个月的预估成本。 它还为所有推荐的数据库提供大容量预配单数据库和托管实例的功能。
-
-> [!NOTE]
-> 此功能当前仅通过命令行界面 (CLI) 提供。
+使用 SKU 建议功能，可以基于从计算机上收集的性能计数器（ (s) 托管数据库）确定最小建议的 Azure SQL 数据库或 Azure SQL 托管实例 SKU。 此功能提供与定价层、计算级别和最大数据大小相关的建议，以及每个月的预估成本。 它还为所有推荐的数据库提供大容量预配单数据库和托管实例的功能。 此功能当前仅通过命令行界面 (CLI) 提供。
 
 以下说明可帮助你在 Azure 中使用 DMA 来确定 SKU 建议并设置相应的单个数据库 () 或 () 。
 
-## <a name="prerequisites"></a>必备条件
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
+
+## <a name="prerequisites"></a>先决条件
 
 - 下载并安装最新版本的 [DMA](https://aka.ms/get-dma)。 如果你已经具有该工具的早期版本，请将其打开，系统会提示你升级 DMA。
 - 确保你的计算机具有 [PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 或更高版本，以便运行所有脚本。 有关如何找出计算机上安装的 PowerShell 版本的信息，请参阅 [下载并安装 Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)一文。
   > [!NOTE]
   > 若要收集计算机信息，数据收集脚本使用 PowerShell 6 中弃用的 Get-WmiObject cmdlet。 若要在 PowerShell 6 或7中运行此脚本，必须将 WMI cmdlet 替换为较新的 CIM cmdlet。
-- 确保计算机上已安装 Azure Powershell 模块。 有关详细信息，请参阅 [安装 Azure PowerShell 模块](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true)一文。
+- 确保你的计算机安装了 Azure PowerShell 模块。 有关详细信息，请参阅 [安装 Azure PowerShell 模块](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true)一文。
 - 验证要收集性能计数器所需的 PowerShell 文件 **SkuRecommendationDataCollectionScript.ps1** 是否安装在 DMA 文件夹中。
 - 确保你要在其上执行此过程的计算机对承载数据库的计算机具有管理员权限。
 
@@ -252,6 +246,6 @@ HTML 文件以图形格式包含这些信息。 它提供了一个用户友好�
     > [!NOTE]
     > 在子网中创建托管实例 (第一次) 可能需要几个小时才能完成。 通过 PowerShell 运行预配脚本后，可以在 Azure 门户上检查部署的状态。
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 - 有关从 CLI 运行 DMA 的命令的完整列表，请参阅 [从命令行运行数据迁移助手](./dma-commandline.md)一文。

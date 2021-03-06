@@ -15,18 +15,20 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4c59fb5228ef46a693e343716d1e58e56c042a53
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1094f10eedc819123cd446c0933ec14df511ac75
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100061552"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247348"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>使用数据迁移助手评估迁移到 Azure SQL 数据库的 SQL Server 数据空间的准备情况
 
-将数百个 SQL Server 实例和数千个数据库迁移到 Azure SQL 数据库，我们的平台即服务 (PaaS) 产品/服务，这是一个很大的任务。 为了尽可能简化该过程，您需要自信地了解迁移的相对就绪性。 确定低挂起的可理解性，包括完全准备就绪的服务器和数据库，或者需要最少的工作量来做好迁移准备，从而使您的工作更加轻松并加速。
+将数百个 SQL Server 实例和数千个数据库迁移到 Azure SQL 数据库或 Azure SQL 托管实例，我们的平台即服务 (PaaS) 产品/服务，这是一个很大的任务。 为了尽可能简化该过程，您需要自信地了解迁移的相对就绪性。 确定低挂起的可理解性，包括完全准备就绪的服务器和数据库，或者需要最少的工作量来做好迁移准备，从而使您的工作更加轻松并加速。
 
 本文提供了有关利用 [数据迁移助手](./dma-overview.md) 汇总就绪结果并在 [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) 中心进行介绍的分步说明。
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -178,7 +180,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
 
    ![Azure Migrate-查看迁移阻止程序](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [数据迁移助手 (DMA)](../dma/dma-overview.md)
 * [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)

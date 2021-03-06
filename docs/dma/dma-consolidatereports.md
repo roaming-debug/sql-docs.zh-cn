@@ -14,18 +14,20 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c2804bbc185a3aa17d7f50d85b9ef6c2cc84d002
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: c82b5cf03b5db429903dd90fdf8a5fa5d6ec3772
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100044644"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247508"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 评估企业和合并评估报告
 
 以下分步说明可帮助你使用数据迁移助手来执行用于升级本地 SQL Server 或 SQL Server 在 Azure Vm 上运行或迁移到 Azure SQL 数据库的已成功缩放评估。
 
-## <a name="prerequisites"></a>必备条件
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
+
+## <a name="prerequisites"></a>先决条件
 
 - 指定网络上的工具计算机，DMA 将从该计算机启动。 确保此计算机已连接到 SQL Server 目标。
 - 下载和安装：
@@ -110,7 +112,7 @@ ms.locfileid: "100044644"
 
 - ServerName
 - InstanceName
-- Port
+- 端口
 - AssessmentFlag
 
 ![如果使用实例清单，则为 SQL Server 表内容的屏幕截图。](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
@@ -123,7 +125,7 @@ ms.locfileid: "100044644"
 
 下表描述了与 dmaDataCollector 函数关联的参数。
 
-|参数  |说明 |
+|参数  |描述 |
 |---------|---------|
 |**getServerListFrom** | 你的清单。 可能的值为 **SqlServer** 和 **CSV**。<br/>有关详细信息，请参阅 [创建 SQL server 清点](#create-inventory)。 |
 |**csvPath** | CSV 清单文件的路径。  仅当 **getServerListFrom** 设置为  **CSV** 时使用。 |
@@ -147,7 +149,7 @@ ms.locfileid: "100044644"
 
 下表描述了与 dmaProcessor 函数关联的参数。
 
-|参数  |说明 |
+|参数  |描述 |
 |---------|---------|
 |**processTo** | 将处理 JSON 文件的位置。 可能的值为 **SQLServer** 和 **AzureSQLDatabase**。 |
 |**serverName** | 数据将处理到的 SQL Server 实例。  如果为 **processTo** 参数指定 **AzureSQLDatabase** ，则仅包含 SQL Server 名称 (不包含 database.windows.net) 。 面向 Azure SQL 数据库时，系统将提示你提供两个登录名;第一种是 Azure 租户凭据，第二种是 Azure SQL Server 的管理员登录名。 |
@@ -274,7 +276,7 @@ Power BI 报表中显示的详细信息如以下部分所示。
 
 - InstanceDatabase
 - ChangeCategory
-- Title
+- 标题
 - ObjectType
 - ImpactedObjectName
 

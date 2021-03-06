@@ -15,19 +15,20 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c88a289e21e7cd70980763474e82b7dd6cbd49c2
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 300d88b66c2105235ab04ff616d9fcf81b24e944
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489514"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247336"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>使用数据迁移助手进行 SQL Server 迁移评估
 
 下面的分步说明将帮助你执行第一次评估，以迁移到本地 SQL Server、SQL Server 在 Azure VM 上运行，或者通过使用数据迁移助手迁移到 Azure SQL Database。
 
-   > [!NOTE]
-   > 数据迁移助手 v 5.0 为在应用程序代码中分析数据库连接和嵌入式 SQL 查询引入了支持。 有关详细信息，请参阅博客文章 [使用数据迁移助手对应用程序的数据访问层进行评估](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)。
+数据迁移助手 v 5.0 为在应用程序代码中分析数据库连接和嵌入式 SQL 查询引入了支持。 有关详细信息，请参阅博客文章 [使用数据迁移助手对应用程序的数据访问层进行评估](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)。
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## <a name="create-an-assessment"></a>创建评估
 
@@ -37,7 +38,7 @@ ms.locfileid: "97489514"
 
     如果要将本地 SQL Server 实例升级到现代的本地 SQL Server 实例或托管在 Azure VM 上的 SQL Server，请将源和目标服务器类型设置为 " **SQL Server**"。 如果要迁移到 Azure SQL 数据库，请改为将目标服务器类型设置为 " **AZURE Sql 数据库**"。
 
-3. 单击 **创建**。
+3. 单击 **“创建”** 。
 
    ![创建评估](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
@@ -119,7 +120,7 @@ ms.locfileid: "97489514"
 
 ## <a name="view-results"></a>查看结果
 
-评估的持续时间取决于添加的数据库数和每个数据库的架构大小。 为每个数据库提供结果后，就会显示结果。
+评估的持续时间取决于添加的数据库数和每个数据库的架构大小。 每个数据库的结果一旦生成，便会立即显示。
 
 1. 选择已完成评估的数据库，然后使用切换器在 **兼容性问题** 和 **功能建议** 之间切换。
 

@@ -1,7 +1,7 @@
 ---
 title: 空闲连接复原
 description: 了解空闲连接复原的概念及其在 Microsoft Drivers for PHP for SQL Server 中的行为方式。
-ms.date: 07/13/2017
+ms.date: 03/04/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4008dd4f023170b50bdf28f1f026da9ee892f970
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 07223e87c82a64fe17cd1b2969b5c93227c70af2
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726858"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247489"
 ---
 # <a name="idle-connection-resiliency"></a>空闲连接复原
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "91726858"
 |关键字|值|默认|说明|
 |-|-|-|-|
 |**ConnectRetryCount**| 介于 0 和 255 之间（含限值）的整数|1|在连接断开时最多尝试重新建立多少次连接后放弃。 在连接断开时，默认尝试一次重新建立连接。 值 0 表示不会尝试重新建立连接。|
-|**ConnectRetryInterval**| 介于 1 和 60 之间（含限值）的整数|1| 尝试重新建立连接的时间间隔（以秒为单位）。 应用程序在检测到连接断开后立即尝试重新连接，然后在等待 ConnectRetryInterval  秒后重试。 如果 ConnectRetryCount  等于 0，则忽略此关键字。
+|**ConnectRetryInterval**| 介于 1 和 60 之间（含限值）的整数|10| 尝试重新建立连接的时间间隔（以秒为单位）。 应用程序在检测到连接断开后立即尝试重新连接，然后在等待 ConnectRetryInterval  秒后重试。 如果 ConnectRetryCount  等于 0，则忽略此关键字。
 
 如果 ConnectRetryCount  与 ConnectRetryInterval  的乘积大于 LoginTimeout  ，则在达到 LoginTimeout  后，客户端会立即停止尝试连接；如果不大于，它会继续尝试重新连接，直到达到 ConnectRetryCount  。
 
