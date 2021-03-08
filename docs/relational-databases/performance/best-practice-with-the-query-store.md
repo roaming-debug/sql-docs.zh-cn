@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8379a2e1c18ea5da82abda5ad25dee47679a742
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 85c9a992660b63f70d2193acd114e7b07d3c1092
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837765"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186490"
 ---
 # <a name="best-practices-with-query-store"></a>查询存储最佳做法
 
@@ -434,7 +434,7 @@ WHERE is_forced_plan = 1;
 > 如果仅对 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 中的实时工作负载见解使用查询存储，请尽快安装 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) 中的性能可伸缩性改进。 如果没有这些改进，则当数据库处于繁重的工作负载下时，可能会发生旋转锁争用，并且服务器性能可能会变慢。 特别是，你可能会发现 `QUERY_STORE_ASYNC_PERSIST` 旋转锁或 `SPL_QUERY_STORE_STATS_COOKIE_CACHE` 旋转锁上出现繁重的争用情况。 应用此改进后，查询存储将不再导致旋转锁争用。
 
 > [!IMPORTANT]
-> 如果仅对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）中的实时工作负载见解使用查询存储，请考虑尽快安装 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU15、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 和 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU8 中的性能可伸缩性改进。 如果没有此改进，则当数据库处于繁重的即席工作负载下时，查询存储可能会占用大量内存，并且服务器性能可能会变慢。 应用此改进后，查询存储会对其各个组件可使用的内存量施加内部限制，并且可以自动将操作模式更改为只读，直到有足够的内存返回到 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]。 请注意，不会记录查询存储内部内存限制，因为它们随时可能更改。  
+> 如果仅对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）中的实时工作负载见解使用查询存储，请考虑尽快安装 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU15、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU23 和 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 中的性能可伸缩性改进。 如果没有此改进，则当数据库处于繁重的即席工作负载下时，查询存储可能会占用大量内存，并且服务器性能可能会变慢。 应用此改进后，查询存储会对其各个组件可使用的内存量施加内部限制，并且可以自动将操作模式更改为只读，直到有足够的内存返回到 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]。 请注意，不会记录查询存储内部内存限制，因为它们随时可能更改。  
 
 
 ## <a name="using-query-store-in-azure-sql-database-active-geo-replication"></a><a name="geosyncreplicas"></a> 在 Azure SQL 数据库活动异地复制中使用查询存储

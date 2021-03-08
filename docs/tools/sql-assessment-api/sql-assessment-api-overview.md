@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 1/25/2021
-ms.openlocfilehash: 19328956cab5d7c5e449e48d99bbfda1b999ca6f
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/3/2021
+ms.openlocfilehash: 7e55abe0d02a9f9deffffdaa7639d911faad1fa3
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100067115"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102185744"
 ---
 # <a name="sql-assessment-api"></a>SQL 评估 API
 
@@ -24,9 +24,13 @@ SQL 评估 API 提供了一种评估 SQL Server 配置以获得最佳做法的�
 
 API 可用于访问：
  
-* Azure SQL 数据库托管实例和 SQL Server 2012 及更高版本。
+* Azure 虚拟机上的 SQL Server
 
-* 基于 Linux 的系统上的 SQL。
+* Azure SQL 数据库托管实例
+
+* SQL Server 2012 及更高版本
+
+* 基于 Linux 的系统上的 SQL
 
 API 也用于面向 Azure Data Studio (ADS) 的 SQL Server 评估扩展。
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 874c3175b830cbcdb5805c5bdb06a747015ff889
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 67e14f965889cbbeecf2a9800d49b70622b88502
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100273008"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186384"
 ---
 # <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>Sqlrutils（SQL Server 机器学习服务中的 R 包）
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -35,7 +35,7 @@ Sqlrutils 是 Microsoft 的一种 R 包，为 R 用户提供一种机制，将�
   
 ## <a name="full-reference-documentation"></a>完整参考文档
 
-Sqlrutils 包分布于多种 Microsoft 产品中，但不管你是在 SQL Server 还是在其他产品中获取该包，用法都是一样的。 由于函数相同，因此[单个 sqlrutils 函数的文档](/machine-learning-server/r-reference/revoscaler/revoscaler)仅发布到 Microsoft Machine Learning Server 的 [R 引用](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)下的一个位置。 如果存在任何特定于产品的行为，这些差异将在函数帮助页中注明。
+Sqlrutils 包分布于多种 Microsoft 产品中，但不管你是在 SQL Server 还是在其他产品中获取该包，用法都是一样的。 由于函数相同，因此单个 sqlrutils 函数的文档仅发布到 Microsoft Machine Learning Server 的 [sqlrutils 包引用](/machine-learning-server/r-reference/sqlrutils/sqlrutils)下的一个位置。 如果存在任何特定于产品的行为，这些差异将在函数帮助页中注明。
 
 ## <a name="functions-list"></a>函数列表
 
@@ -106,4 +106,4 @@ sqlrutils 包函数必须在具有 R 的 SQL Server 机器学习的计算机上�
 
 ## <a name="see-also"></a>另请参阅
 
-[如何使用 sqlrutils 创建存储过程](how-to-create-a-stored-procedure-using-sqlrutils.md)
+[如何使用 sqlrutils 创建存储过程](/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r)

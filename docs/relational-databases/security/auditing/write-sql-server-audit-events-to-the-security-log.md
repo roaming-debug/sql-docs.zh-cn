@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 68228106bcd2620cb684bd61efec353fdb49585c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: abdd25c6166b40436584a1260d4b1b09d40900c4
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884837"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186047"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>将 SQL Server 审核事件写入安全日志  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 在高度安全环境中，Windows 安全日志是写入记录对象访问的事件的合适位置。 其他审核位置也受支持，但是更易被篡改。  
   
- 将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务器审核写入 Windows 安全日志有两个关键要求：  
+ 将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务器审核写入 Windows 安全日志有三个关键要求：  
   
 -   必须配置审核对象访问设置以捕获事件。 审核策略工具 (`auditpol.exe`) 公开了 **审核对象访问** 类别中的多种子策略设置。 若要允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核对象访问，请配置 **应用程序生成的** 设置。  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务正在其下运行的帐户必须拥有 **生成安全审核** 权限才能写入 Windows 安全日志。 默认情况下，LOCAL SERVICE 和 NETWORK SERVICE 帐户拥有此权限。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在其中一个帐户下运行，则不需要此步骤。  

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 87ac1c0759264b00567d5edc2cd9f22727fdd0fa
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 4139b8b53a50aa58329f6a5a5c490d99ee9f0524
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100353866"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186221"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
 
@@ -71,7 +71,7 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
  客户端必须能够验证服务器所用证书的所有权。 如果客户端具有对服务器证书进行签名的证书颁发机构所颁发的公钥证书，则不需要进一步的配置。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 包含多个证书颁发机构所颁发的公钥证书。 如果服务器证书由公共或私人证书颁发机构进行签名，而客户端没有该机构颁发的公钥证书，则必须安装对服务器证书进行签名的证书颁发机构所颁发的公钥证书。  
   
 > [!NOTE]  
-> 若要在故障转移群集中使用加密，必须在故障转移群集的所有节点上安装带有虚拟服务器的完全限定 DNS 名称的服务器证书。 例如，如果你有一个双节点群集，节点名称分别为 _test1.\_\<your company>\*.com* 和 **_test2.\_\<your company>\*.com*** 并且又拥有名为 *virtsql_ 的虚拟服务器，你需要在两个节点上为 _ *_virtsql.\_\<your company>\*.com*** 安装证书。 可设置“SQL Server 网络配置”的“virtsql 的协议”属性框上的“ForceEncryption”选项，将其值设置为“是”   。
+> 若要在故障转移群集中使用加密，必须在故障转移群集的所有节点上安装带有虚拟服务器的完全限定 DNS 名称的服务器证书。 例如，如果你有一个双节点群集，节点名称分别为 ***test1.\*\<your company>\*.com*** 和 **_test2.\_\<your company>\*.com*** 并且又拥有名为 *virtsql_ 的虚拟服务器，你需要在两个节点上为 _ *_virtsql.\_\<your company>\*.com*** 安装证书。 可设置“SQL Server 网络配置”的“virtsql 的协议”属性框上的“ForceEncryption”选项，将其值设置为“是”   。
 
 > [!NOTE]
 > 在 Azure VM 上创建从 Azure 搜索索引器到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密连接时，请参阅 [在 Azure VM 上配置从 Azure 搜索索引器到 SQL Server 的连接](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers)。 
@@ -85,6 +85,9 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户必须拥有访问 TLS 证书所必需的权限。
 
 - 当前系统时间必须晚于证书的“有效起始时间”属性，并早于证书的“有效截止时间”属性。
+
+> [!NOTE]  
+> 证书有效性在通过客户端连接项连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时进行评估，启动这些连接时将加密选项指定为 true，除非被信任服务器证书设置覆盖。 
 
 - 该证书必须用于服务器身份验证。 这就要求，证书的“增强型密钥使用”属性必须指定“服务器身份验证(1.3.6.1.5.5.7.3.1)”。
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - deprecation [SQL Server], feature list
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 518b29507e7992b267922e09c97bf98b1657205d
-ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
+ms.openlocfilehash: e4227e17c9b8f3319e771d7de9d93fefddbaa487
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100525151"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186080"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的数据库引擎功能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -28,9 +28,9 @@ ms.locfileid: "100525151"
 本主题介绍 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
 如果功能标记为已弃用，表示：
--  该功能仅处于维护模式。 无法进行新的更改，包括与新功能的互操作性有关的更改。
--  我们努力不从将来的版本中删除已弃用的功能，使升级更简单。 但是，在极少数情况下，如果该功能限制了将来的创新，我们可能选择从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中将其永久删除。
--  对于新的开发工作，不建议使用已弃用的功能。      
+- 该功能仅处于维护模式。 不进行新的更改，包括使用新功能解决互操作性的相关更改。
+- 我们努力不从将来的版本中删除已弃用的功能，使升级更简单。 但是，在极少数情况下，如果该功能限制了将来的创新，我们可能选择从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中将其永久停用（删除）。
+- 请勿在新的开发工作中使用已弃用的功能。 对于现有应用，计划尽快修改当前使用这些功能的应用程序。     
 
 对于 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]，请参阅 [SQL Server 2017 中弃用的数据库引擎功能](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)。
 
@@ -44,7 +44,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```  
   
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server 的下一版本中弃用的功能
- 下一版 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将不再支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称  。 **功能 ID** 值在跟踪事件中作为 ObjectId。  
+ 未来某个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本将不再支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称  。 **功能 ID** 值在跟踪事件中作为 ObjectId。  
   
 |类别|不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  

@@ -1,10 +1,8 @@
 ---
-title: 查看或更改服务器属性 (SQL Server) | Microsoft Docs
+title: 查看或更改服务器属性 (SQL Server)
 description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或 SQL Server 配置管理器来查看或更改 SQL Server 实例的属性。
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
@@ -18,13 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: contperf-fy20q4
-ms.openlocfilehash: f6bf2a5d86faba024d58ae6b6f9c539e8bd17003
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 03/14/2017
+ms.openlocfilehash: 80d52c19e5fde8116f7f6fed638e1120064038d3
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100350341"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186038"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>查看或更改服务器属性 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,15 +94,15 @@ ms.locfileid: "100350341"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准栏上，选择“新建查询”。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例查询 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 目录视图，以返回有关当前服务器上的各个服务器配置选项的信息。 该示例返回选项的名称 (`name`) 和说明 (`description`)，以及该选项是否为高级选项 (`is_advanced`)。  
+3.  将以下示例复制并粘贴到查询窗口中，然后选择“执行”。 此示例查询 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 目录视图，以返回有关当前服务器上的各个服务器配置选项的信息。 该示例返回选项的名称 (`name`) 和说明 (`description`)，其值 (`value`)，以及该选项是否为高级选项 (`is_advanced`)。  
   
     ```wmimof  
     USE AdventureWorks2012;   
     GO  
-    SELECT name, description, is_advanced  
-    FROM sys.configurations ;   
+    SELECT name, description, value, is_advanced  
+    FROM sys.configurations;   
     GO  
   
     ```  
@@ -111,9 +111,9 @@ ms.locfileid: "100350341"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准栏上，选择“新建查询”。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例显示如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 更改服务器属性。 本示例将 `fill factor` 选项的值更改为 `100`。 必须重新启动服务器，更改才会生效。  
+3.  将以下示例复制并粘贴到查询窗口中，然后选择“执行”。 此示例显示如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 更改服务器属性。 本示例将 `fill factor` 选项的值更改为 `100`。 必须重新启动服务器，更改才会生效。  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -137,11 +137,11 @@ GO
   
 1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-2.  在 **“SQL Server 配置管理器”** 中，单击 **“SQL Server 服务”** 。  
+2.  在 SQL Server 配置管理器中选择“SQL Server 服务” 。  
   
-3.  在“详细信息”窗格中，右键单击“SQL Server (\<**_instancename_**>)”，再单击“属性” 。  
+3.  在“详细信息”窗格中，右键单击“SQL Server (\<**_instancename_**>)” ，然后选择“属性”。  
   
-4.  在“SQL Server (\<**_instancename_**>) 属性”对话框中，更改“服务”选项卡或“高级”选项卡上的服务器属性，再单击“确定”   。  
+4.  在“SQL Server (\<**_instancename_**>) 属性”对话框中，更改“服务”选项卡或“高级”选项卡上的服务器属性，然后选择“确定”   。  
   
 ## <a name="restart-after-changes"></a><a name="FollowUp"></a>更改后重启
 

@@ -3,7 +3,7 @@ title: SQL Server 2017 中弃用的数据库引擎功能 | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: 了解弃用的数据库引擎功能，这些功能在 SQL Server 2017 (14.x) 中仍然可用，但不应在新的应用程序中使用。
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 03/03/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,24 +17,23 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
-ms.openlocfilehash: e14f354812c99b9ed3e8be86734e3cb8e07db751
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: e3b27292b817d0ec0bf22afcc1e8eaab61864e82
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489471"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186431"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中弃用的数据库引擎功能
 
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
-  本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
+  本主题介绍 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
 如果功能标记为已弃用，表示：
-
-- 该功能仅处于维护模式。 无法进行新的更改，包括与新功能的互操作性有关的更改。
-- 我们努力不从将来的版本中删除已弃用的功能，使升级更简单。 但是，在极少数情况下，如果该功能限制了将来的创新，我们可能选择从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中将其永久删除。
-- 对于新的开发工作，不建议使用已弃用的功能。      
+- 该功能仅处于维护模式。 不进行新的更改，包括使用新功能解决互操作性的相关更改。
+- 我们努力不从将来的版本中删除已弃用的功能，使升级更简单。 但是，在极少数情况下，如果该功能限制了将来的创新，我们可能选择从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中将其永久停用（删除）。
+- 请勿在新的开发工作中使用已弃用的功能。 对于现有应用，计划尽快修改当前使用这些功能的应用程序。     
 
 可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object 性能计数器监视不推荐使用的功能的使用情况并跟踪事件。 有关详细信息，请参阅 [使用 SQL Server 对象](../relational-databases/performance-monitor/use-sql-server-objects.md)。  
 
@@ -49,8 +48,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > 此列表与 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 列表相同。 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] 未宣布弃用或停止使用任何新的数据库引擎功能。
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server 的下一版本中弃用的功能
-
-以下 SQL Server 数据库引擎功能在下一个 SQL Server 版本中将被弃用。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称。 **功能 ID** 值在跟踪事件中作为 ObjectId。
+未来某个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本将不再支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称  。 **功能 ID** 值在跟踪事件中作为 ObjectId。
 
 ### <a name="back-up-and-restore"></a>备份和还原
 
@@ -62,7 +60,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 不推荐使用的功能 | 替代功能 | 功能名称 | 功能 ID |
 |--------------------|-------------|--------------|------------|
-从版本 100 升级（SQL Server 2008 和 SQL Server 2008 R2）。 | SQL Server 版本结束[支持](/lifecycle/products/?products=sql-server)时，相关数据库兼容性级别将被标记为弃用。 但是，我们继续支持在任何支持的数据库兼容性级别上认证的应用程序尽可能长的时间，使升级更简单。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 | 数据库兼容性级别 100 | 108 |
+从版本 100（[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）升级。 | 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本结束[支持](/lifecycle/products/?products=sql-server)，相关数据库兼容性级别将标记为已弃用。 但是，我们继续支持在任何支持的数据库兼容性级别上认证的应用程序尽可能长的时间，使升级更简单。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 | 数据库兼容性级别 100 | 108 |
 
 ### <a name="database-objects"></a>数据库对象
 
