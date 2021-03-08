@@ -9,12 +9,12 @@ ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f3e1e0ed29121f0fb0ffcac54885ca80de3e63c
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: c4cb10ac3ba1e0fd8b437e7f0509dc16cc72d854
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489301"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837064"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 大数据群集发行说明
 
@@ -98,7 +98,7 @@ SQL Server 2019 累积更新 9 (CU9) 版本。
    使用 `mssql-conf` 进行 SQL Server 主实例配置的群集在升级到 CU9 之后需要用户执行额外的步骤。 按照[此处](bdc-upgrade-configuration.md)的说明进行操作。
 
 - 改进了 [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] 静态加密体验。
-- 能够使用虚拟环境动态安装 Python Spark 包。
+- 能够使用虚拟环境动态[安装 Python Spark 包](spark-install-packages.md)。
 - 升级了大多数 OSS 组件（Grafana、Kibana、FluentBit 等）的软件版本，可确保 BDC 映像具有最新的增强功能和修补程序。 请参阅[开源软件参考](reference-open-source-software.md)。
 - 其他各种改进和 bug 修复。
 
@@ -145,7 +145,7 @@ SQL Server 2019 的累积更新 6 (CU6) 版本。
 - [通过 Azure Kubernetes 服务 (AKS) 专用群集部署大数据群集](private-deploy.md)
 - [限制 Azure Kubernetes 服务 (AKS) 专用群集中大数据群集 (BDC) 的出口流量](private-restrict-egress-traffic.md)
 - [部署高可用性 SQL Server 大数据群集](deployment-high-availability.md)
-- [配置 SQL Server 大数据群集](configure-cluster.md)
+- [配置 SQL Server 大数据群集](./configure-bdc-overview.md)
 - [在大数据群集中配置 Apache Spark 和 Apache Hadoop](configure-spark-hdfs.md)
 - [SQL Server 主实例配置属性](reference-config-master-instance.md)
 - [Apache Spark 和 Apache Hadoop (HDFS) 配置属性](reference-config-spark-hadoop.md)
@@ -267,7 +267,7 @@ SQL Server 2019 常规分发版本 1 (GDR1) - 介绍 [!INCLUDE[big-data-clusters
 
 - **受影响的版本**：专门从 CU6 或早期版本升级到 CU8 版本时，会出现这种情况。 执行 CU8+ 的新部署或直接升级到 CU9 时，不会出现这种情况。
 
-- **问题和对客户的影响**：在这种情况下，默认未启用 HDFS 加密区域支持，用户需要使用[配置指南](encryption-at-rest-concepts-and-configuration.md)中提供的步骤进行配置。
+- **问题和对客户的影响**：在这种情况下，默认未启用 HDFS 加密区域支持，用户需要使用 [配置指南](encryption-at-rest-concepts-and-configuration.md)中提供的步骤进行配置。
 
 ### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>应用累积更新前清空 Livy 作业
 

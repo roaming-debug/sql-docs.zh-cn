@@ -10,18 +10,21 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 29f67c57bb6609d037d6e7077a91e5c7229e93fb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 778d8f2f53ba56436047eee53d17dd827c58f3eb
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99195317"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837564"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下载 ODBC Driver for SQL Server
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Microsoft ODBC Driver for SQL Server 是单个动态链接库 (DLL)，它包含对使用本机代码 API 连接到 SQL Server 的应用程序的运行时支持。 使用 Microsoft ODBC Driver 17 for SQL Server 创建新的应用程序或增强需利用 SQL Server 新增功能的现有应用程序。
+
+> [!Important]
+> 如果向 Microsoft ODBC Driver for SQL Server 使用 Azure Active Directory 托管标识 (`authentication=ActiveDirectoryMSI`) 身份验证，请不要升级到版本 17.7。 17.7 中有一个问题，会在使用该身份验证模式时导致错误。
 
 ## <a name="download-for-windows"></a>适用于 Windows 的下载项
 

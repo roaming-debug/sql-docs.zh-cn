@@ -2,7 +2,7 @@
 description: MERGE (Transact-SQL)
 title: MERGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/20/2019
+ms.date: 02/27/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -26,12 +26,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest
-ms.openlocfilehash: 6bb1014c22353826b6e4429726d4d28549cc274a
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: c7b388649cf7ca535d5d81eb2d05cf4f0a27d373
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489331"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838955"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -238,16 +238,84 @@ DEFAULT VALUES
 >[!NOTE]
 > 在 Azure Synapse Analytics 中，MERGE 命令（预览）与 SQL Server 和 Azure SQL 数据库相比具有以下差异。  
 > - MERGE 更新操作实现为删除和插入对。 MERGE 更新的受影响的行计数包括删除的行和插入的行。 
-
 > - 在预览期间，包含 IDENTITY 列的表不支持 MERGE…WHEN NOT MATCHED INSERT。  
-
 > - 此表描述了对具有不同分发类型的表的支持：
-
+>
 >|Azure Synapse Analytics 中的 MERGE CLAUSE|支持的 TARGE 分发表| 支持的 SOURCE 分发表|评论|  
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| 所有分发类型 |所有分发类型||  
 >|**NOT MATCHED BY TARGET**|HASH |所有分发类型|使用 UPDATE/DELETE FROM…JOIN 来同步两个表。 |
 >|**NOT MATCHED BY SOURCE**|所有分发类型|所有分发类型|||  
+
+>[!IMPORTANT]
+> 在 Azure Synapse Analytics 中，MERGE 命令目前处于预览状态，可能会在某些情况下，使目标表处于不一致状态，其中的行置于错误分布中，在某些情况下会导致以后的查询返回错误结果。 当满足以下两个条件时，可能会出现此问题：
+>
+> - 已对 Azure Synapse SQL 数据库中的 HASH 分布式 TARGET 表执行 MERGE T-SQL 语句。
+> - 合并的 TARGET 表具有辅助索引或 UNIQUE 约束。
+>
+> 在提供修补程序之前，请避免对具有辅助索引或 UNIQUE 约束的 HASH 分布式 TARGET 表使用 MERGE 命令。  对于具有带 UNIQUE 约束或辅助索引的 HASH 分布式表的数据库，也可能暂时禁用 MERGE 功能支持。      
+>
+> 重要提示，预览功能仅用于测试，不应用于生产实例或生产数据。 如果数据很重要，还请保留测试数据的副本。
+> 
+> 要检查数据库中哪个分布式哈希表由于此问题而不能执行 MERGE，请运行以下语句
+>```sql
+> select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b
+> on a.object_id = b.object_id
+> join
+> sys.pdw_table_distribution_properties c
+> on a.object_id = c.object_id
+> where b.type = 2 and c.distribution_policy_desc = 'HASH'
+> ```
+> 
+> 若要检查此问题是否影响了用于 MERGE 的分布式哈希 TARGET 表，请按照以下步骤检查表中是否有错误分布的行。  如果返回“无需修复”，则此表不会受到影响。  
+>
+>```sql
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>
+> create table [check_table_1] with(distribution = round_robin) as
+> select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> group by <DISTRIBUTION_COLUMN>;
+> go
+>
+> create table [check_table_2] with(distribution = hash(x)) as
+> select x from [check_table_1];
+>go
+>
+> if not exists(select top 1 * from (select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> except select x from 
+> [check_table_2]) as tmp)
+> select 'no need for repair' as result
+> else select 'needs repair' as result
+> go
+>
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>```
+>若要修复受影响的表，请运行以下语句，将旧表中的所有行复制到新表中。
+>```sql
+> if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> if object_id('[repair_table]', 'U') is not null
+> drop table [repair_table];
+> go
+> create table [repair_table_temp] with(distribution = round_robin) as select * from <MERGE_TARGET_TABLE>;
+> go
+>
+> -- [repair_table] will hold the repaired table generated from <MERGE_TARGET_TABLE>
+> create table [repair_table] with(distribution = hash(<DISTRIBUTION_COLUMN>)) as select * from [repair_table_temp];
+> go
+>if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> ```   
 
 必须指定三个 MATCHED 子句中的至少一个子句，但可以按任何顺序指定。 无法在同一个 MATCHED 子句中多次更新一个变量。  
   

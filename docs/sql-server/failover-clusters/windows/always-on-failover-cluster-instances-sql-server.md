@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 2f87ae98424eef3f6aeadca1f11da6d9d1f2b403
-ms.sourcegitcommit: 8bdb5a51f87a6ff3b94360555973ca0cd0b6223f
+ms.openlocfilehash: acbe6e9241f003f100bedc3fd01d297fb91e8141
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100549383"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836640"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 故障转移群集实例 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "100549383"
  FCI 由一组物理服务器（节点）构成，这些服务器包含类似的硬件配置以及相同的软件配置，其中包括操作系统版本和修补程序级别，以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本、修补程序级别、组件和实例名称。 相同的软件配置是确保 FCI 在节点间进行故障转移时能够正常运行所必需的。  
   
  WSFC 资源组  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 在 WSFC 资源组中运行。 该资源组中的每个节点均维护配置设置和检查点注册表项的同步副本，以确保 FCI 在故障转移后可完全正常运行，并且群集中一次只有一个节点（活动节点）拥有该资源组。 WSFC 服务可管理服务器群集、仲裁配置、故障转移策略和故障转移操作以及 FCI 的 VNN 和虚拟 IP 地址。 在出现故障（硬件故障、操作系统故障、应用程序或服务故障）或进行计划的升级时，资源组所有权就转移至 FCI 中的另一个节点。WSFC 资源组中支持的节点数取决于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本。 另外，同一个 WSFC 群集可运行多个 FCI（多个资源组），具体取决于您的硬件能力（如 CPU、内存和磁盘数）。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 在 WSFC 资源组中运行。 该资源组中的每个节点均维护配置设置和检查点注册表项的同步副本，以确保 FCI 在故障转移后可完全正常运行，并且群集中一次只有一个节点（活动节点）拥有该资源组。 WSFC 服务可管理服务器群集、仲裁配置、故障转移策略和故障转移操作以及 FCI 的 VNN 和虚拟 IP 地址。 在出现故障（硬件故障、操作系统故障、应用程序或服务故障）或进行计划升级时，该资源组的所有权就会转移至另一个 FCI 节点。 WSFC 资源组中支持的节点数取决于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本。 另外，同一个 WSFC 群集可运行多个 FCI（多个资源组），具体取决于您的硬件能力（如 CPU、内存和磁盘数）。  
   
  SQL Server 二进制文件  
  产品二进制文件本地安装在 FCI 的每个节点上，此过程类似于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 独立安装。 但是，在启动过程中，服务将不会自动启动，而是由 WSFC 管理。  

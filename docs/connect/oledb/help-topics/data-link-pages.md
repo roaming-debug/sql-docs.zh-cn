@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: 52089c92af76611fe8ab60b53dc7cf2848fb31c5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e3a7367daa776da3641c1b9a506f8f8335ce05d9
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99195307"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837439"
 ---
 # <a name="universal-data-link-udl-configuration"></a>通用数据链接 (UDL) 配置
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "99195307"
 |选项|说明|
 |---   |---        |
 |选择或输入服务器名称|从下拉列表中选择服务器名称，或者键入要访问的数据库所在的服务器的位置。 在服务器上选择数据库是一项单独的操作。 单击“刷新”可更新列表。
-|输入登录服务器所需的信息|可以从此下拉列表选择以下身份验证选项： <ul><li>`Windows Authentication:` 使用当前登录用户的 Windows 帐户凭据对 SQL Server 进行身份验证。</li><li>`SQL Server Authentication:` 使用登录 ID 和密码进行身份验证。</li><li>`Active Directory - Integrated:` 使用 Azure Active Directory 标识进行集成身份验证。 此模式还可用于对 SQL Server 进行 Windows 身份验证。</li><li>`Active Directory - Password:` 使用 Azure Active Directory 标识进行用户 ID 和密码身份验证。</li><li>`Active Directory - Universal with MFA support:` 使用 Azure Active Directory 标识进行交互式身份验证。 此模式支持 Azure 多重身份验证 (MFA)。</li><li>`Active Directory - Service Principal:` Azure Active Directory 服务主体身份验证。 用户名应设置为应用程序（客户端）ID。 密码应设置为应用程序（客户端）机密。</li></ul>|
+|输入登录服务器所需的信息|可以从此下拉列表选择以下身份验证选项： <ul><li>`Windows Authentication:` 使用当前登录用户的 Windows 帐户凭据对 SQL Server 进行身份验证。</li><li>`SQL Server Authentication:` 使用登录 ID 和密码进行身份验证。</li><li>`Active Directory - Integrated:` 使用 Azure Active Directory 标识进行集成身份验证。 此模式还可用于对 SQL Server 进行 Windows 身份验证。</li><li>`Active Directory - Password:` 使用 Azure Active Directory 标识进行用户 ID 和密码身份验证。</li><li>`Active Directory - Universal with MFA support:` 使用 Azure Active Directory 标识进行交互式身份验证。 此模式支持 Azure Active Directory 多重身份验证 (MFA)。</li><li>`Active Directory - Service Principal:` Azure Active Directory 服务主体身份验证。 用户名应设置为应用程序（客户端）ID。 密码应设置为应用程序（客户端）机密。</li></ul>|
 |服务器 SPN|如果您使用受信任连接，则可为服务器指定服务主体名称 (SPN)。|
 |用户名|键入登录数据源时要用于身份验证的用户 ID。|
 |密码|键入登录数据源时要用于身份验证的密码。|

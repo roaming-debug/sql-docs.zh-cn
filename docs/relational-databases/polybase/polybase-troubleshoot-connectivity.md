@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016'
-ms.openlocfilehash: 0734f0a8163486ab46ef8143966a24adee35194d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: c1957724f028283c2e3aa6377604726f0c307add
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100079418"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838040"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
 
@@ -207,7 +207,7 @@ PolyBase 将尝试访问 HDFS 并将失败，因为请求不包含必要的服�
 | javax.security.auth.login.LoginException<br> 校验和失败 |管理服务主体存在，但是密码错误。 |
 | 本机配置名：C:\Windows\krb5.ini<br>从本机配置加载 | 此消息表示 Java 的 krb5LoginModule 检测到了计算机上的自定义客户端配置。 检查自定义客户端设置，因为可能是它们导致出现此问题。 |
 | javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>非法主体名称 admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule：没有规则适用于 admin_user@CONTOSO.COM | 根据 Hadoop 群集的相应规则将“hadoop.security.auth_to_local”属性添加到 core-site.xml。 |
-| java.net.ConnectException<br>正在尝试访问 URI: hdfs://10.193.27.230:8020 上的外部文件系统<br>由于连接异常，从 IAAS16981207/10.107.0.245 调用 10.193.27.230:8020 失败 | 对 KDC 的身份验证成功，但是未能访问 Hadoop 名称节点。 检查名称节点 IP 和端口。 验证是否已禁用 Hadoop 上的防火墙。 |
+| java.net.ConnectException<br>正在尝试访问 URI: hdfs://10.193.27.230:8020 上的外部文件系统<br>由于连接异常，从 IAAS16981207/10.107.0.245 调用 10.193.27.230:8020 失败 |    对 KDC 的身份验证成功，但是未能访问 Hadoop 名称节点。 检查名称节点 IP 和端口。 验证是否已禁用 Hadoop 上的防火墙。 |
 | java.io.FileNotFoundException<br>文件不存在: /test/data.csv |    身份验证成功，但是指定的位置不存在。 首先检查路径，或使用根路径“/”进行测试。 |
 
 ## <a name="debugging-tips"></a>调试提示
@@ -256,4 +256,5 @@ PolyBase 将尝试访问 HDFS 并将失败，因为请求不包含必要的服�
 [使用 Active Directory 身份验证将 PolyBase 与 Cloudera 集成](/archive/blogs/microsoftrservertigerteam/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Cloudera 的 Kerberos for CDH 设置指南](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Hortonworks 的 Kerberos for HDP 设置指南](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
-[PolyBase 故障排除](polybase-troubleshooting.md)
+[PolyBase 故障排除](polybase-troubleshooting.md)   
+[PolyBase 错误和可行解决方案](polybase-errors-and-possible-solutions.md)   

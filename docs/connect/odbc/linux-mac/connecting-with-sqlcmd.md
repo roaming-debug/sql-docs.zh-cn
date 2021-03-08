@@ -2,7 +2,7 @@
 title: 使用 sqlcmd 进行连接
 description: 了解如何在 Linux 和 macOS 上结合使用 sqlcmd 实用工具与 Microsoft ODBC Driver for SQL Server。
 ms.custom: ''
-ms.date: 06/22/2020
+ms.date: 02/24/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5d69f1a19e0494b7426eebbac7d8732794f90be8
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 216f78615ca049d3e97134cb14831d9a5e6afd32
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987903"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837357"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 进行连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -56,6 +56,12 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] 指定输入和输出代码页。 代码页页码是指定已安装的 Linux 代码页的数值。
 （自 17.5.1.1 起提供）
+
+- 当连接到 SQL 数据库或 Azure Synapse Analytics 时，客户端将使用 -G 开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 此选项设置 sqlcmd 脚本变量 SQLCMDUSEAAD = true。 -G 开关至少需要 sqlcmd 版本 17.6。 要确定你的版本，请执行 sqlcmd -?。
+
+> [!IMPORTANT]
+> `-G` 选项仅适用于 Azure SQL 数据库和 Azure Synapse Analytics。
+> Linux 或 macOS 目前不支持 AAD 交互式身份验证。 AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) 版本 17.6.1 或更高版本以及正确[配置的 Kerberos 环境](using-integrated-authentication.md#configure-kerberos)。
 
 - -h number_of_rows  指定要在列标题之间打印的行数  。  
   
@@ -123,6 +129,10 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -y variable_length_type_display_width  设置 `sqlcmd` 脚本变量 `SQLCMDMAXFIXEDTYPEWIDTH`。
   
 - -Y fixed_length_type_display_width  设置 `sqlcmd` 脚本变量 `SQLCMDMAXVARTYPEWIDTH`。
+
+- -z password  更改密码。  
+  
+- -Z password  更改密码并退出。  
 
 
 ## <a name="available-commands"></a>可用命令
@@ -195,10 +205,6 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
     sqlcmd -S<...> -P<..> -U<..> -I c.sql  
 ```
 
-- -z password  更改密码。  
-  
-- -Z password  更改密码并退出。  
-
 ## <a name="unavailable-commands"></a>不可用的命令
 
 在当前版本中，以下命令不可用：  
@@ -221,7 +227,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 在 DSN 中，只有 DRIVER 项是必需的；但若要连接到远程服务器，`sqlcmd` 或 `bcp` 需要 SERVER 元素中的值。 如果 SERVER 元素为空或不存在于 DSN 中，`sqlcmd` 和 `bcp` 将尝试连接到本地系统上的默认实例。
 
-在 Windows 系统上使用 bcp 时，[!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] 及更早版本需要 SQL Native Client 11 驱动程序 (sqlncli11.dll)，而 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 及更高版本需要 Microsoft ODBC Driver 17 for SQL Server 驱动程序 (msodbcsql17.dll)。  
+在 Windows 系统上使用 bcp 时，[!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] 及更早版本需要 SQL Native Client 11 驱动程序 (sqlncli11.dll)，而 [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] 及更高版本需要 Microsoft ODBC Driver 17 for SQL Server 驱动程序 (msodbcsql17.dll)。  
 
 如果在 DSN 和 `sqlcmd` 或 `bcp` 命令行中指定了相同的选项，命令行选项将替代 DSN 中使用的值。 例如，如果 DSN 具有 DATABASE 项且 `sqlcmd` 命令行包含 -d，将使用传递给 -d 的值   。 如果在 DSN 中指定了 Trusted_Connection=yes  ，便会使用 Kerberos 身份验证，并忽略用户名 (-U  ) 和密码 (-P  )（若有）。
 

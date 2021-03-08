@@ -1,26 +1,28 @@
 ---
-title: PolyBase 的监视和故障排除 | Microsoft Docs
+title: PolyBase 的监视和故障排除
 description: 若要对 PolyBase 进行故障排除，请使用这些视图和 DMV。 查看 PolyBase 查询计划，监视 PolyBase 组中的节点，并设置 Hadoop 名称节点高可用性。
-ms.date: 04/23/2019
+ms.date: 02/17/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+dev_langs:
+- TSQL
+- XML
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
 helpviewer_keywords:
 - PolyBase, troubleshooting
-ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016'
-ms.openlocfilehash: 5945f88320f01f6ce431bea79483528bf8dbeb64
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5306f392623bebdb08d17b704e12b06c5ce9e8fa
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351757"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101835231"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase 的监视和故障排除
 
@@ -171,15 +173,15 @@ PolyBase 查询拆分为 sys.dm_exec_distributed_request_steps 中的一系列�
    ORDER BY total_elapsed_time DESC;  
    ```  
 
-## <a name="to-view-the--polybase-query-plan-to-be-changed"></a>查看 PolyBase 查询计划（待更改） 
+## <a name="to-view-the-polybase-query-plan-to-be-changed"></a>查看 PolyBase 查询计划（待更改） 
 
-1. 在 SSMS 中，启用“包含实际的执行计划”(Ctrl+M)，并运行查询  。
+1. 在 SSMS 中，启用“包含实际的执行计划”(Ctrl+M)，并运行查询。
 
 2. 单击“执行计划”  选项卡。
 
    ![PolyBase 查询计划](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 查询计划")  
 
-3. 右键单击“远程查询运算符”  ，然后选择“属性”  。
+3. 右键单击“远程查询运算符”，然后选择“属性”。
 
 4. 将远程查询值复制并粘贴到文本编辑器中，以查看 XML 远程查询计划。 下面显示了一个示例。
 
@@ -258,10 +260,35 @@ PolyBase 查询拆分为 sys.dm_exec_distributed_request_steps 中的一系列�
 
 解决方法：使用 DNS 名称重新路由与活动的名称节点的连接。 为完成此操作，需要确定外部数据源正在使用 DNS 名称与名称节点通信。 发生名称节点故障转移时，需要更改与外部数据源定义中使用的 DNS 名称相关联的 IP 地址。 此操作将所有新的连接重新路由到正确的名称节点。 故障转移发生时，现有连接将会失败。 若要自动化此过程，“检测信号”可以 ping 活动的名称节点。 如果检测信号失败，可以认为发生了故障转移，并且自动切换到辅助副本 IP 地址。
 
+## <a name="log-file-locations"></a>日志文件位置
+
+在 Windows 服务器中，日志默认位于以下安装目录路径：c:\Program Files\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\Polybase\。
+
+在 Linux 服务器中，这些日志默认位于 /var/opt/mssql/log/polybase 中。
+
+PolyBase 数据移动日志文件：  
+- <INSTANCENAME>_<SERVERNAME>_Dms_errors.log 
+- <INSTANCENAME>_<SERVERNAME>_Dms_movement.log 
+
+PolyBase 引擎服务日志文件：  
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_errors.log 
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_movement.log 
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_server.log 
+
+在 Windows 中，PolyBase Java 日志文件：
+- <SERVERNAME> Dms polybase.log
+- <SERVERNAME>_DWEngine_polybase.log
+ 
+在 Linux 中，PolyBase Java 日志文件：
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_pdw.log
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_dms.log
+
+
 ## <a name="error-messages-and-possible-solutions"></a>错误消息和可能的解决方案
 
-若要排查外部表错误，请参阅 Murshed Zaman 的博客 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](/archive/blogs/sqlcat/polybase-setup-errors-and-possible-solutions "PolyBase 安装错误和可行解决方案")。
+有关常见的故障排除方案，请参阅 [PolyBase 错误和可能的解决方案](polybase-errors-and-possible-solutions.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[PolyBase Kerberos 连接疑难解答](polybase-troubleshoot-connectivity.md)
+[PolyBase Kerberos 连接故障排除](polybase-troubleshoot-connectivity.md)   
+[PolyBase 错误和可行解决方案](polybase-errors-and-possible-solutions.md)   

@@ -6,17 +6,17 @@ ms.date: 12/13/2017
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
-author: haoqian
+author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 13f9a386b6ab60280edf2d8b494721dd233b042a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 25f550f711364760de9cc07608b46532cfa34219
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347416"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838997"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>在 Integration Services (SSIS) Scale Out 中运行包
 
@@ -125,6 +125,9 @@ GO
 
 ## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a>在 SQL Server 代理作业中运行包
 在 SQL Server 代理作业中，可以运行 SSIS 包作为作业的一个步骤。 要在 Scale Out 中运行包，请将默认执行模式设置为“Scale Out”  。将默认执行模式设置为“Scale Out”后，SQL Server 代理作业中的包将在 Scale Out 模式下运行  。
+
+> [!NOTE]
+> 不能通过取消 SQL Server 代理作业来停止 Scale Out 包执行。 若要停止 Scale Out 执行，建议使用 catalog.stop_operation 存储过程或使用“活动操作”窗格。 
 
 ## <a name="next-steps"></a>后续步骤
 -   [Scale Out 疑难解答](troubleshooting-scale-out.md)

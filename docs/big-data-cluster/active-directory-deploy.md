@@ -5,16 +5,16 @@ description: 了解如何在 Active Directory 域中升级 SQL Server 大数据�
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 02/11/2021
+ms.date: 02/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 799afc246b106c4b49d6aba44f8d26a761d6c2cc
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 9417444a1c9d28181529ace79b6dcff6162b7f2d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343958"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837025"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>在 Active Directory 模式下部署 SQL Server 大数据群集
 
@@ -27,6 +27,21 @@ ms.locfileid: "100343958"
 通过使用 `kubeadm-prod` 配置文件或 `openshift-prod`（从 CU5 版本开始），你将自动获得 AD 集成所需的安全相关信息和终结点相关信息的占位符。
 
 此外，还需要提供 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 将用于在 AD 中创建必要对象的凭据。 这些凭据作为环境变量提供。
+
+### <a name="traffic-and-ports"></a>流量和端口
+
+验证是否有任何防火墙或第三方应用程序允许 Active Directory 通信所需的端口。 
+
+![大数据群集与 Active Directory 之间的流量关系图。 控制器、安全支持服务以及其他群集服务通过 LDAP/Kerberos 与域控制器对话。 BDC DNS 代理服务通过 DNS 与 DNS 服务器对话。](media/big-data-cluster-overview/big-data-cluster-active-directory-dns-traffic-ports.png)
+
+通过这些协议向 Kubernetes 群集服务发出请求，然后从该服务向 Active Directory 域传达这些请求，因此应允许在侦听 TCP 和 UDP 所需端口的任何防火墙或第三方应用程序中传入和传出流量。 Active Directory 使用的标准端口号：
+
+| 服务 | 端口 |
+|:---|:---|
+| DNS | 53 |
+| LDAP <BR> LDAPS | 389<BR> 636 |
+| Kerberos | 88 |
+| 全局编录端口 <BR>通过 LDAP<BR>通过 LDAPS |<BR> 3268 <BR> 3269 |
 
 ## <a name="set-security-environment-variables"></a>设置安全环境变量
 
@@ -70,7 +85,7 @@ AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命�
 
 此列表中的 AD 组映射到 `bdcUser` 大数据群集角色，需要对其授予对 SQL Server 的访问权限（请参阅 [SQL Server 权限](../relational-databases/security/permissions-hierarchy-database-engine.md)）或者对 HDFS 的访问权限（请参阅 [HDFS 权限指南](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)）。 当连接到控制器终结点时，这些用户只能使用 `azdata bdc endpoint list` 命令列出群集中的可用终结点。
 
-有关如何更新 AD 组的这个设置的详细信息，请参阅[管理 Active Directory 模式下的大数据群集访问](manage-user-access.md)。
+有关如何更新 AD 组的这些设置的详细信息，请参阅[管理 Active Directory 模式下的大数据群集访问](manage-user-access.md)。
 
   >[!TIP]
   >若要在 Azure Data Studio 中连接到 SQL Server 主机时启用 HDFS 浏览体验，必须向具有 bdcUser 角色的用户授予 VIEW SERVER STATE 权限，因为 Azure Data Studio 使用 `sys.dm_cluster_endpoints` DMV 将所需的 Knox 网关终结点连接到 HDFS。
@@ -223,7 +238,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 
 现在，你应该已设置所有所需的参数，用于部署具有 Active Directory 集成的 BDC。
 
-现在可以使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 命令和 kubeadm-prod 部署配置文件部署与 Active Directory 集成的 BDC 群集。 有关如何部署 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 的完整文档，请访问[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md)。
+现在可以使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 命令和 kubeadm-prod 部署配置文件部署与 Active Directory 集成的 BDC 群集。 有关如何部署 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 的完整文档，请参阅[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md)。
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>验证域控制器的反向 DNS 条目
 

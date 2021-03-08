@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 52fbeee33dd992f4916f33a1545b59265a8b47f9
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 863278eacebc4b405a4a44e72c4318e950d0cc1d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345652"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837660"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 Always on 可用性组故障转移
 
@@ -50,17 +50,18 @@ ms.locfileid: "100345652"
 - RHEL/Ubuntu 示例
 
    ```bash
-   sudo pcs resource move ag_cluster-master nodeName2 --master
+   sudo pcs resource move ag_cluster-master nodeName2 --master --lifetime=30S
    ```
 
 - SLES 示例
 
    ```bash
-   crm resource migrate ag_cluster nodeName2
+   crm resource migrate ag_cluster nodeName2 --lifetime=30S
    ```
 
 >[!IMPORTANT]
->手动故障转移资源后，需要删除自动添加的位置约束。
+>使用 --lifetime 选项时，为移动资源而创建的位置约束本质上是临时的，并且在前面的示例中在 30 秒内有效。
+>请注意，临时约束不会自动清除，并可能会显示在约束列表中，但作为过期约束显示。 过期约束不会影响 pacemaker 群集的故障转移行为。 如果移动资源时不使用 --lifetime 选项，则应删除自动添加的位置约束，如下所述。
 
 #### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> 步骤 2. 删除位置约束
 

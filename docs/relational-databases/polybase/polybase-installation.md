@@ -1,7 +1,7 @@
 ---
-title: 在 Windows 上安装 PolyBase | Microsoft Docs
+title: 在 Windows 上安装 PolyBase
 description: 了解如何将 PolyBase 安装为单节点或 PolyBase 横向扩展组。 可以使用安装向导或命令提示符。 最后，启用 PolyBase。
-ms.date: 09/24/2018
+ms.date: 02/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016'
-ms.openlocfilehash: 00cb6468e269b057fb5d5d539a3f0efdd8be36ed
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ca5c7911444dcc5cdd87787a80ee0d9e572797ef
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351814"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838076"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -161,11 +161,12 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
 RECONFIGURE;
 ```
-
-
 ## <a name="post-installation-notes"></a>安装后注意事项  
 
 PolyBase 安装三个用户数据库：DWConfiguration、DWDiagnostics 和 DWQueue。 这些数据库供 PolyBase 使用。 请勿更改或删除它们。  
+
+> [!CAUTION]
+> 如果将 PolyBase 添加到 SQL Server 的现有安装，则会在安装介质的版本级别安装功能，这些功能可能位于 SQL Server 的其他版本级别。 这可能会导致意外行为或错误。 在安装 PolyBase 功能之后，务必要将新功能引入到相同版本级别。 根据需要安装服务包 (SP)、累积更新 (CU) 和/或常规分发版本 (GDR)。 要确定 PolyBase 的版本，请参阅[确定 SQL Server 及其组件的版本、版本类别和更新级别](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#polybase)。
    
 ### <a name="how-to-confirm-installation"></a><a id="confirminstall"></a> 如何确认安装  
 

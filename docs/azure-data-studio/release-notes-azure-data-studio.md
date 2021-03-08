@@ -8,17 +8,30 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 2/10/2021
-ms.openlocfilehash: 17cc8ef3252ad39c344de7a7c51a9af80c1f6030
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.date: 2/18/2021
+ms.openlocfilehash: c666ae644200c1b2beefb7f73c8a819294831985
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343403"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836024"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](./download-azure-data-studio.md)**
+
+## <a name="february-2021"></a>2021 年 2 月
+
+2021 年 2 月 18 日 &nbsp; / &nbsp; 版本：1.26.0
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| ------ | ------- |
+| Bug 修复 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2021+Release%22+is%3Aclosed)。 |
+| 扩展更新 | [Dacpac](extensions/sql-server-dacpac-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [机器学习](extensions/machine-learning-extension.md) </br> [探查器](extensions/sql-server-profiler-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| Azure Arc 新增功能 | 现支持多个数据控制器 <br/> 新连接对话框选项，如 kube 配置文件 <br/> Postgres 仪表板增强功能 |
+| Notebook 新增功能 | Windows 上 Jupyter 服务器的启动时间缩短了 50% <br/> 添加了对通过右键单击编辑 Jupyter Books 的支持 <br/> 添加了 URI 笔记本参数化支持，并[添加了笔记本参数化文档](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-parameterization) |
 
 ## <a name="december-2020-hotfix"></a>2020 年 12 月（修补程序）
 

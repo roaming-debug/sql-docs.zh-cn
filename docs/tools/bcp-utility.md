@@ -27,14 +27,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
-ms.date: 09/11/2020
+ms.date: 02/24/2021
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 87aa8b901c24839aa23b75a318b7a47e3d52f40e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: c74a2f03c36449bc597d699edb008206c76d7448
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100349976"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839009"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 
@@ -219,8 +219,8 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  当连接到 Azure SQL 数据库或 Azure Synapse Analytics 时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[版本 14.0.3008.27 或更高版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[将 Azure Active Directory 身份验证用于 SQL 数据库或 Azure Synapse Analytics 身份验证](/azure/sql-database/sql-database-aad-authentication)。 
 
 > [!IMPORTANT]
-> **-G** 选项仅适用于 Azure SQL 数据库 和 Azure 数据仓库。
-> Linux 或 macOS 目前不支持 AAD 集成和交互式身份验证。
+> -G 选项仅适用于 Azure SQL 数据库和 Azure Synapse Analytics。
+> Linux 或 macOS 目前不支持 AAD 交互式身份验证。 AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) 版本 17.6.1 或更高版本以及正确[配置的 Kerberos 环境](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos)。
 
 > [!TIP]
 > 若要检查 BCP 版本是否包括对 Azure Active Directory 身份验证 (AAD) 类型 **bcp --** (bcp\<space>\<dash>\<dash>) 并验证可用参数列表中是否显示 -G。

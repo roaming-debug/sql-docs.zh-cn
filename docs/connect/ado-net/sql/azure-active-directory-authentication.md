@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: karinazhou
 ms.author: v-jizho2
-ms.reviewer: ''
-ms.openlocfilehash: 0f8aaffc1f87b33a5c685b55d724fe96c44258af
-ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
+ms.reviewer: v-daenge
+ms.openlocfilehash: c57c2d10854ed902a6230eafc3a912cd0508c989
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96297944"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101835984"
 ---
 # <a name="using-azure-active-directory-authentication-with-sqlclient"></a>通过 SqlClient 使用 Azure Active Directory 身份验证
 
@@ -26,7 +26,7 @@ ms.locfileid: "96297944"
 
 本文介绍如何通过 SqlClient 从 .NET 应用程序使用 Azure Active Directory (Azure AD) 身份验证连接到 Azure SQL 数据源。
 
-Azure AD 身份验证使用 Azure AD 中的标识访问 Azure SQL 数据源（例如 Azure SQL 数据库、Azure SQL 托管实例和 Azure Synapse Analytics）。 利用 Microsoft.Data.SqlClient 命名空间，客户端应用程序可以在连接到 Azure SQL 数据库时在不同的身份验证模式下指定 Azure AD 凭据。 
+Azure AD 身份验证使用 Azure AD 中的标识访问 Azure SQL 数据源（例如 Azure SQL 数据库、Azure SQL 托管实例和 Azure Synapse Analytics）。 利用 Microsoft.Data.SqlClient 命名空间，客户端应用程序可以在连接到 Azure SQL 数据库时在不同的身份验证模式下指定 Azure AD 凭据。
 
 设置连接字符串中的 `Authentication` 连接属性时，客户端可以根据提供的值选择首选 Azure AD 身份验证模式：
 
@@ -39,7 +39,6 @@ Azure AD 身份验证使用 Azure AD 中的标识访问 Azure SQL 数据源（�
 - Microsoft.Data.SqlClient 2.1.0 中添加了更多身份验证模式，包括 `Active Directory Device Code Flow` 和 `Active Directory Managed Identity`（也称为 `Active Directory MSI`）。 这些新模式允许应用程序获取连接到服务器的访问令牌。 
 
 有关 Azure AD 身份验证的更多信息（除以下各节介绍的信息外），请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](/azure/azure-sql/database/authentication-aad-overview)。
-
 
 ## <a name="setting-azure-active-directory-authentication"></a>设置 Azure Active Directory 身份验证
 
@@ -54,8 +53,7 @@ Azure AD 身份验证使用 Azure AD 中的标识访问 Azure SQL 数据源（�
 | Active Directory 设备代码流 | 使用设备代码流模式对 Azure AD 标识进行身份验证 | .NET Framework 4.6+、.NET Core 2.1+、.NET Standard 2.0+ | 2.1.0+ |
 | Active Directory 托管标识、 <br>Active Directory MSI | 使用系统分配或用户分配的托管标识对 Azure AD 标识进行身份验证 | .NET Framework 4.6+、.NET Core 2.1+、.NET Standard 2.0+ | 2.1.0+ |
 
-<sup>1</sup> 在 Microsoft.Data.SqlClient  2.0.0 之前，`Active Directory Integrated` 和 `Active Directory Interactive` 身份验证仅在 .NET Framework 4.6 或更高版本上受支持。 
-
+<sup>1</sup> 在 Microsoft.Data.SqlClient 2.0.0 之前，`Active Directory Integrated` 和 `Active Directory Interactive` 身份验证模式仅在 .NET Framework 4.6 或更高版本上受支持。
 
 ## <a name="using-active-directory-password-authentication"></a>使用 Active Directory 密码身份验证
 
@@ -63,7 +61,7 @@ Azure AD 身份验证使用 Azure AD 中的标识访问 Azure SQL 数据源（�
 
 ```c#
 // Use your own server, database, user ID, and password.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Password; Database=testdb; User Id=user@domain.com; Password=**_";
+string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Password; Database=testdb; User Id=user@domain.com; Password=***";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -161,9 +159,9 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 
 ## <a name="using-active-directory-managed-identity-authentication"></a>使用 Active Directory 托管标识身份验证
 
-Azure 资源的托管标识是以前称为托管服务标识 (MSI) 服务的新名称。 当客户端应用程序使用 Azure 资源访问支持 Azure AD 身份验证的 Azure 服务时，可以使用托管标识进行身份验证，方法是为 Azure AD 中的 Azure 资源提供标识。 然后，可以使用该标识来获取访问令牌。 这样就无需管理凭据和密码。 
+Azure 资源的托管标识是以前称为托管服务标识 (MSI) 服务的新名称。 当客户端应用程序使用 Azure 资源访问支持 Azure AD 身份验证的 Azure 服务时，可以使用托管标识进行身份验证，方法是为 Azure AD 中的 Azure 资源提供标识。 然后，可以使用该标识来获取访问令牌。 此身份验证方法不需管理凭据和密码。
 
-托管标识分为两种类型： 
+托管标识分为两种类型：
 
 - 系统分配的托管标识是在 Azure AD 中的服务实例上创建的。 它与该服务实例的生命周期相关联。 
 - 用户分配的托管标识是作为独立的 Azure 资源创建的。 可以将其分配给 Azure 服务的一个或多个实例。 

@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a6fd7131b63741a82c120e1e0b222405865a9d
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 505cda4f226945cd8788e777b8ac1ea35a3aa47e
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237177"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837714"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -210,7 +210,10 @@ OUTPUT 子句
  如果值列表中的各值与表中各列的顺序不相同，或者未包含表中各列的值，则必须使用 column_list 显式指定存储每个传入值的列。  
   
  您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行构造函数（又称为表值构造函数）在一个 INSERT 语句中指定多个行。 行构造函数包含一个 VALUES 子句和多个括在圆括号中且以逗号分隔的值列表。 有关详细信息，请参阅[表值构造函数 (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md)。  
-  
+
+> [!NOTE]  
+> 在 Azure Synapse Analytics 中，插入值只能是常量文本值或变量引用。 若要插入非文本，请将变量设置为非常量值并插入变量。
+
  DEFAULT  
  强制[!INCLUDE[ssDE](../../includes/ssde-md.md)]加载为列定义的默认值。 如果某列并不存在默认值，并且该列允许 Null 值，则插入 NULL。 对于使用 timestamp 数据类型定义的列，插入下一个时间戳值。 DEFAULT 对标识列无效。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4f53290d9b9a1ecd161ef02161f29c172297a93f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4e918602b3793d95d6192a832f110500454ee8a5
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727408"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837369"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -107,7 +107,7 @@ Driver='ODBC Driver 17 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>使用 Active Directory 对 Linux 或 macOS 计算机进行身份验证
 
-要配置 Kerberos，请在 `krb5.conf` 文件中输入数据。 `krb5.conf` 位于 `/etc/` 中，但可以使用语法（例如，`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`）引用其他文件。 以下是一个示例 `krb5.conf` 文件：  
+<a name="configure-kerberos"></a>要配置 Kerberos，请在 `krb5.conf` 文件中输入数据。 `krb5.conf` 位于 `/etc/` 中，但可以使用语法（例如，`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`）引用其他文件。 以下是一个示例 `krb5.conf` 文件：  
   
 ```  
 [libdefaults]  

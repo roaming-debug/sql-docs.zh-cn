@@ -15,12 +15,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: b6a8b2edf94d74720836e02589ec8e1270f38dac
-ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
+ms.openlocfilehash: 4e322ff478e9ccdc031882e7c3b5b18fd8506e42
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100525155"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186440"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2019-15x"></a>SQL Server 2019 (15.x) 中不推荐使用的数据库引擎功能
 
@@ -35,9 +35,9 @@ ms.locfileid: "100525155"
 
 如果功能标记为已弃用，表示：
 
-- 该功能仅处于维护模式。 无法进行新的更改，包括与新功能的互操作性有关的更改。
-- 我们努力不从将来的版本中删除已弃用的功能，使升级更简单。 但是，在极少数情况下，如果该功能限制了将来的创新，我们可能选择从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中将其永久删除。
-- 对于新的开发工作，不建议使用已弃用的功能。      
+- 该功能仅处于维护模式。 不进行新的更改，包括使用新功能解决互操作性的相关更改。
+- 我们努力不从将来的版本中删除已弃用的功能，使升级更简单。 但是，在极少数情况下，如果该功能限制了将来的创新，我们可能选择从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中将其永久停用（删除）。
+- 请勿在新的开发工作中使用已弃用的功能。 对于现有应用，计划尽快修改当前使用这些功能的应用程序。     
 
 可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object 性能计数器或 `deprecation_announcement` 和 `deprecation_final_support` 扩展事件监视已弃用功能的使用情况。 有关详细信息，请参阅 [使用 SQL Server 对象](../relational-databases/performance-monitor/use-sql-server-objects.md)。  
 

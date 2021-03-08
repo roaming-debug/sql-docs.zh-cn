@@ -3,18 +3,18 @@ title: 在 Windows 上安装
 description: 了解如何在 Windows 上安装 SQL Server 机器学习服务。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/29/2020
+ms.date: 02/17/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017'
-ms.openlocfilehash: 592a365024edbbe4ee2743a156ee480b76849ba9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 44993ae527e99d615a9be620e3d930aa520c8980
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096836"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839503"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -65,7 +65,7 @@ ms.locfileid: "98096836"
 
 1. 启动 SQL Server 的安装向导。
   
-1. 在“安装”选项卡上，选择“全新 SQL Server 独立安装或向现有安装添加功能” 。
+1. 在“安装”选项卡上，选择“全新 SQL Server 独立安装或向现有安装添加功能”   。
 
    ::: moniker range="=sql-server-2017"
    ![全新 SQL Server 独立安装](media/2017setup-installation-page-mlsvcs.png)
@@ -139,7 +139,7 @@ ms.locfileid: "98096836"
    > [!NOTE]
    >  如果正在使用的计算机无法访问 Internet，则可以在此时暂停安装以单独下载安装程序。 有关详细信息，请参阅[在没有 Internet 连接的情况下安装机器学习组件](../install/sql-ml-component-install-without-internet-access.md)。
 
-1. 在“准备安装”页面上，验证是否已包括这些选择，然后选择“安装” 。
+1. 在“准备安装”页面上，验证是否已包括这些选择，然后选择“安装”   。
   
    + 数据库引擎服务
    + 机器学习服务（数据库内）
@@ -157,7 +157,7 @@ ms.locfileid: "98096836"
 
 2. 在“同意安装 Python”页上，选择“接受”，然后选择“下一步”  。 Python 开源许可协议还涵盖了 Anaconda 和相关工具，以及 Microsoft 开发团队提供的一些新 Python 库。
 
-3. 在“准备安装”页面上，验证是否已包括这些选择，然后选择“安装” 。
+3. 在“准备安装”页面上，验证是否已包括这些选择，然后选择“安装”   。
   
    + 数据库引擎服务
    + 机器学习服务（数据库内）
@@ -171,9 +171,9 @@ ms.locfileid: "98096836"
 
 ## <a name="set-environment-variables"></a>设置环境变量
 
-（仅适用于 R 功能集成）应设置“MKL_CBWR”环境变量，以确保从 Intel 数学核心函数库 (MKL) 计算得到[一致的输出结果](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)。
+（仅适用于 R 功能集成）应设置“MKL_CBWR”环境变量，以确保从 Intel 数学核心函数库 (MKL) 计算得到[一致的输出结果](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)  。
 
-1. 在“控制面板”中，单击“系统和安全” > “系统” > “高级系统设置” > “环境变量”   。
+1. 在“控制面板”中，单击“系统和安全” > “系统” > “高级系统设置” > “环境变量”     。
 
 2. 创建新的用户或系统变量。 
 
@@ -272,22 +272,45 @@ ms.locfileid: "98096836"
 >
 > 例如，可以添加以下行来生成任意列名：`WITH RESULT SETS ((Col1 AS int))`
 
-::: moniker range="=sql-server-2017"
-<!-- There are no updates yet available for 2019, and there's no 2019 update list site. When updates become available, add 2019 information to this section. -->
+::: moniker range=">=sql-server-2017"
 
 <a name="apply-cu"></a>
 
 ## <a name="apply-updates"></a>应用更新
 
-建议将最新的累积更新应用于数据库引擎和机器学习组件。
+### <a name="existing-installation"></a>现有安装
+
+如果已将机器学习服务添加到现有 SQL Server 实例，并且之前应用了累积更新 (CU)，则数据库引擎版本和机器学习服务功能可能会有所不同。 这可能会导致意外行为或错误。 
+
+执行以下步骤，将机器学习服务引入与数据库引擎相同的版本。
+
+1. 确定用于数据库引擎的累积更新 (CU)。 运行此 T-SQL 语句：
+
+   ```sql
+   SELECT @@VERSION
+   ```
+ 
+   下面是 SQL Server 2019 累积更新 (CU) 8 的输出示例：
+ 
+   Microsoft SQL Server 2019 (RTM-CU8-GDR) (KB4583459) - 15.0.4083.2 (X64) 2020 年 11 月 2 日 18:35:09   版权所有 (C) 2019 Microsoft Corporation Windows 10 Enterprise 10.0 <X64> 开发人员版（64 位）（内部版本 19042:）（虚拟机监控程序）
+
+   有关详细信息，请参阅[确定 SQL Server 及其组件的版本、版本类别和更新级别](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services)。
+
+1. 下载已为数据库引擎安装的[累积更新 (CU)](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)。
+
+1. 运行以安装累积更新 (CU)，并按照说明安装机器学习服务的 CU。
+
+### <a name="new-installation"></a>新安装
+
+如果在 SQL Server 数据库引擎的新安装中安装机器学习服务，建议将最新累积更新应用于数据库引擎和机器学习组件。
 
 在连接 Internet 的设备上，累积更新通常通过 Windows 更新进行应用，但也可以使用以下步骤进行可控更新。 为数据库引擎应用更新时，安装程序将为你在同一实例上安装的任何 Python 或 R 功能拉取累积更新。 
 
 断开连接的服务器需要执行额外的步骤。 有关详细信息，请参阅 [在没有 Internet 连接的计算机上安装 > 应用累积更新](sql-ml-component-install-without-internet-access.md#apply-cu)。
 
-1. 开始使用已安装的基线实例：SQL Server 2017 初始版本
+1. 开始使用已安装的基线实例：SQL Server 初始版本。
 
-2. 请转到累积更新列表：[Microsoft SQL Server 的最新更新](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+2. 请转到累积更新列表：[Microsoft SQL Server 的最新更新](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)。
 
 3. 选择最新的累积更新。 自动下载并提取可执行文件。
 
@@ -332,6 +355,7 @@ ms.locfileid: "98096836"
 现在所有工作已顺利进行，可能还需要优化服务器以支持机器学习，或安装预先训练的机器学习模型。
 
 ::: moniker range="=sql-server-2017"
+
 ### <a name="add-more-worker-accounts"></a>添加更多辅助角色帐户
 
 如果预期会有很多用户同时运行脚本，则可以增加分配给 Launchpad 服务的辅助角色帐户数目。 有关详细信息，请参阅[在 SQL Server 机器学习服务中扩展外部脚本的并发执行](../administration/scale-concurrent-execution-external-scripts.md)。

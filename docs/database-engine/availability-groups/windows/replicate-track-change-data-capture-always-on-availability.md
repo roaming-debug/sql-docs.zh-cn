@@ -2,7 +2,7 @@
 title: 复制、更改跟踪和更改数据捕获及可用性组
 description: 了解使用 SQL Server Always On 可用性组时复制、更改跟踪和更改数据捕获的互操作性。
 ms.custom: seo-lt-2019
-ms.date: 08/21/2018
+ms.date: 02/23/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: availability-groups
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f82db97e9b818ecca6682cf6778850dab8a238c1
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1ee6a097a60930064ee23389d1d54e965336e3d7
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100344555"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837682"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,18 +42,18 @@ ms.locfileid: "100344555"
 ###  <a name="general-changes-to-replication-agents-to-support-availability-groups"></a><a name="Changes"></a>为支持可用性组对复制代理进行的常规更改  
  修改了三个复制代理来支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 日志读取器代理、快照代理和合并代理经过了修改，现在可以查询重定向发布服务器的分发数据库，并且可以使用返回的可用性组侦听器名称来连接数据库发布服务器（如果已声明重定向的发布服务器）。  
   
- 默认情况下，当代理查询分发服务器以确定是否已重定向原始发布服务器时，则在将重定向的主机返回到代理之前，将会验证当前目标或重定向的适用性。 建议执行此操作。 不过，如果代理启动非常频繁，与验证存储过程相关的开销可能会过于昂贵。 日志读取器代理、快照代理和合并代理中已新增命令行开关 *BypassPublisherValidation*。 使用此开关时，重定向的发布服务器将会立即返回到代理，并绕过验证存储过程的执行。  
+ 默认情况下，当代理查询分发服务器以确定是否已重定向原始发布服务器时，则在将重定向的主机返回到代理之前，将会验证当前目标或重定向的适用性。 建议执行此操作。 不过，如果代理启动非常频繁，与验证存储过程相关的开销可能会过于昂贵。 日志读取器代理、快照代理和合并代理中已新增命令行开关 BypassPublisherValidation。 使用此开关时，重定向的发布服务器将会立即返回到代理，并绕过验证存储过程的执行。  
   
  代理历史记录日志中会记录从验证存储过程中返回的故障。 严重性大于或等于 16 的错误将会导致代理终止。 这些代理中已经内置了一些重试功能，以便在其故障转移到新的主副本时处理预计会出现的与已发布的数据库断开连接的情况。  
   
 #### <a name="log-reader-agent-modifications"></a>日志读取器代理修改  
- 日志读取器代理包含以下更改。  
+ 日志读取器代理有以下更改。  
   
 -   **已复制数据库的一致性**  
   
      如果已发布的数据库是可用性组的成员，默认情况下，日志读取器不会处理尚未在所有可用性组次要副本上强制写入的日志记录。 这能确保在故障转移时，复制到订阅服务器的所有行也在新的主要副本上同时存在。  
   
-     当发布服务器只有两个可用性副本（一个主要副本和一个次要副本）且发生故障转移时，原始主要副本仍保持关闭，因为在所有辅助数据库都恢复联机状态或从可用性组中删除发生故障的次要副本之前，日志读取器将不会前移。 日志读取器（现在对辅助数据库运行）将不会前移，因为 AlwaysOn 无法对任何辅助数据库强制执行任何更改。 若要允许日志读取器进一步进行处理并且仍具有灾难恢复能力，请使用 ALTER AVAILABITY GROUP <group_name> REMOVE REPLICA 从可用性组中删除原始主副本。 然后将新的辅助副本添加到可用性组。  
+     当发布服务器只有两个可用性副本（一个主要副本和一个次要副本）且发生故障转移时，原始主要副本仍保持关闭，因为在所有辅助数据库都恢复联机状态或从可用性组中删除发生故障的次要副本之前，日志读取器将不会前移。 日志读取器（现在对辅助数据库运行）将不会前移，因为 AlwaysOn 无法对任何辅助数据库强制执行任何更改。 若要允许日志读取器进一步进行处理并且仍具有灾难恢复能力，请使用 ALTER AVAILABITY GROUP <group_name> REMOVE REPLICA 从可用性组中删除原始主要副本。 然后将新的辅助副本添加到可用性组。  
   
 -   **跟踪标志 1448**  
   
@@ -109,7 +109,7 @@ ms.locfileid: "100344555"
     ```  
   
     > [!NOTE]  
-    >  在故障转移之前，您应在所有可能的故障转移目标上创建作业，并将其标记为禁用，直到主机上的可用性副本成为新的主副本。 当本地数据库变为辅助数据库时，还应禁用旧的主数据库上运行的 CDC 作业。 若要禁用和启用作业，请使用 [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 的 \@enabled 选项。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
+    >  在故障转移后，应在新的主要副本上创建作业。 当本地数据库变为辅助数据库时，应禁用旧的主数据库上运行的 CDC 作业。 如果副本再次成为主副本，请发布此内容，需要重新启用副本上的 CDC 作业。 若要禁用和启用作业，请使用 [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 的 \@enabled 选项。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
   
 -   **向 AlwaysOn 主数据库副本中添加 CDC 角色**  
   
@@ -207,9 +207,9 @@ ms.locfileid: "100344555"
   
 |复制|发布者|分发服务器|订阅者|  
 |-|-|-|-|  
-|**事务性**|是<br /><br /> 注意：不包括对双向和相互事务复制的支持。|是|“是”| 
+|**事务性**|是<br /><br /> 注意：不包括对双向和相互事务复制的支持。|是|是| 
 |**P2P**|否|否|否|  
-|**合并**|“是”|否|否|  
+|**合并**|是|否|否|  
 |**快照**|是|否|是|
   
  **不支持将分发服务器数据库用于数据库镜像。  

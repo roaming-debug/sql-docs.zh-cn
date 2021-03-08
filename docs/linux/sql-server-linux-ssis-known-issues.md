@@ -8,12 +8,12 @@ ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0c95b3a843cbec0e703efea846b9c80f99b9dc41
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ce07fb02a81b4e44375d80f643713b9a0b62d80d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346236"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838990"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>适用于 Linux 上 SSIS 的限制和已知问题
 
@@ -56,7 +56,7 @@ Linux 支持以下内置 Integration Services 组件。 其中一些在 Linux �
 | 任务 | 限制 |
 |------------|---|
 | 执行进程任务 | 仅支持进程内模式。 |
-| 文件系统任务 | 不支持“移动目录”和“设置文件属性”操作   。 |
+| 文件系统任务 | 不支持“移动目录”和“设置文件属性”操作。 |
 | 脚本任务 | 仅支持标准 .NET Framework API。 |
 | 发送邮件任务 | 仅支持匿名用户模式。 |
 | 传输数据库任务 | 不支持 UNC 路径。 |
@@ -94,14 +94,14 @@ Linux 支持以下维护计划任务：
 | 组件 | 限制 |
 |------------|---|
 | ADO.NET 源和目标 | 仅支持 SQLClient 数据提供程序。 |
-| 平面文件源和目标 | 仅支持应用默认路径映射规则的 Windows 样式文件路径。 例如，`D:\home\ssis\travel.csv` 变为 `/home/ssis/travel.csv`。 |
+| 平面文件源和目标 | 1.仅支持应用默认路径映射规则的 Windows 样式文件路径。 例如，`D:\home\ssis\travel.csv` 变为 `/home/ssis/travel.csv`。 2. 不支持在 Red Hat 7 上装载的 Azure 文件共享。 |
 | OData 源 | 仅支持基本身份验证。 |
 | ODBC 源和目标 | 支持 Linux 上的 64 位 Unicode ODBC 驱动程序。 取决于 Linux 上的 UnixODBC 驱动程序管理器。 |
 | OLE DB 源和目标 | 仅支持 SQL Server Native Client 11.0 和 Microsoft OLE DB Provider for SQL Server。 |
 | | |
 
 ## <a name="supported-data-flow-transformations"></a>支持的数据流转换
-- Aggregate
+- 聚合
 - 审核
 - 平衡的数据分发服务器
 - 字符映射

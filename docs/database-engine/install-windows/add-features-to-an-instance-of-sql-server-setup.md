@@ -8,27 +8,29 @@ helpviewer_keywords:
 - feature adding [SQL Server]
 - " SQL Server, features"
 - adding features to  SQL Server
-ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: cawrites
 ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 09/07/2019
+ms.date: 02/05/2021
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 2f756136657d20a694cbaa2263500624eeaf8c27
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b8b520e3c5f44342970881e3e67b3dbf95ce9853
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347870"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837567"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>向 SQL Server 的实例添加功能（安装程序）
 
 [!INCLUDE [ SQL Server - Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-本文提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加功能的分步过程。 某些 SQL Server 组件或服务特定于 SQL Server 的实例。 它们也称为识别实例的组件或服务。 它们与托管它们的实例共享相同的版本，并且专用于该实例。 你可以向 SQL Server 实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关 SQL Server 各版本支持的功能的列表，请参阅 [SQL Server 2017 各个版本及其支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)或 [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)。
+本文提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加功能的分步过程。 某些 SQL Server 组件或服务特定于 SQL Server 的实例。 它们也称为识别实例的组件或服务。 它们与托管它们的实例共用相同的版本，并且仅用于相应实例。 你可以向 SQL Server 实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关 SQL Server 各版本支持的功能的列表，请参阅 [SQL Server 2017 各个版本及其支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)或 [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)。
 
 若要从命令提示符向 SQL Server 实例添加功能，请参阅[从命令提示符安装 SQL Server](./install-sql-server-from-the-command-prompt.md)。
+
+> [!CAUTION]
+> 如果将功能添加到 SQL Server 的现有安装，则会在安装介质的版本级别安装功能，这些功能可能位于 SQL Server 的其他版本级别。 这可能会导致意外行为或错误。 始终遵循 SQL Server 安装程序的成功做法，方法是将新功能引入到相同版本级别。 根据需要安装服务包 (SP)、累积更新 (CU) 和/或常规分发版本 (GDR)。 若要确定添加到 SQL Server 安装的功能版本，请参阅[确定 SQL Server 及其组件的版本、版本类别和更新级别](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -156,3 +158,4 @@ ms.locfileid: "100347870"
 - [修复失败的 SQL Server 2016 安装](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 - [使用安装向导升级 SQL Server（安装程序）](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 - [从命令提示符安装 SQL Server](./install-sql-server-from-the-command-prompt.md)
+- [SQL Server 的最新更新](latest-updates-for-microsoft-sql-server.md)

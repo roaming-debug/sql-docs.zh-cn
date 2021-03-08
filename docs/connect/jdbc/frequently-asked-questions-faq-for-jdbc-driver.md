@@ -2,7 +2,7 @@
 title: JDBC 驱动程序常见问题解答 (FAQ)
 description: 本页是关于 Microsoft JDBC Driver for SQL Server 的常见问题解答。
 ms.custom: ''
-ms.date: 01/29/2021
+ms.date: 02/26/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 634bbd66e2ad00ccda3b60f6f2fccfea976d09b0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 71c5e88db1bbc0c1b8d6698930c503a1134bac7d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163622"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837097"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驱动程序常见问题解答 (FAQ)
 
@@ -40,9 +40,9 @@ Microsoft JDBC Driver 9.2 支持 JDBC 4.2 和 4.3（部分）规范，并且安�
 
 | JAR                        | JDBC 规范            | 添加版本 |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-9.2.0.jre15.jar | JDBC 4.3（部分）和 4.2 | JDK 15.0    |
-| mssql-jdbc-9.2.0.jre11.jar | JDBC 4.3（部分）和 4.2 | JDK 11.0    |
-| mssql-jdbc-9.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-9.2.1.jre15.jar | JDBC 4.3（部分）和 4.2 | JDK 15.0    |
+| mssql-jdbc-9.2.1.jre11.jar | JDBC 4.3（部分）和 4.2 | JDK 11.0    |
+| mssql-jdbc-9.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 8.4 支持 JDBC 4.2 和 4.3（部分）规范，并且安装包中包含以下三个 JAR 类库：

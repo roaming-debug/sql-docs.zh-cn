@@ -6,33 +6,33 @@ author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 10/01/2020
+ms.date: 02/25/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 83e9d79f0316646d6ee25233e604e6751167b5f2
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 7c26dc7e193d3dd5ad688af4d4dc79e2dd3eeea7
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100039517"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101835964"
 ---
 # <a name="check-out-cluster-logs--with-kibana-dashboard"></a>使用 Kibana Dashboard 签出群集日志
 
-本文介绍如何监视 SQL Server 大数据群集内的应用程序。
+本文介绍如何监视 [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] 内的应用程序。
 
 ## <a name="prerequisites"></a>先决条件
 
-- [SQL Server 2019 大数据群集](deployment-guidance.md)
+- [[!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md)
 - [azdata 命令行工具](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>功能
 
-在 SQL Server 2019 中，可以创建、删除、描述、初始化、列出运行和更新应用程序。 下表介绍了可以与 azdata 一起使用的应用程序部署命令。
+在 [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] 中，可以创建、删除、描述、初始化、列出运行和更新应用程序。 下表介绍了可以与 azdata 一起使用的应用程序部署命令。
 
 |Command |说明 |
 |:---|:---|
-|`azdata bdc endpoint list` | 列出大数据群集的终结点。 |
+|`azdata bdc endpoint list` | 列出 [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] 的终结点。 |
 
 
 可以使用下面的示例来列出 Kibana Dashboard 的终结点：
@@ -51,8 +51,10 @@ azdata bdc endpoint list --endpoint-name logsui
 ![Kibana 仪表板](./media/view-cluster-status/kibana-dashboard.png)
 
 > [!NOTE]
-> （旧）Microsoft Edge 浏览器与 Kibana 不兼容，因此必须使用基于 chromium 的浏览器，才能正确显示仪表板。 使用不受支持的浏览器加载仪表板时，会看到一个空白页。 请参阅此处，了解 Kibana 支持的浏览器。
+> 旧版 Microsoft Edge 浏览器与 Kibana 不兼容，因此必须使用基于 chromium 的 Edge 浏览器，才能正确显示仪表板。 使用不受支持的浏览器加载仪表板时，会看到一个空白页，请参阅 [Kibana 支持的浏览器](https://www.elastic.co/support/matrix#matrix_browsers)。
 
 ## <a name="next-steps"></a>后续步骤
 
 有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的详细信息，请参阅[什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。
+
+

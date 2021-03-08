@@ -2,7 +2,7 @@
 title: JDBC Driver 发行说明
 description: 本文列出了 Microsoft JDBC Driver for SQL Server 的各个发行版。 对于每个发行版本，将对所做的更改进行命名和说明。
 ms.custom: ''
-ms.date: 01/29/2021
+ms.date: 03/02/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ffc7d8e4090673f3fc8feb96aa3650d35361281
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: c394eaeb6ec8361dd429b944b128d19a0cf33319
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99234860"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837524"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 发行说明
 
@@ -24,27 +24,42 @@ ms.locfileid: "99234860"
 
 ## <a name="92"></a><a id="92"></a> 9.2
 
-[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 9.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2153622)  
-[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 9.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2153521)  
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 9.2.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2155948)  
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 9.2.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2155949)  
 
-版本号：9.2.0 发布时间：2021 年 1 月 29 日
+版本号：9.2.1  
+发布日期：2021 年 3 月 2 日
 
 如果你需要下载非所检测到的语言的驱动程序，则可使用以下直接链接。  
-对于 zip 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
-对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
+对于 zip 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x40a)  
+对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x40a)  
 
 ### <a name="compliance"></a>合规性
 
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
-| 下载 JDBC Driver 9.2 的最新更新。 | &bull; &nbsp; [GitHub，9.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 9.2 包中的 jar。<br/><br/>例如，9.2 包中的 mssql-jdbc-9.2.0.jre15.jar 文件应与 Java 15 配合使用。 |
+| 下载 JDBC Driver 9.2 的最新更新。 | &bull; &nbsp; [GitHub，9.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 9.2 包中的 jar。<br/><br/>例如，9.2 包中的 mssql-jdbc-9.2.1.jre15.jar 文件应与 Java 15 配合使用。 |
 | 与 Java 开发工具包 (JDK) 版本 15.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 9.2 for SQL Server 现在还与 Java 开发工具包 (JDK) 版本 15.0 兼容。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="releases"></a>版本
 
-版本号：9.2.0 发布时间：2021 年 1 月 29 日
+版本号：9.2.1  
+发布日期：2021 年 3 月 2 日
+
+修复了9.2.1 中的问题：
+
+修复了在 Azure 环境中进行 ActiveDirectoryServicePrincipal 身份验证期间客户端密码为空的问题。
+
+版本号：9.2.0  
+发布日期：2021 年 1 月 29 日
+
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 9.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2153622)  
+[![下载](../../ssms/media/download-icon.png)下载 Microsoft JDBC Driver 9.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2153521)  
+
+Zip 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
+Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
 
 ### <a name="support-for-jdk-15"></a>支持 JDK 15
 

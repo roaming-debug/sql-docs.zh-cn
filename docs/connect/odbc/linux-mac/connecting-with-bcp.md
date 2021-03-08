@@ -2,7 +2,7 @@
 title: 使用 bcp 连接
 description: 了解如何在 Linux 和 macOS 上结合使用 bcp 实用工具与 Microsoft ODBC Driver for SQL Server。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/24/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b66ebab16bc26beec9ef9cd8699f53e75d36d478
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f8bff2d5d9892d709885d0888e36ca042aa72242
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727431"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837391"
 ---
 # <a name="connecting-with-bcp"></a>使用 bcp 连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,7 +74,14 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
   
 - -F *first_row*  
 指定要从表中导出或从数据文件导入的第一行的编号。  
-  
+
+- -G  
+当连接到 Azure SQL 数据库或 Azure Synapse Analytics 时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关至少需要 bcp 版本 17.6。 要确定你的版本，请执行 bcp -v。
+
+> [!IMPORTANT]
+> `-G` 选项仅适用于 Azure SQL 数据库和 Azure Synapse Analytics。
+> Linux 或 macOS 目前不支持 AAD 交互式身份验证。 AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) 版本 17.6.1 或更高版本以及正确[配置的 Kerberos 环境](using-integrated-authentication.md#configure-kerberos)。
+
 - -k  
 指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。  
   

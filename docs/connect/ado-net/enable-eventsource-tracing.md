@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
-ms.reviewer: ''
-ms.openlocfilehash: 1bcf11727a5ccd640846788b936ff5fefe9c63a3
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.reviewer: v-daenge
+ms.openlocfilehash: c13942dc5633deec4759ebd4c8a5661654c0952b
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595682"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837074"
 ---
 # <a name="enable-event-tracing-in-sqlclient"></a>启用 SqlClient 中的事件跟踪
 
@@ -50,6 +50,7 @@ Microsoft.Data.SqlClient.EventSource
 |||
 
 ## <a name="example"></a>示例
+
 下面的示例对“AdventureWorks”示例数据库上的数据操作启用事件跟踪，并在控制台窗口中显示事件。
 
 [!code-csharp [SqlClientEventSource#1](~/../sqlclient/doc/samples/SqlClientEventSource.cs#1)]
@@ -112,7 +113,7 @@ class Program
    ```
    xperf -start trace -f myTrace.etl -on *Microsoft.Data.SqlClient.EventSource
    ```
-   
+
 2. 运行本机 SNI 跟踪示例以连接到 SQL Server。
 
 3. 使用以下命令停止跟踪。
@@ -120,8 +121,8 @@ class Program
    ```
    xperf -stop trace
    ```
-   
-4. 使用 PerfView 打开在步骤 1 中指定的 myTrace.etl 文件。 可以通过 `Microsoft.Data.SqlClient.EventSource/SNIScope` 和 `Microsoft.Data.SqlClient.EventSource/SNITrace` 事件名称找到 SNI 跟踪日志。 
+
+4. 使用 PerfView 打开在步骤 1 中指定的 myTrace.etl 文件。 可以通过 `Microsoft.Data.SqlClient.EventSource/SNIScope` 和 `Microsoft.Data.SqlClient.EventSource/SNITrace` 事件名称找到 SNI 跟踪日志。
 
    ![使用 PerfView 查看 SNI 跟踪文件](media/view-event-trace-native-sni.png)
 
@@ -133,20 +134,20 @@ class Program
 2. 配置跟踪文件名、输出路径和提供程序名称。
 
    ![在收集之前配置 Prefview](media/collect-event-trace-native-sni.png)
-   
+
 3. 开始收集。
 
 4. 运行本机 SNI 跟踪示例以连接到 SQL Server。
 
 5. 使用 PerfView 停止收集。 根据步骤 2 中的配置，生成 PerfViewData.etl 文件需要一段时间。
 
-6. 在 PerfView 中打开 etl 文件。 可以通过 `Microsoft.Data.SqlClient.EventSource/SNIScope` 和 `Microsoft.Data.SqlClient.EventSource/SNITrace` 事件名称找到 SNI 跟踪日志。 
-
+6. 在 PerfView 中打开 `etl` 文件。 可以通过 `Microsoft.Data.SqlClient.EventSource/SNIScope` 和 `Microsoft.Data.SqlClient.EventSource/SNITrace` 事件名称找到 SNI 跟踪日志。
 
 ## <a name="external-resources"></a>外部资源  
+
 有关详细信息，请参阅以下资源。  
   
 |资源|说明|  
 |--------------|-----------------|  
-|[EventSource 类](/dotnet/api/system.diagnostics.tracing.eventsource)|提供用于创建 ETW 事件的功能。| 
+|[EventSource 类](/dotnet/api/system.diagnostics.tracing.eventsource)|用于创建 ETW 事件。|
 |[EventListener 类](/dotnet/api/system.diagnostics.tracing.eventlistener)|提供用于启用和禁用事件源中事件的方法。|

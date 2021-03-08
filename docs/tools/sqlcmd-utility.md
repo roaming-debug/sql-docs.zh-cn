@@ -26,14 +26,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 09/11/2020
+ms.date: 02/24/2021
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: be528466cb44e5c72413b0494dfe5416dd29783e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1b7d902064ef7a083b706af08730e91319be312f
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100338590"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836829"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 实用工具
 
@@ -179,8 +179,8 @@ sqlcmd
 当连接到 SQL 数据库或 Azure Synapse Analytics 时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 此选项设置 **sqlcmd** 脚本变量 SQLCMDUSEAAD = true。 -G 开关至少需要 **sqlcmd** 版本 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要确定你的版本，请执行 `sqlcmd -?`。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库或 Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)。 不支持同时使用 -A 选项和 -G 选项。
 
 > [!IMPORTANT]
-> `-G` 选项仅适用于 Azure SQL 数据库和 Azure 数据仓库。
-> Linux 或 macOS 目前不支持 AAD 交互式身份验证。 AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) 版本 17.6.1 或更高版本以及正确配置的 Kerberos 环境。
+> `-G` 选项仅适用于 Azure SQL 数据库和 Azure Synapse Analytics。
+> Linux 或 macOS 目前不支持 AAD 交互式身份验证。 AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) 版本 17.6.1 或更高版本以及正确[配置的 Kerberos 环境](../connect/odbc/linux-mac/using-integrated-authentication#configure-kerberos)。
 
 - **Azure Active Directory 用户名和密码：** 
 
@@ -199,7 +199,7 @@ sqlcmd
 - **Azure Active Directory 集成**
 
    要进行 Azure Active Directory 集成身份验证，可提供 -G 选项而无需用户名或密码。
-   Linux 或 macOS 目前不支持 AAD 集成身份验证。
+   AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) 版本 17.6.1 或更高版本以及正确[配置的 Kerberos 环境](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos)。
 
     ```cmd
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G

@@ -2,7 +2,7 @@
 description: JDBC 驱动程序的系统要求
 title: JDBC 驱动程序的系统要求 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2021
+ms.date: 02/26/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2052f4db6b90851a09b0aa7f56a2f4a9220be506
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 50820ee0f7da0f58872d255c8a918dff35234553
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99187668"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837544"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驱动程序的系统要求
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "99187668"
 
 Microsoft JDBC Driver 9.2 for SQL Server：  
 
-  JDBC Driver 9.2 在每个安装包中包含三个 JAR 类库：mssql-jdbc-9.2.0.jre8.jar、mssql-jdbc-9.2.0.jre11.jar 和 mssql-jdbc-9.2.0.jre15.jar  。
+  JDBC Driver 9.2 在每个安装包中包含三个 JAR 类库：mssql-jdbc-9.2.1.jre8.jar、mssql-jdbc-9.2.1.jre11.jar 和 mssql-jdbc-9.2.1.jre15.jar。
 
   JDBC Driver 9.2 适用于各种主要 Java 虚拟机，且受到这些虚拟机的支持，但仅在 OpenJDK 1.8、OpenJDK 11.0、OpenJDK 15.0、Azul Zulu JRE 1.8、Azul Zulu JRE 11.0 和 Azul Zulu JRE 15.0 上经过测试。
   
@@ -60,9 +60,9 @@ Microsoft JDBC Driver 9.2 for SQL Server：
   
   |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|说明|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-9.2.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 1.8。 使用 JRE 1.7 或更低版本会引发异常。<br /><br /> 9\.2 中的新功能包括：JDK 15 支持、Azure Active Directory 交互式身份验证支持、Azure Active Directory 服务主体身份验证支持以及适用于非 Azure Synapse Analytics 服务器的 useBulkCopyForBatchInsert 支持。 |
-|mssql-jdbc-9.2.0.jre11.jar|4.3|11|需要 Java 运行时环境 (JRE) 11.0. 使用 JRE 10.0 或更低版本会引发异常。<br /><br /> 9\.2 中的新功能包括：JDK 15 支持、Azure Active Directory 交互式身份验证支持、Azure Active Directory 服务主体身份验证支持以及适用于非 Azure Synapse Analytics 服务器的 useBulkCopyForBatchInsert 支持。 |
-|mssql-jdbc-9.2.0.jre15.jar|4.3|15|需要 Java Runtime Environment (JRE) 15.0。 使用 JRE 14.0 或更低版本会引发异常。<br /><br /> 9\.2 中的新功能包括：JDK 15 支持、Azure Active Directory 交互式身份验证支持、Azure Active Directory 服务主体身份验证支持以及适用于非 Azure Synapse Analytics 服务器的 useBulkCopyForBatchInsert 支持。 |
+|mssql-jdbc-9.2.1.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 1.8。 使用 JRE 1.7 或更低版本会引发异常。<br /><br /> 9\.2 中的新功能包括：JDK 15 支持、Azure Active Directory 交互式身份验证支持、Azure Active Directory 服务主体身份验证支持以及适用于非 Azure Synapse Analytics 服务器的 useBulkCopyForBatchInsert 支持。 |
+|mssql-jdbc-9.2.1.jre11.jar|4.3|11|需要 Java 运行时环境 (JRE) 11.0. 使用 JRE 10.0 或更低版本会引发异常。<br /><br /> 9\.2 中的新功能包括：JDK 15 支持、Azure Active Directory 交互式身份验证支持、Azure Active Directory 服务主体身份验证支持以及适用于非 Azure Synapse Analytics 服务器的 useBulkCopyForBatchInsert 支持。 |
+|mssql-jdbc-9.2.1.jre15.jar|4.3|15|需要 Java Runtime Environment (JRE) 15.0。 使用 JRE 14.0 或更低版本会引发异常。<br /><br /> 9\.2 中的新功能包括：JDK 15 支持、Azure Active Directory 交互式身份验证支持、Azure Active Directory 服务主体身份验证支持以及适用于非 Azure Synapse Analytics 服务器的 useBulkCopyForBatchInsert 支持。 |
 
 
   JDBC Driver 9.2 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目：  
@@ -71,7 +71,7 @@ Microsoft JDBC Driver 9.2 for SQL Server：
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>9.2.0.jre11</version>
+    <version>9.2.1.jre11</version>
 </dependency>
 ```
 
