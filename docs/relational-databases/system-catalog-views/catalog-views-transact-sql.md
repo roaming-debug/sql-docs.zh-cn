@@ -24,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d209068156b63111114b1c81111d8f1ebb1cc3f8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2612f36b574cd9d79d4bf394b26318e7ebb1cf31
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193063"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464937"
 ---
 # <a name="system-catalog-views-transact-sql"></a> (Transact-sql) 的系统目录视图
 
@@ -121,4 +121,4 @@ ms.locfileid: "99193063"
 
 - [&#40;Transact-sql&#41;的信息架构视图 ](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)
-- [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)
+- [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)

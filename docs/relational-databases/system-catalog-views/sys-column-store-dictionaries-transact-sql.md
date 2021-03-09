@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c1d5bddc4c0e6e5e81758783c37e746e635788cb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 599e307eadb261ce8f8e259b8fab424ae66b1ec5
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99188829"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464815"
 ---
 # <a name="syscolumn_store_dictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99188829"
 |column_id|**int**|以1开头的列存储列的 ID。 第一列的 ID 为1，第二列的 ID = 2，等等。|  
 |**dictionary_id**|**int**|可以有两种类型的字典：全局和本地，与列段关联。 Dictionary_id 为0表示在所有列段之间共享的全局字典 (为该列) 每个行组。|  
 |**version**|**int**|字典格式的版本。|  
-|type |**int**|字典类型：<br /><br /> 1-包含 **int** 值的哈希字典<br /><br /> 2-未使用<br /><br /> 3-包含字符串值的哈希字典<br /><br /> 包含 **浮点** 值的4哈希字典<br /><br /> 有关字典的详细信息，请参阅 [列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)。|  
+|type|**int**|字典类型：<br /><br /> 1-包含 **int** 值的哈希字典<br /><br /> 2-未使用<br /><br /> 3-包含字符串值的哈希字典<br /><br /> 包含 **浮点** 值的4哈希字典<br /><br /> 有关字典的详细信息，请参阅 [列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)。|  
 |**last_id**|**int**|字典中的最后一个数据 ID。|  
 |**entry_count**|**bigint**|字典中的条目数。|  
 |**on_disk_size**|**bigint**|字典大小（以字节为单位）。|  
@@ -52,7 +52,7 @@ ms.locfileid: "99188829"
 ## <a name="see-also"></a>另请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   

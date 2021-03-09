@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: eacd871674d15bfa96cd77dd290ff9640520b58a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 01417fa9f7f790229e073964133396f87f144d45
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346424"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465151"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的安装指南
 
@@ -36,7 +36,7 @@ ms.locfileid: "100346424"
 > - [Ubuntu 快速入门](quickstart-install-connect-ubuntu.md)
 > - [Docker 快速入门](quickstart-install-connect-docker.md)
 
-有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](../linux/sql-server-linux-faq.md)。
+有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](../linux/sql-server-linux-faq.yml)。
 
 ## <a name="supported-platforms"></a><a id="supportedplatforms"></a> 支持的平台
 
@@ -239,4 +239,4 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
 > [!TIP]
-> 有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](sql-server-linux-faq.md)。
+> 有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](sql-server-linux-faq.yml)。

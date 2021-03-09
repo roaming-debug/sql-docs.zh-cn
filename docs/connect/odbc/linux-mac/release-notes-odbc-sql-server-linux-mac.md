@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2c178b7afd7bf46003b689ef56af67f12609e0a9
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 83f8dbb834af379e02635130e23c0f5fd7299f3b
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837336"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464282"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
 
@@ -141,7 +141,7 @@ GeneMi.  2019/04/03.
 
 ## <a name="17"></a>17
 
-**支持新分发**：macOS High Sierra 和 Ubuntu 17.10 
+**支持新分发**：macOS High Sierra 和 Ubuntu 17.10
 
 **性能改进**：驱动程序在 UTF-8/16 之间转换时，性能提升超过 10 倍。
 
@@ -151,19 +151,21 @@ GeneMi.  2019/04/03.
 
 新连接字符串属性 UseFMTOnly 使驱动程序在需要临时表的特殊情况下使用旧的元数据。
 
-支持 Azure SQL 托管实例。 
+支持 Azure SQL 托管实例。
+
 > [!NOTE]
 > 使用托管实例时存在许多差异：
-> -   不支持 FILESTREAM 
-> -   不支持本地文件系统访问，但这对于跟踪文件等类似内容是必需的 
-> -   不支持从本地路径创建 UDT 
-> -   不支持 Windows 集成身份验证 
-> -   不支持 DTC 
-> -   “sa”帐户不存在（默认帐户称为“cloudSA”）
-> -   TDS 令牌错误 (0xAA) 返回不正确的服务器名称
-> -   不支持数据库名称中的特殊字符 
-> -   不支持 ALTER DATABASE [dbname1] MODIFY NAME = [dbname2]
-> -   无论语言设置如何，错误消息始终以英语显示（与 Azure 相同） 
+>
+> - 不支持 FILESTREAM
+> - 不支持本地文件系统访问，但这对于跟踪文件等类似内容是必需的
+> - 不支持从本地路径创建 UDT
+> - 不支持 Windows 集成身份验证
+> - 不支持 DTC
+> - “sa”帐户不存在（默认帐户称为“cloudSA”）
+> - TDS 令牌错误 (0xAA) 返回不正确的服务器名称
+> - 不支持数据库名称中的特殊字符
+> - 不支持 ALTER DATABASE [dbname1] MODIFY NAME = [dbname2]
+> - 无论语言设置如何，错误消息始终以英语显示（与 Azure 相同）
 
 ## <a name="131-for-ssnoversion-on-linux-and-macos-may-2017"></a>Linux 和 macOS 上的 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，2017 年 5 月
 

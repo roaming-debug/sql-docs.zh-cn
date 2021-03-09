@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 2032bc1ba6658b18649f5908bebd4ae9405522b9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 45101cdf0c5e0dd9db7565ef9ff8c122749db1d7
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99150704"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464161"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99150704"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|class |**tinyint**|标识被引用的实体的类：<br /><br /> 0 = 对象或列 (非绑定到架构的引用仅) <br /><br /> 1 = 对象或列（架构绑定引用）<br /><br /> 2 = 类型（架构绑定引用）<br /><br /> 3 = XML 架构集合（架构绑定引用）<br /><br /> 4 = 分区函数（架构绑定引用）|  
+|**class**|**tinyint**|标识被引用的实体的类：<br /><br /> 0 = 对象或列 (非绑定到架构的引用仅) <br /><br /> 1 = 对象或列（架构绑定引用）<br /><br /> 2 = 类型（架构绑定引用）<br /><br /> 3 = XML 架构集合（架构绑定引用）<br /><br /> 4 = 分区函数（架构绑定引用）|  
 |**class_desc**|**nvarchar(60)**|被引用的实体的类的说明：<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
 |object_id|**int**|引用对象的 ID。|  
 |column_id|**int**|如果引用 ID 是一列，则为引用列的 ID；否则为 0。|  
@@ -54,6 +54,6 @@ ms.locfileid: "99150704"
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
   
   

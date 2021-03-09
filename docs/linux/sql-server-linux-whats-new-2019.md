@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d6978bfa68d3a9b922e46454481618e448e91b96
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 8cc766248f4dd2776a0367b2c0ac6e12f385433e
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346198"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464647"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 的新增功能
 
@@ -54,6 +54,6 @@ ms.locfileid: "100346198"
 - [在 Docker 上运行](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true)
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](sql-server-linux-faq.md)。 要查看 SQL Server 2019 中引入的其他改进，请参阅 [SQL Server 2019 的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true)。
+有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](sql-server-linux-faq.yml)。 要查看 SQL Server 2019 中引入的其他改进，请参阅 [SQL Server 2019 的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true)。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5455169782503939330c32829a89bf0701aac25a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 531dca0f328f5f587d2da545bcae182f228bdee5
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943568"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464752"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 驱动程序概述
 
@@ -44,7 +44,7 @@ JDBC 驱动程序版本 4.x 是过时版本。 对 4.x 的支持已在 2018 年�
 |[部署 JDBC 驱动程序](../../connect/jdbc/deploying-the-jdbc-driver.md)|介绍如何在 Windows 和 Unix 操作系统中重新分发和部署 Microsoft JDBC 驱动程序。|  
 |[查找 JDBC 驱动程序的其他信息](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|介绍在何处可找到有关 Microsoft JDBC 驱动程序的其他资源，包括外部资源的链接。|  
 |[Microsoft JDBC Driver for SQL Server 支持矩阵](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft SQL Server JDBC 驱动程序的支持矩阵和支持生命周期策略。|  
-|[JDBC 驱动程序常见问题解答 (FAQ)](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC 驱动程序常见问题解答。|  
+|[JDBC 驱动程序常见问题解答 (FAQ)](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.yml)|Microsoft JDBC 驱动程序常见问题解答。|  
 |[Microsoft SQL Server JDBC 驱动程序的功能依赖关系](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server 的功能依赖项。|
 | &nbsp; | &nbsp; |
 

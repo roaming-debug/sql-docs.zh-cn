@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e4d772f7355982b1856ac467558242c561e6b391
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: c863cb129f1ba40c2bb73fff51adb859a8a7bade
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346196"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464646"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的新增功能
 
@@ -71,6 +71,6 @@ ms.locfileid: "100346196"
 - [在 Docker 上运行](quickstart-install-connect-docker.md)
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](sql-server-linux-faq.md)。 要查看 SQL Server 2017 中引入的其他改进，请参阅[SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)。
+有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](sql-server-linux-faq.yml)。 要查看 SQL Server 2017 中引入的其他改进，请参阅[SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

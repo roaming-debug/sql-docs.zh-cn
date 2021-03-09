@@ -1,0 +1,29 @@
+### YamlMime:FAQ
+metadata:
+  title: PolyBase 中的常见问题解答 |Microsoft Docs
+  description: 比较 PolyBase 和链接服务器，并比较大数据群集中的 PolyBase 和独立实例中的 PolyBase。 了解 PolyBase 2019 中的新增功能。
+  ms.date: 12/02/2020
+  ms.prod: sql
+  ms.technology: polybase
+  ms.topic: conceptual
+  author: MikeRayMSFT
+  ms.author: mikeray
+  ms.reviewer: mikeray
+  ms.openlocfilehash: ad8a61554bf76ae318f33df6d50a59795448fff4
+  ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 03/08/2021
+  ms.locfileid: "102466189"
+title: 常见问题
+summary: >
+  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+sections:
+- name: 忽略
+  questions:
+  - question: PolyBase 与 链接服务器
+    answer: "下表主要说明了 PolyBase 和 链接服务器之间的功能差异：\n\n|PolyBase | 链接服务器|\n|--------------------------|--------------------------|  \n|数据库范围的对象|实例范围的对象|\n|使用 ODBC 驱动程序|使用 OLEDB 提供程序|\n|支持对所有数据源执行只读操作，仅支持对 HADOOP 和数据池数据源的插入操作|支持读写操作|\n|可横向扩展来自单个连接的远程数据源查询 |无法横向扩展来自单个连接的远程数据源查询|\n|支持谓词下推|支持谓词下推|\n|可用性组不需要单独配置|可用性组中的每个实例均需要单独配置|\n|仅基本身份验证|基本身份验证和集成身份验证|\n|适用于处理大量行的分析查询|适用于返回单行或少量行的 OLTP 查询|\n|使用外部表的查询不能参与分布式事务|分布式查询可以参与分布式事务|\n"
+  - question: PolyBase 2019 中的新增功能
+    answer: "[!INCLUDE[sssql19](../../includes/sssql19-md.md)]中的 PolyBase 现可从更多种数据源读取数据。 这些外部数据源中的数据可作为外部表存储在 SQL Server 上。 PolyBase 还支持对这些外部数据源进行下推计算（不包括 ODBC 泛型类型）。\n\n**兼容的数据源**\n\n- SQL Server\n- Oracle\n- Teradata\n- MongoDB\n- 兼容的 ODBC 泛型类型\n  \n> [!NOTE]\n> PolyBase 可允许使用第三方 ODBC 驱动程序连接到外部数据源。 这些驱动程序不随 PolyBase 一起提供，可能不会按预期工作。 有关详细信息，请参阅有关 PolyBase ODBC 泛型配置的[指南](../../relational-databases/polybase/polybase-configure-odbc-generic.md)。  \n"
+  - question: 大数据群集中的 PolyBase 与独立实例中的 PolyBase
+    answer: "下表主要说明了 [!INCLUDE[sssql19](../../includes/sssql19-md.md)]独立安装和 [!INCLUDE[sssql19](../../includes/sssql19-md.md)]大数据群集提供的 PolyBase 功能：\n\n|Feature |大数据群集|独立实例|\n|--------------------------|--------------------------|---------|   \n|为 SQL Server、Oracle、Teradata 和 Mongo DB 创建外部数据源 |X|X|\n|使用可兼容的第三方 ODBC 驱动程序创建外部数据源 | | X|\n|为 HADOOP 数据源创建外部数据源 | X| X|\n|为 Azure Blob 存储创建外部数据源 | X| X|\n|在 SQL Server 数据池上创建外部表 | X| |\n|在 SQL Server 存储池上创建外部表 | X| |\n|执行横向扩展查询 | X| X（仅限 Windows） |\n\n> [!NOTE]\n> 此表未说明最新的 [!INCLUDE[sssql19](../../includes/sssql19-md.md)] CTP 提供的功能。 有关可用功能的信息，请参阅发行说明。 有关使用 ODBC 泛型连接器进行连接的详细信息，请访问我们的[配置 ODBC 泛型类型的操作指南](polybase-configure-odbc-generic.md)。"

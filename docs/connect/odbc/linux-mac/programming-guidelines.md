@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 8843bf303f20a7d8aa0baac5be3d9da4e7c54e01
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 6d602db9c189b6e7fce8b767b60204253ccb7f67
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886361"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464388"
 ---
 # <a name="programming-guidelines"></a>编程指南
 
@@ -148,7 +148,7 @@ Windows 与 Linux 和 macOS 上的几个版本的 iconv 库之间存在一些编
 3.  当驱动程序与高度多线程的应用程序一起使用时，unixODBC 的句柄验证可能会成为性能瓶颈。 在这种情况下，通过使用 `--enable-fastvalidate` 选项编译 unixODBC 可以显着提高性能。 但是，请注意，这可能导致将无效句柄传递给 ODBC API 的应用程序崩溃，而不是返回 `SQL_INVALID_HANDLE` 错误。
 
 ## <a name="see-also"></a>另请参阅  
-[常见问题解答](frequently-asked-questions-faq-for-odbc-linux.md)
+[常见问题解答](frequently-asked-questions-faq-for-odbc-linux.yml)
 
 [此版本驱动程序中的已知问题](known-issues-in-this-version-of-the-driver.md)
 

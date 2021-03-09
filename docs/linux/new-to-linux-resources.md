@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 253c398e0f010e164d1efa5c39fc958e86047ed6
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3a188ed2a055d65fec5475e620ea31bd512b058b
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100064052"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464675"
 ---
 # <a name="new-to-linux-resources-for-sql-users"></a>面向刚接触 Linux 的 SQL 用户的资源
 
@@ -65,4 +65,4 @@ ms.locfileid: "100064052"
 
 熟悉 Linux 环境后，请查看 Linux 上的 SQL Server 的[版本和组件](sql-server-linux-editions-and-components-2019.md)，以及[支持的 Linux 平台](sql-server-linux-release-notes-2019.md)。 
 
-若要了解详细信息，请参阅[其他 Linux 教程](https://www.linux.org/forums/linux-beginner-tutorials.123/)以及[常见问题解答](sql-server-linux-faq.md)。
+若要了解详细信息，请参阅[其他 Linux 教程](https://www.linux.org/forums/linux-beginner-tutorials.123/)以及[常见问题解答](sql-server-linux-faq.yml)。

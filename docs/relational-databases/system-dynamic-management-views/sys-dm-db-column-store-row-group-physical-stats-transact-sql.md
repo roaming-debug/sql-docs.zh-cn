@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6a1b4c7a8bdead03561989fbe17f5a28b4f0621
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 020cfa1e2f1f60064f21063e0766213ab44aaa25
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237507"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464822"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-sql) 
 
@@ -44,7 +44,7 @@ ms.locfileid: "99237507"
 |**partition_number**|**int**|保存 *row_group_id* 的表分区的 ID。 您可以使用 partition_number 将此 DMV 联接到 sys.partitions。|  
 |**row_group_id**|**int**|此行组的 ID。 对于已分区表，值在分区中是唯一的。<br /><br /> 对于内存尾，为-1。|  
 |**delta_store_hobt_id**|**bigint**|增量存储中行组的 hobt_id。<br /><br /> 如果行组不在增量存储中，则为 NULL。<br /><br /> 对于内存中表尾，为 NULL。|  
-|**state**|**tinyint**|与 *state_description* 关联的 ID 号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 逻辑删除<br /><br /> 压缩是适用于内存中表的唯一状态。|  
+|State |**tinyint**|与 *state_description* 关联的 ID 号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 逻辑删除<br /><br /> 压缩是适用于内存中表的唯一状态。|  
 |**state_desc**|**nvarchar(60)**|行组状态的说明：<br /><br /> 0-不可见-正在生成的行组。 例如： <br />压缩数据时，列存储中的行组是不可见的。 压缩完成后，元数据开关会将列存储行组的状态从不可见改为已压缩，并将增量存储行组的状态从 "已关闭" 更改为 "逻辑删除"。<br /><br /> 1-打开-正在接受新行的增量存储行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 2-已关闭-增量存储中的行组，其中包含最大行数，正在等待元组移动进程将其压缩到列存储中。<br /><br /> 3压缩-使用列存储压缩进行压缩并存储在列存储中的行组。<br /><br /> 4-逻辑删除-行组，该组以前位于增量存储中，不再使用。|  
 |**total_rows**|**bigint**|以物理方式存储在行组中的行数。 对于压缩的行组。 包括标记为已删除的行。|  
 |**deleted_rows**|**bigint**|以物理方式存储在压缩行组中且标记为要删除的行数。<br /><br /> 对于增量存储中的行组，值为 0。|  
@@ -91,7 +91,7 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [列存储索引体系结构](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
- [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  

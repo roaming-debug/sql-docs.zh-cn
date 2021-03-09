@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: e24a8532aa721f4103e6cbff4b34b15bf607640c
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 2e48f40003412a2db5340a32e5408f649bf5bb18
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839032"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464972"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -104,7 +104,7 @@ GO
 |CLR_HOSTTASK|仅限内部使用。|
 |CLR_SPIN_LOCK|仅限内部使用。|
 |CMED_DATABASE|仅限内部使用。|
-|CMED_HASH_SET|仅限内部使用。|
+|CMED_HASH_SET|仅限内部使用。<br><br>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] CU1)  (<br><br> **注意：** 应用 [SQL Server 2016 CU2](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5)后，此旋转锁名称将更改为 LOCK_RW_CMED_HASH_SET。|
 |COLUMNDATASETSESSIONLIST|仅限内部使用。|
 |COLUMNSTORE_HASHTABLE|仅限内部使用。|
 |COLUMNSTOREBUILDSTATE_LIST|仅限内部使用。|
@@ -124,7 +124,7 @@ GO
 |DBSEEDING_OPERATION|仅限内部使用。|
 |DBT_HASH|仅限内部使用。|
 |DBT_IO_LIST|仅限内部使用。|
-|DBTABLE|控制对包含该数据库的属性的 SQL Server 中的每个数据库的内存中数据结构的访问。 请参阅[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)，了解详细信息。 |
+|DBTABLE|控制对中每个 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 包含该数据库的属性的数据库的内存中数据结构的访问。 请参阅[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)，了解详细信息。 |
 |DEFERRED_WF_EXT_DROP|仅限内部使用。|
 |DEK_INSTANCE|仅限内部使用。|
 |DELAYED_PARTITIONED_STACK|仅限内部使用。|
@@ -134,7 +134,7 @@ GO
 |DIGEST_CACHE|仅限内部使用。|
 |DINPBUF|仅限内部使用。|
 |DIRECTLOGCONSUMER|仅限内部使用。|
-|DP_LIST|控制对打开了间接检查点的数据库的脏页列表的访问。 应用 [文章 4497928](https://support.microsoft.com/kb/4497928)、 [文章 4040276](https://support.microsoft.com/kb/4040276) 中的修补程序或使用 [跟踪标志 3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 请参阅[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)，了解详细信息。|
+|DP_LIST|控制对打开了间接检查点的数据库的脏页列表的访问。 应用 [文章 4497928](https://support.microsoft.com/kb/4497928)、 [文章 4040276](https://support.microsoft.com/kb/4040276)中的修补程序，或使用 [跟踪标志 3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 请参阅[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)，了解详细信息。|
 |DROP|仅限内部使用。|
 |DROP_TEMPO|仅限内部使用。|
 |DROPPED_ALLOC_UNIT|仅限内部使用。|
@@ -191,18 +191,18 @@ GO
 |LANG_RES_LOAD|仅限内部使用。|
 |LIVE_TARGET_TVF|仅限内部使用。|
 |LOCK_FREE_LIST|仅限内部使用。|
-|LOCK_HASH|保护对锁定管理器哈希表的访问，该表存储有关在数据库中持有的锁的信息。 请参阅[本文](https://support.microsoft.com/kb/2926217)，了解详细信息。|
+|LOCK_HASH|保护对锁定管理器哈希表的访问，该表存储有关在数据库中持有的锁的信息。 有关详细信息，请参阅 [此文章](https://support.microsoft.com/kb/2926217) 以及 [事务锁定和行版本控制指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine)。|
 |LOCK_NOTIFICATION|仅限内部使用。|
 |LOCK_RESOURCE_ID|仅限内部使用。|
 |LOCK_RW_ABTX_HASH_SET|仅限内部使用。|
 |LOCK_RW_AGDB_HEALTH_DIAG|仅限内部使用。|
-|LOCK_RW_CMED_HASH_SET|仅限内部使用。|
+|LOCK_RW_CMED_HASH_SET|仅限内部使用。<br><br>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从 CU2 开始 ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) 、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]|
 |LOCK_RW_DPT_TABLE|仅限内部使用。|
 |LOCK_RW_IN_ROW_TRACKER|仅限内部使用。|
 |LOCK_RW_LOGIN_RATE_STATS|仅限内部使用。|
 |LOCK_RW_PVS_PAGE_TRACKER|仅限内部使用。|
 |LOCK_RW_RBIO_REQ|仅限内部使用。|
-|LOCK_RW_SECURITY_CACHE|仅限内部使用。|
+|LOCK_RW_SECURITY_CACHE|保护与安全令牌和访问检查相关的缓存条目。 <br><br>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从 CU2 开始 ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) 、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]<br><br> 如果 TokenAndPermUserStore 缓存存储中的条目持续增长，你可能会注意到此旋转锁的较大旋转。 评估使用 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 和4618来限制条目。 有关详细信息，请参阅 [访问检查缓存服务器配置选项](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)、 [本文和](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d)此 [博客](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)。|
 |LOCK_RW_TEST|仅限内部使用。|
 |LOCK_RW_WPR_BUCKET|仅限内部使用。|
 |LOCK_SORT_STREAM|仅限内部使用。|
@@ -233,7 +233,7 @@ GO
 |MEM_MGR|仅限内部使用。|
 |MGR_CACHE|仅限内部使用。|
 |MIGRATION_BUF_LIST|仅限内部使用。|
-|终端|保护与安全令牌和访问检查相关的缓存条目。 用于以下版本 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。 如果 TokenAndPermUserStore 缓存存储中的条目持续增长，你可能会注意到此旋转锁的较大旋转。 评估使用 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 和4618来限制条目。 其他参考资料： [博客](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)、 [文章](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) 和 [文档](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)。|
+|终端|保护与安全令牌和访问检查相关的缓存条目。 <br><br>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最多 ([!INCLUDE[sssql11-md](../../includes/sssql11-md.md)]) <br><br>如果 TokenAndPermUserStore 缓存存储中的条目持续增长，你可能会注意到此旋转锁的较大旋转。 评估使用 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 和4618来限制条目。 有关详细信息，请参阅 [访问检查缓存服务器配置选项](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)、 [本文和](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d)此 [博客](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)。|
 |NETCONN_ADDRESS|仅限内部使用。|
 |ONDEMAND_TASK|仅限内部使用。|
 |ONE_PROC_SIM_NODE_CONTEXT|仅限内部使用。|
@@ -294,7 +294,7 @@ GO
 |SBS_TRANSPORT|仅限内部使用。|
 |SBS_UCS_DISPATCH|仅限内部使用。|
 |安全性|仅限内部使用。|
-|SECURITY_CACHE|保护与安全令牌和访问检查相关的缓存条目。 用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更高版本。 如果 TokenAndPermUserStore 缓存存储中的条目持续增长，你可能会注意到此旋转锁的较大旋转。 评估使用 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 和4618来限制条目。 其他参考资料： [博客](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)、 [文章](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) 和 [文档](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)。 请注意，在对 [sql 2017 和 sql 2016 应用更新](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5)后，旋转锁名称发生了更改。|
+|SECURITY_CACHE|保护与安全令牌和访问检查相关的缓存条目。 <br><br>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] CU1)  (<br><br> 如果 TokenAndPermUserStore 缓存存储中的条目持续增长，你可能会注意到此旋转锁的较大旋转。 评估使用 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 和4618来限制条目。 有关详细信息，请参阅 [访问检查缓存服务器配置选项](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)、 [本文和](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d)此 [博客](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)。<br><br>**注意：** 应用 [SQL Server 2016 CU2](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5)后，此旋转锁名称将更改为 LOCK_RW_SECURITY_CACHE。|
 |SECURITY_FEDAUTH_AAD_BECWSCONNS|仅限内部使用。|
 |SEMANTIC_TICACHE|仅限内部使用。|
 |SEQUENCED_OBJECT|仅限内部使用。|
@@ -312,7 +312,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|仅限内部使用。|
 |SOS_BLOCKALLOCPARTIALLIST|仅限内部使用。|
 |SOS_BLOCKDESCRIPTORBUCKET|仅限内部使用。|
-|SOS_CACHESTORE|同步对 SQL Server （如计划缓存或临时表缓存）中各种内存中缓存的访问。 此旋转锁类型上的繁重争用可能意味着许多不同的因素，具体取决于争用中的特定缓存。 请与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系，以帮助解决此旋转锁类型问题。 |
+|SOS_CACHESTORE|同步对中各种内存中缓存的访问 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] ，例如计划缓存或临时表缓存。 此旋转锁类型上的繁重争用可能意味着许多不同的因素，具体取决于争用中的特定缓存。 请与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系，以帮助解决此旋转锁类型问题。 |
 |SOS_CACHESTORE_CLOCK|仅限内部使用。|
 |SOS_CLOCKALG_INTERNODE_SYNC|仅限内部使用。|
 |SOS_DEBUG_HOOK|仅限内部使用。|
@@ -407,8 +407,6 @@ GO
 |XVB_CSN|仅限内部使用。|
 |XVB_LIST|仅限内部使用。|
  
-
-  
 ## <a name="see-also"></a>另请参阅  
  
  [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   

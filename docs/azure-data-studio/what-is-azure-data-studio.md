@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/20/2020
-ms.openlocfilehash: daba14f8b407d2ce5aabd81fc38915c29e114a5e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b9adac14bfd458b96fe4e46c478af2d2b5d6a181
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048058"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464866"
 ---
 # <a name="what-is-azure-data-studio"></a>什么是 Azure Data Studio？
 
@@ -22,7 +22,7 @@ Azure Data Studio 是一种跨平台的数据库工具，适合在 Windows、mac
 
 Azure Data Studio 利用 IntelliSense、代码片段、源代码管理集成和集成终端提供新式编辑器体验。 它在设计时考虑了数据平台用户，带有内置查询结果集图表和可自定义的仪表板。
 
-可通过一个提供软件修改和使用权限的源代码 EULA 来获取 GitHub 上 Azure Data Studio 的源代码及其数据提供程序，但不能在云服务中重新分发或托管该源代码。 有关详细信息，请参阅 [Azure Data Studio 常见问题解答](faq.md)。
+可通过一个提供软件修改和使用权限的源代码 EULA 来获取 GitHub 上 Azure Data Studio 的源代码及其数据提供程序，但不能在云服务中重新分发或托管该源代码。 有关详细信息，请参阅 [Azure Data Studio 常见问题解答](faq.yml)。
 
 [下载并安装 Azure Data Studio](./download-azure-data-studio.md)
 
@@ -167,7 +167,7 @@ Azure Data Studio 还提供用于创建自定义 SQL 代码片段的功能。 �
 ## <a name="next-steps"></a>后续步骤
 
 - [下载并安装 Azure Data Studio](./download-azure-data-studio.md)
-- [Azure Data Studio 常见问题解答](faq.md)
+- [Azure Data Studio 常见问题解答](faq.yml)
 - [连接并查询 SQL Server](quickstart-sql-server.md)
 - [连接并查询 Azure SQL 数据库](quickstart-sql-database.md)
 

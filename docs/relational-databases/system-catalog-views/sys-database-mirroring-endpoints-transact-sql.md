@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d9570a43fe817eac49dfa953745272021af0b6f1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a402c209d94c74a7709462a6f4db64ed73fbb318
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209507"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464580"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "99209507"
 |**connection_auth_desc**|**Nvarchar (60)**|连接到此端点所需的身份验证类型的说明，为以下值之一：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE|  
 |**certificate_id**|**int**|身份验证所用证书的 ID（如果有）。<br /><br /> 0 = 使用 Windows 身份验证。|  
 |**encryption_algorithm**|**tinyint**|加密算法，为以下值之一：<br /><br /> **0** -无<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -无，RC4<br /><br /> **4** -无、AES<br /><br /> **5** -RC4、AES<br /><br /> **6** -AES、RC4<br /><br /> **7** -无、RC4、AES<br /><br /> **8** -无、AES、RC4|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的说明，为以下值之一：<br /><br /> NONE<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的说明，为以下值之一：<br /><br /> 无<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>备注  
   
@@ -64,6 +64,6 @@ ms.locfileid: "99209507"
  [sys.database_mirroring &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
  [数据库镜像终结点 (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
   
   

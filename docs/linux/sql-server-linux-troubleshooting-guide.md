@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 56961a0dd9f57085ebe2d937668fe32c7e28dc73
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1f2df7f7cb0660cb879334a1099f6b7ce639d211
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346222"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464632"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
@@ -22,7 +22,7 @@ ms.locfileid: "100346222"
 本文档介绍如何对 Linux 上或 Docker 容器中运行的 Microsoft SQL Server 进行故障排除。 在对 Linux 上的 SQL Server 进行故障排除时，请记得查看 [Linux 上的 SQL Server 发行说明](sql-server-linux-release-notes.md)中的支持功能和已知限制。
 
 > [!TIP]
-> 有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](sql-server-linux-faq.md)。
+> 有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](sql-server-linux-faq.yml)。
 
 ## <a name="troubleshoot-connection-failures"></a><a id="connection"></a> 解决连接失败问题
 如果在连接到 Linux SQL Server 时存在问题，可以检查以下几点。

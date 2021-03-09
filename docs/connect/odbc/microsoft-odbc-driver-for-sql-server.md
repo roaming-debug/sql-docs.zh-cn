@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b17517d0a4a904c5a8ffa56a625ba092c6b79b41
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: b107155d9672b2a1d7b905a387e48373905dab55
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807040"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464167"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -59,7 +59,7 @@ ODBC 驱动程序附带 [sqlcmd](../../tools/sqlcmd-utility.md)  和 [bcp](../..
 - [使用 bcp 连接  ](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [使用 sqlcmd 进行连接  ](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [数据访问跟踪](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
-- [常见问题解答](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+- [常见问题解答](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.yml)
 - [安装驱动程序管理器](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 - [已知问题](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [编程指南](../../connect/odbc/linux-mac/programming-guidelines.md)

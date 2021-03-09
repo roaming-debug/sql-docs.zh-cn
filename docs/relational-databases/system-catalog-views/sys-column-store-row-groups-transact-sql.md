@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: e2b9faf192f19df1cf402d6fc1850fb4acd855c0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b949ce0f7c32676c1d47125d411af1e22c00bb7a
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99205361"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465067"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "99205361"
 |**partition_number**|int|保留行组 row_group_id 的表分区的 ID。 您可以使用 partition_number 将此 DMV 联接到 sys.partitions。|  
 |**row_group_id**|int|与此行组关联的行组编号。 这在分区中是唯一的。<br /><br /> -1 = 内存中表的尾部。|  
 |**delta_store_hobt_id**|bigint|增量存储中打开的行组的 hobt_id。<br /><br /> 如果行组不在增量存储中，则为 NULL。<br /><br /> 对于内存中表的尾部，为 NULL。|  
-|**state**|tinyint|与 state_description 关联的 ID 号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = 逻辑删除|  
+|State |tinyint|与 state_description 关联的 ID 号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = 逻辑删除|  
 |**state_description**|nvarchar(60)|行组的持久状态的说明：<br /><br /> 不可见-从增量存储中的数据生成的过程中隐藏的压缩段。 读操作将使用增量存储区，直至完成不可见的压缩段。 然后，新段变为可见，并删除源增量存储区。<br /><br /> OPEN-正在接受新记录的读/写行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 已关闭-已填充但尚未由元组移动器进程压缩的行组。<br /><br /> 压缩-已填充和压缩的行组。|  
 |**total_rows**|bigint|行组中物理存储的总行数。 一些行可能已删除，但它们仍被存储。 一个行组中的最大行数为 1,048,576（十六进制 FFFFF）。|  
 |**deleted_rows**|bigint|行组中标记为已删除的总行数。 对于 DELTA 行组，此值始终为 0。|  
@@ -78,10 +78,10 @@ AND i.index_id = CSRowGroups.index_id
 ORDER BY object_name(i.object_id), i.name, row_group_id;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   

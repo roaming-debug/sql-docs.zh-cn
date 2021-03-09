@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 1698ea0f99a92c9b93af3eb7eb479bb10b200928
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f39b48cc7240cd550e42574c082a86f07d58abd5
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198587"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102463975"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "99198587"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|备份设备的名称。 在集中是唯一的。|  
-|type |**tinyint**|备份设备的类型：<br /><br /> 2 = 磁盘<br /><br /> 3 = 软盘（已过时）<br /><br /> 5 = 磁带<br /><br /> 6 = 管道（已过时）<br /><br /> 7 = 虚拟设备（供第三方备份供应商选择使用）<br /><br /> 9 = URL<br /><br />通常，只使用磁盘 (2) 和 URL (9) 。|  
+|type|**tinyint**|备份设备的类型：<br /><br /> 2 = 磁盘<br /><br /> 3 = 软盘（已过时）<br /><br /> 5 = 磁带<br /><br /> 6 = 管道（已过时）<br /><br /> 7 = 虚拟设备（供第三方备份供应商选择使用）<br /><br /> 9 = URL<br /><br />通常，只使用磁盘 (2) 和 URL (9) 。|  
 |**type_desc**|**nvarchar(60)**|备份设备类型的说明：<br /><br /> DISK<br /><br /> DISKETTE（已过时）<br /><br /> TAPE<br /><br /> PIPE（已过时）<br /><br /> VIRTUAL_DEVICE（供第三方备份供应商选择使用）<br /><br /> URL <br /><br /> 通常，只使用磁盘和 URL。|  
 |**physical_name**|**nvarchar(260)**|备份设备的物理文件名或路径。|  
   
@@ -49,6 +49,6 @@ ms.locfileid: "99198587"
  [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [sp_addumpdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [数据库和文件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
   
   
