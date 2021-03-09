@@ -6146,7 +6146,7 @@ items:
             href: dma/dma-assess-ssis.md
           - name: 保存和加载评估
             href: dma/dma-save-load-assessments.md
-          - name: 确定适当的 Azure SQL 数据库 SKU
+          - name: 识别目标 Azure SQL SKU
             href: dma/dma-sku-recommend-sql-db.md
           - name: 将 SQL Server 升级到更高版本
             href: dma/dma-migrateonpremsql.md
@@ -7213,7 +7213,7 @@ items:
                   - name: Kerberos 连接
                     href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
                   - name: PolyBase 常见问题
-                    href: relational-databases/polybase/polybase-faq.md
+                    href: relational-databases/polybase/polybase-faq.yml
                   - name: PolyBase 错误和可行解决方案
                     href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
           - name: 参考
@@ -10037,7 +10037,7 @@ items:
               - name: SQL Server 2017
                 href: linux/sql-server-linux-editions-and-components-2017.md
           - name: 常见问题解答
-            href: linux/sql-server-linux-faq.md
+            href: linux/sql-server-linux-faq.yml
       - name: 快速入门
         items:
           - name: 安装和连接 - Red Hat
@@ -11513,7 +11513,7 @@ items:
         href: relational-databases/system-catalog-views/catalog-views-transact-sql.md
         items:
           - name: 查询 SQL Server 系统目录常见问题
-            href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md
+            href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml
           - name: 架构 - sys.schemas
             href: relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md
           - name: 消息（错误）- sys.messages
